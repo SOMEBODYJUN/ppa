@@ -1,0 +1,502 @@
+﻿Luke–Tam background PDF 人工下载清单（核验修正版）
+生成日期：2026-07-23
+目标目录：data/inbox/background_pdf/
+
+【保证范围，请先读】
+1. 本清单保证：40 条均为真实文献；题名、作者、年份和 DOI 已尽量纠正；每条至少给出首选入口、备用入口、Google Scholar 精确检索和图书馆兜底路线。
+2. 无法诚实保证你的当前账户能从每个出版社“一键免费下载”：订阅、地区和校园认证由出版社及学校决定。
+3. 标为 CAMPUS_ACCESS 或 LIBRARY_ILL 的条目：先接学校 VPN/图书馆代理；仍无全文，就提交馆际互借（ILL）或文献传递。这样每条都有合法、可人工执行的获取路径。
+4. 不要从来历不明的聚合站下载可执行文件。目标文件必须是 PDF；下载后打开首页核对题名和作者。
+
+【状态说明】
+- OA_DIRECT: 首选通常是可直接打开的合法全文 PDF。
+- REPOSITORY_PAGE: 首选是机构仓储/档案页；进入后点 PDF、Download、Full text 或 Files。
+- CAMPUS_ACCESS: 正式全文通常需要学校 VPN、图书馆代理或校园网。
+- LIBRARY_ILL: 未找到稳定公开全文直链；按给定入口检索，最终用馆际互借/文献传递获取。
+
+【数量】
+- OA_DIRECT：22
+- REPOSITORY_PAGE：9
+- CAMPUS_ACCESS：8
+- LIBRARY_ILL：1
+- 合计：40
+
+【统一操作顺序】
+A. 先开“首选入口”。若是 PDF，浏览器中下载；若是页面，找 PDF / Download / Full text / Files。
+B. 失败则开“备用入口”，并接入学校 VPN、图书馆代理或校园网。
+C. 再开“Scholar 搜索”，优先选择右侧 [PDF]、作者主页、大学机构仓储或出版社开放版本。
+D. 仍失败：把题名、作者、年份、DOI 复制到学校图书馆的馆际互借/文献传递表单。图书馆返回 PDF 后按 Save as 文件名保存。
+E. 下载后核验：PDF 首页题名、作者须与本条一致；页数过少时检查是否只是摘要、目录或书评。
+
+======================================================================
+
+A. 教材 / 专著
+==========
+
+[ ] ref.004 | priority 1 | 2017 | CAMPUS_ACCESS
+题名：Convex Analysis and Monotone Operator Theory in Hilbert Spaces, 2nd ed.
+作者：Heinz H. Bauschke; Patrick L. Combettes
+DOI：10.1007/978-3-319-48311-5
+首选入口：https://link.springer.com/book/10.1007/978-3-319-48311-5
+备用入口：https://doi.org/10.1007/978-3-319-48311-5
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Convex+Analysis+and+Monotone+Operator+Theory+in+Hilbert+Spaces%2C+2nd+ed.%22+Heinz+H.+Bauschke+pdf
+Save as：ref.004_convex_analysis_and_monotone_operator_theory_in_hilbert_spaces_2nd_ed.pdf
+操作备注：Springer 电子书。先接学校 VPN/图书馆代理，再点 Download book PDF；若学校未订购，走图书馆电子书采购建议或馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.007 | priority 1 | 2008 | CAMPUS_ACCESS
+题名：Set-Valued Mappings and Enlargements of Monotone Operators
+作者：Regina S. Burachik; Alfredo N. Iusem
+DOI：10.1007/978-0-387-69757-4
+首选入口：https://link.springer.com/book/10.1007/978-0-387-69757-4
+备用入口：https://doi.org/10.1007/978-0-387-69757-4
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Set-Valued+Mappings+and+Enlargements+of+Monotone+Operators%22+Regina+S.+Burachik+pdf
+Save as：ref.007_set_valued_mappings_and_enlargements_of_monotone_operators.pdf
+操作备注：Springer Optimization and Its Applications, vol. 8。原清单漏了卷号和图书 DOI。接学校权限后下载整书 PDF；否则馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.011 | priority 1 | 2014 | OA_DIRECT
+题名：Implicit Functions and Solution Mappings: A View from Variational Analysis, 2nd ed.
+作者：Asen L. Dontchev; R. Tyrrell Rockafellar
+DOI：10.1007/978-1-4939-1037-3
+首选入口：https://sites.math.washington.edu/~rtr/papers/rtr234-Implicit2.pdf
+备用入口：https://link.springer.com/book/10.1007/978-1-4939-1037-3
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Implicit+Functions+and+Solution+Mappings%3A+A+View+from+Variational+Analysis%2C+2nd+ed.%22+Asen+L.+Dontchev+pdf
+Save as：ref.011_implicit_functions_and_solution_mappings_2nd_ed.pdf
+操作备注：首选为 Rockafellar 个人主页上的完整 PDF；若失效，使用 Springer 校内权限。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+B. 核心经典工具论文
+===========
+
+[ ] ref.009 | priority 1 | 2004 | REPOSITORY_PAGE
+题名：Proximal Methods for Cohypomonotone Operators
+作者：Patrick L. Combettes; Teemu Pennanen
+DOI：10.1137/S0363012903427336
+首选入口：https://hal.science/hal-00017837
+备用入口：https://epubs.siam.org/doi/pdf/10.1137/S0363012903427336
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Proximal+Methods+for+Cohypomonotone+Operators%22+Patrick+L.+Combettes+pdf
+Save as：ref.009_proximal_methods_for_cohypomonotone_operators.pdf
+操作备注：先在 HAL 页面点 Files/Download；SIAM 入口可能要求学校权限。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.018 | priority 1 | 2003 | OA_DIRECT
+题名：Inexact Variants of the Proximal Point Algorithm without Monotonicity
+作者：Alfredo N. Iusem; Teemu Pennanen; Benar F. Svaiter
+DOI：10.1137/S1052623401399587
+首选入口：https://nms.kcl.ac.uk/teemu.pennanen/iproxSIOPT.pdf
+备用入口：https://epubs.siam.org/doi/pdf/10.1137/S1052623401399587
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Inexact+Variants+of+the+Proximal+Point+Algorithm+without+Monotonicity%22+Alfredo+N.+Iusem+pdf
+Save as：ref.018_inexact_variants_of_the_proximal_point_algorithm_without_monotonicity.pdf
+操作备注：首选为作者托管 PDF。期刊卷期年份是 2003；SIAM 网页较晚才上线，不要误改成 2006。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.023 | priority 1 | 2009 | OA_DIRECT
+题名：Metric Subregularity and the Proximal Point Method
+作者：Dennis Leventhal
+DOI：10.1016/j.jmaa.2009.07.012
+首选入口：https://arxiv.org/pdf/0902.4200
+备用入口：https://doi.org/10.1016/j.jmaa.2009.07.012
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Metric+Subregularity+and+the+Proximal+Point+Method%22+Dennis+Leventhal+pdf
+Save as：ref.023_metric_subregularity_and_the_proximal_point_method.pdf
+操作备注：arXiv 可直接下载；ScienceDirect 为正式版本入口。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.024 | priority 1 | 2023 | OA_DIRECT
+题名：The Proximal Point Algorithm without Monotonicity (35th RAMP Symposium version)
+作者：D. Russell Luke; Matthew K. Tam
+DOI：无（2023 会议版）；扩展期刊版 DOI: 10.1287/moor.2025.0863
+首选入口：https://num.math.uni-goettingen.de/~r.luke/publications/RAMP.pdf
+备用入口：https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863
+Scholar 搜索：https://scholar.google.com/scholar?q=%22The+Proximal+Point+Algorithm+without+Monotonicity+%2835th+RAMP+Symposium+version%29%22+D.+Russell+Luke+pdf
+Save as：ref.024_generalized_monotonicity_and_the_proximal_point_algorithm.pdf
+操作备注：首选链接是 2023 RAMP 原文，文内题名为 The Proximal Point Algorithm without Monotonicity。备用是 2025 年开放获取扩展期刊版 Generalized Monotonicity and the Proximal Point Algorithm。原清单把 2025 DOI 错配给了 2023 会议版。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.029 | priority 1 | 1962 | REPOSITORY_PAGE
+题名：Monotone (Nonlinear) Operators in Hilbert Space
+作者：George J. Minty
+DOI：10.1215/S0012-7094-62-02933-2
+首选入口：https://projecteuclid.org/journals/duke-mathematical-journal/volume-29/issue-3/Monotone-nonlinear-operators-in-Hilbert-space/10.1215/S0012-7094-62-02933-2.short
+备用入口：https://doi.org/10.1215/S0012-7094-62-02933-2
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Monotone+%28Nonlinear%29+Operators+in+Hilbert+Space%22+George+J.+Minty+pdf
+Save as：ref.029_monotone_nonlinear_operators_in_hilbert_space.pdf
+操作备注：Project Euclid 页面明确提供 Download PDF；若页面要求认证，接学校代理或用图书馆文献传递。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.031 | priority 1 | 2002 | OA_DIRECT
+题名：Local Convergence of the Proximal Point Algorithm and Multiplier Methods without Monotonicity
+作者：Teemu Pennanen
+DOI：10.1287/moor.27.1.170.331
+首选入口：https://citeseerx.ist.psu.edu/document?doi=ef6d2b771882873aa481c4b4cc84910d46f711cf&repid=rep1&type=pdf
+备用入口：https://pubsonline.informs.org/doi/pdf/10.1287/moor.27.1.170.331
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Local+Convergence+of+the+Proximal+Point+Algorithm+and+Multiplier+Methods+without+Monotonicity%22+Teemu+Pennanen+pdf
+Save as：ref.031_local_convergence_of_the_proximal_point_algorithm_and_multiplier_methods.pdf
+操作备注：首选为全文镜像；INFORMS 是正式版本入口，必要时用学校权限。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.033 | priority 1 | 1996 | OA_DIRECT
+题名：Prox-Regular Functions in Variational Analysis
+作者：R. A. Poliquin; R. Tyrrell Rockafellar
+DOI：10.1090/S0002-9947-96-01544-9
+首选入口：https://sites.math.washington.edu/~rtr/papers/rtr157-ProxRegular.pdf
+备用入口：https://doi.org/10.1090/S0002-9947-96-01544-9
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Prox-Regular+Functions+in+Variational+Analysis%22+R.+A.+Poliquin+pdf
+Save as：ref.033_prox_regular_functions_in_variational_analysis.pdf
+操作备注：首选为 Rockafellar 个人主页 PDF；AMS 为正式记录。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.034 | priority 1 | 2000 | OA_DIRECT
+题名：Local Differentiability of Distance Functions
+作者：R. A. Poliquin; R. Tyrrell Rockafellar; Lionel Thibault
+DOI：10.1090/S0002-9947-00-02550-2
+首选入口：https://sites.math.washington.edu/~rtr/papers/rtr170-LocalDiffDistance.pdf
+备用入口：https://doi.org/10.1090/S0002-9947-00-02550-2
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Local+Differentiability+of+Distance+Functions%22+R.+A.+Poliquin+pdf
+Save as：ref.034_local_differentiability_of_distance_functions.pdf
+操作备注：首选为作者主页 PDF；AMS 为正式记录。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.035 | priority 1 | 1976 | OA_DIRECT
+题名：Monotone Operators and the Proximal Point Algorithm
+作者：R. Tyrrell Rockafellar
+DOI：10.1137/0314056
+首选入口：https://www.ceremade.dauphine.fr/~carlier/Rockafellar1976.pdf
+备用入口：https://epubs.siam.org/doi/pdf/10.1137/0314056
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Monotone+Operators+and+the+Proximal+Point+Algorithm%22+R.+Tyrrell+Rockafellar+pdf
+Save as：ref.035_monotone_operators_and_the_proximal_point_algorithm.pdf
+操作备注：首选为完整 PDF；SIAM 为正式版本入口。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.036 | priority 1 | 2023 | CAMPUS_ACCESS
+题名：Generic Linear Convergence through Metric Subregularity in a Variable-Metric Extension of the Proximal Point Algorithm
+作者：R. Tyrrell Rockafellar
+DOI：10.1007/s10589-023-00494-z
+首选入口：https://link.springer.com/article/10.1007/s10589-023-00494-z
+备用入口：https://doi.org/10.1007/s10589-023-00494-z
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Generic+Linear+Convergence+through+Metric+Subregularity+in+a+Variable-Metric+Extension+of+the+Proximal+Point+Algorithm%22+R.+Tyrrell+Rockafellar+pdf
+Save as：ref.036_generic_linear_convergence_through_metric_subregularity_in_a_variable_metric_extension_of_the_proximal_point_algorithm.pdf
+操作备注：Springer 页面点 Download PDF；若没有开放全文，先用学校 VPN/代理，再用 Scholar 找作者稿，最后走文献传递。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+C. 直接相关论文
+=========
+
+[ ] ref.001 | priority 2 | 2014 | OA_DIRECT
+题名：Firmly Nonexpansive Mappings in Classes of Geodesic Spaces
+作者：David Ariza-Ruiz; Laurențiu Leuștean; Genaro López-Acedo
+DOI：10.1090/S0002-9947-2014-05968-0
+首选入口：https://arxiv.org/pdf/1203.1432
+备用入口：https://doi.org/10.1090/S0002-9947-2014-05968-0
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Firmly+Nonexpansive+Mappings+in+Classes+of+Geodesic+Spaces%22+David+Ariza-Ruiz+pdf
+Save as：ref.001_firmly_nonexpansive_mappings_in_classes_of_geodesic_spaces.pdf
+操作备注：arXiv 可直接下载；AMS 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.002 | priority 2 | 2007 | REPOSITORY_PAGE
+题名：Convergence of the Proximal Point Method for Metrically Regular Mappings
+作者：Francisco J. Aragón Artacho; Asen L. Dontchev; Michel H. Geoffroy
+DOI：10.1051/proc:071701
+首选入口：https://orbilu.uni.lu/handle/10993/10818
+备用入口：https://doi.org/10.1051/proc:071701
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Convergence+of+the+Proximal+Point+Method+for+Metrically+Regular+Mappings%22+Francisco+J.+Arag%C3%B3n+Artacho+pdf
+Save as：ref.002_convergence_of_the_proximal_point_method_for_metrically_regular_mappings.pdf
+操作备注：ORBilu 机构仓储页面中下载附件；若附件入口变化，使用 DOI 或 Scholar。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.005 | priority 2 | 2022 | OA_DIRECT
+题名：α-Firmly Nonexpansive Operators on Metric Spaces
+作者：Arsjon Bërdëllima; Florian Lauster; D. Russell Luke
+DOI：10.1007/s11784-021-00919-4
+首选入口：https://arxiv.org/pdf/2104.11302
+备用入口：https://link.springer.com/article/10.1007/s11784-021-00919-4
+Scholar 搜索：https://scholar.google.com/scholar?q=%22%CE%B1-Firmly+Nonexpansive+Operators+on+Metric+Spaces%22+Arsjon+B%C3%ABrd%C3%ABllima+pdf
+Save as：ref.005_alpha_firmly_nonexpansive_operators_on_metric_spaces.pdf
+操作备注：arXiv 可直接下载；Springer 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.008 | priority 2 | 2024 | CAMPUS_ACCESS
+题名：A Semi-Bregman Proximal Alternating Method for a Class of Nonconvex Problems: Local and Global Convergence Analysis
+作者：Eitan Cohen; D. Russell Luke; Tomer Pinta; Shoham Sabach; Marc Teboulle
+DOI：10.1007/s10898-023-01334-4
+首选入口：https://link.springer.com/article/10.1007/s10898-023-01334-4
+备用入口：https://doi.org/10.1007/s10898-023-01334-4
+Scholar 搜索：https://scholar.google.com/scholar?q=%22A+Semi-Bregman+Proximal+Alternating+Method+for+a+Class+of+Nonconvex+Problems%3A+Local+and+Global+Convergence+Analysis%22+Eitan+Cohen+pdf
+Save as：ref.008_a_semi_bregman_proximal_alternating_method_for_a_class_of_nonconvex_problems.pdf
+操作备注：Springer 正式入口。若未开放，接学校权限；再用 Scholar/作者主页寻找 accepted manuscript；最后文献传递。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.010 | priority 2 | 2004 | OA_DIRECT
+题名：Approximate Convexity and Submonotonicity
+作者：Aris Daniilidis; Pavel Georgiev
+DOI：10.1016/j.jmaa.2003.11.004
+首选入口：https://www.arisdaniilidis.at/DG_ac.pdf
+备用入口：https://doi.org/10.1016/j.jmaa.2003.11.004
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Approximate+Convexity+and+Submonotonicity%22+Aris+Daniilidis+pdf
+Save as：ref.010_approximate_convexity_and_submonotonicity.pdf
+操作备注：首选为作者托管 PDF；ScienceDirect 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.025 | priority 2 | 2020 | OA_DIRECT
+题名：Necessary Conditions for Linear Convergence of Iterated Expansive, Set-Valued Mappings
+作者：D. Russell Luke; Marc Teboulle; Nguyen H. Thao
+DOI：10.1007/s10107-018-1343-8
+首选入口：https://arxiv.org/pdf/1704.08926
+备用入口：https://link.springer.com/article/10.1007/s10107-018-1343-8
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Necessary+Conditions+for+Linear+Convergence+of+Iterated+Expansive%2C+Set-Valued+Mappings%22+D.+Russell+Luke+pdf
+Save as：ref.025_necessary_conditions_for_linear_convergence_of_iterated_expansive_set_valued_mappings.pdf
+操作备注：arXiv 可直接下载；Springer 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.032 | priority 2 | 2016 | OA_DIRECT
+题名：Linear Convergence of the Douglas–Rachford Method for Two Closed Sets
+作者：Hung M. Phan
+DOI：10.1080/02331934.2015.1051532
+首选入口：https://arxiv.org/pdf/1401.6509
+备用入口：https://doi.org/10.1080/02331934.2015.1051532
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Linear+Convergence+of+the+Douglas%E2%80%93Rachford+Method+for+Two+Closed+Sets%22+Hung+M.+Phan+pdf
+Save as：ref.032_linear_convergence_of_the_douglas_rachford_method_for_two_closed_sets.pdf
+操作备注：arXiv 可直接下载；Taylor & Francis 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+D. 比较 / 边界材料
+============
+
+[ ] ref.030 | priority 3 | 2000 | REPOSITORY_PAGE
+题名：Approximate Convex Functions
+作者：Huynh Van Ngai; Dinh The Luc; Michel Théra
+DOI：无（原清单 DOI 10.1007/978-3-662-06409-2_3 属于另一篇书章）
+首选入口：https://www.researchgate.net/publication/242765174_Approximate_Convex_Functions
+备用入口：https://scholar.google.com/scholar?q=%22Approximate+Convex+Functions%22+Ngai+Luc+Thera+pdf
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Approximate+Convex+Functions%22+Huynh+Van+Ngai+pdf
+Save as：ref.030_approximate_convex_functions.pdf
+操作备注：ResearchGate 页面显示可获取全文时点 Download full-text PDF；若需登录或请求作者，用 Scholar、作者主页或图书馆文献传递。不要使用原清单的错误 Springer DOI。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.039 | priority 3 | 1983 | CAMPUS_ACCESS
+题名：Strong and Weak Convexity of Sets and Functions
+作者：Jean-Philippe Vial
+DOI：10.1287/moor.8.2.231
+首选入口：https://pubsonline.informs.org/doi/10.1287/moor.8.2.231
+备用入口：https://doi.org/10.1287/moor.8.2.231
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Strong+and+Weak+Convexity+of+Sets+and+Functions%22+Jean-Philippe+Vial+pdf
+Save as：ref.039_strong_and_weak_convexity_of_sets_and_functions.pdf
+操作备注：INFORMS 正式入口。先用学校权限；若无订购，用 Scholar 找作者稿或提交馆际互借/文献传递。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+E. 扩展背景
+=======
+
+[ ] ref.003 | priority 4 | 1978 | LIBRARY_ILL
+题名：On the Asymptotic Behavior of Nonexpansive Mappings and Semigroups in Banach Spaces
+作者：Jean-Bernard Baillon; Ronald E. Bruck; Simeon Reich
+DOI：无
+首选入口：https://scholar.google.com/scholar?q=%22On+the+asymptotic+behavior+of+nonexpansive+mappings+and+semigroups+in+Banach+spaces%22+pdf
+备用入口：https://www.math.uh.edu/~hjm/
+Scholar 搜索：https://scholar.google.com/scholar?q=%22On+the+Asymptotic+Behavior+of+Nonexpansive+Mappings+and+Semigroups+in+Banach+Spaces%22+Jean-Bernard+Baillon+pdf
+Save as：ref.003_on_the_asymptotic_behavior_of_nonexpansive_mappings_and_semigroups_in_banach_spaces.pdf
+操作备注：老期刊文献，先在 Scholar 找作者稿/扫描件；再到 Houston Journal of Mathematics 档案按 1978 年卷期查找。找不到时直接提交题名、作者、年份给馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.006 | priority 4 | 1977 | REPOSITORY_PAGE
+题名：Nonexpansive Projections and Resolvents of Accretive Operators in Banach Spaces
+作者：Ronald E. Bruck; Simeon Reich
+DOI：无
+首选入口：https://www.math.uh.edu/~hjm/vol03-4.html
+备用入口：https://scholar.google.com/scholar?q=%22Nonexpansive+projections+and+resolvents+of+accretive+operators+in+Banach+spaces%22+pdf
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Nonexpansive+Projections+and+Resolvents+of+Accretive+Operators+in+Banach+Spaces%22+Ronald+E.+Bruck+pdf
+Save as：ref.006_nonexpansive_projections_and_resolvents_of_accretive_operators_in_banach_spaces.pdf
+操作备注：Houston Journal of Mathematics 第 3 卷第 4 期页面，找到题名后点 PDF；若旧站链接失效，用 Scholar 或馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.012 | priority 4 | 1966 | CAMPUS_ACCESS
+题名：A Remark on a Theorem of M. A. Krasnoselski
+作者：Michael Edelstein
+DOI：10.2307/2315474
+首选入口：https://doi.org/10.2307/2315474
+备用入口：https://scholar.google.com/scholar?q=%22A+Remark+on+a+Theorem+of+M.+A.+Krasnoselski%22+Edelstein+pdf
+Scholar 搜索：https://scholar.google.com/scholar?q=%22A+Remark+on+a+Theorem+of+M.+A.+Krasnoselski%22+Michael+Edelstein+pdf
+Save as：ref.012_a_remark_on_a_theorem_of_m_a_krasnoselski.pdf
+操作备注：JSTOR/学校权限路线。原清单题名被截断且 DOI 完全错误；正确 DOI 为 10.2307/2315474。无权限时用馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.013 | priority 4 | 2013 | OA_DIRECT
+题名：A Method for Finding Structured Sparse Solutions to Nonnegative Least Squares Problems with Applications
+作者：Ernie Esser; Yifei Lou; Jack Xin
+DOI：10.1137/13090540X
+首选入口：https://ww3.math.ucla.edu/camreport/cam13-01.pdf
+备用入口：https://epubs.siam.org/doi/pdf/10.1137/13090540X
+Scholar 搜索：https://scholar.google.com/scholar?q=%22A+Method+for+Finding+Structured+Sparse+Solutions+to+Nonnegative+Least+Squares+Problems+with+Applications%22+Ernie+Esser+pdf
+Save as：ref.013_a_method_for_finding_structured_sparse_solutions_to_nonnegative_least_squares_problems_with_applications.pdf
+操作备注：UCLA CAM 报告为直接 PDF；SIAM 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.014 | priority 4 | 2019 | OA_DIRECT
+题名：Random Function Iterations for Consistent Stochastic Feasibility
+作者：Neal Hermer; D. Russell Luke; Anja Sturm
+DOI：10.1080/01630563.2018.1535507
+首选入口：https://arxiv.org/pdf/1808.05426
+备用入口：https://doi.org/10.1080/01630563.2018.1535507
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Random+Function+Iterations+for+Consistent+Stochastic+Feasibility%22+Neal+Hermer+pdf
+Save as：ref.014_random_function_iterations_for_consistent_stochastic_feasibility.pdf
+操作备注：arXiv 可直接下载；Taylor & Francis 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.015 | priority 4 | 2023 | OA_DIRECT
+题名：Rates of Convergence for Chains of Expansive Markov Operators
+作者：Neal Hermer; D. Russell Luke; Anja Sturm
+DOI：10.1093/imatrm/tnad001
+首选入口：https://academic.oup.com/imatrm/article-pdf/7/1/tnad001/54035968/tnad001.pdf
+备用入口：https://arxiv.org/pdf/2206.05213
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Rates+of+Convergence+for+Chains+of+Expansive+Markov+Operators%22+Neal+Hermer+pdf
+Save as：ref.015_rates_of_convergence_for_chains_of_expansive_markov_operators.pdf
+操作备注：OUP 正式 PDF 为开放获取；arXiv 是备用。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.016 | priority 4 | 2011 | CAMPUS_ACCESS
+题名：Regularity on a Fixed Set
+作者：Alexander D. Ioffe
+DOI：10.1137/110820981
+首选入口：https://epubs.siam.org/doi/pdf/10.1137/110820981?download=true
+备用入口：https://doi.org/10.1137/110820981
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Regularity+on+a+Fixed+Set%22+Alexander+D.+Ioffe+pdf
+Save as：ref.016_regularity_on_a_fixed_set.pdf
+操作备注：SIAM 正式 PDF，通常需要学校权限；若学校未订购，Scholar 搜作者稿或馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.017 | priority 4 | 2013 | REPOSITORY_PAGE
+题名：Nonlinear Regularity Models
+作者：Alexander D. Ioffe
+DOI：10.1007/s10107-013-0670-z
+首选入口：https://www.researchgate.net/publication/257479952_Nonlinear_regularity_models
+备用入口：https://link.springer.com/article/10.1007/s10107-013-0670-z
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Nonlinear+Regularity+Models%22+Alexander+D.+Ioffe+pdf
+Save as：ref.017_nonlinear_regularity_models.pdf
+操作备注：ResearchGate 页面显示 Article PDF Available 时下载作者全文；否则使用 Springer 校内权限或馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.019 | priority 4 | 1955 | REPOSITORY_PAGE
+题名：Two Remarks on the Method of Successive Approximations
+作者：M. A. Krasnoselskii
+DOI：无
+首选入口：https://www.mathnet.ru/eng/rm7954
+备用入口：https://scholar.google.com/scholar?q=%22Two+remarks+on+the+method+of+successive+approximations%22+Krasnoselskii+pdf
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Two+Remarks+on+the+Method+of+Successive+Approximations%22+M.+A.+Krasnoselskii+pdf
+Save as：ref.019_two_remarks_on_the_method_of_successive_approximations.pdf
+操作备注：Math-Net.Ru 页面点 Full-text PDF；可能是俄文原版/扫描版。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.020 | priority 4 | 2018 | OA_DIRECT
+题名：Set Regularities and Feasibility Problems
+作者：Alexander Y. Kruger; D. Russell Luke; Nguyen H. Thao
+DOI：10.1007/s10107-016-1039-x
+首选入口：https://arxiv.org/pdf/1602.04935
+备用入口：https://num.math.uni-goettingen.de/~r.luke/publications/KLN160215_submitted.pdf
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Set+Regularities+and+Feasibility+Problems%22+Alexander+Y.+Kruger+pdf
+Save as：ref.020_set_regularities_and_feasibility_problems.pdf
+操作备注：arXiv 与作者稿都可直接下载；Springer DOI 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.021 | priority 4 | 1986 | CAMPUS_ACCESS
+题名：A Remark on Regularization in Hilbert Spaces
+作者：Jean-Michel Lasry; Pierre-Louis Lions
+DOI：10.1007/BF02765025
+首选入口：https://link.springer.com/article/10.1007/BF02765025
+备用入口：https://www.researchgate.net/publication/225803965_A_remark_on_regularization_in_Hilbert_spaces
+Scholar 搜索：https://scholar.google.com/scholar?q=%22A+Remark+on+Regularization+in+Hilbert+Spaces%22+Jean-Michel+Lasry+pdf
+Save as：ref.021_a_remark_on_regularization_in_hilbert_spaces.pdf
+操作备注：先用 Springer 学校权限；ResearchGate 若显示全文则下载。仍无全文时馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.022 | priority 4 | 2021 | OA_DIRECT
+题名：Convergence of Proximal Splitting Algorithms in CAT(κ) Spaces and Beyond
+作者：Florian Lauster; D. Russell Luke
+DOI：10.1186/s13663-021-00698-0
+首选入口：https://arxiv.org/pdf/2105.05691
+备用入口：https://link.springer.com/article/10.1186/s13663-021-00698-0
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Convergence+of+Proximal+Splitting+Algorithms+in+CAT%28%CE%BA%29+Spaces+and+Beyond%22+Florian+Lauster+pdf
+Save as：ref.022_convergence_of_proximal_splitting_algorithms_in_cat_kappa_spaces_and_beyond.pdf
+操作备注：arXiv 可直接下载；Springer 文章本身也是开放获取。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.026 | priority 4 | 2018 | OA_DIRECT
+题名：Quantitative Convergence Analysis of Iterated Expansive, Set-Valued Mappings
+作者：D. Russell Luke; Nguyen H. Thao; Matthew K. Tam
+DOI：10.1287/moor.2017.0898
+首选入口：https://arxiv.org/pdf/1605.05725
+备用入口：https://pubsonline.informs.org/doi/pdf/10.1287/moor.2017.0898
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Quantitative+Convergence+Analysis+of+Iterated+Expansive%2C+Set-Valued+Mappings%22+D.+Russell+Luke+pdf
+Save as：ref.026_quantitative_convergence_analysis_of_iterated_expansive_set_valued_mappings.pdf
+操作备注：arXiv 可直接下载；INFORMS 为正式版本。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.027 | priority 4 | 1953 | OA_DIRECT
+题名：Mean Value Methods in Iterations
+作者：W. Robert Mann
+DOI：10.1090/S0002-9939-1953-0054846-3
+首选入口：https://www.ams.org/journals/proc/1953-004-03/S0002-9939-1953-0054846-3/S0002-9939-1953-0054846-3.pdf
+备用入口：https://doi.org/10.1090/S0002-9939-1953-0054846-3
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Mean+Value+Methods+in+Iterations%22+W.+Robert+Mann+pdf
+Save as：ref.027_mean_value_methods_in_iterations.pdf
+操作备注：AMS 档案 PDF 直链。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.028 | priority 4 | 1970 | OA_DIRECT
+题名：Régularisation d'inéquations variationnelles par approximations successives
+作者：Bernard Martinet
+DOI：10.1051/m2an/197004R301541
+首选入口：https://www.numdam.org/item/M2AN_1970__4_3_154_0.pdf
+备用入口：https://doi.org/10.1051/m2an/197004R301541
+Scholar 搜索：https://scholar.google.com/scholar?q=%22R%C3%A9gularisation+d%27in%C3%A9quations+variationnelles+par+approximations+successives%22+Bernard+Martinet+pdf
+Save as：ref.028_regularisation_d_inequations_variationnelles_par_approximations_successives.pdf
+操作备注：NUMDAM 扫描 PDF 直链；原清单法文重音和断词已修正。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.037 | priority 4 | 1999 | REPOSITORY_PAGE
+题名：On α(·)-Monotone Multifunctions and Differentiability of γ-Paraconvex Functions
+作者：Stefan Rolewicz
+DOI：10.4064/sm-133-1-29-37
+首选入口：https://eudml.org/doc/216603
+备用入口：https://doi.org/10.4064/sm-133-1-29-37
+Scholar 搜索：https://scholar.google.com/scholar?q=%22On+%CE%B1%28%C2%B7%29-Monotone+Multifunctions+and+Differentiability+of+%CE%B3-Paraconvex+Functions%22+Stefan+Rolewicz+pdf
+Save as：ref.037_on_alpha_monotone_multifunctions_and_differentiability_of_gamma_paraconvex_functions.pdf
+操作备注：EuDML 页面点 Full text/PDF；若跳到出版社，使用 DOI 或 Scholar。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.038 | priority 4 | 1981 | REPOSITORY_PAGE
+题名：Submonotone Subdifferentials of Lipschitz Functions
+作者：Jonathan E. Spingarn
+DOI：10.1090/S0002-9947-1981-0597868-8
+首选入口：https://www.ams.org/journals/tran/1981-264-01/S0002-9947-1981-0597868-8/
+备用入口：https://www.jstor.org/stable/1998411
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Submonotone+Subdifferentials+of+Lipschitz+Functions%22+Jonathan+E.+Spingarn+pdf
+Save as：ref.038_submonotone_subdifferentials_of_lipschitz_functions.pdf
+操作备注：AMS 页面点 PDF；若受限，使用 JSTOR 学校权限或馆际互借。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+[ ] ref.040 | priority 4 | 2015 | OA_DIRECT
+题名：Minimization of ℓ₁−ℓ₂ for Compressed Sensing
+作者：Penghang Yin; Yifei Lou; Qi He; Jack Xin
+DOI：10.1137/140952363
+首选入口：https://ww3.math.ucla.edu/camreport/cam14-01.pdf
+备用入口：https://epubs.siam.org/doi/pdf/10.1137/140952363
+Scholar 搜索：https://scholar.google.com/scholar?q=%22Minimization+of+%E2%84%93%E2%82%81%E2%88%92%E2%84%93%E2%82%82+for+Compressed+Sensing%22+Penghang+Yin+pdf
+Save as：ref.040_minimization_of_l1_minus_l2_for_compressed_sensing.pdf
+操作备注：UCLA CAM 报告为直接 PDF。原清单给的 ICASSP DOI 属于另一篇论文，已改为正确 SIAM DOI。
+下载后检查：[ ] 是 PDF  [ ] 首页题名一致  [ ] 作者一致  [ ] 已放入目标目录
+
+======================================================================
+【四条关键纠错】
+- ref.012：正确 DOI 是 10.2307/2315474；原 DOI 指向其他文献。
+- ref.024：2023 RAMP 会议版没有该 DOI；10.1287/moor.2025.0863 是 2025 开放获取扩展期刊版。
+- ref.030：未确认有 DOI；原 Springer DOI 指向其他书章，禁止使用。
+- ref.040：正确 DOI 是 10.1137/140952363；原 ICASSP DOI 指向另一篇论文。
+
+【文件命名规则】
+- 尽量严格使用每条 Save as。
+- 若下载的是 accepted manuscript / preprint，可在文件名末尾加 _accepted 或 _preprint，但必须保留 ref.xxx。
+- ref.024 若同时保存两个版本，建议：
+  ref.024_the_proximal_point_algorithm_without_monotonicity_2023_ramp.pdf
+  ref.024_generalized_monotonicity_and_the_proximal_point_algorithm_2025_journal.pdf
+
+完成后，可用文件管理器按 ref.001…ref.040 排序，确认没有漏号。

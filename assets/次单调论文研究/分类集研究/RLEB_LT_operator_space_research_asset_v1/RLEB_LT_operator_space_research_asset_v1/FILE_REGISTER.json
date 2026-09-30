@@ -1,0 +1,592 @@
+{
+  "schema_version": 1,
+  "asset_version": "v1",
+  "date": "2026-09-20",
+  "source_workspace": "/workspace/scratch/bf20ae56bc4b",
+  "entries": [
+    {
+      "path": "00_START_HERE/QUICK_HANDOFF.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "用短篇说明目标、前人工具、尝试、当前停点及要什么idea。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "00_START_HERE/READING_ROUTES.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "提供30分钟入口与按学科分工的证明阅读路径。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/01_full_handoff_draft.md",
+      "source": "mathematician_handoff/01_full_handoff_draft.md",
+      "status": "SUPERSEDED",
+      "purpose": "交接初稿与详细历史索引，不能沿用已被关闭的未知项。",
+      "audit": "由同目录02/04审后修订、06审计及07综合覆盖当前状态",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/02_ideal_problem_formulation.md",
+      "source": "mathematician_handoff/02_ideal_problem_formulation.md",
+      "status": "CANONICAL",
+      "purpose": "精确定义中立比较口径、步长量词和内生剖面。",
+      "audit": "06复核；含审计后定理P加强",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/03_obstruction_taxonomy.md",
+      "source": "mathematician_handoff/03_obstruction_taxonomy.md",
+      "status": "CANONICAL",
+      "purpose": "保存O1–O12的最小反例与技术边界，按问题检索。",
+      "audit": "本轮06及07采用；并非全部为独立未决问题",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/04_research_ideas.md",
+      "source": "mathematician_handoff/04_research_ideas.md",
+      "status": "CANONICAL",
+      "purpose": "给出构建候选、种子引理与验收线，供选取主桥梁路线。",
+      "audit": "06核种子引理；路线覆盖和总体结论未证",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/05_priorart_boundary.md",
+      "source": "mathematician_handoff/05_priorart_boundary.md",
+      "status": "CANONICAL",
+      "purpose": "整理当前体系的原始文献对应及未清关优先权。",
+      "audit": "文献边界记录；非穷尽首创判决",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md",
+      "source": "mathematician_handoff/06_math_audit.md",
+      "status": "CANONICAL",
+      "purpose": "独立核准T-only观测和种子引理并限制其向完整图外推。",
+      "audit": "两处范围修正；种子命题成立；总体差距未完成",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/07_final_handoff.md",
+      "source": "mathematician_handoff/07_final_handoff.md",
+      "status": "CANONICAL",
+      "purpose": "最新完整技术综合与已核范围，作为数学家交接主稿。",
+      "audit": "采用06与02/04审后修订；不等于总体PASS",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/mathematician_handoff/README.md",
+      "source": "mathematician_handoff/README.md",
+      "status": "SUPERSEDED",
+      "purpose": "旧技术交接导航，作为来源保留，首页由本包新入口替代。",
+      "audit": "旧导航；非数学审计",
+      "creator": "数学家交接工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "01_CANONICAL_HANDOFF/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "解释当前技术交接文件的优先级和旧初稿地位。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/01_ambient_axioms.md",
+      "source": "ppa_system_team/01_ambient_axioms.md",
+      "status": "CANONICAL",
+      "purpose": "定义中立闭图本体、良定图表、公理与各动力层。",
+      "audit": "架构08列明范围内复核",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/02_convergence_topology.md",
+      "source": "ppa_system_team/02_convergence_topology.md",
+      "status": "CANONICAL",
+      "purpose": "证明逐点/局部一致及全时间/共同尾的拓扑关系。",
+      "audit": "架构08范围内复核；不可扩大到任意Hilbert情形",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/03_certificate_embeddings.md",
+      "source": "ppa_system_team/03_certificate_embeddings.md",
+      "status": "CANONICAL",
+      "purpose": "给direct/energy规范化、LT转换与标准图卡证书编码。",
+      "audit": "07专项PASS；固定图卡/接口边界",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/04_priorart.md",
+      "source": "ppa_system_team/04_priorart.md",
+      "status": "CANONICAL",
+      "purpose": "保存WPO、BRZ、全时间拓扑与resolvent族原文证据。",
+      "audit": "文献记录；优先权非总清关",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/05_stress_test.md",
+      "source": "ppa_system_team/05_stress_test.md",
+      "status": "CANONICAL",
+      "purpose": "压力检查对象量词、单值/全域与证书投影推理。",
+      "audit": "修订压力记录；与07/08合读",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/06_resolvent_family.md",
+      "source": "ppa_system_team/06_resolvent_family.md",
+      "status": "CANONICAL",
+      "purpose": "建立完整跨步长关系、相容族、轨道与策略接口。",
+      "audit": "独立代数/拓扑论证；范围见08",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/07_embedding_math_audit.md",
+      "source": "ppa_system_team/07_embedding_math_audit.md",
+      "status": "CANONICAL",
+      "purpose": "专项独立复核LT→energy、gauge规范化与紧图卡编码。",
+      "audit": "PASS，附明确接口边界",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/08_architecture_audit.md",
+      "source": "ppa_system_team/08_architecture_audit.md",
+      "status": "CANONICAL",
+      "purpose": "审查母空间、局部良定图表与拓扑基础。",
+      "audit": "修补后PASS，仅明示有限维/共同域/量词范围",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/09_value_audit.md",
+      "source": "ppa_system_team/09_value_audit.md",
+      "status": "HISTORICAL",
+      "purpose": "保存前人覆盖与价值分析，部分旧未完成状态已被后续替代。",
+      "audit": "energy/局部图表旧句由03/07/08/10替代",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/ppa_system_team/10_final_blueprint.md",
+      "source": "ppa_system_team/10_final_blueprint.md",
+      "status": "CANONICAL",
+      "purpose": "中立体系底座总览，列出公理和基础定理依赖。",
+      "audit": "底座权威；当前未决任务以后续交接为准",
+      "creator": "中立PPA体系工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "02_NEUTRAL_PPA_SYSTEM/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "指向体系底座并说明旧价值稿被关闭的技术状态。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/01_frozen_denominator.md",
+      "source": "ppa_classification_team/01_frozen_denominator.md",
+      "status": "CANONICAL",
+      "purpose": "固定完整原图、宏观域、真实残差和实际尾等比较规格。",
+      "audit": "05§9范围内交叉复核",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/02_structural_deformation.md",
+      "source": "ppa_classification_team/02_structural_deformation.md",
+      "status": "CANONICAL",
+      "purpose": "保存受限仿射结构层的保真变形与任意步长LT排除。",
+      "audit": "05范围内通过；同尾/宏观同域/母空间位置未闭合",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/03_object_category.md",
+      "source": "ppa_classification_team/03_object_category.md",
+      "status": "CANONICAL",
+      "purpose": "给完整紧源对象侧K_sigma及类别诊断工具。",
+      "audit": "05范围内复核；不外推任意未控域外图",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/04_step_spectrum.md",
+      "source": "ppa_classification_team/04_step_spectrum.md",
+      "status": "CANONICAL",
+      "purpose": "处理实步长编码、局部谱实现及选择量词分离。",
+      "audit": "05范围内复核；优先权未清关",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/05_obstruction_audit.md",
+      "source": "ppa_classification_team/05_obstruction_audit.md",
+      "status": "CANONICAL",
+      "purpose": "交叉复核分类模块并给自第一纲和尾层退化边界。",
+      "audit": "§9为该阶段精确放行范围",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/06_priorart_tools.md",
+      "source": "ppa_classification_team/06_priorart_tools.md",
+      "status": "CANONICAL",
+      "purpose": "说明延拓、局部替换和共轭工具的前提与缺失接口。",
+      "audit": "文献/工具适用性记录",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/ppa_classification_team/07_stage_synthesis.md",
+      "source": "ppa_classification_team/07_stage_synthesis.md",
+      "status": "HISTORICAL",
+      "purpose": "保存分类阶段成果与旧策略，其仿射优先建议已降为工具路线。",
+      "audit": "成果未撤销；策略由最新07交接替代",
+      "creator": "PPA分类构建工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "03_CLASSIFICATION_STAGE/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "保留分类模块但降级旧仿射优先策略。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "04_AUDITS_AND_PRIOR_ART/ASSET_SCOPE_AUDIT.md",
+      "source": "research_asset_scope_audit.md",
+      "status": "CANONICAL",
+      "purpose": "独立核对包的范围、权威版本、原件身份与审计状态优先级。",
+      "audit": "资产范围/版本QA，不是新数学审计",
+      "creator": "/root/research_asset_scope_audit"
+    },
+    {
+      "path": "04_AUDITS_AND_PRIOR_ART/CLAIM_BOUNDARY_REGISTER.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "逐项对照可用主张、禁止外推与证明证据。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "04_AUDITS_AND_PRIOR_ART/PRIOR_ART_MAP.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "按原记录对照前人工具、精确文献位置和本项目缺桥。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "04_AUDITS_AND_PRIOR_ART/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "导航各阶段审计正文，避免将不同PASS合并。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/01_exact_translation.md",
+      "source": "comparison_space_team/01_exact_translation.md",
+      "status": "HISTORICAL",
+      "purpose": "建立RLEB与LT共同接口词典，区分all-pairs和pointwise。",
+      "audit": "可用接口工具；当前转换用体系03/07",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/02_monotone_category_literature.md",
+      "source": "comparison_space_team/02_monotone_category_literature.md",
+      "status": "HISTORICAL",
+      "purpose": "查单调/resolvent/非扩张算子空间的类别先例。",
+      "audit": "文献记录；最新边界用交接05",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/03_holder_lipschitz_category.md",
+      "source": "comparison_space_team/03_holder_lipschitz_category.md",
+      "status": "HISTORICAL",
+      "purpose": "分析固定模、big/little Hölder和模饱和的拓扑差异。",
+      "audit": "06修补后范围内通过",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/04_comparison_space_architecture.md",
+      "source": "comparison_space_team/04_comparison_space_architecture.md",
+      "status": "HISTORICAL",
+      "purpose": "构造统一严格RLEB的特殊超吸引比较层Y。",
+      "audit": "06范围内通过；08限制母空间代表性",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/05_meagreness_feasibility.md",
+      "source": "comparison_space_team/05_meagreness_feasibility.md",
+      "status": "HISTORICAL",
+      "purpose": "给特殊结构层的meagreness见证和可行性证明。",
+      "audit": "06范围内通过；不是中立母空间总定理",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/06_math_audit.md",
+      "source": "comparison_space_team/06_math_audit.md",
+      "status": "HISTORICAL",
+      "purpose": "独立核准特殊层定理与列明的任意步长加强。",
+      "audit": "修补后PASS；R1–R4关闭，范围见§§7–8",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/07_priorart_value_audit.md",
+      "source": "comparison_space_team/07_priorart_value_audit.md",
+      "status": "HISTORICAL",
+      "purpose": "记录该受限组合构造的优先权与研究价值边界。",
+      "audit": "非当前中立体系最终优先权判决",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/08_naturalness_audit.md",
+      "source": "comparison_space_team/08_naturalness_audit.md",
+      "status": "HISTORICAL",
+      "purpose": "说明预设超吸引为何不能代表全部RLEB或全部收敛者。",
+      "audit": "受限层自然性边界",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/comparison_space_team/09_final_synthesis.md",
+      "source": "comparison_space_team/09_final_synthesis.md",
+      "status": "HISTORICAL",
+      "purpose": "保存特殊层综合结论与当时下一步建议。",
+      "audit": "总问题口径由中立体系及新交接替代",
+      "creator": "早期比较空间工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/01_operator_space.md",
+      "source": "genericity_team/01_operator_space.md",
+      "status": "HISTORICAL",
+      "purpose": "构造共同证书层及极限选择的集合结构工具。",
+      "audit": "06提修补；08§7说明处理，未见独立终审closure",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/02_baire_literature.md",
+      "source": "genericity_team/02_baire_literature.md",
+      "status": "HISTORICAL",
+      "purpose": "保存早期Baire文献与拓扑敏感性记录。",
+      "audit": "后续文献链有更直接BRZ对照",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/03_prevalence_measure.md",
+      "source": "genericity_team/03_prevalence_measure.md",
+      "status": "HISTORICAL",
+      "purpose": "区分Baire、prevalence、Haar-null与参数概率的量词。",
+      "audit": "06提修补；08§7说明处理",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/04_semialgebraic_families.md",
+      "source": "genericity_team/04_semialgebraic_families.md",
+      "status": "HISTORICAL",
+      "purpose": "保留有限参数坏选择/削圆相图作为研究历史与测试。",
+      "audit": "不作总体类大小证据",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/05_rleb_robustness.md",
+      "source": "genericity_team/05_rleb_robustness.md",
+      "status": "HISTORICAL",
+      "purpose": "分析同证书平滑化与C0/强Hölder鲁棒性的区别。",
+      "audit": "受限鲁棒性工具",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/06_math_stress.md",
+      "source": "genericity_team/06_math_stress.md",
+      "status": "SUPERSEDED",
+      "purpose": "保留初审缺口和精确修补要求，追踪研究演变。",
+      "audit": "原状态MINOR_REPAIR；08§7说明四项修补，无独立最终PASS文件",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/07_value_priorart.md",
+      "source": "genericity_team/07_value_priorart.md",
+      "status": "HISTORICAL",
+      "purpose": "记录坏选择泛性方向当时的价值与先例评判。",
+      "audit": "非当前认证覆盖问题终判",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/genericity_team/08_final_synthesis.md",
+      "source": "genericity_team/08_final_synthesis.md",
+      "status": "HISTORICAL",
+      "purpose": "综合早期坏类方向并记录修补说明和条件性结论。",
+      "audit": "CONDITIONAL；参数优先路线已不再采用",
+      "creator": "早期坏选择泛性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/01_terminology_map.md",
+      "source": "initial_value_stability_team/01_terminology_map.md",
+      "status": "HISTORICAL",
+      "purpose": "对齐次单调等术语、RLEB接口与初值稳定性语言。",
+      "audit": "专题背景，非当前大小主问题",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/02_fixedpoint_retraction.md",
+      "source": "initial_value_stability_team/02_fixedpoint_retraction.md",
+      "status": "HISTORICAL",
+      "purpose": "查极限回缩及统一迭代尾传递的正则性先例。",
+      "audit": "文献与充分条件工具",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/03_hypomonotone_proxregular.md",
+      "source": "initial_value_stability_team/03_hypomonotone_proxregular.md",
+      "status": "HISTORICAL",
+      "purpose": "整理hypo/cohypo、prox-regular的步长和稳定性充分条件。",
+      "audit": "专题07/08列明通过项",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/04_asymptotic_phase.md",
+      "source": "initial_value_stability_team/04_asymptotic_phase.md",
+      "status": "HISTORICAL",
+      "purpose": "查渐近相位及极限映射光滑性对应。",
+      "audit": "原始文献对象区分工具",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/05_partial_smoothness.md",
+      "source": "initial_value_stability_team/05_partial_smoothness.md",
+      "status": "HISTORICAL",
+      "purpose": "分析部分光滑和切向条件可能怎样恢复稳定。",
+      "audit": "候选接口；不宣称最弱条件",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/06_synthesis.md",
+      "source": "initial_value_stability_team/06_synthesis.md",
+      "status": "CANONICAL",
+      "purpose": "初值稳定性专题的最终综合与明示充分接口。",
+      "audit": "08哈希绑定SYNTHESIS_PASS，仅专题范围",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/07_synthesis_stress.md",
+      "source": "initial_value_stability_team/07_synthesis_stress.md",
+      "status": "SUPERSEDED",
+      "purpose": "保留初值稳定性综合的独立初审与修补项。",
+      "audit": "初审MINOR_REPAIR由08关闭",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/initial_value_stability_team/08_synthesis_closure.md",
+      "source": "initial_value_stability_team/08_synthesis_closure.md",
+      "status": "CANONICAL",
+      "purpose": "绑定最终综合哈希并关闭两项初审修补。",
+      "audit": "SYNTHESIS_PASS；非最弱性/全球优先权证明",
+      "creator": "初值稳定性工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "05_EARLIER_EXPLORATIONS/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "解释三组历史探索与当前主问题的关系和审计状态。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "06_RELATED_MANUSCRIPT_ASSETS/README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "说明三份源ZIP的角色、优先阅读顺序和修订稿冻结身份。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "06_RELATED_MANUSCRIPT_ASSETS/solution_selection_final_audit.md",
+      "source": "solution_selection_final_audit.md",
+      "status": "HISTORICAL",
+      "purpose": "保存修订前solution-selection新稿最终审计和精确文献边界。",
+      "audit": "ABC_PASS_AFTER_REPAIR/PARTIAL-PRIOR；修订后状态看交付zip内closure",
+      "creator": "solution-selection终审工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip",
+      "source": "solution_selection_revised_v1_delivery.zip",
+      "status": "CANONICAL",
+      "purpose": "原样封存修订稿、PDF、TeX、复现与数学/主张/文件关闭记录。",
+      "audit": "内含REVISION_MATH_PASS、REVISION_CLAIMS_PASS、PACKAGE_QA_PASS；非全球首创",
+      "creator": "solution-selection修订/交付工作组（源文件未署可核代理 ID）"
+    },
+    {
+      "path": "06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RL_generalized_subregularity_assets_2026-09-14_v2.zip",
+      "source": "upload/01-_RL-_2026-09-14_v2_-.zip",
+      "status": "HISTORICAL",
+      "purpose": "原样保存9/14 RL、锥、Markov历史总资产和离线超边导航。",
+      "audit": "用户源快照；不以旧PENDING评判新稿",
+      "creator": "用户上传来源；包内各资产按原署名"
+    },
+    {
+      "path": "06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RLEB_PPA_submission_assets_2026-09-18.zip",
+      "source": "upload/04-RLEB_PPA_-_2026-09-18.zip",
+      "status": "CANONICAL",
+      "purpose": "原样保存本次调用的9/18 RLEB–PPA专题基础稿。",
+      "audit": "用户源快照；当前仅核实际调用接口",
+      "creator": "用户上传来源；包内各资产按原署名"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "记录本次资产整理的编排和范围变化。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "FILE_INDEX.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "为每个交付文件给出状态标签和一句用途，支持定位。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "FILE_REGISTER.json",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "提供逐文件来源、标签、用途、审计状态的机器可读索引。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "MANIFEST.sha256",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "给出所有交付文件（不含自身）的完整性校验值。",
+      "audit": "完整性清单；非数学证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "OPEN_PROBLEM.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "把求助集中为一个主桥梁及四个相连接口和验收标准。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "记录源到交付映射、身份、代理可核程度和审计链。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "README.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "项目目标、当前主桥梁、阅读路径、版本标签与接手总入口。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    },
+    {
+      "path": "STATUS.md",
+      "source": null,
+      "status": "CANONICAL",
+      "purpose": "登记已核结果、适用范围、未完成主问题与禁止外推。",
+      "audit": "本轮编辑/导航；数学状态引用原报告，不新增证明",
+      "creator": "/root/research_asset_curator"
+    }
+  ]
+}

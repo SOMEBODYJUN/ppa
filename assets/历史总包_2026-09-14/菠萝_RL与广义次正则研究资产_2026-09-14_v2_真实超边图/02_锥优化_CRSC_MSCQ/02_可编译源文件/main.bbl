@@ -1,0 +1,117 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Andreani et~al.(2025)Andreani, Haeser, Mito, and
+  Ram{\'i}rez]{ahmr2025author}
+Roberto Andreani, Gabriel Haeser, Leonardo~M. Mito, and H{\'e}ctor Ram{\'i}rez.
+\newblock A minimal face constant rank constraint qualification for reducible
+  conic programming.
+\newblock Author manuscript, 2025.
+\newblock URL \url{https://www.ime.usp.br/~ghaeser/crsc-redcones.pdf}.
+\newblock Revision of March 20, 2025; the version used for numbered theorem
+  comparisons.
+
+\bibitem[Andreani et~al.(2026{\natexlab{a}})Andreani, {da Rosa}, and
+  Secchin]{andreani2026new}
+Roberto Andreani, Mariana {da Rosa}, and Leonardo~D. Secchin.
+\newblock A new constant-rank-type condition related to {MFCQ} and local error
+  bounds.
+\newblock \emph{Journal of Optimization Theory and Applications}, 209,
+  2026{\natexlab{a}}.
+\newblock \doi{10.1007/s10957-026-02965-9}.
+\newblock Article 21; published March 26, 2026.
+
+\bibitem[Andreani et~al.(2026{\natexlab{b}})Andreani, Haeser, {da Rosa}, and
+  Santos]{andreani2026nonrelaxable}
+Roberto Andreani, Gabriel Haeser, Mariana {da Rosa}, and Daiana~O. Santos.
+\newblock On constraint qualifications for non-relaxable sets and an augmented
+  {Lagrangian} method.
+\newblock \emph{Computational Optimization and Applications},
+  2026{\natexlab{b}}.
+\newblock \doi{10.1007/s10589-026-00792-2}.
+\newblock Published May 15, 2026.
+
+\bibitem[Andreani et~al.(2026{\natexlab{c}})Andreani, Haeser, Mito, and
+  Ram{\'i}rez]{ahmr2026}
+Roberto Andreani, Gabriel Haeser, Leonardo~M. Mito, and H{\'e}ctor Ram{\'i}rez.
+\newblock A minimal face constant rank constraint qualification for reducible
+  conic programming.
+\newblock \emph{Mathematical Programming}, 215:\penalty0 743--769,
+  2026{\natexlab{c}}.
+\newblock \doi{10.1007/s10107-025-02237-w}.
+\newblock Published online May 24, 2025.
+
+\bibitem[Chieu et~al.(2026)Chieu, Trang, and Yen]{chieu2026soc}
+Nguyen~Huy Chieu, Nguyen Thi~Quynh Trang, and Nguyen Thi~Hai Yen.
+\newblock Revisiting the constant-rank constraint qualification for
+  second-order cone programs.
+\newblock arXiv:2604.00365v1, 2026.
+\newblock URL \url{https://arxiv.org/abs/2604.00365v1}.
+\newblock April 1, 2026.
+
+\bibitem[Huy et~al.(2025)Huy, Hung, Tuyen, and Tuan]{huy2025cone}
+Nguyen~Quang Huy, Nguyen~Huy Hung, Nguyen~Van Tuyen, and Hoang~Ngoc Tuan.
+\newblock Error bounds for a class of cone-convex inclusion problems.
+\newblock arXiv:2502.04716v1, 2025.
+\newblock URL \url{https://arxiv.org/abs/2502.04716v1}.
+\newblock February 7, 2025.
+
+\bibitem[Lin et~al.(2025)Lin, Liu, and Louren\c{c}o]{lin2025facial}
+Ying Lin, Tianxiang Liu, and Bruno~F. Louren\c{c}o.
+\newblock Facial reduction for nice (and non-nice) convex programs.
+\newblock Optimization Online preprint, 2025.
+\newblock URL
+  \url{https://optimization-online.org/wp-content/uploads/2025/12/cfr.pdf}.
+\newblock Manuscript dated December 17, 2025; posted December 18, 2025.
+
+\bibitem[Lindstrom et~al.(2023)Lindstrom, Louren\c{c}o, and
+  Pong]{lindstrom2023frf}
+Scott~B. Lindstrom, Bruno~F. Louren\c{c}o, and Ting~Kei Pong.
+\newblock Error bounds, facial residual functions and applications to the
+  exponential cone.
+\newblock \emph{Mathematical Programming}, 200:\penalty0 229--278, 2023.
+\newblock \doi{10.1007/s10107-022-01883-8}.
+
+\bibitem[Louren\c{c}o(2021)]{lourencoAmenable}
+Bruno~F. Louren\c{c}o.
+\newblock Amenable cones: error bounds without constraint qualifications.
+\newblock \emph{Mathematical Programming}, 186:\penalty0 1--48, 2021.
+\newblock \doi{10.1007/s10107-019-01439-3}.
+
+\bibitem[Louren\c{c}o et~al.(2022)Louren\c{c}o, Roshchina, and
+  Saunderson]{lrs2022}
+Bruno~F. Louren\c{c}o, Vera Roshchina, and James Saunderson.
+\newblock Amenable cones are particularly nice.
+\newblock \emph{SIAM Journal on Optimization}, 32\penalty0 (3):\penalty0
+  2347--2375, 2022.
+\newblock \doi{10.1137/20M138466X}.
+\newblock URL \url{https://bflourenco.github.io/papers/amenable_nice.pdf}.
+
+\bibitem[Nishijima et~al.(2026)Nishijima, Li, and
+  Louren\c{c}o]{nishijima2026radial}
+Mitsuhiro Nishijima, Guoyin Li, and Bruno~F. Louren\c{c}o.
+\newblock Radial-type error bounds for semidefinite feasibility problems
+  without strict feasibility: qualitative estimates and asymptotic tightness.
+\newblock arXiv:2608.09013v2, 2026.
+\newblock URL \url{https://arxiv.org/abs/2608.09013v2}.
+\newblock August 28, 2026.
+
+\bibitem[Pataki(2007)]{pataki2007}
+G{\'a}bor Pataki.
+\newblock On the closedness of the linear image of a closed convex cone.
+\newblock \emph{Mathematics of Operations Research}, 32\penalty0 (2):\penalty0
+  395--412, 2007.
+\newblock \doi{10.1287/moor.1060.0242}.
+
+\bibitem[Scott(2025)]{scott2025joint}
+Matthew~S. Scott.
+\newblock Qualification-free convex analysis via the joint supporting subspace.
+\newblock arXiv:2510.12244v3, 2025.
+\newblock URL \url{https://arxiv.org/abs/2510.12244v3}.
+\newblock November 25, 2025.
+
+\end{thebibliography}

@@ -1,0 +1,172 @@
+contract_version: "1.0"
+source_file: "work/RL_foundations_draft.md @ sha256:e24b415afe82ba6a98bd5fd7740bc25f5026da151934cd66d7cfbd22e5924815"
+
+locked_numbers:
+  - item: "numbered mathematical objects"
+    locked_content: "30 objects: 5 definitions, 7 theorems, 8 propositions, 2 lemmas, 5 corollaries, and 3 examples"
+    verification: "The final artifact contains the same 30 identifiers with no duplicate or missing reference."
+  - item: "equation tags"
+    locked_content: "125 tags, including RL, A-RL, GEB, PEB, EX, and every tag from 0.1 through 9.14b"
+    verification: "The source and final tag sequences are exactly equal; duplicate count is zero."
+  - item: "global parameter domains"
+    locked_content: 'H real Hilbert; lambda > 0; L >= 0; 0 < gamma <= 1; rho > 0; q > 0 unless a theorem explicitly strengthens q > 1'
+    verification: "Protected by exact equality of all 711 math fragments and by manual statement review."
+  - item: "power-phase thresholds"
+    locked_content: 'p = gamma q; the regimes p > 1, p = 1, p < 1; the separate gamma = 1 and L = 0 regimes'
+    verification: "Unchanged in Corollaries 5.1--5.3."
+  - item: "example parameter domains"
+    locked_content: 'GX-071: 0 < gamma < 1, q > 1/gamma, alpha = gamma q > 1; GX-072: q > 1, 0 < gamma < 1, beta = q/gamma - 1; GX-073: 0 < alpha < 1, beta > 0, 0 < delta < 1'
+    verification: "GX-071--GX-073 blocks are byte-identical to the frozen source except for Chinese heading and verdict labels."
+
+locked_units: []
+
+locked_citations_and_dois:
+  - citation: "Wang--Li--Ng 2023"
+    doi: null
+    status: "PENDING_VERIFICATION"
+    lock: "Retain the manuscript's caveat that theorem-level overlap still requires full-text review."
+  - citation: "Moursi--Vanderwerff 2025"
+    doi: null
+    status: "PENDING_VERIFICATION"
+    lock: "Retain the manuscript's caveat that theorem-level overlap still requires full-text review."
+
+locked_entities_and_gene_names:
+  - entity: "GX-071"
+    role: "attainability witness"
+    lock: "Preserve operator, solution set, residual scale, alignment, orbit, and verdict."
+  - entity: "GX-072"
+    role: "conservativeness witness"
+    lock: "Preserve operator, isolated zero, full q-MSR, Hölder sharpness, orbit scaling, and verdict."
+  - entity: "GX-073"
+    role: "domain-escape witness"
+    lock: "Preserve relation, residual, one-step scale, finite escape, and verdict."
+  - entity: "GX-074"
+    role: "coverage counterexample"
+    lock: "Preserve the natural-domain limitation in Remark 1.5."
+
+locked_models_and_datasets:
+  - item: "F:H multimap, Minty--Cayley maps, resolvent and reflector relations"
+    status: "VERIFIED_USER_MATERIAL"
+    lock: "No operator, graph, domain, solution set, or generated relation was changed."
+  - item: "datasets"
+    status: "NOT_APPLICABLE"
+    lock: "The manuscript is theoretical and introduces no empirical dataset."
+
+locked_terms:
+  - term: "full relation / restricted relation"
+    controlled_rendering: "完全关系 / 限制关系 in the terminology note and Definition 0.2 heading; technical uses remain consistent."
+  - term: "all-pairs RL / anchored RL"
+    controlled_rendering: "Retain the distinction between pairwise and anchored quantifiers."
+  - term: "named branch"
+    controlled_rendering: "Retain branch-specific conclusions; never upgrade them to arbitrary full-resolvent selections."
+  - term: "coverage / exclusion / invariance"
+    controlled_rendering: "Retain existence / full uniqueness / iterative legality as three noninterchangeable roles."
+  - term: "full residual / selected residual"
+    controlled_rendering: "Retain the residual-infimum distinction and the residual-completeness condition."
+  - term: "base neighborhood / residual window"
+    controlled_rendering: "Retain the two-localization convention for general gauges."
+  - term: "isolated / nonisolated"
+    controlled_rendering: "Retain the alignment and drift requirements in the nonisolated case."
+  - term: "upper order / two-sided exact exponent / exact Q-factor"
+    controlled_rendering: "Retain the three strictly increasing claim-strength levels."
+  - term: "RL"
+    controlled_rendering: "Retain as an internal project code; public naming remains unresolved."
+
+locked_statistical_meaning:
+  - status: "NOT_APPLICABLE"
+    lock: "No statistical estimand, p value, confidence interval, sample size, or replicate structure occurs in the manuscript."
+
+locked_causal_strength:
+  - claim: "PPA convergence results"
+    lock: "Remain conditional sufficient results under the printed coverage, anchored, error-bound, contraction, and margin assumptions."
+  - claim: "critical constants"
+    lock: "Remain sufficient route constants; they are not asserted necessary or optimal."
+  - claim: "GX judgments"
+    lock: "Remain existence or counterexample judgments only; they do not establish genericity, necessity, naturality, or universality."
+  - claim: "literature position"
+    lock: "No novelty, priority, exclusivity, or maximality claim was added."
+
+locked_uncertainty_and_limitations:
+  - "The public name of RL is not fixed."
+  - "The joint optimality of local gauge--PPA step constants and critical coefficients is unknown."
+  - "Optimal restricted or endpoint all-pairs constants for GX-071--GX-073 are unknown."
+  - "The theorem-level overlap with Wang--Li--Ng 2023 and Moursi--Vanderwerff 2025 remains pending full-text verification."
+  - "GX-071 proves attainability but not genericity, necessity, naturality, or a universal compensation law."
+  - "No application-derived, non-reverse-calibrated exact theta-q witness is available."
+  - "Weakening Assumption A to an orbit-only statement requires a separate endpoint-membership mechanism."
+
+post_edit_discrepancies: []
+
+author_approved_changes:
+  - scope: "Language and structure"
+    authorization: "The task authorized deep structural and language optimization while explicitly locking all mathematical content."
+    applied_change: "A conservative standard-level polish was used to avoid altering scientific meaning."
+
+locked_equations:
+  source_math_fragment_count: 711
+  final_math_fragment_count: 711
+  source_math_fragment_sha256: "cf896959aae5cdcead9d75989e45f8a3efcb7f718d2fffa33f3eacd0a10f5245"
+  final_math_fragment_sha256: "cf896959aae5cdcead9d75989e45f8a3efcb7f718d2fffa33f3eacd0a10f5245"
+  exact_fragment_order_equal: true
+  equation_tag_count_source: 125
+  equation_tag_count_final: 125
+  exact_equation_tag_order_equal: true
+  locked_tag_groups:
+    - "0.1; RL; A-RL; GEB; PEB; EX"
+    - "1.1--1.8"
+    - "2.1--2.6"
+    - "3.1--3.4"
+    - "4.1--4.18, including assumptions B, A, and E"
+    - "5.1--5.10"
+    - "6.1--6.7"
+    - "7.1--7.14, including 7.G1, 7.G2, and letter-suffixed tags"
+    - "8.1--8.14, including letter-suffixed tags"
+    - "9.1--9.14b"
+
+locked_constants_and_exponents:
+  - locator: "Theorem 1.1"
+    lock: "The factor 1/4 and every 1/2 coefficient in the Minty--Cayley equivalences."
+  - locator: "Theorem 2.1"
+    lock: "theta_L, mu_L, rho_L, tau_L, the inverse coefficient L lambda^(gamma-1), and the positive-scaling step lambda/c."
+  - locator: "Lemma 4.1 and Theorem 4.2"
+    lock: "b_gamma, Phi_gamma, the factor 1/(2 lambda), c_gamma < 1, theta, and the finite-length budget B_gamma."
+  - locator: "Corollaries 5.1--5.3"
+    lock: "C_delta0, kappa_gamma, A_1, kappa_1, and the distinct gamma-q, q, and L = 0 phase statements."
+  - locator: "Theorem 6.1 and Corollary 6.2"
+    lock: "delta_w, the two reflection-ratio bounds, and 2^(q+1)(rho+c)/lambda^q."
+  - locator: "Theorems and propositions in Section 7"
+    lock: "All q-flatness transfer constants, eta windows, C_q = rho(2/lambda)^q, theta, recurrence exponents, and mu/lambda^q."
+  - locator: "Section 8"
+    lock: "The factor 3 in the alignment envelope, 2/lambda rescaling, rho(2K/lambda)^q, and (1-kappa)lambda."
+  - locator: "GX-071--GX-073"
+    lock: "All exact limits, Hölder exponents, numerical constants, orbit recurrences, and escape inequalities."
+
+locked_quantifiers_and_domains:
+  - "All-pairs and solution-anchored quantifiers remain exactly as printed."
+  - "The natural domain D_lambda(F) and every restricted domain remain unchanged."
+  - "Empty graph restrictions and empty-supremum conventions remain unchanged."
+  - "Coverage, exclusion, invariance, residual windows, and base neighborhoods remain separate hypotheses."
+  - "Endpoint-wide Assumptions A, B, and E remain quantified over the full active set."
+  - "The GX-073 finite-domain escape conclusion remains tied to the natural Minty domain."
+
+edit_differences:
+  - location: "front matter"
+    before: "Internal canonical-draft notice without an abstract."
+    after: "Publication-facing title, scope-preserving abstract, keywords, and terminology note."
+    reason: "Remove process language and orient the reader without adding a scientific claim."
+  - location: "numbered object labels and cross-references"
+    before: "Definition/Theorem/Proposition/Lemma/Corollary/Example; Proof/Remark/Verdict."
+    after: "定义/定理/命题/引理/推论/例；证明/注/判定。"
+    reason: "Improve Chinese academic consistency."
+  - location: "Definitions 0.1--0.3"
+    before: "graph restriction and relation/map wording mixed with process-like phrasing."
+    after: "Clarified the graph-restriction wording and relation-before-map status without changing scope."
+    reason: "Terminology and local clarity."
+  - location: "Proposition 7.2 proof"
+    before: "The scaled gauge arguments were only covered by 'sufficiently small graph germ'."
+    after: "The proof explicitly says the germ is shrunk so the scaled arguments remain in the function domains."
+    reason: "Editorial precision requested by the independent referee."
+  - location: "end of Section 8"
+    before: "The isolated-zero statement could be read outside the local region."
+    after: "It is explicitly tied to a sufficiently small localization around the same locally isolated zero."
+    reason: "Editorial precision requested by the independent referee."

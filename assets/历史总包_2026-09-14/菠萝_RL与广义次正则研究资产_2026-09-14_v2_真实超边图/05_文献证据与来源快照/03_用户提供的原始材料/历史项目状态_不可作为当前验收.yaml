@@ -1,0 +1,121 @@
+project_id: RL-PPA-VERIFY
+product_name: SCI-Skills
+product_version: 3.0.2
+contract_version: "1.0"
+assistant_name: 宝宝巴士
+entry_route: project_continue
+research_direction: nonlinear RL generalized monotonicity plus generalized metric subregularity for local PPA convergence
+working_title: Partial-information verification calculus for RL-PPA
+primary_paper_family: T
+family_confidence: high
+user_reported_stage: verification-theory development
+diagnosed_stage: T6
+stage_confidence: high
+execution_mode: CREATE
+action_route: PROMPT
+active_expert_skills:
+  - sci-skills-manuscript-writing
+  - sci-skills-presubmission-review
+expert_tasks:
+  lifecycle: [QUEUED, DISPATCHED, RETURNED, VERIFIED, REJECTED_FOR_REPAIR]
+  active:
+    []
+  completed:
+    - T2-MONO-001
+    - T2-SUBREG-002
+    - T2-INVERSE-003
+    - T2-NONLINEAR-004
+    - T2-PPA-005
+    - T2-AUDIT-006
+    - T3-RL-SIDE-007
+    - T3-SUBREG-SIDE-008
+    - T3-NATURAL-009
+    - T3-SEPARATION-010
+    - T3-NEW-VERIFIERS-011
+    - T3-ADVERSARIAL-012
+    - T4-ARCH-013
+    - T4-THEOREM-014-R
+    - T4-AUDIT-015
+    - T4-LITERATURE-016
+    - T4-NATURAL-017
+    - T4-REDTEAM-018
+    - T5-CORE-019
+    - T5-SHARP-020
+    - T5-NATURAL-021
+    - T5-COMPARE-022
+    - T5-OBJECTIONS-023
+    - T5-AUDIT-024
+    - T5-AUDIT-FINAL-025
+    - T5-MERGE-CORE-026
+    - T5-MERGE-SHARP-027
+    - T5-MERGE-NATURAL-028
+    - T5-MERGE-COMPARE-029
+    - T5-MERGE-SEPARATION-030
+    - T5-SHARP-RECHECK-031
+    - T5-AUDIT-RECHECK-032
+    - T5-COMPARE-RECHECK-033
+    - T5-NATURAL-RECHECK-034
+    - T5-SEPARATION-RECHECK-035
+  rejected_for_repair:
+    - T4-THEOREM-014
+  provisional: []
+stage_status:
+  passed: [T1, T2, T3, T4, T5]
+  partially_passed: []
+  failed: []
+  not_assessed: [T6, T7]
+available_resources:
+  literature: []
+  primary_texts: []
+  code: []
+  results: []
+  manuscript:
+    - /workspace/scratch/01cfe9a021bd/RL_PPA_T5_core_manuscript_2026-09-07.md
+    - /workspace/scratch/01cfe9a021bd/t5_final_acceptance_audit.md
+data_sufficiency:
+  status: NOT_APPLICABLE
+manual_operations:
+  status: NOT_REQUIRED
+claim_evidence_ledger:
+  - claim: RL and ordinary/high-order subregularity certificates may be produced independently and combined on one allowed PPA transition
+    evidence: theorem_5_and_adversarial_audit
+    status: verified_project_derivation
+  - claim: support-function yield/friction plus normal-cone VI admits explicit genuine RL and high-order set-distance EB certificates
+    evidence: theorem_7_and_independent_agent_checks
+    status: verified_project_derivation
+  - claim: the natural class lies outside specified full-neighborhood finite quadratic or anchored certificates
+    evidence: phase2_competitor_separation
+    status: verified_with_scope_limits
+  - claim: all older PPA theories fail on the natural class
+    evidence: degenerate_partial_countercertificate
+    status: rejected_overclaim
+  - claim: the paper should be organized around a sharp compatibility theorem, an attainable family, a cross-active-set natural class, and scoped two-way comparison
+    evidence: T4_architecture_theorem_audit_and_redteam
+    status: accepted_argument_framework
+  - claim: the natural-class asymptotic margin alone gives a prescribed-radius contraction
+    evidence: T4_delta_r_audit
+    status: rejected_without_r_condition
+  - claim: the denominator 2 is non-improvable for the stated uniform asymptotic RL-step-bound plus ordinary-error-bound certificate
+    evidence: Theorem_3_3_and_Proposition_3_4
+    status: verified_project_derivation
+  - claim: gamma-q compatibility is necessary for actual PPA convergence
+    evidence: Proposition_3_5_degenerate_shear
+    status: rejected_overclaim
+  - claim: the support-function/normal-cone class is outside every earlier PPA theory
+    evidence: Proposition_5_4_and_Proposition_6_1
+    status: rejected_overclaim
+  - claim: displayed anchored or partial convergence conditions imply AP-RL on the complete local inverse
+    evidence: Proposition_6_2_Minty_collision
+    status: refuted_with_scoped_counterexample
+terminology_ledger:
+  - term: RL generalized monotonicity
+    definition: "||a-lambda b|| <= L ||a+lambda b||^gamma on specified graph pairs"
+  - term: genuine nonlinear RL
+    definition: reflected Minty map is not locally Lipschitz; a strictly subunit best Holder exponent is a stronger power-order form
+current_blockers: []
+next_action:
+  type: contribution_limitations_and_conclusion
+  stage: T6
+  prompt_generated: false
+  operation_guide_generated: false
+last_updated: 2026-09-07

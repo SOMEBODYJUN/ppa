@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:boluo:research-hypergraph:v2",
+  "title": "Directed incidence bipartite research hypergraph",
+  "type": "object",
+  "required": ["schema_version", "representation", "entities", "hyperedges", "assets", "relation_types", "core_entity_count"],
+  "properties": {
+    "schema_version": {"const": "2.0.0"},
+    "representation": {"const": "directed_incidence_bipartite_hypergraph"},
+    "entities": {"type": "array", "minItems": 35, "items": {"$ref": "#/$defs/entity"}},
+    "hyperedges": {"type": "array", "minItems": 20, "maxItems": 35, "items": {"$ref": "#/$defs/hyperedge"}},
+    "assets": {"type": "array", "items": {"$ref": "#/$defs/asset"}},
+    "core_entity_count": {"type": "integer", "minimum": 35, "maximum": 60},
+    "relation_types": {"type": "object", "minProperties": 14}
+  },
+  "$defs": {
+    "status": {"enum": ["PROVED", "PENDING", "OBSTRUCTED", "ALREADY_COVERED", "REFERENCE", "SUPERSEDED", "NOT_EXECUTED"]},
+    "relation_type": {"enum": ["DEFINES", "ASSUMES", "IMPLIES", "PROVES", "VERIFIES", "AUDITS", "APPLIES_TO", "COUNTEREXAMPLE_TO", "LIMITS", "DOMINATES", "SUPERSEDES", "EXTENDS", "OPEN_BLOCKER", "SOURCE_FOR"]},
+    "source": {
+      "type": "object", "required": ["asset_id", "path", "locator", "excerpt", "evidence_basis"],
+      "properties": {
+        "asset_id": {"type": "string", "minLength": 1}, "path": {"type": "string", "minLength": 1},
+        "excerpt": {"type": "string"}, "evidence_basis": {"const": "VERIFIED_USER_MATERIAL"},
+        "locator": {"type": "object", "required": ["heading", "line_start", "line_end"], "properties": {
+          "heading": {"type": "string", "minLength": 1},
+          "line_start": {"type": ["integer", "null"], "minimum": 1},
+          "line_end": {"type": ["integer", "null"], "minimum": 1}
+        }}
+      }
+    },
+    "entity": {
+      "type": "object", "required": ["id", "label", "kind", "project", "layer", "evidence_status", "statement", "sources", "core", "core_claim", "document_leaf", "x", "y"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1}, "label": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["research_question", "definition", "assumption", "certificate", "theorem", "conclusion", "proof_mechanism", "example", "counterexample", "obstacle", "open_blocker", "audit", "code", "paper", "original_literature", "document"]},
+        "project": {"enum": ["RL", "CONIC", "MARKOV", "CROSS"]},
+        "layer": {"enum": ["native", "certificate", "result", "evidence"]},
+        "evidence_status": {"$ref": "#/$defs/status"}, "statement": {"type": "string", "minLength": 1},
+        "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+        "core": {"type": "boolean"}, "core_claim": {"type": "boolean"}, "document_leaf": {"type": "boolean"},
+        "x": {"type": "number"}, "y": {"type": "number"}
+      }
+    },
+    "member": {
+      "type": "object", "required": ["entity_id", "role", "direction", "relation_type", "evidence_status"],
+      "properties": {
+        "entity_id": {"type": "string", "minLength": 1}, "role": {"type": "string", "minLength": 2},
+        "direction": {"enum": ["entity_to_relation", "relation_to_entity"]},
+        "relation_type": {"$ref": "#/$defs/relation_type"}, "evidence_status": {"$ref": "#/$defs/status"}
+      }, "additionalProperties": false
+    },
+    "coverage": {
+      "type": "object", "required": ["slot", "label", "availability", "asset_ids", "note"],
+      "properties": {
+        "slot": {"enum": ["proof", "independent_audit", "example_or_counterexample", "validation_code", "final_manuscript"]},
+        "label": {"type": "string"}, "availability": {"enum": ["PRESENT", "MISSING"]},
+        "asset_ids": {"type": "array", "items": {"type": "string"}}, "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "hyperedge": {
+      "type": "object", "required": ["id", "name", "relation_type", "evidence_status", "statement", "members", "sources", "projects", "cross_project", "evidence_coverage", "x", "y"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^h[0-9]{2}$"}, "name": {"type": "string", "minLength": 1},
+        "relation_type": {"$ref": "#/$defs/relation_type"}, "evidence_status": {"$ref": "#/$defs/status"},
+        "statement": {"type": "string", "minLength": 20},
+        "members": {"type": "array", "minItems": 3, "items": {"$ref": "#/$defs/member"}},
+        "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}},
+        "projects": {"type": "array", "minItems": 1, "items": {"enum": ["RL", "CONIC", "MARKOV"]}},
+        "cross_project": {"type": "boolean"}, "evidence_coverage": {"type": "array", "items": {"$ref": "#/$defs/coverage"}},
+        "x": {"type": "number"}, "y": {"type": "number"}
+      }
+    },
+    "asset": {
+      "type": "object", "required": ["id", "path", "evidence_status", "original_source", "research_original", "retained_from_v1", "mapped_hyperedges", "mapping_role"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1}, "path": {"type": "string", "pattern": "^(?!/)(?!.*\\.\\./).+"},
+        "evidence_status": {"$ref": "#/$defs/status"}, "original_source": {"type": "string"},
+        "research_original": {"type": "boolean"}, "retained_from_v1": {"type": "boolean"},
+        "mapped_hyperedges": {"type": "array", "items": {"type": "string"}}, "mapping_role": {"type": "string"}
+      }
+    }
+  }
+}

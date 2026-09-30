@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>菠萝 · 研究资产统一超边知识图 v2</title>
+<style>
+:root{--bg:#f5f3ee;--panel:#fffefb;--ink:#202d3b;--muted:#6b7580;--border:#dedfd9;--accent:#255f69;--warn:#9b4f25}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,'Segoe UI','Microsoft YaHei',sans-serif;font-size:13px}button,input,select{font:inherit}button,select,input{border:1px solid var(--border);border-radius:7px;background:#fff;color:var(--ink);padding:7px 9px}button{cursor:pointer}button:hover{border-color:#53868b;background:#f1f8f6}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #dbad67}button.active{background:#255f69;color:white;border-color:#255f69}header{padding:17px 22px 12px;background:var(--panel);border-bottom:1px solid var(--border)}.eyebrow{font-size:11px;letter-spacing:.16em;color:#7d837a}h1{font-size:22px;margin:4px 0 6px;font-weight:650;letter-spacing:.015em}header p{margin:0;line-height:1.7;color:#536370}.meta{float:right;text-align:right;margin-top:7px;color:#5b6a72;font-size:12px}.toolbar{display:flex;gap:7px;align-items:center;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--border);background:#fdfcf9}.toolbar label{display:flex;gap:5px;align-items:center}.toolbar input[type=search]{width:240px}.toolbar input[type=checkbox]{margin:0}.tours{display:flex;gap:6px;align-items:center;padding:8px 16px;overflow:auto;white-space:nowrap;background:#f1f0e9;border-bottom:1px solid var(--border)}.tours button{padding:5px 8px;font-size:12px}.layout{display:grid;grid-template-columns:minmax(620px,1fr) 364px;height:calc(100vh - 263px);min-height:600px}.canvas-shell{position:relative;overflow:hidden;background:#f7f6f2}.canvas{width:100%;height:100%;display:block;touch-action:none;cursor:grab}.canvas:active{cursor:grabbing}.canvas-tools{position:absolute;left:14px;bottom:14px;display:flex;gap:4px;z-index:2}.canvas-tools button{box-shadow:0 2px 6px #21363812}.canvas-hint{position:absolute;left:14px;top:9px;background:#fffefbdc;padding:5px 8px;border-radius:4px;font-size:11px;color:#62717c;pointer-events:none}.mini{position:absolute;right:15px;bottom:15px;width:185px;height:133px;border:1px solid #cbd3ce;background:#fffefbea;border-radius:8px;cursor:crosshair}.legend{position:absolute;left:14px;bottom:55px;max-width:410px;display:flex;gap:5px;flex-wrap:wrap;background:#fffefbe8;padding:6px;border-radius:6px;font-size:10px;pointer-events:none}.legend span{border-left:3px solid;padding:0 5px;line-height:1.65}.node,.hypernode{cursor:pointer}.node text,.hypernode text{pointer-events:none}.node:focus,.hypernode:focus{outline:none}.node:focus rect,.hypernode:focus polygon{stroke:#bd7a30;stroke-width:5}.entity-label{font-size:17px;font-weight:600;fill:#243542}.entity-sub{font-size:11px;fill:#6d7881}.h-label{font-size:15px;fill:#213f47;font-weight:650}.h-type{font-size:10px;letter-spacing:.06em;fill:#4e636a}.incidence{fill:none;stroke-width:1.7;opacity:.19;pointer-events:stroke;cursor:pointer;transition:opacity .15s}.incidence.cross{opacity:.37;stroke-dasharray:8 5}.incidence.selected{opacity:.96;stroke-width:3}.role-label{font-size:12px;fill:#2f424b;paint-order:stroke;stroke:#fffefb;stroke-width:5;stroke-linejoin:round;pointer-events:none}.faded{opacity:.15}.selected-card{filter:drop-shadow(0 3px 6px #173b382f)}.band-title{font-size:21px;fill:#506a76;font-weight:650}.section-label{font-size:20px;fill:#697a84;letter-spacing:3px}.band-note{font-size:14px;fill:#81909a}aside{border-left:1px solid var(--border);background:var(--panel);overflow:auto;padding:17px 18px}aside h2{font-size:19px;margin:4px 0 9px;line-height:1.4}aside h3{font-size:13px;margin:20px 0 8px;color:#416472}aside p{line-height:1.75;margin:8px 0;color:#4c5f6b}.pill{display:inline-block;border-radius:20px;background:#eef1e8;color:#537049;padding:3px 8px;font-size:10px;letter-spacing:.03em;margin:0 3px 4px 0}.pill.PENDING{background:#fff0d9;color:#8b5d20}.pill.OBSTRUCTED{background:#fae5e5;color:#a0454d}.pill.ALREADY_COVERED{background:#f0e6f1;color:#8c577f}.pill.NOT_EXECUTED{background:#eee;color:#6a7175}.card{padding:10px;margin:8px 0;border:1px solid #e0e5df;border-radius:8px;background:#fcfcf7}.member{padding:8px 0;border-bottom:1px solid #e7e9e2}.member button{font-weight:600;text-align:left;border:0;padding:2px 0;background:transparent}.member small{display:block;line-height:1.6;color:#72828b}.member .role{color:#405b68;font-size:12px;margin-top:3px}.missing{border-left:3px solid #bf5f4b;background:#fff1eb}.present{border-left:3px solid #728b62}.card b{font-size:12px}summary{cursor:pointer;line-height:1.65}.source-title{font-size:12px;line-height:1.6;overflow-wrap:anywhere}.source-locator{font-size:11px;color:#6d7c84;line-height:1.65}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.6 ui-monospace,monospace;background:#f0f2ee;padding:8px;border-radius:5px;max-height:210px;overflow:auto}.asset-link{color:#247780;display:inline-block;margin:5px 9px 2px 0;font-size:11px;text-decoration:none}.asset-link:hover{text-decoration:underline}.relation-list{display:flex;flex-direction:column;gap:5px}.relation-list button{text-align:left;padding:7px 9px;border-left:4px solid}.relation-list small{color:#718089;float:right}.statusline{font-size:11px;color:#68818a;padding-top:5px}.filetable{width:100%;border-collapse:collapse;font-size:11px}.filetable th,.filetable td{text-align:left;vertical-align:top;padding:7px 5px;border-bottom:1px solid #e2e4dd;overflow-wrap:anywhere}.filetable td:first-child{min-width:170px}.file-mode{display:none;position:absolute;inset:38px 14px 53px;background:#fffefb;border:1px solid #dce2db;border-radius:8px;overflow:auto;padding:12px}.file-mode h2{margin:0;font-size:17px}.notice{padding:10px;border-radius:6px;background:#f2ece0;color:#84603d;font-size:11px;line-height:1.75}.empty{padding:30px;color:#849086;text-align:center}.footer-note{border-top:1px solid var(--border);padding:7px 16px;font-size:10px;color:#7a807a;background:#fffefb}@media(max-width:1080px){.layout{grid-template-columns:minmax(450px,1fr) 320px}.toolbar input[type=search]{width:170px}.meta{display:none}}@media(max-width:780px){header{padding:12px}h1{font-size:18px}.layout{display:flex;flex-direction:column;height:auto;min-height:0}.canvas-shell{height:65vh;min-height:420px}aside{border-left:0;border-top:1px solid var(--border);max-height:70vh}.toolbar{padding:8px}.mini{width:130px;height:94px}.legend{max-width:270px}.canvas-hint{max-width:calc(100% - 28px)}.tours{padding:7px}.footer-note{font-size:9px}}
+</style>
+</head>
+<body>
+<header><div class="meta" id="stats"></div><div class="eyebrow">BO LUO / RESEARCH RELATION ATLAS · 2026-09-14</div><h1>研究资产统一超边知识图 <span style="font-weight:400;color:#879086">v2</span></h1><p>这是超图的<b>关联二部表示</b>：圆角卡片是实体，<b>带名称的六边形是超边</b>。箭头和颜色标记成员角色；跨项目联系不是无标签分组，也不自动构成新定理。</p></header>
+<div class="toolbar">
+<input id="search" type="search" placeholder="搜索概念、关系、证据或资产…" aria-label="搜索图与资产">
+<select id="project" aria-label="项目筛选"><option value="ALL">全部项目 · 统一图</option><option value="RL">RL–PPA</option><option value="CONIC">锥 CRSC–MSCQ</option><option value="MARKOV">随机 / Markov</option><option value="CROSS">跨项目联系</option></select>
+<select id="type" aria-label="关系类型筛选"><option value="ALL">全部关系类型</option></select>
+<select id="status" aria-label="证据状态筛选"><option value="ALL">全部证据状态</option><option>PROVED</option><option>PENDING</option><option>OBSTRUCTED</option><option>ALREADY_COVERED</option><option>REFERENCE</option><option>SUPERSEDED</option><option>NOT_EXECUTED</option></select>
+<select id="layoutMode" aria-label="布局切换"><option value="hierarchy">层级布局</option><option value="force">力导向布局</option></select>
+<label><input id="docs" type="checkbox">文档叶节点</label><label><input id="roles" type="checkbox">全部角色标签</label>
+<button id="semantic" class="active">语义层</button><button id="files">文件层</button>
+</div>
+<div class="tours"><span style="color:#6d7c84;font-size:11px">从一个问题读起</span><button data-tour="h02">RL 由什么推出？</button><button data-tour="h30">哪些文件证明？</button><button data-tour="h05">什么反例限制？</button><button data-tour="h24">锥与 Markov 为何相关？</button><button data-tour="h23">下一步卡在哪里？</button><button id="allRelations">全部 35 条关系</button></div>
+<main class="layout"><section class="canvas-shell" aria-label="统一超边图画布">
+<svg id="graph" class="canvas" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="可交互的有向关联二部超图"><defs id="defs"></defs><g id="viewport"><g id="bands"></g><g id="edges"></g><g id="roleLabels"></g><g id="nodes"></g></g></svg>
+<div class="canvas-hint" id="hint">默认显示全部语义联系。单击实体/六边形查角色与证据；滚轮缩放、拖动平移，双击聚焦。</div>
+<div class="file-mode" id="fileMode"></div>
+<div id="legend" class="legend"></div><div class="canvas-tools"><button id="zoomIn" aria-label="放大">＋</button><button id="zoomOut" aria-label="缩小">−</button><button id="fit">全图</button><button id="reset">重置</button><span id="zoomLabel" style="padding:8px 4px;color:#6a7c83;font-size:11px"></span></div>
+<svg class="mini" id="minimap" aria-label="全图概览；点击移动视窗" viewBox="0 0 2600 2000" preserveAspectRatio="none"></svg></section>
+<aside id="detail" aria-live="polite"></aside></main>
+<div class="footer-note">仅依据保留文件；未更新外部文献、运行研究数学脚本或推进论文阶段。旧合稿与当前稿分开标注；缺少证据明示缺失。没有真实浏览器截图 QA，细字体与高密度排版仍待复核。</div>
+<script id="graph-data" type="application/json">__GRAPH_DATA__</script>
+<script id="asset-payloads" type="application/json">__ASSET_PAYLOADS__</script>
+<script id="graph-app">
+'use strict';
+const DATA=JSON.parse(document.getElementById('graph-data').textContent);
+const PAYLOADS=JSON.parse(document.getElementById('asset-payloads').textContent);
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const entityMap=new Map(DATA.entities.map(e=>[e.id,e]));
+const hyperMap=new Map(DATA.hyperedges.map(h=>[h.id,h]));
+const assetMap=new Map(DATA.assets.map(a=>[a.id,a]));
+const TYPES=DATA.relation_types;
+const STATE={project:'ALL',type:'ALL',status:'ALL',search:'',docs:false,roles:false,layout:'hierarchy',mode:'semantic',selected:null,scale:1,tx:0,ty:0};
+const positions=new Map([...DATA.entities,...DATA.hyperedges].map(n=>[n.id,{x:n.x,y:n.y}]));
+let current={entities:[],hyperedges:[]},pan=null,drag=null,forceRun=0;
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function svg(tag,attrs={},parent){const n=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))n.setAttribute(k,String(v));if(parent)parent.appendChild(n);return n;}
+function textSvg(p,x,y,t,cls){const n=svg('text',{x,y,'text-anchor':'middle','class':cls},p);n.textContent=t;return n;}
+function wrap(t,n=13){const chars=Array.from(t),out=[];while(chars.length)out.push(chars.splice(0,n).join(''));return out;}
+function color(t){return TYPES[t]?.color||'#6e8390';}
+function visibleSet(){
+ const q=STATE.search.trim().toLowerCase();
+ const hs=DATA.hyperedges.filter(h=>
+   (STATE.project==='ALL'||(STATE.project==='CROSS'?h.cross_project:h.projects.includes(STATE.project)))&&
+   (STATE.type==='ALL'||h.relation_type===STATE.type||h.members.some(m=>m.relation_type===STATE.type))&&
+   (STATE.status==='ALL'||h.evidence_status===STATE.status||h.members.some(m=>m.evidence_status===STATE.status))&&
+   (!q||(h.name+' '+h.statement+' '+h.members.map(m=>entityMap.get(m.entity_id)?.label+' '+m.role).join(' ')+' '+h.sources.map(s=>s.path+' '+s.locator.heading).join(' ')).toLowerCase().includes(q)));
+ const ids=new Set(hs.flatMap(h=>h.members.map(m=>m.entity_id)));
+ const allDefault=STATE.project==='ALL'&&STATE.type==='ALL'&&STATE.status==='ALL'&&!q;
+ const es=DATA.entities.filter(e=>(e.core||STATE.docs)&&((ids.has(e.id))||(allDefault&&e.core)));
+ return {entities:es,hyperedges:hs};
+}
+function selectionSets(){
+ const selectedHs=new Set(),selectedEs=new Set();
+ if(hyperMap.has(STATE.selected)){selectedHs.add(STATE.selected);for(const m of hyperMap.get(STATE.selected).members)selectedEs.add(m.entity_id);}
+ if(entityMap.has(STATE.selected)){selectedEs.add(STATE.selected);for(const h of DATA.hyperedges)if(h.members.some(m=>m.entity_id===STATE.selected)){selectedHs.add(h.id);for(const m of h.members)selectedEs.add(m.entity_id);}}
+ return {selectedHs,selectedEs};
+}
+function boundary(a,b,kind){const dx=b.x-a.x,dy=b.y-a.y;if(!dx&&!dy)return {...a};const hw=kind==='hyper'?109:113,hh=kind==='hyper'?36:31;const t=Math.min(hw/Math.max(Math.abs(dx),.001),hh/Math.max(Math.abs(dy),.001));return{x:a.x+dx*t,y:a.y+dy*t};}
+function transform(){ $('viewport').setAttribute('transform',`translate(${STATE.tx},${STATE.ty}) scale(${STATE.scale})`);$('zoomLabel').textContent=Math.round(STATE.scale*100)+'%';renderMini(); }
+function drawBands(){
+ const b=$('bands');b.replaceChildren();
+ for(const[x,w,label]of [[25,500,'原生信息 / 问题'],[890,530,'定义 / 证书'],[1750,530,'定理 / 收敛 / 障碍']]){svg('rect',{x,y:12,width:w,height:1590,rx:18,fill:'#eeeee7',opacity:.47},b);textSvg(b,x+w/2,29,label,'section-label');}
+ for(const[y,title,note]of [[185,'01  RL–PPA','图几何 ≠ 覆盖；证书 ≠ 实际最优率'],[704,'02  锥 CRSC–MSCQ','固定面 → 两次修正 → 原始锥残差'],[1135,'03  随机 / Markov','exact-zero ≠ 任意速率兼容性'],[1630,'04  证据超边与原始文件','六类主张证据包；缺项见右侧，不补造文件']]){svg('line',{x1:15,x2:2570,y1:y+18,y2:y+18,stroke:'#d5dcd5','stroke-width':1},b);const tx=textSvg(b,25,y,title,'band-title');tx.setAttribute('text-anchor','start');const nt=textSvg(b,750,y,note,'band-note');nt.setAttribute('text-anchor','start');}
+}
+function render(){
+ current=visibleSet();const {selectedHs,selectedEs}=selectionSets(),hasSelection=!!STATE.selected;
+ $('edges').replaceChildren();$('roleLabels').replaceChildren();$('nodes').replaceChildren();
+ const shown=new Set(current.entities.map(e=>e.id));
+ for(const h of current.hyperedges){const hp=positions.get(h.id);for(let i=0;i<h.members.length;i++){
+   const m=h.members[i];if(!shown.has(m.entity_id))continue;const ep=positions.get(m.entity_id);if(!ep)continue;
+   const p1=boundary(ep,hp,'entity'),p2=boundary(hp,ep,'hyper');const incoming=m.direction==='entity_to_relation';
+   const start=incoming?p1:p2,end=incoming?p2:p1;const mid=(start.x+end.x)/2;
+   const selected=selectedHs.has(h.id)&&(!entityMap.has(STATE.selected)||m.entity_id===STATE.selected||selectedEs.has(m.entity_id));
+   const line=svg('path',{d:`M${start.x},${start.y} C${mid},${start.y} ${mid},${end.y} ${end.x},${end.y}`,stroke:color(m.relation_type),'marker-end':`url(#arrow-${m.relation_type})`,'class':'incidence'+(h.cross_project?' cross':'')+(selected?' selected':'')+(hasSelection&&!selected?' faded':''),'data-hyperedge':h.id,'data-entity':m.entity_id,'data-direction':m.direction},$('edges'));
+   const title=svg('title',{},line);title.textContent=`${incoming?'实体 → 关系':'关系 → 实体'} · ${m.relation_type} · ${m.role}`;
+   line.addEventListener('click',ev=>{ev.stopPropagation();select(h.id);});
+   if(STATE.roles||selected){const ly=(start.y+end.y)/2+(i%3-1)*13;const l=textSvg($('roleLabels'),mid,ly,m.role,'role-label');l.setAttribute('fill',color(m.relation_type));}
+ }}
+ for(const e of current.entities){const p=positions.get(e.id);const active=selectedEs.has(e.id);const g=svg('g',{'class':'node'+(hasSelection&&!active?' faded':'')+(active?' selected-card':''),transform:`translate(${p.x},${p.y})`,tabindex:0,role:'button','aria-label':e.label,'data-id':e.id},$('nodes'));
+  const col=e.project==='RL'?'#5d8393':e.project==='CONIC'?'#5d8b77':e.project==='MARKOV'?'#8c7298':'#ad9055';
+  svg('rect',{x:-113,y:-31,width:226,height:62,rx:e.document_leaf?4:17,fill:active?'#fffef7':'#fffefa',stroke:active?'#305e65':col,'stroke-width':active?3:1.4},g);
+  svg('circle',{cx:-101,cy:-20,r:3.5,fill:e.evidence_status==='OBSTRUCTED'?'#bd4d57':e.evidence_status==='PENDING'?'#bc8a3c':col},g);
+  const label=wrap(e.label,13);label.slice(0,2).forEach((s,i)=>textSvg(g,0,label.length>1?-8+i*19:-3,s,'entity-label'));
+  textSvg(g,0,25,e.document_leaf?e.kind.toUpperCase():e.evidence_status,'entity-sub');
+  const t=svg('title',{},g);t.textContent=e.label+'\n'+e.statement;
+  bindNode(g,e.id);
+ }
+ for(const h of current.hyperedges){const p=positions.get(h.id),active=selectedHs.has(h.id);const g=svg('g',{'class':'hypernode'+(hasSelection&&!active?' faded':'')+(active?' selected-card':''),transform:`translate(${p.x},${p.y})`,tabindex:0,role:'button','aria-label':h.name,'data-id':h.id},$('nodes'));
+  svg('polygon',{points:'-91,-36 91,-36 113,0 91,36 -91,36 -113,0',fill:active?'#e3f1e9':'#eaf0e8',stroke:color(h.relation_type),'stroke-width':active?4:2.3,'stroke-dasharray':h.evidence_status==='PENDING'?'6 3':''},g);
+  const label=wrap(h.name,13);label.slice(0,2).forEach((s,i)=>textSvg(g,0,label.length>1?-10+i*18:-3,s,'h-label'));
+  textSvg(g,0,28,h.id.toUpperCase()+' · '+h.relation_type,'h-type');bindNode(g,h.id);
+ }
+ $('stats').innerHTML=`${DATA.core_entity_count} 精选实体 · ${DATA.hyperedges.length} 语义超边<br>${DATA.hyperedges.filter(h=>h.cross_project).length} 跨项目超边 · ${DATA.assets.length} 个可追溯文件`;
+ $('hint').textContent=`当前 ${current.entities.length} 个实体 / ${current.hyperedges.length} 条超边 · 六边形可点击；成员角色随选择展开 · 滚轮缩放 / 拖动 / 双击聚焦`;
+ transform();if(STATE.mode==='files')renderFiles();
+}
+function bindNode(g,id){g.addEventListener('click',ev=>{ev.stopPropagation();select(id);});g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();select(id);}});g.addEventListener('dblclick',ev=>{ev.stopPropagation();focus(id);});g.addEventListener('pointerdown',ev=>{if(ev.button!==0)return;ev.stopPropagation();const p=positions.get(id);drag={id,x:ev.clientX,y:ev.clientY,px:p.x,py:p.y};$('graph').setPointerCapture?.(ev.pointerId);});}
+function badge(s){return `<span class="pill ${esc(s)}">${esc(s)}</span>`;}
+function assetLinks(aid){const a=assetMap.get(aid);if(!a)return '<span>缺失：未找到资产映射</span>';const bundled=decodeURIComponent(location.pathname).includes('/00_从这里开始/');let s='';if(bundled)s+=`<a class="asset-link" href="../${esc(a.path)}" target="_blank" rel="noopener">相对路径打开原件 ↗</a>`;if(PAYLOADS[aid])s+=`<a class="asset-link" href="#" data-download="${esc(aid)}">离线下载原件 ↓</a>`;else if(!bundled)s+='<span class="source-locator">整理层原件在 ZIP 内；以下映射与摘录离线可查。</span>';return s;}
+function sourceHTML(s){return `<details class="card"><summary class="source-title">${esc(s.path.split('/').pop())}</summary><div class="source-locator">${esc(s.path)}<br>${esc(s.locator.heading)}${s.locator.line_start?' · 文件行 '+s.locator.line_start+'–'+s.locator.line_end:''}<br>${esc(s.evidence_basis)}</div>${assetLinks(s.asset_id)}${s.excerpt?'<pre>'+esc(s.excerpt)+'</pre>':''}</details>`;}
+function coverageHTML(h){if(!h.evidence_coverage?.length)return '';return '<h3>核心主张 · 五类证据槽位</h3>'+h.evidence_coverage.map(s=>`<div class="card ${s.availability==='MISSING'?'missing':'present'}"><b>${s.availability==='MISSING'?'缺失':'已保留'} · ${esc(s.label)}</b><p style="font-size:12px">${esc(s.note)}</p>${s.asset_ids.map(a=>'<div class="source-locator">'+esc(assetMap.get(a)?.path)+'<br>'+assetLinks(a)+'</div>').join('')}</div>`).join('');}
+function select(id){if(!hyperMap.has(id)&&!entityMap.has(id))return;STATE.selected=id;render();renderDetails(id);}
+function renderDetails(id){const h=hyperMap.get(id),e=entityMap.get(id);if(h){
+ const hidden=h.members.filter(m=>!current.entities.some(e=>e.id===m.entity_id)).length;
+ $('detail').innerHTML=`<div class="eyebrow">VISIBLE HYPEREDGE / ${esc(h.id)}</div><h2>${esc(h.name)}</h2>${badge(h.evidence_status)}<span class="pill" style="color:${color(h.relation_type)}">${esc(h.relation_type)}</span>${h.cross_project?'<span class="pill">跨项目</span>':''}<p>${esc(h.statement)}</p><div class="notice">${h.members.length} 个参与实体；箭头方向是成员角色，不是每条输入都为逻辑前提。${hidden?hidden+' 个文档成员暂未画出，可勾选“文档叶节点”；完整成员始终列于下方。':''}</div>${coverageHTML(h)}<h3>全部成员 · 角色 · 方向</h3>${h.members.map(m=>{const x=entityMap.get(m.entity_id);return `<div class="member"><button data-select="${esc(x.id)}">${esc(x.label)}</button><div class="role">${esc(m.role)}</div><small style="color:${color(m.relation_type)}">${esc(m.relation_type)} · ${m.direction==='entity_to_relation'?'实体 → 关系':'关系 → 实体'} · ${esc(m.evidence_status)}</small></div>`;}).join('')}<h3>来源文件与准确定位</h3>${h.sources.map(sourceHTML).join('')}<button id="backRelations">返回全部关系</button>`;
+ }else if(e){const hs=DATA.hyperedges.filter(h=>h.members.some(m=>m.entity_id===id));const a=e.asset_id?assetMap.get(e.asset_id):null;
+ $('detail').innerHTML=`<div class="eyebrow">ENTITY / ${esc(e.kind)}</div><h2>${esc(e.label)}</h2>${badge(e.evidence_status)}<p>${esc(e.statement)}</p>${a?'<div class="card source-title">'+esc(a.path)+'<p class="source-locator">原始来源：'+esc(a.original_source)+'<br>映射角色：'+esc(a.mapping_role)+'</p>'+assetLinks(a.id)+'</div>':''}<h3>参与的 ${hs.length} 条超边</h3>${relationList(hs)}${!hs.length?'<div class="notice">档案/辅助文件；未凭文件名赋予核心数学推理关系。仍可从完整资产索引追溯。</div>':''}<h3>来源与定位</h3>${e.sources.map(sourceHTML).join('')}`;
+ }bindDetail();}
+function relationList(hs){return '<div class="relation-list">'+hs.map(h=>`<button data-select="${esc(h.id)}" style="border-left-color:${color(h.relation_type)}"><small>${h.members.length} 元</small>${esc(h.id.toUpperCase())} · ${esc(h.name)}<div class="statusline">${esc(h.relation_type)} · ${esc(h.evidence_status)}${h.cross_project?' · 跨项目':''}</div></button>`).join('')+'</div>';}
+function overview(){STATE.selected=null;render();$('detail').innerHTML=`<div class="eyebrow">ONE GRAPH / THREE RESEARCH LINES</div><h2>读关系，不只读分组</h2><p>所有重要主张置于一张图中。沿 <b>实体 → 命名超边 → 结论</b> 读数学关系，沿下方证据超边核对“谁证明、谁审计、缺什么”。</p><div class="notice">六边形才是关系节点；实体之间没有直接连线。颜色编码成员关系类型，虚线框表示待核，长虚线关联强调跨项目。缺失证据不计为已完成成员。</div><h3>快速检查</h3><p>RL：h02 / h30<br>锥：h10 / h13 / h31<br>Markov：h15–h23 / h32–h35<br>跨项目：h24–h29</p><h3>全部 ${current.hyperedges.length} 条当前关系</h3>${relationList(current.hyperedges)}<h3>边界说明</h3><p>PROVED 是作用域内项目证据；不是发表、全球首创或阶段验收。所有研究代码本轮未执行。没有浏览器截图 QA。</p>`;bindDetail();}
+function bindDetail(){document.querySelectorAll('[data-select]').forEach(b=>b.addEventListener('click',()=>select(b.getAttribute('data-select'))));document.querySelectorAll('[data-download]').forEach(b=>b.addEventListener('click',ev=>{ev.preventDefault();downloadAsset(b.getAttribute('data-download'));}));$('backRelations')?.addEventListener('click',overview);}
+function downloadAsset(aid){const a=assetMap.get(aid),b64=PAYLOADS[aid];if(!b64)return false;const bytes=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));const url=URL.createObjectURL(new Blob([bytes],{type:'application/octet-stream'}));const link=document.createElement('a');link.href=url;link.download=a.path.split('/').pop();document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);return true;}
+function renderFiles(){const q=STATE.search.toLowerCase();const list=DATA.assets.filter(a=>(STATE.project==='ALL'||STATE.project==='CROSS'||a.project===STATE.project)&&(STATE.status==='ALL'||a.evidence_status===STATE.status)&&(!q||(a.path+' '+a.original_source+' '+a.mapping_role).toLowerCase().includes(q))&&(STATE.type==='ALL'||a.mapped_hyperedges.some(id=>{const h=hyperMap.get(id);return h.relation_type===STATE.type||h.members.some(m=>m.relation_type===STATE.type);})));$('fileMode').innerHTML=`<h2>全部资产 · ${list.length} / ${DATA.assets.length}</h2><p class="source-locator">每个包内文件均有唯一实体和来源映射。未被选为核心证据的文件保持档案角色，不补造数学超边。</p><table class="filetable"><thead><tr><th>资产 / 原始来源</th><th>证据状态与映射</th><th>读取</th></tr></thead><tbody>${list.map(a=>`<tr><td><button data-select="doc__${esc(a.id)}" style="text-align:left;padding:0;border:0">${esc(a.path)}</button><div class="source-locator">${esc(a.original_source)}</div></td><td>${badge(a.evidence_status)}<div>${esc(a.mapping_role)}</div><div>${a.mapped_hyperedges.map(id=>`<button data-select="${id}" style="padding:2px 3px;font-size:10px">${id.toUpperCase()}</button>`).join(' ')}</div></td><td>${assetLinks(a.id)}</td></tr>`).join('')}</tbody></table>`;bindDetail();}
+function mode(m){STATE.mode=m;$('fileMode').style.display=m==='files'?'block':'none';$('files').classList.toggle('active',m==='files');$('semantic').classList.toggle('active',m==='semantic');if(m==='files')renderFiles();}
+function bbox(nodes){const ps=nodes.map(n=>positions.get(n.id));if(!ps.length)return{x:0,y:0,w:2600,h:1940};const minx=Math.min(...ps.map(p=>p.x))-140,maxx=Math.max(...ps.map(p=>p.x))+140,miny=Math.min(...ps.map(p=>p.y))-65,maxy=Math.max(...ps.map(p=>p.y))+65;return{x:minx,y:miny,w:maxx-minx,h:maxy-miny};}
+function fit(){const b=bbox([...current.entities,...current.hyperedges]),r=$('graph').getBoundingClientRect();STATE.scale=Math.max(.15,Math.min((r.width-45)/b.w,(r.height-90)/b.h,1));STATE.tx=(r.width-b.w*STATE.scale)/2-b.x*STATE.scale;STATE.ty=(r.height-b.h*STATE.scale)/2-b.y*STATE.scale;transform();}
+function zoom(f,cx,cy){const r=$('graph').getBoundingClientRect();cx=cx??r.width/2;cy=cy??r.height/2;const old=STATE.scale;STATE.scale=Math.min(2.8,Math.max(.12,old*f));STATE.tx=cx-(cx-STATE.tx)*STATE.scale/old;STATE.ty=cy-(cy-STATE.ty)*STATE.scale/old;transform();}
+function focus(id){const p=positions.get(id);if(!p)return;const r=$('graph').getBoundingClientRect();STATE.scale=Math.max(STATE.scale,.95);STATE.tx=r.width/2-p.x*STATE.scale;STATE.ty=r.height/2-p.y*STATE.scale;transform();}
+function renderMini(){const m=$('minimap');m.replaceChildren();const all=[...current.entities,...current.hyperedges],b=bbox(all);m.setAttribute('viewBox',`${b.x-40} ${b.y-40} ${b.w+80} ${b.h+80}`);for(const n of all){const p=positions.get(n.id);svg('rect',{x:p.x-22,y:p.y-12,width:44,height:24,rx:hyperMap.has(n.id)?0:8,fill:hyperMap.has(n.id)?color(n.relation_type):'#8fa69c',opacity:.8},m);}const r=$('graph').getBoundingClientRect();svg('rect',{x:-STATE.tx/STATE.scale,y:-STATE.ty/STATE.scale,width:r.width/STATE.scale,height:r.height/STATE.scale,fill:'#75a9a318',stroke:'#326d76','stroke-width':6},m);m._bbox=b;}
+function reset(){forceRun++;Object.assign(STATE,{project:'ALL',type:'ALL',status:'ALL',search:'',docs:false,roles:false,layout:'hierarchy',selected:null});$('project').value='ALL';$('type').value='ALL';$('status').value='ALL';$('search').value='';$('docs').checked=false;$('roles').checked=false;$('layoutMode').value='hierarchy';for(const n of [...DATA.entities,...DATA.hyperedges])positions.set(n.id,{x:n.x,y:n.y});mode('semantic');overview();fit();}
+function forceLayout(){const run=++forceRun,ns=[...current.entities,...current.hyperedges],nmap=new Map(ns.map((n,i)=>[n.id,i])),v=ns.map(n=>({...positions.get(n.id),vx:0,vy:0,ox:n.x,oy:n.y}));const links=current.hyperedges.flatMap(h=>h.members.filter(m=>nmap.has(m.entity_id)).map(m=>[nmap.get(h.id),nmap.get(m.entity_id)]));let tick=0;
+ function step(){if(run!==forceRun||STATE.layout!=='force')return;for(let k=0;k<3;k++){for(let i=0;i<v.length;i++){v[i].vx+=(v[i].ox-v[i].x)*.0014;v[i].vy+=(v[i].oy-v[i].y)*.0014;for(let j=i+1;j<v.length;j++){let dx=v[i].x-v[j].x,dy=v[i].y-v[j].y;if(!dx&&!dy){dx=.1;dy=.2;}const dist=Math.sqrt(dx*dx+dy*dy),f=Math.min(4,1800/Math.max(120,dist*dist));v[i].vx+=dx/dist*f;v[i].vy+=dy/dist*f;v[j].vx-=dx/dist*f;v[j].vy-=dy/dist*f;}}
+ for(const[a,b]of links){const dx=v[b].x-v[a].x,dy=v[b].y-v[a].y,dist=Math.max(1,Math.hypot(dx,dy)),f=(dist-280)*.002;v[a].vx+=dx/dist*f;v[a].vy+=dy/dist*f;v[b].vx-=dx/dist*f;v[b].vy-=dy/dist*f;}
+ for(let i=0;i<v.length;i++){v[i].vx*=.78;v[i].vy*=.78;v[i].x+=v[i].vx;v[i].y+=v[i].vy;positions.set(ns[i].id,{x:v[i].x,y:v[i].y});}tick++;}render();if(tick<150)requestAnimationFrame(step);else fit();}step();}
+for(const[t,meta]of Object.entries(TYPES)){
+ const opt=document.createElement('option');opt.value=t;opt.textContent=t+' · '+meta.label;$('type').appendChild(opt);
+ const marker=svg('marker',{id:'arrow-'+t,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto','markerUnits':'strokeWidth'},$('defs'));svg('path',{d:'M 0 0 L 10 5 L 0 10 z',fill:meta.color},marker);
+}
+$('legend').innerHTML=Object.entries(TYPES).map(([t,m])=>`<span style="border-color:${m.color}">${m.label}</span>`).join('');
+for(const key of ['project','type','status'])$(key).addEventListener('change',()=>{STATE[key]=$(key).value;STATE.selected=null;overview();fit();});
+$('search').addEventListener('input',()=>{STATE.search=$('search').value;STATE.selected=null;overview();fit();});
+for(const key of ['docs','roles'])$(key).addEventListener('change',()=>{STATE[key]=$(key).checked;render();if(STATE.selected)renderDetails(STATE.selected);if(key==='docs')fit();});
+$('layoutMode').addEventListener('change',()=>{STATE.layout=$('layoutMode').value;if(STATE.layout==='force')forceLayout();else{forceRun++;for(const n of [...DATA.entities,...DATA.hyperedges])positions.set(n.id,{x:n.x,y:n.y});render();fit();}});
+$('semantic').addEventListener('click',()=>mode('semantic'));$('files').addEventListener('click',()=>mode('files'));$('allRelations').addEventListener('click',overview);
+document.querySelectorAll('[data-tour]').forEach(b=>b.addEventListener('click',()=>{reset();select(b.getAttribute('data-tour'));}));
+$('zoomIn').addEventListener('click',()=>zoom(1.3));$('zoomOut').addEventListener('click',()=>zoom(1/1.3));$('fit').addEventListener('click',fit);$('reset').addEventListener('click',reset);
+$('graph').addEventListener('wheel',ev=>{ev.preventDefault();const r=$('graph').getBoundingClientRect();zoom(Math.exp(-ev.deltaY*.0015),ev.clientX-r.left,ev.clientY-r.top);},{passive:false});
+$('graph').addEventListener('pointerdown',ev=>{if(ev.button!==0)return;pan={x:ev.clientX,y:ev.clientY,tx:STATE.tx,ty:STATE.ty};$('graph').setPointerCapture?.(ev.pointerId);});
+$('graph').addEventListener('pointermove',ev=>{if(drag){const p=positions.get(drag.id);p.x=drag.px+(ev.clientX-drag.x)/STATE.scale;p.y=drag.py+(ev.clientY-drag.y)/STATE.scale;render();}else if(pan){STATE.tx=pan.tx+ev.clientX-pan.x;STATE.ty=pan.ty+ev.clientY-pan.y;transform();}});
+for(const ev of ['pointerup','pointercancel'])$('graph').addEventListener(ev,()=>{pan=null;drag=null;});
+$('minimap').addEventListener('click',ev=>{const r=$('minimap').getBoundingClientRect(),b=$('minimap')._bbox;if(!b)return;const x=b.x-40+(ev.clientX-r.left)/r.width*(b.w+80),y=b.y-40+(ev.clientY-r.top)/r.height*(b.h+80),g=$('graph').getBoundingClientRect();STATE.tx=g.width/2-x*STATE.scale;STATE.ty=g.height/2-y*STATE.scale;transform();});
+window.addEventListener('resize',fit);
+window.HypergraphAPI={DATA,STATE,positions,visibleSet,selectionSets,select,reset,fit,zoom,mode,render,renderFiles,downloadAsset,forceLayout};
+drawBands();overview();fit();
+</script>
+</body></html>

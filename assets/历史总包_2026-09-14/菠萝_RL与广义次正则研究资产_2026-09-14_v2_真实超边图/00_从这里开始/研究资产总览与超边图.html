@@ -1,0 +1,1879 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>菠萝 · RL 与广义次正则研究资产</title>
+<style>
+:root{--bg:#f6f8fa;--paper:#fff;--ink:#172c3f;--muted:#657585;--line:#dce3e9;--accent:#116b63;--subtle:#e9f3f0;--shadow:0 6px 28px #18364509;--proved:#15856b;--pending:#b67b14;--obstructed:#bd4d59;--covered:#7e63ad;--reference:#5e778f;--superseded:#80838a;--not-executed:#4a7ea4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans CJK SC","Microsoft YaHei",sans-serif}button,input,select{font:inherit;color:inherit}button,select{cursor:pointer}button,a,input,select{outline-offset:4px}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.wrap{max-width:1500px;margin:auto;padding:0 32px}.top{background:var(--paper);border-bottom:1px solid var(--line)}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:15px;padding-bottom:15px}.brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:.02em}.mark{width:34px;height:34px;border-radius:10px;background:var(--accent);color:white;display:grid;place-items:center;font-size:20px}.topnav{display:flex;gap:19px;align-items:center;font-size:12px}.hero{padding-top:35px;padding-bottom:26px}.eyebrow{font-size:11px;letter-spacing:.18em;color:var(--accent);font-weight:800}.hero h1{font-size:clamp(25px,3vw,39px);line-height:1.25;letter-spacing:-.03em;margin:10px 0 13px}.lead{max-width:900px;color:var(--muted);margin:0}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:19px}.tag{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper);border-radius:20px;padding:3px 10px;font-size:11px}.tag i,.dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--accent);margin-right:6px}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:26px}.stat{padding:17px 20px;border:1px solid var(--line);background:var(--paper);border-radius:12px;box-shadow:var(--shadow)}.stat strong{font-size:24px;display:block;line-height:1.15;margin-bottom:8px}.stat span{color:var(--muted);font-size:12px}.stat .small{font-size:17px}.notice{border:1px solid #ddbc764f;background:color-mix(in srgb,var(--pending) 7%,var(--paper));border-radius:10px;padding:12px 16px;margin:5px 0 21px;font-size:12px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--paper);border:1px solid var(--line);padding:15px;border-radius:12px}.search{position:relative;flex:1;min-width:230px}.search span{position:absolute;left:12px;top:7px;color:var(--muted);font-size:19px}.search input{width:100%;padding:9px 12px 9px 38px;background:var(--bg);border:1px solid var(--line);border-radius:7px}select{border:1px solid var(--line);background:var(--paper);border-radius:7px;padding:9px 29px 9px 10px;max-width:210px}.btn{border:1px solid var(--line);background:var(--paper);border-radius:7px;padding:7px 12px}.btn:hover{background:var(--subtle)}.tabs{display:flex;gap:4px}.tabs button{background:transparent;border:0;padding:7px 13px;border-radius:6px;color:var(--muted)}.tabs button[aria-selected=true]{color:var(--accent);background:var(--subtle);font-weight:700}.viewbar{display:flex;align-items:center;justify-content:space-between;margin:17px 0 12px;gap:12px}.result{font-size:12px;color:var(--muted)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:17px;align-items:start;margin-bottom:30px}.canvas,.detail{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}.canvas-head{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.canvas-head h2{font-size:16px;margin:0}.canvas-head p{font-size:11px;color:var(--muted);margin:3px 0 0}.graph-head{padding:15px 18px;background:linear-gradient(110deg,var(--subtle),var(--paper));border-bottom:1px solid var(--line)}.graph-head select{max-width:100%;width:100%;padding:9px}.graph-caption{font-size:11px;color:var(--muted);margin:8px 0 0}.graphstage{overflow:auto;min-height:470px;touch-action:pan-y}svg{display:block;width:100%;min-width:580px;height:auto;user-select:none}.edge-line{fill:none;stroke-width:2;opacity:.36}.edge-line.highlight{opacity:.92;stroke-width:3}.node{cursor:pointer}.node rect{fill:var(--paper);stroke:var(--line);stroke-width:1.25}.node:hover rect,.node:focus rect{stroke:var(--accent);stroke-width:2}.node.dim{opacity:.25}.node.active rect{stroke:var(--accent);stroke-width:2.5;fill:var(--subtle)}.node .role{font-size:10px;fill:var(--muted)}.node .label{font-size:13px;fill:var(--ink);font-weight:600}.hub{cursor:pointer}.hub rect{fill:var(--paper);stroke-width:1.7}.hub text{fill:var(--ink);font-size:13px;font-weight:700}.hub .hubsub{fill:var(--muted);font-size:10px;font-weight:400}.legend{display:flex;flex-wrap:wrap;gap:9px 16px;padding:13px 20px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}.legend span{white-space:nowrap}.detail{position:sticky;top:16px}.detail-top{padding:20px 21px 15px;border-bottom:1px solid var(--line)}.detail-top .eyebrow{font-size:10px}.detail h3{font-size:17px;margin:9px 0 10px;line-height:1.5;overflow-wrap:anywhere}.status{font-size:10px;font-weight:700;border:1px solid;border-radius:5px;padding:3px 6px;display:inline-block}.detail-body{padding:17px 21px;max-height:650px;overflow:auto}.detail h4{font-size:11px;margin:19px 0 5px;color:var(--muted);font-weight:600}.detail h4:first-child{margin-top:0}.detail p{margin:0;font-size:12px}.detail code{display:block;white-space:normal;word-break:break-all;font-size:10px;color:var(--muted);background:var(--bg);padding:8px;border-radius:6px}.open{display:block;background:var(--accent);color:white;text-align:center;padding:10px;border-radius:7px;font-size:12px;margin-bottom:12px}.open:hover{filter:brightness(1.1);text-decoration:none}.related{display:block;width:100%;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:6px;font-size:11px;padding:8px 9px;margin:6px 0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;padding:18px}.asset-card{border:1px solid var(--line);border-radius:9px;padding:16px;cursor:pointer;min-width:0}.asset-card:hover{border-color:var(--accent)}.asset-card h3{font-size:13px;line-height:1.6;margin:10px 0 6px;overflow-wrap:anywhere}.asset-card p{font-size:11px;color:var(--muted);margin:6px 0}.card-bottom{display:flex;gap:12px;justify-content:space-between;margin-top:13px;font-size:11px}.directory{padding:18px}.directory details{border-bottom:1px solid var(--line);padding:9px 0}.directory summary{font-weight:700;cursor:pointer;font-size:13px}.file-row{display:flex;gap:10px;align-items:center;padding:9px 3px;border-bottom:1px solid var(--line);font-size:12px}.file-row button{background:none;border:0;text-align:left;padding:0;color:var(--ink);flex:1;min-width:0;overflow-wrap:anywhere}.file-row a{font-size:11px;white-space:nowrap}.empty{padding:45px 25px;color:var(--muted);text-align:center;font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding:22px 0 32px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}[hidden]{display:none!important}.theme{font-size:12px;padding:4px 9px}#live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#101820;--paper:#18232e;--ink:#dfebf5;--muted:#98aaba;--line:#304251;--accent:#70c8b5;--subtle:#19382f;--shadow:0 6px 28px #0002;--proved:#51c4a3;--pending:#e4b556;--obstructed:#e77f8a;--covered:#b89fe1;--reference:#93adc4;--superseded:#a2a6ae;--not-executed:#80b4d6}}
+:root[data-theme=dark]{--bg:#101820;--paper:#18232e;--ink:#dfebf5;--muted:#98aaba;--line:#304251;--accent:#70c8b5;--subtle:#19382f;--shadow:0 6px 28px #0002;--proved:#51c4a3;--pending:#e4b556;--obstructed:#e77f8a;--covered:#b89fe1;--reference:#93adc4;--superseded:#a2a6ae;--not-executed:#80b4d6}
+@media(max-width:1050px){.wrap{padding-left:20px;padding-right:20px}.workspace{grid-template-columns:minmax(0,1fr) 290px}.topnav a:nth-child(2){display:none}.stat{padding:15px}.detail-top,.detail-body{padding-left:17px;padding-right:17px}.cards{grid-template-columns:1fr}}
+@media(max-width:760px){.wrap{padding-left:15px;padding-right:15px}.top .wrap{padding-top:11px;padding-bottom:11px}.topnav{gap:10px}.topnav a{display:none}.brand{font-size:12px}.hero{padding-top:24px}.hero h1{font-size:27px}.statgrid{grid-template-columns:repeat(2,1fr);gap:9px;margin-top:19px}.stat strong{font-size:22px}.stat .small{font-size:15px}.workspace{grid-template-columns:1fr;gap:13px}.detail{position:static}.detail-body{max-height:none}.toolbar{gap:8px;padding:11px}.search{flex-basis:100%}.toolbar select{flex:1;min-width:0;width:29%;font-size:11px;padding-left:6px;padding-right:15px}.viewbar{align-items:start}.tabs button{padding:7px 10px}.result{padding-top:8px;font-size:10px}.canvas-head{padding:13px}.canvas-head h2{font-size:14px}.graphstage{min-height:360px}svg{min-width:650px}.graph-caption:after{content:' 手机可横向滑动图面，点击文件后向下查看详情。'}.notice{font-size:11px}.cards{grid-template-columns:1fr}.foot{font-size:10px}.detail h3{font-size:16px}}
+@media(prefers-reduced-motion:no-preference){.node,.asset-card,button{transition:opacity .18s,background .18s,border-color .18s}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand"><span class="mark" aria-hidden="true">菠</span><span>菠萝 / 研究资产</span></div><nav class="topnav" aria-label="主要入口"><a href="README_研究资产导航.md">阅读指南</a><a href="给未来Codex和PRO的使用说明.md">Codex / PRO 接力</a><button id="theme" class="btn theme">切换深浅色</button></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="eyebrow">RESEARCH ASSETS · 2026.09.14</div><h1>从成果出发，沿证据继续研究。</h1><p class="lead">RL–PPA、锥优化与随机 Markov 三条主线的精选研究资产。保留原始证明、独立审计、关键反例与可复现源文件；这是一份研究快照，不是一张“全部完成”的通行证。</p><div class="tags"><span class="tag"><i></i>完全离线 · 无外部资源</span><span class="tag">原件字节保留 · SHA256 可追溯</span><span class="tag">候选与负结果单独标记</span></div><div class="statgrid"><div class="stat"><strong id="nassets">—</strong><span>精选资产 / 含整理层</span></div><div class="stat"><strong id="nedges">—</strong><span>多元证据超边</span></div><div class="stat"><strong class="small">数学 ≠ 优先权</strong><span>状态逐命题解释</span></div><div class="stat"><strong class="small">三条主线 · 一份计划</strong><span>混沌只作侦察，不计成果</span></div></div></section>
+<aside class="notice"><strong>当前门槛：</strong>RL 的 T4 未完全闭合、T5 暂定；锥稿最成熟，但 M01 正式发表版仍待逐定理比较；Markov 有可靠正负结果，尚无统一正式论文。本次未执行数学脚本、未重编译、未重新检索文献。</aside>
+<section class="toolbar" aria-label="筛选资产"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索中文用途、原文件名、结论或状态…" aria-label="搜索资产"></label><select id="project" aria-label="按项目筛选"><option value="">全部项目</option></select><select id="kind" aria-label="按类型筛选"><option value="">全部类型</option></select><select id="status" aria-label="按证据状态筛选"><option value="">全部证据状态</option></select><button class="btn" id="reset">重置布局</button></section>
+<div class="viewbar"><div class="tabs" role="tablist" aria-label="切换视图"><button role="tab" id="tab-graph" data-view="graph" aria-selected="true">超边图</button><button role="tab" id="tab-cards" data-view="cards" aria-selected="false">资产卡片</button><button role="tab" id="tab-directory" data-view="directory" aria-selected="false">目录</button></div><div class="result" id="count" aria-live="polite"></div></div>
+<div class="workspace"><section class="canvas"><div class="canvas-head"><div><h2 id="view-title">研究关系 · 多元超边视图</h2><p>连接依据完整资产，而不是将文件数量当成证明强度。</p></div><span class="tag" id="edge-badge">研究关系</span></div><div id="graph-view"><div class="graph-head"><select id="edge" aria-label="选择成果超边"></select><p class="graph-caption">菱形为一条超边，同时关联多个角色。虚线表示候选 / 未闭合关系；节点颜色不是全文件“通过”标签。</p></div><div class="graphstage" id="graphstage"><svg id="graph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" role="img" aria-label="研究成果与定义、证明、审计、实例、程序、主稿的多元超边关系"></svg></div></div><div id="cards-view" hidden><div class="cards" id="cards"></div></div><div id="directory-view" hidden><div class="directory" id="directory"></div></div><div class="legend" id="legend"></div></section><aside class="detail" aria-label="资产详情" id="detail"></aside></div>
+<footer class="foot"><span>整理层 · 保留科学边界 · 不新增数学验收</span><span><a href="manifest.json">manifest</a> · <a href="资产关系数据.json">关系数据</a> · <a href="文件来源与中文名称对照.csv">来源对照</a> · <a href="SHA256文件校验清单.txt">SHA256 校验</a></span></footer>
+</main><div id="live" role="status" aria-live="polite"></div>
+<noscript><p style="padding:30px">交互视图需要浏览器启用 JavaScript；无需网络。仍可打开 <a href="README_研究资产导航.md">研究导航</a> 阅读所有目录。</p></noscript>
+<script id="asset-data" type="application/json">{
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-14",
+  "layer": "整理层",
+  "projects": [
+    {
+      "id": "00",
+      "name": "从这里开始",
+      "path": "00_从这里开始"
+    },
+    {
+      "id": "01",
+      "name": "RL_PPA核心理论",
+      "path": "01_RL_PPA核心理论"
+    },
+    {
+      "id": "02",
+      "name": "锥优化_CRSC_MSCQ",
+      "path": "02_锥优化_CRSC_MSCQ"
+    },
+    {
+      "id": "03",
+      "name": "随机与Markov理论",
+      "path": "03_随机与Markov理论"
+    },
+    {
+      "id": "04",
+      "name": "公开问题与未来攻关",
+      "path": "04_公开问题与未来攻关"
+    },
+    {
+      "id": "05",
+      "name": "文献证据与来源快照",
+      "path": "05_文献证据与来源快照"
+    },
+    {
+      "id": "06",
+      "name": "关键失败与研究边界",
+      "path": "06_关键失败与研究边界"
+    }
+  ],
+  "statuses": {
+    "PROVED": {
+      "label": "项目内已证",
+      "meaning": "指定命题有项目证明与明确审计；不是发表、形式化或优先权认证"
+    },
+    "PENDING": {
+      "label": "尚待闭合",
+      "meaning": "候选、修复、合稿、优先权或适用性待核"
+    },
+    "OBSTRUCTED": {
+      "label": "指定路线受阻",
+      "meaning": "精确作用域内的不可能性 / 反例，通常是有价值负结果"
+    },
+    "ALREADY_COVERED": {
+      "label": "旧机制覆盖",
+      "meaning": "仅扣除已明确覆盖的主张；同文件其他命题分别判断"
+    },
+    "REFERENCE": {
+      "label": "来源 / 整理层",
+      "meaning": "不赋予数学结论"
+    },
+    "SUPERSEDED": {
+      "label": "历史已替代",
+      "meaning": "保留追溯，不作当前排序或验收"
+    },
+    "NOT_EXECUTED": {
+      "label": "本次未运行",
+      "meaning": "纳入代码仅完成语法检查；未执行数学验证"
+    }
+  },
+  "nodes": [
+    {
+      "id": "rl_pdf",
+      "title": "RL与广义次正则_当前排版论文.pdf",
+      "short_title": "RL与广义次正则_当前排版论文",
+      "project": "01",
+      "type": "主稿",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前排版论文.pdf",
+      "href": "../01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前排版论文.pdf",
+      "source": "output/pdf/RL_PPA_generalized_subregularity_Boluo.pdf",
+      "purpose": "当前可阅读论文，配合审计使用",
+      "conclusion": "T4 尚未完全闭合；T5 暂定，排版完成不等于研究验收。",
+      "authoritative": true,
+      "sha256": "e0289b1f9e76fddd174986a009fbaf2db1ba3b51476689d517a22fd0b4c2aaae"
+    },
+    {
+      "id": "rl_tex",
+      "title": "RL与广义次正则_当前论文源.tex",
+      "short_title": "RL与广义次正则_当前论文源",
+      "project": "01",
+      "type": "源文件",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前论文源.tex",
+      "href": "../01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前论文源.tex",
+      "source": "output/pdf/RL_PPA_generalized_subregularity_Boluo.tex",
+      "purpose": "当前 PDF 对应 TeX；XeLaTeX 构建",
+      "conclusion": "保留正文原字节；并未将审稿修订静默写入。",
+      "authoritative": true,
+      "sha256": "8d0565a57c6580f9ddf7264560bde5a07215af1238033efdc11bb5fe71db56e8"
+    },
+    {
+      "id": "rl_font",
+      "title": "author_boluo.png",
+      "short_title": "author_boluo",
+      "project": "01",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "01_RL_PPA核心理论/01_论文主稿/author_boluo.png",
+      "href": "../01_RL_PPA核心理论/01_论文主稿/author_boluo.png",
+      "source": "output/pdf/author_boluo.png",
+      "purpose": "作者中文署名图，TeX 硬编码依赖",
+      "conclusion": "为保证编译保留机器依赖名；非研究结果。",
+      "authoritative": true,
+      "sha256": "31443d3720ddc30e4e63342afd177119e2813f9b4d45652153b58963a5b2aaf1"
+    },
+    {
+      "id": "rl_md",
+      "title": "RL核心数学合稿_T5_2026-09-07.md",
+      "short_title": "RL核心数学合稿_T5_2026-09-07",
+      "project": "01",
+      "type": "主稿",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/01_论文主稿/RL核心数学合稿_T5_2026-09-07.md",
+      "href": "../01_RL_PPA核心理论/01_论文主稿/RL核心数学合稿_T5_2026-09-07.md",
+      "source": "upload/01-RL_PPA_T5_core_manuscript_2026-09-07.md",
+      "purpose": "最终敌对审稿引用行号的原始合稿",
+      "conclusion": "内部 accepted 语句不能覆盖后续修复审稿。",
+      "authoritative": true,
+      "sha256": "8bc3d4906f9d28ca349aad1df068eb8d5f9272d65bb731346f0949f63b9975e9"
+    },
+    {
+      "id": "rl_deriv",
+      "title": "RL与次正则_原始主推导.md",
+      "short_title": "RL与次正则_原始主推导",
+      "project": "01",
+      "type": "定义与推导",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/02_核心推导/RL与次正则_原始主推导.md",
+      "href": "../01_RL_PPA核心理论/02_核心推导/RL与次正则_原始主推导.md",
+      "source": "main_derivations.md",
+      "purpose": "原始概念与推导起点",
+      "conclusion": "历史推导须服从较新量词、作用域和反例修正。",
+      "authoritative": false,
+      "sha256": "88beb6be932bae4f9c4af78c864b5b1dc8814e4cc86ff4bc13c28d03e7337369"
+    },
+    {
+      "id": "rl_chain",
+      "title": "核心定理链_补位终审与完整量词.md",
+      "short_title": "核心定理链_补位终审与完整量词",
+      "project": "01",
+      "type": "证明",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/02_核心推导/核心定理链_补位终审与完整量词.md",
+      "href": "../01_RL_PPA核心理论/02_核心推导/核心定理链_补位终审与完整量词.md",
+      "source": "t4_theorem_rescue.md",
+      "purpose": "允许转移、coverage、半径与有限长定理链",
+      "conclusion": "给出修复后的定理链；不是当前论文自动通过证明。",
+      "authoritative": false,
+      "sha256": "0aada547bb4fddba1abb121e0cff03e5af55e491bc49eab6d3c6816bb91bddac"
+    },
+    {
+      "id": "rl_root",
+      "title": "独立证书组合_第二阶段根推导.md",
+      "short_title": "独立证书组合_第二阶段根推导",
+      "project": "01",
+      "type": "定义与推导",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/02_核心推导/独立证书组合_第二阶段根推导.md",
+      "href": "../01_RL_PPA核心理论/02_核心推导/独立证书组合_第二阶段根推导.md",
+      "source": "phase2_root_derivations.md",
+      "purpose": "两侧独立证书及统一一步接口",
+      "conclusion": "同一合法转移与同一目标是组合前提。",
+      "authoritative": false,
+      "sha256": "291c5b79461230d89e9ad33edbec875ff630afea213817bc9d2b99ef6caba433"
+    },
+    {
+      "id": "rl_natural",
+      "title": "支撑函数与法锥_自然类推导.md",
+      "short_title": "支撑函数与法锥_自然类推导",
+      "project": "01",
+      "type": "例子",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md",
+      "href": "../01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md",
+      "source": "phase2_natural_classes.md",
+      "purpose": "自然类与非孤立解集实例",
+      "conclusion": "包含历史参数化结果；最终范围以合稿及重审为准。",
+      "authoritative": false,
+      "sha256": "abe082412883506ab76bdcc2b653f7971ecacb82205dd7cbe632186c84e8c2c9"
+    },
+    {
+      "id": "rl_separate",
+      "title": "指定竞争证书_分离与退化幸存者.md",
+      "short_title": "指定竞争证书_分离与退化幸存者",
+      "project": "01",
+      "type": "反例",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/05_实例与反例/指定竞争证书_分离与退化幸存者.md",
+      "href": "../01_RL_PPA核心理论/05_实例与反例/指定竞争证书_分离与退化幸存者.md",
+      "source": "phase2_competitor_separation.md",
+      "purpose": "限定测试的比较与反例",
+      "conclusion": "不能推出所有 matrix 或 partial 理论均失败。",
+      "authoritative": false,
+      "sha256": "5f79dcee04a16fce8bc4993c7058399d4c7d1842121efc4c00de328511beeed9"
+    },
+    {
+      "id": "rl_synthesis",
+      "title": "独立接口_对抗综合与作用域.md",
+      "short_title": "独立接口_对抗综合与作用域",
+      "project": "01",
+      "type": "理论升级",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/03_判别方法与理论升级/独立接口_对抗综合与作用域.md",
+      "href": "../01_RL_PPA核心理论/03_判别方法与理论升级/独立接口_对抗综合与作用域.md",
+      "source": "phase2_adversarial_synthesis.md",
+      "purpose": "两侧独立验证的合法组合地图",
+      "conclusion": "不要求统一黑箱；保留作用域和可继续性。",
+      "authoritative": false,
+      "sha256": "b9c3beb06b4835bb08b30ae0bef5524c2ceeee06beef5bb2a1ac37dfbcf3b4f7"
+    },
+    {
+      "id": "rl_arch",
+      "title": "RL旗舰升级_架构与待攻关接口.md",
+      "short_title": "RL旗舰升级_架构与待攻关接口",
+      "project": "01",
+      "type": "任务架构",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/03_判别方法与理论升级/RL旗舰升级_架构与待攻关接口.md",
+      "href": "../01_RL_PPA核心理论/03_判别方法与理论升级/RL旗舰升级_架构与待攻关接口.md",
+      "source": "output/RL_FLAGSHIP_UPGRADE_ARCHITECTURE.md",
+      "purpose": "从成熟接口到旗舰缺口的架构",
+      "conclusion": "架构和候选接口不能当作已证明新定理。",
+      "authoritative": false,
+      "sha256": "c346477dc8ed1f372e94adafbc98f5d39249fbcce9a94654f9e014d8d1560c09"
+    },
+    {
+      "id": "rl_path",
+      "title": "多步路径与有限捕获_RL研究札记_2026-09-09.md",
+      "short_title": "多步路径与有限捕获_RL研究札记_2026-09-09",
+      "project": "01",
+      "type": "理论升级",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md",
+      "href": "../01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md",
+      "source": "output/MULTISTEP_PATHWISE_RL_RESEARCH_NOTE_2026-09-09.md",
+      "purpose": "合法路径语言、块端点及中间步预算",
+      "conclusion": "有项目内证明；精确形式全球优先权及统一合稿审计待核。",
+      "authoritative": false,
+      "sha256": "74d9a2b464aba8d9b585b7c30e61b8faca8eab78b23da7f634cac04c5a18b4b4"
+    },
+    {
+      "id": "rl_c11",
+      "title": "C11复合次正则_定量模块与未解边界.md",
+      "short_title": "C11复合次正则_定量模块与未解边界",
+      "project": "01",
+      "type": "理论升级",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md",
+      "href": "../01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md",
+      "source": "output/ATTACK_C11_COMPOSITE_GENERALIZED_SUBREGULARITY.md",
+      "purpose": "同目标复合验证器、非幂 gauge 与二阶目标",
+      "conclusion": "现有模块 PROVED 的作者内裁定不等于公开方向全解；秩亏活动变化仍待攻。",
+      "authoritative": false,
+      "sha256": "d9f9e5c53c41d827a7fd25250fbd5cbee3c3f2d08c41d245dc9b8f552b084619"
+    },
+    {
+      "id": "rl_audit",
+      "title": "定理量词与精确性_独立数学审计_T4.md",
+      "short_title": "定理量词与精确性_独立数学审计_T4",
+      "project": "01",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/定理量词与精确性_独立数学审计_T4.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/定理量词与精确性_独立数学审计_T4.md",
+      "source": "t4_proof_audit.md",
+      "purpose": "独立检查量词、预算、半径和最佳指数",
+      "conclusion": "结论 CONDITIONALLY_READY / REPAIR；原报告修复项须逐条对应。",
+      "authoritative": false,
+      "sha256": "11638100ad65607b8a22bb141e8b8dc15a5c93c4e9a3c6389078341bd8d9231a"
+    },
+    {
+      "id": "rl_lit",
+      "title": "理论谱系与贡献边界_文献论证_T4.md",
+      "short_title": "理论谱系与贡献边界_文献论证_T4",
+      "project": "01",
+      "type": "文献证据",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/理论谱系与贡献边界_文献论证_T4.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/理论谱系与贡献边界_文献论证_T4.md",
+      "source": "t4_literature_argument.md",
+      "purpose": "比较框架与来源范围",
+      "conclusion": "文献定位为历史检索证据，不是 2026-09-14 新检索。",
+      "authoritative": false,
+      "sha256": "e5b73c1aa83ce6266895e5912263843acc1c7e45829999af01da0876c50e049e"
+    },
+    {
+      "id": "rl_red",
+      "title": "核心论证框架_敌对审稿_T4.md",
+      "short_title": "核心论证框架_敌对审稿_T4",
+      "project": "01",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/核心论证框架_敌对审稿_T4.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/核心论证框架_敌对审稿_T4.md",
+      "source": "t4_reviewer_redteam.md",
+      "purpose": "框架与贡献红队",
+      "conclusion": "不得将候选阶段验收升级为发表准备。",
+      "authoritative": false,
+      "sha256": "5c0c211ef0907efb5ace5e3783f69b99574f4ef450ffe112ea1ab469d1b7833e"
+    },
+    {
+      "id": "rl_delta",
+      "title": "最终合稿_代数与定理差异复核_T5A.md",
+      "short_title": "最终合稿_代数与定理差异复核_T5A",
+      "project": "01",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_代数与定理差异复核_T5A.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_代数与定理差异复核_T5A.md",
+      "source": "T5_AUDIT_A_FINAL_MANUSCRIPT_DELTA.md",
+      "purpose": "真实合稿的代数复核与差异",
+      "conclusion": "按其实际版本和行号使用。",
+      "authoritative": false,
+      "sha256": "4ad5e7214b9c61beb04d0e4b1af1c8c95cd5a44aefe535e1066e1b15b1bacb78"
+    },
+    {
+      "id": "rl_recheck",
+      "title": "最终合稿_实例常数与反例重审_T5E.md",
+      "short_title": "最终合稿_实例常数与反例重审_T5E",
+      "project": "01",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_实例常数与反例重审_T5E.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_实例常数与反例重审_T5E.md",
+      "source": "T5_AUDIT_E_MERGED_RECHECK.md",
+      "purpose": "实例、最佳指数、正常直接证明、反向例重审",
+      "conclusion": "聚合率与真实率、AP-RL 与弱接口必须分开。",
+      "authoritative": false,
+      "sha256": "20002ded0e0acfa115c3303b040f00399695f29a3573f06480d49f216529f428"
+    },
+    {
+      "id": "rl_referee",
+      "title": "总体敌对审稿_修复清单与PRO导入许可_T5F.md",
+      "short_title": "总体敌对审稿_修复清单与PRO导入许可_T5F",
+      "project": "01",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/总体敌对审稿_修复清单与PRO导入许可_T5F.md",
+      "href": "../01_RL_PPA核心理论/04_证明审计与敌对审稿/总体敌对审稿_修复清单与PRO导入许可_T5F.md",
+      "source": "T5_AUDIT_F_REFEREE.md",
+      "purpose": "当前可信度和导入限制的首要审计入口",
+      "conclusion": "第 0 节优先于历史模块判断；REPAIRABLE，投稿 NOT_READY。",
+      "authoritative": true,
+      "sha256": "c8051e2b5c6b8aba640bdda54dc873b33476c7c99d4719e854a4cadada67945e"
+    },
+    {
+      "id": "rl_test",
+      "title": "验证_RL合稿实例与常数.py",
+      "short_title": "验证_RL合稿实例与常数",
+      "project": "01",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "01_RL_PPA核心理论/06_验证程序/验证_RL合稿实例与常数.py",
+      "href": "../01_RL_PPA核心理论/06_验证程序/验证_RL合稿实例与常数.py",
+      "source": "T5_AUDIT_E_checks.py",
+      "purpose": "实例与常数复核脚本",
+      "conclusion": "本次只做语法检查，不重新执行数学验证。",
+      "authoritative": false,
+      "sha256": "3a3dab8045bf30d722fab12d2c135f0b641b9ddcbb3d6fa8ffc029d6af587981"
+    },
+    {
+      "id": "c11_test",
+      "title": "验证_C11复合次正则.py",
+      "short_title": "验证_C11复合次正则",
+      "project": "01",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "01_RL_PPA核心理论/06_验证程序/验证_C11复合次正则.py",
+      "href": "../01_RL_PPA核心理论/06_验证程序/验证_C11复合次正则.py",
+      "source": "output/verify_c11_composite.py",
+      "purpose": "复合模块公式数值检查",
+      "conclusion": "程序不是普遍性数学证明。",
+      "authoritative": false,
+      "sha256": "c5324260c85b9f8c28ac5e0c30f3ae79520488efd3203d3a3ee45ecd8c052247"
+    },
+    {
+      "id": "conic_pdf",
+      "title": "冻结最小面CRSC与MSCQ_当前论文_v04.pdf",
+      "short_title": "冻结最小面CRSC与MSCQ_当前论文_v04",
+      "project": "02",
+      "type": "主稿",
+      "status": "PROVED",
+      "path": "02_锥优化_CRSC_MSCQ/01_论文主稿/冻结最小面CRSC与MSCQ_当前论文_v04.pdf",
+      "href": "../02_锥优化_CRSC_MSCQ/01_论文主稿/冻结最小面CRSC与MSCQ_当前论文_v04.pdf",
+      "source": "output/conic_paper/latex_v01/main.pdf",
+      "purpose": "当前最成熟锥论文 PDF",
+      "conclusion": "当前 main.pdf 对应构建报告 v0.4；数学核心有审计，M01 正式版优先权仍 PENDING。",
+      "authoritative": true,
+      "sha256": "273086ca09fbc68cbb0ee2eb59313994dc86b434281dcc8ff777618edc52b6c3"
+    },
+    {
+      "id": "conic_tex",
+      "title": "main.tex",
+      "short_title": "main",
+      "project": "02",
+      "type": "源文件",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/main.tex",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/main.tex",
+      "source": "output/conic_paper/latex_v01/main.tex",
+      "purpose": "主稿源文件",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "4da7f81e1907a866f656eb2ab4da98e1efc2f156c5370c89016f2cba3c7a9af3"
+    },
+    {
+      "id": "conic_bib",
+      "title": "references.bib",
+      "short_title": "references",
+      "project": "02",
+      "type": "文献证据",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/references.bib",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/references.bib",
+      "source": "output/conic_paper/latex_v01/references.bib",
+      "purpose": "13 条书目记录；含正式版与作者稿分列",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "14cf0474d90a34fa9c3aa4b89bf409446aca78975d31925823861fd1d4533ef5"
+    },
+    {
+      "id": "conic_bbl",
+      "title": "main.bbl",
+      "short_title": "main",
+      "project": "02",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/main.bbl",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/main.bbl",
+      "source": "output/conic_paper/latex_v01/main.bbl",
+      "purpose": "已生成书目，便于离线复现",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "75cc4d3dd2cbc30c58722f5929c16e4edaf19c47773162ea533ff4e3d6a9ca18"
+    },
+    {
+      "id": "conic_build",
+      "title": "build.sh",
+      "short_title": "build",
+      "project": "02",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/build.sh",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/build.sh",
+      "source": "output/conic_paper/latex_v01/build.sh",
+      "purpose": "原生产环境构建脚本",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "757c605db6fe0d74ae6b9bf5ac02fda2bd48bc173f3d0fa114d6c9b36b41bc4d"
+    },
+    {
+      "id": "conic_ttf",
+      "title": "author-cjk.ttf",
+      "short_title": "author-cjk",
+      "project": "02",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.ttf",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.ttf",
+      "source": "output/conic_paper/latex_v01/author-cjk.ttf",
+      "purpose": "中文作者 TrueType 字体子集",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "d6aef8f34ecff3ad54d910d5c324187cb20c629417291aa3a232ae7fc4c66ab5"
+    },
+    {
+      "id": "conic_enc",
+      "title": "author-cjk.enc",
+      "short_title": "author-cjk",
+      "project": "02",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.enc",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.enc",
+      "source": "output/conic_paper/latex_v01/author-cjk.enc",
+      "purpose": "作者字体 TeX 编码",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "61ea965bb94ec304c76eda1e1528320f62914f31cf9db1ec0ae096b16cf95e04"
+    },
+    {
+      "id": "conic_tfm",
+      "title": "author-cjk.tfm",
+      "short_title": "author-cjk",
+      "project": "02",
+      "type": "构建依赖",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.tfm",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/author-cjk.tfm",
+      "source": "output/conic_paper/latex_v01/author-cjk.tfm",
+      "purpose": "作者字体 TeX metrics",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "37b9b5e90901b5801752f43349a2a8c7e89ce0999e7756ccdd265cce30c88752"
+    },
+    {
+      "id": "conic_fontpy",
+      "title": "build_author_font.py",
+      "short_title": "build_author_font",
+      "project": "02",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/build_author_font.py",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/build_author_font.py",
+      "source": "output/conic_paper/latex_v01/build_author_font.py",
+      "purpose": "可选作者字体再生成；非普通编译前提",
+      "conclusion": "保留上游机器依赖名，避免改写或破坏原始源文件。",
+      "authoritative": true,
+      "sha256": "370dd0420fbf6927f5657b982926e613024bf3fe18916fb2f637e33e7a2579e0"
+    },
+    {
+      "id": "conic_readme",
+      "title": "原始构建与数学范围说明.md",
+      "short_title": "原始构建与数学范围说明",
+      "project": "02",
+      "type": "构建说明",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/原始构建与数学范围说明.md",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/原始构建与数学范围说明.md",
+      "source": "output/conic_paper/latex_v01/README.md",
+      "purpose": "原始构建与数学范围说明",
+      "conclusion": "原件保留；其中历史路径和版本记述不能视作当前可用文件承诺。",
+      "authoritative": true,
+      "sha256": "14b4fc8132f99e8b47136dff8a4ffe622a23359d31b5c25427f399c76284b720"
+    },
+    {
+      "id": "conic_report",
+      "title": "构建报告与版本核对_v04.md",
+      "short_title": "构建报告与版本核对_v04",
+      "project": "02",
+      "type": "构建说明",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/构建报告与版本核对_v04.md",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/构建报告与版本核对_v04.md",
+      "source": "output/conic_paper/latex_v01/BUILD_REPORT.md",
+      "purpose": "构建报告与版本核对_v04",
+      "conclusion": "原件保留；其中历史路径和版本记述不能视作当前可用文件承诺。",
+      "authoritative": true,
+      "sha256": "2b468477e4199db8beb39c22b4e2f2ec9fee95ccf75ff951bbae2b7d1bd943ad"
+    },
+    {
+      "id": "conic_fontsrc",
+      "title": "中文作者字体来源与再生成说明.md",
+      "short_title": "中文作者字体来源与再生成说明",
+      "project": "02",
+      "type": "构建说明",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/中文作者字体来源与再生成说明.md",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/中文作者字体来源与再生成说明.md",
+      "source": "output/conic_paper/latex_v01/FONT_SOURCE.md",
+      "purpose": "中文作者字体来源与再生成说明",
+      "conclusion": "原件保留；其中历史路径和版本记述不能视作当前可用文件承诺。",
+      "authoritative": true,
+      "sha256": "f1c8a973c94191fe80fd0c043fa97d09495cc7b0a0f8ea431673dc9492743c8d"
+    },
+    {
+      "id": "conic_ledger",
+      "title": "论文证据范围与未闭合门槛台账.md",
+      "short_title": "论文证据范围与未闭合门槛台账",
+      "project": "02",
+      "type": "文献证据",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/论文证据范围与未闭合门槛台账.md",
+      "href": "../02_锥优化_CRSC_MSCQ/02_可编译源文件/论文证据范围与未闭合门槛台账.md",
+      "source": "output/conic_paper/latex_v01/DRAFT_LEDGER.md",
+      "purpose": "论文证据范围与未闭合门槛台账",
+      "conclusion": "原件保留；其中历史路径和版本记述不能视作当前可用文件承诺。",
+      "authoritative": true,
+      "sha256": "bc8099c34a9402685c9b7decdc08c0089a96720b31117d4769617d36f6820777"
+    },
+    {
+      "id": "conic_core",
+      "title": "冻结CRSC_秩夹逼与MSCQ核心证明审计.md",
+      "short_title": "冻结CRSC_秩夹逼与MSCQ核心证明审计",
+      "project": "02",
+      "type": "审计",
+      "status": "PROVED",
+      "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/冻结CRSC_秩夹逼与MSCQ核心证明审计.md",
+      "href": "../02_锥优化_CRSC_MSCQ/03_核心证明审计/冻结CRSC_秩夹逼与MSCQ核心证明审计.md",
+      "source": "output/conic_paper/CORE_PROOF_AUDIT.md",
+      "purpose": "冻结CRSC_秩夹逼与MSCQ核心证明审计",
+      "conclusion": "核心链为项目内 PROVED；并非全球优先权认证。",
+      "authoritative": false,
+      "sha256": "e163ade04e7c5e3a82f6d44ed0034809ef519650ffc3758d1c95fc6de65d3280"
+    },
+    {
+      "id": "conic_boundary",
+      "title": "Nice非Amenable锥_边界反例与必要性审计.md",
+      "short_title": "Nice非Amenable锥_边界反例与必要性审计",
+      "project": "02",
+      "type": "反例",
+      "status": "OBSTRUCTED",
+      "path": "02_锥优化_CRSC_MSCQ/04_边界反例与优先权/Nice非Amenable锥_边界反例与必要性审计.md",
+      "href": "../02_锥优化_CRSC_MSCQ/04_边界反例与优先权/Nice非Amenable锥_边界反例与必要性审计.md",
+      "source": "output/conic_paper/BOUNDARY_COUNTEREXAMPLE_AUDIT.md",
+      "purpose": "Nice非Amenable锥_边界反例与必要性审计",
+      "conclusion": "nice 本身不足；LRS 真残差只证正且 O(t^5)，不能改写为 Θ(t^5)。",
+      "authoritative": false,
+      "sha256": "9fab8462655691771a570c04e940503d4015bfa5e57b75aff42cede08709ee9b"
+    },
+    {
+      "id": "conic_examples",
+      "title": "耦合SOC与PSD_正例及显式常数审计.md",
+      "short_title": "耦合SOC与PSD_正例及显式常数审计",
+      "project": "02",
+      "type": "例子",
+      "status": "PROVED",
+      "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/耦合SOC与PSD_正例及显式常数审计.md",
+      "href": "../02_锥优化_CRSC_MSCQ/03_核心证明审计/耦合SOC与PSD_正例及显式常数审计.md",
+      "source": "output/conic_paper/EXAMPLES_AND_CONSTANTS_AUDIT.md",
+      "purpose": "耦合SOC与PSD_正例及显式常数审计",
+      "conclusion": "两个主文正例及显式修复界；不声称最优通用常数。",
+      "authoritative": false,
+      "sha256": "f5a35d8bbbea1ecf8509f7475169cbca130697ce1d992968d205e780cbb93e12"
+    },
+    {
+      "id": "conic_priority",
+      "title": "CRSC与MSCQ_优先权及正式版证据矩阵.md",
+      "short_title": "CRSC与MSCQ_优先权及正式版证据矩阵",
+      "project": "02",
+      "type": "文献证据",
+      "status": "PENDING",
+      "path": "02_锥优化_CRSC_MSCQ/04_边界反例与优先权/CRSC与MSCQ_优先权及正式版证据矩阵.md",
+      "href": "../02_锥优化_CRSC_MSCQ/04_边界反例与优先权/CRSC与MSCQ_优先权及正式版证据矩阵.md",
+      "source": "output/conic_paper/PRIORITY_EVIDENCE_MATRIX.md",
+      "purpose": "CRSC与MSCQ_优先权及正式版证据矩阵",
+      "conclusion": "M01 正式发表版逐定理比较尚未完成。",
+      "authoritative": false,
+      "sha256": "29940cbcb539028e84fc01bfc23d06b7ae84fa67b473056edb0f60a9fa846ab2"
+    },
+    {
+      "id": "conic_arch",
+      "title": "锥论文_最终论证架构与依赖链.md",
+      "short_title": "锥论文_最终论证架构与依赖链",
+      "project": "02",
+      "type": "定义与推导",
+      "status": "PENDING",
+      "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/锥论文_最终论证架构与依赖链.md",
+      "href": "../02_锥优化_CRSC_MSCQ/03_核心证明审计/锥论文_最终论证架构与依赖链.md",
+      "source": "output/conic_paper/T4_argument_architecture.md",
+      "purpose": "锥论文_最终论证架构与依赖链",
+      "conclusion": "历史架构；当前正文以 v04 源文件为准。",
+      "authoritative": false,
+      "sha256": "5622b9ac9381e1df99cb042e7b210e19d2ace230800cc87c989271981b562ac3"
+    },
+    {
+      "id": "conic_test",
+      "title": "验证_SOC与PSD实例常数.py",
+      "short_title": "验证_SOC与PSD实例常数",
+      "project": "02",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "02_锥优化_CRSC_MSCQ/05_验证程序/验证_SOC与PSD实例常数.py",
+      "href": "../02_锥优化_CRSC_MSCQ/05_验证程序/验证_SOC与PSD实例常数.py",
+      "source": "output/conic_paper/verify_examples_constants.py",
+      "purpose": "验证_SOC与PSD实例常数",
+      "conclusion": "本次仅语法检查；数值下界比率不是真实锥距离认证。",
+      "authoritative": false,
+      "sha256": "667f22012eb86427e7817c13e6b7b8160549b46a3ca0d118502cf6f95f126fda"
+    },
+    {
+      "id": "stoch",
+      "title": "随机RL_合法耦合接口与提升障碍.md",
+      "short_title": "随机RL_合法耦合接口与提升障碍",
+      "project": "03",
+      "type": "定义与推导",
+      "status": "PENDING",
+      "path": "03_随机与Markov理论/01_随机RL主线/随机RL_合法耦合接口与提升障碍.md",
+      "href": "../03_随机与Markov理论/01_随机RL主线/随机RL_合法耦合接口与提升障碍.md",
+      "source": "output/STOCHASTIC_RL_THEORY_ATTACK.md",
+      "purpose": "随机RL_合法耦合接口与提升障碍",
+      "conclusion": "接口可用但原生兼容耦合未普遍构造；不能冒充已建立的随机 RL 旗舰。",
+      "authoritative": false,
+      "sha256": "94b4d0df4016189ad90bb0c6b301f23d097666da3d44db0074b22ddadc569f50"
+    },
+    {
+      "id": "finite",
+      "title": "有限状态_精确零集与线性误差界等价.md",
+      "short_title": "有限状态_精确零集与线性误差界等价",
+      "project": "03",
+      "type": "证明",
+      "status": "PROVED",
+      "path": "03_随机与Markov理论/02_有限状态分类/有限状态_精确零集与线性误差界等价.md",
+      "href": "../03_随机与Markov理论/02_有限状态分类/有限状态_精确零集与线性误差界等价.md",
+      "source": "output/MARKOV_FINITE_STATE_EXACT_ZERO_LINEAR_EB.md",
+      "purpose": "有限状态_精确零集与线性误差界等价",
+      "conclusion": "固定有限数据、原始嵌套 OT 残差；项目内证明与审计通过，优先权 PENDING。",
+      "authoritative": false,
+      "sha256": "0608f742257d34447292b83025bd40ea4768bd5f3972cd7cb224b9375669bf00"
+    },
+    {
+      "id": "finite_audit",
+      "title": "有限状态分类与惰性四循环_精确独立审计.md",
+      "short_title": "有限状态分类与惰性四循环_精确独立审计",
+      "project": "03",
+      "type": "审计",
+      "status": "PROVED",
+      "path": "03_随机与Markov理论/02_有限状态分类/有限状态分类与惰性四循环_精确独立审计.md",
+      "href": "../03_随机与Markov理论/02_有限状态分类/有限状态分类与惰性四循环_精确独立审计.md",
+      "source": "output/AUDIT_MARKOV_FINITE_STATE_LAZY4.md",
+      "purpose": "有限状态分类与惰性四循环_精确独立审计",
+      "conclusion": "锐界 13/p 与 source-rate 不兼容需保留不同量词。",
+      "authoritative": false,
+      "sha256": "fd3c3f75b9b7bf94b978c933fbae3e2a69467eaecf6fffaaa8451b49e3cd612b"
+    },
+    {
+      "id": "markov_counter",
+      "title": "有限与无限状态_反例及正则性障碍独立审计.md",
+      "short_title": "有限与无限状态_反例及正则性障碍独立审计",
+      "project": "03",
+      "type": "反例",
+      "status": "OBSTRUCTED",
+      "path": "03_随机与Markov理论/03_无限状态障碍/有限与无限状态_反例及正则性障碍独立审计.md",
+      "href": "../03_随机与Markov理论/03_无限状态障碍/有限与无限状态_反例及正则性障碍独立审计.md",
+      "source": "output/AUDIT_MARKOV_COUNTEREXAMPLE.md",
+      "purpose": "有限与无限状态_反例及正则性障碍独立审计",
+      "conclusion": "第 13 节为可数紧致精确零集例；无正 Hölder EB 不等于无任意 gauge。",
+      "authoritative": false,
+      "sha256": "3416727429588eb73b811b20fe45b49b4d2a2eef795190888fc602ee24281aa2"
+    },
+    {
+      "id": "mass",
+      "title": "质量稀释与矩匹配_随机提升独立审计.md",
+      "short_title": "质量稀释与矩匹配_随机提升独立审计",
+      "project": "03",
+      "type": "审计",
+      "status": "OBSTRUCTED",
+      "path": "03_随机与Markov理论/01_随机RL主线/质量稀释与矩匹配_随机提升独立审计.md",
+      "href": "../03_随机与Markov理论/01_随机RL主线/质量稀释与矩匹配_随机提升独立审计.md",
+      "source": "output/AUDIT_STOCHASTIC_MASS_DILUTION_AND_MATCHING.md",
+      "purpose": "质量稀释与矩匹配_随机提升独立审计",
+      "conclusion": "全分布 RMS 上 q>1 受稀释阻碍；先复合后积分，原生匹配仍待证。",
+      "authoritative": false,
+      "sha256": "ce8a410e86ef07eb111dcd28b6cf92c25f6738194c91059993d4e1e1212a69d9"
+    },
+    {
+      "id": "correlation",
+      "title": "相关性感知_随机近端正类与分支缺陷障碍.md",
+      "short_title": "相关性感知_随机近端正类与分支缺陷障碍",
+      "project": "03",
+      "type": "证明",
+      "status": "ALREADY_COVERED",
+      "path": "03_随机与Markov理论/04_相关性与随机表示/相关性感知_随机近端正类与分支缺陷障碍.md",
+      "href": "../03_随机与Markov理论/04_相关性与随机表示/相关性感知_随机近端正类与分支缺陷障碍.md",
+      "source": "output/ATTACK_RANDOM_PROXIMAL_CORRELATION_AWARE.md",
+      "purpose": "相关性感知_随机近端正类与分支缺陷障碍",
+      "conclusion": "正类受经典均方收缩及 Banach EB 覆盖；分支缺陷和不能识别不一致随机不变律。",
+      "authoritative": false,
+      "sha256": "e56084aba8c568fbbb4493e22afb2c4bbdea120a9f59aef88f6615601f56f4cb"
+    },
+    {
+      "id": "native",
+      "title": "非乘积随机近端_吸收选择与非不变极限障碍.md",
+      "short_title": "非乘积随机近端_吸收选择与非不变极限障碍",
+      "project": "03",
+      "type": "反例",
+      "status": "OBSTRUCTED",
+      "path": "03_随机与Markov理论/04_相关性与随机表示/非乘积随机近端_吸收选择与非不变极限障碍.md",
+      "href": "../03_随机与Markov理论/04_相关性与随机表示/非乘积随机近端_吸收选择与非不变极限障碍.md",
+      "source": "output/ATTACK_NATIVE_NONPRODUCT_RANDOM_PROXIMAL.md",
+      "purpose": "非乘积随机近端_吸收选择与非不变极限障碍",
+      "conclusion": "物理零距匹配强迫吸收；固定目标 global prox 不支持持续平稳循环。",
+      "authoritative": false,
+      "sha256": "f45947f55a8e36b80e80d90cd31e425fcd869393957d828e7574f6140dd4c3f2"
+    },
+    {
+      "id": "conditional",
+      "title": "条件残差修复_相关性与块刷新定理.md",
+      "short_title": "条件残差修复_相关性与块刷新定理",
+      "project": "03",
+      "type": "证明",
+      "status": "PENDING",
+      "path": "03_随机与Markov理论/04_相关性与随机表示/条件残差修复_相关性与块刷新定理.md",
+      "href": "../03_随机与Markov理论/04_相关性与随机表示/条件残差修复_相关性与块刷新定理.md",
+      "source": "output/ATTACK_MARKOV_CONDITIONAL_REPAIR.md",
+      "purpose": "条件残差修复_相关性与块刷新定理",
+      "conclusion": "固定边缘条件 Wasserstein；改变拓扑，不是原普通 W2 必要性定理。",
+      "authoritative": false,
+      "sha256": "91f7a071db2d62e1b8ab965e6cb13d1d0568f582b72eb4bc47dc0b6e22357072"
+    },
+    {
+      "id": "conditional_audit",
+      "title": "条件残差修复_独立敌对审计与高斯锐常数.md",
+      "short_title": "条件残差修复_独立敌对审计与高斯锐常数",
+      "project": "03",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "03_随机与Markov理论/04_相关性与随机表示/条件残差修复_独立敌对审计与高斯锐常数.md",
+      "href": "../03_随机与Markov理论/04_相关性与随机表示/条件残差修复_独立敌对审计与高斯锐常数.md",
+      "source": "output/AUDIT_MARKOV_CONDITIONAL_REPAIR.md",
+      "purpose": "条件残差修复_独立敌对审计与高斯锐常数",
+      "conclusion": "数学有条件通过；Dobrushin 直接既有，Gaussian 精确优先权仍待查。",
+      "authoritative": false,
+      "sha256": "1d02926016b2e79e210d578303de4e80427999f99a33ab4840b1d9c68effe6eb"
+    },
+    {
+      "id": "markov_novelty",
+      "title": "Markov研究_全球新颖性压力测试与旧机制扣除.md",
+      "short_title": "Markov研究_全球新颖性压力测试与旧机制扣除",
+      "project": "03",
+      "type": "文献证据",
+      "status": "PENDING",
+      "path": "03_随机与Markov理论/05_新颖性及期刊门槛/Markov研究_全球新颖性压力测试与旧机制扣除.md",
+      "href": "../03_随机与Markov理论/05_新颖性及期刊门槛/Markov研究_全球新颖性压力测试与旧机制扣除.md",
+      "source": "output/MARKOV_GLOBAL_NOVELTY_AUDIT.md",
+      "purpose": "Markov研究_全球新颖性压力测试与旧机制扣除",
+      "conclusion": "有限检索未发现匹配不等于全球首创。",
+      "authoritative": false,
+      "sha256": "47684c88ebee712a63ff6268c849f92c2ecf80a467a48990ac14fcba457a48b3"
+    },
+    {
+      "id": "markov_journal",
+      "title": "有限Markov分类_论文整合与期刊门槛重评.md",
+      "short_title": "有限Markov分类_论文整合与期刊门槛重评",
+      "project": "03",
+      "type": "审计",
+      "status": "PENDING",
+      "path": "03_随机与Markov理论/05_新颖性及期刊门槛/有限Markov分类_论文整合与期刊门槛重评.md",
+      "href": "../03_随机与Markov理论/05_新颖性及期刊门槛/有限Markov分类_论文整合与期刊门槛重评.md",
+      "source": "output/JOURNAL_REEVALUATION_FINITE_MARKOV_CLASSIFICATION.md",
+      "purpose": "有限Markov分类_论文整合与期刊门槛重评",
+      "conclusion": "尚无统一正式论文；需要同版合并审计，不能以多个 PASS 替代。",
+      "authoritative": false,
+      "sha256": "4dca9d637e64dea431814d12b126f220e7ef4d70aeca536aad053a42a8e5701f"
+    },
+    {
+      "id": "finite_test",
+      "title": "验证_有限状态OT严格性.py",
+      "short_title": "验证_有限状态OT严格性",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_有限状态OT严格性.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_有限状态OT严格性.py",
+      "source": "output/verify_finite_state_ot_strictness.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "413918ccd90961c7a332b2f5edd19dbb2b6078efda476e065465c18b7591a659"
+    },
+    {
+      "id": "finite_exact",
+      "title": "验证_惰性四循环精确有理数.py",
+      "short_title": "验证_惰性四循环精确有理数",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_惰性四循环精确有理数.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_惰性四循环精确有理数.py",
+      "source": "output/audit_markov_finite_state_lazy4_exact.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "280e57a432bae380d5737b6ead99063902b0448258cdda2d1ab3b7ba7ba65f4e"
+    },
+    {
+      "id": "markov_exact",
+      "title": "验证_四状态反例精确证书.py",
+      "short_title": "验证_四状态反例精确证书",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_四状态反例精确证书.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_四状态反例精确证书.py",
+      "source": "output/audit_markov_counterexample_exact.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "c0b512fbccbe2e7d40e0721fb3c41521900d622605309a4f211b42f6392a2151"
+    },
+    {
+      "id": "markov_ext",
+      "title": "验证_投影与可数紧致扩展.py",
+      "short_title": "验证_投影与可数紧致扩展",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_投影与可数紧致扩展.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_投影与可数紧致扩展.py",
+      "source": "output/audit_markov_extensions_exact.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "edce45b071adba32b6616c8fe94da452c0b20b9c433f5bc7e66759001fd2a740"
+    },
+    {
+      "id": "conditional_test",
+      "title": "验证_条件残差修复独立复核.py",
+      "short_title": "验证_条件残差修复独立复核",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_条件残差修复独立复核.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_条件残差修复独立复核.py",
+      "source": "output/verify_markov_conditional_repair_independent.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "0885b8e0e10060e9c47bc24b7327c18d58c3a3a0eb7d9a627846a4d50e33fc02"
+    },
+    {
+      "id": "correlation_test",
+      "title": "验证_随机近端相关性与常数.py",
+      "short_title": "验证_随机近端相关性与常数",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_随机近端相关性与常数.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_随机近端相关性与常数.py",
+      "source": "output/verify_random_proximal_correlation_aware.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "87dbfa24f9191d5f11e3372a50e4bd014c9e1e1eac72ccfc23f63047abf097e0"
+    },
+    {
+      "id": "native_test",
+      "title": "验证_非乘积近端与吸收障碍.py",
+      "short_title": "验证_非乘积近端与吸收障碍",
+      "project": "03",
+      "type": "程序",
+      "status": "NOT_EXECUTED",
+      "path": "03_随机与Markov理论/06_验证程序/验证_非乘积近端与吸收障碍.py",
+      "href": "../03_随机与Markov理论/06_验证程序/验证_非乘积近端与吸收障碍.py",
+      "source": "output/verify_native_nonproduct_random_proximal.py",
+      "purpose": "与相应证明直接关联的计算检查",
+      "conclusion": "本次只检查 Python 语法；有限截断不能证明无限状态定理。",
+      "authoritative": false,
+      "sha256": "1b1ee7af6e7ae35f9c35c5fbc7409365957eefa20fe0d4cfe16df92494f9c55d"
+    },
+    {
+      "id": "open_reg",
+      "title": "正则性公开问题_用户原始材料.md",
+      "short_title": "正则性公开问题_用户原始材料",
+      "project": "04",
+      "type": "原始材料",
+      "status": "REFERENCE",
+      "path": "04_公开问题与未来攻关/01_原始公开问题/正则性公开问题_用户原始材料.md",
+      "href": "../04_公开问题与未来攻关/01_原始公开问题/正则性公开问题_用户原始材料.md",
+      "source": "upload/01-OPEN_PROBLEMS_REGULARITY.md",
+      "purpose": "保留原始问题与来源，不承诺当前仍开放",
+      "conclusion": "保留原始问题与来源，不承诺当前仍开放",
+      "authoritative": false,
+      "sha256": "3e0c9aca101d5165f7cd4f0e2db7824933a77e4a2aaf1ec5d61769c752d2471c"
+    },
+    {
+      "id": "open_ops",
+      "title": "结构化算子公开问题_用户原始材料.md",
+      "short_title": "结构化算子公开问题_用户原始材料",
+      "project": "04",
+      "type": "原始材料",
+      "status": "REFERENCE",
+      "path": "04_公开问题与未来攻关/01_原始公开问题/结构化算子公开问题_用户原始材料.md",
+      "href": "../04_公开问题与未来攻关/01_原始公开问题/结构化算子公开问题_用户原始材料.md",
+      "source": "upload/01-OPEN_PROBLEMS_STRUCTURED_OPERATORS.md",
+      "purpose": "保留原始问题与 verifier 能力边界",
+      "conclusion": "保留原始问题与 verifier 能力边界",
+      "authoritative": false,
+      "sha256": "646ab1a29819c8b6a96dff9508082e1e264632226241a1efe7c1366d555fad3b"
+    },
+    {
+      "id": "open_final",
+      "title": "公开问题终局红队_历史筛选与停止条件.md",
+      "short_title": "公开问题终局红队_历史筛选与停止条件",
+      "project": "04",
+      "type": "任务计划",
+      "status": "SUPERSEDED",
+      "path": "04_公开问题与未来攻关/02_筛选与红队结论/公开问题终局红队_历史筛选与停止条件.md",
+      "href": "../04_公开问题与未来攻关/02_筛选与红队结论/公开问题终局红队_历史筛选与停止条件.md",
+      "source": "output/FINAL_REDTEAM_TOP_PROBLEMS.md",
+      "purpose": "保留有用排雷；旧优先级不作为今日任务顺序",
+      "conclusion": "保留有用排雷；旧优先级不作为今日任务顺序",
+      "authoritative": false,
+      "sha256": "91cd826a594c49873e0c97a78ebe22888a1eb44d487a8351e3db243a4f6b5360"
+    },
+    {
+      "id": "open_attack",
+      "title": "公开问题攻关_可复用定理与失败边界_2026-09-09.md",
+      "short_title": "公开问题攻关_可复用定理与失败边界_2026-09-09",
+      "project": "04",
+      "type": "任务计划",
+      "status": "PENDING",
+      "path": "04_公开问题与未来攻关/02_筛选与红队结论/公开问题攻关_可复用定理与失败边界_2026-09-09.md",
+      "href": "../04_公开问题与未来攻关/02_筛选与红队结论/公开问题攻关_可复用定理与失败边界_2026-09-09.md",
+      "source": "output/PPA_RL_OPEN_PROBLEMS_ATTACK_REPORT_2026-09-09.md",
+      "purpose": "残差转移、warped、multiweak 和整轨道边界",
+      "conclusion": "残差转移、warped、multiweak 和整轨道边界",
+      "authoritative": false,
+      "sha256": "58a3f2f1dc4fcdd93c1b5f7e633c6ebc6ed5274c26cf29ac7fc485929c8beb9e"
+    },
+    {
+      "id": "open_flagship",
+      "title": "Codex旗舰攻关_历史任务书与验收标准_2026-09-09.md",
+      "short_title": "Codex旗舰攻关_历史任务书与验收标准_2026-09-09",
+      "project": "04",
+      "type": "任务计划",
+      "status": "SUPERSEDED",
+      "path": "04_公开问题与未来攻关/03_旗舰问题任务书/Codex旗舰攻关_历史任务书与验收标准_2026-09-09.md",
+      "href": "../04_公开问题与未来攻关/03_旗舰问题任务书/Codex旗舰攻关_历史任务书与验收标准_2026-09-09.md",
+      "source": "output/CODEX_FLAGSHIP_NEXT_ATTACKS_2026-09-09.md",
+      "purpose": "内容可复用，但排序由后续一个月计划更新",
+      "conclusion": "内容可复用，但排序由后续一个月计划更新",
+      "authoritative": false,
+      "sha256": "ecaec4f83c8381a4bc448ee1946141eeba2d950bbd2af8cabf15f1f066a5435e"
+    },
+    {
+      "id": "open_plan",
+      "title": "三主线人机协作_30天研究计划_2026-09-10.md",
+      "short_title": "三主线人机协作_30天研究计划_2026-09-10",
+      "project": "04",
+      "type": "任务计划",
+      "status": "PENDING",
+      "path": "04_公开问题与未来攻关/04_一个月研究计划/三主线人机协作_30天研究计划_2026-09-10.md",
+      "href": "../04_公开问题与未来攻关/04_一个月研究计划/三主线人机协作_30天研究计划_2026-09-10.md",
+      "source": "output/RL_RESEARCH_30_DAY_HUMAN_CODEX_PLAN_2026-09-10.md",
+      "purpose": "最新可用研究计划；历史日期不自动平移，未将混沌侦察算成果",
+      "conclusion": "最新可用研究计划；历史日期不自动平移，未将混沌侦察算成果",
+      "authoritative": true,
+      "sha256": "30621d0196488d01a748d6bba89c5f62b031791c7f92b49308a514e0d548bda5"
+    },
+    {
+      "id": "frankowska",
+      "title": "Frankowska_1989_逆映射原始论文.pdf",
+      "short_title": "Frankowska_1989_逆映射原始论文",
+      "project": "05",
+      "type": "原始文献",
+      "status": "REFERENCE",
+      "path": "05_文献证据与来源快照/01_关键原始论文/Frankowska_1989_逆映射原始论文.pdf",
+      "href": "../05_文献证据与来源快照/01_关键原始论文/Frankowska_1989_逆映射原始论文.pdf",
+      "source": "frankowska_1989_inverse.pdf",
+      "purpose": "已在工作区的关键原始 PDF",
+      "conclusion": "原论文与项目论断分开；本次不新增外部文献核验。",
+      "authoritative": true,
+      "sha256": "a1d05d419913cd9bdb463ca868f705960c96598c5be582fb58908b55111c2892"
+    },
+    {
+      "id": "m3audit",
+      "title": "广义次正则_2024至2026文献审计.md",
+      "short_title": "广义次正则_2024至2026文献审计",
+      "project": "05",
+      "type": "文献证据",
+      "status": "REFERENCE",
+      "path": "05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026文献审计.md",
+      "href": "../05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026文献审计.md",
+      "source": "m3_generalized_2024_2026_audit.md",
+      "purpose": "广义次正则近期文献审计快照",
+      "conclusion": "历史检索记录，不是当日全球完备检索。",
+      "authoritative": false,
+      "sha256": "376316e389eaa1efe2e41008a9669b75c92c4fc9b2ec33978a1b4d2efe089884"
+    },
+    {
+      "id": "m3log",
+      "title": "广义次正则_2024至2026查询日志.json",
+      "short_title": "广义次正则_2024至2026查询日志",
+      "project": "05",
+      "type": "检索日志",
+      "status": "REFERENCE",
+      "path": "05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026查询日志.json",
+      "href": "../05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026查询日志.json",
+      "source": "m3_generalized_2024_2026_query_log.json",
+      "purpose": "保留可追溯检索串与来源",
+      "conclusion": "仅继承已有检索的实际访问深度。",
+      "authoritative": false,
+      "sha256": "c167084e323955f8e6d302113533bdbb7145ccd8b464668b38c028c5793c7e22"
+    },
+    {
+      "id": "oldstate",
+      "title": "历史项目状态_不可作为当前验收.yaml",
+      "short_title": "历史项目状态_不可作为当前验收",
+      "project": "05",
+      "type": "原始材料",
+      "status": "SUPERSEDED",
+      "path": "05_文献证据与来源快照/03_用户提供的原始材料/历史项目状态_不可作为当前验收.yaml",
+      "href": "../05_文献证据与来源快照/03_用户提供的原始材料/历史项目状态_不可作为当前验收.yaml",
+      "source": "project_state.yaml",
+      "purpose": "记录历史 accepted 与当前保守状态的冲突",
+      "conclusion": "其 T4/T5 passed 不能覆盖更晚审稿与作者当前状态约束。",
+      "authoritative": false,
+      "sha256": "159a12fa7659ddaba07346c57b7ffa568df0a25d8e3ddc343bf697de099b452d"
+    },
+    {
+      "id": "start",
+      "title": "README_研究资产导航.md",
+      "short_title": "README_研究资产导航",
+      "project": "00",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/README_研究资产导航.md",
+      "href": "README_研究资产导航.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "fd68b54b79e9afc755829e9e11df3cee6dc0f294e78e6fe5891168f8baafd4c1"
+    },
+    {
+      "id": "guide",
+      "title": "给未来Codex和PRO的使用说明.md",
+      "short_title": "给未来Codex和PRO的使用说明",
+      "project": "00",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/给未来Codex和PRO的使用说明.md",
+      "href": "给未来Codex和PRO的使用说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "72e19ba740ede30b894aa3941f131f2818558c800665b0b2868c483d3d84b90f"
+    },
+    {
+      "id": "readme_01",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "01",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "01_RL_PPA核心理论/README_本目录说明.md",
+      "href": "../01_RL_PPA核心理论/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "afda6878ddf4ab06fc83154a260f4ffe454b89a2491a1b5297fb674da66c4bd1"
+    },
+    {
+      "id": "readme_02",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "02",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "02_锥优化_CRSC_MSCQ/README_本目录说明.md",
+      "href": "../02_锥优化_CRSC_MSCQ/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "80a8cb8bc8ed60765de279b08a488fbc6ab1e7645df48f68079284961fd79b45"
+    },
+    {
+      "id": "readme_03",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "03",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "03_随机与Markov理论/README_本目录说明.md",
+      "href": "../03_随机与Markov理论/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "4e7c63321a1e8b5b41a0e85c094d7b95abfc14b7cf69f0a9d7d1fe1984dbe81b"
+    },
+    {
+      "id": "readme_04",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "04",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "04_公开问题与未来攻关/README_本目录说明.md",
+      "href": "../04_公开问题与未来攻关/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "75085483a92f0a020038de588fe712856602f7475aeb01dbda434e175bbadf08"
+    },
+    {
+      "id": "readme_05",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "05",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "05_文献证据与来源快照/README_本目录说明.md",
+      "href": "../05_文献证据与来源快照/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "49ed752a056539945c1448e4a166f3c39b65136956524ab9e1e46b0068bdb156"
+    },
+    {
+      "id": "readme_06",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "06",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "06_关键失败与研究边界/README_本目录说明.md",
+      "href": "../06_关键失败与研究边界/README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "6cf540aec808bdb6bf566641552216c56ab075a8f0ed74ae2ec76cd0f953ae4d"
+    },
+    {
+      "id": "readme_00",
+      "title": "README_本目录说明.md",
+      "short_title": "README_本目录说明",
+      "project": "00",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/README_本目录说明.md",
+      "href": "README_本目录说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "36b3de108c218376d201078f2fe12d60b2474de02b30ce9f4adc487e0752938e"
+    },
+    {
+      "id": "boundary_0",
+      "title": "已证明的不可能性与障碍.md",
+      "short_title": "已证明的不可能性与障碍",
+      "project": "06",
+      "type": "边界摘要",
+      "status": "REFERENCE",
+      "path": "06_关键失败与研究边界/已证明的不可能性与障碍.md",
+      "href": "../06_关键失败与研究边界/已证明的不可能性与障碍.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "745ac8f31d3828e676848cb3ad32f5a78d36515970f146cdaedd0bb764cd7d7b"
+    },
+    {
+      "id": "boundary_1",
+      "title": "被旧理论覆盖或支配的结果.md",
+      "short_title": "被旧理论覆盖或支配的结果",
+      "project": "06",
+      "type": "边界摘要",
+      "status": "REFERENCE",
+      "path": "06_关键失败与研究边界/被旧理论覆盖或支配的结果.md",
+      "href": "../06_关键失败与研究边界/被旧理论覆盖或支配的结果.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "48fadae27a09841d4bdadbe6b0f0ab31882c40b71bf528026bb9207e2fd0c07c"
+    },
+    {
+      "id": "boundary_2",
+      "title": "尚未证明的候选命题.md",
+      "short_title": "尚未证明的候选命题",
+      "project": "06",
+      "type": "边界摘要",
+      "status": "REFERENCE",
+      "path": "06_关键失败与研究边界/尚未证明的候选命题.md",
+      "href": "../06_关键失败与研究边界/尚未证明的候选命题.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "ad3a2fc2add2f29ae7043f2bed6fbaad22d7d0b0ab89aa5db655e8261e78459b"
+    },
+    {
+      "id": "boundary_3",
+      "title": "不应再次重复的失败路线.md",
+      "short_title": "不应再次重复的失败路线",
+      "project": "06",
+      "type": "边界摘要",
+      "status": "REFERENCE",
+      "path": "06_关键失败与研究边界/不应再次重复的失败路线.md",
+      "href": "../06_关键失败与研究边界/不应再次重复的失败路线.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "8b41e464e028ca617b1fecc19540b437360d9f68115dce5a0d29172c4b42e091"
+    },
+    {
+      "id": "selection",
+      "title": "打包筛选说明.md",
+      "short_title": "打包筛选说明",
+      "project": "00",
+      "type": "导航",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/打包筛选说明.md",
+      "href": "打包筛选说明.md",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "06f210e7fcc7dd0810019a81f39a7c3a3a508fafe1b8744388d0a5955ecd2411"
+    },
+    {
+      "id": "confidence",
+      "title": "当前成果与可信度.yaml",
+      "short_title": "当前成果与可信度",
+      "project": "00",
+      "type": "状态总账",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/当前成果与可信度.yaml",
+      "href": "当前成果与可信度.yaml",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "a17e367fe94c88edb7d97cc87443fca2fea52cf42b2b66677687b3ddfd2b9846"
+    },
+    {
+      "id": "graph",
+      "title": "研究资产总览与超边图.html",
+      "short_title": "研究资产总览与超边图",
+      "project": "00",
+      "type": "离线交互导航",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/研究资产总览与超边图.html",
+      "href": "研究资产总览与超边图.html",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": null
+    },
+    {
+      "id": "relations",
+      "title": "资产关系数据.json",
+      "short_title": "资产关系数据",
+      "project": "00",
+      "type": "关系数据",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/资产关系数据.json",
+      "href": "资产关系数据.json",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": null
+    },
+    {
+      "id": "sources",
+      "title": "文件来源与中文名称对照.csv",
+      "short_title": "文件来源与中文名称对照",
+      "project": "00",
+      "type": "来源对照",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/文件来源与中文名称对照.csv",
+      "href": "文件来源与中文名称对照.csv",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": null
+    },
+    {
+      "id": "ledger",
+      "title": "纳入与排除台账.csv",
+      "short_title": "纳入与排除台账",
+      "project": "00",
+      "type": "筛选台账",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/纳入与排除台账.csv",
+      "href": "纳入与排除台账.csv",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": "8717065f1e87eb08dabb2a28424869fa16a5d064a78a03122050980088b99e58"
+    },
+    {
+      "id": "manifest",
+      "title": "manifest.json",
+      "short_title": "manifest",
+      "project": "00",
+      "type": "机器清单",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/manifest.json",
+      "href": "manifest.json",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": null
+    },
+    {
+      "id": "hashes",
+      "title": "SHA256文件校验清单.txt",
+      "short_title": "SHA256文件校验清单",
+      "project": "00",
+      "type": "校验清单",
+      "status": "REFERENCE",
+      "path": "00_从这里开始/SHA256文件校验清单.txt",
+      "href": "SHA256文件校验清单.txt",
+      "source": "GENERATED:整理层_2026-09-14",
+      "purpose": "整理层说明；不是数学正文",
+      "conclusion": "整理层说明；不是数学正文",
+      "authoritative": false,
+      "sha256": null
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "rl_interface",
+      "title": "RL–PPA：合法转移与独立证书接口",
+      "short": "RL 合法接口",
+      "status": "PENDING",
+      "summary": "把相同目标与允许转移上的 RL 几何、误差界、coverage 和轨道预算一起读取。",
+      "caveat": "最新计划：T4 未闭合、T5 暂定，Cor.5.3 受 Prop.5.4 支配；历史 MF01–MF07 对指定 Markdown 生效，不能不经比版当作排版稿现错。",
+      "members": [
+        {
+          "node": "rl_md",
+          "role": "定义与原始合稿"
+        },
+        {
+          "node": "rl_chain",
+          "role": "完整量词与证明链"
+        },
+        {
+          "node": "rl_referee",
+          "role": "原始合稿敌对审稿"
+        },
+        {
+          "node": "rl_natural",
+          "role": "自然类实例"
+        },
+        {
+          "node": "rl_test",
+          "role": "实例验证程序"
+        },
+        {
+          "node": "rl_pdf",
+          "role": "当前排版主稿"
+        },
+        {
+          "node": "open_plan",
+          "role": "现行保守状态与研究门槛"
+        }
+      ]
+    },
+    {
+      "id": "rl_natural_edge",
+      "title": "RL 自然类：支撑函数、法锥与有限测试分离",
+      "short": "自然类与分离",
+      "status": "PENDING",
+      "summary": "自然类的跨活动面 RL、普通 EB、尖锐指数、正常直接证明和限定竞争反例。",
+      "caveat": "必须区分聚合充分条件与真实收敛；退化 partial 证书仍存活，反例只排除 AP-RL。",
+      "members": [
+        {
+          "node": "rl_md",
+          "role": "定义及最终数学陈述"
+        },
+        {
+          "node": "rl_natural",
+          "role": "自然类推导"
+        },
+        {
+          "node": "rl_separate",
+          "role": "限定竞争反例"
+        },
+        {
+          "node": "rl_recheck",
+          "role": "合稿实例独立重审"
+        },
+        {
+          "node": "rl_test",
+          "role": "实例常数程序"
+        },
+        {
+          "node": "rl_pdf",
+          "role": "主稿呈现"
+        }
+      ]
+    },
+    {
+      "id": "path",
+      "title": "多步路径 RL：合法语言与有限捕获",
+      "short": "路径与有限捕获",
+      "status": "PENDING",
+      "summary": "路径 atlas、块端点收缩、前缀界和块内长度预算共同支持多步路线。",
+      "caveat": "研究札记有项目内证明，不自动继承一步审计；独立同版审计及精确优先权待闭合。",
+      "members": [
+        {
+          "node": "rl_path",
+          "role": "定义、证明与两步例"
+        },
+        {
+          "node": "rl_chain",
+          "role": "一步接口与预算基线"
+        },
+        {
+          "node": "rl_arch",
+          "role": "升级架构"
+        },
+        {
+          "node": "rl_referee",
+          "role": "上游作用域约束"
+        },
+        {
+          "node": "open_plan",
+          "role": "后续验收任务"
+        }
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "C11 复合次正则：同目标定量模块",
+      "short": "C11 复合验证",
+      "status": "PENDING",
+      "summary": "把复合残差验证器、非幂 gauge 示例与 RL 接入范围连接，保留公开方向未解部分。",
+      "caveat": "源笔记自述模块 PROVED、方向 PARTIAL；上游审稿不是 C11 专项独审，不能冒充已合入主稿。",
+      "members": [
+        {
+          "node": "rl_c11",
+          "role": "定义、模块证明与例子"
+        },
+        {
+          "node": "c11_test",
+          "role": "公式验证程序"
+        },
+        {
+          "node": "rl_md",
+          "role": "拟接入的 RL 主稿"
+        },
+        {
+          "node": "rl_referee",
+          "role": "上游范围约束，非本模块独审"
+        },
+        {
+          "node": "m3audit",
+          "role": "历史文献边界"
+        },
+        {
+          "node": "rl_arch",
+          "role": "理论升级目标"
+        }
+      ]
+    },
+    {
+      "id": "conic",
+      "title": "锥优化：冻结最小面 CRSC → MSCQ",
+      "short": "冻结面与 MSCQ",
+      "status": "PROVED",
+      "summary": "核心证明、SOC/PSD 正例、LRS 边界、优先权矩阵和源码共同构成当前最成熟成果包。",
+      "caveat": "PROVED 只指项目内核心数学；M01 正式发表版逐定理比较仍 PENDING。",
+      "members": [
+        {
+          "node": "conic_tex",
+          "role": "定义与正式定理源"
+        },
+        {
+          "node": "conic_core",
+          "role": "核心证明独立审计"
+        },
+        {
+          "node": "conic_examples",
+          "role": "SOC / PSD 正例常数"
+        },
+        {
+          "node": "conic_boundary",
+          "role": "必要性与反例"
+        },
+        {
+          "node": "conic_test",
+          "role": "实例常数程序"
+        },
+        {
+          "node": "conic_priority",
+          "role": "优先权待核证据"
+        },
+        {
+          "node": "conic_pdf",
+          "role": "当前 v04 主稿"
+        },
+        {
+          "node": "conic_report",
+          "role": "构建与版本证明"
+        }
+      ]
+    },
+    {
+      "id": "finite_edge",
+      "title": "有限 Markov：精确零集 ⇔ 全局线性 EB",
+      "short": "有限状态分类",
+      "status": "PROVED",
+      "summary": "原始嵌套 OT 的有限表示、锐常数和惰性四循环经过独立项目审计。",
+      "caveat": "固定有限数据；一般多面体 EB 机制已知，精确 source-specific 优先权未证；无统一正式论文。",
+      "members": [
+        {
+          "node": "finite",
+          "role": "定义与有限状态证明"
+        },
+        {
+          "node": "finite_audit",
+          "role": "独立证明及四循环审计"
+        },
+        {
+          "node": "finite_test",
+          "role": "OT 严格性程序"
+        },
+        {
+          "node": "finite_exact",
+          "role": "四循环精确算术程序"
+        },
+        {
+          "node": "markov_counter",
+          "role": "有限 / 无限对照反例"
+        },
+        {
+          "node": "markov_novelty",
+          "role": "近邻扣除与优先权"
+        },
+        {
+          "node": "markov_journal",
+          "role": "论文整合门槛"
+        }
+      ]
+    },
+    {
+      "id": "infinite",
+      "title": "无限 Markov：收敛与正 Hölder EB 的分离",
+      "short": "无限状态障碍",
+      "status": "OBSTRUCTED",
+      "summary": "可数紧致精确零集模型在收敛同时阻断指定残差的所有正 Hölder EB。",
+      "caveat": "不表示无任意 general gauge；对 source-rate-compatible gauge 的排除是另一条有量词限制的命题。",
+      "members": [
+        {
+          "node": "markov_counter",
+          "role": "完整反例、定义与独立审计"
+        },
+        {
+          "node": "markov_exact",
+          "role": "有限反例精确检查"
+        },
+        {
+          "node": "markov_ext",
+          "role": "可数扩展辅助检查"
+        },
+        {
+          "node": "finite",
+          "role": "有限状态正向分类"
+        },
+        {
+          "node": "markov_novelty",
+          "role": "来源与优先权限制"
+        },
+        {
+          "node": "markov_journal",
+          "role": "拟合稿中的范围要求"
+        }
+      ]
+    },
+    {
+      "id": "stoch_edge",
+      "title": "随机 RL：质量稀释、矩匹配与原生耦合",
+      "short": "随机提升接口",
+      "status": "PENDING",
+      "summary": "确定性接口提升到分布空间须先复合后积分，并明确同一输出匹配耦合。",
+      "caveat": "匹配定理有条件成立，但原生兼容耦合不是已获得的普遍黑箱；线性切片是旧 expected almost-firmness。",
+      "members": [
+        {
+          "node": "stoch",
+          "role": "随机定义与条件定理"
+        },
+        {
+          "node": "mass",
+          "role": "独立稀释及矩匹配审计"
+        },
+        {
+          "node": "rl_chain",
+          "role": "确定性接口基线"
+        },
+        {
+          "node": "correlation",
+          "role": "受旧理论覆盖的正例"
+        },
+        {
+          "node": "native",
+          "role": "物理匹配吸收障碍"
+        },
+        {
+          "node": "native_test",
+          "role": "原生近端模型程序"
+        }
+      ]
+    },
+    {
+      "id": "conditional_edge",
+      "title": "条件残差修复：相关性、块刷新与旧机制",
+      "short": "条件相关性修复",
+      "status": "PENDING",
+      "summary": "固定边缘的条件 Wasserstein 修复相关性盲区，并给 sharp refresh / Gaussian 系数。",
+      "caveat": "改变度量；Dobrushin 与弱 Poincaré 基线已知；Gaussian 精确优先权待对照。",
+      "members": [
+        {
+          "node": "conditional",
+          "role": "定义、正向定理与模型"
+        },
+        {
+          "node": "conditional_audit",
+          "role": "独立修复与常数审计"
+        },
+        {
+          "node": "conditional_test",
+          "role": "独立验证程序"
+        },
+        {
+          "node": "correlation",
+          "role": "随机近端应用与覆盖"
+        },
+        {
+          "node": "correlation_test",
+          "role": "应用常数程序"
+        },
+        {
+          "node": "markov_novelty",
+          "role": "旧机制扣除"
+        },
+        {
+          "node": "markov_journal",
+          "role": "论文范围取舍"
+        }
+      ]
+    },
+    {
+      "id": "native_edge",
+      "title": "原生随机近端：吸收、选择与非 Feller 极限",
+      "short": "随机选择边界",
+      "status": "OBSTRUCTED",
+      "summary": "将固定目标 global proximal 选择、物理匹配和非不变极限作为严格边界资产。",
+      "caveat": "不是对所有随机 resolvent 的否定；global minimizer 图、subdifferential resolvent、物理核与 law coupling 不得互换。",
+      "members": [
+        {
+          "node": "native",
+          "role": "定义、证明与原生非分离例"
+        },
+        {
+          "node": "native_test",
+          "role": "模型精确验证程序"
+        },
+        {
+          "node": "mass",
+          "role": "上游匹配接口审计"
+        },
+        {
+          "node": "stoch",
+          "role": "受阻的随机提升方向"
+        },
+        {
+          "node": "correlation",
+          "role": "不同目标分支的对照"
+        },
+        {
+          "node": "open_plan",
+          "role": "停止 / 转向标准"
+        }
+      ]
+    },
+    {
+      "id": "future",
+      "title": "未来攻关：原问题、红队、任务书与计划",
+      "short": "可继续的任务链",
+      "status": "PENDING",
+      "summary": "以原始问题和停止条件组织下轮工作，旧排序保留为历史参考。",
+      "caveat": "公开状态本次未重查；严格混沌没有独立成果；先读失败边界再发起新攻关。",
+      "members": [
+        {
+          "node": "open_reg",
+          "role": "正则性原始问题"
+        },
+        {
+          "node": "open_ops",
+          "role": "结构算子原始问题"
+        },
+        {
+          "node": "open_final",
+          "role": "历史终局红队"
+        },
+        {
+          "node": "open_flagship",
+          "role": "历史旗舰任务书"
+        },
+        {
+          "node": "open_attack",
+          "role": "可复用模块与失败边界"
+        },
+        {
+          "node": "open_plan",
+          "role": "当前可用月度计划"
+        },
+        {
+          "node": "boundary_2",
+          "role": "尚未证明候选总览"
+        },
+        {
+          "node": "boundary_3",
+          "role": "不应重复路线"
+        }
+      ]
+    }
+  ],
+  "semantics": "star expansion of hyperedges; members are research evidence relationships, not automatic logical proof",
+  "offline": true
+}</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('asset-data').textContent);
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
+const byId=Object.fromEntries(D.nodes.map(n=>[n.id,n]));
+let mode='graph',picked=null,edgeId=D.hyperedges[0].id;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const color=s=>'var(--'+s.toLowerCase().replaceAll('_','-')+')';
+const badge=s=>'<span class="status" style="color:'+color(s)+'">'+esc(s)+' · '+esc(D.statuses[s].label)+'</span>';
+function option(el,value,label){const op=document.createElement('option');op.value=value;op.textContent=label;el.append(op)}
+for(const p of D.projects)option($('project'),p.id,p.name);
+for(const t of [...new Set(D.nodes.map(n=>n.type))].sort())option($('kind'),t,t);
+for(const [k,v] of Object.entries(D.statuses)){option($('status'),k,k+' · '+v.label);const span=document.createElement('span');span.innerHTML='<i class="dot" style="background:'+color(k)+'"></i>'+esc(v.label);$('legend').append(span)}
+$('nassets').textContent=D.nodes.length;$('nedges').textContent=D.hyperedges.length;
+function filtered(){const q=$('search').value.trim().toLowerCase();return D.nodes.filter(n=>(!$('project').value||n.project===$('project').value)&&(!$('kind').value||n.type===$('kind').value)&&(!$('status').value||n.status===$('status').value)&&(!q||[n.title,n.purpose,n.conclusion,n.source,n.path,n.status].join(' ').toLowerCase().includes(q)))}
+function shownEdges(ids){return D.hyperedges.filter(e=>e.members.some(m=>ids.has(m.node)))}
+function svg(tag,attrs,parent){const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,String(v)));(parent||$('graph')).append(n);return n}
+function lines(parent,text,x,y,max=18,cls='label'){const chunks=Array.from(text);for(let i=0;i<Math.min(3,Math.ceil(chunks.length/max));i++){const t=svg('text',{x,y:y+i*18,class:cls},parent);t.textContent=chunks.slice(i*max,(i+1)*max).join('')+(i===2&&chunks.length>max*3?'…':'')}}
+function edgeDetail(e){picked=null;$('detail').innerHTML='<div class="detail-top"><div class="eyebrow">MULTI-ENTITY RELATION</div><h3>'+esc(e.title)+'</h3>'+badge(e.status)+'</div><div class="detail-body"><h4>这条超边表达什么</h4><p>'+esc(e.summary)+'</p><h4>尚未闭合 / 使用限制</h4><p>'+esc(e.caveat)+'</p><h4>定义 → 证明 → 审计 → 复现</h4>'+e.members.map(m=>'<button class="related" data-node="'+esc(m.node)+'">'+esc(m.role)+' · '+esc(byId[m.node].title)+'</button>').join('')+'<h4>重要提示</h4><p>这是一条整理层研究关系；不是把所有文件连在一起就产生新证明。点击文件查看版本与原始作用域。</p></div>';bindDetail()}
+function nodeDetail(id){const n=byId[id];picked=id;const rel=D.hyperedges.filter(e=>e.members.some(m=>m.node===id));const dep=[...new Set(rel.flatMap(e=>e.members.filter(m=>m.node!==id).map(m=>m.node)))];$('detail').innerHTML='<div class="detail-top"><div class="eyebrow">'+esc(n.type)+' · '+esc(D.projects.find(p=>p.id===n.project)?.name||'整理层')+'</div><h3>'+esc(n.title)+'</h3>'+badge(n.status)+'</div><div class="detail-body"><a class="open" href="'+esc(n.href)+'" target="_blank" rel="noopener">打开原件 ↗</a><h4>文件作用</h4><p>'+esc(n.purpose)+'</p><h4>结论与边界</h4><p>'+esc(n.conclusion)+'</p><h4>当前入口 / 权威版本</h4><p>'+(n.authoritative?'此表示的当前入口；不代表全稿或优先权通过。':'研究支持、历史材料或整理层；不单独授予阶段验收。')+'</p><h4>关联超边</h4>'+(rel.length?rel.map(e=>'<button class="related" data-edge="'+esc(e.id)+'">◇ '+esc(e.title)+'</button>').join(''):'<p>目录 / 来源辅助资产；未指定数学超边。</p>')+'<h4>关联依赖与支持文件</h4>'+(dep.length?dep.map(id=>'<button class="related" data-node="'+esc(id)+'">'+esc(byId[id].title)+'</button>').join(''):'<p>见所属目录说明。</p>')+'<h4>原始路径</h4><code>'+esc(n.source)+'</code><h4>包内相对路径</h4><code>'+esc(n.path)+'</code><h4>SHA256</h4><code>'+esc(n.sha256||'整理元数据的字节哈希见 SHA256 清单；避免自指循环。')+'</code></div>';bindDetail();document.querySelectorAll('.node').forEach(el=>el.classList.toggle('active',el.dataset.id===id));$('live').textContent='已选择：'+n.title}
+function bindDetail(){document.querySelectorAll('#detail [data-node]').forEach(b=>b.onclick=()=>nodeDetail(b.dataset.node));document.querySelectorAll('#detail [data-edge]').forEach(b=>b.onclick=()=>{edgeId=b.dataset.edge;setMode('graph');render()})}
+function drawGraph(nodes,edges){const ids=new Set(nodes.map(n=>n.id));$('edge').replaceChildren();for(const e of edges)option($('edge'),e.id,e.title+' · '+e.status);if(!edges.some(e=>e.id===edgeId))edgeId=edges[0]?.id||'';$('edge').value=edgeId;$('graph').replaceChildren();if(!edgeId){$('graph').setAttribute('viewBox','0 0 900 360');const t=svg('text',{x:450,y:170,'text-anchor':'middle',fill:'var(--muted)'});t.textContent='没有匹配超边。可切换卡片或目录查看匹配的辅助资产。';$('edge-badge').textContent='无匹配超边';return}
+const e=edges.find(e=>e.id===edgeId);$('edge-badge').textContent=e.members.length+' 个角色 · 1 条超边';const rows=Math.ceil(e.members.length/2),height=Math.max(560,rows*123+62),cy=height/2;$('graph').setAttribute('viewBox','0 0 900 '+height);
+svg('rect',{x:15,y:15,width:870,height:height-30,rx:20,fill:color(e.status),opacity:.035});
+const pos=e.members.map((m,i)=>({m,n:byId[m.node],left:i%2===0,x:i%2===0?36:622,y:40+Math.floor(i/2)*123}));
+for(const p of pos){const fromX=p.left?340:560,toX=p.left?p.x+240:p.x,py=p.y+43;svg('path',{d:'M '+fromX+' '+cy+' C '+(p.left?298:602)+' '+cy+', '+(p.left?322:578)+' '+py+', '+toX+' '+py,class:'edge-line'+(ids.has(p.n.id)?' highlight':''),stroke:color(e.status),'stroke-dasharray':e.status==='PENDING'?'7 5':'none'})}
+const hub=svg('g',{class:'hub',tabindex:0,role:'button','aria-label':'显示超边详情：'+e.title});svg('path',{d:'M 450 '+(cy-86)+' L 555 '+cy+' L 450 '+(cy+86)+' L 345 '+cy+' Z',fill:color(e.status),opacity:.1},hub);svg('path',{d:'M 450 '+(cy-86)+' L 555 '+cy+' L 450 '+(cy+86)+' L 345 '+cy+' Z',fill:'none',stroke:color(e.status),'stroke-width':1.8,'stroke-dasharray':e.status==='PENDING'?'7 5':'none'},hub);const ht=svg('text',{x:450,y:cy-15,'text-anchor':'middle'},hub);ht.textContent=e.short;const hs=svg('text',{x:450,y:cy+10,'text-anchor':'middle',class:'hubsub'},hub);hs.textContent=e.status;const hs2=svg('text',{x:450,y:cy+31,'text-anchor':'middle',class:'hubsub'},hub);hs2.textContent='一条超边 · '+e.members.length+' 项关联';hub.onclick=()=>edgeDetail(e);hub.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();edgeDetail(e)}};
+for(const p of pos){const g=svg('g',{class:'node'+(!ids.has(p.n.id)?' dim':'')+(p.n.id===picked?' active':''),transform:'translate('+p.x+' '+p.y+')',tabindex:0,role:'button','aria-label':p.m.role+'：'+p.n.title,'data-id':p.n.id});svg('rect',{x:0,y:0,width:240,height:93,rx:9},g);svg('rect',{x:0,y:0,width:4,height:93,rx:2,style:'fill:'+color(p.n.status)+';stroke:none'},g);const role=svg('text',{x:14,y:20,class:'role'},g);role.textContent=p.m.role+' / '+p.n.type;lines(g,p.n.short_title||p.n.title,14,43,17);const tt=svg('title',{},g);tt.textContent=p.n.title+'\n'+p.n.status+' · '+p.n.conclusion;g.onclick=()=>nodeDetail(p.n.id);g.onkeydown=ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();nodeDetail(p.n.id)}}}
+if(!picked||!e.members.some(m=>m.node===picked))edgeDetail(e)}
+function drawCards(nodes){$('cards').innerHTML=nodes.length?nodes.map(n=>'<article class="asset-card" tabindex="0" data-node="'+esc(n.id)+'">'+badge(n.status)+'<h3>'+esc(n.title)+'</h3><p>'+esc(n.purpose)+'</p><div class="card-bottom"><span>'+esc(n.type)+'</span><a href="'+esc(n.href)+'" target="_blank" rel="noopener">打开文件 ↗</a></div></article>').join(''):'<div class="empty">没有匹配资产。试试搜索原文件名或重置筛选。</div>';document.querySelectorAll('.asset-card').forEach(el=>{el.onclick=ev=>{if(ev.target.closest('a'))return;nodeDetail(el.dataset.node)};el.onkeydown=ev=>{if(ev.key==='Enter'){ev.preventDefault();nodeDetail(el.dataset.node)}}})}
+function drawDirectory(nodes){$('directory').innerHTML=D.projects.map(p=>{const group=nodes.filter(n=>n.project===p.id);return group.length?'<details open><summary>'+esc(p.name)+' <span class="result">'+group.length+' 个文件</span></summary>'+group.map(n=>'<div class="file-row"><i class="dot" style="background:'+color(n.status)+'" title="'+esc(n.status)+'"></i><button data-node="'+esc(n.id)+'">'+esc(n.path.split('/').slice(1).join('/'))+'</button><a href="'+esc(n.href)+'" target="_blank" rel="noopener">打开 ↗</a></div>').join('')+'</details>':''}).join('')||'<div class="empty">没有匹配资产。</div>';document.querySelectorAll('#directory [data-node]').forEach(b=>b.onclick=()=>nodeDetail(b.dataset.node))}
+function render(){const nodes=filtered(),edges=shownEdges(new Set(nodes.map(n=>n.id)));$('count').textContent=nodes.length+' / '+D.nodes.length+' 个资产 · '+edges.length+' 条关联超边';drawGraph(nodes,edges);drawCards(nodes);drawDirectory(nodes)}
+function setMode(v){mode=v;for(const x of ['graph','cards','directory']){$(x+'-view').hidden=x!==v;$('tab-'+x).setAttribute('aria-selected',x===v?'true':'false')}$('view-title').textContent={graph:'研究关系 · 多元超边视图',cards:'精选资产 · 按作用阅读',directory:'包内目录 · 唯一路径'}[v]}
+for(const id of ['search','project','kind','status'])$(id).addEventListener(id==='search'?'input':'change',()=>{picked=null;render()});
+document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>setMode(b.dataset.view));
+$('edge').onchange=()=>{edgeId=$('edge').value;picked=null;render()};
+$('reset').onclick=()=>{for(const id of ['search','project','kind','status'])$(id).value='';edgeId=D.hyperedges[0].id;picked=null;setMode('graph');$('graphstage').scrollLeft=0;render()};
+$('theme').onclick=()=>{const current=document.documentElement.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=current==='dark'?'light':'dark'};
+render();
+</script>
+</body>
+</html>

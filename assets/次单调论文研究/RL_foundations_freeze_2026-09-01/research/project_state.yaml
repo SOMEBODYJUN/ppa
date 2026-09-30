@@ -1,0 +1,74 @@
+project_id: monotonicity-regularity-seesaw-2026-09
+paper_family: T
+route: theoretical
+current_stage: T2
+stage_name: 理论谱系与精确先例核验
+stage_status: rl_foundations_fixed_baseline_accepted_with_novelty_fulltexts_pending
+diagnosis:
+  T1: passed_with_medium_confidence
+  T2: partially_passed_repair_required
+  T3: provisional_asset_only
+  T4: not_started
+evidence:
+  user_problem_statement: VERIFIED_USER_MATERIAL
+  rl_draft: VERIFIED_USER_MATERIAL
+  external_literature: formula_level_audit_completed_but_key_fulltexts_and_database_chaining_pending
+  rl_definition_novelty: weak
+  gamma1_operator_side: exact_prior_art_verified
+  gamma_subunit_operator_theory: potentially_novel_but_unverified
+  rl_proof_package: mathematical_freeze_30_of_30_numbered_objects_passed
+  rl_foundations_polishing: locked_content_verified
+  rl_foundations_fixed_baseline: accepted_ready
+  rl_foundations_submission_manuscript: not_ready
+data_sufficiency: SUFFICIENT
+acquisition: NOT_NEEDED
+primary_experts:
+  - sci-skills-literature-search
+  - sci-skills-paper-deep-reading
+  - sci-skills-journal-recommendation
+  - independent-proof-referee
+workflow_order:
+  - theory_atlas
+  - gap_examples
+  - example_properties
+  - seesaw_synthesis
+constraints:
+  - no_third_party_api
+  - primary_sources_preferred
+  - no_synthesis_before_independent_recalculation
+  - distinguish_theorem_implication_strictness_incomparability_heuristic
+source_files:
+  - upload/01-RL_Submonotonicity-.md
+current_outputs:
+  - research/theory_atlas.md
+  - research/gap_examples.md
+  - research/example_properties.md
+  - research/seesaw_synthesis.md
+  - research/rl_novelty_and_publication_assessment.md
+  - research/RL_foundations.md
+  - research/RL_foundations_freeze_manifest.md
+open_blockers:
+  - obtain_and_formula_check_Moursi_Vanderwerff_2025_fulltext
+  - obtain_and_formula_check_Wang_Li_Ng_2023_fulltext
+  - obtain_and_formula_check_Luque_1984_fulltext
+  - formula_check_Rolewicz_Ngai_Penot_and_rho_paramonotonicity_sources
+  - choose_final_public_name_for_RL
+foundation_freeze:
+  acceptance: ACCEPTED_AS_FIXED_MATHEMATICAL_FOUNDATION
+  foundation_readiness: READY
+  submission_readiness: NOT_READY
+  artifact: research/RL_foundations.md
+  artifact_sha256: 0adf8ca1593148bebce576e9659f3da50e61a77880c0b311cbcc35d0dcbb4ebd
+  mathematical_source: work/RL_foundations_draft.md
+  mathematical_source_sha256: e24b415afe82ba6a98bd5fd7740bc25f5026da151934cd66d7cfbd22e5924815
+  final_referee: work/rl_foundations_final_referee.md
+  referee_verdict: PASS_FOR_MATHEMATICAL_FREEZE
+  presubmission_review: work/rl_foundations_presubmission_review.md
+  presubmission_review_sha256: 1ba2142cf964928d2b09bde17e1e2827b6be1be327d00636e104ff600b449071
+  presubmission_foundation_verdict: READY_PASS_CANDIDATE_ACCEPTED_BY_ORCHESTRATOR
+  presubmission_submission_verdict: NOT_READY
+  numbered_objects: 30
+  repair_count: 0
+  fail_count: 0
+  polishing_math_fragments_locked: 711
+  equation_tags_locked: 125

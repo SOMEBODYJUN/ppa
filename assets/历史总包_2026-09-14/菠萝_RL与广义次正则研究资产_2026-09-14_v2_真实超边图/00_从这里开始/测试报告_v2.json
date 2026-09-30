@@ -1,0 +1,197 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "checks": {
+    "JSON_schema_all_authored_constraints": {
+      "passed": true,
+      "detail": "Dependency-free validator covers every assertion keyword used in the supplied Draft 2020-12 schema; not a general implementation."
+    },
+    "unique_entity_hyperedge_asset_ids": {
+      "passed": true,
+      "detail": null
+    },
+    "35_to_60_selected_entities": {
+      "passed": true,
+      "detail": null
+    },
+    "20_to_35_semantic_hyperedges": {
+      "passed": true,
+      "detail": null
+    },
+    "all_references_and_members": {
+      "passed": true,
+      "detail": null
+    },
+    "two_direction_role_encoding": {
+      "passed": true,
+      "detail": null
+    },
+    "both_directions_per_hyperedge": {
+      "passed": true,
+      "detail": null
+    },
+    "14_relation_types_present": {
+      "passed": true,
+      "detail": null
+    },
+    "cross_project_hyperedges": {
+      "passed": true,
+      "detail": null
+    },
+    "core_claims_have_complete_evidence_slots": {
+      "passed": true,
+      "detail": null
+    },
+    "missing_slots_not_filled_with_fake_assets": {
+      "passed": true,
+      "detail": null
+    },
+    "evidence_assets_are_actual_hyperedge_members": {
+      "passed": true,
+      "detail": null
+    },
+    "every_package_file_mapped": {
+      "passed": true,
+      "detail": {
+        "missing_from_map": [],
+        "missing_on_disk": []
+      }
+    },
+    "all_assets_have_document_entity": {
+      "passed": true,
+      "detail": null
+    },
+    "asset_hyperedge_mapping_references": {
+      "passed": true,
+      "detail": null
+    },
+    "v1_68_originals_byte_identical": {
+      "passed": true,
+      "detail": null
+    },
+    "chinese_mapping_byte_identical": {
+      "passed": true,
+      "detail": null
+    },
+    "all_source_headings_lines_excerpts_exact": {
+      "passed": true,
+      "detail": []
+    },
+    "HTML_parser_nesting_and_unique_ids": {
+      "passed": true,
+      "detail": {
+        "nesting": [],
+        "unclosed": []
+      }
+    },
+    "HTML_embedded_JSON_identical": {
+      "passed": true,
+      "detail": null
+    },
+    "68_embedded_originals_byte_identical": {
+      "passed": true,
+      "detail": null
+    },
+    "no_CDN_or_remote_runtime_assets": {
+      "passed": true,
+      "detail": null
+    },
+    "all_v2_relative_asset_and_README_links": {
+      "passed": true,
+      "detail": []
+    },
+    "Node_JS_syntax": {
+      "passed": true,
+      "detail": ""
+    },
+    "simulated_DOM_interaction_tests": {
+      "passed": true,
+      "detail": {
+        "status": "PASS",
+        "tests_passed": 15,
+        "tests": [
+          "default_35_hyperedge_nodes_and_core_entities",
+          "all_35_hyperedge_clicks_show_complete_members_roles_and_sources",
+          "all_core_entity_clicks_show_all_incident_hyperedges",
+          "all_rendered_edges_have_directional_markers",
+          "project_and_cross_project_filters",
+          "14_relation_type_filters_include_member_roles",
+          "evidence_status_filters",
+          "search_and_zero_result_recovery",
+          "document_leaf_toggle",
+          "semantic_file_layer_lists_all_assets",
+          "six_evidence_packages_display_missing_slots_honestly",
+          "zoom_pan_node_drag_and_minimap_events",
+          "force_layout_executes_and_hierarchy_resets",
+          "offline_original_asset_download",
+          "keyboard_enter_selection_and_reset"
+        ],
+        "environment": "Synthetic DOM / Node VM; not a browser and not screenshot QA"
+      }
+    },
+    "default_node_bounding_boxes_do_not_overlap": {
+      "passed": true,
+      "detail": []
+    },
+    "all_hyperedges_in_one_connected_graph": {
+      "passed": true,
+      "detail": null
+    },
+    "all_semantic_entities_connected": {
+      "passed": true,
+      "detail": null
+    },
+    "SHA256_list": {
+      "passed": true,
+      "detail": []
+    }
+  },
+  "counts": {
+    "core_entities": 57,
+    "semantic_entities": 48,
+    "all_entities": 149,
+    "hyperedges": 35,
+    "incidences": 184,
+    "assets": 101,
+    "cross_project_hyperedges": 10,
+    "primary_relation_types": {
+      "DEFINES": 2,
+      "IMPLIES": 2,
+      "EXTENDS": 2,
+      "PROVES": 4,
+      "LIMITS": 3,
+      "VERIFIES": 1,
+      "DOMINATES": 2,
+      "COUNTEREXAMPLE_TO": 4,
+      "APPLIES_TO": 1,
+      "ASSUMES": 1,
+      "OPEN_BLOCKER": 2,
+      "SOURCE_FOR": 4,
+      "SUPERSEDES": 1,
+      "AUDITS": 6
+    },
+    "member_relation_types": {
+      "DEFINES": 3,
+      "LIMITS": 18,
+      "SOURCE_FOR": 20,
+      "ASSUMES": 48,
+      "PROVES": 17,
+      "IMPLIES": 9,
+      "OPEN_BLOCKER": 16,
+      "VERIFIES": 16,
+      "COUNTEREXAMPLE_TO": 10,
+      "APPLIES_TO": 11,
+      "DOMINATES": 4,
+      "AUDITS": 9,
+      "EXTENDS": 1,
+      "SUPERSEDES": 2
+    }
+  },
+  "visual_QA_limitations": "No Chromium/Firefox/WebKit executable was available. No browser screenshot, real font rendering or physical pointer QA was performed. HTML parser, JS execution with a synthetic DOM and numerical layout checks are not a browser.",
+  "original_workspace_policy": "Research original bytes and v1 ZIP not changed. Only the new copy and new output artifacts were edited.",
+  "packaging_checks": {
+    "actual_zip_extraction": "Validated after final archive construction; exact result and archive SHA256 printed in delivery record outside the ZIP to avoid archive self-reference.",
+    "relative_links": "Every new organizer link and every asset path checked; historical links inside unedited research originals were not rewritten.",
+    "hash_policy": "All 100 files other than the checksum list are hashed in the list; manifest excludes its own hash."
+  }
+}

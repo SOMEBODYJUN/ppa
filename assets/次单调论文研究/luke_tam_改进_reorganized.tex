@@ -1,0 +1,506 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools,xcolor}
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\definecolor{paperblue}{RGB}{0,55,125}
+\newenvironment{improved}{\par\begingroup\color{red}}{\par\endgroup}
+\newcommand{\E}{\mathcal E}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\gph}{\operatorname{gph}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\zer}{\operatorname{zer}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\barx}{\overline{x}}
+\newcommand{\bx}{\widehat{x}}
+\newcommand{\B}{\mathbb B}
+
+\title{A Faithful and Audited Proof Line for Local PPA Convergence}
+\author{Luke--Tam 2025 proof architecture, with two projection-free repairs}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\textit{Source convention.} The black statements and arguments below reproduce (or closely compress without changing notation) the relevant definitions, assumptions, lemmas, theorem, proof order, and displayed formulas of D.~Russell Luke and Matthew K.~Tam, ``Generalized Monotonicity and the Proximal Point Algorithm'' (2025). Red text is used only for the two requested proof improvements and for logically necessary audit corrections.
+
+\section{Setting and notation}
+
+The paper works in a Euclidean space \(\E\), with a set-valued mapping \(F:\E\rightrightarrows\E\), and the zero problem
+\begin{equation}
+  \text{find }x\in\E\quad\text{s.t.}\quad 0\in F(x).                 \tag{1}
+\end{equation}
+For \(\lambda>0\),
+\begin{equation}
+ J_{\lambda F}:=(\Id+\lambda F)^{-1},\qquad
+ x^{n+1}\in J_{\lambda_nF}(x^n)\quad(n\in\mathbb N).                 \tag{2}
+\end{equation}
+is the (possibly set-valued) proximal point iteration. Distances are infimal distances,
+\[
+\dist(x,A):=\inf_{a\in A}\|x-a\|,
+\]
+and \(P_A(x)\) denotes the (possibly empty) exact metric projection.
+
+For a closed subset \(D\subset\E\), a self-map \(T:D\rightrightarrows D\) is point-wise almost \(\alpha\)-firmly nonexpansive (point-wise a\(\alpha\)-fne) at \(\barx\in D\) on \(D\), with violation \(\varepsilon\in[0,1]\), if
+\begin{equation}
+\bigl(\forall x\in D\bigr)\bigl(\forall x^+\in Tx\bigr)\bigl(\forall \barx^+\in T\barx\bigr):
+\|x^+-\barx^+\|^2\le (1+\varepsilon)\|x-\barx\|^2-
+\frac{1-\alpha}{\alpha}\|(x-x^+)-(\barx-\barx^+)\|^2 .       \tag{3}
+\end{equation}
+The paper emphasizes that point-wise a\(\alpha\)-fne at a point implies single-valuedness at that point, but not neighborhood continuity.
+
+\section{Original Luke--Tam proof architecture}
+
+The logical chain used in the paper is
+\[
+\text{metric subregularity of }F
+\Longrightarrow\text{ residual lower bound for }\Phi_\lambda:=\Id-J_{\lambda F}
+\Longrightarrow\text{ submonotonicity gives (30)}
+\Longrightarrow\text{ distance contraction}
+\Longrightarrow\text{ Lemma 2 gives sequence convergence}.
+\]
+The bridge from submonotonicity to resolvent estimates is Proposition~4: for the truncation
+\[
+F_W(u):=\begin{cases}F(u)\cap W,&u\in U,\\\varnothing,&u\notin U,\end{cases}
+\qquad D:=(\Id+F_W)(U),
+\]
+submonotonicity on \(U\) in \(W\) with violation \(\tau<1/2\) is equivalent to \(J_{F_W}\) being a\(\alpha\)-fne on \(D\) with \(\alpha=1/2\), violation \(\varepsilon=2\tau\), and to \(2J_{F_W}-\Id\) being Lipschitz with constant \(\sqrt{1+4\tau}\). The only estimates needed below are the paper's (28)--(30), together with Lemma~2.
+
+\subsection*{Definition 1 (Metric subregularity)}
+
+A mapping \(\Phi:\E\rightrightarrows\E\) is metrically subregular on \(U\subset\E\) for \(\bar y\in\E\), relative to \(\Lambda\subset\E\), if there exists \(\rho>0\) such that
+\begin{equation}
+ \dist\bigl(x,\Phi^{-1}(\bar y)\cap\Lambda\bigr)
+ \le \rho\,\dist\bigl(\bar y,\Phi(x)\bigr)qquad(\forall x\in U\cap\Lambda).
+                                                               \tag{D1}
+\end{equation}
+
+\subsection*{Assumption 1 (Regularity assumptions I)}
+
+For \(D\subset\E\), the paper assumes:
+\begin{enumerate}[label=(\alph*)]
+\item \(\Fix T\cap D\) is nonempty and closed;
+\item \(T:D\rightrightarrows D\);
+\item for some \(\alpha\in(0,1)\), \(\varepsilon\in[0,1]\),
+\begin{equation}
+\|x^+-y\|^2\le(1+\varepsilon)\|x-y\|^2-
+\frac{1-\alpha}{\alpha}\|x-x^+\|^2
+\quad(x\in D,\ x^+\in Tx,\ y\in\Fix T\cap D);                 \tag{4}
+\end{equation}
+\item \(\Id-T\) is metrically subregular on \(D\), relative to \(D\), for zero, with constant \(\rho>0\):
+\begin{equation}
+\dist(x,\Fix T\cap D)\le \rho\,\dist((\Id-T)x,0)
+\le\inf_{x^+\in Tx}\rho\|x-x^+\|.                         \tag{5}
+\end{equation}
+\end{enumerate}
+
+\subsection*{Proposition 1 (fixed-point contraction)}
+
+Under Assumption~1, every fixed-point sequence \(x^{n+1}\in Tx^n\) satisfies
+\begin{equation}
+ \dist(x^{n+1},\Fix T\cap D)\le\theta_{\alpha,\varepsilon}
+ \dist(x^n,\Fix T\cap D),                                   \tag{6}
+\end{equation}
+where
+\begin{equation}
+ \theta_{\alpha,\varepsilon}:=
+ \left((1+\varepsilon)-\frac{1-\alpha}{\rho^2\alpha}\right)^{1/2}. \tag{7}
+\end{equation}
+If
+\begin{equation}
+ \sqrt{\frac{1-\alpha}{(1+\varepsilon)\alpha}}
+ \le \rho\le
+ \sqrt{\frac{1-\alpha}{\varepsilon\alpha}},                         \tag{8}
+\end{equation}
+then \(\theta_{\alpha,\varepsilon}\in[0,1)\) and \(x^n\to\barx\in\Fix T\cap D\) \(R\)-linearly with this rate.
+
+\section{Metric subregularity / residual lemma}
+
+\subsection*{Definition 2 (Submonotone mappings) and Proposition 3}
+
+For \(U,W\subset\E\) and \(\tau\ge0\), \(F\) is submonotone on \(U\) in \(W\), with violation \(\tau\), if
+\begin{equation}
+ -\tau\|(u+u^+)-(v+v^+)\|^2
+ \le\langle u-v,u^+-v^+\rangle                         \tag{10}
+\end{equation}
+for all \(u,v\in U\), \(u^+\in Fu\cap W\), \(v^+\in Fv\cap W\). It is maximal submonotone if every submonotone extension \(\widetilde F\) with \(\gph F\subset\gph\widetilde F\) has the same graph on \(U\times W\). The maximal extension exists by the usual Zorn-chain union argument; no dimension assumption enters that argument.
+
+More explicitly (Proposition~2), let \(\mathcal M\) be the family of all submonotone extensions of \(F\), ordered by graph inclusion. For a totally ordered subfamily \(\{G_i\}\), define \(\gph G:=\bigcup_i\gph G_i\). Any two graph points in \(U\times W\) belong to one common member of the chain, so \(G\) is submonotone and is an upper bound. Zorn's lemma yields a maximal extension \(\widetilde F\).
+
+Proposition~3 records the equivalent form
+\begin{equation}
+ \|u-v\|^2+\|u^+-v^+\|^2
+ \le(1+2\tau)\|(u+u^+)-(v+v^+)\|^2,                  \tag{P3b}
+\end{equation}
+and the equivalent forms
+\begin{align}
+ -\tau\bigl(\|u-v\|^2+\|u^+-v^+\|^2\bigr)
+ &\le(1+2\tau)\langle u-v,u^+-v^+\rangle,             \tag{P3c}\\
+ 0&\le\|u-u^+\|^2+\|v-v^+\|^2
+ +\frac{2\tau}{1+2\tau}\bigl(\|u-v\|^2+\|u^+-v^+\|^2\bigr)\notag\\
+ &\hspace{2cm}-\|v-u^+\|^2-\|u-v^+\|^2.                \tag{P3d}
+\end{align}
+These are algebraic rearrangements of (10).
+
+\subsection*{Theorem 1 (closed fibers)}
+
+If \(F\) is maximal submonotone on \(U\) in \(W\) with violation \(\tau\), then each \(Fv\cap W\) is the intersection of \(W\) and a lower-level set of a proper lsc weakly convex function with constant \(\tau\). In particular, \(Fv\cap O\) is closed for every closed \(O\subset W\); the analogous statement holds for \(F^{-1}(w)\cap U\).
+
+The paper's proof starts from
+\begin{equation}
+Fv\cap W=
+\bigcap_{\substack{u\in U\\u^+\in Fu\cap W}}
+\left\{w\in W:\ 0\le \tau\|(u+u^+)-(v+w)\|^2
+ +\langle u-v,u^+-w\rangle\right\}.                 \tag{11}
+\end{equation}
+The reverse inclusion is obtained by adjoining a candidate \(w\) to the fiber and using maximality. For fixed \((u,u^+)\), the set in (11) is a lower-level set of
+\[
+ f(w)=\langle(1+2\tau)(u-v)+2\tau u^+,w\rangle-\tau\|w\|^2,
+\]
+which is proper, lsc, and weakly convex (constant \(2\tau\)); taking the supremum/max over the family gives the asserted fiber description and closedness.
+
+\subsection*{Lemma 1 (resolvent residual estimate: original argument)}
+
+Let \(F^{-1}(0)\cap D\ne\varnothing\) be closed, let \(J_{\lambda F}:D\rightrightarrows D\), and suppose that \(F\) is metrically subregular for zero on \(U\), relative to \(D\), with constant \(\rho\). Put
+\[
+U':=\{x\in D:J_{\lambda F}(x)\subset U\cap D\}\ne\varnothing,
+\qquad \Phi_\lambda:=\Id-J_{\lambda F}.
+\]
+The paper writes: for \(x^+\in J_{\lambda F}(x)\),
+\begin{equation}
+ \|x-x^+\|\ge\lambda\dist(0,F(x^+)),                         \tag{22}
+\end{equation}
+and, using a projection \(\barx\in P_{F^{-1}(0)\cap D}(x^+)\),
+\begin{equation}
+ \dist(x,F^{-1}(0)\cap D)
+ \le\|x-x^+\|+\dist(x^+,F^{-1}(0)\cap D).                    \tag{23}
+\end{equation}
+Metric subregularity gives
+\begin{equation}
+ \dist(x^+,F^{-1}(0)\cap D)\le\rho\dist(0,F(x^+)),qquad x^+\in U\cap D. \tag{24}
+\end{equation}
+Combining (22)--(24),
+\begin{equation}
+ \dist(x,F^{-1}(0)\cap D)\le\frac{\lambda+\rho}{\lambda}\|x-x^+\|. \tag{25}
+\end{equation}
+Recalling the paper's relative identification
+\(F^{-1}(0)\cap D=\Fix J_{\lambda F}\cap D=\Phi_\lambda^{-1}(0)\cap D\), this is
+\begin{equation}
+ \dist\bigl(x,F^{-1}(0)\cap D\bigr)
+ \le\frac{\lambda+\rho}{\lambda}\dist\bigl(0,\Phi_\lambda(x)\bigr),qquad x\in U'\cap D. \tag{L1}
+\end{equation}
+
+\begin{improved}
+\textbf{Improved residual line (needed for a Hilbert audit).} The exact projection in (23) is not needed. For every \(x^+\in J_{\lambda F}(x)\), the triangle inequality directly gives
+\[
+\dist(x,F^{-1}(0)\cap D)
+\le \|x-x^+\|+\dist(x^+,F^{-1}(0)\cap D).
+\]
+Thus (22), (24), and (25) remain valid in any normed space in which the displayed resolvent relation makes sense, and in particular in any real Hilbert space. This is a third, auxiliary projection removal exposed by the audit; it does not alter the paper's Lemma~1 statement.
+\end{improved}
+
+\section{Linearly monotone sequence lemma}
+
+A sequence is linearly monotone relative to \(S\) with rate \(\kappa\in[0,1]\) if
+\begin{equation}
+ \dist(x^{n+1},S)\le\kappa\dist(x^n,S)\qquad(n\in\mathbb N).       \tag{26}
+\end{equation}
+
+\subsection*{Lemma 2 (Original argument)}
+
+Let \(\{x^n\}\) be a sequence in \(\E\), let \(S\subset\E\) be closed, and let \(\delta>0\). Assume
+\begin{enumerate}[label=(\alph*)]
+\item \(\|x^{n+1}-x^n\|\le\delta\dist(x^n,S)\) for all \(n\);
+\item (26) holds with \(\kappa<1\).
+\end{enumerate}
+Then \(x^n\) converges gauge monotonically to some \(x^*\in S\), with rate \(O(\kappa^n/(1-\kappa))\).
+
+\paragraph{Original argument.} Iterating (26) in (a) gives
+\[
+\|x^{n+1}-x^n\|\le \delta\kappa^n t_0,qquad t_0:=\dist(x^0,S).
+\]
+For \(n<\ell\), the triangle inequality yields
+\[
+\|x^n-x^\ell\|<\delta s_n t_0,qquad
+s_n:=\sum_{j=n}^{\infty}\kappa^j=\frac{\kappa^n}{1-\kappa}.
+\]
+Hence \(\{x^n\}\) is Cauchy. Completeness of the Euclidean space gives \(x^n\to x^*\in\E\). The paper then invokes bounded compactness to choose \(\bar x^n\in P_S(x^n)\), obtains
+\[
+\|x^n-\bar x^n\|=\dist(x^n,S)\le\kappa^n t_0\to0,
+\]
+and concludes from \(\bar x^n\in S\), closedness of \(S\), and \(\bar x^n\to x^*\) that \(x^*\in S\).
+
+\begin{improved}
+\textbf{Improved argument A (no bounded compactness, no exact projection).} The Cauchy part is unchanged. The only remaining facts are
+\[
+ x^n\to x^*,
+ \qquad \dist(x^n,S)\le \kappa^n\dist(x^0,S)\longrightarrow0.
+\]
+The distance-to-a-set function is 1-Lipschitz in every metric space:
+\[
+ \bigl|\dist(a,S)-\dist(b,S)\bigr|\le d(a,b).
+\]
+Therefore, in the norm notation of the paper,
+\[
+ \dist(x^*,S)\le \|x^*-x^n\|+\dist(x^n,S)\longrightarrow0.
+\]
+Since \(S\) is closed, \(\dist(x^*,S)=0\) implies \(x^*\in S\). Thus bounded compactness is completely removable: the lemma needs only a complete ambient metric space, a nonempty closed \(S\), the metric step bound \(d(x^{n+1},x^n)\le\delta\dist(x^n,S)\), and linear monotonicity. No vector addition, inner product, or finite-dimensionality is used in this lemma. In a general complete metric space, the word ``norm'' and the PPA identities are replaced by the metric \(d\); only the later resolvent/submonotonicity portions require linear or Hilbert structure.
+\end{improved}
+
+\section{Assumption 2}
+
+Fix \(\lambda>0\). For \(F:\E\rightrightarrows\E\) and \(D\subset\E\), Assumption~2 is:
+\begin{enumerate}[label=(\alph*)]
+\item \(F^{-1}(0)\cap D\ne\varnothing\) and is closed;
+\item \(J_{\lambda F}:D\rightrightarrows D\) is a self-map;
+\item for every \(\barx\in F^{-1}(0)\cap D\), there is a neighborhood \(N\) such that
+\[
+N':=\{x\in D:J_{\lambda F}(x)\subset N\cap D\}\ne\varnothing,
+\]
+and
+\begin{equation}
+ \dist(x,F^{-1}(0)\cap D)\le\bar\rho\,\dist(Fx,0),qquad x\in N\cap D;                 \tag{27}
+\end{equation}
+\item for every such \(\barx\), there are neighborhoods \(U,U'\) of \(\barx\), a neighborhood \(W\) of zero, and \(\tau\ge0\) such that
+\begin{enumerate}[label=\roman*.]
+\item \(\lambda F\) is maximal submonotone on \(U\) in \(W\), with violation \(\tau\);
+\item \(U'\subset(\Id+\lambda F)(U)\), where \(F\) is restricted to \(F(x)\cap(W/\lambda)\), and
+\[
+ \tau\left(1+\frac{\bar\rho}{\lambda}\right)^2<\frac12 .
+\]
+\end{enumerate}
+\end{enumerate}
+
+\section{Local convergence theorem}
+
+\subsection*{Theorem 2 (Local Convergence: paper statement)}
+
+Under Assumption~2 at \(\barx\in F^{-1}(0)\cap D\), there exists \(\delta>0\) such that
+\[
+J_{\lambda F}(x)\cap B_\delta(\barx)\ne\varnothing\quad
+(x\in B_\delta(\barx)\cap D),
+\]
+and every sequence generated by
+\[
+x^{n+1}\in J_{\lambda F}(x^n)\cap B_\delta(\barx)
+\]
+converges \(R\)-linearly to \(\bx\in F^{-1}(0)\cap B_\delta(\barx)\cap D\). With
+\[
+\kappa:=\sqrt{1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2}<1,
+\]
+the paper gives
+\begin{equation}
+ \|x^n-\bx\|
+ \le \frac{4\delta\sqrt{1+2\tau}}{1-\kappa}
+ \dist\bigl(x^0,F^{-1}(0)\cap B_\delta(\barx)\cap D\bigr)\,\kappa^n .       \tag{T2}
+\end{equation}
+
+\subsection*{Original argument (proof architecture and projector step)}
+
+Choose \(\rho>\bar\rho\) so that \(\tau(1+\rho/\lambda)^2<1/2\). Lemma~1 applied to (27) gives
+\begin{equation}
+ \frac{\lambda}{\lambda+\rho}\dist(x,F^{-1}(0)\cap D)
+ \le\|x-x^+\|,
+ \quad x\in N'\cap D,\quad x^+\in J_{\lambda F}(x).       \tag{28}
+\end{equation}
+Proposition~3 gives, for \(u\in U\), \(u^+\in\lambda Fu\cap W\), and \(p\in F^{-1}(0)\cap U\),
+\begin{equation}
+ \|u-p\|^2+\|u^+\|^2
+ \le(1+2\tau)\|(u+u^+)-p\|^2.                              \tag{29}
+\end{equation}
+The paper next observes that Assumption~2(d) remains valid after replacing \(U,U'\) by subneighborhoods. For \(x\in U'\), choose \(u\in U\) and \(u^+\in\lambda Fu\cap W\) with \(x=u+u^+\). If \(B_\varepsilon(\barx)\subset U'\) and \(\sigma:=\sqrt{1+2\tau}\,\varepsilon\), then (29) implies
+\[
+\|u-\barx\|\le\sqrt{1+2\tau}\,\|x-\barx\|\le\sigma,
+\]
+so \(B_\sigma(\barx)\subset U\) and \(B_\varepsilon(\barx)\subset(\Id+\lambda F)(B_\sigma(\barx))\). After this shrinking, if \(x\in U'\cap D\) and \(x^+\in J_{\lambda F}(x)\cap U\subset D\), then
+\begin{equation}
+ \|x^+-p\|^2+\|x-x^+\|^2
+ \le(1+2\tau)\|x-p\|^2,qquad p\in F^{-1}(0)\cap U.       \tag{30}
+\end{equation}
+Take \(r:=2\delta\sqrt{1+2\tau}\) and \(\delta\) so small that \(B_r(\barx)\subset U'\cap U\). Equation (30) shows that iterates started in \(B_\delta(\barx)\cap D\) remain in \(B_r(\barx)\cap D\).
+\[
+\|x^+-\barx\|^2
+\le\|x^+-\barx\|^2+\|x-x^+\|^2
+\le(1+2\tau)\|x-\barx\|^2
+\le(1+2\tau)\delta^2\le r^2.
+\]
+
+The paper then sets
+\[
+S_r:=F^{-1}(0)\cap B_r(\barx)\cap D,
+\]
+uses Theorem~1 (and Assumption~2(a)) to obtain that \(S_r\) is nonempty and closed, and invokes an exact projector \(p\in P_{S_r}(x)\). It claims
+\begin{equation}
+ P_{S_r}(x)\subset P_{F^{-1}(0)}(x).                               \tag{P}
+\end{equation}
+The printed argument is: if a global zero \(q\notin B_r(\barx)\) satisfied \(\|q-x\|<\dist(x,S_r)\), then
+\[
+ \|q-\barx\|\le\|q-x\|+\|x-\barx\|
+ <\dist(x,F^{-1}(0)\cap B_r(\barx))+\|x-\barx\|
+ \le2\|x-\barx\|\le2\delta\le r,
+\]
+which is a contradiction. Substituting an exact projector into (30), then using (28), the paper obtains
+\[
+\begin{aligned}
+ \dist(x^+,S_r)^2
+ &\le (1+2\tau)\|x-p\|^2-\|x-x^+\|^2\\
+ &\le (1+2\tau)\|x-p\|^2
+ -\left(\frac{\lambda}{\lambda+\rho}\right)^2
+ \dist\bigl(x,F^{-1}(0)\bigr)^2\\
+ &\le\left(1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2\right)\|x-p\|^2\\
+ &=\kappa^2\dist(x,S_r)^2,
+\end{aligned}
+\]
+and applies Lemma~2.
+
+\begin{improved}
+\textbf{Improved argument B (epsilon-nearest points; no exact projection).}
+
+The correct distance set for the residual estimate (28) is
+\[
+ Z:=F^{-1}(0),\qquad Z_D:=Z\cap D,qquad S_r:=Z_D\cap \overline B_r(\barx),
+\]
+where the ball is taken closed (if the paper's notation is read as an open ball, replace it here by the closed ball and shrink \(\delta\)). Since \(\barx\in Z_D\), \(S_r\ne\varnothing\). For \(x\in\overline B_\delta(\barx)\cap D\),
+\[
+ \dist(x,S_r)\le\|x-\barx\|\le\delta.
+\]
+If \(q\in Z_D\setminus S_r\), then \(\|q-\barx\|>r\), and hence
+\[
+ \|x-q\|\ge\|q-\barx\|-\|x-\barx\|\ge r-\delta
+ =\delta\bigl(2\sqrt{1+2\tau}-1\bigr)\ge\delta.
+\]
+Thus \(\inf_{q\in Z_D\setminus S_r}\|x-q\|\ge\delta\ge\dist(x,S_r)\), and the infimum over the disjoint union \(Z_D=S_r\cup(Z_D\setminus S_r)\) proves the pure distance fact
+\begin{equation}
+ \boxed{\dist(x,S_r)=\dist(x,Z_D)}.                         \tag{B1}
+\end{equation}
+No attainment is used. Notice the necessary correction: equality with \(\dist(x,Z)\) is not guaranteed when \(D\ne\E\), because a zero in \(Z\cap B_r(\barx)\setminus D\) may be closer. The additional local compatibility \(Z\cap\overline B_r(\barx)\subset D\) guarantees \(\dist(x,S_r)=\dist(x,Z)\). Without that compatibility, the printed inclusion (P) is stronger than what its displayed contradiction proves.
+
+For any \(\varepsilon>0\), the definition of distance supplies \(p_\varepsilon\in S_r\) such that
+\begin{equation}
+ \|x-p_\varepsilon\|\le\dist(x,S_r)+\varepsilon.           \tag{B2}
+\end{equation}
+Because \(p_\varepsilon\in Z_D\cap U\), (30) gives
+\[
+ \dist(x^+,S_r)^2
+ \le\|x^+-p_\varepsilon\|^2
+ \le(1+2\tau)\|x-p_\varepsilon\|^2-\|x-x^+\|^2.
+\]
+Using (28) and (B1),
+\begin{equation}
+ \dist(x^+,S_r)^2
+ \le(1+2\tau)\bigl(\dist(x,S_r)+\varepsilon\bigr)^2
+ -\left(\frac{\lambda}{\lambda+\rho}\right)^2\dist(x,S_r)^2. \tag{B3}
+\end{equation}
+The left side is independent of \(\varepsilon\). Letting \(\varepsilon\downarrow0\) yields
+\begin{equation}
+ \dist(x^+,S_r)^2\le\kappa^2\dist(x,S_r)^2,qquad
+ \kappa^2:=1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2.  \tag{B4}
+\end{equation}
+Dropping the first nonnegative term in (30) and using (B2) likewise gives
+\[
+ \|x-x^+\|^2\le(1+2\tau)\bigl(\dist(x,S_r)+\varepsilon\bigr)^2,
+\]
+so, after \(\varepsilon\downarrow0\),
+\[
+ \|x-x^+\|\le\sqrt{1+2\tau}\,\dist(x,S_r).
+\]
+The condition \(\tau(1+\rho/\lambda)^2<1/2\) is exactly what makes \(\kappa<1\). Together with (30), this is Lemma~2(a)--(b), now without convexity, compactness, or any metric-projection attainment.
+\end{improved}
+
+\section{Consequences of the two improvements}
+
+\begin{enumerate}
+\item Improvement A deletes the ``boundedly compact'' hypothesis from Lemma~2 and deletes every exact projection used only to prove that the Cauchy limit belongs to \(S\). It strengthens the lemma from complete Euclidean spaces to complete metric spaces (with the step estimate written metrically).
+\item Improvement B deletes finite-dimensional projection attainment in the main local contraction. The exact equality needed by (28) is (B1) with \(Z_D=F^{-1}(0)\cap D\). The stronger equality with the unrestricted zero set \(Z\) requires the explicit local compatibility \(Z\cap\overline B_r(\barx)\subset D\); it must not be silently assumed.
+\item The auxiliary red replacement after Lemma~1 removes the other exact projection in the paper (the point chosen in (23)); this is necessary when auditing a Hilbert-space version.
+\item With (B1), the contraction is directly relative to \(S_r\), so Lemma~2 yields convergence to a point of \(S_r\), with the same \(\kappa\) and the same geometric tail estimate. The theorem's later convergence conclusion is therefore genuinely strengthened by eliminating projection existence, not merely cosmetically rewritten.
+\end{enumerate}
+
+\section{Hilbert-space extension audit}
+
+The audit below distinguishes algebraic Hilbert facts, metric facts, and the two (plus one auxiliary) attainment points.
+
+\subsection*{Independent four-point verdicts}
+
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Correct.} In Lemma~2, \(\dist(x^*,S)\le\|x^*-x^n\|+\dist(x^n,S)\to0\) is exactly the 1-Lipschitz distance argument. The minimal assumptions are: a nonempty closed \(S\), a complete ambient metric space, the metric step bound, and linear monotonicity.
+\item \textbf{Needs repair as originally phrased; correct after repair.} The \(\varepsilon\)-nearest-point limit is valid, but the unrestricted identity \(\dist(x,S_r)=\dist(x,F^{-1}(0))\) is false without local containment of zeros in \(D\). The correct identity under the paper's assumptions is (B1), with \(Z_D=F^{-1}(0)\cap D\); then (B2)--(B4) are valid. The containment condition is sufficient, not claimed necessary.
+\item \textbf{Needs repair in the printed proof; no unresolved dimension dependence after repair.} Besides the two identified projector steps, Lemma~1 uses an exact projection in (23). The direct triangle inequality removes it. Inner-product identities, metric subregularity, Zorn extension, Theorem~1, resolvent coverage, and neighborhood shrinking are all Hilbert-valid.
+\item \textbf{A after explicit repairs, not as a verbatim printed proof.} A real-Hilbert theorem follows with the relative zero set \(Z_D\), the projection-free Lemma~1/Lemma~2 arguments, and the nested-radius/selected-iterate formulation. The paper's exact global-projector inclusion and its one-ball radius wording cannot be retained without the extra conditions stated here.
+\end{enumerate}
+
+\begin{center}
+\begin{tabular}{p{0.28\textwidth}p{0.62\textwidth}}
+\hline
+\textbf{Item} & \textbf{Dependence and verdict}\\
+\hline
+Definition~1 and all distance estimates & Metric statements; valid in arbitrary metric spaces whenever the referenced sets are nonempty.\\
+Definition~1 $\to$ Assumption~1 $\to$ Proposition~1 & (4)--(8) use norm squares and the inner-product expansion behind almost firm nonexpansiveness. These identities hold in every real Hilbert space. Completeness, not finite dimension, is what is used to pass from Cauchy to convergence.\\
+Definition~2 / Proposition~3 & Pure rearrangements of $\|a+b\|^2=\|a\|^2+2\langle a,b\rangle+\|b\|^2$; valid in every real Hilbert space.\\
+Maximal submonotonicity & The chain-union and Zorn argument is set-theoretic and has no finite-dimensional step.\\
+Theorem~1 (closed fibers) & The functions $w\mapsto\langle a,w\rangle-\tau\|w\|^2$ are continuous and weakly convex in any real Hilbert space; arbitrary suprema of lsc functions are lsc. No compactness or Bolzano--Weierstrass argument is used.\\
+Proposition~4 (resolvents) & The equivalence and the Lipschitz estimate for $2J_{F_W}-\Id$ use Hilbert inner-product identities; no finite-dimensionality is needed.\\
+Lemma~1 & The printed proof uses an exact projection in (23), which is finite-dimensional attainment. The red triangle-inequality replacement removes it; the residual estimate then holds in Hilbert space.\\
+Lemma~2 & The printed proof uses exact projections and bounded compactness. Improvement A replaces both by 1-Lipschitzness of distance; complete metric space suffices.\\
+Assumption~2 local coverage & Neighborhood shrinking, the self-map property, and the inclusion $U'\subset(\Id+\lambda F)(U)$ are metric/set-valued statements. No finite-dimensional continuity theorem is invoked.\\
+Theorem~2 projector step & The printed exact projector is finite-dimensional and, as written with $P_Z$, also needs $Z\cap\overline B_r(\barx)\subset D$. Improvement B uses only (B1), distance definition, triangle inequality, subregularity, and (30).\\
+\hline
+\end{tabular}
+\end{center}
+
+\paragraph{What does not generalize to an arbitrary complete metric space?} The proof of Lemma~2 does. The definitions of resolvent, submonotonicity, and the identities (3), (10), (29), and (30) use vector addition, scalar multiplication, and an inner product; they do not have a direct meaning in a general metric space. Thus the audit supports a Hilbert extension, not a metric-space extension of Theorem~2.
+
+\paragraph{Final audit conclusion.} After the three explicit projection-free replacements (the requested A and B, plus the residual-line repair in Lemma~1), no unavoidable finite-dimensional Euclidean step remains in the Luke--Tam main line. The correct conclusion is therefore:
+
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{\textbf{A (with a precise repair).} The local convergence theorem extends to real Hilbert spaces under the same Assumption~2, interpreted in the Hilbert norm, provided the local set is written as $S_r=(F^{-1}(0)\cap D)\cap\overline B_r(\barx)$ and the proof uses (B1)--(B4) (and the triangle-inequality version of Lemma~1). The unrestricted equality with $F^{-1}(0)$, and hence the printed projector inclusion (P), is guaranteed by the additional local compatibility stated above.}}
+\end{center}
+
+\section{Revised theorem statement}
+
+\begin{improved}
+\textbf{Hilbert-space version (supported by the audit).} Let \(\E\) be a real Hilbert space, \(F:\E\rightrightarrows\E\), \(D\subset\E\), and \(\lambda>0\). Assume Assumption~2 with all neighborhoods and distances taken in the Hilbert norm. For \(\barx\in F^{-1}(0)\cap D\), choose \(\delta_0>0\) so small that, with \(r:=2\delta_0\sqrt{1+2\tau}\), \(\overline B_r(\barx)\subset U'\cap U\). Then every \(x\in\overline B_{\delta_0}(\barx)\cap D\) has a choice
+\[
+x^+\in J_{\lambda F}(x)\cap\overline B_r(\barx).
+\]
+Every sequence for which the locally selected iterates remain in \(\overline B_{\delta_0}(\barx)\cap D\) (and hence each next point lies in the displayed resolvent branch) converges in norm to some
+\[
+\bx\in F^{-1}(0)\cap D\cap\overline B_{\delta_0}(\barx)
+\]
+with the same \(R\)-linear contraction factor
+\[
+\kappa=\sqrt{1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2}<1,
+\]
+and the projection-free geometric-tail estimate
+\[
+ \|x^n-\bx\|\le \frac{\sqrt{1+2\tau}}{1-\kappa}\,\dist(x^0,S_r)\,\kappa^n,
+ \qquad S_r=F^{-1}(0)\cap D\cap\overline B_r(\barx).
+\]
+The proof is exactly the paper's proof through (30), followed by (B1)--(B4) and Improved Lemma~2. The qualifier on the selected iterates is deliberate: Assumption~2(d,ii) gives a nearby resolvent branch, but the printed proof does not establish invariance of one fixed center ball when \(\tau>0\).
+\end{improved}
+
+\section{Remaining unresolved finite-dimensional dependencies}
+
+There is no remaining \emph{unavoidable} finite-dimensional dependency in the repaired main line. Two qualifications must remain explicit rather than hidden:
+\begin{enumerate}
+\item If one insists on retaining the printed exact projections in Lemma~1, Lemma~2, or Theorem~2, finite-dimensional (or another explicit projection-attainment) assumption is still being used. The repaired proof does not.
+\item If one insists on the printed statement \(P_{S_r}(x)\subset P_{F^{-1}(0)}(x)\) or on \(\dist(x,S_r)=\dist(x,F^{-1}(0))\) while \(D\ne\E\), the sufficient additional compatibility \(F^{-1}(0)\cap\overline B_r(\barx)\subset D\) should be imposed. Without it, the correct set is \(Z_D\), and the unrestricted claim is not proved.
+\item Independently of dimension, the printed proof has a radius mismatch: it proves that inputs in \(B_\delta(\barx)\) have selected outputs in \(B_r(\barx)\), with \(r=2\delta\sqrt{1+2\tau}\), but its last sentence switches to \(x^0\in B_r\) and sequences constrained to \(B_r\). The supportable formulation is the nested-radius/selected-iterate version stated in the red revised theorem above; this is a logical radius issue, not a Euclidean compactness issue.
+\item The prefactor \(4\delta\sqrt{1+2\tau}\) in the printed estimate (T2) is quoted as part of the original theorem statement. The repaired proof directly yields the geometric-tail constant \(\sqrt{1+2\tau}\) shown in the red theorem; no unproved identification of the two prefactors is made.
+\end{enumerate}
+
+\section*{Change log}
+
+\begin{itemize}
+\item \textbf{Improvement A:} removes bounded compactness and exact projections from Lemma~2; completeness plus closedness is enough.
+\item \textbf{Improvement B:} removes exact projection attainment from Theorem~2; it replaces the projector argument by (B1)--(B4), with \(Z_D\) as the exact distance set.
+\item \textbf{Additional audit repair:} removes the exact projection in Lemma~1 by a direct triangle inequality.
+\item \textbf{Net effect:} the contraction and sequence-convergence conclusions survive without finite-dimensional compactness or attainment.
+\item \textbf{Hilbert extension:} conclusion A holds for the repaired theorem in real Hilbert spaces; a general complete metric-space extension is supported only for Lemma~2, not for the vector/inner-product PPA steps.
+\end{itemize}
+
+\end{document}

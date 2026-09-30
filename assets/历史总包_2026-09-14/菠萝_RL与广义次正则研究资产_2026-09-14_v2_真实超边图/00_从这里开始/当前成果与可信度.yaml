@@ -1,0 +1,135 @@
+schema_version: '1.0'
+snapshot_date: '2026-09-14'
+layer: 整理层；不是新一轮研究验收
+evidence_policy:
+  PROVED:
+    label: 项目内已证
+    meaning: 指定命题有项目证明与明确审计；不是发表、形式化或优先权认证
+  PENDING:
+    label: 尚待闭合
+    meaning: 候选、修复、合稿、优先权或适用性待核
+  OBSTRUCTED:
+    label: 指定路线受阻
+    meaning: 精确作用域内的不可能性 / 反例，通常是有价值负结果
+  ALREADY_COVERED:
+    label: 旧机制覆盖
+    meaning: 仅扣除已明确覆盖的主张；同文件其他命题分别判断
+  REFERENCE:
+    label: 来源 / 整理层
+    meaning: 不赋予数学结论
+  SUPERSEDED:
+    label: 历史已替代
+    meaning: 保留追溯，不作当前排序或验收
+  NOT_EXECUTED:
+    label: 本次未运行
+    meaning: 纳入代码仅完成语法检查；未执行数学验证
+projects:
+- project: RL_PPA
+  version: 现存排版 PDF/TeX + 2026-09-07 T5 原始 Markdown
+  maturity: T4 未完全闭合；T5 暂定
+  evidence_status: PENDING
+  core_mathematics: 可用核心与补位证明；T5原始合稿最终审稿 REPAIRABLE
+  blockers:
+  - 最新计划：Cor.5.3 被 Prop.5.4 支配
+  - 一般 gauge 的真实价值与最近理论比较待补
+  - 历史 MF01–MF07 须先比对版本，不自动认定为排版稿现错
+  - 外部优先权
+  entry_files:
+  - 01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前排版论文.pdf
+  - 01_RL_PPA核心理论/01_论文主稿/RL核心数学合稿_T5_2026-09-07.md
+  - 01_RL_PPA核心理论/04_证明审计与敌对审稿/总体敌对审稿_修复清单与PRO导入许可_T5F.md
+  - 04_公开问题与未来攻关/04_一个月研究计划/三主线人机协作_30天研究计划_2026-09-10.md
+  conflicting_historical_state: project_state.yaml 声称 T4/T5 passed；仅保留历史，现行工作基线用 2026-09-10
+    计划
+- project: CONIC_CRSC_MSCQ
+  version: v0.4 / latex_v01/main.pdf；作者名修复，数学同 v0.3
+  maturity: 三条主线中最成熟；已有当前完整主稿及核心审计
+  evidence_status: PROVED
+  priority_status: PENDING
+  blockers:
+  - M01 DOI 10.1007/s10107-025-02237-w 正式发表正文逐定理比较
+  missing_named_pdf: 独立命名 v04 PDF 缺失；已保存相同成品 main.pdf 的中文副本
+  entry_files:
+  - 02_锥优化_CRSC_MSCQ/01_论文主稿/冻结最小面CRSC与MSCQ_当前论文_v04.pdf
+  - 02_锥优化_CRSC_MSCQ/03_核心证明审计/冻结CRSC_秩夹逼与MSCQ核心证明审计.md
+  - 02_锥优化_CRSC_MSCQ/04_边界反例与优先权/CRSC与MSCQ_优先权及正式版证据矩阵.md
+- project: STOCHASTIC_MARKOV
+  version: 2026-09-09 研究札记与审计集合
+  maturity: 可靠正负结果；尚无统一正式论文
+  evidence_status: PENDING
+  proved_modules:
+  - 固定有限源数据 exact zeros ↔ global linear EB
+  - 惰性四循环精确锐证书
+  - 可数紧致精确零集与正 Hölder EB 分离
+  blockers:
+  - 同一版本合并审计
+  - 精确 source-specific 优先权
+  - 随机 RL 原生兼容耦合生产器
+  known_obstructions:
+  - 质量稀释
+  - 物理零距匹配强迫吸收
+  - 非 Feller 非不变极限
+  already_covered:
+  - 一般 PWA/Hoffman EB 原理
+  - 条件 OT 与 Dobrushin
+  - 均方收缩随机近端正类
+- project: OPEN_PROBLEMS_AND_CHAOS
+  version: 问题原件 + 2026-09-10 月度计划
+  maturity: 研究计划与限时侦察，不是第四篇成熟论文
+  evidence_status: PENDING
+  chaos_status: SCOUTING_ONLY
+  blockers:
+  - 严格数学混沌无独立成熟证明资产
+  - 历史问题开放状态未重新核验
+  superseded:
+  - 旧问题排序
+  - 旧旗舰任务优先级
+execution:
+  source_modified: false
+  mathematical_scripts: NOT_EXECUTED; py_compile only
+  latex_compilation: NOT_RERUN
+  literature_search: NOT_RERUN
+  packaging_checks: 见外层验收结果，哈希与路径可用随附清单只读复核
+route_state:
+  entry_route: direct_task
+  execution_mode: PACKAGE
+  action_route: PROMPT
+  paper_family: T
+  stage_advancement: NOT_ASSESSED
+  data_sufficiency: SUFFICIENT_FOR_LOCAL_PACKAGING
+  external_acquisition: NOT_NEEDED
+expert_contract:
+  contract_version: '1.0'
+  expert_skill: sci-skills-data-availability
+  project_id: null
+  paper_family: null
+  stage_id: null
+  task_id: null
+  task_status: COMPLETE
+  inputs_reviewed:
+  - 471-file local inventory
+  - 当前主稿、构建报告、独立审计、检索与计划材料
+  outputs:
+  - 中文资产包
+  - 离线超边导航
+  - 来源及筛选台账
+  - 机器manifest与SHA256
+  evidence_status:
+  - VERIFIED_USER_MATERIAL
+  - AI_INFERENCE:整理层归类
+  - NOT_EXECUTED:数学脚本
+  assumptions:
+  - 作者提供的现行保守状态优先于旧状态账
+  author_input_needed: []
+  manual_actions: []
+  quality_checks:
+  - non-destructive byte copies
+  - path and metadata validation
+  - PDF parse
+  - Python syntax-only
+  conflicts:
+  - 旧T4/T5 passed 与当前保守状态不一致
+  conflict_resolution_status: UNRESOLVED
+  merge_permission: orchestrator_only
+  recommended_next_action: 逐命题核对同版证据后开启一项修复任务
+  stage_acceptance_recommendation: NOT_ASSESSED

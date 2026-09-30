@@ -1,0 +1,44 @@
+{
+  "contract_version": "1.0",
+  "expert_skill": "sci-skills-scientific-figures",
+  "project_id": null,
+  "paper_family": null,
+  "stage_id": null,
+  "task_id": null,
+  "task_status": "COMPLETE",
+  "inputs_reviewed": [
+    "v1 ZIP / manifest / 中文映射",
+    "当前 RL TeX 与旧合稿独立审计",
+    "锥当前 TeX、核心/边界/正例/优先权审计",
+    "Markov 分类、正负结果与研究计划"
+  ],
+  "outputs": [
+    "研究资产统一超边知识图_v2.html",
+    "资产关系数据.json",
+    "资产关系_schema_v2.json",
+    "校验_v2.py",
+    "交互模拟测试_v2.cjs"
+  ],
+  "evidence_status": [
+    "VERIFIED_USER_MATERIAL",
+    "AI_INFERENCE: 跨项目结构性综合，不是新定理",
+    "NOT_EXECUTED: 数学脚本 / 浏览器截图"
+  ],
+  "assumptions": [
+    "这是已获请求的导航解释图，不插入论文正文",
+    "图中 PROVED 为项目内作用域判断"
+  ],
+  "author_input_needed": [],
+  "manual_actions": [],
+  "quality_checks": [
+    "参见 测试报告_v2.json"
+  ],
+  "conflicts": [
+    "旧 RL 合稿审计与当前新增 Lemma 3.1 版本范围不同，显式分离",
+    "历史 passed 记录与 9月10日保守基线不同，按后续计划导航而不改阶段"
+  ],
+  "conflict_resolution_status": "UNRESOLVED",
+  "merge_permission": "orchestrator_only",
+  "recommended_next_action": "用真实浏览器检查高密度图的字形与交互",
+  "stage_acceptance_recommendation": "NOT_ASSESSED"
+}

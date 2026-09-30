@@ -1,0 +1,1696 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{microtype}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\gph}{\operatorname{gph}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\Id}{\operatorname{Id}}
+\newcommand{\rad}{\mathcal R}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\eps}{\varepsilon}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\title{Sharp Simultaneous Shadows and Fiber Realization\newline for H\"older--RL Relations}
+\author{Author information to be supplied}
+\date{Research manuscript --- 23 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $H$ be a real Hilbert space and let $F:H\rightrightarrows H$ satisfy
+$\norm{(x-y)-\lambda(v-w)}\le L\norm{(x-y)+\lambda(v-w)}^\gamma$
+for all graph pairs, where $\lambda,L>0$ and $0<\gamma<1$.
+We prove that one strongly monotone bi-Lipschitz homeomorphism
+$A:H\to H$ simultaneously approximates every nonempty forward fiber
+$F(x)$ and inverse fiber $F^{-1}(v)$. Writing
+$\rad=L^{1/(1-\gamma)}$, the respective uniform errors are
+$\rad/(\sqrt2\lambda)$ and $\rad/\sqrt2$, and the
+dimension-independent factor $1/\sqrt2$ is optimal. The construction
+also provides a cross inequality and an explicit monotone-enlargement
+inclusion. Preserving a specified graph point changes the optimal factor
+to $1$. In finite dimensions, for relations that are graph-maximal at the
+fixed parameters, the possible complete inverse fibers are exactly the
+nonempty compact sets of diameter at most $\rad$, with a scaled statement
+for forward fibers. The realization attains the smallest H\"older constant
+permitted by the prescribed set. We establish sharp range localization
+in fixed windows and give a finite-data quadratic-program construction
+of globally invertible surrogates with coverage-dependent paired error
+certificates. A deadband model illustrates stable approximate inversion
+without claiming stable exact recovery. The results distinguish global
+simultaneous organization from the unrestricted compact geometry possible
+within an individual fiber.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Set-valued relation; H\"older continuity; strong
+monotonicity; Kirszbraun extension; fiber realization; certified approximation.
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+A relation may assign several outputs to one input and several inputs to
+one output. Describing an individual value set does not necessarily explain
+how different value sets fit together. Conversely, the existence of a
+well-conditioned approximation need not restrict the topology of the
+original fibers. This paper studies these complementary questions for
+relations satisfying a sublinear H\"older condition in graph coordinates.
+
+Throughout, $H$ is a real Hilbert space and $\lambda,L>0$ and
+$0<\gamma<1$ are fixed. We consider the all-pairs condition
+\begin{equation}\label{eq:RLintro}
+ \norm{(x-y)-\lambda(v-w)}
+ \le L\norm{(x-y)+\lambda(v-w)}^\gamma
+ \qquad ((x,v),(y,w)\in\gph F).
+\end{equation}
+We call this the H\"older--RL condition, where the terminology is only a
+label for \eqref{eq:RLintro}. It is a global condition on all graph pairs,
+not a condition only relative to a solution or along an individual branch.
+The natural length scale is $\rad=L^{1/(1-\gamma)}$.
+
+Our first result concerns approximation at the \emph{same original base
+point}. Ordinary graph proximity allows both coordinates of a graph point
+to move. In contrast, a forward fiber estimate holds with the input fixed,
+and an inverse fiber estimate holds with the output fixed. We construct
+one strongly monotone bi-Lipschitz homeomorphism $A:H\to H$ satisfying
+\begin{equation}\label{eq:intro_bounds}
+ \sup_{v\in F(x)}\norm{v-A(x)}\le\frac{\rad}{\sqrt2\lambda},
+ \qquad
+ \sup_{x\in F^{-1}(v)}\norm{x-A^{-1}(v)}\le\frac{\rad}{\sqrt2},
+\end{equation}
+whenever the indicated fiber is nonempty. The same map works for every
+input and every output. The factor $1/\sqrt2$ is optimal uniformly over
+dimensions, even if the approximating center is not required to come from
+a monotone map. We call such an $A$ a \emph{shadow}. This word does not mean
+that $A$ is a selection of $F$: its graph need not lie in $\gph F$.
+
+The proof passes through the partial map
+$C(x+\lambda v)=x-\lambda v$. A H\"older estimate bounds its excess above
+a chosen Lipschitz slope. Orthogonal lifting and the classical
+Kirszbraun theorem then give a contraction $N$ with the two-parameter
+estimate
+\[
+ \norm{C(p)-N(q)}^2
+ \le \sigma^2\norm{p-q}^2+M_\sigma/2,
+ \qquad p\in\dom C,\ q\in H.
+\]
+It is this cross estimate, rather than just a same-parameter uniform
+approximation bound, that yields \eqref{eq:intro_bounds} without a
+condition-number loss. Global graph maximality is not needed for this
+part of the theory.
+
+Our second main result determines the possible complete fibers of
+graph-maximal relations in finite dimensions. At fixed parameters, a set
+$K\subset\R^n$ occurs as $F^{-1}(0)$ if and only if it is nonempty,
+compact, and has diameter at most $\rad$. The forward-fiber threshold is
+$\rad/\lambda$. The sufficient direction constructs a map with prescribed
+fixed-point set $K$ and H\"older constant $(\diam K)^{1-\gamma}$, the least
+constant compatible with that set. The construction can also make the
+original $F$ single-valued and globally Lipschitz. Thus a common stable
+shadow is compatible with arbitrary compact fiber geometry at the
+permitted scale. The realization theorem is a positive classification,
+not merely a collection of examples showing failures of convexity.
+
+We give two further quantitative consequences. First, an exact scalar
+localization function gives sharp ball-to-ball range coverage, including
+the setting where graph maximality is known only inside a fixed window.
+Second, finitely many graph observations produce one globally consistent
+contraction through a strongly convex quadratic program. Parameter-space
+coverage turns sampled estimates into paired certificates for unobserved
+graph points. A finite-information obstruction explains why finitely many
+observations cannot certify a uniform error on an unrestricted unbounded
+domain. A deadband inverse problem illustrates the precise tradeoff:
+stable approximate representatives can coexist with unstable exact inverse
+selections. The certificate does not recover information absent from the
+original model.
+
+\paragraph{Relation to earlier work.}
+Luke and Tam \cite[Theorem~1]{LukeTam} study generalized monotonicity and the proximal
+point algorithm, including representations of value sets and inverse value
+sets by lower-level sets of lower semicontinuous weakly convex functions
+in their relatively maximal submonotone framework. Their original-
+relation viewpoint motivates our questions. We consider a different,
+sublinear all-pairs condition and ask for simultaneous quantitative
+approximation and exact fiber realization. We do not claim to settle the
+Bregman, stochastic, or algorithmic directions in their outlook.
+
+The tools underlying our proofs are classical. The Kirszbraun--Valentine
+theorem \cite{Kirszbraun,Valentine} supplies Hilbert-space Lipschitz
+extension. Same-constant
+H\"older extension follows from the Hilbert snowflake embedding associated
+with Schoenberg's theorem \cite{Schoenberg}, and is discussed together with
+monotone extension by Minty \cite{Minty1970}. Uniform Lipschitz approximation
+of uniformly continuous Hilbert-valued mappings is already established
+by Levy and Rice \cite{LevyRice}. Constructive links between Lipschitz
+extension and monotone operator theory are developed, for example, by
+Bauschke and Wang \cite{BauschkeWang}. We do not claim these approximation or
+extension principles as new. The conclusion here concerns the original
+relation and its inverse at fixed original base points, one common
+strongly monotone homeomorphism, and a dimension-independent optimal
+constant. The enlargement consequence uses the established notion of
+monotone enlargement \cite{BurachikIusemSvaiter}.
+
+The finite-data formula is a specialization of constructive Kirszbraun
+extension. Azagra, Le Gruyer, and Mudarra
+\cite[Theorems~2 and~8]{AzagraLeGruyerMudarra} give an explicit Lipschitz
+extension formula and an extension theorem for strongly bi-Lipschitz maps.
+Algorithmic Kirszbraun extension for vector-valued regression is studied
+by Zaichyk et al.\ \cite{ZaichykEtAl}. We provide a direct proof of the
+particular quadratic program used here, rather than claiming a new
+general extension algorithm.
+
+Exact interpolation within prescribed operator classes is a related but
+different question. Rubbens, Hendrickx, and Taylor
+\cite[Section~3.3]{RubbensHendrickxTaylor} develop strengthened finite-data
+conditions for strongly monotone Lipschitz operators, including necessary
+relaxations of one-point extendibility. Here the original RL samples need
+not be exactly interpolable by that target class. Our construction accepts
+a quantified approximation error and provides paired, coverage-dependent
+certificates for the same surrogate of the underlying relation. Classical
+extension, contraction, and
+degree arguments are identified as tools rather than additional novelty
+claims.
+
+The present paper is a structure and approximation study. It does not
+assert that a shadow together with a residual error bound automatically
+implies convergence of an algorithm for the original relation.
+
+\section{Relations, graph coordinates, and fixed parameters}\label{sec:setup}
+
+For $F:H\rightrightarrows H$, write
+\[
+ \gph F=\{(x,v):v\in F(x)\},\quad
+ \dom F=\{x:F(x)\ne\varnothing\},\quad
+ \ran F=\{v:F^{-1}(v)\ne\varnothing\},
+\]
+where $F^{-1}(v)=\{x:v\in F(x)\}$. A \emph{fiber} is one of these
+forward or inverse values. An open ball is denoted by $B(x,r)$ and a closed
+ball by $\overline B(x,r)$. For nonempty sets $E,D$, their Hausdorff distance
+is
+\[
+ d_H(E,D)=\max\{\sup_{e\in E}\dist(e,D),\sup_{d\in D}\dist(d,E)\},
+\]
+with the value $+\infty$ allowed. In particular,
+$d_H(E,\{a\})=\sup_{e\in E}\norm{e-a}$.
+
+\begin{definition}\label{def:RL}
+A nonempty relation $F$ is a $(\lambda,L,\gamma)$ H\"older--RL relation
+if \eqref{eq:RLintro} holds. It is \emph{graph-maximal at the fixed
+parameters} if no proper superset of its graph satisfies that same
+inequality with the same $\lambda,L,\gamma$.
+For $U,W\subset H$, a nonempty graph $G\subset U\times W$ is
+\emph{relatively maximal} if no proper superset within $U\times W$
+satisfies the fixed-parameter inequality.
+\end{definition}
+
+This maximality is not maximal monotonicity. A map $A:H\to H$ is
+$\mu$-strongly monotone if
+$\ip{A(x)-A(y)}{x-y}\ge\mu\norm{x-y}^2$ for all $x,y$. It is
+$\ell$-Lipschitz if $\norm{A(x)-A(y)}\le\ell\norm{x-y}$. A bi-Lipschitz
+homeomorphism here means a bijection whose map and inverse are Lipschitz.
+
+\begin{lemma}[Graph coordinates]\label{lem:cayley}
+Let $F$ satisfy \eqref{eq:RLintro} and put
+\begin{equation}\label{eq:cayley}
+ D=\{x+\lambda v:(x,v)\in\gph F\},\qquad
+ C(x+\lambda v)=x-\lambda v.
+\end{equation}
+Then $C:D\to H$ is well-defined and $L$-H\"older with exponent $\gamma$.
+Conversely, any such map defines an RL graph by
+\begin{equation}\label{eq:reconstruct}
+ \gph F=\left\{\left(\frac{p+C(p)}2,
+                    \frac{p-C(p)}{2\lambda}\right):p\in D\right\}.
+\end{equation}
+If $D=H$, this graph is graph-maximal at the fixed parameters.
+\end{lemma}
+
+\begin{proof}
+If two graph points have the same sum $x+\lambda v$, the right-hand side
+of \eqref{eq:RLintro} is zero. Their differences $x-\lambda v$ are therefore
+equal. Adding and subtracting the equalities identifies the two original
+points. The RL inequality is exactly
+$\norm{C(p)-C(q)}\le L\norm{p-q}^\gamma$, and solving for $(x,v)$ gives
+\eqref{eq:reconstruct}. Conversely, substitution into \eqref{eq:RLintro}
+verifies the condition. If $D=H$ and a pair $(x,v)$ is compatible with the
+entire graph, compare it with the existing pair at parameter
+$p=x+\lambda v$. Their parameter difference is zero, so compatibility
+forces their second graph coordinate to agree. The proposed pair is
+already in the graph, proving maximality.
+\end{proof}
+
+We use two classical extension results. The Kirszbraun--Valentine theorem states that
+a Lipschitz map from a subset of a Hilbert space into another Hilbert
+space has a same-constant extension to the whole domain space
+\cite{Kirszbraun,Valentine}. We also use the following H\"older consequence.
+
+\begin{lemma}[Classical H\"older extension]\label{lem:holderextension}
+Every $L$-H\"older map $C:D\subset H\to H$ of exponent $0<\gamma<1$
+has an $L$-H\"older extension $\widehat C:H\to H$ of the same exponent.
+Consequently an RL relation is graph-maximal if and only if $D=H$ in
+\eqref{eq:cayley}. Every RL graph has a graph-maximal completion at the
+same parameters.
+\end{lemma}
+
+\begin{proof}
+The Hilbert snowflake theorem \cite{Schoenberg} gives a Hilbert space $E$
+and a map $J:H\to E$ such that
+$\norm{J(p)-J(q)}_E=\norm{p-q}^\gamma$.
+The map $J(p)\mapsto C(p)$ on $J(D)$ is $L$-Lipschitz, so Kirszbraun
+extension to $E$, followed by composition with $J$, gives $\widehat C$.
+This proves the extension statement (see also \cite{Minty1970}).
+If an RL graph were maximal with $D\ne H$, \eqref{eq:reconstruct} applied
+to $\widehat C$ would give a proper compatible extension, a contradiction.
+The converse is Lemma~\ref{lem:cayley}, and the same construction proves
+the completion assertion.
+\end{proof}
+
+\begin{lemma}[Fiber diameters]\label{lem:diameters}
+Every RL relation satisfies
+\begin{equation}\label{eq:diameters}
+ \diam F(x)\le\rad/\lambda,\qquad
+ \diam F^{-1}(v)\le\rad
+\end{equation}
+for each nonempty fiber. Neither maximality nor closedness is needed.
+\end{lemma}
+
+\begin{proof}
+For $v,w\in F(x)$, set $d=\lambda\norm{v-w}$. Then $d\le Ld^\gamma$.
+If $d>0$, division gives $d\le L^{1/(1-\gamma)}=\rad$; the case $d=0$
+is immediate. Setting the outputs equal proves the inverse assertion.
+\end{proof}
+
+\section{Sharp simultaneous strongly monotone shadows}\label{sec:shadow}
+
+\subsection{Quadratic excess and orthogonal lifting}
+
+For $\sigma>0$, define
+\begin{equation}\label{eq:M}
+ M_\sigma=(1-\gamma)\gamma^{\gamma/(1-\gamma)}
+            \rad^2\sigma^{-2\gamma/(1-\gamma)}.
+\end{equation}
+
+\begin{lemma}[Exact quadratic excess]\label{lem:excess}
+For every $\sigma>0$,
+\begin{equation}\label{eq:excess}
+ \sup_{t\ge0}\{L^2t^{2\gamma}-\sigma^2t^2\}=M_\sigma.
+\end{equation}
+The maximum is attained at
+$t_\sigma=(\gamma L^2/\sigma^2)^{1/[2(1-\gamma)]}$.
+\end{lemma}
+
+\begin{proof}
+For $t>0$ the derivative vanishes precisely when
+$\gamma L^2t^{2\gamma-2}=\sigma^2$. The function is positive for
+sufficiently small positive $t$, equals zero at zero, and tends to
+$-\infty$ at infinity. The unique positive critical point is therefore
+the maximum. Since $\sigma^2t_\sigma^2=\gamma L^2t_\sigma^{2\gamma}$,
+substitution gives $(1-\gamma)L^2t_\sigma^{2\gamma}$, which simplifies to
+\eqref{eq:M}.
+\end{proof}
+
+\begin{lemma}[Cross-lift]\label{lem:crosslift}
+Let $C:D\subset H\to H$ be $L$-H\"older of exponent $\gamma$ and
+$D\ne\varnothing$. For every $0<\sigma<1$ there exists a
+$\sigma$-Lipschitz map $N:H\to H$ such that
+\begin{equation}\label{eq:crosslift}
+ \norm{C(p)-N(q)}^2
+ \le\sigma^2\norm{p-q}^2+M_\sigma/2
+ \qquad(p\in D,\ q\in H).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $\ell_2(D)$ be the Hilbert space of square-summable families indexed
+by the set $D$, with coordinate unit vectors $e_p$, and set
+$r^2=M_\sigma/(2\sigma^2)$. On
+$\widehat D=\{(p,re_p):p\in D\}\subset H\oplus\ell_2(D)$ define
+$\widehat C(p,re_p)=C(p)$. For distinct $p,s\in D$,
+\[
+ \norm{C(p)-C(s)}^2
+ \le L^2\norm{p-s}^{2\gamma}
+ \le\sigma^2\norm{p-s}^2+M_\sigma
+ =\sigma^2\norm{(p,re_p)-(s,re_s)}^2.
+\]
+Thus $\widehat C$ is $\sigma$-Lipschitz; the identical-point case is
+automatic. Kirszbraun's theorem gives a $\sigma$-Lipschitz extension
+$\widehat N:H\oplus\ell_2(D)\to H$. Set $N(q)=\widehat N(q,0)$.
+Comparing a lifted point with a base-plane point gives
+\[
+ \norm{C(p)-N(q)}^2
+ \le\sigma^2(\norm{p-q}^2+r^2)
+ =\sigma^2\norm{p-q}^2+M_\sigma/2,
+\]
+as claimed. Possible nonseparability of $\ell_2(D)$ does not change the
+Hilbert-space extension theorem.
+\end{proof}
+
+\subsection{The main approximation theorem}
+
+\begin{theorem}[One shadow in both directions]\label{thm:shadow}
+Let $F$ be a nonempty $(\lambda,L,\gamma)$ RL relation on a real Hilbert
+space. For each $0<\sigma<1$ there exists a bi-Lipschitz homeomorphism
+$A_\sigma:H\to H$ satisfying
+\begin{align}
+ \Lip(A_\sigma)&\le\frac{1+\sigma}{\lambda(1-\sigma)},
+ &\Lip(A_\sigma^{-1})&\le\frac{\lambda(1+\sigma)}{1-\sigma},
+ \label{eq:conditioning}\\
+ \ip{A_\sigma(x)-A_\sigma(y)}{x-y}
+ &\ge\frac{1-\sigma}{\lambda(1+\sigma)}\norm{x-y}^2.
+ \label{eq:strongmono}
+\end{align}
+For every $(x,v)\in\gph F$ and $z\in H$, the same map satisfies
+\begin{equation}\label{eq:originalcross}
+ \ip{x-z}{v-A_\sigma(z)}
+ \ge\frac{1-\sigma^2}{4\lambda}
+       \norm{x-z+\lambda(v-A_\sigma(z))}^2
+       -\frac{M_\sigma}{8\lambda}.
+\end{equation}
+In particular, with
+$r_\sigma=\sqrt{M_\sigma/[2(1-\sigma^2)]}$,
+\begin{equation}\label{eq:pairedsigma}
+ \norm{v-A_\sigma(x)}\le r_\sigma/\lambda,
+ \qquad
+ \norm{x-A_\sigma^{-1}(v)}\le r_\sigma
+ \qquad((x,v)\in\gph F).
+\end{equation}
+The displayed radius $r_\sigma$ is minimized at $\sigma=\sqrt\gamma$.
+For the resulting map $A$,
+\begin{equation}\label{eq:pairedsharp}
+ \norm{v-A(x)}\le\frac{\rad}{\sqrt2\lambda},
+ \qquad
+ \norm{x-A^{-1}(v)}\le\frac{\rad}{\sqrt2}
+ \qquad((x,v)\in\gph F).
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{lem:crosslift} directly to the partial map in
+Lemma~\ref{lem:cayley}, and define
+\begin{equation}\label{eq:shadowparam}
+ X(q)=\frac{q+N(q)}2,\qquad
+ V(q)=\frac{q-N(q)}{2\lambda}.
+\end{equation}
+For any $x\in H$, the equation $X(q)=x$ is equivalent to
+$q=2x-N(q)$. Its right-hand side is a contraction of modulus at most
+$\sigma$, so the Banach fixed-point theorem gives a unique solution.
+For any $v\in H$, the same theorem applied to $q=2\lambda v+N(q)$ gives
+a unique solution of $V(q)=v$. Thus both $X$ and $V$ are bijections and
+$A_\sigma=V\circ X^{-1}$ is a bijection.
+
+For $q_1,q_2\in H$, put $h=q_1-q_2$ and $k=N(q_1)-N(q_2)$, so that
+$\norm{k}\le\sigma\norm{h}$. Differences in the original coordinates
+are $(h+k)/2$ and $(h-k)/(2\lambda)$. The estimates
+\[
+ (1-\sigma)\norm{h}\le\norm{h\pm k}
+ \le(1+\sigma)\norm{h}
+\]
+give both bounds in \eqref{eq:conditioning}. Moreover,
+\begin{align*}
+ \ip{V(q_1)-V(q_2)}{X(q_1)-X(q_2)}
+ &=\frac{\norm{h}^2-\norm{k}^2}{4\lambda}\\
+ &\ge\frac{1-\sigma^2}{4\lambda}\norm{h}^2
+ \ge\frac{1-\sigma}{\lambda(1+\sigma)}
+       \norm{X(q_1)-X(q_2)}^2.
+\end{align*}
+This proves \eqref{eq:strongmono}; the Lipschitz bounds also establish
+the asserted homeomorphism property.
+
+For an original graph point and a point on the shadow, let
+$p=x+\lambda v\in D$ and $q=z+\lambda A_\sigma(z)$. Then
+\[
+ p-q=(x-z)+\lambda(v-A_\sigma(z)),\qquad
+ C(p)-N(q)=(x-z)-\lambda(v-A_\sigma(z)).
+\]
+The difference of their squared norms is
+$4\lambda\ip{x-z}{v-A_\sigma(z)}$. Therefore
+\eqref{eq:crosslift} gives \eqref{eq:originalcross}.
+Taking $z=x$ makes its left side zero and gives the forward bound in
+\eqref{eq:pairedsigma}. Taking $z=A_\sigma^{-1}(v)$ gives the inverse
+bound. These two substitutions use the same $A_\sigma$.
+
+Finally, putting $u=\sigma^2$, the squared radius is a positive
+$\sigma$-independent constant times
+$u^{-\gamma/(1-\gamma)}(1-u)^{-1}$. Its logarithmic derivative is
+\[
+ -\frac{\gamma}{(1-\gamma)u}+\frac1{1-u},
+\]
+which vanishes only at $u=\gamma$. The function diverges at both
+endpoints, so this point is the unique minimum. Substitution gives
+$M_{\sqrt\gamma}=(1-\gamma)\rad^2$ and $r_{\sqrt\gamma}^2=\rad^2/2$,
+proving \eqref{eq:pairedsharp}.
+\end{proof}
+
+The quantifiers in this theorem matter: one $A$ controls all graph points.
+In an arbitrary Hilbert space the theorem says nothing about the
+nonemptiness of a fiber not already represented in $\gph F$.
+
+\begin{corollary}[Enlargement inclusion]\label{cor:enlargement}
+The map $A_\sigma$ in Theorem~\ref{thm:shadow} is maximal monotone. With
+the standard enlargement
+\[
+ A_\sigma^{[\eps]}(x)=
+ \{v:\ip{x-z}{v-A_\sigma(z)}\ge-\eps\text{ for every }z\in H\},
+\]
+one has
+\begin{equation}\label{eq:enlargement}
+ F(x)\subset A_\sigma^{[M_\sigma/(8\lambda)]}(x).
+\end{equation}
+For the map minimizing the radius in \eqref{eq:pairedsigma},
+$\eps=(1-\gamma)\rad^2/(8\lambda)$.
+\end{corollary}
+
+\begin{proof}
+Strong monotonicity implies monotonicity. If $(u,w)$ is monotonically
+related to the entire graph of the continuous full-domain map $A_\sigma$,
+then, for $z=u+th$ and $t>0$,
+$\ip{h}{w-A_\sigma(u+th)}\le0$. Letting $t\downarrow0$ and then
+replacing $h$ by $-h$ gives
+$\ip{h}{w-A_\sigma(u)}=0$ for every $h$, whence $w=A_\sigma(u)$.
+Thus no point can be added monotonically. Dropping the nonnegative
+squared term in \eqref{eq:originalcross} proves the inclusion, and
+substituting $\sigma=\sqrt\gamma$ gives the stated parameter.
+\end{proof}
+
+The displayed enlargement parameter is associated with the map that
+minimizes the fiber-radius guarantee. We do not assert that it is the
+smallest possible enlargement parameter.
+
+\subsection{Dimension-independent optimality}
+
+\begin{theorem}[Optimal universal factor]\label{thm:sharpness}
+The factor $1/\sqrt2$ in each inequality of \eqref{eq:pairedsharp} cannot
+be replaced by a smaller constant valid in all finite dimensions. This
+remains true for graph-maximal RL relations and arbitrary choices of a
+single center for the fiber under consideration.
+\end{theorem}
+
+\begin{proof}
+Fix $n\ge1$ and take vertices $u_0,\ldots,u_n\in\R^n$ of a regular
+simplex of edge length $\rad$, centered so that $\sum_i u_i=0$.
+Let $Q=\conv\{u_0,\ldots,u_n\}$. To compute the vertex radius, use
+\[
+ \sum_{j=0}^n\norm{u_i-u_j}^2
+ =(n+1)\norm{u_i}^2+\sum_{j=0}^n\norm{u_j}^2.
+\]
+The left side is $n\rad^2$ for every $i$, so all vertex norms are equal
+and their common squared value is
+$r_n^2=n\rad^2/[2(n+1)]$. For any $b\in\R^n$,
+\[
+ \frac1{n+1}\sum_{i=0}^n\norm{u_i-b}^2=r_n^2+\norm{b}^2.
+\]
+At least one vertex is therefore at distance at least $r_n$ from $b$.
+
+The metric projection $P_Q$ is nonexpansive and has image of diameter
+$\rad$. Consequently
+\[
+ \norm{P_Q(p)-P_Q(q)}
+ \le\min\{\norm{p-q},\rad\}
+ \le\rad^{1-\gamma}\norm{p-q}^\gamma
+ =L\norm{p-q}^\gamma.
+\]
+For the middle inequality, if $t\le\rad$ then
+$t\le\rad^{1-\gamma}t^\gamma$, while if $t\ge\rad$ then
+$\rad\le\rad^{1-\gamma}t^\gamma$.
+
+Use $C=-P_Q$ in \eqref{eq:reconstruct} with domain $\R^n$. The resulting
+relation is graph-maximal by Lemma~\ref{lem:cayley}. Its input is zero
+exactly when $p=P_Qp$, or $p\in Q$, and then its output is $p/\lambda$.
+Thus $F(0)=Q/\lambda$. Any center $b$ has worst-case distance at least
+$r_n/\lambda$ from this fiber. Any universal forward factor $c$ must
+therefore satisfy $c\ge\sqrt{n/[2(n+1)]}$ for every $n$, so
+$c\ge1/\sqrt2$.
+
+Using $C=P_Q$ instead yields $F^{-1}(0)=Q$ and gives the same lower
+bound for any inverse-fiber center. The two witnesses need not be the
+same relation: either one already rules out a smaller common universal
+factor.
+\end{proof}
+
+This theorem does not determine the best factor in each fixed dimension,
+nor does it assert optimality of the conditioning bounds in
+\eqref{eq:conditioning}--\eqref{eq:strongmono}.
+
+\subsection{Preserving a specified graph point}
+
+\begin{theorem}[Anchored shadow]\label{thm:anchor}
+Under the assumptions of Theorem~\ref{thm:shadow}, fix
+$(x_0,v_0)\in\gph F$. For every $0<\sigma<1$ there exists a bi-Lipschitz
+homeomorphism $A_{\sigma,0}:H\to H$ with the conditioning and
+strong-monotonicity bounds
+\eqref{eq:conditioning}--\eqref{eq:strongmono}, such that
+$A_{\sigma,0}(x_0)=v_0$ and, for every $(x,v)\in\gph F$ and $z\in H$,
+\begin{equation}\label{eq:anchorcross}
+ \ip{x-z}{v-A_{\sigma,0}(z)}
+ \ge\frac{1-\sigma^2}{4\lambda}
+      \norm{x-z+\lambda(v-A_{\sigma,0}(z))}^2
+      -\frac{M_\sigma}{4\lambda}.
+\end{equation}
+Writing $A_0=A_{\sqrt\gamma,0}$, this gives, for every original graph point,
+\begin{equation}\label{eq:anchorbounds}
+ \norm{v-A_{0}(x)}\le\rad/\lambda,
+ \qquad \norm{x-A_{0}^{-1}(v)}\le\rad,
+\end{equation}
+and $F(x)\subset A_0^{[(1-\gamma)\rad^2/(4\lambda)]}(x)$.
+The factor $1$ is optimal under the anchoring requirement, already in
+dimension one.
+\end{theorem}
+
+\begin{proof}
+Let $p_0=x_0+\lambda v_0$ and $c_0=x_0-\lambda v_0$. Repeat the lift of
+Lemma~\ref{lem:crosslift} with $r^2=M_\sigma/\sigma^2$, and add the base
+datum $(p_0,0)\mapsto c_0$. Distinct lifted data are compatible with
+Lipschitz modulus $\sigma$ because their extra squared distance supplies
+$2M_\sigma$, at least the excess required by Lemma~\ref{lem:excess}.
+A lifted datum and the anchor are compatible because
+\[
+ \norm{C(p)-c_0}^2
+ \le\sigma^2\norm{p-p_0}^2+M_\sigma
+ =\sigma^2\norm{(p,re_p)-(p_0,0)}^2.
+\]
+Kirszbraun extension now gives a contraction $N$ with $N(p_0)=c_0$ and
+\[
+ \norm{C(p)-N(q)}^2\le\sigma^2\norm{p-q}^2+M_\sigma.
+\]
+Construct $A_{\sigma,0}$ as in \eqref{eq:shadowparam}. The anchor
+equalities give $X(p_0)=x_0$ and $V(p_0)=v_0$. The conditioning proof is
+unchanged, and the difference-of-squares identity gives
+\eqref{eq:anchorcross}. Setting $z=x$ or $z=A_{\sigma,0}^{-1}(v)$ yields
+forward and inverse radii
+$\lambda^{-1}\sqrt{M_\sigma/(1-\sigma^2)}$ and
+$\sqrt{M_\sigma/(1-\sigma^2)}$, respectively. At
+$\sigma=\sqrt\gamma$ these equal $\rad/\lambda$ and $\rad$.
+Dropping the square gives the stated
+enlargement inclusion.
+
+For forward optimality in $\R$, take $Q=[0,\rad]$, use $C=-P_Q$, and
+anchor at $(0,0)$. Then $F(0)=[0,\rad/\lambda]$, whereas the anchoring
+requires $A_0(0)=0$. Its worst-case forward error is at least
+$\rad/\lambda$. For inverse optimality use $C=P_Q$, so
+$F^{-1}(0)=Q$, and the same anchor forces $A_0^{-1}(0)=0$.
+The worst-case inverse error is at least $\rad$.
+\end{proof}
+
+\section{Finite-dimensional geometry and exact fiber realization}
+\label{sec:fibers}
+
+\subsection{Full domain, full range, and compact fibers}
+
+\begin{theorem}\label{thm:finite_geometry}
+Let $H=\R^n$ and let $F$ be graph-maximal at the fixed RL parameters.
+Then
+\begin{equation}\label{eq:fullrange}
+ \dom F=\ran F=\R^n.
+\end{equation}
+Every forward and inverse fiber is compact. Both coordinate projections
+from $\gph F$ are proper, and $F$ and $F^{-1}$ are upper semicontinuous
+and locally bounded. They map compact sets to compact unions of values.
+Orient the graph by the parametrization of Lemma~\ref{lem:cayley},
+with the standard orientation on $\R^n$. Under this convention,
+each projection has degree $1$.
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{lem:holderextension}, the Cayley map $C$ is defined on all
+of $\R^n$. It is continuous and satisfies
+$\norm{C(p)}\le\norm{C(0)}+L\norm{p}^\gamma$.
+The map
+$p\mapsto((p+C(p))/2,(p-C(p))/(2\lambda))$
+is a homeomorphism onto the graph, with continuous inverse $(x,v)\mapsto
+x+\lambda v$. For $t\in[0,1]$ define
+\[
+ X_t(p)=\frac{p+tC(p)}2,\qquad
+ V_t(p)=\frac{p-tC(p)}{2\lambda}.
+\]
+Uniformly in $t$,
+\[
+ 2\norm{X_t(p)}\ge\norm{p}-\norm{C(0)}-L\norm{p}^\gamma,
+ \quad
+ 2\lambda\norm{V_t(p)}\ge\norm{p}-\norm{C(0)}-L\norm{p}^\gamma.
+\]
+The right sides tend to infinity with $\norm p$. Hence both homotopies
+are uniformly proper: preimages of any bounded target set remain in a
+common bounded parameter set.
+
+Fix a target $y$. Choose a large ball so that neither homotopy hits $y$
+on its boundary. Homotopy invariance of Brouwer degree gives degree $1$
+for $X_1$ and $V_1$, since $X_0=\Id/2$ and $V_0=\Id/(2\lambda)$ are
+positive scalar multiples of the identity. The nonzero-degree existence
+property gives a preimage of $y$ for each map, proving \eqref{eq:fullrange}.
+These are classical degree properties; see, for example,
+\cite{BenevieriFuriPeraSpadini}.
+
+The displayed coercive bounds and continuity show that the preimage of
+a compact set under either projection, expressed in the parameter $p$,
+is closed and bounded, hence compact. The projections are thus proper,
+and point preimages give compact fibers. The graph is closed: if
+$(x_j,v_j)\to(x,v)$, then $p_j=x_j+\lambda v_j\to x+\lambda v$ and
+$C(p_j)=x_j-\lambda v_j\to x-\lambda v$, which verifies graph membership
+by continuity. The same coercive bounds show local boundedness of each
+fiber map: bounded $x$ bounds $p$, hence $v$, and bounded $v$ bounds $p$,
+hence $x$.
+
+For upper semicontinuity, suppose an open set $O$ contains $F(x)$ but
+there are $x_j\to x$ and $v_j\in F(x_j)\setminus O$. Local boundedness
+gives a convergent subsequence of $v_j$; closedness of the graph puts its
+limit in $F(x)\subset O$, contradicting openness. The inverse argument
+is identical with the coordinates exchanged. Finally, for a compact
+set $K$, the portion of the graph above $K$ is compact by properness;
+its projection onto the other coordinate is $F(K)$ and is compact.
+The inverse statement follows from the other projection.
+\end{proof}
+
+\begin{corollary}\label{cor:hausdorff}
+For a relation satisfying Theorem~\ref{thm:finite_geometry}, the same
+shadow $A$ satisfies the complete-fiber Hausdorff estimates
+\[
+ \sup_{x\in\R^n}d_H(F(x),\{A(x)\})\le\frac{\rad}{\sqrt2\lambda},
+ \qquad
+ \sup_{v\in\R^n}d_H(F^{-1}(v),\{A^{-1}(v)\})\le\frac{\rad}{\sqrt2}.
+\]
+\end{corollary}
+\begin{proof}
+All fibers are nonempty by \eqref{eq:fullrange}, and Hausdorff distance
+to a singleton equals the supremum of the distances to that singleton.
+Apply \eqref{eq:pairedsharp}.
+\end{proof}
+
+Finite dimensionality in Theorem~\ref{thm:finite_geometry} is essential
+to this proof: bounded closed subsets of an infinite-dimensional Hilbert
+space need not be compact, and Brouwer degree is not available in that
+generality. We do not assert \eqref{eq:fullrange} for arbitrary Hilbert
+spaces.
+
+\subsection{Prescribed fixed-point sets with optimal H\"older modulus}
+
+\begin{lemma}[A strict convex-hull margin]\label{lem:margin}
+Let $K$ be a nonempty compact subset of a Hilbert space, let
+$D_K=\diam K$, and let $Q=\overline{\conv}K$. Then, for every $p\in Q$,
+\begin{equation}\label{eq:margin}
+ \sup_{q\in Q}\norm{p-q}^2
+ \le D_K^2-\dist(p,K)^2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Every $k\in K$ and $q\in Q$ satisfy $\norm{k-q}\le D_K$: this follows
+by convexity of the norm for a finite convex combination $q$, and then
+by passage to its limit. Choose finite convex combinations
+$p_m=\sum_i\alpha_i k_i\to p$, with $\alpha_i\ge0$ and
+$\sum_i\alpha_i=1$. For any fixed $q\in Q$, the Hilbert variance identity
+gives
+\[
+ \norm{p_m-q}^2
+ =\sum_i\alpha_i\norm{k_i-q}^2
+  -\sum_i\alpha_i\norm{k_i-p_m}^2
+ \le D_K^2-\dist(p_m,K)^2.
+\]
+The distance function is continuous, so taking $m\to\infty$ proves
+the inequality for each $q$. Taking its supremum gives
+\eqref{eq:margin}.
+\end{proof}
+
+\begin{theorem}[Optimal prescribed fixed-point realization]\label{thm:fixedset}
+Let $K$ be a nonempty compact subset of a real Hilbert space and
+$D_K=\diam K$. For every $0<\gamma<1$ there exists a map
+$R:H\to\overline{\conv}K$ such that
+\begin{equation}\label{eq:fixedset}
+ \Fix R=K,\qquad
+ \norm{R(x)-R(y)}\le D_K^{1-\gamma}\norm{x-y}^\gamma
+ \quad(x,y\in H).
+\end{equation}
+For $D_K=0$, the coefficient is interpreted as zero. For $D_K>0$, no
+smaller H\"older constant is possible for any map fixing every point of
+$K$.
+\end{theorem}
+
+\begin{proof}
+If $D_K=0$, the constant map to the sole point of $K$ has all asserted
+properties. Assume $D_K>0$, set $Q=\overline{\conv}K$ and
+$L_0=D_K^{1-\gamma}$, and fix $k_0\in K$.
+If $Q=K$, use $R=P_Q$. Nonexpansiveness and the range diameter give
+\[
+ \norm{P_Qx-P_Qy}\le\min\{\norm{x-y},D_K\}
+ \le L_0\norm{x-y}^\gamma,
+\]
+and the fixed-point set is $Q=K$.
+
+Suppose $Q\setminus K\ne\varnothing$. For each $p\in Q\setminus K$,
+put $d_p=\dist(p,K)>0$ and $E_p=\sqrt{D_K^2-d_p^2}<D_K$. By
+Lemma~\ref{lem:margin}, $\norm{p-q}\le E_p$ for every $q\in Q$.
+Choose
+\[
+ 0<r_p<\min\{d_p/2,(D_K-E_p)/2\},\qquad D_p=E_p+r_p<D_K,
+\]
+and define on $Q$
+\[
+ \phi_p(y)=\max\{1-\norm{y-p}/r_p,0\},\qquad
+ H_p(y)=\phi_p(y)(y-k_0),\qquad M_p=1+D_K/r_p.
+\]
+The function $\phi_p$ vanishes on $K$, is positive in the relative open
+ball $Q\cap B(p,r_p)$, and has Lipschitz constant at most $1/r_p$.
+For $y,z\in Q$,
+\[
+ \norm{H_p(y)-H_p(z)}
+ \le\phi_p(y)\norm{y-z}
+       +\abs{\phi_p(y)-\phi_p(z)}\norm{z-k_0}
+ \le M_p\norm{y-z}.
+\]
+Choose a positive number
+\begin{equation}\label{eq:epsilon_bump}
+ 0<\eps_p\le
+ \min\left\{1,\frac{L_0D_p^{\gamma-1}-1}{M_p}\right\}.
+\end{equation}
+The right side is positive because $D_p<D_K$ and $\gamma-1<0$.
+Set $S_p(y)=y-\eps_p H_p(y)$. It is a convex combination of $y$ and
+$k_0$, so $S_p(Q)\subset Q$, and it fixes $K$.
+
+We check its H\"older modulus for all point pairs. If
+$\phi_p(y)=\phi_p(z)=0$, then $S_p(y)-S_p(z)=y-z$ and
+$\norm{y-z}\le D_K$ gives the required $L_0$-H\"older bound. Otherwise
+assume, after interchanging $y,z$ if necessary, that $\phi_p(y)>0$.
+Then $h=\norm{y-z}<r_p+E_p=D_p$. If $h=0$ there is nothing to prove;
+if $h>0$, \eqref{eq:epsilon_bump} gives
+\[
+ \norm{S_p(y)-S_p(z)}
+ \le(1+\eps_p M_p)h
+ \le L_0D_p^{\gamma-1}h
+ \le L_0h^\gamma.
+\]
+The last inequality uses the negative exponent $\gamma-1$.
+
+The compact metric space $K$ is separable, and rational convex
+combinations of a countable dense subset make $Q$ separable. Hence
+$Q\setminus K$ is second countable. Its cover by the relative open
+balls $Q\cap B(p,r_p)$ has a finite or countable subcover. Enumerate the
+associated maps as $S_j$, and choose strictly positive weights $a_j$
+summing to one. Define
+\[
+ S(y)=\sum_j a_jS_j(y).
+\]
+The series converges uniformly because $Q$ is bounded. Its sum lies in
+$Q$: finite weighted sums completed with the remaining weight at $k_0$
+lie in $Q$ and converge to the same limit. The common H\"older estimate
+passes to the sum. Moreover,
+\[
+ S(y)=y-\theta(y)(y-k_0),\qquad
+ \theta(y)=\sum_j a_j\eps_j\phi_j(y).
+\]
+For $y\in K$, every bump vanishes, so $S(y)=y$. If $y\in Q\setminus K$,
+one of the covering bumps is positive; all coefficients are positive,
+so $\theta(y)>0$. Since $y\ne k_0$, this implies $S(y)\ne y$.
+Thus $\Fix S=K$ on $Q$.
+
+Finally set $R=S\circ P_Q$. Nonexpansiveness of $P_Q$ transfers the
+$L_0$-H\"older estimate to all of $H$. If $R(x)=x$, then $x\in Q$,
+so $P_Qx=x$ and $S(x)=x$, hence $x\in K$. Conversely every point of $K$
+is fixed. This proves \eqref{eq:fixedset}.
+
+If any map fixes $K$ and has H\"older constant $B$, then for distinct
+$k,l\in K$ one has $\norm{k-l}\le B\norm{k-l}^\gamma$, so
+$B\ge\norm{k-l}^{1-\gamma}$. Taking the supremum over $K$ gives
+$B\ge D_K^{1-\gamma}$ and proves optimality.
+\end{proof}
+
+\begin{theorem}[Exact finite-dimensional fiber classification]\label{thm:fibers}
+Fix $n\ge1$ and the parameters $\lambda,L>0$, $0<\gamma<1$.
+A set $K\subset\R^n$ is the complete inverse fiber $F^{-1}(0)$ of
+some graph-maximal RL relation if and only if
+\begin{equation}\label{eq:fiberiff}
+ K\ne\varnothing,\qquad K\text{ is compact},\qquad \diam K\le\rad.
+\end{equation}
+A set is the complete forward fiber $F(0)$ of such a relation if and
+only if it is nonempty, compact, and has diameter at most
+$\rad/\lambda$. Translations give the corresponding statements for
+any specified base input or output.
+\end{theorem}
+
+\begin{proof}
+Necessity follows from Theorem~\ref{thm:finite_geometry} and
+Lemma~\ref{lem:diameters}. For sufficiency in the inverse case, take
+the map $R$ from Theorem~\ref{thm:fixedset}. Its H\"older constant is
+$(\diam K)^{1-\gamma}\le L$. Use $C=R$ with full domain in
+\eqref{eq:reconstruct}. Lemma~\ref{lem:cayley} gives an RL relation
+maximal at the specified parameters, even if its least possible
+H\"older constant is smaller than $L$. Its output is zero exactly when
+$p=R(p)$, and at such a parameter its input equals $p$. Therefore
+$F^{-1}(0)=\Fix R=K$.
+
+For a forward fiber $K$ with diameter at most $\rad/\lambda$, apply
+Theorem~\ref{thm:fixedset} to $\lambda K$ to obtain $S$ with
+$\Fix S=\lambda K$ and constant at most $L$. Use $C=-S$ in
+\eqref{eq:reconstruct}. The input is zero exactly when $p=S(p)$,
+and then the output is $p/\lambda$. Hence $F(0)=K$. Translating either
+original coordinate does not change graph differences in the RL
+inequality, proving the last assertion.
+\end{proof}
+
+\subsection{A single-valued Lipschitz realization}
+
+\begin{corollary}\label{cor:lipschitz_realization}
+Under \eqref{eq:fiberiff}, for every $0<\eta<1$ the inverse fiber can
+be realized by a single-valued globally Lipschitz map
+$F:\R^n\to\R^n$ that is graph-maximal at the same parameters and
+satisfies $F^{-1}(0)=K$. Writing $Q=\overline{\conv}K$ and
+$D_K=\diam K$, it may be chosen so that
+\begin{equation}\label{eq:lipschitz_realization}
+ \Lip F\le\frac{1+\eta}{\lambda(1-\eta)},\qquad
+ \sup_u\left\|F(u)-\frac{u-P_Qu}{\lambda}\right\|
+ \le\frac{\eta D_K}{\lambda}.
+\end{equation}
+The least H\"older constant of its Cayley map remains
+$D_K^{1-\gamma}$ (zero for a singleton).
+\end{corollary}
+
+\begin{proof}
+For $D_K=0$, with $K=\{k_0\}$ take $F(u)=(u-k_0)/\lambda$.
+All assertions follow directly. For $D_K>0$, in
+\eqref{eq:epsilon_bump} impose in addition $\eps_p\le\eta/M_p$.
+This preserves all previous conclusions. With $E=S-\Id_Q$ the same
+positive combination gives
+$\Lip E\le\eta$ and $\sup_{y\in Q}\norm{E(y)}\le\eta D_K$.
+The projection case $Q=K$ is included by taking $E=0$.
+Thus the realized map can be written
+$R=P_Q+E\circ P_Q$.
+
+Define $G=(\Id+R)/2$. Projection onto a closed convex set is monotone
+and nonexpansive. Consequently
+\[
+ 2\ip{G(a)-G(b)}{a-b}
+ =\norm{a-b}^2+\ip{P_Qa-P_Qb}{a-b}
+   +\ip{E(P_Qa)-E(P_Qb)}{a-b}
+ \ge(1-\eta)\norm{a-b}^2.
+\]
+Also $\Lip G\le(2+\eta)/2$. Put $c=(1-\eta)/2$ and
+$M=(2+\eta)/2$. For any target $u$ and any $0<t<2c/M^2$, the map
+$a\mapsto a-t(G(a)-u)$ is a contraction, since the square of its
+Lipschitz modulus is at most $1-2tc+t^2M^2<1$. The fixed-point theorem
+therefore shows that $G$ is bijective. Strong monotonicity and
+Cauchy--Schwarz give $\Lip G^{-1}\le2/(1-\eta)$.
+
+The relation generated by $R$ is thus the single-valued map
+\[
+ F(u)=\frac{a-R(a)}{2\lambda}=\frac{a-u}{\lambda},
+ \qquad a=G^{-1}(u).
+\]
+Since $\Id-P_Q$ is nonexpansive,
+\[
+ \norm{(a-R(a))-(b-R(b))}\le(1+\eta)\norm{a-b},
+\]
+which together with the inverse bound gives the first part of
+\eqref{eq:lipschitz_realization}. Maximality and the exact zero set
+were proved in Theorem~\ref{thm:fibers}. Since $R$ fixes $K$, the
+optimality argument of Theorem~\ref{thm:fixedset} gives its least
+H\"older constant.
+
+It remains to verify the uniform approximation. Set
+$G_0=(\Id+P_Q)/2$. Its strong-monotonicity modulus is at least $1/2$,
+and its inverse is $G_0^{-1}(u)=2u-P_Qu$. Indeed the projection
+characterization says $\ip{u-P_Qu}{y-P_Qu}\le0$ for every $y\in Q$;
+multiplying by $2$ shows $P_Q(2u-P_Qu)=P_Qu$.
+For $a=G^{-1}(u)$ and $a_0=G_0^{-1}(u)$,
+\[
+ \norm{a-a_0}
+ \le2\norm{G_0(a)-G_0(a_0)}
+ =\norm{E(P_Qa)}\le\eta D_K.
+\]
+Since $(u-P_Qu)/\lambda=(a_0-u)/\lambda$, subtraction gives the
+second inequality of \eqref{eq:lipschitz_realization}.
+\end{proof}
+
+In particular, nonconvex compact zero sets can occur in a single-valued
+globally Lipschitz realization arbitrarily close to the monotone
+projection residual $(\Id-P_Q)/\lambda$. This does not make that
+realization strongly monotone: a strongly monotone map has at most one
+zero.
+
+\section{Sharp range localization in global and fixed windows}
+\label{sec:range}
+
+\begin{lemma}[Scalar localization]\label{lem:rho}
+For $t\ge0$, let $\rho(t)$ be the largest nonnegative solution of
+\begin{equation}\label{eq:rho}
+ \rho-t=L(\rho+t)^\gamma.
+\end{equation}
+Then $\rho(0)=\rad$, $\rho$ is continuous and strictly increasing,
+and its range is $[\rad,\infty)$. For every graph anchor
+$(x_0,v_0)\in\gph F$, every graph point satisfies
+\begin{equation}\label{eq:localization}
+ \norm{x-x_0}\le\rho(\lambda\norm{v-v_0}),\qquad
+ \lambda\norm{v-v_0}\le\rho(\norm{x-x_0}).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $u=\rho+t$. Equation \eqref{eq:rho} is
+$u-Lu^\gamma=2t$. On $u\ge\rad$, the left side has derivative
+$1-\gamma Lu^{\gamma-1}\ge1-\gamma>0$, starts at zero, and tends to
+infinity. It thus defines a unique continuous branch $u(t)\ge\rad$.
+Its derivative is
+$u'(t)=2/(1-\gamma Lu(t)^{\gamma-1})>2$, so
+$\rho(t)=u(t)-t$ is strictly increasing and unbounded. For $t>0$ a
+nonnegative solution of \eqref{eq:rho} must have $\rho>t$ and
+$u-Lu^\gamma>0$, hence $u>\rad$, so this solution is unique. For
+$t=0$ the possible roots are $0$ and $\rad$, and the stated choice is
+the larger root.
+
+For $s=\norm{x-x_0}$ and $t=\lambda\norm{v-v_0}$, the reverse and
+ordinary triangle inequalities give
+$\abs{s-t}\le L(s+t)^\gamma$. If $s\le t$, then $s\le\rho(t)$
+because $\rho(t)\ge t$. If $s>t$, the inequality says
+$(s+t)-L(s+t)^\gamma\le2t$. When $s+t\le\rad$ the desired bound
+is automatic from $\rho(t)\ge\rad$; when $s+t>\rad$, monotonicity
+of the preceding scalar function gives $s+t\le u(t)$, hence
+$s\le\rho(t)$. Interchanging $s,t$ proves the other bound.
+\end{proof}
+
+For $r>\rad$ define $h(r)\in(0,r)$ by
+\begin{equation}\label{eq:h}
+ r-h(r)=L(r+h(r))^\gamma.
+\end{equation}
+The left side minus the right side is strictly decreasing as a function
+of $h$, positive at $h=0$ and negative at $h=r$. Thus the root is
+unique. Lemma~\ref{lem:rho} shows $\rho(h(r))=r$.
+
+\begin{theorem}[Global coverage and entire-fiber containment]\label{thm:coverage}
+Let $F$ be graph-maximal on $\R^n$, and fix
+$(x_0,v_0)\in\gph F$. For $r>\rad$,
+\begin{equation}\label{eq:coverage}
+ B(v_0,h(r)/\lambda)\subset F(B(x_0,r)),
+ \qquad
+ F^{-1}(v)\subset B(x_0,r)
+ \quad\text{for every }v\in B(v_0,h(r)/\lambda).
+\end{equation}
+In the second assertion the inverse fiber is nonempty. The symmetric
+statement is
+\[
+ B(x_0,h(\lambda s))\subset F^{-1}(B(v_0,s)),
+ \quad F(x)\subset B(v_0,s)
+ \quad(x\in B(x_0,h(\lambda s))),
+\]
+whenever $\lambda s>\rad$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:finite_geometry} guarantees a nonempty inverse fiber
+for every $v$. If $\lambda\norm{v-v_0}<h(r)$, then every point in
+that fiber satisfies
+\[
+ \norm{x-x_0}\le\rho(\lambda\norm{v-v_0})
+ <\rho(h(r))=r.
+\]
+This gives both coverage and full-fiber containment. For the symmetric
+statement, full domain gives $F(x)\ne\varnothing$ and the second
+inequality of \eqref{eq:localization} gives
+$\lambda\norm{v-v_0}<\rho(h(\lambda s))=\lambda s$ for every
+$v\in F(x)$.
+\end{proof}
+
+\begin{theorem}[Fixed-window coverage]\label{thm:window}
+Let $U,W\subset\R^n$ and let $G\subset U\times W$ be a nonempty
+relatively maximal RL graph. Suppose $(x_0,v_0)\in G$,
+$B(x_0,r)\subset U$, $B(v_0,s)\subset W$, and $r>\rad$, $s>0$.
+Then every
+\begin{equation}\label{eq:windowtargets}
+ v\in B\bigl(v_0,\min\{s,h(r)/\lambda\}\bigr)
+\end{equation}
+has a nonempty inverse fiber in $G$, and all its inverse points in
+$G$ belong to $B(x_0,r)$. In particular, the target ball in
+\eqref{eq:windowtargets} is contained in the range of the restriction
+of $G$ to $B(x_0,r)\times W$.
+\end{theorem}
+
+\begin{proof}
+Apply Lemma~\ref{lem:holderextension} to the partial Cayley map of $G$
+and let $\widehat F$ be the resulting global graph-maximal completion.
+The graph $\gph\widehat F\cap(U\times W)$ contains $G$ and is
+compatible at the same parameters. Relative maximality therefore gives
+\[
+ G=\gph\widehat F\cap(U\times W).
+\]
+For a target in \eqref{eq:windowtargets},
+Theorem~\ref{thm:coverage} gives a nonempty complete inverse fiber of
+$\widehat F$, entirely in $B(x_0,r)\subset U$. The target belongs
+to $W$, so the equality of graph restrictions puts every one of these
+points in $G$. Conversely, every point of $G$ is in the completion,
+and is localized by the same theorem. This proves all assertions.
+\end{proof}
+
+\begin{proposition}[Sharp radius and threshold]\label{prop:coveragesharp}
+The radius $h(r)/\lambda$ in \eqref{eq:coverage} cannot be increased
+uniformly, and the strict threshold $r>\rad$ cannot be replaced by
+$r\le\rad$ while retaining a positive centered output ball uniformly
+over the class.
+\end{proposition}
+
+\begin{proof}
+In dimension one, take $C(p)=L(p_+)^\gamma$, where
+$p_+=\max\{p,0\}$. The inequality
+$\abs{a^\gamma-b^\gamma}\le\abs{a-b}^\gamma$ for $a,b\ge0$,
+together with nonexpansiveness of $p\mapsto p_+$, makes $C$
+$L$-H\"older. Its full graph produces a maximal RL relation anchored
+at $(0,0)$, with
+\[
+ x(p)=\frac{p+L(p_+)^\gamma}{2},\qquad
+ v(p)=\frac{p-L(p_+)^\gamma}{2\lambda}.
+\]
+A positive output requires $p>\rad$, since for $p\le0$ the output
+is nonpositive and for $0<p\le\rad$ one has $p\le Lp^\gamma$.
+On $p>\rad$, $v$ is strictly increasing because
+$v'(p)=(1-\gamma Lp^{\gamma-1})/(2\lambda)>0$, and it ranges over
+all positive outputs. The corresponding $x(p)$ is strictly greater
+than $\rad$. Hence no positive output has an inverse in
+$(-r,r)$ when $r\le\rad$.
+
+For $r>\rad$, the parameter $p=r+h(r)$ satisfies
+$L p^\gamma=r-h(r)$, so $x(p)=r$ and
+$v(p)=h(r)/\lambda$. This positive output has no other inverse,
+and its only inverse is outside the open input ball. Any strictly
+larger centered output radius would include this target and fail.
+The global example is also a permitted fixed-window example by taking
+the windows to be the full space.
+\end{proof}
+
+\section{Finite-data shadows and coverage certificates}\label{sec:finite}
+
+The full-graph theorem is an existence theorem: an arbitrary extension
+does not by itself supply a finite numerical evaluation oracle. We now
+give a separate construction from a fixed finite data set in $\R^n$.
+The resulting map is defined globally, but its accuracy for an unknown
+original relation is certified only at observations and where coverage
+is available.
+
+\subsection{A globally consistent quadratic-program construction}
+
+Fix $m\ge1$ graph samples $(x_i,v_i)$ and set
+$p_i=x_i+\lambda v_i$, $c_i=x_i-\lambda v_i$. Repeated parameter
+points in consistent data have the same $c_i$ and may be merged. Fix
+$0<\sigma<1$, and put
+\begin{equation}\label{eq:finiteconstants}
+ M=M_\sigma,\qquad a^2=M/2,
+ \qquad P=[p_1\ \cdots\ p_m],\quad V=[c_1\ \cdots\ c_m].
+\end{equation}
+The construction requires only the sample compatibility inequalities
+\begin{equation}\label{eq:samplecompat}
+ \norm{c_i-c_j}^2\le\sigma^2\norm{p_i-p_j}^2+M.
+\end{equation}
+Certified H\"older data satisfy these by Lemma~\ref{lem:excess}. Define
+\begin{align}
+ Q&=\sigma^2P^TP+V^TV+a^2I_m,\label{eq:Q}\\
+ d_i(q)&=\sigma^2\norm{p_i}^2-\norm{c_i}^2
+              -4\sigma^2\ip{p_i}{q},\label{eq:d}\\
+ \Delta_m&=\{\theta\in\R^m:\theta_i\ge0,\ \sum_i\theta_i=1\},\notag\\
+ \theta(q)&=\argmin_{\theta\in\Delta_m}
+           \Phi_q(\theta),\qquad
+ \Phi_q(\theta)=\theta^TQ\theta+d(q)^T\theta,
+ \qquad N_m(q)=V\theta(q).\label{eq:QP}
+\end{align}
+
+\begin{theorem}[Finite-data contraction and sampled cross estimate]
+\label{thm:finite_qp}
+The minimizer in \eqref{eq:QP} exists and is unique. The formula defines
+one global $\sigma$-Lipschitz map $N_m:\R^n\to\R^n$. Under
+\eqref{eq:samplecompat}, it satisfies
+\begin{equation}\label{eq:samplecross}
+ \norm{c_i-N_m(q)}^2
+ \le\sigma^2\norm{p_i-q}^2+a^2
+ \qquad(i=1,\ldots,m,\ q\in\R^n).
+\end{equation}
+The graph parametrization
+\begin{equation}\label{eq:Am}
+ x=\frac{q+N_m(q)}2,\qquad
+ A_m(x)=\frac{q-N_m(q)}{2\lambda}
+\end{equation}
+defines a strongly monotone bi-Lipschitz homeomorphism with the bounds
+\eqref{eq:conditioning}--\eqref{eq:strongmono}. It obeys the cross
+inequality \eqref{eq:originalcross} for every sampled graph point and
+all $z$, and therefore the paired sampled bounds
+\begin{equation}\label{eq:samplepaired}
+ \norm{v_i-A_m(x_i)}\le\frac{a}{\lambda\sqrt{1-\sigma^2}},
+ \qquad
+ \norm{x_i-A_m^{-1}(v_i)}\le\frac{a}{\sqrt{1-\sigma^2}}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The simplex is compact and nonempty, and $Q\succeq a^2I_m$ with
+$a>0$. Thus the continuous objective is strictly convex and has a
+unique minimizer.
+
+Let $r=a/\sigma$, introduce lifted points $z_i=(p_i,re_i)$ in
+$E=\R^n\oplus\R^m$, and let $Z$ have these columns. Then
+$Q=\sigma^2 Z^TZ+V^TV$. For every $z\in E$, consider the same
+minimization with coefficients
+\[
+ d_i^E(z)=\sigma^2\norm{z_i}^2-\norm{c_i}^2
+                        -4\sigma^2\ip{z_i}{z},
+\]
+and denote its unique minimizer by $\theta_z$. At $z=(q,0)$ the
+coefficients differ from \eqref{eq:d} by the same constant $a^2$
+for every $i$. This changes the simplex objective by a constant,
+so $\theta_{(q,0)}=\theta(q)$.
+
+For $z,w\in E$, put $\delta=\theta_z-\theta_w$. The variational
+inequalities at the two minimizers, tested against one another, give
+\[
+ \delta^TQ\delta\le2\sigma^2\ip{Z\delta}{z-w}.
+\]
+Indeed subtraction of the gradients uses
+$d^E(z)-d^E(w)=-4\sigma^2Z^T(z-w)$ and division by $2$ gives the
+displayed inequality. Hence
+\begin{align*}
+ \norm{V\delta}^2
+ &\le\sigma^2\bigl(2\ip{Z\delta}{z-w}-\norm{Z\delta}^2\bigr)\\
+ &=\sigma^2\bigl(\norm{z-w}^2-\norm{Z\delta-(z-w)}^2\bigr)
+ \le\sigma^2\norm{z-w}^2.
+\end{align*}
+Thus $\widetilde N(z)=V\theta_z$ is $\sigma$-Lipschitz, and its
+restriction $N_m(q)=\widetilde N(q,0)$ has the same modulus. This
+Lipschitz argument did not require sample compatibility.
+
+Compatibility ensures interpolation at the lifted data. At $z=z_j$,
+the candidate $\theta=e_j$ satisfies, for each $i$,
+\[
+ [2Qe_j+d^E(z_j)]_i-[2Qe_j+d^E(z_j)]_j
+ =\sigma^2\norm{z_i-z_j}^2-\norm{c_i-c_j}^2\ge0.
+\]
+For $i\ne j$, the last inequality is \eqref{eq:samplecompat}, since
+$\sigma^2\norm{z_i-z_j}^2=\sigma^2\norm{p_i-p_j}^2+2a^2$.
+For $i=j$ it is equality. These inequalities give the simplex
+first-order optimality condition at $e_j$, so uniqueness implies
+$\theta_{z_j}=e_j$ and $\widetilde N(z_j)=c_j$. Comparing $z_j$
+with $(q,0)$ yields \eqref{eq:samplecross}.
+
+The contraction-to-operator proof of Theorem~\ref{thm:shadow}, applied
+to $N_m$, proves the assertions about $A_m$. The same
+difference-of-squares calculation applied to \eqref{eq:samplecross}
+gives \eqref{eq:originalcross} on sampled graph points, and setting
+the original input or output equal gives \eqref{eq:samplepaired}.
+\end{proof}
+
+The quadratic program is also obtained by specializing the explicit
+Kirszbraun formula of \cite{AzagraLeGruyerMudarra} to the finitely many
+lifted data. The preceding proof is self-contained for this formula and
+does not require evaluating a convex envelope. The sample set is fixed:
+adding observations may change the resulting global map. Independently
+choosing a feasible ball-intersection value at each query, without
+cross-query compatibility, is not the construction in
+\eqref{eq:QP}.
+
+\subsection{Coverage-dependent paired certificates}
+
+\begin{theorem}\label{thm:covered}
+Suppose the samples belong to an RL graph with partial Cayley map $C$.
+For $\delta\ge0$ put $b=L\delta^\gamma$ and
+\begin{equation}\label{eq:Kdelta}
+ K_\delta=
+ \frac{b+\sigma^2\delta+
+ \sqrt{\sigma^2(b+\delta)^2+(1-\sigma^2)a^2}}
+ {1-\sigma^2}.
+\end{equation}
+Every original graph point $(x,v)$ whose parameter
+$p=x+\lambda v$ satisfies
+$\dist(p,\{p_1,\ldots,p_m\})\le\delta$ obeys
+\begin{equation}\label{eq:coveredpaired}
+ \lambda\norm{v-A_m(x)}\le K_\delta,
+ \qquad \norm{x-A_m^{-1}(v)}\le K_\delta.
+\end{equation}
+At $\delta=0$, these are the bounds in
+\eqref{eq:samplepaired}; if also $\sigma=\sqrt\gamma$,
+$K_0=\rad/\sqrt2$.
+\end{theorem}
+
+\begin{proof}
+Choose a closest sample $p_i$, which exists because the set is finite.
+For every $q\in\R^n$, H\"older continuity and
+\eqref{eq:samplecross} give
+\begin{equation}\label{eq:coveragecross}
+ \norm{C(p)-N_m(q)}
+ \le b+\sqrt{\sigma^2(\norm{p-q}+\delta)^2+a^2}.
+\end{equation}
+First take $q=x+\lambda A_m(x)$, so the compared points have the
+same original input. Then
+$\norm{p-q}=\norm{C(p)-N_m(q)}=\lambda\norm{v-A_m(x)}$.
+For the inverse comparison choose
+$q=A_m^{-1}(v)+\lambda v$; both norms instead equal
+$\norm{x-A_m^{-1}(v)}$. Thus in either case the nonnegative quantity
+$t$ to be bounded satisfies
+\[
+ t\le b+\sqrt{\sigma^2(t+\delta)^2+a^2}.
+\]
+If $t<b$, then $t\le K_\delta$ immediately, since
+$K_\delta\ge b$. If $t\ge b$, squaring the nonnegative sides gives
+\[
+ (1-\sigma^2)t^2-2(b+\sigma^2\delta)t
+             +b^2-\sigma^2\delta^2-a^2\le0.
+\]
+The upper root of this upward quadratic is \eqref{eq:Kdelta}, because
+\[
+ (b+\sigma^2\delta)^2
+ -(1-\sigma^2)(b^2-\sigma^2\delta^2-a^2)
+ =\sigma^2(b+\delta)^2+(1-\sigma^2)a^2.
+\]
+Therefore $t\le K_\delta$. Substituting $\delta=0$ proves the final
+assertions.
+\end{proof}
+
+\begin{corollary}[Entire fibers on a covered region]\label{cor:coveredfibers}
+Let $\Omega\subset\dom C$ be a region covered within distance $\delta$
+by the sample parameters. If every point of a nonempty fiber $F(x)$
+has parameter in $\Omega$, then
+$d_H(F(x),\{A_m(x)\})\le K_\delta/\lambda$. If every point of a
+nonempty inverse fiber $F^{-1}(v)$ has parameter in $\Omega$, then
+$d_H(F^{-1}(v),\{A_m^{-1}(v)\})\le K_\delta$.
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:covered} to every graph point in the indicated
+fiber and use the singleton formula for Hausdorff distance.
+\end{proof}
+
+The condition is coverage of $p=x+\lambda v$, not coverage of $x$
+alone. For an explicit sufficient parameter radius, suppose $C(0)$ is
+known and the complete Cayley map is defined. If either
+$\norm{x}\le B$ or $\lambda\norm v\le B$, then
+\begin{equation}\label{eq:parameterradius}
+ \norm p\le
+ T_B:=\max\{4B+2\norm{C(0)},(2L)^{1/(1-\gamma)}\}.
+\end{equation}
+Indeed, from either $p=2x-C(p)$ or $p=2\lambda v+C(p)$,
+$t=\norm p\le2B+\norm{C(0)}+Lt^\gamma$. If $t>T_B$, then
+$2B+\norm{C(0)}<t/2$ and $Lt^\gamma<t/2$, a contradiction.
+Thus a parameter $\delta$-net of $\overline B(0,T_B)$ certifies all
+fibers in either specified original-coordinate working region.
+Access to such parameter samples is an additional sampling assumption,
+not a consequence of having one arbitrarily chosen value at each sampled
+original input.
+
+\subsection{Finite-precision evaluation}
+
+\begin{proposition}[Computable evaluation certificates]\label{prop:evaluation}
+For a feasible $\widehat\theta\in\Delta_m$, let
+$g_q=2Q\widehat\theta+d(q)$ and define its Frank--Wolfe gap
+\[
+ G=\ip{g_q}{\widehat\theta}-\min_i(g_q)_i.
+\]
+Then $G\ge0$ and
+\begin{equation}\label{eq:qpgap}
+ \norm{V\widehat\theta-N_m(q)}\le\sqrt G.
+\end{equation}
+More generally, if $\widehat N(q)$ approximates $N_m(q)$ with certified
+error at most $e$, then any candidate parameter $q$ gives
+\begin{align}
+ \left\|A_m(x)-\frac{q-x}{\lambda}\right\|
+ &\le\frac{\norm{q-2x+\widehat N(q)}+e}
+              {\lambda(1-\sigma)},\label{eq:forwardresidual}\\
+ \left\|A_m^{-1}(v)-(q-\lambda v)\right\|
+ &\le\frac{\norm{q-2\lambda v-\widehat N(q)}+e}
+              {1-\sigma}.\label{eq:inverseresidual}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+The minimum component of $g_q$ is its minimum over the simplex, so the
+gap is nonnegative. Convexity gives
+$\Phi_q(\widehat\theta)-\Phi_q(\theta(q))\le G$. The exact quadratic
+expansion, together with the first-order inequality at $\theta(q)$,
+gives
+\[
+ \Phi_q(\widehat\theta)-\Phi_q(\theta(q))
+ \ge(\widehat\theta-\theta(q))^TQ(\widehat\theta-\theta(q))
+ \ge\norm{V\widehat\theta-N_m(q)}^2,
+\]
+proving \eqref{eq:qpgap}.
+
+If $T$ is a contraction of modulus $\sigma$ with fixed point $q_*$,
+then
+$\norm{q-q_*}\le\norm{q-T(q)}+\sigma\norm{q-q_*}$, hence
+$\norm{q-q_*}\le\norm{q-T(q)}/(1-\sigma)$.
+Use $T(q)=2x-N_m(q)$ or $T(q)=2\lambda v+N_m(q)$, bound the exact
+residual by its approximate residual plus $e$, and use
+$A_m(x)=(q_*-x)/\lambda$ or $A_m^{-1}(v)=q_*-\lambda v$.
+This gives \eqref{eq:forwardresidual}--\eqref{eq:inverseresidual}.
+\end{proof}
+
+Exact evaluations allow ordinary geometric fixed-point iteration. The
+certificates above also allow any positive target accuracy using
+sufficiently accurate quadratic-program solutions. Numerical errors
+must be added to the geometric bounds in Theorem~\ref{thm:covered}.
+Floating-point gaps need validated tolerances or outward rounding if
+they are used for computer-assisted rigorous numerical certification.
+No dimension-independent sample or running-time complexity is asserted;
+covering a region may require many samples in high dimension.
+
+\begin{corollary}[Bias, observation noise, and evaluation error]
+\label{cor:totalerror}
+Let $v$ be a true output and $\widetilde v$ an observation with
+$\norm{\widetilde v-v}\le\eta$. Suppose all points of
+$F^{-1}(v)$ satisfy the coverage condition of
+Corollary~\ref{cor:coveredfibers}. If an evaluated proxy
+$\widehat x$ satisfies
+$\norm{\widehat x-A_m^{-1}(\widetilde v)}\le e$, then every
+$x\in F^{-1}(v)$ satisfies
+\begin{equation}\label{eq:totalerror}
+ \norm{x-\widehat x}
+ \le K_\delta+
+       \frac{\lambda(1+\sigma)}{1-\sigma}\eta+e.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Insert $A_m^{-1}(v)$ and $A_m^{-1}(\widetilde v)$ between $x$ and
+$\widehat x$. Bound the three resulting distances by the coverage
+certificate, the inverse Lipschitz constant in
+\eqref{eq:conditioning}, and $e$, respectively.
+\end{proof}
+
+The first term is model/coverage bias, the second is noise amplification,
+and the third is evaluation error. The first does not generally vanish
+when observation and computation errors vanish.
+
+\subsection{Why a finite total transcript cannot certify the whole space}
+
+\begin{proposition}[Finite-information obstruction]\label{prop:information}
+Let $n\ge1$. Consider deterministic procedures which, given point
+evaluations of an unknown globally $L$-H\"older map
+$C:\R^n\to\R^n$ of exponent $\gamma$, make finitely many possibly
+adaptive queries and output a single-valued map $A:\R^n\to\R^n$
+with no further access to the oracle. No such procedure can guarantee
+a finite uniform forward-fiber
+error for the corresponding relation on all of $\R^n$ for every such
+$C$. In particular it cannot guarantee the sharp global radius from
+finite total information alone.
+\end{proposition}
+
+\begin{proof}
+Run a proposed procedure on $C_0=0$ and let $S$ contain the finitely
+many queried points together with $0$. Fix a unit vector $e$ and define
+$C_1(p)=L\dist(p,S)^\gamma e$. Distance to $S$ is $1$-Lipschitz, and
+$\abs{s^\gamma-t^\gamma}\le\abs{s-t}^\gamma$ for nonnegative $s,t$.
+Therefore $C_1$ is $L$-H\"older. It vanishes at every queried point.
+By induction over the adaptive queries, the deterministic procedure
+receives the same transcript on $C_1$ as on $C_0$ and outputs the same
+map $A$. Both full-domain maps define graph-maximal RL relations.
+
+The relation for $C_0$ is $F_0(x)=\{x/\lambda\}$. If the output has
+no finite uniform error for $F_0$, the procedure already fails. Otherwise
+there is $B<\infty$ with
+$\norm{A(x)-x/\lambda}\le B$ for every $x$.
+For a graph point of the relation associated with $C_1$, put
+$c=C_1(p)$, $x=(p+c)/2$, and $v=(p-c)/(2\lambda)$. Then
+\[
+ \norm{v-A(x)}
+ \ge\norm{v-x/\lambda}-\norm{A(x)-x/\lambda}
+ \ge\norm c/\lambda-B.
+\]
+Since $S$ is finite, $\dist(p,S)$ is unbounded on $\R^n$. The last
+expression is unbounded, so $A$ has no finite uniform forward error for
+this second relation. This contradicts the proposed guarantee.
+\end{proof}
+
+This statement concerns finite total information, deterministic
+procedures, an unrestricted H\"older class, and an unbounded domain.
+It does not cover probabilistic guarantees, continued oracle access,
+known analytic maps, or approximation on a specified compact region.
+
+\section{A deadband inverse problem: what the certificate changes}
+\label{sec:deadband}
+
+Let $U$ be an orthogonal $2\times2$ matrix, let $a>0$, and put
+\begin{equation}\label{eq:deadband}
+ K=U[-a,a]^2,\qquad F(x)=x-P_Kx,\qquad \lambda=1.
+\end{equation}
+This is a vector deadband: inputs inside $K$ all produce output zero.
+It is already a monotone single-valued map, and
+\begin{equation}\label{eq:exactEB}
+ F^{-1}(0)=K,\qquad \dist(x,K)=\norm{F(x)}.
+\end{equation}
+The example is not intended to demonstrate that monotone-operator
+theory fails to apply. It distinguishes distance to a fixed solution
+set from stable point reconstruction as the target changes.
+
+\begin{proposition}[Exact graph coordinates and unavoidable inverse jumps]
+\label{prop:deadbandjump}
+The full Cayley map of \eqref{eq:deadband} is $C=P_K$. For
+$\gamma=1/2$, its least H\"older constant is
+$L=\sqrt D$, where $D=\diam K=2a\sqrt2$, and hence $\rad=D$.
+Let $n_j=Ue_j$ and choose $0<4\eps<a$. For the two outputs
+$w_\pm=\pm\eps n_1$,
+\begin{equation}\label{eq:deadbandfibers}
+ F^{-1}(w_\pm)=\{\pm(a+\eps)n_1+tn_2:\abs t\le a\}.
+\end{equation}
+Every pair of exact reconstructions $x_\pm\in F^{-1}(w_\pm)$ satisfies
+\begin{equation}\label{eq:exactgain}
+ \frac{\norm{x_+-x_-}}{\norm{w_+-w_-}}
+ \ge\frac a\eps+1.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+If $q=P_Kx$, then the projection characterization says
+$\ip{x-q}{y-q}\le0$ for every $y\in K$. Thus
+$p=2x-q$ has $P_Kp=q$, and
+$x-F(x)=q=P_K(x+F(x))$. Conversely, for any $p$ set
+$q=P_Kp$ and $x=(p+q)/2$. The same projection characterization,
+scaled by $1/2$, gives $P_Kx=q$ and $F(x)=(p-q)/2$.
+This proves the full parametrization, hence graph maximality.
+Nonexpansiveness and the image diameter give
+\[
+ \norm{P_Kp-P_Kq}\le\min\{\norm{p-q},D\}
+ \le\sqrt D\,\norm{p-q}^{1/2}.
+\]
+Two diameter endpoints of $K$, fixed by $P_K$, force
+$L\ge\sqrt D$, so the constant is least possible.
+
+In rotated coordinates, each component of $F$ is
+$f(s)=s-\max\{-a,\min\{s,a\}\}$. For an output $\eps>0$ its
+unique scalar inverse is $a+\eps$; for $-\eps$ it is $-a-\eps$;
+for zero its inverse is $[-a,a]$. This yields
+\eqref{eq:deadbandfibers}. The difference in the $n_1$ coordinate
+of any two chosen inverse points is $2a+2\eps$. Their Euclidean
+distance is at least that amount, while
+$\norm{w_+-w_-}=2\eps$, proving \eqref{eq:exactgain}.
+\end{proof}
+
+For a transparent analytic proxy, take the contraction
+$N=\tfrac12 P_K$ and define $A$ by \eqref{eq:shadowparam}. Its
+Lipschitz and inverse Lipschitz constants are at most $3$, and its
+strong-monotonicity modulus is at least $1/3$.
+This is a model-specific contraction; its choice $\sigma=1/2$ is not
+the radius-minimizing parameter $\sqrt\gamma=1/\sqrt2$ of the
+general theorem.
+
+\begin{proposition}[Stable analytic proxy with full-fiber control]
+\label{prop:deadbandproxy}
+For the above $A$, in the rotated coordinates each component of
+$A^{-1}$ is
+\begin{equation}\label{eq:deadbandproxyformula}
+ \alpha(w)=
+ \begin{cases}
+ 3w,& |w|\le a/4,\\
+ w+\tfrac a2\operatorname{sign}(w),& |w|\ge a/4.
+ \end{cases}
+\end{equation}
+The formulas agree at the endpoints. Every complete inverse fiber obeys
+\begin{equation}\label{eq:deadbandglobaltube}
+ \sup_{x\in F^{-1}(v)}\norm{x-A^{-1}(v)}\le a\sqrt2
+ \qquad(v\in\R^2).
+\end{equation}
+For $w_\pm$ from Proposition~\ref{prop:deadbandjump},
+\begin{align}
+ A^{-1}(w_\pm)&=\pm3\eps n_1,\label{eq:proxygain1}\\
+ \frac{\norm{A^{-1}(w_+)-A^{-1}(w_-)}}
+      {\norm{w_+-w_-}}&=3,\label{eq:proxygain2}\\
+ \sup_{x\in F^{-1}(w_\pm)}\norm{x-A^{-1}(w_\pm)}
+ &=\sqrt{(a-2\eps)^2+a^2}.\label{eq:proxyerror}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Writing $\pi(p)=\max\{-a,\min\{p,a\}\}$, scalar inverse evaluation
+requires $p=2w+\tfrac12\pi(p)$ and returns $p-w$.
+If $|w|\le a/4$, then $p=4w\in[-a,a]$ solves this equation and
+returns $3w$. If $w\ge a/4$, then $p=2w+a/2\ge a$ solves it and
+returns $w+a/2$; the negative case is symmetric. The contraction
+ensures these are the unique solutions, proving
+\eqref{eq:deadbandproxyformula}.
+
+For $w>0$, the scalar true inverse is $a+w$. If $0<w\le a/4$,
+its difference from the proxy is $a-2w\le a$; if $w\ge a/4$, its
+difference is $a/2$. For $w<0$ the absolute differences are the
+same. At $w=0$, the true inverse interval is $[-a,a]$ and the proxy
+is zero, so the worst difference is $a$. Applying this bound to
+each rotated coordinate and using orthogonality gives
+\eqref{eq:deadbandglobaltube}. Since $4\eps<a$, the first branch
+of \eqref{eq:deadbandproxyformula} applies to both targets, proving
+\eqref{eq:proxygain1}--\eqref{eq:proxygain2}. Substitution into
+\eqref{eq:deadbandfibers} gives the displacement
+$\pm(a-2\eps)n_1+tn_2$; maximizing its norm over $|t|\le a$ proves
+\eqref{eq:proxyerror}.
+\end{proof}
+
+For $a=1/8$ and $\eps=10^{-4}$, the output displacement is $0.0002$.
+Every exact inverse pair moves by at least $0.2502$, a gain of at
+least $1251$, whereas the analytic proxy moves by $0.0006$, a gain
+of $3$. The proxy generally is not an exact inverse point. These
+numbers compare two different requirements---exact reconstruction and
+certified approximate reconstruction---and make their tradeoff explicit.
+
+The known analytic model permits other simple choices. In particular,
+the identity map already gives the global forward and inverse radius
+$a\sqrt2$, because $x-v=P_Kx\in K$ and
+$\sup_{k\in K}\norm k=a\sqrt2$. Thus this example does not establish
+that the shadow construction dominates bespoke regularization. Its
+purpose is to exhibit what a common stable proxy and a full-fiber
+certificate mean, and what they do not mean. For finite graph data,
+Section~\ref{sec:finite} supplies a model-class construction and adds
+the explicit coverage and evaluation terms that an exact analytic
+calculation does not require.
+
+\section{Discussion and scope}\label{sec:discussion}
+
+The simultaneous shadow theorem and the realization theorem express
+two complementary conclusions. The entire relation admits one
+quantitatively controlled, strongly monotone, invertible approximation.
+Nevertheless, an individual finite-dimensional fiber may be any
+nonempty compact set of the permitted diameter. The approximation
+does not turn original fibers into convex sets, select an exact branch,
+or eliminate nonidentifiability. Its radius is a uniform worst-case
+guarantee, not a claim that every relation requires the full radius.
+
+The global assumption is restrictive. To see its large-scale meaning,
+fix a graph anchor and write $d=(x-x_0)+\lambda(v-v_0)$ and
+$e=(x-x_0)-\lambda(v-v_0)$. Along any graph sequence unbounded in
+$H\times H$, $\norm d$ must be unbounded, since
+$\norm e\le L\norm d^\gamma$ bounds both original coordinate
+differences whenever $d$ is bounded. Along a sequence with
+$\norm d\to\infty$, one has $\norm e/\norm d\to0$.
+Since $x-x_0=(d+e)/2$, this implies, uniformly for large graph points,
+\[
+ v-v_0=\lambda^{-1}(x-x_0)+O(\norm{x-x_0}^\gamma).
+\]
+In particular, the class prescribes a common asymptotic linear slope;
+it is not a container for every locally regular nonmonotone model.
+
+The sharp constant established here is uniform over dimensions.
+Determining optimal constants in each fixed dimension, or under
+additional geometric assumptions on fibers, remains a distinct
+question. Likewise, a specified anchor changes the approximation
+problem and its optimal factor. Additional interpolation constraints
+or stronger computational requirements may impose different tradeoffs.
+
+The finite-data theorem distinguishes a mathematical existence result
+from a computable surrogate. It supplies one coherent global map from
+fixed observations and certifies unobserved graph points only where
+the specified coverage assumption holds. Proposition~\ref{prop:information}
+shows why this locality cannot be discarded in the stated oracle
+model. Efficient adaptive coverage, structured sampling, and
+dimension-dependent guarantees are natural computational questions,
+but are not resolved by the existence of a finite quadratic program.
+
+\begin{thebibliography}{99}
+
+\bibitem{AzagraLeGruyerMudarra}
+D. Azagra, E. Le Gruyer, and C. Mudarra,
+\emph{Kirszbraun's theorem via an explicit formula},
+Canadian Mathematical Bulletin \textbf{64}(1) (2021), 142--153.
+\url{https://doi.org/10.4153/S0008439520000314}.
+
+\bibitem{BauschkeWang}
+H. H. Bauschke and X. Wang,
+\emph{Firmly nonexpansive and Kirszbraun--Valentine extensions: a
+constructive approach via monotone operator theory},
+in Nonlinear Analysis and Optimization I, Contemporary Mathematics
+\textbf{513}, American Mathematical Society, 2010, 55--64.
+\url{https://doi.org/10.1090/conm/513/10075}.
+
+\bibitem{BenevieriFuriPeraSpadini}
+P. Benevieri, M. Furi, M. P. Pera, and M. Spadini,
+\emph{An introduction to topological degree in Euclidean spaces},
+arXiv:2304.06463, 2023. \url{https://arxiv.org/abs/2304.06463}.
+
+\bibitem{BurachikIusemSvaiter}
+R. S. Burachik, A. N. Iusem, and B. F. Svaiter,
+\emph{Enlargement of monotone operators with applications to variational
+inequalities}, Set-Valued Analysis \textbf{5}(2) (1997), 159--180.
+\url{https://doi.org/10.1023/A:1008615624787}.
+
+\bibitem{Kirszbraun}
+M. D. Kirszbraun,
+\emph{\"Uber die zusammenziehende und Lipschitzsche Transformationen},
+Fundamenta Mathematicae \textbf{22}(1) (1934), 77--108.
+\url{https://doi.org/10.4064/fm-22-1-77-108}.
+
+\bibitem{LevyRice}
+R. Levy and M. D. Rice,
+\emph{The approximation and extension of uniformly continuous Banach
+space valued mappings}, Commentationes Mathematicae Universitatis
+Carolinae \textbf{24}(2) (1983), 251--265.
+\url{https://dml.cz/handle/10338.dmlcz/106224}.
+
+\bibitem{LukeTam}
+D. R. Luke and M. K. Tam,
+\emph{Generalized monotonicity and the proximal point algorithm},
+Mathematics of Operations Research, Articles in Advance,
+published online 21 November 2025.
+\url{https://doi.org/10.1287/moor.2025.0863}.
+
+\bibitem{Minty1970}
+G. J. Minty,
+\emph{On the extension of Lipschitz, Lipschitz--H\"older continuous,
+and monotone functions}, Bulletin of the American Mathematical Society
+\textbf{76}(2) (1970), 334--339.
+\url{https://doi.org/10.1090/S0002-9904-1970-12466-1}.
+
+\bibitem{RubbensHendrickxTaylor}
+A. Rubbens, J. M. Hendrickx, and A. Taylor,
+\emph{A constructive approach to strengthen algebraic descriptions of
+function and operator classes},
+Journal of Nonsmooth Analysis and Optimization \textbf{6} (2026),
+article 15673.
+\url{https://doi.org/10.46298/jnsao-2026-15673}.
+
+\bibitem{Schoenberg}
+I. J. Schoenberg,
+\emph{Metric spaces and positive definite functions},
+Transactions of the American Mathematical Society \textbf{44}(3) (1938),
+522--536.
+\url{https://doi.org/10.1090/S0002-9947-1938-1501980-0}.
+
+\bibitem{Valentine}
+F. A. Valentine,
+\emph{A Lipschitz condition preserving extension for a vector function},
+American Journal of Mathematics \textbf{67}(1) (1945), 83--93.
+\url{https://doi.org/10.2307/2371917}.
+
+\bibitem{ZaichykEtAl}
+H. Zaichyk, A. Biess, A. Kontorovich, and Y. Makarychev,
+\emph{Efficient Kirszbraun extension with applications to regression},
+Mathematical Programming \textbf{207} (2024), 617--642.
+\url{https://doi.org/10.1007/s10107-023-02023-6}.
+
+\end{thebibliography}
+\end{document}

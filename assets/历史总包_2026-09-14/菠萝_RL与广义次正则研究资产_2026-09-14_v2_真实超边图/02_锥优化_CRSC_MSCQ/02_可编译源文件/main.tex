@@ -1,0 +1,1481 @@
+% RL-CONIC-2026 / theoretical / T4 -> T5 provisional / MW-MASTER-V04
+% Author name is exactly 菠萝, as explicitly required by the author.
+% No affiliation, email, or funding is invented.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs,array}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[unicode=true,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,
+  urlcolor=blue!45!black,breaklinks=true]{hyperref}
+\hypersetup{pdftitle={Frozen minimal-face constant rank and metric subregularity over amenable cones},
+  pdfauthor={菠萝},pdfsubject={Theoretical manuscript v0.4}}
+% Native pdfLaTeX font embedding for the two Unicode author-name glyphs.
+\pdfmapline{+author-cjk AuthorNameCJK "AuthorNameCJKEncoding ReEncodeFont" <author-cjk.enc <author-cjk.ttf}
+\pdfglyphtounicode{uni83E0}{83E0}
+\pdfglyphtounicode{uni841D}{841D}
+\newcommand{\authorname}{\begingroup
+  \font\authorcjk=author-cjk at 12pt\authorcjk\char0\char1\endgroup}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=3pt,topsep=5pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\ri}{ri}
+\DeclareMathOperator{\rbd}{rbd}
+\DeclareMathOperator{\spann}{span}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\cone}{cone}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\interior}{int}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Ssym}{\mathbb S}
+\newcommand{\xb}{\bar x}
+\newcommand{\xhat}{\widehat x}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\dset}[2]{\dist(#1,#2)}
+
+\title{Frozen minimal-face constant rank and metric subregularity\protect\\
+  over amenable cones}
+\author{\authorname}
+\date{September 9, 2026\\[3pt]\small Working manuscript v0.4}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study continuously differentiable conic systems at a cone apex under a
+constant-rank condition defined by the reference minimal linearized face.
+For a finite-dimensional proper nice cone, reference closedness of the
+adjoint cone image and constancy of the normal rank imply closedness of
+nearby adjoint images, stability of the minimal linearized face, and local
+nonlinear facial reduction. The key observation is a rank sandwich on two
+fixed dual-face subspaces. A quantitative normal correction then moves
+each nearby input to one common face manifold with displacement controlled
+by the original cone residual. If the reference face is amenable in the
+cone, a second correction within that manifold yields metric
+subregularity and an explicit local upper bound for its modulus.
+Consequently, within the class of proper nice cones, amenability is
+equivalent to the universal validity of this constant-rank-to-subregularity
+implication for all apex systems. The reverse implication is already
+detected by linear face inclusions. An adaptation of the published
+four-dimensional nice nonamenable cone of Louren\c{c}o, Roshchina, and
+Saunderson shows failure of the error bound even under full facial CRCQ.
+A coupled second-order-cone system and positive-semidefinite systems with
+high-dimensional nonpolyhedral faces illustrate the joint-input argument.
+\end{abstract}
+
+\noindent\textbf{Keywords.} Constant rank; constraint qualification;
+minimal face; nice cone; amenable cone; metric subregularity; facial reduction.
+
+\section{Introduction}
+\label{sec:introduction}
+
+For a smooth constraint mapping $G$ and a closed convex cone $C$, a local
+error bound compares the distance of an input to $G^{-1}(C)$ with the
+output residual $\dset{G(x)}{C}$. Such a comparison is particularly useful
+when a strict feasible linearized direction is unavailable. A face-based
+constant-rank condition can describe this degeneracy without requiring
+the original linearized system to meet the interior of the whole cone.
+The resulting question has two distinct parts: does the condition
+stabilize the appropriate face, and does it control distance using the
+\emph{original} cone residual?
+
+These questions should not be conflated. Local equality between the
+original feasible set and a face-reduced feasible set is a geometric
+statement. It does not automatically compare the distances to the cone
+and to the face. The present paper separates these roles. Niceness
+provides the closed-image geometry needed for face stability and normal
+correction. Amenability of the particular reference face supplies the
+metric comparison that completes the error bound.
+
+\newpage
+\paragraph{Main results.}
+For $C^1$ apex systems with the frozen-face condition defined below,
+the results have three parts.
+\begin{enumerate}[label=\arabic*.]
+\item Over a proper nice cone, frozen minimal-face CRSC gives nearby
+closed adjoint images and the same minimal linearized face
+(Theorem~\ref{thm:stability}), together with local nonlinear facial
+reduction (Corollary~\ref{cor:fr}).
+\item If the reference face is amenable in the original cone, the same
+condition yields MSCQ with an explicit sufficient local constant
+(Theorem~\ref{thm:mscq}); amenable cones satisfy this face hypothesis
+(Corollary~\ref{cor:amenable}).
+\item For a fixed proper nice cone, amenability is equivalent to the
+universal CRSC-to-MSCQ property over all admissible apex systems
+(Theorem~\ref{thm:universal}); the nice nonamenable example fails MSCQ
+even under full facial CRCQ (Proposition~\ref{prop:counterexample}).
+\end{enumerate}
+
+\subsection{Relation to the closest results}
+
+The minimal-face CRSC framework of Andreani, Haeser, Mito, and
+Ram\'irez \citep{ahmr2026} is the nearest starting point. Our numbered
+comparison refers specifically to their March 20, 2025 author manuscript
+\citep{ahmr2025author}. Its Definition~3.2 freezes the minimal linearized
+face at the reference point. Proposition~5.2 proves nonlinear facial
+reduction from a strict conjugate-face kernel multiplier and a
+constant-rank condition on the conjugate-face span. Theorem~5.2 obtains
+the reduction with additional nearby closed-image and face-stability
+assumptions, denoted A1 and A2, and the following paragraph asks whether
+they can be removed. We derive the missing conjugate-span rank condition
+directly from frozen minimal-face CRSC, and also prove A1 and A2
+themselves on an open input neighborhood. This removes the additional
+assumptions from the theorem as stated in that author version. The
+comparison is not a claim that the final published text has been checked
+to be identical to that version.
+
+Our geometric argument imports Pataki's criterion for a closed linear
+image of a cone \citep[Theorem~1.1]{pataki2007}. Its exact equality of a conjugate-face image with a
+linear subspace is essential. Replacing this equality by an equality
+only after taking closures would not justify the rank argument below.
+The other imported ingredient is cone amenability: a facewise error
+bound on the linear span of a face. This concept, its relation to
+niceness, and its product and standard-cone properties are established
+results of Louren\c{c}o \citep{lourencoAmenable} and
+Louren\c{c}o, Roshchina, and Saunderson \citep{lrs2022}.
+Those geometric properties are not claimed as contributions here.
+Nor is the short rank sandwich a new general principle of facial
+reduction: it supplies the hypothesis needed by an existing proposition.
+
+The nonlinear step is necessary because a general value $G(x)$ need not
+belong to the span of the minimal face, where amenability applies. We
+first produce an input correction to that span with cost measured by the
+original residual. Only then do we invoke amenability and perform a
+second, relative-interior correction. Both steps use the same joint input
+mapping. No intersection regularity is inferred from separate blockwise
+error bounds.
+
+Related error-bound results have different model hypotheses.
+\citet[Theorem~5.1]{chieu2026soc} establish a CRCQ--MSCQ equivalence for
+an affine single-SOC system. The nonlinear theorem of
+\citet[Theorem~4.1]{huy2025cone} uses $C^1$ cone-concave data, a specified
+smooth-cone class, and a nearby Abadie condition. These hypotheses are
+not assumed here. Table~\ref{tab:nearest} records the distinctions that
+are relevant to the proof, without implying that all other error-bound
+results have been excluded.
+
+\begin{table}[!htbp]
+\centering\small
+\caption{Closest interfaces and their relevant hypotheses. The first row
+uses the explicitly cited author version.}
+\label{tab:nearest}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}
+                  >{\raggedright\arraybackslash}p{.34\linewidth}
+                  >{\raggedright\arraybackslash}p{.36\linewidth}@{}}
+\toprule
+Source & Relevant statement & Interface with this paper\\
+\midrule
+\citet{ahmr2025author}, Theorem~5.2 & Frozen minimal-face CRSC with A1/A2;
+nonlinear facial reduction & The fixed-subspace rank argument supplies
+the missing rank condition and yields A1/A2.\\[4pt]
+\citet{lourencoAmenable}; \citet{lrs2022} & Face-to-cone residual comparison
+on $\spann F$ & Imported after a quantitative input correction to the
+common face manifold.\\[4pt]
+\citet{chieu2026soc}, Theorem~5.1 & Affine single-SOC CRCQ and MSCQ &
+The present sufficient theorem allows arbitrary $C^1$ joint maps and
+amenable output cones.\\[4pt]
+\citet{huy2025cone}, Theorem~4.1 & Smooth cone, cone-concavity, and nearby
+Abadie condition & The present hypothesis is frozen minimal-face CRSC;
+cone-concavity is not imposed.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Facial residual functions allow non-Lipschitz moduli for affine conic
+feasibility \citep{lindstrom2023frf}; radial-type estimates for
+semidefinite feasibility likewise concern an affine-space/PSD model
+\citep{nishijima2026radial}. Such results do not supply, merely by their
+generality in the output cone, the nonlinear input correction used here.
+Modern facial-reduction and joint-supporting-subspace approaches for
+convex programs \citep{lin2025facial,scott2025joint} have convex-set or
+$f+g\circ A$ models; an arbitrary $C^1$ inverse image need not be convex.
+Recent constant-rank-type local error bounds and non-relaxable-set
+qualifications \citep{andreani2026new,andreani2026nonrelaxable} concern
+scalar nonlinear programming. In particular, the Lower-CRSC testing
+domain in the latter is not the open-neighborhood frozen-face condition
+used below. These comparisons locate the present hypotheses; they do
+not claim a first constant-rank error bound in nonlinear optimization.
+
+\subsection{Organization}
+
+Section~\ref{sec:preliminaries} fixes the notation and condition.
+Sections~\ref{sec:nice} and \ref{sec:mscq} develop the two corrections
+and the universal characterization. Section~\ref{sec:boundary} gives
+the apex counterexample. Section~\ref{sec:examples} treats cone classes,
+two coupled nonlinear examples, and fixed local reductions.
+Section~\ref{sec:residual-interface} gives the regularity interface
+through a residual comparison.
+
+\section{Preliminaries and the frozen-face condition}
+\label{sec:preliminaries}
+
+All spaces are finite-dimensional Euclidean spaces and all distances are
+Euclidean unless a subspace metric is explicitly indicated. For a linear
+map $A:X\to E$, its adjoint is $A^*:E\to X$. For a subspace $L$, $P_L$
+denotes the orthogonal projection. We use the positive dual
+\[
+ C^*=\{y\in E:\ip{y}{c}\geq0\text{ for every }c\in C\}.
+\]
+The negative-polar convention changes only the sign of an adjoint cone
+image, not its closedness or rank.
+
+A cone is \emph{proper} here if it is closed, convex, pointed, and
+full-dimensional in a positive-dimensional ambient space. If $F$ is a
+face of $C$, then
+\[
+ F^\perp=(\spann F)^\perp,
+ \qquad F^\triangle=C^*\cap F^\perp.
+\]
+We use $F_{\min}(Q)$ for the smallest face of $C$ containing $Q\subset C$.
+A convex set meets the relative interior of its minimal containing face.
+In particular, if $Q=\range A\cap C$, there is $\bar d\in X$ such that
+$A\bar d\in\ri F_{\min}(Q)$. For a nonzero face the image can be chosen
+nonzero. One may see this by taking finitely many points whose faces
+generate the minimal face and summing them. The set $\range A\cap C$ is
+a convex cone, so the sum remains in it.
+
+\begin{definition}[Niceness and face amenability]
+\label{def:amenable}
+A closed convex cone $C$ is \emph{nice} if $C^*+J^\perp$ is closed for
+every face $J$ of $C$. A face $J$ is \emph{amenable in $C$} if there is a
+finite constant $a_J>0$ such that
+\begin{equation}
+ \dset{y}{J}\leq a_J\dset{y}{C}
+ \qquad (y\in\spann J).
+ \label{eq:amenable}
+\end{equation}
+The cone is \emph{amenable} if every face is amenable in this sense.
+\end{definition}
+
+Amenable cones are nice, and nice cones are facially exposed. These are
+imported cone-geometric facts \citep{lourencoAmenable,lrs2022}. In
+particular, for a nice cone and a proper face $F$, a point in
+$\ri F^\triangle$ exposes $F$; the conjugate face is nonzero. No
+constant uniform over all faces is required in
+Definition~\ref{def:amenable}.
+
+Fix an open set $V\subset X$, a point $\xb\in V$, and a $C^1$ map
+$G:V\to E$ with $G(\xb)=0$. Write
+\begin{equation}
+ \Omega=\{x\in V:G(x)\in C\},\qquad A=DG(\xb),\qquad
+ F=F_{\min}(\range A\cap C),
+ \label{eq:setup}
+\end{equation}
+and freeze the subspaces
+\begin{equation}
+ H=F^\perp,\qquad S=\spann F^\triangle\subset H.
+ \label{eq:subspaces}
+\end{equation}
+Every local assertion below is understood after shrinking to a
+neighborhood of $\xb$ contained in $V$.
+
+\begin{definition}[Frozen minimal-face CRSC]
+\label{def:crsc}
+The system in \eqref{eq:setup} satisfies frozen minimal-face CRSC at
+$\xb$ if $A^*C^*$ is closed and there is an open neighborhood of $\xb$
+on which
+\begin{equation}
+ \rank\bigl(DG(x)^*|_H\bigr)=r,
+ \qquad r=\rank(A^*|_H).
+ \label{eq:crsc}
+\end{equation}
+\end{definition}
+
+\begin{definition}[Full facial CRCQ at an apex]
+\label{def:crcq}
+The facial constant-rank property holds at $\xb$ if there is one
+neighborhood $W$ of $\xb$ such that, for every face $J$ of $C$,
+$\rank(DG(x)^*|_{J^\perp})$ is constant for $x\in W$; the constant
+may depend on $J$. Full facial CRCQ consists of this property and
+closedness of $A^*C^*$.
+\end{definition}
+This is Definition~3.1 of \citet{ahmr2025author} in the apex
+representation with the identity reduction. The faces tested are all
+faces of $C$, not only subfaces of $F$. Full facial CRCQ implies
+Definition~\ref{def:crsc}.
+
+The face $F$ and the reduction $G$, if a reduction is used, are fixed at
+$\xb$. The rank condition is imposed on an open input neighborhood, not
+only on feasible points. Nearby closedness of $DG(x)^*C^*$ and nearby
+constancy of the minimal linearized face are \emph{conclusions}, not
+additional assumptions.
+
+\begin{definition}[MSCQ]
+The system satisfies the metric subregularity constraint qualification
+(MSCQ) at $\xb$ if some $\kappa>0$ and some neighborhood $W$ of $\xb$
+satisfy
+\begin{equation}
+ \dset{x}{\Omega}\leq\kappa\dset{G(x)}{C}
+ \qquad (x\in W).
+ \label{eq:mscq}
+\end{equation}
+\end{definition}
+
+For clarity, the closed-image theorem that is imported throughout is
+stated explicitly. It is not proved or claimed as new here.
+
+\begin{theorem}[Pataki's closed-image criterion, imported
+{\citep[Theorem~1.1]{pataki2007}}]
+\label{thm:pataki}
+Let $C$ be proper and nice, let $A:X\to E$ be linear, and define $F,H,S$
+as in \eqref{eq:setup}--\eqref{eq:subspaces}. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+ \item $A^*C^*$ is closed;
+ \item $A^*F^\triangle=A^*H$;
+ \item both of the following hold:
+ \begin{equation}
+ \ker A^*\cap\ri F^\triangle\ne\varnothing,
+ \qquad
+ \range A\cap S^\perp=\range A\cap\spann F.
+ \label{eq:pataki-kernel}
+ \end{equation}
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[Zero-dimensional reduction]
+If a fixed local reduction has zero-dimensional output space, the reduced
+map and cone are both zero. Local equivalence then makes every sufficiently
+near input feasible, and any positive error-bound constant is valid.
+This branch is separate from the positive-dimensional proper-cone setup;
+no unit direction, positive singular value, or relative-boundary margin
+will be invoked for it.
+\end{remark}
+
+\section{Nice cones: nearby stability and normal correction}
+\label{sec:nice}
+
+Throughout this section, $C$ is proper and nice and frozen minimal-face
+CRSC holds at $\xb$.
+
+\subsection{A rank sandwich on fixed subspaces}
+
+\begin{lemma}[Fixed-subspace rank sandwich]
+\label{lem:sandwich}
+On some open neighborhood of $\xb$,
+\begin{equation}
+ \rank\bigl(DG(x)^*|_S\bigr)
+ =\rank\bigl(DG(x)^*|_H\bigr)=r,
+ \qquad DG(x)^*S=DG(x)^*H.
+ \label{eq:sandwich}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Theorem~\ref{thm:pataki} and reference closedness give
+$A^*F^\triangle=A^*H$. Taking linear spans yields $A^*S=A^*H$,
+so the rank of $A^*|_S$ is $r$. If $r>0$, choose fixed orthonormal bases
+and a nonzero $r$-by-$r$ minor of this restricted matrix. Continuity of
+$DG$ preserves that minor on a neighborhood. On the other hand,
+$S\subset H$ and \eqref{eq:crsc} give
+\[
+ r\leq\rank(DG(x)^*|_S)
+ \leq\rank(DG(x)^*|_H)=r.
+\]
+For $r=0$ the conclusion follows from the second inequality alone.
+The subspace images are nested and have equal dimension, hence are equal.
+\end{proof}
+
+\begin{lemma}[Continuity of kernel projections]
+\label{lem:kernel}
+If a continuous matrix field $B(x)$ has constant rank near $\xb$, the
+orthogonal projection onto $\ker B(x)$ depends continuously on $x$.
+\end{lemma}
+\begin{proof}
+Choose a nonzero maximal minor at $\xb$ and retain it on a smaller
+neighborhood. Solving the corresponding dependent coordinates expresses
+the kernel as a graph of a continuous linear-map field over a fixed
+coordinate subspace. If $Q(x)$ is the continuous full-column-rank matrix
+whose columns span this graph, its orthogonal projection is
+$Q(x)(Q(x)^*Q(x))^{-1}Q(x)^*$. The formula is continuous.
+The zero-dimensional and full-dimensional kernels are included directly.
+\end{proof}
+
+\begin{theorem}[Full-neighborhood stability]
+\label{thm:stability}
+There is an open neighborhood $W$ of $\xb$ such that, for every $x\in W$,
+\begin{equation}
+ DG(x)^*C^*\text{ is closed},
+ \qquad F_{\min}(\range DG(x)\cap C)=F.
+ \label{eq:stability}
+\end{equation}
+Thus the nearby conditions A1 and A2 are automatic under the frozen
+condition in Definition~\ref{def:crsc}.
+\end{theorem}
+\begin{proof}
+Write $A_x=DG(x)$. First suppose $F=C$. The minimal-face property gives
+a vector $\bar d$ with $A\bar d\in\interior C$. By continuity,
+$A_x\bar d\in\interior C$ nearby, so the minimal face remains $C$.
+Choose a common $\delta>0$ with $B(A_x\bar d,\delta)\subset C$
+nearby. For $y\in C^*$,
+\[
+ \delta\norm{y}\leq\ip{A_x\bar d}{y}
+ =\ip{\bar d}{A_x^*y}.
+\]
+For each fixed nearby $x$, every convergent sequence $A_x^*y_j$,
+$y_j\in C^*$, therefore has bounded lifts $y_j$. A convergent
+subsequence of the lifts proves that $A_x^*C^*$ is closed.
+No surjectivity of $A_x$ is needed.
+
+Suppose now that $F$ is proper. Choose
+$Y_0\in\ri F^\triangle\cap\ker A^*$ using
+Theorem~\ref{thm:pataki}. Lemmas~\ref{lem:sandwich} and
+\ref{lem:kernel} show that
+\[
+ Y_x=P_{\ker(A_x^*|_S)}Y_0
+ \longrightarrow Y_0,
+\]
+where the kernel and projection are taken inside $S$.
+Since $\ri F^\triangle$ is open relative to $S$, shrinking the
+neighborhood gives
+\begin{equation}
+ Y_x\in\ri F^\triangle,\qquad A_x^*Y_x=0.
+ \label{eq:exposing}
+\end{equation}
+For $v\in\range A_x\cap C$, we have $\ip{Y_x}{v}=0$.
+Indeed, for each $y\in F^\triangle$, relative interior gives
+$Y_x-\varepsilon y\in F^\triangle$ for some $\varepsilon>0$.
+Nonnegativity of both pairings with $v$ then forces $\ip{y}{v}=0$.
+Facial exposedness, equivalently the double-conjugate identity for $F$,
+therefore implies
+\begin{equation}
+ \range A_x\cap C\subset F.
+ \label{eq:face-inclusion}
+\end{equation}
+If $F=\{0\}$ this already proves minimal-face stability.
+
+If $F\ne\{0\}$, select $\bar d$ with $A\bar d\in\ri F$ and define
+\[
+ d_x=P_{\ker(P_HA_x)}\bar d.
+\]
+The map $P_HA_x$ has rank $r$, and $P_HA\bar d=0$.
+Lemma~\ref{lem:kernel} gives $d_x\to\bar d$. Consequently
+$A_xd_x\in\spann F$ and $A_xd_x\to A\bar d\in\ri F$.
+The image is in $\ri F$ nearby. Together with
+\eqref{eq:face-inclusion}, this proves the second assertion in
+\eqref{eq:stability}.
+
+Finally, the image equality in \eqref{eq:sandwich} gives
+\[
+ \ker(P_SA_x)=\ker(P_HA_x),
+ \qquad
+ \range A_x\cap S^\perp=\range A_x\cap\spann F.
+\]
+The second equality follows by representing a vector in the range as
+$A_xd$ and applying the kernel equality. We have already proved that its
+minimal face at $x$ is $F$. This equality and \eqref{eq:exposing} now
+apply Theorem~\ref{thm:pataki} at $x$, proving closedness.
+There is no use of nearby closedness earlier in the proof.
+\end{proof}
+
+\subsection{A normal angle and a common face manifold}
+
+Define
+\begin{equation}
+ U=\range(P_HA),\qquad D=\cl(P_HC)\subset H,
+ \qquad \phi=P_HG.
+ \label{eq:normal}
+\end{equation}
+The closure in the definition of $D$ is deliberate: a projected
+nonpolyhedral cone need not be closed.
+
+\begin{lemma}[Positive normal angle]
+\label{lem:angle}
+The subspace $U$ and the closed cone $D$ satisfy $U\cap D=\{0\}$.
+If $r>0$, then
+\begin{equation}
+ \eta=\min_{\substack{u\in U\\\norm{u}=1}}\dset{u}{D}>0.
+ \label{eq:eta}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Let $u=P_HAd\in D$. Every $y\in F^\triangle$ has
+$\ip{u}{y}\geq0$, first on $P_HC$ and then by continuity on its closure.
+For any $h\in H$, Theorem~\ref{thm:pataki} supplies
+$y\in F^\triangle$ with $A^*y=A^*h$. Since both $h$ and $y$ are in $H$,
+\[
+ \ip{u}{h}=\ip{Ad}{h}=\ip{Ad}{y}=\ip{u}{y}\geq0.
+\]
+Applying the same argument to $-h$ gives $\ip{u}{h}=0$ for every
+$h\in H$. Since $u\in H$, it is zero. If $r>0$, compactness of the unit
+sphere in $U$ and closedness of $D$ give \eqref{eq:eta}.
+\end{proof}
+
+\begin{lemma}[Quantitative correction to the common manifold]
+\label{lem:normal-correction}
+Let $M=\{x\in V:\phi(x)=0\}$. Every sufficiently near $x$ admits
+$\xhat\in M$ such that
+\begin{equation}
+ \norm{x-\xhat}\leq b\dset{G(x)}{C}.
+ \label{eq:normal-correction}
+\end{equation}
+For $r>0$ one may take
+\begin{equation}
+ b=\frac{4}{\sigma\eta},\qquad
+ \sigma=\sigma_{\min}^{+}(P_HA),
+ \label{eq:b}
+\end{equation}
+where $\sigma_{\min}^{+}$ is the smallest positive singular value.
+For $r=0$, one may take $b=0$ and $\xhat=x$.
+\end{lemma}
+\begin{proof}
+The derivative $D\phi(x)=P_HDG(x)$ has rank $r$ near $\xb$.
+If $r=0$, $\phi$ is constant on a small connected neighborhood, and is
+zero because $\phi(\xb)=0$. This proves the stated branch.
+
+Let $r>0$, put $N=\ker D\phi(\xb)$, and consider
+\[
+ \Theta(x)=\bigl(P_U\phi(x),P_N(x-\xb)\bigr)\in U\times N.
+\]
+Its derivative at $\xb$ is invertible: $D\phi(\xb)$ is an isomorphism
+from $N^\perp$ to $U$, while the second component is the identity on $N$.
+The inverse function theorem provides a $C^1$ inverse $x=\theta(u,z)$
+on a small product neighborhood of $(0,0)$.
+
+The derivative of $P_U\phi$ has rank $r$ near $\xb$, as does
+$D\phi$. Its kernel therefore equals the kernel of $D\phi$.
+Along each connected $z$-fiber the full map $\phi\circ\theta$ has zero
+$z$-derivative. Since its $U$-component is $u$, it follows that
+\begin{equation}
+ \phi(\theta(u,z))=u+\beta(u),\qquad
+ \beta(u)\in U^\perp\cap H,\quad \beta(0)=D\beta(0)=0.
+ \label{eq:graph}
+\end{equation}
+This is precisely the constant-rank consequence needed here; it uses
+only $C^1$ regularity.
+
+At the reference point, $\norm{D_u\theta}=1/\sigma$.
+Shrink the product chart so that
+\[
+ \norm{D_u\theta}\leq\frac{2}{\sigma},
+ \qquad \norm{D\beta}\leq\frac{\eta}{2}.
+\]
+Cone homogeneity, \eqref{eq:eta}, and the distance Lipschitz inequality give
+\[
+ \dset{\phi(x)}{D}
+ \geq\dset{u}{D}-\norm{\beta(u)}
+ \geq\frac{\eta}{2}\norm{u}.
+\]
+Take $\xhat=\theta(0,z)$. Equation~\eqref{eq:graph} implies
+$\xhat\in M$, and the segment in the $u$-coordinate yields
+\[
+ \norm{x-\xhat}\leq\frac{2}{\sigma}\norm{u}.
+\]
+Since $P_H$ is nonexpansive and $D$ contains $P_HC$,
+$\dset{\phi(x)}{D}\leq\dset{G(x)}{C}$.
+Combining these estimates proves \eqref{eq:normal-correction}.
+Nested neighborhoods ensure the input and its correction remain in the
+same chart.
+\end{proof}
+
+\begin{corollary}[Nonlinear facial reduction]
+\label{cor:fr}
+On a neighborhood of $\xb$,
+\begin{equation}
+ G^{-1}(C)=G^{-1}(F).
+ \label{eq:fr}
+\end{equation}
+\end{corollary}
+\begin{proof}
+If $G(x)\in C$, the residual on the right of
+\eqref{eq:normal-correction} is zero; its correction thus equals $x$.
+Hence $\phi(x)=0$ and $G(x)\in C\cap\spann F=F$.
+The reverse inclusion is immediate.
+\end{proof}
+
+\begin{remark}[Dependence on the existing facial-reduction argument]
+The rank sandwich also supplies the conjugate-span rank hypothesis of
+\citet[Proposition~5.2]{ahmr2025author}, so
+Corollary~\ref{cor:fr} could be obtained from that result.
+Lemma~\ref{lem:normal-correction} gives a direct proof and the additional
+quantitative correction needed for the original-residual estimate below.
+The full-face branch $F=C$ has $H=\{0\}$ and $M=V$ locally; no
+nonzero conjugate-face multiplier is asserted in that branch.
+\end{remark}
+
+\section{Amenability and the original-residual error bound}
+\label{sec:mscq}
+
+\subsection{A second correction on the same manifold}
+
+\begin{lemma}[Relative-interior correction]
+\label{lem:relative}
+Under the standing hypotheses of Section~\ref{sec:nice}, including
+properness and niceness of $C$ and frozen minimal-face CRSC at $\xb$,
+let $M$ be the common manifold in Lemma~\ref{lem:normal-correction}.
+Assume $F\ne\{0\}$. There is a unit vector
+$d_0\in\ker(P_HA)$ such that $v_0=Ad_0\in\ri F$. Define
+\begin{equation}
+ \tau_F=\dist_{\spann F}(v_0,\rbd F)>0.
+ \label{eq:tau}
+\end{equation}
+For every sufficiently near $\xhat\in M$, there is $x^+\in M$ with
+$G(x^+)\in F$ and
+\begin{equation}
+ \norm{x^+-\xhat}\leq c\dset{G(\xhat)}{F},
+ \qquad c=\frac{4}{\tau_F}.
+ \label{eq:relative}
+\end{equation}
+\end{lemma}
+\begin{proof}
+The minimal-face property gives a direction with nonzero image in
+$\ri F$. Rescale it to obtain $d_0$; positive rescaling preserves the
+relative interior. Since $Ad_0\in\spann F$, $d_0$ belongs to
+$\ker(P_HA)$. The margin \eqref{eq:tau} is finite and positive because
+$F$ is a nonzero pointed cone in its span.
+
+Use local coordinates $m(z)$ for $M$ with $m(0)=\xb$, choosing
+$m(z)=\theta(0,z)$ in the positive-rank construction and the identity
+chart in the rank-zero case. There is a fixed coordinate direction $w_0$
+with $Dm(0)w_0=d_0$. The map $G\circ m$ takes values in $\spann F$.
+By continuity, shrink the chart so that
+\[
+ \norm{Dm(z)w_0}\leq2,
+ \qquad
+ \norm{D(G\circ m)(z)w_0-v_0}\leq\frac{\tau_F}{4}.
+\]
+For $\xhat=m(z)$ set $q=\dset{G(\xhat)}{F}$. If $q=0$, take
+$x^+=\xhat$. Otherwise choose a nearest point $f\in F$ and put
+$t=2q/\tau_F$. Along the coordinate segment $z+s w_0$, $0\leq s\leq t$,
+integration gives
+\[
+ G(m(z+t w_0))=f+t v_0+e,
+ \qquad \norm{e}\leq q+\frac{t\tau_F}{4}
+ =\frac{3}{4}t\tau_F<t\tau_F.
+\]
+The relative ball with center $v_0$ and radius $\tau_F$ is contained
+in $F$. Cone homogeneity and $F+F=F$ therefore imply the displayed
+endpoint belongs to $F$. The input path has length at most $2t$, proving
+\eqref{eq:relative}. By continuity, $q\to0$ as $\xhat\to\xb$;
+nesting neighborhoods ensures all these paths stay in the chart.
+\end{proof}
+
+\begin{theorem}[MSCQ from amenability of the reference face]
+\label{thm:mscq}
+Let $C$ be a proper nice cone, let $G$ be $C^1$ with $G(\xb)=0$, and
+suppose frozen minimal-face CRSC holds at $\xb$. Assume the reference face
+$F$ is amenable in $C$, that is, for some $a_F>0$,
+\[
+ \dset{y}{F}\leq a_F\dset{y}{C}\qquad(y\in\spann F).
+\]
+Then the system has MSCQ at $\xb$. This is a property of $F$
+relative to the original cone $C$, not merely amenability of $F$
+viewed as an independent cone.
+For $F\ne\{0\}$, let $a_F$ satisfy \eqref{eq:amenable}, let $b$ be as
+in Lemma~\ref{lem:normal-correction}, and let $L_G$ be a local
+Lipschitz constant of $G$ on the neighborhoods used for both corrections.
+Then one valid local upper bound is
+\begin{equation}
+ \boxed{\kappa=b+c\,a_F(1+L_Gb),\qquad c=4/\tau_F.}
+ \label{eq:kappa}
+\end{equation}
+If $F=\{0\}$ and $b>0$, $\kappa=b$ is valid. If $F=\{0\}$ and
+$b=0$, all sufficiently near inputs are feasible, and any $\kappa>0$
+is valid.
+\end{theorem}
+\begin{proof}
+Set $\rho=\dset{G(x)}{C}$. Lemma~\ref{lem:normal-correction} gives
+$\xhat\in M$ with $\norm{x-\xhat}\leq b\rho$.
+If $F=\{0\}$, then $\spann F=\{0\}$, so $G(\xhat)=0$ and
+$\xhat$ is feasible. This proves the zero-face assertions.
+
+Suppose $F\ne\{0\}$. Since $G(\xhat)\in\spann F$, amenability
+and local Lipschitz continuity give
+\begin{align}
+ \dset{G(\xhat)}{F}
+ &\leq a_F\dset{G(\xhat)}{C}\notag\\
+ &\leq a_F\bigl(\rho+L_G\norm{x-\xhat}\bigr)
+ \leq a_F(1+L_Gb)\rho.
+ \label{eq:amenable-chain}
+\end{align}
+Apply Lemma~\ref{lem:relative} to this same corrected input. The resulting
+$x^+$ belongs to $\Omega$, and
+\[
+ \dset{x}{\Omega}\leq\norm{x-x^+}
+ \leq\norm{x-\xhat}+\norm{\xhat-x^+}
+ \leq\bigl[b+c\,a_F(1+L_Gb)\bigr]\rho.
+\]
+Here the neighborhood is common to all inputs under consideration.
+Fix first a product chart with the derivative bounds used in both lemmas,
+then a smaller chart whose closure lies in it. The latter has positive
+distance from the boundary of the larger coordinate domain. The normal
+correction $(u,z)\mapsto(0,z)$ stays inside the product chart. Finally,
+shrink one input neighborhood so that every corrected point is in the
+smaller chart and every relative-correction coordinate segment has length
+less than that fixed boundary margin. This is possible because
+$\xhat\to\xb$ and $\dset{G(\xhat)}{F}\to0$. A convex input ball
+containing all these points supplies the same Lipschitz constant $L_G$.
+Only finitely many neighborhood restrictions are used, so the estimate
+holds on one open neighborhood of $\xb$.
+\end{proof}
+
+\begin{corollary}[Amenable cones]
+\label{cor:amenable}
+For every proper amenable cone, frozen minimal-face CRSC at an apex
+implies MSCQ for arbitrary $C^1$ constraint data.
+\end{corollary}
+\begin{proof}
+Amenability implies niceness and supplies \eqref{eq:amenable} for the
+reference face, so Theorem~\ref{thm:mscq} applies.
+\end{proof}
+
+\begin{remark}[Scope of the constants]
+The constants in \eqref{eq:b}, \eqref{eq:tau}, and \eqref{eq:kappa}
+are sufficient local upper bounds, not optimal subregularity moduli.
+The proof establishes the existence of a sufficiently small radius;
+it does not compute a universal radius from these constants alone.
+For $F=C$ the rank-zero normal branch applies with $b=0$ and $a_F=1$,
+leaving only the usual interior-direction correction.
+The theorem requires amenability only of $F$ in $C$, not of all faces of $C$.
+For reference, the degenerate cases are as follows:
+\begin{center}\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Case & Correction and bound\\
+\midrule
+$r=0$ & $\phi\equiv0$ locally; identity chart and $b=0$.\\
+$F=\{0\}$ & Normal correction is already feasible; no $d_0$ or $\tau_F$.\\
+$F=C$ & $H=\{0\}$, $b=0$, $a_F=1$; only interior correction.\\
+$E=\{0\}$ reduction & Locally all feasible; any $\kappa>0$.\\
+\bottomrule
+\end{tabular}
+\end{center}
+In every case a zero face residual requires no second movement.
+\end{remark}
+
+\subsection{A universal characterization within nice cones}
+
+\begin{proposition}[The isometric face-inclusion test]
+\label{prop:inclusion}
+Let $C$ be a closed convex cone in a finite-dimensional Euclidean space,
+let $J$ be a closed face, and let $I_J:L\hookrightarrow E$ be inclusion,
+where $L=\spann J$ has the induced Euclidean norm. Then
+$I_J^{-1}(C)=J$, and this system has MSCQ at zero if and only if $J$ is
+amenable in $C$. If $C$ is nice, the inclusion satisfies full facial
+CRCQ at zero. Under the same niceness assumption, A1 and A2 hold globally
+for this fixed apex representation.
+\end{proposition}
+\begin{proof}
+First $C\cap\spann J=J$. Indeed, write $y\in C\cap\spann J$ as
+$y=j_1-j_2$, with $j_1,j_2\in J$. Since $y+j_2=j_1\in J$ and $J$
+is a face of a cone, $y\in J$. Inclusion is isometric, so its distance
+to feasibility is exactly $\dset{y}{J}$ in the ambient metric.
+Amenability therefore implies local MSCQ. Conversely, if some
+$\varepsilon,\kappa>0$ give the MSCQ inequality for $y\in L$ with
+$\norm{y}<\varepsilon$, apply it to $\lambda y$, with
+$\lambda\norm{y}<\varepsilon$. Both cone distances scale by $\lambda$;
+cancelling it proves the face estimate for every nonzero $y\in L$.
+The estimate at zero is immediate.
+
+Suppose now that $C$ is nice. Since $I_J^*=P_L$,
+\begin{equation}
+ I_J^*C^*=P_LC^*=(C^*+L^\perp)\cap L
+ \label{eq:inclusion-image}
+\end{equation}
+is closed by niceness. For every face $Q$ of $C$, the image
+$DI_J(y)^*[Q^\perp]=P_L[Q^\perp]$ is independent of $y$.
+Thus all face-rank tests hold on one common neighborhood, indeed on
+all of $L$, and reference closedness proves full facial CRCQ.
+Finally $\range DI_J\cap C=J$ and $P_{J^\perp}DI_J=0$ globally.
+The adjoint cone image and minimal linearized face are consequently
+constant throughout this fixed representation.
+\end{proof}
+
+\begin{theorem}[Universal CRSC-to-MSCQ property]
+\label{thm:universal}
+Fix a proper nice cone $C$. The following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+ \item $C$ is amenable.
+ \item For every finite-dimensional Euclidean input space $X$, every open
+ set $V\subset X$, every $\xb\in V$, and every $C^1$ map $G:V\to E$
+ with $G(\xb)=0$, frozen minimal-face CRSC at $\xb$ implies the existence
+ of $\kappa,\varepsilon>0$ such that $B(\xb,\varepsilon)\subset V$ and
+ \[
+ \dset{x}{G^{-1}(C)}\leq\kappa\dset{G(x)}{C}
+ \qquad(x\in B(\xb,\varepsilon)).
+ \]
+ \item The statement in (ii) holds with full facial CRCQ in place of
+ frozen minimal-face CRSC.
+ \item For each face $J$ of $C$, the inclusion map
+ $I_J:\spann J\hookrightarrow E$ has MSCQ at zero.
+\end{enumerate}
+The constants and radii may depend on the map and reference point, or on
+the face in (iv). No common modulus or common radius across these
+systems is asserted.
+\end{theorem}
+\begin{proof}
+Corollary~\ref{cor:amenable} proves (i)$\Rightarrow$(ii).
+Full facial CRCQ implies minimal-face CRSC, giving
+(ii)$\Rightarrow$(iii). By Proposition~\ref{prop:inclusion}, niceness
+makes every face inclusion satisfy full facial CRCQ, so
+(iii)$\Rightarrow$(iv). The same proposition turns (iv) into amenability
+of every face, proving (iv)$\Rightarrow$(i).
+\end{proof}
+
+The quantifiers are essential: this theorem characterizes a cone through
+the behavior of \emph{all} admissible maps. It does not assert that
+CRSC and MSCQ are equivalent for an individual map, nor that an
+individual MSCQ system requires its entire output cone to be amenable.
+The zero face has a zero-dimensional, locally feasible inclusion; the
+full face has the identity inclusion and bound one. These cases require
+no uniform convention across different input spaces. The short reverse
+direction is consistent with the known facewise metric characterizations
+in \citet[Proposition~12]{lourencoAmenable} and
+\citet[Proposition~3.2]{lrs2022}. Niceness ensures the testing maps belong
+to the quantified CQ class; the theorem is not asserted for arbitrary
+closed cones without that standing assumption.
+
+\section{The boundary: a nice-cone counterexample with constant derivative}
+\label{sec:boundary}
+
+For every nonamenable face of a nice cone,
+Proposition~\ref{prop:inclusion} gives a linear full-facial-CRCQ system
+that fails MSCQ. This does not mean every representation over a
+nonamenable cone fails the error bound. It shows that even all frozen
+facial rank tests cannot supply a missing face-to-cone residual estimate.
+
+We next give an explicit witness using the cone of
+\citet[Section~5]{lrs2022}. The cone, its niceness, and its original
+tangency geometry are imported from that work. The presentation below
+adapts them to an isometric constraint representation and a sequence
+converging to the apex.
+
+For $0\leq t\leq2\pi$, set
+\[
+ \alpha(t)=(\cos t,\sin t,1),\qquad
+ \beta(t)=(\cos t,\sin t,-1).
+\]
+For $0\leq t\leq\pi$, set
+\[
+ \gamma(t)=\left(2\cos(2t)-1,\;2\sin(2t),\;
+ \frac98\cos t-\frac18\cos(3t)\right).
+\]
+Here $\alpha,\beta,\gamma$ also denote the images of the three curves.
+Define
+\begin{equation}
+ B=\conv(\alpha\cup\beta\cup\gamma),\qquad
+ K=\cone(B\times\{1\})\subset\R^4.
+ \label{eq:lrs-cone}
+\end{equation}
+The cone's niceness is \citet[Proposition~5.1]{lrs2022}; its
+nonamenability and the existence statement appear in their
+Proposition~5.2 and Theorem~5.3. Its upper disk generates the face
+\begin{equation}
+ J=\{(a,b,s,s):s\geq\sqrt{a^2+b^2}\}.
+ \label{eq:lrs-face}
+\end{equation}
+On the Euclidean input space $\R^3$, take the linear isometry
+\begin{equation}
+ G(a,b,c)=(a,b,c/\sqrt2,c/\sqrt2).
+ \label{eq:lrs-map}
+\end{equation}
+\begin{proposition}[Full facial CRCQ without MSCQ]
+\label{prop:counterexample}
+The cone $K$ in \eqref{eq:lrs-cone} is proper and nice, and $J$ in
+\eqref{eq:lrs-face} is an exposed face. The system
+$G(x)\in K$ with \eqref{eq:lrs-map} satisfies full facial CRCQ at zero,
+but fails MSCQ there. Along an explicit path its distance to the whole
+feasible set is $\Theta(t^3)$, while its actual positive cone residual
+is $O(t^5)$.
+\end{proposition}
+\begin{proof}
+The set $B$ is compact and contains the solid cylinder
+$\conv(\alpha\cup\beta)$, so it has nonempty interior in $\R^3$.
+Its height-one conic lift $K$ is full-dimensional and pointed. To see
+closedness, if $\lambda_j(b_j,1)$ converges, its fourth coordinate
+makes $\lambda_j$ converge. Compactness of $B$ treats a positive limit;
+boundedness of $B$ forces the whole vector to zero if $\lambda_j\to0$.
+Niceness is imported from the cited proposition.
+
+Writing $c=\cos t$ gives
+\[
+ \gamma_3(t)=\frac32c-\frac12c^3,
+ \qquad 1-\gamma_3(t)=\frac12(1-c)^2(2+c).
+\]
+On $[-1,1]$ the height is at most one, with equality only at $c=1$.
+Hence $B\cap\{z=1\}=\conv\alpha$, and the nonnegative functional
+$(a,b,z,s)\mapsto s-z$ exposes precisely $J$.
+In particular $\range G=\spann J$, $K\cap\range G=J$, and the full
+feasible set is
+\begin{equation}
+ \Omega=\{(a,b,c):c\geq\sqrt2\sqrt{a^2+b^2}\}.
+ \label{eq:lrs-feasible}
+\end{equation}
+The isometry $G$ identifies $\R^3$ with $\spann J$.
+Proposition~\ref{prop:inclusion} proves full facial CRCQ, including
+reference adjoint-image closedness and one common neighborhood for all
+face-rank tests.
+
+For $0<t<\pi/2$, write
+\[
+ a(t)=2\cos(2t)-1,\quad b(t)=2\sin(2t),\quad
+ r(t)=\sqrt{a(t)^2+b(t)^2}=\sqrt{5-4\cos(2t)},
+\]
+and choose inputs
+$u(t)=t(a(t),b(t),\sqrt2)\to0$. Then
+$G(u(t))=t(a(t),b(t),1,1)$.
+Since $r(t)>1$, the output is outside $J$ but inside $\spann J$.
+It is therefore outside the closed cone $K$, and the actual residual
+$\delta_t=\dset{G(u(t))}{K}$ is positive.
+Since $(\gamma(t),1)\in K$, homogeneity gives
+\begin{align}
+ 0<\delta_t
+ &\leq q_t:=t\left(1-\frac98\cos t+\frac18\cos(3t)\right)\notag\\
+ &=\frac{t}{2}(1-\cos t)^2(2+\cos t)
+ =\frac38t^5+O(t^7).
+ \label{eq:small-residual}
+\end{align}
+This is an upper bound on the cone residual, not an asserted exact
+distance to $K$.
+
+Because $G$ is isometric and $K\cap\spann J=J$,
+\[
+ \dset{u(t)}{G^{-1}(K)}=\dset{G(u(t))}{J}.
+\]
+For the unscaled output, fixing $s\geq0$ and minimizing the first two
+coordinates over the disk of radius $s$ gives the squared distance
+\[
+ \bigl(\max\{r(t)-s,0\}\bigr)^2+2(1-s)^2.
+\]
+On $0\leq s\leq r(t)$ this function is strictly convex with minimizer
+$s_t=(r(t)+2)/3\in(1,r(t))$. On $s\geq r(t)$ it is minimized at
+$r(t)$, which cannot improve that value. The global minimum is thus
+$\frac23(r(t)-1)^2$. Isometry and cone homogeneity give
+\begin{align}
+ \dset{u(t)}{G^{-1}(K)}
+ &=t\sqrt{\frac23}\,(r(t)-1)\notag\\
+ &=4\sqrt{\frac23}\,t^3+O(t^5).
+ \label{eq:large-distance}
+\end{align}
+Here $r(t)-1=8\sin^2t/(\sqrt{1+8\sin^2t}+1)$.
+Consequently $\delta_t=O(t^5)$ and
+\[
+ \frac{\dset{u(t)}{\Omega}}{\delta_t}
+ \geq\frac{\dset{u(t)}{\Omega}}{q_t},\qquad
+ \lim_{t\downarrow0}t^2\frac{\dset{u(t)}{\Omega}}{q_t}
+ =\frac{32}{3}\sqrt{\frac23}>0.
+\]
+For an explicit neighborhood contradiction, $0<t<\pi/2$ gives
+$\sin t\geq2t/\pi$, $r(t)+1\leq4$, and
+$1-\cos t\leq t^2/2$. Thus
+\[
+ \dset{u(t)}{\Omega}\geq\frac8{\pi^2}\sqrt{\frac23}\,t^3,
+ \quad q_t\leq\frac38t^5,
+ \quad \norm{u(t)}\leq\sqrt{11}\,t.
+\]
+Given any proposed $\varepsilon,\kappa>0$, set
+$c_0=64\sqrt{2/3}/(3\pi^2)$ and choose
+\[
+ 0<t<\min\left\{\frac\pi2,\frac{\varepsilon}{\sqrt{11}},
+                  \sqrt{\frac{c_0}{\kappa}}\right\}.
+\]
+Then $\norm{u(t)}<\varepsilon$ while its actual distance-to-residual
+ratio exceeds $\kappa$, contradicting MSCQ.
+\end{proof}
+
+The nearby face and closed-image properties also hold globally for this
+linear map. Hence the obstruction is not instability of the rank or
+minimal face. It is the failure of \eqref{eq:amenable} for $J$ inside $K$.
+No new nice nonamenable cone is claimed. Only $q_t$, the constructed
+upper bound, is shown here to be $\Theta(t^5)$; no matching lower bound
+for $\delta_t$ or optimal H\"older exponent is asserted. Numerical
+lower-bound-ratio checks for $\dset{u(t)}{\Omega}/q_t$ are merely
+sanity checks of this analytic expression, not evaluations of the true
+cone-distance ratio or certified interval computations.
+
+\section{Cone classes, coupled examples, and fixed reductions}
+\label{sec:examples}
+
+\subsection{Products and strictly convex factors}
+
+Let $C=\prod_{i=1}^m C_i$ in an orthogonal product space. Faces of a
+product have the form $F=\prod_i F_i$. If $F_i$ is amenable in $C_i$
+with constant $a_i$, then for $y\in\spann F$,
+\[
+ \dset{y}{F}^2=\sum_i\dset{y_i}{F_i}^2
+ \leq(\max_i a_i)^2\sum_i\dset{y_i}{C_i}^2.
+\]
+Thus $a_F=\max_i a_i$ is valid. This is the established product
+amenability calculus \citep{lourencoAmenable}, displayed here to fix
+the constant and the output metric.
+
+For a ray face $F_i=\R_+v_i$ with $\norm{v_i}=1$, the bound
+\[
+ a_i=\frac{1}{\dset{-v_i}{C_i}}
+\]
+is immediate by considering positive and negative multiples of $v_i$.
+The denominator is positive by pointedness and closedness. Zero and full
+faces have the trivial comparison. This proves the face estimates for
+proper strictly convex cones, whose nonzero proper faces are rays.
+In particular, finite products of the standard $p$-cones
+\[
+ C_p=\{(s,z):s\geq\norm{z}_p\},\qquad 1<p<\infty,
+\]
+and nonnegative scalar blocks are covered by
+Corollary~\ref{cor:amenable}. The example classes and their amenability
+are known; the conclusion used here is the joint nonlinear CRSC-to-MSCQ
+implication.
+
+This product calculation makes no assumption about blockwise MSCQ of
+the input maps. A single $G$ may couple every variable across the blocks.
+The proof first uses the one normal map $P_HG$, one rank, one angle,
+and one common manifold, and only afterwards the amenability of the
+whole output face.
+
+\subsection{Positive-semidefinite faces}
+
+Equip $\Ssym^m$ with the trace inner product. Every face of $\Ssym_+^m$
+has the form
+\[
+ F=\{URU^{\mathsf T}:R\in\Ssym_+^k\},
+ \qquad U^{\mathsf T}U=I_k.
+\]
+A matrix in $\spann F$ is $Y=UBU^{\mathsf T}$ with $B\in\Ssym^k$.
+Its orthogonal projection onto the PSD cone is
+$UB_+U^{\mathsf T}$, which already lies in $F$. Therefore
+\begin{equation}
+ \dset{Y}{F}=\dset{Y}{\Ssym_+^m}\qquad(Y\in\spann F),
+ \label{eq:psd-face}
+\end{equation}
+and one may take $a_F=1$. The PSD specialization consequently includes
+proper faces of arbitrary rank and dimension, not only ray faces.
+
+\subsection{Two SOC blocks with one curved common equation}
+
+The two examples below show joint structural coverage and the sources
+of the proof constants, which we compare with direct estimates on a
+specified ball.
+
+Let $Q_3=\{(z_0,z_1,z_2):z_0\geq\sqrt{z_1^2+z_2^2}\}$, and put
+\[
+ v=(1,1,0),\qquad n=(1,-1,0),\qquad e=(0,0,1),
+ \qquad h(s,t,u)=u-st.
+\]
+Define $G:\R^3\to\R^3\times\R^3$ by
+\begin{equation}
+ G_1=sv+hn+h^2e,\qquad
+ G_2=tv-hn+2h^2e,
+ \label{eq:soc-example}
+\end{equation}
+with feasibility requirement $G(s,t,u)\in Q_3\times Q_3$.
+At the origin the derivative image is
+\[
+ (s,t,u)\longmapsto(sv+un,\;tv-un).
+\]
+The two pairings with $n$ are $2u$ and $-2u$, so membership in both cones
+forces $u=0$, $s\geq0$, and $t\geq0$. The minimal face is thus
+\[
+ F=\R_+v\times\R_+v,
+\]
+a two-dimensional proper face.
+
+The joint normal map is
+\[
+ P_HG=(hn+h^2e,\;-hn+2h^2e).
+\]
+Its derivative factors through $Dh=(-t,-s,1)$, which never vanishes.
+The derivative with respect to $h$ is $(n+2he,-n+4he)$ with squared
+norm $4+20h^2>0$, so the joint normal rank is one everywhere.
+Reference closedness can be checked without another appeal to the
+closed-image theorem:
+\begin{equation}
+ A^*C^*=\R_+^2\times\R.
+ \label{eq:soc-adjoint}
+\end{equation}
+Indeed its first two coordinates are the nonnegative pairings with $v$.
+Conversely, for $a,b\geq0$ and $z\in\R$, write
+$z_+=\max\{z,0\}$, $z_-=\max\{-z,0\}$ and choose
+\[
+ y_1=(a/2)v+(z_+/2)n,\qquad y_2=(b/2)v+(z_-/2)n.
+\]
+Both belong to $Q_3$, and $A^*(y_1,y_2)=(a,b,z)$.
+The conjugate face is $\R_+n\times\R_+n$, whose adjoint image, like
+$A^*H$, is the full $u$-axis. Thus CRSC holds.
+
+For the nonlinear map, the same pairings give $2h$ and $-2h$. Feasibility
+forces $h=0$, and conversely this removes all normal terms. Hence
+\begin{equation}
+ \Omega=\{(s,t,u):s\geq0,\ t\geq0,\ u=st\}.
+ \label{eq:soc-feasible}
+\end{equation}
+The common face manifold is the curved surface $h=0$.
+Each block separately has an interior derivative direction: for example,
+$s=u>0$ for the first block gives a positive multiple of $(1,0,0)$,
+and $t=-u>0$ does the same for the second. The joint derivative has no
+interior direction because its two normal pairings have opposite signs.
+Theorem~\ref{thm:mscq} applies jointly to the nonisolated feasible set
+\eqref{eq:soc-feasible}.
+
+\paragraph{Geometric constants and a general local bound.}
+Use the orthonormal vectors $\widehat v=v/\sqrt2$,
+$\widehat n=n/\sqrt2$, and $e$. The normal projection closure is
+\begin{equation}
+ \cl(P_{v^\perp}Q_3)
+ =\{a\widehat n+ze:a\geq0,\ z\in\R\}.
+ \label{eq:soc-closure}
+\end{equation}
+To see why the closure is needed, write a full vector as
+$\lambda\widehat v+a\widehat n+ze$. Its SOC conditions are
+$\lambda,a\geq0$ and $2\lambda a\geq z^2$. When $a>0$, any $z$ is
+possible by increasing $\lambda$; at $a=0$ the original projection
+requires $z=0$, whereas the closure permits every $z$.
+The two unit directions of $U=\spann\{(n,-n)\}$ are
+$\pm(n,-n)/2$, each at distance $1/\sqrt2$ from the product of the
+closed half-spaces in \eqref{eq:soc-closure}. Since the sole positive
+singular value of $P_HA$ is $2$, the constants are
+\[
+ \sigma=2,\qquad\eta=1/\sqrt2,\qquad b=2\sqrt2.
+\]
+The unit tangent direction $d_0=(1,1,0)/\sqrt2$ has image
+$(\widehat v,\widehat v)$, so $\tau_F=1$ and $c=4$.
+On the line spanned by $\widehat v$, the SOC projection of
+$-\widehat v$ is zero. The face comparison is consequently exact there;
+orthogonal product distances give $a_F=1$.
+
+For $\norm{x}\leq R$, set $H_R=R+R^2/2$. Then $|h|\leq H_R$ and
+$\norm{Dh}^2\leq1+R^2$. The tangential output increment
+$(\Delta s\,v,\Delta t\,v)$ is orthogonal to the normal increment, hence
+\[
+ \norm{DG(x)}^2\leq2+(4+20H_R^2)(1+R^2).
+\]
+At $R=1/4$ the right side is $32485/4096<9$, so $L_G=3$ is valid
+on that ball. Substitution in \eqref{eq:kappa} yields
+\begin{equation}
+ \kappa_{\rm th}=4+26\sqrt2
+ \label{eq:soc-kappa-th}
+\end{equation}
+on some sufficiently small neighborhood. The calculation of $L_G$ on
+$B_{1/4}$ does not, by itself, identify the radius required by the
+general constant-rank coordinate proof.
+
+\paragraph{A direct bound on a specified ball.}
+Write $s_- =\max\{-s,0\}$, $t_- =\max\{-t,0\}$,
+$a^2=s_-^2+t_-^2$, and $\rho=\dset{G(x)}{C}$. Each SOC lies in the
+intersection of the two orthogonal half-spaces defined by nonnegative
+pairings with $\widehat v$ and $\widehat n$. The two block residuals
+therefore give
+\[
+ \rho^2\geq2(s_-^2+t_-^2+h^2)=2(a^2+h^2).
+\]
+Set $x^+=(s_+,t_+,s_+t_+)\in\Omega$.
+For $\norm{x}\leq R$, Cauchy--Schwarz gives
+\[
+ |st-s_+t_+|\leq |t|s_-+s_+t_-
+ \leq\sqrt{t^2+s_+^2}\,a\leq Ra.
+\]
+Thus $\norm{x-x^+}\leq\sqrt{a^2+h^2}+Ra\leq(1+R)\rho/\sqrt2$,
+which proves the independently quantified estimate
+\begin{equation}
+ \dset{x}{\Omega}\leq\frac5{4\sqrt2}\dset{G(x)}{C}
+ \qquad(\norm{x}\leq1/4).
+ \label{eq:soc-direct}
+\end{equation}
+The constructed point need not be a nearest feasible point, and neither
+this constant nor \eqref{eq:soc-kappa-th} is claimed to be optimal.
+
+\subsection{A PSD model with a high-dimensional nonpolyhedral face}
+
+Let $k\geq3$. Use inputs $(B,u)\in\Ssym^k\times\R$ with norm
+$\sqrt{\norm{B}_F^2+u^2}$, and the Frobenius norm on the output.
+Set $h=u-\tr(B^2)=u-\norm{B}_F^2$, and fix
+\[
+ C_0=[e_1,e_2],\qquad D_0=[e_2,e_3],\qquad
+ J_0=\diag(1,-1),
+\]
+where $e_i$ are the standard vectors of $\R^k$.
+Thus $\norm{C_0}_F^2=\norm{D_0}_F^2=2$ and
+$\ip{C_0}{D_0}=0$. Define
+\begin{equation}
+ G(B,u)=
+ \begin{pmatrix}
+ B & hC_0+h^2D_0\\
+ hC_0^{\mathsf T}+h^2D_0^{\mathsf T} & hJ_0
+ \end{pmatrix}\in\Ssym^{k+2}.
+ \label{eq:psd-example}
+\end{equation}
+At zero, a PSD derivative value must have $u=0$ by its bottom principal
+block. Its off-diagonal block then vanishes. Thus the minimal face is
+\begin{equation}
+ F=\left\{\begin{pmatrix}B&0\\0&0\end{pmatrix}:B\succeq0\right\},
+ \qquad \dim F=\frac{k(k+1)}{2}.
+ \label{eq:psd-minimal}
+\end{equation}
+This face is exposed by $\diag(0_k,I_2)$ and is isometric to
+$\Ssym_+^k$. It is nonpolyhedral, since rank-one PSD matrices along
+infinitely many directions give distinct extreme rays. The smallest
+case here, $k=3$, has a six-dimensional proper face of $\Ssym_+^5$.
+
+For a symmetric block matrix $Y=\left(\begin{smallmatrix}P&Z\\
+Z^{\mathsf T}&W\end{smallmatrix}\right)$,
+\[
+ A^*Y=(P,\,2\ip{C_0}{Z}+\ip{J_0}{W}).
+\]
+If $Y\succeq0$ then $P\succeq0$. Conversely any
+$(P,z)\in\Ssym_+^k\times\R$ is obtained with $Z=0$ and
+$W=\diag(z_+,z_-)$. Hence
+\begin{equation}
+ A^*C^*=\Ssym_+^k\times\R,
+ \qquad A^*F^\triangle=A^*H=\{0\}\times\R.
+ \label{eq:psd-adjoint}
+\end{equation}
+In particular the adjoint cone image is closed.
+Write $q(h)=P_HG$. Its derivative and squared Frobenius norm are
+\[
+ q'(h)=\begin{pmatrix}0&C_0+2hD_0\\
+ C_0^{\mathsf T}+2hD_0^{\mathsf T}&J_0\end{pmatrix},
+ \qquad\norm{q'(h)}_F^2=6+16h^2>0.
+\]
+Since $Dh(E,t)=t-2\ip{B}{E}$ always has $u$-component one,
+$D(P_HG)=q'(h)Dh$ has rank one everywhere. This verifies the full
+neighborhood condition for CRSC, using the joint normal map.
+
+For the nonlinear system, the bottom principal block again forces $h=0$.
+All cross terms then vanish, giving the exact equivalence
+\begin{equation}
+ G(B,u)\succeq0
+ \quad\Longleftrightarrow\quad
+ B\succeq0,\qquad u=\tr(B^2).
+ \label{eq:psd-feasible}
+\end{equation}
+The theorem supplies MSCQ for this representation with $a_F=1$.
+The example demonstrates coupled nonlinear normal components and
+arbitrarily large nonpolyhedral faces; it does not claim that elementary
+direct analysis could not establish an error bound for this example.
+
+\paragraph{Projection closure and general local constants.}
+In this example
+\begin{equation}
+ D=\cl(P_H\Ssym_+^{k+2})
+ =\left\{\begin{pmatrix}0&Z\\Z^{\mathsf T}&W\end{pmatrix}:
+             W\succeq0,\ Z\in\R^{k\times2}\right\}.
+ \label{eq:psd-closure}
+\end{equation}
+The lower block of any PSD matrix proves one inclusion. For the other,
+replace $W$ by $W+\varepsilon I_2$ and choose the upper block
+$Z(W+\varepsilon I_2)^{-1}Z^{\mathsf T}$. The resulting full matrix
+is PSD, and its normal projection converges to the specified point as
+$\varepsilon\downarrow0$. Singular lower blocks would impose extra
+cross-block restrictions before taking the closure.
+
+Let $N_0=q'(0)$, so $\norm{N_0}_F^2=6$ and $P_HA(E,t)=tN_0$.
+The cross block can be retained exactly in a projection onto $D$;
+the distance comes only from projecting the lower block onto
+$\Ssym_+^2$. Each of $J_0$ and $-J_0$ has one negative eigenvalue
+of magnitude one. Consequently
+\[
+ \sigma=\sqrt6,\qquad
+ \eta=\dset{\pm N_0/\sqrt6}{D}=1/\sqrt6,\qquad b=4.
+\]
+The normal cross terms affect both $\sigma$ and the normalized angle;
+their effects cancel in $b$. The unit tangent direction
+$d_0=(I_k/\sqrt k,0)$ gives $\tau_F=1/\sqrt k$, since the Frobenius
+distance to the relative PSD boundary is the smallest eigenvalue.
+Thus $c=4\sqrt k$ and, by \eqref{eq:psd-face}, $a_F=1$.
+
+On $\norm{(B,u)}\leq R$, set $H_R=R+R^2$.
+The bounds $|h|\leq H_R$, $\norm{Dh}^2\leq1+4R^2$, and orthogonality
+of the upper-block and normal increments yield
+\[
+ \norm{DG(B,u)}^2\leq1+(6+16H_R^2)(1+4R^2).
+\]
+At $R=1/4$ the right side is $669/64<(13/4)^2$, so $L_G=13/4$ is
+valid on this specified ball. The general theorem then gives
+\begin{equation}
+ \kappa_{\rm th}=4+56\sqrt k
+ \label{eq:psd-kappa-th}
+\end{equation}
+on some sufficiently small neighborhood, not an automatically
+computed radius of $1/4$.
+
+\paragraph{Direct spectral repair on the specified ball.}
+Decompose $B=B_+-B_-$ into orthogonal positive and negative spectral
+parts. Put $a=\norm{B_-}_F$ and
+$\rho=\dset{G(B,u)}{\Ssym_+^{k+2}}$.
+The two principal blocks of any PSD comparison matrix are PSD; discarding
+the nonnegative cross-block distance term gives
+\[
+ \rho^2\geq\dset{B}{\Ssym_+^k}^2
+              +\dset{hJ_0}{\Ssym_+^2}^2=a^2+h^2.
+\]
+The point $(B^+,u^+)=(B_+,\norm{B_+}_F^2)$ is feasible, and
+$u-u^+=h+a^2$. If $\norm{(B,u)}\leq R$, then $a\leq R$ and
+\[
+ \norm{(B,u)-(B^+,u^+)}
+ =\sqrt{a^2+(h+a^2)^2}
+ \leq\sqrt{a^2+h^2}+a^2\leq(1+R)\rho.
+\]
+Therefore the independent, explicit-radius estimate is
+\begin{equation}
+ \dset{(B,u)}{\Omega}\leq\frac54\dset{G(B,u)}{\Ssym_+^{k+2}}
+ \qquad(\norm{(B,u)}\leq1/4).
+ \label{eq:psd-direct}
+\end{equation}
+This dimension-independent direct bound shows that the $\sqrt k$
+growth in \eqref{eq:psd-kappa-th} belongs to the selected general
+direction and proof constants, not to a demonstrated necessary
+dimension dependence of this example. No optimal modulus is claimed.
+
+\begin{table}[t]
+\centering\small
+\caption{Constants for the two joint examples. The Lipschitz bounds are
+on $B_{1/4}$; only the final error-bound row is proved directly on that whole ball.}
+\label{tab:constants}
+\begin{tabular}{@{}lll@{}}
+\toprule
+Quantity & Coupled SOC & PSD, $k\geq3$\\
+\midrule
+$\sigma$ & $2$ & $\sqrt6$\\
+$\eta$ & $1/\sqrt2$ & $1/\sqrt6$\\
+$a_F$ & $1$ & $1$\\
+$\tau_F$ & $1$ & $1/\sqrt k$\\
+$L_G$ on $B_{1/4}$ & $3$ & $13/4$\\
+$\kappa_{\rm th}$, unspecified local radius & $4+26\sqrt2$ & $4+56\sqrt k$\\
+Direct $\kappa$ on $B_{1/4}$ & $5/(4\sqrt2)$ & $5/4$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Transfer through a fixed local reduction}
+\label{subsec:reduction}
+
+\begin{lemma}[Output-local residual transfer]
+\label{lem:transfer}
+Let $K$ be a closed convex cone, let $g$ be continuous near $\xb$, and
+put $\bar y=g(\xb)\in K$, not necessarily an apex point.
+Suppose there is an open output neighborhood $O$ of
+$\bar y$ and a fixed $C^1$ map $\Xi:O\to E$ such that
+\begin{equation}
+ \Xi(\bar y)=0,\qquad
+ y\in K\ \Longleftrightarrow\ \Xi(y)\in C
+ \quad(y\in O).
+ \label{eq:reduction}
+\end{equation}
+Assume the reduced data $G=\Xi\circ g$ meet the hypotheses of
+Theorem~\ref{thm:mscq}. Choose a positive local Lipschitz bound
+$L_\Xi$ for $\Xi$. Then
+\begin{equation}
+ \dset{G(x)}{C}\leq L_\Xi\dset{g(x)}{K}
+ \label{eq:residual-transfer}
+\end{equation}
+holds near $\xb$, and the original system has MSCQ with constant
+$\kappa L_\Xi$, where $\kappa$ is a bound supplied by
+Theorem~\ref{thm:mscq}.
+\end{lemma}
+\begin{proof}
+Projection onto the closed convex cone $K$ is continuous. Since
+$g(x)\to\bar y=P_K\bar y$, shrink the input neighborhood until both
+$g(x)$ and $P_Kg(x)$ lie in one output neighborhood on which $\Xi$ has
+the chosen Lipschitz bound. Then \eqref{eq:reduction} yields
+\[
+ \dset{G(x)}{C}
+ \leq\norm{\Xi(g(x))-\Xi(P_Kg(x))}
+ \leq L_\Xi\dset{g(x)}{K}.
+\]
+The nearby corrected feasible points in Theorem~\ref{thm:mscq} are
+also feasible for the original system by \eqref{eq:reduction}.
+Its distance estimate therefore proves the claimed original bound.
+Only this residual direction is needed; neither a reverse comparison
+nor surjectivity of $D\Xi$ is used in this transfer step.
+\end{proof}
+
+For PSD constraints, a standard fixed Schur-complement reduction is
+explicit. In an orthogonal basis at a reference PSD matrix of rank $q$,
+write a nearby symmetric matrix as
+\[
+ Y=\begin{pmatrix}Y_{11}&Y_{12}\\Y_{12}^{\mathsf T}&Y_{22}\end{pmatrix},
+ \qquad Y_{11}\succ0,
+\]
+and take
+$\Xi(Y)=Y_{22}-Y_{12}^{\mathsf T}Y_{11}^{-1}Y_{12}$.
+Then $Y\succeq0$ if and only if $\Xi(Y)\succeq0$, and the reduced
+reference is zero. If $q$ is the full matrix size, the reduced output
+space is zero-dimensional and the separate locally feasible branch
+applies. We do not infer such a local reduction at every nonapex point
+of every amenable cone from amenability alone.
+
+\section{A regularity and residual-transfer interface}
+\label{sec:residual-interface}
+
+The natural relation certified by Theorem~\ref{thm:mscq} is
+\[
+ \mathcal M(x)=G(x)-C,\qquad
+ \dset{0}{\mathcal M(x)}=\dset{G(x)}{C}.
+\]
+Its regularity gauge is $\psi_{\mathcal M}(t)=\kappa t$.
+For a set-valued operator $\mathcal T$, write
+$Z_{\mathcal T}=\{x:0\in\mathcal T(x)\}$. Assume independently that
+$Z_{\mathcal T}$ agrees with $\Omega$ locally and that
+\begin{equation}
+ \dset{G(x)}{C}\leq
+ \chi\bigl(\dset{0}{\mathcal T(x)}\bigr)
+ \label{eq:operator-comparison}
+\end{equation}
+holds near $\xb$, with $\chi$ nondecreasing and vanishing at zero.
+The same nearby feasible corrections then give the local bound
+\begin{equation}
+ \dset{x}{Z_{\mathcal T}}
+ \leq\kappa\chi\bigl(\dset{0}{\mathcal T(x)}\bigr),
+ \qquad \psi_{\mathcal T}(t)=\kappa\chi(t).
+ \label{eq:operator-gauge}
+\end{equation}
+This only transfers a regularity certificate. The relation
+$\mathcal M:X\rightrightarrows E$ need not be a square-space operator
+for a proximal-point iteration; the operator, its geometric hypotheses,
+and the zero-set/residual comparisons remain separate obligations.
+If $\chi$ is linear, the resulting gauge remains linear. No nonlinear
+exponent or proximal-point convergence rate is asserted.
+
+\section{Limitations and conclusion}
+\label{sec:conclusion}
+
+The positive metric result is deliberately limited to a proper nice
+cone with an amenable reference face. Nonpointed and non-full-dimensional
+models would require explicit restriction or quotient constructions and
+are outside the frozen scope of this manuscript. Nonapex applications
+require a fixed valid local reduction as in
+Section~\ref{subsec:reduction}; no automatic reducibility assertion is
+made for arbitrary amenable cones. All rank statements use the reference
+face on an open input neighborhood. The result does not replace that
+condition by rank constancy only along the feasible set.
+
+The argument is analytic and uses $C^1$ data. It is not a numerical
+verification procedure for exact neighborhood rank constancy, and the
+displayed constants do not determine an optimal modulus or an explicit
+largest validity radius. The illustrative SOC and PSD systems demonstrate
+the scope of a joint map, not algorithmic superiority. The nice
+nonamenable cone and the foundational cone-geometric results retain their
+original attribution.
+
+The principal conclusion is the separation of geometric and metric
+roles. Frozen minimal-face CRSC over a proper nice cone already controls
+the missing nearby face geometry. A quantitative correction to the
+common face manifold then allows the face's amenability to be used with
+the original residual. Combining this sufficient direction with linear
+face inclusions gives an exact universal boundary inside the nice class:
+amenability is precisely the property under which every apex CRSC system
+has MSCQ. The same boundary explains why full facial rank constancy
+cannot restore a linear error bound in the nonamenable example.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

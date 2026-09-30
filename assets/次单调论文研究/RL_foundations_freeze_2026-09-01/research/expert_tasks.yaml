@@ -1,0 +1,303 @@
+contract_version: "1.0"
+project_id: monotonicity-regularity-seesaw-2026-09
+paper_family: T
+stage_id: T2
+stage_authority: sci-skills
+tasks:
+  - task_id: RL-FND-DEF-01
+    status: RETURNED_VERIFIED
+    expert_skill: sci-skills-manuscript-writing
+    task_summary: freeze RL definitions domains quantifiers and terminology
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - work/rl_proof_referee.md
+    expected_outputs:
+      - work/rl_foundations_definitions.md
+    evidence_boundaries:
+      - no novelty inference from algebraic reformulation
+    acceptance_checks:
+      - all local and restricted quantifiers explicit
+      - natural Minty domains explicit
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-PPA-02
+    status: RETURNED_VERIFIED
+    expert_skill: independent-proof-analysis
+    task_summary: prove a quantified localized gauge-PPA convergence theorem
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - work/rl_proof_referee.md
+    expected_outputs:
+      - work/rl_foundations_ppa_theorem.md
+    evidence_boundaries:
+      - theorem validity only; no prior-art claim
+    acceptance_checks:
+      - existence branch invariance finite length and limit membership proved
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-ANCHOR-03
+    status: RETURNED_VERIFIED_AFTER_REPAIR
+    expert_skill: independent-proof-analysis
+    task_summary: verify moving-anchor and isolated-zero q-flatness theorems
+    inputs:
+      - work/rl_genuine_exponent.md
+    expected_outputs:
+      - work/rl_foundations_anchor_theorems.md
+    evidence_boundaries:
+      - internal theorem proof is not a novelty certificate
+    acceptance_checks:
+      - constants and approximate-nearest-point arguments checked
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-SHARP-04
+    status: RETURNED_VERIFIED_AFTER_REPAIR
+    expert_skill: independent-proof-analysis
+    task_summary: formalize solution alignment and test exponent sharpness
+    inputs:
+      - work/rl_genuine_exponent.md
+      - research/example_properties.md
+    expected_outputs:
+      - work/rl_foundations_alignment_sharpness.md
+    evidence_boundaries:
+      - engineered attainment examples cannot establish natural universality
+    acceptance_checks:
+      - exact and upper orders separated
+      - isolated and nonisolated anchors separated
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-PRIOR-05
+    status: COMPLETED_WITH_TARGETED_FULLTEXT_GAPS
+    expert_skill: sci-skills-literature-search
+    task_summary: targeted prior-art audit for reflection flatness and solution drift
+    inputs:
+      - work/rl_genuine_exponent.md
+      - research/theory_atlas.md
+    expected_outputs:
+      - work/rl_foundations_structure_prior_art.md
+    evidence_boundaries:
+      - primary or official sources only
+      - negative search is not novelty proof
+    acceptance_checks:
+      - formula and alias queries recorded
+      - claim-safe matrix produced
+    known_missing_items:
+      - subscription-only full texts may remain pending
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-FINAL-REFEREE-06
+    status: COMPLETED_PASS_FOR_MATHEMATICAL_FREEZE
+    expert_skill: independent-proof-referee
+    task_summary: independent line-by-line proof and quantifier review of the frozen RL foundations source
+    inputs:
+      - work/RL_foundations_draft.md
+    expected_outputs:
+      - work/rl_foundations_final_referee.md
+    evidence_boundaries:
+      - verdict bound to the exact source hash
+      - no novelty or literature-priority inference
+    acceptance_checks:
+      - all numbered objects independently checked
+      - zero unresolved non-editorial mathematical issues
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-POLISH-07
+    status: COMPLETED_LOCKED_CONTENT_VERIFIED
+    expert_skill: sci-skills-academic-polishing
+    task_summary: claim-safe academic polishing after mathematical freeze
+    inputs:
+      - work/RL_foundations_draft.md
+      - work/rl_foundations_final_referee.md
+    expected_outputs:
+      - research/RL_foundations.md
+      - work/rl_foundations_polishing_report.md
+      - work/rl_foundations_locked_content_ledger.yaml
+    evidence_boundaries:
+      - no changes to mathematics, quantifiers, constants, exponents, or claim strength
+    acceptance_checks:
+      - source and final math fragments identical
+      - theorem proofs and equation tags preserved
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: RL-FND-PRESUB-08
+    status: COMPLETED_FOUNDATION_READY_SUBMISSION_NOT_READY
+    expert_skill: sci-skills-presubmission-review
+    task_summary: purpose-separated final readiness review
+    inputs:
+      - research/RL_foundations.md
+      - work/rl_foundations_final_referee.md
+      - work/rl_foundations_polishing_report.md
+      - work/rl_foundations_locked_content_ledger.yaml
+      - work/rl_foundations_structure_claim_safe_matrix.md
+    expected_outputs:
+      - work/rl_foundations_presubmission_review.md
+    evidence_boundaries:
+      - fixed-foundation readiness separated from journal-submission readiness
+      - no editor-decision prediction
+    acceptance_checks:
+      - no foundation-use blocker, major, or moderate issue
+      - submission gaps explicitly recorded
+    known_missing_items:
+      - public RL name
+      - key full-text theorem-overlap checks
+      - submission introduction and references
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-A-MONO
+    expert_skill: sci-skills-literature-search
+    task_summary: generalized monotonicity theory atlas and primary-source verification
+    inputs:
+      - user research specification
+      - RL draft
+    expected_outputs:
+      - definitions and conventions
+      - theorem-level relation edges
+      - source locators
+    evidence_boundaries:
+      - no inferred citation treated as verified
+      - no abstract-only source treated as full-text proof
+    acceptance_checks:
+      - assumptions and parameter conventions explicit
+      - strictness and incomparability supported or marked pending
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-A-REG
+    expert_skill: sci-skills-literature-search
+    task_summary: metric regularity theory atlas and primary-source verification
+    inputs:
+      - user research specification
+    expected_outputs:
+      - definitions and inverse equivalences
+      - coderivative characterizations with hypotheses
+      - theorem-level relation edges
+    evidence_boundaries:
+      - mutable or bibliographic facts require source locators
+    acceptance_checks:
+      - all neighborhood quantifiers and moduli explicit
+      - exponent convention explicit
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-A-RL
+    expert_skill: sci-skills-paper-deep-reading
+    task_summary: deep audit of the uploaded RL derivations and comparison with nearest prior art
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+    expected_outputs:
+      - formula verification
+      - quantifier and domain audit
+      - prior-art comparison table
+    evidence_boundaries:
+      - uploaded draft claims are not external prior-art evidence
+    acceptance_checks:
+      - equivalences checked algebraically
+      - γq treated as a local derivation, not a universal law
+    known_missing_items:
+      - original Luke-Tam bibliographic identification
+    manual_operation_allowed: false
+    optional_adapters_allowed:
+      - local-python
+  - task_id: T2-NOV-EXACT
+    status: COMPLETED_WITH_TARGETED_FULLTEXT_GAPS
+    expert_skill: sci-skills-literature-search
+    task_summary: formula-level and alias-level prior-art search for RL Hölder Cayley geometry
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - research/theory_atlas.md
+    expected_outputs:
+      - reproducible exact-formula and synonym search log
+      - verified nearest-prior-art matrix
+      - novelty threats separated into exact, equivalent, adjacent, and unrelated
+    evidence_boundaries:
+      - official or primary sources only
+      - abstract-only access cannot establish theorem equivalence
+    acceptance_checks:
+      - search by formulas, Cayley/resolvent properties, graph inequalities, and inverse formulations
+      - no absence-of-search-result treated as proof of novelty
+    known_missing_items:
+      - complete database exports from subscription indexes
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-NOV-DEEP
+    status: COMPLETED_REPAIR_RECOMMENDED
+    expert_skill: sci-skills-paper-deep-reading
+    task_summary: full-quantifier comparison of RL with the nearest verified papers found by T2-NOV-EXACT
+    inputs:
+      - research/theory_atlas.md
+      - work/a_rl_position.md
+    expected_outputs:
+      - theorem-by-theorem formula comparison
+      - exact novelty residue after parameter and scaling transformations
+      - limitations and claim-safe contribution statement
+    evidence_boundaries:
+      - full-text or theorem-page evidence required for equivalence claims
+    acceptance_checks:
+      - local/global, all-pairs/anchored, domain/range, maximality, and stepsize quantifiers explicit
+      - novelty residue must survive known semimonotonicity and Luke-Tam transformations
+    known_missing_items:
+      - nearest papers to be supplied by T2-NOV-EXACT
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-RL-PROOF-REFEREE
+    status: COMPLETED_MAJOR_RECONSTRUCTION_REQUIRED
+    expert_skill: independent-proof-referee
+    task_summary: strict quantifier and proof audit of the RL PPA draft
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - research/example_properties.md
+    expected_outputs:
+      - proof validity classification
+      - minimal repaired theorem
+    evidence_boundaries:
+      - no literature or novelty inference
+    acceptance_checks:
+      - range branch invariance and limit membership checked
+    known_missing_items: []
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-RL-GENUINE-EXPONENT
+    status: COMPLETED_INTERNAL_THEOREM_PENDING_PRIOR_ART
+    expert_skill: independent-theory-analysis
+    task_summary: distinguish all-pairs Hölder roughness from centered reflection and solution drift
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - research/example_properties.md
+    expected_outputs:
+      - structure theorem
+      - proof and counterexamples
+    evidence_boundaries:
+      - internal deduction only; not a novelty certificate
+    acceptance_checks:
+      - isolated and nonisolated zeros separated
+      - moving input and fixed anchors separated
+    known_missing_items:
+      - external prior-art audit for the new structure theorem
+    manual_operation_allowed: false
+    optional_adapters_allowed: []
+  - task_id: T2-RL-PUBLICATION-CALIBRATION
+    status: COMPLETED_PROVISIONAL
+    expert_skill: sci-skills-journal-recommendation
+    task_summary: conditional journal-level calibration for current repaired and strengthened result packages
+    inputs:
+      - upload/01-RL_Submonotonicity-.md
+      - research/theory_atlas.md
+      - research/example_properties.md
+      - research/seesaw_synthesis.md
+    expected_outputs:
+      - contribution matrix
+      - scope-verified conditional journal calibrators
+    evidence_boundaries:
+      - no acceptance prediction or ranking folklore
+    acceptance_checks:
+      - official scopes verified
+      - current draft separated from hypothetical strengthened packages
+    known_missing_items:
+      - final manuscript and closed novelty audit
+    manual_operation_allowed: false
+    optional_adapters_allowed: []

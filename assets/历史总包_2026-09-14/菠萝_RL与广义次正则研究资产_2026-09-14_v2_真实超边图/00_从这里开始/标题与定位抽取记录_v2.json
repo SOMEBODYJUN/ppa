@@ -1,0 +1,4887 @@
+[
+  {
+    "asset_id": "readme_00",
+    "path": "00_从这里开始/README_本目录说明.md",
+    "sha256": "36b3de108c218376d201078f2fe12d60b2474de02b30ce9f4adc487e0752938e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 从这里开始"
+      }
+    ]
+  },
+  {
+    "asset_id": "start",
+    "path": "00_从这里开始/README_研究资产导航.md",
+    "sha256": "fd68b54b79e9afc755829e9e11df3cee6dc0f294e78e6fe5891168f8baafd4c1",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 菠萝 · RL 与广义次正则研究资产"
+      },
+      {
+        "line": 5,
+        "text": "## 快速入口"
+      },
+      {
+        "line": 17,
+        "text": "## 建议阅读顺序"
+      },
+      {
+        "line": 24,
+        "text": "## 状态必须按命题理解"
+      },
+      {
+        "line": 34,
+        "text": "## 版本与校验"
+      }
+    ]
+  },
+  {
+    "asset_id": "hashes",
+    "path": "00_从这里开始/SHA256文件校验清单.txt",
+    "sha256": "912be932708abb592c748e7661ca4ef6edb2398cab39c98c6b40f0fa413158f3",
+    "headings": []
+  },
+  {
+    "asset_id": "manifest",
+    "path": "00_从这里开始/manifest.json",
+    "sha256": "73caf913403f8296f1d380770269f275b60a46e82ceea65c15d1aa3c11c0efe7",
+    "headings": []
+  },
+  {
+    "asset_id": "confidence",
+    "path": "00_从这里开始/当前成果与可信度.yaml",
+    "sha256": "a17e367fe94c88edb7d97cc87443fca2fea52cf42b2b66677687b3ddfd2b9846",
+    "headings": []
+  },
+  {
+    "asset_id": "selection",
+    "path": "00_从这里开始/打包筛选说明.md",
+    "sha256": "06f210e7fcc7dd0810019a81f39a7c3a3a508fafe1b8744388d0a5955ecd2411",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 打包筛选说明"
+      },
+      {
+        "line": 5,
+        "text": "## 纳入与排除口径"
+      },
+      {
+        "line": 13,
+        "text": "## 名称与可编译性"
+      },
+      {
+        "line": 17,
+        "text": "## 已知缺失 / 未完成"
+      },
+      {
+        "line": 26,
+        "text": "## 自指元数据"
+      }
+    ]
+  },
+  {
+    "asset_id": "sources",
+    "path": "00_从这里开始/文件来源与中文名称对照.csv",
+    "sha256": "df1f39aede72b96e51e7869f748fb766f5f0b351c45c9e568c8d40cf68e83348",
+    "headings": []
+  },
+  {
+    "asset_id": "ledger",
+    "path": "00_从这里开始/纳入与排除台账.csv",
+    "sha256": "8717065f1e87eb08dabb2a28424869fa16a5d064a78a03122050980088b99e58",
+    "headings": []
+  },
+  {
+    "asset_id": "guide",
+    "path": "00_从这里开始/给未来Codex和PRO的使用说明.md",
+    "sha256": "72e19ba740ede30b894aa3941f131f2818558c800665b0b2868c483d3d84b90f",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 给未来 Codex 和 PRO 的使用说明"
+      },
+      {
+        "line": 5,
+        "text": "## 第一轮必须先读"
+      },
+      {
+        "line": 9,
+        "text": "## 引用版本"
+      },
+      {
+        "line": 15,
+        "text": "## 不可违反的接口边界"
+      },
+      {
+        "line": 25,
+        "text": "## 继续研究的工作契约"
+      }
+    ]
+  },
+  {
+    "asset_id": "relations",
+    "path": "00_从这里开始/资产关系数据.json",
+    "sha256": "ac748888c5cdea2dd8b5ba6daa7ad254b4feedfd1e4241a7ef001fc449264046",
+    "headings": []
+  },
+  {
+    "asset_id": "rl_tex",
+    "path": "01_RL_PPA核心理论/01_论文主稿/RL与广义次正则_当前论文源.tex",
+    "sha256": "8d0565a57c6580f9ddf7264560bde5a07215af1238033efdc11bb5fe71db56e8",
+    "headings": [
+      {
+        "line": 73,
+        "text": "\\section{Introduction}\\label{introduction}}"
+      },
+      {
+        "line": 181,
+        "text": "\\section{Geometry and certificate"
+      },
+      {
+        "line": 203,
+        "text": "\\subsection{Graph patches and admissible proximal"
+      },
+      {
+        "line": 309,
+        "text": "\\subsection{Solution comparisons and genuinely nonlinear"
+      },
+      {
+        "line": 388,
+        "text": "\\subsection{Ordinary error bounds and certificate"
+      },
+      {
+        "line": 457,
+        "text": "\\section{Independent certificates and local"
+      },
+      {
+        "line": 729,
+        "text": "\\subsection{Power certificates and positive"
+      },
+      {
+        "line": 873,
+        "text": "\\subsection{The linear endpoint and the meaning of the"
+      },
+      {
+        "line": 908,
+        "text": "\\subsection{Exact scalar"
+      },
+      {
+        "line": 1017,
+        "text": "\\subsection{A two-branch family attaining the asymptotic"
+      },
+      {
+        "line": 1270,
+        "text": "\\subsection{Actual contraction without a compatible uniform scalar"
+      },
+      {
+        "line": 1477,
+        "text": "\\section{Independent verification"
+      },
+      {
+        "line": 1502,
+        "text": "\\subsection{A normal inverse with Hölder tangential"
+      },
+      {
+        "line": 1578,
+        "text": "\\subsection{Independent residual"
+      },
+      {
+        "line": 1669,
+        "text": "\\section{A support-function law coupled to a normal-cone"
+      },
+      {
+        "line": 1681,
+        "text": "\\subsection{Complete resolvent and independent"
+      },
+      {
+        "line": 1926,
+        "text": "\\subsection{Genuine nonlinear"
+      },
+      {
+        "line": 2001,
+        "text": "\\subsection{Two scales and the whole PPA"
+      },
+      {
+        "line": 2119,
+        "text": "\\subsection{A successful direct partial"
+      },
+      {
+        "line": 2240,
+        "text": "\\subsection{Disk example and exact"
+      },
+      {
+        "line": 2362,
+        "text": "\\section{Relations to existing PPA"
+      },
+      {
+        "line": 2561,
+        "text": "\\subsection{Comparison by quantifier and retained"
+      },
+      {
+        "line": 2646,
+        "text": "\\subsection{Exact import formulas}\\label{exact-import-formulas}}"
+      },
+      {
+        "line": 2655,
+        "text": "\\subsubsection{Scalar"
+      },
+      {
+        "line": 2709,
+        "text": "\\subsubsection{Solution-anchored"
+      },
+      {
+        "line": 2735,
+        "text": "\\subsubsection{Native PSM coupling}\\label{native-psm-coupling}}"
+      },
+      {
+        "line": 2771,
+        "text": "\\subsection{Forward separation with a surviving degenerate"
+      },
+      {
+        "line": 2946,
+        "text": "\\subsection{Reverse separation by a Minty"
+      },
+      {
+        "line": 3016,
+        "text": "\\subsection{Contribution boundary}\\label{contribution-boundary}}"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_md",
+    "path": "01_RL_PPA核心理论/01_论文主稿/RL核心数学合稿_T5_2026-09-07.md",
+    "sha256": "8bc3d4906f9d28ca349aad1df068eb8d5f9272d65bb731346f0949f63b9975e9",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Sharp Hölder Error-Bound Certificates for Proximal Point Convergence near Nonisolated Zero Sets"
+      },
+      {
+        "line": 3,
+        "text": "## T5 core-manuscript draft"
+      },
+      {
+        "line": 12,
+        "text": "### Abstract"
+      },
+      {
+        "line": 16,
+        "text": "### Locked scope and notation"
+      },
+      {
+        "line": 21,
+        "text": "## 1. Introduction"
+      },
+      {
+        "line": 59,
+        "text": "## 2. Geometry and certificate scopes"
+      },
+      {
+        "line": 70,
+        "text": "### 2.1. Graph patches and admissible proximal transitions"
+      },
+      {
+        "line": 130,
+        "text": "### 2.2. Solution comparisons and genuinely nonlinear geometry"
+      },
+      {
+        "line": 162,
+        "text": "### 2.3. Ordinary error bounds and certificate matching"
+      },
+      {
+        "line": 194,
+        "text": "## 3. Independent certificates and local trajectories"
+      },
+      {
+        "line": 319,
+        "text": "### 3.1. Power certificates and positive radii"
+      },
+      {
+        "line": 409,
+        "text": "### 3.2. The linear endpoint and the meaning of the coefficient"
+      },
+      {
+        "line": 431,
+        "text": "### 3.3. Exact scalar relaxation"
+      },
+      {
+        "line": 517,
+        "text": "### 3.4. A two-branch family attaining the asymptotic constant"
+      },
+      {
+        "line": 708,
+        "text": "### 3.5. Actual contraction without a compatible uniform scalar certificate"
+      },
+      {
+        "line": 847,
+        "text": "## 4. Independent verification modules"
+      },
+      {
+        "line": 861,
+        "text": "### 4.1. A normal inverse with Hölder tangential feedback"
+      },
+      {
+        "line": 918,
+        "text": "### 4.2. Independent residual verifiers"
+      },
+      {
+        "line": 986,
+        "text": "## 5. A support-function law coupled to a normal-cone inclusion"
+      },
+      {
+        "line": 990,
+        "text": "### 5.1. Complete resolvent and independent certificates"
+      },
+      {
+        "line": 1188,
+        "text": "### 5.2. Genuine nonlinear order"
+      },
+      {
+        "line": 1238,
+        "text": "### 5.3. Two scales and the whole PPA orbit"
+      },
+      {
+        "line": 1331,
+        "text": "### 5.4. A successful direct partial proof"
+      },
+      {
+        "line": 1420,
+        "text": "### 5.5. Disk example and exact orbit"
+      },
+      {
+        "line": 1521,
+        "text": "## 6. Relations to existing PPA geometries"
+      },
+      {
+        "line": 1570,
+        "text": "### 6.1. Comparison by quantifier and retained information"
+      },
+      {
+        "line": 1583,
+        "text": "### 6.2. Exact import formulas"
+      },
+      {
+        "line": 1587,
+        "text": "#### 6.2.1. Scalar semimonotonicity"
+      },
+      {
+        "line": 1620,
+        "text": "#### 6.2.2. Solution-anchored weak-Minty"
+      },
+      {
+        "line": 1637,
+        "text": "#### 6.2.3. Native PSM coupling"
+      },
+      {
+        "line": 1655,
+        "text": "### 6.3. Forward separation with a surviving degenerate certificate"
+      },
+      {
+        "line": 1787,
+        "text": "### 6.4. Reverse separation by a Minty collision"
+      },
+      {
+        "line": 1838,
+        "text": "### 6.5. Reviewer objections and bounded responses"
+      },
+      {
+        "line": 1851,
+        "text": "### 6.6. Contribution boundary"
+      },
+      {
+        "line": 1857,
+        "text": "## T5 stage dossier"
+      },
+      {
+        "line": 1859,
+        "text": "### Concept distinctions fixed in the manuscript"
+      },
+      {
+        "line": 1872,
+        "text": "### Evidence status"
+      },
+      {
+        "line": 1879,
+        "text": "### T5 acceptance decision"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_deriv",
+    "path": "01_RL_PPA核心理论/02_核心推导/RL与次正则_原始主推导.md",
+    "sha256": "88beb6be932bae4f9c4af78c864b5b1dc8814e4cc86ff4bc13c28d03e7337369",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL–PPA 主线程数学推导（待交叉审计）"
+      },
+      {
+        "line": 3,
+        "text": "## 1. Minty 图表的精确形式"
+      },
+      {
+        "line": 24,
+        "text": "## 2. 完整标量包络"
+      },
+      {
+        "line": 56,
+        "text": "### 2.1 \\(0<\\gamma<1\\)"
+      },
+      {
+        "line": 94,
+        "text": "### 2.2 \\(\\gamma=1\\) 与线性误差界"
+      },
+      {
+        "line": 110,
+        "text": "## 3. 不要把原生二次信息过早压成单个 L"
+      },
+      {
+        "line": 152,
+        "text": "## 4. 高阶误差界的去奇异化移植"
+      },
+      {
+        "line": 177,
+        "text": "## 5. 半代数定性联合证书"
+      },
+      {
+        "line": 192,
+        "text": "## 6. 锐的多值非孤立剪切族"
+      },
+      {
+        "line": 228,
+        "text": "## 7. 模块化证书编译器"
+      },
+      {
+        "line": 258,
+        "text": "## 8. 高阶误差界并非实际收缩的必要条件"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_chain",
+    "path": "01_RL_PPA核心理论/02_核心推导/核心定理链_补位终审与完整量词.md",
+    "sha256": "0aada547bb4fddba1abb121e0cff03e5af55e491bc49eab6d3c6816bb91bddac",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T4 定理链补位终审"
+      },
+      {
+        "line": 5,
+        "text": "## 1. 最终定理链"
+      },
+      {
+        "line": 18,
+        "text": "## 2. Theorem 3.1：可直接用于 T5 的完整量词"
+      },
+      {
+        "line": 59,
+        "text": "## 3. Corollary 3.2：幂型参数和实际半径"
+      },
+      {
+        "line": 85,
+        "text": "## 4. 自然类 δ/r 审计"
+      },
+      {
+        "line": 119,
+        "text": "## 5. 依赖与禁止依赖表"
+      },
+      {
+        "line": 132,
+        "text": "## 6. 当前 T4 文件的修复吸收裁定"
+      },
+      {
+        "line": 140,
+        "text": "## 7. Contract 1.0"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_root",
+    "path": "01_RL_PPA核心理论/02_核心推导/独立证书组合_第二阶段根推导.md",
+    "sha256": "291c5b79461230d89e9ad33edbec875ff630afea213817bc9d2b99ef6caba433",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Phase 2 root derivations: separated verification and natural coverage"
+      },
+      {
+        "line": 3,
+        "text": "## A. Separation principle"
+      },
+      {
+        "line": 52,
+        "text": "## B. A natural conic generalized-equation class"
+      },
+      {
+        "line": 127,
+        "text": "## C. Smooth-manifold obstruction"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_c11",
+    "path": "01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md",
+    "sha256": "d9f9e5c53c41d827a7fd25250fbd5cbee3c3f2d08c41d245dc9b8f552b084619",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# C^{1,1}/composite generalized-subregularity attack"
+      },
+      {
+        "line": 9,
+        "text": "## 1. Verified public direction and target"
+      },
+      {
+        "line": 17,
+        "text": "## 2. Hessian-free target transfer"
+      },
+      {
+        "line": 30,
+        "text": "### Theorem A — target transfer, PROJECT_PROOF"
+      },
+      {
+        "line": 51,
+        "text": "## 3. Quantitative C^{1,1} composite verifier"
+      },
+      {
+        "line": 74,
+        "text": "### Theorem B — explicit modulus transfer, PROJECT_PROOF"
+      },
+      {
+        "line": 124,
+        "text": "## 4. Independent RL, actual coverage, and localization"
+      },
+      {
+        "line": 128,
+        "text": "### Theorem C — all-pairs RL and covered localized resolvent, PROJECT_PROOF"
+      },
+      {
+        "line": 178,
+        "text": "## 5. Curved non-C² model: powers and genuinely useful nonpower gauge"
+      },
+      {
+        "line": 209,
+        "text": "### 5.1 Power case"
+      },
+      {
+        "line": 215,
+        "text": "### 5.2 Nonpower case"
+      },
+      {
+        "line": 258,
+        "text": "### 5.3 Genuine multivalued variant"
+      },
+      {
+        "line": 266,
+        "text": "## 6. Obstructions"
+      },
+      {
+        "line": 268,
+        "text": "### 6.1 C¹,¹ gradients do not create q>1 EB"
+      },
+      {
+        "line": 272,
+        "text": "### 6.2 Missing weak separation destroys target-correct EB"
+      },
+      {
+        "line": 280,
+        "text": "### 6.3 WSP does not permit an arbitrary smaller target"
+      },
+      {
+        "line": 284,
+        "text": "### 6.4 Clarke-Hessian substitution can be wrong"
+      },
+      {
+        "line": 303,
+        "text": "## 7. Legitimate roles of existing tools"
+      },
+      {
+        "line": 312,
+        "text": "## 8. Closest-literature collision audit"
+      },
+      {
+        "line": 338,
+        "text": "## 9. Contribution and flagship decision"
+      },
+      {
+        "line": 358,
+        "text": "## 10. Smallest next theorem worth a flagship attack"
+      },
+      {
+        "line": 372,
+        "text": "## 11. Execution check"
+      },
+      {
+        "line": 376,
+        "text": "## 12. Evidence / execution contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_arch",
+    "path": "01_RL_PPA核心理论/03_判别方法与理论升级/RL旗舰升级_架构与待攻关接口.md",
+    "sha256": "c346477dc8ed1f372e94adafbc98f5d39249fbcce9a94654f9e014d8d1560c09",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL–PPA 旗舰升级架构：保留真实路径，而不是继续扩大标量参数表"
+      },
+      {
+        "line": 7,
+        "text": "## 0. 唯一首选，以及必须先纠正的一件事"
+      },
+      {
+        "line": 35,
+        "text": "## 1. 本次审计的输入和不可混淆的层级"
+      },
+      {
+        "line": 64,
+        "text": "## 2. 新的 M1 审计结论：两步捕获例子已经一步严格距离收缩"
+      },
+      {
+        "line": 84,
+        "text": "### 命题 2.1：尖锐的一步因子"
+      },
+      {
+        "line": 142,
+        "text": "### 意义及正确的严格性声明"
+      },
+      {
+        "line": 154,
+        "text": "## 3. 五项候选升级的选择结果"
+      },
+      {
+        "line": 168,
+        "text": "## 4. 首选升级的严格对象：联合路径证书"
+      },
+      {
+        "line": 184,
+        "text": "### 4.1 合法路径与特征"
+      },
+      {
+        "line": 207,
+        "text": "### 4.2 联合包络"
+      },
+      {
+        "line": 241,
+        "text": "## 5. 应有的后端主定理：一般比较递推与局部全过程"
+      },
+      {
+        "line": 245,
+        "text": "### 定理 5.1：同一目标的联合路径收敛"
+      },
+      {
+        "line": 273,
+        "text": "### 可计算的非 Q 线性长度条件"
+      },
+      {
+        "line": 298,
+        "text": "### 该可和门槛的反例"
+      },
+      {
+        "line": 310,
+        "text": "## 6. 多步的真正严格扩张，以及它不能证明的事"
+      },
+      {
+        "line": 312,
+        "text": "### 一个确实不能由一步距离 Q 收缩覆盖的验收例"
+      },
+      {
+        "line": 338,
+        "text": "### 三个多步止错反例"
+      },
+      {
+        "line": 346,
+        "text": "## 7. 不相容 CDRS 必须升级“相位对象”，不能要求错误的有限长度"
+      },
+      {
+        "line": 369,
+        "text": "## 8. 为什么另外三类升级目前不是首选"
+      },
+      {
+        "line": 371,
+        "text": "### 8.1 固定/可变正定测试度量"
+      },
+      {
+        "line": 381,
+        "text": "### 8.2 Warped/退化图"
+      },
+      {
+        "line": 387,
+        "text": "### 8.3 选择稳定性"
+      },
+      {
+        "line": 397,
+        "text": "## 9. 应攻击的生产主定理，不是已经证明的主定理"
+      },
+      {
+        "line": 399,
+        "text": "### 目标定理 N：原生有限类型 → 相容路径证书"
+      },
+      {
+        "line": 428,
+        "text": "## 10. 与公开问题及已知机制的对应"
+      },
+      {
+        "line": 442,
+        "text": "## 11. Codex 证明攻击清单与停止条件"
+      },
+      {
+        "line": 444,
+        "text": "### 唯一主攻击：原生、活动域相容的有限类型 CDRS 联合证书"
+      },
+      {
+        "line": 456,
+        "text": "### 停止或降级条件"
+      },
+      {
+        "line": 467,
+        "text": "## 12. 期刊竞争力判断"
+      },
+      {
+        "line": 485,
+        "text": "## 13. 返回契约"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_path",
+    "path": "01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md",
+    "sha256": "74d9a2b464aba8d9b585b7c30e61b8faca8eab78b23da7f634cac04c5a18b4b4",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Multi-step, pathwise, and finite-capture RL–generalized-subregularity theory"
+      },
+      {
+        "line": 6,
+        "text": "## 1. Executive conclusion"
+      },
+      {
+        "line": 24,
+        "text": "## 2. Three levels of multi-step information"
+      },
+      {
+        "line": 35,
+        "text": "### 2.1 Block-lifted RL"
+      },
+      {
+        "line": 82,
+        "text": "### 2.2 Solution-comparison block RL plus general \\(\\psi_m\\)"
+      },
+      {
+        "line": 145,
+        "text": "### 2.3 Path atlas"
+      },
+      {
+        "line": 191,
+        "text": "## 3. Main whole-orbit theorem"
+      },
+      {
+        "line": 193,
+        "text": "### Theorem 3.1 (pathwise \\(m\\)-block convergence and localization)"
+      },
+      {
+        "line": 232,
+        "text": "#### Proof"
+      },
+      {
+        "line": 244,
+        "text": "### Corollary 3.2 (block-lifted RL plus generalized subregularity)"
+      },
+      {
+        "line": 250,
+        "text": "### Corollary 3.3 (finite capture)"
+      },
+      {
+        "line": 263,
+        "text": "### Corollary 3.4 (phase-cycle convergence)"
+      },
+      {
+        "line": 288,
+        "text": "## 4. Power bookkeeping on legal words"
+      },
+      {
+        "line": 326,
+        "text": "## 5. Verified multivalued, nonisolated finite-capture class"
+      },
+      {
+        "line": 390,
+        "text": "### Separation from almost-averaged and paracontractive theories"
+      },
+      {
+        "line": 426,
+        "text": "## 6. Exact relationship to existing theories"
+      },
+      {
+        "line": 438,
+        "text": "### Two indispensable obstructions"
+      },
+      {
+        "line": 445,
+        "text": "## 7. Public problems that this upgrade can attack"
+      },
+      {
+        "line": 447,
+        "text": "### P1. Weak almost-averaged/set-valued selection theory"
+      },
+      {
+        "line": 455,
+        "text": "### P2. Compositions without common fixed points"
+      },
+      {
+        "line": 461,
+        "text": "### P3. Verifiable gauge metric subregularity"
+      },
+      {
+        "line": 467,
+        "text": "### P4. Cyclic projections: regularity and geometry are entangled"
+      },
+      {
+        "line": 473,
+        "text": "### P5. RAAR phase retrieval metric subregularity"
+      },
+      {
+        "line": 481,
+        "text": "## 8. Research verdict"
+      },
+      {
+        "line": 514,
+        "text": "## 9. Search record and evidence boundary"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_synthesis",
+    "path": "01_RL_PPA核心理论/03_判别方法与理论升级/独立接口_对抗综合与作用域.md",
+    "sha256": "b9c3beb06b4835bb08b30ae0bef5524c2ceeee06beef5bb2a1ac37dfbcf3b4f7",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Phase 2：RL–PPA 独立接口与对抗审计"
+      },
+      {
+        "line": 5,
+        "text": "## 0. 裁定"
+      },
+      {
+        "line": 17,
+        "text": "## 1. 尽可能一般的合法组合元定理"
+      },
+      {
+        "line": 21,
+        "text": "### 1.1 允许转移而非预设全局唯一 resolvent"
+      },
+      {
+        "line": 97,
+        "text": "### 1.2 这一版本为什么比“RL＋EB”字面更一般"
+      },
+      {
+        "line": 106,
+        "text": "### 1.3 可直接交给作者的幂型接口"
+      },
+      {
+        "line": 127,
+        "text": "## 2. 隐藏量词清单与最小修复"
+      },
+      {
+        "line": 146,
+        "text": "### 2.1 两个一行反例"
+      },
+      {
+        "line": 152,
+        "text": "## 3. 自然应用类的结构筛选：一条新的否定性引理"
+      },
+      {
+        "line": 154,
+        "text": "### 光滑零流形上的 genuine 障碍"
+      },
+      {
+        "line": 180,
+        "text": "## 4. 已有分离证明的独立检查"
+      },
+      {
+        "line": 182,
+        "text": "### 4.1 主报告二分支剪切族"
+      },
+      {
+        "line": 192,
+        "text": "### 4.2 “旧理论不能做”的正确层级"
+      },
+      {
+        "line": 200,
+        "text": "## 5. 自然偏置摩擦/法锥候选：独立复核结论"
+      },
+      {
+        "line": 256,
+        "text": "## 6. 可发表贡献的保守排序"
+      },
+      {
+        "line": 258,
+        "text": "### 6.1 已足以成立的贡献，不需要先发明新判别法"
+      },
+      {
+        "line": 266,
+        "text": "### 6.2 只有发生具体失败时才需要新判据"
+      },
+      {
+        "line": 272,
+        "text": "## 7. 审查准备度与待整合事项"
+      },
+      {
+        "line": 281,
+        "text": "## 8. 本轮追加交叉审阅"
+      },
+      {
+        "line": 283,
+        "text": "### 8.1 已实际阅读全文的 phase2 文件"
+      },
+      {
+        "line": 288,
+        "text": "### 8.2 natural_classes 提交的反馈摩擦公式"
+      },
+      {
+        "line": 315,
+        "text": "### 8.3 new_verifiers 提交的 Minty mixing 公式"
+      },
+      {
+        "line": 335,
+        "text": "## 9. SCI expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_audit",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/定理量词与精确性_独立数学审计_T4.md",
+    "sha256": "11638100ad65607b8a22bb141e8b8dc15a5c93c4e9a3c6389078341bd8d9231a",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T4 对抗数学审计：RL–PPA 的定理、量词与精确性"
+      },
+      {
+        "line": 6,
+        "text": "## 1. 审计范围、结论与证据等级"
+      },
+      {
+        "line": 28,
+        "text": "## 2. 总裁定表"
+      },
+      {
+        "line": 59,
+        "text": "## 3. RL 等价、后果和常数 2：逐式检查"
+      },
+      {
+        "line": 61,
+        "text": "### 3.1 耦合 Minty 等价通过"
+      },
+      {
+        "line": 84,
+        "text": "### 3.2 步长界不是等价命题"
+      },
+      {
+        "line": 99,
+        "text": "### 3.3 一步约束与修正常数通过"
+      },
+      {
+        "line": 124,
+        "text": "### 3.4 定理 2 的 exact 范围与端点证明"
+      },
+      {
+        "line": 151,
+        "text": "### 3.5 sharpness 与冻结 λ"
+      },
+      {
+        "line": 163,
+        "text": "## 4. 一般 gauge 与 whole-orbit：缺漏及可直接替换文本"
+      },
+      {
+        "line": 165,
+        "text": "### 4.1 缺漏的后果"
+      },
+      {
+        "line": 173,
+        "text": "### 4.2 建议替换版元定理"
+      },
+      {
+        "line": 195,
+        "text": "### 4.3 whole-orbit 证明无循环的写法"
+      },
+      {
+        "line": 209,
+        "text": "## 5. Hölder-feedback 定理：通过的内容与应删除的扩大断言"
+      },
+      {
+        "line": 238,
+        "text": "## 6. 支撑函数/屈服自然类：一般闭凸 C 的完整复核"
+      },
+      {
+        "line": 242,
+        "text": "### 6.1 完整法向 inverse、零集、闭图"
+      },
+      {
+        "line": 264,
+        "text": "### 6.2 参数 prox 的估计通过，包括 s=0"
+      },
+      {
+        "line": 281,
+        "text": "### 6.3 两个指数的最佳性与常数的边界"
+      },
+      {
+        "line": 296,
+        "text": "### 6.4 radius 与实际率"
+      },
+      {
+        "line": 319,
+        "text": "### 6.5 非三角 a(t) 附录类"
+      },
+      {
+        "line": 340,
+        "text": "## 7. 竞品失败序列：逐项重算与作用域"
+      },
+      {
+        "line": 350,
+        "text": "### 7.1 Fixed finite weak/oblique-Minty：VALID"
+      },
+      {
+        "line": 364,
+        "text": "### 7.2 Scalar semimonotonicity、hypo/cohypo：VALID"
+      },
+      {
+        "line": 374,
+        "text": "### 7.3 Coercive matrix semimonotonicity：VALID"
+      },
+      {
+        "line": 392,
+        "text": "### 7.4 Almost-averaging 与 Luke–Tam：VALID"
+      },
+      {
+        "line": 398,
+        "text": "### 7.5 Fixed PSM：VALID，非退化条件不可省"
+      },
+      {
+        "line": 427,
+        "text": "### 7.6 MR、strong SR、restricted monotonicity：结论VALID，方向需修复"
+      },
+      {
+        "line": 435,
+        "text": "### 7.7 反向例与“不可比”的范围"
+      },
+      {
+        "line": 441,
+        "text": "## 8. 附带审计：光滑障碍与小增益扩展"
+      },
+      {
+        "line": 443,
+        "text": "### 8.1 光滑零流形障碍：VALID"
+      },
+      {
+        "line": 453,
+        "text": "### 8.2 小增益：恢复被压缩的步长与零集论证"
+      },
+      {
+        "line": 469,
+        "text": "## 9. 三个审稿视角与修复优先级"
+      },
+      {
+        "line": 471,
+        "text": "### Contribution"
+      },
+      {
+        "line": 475,
+        "text": "### Methods"
+      },
+      {
+        "line": 479,
+        "text": "### Communication"
+      },
+      {
+        "line": 492,
+        "text": "## 10. 限制、质量检查与交付"
+      },
+      {
+        "line": 506,
+        "text": "## 11. SCI expert-result contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_referee",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/总体敌对审稿_修复清单与PRO导入许可_T5F.md",
+    "sha256": "c8051e2b5c6b8aba640bdda54dc873b33476c7c99d4719e854a4cadada67945e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T5 总体敌对审稿 F：证明可信度、贡献边界与 Pro 主张许可"
+      },
+      {
+        "line": 5,
+        "text": "## 0. 真实合稿最终复核：本节优先于历史模块判断"
+      },
+      {
+        "line": 11,
+        "text": "### 0.1 源审查中的修复是否进入真实合稿"
+      },
+      {
+        "line": 26,
+        "text": "### 0.2 当前合稿需要修改的句子"
+      },
+      {
+        "line": 40,
+        "text": "### 0.3 合稿哪些部分可原样给 Pro"
+      },
+      {
+        "line": 64,
+        "text": "## 1. 裁决与来源边界"
+      },
+      {
+        "line": 86,
+        "text": "## 2. 数学核心：通过了哪些敌对检查"
+      },
+      {
+        "line": 88,
+        "text": "### 2.1 定义与主定理量词"
+      },
+      {
+        "line": 110,
+        "text": "### 2.2 幂率、线性端点与“尖锐”的准确对象"
+      },
+      {
+        "line": 126,
+        "text": "### 2.3 自然类的可验证性与 genuine 行为"
+      },
+      {
+        "line": 141,
+        "text": "### 2.4 非必要性与一般 gauge 障碍"
+      },
+      {
+        "line": 147,
+        "text": "## 3. 顶级优化期刊视角：贡献是否站得住"
+      },
+      {
+        "line": 149,
+        "text": "### Contribution lens"
+      },
+      {
+        "line": 157,
+        "text": "### Methods lens"
+      },
+      {
+        "line": 161,
+        "text": "### Communication lens"
+      },
+      {
+        "line": 165,
+        "text": "## 4. 初轮模块审计记录：最终合稿状态由第 0 节覆盖"
+      },
+      {
+        "line": 197,
+        "text": "## 5. Pro 可安全使用的主张白名单"
+      },
+      {
+        "line": 220,
+        "text": "## 6. Pro 禁用清单"
+      },
+      {
+        "line": 244,
+        "text": "## 7. M1 / SO-06：能否据此让 Pro 安全攻题"
+      },
+      {
+        "line": 270,
+        "text": "### 给 Pro 的 M1 前置闸门"
+      },
+      {
+        "line": 278,
+        "text": "### M1 专用禁用主张"
+      },
+      {
+        "line": 291,
+        "text": "## 8. 修复优先级、证据状态与质量检查"
+      },
+      {
+        "line": 303,
+        "text": "### 本轮快照"
+      },
+      {
+        "line": 317,
+        "text": "## 9. SCI-Skills Expert Contract 1.0"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_delta",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_代数与定理差异复核_T5A.md",
+    "sha256": "4ad5e7214b9c61beb04d0e4b1af1c8c95cd5a44aefe535e1066e1b15b1bacb78",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T5 审计 A：真实合稿 delta audit"
+      },
+      {
+        "line": 9,
+        "text": "## 1. 当前判定"
+      },
+      {
+        "line": 15,
+        "text": "## 2. 旧问题逐项核对"
+      },
+      {
+        "line": 25,
+        "text": "### 2.1 A01 的关键量词已真正进入数学前提"
+      },
+      {
+        "line": 50,
+        "text": "## 3. scalar exact / operator sharp 的最终限定"
+      },
+      {
+        "line": 67,
+        "text": "### 3.1 denominator 2 和 sqrt(2) 没有混淆"
+      },
+      {
+        "line": 83,
+        "text": "### 3.2 上界的量词、正半径和可达性仍一致"
+      },
+      {
+        "line": 91,
+        "text": "## 4. 额外 delta：统一 gauge 反例的证明有所增强"
+      },
+      {
+        "line": 101,
+        "text": "## 5. 本次最终 disposition"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_recheck",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/最终合稿_实例常数与反例重审_T5E.md",
+    "sha256": "20002ded0e0acfa115c3303b040f00399695f29a3573f06480d49f216529f428",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T5 E：真实合稿例子与历史修复落地复核"
+      },
+      {
+        "line": 11,
+        "text": "## 1. 范围与核查方法"
+      },
+      {
+        "line": 17,
+        "text": "## 2. 历史修复落地表"
+      },
+      {
+        "line": 32,
+        "text": "## 3. 两分支与退化 shear 的真实落地"
+      },
+      {
+        "line": 34,
+        "text": "### 3.1 Proposition 3.4"
+      },
+      {
+        "line": 48,
+        "text": "### 3.2 Proposition 3.5"
+      },
+      {
+        "line": 54,
+        "text": "## 4. 自然类、圆盘、多面体与旧证书排除"
+      },
+      {
+        "line": 75,
+        "text": "## 5. Reverse 例确实只排除 AP-RL"
+      },
+      {
+        "line": 83,
+        "text": "## 6. 给 M1 / SO-06 Pro 可安全抽取的 benchmark"
+      },
+      {
+        "line": 109,
+        "text": "## 7. 最终三视角裁决与下一步"
+      },
+      {
+        "line": 117,
+        "text": "## SCI-Skills Expert Contract 1.0"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_red",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/核心论证框架_敌对审稿_T4.md",
+    "sha256": "5c0c211ef0907efb5ace5e3783f69b99574f4ef450ffe112ea1ab469d1b7833e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL–PPA：T4 严格审稿红队与最短成稿方案"
+      },
+      {
+        "line": 6,
+        "text": "## 0. 裁定先行"
+      },
+      {
+        "line": 20,
+        "text": "## 1. 审查范围与事实底座"
+      },
+      {
+        "line": 22,
+        "text": "### 1.1 实际完整阅读的输入"
+      },
+      {
+        "line": 48,
+        "text": "## 2. 至少十二个最可能导致拒稿的审稿问题"
+      },
+      {
+        "line": 50,
+        "text": "### A. 致命：贡献主张或主定理若这样写，现有证据无法支撑"
+      },
+      {
+        "line": 52,
+        "text": "#### R01 — 新颖性被“编译器/独立生产线”的命名替代"
+      },
+      {
+        "line": 62,
+        "text": "#### R02 — 主自然类有更强、更短且条件更弱的现成结构证明"
+      },
+      {
+        "line": 72,
+        "text": "#### R03 — 把有限证书的最坏界误写成算法必要条件、全体理论排除或普遍最优率"
+      },
+      {
+        "line": 82,
+        "text": "### B. 重大：会使严谨性、可验证性或稿件定位受到实质质疑"
+      },
+      {
+        "line": 84,
+        "text": "#### R04 — “修正 \\(\\sqrt2\\) 为 2”是否只是在修正项目自己的松估计？"
+      },
+      {
+        "line": 93,
+        "text": "#### R05 — 局部逆、覆盖与允许选择若分散书写，主定理可能被读成不成立的全图结论"
+      },
+      {
+        "line": 102,
+        "text": "#### R06 — AP 几何远强于 PPA 实际所需的解比较：为何整篇突出 all-pairs？"
+      },
+      {
+        "line": 111,
+        "text": "#### R07 — 距离下降不能自动闭合局部全轨道，非孤立切向漂移可能越域"
+      },
+      {
+        "line": 120,
+        "text": "#### R08 — 次正则性证书会否在局部化或残差替换中悄悄变成另一个问题？"
+      },
+      {
+        "line": 129,
+        "text": "#### R09 — 定性模量、最优渐近模量和实际半径常数混为一谈"
+      },
+      {
+        "line": 138,
+        "text": "#### R10 — “可计算/可执行”是否暗中要求和原问题一样难的全图知识？"
+      },
+      {
+        "line": 147,
+        "text": "#### R11 — 自然性主张超过了已核实的物理与模型证据"
+      },
+      {
+        "line": 156,
+        "text": "#### R12 — 最近邻文献尚未锁定，负面检索结论不能承担首创证明"
+      },
+      {
+        "line": 165,
+        "text": "#### R13 — 扩展模块改变了结论对象，却被并入同一标量定理"
+      },
+      {
+        "line": 174,
+        "text": "### C. 次要：单独未必阻断，但会放大“尚未成稿”的印象"
+      },
+      {
+        "line": 176,
+        "text": "#### R14 — 21 节工作报告仍保留历史纠偏与多套近重复主线"
+      },
+      {
+        "line": 185,
+        "text": "#### R15 — 符号冲突与率的简称使正确定理难以阅读"
+      },
+      {
+        "line": 194,
+        "text": "#### R16 — 纯理论图或数值自检被误呈现为实验验证"
+      },
+      {
+        "line": 203,
+        "text": "## 3. 三个独立审稿视角与交叉裁定"
+      },
+      {
+        "line": 205,
+        "text": "### 3.1 贡献审稿人"
+      },
+      {
+        "line": 211,
+        "text": "### 3.2 方法审稿人"
+      },
+      {
+        "line": 217,
+        "text": "### 3.3 结构审稿人"
+      },
+      {
+        "line": 223,
+        "text": "### 3.4 综合、分歧与工作量"
+      },
+      {
+        "line": 239,
+        "text": "## 4. 中心贡献是否足以撑论文：明确回答与最短结构"
+      },
+      {
+        "line": 241,
+        "text": "### 4.1 明确回答"
+      },
+      {
+        "line": 253,
+        "text": "### 4.2 最短可投稿结构"
+      },
+      {
+        "line": 266,
+        "text": "### 4.3 正文最小定理链"
+      },
+      {
+        "line": 281,
+        "text": "### 4.4 不应进入正文的材料"
+      },
+      {
+        "line": 289,
+        "text": "## 5. 至多两个理论图位提案：只提案、不渲染"
+      },
+      {
+        "line": 293,
+        "text": "### 图位 F1 — “原生输入如何进入同一步证书”"
+      },
+      {
+        "line": 303,
+        "text": "### 图位 F2 — “三种不同的收敛/认证结论”"
+      },
+      {
+        "line": 315,
+        "text": "## 6. 证据、执行状态、作者输入与局限"
+      },
+      {
+        "line": 325,
+        "text": "## 7. 质量检查与 SCI expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_lit",
+    "path": "01_RL_PPA核心理论/04_证明审计与敌对审稿/理论谱系与贡献边界_文献论证_T4.md",
+    "sha256": "e5b73c1aa83ce6266895e5912263843acc1c7e45829999af01da0876c50e049e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T4 文献论证：围绕独立认证、临界边界与严格互补组织先行理论"
+      },
+      {
+        "line": 7,
+        "text": "## 1. 结论先行：Related work 要回答什么"
+      },
+      {
+        "line": 24,
+        "text": "## 2. 建议章节安排：每处引文都有任务"
+      },
+      {
+        "line": 43,
+        "text": "## 3. 六类必须精确定位的先行理论"
+      },
+      {
+        "line": 45,
+        "text": "### 3.1 Luke–Tam：最近的线性同算法基线，不是被忽略的非孤立理论"
+      },
+      {
+        "line": 57,
+        "text": "### 3.2 Semimonotonicity：可直接借用的二次信息库，不是一个可整体排除的标签"
+      },
+      {
+        "line": 71,
+        "text": "### 3.3 Weak/oblique-Minty：锚定能量路线，不能被升格为 AP"
+      },
+      {
+        "line": 85,
+        "text": "### 3.4 Partial subregularity 与 partial strong submonotonicity：两个概念、两种原生接口"
+      },
+      {
+        "line": 93,
+        "text": "### 3.5 Higher-order subregularity：EB 独立侧的先行基础，不是需击败的竞争者"
+      },
+      {
+        "line": 101,
+        "text": "### 3.6 Identifiable manifold：受限定的 EB 转移工具，不是任意算子的高阶 EB 黑箱"
+      },
+      {
+        "line": 109,
+        "text": "## 4. Claim–evidence 矩阵"
+      },
+      {
+        "line": 129,
+        "text": "## 5. 可直接进入 §1.2 的论证型短稿"
+      },
+      {
+        "line": 141,
+        "text": "## 6. 新颖性句式：可说、需条件、不可说"
+      },
+      {
+        "line": 143,
+        "text": "### 6.1 现阶段可说"
+      },
+      {
+        "line": 153,
+        "text": "### 6.2 必须附条件才可说"
+      },
+      {
+        "line": 163,
+        "text": "### 6.3 不可说"
+      },
+      {
+        "line": 175,
+        "text": "## 7. 次要文献的精确去向：不让边界审核占领正文"
+      },
+      {
+        "line": 194,
+        "text": "## 8. 来源核验记录与局限"
+      },
+      {
+        "line": 216,
+        "text": "## 9. 质量检查"
+      },
+      {
+        "line": 228,
+        "text": "## 10. SCI expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_separate",
+    "path": "01_RL_PPA核心理论/05_实例与反例/指定竞争证书_分离与退化幸存者.md",
+    "sha256": "5f79dcee04a16fce8bc4993c7058399d4c7d1842121efc4c00de328511beeed9",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 第二阶段：同一 Euclidean PPA 的严格分离与旧工具正向接入"
+      },
+      {
+        "line": 5,
+        "text": "## 0. 结论先行"
+      },
+      {
+        "line": 17,
+        "text": "## 1. 比较对象和证据等级"
+      },
+      {
+        "line": 32,
+        "text": "## 2. 自然结构族：无需从闭式预解算子反造 \\(F\\)"
+      },
+      {
+        "line": 74,
+        "text": "### 2.1 独立的 RL 验证"
+      },
+      {
+        "line": 108,
+        "text": "### 2.2 独立的集合误差界验证"
+      },
+      {
+        "line": 127,
+        "text": "### 2.3 与项目定理最后匹配"
+      },
+      {
+        "line": 154,
+        "text": "### 2.4 Support/yield 集合版本：用真实集合系数替代球外包络"
+      },
+      {
+        "line": 177,
+        "text": "## 3. 真正非 Lipschitz：不是把线性 RL 换个指数标签"
+      },
+      {
+        "line": 204,
+        "text": "## 4. 严格排除：指定旧证书的必要条件和失败序列"
+      },
+      {
+        "line": 206,
+        "text": "### 4.1 Luke–Tam 线性 submonotonicity"
+      },
+      {
+        "line": 221,
+        "text": "### 4.2 任意固定有限 weak/oblique-Minty"
+      },
+      {
+        "line": 251,
+        "text": "### 4.3 Hypomonotonicity 和 informative scalar semimonotonicity"
+      },
+      {
+        "line": 277,
+        "text": "### 4.4 Matrix semimonotonicity：只排除 coercive 域，不能全部排除"
+      },
+      {
+        "line": 330,
+        "text": "### 4.5 Luke–Thao–Tam almost-averaging"
+      },
+      {
+        "line": 340,
+        "text": "### 4.6 固定的切向非退化 PSM 测试"
+      },
+      {
+        "line": 367,
+        "text": "### 4.7 Restricted monotonicity 和 metric-regular generalized PPA"
+      },
+      {
+        "line": 376,
+        "text": "## 5. 必须公开的竞争证明：旧 partial 工具确实能够用"
+      },
+      {
+        "line": 380,
+        "text": "### 5.1 退化法向 PSM 精确成立"
+      },
+      {
+        "line": 409,
+        "text": "### 5.2 法向强单调性甚至给更紧因子"
+      },
+      {
+        "line": 446,
+        "text": "## 6. 最强安全分离定理"
+      },
+      {
+        "line": 478,
+        "text": "## 7. 反向边界与待解决的真正任务"
+      },
+      {
+        "line": 491,
+        "text": "## 8. 原始来源定位与检索记录"
+      },
+      {
+        "line": 516,
+        "text": "## 9. 审核合同"
+      }
+    ]
+  },
+  {
+    "asset_id": "rl_natural",
+    "path": "01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md",
+    "sha256": "abe082412883506ab76bdcc2b653f7971ecacb82205dd7cbe632186c84e8c2c9",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Phase 2：自然多值本构类的两条独立 RL–PPA 证书"
+      },
+      {
+        "line": 7,
+        "text": "## 1. 结论先行"
+      },
+      {
+        "line": 23,
+        "text": "## 2. 自然来源：哪些是真正来源，哪些是本项目模型化"
+      },
+      {
+        "line": 25,
+        "text": "### 2.1 已核原始文献"
+      },
+      {
+        "line": 35,
+        "text": "### 2.2 模型化边界"
+      },
+      {
+        "line": 46,
+        "text": "## 3. 候选 A：锥约束的载荷依赖屈服/摩擦广义方程"
+      },
+      {
+        "line": 48,
+        "text": "### 定理 A（全活动集、非孤立解集、两条独立证书）"
+      },
+      {
+        "line": 123,
+        "text": "### 证明：存在性与唯一性这条管线"
+      },
+      {
+        "line": 145,
+        "text": "### 证明：RL 这条管线"
+      },
+      {
+        "line": 185,
+        "text": "### 证明：EB 这条管线"
+      },
+      {
+        "line": 197,
+        "text": "### 证明：genuine 非 Lipschitz"
+      },
+      {
+        "line": 209,
+        "text": "## 4. 定量接入、实例与真实收敛率"
+      },
+      {
+        "line": 211,
+        "text": "### 4.1 明确的局部半径与理论因子"
+      },
+      {
+        "line": 242,
+        "text": "### 4.2 原生分块信息给更好的实际结论"
+      },
+      {
+        "line": 269,
+        "text": "### 4.3 真多值圆盘摩擦：一个全部常数可算的实例"
+      },
+      {
+        "line": 305,
+        "text": "### 4.4 多面体屈服与活动集"
+      },
+      {
+        "line": 317,
+        "text": "## 5. 候选 B：切向相关法向刚度——非三角反馈"
+      },
+      {
+        "line": 336,
+        "text": "### 定理 B"
+      },
+      {
+        "line": 359,
+        "text": "### 证明"
+      },
+      {
+        "line": 415,
+        "text": "### 自然性与缺口"
+      },
+      {
+        "line": 419,
+        "text": "## 6. 指定旧证书的严格失败与必须保留的例外"
+      },
+      {
+        "line": 421,
+        "text": "### 6.1 任意固定解锚点的 finite oblique weak-Minty 失败"
+      },
+      {
+        "line": 443,
+        "text": "### 6.2 finite anchored calmness / almost-averaging 失败"
+      },
+      {
+        "line": 447,
+        "text": "### 6.3 不应隐瞒的 partial 旧工具"
+      },
+      {
+        "line": 453,
+        "text": "## 7. 为什么不继续盲找光滑 KKT 作为 genuine 来源"
+      },
+      {
+        "line": 459,
+        "text": "## 8. 检索与证据账本"
+      },
+      {
+        "line": 483,
+        "text": "## 9. SCI 返回合同"
+      }
+    ]
+  },
+  {
+    "asset_id": "c11_test",
+    "path": "01_RL_PPA核心理论/06_验证程序/验证_C11复合次正则.py",
+    "sha256": "c5324260c85b9f8c28ac5e0c30f3ae79520488efd3203d3a3ee45ecd8c052247",
+    "headings": []
+  },
+  {
+    "asset_id": "rl_test",
+    "path": "01_RL_PPA核心理论/06_验证程序/验证_RL合稿实例与常数.py",
+    "sha256": "3a3dab8045bf30d722fab12d2c135f0b641b9ddcbb3d6fa8ffc029d6af587981",
+    "headings": [
+      {
+        "line": 28,
+        "text": "# Two branches sharing a Minty input have unequal reflection outputs."
+      },
+      {
+        "line": 32,
+        "text": "# M1/SO-06 logic benchmark: fixed F={(-sqrt(y),y),(-sqrt(y),-3y)}."
+      },
+      {
+        "line": 33,
+        "text": "# Complete direct-Minty inverse is single-valued and full-domain exactly at tau>1/3."
+      },
+      {
+        "line": 48,
+        "text": "# B5 minimal example J(p,q) = (p + sqrt(abs(q)), abs(q)/2)."
+      },
+      {
+        "line": 49,
+        "text": "# Summable input errors force at least harmonic tangential growth."
+      },
+      {
+        "line": 60,
+        "text": "# An unchanged small normal coordinate satisfies arbitrarily small fixed relative error."
+      }
+    ]
+  },
+  {
+    "asset_id": "readme_01",
+    "path": "01_RL_PPA核心理论/README_本目录说明.md",
+    "sha256": "afda6878ddf4ab06fc83154a260f4ffe454b89a2491a1b5297fb674da66c4bd1",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL–PPA 核心理论"
+      },
+      {
+        "line": 5,
+        "text": "## 建议入口顺序"
+      },
+      {
+        "line": 19,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_build",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/build.sh",
+    "sha256": "757c605db6fe0d74ae6b9bf5ac02fda2bd48bc173f3d0fa114d6c9b36b41bc4d",
+    "headings": [
+      {
+        "line": 4,
+        "text": "# Workspace-local workaround for this image's absent generated TeX databases."
+      },
+      {
+        "line": 5,
+        "text": "# No package installation or system modification is performed."
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_fontpy",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/build_author_font.py",
+    "sha256": "370dd0420fbf6927f5657b982926e613024bf3fe18916fb2f637e33e7a2579e0",
+    "headings": []
+  },
+  {
+    "asset_id": "conic_bbl",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/main.bbl",
+    "sha256": "75cc4d3dd2cbc30c58722f5929c16e4edaf19c47773162ea533ff4e3d6a9ca18",
+    "headings": []
+  },
+  {
+    "asset_id": "conic_tex",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/main.tex",
+    "sha256": "4da7f81e1907a866f656eb2ab4da98e1efc2f156c5370c89016f2cba3c7a9af3",
+    "headings": [
+      {
+        "line": 90,
+        "text": "\\section{Introduction}"
+      },
+      {
+        "line": 91,
+        "text": "\\label{sec:introduction}"
+      },
+      {
+        "line": 130,
+        "text": "\\subsection{Relation to the closest results}"
+      },
+      {
+        "line": 182,
+        "text": "\\label{tab:nearest}"
+      },
+      {
+        "line": 220,
+        "text": "\\subsection{Organization}"
+      },
+      {
+        "line": 230,
+        "text": "\\section{Preliminaries and the frozen-face condition}"
+      },
+      {
+        "line": 231,
+        "text": "\\label{sec:preliminaries}"
+      },
+      {
+        "line": 258,
+        "text": "\\begin{definition}[Niceness and face amenability]"
+      },
+      {
+        "line": 259,
+        "text": "\\label{def:amenable}"
+      },
+      {
+        "line": 293,
+        "text": "\\begin{definition}[Frozen minimal-face CRSC]"
+      },
+      {
+        "line": 294,
+        "text": "\\label{def:crsc}"
+      },
+      {
+        "line": 305,
+        "text": "\\begin{definition}[Full facial CRCQ at an apex]"
+      },
+      {
+        "line": 306,
+        "text": "\\label{def:crcq}"
+      },
+      {
+        "line": 324,
+        "text": "\\begin{definition}[MSCQ]"
+      },
+      {
+        "line": 338,
+        "text": "\\begin{theorem}[Pataki's closed-image criterion, imported"
+      },
+      {
+        "line": 340,
+        "text": "\\label{thm:pataki}"
+      },
+      {
+        "line": 365,
+        "text": "\\section{Nice cones: nearby stability and normal correction}"
+      },
+      {
+        "line": 366,
+        "text": "\\label{sec:nice}"
+      },
+      {
+        "line": 371,
+        "text": "\\subsection{A rank sandwich on fixed subspaces}"
+      },
+      {
+        "line": 373,
+        "text": "\\begin{lemma}[Fixed-subspace rank sandwich]"
+      },
+      {
+        "line": 374,
+        "text": "\\label{lem:sandwich}"
+      },
+      {
+        "line": 398,
+        "text": "\\begin{lemma}[Continuity of kernel projections]"
+      },
+      {
+        "line": 399,
+        "text": "\\label{lem:kernel}"
+      },
+      {
+        "line": 413,
+        "text": "\\begin{theorem}[Full-neighborhood stability]"
+      },
+      {
+        "line": 414,
+        "text": "\\label{thm:stability}"
+      },
+      {
+        "line": 490,
+        "text": "\\subsection{A normal angle and a common face manifold}"
+      },
+      {
+        "line": 501,
+        "text": "\\begin{lemma}[Positive normal angle]"
+      },
+      {
+        "line": 502,
+        "text": "\\label{lem:angle}"
+      },
+      {
+        "line": 523,
+        "text": "\\begin{lemma}[Quantitative correction to the common manifold]"
+      },
+      {
+        "line": 524,
+        "text": "\\label{lem:normal-correction}"
+      },
+      {
+        "line": 590,
+        "text": "\\begin{corollary}[Nonlinear facial reduction]"
+      },
+      {
+        "line": 591,
+        "text": "\\label{cor:fr}"
+      },
+      {
+        "line": 615,
+        "text": "\\section{Amenability and the original-residual error bound}"
+      },
+      {
+        "line": 616,
+        "text": "\\label{sec:mscq}"
+      },
+      {
+        "line": 618,
+        "text": "\\subsection{A second correction on the same manifold}"
+      },
+      {
+        "line": 620,
+        "text": "\\begin{lemma}[Relative-interior correction]"
+      },
+      {
+        "line": 621,
+        "text": "\\label{lem:relative}"
+      },
+      {
+        "line": 672,
+        "text": "\\begin{theorem}[MSCQ from amenability of the reference face]"
+      },
+      {
+        "line": 673,
+        "text": "\\label{thm:mscq}"
+      },
+      {
+        "line": 731,
+        "text": "\\begin{corollary}[Amenable cones]"
+      },
+      {
+        "line": 732,
+        "text": "\\label{cor:amenable}"
+      },
+      {
+        "line": 765,
+        "text": "\\subsection{A universal characterization within nice cones}"
+      },
+      {
+        "line": 767,
+        "text": "\\begin{proposition}[The isometric face-inclusion test]"
+      },
+      {
+        "line": 768,
+        "text": "\\label{prop:inclusion}"
+      },
+      {
+        "line": 803,
+        "text": "\\begin{theorem}[Universal CRSC-to-MSCQ property]"
+      },
+      {
+        "line": 804,
+        "text": "\\label{thm:universal}"
+      },
+      {
+        "line": 847,
+        "text": "\\section{The boundary: a nice-cone counterexample with constant derivative}"
+      },
+      {
+        "line": 848,
+        "text": "\\label{sec:boundary}"
+      },
+      {
+        "line": 891,
+        "text": "\\begin{proposition}[Full facial CRCQ without MSCQ]"
+      },
+      {
+        "line": 892,
+        "text": "\\label{prop:counterexample}"
+      },
+      {
+        "line": 1005,
+        "text": "\\section{Cone classes, coupled examples, and fixed reductions}"
+      },
+      {
+        "line": 1006,
+        "text": "\\label{sec:examples}"
+      },
+      {
+        "line": 1008,
+        "text": "\\subsection{Products and strictly convex factors}"
+      },
+      {
+        "line": 1044,
+        "text": "\\subsection{Positive-semidefinite faces}"
+      },
+      {
+        "line": 1062,
+        "text": "\\subsection{Two SOC blocks with one curved common equation}"
+      },
+      {
+        "line": 1195,
+        "text": "\\subsection{A PSD model with a high-dimensional nonpolyhedral face}"
+      },
+      {
+        "line": 1341,
+        "text": "\\label{tab:constants}"
+      },
+      {
+        "line": 1357,
+        "text": "\\subsection{Transfer through a fixed local reduction}"
+      },
+      {
+        "line": 1358,
+        "text": "\\label{subsec:reduction}"
+      },
+      {
+        "line": 1360,
+        "text": "\\begin{lemma}[Output-local residual transfer]"
+      },
+      {
+        "line": 1361,
+        "text": "\\label{lem:transfer}"
+      },
+      {
+        "line": 1415,
+        "text": "\\section{A regularity and residual-transfer interface}"
+      },
+      {
+        "line": 1416,
+        "text": "\\label{sec:residual-interface}"
+      },
+      {
+        "line": 1447,
+        "text": "\\section{Limitations and conclusion}"
+      },
+      {
+        "line": 1448,
+        "text": "\\label{sec:conclusion}"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_bib",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/references.bib",
+    "sha256": "14cf0474d90a34fa9c3aa4b89bf409446aca78975d31925823861fd1d4533ef5",
+    "headings": []
+  },
+  {
+    "asset_id": "conic_fontsrc",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/中文作者字体来源与再生成说明.md",
+    "sha256": "f1c8a973c94191fe80fd0c043fa97d09495cc7b0a0f8ea431673dc9492743c8d",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Author-name font resource"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_readme",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/原始构建与数学范围说明.md",
+    "sha256": "14b4fc8132f99e8b47136dff8a4ffe622a23359d31b5c25427f399c76284b720",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Frozen minimal-face constant rank and metric subregularity over amenable cones"
+      },
+      {
+        "line": 9,
+        "text": "## Files"
+      },
+      {
+        "line": 21,
+        "text": "## Ordinary TeX Live build"
+      },
+      {
+        "line": 33,
+        "text": "## Mathematical and evidence scope"
+      },
+      {
+        "line": 39,
+        "text": "## Remaining release gate"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_report",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/构建报告与版本核对_v04.md",
+    "sha256": "2b468477e4199db8beb39c22b4e2f2ec9fee95ccf75ff951bbae2b7d1bd943ad",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Build report: RL-CONIC-2026 / MW-MASTER-V04"
+      },
+      {
+        "line": 3,
+        "text": "## v0.4 exact-author-name outcome (current)"
+      },
+      {
+        "line": 9,
+        "text": "### Existing-font route and compilation"
+      },
+      {
+        "line": 17,
+        "text": "### Verification and visual QA"
+      },
+      {
+        "line": 35,
+        "text": "### Final fingerprints and package"
+      },
+      {
+        "line": 54,
+        "text": "## Historical v0.3 build record (author display superseded above)"
+      },
+      {
+        "line": 56,
+        "text": "### v0.3 outcome (historical)"
+      },
+      {
+        "line": 62,
+        "text": "### Repair and bounded regression"
+      },
+      {
+        "line": 75,
+        "text": "### Actual compilation and visual QA"
+      },
+      {
+        "line": 96,
+        "text": "### Final fingerprints"
+      },
+      {
+        "line": 105,
+        "text": "### Source package and residual gate"
+      },
+      {
+        "line": 117,
+        "text": "## Historical v0.2 build report (superseded by the current record above)"
+      },
+      {
+        "line": 119,
+        "text": "### v0.2 outcome (historical snapshot)"
+      },
+      {
+        "line": 125,
+        "text": "### Applied integration map"
+      },
+      {
+        "line": 145,
+        "text": "### Current compilation and QA"
+      },
+      {
+        "line": 166,
+        "text": "### Current fingerprints"
+      },
+      {
+        "line": 175,
+        "text": "### Source package and residual gates"
+      },
+      {
+        "line": 187,
+        "text": "## Historical v0.1 build report (superseded by the current record above)"
+      },
+      {
+        "line": 191,
+        "text": "## Outcome"
+      },
+      {
+        "line": 211,
+        "text": "## Evidence and execution status"
+      },
+      {
+        "line": 221,
+        "text": "## Build route and incidental runtime repairs"
+      },
+      {
+        "line": 244,
+        "text": "## Quality checks"
+      },
+      {
+        "line": 268,
+        "text": "## v0.1 fingerprints"
+      },
+      {
+        "line": 276,
+        "text": "## Limitations and handoff"
+      },
+      {
+        "line": 282,
+        "text": "## One next action"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_ledger",
+    "path": "02_锥优化_CRSC_MSCQ/02_可编译源文件/论文证据范围与未闭合门槛台账.md",
+    "sha256": "bc8099c34a9402685c9b7decdc08c0089a96720b31117d4769617d36f6820777",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL-CONIC-2026 / MW-MASTER-V04: author-name correction ledger"
+      },
+      {
+        "line": 3,
+        "text": "## v0.4 exact author-name correction (current)"
+      },
+      {
+        "line": 17,
+        "text": "## Historical v0.3 repair ledger (author display superseded above)"
+      },
+      {
+        "line": 19,
+        "text": "### v0.3 authorized scope and repair map (historical)"
+      },
+      {
+        "line": 34,
+        "text": "### Current evidence and remaining gates"
+      },
+      {
+        "line": 50,
+        "text": "## v0.2 historical directed integration ledger (superseded where repaired above)"
+      },
+      {
+        "line": 52,
+        "text": "## v0.2 pre-edit integration contract"
+      },
+      {
+        "line": 78,
+        "text": "### Internal gates and conflict dispositions"
+      },
+      {
+        "line": 91,
+        "text": "### Updated section contracts"
+      },
+      {
+        "line": 97,
+        "text": "## v0.1 historical ledger (preserved)"
+      },
+      {
+        "line": 101,
+        "text": "## Scope and inputs"
+      },
+      {
+        "line": 112,
+        "text": "## Claim ledger created before result-bearing prose"
+      },
+      {
+        "line": 128,
+        "text": "## Section contracts"
+      },
+      {
+        "line": 142,
+        "text": "## Unresolved placeholders"
+      },
+      {
+        "line": 151,
+        "text": "## Terminology and figure proposals"
+      },
+      {
+        "line": 157,
+        "text": "## One next action"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_core",
+    "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/冻结CRSC_秩夹逼与MSCQ核心证明审计.md",
+    "sha256": "e163ade04e7c5e3a82f6d44ed0034809ef519650ffc3758d1c95fc6de65d3280",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL-CONIC-2026 — PA-CORE 核心证明逐项审查"
+      },
+      {
+        "line": 5,
+        "text": "## 1. 范围、证据与结论"
+      },
+      {
+        "line": 26,
+        "text": "## 2. 冻结设定与 imported theorem 检查"
+      },
+      {
+        "line": 36,
+        "text": "## 3. PROVED：秩夹逼及 A1/A2"
+      },
+      {
+        "line": 38,
+        "text": "### P1. 固定子空间秩夹逼"
+      },
+      {
+        "line": 44,
+        "text": "### P2. 严格乘子和线性化最小面的统一稳定性"
+      },
+      {
+        "line": 58,
+        "text": "### P3. 附近闭像 A1"
+      },
+      {
+        "line": 66,
+        "text": "## 4. PROVED：公共法向流形及常数 b"
+      },
+      {
+        "line": 68,
+        "text": "### P4. 关键分离对投影闭包成立"
+      },
+      {
+        "line": 76,
+        "text": "### P5. C1 坐标图、纤维独立与法向修正"
+      },
+      {
+        "line": 101,
+        "text": "### P6. 局部非线性面约化"
+      },
+      {
+        "line": 107,
+        "text": "## 5. PROVED：参考面残差性质、切向修正及 MSCQ"
+      },
+      {
+        "line": 109,
+        "text": "### P7. 相对内点方向与 c=4/τ_F"
+      },
+      {
+        "line": 125,
+        "text": "### P8. 邻域不是随每个点临时选择"
+      },
+      {
+        "line": 133,
+        "text": "### P9. 仅需参考面在原锥中的 amenability"
+      },
+      {
+        "line": 156,
+        "text": "### P10. 非 apex 原约束的残差转移"
+      },
+      {
+        "line": 169,
+        "text": "## 6. PROVED：proper nice 范围内的精确普遍量词"
+      },
+      {
+        "line": 181,
+        "text": "## 7. NEEDS_REPHRASE：精确定位及最小修订建议"
+      },
+      {
+        "line": 193,
+        "text": "## 8. GAP、三重审查、修订优先级"
+      },
+      {
+        "line": 203,
+        "text": "## 9. 执行、交付与限制"
+      },
+      {
+        "line": 210,
+        "text": "## 10. 标准 SCI expert contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_examples",
+    "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/耦合SOC与PSD_正例及显式常数审计.md",
+    "sha256": "f5a35d8bbbea1ecf8509f7475169cbca130697ce1d992968d205e780cbb93e12",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# PA-EXAMPLES：两个主文正例与定量常数审计"
+      },
+      {
+        "line": 7,
+        "text": "## 1. 结论与输入边界"
+      },
+      {
+        "line": 27,
+        "text": "## 2. 全部范数、对象与常数先固定"
+      },
+      {
+        "line": 58,
+        "text": "## 3. E-SOC：联合约束而非单块推理"
+      },
+      {
+        "line": 60,
+        "text": "### 3.1 精确数据与可行集"
+      },
+      {
+        "line": 82,
+        "text": "### 3.2 minimal face 与闭像：不必在例子中再借助 Pataki"
+      },
+      {
+        "line": 116,
+        "text": "### 3.3 CRSC 在完整邻域成立"
+      },
+      {
+        "line": 133,
+        "text": "### 3.4 amenability 与全部通用参数"
+      },
+      {
+        "line": 171,
+        "text": "### 3.5 独立的显式半径验证，不冒充最优常数"
+      },
+      {
+        "line": 204,
+        "text": "## 4. E-PSD：任意高维的非多面 proper face"
+      },
+      {
+        "line": 206,
+        "text": "### 4.1 参数完全固定"
+      },
+      {
+        "line": 233,
+        "text": "### 4.2 minimal face、闭像与 CRSC"
+      },
+      {
+        "line": 282,
+        "text": "### 4.3 角常数需要 projected cone 的闭包"
+      },
+      {
+        "line": 310,
+        "text": "### 4.4 amenability、内点余量与 L_G"
+      },
+      {
+        "line": 337,
+        "text": "### 4.5 显式可行点修复核验半径"
+      },
+      {
+        "line": 370,
+        "text": "## 5. 常数的主文速查表"
+      },
+      {
+        "line": 391,
+        "text": "## 6. 哪些只应列为直接推论；双曲锥 gate"
+      },
+      {
+        "line": 393,
+        "text": "### 6.1 p-cone 与产品覆盖"
+      },
+      {
+        "line": 403,
+        "text": "### 6.2 双曲锥不进入当前主文例子清单"
+      },
+      {
+        "line": 411,
+        "text": "## 7. 三个审稿视角、风险与最小修补"
+      },
+      {
+        "line": 424,
+        "text": "## 8. 证明任务状态与执行证据"
+      },
+      {
+        "line": 450,
+        "text": "## 9. 标准专家返回"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_arch",
+    "path": "02_锥优化_CRSC_MSCQ/03_核心证明审计/锥论文_最终论证架构与依赖链.md",
+    "sha256": "5622b9ac9381e1df99cb042e7b210e19d2ace230800cc87c989271981b562ac3",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# T4-A｜锥约束论文论证架构"
+      },
+      {
+        "line": 10,
+        "text": "## 1. Scope and inputs｜范围、证据与写作边界"
+      },
+      {
+        "line": 25,
+        "text": "## 2. Specialist findings｜拟题与中心命题"
+      },
+      {
+        "line": 27,
+        "text": "### 2.1 拟题"
+      },
+      {
+        "line": 41,
+        "text": "### 2.2 中心命题：一条正则性桥梁及其精确边界"
+      },
+      {
+        "line": 47,
+        "text": "### 2.3 主张—证据账本"
+      },
+      {
+        "line": 63,
+        "text": "## 3. 详细章节提纲"
+      },
+      {
+        "line": 67,
+        "text": "### 第 1 节 Introduction｜问题、缺口与三层答案"
+      },
+      {
+        "line": 76,
+        "text": "### 第 2 节 Preliminaries and the frozen-face condition｜定义与既有工具"
+      },
+      {
+        "line": 90,
+        "text": "### 第 3 节 Automatic facial stability on nice cones｜第一主定理"
+      },
+      {
+        "line": 100,
+        "text": "### 第 4 节 From normal correction to metric subregularity｜第二主定理及核心证明"
+      },
+      {
+        "line": 125,
+        "text": "### 第 5 节 Universal characterization and failure beyond amenability｜第三主定理与反例"
+      },
+      {
+        "line": 137,
+        "text": "### 第 6 节 Cone classes, coupled systems, and local reductions｜范围与可读实例"
+      },
+      {
+        "line": 149,
+        "text": "### 第 7 节 Discussion and conclusion｜边界与可选接口"
+      },
+      {
+        "line": 165,
+        "text": "### 附录建议"
+      },
+      {
+        "line": 170,
+        "text": "## 4. 章节论证任务表"
+      },
+      {
+        "line": 184,
+        "text": "## 5. 定理/引理依赖图（文字依赖表）"
+      },
+      {
+        "line": 210,
+        "text": "## 6. 关键概念安排与术语统一"
+      },
+      {
+        "line": 230,
+        "text": "## 7. Limitations and risks｜反驳、风险与冲突放置"
+      },
+      {
+        "line": 232,
+        "text": "### 7.1 预期反驳的最佳落点"
+      },
+      {
+        "line": 247,
+        "text": "### 7.2 需要主协调者裁定的来源冲突"
+      },
+      {
+        "line": 257,
+        "text": "### 7.3 未执行事项与不阻碍当前架构的限制"
+      },
+      {
+        "line": 261,
+        "text": "## 8. 建议保留、压缩与删除"
+      },
+      {
+        "line": 284,
+        "text": "## 9. Figure-location proposals｜可选图示提案（本任务未渲染）"
+      },
+      {
+        "line": 288,
+        "text": "## 10. Quality checks｜完成自检与交付"
+      },
+      {
+        "line": 300,
+        "text": "## 11. SCI-Skills standard expert contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_priority",
+    "path": "02_锥优化_CRSC_MSCQ/04_边界反例与优先权/CRSC与MSCQ_优先权及正式版证据矩阵.md",
+    "sha256": "29940cbcb539028e84fc01bfc23d06b7ae84fa67b473056edb0f60a9fa846ab2",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# CRSC–MSCQ：有界先行性证据矩阵"
+      },
+      {
+        "line": 5,
+        "text": "## 1. Scope and inputs"
+      },
+      {
+        "line": 29,
+        "text": "## 2. Specialist findings：结论与门禁"
+      },
+      {
+        "line": 37,
+        "text": "### 2.1 目标 DOI 的版本证据"
+      },
+      {
+        "line": 49,
+        "text": "## 3. 原始来源与纳入理由"
+      },
+      {
+        "line": 70,
+        "text": "## 4. Claim-to-reference evidence matrix"
+      },
+      {
+        "line": 86,
+        "text": "## 5. 检索与筛选日志"
+      },
+      {
+        "line": 88,
+        "text": "### 5.1 实际执行的完整查询"
+      },
+      {
+        "line": 113,
+        "text": "### 5.2 定向原始来源检查"
+      },
+      {
+        "line": 119,
+        "text": "### 5.3 纳排规则与日志"
+      },
+      {
+        "line": 139,
+        "text": "## 6. 允许与禁止的新颖性措辞"
+      },
+      {
+        "line": 160,
+        "text": "## 7. Evidence and execution status / limitations"
+      },
+      {
+        "line": 171,
+        "text": "### 7.1 最终版差分验收清单（尚未执行）"
+      },
+      {
+        "line": 182,
+        "text": "### 7.2 可复制的手工操作陪跑 Prompt"
+      },
+      {
+        "line": 230,
+        "text": "## 8. Quality checks and deliverable"
+      },
+      {
+        "line": 243,
+        "text": "## 9. Exact SCI-Skills expert result"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_boundary",
+    "path": "02_锥优化_CRSC_MSCQ/04_边界反例与优先权/Nice非Amenable锥_边界反例与必要性审计.md",
+    "sha256": "9fab8462655691771a570c04e940503d4015bfa5e57b75aff42cede08709ee9b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Boundary counterexample audit — PA-BOUNDARY"
+      },
+      {
+        "line": 7,
+        "text": "## 1. Scope and reviewed inputs"
+      },
+      {
+        "line": 17,
+        "text": "## 2. Findings at a glance"
+      },
+      {
+        "line": 30,
+        "text": "## 3. Paper-ready proposition: the face-inclusion test"
+      },
+      {
+        "line": 72,
+        "text": "## 4. Paper-ready proposition: the explicit apex counterexample"
+      },
+      {
+        "line": 197,
+        "text": "### 4.1 Explicit neighborhood quantifiers without relying on numerical Taylor checks"
+      },
+      {
+        "line": 223,
+        "text": "### 4.2 What the estimates do not prove"
+      },
+      {
+        "line": 231,
+        "text": "## 5. Paper-ready universal characterization with exact quantifiers"
+      },
+      {
+        "line": 250,
+        "text": "## 6. Evidence and execution status"
+      },
+      {
+        "line": 283,
+        "text": "## 7. Three review lenses and proof-gap list"
+      },
+      {
+        "line": 285,
+        "text": "### Contribution"
+      },
+      {
+        "line": 289,
+        "text": "### Methods"
+      },
+      {
+        "line": 302,
+        "text": "### Communication"
+      },
+      {
+        "line": 308,
+        "text": "## 8. Deliverables, limitations, and quality checks"
+      },
+      {
+        "line": 314,
+        "text": "## 9. Standard SCI expert contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "conic_test",
+    "path": "02_锥优化_CRSC_MSCQ/05_验证程序/验证_SOC与PSD实例常数.py",
+    "sha256": "667f22012eb86427e7817c13e6b7b8160549b46a3ca0d118502cf6f95f126fda",
+    "headings": [
+      {
+        "line": 26,
+        "text": "# SOC: ||P_H A e_u||^2=4; normalized cone-angle squared is 1/2."
+      },
+      {
+        "line": 40,
+        "text": "# PSD: k=3, C0=[e1,e2], D0=[e2,e3], Frobenius geometry."
+      },
+      {
+        "line": 55,
+        "text": "# Finite deterministic SOC checks only: exact feasible candidate and analytic"
+      },
+      {
+        "line": 56,
+        "text": "# distance-to-SOC formula. These samples are not the proof of the estimates."
+      },
+      {
+        "line": 73,
+        "text": "# PSD direct-bound algebra for diagonal B and rational h. The general proof"
+      },
+      {
+        "line": 74,
+        "text": "# uses the PSD block distance lower bound, not diagonal-only experiments."
+      }
+    ]
+  },
+  {
+    "asset_id": "readme_02",
+    "path": "02_锥优化_CRSC_MSCQ/README_本目录说明.md",
+    "sha256": "80a8cb8bc8ed60765de279b08a488fbc6ab1e7645df48f68079284961fd79b45",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 锥优化 CRSC–MSCQ"
+      },
+      {
+        "line": 5,
+        "text": "## 建议入口顺序"
+      },
+      {
+        "line": 18,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "mass",
+    "path": "03_随机与Markov理论/01_随机RL主线/质量稀释与矩匹配_随机提升独立审计.md",
+    "sha256": "ce8a410e86ef07eb111dcd28b6cf92c25f6738194c91059993d4e1e1212a69d9",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Independent audit: stochastic mass dilution, moment matching, and exact scalar lifting"
+      },
+      {
+        "line": 5,
+        "text": "## Executive decision"
+      },
+      {
+        "line": 19,
+        "text": "## 1. Claim-by-claim audit of the submitted stochastic report"
+      },
+      {
+        "line": 32,
+        "text": "### 1.1 Explicit reconstruction of the audited proof"
+      },
+      {
+        "line": 70,
+        "text": "### 1.2 Two important non-implications"
+      },
+      {
+        "line": 77,
+        "text": "## 2. Strengthened dilution theorem for nonisolated targets and actual Markov outputs"
+      },
+      {
+        "line": 79,
+        "text": "### Lemma 2.1 — distance to the full family of laws supported on a set"
+      },
+      {
+        "line": 97,
+        "text": "### Theorem 2.2 — local full-law moment-order obstruction"
+      },
+      {
+        "line": 151,
+        "text": "## 3. Exact moment matching: a necessary-and-sufficient scalar theorem"
+      },
+      {
+        "line": 153,
+        "text": "### Theorem 3.1 — universal `Lʳ` residual classification"
+      },
+      {
+        "line": 193,
+        "text": "### Critical local-to-global consequence"
+      },
+      {
+        "line": 197,
+        "text": "## 4. Exact scalar commutation classification"
+      },
+      {
+        "line": 210,
+        "text": "### Theorem 4.1 — exact concavification formula"
+      },
+      {
+        "line": 235,
+        "text": "### Corollary 4.2 — local RMS contraction requires the whole support envelope"
+      },
+      {
+        "line": 258,
+        "text": "### Corollary 4.3 — exact power formulas and the loss from separate aggregation"
+      },
+      {
+        "line": 320,
+        "text": "### Consequence for genuine nonlinear RL"
+      },
+      {
+        "line": 326,
+        "text": "## 5. Exact relationship to the closest existing machinery"
+      },
+      {
+        "line": 328,
+        "text": "### 5.1 Pischke–Powell (2026): this is a substantive overlap, not a distant citation"
+      },
+      {
+        "line": 334,
+        "text": "### 5.2 Classical multivalued superposition theory"
+      },
+      {
+        "line": 340,
+        "text": "### 5.3 HLS and conditional transport"
+      },
+      {
+        "line": 346,
+        "text": "## 6. What is proved, what should be repaired, and what should be killed"
+      },
+      {
+        "line": 348,
+        "text": "### Mathematical repairs before inclusion in a paper"
+      },
+      {
+        "line": 356,
+        "text": "### Publication-value judgment"
+      },
+      {
+        "line": 367,
+        "text": "## 7. Return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "stoch",
+    "path": "03_随机与Markov理论/01_随机RL主线/随机RL_合法耦合接口与提升障碍.md",
+    "sha256": "94b4d0df4016189ad90bb0c6b301f23d097666da3d44db0074b22ddadc569f50",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Stochastic RL: legal coupling interface, a dilution obstruction, and a flagship kill gate"
+      },
+      {
+        "line": 5,
+        "text": "## Verdict"
+      },
+      {
+        "line": 19,
+        "text": "## 1. Inputs and evidence scope"
+      },
+      {
+        "line": 33,
+        "text": "## 2. Exact relation to HLS: where renaming must stop"
+      },
+      {
+        "line": 70,
+        "text": "## 3. Why physical and law-space displacements cannot be interchanged"
+      },
+      {
+        "line": 80,
+        "text": "### Natural parallel-projection test"
+      },
+      {
+        "line": 97,
+        "text": "### A correct recoupling inequality, and its limitation"
+      },
+      {
+        "line": 115,
+        "text": "## 4. Small-mass dilution: a no-go for the naive nonlinear lift"
+      },
+      {
+        "line": 117,
+        "text": "### Proposition 4.1 — superlinear full-law EB obstruction"
+      },
+      {
+        "line": 150,
+        "text": "### Corollary 4.2 — the critical deterministic exponent need not survive averaging"
+      },
+      {
+        "line": 156,
+        "text": "### Concrete deterministic-to-law failure"
+      },
+      {
+        "line": 173,
+        "text": "### Correct moment order"
+      },
+      {
+        "line": 190,
+        "text": "## 5. A legal coupling-level RL–gauge theorem"
+      },
+      {
+        "line": 225,
+        "text": "### Theorem 5.1 — energy, nonlinear composition and whole-law convergence"
+      },
+      {
+        "line": 285,
+        "text": "### Coverage and nonvacuity gate"
+      },
+      {
+        "line": 291,
+        "text": "## 6. A fully verified nonlinear multivalued class beyond HLS's finite expected almost-FNE hypothesis"
+      },
+      {
+        "line": 319,
+        "text": "### Native reference, preserving initial correlations"
+      },
+      {
+        "line": 345,
+        "text": "### Genuine nonlinear RL and pointwise order-two EB"
+      },
+      {
+        "line": 383,
+        "text": "### Strict separation from finite expected almost-FNE"
+      },
+      {
+        "line": 395,
+        "text": "## 7. Required adversarial tests"
+      },
+      {
+        "line": 397,
+        "text": "### 7.1 The natural parallel projection is detected"
+      },
+      {
+        "line": 407,
+        "text": "### 7.2 Pointwise gauges cannot simply be applied to RMS residuals"
+      },
+      {
+        "line": 411,
+        "text": "### 7.3 Accurate zeros plus energy need not imply convergence"
+      },
+      {
+        "line": 415,
+        "text": "### 7.4 Different residuals cannot be swapped into one energy identity"
+      },
+      {
+        "line": 419,
+        "text": "### 7.5 A stronger, genuinely multivalued natural pressure test"
+      },
+      {
+        "line": 425,
+        "text": "## 8. Publication-value decision"
+      },
+      {
+        "line": 445,
+        "text": "## 9. Return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "finite",
+    "path": "03_随机与Markov理论/02_有限状态分类/有限状态_精确零集与线性误差界等价.md",
+    "sha256": "0608f742257d34447292b83025bd40ea4768bd5f3972cd7cb224b9375669bf00",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Finite-state classification for the original invariant transport discrepancy"
+      },
+      {
+        "line": 9,
+        "text": "## 1. Outcome and exact quantifiers"
+      },
+      {
+        "line": 60,
+        "text": "### Theorem 1 — finite-state exact-zero/linear-EB equivalence"
+      },
+      {
+        "line": 78,
+        "text": "## 2. Exact finite-polytope representation of the nested minimization"
+      },
+      {
+        "line": 106,
+        "text": "### Lemma 2 — exact union, not a relaxation"
+      },
+      {
+        "line": 147,
+        "text": "## 3. Two facts about squared distance to the stationary polytope"
+      },
+      {
+        "line": 160,
+        "text": "## 4. Vertex proof and the sharp finite constant"
+      },
+      {
+        "line": 201,
+        "text": "## 5. Independent Hoffman proof, including branches without zero faces"
+      },
+      {
+        "line": 248,
+        "text": "## 6. Proven continuity and continuous piecewise-affine structure"
+      },
+      {
+        "line": 306,
+        "text": "## 7. Finite exact-zero certificates and applicability boundaries"
+      },
+      {
+        "line": 337,
+        "text": "## 8. How this narrows the public open question"
+      },
+      {
+        "line": 358,
+        "text": "## 9. Safe contribution wording and review record"
+      },
+      {
+        "line": 380,
+        "text": "## 10. Strictly stronger than pointwise displacement injectivity: two positive examples"
+      },
+      {
+        "line": 391,
+        "text": "### 10.1 A minimal nontrivial support-based example"
+      },
+      {
+        "line": 414,
+        "text": "### 10.2 A genuinely OT-dependent, geometrically convergent four-state example"
+      },
+      {
+        "line": 442,
+        "text": "#### Exact zeros require input-OT optimality"
+      },
+      {
+        "line": 475,
+        "text": "#### Sharp global constant: hand proof and exhaustive exact verification"
+      },
+      {
+        "line": 540,
+        "text": "#### Actual Markov convergence, with all-initial-law relative quantifiers"
+      },
+      {
+        "line": 573,
+        "text": "#### Small-update almost-firmness and failure of the specific scalar-rate compatibility condition"
+      },
+      {
+        "line": 632,
+        "text": "## 11. Focused finite-state priority deduction"
+      }
+    ]
+  },
+  {
+    "asset_id": "finite_audit",
+    "path": "03_随机与Markov理论/02_有限状态分类/有限状态分类与惰性四循环_精确独立审计.md",
+    "sha256": "fd3c3f75b9b7bf94b978c933fbae3e2a69467eaecf6fffaaa8451b49e3cd612b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Independent audit: finite-state source discrepancy and the lazy four-cycle"
+      },
+      {
+        "line": 5,
+        "text": "## 1. Verdict"
+      },
+      {
+        "line": 18,
+        "text": "## 2. Inputs and exact source quantifiers"
+      },
+      {
+        "line": 40,
+        "text": "## 3. Audit of the general finite-state theorem"
+      },
+      {
+        "line": 59,
+        "text": "## 4. Four-cycle: direct sharp proof without enumeration"
+      },
+      {
+        "line": 140,
+        "text": "### Exact zeros and the essential OT constraint"
+      },
+      {
+        "line": 160,
+        "text": "## 5. The 35-vertex computation: why it is exhaustive"
+      },
+      {
+        "line": 176,
+        "text": "## 6. Local constant and source-compatible parameters"
+      },
+      {
+        "line": 178,
+        "text": "### 6.1 Global sharpness must not be transferred to a local ray"
+      },
+      {
+        "line": 219,
+        "text": "### 6.2 Exact expected almost-firm violation for every parameter"
+      },
+      {
+        "line": 246,
+        "text": "### 6.3 No source-compatible general gauge, not merely no compatible linear constant"
+      },
+      {
+        "line": 273,
+        "text": "## 7. Actual geometric convergence and local one-step expansion"
+      },
+      {
+        "line": 329,
+        "text": "## 8. Contribution and communication boundaries"
+      },
+      {
+        "line": 331,
+        "text": "### Contribution lens"
+      },
+      {
+        "line": 337,
+        "text": "### Methods lens"
+      },
+      {
+        "line": 341,
+        "text": "### Communication lens"
+      },
+      {
+        "line": 345,
+        "text": "## 9. Execution and expert contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "markov_counter",
+    "path": "03_随机与Markov理论/03_无限状态障碍/有限与无限状态_反例及正则性障碍独立审计.md",
+    "sha256": "3416727429588eb73b811b20fe45b49b4d2a2eef795190888fc602ee24281aa2",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Independent hostile audit: the four-state invariant-transport example"
+      },
+      {
+        "line": 5,
+        "text": "## Verdict, updated after the extension audit"
+      },
+      {
+        "line": 17,
+        "text": "## 1. Source and hypothesis audit"
+      },
+      {
+        "line": 21,
+        "text": "### 1.1 Hermer–Luke–Sturm"
+      },
+      {
+        "line": 25,
+        "text": "### 1.2 Luke, Mathematical Programming 2024/2025"
+      },
+      {
+        "line": 29,
+        "text": "### 1.3 Luke–Schultze–Grubmüller, Mathematical Programming 2026"
+      },
+      {
+        "line": 33,
+        "text": "### 1.4 Exact discrepancy retained in this audit"
+      },
+      {
+        "line": 45,
+        "text": "## 2. Exact finite-state model"
+      },
+      {
+        "line": 80,
+        "text": "### Expected almost-firmness"
+      },
+      {
+        "line": 97,
+        "text": "## 3. Exact Wasserstein distance and sharp contraction"
+      },
+      {
+        "line": 116,
+        "text": "### Proof of the distance formula"
+      },
+      {
+        "line": 139,
+        "text": "### Exact contraction certificates"
+      },
+      {
+        "line": 170,
+        "text": "## 4. Optimal coupling, false zeros and nonparacontraction"
+      },
+      {
+        "line": 197,
+        "text": "### It is genuinely outside paracontraction in measure"
+      },
+      {
+        "line": 216,
+        "text": "## 5. Additional audit result: the discrepancy itself IS subregular"
+      },
+      {
+        "line": 220,
+        "text": "### Proposition"
+      },
+      {
+        "line": 240,
+        "text": "### Proof"
+      },
+      {
+        "line": 273,
+        "text": "### What this rules out rhetorically"
+      },
+      {
+        "line": 277,
+        "text": "## 6. Convergence to an individual law, with uniform relative rate"
+      },
+      {
+        "line": 315,
+        "text": "## 7. What is actually refuted"
+      },
+      {
+        "line": 334,
+        "text": "## 8. Priority and publication audit"
+      },
+      {
+        "line": 346,
+        "text": "## 9. Additional scope theorem: exact zeros on a compact domain already give some gauge"
+      },
+      {
+        "line": 368,
+        "text": "## 10. Execution record and quality checks"
+      },
+      {
+        "line": 382,
+        "text": "### Expert return contract"
+      },
+      {
+        "line": 431,
+        "text": "## 11. Addendum verdict: projection, countable exact-zero model, compactness"
+      },
+      {
+        "line": 449,
+        "text": "## 12. Independent proof audit of the natural projection example"
+      },
+      {
+        "line": 512,
+        "text": "## 13. Independent proof audit of the countable exact-zero construction"
+      },
+      {
+        "line": 514,
+        "text": "### 13.1 Local blocks and costs"
+      },
+      {
+        "line": 526,
+        "text": "### 13.2 Compact state domain, continuity and uniform regularity"
+      },
+      {
+        "line": 557,
+        "text": "### 13.3 Stationarity and the complete transport dual"
+      },
+      {
+        "line": 596,
+        "text": "### 13.4 Exact discrepancy zeros, including the infinite-block issue"
+      },
+      {
+        "line": 609,
+        "text": "### 13.5 Point convergence and finite Wasserstein length"
+      },
+      {
+        "line": 659,
+        "text": "### 13.6 No positive Hölder exponent, locally at one invariant law"
+      },
+      {
+        "line": 679,
+        "text": "## 14. Additional corollary: rate-compatible general gauges also fail here"
+      },
+      {
+        "line": 709,
+        "text": "## 15. Addendum execution, source scope and next step"
+      }
+    ]
+  },
+  {
+    "asset_id": "conditional_audit",
+    "path": "03_随机与Markov理论/04_相关性与随机表示/条件残差修复_独立敌对审计与高斯锐常数.md",
+    "sha256": "1d02926016b2e79e210d578303de4e80427999f99a33ab4840b1d9c68effe6eb",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Independent hostile audit: conditional Markov residual repair"
+      },
+      {
+        "line": 5,
+        "text": "## Executive verdict"
+      },
+      {
+        "line": 27,
+        "text": "## 1. Materials, scope and evidence"
+      },
+      {
+        "line": 44,
+        "text": "## 2. Frozen marginal, changed metric, and actual invariant problem"
+      },
+      {
+        "line": 46,
+        "text": "### 2.1 Legal construction"
+      },
+      {
+        "line": 64,
+        "text": "### 2.2 What the construction does not prove"
+      },
+      {
+        "line": 83,
+        "text": "### 2.3 No unmatched RL energy"
+      },
+      {
+        "line": 95,
+        "text": "## 3. Sharp binary-refresh theorem and its quantifiers"
+      },
+      {
+        "line": 97,
+        "text": "### 3.1 Tensorization proof: PASS"
+      },
+      {
+        "line": 109,
+        "text": "### 3.2 Optimal constants: PASS"
+      },
+      {
+        "line": 135,
+        "text": "### 3.3 Equivalences: PASS, with quantifiers retained"
+      },
+      {
+        "line": 153,
+        "text": "## 4. Nonuniform gauges, length and countable continuous RFI"
+      },
+      {
+        "line": 155,
+        "text": "### 4.1 Knapsack formula: PASS"
+      },
+      {
+        "line": 171,
+        "text": "### 4.2 Actual rates and length: PASS"
+      },
+      {
+        "line": 186,
+        "text": "### 4.3 Countable continuous-map implementation: PASS"
+      },
+      {
+        "line": 194,
+        "text": "### 4.4 Exact weak-Poincaré reduction: novelty warning"
+      },
+      {
+        "line": 219,
+        "text": "## 5. Coupled Gaussian improvement: optimal EB coefficient"
+      },
+      {
+        "line": 223,
+        "text": "### Proposition A — sharp conditional Gaussian error bound"
+      },
+      {
+        "line": 240,
+        "text": "#### Proof"
+      },
+      {
+        "line": 292,
+        "text": "### Why this matters, and the remaining caution"
+      },
+      {
+        "line": 300,
+        "text": "## 6. Dependent Dobrushin theorem: valid, but directly existing"
+      },
+      {
+        "line": 316,
+        "text": "## 7. Closest literature: verified overlaps and unresolved checks"
+      },
+      {
+        "line": 343,
+        "text": "## 8. Independent execution results"
+      },
+      {
+        "line": 364,
+        "text": "## 9. Editorial-risk assessment and minimum upgrade"
+      },
+      {
+        "line": 366,
+        "text": "### Contribution lens"
+      },
+      {
+        "line": 370,
+        "text": "### Methods lens"
+      },
+      {
+        "line": 374,
+        "text": "### Communication lens"
+      },
+      {
+        "line": 378,
+        "text": "### Final GO / REPAIR / KILL matrix"
+      },
+      {
+        "line": 396,
+        "text": "## 10. Expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "conditional",
+    "path": "03_随机与Markov理论/04_相关性与随机表示/条件残差修复_相关性与块刷新定理.md",
+    "sha256": "91f7a071db2d62e1b8ab965e6cb13d1d0568f582b72eb4bc47dc0b6e22357072",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Correlation-aware conditional residuals for random projections and block refresh"
+      },
+      {
+        "line": 5,
+        "text": "## Executive verdict"
+      },
+      {
+        "line": 19,
+        "text": "## 1. Sources, scope and choice of existing tool"
+      },
+      {
+        "line": 39,
+        "text": "## 2. Native random coordinate projections and a computable residual"
+      },
+      {
+        "line": 71,
+        "text": "### Lemma 2.1: conditional tensorization"
+      },
+      {
+        "line": 85,
+        "text": "### Theorem 2.2: sharp native error bound and convergence equivalence"
+      },
+      {
+        "line": 137,
+        "text": "### Consequences and exact limits"
+      },
+      {
+        "line": 151,
+        "text": "## 3. General gauges: exact answer for nonuniform binary refresh"
+      },
+      {
+        "line": 177,
+        "text": "### Theorem 3.1: the smallest gauge from native data"
+      },
+      {
+        "line": 205,
+        "text": "### Theorem 3.2: exact uniform rates and finite length"
+      },
+      {
+        "line": 230,
+        "text": "### Explicit polynomial example"
+      },
+      {
+        "line": 256,
+        "text": "### A compact continuous-RFI implementation of arbitrarily slow fibers"
+      },
+      {
+        "line": 270,
+        "text": "## 4. Genuinely dependent blocks: import Dobrushin comparison"
+      },
+      {
+        "line": 288,
+        "text": "### Theorem 4.1: an explicit correlated-specification EB"
+      },
+      {
+        "line": 307,
+        "text": "### Native convergence certificate"
+      },
+      {
+        "line": 323,
+        "text": "## 5. A natural coupled random-projection/Gaussian class"
+      },
+      {
+        "line": 347,
+        "text": "### Theorem 5.1: explicit projection-matrix verifier"
+      },
+      {
+        "line": 373,
+        "text": "## 6. Relation to the old synchronous discrepancy and to RL"
+      },
+      {
+        "line": 375,
+        "text": "### 6.1 The parallel-projection failure is repaired exactly"
+      },
+      {
+        "line": 391,
+        "text": "### 6.2 Retaining only coordinate marginals still fails"
+      },
+      {
+        "line": 396,
+        "text": "### 6.3 This changes topology: a mandatory limitation"
+      },
+      {
+        "line": 404,
+        "text": "### 6.4 Safe stochastic RL interface"
+      },
+      {
+        "line": 418,
+        "text": "## 7. What has actually advanced, and what has not"
+      },
+      {
+        "line": 437,
+        "text": "### Decisive additional overlap: weak Poincaré profiles"
+      },
+      {
+        "line": 449,
+        "text": "## 8. Search log and evidence boundaries"
+      },
+      {
+        "line": 469,
+        "text": "### Executed checks"
+      },
+      {
+        "line": 473,
+        "text": "## 9. Return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "correlation",
+    "path": "03_随机与Markov理论/04_相关性与随机表示/相关性感知_随机近端正类与分支缺陷障碍.md",
+    "sha256": "e56084aba8c568fbbb4493e22afb2c4bbdea120a9f59aef88f6615601f56f4cb",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Correlation-aware residuals beyond Gibbs: genuine random proximal maps"
+      },
+      {
+        "line": 5,
+        "text": "## 0. Outcome"
+      },
+      {
+        "line": 17,
+        "text": "## 1. Scope, reviewed inputs and existing machinery"
+      },
+      {
+        "line": 41,
+        "text": "## 2. Natural model: inconsistent semidefinite quadratic proximal maps"
+      },
+      {
+        "line": 90,
+        "text": "### The correlation-aware residual"
+      },
+      {
+        "line": 106,
+        "text": "## 3. Complete positive theorem, with native constants"
+      },
+      {
+        "line": 108,
+        "text": "### Theorem A — non-Gibbs random-proximal conditional EB"
+      },
+      {
+        "line": 149,
+        "text": "#### Proof"
+      },
+      {
+        "line": 169,
+        "text": "### Ordinary joint Wasserstein interface"
+      },
+      {
+        "line": 183,
+        "text": "### A noncommuting inconsistent example"
+      },
+      {
+        "line": 207,
+        "text": "### Multivalued normal-cone endpoint"
+      },
+      {
+        "line": 217,
+        "text": "## 4. Smooth scalar random prox: exact sharp constants and missed correlations"
+      },
+      {
+        "line": 243,
+        "text": "### Exact native residual evaluation"
+      },
+      {
+        "line": 262,
+        "text": "### Sharpness"
+      },
+      {
+        "line": 281,
+        "text": "### Exact old-discrepancy formula"
+      },
+      {
+        "line": 328,
+        "text": "## 5. Minimal structural obstruction: stationarity is not branchwise stationarity"
+      },
+      {
+        "line": 330,
+        "text": "### Proposition B — branchwise residuals fail for inconsistent prox"
+      },
+      {
+        "line": 359,
+        "text": "### Why the Gibbs repair does not transplant directly"
+      },
+      {
+        "line": 377,
+        "text": "## 6. Exact comparison with HLS, tensorization and Dobrushin"
+      },
+      {
+        "line": 379,
+        "text": "### 6.1 HLS domination is already verified after the conserved variable is frozen"
+      },
+      {
+        "line": 404,
+        "text": "### 6.2 Tensorization and Dobrushin: inapplicability is not novelty"
+      },
+      {
+        "line": 420,
+        "text": "## 7. RL interface and the remaining genuine research barrier"
+      },
+      {
+        "line": 434,
+        "text": "## 8. Quality checks, risks and verdict"
+      },
+      {
+        "line": 462,
+        "text": "## 9. Exact expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "native",
+    "path": "03_随机与Markov理论/04_相关性与随机表示/非乘积随机近端_吸收选择与非不变极限障碍.md",
+    "sha256": "f45947f55a8e36b80e80d90cd31e425fcd869393957d828e7574f6140dd4c3f2",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Native non-product random proximal maps: an absorption and selection barrier"
+      },
+      {
+        "line": 5,
+        "text": "## 0. Decision"
+      },
+      {
+        "line": 20,
+        "text": "## 1. Scope, native objects and literature gate"
+      },
+      {
+        "line": 49,
+        "text": "## 2. A universal physical-coupling obstruction"
+      },
+      {
+        "line": 51,
+        "text": "### Theorem 2.1 — zero-distance physical RL forces absorption"
+      },
+      {
+        "line": 78,
+        "text": "### Approximate-reference version"
+      },
+      {
+        "line": 96,
+        "text": "### Multi-step and support-only boundaries"
+      },
+      {
+        "line": 108,
+        "text": "### What does and does not survive"
+      },
+      {
+        "line": 118,
+        "text": "## 3. Same-objective randomized global prox: all stationary motion disappears"
+      },
+      {
+        "line": 120,
+        "text": "### Theorem 3.1 — exact invariant-family identification from proximal descent"
+      },
+      {
+        "line": 157,
+        "text": "### Full-support tie selection"
+      },
+      {
+        "line": 168,
+        "text": "### Exceptions are real changes of problem"
+      },
+      {
+        "line": 172,
+        "text": "## 4. Common minimizers already give linear solution comparison"
+      },
+      {
+        "line": 174,
+        "text": "### Proposition 4.1 — no essential nonlinear anchored scale in consistent global prox"
+      },
+      {
+        "line": 194,
+        "text": "## 5. Fully native non-product group-sparse proximal counterexample"
+      },
+      {
+        "line": 196,
+        "text": "### 5.1 Objective, complete graph and actual policy"
+      },
+      {
+        "line": 259,
+        "text": "### Theorem 5.1 — unique invariant law but noninvariant finite-length limits"
+      },
+      {
+        "line": 330,
+        "text": "### Corollary 5.2 — every vanishing-gauge local law-step EB fails"
+      },
+      {
+        "line": 350,
+        "text": "### No Hölder selection or probabilistic continuity across the jump"
+      },
+      {
+        "line": 361,
+        "text": "### Why this is not a counterexample to T5"
+      },
+      {
+        "line": 378,
+        "text": "## 6. Continuous noise removes tie-choice relevance"
+      },
+      {
+        "line": 380,
+        "text": "### Proposition 6.1 — almost-everywhere single-valued global prox"
+      },
+      {
+        "line": 420,
+        "text": "## 7. Native finite-support calculus: why the same barrier is not special to one group"
+      },
+      {
+        "line": 449,
+        "text": "## 8. Exact reduction and exclusion audit"
+      },
+      {
+        "line": 466,
+        "text": "### The closest existing stochastic and non-Feller frameworks"
+      },
+      {
+        "line": 476,
+        "text": "## 9. What this actually adds to the RL research program"
+      },
+      {
+        "line": 487,
+        "text": "## 10. Search and execution record"
+      },
+      {
+        "line": 523,
+        "text": "## 11. Publication threshold and return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "markov_novelty",
+    "path": "03_随机与Markov理论/05_新颖性及期刊门槛/Markov研究_全球新颖性压力测试与旧机制扣除.md",
+    "sha256": "47684c88ebee712a63ff6268c849f92c2ecf80a467a48990ac14fcba457a48b3",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Markov invariant-transport programme: global-priority stress test"
+      },
+      {
+        "line": 5,
+        "text": "## 1. Decision"
+      },
+      {
+        "line": 17,
+        "text": "## 2. Scope, inputs, and labels"
+      },
+      {
+        "line": 59,
+        "text": "## 3. Direct RFI lineage: what is actually ruled out"
+      },
+      {
+        "line": 75,
+        "text": "## 4. Most serious conceptual precedent: weak-Poincaré counterexamples"
+      },
+      {
+        "line": 92,
+        "text": "## 5. Positive repair: imports versus possible new interface"
+      },
+      {
+        "line": 94,
+        "text": "### 5.1 Conditional is not automatically adapted"
+      },
+      {
+        "line": 106,
+        "text": "### 5.2 Dobrushin and Gaussian claims"
+      },
+      {
+        "line": 120,
+        "text": "### 5.3 The nonuniform one-bit gauge is an optimal spectral profile"
+      },
+      {
+        "line": 134,
+        "text": "### 5.4 Other adjacent tools screened"
+      },
+      {
+        "line": 141,
+        "text": "## 6. Safe abstract-level claims"
+      },
+      {
+        "line": 157,
+        "text": "## 7. Research decision and remaining evidence"
+      },
+      {
+        "line": 165,
+        "text": "## 8. Search record and limits"
+      },
+      {
+        "line": 217,
+        "text": "## 9. Exact expert return contract"
+      }
+    ]
+  },
+  {
+    "asset_id": "markov_journal",
+    "path": "03_随机与Markov理论/05_新颖性及期刊门槛/有限Markov分类_论文整合与期刊门槛重评.md",
+    "sha256": "4dca9d637e64dea431814d12b126f220e7ef4d70aeca536aad053a42a8e5701f",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 有限状态 Markov 分类成果包：期刊门槛重新评估"
+      },
+      {
+        "line": 5,
+        "text": "## 1. 更新后的判决"
+      },
+      {
+        "line": 13,
+        "text": "## 2. 新资产究竟增加了什么"
+      },
+      {
+        "line": 28,
+        "text": "## 3. 数学审查：通过的部分与必须并入主稿的修正"
+      },
+      {
+        "line": 46,
+        "text": "### 3.1 有限主定理没有发现新的致命漏洞"
+      },
+      {
+        "line": 58,
+        "text": "### 3.2 Lazy-cycle 的四项修正不得丢失"
+      },
+      {
+        "line": 79,
+        "text": "## 4. 敌意审稿人仍然能提出什么"
+      },
+      {
+        "line": 93,
+        "text": "## 5. 最强近邻扣除：需要承认的旧机制"
+      },
+      {
+        "line": 105,
+        "text": "## 6. 最低剩余门：Proof / Novelty / Application"
+      },
+      {
+        "line": 109,
+        "text": "### P：证明与版本冻结——大部分已过，剩下合并审计"
+      },
+      {
+        "line": 117,
+        "text": "### N：优先权与意义——仍是决定期刊层级的硬门"
+      },
+      {
+        "line": 125,
+        "text": "### A：应用——聚焦理论论文已有基础，实用算法论文尚未有"
+      },
+      {
+        "line": 133,
+        "text": "## 7. 期刊层级：现在应怎样说"
+      },
+      {
+        "line": 145,
+        "text": "## 8. 推荐主稿内容与停止扩张规则"
+      },
+      {
+        "line": 160,
+        "text": "## 9. 证据与返回契约"
+      }
+    ]
+  },
+  {
+    "asset_id": "markov_exact",
+    "path": "03_随机与Markov理论/06_验证程序/验证_四状态反例精确证书.py",
+    "sha256": "c0b512fbccbe2e7d40e0721fb3c41521900d622605309a4f211b42f6392a2151",
+    "headings": []
+  },
+  {
+    "asset_id": "finite_exact",
+    "path": "03_随机与Markov理论/06_验证程序/验证_惰性四循环精确有理数.py",
+    "sha256": "280e57a432bae380d5737b6ead99063902b0448258cdda2d1ab3b7ba7ba65f4e",
+    "headings": []
+  },
+  {
+    "asset_id": "markov_ext",
+    "path": "03_随机与Markov理论/06_验证程序/验证_投影与可数紧致扩展.py",
+    "sha256": "edce45b071adba32b6616c8fe94da452c0b20b9c433f5bc7e66759001fd2a740",
+    "headings": []
+  },
+  {
+    "asset_id": "finite_test",
+    "path": "03_随机与Markov理论/06_验证程序/验证_有限状态OT严格性.py",
+    "sha256": "413918ccd90961c7a332b2f5edd19dbb2b6078efda476e065465c18b7591a659",
+    "headings": []
+  },
+  {
+    "asset_id": "conditional_test",
+    "path": "03_随机与Markov理论/06_验证程序/验证_条件残差修复独立复核.py",
+    "sha256": "0885b8e0e10060e9c47bc24b7327c18d58c3a3a0eb7d9a627846a4d50e33fc02",
+    "headings": []
+  },
+  {
+    "asset_id": "correlation_test",
+    "path": "03_随机与Markov理论/06_验证程序/验证_随机近端相关性与常数.py",
+    "sha256": "87dbfa24f9191d5f11e3372a50e4bd014c9e1e1eac72ccfc23f63047abf097e0",
+    "headings": []
+  },
+  {
+    "asset_id": "native_test",
+    "path": "03_随机与Markov理论/06_验证程序/验证_非乘积近端与吸收障碍.py",
+    "sha256": "1b1ee7af6e7ae35f9c35c5fbc7409365957eefa20fe0d4cfe16df92494f9c55d",
+    "headings": [
+      {
+        "line": 35,
+        "text": "# Polynomial identities along x=a*v reduce to affine/quadratic coefficients."
+      }
+    ]
+  },
+  {
+    "asset_id": "readme_03",
+    "path": "03_随机与Markov理论/README_本目录说明.md",
+    "sha256": "4e7c63321a1e8b5b41a0e85c094d7b95abfc14b7cf69f0a9d7d1fe1984dbe81b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 随机与 Markov 理论"
+      },
+      {
+        "line": 5,
+        "text": "## 建议入口顺序"
+      },
+      {
+        "line": 20,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_reg",
+    "path": "04_公开问题与未来攻关/01_原始公开问题/正则性公开问题_用户原始材料.md",
+    "sha256": "3e0c9aca101d5165f7cd4f0e2db7824933a77e4a2aaf1ec5d61769c752d2471c",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL-PPA 正则性公开问题与技术瓶颈清单"
+      },
+      {
+        "line": 7,
+        "text": "## 1. 范围、记号与证据口径"
+      },
+      {
+        "line": 49,
+        "text": "## 2. 筛选结果"
+      },
+      {
+        "line": 67,
+        "text": "## 3. 11 个详细候选"
+      },
+      {
+        "line": 69,
+        "text": "### R01 — 保留零集排除信息的 outer/restricted coderivative 运算规则"
+      },
+      {
+        "line": 99,
+        "text": "### R02 — 普通 metric subregularity 的精确 Lipschitz 扰动半径"
+      },
+      {
+        "line": 138,
+        "text": "### R03 — 有限线性系统 continuous subregularity 半径的点式公式"
+      },
+      {
+        "line": 168,
+        "text": "### R04 — 一般半无限线性系统 ordinary subregularity 的精确模量"
+      },
+      {
+        "line": 205,
+        "text": "### R05 — 将 generalized metric subregularity 的验证从 (C^2) 推至 (C^{1,1})/composite"
+      },
+      {
+        "line": 243,
+        "text": "### R06 — 退化 SDP 的实例级最优/近最优误差界常数"
+      },
+      {
+        "line": 277,
+        "text": "### R07 — 刻画 (\\alpha)-error-bound-regular 锥，(1/2\\le\\alpha<1)"
+      },
+      {
+        "line": 307,
+        "text": "### R08 — 是否存在“几乎处处劣于平方根”的闭凸锥？"
+      },
+      {
+        "line": 331,
+        "text": "### R09 — 非线性 facial-residual 模量的几何角条件"
+      },
+      {
+        "line": 370,
+        "text": "### R10 — 具体模型中精确非幂 gauge 的实际计算"
+      },
+      {
+        "line": 400,
+        "text": "### R11 — 非孤立解集上普通 (q>1) subregularity 的扰动证书"
+      },
+      {
+        "line": 434,
+        "text": "## 4. 观察项：未进入 11 个最终候选"
+      },
+      {
+        "line": 443,
+        "text": "## 5. 原始候选台账：36 项"
+      },
+      {
+        "line": 486,
+        "text": "## 6. 关键淘汰与后续核验结论"
+      },
+      {
+        "line": 512,
+        "text": "## 7. 等待中央筛选时的建议"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_ops",
+    "path": "04_公开问题与未来攻关/01_原始公开问题/结构化算子公开问题_用户原始材料.md",
+    "sha256": "646ab1a29819c8b6a96dff9508082e1e264632226241a1efe7c1366d555fad3b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL–PPA 相关 structured-operator 开放问题与验证瓶颈"
+      },
+      {
+        "line": 10,
+        "text": "## 1. 分类、模型层级与 T5 接口"
+      },
+      {
+        "line": 12,
+        "text": "### 1.1 证据等级"
+      },
+      {
+        "line": 20,
+        "text": "### 1.2 模型层级"
+      },
+      {
+        "line": 29,
+        "text": "### 1.3 T5 的两个 verifier"
+      },
+      {
+        "line": 46,
+        "text": "## 2. 原始候选池：34 个去重候选"
+      },
+      {
+        "line": 85,
+        "text": "## 3. 12 个高质量候选总览"
+      },
+      {
+        "line": 102,
+        "text": "## 4. 详细候选"
+      },
+      {
+        "line": 104,
+        "text": "### SO-01 — 精确约化 Coulomb 法则的非单调 FBF 外迭代率"
+      },
+      {
+        "line": 123,
+        "text": "### SO-02 — 软化 lattice-spring catch-up 的局部存在与跨面稳定性"
+      },
+      {
+        "line": 141,
+        "text": "### SO-03 — fractional non-associated plasticity：局部材料律到组装隐式解"
+      },
+      {
+        "line": 160,
+        "text": "### SO-04 — VI normal map 的 B-subdifferential 计算与 globalization"
+      },
+      {
+        "line": 177,
+        "text": "### SO-05 — 不可局部 Lipschitz 方程化 GE 的可实施 semismooth* Newton"
+      },
+      {
+        "line": 191,
+        "text": "### SO-06 — 非三角 composite semimonotone inclusion 的 implicit coverage 集 $\\Lambda$"
+      },
+      {
+        "line": 213,
+        "text": "### SO-07 — 退化 PPA 的 actual range coverage，而非 closure coverage"
+      },
+      {
+        "line": 230,
+        "text": "### SO-08 — 多值 relaxed/cyclic DRS 的 residual regularity 可验证性"
+      },
+      {
+        "line": 248,
+        "text": "### SO-09 — 超出局部 hypomonotonicity 的 stratified Minty atlas"
+      },
+      {
+        "line": 262,
+        "text": "### SO-10 — polyhedral multifunction 的 inverse-openness、collision 与统一常数证书"
+      },
+      {
+        "line": 276,
+        "text": "### SO-11 — 半代数分支图的可执行联合证书"
+      },
+      {
+        "line": 294,
+        "text": "### SO-12 — LP argmin mapping 在 nominal RHS 的 pointwise Hoffman modulus"
+      },
+      {
+        "line": 317,
+        "text": "## 5. 重要边界与强制淘汰项"
+      },
+      {
+        "line": 319,
+        "text": "### 5.1 完整工程问题不进入 RL 主筛"
+      },
+      {
+        "line": 324,
+        "text": "### 5.2 已被 2025–2026 结果关闭或显著收窄"
+      },
+      {
+        "line": 334,
+        "text": "## 6. 中央筛选建议"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_attack",
+    "path": "04_公开问题与未来攻关/02_筛选与红队结论/公开问题攻关_可复用定理与失败边界_2026-09-09.md",
+    "sha256": "58a3f2f1dc4fcdd93c1b5f7e633c6ebc6ed5274c26cf29ac7fc485929c8beb9e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# PPA–RL 公开问题筛选与第二轮攻关报告"
+      },
+      {
+        "line": 7,
+        "text": "## 0. 执行结论"
+      },
+      {
+        "line": 24,
+        "text": "## 1. 公开问题池：哪些是真的，哪些值得打"
+      },
+      {
+        "line": 36,
+        "text": "### 1.1 被剔除的伪空白"
+      },
+      {
+        "line": 43,
+        "text": "## 2. 已证明结果 A：原生 \\(A+B\\) 误差界到 DRS 实际残差的显式转移"
+      },
+      {
+        "line": 45,
+        "text": "### 2.1 单值连续模分量"
+      },
+      {
+        "line": 96,
+        "text": "### 2.2 两个算子均可多值：图交集版本"
+      },
+      {
+        "line": 121,
+        "text": "### 2.3 有限多面体图块的手算证书"
+      },
+      {
+        "line": 145,
+        "text": "### 2.4 必须保留的边界"
+      },
+      {
+        "line": 153,
+        "text": "## 3. 已证明结果 B：nonlinear warped proximal 公开方向的正子类与反例"
+      },
+      {
+        "line": 157,
+        "text": "### 3.1 无条件结论不可能成立"
+      },
+      {
+        "line": 171,
+        "text": "### 3.2 一个非幂、非单调、非孤立的原生正类"
+      },
+      {
+        "line": 228,
+        "text": "### 3.3 新颖性限制"
+      },
+      {
+        "line": 236,
+        "text": "## 4. 已证明结果 C：multi-weak aDR 暴露现有理论的真实缺口"
+      },
+      {
+        "line": 240,
+        "text": "### 4.1 正裕量区其实没有 genuine 非线性入口"
+      },
+      {
+        "line": 249,
+        "text": "### 4.2 临界参数确实产生 RL 特有几何，但单标量汇总失败"
+      },
+      {
+        "line": 274,
+        "text": "## 5. 已证明结果 D：局部 DRS/CP、非孤立解集与 sharp whole-orbit 边界"
+      },
+      {
+        "line": 276,
+        "text": "### 5.1 DRS 的精确提升与能量恒等式"
+      },
+      {
+        "line": 314,
+        "text": "### 5.2 普通 general-\\(\\psi\\) whole-orbit 定理"
+      },
+      {
+        "line": 354,
+        "text": "### 5.3 有限 Minty 图块的 coverage/gluing 证书"
+      },
+      {
+        "line": 372,
+        "text": "### 5.4 primal EB 不能直接替代 splitting residual EB"
+      },
+      {
+        "line": 378,
+        "text": "### 5.5 whole-orbit 的 Dini/长度预算是真实要求，而且 \\(q=1/2\\) 是 sharp 边界"
+      },
+      {
+        "line": 397,
+        "text": "### 5.6 临界 Chambolle–Pock 的显式 kernel lift"
+      },
+      {
+        "line": 422,
+        "text": "### 5.7 退化 CP/PPPA 的精确分层"
+      },
+      {
+        "line": 437,
+        "text": "## 6. 对公开问题的最终优先级"
+      },
+      {
+        "line": 439,
+        "text": "### 第一优先：把 DRS 原生误差界转移定理接入 RL 收敛主线"
+      },
+      {
+        "line": 449,
+        "text": "### 第二优先：把局部 DRS/CP 定理扩展为非投影可约化的有限多值图块 calculus"
+      },
+      {
+        "line": 453,
+        "text": "### 第三优先：nonlinear warped 的原生核恢复模量定理"
+      },
+      {
+        "line": 457,
+        "text": "### 暂不主攻"
+      },
+      {
+        "line": 463,
+        "text": "## 7. 可发表性判断"
+      },
+      {
+        "line": 480,
+        "text": "## 8. 证据与验收"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_final",
+    "path": "04_公开问题与未来攻关/02_筛选与红队结论/公开问题终局红队_历史筛选与停止条件.md",
+    "sha256": "91cd826a594c49873e0c97a78ebe22888a1eb44d487a8351e3db243a4f6b5360",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 终局敌对筛选：两条主攻线，一条有明确猜想编号的高风险挑战"
+      },
+      {
+        "line": 5,
+        "text": "## 0. 最终决定"
+      },
+      {
+        "line": 21,
+        "text": "## 1. 本次敌对筛选与以往报告的实质区别"
+      },
+      {
+        "line": 23,
+        "text": "### 1.1 已经扣掉的假新颖性"
+      },
+      {
+        "line": 31,
+        "text": "### 1.2 两条必须保留的数学边界"
+      },
+      {
+        "line": 47,
+        "text": "## 2. 主攻 A：真正可用的循环投影残差验证器"
+      },
+      {
+        "line": 49,
+        "text": "### A1. 公开来源与现状"
+      },
+      {
+        "line": 59,
+        "text": "### A2. 我们已有结果——足以起步，但不能拼接冒充总定理"
+      },
+      {
+        "line": 70,
+        "text": "### A3. 关键缺口"
+      },
+      {
+        "line": 79,
+        "text": "### A4. 最终旗舰定理的验收形态"
+      },
+      {
+        "line": 94,
+        "text": "### A5. 需要的有限 RL 升级"
+      },
+      {
+        "line": 100,
+        "text": "### A6. Codex 攻关顺序与停止条件"
+      },
+      {
+        "line": 123,
+        "text": "## 3. 主攻 B：多弱 splitting 的稳定性相图与原生反馈设计"
+      },
+      {
+        "line": 125,
+        "text": "### B1. 公开来源与现状"
+      },
+      {
+        "line": 131,
+        "text": "### B2. 我们已有结果"
+      },
+      {
+        "line": 143,
+        "text": "### B3. 关键缺口"
+      },
+      {
+        "line": 152,
+        "text": "### B4. 最终旗舰定理的验收形态"
+      },
+      {
+        "line": 158,
+        "text": "### B5. 需要的有限 RL 升级"
+      },
+      {
+        "line": 164,
+        "text": "### B6. Codex 攻关顺序与停止条件"
+      },
+      {
+        "line": 180,
+        "text": "## 4. 高风险第三项二选一：本轮选惯性 DRS，Markov 必要性列储备"
+      },
+      {
+        "line": 207,
+        "text": "### C. 选中的高风险目标：一般非二次凸复合优化的加速 DRS"
+      },
+      {
+        "line": 209,
+        "text": "### C1. 精确来源与当前状态"
+      },
+      {
+        "line": 233,
+        "text": "### C2. 已有文献和我们已有结果"
+      },
+      {
+        "line": 244,
+        "text": "### C3. 关键缺口与旗舰目标"
+      },
+      {
+        "line": 250,
+        "text": "### C4. 与 RL 的关系：不能强套，但允许有限升级"
+      },
+      {
+        "line": 256,
+        "text": "### C5. 一轮清障的准确 Codex 工作"
+      },
+      {
+        "line": 275,
+        "text": "## 5. 期刊档位：只评价完成标准，不把选题名称当论文质量"
+      },
+      {
+        "line": 291,
+        "text": "## 6. 整体 Codex 执行安排"
+      },
+      {
+        "line": 295,
+        "text": "### 当前立即执行的一个总动作"
+      },
+      {
+        "line": 309,
+        "text": "## 7. 检索、证据与局限台账"
+      },
+      {
+        "line": 311,
+        "text": "### 阅读覆盖"
+      },
+      {
+        "line": 317,
+        "text": "### 核验来源深度"
+      },
+      {
+        "line": 328,
+        "text": "### 可复用检索串"
+      },
+      {
+        "line": 349,
+        "text": "## 8. 专家回传合同"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_flagship",
+    "path": "04_公开问题与未来攻关/03_旗舰问题任务书/Codex旗舰攻关_历史任务书与验收标准_2026-09-09.md",
+    "sha256": "ecaec4f83c8381a4bc448ee1946141eeba2d950bbd2af8cabf15f1f066a5435e",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# Codex 下一轮旗舰攻关任务书"
+      },
+      {
+        "line": 3,
+        "text": "## 总规则"
+      },
+      {
+        "line": 10,
+        "text": "## A. Markov：相关性感知的 necessary/sufficient theory"
+      },
+      {
+        "line": 12,
+        "text": "### 输入"
+      },
+      {
+        "line": 20,
+        "text": "### 主任务"
+      },
+      {
+        "line": 24,
+        "text": "### 必须交付"
+      },
+      {
+        "line": 32,
+        "text": "### 停止条件"
+      },
+      {
+        "line": 36,
+        "text": "## B. Multiweak：全非势签名反馈与表示排除"
+      },
+      {
+        "line": 38,
+        "text": "### 输入"
+      },
+      {
+        "line": 46,
+        "text": "### 主任务"
+      },
+      {
+        "line": 50,
+        "text": "### 必须交付"
+      },
+      {
+        "line": 58,
+        "text": "### 停止条件"
+      },
+      {
+        "line": 62,
+        "text": "## C. Momentum DRS Conjecture 5.7"
+      },
+      {
+        "line": 64,
+        "text": "### 输入"
+      },
+      {
+        "line": 70,
+        "text": "### 主任务"
+      },
+      {
+        "line": 74,
+        "text": "### 必须交付"
+      },
+      {
+        "line": 81,
+        "text": "### 停止条件"
+      },
+      {
+        "line": 85,
+        "text": "## 支持模块，不单开旗舰"
+      }
+    ]
+  },
+  {
+    "asset_id": "open_plan",
+    "path": "04_公开问题与未来攻关/04_一个月研究计划/三主线人机协作_30天研究计划_2026-09-10.md",
+    "sha256": "30621d0196488d01a748d6bba89c5f62b031791c7f92b49308a514e0d548bda5",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# RL 研究计划：未来 30 天的人机分工与成果门槛"
+      },
+      {
+        "line": 10,
+        "text": "## 1. 一句话战略"
+      },
+      {
+        "line": 22,
+        "text": "## 2. 当前项目总账：先消除版本和成熟度错觉"
+      },
+      {
+        "line": 35,
+        "text": "## 3. 30 天后必须争取拿到的东西"
+      },
+      {
+        "line": 37,
+        "text": "### 保底交付"
+      },
+      {
+        "line": 44,
+        "text": "### 冲刺交付（不作为保底）"
+      },
+      {
+        "line": 54,
+        "text": "## 4. 算力分配"
+      },
+      {
+        "line": 67,
+        "text": "## 5. Codex 的高算力使用协议"
+      },
+      {
+        "line": 88,
+        "text": "## 6. 作者每天怎样审阅，而不是被长报告淹没"
+      },
+      {
+        "line": 90,
+        "text": "### 默认投入"
+      },
+      {
+        "line": 95,
+        "text": "### 每日 90 分钟模板"
+      },
+      {
+        "line": 103,
+        "text": "### Codex 每天只能提交一张不超过两页的“接口卡”"
+      },
+      {
+        "line": 116,
+        "text": "## 7. 三条主线的具体研究任务"
+      },
+      {
+        "line": 118,
+        "text": "### 7.1 锥优化：成熟成果优先兑现"
+      },
+      {
+        "line": 120,
+        "text": "#### 需要作者真正理解"
+      },
+      {
+        "line": 130,
+        "text": "#### Codex 本月任务"
+      },
+      {
+        "line": 139,
+        "text": "#### 止损条件"
+      },
+      {
+        "line": 144,
+        "text": "### 7.2 RL 主线：从“漂亮框架”变成可用理论"
+      },
+      {
+        "line": 146,
+        "text": "#### 必须保留的核心"
+      },
+      {
+        "line": 153,
+        "text": "#### 必须修复的结构"
+      },
+      {
+        "line": 160,
+        "text": "#### 本月高算力任务"
+      },
+      {
+        "line": 168,
+        "text": "#### RL 的成功标准"
+      },
+      {
+        "line": 173,
+        "text": "### 7.3 随机/Markov：攻击一个有边界的新定理"
+      },
+      {
+        "line": 175,
+        "text": "#### 已经可靠的基础"
+      },
+      {
+        "line": 185,
+        "text": "#### 本月首攻的新定理：随机表示—证书边界"
+      },
+      {
+        "line": 211,
+        "text": "#### 价值门槛"
+      },
+      {
+        "line": 215,
+        "text": "#### 严格混沌侦察"
+      },
+      {
+        "line": 221,
+        "text": "## 8. 逐日安排（2026-09-10 至 2026-10-09）"
+      },
+      {
+        "line": 258,
+        "text": "## 9. 三个硬门槛"
+      },
+      {
+        "line": 260,
+        "text": "### 第 7 天门槛"
+      },
+      {
+        "line": 268,
+        "text": "### 第 14 天门槛"
+      },
+      {
+        "line": 274,
+        "text": "### 第 21 天门槛"
+      },
+      {
+        "line": 282,
+        "text": "## 10. 月末三种结果都算成功，但含义不同"
+      },
+      {
+        "line": 284,
+        "text": "### A. 理想结果"
+      },
+      {
+        "line": 290,
+        "text": "### B. 稳健结果"
+      },
+      {
+        "line": 297,
+        "text": "### C. 止损结果"
+      },
+      {
+        "line": 307,
+        "text": "## 11. 作者本月只需承担的不可替代职责"
+      },
+      {
+        "line": 319,
+        "text": "## 12. 明天开始时 Codex 应提交的第一包"
+      }
+    ]
+  },
+  {
+    "asset_id": "readme_04",
+    "path": "04_公开问题与未来攻关/README_本目录说明.md",
+    "sha256": "75085483a92f0a020038de588fe712856602f7475aeb01dbda434e175bbadf08",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 公开问题与未来攻关"
+      },
+      {
+        "line": 5,
+        "text": "## 建议入口顺序"
+      },
+      {
+        "line": 18,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "m3audit",
+    "path": "05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026文献审计.md",
+    "sha256": "376316e389eaa1efe2e41008a9669b75c92c4fc9b2ec33978a1b4d2efe089884",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# M3 generalized / ordinary subregularity: 2024–2026 control audit"
+      },
+      {
+        "line": 5,
+        "text": "## Main result"
+      },
+      {
+        "line": 11,
+        "text": "## Concept blocks and screening"
+      },
+      {
+        "line": 22,
+        "text": "## Deduplicated evidence matrix"
+      },
+      {
+        "line": 40,
+        "text": "## Interface conclusions"
+      },
+      {
+        "line": 48,
+        "text": "## Access, quality and deduplication notes"
+      },
+      {
+        "line": 56,
+        "text": "## Manual full-text acquisition companion (not executed)"
+      },
+      {
+        "line": 102,
+        "text": "## One next action"
+      }
+    ]
+  },
+  {
+    "asset_id": "m3log",
+    "path": "05_文献证据与来源快照/02_文献检索记录/广义次正则_2024至2026查询日志.json",
+    "sha256": "c167084e323955f8e6d302113533bdbb7145ccd8b464668b38c028c5793c7e22",
+    "headings": []
+  },
+  {
+    "asset_id": "oldstate",
+    "path": "05_文献证据与来源快照/03_用户提供的原始材料/历史项目状态_不可作为当前验收.yaml",
+    "sha256": "159a12fa7659ddaba07346c57b7ffa568df0a25d8e3ddc343bf697de099b452d",
+    "headings": []
+  },
+  {
+    "asset_id": "readme_05",
+    "path": "05_文献证据与来源快照/README_本目录说明.md",
+    "sha256": "49ed752a056539945c1448e4a166f3c39b65136956524ab9e1e46b0068bdb156",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 文献证据与来源快照"
+      },
+      {
+        "line": 5,
+        "text": "## 建议入口顺序"
+      },
+      {
+        "line": 20,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "readme_06",
+    "path": "06_关键失败与研究边界/README_本目录说明.md",
+    "sha256": "6cf540aec808bdb6bf566641552216c56ab075a8f0ed74ae2ec76cd0f953ae4d",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 关键失败与研究边界"
+      },
+      {
+        "line": 14,
+        "text": "## 本目录原件用途"
+      }
+    ]
+  },
+  {
+    "asset_id": "boundary_3",
+    "path": "06_关键失败与研究边界/不应再次重复的失败路线.md",
+    "sha256": "8b41e464e028ca617b1fecc19540b437360d9f68115dce5a0d29172c4b42e091",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 不应再次重复的失败路线"
+      }
+    ]
+  },
+  {
+    "asset_id": "boundary_2",
+    "path": "06_关键失败与研究边界/尚未证明的候选命题.md",
+    "sha256": "ad3a2fc2add2f29ae7043f2bed6fbaad22d7d0b0ab89aa5db655e8261e78459b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 尚未证明的候选命题"
+      }
+    ]
+  },
+  {
+    "asset_id": "boundary_0",
+    "path": "06_关键失败与研究边界/已证明的不可能性与障碍.md",
+    "sha256": "745ac8f31d3828e676848cb3ad32f5a78d36515970f146cdaedd0bb764cd7d7b",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 已证明的不可能性与障碍"
+      },
+      {
+        "line": 5,
+        "text": "## 1. 同一 RMS 分布残差不能无条件承载高阶 EB"
+      },
+      {
+        "line": 9,
+        "text": "## 2. 物理零距匹配强迫吸收"
+      },
+      {
+        "line": 13,
+        "text": "## 3. 无限状态中，精确零集与几何收敛仍不足以推出正 Hölder EB"
+      },
+      {
+        "line": 17,
+        "text": "## 4. Nice 不足以无条件推出原残差 MSCQ"
+      },
+      {
+        "line": 21,
+        "text": "## 5. 任意核的分布极限未必是不变律"
+      }
+    ]
+  },
+  {
+    "asset_id": "boundary_1",
+    "path": "06_关键失败与研究边界/被旧理论覆盖或支配的结果.md",
+    "sha256": "48fadae27a09841d4bdadbe6b0f0ab31882c40b71bf528026bb9207e2fd0c07c",
+    "headings": [
+      {
+        "line": 1,
+        "text": "# 被旧理论覆盖或支配的结果"
+      },
+      {
+        "line": 5,
+        "text": "## 明确旧机制"
+      }
+    ]
+  }
+]
