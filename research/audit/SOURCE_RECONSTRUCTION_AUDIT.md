@@ -102,3 +102,7 @@
 历史复合稿 §5.3 的真多值变体已拆成 [CI-OBJECT / C40](../topics/composite_regular/cusp_identification.md)：在同一满秩曲线上写出全部次梯度、S 外残差间隙，并把“步残差小于 \(\nu\)”转成对局部近端输入、步长、乘子界的明确充分门。它没有解决秩亏，也没有检查远端完整近端纤维。§6.2 的振荡函数已拆成 [C41](../topics/composite_regular/oscillating_target.md)：给出趋零的严格局部极大驻点序列，证实无弱分离时到完整二阶目标的全邻域 EB 不可能。两行在逐单元 TSV 从 `deferred` 改为 `rewritten`，外部 §8 仍未核。
 
 [复合主题入口](../topics/composite_regular/README.md)示范目录按独立对象/证明增长；原来源文件级状态依然未关闭。新的数学结论按自身证据身份使用，不能用旧稿的 `PROVED` 字样替代上述条件。
+
+## 10. 增量：9/01 GX-071 的对象卡
+
+[幂次剪切 C42](../topics/path_dynamics/power_shear.md) 从 9/01 foundations §9.2 的 GX-071 重新反演完整图、计算真残差和法向精确速率，并把全对反射指数限定为有界输入窗，附上单条轨道的切向留域预算。它是反向校准的可达性见证，不能当成普遍必要或最佳常数定理。逐单元 TSV 新增此节；同一 foundations 稿其他定义和 GX-072/073、其他历史副本仍未逐项裁决。

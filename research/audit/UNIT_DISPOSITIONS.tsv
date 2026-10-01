@@ -15,3 +15,4 @@ history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§8 外部文献	deferred			未访问一手来源逐条核适用条件	建立精确文献事实记录
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§5 原生 Sign 图与隐式求解	deferred			现存可核表达式只给外层 T 未重建完整多值图	恢复原生方程并验证所有允许选择到 T 的桥
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/RL旗舰升级_架构与待攻关接口.md	§2 M1 一步锐因子	rewritten	C39-v1 / M1-SHARP	research/topics/path_dynamics/m1_capture.md#m1-sharp	独立展开 s>0 和 s≤0 并以 z_t 序列取等	不推出完整原图 RL 和残差 EB
+history/sources/次单调论文研究/RL_foundations.md	§9.2 GX-071	rewritten	C42-v1 / PS-RATE	research/topics/path_dynamics/power_shear.md#ps-rate	反演完整图并重算真实残差指数 法向比例与切向预算	有界窗最优常数及 GX-072 对照未核

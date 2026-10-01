@@ -631,6 +631,16 @@
       "id": "OB-TARGET",
       "label": "局部最小自动保证二阶目标 EB 的错误猜测",
       "file": "topics/composite_regular/oscillating_target.md#ot-scope"
+    },
+    {
+      "id": "PS-OBJECT",
+      "label": "幂次剪切完整图与指定步长",
+      "file": "topics/path_dynamics/power_shear.md#ps-object"
+    },
+    {
+      "id": "PS-RATE",
+      "label": "法向 γq 精确可达与切向预算",
+      "file": "topics/path_dynamics/power_shear.md#ps-rate"
     }
   ],
   "edges": [
@@ -1567,6 +1577,15 @@
       "relation": "refutes",
       "scope": "C∞ 非负 f 在 0 严格全局最小，却有 x_k→0 的 f′=0、f″<0；仅否定不加目标一致/弱分离时到完整 Θ₂ 的全邻域 Ψ(0)=0 EB。",
       "status": "本轮区间变号和目标距离独立证明"
+    },
+    {
+      "id": "E81",
+      "topic": "路径图集",
+      "inputs": ["PS-OBJECT"],
+      "output": "PS-RATE",
+      "relation": "conditional",
+      "scope": "λ=1、0<γ<1、q>1/γ、α=γq；完整 F=J^−1−I 的真 EB，单条轨道法向速率 r_+=r^α；反射全对 γ 只在有界输入窗口，留域另需切向余量。",
+      "status": "本轮反演、残差渐近与轨道预算独立重算；非普适速率"
     }
   ]
 }

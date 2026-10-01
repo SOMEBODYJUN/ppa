@@ -246,3 +246,9 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 \(f(0)=0\)、\(f(x)=e^{-1/x^2}(2+\sin(1/x^4))\) \((x\ne0)\)，令 \(\Gamma=\{f'=0\}\)、\(\Theta_2=\{x\in\Gamma:d^2 f(x\mid0)(w)\ge0\ \forall w\}\)。存在 \(x_k\downarrow0\) 使 \(f'(x_k)=0,f''(x_k)<0\)，故 \(d(x_k,\Theta_2)>0\)。对**任意** \(\Psi\) 满足 \(\Psi(0)=0\)，不存在包含 0 的邻域使 \(d(x,\Theta_2)\le\Psi(|f'(x)|)\) 在整个邻域成立。
 - **Definitions / Dependencies / Evidence**：[OT-MAXIMA](research/topics/composite_regular/oscillating_target.md#ot-maxima) 的 \(u=x^{-4}\) 区间变号及负二阶导证明；\(f\in C^\infty\)，0 是严格全局极小点但近邻驻点函数值为正。状态 `derived-checked`；历史复合稿 §6.2 是来源线索。
 - **Counterevidence / Objections / Scope / Related Files**：只否定没有目标一致/弱分离前件时**到完整 \(\Theta_2\)** 的误差界；不否定到 \(\Gamma\) 的界或 [C34](research/canonical/composite_subregularity.md#cs-transfer) 在完整前提下的正向结论。[F15](FAILED_ROUTES.md#f15)。
+
+## C42-v1 / PS-RATE · 幂次剪切的可达速率校准
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(0<\gamma<1\)、\(q>1/\gamma\)、\(\alpha=\gamma q>1\)，在 \(\mathbb R^2\) 固定 \(\lambda=1\) 与 \(J(t,z)=(t+|z|^\gamma,P_\alpha z)\)，\(F=J^{-1}-I\)、\(S=\mathbb R\times\{0\}\)。对全部 \((s,u)\)，\(d((s,u),S)\le r_F(s,u)^q\)，而 \(q\) 在 \(u\to0\) 不可增大。对全部 \(0<|z|<1\) 的实际轨道一步，有 \(d(J(t,z),S)=d((t,z),S)^{\gamma q}\)，且 \(d(Jx,S)/\|x-Jx\|^q\to1\) 当 \(|z|\downarrow0\)。每个**有界**且含法向邻域的输入矩形上反射 \(2J-I\) 有全对 \(\gamma\)-Hölder 界，此指数不能增大。
+- **Definitions / Dependencies / Evidence**：[PS-OBJECT、PS-RATE 与有界窗口证明](research/topics/path_dynamics/power_shear.md) 直接反演完整图、比较真残差、算沿法向比例和切向位移预算；状态 derived-checked，历史 GX-071 / 9/01 foundations §9.2 是来源别名。
+- **Counterevidence / Objections / Scope / Related Files**：无界全图不继承次线性全对 RL；整个有界矩形不自动不变，单条轨道需正切向余量。只证明 \(\gamma q\) 在此反向校准族**可达到**，不是普适精确速率、必要条件或有界窗最优 RL 常数。与 GX-072 的对照未验。

@@ -61,3 +61,7 @@ E74 再加所有相关外层次梯度的 M 界及 λβM<1，只先得局部全�
 E79 对 [CI-OBJECT](topics/composite_regular/cusp_identification.md#ci-object) 增加 **CS-PROX 的局部版本**：同一曲面 \(c=t-(s_+)^2\)、\(\nu>0\)、\(\eta\) 连续严格增无界、\(0<R<1/2\)，\(M=\nu+\eta(R+R^2)\)、\(h=2M\)、\(\lambda h<1\)。还需输入 \(x\in B_{r/2}(0)\) 且 \(d(x,S)<\lambda\nu(1-\lambda h)\)，\(r=R(1-2R)/4\)。此时图在 S 上多值、S 外真残差至少 \(\nu\)，但唯一**球内**近端步的选中残差小于 \(\nu\)，所以一步到 S；并未认证完整 \(J_{\lambda F}\) 的远端纤维。[C40](topics/composite_regular/cusp_identification.md#ci-identify)。
 
 E80 是独立反例关系：[OT-MAXIMA](topics/composite_regular/oscillating_target.md#ot-maxima) 的驻点严格极大序列有 \(|f'|=0\)、\(d(x,\Theta_2)>0\)。它只否定删除目标一致条件后对完整 \(\Theta_2\) 的全邻域 EB；函数虽在零点严格局部最小，弱分离被 \(f(x_k)>f(0)\) 破坏。不能将箭头倒读为 C34 错误，也不能悄然将目标换成 \(\Gamma\)。[F15](../FAILED_ROUTES.md#f15)。
+
+## E81：幂次剪切的可达性而非普遍速率
+
+固定 \(\lambda=1\)、\(0<\gamma<1\)、\(q>1/\gamma\)、\(\alpha=\gamma q\)，由 [PS-OBJECT](topics/path_dynamics/power_shear.md#ps-object) 的**完整**三角图可反演 F，并对所有点给真残差 \(q\)-EB。对实际轨道的法向距离恰为 \(r_+=r^\alpha\)。反射全对 \(\gamma\) 的范围限于**有界输入矩形**，单条轨道留在该矩形还要切向余量覆盖整个漂移和；它不表示无界全图 RL，更不能推出所有满足同指数证书的轨道都按 \(\gamma q\) 精确收敛。[C42](topics/path_dynamics/power_shear.md#ps-rate) 只是反向校准例的可达见证。
