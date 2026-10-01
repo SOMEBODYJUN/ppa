@@ -222,3 +222,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：c(s,t)=t−(s_+)²，S={(s,(s_+)²):s∈ℝ}；对连续严格增无界 η、η(0)=0 取 φ(z)=∫₀^{|z|}η(u)du，F=∂(φ∘c)。每点 r_F=η(|c|)√(1+4s_+²)，d((s,t),S)≤η^{-1}(r_F)。η(u)=u^a、0<a<1 时，幂 q=1/a 的最佳常数 1；η(u)=u log(e/u) 于 0≤u≤1、随后 η(u)=u 时有趋零 gauge η^{-1}(r)∼r/log(1/r)，但任何 q>1 的幂 EB 失败。
 - **Dependencies / Evidence / Status**：[CS-MODEL](research/canonical/composite_subregularity.md#cs-model) 逐点公式、竖线锐性和标量近端方程；状态 derived-checked。对后一模型的局部轨道还需 C36 的 λh<1、gauge 兼容和留域；其收敛为超线性但无任意固定 p>1 的 Q-order。
 - **Objections / Scope**：这里 c 为 C^{1,1} 而非 C²；源文的其他真多值变体未纳入本命题，外部新颖性未审。
+
+## C38-v1 / M1-CAPTURE · 显式外层映射的两步捕获
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 Euclidean \(\mathbb R^2\)，令 \(c=2/3\)、\(f(r)=\operatorname{sign}(r)[3(|r|-c)_+/2]^{1/3}\)、\(T(z_1,z_2)=(z_1-f(z_1-3z_2),0)\)、\(Z=[-c,c]\times\{0\}\)、\(z_*=(c,0)\)、\(R=1/(96\sqrt {10})\)。对**每个** \(z\in B_R(z_*)\)，\(T^2z\in Z=\operatorname{Fix}T\)，以后轨道固定。不存在分支选择量词；这是明确给出的单值 \(T\) 的命题。
+- **Definitions / Dependencies / Evidence**：同一状态的 \(s=a-3b\) 与 \(h=(3s_+/2)^{1/3}\)，先证明第一步在 \((-c,c+R)\times\{0\}\)，再对第一步超出 \(c\) 的量 \(0<\delta<R\) 直接计算第二步。[对象和完整证明](research/topics/path_dynamics/m1_capture.md#m1-capture)；历史 9/09 多步札记 §5 只作来源线索。
+- **Counterevidence / Objections / Status / Scope / Related Files**：`derived-checked`，仅此映射与球；原生多值 `Sign` 广义方程、它的全部允许选择、完整 resolvent 和真正残差尚未恢复，不能用此条给它们认证。[未闭桥](research/topics/path_dynamics/m1_capture.md#m1-obligation)。外部新颖性未审。
+
+## C39-v1 / M1-SHARP · 同一映射的锐一步距离收缩
+
+- **Exact Statement / Objects / Domain / Quantifiers**：保留 C38 的**同一** \(T,Z,z_*,R\)。对每个 \(z\in B_R(z_*)\)，\(d(Tz,Z)\le(3/\sqrt {10})d(z,Z)\)。常数 \(3/\sqrt {10}<1\) 为这个球上统一距离因子的最小值：\(z_t=(c+3t,t)\)、\(t\downarrow0\) 实现该距离比。
+- **Definitions / Dependencies / Evidence**：用完整活动关系 \(s=a-3b\) 而不是分别放大两个标量模；分 \(s\le0\) 和 \(s>0\) 的代数证明在 [M1-SHARP](research/topics/path_dynamics/m1_capture.md#m1-sharp)。`derived-checked`；历史较晚的旗舰架构札记 §2 指出这项修正，本轮重新核算。
+- **Counterevidence / Objections / Scope / Related Files**：这**不**直接给出全对 RL、真残差 EB 或局部无限轨道留域；C38 独立地给有限捕获。旧例仍可说明独立最坏标量组合失真，却不能作为“一步距离收缩不存在”的反例。[F14](FAILED_ROUTES.md#f14)。

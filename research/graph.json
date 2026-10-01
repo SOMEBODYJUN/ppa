@@ -596,6 +596,21 @@
       "id": "CS-POWER-GENERAL",
       "label": "所有满秩复合都有超线性幂 EB 的过强命题",
       "file": "canonical/composite_subregularity.md#cs-model"
+    },
+    {
+      "id": "M1-OBJECT",
+      "label": "显式 M1 映射、线段零集与端点球",
+      "file": "topics/path_dynamics/m1_capture.md#m1-object"
+    },
+    {
+      "id": "M1-CAPTURE",
+      "label": "每个球内初值两步捕获",
+      "file": "topics/path_dynamics/m1_capture.md#m1-capture"
+    },
+    {
+      "id": "M1-SHARP",
+      "label": "锐一步距离因子 3/√10",
+      "file": "topics/path_dynamics/m1_capture.md#m1-sharp"
     }
   ],
   "edges": [
@@ -1496,6 +1511,24 @@
       "relation": "limits",
       "scope": "c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。",
       "status": "本轮显式反例"
+    },
+    {
+      "id": "E77",
+      "topic": "路径图集",
+      "inputs": ["M1-OBJECT"],
+      "output": "M1-CAPTURE",
+      "relation": "conditional",
+      "scope": "仅给定单值 T，R=1/(96√10)，Z=[−2/3,2/3]×{0}；对 B_R((2/3,0)) 的每个初值两步进入 Z；不涵盖原生多值 Sign 方程的所有选择。",
+      "status": "本轮由显式映射独立重算；原生图桥未核"
+    },
+    {
+      "id": "E78",
+      "topic": "路径图集",
+      "inputs": ["M1-OBJECT"],
+      "output": "M1-SHARP",
+      "relation": "conditional",
+      "scope": "同一 T、Z、R；全体球内初值的一步距离上界 3/√10，沿 z_t=(2/3+3t,t) 取等；不推出全对 RL 或真残差 EB。",
+      "status": "本轮代数与锐性序列独立重算"
     }
   ]
 }

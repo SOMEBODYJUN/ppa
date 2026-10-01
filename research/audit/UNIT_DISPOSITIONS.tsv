@@ -4,7 +4,7 @@ history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§3.1–3.3	rewritten	C31-v1 / PA-WHOLE	research/canonical/path_atlas.md#pa-whole	补 universal 选择和实际中间留域量词；给完整证明	特定算法须另证前缀覆盖
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§3.4	superseded	C33-v1 / PA-CYCLES	research/canonical/path_atlas.md#pa-cycles	相位连续性单独推论；不能继承有限总长定理	外部优先性未核
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§4	superseded	C32-v1 / PA-POWER	research/canonical/path_atlas.md#pa-power	逐词指数 >1 不足以统一，反例和充分门已写	若词集无限须给统一余量
-history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§5 M1 具体两步捕获	deferred			未从原生多值广义方程独立核半径和锐指数	重算合法分支和每条选择的捕获量词
+history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§5 显式 T 两步捕获	rewritten	C38-v1 / M1-CAPTURE	research/topics/path_dynamics/m1_capture.md#m1-capture	给定单值 T 的同一活动关系直接重算 R 球上每点两步捕获	不包括原生多值 Sign 方程及其所有选择
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§6–§9 外部比较与优先性	deferred			旧文献搜查记录不是本轮逐定理核验	独立核一手定理适用条件与新颖性
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§2	rewritten	C34-v1 / CS-TRANSFER	research/canonical/composite_subregularity.md#cs-transfer	局部目标集合和球外隔离证明	仅限原合取条件
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§3	rewritten	C35-v1 / CS-EB	research/canonical/composite_subregularity.md#cs-eb	修复闭球自映射 链式规则和真残差独立重算	秩亏推广开放
@@ -13,3 +13,5 @@ history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§5.3 真多值变体	deferred			本轮未核原生多值分支	分图重建适用域与输出选择
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§6.2 振荡弱分离	deferred			未独立核完整反例	按 C34 的 S 和 Γ 重算
 history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/C11复合次正则_定量模块与未解边界.md	§8 外部文献	deferred			未访问一手来源逐条核适用条件	建立精确文献事实记录
+history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/多步路径与有限捕获_RL研究札记_2026-09-09.md	§5 原生 Sign 图与隐式求解	deferred			现存可核表达式只给外层 T 未重建完整多值图	恢复原生方程并验证所有允许选择到 T 的桥
+history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/03_判别方法与理论升级/RL旗舰升级_架构与待攻关接口.md	§2 M1 一步锐因子	rewritten	C39-v1 / M1-SHARP	research/topics/path_dynamics/m1_capture.md#m1-sharp	独立展开 s>0 和 s≤0 并以 z_t 序列取等	不推出完整原图 RL 和残差 EB

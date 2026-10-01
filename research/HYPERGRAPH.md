@@ -159,6 +159,8 @@
 | E69 | [PA-BLOCK · 块 RL 和实际输出 EB](canonical/path_atlas.md#pa-block) ∧ [PA-COVER · 实际前缀延拓及留域覆盖](canonical/path_atlas.md#pa-whole) ∧ [PA-BUDGET · 统一终点与可求和位移](canonical/path_atlas.md#pa-whole) | conditional → [PA-WHOLE · 每条实际轨道有限长收敛](canonical/path_atlas.md#pa-whole) | 同一个合法块的最近零点比较与实际输出 EB 给终点 ρ；另要 ρ≤κt、中间前缀界、延拓及位移预算。；**本轮代数与整轨道证明** |
 | E70 | [PA-POWER · 合法词幂及统一量词](canonical/path_atlas.md#pa-power) ∧ [PA-DEF · 合法词与路径前缀](canonical/path_atlas.md#pa-def) | conditional → [PA-CONTRACT · 统一幂词终点收缩](canonical/path_atlas.md#pa-power) | 只获得统一终点收缩：有限词集全 A>1，或无限词集 inf A>1、sup C<∞；中间覆盖与位移求和仍需另证。；**本轮量词反例；未断言完整预算** |
 | E71 | [PA-CYCLES · 独立的相位极限命题](canonical/path_atlas.md#pa-cycles) | limits → [PA-WHOLE · 每条实际轨道有限长收敛](canonical/path_atlas.md#pa-whole) | 非平凡周期有不消失块内位移，不满足 PA-WHOLE 的 H<∞；相位极限需独立连续性命题，Fix T^m 不等于 Fix T。；**本轮 T(x)=1−x 反例** |
+| E77 | [M1-OBJECT · 显式 M1 映射、线段零集与端点球](topics/path_dynamics/m1_capture.md#m1-object) | conditional → [M1-CAPTURE · 每个球内初值两步捕获](topics/path_dynamics/m1_capture.md#m1-capture) | 仅给定单值 T，R=1/(96√10)，Z=[−2/3,2/3]×{0}；对 B_R((2/3,0)) 的每个初值两步进入 Z；不涵盖原生多值 Sign 方程的所有选择。；**本轮由显式映射独立重算；原生图桥未核** |
+| E78 | [M1-OBJECT · 显式 M1 映射、线段零集与端点球](topics/path_dynamics/m1_capture.md#m1-object) | conditional → [M1-SHARP · 锐一步距离因子 3/√10](topics/path_dynamics/m1_capture.md#m1-sharp) | 同一 T、Z、R；全体球内初值的一步距离上界 3/√10，沿 z_t=(2/3+3t,t) 取等；不推出全对 RL 或真残差 EB。；**本轮代数与锐性序列独立重算** |
 
 ## 复合次正则
 
