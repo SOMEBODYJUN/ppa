@@ -6,7 +6,7 @@
 | 优先 | 精确待办与输入 | 达成标准 / 真实阻塞 |
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
-| 局部值域候选 | [C70 分析层](research/canonical/finite_sample_collar.md) 已独立重算；对 [C05](research/holder_structure.md#h07) 核整个 \(T\) 在窗上的条件、Čech 约定及拓扑证明 | 有限样本只证包络；整窗非空、usc、acyclic 等仍需模型给出。原 rational morphism Lefschetz 引文的适用门已核，不再重复列为未核 |
+| 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
 | 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 52 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。无法从单元数/文件数算覆盖率 |
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
@@ -23,7 +23,7 @@
 
 ## 本批增量：9/25 度量层与拓扑候选分离
 
-[C70](research/canonical/finite_sample_collar.md) 从 S25 §8 独立重算有限样本全空间双包络、整窗全称步界和 EB 加上 collar 后的内域余量。C70 不给固定点或值域球；C05 的 usc/acyclic、上同调和 Lefschetz 合取仍独立。按 (8.3) 与 (8.4)–(8.7) 两个来源单元登记，不把 §8 整节判为已审。
+[C70](research/canonical/finite_sample_collar.md) 从 S25 §8 独立重算有限样本全空间双包络、整窗全称步界和 EB 加上 collar 后的内域余量。C70 不给固定点或值域球；原稿 C05-v1 当时的 usc/acyclic、上同调和 Lefschetz 合取仍独立；其后 C05-v2 已对条件拓扑链重算。按 (8.3) 与 (8.4)–(8.7) 两个来源单元登记，不把 §8 整节判为已审。
 
 ## 当前增量：同常数扩张、GX-068、矩包络和新图的局部指数
 
@@ -103,7 +103,7 @@
 - **9/19 随机措辞**：原稿写 Polish，证明用给定 \(d_{\mathsf X}\) 完备；\((0,2)\) 上的确定性序列满足其他假设却收敛到空间外。原命题若按拓扑 Polish 解释为假；修订版本明确 complete metric。[H06](research/holder_structure.md)、[FAILED F07](FAILED_ROUTES.md)
 - **S23 全局结构**：同一个强单调双 Lipschitz 影子及有限维完整纤维分类的证明已局部独立重算，未见内部计算致命断点；Hilbert 同常数扩张的导入门已核；有限维 degree/fixed-set 的完整应用及同对象先行性仍是独立门。固定维数的最优因子仍开放。
 - **S23 值域与有限数据**：最大根定位给全局与相对 maximal 窗口的**整个纤维**锐覆盖；有限兼容样本的 QP 给全局一致 \(A_m\)，但未知图点只在 Cayley 参数覆盖下认证。可验证 gap、噪声和求值误差叠加成三项界；有限总查询在无界 Hölder 类不能全空间认证。[range_finite_data](research/range_finite_data.md)。这条链原八条 Claim 未记录，现立 C18–C21。
-- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 已与[一手原文](research/LITERATURE.md#lit-grn-2002)逐项核 retract、Vietoris span、紧 morphism→CAC 及非零 Lefschetz 数；这不核定整窗模型、有限样本认证以外的假设或新颖性，C05 仍为 PDF-only 候选。[H07](research/holder_structure.md)
+- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 已与[一手原文](research/LITERATURE.md#lit-grn-2002)逐项核 retract、Vietoris span、紧 morphism→CAC 及非零 Lefschetz 数；这不核定整窗模型、有限样本认证以外的假设或新颖性，原稿 C05-v1 仍为 PDF-only 候选；C05-v2 是另立的已重算条件版本。[H07](research/holder_structure.md)
 
 ## 独立旁支与依赖门
 

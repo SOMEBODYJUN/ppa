@@ -44,7 +44,7 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 ## E13：有限观测与整窗拓扑是不同量词层
 
-9/25 的有限样本 \((p_i,y_i)_{i=1}^m\) 只给到 \(d(\cdot,S)\) 的[可验证上下包络 C70-v1a](canonical/finite_sample_collar.md#fsc-envelope)。另有**指定的整个** \(T\) 对每个 \(p\in A,y\in T(p)\) 的步界/输出 EB，加上经验证的 collar 数值，才给 [C70-v1b 内域余量](canonical/finite_sample_collar.md#fsc-collar)；这个结果没有 fixed point 结论。C05 还需要 \(T\) 在 \(A\) 邻域 usc、各值非空紧且 Čech–\(\mathbb Q\)-acyclic，以及上同调满射与 Euler 特征条件。\(T\) 可是完整 resolvent 的子关系；不能暗换成全纤维。外部 Lefschetz [6, Theorem 6.2] 的适用条件已在[一手文献卡](LITERATURE.md#lit-grn-2002)按紧图/Vietoris/CAC 逐项核对；它不建立任何整窗模型假设，C05 仍是 PDF-only 候选。[H07](holder_structure.md)。
+9/25 的有限样本 \((p_i,y_i)_{i=1}^m\) 只给到 \(d(\cdot,S)\) 的[可验证上下包络 C70-v1a](canonical/finite_sample_collar.md#fsc-envelope)。另有**指定的整个** \(T\) 对每个 \(p\in A,y\in T(p)\) 的步界/输出 EB，加上经验证的 collar 数值，才给 [C70-v1b 内域余量](canonical/finite_sample_collar.md#fsc-collar)；这个结果没有 fixed point 结论。C05-v1 还需要 \(T\) 在 \(A\) 邻域 usc、各值非空紧且 Čech–\(\mathbb Q\)-acyclic，以及上同调满射与 Euler 特征条件。\(T\) 可是完整 resolvent 的子关系；不能暗换成全纤维。外部 Lefschetz [6, Theorem 6.2] 的适用条件已在[一手文献卡](LITERATURE.md#lit-grn-2002)按紧图/Vietoris/CAC 逐项核对；它不建立任何整窗模型假设，原稿 C05-v1 仍是 PDF-only 候选。[H07](holder_structure.md#h07)。保留全部这些合取前提而将 \(q\gamma>1\) 放宽成 \(q>0\) 的独立新版本见 [C05-v2](canonical/local_range_without_supercriticality.md#lr-theorem)。
 
 固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_3\) 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
 
@@ -147,3 +147,11 @@ E102 **另加**同一 \(G\) 的闭图和 \(D\) 在整个 \(H\) 稠密，才由�
 E103 固定**完整** \(F\)、\(S=F^{-1}(0)\ni\bar u\) 与对完整 \(F(u)\) 取 infimum 的 \(r_F(u)\)。窗口版在同一个 \(U\) 只要求 \(r_F(u)<\delta\)，其中 \(0<\delta<\eta\) 且 \(\psi:[0,\eta)\to[0,\infty)\) 有限非减。再加 \(\psi(\delta)>0\)，才可用 \(d(u,S)\le\|u-\bar u\|\) 在 \(U\cap B(\bar u,\psi(\delta))\) 控制 **所有可评价的** \(r_F(u)<\eta\)；若要对 \(r_F(u)\ge\eta\) 或 \(+\infty\) 写原式，须另给全域扩展或约定。正阈值只是充分条件，不能标作必要。[C59](canonical/residual_window_bridge.md#rw-positive)。
 
 E104 的闭完整图在零点纤维 \(\{0,1\}\)、其余纤维 \(\{1\}\)，故窗口 \(r_F<1/2\) 只见零点；扁平 gauge 却在 \(r_F=1\) 仍为零。它反驳无条件去窗口，不反驳窗口版，也没有声称满足全对 RL。[RW-FLAT](canonical/residual_window_bridge.md#rw-flat)、[F21](../FAILED_ROUTES.md#f21)。
+
+## E127–E128：C05 的新版本与次临界可行性
+
+E127 合取 **同一** 完整 \(F,S,\lambda,L,\kappa,\gamma,q\)、有限样本 E、两非空紧有限多面体 \(A\subset\operatorname{int}B\)、指定 \(T\) 的整窗每个输出 (1)、C70 的四项 collar、在 \(A\) 邻域的非空紧 usc 有理 acyclic 值、每阶包含上同调满射及 \(\chi(A)\ne0\)。这套条件只要求 \(q>0\)；由 C70 内域余量到紧 span 的 Vietoris–Begle、同伦和 Lefschetz coincidence 给连续 \(h\) 的原关系值域结论。它是 [C05-v2](canonical/local_range_without_supercriticality.md#lr-theorem)，**不是**将原稿 C05-v1 的 \(q\gamma>1\) 偷换为来源事实。E128 的 \(q\gamma=1/2\) 单值区间模型逐项满足同一版本及精确 collar，只证明这个放宽非空，不证明一般原生 \(T\) 的整窗认证。
+
+## E129–E133：完整近端全选择收敛仍不逆推全对 RL
+
+E129–E132 都使用 **同一个** 闭完整实关系 \(F(0)=\{0\}\cup\{1/n\}\)、\(F(x)=\{x\}\) (\(x\ne0\)) 和固定任意 \(\lambda>0\)。E129 的算子真残差 \(r_F=|x|\) 与目标正确 EB 不可换为以 \(d(y,F(0))\) 为右端的两变量残差；后者对所有零消失 gauge 失败。E130 解出完整 \(J(p)=\{p/(1+\lambda)\}\cup(\{0\}\text{ if }p\in\lambda A)\)，因而最小步线性 EB 与 **每条** 允许轨道的保号望远镜总长成立。E131 比较完整图的任意两点：零锚常数 1 不防止离散输入 \(\lambda/n\) 的同输入双输出，故全对零消失模失败。E132 用趋零跨支图差实现任意实斜率，给局部与全域同一个负负二参数区。E133 将 E129–E131 的**同对象**证书合取作为 [F25](../FAILED_ROUTES.md#f25) 的反例；它没有把充分的全对收敛定理反向判错。[对象卡](topics/examples/diagonal_spike_relation.md#ds-object) 保存每个完整纤维和端点证明。

@@ -171,7 +171,7 @@ s_k=2^{-(k+3)}+3\cdot4^{-(k+3)}
 <a id="sample"></a>
 <a id="window"></a>
 <a id="h07"></a>
-## H07 · C05：有限数据原关系局部值域证书
+## H07 · C05-v1：有限数据原关系局部值域证书
 
 此节是独立假设层。令 \(S=F^{-1}(0)\subset\mathbb R^n\) 非空闭，\(T(p)\) 是指定的实际 proximal 输出族：
 
@@ -206,7 +206,7 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 **证明结构与核验门槛**：[C70 的独立度量重算](canonical/finite_sample_collar.md#fsc-envelope) 把有限样本双包络与**另需整窗全称条件**的 collar 分开，前者单独不能给 \(T(A)\subset\operatorname{int}A\)。合取后所有输出距 \(A^c\) 至少 \(m-\alpha\)。紧图 \(\Gamma\) 第一投影 \(\pi\) 的 acyclic 纤维给 Vietoris–Begle 同构；线段在 B 内的同伦与上同调满射给 \(e^*=\pi^*\)。在同一个图 span 上改为 \(e_h(p,y)=y+\lambda h(y)\)，Lefschetz 数为 \(\chi(A)\)，得到 coincidence。原稿没有假定非线性像 \(e_h(T(p))\) 仍 acyclic，此点处理正确。
 
-已按[一手文献卡 LIT-GRN-2002](LITERATURE.md#lit-grn-2002) 核原引文 [6, Theorem 6.2]：\(A\) 为 Euclidean neighborhood retract；\(\Gamma\) 与 \(\pi\) 是紧 Vietoris span；\(e_h(\Gamma)\subset A\) 为紧 morphism，故属原文的 \(CAC(A)\)；同伦和上同调满射给非零 Lefschetz 数。这关闭**该引文的适用条件门**，不把 C05 升为已独立审完的定理。有限观测不能建立整窗估计、usc 或 acyclicity；紧度量值的 Čech cohomology/homology 等价限于本范围，外部新颖性未核；也不存在 H02 → H07 的无条件蕴含。来源：S25 页 21–22，Theorem 8.1 证明及其后范围说明。
+已按[一手文献卡 LIT-GRN-2002](LITERATURE.md#lit-grn-2002) 核原引文 [6, Theorem 6.2]：\(A\) 为 Euclidean neighborhood retract；\(\Gamma\) 与 \(\pi\) 是紧 Vietoris span；\(e_h(\Gamma)\subset A\) 为紧 morphism，故属原文的 \(CAC(A)\)；同伦和上同调满射给非零 Lefschetz 数。这关闭**该引文的适用条件门**，不把原稿 C05-v1 升为已独立审完的定理。有限观测不能建立整窗估计、usc 或 acyclicity；紧度量值的 Čech cohomology/homology 等价限于本范围，外部新颖性未核；也不存在 H02 → H07 的无条件蕴含。来源：S25 页 21–22，Theorem 8.1 证明及其后范围说明。去掉 \(q\gamma>1\) 而保留全部整窗及拓扑条件的独立新版本见 [C05-v2](canonical/local_range_without_supercriticality.md#lr-theorem)；原稿措辞仍按本页 v1 记录。
 
 ## 数学超边总表
 
@@ -232,6 +232,6 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 ## 下一步证明工作
 
-1. H01 的同常数扩张与 H07 的 rational morphism 导入门已分别在 HE-EXTENSION、LIT-GRN-2002 核过；继续独立核 C03 的 cross-lift/影子锐性、C04 的 degree/fixed-set 构造，以及 C05 的整窗模型、Čech 约定和剩余拓扑步骤。
+1. H01 的同常数扩张与 H07 的 rational morphism 导入门已分别在 HE-EXTENSION、LIT-GRN-2002 核过；继续独立核 C03 的 cross-lift/影子锐性、C04 的 degree/fixed-set 构造，以及 C05-v2 的原生整窗模型认证、C05-v1 的来源版本核对。
 2. 在随机推论正式版本中补上给定度量完备性，并保留反例作为修订原因。
 3. 用 H05 的拓扑限制逐个审查 H03 中病态紧零集实现能满足哪些 EB/coverage 条件，避免把结构存在性误读为 PPA 收敛。

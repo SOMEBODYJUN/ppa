@@ -15,10 +15,9 @@ collar 和拓扑条件均保留。原稿 C05-v1 仍按原文记录。下述证�
 \[
 \phi(r)=\tfrac12(r+Lr^\gamma),\qquad c=\kappa\lambda^{-q}.
 \]
-取非空紧有限多面体 \(A\subset\operatorname{int}B\subset\mathbb R^n\)
-（\(B\) 也紧），及定义在 \(A\) 某邻域的指定对应 \(T\)。
-对每个 \(p\in A\)，\(T(p)\) 非空紧且是有理 Čech-acyclic 空间；
-\(T\) upper semicontinuous。对 **所有** \(p\in A,y\in T(p)\)，假设
+取两个非空紧有限多面体 \(A,B\subset\mathbb R^n\)，且
+\(A\subset\operatorname{int}B\)，及在 \(A\) 某邻域上 upper semicontinuous 的指定对应 \(T\)，
+其在该邻域的每个值非空紧且有理 Čech-acyclic。对 **所有** \(p\in A,y\in T(p)\)，假设
 \[
 (p-y)/\lambda\in F(y),\quad
 \|p-y\|\le\phi(d(p,S)),\quad

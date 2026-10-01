@@ -85,7 +85,7 @@
 | 9/01 GX-004/009/021 的对象与本轮选择的观察 | [C24–C26 / EX01–EX03](../canonical/example_atlas.md)，图 E59–E61 | 旋转、正紧对角、三次映射的对象、真残差、完整 J、边界及常数均直接重算；`derived-checked` | 其他 GX 与这三张原卡尚未重写的属性（如 paramonotone、rectangular）仍是 `unreviewed` |
 | 9/01 foundations / regularity 的选定定义、参数与 GX-015 换步 | [C27–C30 / PD 字典](../canonical/parameter_dictionary.md)，图 E62–E67 | 全对量词、Cayley、tied 曲线端点、同图换步、尺度及残差方向独立重算；`derived-checked` | 一般二参数 semimonotonicity、coderivative、全 GX 最优常数未吸收；原 ZIP 其他单元仍 `unreviewed` |
 
-两行只裁决上述数学单元，逐文件 TSV 的 `semantic_disposition=unreviewed` 暂不批量改成 `rewritten`，因为同一来源仍含其他 Claim、例和版本。应在逐单元映射齐备后，才给整份来源关闭状态。
+上表四行只裁决所列数学单元，逐文件 TSV 的 `semantic_disposition=unreviewed` 暂不批量改成 `rewritten`，因为同一来源仍含其他 Claim、例和版本。应在逐单元映射齐备后，才给整份来源关闭状态。
 
 ## 7. 后续增量：合法路径与复合次正则的逐单元重写
 
@@ -139,11 +139,11 @@
 
 [C56](../canonical/all_pairs_verifier.md#av-bridge) 重新证明同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对活跃输入的保距离合取，只生产指定分支的 B/A，不生产实际输出真 EB 或完整图排他。[C57](../canonical/all_pairs_verifier.md#av-gap) 是新的完整关系反例：图块 \(L=0\) 全对且满域，但其零图点不保完整零集距离，故零距离输入上的锚条件失败。两行进入逐单元 TSV；旧 §1.1–§2 的其他代数或参数条目与全部 GX 性质并未据此整份关闭。
 
-## 15. 增量：§1.1–§2 的闭域门与已有重写去向
+## 18. 增量：§1.1–§2 的闭域门与已有重写去向
 
 从 foundations §1.1–§1.4 的剪切与 pullback 重新证明 [C58 闭图—闭自然域](../canonical/closed_graph_minty_domain.md#cg-closure)，增加原稿没有作为定理单列的完备性与稠密性合取门。闭图单独无覆盖，图块闭域也不排除完整图外分支。§1.1 的能量代数、§1.4 的 coverage/exclusion 与 §2.1(a)–(c) 的 tied、inverse、缩放此前已在 [参数字典](../canonical/parameter_dictionary.md) 独立重算，此次各给逐单元去向，避免在新正文重复证明后虚增成果。新增五行来源裁决仅针对这些明确语句；§0.4 的残差窗口由下一节另行裁决，更多 GX/同稿边界仍未逐项关闭，源文件级状态继续开放。
 
-## 16. 增量：§0.4 的一般 gauge 残差窗口
+## 19. 增量：§0.4 的一般 gauge 残差窗口
 
 [C59](../canonical/residual_window_bridge.md#rw-positive) 将旧稿定义0.4 的幂函数缩域推理重写为有正阈值的充分门，并显式限制到 gauge 可评价残差；[RW-FLAT](../canonical/residual_window_bridge.md#rw-flat) 给闭完整图的平坦 gauge 反例，阻断无条件去窗口。这项新增只关闭 §0.4 中被声明的量词关系，不验证同稿其余定义与后续定理，也不否定另加 all-pairs RL 的特殊结果。逐单元 TSV 增加一行，文件级状态仍开放。
 
