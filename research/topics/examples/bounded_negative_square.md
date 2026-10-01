@@ -47,7 +47,7 @@ J_F(p)=\left\{\frac{1-\sqrt{1-4p}}2\right\},
 \]
 全图线性 RL 不成立。对 \(0<\gamma<1\)，全图不等式
 \(|\Delta h|\le L|\Delta g|^\gamma\) 的临界指数是 \(1/2\)，
-且 \(L_{1,1/2}^*=2\)：(NS2) 在 \(\gamma=1/2\) 给
+且 \(L_{1,1/2}^*=2\)：对不同的两图点，(NS2) 在 \(\gamma=1/2\) 给
 \[
 \frac{|\Delta h|^2}{|\Delta g|}
 =\frac{|a|(1+s)^2}{1-s}\le4,

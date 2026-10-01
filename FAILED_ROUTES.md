@@ -201,6 +201,6 @@
 <a id="f30"></a>
 ## F30 · 锐全局逆像界被误读为 rectangularity 或反射严格收缩
 
-- **尝试与断点**：把完整、极大且严格单调的全域线性图的全局 MR 常数 1，当作正 cocoercivity、rectangularity 或同一步长全对反射 \(L<1\) 的证书。逆像界只度量 \(F^{-1}\) 的下奇异值；它不管 \(\langle h,Fh\rangle/\|Fh\|^2\) 在高维尾部趋零。
+- **尝试与断点**：把完整、极大且严格单调的全域线性图的全局 MR 常数 1，当作正 cocoercivity、rectangularity 或同一步长全对反射 \(L<1\) 的证书。逆像界控制 \(\|F^{-1}\|\)，等价地控制 \(F\) 的下奇异值；它不管 \(\langle h,Fh\rangle/\|Fh\|^2\) 在高维尾部趋零。
 - **完整见证**：[C102/C103](research/topics/examples/skew_compact_diagonal.md#scd-inverse) 的 \(F=D+B\) 有 \(\|F^{-1}\|=1\)、所有目标完整单值逆像、全域近端严格收缩，但高块使正 cocoercivity 模为零、反射锐 \(L=1\)。对 \(x=0,v=(1/n)_n\in\operatorname{ran}F\)，有限支撑 \(z^{(N)}\) 又直接给 rectangular 条件的配对下确界 \(-\tfrac14\sum_{n\le N}1/n\to-\infty\)，无需导入旧稿所用外部等价命题。
 - **回收与重启门**：全局真逆像界、每条近端几何收敛和极大单调各自成立。要得正 cocoercivity 或反射严格模，须另证同一完整图的内积下界相对 \(\|Fh\|^2\) 或相应 Cayley 严格界；有限块上的正系数不可无条件统一至 \(\ell^2\)。
