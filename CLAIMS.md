@@ -528,3 +528,9 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：定义**另一个**完整关系 \(F_\infty(x)=\{-\sqrt x\}\) 当 \(x\ge0\)、其余为空；固定 \(\lambda=1\)，完整自然域 \([-1/4,\infty)\)，\(-1/4\le p\le0\) 的全部输出为 \(t_\pm(p)^2\)，\(p>0\) 仅为 \(t_+(p)^2\)，\(p<-1/4\) 为空。\(J_{F_\infty}(0)=\{0,1\}\) 阻断所有零消失全对 RL；任何非零合法初始输入的每条完整近端路径在第一步后为唯一正路径并趋 \(+\infty\)，零初值可恒零或稍后逃逸。
 - **Dependencies / Evidence / Status**：[SR-PARENT](research/topics/examples/restricted_root_graph.md#sr-parent) 完整二次根及逐步差分证明；`derived-checked`。母图身份来自原 GX-032 的第一句，全部路径是本库新增推导。
 - **Counterevidence / Scope**：受限图 \(\Gamma\) 的公式只对其短支与短域成立；不得把受限 \(L=3\)、二次一步或零目标路径结论移植给母图。旧稿的 LT 外部调用及先行性另审。
+
+## C88-v1 / LCR-SHARP · 同一四状态核的表示相关同步 OT 模
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(G=(0,1,3,4)\)、循环 \(T\)、每个 \(0<p<1\)、同一个 \(P_p=(1-p)I+pT_\#\)、唯一不变律 \(\pi\) 与平方距离成本 \(C\)。另定义一次噪声中的四个逐状态独立 Bernoulli\((p)\) 开关；对**每个** \(\mu\in\Delta_4\)，仅在 \(\operatorname{Opt}_C(\mu,\pi)\) 上对其同噪声位移成本取最小 \(\Psi_{\rm ind}^2\)。于是 \(\Psi_{\rm ind}^{-1}(0)=\{\pi\}\)，且 \(W_2^2(\mu,\pi)\le[13/(p(7-6p))]\Psi_{\rm ind}(\mu)^2\)，系数全律空间锐。共同开关表示的对应锐平方系数为 C71 的 \(13/p\)。
+- **Dependencies / Evidence / Status / Related Files**：[LCR-OBJECT/SHARP](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 的全部成本、两项无交叉抵消界及取等计划独立证明；C71 提供同对象 \(C\le13A\) 的已核引理。`derived-checked`；这是本库新增表示和命题，不是历史 C71 的来源报告。
+- **Counterevidence / Scope**：核和平稳律相同不代表同步成本相同；i=j 时两分支必须使用同一个噪声，不能套独立输入公式。结论限此四点几何、固定 \(p\) 与 OT 最优计划；不推出随机轨道的收敛率或跨表示统一残差。

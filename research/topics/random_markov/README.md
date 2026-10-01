@@ -8,4 +8,6 @@
 
 [四状态惰性循环](lazy_cycle_ot.md)在原同步 OT 残差中用最优运输的无交叉约束排除位移签名碰撞，得到精确零集与锐常数 \(\sqrt{13/p}\)；去掉输入 OT 最优性，同一核便出现假零点。它是 C15 固定有限数据框架的具体对象卡，锐常数另有直接证明。
 
+[同核两种随机映射表示](lazy_cycle_representations.md#lcr-object) 固定四状态核与不变律，比较共同 Bernoulli 开关和四个逐状态独立开关的同步位移成本；[C88](lazy_cycle_representations.md#lcr-sharp) 给后者的锐平方系数 \(13/[p(7-6p)]\)。该差异属于表示相关残差，不改变 Markov 核。
+
 [条件二次随机近端](../../canonical/random_proximal.md)的 C22/C23 使用随机切换二次目标与固定守恒边缘；[Markov 同步 OT](../../cone_markov.md)则使用另一个表示相关的残差 \(\Psi\)。新桥若改变核、目标、零集或残差，必须另立 Claim；只有同一对象与完整条件吻合才连接超边。

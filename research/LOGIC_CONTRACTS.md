@@ -62,7 +62,7 @@ E113 对任意非空子集 \(D\subset H\) 及**全部配对**的相同 \(L,0<\ga
 
 ## E115–E118：并图三残差与新 Sign 图局部指数
 
-E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 是 \(r_F(x)=d(0,F(x))=x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR/semimonotonicity 仍另核。[IS 卡](topics/examples/identity_square_branch_union.md)。
+E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 的全局公式是 \(r_F(x)=d(0,F(x))=\min\{|x|,x^2\}\)，在 \(|x|\le1\) 的零点局部窗才简化为 \(x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR/semimonotonicity 仍另核。[IS 卡](topics/examples/identity_square_branch_union.md)。
 
 E118 对另一个**新定义**的 \(F_{\rm lift}\) 使用 C64 的全域完整 \(J_F=T\)；固定 \(\lambda=1\)、端点 Minty 输入球 \(U=B_\rho((2/3,0))\)、\(0<\rho<\min\{1/2,(2/3)/(2\sqrt{10})\}\)。球内任意两完整图点的反射差有 \(1/3\) Hölder 界，端点正向输入序列排除更高指数；任何无界全域版本和历史循环 Sign 方程都没有这条边。[SL-RL](topics/path_dynamics/m1_sign_lift.md#sl-rl)。
 
@@ -167,6 +167,10 @@ E139/E140 固定同一 \(F=\partial|\cdot|\)，但分别以原算子完整 \(r_F
 ## E142：固定有限状态残差的正则性与 EB 分离
 
 E142 保持 C15 的**同一**有限互异状态、核、\(C,R\) 与所有不变目标律。对每对边缘，\(C\)-最优计划集非空；[Hoffman 的固定矩阵、一致右端版本](LITERATURE.md#lit-hoffman-1952) 加最大耦合的 \(C\)-成本变化界，控制最优计划集的 Hausdorff 变化。再对同一紧 \(\mathcal I\) 取小，得到 \(\Phi=\Psi^2\) 在**整个** \(\Delta_N\) 全局 Lipschitz；有限 tight-edge 分支与该连续性合取才给连续分片仿射。此边不以 exact-zero 或顶点判据为输入，也不推出 C15 的 EB；图中的 FS-CELLS 输入表示可用于有限分片表示的已核代数，而非把 C15 的结论当作正则性假设。空零面时 [FS-HOFFMAN](topics/random_markov/finite_state_certificate.md#fs-hoffman) 另用正成本下界，不把不一致系统送入外部定理。
+
+## E153：同核不同随机表示的残差身份
+
+E153 固定 C71 的四状态核、\(\pi,C,0<p<1\)，但**新增**一次噪声中的四个逐状态独立 Bernoulli 开关。对不同输入状态同步使用同一四位噪声，成本为 \(p^2(d_i-d_j)^2+p(1-p)(d_i^2+d_j^2)\)；同输入使用同一位，成本为零。对**每个**输入律仍只在 \(\operatorname{Opt}_C(\mu,\pi)\) 内最小化；共同开关的 C71 不等式 \(C\le13A\) 与新无交叉不等式 \(7C\le13B\) 合取，得到 [C88](topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 的精确零集和锐系数。核相同只保持边缘转移与不变律，不能替换残差成本或其锐常数。
 
 ## E143–E145：同一正弦图的局部模不可跨目标合成
 

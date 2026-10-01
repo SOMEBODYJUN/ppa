@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 227 个数学节点、152 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 229 个数学节点、153 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -67,7 +67,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | DR 切触与横截 | 同一算法残差 \(I-T\) 在切触线/抛物线有锐半阶 MSR 模 1、无统一一步距离严格收缩；横截两线有全域线性 MR/MSR 模 \(1/\sin\theta\) 和轨道因子 \(\cos\theta\) | C60/C61 是两个对象；不能把算法模换成法锥和的模 |
 | 对角竖支闭图 | 完整原图的线性真 EB + 满输入完整近端的线性步 EB + 每选择线性有限长，与零锚 RL 同时成立；同输入跨支碰撞排除任意全对零消失模 | C72–C75/GX-075 独立对象卡；F25 阻断从动力逆推全对 RL |
 | 身份与平方并图 | 同一完整 \(F(x)=\{x,x^2\}\) 的真残差锐半阶；指定身份近端线性步 EB 与完整最小步半阶分离；跨支同输入碰撞 | C66–C68/GX-068；三个残差/图量词分别调用，原卡其他性质未审 |
-| 惰性四状态同步 OT | 固定四点循环、0<p<1、同一输入对唯一不变律的 C-最优耦合 + 同步残差成本 → 精确零集与锐 √(13/p) 线性界；放松内层 OT → 同核假零点 | C71 独立重算；一般有限状态分类及优先权仍待审 |
+| 惰性四状态同步 OT | 固定四点循环、0<p<1、同一输入对唯一不变律的 C-最优耦合 + 同步残差成本 → 精确零集与锐 √(13/p) 线性界；放松内层 OT → 同核假零点 | C71 独立重算；一般固定有限状态证书另见下行 C15，来源其余速率结论及优先权待审 |
+| 同核不同随机表示 | 四状态核固定，改为逐状态独立 Bernoulli 的随机映射表示 + 同一 C-最优输入运输 → 同一零集但锐平方系数 13/[p(7−6p)] | [C88](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 新推导；表示会改变同步残差，不能从核身份直接迁移常数 |
 | 固定有限状态同步 OT | 固定互异状态及核 + 同一 C-最优耦合 + 全部不变律 + 零成本 tight-edge 顶点行边缘不变 ⇔ 精确零集 ⇔ 全律空间锐线性 EB | [C15 完整证明](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 已独立重写；不需混合性，也不推动力收敛。§5 备用证明和 §6 正则性另有去向 |
 | 有限状态残差正则性 | 固定有限数据 + C-最优计划的固定矩阵 Hoffman 界 + 运输成本变化界 → Φ=Ψ² 全域 Lipschitz；有限 tight-edge 分支 → 连续分片仿射 | [C80](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 不要求 C15 的 exact-zero 判据；正则性不推出 EB |
 | 正值正弦的错目标边界 | GX-064 完整 F=2+sin x 在 λ=1 的全对临界 1/3 阶与目标 3 的固定目标半阶属于不同参考图点；F 零集为空 | C81/C82 的缩窗锐常数与每选择向负无穷的完整路径已重算；不能拼成零集 PPA |
