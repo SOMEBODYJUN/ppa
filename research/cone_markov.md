@@ -124,9 +124,9 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 
 | 别名 | 路径／定位 |
 |---|---|
-| CM-C | [锥证明包](../assets/次单调论文研究/ATTACK_PRODUCT_CONE_CRSC_MSCQ.md)，§§2–10 |
-| CM-M | [Markov 定理包](../assets/次单调论文研究/MARKOV_PAPER_THEOREM_PACKAGE.md)，Definitions §1、Theorems 1/F/2/4/6–8、Propositions 9/10/M |
-| CM-H | `assets/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/` 下 `02_锥优化_CRSC_MSCQ/03_核心证明审计/` 和 `03_随机与Markov理论/` 的逐题审计 |
-| CM-N | [9/21 总账](../assets/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md)，§§2–3；[no-go](../assets/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)，N03/N04/N13 |
+| CM-C | [锥证明包](../history/sources/次单调论文研究/ATTACK_PRODUCT_CONE_CRSC_MSCQ.md)，§§2–10 |
+| CM-M | [Markov 定理包](../history/sources/次单调论文研究/MARKOV_PAPER_THEOREM_PACKAGE.md)，Definitions §1、Theorems 1/F/2/4/6–8、Propositions 9/10/M |
+| CM-H | `history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/` 下 `02_锥优化_CRSC_MSCQ/03_核心证明审计/` 和 `03_随机与Markov理论/` 的逐题审计 |
+| CM-N | [9/21 总账](../history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md)，§§2–3；[no-go](../history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)，N03/N04/N13 |
 
 开放门包括锥正式版及近邻定理的逐条优先权核查、随机原生匹配接口、同核不同表示的严格证书分离。9/21 另报告更强 Markov 模型及结构性恢复并停止继续升级反例；相关后期原证明未附全，不在本页补造。已有组件不新不等于整个联合命题不新；内部 PASS 也不等于原创性已证。

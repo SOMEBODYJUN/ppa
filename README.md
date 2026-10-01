@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 81 个数学节点、53 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 assets/ 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 81 个数学节点、53 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 history/sources/ 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
 
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，外部定理与先行性门未关闭。9/25 局部值域证书另有独立整窗拓扑假设。
 
@@ -87,6 +87,6 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
 | [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 精确身份、当前阻塞、已失败机制；每次进展后同步维护。 |
-| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md) | 初始校验与旧批次盘点；用于核原件，不再作为数学地图。原件保留在 [assets/](assets/)，Git 历史可追初始导入。 |
+| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md) | 初始校验与旧批次盘点；用于核原件，不再作为数学地图。原件保留在 [history/sources/](history/sources/)，Git 历史可追初始导入。 |
 
 阅读顺序：本页和超边图 → 依节点进数学模块 → SOURCES 的原稿标签/页码 → CLAIMS 的现存 objection。图中路线是搜索种子，不是方法白名单。

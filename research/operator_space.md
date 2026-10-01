@@ -122,14 +122,14 @@ m_j(T)=\sup_{\|x-y\|\le2^{-j}}\|R_Tx-R_Ty\|,\qquad
 
 ## 6. 来源定位
 
-设包根 `P=assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/`。
+设包根 `P=history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/`。
 
 | 别名 | 原文路径与定位 |
 |---|---|
 | OS-H | `P/01_CANONICAL_HANDOFF/mathematician_handoff/07_final_handoff.md`，§§2–6、§11 来源表 |
 | OS-A | `P/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md`，§§1–7 |
 | OS-E | `P/02_NEUTRAL_PPA_SYSTEM/ppa_system_team/03_certificate_embeddings.md`；`07_embedding_math_audit.md` |
-| OS-N | `assets/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md`；`03_NO_GO_LEDGER.md` |
-| OS-I | `assets/提纯总账_2026-09-21_v0.9/05_INTERNAL_INDEX.md`，恢复清单；路径是历史位置 |
+| OS-N | `history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md`；`03_NO_GO_LEDGER.md` |
+| OS-I | `history/sources/提纯总账_2026-09-21_v0.9/05_INTERNAL_INDEX.md`，恢复清单；路径是历史位置 |
 
 来源文件属于证据层；上述 OS-* 数学节点与超边属于规范层。若后续证明改变域、选择或步长量词，应另立版本，不能静默覆盖此页。

@@ -4,9 +4,9 @@
 
 ## 来源与版本
 
-- **S23**：[9/23 结构稿 TeX](../assets/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)，以及[匹配 PDF](../assets/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.pdf)。以下 TeX 行号对应原始附件，标签是稳定定位。
-- **S19**：[9/19 扩展源码 ZIP](../assets/次单调论文研究/RLEB_投稿扩展版_完整源码_2026-09-19.zip)，内文件 `RLEB_投稿扩展版_2026-09-19/sections/extensions_moduli_structure.tex`。本轮读取了解包全文；以下 S19 行号均指该文件。
-- **S25**：[9/25 combined PDF](../assets/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf)，§8，印刷页 20–22。该新增节没有同版 TeX；不把 S23 当作其源码。
+- **S23**：[9/23 结构稿 TeX](../history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)，以及[匹配 PDF](../history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.pdf)。以下 TeX 行号对应原始附件，标签是稳定定位。
+- **S19**：[9/19 扩展源码 ZIP](../history/sources/次单调论文研究/RLEB_投稿扩展版_完整源码_2026-09-19.zip)，内文件 `RLEB_投稿扩展版_2026-09-19/sections/extensions_moduli_structure.tex`。本轮读取了解包全文；以下 S19 行号均指该文件。
+- **S25**：[9/25 combined PDF](../history/sources/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf)，§8，印刷页 20–22。该新增节没有同版 TeX；不把 S23 当作其源码。
 
 ## H01 · 固定参数全图 RL 与 Cayley 表示
 
