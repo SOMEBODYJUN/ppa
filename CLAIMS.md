@@ -600,3 +600,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C98 同一完整图，每个单位 \(\bar x\) 取 \(\bar y=K\bar x\ne0\)。固定目标 \(F^{-1}(\bar y)=\{\bar x\}\) 且对**全部** \(x\in B\) 有 \(\|x-\bar x\|^2\le2d(\bar y,F(x))\)。在 \((\bar x,\bar y)\) 共同邻域，固定目标 MSR、两变量 MR、逆映射 Hölder 的半阶系数下确界均为 \(\sqrt2\)；\(q<1/2\) 的局部系数下确界为 0，\(q>1/2\) 失败。全局 \(q\le1/2\) 的取等发生在对径点，与局部锐见证分开。
 - **Dependencies / Evidence / Status / Related Files**：[SB-BOUNDARY](research/topics/examples/skew_ball_inverse.md#sb-boundary) 的同一完整法向射线 \(z_\theta,v_\theta\) 同时取最近残差与逆像距离；依赖 C98 的上界，`derived-checked`。
 - **Counterevidence / Scope**：\((0,0)\) 的局部图为可逆旋转，普通线性 MR/MSR 系数 1；边界非零目标的半阶不能移植为零目标正则性。低幂零局部下确界不能写成非平凡邻域中系数 0 的可达界。
+
+## C100-v1 / BNS-MINTY · 有界负平方完整图的全对步长相变
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实完整关系 \(F(x)=\{-x^2\}\) 当 \(0\le x\le1/2\)、其余为空；固定每个 \(\lambda>0\)，对**全部**两图点且同一步长：\(0<\lambda<1\) 的完整 Minty 自然域为 \([0,1/2-\lambda/4]\)，单值且全图线性 RL 锐常数 \((1+\lambda)/(1-\lambda)\)；\(\lambda=1\) 的自然域 \([0,1/4]\)，单值但全图临界指数 \(1/2\) 锐常数 2，低指数锐值为 (NS5)；\(\lambda>1\) 有完整图同输入跨点碰撞，排除任意零消失全对反射模。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[BNS-OBJECT/MINTY](research/topics/examples/bounded_negative_square.md#bns-minty) 从所有区间点对、可实现差值和端点序列重算；来源是 9/01 ZIP `work/c_gx053_065.md` 的 GX-053 选定观察；`derived-checked`，不调用外部定理。
+- **Counterevidence / Scope**：全图半阶锐性发生在 \(1/2\) 端点，不是零点局部指数；临界 \(J\) 只在自然域定义；局部缩图的 RL 与完整母图的全对条件是不同命题。历史 Spingarn 名称、VI 分类和先行性未审。
+
+## C101-v1 / BNS-ZERO-PATH · 真零残差与临界合法路径越域
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C100 的同一完整图，\(S=\{0\}\)；对每个域内 \(x\)，\(d(x,S)=r_F(x)^{1/2}\)，固定零目标的最大局部幂次 \(q=1/2\)，系数 1 锐。固定 \(\lambda=1\)，对**每个** \(p_0\in[0,1/4]\) 和每一步在自然域的完整近端路径：零路径恒零；每个正初值的唯一合法路径只能有限步延续，随后输出越出自然输入域。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[BNS-ZERO](research/topics/examples/bounded_negative_square.md#bns-zero) 的完整残差恒等式、严格递增与极限反证；路径依赖 C100 的完整 \(J\) 纤维；`derived-checked`。来源 GX-053 仅提供图和 EB 线索，逐路径结论为本库推导。
+- **Counterevidence / Scope**：正目标逆像为空，固定目标 EB 不提供两变量 MR；全图半阶乘真 EB 半阶既不产生收缩门，也不提供负输入 coverage 或正侧留域；有限合法路径越域不是发散的无限合法轨道。
