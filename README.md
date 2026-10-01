@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 143 个数学节点、91 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 147 个数学节点、94 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
 
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
@@ -65,6 +65,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 孤立零点分支 | 同图 germ 三模平坦性 + 真 EB + 指定输入/输出窗口及小步门 → 上 \(q\) 阶；再加正归一化极限 → 精确 Q 因子 | C45/C46；选中值不倒推真 EB，完整纤维另证 |
 | 离散覆盖障碍 | 完整紧图全对 RL + \(S=K\) 上真 EB 仍不提供零点输入球 | C47/GX-074；coverage 独立 |
 | 非孤立对齐 | 输出最近零点锚 + 全家族真 EB/小步门 + 统一锚模 → 上 \(\theta q\) 阶；同序列三重饱和才给锐性 | C48–C50；无最近点另用正容差，跨序列指数不能拼接 |
+| 移动锚反射 | 同一实际图点的真 EB + 输出近锚 + 小残差 → 相对该锚的反射比趋 1；幂型给定量缺陷 | C51/C52；固定锚与集合距离收缩需要别的桥，F18 有反例 |
 | 复合次正则 | 原生凸外层 EB ∧ 满行秩定量修复 ∧ 链式残差下界 → 复合真实 EB；再加全部乘子界、步长门、gauge 兼容和留域 → 局部近端有限长 | C34–C37 已重写；尖点外层特例在 C40，秩亏原生推广开放；历史 C11 不等于回缩 C11 |
 | 复合模型的独立边界 | 曲面尖点外层 + 真残差间隙 + 局部近端步长门 → 一步识别；光滑驻点极大序列 → 无弱分离时二阶目标 EB 失败 | C40/C41 本轮重算；前者图真多值而局部输出唯一，后者只攻击到 \(\Theta_2\) 的扩大陈述 |
 
@@ -73,6 +74,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 [孤立零点平坦性](research/canonical/isolated_zero_flatness.md) 将图 germ 的代数、完整残差纤维、指定分支轨道上阶和正因子的额外极限分开；[GX-074](research/topics/path_dynamics/discrete_coverage.md) 给紧全图仍无 coverage 的见证。
 
 [非孤立对齐](research/canonical/nonisolated_alignment.md) 用输出最近零点的锚距离及最近点漂移解释 \(\theta q\) 上界；无 proximinality 的近似锚与正 Q 因子各有附加门。[F17](FAILED_ROUTES.md#f17) 防止把不同序列的最坏指数相乘。
+
+[移动锚反射](research/canonical/moving_anchor_reflection.md) 的逐图点双边比与幂型常数只围绕随输出选取的 p；线性零集反例使固定锚和集合距离的错误升级可直接检查。
 
 ## Research Frontier
 
@@ -96,7 +99,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
 3. 为 9/25 §8 配对可编译源，核 [6, Theorem 6.2] 的范畴与 Čech 同调条件；在正文保持“指定 \(T\)”量词。
 4. 修订 9/19 随机推论的指定度量完备性，保留反例作为缘由；分别推进结构、锥、Markov 的外部先行性核验。
-5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations §6 moving-anchor、其余 GX 单元，以及 M1 **原生多值图到已验显式 T 的桥**；复合稿的真多值尖点与振荡弱分离例已有精确重写，下一步核秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
+5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations §5 局部收敛门、其余 GX 单元，以及 M1 **原生多值图到已验显式 T 的桥**；复合稿的真多值尖点与振荡弱分离例已有精确重写，下一步核秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
 
 ## File Map
 
@@ -104,6 +107,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | --- | --- |
 | [research/canonical/isolated_zero_flatness.md](research/canonical/isolated_zero_flatness.md) | IZ-GERM/FIBERS 与 C45/C46：孤立零点的图 germ 换算、真残差全部小纤维门、分支上阶及正 Q 因子的额外极限；研究孤立解 PPA 时读。 |
 | [research/canonical/nonisolated_alignment.md](research/canonical/nonisolated_alignment.md) | NA-OBJECT/DRIFT/COMPOSE/APPROX/SHARP 与 C48–C50：非孤立零集的锚漂移、统一 gauge 上界、无最近点的正容差修补、同序列锐性；研究 \(\theta q\) 或 tangent drift 时读。 |
+| [research/canonical/moving_anchor_reflection.md](research/canonical/moving_anchor_reflection.md) | MA-OBJECT/REFLECT/POWER/LIMIT 与 C51/C52：实际图点的输出近锚反射、幂型系数、固定锚及集合收缩反例；把局部 EB 用于反射或选锚时读。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
 | [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | E02/03、E06/11/12、E17–19、E13、E54–83 的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |

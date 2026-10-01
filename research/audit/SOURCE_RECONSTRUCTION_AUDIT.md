@@ -124,3 +124,7 @@
 ## 14. 增量：非孤立解集的对齐与同序列锐性
 
 [非孤立 alignment](../canonical/nonisolated_alignment.md) 把 §8.1–8.3 和 §9.1 拆成 C48–C50 及 NA-APPROX：最近点存在性须覆盖整个 envelope 输入家族，集合间 infimum 不要求取到；真 EB、小步门、锚漂移 profile 和 gauge 定义域合取才给上指数；无最近点时另用正容差近似锚；精确 \(\theta q\) 见证需同一序列的三个正比值。逐源 TSV 再增加四行。GX-071–074 的对象卡另有自身证明，不能反向证明这条一般定理最优；其他 foundations 小节和外部文献仍未关闭。
+
+## 15. 增量：moving-anchor 与固定锚的分界
+
+[移动锚反射](../canonical/moving_anchor_reflection.md) 从 foundations §6.1–6.2 重算真残差输出近锚的双边渐近反射比和幂型缺陷常数 C51/C52；线性零集的显式完整关系阻断将输出近锚换为任意固定零点或集合距离收缩，[F18](../../FAILED_ROUTES.md#f18) 记录机制。逐单元 TSV 增加两行。此结果逐图点成立，不自动赋予原算法的输入 coverage、全对 RL 或轨道留域；文件级清洗仍开放。

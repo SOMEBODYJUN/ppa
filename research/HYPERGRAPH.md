@@ -54,6 +54,7 @@
 | E24 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
 | E44 | [M-MOMENT · 小质量混合 pq≤r](cone_markov.md#m-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门；**Markov Proposition M** |
 | E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
+| E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
 
 ## 局部拓扑
 
@@ -194,6 +195,13 @@
 | E89 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | 同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；包络另需 A(r)≤Kr^θ。只给上指数。；**本轮 |a−λt|≤s 逐点重算** |
 | E90 | [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-APPROX · 无最近点时的正容差近似锚](canonical/nonisolated_alignment.md#na-approx) | 不需 proximinality；对同一实际输出的 t>0 取 e(t)>0，ψ(t)+e(t)≤κλt、κ<1 和 a_e/((1−κ)λ)<ηψ；只替换最近点存在性，不给输入 coverage。；**本轮近似锚 infimum 证明** |
 | E91 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | conditional → [NA-SHARP · 同序列 θq 饱和门](canonical/nonisolated_alignment.md#na-sharp) | 上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。；**本轮同序列乘积与步长渐近** |
+
+## 移动锚
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E92 | [MA-OBJECT · 图点真 EB 与逐点输出近锚](canonical/moving_anchor_reflection.md#ma-object) | conditional → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | 同一 (y,w)∈gph F、t=\|\|w\|\|>0、真 EB ψ=o(id)、p 为输出近锚且 e=o(id)、δ=(ψ(t)+e(t))/(λt)<1；双边反射比及缺陷界仅关于这个 p。；**本轮三角双边界独立重算** |
+| E93 | [MA-OBJECT · 图点真 EB 与逐点输出近锚](canonical/moving_anchor_reflection.md#ma-object) ∧ [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | conditional → [MA-POWER · 幂型近锚反射缺陷常数](canonical/moving_anchor_reflection.md#ma-power) | 同一逐点 p；另需 q>1、真 ρt^q EB、近锚误差 ct^q 及 (ρ+c)t^(q−1)/λ≤1/2；充分缺陷系数 2^(q+1)(ρ+c)/λ^q。；**本轮逐点幂界；常数未证最优** |
 
 ## 不蕴含关系
 

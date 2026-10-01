@@ -16,6 +16,12 @@ E90 不以 E88 的 proximinality 为前提：正的 \(e(t)\) 或另证近似投�
 
 E91 需要 E89 的共同上界环境和**同一**合法输入序列上三个正有限归一化极限；它不能用不同序列分别达到的 \(\theta,q\) 拼接。此时正因子为 \(CB^qA^q\)，而 \(\psi=o(t)\)、\(t_n\to0\) 强制 \(B=1/\lambda\)。若三重饱和没有证据，只保留 C49 的 upper bound。[C50](canonical/nonisolated_alignment.md#na-sharp)、[F17](../FAILED_ROUTES.md#f17)。
 
+## E92–E94：移动输出锚只约束同一图点
+
+E92 固定一个实际 \((y,w)\in\operatorname{gph}F\)、\(t=\|w\|>0\)、步长 \(\lambda\)，输出 y 有真 EB \(\psi(r_F(y))\) 且 \(\psi=o(t)\)；所选 \(p\in S\) 满足 \(\|y-p\|\le d(y,S)+e(t)\)，\(e=o(t)\)，若 \(e=0\) 需最近点存在。双边比与缺陷只关于这个随点变化的 p。E93 再用同一个 p 和幂型 \(d(y,S)\le\rho r_F(y)^q\)、\(e(t)=ct^q\)、\(q>1\)、\((\rho+c)t^{q-1}/\lambda\le1/2\) 给充分常数。二者均不需全对 RL，也不供输入 coverage。[C51/C52](canonical/moving_anchor_reflection.md)。
+
+E94 的完整关系具有线性零集并在每个零点均含 0 及趋零的非零图值；取 y 固定、p=y 给移动锚零缺陷，但固定 \(p_0=0\) 的相对缺陷趋 2，反射前后到 S 距离相等。它限制把 E92 读成固定锚或集合距离收缩，不反驳 E92 自身。[MA-LIMIT](canonical/moving_anchor_reflection.md#ma-limit)、[F18](../FAILED_ROUTES.md#f18)。
+
 本页按 [graph.json](graph.json) 的边 ID 解释合取输入。图只存摘要；调用一个 Claim 时必须读 [总账](../CLAIMS.md) 与对应证明。`∧` 表示**同一对象、同一参数及同一合法区域上的同时成立**，不允许用不同稿件各取一半前提。`source-report`、`candidate`、`derived-checked` 不能因画了箭头自动升为 `canonical`。
 
 ## E02→E03：局部 RLEB 的完整收敛链

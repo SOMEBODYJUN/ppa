@@ -27,3 +27,5 @@ history/sources/次单调论文研究/RL_foundations.md	§8.1 输出锚与漂移
 history/sources/次单调论文研究/RL_foundations.md	§8.2 gauge 合成	rewritten	C49-v1 / NA-COMPOSE	research/canonical/nonisolated_alignment.md#na-compose	重算同一实际输出的真 EB 小步门 gauge 定义域及全家族上界	不推出完整 resolvent 所有选择与轨道留域
 history/sources/次单调论文研究/RL_foundations.md	§8.3 无 proximinality 近似锚	rewritten	NA-APPROX	research/canonical/nonisolated_alignment.md#na-approx	正容差保证近似集非空并重算 κ 预算	近似锚 profile 仍须对实际输入家族验证
 history/sources/次单调论文研究/RL_foundations.md	§9.1 joint saturation	rewritten	C50-v1 / NA-SHARP	research/canonical/nonisolated_alignment.md#na-sharp	三个同序列正极限相乘并核超线性 EB 强制 B=1/λ	不同序列的锐指数不能相乘
+history/sources/次单调论文研究/RL_foundations.md	§6.1 moving-anchor 渐近反射	rewritten	C51-v1 / MA-REFLECT	research/canonical/moving_anchor_reflection.md#ma-reflect	真残差输出近锚与双边三角比重算 并用线性零集反例限固定锚	不推出全对模或输入 coverage
+history/sources/次单调论文研究/RL_foundations.md	§6.2 power defect	rewritten	C52-v1 / MA-POWER	research/canonical/moving_anchor_reflection.md#ma-power	重算幂型近锚常数及 A=0 边界	最优常数和轨道结论均未核

@@ -1,8 +1,12 @@
 # Research State · 2026-10-01
 
+## 第三笔增量：逐图点移动锚与固定锚的边界
+
+[C51/C52 移动锚反射](research/canonical/moving_anchor_reflection.md) 从旧 foundations §6 重算实际图点的输出近锚双边比、幂型缺陷及正容差近锚选择。真 EB 是输出 y 的全纤维残差，p 随 y、w 改变；[F18](FAILED_ROUTES.md#f18) 的线性零集完整关系说明不能将它变成任意固定锚的反射或集合距离收缩。下一步从 9/01 其余未验收 GX 或 §5 的局部收敛门选独立单元，继续按同对象、同目标和实际分支逐项裁决。
+
 ## 第二笔增量：非孤立解集的锚点漂移与锐性
 
-[C48–C50 / 非孤立 alignment](research/canonical/nonisolated_alignment.md) 重新证明 9/01 foundations §8–§9.1 的锚点界、真 EB 合成与同序列饱和。\(P_S(x)\) 和 \(P_S(Jx)\) 的存在必须覆盖整个输入家族；未取到的集合间 infimum 用近似点对处理。若没有 proximinality，NA-APPROX 用正容差并要求额外 \(\kappa\) 预算。统一 \(\mathcal A(r)\le Kr^\theta\) 与实际输出真 EB 只给 upper \(\theta q\)；[F17](FAILED_ROUTES.md#f17) 记录“不同序列的两个锐指数相乘”的量词断点。下一步选择一个尚未重写的 GX 对象或 §6 moving-anchor 定理，逐项核图、目标与轨道；不要把 C49 当作它们的普遍最优性证明。
+[C48–C50 / 非孤立 alignment](research/canonical/nonisolated_alignment.md) 重新证明 9/01 foundations §8–§9.1 的锚点界、真 EB 合成与同序列饱和。\(P_S(x)\) 和 \(P_S(Jx)\) 的存在必须覆盖整个输入家族；未取到的集合间 infimum 用近似点对处理。若没有 proximinality，NA-APPROX 用正容差并要求额外 \(\kappa\) 预算。统一 \(\mathcal A(r)\le Kr^\theta\) 与实际输出真 EB 只给 upper \(\theta q\)；[F17](FAILED_ROUTES.md#f17) 记录“不同序列的两个锐指数相乘”的量词断点。下一步选择一个尚未重写的 GX 对象或 §5 的局部收敛门，逐项核图、目标与轨道；不要把 C49 当作它们的普遍最优性证明。
 
 ## 本轮增量：孤立零点与输入覆盖的独立门
 
@@ -55,7 +59,7 @@
 
 ## 证据与下一阶段
 
-现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前 91 条边经版本和范围重组，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
+现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前 94 条边经版本和范围重组，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
 
 **覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向只覆盖列出的 C31–C44 来源小节；GX 余项、随机其他支线、M1 原生图桥、复合秩亏原生证明和外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
 **例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。

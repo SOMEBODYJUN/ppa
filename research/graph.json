@@ -716,6 +716,26 @@
       "id": "NA-SHARP",
       "label": "同序列 θq 饱和门",
       "file": "canonical/nonisolated_alignment.md#na-sharp"
+    },
+    {
+      "id": "MA-OBJECT",
+      "label": "图点真 EB 与逐点输出近锚",
+      "file": "canonical/moving_anchor_reflection.md#ma-object"
+    },
+    {
+      "id": "MA-REFLECT",
+      "label": "移动零点锚的渐近反射比",
+      "file": "canonical/moving_anchor_reflection.md#ma-reflect"
+    },
+    {
+      "id": "MA-POWER",
+      "label": "幂型近锚反射缺陷常数",
+      "file": "canonical/moving_anchor_reflection.md#ma-power"
+    },
+    {
+      "id": "MA-LIMIT",
+      "label": "固定锚与集合收缩的反例边界",
+      "file": "canonical/moving_anchor_reflection.md#ma-limit"
     }
   ],
   "edges": [
@@ -1785,6 +1805,40 @@
       "relation": "conditional",
       "scope": "上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。",
       "status": "本轮同序列乘积与步长渐近"
+    },
+    {
+      "id": "E92",
+      "topic": "移动锚",
+      "inputs": [
+        "MA-OBJECT"
+      ],
+      "output": "MA-REFLECT",
+      "relation": "conditional",
+      "scope": "同一 (y,w)∈gph F、t=||w||>0、真 EB ψ=o(id)、p 为输出近锚且 e=o(id)、δ=(ψ(t)+e(t))/(λt)<1；双边反射比及缺陷界仅关于这个 p。",
+      "status": "本轮三角双边界独立重算"
+    },
+    {
+      "id": "E93",
+      "topic": "移动锚",
+      "inputs": [
+        "MA-OBJECT",
+        "MA-REFLECT"
+      ],
+      "output": "MA-POWER",
+      "relation": "conditional",
+      "scope": "同一逐点 p；另需 q>1、真 ρt^q EB、近锚误差 ct^q 及 (ρ+c)t^(q−1)/λ≤1/2；充分缺陷系数 2^(q+1)(ρ+c)/λ^q。",
+      "status": "本轮逐点幂界；常数未证最优"
+    },
+    {
+      "id": "E94",
+      "topic": "交叉限制",
+      "inputs": [
+        "MA-LIMIT"
+      ],
+      "output": "MA-REFLECT",
+      "relation": "limits",
+      "scope": "S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。",
+      "status": "本轮完整图值与距离直接计算"
     }
   ]
 }
