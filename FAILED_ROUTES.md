@@ -197,3 +197,10 @@
 - **尝试与断点**：只因完整关系 \(F=N_B\) 在参考零点的固定目标 MSR 系数下确界为 0、全域反射非扩张，便推原关系有任意正指数两变量 MR/HREG 或 inverse Aubin。固定目标在 \(\operatorname{dom}F=B=S\) 上两边均零，域外残差为无穷，完全没有测量非零目标的逆像跳变；全邻域的 \(0\cdot\infty\) 还需约定，故只称系数**下确界** 0。
 - **精确反例**：[BN-REGULARITY](research/topics/examples/ball_normal_cone.md#bn-regularity) 对每个边界 \(e\in\partial B\) 取 \(y=-te\to0\)：\(F^{-1}(y)=\{-e\}\)，\(d(e,F^{-1}(y))=2\)，而 \(\|y\|=d(y,F(e))=t\)。内部参考点的非零目标逆点也立即跳到球面。因而每个参考零点的两变量及固定输入正指数界失败；逆 Aubin 取 \(e\in F^{-1}(0)\) 同样失败。
 - **回收与重启门**：完整法锥的全图二参数区和锐 \(L=1\) 反射非扩张仍成立；固定目标系数下确界 0 仍是诚实但真空的陈述。要得到有内容的 EB，先说明非孤立零集、域外残差、目标扰动和输入 coverage 的同一规范；改零集或引入其它残差须另立命题。
+
+<a id="f30"></a>
+## F30 · 锐全局逆像界被误读为 rectangularity 或反射严格收缩
+
+- **尝试与断点**：把完整、极大且严格单调的全域线性图的全局 MR 常数 1，当作正 cocoercivity、rectangularity 或同一步长全对反射 \(L<1\) 的证书。逆像界只度量 \(F^{-1}\) 的下奇异值；它不管 \(\langle h,Fh\rangle/\|Fh\|^2\) 在高维尾部趋零。
+- **完整见证**：[C102/C103](research/topics/examples/skew_compact_diagonal.md#scd-inverse) 的 \(F=D+B\) 有 \(\|F^{-1}\|=1\)、所有目标完整单值逆像、全域近端严格收缩，但高块使正 cocoercivity 模为零、反射锐 \(L=1\)。对 \(x=0,v=(1/n)_n\in\operatorname{ran}F\)，有限支撑 \(z^{(N)}\) 又直接给 rectangular 条件的配对下确界 \(-\tfrac14\sum_{n\le N}1/n\to-\infty\)，无需导入旧稿所用外部等价命题。
+- **回收与重启门**：全局真逆像界、每条近端几何收敛和极大单调各自成立。要得正 cocoercivity 或反射严格模，须另证同一完整图的内积下界相对 \(\|Fh\|^2\) 或相应 Cayley 严格界；有限块上的正系数不可无条件统一至 \(\ell^2\)。

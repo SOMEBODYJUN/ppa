@@ -612,3 +612,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C100 的同一完整图，\(S=\{0\}\)；对每个域内 \(x\)，\(d(x,S)=r_F(x)^{1/2}\)，固定零目标的最大局部幂次 \(q=1/2\)，系数 1 锐。固定 \(\lambda=1\)，对**每个** \(p_0\in[0,1/4]\) 和每一步在自然域的完整近端路径：零路径恒零；每个正初值的唯一合法路径只能有限步延续，随后输出越出自然输入域。
 - **Definitions / Dependencies / Evidence / Status / Related Files**：[BNS-ZERO](research/topics/examples/bounded_negative_square.md#bns-zero) 的完整残差恒等式、严格递增与极限反证；路径依赖 C100 的完整 \(J\) 纤维；`derived-checked`。来源 GX-053 仅提供图和 EB 线索，逐路径结论为本库推导。
 - **Counterevidence / Scope**：正目标逆像为空，固定目标 EB 不提供两变量 MR；全图半阶乘真 EB 半阶既不产生收缩门，也不提供负输入 coverage 或正侧留域；有限合法路径越域不是发散的无限合法轨道。
+
+## C102-v1 / SCD-INVERSE · 斜等距加紧正对角的锐逆像与非 rectangularity
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 \(H=\ell^2\)，完整全域单值线性 \(F=D+B\)，\(D(x_n)=(x_n/n)\)、\(B\) 为两两坐标的正交斜旋转。\(F\) 有界双射，\(\|F^{-1}\|=1,\|F\|=3/2,S=\{0\}\)；对全部 \(x,y\in H\)，\(d(x,F^{-1}(y))\le\|Fx-y\|\) 的系数全局及逐参考点局部锐。\(F\) 严格且极大单调、paramonotone，但强单调与正 cocoercivity 模均为零，并非 rectangular（存在 \(x\in\operatorname{dom}F,v\in\operatorname{ran}F\) 使 \(\inf_z\langle x-z,v-Fz\rangle=-\infty\)）。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[SCD-INVERSE](research/topics/examples/skew_compact_diagonal.md#scd-inverse) 的全部块奇异值、完整逆图、双侧单调极大性证明和谐和级数反例；`derived-checked`。9/01 ZIP `work/c_gx053_065.md` GX-059 为对象来源；非 rectangularity 已用直接见证重证，无须旧稿 BWY 等价引文。
+- **Counterevidence / Scope**：有限维截断的正 cocoercivity 不可对维数取统一下界；这是逆映射 MR，而非全对反射的严格收缩。外部先行性和同稿其它 GX 未审。
+
+## C103-v1 / SCD-PROX · 完整近端严格收缩与锐非严格反射
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C102 同一完整图，对每个固定 \(\lambda>0\)，\(J_{\lambda F}\) 全空间单值且 \(\|J_{\lambda F}^m\|=(1+\lambda^2)^{-m/2}\) 对全部整数 \(m\ge0\)；全域合法轨道几何有限长趋零。同参数反射 \(R=2J-I\) 的全图 all-pairs 线性 RL 锐常数为 1，无界全图任何 \(\gamma<1\) 的有限 Hölder 常数失败。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[SCD-PROX](research/topics/examples/skew_compact_diagonal.md#scd-prox) 的完整块逆、能量恒等式和高块锐性序列；依赖 C102 的统一奇异值下界；`derived-checked`，近端的精确收缩与全部幂为本库补出的结论。
+- **Counterevidence / Scope**：全图反射模 \(L=1\) 不推出慢轨道；近端收缩不能倒推反射 \(L<1\)。改变原图为紧对角 \(D\) 或有限维块截断后是新对象。

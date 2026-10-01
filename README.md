@@ -75,6 +75,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 正值正弦的错目标边界 | GX-064 完整 F=2+sin x 在 λ=1 的全对临界 1/3 阶与目标 3 的固定目标半阶属于不同参考图点；F 零集为空 | C81/C82 的缩窗锐常数与每选择向负无穷的完整路径已重算；不能拼成零集 PPA |
 | 有界平方的锐性与留域边界 | GX-065 完整有界图的全图临界半阶锐性见证在左端点，零点真残差半阶在零点；两界可同窗成立但 \(q\gamma=1/4\) | C83/C84 重算全部锐模；正输入路径仅有 \(1/k\) 衰减，负输入有限步越域；粗指数与缺留域不支持统一零点收敛 |
 | 有界负恒等图的步长门 | GX-066 的同一完整图在 \(\lambda=1\) 使全部 Minty 输入塌为零；\(\lambda>2\) 则所有合法近端路径线性收敛，但反射线性模大于 1 | C96/C97 全图锐模与每步自然域重算；固定零目标真 EB、输入覆盖、反射收缩和动力稳定属于不同命题 |
+| 斜等距加紧正对角 | 完整 `D+B` 在实 ℓ² 上全域双射，逆映射全局锐线性而强单调与 cocoercivity 模均为零 | C102/C103：直接谐和级数见证非 rectangular；完整近端严格收缩、全对反射锐常数 1，不能相互授予严格性 |
 | 有界负平方的全图与路径 | 完整 `-x²` 限在 `[0,1/2]`，步长 1 的全图端点半阶 RL 与零点真残差半阶同时成立 | C100/C101：全图锐常数 2、真 EB 锐常数 1；正侧近端路径有限步越域，不能把两个半阶模当作零点收敛 |
 | 斜旋转法锥的逆像锐界 | 二维完整 \(K+N_B\) 的每个目标有唯一原像；全部图点给 \(\|\Delta x\|^2\le2\|\Delta y\|\) | C98/C99：全域逆像与原算子 MR 的锐 \(q\le1/2\) 系数 \(2^{1-q}\)；非零边界目标局部锐半阶 \(\sqrt2\)，原点则局部线性 |
 | 负平方根的图身份门 | GX-032 的短受限图 \(F_U\) 有锐全对 \(L=3\) 与真二次 EB，但任一非零输入仅有一步；半直线母图 \(F_\infty\) 有远支，同输入碰撞 | C85–C87 分别重算两个完整关系，F28 禁止把短图证书与母图或无限轨道拼接 |
@@ -168,6 +169,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/examples/positive_sine_phase.md](research/topics/examples/positive_sine_phase.md) | C81/C82/GX-064：完整正值正弦图的步长三相、临界全对和锚定常数、非零目标半阶及无零集路径；比较局部 RL 与 EB 时先核目标和基点。 |
 | [research/topics/examples/bounded_square_minty.md](research/topics/examples/bounded_square_minty.md) | C83/C84/GX-065：有界平方完整图的全图临界端点折叠与精确 Hölder 常数、零目标真残差半阶、正侧 \(1/k\) 与负侧自然域逃逸；两界可同窗但收缩兼容和留域不成立。 |
 | [research/topics/examples/bounded_negative_identity.md](research/topics/examples/bounded_negative_identity.md) | C96/C97/GX-066：完整有界负恒等图在 \(\lambda=1\) 的零输入多值、各指数锐全对常数及全部合法路径的步长相变；检验近端收缩与反射模、自然域覆盖能否互授时读。 |
+| [research/topics/examples/skew_compact_diagonal.md](research/topics/examples/skew_compact_diagonal.md) | C102/C103/GX-059：完整无限维斜等距加紧对角的锐逆像、非 rectangular 直接反例、近端幂范数及反射锐非严格界；攻击正则性到图几何的逆推时读。 |
 | [research/topics/examples/bounded_negative_square.md](research/topics/examples/bounded_negative_square.md) | C100/C101/GX-053：完整有界负平方图随步长的 Minty 相变、端点全对锐半阶、零点真残差与临界正侧有限步越自然域；检验 coverage 与留域时读。 |
 | [research/topics/examples/skew_ball_inverse.md](research/topics/examples/skew_ball_inverse.md) | C98/C99/GX-058：斜旋转加完整盘法锥的显式全域逆像、全部图点半阶不等式和边界非零目标的取等射线；研究 MR/MSR 与 inverse Hölder 的全域和局部模时读，不能转授反射 RL。 |
 | [research/topics/examples/restricted_root_graph.md](research/topics/examples/restricted_root_graph.md) | C85–C87/GX-032：严格分开受限负平方根完整短图与半直线完整母图，给锐成对常数、真二次 EB、受限无续步、母图远支与发散；从受限算法向母图推断时先读。 |

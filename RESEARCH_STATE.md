@@ -7,7 +7,7 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 80 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 81 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
 
 [C92 两变量半阶 MR](research/topics/examples/identity_square_branch_union.md#is-mr) 在 GX-068 同一完整并图中补共同输入/目标窗口，并严格区分最近逆点与全纤维；[C95 二参数区域](research/topics/examples/identity_square_branch_union.md#is-semimono) 又以全体跨支斜率证明 \(\mu,\rho<0,\mu\rho\ge1/4\) 与 C89 正 \(A\) 门不相交。[C93/C94 闭球法锥](research/topics/examples/ball_normal_cone.md#bn-object) 把 GX-067 的固定目标真空零系数与逆目标不稳定分离。敌对审查纠正了 \(0\cdot\infty\) 和 HREG/UHREG 分母的最初草稿表述。原卡其它观察和全库清洗仍开放。
 
@@ -16,6 +16,10 @@
 本轮新增 [C88 同核不同随机表示](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp)：四状态核与唯一不变律固定，逐状态独立开关改变同步 OT 成本与锐系数。它是新构造，不计作旧来源单元验收。空白接收修正了 E115 真残差的局部窗遗漏及 README 对 C15 已完成证书的过期暗示；C05-v2 的拓扑导入已按现有条件核，原生模型的整窗全称认证仍是开放义务。
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
+
+## 本批增量：GX-059 的完整逆像与图几何边界
+
+[C102/C103](research/topics/examples/skew_compact_diagonal.md#scd-object) 从 GX-059 重算无限维 `D+B` 的全部逆纤维和块谱，并以具体谐和级数序列直接否定 rectangularity，取代旧稿尚未核的 BWY 定理调用。其近端全域严格收缩、反射锐模为 1；该对照不因有限维截断转移。外部先行性和同稿其它 GX 仍开放。
 
 ## 本批增量：GX-053 与空白接收修订
 
