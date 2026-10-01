@@ -251,4 +251,16 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(0<\gamma<1\)、\(q>1/\gamma\)、\(\alpha=\gamma q>1\)，在 \(\mathbb R^2\) 固定 \(\lambda=1\) 与 \(J(t,z)=(t+|z|^\gamma,P_\alpha z)\)，\(F=J^{-1}-I\)、\(S=\mathbb R\times\{0\}\)。对全部 \((s,u)\)，\(d((s,u),S)\le r_F(s,u)^q\)，而 \(q\) 在 \(u\to0\) 不可增大。对全部 \(0<|z|<1\) 的实际轨道一步，有 \(d(J(t,z),S)=d((t,z),S)^{\gamma q}\)，且 \(d(Jx,S)/\|x-Jx\|^q\to1\) 当 \(|z|\downarrow0\)。每个**有界**且含法向邻域的输入矩形上反射 \(2J-I\) 有全对 \(\gamma\)-Hölder 界，此指数不能增大。
 - **Definitions / Dependencies / Evidence**：[PS-OBJECT、PS-RATE 与有界窗口证明](research/topics/path_dynamics/power_shear.md) 直接反演完整图、比较真残差、算沿法向比例和切向位移预算；状态 derived-checked，历史 GX-071 / 9/01 foundations §9.2 是来源别名。
-- **Counterevidence / Objections / Scope / Related Files**：无界全图不继承次线性全对 RL；整个有界矩形不自动不变，单条轨道需正切向余量。只证明 \(\gamma q\) 在此反向校准族**可达到**，不是普适精确速率、必要条件或有界窗最优 RL 常数。与 GX-072 的对照未验。
+- **Counterevidence / Objections / Scope / Related Files**：无界全图不继承次线性全对 RL；整个有界矩形不自动不变，单条轨道需正切向余量。只证明 \(\gamma q\) 在此反向校准族**可达到**，不是普适精确速率、必要条件或有界窗最优 RL 常数。[C43](research/topics/path_dynamics/oscillatory_shear.md) 是不同对象的保守指数对照。
+
+## C43-v1 / OS-SCALING · 粗全对指数与双边实际阶分离
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R^2\) 固定 \(q>1,0<\gamma<1,\beta=q/\gamma-1\)，\(h(0)=0,h(x)=|x|^q\sin(|x|^{-\beta})\) 非零时，\(J(x,y)=(P_qx,P_qy+h(x))\)，\(F=J^{-1}-I,\lambda=1\)。对**全部** \(z\)，\(2^{-1-q/2}\|z\|^q\le\|Jz\|\le\sqrt5\|z\|^q\)。对足够小的球内全部非零轨道，局部零集为 \(\{0\}\)，距离有统一双边 \(q\)-阶；完整 \(F\) 的真实残差有局部 \(q\)-EB 而无任何更大幂指数。反射 \(2J-I\) 在每个有界输入窗为全对 \(\gamma\)-Hölder，在含零邻域无更高指数。
+- **Definitions / Dependencies / Evidence**：[OS-OBJECT / SCALING / REFLECTION](research/topics/path_dynamics/oscillatory_shear.md) 的双边范数、局部固定点、两尺度 Hölder 与相位极值序列的直接证明；状态 derived-checked，来源别名 GX-072 / 9/01 foundations §9.3。
+- **Counterevidence / Objections / Scope / Related Files**：实际阶 \(q>\gamma q\) 说明全对最坏指数可能保守，不反驳 C42 的可达构造；归一化 Q 因子未证明有极限。零集只在原点附近孤立，完整图在其他远端仍有零点；无界全图次线性 RL 不成立。外部先行性未核。
+
+## C44-v1 / DE-ESCAPE · 自然 Minty 域上一步尺度不等于收敛阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：取 \(0<\alpha<1,\beta>0,0<\delta<1,\lambda=1,D=[-\delta,\delta]\)，\(C(0)=0,C(x)=P_\alpha(x)[2+\sin(|x|^{-\beta})]\) 非零时，\(J=(I+C)/2\) 仅在 D 定义，\(\operatorname{gph}F=\{(Jx,x-Jx):x\in D\}\)。\(S=\operatorname{zer}F=\{0\}\)。对**每个**非零初值 \(x_0\in D\)，迭代 \(x_{k+1}=Jx_k\) 有有限的首次 \(x_k\notin D\)；一步 \(r_+=\Theta(r^\alpha)>r\)。零点锚定反射最大指数为 \(\alpha\)、局部常数 3；全对反射最大指数为 \(\alpha/(\beta+1)\)。对所有充分小非零输出 u 的完整纤维，\(d(u,S)/r_F(u)\to1\)，线性 EB 常数的缩域下确界 1，任何 \(q>1\) 幂 EB 失败。
+- **Definitions / Dependencies / Evidence**：[DE-OBJECT / EXPONENT / ESCAPE / RESIDUAL](research/topics/path_dynamics/domain_escape.md) 的两尺度证明、单调半径与多原像一致残差比；状态 derived-checked，历史 GX-073 / 9/01 foundations §9.4 是来源别名。
+- **Counterevidence / Objections / Scope / Related Files**：只给原关系**自然域**内轨道的有限逃逸，不谈未定义延拓后的动力；不能由一步指数声称收敛。把选中残差比提升到真实 infimum 依赖所有原像一致趋零及非空紧纤维；改变 D 须另立版本。外部先行性未核。

@@ -65,3 +65,11 @@ E80 是独立反例关系：[OT-MAXIMA](topics/composite_regular/oscillating_tar
 ## E81：幂次剪切的可达性而非普遍速率
 
 固定 \(\lambda=1\)、\(0<\gamma<1\)、\(q>1/\gamma\)、\(\alpha=\gamma q\)，由 [PS-OBJECT](topics/path_dynamics/power_shear.md#ps-object) 的**完整**三角图可反演 F，并对所有点给真残差 \(q\)-EB。对实际轨道的法向距离恰为 \(r_+=r^\alpha\)。反射全对 \(\gamma\) 的范围限于**有界输入矩形**，单条轨道留在该矩形还要切向余量覆盖整个漂移和；它不表示无界全图 RL，更不能推出所有满足同指数证书的轨道都按 \(\gamma q\) 精确收敛。[C42](topics/path_dynamics/power_shear.md#ps-rate) 只是反向校准例的可达见证。
+
+## E82：同指数输入而实际阶更高
+
+[OS-OBJECT](topics/path_dynamics/oscillatory_shear.md#os-object) 是**另一**完整三角图：\(q>1,0<\gamma<1,\beta=q/\gamma-1\)，\(h(x)=|x|^q\sin(|x|^{-\beta})\)。其全域 \(J\) 双边 \(q\)-缩放和邻域真残差 \(q\)-EB 与有界窗最大全对反射指数 \(\gamma\) 同时成立；每条充分小非零轨道有双边 \(q\)-阶，而 \(q>\gamma q\)。这里的零集仅在原点附近为单点，远端仍有固定点；归一化 Q 因子的极限未证。[C43](topics/path_dynamics/oscillatory_shear.md#os-scaling) 限定了与 E81 比较的对象差异。
+
+## E83：自然域与全纤维残差
+
+[DE-OBJECT](topics/path_dynamics/domain_escape.md#de-object) 只在 \(D=[-\delta,\delta]\) 定义原图，\(0<\alpha<1,\beta>0,0<\delta<1\)。在同一图上锚定反射指数 \(\alpha\)、全对指数 \(\alpha/(\beta+1)\)，但所有非零合法轨道半径严格增，有限步离开 D。[C44](topics/path_dynamics/domain_escape.md#de-escape) 的局部线性 EB 用的是每个原像上的一致残差比再对完整纤维取最小，不是挑一个好分支。输入域 coverage 和不变性不能从一步指数或 EB 自动得到；域外没有原算法轨道。

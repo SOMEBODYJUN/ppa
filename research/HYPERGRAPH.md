@@ -162,6 +162,8 @@
 | E77 | [M1-OBJECT · 显式 M1 映射、线段零集与端点球](topics/path_dynamics/m1_capture.md#m1-object) | conditional → [M1-CAPTURE · 每个球内初值两步捕获](topics/path_dynamics/m1_capture.md#m1-capture) | 仅给定单值 T，R=1/(96√10)，Z=[−2/3,2/3]×{0}；对 B_R((2/3,0)) 的每个初值两步进入 Z；不涵盖原生多值 Sign 方程的所有选择。；**本轮由显式映射独立重算；原生图桥未核** |
 | E78 | [M1-OBJECT · 显式 M1 映射、线段零集与端点球](topics/path_dynamics/m1_capture.md#m1-object) | conditional → [M1-SHARP · 锐一步距离因子 3/√10](topics/path_dynamics/m1_capture.md#m1-sharp) | 同一 T、Z、R；全体球内初值的一步距离上界 3/√10，沿 z_t=(2/3+3t,t) 取等；不推出全对 RL 或真残差 EB。；**本轮代数与锐性序列独立重算** |
 | E81 | [PS-OBJECT · 幂次剪切完整图与指定步长](topics/path_dynamics/power_shear.md#ps-object) | conditional → [PS-RATE · 法向 γq 精确可达与切向预算](topics/path_dynamics/power_shear.md#ps-rate) | λ=1、0<γ<1、q>1/γ、α=γq；完整 F=J^−1−I 的真 EB，单条轨道法向速率 r_+=r^α；反射全对 γ 只在有界输入窗口，留域另需切向余量。；**本轮反演、残差渐近与轨道预算独立重算；非普适速率** |
+| E82 | [OS-OBJECT · 振荡剪切完整图与局部孤立零点](topics/path_dynamics/oscillatory_shear.md#os-object) | conditional → [OS-SCALING · 双边 q 阶与最大全对 γ 指数](topics/path_dynamics/oscillatory_shear.md#os-scaling) | λ=1、q>1、0<γ<1、β=q/γ−1；全域双边 J 范数，局部真残差 q-EB 与局部轨道 q 阶；反射最大全对 γ 只在有界窗口；归一化 Q 因子未证。；**本轮双边界、两尺度 Hölder 和相位锐性独立重算** |
+| E83 | [DE-OBJECT · 指定 Minty 域振荡反射图](topics/path_dynamics/domain_escape.md#de-object) | conditional → [DE-ESCAPE · 真残差线性而非零轨道有限逃逸](topics/path_dynamics/domain_escape.md#de-escape) | 0<α<1、β>0、0<δ<1、λ=1、输入域 D=[−δ,δ]；每个非零初值半径严格增且有限步出 D，真残差局部线性；锚定 α 和全对 α/(β+1) 不给不变域。；**本轮两尺度、有限逃逸及全原像残差一致性独立重算** |
 
 ## 复合次正则
 
