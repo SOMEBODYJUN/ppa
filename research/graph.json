@@ -1,0 +1,1047 @@
+{
+  "schema": "ppa-hypergraph/1",
+  "meaning": "Every inputs array is conjunctive. An edge applies only under its scope and evidence status; refutes/limits edges do not assert implication in the opposite direction.",
+  "nodes": [
+    {
+      "id": "D01",
+      "label": "完整图、真残差与图剪切",
+      "file": "foundations.md"
+    },
+    {
+      "id": "D02",
+      "label": "全对 RL 与指定尺度",
+      "file": "foundations.md"
+    },
+    {
+      "id": "D03",
+      "label": "Cayley 表示",
+      "file": "foundations.md"
+    },
+    {
+      "id": "D04",
+      "label": "真实 EB 与 gauge",
+      "file": "foundations.md"
+    },
+    {
+      "id": "COV",
+      "label": "图块 coverage 与最近零点图",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "CMP",
+      "label": "统一兼容 κ<1",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "LOC",
+      "label": "留域预算与闭零集",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "R01",
+      "label": "一步能量、步长、输出界",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "R02",
+      "label": "局部 PPA 有限长度",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "R03",
+      "label": "能量证书与临界阈值",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "R04",
+      "label": "signed-Schur 跨支验证",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "DIN",
+      "label": "一般模与 Dini 条件",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "LOG",
+      "label": "对数接缝精确门槛",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "RET",
+      "label": "连续极限回缩",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "H01",
+      "label": "全局 RL 与固定参数 maximal",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "LIFT",
+      "label": "二次 excess 与正交提升",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "H02",
+      "label": "同一强单调影子",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "PROPER",
+      "label": "有限维 properness、degree",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "FIX",
+      "label": "任意紧集精确固定点构造",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "H03",
+      "label": "有限维完整纤维分类",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "SAMPLE",
+      "label": "有限 proximal 样本与包络",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "WINDOW",
+      "label": "整窗 usc、acyclic 与上同调条件",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "H07",
+      "label": "原关系局部值域候选",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "TAIL",
+      "label": "共同轨道与统一尾界",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "S01",
+      "label": "极限解选择的对数模",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "FULL",
+      "label": "局部与完整 resolvent 一致",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "S02",
+      "label": "RLEB 极限选择版本",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "LT",
+      "label": "Luke–Tam 公共 all-pairs 证书",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "OS-E",
+      "label": "RLEB 能量证书",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "PHI",
+      "label": "紧 T-only 图卡的 proper Φ",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "SIZE",
+      "label": "中立母空间中的规模比较",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "C-RANK",
+      "label": "冻结秩夹逼",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "C-FACE",
+      "label": "面稳定与共同流形",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "C-MSCQ",
+      "label": "原锥残差 MSCQ",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-PSI",
+      "label": "同步 OT 残差 Ψ",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-EXACT",
+      "label": "exact-zero 与一般 gauge",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-FIN",
+      "label": "有限状态顶点测试与线性 EB",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-COND",
+      "label": "守恒边缘条件残差",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "R05",
+      "label": "一般模 RL + Dini 的点收敛",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "OB-TOPO",
+      "label": "非局部可缩零集的附加收敛假设障碍",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "OB-RES",
+      "label": "条件残差不可代入同步 OT 能量",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "GROW",
+      "label": "真实残差幂增长",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "SCHUR",
+      "label": "反向 Schur 定向与全纤维排他",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "COLLIDE",
+      "label": "逐支正则但跨支碰撞",
+      "file": "rleb_ppa.md"
+    },
+    {
+      "id": "STOCH",
+      "label": "期望距离收缩与路径 Dini 步长",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "METRIC",
+      "label": "所指定度量完备",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "STOCH-LIMIT",
+      "label": "随机极限在闭 S 内",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "POLISH-GAP",
+      "label": "拓扑 Polish 不保指定度量完备",
+      "file": "holder_structure.md"
+    },
+    {
+      "id": "SEL-EX",
+      "label": "完整半代数二值例与匹配下界",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "SEL-SHARP",
+      "label": "极限选择无正阶两点 Hölder",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "CAT-GAP",
+      "label": "proper/quotient 不保纲",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "LOCAL-LOSS",
+      "label": "局部观测不控制完整原图",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "NO-GO",
+      "label": "旧 Baire/孔隙共同塌缩报告",
+      "file": "operator_space.md"
+    },
+    {
+      "id": "C-AMEN",
+      "label": "参考面 amenability",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "C-NORMAL",
+      "label": "共同法向/切向修正",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "C-UNIV",
+      "label": "顶点系统普遍 MSCQ",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "C-NONAMEN",
+      "label": "nice 非 amenable 边界例",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-FALSE",
+      "label": "快混合仍 Ψ 假零",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-NOPOWER",
+      "label": "exact-zero 快率无正幂 EB",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-BINARY",
+      "label": "bit 刷新 a*>0 判据",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-GAUSS",
+      "label": "Gaussian 谱隙 ζ",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-MOMENT",
+      "label": "小质量混合 pq≤r",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "M-RECOUP",
+      "label": "回耦损失控制",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "F03",
+      "label": "图块外额外输出反例",
+      "file": "solution_selection.md"
+    },
+    {
+      "id": "FAST-EB",
+      "label": "快混合必有原 Ψ exact-zero",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "POWER-EB",
+      "label": "exact-zero + 快率必有正幂 EB",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "COND-EB",
+      "label": "守恒边缘条件残差 EB",
+      "file": "cone_markov.md"
+    },
+    {
+      "id": "RHO",
+      "label": "最大根 ρ 与 h(r) 标量定位",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "W01",
+      "label": "全纤维值域球",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "REL-MAX",
+      "label": "相对 maximal 窗口",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "W02",
+      "label": "固定窗口全纤维覆盖",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "QSAMPLE",
+      "label": "样本交叉兼容",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "QP",
+      "label": "严格凸 QP 与全局 N_m",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-COVER",
+      "label": "Cayley 参数 δ-覆盖",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-BOUND",
+      "label": "正反纤维配对 Kδ 界",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-EVAL",
+      "label": "已验证 gap、噪声与求值误差",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-TOTAL",
+      "label": "覆盖 + 噪声 + 求值三项界",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-ORACLE",
+      "label": "无界域有限确定性总查询",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-NOGLOBAL",
+      "label": "有限 transcript 无全空间认证",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "DEADBAND",
+      "label": "deadband 精确逆跳跃与稳定代理",
+      "file": "range_finite_data.md"
+    },
+    {
+      "id": "Q-ADVANTAGE",
+      "label": "影子代理普遍优于定制正则化",
+      "file": "range_finite_data.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E01",
+      "topic": "定义",
+      "inputs": [
+        "D01",
+        "D02"
+      ],
+      "output": "D03",
+      "relation": "equivalence",
+      "scope": "同图块、同 λ、同输入对尺度",
+      "status": "代数可复核"
+    },
+    {
+      "id": "E02",
+      "topic": "收敛",
+      "inputs": [
+        "D02",
+        "COV",
+        "D04"
+      ],
+      "output": "R01",
+      "relation": "implies",
+      "scope": "实际输出、最近解点均在图块；真残差 EB",
+      "status": "S19 稿内证明"
+    },
+    {
+      "id": "E03",
+      "topic": "收敛",
+      "inputs": [
+        "R01",
+        "CMP",
+        "LOC"
+      ],
+      "output": "R02",
+      "relation": "implies",
+      "scope": "局部 J_G 轨道；完整 J_F 另需 FULL",
+      "status": "S19 稿内证明"
+    },
+    {
+      "id": "E04",
+      "topic": "收敛",
+      "inputs": [
+        "R01",
+        "D04",
+        "LOC"
+      ],
+      "output": "R03",
+      "relation": "implies",
+      "scope": "ψ 连续严格增、q_E<1、能量分支预算",
+      "status": "S19 稿内证明"
+    },
+    {
+      "id": "E05",
+      "topic": "收敛",
+      "inputs": [
+        "R04",
+        "D04",
+        "CMP",
+        "LOC"
+      ],
+      "output": "R02",
+      "relation": "conditional",
+      "scope": "Schur 定向、完整纤维排他和 EB 各自验证",
+      "status": "条件验证器"
+    },
+    {
+      "id": "E06",
+      "topic": "收敛",
+      "inputs": [
+        "COV",
+        "D04",
+        "CMP",
+        "LOC",
+        "DIN"
+      ],
+      "output": "R05",
+      "relation": "conditional",
+      "scope": "一般模全对 RL；有限长度另需 Dini",
+      "status": "S19 一般模版本"
+    },
+    {
+      "id": "E07",
+      "topic": "反例",
+      "inputs": [
+        "LOG"
+      ],
+      "output": "R05",
+      "relation": "limits",
+      "scope": "a≤1 的完整接缝：距离收缩仍无点收敛",
+      "status": "显式反例"
+    },
+    {
+      "id": "E08",
+      "topic": "结构",
+      "inputs": [
+        "H01",
+        "LIFT"
+      ],
+      "output": "H02",
+      "relation": "implies",
+      "scope": "全图全尺度；正交扩张与 Banach contraction",
+      "status": "S23 稿内证明、局部重算"
+    },
+    {
+      "id": "E09",
+      "topic": "结构",
+      "inputs": [
+        "H01",
+        "PROPER"
+      ],
+      "output": "H03",
+      "relation": "necessary",
+      "scope": "有限维、graph-maximal、直径界",
+      "status": "S23 稿内证明"
+    },
+    {
+      "id": "E10",
+      "topic": "结构",
+      "inputs": [
+        "FIX",
+        "D03"
+      ],
+      "output": "H03",
+      "relation": "sufficient",
+      "scope": "每个非空紧 K、diam K≤R，存在某个 F",
+      "status": "S23 稿内构造"
+    },
+    {
+      "id": "E11",
+      "topic": "交叉限制",
+      "inputs": [
+        "R05",
+        "D03",
+        "COV"
+      ],
+      "output": "RET",
+      "relation": "implies",
+      "scope": "一般模版本的同图块 all-pairs 连续性、共同开域与统一尾界",
+      "status": "S19 稿内证明"
+    },
+    {
+      "id": "E12",
+      "topic": "交叉限制",
+      "inputs": [
+        "H03",
+        "RET"
+      ],
+      "output": "OB-TOPO",
+      "relation": "limits",
+      "scope": "任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立",
+      "status": "条件障碍"
+    },
+    {
+      "id": "E13",
+      "topic": "局部拓扑",
+      "inputs": [
+        "SAMPLE",
+        "WINDOW"
+      ],
+      "output": "H07",
+      "relation": "conditional",
+      "scope": "collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系",
+      "status": "S25 候选；外部定理门未闭"
+    },
+    {
+      "id": "E14",
+      "topic": "解选择",
+      "inputs": [
+        "TAIL",
+        "D02"
+      ],
+      "output": "S01",
+      "relation": "conditional",
+      "scope": "共同迭代域、统一几何或超几何尾；D02 给局部 Hölder",
+      "status": "修订包内部审计"
+    },
+    {
+      "id": "E15",
+      "topic": "解选择",
+      "inputs": [
+        "R02",
+        "TAIL"
+      ],
+      "output": "S02",
+      "relation": "implies",
+      "scope": "仅局部 J_G；若要完整 J_F 加 FULL",
+      "status": "修订版"
+    },
+    {
+      "id": "E16",
+      "topic": "解选择",
+      "inputs": [
+        "R02",
+        "FULL",
+        "TAIL"
+      ],
+      "output": "S02",
+      "relation": "conditional",
+      "scope": "完整 resolvent 的共同轨道区域一致性",
+      "status": "修订版"
+    },
+    {
+      "id": "E17",
+      "topic": "算子空间",
+      "inputs": [
+        "D01",
+        "LT",
+        "D04",
+        "COV"
+      ],
+      "output": "OS-E",
+      "relation": "conditional",
+      "scope": "同 S、同 coverage/留域；公共 all-pairs LT 归一化",
+      "status": "S20 内部证明"
+    },
+    {
+      "id": "E18",
+      "topic": "算子空间",
+      "inputs": [
+        "PHI"
+      ],
+      "output": "SIZE",
+      "relation": "limits",
+      "scope": "proper/quotient 不推出保纲；局部观测不恢复完整 F",
+      "status": "反例支持的缺口"
+    },
+    {
+      "id": "E19",
+      "topic": "算子空间",
+      "inputs": [
+        "LT",
+        "OS-E",
+        "PHI"
+      ],
+      "output": "SIZE",
+      "relation": "open",
+      "scope": "需中立完整对象、鉴别性量尺、保纲与反塌缩",
+      "status": "开放目标"
+    },
+    {
+      "id": "E20",
+      "topic": "锥",
+      "inputs": [
+        "C-RANK",
+        "C-FACE"
+      ],
+      "output": "C-MSCQ",
+      "relation": "conditional",
+      "scope": "nice+冻结 CRSC+参考面 amenability+法向/切向修正",
+      "status": "证明包内部审计"
+    },
+    {
+      "id": "E21",
+      "topic": "交叉限制",
+      "inputs": [
+        "C-MSCQ",
+        "D01"
+      ],
+      "output": "D04",
+      "relation": "conditional",
+      "scope": "需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集",
+      "status": "尚未建立的一般桥"
+    },
+    {
+      "id": "E22",
+      "topic": "Markov",
+      "inputs": [
+        "M-PSI"
+      ],
+      "output": "M-EXACT",
+      "relation": "conditional",
+      "scope": "紧连续随机映射；exact-zero 等价一般 gauge",
+      "status": "证明包内部审计"
+    },
+    {
+      "id": "E23",
+      "topic": "Markov",
+      "inputs": [
+        "M-PSI",
+        "M-EXACT"
+      ],
+      "output": "M-FIN",
+      "relation": "conditional",
+      "scope": "固定有限状态几何；有限 OT tight-edge 顶点",
+      "status": "证明包内部审计"
+    },
+    {
+      "id": "E24",
+      "topic": "交叉限制",
+      "inputs": [
+        "M-COND",
+        "M-PSI"
+      ],
+      "output": "OB-RES",
+      "relation": "limits",
+      "scope": "条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制",
+      "status": "显式两 bit 障碍"
+    },
+    {
+      "id": "E25",
+      "topic": "收敛",
+      "inputs": [
+        "R01",
+        "GROW"
+      ],
+      "output": "CMP",
+      "relation": "conditional",
+      "scope": "a<γ 自动小尺度；a=γ 要 λm>L/2；a>γ 此标量测试失败",
+      "status": "S19 residual growth"
+    },
+    {
+      "id": "E26",
+      "topic": "收敛",
+      "inputs": [
+        "R01",
+        "GROW"
+      ],
+      "output": "R03",
+      "relation": "conditional",
+      "scope": "a=γ 的能量阈值 λm>L/√2，另一充分证书",
+      "status": "S19 能量分支"
+    },
+    {
+      "id": "E27",
+      "topic": "收敛",
+      "inputs": [
+        "SCHUR"
+      ],
+      "output": "R04",
+      "relation": "conditional",
+      "scope": "切向反演、两支相反 signed growth、完整纤维和统一导数界",
+      "status": "S19 条件验证器"
+    },
+    {
+      "id": "E28",
+      "topic": "反例",
+      "inputs": [
+        "COLLIDE"
+      ],
+      "output": "R04",
+      "relation": "limits",
+      "scope": "逐支正则不能替代跨支定向",
+      "status": "S19 collision 反例"
+    },
+    {
+      "id": "E29",
+      "topic": "随机",
+      "inputs": [
+        "STOCH",
+        "METRIC"
+      ],
+      "output": "STOCH-LIMIT",
+      "relation": "implies",
+      "scope": "给定度量完备、闭 S、不变域；期望收缩与 Dini",
+      "status": "9/19 修补版本"
+    },
+    {
+      "id": "E30",
+      "topic": "反例",
+      "inputs": [
+        "STOCH",
+        "POLISH-GAP"
+      ],
+      "output": "STOCH-LIMIT",
+      "relation": "refutes",
+      "scope": "X=(0,2) 通常距离；有限长度而极限在空间外",
+      "status": "本轮显式反例"
+    },
+    {
+      "id": "E31",
+      "topic": "解选择",
+      "inputs": [
+        "S01",
+        "SEL-EX"
+      ],
+      "output": "SEL-SHARP",
+      "relation": "conditional",
+      "scope": "完整模型、跨支 RL、真 EB、兼容与首次切换下界",
+      "status": "修订包内部审计"
+    },
+    {
+      "id": "E32",
+      "topic": "反例",
+      "inputs": [
+        "F03"
+      ],
+      "output": "FULL",
+      "relation": "refutes",
+      "scope": "F(u)={u,-u} 的图块 A1–A4；J_G(0) 单值、J_F(0) 全实线",
+      "status": "显式反例"
+    },
+    {
+      "id": "E33",
+      "topic": "算子空间",
+      "inputs": [
+        "PHI"
+      ],
+      "output": "CAT-GAP",
+      "relation": "limits",
+      "scope": "proper 闭满射 x↦max(x,0) 的无处稠密集合逆像有内点",
+      "status": "S20 反例"
+    },
+    {
+      "id": "E34",
+      "topic": "算子空间",
+      "inputs": [
+        "PHI"
+      ],
+      "output": "LOCAL-LOSS",
+      "relation": "limits",
+      "scope": "T_N 在 K 上同观测，域外 r=2 附近无一致紧性",
+      "status": "S20 反例"
+    },
+    {
+      "id": "E35",
+      "topic": "算子空间",
+      "inputs": [
+        "NO-GO"
+      ],
+      "output": "SIZE",
+      "relation": "limits",
+      "scope": "N05/N08/N10 量尺共同塌缩；原孔隙审计未恢复",
+      "status": "S21 历史报告"
+    },
+    {
+      "id": "E36",
+      "topic": "锥",
+      "inputs": [
+        "C-RANK"
+      ],
+      "output": "C-FACE",
+      "relation": "conditional",
+      "scope": "nice、闭像及常秩核投影给面稳定",
+      "status": "锥证明包内部审计"
+    },
+    {
+      "id": "E37",
+      "topic": "锥",
+      "inputs": [
+        "C-FACE",
+        "C-NORMAL",
+        "C-AMEN"
+      ],
+      "output": "C-MSCQ",
+      "relation": "implies",
+      "scope": "法向流形修正与参考面切向误差界联合",
+      "status": "锥证明包内部审计"
+    },
+    {
+      "id": "E38",
+      "topic": "锥",
+      "inputs": [
+        "C-AMEN",
+        "C-RANK"
+      ],
+      "output": "C-UNIV",
+      "relation": "conditional",
+      "scope": "固定 proper nice 锥的每个顶点冻结 CRSC 系统",
+      "status": "锥证明包内部审计"
+    },
+    {
+      "id": "E39",
+      "topic": "反例",
+      "inputs": [
+        "C-NONAMEN"
+      ],
+      "output": "C-UNIV",
+      "relation": "refutes",
+      "scope": "nice 非 amenable 锥的线性满秩冻结系统失 MSCQ",
+      "status": "来源旧锥加本包路径"
+    },
+    {
+      "id": "E40",
+      "topic": "反例",
+      "inputs": [
+        "M-FALSE"
+      ],
+      "output": "FAST-EB",
+      "relation": "refutes",
+      "scope": "公平 bit 一步平稳但相关律 Ψ=0、距不变律>0",
+      "status": "Markov 显式模型"
+    },
+    {
+      "id": "E41",
+      "topic": "反例",
+      "inputs": [
+        "M-NOPOWER"
+      ],
+      "output": "POWER-EB",
+      "relation": "refutes",
+      "scope": "无限紧可数状态 exact-zero 且快率，却无任何局部正幂 EB；不反驳有限状态定理",
+      "status": "Markov 显式模型"
+    },
+    {
+      "id": "E42",
+      "topic": "Markov",
+      "inputs": [
+        "M-COND",
+        "M-BINARY"
+      ],
+      "output": "COND-EB",
+      "relation": "conditional",
+      "scope": "固定守恒边缘的 bit 刷新；a*>0 等价条件 EB 与统一速率，不是原 Ψ",
+      "status": "Markov 定理包"
+    },
+    {
+      "id": "E43",
+      "topic": "Markov",
+      "inputs": [
+        "M-COND",
+        "M-GAUSS"
+      ],
+      "output": "COND-EB",
+      "relation": "conditional",
+      "scope": "Gaussian Gibbs、Q>0、ζ>0，条件残差锐 EB 常数 ζ^-1/2",
+      "status": "Markov 定理包"
+    },
+    {
+      "id": "E44",
+      "topic": "交叉限制",
+      "inputs": [
+        "M-MOMENT"
+      ],
+      "output": "D04",
+      "relation": "limits",
+      "scope": "对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门",
+      "status": "Markov Proposition M"
+    },
+    {
+      "id": "E45",
+      "topic": "Markov",
+      "inputs": [
+        "M-RECOUP",
+        "M-PSI"
+      ],
+      "output": "M-EXACT",
+      "relation": "conditional",
+      "scope": "只有趋近同一 Ψ inf 的耦合及损失界，收缩才可反推 EB",
+      "status": "Markov 条件桥"
+    },
+    {
+      "id": "E46",
+      "topic": "值域",
+      "inputs": [
+        "H01",
+        "RHO"
+      ],
+      "output": "W01",
+      "relation": "conditional",
+      "scope": "有限维 graph-maximal、非空完整逆纤维、r>R",
+      "status": "S23 稿内证明"
+    },
+    {
+      "id": "E47",
+      "topic": "值域",
+      "inputs": [
+        "W01",
+        "REL-MAX"
+      ],
+      "output": "W02",
+      "relation": "conditional",
+      "scope": "同参数全局 completion、窗口球包含与目标窗口",
+      "status": "S23 稿内证明"
+    },
+    {
+      "id": "E48",
+      "topic": "值域",
+      "inputs": [
+        "RHO"
+      ],
+      "output": "W01",
+      "relation": "limits",
+      "scope": "一维 C(p)=L(p_+)^γ 给 r>R 严格门和半径锐性",
+      "status": "S23 锐性反例"
+    },
+    {
+      "id": "E49",
+      "topic": "有限数据",
+      "inputs": [
+        "QSAMPLE",
+        "LIFT"
+      ],
+      "output": "QP",
+      "relation": "implies",
+      "scope": "同一固定样本的严格凸 QP，所有查询共用 N_m",
+      "status": "S23 稿内构造"
+    },
+    {
+      "id": "E50",
+      "topic": "有限数据",
+      "inputs": [
+        "QP",
+        "Q-COVER",
+        "D02"
+      ],
+      "output": "Q-BOUND",
+      "relation": "conditional",
+      "scope": "未知每个图点的 Cayley 参数被 δ-覆盖；全纤维需全部点",
+      "status": "S23 稿内证明"
+    },
+    {
+      "id": "E51",
+      "topic": "有限数据",
+      "inputs": [
+        "Q-BOUND",
+        "Q-EVAL"
+      ],
+      "output": "Q-TOTAL",
+      "relation": "conditional",
+      "scope": "真输出的全纤维覆盖、已认证 gap、噪声 η 和求值 e",
+      "status": "S23 稿内证明"
+    },
+    {
+      "id": "E52",
+      "topic": "反例",
+      "inputs": [
+        "Q-ORACLE"
+      ],
+      "output": "Q-NOGLOBAL",
+      "relation": "implies",
+      "scope": "两张全局 Hölder 图在有限自适应查询上同 transcript、远端分离",
+      "status": "S23 不可区分反例"
+    },
+    {
+      "id": "E53",
+      "topic": "有限数据",
+      "inputs": [
+        "DEADBAND"
+      ],
+      "output": "Q-ADVANTAGE",
+      "relation": "refutes",
+      "scope": "稳定代理不必是精确逆；恒等代理已有同半径，不能宣称普遍优越",
+      "status": "S23 显式实例"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Failed Routes / Obstructions
 
-这些卡片保存**失败的精确目标和机制**。9/21 v0.9 报告里部分原证明不在本次附件，相关事实保持“来源包报告”状态；详情和可恢复文件名见 [其 no-go ledger](assets/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。一种量尺在一个空间失败，不是整个比较问题不可能。
+这些卡片保存**失败的精确目标和机制**。9/21 v0.9 的历史 SOURCE-MISSING 不能原封不动当作当前状态：I-001 历史包 100/101 项已展开、I-002/I-003–005/I-059 已恢复，I-075 专题包以展开内容恢复；I-097–099 与 I-102 仍未在盘点文件名中发现。I-005 是审计任务书，不是审计报告。未重构原证明的 N05/N10 仍标“来源包报告”；详情见 [来源谱系](research/SOURCES.md) 与 [no-go ledger](assets/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。一种量尺在一个空间失败，不是整个比较问题不可能。
 
 ## F01 · 以单个 cusp / 仿射漂移层代替总体覆盖
 
@@ -43,3 +43,15 @@
 | 为锥、Markov、RL 强设一个母定理 | 锥 MSCQ 缺同目标和反射接口，Markov \(\Psi\) 非 ordinary RL residual | 可统一叙事，数学定理保持独立，N04 |
 
 表中 N 编号均指 [9/21 原 no-go ledger](assets/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。网络、工具、审稿模型或编译失败均不在这里当数学反证。
+
+## F07 · “Polish”被当作给定度量完备
+
+- **原尝试**：9/19 扩展稿 extensions_moduli_structure.tex 的随机推论仅写 \((\mathsf X,d_{\mathsf X})\) Polish；在期望距离收缩和 Dini 步长包络下证明几乎处处有限长度，然后用“completeness”推出空间内极限。
+- **错误位置与性质**：Polish 若取拓扑可完备的标准含义，不保证**所指定** \(d_{\mathsf X}\) 完备。取 \(\mathsf X=(0,2)\) 通常距离，\(S=\{2^{-n}:n\ge1\}\)，确定性 \(X_k=2^{-(k+2)}+4^{-(k+2)}\)。令 \(D_k=4^{-(k+2)}\)，\(\omega(t)=4\sqrt t\)，\(\kappa=1/4,R=1/16\)；有 \(D_{k+1}=D_k/4\) 和 \(s_k\le[D_k+\omega(D_k)]/2\)，却 \(X_k\to0\notin\mathsf X\)。这是否定原**措辞的一个解释**的真实反例，不否定期望和 Dini 的求和计算。
+- **salvage / 修补**：明示给定度量完备（可用 complete separable metric space），则稿内 Tonelli、有限长度、Cauchy 与闭 \(S\) 的证明链成立；不需另加 \(\omega\) 凹性。确定性 complete-metric transfer 本就明确完备，不受影响。[holder_structure H06](research/holder_structure.md)。
+
+## F08 · 全局纤维实现误读为局部收敛认证
+
+- **诱人的错误推论**：9/23 的 graph-maximal 全局 RL 可实现每个直径受限非空紧零集，于是把任意这类 \(K\) 当作也满足 9/19 局部收敛/极限回缩条件。
+- **精确障碍**：9/19 的连续极限回缩需同图块全对模、局部 coverage、输出 EB、兼容、Dini 与不变开域；合取成立则 \(S\cap U\) 为 Euclidean neighborhood retract、局部可缩。Cantor 型紧集在其非孤立点不局部可缩，因此其全局实现不能在那些点同时满足这套附加条件。
+- **salvage**：全局纤维分类与局部回缩结果都保留；这条跨稿条件限制可用来攻击某个给定实现的 EB/coverage，而不是宣称结构定理互相矛盾。[结构模块 H03/H05](research/holder_structure.md)。

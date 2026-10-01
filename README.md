@@ -1,83 +1,92 @@
-# PPA 数学研究地图
+# PPA 研究地图：数学节点与真实超边
 
-本仓库根据 2026-09-30 收到的「次单调论文研究.zip」初始化。目录中的原研究文本是数学论证的来源；本页是导航和状态索引，不是证明。初始导入保留原目录和文件名；[导入清单](INGEST_MANIFEST.tsv)给出逐文件 SHA-256、去向和未纳入原因。[原上传包校验值](UPLOADED_ARCHIVE.sha256)用于核对来源。没有把聊天总结当作证明，也没有因为某稿被称为“投稿稿”就把其原创性或正确性升级为外部确认。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 81 个数学节点、53 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 assets/ 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+
+> 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，外部定理与先行性门未关闭。9/25 局部值域证书另有独立整窗拓扑假设。
 
 ## Research Goal
 
-项目以广义单调性、真实误差界和近端点算法（PPA）为核心，形成三条可分开的研究目标：
-
-1. **RLEB–PPA**：在明确的 range coverage、同一图块、真实残差和留域预算下，证明非线性反射控制加误差界足以使近端轨道收敛；识别多值接缝的真实增量和适用边界。
-2. **算子空间比较**：在不以证书参数预先定义的自然对象空间中，比较 RLEB、Luke–Tam 公共 all-pairs 接口与极大单调类的覆盖规模。严格多出一个例子不解决“多大”这一问题。
-3. **Hölder–RL 结构稿**：研究满足全图、全尺度 Hölder–RL 条件的关系能否被同一个强单调双 Lipschitz 映射同时近似正反纤维，以及有限维全纤维的精确可实现性；2026-09-25 候选 PDF 还提出独立的局部拓扑值域证书。
-
-锥优化 CRSC/MSCQ、Markov/输运差异、解选择稳定性是独立或相邻主线。它们不能只凭主题相似就成为 RLEB 收敛定理的推论。
+1. **收敛机制**：在同一图块、真实全纤维残差、coverage 与留域预算下，确定非线性全对 RL 和误差界如何控制 PPA，区分距离收缩与点收敛。
+2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。
+3. **结构与纤维**：全图全尺度 Hölder–RL 下研究一个同时近似正反纤维的强单调影子、固定参数极大图的完整纤维与最优常数。
+4. **独立旁支**：冻结面 CRSC→MSCQ、Markov/运输残差与解选择稳定性分别保留自己的对象和量词；跨线连接须证明桥。
 
 ## Mathematical Objects 与 Definition Map
 
-令 \(F:H\rightrightarrows H\)，\(\lambda>0\)，\(S=F^{-1}(0)\)，\(J_{\lambda F}(p)=\{x:p-x\in\lambda F(x)\}\)，\(r_F(x)=\inf_{v\in F(x)}\|v\|\)（空值为 \(+\infty\)）。对图点 \((x,v),(y,w)\) 写 \(d=(x-y)+\lambda(v-w)\)、\(e=(x-y)-\lambda(v-w)\)。**全图 all-pairs RL** 在声明的图块与尺度上是 \(\|e\|\le L\|d\|^\gamma\)；它不同于只与解点比较的 anchored 条件。Cayley 输入 \(p=x+\lambda v\) 上的 \(C(p)=x-\lambda v\) 把该式变为 Hölder 模，且 \(x=(p+C(p))/2\)、\(v=(p-C(p))/(2\lambda)\)。
+定义域、量词、约定在 [foundations.md](research/foundations.md)。核心坐标为
 
-RLEB 局部收敛另外要求：完整或明示限制的 resolvent 的 **coverage**；误差界 \(d(x,S)\le\psi(r_F(x))\) 在实际输出有效；\(\psi((t+Lt^\gamma)/(2\lambda))\le\kappa t\)；使整条轨道留在共同图块的初始长度预算。**全局图 maximal at fixed parameters** 则是另一概念：给定 \(\lambda,L,\gamma\) 时图在该不等式下不可真扩张，既非极大单调，也不等于局部 coverage。9/23 结构稿取 \(H\) 为实 Hilbert 空间、\(L>0\)、\(0<\gamma<1\)、全图全尺度条件；其有限纤维分类另外取 \(H=\mathbb R^n\) 和图极大。
+\[
+J_{\lambda F}(p)=\{u:p-u\in\lambda F(u)\},\quad
+r_F(u)=\inf_{v\in F(u)}\|v\|,\quad
+p=u+\lambda v,\quad C(p)=u-\lambda v .
+\]
 
-算子空间主线首阶段取 \(E=\mathbb R^d\)，用完整闭图 \(G=\operatorname{gph}F\) 和固定步长图剪切 \((u,v)\mapsto(u+\lambda v,u)\)。**全域完整** \(T=J_{\lambda F}\) 可恢复 \(F(u)=\{(p-u)/\lambda:Tp=u\}\)，局部 \(T|_U\) 一般不可恢复域外图和真实最小残差。比较单位 \(F\)、\((F,\lambda)\)、轨道／步长策略及选择量词必须分别声明。具体约定以 [RLEB 定理骨架（ZIP 内）](assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RLEB_PPA_submission_assets_2026-09-18.zip)、[中立体系蓝图](assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/02_NEUTRAL_PPA_SYSTEM/ppa_system_team/10_final_blueprint.md) 和 [结构稿 TeX](assets/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 为准。
+对同一图块任意**两**图点、同一步长和输入对尺度，全对 RL 写成
+\(\|\Delta u-\lambda\Delta v\|\le L\|\Delta u+\lambda\Delta v\|^\gamma\)。
+它给部分定义的 Cayley 映射与图块单值 \(J_{\mathcal G}\)，**不提供输入 coverage**。
+局部 RLEB 另用实际输出上的 \(d(u,S)\le\psi(r_F(u))\)、兼容及初值长度预算。
+全局结构稿取实 Hilbert 空间、非空完整图、\(L>0,0<\gamma<1\)、全部尺度；其中 graph-maximal 固定 \((\lambda,L,\gamma)\)，不是极大单调。有限维完整纤维分类再增加 \(H=\mathbb R^n\)。
 
-```mermaid
-flowchart TD
-  G["完整图与共同域"] --> C["Minty–Cayley / 完整 resolvent"]
-  C --> RL["all-pairs RL 与反射模"]
-  G --> EB["真实全纤维残差与误差界"]
-  RL --> PPA["一步估计、兼容及留域"]
-  EB --> PPA
-  PPA --> ORBIT["距离率、有限长度、极限选择"]
-  C --> SPACE["中立算子与动力空间"]
-  SPACE --> GAP["RLEB–LT 类大小：开放"]
-```
-
-## Claim Map 与 Known Results
-
-完整量词、状态、证据和异议在 [CLAIMS.md](CLAIMS.md)。下面的箭头仅表示**所列范围内**的依赖，不能跨稿迁移。
-
-| 编号 | 命题身份与依赖 | 当前证据层 |
+| 前件 | 后件 | 需要额外检查 |
 | --- | --- | --- |
-| C01 | 全图 RL ↔ Cayley Hölder 图坐标；基础代数引理 | 稿内证明，可直接复核 |
-| C02 | 9/18 局部 RLEB：coverage + RL + 真实 EB + 兼容 + 留域 → 收敛与尾界 | 原稿证明与内审记录；本轮未重审全部条件 |
-| C03 | 9/23 全局 RL → 一个同时近似正反纤维的强单调影子，统一因子 \(1/\sqrt2\) | 有 TeX 证明的研究稿候选，尚待独立深审 |
-| C04 | 有限维图极大 RL 的完整逆纤维恰为非空、紧、直径 \(\le L^{1/(1-\gamma)}\) 的集合 | 同一研究稿候选；依赖 C01、全域扩张和不动点构造 |
-| C05 | 9/25 PDF 的局部有限 proximal 数据 + 额外拓扑假设 → 原关系值域邻域 | 独立假设层的新增候选；缺对应 TeX 和独立核验 |
-| C06 | 紧源 T-only 图卡中实际尾／反射模观测的 properness 与紧纤维 | 9/20 内部独立审计，严限于该图卡 |
-| C07 | 9/21 提纯包报告的普通 Baire／原动力度量多孔性塌缩 | V-A/V-B 历史总账；部分原证明在本次附件中缺失 |
-| C08 | 解选择映射的一般模传递与显式坏 Hölder 例 | 修订包报告修补后通过；一般定理只用于局部 \(J_{\mathcal G}\) 或另证完整纤维一致性 |
+| 全对 RL | Cayley 图坐标、图块内同输入唯一 | 完整或局部输入 coverage 独立 |
+| 局部图块 \(J_{\mathcal G}\) | 完整 \(J_{\lambda F}\) | 共同轨道输入域的全纤维一致性 |
+| 局部或全时间 \(T\) 观测 | 原关系 \(F\) | 必须保存完整输入与完整输出纤维 |
+| 锥 MSCQ | PPA 的真残差 EB | 同一零集及锥残差到 \(r_F\) 的桥 |
+| 条件 Markov 残差 | 同步 OT 残差 \(\Psi\) | 同一耦合、目标和回耦损失界 |
 
-## Research Frontier 与 Open Problems
+## Claim Map 与 Dependency Graph
 
-**体系级主瓶颈**：找自然、参数中立且保留完整原图和真实残差的空间／表示，以及有鉴别力的大小不变量，使 RLEB、LT、极大单调在同一接口上接受真正的规模比较。9/20 包中的 \(\Phi=(\text{actual tail},\text{actual reflector modulus})\) 在固定紧 T-only 图卡是 proper；它的 category-preserving 性与局部观测到完整 \(F\) 的提升仍缺。9/21 包进一步报告若干旧 Baire／多孔性环境**同时**把两个类判小，因而旧“差集非 \(\sigma\)-upper-porous”目标已被报告为假。需先恢复其未附原证明，再在新空间上提出可判真伪的比较命题。
+完整命题身份、版本、异议在 [CLAIMS.md](CLAIMS.md)。下面是**数学路线而非文件链**；每行的合取和适用域见 [超边表](research/HYPERGRAPH.md)。
 
-结构稿的下一步是逐条攻击正反纤维的统一常数、Hilbert 空间 Hölder 扩张的使用条件、有限维固定点构造与值域覆盖；9/25 新增的 Čech／Vietoris–Begle／Lefschetz 引用须核对适用条件、完整 \(T\) 的独立假设及有限数据能验证哪些不等式。候选稿没有经本次独立同行审查。9/18 RLEB 投稿主张还需同对象同量词的先行性核查；锥、Markov 与结构稿各自的原创性也单独判断。
+| 路线 | 承重节点及联合前件 | 当前状态 |
+| --- | --- | --- |
+| 局部 RLEB | 图块全对 RL + coverage + 最近零点图 + 真实输出 EB → 一步估计；再加兼容 + 留域 → 有限长度 | R01/R02 稿内证明，完整 \(J_F\) 需另证同一性 |
+| 非幂次边界 | 一般模 + Dini + 上述全部局部条件 → 点收敛；对数完整接缝 \(a\le1\) 有距离收缩但点发散 | 9/19 稿内构造与本轮局部重算 |
+| 全局结构 | 全图 RL → Cayley；二次 excess + 正交提升 + Banach → 单一正反影子 | C03 候选 |
+| 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
+| 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加参数覆盖 → 未观测图点误差 | C18–C20 稿内证明；有限查询不能全空间认证 C21 |
+| 拓扑限制 | 局部 all-pairs + EB + Dini + coverage + 不变开域 → 连续极限回缩 | 不由任意紧零集实现自动得到 |
+| 有限数据值域 | 样本包络 + 整窗 \(T\) 的 usc/acyclic + collar + 上同调 + Lefschetz → 原关系局部值域球 | C05 PDF-only，外部定理门未闭 |
+| 大小比较 | LT 公共接口 → RLEB 能量证书；紧 T-only \(\Phi\) proper；还缺完整对象与保纲桥 | 总体规模命题开放 |
+| 锥与 Markov | 冻结秩→面稳定→MSCQ；同步 OT exact-zero→一般 gauge，有限状态顶点→线性 EB | 两条独立链，跨线桥待证 |
 
-## Refuted / Failed 与 Next Actions
+9/14 历史包本身已有 149 个实体、35 条超边；本图以它为搜索种子，读入 9/18–9/25 版本后重新判断，没有把历史边直接升级为当前真理。
 
-[FAILED_ROUTES.md](FAILED_ROUTES.md)记录每条路线具体的失败机制和可回收资产。优先行动：
+## Research Frontier
 
-1. 为 9/25 PDF 保存匹配的可编译源与版本差异；独立检查新增 Theorem 8.1 的拓扑定理调用和数值证书边界。
-2. 从 9/21 提纯包的内部索引恢复 N05、N10 及内禀模谱原证明／审计，再确定哪些负结果可在新仓库升为有原件的 canonical record。
-3. 对算子空间主问题先给中立空间、完整图恢复、大小不变量及反塌缩测试的一个精确命题；不得再把特殊层差距上推到母空间。
-4. 按确切定理和版本完成 RLEB、锥、Markov 及结构稿各自的文献核验；外部文献事实不能仅凭内部摘要升级。
+**首要开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
 
-## File Map 与分批阅读
+结构稿的 proof obligations：Hilbert Hölder 扩张、统一影子常数下界、有限维 degree、fixed-set 构造、固定窗口 completion 与有限样本覆盖的适用条件；有限总查询的全空间障碍要保持确定性、无界域量词。[值域与有限数据](research/range_finite_data.md)。9/25 另需逐条核引用的 rational morphism Lefschetz 定理，有限样本只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
 
-本轮按原目录的总目录、分类集、最新成果、正式后的研究、相似研究，以及嵌套 9/14 与 9/21 包的入口和关键证明，完成**初始化阅读**。这是来源、定义、范围和冲突的审计，不是对每一页证明或每篇外文论文的重新审稿。[BATCH_README.md](BATCH_README.md)列出各批阅读范围及未核实项。路径均相对仓库根，链接可直达。
+## Known Results、Refuted / Failed、Open Problems
 
-| 路径 | 内容、数学作用、何时读 |
+- 可直接复核的代数：Cayley 双向坐标、固定步长全域完整 resolvent 的原图反演、同图块内同输入唯一。
+- 有证明文本和限定内部审计的研究结果：局部 RLEB、固定紧源 \(\Phi\)、解选择修订版、锥与 Markov 条件命题。候选稿与外部审稿、文献新颖性是独立层。
+- 已证伪的扩大陈述：局部 \(J_{\mathcal G}\) 自动等于完整 \(J_F\)；Polish 拓扑性质自动给指定度量完备；proper 即保纲。精确反例和可回收部分见 [FAILED_ROUTES.md](FAILED_ROUTES.md)。
+- 尚未解：总体规模比较；9/21 N10 原孔隙否定证明可追溯性；9/25 外部拓扑定理应用；各固定维数影子最优常数；同对象同量词的全球先行性。
+
+## Next Actions
+
+1. 冻结总体比较的**计数对象、三类认证量词和大小不变量**的一页规格，先用 N05/N08/N09/N10 及远端自由度反例攻击，再尝试总体定理。
+2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
+3. 为 9/25 §8 配对可编译源，核 [6, Theorem 6.2] 的范畴与 Čech 同调条件；在正文保持“指定 \(T\)”量词。
+4. 修订 9/19 随机推论的指定度量完备性，保留反例作为缘由；分别推进结构、锥、Markov 的外部先行性核验。
+
+## File Map
+
+| 仓库根相对完整路径 | 数学资产、目的、何时读取或更新 |
 | --- | --- |
-| [RESEARCH_STATE.md](RESEARCH_STATE.md) | 当前活跃目标、版本优先级、关键 proof obligations；开始新任务先读。 |
-| [CLAIMS.md](CLAIMS.md) | C01–C08 的精确身份、量词、依赖、证据与异议；引用重要命题前读。 |
-| [FAILED_ROUTES.md](FAILED_ROUTES.md) | 旧量尺的共同塌缩、局部图信息损失、解选择稿的完整 resolvent 误用；拟重启路线前读。 |
-| [assets/次单调论文研究/最新成果/](assets/次单调论文研究/最新成果/) | 9/23 结构稿 TeX/PDF、中文讲稿和 9/25 增补 PDF；研究影子、纤维或局部值域时读。9/25 PDF 比 TeX 多 §8，不可视为同版源码。 |
-| [assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/](assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/) | 9/20 完整分类集技术包：`00_START_HERE`→`STATUS`→`OPEN_PROBLEM`→`01_CANONICAL_HANDOFF/.../07_final_handoff.md` 与 `06_math_audit.md`；含全图、\(\Phi\)、LT 嵌入、分母与文献边界。阅读时保留包内 CANONICAL/HISTORICAL/SUPERSEDED 标签。 |
-| [assets/提纯总账_2026-09-21_v0.9/](assets/提纯总账_2026-09-21_v0.9/) | 9/21 后续总账：`01_CURRENT_MAP`、`02_VERIFIED_CORE`、`03_NO_GO_LEDGER`、`04_OPEN_GATES`；可先了解更晚的负结果，但 V-B/SOURCE-MISSING 不能替代原证明。 |
-| [assets/次单调论文研究/正式后的研究/](assets/次单调论文研究/正式后的研究/) | 9/18 解选择 `research_note.md`、独立证伪任务及实验 ZIP；需结合分类集 `06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip` 的修订审计，不能只用旧稿。 |
-| [assets/次单调论文研究/RL_foundations.md](assets/次单调论文研究/RL_foundations.md) | Hilbert 空间 RL 量词、全／限制关系、覆盖／排除／不变、PPA gauge 定理与例子；追溯早期定义时读，其旧战略不覆盖较新状态。 |
-| [assets/次单调论文研究/ATTACK_PRODUCT_CONE_CRSC_MSCQ.md](assets/次单调论文研究/ATTACK_PRODUCT_CONE_CRSC_MSCQ.md) 与 [MARKOV_PAPER_THEOREM_PACKAGE.md](assets/次单调论文研究/MARKOV_PAPER_THEOREM_PACKAGE.md) | 两条独立旁支的证明包、边界和优先权门；只有研究锥或随机输运时进入，不自动并入 RL 定理。 |
-| [assets/历史总包_2026-09-14/](assets/历史总包_2026-09-14/) | 原嵌套 9/14 总包逐文件展开的来源谱系、数学稿、审计和超边导航；用于追溯历史。第三方原文 PDF 未公开复制。 |
-| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv) | 原外层压缩包及 9/14、9/21 内部逐项 SHA-256、导入位置和排除原因；恢复／比对版本时读。 |
+| [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
+| [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
+| [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
+| [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
+| [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；要从结构定理走向可计算证书时读。 |
+| [research/solution_selection.md](research/solution_selection.md) | S01–S03：统一尾到极限模、局部/完整修补、锐性模型；主张初值稳定时读。 |
+| [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |
+| [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
+| [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
+| [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 精确身份、当前阻塞、已失败机制；每次进展后同步维护。 |
+| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md) | 初始校验与旧批次盘点；用于核原件，不再作为数学地图。原件保留在 [assets/](assets/)，Git 历史可追初始导入。 |
 
-外部论文仅记录在原研究笔记和导入清单，不把带有个人使用或再分发限制的 PDF 推送到公开仓库。仓库中的原件不因目录迁移而改写，研究地图对它们的认识随核查更新。
+阅读顺序：本页和超边图 → 依节点进数学模块 → SOURCES 的原稿标签/页码 → CLAIMS 的现存 objection。图中路线是搜索种子，不是方法白名单。

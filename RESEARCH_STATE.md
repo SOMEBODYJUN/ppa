@@ -1,33 +1,42 @@
-# Research State · 2026-09-30 初始化
+# Research State · 2026-10-01
 
-## 活跃目标与版本顺序
+本文件只记录**当前前沿**；数学定义、精确命题与来源分别见 [foundations](research/foundations.md)、[CLAIMS](CLAIMS.md)、[SOURCES](research/SOURCES.md)。本轮按实际远端初始提交 e7ace9f 恢复，重读了承重原稿与历史超边层，新增规范模块。数学状态不由聊天或文件名决定。
 
-当前长期主问题是一个**无证书标签的、非退化的 RLEB–LT–极大单调覆盖规模比较**。对于此问题，9/21 的 [提纯总账](assets/提纯总账_2026-09-21_v0.9/README.md)更新了 9/20 [分类集交接](assets/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/README.md)的研究策略和若干 no-go；9/20 的数学证明和适用条件仍应按原 `07_final_handoff.md`、`06_math_audit.md` 阅读。9/21 总账自称 v0.9，明示有 `SOURCE-MISSING` 和 `V-B` 项；日期更新不构成缺失证明的替代。
+## 活跃目标 A：RLEB–LT–极大单调的总体规模比较
 
-另一个活跃、独立的投稿候选是 9/23 [Hölder–RL 结构稿 TeX](assets/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)，其匹配 PDF 21 页。9/25 [combined candidate PDF](assets/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf) 24 页，新增 §8 的局部有限数据拓扑值域定理；没有同版 TeX。它不是 9/23 TeX 的无变化 PDF。
+**Exact gap**：给自然、参数中立、保留完整原图与真实残差的对象空间 \(\mathfrak X\)，明定计数单位 \(F\) 或 \((F,\lambda)\)、合法选择及局部域量词，再选一个不把目标类一齐压小的大小不变量 \(\mathcal I\)，证明同一母空间中 RLEB、LT 公共 all-pairs 和极大单调类的规模关系。当前没有该总体定理。
 
-9/18 RLEB–PPA 投稿资产是局部收敛接口的默认来源；9/14 总包是更早、更宽的历史谱系；解选择修订包纠正原稿把局部 resolvent 无条件认作完整 resolvent 的漏洞。不要按单纯文件名或“PASS”字样覆盖后来的精确范围修正。
+**已知组件**：完整全域 \(T=J_{\lambda F}\) 的图反演；匹配接口下 LT→RLEB 能量证书；固定紧 T-only 图卡 \(\Phi=(w,m)\) proper；有受限严格分离构造。均不能单独解决总体问题。[operator_space](research/operator_space.md)
 
-## 已知与证据层
+**承重障碍**：
 
-- **代数可复核**：Minty–Cayley 图坐标、固定步长的全图剪切和真实残差的全纤维定义。[CLAIMS C01](CLAIMS.md)。
-- **内部证明／审计有明确范围**：9/18 局部 RLEB 定理 C02；9/20 固定紧源 T-only 图卡的 \(\Phi\) properness C06；解选择修订包 C08。它们不是外部审稿结论。
-- **9/23 候选稿**：C03、C04 的完整 TeX 证明可查，尚未由本次独立重构关键引理；文献先行性未终审。
-- **9/25 新增候选**：C05 与全图全尺度结构定理的假设层分离，有限样本本身不建立 complete \(T\) 的 upper semicontinuity／acyclic values，也不建立所需局部估计。
-- **9/21 历史报告**：普通 Baire／轨道理想／多孔性量尺的负结果 C07 具有明确 no-go 范围；部分承重原稿在这次附件中缺席，保持“报告结果待追原证据”。
+1. proper/quotient 不推出 category-preserving；单一局部 \(T\) 观测不保全局 \(F\) 和 \(r_F\)。
+2. 9/21 总账报告 N05/N08/N10 的共同塌缩与 N09 远端自由度；其中 I-097–099 原孔隙审计及 I-102 正式表示稿未在当前盘点的原件名中发现，保留“来源包报告”而非重构证明。
+3. 同时，9/21 旧 SOURCE-MISSING 是**当时**状态：I-001 已恢复 100/101 的历史展开内容（受限第三方 PDF 未入库）；I-002、I-003–005、I-059 已恢复；I-075 的 73 文件专题包以展开内容恢复，原重复 ZIP 未保留。I-005 实为审计**任务书**，不能当审计通过记录。解选择的实际修补证据在 I-059 内 revision_math_audit 与 revision_math_closure。
 
-## 当前 barrier 与 competing mechanisms
+**下一判别**：写一页 \((\mathfrak X,\mathcal I,\mathcal R,\mathcal L,\mathcal M)\) 规格，先找 N05/N08/N09/N10 的反塌缩反例；若量尺共同塌缩，换表示或不变量，而非在特殊层追加成员例。
 
-| 障碍 | 必须解决的 proof obligation | 已知反向证据 |
+## 活跃目标 B：局部 RLEB 与结构稿的精确边界
+
+- **S19 局部 PPA**：coverage + 同图块全对 RL + 真实输出 EB + gauge 兼容 + 留域，给有限长及尾界；一般模还需 Dini。该组合的缺一条件不能静默删除。[R01–R04](research/rleb_ppa.md)
+- **9/19 新资产**：对数二支完整图 \(a\le1\) 显示几何距离收缩而切向漂移发散；\(a>1\) 收敛。统一尾与同图块全对连续性给局部极限回缩。这使“任意紧零集可实现”和“额外收敛条件下零集为邻域回缩”形成可检验的条件限制。[H04/H05](research/holder_structure.md)
+- **9/19 随机措辞**：原稿写 Polish，证明用给定 \(d_{\mathsf X}\) 完备；\((0,2)\) 上的确定性序列满足其他假设却收敛到空间外。原命题若按拓扑 Polish 解释为假；修订版本明确 complete metric。[H06](research/holder_structure.md)、[FAILED F07](FAILED_ROUTES.md)
+- **S23 全局结构**：同一个强单调双 Lipschitz 影子及有限维完整纤维分类的证明已局部独立重算，未见内部计算致命断点；经典 Hilbert 扩张、有限维 degree 的调用及同对象先行性仍是独立门。固定维数的最优因子仍开放。
+- **S23 值域与有限数据**：最大根定位给全局与相对 maximal 窗口的**整个纤维**锐覆盖；有限兼容样本的 QP 给全局一致 \(A_m\)，但未知图点只在 Cayley 参数覆盖下认证。可验证 gap、噪声和求值误差叠加成三项界；有限总查询在无界 Hölder 类不能全空间认证。[range_finite_data](research/range_finite_data.md)。这条链原八条 Claim 未记录，现立 C18–C21。
+- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 需逐条核适用条件，当前为 PDF-only 候选。[H07](research/holder_structure.md)
+
+## 独立旁支与依赖门
+
+| 链 | 当前可使用的精确成果 | 不得越过的门 |
 | --- | --- | --- |
-| 分母和尺度 | 给定自然、参数中立的原对象空间与大小不变量，证明 RLEB、LT 和差集在其中可比较且不一起塌缩 | 9/21 `03_NO_GO_LEDGER` 的 N05、N08、N10；其原证明可用性逐项核对 |
-| 动力信息与原算子信息 | 若使用 \(\Phi\) 或局部图卡，证明类别保持并保留所有影响 \(r_F\) 的完整图点；或直接在原对象空间证明比较定理 | 9/20 审计：proper/quotient 不推出保纲；局部 \(T\) 不控制域外图 |
-| 9/25 拓扑值域证书 | 重建 Theorem 8.1 的图对应、Čech/Vietoris–Begle 与 Lefschetz 适用条件；清晰分离样本验证和整窗结构假设 | 仅 PDF 有稿，文中明说 (8.1)–(8.2) 与完整 \(T\) 的拓扑不由有限样本保证 |
-| 9/23 影子与纤维 | 独立核验 orthogonal lift、Hölder Hilbert 扩张、最优因子和任意紧集的 sharp fixed-set realization；检查退化维数和非闭图 | 当前有稿内证明，但本轮阅读不是独立 referee |
-| 创新边界 | 同对象、同量词、同强度比对原始论文定理；分别审核 RLEB、结构稿、锥和 Markov | 内部优先权评估不是全球原创性证书 |
+| 锥 | nice + 冻结 CRSC 的秩夹逼、面稳定，参考面 amenability 与法向/切向修正给 MSCQ；nice 非 amenable 的普遍量词边界 | 原锥残差到 \(r_F\) 的桥、同一零集、反射和 coverage 另证；文献正式版优先权待核 |
+| Markov | 紧连续同步 OT \(\Psi\) 的 exact-zero⇔一般 gauge；有限状态顶点测试⇔线性 EB；条件 bit/Gaussian 修复 | 表示依赖、同耦合、守恒边缘、recoupling；不能由快收敛反推原 \(\Psi\) EB |
+| 解选择 | 统一尾 + 局部 Hölder → 对数/超几何极限模；完整显式例的两点非 Hölder | 只对 \(J_{\mathcal G}\) 直接导入；完整 \(J_F\) 须全纤维一致；经典 AGM 先例已覆盖较宽现象 |
 
-## 当前路线与下一阶段最有信息价值的动作
+各链的定义、量词与反例在 [cone_markov](research/cone_markov.md) 和 [solution_selection](research/solution_selection.md)。
 
-先对 9/21 所列负结果建立**原证明可追溯性表**，特别是 N05、N10；若原件缺失，按 exact claim 重新独立证明或保持悬置。随后提出一个对象空间及大小不变量的一页精确规格，并在证明长篇定理前攻击 N05/N08/N09/N10 的塌缩反例。另行把 9/25 新增 §8 的 TeX 来源和有限数据证书独立核验；该项不会自动解决总体算子空间大小问题。
+## 证据与下一阶段
 
-没有理由以有限样本、模型 confidence、内部 PASS 或暂时未找到反例，提升以上未决命题。每个新结论先在 `CLAIMS.md` 另立版本，完成证据和异议登记后再更新本状态。
+本轮独立工作只对所述核心公式、部分证明链和反例进行了重算；未逐行 referee 全部 251 个导入文件，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子，当前 24 条边经版本和范围重组，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
+
+下一阶段先补证据门：追 I-097–099/I-102；核 9/25 [6] 原文；正式修随机完备性；再让总体比较的一个精确空间/量尺接受反塌缩攻击。若没有新证据，不新增“已证”节点。
