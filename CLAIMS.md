@@ -509,7 +509,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C83 同一 \(F\)，完整算子真残差 \(r_F(x)=x^2\) 在 \([-1,1]\)，\(S=\{0\}\)，故固定零目标局部 EB 最高指数 \(q=1/2\)，锐缩窗系数 1。固定 \(\lambda=1/2\)、完整 \(J\) 和实际自然输入域 \([-1/2,3/2]\)：每个 \(0<p_0<3/2\) 的唯一无限路径 \(p_{k+1}=J(p_k)\) 满足 \(kp_k\to2\)；每个 \(-1/2\le p_0<0\) 仅有有限条合法步，最终离开自然输入域。
 - **Dependencies / Evidence / Status / Related Files**：[BS-ZERO](research/topics/examples/bounded_square_minty.md#bs-zero) 的完整残差恒等式、逆图迭代和有界单调反证；`derived-checked`。零目标观察取材于 GX-065，正/负路径是本仓库新增推导。
-- **Counterevidence / Scope**：双侧目标 MR 因负目标空逆像失败；图上端点的全图半阶证书和零点真 EB 不在同一个局部图窗。没有所有零点附近输入的无限合法轨道或 \(q\gamma>1\) 的收缩门，不能从两个半阶数字声称 PPA 局部收敛。
+- **Counterevidence / Scope**：双侧目标 MR 因负目标空逆像失败。全图半阶 RL 和零点真 EB 可在零点小窗合取；但全图半阶的**锐性见证**在左端点，零点局部 RL 可线性，且半阶相乘只得 \(q\gamma=1/4\)，不满足收缩兼容门。负侧轨道又失去不变域，故不能从两个半阶数字声称统一局部收敛。
 
 ## C85-v1 / SR-GEOMETRY · 受限负平方根图的锐成对常数
 

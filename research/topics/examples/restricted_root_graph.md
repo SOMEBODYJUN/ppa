@@ -63,7 +63,7 @@ J_{F_U}(p)=\{t(p)^2\}.                              \tag{SR4}
 初值仅有一步，不能组成无限合法路径。对 \(0\le x\le1/16\)
 有 \(S_U=\{0\}\)、\(r_{F_U}(x)=\sqrt x\)，从而
 \[
-d(x,S_U)=x=r_{F_U}(x)^2,qquad
+d(x,S_U)=x=r_{F_U}(x)^2,\qquad
 \frac{J_{F_U}(p)}{|p|^2}=\frac1{(1-t(p))^2}\longrightarrow1
 \quad(p\uparrow0).                                  \tag{SR5}
 \]

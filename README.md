@@ -71,7 +71,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 固定有限状态同步 OT | 固定互异状态及核 + 同一 C-最优耦合 + 全部不变律 + 零成本 tight-edge 顶点行边缘不变 ⇔ 精确零集 ⇔ 全律空间锐线性 EB | [C15 完整证明](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 已独立重写；不需混合性，也不推动力收敛。§5 备用证明和 §6 正则性另有去向 |
 | 有限状态残差正则性 | 固定有限数据 + C-最优计划的固定矩阵 Hoffman 界 + 运输成本变化界 → Φ=Ψ² 全域 Lipschitz；有限 tight-edge 分支 → 连续分片仿射 | [C80](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 不要求 C15 的 exact-zero 判据；正则性不推出 EB |
 | 正值正弦的错目标边界 | GX-064 完整 F=2+sin x 在 λ=1 的全对临界 1/3 阶与目标 3 的固定目标半阶属于不同参考图点；F 零集为空 | C81/C82 的缩窗锐常数与每选择向负无穷的完整路径已重算；不能拼成零集 PPA |
-| 有界平方的错窗口边界 | GX-065 完整有界图的全图临界半阶发生在左端点，零点真残差半阶在另一窗口；自然 Minty 域有限 | C83/C84 重算全部锐模；正输入路径仅有 \(1/k\) 衰减，负输入有限步越域；不可合成统一零点收敛 |
+| 有界平方的锐性与留域边界 | GX-065 完整有界图的全图临界半阶锐性见证在左端点，零点真残差半阶在零点；两界可同窗成立但 \(q\gamma=1/4\) | C83/C84 重算全部锐模；正输入路径仅有 \(1/k\) 衰减，负输入有限步越域；粗指数与缺留域不支持统一零点收敛 |
 | 负平方根的图身份门 | GX-032 的短受限图 \(F_U\) 有锐全对 \(L=3\) 与真二次 EB，但任一非零输入仅有一步；半直线母图 \(F_\infty\) 有远支，同输入碰撞 | C85–C87 分别重算两个完整关系，F28 禁止把短图证书与母图或无限轨道拼接 |
 | 异维数正则性与两残差 | GX-076 的最近逆点线性但固定/双变量锐半阶；GX-077 的原算子残差跳跃系数下确界 0，但近端步残差锐系数 1 | C76–C79 独立对象卡；不能将 GX-076 赋予同空间 RL，也不能互换原算子与近端残差 |
 | 固定目标随机近端 | 同一全局 prox + 域内平稳律 → 吸收支持；非乘积闭近端图 + fair tie 核 → 有限长非不变极限及完整 \(W_2\) 邻域无 law-step gauge EB | C62/C63；与随机换目标 C22/C23、Markov 同步 OT \(\Psi\) 分离 |
@@ -160,7 +160,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/example_atlas.md](research/canonical/example_atlas.md) | EX01 旋转、EX02 正紧对角、EX03 三次映射的完整对象卡、真残差、参数、证明及历史别名；检验某个逆推、EB 或常数边界时读，新增 GX 先区分对象与观察。 |
 | [research/topics/examples/diagonal_spike_relation.md](research/topics/examples/diagonal_spike_relation.md) | C72–C75/GX-075：对角图加离散竖支的完整残差、每条近端路径、零锚/全对分离及精确二参数区；攻击“收敛或 EB 逆推全对 RL”时读。 |
 | [research/topics/examples/positive_sine_phase.md](research/topics/examples/positive_sine_phase.md) | C81/C82/GX-064：完整正值正弦图的步长三相、临界全对和锚定常数、非零目标半阶及无零集路径；比较局部 RL 与 EB 时先核目标和基点。 |
-| [research/topics/examples/bounded_square_minty.md](research/topics/examples/bounded_square_minty.md) | C83/C84/GX-065：有界平方完整图的全图临界端点折叠与精确 Hölder 常数、零目标真残差半阶、正侧 \(1/k\) 与负侧自然域逃逸；使用局部收敛链时须检查两个估计的共同窗口和留域。 |
+| [research/topics/examples/bounded_square_minty.md](research/topics/examples/bounded_square_minty.md) | C83/C84/GX-065：有界平方完整图的全图临界端点折叠与精确 Hölder 常数、零目标真残差半阶、正侧 \(1/k\) 与负侧自然域逃逸；两界可同窗但收缩兼容和留域不成立。 |
 | [research/topics/examples/restricted_root_graph.md](research/topics/examples/restricted_root_graph.md) | C85–C87/GX-032：严格分开受限负平方根完整短图与半直线完整母图，给锐成对常数、真二次 EB、受限无续步、母图远支与发散；从受限算法向母图推断时先读。 |
 | [research/topics/examples/hemiregular_piecewise_parabola.md](research/topics/examples/hemiregular_piecewise_parabola.md)、[research/topics/examples/absolute_value_subgradient.md](research/topics/examples/absolute_value_subgradient.md) | C76/C77 与 C78/C79：前者是异维数完整映射的最近逆点与两变量正则对照、局部非闭图；后者把绝对值次梯度的原算子真残差跳跃和软阈值近端步残差分开。研究 MR/MSR 量词或残差模传递时读。 |
 | [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/identity_square_branch_union.md](research/topics/examples/identity_square_branch_union.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C66–C68/GX-068 的完整并图、两种真残差与跨支碰撞；C60/C61/GX-069/070 的 DR 算法残差锐模。先区分原算子、选支、完整步和算法残差。 |
