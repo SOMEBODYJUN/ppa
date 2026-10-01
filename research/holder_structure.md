@@ -190,7 +190,7 @@ y\in T(p)\Rightarrow(p-y)/\lambda\in F(y),\qquad
 u_E(z)=\min_i(\|z-y_i\|+e_i).
 \]
 
-由距离的 1-Lipschitz 性，\(g_E\le d(\cdot,S)\leu_E\)。取紧有限多面体 \(A\subset\operatorname{int}B\)，假设：
+由距离的 1-Lipschitz 性，\(g_E\le d(\cdot,S)\le u_E\)。取紧有限多面体 \(A\subset\operatorname{int}B\)，假设：
 
 - \(T\) 在 \(A\) 邻域 usc，取非空紧 Čech–\(\mathbb Q\)-acyclic 值，前述 proximal 和数值估计对 \(A\) 全部输出成立。
 - \(\sup_Au_E\le u\)，\(\inf_{B\setminus\operatorname{int}A}g_E\ge m>0\)，\(\phi(u)<d(A,B^c)\)，\(\alpha=c\phi(u)^q<m\)。
@@ -206,7 +206,7 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 **证明结构与核验门槛**：collar 不等式先给 \(T(A)\subset\operatorname{int}A\) 且所有输出距 \(A^c\) 至少 \(m-\alpha\)。紧图 \(\Gamma\) 第一投影 \(\pi\) 的 acyclic 纤维给 Vietoris–Begle 同构；线段在 B 内的同伦与上同调满射给 \(e^*=\pi^*\)。在同一个图 span 上改为 \(e_h(p,y)=y+\lambda h(y)\)，Lefschetz 数为 \(\chi(A)\)，得到 coincidence。原稿没有假定非线性像 \(e_h(T(p))\) 仍 acyclic，此点处理正确。
 
-本轮已核对 collar 推理、量词和图 span 推导；**尚未完成原引文 [6, Theorem 6.2] 的全部 admissible morphism/有理 Čech 同调适用条件核验**，故仍是稿内证明候选。有限观测不能建立整窗估计、usc 或 acyclicity；也不存在 H02 → H07 的无条件蕴含。来源：S25 页 21–22，Theorem 8.1 证明及其后范围说明。
+已按[一手文献卡 LIT-GRN-2002](LITERATURE.md#lit-grn-2002) 核原引文 [6, Theorem 6.2]：\(A\) 为 Euclidean neighborhood retract；\(\Gamma\) 与 \(\pi\) 是紧 Vietoris span；\(e_h(\Gamma)\subset A\) 为紧 morphism，故属原文的 \(CAC(A)\)；同伦和上同调满射给非零 Lefschetz 数。这关闭**该引文的适用条件门**，不把 C05 升为已独立审完的定理。有限观测不能建立整窗估计、usc 或 acyclicity；紧度量值的 Čech cohomology/homology 等价限于本范围，外部新颖性未核；也不存在 H02 → H07 的无条件蕴含。来源：S25 页 21–22，Theorem 8.1 证明及其后范围说明。
 
 ## 数学超边总表
 

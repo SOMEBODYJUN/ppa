@@ -976,7 +976,7 @@
       "output": "H07",
       "relation": "conditional",
       "scope": "collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系",
-      "status": "S25 候选；外部定理门未闭"
+      "status": "S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立"
     },
     {
       "id": "E14",

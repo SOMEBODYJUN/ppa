@@ -66,7 +66,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E13 | [SAMPLE · 有限 proximal 样本与包络](holder_structure.md#sample) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选](holder_structure.md#h07) | collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系；**S25 候选；外部定理门未闭** |
+| E13 | [SAMPLE · 有限 proximal 样本与包络](holder_structure.md#sample) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选](holder_structure.md#h07) | collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系；**S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立** |
 
 ## 解选择
 

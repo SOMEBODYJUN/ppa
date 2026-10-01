@@ -35,7 +35,7 @@
 | 9/18 解选择及修订关闭 ZIP | [solution_selection](../solution_selection.md) | 规范层保留修补方向；`Codex_independent_audit.md` 是任务书，真实审计在修订包，不能让文件名替代证据身份；数值 CSV 不是证明 |
 | 9/20 分类集与 9/21 提纯总账 | [operator_space](../operator_space.md)、FAILED_ROUTES | 当前缺失原证明与历史 SOURCE-MISSING 分开；恢复源文件只关闭“找不到”，不会自动关闭“证明未核”；I-097–099/I-102 仍需原件/精确证明 |
 | 9/23 正式 TeX | [holder_structure](../holder_structure.md)、[range_finite_data](../range_finite_data.md) | 主要结果覆盖但外部定理适用性与先行性独立；候选稿不是公认定理 |
-| 9/25 PDF | [holder_structure](../holder_structure.md) H07 | 整窗指定 T 的拓扑假设及 Lefschetz 引用未关闭，不能靠有限数据补足 |
+| 9/25 PDF | [holder_structure](../holder_structure.md) H07 | 整窗指定 T 的拓扑假设及其实际认证仍未关闭；原引文 Theorem 6.2 的 retract/Vietoris/compact→CAC 适用门后来已在 [LIT-GRN-2002](../LITERATURE.md#lit-grn-2002) 一手核对，不能靠有限数据补足其他前提 |
 
 上述“尚无”按 `2d127c9` 判断。并行新增模块应在后续提交中填写：精确锚点、重写版本、审核者、未闭义务；不直接删除来源簇。
 

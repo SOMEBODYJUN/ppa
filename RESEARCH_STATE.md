@@ -62,7 +62,7 @@
 - **9/19 随机措辞**：原稿写 Polish，证明用给定 \(d_{\mathsf X}\) 完备；\((0,2)\) 上的确定性序列满足其他假设却收敛到空间外。原命题若按拓扑 Polish 解释为假；修订版本明确 complete metric。[H06](research/holder_structure.md)、[FAILED F07](FAILED_ROUTES.md)
 - **S23 全局结构**：同一个强单调双 Lipschitz 影子及有限维完整纤维分类的证明已局部独立重算，未见内部计算致命断点；经典 Hilbert 扩张、有限维 degree 的调用及同对象先行性仍是独立门。固定维数的最优因子仍开放。
 - **S23 值域与有限数据**：最大根定位给全局与相对 maximal 窗口的**整个纤维**锐覆盖；有限兼容样本的 QP 给全局一致 \(A_m\)，但未知图点只在 Cayley 参数覆盖下认证。可验证 gap、噪声和求值误差叠加成三项界；有限总查询在无界 Hölder 类不能全空间认证。[range_finite_data](research/range_finite_data.md)。这条链原八条 Claim 未记录，现立 C18–C21。
-- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 需逐条核适用条件，当前为 PDF-only 候选。[H07](research/holder_structure.md)
+- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 已与[一手原文](research/LITERATURE.md#lit-grn-2002)逐项核 retract、Vietoris span、紧 morphism→CAC 及非零 Lefschetz 数；这不核定整窗模型、有限样本认证以外的假设或新颖性，C05 仍为 PDF-only 候选。[H07](research/holder_structure.md)
 
 ## 独立旁支与依赖门
 
@@ -86,4 +86,4 @@
 
 **定义/参数首批**：[PD 字典](research/canonical/parameter_dictionary.md)重写了全对/锚定、全图/图块、coverage/exclusion、同图换步、线性 RL tied 曲线、有界尺度指数及真残差方向，C27–C30 分别固定数学身份。若要比较不同步长，先核新 Minty 输入 \(Q(D)\) 的单射与 coverage；若要把选中步界写成真 EB，先核全纤维最小残差的方向。这些是当前可直接复用的基础，旧 checkpoint 的完整定义和全部示例尚未逐项关门。
 
-下一阶段先补证据门：追 I-097–099/I-102；核 9/25 [6] 原文；正式修随机完备性；再让总体比较的一个精确空间/量尺接受反塌缩攻击。若没有新证据，不新增“已证”节点。
+下一阶段先补证据门：追 I-097–099/I-102；在 9/25 [6] 引文已核的基础上独立审整窗模型与数值包络；正式修随机完备性；再让总体比较的一个精确空间/量尺接受反塌缩攻击。若没有新证据，不新增“已证”节点。

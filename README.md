@@ -4,7 +4,7 @@
 
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
-> 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，外部定理与先行性门未关闭。9/25 局部值域证书另有独立整窗拓扑假设。
+> 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，部分外部定理与先行性门未关闭。9/25 局部值域证书的 Lefschetz 引文适用门已核，但仍有独立整窗拓扑假设和候选证明待审。
 
 ## Research Goal
 
@@ -56,7 +56,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
 | 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加参数覆盖 → 未观测图点误差 | C18–C20 稿内证明；有限查询不能全空间认证 C21 |
 | 拓扑限制 | 局部 all-pairs + EB + Dini + coverage + 不变开域 → 连续极限回缩 | 不由任意紧零集实现自动得到 |
-| 有限数据值域 | 样本包络 + 整窗 \(T\) 的 usc/acyclic + collar + 上同调 + Lefschetz → 原关系局部值域球 | C05 PDF-only，外部定理门未闭 |
+| 有限数据值域 | 样本包络 + 整窗 \(T\) 的 usc/acyclic + collar + 上同调 + Lefschetz → 原关系局部值域球 | C05 PDF-only 候选；[原引文](research/LITERATURE.md#lit-grn-2002) 的紧 morphism/CAC 适用门已核，整窗前提仍独立 |
 | 大小比较 | LT 公共接口 → RLEB 能量证书；紧 T-only \(\Phi\) proper；还缺完整对象与保纲桥 | 总体规模命题开放 |
 | 锥与 Markov | 冻结秩→面稳定→MSCQ；同步 OT exact-zero→一般 gauge，有限状态顶点→线性 EB | 两条独立链，跨线桥待证 |
 | 不一致随机近端 | 有限维二次近端 + 正权重 + 固定守恒边缘 + 独立新噪声 → 活跃谱隙 → 条件 \(W_2\) 收缩 → 真实 law-step EB；逐分支残差零集另由共同定点决定 | C22/C23 本轮独立推导；与普通 \(W_2\)、物理步长、Markov 同步缺陷的替换不成立 |
@@ -94,7 +94,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 **首要开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
 
-结构稿的 proof obligations：Hilbert Hölder 扩张、统一影子常数下界、有限维 degree、fixed-set 构造、固定窗口 completion 与有限样本覆盖的适用条件；有限总查询的全空间障碍要保持确定性、无界域量词。[值域与有限数据](research/range_finite_data.md)。9/25 另需逐条核引用的 rational morphism Lefschetz 定理，有限样本只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
+结构稿的 proof obligations：Hilbert Hölder 扩张、统一影子常数下界、有限维 degree、fixed-set 构造、固定窗口 completion 与有限样本覆盖的适用条件；有限总查询的全空间障碍要保持确定性、无界域量词。[值域与有限数据](research/range_finite_data.md)。9/25 的 rational morphism Lefschetz 定理现有[逐条件一手核验](research/LITERATURE.md#lit-grn-2002)；有限样本仍只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
 
 ## Known Results、Refuted / Failed、Open Problems
 
@@ -110,7 +110,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 1. 冻结总体比较的**计数对象、三类认证量词和大小不变量**的一页规格，先用 N05/N08/N09/N10 及远端自由度反例攻击，再尝试总体定理。
 2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
-3. 为 9/25 §8 配对可编译源，核 [6, Theorem 6.2] 的范畴与 Čech 同调条件；在正文保持“指定 \(T\)”量词。
+3. 为 9/25 §8 配对可编译源，在[引文已核](research/LITERATURE.md#lit-grn-2002)的基础上独立审整窗假设、数值包络与紧度量值的 Čech 同调约定；在正文保持“指定 \(T\)”量词。
 4. 修订 9/19 随机推论的指定度量完备性，保留反例作为缘由；分别推进结构、锥、Markov 的外部先行性核验。
 5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations 尚未分项裁决的定义、其余 GX 单元，以及 M1 **原生多值图到已验显式 T 的桥**；§0.4 与 §1.1–§2 的选定接口已有明确去向，不代表整稿关闭。复合稿的真多值尖点与振荡弱分离例已有精确重写，下一步核秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
 
@@ -132,6 +132,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
+| [research/LITERATURE.md](research/LITERATURE.md) | LIT-GRN-2002：一手 Theorem 6.2 的准确前提及 C05 紧图导入逐条件检查；使用 9/25 局部值域候选或修改其拓扑假设时读，不把引文核验当整稿验收。 |
 | [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；要从结构定理走向可计算证书时读。 |
 | [research/solution_selection.md](research/solution_selection.md) | S01–S03：统一尾到极限模、局部/完整修补、锐性模型；主张初值稳定时读。 |
 | [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |
