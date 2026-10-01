@@ -557,7 +557,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：完整 \(F(x)=\{x,x^2\}:\mathbb R\rightrightarrows\mathbb R\)。对每个 \(0<\delta\le1/3\)、所有 \(|x|,|y|<\delta\)，\(d(x,F^{-1}(y))\le d(y,F(x))^{1/2}\)，共同窗口系数 1 取等、最大局部指数 \(1/2\)；对**系数恰为 1 的对称开窗口**最大半径为 \(1/3\)。对 \(|u|,|v|<\delta\)、全部 \(z\in F^{-1}(u)\cap(-\delta,\delta)\) 又有 \(d(z,F^{-1}(v))\le|u-v|^{1/2}\)，系数锐 1；完整逆像不存在原点单值局部化。
 - **Dependencies / Evidence / Status / Related Files**：[IS-MR](research/topics/examples/identity_square_branch_union.md#is-mr) 从完整逆纤维逐正负目标和身份/平方残差重算；来源 9/01 ZIP `work/c_consistency_audit.md` §CCA-M14 的半阶观察，本库另证最大对称窗口。`derived-checked` 限此对象和共同窗口；证据不是有限计算。
-- **Counterevidence / Objections / Scope**：C66 固定目标真残差、C67 完整近端最小步、(I3) 最近逆点线性律与本两变量 MR 量词不同。半阶逆 Aubin 不给线性 MR，也不等于单值局部化；C68 同图全对 RL 仍因同输入碰撞失败。Semimonotonicity 全区域及优先性未核。
+- **Counterevidence / Objections / Scope**：C66 固定目标真残差、C67 完整近端最小步、(I3) 最近逆点线性律与本两变量 MR 量词不同。半阶逆 Aubin 不给线性 MR，也不等于单值局部化；C68 同图全对 RL 仍因同输入碰撞失败。二参数区域现另由 C95 核定；外部优先性未核。
 
 ## C93-v1 / BN-GEOMETRY · 闭球完整法锥的两参数图与全域反射
 
@@ -576,3 +576,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C66 的同一完整关系 \(F(x)=\{x,x^2\}\)，在全图或原点处同时含两支的任意共同小图点窗，对**所有两图点**要求 \(ab\ge\mu a^2+\rho b^2\)。精确参数集合 \(\Sigma(F)=\{(\mu,\rho):\mu<0,\rho<0,\mu\rho\ge1/4\}\)；全部实数割线斜率在每个共同原点窗可实现，故局部不能扩大区域。每个 \(\lambda>0\) 与有效参数对均有 \(A=1+\lambda\mu+\rho/\lambda\le0\)、\(\Delta=1-4\mu\rho\le0\)，无一满足 C89/C91 的 \(A>0,\Delta\ge0\) 联合门。
 - **Dependencies / Evidence / Status / Related Files**：[IS-SEMIMONO](research/topics/examples/identity_square_branch_union.md#is-semimono) 的跨支斜率实现、全实二次多项式极小与 AM–GM；[C89](research/canonical/non_tied_cayley.md#nt-quadratic) 的参数定义。来源 9/01 ZIP `work/c_gx066_077.md` GX-068 的区域观察，现独立重算；`derived-checked`，已做独立敌对复核。
 - **Counterevidence / Objections / Scope**：边界 \(\mu\rho=1/4\) 包含在内；\(A=0\) 仅在该边界的配平步长。此签名区域不提供非负 hypomonotone/cohypomonotone 单项模，也不能压倒 C68 的同输入跨支碰撞。C92 的两变量半阶 MR 与全对 RL 失败共存；VI 标签与外部先行性另核。
+
+## C96-v1 / BNI-MINTY · 有界负恒等图的全对步长相变
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整实关系 \(F(x)=\{-x\}\) 对 \(|x|\le1\)，其余为空。每个固定 \(\lambda>0\)，任意两图点、同一 \(\lambda\)：若 \(\lambda\ne1\)，自然输入域 \(D_\lambda=(1-\lambda)[-1,1]\)，完整 \(J(p)=p/(1-\lambda)\)，完整反射 \(C(p)=(1+\lambda)p/(1-\lambda)\)。全图线性 RL 锐常数 \((1+\lambda)/|1-\lambda|\)，每个 \(0<\gamma<1\) 的锐常数 \(2^{1-\gamma}(1+\lambda)|1-\lambda|^{-\gamma}\)。\(\lambda=1\) 时 \(D_1=\{0\},J_F(0)=[-1,1]\)，同输入不同输出排除任意零消失全对模。完整真残差 \(r_F(x)=|x|=d(x,\{0\})\) 只作固定零目标 EB。
+- **Dependencies / Evidence / Status / Related Files**：[BNI-MINTY](research/topics/examples/bounded_negative_identity.md#bni-minty) 由全部完整图点剪切重算，来源 9/01 ZIP `work/c_gx066_077.md` GX-066；`derived-checked`，无外部定理调用。
+- **Counterevidence / Scope**：低于一阶的常数使用图直径 2；换成无界母图即是新对象。\(\lambda=1\) 的残差 EB 不产生输入覆盖；不能拼接不同步长的纤维。
+
+## C97-v1 / BNI-PATH · 同图全部合法近端路径的步长分类
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C96 的同一完整关系，每个固定 \(\lambda>0\)、每个 \(p_0\in D_\lambda\)、每条每步输入留在 \(D_\lambda\) 的近端路径。\(0<\lambda<2,\lambda\ne1\) 的每个非零初值有限步越域；\(\lambda=1\) 唯一无限合法路径恒零；\(\lambda=2\) 的非零初值二周期；\(\lambda>2\) 所有初值的唯一无限路径以锐因子 \((\lambda-1)^{-1}\) 有限长趋零。同一 \(\lambda>2\) 的反射线性模却是 \((\lambda+1)/(\lambda-1)>1\)。
+- **Dependencies / Evidence / Status / Related Files**：[BNI-PATH](research/topics/examples/bounded_negative_identity.md#bni-path) 的闭式迭代、自然域检查和边界分类；依赖 C96 的完整 \(J\) 纤维，`derived-checked`。来源 GX-066 的图公式为线索，步长全路径分类由本库推导。
+- **Counterevidence / Scope**：有限步越域不等于发散的无限合法轨道；\(\lambda>2\) 的动力稳定不能倒推反射收缩，也不反驳含 \(L<1\) 等额外前提的定理。

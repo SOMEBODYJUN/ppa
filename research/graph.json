@@ -1197,6 +1197,21 @@
       "id": "IS-SEMI",
       "label": "并图二参数全对区域与正 A 门冲突",
       "file": "topics/examples/identity_square_branch_union.md#is-semimono"
+    },
+    {
+      "id": "BNI-OBJECT",
+      "label": "有界负恒等完整关系与自然域",
+      "file": "topics/examples/bounded_negative_identity.md#bni-object"
+    },
+    {
+      "id": "BNI-MINTY",
+      "label": "步长一折叠与全对锐模",
+      "file": "topics/examples/bounded_negative_identity.md#bni-minty"
+    },
+    {
+      "id": "BNI-PATH",
+      "label": "所有合法路径的步长相变",
+      "file": "topics/examples/bounded_negative_identity.md#bni-path"
     }
   ],
   "edges": [
@@ -3049,6 +3064,29 @@
       "relation": "conditional",
       "scope": "完整 F(x)={x,x²} 或双支共同原点窗的所有图点对；跨支割线斜率实现每个实 t，故 Σ={μ<0,ρ<0,μρ≥1/4}。任意 λ>0 对有效参数均有 A=1+λμ+ρ/λ≤0 与 Δ≤0；C89/C91 的 A>0,Δ≥0 联合门在同图不可调用，不是对其定理的反例。",
       "status": "C95-v1 来源 GX-068 精确区域独立重算及 C89 条件对照"
+    },
+    {
+      "id": "E161",
+      "topic": "例库",
+      "inputs": [
+        "BNI-OBJECT"
+      ],
+      "output": "BNI-MINTY",
+      "relation": "conditional",
+      "scope": "固定有界完整 F(x)={−x} (|x|≤1)、每个 λ>0、全图全部图点对；λ≠1 时线性和次线性锐 RL 常数由直径 2 给出；λ=1 时自然域 {0} 的完整纤维多值，任意零消失全对模失败。真残差 EB 不给输入覆盖。",
+      "status": "C96-v1 全图剪切和端点取等重算"
+    },
+    {
+      "id": "E162",
+      "topic": "例库",
+      "inputs": [
+        "BNI-OBJECT",
+        "BNI-MINTY"
+      ],
+      "output": "BNI-PATH",
+      "relation": "conditional",
+      "scope": "同一完整图、同一固定 λ 与全部合法初值；逐步核 p_k∈D_λ：λ<2 非零路径有限步越域（λ=1 仅零路径无限合法），λ=2 二周期，λ>2 所有路径锐线性收敛而反射模 >1。不跨步长转授。",
+      "status": "C97-v1 完整纤维和闭式迭代重算"
     }
   ]
 }
