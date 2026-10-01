@@ -498,3 +498,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C81 同一完整 \(F\)，参考 \((\bar x,\bar y)=(\pi/2,3)\)，\(x\) 仅在 \(\bar x\) 的局部窗，完整逆纤维 \(F^{-1}(3)\)。固定目标 EB \(d(x,F^{-1}(3))\le K|F(x)-3|^q\) 的最高指数 \(q=1/2\)，该指数缩窗锐系数下确界 \(\sqrt2\)；较低正指数下确界 0，较高指数无有限系数。任何要求目标 \(y\) 在 3 的**双侧邻域**且对全部近输入成立的正指数两变量 MR 失败，因为 \(y>3\) 有空逆像。
 - **Dependencies / Evidence / Status / Related Files**：[SIN-TARGET](research/topics/examples/positive_sine_phase.md#sin-target) 的完整逆像及 \(1-\cos h\sim h^2/2\)；`derived-checked`，来源同一 GX-064 的非零目标观察。
 - **Counterevidence / Scope**：C81 的临界 \(x_0\) 对应输出 2，而本 Claim 的目标是 3；\(F^{-1}(0)=\varnothing\)。[SIN-BOUNDARY](research/topics/examples/positive_sine_phase.md#sin-boundary) 逐步证明每条完整近端选择路径趋 \(-\infty\)，因此不能把两个局部锐指数当零点收敛证书。外部新颖性未核。
+
+## C83-v1 / BS-PHASE · 有界平方完整图的 Minty 端点相变
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(F(x)=\{x^2\}\) 仅在 \([-1,1]\)，其余为空；每个固定 \(\lambda>0\) 对**整个**完整图所有点对求 RL 锐模。\(0<\lambda<1/2\) 时自然输入域上完整 \(J\) 单值，全图线性锐常数 \((1+2\lambda)/(1-2\lambda)\)。\(\lambda=1/2\) 仍单值，全图最高 Hölder 指数 \(1/2\)，该指数锐常数 \(2\sqrt2\)，低于半阶的锐常数见 (BS5)，高于半阶失败。\(\lambda>1/2\) 有同输入跨图点碰撞，无零消失全对模。
+- **Dependencies / Evidence / Status / Related Files**：[BS-PHASE](research/topics/examples/bounded_square_minty.md#bs-phase) 以完整区间的割线 (BS2)、可实现点对约束 (BS3)–(BS5) 和对称折叠重算；`derived-checked`。来源 ZIP GX-065 的此观察，旧 PASS 标签不是证据。
+- **Counterevidence / Scope**：临界全图半阶来自 **\(x=-1\) 端点**，在零点邻域线性 RL 缩窗常数下确界为 1；自然输入域有限，不能声称满实输入或把端点半阶当作零点局部半阶。
+
+## C84-v1 / BS-ZERO · 同图零残差半阶及临界两侧合法路径
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C83 同一 \(F\)，完整算子真残差 \(r_F(x)=x^2\) 在 \([-1,1]\)，\(S=\{0\}\)，故固定零目标局部 EB 最高指数 \(q=1/2\)，锐缩窗系数 1。固定 \(\lambda=1/2\)、完整 \(J\) 和实际自然输入域 \([-1/2,3/2]\)：每个 \(0<p_0<3/2\) 的唯一无限路径 \(p_{k+1}=J(p_k)\) 满足 \(kp_k\to2\)；每个 \(-1/2\le p_0<0\) 仅有有限条合法步，最终离开自然输入域。
+- **Dependencies / Evidence / Status / Related Files**：[BS-ZERO](research/topics/examples/bounded_square_minty.md#bs-zero) 的完整残差恒等式、逆图迭代和有界单调反证；`derived-checked`。零目标观察取材于 GX-065，正/负路径是本仓库新增推导。
+- **Counterevidence / Scope**：双侧目标 MR 因负目标空逆像失败；图上端点的全图半阶证书和零点真 EB 不在同一个局部图窗。没有所有零点附近输入的无限合法轨道或 \(q\gamma>1\) 的收缩门，不能从两个半阶数字声称 PPA 局部收敛。

@@ -1097,6 +1097,26 @@
       "id": "OB-RES-STEP",
       "label": "原算子与步残差系数不可互授",
       "file": "../FAILED_ROUTES.md#f27"
+    },
+    {
+      "id": "BS-OBJECT",
+      "label": "有界平方完整图与自然 Minty 域",
+      "file": "topics/examples/bounded_square_minty.md#bs-object"
+    },
+    {
+      "id": "BS-PHASE",
+      "label": "左端点 Minty 折叠的锐全对相变",
+      "file": "topics/examples/bounded_square_minty.md#bs-phase"
+    },
+    {
+      "id": "BS-ZERO",
+      "label": "零点半阶真残差与两侧合法路径",
+      "file": "topics/examples/bounded_square_minty.md#bs-zero"
+    },
+    {
+      "id": "OB-BS-WINDOW",
+      "label": "全图端点指数不得接作零点局部收敛",
+      "file": "topics/examples/bounded_square_minty.md#bs-zero"
     }
   ],
   "edges": [
@@ -2734,7 +2754,10 @@
     {
       "id": "E142",
       "topic": "有限状态 Markov",
-      "inputs": ["FS-OBJECT", "FS-CELLS"],
+      "inputs": [
+        "FS-OBJECT",
+        "FS-CELLS"
+      ],
       "output": "FS-REGULARITY",
       "relation": "conditional",
       "scope": "固定有限互异状态和同噪声 R；C-最优计划集对所有边缘非空、固定系数 Hoffman 界和运输成本 Lipschitz 给 Φ=Ψ² 全域 Lipschitz；有限 LP 分支加连续性给分片仿射。不需 exact-zero 判据，系数不跨系统统一。",
@@ -2743,7 +2766,9 @@
     {
       "id": "E143",
       "topic": "例库",
-      "inputs": ["SIN-OBJECT"],
+      "inputs": [
+        "SIN-OBJECT"
+      ],
       "output": "SIN-PHASE",
       "relation": "conditional",
       "scope": "完整 F=2+sin x；固定 λ<1 全图线性锐常数，λ=1 奇 π 参数窗全对最高 1/3 阶和缩窗下确界，λ>1 同输入碰撞；无界全图次线性另受周期平移阻断。",
@@ -2752,7 +2777,9 @@
     {
       "id": "E144",
       "topic": "例库",
-      "inputs": ["SIN-OBJECT"],
+      "inputs": [
+        "SIN-OBJECT"
+      ],
       "output": "SIN-TARGET",
       "relation": "conditional",
       "scope": "同一完整映射，但目标为 3、参考输入 π/2；固定目标锐半阶模 √2；双侧扰动目标 y>3 为空逆像，不能扩成两变量 MR。",
@@ -2761,11 +2788,48 @@
     {
       "id": "E145",
       "topic": "交叉限制",
-      "inputs": ["SIN-PHASE", "SIN-TARGET"],
+      "inputs": [
+        "SIN-PHASE",
+        "SIN-TARGET"
+      ],
       "output": "OB-SIN-PPA",
       "relation": "limits",
       "scope": "C81 临界 RL 在奇 π 的图输出 2；C82 误差界是非零目标 3；完整 F 零集为空，每条固定步长完整近端选择路径向 −∞。不同目标与图点的模不能相乘为零集 PPA 速率。",
       "status": "同对象但不同局部目标的量词边界及新动力推导"
+    },
+    {
+      "id": "E146",
+      "topic": "例库",
+      "inputs": [
+        "BS-OBJECT"
+      ],
+      "output": "BS-PHASE",
+      "relation": "conditional",
+      "scope": "同一完整有界图 F(x)=x², |x|≤1；固定 λ<1/2 全图线性锐模；λ=1/2 左端点全对最高 1/2 阶、锐常数 2√2；λ>1/2 内折叠同输入碰撞。只在自然输入域谈完整 J。",
+      "status": "C83-v1 割线和完整端点约束重算"
+    },
+    {
+      "id": "E147",
+      "topic": "例库",
+      "inputs": [
+        "BS-OBJECT"
+      ],
+      "output": "BS-ZERO",
+      "relation": "conditional",
+      "scope": "同一图 S={0}, r_F(x)=x² 给零点固定目标半阶 EB 锐模 1；λ=1/2 时正输入路径 k p_k→2，负输入有限次离开 D=[−1/2,3/2]。",
+      "status": "C84-v1 全纤维与迭代重算"
+    },
+    {
+      "id": "E148",
+      "topic": "交叉限制",
+      "inputs": [
+        "BS-PHASE",
+        "BS-ZERO"
+      ],
+      "output": "OB-BS-WINDOW",
+      "relation": "limits",
+      "scope": "C83 全图半阶锐性发生在 x=−1，C84 零目标半阶发生在 x=0；两个局部中心不同。即使同一完整图有两张证书，也不提供负侧留域或所有零点初值的无限 PPA 路径。",
+      "status": "C83/C84 同对象不同窗口和实际路径见证"
     }
   ]
 }
