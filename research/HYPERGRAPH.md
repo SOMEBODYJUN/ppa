@@ -151,6 +151,25 @@
 | E66 | [PD-RESIDUAL · 真残差与选中值的方向](canonical/parameter_dictionary.md#pd-residual) | refutes → [OB-SELECTED · 选中步残差不能倒推真 EB](canonical/parameter_dictionary.md#pd-residual) | r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。；**本轮代数/反例独立重算；文献命名另核** |
 | E67 | [PD-REGULARITY · MR/MSR 与 strong 的量词方向](canonical/parameter_dictionary.md#pd-regularity) | refutes → [OB-MR-MSR · MR 与 strong MSR 无条件互推（错误）](canonical/parameter_dictionary.md#pd-regularity) | MR 固定目标给 MSR；F(x)=\|x\| 和 F(x,y)=x 在原点分别反驳 strong MSR→MR 与 MR→strong MSR。；**本轮代数/反例独立重算；文献命名另核** |
 
+## 路径图集
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E68 | [PA-DEF · 合法词与路径前缀](canonical/path_atlas.md#pa-def) ∧ [PA-COVER · 实际前缀延拓及留域覆盖](canonical/path_atlas.md#pa-whole) ∧ [PA-BUDGET · 统一终点与可求和位移](canonical/path_atlas.md#pa-whole) | implies → [PA-WHOLE · 每条实际轨道有限长收敛](canonical/path_atlas.md#pa-whole) | R^n、闭 S、开 V；每条合法选择；统一 Θ≤κt、H(t)<∞，初值 H(d0)<距边界。；**本轮重写证明；未核新颖性** |
+| E69 | [PA-BLOCK · 块 RL 和实际输出 EB](canonical/path_atlas.md#pa-block) ∧ [PA-COVER · 实际前缀延拓及留域覆盖](canonical/path_atlas.md#pa-whole) ∧ [PA-BUDGET · 统一终点与可求和位移](canonical/path_atlas.md#pa-whole) | conditional → [PA-WHOLE · 每条实际轨道有限长收敛](canonical/path_atlas.md#pa-whole) | 同一个合法块的最近零点比较与实际输出 EB 给终点 ρ；另要 ρ≤κt、中间前缀界、延拓及位移预算。；**本轮代数与整轨道证明** |
+| E70 | [PA-POWER · 合法词幂及统一量词](canonical/path_atlas.md#pa-power) ∧ [PA-DEF · 合法词与路径前缀](canonical/path_atlas.md#pa-def) | conditional → [PA-CONTRACT · 统一幂词终点收缩](canonical/path_atlas.md#pa-power) | 只获得统一终点收缩：有限词集全 A>1，或无限词集 inf A>1、sup C<∞；中间覆盖与位移求和仍需另证。；**本轮量词反例；未断言完整预算** |
+| E71 | [PA-CYCLES · 独立的相位极限命题](canonical/path_atlas.md#pa-cycles) | limits → [PA-WHOLE · 每条实际轨道有限长收敛](canonical/path_atlas.md#pa-whole) | 非平凡周期有不消失块内位移，不满足 PA-WHOLE 的 H<∞；相位极限需独立连续性命题，Fix T^m 不等于 Fix T。；**本轮 T(x)=1−x 反例** |
+
+## 复合次正则
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E72 | [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-TRANSFER · 弱分离下目标集合一致](canonical/composite_subregularity.md#cs-transfer) | 有限连续 f、局部最小、驻点弱分离、S⊆Γ 且包含所有局部极小点；x∈B_{R/4}。；**本轮独立重算** |
+| E73 | [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) | c∈C^{1,1}、Dc 满行秩且 βR<σ0、φ 有限凸、c(x̄)∈C、外层真实 EB；目标 S=c^{-1}(C)；x∈B_r。；**本轮修复、链式、残差三门重算** |
+| E74 | [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) ∧ [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-PROX · 局部 RL、coverage、轨道预算](canonical/composite_subregularity.md#cs-prox) | 另需全部外层次梯度界 M、λβM<1；仅局部输出。轨道再需 Ψ_F(bd)≤κd、最近零点同图块和初值留域预算。；**本轮完整局部证明；不升为完整 J_F** |
+| E75 | [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) | conditional → [CS-MODEL · 曲面幂和非幂锐例](canonical/composite_subregularity.md#cs-model) | 曲面 c=t−(s_+)² 是满秩特殊例；竖向修复改进通用常数，η=u^a 与 u log(e/u) 分别显示幂锐界和无固定 p>1 的非幂边界。；**本轮直接计算** |
+| E76 | [CS-RANK-EX · 秩亏同阶传递反例](canonical/composite_subregularity.md#cs-objections) | limits → [CS-OPEN-RANK · 秩亏原生 verifier 开放目标](canonical/composite_subregularity.md#cs-objections) | c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。；**本轮显式反例** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

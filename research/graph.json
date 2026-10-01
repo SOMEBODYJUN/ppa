@@ -516,6 +516,81 @@
       "id": "OB-MR-MSR",
       "label": "MR 与 strong MSR 无条件互推（错误）",
       "file": "canonical/parameter_dictionary.md#pd-regularity"
+    },
+    {
+      "id": "PA-DEF",
+      "label": "合法词与路径前缀",
+      "file": "canonical/path_atlas.md#pa-def"
+    },
+    {
+      "id": "PA-COVER",
+      "label": "实际前缀延拓及留域覆盖",
+      "file": "canonical/path_atlas.md#pa-whole"
+    },
+    {
+      "id": "PA-BUDGET",
+      "label": "统一终点与可求和位移",
+      "file": "canonical/path_atlas.md#pa-whole"
+    },
+    {
+      "id": "PA-WHOLE",
+      "label": "每条实际轨道有限长收敛",
+      "file": "canonical/path_atlas.md#pa-whole"
+    },
+    {
+      "id": "PA-BLOCK",
+      "label": "块 RL 和实际输出 EB",
+      "file": "canonical/path_atlas.md#pa-block"
+    },
+    {
+      "id": "PA-POWER",
+      "label": "合法词幂及统一量词",
+      "file": "canonical/path_atlas.md#pa-power"
+    },
+    {
+      "id": "PA-CYCLES",
+      "label": "独立的相位极限命题",
+      "file": "canonical/path_atlas.md#pa-cycles"
+    },
+    {
+      "id": "CS-OBJECT",
+      "label": "复合真残差与目标集合",
+      "file": "canonical/composite_subregularity.md#cs-object"
+    },
+    {
+      "id": "CS-TRANSFER",
+      "label": "弱分离下目标集合一致",
+      "file": "canonical/composite_subregularity.md#cs-transfer"
+    },
+    {
+      "id": "CS-EB",
+      "label": "满行秩复合 gauge EB",
+      "file": "canonical/composite_subregularity.md#cs-eb"
+    },
+    {
+      "id": "CS-PROX",
+      "label": "局部 RL、coverage、轨道预算",
+      "file": "canonical/composite_subregularity.md#cs-prox"
+    },
+    {
+      "id": "CS-MODEL",
+      "label": "曲面幂和非幂锐例",
+      "file": "canonical/composite_subregularity.md#cs-model"
+    },
+    {
+      "id": "CS-OPEN-RANK",
+      "label": "秩亏原生 verifier 开放目标",
+      "file": "canonical/composite_subregularity.md#cs-objections"
+    },
+    {
+      "id": "PA-CONTRACT",
+      "label": "统一幂词终点收缩",
+      "file": "canonical/path_atlas.md#pa-power"
+    },
+    {
+      "id": "CS-RANK-EX",
+      "label": "秩亏同阶传递反例",
+      "file": "canonical/composite_subregularity.md#cs-objections"
     }
   ],
   "edges": [
@@ -1311,6 +1386,111 @@
       "output": "OB-MR-MSR",
       "scope": "MR 固定目标给 MSR；F(x)=|x| 和 F(x,y)=x 在原点分别反驳 strong MSR→MR 与 MR→strong MSR。",
       "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E68",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-DEF",
+        "PA-COVER",
+        "PA-BUDGET"
+      ],
+      "output": "PA-WHOLE",
+      "relation": "implies",
+      "scope": "R^n、闭 S、开 V；每条合法选择；统一 Θ≤κt、H(t)<∞，初值 H(d0)<距边界。",
+      "status": "本轮重写证明；未核新颖性"
+    },
+    {
+      "id": "E69",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-BLOCK",
+        "PA-COVER",
+        "PA-BUDGET"
+      ],
+      "output": "PA-WHOLE",
+      "relation": "conditional",
+      "scope": "同一个合法块的最近零点比较与实际输出 EB 给终点 ρ；另要 ρ≤κt、中间前缀界、延拓及位移预算。",
+      "status": "本轮代数与整轨道证明"
+    },
+    {
+      "id": "E70",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-POWER",
+        "PA-DEF"
+      ],
+      "output": "PA-CONTRACT",
+      "relation": "conditional",
+      "scope": "只获得统一终点收缩：有限词集全 A>1，或无限词集 inf A>1、sup C<∞；中间覆盖与位移求和仍需另证。",
+      "status": "本轮量词反例；未断言完整预算"
+    },
+    {
+      "id": "E71",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-CYCLES"
+      ],
+      "output": "PA-WHOLE",
+      "relation": "limits",
+      "scope": "非平凡周期有不消失块内位移，不满足 PA-WHOLE 的 H<∞；相位极限需独立连续性命题，Fix T^m 不等于 Fix T。",
+      "status": "本轮 T(x)=1−x 反例"
+    },
+    {
+      "id": "E72",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-OBJECT"
+      ],
+      "output": "CS-TRANSFER",
+      "relation": "conditional",
+      "scope": "有限连续 f、局部最小、驻点弱分离、S⊆Γ 且包含所有局部极小点；x∈B_{R/4}。",
+      "status": "本轮独立重算"
+    },
+    {
+      "id": "E73",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-OBJECT"
+      ],
+      "output": "CS-EB",
+      "relation": "conditional",
+      "scope": "c∈C^{1,1}、Dc 满行秩且 βR<σ0、φ 有限凸、c(x̄)∈C、外层真实 EB；目标 S=c^{-1}(C)；x∈B_r。",
+      "status": "本轮修复、链式、残差三门重算"
+    },
+    {
+      "id": "E74",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-EB",
+        "CS-OBJECT"
+      ],
+      "output": "CS-PROX",
+      "relation": "conditional",
+      "scope": "另需全部外层次梯度界 M、λβM<1；仅局部输出。轨道再需 Ψ_F(bd)≤κd、最近零点同图块和初值留域预算。",
+      "status": "本轮完整局部证明；不升为完整 J_F"
+    },
+    {
+      "id": "E75",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-EB"
+      ],
+      "output": "CS-MODEL",
+      "relation": "conditional",
+      "scope": "曲面 c=t−(s_+)² 是满秩特殊例；竖向修复改进通用常数，η=u^a 与 u log(e/u) 分别显示幂锐界和无固定 p>1 的非幂边界。",
+      "status": "本轮直接计算"
+    },
+    {
+      "id": "E76",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-RANK-EX"
+      ],
+      "output": "CS-OPEN-RANK",
+      "relation": "limits",
+      "scope": "c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。",
+      "status": "本轮显式反例"
     }
   ]
 }

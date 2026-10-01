@@ -84,3 +84,9 @@
 | 9/01 foundations / regularity 的选定定义、参数与 GX-015 换步 | [C27–C30 / PD 字典](../canonical/parameter_dictionary.md)，图 E62–E67 | 全对量词、Cayley、tied 曲线端点、同图换步、尺度及残差方向独立重算；`derived-checked` | 一般二参数 semimonotonicity、coderivative、全 GX 最优常数未吸收；原 ZIP 其他单元仍 `unreviewed` |
 
 两行只裁决上述数学单元，逐文件 TSV 的 `semantic_disposition=unreviewed` 暂不批量改成 `rewritten`，因为同一来源仍含其他 Claim、例和版本。应在逐单元映射齐备后，才给整份来源关闭状态。
+
+## 7. 后续增量：合法路径与复合次正则的逐单元重写
+
+[逐单元去向](UNIT_DISPOSITIONS.tsv) 新增 14 个来源单元：9/09 多步札记的 §2–§4 有规范版本 C31–C33，其中 §3.4 与 §4 的扩大陈述被修订，§5 M1 具体常数和 §6–§9 外部比较仍未核；复合模块 §2–§5.2 的 C34–C37 已重写，§5.3 真多值、§6.2 振荡弱分离和 §8 文献仍待裁决。每行给源文件、精确小节、版本、锚点、修订理由和下一义务。9/09 T4 ZIP 内复合稿与 9/14 展开件同 SHA-256，算一份证据。
+
+本批新增 [path_atlas](../canonical/path_atlas.md) 和 [composite_subregularity](../canonical/composite_subregularity.md) 的数学正文及 [F12/F13](../../FAILED_ROUTES.md)。两个原件均还有未审单元，故原件和 ZIP 清单的文件级语义状态继续保持未关闭；“逐节已重写”不等于“整份材料已验收”。后续原创研究不受这些待办约束，按增长协议直接进入新 Claim。
