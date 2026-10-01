@@ -8,6 +8,7 @@
 - **S19**：[9/19 扩展源码 ZIP](../history/sources/次单调论文研究/RLEB_投稿扩展版_完整源码_2026-09-19.zip)，内文件 `RLEB_投稿扩展版_2026-09-19/sections/extensions_moduli_structure.tex`。本轮读取了解包全文；以下 S19 行号均指该文件。
 - **S25**：[9/25 combined PDF](../history/sources/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf)，§8，印刷页 20–22。该新增节没有同版 TeX；不把 S23 当作其源码。
 
+<a id="h01"></a>
 ## H01 · 固定参数全图 RL 与 Cayley 表示
 
 令实 Hilbert 空间上非空关系 \(F:H\rightrightarrows H\)，固定 \(\lambda,L>0\)、\(0<\gamma<1\)。对**每对**图点，要求
@@ -27,6 +28,8 @@ C(x+\lambda v)=x-\lambda v,\qquad
 
 **证据**：S23 §2，`def:RL`、`lem:cayley`、`lem:holderextension`，222–291 行。坐标代数已独立复核；两个经典扩张定理是外部依赖。局部图块与完整 resolvent 的区别见[定义接口](foundations.md)。
 
+<a id="lift"></a>
+<a id="h02"></a>
 ## H02 · C03：同一个强单调影子控制正反方向
 
 **假设**仅为 H01，不要求原关系 graph-maximal、闭图或有限维。对每个 \(0<\sigma<1\)，存在**一个**强单调双 Lipschitz 同胚 \(A_\sigma:H\to H\)，令
@@ -58,6 +61,9 @@ r_\sigma=\sqrt{\frac{M_\sigma}{2(1-\sigma^2)}}.
 
 **最优性的精确范围**：正则单纯形半径 \(R\sqrt{n/[2(n+1)]}\) 给所有维数统一常数的下界，令 \(n\to\infty\) 得 \(1/\sqrt2\)。原稿没有证明每个固定维数的最优因子，也没有证明 conditioning 常数最优。指定锚点是另一问题，原稿的最优因子为 1。证据：`thm:sharpness`，506–557 行；`thm:anchor`，561–617 行。
 
+<a id="proper"></a>
+<a id="fix"></a>
+<a id="h03"></a>
 ## H03 · C04：有限维完整纤维的精确分类
 
 固定 \(n\ge1\) 及 H01 参数。集合 \(K\subset\mathbb R^n\) 能作为**某个**固定参数 graph-maximal RL 关系的完整 \(F^{-1}(0)\)，当且仅当
@@ -78,6 +84,9 @@ K\ne\varnothing,\qquad K\text{ 紧},\qquad\operatorname{diam}K\le R.
 
 **范围门槛**：固定点实现本身允许 Hilbert 空间；完整纤维分类的必要性使用有限维紧性与 Brouwer degree。不得整体推广到无限维。非空完整纤维再与 H02 合取，才得到到 singleton 的 Hausdorff 误差界；H02 单独不保证原纤维非空。
 
+<a id="din"></a>
+<a id="log"></a>
+<a id="r05"></a>
 ## H04 · 一般模、Dini 门槛与对数反例
 
 将局部 all-pairs 右侧替换为连续非减 \(\omega\)，\(\omega(0)=0\)。保留局部 range coverage、最近零点比较、真实输出误差界及 gauge 范围；要求
@@ -110,6 +119,8 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 
 轨道距离每步乘 \(1/4\)，水平增量为 \(\ell_a(4^{-k}|q_0|)\)。当 \(q_0\ne0\)，有限长度及点收敛当且仅当 \(a>1\)；\(a\le1\) 时水平坐标趋于正无穷。这证明 **此族中** Dini 门槛精确，反驳“到集合距离几何下降必然点收敛”；不证明每个非 Dini 模都必然失败。来源：S19 `thm:logarithmic-seam`，145–295 行；完整 proximal 解算与级数判别已独立核对。
 
+<a id="ret"></a>
+<a id="ob-topo"></a>
 ## H05 · 连续极限回缩与任意紧零集的条件限制
 
 在 H04 整套局部假设下，令 \(\ell_\omega=\mathcal L_\omega\)，
@@ -122,6 +133,10 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 
 **跨主线关系**：H03 可实现任意非空紧零集，包括 Cantor 型集合；H05 的收敛假设则迫使零集局部可缩。两者并不矛盾：在这类非局部可缩零点附近，H04 的整套附加假设不能全部成立。地图应将此标为“合取假设的拓扑限制”，不能标成 H03 被 H05 否定。
 
+<a id="stoch"></a>
+<a id="metric"></a>
+<a id="stoch-limit"></a>
+<a id="polish-gap"></a>
 ## H06 · 随机推论的给定度量缺口及修补
 
 S19 `thm:stochastic-rleb`，502–554 行，假设路径留在 \(0\le D_k\le R\) 的不变域，且
@@ -153,6 +168,9 @@ s_k=2^{-(k+3)}+3\cdot4^{-(k+3)}
 
 **规范修补版本**：明确要求“给定度量 \(d_{\mathsf X}\) 完备”，可写 complete separable metric space，再用 \(S\) 闭得到极限在 \(S\)。本页将原稿标为待修条件，将修补版标为本轮推导；不静默改写原文。S19 的确定性 `prop:complete-metric-transfer`（404–435 行）已经明确要求 complete，不受此措辞问题影响。
 
+<a id="sample"></a>
+<a id="window"></a>
+<a id="h07"></a>
 ## H07 · C05：有限数据原关系局部值域证书
 
 此节是独立假设层。令 \(S=F^{-1}(0)\subset\mathbb R^n\) 非空闭，\(T(p)\) 是指定的实际 proximal 输出族：

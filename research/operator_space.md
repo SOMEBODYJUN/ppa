@@ -31,6 +31,8 @@ r_F(u)=\lambda^{-1}\inf_{Tx=u}\|x-u\|.
 
 反例：\(F(0)=\mathbb R,F(u)=\{-u/2\}\)（\(u\ne0\)）给 \(J_F(x)=\{0,2x\}\)，同时有终止和发散选择；\(F=I\) 的每个固定步长均收敛，但可和正步长序列可产生非零极限。[OS-H O1]
 
+<a id="lt"></a>
+<a id="os-e"></a>
 ## 2. 认证超边：LT 的准确包含范围
 
 在已经对齐完整 coverage、同一目标 \(S\)、测试域、真实残差与留域预算的接口上，设 \(R_T=2T-I\)。
@@ -65,6 +67,7 @@ d(u,S)\le\rho r_F(u),\quad
 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)。故
 \(\mathcal L_{\rm ap}\subseteq\mathcal R_E\subseteq\mathcal R_D\cup\mathcal R_E\)。该转换不承诺保持最佳常数、最大初值域，也不覆盖历史 LTT pointwise／多值框架的全部量词。[OS-H §3.2]
 
+<a id="phi"></a>
 ## 3. OS-PHI：实际尾与反射模的 proper 观测
 
 固定非空紧 \(K\subset\mathbb R^d\)、非空闭 \(S\subset K\)，令
@@ -89,6 +92,8 @@ m_j(T)=\sup_{\|x-y\|\le2^{-j}}\|R_Tx-R_Ty\|,\qquad
 
 **证明机制。** 迭代序列的闭递推约束给 Polish；\(\|\Delta w\|\le2\rho\)、\(\|\Delta m\|\le4\rho\) 给连续。共同趋零模给 Arzelà–Ascoli 单步紧性，共同尾使其升级为全时间紧性。\(c_0\) 紧参数集通过有限网提供统一趋零预算，因而逆像紧。这里只用坐标有界不够。
 
+<a id="cat-gap"></a>
+<a id="local-loss"></a>
 ### 尚缺的两条桥
 
 1. **保纲桥。** proper 不推出 category-preserving。\(p(x)=\max(x,0):[-1,1]\to[0,1]\) 为 proper 闭满射，但无处稠密 \(\{0\}\) 的逆像有内点。此例否定一般推理，未否定特定 \(\Phi\) 的保纲性。
@@ -106,6 +111,8 @@ m_j(T)=\sup_{\|x-y\|\le2^{-j}}\|R_Tx-R_Ty\|,\qquad
 
 以上来源为 OS-A §§3–6。塔方案刚性不等于同尾层刚性：投影 \(P(s,r)=(s,0)\) 的塔只允许自身，但 \(U_a(s,r)=(s+ar(1-r)(1-s^2),0)\)（\(0<a\le1\)）与它同具精确尾 \((1,0,0,\dots)\)。
 
+<a id="size"></a>
+<a id="no-go"></a>
 ## 5. 后续负结果与证据缺口
 
 9/21 总账在其历史空间中报告：普通全图／\(C^0\) Baire、轨道小集理想、原动力度量的绝对孔隙性都把 LT 与 RLEB 同时判小；尤其报告

@@ -2,6 +2,8 @@
 
 来源以 S19 `sections/theorem_spine.tex` 为主；S18 是较早的投稿稿。源文件索引在 [SOURCES.md](SOURCES.md)。以下是稿件命题的可检索重构，不代表先行性审查完成。D01–D04 的定义见 [foundations.md](foundations.md)。
 
+<a id="cov"></a>
+<a id="r01"></a>
 ## R01 · 一步估计：图几何与真实残差在这里相遇
 
 令 \(X=\mathbb R^n\)，\(S\subset F^{-1}(0)\) 非空闭，\(U\subset X\) 开，\(U_R=\{x\in U:d(x,S)\le R\}\)。固定 \(\lambda>0\)、\(L\ge0\)、\(0<\gamma\le1\)、\(\bar t>0\) 与非减原点连续 gauge \(\psi\)。假设每个 \(x\in U_R\) 在图块 \(\mathcal G\subset\operatorname{gph}F\) 上有 proximal 输出，并有一个 \(p\in P_S(x)\) 满足 \((p,0)\in\mathcal G\)；该图块在输入对尺度 \(R\) 满足全对 RL。对**实际输出** \(x^+=J_{\mathcal G}x\) 假设真残差界 \(d(x^+,S)\le\psi(r_F(x^+))\)，且 \((R+LR^\gamma)/(2\lambda)\le\bar t\)。
@@ -17,6 +19,9 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 
 第一式用同一图块的 \((p,0)\) 和 proximal 图点作成对比较；第二式用反三角不等式；末式用 \(r_F(x^+)\le s/\lambda\)，不假设 \(s/\lambda=r_F(x^+)\)。同输入唯一只保证图块内 \(J_{\mathcal G}\) 单值。S19 `lem:solution-comparison`。
 
+<a id="cmp"></a>
+<a id="loc"></a>
+<a id="r02"></a>
 ## R02 · 局部直接收敛定理
 
 保留 R01 的全部域、量词与 gauge 条件，另假设存在 \(0<\kappa<1\) 使
@@ -36,12 +41,17 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 
 **允许多选择的另一版本**（S19 `cor:selection-extension`）以每个合法 \(x^+\in\mathcal J(x)\subset J_{\lambda F}(x)\) 的统一 anchored 比较、输出 EB、coverage 取代图块 A1–A3；它不声称全对 RL 自动使完整 \(J_{\lambda F}\) 单值。每条合法轨道有同一上界，极限可随选择变化。
 
+<a id="r03"></a>
+<a id="grow"></a>
 ## R03 · 竞争的充分证书与临界边界
 
 若真残差增长 \(r_F(y)\ge m d(y,S)^a\)，\(0<\gamma<1,L>0\)，选择 \(\psi(t)=(t/m)^{1/a}\)。R02 的小尺度直接兼容在 \(a<\gamma\) 成立；\(a=\gamma\) 时恰当 \(\lambda m>L/2\)；\(a>\gamma\) 时这个**标量测试**失败。失败不证明某条轨道发散。S19 `cor:residual-growth`。
 
 同一稿件有另一个能量证书：当 \(\psi\) 连续严格递增且 \(R\le\psi(\bar t)\)，置 \(V(r)=r^2+\lambda^2[\psi^{-1}(r)]^2\)，\(A(r)=(r^2+L^2r^{2\gamma})/2\)。若 \(q_E(R)=\sup_{0<r\le R}A(r)/V(r)\le q<1\) 且 \(\sqrt{qV(d_0)}/(1-\sqrt q)<\operatorname{dist}(x^0,X\setminus U)\)，则 \(V(d_k)\le q^kV(d_0)\) 并有有限长和尾界。\(a=\gamma\) 的小尺度能量阈值 \(\lambda m>L/\sqrt2\) 比直接阈值更强；两者是**证明证书的阈值**，不宣称个别轨道收敛的必要条件。S19 `prop:energy-certificate`, `rem:sharpness-boundary`。
 
+<a id="r04"></a>
+<a id="schur"></a>
+<a id="collide"></a>
 ## R04 · 可检验图块、实例与条件拓展
 
 - S19 `thm:square-root-seam` 反演一个闭图、正法向处二值的完整 proximal 关系；反射在接缝呈平方根阶，完整图跨支满足 RL，真实最小残差与覆盖各自验算。`prop:seam-quadratic-separation` 排除的是**指定**二次 \(J\)-side 证书，不是所有可能的 LT 定理。

@@ -28,9 +28,12 @@ edge_ids = [e["id"] for e in graph["edges"]]
 if len(node_ids) != len(set(node_ids)) or len(edge_ids) != len(set(edge_ids)):
     errors.append("duplicate graph identity")
 for n in graph["nodes"]:
-    path = ROOT / "research" / n["file"].split("#")[0]
+    file, _, anchor = n["file"].partition("#")
+    path = ROOT / "research" / file
     if not path.is_file():
         errors.append(f"missing graph target: {n['id']} -> {path}")
+    elif anchor and f'id="{anchor}"' not in path.read_text(encoding="utf-8"):
+        errors.append(f"missing graph anchor: {n['id']} -> {n['file']}")
 for e in graph["edges"]:
     if not e["inputs"] or len(e["inputs"]) != len(set(e["inputs"])) or any(i not in node_ids for i in e["inputs"]):
         errors.append(f"invalid conjunctive inputs: {e['id']}")

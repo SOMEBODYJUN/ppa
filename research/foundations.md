@@ -2,6 +2,7 @@
 
 本页是重构的数学定义层。它不把任何稿件的证明状态自动提升；来源键及版本见 [SOURCES.md](SOURCES.md)。本文中的“完整”总是指被声明的关系的**整个图**，而不是一次迭代中选中的支。
 
+<a id="d01"></a>
 ## D01 · 原关系、残差与图剪切
 
 在实 Hilbert 空间 \(H\) 上令 \(F:H\rightrightarrows H\)，
@@ -21,6 +22,7 @@ F(u)=\{(p-u)/\lambda:u\in T(p)\}.
 
 局部 \(T|_U\) 则不决定域外图、完整逆纤维或 \(r_F\)。这一缺口贯穿 [算子空间比较](operator_space.md) 与 [解选择](solution_selection.md)。来源：S19 `theorem_spine.tex` 定义与 `ass:local-rleb`；S20 `07_final_handoff.md` §2。
 
+<a id="d02"></a>
 ## D02 · 同一图块、同一尺度的全对 RL
 
 对 \((u,v),(u',v')\in\mathcal G\) 置 \(a=u-u'\)，\(b=v-v'\)。局部参数 \(R>0,L\ge0,0<\gamma\le1\) 的 \(\mathrm{RL}(\lambda,\gamma,L;R)\) 是在**所有**满足 \(\|a+\lambda b\|\le R\) 的图点对上
@@ -32,6 +34,7 @@ F(u)=\{(p-u)/\lambda:u\in T(p)\}.
 
 它等价于 \(\lambda\langle a,b\rangle\ge[\|a+\lambda b\|^2-L^2\|a+\lambda b\|^{2\gamma}]/4\)。固定解点的 anchored 比较是较弱的**不同命题**；局部输入球半径 \(r\) 内的任意两点可能相距 \(2r\)，不能把中心半径当作成对尺度。S19 `def:graph-RL`。全局结构稿 S23 使用非空完整图、\(L>0,0<\gamma<1\)，对所有图点对和所有尺度成立；它不包含局部 coverage、EB 或 PPA 的结论。
 
+<a id="d03"></a>
 ## D03 · Cayley 坐标与 coverage 是两件事
 
 若 D02 成立，则 \(M_+|_{\mathcal G}\) 单射。写 \(D=M_+(\mathcal G)\)、\(C=M_-\circ(M_+|_{\mathcal G})^{-1}:D\to H\)，则 \(C\) 在测试尺度内为 \(L\)-Hölder，并有
@@ -44,6 +47,7 @@ J_{\mathcal G}(p)=(p+C(p))/2.
 
 反向也成立，但 D02 **不推出** \(D=H\)，甚至不推出所需局部输入集包含于 \(D\)。取 \(p=p'\) 时得到同输入唯一性，只对 \(\mathcal G\) 的纤维有效。完整结构问题中“graph-maximal”固定 \((\lambda,L,\gamma)\)：不能在保留 D02 的条件下真扩图；它不是极大单调。全局 \(D=H\) 蕴含该意义的 graph-maximal；反向借同常数 Hölder 扩张在**实 Hilbert 空间**也成立，不限有限维。有限维限制始于后续 properness/degree 的完整纤维分类，见 [结构稿](holder_structure.md)。S23 `lem:cayley`，S19 `lem:minty-equivalence`。
 
+<a id="d04"></a>
 ## D04 · 真误差界、兼容和留域
 
 \(\psi:[0,\bar t]\to[0,\infty)\) 非减、\(\psi(0)=0\)、原点连续。输出集合 \(V\) 上的真实 gauge EB 是

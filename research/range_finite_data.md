@@ -2,6 +2,10 @@
 
 来源 S23 结构稿 TeX §5–§7（行 952–1572），21 页 PDF 同版；中文教学稿帮助解释机制，不作为证明。这里的全局/固定窗口值域结果属于**全图全尺度 RL 的有限维结构线**；9/25 §8 的局部拓扑证书是另一套假设，见 [holder_structure H07](holder_structure.md)。本轮逐式核对了定位函数、二次规划构造、覆盖不等式与有限信息反例的推理；外部扩张/degree 定理及先行性仍是门。
 
+<a id="rho"></a>
+<a id="w01"></a>
+<a id="rel-max"></a>
+<a id="w02"></a>
 ## W01 · 精确标量定位与整个纤维的值域覆盖
 
 固定 \(\lambda,L>0,0<\gamma<1\)，令 \(R=L^{1/(1-\gamma)}\)。对 \(t\ge0\)，定义 \(\rho(t)\) 为
@@ -24,6 +28,8 @@ F^{-1}(v)\subset B(x_0,r)\quad
 
 第二式管的是**整个非空逆纤维**。正向对偶版也成立。对窗口 \(G\subset U\times W\) 的非空**相对 maximal** RL 图，若锚在图内、\(B(x_0,r)\subset U\)、\(B(v_0,s)\subset W\)、\(r>R,s>0\)，则所有 \(v\in B(v_0,\min\{s,h(r)/\lambda\})\) 在 \(G\) 中有非空逆纤维，整个纤维落在 \(B(x_0,r)\)。证明先作同参数全局 completion，再由相对 maximal 得窗口内相等。半径和严格 \(r>R\) 门槛在**所有维数统一**的意义上锐：一维 \(C(p)=L(p_+)^\gamma\) 见 S23 prop:coveragesharp。它没有声称任意非 maximal 子图也覆盖。来源：lem:rho、thm:coverage、thm:window、prop:coveragesharp。
 
+<a id="qsample"></a>
+<a id="qp"></a>
 ## Q01 · 一个有限样本构造的全局一致影子
 
 给 \(m\ge1\) 个图样本 \((x_i,v_i)\)，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，重复且一致的 \(p_i\) 可合并。固定 \(0<\sigma<1\)，取 H02 的 \(M_\sigma\)、\(a^2=M_\sigma/2>0\)，矩阵 \(P=[p_i]\)、\(V=[c_i]\)。**只需样本兼容**
@@ -49,6 +55,8 @@ F^{-1}(v)\subset B(x_0,r)\quad
 \(\|v_i-A_m(x_i)\|\le a/[\lambda\sqrt{1-\sigma^2}]\) 与
 \(\|x_i-A_m^{-1}(v_i)\|\le a/\sqrt{1-\sigma^2}\)。\(N_m\) 全球定义并不使它自动在**未观测完整图**上获得全球误差认证；独立逐查询挑一个球交值也不保证共同 Lipschitz 性。来源：S23 thm:finite_qp、行 1114–1223。
 
+<a id="q-cover"></a>
+<a id="q-bound"></a>
 ## Q02 · 覆盖的对象是 Cayley 参数，不只是原输入
 
 若样本来自 RL 图，且未知图点的 \(p=x+\lambda v\) 离某个样本参数不超过 \(\delta\)，置 \(b=L\delta^\gamma\)，
@@ -66,6 +74,8 @@ K_\delta=
 \(t\le b+\sqrt{\sigma^2(t+\delta)^2+a^2}\) 的上根。若非空完整纤维的**所有图点参数**被此网覆盖，才得到到 singleton 的 Hausdorff 界 \(K_\delta/\lambda\) 或 \(K_\delta\)。当 \(\delta=0,\sigma=\sqrt\gamma\) 为 \(R/\sqrt2\)；对固定小 \(\delta\) 不声称常数最优。若完整 \(C(0)\) 已知，原输入 \(\|x\|\le B\) 或输出 \(\lambda\|v\|\le B\) 时有
 \(\|p\|\le T_B=\max\{4B+2\|C(0)\|,(2L)^{1/(1-\gamma)}\}\)；取得该参数球的 \(\delta\)-网是额外采样假设。来源：thm:covered、cor:coveredfibers，行 1227–1311。
 
+<a id="q-eval"></a>
+<a id="q-total"></a>
 ## Q03 · 可计算误差分解
 
 对可行近似 \(\widehat\theta\in\Delta_m\)，QP 梯度 \(g_q=2Q\widehat\theta+d(q)\) 的 Frank–Wolfe gap
@@ -81,10 +91,14 @@ K_\delta=
 
 三项分别是覆盖/模型偏差、噪声放大、求值误差。浮点 gap 用于严格证书需验证容差或向外取整；原稿**未给维数无关样本复杂度或运行时间**。来源：prop:evaluation、cor:totalerror。
 
+<a id="q-oracle"></a>
+<a id="q-noglobal"></a>
 ## Q04 · 有限总查询不可能认证无界全空间
 
 对 \(n\ge1\) 的无限制全局 \(L\)-Hölder \(C:\mathbb R^n\to\mathbb R^n\)，任何确定性程序若只作**有限次（可自适应）点查询**后输出一个不再访问 oracle 的单值 \(A\)，不能对所有这样的 \(C\) 保证其对应关系的全空间统一有限正向纤维误差。对零图 \(C_0=0\) 运行并记录有限查询集 \(E\)（加原点）；令 \(C_1(p)=L\,d(p,E)^\gamma e\)。两图给完全相同的自适应 transcript，却在无界远处任意分离；若输出 \(A\) 对 \(C_0\) 有有界误差，则对 \(C_1\) 必无界。这不排除持续 oracle、随机保障、已知解析式或指定紧域的认证。来源：prop:information。
 
+<a id="deadband"></a>
+<a id="q-advantage"></a>
 ## B01 · deadband 实例的意义和限度
 
 \(K=U[-a,a]^2\)（\(U\) 正交）、\(F(x)=x-P_Kx\)、\(\lambda=1\)：本身已单调且 \(d(x,K)=\|F(x)\|\)，完整 Cayley \(C=P_K\)。在 \(\gamma=1/2\) 时最小全局 Hölder 常数 \(\sqrt{\operatorname{diam}K}\)。输出 \(w_\pm=\pm\varepsilon Ue_1\)（\(0<4\varepsilon<a\)）的完整逆纤维两侧相隔至少 \(2a+2\varepsilon\)，任何精确逆选择增益至少 \(a/\varepsilon+1\)。选 \(N=P_K/2\) 的代理逆映射为每坐标 \(\alpha(w)=3w\) 若 \(|w|\le a/4\)，否则 \(w+(a/2)\operatorname{sign}w\)；增益 3 且完整逆纤维误差至多 \(a\sqrt2\)。这展示精确重构与稳定近似的两种要求，**不证明该代理优于定制正则化**：恒等代理已有同样的全局 \(a\sqrt2\) 半径。来源：prop:deadbandjump、prop:deadbandproxy。

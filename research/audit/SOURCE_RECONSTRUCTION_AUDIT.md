@@ -1,0 +1,84 @@
+# 来源重构覆盖审计
+
+审计基线：`2d127c9`；2026-10-01。开始时工作树干净，先读取 README、CLAIMS、RESEARCH_STATE、FAILED_ROUTES。下列来源簇覆盖表以该基线为准；本轮新增内容的整合状态另见第 6 节，不能凭文件出现自动关闭缺口。
+
+**盘点不等于数学验收。** 本次逐文件字节盘点、ZIP 成员枚举、历史审计核读及代码复跑，不能声称已独立读完每份原稿的每个证明。新资产应从原件重写精确数学内容；历史文本只作证据和反例线索。未来原创研究也按同一规范进入，不以历史文件数量限制增长。
+
+## 1. 可重复核对的范围
+
+| 对象 | 实测数量 | 本次完成的工作 | 尚不表示 |
+| --- | ---: | --- | --- |
+| 原件文件 | 251 | 路径、长度、SHA-256 | 251 个文件的所有数学内容均已裁决 |
+| ZIP | 11 | 对每包枚举非目录成员，并递归检测 ZIP | 包中每一命题已重写 |
+| ZIP 非目录成员 | 178 | 哈希、长度、与展开原件的逐字节匹配 | 178 个独立成果 |
+| 与展开原件相同的成员 | 41 | 哈希匹配 | 不同文件的语义等价；其余 137 项无价值 |
+| 已展开数学验证器 | 10 | 当前环境全部退出码 0，保存完整输出 | 普遍定理成立、代码数值方法正确、所有端点已证 |
+
+本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
+
+所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
+
+## 2. 来源簇 → 现有规范层 → 仍需重写
+
+| 来源簇与定位 | 基线规范入口 | 尚未关闭的内容与验收要求 |
+| --- | --- | --- |
+| 9/01 三个 checkpoint，`research/theory_atlas.md`、`work/a_*` | [foundations](../foundations.md)、[operator_space](../operator_space.md) 仅部分覆盖 | 单调性与正则性完整定义字典、术语冲突、逐边严格性、不同空间的引用条件；逐条保留 MR/MSR 与 inverse Aubin/calm 的对象方向 |
+| 9/01 `research/gap_examples.md`、`example_properties.md`、六份 `work/c_gx*.md` | 尚无完整规范例库 | GX-001–077 逐卡重写、同构/缩放/参考点去重；每卡需完整 F、域、零集、λ、残差、局部窗、最优常数证明或待定标记 |
+| 9/01 `work/c_consistency_audit.md` | 尚无逐项修正关闭表 | 历史审计有 18 项以上具体修正；不是全部 PASS。优先保留 tuned-step、fixed-target/two-variable、modulus-zero 机制、例卡重复和限定窗 |
+| 9/01 `work/a_consistency_audit.md` | 尚无规范冲突台账 | PPA-03 增长步长 O/Ω 争议、Spingarn 命名、有限维 converse 被 Hilbert 化、PSNC inverse 方向、一般度量 q>1 反例；均是历史报告，引用外部原文前再核 |
+| 9/01 novelty checkpoint，`RL_novelty_boundary.md`、`novelty_*`、`claim_safe_matrix` | 各模块零散提及先例 | 新颖性对照需独立文献卡：检索日期、访问深度、逐定理对象映射和未读全文门；旧“deepread”标题可能仅为摘要级读取 |
+| 9/09 T4 包，`ATTACK_C11_COMPOSITE_GENERALIZED_SUBREGULARITY.md`、`verify_c11_composite.py` | 基线缺独立模块 | 复合次正则与多步路径应重写；历史 C11 与当前 C11（极限回缩）不同身份，必须有命名空间，禁止直接合并 |
+| 9/14 历史总包，RL 核心及 35 条超边 | [rleb_ppa](../rleb_ppa.md)、[旧边对照](../HISTORICAL_EDGE_CROSSWALK.md) | 旧边逐条对照已存在，但逐源命题/例/失败机制尚非全部覆盖；边有去向不意味着所有原件内容有去向 |
+| 9/14 随机与 Markov 分支 | [cone_markov](../cone_markov.md) | 基线时相关性感知近端、四点耦合、非乘积/吸收障碍、可数紧扩展需独立命题身份及依赖；本轮 RP 子链的新增去向见第 6 节，其余未关闭 |
+| 9/14 锥分支与 v04 ZIP | [cone_markov](../cone_markov.md) | 原始 CRSC、nice/amenable、面稳定、法向/切向修正的每个依赖及验证器尚需一一关联 |
+| 9/18 投稿与 9/19 扩展 ZIP | [rleb_ppa](../rleb_ppa.md)、[holder_structure](../holder_structure.md) | 主要收敛/Dini/回缩已整理；signed-Schur verifier、锁定台账和来源版本仍需逐项裁决；随机完备性修正版与原措辞保持不同版本 |
+| 9/18 解选择及修订关闭 ZIP | [solution_selection](../solution_selection.md) | 规范层保留修补方向；`Codex_independent_audit.md` 是任务书，真实审计在修订包，不能让文件名替代证据身份；数值 CSV 不是证明 |
+| 9/20 分类集与 9/21 提纯总账 | [operator_space](../operator_space.md)、FAILED_ROUTES | 当前缺失原证明与历史 SOURCE-MISSING 分开；恢复源文件只关闭“找不到”，不会自动关闭“证明未核”；I-097–099/I-102 仍需原件/精确证明 |
+| 9/23 正式 TeX | [holder_structure](../holder_structure.md)、[range_finite_data](../range_finite_data.md) | 主要结果覆盖但外部定理适用性与先行性独立；候选稿不是公认定理 |
+| 9/25 PDF | [holder_structure](../holder_structure.md) H07 | 整窗指定 T 的拓扑假设及 Lefschetz 引用未关闭，不能靠有限数据补足 |
+
+上述“尚无”按 `2d127c9` 判断。并行新增模块应在后续提交中填写：精确锚点、重写版本、审核者、未闭义务；不直接删除来源簇。
+
+## 3. 例库增长必须防止的错误
+
+核读旧 `c_consistency_audit.md` 得到以下**来源提出的整合要求**，本次不是对全部 GX 证明的独立确认：
+
+1. 77 个 GX 是观察条目，不能统计成 77 个独立算子。Volterra 与其伴随的酉共轭、同一 cubic 的不同残差、同一法锥的参考点观察须分清。
+2. 一个规范对象可以有多个 observation；不同映射如 `N_L` 与 `I-P_L` 不能因为共享集合就合并。
+3. fixed-target MSR/SMSR 与 nearby-target MR/SMR 分开存常数。`modulus=0` 指缩域后常数下确界；需标大零集、域外真空、分支钉住、残差跳跃或超线性 germ，不能当统一强度。
+4. RL 记录至少包含 `(graph/window, λ, γ, L, local/global, all-pairs/anchored, genuine/inherited)`。所有步长碰撞、临界值与尾部抵消必须随观察保留。
+5. GX-071 属反向校准构造，不能用其定义得到的 `γq` 恒等式充当普遍经验定律。GX-025/026 的共同推导可以共享，但规范观察应各有身份。
+6. 上界被改进与旧命题被反例推翻是两种关系。不得把 `C-SHARPEN`、`C-REFINE`、`C-UPGRADE` 一律记成历史错误。
+
+## 4. 代码与再现性
+
+[运行记录](LEGACY_VERIFIER_RUNS.json) 保存 Python、NumPy、SciPy 版本、脚本哈希、命令、退出码及 stdout/stderr。十个展开数学验证器全部运行成功。历史构图/校验程序、字体生成器、ZIP 内 `verify_research.py` 不包含在这十个结果中；它们不能继承 PASS。
+
+下一步代码验收必须逐个登记：规范 Claim 版本、数学测试对象、精确有理/浮点/随机类别、输入及固定种子、容差、依赖、预期输出、已知盲区。旧脚本内容只作为参考；需要继续维护的代码应重写到规范代码区并与 Claim 同版本变化。一次数值 exit 0 不能证明无界域、所有样本、任意维数、锐常数或收敛端点。
+
+## 5. 可增长的验收门
+
+新研究与历史重构共用下列门；每项允许状态停留，并记录阻塞理由。
+
+| 门 | 必交付的内容 | 通过后允许的使用 |
+| --- | --- | --- |
+| G0 来源或研究问题 | 来源哈希/位置或原创问题、任务范围、现有对象检索 | 进入待研究区，不获得真值标签 |
+| G1 身份 | 稳定 ID、版本、对象与规范同一性、来源别名；例卡区分 object/observation | 可索引，避免重复计算和编号碰撞 |
+| G2 精确陈述 | 空间、域、量词次序、全部合取假设、结论、残差、参数与窗；定义先存在 | 可进入候选图，不得假装可调用定理 |
+| G3 证明及攻击 | 可独立读懂的推导、依赖版本、反例测试；外部定理写精确接口 | 按实际审查深度标正文证明/局部核验/独立验收 |
+| G4 范围和证据 | 区分分析证明、有限计算、来源报告、新颖性；反向/否定边有独立见证 | 可建立带 scope 的超边，禁止证据等级自动传播 |
+| G5 整合 | 正文精确锚点、Claim、图、反例、前沿状态同步；检索能从结论找到条件和证据 | 成为后续研究规范入口 |
+| G6 可重现与保存 | 代码/链接/锚点检查，相关运行记录，提交与远端核对 | 完成该批交付；不表示所有来源清洗结束 |
+
+语义覆盖的关闭条件：对一份来源的每个有价值单元给出 `rewritten / superseded / refuted / duplicate / nonmathematical / deferred` 之一及理由。`rewritten` 必须指向规范单元的版本与锚点；`duplicate` 必须说明是字节相同还是数学等价；`deferred` 保留可执行下一步。不得用“整个 ZIP 已读”代替这些映射。
+
+未来增长不要求先清空所有历史待办。新命题、桥、反例、例子、算法实验和失败路线可独立进入 G0；通过 G5 后加入规范正文，旧版本保留 `supersedes/refines/refutes` 关系。研究地图由这些对象和关系生成。
+
+## 6. 本轮已整合单元与仍开放的同簇范围
+
+| 来源单元 | 新规范身份与位置 | 重写和证据深度 | 后续义务 |
+| --- | --- | --- | --- |
+| 9/14 随机相关性感知报告的有限维不一致二次近端正类 | [C22-v1 / RP-EB](../canonical/random_proximal.md#rp-eb)，前置 RP-OBJECT/GAP/CONTRACTION；图 E54–E56 | 矩阵谱隙、同步耦合、不变律分类、条件 law-step 双边 EB 与有限长度独立重算；`derived-checked` | 外部文献优先权、变参数/无限维版本；历史验证器仅有限运行 |
+| 同报告的逐分支残差障碍及标量实例 | [C23-v1 / RP-BRANCH](../canonical/random_proximal.md#rp-branch)、[RP-SCALAR](../canonical/random_proximal.md#rp-scalar)，[F09](../../FAILED_ROUTES.md)；图 E57–E58 | firm nonexpansiveness 积分证明、平稳物理步长反例与锐常数推导；`derived-checked` | 不同残差的零集桥需另证；不声称整个 9/14 随机目录均已裁决 |
+
+两行只裁决上述数学单元，逐文件 TSV 的 `semantic_disposition=unreviewed` 暂不批量改成 `rewritten`，因为同一来源仍含其他 Claim、例和版本。应在逐单元映射齐备后，才给整份来源关闭状态。

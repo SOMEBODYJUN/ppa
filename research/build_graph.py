@@ -10,7 +10,10 @@ nodes = {n["id"]: n for n in data["nodes"]}
 assert len(nodes) == len(data["nodes"]), "duplicate node"
 assert len({e["id"] for e in data["edges"]}) == len(data["edges"]), "duplicate edge"
 for n in nodes.values():
-    assert (ROOT / n["file"]).is_file(), n
+    file, _, anchor = n["file"].partition("#")
+    assert (ROOT / file).is_file(), n
+    if anchor:
+        assert f'id="{anchor}"' in (ROOT / file).read_text(encoding="utf-8"), n
 for e in data["edges"]:
     assert e["inputs"] and all(i in nodes for i in e["inputs"])
     assert e["output"] in nodes and e["output"] not in e["inputs"], e

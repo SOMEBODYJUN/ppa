@@ -1,0 +1,88 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "baseline": "2d127c9",
+  "runs": [
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/06_验证程序/验证_C11复合次正则.py",
+      "sha256": "c5324260c85b9f8c28ac5e0c30f3ae79520488efd3203d3a3ee45ecd8c052247",
+      "exit_code": 0,
+      "stdout": "Logarithmic PPA exact scalar equation; expected last ratio -> 1\ninput exponent k, output/input, asymptotic ratio\n10 0.0352469782469 0.811591666844\n30 0.0132625352844 0.916143481234\n100 0.00420645900866 0.968572980762\n300 0.00142994899158 0.987773769525\n1000 0.000432464017842 0.995785200739\n10000 4.34067419857e-05 0.999477170316\nHypomonotone-to-RL squared constant identity: PASS\nC11 strong-minimum Clarke interval: -0.9622776601683793 5.362277660168379\nAll standard-library checks passed.\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/06_验证程序/验证_C11复合次正则.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/06_验证程序/验证_RL合稿实例与常数.py",
+      "sha256": "3a3dab8045bf30d722fab12d2c135f0b641b9ddcbb3d6fa8ffc029d6af587981",
+      "exit_code": 0,
+      "stdout": "{'seed': 20260908, 'two_branch_samples': 2000, 'two_branch_Minty_max_error': 4.440892098500626e-16, 'disk_orbit_max_error': 1.1102230246251565e-16, 'disk_L': 2.5, 'disk_certificate_factor': 0.649519052838329, 'reverse_collision_reflection_gap_at_unit_input': 0.33333333333333337, 'M1_direct_Minty_tau_coverage': [(0.1, False), (0.3333333333333333, False), (0.5, True), (1.0, True), (2.0, True)], 'inexact_steps': 100000, 'inexact_error_sum': 0.00016449240668982314, 'inexact_distance': 1.0000200009000521e-14, 'inexact_tangent': 0.1795308263332065, 'harmonic_tangent_lower_bound': 0.12090146129863336, 'fixed_relative_error_ratios': [0.07071067811865475, 0.007071067811865475, 0.0007071067811865475, 7.071067811865475e-05]}\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/06_验证程序/验证_RL合稿实例与常数.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/02_锥优化_CRSC_MSCQ/05_验证程序/验证_SOC与PSD实例常数.py",
+      "sha256": "667f22012eb86427e7817c13e6b7b8160549b46a3ca0d118502cf6f95f126fda",
+      "exit_code": 0,
+      "stdout": "PASS: exact SOC/PSD normal norms, angle constants, and Lipschitz bounds.\nPASS: SOC theorem parameters (sigma, eta, tau, a_F)=(2,1/sqrt(2),1,1).\nPASS: PSD theorem parameters (sigma, eta, tau, a_F)=(sqrt(6),1/sqrt(6),1/sqrt(k),1).\nPASS: 257 deterministic SOC feasible-candidate/residual sanity checks.\nPASS: 617 deterministic diagonal-PSD direct-bound algebra checks.\nProof scope: see EXAMPLES_AND_CONSTANTS_AUDIT.md; no optimal-modulus claim.\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/02_锥优化_CRSC_MSCQ/05_验证程序/验证_SOC与PSD实例常数.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_四状态反例精确证书.py",
+      "sha256": "c0b512fbccbe2e7d40e0721fb3c41521900d622605309a4f211b42f6392a2151",
+      "exit_code": 0,
+      "stdout": "P = [[Fraction(7, 8), Fraction(0, 1), Fraction(1, 8), Fraction(0, 1)], [Fraction(0, 1), Fraction(1, 1), Fraction(0, 1), Fraction(0, 1)], [Fraction(1, 8), Fraction(0, 1), Fraction(7, 8), Fraction(0, 1)], [Fraction(0, 1), Fraction(0, 1), Fraction(1, 8), Fraction(7, 8)]]\nsix independent dual potential rows = [[Fraction(-7, 4), Fraction(-3, 2), Fraction(-3, 4), Fraction(9, 4)], [Fraction(-5, 4), Fraction(-1, 1), Fraction(-1, 4), Fraction(9, 4)], [Fraction(-3, 4), Fraction(-1, 2), Fraction(1, 4), Fraction(7, 4)], [Fraction(-1, 4), Fraction(0, 1), Fraction(1, 4), Fraction(5, 4)], [Fraction(1, 4), Fraction(0, 1), Fraction(-1, 4), Fraction(3, 4)], [Fraction(1, 4), Fraction(-1, 2), Fraction(-3, 4), Fraction(1, 4)]]\nall four proposed short rational certificates independently verified\ncertificate 1: theta=[Fraction(0, 1), Fraction(7, 8), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 8)], slack=[Fraction(161, 256), Fraction(159, 256), Fraction(149, 256), Fraction(0, 1)]\ncertificate 2: theta=[Fraction(0, 1), Fraction(109, 120), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(11, 120)], slack=[Fraction(21, 256), Fraction(27, 256), Fraction(25, 256), Fraction(0, 1)]\ncertificate 3: theta=[Fraction(0, 1), Fraction(1, 10), Fraction(23, 30), Fraction(0, 1), Fraction(2, 15), Fraction(0, 1)], slack=[Fraction(0, 1), Fraction(3, 64), Fraction(0, 1), Fraction(0, 1)]\ncertificate 4: theta=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(9, 10), Fraction(1, 10), Fraction(0, 1)], slack=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]\ncertificate 5: theta=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 10), Fraction(9, 10), Fraction(0, 1)], slack=[Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 8)]\ncertificate 6: theta=[Fraction(0, 1), Fraction(0, 1), Fraction(7, 60), Fraction(0, 1), Fraction(0, 1), Fraction(53, 60)], slack=[Fraction(0, 1), Fraction(1, 32), Fraction(1, 32), Fraction(35, 128)]\npairwise expected firm ratios = [Fraction(3, 2), Fraction(3, 2), Fraction(1, 1), Fraction(3, 2), Fraction(17, 18), Fraction(1, 1)]\nnonpara witness t= 1 Psi^2= 0 W2^2 to pi= 1/2 E= 1/2\nnonpara witness t= 1/2 Psi^2= 0 W2^2 to pi= 1/4 E= 1/4\nnonpara witness t= 1/10 Psi^2= 0 W2^2 to pi= 1/20 E= 1/20\nnonpara witness t= 1/1000 Psi^2= 0 W2^2 to pi= 1/2000 E= 1/2000\nnear-point-invariant witness t= 1/4 Psi^2= 0 E= 1/4\nnear-point-invariant witness t= 1/10 Psi^2= 0 E= 1/10\nnear-point-invariant witness t= 1/1000 Psi^2= 0 E= 1/1000\nALL INDEPENDENT EXACT CHECKS PASSED\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_四状态反例精确证书.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_惰性四循环精确有理数.py",
+      "sha256": "280e57a432bae380d5737b6ead99063902b0448258cdda2d1ab3b7ba7ba65f4e",
+      "exit_code": 0,
+      "stdout": "PASS: cost, residual, H matrix and invariant law\nPASS: 35 subdivision vertices and 1/12 supplementary grid\nPASS: sharp E <= 26 Psi^2; equality witness (0,0,3/4,1/4)\nPASS: OT optimality is essential; unrestricted coupling gives false zero\nPASS: Dobrushin(P^2)=1/2; relative R-linear W2 mixing\nPASS: local E expansion factor 5/2, so no one-step Q contraction\nPASS: same-map almost-NE needs violation >=15/2, not epsilon<1\nPASS: general p sharp global squared EB 13/p, sharp local squared EB 4/p\nPASS: expected almost-FNE epsilon_min=p(15+25*tau); balanced epsilon=40p\nPASS: p=1/100 gives source-valid epsilon=2/5 but no compatible scalar gauge\nPASS: beta-to-global-maximizer ray does NOT preserve global sharp ratio\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_惰性四循环精确有理数.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_投影与可数紧致扩展.py",
+      "sha256": "edce45b071adba32b6616c8fe94da452c0b20b9c433f5bc7e66759001fd2a740",
+      "exit_code": 0,
+      "stdout": "uniform squared-distance factor = 3125/3267\nprojection witness t = 1/8 actual-limit transport^2 = 1/32 nearest-anchor^2 = 1/64\nprojection witness t = 1/4 actual-limit transport^2 = 1/8 nearest-anchor^2 = 1/16\nprojection witness t = 1/3 actual-limit transport^2 = 2/9 nearest-anchor^2 = 1/9\n12 rational blocks, all cross-block pairs, residual labels, cost bounds and mixture identities verified\nALL INDEPENDENT EXTENSION CHECKS PASSED\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_投影与可数紧致扩展.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_有限状态OT严格性.py",
+      "sha256": "413918ccd90961c7a332b2f5edd19dbb2b6078efda476e065465c18b7591a659",
+      "exit_code": 0,
+      "stdout": "PASS: all 35 polyhedral subdivision vertices checked exactly\nPASS: sole zero-residual vertex is uniform stationary law\nSharp squared W2 error-bound constant: 26\nUnique maximizing count vector z (law z/4): (0, 0, 3, 1)\nAt maximizer: distance squared=13/4, discrepancy squared=1/8\nPASS: relaxed zero-cost coupling is not input-OT optimal\nPASS: p=1/100 has sharp squared constant 1300 and balanced violation 2/5 < 1\nPASS: local adjacent-mass witness has squared ratio 4/p\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_有限状态OT严格性.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_条件残差修复独立复核.py",
+      "sha256": "0885b8e0e10060e9c47bc24b7327c18d58c3a3a0eb7d9a627846a4d50e33fc02",
+      "exit_code": 0,
+      "stdout": "Independent exhaustive binary-simplex laws: 165 PASS\nIndependent interacting Ising conditional EB/contraction: PASS; theta 0.8796852627671609\nIndependent coupled Gaussian EB sharpness and orthogonality: PASS; random max ratio 0.4007815709318385\nIndependent full-map RFI energy enumeration: PASS; maximal excess 0.031494140625\nALL INDEPENDENT AUDIT CHECKS PASSED\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_条件残差修复独立复核.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_随机近端相关性与常数.py",
+      "sha256": "87dbfa24f9191d5f11e3372a50e4bd014c9e1e1eac72ccfc23f63047abf097e0",
+      "exit_code": 0,
+      "stdout": "Noncommuting inconsistent quadratic prox: eigenvalues and 1000 pair checks PASS\nNative c^2 = 3/4, eta = 1/12; invariant mean = [0.35355339 0.35355339]\nMax sampled synchronous squared ratio = 0.7499984920872929\nScalar AR-prox variance, translation sharpness, stationary-step obstruction PASS\na=1/2 diagonal conditional (E^2,R^2,E_+^2) = (2/3,1/3,1/6)\nALL RANDOM PROXIMAL CORRELATION-AWARE CHECKS PASSED\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_随机近端相关性与常数.py"
+    },
+    {
+      "source": "history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_非乘积近端与吸收障碍.py",
+      "sha256": "1b1ee7af6e7ae35f9c35c5fbc7409365957eefa20fe0d4cfe16df92494f9c55d",
+      "exit_code": 0,
+      "stdout": "Q inverse: ((Fraction(3, 8), Fraction(-1, 8)), (Fraction(-1, 8), Fraction(3, 8)))\nThreshold gain: (3*x1^2 - 2*x1*x2 + 3*x2^2 + 12*x1 + 12*x2 + 36)/16\nRay candidate: ((a+3)/4, (a+3)/4); ray gain: (a+3)^2/4\ng(v), g(0): 4 9/4\nExact rational identities passed.\nk=0: a_k=2, gain=25/4\nk=1: a_k=5/4, gain=289/64\nk=2: a_k=17/16, gain=4225/1024\nk=5: a_k=1025/1024, gain=16785409/4194304\nk=10: a_k=1048577/1048576, gain=17592194433025/4398046511104\n",
+      "stderr": "",
+      "command": "python history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/03_随机与Markov理论/06_验证程序/验证_非乘积近端与吸收障碍.py"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 81 个数学节点、53 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 history/sources/ 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 87 个数学节点、58 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+
+**这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，外部定理与先行性门未关闭。9/25 局部值域证书另有独立整窗拓扑假设。
 
@@ -10,6 +12,7 @@
 2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。
 3. **结构与纤维**：全图全尺度 Hölder–RL 下研究一个同时近似正反纤维的强单调影子、固定参数极大图的完整纤维与最优常数。
 4. **独立旁支**：冻结面 CRSC→MSCQ、Markov/运输残差与解选择稳定性分别保留自己的对象和量词；跨线连接须证明桥。
+5. **随机近端的条件律残差**：在守恒坐标下分类混合不变律，核验真实 law-step 的误差界，同时攻击把逐分支或物理步长当作同一残差的偷换。
 
 ## Mathematical Objects 与 Definition Map
 
@@ -37,7 +40,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Claim Map 与 Dependency Graph
 
-完整命题身份、版本、异议在 [CLAIMS.md](CLAIMS.md)。下面是**数学路线而非文件链**；每行的合取和适用域见 [超边表](research/HYPERGRAPH.md)。
+完整命题身份、版本、异议在 [CLAIMS.md](CLAIMS.md)。下面是**数学路线而非文件链**；每行的合取和适用域见 [超边表](research/HYPERGRAPH.md)，承重边的量词逐项见 [条件逻辑契约](research/LOGIC_CONTRACTS.md)。
 
 | 路线 | 承重节点及联合前件 | 当前状态 |
 | --- | --- | --- |
@@ -50,6 +53,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 有限数据值域 | 样本包络 + 整窗 \(T\) 的 usc/acyclic + collar + 上同调 + Lefschetz → 原关系局部值域球 | C05 PDF-only，外部定理门未闭 |
 | 大小比较 | LT 公共接口 → RLEB 能量证书；紧 T-only \(\Phi\) proper；还缺完整对象与保纲桥 | 总体规模命题开放 |
 | 锥与 Markov | 冻结秩→面稳定→MSCQ；同步 OT exact-zero→一般 gauge，有限状态顶点→线性 EB | 两条独立链，跨线桥待证 |
+| 不一致随机近端 | 有限维二次近端 + 正权重 + 固定守恒边缘 + 独立新噪声 → 活跃谱隙 → 条件 \(W_2\) 收缩 → 真实 law-step EB；逐分支残差零集另由共同定点决定 | C22/C23 本轮独立推导；与普通 \(W_2\)、物理步长、Markov 同步缺陷的替换不成立 |
 
 9/14 历史包本身已有 149 个实体、35 条超边；本图以它为搜索种子，读入 9/18–9/25 版本后重新判断，没有把历史边直接升级为当前真理。
 
@@ -65,6 +69,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 - 有证明文本和限定内部审计的研究结果：局部 RLEB、固定紧源 \(\Phi\)、解选择修订版、锥与 Markov 条件命题。候选稿与外部审稿、文献新颖性是独立层。
 - 已证伪的扩大陈述：局部 \(J_{\mathcal G}\) 自动等于完整 \(J_F\)；Polish 拓扑性质自动给指定度量完备；proper 即保纲。精确反例和可回收部分见 [FAILED_ROUTES.md](FAILED_ROUTES.md)。
 - 尚未解：总体规模比较；9/21 N10 原孔隙否定证明可追溯性；9/25 外部拓扑定理应用；各固定维数影子最优常数；同对象同量词的全球先行性。
+- 新的 C22/C23 以完整证明写入[随机近端模块](research/canonical/random_proximal.md)：条件 law-step 与逐分支推前残差具有不同零集；标量例使 EB 的统一常数锐。历史验证器的有限运行记录与证明分开保存。
 
 ## Next Actions
 
@@ -72,12 +77,15 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
 3. 为 9/25 §8 配对可编译源，核 [6, Theorem 6.2] 的范畴与 Čech 同调条件；在正文保持“指定 \(T\)”量词。
 4. 修订 9/19 随机推论的指定度量完备性，保留反例作为缘由；分别推进结构、锥、Markov 的外部先行性核验。
+5. 按[覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md)为旧 checkpoint 的定义字典、GX 例卡、复合次正则与多步路径建立逐单元去向；同构例和重名 C11 先分身份，再审证明。新研究按[增长协议](RESEARCH_PROTOCOL.md)独立进入，不等待历史区全部清洗。
 
 ## File Map
 
 | 仓库根相对完整路径 | 数学资产、目的、何时读取或更新 |
 | --- | --- |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
+| [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | E02/03、E06/11/12、E17–19、E13、E54–58 的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
+| [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
@@ -85,8 +93,10 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/solution_selection.md](research/solution_selection.md) | S01–S03：统一尾到极限模、局部/完整修补、锐性模型；主张初值稳定时读。 |
 | [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |
 | [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
+| [research/canonical/random_proximal.md](research/canonical/random_proximal.md) | RP-OBJECT/GAP/CONTRACTION/EB/BRANCH/SCALAR 的全证明、尖锐例和残差替换障碍；研究随机近端或条件 \(W_2\) 时读，改假设须另立版本。 |
+| [research/audit/SOURCE_RECONSTRUCTION_AUDIT.md](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md)、[SOURCE_FILE_INVENTORY.tsv](research/audit/SOURCE_FILE_INVENTORY.tsv)、[ZIP_MEMBER_INVENTORY.tsv](research/audit/ZIP_MEMBER_INVENTORY.tsv)、[LEGACY_VERIFIER_RUNS.json](research/audit/LEGACY_VERIFIER_RUNS.json) | 251 个原件及 178 个包内成员的路径/哈希/语义未决字段，旧验证器环境与运行输出；逐源重写时更新 disposition 与规范锚点，不能将盘点算验收。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
 | [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 精确身份、当前阻塞、已失败机制；每次进展后同步维护。 |
-| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md) | 初始校验与旧批次盘点；用于核原件，不再作为数学地图。原件保留在 [history/sources/](history/sources/)，Git 历史可追初始导入。 |
+| [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md)、[history/README.md](history/README.md) | 初始校验、旧批次盘点与原件使用约定；用于核原件，不再作为数学地图。原件保留在 `history/sources/`，Git 历史可追初始导入。 |
 
-阅读顺序：本页和超边图 → 依节点进数学模块 → SOURCES 的原稿标签/页码 → CLAIMS 的现存 objection。图中路线是搜索种子，不是方法白名单。
+阅读顺序：本页和超边图 → 依节点进数学模块 → CLAIMS 的精确版本和现存 objection → 必要时 SOURCES 的原稿标签/页码。要写新资产时先读增长协议和当前前沿；图中路线是搜索种子，不是方法白名单。

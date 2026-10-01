@@ -2,6 +2,12 @@
 
 本页从证明包重构数学内容。来源报告的内部审计与本轮阅读分开：本轮核对主要定义、结论和依赖，没有重新完成一般锥定理的全部拓扑细节、全部运输多面体计算或全球优先权审计。这里的结论不能自动接入确定性 RLEB–PPA。
 
+<a id="c-rank"></a>
+<a id="c-mscq"></a>
+<a id="c-amen"></a>
+<a id="c-normal"></a>
+<a id="c-univ"></a>
+<a id="c-nonamen"></a>
 ## 1. 锥：冻结最小面的精确对象
 
 有限维欧氏空间 \(X,E\)，闭、尖、满维凸锥 \(C\subset E\)，\(G:V\to E\) 为 \(C^1\)，\(G(\bar x)=0\)。令
@@ -14,6 +20,7 @@ H=F^\perp,\ S=\operatorname{span}(C^*\cap F^\perp).
 此处 \(S\) 是对偶面子空间，不是 PPA 零集。冻结面 CRSC 要求 \(A^*C^*\) 闭，且 \(\operatorname{rank}(DG(x)^*|_H)\) 在一个完整邻域恒定。锥 nice 指每个面 \(J\) 的 \(C^*+J^\perp\) 闭；amenable 指每个面存在有限 \(a_J\) 使
 \(d(y,J)\le a_Jd(y,C)\) 对全部 \(y\in\operatorname{span}J\) 成立。[CM-C §2]
 
+<a id="c-face"></a>
 ### CM-RANK → CM-FACE → CM-MSCQ
 
 | 超边 | 联合前件 | 结论与证明作用 |
@@ -37,6 +44,7 @@ H=F^\perp,\ S=\operatorname{span}(C^*\cap F^\perp).
 
 **实例的数学作用。** 耦合双 SOC 的可行集为 \(s,t\ge0,u=st\)；PSD 例可行集为 \(B\succeq0,u=\operatorname{tr}(B^2)\)。它们检验共同法向修正和高维非多面体面，未从各块 MSCQ 推联合 MSCQ。PSD 参考面 amenability 常数为 1，有限乘积常数取各面的最大值。[CM-C §6]
 
+<a id="m-psi"></a>
 ## 2. Markov：必须保留的双层最小化
 
 紧 \(G\subset\mathbb R^d\)，几乎处处连续、联合可测的随机自映射 \(T_\xi\)，实际更新使用独立新噪声。设 \(\mu P=\mathbb E(T_\xi)_\#\mu\)，不变律集 \(\mathcal I\ne\varnothing\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。定义
@@ -50,6 +58,7 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 
 内层必须是该输入/目标对的完整平方欧氏成本最优耦合，且两边共用同一噪声；\(\Psi\) 不是 \(W_2(\mu,\mu P)\)。核 \(P\) 本身也不决定表示依赖的 \(c_R\)。[CM-M §1]
 
+<a id="m-exact"></a>
 ### CM-GAUGE：紧性与 exact-zero
 
 上述紧连续设置保证极小值取得、\(\Psi\) 下半连续，并有
@@ -61,6 +70,7 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 
 证明先用紧性推出 \(\omega(s)=\sup_{\Psi(\mu)\le s}d(\mu)\to0\)，再作连续严格增大函数包络；不需要轨道收敛假设，不给可计算或速率兼容 gauge。[CM-M Theorem 1]
 
+<a id="m-fin"></a>
 ### CM-FINITE：有限状态 exact-zero ⇔ 全局线性 EB
 
 固定有限状态几何、随机映射及其概率，令 \(C_{ij}=\|g_i-g_j\|^2\)、\(R_{ij}=c_R(g_i,g_j)\)。最优运输对偶顶点的 tight-edge 图产生有限多面体 \(\mathcal F_k\)，其并精确覆盖“不变列边缘＋该对边缘最优运输”的所有计划。记其顶点并为 \(\mathcal V\)，\(E(\mu)=d(\mu)^2\)。
@@ -74,6 +84,10 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 最优平方系数为
 \(B_* =\max_{v\in\mathcal V,R\cdot v>0}E(r(v))/(R\cdot v)\)，空最大值为 0。证明靠精确有限分支与凸性；不需要混合性、唯一不变律或 almost-firmness。只对固定数据给有限判定，不承诺多项式时间或跨系统统一常数。[CM-M Theorem F]
 
+<a id="m-false"></a>
+<a id="m-nopower"></a>
+<a id="fast-eb"></a>
+<a id="power-eb"></a>
 ### CM-FALSE-ZERO 与 CM-NO-POWER：两个独立反例
 
 | 模型 | 同时成立 | 排除的推理 |
@@ -85,6 +99,13 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 \(\Theta_\rho(t)^2=(1+\varepsilon)t^2-\tau[\rho^{-1}(t)]^2\)
 的严格收缩兼容 gauge，不能说所有速率证书均失败。[CM-M Theorems 2、4，Corollary 5]
 
+<a id="m-cond"></a>
+<a id="ob-res"></a>
+<a id="m-binary"></a>
+<a id="m-gauss"></a>
+<a id="m-moment"></a>
+<a id="m-recoup"></a>
+<a id="cond-eb"></a>
 ## 3. 条件残差修复与随机提升边界
 
 固定守恒边缘 \(\nu\)，条件运输
