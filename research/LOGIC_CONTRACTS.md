@@ -111,3 +111,9 @@ E98 的 AV-OBJECT 在同一 \(G\subset\operatorname{gph}F\) 上对所有图点�
 E99 需将 \(U\) 取成开球、\(A=A_\delta\) 且覆盖 \(d=0\) 输入；另对同一实际 \(Tx\) 证窗口化真残差 EB、标量兼容以及所给初值的严格长度预算，才调用 C53 的有限长度结论。D04 是残差定义入口，不能代替具体输出 EB 的证明。图块内单值也不能自动变成完整 \(J_{\lambda F}\) 的所有选择。
 
 E100 的 [C57](canonical/all_pairs_verifier.md#av-gap) 同时有 \(L=0\) 全对、全输入 coverage 和真实输出 EB，却有 \(S_G=\{0\}\ne S=\mathbb R\)，因此零距离输入不固定。完整 resolvent 的另一分支说明排他性也是独立门；[F20](../FAILED_ROUTES.md#f20) 保存两个缺口的区别。
+
+## E101–E102：闭图、闭自然域、稠密性是三个不同层次
+
+E101 固定**同一非空图块** \(G\subset H\times H\)、同一步长 \(\lambda>0\) 与完备实 Hilbert \(H\)。对所有 Minty 输入差小于一个共同 \(R>0\) 的**两图点**，要求 \(\|\Delta M_-\|\le\omega(\|\Delta M_+\|)\)、\(\omega(0)=0\) 及 \(\omega(t)\to0\)；既不要求输入球 coverage，也不要求 EB。Cayley pullback 在 \(\overline D\) 有唯一连续延拓，得到 \(G\) 闭 iff \(D=M_+(G)\) 闭。若用一般有正尺度跳跃的模，闭包保持模的精确常数另需核；本边只断言闭包表示与闭性。[C58](canonical/closed_graph_minty_domain.md#cg-closure)。
+
+E102 **另加**同一 \(G\) 的闭图和 \(D\) 在整个 \(H\) 稠密，才由闭 \(D\) 推出 \(D=H\)。取 \(G=[0,1]\times\{0\}\subset\mathbb R^2\) 可同时满足闭图与全对线性 RL，但没有零点邻域输入球，所以不能删除稠密性。即使图块已满输入，完整 \(F\) 在图块外的纤维仍需另证排他；这一边不提供 PPA 的真实残差 EB、兼容或留域。[F16](../FAILED_ROUTES.md#f16) 是更强的无 coverage 见证。

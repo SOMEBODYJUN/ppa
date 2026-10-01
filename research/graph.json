@@ -781,6 +781,16 @@
       "id": "OB-AV-ANCHOR",
       "label": "全对图块加 coverage 自动给完整零集锚（错误）",
       "file": "canonical/all_pairs_verifier.md#av-gap"
+    },
+    {
+      "id": "CG-CLOSURE",
+      "label": "闭图当且仅当 Minty 自然域闭",
+      "file": "canonical/closed_graph_minty_domain.md#cg-closure"
+    },
+    {
+      "id": "CG-COVERAGE",
+      "label": "闭图与稠密输入域合取给满覆盖",
+      "file": "canonical/closed_graph_minty_domain.md#cg-closure"
     }
   ],
   "edges": [
@@ -1951,6 +1961,28 @@
       "relation": "refutes",
       "scope": "完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。",
       "status": "新反例，全部完整纤维与两种零集直接核算"
+    },
+    {
+      "id": "E101",
+      "topic": "定义",
+      "inputs": [
+        "PD-CAYLEY"
+      ],
+      "output": "CG-CLOSURE",
+      "relation": "conditional",
+      "scope": "同一非空 G⊂H×H，H 完备，固定 λ>0；每对输入差<R 的图点满足 ω(0)=0 且 ω(t)→0 的全对模。剪切图的闭包是延拓 Cayley 的 pullback；G 闭 iff M_+(G) 闭。",
+      "status": "C58 近对角线模与闭包独立证明；正尺度跳跃模不自动延续原常数"
+    },
+    {
+      "id": "E102",
+      "topic": "定义",
+      "inputs": [
+        "CG-CLOSURE"
+      ],
+      "output": "CG-COVERAGE",
+      "relation": "conditional",
+      "scope": "同一图块另证 G 闭且 D=M_+(G) 在整个 H 稠密，才由 D 闭推出 D=H。单独闭图无 coverage；图块结论不排除完整图其他输出。",
+      "status": "C58 直接推论；边界取闭 G=[0,1]×{0}，见 F16"
     }
   ]
 }

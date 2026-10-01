@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 156 个数学节点、100 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 158 个数学节点、102 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
 
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
@@ -34,6 +34,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 前件 | 后件 | 需要额外检查 |
 | --- | --- | --- |
 | 全对 RL | Cayley 图坐标、图块内同输入唯一 | 完整或局部输入 coverage 独立 |
+| 近对角线全对模 + 闭图 | Minty 自然域闭 | 还需该域在整个空间稠密才得满输入覆盖；完备环境与同一图块 |
 | 局部图块 \(J_{\mathcal G}\) | 完整 \(J_{\lambda F}\) | 共同轨道输入域的全纤维一致性 |
 | 局部或全时间 \(T\) 观测 | 原关系 \(F\) | 必须保存完整输入与完整输出纤维 |
 | 锥 MSCQ | PPA 的真残差 EB | 同一零集及锥残差到 \(r_F\) 的桥 |
@@ -48,6 +49,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 局部 RLEB | 图块全对 RL + coverage + 最近零点图 + 真实输出 EB → 一步估计；再加兼容 + 留域 → 有限长度 | R01/R02 稿内证明，完整 \(J_F\) 需另证同一性 |
 | 指定分支弱接口 | 整球 named coverage + 全家族近似零点锚 + 实际输出真 EB + 小尺度兼容 + 初值留域 → Hilbert 有限长度；零距离锚条件还给局部闭零集 | C53/C54 独立重算；C55 证明此接口不蕴含同指数全对 RL，不可回填 R02 的全对输入 |
 | 全对图块到指定锚 | 同图块全对 RL + 指定输入 coverage + 图块零锚对完整零集保距离 → named B/A；实际输出 EB、兼容与留域另接 C53 | C56 条件桥；C57 完整关系说明前两项不能省去零锚保距离，完整排他也独立 |
+| 闭图与自然域 | 近对角线全对消失模 + Hilbert 完备 → 闭图 iff Minty 自然域闭；再合取自然域稠密 → 满覆盖 | C58 独立推导；闭图仍可有紧真自然域，图块外完整纤维另证 |
 | 非幂次边界 | 一般模 + Dini + 上述全部局部条件 → 点收敛；对数完整接缝 \(a\le1\) 有距离收缩但点发散 | 9/19 稿内构造与本轮局部重算 |
 | 全局结构 | 全图 RL → Cayley；二次 excess + 正交提升 + Banach → 单一正反影子 | C03 候选 |
 | 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
@@ -81,6 +83,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 [全对验证器](research/canonical/all_pairs_verifier.md) 划清图块零集与完整零集的距离门；C57 的完整多值图在全对 RL、满输入覆盖和输出真 EB 下仍缺指定锚，并保留远端完整分支。
 
+[闭图与 Minty 自然域](research/canonical/closed_graph_minty_domain.md) 从同一图块的近对角线模证明闭图—闭域等价，并把“域另已稠密”作为满覆盖的承重前提；它不产生残差 EB 或完整图排他。
+
 [指定分支局部定理](research/canonical/named_branch_local.md) 将旧 foundations §4–§5 的 anchored 近似锚、实际真残差 EB、Hilbert 完备性和留域预算写成 C53/C54；[振荡完整图 C55](research/canonical/named_branch_local.md#nb-oscillation) 把它同全对 RL 的逻辑边界具体化。
 
 ## Research Frontier
@@ -105,7 +109,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
 3. 为 9/25 §8 配对可编译源，核 [6, Theorem 6.2] 的范畴与 Čech 同调条件；在正文保持“指定 \(T\)”量词。
 4. 修订 9/19 随机推论的指定度量完备性，保留反例作为缘由；分别推进结构、锥、Markov 的外部先行性核验。
-5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations §1.3–§2 的未裁决接口、其余 GX 单元，以及 M1 **原生多值图到已验显式 T 的桥**；复合稿的真多值尖点与振荡弱分离例已有精确重写，下一步核秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
+5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations §0 残差窗口的边界、其余 GX 单元，以及 M1 **原生多值图到已验显式 T 的桥**；§1.1–§2 的选定代数和闭域接口已有明确去向，不代表整稿关闭。复合稿的真多值尖点与振荡弱分离例已有精确重写，下一步核秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
 
 ## File Map
 
@@ -116,9 +120,10 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/moving_anchor_reflection.md](research/canonical/moving_anchor_reflection.md) | MA-OBJECT/REFLECT/POWER/LIMIT 与 C51/C52：实际图点的输出近锚反射、幂型系数、固定锚及集合收缩反例；把局部 EB 用于反射或选锚时读。 |
 | [research/canonical/named_branch_local.md](research/canonical/named_branch_local.md) | NB-OBJECT/LOCAL/POWER/OSCILLATION 与 C53–C55：Hilbert 空间不取最近点的 anchored 分支收敛、局部闭性、幂次退化门及全对线性 RL 的振荡反例；要将局部 PPA 从全对图块改为指定分支时读。 |
 | [research/canonical/all_pairs_verifier.md](research/canonical/all_pairs_verifier.md) | AV-OBJECT/BRIDGE/GAP 与 C56/C57：同图块全对 RL、输入 coverage、零锚保距离三项如何生产指定 B/A，以及缺少保距离的完整多值反例；从 R02 接入 C53 时读。 |
+| [research/canonical/closed_graph_minty_domain.md](research/canonical/closed_graph_minty_domain.md) | CG-OBJECT/CLOSURE/BOUNDARY 与 C58：完备 Hilbert 空间内近对角线消失模使图闭 iff 自然输入域闭；只有另证稠密才得满 coverage，且图块不排除完整外纤维。从闭图尝试推出输入存在性时先读。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
-| [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | E02/03、E06/11/12、E17–19、E13、E54–100 的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
+| [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | E02/03、E06/11/12、E17–19、E13、E54–102 的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
 | [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |

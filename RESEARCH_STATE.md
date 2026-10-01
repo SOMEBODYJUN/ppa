@@ -1,14 +1,18 @@
 # Research State · 2026-10-01
 
+## 当前增量：闭图与 Minty 自然域闭性的条件桥
+
+[C58](research/canonical/closed_graph_minty_domain.md#cg-closure) 从旧 foundations §1.1–§1.4 的剪切坐标继续推导：同一非空图块上全对模只需在对角线附近于零点消失，完备 Hilbert 空间中 Cayley 唯一延拓至自然域闭包，图闭 iff 自然输入域闭。**再加自然域在整个空间稠密**才给满输入覆盖；闭图及全对 RL 本身仍无覆盖。E101–E102 明列两层额外门，不能把图块覆盖与完整 resolvent 任意纤维混同。§2 的 tied、inverse、缩放已在参数字典重算，此次将 §1–§2 五个精确单元补入逐源去向；这不是整份 foundations 的验收。下一步优先审 §0 残差窗口的边界、未裁决 GX 性质或 M1 原生 Sign 纤维，避免重复已有参数代数。
+
 ## 第二批增量：§3 图块验证器的零锚保距离
 
-[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在实 Hilbert 空间把同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对所有活跃输入的保距离，精确接到 C53 的 B/A；实际输出真残差 EB、兼容和留域仍独立。[C57](research/canonical/all_pairs_verifier.md#av-gap) 以完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 表明全对 \(L=0\) 与满输入 coverage 仍可能在所有非零零距离输入失去锚，完整排他亦失败；[F20](FAILED_ROUTES.md#f20) 记录两个缺口。下一步审旧稿 §1.3–§2 的未裁决接口与其他 GX 单元，或恢复 M1 原生多值桥。
+[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在实 Hilbert 空间把同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对所有活跃输入的保距离，精确接到 C53 的 B/A；实际输出真残差 EB、兼容和留域仍独立。[C57](research/canonical/all_pairs_verifier.md#av-gap) 以完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 表明全对 \(L=0\) 与满输入 coverage 仍可能在所有非零零距离输入失去锚，完整排他亦失败；[F20](FAILED_ROUTES.md#f20) 记录两个缺口。其后 §1.1–§2 的选定接口已按上节裁决；其他 GX 单元及 M1 原生多值桥仍开放。
 
 ## 当前增量：§4–§5 的指定分支与全对边界
 
 [C53/C54](research/canonical/named_branch_local.md) 从旧 foundations §4–§5 重写了实 Hilbert 空间的 named PPA：B 整球分支覆盖、A 对所有小距离输入（包括零距离点）的近似最近零点锚、E 对实际输出的真实全纤维残差 EB、兼容与严格留域预算须合取。由 A/B 还可推出 \(U\cap\overline S=U\cap S\)，故无需额外假设全局闭零集或最近点存在。幂次门在 \(0<\gamma<1,L>0\)、\(\gamma=1\)、\(L=0\) 三种参数情形分别记录，只提供上阶和充分条件，不提供普适正 Q 因子。
 
-[C55](research/canonical/named_branch_local.md#nb-oscillation) 是本轮新反例：完整闭图有指定分支 anchored \(\gamma=1,L=3/5\)、全图真 EB、实际收缩，但反射在任意零邻域非 Lipschitz。[F19](FAILED_ROUTES.md#f19) 阻止把这条弱接口的结论作为 R02 全对 RL 的证明。后续从未裁决的 §1.3–§2 或其他 GX 中选独立数学单元，或者恢复 M1 原生多值方程；先核目标对象与全部完整纤维。
+[C55](research/canonical/named_branch_local.md#nb-oscillation) 是该批新反例：完整闭图有指定分支 anchored \(\gamma=1,L=3/5\)、全图真 EB、实际收缩，但反射在任意零邻域非 Lipschitz。[F19](FAILED_ROUTES.md#f19) 阻止把这条弱接口的结论作为 R02 全对 RL 的证明。该批留下的 §1.3–§2 入口已在本次选定单元中处理；其他 GX 和 M1 原生多值方程仍须核目标对象与全部完整纤维。
 
 ## 第三笔增量：逐图点移动锚与固定锚的边界
 
@@ -69,9 +73,9 @@
 
 ## 证据与下一阶段
 
-现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前 100 条边经版本和范围重组，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
+现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前 102 条边经版本和范围重组，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
 
-**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向只覆盖表列的 35 个数学单元；GX 余项、随机其他支线、M1 原生图桥、复合秩亏原生证明和外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
+**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向只覆盖表列的 40 个数学单元；GX 余项、随机其他支线、M1 原生图桥、复合秩亏原生证明和外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
 **例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。
 
 **例库首批**：C24–C26 的 EX01 旋转、EX02 正紧对角、EX03 三次映射已给完整对象、真实残差和直接证明。尤其 EX02 排除任何趋零 gauge 的统一局部 EB，却保留每个初值的 PPA 强收敛；EX03 将固定目标常数 1、两变量 \(2^{2/3}\) 与算法残差下确界 \(\lambda^{-1/3}\) 分开。此三例只关闭对应 GX-004/009/021 的本轮数学单元，原卡其他性质和其余 GX 尚待重写。

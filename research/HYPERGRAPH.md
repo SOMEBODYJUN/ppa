@@ -9,6 +9,8 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E01 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D02 · 全对 RL 与指定尺度](foundations.md#d02) | equivalence → [D03 · Cayley 表示](foundations.md#d03) | 同图块、同 λ、同输入对尺度；**代数可复核** |
+| E101 | [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) | conditional → [CG-CLOSURE · 闭图当且仅当 Minty 自然域闭](canonical/closed_graph_minty_domain.md#cg-closure) | 同一非空 G⊂H×H，H 完备，固定 λ>0；每对输入差<R 的图点满足 ω(0)=0 且 ω(t)→0 的全对模。剪切图的闭包是延拓 Cayley 的 pullback；G 闭 iff M_+(G) 闭。；**C58 近对角线模与闭包独立证明；正尺度跳跃模不自动延续原常数** |
+| E102 | [CG-CLOSURE · 闭图当且仅当 Minty 自然域闭](canonical/closed_graph_minty_domain.md#cg-closure) | conditional → [CG-COVERAGE · 闭图与稠密输入域合取给满覆盖](canonical/closed_graph_minty_domain.md#cg-closure) | 同一图块另证 G 闭且 D=M_+(G) 在整个 H 稠密，才由 D 闭推出 D=H。单独闭图无 coverage；图块结论不排除完整图其他输出。；**C58 直接推论；边界取闭 G=[0,1]×{0}，见 F16** |
 
 ## 收敛
 

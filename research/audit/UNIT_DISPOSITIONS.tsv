@@ -34,3 +34,8 @@ history/sources/次单调论文研究/RL_foundations.md	§5.1–5.4 幂次和三
 history/sources/次单调论文研究/RL_foundations.md	§4 anchored 与 all-pairs 的逻辑区分	rewritten	C55-v1 / NB-OSCILLATION	research/canonical/named_branch_local.md#nb-oscillation	新完整图振荡反例证明锚定线性 RL 加真 EB 不推出全对线性 RL	不排除更弱全对指数 外部优先性未核
 history/sources/次单调论文研究/RL_foundations.md	§3.1 all-pairs verifier、zero-anchor equality	rewritten	C56-v1 / AV-BRIDGE	research/canonical/all_pairs_verifier.md#av-bridge	独立重算图块单射 active set 近似零锚与双输入反射模	实际输出 EB 兼容 留域及完整图排他均独立
 history/sources/次单调论文研究/RL_foundations.md	§3.1 zero-anchor equality 的必要门测试	rewritten	C57-v1 / AV-GAP	research/canonical/all_pairs_verifier.md#av-gap	新完整多值关系例 分离全对 coverage 与保距离零锚	只否定缺保距离的自动验证 不称普遍必要
+history/sources/次单调论文研究/RL_foundations.md	§1.1 定理1.1 剪切/能量等价	rewritten	PD-CAYLEY	research/canonical/parameter_dictionary.md#pd-cayley	同图块全对模的反射、内积及平行四边形式已独立重算	只给自然输入域单值；不含 coverage
+history/sources/次单调论文研究/RL_foundations.md	§1.2 注1.2 与§1.3 pullback 的闭性接口	rewritten	C58-v1 / CG-CLOSURE	research/canonical/closed_graph_minty_domain.md#cg-closure	从近对角线模、完备性和剪切逆映射重写闭图 iff 闭输入域；该推论为新增推导	正尺度跳跃模的同常数延拓及文献先行性未核
+history/sources/次单调论文研究/RL_foundations.md	§1.4 named 与 full resolvent	rewritten	PD-QUANTIFIERS	research/canonical/parameter_dictionary.md#pd-quantifiers	coverage 与完整纤维 exclusion 的合取已在参数字典明确，单值只对图块有效	具体原关系仍须单独证明 exclusion
+history/sources/次单调论文研究/RL_foundations.md	§2.1(a) tied 线性参数	rewritten	C28-v1 / PD-TIED	research/canonical/parameter_dictionary.md#pd-tied	平方展开重新推导精确 tied 曲线、L=0 端点及负系数边界	一般非 tied 双参数最优换算未核
+history/sources/次单调论文研究/RL_foundations.md	§2.1(b,c) inverse 与正值缩放	rewritten	PD-STEP / inverse-scaling	research/canonical/parameter_dictionary.md#pd-step	逐项缩放 Minty 差，区分改关系与同图换步	新关系的自然域和 coverage 不随文字推得

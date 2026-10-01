@@ -136,3 +136,7 @@
 ## 17. 增量：§3.1 全对图块验证器
 
 [C56](../canonical/all_pairs_verifier.md#av-bridge) 重新证明同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对活跃输入的保距离合取，只生产指定分支的 B/A，不生产实际输出真 EB 或完整图排他。[C57](../canonical/all_pairs_verifier.md#av-gap) 是新的完整关系反例：图块 \(L=0\) 全对且满域，但其零图点不保完整零集距离，故零距离输入上的锚条件失败。两行进入逐单元 TSV；旧 §1.1–§2 的其他代数或参数条目与全部 GX 性质并未据此整份关闭。
+
+## 15. 增量：§1.1–§2 的闭域门与已有重写去向
+
+从 foundations §1.1–§1.4 的剪切与 pullback 重新证明 [C58 闭图—闭自然域](../canonical/closed_graph_minty_domain.md#cg-closure)，增加原稿没有作为定理单列的完备性与稠密性合取门。闭图单独无覆盖，图块闭域也不排除完整图外分支。§1.1 的能量代数、§1.4 的 coverage/exclusion 与 §2.1(a)–(c) 的 tied、inverse、缩放此前已在 [参数字典](../canonical/parameter_dictionary.md) 独立重算，此次各给逐单元去向，避免在新正文重复证明后虚增成果。新增五行来源裁决仅针对这些明确语句；§0 残差窗口及更多 GX/同稿边界仍未逐项关闭，源文件级状态继续开放。
