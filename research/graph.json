@@ -591,6 +591,11 @@
       "id": "CS-RANK-EX",
       "label": "秩亏同阶传递反例",
       "file": "canonical/composite_subregularity.md#cs-objections"
+    },
+    {
+      "id": "CS-POWER-GENERAL",
+      "label": "所有满秩复合都有超线性幂 EB 的过强命题",
+      "file": "canonical/composite_subregularity.md#cs-model"
     }
   ],
   "edges": [
@@ -1474,11 +1479,11 @@
       "id": "E75",
       "topic": "复合次正则",
       "inputs": [
-        "CS-EB"
+        "CS-MODEL"
       ],
-      "output": "CS-MODEL",
-      "relation": "conditional",
-      "scope": "曲面 c=t−(s_+)² 是满秩特殊例；竖向修复改进通用常数，η=u^a 与 u log(e/u) 分别显示幂锐界和无固定 p>1 的非幂边界。",
+      "output": "CS-POWER-GENERAL",
+      "relation": "refutes",
+      "scope": "同一个满秩曲面 c=t−(s_+)²，η=u log(e/u) 有非幂趋零 gauge，却对任意固定 q>1 无 q 次幂 EB；只否定普遍幂次升级。",
       "status": "本轮直接计算"
     },
     {

@@ -167,7 +167,7 @@
 | E72 | [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-TRANSFER · 弱分离下目标集合一致](canonical/composite_subregularity.md#cs-transfer) | 有限连续 f、局部最小、驻点弱分离、S⊆Γ 且包含所有局部极小点；x∈B_{R/4}。；**本轮独立重算** |
 | E73 | [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) | c∈C^{1,1}、Dc 满行秩且 βR<σ0、φ 有限凸、c(x̄)∈C、外层真实 EB；目标 S=c^{-1}(C)；x∈B_r。；**本轮修复、链式、残差三门重算** |
 | E74 | [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) ∧ [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-PROX · 局部 RL、coverage、轨道预算](canonical/composite_subregularity.md#cs-prox) | 另需全部外层次梯度界 M、λβM<1；仅局部输出。轨道再需 Ψ_F(bd)≤κd、最近零点同图块和初值留域预算。；**本轮完整局部证明；不升为完整 J_F** |
-| E75 | [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) | conditional → [CS-MODEL · 曲面幂和非幂锐例](canonical/composite_subregularity.md#cs-model) | 曲面 c=t−(s_+)² 是满秩特殊例；竖向修复改进通用常数，η=u^a 与 u log(e/u) 分别显示幂锐界和无固定 p>1 的非幂边界。；**本轮直接计算** |
+| E75 | [CS-MODEL · 曲面幂和非幂锐例](canonical/composite_subregularity.md#cs-model) | refutes → [CS-POWER-GENERAL · 所有满秩复合都有超线性幂 EB 的过强命题](canonical/composite_subregularity.md#cs-model) | 同一个满秩曲面 c=t−(s_+)²，η=u log(e/u) 有非幂趋零 gauge，却对任意固定 q>1 无 q 次幂 EB；只否定普遍幂次升级。；**本轮直接计算** |
 | E76 | [CS-RANK-EX · 秩亏同阶传递反例](canonical/composite_subregularity.md#cs-objections) | limits → [CS-OPEN-RANK · 秩亏原生 verifier 开放目标](canonical/composite_subregularity.md#cs-objections) | c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。；**本轮显式反例** |
 
 ## 不蕴含关系
