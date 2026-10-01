@@ -39,3 +39,4 @@ history/sources/次单调论文研究/RL_foundations.md	§1.2 注1.2 与§1.3 pu
 history/sources/次单调论文研究/RL_foundations.md	§1.4 named 与 full resolvent	rewritten	PD-QUANTIFIERS	research/canonical/parameter_dictionary.md#pd-quantifiers	coverage 与完整纤维 exclusion 的合取已在参数字典明确，单值只对图块有效	具体原关系仍须单独证明 exclusion
 history/sources/次单调论文研究/RL_foundations.md	§2.1(a) tied 线性参数	rewritten	C28-v1 / PD-TIED	research/canonical/parameter_dictionary.md#pd-tied	平方展开重新推导精确 tied 曲线、L=0 端点及负系数边界	一般非 tied 双参数最优换算未核
 history/sources/次单调论文研究/RL_foundations.md	§2.1(b,c) inverse 与正值缩放	rewritten	PD-STEP / inverse-scaling	research/canonical/parameter_dictionary.md#pd-step	逐项缩放 Minty 差，区分改关系与同图换步	新关系的自然域和 coverage 不随文字推得
+history/sources/次单调论文研究/RL_foundations.md	§0.4 残差窗口与幂 gauge 缩域	rewritten	C59-v1 / RW-POSITIVE	research/canonical/residual_window_bridge.md#rw-positive	保留真全纤维 infimum；一般非减 gauge 增加正阈值充分门，闭图扁平 gauge 反例限制扩大陈述	有限 gauge 域外需另定义扩展；附加 RL 特例未据反例判决

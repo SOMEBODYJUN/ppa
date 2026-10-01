@@ -791,6 +791,26 @@
       "id": "CG-COVERAGE",
       "label": "闭图与稠密输入域合取给满覆盖",
       "file": "canonical/closed_graph_minty_domain.md#cg-closure"
+    },
+    {
+      "id": "RW-OBJECT",
+      "label": "真残差窗口与可评价邻域量词",
+      "file": "canonical/residual_window_bridge.md#rw-object"
+    },
+    {
+      "id": "RW-POSITIVE",
+      "label": "正阈值一般 gauge 的缩邻域桥",
+      "file": "canonical/residual_window_bridge.md#rw-positive"
+    },
+    {
+      "id": "RW-FLAT",
+      "label": "闭图扁平 gauge 的窗口反例",
+      "file": "canonical/residual_window_bridge.md#rw-flat"
+    },
+    {
+      "id": "OB-RW-NEIGH",
+      "label": "一般窗口 EB 自动成为邻域 EB（错误）",
+      "file": "canonical/residual_window_bridge.md#rw-flat"
     }
   ],
   "edges": [
@@ -1983,6 +2003,29 @@
       "relation": "conditional",
       "scope": "同一图块另证 G 闭且 D=M_+(G) 在整个 H 稠密，才由 D 闭推出 D=H。单独闭图无 coverage；图块结论不排除完整图其他输出。",
       "status": "C58 直接推论；边界取闭 G=[0,1]×{0}，见 F16"
+    },
+    {
+      "id": "E103",
+      "topic": "定义",
+      "inputs": [
+        "PD-RESIDUAL",
+        "RW-OBJECT"
+      ],
+      "output": "RW-POSITIVE",
+      "relation": "conditional",
+      "scope": "同一完整 F 和 S=F^-1(0)∋ubar；有限非减 ψ:[0,η) 且窗口 EB 对全部 r_F(u)<δ 成立；另需 0<δ<η 与 ψ(δ)>0。V=U∩B(ubar,ψ(δ)) 上对所有 r_F(u)<η 得同一 EB；定义域外不得擅用 ψ。",
+      "status": "C59 正阈值直接证明；正幂是特例，条件只充分"
+    },
+    {
+      "id": "E104",
+      "topic": "交叉限制",
+      "inputs": [
+        "RW-FLAT"
+      ],
+      "output": "OB-RW-NEIGH",
+      "relation": "refutes",
+      "scope": "完整闭图 F(0)={0,1},F(u)={1} (u≠0)，S={0}、ψ(t)=max(t−2,0)、δ=1/2；窗口只检验零点，但任意邻域有 r_F=1 且 ψ(1)=0<|u|。不附加全对 RL。",
+      "status": "C59 边界反例，完整图与全部纤维直接计算"
     }
   ]
 }

@@ -11,6 +11,7 @@
 | E01 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D02 · 全对 RL 与指定尺度](foundations.md#d02) | equivalence → [D03 · Cayley 表示](foundations.md#d03) | 同图块、同 λ、同输入对尺度；**代数可复核** |
 | E101 | [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) | conditional → [CG-CLOSURE · 闭图当且仅当 Minty 自然域闭](canonical/closed_graph_minty_domain.md#cg-closure) | 同一非空 G⊂H×H，H 完备，固定 λ>0；每对输入差<R 的图点满足 ω(0)=0 且 ω(t)→0 的全对模。剪切图的闭包是延拓 Cayley 的 pullback；G 闭 iff M_+(G) 闭。；**C58 近对角线模与闭包独立证明；正尺度跳跃模不自动延续原常数** |
 | E102 | [CG-CLOSURE · 闭图当且仅当 Minty 自然域闭](canonical/closed_graph_minty_domain.md#cg-closure) | conditional → [CG-COVERAGE · 闭图与稠密输入域合取给满覆盖](canonical/closed_graph_minty_domain.md#cg-closure) | 同一图块另证 G 闭且 D=M_+(G) 在整个 H 稠密，才由 D 闭推出 D=H。单独闭图无 coverage；图块结论不排除完整图其他输出。；**C58 直接推论；边界取闭 G=[0,1]×{0}，见 F16** |
+| E103 | [PD-RESIDUAL · 真残差与选中值的方向](canonical/parameter_dictionary.md#pd-residual) ∧ [RW-OBJECT · 真残差窗口与可评价邻域量词](canonical/residual_window_bridge.md#rw-object) | conditional → [RW-POSITIVE · 正阈值一般 gauge 的缩邻域桥](canonical/residual_window_bridge.md#rw-positive) | 同一完整 F 和 S=F^-1(0)∋ubar；有限非减 ψ:[0,η) 且窗口 EB 对全部 r_F(u)<δ 成立；另需 0<δ<η 与 ψ(δ)>0。V=U∩B(ubar,ψ(δ)) 上对所有 r_F(u)<η 得同一 EB；定义域外不得擅用 ψ。；**C59 正阈值直接证明；正幂是特例，条件只充分** |
 
 ## 收敛
 
@@ -59,6 +60,7 @@
 | E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
 | E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
 | E100 | [AV-GAP · 完整多值零集未被图块零锚覆盖](canonical/all_pairs_verifier.md#av-gap) | refutes → [OB-AV-ANCHOR · 全对图块加 coverage 自动给完整零集锚（错误）](canonical/all_pairs_verifier.md#av-gap) | 完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。；**新反例，全部完整纤维与两种零集直接核算** |
+| E104 | [RW-FLAT · 闭图扁平 gauge 的窗口反例](canonical/residual_window_bridge.md#rw-flat) | refutes → [OB-RW-NEIGH · 一般窗口 EB 自动成为邻域 EB（错误）](canonical/residual_window_bridge.md#rw-flat) | 完整闭图 F(0)={0,1},F(u)={1} (u≠0)，S={0}、ψ(t)=max(t−2,0)、δ=1/2；窗口只检验零点，但任意邻域有 r_F=1 且 ψ(1)=0<\|u\|。不附加全对 RL。；**C59 边界反例，完整图与全部纤维直接计算** |
 
 ## 局部拓扑
 

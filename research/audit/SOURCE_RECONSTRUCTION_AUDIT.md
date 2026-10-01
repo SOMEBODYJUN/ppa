@@ -139,4 +139,8 @@
 
 ## 15. 增量：§1.1–§2 的闭域门与已有重写去向
 
-从 foundations §1.1–§1.4 的剪切与 pullback 重新证明 [C58 闭图—闭自然域](../canonical/closed_graph_minty_domain.md#cg-closure)，增加原稿没有作为定理单列的完备性与稠密性合取门。闭图单独无覆盖，图块闭域也不排除完整图外分支。§1.1 的能量代数、§1.4 的 coverage/exclusion 与 §2.1(a)–(c) 的 tied、inverse、缩放此前已在 [参数字典](../canonical/parameter_dictionary.md) 独立重算，此次各给逐单元去向，避免在新正文重复证明后虚增成果。新增五行来源裁决仅针对这些明确语句；§0 残差窗口及更多 GX/同稿边界仍未逐项关闭，源文件级状态继续开放。
+从 foundations §1.1–§1.4 的剪切与 pullback 重新证明 [C58 闭图—闭自然域](../canonical/closed_graph_minty_domain.md#cg-closure)，增加原稿没有作为定理单列的完备性与稠密性合取门。闭图单独无覆盖，图块闭域也不排除完整图外分支。§1.1 的能量代数、§1.4 的 coverage/exclusion 与 §2.1(a)–(c) 的 tied、inverse、缩放此前已在 [参数字典](../canonical/parameter_dictionary.md) 独立重算，此次各给逐单元去向，避免在新正文重复证明后虚增成果。新增五行来源裁决仅针对这些明确语句；§0.4 的残差窗口由下一节另行裁决，更多 GX/同稿边界仍未逐项关闭，源文件级状态继续开放。
+
+## 16. 增量：§0.4 的一般 gauge 残差窗口
+
+[C59](../canonical/residual_window_bridge.md#rw-positive) 将旧稿定义0.4 的幂函数缩域推理重写为有正阈值的充分门，并显式限制到 gauge 可评价残差；[RW-FLAT](../canonical/residual_window_bridge.md#rw-flat) 给闭完整图的平坦 gauge 反例，阻断无条件去窗口。这项新增只关闭 §0.4 中被声明的量词关系，不验证同稿其余定义与后续定理，也不否定另加 all-pairs RL 的特殊结果。逐单元 TSV 增加一行，文件级状态仍开放。

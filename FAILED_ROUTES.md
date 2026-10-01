@@ -135,3 +135,10 @@
 - **尝试与断点**：由图块全对 RL、指定输入 coverage 直接推 C53 的锚定条件，忽略图块所含零图点 \(S_G\) 对完整零集 \(S\) 的距离是否保真。全对不等式只能拿同一个图块里的 \((p,0)\) 来比较。
 - **反例**：[C57](research/canonical/all_pairs_verifier.md#av-gap) 的完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 满足 \(L=0\) 全对 RL 且满输入覆盖，但 \(S=\mathbb R,S_G=\{0\}\)。所有非零输入到 \(S\) 距离零而指定 \(T(x)=x/2\) 不固定，输出真 EB 仍成立；完整 J 同时含 \(x\) 和 \(x/2\)。
 - **回收及重启条件**：[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在 active set 上另加 \(d(x,S_G)=d(x,S)\)，便能以近似 infimum 构造锚，无须投影取到；之后真 EB、兼容、留域和完整排他各自另证。这里的反例不宣称该保距离条件是任何算法收敛的普遍必要条件。
+
+<a id="f21"></a>
+## F21 · 一般 gauge 的残差窗口被当作无窗口邻域界
+
+- **尝试及断点**：窗口假设只检查 \(r_F(u)<\delta\) 的点；若直接把它用于邻域内全部有限残差，就必须控制阈值以上的 \(d(u,S)\) 与 \(\psi(r_F(u))\)。正幂有 \(\psi(\delta)>0\)，但允许的非减 gauge 可在残差 \(1\) 仍为零。
+- **闭图反例**：[RW-FLAT](research/canonical/residual_window_bridge.md#rw-flat) 的完整闭图取 \(F(0)=\{0,1\}\)、\(F(u)=\{1\}\) 对 \(u\ne0\)，\(S=\{0\}\)、\(\psi(t)=\max\{t-2,0\}\)、\(\delta=1/2\)。窗口内只见零点；任意零邻域的非零点却有 \(r_F=1\)、\(\psi(r_F)=0<d(u,S)\)。这是量词及 gauge 阈值的漏洞，不否定窗口版原陈述。
+- **可回收结果与重启门**：[C59](research/canonical/residual_window_bridge.md#rw-positive) 给出 \(\psi(\delta)>0\) 时缩至 \(B(\bar u,\psi(\delta))\) 的充分桥。若 gauge 只在 \([0,\eta)\) 定义，桥的无窗口结论只针对 \(r_F<\eta\)；改为全部残差须另定义全域 gauge。反例不满足额外全对 RL，因此不能被拿去否定加 RL 的特殊定理。

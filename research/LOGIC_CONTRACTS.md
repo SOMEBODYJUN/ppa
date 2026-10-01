@@ -117,3 +117,9 @@ E100 的 [C57](canonical/all_pairs_verifier.md#av-gap) 同时有 \(L=0\) 全对�
 E101 固定**同一非空图块** \(G\subset H\times H\)、同一步长 \(\lambda>0\) 与完备实 Hilbert \(H\)。对所有 Minty 输入差小于一个共同 \(R>0\) 的**两图点**，要求 \(\|\Delta M_-\|\le\omega(\|\Delta M_+\|)\)、\(\omega(0)=0\) 及 \(\omega(t)\to0\)；既不要求输入球 coverage，也不要求 EB。Cayley pullback 在 \(\overline D\) 有唯一连续延拓，得到 \(G\) 闭 iff \(D=M_+(G)\) 闭。若用一般有正尺度跳跃的模，闭包保持模的精确常数另需核；本边只断言闭包表示与闭性。[C58](canonical/closed_graph_minty_domain.md#cg-closure)。
 
 E102 **另加**同一 \(G\) 的闭图和 \(D\) 在整个 \(H\) 稠密，才由闭 \(D\) 推出 \(D=H\)。取 \(G=[0,1]\times\{0\}\subset\mathbb R^2\) 可同时满足闭图与全对线性 RL，但没有零点邻域输入球，所以不能删除稠密性。即使图块已满输入，完整 \(F\) 在图块外的纤维仍需另证排他；这一边不提供 PPA 的真实残差 EB、兼容或留域。[F16](../FAILED_ROUTES.md#f16) 是更强的无 coverage 见证。
+
+## E103–E104：残差阈值以上的 gauge 值
+
+E103 固定**完整** \(F\)、\(S=F^{-1}(0)\ni\bar u\) 与对完整 \(F(u)\) 取 infimum 的 \(r_F(u)\)。窗口版在同一个 \(U\) 只要求 \(r_F(u)<\delta\)，其中 \(0<\delta<\eta\) 且 \(\psi:[0,\eta)\to[0,\infty)\) 有限非减。再加 \(\psi(\delta)>0\)，才可用 \(d(u,S)\le\|u-\bar u\|\) 在 \(U\cap B(\bar u,\psi(\delta))\) 控制 **所有可评价的** \(r_F(u)<\eta\)；若要对 \(r_F(u)\ge\eta\) 或 \(+\infty\) 写原式，须另给全域扩展或约定。正阈值只是充分条件，不能标作必要。[C59](canonical/residual_window_bridge.md#rw-positive)。
+
+E104 的闭完整图在零点纤维 \(\{0,1\}\)、其余纤维 \(\{1\}\)，故窗口 \(r_F<1/2\) 只见零点；扁平 gauge 却在 \(r_F=1\) 仍为零。它反驳无条件去窗口，不反驳窗口版，也没有声称满足全对 RL。[RW-FLAT](canonical/residual_window_bridge.md#rw-flat)、[F21](../FAILED_ROUTES.md#f21)。
