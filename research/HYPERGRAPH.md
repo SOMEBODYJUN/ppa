@@ -69,7 +69,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E13 | [SAMPLE · 有限 proximal 样本与包络](holder_structure.md#sample) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选](holder_structure.md#h07) | collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系；**S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立** |
+| E13 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选](holder_structure.md#h07) | 指定 T 整窗非空紧 usc、Čech-Q-acyclic，有限多面体 A⊂int B、χ(A)≠0、上同调满射和 rational Lefschetz；FSC-COLLAR 只闭合度量内域余量，不能单独给 coincidence；T 可为子关系；**S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立** |
 
 ## 解选择
 
@@ -250,6 +250,13 @@
 | --- | --- | --- | --- |
 | E119 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-ENV · 连续 gauge 的最小凹上包络](topics/random_markov/scalar_moment_envelope.md#sme-envelope) | 1≤p<∞、R>0、连续非减 φ(0)=0、对所有概率律且实际 D≤R；最坏矩 p 次方等于 (cav g)(t^p)，g(z)=φ(z^(1/p))^p，至多二点幅度取等。；**C69 紧均值集与凹包络证明** |
 | E120 | [SME-ENV · 连续 gauge 的最小凹上包络](topics/random_markov/scalar_moment_envelope.md#sme-envelope) | conditional → [SME-POWER · 幂次最坏矩与同变量复合](topics/random_markov/scalar_moment_envelope.md#sme-power) | 幂 φ(u)=Au^α 特化：α≤1 为 At^α，α≥1 为 AR^(α−1)t；同一个 D 上逐点 S≤CD^γ、D+≤KS^q 先复合再取矩，必须同一合法耦合及支撑。；**C69 幂次与同变量复合** |
+
+## 局部值域的分析层
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E123 | [SAMPLE · 有限 proximal 样本与包络](holder_structure.md#sample) | conditional → [FSC-ENV · 经验证样本的全空间距离双包络](canonical/finite_sample_collar.md#fsc-envelope) | 非空有限样本每对实际输出分别独立验证步界和输出零距界；φ严格增；对整个 R^n 得 g_E≤d(·,S)≤u_E，不证明整窗 T；**C70-v1a 独立重算 (8.3)** |
+| E124 | [FSC-ENV · 经验证样本的全空间距离双包络](canonical/finite_sample_collar.md#fsc-envelope) ∧ [FSC-FULL · 指定 T 的整窗每个输出满足步界与误差界](canonical/finite_sample_collar.md#fsc-object) | conditional → [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) | 另加 A⊂int B 紧、sup_A u_E≤u、inf_{B\int A}g_E≥m>0、φ(u)<d(A,B^c)、α=cφ(u)^q<m；所有 p∈A 和 y∈T(p) 留在 int A 且 d(y,A^c)≥m−α；**C70-v1b 独立重算 (8.4)→(8.7)；未证拓扑 coincidence** |
 
 ## 不蕴含关系
 

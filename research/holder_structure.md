@@ -1,6 +1,6 @@
 # Hölder–RL：整体结构、局部收敛与拓扑条件
 
-本页将原稿重构为数学节点及合取依赖。**审读状态**：本轮独立核读并局部重算了下列 shadow、纤维实现、Dini、对数接缝和回缩的稿内证明，未发现所列内部计算的致命断点；这不等于完成外部引理适用条件、优先权或整篇论文的独立审稿。随机推论另有明确的度量完备性修补。9/25 Lefschetz 模块仍有外部定理核验门槛。
+本页将原稿重构为数学节点及合取依赖。**审读状态**：本轮独立核读并局部重算了下列 shadow、纤维实现、Dini、对数接缝和回缩的稿内证明，未发现所列内部计算的致命断点；这不等于完成外部引理适用条件、优先权或整篇论文的独立审稿。随机推论另有明确的度量完备性修补。9/25 引用的 rational morphism Lefschetz 定理适用门已有一手核验；整窗模型和其余拓扑证明义务仍未关闭。
 
 ## 来源与版本
 
@@ -204,7 +204,7 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 更一般地，每个连续 \(h:A\to\mathbb R^n\) 且 \(\sup_A\|h\|<(m-\alpha)/\lambda\)，存在 \(x\in\operatorname{int}A\) 使 \(h(x)\in F(x)\)、\(d(x,S)\le\kappa\|h(x)\|^q\)。
 
-**证明结构与核验门槛**：collar 不等式先给 \(T(A)\subset\operatorname{int}A\) 且所有输出距 \(A^c\) 至少 \(m-\alpha\)。紧图 \(\Gamma\) 第一投影 \(\pi\) 的 acyclic 纤维给 Vietoris–Begle 同构；线段在 B 内的同伦与上同调满射给 \(e^*=\pi^*\)。在同一个图 span 上改为 \(e_h(p,y)=y+\lambda h(y)\)，Lefschetz 数为 \(\chi(A)\)，得到 coincidence。原稿没有假定非线性像 \(e_h(T(p))\) 仍 acyclic，此点处理正确。
+**证明结构与核验门槛**：[C70 的独立度量重算](canonical/finite_sample_collar.md#fsc-envelope) 把有限样本双包络与**另需整窗全称条件**的 collar 分开，前者单独不能给 \(T(A)\subset\operatorname{int}A\)。合取后所有输出距 \(A^c\) 至少 \(m-\alpha\)。紧图 \(\Gamma\) 第一投影 \(\pi\) 的 acyclic 纤维给 Vietoris–Begle 同构；线段在 B 内的同伦与上同调满射给 \(e^*=\pi^*\)。在同一个图 span 上改为 \(e_h(p,y)=y+\lambda h(y)\)，Lefschetz 数为 \(\chi(A)\)，得到 coincidence。原稿没有假定非线性像 \(e_h(T(p))\) 仍 acyclic，此点处理正确。
 
 已按[一手文献卡 LIT-GRN-2002](LITERATURE.md#lit-grn-2002) 核原引文 [6, Theorem 6.2]：\(A\) 为 Euclidean neighborhood retract；\(\Gamma\) 与 \(\pi\) 是紧 Vietoris span；\(e_h(\Gamma)\subset A\) 为紧 morphism，故属原文的 \(CAC(A)\)；同伦和上同调满射给非零 Lefschetz 数。这关闭**该引文的适用条件门**，不把 C05 升为已独立审完的定理。有限观测不能建立整窗估计、usc 或 acyclicity；紧度量值的 Čech cohomology/homology 等价限于本范围，外部新颖性未核；也不存在 H02 → H07 的无条件蕴含。来源：S25 页 21–22，Theorem 8.1 证明及其后范围说明。
 

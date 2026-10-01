@@ -108,6 +108,21 @@
       "file": "holder_structure.md#sample"
     },
     {
+      "id": "FSC-ENV",
+      "label": "经验证样本的全空间距离双包络",
+      "file": "canonical/finite_sample_collar.md#fsc-envelope"
+    },
+    {
+      "id": "FSC-FULL",
+      "label": "指定 T 的整窗每个输出满足步界与误差界",
+      "file": "canonical/finite_sample_collar.md#fsc-object"
+    },
+    {
+      "id": "FSC-COLLAR",
+      "label": "有限包络与整窗条件给内域余量",
+      "file": "canonical/finite_sample_collar.md#fsc-collar"
+    },
+    {
       "id": "WINDOW",
       "label": "整窗 usc、acyclic 与上同调条件",
       "file": "holder_structure.md#window"
@@ -1095,12 +1110,12 @@
       "id": "E13",
       "topic": "局部拓扑",
       "inputs": [
-        "SAMPLE",
+        "FSC-COLLAR",
         "WINDOW"
       ],
       "output": "H07",
       "relation": "conditional",
-      "scope": "collar、χ(A)≠0、同调满射、rational Lefschetz；指定 T 可为子关系",
+      "scope": "指定 T 整窗非空紧 usc、Čech-Q-acyclic，有限多面体 A⊂int B、χ(A)≠0、上同调满射和 rational Lefschetz；FSC-COLLAR 只闭合度量内域余量，不能单独给 coincidence；T 可为子关系",
       "status": "S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立"
     },
     {
@@ -2355,6 +2370,24 @@
       "relation": "conditional",
       "scope": "对全部 0≤D≤R 且 ||D||p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。",
       "status": "C69 稀薄二点律的必要性"
+    },
+    {
+      "id": "E123",
+      "topic": "局部值域的分析层",
+      "inputs": ["SAMPLE"],
+      "output": "FSC-ENV",
+      "relation": "conditional",
+      "scope": "非空有限样本每对实际输出分别独立验证步界和输出零距界；φ严格增；对整个 R^n 得 g_E≤d(·,S)≤u_E，不证明整窗 T",
+      "status": "C70-v1a 独立重算 (8.3)"
+    },
+    {
+      "id": "E124",
+      "topic": "局部值域的分析层",
+      "inputs": ["FSC-ENV", "FSC-FULL"],
+      "output": "FSC-COLLAR",
+      "relation": "conditional",
+      "scope": "另加 A⊂int B 紧、sup_A u_E≤u、inf_{B\\int A}g_E≥m>0、φ(u)<d(A,B^c)、α=cφ(u)^q<m；所有 p∈A 和 y∈T(p) 留在 int A 且 d(y,A^c)≥m−α",
+      "status": "C70-v1b 独立重算 (8.4)→(8.7)；未证拓扑 coincidence"
     }
   ]
 }
