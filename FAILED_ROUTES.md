@@ -183,3 +183,10 @@
 
 - **尝试与断点**：在完整 \(F=\partial|x|\) 上，非零点真原算子残差恒为 1，因输入邻域可缩，固定零目标线性 EB 的最优**局部系数下确界**为 0。若因此对 \(J_{\lambda F}\) 的 fixed-point 步残差声称系数 0，则改变了残差对象。
 - **精确见证与回收**：[C78/C79](research/topics/examples/absolute_value_subgradient.md) 对每个 \(\lambda>0\) 给完整 \(J(p)=\operatorname{sgn}(p)(|p|-\lambda)_+\)；\(|p|<\lambda\) 时 \(d(p,\operatorname{Fix}J)=|p-J(p)|=|p|\)，步 EB 的锐局部系数是 1。原算子逆像局部钉住与一步终止依然同时成立，但两种常数不能相互替换。若 gauge 只定义在残差小于 1 的窗口，原算子窗口只剩零点，须另列真空范围。
+
+<a id="f28"></a>
+## F28 · 受限图的一步证书被授给完整母图或无限轨道
+
+- **尝试与断点**：GX-032 先给 \(F_\infty(x)=-\sqrt x\) 的半直线母图，再在 \(U=[0,1/16]\) 截取 \(\Gamma\)。若把短支逆图公式称为母图完整 resolvent，便漏掉母图从输入 0 到输出 1 的远支；若由受限 \(L=3\)、真二次 EB 和一步 \(O(p^2)\) 猜无限二次收敛，便漏掉下一输入是否仍在受限自然域。
+- **精确反证**：[C85/C86](research/topics/examples/restricted_root_graph.md#sr-escape) 在受限 \(F_U\) 中给 \(D_U=[-3/16,0]\)、每个非零输入的输出 \(J(p)>0\notin D_U\)，没有非零合法第二步。[C87](research/topics/examples/restricted_root_graph.md#sr-parent) 对真正完整的 \(F_\infty\) 给 \(J(0)=\{0,1\}\)，同输入不同反射输出使零消失全对模失败；非零完整路径向 \(+\infty\)。
+- **可回收与重启门**：受限图三项锐成对常数、真二次输出 EB 和锐一步比值都独立成立。任何轨道定理须逐步证明指定输入域不变和完整纤维排他；任何母图断言须重新对全部远支检验。扩大原关系是改变对象，不是为受限证书补一个推理步骤。

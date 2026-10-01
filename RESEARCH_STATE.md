@@ -7,9 +7,13 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 63 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 65 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
+
+## 本批增量：GX-032 的受限图与母图拆分
+
+[C85–C87](research/topics/examples/restricted_root_graph.md) 从同一 GX-032 的两种对象重算：短图 \(F_U\) 的锐全对线性 RL \(L=3\)、真二次 EB 和无第二步，与母图 \(F_\infty\) 的完整远支、同输入碰撞、非零路径发散分离。[F28](FAILED_ROUTES.md#f28) 保存把受限图公式转授给母图或无限轨道的具体断点。两份来源成员只裁决了选定 GX-032 单元，不关闭 ZIP 其它卡、历史 LT 引文和外部先行性。
 
 ## 本批增量：有界平方图的错窗口门与空白接收纠错
 

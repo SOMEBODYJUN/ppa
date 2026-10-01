@@ -5,3 +5,4 @@
 新对象另建短文件；旧卡新增属性时只在逐项证明后修正文及 Claim 身份。外部先行性和其余 GX 卡继续按 [覆盖审计](../../audit/SOURCE_RECONSTRUCTION_AUDIT.md)处理。
 
 [有界平方图](bounded_square_minty.md) 从 GX-065 分开左端点的全图 Minty 相变、零点半阶真残差和正负两侧的实际路径；端点的锐全对指数不能被搬到零点作同窗收敛门。
+[负平方根短图与母图](restricted_root_graph.md) 从 GX-032 拆开两种完整关系；短图有锐全对常数和真二次 EB 却无第二步，母图另有远支及发散路径。

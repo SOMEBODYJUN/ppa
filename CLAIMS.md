@@ -510,3 +510,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C83 同一 \(F\)，完整算子真残差 \(r_F(x)=x^2\) 在 \([-1,1]\)，\(S=\{0\}\)，故固定零目标局部 EB 最高指数 \(q=1/2\)，锐缩窗系数 1。固定 \(\lambda=1/2\)、完整 \(J\) 和实际自然输入域 \([-1/2,3/2]\)：每个 \(0<p_0<3/2\) 的唯一无限路径 \(p_{k+1}=J(p_k)\) 满足 \(kp_k\to2\)；每个 \(-1/2\le p_0<0\) 仅有有限条合法步，最终离开自然输入域。
 - **Dependencies / Evidence / Status / Related Files**：[BS-ZERO](research/topics/examples/bounded_square_minty.md#bs-zero) 的完整残差恒等式、逆图迭代和有界单调反证；`derived-checked`。零目标观察取材于 GX-065，正/负路径是本仓库新增推导。
 - **Counterevidence / Scope**：双侧目标 MR 因负目标空逆像失败；图上端点的全图半阶证书和零点真 EB 不在同一个局部图窗。没有所有零点附近输入的无限合法轨道或 \(q\gamma>1\) 的收缩门，不能从两个半阶数字声称 PPA 局部收敛。
+
+## C85-v1 / SR-GEOMETRY · 受限负平方根图的锐成对常数
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整受限关系 \(F_U(x)=\{-\sqrt x\}\) 当 \(0\le x\le1/16\)、其余为空，单位步长；对图中任意**两**点，图差 \(a=\Delta x,b=\Delta v,d=a+b,r=a-b\)。最小有效非负 LT \(ab\ge-\tau d^2\) 常数 \(\tau=2\)，全对线性 \(|r|\le L|d|\) 锐 \(L=3\)，cohypomonotone \(ab\ge-\rho b^2\) 锐 \(\rho=1/2\)。任意原点右图窗无有限 \(ab\ge-\rho a^2\) 的 hypomonotone 常数。
+- **Dependencies / Evidence / Status**：[SR-GEOMETRY](research/topics/examples/restricted_root_graph.md#sr-geometry) 以参数 \(s,t\in[0,1/4]\) 的全部图点割线和逼近端点重算；`derived-checked`。来源 GX-032 仅作为线索，成员定位见逐源表。
+- **Counterevidence / Scope**：只用于受限图和单位步长；不授给母图 \(F_\infty(x)=-\sqrt x\) (\(x\ge0\)) 的完整 resolvent。历史命名及外部优先性未核。
+
+## C86-v1 / SR-ESCAPE · 受限真二次 EB 不给第二步
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C85 同一完整受限 \(F_U\)，自然输入域 \(D_U=[-3/16,0]\)，每个非零 \(p\in D_U\) 唯一输出 \(J_{F_U}(p)=t(p)^2>0\notin D_U\)。全部图输出的真残差 \(r_{F_U}(x)=\sqrt x\)，\(S_U=\{0\}\)，故固定零目标 \(d(x,S_U)=r_{F_U}(x)^2\) 的最高局部幂 2、系数 1；\(p\uparrow0\) 的锐一步比值 \(J(p)/|p|^2\to1\)，但无任何非零两步合法路径。
+- **Dependencies / Evidence / Status**：[SR-ESCAPE](research/topics/examples/restricted_root_graph.md#sr-escape) 的完整逆图根、自然域和全输出残差直接证明；`derived-checked`。
+- **Counterevidence / Scope**：一步模与真 EB 是有效结果；没有输入不变域，不能称“二次收敛”。若改回完整母图，输入域、纤维及命题身份均变。
+
+## C87-v1 / SR-PARENT · 半直线母图的完整远支
+
+- **Exact Statement / Objects / Domain / Quantifiers**：定义**另一个**完整关系 \(F_\infty(x)=\{-\sqrt x\}\) 当 \(x\ge0\)、其余为空；固定 \(\lambda=1\)，完整自然域 \([-1/4,\infty)\)，\(-1/4\le p\le0\) 的全部输出为 \(t_\pm(p)^2\)，\(p>0\) 仅为 \(t_+(p)^2\)，\(p<-1/4\) 为空。\(J_{F_\infty}(0)=\{0,1\}\) 阻断所有零消失全对 RL；任何非零合法初始输入的每条完整近端路径在第一步后为唯一正路径并趋 \(+\infty\)，零初值可恒零或稍后逃逸。
+- **Dependencies / Evidence / Status**：[SR-PARENT](research/topics/examples/restricted_root_graph.md#sr-parent) 完整二次根及逐步差分证明；`derived-checked`。母图身份来自原 GX-032 的第一句，全部路径是本库新增推导。
+- **Counterevidence / Scope**：受限图 \(\Gamma\) 的公式只对其短支与短域成立；不得把受限 \(L=3\)、二次一步或零目标路径结论移植给母图。旧稿的 LT 外部调用及先行性另审。

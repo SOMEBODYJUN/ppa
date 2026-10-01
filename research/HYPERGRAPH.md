@@ -68,6 +68,7 @@
 | E141 | [ABS-OP · 原算子残差跳跃与逆像钉住](topics/examples/absolute_value_subgradient.md#av-operator) ∧ [ABS-PROX · 完整软阈值近端的锐步 EB](topics/examples/absolute_value_subgradient.md#av-prox) | limits → [OB-RES-STEP · 原算子与步残差系数不可互授](../FAILED_ROUTES.md#f27) | 同一完整图的原算子残差局部系数下确界 0，近端步残差局部锐系数 1；不同残差不可互授。；**F27/C78–C79** |
 | E145 | [SIN-PHASE · 临界全对三分之一阶及步长三相](topics/examples/positive_sine_phase.md#sin-phase) ∧ [SIN-TARGET · 非零目标 3 的锐半阶 EB](topics/examples/positive_sine_phase.md#sin-target) | limits → [OB-SIN-PPA · 无零点阻断局部模与 PPA 拼接](topics/examples/positive_sine_phase.md#sin-boundary) | C81 临界 RL 在奇 π 的图输出 2；C82 误差界是非零目标 3；完整 F 零集为空，每条固定步长完整近端选择路径向 −∞。不同目标与图点的模不能相乘为零集 PPA 速率。；**同对象但不同局部目标的量词边界及新动力推导** |
 | E148 | [BS-PHASE · 左端点 Minty 折叠的锐全对相变](topics/examples/bounded_square_minty.md#bs-phase) ∧ [BS-ZERO · 零点半阶真残差与两侧合法路径](topics/examples/bounded_square_minty.md#bs-zero) | limits → [OB-BS-WINDOW · 全图端点指数不得接作零点局部收敛](topics/examples/bounded_square_minty.md#bs-zero) | C83 全图半阶锐性发生在 x=−1，C84 零目标半阶发生在 x=0；两个局部中心不同。即使同一完整图有两张证书，也不提供负侧留域或所有零点初值的无限 PPA 路径。；**C83/C84 同对象不同窗口和实际路径见证** |
+| E152 | [SR-GEOMETRY · 短图的锐 LT 与全对 RL 常数](topics/examples/restricted_root_graph.md#sr-geometry) ∧ [SR-ESCAPE · 受限图真二次 EB 与无第二步](topics/examples/restricted_root_graph.md#sr-escape) ∧ [SR-PARENT · 完整母图远支、碰撞与路径发散](topics/examples/restricted_root_graph.md#sr-parent) | limits → [OB-SR-IDENTITY · 受限图证书不能转授母图或无限轨道](../FAILED_ROUTES.md#f28) | 受限图的全对 RL 与真实二次 EB 只给一步，不能删除输入不变性；母图添远支后不再满足其全对 RL。受限与母图的完整 resolvent、轨道量词是不同命题。；**F28/C85–C87 对象身份与续步反例** |
 
 ## 局部拓扑
 
@@ -174,6 +175,9 @@
 | E144 | [SIN-OBJECT · 正值正弦完整图与 Minty 坐标](topics/examples/positive_sine_phase.md#sin-object) | conditional → [SIN-TARGET · 非零目标 3 的锐半阶 EB](topics/examples/positive_sine_phase.md#sin-target) | 同一完整映射，但目标为 3、参考输入 π/2；固定目标锐半阶模 √2；双侧扰动目标 y>3 为空逆像，不能扩成两变量 MR。；**C82 完整逆纤维与余弦渐近重算** |
 | E146 | [BS-OBJECT · 有界平方完整图与自然 Minty 域](topics/examples/bounded_square_minty.md#bs-object) | conditional → [BS-PHASE · 左端点 Minty 折叠的锐全对相变](topics/examples/bounded_square_minty.md#bs-phase) | 同一完整有界图 F(x)=x², \|x\|≤1；固定 λ<1/2 全图线性锐模；λ=1/2 左端点全对最高 1/2 阶、锐常数 2√2；λ>1/2 内折叠同输入碰撞。只在自然输入域谈完整 J。；**C83-v1 割线和完整端点约束重算** |
 | E147 | [BS-OBJECT · 有界平方完整图与自然 Minty 域](topics/examples/bounded_square_minty.md#bs-object) | conditional → [BS-ZERO · 零点半阶真残差与两侧合法路径](topics/examples/bounded_square_minty.md#bs-zero) | 同一图 S={0}, r_F(x)=x² 给零点固定目标半阶 EB 锐模 1；λ=1/2 时正输入路径 k p_k→2，负输入有限次离开 D=[−1/2,3/2]。；**C84-v1 全纤维与迭代重算** |
+| E149 | [SR-OBJECT · 负平方根的受限图与母图身份](topics/examples/restricted_root_graph.md#sr-object) | conditional → [SR-GEOMETRY · 短图的锐 LT 与全对 RL 常数](topics/examples/restricted_root_graph.md#sr-geometry) | 严格固定受限图 Γ={(t²,−t):0≤t≤1/4} 和 λ=1；全部图点对的锐 LT τ=2、线性 RL L=3、cohypomonotone ρ=1/2；零点右窗无有限 hypomonotone 系数。；**C85-v1 全点对参数化重算** |
+| E150 | [SR-OBJECT · 负平方根的受限图与母图身份](topics/examples/restricted_root_graph.md#sr-object) | conditional → [SR-ESCAPE · 受限图真二次 EB 与无第二步](topics/examples/restricted_root_graph.md#sr-escape) | 同一完整受限 F_U 的自然输入域 D=[−3/16,0]；真输出残差 r_F(x)=√x 给 q=2 的固定零目标锐系数 1，但每个非零合法输入的唯一输出为正，故不在 D。；**C86-v1 全纤维与自然域核算** |
+| E151 | [SR-OBJECT · 负平方根的受限图与母图身份](topics/examples/restricted_root_graph.md#sr-object) | conditional → [SR-PARENT · 完整母图远支、碰撞与路径发散](topics/examples/restricted_root_graph.md#sr-parent) | 改为另一个半直线完整母关系 F∞ 时须重新求全部根：J(0)={0,1} 同输入碰撞排除零消失全对 RL；非零路径第一步后为正且趋 +∞。；**C87-v1 新对象完整根和动力重算** |
 
 ## 参数字典
 

@@ -1117,6 +1117,31 @@
       "id": "OB-BS-WINDOW",
       "label": "全图端点指数不得接作零点局部收敛",
       "file": "topics/examples/bounded_square_minty.md#bs-zero"
+    },
+    {
+      "id": "SR-OBJECT",
+      "label": "负平方根的受限图与母图身份",
+      "file": "topics/examples/restricted_root_graph.md#sr-object"
+    },
+    {
+      "id": "SR-GEOMETRY",
+      "label": "短图的锐 LT 与全对 RL 常数",
+      "file": "topics/examples/restricted_root_graph.md#sr-geometry"
+    },
+    {
+      "id": "SR-ESCAPE",
+      "label": "受限图真二次 EB 与无第二步",
+      "file": "topics/examples/restricted_root_graph.md#sr-escape"
+    },
+    {
+      "id": "SR-PARENT",
+      "label": "完整母图远支、碰撞与路径发散",
+      "file": "topics/examples/restricted_root_graph.md#sr-parent"
+    },
+    {
+      "id": "OB-SR-IDENTITY",
+      "label": "受限图证书不能转授母图或无限轨道",
+      "file": "../FAILED_ROUTES.md#f28"
     }
   ],
   "edges": [
@@ -2830,6 +2855,52 @@
       "relation": "limits",
       "scope": "C83 全图半阶锐性发生在 x=−1，C84 零目标半阶发生在 x=0；两个局部中心不同。即使同一完整图有两张证书，也不提供负侧留域或所有零点初值的无限 PPA 路径。",
       "status": "C83/C84 同对象不同窗口和实际路径见证"
+    },
+    {
+      "id": "E149",
+      "topic": "例库",
+      "inputs": [
+        "SR-OBJECT"
+      ],
+      "output": "SR-GEOMETRY",
+      "relation": "conditional",
+      "scope": "严格固定受限图 Γ={(t²,−t):0≤t≤1/4} 和 λ=1；全部图点对的锐 LT τ=2、线性 RL L=3、cohypomonotone ρ=1/2；零点右窗无有限 hypomonotone 系数。",
+      "status": "C85-v1 全点对参数化重算"
+    },
+    {
+      "id": "E150",
+      "topic": "例库",
+      "inputs": [
+        "SR-OBJECT"
+      ],
+      "output": "SR-ESCAPE",
+      "relation": "conditional",
+      "scope": "同一完整受限 F_U 的自然输入域 D=[−3/16,0]；真输出残差 r_F(x)=√x 给 q=2 的固定零目标锐系数 1，但每个非零合法输入的唯一输出为正，故不在 D。",
+      "status": "C86-v1 全纤维与自然域核算"
+    },
+    {
+      "id": "E151",
+      "topic": "例库",
+      "inputs": [
+        "SR-OBJECT"
+      ],
+      "output": "SR-PARENT",
+      "relation": "conditional",
+      "scope": "改为另一个半直线完整母关系 F∞ 时须重新求全部根：J(0)={0,1} 同输入碰撞排除零消失全对 RL；非零路径第一步后为正且趋 +∞。",
+      "status": "C87-v1 新对象完整根和动力重算"
+    },
+    {
+      "id": "E152",
+      "topic": "交叉限制",
+      "inputs": [
+        "SR-GEOMETRY",
+        "SR-ESCAPE",
+        "SR-PARENT"
+      ],
+      "output": "OB-SR-IDENTITY",
+      "relation": "limits",
+      "scope": "受限图的全对 RL 与真实二次 EB 只给一步，不能删除输入不变性；母图添远支后不再满足其全对 RL。受限与母图的完整 resolvent、轨道量词是不同命题。",
+      "status": "F28/C85–C87 对象身份与续步反例"
     }
   ]
 }
