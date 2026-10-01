@@ -61,6 +61,7 @@
 | E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
 | E100 | [AV-GAP · 完整多值零集未被图块零锚覆盖](canonical/all_pairs_verifier.md#av-gap) | refutes → [OB-AV-ANCHOR · 全对图块加 coverage 自动给完整零集锚（错误）](canonical/all_pairs_verifier.md#av-gap) | 完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。；**新反例，全部完整纤维与两种零集直接核算** |
 | E104 | [RW-FLAT · 闭图扁平 gauge 的窗口反例](canonical/residual_window_bridge.md#rw-flat) | refutes → [OB-RW-NEIGH · 一般窗口 EB 自动成为邻域 EB（错误）](canonical/residual_window_bridge.md#rw-flat) | 完整闭图 F(0)={0,1},F(u)={1} (u≠0)，S={0}、ψ(t)=max(t−2,0)、δ=1/2；窗口只检验零点，但任意邻域有 r_F=1 且 ψ(1)=0<\|u\|。不附加全对 RL。；**C59 边界反例，完整图与全部纤维直接计算** |
+| E107 | [DR-TAN · GX-069 切触 DR 的半阶真残差](topics/examples/dr_tangency_transversality.md#dr-tangent) | refutes → [OB-DR-STRICT · 半阶 EB 自动给统一一步严格距离收缩（错误）](topics/examples/dr_tangency_transversality.md#dr-tangent) | z_s=(s,−s²)→0 时 d(Tz_s,S)=d(z_s,S)>0；虽有全邻域半阶 EB，任何统一 ρ<1 的一步距离比均失败。；**C60 精确取等序列** |
 
 ## 局部拓扑
 
@@ -139,6 +140,8 @@
 | E56 | [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) ∧ [RP-OBJECT · 有限维不一致二次近端与守恒边缘](canonical/random_proximal.md#rp-object) | implies → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 同一固定 ν、条件运输距离、整个混合核的真实 law-step 残差；双边常数 1±c、有限长度；不能换普通物理步长。；**本轮独立推导；未核外部优先权** |
 | E57 | [RP-BRANCH · 分支残差零集是共同固定点](canonical/random_proximal.md#rp-branch) ∧ [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 分支 firmly nonexpansive 且各有固定点时，逐支推前残差零集是共同固定点支持律；混合不变律可存在而该残差严格正。；**本轮独立推导；未核外部优先权** |
 | E58 | [RP-SCALAR · 标量尖锐性与正物理步长](canonical/random_proximal.md#rp-scalar) | sharpness → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 在双分支标量子族，c=a 且一般 EB 上界系数 1/(1-c) 与相对收缩 c^k 同时取等；不声称每个固定矩阵模型最优。；**本轮独立推导；未核外部优先权** |
+| E108 | [FP-OBJECT · 同一目标的全局 prox 与指定选择核](topics/random_markov/proximal_selection_seam.md#ps-objects) | conditional → [FP-ABSORB · 固定目标平稳律的吸收支持](topics/random_markov/proximal_selection_seam.md#ps-absorption) | 同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫\|f\|，不适用于完整非凸次梯度 resolvent 或随机换目标。；**C62 有界 arctan 严格下降证明** |
+| E109 | [FP-SEAM · 非乘积 prox 的闭图与核接缝](topics/random_markov/proximal_selection_seam.md#ps-example) ∧ [FP-ABSORB · 固定目标平稳律的吸收支持](topics/random_markov/proximal_selection_seam.md#ps-absorption) | conditional → [FP-NOEB · 完整 W2 邻域的 law-step gauge 障碍](topics/random_markov/proximal_selection_seam.md#ps-no-eb) | 固定二维非乘积 group-ℓ0、λ=1 与 fair tie 核；唯一不变律 δ0，μk=(1−ε)δ0+εδakv 在任意给定完整 W2 邻域中可取固定 ε>0，真实 law-step→0 而到不变律距离→√(2ε)>0。非 Feller 接缝与闭 prox 图并存。；**C63 全图、全部平稳点与显式最优运输重算；V10 仅有限代数** |
 
 ## 例库
 
@@ -147,6 +150,8 @@
 | E59 | [EX-ROT · 纯旋转完整图与 resolvent](canonical/example_atlas.md#ex01) | refutes → [OB-STRONG · J 严格收缩必推出 F 强单调（错误）](canonical/example_atlas.md#ex01) | 全图 R²、每个 ω,λ>0，完整 J 的 Lip 严格小于 1，而 F 的单调内积恒为 0；无附加条件的逆推论错误。；**本轮独立推导；仅此例/族** |
 | E60 | [EX-DIAG · 正紧对角无限维尾方向](canonical/example_atlas.md#ex02) | refutes → [OB-GAUGE · 严格单调+cocoercive 必有趋零 gauge EB（错误）](canonical/example_atlas.md#ex02) | H=ℓ² 的同一个 F；对每个趋零 ψ，不存在任意局部统一 C,δ；有限维截断不继承反例。；**本轮独立推导；仅此例/族** |
 | E61 | [EX-CUBIC · 三次映射与完整 J](canonical/example_atlas.md#ex03) | implies → [EX-MODULI · 固定/移动目标与算法残差三种精确模](canonical/example_atlas.md#ex03) | F=x³ 的固定目标 q=1/3 模 1、两变量模 2^(2/3)、Gλ=I−JλF 局部模下确界 λ^(−1/3)；对象及取到性不同。；**本轮独立推导；仅此例/族** |
+| E105 | [DR-OBJECT · DR 算法残差及两种集合几何](topics/examples/dr_tangency_transversality.md#dr-objects) | conditional → [DR-TAN · GX-069 切触 DR 的半阶真残差](topics/examples/dr_tangency_transversality.md#dr-tangent) | C=横轴、D=抛物线、G=I-T，投影管 U={b>−1/2}；对全部零附近输入的真算法残差给最优半阶模 1，不把法锥和 N_C+N_D 当 G。；**C60 完整投影参数与取等序列重算** |
+| E106 | [DR-OBJECT · DR 算法残差及两种集合几何](topics/examples/dr_tangency_transversality.md#dr-objects) | conditional → [DR-TRANS · GX-070 横截 DR 的精确线性模](topics/examples/dr_tangency_transversality.md#dr-transverse) | 改为夹角 θ∈(0,π/2) 的两条横截线、同一 DR 公式；G=I−cosθ Qθ，全域 MR/MSR 精确模 1/sinθ，实际 T 轨道因子 cosθ；是另一对象。；**C61 反射与奇异值恒等式重算** |
 
 ## 参数字典
 
@@ -217,6 +222,14 @@
 | E96 | [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | conditional → [NB-POWER · 幂次充分门与退化端点](canonical/named_branch_local.md#nb-power) | 同一 B/A/E、ψ(t)=ρt^q 且窗口门保持；γ<1,L>0 使用 p=γq；γ=1 使用 q；L=0 使用 q，不受 γ 影响。p>1 或临界系数<1 是充分门，另需留域；只给 upper order。；**§5 重新分解三类端点，未声称必要或正 Q 因子** |
 | E98 | [AV-OBJECT · 全对图块、输入覆盖与零锚保距离](canonical/all_pairs_verifier.md#av-object) | conditional → [AV-BRIDGE · 全对验证器给指定锚与双输入模](canonical/all_pairs_verifier.md#av-bridge) | 实 Hilbert、同一 G⊂gph F 的所有图点对 RL(λ,L,γ)、U⊂M_+(G)，且 active set A 每个 x 有 d(x,S_G)=d(x,S)<∞；由图块单射与近似零锚得指定分支 A 及 U 上反射模。；**旧 §3.1 逐图点重算；EB 与轨道尚未提供** |
 | E99 | [AV-BRIDGE · 全对验证器给指定锚与双输入模](canonical/all_pairs_verifier.md#av-bridge) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | 取 U 开球、A=Aδ 含零距离输入；另对每个实际 Tx 核真残差窗口 E、同一 ψ 的 h(δ)<η 与 limsup Φ/r<1，并给每个初值严格留域。只得指定轨道；完整 J_F 任意选择须另证排他。；**C56 的 B/A 接口加 C53 独立 E/兼容/留域；不把定义 D04 当成已验输出 EB** |
+
+## 路径动力学
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E110 | [SL-INCLUSION · 新 Sign 包含与全纤维图](topics/path_dynamics/m1_sign_lift.md#sl-inclusion) | implies → [SL-RESOLVENT · 新完整图的 J 等于 M1 显式 T](topics/path_dynamics/m1_sign_lift.md#sl-graph) | 新定义 F_lift(u,0) 的全部 (h,q) 由 u+h−3q∈(2/3)Sign(h)+(2/3)h³ 给出，轴外为空；λ=1，Sign(0)=[−1,1]。对每个 z∈R² 唯一 h=f(p−3q)，完整 J_Flift(z)={Tz}，自然 Minty 域全平面；绝不认证历史原生循环方程。；**C64 全分支与端点独立反演** |
+| E111 | [SL-INCLUSION · 新 Sign 包含与全纤维图](topics/path_dynamics/m1_sign_lift.md#sl-inclusion) | conditional → [SL-RESIDUAL · 新图端点的锐线性真残差](topics/path_dynamics/m1_sign_lift.md#sl-zero-residual) | 同一新图的全部残差纤维在端点给 r_F(c+δ,0)=δ/3、d((c+δ,0),zer F)=δ (0<δ<1)；线性 EB 常数 3 锐利，和 C38/C39 的动力证明逻辑独立。；**C64 按 h 正/零/负分支求 infimum** |
+| E112 | [SL-RESOLVENT · 新完整图的 J 等于 M1 显式 T](topics/path_dynamics/m1_sign_lift.md#sl-graph) ∧ [M1-CAPTURE · 每个球内初值两步捕获](topics/path_dynamics/m1_capture.md#m1-capture) ∧ [M1-SHARP · 锐一步距离因子 3/√10](topics/path_dynamics/m1_capture.md#m1-sharp) | conditional → [SL-DYNAMICS · 新图完整 resolvent 的显式捕获与锐一步界](topics/path_dynamics/m1_sign_lift.md#sl-status) | 仅对新 F_lift 的完整 resolvent J=T，C38 两步捕获与 C39 一步锐因子各自已对这个显式映射证明，合取后可用于这个新完整 J；本边不把历史原生循环算法认作 F_lift。；**调用关系，非新证明** |
 
 ## 不蕴含关系
 

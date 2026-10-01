@@ -144,3 +144,11 @@
 ## 16. 增量：§0.4 的一般 gauge 残差窗口
 
 [C59](../canonical/residual_window_bridge.md#rw-positive) 将旧稿定义0.4 的幂函数缩域推理重写为有正阈值的充分门，并显式限制到 gauge 可评价残差；[RW-FLAT](../canonical/residual_window_bridge.md#rw-flat) 给闭完整图的平坦 gauge 反例，阻断无条件去窗口。这项新增只关闭 §0.4 中被声明的量词关系，不验证同稿其余定义与后续定理，也不否定另加 all-pairs RL 的特殊结果。逐单元 TSV 增加一行，文件级状态仍开放。
+
+## 增量：GX-069/070、固定目标随机近端、M1 的可行 Sign 实现
+
+[C60/C61 DR 双对象卡](../topics/examples/dr_tangency_transversality.md) 从 9/01 ZIP 的 `work/c_gx066_077.md` 两张卡独立重算投影管、真算法残差、半阶/线性最优模及各自一步/轨道范围。来源用 `archive.zip!/work/c_gx066_077.md` 在逐单元 TSV 定位，验证器检查 ZIP 成员存在；原卡的其余 primal 标签和外部先行性未验收。
+
+[C62/C63 固定目标近端](../topics/random_markov/proximal_selection_seam.md) 从 9/14 非乘积稿 §3、§5 重写域内平稳律吸收、全局近端完整图及 fair tie 核接缝。历史 V10 有理脚本 2026-10-01 复跑退出码 0，只是有限代数观察；一般平稳律与每个 \(W_2\) 邻域的障碍在正文另给证明。四个选定来源单元在 TSV 新增去向，当前共 45；同稿其他随机机制和其余 ZIP 成员仍未裁决。
+
+[C64 新 Sign 实现](../topics/path_dynamics/m1_sign_lift.md) 是针对已核显式 T 的**原创反向构造**，不是把历史原生方程作 `rewritten`；因此不新增虚假的历史单元去向，原 §5 原生桥继续 `deferred`。[F23](../../FAILED_ROUTES.md#f23) 记录两份同名 M1 的身份隔离及恢复原生方程的精确义务。9/25 所引 [6, Theorem 6.2] 的一手适用门另由 [LIT-GRN-2002](../LITERATURE.md#lit-grn-2002) 关闭，但 C05 的整窗模型仍候选。

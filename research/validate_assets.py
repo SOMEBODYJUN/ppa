@@ -74,7 +74,14 @@ if unit_path.is_file():
         if key in seen_units:
             errors.append(f"duplicate source unit: {key}")
         seen_units.add(key)
-        if not (ROOT / row["source"]).is_file():
+        source_zip, sep, source_member = row["source"].partition("!/")
+        if sep:
+            try:
+                with zipfile.ZipFile(ROOT / source_zip) as archive:
+                    archive.getinfo(source_member)
+            except (OSError, KeyError, zipfile.BadZipFile) as exc:
+                errors.append(f"missing unit ZIP member: {row['source']}: {exc}")
+        elif not (ROOT / row["source"]).is_file():
             errors.append(f"missing unit source: {row['source']}")
         if row["disposition"] not in {"rewritten", "superseded", "refuted", "duplicate", "nonmathematical", "deferred"}:
             errors.append(f"invalid unit disposition: {key}")

@@ -142,3 +142,17 @@
 - **尝试及断点**：窗口假设只检查 \(r_F(u)<\delta\) 的点；若直接把它用于邻域内全部有限残差，就必须控制阈值以上的 \(d(u,S)\) 与 \(\psi(r_F(u))\)。正幂有 \(\psi(\delta)>0\)，但允许的非减 gauge 可在残差 \(1\) 仍为零。
 - **闭图反例**：[RW-FLAT](research/canonical/residual_window_bridge.md#rw-flat) 的完整闭图取 \(F(0)=\{0,1\}\)、\(F(u)=\{1\}\) 对 \(u\ne0\)，\(S=\{0\}\)、\(\psi(t)=\max\{t-2,0\}\)、\(\delta=1/2\)。窗口内只见零点；任意零邻域的非零点却有 \(r_F=1\)、\(\psi(r_F)=0<d(u,S)\)。这是量词及 gauge 阈值的漏洞，不否定窗口版原陈述。
 - **可回收结果与重启门**：[C59](research/canonical/residual_window_bridge.md#rw-positive) 给出 \(\psi(\delta)>0\) 时缩至 \(B(\bar u,\psi(\delta))\) 的充分桥。若 gauge 只在 \([0,\eta)\) 定义，桥的无窗口结论只针对 \(r_F<\eta\)；改为全部残差须另定义全域 gauge。反例不满足额外全对 RL，因此不能被拿去否定加 RL 的特殊定理。
+
+<a id="f22"></a>
+## F22 · 闭的全局近端图与有限长轨道自动给不变极限或 law-step EB
+
+- **尝试与断点**：把全局多值近端图的闭性当作任意指定选择核的弱连续性，遂由有限长物理轨道推极限律不变；再把真实 law-step 的精确零集自动升级为零点附近一致消失 gauge EB。图的闭性只管允许的**集合**，不管在 tie 点跳变的选择概率；exact-zero 只管残差恰零，不管趋零序列的紧性或逆连续性。
+- **完整反例**：[C63](research/topics/random_markov/proximal_selection_seam.md#ps-example) 的固定二维 group-\(\ell_0\) 目标有闭完整全局 prox 图；fair tie 核沿 \(a_kv\downarrow v\) 有有限长度而 \(K(v)=\tfrac12\delta_0+\tfrac12\delta_v\)。唯一平稳律是 \(\delta_0\)，但每个完整 \(W_2\) 邻域可装入 \(\mu_k\) 使 \(\mathcal R(\mu_k)\to0\)、\(d(\mu_k,\delta_0)\to\sqrt{2\epsilon}>0\)。
+- **回收与重启门**：[C62](research/topics/random_markov/proximal_selection_seam.md#ps-absorption) 的同一目标全局 prox 平稳吸收律仍成立，真 law-step 的零集仍是平稳律。要救极限不变性须核具体核在**该极限**的闭/连续传递；要救 EB 须限制真正排除上述质量稀释序列的律空间或加入定量逆界。改用随机换目标、同步 OT 残差或完整次梯度 resolvent 是新对象，不沿用本反例的真值。
+
+<a id="f23"></a>
+## F23 · 从同名 M1 显式外层映射认证历史原生 Sign 方程
+
+- **尝试与断点**：历史多步 §5 给出 \(T(p,q)=(p-f(p-3q),0)\) 并称来自一个真正多值 Sign 广义方程，企图据此把显式 T 的两步捕获、锐一步界或真实残差赋给**历史原生循环算法的全部路径**。旧稿没有写出原生方程的完整图、每个相位与全部允许选择；另有同名 M1/SO-06 是不同的两分支 Minty benchmark，不能拼作来源。
+- **诚实回收**：[C64 新构造](research/topics/path_dynamics/m1_sign_lift.md#sl-graph) 反向定义一个闭的完整多值 \(F_{\rm lift}\)，其全域单位步长 resolvent 恰为这个 T，并直接算零集及真残差。这只证明**存在一个** Sign 图实现；完整 J 若在全域预先等于 T，其图可反演唯一，但历史模型未证明是该完整 J，也可能是多相位组合。
+- **重启条件**：恢复历史原生方程的完整定义、自然域、全部图值和每步相位/选择；逐输入检验它们与 T 的路径对应。缺任何一项则 C38/C39 只授给显式 T 或已经明确新定义的 \(F_{\rm lift}\)，不能写“原生多值桥已闭”。

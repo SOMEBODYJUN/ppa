@@ -811,6 +811,66 @@
       "id": "OB-RW-NEIGH",
       "label": "一般窗口 EB 自动成为邻域 EB（错误）",
       "file": "canonical/residual_window_bridge.md#rw-flat"
+    },
+    {
+      "id": "DR-OBJECT",
+      "label": "DR 算法残差及两种集合几何",
+      "file": "topics/examples/dr_tangency_transversality.md#dr-objects"
+    },
+    {
+      "id": "DR-TAN",
+      "label": "GX-069 切触 DR 的半阶真残差",
+      "file": "topics/examples/dr_tangency_transversality.md#dr-tangent"
+    },
+    {
+      "id": "DR-TRANS",
+      "label": "GX-070 横截 DR 的精确线性模",
+      "file": "topics/examples/dr_tangency_transversality.md#dr-transverse"
+    },
+    {
+      "id": "OB-DR-STRICT",
+      "label": "半阶 EB 自动给统一一步严格距离收缩（错误）",
+      "file": "topics/examples/dr_tangency_transversality.md#dr-tangent"
+    },
+    {
+      "id": "FP-OBJECT",
+      "label": "同一目标的全局 prox 与指定选择核",
+      "file": "topics/random_markov/proximal_selection_seam.md#ps-objects"
+    },
+    {
+      "id": "FP-ABSORB",
+      "label": "固定目标平稳律的吸收支持",
+      "file": "topics/random_markov/proximal_selection_seam.md#ps-absorption"
+    },
+    {
+      "id": "FP-SEAM",
+      "label": "非乘积 prox 的闭图与核接缝",
+      "file": "topics/random_markov/proximal_selection_seam.md#ps-example"
+    },
+    {
+      "id": "FP-NOEB",
+      "label": "完整 W2 邻域的 law-step gauge 障碍",
+      "file": "topics/random_markov/proximal_selection_seam.md#ps-no-eb"
+    },
+    {
+      "id": "SL-INCLUSION",
+      "label": "新 Sign 包含与全纤维图",
+      "file": "topics/path_dynamics/m1_sign_lift.md#sl-inclusion"
+    },
+    {
+      "id": "SL-RESOLVENT",
+      "label": "新完整图的 J 等于 M1 显式 T",
+      "file": "topics/path_dynamics/m1_sign_lift.md#sl-graph"
+    },
+    {
+      "id": "SL-RESIDUAL",
+      "label": "新图端点的锐线性真残差",
+      "file": "topics/path_dynamics/m1_sign_lift.md#sl-zero-residual"
+    },
+    {
+      "id": "SL-DYNAMICS",
+      "label": "新图完整 resolvent 的显式捕获与锐一步界",
+      "file": "topics/path_dynamics/m1_sign_lift.md#sl-status"
     }
   ],
   "edges": [
@@ -2026,6 +2086,97 @@
       "relation": "refutes",
       "scope": "完整闭图 F(0)={0,1},F(u)={1} (u≠0)，S={0}、ψ(t)=max(t−2,0)、δ=1/2；窗口只检验零点，但任意邻域有 r_F=1 且 ψ(1)=0<|u|。不附加全对 RL。",
       "status": "C59 边界反例，完整图与全部纤维直接计算"
+    },
+    {
+      "id": "E105",
+      "topic": "例库",
+      "inputs": [
+        "DR-OBJECT"
+      ],
+      "output": "DR-TAN",
+      "relation": "conditional",
+      "scope": "C=横轴、D=抛物线、G=I-T，投影管 U={b>−1/2}；对全部零附近输入的真算法残差给最优半阶模 1，不把法锥和 N_C+N_D 当 G。",
+      "status": "C60 完整投影参数与取等序列重算"
+    },
+    {
+      "id": "E106",
+      "topic": "例库",
+      "inputs": [
+        "DR-OBJECT"
+      ],
+      "output": "DR-TRANS",
+      "relation": "conditional",
+      "scope": "改为夹角 θ∈(0,π/2) 的两条横截线、同一 DR 公式；G=I−cosθ Qθ，全域 MR/MSR 精确模 1/sinθ，实际 T 轨道因子 cosθ；是另一对象。",
+      "status": "C61 反射与奇异值恒等式重算"
+    },
+    {
+      "id": "E107",
+      "topic": "交叉限制",
+      "inputs": [
+        "DR-TAN"
+      ],
+      "output": "OB-DR-STRICT",
+      "relation": "refutes",
+      "scope": "z_s=(s,−s²)→0 时 d(Tz_s,S)=d(z_s,S)>0；虽有全邻域半阶 EB，任何统一 ρ<1 的一步距离比均失败。",
+      "status": "C60 精确取等序列"
+    },
+    {
+      "id": "E108",
+      "topic": "随机近端",
+      "inputs": [
+        "FP-OBJECT"
+      ],
+      "output": "FP-ABSORB",
+      "relation": "conditional",
+      "scope": "同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫|f|，不适用于完整非凸次梯度 resolvent 或随机换目标。",
+      "status": "C62 有界 arctan 严格下降证明"
+    },
+    {
+      "id": "E109",
+      "topic": "随机近端",
+      "inputs": [
+        "FP-SEAM",
+        "FP-ABSORB"
+      ],
+      "output": "FP-NOEB",
+      "relation": "conditional",
+      "scope": "固定二维非乘积 group-ℓ0、λ=1 与 fair tie 核；唯一不变律 δ0，μk=(1−ε)δ0+εδakv 在任意给定完整 W2 邻域中可取固定 ε>0，真实 law-step→0 而到不变律距离→√(2ε)>0。非 Feller 接缝与闭 prox 图并存。",
+      "status": "C63 全图、全部平稳点与显式最优运输重算；V10 仅有限代数"
+    },
+    {
+      "id": "E110",
+      "topic": "路径动力学",
+      "inputs": [
+        "SL-INCLUSION"
+      ],
+      "output": "SL-RESOLVENT",
+      "relation": "implies",
+      "scope": "新定义 F_lift(u,0) 的全部 (h,q) 由 u+h−3q∈(2/3)Sign(h)+(2/3)h³ 给出，轴外为空；λ=1，Sign(0)=[−1,1]。对每个 z∈R² 唯一 h=f(p−3q)，完整 J_Flift(z)={Tz}，自然 Minty 域全平面；绝不认证历史原生循环方程。",
+      "status": "C64 全分支与端点独立反演"
+    },
+    {
+      "id": "E111",
+      "topic": "路径动力学",
+      "inputs": [
+        "SL-INCLUSION"
+      ],
+      "output": "SL-RESIDUAL",
+      "relation": "conditional",
+      "scope": "同一新图的全部残差纤维在端点给 r_F(c+δ,0)=δ/3、d((c+δ,0),zer F)=δ (0<δ<1)；线性 EB 常数 3 锐利，和 C38/C39 的动力证明逻辑独立。",
+      "status": "C64 按 h 正/零/负分支求 infimum"
+    },
+    {
+      "id": "E112",
+      "topic": "路径动力学",
+      "inputs": [
+        "SL-RESOLVENT",
+        "M1-CAPTURE",
+        "M1-SHARP"
+      ],
+      "output": "SL-DYNAMICS",
+      "relation": "conditional",
+      "scope": "仅对新 F_lift 的完整 resolvent J=T，C38 两步捕获与 C39 一步锐因子各自已对这个显式映射证明，合取后可用于这个新完整 J；本边不把历史原生循环算法认作 F_lift。",
+      "status": "调用关系，非新证明"
     }
   ]
 }

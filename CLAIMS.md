@@ -354,3 +354,33 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整 \(F:H\rightrightarrows H\)、\(S=F^{-1}(0)\ni\bar u\)、真残差 \(r_F=d(0,F(u))\)。有限非减 \(\psi:[0,\eta)\to[0,\infty)\)、\(\psi(0)=0\)、原点连续。若存在 \(U\ni\bar u\)、\(0<\delta<\eta\)，对 **每个** \(u\in U\) 且 \(r_F(u)<\delta\) 有 \(d(u,S)\le\psi(r_F(u))\)，并且 \(\psi(\delta)>0\)，则在 \(V=U\cap B(\bar u,\psi(\delta))\) 对 **每个** \(r_F(u)<\eta\) 的 \(u\) 成立同一界。若 gauge 另有全域非减延拓，可将无窗口量词扩大至全部可评价的有限残差（空纤维按 \(+\infty\) 约定）。
 - **Definitions / Dependencies / Evidence**：[RW-OBJECT/POSITIVE](research/canonical/residual_window_bridge.md#rw-positive) 用 \(d(u,S)\le\|u-\bar u\|\) 与阈值以上的 gauge 单调性直接证明；derived-checked。旧 foundations 定义0.4 只给正幂特殊情形；本页一般充分门为独立推导。
 - **Counterevidence / Objections / Scope / Related Files**：正阈值不是普遍必要条件；没有它时闭图完整关系也可窗口版真而邻域版假，见 [RW-FLAT](research/canonical/residual_window_bridge.md#rw-flat)。有限定义域外 \(\psi(r_F(u))\) 无定义，不能把受限可评价量词暗写成所有 \(u\)；文献先行性未核。
+
+## C60-v1 / DR-TAN · 切触线与抛物线的算法残差
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(C=\mathbb R\times\{0\},D=\{(s,s^2):s\in\mathbb R\}\subset\mathbb R^2\)，\(U=\{(a,b):b>-1/2\}\)，\(T=I-P_C+P_DR_C\)、\(G=I-T\)。\(P_DR_C\) 在整个 \(U\) 单值，\(S=G^{-1}(0)=\{(0,b):b>-1/2\}\)。对原点附近 **所有** \(z=(a,b)\in U\)，若 \(a=s+2s(s^2+b)\)，则 \(d(z,S)=|a|\le(1+2|b|+2s^2)\|Gz\|^{1/2}\)；半阶局部最优模为 1，任何 \(q>1/2\) 的相同目标幂 EB 失败。不存在原点邻域上统一 \(\rho<1\) 的 \(d(Tz,S)\le\rho d(z,S)\)。
+- **Definitions / Dependencies / Evidence**：[DR-TAN](research/topics/examples/dr_tangency_transversality.md#dr-tangent) 从全管唯一投影及 \(G=(2s(s^2+b),-s^2)\) 重算；\(z_s=(s,-s^2)\) 达成半阶模 1 和一步距离比 1。状态 `derived-checked`；来源为 9/01 ZIP `work/c_gx066_077.md` GX-069，详见正文哈希。
+- **Counterevidence / Objections / Scope**：这是算法残差，不是 \(N_C+N_D\) 的 EB；\(D\) 非凸、投影唯一只在所列管上。管不变不保证每条轨道留在某个小邻域或有指定渐近率。文献优先性未核。
+
+## C61-v1 / DR-TRANS · 横截线的精确线性模
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(C,D\subset\mathbb R^2\) 为过原点且夹角 \(0<\theta<\pi/2\) 的直线；全空间同一 \(T=I-P_C+P_DR_C\)、\(G=I-T\)。令 \(c=\cos\theta,s=\sin\theta\)，某旋向的 \(Q_\theta\) 使 \(T=cQ_\theta\)、\(G=I-cQ_\theta\)。对 **所有** \(z,z'\)，\(\|Gz-Gz'\|=s\|z-z'\|\)；\(G^{-1}\) 全局 Lipschitz、MR/MSR 精确模 \(1/s\)，\(\|T^kz\|=c^k\|z\|\) 对每个 \(k\ge0\)。
+- **Definitions / Dependencies / Evidence**：[DR-TRANS](research/topics/examples/dr_tangency_transversality.md#dr-transverse) 的平面反射复合和奇异值恒等式；状态 `derived-checked`。来源为同一 9/01 ZIP GX-070，不将它和 C60 当作同一算子的改参。
+- **Counterevidence / Objections / Scope**：法锥和 \(N_C+N_D\) 的定义域和残差不同；横截构造不能给任意两集合的普遍模。外部先行性未核。
+
+## C62-v1 / PS-ABSORPTION · 固定全局近端的平稳律吸收
+
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^n\)、\(\lambda>0\)、同一个 proper Borel \(f:\mathbb R^n\to(-\infty,+\infty]\)。对每个 \(x\in\operatorname{dom}f\)，全局最小解集合 \(P_\lambda f(x)\ne\varnothing\)；Borel 核 \(K(x,P_\lambda f(x))=1\)。令 \(A_K=\{x\in\operatorname{dom}f:K(x,\{x\})=1\}\)。对 **每个** 支撑于 \(\operatorname{dom}f\) 的概率律 \(\pi\)，\(\pi K=\pi\) 当且仅当 \(\pi(A_K)=1\)，不要求 \(f\) 可积或二阶矩。若有限多值集合的各最小解均获正选择概率，则 \(A_K=\{x:P_\lambda f(x)=\{x\}\}\)。
+- **Definitions / Dependencies / Evidence**：[PS-ABSORPTION](research/topics/random_markov/proximal_selection_seam.md#ps-absorption) 以同律下有界严格递增 \(\arctan f\) 避免 \(\int|f|\) 的隐藏门，再用平方罚项的严格下降。`derived-checked`；来源 9/14 非乘积近端稿 §3，已重构而非继承标题。
+- **Counterevidence / Objections / Scope**：仅对同一个目标的**全局**近端最小解和域内平稳律；非凸 limiting-subdifferential 的完整 resolvent 可含非最小驻点，随机切换目标亦另需证明。外部新颖性未核。
+
+## C63-v1 / PS-SEAM · 闭近端图与非不变极限的 law-step 障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(\lambda=1,H=\left(\begin{smallmatrix}2&1\\1&2\end{smallmatrix}\right),b=(3,3)\)，\(f(y)=\tfrac12y^THy-b^Ty+4\mathbf1_{y\ne0}\)，\(Q=H+I\)、\(t(x)=Q^{-1}(b+x)\)、\(g(x)=\tfrac12(b+x)^TQ^{-1}(b+x)\)。完整全局近端图按 \(g<4,=4,>4\) 分别为 \(\{0\},\{0,t(x)\},\{t(x)\}\)；在 tie 各支选概率 \(1/2\) 的核 \(K\) 有唯一平稳律 \(\delta_0\)。沿 \(v=(1,1),a_0>1\) 的真实轨道 \(a_k=1+(a_0-1)4^{-k}\) 有有限总长度却趋向非平稳 \(\delta_v\)。对 **每个** \(W_2\) 邻域 \(B_r(\delta_0)\)，存在固定 \(\epsilon>0\) 与 \(\mu_k=(1-\epsilon)\delta_0+\epsilon\delta_{a_kv}\) 全部在邻域，使 \(W_2(\mu_k,\mu_kK)\to0\) 而 \(W_2(\mu_k,\delta_0)\to\sqrt{2\epsilon}>0\)；故该完整邻域上不存在任何零点消失的 law-step gauge EB。
+- **Definitions / Dependencies / Evidence**：[PS-SEAM/NO-EB](research/topics/random_markov/proximal_selection_seam.md#ps-example) 的全图比较、C62 吸收律和射线上显式最优运输；历史 V10 的有理有限恒等式本轮复跑只作观察。`derived-checked`；来源 9/14 非乘积近端稿 §5，外部优先性未核。
+- **Counterevidence / Objections / Scope**：零残差仍恰为不变律；问题是**一致消失模**和核的接缝连续性。闭多值图不保证所选核 Feller；这不是 C22/C23 的不一致随机二次近端，亦不是同步 OT \(\Psi\)。
+
+## C64-v1 / SL-LIFT · M1 显式映射的新完整 Sign 图实现
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(c=2/3\)、\(A(h)=c\operatorname{Sign}(h)+2h^3/3\)，\(\operatorname{Sign}(0)=[-1,1]\)。新关系 \(F_{\rm lift}(u,v)=\varnothing\) 当 \(v\ne0\)；当 \(v=0\)，其**全部**值是 \(\{(h,q):u+h-3q\in A(h)\}\)。对每个 \(z=(p,q)\in\mathbb R^2\)，完整单位步长 resolvent \(J_{F_{\rm lift}}(z)=\{(p-f(p-3q),0)\}=\{Tz\}\)，自然 Minty 域全为 \(\mathbb R^2\)，零集为 \([-c,c]\times\{0\}\)。对 \(0<\delta<1\)，\(r_{F_{\rm lift}}(c+\delta,0)=\delta/3\) 且到零集距离 \(\delta\)，端点线性 EB 常数 3 锐利；左端对称。
+- **Definitions / Dependencies / Evidence**：[SL-INCLUSION/GRAPH/ZERO](research/topics/path_dynamics/m1_sign_lift.md#sl-inclusion) 从 Sign 单调包含的三分支唯一反演并对全部残差纤维取 infimum；`derived-checked`。这是**新构造**，可将 C38/C39 对显式 \(T\) 的结论调用到此新关系的完整 resolvent。
+- **Counterevidence / Objections / Scope**：历史多步 §5 只给外层 \(T\) 与来源声明，不给原生循环方程全部允许分支；本构造绝不认证历史原生图身份。另一同名 M1/SO-06 是不同算子。新图的全对 RL、历史算法路径对应及外部优先性均未核。

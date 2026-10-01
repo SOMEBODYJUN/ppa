@@ -46,6 +46,14 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 9/25 的有限样本 \((p_i,y_i)_{i=1}^m\) 只给到 \(d(\cdot,S)\) 的可验证上下包络。结论还需要**指定的整个** \(T\) 在 \(A\) 邻域 usc、各值非空紧且 Čech–\(\mathbb Q\)-acyclic、每个输出满足 proximal 与误差估计，另有 collar、上同调满射与 Euler 特征条件。\(T\) 可是完整 resolvent 的子关系；不能暗换成全纤维。外部 Lefschetz [6, Theorem 6.2] 的适用条件已在[一手文献卡](LITERATURE.md#lit-grn-2002)按紧图/Vietoris/CAC 逐项核对；它不建立任何整窗模型假设，C05 仍是 PDF-only 候选。[H07](holder_structure.md)。
 
+## E105–E112：三组新对象的互不替代条件
+
+E105/E106 的共同名称 Douglas–Rachford 只固定公式 \(T=I-P_C+P_DR_C\)、算法残差 \(G=I-T\)：**切触**的 \(D\) 是抛物线，只在 \(b>-1/2\) 统一投影并于零附近有半阶 MSR；**横截**的 \(D\) 是直线，对所有输入有可逆线性 \(G\) 和精确模 \(1/\sin\theta\)。二者不是同一算子的参数版本。E107 的取等输入 \((s,-s^2)\) 只反驳“半阶 EB 自动给统一一步严格距离收缩”；并未否定全投影管不变或判定每条局部轨道。[对象卡](topics/examples/dr_tangency_transversality.md)。
+
+E108 的全称量词是：**每个**支撑于同一 \(f\) 的 \(\operatorname{dom}f\) 的平稳概率律，在核只选全局近端最小解时必吸收。E109 的新二维模型另有 fair tie 核；对**每个**完整 \(W_2\) 零点邻域可选固定 \(\epsilon>0\) 并有一列律，真实 law-step 趋零、到**唯一**不变律的距离不趋零。完整多值近端图闭不替所选核的 Feller 性，且 C22/C23 的随机二次目标与同步 OT \(\Psi\) 都是别的残差。[固定目标正文](topics/random_markov/proximal_selection_seam.md)。
+
+E110/E111 从**新定义** \(F_{\rm lift}\) 的全部图值分别推出完整单位步长 \(J_F=T\) 和端点真实残差 \(\delta/3\)；后一个结论要重新取完整纤维 infimum，不从动力率推出。E112 只有在这个新关系与已核显式 \(T\) 逐输入同一时，才把 C38/C39 的两项动力结论应用到它。历史“原生循环 Sign 方程”没有给可识别的完整图与允许相位，所以没有从 E110 到该历史方程的边。[Sign 新构造](topics/path_dynamics/m1_sign_lift.md)。
+
 ## E54–E58：随机近端中的三种残差
 
 RP-OBJECT 固定有限维二次近端、正权重、共同核 \(U\)、非零活跃空间 \(V\) 和与当前状态独立的新噪声；RP-GAP 仅在 \(V\) 上给 \(c<1\)。对**每个固定**守恒边缘 \(\nu\in\mathscr P_2(U)\)、**所有** \(\mu\in\mathscr M_\nu\)，RP-CONTRACTION 给完整混合核的条件 \(\mathsf W_\nu\) 收缩。RP-EB 才使用 \(\mathcal R_\nu(\mu)=\mathsf W_\nu(\mu,\mu P)\) 推出 \((1-c)E_\nu\le\mathcal R_\nu\le(1+c)E_\nu\) 与有限长度。[完整证明](canonical/random_proximal.md)。
