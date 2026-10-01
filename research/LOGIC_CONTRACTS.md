@@ -103,3 +103,11 @@ E95 在实 Hilbert 空间固定完整 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、�
 E96 在**同一** B/A/E、同一输出窗口上把 \(\psi(t)\) 换为 \(\rho t^q\)。\(0<\gamma<1,L>0\) 的主指数是 \(\gamma q\)，\(\gamma=1\) 的主指数是 \(q\)，\(L=0\) 的主指数也是 \(q\) 而不论所打印的 \(\gamma\)；临界系数见 [C54](canonical/named_branch_local.md#nb-power)。这些是上界给出的充分门，正 Q 因子和下阶另需沿同一轨道的额外极限。
 
 E97 是反驳边而非把 C53 推向 D02：[C55](canonical/named_branch_local.md#nb-oscillation) 同时有完整图、指定锚定线性 RL、真 EB 与局部收缩，但 Cayley 在每个零邻域非 Lipschitz。故 R02 的全对输入不可由 C53 回填；较弱的全对 Hölder 指数仍未由此例排除。[F19](../FAILED_ROUTES.md#f19) 保存失败机制。
+
+## E98–E100：全对图块进入指定分支所需的零锚距离门
+
+E98 的 AV-OBJECT 在同一 \(G\subset\operatorname{gph}F\) 上对所有图点对给全对 RL，并在指定 \(U\) 给自然输入 coverage；对 active set \(A\) 的**每个** \(x\) 另需 \(d(x,S_G)=d(x,S)<\infty\)，\(S_G=\{p\in S:(p,0)\in G\}\)。只有这项保距离，才能在 \(G\) 内取近似零锚并使用成对不等式。C56 只产出 C53 的 B/A 和图块反射的双输入模，不产出 E。
+
+E99 需将 \(U\) 取成开球、\(A=A_\delta\) 且覆盖 \(d=0\) 输入；另对同一实际 \(Tx\) 证窗口化真残差 EB、标量兼容以及所给初值的严格长度预算，才调用 C53 的有限长度结论。D04 是残差定义入口，不能代替具体输出 EB 的证明。图块内单值也不能自动变成完整 \(J_{\lambda F}\) 的所有选择。
+
+E100 的 [C57](canonical/all_pairs_verifier.md#av-gap) 同时有 \(L=0\) 全对、全输入 coverage 和真实输出 EB，却有 \(S_G=\{0\}\ne S=\mathbb R\)，因此零距离输入不固定。完整 resolvent 的另一分支说明排他性也是独立门；[F20](../FAILED_ROUTES.md#f20) 保存两个缺口的区别。

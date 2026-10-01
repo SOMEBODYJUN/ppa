@@ -761,6 +761,26 @@
       "id": "OB-NB-ALL",
       "label": "锚定收缩必有全对线性 RL（错误）",
       "file": "canonical/named_branch_local.md#nb-oscillation"
+    },
+    {
+      "id": "AV-OBJECT",
+      "label": "全对图块、输入覆盖与零锚保距离",
+      "file": "canonical/all_pairs_verifier.md#av-object"
+    },
+    {
+      "id": "AV-BRIDGE",
+      "label": "全对验证器给指定锚与双输入模",
+      "file": "canonical/all_pairs_verifier.md#av-bridge"
+    },
+    {
+      "id": "AV-GAP",
+      "label": "完整多值零集未被图块零锚覆盖",
+      "file": "canonical/all_pairs_verifier.md#av-gap"
+    },
+    {
+      "id": "OB-AV-ANCHOR",
+      "label": "全对图块加 coverage 自动给完整零集锚（错误）",
+      "file": "canonical/all_pairs_verifier.md#av-gap"
     }
   ],
   "edges": [
@@ -1897,6 +1917,40 @@
       "relation": "refutes",
       "scope": "完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。",
       "status": "新构造，全部原像残差下界与 Cayley 导数独立计算"
+    },
+    {
+      "id": "E98",
+      "topic": "指定分支",
+      "inputs": [
+        "AV-OBJECT"
+      ],
+      "output": "AV-BRIDGE",
+      "relation": "conditional",
+      "scope": "实 Hilbert、同一 G⊂gph F 的所有图点对 RL(λ,L,γ)、U⊂M_+(G)，且 active set A 每个 x 有 d(x,S_G)=d(x,S)<∞；由图块单射与近似零锚得指定分支 A 及 U 上反射模。",
+      "status": "旧 §3.1 逐图点重算；EB 与轨道尚未提供"
+    },
+    {
+      "id": "E99",
+      "topic": "指定分支",
+      "inputs": [
+        "AV-BRIDGE",
+        "D04"
+      ],
+      "output": "NB-LOCAL",
+      "relation": "conditional",
+      "scope": "取 U 开球、A=Aδ 含零距离输入；另对每个实际 Tx 核真残差窗口 E、同一 ψ 的 h(δ)<η 与 limsup Φ/r<1，并给每个初值严格留域。只得指定轨道；完整 J_F 任意选择须另证排他。",
+      "status": "C56 的 B/A 接口加 C53 独立 E/兼容/留域；不把定义 D04 当成已验输出 EB"
+    },
+    {
+      "id": "E100",
+      "topic": "交叉限制",
+      "inputs": [
+        "AV-GAP"
+      ],
+      "output": "OB-AV-ANCHOR",
+      "relation": "refutes",
+      "scope": "完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。",
+      "status": "新反例，全部完整纤维与两种零集直接核算"
     }
   ]
 }

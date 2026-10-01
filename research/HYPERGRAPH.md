@@ -56,6 +56,7 @@
 | E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
 | E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
 | E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
+| E100 | [AV-GAP · 完整多值零集未被图块零锚覆盖](canonical/all_pairs_verifier.md#av-gap) | refutes → [OB-AV-ANCHOR · 全对图块加 coverage 自动给完整零集锚（错误）](canonical/all_pairs_verifier.md#av-gap) | 完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。；**新反例，全部完整纤维与两种零集直接核算** |
 
 ## 局部拓扑
 
@@ -210,6 +211,8 @@
 | --- | --- | --- | --- |
 | E95 | [NB-OBJECT · 指定分支、近似锚与实际输出真 EB](canonical/named_branch_local.md#nb-object) | conditional → [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | 实 Hilbert；同一 T 在开球 U 覆盖，A 对所有 d(x,S)≤δ（含 d=0）给近似最近零点锚，E 对每个实际 Tx 给真残差窗口 EB；另需 limsup Φ(t)/t<1 与初值严格留域预算。只得指定轨道、U 内闭 S，不得升级完整 J_F 任意选择。；**§4 重算逐步界、Hilbert 完备性与零距离输入** |
 | E96 | [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | conditional → [NB-POWER · 幂次充分门与退化端点](canonical/named_branch_local.md#nb-power) | 同一 B/A/E、ψ(t)=ρt^q 且窗口门保持；γ<1,L>0 使用 p=γq；γ=1 使用 q；L=0 使用 q，不受 γ 影响。p>1 或临界系数<1 是充分门，另需留域；只给 upper order。；**§5 重新分解三类端点，未声称必要或正 Q 因子** |
+| E98 | [AV-OBJECT · 全对图块、输入覆盖与零锚保距离](canonical/all_pairs_verifier.md#av-object) | conditional → [AV-BRIDGE · 全对验证器给指定锚与双输入模](canonical/all_pairs_verifier.md#av-bridge) | 实 Hilbert、同一 G⊂gph F 的所有图点对 RL(λ,L,γ)、U⊂M_+(G)，且 active set A 每个 x 有 d(x,S_G)=d(x,S)<∞；由图块单射与近似零锚得指定分支 A 及 U 上反射模。；**旧 §3.1 逐图点重算；EB 与轨道尚未提供** |
+| E99 | [AV-BRIDGE · 全对验证器给指定锚与双输入模](canonical/all_pairs_verifier.md#av-bridge) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | 取 U 开球、A=Aδ 含零距离输入；另对每个实际 Tx 核真残差窗口 E、同一 ψ 的 h(δ)<η 与 limsup Φ/r<1，并给每个初值严格留域。只得指定轨道；完整 J_F 任意选择须另证排他。；**C56 的 B/A 接口加 C53 独立 E/兼容/留域；不把定义 D04 当成已验输出 EB** |
 
 ## 不蕴含关系
 

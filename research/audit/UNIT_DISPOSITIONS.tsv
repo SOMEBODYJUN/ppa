@@ -32,3 +32,5 @@ history/sources/次单调论文研究/RL_foundations.md	§6.2 power defect	rewri
 history/sources/次单调论文研究/RL_foundations.md	§4.1–4.3 named branch、近似锚与局部闭性	rewritten	C53-v1 / NB-LOCAL	research/canonical/named_branch_local.md#nb-local	独立重算逐图点链 有限长度 Hilbert 极限与零距离输入的局部闭性	只限指定分支 完整纤维任意选择另证
 history/sources/次单调论文研究/RL_foundations.md	§5.1–5.4 幂次和三个退化端点	rewritten	C54-v1 / NB-POWER	research/canonical/named_branch_local.md#nb-power	重算 γq、γ=1、L=0 三类充分门并隔离上阶与正 Q 因子	充分证书不宣称必要性或普适精确阶
 history/sources/次单调论文研究/RL_foundations.md	§4 anchored 与 all-pairs 的逻辑区分	rewritten	C55-v1 / NB-OSCILLATION	research/canonical/named_branch_local.md#nb-oscillation	新完整图振荡反例证明锚定线性 RL 加真 EB 不推出全对线性 RL	不排除更弱全对指数 外部优先性未核
+history/sources/次单调论文研究/RL_foundations.md	§3.1 all-pairs verifier、zero-anchor equality	rewritten	C56-v1 / AV-BRIDGE	research/canonical/all_pairs_verifier.md#av-bridge	独立重算图块单射 active set 近似零锚与双输入反射模	实际输出 EB 兼容 留域及完整图排他均独立
+history/sources/次单调论文研究/RL_foundations.md	§3.1 zero-anchor equality 的必要门测试	rewritten	C57-v1 / AV-GAP	research/canonical/all_pairs_verifier.md#av-gap	新完整多值关系例 分离全对 coverage 与保距离零锚	只否定缺保距离的自动验证 不称普遍必要

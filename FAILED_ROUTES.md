@@ -128,3 +128,10 @@
 - **尝试与断点**：只控制每个输入相对其近似最近零点的 Cayley 偏移，并有真残差 EB 与收缩，于是想对任意两个输入断言同参数的全对 RL。锚定比较没有控制两个非零输入之间的振荡。
 - **完整反例**：[C55](research/canonical/named_branch_local.md#nb-oscillation) 的完整关系由 \(T(x)=x[3/10+(1/10)\sin(x^{-2})]\) 反演。对零点锚有 \(\gamma=1,L=3/5\)，所有输出满足 \(|y|\le(2/3)r_F(y)\)，而 Cayley 导数沿 \(x_n=(2\pi n)^{-1/2}\) 无界，故任何零邻域的全对线性 RL 均失败。
 - **回收与重启门**：[C53/C54](research/canonical/named_branch_local.md) 直接用 anchored 条件证明指定分支的有限长度及幂次上阶，无需全对升级。若目标是完整图上任意两点的模或所有完整 resolvent 分支，另证跨输入比较与完整纤维条件；本例不否定可能的较弱 Hölder 指数。
+
+<a id="f20"></a>
+## F20 · 全对图块与覆盖不足以生产完整零集的锚
+
+- **尝试与断点**：由图块全对 RL、指定输入 coverage 直接推 C53 的锚定条件，忽略图块所含零图点 \(S_G\) 对完整零集 \(S\) 的距离是否保真。全对不等式只能拿同一个图块里的 \((p,0)\) 来比较。
+- **反例**：[C57](research/canonical/all_pairs_verifier.md#av-gap) 的完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 满足 \(L=0\) 全对 RL 且满输入覆盖，但 \(S=\mathbb R,S_G=\{0\}\)。所有非零输入到 \(S\) 距离零而指定 \(T(x)=x/2\) 不固定，输出真 EB 仍成立；完整 J 同时含 \(x\) 和 \(x/2\)。
+- **回收及重启条件**：[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在 active set 上另加 \(d(x,S_G)=d(x,S)\)，便能以近似 infimum 构造锚，无须投影取到；之后真 EB、兼容、留域和完整排他各自另证。这里的反例不宣称该保距离条件是任何算法收敛的普遍必要条件。

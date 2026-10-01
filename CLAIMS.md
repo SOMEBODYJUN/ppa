@@ -330,3 +330,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R,\lambda=1\) 取 \(T(0)=0,T(x)=x[3/10+(1/10)\sin(x^{-2})]\)（\(x\ne0\)），完整定义 \(F(y)=\{x-y:T(x)=y\}\)。对唯一 \(S=\{0\}\) 及每个输入，A 以 \(\gamma=1,L=3/5\) 成立，且真 EB 为 \(|y|\le(2/3)r_F(y)\)，故 C53 的 \(\Phi(r)=(8/15)r\)；但任何零邻域上此完整图的全对 \(\gamma=1\) RL 均失败。
 - **Definitions / Dependencies / Evidence**：[NB-OSCILLATION](research/canonical/named_branch_local.md#nb-oscillation) 以 \(1/5\le a(x)\le2/5\) 控制所有原像的真残差，并以 Cayley 导数沿明确序列无界证明不蕴含；新构造，derived-checked。
 - **Counterevidence / Objections / Scope / Related Files**：只排除全对线性指数，不排除其他较弱 Hölder 指数。不能以这个例子的完整 \(J_F=T\) 反推任意原关系的完整 resolvent 同一性；外部优先性未核。
+
+## C56-v1 / AV-BRIDGE · 全对图块到指定锚接口
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、\(G\subset\operatorname{gph}F\)、\(\lambda>0\)。若 \(G\) 对任意两图点满足同一 \(L\ge0,0<\gamma\le1\) 的全对 RL，\(U\subset M_+(G)\)，且对 active set \(A\subset U\) 的每个输入 \(d(x,S_G)=d(x,S)<\infty\)，其中 \(S_G=\{p\in S:(p,0)\in G\}\)，则图块唯一指定分支在 \(U\) 上存在；对所有 \(x\in A\) 可取近似最近 \(p_n\in S_G\) 满足 C53 的锚界，且反射在 \(U\) 的任意两输入间有全对 Hölder 模。
+- **Definitions / Dependencies / Evidence**：[AV-OBJECT/BRIDGE](research/canonical/all_pairs_verifier.md#av-bridge) 使用剪切单射、覆盖、同图块零锚及距离 infimum 重算旧 foundations §3.1；derived-checked。若要调用 C53，另加对实际输出的真残差 E、兼容和初值留域预算。
+- **Counterevidence / Objections / Scope / Related Files**：不要求 \(S_G=S\)，但保距离的 (AV-2) 不可凭 RL 与 coverage 删除，见 C57。完整 \(J_{\lambda F}\) 的任意输出还需对完整输入纤维排他；不提供全局 closedness 或算法不变性。
+
+## C57-v1 / AV-GAP · 失去零锚保距离的完整关系反例
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(H=\mathbb R,\lambda=1,F(y)=\{0,y\}\)、\(G=\{(y,y):y\in\mathbb R\}\)。全图块任意两点以 \(L=0\) 满足每个 \(0<\gamma\le1\) 的 RL，且 \(M_+(G)=\mathbb R\)，但完整 \(S=\mathbb R\)、\(S_G=\{0\}\)，对每个 \(x\ne0\) 有 \(d(x,S_G)=|x|>0=d(x,S)\)。指定 \(T(x)=x/2\) 不固定这些零距离输入；完整 \(J_F(x)\) 还同时含 \(x\) 与 \(x/2\)。
+- **Definitions / Dependencies / Evidence**：[AV-GAP](research/canonical/all_pairs_verifier.md#av-gap) 直接计算全部图值、自然域、反射与零集；新反例，derived-checked。
+- **Counterevidence / Objections / Scope / Related Files**：否定“全对图块 RL + coverage 自动产生 C53 的 A”及“图块单值自动给完整排他”，不是对 C56 的反例；其 (AV-2) 不成立。即使真输出 EB 在本例成立，仍不能替代零锚保距离。

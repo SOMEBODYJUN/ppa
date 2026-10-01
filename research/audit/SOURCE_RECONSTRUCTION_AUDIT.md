@@ -132,3 +132,7 @@
 ## 16. 增量：named branch §4–§5 和新振荡反例
 
 [C53/C54](../canonical/named_branch_local.md) 对旧 foundations §4.1–4.3、§5.1–5.4 另立条件链：Hilbert 完备性、B 的指定输入覆盖、A 的全家族近似零点锚（含零距离输入）、E 的实际输出真残差窗口、兼容和留域预算。§5 的 \(\gamma=1\) 与 \(L=0\) 端点不能沿用非退化 \(\gamma q\) 标签。[C55](../canonical/named_branch_local.md#nb-oscillation) 是新构造，显示锚定线性证书加真 EB 和收缩仍不提供完整图的全对线性 RL；此例不是历史原稿声称的来源事实。三行已进入逐单元 TSV，分别标注重写和新推导。本次没有裁决该原稿 §1.3–§3 的全部接口、其余 GX 性质或外部优先权；来源文件级状态继续开放。
+
+## 17. 增量：§3.1 全对图块验证器
+
+[C56](../canonical/all_pairs_verifier.md#av-bridge) 重新证明同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对活跃输入的保距离合取，只生产指定分支的 B/A，不生产实际输出真 EB 或完整图排他。[C57](../canonical/all_pairs_verifier.md#av-gap) 是新的完整关系反例：图块 \(L=0\) 全对且满域，但其零图点不保完整零集距离，故零距离输入上的锚条件失败。两行进入逐单元 TSV；旧 §1.1–§2 的其他代数或参数条目与全部 GX 性质并未据此整份关闭。

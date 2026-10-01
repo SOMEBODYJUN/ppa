@@ -1,5 +1,9 @@
 # Research State · 2026-10-01
 
+## 第二批增量：§3 图块验证器的零锚保距离
+
+[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在实 Hilbert 空间把同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对所有活跃输入的保距离，精确接到 C53 的 B/A；实际输出真残差 EB、兼容和留域仍独立。[C57](research/canonical/all_pairs_verifier.md#av-gap) 以完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 表明全对 \(L=0\) 与满输入 coverage 仍可能在所有非零零距离输入失去锚，完整排他亦失败；[F20](FAILED_ROUTES.md#f20) 记录两个缺口。下一步审旧稿 §1.3–§2 的未裁决接口与其他 GX 单元，或恢复 M1 原生多值桥。
+
 ## 当前增量：§4–§5 的指定分支与全对边界
 
 [C53/C54](research/canonical/named_branch_local.md) 从旧 foundations §4–§5 重写了实 Hilbert 空间的 named PPA：B 整球分支覆盖、A 对所有小距离输入（包括零距离点）的近似最近零点锚、E 对实际输出的真实全纤维残差 EB、兼容与严格留域预算须合取。由 A/B 还可推出 \(U\cap\overline S=U\cap S\)，故无需额外假设全局闭零集或最近点存在。幂次门在 \(0<\gamma<1,L>0\)、\(\gamma=1\)、\(L=0\) 三种参数情形分别记录，只提供上阶和充分条件，不提供普适正 Q 因子。
