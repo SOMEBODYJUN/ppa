@@ -436,6 +436,86 @@
       "id": "RP-SCALAR",
       "label": "标量尖锐性与正物理步长",
       "file": "canonical/random_proximal.md#rp-scalar"
+    },
+    {
+      "id": "EX-ROT",
+      "label": "纯旋转完整图与 resolvent",
+      "file": "canonical/example_atlas.md#ex01"
+    },
+    {
+      "id": "OB-STRONG",
+      "label": "J 严格收缩必推出 F 强单调（错误）",
+      "file": "canonical/example_atlas.md#ex01"
+    },
+    {
+      "id": "EX-DIAG",
+      "label": "正紧对角无限维尾方向",
+      "file": "canonical/example_atlas.md#ex02"
+    },
+    {
+      "id": "OB-GAUGE",
+      "label": "严格单调+cocoercive 必有趋零 gauge EB（错误）",
+      "file": "canonical/example_atlas.md#ex02"
+    },
+    {
+      "id": "EX-CUBIC",
+      "label": "三次映射与完整 J",
+      "file": "canonical/example_atlas.md#ex03"
+    },
+    {
+      "id": "EX-MODULI",
+      "label": "固定/移动目标与算法残差三种精确模",
+      "file": "canonical/example_atlas.md#ex03"
+    },
+    {
+      "id": "PD-QUANTIFIERS",
+      "label": "全对/锚定、图块/全图、尺度/coverage",
+      "file": "canonical/parameter_dictionary.md#pd-quantifiers"
+    },
+    {
+      "id": "PD-CAYLEY",
+      "label": "Cayley 与成对能量等价式",
+      "file": "canonical/parameter_dictionary.md#pd-cayley"
+    },
+    {
+      "id": "PD-TIED",
+      "label": "γ=1 tied 参数曲线含 L=0",
+      "file": "canonical/parameter_dictionary.md#pd-tied"
+    },
+    {
+      "id": "PD-STEP",
+      "label": "同图换步的单射与 coverage 门",
+      "file": "canonical/parameter_dictionary.md#pd-step"
+    },
+    {
+      "id": "PD-SCALE",
+      "label": "有界降指数与无界反例",
+      "file": "canonical/parameter_dictionary.md#pd-scale"
+    },
+    {
+      "id": "PD-RESIDUAL",
+      "label": "真残差与选中值的方向",
+      "file": "canonical/parameter_dictionary.md#pd-residual"
+    },
+    {
+      "id": "PD-REGULARITY",
+      "label": "MR/MSR 与 strong 的量词方向",
+      "file": "canonical/parameter_dictionary.md#pd-regularity"
+    },
+    {
+      "id": "OB-SCALE",
+      "label": "无界域不能自由换 Hölder 指数",
+      "file": "canonical/parameter_dictionary.md#pd-scale"
+    },
+    {
+      "id": "OB-SELECTED",
+      "label": "选中步残差不能倒推真 EB",
+      "file": "canonical/parameter_dictionary.md#pd-residual"
+    },
+    {
+      "id": "OB-MR-MSR",
+      "label": "MR 与 strong MSR 无条件互推（错误）",
+      "file": "canonical/parameter_dictionary.md#pd-regularity"
     }
   ],
   "edges": [
@@ -1130,6 +1210,107 @@
       "output": "RP-EB",
       "scope": "在双分支标量子族，c=a 且一般 EB 上界系数 1/(1-c) 与相对收缩 c^k 同时取等；不声称每个固定矩阵模型最优。",
       "status": "本轮独立推导；未核外部优先权"
+    },
+    {
+      "id": "E59",
+      "topic": "例库",
+      "inputs": [
+        "EX-ROT"
+      ],
+      "relation": "refutes",
+      "output": "OB-STRONG",
+      "scope": "全图 R²、每个 ω,λ>0，完整 J 的 Lip 严格小于 1，而 F 的单调内积恒为 0；无附加条件的逆推论错误。",
+      "status": "本轮独立推导；仅此例/族"
+    },
+    {
+      "id": "E60",
+      "topic": "例库",
+      "inputs": [
+        "EX-DIAG"
+      ],
+      "relation": "refutes",
+      "output": "OB-GAUGE",
+      "scope": "H=ℓ² 的同一个 F；对每个趋零 ψ，不存在任意局部统一 C,δ；有限维截断不继承反例。",
+      "status": "本轮独立推导；仅此例/族"
+    },
+    {
+      "id": "E61",
+      "topic": "例库",
+      "inputs": [
+        "EX-CUBIC"
+      ],
+      "relation": "implies",
+      "output": "EX-MODULI",
+      "scope": "F=x³ 的固定目标 q=1/3 模 1、两变量模 2^(2/3)、Gλ=I−JλF 局部模下确界 λ^(−1/3)；对象及取到性不同。",
+      "status": "本轮独立推导；仅此例/族"
+    },
+    {
+      "id": "E62",
+      "topic": "参数字典",
+      "inputs": [
+        "D02",
+        "PD-QUANTIFIERS"
+      ],
+      "relation": "equivalence",
+      "output": "PD-CAYLEY",
+      "scope": "同一图块、同一步长、每对指定图点；RL 与 C 在自然域的连续模及两条能量式精确等价，coverage 独立。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E63",
+      "topic": "参数字典",
+      "inputs": [
+        "PD-CAYLEY",
+        "PD-QUANTIFIERS"
+      ],
+      "relation": "conditional",
+      "output": "PD-TIED",
+      "scope": "γ=1，固定同一 λ、全部相同配对；θ∈(−1/2,1/2]，L=0 对应 θ=1/2；一般独立双参数不在此边结论。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E64",
+      "topic": "参数字典",
+      "inputs": [
+        "PD-CAYLEY"
+      ],
+      "relation": "conditional",
+      "output": "PD-STEP",
+      "scope": "同一图 Γ，η>0；新自然域 Q(D)，Cη 良定 iff Q 单射；Lipschitz 上界另要求旧 C 的 L 与 α−|β|L>0，coverage 另核。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E65",
+      "topic": "参数字典",
+      "inputs": [
+        "PD-SCALE"
+      ],
+      "relation": "limits",
+      "output": "OB-SCALE",
+      "scope": "同一有界 D 可高指数降低指数；C(s)=s 和 sign(s)|s|^γ 在无界 D 分别阻断反向/全局通用改指数。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E66",
+      "topic": "参数字典",
+      "inputs": [
+        "PD-RESIDUAL"
+      ],
+      "relation": "refutes",
+      "output": "OB-SELECTED",
+      "scope": "r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
+    },
+    {
+      "id": "E67",
+      "topic": "参数字典",
+      "inputs": [
+        "PD-REGULARITY"
+      ],
+      "relation": "refutes",
+      "output": "OB-MR-MSR",
+      "scope": "MR 固定目标给 MSR；F(x)=|x| 和 F(x,y)=x 在原点分别反驳 strong MSR→MR 与 MR→strong MSR。",
+      "status": "本轮代数/反例独立重算；文献命名另核"
     }
   ]
 }

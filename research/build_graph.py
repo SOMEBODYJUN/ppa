@@ -18,6 +18,8 @@ for e in data["edges"]:
     assert e["inputs"] and all(i in nodes for i in e["inputs"])
     assert e["output"] in nodes and e["output"] not in e["inputs"], e
     assert len(e["inputs"]) == len(set(e["inputs"])), e
+    assert e["relation"] in {"conditional", "equivalence", "implies", "limits", "necessary", "open", "refutes", "sharpness", "sufficient"}, e
+    assert e["scope"].strip() and e["status"].strip(), e
 
 groups = defaultdict(list)
 for e in data["edges"]:
@@ -32,7 +34,7 @@ md = [
     "本图从 [graph.json](graph.json) 生成；运行 python3 research/build_graph.py 同时生成本页和 [交互 HTML](map.html)。"
     "每条边的输入是**合取**；范围、版本及证据状态不可省。节点链接进入重构的数学模块，原始证据见 [SOURCES.md](SOURCES.md)。", "",
     "关系 conditional 带有额外前提，open 是目标而非证明，limits 是反例或边界；"
-    "necessary 和 sufficient 分别对应纤维分类的两个方向。", ""
+    "necessary 和 sufficient 分别对应纤维分类的两个方向；sharpness 只给声明范围内的下界见证。", ""
 ]
 for group, edges in groups.items():
     md += ["## " + group, "", "| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |",

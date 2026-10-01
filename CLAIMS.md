@@ -141,3 +141,42 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：有限个 firmly nonexpansive \(S_i:H\to H\)，每支有固定点，所有 \(p_i>0\)；对**每一个** \(\mu\in\mathscr P_2(H)\)，\(\sum_i p_i W_2(\mu,(S_i)_\#\mu)^2=0\) 当且仅当 \(\mu(\cap_i\operatorname{Fix}S_i)=1\)。\(H\) 是有限维欧氏空间；该命题不要求 \(S_i\) 为同一个目标的近端。
 - **Dependencies / Evidence**：firm nonexpansiveness 的定点平方不等式，分别积分并利用有限二阶矩与推前律相等。[规范证明](research/canonical/random_proximal.md#rp-branch)；标量不一致双近端给混合不变律存在而分支残差严格正的实例。
 - **Counterevidence / Status / Scope / Related Files**：本轮 `derived-checked`；对象是逐支残差的零集，不能推出混合核不变律的零集判据。若取消每支固定点或换成同步缺陷，必须另立版本。[反例与尖锐例](research/canonical/random_proximal.md#rp-scalar)。历史 C11 复合次正则与现 C11 回缩同号，均不得占用 C22/C23 身份。
+
+## C24-v1 / EX01 · 旋转 resolvent 收缩不蕴含强单调
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R^2\) 取 \(K(x_1,x_2)=(-x_2,x_1)\)，固定任意 \(\omega,\lambda>0\)，\(F=\omega K\)。完整 \(J_{\lambda F}=(I-\lambda\omega K)/(1+(\lambda\omega)^2)\) 在全空间的 Lipschitz 常数为 \((1+(\lambda\omega)^2)^{-1/2}<1\)，但 \(\langle x-y,Fx-Fy\rangle=0\) 对**全部** \(x,y\) 成立，故无正强单调常数。反射 \(2J-I\) 是等距映射，固定步长全图 RL \(\gamma=1\) 的锐常数为 1；任意 \(0<\gamma<1\) 的无界全图 RL 无有限常数。
+- **Definitions / Dependencies / Evidence**：完整原图、同一步长及全对尺度；直接矩阵反演和正交范数计算，见[规范例卡 EX01](research/canonical/example_atlas.md#ex01)，历史别名 GX-004。
+- **Counterevidence / Status / Scope / Related Files**：`derived-checked`；只否定没有额外假设的 “完整 J 严格收缩 ⇒ F 强单调”。\(r_F(x)=\omega\|x\|\) 的真 EB 与此失败并存；变步长或有界尺度必须另标范围。
+
+## C25-v1 / EX02 · 正紧对角的任意趋零 gauge 障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(H=\ell^2\)，\((Fx)_n=x_n/n\) 满域，\(S=\{0\}\)、\(r_F(x)=\|Fx\|\)。对**任意** \(\psi:[0,\varepsilon)\to[0,\infty)\) 满足 \(\psi(t)\to0\) 当 \(t\downarrow0\)，**不存在** \(C,\delta>0\) 使 \(\|x\|\le C\psi(r_F(x))\) 对所有 \(\|x\|<\delta\) 成立。与此同时 \(F\) 严格单调、1-cocoercive、极大单调；每个固定 \(\lambda>0\) 的完整 PPA 对每个初值强收敛到 0，但每个有限迭代的算子范数 \(\|J_{\lambda F}^k\|=1\)。
+- **Dependencies / Evidence**：固定 \(0<t<\delta\) 用 \(x=te_n\) 让真残差 \(t/n\to0\)；逐坐标乘子 \(n/(n+\lambda)\) 及受控尾部证明逐点收敛。[规范例卡 EX02](research/canonical/example_atlas.md#ex02)，历史别名 GX-009。
+- **Counterevidence / Status / Scope / Related Files**：`derived-checked`；无限维尾方向是障碍，有限维截断不属于同一 Claim。没有统一 EB 不推出某条特定轨道不收敛；也不反驳加闭值域等前提后的命题。
+
+## C26-v1 / EX03 · 三次映射的三种精确模
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(F:\mathbb R\to\mathbb R, F(x)=x^3\)，\(S=\{0\},r_F(x)=|x|^3\)。固定目标 \(q=1/3\) EB 对全部 \(x\) 恒等且最佳常数 1；两变量 \(|x-F^{-1}(y)|\le2^{2/3}|Fx-y|^{1/3}\) 对全部 \(x,y\) 成立，且最佳局部和全局常数均 \(2^{2/3}\)。对每个固定 \(\lambda>0\)，算法残差 \(G_\lambda=I-J_{\lambda F}\) 的固定目标 \(q=1/3\) **局部常数下确界**为 \(\lambda^{-1/3}\)，但该值在任何含非零邻点的固定邻域不取到。
+- **Dependencies / Evidence**：\(4(a^2+ab+b^2)-(a-b)^2=3(a+b)^2\ge0\) 且 \(a=-b\) 取等；\(p=u+\lambda u^3\) 直接算 \(G_\lambda(p)=\lambda u^3\)。见[规范例卡 EX03](research/canonical/example_atlas.md#ex03)，历史别名 GX-021。
+- **Counterevidence / Status / Scope / Related Files**：`derived-checked`；\(F\)、\(G_\lambda\) 与 \(\eta F\) 是不同观察对象。固定目标与移动目标的常数不能互换；\(q<1\) 的逆 Hölder 不等于普通 Lipschitz 强正则。原卡其他属性尚未逐项重写。
+
+## C27-v1 / PD-STEP · 固定同图换步的单射门
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 Hilbert 关系的指定图块 \(\Gamma\)，若在 \(\lambda>0\) 下全对 RL 使旧 Cayley \(C:D_\lambda(\Gamma)\to H\) 良定，对**任意指定**新步长 \(\eta>0\) 置 \(t=\eta/\lambda,\alpha=(1+t)/2,\beta=(1-t)/2\) 与 \(Q=\alpha I+\beta C\)。新 Minty 输入域恰为 \(Q(D_\lambda)\)；相同图块在新步长具有单值 Cayley **当且仅当** \(Q\) 单射，此时 \(C_\eta=(\beta I+\alpha C)\circ Q^{-1}\)。若旧 \(C\) 为 \(L\)-Lipschitz 且 \(m=\alpha-|\beta|L>0\)，新映射在新自然域的 Lipschitz 常数至多 \((|\beta|+\alpha L)/m\)。
+- **Dependencies / Evidence**：同一图点的正反射二坐标线性变换，矩阵行列式 \(t>0\)；下界 \(\|\Delta Q\|\ge m\|\Delta x\|\)。[PD-STEP 证明及尖锐反例](research/canonical/parameter_dictionary.md#pd-step)；历史 GX-015 只作来源别名。
+- **Counterevidence / Status / Scope / Related Files**：`derived-checked`；\(C(s)=\operatorname{sgn}(s)|s|^\gamma\) 表明 \(\eta>\lambda\) 可折叠，\(\eta<\lambda\) 可变 Lipschitz 且失去所有全局次线性指数。即使单射，另须核新目标输入的 coverage；这不是对不同关系缩放或取逆的陈述。
+
+## C28-v1 / PD-TIED · 线性 RL 与 tied 双参数的精确等价
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定同一图块、步长 \(\lambda>0\)、全部指定配对及其尺度，\(L\ge0\)，\(a=u-u',b=v-v'\)。对每一对，\(\|a-\lambda b\|\le L\|a+\lambda b\|\) 当且仅当 \(\langle a,b\rangle\ge\mu\|a\|^2+\rho\|b\|^2\)，其中 \(\theta=(1-L^2)/(2(1+L^2)),\mu=\theta/\lambda,\rho=\lambda\theta\)。有限 \(L\ge0\) 的精确范围为 \(-1/2<\theta\le1/2\)，上端 \(L=0\) 被包含。
+- **Dependencies / Evidence / Status**：平方展开、分母正性及反向同一步；[PD-TIED](research/canonical/parameter_dictionary.md#pd-tied) 直接证明，`derived-checked`。若 \(L>1\)，\(\mu,\rho<0\) 不可删负项；完整独立二参数类不等同这条 tied 曲线。命名和先行性另核。
+
+## C29-v1 / PD-SCALE · 有界降指数与无界反向障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定同一 Cayley 输入域 \(D\)、同一 \(C:D\to H\)。若 \(\operatorname{diam}D\le\Delta<\infty\)，\(0<\gamma_1\le\gamma_2\le1\) 且 \(C\) 是 \((L_2,\gamma_2)\)-Hölder，则它在同一域是 \((L_2\Delta^{\gamma_2-\gamma_1},\gamma_1)\)-Hölder。无界 \(D\) 上没有这条一般包含：\(C(s)=s\) 的更小指数全局失败；\(C(s)=\operatorname{sgn}(s)|s|^\gamma\) 在零点对更大指数、无穷远对更小指数失败。
+- **Dependencies / Evidence / Counterevidence / Status**：尺度幂代数及相反数给凹幂的全局锐常数 \(2^{1-\gamma}\)，见[PD-SCALE](research/canonical/parameter_dictionary.md#pd-scale)；`derived-checked`。单点域真空，局部下界配对只给远离对角线的估计，不冒充邻域 Lipschitz。
+
+## C30-v1 / PD-RESIDUAL · 完整最小残差的推理方向
+
+- **Exact Statement / Objects / Domain / Quantifiers**：任意关系 \(F\) 的非空零集 \(S\)，\(r_F(u)=\inf_{v\in F(u)}\|v\|\)，固定合法步 \(x=u+\lambda v\)。总有 \(r_F(u)\le\|v\|\)。若 \(\psi\) 非减，**已有**对实际输出的 \(d(u,S)\le\psi(r_F(u))\) 才可推出 \(d(u,S)\le\psi(\|v\|)\)；反向不成立。若对该纤维**每个** \(v\) 有 \(d(u,S)\le\kappa\|v\|^q\)，\(q>0\)，取 inf 可得真残差幂 EB；一般非减 gauge 需额外右连续性或实际下确界可取。
+- **Dependencies / Evidence / Counterevidence / Status**：infimum 定义及趋近序列；\(F(u)=\{u,u^2\}\) 选 \(v=u\) 时有选中值线性界，而在零附近 \(r_F(u)=u^2\) 不支持真线性 EB。[PD-RESIDUAL](research/canonical/parameter_dictionary.md#pd-residual)，`derived-checked`。零点、输出窗口与空纤维约定随新问题重新固定；不能从算法步长推回完整图条件。

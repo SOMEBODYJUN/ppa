@@ -80,5 +80,7 @@
 | --- | --- | --- | --- |
 | 9/14 随机相关性感知报告的有限维不一致二次近端正类 | [C22-v1 / RP-EB](../canonical/random_proximal.md#rp-eb)，前置 RP-OBJECT/GAP/CONTRACTION；图 E54–E56 | 矩阵谱隙、同步耦合、不变律分类、条件 law-step 双边 EB 与有限长度独立重算；`derived-checked` | 外部文献优先权、变参数/无限维版本；历史验证器仅有限运行 |
 | 同报告的逐分支残差障碍及标量实例 | [C23-v1 / RP-BRANCH](../canonical/random_proximal.md#rp-branch)、[RP-SCALAR](../canonical/random_proximal.md#rp-scalar)，[F09](../../FAILED_ROUTES.md)；图 E57–E58 | firm nonexpansiveness 积分证明、平稳物理步长反例与锐常数推导；`derived-checked` | 不同残差的零集桥需另证；不声称整个 9/14 随机目录均已裁决 |
+| 9/01 GX-004/009/021 的对象与本轮选择的观察 | [C24–C26 / EX01–EX03](../canonical/example_atlas.md)，图 E59–E61 | 旋转、正紧对角、三次映射的对象、真残差、完整 J、边界及常数均直接重算；`derived-checked` | 其他 GX 与这三张原卡尚未重写的属性（如 paramonotone、rectangular）仍是 `unreviewed` |
+| 9/01 foundations / regularity 的选定定义、参数与 GX-015 换步 | [C27–C30 / PD 字典](../canonical/parameter_dictionary.md)，图 E62–E67 | 全对量词、Cayley、tied 曲线端点、同图换步、尺度及残差方向独立重算；`derived-checked` | 一般二参数 semimonotonicity、coderivative、全 GX 最优常数未吸收；原 ZIP 其他单元仍 `unreviewed` |
 
 两行只裁决上述数学单元，逐文件 TSV 的 `semantic_disposition=unreviewed` 暂不批量改成 `rewritten`，因为同一来源仍含其他 Claim、例和版本。应在逐单元映射齐备后，才给整份来源关闭状态。

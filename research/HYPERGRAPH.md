@@ -2,7 +2,7 @@
 
 本图从 [graph.json](graph.json) 生成；运行 python3 research/build_graph.py 同时生成本页和 [交互 HTML](map.html)。每条边的输入是**合取**；范围、版本及证据状态不可省。节点链接进入重构的数学模块，原始证据见 [SOURCES.md](SOURCES.md)。
 
-关系 conditional 带有额外前提，open 是目标而非证明，limits 是反例或边界；necessary 和 sufficient 分别对应纤维分类的两个方向。
+关系 conditional 带有额外前提，open 是目标而非证明，limits 是反例或边界；necessary 和 sufficient 分别对应纤维分类的两个方向；sharpness 只给声明范围内的下界见证。
 
 ## 定义
 
@@ -131,6 +131,25 @@
 | E56 | [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) ∧ [RP-OBJECT · 有限维不一致二次近端与守恒边缘](canonical/random_proximal.md#rp-object) | implies → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 同一固定 ν、条件运输距离、整个混合核的真实 law-step 残差；双边常数 1±c、有限长度；不能换普通物理步长。；**本轮独立推导；未核外部优先权** |
 | E57 | [RP-BRANCH · 分支残差零集是共同固定点](canonical/random_proximal.md#rp-branch) ∧ [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 分支 firmly nonexpansive 且各有固定点时，逐支推前残差零集是共同固定点支持律；混合不变律可存在而该残差严格正。；**本轮独立推导；未核外部优先权** |
 | E58 | [RP-SCALAR · 标量尖锐性与正物理步长](canonical/random_proximal.md#rp-scalar) | sharpness → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 在双分支标量子族，c=a 且一般 EB 上界系数 1/(1-c) 与相对收缩 c^k 同时取等；不声称每个固定矩阵模型最优。；**本轮独立推导；未核外部优先权** |
+
+## 例库
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E59 | [EX-ROT · 纯旋转完整图与 resolvent](canonical/example_atlas.md#ex01) | refutes → [OB-STRONG · J 严格收缩必推出 F 强单调（错误）](canonical/example_atlas.md#ex01) | 全图 R²、每个 ω,λ>0，完整 J 的 Lip 严格小于 1，而 F 的单调内积恒为 0；无附加条件的逆推论错误。；**本轮独立推导；仅此例/族** |
+| E60 | [EX-DIAG · 正紧对角无限维尾方向](canonical/example_atlas.md#ex02) | refutes → [OB-GAUGE · 严格单调+cocoercive 必有趋零 gauge EB（错误）](canonical/example_atlas.md#ex02) | H=ℓ² 的同一个 F；对每个趋零 ψ，不存在任意局部统一 C,δ；有限维截断不继承反例。；**本轮独立推导；仅此例/族** |
+| E61 | [EX-CUBIC · 三次映射与完整 J](canonical/example_atlas.md#ex03) | implies → [EX-MODULI · 固定/移动目标与算法残差三种精确模](canonical/example_atlas.md#ex03) | F=x³ 的固定目标 q=1/3 模 1、两变量模 2^(2/3)、Gλ=I−JλF 局部模下确界 λ^(−1/3)；对象及取到性不同。；**本轮独立推导；仅此例/族** |
+
+## 参数字典
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E62 | [D02 · 全对 RL 与指定尺度](foundations.md#d02) ∧ [PD-QUANTIFIERS · 全对/锚定、图块/全图、尺度/coverage](canonical/parameter_dictionary.md#pd-quantifiers) | equivalence → [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) | 同一图块、同一步长、每对指定图点；RL 与 C 在自然域的连续模及两条能量式精确等价，coverage 独立。；**本轮代数/反例独立重算；文献命名另核** |
+| E63 | [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) ∧ [PD-QUANTIFIERS · 全对/锚定、图块/全图、尺度/coverage](canonical/parameter_dictionary.md#pd-quantifiers) | conditional → [PD-TIED · γ=1 tied 参数曲线含 L=0](canonical/parameter_dictionary.md#pd-tied) | γ=1，固定同一 λ、全部相同配对；θ∈(−1/2,1/2]，L=0 对应 θ=1/2；一般独立双参数不在此边结论。；**本轮代数/反例独立重算；文献命名另核** |
+| E64 | [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) | conditional → [PD-STEP · 同图换步的单射与 coverage 门](canonical/parameter_dictionary.md#pd-step) | 同一图 Γ，η>0；新自然域 Q(D)，Cη 良定 iff Q 单射；Lipschitz 上界另要求旧 C 的 L 与 α−\|β\|L>0，coverage 另核。；**本轮代数/反例独立重算；文献命名另核** |
+| E65 | [PD-SCALE · 有界降指数与无界反例](canonical/parameter_dictionary.md#pd-scale) | limits → [OB-SCALE · 无界域不能自由换 Hölder 指数](canonical/parameter_dictionary.md#pd-scale) | 同一有界 D 可高指数降低指数；C(s)=s 和 sign(s)\|s\|^γ 在无界 D 分别阻断反向/全局通用改指数。；**本轮代数/反例独立重算；文献命名另核** |
+| E66 | [PD-RESIDUAL · 真残差与选中值的方向](canonical/parameter_dictionary.md#pd-residual) | refutes → [OB-SELECTED · 选中步残差不能倒推真 EB](canonical/parameter_dictionary.md#pd-residual) | r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。；**本轮代数/反例独立重算；文献命名另核** |
+| E67 | [PD-REGULARITY · MR/MSR 与 strong 的量词方向](canonical/parameter_dictionary.md#pd-regularity) | refutes → [OB-MR-MSR · MR 与 strong MSR 无条件互推（错误）](canonical/parameter_dictionary.md#pd-regularity) | MR 固定目标给 MSR；F(x)=\|x\| 和 F(x,y)=x 在原点分别反驳 strong MSR→MR 与 MR→strong MSR。；**本轮代数/反例独立重算；文献命名另核** |
 
 ## 不蕴含关系
 

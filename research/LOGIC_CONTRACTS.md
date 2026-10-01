@@ -30,4 +30,12 @@ RP-OBJECT 固定有限维二次近端、正权重、共同核 \(U\)、非零活�
 
 RP-BRANCH 的对象更宽：每支 firmly nonexpansive、有不动点且正权重，则 \(\sum_i p_iW_2(\mu,(S_i)_\#\mu)^2=0\) 等价于 \(\mu\) 支持于**所有**分支的共同固定点。RP-SCALAR 在一个不一致近端子族同时实现混合不变律、严格正物理步长及统一 EB 系数的尖锐性。分支残差、物理步长和完整核 law-step 各有不同零集或量纲；E57 是阻断替换的限制边，E58 只证明整个模型类的统一常数不能降低。[F09](../FAILED_ROUTES.md)。
 
+## E59–E67：例子、参数及方向
+
+E59–E61 的输入是**三个不同对象**，其历史 GX 号仅作观察别名：[EX01](canonical/example_atlas.md#ex01) 对每个 \(\omega,\lambda>0\) 的旋转完整 J 严格收缩但 \(F\) 无正强单调常数；[EX02](canonical/example_atlas.md#ex02) 是**无限维同一个**正紧对角 \(F\)，对任意趋零 \(\psi\) 都没有局部统一 EB，仍可对每个初值逐点收敛；[EX03](canonical/example_atlas.md#ex03) 的三个常数属于 \(F\) 固定目标、\(F\) 两变量和派生 \(G_\lambda\)，分别为 1、\(2^{2/3}\)、\(\lambda^{-1/3}\) 的局部下确界。不能因同属“正则性”就混同对象与量词。
+
+E62–E64 固定同一图块 \(\Gamma\) 后，先区分全对/锚定及自然输入域与 coverage，再在同一步长用 Cayley 代数。E63 仅在 \(\gamma=1\)、相同配对范围上得到 tied \(\rho=\lambda^2\mu\)；\(L=0\) 是允许端点。E64 改**同一图的步长**时 \(Q=\alpha I+\beta C\)；新单值 iff \(Q\) 单射，Lipschitz 上界另需 \(\alpha-|\beta|L>0\)，新目标输入 coverage 不随之自动获得。[PD-STEP](canonical/parameter_dictionary.md#pd-step) 的 \(\eta>\lambda\) 折叠反例阻断无条件换步。
+
+E65 的高指数→低指数只在同一**有界**输入域有统一常数。E66 的方向是“真残差 EB + 非减 gauge → 选中值界”；\(F(u)=\{u,u^2\}\) 阻断逆向。E67 的 MR 是移动目标、MSR 是固定目标；MR→MSR，但 MR 与 strong MSR 无条件互推都被显式反例否定。[PD 字典](canonical/parameter_dictionary.md)逐项证明，不把命名惯例当作推理。
+
 任何新版本若改空间、残差、边缘、噪声条件或量词，应修改对应 Claim 版本及图边，保留旧反例；不要通过放宽 `scope` 文本暗中扩大原命题。

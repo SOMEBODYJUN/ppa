@@ -3,6 +3,7 @@ import csv
 import hashlib
 import json
 import re
+import zipfile
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -21,6 +22,45 @@ for row in rows:
     raw = path.read_bytes()
     if len(raw) != int(row["bytes"]) or hashlib.sha256(raw).hexdigest() != row["sha256"]:
         errors.append(f"source hash/size changed: {path}")
+
+inventory_path = ROOT / "research/audit/SOURCE_FILE_INVENTORY.tsv"
+source_count = 0
+if inventory_path.is_file():
+    with inventory_path.open(encoding="utf-8", newline="") as f:
+        inventory = list(csv.DictReader(f, delimiter="\t"))
+    source_count = len(inventory)
+    for row in inventory:
+        path = ROOT / row["source"]
+        if not path.is_file():
+            errors.append(f"missing audited source: {path}")
+            continue
+        raw = path.read_bytes()
+        if len(raw) != int(row["bytes"]) or hashlib.sha256(raw).hexdigest() != row["sha256"]:
+            errors.append(f"audited source hash/size changed: {path}")
+    physical = {str(p.relative_to(ROOT)) for p in (ROOT / "history/sources").rglob("*") if p.is_file()}
+    inventoried = {r["source"] for r in inventory}
+    if physical != inventoried:
+        errors.append(f"source inventory mismatch: {len(physical - inventoried)} unlisted, {len(inventoried - physical)} missing")
+
+member_count = 0
+member_path = ROOT / "research/audit/ZIP_MEMBER_INVENTORY.tsv"
+if member_path.is_file():
+    with member_path.open(encoding="utf-8", newline="") as f:
+        members = list(csv.DictReader(f, delimiter="\t"))
+    member_count = len(members)
+    for row in members:
+        zip_name, sep, member = row["source_member"].partition("!/")
+        if not sep:
+            errors.append(f"bad ZIP member locator: {row['source_member']}")
+            continue
+        try:
+            with zipfile.ZipFile(ROOT / zip_name) as archive:
+                raw = archive.read(member)
+        except (OSError, KeyError, zipfile.BadZipFile) as exc:
+            errors.append(f"missing/bad ZIP member: {row['source_member']}: {exc}")
+            continue
+        if len(raw) != int(row["bytes"]) or hashlib.sha256(raw).hexdigest() != row["sha256"]:
+            errors.append(f"ZIP member hash/size changed: {row['source_member']}")
 
 graph = json.loads((ROOT / "research/graph.json").read_text(encoding="utf-8"))
 node_ids = [n["id"] for n in graph["nodes"]]
@@ -58,5 +98,6 @@ for page in normative:
 
 if errors:
     raise SystemExit("\n".join(errors))
-print(f"Verified {sum(r['status'] == 'imported' for r in rows)} imported source hashes, "
+print(f"Verified {sum(r['status'] == 'imported' for r in rows)} initial-manifest hashes, "
+      f"{source_count} audited source files, {member_count} ZIP members, "
       f"{len(node_ids)} nodes, {len(edge_ids)} edges and {len(normative)} Markdown files.")

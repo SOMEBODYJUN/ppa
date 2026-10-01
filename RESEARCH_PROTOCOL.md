@@ -9,7 +9,7 @@
 | 精确定义与约定 | `research/foundations.md` 或 `research/canonical/<topic>.md`。标明空间、参数、局部/全局及依赖；冲突约定并存且各自命名。 |
 | 定理、引理、猜想、反例、桥 | 主题模块 `research/*.md` 或 `research/canonical/*.md` 的独立锚点；精确身份另登 `CLAIMS.md`，图中只为真正承重的关系建节点/边。 |
 | 独立证明、攻击与义务 | 同一主题模块相邻章节；未闭 obligation 放 `RESEARCH_STATE.md`，失败机制进入 `FAILED_ROUTES.md`。不得以评分或审稿意见代替推理。 |
-| 可复现计算 | 新代码放 `research/code/<topic>/`，记录运行命令、环境、参数、seed、精度、误差和输出。历史代码原样留在 `history/sources/`，其执行不自动验证一般命题。 |
+| 可复现计算 | 新代码放 `research/code/<topic>/`，记录运行命令、环境、参数、seed、精度、误差和输出。[代码登记](research/CODE_REGISTER.md)映射旧验证器与 Claim；历史代码原样留在 `history/sources/`，其执行不自动验证一般命题。 |
 | 文献事实 | `research/LITERATURE.md`，给确切版本、定理/页码和假设；解释、猜想与先行性判断另标层级。未读原文时不能写成 paper fact。 |
 | 来源追溯和覆盖 | `research/SOURCES.md` 给版本定位；`research/audit/` 给尚未裁决的逐项来源、ZIP 成员和重复关系。原件移入 `history/sources/`，哈希与初始清单保持一致。 |
 
