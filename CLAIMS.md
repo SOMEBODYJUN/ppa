@@ -42,7 +42,7 @@
 
 ## C06 · 固定紧 T-only 图卡的内生观测
 
-- **Exact Statement / Objects / Domain**：非空紧 \(K\subset\mathbb R^d\)，非空闭 \(S\subset K\)。令 \(X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{一致},\Pi_T(K)\subset S\}\)，全时间度量 \(\rho(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K\)。定义实际尾 \(w_n\) 为迭代后所有步差与到 \(S\) 距离的上确界，实际反射模 \(m_j=\sup_{\|x-y\|\le2^{-j}}\|(2T-I)x-(2T-I)y\|\)。则 \(\Phi:X\to c_0\times c_0\)，\(T\mapsto(w,m)\) 连续 proper；其实际像闭 Polish，非空精确纤维紧/Baire，映射到像 perfect/quotient。
+- **Exact Statement / Objects / Domain**：非空紧 \(K\subset\mathbb R^d\)，非空闭 \(S\subset K\)。令 \(X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{一致},\Pi_T(K)\subset S\}\)，全时间度量 \(\rho(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K\)。定义 \(w_n(T)=\max\{\sup_{k,\ell\ge n}\|T^k-T^\ell\|_K,\ \sup_{k\ge n,x\in K}d(T^kx,S)\}\)：第一项看**所有尾部两迭代差**，不是仅相邻步差。令 \(m_j=\sup_{\|x-y\|\le2^{-j}}\|(2T-I)x-(2T-I)y\|\)。则 \(\Phi:X\to c_0\times c_0\)，\(T\mapsto(w,m)\) 连续 proper；其实际像闭 Polish，非空精确纤维紧/Baire，映射到像 perfect/quotient。
 - **Dependencies / Evidence**：[9/20 `06_math_audit.md` §1](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md) 的 Arzelà–Ascoli、共同尾预算及全时间收敛证明；内部独立审计。
 - **Objections / Status / Scope**：**仅固定紧源完整 T-only、非空 X 条件下内部已审**；proper/quotient 不推出 category-preserving；局部 \(T\) 不代表完整全局 \(F\)。
 
@@ -624,3 +624,27 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C102 同一完整图，对每个固定 \(\lambda>0\)，\(J_{\lambda F}\) 全空间单值且 \(\|J_{\lambda F}^m\|=(1+\lambda^2)^{-m/2}\) 对全部整数 \(m\ge0\)；全域合法轨道几何有限长趋零。同参数反射 \(R=2J-I\) 的全图 all-pairs 线性 RL 锐常数为 1，无界全图任何 \(\gamma<1\) 的有限 Hölder 常数失败。
 - **Definitions / Dependencies / Evidence / Status / Related Files**：[SCD-PROX](research/topics/examples/skew_compact_diagonal.md#scd-prox) 的完整块逆、能量恒等式和高块锐性序列；依赖 C102 的统一奇异值下界；`derived-checked`，近端的精确收缩与全部幂为本库补出的结论。
 - **Counterevidence / Scope**：全图反射模 \(L=1\) 不推出慢轨道；近端收缩不能倒推反射 \(L<1\)。改变原图为紧对角 \(D\) 或有限维块截断后是新对象。
+
+## C104-v1 / VO-GAUGE · Volterra 完整图与无统一消失 gauge
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 \(H=L^2(0,1)\) 上全域完整 \(Vx(t)=\int_0^t x(s)\,ds\)，\(S=\{0\}\)、真残差 \(r_V(x)=\|Vx\|\)。其逆纤维恰是满足 \(y\in H^1,y(0)=0\) 时的 \(\{y'\}\)，否则为空；值域稠密非满。\(V\) 极大单调但非严格、非 paramonotone、非 rectangular。对任意 \(\eta>0\)、在 \([0,\eta)\) 上右极限为零的非负 gauge \(\psi\)，任意 \(C,\delta>0\)，存在 \(\|x\|<\delta,\|Vx\|<\eta\) 使 \(\|x\|>C\psi(\|Vx\|)\)；不要求 \(\psi\) 单调。
+- **Dependencies / Evidence / Status / Related Files**：[VO-OBJECT/GRAPH](research/topics/examples/volterra_integration.md#vo-graph) 从积分分部、显式直线见证与高频余弦直接推导；来源 9/01 ZIP work/c_gx053_065.md GX-060，`derived-checked` 限本对象。无 BWY 外部调用。
+- **Counterevidence / Scope**：这是固定零目标原算子真残差的统一邻域障碍；点态近端轨道仍可强收敛。稠密值域不等于满值域，伴随 GX-061 的其它观察未核。
+
+## C105-v1 / VO-PROX · 全域近端强收敛而无统一有限步收缩
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C104 同一完整图，每个固定 \(\lambda>0\)，\(J_\lambda=(I+\lambda V)^{-1}\) 全 \(H\) 单值；对所有图点对，全图 all-pairs 线性 RL 锐 \(L=1\)，取等的零均值条件在图点差上。每个整数 \(k\ge1\) 有 \(\|J_\lambda^k\|_{\rm op}=1\)，每个非零输入逐次严格缩短，且对每个 \(p\in H\)，\(J_\lambda^kp\to0\) 强收敛。对近端**输入**步残差 \(g_\lambda(p)=\|p-J_\lambda p\|\)，任何右极限零 gauge 的统一局部 EB 同样失败。
+- **Dependencies / Evidence / Status / Related Files**：[VO-PROX](research/topics/examples/volterra_integration.md#vo-prox) 用完整 Volterra 逆、能量式、高频方向及 \(\operatorname{ran}V\) 稠密证明；`derived-checked`。来源 GX-060 已给完整逆像、值域及显式 resolvent；全部有限幂与强收敛是本库新增推导。
+- **Counterevidence / Scope**：严格逐点缩短不等于算子范数小于 1；强收敛不声称每条轨道有限长度。步残差与 C104 的原算子输出真残差是不同对象；无界全图的 \(\gamma<1\) RL 不从 \(L=1\) 继承。
+
+## C106-v1 / NC-BRANCH · 负三次完整图碰撞与受限图块反射
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实全域完整 \(F(x)=-x^3\)，每个 \(\lambda>0\) 的完整 \(J_{\lambda F}(0)=\{0,\pm\lambda^{-1/2}\}\) 导致所有正指数全图零消失 all-pairs RL 失败。另固定 \(M>0,3\lambda M^2<1\)，只在 \(G_M=\{(x,-x^3):|x|\le M\}\) 上，Minty 输入覆盖 \(D_M=[-M(1-\lambda M^2),M(1-\lambda M^2)]\)，该图块单值且全对线性反射最小常数为 \((1+3\lambda M^2)/(1-3\lambda M^2)\)。
+- **Dependencies / Evidence / Status / Related Files**：[NC-OBJECT/BRANCH](research/topics/examples/negative_cubic_branch.md#nc-branch) 的完整三根和两图点割线计算；来源 9/01 ZIP work/c_gx053_065.md GX-054，`derived-checked`。
+- **Counterevidence / Scope**：图块的锐常数不授予完整 \(J\)；完整图的远根不因缩小输入球消失。参数 \(\lambda\) 和 \(M\) 固定在同一图块，旧卡其它二参数分类未核。
+
+## C107-v1 / NC-REGULARITY · 负三次残差、逆像与受限路径
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C106 同一完整图 \(S=\{0\}\)，对全部 \(x\)，\(d(x,S)=r_F(x)^{1/3}\)，固定零目标最大局部幂 \(1/3\) 锐系数 1；完整逆像两目标 \(1/3\)-Hölder 锐全局与原点局部系数 \(2^{2/3}\)。对 C106 的**受限** \(T_M\) 的每个非零合法初值，逐步留在 \(D_M\) 的路径只能有限步延续；零路径恒零。
+- **Dependencies / Evidence / Status / Related Files**：[NC-REGULARITY](research/topics/examples/negative_cubic_branch.md#nc-regularity) 的完整真残差、立方差和单调路径反证；`derived-checked`。残差与逆像模也可由已核 EX03 的 \(x^3\) 经符号变换得出；路径和完整图碰撞需另算。
+- **Counterevidence / Scope**：受限路径越域不表示完整多值近端每条路径都如此；固定目标系数 1 不等于两目标系数。全图碰撞、局部图块估计与零目标 EB 不能拼成完整 PPA 收敛证书。
