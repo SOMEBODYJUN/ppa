@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：70 行逐源数学单元有精确去向，最近的 GX-067、GX-068 CCA-M14 与非 tied §2.1 选定去向见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
+**当前覆盖读法**：71 行逐源数学单元有精确去向，最近的 GX-067、GX-068 CCA-M14/二参数区域与非 tied §2.1 选定去向见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -181,11 +181,13 @@
 
 [FS-HOFFMAN](../topics/random_markov/finite_state_certificate.md#fs-hoffman) 重写同一 C15 的非锐备用证据：非空零面用 Hoffman，空零面用紧性正下界。[C80](../topics/random_markov/finite_state_certificate.md#fs-regularity) 在固定有限状态上分离出 \(\Phi=\Psi^2\) 的全域 Lipschitz 与连续分片仿射性，不用 C15 的零集鉴别；[Hoffman 原文](../LITERATURE.md#lit-hoffman-1952) 的固定矩阵且目标系统有解的接口已核。来源 §5、§6 两行只关闭这两个单元，原稿其它例及先行性依然未审。
 
-此处原列的 GX-068 两变量正则、GX-032 受限图与 `work/a_monotonicity.md` §2.1 非 tied Cayley 是**当时的下一步建议**；现分别见 [C92](../topics/examples/identity_square_branch_union.md#is-mr)、[C85/C86](../topics/examples/restricted_root_graph.md#sr-geometry)、[C89–C91](../canonical/non_tied_cayley.md#nt-audit) 的选定单元重写。继续核同卡 semimonotonicity、§2.2 以后其它参数类、VI/外部先行性。来源级 `unreviewed` 目前同时覆盖未建语义索引与已有部分逐源去向，不能从该字段估算验收比例；完整关闭前须对声明的文件/成员 hash 范围建立穷尽的单元表，每个单元给去向及证据层。`deferred` 可完成分类，但数学义务仍开放。
+此处原列的 GX-068 两变量正则、GX-032 受限图与 `work/a_monotonicity.md` §2.1 非 tied Cayley 是**当时的下一步建议**；现分别见 [C92](../topics/examples/identity_square_branch_union.md#is-mr)、[C85/C86](../topics/examples/restricted_root_graph.md#sr-geometry)、[C89–C91](../canonical/non_tied_cayley.md#nt-audit) 的选定单元重写。GX-068 的二参数 semimonotonicity 区域随后又由 [C95](../topics/examples/identity_square_branch_union.md#is-semimono) 重证；继续核 §2.2 以后其它参数类、VI/外部先行性。来源级 `unreviewed` 目前同时覆盖未建语义索引与已有部分逐源去向，不能从该字段估算验收比例；完整关闭前须对声明的文件/成员 hash 范围建立穷尽的单元表，每个单元给去向及证据层。`deferred` 可完成分类，但数学义务仍开放。
 
 ## 增量：GX-067 与 GX-068 CCA-M14
 
 [C92](../topics/examples/identity_square_branch_union.md#is-mr) 对完整并图同时核目标正负的两变量半阶 MR、逆 Hölder–Aubin 量词和系数 1 的最大对称窗口；只关闭旧 CCA-M14，不以最近逆点的线性模代替完整逆关系。[C93/C94](../topics/examples/ball_normal_cone.md#bn-object) 从完整闭球法锥重算全域反射与二参数区，区分固定零目标的真空 MSR 系数**下确界**与每个参考点上两变量/逆像稳定性的失败。敌对重算已纠正零乘无穷的语义及 HREG/UHREG 分母的差别。历史原卡其余性质仍待审。
+
+[C95](../topics/examples/identity_square_branch_union.md#is-semimono) 再以完整跨支割线重证 GX-068 的全图/同窗二参数区域 \(\mu<0,\rho<0,\mu\rho\ge1/4\)，并验证这些同图参数对每个步长均不满足 C89 的正 \(A\) 门。独立敌对重算确认边界 \(\mu\rho=1/4\) 包含及同输入图碰撞；其它旧标签仍不能按整卡升级。
 
 ## 增量：正值正弦图的目标与尺度分离
 

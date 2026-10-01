@@ -7,9 +7,9 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 70 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 71 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
 
-[C92 两变量半阶 MR](research/topics/examples/identity_square_branch_union.md#is-mr) 在 GX-068 同一完整并图中补共同输入/目标窗口，并严格区分最近逆点与全纤维；[C93/C94 闭球法锥](research/topics/examples/ball_normal_cone.md#bn-object) 把 GX-067 的固定目标真空零系数与逆目标不稳定分离。敌对审查纠正了 \(0\cdot\infty\) 和 HREG/UHREG 分母的最初草稿表述。原卡其它观察和全库清洗仍开放。
+[C92 两变量半阶 MR](research/topics/examples/identity_square_branch_union.md#is-mr) 在 GX-068 同一完整并图中补共同输入/目标窗口，并严格区分最近逆点与全纤维；[C95 二参数区域](research/topics/examples/identity_square_branch_union.md#is-semimono) 又以全体跨支斜率证明 \(\mu,\rho<0,\mu\rho\ge1/4\) 与 C89 正 \(A\) 门不相交。[C93/C94 闭球法锥](research/topics/examples/ball_normal_cone.md#bn-object) 把 GX-067 的固定目标真空零系数与逆目标不稳定分离。敌对审查纠正了 \(0\cdot\infty\) 和 HREG/UHREG 分母的最初草稿表述。原卡其它观察和全库清洗仍开放。
 
 [C89–C91 非 tied 二参数图](research/canonical/non_tied_cayley.md#nt-object) 从 9/01 ZIP §2.1 的三个精确单元重新推导平移 Cayley 球、普适锐模、步长碰撞、可逆单调变换和同参数图极大门；这一批仅关闭登记单元，同稿 §2.2 以后和外部优先性仍开放。
 
@@ -61,7 +61,7 @@
 
 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 从 Gaussian 正定核重建 Hilbert \(\gamma\) 雪花，导入正式版 [LIT-ALM-2021 Theorem 1.2](research/LITERATURE.md#lit-alm-2021) 的同常数 Hilbert Lipschitz 扩张，闭合 H01 **固定参数 graph-maximal 完成**这一步的适用条件；不由此裁决 C03 整个影子定理或其他外部定理。
 
-[C66–C68 / GX-068](research/topics/examples/identity_square_branch_union.md) 把 \(F(x)=\{x,x^2\}\) 的真算子残差锐半阶、指定身份近端的线性步残差、完整多值近端的半阶最小步残差及同输入跨支碰撞分为三个 Claim。历史同卡的两变量 MR、semimonotonicity 仍未验收。[C65](research/topics/path_dynamics/m1_sign_lift.md#sl-rl) 在**新定义**的完整 Sign 图上，证端点指定输入窗口的最大全对 RL 指数 \(1/3\)；它不认证旧循环方程或无界全图常数。
+[C66–C68 / GX-068](research/topics/examples/identity_square_branch_union.md) 当时把 \(F(x)=\{x,x^2\}\) 的真算子残差锐半阶、指定身份近端的线性步残差、完整多值近端的半阶最小步残差及同输入跨支碰撞分为三个 Claim；当时未核的两变量 MR 和二参数区域**现已**分别重写为 C92、C95。[C65](research/topics/path_dynamics/m1_sign_lift.md#sl-rl) 在**新定义**的完整 Sign 图上，证端点指定输入窗口的最大全对 RL 指数 \(1/3\)；它不认证旧循环方程或无界全图常数。
 
 [C69 标量矩包络](research/topics/random_markov/scalar_moment_envelope.md#sme-envelope) 对硬支持下的全部概率律给精确凹上包络与两点取等。临界 \(\gamma q=1\) 时，若把同变量的两条逐点证书分开取最坏矩再复合，会虚增 \((R/t)^{1-\gamma}\)；[F24](FAILED_ROUTES.md#f24) 保存这个失相关机制。合法随机算法的同耦合、实际支撑和目标边缘仍是独立输入，不能将 C69 当作原生收敛定理。这批数学卡由三条独立代理分工并互相逆向检查；主线核量词、登记来源和依赖。
 
@@ -79,7 +79,7 @@
 
 ## 前一增量：闭图与 Minty 自然域闭性的条件桥
 
-[C58](research/canonical/closed_graph_minty_domain.md#cg-closure) 从旧 foundations §1.1–§1.4 的剪切坐标继续推导：同一非空图块上全对模只需在对角线附近于零点消失，完备 Hilbert 空间中 Cayley 唯一延拓至自然域闭包，图闭 iff 自然输入域闭。**再加自然域在整个空间稠密**才给满输入覆盖；闭图及全对 RL 本身仍无覆盖。E101–E102 明列两层额外门，不能把图块覆盖与完整 resolvent 任意纤维混同。§2 的 tied、inverse、缩放已在参数字典重算，这批将 §1–§2 五个精确单元补入逐源去向；这不是整份 foundations 的验收。随后 §0.4 的残差窗口边界已在上节处理。
+[C58](research/canonical/closed_graph_minty_domain.md#cg-closure) 从旧 foundations §1.1–§1.4 的剪切坐标继续推导：同一非空图块上全对模只需在对角线附近于零点消失，完备 Hilbert 空间中 Cayley 唯一延拓至自然域闭包，图闭 iff 自然输入域闭。**同一图块闭图且自然域在整个空间稠密**才给满输入覆盖；只稠密的非闭图、或只闭的真自然域均不够。E101–E102 明列两层额外门，不能把图块覆盖与完整 resolvent 任意纤维混同。§2 的 tied、inverse、缩放已在参数字典重算，这批将 §1–§2 五个精确单元补入逐源去向；这不是整份 foundations 的验收。随后 §0.4 的残差窗口边界已在上节处理。
 
 ## 第二批增量：§3 图块验证器的零锚保距离
 
@@ -152,7 +152,7 @@
 
 现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前图的精确节点/边数以 [graph.json](research/graph.json) 和结构校验为准，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
 
-**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 70 个数学单元；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
+**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 71 个数学单元；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
 **例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。
 
 **例库首批**：C24–C26 的 EX01 旋转、EX02 正紧对角、EX03 三次映射已给完整对象、真实残差和直接证明。尤其 EX02 排除任何趋零 gauge 的统一局部 EB，却保留每个初值的 PPA 强收敛；EX03 将固定目标常数 1、两变量 \(2^{2/3}\) 与算法残差下确界 \(\lambda^{-1/3}\) 分开。此三例只关闭对应 GX-004/009/021 的本轮数学单元，原卡其他性质和其余 GX 尚待重写。

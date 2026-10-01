@@ -57,7 +57,34 @@ d(x,F^{-1}(y))^2=|x+a|^2
 等价的局部逆 Hölder–Aubin 形式须写出成员量词：\(|u|,|v|<\delta\)，\(z\in F^{-1}(u)\cap(-\delta,\delta)\) 时，以 (I8) 的 \((x,y)=(z,v)\) 得
 \(d(z,F^{-1}(v))\le|u-v|^{1/2}\)，锐系数亦为 1（取 \(u=t^2,v=0,z=t\)）。这不提供单值局部化：每个充分小的正目标都有 \(y,\pm\sqrt y\) 三个趋零逆点；身份选择 \(y\mapsto y\) 虽然连续，也不代表完整逆关系单值。与 (I3) 的最近逆点线性界、(I2) 的固定目标半阶、(I7) 的近端步残差及全对 RL 碰撞均是不同量词。
 
-来源为同一 ZIP 的 `work/c_consistency_audit.md` §CCA-M14（成员 SHA-256 `44942cb65a7ae675d669fda4de90757630130be3987f6f5eef26d8cf6594290f`）。旧审计的局部半阶观察在此独立证明；semimonotonicity 区域与外部先行性仍未裁决。
+来源为同一 ZIP 的 `work/c_consistency_audit.md` §CCA-M14（成员 SHA-256 `44942cb65a7ae675d669fda4de90757630130be3987f6f5eef26d8cf6594290f`）。旧审计的局部半阶观察在此独立证明；同图 semimonotonicity 区域另见下节 C95，外部先行性仍未裁决。
+
+<a id="is-semimono"></a>
+## IS-SEMIMONO-v1：完整并图的精确二参数区域（C95）
+
+对任意实数 \(\mu,\rho\)，考虑完整图或原点处同时含两支的任意充分小**共同图点窗**上的全对条件
+\[
+\langle a,b\rangle\ge\mu|a|^2+\rho|b|^2,
+\qquad a=x-x',\quad b=v-v',\quad (x,v),(x',v')\in\operatorname{gph}F.
+\tag{I9}
+\]
+其精确参数区域在完整图与该局部 germ **相同**：
+\[
+\Sigma(F)=\{(\mu,\rho):\mu<0,\ \rho<0,\ \mu\rho\ge1/4\}.
+\tag{I10}
+\]
+这是允许负参数的图不等式区域，不表示原图有非负次单调常数或全对 RL。
+
+先证所有有限斜率都可在趋零的**跨支图点对**实现。给定 \(t\ne1\)，取非零 \(y\to0\)，令身份支输入 \(x=(y^2-ty)/(1-t)\)；则 \(x,y\to0\)、\(a=x-y\ne0\)，而 \(b=x-y^2=t a\)。斜率 \(t=1\) 由身份支的两个不同图点实现。因此 (I9) 对完整图或任何含两支的共同原点窗成立，当且仅当
+\[
+t-\mu-\rho t^2\ge0\quad\text{对每个 }t\in\mathbb R;
+\tag{I11}
+\]
+同输入不同支的 \(a=0,b\ne0\) 还要求 \(\rho\le0\)，这已由 (I11) 蕴含。二次多项式全域非负强制 \(\rho<0\)；其最小值在 \(t=1/(2\rho)\)，条件 \(1/(4\rho)-\mu\ge0\) 等价于 \(\mu\rho\ge1/4\)，并给 \(\mu<0\)。反向对任意图点，若 \(a\ne0\) 以 \(t=b/a\) 代 (I11)，\(a=0\) 用 \(\rho<0\) 即得 (I9)。这也逐坐标证明没有有限的单独 hypomonotonicity 或 cohypomonotonicity 下界：跨支斜率 \(t\to-\infty\) 使 \(ab/a^2=t\to-\infty\)，\(t\to0^-\) 使 \(ab/b^2=1/t\to-\infty\)。
+
+这一区域与 [C89 的平移 Cayley 球](../../canonical/non_tied_cayley.md#nt-quadratic) 的门有精确**不相交**关系：对每个 \(\lambda>0\)，令 \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\)，则 (I10) 和 AM–GM 给 \(A\le1-2\sqrt{\mu\rho}\le0\)、\(\Delta\le0\)。等号 \(A=0\) 仅在 \(\mu\rho=1/4,\lambda=\sqrt{\rho/\mu}\) 出现。故没有一个认证 (I10) 的参数对能满足 C89/C91 的 \(A>0,\Delta\ge0\) 联合门，不能用二参数不等式为本完整并图补出 Minty 单值性。直接地，斜率 \(t=-1/\lambda\) 的局部跨支图点对有 \(a+\lambda b=0\)、\(a-\lambda b=2a\ne0\)。此处是**同图、全部图点**的门冲突，并非声称 C89 对任意负参数图都失败；本图还有 (I8) 的两变量半阶 MR 与同输入跨支碰撞。
+
+来源为同一 ZIP `work/c_gx066_077.md` 的 GX-068 semimonotonicity 区域，以上实现全部实斜率与 C89 门对照由本库逐式重算。只关闭这一完整区域单元；历史 VI 分类及外部先行性另审。
 
 <a id="is-resolvent"></a>
 ## IS-STEP-v1：指定近端分支与完整步残差
@@ -111,4 +138,4 @@ x=\frac{y+\lambda y^2}{1+\lambda}.
 
 两个半阶模的残差不同：\(r_F(x)\) 在**原算子输出纤维**取下确界；\(r_J(p)\) 在**同一 Minty 输入的近端输出纤维**取下确界。它们的精确常数分别为 \(1\) 与 \(1/\sqrt{\lambda}\)。同一对象的指定身份选择却给线性 fixed-point EB；这是分支选择与完整关系的量词分离，不表示真实残差的半阶规律被线性化。
 
-自审边界：平方支只在 \(p\geq-1/(4\lambda)\) 存在，然而局部碰撞和 (I7) 同时使用 \(p\to0^\pm\)，故处于其域内；远根被 (I4) 保留且在 (I7) 中单独排除；(I3) 的最近点和全部逆像量词分开；全对 RL 的反例使用同一 \(\lambda\) 与同一图块。C92 的两变量半阶只在明示的共同窗口使用完整逆纤维，且不产生完整 Minty 单值性。尚未核历史例卡所列完整 semimonotonicity 区域及外部文献优先权。
+自审边界：平方支只在 \(p\geq-1/(4\lambda)\) 存在，然而局部碰撞和 (I7) 同时使用 \(p\to0^\pm\)，故处于其域内；远根被 (I4) 保留且在 (I7) 中单独排除；(I3) 的最近点和全部逆像量词分开；全对 RL 的反例使用同一 \(\lambda\) 与同一图块。C92 的两变量半阶只在明示的共同窗口使用完整逆纤维；C95 的全对二参数区域包含全部跨支斜率且不能调用 C89 的正 \(A\) 门。历史 VI 分类及外部文献优先权尚未核。

@@ -401,7 +401,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(F(x)=\{x,x^2\}\) 在 \(\mathbb R\) 上为完整关系，\(S=\{0\}\)；每个 \(0<|x|<1\) 的 \(r_F(x)=x^2\)、\(d(x,S)=|x|\)。固定目标局部半阶 EB 的收缩邻域最优模为 1，任意指数 \(q>1/2\) 失败。最近逆点 \(d(0,F^{-1}(y))=|y|\) (\(|y|<1\)) 是不同量词；全部局部逆像的最优阶仍仅 \(1/2\)。
 - **Dependencies / Evidence**：[IS-OP](research/topics/examples/identity_square_branch_union.md#is-operator-eb) 重算完整算子及逆纤维；9/01 ZIP `work/c_gx066_077.md` 的 GX-068 是来源线索。`derived-checked`。
-- **Counterevidence / Objections / Scope**：不能把最近逆点线性律当所有原像的线性 calm；历史两变量 MR 和 semimonotonicity 全范围未审。
+- **Counterevidence / Objections / Scope**：不能把最近逆点线性律当所有原像的线性 calm；同一完整图的两变量半阶 MR 现见 C92，二参数 semimonotonicity 全区域现见 C95，均不改变本固定目标 Claim 的量词。历史 VI 标签与外部先行性未审。
 
 ## C67-v1 / IS-STEP · 同一并图的指定步与完整步残差
 
@@ -570,3 +570,9 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C93 同一完整 \(N_B\)，每个 \(\bar x\in B\) 的参考 \((\bar x,0)\)，\(S=B\)。固定零目标的真残差 EB/MSR 可行系数下确界为 0，因为域内残差和距离同时为零、域外残差为 \(+\infty\)；逆关系 ordinary calm 的局部系数亦为 0。对任意这样的参考点，全部正指数的两变量 Hölder MR 与固定输入 hemiregularity 失败；inverse Aubin 失败；SMSR/isolated calm 因零点不孤立而失败。
 - **Dependencies / Evidence / Status / Related Files**：[BN-REGULARITY](research/topics/examples/ball_normal_cone.md#bn-regularity) 分球内、\(m=1\) 边界、\(m\ge2\) 边界逐目标构造；`derived-checked`，只属 GX-067 选定单元。
 - **Counterevidence / Objections / Scope**：零系数是域/大零集机制，不能作为非真空正残差增长，也不能推目标扰动稳定。若将零目标改为球心或边界是不同命题；历史其它性质及优先权待审。
+
+## C95-v1 / IS-SEMIMONO · 身份平方完整并图的精确二参数区域
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C66 的同一完整关系 \(F(x)=\{x,x^2\}\)，在全图或原点处同时含两支的任意共同小图点窗，对**所有两图点**要求 \(ab\ge\mu a^2+\rho b^2\)。精确参数集合 \(\Sigma(F)=\{(\mu,\rho):\mu<0,\rho<0,\mu\rho\ge1/4\}\)；全部实数割线斜率在每个共同原点窗可实现，故局部不能扩大区域。每个 \(\lambda>0\) 与有效参数对均有 \(A=1+\lambda\mu+\rho/\lambda\le0\)、\(\Delta=1-4\mu\rho\le0\)，无一满足 C89/C91 的 \(A>0,\Delta\ge0\) 联合门。
+- **Dependencies / Evidence / Status / Related Files**：[IS-SEMIMONO](research/topics/examples/identity_square_branch_union.md#is-semimono) 的跨支斜率实现、全实二次多项式极小与 AM–GM；[C89](research/canonical/non_tied_cayley.md#nt-quadratic) 的参数定义。来源 9/01 ZIP `work/c_gx066_077.md` GX-068 的区域观察，现独立重算；`derived-checked`，已做独立敌对复核。
+- **Counterevidence / Objections / Scope**：边界 \(\mu\rho=1/4\) 包含在内；\(A=0\) 仅在该边界的配平步长。此签名区域不提供非负 hypomonotone/cohypomonotone 单项模，也不能压倒 C68 的同输入跨支碰撞。C92 的两变量半阶 MR 与全对 RL 失败共存；VI 标签与外部先行性另核。

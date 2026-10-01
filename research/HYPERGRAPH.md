@@ -181,6 +181,7 @@
 | E157 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-MR · 完整并图共同窗口两变量半阶 MR](topics/examples/identity_square_branch_union.md#is-mr) | 固定完整 F(x)={x,x²}；任意 0<δ≤1/3、全部 \|x\|,\|y\|<δ，完整逆像距离 ≤ 完整输出残差的平方根，系数 1 取等且对称系数 1 窗最大半径 1/3；逆 Hölder–Aubin 须对 z∈F⁻¹(u)∩窗全称。最近逆点线性律与近端步残差不替代此量词。；**C92-v1 旧 CCA-M14 独立重算，最大窗口为新增推导** |
 | E158 | [BN-OBJECT · 完整闭球法锥及零集](topics/examples/ball_normal_cone.md#bn-object) | conditional → [BN-GEO · 法锥全图参数区与锐非扩张反射](topics/examples/ball_normal_cone.md#bn-geometry) | m≥1、完整 N_B、全部 λ>0 与全部图点对；J=P_B、R=2P_B−I；二参数区 μ≤0、ρ≤0，反射全域线性 RL 锐 1；无界全对 γ<1 失败。；**C93-v1 完整法锥及投影代数重算** |
 | E159 | [BN-OBJECT · 完整闭球法锥及零集](topics/examples/ball_normal_cone.md#bn-object) | conditional → [BN-REG · 真空 MSR 与逆像扰动不稳定](topics/examples/ball_normal_cone.md#bn-regularity) | 每个参考 (x̄,0), x̄∈B，固定零目标 S=B 且域外残差 +∞：每个正 MSR 系数可用、下确界 0；反向扰动目标 y=−t e 于边界或 y=t e 于内部使全部正指数 MR/HREG 及 inverse Aubin 失败。κ=0 的全邻域式不预设 0·∞。；**C94-v1 固定目标真空与两变量不稳定分离** |
+| E160 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) ∧ [NT-OBJECT · 同图全对非 tied 二参数条件与 Minty 坐标](canonical/non_tied_cayley.md#nt-object) | conditional → [IS-SEMI · 并图二参数全对区域与正 A 门冲突](topics/examples/identity_square_branch_union.md#is-semimono) | 完整 F(x)={x,x²} 或双支共同原点窗的所有图点对；跨支割线斜率实现每个实 t，故 Σ={μ<0,ρ<0,μρ≥1/4}。任意 λ>0 对有效参数均有 A=1+λμ+ρ/λ≤0 与 Δ≤0；C89/C91 的 A>0,Δ≥0 联合门在同图不可调用，不是对其定理的反例。；**C95-v1 来源 GX-068 精确区域独立重算及 C89 条件对照** |
 
 ## 参数字典
 

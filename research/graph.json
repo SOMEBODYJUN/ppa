@@ -1192,6 +1192,11 @@
       "id": "BN-REG",
       "label": "真空 MSR 与逆像扰动不稳定",
       "file": "topics/examples/ball_normal_cone.md#bn-regularity"
+    },
+    {
+      "id": "IS-SEMI",
+      "label": "并图二参数全对区域与正 A 门冲突",
+      "file": "topics/examples/identity_square_branch_union.md#is-semimono"
     }
   ],
   "edges": [
@@ -3032,6 +3037,18 @@
       "relation": "conditional",
       "scope": "每个参考 (x̄,0), x̄∈B，固定零目标 S=B 且域外残差 +∞：每个正 MSR 系数可用、下确界 0；反向扰动目标 y=−t e 于边界或 y=t e 于内部使全部正指数 MR/HREG 及 inverse Aubin 失败。κ=0 的全邻域式不预设 0·∞。",
       "status": "C94-v1 固定目标真空与两变量不稳定分离"
+    },
+    {
+      "id": "E160",
+      "topic": "例库",
+      "inputs": [
+        "IS-OBJECT",
+        "NT-OBJECT"
+      ],
+      "output": "IS-SEMI",
+      "relation": "conditional",
+      "scope": "完整 F(x)={x,x²} 或双支共同原点窗的所有图点对；跨支割线斜率实现每个实 t，故 Σ={μ<0,ρ<0,μρ≥1/4}。任意 λ>0 对有效参数均有 A=1+λμ+ρ/λ≤0 与 Δ≤0；C89/C91 的 A>0,Δ≥0 联合门在同图不可调用，不是对其定理的反例。",
+      "status": "C95-v1 来源 GX-068 精确区域独立重算及 C89 条件对照"
     }
   ]
 }

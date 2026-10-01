@@ -70,6 +70,10 @@ E157 保持 E115 的**同一完整并图**，但目标也在 \((-\delta,\delta)\
 
 E158 固定 \(m\ge1\) 的完整闭球法锥及任意步长，以全部图点对得到二参数区域 \(\mu,\rho\le0\) 与全域锐线性反射模 1；不能因单调把正强单调或正 cocoercive 参数画进来。E159 在**同一完整关系**上把固定零目标 \(S=B\) 的真空 MSR 系数下确界 0 与所有参考零点的扰动目标 MR/HREG 失败分开；全邻域 \(\kappa=0\) 的写法不预设 \(0\cdot\infty\)。[BN 卡](topics/examples/ball_normal_cone.md#bn-object) 与 [F29](../FAILED_ROUTES.md#f29) 给域外语义和边界反向目标见证。
 
+## E160：并图二参数签名不满足正 Cayley 球门
+
+E160 同时固定 [C95 的完整并图](topics/examples/identity_square_branch_union.md#is-semimono) 与 [C89 的二参数定义](canonical/non_tied_cayley.md#nt-object)，不从一个结果“推出”另一个定理。跨支图点对在每个原点图窗实现全部实斜率，因而 \(\Sigma(F)\) **恰**为 \(\mu<0,\rho<0,\mu\rho\ge1/4\)。对每个 \(\lambda>0\)，同图有效参数有 \(A\le0,\Delta\le0\)，故 C89/C91 的 \(A>0,\Delta\ge0\) 联合充分门不可用于此图；这并不反驳 C89 在其自身门内的命题。等号边界与 C68 的同输入跨支碰撞由正文独立核算。
+
 E118 对另一个**新定义**的 \(F_{\rm lift}\) 使用 C64 的全域完整 \(J_F=T\)；固定 \(\lambda=1\)、端点 Minty 输入球 \(U=B_\rho((2/3,0))\)、\(0<\rho<\min\{1/2,(2/3)/(2\sqrt{10})\}\)。球内任意两完整图点的反射差有 \(1/3\) Hölder 界，端点正向输入序列排除更高指数；任何无界全域版本和历史循环 Sign 方程都没有这条边。[SL-RL](topics/path_dynamics/m1_sign_lift.md#sl-rl)。
 
 ## E119–E122：所有概率律的包络与原生可实现耦合
