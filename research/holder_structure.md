@@ -24,9 +24,9 @@ C(x+\lambda v)=x-\lambda v,\qquad
 \operatorname{gph}F=\left\{\left(\frac{p+C(p)}2,\frac{p-C(p)}{2\lambda}\right):p\in D\right\}.
 \]
 
-在**同一固定参数**下 graph-maximal 当且仅当 \(D=H\)：反向用同输入唯一性，正向用同常数 Hölder 扩张。此扩张在一般 Hilbert 空间成立，稿内通过 Hilbert snowflake 与 Kirszbraun 组合证明。不能将 graph-maximal 改成极大单调。
+在**同一固定参数**下 graph-maximal 当且仅当 \(D=H\)：反向用同输入唯一性，正向用同常数 Hölder 扩张。[HE-EXTENSION](canonical/holder_extension.md#he-extension) 已将 Hilbert 雪花的核正性、同常数扩张和图 pullback 逐项重写，并核正式出版版的[Kirszbraun Theorem 1.2](LITERATURE.md#lit-alm-2021)。不能将 graph-maximal 改成极大单调。
 
-**证据**：S23 §2，`def:RL`、`lem:cayley`、`lem:holderextension`，222–291 行。坐标代数已独立复核；两个经典扩张定理是外部依赖。局部图块与完整 resolvent 的区别见[定义接口](foundations.md)。
+**证据**：S23 §2，`def:RL`、`lem:cayley`、`lem:holderextension`，222–291 行。坐标代数、雪花正性与同参数 maximal 逻辑已独立复核；Hilbert 间 Lipschitz 扩张仍作为有准确一手前提的外部定理导入。局部图块与完整 resolvent 的区别见[定义接口](foundations.md)。
 
 <a id="lift"></a>
 <a id="h02"></a>

@@ -5,7 +5,7 @@
 ## C01 · 全图 RL 的 Cayley 坐标
 
 - **Exact Statement / Objects / Domain**：非空关系 \(F:H\rightrightarrows H\)，实 Hilbert 空间 \(H\)，\(\lambda,L>0\)，\(0<\gamma<1\)。在**每一对**图点 \((x,v),(y,w)\) 上有 \(\|(x-y)-\lambda(v-w)\|\le L\|(x-y)+\lambda(v-w)\|^\gamma\)，当且仅当 \(D=\{x+\lambda v:(x,v)\in\operatorname{gph}F\}\) 上 \(C(x+\lambda v)=x-\lambda v\) 良定且为 \(L\)-Hölder；反向图重建为 \(((p+C(p))/2,(p-C(p))/(2\lambda))\)。若 \(D=H\) 则图在**同一固定参数**下 maximal。
-- **Dependencies / Evidence**：图点求和、求差和同输入唯一性；[9/23 TeX Lemma `cayley`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 直接给出双向证明。
+- **Dependencies / Evidence**：图点求和、求差和同输入唯一性；[9/23 TeX Lemma `cayley`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 直接给出双向证明。反向“任何极大图必满域”的同常数扩张已在 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 从 Hilbert 雪花正性及[一手 Kirszbraun 引文](research/LITERATURE.md#lit-alm-2021)单独重写。
 - **Objections / Status / Scope**：代数事实，易复核；只说固定参数的 graph-maximal，绝不等同于极大单调；局部图块须重新声明量词。
 
 ## C02 · 9/18 局部 RLEB–PPA 收敛（原稿版本）
@@ -383,4 +383,34 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(c=2/3\)、\(A(h)=c\operatorname{Sign}(h)+2h^3/3\)，\(\operatorname{Sign}(0)=[-1,1]\)。新关系 \(F_{\rm lift}(u,v)=\varnothing\) 当 \(v\ne0\)；当 \(v=0\)，其**全部**值是 \(\{(h,q):u+h-3q\in A(h)\}\)。对每个 \(z=(p,q)\in\mathbb R^2\)，完整单位步长 resolvent \(J_{F_{\rm lift}}(z)=\{(p-f(p-3q),0)\}=\{Tz\}\)，自然 Minty 域全为 \(\mathbb R^2\)，零集为 \([-c,c]\times\{0\}\)。对 \(0<\delta<1\)，\(r_{F_{\rm lift}}(c+\delta,0)=\delta/3\) 且到零集距离 \(\delta\)，端点线性 EB 常数 3 锐利；左端对称。
 - **Definitions / Dependencies / Evidence**：[SL-INCLUSION/GRAPH/ZERO](research/topics/path_dynamics/m1_sign_lift.md#sl-inclusion) 从 Sign 单调包含的三分支唯一反演并对全部残差纤维取 infimum；`derived-checked`。这是**新构造**，可将 C38/C39 对显式 \(T\) 的结论调用到此新关系的完整 resolvent。
-- **Counterevidence / Objections / Scope**：历史多步 §5 只给外层 \(T\) 与来源声明，不给原生循环方程全部允许分支；本构造绝不认证历史原生图身份。另一同名 M1/SO-06 是不同算子。新图的全对 RL、历史算法路径对应及外部优先性均未核。
+- **Counterevidence / Objections / Scope**：历史多步 §5 只给外层 \(T\) 与来源声明，不给原生循环方程全部允许分支；本构造绝不认证历史原生图身份。另一同名 M1/SO-06 是不同算子。新图在指定端点输入窗口的全对 RL 另见 C65；无界全图、历史算法路径对应及外部优先性仍未核。
+
+## C65-v1 / SL-RL · 新 Sign 图端点局部最大全对指数
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C64 **同一个新完整图**上固定 \(\lambda=1,c=2/3\) 和 Minty 输入窗口 \(U=B_\rho((c,0))\)，\(0<\rho<\min\{1/2,c/(2\sqrt{10})\}\)。对所有输入均在 U 的**任意两**图点，有全对 \(\gamma=1/3\) Hölder–RL，常数 \(L_\rho=(2\rho)^{2/3}+2(3/2)^{1/3}10^{1/6}\)；任何包含端点输入的正半径球上、\(\gamma>1/3\) 均失败。
+- **Dependencies / Evidence**：[SL-RL](research/topics/path_dynamics/m1_sign_lift.md#sl-rl) 从完整 \(J_F=T\)、\(C(p,q)=(p-2f(p-3q),-q)\)、立方根不等式与端点 \(x_t=(c+t,0)\) 逐项重算；独立逆向检查常数与球的正侧条件。`derived-checked`。
+- **Counterevidence / Objections / Scope**：局部全对图块，不称无界域相同指数/常数；只对新构造 C64，不授给历史原生循环方程。端点真残差线性与全对指数 \(1/3\) 不否定 C39 通过同一活动关系得到的一步严格收缩。
+
+## C66-v1 / IS-OP · 身份与平方并图的真残差锐半阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(F(x)=\{x,x^2\}\) 在 \(\mathbb R\) 上为完整关系，\(S=\{0\}\)；每个 \(0<|x|<1\) 的 \(r_F(x)=x^2\)、\(d(x,S)=|x|\)。固定目标局部半阶 EB 的收缩邻域最优模为 1，任意指数 \(q>1/2\) 失败。最近逆点 \(d(0,F^{-1}(y))=|y|\) (\(|y|<1\)) 是不同量词；全部局部逆像的最优阶仍仅 \(1/2\)。
+- **Dependencies / Evidence**：[IS-OP](research/topics/examples/identity_square_branch_union.md#is-operator-eb) 重算完整算子及逆纤维；9/01 ZIP `work/c_gx066_077.md` 的 GX-068 是来源线索。`derived-checked`。
+- **Counterevidence / Objections / Scope**：不能把最近逆点线性律当所有原像的线性 calm；历史两变量 MR 和 semimonotonicity 全范围未审。
+
+## C67-v1 / IS-STEP · 同一并图的指定步与完整步残差
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(\lambda>0\)，完整 \(J_{\lambda F}(p)\) 含身份根 \(p/(1+\lambda)\)，当 \(p\ge-1/(4\lambda)\) 另含平方根的近根与远根（\(p=0\) 远根 \(-1/\lambda\)）。指定身份选择 \(J_1\) 的 fixed-point EB 精确线性模 \((1+\lambda)/\lambda\)；完整最小步残差 \(r_J(p)=\inf_{u\in J(p)}|p-u|=\lambda p^2(1+o(1))\)，故收缩邻域最优半阶模 \(1/\sqrt\lambda\)，所有更高幂次失败。
+- **Dependencies / Evidence**：[IS-STEP](research/topics/examples/identity_square_branch_union.md#is-resolvent) 解一元二次方程并比较完整纤维中的三类根，`derived-checked`。
+- **Counterevidence / Objections / Scope**：指定分支的线性轨道不能升级成完整多值 J 的任意选择定理；本地锐常数指邻域收缩下确界，不声称固定邻域端点常数取到。
+
+## C68-v1 / IS-RL · 同输入跨支碰撞排除全对模
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C66 的完整图及任何固定 \(\lambda>0\)，任意零邻域存在不同两图点 \((x,x)\)、\((y,y^2)\)，其中 \(0<y<1\)、\(x=(y+\lambda y^2)/(1+\lambda)\)，满足同一 Minty 输入而 Cayley 输出不同。因此包含完整局部两支的图块对任意 \(\gamma>0\) 无有限全对 Hölder–RL 常数，完整 J 也不是局部单值。
+- **Dependencies / Evidence**：[IS-RL](research/topics/examples/identity_square_branch_union.md#is-collision) 的同输入零分母计算，`derived-checked`。
+- **Counterevidence / Objections / Scope**：不否定任何一条指定单支可能有良好模；与 C67 的残差分离相关但不是由半阶 EB 自动推出。
+
+## C69-v1 / SME-ENVELOPE · 硬支持下非线性证书的锐矩提升
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(1\le p<\infty,R>0\)，连续非减 \(\varphi:[0,R]\to[0,\infty)\) 且 \(\varphi(0)=0\)；对所有概率空间和所有 \(0\le D\le R\) a.s.、\(\|D\|_p\le t\) 的随机变量取最坏 \(\|\varphi(D)\|_p\)。置 \(g(z)=\varphi(z^{1/p})^p\)，精确 p 次方等于 \(\operatorname{cav}g(t^p)\)，每个 t 可由至多两个幅度达到。幂次 \(\varphi(u)=Au^\alpha\) 时得 \(At^\alpha\) (\(\alpha\le1\)) 或 \(AR^{\alpha-1}t\) (\(\alpha\ge1\))；同一个 D 上逐点复合 \(S\le CD^\gamma,D_+\le KS^q\) 的临界 \(\gamma q=1\) 先复合提升为 \(KC^qt\)，分开取两个锐包络给 \(KC^qR^{1-\gamma}t^\gamma\)，比值 \((R/t)^{1-\gamma}\)。
+- **Dependencies / Evidence**：[SME-ENVELOPE/POWER](research/topics/random_markov/scalar_moment_envelope.md#sme-envelope) 的紧区间均值集、凹包络、两点极值与同一变量复合；[SME-SUPPORT](research/topics/random_markov/scalar_moment_envelope.md#sme-support) 另证仅小 \(L^p\) 距离无法替代逐点硬支持。`derived-checked`，9/14 质量稀释独立审计 §4 是来源。
+- **Counterevidence / Objections / Scope**：上确界对**所有概率律**，不是指定原生耦合的可实现最优值；真实随机 PPA 的合法耦合、目标边缘与更新核须另证。分开聚合的损失不是物理轨道发散。

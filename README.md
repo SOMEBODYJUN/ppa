@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 174 个数学节点、112 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 187 个数学节点、122 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 下载后可在浏览器打开；GitHub 文件页未必执行 HTML。
 
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
@@ -52,7 +52,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 闭图与自然域 | 近对角线全对消失模 + Hilbert 完备 → 闭图 iff Minty 自然域闭；再合取自然域稠密 → 满覆盖 | C58 独立推导；闭图仍可有紧真自然域，图块外完整纤维另证 |
 | 残差窗口的量词 | 完整真残差窗口 EB + 非减 gauge 在阈值 \(\delta\) 处为正 → 缩邻域后的可评价残差 EB | C59 充分门；平坦 gauge 与闭图仍可窗口真、邻域假，定义域外须另给 gauge |
 | 非幂次边界 | 一般模 + Dini + 上述全部局部条件 → 点收敛；对数完整接缝 \(a\le1\) 有距离收缩但点发散 | 9/19 稿内构造与本轮局部重算 |
-| 全局结构 | 全图 RL → Cayley；二次 excess + 正交提升 + Banach → 单一正反影子 | C03 候选 |
+| 全局结构 | 全图 RL → Cayley；Hilbert 雪花 + 同常数 Lipschitz 扩张 → 固定参数 graph-maximal 完成；二次 excess + 正交提升 + Banach → 单一正反影子 | 扩张 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 的量词和一手引文已核；C03 仍是独立候选 |
 | 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
 | 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加参数覆盖 → 未观测图点误差 | C18–C20 稿内证明；有限查询不能全空间认证 C21 |
 | 拓扑限制 | 局部 all-pairs + EB + Dini + coverage + 不变开域 → 连续极限回缩 | 不由任意紧零集实现自动得到 |
@@ -62,11 +62,13 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 不一致随机近端 | 有限维二次近端 + 正权重 + 固定守恒边缘 + 独立新噪声 → 活跃谱隙 → 条件 \(W_2\) 收缩 → 真实 law-step EB；逐分支残差零集另由共同定点决定 | C22/C23 本轮独立推导；与普通 \(W_2\)、物理步长、Markov 同步缺陷的替换不成立 |
 | 规范例库 | 纯旋转：完整 J 严格收缩而 F 无强单调；正紧对角：严格单调+cocoercive 而无任意趋零 gauge EB；三次映射：固定目标/两变量/算法残差的精确模不同 | C24–C26 的三个对象及证明；历史 GX 编号是观察别名，不代表 77 个独立算子 |
 | DR 切触与横截 | 同一算法残差 \(I-T\) 在切触线/抛物线有锐半阶 MSR 模 1、无统一一步距离严格收缩；横截两线有全域线性 MR/MSR 模 \(1/\sin\theta\) 和轨道因子 \(\cos\theta\) | C60/C61 是两个对象；不能把算法模换成法锥和的模 |
+| 身份与平方并图 | 同一完整 \(F(x)=\{x,x^2\}\) 的真残差锐半阶；指定身份近端线性步 EB 与完整最小步半阶分离；跨支同输入碰撞 | C66–C68/GX-068；三个残差/图量词分别调用，原卡其他性质未审 |
 | 固定目标随机近端 | 同一全局 prox + 域内平稳律 → 吸收支持；非乘积闭近端图 + fair tie 核 → 有限长非不变极限及完整 \(W_2\) 邻域无 law-step gauge EB | C62/C63；与随机换目标 C22/C23、Markov 同步 OT \(\Psi\) 分离 |
+| 非线性矩提升 | 连续非减 gauge + 实际硬支持 + 全部概率律 → 凹包络锐式；同一变量两条点态证书先复合再取矩 | C69 抽象工具；临界分开聚合损失见 F24，原生合法耦合和目标边缘未证 |
 | 参数与逻辑转换 | 同图换步：旧 Cayley → \(Q=\alpha I+\beta C\)，新 Cayley 良定 iff \(Q\) 单射；线性 RL → tied 参数曲线；有界输入域高指数→低指数；真残差 EB → 选中值界 | C27–C30 分别限定相同对象、配对与尺度，折叠和分支反例阻断逆向推理 |
 | 合法多步路径 | 实际前缀 coverage ∧ 统一终点收缩 ∧ 可求和块内位移 ∧ 初值留域 → 每条轨道有限长收敛；块 RL/输出 EB 只生产终点估计 | C31–C33 已重新证明；无限词逐词指数 >1 不给统一半径，周期相位极限须单独处理 |
 | M1 显式动力 | 同一状态的活动关系 \(s=a-3b\) → 球内两步捕获及锐一步距离因子 \(3/\sqrt {10}\) | C38/C39 对给定单值 T 重算；原生多值方程到 T 的桥仍未核，不能声称一步定理严格失败 |
-| M1 的新 Sign 实现 | 新定义的全部 \(F_{\rm lift}\) 图值 → 全域完整 \(J_F=T\) 与端点真残差锐线性模 3；同一个 T → C38/C39 动力可调用 | C64 是新关系的构造；历史原生循环方程缺相位/全部选择，不能认作它 |
+| M1 的新 Sign 实现 | 新定义的全部 \(F_{\rm lift}\) 图值 → 全域完整 \(J_F=T\) 与端点真残差锐线性模 3；指定输入球上全对 RL 最大指数 \(1/3\)；同一个 T → C38/C39 动力可调用 | C64/C65 是新关系；历史原生循环方程缺相位/全部选择，不能认作它 |
 | 幂次剪切校准 | 完整三角图与真残差 EB + 有界窗全对 \(\gamma\)-Hölder + 切向余量 → 法向速率精确可达 \(\gamma q\) | C42/GX-071，只是反向构造的可达例；无界全图 RL、普适精确速率都不成立 |
 | 振荡剪切分离 | 完整三角图 + 振荡两尺度 → 有界窗最大全对指数 \(\gamma\)；同一映射的双边真实阶为 \(q>\gamma q\) | C43/GX-072，说明全对最坏指数可能保守；归一化 Q 因子未证收敛 |
 | 自然域逃逸 | 指定 Minty 域振荡反射 + 锚定 \(\alpha\)、全对 \(\alpha/(\beta+1)\) + 线性真残差 → 非零轨道有限步出域 | C44/GX-073；一步尺度不能称收敛阶，改变域或延拓后是新对象 |
@@ -97,7 +99,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 **首要开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
 
-结构稿的 proof obligations：Hilbert Hölder 扩张、统一影子常数下界、有限维 degree、fixed-set 构造、固定窗口 completion 与有限样本覆盖的适用条件；有限总查询的全空间障碍要保持确定性、无界域量词。[值域与有限数据](research/range_finite_data.md)。9/25 的 rational morphism Lefschetz 定理现有[逐条件一手核验](research/LITERATURE.md#lit-grn-2002)；有限样本仍只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
+结构稿的 proof obligations：Hilbert Hölder 扩张已有[逐项重写和准确一手导入](research/canonical/holder_extension.md)；统一影子常数下界、有限维 degree、fixed-set 构造、固定窗口 completion 与有限样本覆盖仍需各自审查；有限总查询的全空间障碍要保持确定性、无界域量词。[值域与有限数据](research/range_finite_data.md)。9/25 的 rational morphism Lefschetz 定理现有[逐条件一手核验](research/LITERATURE.md#lit-grn-2002)；有限样本仍只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
 
 ## Known Results、Refuted / Failed、Open Problems
 
@@ -131,24 +133,24 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/residual_window_bridge.md](research/canonical/residual_window_bridge.md) | RW-OBJECT/POSITIVE/FLAT 与 C59：全纤维残差窗口、一般非减 gauge 正阈值下的缩域充分门，以及完整闭图的平坦 gauge 反例；调用 EB 时若残差可能超窗口或 gauge 有限定义域，先读。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
-| [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | E02/03、E06/11/12、E17–19、E13、E54–112 的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
+| [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | 关键超边的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
 | [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
-| [research/LITERATURE.md](research/LITERATURE.md) | LIT-GRN-2002：一手 Theorem 6.2 的准确前提及 C05 紧图导入逐条件检查；使用 9/25 局部值域候选或修改其拓扑假设时读，不把引文核验当整稿验收。 |
+| [research/LITERATURE.md](research/LITERATURE.md)、[research/canonical/holder_extension.md](research/canonical/holder_extension.md) | LIT-GRN-2002 核 C05 的一手拓扑门；LIT-ALM-2021 Theorem 1.2 + HE-SNOWFLAKE/EXTENSION 核 H01 的 Hilbert 同常数扩张及固定参数 graph-maximal。引文核验不自动升级整稿。 |
 | [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；要从结构定理走向可计算证书时读。 |
 | [research/solution_selection.md](research/solution_selection.md) | S01–S03：统一尾到极限模、局部/完整修补、锐性模型；主张初值稳定时读。 |
 | [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |
 | [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
 | [research/canonical/random_proximal.md](research/canonical/random_proximal.md) | RP-OBJECT/GAP/CONTRACTION/EB/BRANCH/SCALAR 的全证明、尖锐例和残差替换障碍；研究随机近端或条件 \(W_2\) 时读，改假设须另立版本。 |
 | [research/canonical/example_atlas.md](research/canonical/example_atlas.md) | EX01 旋转、EX02 正紧对角、EX03 三次映射的完整对象卡、真残差、参数、证明及历史别名；检验某个逆推、EB 或常数边界时读，新增 GX 先区分对象与观察。 |
-| [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C60/C61：GX-069/070 的 DR 算法残差 \(G=I-T\) 在切触与横截集合中的完整对象、最优模和实际一步/轨道边界；比较算法 EB 与法锥和正则性时读。 |
-| [research/topics/random_markov/README.md](research/topics/random_markov/README.md)、[research/topics/random_markov/proximal_selection_seam.md](research/topics/random_markov/proximal_selection_seam.md) | C62/C63：同一固定目标全局近端的平稳吸收、二维非乘积闭图、fair tie 非 Feller 核及每个完整 \(W_2\) 邻域的 law-step gauge 障碍；改选核或换随机目标时先辨对象。 |
+| [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/identity_square_branch_union.md](research/topics/examples/identity_square_branch_union.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C66–C68/GX-068 的完整并图、两种真残差与跨支碰撞；C60/C61/GX-069/070 的 DR 算法残差锐模。先区分原算子、选支、完整步和算法残差。 |
+| [research/topics/random_markov/README.md](research/topics/random_markov/README.md)、[research/topics/random_markov/proximal_selection_seam.md](research/topics/random_markov/proximal_selection_seam.md)、[research/topics/random_markov/scalar_moment_envelope.md](research/topics/random_markov/scalar_moment_envelope.md) | C62/C63 固定目标全局近端的核接缝；C69 连续 gauge 的锐标量矩包络与分开聚合损失。后者须另证明原生合法耦合和硬支持。 |
 | [research/canonical/parameter_dictionary.md](research/canonical/parameter_dictionary.md) | PD-QUANTIFIERS/CAYLEY/TIED/STEP/SCALE/RESIDUAL/REGULARITY：同一图换步的单射门、尺度、真残差和 MR/MSR 的量词；引入或改变 RL 参数、正则性、选中步残差时先读。 |
 | [research/canonical/path_atlas.md](research/canonical/path_atlas.md) | PA-DEF/WHOLE/BLOCK/POWER/CYCLES：每条合法路径的前缀延拓、块内预算、整轨道证明；无限词统一性反例及非平凡周期的独立相位结论。做多步或多值算法时先核实际分支与留域。 |
 | [research/topics/path_dynamics/README.md](research/topics/path_dynamics/README.md)、[research/topics/path_dynamics/m1_capture.md](research/topics/path_dynamics/m1_capture.md)、[research/topics/path_dynamics/power_shear.md](research/topics/path_dynamics/power_shear.md)、[research/topics/path_dynamics/oscillatory_shear.md](research/topics/path_dynamics/oscillatory_shear.md)、[research/topics/path_dynamics/domain_escape.md](research/topics/path_dynamics/domain_escape.md) | 路径主题入口与独立对象卡：C38/C39 的 M1 端点球和原生图缺口；C42 的可达性；C43 的保守指数；C44 的自然域逃逸与全纤维线性残差。新增对象先辨图、窗口和零集。 |
-| [research/topics/path_dynamics/m1_sign_lift.md](research/topics/path_dynamics/m1_sign_lift.md) | C64：新定义完整 Sign 图的全部纤维、全域 \(J_F=T\) 与端点真残差模 3；检验显式 T 是否可能有多值图实现时读，历史原生循环方程仍须原始定义和路径桥。 |
+| [research/topics/path_dynamics/m1_sign_lift.md](research/topics/path_dynamics/m1_sign_lift.md) | C64/C65：新定义完整 Sign 图的全部纤维、全域 \(J_F=T\)、端点真残差模 3 和指定球上局部最大全对指数 \(1/3\)；历史原生循环方程仍须原始定义和路径桥。 |
 | [research/canonical/composite_subregularity.md](research/canonical/composite_subregularity.md) | CS-TRANSFER/EB/PROX/MODEL：满行秩修复、链式真残差、局部近端轨道及曲面幂/非幂锐例；秩亏反例和开放乘子门。研究复合目标或调用历史 C11 时先辨身份。 |
 | [research/topics/composite_regular/README.md](research/topics/composite_regular/README.md)、[research/topics/composite_regular/cusp_identification.md](research/topics/composite_regular/cusp_identification.md)、[research/topics/composite_regular/oscillating_target.md](research/topics/composite_regular/oscillating_target.md) | 复合主题可扩写入口与 C40/C41 独立证明：真多值次梯度的局部一步识别门、弱分离缺失时驻点极大序列的目标正确 EB 障碍。新增秩亏机制或目标反例时分别开卡，先核同一目标和真实残差。 |
 | [research/audit/SOURCE_RECONSTRUCTION_AUDIT.md](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md)、[SOURCE_FILE_INVENTORY.tsv](research/audit/SOURCE_FILE_INVENTORY.tsv)、[ZIP_MEMBER_INVENTORY.tsv](research/audit/ZIP_MEMBER_INVENTORY.tsv)、[LEGACY_VERIFIER_RUNS.json](research/audit/LEGACY_VERIFIER_RUNS.json) | 251 个原件及 178 个包内成员的路径/哈希/语义未决字段，旧验证器环境与运行输出；逐源重写时更新 disposition 与规范锚点，不能将盘点算验收。 |

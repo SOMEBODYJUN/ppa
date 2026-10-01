@@ -62,6 +62,8 @@
 | E100 | [AV-GAP · 完整多值零集未被图块零锚覆盖](canonical/all_pairs_verifier.md#av-gap) | refutes → [OB-AV-ANCHOR · 全对图块加 coverage 自动给完整零集锚（错误）](canonical/all_pairs_verifier.md#av-gap) | 完整 F(y)={0,y}、图块 G={(y,y)} 在 R 上全对 L=0 且满 coverage；S=R,S_G={0}，非零输入 d(x,S)=0 而 Tx=x/2。缺的是零锚保距离，完整排他也独立失败。；**新反例，全部完整纤维与两种零集直接核算** |
 | E104 | [RW-FLAT · 闭图扁平 gauge 的窗口反例](canonical/residual_window_bridge.md#rw-flat) | refutes → [OB-RW-NEIGH · 一般窗口 EB 自动成为邻域 EB（错误）](canonical/residual_window_bridge.md#rw-flat) | 完整闭图 F(0)={0,1},F(u)={1} (u≠0)，S={0}、ψ(t)=max(t−2,0)、δ=1/2；窗口只检验零点，但任意邻域有 r_F=1 且 ψ(1)=0<\|u\|。不附加全对 RL。；**C59 边界反例，完整图与全部纤维直接计算** |
 | E107 | [DR-TAN · GX-069 切触 DR 的半阶真残差](topics/examples/dr_tangency_transversality.md#dr-tangent) | refutes → [OB-DR-STRICT · 半阶 EB 自动给统一一步严格距离收缩（错误）](topics/examples/dr_tangency_transversality.md#dr-tangent) | z_s=(s,−s²)→0 时 d(Tz_s,S)=d(z_s,S)>0；虽有全邻域半阶 EB，任何统一 ρ<1 的一步距离比均失败。；**C60 精确取等序列** |
+| E121 | [SME-POWER · 幂次最坏矩与同变量复合](topics/random_markov/scalar_moment_envelope.md#sme-power) | refutes → [OB-AGGREGATE · 分开矩聚合的临界失相关障碍](../FAILED_ROUTES.md#f24) | 0<γ<1、q>1、γq=1、0<t<R：分开最坏包络与先复合的最坏上界比 (R/t)^(1−γ)；各自锐的极值分布未必相同。并非证明任何物理随机轨道发散。；**F24 的定量失相关见证** |
+| E122 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-SUPPORT · 小矩距离不提供逐点支撑](topics/random_markov/scalar_moment_envelope.md#sme-support) | 对全部 0≤D≤R 且 \|\|D\|\|p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。；**C69 稀薄二点律的必要性** |
 
 ## 局部拓扑
 
@@ -152,6 +154,9 @@
 | E61 | [EX-CUBIC · 三次映射与完整 J](canonical/example_atlas.md#ex03) | implies → [EX-MODULI · 固定/移动目标与算法残差三种精确模](canonical/example_atlas.md#ex03) | F=x³ 的固定目标 q=1/3 模 1、两变量模 2^(2/3)、Gλ=I−JλF 局部模下确界 λ^(−1/3)；对象及取到性不同。；**本轮独立推导；仅此例/族** |
 | E105 | [DR-OBJECT · DR 算法残差及两种集合几何](topics/examples/dr_tangency_transversality.md#dr-objects) | conditional → [DR-TAN · GX-069 切触 DR 的半阶真残差](topics/examples/dr_tangency_transversality.md#dr-tangent) | C=横轴、D=抛物线、G=I-T，投影管 U={b>−1/2}；对全部零附近输入的真算法残差给最优半阶模 1，不把法锥和 N_C+N_D 当 G。；**C60 完整投影参数与取等序列重算** |
 | E106 | [DR-OBJECT · DR 算法残差及两种集合几何](topics/examples/dr_tangency_transversality.md#dr-objects) | conditional → [DR-TRANS · GX-070 横截 DR 的精确线性模](topics/examples/dr_tangency_transversality.md#dr-transverse) | 改为夹角 θ∈(0,π/2) 的两条横截线、同一 DR 公式；G=I−cosθ Qθ，全域 MR/MSR 精确模 1/sinθ，实际 T 轨道因子 cosθ；是另一对象。；**C61 反射与奇异值恒等式重算** |
+| E115 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-OP · 原算子真残差锐半阶](topics/examples/identity_square_branch_union.md#is-operator-eb) | F(x)={x,x²} 完整图，S={0}；0<\|x\|<1 时真 r_F=x²，最优半阶模 1；最近逆点量词不能替代全部局部逆像。；**C66 完整纤维计算** |
+| E116 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-STEP · 指定分支与完整最小步残差分离](topics/examples/identity_square_branch_union.md#is-resolvent) | 固定 λ>0，完整 J 包括身份根、近平方根与远平方根；指定 J₁ 线性步模 (1+λ)/λ，完整 inf 步模 1/√λ 的局部半阶；远根不得删。；**C67 完整方程和三根渐近** |
+| E117 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-RL · 同输入跨支碰撞](topics/examples/identity_square_branch_union.md#is-collision) | 任意固定 λ>0、任意零邻域内两支图点可有相同 Minty 输入而不同 Cayley 输出；故包含两支的局部完整图无任意正指数全对 RL。；**C68 同输入碰撞** |
 
 ## 参数字典
 
@@ -230,6 +235,21 @@
 | E110 | [SL-INCLUSION · 新 Sign 包含与全纤维图](topics/path_dynamics/m1_sign_lift.md#sl-inclusion) | implies → [SL-RESOLVENT · 新完整图的 J 等于 M1 显式 T](topics/path_dynamics/m1_sign_lift.md#sl-graph) | 新定义 F_lift(u,0) 的全部 (h,q) 由 u+h−3q∈(2/3)Sign(h)+(2/3)h³ 给出，轴外为空；λ=1，Sign(0)=[−1,1]。对每个 z∈R² 唯一 h=f(p−3q)，完整 J_Flift(z)={Tz}，自然 Minty 域全平面；绝不认证历史原生循环方程。；**C64 全分支与端点独立反演** |
 | E111 | [SL-INCLUSION · 新 Sign 包含与全纤维图](topics/path_dynamics/m1_sign_lift.md#sl-inclusion) | conditional → [SL-RESIDUAL · 新图端点的锐线性真残差](topics/path_dynamics/m1_sign_lift.md#sl-zero-residual) | 同一新图的全部残差纤维在端点给 r_F(c+δ,0)=δ/3、d((c+δ,0),zer F)=δ (0<δ<1)；线性 EB 常数 3 锐利，和 C38/C39 的动力证明逻辑独立。；**C64 按 h 正/零/负分支求 infimum** |
 | E112 | [SL-RESOLVENT · 新完整图的 J 等于 M1 显式 T](topics/path_dynamics/m1_sign_lift.md#sl-graph) ∧ [M1-CAPTURE · 每个球内初值两步捕获](topics/path_dynamics/m1_capture.md#m1-capture) ∧ [M1-SHARP · 锐一步距离因子 3/√10](topics/path_dynamics/m1_capture.md#m1-sharp) | conditional → [SL-DYNAMICS · 新图完整 resolvent 的显式捕获与锐一步界](topics/path_dynamics/m1_sign_lift.md#sl-status) | 仅对新 F_lift 的完整 resolvent J=T，C38 两步捕获与 C39 一步锐因子各自已对这个显式映射证明，合取后可用于这个新完整 J；本边不把历史原生循环算法认作 F_lift。；**调用关系，非新证明** |
+| E118 | [SL-RESOLVENT · 新完整图的 J 等于 M1 显式 T](topics/path_dynamics/m1_sign_lift.md#sl-graph) | conditional → [SL-RL · 新 Sign 完整图的端点局部最大全对指数](topics/path_dynamics/m1_sign_lift.md#sl-rl) | 仅新 F_lift、λ=1、U=Bρ((2/3,0)) 且 ρ<min(1/2,c/(2√10))；每对完整图点的 Minty 输入在 U 时有 γ=1/3 常数 Lρ；端点正向序列排除 γ>1/3。不能认证旧循环图或无界全域。；**C65 立方根界与端点锐性** |
+
+## Hilbert 扩张
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E113 | [HE-SNOW · Hilbert γ 雪花的条件负定核](canonical/holder_extension.md#he-snowflake) ∧ [LIT-ALM · Hilbert 间同常数 Kirszbraun 正式 Theorem 1.2](LITERATURE.md#lit-alm-2021) | conditional → [HE-EXT · 同常数 Hölder 扩张与固定参数图完成](canonical/holder_extension.md#he-extension) | 任意非空 D⊂H、0<γ<1、同一 L≥0 的全对 Hölder 映射；雪花等距入 Hilbert 后以正式 Theorem 1.2 同常数扩张，回拉到 H；不保持额外像集或单调性。；**H01 的扩张步骤重新证明及一手前提核对** |
+| E114 | [D02 · 全对 RL 与指定尺度](foundations.md#d02) ∧ [D03 · Cayley 表示](foundations.md#d03) ∧ [HE-EXT · 同常数 Hölder 扩张与固定参数图完成](canonical/holder_extension.md#he-extension) | conditional → [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) | 只针对完整非空全图、固定 λ,L,γ 的 RL 类；同参数 graph-maximal iff Minty 输入域 H。图块局部模不获全域扩张；不是 maximal monotone。；**H01 中 maximal 子命题，不升级结构稿其他候选** |
+
+## 随机矩
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E119 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-ENV · 连续 gauge 的最小凹上包络](topics/random_markov/scalar_moment_envelope.md#sme-envelope) | 1≤p<∞、R>0、连续非减 φ(0)=0、对所有概率律且实际 D≤R；最坏矩 p 次方等于 (cav g)(t^p)，g(z)=φ(z^(1/p))^p，至多二点幅度取等。；**C69 紧均值集与凹包络证明** |
+| E120 | [SME-ENV · 连续 gauge 的最小凹上包络](topics/random_markov/scalar_moment_envelope.md#sme-envelope) | conditional → [SME-POWER · 幂次最坏矩与同变量复合](topics/random_markov/scalar_moment_envelope.md#sme-power) | 幂 φ(u)=Au^α 特化：α≤1 为 At^α，α≥1 为 AR^(α−1)t；同一个 D 上逐点 S≤CD^γ、D+≤KS^q 先复合再取矩，必须同一合法耦合及支撑。；**C69 幂次与同变量复合** |
 
 ## 不蕴含关系
 

@@ -871,6 +871,71 @@
       "id": "SL-DYNAMICS",
       "label": "新图完整 resolvent 的显式捕获与锐一步界",
       "file": "topics/path_dynamics/m1_sign_lift.md#sl-status"
+    },
+    {
+      "id": "HE-SNOW",
+      "label": "Hilbert γ 雪花的条件负定核",
+      "file": "canonical/holder_extension.md#he-snowflake"
+    },
+    {
+      "id": "LIT-ALM",
+      "label": "Hilbert 间同常数 Kirszbraun 正式 Theorem 1.2",
+      "file": "LITERATURE.md#lit-alm-2021"
+    },
+    {
+      "id": "HE-EXT",
+      "label": "同常数 Hölder 扩张与固定参数图完成",
+      "file": "canonical/holder_extension.md#he-extension"
+    },
+    {
+      "id": "IS-OBJECT",
+      "label": "身份与平方并图的完整关系",
+      "file": "topics/examples/identity_square_branch_union.md#is-object"
+    },
+    {
+      "id": "IS-OP",
+      "label": "原算子真残差锐半阶",
+      "file": "topics/examples/identity_square_branch_union.md#is-operator-eb"
+    },
+    {
+      "id": "IS-STEP",
+      "label": "指定分支与完整最小步残差分离",
+      "file": "topics/examples/identity_square_branch_union.md#is-resolvent"
+    },
+    {
+      "id": "IS-RL",
+      "label": "同输入跨支碰撞",
+      "file": "topics/examples/identity_square_branch_union.md#is-collision"
+    },
+    {
+      "id": "SL-RL",
+      "label": "新 Sign 完整图的端点局部最大全对指数",
+      "file": "topics/path_dynamics/m1_sign_lift.md#sl-rl"
+    },
+    {
+      "id": "SME-OBJECT",
+      "label": "硬支持下所有概率律的矩提升对象",
+      "file": "topics/random_markov/scalar_moment_envelope.md#sme-object"
+    },
+    {
+      "id": "SME-ENV",
+      "label": "连续 gauge 的最小凹上包络",
+      "file": "topics/random_markov/scalar_moment_envelope.md#sme-envelope"
+    },
+    {
+      "id": "SME-POWER",
+      "label": "幂次最坏矩与同变量复合",
+      "file": "topics/random_markov/scalar_moment_envelope.md#sme-power"
+    },
+    {
+      "id": "SME-SUPPORT",
+      "label": "小矩距离不提供逐点支撑",
+      "file": "topics/random_markov/scalar_moment_envelope.md#sme-support"
+    },
+    {
+      "id": "OB-AGGREGATE",
+      "label": "分开矩聚合的临界失相关障碍",
+      "file": "../FAILED_ROUTES.md#f24"
     }
   ],
   "edges": [
@@ -2177,6 +2242,119 @@
       "relation": "conditional",
       "scope": "仅对新 F_lift 的完整 resolvent J=T，C38 两步捕获与 C39 一步锐因子各自已对这个显式映射证明，合取后可用于这个新完整 J；本边不把历史原生循环算法认作 F_lift。",
       "status": "调用关系，非新证明"
+    },
+    {
+      "id": "E113",
+      "topic": "Hilbert 扩张",
+      "inputs": [
+        "HE-SNOW",
+        "LIT-ALM"
+      ],
+      "output": "HE-EXT",
+      "relation": "conditional",
+      "scope": "任意非空 D⊂H、0<γ<1、同一 L≥0 的全对 Hölder 映射；雪花等距入 Hilbert 后以正式 Theorem 1.2 同常数扩张，回拉到 H；不保持额外像集或单调性。",
+      "status": "H01 的扩张步骤重新证明及一手前提核对"
+    },
+    {
+      "id": "E114",
+      "topic": "Hilbert 扩张",
+      "inputs": [
+        "D02",
+        "D03",
+        "HE-EXT"
+      ],
+      "output": "H01",
+      "relation": "conditional",
+      "scope": "只针对完整非空全图、固定 λ,L,γ 的 RL 类；同参数 graph-maximal iff Minty 输入域 H。图块局部模不获全域扩张；不是 maximal monotone。",
+      "status": "H01 中 maximal 子命题，不升级结构稿其他候选"
+    },
+    {
+      "id": "E115",
+      "topic": "例库",
+      "inputs": [
+        "IS-OBJECT"
+      ],
+      "output": "IS-OP",
+      "relation": "conditional",
+      "scope": "F(x)={x,x²} 完整图，S={0}；0<|x|<1 时真 r_F=x²，最优半阶模 1；最近逆点量词不能替代全部局部逆像。",
+      "status": "C66 完整纤维计算"
+    },
+    {
+      "id": "E116",
+      "topic": "例库",
+      "inputs": [
+        "IS-OBJECT"
+      ],
+      "output": "IS-STEP",
+      "relation": "conditional",
+      "scope": "固定 λ>0，完整 J 包括身份根、近平方根与远平方根；指定 J₁ 线性步模 (1+λ)/λ，完整 inf 步模 1/√λ 的局部半阶；远根不得删。",
+      "status": "C67 完整方程和三根渐近"
+    },
+    {
+      "id": "E117",
+      "topic": "例库",
+      "inputs": [
+        "IS-OBJECT"
+      ],
+      "output": "IS-RL",
+      "relation": "conditional",
+      "scope": "任意固定 λ>0、任意零邻域内两支图点可有相同 Minty 输入而不同 Cayley 输出；故包含两支的局部完整图无任意正指数全对 RL。",
+      "status": "C68 同输入碰撞"
+    },
+    {
+      "id": "E118",
+      "topic": "路径动力学",
+      "inputs": [
+        "SL-RESOLVENT"
+      ],
+      "output": "SL-RL",
+      "relation": "conditional",
+      "scope": "仅新 F_lift、λ=1、U=Bρ((2/3,0)) 且 ρ<min(1/2,c/(2√10))；每对完整图点的 Minty 输入在 U 时有 γ=1/3 常数 Lρ；端点正向序列排除 γ>1/3。不能认证旧循环图或无界全域。",
+      "status": "C65 立方根界与端点锐性"
+    },
+    {
+      "id": "E119",
+      "topic": "随机矩",
+      "inputs": [
+        "SME-OBJECT"
+      ],
+      "output": "SME-ENV",
+      "relation": "conditional",
+      "scope": "1≤p<∞、R>0、连续非减 φ(0)=0、对所有概率律且实际 D≤R；最坏矩 p 次方等于 (cav g)(t^p)，g(z)=φ(z^(1/p))^p，至多二点幅度取等。",
+      "status": "C69 紧均值集与凹包络证明"
+    },
+    {
+      "id": "E120",
+      "topic": "随机矩",
+      "inputs": [
+        "SME-ENV"
+      ],
+      "output": "SME-POWER",
+      "relation": "conditional",
+      "scope": "幂 φ(u)=Au^α 特化：α≤1 为 At^α，α≥1 为 AR^(α−1)t；同一个 D 上逐点 S≤CD^γ、D+≤KS^q 先复合再取矩，必须同一合法耦合及支撑。",
+      "status": "C69 幂次与同变量复合"
+    },
+    {
+      "id": "E121",
+      "topic": "交叉限制",
+      "inputs": [
+        "SME-POWER"
+      ],
+      "output": "OB-AGGREGATE",
+      "relation": "refutes",
+      "scope": "0<γ<1、q>1、γq=1、0<t<R：分开最坏包络与先复合的最坏上界比 (R/t)^(1−γ)；各自锐的极值分布未必相同。并非证明任何物理随机轨道发散。",
+      "status": "F24 的定量失相关见证"
+    },
+    {
+      "id": "E122",
+      "topic": "交叉限制",
+      "inputs": [
+        "SME-OBJECT"
+      ],
+      "output": "SME-SUPPORT",
+      "relation": "conditional",
+      "scope": "对全部 0≤D≤R 且 ||D||p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。",
+      "status": "C69 稀薄二点律的必要性"
     }
   ]
 }

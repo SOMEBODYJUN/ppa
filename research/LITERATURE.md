@@ -2,6 +2,13 @@
 
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
+<a id="lit-alm-2021"></a>
+## LIT-ALM-2021 · Hilbert 间同常数 Lipschitz 扩张
+
+**Paper fact.** D. Azagra, E. Le Gruyer, C. Mudarra, “Kirszbraun’s Theorem via an Explicit Formula,” *Canadian Mathematical Bulletin* **64** (2021), 142–153, [出版社正式 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/15797B44C630B0E2A4BB12547759929D/S0008439520000314a.pdf/kirszbrauns_theorem_via_an_explicit_formula.pdf), DOI [10.4153/S0008439520000314](https://doi.org/10.4153/S0008439520000314)。印刷页 144 **Theorem 1.2**：任意两个 Hilbert 空间 `X,Y`、任意子集 `E⊂X`、Lipschitz `G:E→Y`，可扩张为 `X→Y` 且保持 Lipschitz 常数。论文给出一个显式公式；本项目只导入存在与同常数性质，不使用该公式的额外正则性。历史稿其他位置若按预印本的编号引 “Theorem 2”，不可直接当正式出版版 Theorem 2；此处以正式页码与 Theorem 1.2 为准。
+
+**Project mapping (2026-10-01).** [HE-EXTENSION](canonical/holder_extension.md#he-extension) 先用 (HE2)–(HE4) 独立将 `H` 的 `γ` 雪花等距嵌入一个 Hilbert `E_γ`，再令源子集为 `J(D)⊂E_γ`、目标为原 Hilbert `H`、Lipschitz 常数为 `L`。因此 [H01](holder_structure.md#h01) 中同一 `λ,L,γ` 的 graph-maximal 完成可用这条**准确引文 + 独立嵌入**调用。此文不证明随机分支、局部图块 coverage、其他 topology/degree 引用或文献先行性。
+
 <a id="lit-grn-2002"></a>
 ## LIT-GRN-2002 · Górniewicz–Rozpłoch-Nowakowska 的 morphism Lefschetz 定理
 

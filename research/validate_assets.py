@@ -122,6 +122,13 @@ normative = list(ROOT.glob("*.md")) + list((ROOT / "research").rglob("*.md"))
 link = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 for page in normative:
     data = page.read_text(encoding="utf-8")
+    # Formulae such as M_p[phi](t) are not Markdown links. Exclude math and
+    # code spans before applying the deliberately small relative-link check.
+    data = re.sub(r"(?s)```.*?```", "", data)
+    data = re.sub(r"(?s)\\\[.*?\\\]", "", data)
+    data = re.sub(r"(?s)\$\$.*?\$\$", "", data)
+    data = re.sub(r"`[^`\n]*`", "", data)
+    data = re.sub(r"(?<!\\)\$[^$\n]*\$", "", data)
     for target in link.findall(data):
         target = target.split("#", 1)[0]
         if not target or "://" in target or target.startswith("mailto:"):

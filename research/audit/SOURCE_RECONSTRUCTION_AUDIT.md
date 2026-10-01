@@ -152,3 +152,9 @@
 [C62/C63 固定目标近端](../topics/random_markov/proximal_selection_seam.md) 从 9/14 非乘积稿 §3、§5 重写域内平稳律吸收、全局近端完整图及 fair tie 核接缝。历史 V10 有理脚本 2026-10-01 复跑退出码 0，只是有限代数观察；一般平稳律与每个 \(W_2\) 邻域的障碍在正文另给证明。四个选定来源单元在 TSV 新增去向，当前共 45；同稿其他随机机制和其余 ZIP 成员仍未裁决。
 
 [C64 新 Sign 实现](../topics/path_dynamics/m1_sign_lift.md) 是针对已核显式 T 的**原创反向构造**，不是把历史原生方程作 `rewritten`；因此不新增虚假的历史单元去向，原 §5 原生桥继续 `deferred`。[F23](../../FAILED_ROUTES.md#f23) 记录两份同名 M1 的身份隔离及恢复原生方程的精确义务。9/25 所引 [6, Theorem 6.2] 的一手适用门另由 [LIT-GRN-2002](../LITERATURE.md#lit-grn-2002) 关闭，但 C05 的整窗模型仍候选。
+
+## 增量：Hilbert 扩张、GX-068 与随机标量提升
+
+[HE-EXTENSION](../canonical/holder_extension.md#he-extension) 重新写出 S23 §2 的 Hilbert 雪花核正性与固定参数极大图逻辑；一手 Hilbert Lipschitz 同常数扩张的正式编号是 [LIT-ALM-2021 Theorem 1.2](../LITERATURE.md#lit-alm-2021)。这里只关闭 H01 扩张步骤的适用范围，不审整篇结构稿。
+
+[C66–C68](../topics/examples/identity_square_branch_union.md) 对 9/01 ZIP 内 GX-068 逐对象重算原算子、全部近端根、完整最小步残差及跨支 RL 碰撞；[C69](../topics/random_markov/scalar_moment_envelope.md) 从 9/14 质量稀释审计 §4 重写任意连续非减 gauge 的硬支持锐矩包络、二点取等与临界分开聚合损失。逐源 TSV 各新增一个数学单元；原卡其他性质及原生随机耦合未验收。[C65](../topics/path_dynamics/m1_sign_lift.md#sl-rl) 对原创 C64 的同一个新完整图补端点球局部指数证明，不虚报为历史原生图的来源单元。代理交叉核了对象常数、近端远根、端点与硬支持，结构与完整证明审查仍有明确范围。

@@ -54,6 +54,20 @@ E108 的全称量词是：**每个**支撑于同一 \(f\) 的 \(\operatorname{do
 
 E110/E111 从**新定义** \(F_{\rm lift}\) 的全部图值分别推出完整单位步长 \(J_F=T\) 和端点真实残差 \(\delta/3\)；后一个结论要重新取完整纤维 infimum，不从动力率推出。E112 只有在这个新关系与已核显式 \(T\) 逐输入同一时，才把 C38/C39 的两项动力结论应用到它。历史“原生循环 Sign 方程”没有给可识别的完整图与允许相位，所以没有从 E110 到该历史方程的边。[Sign 新构造](topics/path_dynamics/m1_sign_lift.md)。
 
+## E113–E114：Hilbert 雪花、引文与固定参数图极大
+
+E113 对任意非空子集 \(D\subset H\) 及**全部配对**的相同 \(L,0<\gamma<1\) 建立 \(C:D\to Y\)。[HE-SNOWFLAKE](canonical/holder_extension.md#he-snowflake) 的 Gaussian 正定性给 \(\|Jx-Jy\|=\|x-y\|^\gamma\)，[LIT-ALM-2021](LITERATURE.md#lit-alm-2021) 的正式 Theorem 1.2 只导入**Hilbert 间**同常数 Lipschitz 扩张；二者合取才给同参数 Hölder 扩张。E114 再把它施于 **完整** RL 图的 Cayley \(C\)，固定 \(\lambda,L,\gamma\)，使用剪切反演和同输入唯一性才得到 `graph-maximal ⇔ Minty 域 H`。图块局部模、预定像集或极大单调性不在结论内；该边只支撑 H01 这一子命题，不审 C03 全篇影子证明。
+
+## E115–E118：并图三残差与新 Sign 图局部指数
+
+E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 是 \(r_F(x)=d(0,F(x))=x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR/semimonotonicity 仍另核。[IS 卡](topics/examples/identity_square_branch_union.md)。
+
+E118 对另一个**新定义**的 \(F_{\rm lift}\) 使用 C64 的全域完整 \(J_F=T\)；固定 \(\lambda=1\)、端点 Minty 输入球 \(U=B_\rho((2/3,0))\)、\(0<\rho<\min\{1/2,(2/3)/(2\sqrt{10})\}\)。球内任意两完整图点的反射差有 \(1/3\) Hölder 界，端点正向输入序列排除更高指数；任何无界全域版本和历史循环 Sign 方程都没有这条边。[SL-RL](topics/path_dynamics/m1_sign_lift.md#sl-rl)。
+
+## E119–E122：所有概率律的包络与原生可实现耦合
+
+E119 固定 \(p,R,\varphi\) 的连续非减硬支持对象，取**所有**概率空间、全部 \(0\le D\le R\) 且 \(\|D\|_p\le t\) 的最坏情形；上确界等于最小凹上包络并存在至多两点幅度的取等律。E120 对幂函数的凹/凸包络给两个锐分支；若还要将 \(S\le CD^\gamma,D_+\le KS^q\) 用于真实更新，必须先在**同一**合法耦合上同时证两条逐点界与真实支撑。E121 的 F24 用临界 \(\gamma q=1\) 定量反驳把两次各自取等的标量包络视为同耦合锐界。E122 的稀薄双点律证明只知道小 \(L^p\) 并不能替代 \(D\le r\) 的逐点门。以上没有核具体 Markov 核的目标边缘或其可实现选择。[SME 正文](topics/random_markov/scalar_moment_envelope.md)。
+
 ## E54–E58：随机近端中的三种残差
 
 RP-OBJECT 固定有限维二次近端、正权重、共同核 \(U\)、非零活跃空间 \(V\) 和与当前状态独立的新噪声；RP-GAP 仅在 \(V\) 上给 \(c<1\)。对**每个固定**守恒边缘 \(\nu\in\mathscr P_2(U)\)、**所有** \(\mu\in\mathscr M_\nu\)，RP-CONTRACTION 给完整混合核的条件 \(\mathsf W_\nu\) 收缩。RP-EB 才使用 \(\mathcal R_\nu(\mu)=\mathsf W_\nu(\mu,\mu P)\) 推出 \((1-c)E_\nu\le\mathcal R_\nu\le(1+c)E_\nu\) 与有限长度。[完整证明](canonical/random_proximal.md)。
