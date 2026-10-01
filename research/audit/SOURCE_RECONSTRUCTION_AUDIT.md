@@ -128,3 +128,7 @@
 ## 15. 增量：moving-anchor 与固定锚的分界
 
 [移动锚反射](../canonical/moving_anchor_reflection.md) 从 foundations §6.1–6.2 重算真残差输出近锚的双边渐近反射比和幂型缺陷常数 C51/C52；线性零集的显式完整关系阻断将输出近锚换为任意固定零点或集合距离收缩，[F18](../../FAILED_ROUTES.md#f18) 记录机制。逐单元 TSV 增加两行。此结果逐图点成立，不自动赋予原算法的输入 coverage、全对 RL 或轨道留域；文件级清洗仍开放。
+
+## 16. 增量：named branch §4–§5 和新振荡反例
+
+[C53/C54](../canonical/named_branch_local.md) 对旧 foundations §4.1–4.3、§5.1–5.4 另立条件链：Hilbert 完备性、B 的指定输入覆盖、A 的全家族近似零点锚（含零距离输入）、E 的实际输出真残差窗口、兼容和留域预算。§5 的 \(\gamma=1\) 与 \(L=0\) 端点不能沿用非退化 \(\gamma q\) 标签。[C55](../canonical/named_branch_local.md#nb-oscillation) 是新构造，显示锚定线性证书加真 EB 和收缩仍不提供完整图的全对线性 RL；此例不是历史原稿声称的来源事实。三行已进入逐单元 TSV，分别标注重写和新推导。本次没有裁决该原稿 §1.3–§3 的全部接口、其余 GX 性质或外部优先权；来源文件级状态继续开放。

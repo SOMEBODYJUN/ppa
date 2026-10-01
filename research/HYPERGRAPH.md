@@ -55,6 +55,7 @@
 | E44 | [M-MOMENT · 小质量混合 pq≤r](cone_markov.md#m-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门；**Markov Proposition M** |
 | E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
 | E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
+| E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
 
 ## 局部拓扑
 
@@ -202,6 +203,13 @@
 | --- | --- | --- | --- |
 | E92 | [MA-OBJECT · 图点真 EB 与逐点输出近锚](canonical/moving_anchor_reflection.md#ma-object) | conditional → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | 同一 (y,w)∈gph F、t=\|\|w\|\|>0、真 EB ψ=o(id)、p 为输出近锚且 e=o(id)、δ=(ψ(t)+e(t))/(λt)<1；双边反射比及缺陷界仅关于这个 p。；**本轮三角双边界独立重算** |
 | E93 | [MA-OBJECT · 图点真 EB 与逐点输出近锚](canonical/moving_anchor_reflection.md#ma-object) ∧ [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | conditional → [MA-POWER · 幂型近锚反射缺陷常数](canonical/moving_anchor_reflection.md#ma-power) | 同一逐点 p；另需 q>1、真 ρt^q EB、近锚误差 ct^q 及 (ρ+c)t^(q−1)/λ≤1/2；充分缺陷系数 2^(q+1)(ρ+c)/λ^q。；**本轮逐点幂界；常数未证最优** |
+
+## 指定分支
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E95 | [NB-OBJECT · 指定分支、近似锚与实际输出真 EB](canonical/named_branch_local.md#nb-object) | conditional → [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | 实 Hilbert；同一 T 在开球 U 覆盖，A 对所有 d(x,S)≤δ（含 d=0）给近似最近零点锚，E 对每个实际 Tx 给真残差窗口 EB；另需 limsup Φ(t)/t<1 与初值严格留域预算。只得指定轨道、U 内闭 S，不得升级完整 J_F 任意选择。；**§4 重算逐步界、Hilbert 完备性与零距离输入** |
+| E96 | [NB-LOCAL · Hilbert 指定轨道有限长度与局部闭零集](canonical/named_branch_local.md#nb-local) | conditional → [NB-POWER · 幂次充分门与退化端点](canonical/named_branch_local.md#nb-power) | 同一 B/A/E、ψ(t)=ρt^q 且窗口门保持；γ<1,L>0 使用 p=γq；γ=1 使用 q；L=0 使用 q，不受 γ 影响。p>1 或临界系数<1 是充分门，另需留域；只给 upper order。；**§5 重新分解三类端点，未声称必要或正 Q 因子** |
 
 ## 不蕴含关系
 

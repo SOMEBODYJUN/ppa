@@ -736,6 +736,31 @@
       "id": "MA-LIMIT",
       "label": "固定锚与集合收缩的反例边界",
       "file": "canonical/moving_anchor_reflection.md#ma-limit"
+    },
+    {
+      "id": "NB-OBJECT",
+      "label": "指定分支、近似锚与实际输出真 EB",
+      "file": "canonical/named_branch_local.md#nb-object"
+    },
+    {
+      "id": "NB-LOCAL",
+      "label": "Hilbert 指定轨道有限长度与局部闭零集",
+      "file": "canonical/named_branch_local.md#nb-local"
+    },
+    {
+      "id": "NB-POWER",
+      "label": "幂次充分门与退化端点",
+      "file": "canonical/named_branch_local.md#nb-power"
+    },
+    {
+      "id": "NB-OSC",
+      "label": "振荡分支的锚定/全对分离",
+      "file": "canonical/named_branch_local.md#nb-oscillation"
+    },
+    {
+      "id": "OB-NB-ALL",
+      "label": "锚定收缩必有全对线性 RL（错误）",
+      "file": "canonical/named_branch_local.md#nb-oscillation"
     }
   ],
   "edges": [
@@ -1839,6 +1864,39 @@
       "relation": "limits",
       "scope": "S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。",
       "status": "本轮完整图值与距离直接计算"
+    },
+    {
+      "id": "E95",
+      "topic": "指定分支",
+      "inputs": [
+        "NB-OBJECT"
+      ],
+      "output": "NB-LOCAL",
+      "relation": "conditional",
+      "scope": "实 Hilbert；同一 T 在开球 U 覆盖，A 对所有 d(x,S)≤δ（含 d=0）给近似最近零点锚，E 对每个实际 Tx 给真残差窗口 EB；另需 limsup Φ(t)/t<1 与初值严格留域预算。只得指定轨道、U 内闭 S，不得升级完整 J_F 任意选择。",
+      "status": "§4 重算逐步界、Hilbert 完备性与零距离输入"
+    },
+    {
+      "id": "E96",
+      "topic": "指定分支",
+      "inputs": [
+        "NB-LOCAL"
+      ],
+      "output": "NB-POWER",
+      "relation": "conditional",
+      "scope": "同一 B/A/E、ψ(t)=ρt^q 且窗口门保持；γ<1,L>0 使用 p=γq；γ=1 使用 q；L=0 使用 q，不受 γ 影响。p>1 或临界系数<1 是充分门，另需留域；只给 upper order。",
+      "status": "§5 重新分解三类端点，未声称必要或正 Q 因子"
+    },
+    {
+      "id": "E97",
+      "topic": "交叉限制",
+      "inputs": [
+        "NB-OSC"
+      ],
+      "output": "OB-NB-ALL",
+      "relation": "refutes",
+      "scope": "完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。",
+      "status": "新构造，全部原像残差下界与 Cayley 导数独立计算"
     }
   ]
 }

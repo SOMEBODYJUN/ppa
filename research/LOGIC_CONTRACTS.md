@@ -95,3 +95,11 @@ E80 是独立反例关系：[OT-MAXIMA](topics/composite_regular/oscillating_tar
 ## E83：自然域与全纤维残差
 
 [DE-OBJECT](topics/path_dynamics/domain_escape.md#de-object) 只在 \(D=[-\delta,\delta]\) 定义原图，\(0<\alpha<1,\beta>0,0<\delta<1\)。在同一图上锚定反射指数 \(\alpha\)、全对指数 \(\alpha/(\beta+1)\)，但所有非零合法轨道半径严格增，有限步离开 D。[C44](topics/path_dynamics/domain_escape.md#de-escape) 的局部线性 EB 用的是每个原像上的一致残差比再对完整纤维取最小，不是挑一个好分支。输入域 coverage 和不变性不能从一步指数或 EB 自动得到；域外没有原算法轨道。
+
+## E95–E97：指定分支与全对图条件的分界
+
+E95 在实 Hilbert 空间固定完整 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、球 \(U\)、同一个 \(T:U\to H\) 和 \(\lambda>0\)。B 对整个 \(U\) 提供实际图点；A 对整个 \(A_\delta\)，**包括 \(d(x,S)=0\)**，提供每个输入自己的近似最近零点序列和相同 \(L,\gamma\) 的锚定不等式；E 对每个实际输出给真残差窗口 EB。先要 \(h(\delta)<\eta\)，再要 \(\limsup_{t\downarrow0}\Phi(t)/t<1\) 和**给定初值**的严格留域预算，才能推出指定轨道有限长度。零距离点用 A、B 证 \(U\cap\overline S=U\cap S\)；不需要在整个 Hilbert 空间假设闭 \(S\) 或最近点取到。A 不比较两个非零输入，且没有排除完整 resolvent 其他输出。
+
+E96 在**同一** B/A/E、同一输出窗口上把 \(\psi(t)\) 换为 \(\rho t^q\)。\(0<\gamma<1,L>0\) 的主指数是 \(\gamma q\)，\(\gamma=1\) 的主指数是 \(q\)，\(L=0\) 的主指数也是 \(q\) 而不论所打印的 \(\gamma\)；临界系数见 [C54](canonical/named_branch_local.md#nb-power)。这些是上界给出的充分门，正 Q 因子和下阶另需沿同一轨道的额外极限。
+
+E97 是反驳边而非把 C53 推向 D02：[C55](canonical/named_branch_local.md#nb-oscillation) 同时有完整图、指定锚定线性 RL、真 EB 与局部收缩，但 Cayley 在每个零邻域非 Lipschitz。故 R02 的全对输入不可由 C53 回填；较弱的全对 Hölder 指数仍未由此例排除。[F19](../FAILED_ROUTES.md#f19) 保存失败机制。

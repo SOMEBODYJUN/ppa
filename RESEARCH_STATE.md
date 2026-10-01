@@ -1,5 +1,11 @@
 # Research State · 2026-10-01
 
+## 当前增量：§4–§5 的指定分支与全对边界
+
+[C53/C54](research/canonical/named_branch_local.md) 从旧 foundations §4–§5 重写了实 Hilbert 空间的 named PPA：B 整球分支覆盖、A 对所有小距离输入（包括零距离点）的近似最近零点锚、E 对实际输出的真实全纤维残差 EB、兼容与严格留域预算须合取。由 A/B 还可推出 \(U\cap\overline S=U\cap S\)，故无需额外假设全局闭零集或最近点存在。幂次门在 \(0<\gamma<1,L>0\)、\(\gamma=1\)、\(L=0\) 三种参数情形分别记录，只提供上阶和充分条件，不提供普适正 Q 因子。
+
+[C55](research/canonical/named_branch_local.md#nb-oscillation) 是本轮新反例：完整闭图有指定分支 anchored \(\gamma=1,L=3/5\)、全图真 EB、实际收缩，但反射在任意零邻域非 Lipschitz。[F19](FAILED_ROUTES.md#f19) 阻止把这条弱接口的结论作为 R02 全对 RL 的证明。下一步从未裁决的 §1.3–§3 或其他 GX 中选独立数学单元，或者恢复 M1 原生多值方程；先核目标对象与全部完整纤维。
+
 ## 第三笔增量：逐图点移动锚与固定锚的边界
 
 [C51/C52 移动锚反射](research/canonical/moving_anchor_reflection.md) 从旧 foundations §6 重算实际图点的输出近锚双边比、幂型缺陷及正容差近锚选择。真 EB 是输出 y 的全纤维残差，p 随 y、w 改变；[F18](FAILED_ROUTES.md#f18) 的线性零集完整关系说明不能将它变成任意固定锚的反射或集合距离收缩。下一步从 9/01 其余未验收 GX 或 §5 的局部收敛门选独立单元，继续按同对象、同目标和实际分支逐项裁决。

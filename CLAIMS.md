@@ -312,3 +312,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C51 的同一图点和 p 上，若 \(q>1,\rho,c\ge0\)、真 EB \(d(y,S)\le\rho r_F(y)^q\)、\(\|y-p\|\le d(y,S)+c\|w\|^q\)，令 \(A=\rho+c\)。当 \((A/\lambda)\|w\|^{q-1}\le1/2\)，有 \(\|\widehat x-(2p-x)\|\le2^{q+1}A\lambda^{-q}\|x-p\|^q\)。
 - **Definitions / Dependencies / Evidence**：[MA-POWER](research/canonical/moving_anchor_reflection.md#ma-power) 的 \(\|x-p\|\ge\lambda\|w\|/2\) 和缺陷恒等式；derived-checked，从旧 §6.2 重算。
 - **Counterevidence / Objections / Scope / Related Files**：常数为充分界，未证最优；\(A=0\) 的零缺陷单独由恒等式得出。结论只相对逐点 output-near p，不提供 branch existence、全对 RL 或 PPA 留域。
+
+## C53-v1 / NB-LOCAL · 近似零点锚下指定分支的有限长度
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整关系 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、\(U=B(\bar x,R)\)、\(\bar x\in S\)、\(\lambda>0\)。对所有 \(x\in A_\delta=\{x\in U:d(x,S)\le\delta\}\)，指定同一个 \(T:U\to H\) 的图值 \((Tx,(x-Tx)/\lambda)\)，要求存在可随 \(x\) 变化的近似最近 \(p_n\in S\) 满足 \(\|2Tx-x-p_n\|\le L\|x-p_n\|^\gamma\)，以及实际 \(Tx\) 的真残差窗口 EB；零距离输入亦包括在内。对有限非减零点连续 \(\psi:[0,\eta)\to[0,\infty)\)，若 \((\delta+L\delta^\gamma)/(2\lambda)<\eta\) 且 \(\limsup_{t\downarrow0}\psi((t+Lt^\gamma)/(2\lambda))/t<1\)，则每个满足 C53 留域预算的指定初值产生全程合法、有限长度、趋于 \(S\) 的 named 轨道及明确尾界；还得到 \(U\cap\overline S=U\cap S\)。
+- **Definitions / Dependencies / Evidence**：[NB-OBJECT/NB-LOCAL](research/canonical/named_branch_local.md#nb-local) 从逐图点恒等式、真残差方向、全家族量词和 Hilbert 完备性独立证明；旧 foundations §4 是来源。状态 derived-checked，文献先行性未核。
+- **Counterevidence / Objections / Scope / Related Files**：A 只是 anchored，不是全对 RL；没有最近点、全局闭 \(S\) 的要求。不能将指定 \(T\) 的结论升级为完整 \(J_{\lambda F}\) 的任意选择；若 A 排除零距离输入，局部闭性及极限归属的论证失效。需对完整纤维另证统一条件。
+
+## C54-v1 / NB-POWER · 幂次上界与退化端点
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C53 同一 \(F,T,U,S\) 和所有输出窗口假设下令 \(\psi(t)=\rho t^q\)，\(\rho,q>0\)。当 \(0<\gamma<1,L>0\)，充分门是 \(\gamma q>1\)，或 \(\gamma q=1\) 且 \(\rho(L/(2\lambda))^q<1\)；当 \(\gamma=1\)，充分门是 \(q>1\)，或 \(q=1\) 且 \(\rho(1+L)/(2\lambda)<1\)；当 \(L=0\)，不论打印的 \(\gamma\)，充分门是 \(q>1\)，或 \(q=1\) 且 \(\rho/(2\lambda)<1\)。每种情况还需缩半径及 C53 的实际初值留域预算；结论是相应一步 upper order、C53 有限长度，以及临界系数的 ratio limsup 上界。
+- **Definitions / Dependencies / Evidence**：[NB-POWER](research/canonical/named_branch_local.md#nb-power) 对 C53 的 \(\Phi(r)\) 分别展开并核退化参数；derived-checked，与 R03 的非退化门槛相容，但 C53 的对象与量词不同。
+- **Counterevidence / Objections / Scope / Related Files**：指数低于 1 时此上界不判定收敛或发散；系数只为该证明证书的充分量，不是一般必要界。Upper order 不给双边精确阶或正 Q 因子；\(L=0\) 时不能沿用 \(\gamma q\) 标签。
+
+## C55-v1 / NB-OSCILLATION · 锚定线性 RL 不推出全对线性 RL
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R,\lambda=1\) 取 \(T(0)=0,T(x)=x[3/10+(1/10)\sin(x^{-2})]\)（\(x\ne0\)），完整定义 \(F(y)=\{x-y:T(x)=y\}\)。对唯一 \(S=\{0\}\) 及每个输入，A 以 \(\gamma=1,L=3/5\) 成立，且真 EB 为 \(|y|\le(2/3)r_F(y)\)，故 C53 的 \(\Phi(r)=(8/15)r\)；但任何零邻域上此完整图的全对 \(\gamma=1\) RL 均失败。
+- **Definitions / Dependencies / Evidence**：[NB-OSCILLATION](research/canonical/named_branch_local.md#nb-oscillation) 以 \(1/5\le a(x)\le2/5\) 控制所有原像的真残差，并以 Cayley 导数沿明确序列无界证明不蕴含；新构造，derived-checked。
+- **Counterevidence / Objections / Scope / Related Files**：只排除全对线性指数，不排除其他较弱 Hölder 指数。不能以这个例子的完整 \(J_F=T\) 反推任意原关系的完整 resolvent 同一性；外部优先性未核。
