@@ -55,3 +55,9 @@ E70 的逐边幂次只证明**终点**上界。有限合法词的全体指数大
 E72 先把目标固定为 S⊆Γ 且包含所有局部极小点，配合 f 在 B_α(x̄) 局部最小与 Γ∩B_ς 的弱分离，才在 B_{R/4} 得三个**同一目标**的距离等式。不能因 S⊆Γ 就随意缩 S。E73 是另一个有自己目标 S=c^{-1}(C) 的命题；在同一 B̄_R 上需要 c∈C^{1,1}、βR<σ_min(Dc(x̄))、φ 有限凸、外层真残差 gauge。满秩同时用于切片修复与 Dcᵀ 的全部乘子下界，才给 r_F 的复合 gauge。[CS-EB](canonical/composite_subregularity.md#cs-eb)。
 
 E74 再加所有相关外层次梯度的 M 界及 λβM<1，只先得局部全对线性 RL 和局部输出 coverage。收敛版本还要 Ψ_F(bd)≤κd 对共同半径内每个 d、最近零点属于同一图块及初值的严格长度预算；不能将其改成完整 resolvent 的所有球外纤维。E75 的曲面是 E73 的特殊对象；其非幂模型反驳“所有满秩复合都具有某个固定 q>1 幂 EB”的过强命题，而不否定一般 gauge 定理。E76 的 c=x²、φ=z²/2 仅否定删除满秩后的**同阶线性传递**，并未排除较弱非线性 gauge。[F13](../FAILED_ROUTES.md#f13)。
+
+## E79–E80：真多值图与目标错误的分离
+
+E79 对 [CI-OBJECT](topics/composite_regular/cusp_identification.md#ci-object) 增加 **CS-PROX 的局部版本**：同一曲面 \(c=t-(s_+)^2\)、\(\nu>0\)、\(\eta\) 连续严格增无界、\(0<R<1/2\)，\(M=\nu+\eta(R+R^2)\)、\(h=2M\)、\(\lambda h<1\)。还需输入 \(x\in B_{r/2}(0)\) 且 \(d(x,S)<\lambda\nu(1-\lambda h)\)，\(r=R(1-2R)/4\)。此时图在 S 上多值、S 外真残差至少 \(\nu\)，但唯一**球内**近端步的选中残差小于 \(\nu\)，所以一步到 S；并未认证完整 \(J_{\lambda F}\) 的远端纤维。[C40](topics/composite_regular/cusp_identification.md#ci-identify)。
+
+E80 是独立反例关系：[OT-MAXIMA](topics/composite_regular/oscillating_target.md#ot-maxima) 的驻点严格极大序列有 \(|f'|=0\)、\(d(x,\Theta_2)>0\)。它只否定删除目标一致条件后对完整 \(\Theta_2\) 的全邻域 EB；函数虽在零点严格局部最小，弱分离被 \(f(x_k)>f(0)\) 破坏。不能将箭头倒读为 C34 错误，也不能悄然将目标换成 \(\Gamma\)。[F15](../FAILED_ROUTES.md#f15)。

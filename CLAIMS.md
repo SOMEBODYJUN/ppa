@@ -234,3 +234,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：保留 C38 的**同一** \(T,Z,z_*,R\)。对每个 \(z\in B_R(z_*)\)，\(d(Tz,Z)\le(3/\sqrt {10})d(z,Z)\)。常数 \(3/\sqrt {10}<1\) 为这个球上统一距离因子的最小值：\(z_t=(c+3t,t)\)、\(t\downarrow0\) 实现该距离比。
 - **Definitions / Dependencies / Evidence**：用完整活动关系 \(s=a-3b\) 而不是分别放大两个标量模；分 \(s\le0\) 和 \(s>0\) 的代数证明在 [M1-SHARP](research/topics/path_dynamics/m1_capture.md#m1-sharp)。`derived-checked`；历史较晚的旗舰架构札记 §2 指出这项修正，本轮重新核算。
 - **Counterevidence / Objections / Scope / Related Files**：这**不**直接给出全对 RL、真残差 EB 或局部无限轨道留域；C38 独立地给有限捕获。旧例仍可说明独立最坏标量组合失真，却不能作为“一步距离收缩不存在”的反例。[F14](FAILED_ROUTES.md#f14)。
+
+## C40-v1 / CI-IDENTIFY · 真多值次梯度的局部一步识别
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R^2\) 固定 \(c(s,t)=t-(s_+)^2\)、\(\nu>0\)、连续严格增无界 \(\eta:[0,\infty)\to[0,\infty)\) 且 \(\eta(0)=0\)，令 \(\phi_\nu(z)=\nu|z|+\int_0^{|z|}\eta(u)du\)、\(F_\nu=\partial(\phi_\nu\circ c)\)、\(S=c^{-1}(0)\)。在 S 上 F 的纤维为 \(Dc^T[-\nu,\nu]\) 而且真多值，在 S 外 \(r_{F_\nu}\ge\nu\)。任取 \(0<R<1/2\)，令 \(M=\nu+\eta(R+R^2),h=2M,r=R(1-2R)/4\)，固定 \(\lambda>0\) 且 \(\lambda h<1\)。对**每个** \(x\in B_{r/2}(0)\) 满足 \(d(x,S)<\lambda\nu(1-\lambda h)\)，唯一基点在 \(B_R(0)\) 的局部近端输出 \(y\) 属于 S，随后相同局部规则固定于 y。
+- **Definitions / Dependencies / Evidence**：[CI-OBJECT 和 CI-IDENTIFY 完整计算](research/topics/composite_regular/cusp_identification.md#ci-identify)；需要 [C36](research/canonical/composite_subregularity.md#cs-prox) 的**局部** coverage、满秩、全部乘子界和同图步长估计。其外层 gauge 可取 \(\eta^{-1}((q-\nu)_+)\)。状态 `derived-checked`，从历史复合稿 §5.3 的观察补上输入半径、步长和真实残差门。
+- **Counterevidence / Objections / Scope / Related Files**：图多值不等于局部近端输出多值；没有核远端完整 resolvent，也不处理秩亏或所有初值。与一般 Hölder–RL 路线的优劣和外部新颖性未核。
+
+## C41-v1 / OT-MAXIMA · 弱分离缺失时二阶目标 EB 的障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 \(f(0)=0\)、\(f(x)=e^{-1/x^2}(2+\sin(1/x^4))\) \((x\ne0)\)，令 \(\Gamma=\{f'=0\}\)、\(\Theta_2=\{x\in\Gamma:d^2 f(x\mid0)(w)\ge0\ \forall w\}\)。存在 \(x_k\downarrow0\) 使 \(f'(x_k)=0,f''(x_k)<0\)，故 \(d(x_k,\Theta_2)>0\)。对**任意** \(\Psi\) 满足 \(\Psi(0)=0\)，不存在包含 0 的邻域使 \(d(x,\Theta_2)\le\Psi(|f'(x)|)\) 在整个邻域成立。
+- **Definitions / Dependencies / Evidence**：[OT-MAXIMA](research/topics/composite_regular/oscillating_target.md#ot-maxima) 的 \(u=x^{-4}\) 区间变号及负二阶导证明；\(f\in C^\infty\)，0 是严格全局极小点但近邻驻点函数值为正。状态 `derived-checked`；历史复合稿 §6.2 是来源线索。
+- **Counterevidence / Objections / Scope / Related Files**：只否定没有目标一致/弱分离前件时**到完整 \(\Theta_2\)** 的误差界；不否定到 \(\Gamma\) 的界或 [C34](research/canonical/composite_subregularity.md#cs-transfer) 在完整前提下的正向结论。[F15](FAILED_ROUTES.md#f15)。

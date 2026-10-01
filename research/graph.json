@@ -611,6 +611,26 @@
       "id": "M1-SHARP",
       "label": "锐一步距离因子 3/√10",
       "file": "topics/path_dynamics/m1_capture.md#m1-sharp"
+    },
+    {
+      "id": "CI-OBJECT",
+      "label": "曲面尖点外层与真多值次梯度",
+      "file": "topics/composite_regular/cusp_identification.md#ci-object"
+    },
+    {
+      "id": "CI-IDENTIFY",
+      "label": "局部近端一步识别非孤立零集",
+      "file": "topics/composite_regular/cusp_identification.md#ci-identify"
+    },
+    {
+      "id": "OT-MAXIMA",
+      "label": "驻点极大序列及二阶目标障碍",
+      "file": "topics/composite_regular/oscillating_target.md#ot-maxima"
+    },
+    {
+      "id": "OB-TARGET",
+      "label": "局部最小自动保证二阶目标 EB 的错误猜测",
+      "file": "topics/composite_regular/oscillating_target.md#ot-scope"
     }
   ],
   "edges": [
@@ -1529,6 +1549,24 @@
       "relation": "conditional",
       "scope": "同一 T、Z、R；全体球内初值的一步距离上界 3/√10，沿 z_t=(2/3+3t,t) 取等；不推出全对 RL 或真残差 EB。",
       "status": "本轮代数与锐性序列独立重算"
+    },
+    {
+      "id": "E79",
+      "topic": "复合次正则",
+      "inputs": ["CI-OBJECT", "CS-PROX"],
+      "output": "CI-IDENTIFY",
+      "relation": "conditional",
+      "scope": "曲面 c=t−(s_+)²、ν>0、η 连续严格增无界；0<R<1/2、M=ν+η(R+R²)、h=2M、λh<1，x∈B_{r/2} 且 d(x,S)<λν(1−λh)，r=R(1−2R)/4；仅唯一球内近端输出。",
+      "status": "本轮从真残差间隙和局部步长界独立重算"
+    },
+    {
+      "id": "E80",
+      "topic": "复合次正则",
+      "inputs": ["OT-MAXIMA"],
+      "output": "OB-TARGET",
+      "relation": "refutes",
+      "scope": "C∞ 非负 f 在 0 严格全局最小，却有 x_k→0 的 f′=0、f″<0；仅否定不加目标一致/弱分离时到完整 Θ₂ 的全邻域 Ψ(0)=0 EB。",
+      "status": "本轮区间变号和目标距离独立证明"
     }
   ]
 }

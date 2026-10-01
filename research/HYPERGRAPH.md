@@ -171,6 +171,8 @@
 | E74 | [CS-EB · 满行秩复合 gauge EB](canonical/composite_subregularity.md#cs-eb) ∧ [CS-OBJECT · 复合真残差与目标集合](canonical/composite_subregularity.md#cs-object) | conditional → [CS-PROX · 局部 RL、coverage、轨道预算](canonical/composite_subregularity.md#cs-prox) | 另需全部外层次梯度界 M、λβM<1；仅局部输出。轨道再需 Ψ_F(bd)≤κd、最近零点同图块和初值留域预算。；**本轮完整局部证明；不升为完整 J_F** |
 | E75 | [CS-MODEL · 曲面幂和非幂锐例](canonical/composite_subregularity.md#cs-model) | refutes → [CS-POWER-GENERAL · 所有满秩复合都有超线性幂 EB 的过强命题](canonical/composite_subregularity.md#cs-model) | 同一个满秩曲面 c=t−(s_+)²，η=u log(e/u) 有非幂趋零 gauge，却对任意固定 q>1 无 q 次幂 EB；只否定普遍幂次升级。；**本轮直接计算** |
 | E76 | [CS-RANK-EX · 秩亏同阶传递反例](canonical/composite_subregularity.md#cs-objections) | limits → [CS-OPEN-RANK · 秩亏原生 verifier 开放目标](canonical/composite_subregularity.md#cs-objections) | c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。；**本轮显式反例** |
+| E79 | [CI-OBJECT · 曲面尖点外层与真多值次梯度](topics/composite_regular/cusp_identification.md#ci-object) ∧ [CS-PROX · 局部 RL、coverage、轨道预算](canonical/composite_subregularity.md#cs-prox) | conditional → [CI-IDENTIFY · 局部近端一步识别非孤立零集](topics/composite_regular/cusp_identification.md#ci-identify) | 曲面 c=t−(s_+)²、ν>0、η 连续严格增无界；0<R<1/2、M=ν+η(R+R²)、h=2M、λh<1，x∈B_{r/2} 且 d(x,S)<λν(1−λh)，r=R(1−2R)/4；仅唯一球内近端输出。；**本轮从真残差间隙和局部步长界独立重算** |
+| E80 | [OT-MAXIMA · 驻点极大序列及二阶目标障碍](topics/composite_regular/oscillating_target.md#ot-maxima) | refutes → [OB-TARGET · 局部最小自动保证二阶目标 EB 的错误猜测](topics/composite_regular/oscillating_target.md#ot-scope) | C∞ 非负 f 在 0 严格全局最小，却有 x_k→0 的 f′=0、f″<0；仅否定不加目标一致/弱分离时到完整 Θ₂ 的全邻域 Ψ(0)=0 EB。；**本轮区间变号和目标距离独立证明** |
 
 ## 不蕴含关系
 
