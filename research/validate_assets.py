@@ -129,13 +129,15 @@ for page in normative:
     data = re.sub(r"(?s)\$\$.*?\$\$", "", data)
     data = re.sub(r"`[^`\n]*`", "", data)
     data = re.sub(r"(?<!\\)\$[^$\n]*\$", "", data)
-    for target in link.findall(data):
-        target = target.split("#", 1)[0]
-        if not target or "://" in target or target.startswith("mailto:"):
+    for raw_target in link.findall(data):
+        target, marker, anchor = raw_target.partition("#")
+        if "://" in target or target.startswith("mailto:"):
             continue
-        candidate = (page.parent / unquote(target)).resolve()
+        candidate = (page.parent / unquote(target)).resolve() if target else page
         if not candidate.exists():
-            errors.append(f"broken link: {page.relative_to(ROOT)} -> {target}")
+            errors.append(f"broken link: {page.relative_to(ROOT)} -> {raw_target}")
+        elif marker and anchor and candidate.is_file() and f'id="{unquote(anchor)}"' not in candidate.read_text(encoding="utf-8"):
+            errors.append(f"broken explicit anchor: {page.relative_to(ROOT)} -> {raw_target}")
 
 if errors:
     raise SystemExit("\n".join(errors))

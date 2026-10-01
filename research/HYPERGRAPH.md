@@ -43,16 +43,16 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E08 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [LIFT · 二次 excess 与正交提升](holder_structure.md#lift) | implies → [H02 · 同一强单调影子](holder_structure.md#h02) | 全图全尺度；正交扩张与 Banach contraction；**S23 稿内证明、局部重算** |
-| E09 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [PROPER · 有限维 properness、degree](holder_structure.md#proper) | necessary → [H03 · 有限维完整纤维分类](holder_structure.md#h03) | 有限维、graph-maximal、直径界；**S23 稿内证明** |
-| E10 | [FIX · 任意紧集精确固定点构造](holder_structure.md#fix) ∧ [D03 · Cayley 表示](foundations.md#d03) | sufficient → [H03 · 有限维完整纤维分类](holder_structure.md#h03) | 每个非空紧 K、diam K≤R，存在某个 F；**S23 稿内构造** |
+| E08 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [LIFT · 二次 excess 与正交提升](holder_structure.md#lift) | implies → [H02 · 同一强单调影子 [候选]](holder_structure.md#h02) | 全图全尺度；正交扩张与 Banach contraction；**candidate / S23 稿内证明、局部重算** |
+| E09 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [PROPER · 有限维 properness、degree](holder_structure.md#proper) | necessary → [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) | 有限维、graph-maximal、直径界；**candidate / S23 稿内证明** |
+| E10 | [FIX · 任意紧集精确固定点构造](holder_structure.md#fix) ∧ [D03 · Cayley 表示](foundations.md#d03) | sufficient → [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) | 每个非空紧 K、diam K≤R，存在某个 F；**candidate / S23 稿内构造** |
 
 ## 交叉限制
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E11 | [R05 · 一般模 RL + Dini 的点收敛](holder_structure.md#r05) ∧ [D03 · Cayley 表示](foundations.md#d03) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | implies → [RET · 连续极限回缩](holder_structure.md#ret) | 一般模版本的同图块 all-pairs 连续性、共同开域与统一尾界；**S19 稿内证明** |
-| E12 | [H03 · 有限维完整纤维分类](holder_structure.md#h03) ∧ [RET · 连续极限回缩](holder_structure.md#ret) | limits → [OB-TOPO · 非局部可缩零集的附加收敛假设障碍](holder_structure.md#ob-topo) | 任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立；**条件障碍** |
+| E12 | [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) ∧ [RET · 连续极限回缩](holder_structure.md#ret) | limits → [OB-TOPO · 非局部可缩零集的附加收敛假设障碍](holder_structure.md#ob-topo) | 任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立；**条件障碍** |
 | E21 | [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集；**尚未建立的一般桥** |
 | E24 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
 | E44 | [M-MOMENT · 小质量混合 pq≤r](cone_markov.md#m-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门；**Markov Proposition M** |
@@ -64,12 +64,13 @@
 | E107 | [DR-TAN · GX-069 切触 DR 的半阶真残差](topics/examples/dr_tangency_transversality.md#dr-tangent) | refutes → [OB-DR-STRICT · 半阶 EB 自动给统一一步严格距离收缩（错误）](topics/examples/dr_tangency_transversality.md#dr-tangent) | z_s=(s,−s²)→0 时 d(Tz_s,S)=d(z_s,S)>0；虽有全邻域半阶 EB，任何统一 ρ<1 的一步距离比均失败。；**C60 精确取等序列** |
 | E121 | [SME-POWER · 幂次最坏矩与同变量复合](topics/random_markov/scalar_moment_envelope.md#sme-power) | refutes → [OB-AGGREGATE · 分开矩聚合的临界失相关障碍](../FAILED_ROUTES.md#f24) | 0<γ<1、q>1、γq=1、0<t<R：分开最坏包络与先复合的最坏上界比 (R/t)^(1−γ)；各自锐的极值分布未必相同。并非证明任何物理随机轨道发散。；**F24 的定量失相关见证** |
 | E122 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-SUPPORT · 小矩距离不提供逐点支撑](topics/random_markov/scalar_moment_envelope.md#sme-support) | 对全部 0≤D≤R 且 \|\|D\|\|p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。；**C69 稀薄二点律的必要性** |
+| E133 | [DS-EB · 真 EB 与目标邻域残差分离](topics/examples/diagonal_spike_relation.md#ds-eb) ∧ [DS-PPA · 完整近端全选择有限长度收敛](topics/examples/diagonal_spike_relation.md#ds-ppa) ∧ [DS-RL · 锐零锚与全对跨支碰撞](topics/examples/diagonal_spike_relation.md#ds-rl) | refutes → [OB-DYN-RL · 动力收敛不逆推全对 RL](../FAILED_ROUTES.md#f25) | 同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。；**F25 由 C72–C74 的同对象证书** |
 
 ## 局部拓扑
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E13 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选](holder_structure.md#h07) | 指定 T 整窗非空紧 usc、Čech-Q-acyclic，有限多面体 A⊂int B、χ(A)≠0、上同调满射和 rational Lefschetz；FSC-COLLAR 只闭合度量内域余量，不能单独给 coincidence；T 可为子关系；**S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立** |
+| E13 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [WINDOW · 整窗 usc、acyclic 与上同调条件](holder_structure.md#window) | conditional → [H07 · 原关系局部值域候选 C05-v1](holder_structure.md#h07) | 指定 T 整窗非空紧 usc、Čech-Q-acyclic，有限多面体 A⊂int B、χ(A)≠0、上同调满射和 rational Lefschetz；FSC-COLLAR 只闭合度量内域余量，不能单独给 coincidence；T 可为子关系；**candidate / S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立** |
 
 ## 解选择
 
@@ -157,6 +158,10 @@
 | E115 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-OP · 原算子真残差锐半阶](topics/examples/identity_square_branch_union.md#is-operator-eb) | F(x)={x,x²} 完整图，S={0}；0<\|x\|<1 时真 r_F=x²，最优半阶模 1；最近逆点量词不能替代全部局部逆像。；**C66 完整纤维计算** |
 | E116 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-STEP · 指定分支与完整最小步残差分离](topics/examples/identity_square_branch_union.md#is-resolvent) | 固定 λ>0，完整 J 包括身份根、近平方根与远平方根；指定 J₁ 线性步模 (1+λ)/λ，完整 inf 步模 1/√λ 的局部半阶；远根不得删。；**C67 完整方程和三根渐近** |
 | E117 | [IS-OBJECT · 身份与平方并图的完整关系](topics/examples/identity_square_branch_union.md#is-object) | conditional → [IS-RL · 同输入跨支碰撞](topics/examples/identity_square_branch_union.md#is-collision) | 任意固定 λ>0、任意零邻域内两支图点可有相同 Minty 输入而不同 Cayley 输出；故包含两支的局部完整图无任意正指数全对 RL。；**C68 同输入碰撞** |
+| E129 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-EB · 真 EB 与目标邻域残差分离](topics/examples/diagonal_spike_relation.md#ds-eb) | 完整 F(0)={0}∪{1/n}、F(x)={x}；r_F=\|x\| 真线性 EB，但右端 d(y,F(0)) 的中心逆误差无任何零消失 gauge。；**C72 完整逆纤维与同一目标序列** |
+| E130 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-PPA · 完整近端全选择有限长度收敛](topics/examples/diagonal_spike_relation.md#ds-ppa) | 每个 λ>0、每个 p 和完整 J 的每条合法路径，步残差 (λ/(1+λ))\|p\|，最坏因子 1/(1+λ)，总长 \|p0\|。；**C73 全部纤维和望远镜证明** |
+| E131 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-RL · 锐零锚与全对跨支碰撞](topics/examples/diagonal_spike_relation.md#ds-rl) | 固定任意 λ>0，零锚全完整图锐 L=1；两趋零图点同 Minty 输入而不同反射输出，任意 ω(0)=0 全对模失败。；**C74 同输入碰撞** |
+| E132 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-QUAD · 完整图精确二参数区](topics/examples/diagonal_spike_relation.md#ds-quadratic) | 局部及全域同一全对二参数 ab≥μa²+ρb² 的精确区 μ<0,ρ<0,μρ≥1/4；跨支差实现所有斜率。；**C75 二次式端点核验** |
 
 ## 参数字典
 
@@ -257,6 +262,20 @@
 | --- | --- | --- | --- |
 | E123 | [SAMPLE · 有限 proximal 样本与包络](holder_structure.md#sample) | conditional → [FSC-ENV · 经验证样本的全空间距离双包络](canonical/finite_sample_collar.md#fsc-envelope) | 非空有限样本每对实际输出分别独立验证步界和输出零距界；φ严格增；对整个 R^n 得 g_E≤d(·,S)≤u_E，不证明整窗 T；**C70-v1a 独立重算 (8.3)** |
 | E124 | [FSC-ENV · 经验证样本的全空间距离双包络](canonical/finite_sample_collar.md#fsc-envelope) ∧ [FSC-FULL · 指定 T 的整窗每个输出满足步界与误差界](canonical/finite_sample_collar.md#fsc-object) | conditional → [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) | 另加 A⊂int B 紧、sup_A u_E≤u、inf_{B\int A}g_E≥m>0、φ(u)<d(A,B^c)、α=cφ(u)^q<m；所有 p∈A 和 y∈T(p) 留在 int A 且 d(y,A^c)≥m−α；**C70-v1b 独立重算 (8.4)→(8.7)；未证拓扑 coincidence** |
+
+## 有限状态 Markov
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E125 | [LC-OBJECT · 四状态惰性循环与同步 OT 残差](topics/random_markov/lazy_cycle_ot.md#lc-object) | conditional → [LC-OT · 同核 OT 残差精确零集与锐常数](topics/random_markov/lazy_cycle_ot.md#lc-sharp) | 固定 G=(0,1,3,4)、0<p<1、Id/T 独立切换，唯一 π=(1/4)^4；对所有 μ∈Δ4，在各自固定边缘的 C-最优计划上取同步 R 最小，精确零集 {π}，全律空间锐 W2/Ψ=√(13/p)。；**C71 同一最优计划的矩阵符号证明及取等律；优先权未审** |
+| E126 | [LC-OBJECT · 四状态惰性循环与同步 OT 残差](topics/random_markov/lazy_cycle_ot.md#lc-object) | limits → [LC-RELAX · 去最优运输约束后的假零点](topics/random_markov/lazy_cycle_ot.md#lc-relax) | 同一核和 μ+=(1/2,1/4,0,1/4)；允许非 C-最优耦合时残差为零，但原 Ψ²=p/2；残差对象变化不能继承精确零集。；**C71 的精确四边耦合反例** |
+
+## 局部值域的拓扑链
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E127 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-RANGE · C05-v2 去超临界幂的条件值域](canonical/local_range_without_supercriticality.md#lr-theorem) | C05-v1 同一 F,S,A,B,T,E 的所有整窗与拓扑条件、q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。；**derived-checked conditional theorem；原生模型与优先性未审** |
+| E128 | [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-FEAS · qγ=1/2 的整窗 collar 可行实例](canonical/local_range_without_supercriticality.md#lr-feasible) | n=1、F(x)=10⁴x、γ=1/2、q=1、1401 个有理格点；A,B 区间全部整窗与 collar 精确成立，说明 qγ>1 对该条件结论不必要。；**精确有理数不等式与单值拓扑条件** |
 
 ## 不蕴含关系
 

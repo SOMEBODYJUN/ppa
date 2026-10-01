@@ -27,12 +27,18 @@
 - **Dependencies / Evidence**：C01、同常数的 Hölder Hilbert 扩张、有限维 proper map/degree 得全域纤维非空紧、`thm:fixedset` 的精确不动点实现；[9/23 TeX `thm:fibers`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)。
 - **Objections / Status / Scope**：**稿内证明候选**；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。扩张和 fixed-set 的适用条件是独立审查重点。
 
-## C05 · 原关系局部值域的有限数据拓扑证书（9/25 新增候选）
+## C05-v1 · 原关系局部值域的有限数据拓扑证书（9/25 稿候选）
 
 - **Exact Statement / Objects / Domain**：\(F:\mathbb R^n\rightrightarrows\mathbb R^n\)，完整闭非空零集 \(S=F^{-1}(0)\)；\(\lambda,L>0\)，\(0<\gamma<1\)，\(q\gamma>1\)，\(\kappa>0\)，\(\phi(r)=(r+Lr^\gamma)/2\)、\(c=\kappa\lambda^{-q}\)。指定的实际 proximal 对应 \(T(p)\) 在相关窗满足 \((p-y)/\lambda\in F(y)\)、\(\|p-y\|\le\phi(d(p,S))\)、\(d(y,S)\le c\|p-y\|^q\) **对每个** \(y\in T(p)\)。紧有限多面体 \(A\subset\operatorname{int}B\) 上 \(T\) upper semicontinuous、非空紧 Čech-\(\mathbb Q\)-acyclic 值；经验证有限样本定义的包络在 A／B 的 collar 满足 PDF (8.4)：\(\sup_Au_E\le u\)、\(\inf_{B\setminus\operatorname{int}A}g_E\ge m>0\)、\(\phi(u)<d(A,B^c)\)、\(\alpha=c\phi(u)^q<m\)。\(H^j(B;\mathbb Q)\to H^j(A;\mathbb Q)\) 对每个 j 满射，且 \(\chi(A)\ne0\)。
 - **Conclusion**：\(B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A)\)；更一般地，\(\sup_A\|h\|<(m-\alpha)/\lambda\) 的连续 \(h:A\to\mathbb R^n\) 有 \(x\in\operatorname{int}A\) 满足 \(h(x)\in F(x)\)、\(d(x,S)\le\kappa\|h(x)\|^q\)。
 - **Dependencies / Evidence**：[9/25 PDF §8 Theorem 8.1](history/sources/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf)；有限样本包络及另需整窗条件的 collar 已独立重算为 [C70-v1](research/canonical/finite_sample_collar.md)，其后 Vietoris–Begle 与有理 morphism Lefschetz theorem 仍是 C05 的拓扑链。[LIT-GRN-2002](research/LITERATURE.md#lit-grn-2002) 已逐项核一手 [6, Theorem 6.2] 的 retract、Vietoris span、紧 morphism \(\subset CAC\) 与 Lefschetz 数导入；这只关闭引文适用门。
 - **Objections / Status / Scope**：**PDF-only 候选，整条新增模块尚未逐行独立审计**。全文明言它不从全图 RL 自动推出；有限观测不证明整窗 (8.1)–(8.2) 或 \(T\) 的存在、usc 和 acyclicity。稿件的紧度量值 Čech cohomology/homology 等价及其余包络推理继续按明示范围核，不因外部定理导入核验而自动升级 C05。
+
+## C05-v2 / LR-RANGE · 去除超临界幂条件的整窗条件定理
+
+- **Exact Statement / Objects / Domain / Quantifiers**：保持 C05-v1 的同一完整 \(F:\mathbb R^n\rightrightarrows\mathbb R^n\)、非空闭 \(S=F^{-1}(0)\)、\(\lambda,L,\kappa>0\)、\(0<\gamma<1\)、紧有限多面体 \(A\subset\operatorname{int}B\)、指定 \(T\) 的全部整窗输出 (8.1)–(8.2)、独立核定的非空有限样本与 (8.4) 四项 collar、usc 非空紧有理 Čech-acyclic 值、每阶 \(b^*\) 满射及 \(\chi(A)\ne0\)。**仅把 \(q\gamma>1\) 改为 \(q>0\)**，仍取 \(c=\kappa\lambda^{-q}\)。则对每个 \(\lambda\|h\|_{\infty,A}<m-\alpha\) 的连续 \(h:A\to\mathbb R^n\)，有 \(x\in\operatorname{int}A\) 满足 \(h(x)\in F(x)\)、\(d(x,S)\le\kappa\|h(x)\|^q\)；尤其 \(B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A)\)。所有数字、集合、对应及样本须属于同一实例。
+- **Definitions / Dependencies / Evidence**：[LR-OBJECT/THEOREM](research/canonical/local_range_without_supercriticality.md#lr-theorem) 在 [C70-v1](research/canonical/finite_sample_collar.md) 度量链之后，核紧图、Vietoris–Begle、线段与扰动同伦、上同调满射和 [LIT-GRN-2002](research/LITERATURE.md#lit-grn-2002) 的 coincidence 导入。9/25 PDF §8 是 C05-v1 的来源，不是本版本原文；本版本为新增 derived-checked 条件推导。[LR-FEASIBLE](research/canonical/local_range_without_supercriticality.md#lr-feasible) 给 \(q\gamma=1/2\) 的全项实例，排除删条件后 vacuous 的解释。
+- **Counterevidence / Objections / Status / Scope**：有限样本仍不能认证指定 \(T\) 在整个窗的非空、usc、acyclic 或 (8.1)–(8.2)；实际原生问题可能无法生成合适的 (8.4)。外部拓扑导入适用门已核，但整条候选的文献新颖性、原生模型和其它定理推广未审。删去 \(q\gamma>1\) 是数学身份变化，不回写 C05-v1 的来源事实；若未来出现 Čech/CAC 的承重异议，应降回候选并隔离拓扑结论。
 
 ## C06 · 固定紧 T-only 图卡的内生观测
 
@@ -315,7 +321,7 @@
 
 ## C53-v1 / NB-LOCAL · 近似零点锚下指定分支的有限长度
 
-- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整关系 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、\(U=B(\bar x,R)\)、\(\bar x\in S\)、\(\lambda>0\)。对所有 \(x\in A_\delta=\{x\in U:d(x,S)\le\delta\}\)，指定同一个 \(T:U\to H\) 的图值 \((Tx,(x-Tx)/\lambda)\)，要求存在可随 \(x\) 变化的近似最近 \(p_n\in S\) 满足 \(\|2Tx-x-p_n\|\le L\|x-p_n\|^\gamma\)，以及实际 \(Tx\) 的真残差窗口 EB；零距离输入亦包括在内。对有限非减零点连续 \(\psi:[0,\eta)\to[0,\infty)\)，若 \((\delta+L\delta^\gamma)/(2\lambda)<\eta\) 且 \(\limsup_{t\downarrow0}\psi((t+Lt^\gamma)/(2\lambda))/t<1\)，则每个满足 C53 留域预算的指定初值产生全程合法、有限长度、趋于 \(S\) 的 named 轨道及明确尾界；还得到 \(U\cap\overline S=U\cap S\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、\(\bar x\in S\)、\(U=B(\bar x,R)\)、\(\lambda>0,L\ge0,0<\gamma\le1,\delta>0\)。指定 **同一个** \(T:U\to H\) 对每个 \(x\in U\) 都有真实近端图值 \((Tx,(x-Tx)/\lambda)\)（NB-B）；对每个 \(x\in A_\delta=\{x\in U:d(x,S)\le\delta\}\)，**包括零距离输入**，有一列 \(p_n\in S\) 满足 \(\|x-p_n\|\to d(x,S)\) 且逐项满足 \(\|2Tx-x-p_n\|\le L\|x-p_n\|^\gamma\)（NB-A），且每个实际输出满足真全纤维残差窗口 \(r_F(Tx)<\eta\)、\(d(Tx,S)\le\psi(r_F(Tx))\)（NB-E）。其中 \(\psi:[0,\eta)\to[0,\infty)\) 有限非减、零点连续、\(\psi(0)=0\)；\((\delta+L\delta^\gamma)/(2\lambda)<\eta\)，\(c=\limsup_{t\downarrow0}\psi((t+Lt^\gamma)/(2\lambda))/t<1\)。记 \(\Phi(t)=\psi((t+Lt^\gamma)/(2\lambda))\)，选 \(c<\theta<1\) 和使 \(\Phi(t)\le\theta t\) 的 \(0<\delta_\theta\le\delta\)。对每个 \(x^0\in U\)、\(r_0=d(x^0,S)\le\delta_\theta\)，**再要求** \(\|x^0-\bar x\|+\frac12[r_0/(1-\theta)+Lr_0^\gamma/(1-\theta^\gamma)]<R\)（NB-2）。则指定轨道全程合法、\(r_k\le\theta^kr_0\)、总长度至多 NB-2 中的方括号半值、趋于 \(S\) 且有该预算的尾界；并有 \(U\cap\overline S=U\cap S\).
 - **Definitions / Dependencies / Evidence**：[NB-OBJECT/NB-LOCAL](research/canonical/named_branch_local.md#nb-local) 从逐图点恒等式、真残差方向、全家族量词和 Hilbert 完备性独立证明；旧 foundations §4 是来源。状态 derived-checked，文献先行性未核。
 - **Counterevidence / Objections / Scope / Related Files**：A 只是 anchored，不是全对 RL；没有最近点、全局闭 \(S\) 的要求。不能将指定 \(T\) 的结论升级为完整 \(J_{\lambda F}\) 的任意选择；若 A 排除零距离输入，局部闭性及极限归属的论证失效。需对完整纤维另证统一条件。
 
@@ -345,9 +351,9 @@
 
 ## C58-v1 / CG-CLOSURE · 闭图与自然 Minty 域的闭性
 
-- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间 \(H\)、\(\lambda>0\)、非空图块 \(G\subset H\times H\)；存在 \(R>0\) 及有限 \(\omega:[0,R)\to[0,\infty)\)，满足 \(\omega(0)=0\)、\(\lim_{t\downarrow0}\omega(t)=0\)，且对 **每一对** Minty 输入差小于 \(R\) 的图点有 \(\|\Delta M_-\|\le\omega(\|\Delta M_+\|)\)。则 \(D=M_+(G)\) 上 Cayley \(C\) 单值并唯一连续延拓至 \(\overline D\)；图的闭包是该延拓的 Cayley pullback。特别地，\(G\) 闭 iff \(D\) 闭；若还知 \(D\) 稠密，则 \(D=H\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间 \(H\)、\(\lambda>0\)、非空图块 \(G\subset H\times H\)；存在 \(R>0\) 及有限 \(\omega:[0,R)\to[0,\infty)\)，满足 \(\omega(0)=0\)、\(\lim_{t\downarrow0}\omega(t)=0\)，且对 **每一对** Minty 输入差小于 \(R\) 的图点有 \(\|\Delta M_-\|\le\omega(\|\Delta M_+\|)\)。则 \(D=M_+(G)\) 上 Cayley \(C\) 单值并唯一连续延拓至 \(\overline D\)；图的闭包是该延拓的 Cayley pullback。特别地，\(G\) 闭 iff \(D\) 闭；**若另有 \(G\) 闭且 \(D\) 在整个 \(H\) 稠密**，才有 \(D=H\)。
 - **Definitions / Dependencies / Evidence**：[CG-OBJECT/CLOSURE](research/canonical/closed_graph_minty_domain.md#cg-closure) 从同一图块的剪切逆映射、近对角线模和 Hilbert 完备性独立证明，derived-checked。旧 foundations §1.1–§1.4 只是坐标与闭性例的来源；该闭域定理不是旧稿状态的升级。
-- **Counterevidence / Objections / Scope / Related Files**：闭图单独不足以 coverage，\(G=[0,1]\times\{0\}\) 有完整反例；没有零点消失模时闭域亦不保闭图。一般跳跃模只保证延拓/闭性，不声称闭包在跳跃尺度仍保同一模。图块结论不排除完整关系中图块外的纤维；文献先行性未核。[CG-BOUNDARY](research/canonical/closed_graph_minty_domain.md#cg-boundary)。
+- **Counterevidence / Objections / Scope / Related Files**：闭图单独不足以 coverage，\(G=[0,1]\times\{0\}\) 有完整反例；稠密但不闭也不足，\(G=\mathbb Q\times\{0\}\subset\mathbb R^2\) 的自然域是 \(\mathbb Q\ne\mathbb R\)，并满足模 \(\omega(t)=t\)。后一项由空白接收审查发现总账抄漏合取前提，规范证明与 E102 原已正确。没有零点消失模时闭域亦不保闭图。一般跳跃模只保证延拓/闭性，不声称闭包在跳跃尺度仍保同一模。图块结论不排除完整关系中图块外的纤维；文献先行性未核。[CG-BOUNDARY](research/canonical/closed_graph_minty_domain.md#cg-boundary)。
 
 ## C59-v1 / RW-POSITIVE · 一般 gauge 的窗口到邻域转换
 
@@ -420,3 +426,33 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：非空闭 \(S=F^{-1}(0)\subset\mathbb R^n\)、\(\lambda,L,c>0\)、\(0<\gamma<1,q>0\)、\(\phi(r)=(r+Lr^\gamma)/2\)。非空有限样本中**每个** \((p_i,y_i)\) 是实际 proximal 对，独立验证 \(\|p_i-y_i\|\le\phi(d(p_i,S))\)、\(d(y_i,S)\le c\|p_i-y_i\|^q\)。定义 \(\rho_i=\phi^{-1}(\|p_i-y_i\|)\)、\(e_i=c\|p_i-y_i\|^q\)、\(g_E(z)=\max_i(\rho_i-\|z-p_i\|)\)、\(u_E(z)=\min_i(\|z-y_i\|+e_i)\)，则**所有** \(z\in\mathbb R^n\) 有 \(g_E(z)\le d(z,S)\le u_E(z)\)。再给非空紧 \(A\subset\operatorname{int}B\)、紧 B，指定 \(T(p)\) 对每个 \(p\in A\) 非空，且以上两估计对**每个** \(y\in T(p)\) 均成立；若 \(\sup_Au_E\le u\)、\(\inf_{B\setminus\operatorname{int}A}g_E\ge m>0\)、\(\phi(u)<d(A,B^c)\)、\(\alpha=c\phi(u)^q<m\)，则对所有 \(p\in A,y\in T(p)\)：\([p,y]\subset B\)、\(y\in\operatorname{int}A\)、\(d(y,A^c)\ge m-\alpha\)。任意 \(\lambda\|h\|_{\infty,A}<m-\alpha\) 的连续扰动沿 \(y+t\lambda h(y)\) 留在内域。
 - **Dependencies / Evidence / Status**：[FSC-ENVELOPE/COLLAR](research/canonical/finite_sample_collar.md#fsc-envelope) 给 1-Lipschitz 双包络和 shell 边界的逐式证明；9/25 PDF §8 印刷页 20–21，(8.1)–(8.4)、(8.7) 为来源。`derived-checked` 仅针对度量分析层；有限覆盖误差预算也在正文。输出可为完整 resolvent 的指定子关系。
 - **Counterevidence / Objections / Scope**：样本验证不能建立整窗全称条件、非空/usc/acyclic \(T\)。内域余量不提供 \(p=y+\lambda h(y)\) 的 coincidence 或 \(F(\operatorname{int}A)\) 值域球；C05 仍需多面体、拓扑条件和外部定理。该分析链不要求 \(q\gamma>1\)，不能将 C05 的其它前提一并删去。
+
+## C71-v1 / LC-OT · 惰性四循环的锐同步运输误差界
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(G=(0,1,3,4)\)、循环 \(T:0\to1\to3\to4\to0\)、\(0<p<1\)，每步概率 \(1-p\) 取 Id、概率 \(p\) 取 T；唯一不变律 \(\pi=(1/4)^4\)。\(C_{ij}=|g_i-g_j|^2\)、\(R_{ij}=p[(g_i-Tg_i)-(g_j-Tg_j)]^2\)。对 **所有** \(\mu\in\Delta_4\)，\(\Psi(\mu)^2=\min_{\eta\in\operatorname{Opt}_C(\mu,\pi)}R\cdot\eta\)，则 \(\Psi^{-1}(0)=\{\pi\}\)、\(W_2(\mu,\pi)\le\sqrt{13/p}\Psi(\mu)\)，系数对这个完整四点律空间最优。
+- **Dependencies / Evidence / Status**：[LC-OBJECT/SHARP](research/topics/random_markov/lazy_cycle_ot.md#lc-sharp) 从唯一有序最优耦合、零成本交换、矩阵 \(C-(13/p)R\) 的符号抵消及取等律独立证明。状态 derived-checked，来源为 9/14 有限状态分类稿 §10.2；不继承其余一般结论和优先权声明。
+- **Counterevidence / Objections / Scope**：同一输入 \(\mu^+=(1/2,1/4,0,1/4)\) 去掉输入对目标的 **OT 最优性** 后有松弛残差零而真实 \(\Psi^2=p/2\)；见 [LC-RELAX](research/topics/random_markov/lazy_cycle_ot.md#lc-relax)。此例不证明任意有限模型必需点态位移签名分离，也不给变动 \(p\) 的统一常数；随机核相同但残差表示或耦合集改变是另一命题。
+
+## C72-v1 / DS-EB · 对角线竖支图的残差量词分离
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整闭关系 \(F(0)=A=\{0\}\cup\{1/n:n\ge1\}\)、\(F(x)=\{x\}\) (\(x\ne0\))，\(S=F^{-1}(0)=\{0\}\)。对所有 \(x\in\mathbb R\)，真 \(r_F(x)=|x|=d(x,S)\)，线性 EB 精确模 1。对所有右端 \(y\) 的完整逆像均有 \(|x|\le|y|\)；但 \(h(y)=d(0,F^{-1}(y))\) 不满足任何零邻域上 \(h(y)\le K\psi(d(y,F(0)))\)，其中 \(K<\infty\)、\(\psi(t)\to0\)；取 \(y\to1/n\) 而不在 \(A\) 给反例。
+- **Dependencies / Evidence / Status**：[DS-EB](research/topics/examples/diagonal_spike_relation.md#ds-eb) 逐纤维公式与目标序列独立证明；9/01 ZIP GX-075 仅为观察来源。derived-checked。
+- **Objections / Scope**：固定零目标、全部逆像的 \(|y|\) 界和右端到 \(F(0)\) 的两变量 MR 是不同残差；后者失败专指以零为参考的目标邻域。外部先行性未核。
+
+## C73-v1 / DS-PPA · 完整近端每条合法路径的锐收敛
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C72 同一完整 \(F\) 上，固定任意 \(\lambda>0\)、\(\tau=(1+\lambda)^{-1}\)。对每个 \(p\in\mathbb R\)，完整 \(J_{\lambda F}(p)=\{\tau p\}\cup(\{0\}\text{ if }p\in\lambda A)\)、\(\operatorname{Fix}J=\{0\}\)、真最小步 \(r_J(p)=(1-\tau)|p|\)。对每个初值和 **每条** 无限合法选择路径 \(p_{k+1}\in J(p_k)\)，\(|p_k|\le\tau^k|p_0|\)、\(\sum_k|p_{k+1}-p_k|=|p_0|\)、\(p_k\to0\)。最坏统一因子 \(\tau\) 及全域步 EB 模 \((1+\lambda)/\lambda\) 均锐。
+- **Dependencies / Evidence / Status**：[DS-PPA](research/topics/examples/diagonal_spike_relation.md#ds-ppa) 解完整方程并列出两种选择，保号望远镜求和；derived-checked。
+- **Objections / Scope**：每条实际路径的结论不能用来反推完整图全对 RL；零重置只在离散输入，始终取对角分支实现锐因子。
+
+## C74-v1 / DS-RL · 锚定最优与全对全模失败并存
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C72 同一完整图，任意固定 \(\lambda>0\)，每图点相对 \((0,0)\) 有 \(|u-\lambda v|\le|u+\lambda v|\)，最优零锚常数为 1。对任意原点完整图邻域，存在趋零的两图点 \((0,c_n)\)、\((\lambda c_n/(1+\lambda),\lambda c_n/(1+\lambda))\)，其 Minty 输入同为 \(\lambda c_n\) 而 Cayley 输出不同；故每个 \(\omega(0)=0\) 的完整全对模均失败，尤其任何 Hölder–RL。
+- **Dependencies / Evidence / Status**：[DS-RL](research/topics/examples/diagonal_spike_relation.md#ds-rl) 的碰撞和端点竖支取等，derived-checked。
+- **Objections / Scope**：闭图、全输入 coverage、C72/C73 两种真线性 EB 和全选择线性收敛的合取仍不修复同输入非单值；这不攻击全对 RL 的充分收敛定理。
+
+## C75-v1 / DS-QUADRATIC · 同图的精确二参数区域
+
+- **Exact Statement / Objects / Domain / Quantifiers**：仍在 C72 的全部完整图点对上，以 \(a=\Delta u,b=\Delta v\) 定义 \(ab\ge\mu a^2+\rho b^2\)。全域有效参数区与原点任意完整图邻域的局部有效区均精确为 \(\mu<0,\rho<0,\mu\rho\ge1/4\)，包含边界；单参数 hypo/cohypo 下模均为 \(-\infty\)。
+- **Dependencies / Evidence / Status**：[DS-QUADRATIC](research/topics/examples/diagonal_spike_relation.md#ds-quadratic) 用跨支差实现任意斜率并核二次式最大值；derived-checked。
+- **Objections / Scope**：该区亦是一般实差的负负正定门，本例的意义在于局部所有斜率可由趋零图点实现；不推出其它例卡的 semimonotonicity 区。

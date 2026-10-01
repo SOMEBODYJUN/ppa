@@ -46,6 +46,8 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 9/25 的有限样本 \((p_i,y_i)_{i=1}^m\) 只给到 \(d(\cdot,S)\) 的[可验证上下包络 C70-v1a](canonical/finite_sample_collar.md#fsc-envelope)。另有**指定的整个** \(T\) 对每个 \(p\in A,y\in T(p)\) 的步界/输出 EB，加上经验证的 collar 数值，才给 [C70-v1b 内域余量](canonical/finite_sample_collar.md#fsc-collar)；这个结果没有 fixed point 结论。C05 还需要 \(T\) 在 \(A\) 邻域 usc、各值非空紧且 Čech–\(\mathbb Q\)-acyclic，以及上同调满射与 Euler 特征条件。\(T\) 可是完整 resolvent 的子关系；不能暗换成全纤维。外部 Lefschetz [6, Theorem 6.2] 的适用条件已在[一手文献卡](LITERATURE.md#lit-grn-2002)按紧图/Vietoris/CAC 逐项核对；它不建立任何整窗模型假设，C05 仍是 PDF-only 候选。[H07](holder_structure.md)。
 
+固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_3\) 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
+
 ## E105–E112：三组新对象的互不替代条件
 
 E105/E106 的共同名称 Douglas–Rachford 只固定公式 \(T=I-P_C+P_DR_C\)、算法残差 \(G=I-T\)：**切触**的 \(D\) 是抛物线，只在 \(b>-1/2\) 统一投影并于零附近有半阶 MSR；**横截**的 \(D\) 是直线，对所有输入有可逆线性 \(G\) 和精确模 \(1/\sin\theta\)。二者不是同一算子的参数版本。E107 的取等输入 \((s,-s^2)\) 只反驳“半阶 EB 自动给统一一步严格距离收缩”；并未否定全投影管不变或判定每条局部轨道。[对象卡](topics/examples/dr_tangency_transversality.md)。

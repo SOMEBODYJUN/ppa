@@ -232,6 +232,6 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 ## 下一步证明工作
 
-1. 查核并冻结 H01 所用经典扩张定理与 H07 所引 rational morphism 定理的原文适用条件。
+1. H01 的同常数扩张与 H07 的 rational morphism 导入门已分别在 HE-EXTENSION、LIT-GRN-2002 核过；继续独立核 C03 的 cross-lift/影子锐性、C04 的 degree/fixed-set 构造，以及 C05 的整窗模型、Čech 约定和剩余拓扑步骤。
 2. 在随机推论正式版本中补上给定度量完备性，并保留反例作为修订原因。
 3. 用 H05 的拓扑限制逐个审查 H03 中病态紧零集实现能满足哪些 EB/coverage 条件，避免把结构存在性误读为 PPA 收敛。

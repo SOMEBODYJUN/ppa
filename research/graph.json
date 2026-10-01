@@ -84,8 +84,9 @@
     },
     {
       "id": "H02",
-      "label": "同一强单调影子",
-      "file": "holder_structure.md#h02"
+      "label": "同一强单调影子 [候选]",
+      "file": "holder_structure.md#h02",
+      "evidence_status": "candidate"
     },
     {
       "id": "PROPER",
@@ -99,8 +100,9 @@
     },
     {
       "id": "H03",
-      "label": "有限维完整纤维分类",
-      "file": "holder_structure.md#h03"
+      "label": "有限维完整纤维分类 [候选]",
+      "file": "holder_structure.md#h03",
+      "evidence_status": "candidate"
     },
     {
       "id": "SAMPLE",
@@ -129,8 +131,9 @@
     },
     {
       "id": "H07",
-      "label": "原关系局部值域候选",
-      "file": "holder_structure.md#h07"
+      "label": "原关系局部值域候选 C05-v1",
+      "file": "holder_structure.md#h07",
+      "evidence_status": "candidate"
     },
     {
       "id": "TAIL",
@@ -951,6 +954,69 @@
       "id": "OB-AGGREGATE",
       "label": "分开矩聚合的临界失相关障碍",
       "file": "../FAILED_ROUTES.md#f24"
+    },
+    {
+      "id": "LC-OBJECT",
+      "label": "四状态惰性循环与同步 OT 残差",
+      "file": "topics/random_markov/lazy_cycle_ot.md#lc-object"
+    },
+    {
+      "id": "LC-OT",
+      "label": "同核 OT 残差精确零集与锐常数",
+      "file": "topics/random_markov/lazy_cycle_ot.md#lc-sharp"
+    },
+    {
+      "id": "LC-RELAX",
+      "label": "去最优运输约束后的假零点",
+      "file": "topics/random_markov/lazy_cycle_ot.md#lc-relax"
+    },
+    {
+      "id": "LR-OBJECT",
+      "label": "C05-v2 整窗条件与 q>0",
+      "file": "canonical/local_range_without_supercriticality.md#lr-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LR-RANGE",
+      "label": "C05-v2 去超临界幂的条件值域",
+      "file": "canonical/local_range_without_supercriticality.md#lr-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LR-FEAS",
+      "label": "qγ=1/2 的整窗 collar 可行实例",
+      "file": "canonical/local_range_without_supercriticality.md#lr-feasible",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DS-OBJECT",
+      "label": "闭完整对角加离散竖支关系",
+      "file": "topics/examples/diagonal_spike_relation.md#ds-object"
+    },
+    {
+      "id": "DS-EB",
+      "label": "真 EB 与目标邻域残差分离",
+      "file": "topics/examples/diagonal_spike_relation.md#ds-eb"
+    },
+    {
+      "id": "DS-PPA",
+      "label": "完整近端全选择有限长度收敛",
+      "file": "topics/examples/diagonal_spike_relation.md#ds-ppa"
+    },
+    {
+      "id": "DS-RL",
+      "label": "锐零锚与全对跨支碰撞",
+      "file": "topics/examples/diagonal_spike_relation.md#ds-rl"
+    },
+    {
+      "id": "DS-QUAD",
+      "label": "完整图精确二参数区",
+      "file": "topics/examples/diagonal_spike_relation.md#ds-quadratic"
+    },
+    {
+      "id": "OB-DYN-RL",
+      "label": "动力收敛不逆推全对 RL",
+      "file": "../FAILED_ROUTES.md#f25"
     }
   ],
   "edges": [
@@ -1055,7 +1121,7 @@
       "output": "H02",
       "relation": "implies",
       "scope": "全图全尺度；正交扩张与 Banach contraction",
-      "status": "S23 稿内证明、局部重算"
+      "status": "candidate / S23 稿内证明、局部重算"
     },
     {
       "id": "E09",
@@ -1067,7 +1133,7 @@
       "output": "H03",
       "relation": "necessary",
       "scope": "有限维、graph-maximal、直径界",
-      "status": "S23 稿内证明"
+      "status": "candidate / S23 稿内证明"
     },
     {
       "id": "E10",
@@ -1079,7 +1145,7 @@
       "output": "H03",
       "relation": "sufficient",
       "scope": "每个非空紧 K、diam K≤R，存在某个 F",
-      "status": "S23 稿内构造"
+      "status": "candidate / S23 稿内构造"
     },
     {
       "id": "E11",
@@ -1116,7 +1182,7 @@
       "output": "H07",
       "relation": "conditional",
       "scope": "指定 T 整窗非空紧 usc、Čech-Q-acyclic，有限多面体 A⊂int B、χ(A)≠0、上同调满射和 rational Lefschetz；FSC-COLLAR 只闭合度量内域余量，不能单独给 coincidence；T 可为子关系",
-      "status": "S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立"
+      "status": "candidate / S25 候选；一手 Lefschetz 引文适用门已核，整窗 T 假设独立"
     },
     {
       "id": "E14",
@@ -2374,7 +2440,9 @@
     {
       "id": "E123",
       "topic": "局部值域的分析层",
-      "inputs": ["SAMPLE"],
+      "inputs": [
+        "SAMPLE"
+      ],
       "output": "FSC-ENV",
       "relation": "conditional",
       "scope": "非空有限样本每对实际输出分别独立验证步界和输出零距界；φ严格增；对整个 R^n 得 g_E≤d(·,S)≤u_E，不证明整窗 T",
@@ -2383,11 +2451,116 @@
     {
       "id": "E124",
       "topic": "局部值域的分析层",
-      "inputs": ["FSC-ENV", "FSC-FULL"],
+      "inputs": [
+        "FSC-ENV",
+        "FSC-FULL"
+      ],
       "output": "FSC-COLLAR",
       "relation": "conditional",
       "scope": "另加 A⊂int B 紧、sup_A u_E≤u、inf_{B\\int A}g_E≥m>0、φ(u)<d(A,B^c)、α=cφ(u)^q<m；所有 p∈A 和 y∈T(p) 留在 int A 且 d(y,A^c)≥m−α",
       "status": "C70-v1b 独立重算 (8.4)→(8.7)；未证拓扑 coincidence"
+    },
+    {
+      "id": "E125",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "LC-OBJECT"
+      ],
+      "output": "LC-OT",
+      "relation": "conditional",
+      "scope": "固定 G=(0,1,3,4)、0<p<1、Id/T 独立切换，唯一 π=(1/4)^4；对所有 μ∈Δ4，在各自固定边缘的 C-最优计划上取同步 R 最小，精确零集 {π}，全律空间锐 W2/Ψ=√(13/p)。",
+      "status": "C71 同一最优计划的矩阵符号证明及取等律；优先权未审"
+    },
+    {
+      "id": "E126",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "LC-OBJECT"
+      ],
+      "output": "LC-RELAX",
+      "relation": "limits",
+      "scope": "同一核和 μ+=(1/2,1/4,0,1/4)；允许非 C-最优耦合时残差为零，但原 Ψ²=p/2；残差对象变化不能继承精确零集。",
+      "status": "C71 的精确四边耦合反例"
+    },
+    {
+      "id": "E127",
+      "topic": "局部值域的拓扑链",
+      "inputs": [
+        "FSC-COLLAR",
+        "LR-OBJECT"
+      ],
+      "output": "LR-RANGE",
+      "relation": "conditional",
+      "scope": "C05-v1 同一 F,S,A,B,T,E 的所有整窗与拓扑条件、q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。",
+      "status": "derived-checked conditional theorem；原生模型与优先性未审"
+    },
+    {
+      "id": "E128",
+      "topic": "局部值域的拓扑链",
+      "inputs": [
+        "LR-OBJECT"
+      ],
+      "output": "LR-FEAS",
+      "relation": "conditional",
+      "scope": "n=1、F(x)=10⁴x、γ=1/2、q=1、1401 个有理格点；A,B 区间全部整窗与 collar 精确成立，说明 qγ>1 对该条件结论不必要。",
+      "status": "精确有理数不等式与单值拓扑条件"
+    },
+    {
+      "id": "E129",
+      "topic": "例库",
+      "inputs": [
+        "DS-OBJECT"
+      ],
+      "output": "DS-EB",
+      "relation": "conditional",
+      "scope": "完整 F(0)={0}∪{1/n}、F(x)={x}；r_F=|x| 真线性 EB，但右端 d(y,F(0)) 的中心逆误差无任何零消失 gauge。",
+      "status": "C72 完整逆纤维与同一目标序列"
+    },
+    {
+      "id": "E130",
+      "topic": "例库",
+      "inputs": [
+        "DS-OBJECT"
+      ],
+      "output": "DS-PPA",
+      "relation": "conditional",
+      "scope": "每个 λ>0、每个 p 和完整 J 的每条合法路径，步残差 (λ/(1+λ))|p|，最坏因子 1/(1+λ)，总长 |p0|。",
+      "status": "C73 全部纤维和望远镜证明"
+    },
+    {
+      "id": "E131",
+      "topic": "例库",
+      "inputs": [
+        "DS-OBJECT"
+      ],
+      "output": "DS-RL",
+      "relation": "conditional",
+      "scope": "固定任意 λ>0，零锚全完整图锐 L=1；两趋零图点同 Minty 输入而不同反射输出，任意 ω(0)=0 全对模失败。",
+      "status": "C74 同输入碰撞"
+    },
+    {
+      "id": "E132",
+      "topic": "例库",
+      "inputs": [
+        "DS-OBJECT"
+      ],
+      "output": "DS-QUAD",
+      "relation": "conditional",
+      "scope": "局部及全域同一全对二参数 ab≥μa²+ρb² 的精确区 μ<0,ρ<0,μρ≥1/4；跨支差实现所有斜率。",
+      "status": "C75 二次式端点核验"
+    },
+    {
+      "id": "E133",
+      "topic": "交叉限制",
+      "inputs": [
+        "DS-EB",
+        "DS-PPA",
+        "DS-RL"
+      ],
+      "output": "OB-DYN-RL",
+      "relation": "refutes",
+      "scope": "同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。",
+      "status": "F25 由 C72–C74 的同对象证书"
     }
   ]
 }

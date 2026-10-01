@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：50 行逐源数学单元有精确去向，其中本批新增的 S25 (8.3) 和 (8.4)–(8.7) 只关闭分析步骤；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。50/251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象。
+**当前覆盖读法**：52 行逐源数学单元有精确去向，其中本批新增的 S25 (8.3) 和 (8.4)–(8.7) 只关闭分析步骤；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。50/251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -160,3 +160,11 @@
 [HE-EXTENSION](../canonical/holder_extension.md#he-extension) 重新写出 S23 §2 的 Hilbert 雪花核正性与固定参数极大图逻辑；一手 Hilbert Lipschitz 同常数扩张的正式编号是 [LIT-ALM-2021 Theorem 1.2](../LITERATURE.md#lit-alm-2021)。这里只关闭 H01 扩张步骤的适用范围，不审整篇结构稿。
 
 [C66–C68](../topics/examples/identity_square_branch_union.md) 对 9/01 ZIP 内 GX-068 逐对象重算原算子、全部近端根、完整最小步残差及跨支 RL 碰撞；[C69](../topics/random_markov/scalar_moment_envelope.md) 从 9/14 质量稀释审计 §4 重写任意连续非减 gauge 的硬支持锐矩包络、二点取等与临界分开聚合损失。逐源 TSV 各新增一个数学单元；原卡其他性质及原生随机耦合未验收。[C65](../topics/path_dynamics/m1_sign_lift.md#sl-rl) 对原创 C64 的同一个新完整图补端点球局部指数证明，不虚报为历史原生图的来源单元。代理交叉核了对象常数、近端远根、端点与硬支持，结构与完整证明审查仍有明确范围。
+
+## 增量：有限状态惰性循环的 OT 约束
+
+[C71](../topics/random_markov/lazy_cycle_ot.md#lc-sharp) 将 9/14 有限状态稿 §10.2 的四状态惰性循环拆为完整同步 OT 模型、精确零集、锐常数和去掉 OT 最优性后的假零点，矩阵符号与取等律由正文独立重算。逐源表增加一个单元；原稿一般有限状态定理、其它例、速率兼容和文献先行性继续未审。
+
+## 增量：GX-075 与条件值域版本
+
+[GX-075 C72–C75](../topics/examples/diagonal_spike_relation.md#ds-object) 已从 9/01 ZIP 的 work/c_gx066_077.md 逐项重算并新增一行去向；其余例卡和原稿标签不因此验收。[C05-v2](../canonical/local_range_without_supercriticality.md#lr-theorem) 是从 9/25 PDF §8 候选证明独立推出的更弱假设版本，故不冒充来源原文的新单元，保留 C05-v1 原身份。空白接收审查发现的 C58 总账闭性漏项已纠正，并将 \mathbb Q\times\{0\} 型稠密非闭图反例写入该 Claim。
