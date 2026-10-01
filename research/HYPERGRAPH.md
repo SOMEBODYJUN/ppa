@@ -66,6 +66,7 @@
 | E122 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-SUPPORT · 小矩距离不提供逐点支撑](topics/random_markov/scalar_moment_envelope.md#sme-support) | 对全部 0≤D≤R 且 \|\|D\|\|p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。；**C69 稀薄二点律的必要性** |
 | E133 | [DS-EB · 真 EB 与目标邻域残差分离](topics/examples/diagonal_spike_relation.md#ds-eb) ∧ [DS-PPA · 完整近端全选择有限长度收敛](topics/examples/diagonal_spike_relation.md#ds-ppa) ∧ [DS-RL · 锐零锚与全对跨支碰撞](topics/examples/diagonal_spike_relation.md#ds-rl) | refutes → [OB-DYN-RL · 动力收敛不逆推全对 RL](../FAILED_ROUTES.md#f25) | 同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。；**F25 由 C72–C74 的同对象证书** |
 | E141 | [ABS-OP · 原算子残差跳跃与逆像钉住](topics/examples/absolute_value_subgradient.md#av-operator) ∧ [ABS-PROX · 完整软阈值近端的锐步 EB](topics/examples/absolute_value_subgradient.md#av-prox) | limits → [OB-RES-STEP · 原算子与步残差系数不可互授](../FAILED_ROUTES.md#f27) | 同一完整图的原算子残差局部系数下确界 0，近端步残差局部锐系数 1；不同残差不可互授。；**F27/C78–C79** |
+| E145 | [SIN-PHASE · 临界全对三分之一阶及步长三相](topics/examples/positive_sine_phase.md#sin-phase) ∧ [SIN-TARGET · 非零目标 3 的锐半阶 EB](topics/examples/positive_sine_phase.md#sin-target) | limits → [OB-SIN-PPA · 无零点阻断局部模与 PPA 拼接](topics/examples/positive_sine_phase.md#sin-boundary) | C81 临界 RL 在奇 π 的图输出 2；C82 误差界是非零目标 3；完整 F 零集为空，每条固定步长完整近端选择路径向 −∞。不同目标与图点的模不能相乘为零集 PPA 速率。；**同对象但不同局部目标的量词边界及新动力推导** |
 
 ## 局部拓扑
 
@@ -168,6 +169,8 @@
 | E138 | [HP-OBJECT · 异维数分段抛物映射及完整图](topics/examples/hemiregular_piecewise_parabola.md#hp-object) | limits → [HP-GRAPH · 原点连续但任意参考产品邻域非闭图](topics/examples/hemiregular_piecewise_parabola.md#hp-graph) | 原点连续不产生整个参考产品邻域内的闭图；异维数映射没有同空间 PPA/Cayley/RL 坐标。；**GX-076 负侧接缝极限** |
 | E139 | [ABS-OBJECT · 绝对值次梯度完整图](topics/examples/absolute_value_subgradient.md#av-object) | conditional → [ABS-OP · 原算子残差跳跃与逆像钉住](topics/examples/absolute_value_subgradient.md#av-operator) | 完整 ∂\|x\|，x≠0 真残差恒 1，\|y\|<1 完整逆像 {0}；固定零目标及两变量 MR 局部线性系数下确界 0。；**C78 全纤维计算** |
 | E140 | [ABS-OBJECT · 绝对值次梯度完整图](topics/examples/absolute_value_subgradient.md#av-object) | conditional → [ABS-PROX · 完整软阈值近端的锐步 EB](topics/examples/absolute_value_subgradient.md#av-prox) | 固定任意 λ>0，完整软阈值 J；\|p\|<λ 步残差 \|p−Jp\|=\|p\|，fixed-point EB 锐系数 1；全图线性 RL 常数 1。；**C79 完整近端与反射** |
+| E143 | [SIN-OBJECT · 正值正弦完整图与 Minty 坐标](topics/examples/positive_sine_phase.md#sin-object) | conditional → [SIN-PHASE · 临界全对三分之一阶及步长三相](topics/examples/positive_sine_phase.md#sin-phase) | 完整 F=2+sin x；固定 λ<1 全图线性锐常数，λ=1 奇 π 参数窗全对最高 1/3 阶和缩窗下确界，λ>1 同输入碰撞；无界全图次线性另受周期平移阻断。；**C81 割线、全对积分界与碰撞重算** |
+| E144 | [SIN-OBJECT · 正值正弦完整图与 Minty 坐标](topics/examples/positive_sine_phase.md#sin-object) | conditional → [SIN-TARGET · 非零目标 3 的锐半阶 EB](topics/examples/positive_sine_phase.md#sin-target) | 同一完整映射，但目标为 3、参考输入 π/2；固定目标锐半阶模 √2；双侧扰动目标 y>3 为空逆像，不能扩成两变量 MR。；**C82 完整逆纤维与余弦渐近重算** |
 
 ## 参数字典
 

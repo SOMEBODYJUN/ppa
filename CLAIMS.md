@@ -486,3 +486,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定有限互异状态 \(G=\{g_1,\ldots,g_N\}\subset\mathbb R^d\)、有限随机自映射与权重、同噪声成本 \(R\)、平方欧氏运输成本 \(C\)、**全部**不变律 \(\mathcal I\)，以及 C15 (FS2) 的原始嵌套最优耦合残差 \(\Phi=\Psi^2\)。对**全部** \(\mu,\mu'\in\Delta_N\)，存在依赖固定系统的 \(L<\infty\)，使 \(|\Phi(\mu)-\Phi(\mu')|\le L\|\mu-\mu'\|_1\)；\(\Phi\) 是有限连续分片仿射函数，且 \(|\Psi(\mu)-\Psi(\mu')|\le\sqrt L\|\mu-\mu'\|_1^{1/2}\)。不以 C15 的 exact-zero 判据为前提。
 - **Dependencies / Evidence / Status / Related Files**：[FS-REGULARITY](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 的最大耦合成本估计、固定系数最优计划多面体 Hoffman 界、有限 LP 分支细分；[LIT-HOFFMAN-1952](research/LITERATURE.md#lit-hoffman-1952) 逐条件导入。来源 9/14 有限状态稿 §6，但证明由本库重写；`derived-checked` 限固定有限数据。§5 的 [FS-HOFFMAN](research/topics/random_markov/finite_state_certificate.md#fs-hoffman) 是同一 C15 存在性结论的独立非锐证明，不改变 C15 身份。
 - **Counterevidence / Objections / Scope**：\(\Phi\) 未被证明凸；嵌套最小化本身不能保证连续性。\(L\) 不跨核或状态集统一，\(\Psi\) 的半阶是可用上模而未宣称各模型均锐；此正则性单独不蕴含 \(\Phi^{-1}(0)=\mathcal I\) 或 EB/动力收敛。原稿先行性与无限状态推广未核。
+
+## C81-v1 / SIN-PHASE · 正值正弦图的完整步长三相
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整 \(F(x)=2+\sin x:\mathbb R\to\mathbb R\)，每个固定 \(\lambda>0\)，Minty \(g_\lambda=x+\lambda F(x)\)，反射 \(c_\lambda=x-\lambda F(x)\)。对 \(0<\lambda<1\)，完整 \(J=g_\lambda^{-1}\) 全域单值且全图线性全对 RL 锐常数 \((1+\lambda)/(1-\lambda)\)。\(\lambda=1\) 全域仍单值；在每个 \(x_0=(2m+1)\pi\) 的缩参数窗，全对最高局部指数 \(1/3\)，该指数常数下确界 \(4\sqrt[3]3\)；**只固定基点** \(x_0\) 的下确界为 \(2\sqrt[3]6\)。任意 \(\lambda>0\) 的无界全图 \(0<\gamma<1\) 失败；\(\lambda=1\) 全图线性亦失败。\(\lambda>1\) 完整图出现同输入不同反射输出，对任何零消失全图模都失败。
+- **Dependencies / Evidence / Status / Related Files**：[SIN-PHASE](research/topics/examples/positive_sine_phase.md#sin-phase) 的割线、全体临界端点的积分界 (SN4)、对称取等序列与显式同输入碰撞；`derived-checked`，来源 ZIP GX-064 的同对象观察，CCA-M08 将旧 `C-DISAGREE` 精化为 `C-REFINE`。
+- **Counterevidence / Scope**：完整自然输入域有 coverage，但 \(\lambda>1\) 无全图单值；正规局部分支未被碰撞反例否定。锐常数是缩窗系数**下确界**，不是预定窗口取到值；全图次线性失败与局部临界半阶/三分之一阶不得混写。\(S=F^{-1}(0)=\varnothing\)，没有零目标 PPA 定理可由此调用。
+
+## C82-v1 / SIN-TARGET · 非零目标的锐固定目标半阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C81 同一完整 \(F\)，参考 \((\bar x,\bar y)=(\pi/2,3)\)，\(x\) 仅在 \(\bar x\) 的局部窗，完整逆纤维 \(F^{-1}(3)\)。固定目标 EB \(d(x,F^{-1}(3))\le K|F(x)-3|^q\) 的最高指数 \(q=1/2\)，该指数缩窗锐系数下确界 \(\sqrt2\)；较低正指数下确界 0，较高指数无有限系数。任何要求目标 \(y\) 在 3 的**双侧邻域**且对全部近输入成立的正指数两变量 MR 失败，因为 \(y>3\) 有空逆像。
+- **Dependencies / Evidence / Status / Related Files**：[SIN-TARGET](research/topics/examples/positive_sine_phase.md#sin-target) 的完整逆像及 \(1-\cos h\sim h^2/2\)；`derived-checked`，来源同一 GX-064 的非零目标观察。
+- **Counterevidence / Scope**：C81 的临界 \(x_0\) 对应输出 2，而本 Claim 的目标是 3；\(F^{-1}(0)=\varnothing\)。[SIN-BOUNDARY](research/topics/examples/positive_sine_phase.md#sin-boundary) 逐步证明每条完整近端选择路径趋 \(-\infty\)，因此不能把两个局部锐指数当零点收敛证书。外部新颖性未核。
