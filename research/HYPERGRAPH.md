@@ -53,6 +53,7 @@
 | E21 | [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集；**尚未建立的一般桥** |
 | E24 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
 | E44 | [M-MOMENT · 小质量混合 pq≤r](cone_markov.md#m-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门；**Markov Proposition M** |
+| E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
 
 ## 局部拓扑
 
@@ -164,6 +165,7 @@
 | E81 | [PS-OBJECT · 幂次剪切完整图与指定步长](topics/path_dynamics/power_shear.md#ps-object) | conditional → [PS-RATE · 法向 γq 精确可达与切向预算](topics/path_dynamics/power_shear.md#ps-rate) | λ=1、0<γ<1、q>1/γ、α=γq；完整 F=J^−1−I 的真 EB，单条轨道法向速率 r_+=r^α；反射全对 γ 只在有界输入窗口，留域另需切向余量。；**本轮反演、残差渐近与轨道预算独立重算；非普适速率** |
 | E82 | [OS-OBJECT · 振荡剪切完整图与局部孤立零点](topics/path_dynamics/oscillatory_shear.md#os-object) | conditional → [OS-SCALING · 双边 q 阶与最大全对 γ 指数](topics/path_dynamics/oscillatory_shear.md#os-scaling) | λ=1、q>1、0<γ<1、β=q/γ−1；全域双边 J 范数，局部真残差 q-EB 与局部轨道 q 阶；反射最大全对 γ 只在有界窗口；归一化 Q 因子未证。；**本轮双边界、两尺度 Hölder 和相位锐性独立重算** |
 | E83 | [DE-OBJECT · 指定 Minty 域振荡反射图](topics/path_dynamics/domain_escape.md#de-object) | conditional → [DE-ESCAPE · 真残差线性而非零轨道有限逃逸](topics/path_dynamics/domain_escape.md#de-escape) | 0<α<1、β>0、0<δ<1、λ=1、输入域 D=[−δ,δ]；每个非零初值半径严格增且有限步出 D，真残差局部线性；锚定 α 和全对 α/(β+1) 不给不变域。；**本轮两尺度、有限逃逸及全原像残差一致性独立重算** |
+| E86 | [DC-OBJECT · GX-074 紧离散图与零集](topics/path_dynamics/discrete_coverage.md#dc-object) | conditional → [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | H=R、K={0}∪{1/n}、gph F=K×{0}、S=K；每个 0<γ≤1 的完整图全对 RL(λ,γ,1) 及图输出真 EB 同时成立，自然输入域仍只有 K。；**本轮完整纤维和量词直接计算** |
 
 ## 复合次正则
 
@@ -176,6 +178,13 @@
 | E76 | [CS-RANK-EX · 秩亏同阶传递反例](canonical/composite_subregularity.md#cs-objections) | limits → [CS-OPEN-RANK · 秩亏原生 verifier 开放目标](canonical/composite_subregularity.md#cs-objections) | c=x²、φ=z²/2 保留外层线性 EB，却不保复合线性 EB；秩亏开放目标必须加入真实残差乘子桥。；**本轮显式反例** |
 | E79 | [CI-OBJECT · 曲面尖点外层与真多值次梯度](topics/composite_regular/cusp_identification.md#ci-object) ∧ [CS-PROX · 局部 RL、coverage、轨道预算](canonical/composite_subregularity.md#cs-prox) | conditional → [CI-IDENTIFY · 局部近端一步识别非孤立零集](topics/composite_regular/cusp_identification.md#ci-identify) | 曲面 c=t−(s_+)²、ν>0、η 连续严格增无界；0<R<1/2、M=ν+η(R+R²)、h=2M、λh<1，x∈B_{r/2} 且 d(x,S)<λν(1−λh)，r=R(1−2R)/4；仅唯一球内近端输出。；**本轮从真残差间隙和局部步长界独立重算** |
 | E80 | [OT-MAXIMA · 驻点极大序列及二阶目标障碍](topics/composite_regular/oscillating_target.md#ot-maxima) | refutes → [OB-TARGET · 局部最小自动保证二阶目标 EB 的错误猜测](topics/composite_regular/oscillating_target.md#ot-scope) | C∞ 非负 f 在 0 严格全局最小，却有 x_k→0 的 f′=0、f″<0；仅否定不加目标一致/弱分离时到完整 Θ₂ 的全邻域 Ψ(0)=0 EB。；**本轮区间变号和目标距离独立证明** |
+
+## 孤立零点
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E84 | [IZ-GERM · 孤立零点图 germ 的 B/J/R 平坦性](canonical/isolated_zero_flatness.md#iz-germ) ∧ [IZ-FIBERS · 真实 EB 到实际图值的方向](canonical/isolated_zero_flatness.md#iz-fibers) | conditional → [IZ-PPA · 指定分支超线性上阶](canonical/isolated_zero_flatness.md#iz-ppa) | 同一孤立 p、q>1、λ>0；IZ-FIBERS 仅用真 EB→实际图值方向，不需反向的 residual-complete；另需指定 T 在输入邻域全域选择、实际输出真 q-EB、步残差 <η、ρη^(q−1)≤λ/2 和闭球留域；只给上阶。；**本轮逐图点及球不变证明** |
+| E85 | [IZ-PPA · 指定分支超线性上阶](canonical/isolated_zero_flatness.md#iz-ppa) | conditional → [IZ-FACTOR · 正 Q 因子的归一化门](canonical/isolated_zero_flatness.md#iz-factor) | 同一非终止轨道；另需 \|\|x^(k+1)−p\|\|/\|\|w_k\|\|^q→μ∈(0,∞)；结论 Q 因子 μ/λ^q；上阶不自动给极限。；**本轮三角双边界重算** |
 
 ## 不蕴含关系
 

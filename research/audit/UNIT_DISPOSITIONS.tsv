@@ -18,3 +18,8 @@ history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_
 history/sources/次单调论文研究/RL_foundations.md	§9.2 GX-071	rewritten	C42-v1 / PS-RATE	research/topics/path_dynamics/power_shear.md#ps-rate	反演完整图并重算真实残差指数 法向比例与切向预算	有界窗最优常数及 GX-072 对照未核
 history/sources/次单调论文研究/RL_foundations.md	§9.3 GX-072	rewritten	C43-v1 / OS-SCALING	research/topics/path_dynamics/oscillatory_shear.md#os-scaling	重算双边 J 范数 真残差 q EB 振荡两尺度与相位锐性	归一化 Q 因子及文献优先性未核
 history/sources/次单调论文研究/RL_foundations.md	§9.4 GX-073	rewritten	C44-v1 / DE-ESCAPE	research/topics/path_dynamics/domain_escape.md#de-escape	重算自然域上两种指数 有限步逃逸和多原像统一真残差比	改变 Minty 域或全局延拓属于新对象
+history/sources/次单调论文研究/RL_foundations.md	§7.1–7.2 graph germ 与一般 gauge	rewritten	IZ-GERM	research/canonical/isolated_zero_flatness.md#iz-germ	逐图点重算 B_q J_q R_q 常数并保留 gauge 重标度域	同 gauge 常数需固定 dilation 条件
+history/sources/次单调论文研究/RL_foundations.md	§7.3 full/branchwise EB	rewritten	IZ-FIBERS	research/canonical/isolated_zero_flatness.md#iz-fibers	显式区分真 infimum 与选中值 并给小残差全部纤维门和双值反例	不将选中值界升级为真 EB
+history/sources/次单调论文研究/RL_foundations.md	§7.4–7.5 isolated named PPA	rewritten	C45-v1 / IZ-PPA	research/canonical/isolated_zero_flatness.md#iz-ppa	重算输入输出窗口 小步门 球不变与全程递推	完整 resolvent 所有选择仍需完整纤维门
+history/sources/次单调论文研究/RL_foundations.md	§7.6 exact q factor	rewritten	C46-v1 / IZ-FACTOR	research/canonical/isolated_zero_flatness.md#iz-factor	额外正归一化残差极限才给精确 Q 因子	上阶本身不产生正因子
+history/sources/次单调论文研究/RL_foundations.md	注1.5 GX-074	rewritten	C47-v1 / DC-GAP	research/topics/path_dynamics/discrete_coverage.md#dc-gap	完整紧图对全部图点对逐算 RL 零集真 EB 和无输入球	目标仅取完整 S=K 更换目标须重证 EB

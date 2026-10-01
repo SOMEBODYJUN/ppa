@@ -661,6 +661,36 @@
       "id": "DE-ESCAPE",
       "label": "真残差线性而非零轨道有限逃逸",
       "file": "topics/path_dynamics/domain_escape.md#de-escape"
+    },
+    {
+      "id": "IZ-GERM",
+      "label": "孤立零点图 germ 的 B/J/R 平坦性",
+      "file": "canonical/isolated_zero_flatness.md#iz-germ"
+    },
+    {
+      "id": "IZ-FIBERS",
+      "label": "真实 EB 到实际图值的方向",
+      "file": "canonical/isolated_zero_flatness.md#iz-fibers"
+    },
+    {
+      "id": "IZ-PPA",
+      "label": "指定分支超线性上阶",
+      "file": "canonical/isolated_zero_flatness.md#iz-ppa"
+    },
+    {
+      "id": "IZ-FACTOR",
+      "label": "正 Q 因子的归一化门",
+      "file": "canonical/isolated_zero_flatness.md#iz-factor"
+    },
+    {
+      "id": "DC-OBJECT",
+      "label": "GX-074 紧离散图与零集",
+      "file": "topics/path_dynamics/discrete_coverage.md#dc-object"
+    },
+    {
+      "id": "DC-GAP",
+      "label": "全对 RL 加真 EB 不给输入覆盖",
+      "file": "topics/path_dynamics/discrete_coverage.md#dc-gap"
     }
   ],
   "edges": [
@@ -1565,7 +1595,9 @@
     {
       "id": "E77",
       "topic": "路径图集",
-      "inputs": ["M1-OBJECT"],
+      "inputs": [
+        "M1-OBJECT"
+      ],
       "output": "M1-CAPTURE",
       "relation": "conditional",
       "scope": "仅给定单值 T，R=1/(96√10)，Z=[−2/3,2/3]×{0}；对 B_R((2/3,0)) 的每个初值两步进入 Z；不涵盖原生多值 Sign 方程的所有选择。",
@@ -1574,7 +1606,9 @@
     {
       "id": "E78",
       "topic": "路径图集",
-      "inputs": ["M1-OBJECT"],
+      "inputs": [
+        "M1-OBJECT"
+      ],
       "output": "M1-SHARP",
       "relation": "conditional",
       "scope": "同一 T、Z、R；全体球内初值的一步距离上界 3/√10，沿 z_t=(2/3+3t,t) 取等；不推出全对 RL 或真残差 EB。",
@@ -1583,7 +1617,10 @@
     {
       "id": "E79",
       "topic": "复合次正则",
-      "inputs": ["CI-OBJECT", "CS-PROX"],
+      "inputs": [
+        "CI-OBJECT",
+        "CS-PROX"
+      ],
       "output": "CI-IDENTIFY",
       "relation": "conditional",
       "scope": "曲面 c=t−(s_+)²、ν>0、η 连续严格增无界；0<R<1/2、M=ν+η(R+R²)、h=2M、λh<1，x∈B_{r/2} 且 d(x,S)<λν(1−λh)，r=R(1−2R)/4；仅唯一球内近端输出。",
@@ -1592,7 +1629,9 @@
     {
       "id": "E80",
       "topic": "复合次正则",
-      "inputs": ["OT-MAXIMA"],
+      "inputs": [
+        "OT-MAXIMA"
+      ],
       "output": "OB-TARGET",
       "relation": "refutes",
       "scope": "C∞ 非负 f 在 0 严格全局最小，却有 x_k→0 的 f′=0、f″<0；仅否定不加目标一致/弱分离时到完整 Θ₂ 的全邻域 Ψ(0)=0 EB。",
@@ -1601,7 +1640,9 @@
     {
       "id": "E81",
       "topic": "路径图集",
-      "inputs": ["PS-OBJECT"],
+      "inputs": [
+        "PS-OBJECT"
+      ],
       "output": "PS-RATE",
       "relation": "conditional",
       "scope": "λ=1、0<γ<1、q>1/γ、α=γq；完整 F=J^−1−I 的真 EB，单条轨道法向速率 r_+=r^α；反射全对 γ 只在有界输入窗口，留域另需切向余量。",
@@ -1610,7 +1651,9 @@
     {
       "id": "E82",
       "topic": "路径图集",
-      "inputs": ["OS-OBJECT"],
+      "inputs": [
+        "OS-OBJECT"
+      ],
       "output": "OS-SCALING",
       "relation": "conditional",
       "scope": "λ=1、q>1、0<γ<1、β=q/γ−1；全域双边 J 范数，局部真残差 q-EB 与局部轨道 q 阶；反射最大全对 γ 只在有界窗口；归一化 Q 因子未证。",
@@ -1619,11 +1662,58 @@
     {
       "id": "E83",
       "topic": "路径图集",
-      "inputs": ["DE-OBJECT"],
+      "inputs": [
+        "DE-OBJECT"
+      ],
       "output": "DE-ESCAPE",
       "relation": "conditional",
       "scope": "0<α<1、β>0、0<δ<1、λ=1、输入域 D=[−δ,δ]；每个非零初值半径严格增且有限步出 D，真残差局部线性；锚定 α 和全对 α/(β+1) 不给不变域。",
       "status": "本轮两尺度、有限逃逸及全原像残差一致性独立重算"
+    },
+    {
+      "id": "E84",
+      "topic": "孤立零点",
+      "inputs": [
+        "IZ-GERM",
+        "IZ-FIBERS"
+      ],
+      "output": "IZ-PPA",
+      "relation": "conditional",
+      "scope": "同一孤立 p、q>1、λ>0；IZ-FIBERS 仅用真 EB→实际图值方向，不需反向的 residual-complete；另需指定 T 在输入邻域全域选择、实际输出真 q-EB、步残差 <η、ρη^(q−1)≤λ/2 和闭球留域；只给上阶。",
+      "status": "本轮逐图点及球不变证明"
+    },
+    {
+      "id": "E85",
+      "topic": "孤立零点",
+      "inputs": [
+        "IZ-PPA"
+      ],
+      "output": "IZ-FACTOR",
+      "relation": "conditional",
+      "scope": "同一非终止轨道；另需 ||x^(k+1)−p||/||w_k||^q→μ∈(0,∞)；结论 Q 因子 μ/λ^q；上阶不自动给极限。",
+      "status": "本轮三角双边界重算"
+    },
+    {
+      "id": "E86",
+      "topic": "路径图集",
+      "inputs": [
+        "DC-OBJECT"
+      ],
+      "output": "DC-GAP",
+      "relation": "conditional",
+      "scope": "H=R、K={0}∪{1/n}、gph F=K×{0}、S=K；每个 0<γ≤1 的完整图全对 RL(λ,γ,1) 及图输出真 EB 同时成立，自然输入域仍只有 K。",
+      "status": "本轮完整纤维和量词直接计算"
+    },
+    {
+      "id": "E87",
+      "topic": "交叉限制",
+      "inputs": [
+        "DC-GAP"
+      ],
+      "output": "COV",
+      "relation": "limits",
+      "scope": "GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。",
+      "status": "本轮紧图反例；非对已有 coverage 定理的反驳"
     }
   ]
 }

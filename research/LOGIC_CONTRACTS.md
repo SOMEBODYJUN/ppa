@@ -1,5 +1,13 @@
 # 承重超边的量词与条件契约
 
+## E84–E87：孤立零点的分支、正因子与输入覆盖
+
+E84 在同一实 Hilbert 关系 F、局部孤立零点 p、\(q>1,\lambda>0\) 下使用 IZ-GERM 的逐图点剪切和 IZ-FIBERS 的真实 EB 到实际图值方向。此外对输入邻域每个 x 必须指定 \(Tx\in J_{\lambda F}(x)\)，全部实际输出属于同一 EB 输出球，\(\|(x-Tx)/\lambda\|<\eta\) 且 \(\rho\eta^{q-1}\le\lambda/2\)。闭输入球在该邻域中并使 \(C_q\delta^{q-1}<1\) 才有整轨道上阶。IZ-FIBERS 的反向需要全部小残差纤维 (IZ-1)，一条好分支不够；它不自动提供 T 的输入 coverage。[C45](canonical/isolated_zero_flatness.md#iz-ppa)。
+
+E85 对同一非终止轨道另加 \(\|x^{k+1}-p\|/\|w_k\|^q\to\mu\in(0,\infty)\)，只在此门下得到正 Q 因子 \(\mu/\lambda^q\)。不能由 E84 的 upper bound 反推 \(\mu\) 存在。[C46](canonical/isolated_zero_flatness.md#iz-factor)。
+
+E86 的全部输入使用一张完整紧图 \(\operatorname{gph}F=K\times\{0\}\)，\(S=K=\{0\}\cup\{1/n\}\)。在自然输入域 K 上全对 RL 与在实际输出上的真实 EB 同时成立；E87 用其限制 COV：这些前件并不蕴含零点的输入开球 coverage。E87 不是把 COV 结论判假，而是显示它在一般局部收敛定理中必须独立给出。若目标换为 \(\{0\}\)，EB 本身不再成立。[C47](topics/path_dynamics/discrete_coverage.md#dc-gap)、[F16](../FAILED_ROUTES.md#f16)。
+
 本页按 [graph.json](graph.json) 的边 ID 解释合取输入。图只存摘要；调用一个 Claim 时必须读 [总账](../CLAIMS.md) 与对应证明。`∧` 表示**同一对象、同一参数及同一合法区域上的同时成立**，不允许用不同稿件各取一半前提。`source-report`、`candidate`、`derived-checked` 不能因画了箭头自动升为 `canonical`。
 
 ## E02→E03：局部 RLEB 的完整收敛链

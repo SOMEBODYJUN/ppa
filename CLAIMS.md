@@ -264,3 +264,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：取 \(0<\alpha<1,\beta>0,0<\delta<1,\lambda=1,D=[-\delta,\delta]\)，\(C(0)=0,C(x)=P_\alpha(x)[2+\sin(|x|^{-\beta})]\) 非零时，\(J=(I+C)/2\) 仅在 D 定义，\(\operatorname{gph}F=\{(Jx,x-Jx):x\in D\}\)。\(S=\operatorname{zer}F=\{0\}\)。对**每个**非零初值 \(x_0\in D\)，迭代 \(x_{k+1}=Jx_k\) 有有限的首次 \(x_k\notin D\)；一步 \(r_+=\Theta(r^\alpha)>r\)。零点锚定反射最大指数为 \(\alpha\)、局部常数 3；全对反射最大指数为 \(\alpha/(\beta+1)\)。对所有充分小非零输出 u 的完整纤维，\(d(u,S)/r_F(u)\to1\)，线性 EB 常数的缩域下确界 1，任何 \(q>1\) 幂 EB 失败。
 - **Definitions / Dependencies / Evidence**：[DE-OBJECT / EXPONENT / ESCAPE / RESIDUAL](research/topics/path_dynamics/domain_escape.md) 的两尺度证明、单调半径与多原像一致残差比；状态 derived-checked，历史 GX-073 / 9/01 foundations §9.4 是来源别名。
 - **Counterevidence / Objections / Scope / Related Files**：只给原关系**自然域**内轨道的有限逃逸，不谈未定义延拓后的动力；不能由一步指数声称收敛。把选中残差比提升到真实 infimum 依赖所有原像一致趋零及非空紧纤维；改变 D 须另立版本。外部先行性未核。
+
+## C45-v1 / IZ-PPA · 孤立零点上指定分支的上阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间 \(H\)、\(\lambda>0,q>1,\rho>0\)，\(p\in S=F^{-1}(0)\) 局部孤立。指定单值 \(T:V\to H\)，每个 \(x\in V\) 都有 \(Tx\in J_{\lambda F}(x)\)，\(T(p)=p\)。存在 \(V_0\subset V\)、输出球 U 和 \(\eta>0\)，使每个 \(x\in V_0\) 的 \(Tx\in U,\|(x-Tx)/\lambda\|<\eta\)，且这些输出满足真实 EB \(\|Tx-p\|\le\rho r_F(Tx)^q\)、\(\rho\eta^{q-1}\le\lambda/2\)。则 \(\|Tx-p\|\le\rho(2/\lambda)^q\|x-p\|^q\)。若闭输入球 \(\overline B(p,\delta)\subset V_0\) 且 \(C_q\delta^{q-1}<1\)，其中 \(C_q=\rho(2/\lambda)^q\)，该球内每条由 T 生成的轨道留域、趋 p，满足 \(r_{k+1}\le C_qr_k^q\)。
+- **Definitions / Dependencies / Evidence**：[IZ-GERM/FIBERS/PPA](research/canonical/isolated_zero_flatness.md#iz-ppa) 给逐图点剪切、真实残差方向、小步门、球不变与完整归纳。状态 derived-checked；旧 RL_foundations §7.1–7.5 是来源，现版本明确输出 EB 的残差窗口和所有输入的分支门。
+- **Counterevidence / Objections / Scope / Related Files**：这是 upper \(q\)-order，不含正 Q 因子；只对指定 T，不升级为完整多值 resolvent 的全部选择。选中图值的幂界不能无条件倒推真实 EB，见 [IZ-FIBERS 双值反例](research/canonical/isolated_zero_flatness.md#iz-fibers)。外部优先性未核。
+
+## C46-v1 / IZ-FACTOR · 精确因子的额外归一化门
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C45 的不终止轨道上令 \(w_k=(x^k-x^{k+1})/\lambda\)。如果另有 \(\|x^{k+1}-p\|/\|w_k\|^q\to\mu\in(0,\infty)\)，则 \(\|x^{k+1}-p\|/\|x^k-p\|^q\to\mu/\lambda^q\)。
+- **Definitions / Dependencies / Evidence**：[IZ-FACTOR](research/canonical/isolated_zero_flatness.md#iz-factor) 的三角双边界与 \(q>1\)；derived-checked，从旧 §7.6 重新核算。
+- **Counterevidence / Objections / Scope / Related Files**：归一化极限是额外假设，C45 的上界自身不产生它；不对有限终止或完整 resolvent 的其他分支声称正因子。
+
+## C47-v1 / DC-GAP · GX-074 的独立 coverage 障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R\) 令 \(K=\{0\}\cup\{1/n:n\ge1\}\)、\(\lambda>0\)、\(F(u)=\{0\}\) 对 \(u\in K\)，域外空值；\(S=K\)。完整紧图在全部图点对上对**每个** \(0<\gamma\le1\) 满足 \(\mathrm{RL}(\lambda,\gamma,1)\)，常数 1 在整个 K 上锐；全部有限残差输出有 \(d(u,S)=r_F(u)=0\)。但是自然输入域恰为 K，任何以 0 为心的开球均不被覆盖。
+- **Definitions / Dependencies / Evidence**：[DC-OBJECT/GAP](research/topics/path_dynamics/discrete_coverage.md#dc-gap) 逐对计算 Cayley、完整纤维、EB 的作用域与域外无步；derived-checked，旧 GX-074 / foundations 注 1.5 是来源。
+- **Counterevidence / Objections / Scope / Related Files**：若把目标换成 \(\{0\}\)，在 \(1/n\) 上真 EB 就失败；不能偷换目标以声称更强结论。反例只否定从 RL 和有限残差 EB 推出输入 coverage，不否定额外假设 coverage 的 PPA 定理。[F16](FAILED_ROUTES.md#f16)。

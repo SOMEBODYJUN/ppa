@@ -101,3 +101,10 @@
 - **尝试与缺口**：只凭基点为局部极小，便把到驻点集 \(\Gamma\) 的残差论证用于更小的二阶目标 \(\Theta_2\)，遗漏附近其他驻点是否仍为目标。属于**目标集合不一致**，并非外层 gauge 的数值精度问题。
 - **精确反例**：[C41](research/topics/composite_regular/oscillating_target.md#ot-maxima) 的 \(C^\infty\) 正函数在零点严格全局最小，却有 \(x_k\to0\) 的严格局部极大点。它们真残差为零，到完整 \(\Theta_2\) 距离为正；任意 \(\Psi(0)=0\) 的全邻域目标正确 EB 失败。驻点弱分离也恰好失效，因为 \(f(x_k)>f(0)\)。
 - **salvage 与重启条件**：[C34](research/canonical/composite_subregularity.md#cs-transfer) 保留局部最小、弱分离与目标夹逼的正向距离一致性。若要在弱分离以外工作，需另证某种排除坏驻点的原生目标一致条件；不能把目标 \(\Theta_2\) 改成 \(\Gamma\) 后仍称解决原命题。
+
+<a id="f16"></a>
+## F16 · 把完整图全对 RL 和真 EB 当成输入覆盖
+
+- **尝试与机制**：由完整图上的全对反射模、非空闭零集和实际图输出的真实残差 EB，断言零点附近所有输入存在 proximal 步，从而启动局部 PPA。
+- **致命缺口**：[C47 / GX-074](research/topics/path_dynamics/discrete_coverage.md#dc-gap) 取紧图 \(K\times\{0\}\)，\(K=\{0\}\cup\{1/n\}\)。整个自然域 K 上每个 \(0<\gamma\le1\) 有全对 \(\mathrm{RL}(\lambda,\gamma,1)\)，在所有有限残差输出上 \(d(u,S)=r_F(u)=0\)，但任意零邻域有输入不在 K，完整 resolvent 的纤维为空。图闭性和全图量词都不能修复缺失的输入。
+- **可回收成果与重启门**：图上的全对模和输出 EB 各自保留；要得到每个邻近输入的轨道，另证 \(V_0\subset\operatorname{ran}(I+\lambda F)\)，还需同一分支的输出留域、兼容及总长度预算。若目标从 \(S=K\) 改为 \(\{0\}\)，旧 EB 不再成立，这属于不同命题。此路线与 F02 的“局部图不保完整纤维”是两种独立的信息门。
