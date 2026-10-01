@@ -588,3 +588,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C96 的同一完整关系，每个固定 \(\lambda>0\)、每个 \(p_0\in D_\lambda\)、每条每步输入留在 \(D_\lambda\) 的近端路径。\(0<\lambda<2,\lambda\ne1\) 的每个非零初值有限步越域；\(\lambda=1\) 唯一无限合法路径恒零；\(\lambda=2\) 的非零初值二周期；\(\lambda>2\) 所有初值的唯一无限路径以锐因子 \((\lambda-1)^{-1}\) 有限长趋零。同一 \(\lambda>2\) 的反射线性模却是 \((\lambda+1)/(\lambda-1)>1\)。
 - **Dependencies / Evidence / Status / Related Files**：[BNI-PATH](research/topics/examples/bounded_negative_identity.md#bni-path) 的闭式迭代、自然域检查和边界分类；依赖 C96 的完整 \(J\) 纤维，`derived-checked`。来源 GX-066 的图公式为线索，步长全路径分类由本库推导。
 - **Counterevidence / Scope**：有限步越域不等于发散的无限合法轨道；\(\lambda>2\) 的动力稳定不能倒推反射收缩，也不反驳含 \(L<1\) 等额外前提的定理。
+
+## C98-v1 / SB-INVERSE · 斜旋转法锥的完整逆像与全域锐半阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：\(K=\begin{psmallmatrix}0&1\\-1&0\end{psmallmatrix}\)，\(B\subset\mathbb R^2\) 为闭单位盘，完整 \(F=K+N_B\)。对全部目标 \(y\in\mathbb R^2\)，\(F^{-1}(y)=\{G(y)\}\)，其完整显式公式为 (SB1)。任意图点对满足 \(\|x-z\|^2\le2\|u-v\|\)；因此对**全部** \(u,v\in\mathbb R^2\) 与 \(0<q\le1/2\)，\(\|G(u)-G(v)\|\le2^{1-q}\|u-v\|^q\)。对全部 \(x\in B,y\in\mathbb R^2\)，\(\|x-G(y)\|\le2^{1-q}d(y,F(x))^q\)。两式的全域系数锐，每个 \(q>1/2\) 在边界附近失败。
+- **Dependencies / Evidence / Status / Related Files**：[SB-INVERSE](research/topics/examples/skew_ball_inverse.md#sb-inverse) 的全纤维求逆、三类图点配对及边界取等；来源 9/01 ZIP `work/c_gx053_065.md` GX-058 的对象和边界观察，锐全域结论为本库新增推导；`derived-checked`，无外部定理调用。
+- **Counterevidence / Scope**：两变量 MR 限 \(x\in B\)，避免盘外无值残差与零系数语义；这是原算子的逆映射与 MR，不是 Cayley 反射 RL。其它旧属性和外部先行性未核。
+
+## C99-v1 / SB-BOUNDARY · 非零边界目标的局部锐半阶
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C98 同一完整图，每个单位 \(\bar x\) 取 \(\bar y=K\bar x\ne0\)。固定目标 \(F^{-1}(\bar y)=\{\bar x\}\) 且对**全部** \(x\in B\) 有 \(\|x-\bar x\|^2\le2d(\bar y,F(x))\)。在 \((\bar x,\bar y)\) 共同邻域，固定目标 MSR、两变量 MR、逆映射 Hölder 的半阶系数下确界均为 \(\sqrt2\)；\(q<1/2\) 的局部系数下确界为 0，\(q>1/2\) 失败。全局 \(q\le1/2\) 的取等发生在对径点，与局部锐见证分开。
+- **Dependencies / Evidence / Status / Related Files**：[SB-BOUNDARY](research/topics/examples/skew_ball_inverse.md#sb-boundary) 的同一完整法向射线 \(z_\theta,v_\theta\) 同时取最近残差与逆像距离；依赖 C98 的上界，`derived-checked`。
+- **Counterevidence / Scope**：\((0,0)\) 的局部图为可逆旋转，普通线性 MR/MSR 系数 1；边界非零目标的半阶不能移植为零目标正则性。低幂零局部下确界不能写成非平凡邻域中系数 0 的可达界。

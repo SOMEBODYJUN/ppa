@@ -1212,6 +1212,21 @@
       "id": "BNI-PATH",
       "label": "所有合法路径的步长相变",
       "file": "topics/examples/bounded_negative_identity.md#bni-path"
+    },
+    {
+      "id": "SB-OBJECT",
+      "label": "完整斜旋转加圆盘法锥",
+      "file": "topics/examples/skew_ball_inverse.md#sb-object"
+    },
+    {
+      "id": "SB-INVERSE",
+      "label": "完整逆像的全域锐半阶 MR",
+      "file": "topics/examples/skew_ball_inverse.md#sb-inverse"
+    },
+    {
+      "id": "SB-BOUNDARY",
+      "label": "非零边界目标的局部锐半阶",
+      "file": "topics/examples/skew_ball_inverse.md#sb-boundary"
     }
   ],
   "edges": [
@@ -3087,6 +3102,29 @@
       "relation": "conditional",
       "scope": "同一完整图、同一固定 λ 与全部合法初值；逐步核 p_k∈D_λ：λ<2 非零路径有限步越域（λ=1 仅零路径无限合法），λ=2 二周期，λ>2 所有路径锐线性收敛而反射模 >1。不跨步长转授。",
       "status": "C97-v1 完整纤维和闭式迭代重算"
+    },
+    {
+      "id": "E163",
+      "topic": "例库",
+      "inputs": [
+        "SB-OBJECT"
+      ],
+      "output": "SB-INVERSE",
+      "relation": "conditional",
+      "scope": "完整 F=K+N_B、二维单位盘、全部目标与全部图点；全图三类图点对给 d²≤2e，故对 0<q≤1/2 逆映射与 x∈B 的两变量 MR 全域锐系数 2^(1−q)；q>1/2 于非零边界参考失败。不声称反射 RL。",
+      "status": "C98-v1 完整法向射线、逆像与取等重算"
+    },
+    {
+      "id": "E164",
+      "topic": "例库",
+      "inputs": [
+        "SB-OBJECT",
+        "SB-INVERSE"
+      ],
+      "output": "SB-BOUNDARY",
+      "relation": "conditional",
+      "scope": "同一图的每个单位 x̄、非零 ȳ=Kx̄；完整固定目标纤维和近边界法向射线共同取等，固定目标 MSR、两变量 MR 与逆映射局部半阶下确界 √2；原点零目标的局部线性正则是不同参考。",
+      "status": "C99-v1 同一取等序列与全部纤维验证"
     }
   ]
 }
