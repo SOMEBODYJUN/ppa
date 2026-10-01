@@ -7,9 +7,17 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 52 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。无法从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前仅 57 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。尚无全部有价值数学单元的语义分母，不能从单元数/文件数算覆盖率 |
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
+
+## 本批增量：C15 完整证书、GX-076/077 与空白接收
+
+[C15-v1](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 保持原命题身份，把摘要重写为有限对偶 tight-edge 计划分支、精确零成本顶点测试和锐全律空间 \(W_2/\Psi\) 系数的完整证明；不从 EB 宣称动力收敛，两点翻转提供同残差反例。来源一般稿 §§1–4、§7 和 §8 有逐项去向，但 Hoffman、连续性和先行性未据此验收。
+
+[GX-076 C76/C77](research/topics/examples/hemiregular_piecewise_parabola.md) 以完整异维数映射分开固定目标半阶、最近逆点线性与共同窗口的两变量锐半阶，显式处理负纤维的开放端点和非局部闭图。[GX-077 C78/C79](research/topics/examples/absolute_value_subgradient.md) 将原算子残差跳跃的零下确界模与完整近端步残差的锐系数 1 分开。[F26/F27](FAILED_ROUTES.md#f26) 留下两个不能互授的机制。这五个本轮逐源单元不关闭同 ZIP 的其它 GX。
+
+空白 Astra Ultra 只凭仓库成功恢复主要对象、合取关系和候选状态，并定位 C31 的过期 M1 语句、C69 的硬支持参数遗漏、S25 引文导航与 C05-v1/v2 的含糊表述；已逐项修正。它确认总体规模问题的共同母空间与量尺仍未冻结，属**实际开放数学规格**；I-097–099/I-102 的原证明缺件是材料缺口；其余大量逐项清洗尚未完成是研究工作量，并非仅导航不佳。C05-v2 的精确 Čech/Vietoris–Begle 版本与原生整窗认证仍须审查，不能因一次空白接收就升级整个定理链。
 
 ## 本批增量：条件值域的新版本与 GX-075
 

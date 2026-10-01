@@ -98,7 +98,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定有限状态几何、随机映射与概率，C14 的同一 \(\Psi\)；枚举最优运输对偶 tight-edge 图产生的有限计划多面体，令 \(\mathcal V\) 为全部顶点，\(E(\mu)=d_{W_2}(\mu,\mathcal I)^2\)，\(R\cdot v\) 为同步残差成本。
 - **Conclusion**：\(\Psi^{-1}(0)=\mathcal I\) 当且仅当每个 \(v\in\mathcal V\) 且 \(R\cdot v=0\) 的行边缘在 \(\mathcal I\)，当且仅当存在 \(B<\infty\) 对**所有**律有 \(E(\mu)\le B\Psi(\mu)^2\)；最佳平方系数为 \(\max_{v:R\cdot v>0}E(r(v))/(R\cdot v)\)，空集最大值 0。
-- **Dependencies / Evidence / Objections / Status / Related Files**：CM-M Theorem F、有限 LP 对偶分支与凸性；[cone_markov CM-FINITE](research/cone_markov.md)。内部证明包；只针对固定有限数据，不承诺多项式算法或无限状态推广。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[FS-CELLS/THEOREM](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 独立重建 LP 对偶有限 tight-edge 分支、完整耦合与凸目标顶点证明，状态 `derived-checked`；[cone_markov CM-FINITE](research/cone_markov.md#m-fin) 是早期摘要，来源 CM-M Theorem F。此处 \(G\) 有有限个互异点，\(R\) 由同噪声成本给定，\(\mathcal I\) 遍历所有不变律；没有暗加最近不变律或混合性。只针对固定数据，不承诺多项式算法、动力收敛或无限状态推广。
 
 ## C16 · 匹配公共接口下的 LT→RLEB 能量证书
 
@@ -192,7 +192,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：X=R^n，非空闭 S、开 V、块长 m、半径 r,η>0；对每个 V 中距离 S≤r 的块起点、每个合法前缀和每个允许转移，都有可延拓合法词及非减前缀距离界 D_{w,j}、步位移界 G_{w,j}。所有 w,j<m,t∈[0,r] 有 D_{w,j}(t)<η；统一终点包络 Θ(t)=sup_w D_{w,m}(t)≤κt，0≤κ<1；统一块位移 G(t)=sup_w Σ_j G_{w,j}(t) 满足 H(t)=Σ_{q≥0} G(κ^q t)<∞。
 - **Conclusion / Scope**：若 x₀∈V、d₀≤r 且 H(d₀)<dist(x₀,X\V)，每条合法轨道都可无限延拓并留在 V，块端点 d(x_{qm},S)≤κ^q d₀，整轨道总长≤H(d₀)，收敛到 S 中一点。量词为每条实际选择，不是存在一条。
 - **Definitions / Dependencies / Evidence**：[PA-DEF、PA-WHOLE 完整证明](research/canonical/path_atlas.md#pa-whole)；闭 S、指定度量完备、实际前缀 coverage、统一可求和预算。状态 derived-checked；由 9/09 札记重新推导，外部先行性未核。
-- **Counterevidence / Objections / Related Files**：终点收缩不管中间留域；非平凡周期不满足可求和步长。原札记周期推论不能作为本 Claim 的推论。[F12](FAILED_ROUTES.md#f12)。M1 特定捕获半径未独立重建。
+- **Counterevidence / Objections / Related Files**：终点收缩不管中间留域；非平凡周期不满足可求和步长。原札记周期推论不能作为本 Claim 的推论。[F12](FAILED_ROUTES.md#f12)。显式 M1 映射的捕获半径已在 [C38](research/topics/path_dynamics/m1_capture.md#m1-capture) 独立重算；历史原生多值循环方程与该映射的身份桥仍未证明。[F23](FAILED_ROUTES.md#f23)。
 
 ## C32-v1 / PA-POWER · 无限合法词的统一性门
 
@@ -417,7 +417,7 @@
 
 ## C69-v1 / SME-ENVELOPE · 硬支持下非线性证书的锐矩提升
 
-- **Exact Statement / Objects / Domain / Quantifiers**：\(1\le p<\infty,R>0\)，连续非减 \(\varphi:[0,R]\to[0,\infty)\) 且 \(\varphi(0)=0\)；对所有概率空间和所有 \(0\le D\le R\) a.s.、\(\|D\|_p\le t\) 的随机变量取最坏 \(\|\varphi(D)\|_p\)。置 \(g(z)=\varphi(z^{1/p})^p\)，精确 p 次方等于 \(\operatorname{cav}g(t^p)\)，每个 t 可由至多两个幅度达到。幂次 \(\varphi(u)=Au^\alpha\) 时得 \(At^\alpha\) (\(\alpha\le1\)) 或 \(AR^{\alpha-1}t\) (\(\alpha\ge1\))；同一个 D 上逐点复合 \(S\le CD^\gamma,D_+\le KS^q\) 的临界 \(\gamma q=1\) 先复合提升为 \(KC^qt\)，分开取两个锐包络给 \(KC^qR^{1-\gamma}t^\gamma\)，比值 \((R/t)^{1-\gamma}\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：\(1\le p<\infty,R>0,\ 0\le t\le R\)，连续非减 \(\varphi:[0,R]\to[0,\infty)\) 且 \(\varphi(0)=0\)；对所有概率空间和所有 \(0\le D\le R\) a.s.、\(\|D\|_p\le t\) 的随机变量取最坏 \(\|\varphi(D)\|_p\)。置 \(g(z)=\varphi(z^{1/p})^p\)，精确 p 次方等于 \(\operatorname{cav}g(t^p)\)，每个 \(t\in[0,R]\) 可由至多两个幅度达到。幂次 \(\varphi(u)=Au^\alpha\) 时得 \(At^\alpha\) (\(\alpha\le1\)) 或 \(AR^{\alpha-1}t\) (\(\alpha\ge1\))；同一个 D 上逐点复合 \(S\le CD^\gamma,D_+\le KS^q\) 的临界 \(\gamma q=1\) 先复合提升为 \(KC^qt\)，分开取两个锐包络给 \(KC^qR^{1-\gamma}t^\gamma\)，比值 \((R/t)^{1-\gamma}\) 只对 \(0<t\le R\) 陈述，且两层 gauge 的输入支持需匹配。
 - **Dependencies / Evidence**：[SME-ENVELOPE/POWER](research/topics/random_markov/scalar_moment_envelope.md#sme-envelope) 的紧区间均值集、凹包络、两点极值与同一变量复合；[SME-SUPPORT](research/topics/random_markov/scalar_moment_envelope.md#sme-support) 另证仅小 \(L^p\) 距离无法替代逐点硬支持。`derived-checked`，9/14 质量稀释独立审计 §4 是来源。
 - **Counterevidence / Objections / Scope**：上确界对**所有概率律**，不是指定原生耦合的可实现最优值；真实随机 PPA 的合法耦合、目标边缘与更新核须另证。分开聚合的损失不是物理轨道发散。
 
@@ -456,3 +456,27 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：仍在 C72 的全部完整图点对上，以 \(a=\Delta u,b=\Delta v\) 定义 \(ab\ge\mu a^2+\rho b^2\)。全域有效参数区与原点任意完整图邻域的局部有效区均精确为 \(\mu<0,\rho<0,\mu\rho\ge1/4\)，包含边界；单参数 hypo/cohypo 下模均为 \(-\infty\)。
 - **Dependencies / Evidence / Status**：[DS-QUADRATIC](research/topics/examples/diagonal_spike_relation.md#ds-quadratic) 用跨支差实现任意斜率并核二次式最大值；derived-checked。
 - **Objections / Scope**：该区亦是一般实差的负负正定门，本例的意义在于局部所有斜率可由趋零图点实现；不推出其它例卡的 semimonotonicity 区。
+
+## C76-v1 / HP-FIXED · 分段抛物映射的半阶固定目标与线性最近逆点
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整 \(\Theta:\mathbb R^2\to\mathbb R\)，\(\Theta(a,b)=a+b^2\) 当 \(a\ge0\)，否则 \(a-b^2\)，欧氏范数，参考 \(((0,0),0)\)。对所有 \((a,b)\)，\(|\Theta(a,b)|=|a|+b^2\)，零集仅原点；局部固定目标 \(d((a,b),S)\le|\Theta(a,b)|^{1/2}\) 的最高幂指数为 \(1/2\)、该指数锐模 1。对所有 \(0<|y|<1/2\)，完整逆纤维的**最近**点距 \(d(0,\Theta^{-1}(y))=|y|\)，线性 HREG/UHREG 锐模 1；整纤维的 centered inverse calmness 只有半阶最大指数。
+- **Dependencies / Evidence / Status**：[HP-FIXED](research/topics/examples/hemiregular_piecewise_parabola.md#hp-fixed) 列出正负完整纤维和取等序列，`derived-checked`；Uderzo Example 2.3 只提供对象及定性 HREG/非 MR，一般锐模是本库重算。
+- **Counterevidence / Scope**：最近逆点不代表所有逆点；\(\Theta\) 不在同一 Hilbert 空间自映射，PPA/Cayley/RL 不适用，图在参考点不局部闭。
+
+## C77-v1 / HP-MR · 共同窗口两变量锐半阶 MR
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C76 同一完整 \(\Theta\) 和全部 \(|a|,|b|,|y|\le1/4\)，\(d((a,b),\Theta^{-1}(y))\le|\Theta(a,b)-y|^{1/2}\)。最大两变量幂指数 \(1/2\)，局部锐模 1。对任何小正 \(y\)，完整逆纤维在零附近非单点，故不存在任何强逆局部单值化。
+- **Dependencies / Evidence / Status**：[HP-MR](research/topics/examples/hemiregular_piecewise_parabola.md#hp-mr) 分同号、异号及负目标开放端点的全部情形证明；`derived-checked`，不调用局部闭图外部定理。
+- **Counterevidence / Scope**：原点连续不保证任何邻域内图局部闭；零目标线性 MR 已由 \((0,t)\) 反证。不同维数对象不得赋予全对 RL 身份。
+
+## C78-v1 / AV-OP · 绝对值次梯度的残差跳跃与逆像钉住
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整 \(F=\partial|\cdot|:\mathbb R\rightrightarrows\mathbb R\)，\(S=\{0\}\)。对每个非零 \(x\)，真残差 \(r_F(x)=1\)，而 \(r_F(0)=0\)；固定目标局部线性 EB 的可行系数下确界为 0。对每个 \(|y|<1\)，完整 \(F^{-1}(y)=\{0\}\)，故局部逆 Aubin、强度量正则及两变量 MR 的系数下确界亦为 0。
+- **Dependencies / Evidence / Status**：[AV-OP](research/topics/examples/absolute_value_subgradient.md#av-operator) 全纤维及邻域量词直接计算，`derived-checked`；来源 GX-077 仅观察别名。
+- **Counterevidence / Scope**：下确界 0 不表示在含非零输入的某固定邻域内可取系数 0；残差小于 1 的窗口是只含零点的真空范围，不与全邻域误差界混同。
+
+## C79-v1 / AV-PROX · 同图近端步残差锐模 1
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C78 同一完整关系，固定每个 \(\lambda>0\)，全输入 \(J_{\lambda F}(p)=\operatorname{sgn}(p)(|p|-\lambda)_+\)。在全部 \(|p|<\lambda\)，\(\operatorname{Fix}J=\{0\}\)，且 \(d(p,\operatorname{Fix}J)=|p-J(p)|=|p|\)，局部步残差线性 EB 锐系数 1、一步进入零点。全图反射 \(2J-I\) 的 Lipschitz/全对线性 RL 锐常数 1；无界全图的任何 \(0<\gamma<1\) 有限 Hölder 常数失败。
+- **Dependencies / Evidence / Status**：[AV-PROX](research/topics/examples/absolute_value_subgradient.md#av-prox) 完整解近端包含式及分段反射证明，`derived-checked`。
+- **Counterevidence / Scope**：原算子残差局部系数下确界 0 不转移到近端步残差；全域步 EB 不成立，局部 \(\gamma<1\) 可继承界不表示全图次线性 RL。

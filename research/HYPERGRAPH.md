@@ -65,6 +65,7 @@
 | E121 | [SME-POWER · 幂次最坏矩与同变量复合](topics/random_markov/scalar_moment_envelope.md#sme-power) | refutes → [OB-AGGREGATE · 分开矩聚合的临界失相关障碍](../FAILED_ROUTES.md#f24) | 0<γ<1、q>1、γq=1、0<t<R：分开最坏包络与先复合的最坏上界比 (R/t)^(1−γ)；各自锐的极值分布未必相同。并非证明任何物理随机轨道发散。；**F24 的定量失相关见证** |
 | E122 | [SME-OBJECT · 硬支持下所有概率律的矩提升对象](topics/random_markov/scalar_moment_envelope.md#sme-object) | conditional → [SME-SUPPORT · 小矩距离不提供逐点支撑](topics/random_markov/scalar_moment_envelope.md#sme-support) | 对全部 0≤D≤R 且 \|\|D\|\|p≤ε 的变量，线性矩界 iff 整个 [0,R] 的逐点线性界；稀薄 R 幅度可落在任意小矩球内。局部 gauge 需另加真实支撑或尾部门。；**C69 稀薄二点律的必要性** |
 | E133 | [DS-EB · 真 EB 与目标邻域残差分离](topics/examples/diagonal_spike_relation.md#ds-eb) ∧ [DS-PPA · 完整近端全选择有限长度收敛](topics/examples/diagonal_spike_relation.md#ds-ppa) ∧ [DS-RL · 锐零锚与全对跨支碰撞](topics/examples/diagonal_spike_relation.md#ds-rl) | refutes → [OB-DYN-RL · 动力收敛不逆推全对 RL](../FAILED_ROUTES.md#f25) | 同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。；**F25 由 C72–C74 的同对象证书** |
+| E141 | [ABS-OP · 原算子残差跳跃与逆像钉住](topics/examples/absolute_value_subgradient.md#av-operator) ∧ [ABS-PROX · 完整软阈值近端的锐步 EB](topics/examples/absolute_value_subgradient.md#av-prox) | limits → [OB-RES-STEP · 原算子与步残差系数不可互授](../FAILED_ROUTES.md#f27) | 同一完整图的原算子残差局部系数下确界 0，近端步残差局部锐系数 1；不同残差不可互授。；**F27/C78–C79** |
 
 ## 局部拓扑
 
@@ -106,7 +107,7 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E22 | [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | conditional → [M-EXACT · exact-zero 与一般 gauge](cone_markov.md#m-exact) | 紧连续随机映射；exact-zero 等价一般 gauge；**证明包内部审计** |
-| E23 | [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) ∧ [M-EXACT · exact-zero 与一般 gauge](cone_markov.md#m-exact) | conditional → [M-FIN · 有限状态顶点测试与线性 EB](cone_markov.md#m-fin) | 固定有限状态几何；有限 OT tight-edge 顶点；**证明包内部审计** |
+| E23 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) | conditional → [M-FIN · 固定有限状态精确零集与锐顶点 EB](topics/random_markov/finite_state_certificate.md#fs-theorem) | 固定互异有限状态、同噪声位移 R、C-最优运输、所有不变律；每个对偶 tight-edge 分支的零成本顶点行边缘不变 iff 精确零集 iff 全律空间线性 W2/Ψ 界；锐常数为顶点比最大值。；**C15-v1 同版本完整独立证明；不推出动力收敛** |
 | E42 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-BINARY · bit 刷新 a*>0 判据](cone_markov.md#m-binary) | conditional → [COND-EB · 守恒边缘条件残差 EB](cone_markov.md#cond-eb) | 固定守恒边缘的 bit 刷新；a*>0 等价条件 EB 与统一速率，不是原 Ψ；**Markov 定理包** |
 | E43 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-GAUSS · Gaussian 谱隙 ζ](cone_markov.md#m-gauss) | conditional → [COND-EB · 守恒边缘条件残差 EB](cone_markov.md#cond-eb) | Gaussian Gibbs、Q>0、ζ>0，条件残差锐 EB 常数 ζ^-1/2；**Markov 定理包** |
 | E45 | [M-RECOUP · 回耦损失控制](cone_markov.md#m-recoup) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | conditional → [M-EXACT · exact-zero 与一般 gauge](cone_markov.md#m-exact) | 只有趋近同一 Ψ inf 的耦合及损失界，收缩才可反推 EB；**Markov 条件桥** |
@@ -162,6 +163,11 @@
 | E130 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-PPA · 完整近端全选择有限长度收敛](topics/examples/diagonal_spike_relation.md#ds-ppa) | 每个 λ>0、每个 p 和完整 J 的每条合法路径，步残差 (λ/(1+λ))\|p\|，最坏因子 1/(1+λ)，总长 \|p0\|。；**C73 全部纤维和望远镜证明** |
 | E131 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-RL · 锐零锚与全对跨支碰撞](topics/examples/diagonal_spike_relation.md#ds-rl) | 固定任意 λ>0，零锚全完整图锐 L=1；两趋零图点同 Minty 输入而不同反射输出，任意 ω(0)=0 全对模失败。；**C74 同输入碰撞** |
 | E132 | [DS-OBJECT · 闭完整对角加离散竖支关系](topics/examples/diagonal_spike_relation.md#ds-object) | conditional → [DS-QUAD · 完整图精确二参数区](topics/examples/diagonal_spike_relation.md#ds-quadratic) | 局部及全域同一全对二参数 ab≥μa²+ρb² 的精确区 μ<0,ρ<0,μρ≥1/4；跨支差实现所有斜率。；**C75 二次式端点核验** |
+| E136 | [HP-OBJECT · 异维数分段抛物映射及完整图](topics/examples/hemiregular_piecewise_parabola.md#hp-object) | conditional → [HP-FIXED · 锐半阶固定目标与线性最近逆点](topics/examples/hemiregular_piecewise_parabola.md#hp-fixed) | Θ:R²→R，零目标完整残差 \|a\|+b²；固定目标最高半阶模 1，最近逆点线性模 1，全部逆点只半阶。；**C76 独立全纤维与取等** |
+| E137 | [HP-OBJECT · 异维数分段抛物映射及完整图](topics/examples/hemiregular_piecewise_parabola.md#hp-object) | conditional → [HP-MR · 共同窗口锐半阶两变量 MR](topics/examples/hemiregular_piecewise_parabola.md#hp-mr) | 全部 \|a\|,\|b\|,\|y\|≤1/4，负目标开放端点以闭包求距离，d((a,b),Θ⁻¹(y))≤\|Θ(a,b)−y\|^{1/2} 且锐。；**C77 全情形直接证明** |
+| E138 | [HP-OBJECT · 异维数分段抛物映射及完整图](topics/examples/hemiregular_piecewise_parabola.md#hp-object) | limits → [HP-GRAPH · 原点连续但任意参考产品邻域非闭图](topics/examples/hemiregular_piecewise_parabola.md#hp-graph) | 原点连续不产生整个参考产品邻域内的闭图；异维数映射没有同空间 PPA/Cayley/RL 坐标。；**GX-076 负侧接缝极限** |
+| E139 | [ABS-OBJECT · 绝对值次梯度完整图](topics/examples/absolute_value_subgradient.md#av-object) | conditional → [ABS-OP · 原算子残差跳跃与逆像钉住](topics/examples/absolute_value_subgradient.md#av-operator) | 完整 ∂\|x\|，x≠0 真残差恒 1，\|y\|<1 完整逆像 {0}；固定零目标及两变量 MR 局部线性系数下确界 0。；**C78 全纤维计算** |
+| E140 | [ABS-OBJECT · 绝对值次梯度完整图](topics/examples/absolute_value_subgradient.md#av-object) | conditional → [ABS-PROX · 完整软阈值近端的锐步 EB](topics/examples/absolute_value_subgradient.md#av-prox) | 固定任意 λ>0，完整软阈值 J；\|p\|<λ 步残差 \|p−Jp\|=\|p\|，fixed-point EB 锐系数 1；全图线性 RL 常数 1。；**C79 完整近端与反射** |
 
 ## 参数字典
 
@@ -269,6 +275,8 @@
 | --- | --- | --- | --- |
 | E125 | [LC-OBJECT · 四状态惰性循环与同步 OT 残差](topics/random_markov/lazy_cycle_ot.md#lc-object) | conditional → [LC-OT · 同核 OT 残差精确零集与锐常数](topics/random_markov/lazy_cycle_ot.md#lc-sharp) | 固定 G=(0,1,3,4)、0<p<1、Id/T 独立切换，唯一 π=(1/4)^4；对所有 μ∈Δ4，在各自固定边缘的 C-最优计划上取同步 R 最小，精确零集 {π}，全律空间锐 W2/Ψ=√(13/p)。；**C71 同一最优计划的矩阵符号证明及取等律；优先权未审** |
 | E126 | [LC-OBJECT · 四状态惰性循环与同步 OT 残差](topics/random_markov/lazy_cycle_ot.md#lc-object) | limits → [LC-RELAX · 去最优运输约束后的假零点](topics/random_markov/lazy_cycle_ot.md#lc-relax) | 同一核和 μ+=(1/2,1/4,0,1/4)；允许非 C-最优耦合时残差为零，但原 Ψ²=p/2；残差对象变化不能继承精确零集。；**C71 的精确四边耦合反例** |
+| E134 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) | conditional → [FS-CELLS · 有限 tight-edge 多面体精确覆盖](topics/random_markov/finite_state_certificate.md#fs-cells) | 有限互异 G、固定 P,C,R；对偶归一化后的全部 tight-edge 计划、列边缘遍历所有不变律，恰为 C-最优合法计划的有限并。；**C15 有限 LP 对偶及互补松弛重算** |
+| E135 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) ∧ [M-FIN · 固定有限状态精确零集与锐顶点 EB](topics/random_markov/finite_state_certificate.md#fs-theorem) | limits → [FS-BOUNDARY · 两点翻转的 EB 与动力分离](topics/random_markov/finite_state_certificate.md#fs-boundary) | 两点交换核精确 E=Ψ²/4、K*=1/2，非平稳律周期翻转；精确零集和锐线性 EB 不推出律动力收敛。；**C15 同对象动力边界** |
 
 ## 局部值域的拓扑链
 

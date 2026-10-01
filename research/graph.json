@@ -202,8 +202,8 @@
     },
     {
       "id": "M-FIN",
-      "label": "有限状态顶点测试与线性 EB",
-      "file": "cone_markov.md#m-fin"
+      "label": "固定有限状态精确零集与锐顶点 EB",
+      "file": "topics/random_markov/finite_state_certificate.md#fs-theorem"
     },
     {
       "id": "M-COND",
@@ -1017,6 +1017,61 @@
       "id": "OB-DYN-RL",
       "label": "动力收敛不逆推全对 RL",
       "file": "../FAILED_ROUTES.md#f25"
+    },
+    {
+      "id": "FS-OBJECT",
+      "label": "固定有限状态同步 OT 的完整耦合与不变律",
+      "file": "topics/random_markov/finite_state_certificate.md#fs-object"
+    },
+    {
+      "id": "FS-CELLS",
+      "label": "有限 tight-edge 多面体精确覆盖",
+      "file": "topics/random_markov/finite_state_certificate.md#fs-cells"
+    },
+    {
+      "id": "FS-BOUNDARY",
+      "label": "两点翻转的 EB 与动力分离",
+      "file": "topics/random_markov/finite_state_certificate.md#fs-boundary"
+    },
+    {
+      "id": "HP-OBJECT",
+      "label": "异维数分段抛物映射及完整图",
+      "file": "topics/examples/hemiregular_piecewise_parabola.md#hp-object"
+    },
+    {
+      "id": "HP-FIXED",
+      "label": "锐半阶固定目标与线性最近逆点",
+      "file": "topics/examples/hemiregular_piecewise_parabola.md#hp-fixed"
+    },
+    {
+      "id": "HP-MR",
+      "label": "共同窗口锐半阶两变量 MR",
+      "file": "topics/examples/hemiregular_piecewise_parabola.md#hp-mr"
+    },
+    {
+      "id": "HP-GRAPH",
+      "label": "原点连续但任意参考产品邻域非闭图",
+      "file": "topics/examples/hemiregular_piecewise_parabola.md#hp-graph"
+    },
+    {
+      "id": "ABS-OBJECT",
+      "label": "绝对值次梯度完整图",
+      "file": "topics/examples/absolute_value_subgradient.md#av-object"
+    },
+    {
+      "id": "ABS-OP",
+      "label": "原算子残差跳跃与逆像钉住",
+      "file": "topics/examples/absolute_value_subgradient.md#av-operator"
+    },
+    {
+      "id": "ABS-PROX",
+      "label": "完整软阈值近端的锐步 EB",
+      "file": "topics/examples/absolute_value_subgradient.md#av-prox"
+    },
+    {
+      "id": "OB-RES-STEP",
+      "label": "原算子与步残差系数不可互授",
+      "file": "../FAILED_ROUTES.md#f27"
     }
   ],
   "edges": [
@@ -1298,13 +1353,12 @@
       "id": "E23",
       "topic": "Markov",
       "inputs": [
-        "M-PSI",
-        "M-EXACT"
+        "FS-OBJECT"
       ],
       "output": "M-FIN",
       "relation": "conditional",
-      "scope": "固定有限状态几何；有限 OT tight-edge 顶点",
-      "status": "证明包内部审计"
+      "scope": "固定互异有限状态、同噪声位移 R、C-最优运输、所有不变律；每个对偶 tight-edge 分支的零成本顶点行边缘不变 iff 精确零集 iff 全律空间线性 W2/Ψ 界；锐常数为顶点比最大值。",
+      "status": "C15-v1 同版本完整独立证明；不推出动力收敛"
     },
     {
       "id": "E24",
@@ -2561,6 +2615,96 @@
       "relation": "refutes",
       "scope": "同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。",
       "status": "F25 由 C72–C74 的同对象证书"
+    },
+    {
+      "id": "E134",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-OBJECT"
+      ],
+      "output": "FS-CELLS",
+      "relation": "conditional",
+      "scope": "有限互异 G、固定 P,C,R；对偶归一化后的全部 tight-edge 计划、列边缘遍历所有不变律，恰为 C-最优合法计划的有限并。",
+      "status": "C15 有限 LP 对偶及互补松弛重算"
+    },
+    {
+      "id": "E135",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-OBJECT",
+        "M-FIN"
+      ],
+      "output": "FS-BOUNDARY",
+      "relation": "limits",
+      "scope": "两点交换核精确 E=Ψ²/4、K*=1/2，非平稳律周期翻转；精确零集和锐线性 EB 不推出律动力收敛。",
+      "status": "C15 同对象动力边界"
+    },
+    {
+      "id": "E136",
+      "topic": "例库",
+      "inputs": [
+        "HP-OBJECT"
+      ],
+      "output": "HP-FIXED",
+      "relation": "conditional",
+      "scope": "Θ:R²→R，零目标完整残差 |a|+b²；固定目标最高半阶模 1，最近逆点线性模 1，全部逆点只半阶。",
+      "status": "C76 独立全纤维与取等"
+    },
+    {
+      "id": "E137",
+      "topic": "例库",
+      "inputs": [
+        "HP-OBJECT"
+      ],
+      "output": "HP-MR",
+      "relation": "conditional",
+      "scope": "全部 |a|,|b|,|y|≤1/4，负目标开放端点以闭包求距离，d((a,b),Θ⁻¹(y))≤|Θ(a,b)−y|^{1/2} 且锐。",
+      "status": "C77 全情形直接证明"
+    },
+    {
+      "id": "E138",
+      "topic": "例库",
+      "inputs": [
+        "HP-OBJECT"
+      ],
+      "output": "HP-GRAPH",
+      "relation": "limits",
+      "scope": "原点连续不产生整个参考产品邻域内的闭图；异维数映射没有同空间 PPA/Cayley/RL 坐标。",
+      "status": "GX-076 负侧接缝极限"
+    },
+    {
+      "id": "E139",
+      "topic": "例库",
+      "inputs": [
+        "ABS-OBJECT"
+      ],
+      "output": "ABS-OP",
+      "relation": "conditional",
+      "scope": "完整 ∂|x|，x≠0 真残差恒 1，|y|<1 完整逆像 {0}；固定零目标及两变量 MR 局部线性系数下确界 0。",
+      "status": "C78 全纤维计算"
+    },
+    {
+      "id": "E140",
+      "topic": "例库",
+      "inputs": [
+        "ABS-OBJECT"
+      ],
+      "output": "ABS-PROX",
+      "relation": "conditional",
+      "scope": "固定任意 λ>0，完整软阈值 J；|p|<λ 步残差 |p−Jp|=|p|，fixed-point EB 锐系数 1；全图线性 RL 常数 1。",
+      "status": "C79 完整近端与反射"
+    },
+    {
+      "id": "E141",
+      "topic": "交叉限制",
+      "inputs": [
+        "ABS-OP",
+        "ABS-PROX"
+      ],
+      "output": "OB-RES-STEP",
+      "relation": "limits",
+      "scope": "同一完整图的原算子残差局部系数下确界 0，近端步残差局部锐系数 1；不同残差不可互授。",
+      "status": "F27/C78–C79"
     }
   ]
 }

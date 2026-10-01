@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：52 行逐源数学单元有精确去向，其中本批新增的 S25 (8.3) 和 (8.4)–(8.7) 只关闭分析步骤；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。50/251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象。
+**当前覆盖读法**：57 行逐源数学单元有精确去向，本批 C15 一般顶点证明与 GX-076/077 的去向见文末；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -168,3 +168,11 @@
 ## 增量：GX-075 与条件值域版本
 
 [GX-075 C72–C75](../topics/examples/diagonal_spike_relation.md#ds-object) 已从 9/01 ZIP 的 work/c_gx066_077.md 逐项重算并新增一行去向；其余例卡和原稿标签不因此验收。[C05-v2](../canonical/local_range_without_supercriticality.md#lr-theorem) 是从 9/25 PDF §8 候选证明独立推出的更弱假设版本，故不冒充来源原文的新单元，保留 C05-v1 原身份。空白接收审查发现的 C58 总账闭性漏项已纠正，并将 \mathbb Q\times\{0\} 型稠密非闭图反例写入该 Claim。
+
+## 增量：一般有限状态证书与 GX-076/077
+
+[C15](../topics/random_markov/finite_state_certificate.md#fs-theorem) 的原摘要本轮补成完整 finite LP 对偶 tight-edge 证明，保持同一 Claim 版本；两点翻转单列误差界不推收敛的动力边界。来源 §§1–4、§7 与 §8 两个单元进入逐源表；§5 Hoffman、§6 连续性仍未验收。C71 四状态模型继续保留自己的直接锐常数证明。
+
+[C76/C77](../topics/examples/hemiregular_piecewise_parabola.md#hp-object) 从 GX-076 重算异维数映射的锐固定目标/两变量半阶与最近逆点线性模；[C78/C79](../topics/examples/absolute_value_subgradient.md#av-object) 从 GX-077 重算完整原算子残差跳跃与近端步残差锐模 1。两张对象卡不把历史 `verified` 字样当成数学证据；前者所引一手 Example 2.3 只支持定性对象/对照。盲读指出的 C69 总账硬支持参数 \(0\le t\le R\) 和 C31 的 M1 过期状态已修正。
+
+本轮空白接收可以仅靠规范层恢复收敛链、候选与开放义务，但指出总体规模比较尚无冻结的共同母空间与量尺；这属于实际研究问题未完成。历史 I-097–099/I-102 原证明缺件属于来源材料缺口。其余逐源覆盖属于尚未做完的清洗工作，不能一概归因于缺件。

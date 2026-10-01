@@ -155,3 +155,11 @@ E127 合取 **同一** 完整 \(F,S,\lambda,L,\kappa,\gamma,q\)、有限样本 E
 ## E129–E133：完整近端全选择收敛仍不逆推全对 RL
 
 E129–E132 都使用 **同一个** 闭完整实关系 \(F(0)=\{0\}\cup\{1/n\}\)、\(F(x)=\{x\}\) (\(x\ne0\)) 和固定任意 \(\lambda>0\)。E129 的算子真残差 \(r_F=|x|\) 与目标正确 EB 不可换为以 \(d(y,F(0))\) 为右端的两变量残差；后者对所有零消失 gauge 失败。E130 解出完整 \(J(p)=\{p/(1+\lambda)\}\cup(\{0\}\text{ if }p\in\lambda A)\)，因而最小步线性 EB 与 **每条** 允许轨道的保号望远镜总长成立。E131 比较完整图的任意两点：零锚常数 1 不防止离散输入 \(\lambda/n\) 的同输入双输出，故全对零消失模失败。E132 用趋零跨支图差实现任意实斜率，给局部与全域同一个负负二参数区。E133 将 E129–E131 的**同对象**证书合取作为 [F25](../FAILED_ROUTES.md#f25) 的反例；它没有把充分的全对收敛定理反向判错。[对象卡](topics/examples/diagonal_spike_relation.md#ds-object) 保存每个完整纤维和端点证明。
+
+## E23、E134–E141：有限状态顶点与两种正则例卡
+
+E134 固定**一个**互异有限状态几何、随机映射、权重和同噪声同步成本 \(R\)；对每对边缘先以 \(C\) 取**最优**运输，再在全部不变目标律 \(\pi\in\mathcal I\) 中最小化 \(R\)。对偶顶点 tight-edge 分支的并恰覆盖这些合法计划。E23 的 C15 只在该固定系统上由全部零成本顶点行边缘不变得到精确零集和锐全域 \(W_2/\Psi\) 常数；凸性属于目标距离平方 \(E\)，**不属于**残差 \(\Phi=\Psi^2\)。C71 是独立可计算实例。E135 的两点翻转在 C15 成立且 \(K=1/2\) 时仍不收敛，故不能把 C15 当动力定理。[FS-THEOREM/BOUNDARY](topics/random_markov/finite_state_certificate.md#fs-theorem)。
+
+E136/E137 固定 \(\Theta:\mathbb R^2\to\mathbb R\) 的完整异维数图。C76 的最近逆点 HREG 线性和固定目标 MSR 半阶是不同量词；C77 对共同 \(|a|,|b|,|y|\le1/4\) 的**两变量** MR 半阶，负目标纤维开放端点只可用于计算距离，不能添入实际图。E138 记录原点连续而参考产品邻域图不局部闭，所以本证明直接用纤维，不能调用缺条件的闭图定理，也不能把此例放到 RL/Cayley 坐标。[HP-MR](topics/examples/hemiregular_piecewise_parabola.md#hp-mr)。
+
+E139/E140 固定同一 \(F=\partial|\cdot|\)，但分别以原算子完整 \(r_F(x)\) 和全输入完整近端 \(|p-J_{\lambda F}(p)|\) 作残差。C78 的局部线性系数下确界为 0，C79 在 \(|p|<\lambda\) 的最优固定点步系数为 1；E141/F27 是**不蕴含边**，不是从一个估计推出另一个估计。全图 \(\gamma=1,L=1\) 的 RL 与无界域 \(\gamma<1\) 的失败仍分别有量词，有限输入窗上的继承幂界不是全图证书。[AV-PROX](topics/examples/absolute_value_subgradient.md#av-prox)。
