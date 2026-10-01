@@ -4,5 +4,7 @@
 
 新对象另建短文件；旧卡新增属性时只在逐项证明后修正文及 Claim 身份。外部先行性和其余 GX 卡继续按 [覆盖审计](../../audit/SOURCE_RECONSTRUCTION_AUDIT.md)处理。
 
+[身份与平方并图的两变量半阶](identity_square_branch_union.md#is-mr) 已补 GX-068 的完整正负目标窗 C92；它与最近逆点的线性律及全对 RL 碰撞并存。[闭球法锥](ball_normal_cone.md) 从 GX-067 重写锐投影反射、全图二参数区以及固定零目标真空 EB 与两变量逆像失稳；修改目标或域外残差语义时另立身份。
+
 [有界平方图](bounded_square_minty.md) 从 GX-065 分开左端点的全图 Minty 相变、零点半阶真残差和正负两侧的实际路径；全图锐性见证在端点，两界在零点小窗仍可同用，但粗指数不构成收缩兼容。
 [负平方根短图与母图](restricted_root_graph.md) 从 GX-032 拆开两种完整关系；短图有锐全对常数和真二次 EB 却无第二步，母图另有远支及发散路径。

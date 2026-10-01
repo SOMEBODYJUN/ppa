@@ -552,3 +552,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 C89 的实 Hilbert 空间和 \(\lambda,\mu,\rho\)，假设 \(A>0,\Delta\ge0\)；对每个非空、完整或图块视作**独立完整图对象**的全对二参数图 \(\Gamma\)，全局同参数图极大当且仅当其 Minty 自然域 \(D=H\)。每个这样的图可在保持相同参数下扩张到满域；\(\Delta=0\) 亦在范围内。
 - **Dependencies / Evidence / Status / Related Files**：[NT-MAXIMAL](research/canonical/non_tied_cayley.md#nt-maximal) 将 C89 的平移 Cayley \(\sqrt\Delta/A\)-Lipschitz 映射用已核 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 的 \(\gamma=1\) Hilbert 同常数扩张后反剪切；反向用同输入唯一性。`derived-checked`；同一 9/01 ZIP §2.1 满域句是来源种子。
 - **Counterevidence / Scope**：不从局部窗口图极大推出全空间 coverage；对完整母关系的指定子图作极大扩张是新对象，不能把原关系域外纤维一并认证。满域也不产生零点、真残差 EB 或近端动力收敛。
+
+## C92-v1 / IS-MR · 身份与平方完整并图的两变量半阶 MR
+
+- **Exact Statement / Objects / Domain / Quantifiers**：完整 \(F(x)=\{x,x^2\}:\mathbb R\rightrightarrows\mathbb R\)。对每个 \(0<\delta\le1/3\)、所有 \(|x|,|y|<\delta\)，\(d(x,F^{-1}(y))\le d(y,F(x))^{1/2}\)，共同窗口系数 1 取等、最大局部指数 \(1/2\)；对**系数恰为 1 的对称开窗口**最大半径为 \(1/3\)。对 \(|u|,|v|<\delta\)、全部 \(z\in F^{-1}(u)\cap(-\delta,\delta)\) 又有 \(d(z,F^{-1}(v))\le|u-v|^{1/2}\)，系数锐 1；完整逆像不存在原点单值局部化。
+- **Dependencies / Evidence / Status / Related Files**：[IS-MR](research/topics/examples/identity_square_branch_union.md#is-mr) 从完整逆纤维逐正负目标和身份/平方残差重算；来源 9/01 ZIP `work/c_consistency_audit.md` §CCA-M14 的半阶观察，本库另证最大对称窗口。`derived-checked` 限此对象和共同窗口；证据不是有限计算。
+- **Counterevidence / Objections / Scope**：C66 固定目标真残差、C67 完整近端最小步、(I3) 最近逆点线性律与本两变量 MR 量词不同。半阶逆 Aubin 不给线性 MR，也不等于单值局部化；C68 同图全对 RL 仍因同输入碰撞失败。Semimonotonicity 全区域及优先性未核。
+
+## C93-v1 / BN-GEOMETRY · 闭球完整法锥的两参数图与全域反射
+
+- **Exact Statement / Objects / Domain / Quantifiers**：每个 \(m\ge1\)、\(B=\{x\in\mathbb R^m:\|x\|\le1\}\)、完整 \(F=N_B\)，每个 \(\lambda>0\) 满全输入 \(J_{\lambda F}=P_B,R=2P_B-I\)。对**全部图点对**，\(\langle a,b\rangle\ge\mu\|a\|^2+\rho\|b\|^2\) 当且仅当 \(\mu\le0,\rho\le0\)；反射全域线性 RL 锐 \(L=1\)，任何无界全对 \(0<\gamma<1\) 的有限 Hölder 常数失败。
+- **Dependencies / Evidence / Status / Related Files**：[BN-GEOMETRY](research/topics/examples/ball_normal_cone.md#bn-geometry) 直接用法锥不等式、完整投影与 firm nonexpansiveness；`derived-checked`。来源 9/01 ZIP `work/c_gx066_077.md` GX-067 仅作对象线索。
+- **Counterevidence / Scope**：图上的 \(\mu=\rho=0\) 不表示强单调或正 cocoercive；有界输入窗可继承低指数，不可转述成全域低指数。其它历史 VI 标签和外部先行性未核。
+
+## C94-v1 / BN-REGULARITY · 法锥真空 MSR 与扰动逆像不稳定
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C93 同一完整 \(N_B\)，每个 \(\bar x\in B\) 的参考 \((\bar x,0)\)，\(S=B\)。固定零目标的真残差 EB/MSR 可行系数下确界为 0，因为域内残差和距离同时为零、域外残差为 \(+\infty\)；逆关系 ordinary calm 的局部系数亦为 0。对任意这样的参考点，全部正指数的两变量 Hölder MR 与固定输入 hemiregularity 失败；inverse Aubin 失败；SMSR/isolated calm 因零点不孤立而失败。
+- **Dependencies / Evidence / Status / Related Files**：[BN-REGULARITY](research/topics/examples/ball_normal_cone.md#bn-regularity) 分球内、\(m=1\) 边界、\(m\ge2\) 边界逐目标构造；`derived-checked`，只属 GX-067 选定单元。
+- **Counterevidence / Objections / Scope**：零系数是域/大零集机制，不能作为非真空正残差增长，也不能推目标扰动稳定。若将零目标改为球心或边界是不同命题；历史其它性质及优先权待审。

@@ -62,7 +62,13 @@ E113 对任意非空子集 \(D\subset H\) 及**全部配对**的相同 \(L,0<\ga
 
 ## E115–E118：并图三残差与新 Sign 图局部指数
 
-E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 的全局公式是 \(r_F(x)=d(0,F(x))=\min\{|x|,x^2\}\)，在 \(|x|\le1\) 的零点局部窗才简化为 \(x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR/semimonotonicity 仍另核。[IS 卡](topics/examples/identity_square_branch_union.md)。
+E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 的全局公式是 \(r_F(x)=d(0,F(x))=\min\{|x|,x^2\}\)，在 \(|x|\le1\) 的零点局部窗才简化为 \(x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR 现由 E157/C92 单列；semimonotonicity 区域仍另核。[IS 卡](topics/examples/identity_square_branch_union.md)。
+
+## E157–E159：完整逆像、真空误差界与反射的不同量词
+
+E157 保持 E115 的**同一完整并图**，但目标也在 \((-\delta,\delta)\) 全称变化；\(0<\delta\le1/3\) 上每对 \((x,y)\) 的完整逆像距离被**完整输出残差**平方根控制，系数 1 的最大对称开窗口为 \(1/3\)。它比 E115 固定 \(y=0\) 的结论量词更广；最近逆点的线性律与指定近端线性步界不能代替其所有逆分支。逆 Hölder–Aubin 仅对落在局部输入窗内的逆像点全称；同对象完整 RL 仍被 E117 碰撞否定。[IS-MR](topics/examples/identity_square_branch_union.md#is-mr)。
+
+E158 固定 \(m\ge1\) 的完整闭球法锥及任意步长，以全部图点对得到二参数区域 \(\mu,\rho\le0\) 与全域锐线性反射模 1；不能因单调把正强单调或正 cocoercive 参数画进来。E159 在**同一完整关系**上把固定零目标 \(S=B\) 的真空 MSR 系数下确界 0 与所有参考零点的扰动目标 MR/HREG 失败分开；全邻域 \(\kappa=0\) 的写法不预设 \(0\cdot\infty\)。[BN 卡](topics/examples/ball_normal_cone.md#bn-object) 与 [F29](../FAILED_ROUTES.md#f29) 给域外语义和边界反向目标见证。
 
 E118 对另一个**新定义**的 \(F_{\rm lift}\) 使用 C64 的全域完整 \(J_F=T\)；固定 \(\lambda=1\)、端点 Minty 输入球 \(U=B_\rho((2/3,0))\)、\(0<\rho<\min\{1/2,(2/3)/(2\sqrt{10})\}\)。球内任意两完整图点的反射差有 \(1/3\) Hölder 界，端点正向输入序列排除更高指数；任何无界全域版本和历史循环 Sign 方程都没有这条边。[SL-RL](topics/path_dynamics/m1_sign_lift.md#sl-rl)。
 

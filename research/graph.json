@@ -1172,6 +1172,26 @@
       "id": "NT-MAXIMAL",
       "label": "同参数图极大 iff 满 Minty 域",
       "file": "canonical/non_tied_cayley.md#nt-maximal"
+    },
+    {
+      "id": "IS-MR",
+      "label": "完整并图共同窗口两变量半阶 MR",
+      "file": "topics/examples/identity_square_branch_union.md#is-mr"
+    },
+    {
+      "id": "BN-OBJECT",
+      "label": "完整闭球法锥及零集",
+      "file": "topics/examples/ball_normal_cone.md#bn-object"
+    },
+    {
+      "id": "BN-GEO",
+      "label": "法锥全图参数区与锐非扩张反射",
+      "file": "topics/examples/ball_normal_cone.md#bn-geometry"
+    },
+    {
+      "id": "BN-REG",
+      "label": "真空 MSR 与逆像扰动不稳定",
+      "file": "topics/examples/ball_normal_cone.md#bn-regularity"
     }
   ],
   "edges": [
@@ -2979,6 +2999,39 @@
       "relation": "conditional",
       "scope": "实 Hilbert、非空完整图、同一 λ,μ,ρ 与任意两图点条件；A>0、Δ≥0 时先将平移 Cayley 映射在同常数下扩张，再逆剪切得保持同参数的全域图。全域反向由同输入唯一性；仅图包含极大 iff D=H，不给原母关系其它纤维、零点或动力。",
       "status": "C91-v1 已核 Hilbert 扩张导入与同参数证明"
+    },
+    {
+      "id": "E157",
+      "topic": "例库",
+      "inputs": [
+        "IS-OBJECT"
+      ],
+      "output": "IS-MR",
+      "relation": "conditional",
+      "scope": "固定完整 F(x)={x,x²}；任意 0<δ≤1/3、全部 |x|,|y|<δ，完整逆像距离 ≤ 完整输出残差的平方根，系数 1 取等且对称系数 1 窗最大半径 1/3；逆 Hölder–Aubin 须对 z∈F⁻¹(u)∩窗全称。最近逆点线性律与近端步残差不替代此量词。",
+      "status": "C92-v1 旧 CCA-M14 独立重算，最大窗口为新增推导"
+    },
+    {
+      "id": "E158",
+      "topic": "例库",
+      "inputs": [
+        "BN-OBJECT"
+      ],
+      "output": "BN-GEO",
+      "relation": "conditional",
+      "scope": "m≥1、完整 N_B、全部 λ>0 与全部图点对；J=P_B、R=2P_B−I；二参数区 μ≤0、ρ≤0，反射全域线性 RL 锐 1；无界全对 γ<1 失败。",
+      "status": "C93-v1 完整法锥及投影代数重算"
+    },
+    {
+      "id": "E159",
+      "topic": "例库",
+      "inputs": [
+        "BN-OBJECT"
+      ],
+      "output": "BN-REG",
+      "relation": "conditional",
+      "scope": "每个参考 (x̄,0), x̄∈B，固定零目标 S=B 且域外残差 +∞：每个正 MSR 系数可用、下确界 0；反向扰动目标 y=−t e 于边界或 y=t e 于内部使全部正指数 MR/HREG 及 inverse Aubin 失败。κ=0 的全邻域式不预设 0·∞。",
+      "status": "C94-v1 固定目标真空与两变量不稳定分离"
     }
   ]
 }
