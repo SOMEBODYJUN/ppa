@@ -186,6 +186,15 @@
 | E84 | [IZ-GERM · 孤立零点图 germ 的 B/J/R 平坦性](canonical/isolated_zero_flatness.md#iz-germ) ∧ [IZ-FIBERS · 真实 EB 到实际图值的方向](canonical/isolated_zero_flatness.md#iz-fibers) | conditional → [IZ-PPA · 指定分支超线性上阶](canonical/isolated_zero_flatness.md#iz-ppa) | 同一孤立 p、q>1、λ>0；IZ-FIBERS 仅用真 EB→实际图值方向，不需反向的 residual-complete；另需指定 T 在输入邻域全域选择、实际输出真 q-EB、步残差 <η、ρη^(q−1)≤λ/2 和闭球留域；只给上阶。；**本轮逐图点及球不变证明** |
 | E85 | [IZ-PPA · 指定分支超线性上阶](canonical/isolated_zero_flatness.md#iz-ppa) | conditional → [IZ-FACTOR · 正 Q 因子的归一化门](canonical/isolated_zero_flatness.md#iz-factor) | 同一非终止轨道；另需 \|\|x^(k+1)−p\|\|/\|\|w_k\|\|^q→μ∈(0,∞)；结论 Q 因子 μ/λ^q；上阶不自动给极限。；**本轮三角双边界重算** |
 
+## 非孤立对齐
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E88 | [NA-OBJECT · 非孤立零集的输入与输出最近点家族](canonical/nonisolated_alignment.md#na-object) | conditional → [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) | 指定同一 J、S，整个 0<d(x,S)≤r0 家族的 P_S(x) 与 P_S(Jx) 非空；集合间 infimum 可不取到；逐点 r≤a≤r+δ≤3a。；**本轮近似点对三角证明** |
+| E89 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | 同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；包络另需 A(r)≤Kr^θ。只给上指数。；**本轮 |a−λt|≤s 逐点重算** |
+| E90 | [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-APPROX · 无最近点时的正容差近似锚](canonical/nonisolated_alignment.md#na-approx) | 不需 proximinality；对同一实际输出的 t>0 取 e(t)>0，ψ(t)+e(t)≤κλt、κ<1 和 a_e/((1−κ)λ)<ηψ；只替换最近点存在性，不给输入 coverage。；**本轮近似锚 infimum 证明** |
+| E91 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | conditional → [NA-SHARP · 同序列 θq 饱和门](canonical/nonisolated_alignment.md#na-sharp) | 上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。；**本轮同序列乘积与步长渐近** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

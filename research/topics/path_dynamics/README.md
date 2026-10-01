@@ -10,6 +10,7 @@
 | [自然域逃逸 GX-073](domain_escape.md) | 仅在指定 Minty 域的关系：一步反射有锚定 \(\alpha\)、全对 \(\alpha/(\beta+1)\)，真残差线性，但非零轨道有限步越域 | 改域或延拓 J 属新对象，不能称原算法在全局发散 |
 | [离散覆盖 GX-074](discrete_coverage.md) | 紧完整图全对 RL 与真实输出 EB 均成立，但自然 Minty 域不含零点输入球 | 用于核 coverage 独立性；目标必须是完整零集 K |
 | [孤立零点分支平坦性](../../canonical/isolated_zero_flatness.md) | C45 的指定分支上阶需要全纤维 EB、输入/输出窗口及小步门；C46 的正因子再需归一化极限 | 与非孤立解集的 alignment 路线分开；若全图任意选择要用，另核完整纤维 |
+| [非孤立解集的锚点漂移](../../canonical/nonisolated_alignment.md) | C48–C50 把输出最近零点的锚模、全家族真 EB、近似锚和同序列锐性分开 | 与孤立零点分支不同；最优阶不能由不同序列拼接 |
 | [PA-WHOLE](../../canonical/path_atlas.md#pa-whole) | 对**每条**合法路径的前缀 coverage、统一终点收缩和可和位移的合取 | 改定理量词须新版本；只改证明可在原单元注明审查范围 |
 | [F12](../../../FAILED_ROUTES.md#f12) | 无限词的统一性与非平凡周期障碍 | 新反例独立写对象卡，然后在 F12 记录被否定的精确版本 |
 

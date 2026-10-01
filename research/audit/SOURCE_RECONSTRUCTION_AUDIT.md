@@ -120,3 +120,7 @@
 [孤立零点平坦性](../canonical/isolated_zero_flatness.md) 按 foundations §7.1–7.6 重写：图 germ 的 B/J/R 三模等价不需先假设完整 resolvent 单值；真 EB 到逐分支界只用残差方向，反向必须覆盖所有小残差纤维；C45 的指定近端分支上阶需全部输入/输出窗口及小步门；C46 的正 Q 因子是额外归一化极限。双值关系给选中界不蕴含真 EB 的直接反例。
 
 [GX-074 / C47](../topics/path_dynamics/discrete_coverage.md) 从同稿注 1.5 重算紧图上全对 RL、目标 S=K 的真 EB 与任意零邻域缺输入；它只反驳无条件 coverage 升级，见 [F16](../../FAILED_ROUTES.md#f16)。逐单元 TSV 为这两组数学内容新增五行；foundations 的 §8 非孤立 alignment、§9.1 与别处尚未逐项验收，不能把整稿置为 rewritten。
+
+## 14. 增量：非孤立解集的对齐与同序列锐性
+
+[非孤立 alignment](../canonical/nonisolated_alignment.md) 把 §8.1–8.3 和 §9.1 拆成 C48–C50 及 NA-APPROX：最近点存在性须覆盖整个 envelope 输入家族，集合间 infimum 不要求取到；真 EB、小步门、锚漂移 profile 和 gauge 定义域合取才给上指数；无最近点时另用正容差近似锚；精确 \(\theta q\) 见证需同一序列的三个正比值。逐源 TSV 再增加四行。GX-071–074 的对象卡另有自身证明，不能反向证明这条一般定理最优；其他 foundations 小节和外部文献仍未关闭。

@@ -8,6 +8,14 @@ E85 对同一非终止轨道另加 \(\|x^{k+1}-p\|/\|w_k\|^q\to\mu\in(0,\infty)\
 
 E86 的全部输入使用一张完整紧图 \(\operatorname{gph}F=K\times\{0\}\)，\(S=K=\{0\}\cup\{1/n\}\)。在自然输入域 K 上全对 RL 与在实际输出上的真实 EB 同时成立；E87 用其限制 COV：这些前件并不蕴含零点的输入开球 coverage。E87 不是把 COV 结论判假，而是显示它在一般局部收敛定理中必须独立给出。若目标换为 \(\{0\}\)，EB 本身不再成立。[C47](topics/path_dynamics/discrete_coverage.md#dc-gap)、[F16](../FAILED_ROUTES.md#f16)。
 
+## E88–E91：非孤立解集的锚点、近似点和锐性
+
+E88 固定同一个 \(S\subset F^{-1}(0)\)、指定 \(J\) 和整个 \(0<d(x,S)\le r_0\) 的输入家族；对家族每个 x 同时要求 \(P_S(x),P_S(Jx)\ne\varnothing\)。集合间漂移的 infimum 不需取到，用近似点对即可得 \(r\le a\le r+\delta\le3a\)。E89 还需在**同一家族每个实际输出**的真 EB、非减超线性 gauge、全部实际步的 \(\psi(t)\le\lambda t/2\)、重标度在定义域内；包络版另需统一 \(\mathcal A(r)\le Kr^\theta\)。只得 upper \(\theta q\)，不含全轨道留域。[C48/C49](canonical/nonisolated_alignment.md)。
+
+E90 不以 E88 的 proximinality 为前提：正的 \(e(t)\) 或另证近似投影非空，并对每个实际 \(t>0\) 有 \(\psi(t)+e(t)\le\kappa\lambda t,\kappa<1\)，才把同一真 EB 写成近似锚的 gauge 界。近似点的存在不提供 Minty 输入 coverage。[NA-APPROX](canonical/nonisolated_alignment.md#na-approx)。
+
+E91 需要 E89 的共同上界环境和**同一**合法输入序列上三个正有限归一化极限；它不能用不同序列分别达到的 \(\theta,q\) 拼接。此时正因子为 \(CB^qA^q\)，而 \(\psi=o(t)\)、\(t_n\to0\) 强制 \(B=1/\lambda\)。若三重饱和没有证据，只保留 C49 的 upper bound。[C50](canonical/nonisolated_alignment.md#na-sharp)、[F17](../FAILED_ROUTES.md#f17)。
+
 本页按 [graph.json](graph.json) 的边 ID 解释合取输入。图只存摘要；调用一个 Claim 时必须读 [总账](../CLAIMS.md) 与对应证明。`∧` 表示**同一对象、同一参数及同一合法区域上的同时成立**，不允许用不同稿件各取一半前提。`source-report`、`candidate`、`derived-checked` 不能因画了箭头自动升为 `canonical`。
 
 ## E02→E03：局部 RLEB 的完整收敛链

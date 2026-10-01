@@ -691,6 +691,31 @@
       "id": "DC-GAP",
       "label": "全对 RL 加真 EB 不给输入覆盖",
       "file": "topics/path_dynamics/discrete_coverage.md#dc-gap"
+    },
+    {
+      "id": "NA-OBJECT",
+      "label": "非孤立零集的输入与输出最近点家族",
+      "file": "canonical/nonisolated_alignment.md#na-object"
+    },
+    {
+      "id": "NA-DRIFT",
+      "label": "输出锚与最近点漂移包络",
+      "file": "canonical/nonisolated_alignment.md#na-drift"
+    },
+    {
+      "id": "NA-COMPOSE",
+      "label": "真 EB 和锚模的条件合成",
+      "file": "canonical/nonisolated_alignment.md#na-compose"
+    },
+    {
+      "id": "NA-APPROX",
+      "label": "无最近点时的正容差近似锚",
+      "file": "canonical/nonisolated_alignment.md#na-approx"
+    },
+    {
+      "id": "NA-SHARP",
+      "label": "同序列 θq 饱和门",
+      "file": "canonical/nonisolated_alignment.md#na-sharp"
     }
   ],
   "edges": [
@@ -1714,6 +1739,52 @@
       "relation": "limits",
       "scope": "GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。",
       "status": "本轮紧图反例；非对已有 coverage 定理的反驳"
+    },
+    {
+      "id": "E88",
+      "topic": "非孤立对齐",
+      "inputs": [
+        "NA-OBJECT"
+      ],
+      "output": "NA-DRIFT",
+      "relation": "conditional",
+      "scope": "指定同一 J、S，整个 0<d(x,S)≤r0 家族的 P_S(x) 与 P_S(Jx) 非空；集合间 infimum 可不取到；逐点 r≤a≤r+δ≤3a。",
+      "status": "本轮近似点对三角证明"
+    },
+    {
+      "id": "E89",
+      "topic": "非孤立对齐",
+      "inputs": [
+        "NA-DRIFT",
+        "D04"
+      ],
+      "output": "NA-COMPOSE",
+      "relation": "conditional",
+      "scope": "同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；包络另需 A(r)≤Kr^θ。只给上指数。",
+      "status": "本轮 |a−λt|≤s 逐点重算"
+    },
+    {
+      "id": "E90",
+      "topic": "非孤立对齐",
+      "inputs": [
+        "D04"
+      ],
+      "output": "NA-APPROX",
+      "relation": "conditional",
+      "scope": "不需 proximinality；对同一实际输出的 t>0 取 e(t)>0，ψ(t)+e(t)≤κλt、κ<1 和 a_e/((1−κ)λ)<ηψ；只替换最近点存在性，不给输入 coverage。",
+      "status": "本轮近似锚 infimum 证明"
+    },
+    {
+      "id": "E91",
+      "topic": "非孤立对齐",
+      "inputs": [
+        "NA-DRIFT",
+        "NA-COMPOSE"
+      ],
+      "output": "NA-SHARP",
+      "relation": "conditional",
+      "scope": "上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。",
+      "status": "本轮同序列乘积与步长渐近"
     }
   ]
 }

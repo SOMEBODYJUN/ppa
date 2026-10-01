@@ -23,3 +23,7 @@ history/sources/次单调论文研究/RL_foundations.md	§7.3 full/branchwise EB
 history/sources/次单调论文研究/RL_foundations.md	§7.4–7.5 isolated named PPA	rewritten	C45-v1 / IZ-PPA	research/canonical/isolated_zero_flatness.md#iz-ppa	重算输入输出窗口 小步门 球不变与全程递推	完整 resolvent 所有选择仍需完整纤维门
 history/sources/次单调论文研究/RL_foundations.md	§7.6 exact q factor	rewritten	C46-v1 / IZ-FACTOR	research/canonical/isolated_zero_flatness.md#iz-factor	额外正归一化残差极限才给精确 Q 因子	上阶本身不产生正因子
 history/sources/次单调论文研究/RL_foundations.md	注1.5 GX-074	rewritten	C47-v1 / DC-GAP	research/topics/path_dynamics/discrete_coverage.md#dc-gap	完整紧图对全部图点对逐算 RL 零集真 EB 和无输入球	目标仅取完整 S=K 更换目标须重证 EB
+history/sources/次单调论文研究/RL_foundations.md	§8.1 输出锚与漂移包络	rewritten	C48-v1 / NA-DRIFT	research/canonical/nonisolated_alignment.md#na-drift	用近似点对重算两投影集合 infimum 及上下包络	投影非空需对整个输入家族假设
+history/sources/次单调论文研究/RL_foundations.md	§8.2 gauge 合成	rewritten	C49-v1 / NA-COMPOSE	research/canonical/nonisolated_alignment.md#na-compose	重算同一实际输出的真 EB 小步门 gauge 定义域及全家族上界	不推出完整 resolvent 所有选择与轨道留域
+history/sources/次单调论文研究/RL_foundations.md	§8.3 无 proximinality 近似锚	rewritten	NA-APPROX	research/canonical/nonisolated_alignment.md#na-approx	正容差保证近似集非空并重算 κ 预算	近似锚 profile 仍须对实际输入家族验证
+history/sources/次单调论文研究/RL_foundations.md	§9.1 joint saturation	rewritten	C50-v1 / NA-SHARP	research/canonical/nonisolated_alignment.md#na-sharp	三个同序列正极限相乘并核超线性 EB 强制 B=1/λ	不同序列的锐指数不能相乘

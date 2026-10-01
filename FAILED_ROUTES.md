@@ -108,3 +108,9 @@
 - **尝试与机制**：由完整图上的全对反射模、非空闭零集和实际图输出的真实残差 EB，断言零点附近所有输入存在 proximal 步，从而启动局部 PPA。
 - **致命缺口**：[C47 / GX-074](research/topics/path_dynamics/discrete_coverage.md#dc-gap) 取紧图 \(K\times\{0\}\)，\(K=\{0\}\cup\{1/n\}\)。整个自然域 K 上每个 \(0<\gamma\le1\) 有全对 \(\mathrm{RL}(\lambda,\gamma,1)\)，在所有有限残差输出上 \(d(u,S)=r_F(u)=0\)，但任意零邻域有输入不在 K，完整 resolvent 的纤维为空。图闭性和全图量词都不能修复缺失的输入。
 - **可回收成果与重启门**：图上的全对模和输出 EB 各自保留；要得到每个邻近输入的轨道，另证 \(V_0\subset\operatorname{ran}(I+\lambda F)\)，还需同一分支的输出留域、兼容及总长度预算。若目标从 \(S=K\) 改为 \(\{0\}\)，旧 EB 不再成立，这属于不同命题。此路线与 F02 的“局部图不保完整纤维”是两种独立的信息门。
+
+<a id="f17"></a>
+## F17 · 两个分离的最坏指数不能相乘为锐轨道阶
+
+- **尝试与断点**：已知某些输入达到锚漂移指数 \(\theta\)，另一些图点达到残差 EB 指数 q，就断言指定映射的实际输出有锐 \(\theta q\) 阶。两个存在量词可指不同序列，且不保证选中步与锚距离同阶或这些序列都是合法近端输入。
+- **可回收结论**：[C49](research/canonical/nonisolated_alignment.md#na-compose) 在整个共同输入家族的真 EB、小步门和统一锚模下给 upper \(\theta q\)；[C50](research/canonical/nonisolated_alignment.md#na-sharp) 再要求**同一**序列上 \(a_n/r_n^\theta\)、\(t_n/a_n\)、\(s_n/t_n^q\) 的三个正有限极限，才给相应的正归一化因子。旧 §9.1 也明确区分二者。没有同序列见证时保持上阶，不写“最优”。
