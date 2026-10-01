@@ -297,6 +297,14 @@
 | E127 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-RANGE · C05-v2 去超临界幂的条件值域](canonical/local_range_without_supercriticality.md#lr-theorem) | C05-v1 同一 F,S,A,B,T,E 的所有整窗与拓扑条件、q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。；**derived-checked conditional theorem；原生模型与优先性未审** |
 | E128 | [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-FEAS · qγ=1/2 的整窗 collar 可行实例](canonical/local_range_without_supercriticality.md#lr-feasible) | n=1、F(x)=10⁴x、γ=1/2、q=1、1401 个有理格点；A,B 区间全部整窗与 collar 精确成立，说明 qγ>1 对该条件结论不必要。；**精确有理数不等式与单值拓扑条件** |
 
+## 非 tied 二参数
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E154 | [NT-OBJECT · 同图全对非 tied 二参数条件与 Minty 坐标](canonical/non_tied_cayley.md#nt-object) ∧ [PD-CAYLEY · Cayley 与成对能量等价式](canonical/parameter_dictionary.md#pd-cayley) | conditional → [NT-BALL · 平移 Cayley 球、普适锐模与步长门](canonical/non_tied_cayley.md#nt-quadratic) | 固定 λ>0、μ,ρ、同一图任意两点；无符号限制先得 NT3。另加 A=1+λμ+ρ/λ>0、Δ=1−4μρ≥0，才配方为平移 Cayley 球和单值；全类锐 C/J 模各由满 Minty 域线性图达到。Δ>0 的 NT9 是类统一步长开门，A≤0 有同输入碰撞。；**C89-v1 代数、锐取等与退化面重算** |
+| E155 | [NT-OBJECT · 同图全对非 tied 二参数条件与 Minty 坐标](canonical/non_tied_cayley.md#nt-object) | conditional → [NT-TRANSFORM · 二参数图到单调图的双射](canonical/non_tied_cayley.md#nt-transform) | 固定同图全对二参数且 Δ=1−4μρ>0；(x,v)↦(w,z) 是整个 H×H 双射，二参数条件 iff 变换图单调，包含极大性随双射保留；不需 NT9，但 Δ=0 不可除以 t。；**C90-v1 恒等式与全图包含双射重算** |
+| E156 | [NT-BALL · 平移 Cayley 球、普适锐模与步长门](canonical/non_tied_cayley.md#nt-quadratic) ∧ [HE-EXT · 同常数 Hölder 扩张与固定参数图完成](canonical/holder_extension.md#he-extension) | conditional → [NT-MAXIMAL · 同参数图极大 iff 满 Minty 域](canonical/non_tied_cayley.md#nt-maximal) | 实 Hilbert、非空完整图、同一 λ,μ,ρ 与任意两图点条件；A>0、Δ≥0 时先将平移 Cayley 映射在同常数下扩张，再逆剪切得保持同参数的全域图。全域反向由同输入唯一性；仅图包含极大 iff D=H，不给原母关系其它纤维、零点或动力。；**C91-v1 已核 Hilbert 扩张导入与同参数证明** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

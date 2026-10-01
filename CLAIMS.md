@@ -534,3 +534,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(G=(0,1,3,4)\)、循环 \(T\)、每个 \(0<p<1\)、同一个 \(P_p=(1-p)I+pT_\#\)、唯一不变律 \(\pi\) 与平方距离成本 \(C\)。另定义一次噪声中的四个逐状态独立 Bernoulli\((p)\) 开关；对**每个** \(\mu\in\Delta_4\)，仅在 \(\operatorname{Opt}_C(\mu,\pi)\) 上对其同噪声位移成本取最小 \(\Psi_{\rm ind}^2\)。于是 \(\Psi_{\rm ind}^{-1}(0)=\{\pi\}\)，且 \(W_2^2(\mu,\pi)\le[13/(p(7-6p))]\Psi_{\rm ind}(\mu)^2\)，系数全律空间锐。共同开关表示的对应锐平方系数为 C71 的 \(13/p\)。
 - **Dependencies / Evidence / Status / Related Files**：[LCR-OBJECT/SHARP](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 的全部成本、两项无交叉抵消界及取等计划独立证明；C71 提供同对象 \(C\le13A\) 的已核引理。`derived-checked`；这是本库新增表示和命题，不是历史 C71 的来源报告。
 - **Counterevidence / Scope**：核和平稳律相同不代表同步成本相同；i=j 时两分支必须使用同一个噪声，不能套独立输入公式。结论限此四点几何、固定 \(p\) 与 OT 最优计划；不推出随机轨道的收敛率或跨表示统一残差。
+
+## C89-v1 / NT-QUADRATIC-SHARP-STEP · 非 tied 二参数图的精确 Cayley 球
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实非零 Hilbert 空间、固定 \(\lambda>0,\mu,\rho\in\mathbb R\)、非空完整关系图或指定图块 \(\Gamma\)。对**任意两**图点以 \(a=\Delta x,b=\Delta v\) 要求 \(\langle a,b\rangle\ge\mu\|a\|^2+\rho\|b\|^2\)。令 \(m=\lambda\mu,s=\rho/\lambda,A=1+m+s,B=m-s,\Delta=1-4\mu\rho\)。无参数门时它等价于 \(A\|r\|^2+2B\langle d,r\rangle\le(1-m-s)\|d\|^2\)；若 \(A>0,\Delta\ge0\)，则等价于 \(\|r+(B/A)d\|\le(\sqrt\Delta/A)\|d\|\)，自然域上的 Cayley 单值，普适锐反射和近端 Lipschitz 上界分别为 \((|B|+\sqrt\Delta)/A\) 与 \((|1+2s|+\sqrt\Delta)/(2A)\)。\(\Delta>0\) 时此类统一保证单射的锐步长门是 NT9 的开区间；端点 \(A\le0\) 存在完整碰撞图。
+- **Dependencies / Evidence / Status / Related Files**：[NT-QUADRATIC/SHARP/STEP](research/canonical/non_tied_cayley.md#nt-quadratic) 的配方、完整 Minty 域线性取等图和端点反例逐项证明。来源是 9/01 ZIP `work/a_monotonicity.md` §2.1 精确单元，哈希和另一字节相同 checkpoint 见正文；`derived-checked` 限数学推导，文献新颖性未核。
+- **Counterevidence / Scope**：反射一个未平移的 Lipschitz 常数不能恢复非 tied 交叉项；只在图块得图块近端单值，不产生完整 \(J_{\lambda F}\) 的 coverage、排他或真残差 EB。\(\Delta<0\)、\(A\le0\) 不套平方根上界。
+
+## C90-v1 / NT-TRANSFORM · 二参数图到单调图的双射
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C89 的同一全对图及任意 \(\Delta=1-4\mu\rho>0\)，不另要求步长门，令 \(t=\sqrt\Delta,\nu=2\mu/(1+t),\xi=\rho/t,w=v-\nu x,z=x-\xi w\)。全部图点的线性双射 \((x,v)\mapsto(w,z)\) 将 C89 二参数图条件等价地送到单调图条件，并在整个 \(H\times H\) 保图包含；全局同 \((\mu,\rho)\) 图极大当且仅当变换图极大单调。
+- **Dependencies / Evidence / Status / Related Files**：[NT-TRANSFORM](research/canonical/non_tied_cayley.md#nt-transform) 的逆公式和 \(\langle\Delta w,\Delta z\rangle=t^{-1}(\langle a,b\rangle-\mu\|a\|^2-\rho\|b\|^2)\) 直接证明；同一 9/01 ZIP §2.1 为来源，`derived-checked`。
+- **Counterevidence / Scope**：\(\Delta=0\) 时该变换因 \(1/t\) 无定义；不得用 C91 的零判别式扩张范围替代。这里的极大性是全图、同参数的包含极大，不是局部极大或未经变换的普通极大单调。
+
+## C91-v1 / NT-MAXIMAL · 非 tied 图极大性与满 Minty 输入域
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 C89 的实 Hilbert 空间和 \(\lambda,\mu,\rho\)，假设 \(A>0,\Delta\ge0\)；对每个非空、完整或图块视作**独立完整图对象**的全对二参数图 \(\Gamma\)，全局同参数图极大当且仅当其 Minty 自然域 \(D=H\)。每个这样的图可在保持相同参数下扩张到满域；\(\Delta=0\) 亦在范围内。
+- **Dependencies / Evidence / Status / Related Files**：[NT-MAXIMAL](research/canonical/non_tied_cayley.md#nt-maximal) 将 C89 的平移 Cayley \(\sqrt\Delta/A\)-Lipschitz 映射用已核 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 的 \(\gamma=1\) Hilbert 同常数扩张后反剪切；反向用同输入唯一性。`derived-checked`；同一 9/01 ZIP §2.1 满域句是来源种子。
+- **Counterevidence / Scope**：不从局部窗口图极大推出全空间 coverage；对完整母关系的指定子图作极大扩张是新对象，不能把原关系域外纤维一并认证。满域也不产生零点、真残差 EB 或近端动力收敛。

@@ -1152,6 +1152,26 @@
       "id": "LCR-SHARP",
       "label": "表示相关的锐同步 OT 误差界",
       "file": "topics/random_markov/lazy_cycle_representations.md#lcr-sharp"
+    },
+    {
+      "id": "NT-OBJECT",
+      "label": "同图全对非 tied 二参数条件与 Minty 坐标",
+      "file": "canonical/non_tied_cayley.md#nt-object"
+    },
+    {
+      "id": "NT-BALL",
+      "label": "平移 Cayley 球、普适锐模与步长门",
+      "file": "canonical/non_tied_cayley.md#nt-quadratic"
+    },
+    {
+      "id": "NT-TRANSFORM",
+      "label": "二参数图到单调图的双射",
+      "file": "canonical/non_tied_cayley.md#nt-transform"
+    },
+    {
+      "id": "NT-MAXIMAL",
+      "label": "同参数图极大 iff 满 Minty 域",
+      "file": "canonical/non_tied_cayley.md#nt-maximal"
     }
   ],
   "edges": [
@@ -2924,6 +2944,41 @@
       "relation": "conditional",
       "scope": "固定 G=(0,1,3,4)、0<p<1 与同一 P_p、π、C；同一次随机映射的四个状态开关独立，i=j 同噪声；对每个 μ 只在 Opt_C(μ,π) 内取同步成本最小。由 C71 的 C≤13A 与新无交叉界 7C≤13B 合取得 Ψ_ind 精确零集和全律空间锐平方系数 13/[p(7−6p)]。改变表示会改变 R，不能从核身份迁移 C71 常数。",
       "status": "C88-v1 完整成本、逐边抵消和取等计划重算"
+    },
+    {
+      "id": "E154",
+      "topic": "非 tied 二参数",
+      "inputs": [
+        "NT-OBJECT",
+        "PD-CAYLEY"
+      ],
+      "output": "NT-BALL",
+      "relation": "conditional",
+      "scope": "固定 λ>0、μ,ρ、同一图任意两点；无符号限制先得 NT3。另加 A=1+λμ+ρ/λ>0、Δ=1−4μρ≥0，才配方为平移 Cayley 球和单值；全类锐 C/J 模各由满 Minty 域线性图达到。Δ>0 的 NT9 是类统一步长开门，A≤0 有同输入碰撞。",
+      "status": "C89-v1 代数、锐取等与退化面重算"
+    },
+    {
+      "id": "E155",
+      "topic": "非 tied 二参数",
+      "inputs": [
+        "NT-OBJECT"
+      ],
+      "output": "NT-TRANSFORM",
+      "relation": "conditional",
+      "scope": "固定同图全对二参数且 Δ=1−4μρ>0；(x,v)↦(w,z) 是整个 H×H 双射，二参数条件 iff 变换图单调，包含极大性随双射保留；不需 NT9，但 Δ=0 不可除以 t。",
+      "status": "C90-v1 恒等式与全图包含双射重算"
+    },
+    {
+      "id": "E156",
+      "topic": "非 tied 二参数",
+      "inputs": [
+        "NT-BALL",
+        "HE-EXT"
+      ],
+      "output": "NT-MAXIMAL",
+      "relation": "conditional",
+      "scope": "实 Hilbert、非空完整图、同一 λ,μ,ρ 与任意两图点条件；A>0、Δ≥0 时先将平移 Cayley 映射在同常数下扩张，再逆剪切得保持同参数的全域图。全域反向由同输入唯一性；仅图包含极大 iff D=H，不给原母关系其它纤维、零点或动力。",
+      "status": "C91-v1 已核 Hilbert 扩张导入与同参数证明"
     }
   ]
 }
