@@ -163,3 +163,7 @@ E134 固定**一个**互异有限状态几何、随机映射、权重和同噪�
 E136/E137 固定 \(\Theta:\mathbb R^2\to\mathbb R\) 的完整异维数图。C76 的最近逆点 HREG 线性和固定目标 MSR 半阶是不同量词；C77 对共同 \(|a|,|b|,|y|\le1/4\) 的**两变量** MR 半阶，负目标纤维开放端点只可用于计算距离，不能添入实际图。E138 记录原点连续而参考产品邻域图不局部闭，所以本证明直接用纤维，不能调用缺条件的闭图定理，也不能把此例放到 RL/Cayley 坐标。[HP-MR](topics/examples/hemiregular_piecewise_parabola.md#hp-mr)。
 
 E139/E140 固定同一 \(F=\partial|\cdot|\)，但分别以原算子完整 \(r_F(x)\) 和全输入完整近端 \(|p-J_{\lambda F}(p)|\) 作残差。C78 的局部线性系数下确界为 0，C79 在 \(|p|<\lambda\) 的最优固定点步系数为 1；E141/F27 是**不蕴含边**，不是从一个估计推出另一个估计。全图 \(\gamma=1,L=1\) 的 RL 与无界域 \(\gamma<1\) 的失败仍分别有量词，有限输入窗上的继承幂界不是全图证书。[AV-PROX](topics/examples/absolute_value_subgradient.md#av-prox)。
+
+## E142：固定有限状态残差的正则性与 EB 分离
+
+E142 保持 C15 的**同一**有限互异状态、核、\(C,R\) 与所有不变目标律。对每对边缘，\(C\)-最优计划集非空；[Hoffman 的固定矩阵、一致右端版本](LITERATURE.md#lit-hoffman-1952) 加最大耦合的 \(C\)-成本变化界，控制最优计划集的 Hausdorff 变化。再对同一紧 \(\mathcal I\) 取小，得到 \(\Phi=\Psi^2\) 在**整个** \(\Delta_N\) 全局 Lipschitz；有限 tight-edge 分支与该连续性合取才给连续分片仿射。此边不以 exact-zero 或顶点判据为输入，也不推出 C15 的 EB；图中的 FS-CELLS 输入表示可用于有限分片表示的已核代数，而非把 C15 的结论当作正则性假设。空零面时 [FS-HOFFMAN](topics/random_markov/finite_state_certificate.md#fs-hoffman) 另用正成本下界，不把不一致系统送入外部定理。

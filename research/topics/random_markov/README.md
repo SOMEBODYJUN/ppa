@@ -1,6 +1,6 @@
 # 随机与 Markov 的独立对象
 
-[固定有限状态顶点证书](finite_state_certificate.md) 为原 C15 摘要补上同一同步 OT 残差的完整 LP 对偶 tight-edge 证明、精确零集与锐全域误差界；调用 [惰性四循环](lazy_cycle_ot.md) 的具体常数前，先核其内层耦合仍为原成本的最优计划。两点翻转说明 C15 的误差界不能直接宣称动力收敛。
+[固定有限状态顶点证书](finite_state_certificate.md) 为原 C15 摘要补上同一同步 OT 残差的完整 LP 对偶 tight-edge 证明、精确零集与锐全域误差界；同页 [FS-HOFFMAN](finite_state_certificate.md#fs-hoffman) 是非锐备用证明，[C80](finite_state_certificate.md#fs-regularity) 另证 \(\Psi^2\) 连续分片仿射且全域 Lipschitz，**不需要**精确零集条件。调用 [惰性四循环](lazy_cycle_ot.md) 的具体常数前，先核其内层耦合仍为原成本的最优计划。两点翻转说明 C15 的误差界不能直接宣称动力收敛。
 
 [固定目标全局近端的选择接缝](proximal_selection_seam.md)给出吸收律、非乘积二维图、有限长非不变极限及真实 \(W_2\) law-step 的局部 gauge 障碍。它使用**同一个目标函数的全局近端最小解**及指定 Borel 核。
 

@@ -98,7 +98,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定有限状态几何、随机映射与概率，C14 的同一 \(\Psi\)；枚举最优运输对偶 tight-edge 图产生的有限计划多面体，令 \(\mathcal V\) 为全部顶点，\(E(\mu)=d_{W_2}(\mu,\mathcal I)^2\)，\(R\cdot v\) 为同步残差成本。
 - **Conclusion**：\(\Psi^{-1}(0)=\mathcal I\) 当且仅当每个 \(v\in\mathcal V\) 且 \(R\cdot v=0\) 的行边缘在 \(\mathcal I\)，当且仅当存在 \(B<\infty\) 对**所有**律有 \(E(\mu)\le B\Psi(\mu)^2\)；最佳平方系数为 \(\max_{v:R\cdot v>0}E(r(v))/(R\cdot v)\)，空集最大值 0。
-- **Dependencies / Evidence / Objections / Status / Related Files**：[FS-CELLS/THEOREM](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 独立重建 LP 对偶有限 tight-edge 分支、完整耦合与凸目标顶点证明，状态 `derived-checked`；[cone_markov CM-FINITE](research/cone_markov.md#m-fin) 是早期摘要，来源 CM-M Theorem F。此处 \(G\) 有有限个互异点，\(R\) 由同噪声成本给定，\(\mathcal I\) 遍历所有不变律；没有暗加最近不变律或混合性。只针对固定数据，不承诺多项式算法、动力收敛或无限状态推广。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[FS-CELLS/THEOREM](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 独立重建 LP 对偶有限 tight-edge 分支、完整耦合与凸目标顶点证明；[FS-HOFFMAN](research/topics/random_markov/finite_state_certificate.md#fs-hoffman) 用非空零面的 Hoffman 界及空零面的紧性提供另一个非锐存在性证明，状态 `derived-checked`。[cone_markov CM-FINITE](research/cone_markov.md#m-fin) 是早期摘要，来源 CM-M Theorem F。此处 \(G\) 有有限个互异点，\(R\) 由同噪声成本给定，\(\mathcal I\) 遍历所有不变律；没有暗加最近不变律或混合性。只针对固定数据，不承诺多项式算法、动力收敛或无限状态推广。
 
 ## C16 · 匹配公共接口下的 LT→RLEB 能量证书
 
@@ -480,3 +480,9 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C78 同一完整关系，固定每个 \(\lambda>0\)，全输入 \(J_{\lambda F}(p)=\operatorname{sgn}(p)(|p|-\lambda)_+\)。在全部 \(|p|<\lambda\)，\(\operatorname{Fix}J=\{0\}\)，且 \(d(p,\operatorname{Fix}J)=|p-J(p)|=|p|\)，局部步残差线性 EB 锐系数 1、一步进入零点。全图反射 \(2J-I\) 的 Lipschitz/全对线性 RL 锐常数 1；无界全图的任何 \(0<\gamma<1\) 有限 Hölder 常数失败。
 - **Dependencies / Evidence / Status**：[AV-PROX](research/topics/examples/absolute_value_subgradient.md#av-prox) 完整解近端包含式及分段反射证明，`derived-checked`。
 - **Counterevidence / Scope**：原算子残差局部系数下确界 0 不转移到近端步残差；全域步 EB 不成立，局部 \(\gamma<1\) 可继承界不表示全图次线性 RL。
+
+## C80-v1 / FS-REGULARITY · 有限状态同步残差的连续分片仿射性
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定有限互异状态 \(G=\{g_1,\ldots,g_N\}\subset\mathbb R^d\)、有限随机自映射与权重、同噪声成本 \(R\)、平方欧氏运输成本 \(C\)、**全部**不变律 \(\mathcal I\)，以及 C15 (FS2) 的原始嵌套最优耦合残差 \(\Phi=\Psi^2\)。对**全部** \(\mu,\mu'\in\Delta_N\)，存在依赖固定系统的 \(L<\infty\)，使 \(|\Phi(\mu)-\Phi(\mu')|\le L\|\mu-\mu'\|_1\)；\(\Phi\) 是有限连续分片仿射函数，且 \(|\Psi(\mu)-\Psi(\mu')|\le\sqrt L\|\mu-\mu'\|_1^{1/2}\)。不以 C15 的 exact-zero 判据为前提。
+- **Dependencies / Evidence / Status / Related Files**：[FS-REGULARITY](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 的最大耦合成本估计、固定系数最优计划多面体 Hoffman 界、有限 LP 分支细分；[LIT-HOFFMAN-1952](research/LITERATURE.md#lit-hoffman-1952) 逐条件导入。来源 9/14 有限状态稿 §6，但证明由本库重写；`derived-checked` 限固定有限数据。§5 的 [FS-HOFFMAN](research/topics/random_markov/finite_state_certificate.md#fs-hoffman) 是同一 C15 存在性结论的独立非锐证明，不改变 C15 身份。
+- **Counterevidence / Objections / Scope**：\(\Phi\) 未被证明凸；嵌套最小化本身不能保证连续性。\(L\) 不跨核或状态集统一，\(\Psi\) 的半阶是可用上模而未宣称各模型均锐；此正则性单独不蕴含 \(\Phi^{-1}(0)=\mathcal I\) 或 EB/动力收敛。原稿先行性与无限状态推广未核。

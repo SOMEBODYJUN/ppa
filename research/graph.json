@@ -1029,6 +1029,11 @@
       "file": "topics/random_markov/finite_state_certificate.md#fs-cells"
     },
     {
+      "id": "FS-REGULARITY",
+      "label": "固定有限状态同步残差连续分片仿射",
+      "file": "topics/random_markov/finite_state_certificate.md#fs-regularity"
+    },
+    {
       "id": "FS-BOUNDARY",
       "label": "两点翻转的 EB 与动力分离",
       "file": "topics/random_markov/finite_state_certificate.md#fs-boundary"
@@ -2705,6 +2710,15 @@
       "relation": "limits",
       "scope": "同一完整图的原算子残差局部系数下确界 0，近端步残差局部锐系数 1；不同残差不可互授。",
       "status": "F27/C78–C79"
+    },
+    {
+      "id": "E142",
+      "topic": "有限状态 Markov",
+      "inputs": ["FS-OBJECT", "FS-CELLS"],
+      "output": "FS-REGULARITY",
+      "relation": "conditional",
+      "scope": "固定有限互异状态和同噪声 R；C-最优计划集对所有边缘非空、固定系数 Hoffman 界和运输成本 Lipschitz 给 Φ=Ψ² 全域 Lipschitz；有限 LP 分支加连续性给分片仿射。不需 exact-zero 判据，系数不跨系统统一。",
+      "status": "C80-v1 重算；LIT-HOFFMAN-1952 一手适用门"
     }
   ]
 }

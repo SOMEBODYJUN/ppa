@@ -2,6 +2,13 @@
 
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
+<a id="lit-hoffman-1952"></a>
+## LIT-HOFFMAN-1952 · 固定线性系统的一致右端误差界
+
+**Paper fact.** A. J. Hoffman, “On Approximate Solutions of Systems of Linear Inequalities,” *Journal of Research of the National Bureau of Standards* **49** (1952), 263–265, [NIST 原文](https://nvlpubs.nist.gov/nistpubs/jres/049/4/V49.N04.A05.pdf), DOI [10.6028/jres.049.027](https://doi.org/10.6028/jres.049.027)。印刷页 263，§2 主定理：对**有解**的有限线性不等式系统与允许的正齐次距离量尺，存在误差界常数，使到可行集的距离受违反量控制。证明在页 263–264 通过有限活动行子集取常数；因此固定左端矩阵时可在所有**有解的**右端间选取同一常数。等式可写成两侧不等式，在有限维用所需的 \(\ell^1\) 范数。
+
+**Project mapping / scope.** [FS-HOFFMAN](topics/random_markov/finite_state_certificate.md#fs-hoffman) 的零面系统只在 \(Z_k\ne\varnothing\) 时调用；空零面以紧性和正成本下界替代。[FS-REGULARITY](topics/random_markov/finite_state_certificate.md#fs-regularity) 对每个目标边缘 \(b'\) 的最优计划集 \(\mathsf S(b')\) 非空，且所有系统的左端矩阵相同，右端 \((b',w(b'))\) 变动。该文不证明有限状态模型的最优耦合表示、锐常数、分片仿射结构或跨模型统一模，这些是项目内另行推导。
+
 <a id="lit-alm-2021"></a>
 ## LIT-ALM-2021 · Hilbert 间同常数 Lipschitz 扩张
 

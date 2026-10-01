@@ -277,6 +277,7 @@
 | E126 | [LC-OBJECT · 四状态惰性循环与同步 OT 残差](topics/random_markov/lazy_cycle_ot.md#lc-object) | limits → [LC-RELAX · 去最优运输约束后的假零点](topics/random_markov/lazy_cycle_ot.md#lc-relax) | 同一核和 μ+=(1/2,1/4,0,1/4)；允许非 C-最优耦合时残差为零，但原 Ψ²=p/2；残差对象变化不能继承精确零集。；**C71 的精确四边耦合反例** |
 | E134 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) | conditional → [FS-CELLS · 有限 tight-edge 多面体精确覆盖](topics/random_markov/finite_state_certificate.md#fs-cells) | 有限互异 G、固定 P,C,R；对偶归一化后的全部 tight-edge 计划、列边缘遍历所有不变律，恰为 C-最优合法计划的有限并。；**C15 有限 LP 对偶及互补松弛重算** |
 | E135 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) ∧ [M-FIN · 固定有限状态精确零集与锐顶点 EB](topics/random_markov/finite_state_certificate.md#fs-theorem) | limits → [FS-BOUNDARY · 两点翻转的 EB 与动力分离](topics/random_markov/finite_state_certificate.md#fs-boundary) | 两点交换核精确 E=Ψ²/4、K*=1/2，非平稳律周期翻转；精确零集和锐线性 EB 不推出律动力收敛。；**C15 同对象动力边界** |
+| E142 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) ∧ [FS-CELLS · 有限 tight-edge 多面体精确覆盖](topics/random_markov/finite_state_certificate.md#fs-cells) | conditional → [FS-REGULARITY · 固定有限状态同步残差连续分片仿射](topics/random_markov/finite_state_certificate.md#fs-regularity) | 固定有限互异状态和同噪声 R；C-最优计划集对所有边缘非空、固定系数 Hoffman 界和运输成本 Lipschitz 给 Φ=Ψ² 全域 Lipschitz；有限 LP 分支加连续性给分片仿射。不需 exact-zero 判据，系数不跨系统统一。；**C80-v1 重算；LIT-HOFFMAN-1952 一手适用门** |
 
 ## 局部值域的拓扑链
 

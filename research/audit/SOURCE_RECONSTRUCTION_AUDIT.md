@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：57 行逐源数学单元有精确去向，本批 C15 一般顶点证明与 GX-076/077 的去向见文末；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
+**当前覆盖读法**：59 行逐源数学单元有精确去向，本批有限状态 §5/§6 的去向见文末；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -171,8 +171,14 @@
 
 ## 增量：一般有限状态证书与 GX-076/077
 
-[C15](../topics/random_markov/finite_state_certificate.md#fs-theorem) 的原摘要本轮补成完整 finite LP 对偶 tight-edge 证明，保持同一 Claim 版本；两点翻转单列误差界不推收敛的动力边界。来源 §§1–4、§7 与 §8 两个单元进入逐源表；§5 Hoffman、§6 连续性仍未验收。C71 四状态模型继续保留自己的直接锐常数证明。
+[C15](../topics/random_markov/finite_state_certificate.md#fs-theorem) 的原摘要本轮补成完整 finite LP 对偶 tight-edge 证明，保持同一 Claim 版本；两点翻转单列误差界不推收敛的动力边界。来源 §§1–4、§7 与 §8 两个单元进入逐源表；§5/§6 后于下段单列去向。C71 四状态模型继续保留自己的直接锐常数证明。
 
 [C76/C77](../topics/examples/hemiregular_piecewise_parabola.md#hp-object) 从 GX-076 重算异维数映射的锐固定目标/两变量半阶与最近逆点线性模；[C78/C79](../topics/examples/absolute_value_subgradient.md#av-object) 从 GX-077 重算完整原算子残差跳跃与近端步残差锐模 1。两张对象卡不把历史 `verified` 字样当成数学证据；前者所引一手 Example 2.3 只支持定性对象/对照。盲读指出的 C69 总账硬支持参数 \(0\le t\le R\) 和 C31 的 M1 过期状态已修正。
 
 本轮空白接收可以仅靠规范层恢复收敛链、候选与开放义务，但指出总体规模比较尚无冻结的共同母空间与量尺；这属于实际研究问题未完成。历史 I-097–099/I-102 原证明缺件属于来源材料缺口。其余逐源覆盖属于尚未做完的清洗工作，不能一概归因于缺件。
+
+## 增量：有限状态备用证明与全域正则性
+
+[FS-HOFFMAN](../topics/random_markov/finite_state_certificate.md#fs-hoffman) 重写同一 C15 的非锐备用证据：非空零面用 Hoffman，空零面用紧性正下界。[C80](../topics/random_markov/finite_state_certificate.md#fs-regularity) 在固定有限状态上分离出 \(\Phi=\Psi^2\) 的全域 Lipschitz 与连续分片仿射性，不用 C15 的零集鉴别；[Hoffman 原文](../LITERATURE.md#lit-hoffman-1952) 的固定矩阵且目标系统有解的接口已核。来源 §5、§6 两行只关闭这两个单元，原稿其它例及先行性依然未审。
+
+后续优先可核：9/01 ZIP `work/c_gx066_077.md` GX-068 的两变量正则观察（现 C66–C68 只关闭真残差及跨支部分）；另一 checkpoint ZIP `work/c_gx027_039.md` GX-032 的受限 Minty 域 LT 边界；以及 `work/a_monotonicity.md` §2.1 的非 tied 双参数 Cayley 字典。它们是**已定位的材料与可执行清洗**，并非缺件。来源级 `unreviewed` 目前同时覆盖未建语义索引与已有部分逐源去向，不能从该字段估算验收比例；完整关闭前须对声明的文件/成员 hash 范围建立穷尽的单元表，每个单元给去向及证据层。`deferred` 可完成分类，但数学义务仍开放。

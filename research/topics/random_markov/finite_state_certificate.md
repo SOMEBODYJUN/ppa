@@ -122,3 +122,74 @@ E(\mu)\le\sum_v\alpha_v E(r(v))
 
 本页证明有限顶点覆盖与锐常数，不依赖 Hoffman 界或 \(\Phi\) 的
 连续性；来源中其它性质及外部新颖性仍待核。
+
+<a id="fs-hoffman"></a>
+## 同一 C15 的备用证明：零面与空零面分开处理
+
+令 \(D=\max_{i,j}\|g_i-g_j\|\)，对每个非空分支 \(\mathcal F_k\)
+置 \(Z_k=\{\eta\in\mathcal F_k:R\cdot\eta=0\}\)。假设 C15 的零顶点
+判据成立。若 \(Z_k\ne\varnothing\)，[LIT-HOFFMAN-1952](../../LITERATURE.md#lit-hoffman-1952)
+应用到定义 \(Z_k\) 的**固定系数矩阵且一致**的线性系统；对已经
+属于 \(\mathcal F_k\) 的计划，唯一新增的等式违反量是非负的
+\(R\cdot\eta\)。存在只依赖该固定分支数据的 \(H_k<\infty\)，使
+\(\operatorname{dist}_1(\eta,Z_k)\le H_k R\cdot\eta\)。取最近的
+\(\eta_0\in Z_k\)，零成本顶点判据及凸分解给
+\(r(\eta_0)\in\mathcal I\)。有限状态的最大耦合及边缘化的
+\(\ell^1\) 收缩给
+\[
+ E(r(\eta))\le W_2^2(r(\eta),r(\eta_0))
+ \le {D^2\over2}\|r(\eta)-r(\eta_0)\|_1
+ \le {D^2H_k\over2}R\cdot\eta .                 \tag{FS8}
+\]
+若 \(Z_k=\varnothing\)，**不可**对这个不一致系统调用 Hoffman；
+紧性给 \(m_k=\min_{\eta\in\mathcal F_k}R\cdot\eta>0\)，且
+\(E\le D^2\)，所以用 \(D^2/m_k\) 作该分支的系数。有限分支的
+最大值再用于 (FS5) 的取到的最优计划，独立地证明 C15 中系数
+**存在**，但通常不给 (FS6) 的锐值。\(D=0\) 的单状态情形两边
+恒为零；无须除以 \(D\)。
+
+<a id="fs-regularity"></a>
+## C80-v1：固定有限系统的残差平方全局正则性
+
+在 (FS1)–(FS2) 的固定数据下，\(\Phi=\Psi^2\) 在整个
+\(\Delta_N\) 上是全局 Lipschitz 的连续分片仿射函数，**不要求**
+零顶点判据、唯一不变律或 Markov 动力收敛；因此 \(\Psi\) 至少
+全局 \(1/2\)-Hölder。此处的常数可以依赖所有固定状态、核和成本。
+
+为逐项验证，先令 \(b=(\mu,\pi)\in\Delta_N^2\)，
+\(w(b)=\min_{\eta\in\Pi(\mu,\pi)}C\cdot\eta\)。把旧最优计划的
+两个坐标分别经最大耦合的转移核改成 \(\mu',\pi'\)：任一坐标
+改变的概率不超过两项 total variation 之和，在改变事件上成本
+变化绝对值至多 \(D^2\)。交换旧新方向得到
+\[
+ |w(b)-w(b')|\le {D^2\over2}\|b-b'\|_1.       \tag{FS9}
+\]
+最优计划集 \(\mathsf S(b)=\{\eta\ge0:A\eta=b,\ C\cdot\eta=w(b)\}\)
+对每个 \(b\) 非空、紧。其不等式的**左端系数矩阵固定**，右端只
+含 \(b,w(b)\)。对任意 \(\eta\in\mathsf S(b)\)，将 Hoffman 界
+应用于一致的目标系统 \(\mathsf S(b')\)，得一个不依赖两对边缘
+的有限常数 \(H\)，满足
+\[
+ \operatorname{dist}_1(\eta,\mathsf S(b'))
+ \le H\bigl(\|b-b'\|_1+|w(b)-w(b')|\bigr)
+ \le H(1+D^2/2)\|b-b'\|_1.                     \tag{FS10}
+\]
+反向同理。由于 \(R\cdot\eta\) 的 \(\ell^1\) Lipschitz 常数为
+\(\|R\|_\infty\)，
+\(h(\mu,\pi)=\min_{\eta\in\mathsf S(\mu,\pi)}R\cdot\eta\)
+具有常数至多 \(L=\|R\|_\infty H(1+D^2/2)\)。对**同一个**紧
+集合 \(\mathcal I\) 取 \(\min_\pi h(\mu,\pi)\)，给
+\(|\Phi(\mu)-\Phi(\mu')|\le L\|\mu-\mu'\|_1\)；平方根不等式
+给 \(|\Psi(\mu)-\Psi(\mu')|\le\sqrt L\|\mu-\mu'\|_1^{1/2}\)。
+
+每个 (FS5) 分支是定义在多面体投影上的线性规划值函数：在其
+有限定义域内为凸分片仿射函数。有限分支的逐点下包络在有限
+超平面细分的相对开胞腔上仿射；刚证得的全局连续性把它延到
+胞腔闭包，得到有限的连续分片仿射表示。**不能**从每支凸性
+推 \(\Phi\) 凸，也不能只因它是嵌套最小化便假设连续。
+
+来源是 9/14 同一有限状态稿 §5–§6；上面的 Hoffman 证明是 C15
+的替代证据，C80 是独立的正则性命题。Hoffman 的原文只提供
+固定矩阵、**有解**右端的距离界；(FS10) 逐目标核有解，(FS8)
+对空零面改用紧性。外部优先权、无限状态极限与跨固定系统的
+统一 Lipschitz 系数未由此验收。
