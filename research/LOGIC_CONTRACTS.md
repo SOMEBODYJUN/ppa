@@ -205,3 +205,15 @@ E149/E150 固定**受限完整关系** \(F_U(x)=\{-\sqrt x\}\) 当 \(0\le x\le1/
 E169 固定**完整** \(V:L^2(0,1)\to L^2(0,1)\)、\(S=\{0\}\)；对每个局部输入半径、残差窗、右极限为零的 gauge 和系数，零均值/高频方向分别用于图几何与**原算子真残差**障碍。其非 rectangular 见证独立于任何外部 BWY 等价。E170 另固定每个 \(\lambda>0\) 的全域完整 \(J_{\lambda V}\)：\(\|J^k\|=1\) 对**每个有限整数** \(k\)，但 \(J^kp\to0\) 对**每个固定** \(p\) 强成立；后一结论需能量式和稠密值域。近端**输入步残差**无消失 gauge EB 用高频输入重新证明，不能从 E169 原算子残差的失败形式迁移。[VO-GRAPH/PROX](topics/examples/volterra_integration.md#vo-graph)。
 
 E171 固定完整 \(F(x)=-x^3\) 和每个固定 \(\lambda>0\)：完整 \(J(0)\) 的三根直接否定零消失全图 RL。**另定义** \(G_M\)、要求 \(3\lambda M^2<1\)，才有该图块内任意两点的锐线性模和仅在 \(D_M\) 上的指定单值 \(T_M\)；图块结论不能改名为完整 \(J\)。E172 的固定零目标真残差与两目标完整逆像是全图命题，其系数分别为 1 与 \(2^{2/3}\)；路径结论却只覆盖 \(T_M\) 的非零逐步合法输入，有限步离开 \(D_M\)。正三次 EX03 的符号对应只传递残差和逆像模，不传递 Minty 分支或轨道。[NC-BRANCH/REGULARITY](topics/examples/negative_cubic_branch.md#nc-branch)。
+
+## E173–E174：极点支的完整近端、残差与逐路径门
+
+E173 对**同一完整关系** \(F(0)=\{0\},F(x)=\{-1/x\}\)（\(0<x\le\varepsilon\)）及每个固定 \(\lambda>0\)，分别检查全部 Minty 纤维和任意两图点。\(\lambda\le\varepsilon^2\) 时 \(J(0)=\{0,\sqrt\lambda\}\)，即使 \(\lambda<\varepsilon^2\) 有零输入球，也没有零消失全对模；\(\lambda>\varepsilon^2\) 时全图锐线性 RL 成立，但零输入是自然域孤立点。输入局部 hypo 失败不等于零图点附近的**乘积图窗**失败，后者只有一个图点。[IP-MINTY](topics/examples/isolated_pole_relation.md#ip-minty)。
+
+E174 另用同一完整图的真全纤维残差 \(r_F(x)=1/x\)、小目标的**全部空逆纤维**和完整 J 的逐步合法路径证明 C109；任意 \(q>0\) 的固定目标局部 EB 系数 0 只是缩窗下确界。即使 \(\lambda>2\varepsilon^2\) 时 \(J\) 在自然域上的锐 Lipschitz 模小于 1，所有非零初值仍不能无限留在该域；算子压缩与算法留域不是一条蕴含。[IP-RESIDUAL/PATH](topics/examples/isolated_pole_relation.md#ip-residual)。
+
+## E175–E176：阶梯图的算术纤维、完整残差与缺失覆盖
+
+E175 固定完整 \(F_\delta(0)=\{0\}\)、正负支各有有理/无理两个输出水平、\(0<\delta<1/2\)，要求**所有**同一 \(\lambda\) 的完整图点对。\(\lambda>\delta\) 给锐全图线性模；\(\lambda\le\delta\) 的反射差不随输入差趋零。\(\lambda<\delta\) 的有理步长虽然 J 单值，跨算术类型仍不连续；无理步长有真正同输入双输出。不能用“无精确碰撞”代替全对零消失模，也不能由零图点局部闭推出输入覆盖。[RS-FIBERS/RL](topics/examples/rational_irrational_staircase.md#gx056-fibers)。
+
+E176 对同一原算子的真零残差 \(r_F(x)=c(x)\) 与**完整近端输入最小步残差** \(s_\lambda(p)\) 分别作 EB：前者任意正幂的局部系数下确界 0，后者在整个自然域的锐线性系数 \(1+\delta/\lambda\)。后者必须对每个输入取**全部近端输出**的最小距离，不能只挑一级分支；每个非零合法步使绝对输入至少降 \(\lambda\)，最终因空纤维终止，而零输入是唯一无限轨道。与 C78/C79 只共享残差跳跃，逆像/coverage/路径不同。[RS-RESIDUAL/PATH](topics/examples/rational_irrational_staircase.md#gx056-residual)。

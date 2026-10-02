@@ -648,3 +648,27 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C106 同一完整图 \(S=\{0\}\)，对全部 \(x\)，\(d(x,S)=r_F(x)^{1/3}\)，固定零目标最大局部幂 \(1/3\) 锐系数 1；完整逆像两目标 \(1/3\)-Hölder 锐全局与原点局部系数 \(2^{2/3}\)。对 C106 的**受限** \(T_M\) 的每个非零合法初值，逐步留在 \(D_M\) 的路径只能有限步延续；零路径恒零。
 - **Dependencies / Evidence / Status / Related Files**：[NC-REGULARITY](research/topics/examples/negative_cubic_branch.md#nc-regularity) 的完整真残差、立方差和单调路径反证；`derived-checked`。残差与逆像模也可由已核 EX03 的 \(x^3\) 经符号变换得出；路径和完整图碰撞需另算。
 - **Counterevidence / Scope**：受限路径越域不表示完整多值近端每条路径都如此；固定目标系数 1 不等于两目标系数。全图碰撞、局部图块估计与零目标 EB 不能拼成完整 PPA 收敛证书。
+
+## C108-v1 / IP-MINTY · 孤立零图点与极点支的全步长完整纤维
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实数空间、固定 \(0<\varepsilon<1\)，完整关系 \(F(0)=\{0\},F(x)=\{-1/x\}\) 对 \(0<x\le\varepsilon\)、其余为空；定义域 \([0,\varepsilon]\) 连通、完整图闭但零图点孤立。对每个固定 \(\lambda>0\)，\(D_\lambda=(-\infty,\varepsilon-\lambda/\varepsilon]\cup\{0\}\)；当 \(\lambda\le\varepsilon^2\) 时 \(J_{\lambda F}(0)=\{0,\sqrt\lambda\}\)，故任何零消失全对 RL 失败；当 \(\lambda>\varepsilon^2\) 时完整 J 单值、全图锐线性 RL 为 \((\lambda+\varepsilon^2)/(\lambda-\varepsilon^2)\)，锐近端 Lipschitz 模为 \(\varepsilon^2/(\lambda-\varepsilon^2)\)，全图次线性幂 RL 仍失败。
+- **Dependencies / Evidence / Status / Related Files**：[IP-MINTY](research/topics/examples/isolated_pole_relation.md#ip-minty) 从全部图点与完整纤维重算，`derived-checked`；来源 9/01 ZIP `work/c_gx053_065.md` GX-055 及同包 `work/b_monotonicity_gaps.md` MGB-05，仅对象和旧断言作线索。
+- **Counterevidence / Scope**：\(\lambda<\varepsilon^2\) 有零输入球却同输入碰撞；\(\lambda>\varepsilon^2\) 全对线性模成立却无零输入球。历史“disconnected domain”应为“disconnected graph”；仅限输入的局部 hypomonotonicity 失败与乘积图窗仅有零点的真空条件不得混同。历史命名与先行性未核。
+
+## C109-v1 / IP-RESIDUAL-PATH · 残差逃逸、空目标纤维与路径留域
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C108 的同一完整关系和 \(S=\{0\}\)，每个 \(q>0\)、全部 \(0<x\le\varepsilon\) 有 \(d(x,S)/r_F(x)^q=x^{q+1}\)；固定零目标的每个正幂局部 EB 系数下确界为 0，非退化输入窗不以系数 0 取到。每个充分小的非零目标的完整逆像为空，所以两变量 MR/SMR 均失败。对**每个** \(\lambda>0\) 及每条完整 J 的逐步合法路径，唯一无限路径是恒零路径；任一非零初值及从零迟后选极点支的路径均有限步离自然输入域。
+- **Dependencies / Evidence / Status / Related Files**：[IP-RESIDUAL/PATH](research/topics/examples/isolated_pole_relation.md#ip-residual) 由完整残差、逆纤维和逐步输入递增预算证明，依赖 C108 的全部 J 纤维；`derived-checked`。来源 GX-055 只报告固定目标与 LT 观察，路径分类为本库新增推导。
+- **Counterevidence / Scope**：\(\lambda>2\varepsilon^2\) 时完整 J 在其自然域锐 Lipschitz 模小于 1，仍非自然域自映射；输出小残差窗口仅见零图点，不能借固定目标零系数断言附近非零轨道收敛。域外 \(+\infty\) 不作 \(0\cdot\infty\) 运算。
+
+## C110-v1 / RS-FIBERS-RL · 算术阶梯的完整近端纤维和锐全对门槛
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实完整关系 \(F_\delta(0)=\{0\}\)、\(F_\delta(x)=\{\operatorname{sgn}(x)c(x)\}\) 对 \(0<|x|<\delta<1/2\)，\(c=1\) 于有理数、\(c=2\) 于无理数，其余点空。对**每个固定** \(\lambda>0\)，完整 \(J\) 的四个非零输入簇和每个纤维由 (RS4)–(RS6) 给出，\(D_\lambda\cap(-\lambda,\lambda)=\{0\}\)。全图全对线性 RL 当且仅当 \(\lambda>\delta\)，锐 \(L=(\lambda+\delta)/(\lambda-\delta)\)；\(0<\lambda\le\delta\) 时任何零消失反射模失败。若 \(0<\lambda<\delta\)，有理步长的完整 J 单值但不连续，无理步长在重叠窗有精确多值碰撞；临界步长单值却有不兼容的遗漏端点极限。
+- **Dependencies / Evidence / Status / Related Files**：[RS-OBJECT/FIBERS/RL](research/topics/examples/rational_irrational_staircase.md#gx056-fibers) 以四个算术水平及全部图点对直接证明，`derived-checked`；来源 9/01 ZIP `work/c_gx053_065.md` GX-056，同字节早期 checkpoint 仅是重复证据。历史较松的 \((1+2\delta)/(1-2\delta)\) 是非锐安全界。
+- **Counterevidence / Scope**：图在零图点附近的**输入输出联合窗**局部闭、在非零图点不局部闭；这不提供零点输入球或近端连续性。次线性全图常数只由有界尺度继承，未核锐值；历史命名和外部先行性未核。
+
+## C111-v1 / RS-RESIDUAL-PATH · 阶梯的真残差与所有合法路径
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C110 同一完整图，\(S=\{0\}\)，任意 \(q>0\) 与 \(0<\eta\le\delta\)，在 \(|x|<\eta\) 的固定零目标真残差 EB 最小系数是 \(\eta\)，故缩窗下确界 0；邻近非零目标的完整逆像为空，MR/SMR 失败。对每个 \(\lambda>0\)，完整近端**最小步残差** \(s_\lambda(p)=d(p,J_{\lambda F}(p))\) 在自然域上给锐 \(|p|\le(1+\delta/\lambda)s_\lambda(p)\)。每条从非零合法输入出发的完整 J 路径都有限步终止、不能达到零；从零唯一无限路径恒零；\(\lambda\ge\delta\) 时每个非零输入恰有一步。
+- **Dependencies / Evidence / Status / Related Files**：[RS-RESIDUAL/PATH](research/topics/examples/rational_irrational_staircase.md#gx056-residual) 的全纤维、取等序列及每步位移 \(\ge\lambda\) 证明；依赖 C110 的完整纤维，`derived-checked`。原稿 GX-056 的真残差与全对模为线索，最小步锐系数和算术路径边界由本库推导。
+- **Counterevidence / Scope**：真残差跳跃的零系数下确界与 C78/C79 的绝对值次梯度相似，但此图缺完整目标纤维与近零输入覆盖；步残差、MR 和路径不能由残差跳跃类比转授。端点 \(\pm\delta\) 未包含，非零图点的闭性和历史二参数区仍待核。
