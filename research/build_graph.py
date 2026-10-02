@@ -1,5 +1,4 @@
 """Validate the mathematical hypergraph and generate its Markdown/HTML views."""
-import html
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -54,50 +53,18 @@ md += [
 ]
 (ROOT / "HYPERGRAPH.md").write_text("\n".join(md), encoding="utf-8")
 
-def esc(s):
-    return html.escape(str(s), quote=True)
-
-cards = []
-for e in data["edges"]:
-    names = [nodes[i]["label"] for i in e["inputs"]]
-    search = " ".join([e["id"], e["topic"], e["scope"], e["status"], nodes[e["output"]]["label"]] + names).lower()
-    inputs = " <strong>∧</strong> ".join(
-        f'<a class="node" href="{esc(nodes[i]["file"])}">{esc(i)} · {esc(nodes[i]["label"])}</a>'
-        for i in e["inputs"])
-    out = nodes[e["output"]]
-    cards.append(
-        f'<article class="edge" data-topic="{esc(e["topic"])}" data-search="{esc(search)}">'
-        f'<div class="tag">{esc(e["id"])} · {esc(e["topic"])} · {esc(e["relation"])}</div>'
-        f'<div class="equation">{inputs} <b>→</b> '
-        f'<a class="node output" href="{esc(out["file"])}">{esc(e["output"])} · {esc(out["label"])}</a></div>'
-        f'<p>{esc(e["scope"])}</p><small>{esc(e["status"])}</small></article>')
-buttons = '<button data-topic="*" class="active">全部</button>' + "".join(
-    f'<button data-topic="{esc(t)}">{esc(t)} · {len(groups[t])}</button>' for t in groups)
-page = """<!doctype html><html lang="zh-CN"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>PPA 数学超边图</title>
-<style>
-:root{--ink:#182a2e;--muted:#53696d;--bg:#f5f5f0;--line:#c8d5d0;--accent:#12675f}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Noto Sans CJK SC",sans-serif}
-header{padding:2.5rem max(1.5rem,calc((100vw - 1100px)/2));background:#143137;color:#f3f5ef}
-h1{margin:0;font-size:clamp(1.8rem,4vw,3rem)}header p{max-width:860px;margin:.5rem 0;color:#d5e4dc}header a{color:#b6e9d6}
-main{max-width:1140px;margin:auto;padding:1.5rem}.controls{position:sticky;top:0;background:var(--bg);padding:.8rem 0;border-bottom:1px solid var(--line)}
-input{width:100%;font:inherit;padding:.65rem;border:1px solid var(--line);border-radius:8px}.filters{display:flex;gap:.4rem;flex-wrap:wrap;margin:.75rem 0}
-button{background:white;border:1px solid var(--line);border-radius:16px;padding:.3rem .7rem;cursor:pointer}
-button.active{background:var(--accent);color:white}#count{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,500px),1fr));gap:.85rem}
-.edge{background:white;border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:1rem}.tag{font-size:.85rem;color:var(--accent);font-weight:700}
-.equation{margin:1rem 0;line-height:2}.equation b{color:var(--accent)}.node{display:inline-block;background:#edf5f0;color:var(--ink);text-decoration:none;border-radius:5px;padding:.1rem .4rem;font-size:.89rem}
-.node:hover{text-decoration:underline}.output{background:#d9ebe5;font-weight:700}.edge p{color:#344b4e;margin:.4rem 0}.edge small{color:#79572d}
-footer{max-width:1140px;margin:2rem auto;padding:1rem 1.5rem;border-top:1px solid var(--line);color:var(--muted)}
-</style></head><body>
-<header><h1>PPA 数学超边图</h1><p>一条边的全部输入必须同时成立。范围与证据状态决定它能否用于新命题；open 仅表示待解决目标。</p>
-<p><a href="HYPERGRAPH.md">Markdown 关系表</a> · <a href="SOURCES.md">原始来源索引</a></p></header>
-<main><div class="controls"><input id="query" type="search" aria-label="搜索超边" placeholder="搜索命题、条件、障碍">
-<div class="filters">""" + buttons + """</div></div><p id="count"></p><div class="grid">""" + "".join(cards) + """</div></main>
-<footer>关系数据：<a href="graph.json">graph.json</a>。本图是研究导航，命题真值以精确证明和未决异议为准。</footer>
-<script>
-const q=document.querySelector("#query"), cards=[...document.querySelectorAll(".edge")], count=document.querySelector("#count");
-let topic="*";function update(){let n=0,term=q.value.trim().toLowerCase();for(const card of cards){let show=(topic==="*"||card.dataset.topic===topic)&&card.dataset.search.includes(term);card.hidden=!show;if(show)n++}count.textContent="显示 "+n+" / "+cards.length+" 条超边"}
-q.addEventListener("input",update);document.querySelectorAll("button[data-topic]").forEach(b=>b.addEventListener("click",()=>{topic=b.dataset.topic;document.querySelector("button.active").classList.remove("active");b.classList.add("active");update()}));update();
-</script></body></html>"""
+# The map has no network/runtime dependencies: graph data and UI sources are
+# embedded so map.html works when opened directly from a repository checkout.
+# Edit map/template.html, map/map.css and map/map.js, then run this generator.
+ui = ROOT / "map"
+page = (ui / "template.html").read_text(encoding="utf-8")
+embedded_data = json.dumps(data, ensure_ascii=False).replace("<", "\\u003c")
+for marker, content in {
+    "<!-- MAP_STYLE -->": "<style>\n" + (ui / "map.css").read_text(encoding="utf-8") + "\n</style>",
+    "<!-- GRAPH_DATA -->": '<script type="application/json" id="graph-data">' + embedded_data + "</script>",
+    "<!-- MAP_SCRIPT -->": "<script>\n" + (ui / "map.js").read_text(encoding="utf-8") + "\n</script>",
+}.items():
+    assert page.count(marker) == 1, marker
+    page = page.replace(marker, content)
 (ROOT / "map.html").write_text(page, encoding="utf-8")
-print(f'Validated {len(nodes)} nodes and {len(data["edges"])} hyperedges.')
+print(f"validated {len(nodes)} nodes and {len(data['edges'])} conjunctive edges; generated HYPERGRAPH.md and map.html")

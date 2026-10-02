@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 294 个数学节点、194 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可漫游的像素数学地图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 294 个数学节点、194 条关系；[graph.json](research/graph.json) 是可校验的结构数据。地图可平移、缩放、搜索和打开节点或关系详情；每条超边的多个输入是**合取**，其适用范围和证据状态须在详情或文字表中核对。地貌和建筑是探索隐喻，不是证明状态或价值评级。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 内嵌关系数据，可单独打开；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -160,7 +160,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/local_range_without_supercriticality.md](research/canonical/local_range_without_supercriticality.md) | C05-v2：在 C70 与整窗拓扑条件已合取时把原稿 qγ>1 降为 q>0 的逐步证明，并给 qγ=1/2 的精确可行 collar；评估局部值域候选时与原稿 v1 并读，不用样本代替整窗认证。 |
 | [research/canonical/finite_sample_collar.md](research/canonical/finite_sample_collar.md) | C70：9/25 §8 的实际样本距离上下包络和需要**全部整窗输出**条件的留域余量；证明不调用拓扑定理。读 C05 前先区分样本认证、分析余量、原稿 C05-v1 的候选状态及 C05-v2 已重算的条件拓扑链；原生模型整窗认证仍开放。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
-| [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html) | 人读合取关系、机读节点边和 HTML 关系图；claim 版本或边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)。 |
+| [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json)、[research/map.html](research/map.html)、[research/map/](research/map/) | 精确文字关系、机读节点边、离线像素探索图与其模板、样式、交互源码。数学 Claim 或条件边变化时改 JSON 并运行 [research/build_graph.py](research/build_graph.py)；视觉和操作变更在 `research/map/` 源文件中修改，生成的 HTML 不单独手改。 |
 | [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | 关键超边的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
 | [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
