@@ -217,3 +217,11 @@ E174 另用同一完整图的真全纤维残差 \(r_F(x)=1/x\)、小目标的**�
 E175 固定完整 \(F_\delta(0)=\{0\}\)、正负支各有有理/无理两个输出水平、\(0<\delta<1/2\)，要求**所有**同一 \(\lambda\) 的完整图点对。\(\lambda>\delta\) 给锐全图线性模；\(\lambda\le\delta\) 的反射差不随输入差趋零。\(\lambda<\delta\) 的有理步长虽然 J 单值，跨算术类型仍不连续；无理步长有真正同输入双输出。不能用“无精确碰撞”代替全对零消失模，也不能由零图点局部闭推出输入覆盖。[RS-FIBERS/RL](topics/examples/rational_irrational_staircase.md#gx056-fibers)。
 
 E176 对同一原算子的真零残差 \(r_F(x)=c(x)\) 与**完整近端输入最小步残差** \(s_\lambda(p)\) 分别作 EB：前者任意正幂的局部系数下确界 0，后者在整个自然域的锐线性系数 \(1+\delta/\lambda\)。后者必须对每个输入取**全部近端输出**的最小距离，不能只挑一级分支；每个非零合法步使绝对输入至少降 \(\lambda\)，最终因空纤维终止，而零输入是唯一无限轨道。与 C78/C79 只共享残差跳跃，逆像/coverage/路径不同。[RS-RESIDUAL/PATH](topics/examples/rational_irrational_staircase.md#gx056-residual)。
+
+## E177–E179：乘积图的全图、图窗和残差分别量词
+
+E177 固定 **同一** 完整 \(A\times B\subset\mathbb R^2\times\mathbb R^2\)、Euclidean 乘积范数与 \(0<\delta<1/2\)，所有两图点使用同一步长 \(\lambda\)。分量线性锐模在 \(\delta<\lambda<1\) 可取最大；端点 \(\lambda=1\) 的全图半阶以及两侧碰撞须另按直积平方和核算。[PS-PHASE](topics/examples/product_splice.md#gx057-rl-phase)。
+
+E178 固定 \(\lambda=1\)，完整乘积的**所有图点对**半阶锐系数由 (P15) 给出且 \(>2\)。若改成临界参考图点的**输入与输出共同图窗**，第二坐标被 \(|v_2|<1\) 剪去，锐系数才是 2；只限输入而允许全部输出时，每个固定非零窗都严格 \(>2\)，尽管双窗缩小的下确界是 2。这是同一关系的三个不同范围，不是 Claim 数值冲突。[PS-SHARP/WINDOW](topics/examples/product_splice.md#gx057-sharp-product-half)。
+
+E179 的真零残差 EB 使用乘积关系的**全部纤维**，在整个有限残差域的半阶锐系数 1；双侧目标空逆像和每一步完整 J 的合法域另查。第一坐标非零无限迭代将单调增到正极限却违方程；第二坐标非零每步绝对输入至少降 \(\lambda\)。两个机制合取才给唯一无限恒零路径，不能由 EB 或 E178 的 RL 单独推出。[PS-ZERO/PATH](topics/examples/product_splice.md#gx057-zero-eb)。

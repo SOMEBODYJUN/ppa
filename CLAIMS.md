@@ -672,3 +672,21 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C110 同一完整图，\(S=\{0\}\)，任意 \(q>0\) 与 \(0<\eta\le\delta\)，在 \(|x|<\eta\) 的固定零目标真残差 EB 最小系数是 \(\eta\)，故缩窗下确界 0；邻近非零目标的完整逆像为空，MR/SMR 失败。对每个 \(\lambda>0\)，完整近端**最小步残差** \(s_\lambda(p)=d(p,J_{\lambda F}(p))\) 在自然域上给锐 \(|p|\le(1+\delta/\lambda)s_\lambda(p)\)。每条从非零合法输入出发的完整 J 路径都有限步终止、不能达到零；从零唯一无限路径恒零；\(\lambda\ge\delta\) 时每个非零输入恰有一步。
 - **Dependencies / Evidence / Status / Related Files**：[RS-RESIDUAL/PATH](research/topics/examples/rational_irrational_staircase.md#gx056-residual) 的全纤维、取等序列及每步位移 \(\ge\lambda\) 证明；依赖 C110 的完整纤维，`derived-checked`。原稿 GX-056 的真残差与全对模为线索，最小步锐系数和算术路径边界由本库推导。
 - **Counterevidence / Scope**：真残差跳跃的零系数下确界与 C78/C79 的绝对值次梯度相似，但此图缺完整目标纤维与近零输入覆盖；步残差、MR 和路径不能由残差跳跃类比转授。端点 \(\pm\delta\) 未包含，非零图点的闭性和历史二参数区仍待核。
+
+## C112-v1 / PS-ZERO-PATH · 负平方与阶梯完整乘积的残差和路径
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Euclidean \(\mathbb R^2\)，固定 \(0<\delta<1/2\)，完整乘积 \(F=A\times B\)，其中 \(A(x)=-x^2\) 于 \([0,1/2]\)、\(B\) 是 C110 的有理/无理阶梯，域外均为空，\(S=\{(0,0)\}\)。对**所有**有限真残差点，\(d(z,S)\le r_F(z)^{1/2}\)，系数 1 全域与局部锐，最大局部幂 \(1/2\)；任意小正第一目标或非零小第二目标逆纤维为空，故双变量 MR/SMR 失败。对每个固定 \(\lambda>0\) 的完整乘积 \(J_{\lambda F}=J_{\lambda A}\times J_{\lambda B}\)，任意非零逐步合法初值的每条路径只可有限步延续；唯一无限路径恒零。
+- **Dependencies / Evidence / Status / Related Files**：[PS-OBJECT/ZERO-EB/RESOLVENT/PATH](research/topics/examples/product_splice.md#gx057-object) 的完整逆纤维、分量自然域和两坐标位移直接证明，依赖 C100/C101 与 C110/C111 的分量身份但逐乘积验证；`derived-checked`。来源 9/01 ZIP `work/c_gx053_065.md` GX-057，路径全分类及全域 EB 量词由本库加证。
+- **Counterevidence / Scope**：全域半阶零目标 EB 的锐点在零轴；临界全对半阶锐点在第一坐标右端，不能拼作零点收敛。目标逆像缺失与完整自然输入留域是独立障碍，域外残差无穷不作字面零系数乘法。
+
+## C113-v1 / PS-RL-PHASE · 完整乘积的全图步长相变
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C112 同一完整图，对每个固定 \(\lambda>0\)、**全部**两图点：若 \(0<\lambda\le\delta\)，阶梯给输入差趋零而反射差不消失；若 \(\delta<\lambda<1\)，全图线性 RL 的锐 \(L^*=\max\{(1+\lambda)/(1-\lambda),(\lambda+\delta)/(\lambda-\delta)\}\)；\(\lambda=1\) 的最大全图幂次为 \(1/2\)；\(\lambda>1\) 第一坐标给精确 Minty 碰撞。全图无有限 hypo 或 cohypomonotone 模，分别由不同坐标见证；自然域和全部 J 纤维为两分量的直积。
+- **Dependencies / Evidence / Status / Related Files**：[PS-RESOLVENT/RL-PHASE](research/topics/examples/product_splice.md#gx057-rl-phase) 的全部图点对、Euclidean 直积与取等分量证明，`derived-checked`；C100/C110 是分量证书，乘积量词另证。
+- **Counterevidence / Scope**：\(\lambda<\delta\) 有理时 J 可以单值而全对消失模仍失败；\(\lambda>1\) 的乘积远支不可因只看临界局部图窗而删除。两个图几何失败的机制各在不同坐标，不能说一个常数对整个乘积成立。
+
+## C114-v1 / PS-SHARP-WINDOW · 临界全乘积锐常数与图邻域分离
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C112 同一完整图，固定 \(\lambda=1\)。**完整乘积全部图点对**的锐半阶系数 \(L_{1,1/2}^{\rm full}\) 满足 [PS-P15](research/topics/examples/product_splice.md#gx057-sharp-product-half) 的精确单变量最大式，且 \(L_{1,1/2}^{\rm full}\ge\sqrt{265/(4\sqrt{257})}>2\)。在临界图点 \(((1/2,0),(-1/4,0))\) 同时限制第二**输出**到 \(|v_2|<1\) 的非退化端点图窗，锐半阶系数为 2；只限制第一输入到任意固定端点窗且第二输入到任意小非零窗、保留全部输出时，锐系数严格大于 2，但双窗缩小的系数下确界仍为 2。
+- **Dependencies / Evidence / Status / Related Files**：[PS-SHARP/WINDOW](research/topics/examples/product_splice.md#gx057-sharp-product-half) 的第二坐标类型分解、第一坐标端点优化与全部取等极限；精确 \(H_\delta\) 驻点多项式、阈值由符号微分另核，`derived-checked`。来源 GX-057 原稿仅给图邻域系数 2 和未定的完整乘积模，(P15) 是本库新增推导。
+- **Counterevidence / Scope**：固定图窗的 2 不是仅限输入窗或完整乘积的常数；曲线尖锐处位于右端点，不是零点局部证书。不能用分量锐常数的最大值替换乘积半阶模，也不能从固定目标半阶 EB 推断路径存在。
