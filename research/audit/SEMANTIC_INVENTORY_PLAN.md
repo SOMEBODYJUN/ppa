@@ -116,7 +116,7 @@ PDF/TeX/讲稿、同名不同哈希文件、同构/缩放例都不是自动 dupl
 
 ## 4. 有限、可审计的单元枚举方法
 
-来源层的首批索引现由 [build_occurrence_index.py](build_occurrence_index.py) 从两个原始清单与仓库实际字节重建为 [SOURCE_OCCURRENCES.tsv](SOURCE_OCCURRENCES.tsv)（429 行）及 [PAYLOAD_GROUPS.tsv](PAYLOAD_GROUPS.tsv)（346 行）。生成器核文件哈希、ZIP 成员集合、同容器重名以及 F/Z 分区；`validate_assets.py` 再双向比较索引。索引的 `pending-*` 全是**尚待处理**，代表位置只为节省重复读取，不能当语义角色、完整提取或数学裁决。[SEMANTIC_UNIT_SEED.tsv](SEMANTIC_UNIT_SEED.tsv) 是第一个逐段试点：对 S19 signed-Schur 成员 **1–452 全部行**分为 11 个连续、不重叠段，10 段有规范锚点，332–341 行的有限图册 remark 明确待裁决。验证器检查行数、连续覆盖和锚点。这个试点只覆盖 346 个不同内容中的**一个**，不是全库语义分母。
+来源层的首批索引现由 [build_occurrence_index.py](build_occurrence_index.py) 从两个原始清单与仓库实际字节重建为 [SOURCE_OCCURRENCES.tsv](SOURCE_OCCURRENCES.tsv)（429 行）及 [PAYLOAD_GROUPS.tsv](PAYLOAD_GROUPS.tsv)（346 行）。生成器核文件哈希、ZIP 成员集合、同容器重名以及 F/Z 分区；`validate_assets.py` 再双向比较索引。索引的 `pending-*` 全是**尚待处理**，代表位置只为节省重复读取，不能当语义角色、完整提取或数学裁决。[SEMANTIC_UNIT_SEED.tsv](SEMANTIC_UNIT_SEED.tsv) 是逐段试点：对 S19 signed-Schur 成员 **1–452 全部行**分为 11 段，对 SS1 修订 `research_note.md` **1–763 全部行**分为 19 段；30 段连续不重叠，其中 16 段有规范锚点，14 段仍待逐项裁决。前者 332–341 行有限图册 remark 保留开放，后者定理 2/3、§5.2 等明确分段。验证器检查行数、连续覆盖和锚点。此试点仅覆盖 346 个不同内容中的**两个**，不是全库语义分母。
 
 1. **来源/内容表**：现有索引每个出现位置一行，含 `locator, sha256, family, representative_locator, format_hint, enumeration_status`；格式只按扩展名初分，**资产角色和提取状态仍未审**。后续增加解码文本的哈希、工具/版本、页数或行数及枚举复核人/日期。来源原件不变。
 2. **语义单元表**：试点已有稳定 `unit_id`、原成员、连续行范围、类型、锚点及仍待裁决状态；扩展到其余内容时增 `payload_sha256, source_label, parent_id, enumeration_reason` 与现有 `UNIT_DISPOSITIONS.tsv` 的来源/单元键。裁决与枚举分开；一个现有裁决可覆盖多个已枚举单元，一个单元也可有多个版本/来源映射。
