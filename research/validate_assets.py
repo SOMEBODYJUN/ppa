@@ -113,6 +113,44 @@ if occurrence_path.is_file() and payload_path.is_file():
                 errors.append(f"invalid payload group: {sha}")
 
 unit_count = 0
+seed_path = ROOT / "research/audit/SEMANTIC_UNIT_SEED.tsv"
+if seed_path.is_file():
+    with seed_path.open(encoding="utf-8", newline="") as f:
+        seed = list(csv.DictReader(f, delimiter="\t"))
+    seed_ids = [row["unit_id"] for row in seed]
+    if len(seed_ids) != len(set(seed_ids)):
+        errors.append("duplicate semantic seed identity")
+    by_member = {}
+    for row in seed:
+        by_member.setdefault(row["source_member"], []).append(row)
+        target = row["canonical_target"]
+        if target:
+            file, _, anchor = target.partition("#")
+            path = ROOT / file
+            if not path.is_file() or (anchor and f'id="{anchor}"' not in path.read_text(encoding="utf-8")):
+                errors.append(f"missing semantic seed target: {row['unit_id']}")
+        elif row["enumeration_status"] != "enumerated-unadjudicated":
+            errors.append(f"unmapped semantic seed: {row['unit_id']}")
+    for locator, segments in by_member.items():
+        container, separator, name = locator.partition("!/")
+        if not separator:
+            errors.append(f"bad semantic seed locator: {locator}")
+            continue
+        try:
+            with zipfile.ZipFile(ROOT / container) as archive:
+                line_count = len(archive.read(name).decode("utf-8").splitlines())
+        except (OSError, KeyError, UnicodeDecodeError, zipfile.BadZipFile) as exc:
+            errors.append(f"unreadable semantic seed: {locator}: {exc}")
+            continue
+        intervals = sorted((int(row["start_line"]), int(row["end_line"])) for row in segments)
+        cursor = 1
+        for first, last in intervals:
+            if first != cursor or last < first:
+                errors.append(f"gap or overlap in semantic seed: {locator} at {cursor}")
+            cursor = last + 1
+        if cursor != line_count + 1:
+            errors.append(f"semantic seed does not cover all {line_count} source lines: {locator}")
+
 unit_path = ROOT / "research/audit/UNIT_DISPOSITIONS.tsv"
 if unit_path.is_file():
     with unit_path.open(encoding="utf-8", newline="") as f:
