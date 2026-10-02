@@ -48,6 +48,25 @@ if member_path.is_file():
     with member_path.open(encoding="utf-8", newline="") as f:
         members = list(csv.DictReader(f, delimiter="\t"))
     member_count = len(members)
+    inventoried_members = [row["source_member"] for row in members]
+    if len(inventoried_members) != len(set(inventoried_members)):
+        errors.append("duplicate ZIP member inventory locator")
+    actual_members = set()
+    for source_zip in (ROOT / "history/sources").rglob("*.zip"):
+        try:
+            with zipfile.ZipFile(source_zip) as archive:
+                actual_members.update(
+                    f"{source_zip.relative_to(ROOT)}!/{info.filename}"
+                    for info in archive.infolist() if not info.is_dir()
+                )
+        except zipfile.BadZipFile as exc:
+            errors.append(f"unreadable source ZIP: {source_zip}: {exc}")
+    listed_members = set(inventoried_members)
+    if actual_members != listed_members:
+        errors.append(
+            f"ZIP inventory mismatch: {len(actual_members - listed_members)} unlisted, "
+            f"{len(listed_members - actual_members)} missing"
+        )
     for row in members:
         zip_name, sep, member = row["source_member"].partition("!/")
         if not sep:
