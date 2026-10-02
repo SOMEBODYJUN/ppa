@@ -74,7 +74,7 @@ d(u,S)\le\rho r_F(u),\quad
 
 \[
 X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{ 一致},\ \Pi_T(K)\subset S\},
-\qquad \rho(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K.
+\qquad d_{\mathrm{all}}^K(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K.
 \]
 
 \(X\) 可能为空：非空蕴含 \(S\) 是 \(K\) 的回缩像。定义
@@ -88,9 +88,9 @@ m_j(T)=\sup_{\|x-y\|\le2^{-j}}\|R_Tx-R_Ty\|,\qquad
 \Phi(T)=(w(T),m(T))\in c_0\times c_0.
 \]
 
-**结论。** \(X\) Polish，\(\Phi\) 连续且紧集逆像紧；实际像闭 Polish，非空精确纤维紧/Baire；到像的映射 perfect、quotient。[OS-A §1，完整证明]
+**结论。** \(X\) Polish，\(\Phi\) 连续且紧集逆像紧；实际像闭 Polish，非空精确纤维紧/Baire；到像的映射 perfect、quotient。[固定紧源的规范证明](canonical/compact_t_observation.md#ct-proper)。历史 OS-A §1 只作来源溯源。
 
-**证明机制。** 迭代序列的闭递推约束给 Polish；\(\|\Delta w\|\le2\rho\)、\(\|\Delta m\|\le4\rho\) 给连续。共同趋零模给 Arzelà–Ascoli 单步紧性，共同尾使其升级为全时间紧性。\(c_0\) 紧参数集通过有限网提供统一趋零预算，因而逆像紧。这里只用坐标有界不够。
+**证明机制。** 迭代序列在收敛函数列空间中的闭递推约束给 Polish；\(\|\Delta w\|\le2d_{\mathrm{all}}^K\)、\(\|\Delta m\|\le4d_{\mathrm{all}}^K\) 给连续。共同趋零模给 Arzelà–Ascoli 单步紧性，共同尾使其升级为全时间紧性。\(c_0\) 紧参数集通过有限网提供统一趋零预算，因而逆像紧；闭映射及纤维结论接着从 properness 推出。具体极限与全时间估计都在[规范证明](canonical/compact_t_observation.md#ct-proper)。这里只用坐标有界不够。
 
 <a id="cat-gap"></a>
 <a id="local-loss"></a>

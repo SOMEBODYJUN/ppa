@@ -168,7 +168,7 @@
     {
       "id": "PHI",
       "label": "紧 T-only 图卡的 proper Φ",
-      "file": "operator_space.md#phi"
+      "file": "canonical/compact_t_observation.md#ct-proper"
     },
     {
       "id": "SIZE",

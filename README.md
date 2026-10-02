@@ -169,7 +169,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；[Q03](research/range_finite_data.md#q-eval) 分开 QP 输出误差 \(e_N\) 与反演求值证书 \(e_x\)，要从结构定理走向可计算证书时读。 |
 | [research/solution_selection.md](research/solution_selection.md)、[solution_selection_rates.md](research/canonical/solution_selection_rates.md) | S01–S03、C08、C115/C116：统一尾的有限前缀尺度证明，完整二值半代数模型的共同证书、逐轨道 Q 二次与两点坏选择；主张初值稳定时读。SS1 定理 2/3 仍未重构。 |
 | [research/canonical/signed_schur_growth.md](research/canonical/signed_schur_growth.md) | C117–C119：双支 signed-Schur 的闭参数域图包含、切向球内全对模与完整纤维门；幂次/同修正坐标匹配、平方根原生图及反例。核局部 R04 或把图块结论转成完整近端前读。 |
-| [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |
+| [research/operator_space.md](research/operator_space.md)、[固定紧源观测证明](research/canonical/compact_t_observation.md#ct-proper) | LT 嵌入、完整图信息、\(\Phi\) 的自足 proper 证明、大小量尺塌缩和未解桥；总体比较工作入口。 |
 | [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
 | [research/topics/random_markov/moment_recoupling.md](research/topics/random_markov/moment_recoupling.md) | C126 的非负标量矩门及更新后律空间小质量障碍；C127 的同步 \(D_\eta\)、回耦损失 \(\Delta_\eta\) 与同一近极小 OT 对的条件线性 EB。研究从收缩反推 \(\Psi\) 的 EB 或随机幂次提升时读；原生耦合仍是独立义务。 |
 | [research/canonical/random_proximal.md](research/canonical/random_proximal.md) | RP-OBJECT/GAP/CONTRACTION/EB/BRANCH/SCALAR 的全证明、尖锐例和残差替换障碍；研究随机近端或条件 \(W_2\) 时读，改假设须另立版本。 |

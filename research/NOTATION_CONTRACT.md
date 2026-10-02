@@ -26,6 +26,7 @@
 | [非 tied 图](canonical/non_tied_cayley.md#nt-object) | \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\) 是该页系数 | 与导数 \(A=DG(\bar x)\)、集合 \(A\) 或其它判别式无身份关系；引用 C89/C91 时连同 \(A>0,\Delta\ge0\) 门 |
 | [有限数据 Q03](range_finite_data.md#q-eval) | \(e_N\) 是某候选参数 \(q\) 处的 \(N_m(q)\) 求值误差；\(e_x\) 是 \(\widehat x\) 到 \(A_m^{-1}(\widetilde v)\) 的反演误差上界 | QP gap 只给 \(e_N\)，必须加候选参数固定点残差并除以 \(1-\sigma\) 才能传给 \(e_x\)；不能把它们叫同一个 \(e\) |
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
+| [固定紧源观测](canonical/compact_t_observation.md#ct-object) | \(d_{\mathrm{all}}^K(T,U)=\sup_n\|T^n-U^n\|_K\) 是整个紧源的全时间度量；\(\Phi=(w,m)\) 是实际尾和反射模 | 此度量不写成 LT 线性 EB 系数 \(\rho\)，也不是旧孔隙性账本的 \(d_{\rm dyn}\)；其 proper 证明不授予完整原关系 \(F\) 的空间 |
 | [例库](topics/examples/README.md) | \(F,K,B,G,R\) 在每张卡内重新绑定 | 必须携带空间、完整/受限图、目标、步长、输入/输出窗、真实或算法残差；GX 编号只标来源观察 |
 
 ## 统一验收问题

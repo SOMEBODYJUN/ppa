@@ -98,10 +98,10 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E17 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [LT · Luke–Tam 公共 all-pairs 证书](operator_space.md#lt) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | conditional → [OS-E · RLEB 能量证书](operator_space.md#os-e) | 同 S、同 coverage/留域；公共 all-pairs LT 归一化；**S20 内部证明** |
-| E18 | [PHI · 紧 T-only 图卡的 proper Φ](operator_space.md#phi) | limits → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | proper/quotient 不推出保纲；局部观测不恢复完整 F；**反例支持的缺口** |
-| E19 | [LT · Luke–Tam 公共 all-pairs 证书](operator_space.md#lt) ∧ [OS-E · RLEB 能量证书](operator_space.md#os-e) ∧ [PHI · 紧 T-only 图卡的 proper Φ](operator_space.md#phi) | open → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | 需中立完整对象、鉴别性量尺、保纲与反塌缩；**开放目标** |
-| E33 | [PHI · 紧 T-only 图卡的 proper Φ](operator_space.md#phi) | limits → [CAT-GAP · proper/quotient 不保纲](operator_space.md#cat-gap) | proper 闭满射 x↦max(x,0) 的无处稠密集合逆像有内点；**S20 反例** |
-| E34 | [PHI · 紧 T-only 图卡的 proper Φ](operator_space.md#phi) | limits → [LOCAL-LOSS · 局部观测不控制完整原图](operator_space.md#local-loss) | T_N 在 K 上同观测，域外 r=2 附近无一致紧性；**S20 反例** |
+| E18 | [PHI · 紧 T-only 图卡的 proper Φ](canonical/compact_t_observation.md#ct-proper) | limits → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | proper/quotient 不推出保纲；局部观测不恢复完整 F；**反例支持的缺口** |
+| E19 | [LT · Luke–Tam 公共 all-pairs 证书](operator_space.md#lt) ∧ [OS-E · RLEB 能量证书](operator_space.md#os-e) ∧ [PHI · 紧 T-only 图卡的 proper Φ](canonical/compact_t_observation.md#ct-proper) | open → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | 需中立完整对象、鉴别性量尺、保纲与反塌缩；**开放目标** |
+| E33 | [PHI · 紧 T-only 图卡的 proper Φ](canonical/compact_t_observation.md#ct-proper) | limits → [CAT-GAP · proper/quotient 不保纲](operator_space.md#cat-gap) | proper 闭满射 x↦max(x,0) 的无处稠密集合逆像有内点；**S20 反例** |
+| E34 | [PHI · 紧 T-only 图卡的 proper Φ](canonical/compact_t_observation.md#ct-proper) | limits → [LOCAL-LOSS · 局部观测不控制完整原图](operator_space.md#local-loss) | T_N 在 K 上同观测，域外 r=2 附近无一致紧性；**S20 反例** |
 | E35 | [NO-GO · 旧 Baire/孔隙共同塌缩报告](operator_space.md#no-go) | limits → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | N05/N08/N10 量尺共同塌缩；原孔隙审计未恢复；**S21 历史报告** |
 
 ## 锥

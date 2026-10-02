@@ -54,11 +54,11 @@
 
 ## C06 · 固定紧 T-only 图卡的内生观测
 
-- **Status**：`source-report`（来源内部已审）；本仓库尚未独立重构本条完整 proper/quotient 证明。
+- **Status**：`derived-checked`；本仓库已从对象定义重构完整 proper/quotient 证明并作独立逆向审读，范围仅为此固定紧源 T-only 图卡。
 
-- **Exact Statement / Objects / Domain**：非空紧 \(K\subset\mathbb R^d\)，非空闭 \(S\subset K\)。令 \(X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{一致},\Pi_T(K)\subset S\}\)，全时间度量 \(\rho(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K\)。定义 \(w_n(T)=\max\{\sup_{k,\ell\ge n}\|T^k-T^\ell\|_K,\ \sup_{k\ge n,x\in K}d(T^kx,S)\}\)：第一项看**所有尾部两迭代差**，不是仅相邻步差。令 \(m_j=\sup_{\|x-y\|\le2^{-j}}\|(2T-I)x-(2T-I)y\|\)。则 \(\Phi:X\to c_0\times c_0\)，\(T\mapsto(w,m)\) 连续 proper；其实际像闭 Polish，非空精确纤维紧/Baire，映射到像 perfect/quotient。
-- **Dependencies / Evidence**：[9/20 `06_math_audit.md` §1](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md) 的 Arzelà–Ascoli、共同尾预算及全时间收敛证明；内部独立审计。
-- **Objections / Status / Scope**：**仅固定紧源完整 T-only、非空 X 条件下内部已审**；proper/quotient 不推出 category-preserving；局部 \(T\) 不代表完整全局 \(F\)。
+- **Exact Statement / Objects / Domain**：非空紧 \(K\subset\mathbb R^d\)，非空闭 \(S\subset K\)。令 \(X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{一致},\Pi_T(K)\subset S\}\)，全时间度量 \(d_{\mathrm{all}}^K(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K\)。定义 \(w_n(T)=\max\{\sup_{k,\ell\ge n}\|T^k-T^\ell\|_K,\ \sup_{k\ge n,x\in K}d(T^kx,S)\}\)：第一项看**所有尾部两迭代差**，不是仅相邻步差。令 \(m_j=\sup_{\|x-y\|\le2^{-j}}\|(2T-I)x-(2T-I)y\|\)。则 \(\Phi:X\to c_0\times c_0\)，\(T\mapsto(w,m)\) 连续 proper；其实际像闭 Polish，非空精确纤维紧/Baire，映射到像 perfect/quotient。
+- **Dependencies / Evidence**：[CT-OBJECT/PROPER](research/canonical/compact_t_observation.md#ct-proper) 的闭迭代嵌入、共同模与尾预算、Arzelà–Ascoli、全时间收敛和闭映射证明；两路独立条件/反例审读。历史 [9/20 `06_math_audit.md` §1](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md) 仅定位来源。
+- **Objections / Status / Scope**：\(X\ne\varnothing\) 当且仅当 \(S\) 是 \(K\) 的回缩像；空 \(X\) 时非空纤维结论无实例。proper/quotient 不推出 category-preserving；局部 \(T\) 不代表完整全局 \(F\)，也不证明总体规模比较。
 
 ## C07 · 原 Baire／多孔性比较量尺的塌缩报告
 
@@ -146,11 +146,11 @@
 
 ## C17 · 固定紧 T-only 图卡的 proper \(\Phi\)（C06 的范围细化）
 
-- **Status**：`source-report`（同 C06 的来源证明）；范围细化不另立一个已独立重证的定理。
+- **Status**：`derived-checked`（直接引用 C06 的同一规范证明）；范围细化不另立较强定理。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：C06 的非空固定紧 \(K\)、闭 \(S\subset K\) 和全时间度量空间 \(X\)；尾 \(w_n\) 同时看所有 \(k,\ell\ge n\) 的迭代差与到 \(S\) 距离，反射模 \(m_j\) 看输入尺度 \(2^{-j}\) 的 \(2T-I\)。
 - **Conclusion**：\(\Phi=(w,m):X\to c_0^2\) 连续 proper，像闭 Polish，非空精确纤维紧；这与 C06 同一数学身份，是释义细化，**不另造较强定理**。
-- **Dependencies / Evidence / Objections / Status / Related Files**：[operator_space §3](research/operator_space.md)，S20 OS-A §1。Arzelà–Ascoli 需紧参数集在 \(c_0\) 中的一致趋零预算；proper/quotient 不推出 category-preserving，局部图卡不恢复完整全局 \(F\)。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[CT-PROPER](research/canonical/compact_t_observation.md#ct-proper) 与 [operator_space §3](research/operator_space.md#phi)；S20 OS-A §1 只作溯源。Arzelà–Ascoli 需紧参数集在 \(c_0\) 中的一致趋零预算；proper/quotient 不推出 category-preserving，局部图卡不恢复完整全局 \(F\)。
 
 ## C18 · 有限维固定窗口的全纤维值域覆盖
 

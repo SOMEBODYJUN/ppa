@@ -46,7 +46,7 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 在同一有限维完整原图 \(F\)、固定 \(\lambda>0,\tau\ge0,\rho>0\)、全域单值 \(T=J_{\lambda F}\)、同一 \(S\)、同一测试域、真实 \(r_F\)、coverage 和留域接口上，LT 公共 all-pairs 证书若满足 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\)、\(2\tau(\lambda+\rho)^2<\lambda^2\)，则该**匹配接口中的** RLEB 能量证书取 \(L^2=1+4\tau,\gamma=1,\psi(t)=\rho t\) 后 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)。这里 \(\rho>0\) 保证 \(\alpha(t)=t/\rho\) 可用；这是证书类的包含，不保最佳常数，不包含 signed LT 或所有 pointwise/多值版本。[OS §2](operator_space.md)。
 
-固定紧 T-only 图卡上的 proper \(\Phi=(w,m)\) 不推出它保 Baire category，也不恢复域外 \(F\)。因此 E19 的总体规模目标还缺参数中立的完整对象空间、计数单位 \(F\) 或 \((F,\lambda)\)、合法选择、三类共同域，以及不把三类一同判小的量尺。不能从 E17 或 proper 直接推出 E19。[OS §3–5](operator_space.md)。
+E18 的输入只是一张固定非空紧 \(K\)、非空闭 \(S\subset K\)、全时间度量下的单值 T-only 图卡；[\(\Phi=(w,m)\) proper 的完整证明](canonical/compact_t_observation.md#ct-proper) 还要求尾列比较**所有**两迭代，\(c_0^2\) 的紧参数集提供共同零尾。此 properness 不推出保 Baire category，也不恢复域外 \(F\)。因此 E19 的总体规模目标还缺参数中立的完整对象空间、计数单位 \(F\) 或 \((F,\lambda)\)、合法选择、三类共同域，以及不把三类一同判小的量尺。不能从 E17 或 proper 直接推出 E19。[OS §3–5](operator_space.md)。
 
 ## E13：有限观测与整窗拓扑是不同量词层
 
