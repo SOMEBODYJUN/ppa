@@ -1,0 +1,4125 @@
+{
+  "version": 1,
+  "seed": "ppa-yunxiu-1",
+  "asset_version": 1,
+  "realms": [
+    {
+      "id": "foundation",
+      "name": "太初书院",
+      "subtitle": "对象 · 参数 · 量词",
+      "x": 720,
+      "y": 650,
+      "rx": 590,
+      "ry": 505,
+      "color": "#84a996",
+      "dark": "#568c80"
+    },
+    {
+      "id": "convergence",
+      "name": "问道山径",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 2010,
+      "y": 650,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b"
+    },
+    {
+      "id": "structure",
+      "name": "玉虚洞天",
+      "subtitle": "全局影子 · 纤维 · 值域",
+      "x": 3300,
+      "y": 650,
+      "rx": 590,
+      "ry": 505,
+      "color": "#acbeb2",
+      "dark": "#799b94"
+    },
+    {
+      "id": "frontier",
+      "name": "无涯云海",
+      "subtitle": "母空间 · 量尺 · 开放目标",
+      "x": 4590,
+      "y": 650,
+      "rx": 590,
+      "ry": 505,
+      "color": "#87aeb2",
+      "dark": "#598993"
+    },
+    {
+      "id": "composite",
+      "name": "青蘅药谷",
+      "subtitle": "锥 · 正则性 · 目标集合",
+      "x": 720,
+      "y": 1860,
+      "rx": 590,
+      "ry": 505,
+      "color": "#a5b398",
+      "dark": "#7a9274"
+    },
+    {
+      "id": "paths",
+      "name": "万木归途",
+      "subtitle": "动力学 · 解选择 · 对齐",
+      "x": 2010,
+      "y": 1860,
+      "rx": 590,
+      "ry": 505,
+      "color": "#86a78b",
+      "dark": "#538476"
+    },
+    {
+      "id": "examples",
+      "name": "试剑群峰",
+      "subtitle": "完整对象 · 锐模 · 反例",
+      "x": 3300,
+      "y": 1860,
+      "rx": 590,
+      "ry": 505,
+      "color": "#b0b5a0",
+      "dark": "#85998b"
+    },
+    {
+      "id": "random",
+      "name": "浮生水乡",
+      "subtitle": "Markov · 运输 · 条件律",
+      "x": 4590,
+      "y": 1860,
+      "rx": 590,
+      "ry": 505,
+      "color": "#86afa6",
+      "dark": "#568e87"
+    },
+    {
+      "id": "examples-annex-1",
+      "name": "试剑群峰 · 外山",
+      "subtitle": "完整对象 · 锐模 · 反例",
+      "x": 720,
+      "y": 3070,
+      "rx": 590,
+      "ry": 505,
+      "color": "#b0b5a0",
+      "dark": "#85998b",
+      "parent": "examples"
+    }
+  ],
+  "nodes": {
+    "ABS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "ABS-OP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "ABS-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "AV-BRIDGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "AV-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 311,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "AV-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 584,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "BN-GEO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BN-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BN-REG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNI-MINTY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNI-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNI-PATH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNS-MINTY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BNS-ZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3770,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BS-PHASE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "BS-ZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1521,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "C-AMEN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 1885,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-FACE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 2067,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-MSCQ": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 1976,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-NONAMEN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 1885,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-NORMAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 1885,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-RANK": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 1976,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "C-UNIV": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 626,
+      "y": 1885,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CAT-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 493,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "CG-CLOSURE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 584,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "CG-COVERAGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "CI-IDENTIFY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 2067,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CI-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 1976,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CMP": {
+      "role": "definition",
+      "kind": "village",
+      "object": "archive",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 2104,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "COLLIDE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "COND-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "COV": {
+      "role": "definition",
+      "kind": "village",
+      "object": "observatory",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 2198,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "CS-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 1521,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-MODEL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 1885,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 1612,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-OPEN-RANK": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 1794,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-POWER-GENERAL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 532,
+      "y": 1794,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 1703,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-RANK-EX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 1703,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-TRANSFER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 1703,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "D01": {
+      "role": "definition",
+      "kind": "village",
+      "object": "archive",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 814,
+      "y": 766,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "D02": {
+      "role": "definition",
+      "kind": "village",
+      "object": "gate",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 1002,
+      "y": 948,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "D03": {
+      "role": "definition",
+      "kind": "village",
+      "object": "pavilion",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 908,
+      "y": 857,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "D04": {
+      "role": "definition",
+      "kind": "village",
+      "object": "pagoda",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 814,
+      "y": 857,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "DC-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 2158,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "DC-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "DE-ESCAPE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "DE-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "DEADBAND": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 311,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "DIN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "DR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DR-TAN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DR-TRANS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DS-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DS-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DS-QUAD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "DS-RL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "EX-CUBIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "EX-DIAG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "EX-MODULI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "EX-ROT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "F03": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 2158,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "FAST-EB": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "maze",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 4684,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "FIX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "FP-ABSORB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
+    },
+    "FP-NOEB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "FP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "FP-SEAM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 1703,
+      "region": "random",
+      "realm": "random"
+    },
+    "FS-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 1521,
+      "region": "random",
+      "realm": "random"
+    },
+    "FS-CELLS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
+    },
+    "FS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 1703,
+      "region": "random",
+      "realm": "random"
+    },
+    "FS-REGULARITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "FSC-COLLAR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "FSC-ENV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "FSC-FULL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "FULL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2198,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "G-COND": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "G-COND-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 2158,
+      "region": "random",
+      "realm": "random"
+    },
+    "GROW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "GX57-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "GX57-PHASE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "GX57-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "GX57-ZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "H01": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "H02": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "mountain",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3300,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "H03": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "portal",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3112,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "H07": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3300,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "HE-EXT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 311,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "HE-SNOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 311,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "HP-FIXED": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1521,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "HP-GRAPH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "HP-MR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "HP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IP-MINTY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IP-RESIDUAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-MR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-OP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-RL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-SEMI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IS-STEP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "IZ-FACTOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "IZ-FIBERS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "IZ-GERM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "IZ-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "LC-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "LC-OT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 2158,
+      "region": "random",
+      "realm": "random"
+    },
+    "LC-RELAX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "LCR-REP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "LCR-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "LIFT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LIT-ALM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 311,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LOC": {
+      "role": "definition",
+      "kind": "village",
+      "object": "gate",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 2104,
+      "y": 311,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "LOCAL-LOSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 584,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "LOG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 311,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LR-FEAS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LR-RANGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "LT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 766,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "M-BINARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-COND": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1703,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-CONTRACTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 2158,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-EXACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 1612,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-FALSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 2158,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-FIN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 1612,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-GAUSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 2158,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-LINEAR-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-MOMENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-NOPOWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-PSI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "M-RECOUP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "M1-CAPTURE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "M1-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "M1-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "MA-LIMIT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "MA-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 2158,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "MA-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "MA-REFLECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "METRIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "NA-APPROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1521,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "NA-COMPOSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "NA-DRIFT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "NA-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "NA-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "NB-LOCAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "NB-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "NB-OSC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 311,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "NB-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "NC-BRANCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "NC-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "NC-REGULARITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "NO-GO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 948,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "NT-BALL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 311,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "NT-MAXIMAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 402,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "NT-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 311,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "NT-TRANSFORM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 402,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "OB-AGGREGATE": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "maze",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1822,
+      "y": 584,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-AV-ANCHOR": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1916,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-BS-WINDOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "OB-DR-STRICT": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 3112,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "OB-DYN-RL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "maze",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2104,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-GAUGE": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2924,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "OB-MR-MSR": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "rift",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 626,
+      "y": 857,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "OB-NB-ALL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "wall",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2104,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-RES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-RES-STEP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-RW-NEIGH": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1728,
+      "y": 584,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-SCALE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 948,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "OB-SELECTED": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "maze",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 626,
+      "y": 948,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "OB-SIN-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 1521,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "OB-SR-IDENTITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "OB-STRONG": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "maze",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 3488,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "OB-TARGET": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1096,
+      "y": 1703,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "OB-TOPO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "OS-E": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 675,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "OS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "OS-SCALING": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "OT-MAXIMA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 1612,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "PA-BLOCK": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-CONTRACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-COVER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-CYCLES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-DEF": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-WHOLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PD-CAYLEY": {
+      "role": "definition",
+      "kind": "village",
+      "object": "courtyard",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 908,
+      "y": 675,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-QUANTIFIERS": {
+      "role": "definition",
+      "kind": "village",
+      "object": "workshop",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 908,
+      "y": 584,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-REGULARITY": {
+      "role": "definition",
+      "kind": "village",
+      "object": "observatory",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 626,
+      "y": 766,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-RESIDUAL": {
+      "role": "definition",
+      "kind": "village",
+      "object": "workshop",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 532,
+      "y": 948,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-SCALE": {
+      "role": "definition",
+      "kind": "village",
+      "object": "gate",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 720,
+      "y": 948,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-STEP": {
+      "role": "definition",
+      "kind": "village",
+      "object": "courtyard",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 908,
+      "y": 766,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PD-TIED": {
+      "role": "definition",
+      "kind": "village",
+      "object": "courtyard",
+      "evidence": "unspecified",
+      "reason": "editorial-definition-index",
+      "x": 1002,
+      "y": 584,
+      "region": "foundation",
+      "realm": "foundation"
+    },
+    "PHI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 493,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "POLISH-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "POWER-EB": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "seal",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 4214,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "PROPER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "PROT-CAYLEY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 1521,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "PROT-CYCLIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3770,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "PROT-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "PROT-TWO-ANGLES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "PS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PS-RATE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "Q-ADVANTAGE": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "seal",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 3582,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-BOUND": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-COVER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-EVAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-NOGLOBAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-ORACLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "Q-TOTAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "QP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "QSAMPLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "R01": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "R02": {
+      "role": "object",
+      "kind": "mine",
+      "object": "pavilion",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "R03": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "R04": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "R05": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "REL-MAX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3770,
+      "y": 675,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "RET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "RHO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "RP-BRANCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1521,
+      "region": "random",
+      "realm": "random"
+    },
+    "RP-CONTRACTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "RP-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
+    },
+    "RP-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1703,
+      "region": "random",
+      "realm": "random"
+    },
+    "RP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
+    },
+    "RP-SCALAR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "RS-FIBERS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "RS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 1976,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "RS-RESIDUAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 2067,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "RW-FLAT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "RW-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "RW-POSITIVE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "S01": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "S02": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SAMPLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "SB-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SB-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3770,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SB-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SB-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 1521,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SB-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SCD-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 2158,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SCD-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SCD-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 1885,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SCHUR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SEL-EX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SEL-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SG-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-GROWTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-MODEL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 948,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-SIGN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-SQRT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SG-TANGENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SIN-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 1703,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SIN-PHASE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SIN-TARGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SIZE": {
+      "role": "open-target",
+      "kind": "mountain",
+      "object": "ocean",
+      "evidence": "unspecified",
+      "reason": "incoming-open-relation",
+      "x": 4590,
+      "y": 766,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "SL-DYNAMICS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SL-INCLUSION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SL-RESIDUAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1976,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SL-RESOLVENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SL-RL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SME-ENV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 1612,
+      "region": "random",
+      "realm": "random"
+    },
+    "SME-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 1703,
+      "region": "random",
+      "realm": "random"
+    },
+    "SME-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 1521,
+      "region": "random",
+      "realm": "random"
+    },
+    "SME-SUPPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1612,
+      "region": "random",
+      "realm": "random"
+    },
+    "SR-ESCAPE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 1794,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SR-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 1612,
+      "region": "examples",
+      "realm": "examples"
+    },
+    "SR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 2822,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "SR-PARENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 2913,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "SS-LOCAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 2158,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SS-TRANSFER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SSQ-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SSQ-NONSEMI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SSQ-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SSQ-SELECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "SSQ-SWITCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "STOCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "STOCH-LIMIT": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 3206,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 2067,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "VAD-GRAPH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 3277,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "VAD-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 3186,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "VAD-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 3186,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "VO-GRAPH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 2822,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "VO-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 3004,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "VO-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 3004,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "W01": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "W02": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "WINDOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
+    }
+  },
+  "edges": {
+    "E01": {
+      "x": 952.92,
+      "y": 840.09
+    },
+    "E02": {
+      "x": 2151.5,
+      "y": 936.1
+    },
+    "E03": {
+      "x": 2150.78,
+      "y": 757.37
+    },
+    "E04": {
+      "x": 2059.32,
+      "y": 657.46
+    },
+    "E05": {
+      "x": 2160.4,
+      "y": 736.16
+    },
+    "E06": {
+      "x": 3064.21,
+      "y": 406.52
+    },
+    "E07": {
+      "x": 3112.0,
+      "y": 354.0
+    },
+    "E08": {
+      "x": 3347.22,
+      "y": 484.41
+    },
+    "E09": {
+      "x": 3127.69,
+      "y": 538.64
+    },
+    "E10": {
+      "x": 3068.31,
+      "y": 603.88
+    },
+    "E100": {
+      "x": 1916.0,
+      "y": 354.0
+    },
+    "E101": {
+      "x": 1868.0,
+      "y": 584.0
+    },
+    "E102": {
+      "x": 1928.8,
+      "y": 628.74
+    },
+    "E103": {
+      "x": 2347.61,
+      "y": 521.81
+    },
+    "E104": {
+      "x": 1715.2,
+      "y": 630.26
+    },
+    "E105": {
+      "x": 3185.12,
+      "y": 1746.22
+    },
+    "E106": {
+      "x": 3210.31,
+      "y": 1837.19
+    },
+    "E107": {
+      "x": 3155.22,
+      "y": 1682.12
+    },
+    "E108": {
+      "x": 4769.41,
+      "y": 1932.22
+    },
+    "E109": {
+      "x": 4824.26,
+      "y": 1806.8
+    },
+    "E11": {
+      "x": 2971.17,
+      "y": 503.52
+    },
+    "E110": {
+      "x": 2057.18,
+      "y": 1804.58
+    },
+    "E111": {
+      "x": 1801.12,
+      "y": 1932.78
+    },
+    "E112": {
+      "x": 2338.19,
+      "y": 1798.31
+    },
+    "E113": {
+      "x": 3346.26,
+      "y": 323.8
+    },
+    "E114": {
+      "x": 3255.28,
+      "y": 419.43
+    },
+    "E115": {
+      "x": 3350.78,
+      "y": 2178.88
+    },
+    "E116": {
+      "x": 3358.36,
+      "y": 2008.15
+    },
+    "E117": {
+      "x": 3351.86,
+      "y": 2089.98
+    },
+    "E118": {
+      "x": 2112.59,
+      "y": 1750.22
+    },
+    "E119": {
+      "x": 4512.91,
+      "y": 1656.92
+    },
+    "E12": {
+      "x": 3092.36,
+      "y": 631.2
+    },
+    "E120": {
+      "x": 4475.12,
+      "y": 1564.22
+    },
+    "E121": {
+      "x": 1861.87,
+      "y": 610.73
+    },
+    "E122": {
+      "x": 4544.42,
+      "y": 1627.06
+    },
+    "E123": {
+      "x": 3159.74,
+      "y": 571.2
+    },
+    "E124": {
+      "x": 3253.81,
+      "y": 670.69
+    },
+    "E125": {
+      "x": 4778.0,
+      "y": 2110.0
+    },
+    "E126": {
+      "x": 4827.08,
+      "y": 2050.09
+    },
+    "E127": {
+      "x": 3346.19,
+      "y": 579.69
+    },
+    "E128": {
+      "x": 3381.2,
+      "y": 448.26
+    },
+    "E129": {
+      "x": 3406.8,
+      "y": 1658.26
+    },
+    "E13": {
+      "x": 3291.41,
+      "y": 722.22
+    },
+    "E130": {
+      "x": 3389.69,
+      "y": 1746.19
+    },
+    "E131": {
+      "x": 3463.67,
+      "y": 1752.62
+    },
+    "E132": {
+      "x": 3443.08,
+      "y": 1686.09
+    },
+    "E133": {
+      "x": 2149.8,
+      "y": 507.36
+    },
+    "E134": {
+      "x": 4704.88,
+      "y": 1841.78
+    },
+    "E135": {
+      "x": 4754.44,
+      "y": 1562.82
+    },
+    "E136": {
+      "x": 3443.04,
+      "y": 1537.82
+    },
+    "E137": {
+      "x": 3175.39,
+      "y": 2030.03
+    },
+    "E138": {
+      "x": 3063.58,
+      "y": 1718.06
+    },
+    "E139": {
+      "x": 3573.41,
+      "y": 1746.78
+    },
+    "E14": {
+      "x": 1802.25,
+      "y": 2023.25
+    },
+    "E140": {
+      "x": 3598.91,
+      "y": 1656.92
+    },
+    "E141": {
+      "x": 2234.14,
+      "y": 524.59
+    },
+    "E142": {
+      "x": 4731.81,
+      "y": 1798.31
+    },
+    "E143": {
+      "x": 3671.69,
+      "y": 1746.19
+    },
+    "E144": {
+      "x": 3064.76,
+      "y": 1783.18
+    },
+    "E145": {
+      "x": 3154.12,
+      "y": 1544.02
+    },
+    "E146": {
+      "x": 3291.41,
+      "y": 1655.78
+    },
+    "E147": {
+      "x": 3320.88,
+      "y": 1564.22
+    },
+    "E148": {
+      "x": 3249.22,
+      "y": 1591.12
+    },
+    "E149": {
+      "x": 2899.48,
+      "y": 1653.27
+    },
+    "E15": {
+      "x": 2185.82,
+      "y": 1929.57
+    },
+    "E150": {
+      "x": 2782.17,
+      "y": 1798.08
+    },
+    "E151": {
+      "x": 1091.69,
+      "y": 2865.19
+    },
+    "E152": {
+      "x": 1832.56,
+      "y": 721.82
+    },
+    "E153": {
+      "x": 4634.04,
+      "y": 1995.1
+    },
+    "E154": {
+      "x": 797.09,
+      "y": 355.92
+    },
+    "E155": {
+      "x": 707.2,
+      "y": 355.74
+    },
+    "E156": {
+      "x": 861.07,
+      "y": 411.39
+    },
+    "E157": {
+      "x": 3312.8,
+      "y": 2113.26
+    },
+    "E158": {
+      "x": 3095.09,
+      "y": 2022.08
+    },
+    "E159": {
+      "x": 3124.8,
+      "y": 1931.26
+    },
+    "E16": {
+      "x": 2210.38,
+      "y": 1929.62
+    },
+    "E160": {
+      "x": 3455.55,
+      "y": 2122.63
+    },
+    "E161": {
+      "x": 3308.59,
+      "y": 1841.22
+    },
+    "E162": {
+      "x": 3346.0,
+      "y": 1884.96
+    },
+    "E163": {
+      "x": 3065.64,
+      "y": 1617.87
+    },
+    "E164": {
+      "x": 3148.06,
+      "y": 1580.32
+    },
+    "E165": {
+      "x": 3680.31,
+      "y": 2019.19
+    },
+    "E166": {
+      "x": 3726.8,
+      "y": 1996.91
+    },
+    "E167": {
+      "x": 3590.59,
+      "y": 2110.78
+    },
+    "E168": {
+      "x": 3642.14,
+      "y": 1919.02
+    },
+    "E169": {
+      "x": 576.34,
+      "y": 2840.39
+    },
+    "E17": {
+      "x": 4636.49,
+      "y": 681.86
+    },
+    "E170": {
+      "x": 875.23,
+      "y": 2968.92
+    },
+    "E171": {
+      "x": 2867.35,
+      "y": 2006.15
+    },
+    "E172": {
+      "x": 2983.28,
+      "y": 2009.14
+    },
+    "E173": {
+      "x": 3064.19,
+      "y": 2162.31
+    },
+    "E174": {
+      "x": 3036.1,
+      "y": 2111.45
+    },
+    "E175": {
+      "x": 3535.22,
+      "y": 1967.41
+    },
+    "E176": {
+      "x": 3549.4,
+      "y": 2031.77
+    },
+    "E177": {
+      "x": 3346.26,
+      "y": 1963.2
+    },
+    "E178": {
+      "x": 3055.35,
+      "y": 1915.15
+    },
+    "E179": {
+      "x": 3250.92,
+      "y": 1959.09
+    },
+    "E18": {
+      "x": 4570.36,
+      "y": 722.2
+    },
+    "E180": {
+      "x": 2247.83,
+      "y": 2085.79
+    },
+    "E181": {
+      "x": 1682.0,
+      "y": 1702.96
+    },
+    "E182": {
+      "x": 1962.96,
+      "y": 1712.54
+    },
+    "E183": {
+      "x": 1671.35,
+      "y": 1763.85
+    },
+    "E184": {
+      "x": 1965.08,
+      "y": 840.09
+    },
+    "E185": {
+      "x": 1943.95,
+      "y": 817.98
+    },
+    "E186": {
+      "x": 2054.96,
+      "y": 691.82
+    },
+    "E187": {
+      "x": 1924.97,
+      "y": 813.15
+    },
+    "E188": {
+      "x": 1066.6,
+      "y": 3239.06
+    },
+    "E189": {
+      "x": 1147.02,
+      "y": 3164.64
+    },
+    "E19": {
+      "x": 4589.17,
+      "y": 718.01
+    },
+    "E190": {
+      "x": 3251.68,
+      "y": 1535.74
+    },
+    "E191": {
+      "x": 3727.86,
+      "y": 1862.02
+    },
+    "E192": {
+      "x": 3508.88,
+      "y": 1841.78
+    },
+    "E193": {
+      "x": 3740.09,
+      "y": 1756.46
+    },
+    "E194": {
+      "x": 3642.93,
+      "y": 1646.79
+    },
+    "E20": {
+      "x": 673.18,
+      "y": 1986.58
+    },
+    "E21": {
+      "x": 826.75,
+      "y": 903.28
+    },
+    "E22": {
+      "x": 4849.97,
+      "y": 1654.65
+    },
+    "E23": {
+      "x": 4700.91,
+      "y": 1656.92
+    },
+    "E24": {
+      "x": 2327.98,
+      "y": 979.77
+    },
+    "E25": {
+      "x": 2138.49,
+      "y": 914.61
+    },
+    "E26": {
+      "x": 2117.9,
+      "y": 720.94
+    },
+    "E27": {
+      "x": 1903.2,
+      "y": 903.26
+    },
+    "E28": {
+      "x": 1882.93,
+      "y": 891.79
+    },
+    "E29": {
+      "x": 3189.09,
+      "y": 812.08
+    },
+    "E30": {
+      "x": 3210.31,
+      "y": 809.19
+    },
+    "E31": {
+      "x": 2026.53,
+      "y": 2021.06
+    },
+    "E32": {
+      "x": 2210.8,
+      "y": 2113.26
+    },
+    "E33": {
+      "x": 4448.26,
+      "y": 480.2
+    },
+    "E34": {
+      "x": 4636.78,
+      "y": 575.37
+    },
+    "E35": {
+      "x": 4617.95,
+      "y": 805.02
+    },
+    "E36": {
+      "x": 571.91,
+      "y": 2040.33
+    },
+    "E37": {
+      "x": 707.2,
+      "y": 1929.74
+    },
+    "E38": {
+      "x": 672.82,
+      "y": 1895.58
+    },
+    "E39": {
+      "x": 578.0,
+      "y": 1885.0
+    },
+    "E40": {
+      "x": 4696.8,
+      "y": 2113.26
+    },
+    "E41": {
+      "x": 4234.88,
+      "y": 2019.22
+    },
+    "E42": {
+      "x": 4637.22,
+      "y": 1802.59
+    },
+    "E43": {
+      "x": 4350.14,
+      "y": 2135.02
+    },
+    "E44": {
+      "x": 861.22,
+      "y": 848.36
+    },
+    "E45": {
+      "x": 4636.26,
+      "y": 2079.8
+    },
+    "E46": {
+      "x": 3535.74,
+      "y": 571.2
+    },
+    "E47": {
+      "x": 3655.12,
+      "y": 627.22
+    },
+    "E48": {
+      "x": 3602.88,
+      "y": 627.22
+    },
+    "E49": {
+      "x": 3249.22,
+      "y": 513.88
+    },
+    "E50": {
+      "x": 3352.35,
+      "y": 698.87
+    },
+    "E51": {
+      "x": 3455.4,
+      "y": 639.77
+    },
+    "E52": {
+      "x": 3283.09,
+      "y": 810.92
+    },
+    "E53": {
+      "x": 3550.65,
+      "y": 365.65
+    },
+    "E54": {
+      "x": 4444.14,
+      "y": 1725.98
+    },
+    "E55": {
+      "x": 4436.49,
+      "y": 1760.61
+    },
+    "E56": {
+      "x": 4440.38,
+      "y": 1856.18
+    },
+    "E57": {
+      "x": 2339.5,
+      "y": 954.91
+    },
+    "E58": {
+      "x": 4385.09,
+      "y": 1929.92
+    },
+    "E59": {
+      "x": 3442.32,
+      "y": 2081.74
+    },
+    "E60": {
+      "x": 2940.91,
+      "y": 1747.92
+    },
+    "E61": {
+      "x": 2919.69,
+      "y": 1932.81
+    },
+    "E62": {
+      "x": 926.1,
+      "y": 719.45
+    },
+    "E63": {
+      "x": 968.93,
+      "y": 618.79
+    },
+    "E64": {
+      "x": 947.47,
+      "y": 738.68
+    },
+    "E65": {
+      "x": 766.19,
+      "y": 952.31
+    },
+    "E66": {
+      "x": 579.74,
+      "y": 960.8
+    },
+    "E67": {
+      "x": 617.41,
+      "y": 809.78
+    },
+    "E68": {
+      "x": 1858.09,
+      "y": 1825.65
+    },
+    "E69": {
+      "x": 1867.81,
+      "y": 1808.33
+    },
+    "E70": {
+      "x": 1895.48,
+      "y": 1746.4
+    },
+    "E71": {
+      "x": 1796.23,
+      "y": 1753.5
+    },
+    "E72": {
+      "x": 511.12,
+      "y": 1659.78
+    },
+    "E73": {
+      "x": 527.69,
+      "y": 1568.81
+    },
+    "E74": {
+      "x": 461.56,
+      "y": 1661.18
+    },
+    "E75": {
+      "x": 532.0,
+      "y": 1842.0
+    },
+    "E76": {
+      "x": 887.12,
+      "y": 1750.78
+    },
+    "E77": {
+      "x": 2296.31,
+      "y": 1750.81
+    },
+    "E78": {
+      "x": 2308.91,
+      "y": 1840.08
+    },
+    "E79": {
+      "x": 353.71,
+      "y": 2019.99
+    },
+    "E80": {
+      "x": 1112.91,
+      "y": 1658.08
+    },
+    "E81": {
+      "x": 2496.91,
+      "y": 1929.92
+    },
+    "E82": {
+      "x": 1527.2,
+      "y": 1929.74
+    },
+    "E83": {
+      "x": 2099.69,
+      "y": 2023.81
+    },
+    "E84": {
+      "x": 1878.65,
+      "y": 462.85
+    },
+    "E85": {
+      "x": 2084.29,
+      "y": 722.23
+    },
+    "E86": {
+      "x": 1723.69,
+      "y": 2110.19
+    },
+    "E87": {
+      "x": 2177.7,
+      "y": 900.5
+    },
+    "E88": {
+      "x": 1719.41,
+      "y": 1746.78
+    },
+    "E89": {
+      "x": 1704.78,
+      "y": 1842.99
+    },
+    "E90": {
+      "x": 1793.79,
+      "y": 1482.17
+    },
+    "E91": {
+      "x": 1667.07,
+      "y": 1850.21
+    },
+    "E92": {
+      "x": 1924.59,
+      "y": 2023.22
+    },
+    "E93": {
+      "x": 1963.22,
+      "y": 2075.59
+    },
+    "E94": {
+      "x": 1911.69,
+      "y": 1928.19
+    },
+    "E95": {
+      "x": 1650.91,
+      "y": 810.92
+    },
+    "E96": {
+      "x": 1681.74,
+      "y": 778.8
+    },
+    "E97": {
+      "x": 2079.67,
+      "y": 360.62
+    },
+    "E98": {
+      "x": 1617.09,
+      "y": 630.08
+    },
+    "E99": {
+      "x": 1589.08,
+      "y": 749.09
+    }
+  },
+  "bounds": {
+    "w": 5310,
+    "h": 3710
+  }
+}

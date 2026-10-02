@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "style": "云岫·青绿金石",
+  "objects": [
+    {
+      "id": "archive",
+      "name": "藏经阁",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/archive.svg"
+    },
+    {
+      "id": "temple",
+      "name": "问道殿",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/temple.svg"
+    },
+    {
+      "id": "pagoda",
+      "name": "九层书塔",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/pagoda.svg"
+    },
+    {
+      "id": "gate",
+      "name": "山门",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/gate.svg"
+    },
+    {
+      "id": "observatory",
+      "name": "观星台",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/observatory.svg"
+    },
+    {
+      "id": "pavilion",
+      "name": "论道亭",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/pavilion.svg"
+    },
+    {
+      "id": "courtyard",
+      "name": "修学别院",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/courtyard.svg"
+    },
+    {
+      "id": "workshop",
+      "name": "天工坊",
+      "family": "village",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/workshop.svg"
+    },
+    {
+      "id": "furnace",
+      "name": "丹炉",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/furnace.svg"
+    },
+    {
+      "id": "scroll",
+      "name": "经卷",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/scroll.svg"
+    },
+    {
+      "id": "sword",
+      "name": "灵剑台",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/sword.svg"
+    },
+    {
+      "id": "stele",
+      "name": "碑林",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/stele.svg"
+    },
+    {
+      "id": "lotus",
+      "name": "青莲",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/lotus.svg"
+    },
+    {
+      "id": "bell",
+      "name": "悟道钟",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/bell.svg"
+    },
+    {
+      "id": "spring",
+      "name": "灵泉",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/spring.svg"
+    },
+    {
+      "id": "crystal",
+      "name": "玉晶簇",
+      "family": "mine",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/crystal.svg"
+    },
+    {
+      "id": "mountain",
+      "name": "云山",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/mountain.svg"
+    },
+    {
+      "id": "lake",
+      "name": "镜湖",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/lake.svg"
+    },
+    {
+      "id": "ocean",
+      "name": "沧海帆舟",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/ocean.svg"
+    },
+    {
+      "id": "island",
+      "name": "悬空山",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/island.svg"
+    },
+    {
+      "id": "bamboo",
+      "name": "竹海",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/bamboo.svg"
+    },
+    {
+      "id": "cave",
+      "name": "洞天",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/cave.svg"
+    },
+    {
+      "id": "constellation",
+      "name": "星域",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/constellation.svg"
+    },
+    {
+      "id": "portal",
+      "name": "秘境门",
+      "family": "mountain",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/portal.svg"
+    },
+    {
+      "id": "broken_bridge",
+      "name": "断桥",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/broken_bridge.svg"
+    },
+    {
+      "id": "seal",
+      "name": "封印碑",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/seal.svg"
+    },
+    {
+      "id": "thunder",
+      "name": "雷劫",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/thunder.svg"
+    },
+    {
+      "id": "thorn",
+      "name": "荆棘阵",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/thorn.svg"
+    },
+    {
+      "id": "locked_gate",
+      "name": "禁制山门",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/locked_gate.svg"
+    },
+    {
+      "id": "maze",
+      "name": "迷阵",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/maze.svg"
+    },
+    {
+      "id": "rift",
+      "name": "空间裂隙",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/rift.svg"
+    },
+    {
+      "id": "wall",
+      "name": "石壁关",
+      "family": "barrier",
+      "anchor": [
+        72,
+        122
+      ],
+      "viewBox": [
+        0,
+        0,
+        144,
+        144
+      ],
+      "file": "assets/objects/wall.svg"
+    }
+  ]
+}

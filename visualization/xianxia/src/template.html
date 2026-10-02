@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>PPA · 云岫 · 数学山海图</title>
+  <meta name="description" content="在像素地图上探索 PPA 研究的定义、条件、结果与开放问题。每条数学超边保留完整合取前提、适用范围和原始证据状态。">
+  <!-- MAP_STYLE -->
+</head>
+<body>
+  <a href="#directory" class="skip-link">跳到可访问目录</a>
+  <header class="masthead">
+    <a class="brand" href="../../README.md" aria-label="PPA 研究库首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>PPA<span class="brand-caption">YUNXIU · RESEARCH REALMS</span></span></a>
+    <div class="masthead-title"><h1>云岫 · 数学山海图</h1><span>一山一问 · 万象同源</span></div>
+    <nav class="top-links" aria-label="研究导航"><a href="gallery.html">万象图鉴 <span>↗</span></a><a href="../../RESEARCH_STATE.md#active-frontier">研究前沿 <span>↗</span></a><a href="../../CLAIMS.md">命题总账 <span>↗</span></a><button id="help-button" class="quiet-button" aria-haspopup="dialog">山海图志 <span>?</span></button></nav>
+  </header>
+  <main class="app-shell">
+    <aside class="journal" aria-label="探索目录">
+      <div class="journal-heading"><span class="eyebrow">THE CULTIVATION JOURNAL</span><div class="journal-title"><h2>问道手记</h2><span class="edition">卷一 · 初境</span></div><p>一片持续生长的数学疆域。<br>每一条路，都有自己的条件。</p></div>
+      <div class="stats" aria-label="图谱总量"><div><strong id="node-total">—</strong><span>数学节点</span></div><div><strong id="edge-total">—</strong><span>合取超边</span></div><div><strong id="region-total">—</strong><span>主题区域</span></div></div>
+      <div class="search-wrap"><span aria-hidden="true">⌕</span><input id="query" type="search" placeholder="寻找命题、条件、证据…" aria-label="搜索节点与超边" autocomplete="off"><kbd>/</kbd></div>
+      <div class="mode-tabs" role="group" aria-label="探索类型"><button class="active" data-mode="all" aria-pressed="true">全部</button><button data-mode="frontier" aria-pressed="false">山海前沿</button><button data-mode="barrier" aria-pressed="false">障碍路标</button></div>
+      <div class="filter-row"><label class="sr-only" for="topic-filter">主题筛选</label><select id="topic-filter"><option value="all">所有数学主题</option></select><button id="reset-filter" class="reset-button" title="清空搜索与筛选" aria-label="清空搜索与筛选">↺</button></div>
+      <div class="directory-heading"><h3 id="directory-title">探索目录</h3><span id="result-count" role="status" aria-live="polite"></span></div>
+      <div class="directory" id="directory" tabindex="-1" aria-labelledby="directory-title"></div>
+      <div class="journal-foot"><span class="tiny-compass" aria-hidden="true">✦</span><div>地图是导航，证明在正文。<br><a href="../../research/HYPERGRAPH.md">关系表</a><span> / </span><a href="../../FAILED_ROUTES.md">失败路线</a><span> / </span><a href="../../research/graph.json">原始数据</a></div></div>
+    </aside>
+    <section class="map-area" aria-label="交互研究地图">
+      <div class="map-head"><div><span class="map-mode-dot"></span><strong id="view-label">全图鸟瞰</strong><span id="view-subtitle">从任意一处地标开始探索</span></div><button id="legend-button" class="paper-button" aria-expanded="false" aria-controls="legend-popover"><span aria-hidden="true">▧</span> 地图图例</button></div>
+      <canvas id="world" tabindex="0" role="img" aria-label="PPA 数学研究像素地图。拖动平移，滚轮缩放；WASD 漫游，方向键平移，加减号缩放，0 全图。节点和全部超边均可从左侧目录使用键盘访问。"></canvas>
+      <div class="map-caption" aria-hidden="true"><span>云岫 · YUNXIU RESEARCH REALMS</span><span>每个 ∧ 都是一组不可拆开的前提</span></div>
+      <div id="tooltip" class="tooltip" hidden></div>
+      <div class="map-controls"><button id="zoom-out" aria-label="缩小地图" title="缩小（−）">−</button><span id="zoom-level" aria-live="off">100%</span><button id="zoom-in" aria-label="放大地图" title="放大（+）">+</button><span class="control-divider"></span><button id="fit-map" class="fit-button" title="全图鸟瞰（0）"><span aria-hidden="true">⌗</span> 全图</button><span class="control-divider"></span><button id="toggle-routes" aria-pressed="false" title="显示或隐藏完整合取超边">路线</button><button id="toggle-walk" aria-pressed="false" title="开启探险者，使用 WASD 漫游">漫游</button></div>
+      <div class="minimap-wrap"><div class="minimap-label"><span>WORLD MAP</span><span aria-hidden="true">N ↑</span></div><canvas id="minimap" width="200" height="128" tabindex="0" role="button" aria-label="全图定位器；点击移动视野，按 Enter 回到全图"></canvas></div>
+      <div class="map-hint" id="map-hint"><span aria-hidden="true">✥</span> 拖动探索 <span>·</span> 滚轮缩放 <span>·</span> WASD 漫游</div>
+      <section class="legend-popover" id="legend-popover" aria-label="地图图例" hidden><div class="popover-title"><h2>读懂这片疆域</h2><button id="close-legend" aria-label="关闭图例">×</button></div><div class="legend-item"><span class="legend-art village" aria-hidden="true">⌂</span><div><strong>书院 · 定义入口</strong><p>规范定义、条件与组织好的理论入口。</p></div></div><div class="legend-item"><span class="legend-art mine" aria-hidden="true">◒</span><div><strong>灵物 · 研究对象</strong><p>经卷、灵泉、丹炉、法器有八种外观；证据须读原文。</p></div></div><div class="legend-item"><span class="legend-art mountain" aria-hidden="true">▲</span><div><strong>秘境 · 显式候选或目标</strong><p>显式开放目标、候选及标注的待证节点。</p></div></div><div class="legend-item"><span class="legend-art barrier" aria-hidden="true">×</span><div><strong>禁制 · 被反驳目标</strong><p>反例、限制或被阻断的推论。</p></div></div><div class="legend-rule"><b>● ＋ ● → ∧ → ●</b><p>输入在同一超边汇合；每个输入须同时成立。朱红禁线 refutes、金色边界 limits、紫色云路 open；青色双向桥 equivalence。默认聚焦所选路线，避免全图缠绕。</p></div><p class="legend-caution">地形、位置、大小与道路远近只是导航设计，不是数学证据、成熟度评级或研究价值排名。候选与来源报告不会因图标升级为已证。</p></section>
+      <aside id="detail" class="detail-panel" aria-label="数学详情" hidden><div class="detail-top"><span class="eyebrow">玉简札记 · 数学详情</span><button id="close-detail" aria-label="关闭详情">×</button></div><div id="detail-content"></div></aside>
+      <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    </section>
+  </main>
+  <footer class="statusbar"><span><i></i> 本地离线图谱 <span class="status-separator">/</span> <span id="data-status"></span></span><span>合取前提不可拆分 <span class="status-separator">·</span> 地貌不代表证明状态</span></footer>
+  <dialog id="help-dialog" aria-labelledby="help-title"><div class="help-head"><span class="eyebrow">A SMALL FIELD GUIDE</span><button id="close-help" aria-label="关闭地图指南">×</button></div><h2 id="help-title">欢迎来到云岫 · 数学山海图</h2><p>先找到一个问题，再检查通向它的每一个前提。</p><ol><li><strong>探索疆域</strong><span>拖动地图，或点击左侧区域；WASD 操作探险者漫游。滚轮与 + / − 缩放，0 回到全图。</span></li><li><strong>顺着合取路线走</strong><span>点击节点查看关联超边；点击 ∧ 枢纽打开一整条数学关系。</span></li><li><strong>在正文核验证据</strong><span>详情保留完整 inputs、relation、scope 和 status。点击正文链接进入定义与证明。</span></li></ol><div class="help-note">地图不计算“完成率”。图标只作探索隐喻；candidate、source-report 与 open 仍保留原本的证据边界。Markdown 正文链接需配合完整仓库打开。</div><div class="help-shortcuts"><kbd>WASD</kbd> 漫游 <kbd>方向键</kbd> 平移 <kbd>+ −</kbd> 缩放 <kbd>0</kbd> 全图 <kbd>/</kbd> 搜索 <kbd>Esc</kbd> 关闭</div><button id="start-exploring" class="primary-button">开始探索 <span>→</span></button></dialog>
+  <noscript><div class="noscript">交互地图需要 JavaScript。所有条件与证据仍可在 <a href="../../research/HYPERGRAPH.md">完整 Markdown 超边表</a> 查看。</div></noscript>
+  <!-- GRAPH_DATA -->
+  <!-- WORLD_DATA -->
+  <!-- OBJECT_DATA -->
+  <!-- MAP_SCRIPT -->
+</body>
+</html>
