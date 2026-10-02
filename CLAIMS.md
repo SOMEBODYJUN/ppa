@@ -730,3 +730,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C120 同一完整图，每个固定 \(\lambda>0\) 的全域单值 \(J_{\lambda V^*}=UJ_{\lambda V}U\) 有显式反向积分核；全图全对线性 RL 锐 \(L=1\)，无界全图任意 \(0<\gamma<1\) 不存在有限常数。每个有限整数 \(k\ge1\) 的算子范数 \(\|J^k\|=1\)，但每个固定 \(p\) 的 \(J^kp\to0\) 强收敛，且每个非零输入单步范数严格缩短。近端输入步残差的任意局部右极限零 gauge EB 也失败。
 - **Dependencies / Evidence / Status / Related Files**：[AV-PROX](research/topics/examples/adjoint_volterra.md#av-prox) 先核全部完整纤维与核公式，再用酉共轭传递 C105 的能量、稠密值域及高频证明；`derived-checked`。来源 GX-061 只给近端公式及 RL 标签，有限幂与点态极限属本库推导。
 - **Counterevidence / Scope**：全图常数的取等条件在**图点差**零均值，不能改写成任意输入差。原算子真残差、近端输入步残差及逐点收敛是三个不同断言；有界输入窗的次线性继承不等于无界全图证书。
+
+## C122-v1 / PR-CAYLEY · 完整旋转族的唯一奇点与锐全对尺度
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 \(\mathbb R^2\) 全域完整 \(Q_\theta=\cos\theta I+\sin\theta K\)，\(-\pi\le\theta\le\pi,\lambda>0\)。令 \(\Delta=1+2\lambda\cos\theta+\lambda^2,N=1-2\lambda\cos\theta+\lambda^2\)。唯一奇点 \(Q=-I,\lambda=1\) 时自然域 \(\{0\}\)，完整 \(J(0)=\mathbb R^2\)；否则 \(J,R\) 全域线性单值，\(\|J\|=\Delta^{-1/2}\)，反射锐线性模 \(\ell=\sqrt{N/\Delta}\)。在任意 Minty 输入对距不超过 \(R>0\) 的窗内，\(0<\gamma\le1\) 的最小全对常数为 \(\ell R^{1-\gamma}\)；无界全图次线性失败，唯 \(Q=I,\lambda=1\) 的零反射例外。
+- **Dependencies / Evidence / Status / Related Files**：[PR-CAYLEY](research/topics/examples/planar_rotation_family.md#pr-cayley) 用矩阵逆、所有可实现差距与完整奇点纤维直接证明，`derived-checked`；来源 Z07 旋转族第 765–839 行。D02 尺度是输入对距，不是球半径。
+- **Counterevidence / Scope**：仅在 \(\Delta>0\) 的同参数 signed LT 锐数为 \(-\lambda\cos\theta/\Delta\)，若只允许非负 \(\tau\) 则为 \(\max\{0,-\lambda\cos\theta/\Delta\}\)；仅在 \(\cos\theta\ge0\) 时截为 0。不能把二者写成同一个常数。来源外部例号和优先性未核。
+
+## C123-v1 / PR-CYCLIC · 循环阶与两张取样角的可保留结论
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C122 同一完整图，所有整数 \(n\ge2\) 的精确循环门是 \(|\theta|\le\pi/n\iff\cos\theta\ge\cos(\pi/n)\)，成立时图也极大 \(n\)-循环单调。GX-062 \(Q_{\pi/3}\) 最高 3 阶、GX-063 \(Q_{\pi/4}\) 最高 4 阶；正强单调及 cocoercivity 系数分别 \(1/2,1/\sqrt2\)，完整逆像的普通 MR/MSR/SMR/SMSR 系数均为 1。两角 \(\ell<1\)，全部近端路径由完整全域相似变换给精确有限长度。
+- **Dependencies / Evidence / Status / Related Files**：[PR-CYCLIC/TWO-ANGLES](research/topics/examples/planar_rotation_family.md#pr-cyclic) 的离散 Fourier 模对角化、全图极大性双侧扰动和完整逆纤维；`derived-checked`。来源 Z07 第 840–908 行分别核入，外部 Voisei 归属不承重。
+- **Counterevidence / Scope**：来源 GX-063 第 902–905 行“循环阶不能由标量强单调模还原”在此旋转族内被 (PR7) **修正**：\(\mu=\cos\theta\) 正好决定所有循环阶。两角只证明相同逆像条件数 1 不决定循环阶；不把该族内关系推广为一般算子定理。

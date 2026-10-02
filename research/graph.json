@@ -1289,6 +1289,26 @@
       "file": "topics/examples/adjoint_volterra.md#av-prox"
     },
     {
+      "id": "PROT-OBJECT",
+      "label": "平面旋转完整参数族与输入对距",
+      "file": "topics/examples/planar_rotation_family.md#pr-object"
+    },
+    {
+      "id": "PROT-CAYLEY",
+      "label": "唯一 Minty 奇点与锐全对模",
+      "file": "topics/examples/planar_rotation_family.md#pr-cayley"
+    },
+    {
+      "id": "PROT-CYCLIC",
+      "label": "Fourier 模的循环阶门",
+      "file": "topics/examples/planar_rotation_family.md#pr-cyclic"
+    },
+    {
+      "id": "PROT-TWO-ANGLES",
+      "label": "两取样角的可保留比较",
+      "file": "topics/examples/planar_rotation_family.md#pr-two-angles"
+    },
+    {
       "id": "NC-OBJECT",
       "label": "负三次完整图与三根 Minty 输入",
       "file": "topics/examples/negative_cubic_branch.md#nc-object"
@@ -3562,6 +3582,33 @@
       "relation": "conditional",
       "scope": "固定同一 λ>0、完整 J_{λV*}=U J_{λV}U 与所有图点对；近端核公式直接反演，酉共轭传递每个固定输入的强收敛和每个有限幂范数 1。输入步残差另以 ae_n 高频序列否定统一消失 gauge EB；不能与原算子真残差或单位球统一收敛混用。",
       "status": "C121-v1 完整近端与 C105 的同参数酉共轭"
+    },
+    {
+      "id": "E190",
+      "topic": "例库",
+      "inputs": ["PROT-OBJECT"],
+      "output": "PROT-CAYLEY",
+      "relation": "conditional",
+      "scope": "同一实 R² 完整 Qθ，全 θ∈[−π,π] 与 λ>0；若 Δ>0 则全域完整 J、R 和输入对距 R 的锐 L*=√(N/Δ)R^(1−γ)，无界次线性只有 θ=0,λ=1 的零反射例外。若 Δ=0 则 Q=−I,λ=1 的 J(0)=R²，所有零消失模失败。两个参数分支不能合成单值公式。",
+      "status": "C122-v1 Z07 Rot-3–5 完整矩阵及纤维重算"
+    },
+    {
+      "id": "E191",
+      "topic": "例库",
+      "inputs": ["PROT-OBJECT"],
+      "output": "PROT-CYCLIC",
+      "relation": "conditional",
+      "scope": "固定同一完整 Qθ 与整数 n≥2；所有 n-循环以离散 Fourier 模逐个对角化，首尾模给 |θ|≤π/n 的必要充分门；该范围的全域图极大单调，故也极大 n-循环单调。外部 Voisei 例号不承重。",
+      "status": "C123-v1 Z07 Rot-1–2 自包含重算"
+    },
+    {
+      "id": "E192",
+      "topic": "例库",
+      "inputs": ["PROT-CAYLEY", "PROT-CYCLIC"],
+      "output": "PROT-TWO-ANGLES",
+      "relation": "conditional",
+      "scope": "只对 θ=π/3 和 π/4 的同族完整图及每个固定 λ>0：分别代入 c=1/2,1/√2；同一逆像条件数 1 而循环阶 3/4，强单调模不同。来源 GX-063 所称循环阶不由强模决定，在这个族内被 μ=c 与 n-循环门反驳；不得外推到所有算子。",
+      "status": "C123-v1 两角算式核验与来源解释修订"
     }
   ]
 }

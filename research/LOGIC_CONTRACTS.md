@@ -224,6 +224,12 @@ E188 固定实 \(L^2(0,1)\) **完整全域** \(V\) 与 \(V^*\)，同一个等距
 
 E189 再固定**同一个** \(\lambda>0\) 与全输入的完整 \(J\)，而非选定分支或不同参数比较。\(J_{\lambda V^*}=UJ_{\lambda V}U\) 使 C105 的每个固定输入强收敛及每个有限幂范数 1 转移；近端输入步残差的消失 gauge 失败仍有独立高频见证。全图线性 RL 的锐性取等需要零均值**图点差**，不能任意改成零均值输入差；逐点强收敛也不授予单位球统一速率。[AV-PROX](topics/examples/adjoint_volterra.md#av-prox)。
 
+## E190–E192：旋转族的完整参数窗、奇点与取样解释
+
+E190 固定**同一** \(\theta\in[-\pi,\pi]\)、\(\lambda>0\) 的完整实平面旋转图。先用 \(\Delta=1+2\lambda\cos\theta+\lambda^2\) 划开唯一奇点 \(Q=-I,\lambda=1\) 的多纤维与 \(\Delta>0\) 的全域单值完整 \(J\)。仅后者对所有输入对距 \(t\le R\) 给锐 \(L^*=\sqrt{N/\Delta}R^{1-\gamma}\)；输入对距 \(R\) 与各输入球半径 \(R\) 不能互换。无界全图次线性另需排除零反射 \(Q=I,\lambda=1\)。[PR-CAYLEY](topics/examples/planar_rotation_family.md#pr-cayley)。
+
+E191 在同一完整图、每个整数 \(n\ge2\) 的循环量词上逐个 Fourier 模验算，首尾模共同给 \(|\theta|\le\pi/n\)，再由全图极大单调给极大 \(n\)-循环；此证明不依赖外部例号。E192 只取 \(\pi/3,\pi/4\) 两角，合用 C122 的同参数矩阵和 C123 的循环门：逆像系数同为 1、循环阶不同，强单调系数也不同。历史“强模不能决定循环阶”在该族内被 \(\mu=\cos\theta\) 否定，详情 [F34](../FAILED_ROUTES.md#f34)；这条反向纠错不宣称一般算子类也可还原。[PR-TWO-ANGLES](topics/examples/planar_rotation_family.md#pr-two-angles)。
+
 ## E173–E174：极点支的完整近端、残差与逐路径门
 
 E173 对**同一完整关系** \(F(0)=\{0\},F(x)=\{-1/x\}\)（\(0<x\le\varepsilon\)）及每个固定 \(\lambda>0\)，分别检查全部 Minty 纤维和任意两图点。\(\lambda\le\varepsilon^2\) 时 \(J(0)=\{0,\sqrt\lambda\}\)，即使 \(\lambda<\varepsilon^2\) 有零输入球，也没有零消失全对模；\(\lambda>\varepsilon^2\) 时全图锐线性 RL 成立，但零输入是自然域孤立点。输入局部 hypo 失败不等于零图点附近的**乘积图窗**失败，后者只有一个图点。[IP-MINTY](topics/examples/isolated_pole_relation.md#ip-minty)。

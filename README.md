@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 284 个数学节点、189 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 288 个数学节点、192 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -194,11 +194,12 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/composite_regular/README.md](research/topics/composite_regular/README.md)、[research/topics/composite_regular/cusp_identification.md](research/topics/composite_regular/cusp_identification.md)、[research/topics/composite_regular/oscillating_target.md](research/topics/composite_regular/oscillating_target.md) | 复合主题可扩写入口与 C40/C41 独立证明：真多值次梯度的局部一步识别门、弱分离缺失时驻点极大序列的目标正确 EB 障碍。新增秩亏机制或目标反例时分别开卡，先核同一目标和真实残差。 |
 | [research/audit/SOURCE_RECONSTRUCTION_AUDIT.md](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md)、[SOURCE_FILE_INVENTORY.tsv](research/audit/SOURCE_FILE_INVENTORY.tsv)、[ZIP_MEMBER_INVENTORY.tsv](research/audit/ZIP_MEMBER_INVENTORY.tsv)、[LEGACY_VERIFIER_RUNS.json](research/audit/LEGACY_VERIFIER_RUNS.json) | 251 个原件及 178 个包内成员的路径/哈希/语义未决字段，旧验证器环境与运行输出；逐源重写时更新 disposition 与规范锚点，不能将盘点算验收。 |
 | [research/topics/examples/volterra_integration.md](research/topics/examples/volterra_integration.md)、[adjoint_volterra.md](research/topics/examples/adjoint_volterra.md)、[negative_cubic_branch.md](research/topics/examples/negative_cubic_branch.md) | C104/C105 与 C120/C121：Volterra 和伴随方向作为一个等距例型，右端点逆像另核；完整近端逐点强收敛而统一 gauge/有限幂界失败。C106/C107：负三次完整远支、图块锐模和路径越域。研究局部证书与完整算法时读。 |
+| [research/topics/examples/planar_rotation_family.md](research/topics/examples/planar_rotation_family.md) | C122/C123：完整旋转族唯一 Minty 奇点、锐全对输入对距模、Fourier 循环阶与 GX-062/063 两角；修正旧稿“族内强模不决定循环阶”的过强解释。 |
 | [research/topics/examples/isolated_pole_relation.md](research/topics/examples/isolated_pole_relation.md)、[rational_irrational_staircase.md](research/topics/examples/rational_irrational_staircase.md) | C108–C111/GX-055/056：前者全步长完整纤维、图窗、残差逃逸和全部合法路径；后者算术支纤维、锐 RL、真残差与完整最小步界。研究零系数模为何不提供输入/目标覆盖时读。 |
 | [research/topics/examples/product_splice.md](research/topics/examples/product_splice.md) | C112–C114/GX-057：完整直积的全纤维、零残差与所有合法路径；临界全图、图点输出窗和仅限输入窗的不同锐半阶系数。组合不同例卡或改变图窗口时读。 |
 | [research/audit/SOURCE_OCCURRENCES.tsv](research/audit/SOURCE_OCCURRENCES.tsv)、[PAYLOAD_GROUPS.tsv](research/audit/PAYLOAD_GROUPS.tsv)、[build_occurrence_index.py](research/audit/build_occurrence_index.py) | 429 个物理文件/ZIP 成员位置与 346 个不同字节内容的可复现索引；状态仍待逐段语义枚举，不能把来源组数当数学覆盖。 |
 | [research/audit/SEMANTIC_UNIT_SEED.tsv](research/audit/SEMANTIC_UNIT_SEED.tsv) | 三份来源成员的连续行覆盖试点：S19、SS1 的选定数学单元去向，以及 GX-053–065 的 39 个第一遍结构段；后者卡内属性和文献事实尚须逐项拆分。校验器检查行区间及已填锚点，不能把分段数量当验收率。 |
-| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 102 行分别核定，只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
+| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 106 行分别核定，只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
