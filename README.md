@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先看修仙主题的 [32 件物件图鉴](visualization/xianxia/gallery.html)，再进入 [可漫游的数学山海图](visualization/xianxia/index.html)；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，现有 294 个数学节点、194 条关系。地图可平移、缩放、搜索和打开节点或关系详情；每条超边的多个输入是**合取**，其适用范围和证据状态须在详情或文字表中核对。新图的 [物件语义](visualization/xianxia/SEMANTIC_ATLAS.md) 与 [增长规则](visualization/xianxia/README.md) 单独维护；地貌和建筑是探索隐喻，不是证明状态或价值评级。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 内嵌关系数据，可单独打开；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 力学处理非轨道节点的排布与碰撞。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 294 个数学节点、194 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -161,8 +161,9 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/finite_sample_collar.md](research/canonical/finite_sample_collar.md) | C70：9/25 §8 的实际样本距离上下包络和需要**全部整窗输出**条件的留域余量；证明不调用拓扑定理。读 C05 前先区分样本认证、分析余量、原稿 C05-v1 的候选状态及 C05-v2 已重算的条件拓扑链；原生模型整窗认证仍开放。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json) | 精确文字关系与机读节点边。数学 Claim 或条件边变化时按规范正文改图并运行 [research/build_graph.py](research/build_graph.py)；表现层只消费图，不能从景观倒推数学状态。 |
-| [visualization/xianxia/](visualization/xianxia/README.md)、[物件图鉴](visualization/xianxia/gallery.html)、[数学山海图](visualization/xianxia/index.html)、[增长交接](visualization/xianxia/HANDOFF.md) | 修仙视觉项目的独立源码、32 个可编辑 SVG、物件角色、持久坐标清单、离线 HTML 和增量测试。新增研究节点时运行其 `build.py`、提交 `data/world.json`，旧坐标不随图增长洗牌；判断画风从图鉴开始，判断数学证据回到规范正文和原始超边。 |
-| [research/map.html](research/map.html)、[research/map/](research/map/) | 上一版像素探索图与可再生前端源码，保留作兼容与设计对照；新修仙美术和增量世界只在 `visualization/xianxia/` 维护。 |
+| [visualization/cosmos/](visualization/cosmos/README.md)、[动态宇宙](visualization/cosmos/index.html)、[语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) | 当前研究图的动态视图：原图 JSON、固定语义锚点、D3 力学、真实图节点的公转、合取阵点与随路探测器。新增或修订超边后运行 `build.py`，核对布局及关系回归；天体造型只负责导航，数学状态仍取原图和规范正文。 |
+| [visualization/xianxia/](visualization/xianxia/README.md)、[物件图鉴](visualization/xianxia/gallery.html)、[数学山海图](visualization/xianxia/index.html)、[增长交接](visualization/xianxia/HANDOFF.md) | 上一版修仙视觉实验，保留可编辑 SVG、静态世界清单与离线 HTML 供设计对照；新宇宙视图在 `visualization/cosmos/` 独立维护。 |
+| [research/map.html](research/map.html)、[research/map/](research/map/) | 更早的像素探索图与可再生前端源码，保留作兼容和设计对照；精确关系仍以 `research/graph.json`、规范正文及 `CLAIMS.md` 为准。 |
 | [research/LOGIC_CONTRACTS.md](research/LOGIC_CONTRACTS.md) | 关键超边的固定对象、量词、合取 side conditions 与不蕴含；使用跨稿箭头或改 Claim 版本时先核。 |
 | [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |

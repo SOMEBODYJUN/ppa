@@ -1,0 +1,41 @@
+/* Semantic layout + genuine D3-force simulation; usable from browser and Node. */
+(function(root,factory){if(typeof module==='object'&&module.exports)module.exports=factory(require('../vendor/d3.v7.9.0.min.js'));else root.CosmosEngine=factory(root.d3);})(typeof globalThis!=='undefined'?globalThis:this,function(d3){
+'use strict';
+const TAU=Math.PI*2;
+const systems=[
+{id:'solar',name:'RLEB · 太阳系',subtitle:'局部收敛定理链',x:0,y:0,color:'#ffc86a',radius:755},
+{id:'structure',name:'HÖLDER · 结构星系',subtitle:'影子、纤维、拓扑',x:1900,y:-1150,color:'#ae9bff',radius:500},
+{id:'finite',name:'ORACLE · 有限数据',subtitle:'值域与认证边界',x:2070,y:470,color:'#72daca',radius:500},
+{id:'markov',name:'MARKOV · 运输星系',subtitle:'同步 OT 与不变律',x:-1900,y:-860,color:'#6da9ff',radius:490},
+{id:'binary',name:'BINARY · 条件刷新',subtitle:'固定边缘 Wν / R',x:-3130,y:-1570,color:'#71e2af',radius:260},
+{id:'gaussian',name:'GAUSSIAN · Gibbs',subtitle:'W₂,Q / R_Q',x:-3150,y:-310,color:'#7cbded',radius:260},
+{id:'path',name:'DYNAMICS · 轨道群',subtitle:'路径、选择、残差',x:130,y:1720,color:'#ecb27d',radius:600},
+{id:'cone',name:'GEOMETRY · 锥与复合',subtitle:'秩、面与误差界',x:1980,y:2070,color:'#8de1bb',radius:470},
+{id:'examples',name:'ARCHIVE · 对象星群',subtitle:'独立完整图与边界例',x:-1970,y:1600,color:'#d29dd9',radius:750},
+{id:'space',name:'FRONTIER · 未知星域',subtitle:'算子空间与规模比较',x:0,y:-1900,color:'#b595ee',radius:430},
+{id:'foundations',name:'ATLAS · 参数与接口',subtitle:'同对象、同尺度、同纤维',x:1320,y:-2860,color:'#90b9e9',radius:500}
+];
+const orbitIds=['D01','D02','D03','D04','COV','CMP','LOC','R01'];
+const moonParents={'R03':'R01','R04':'D02','GROW':'D04','SCHUR':'D03','COLLIDE':'COV','FULL':'LOC'};
+function hash(s){let h=2166136261;for(let i=0;i<s.length;i++)h=Math.imul(h^s.charCodeAt(i),16777619);return h>>>0;}
+function group(n){const f=n.file||'';if(n.id==='R02'||orbitIds.includes(n.id)||moonParents[n.id])return 'solar';if(['M-COND','M-BINARY','COND-EB'].includes(n.id))return 'binary';if(['G-COND','M-GAUSS','G-COND-EB'].includes(n.id))return 'gaussian';if(f.includes('operator_space')||f.includes('compact_t_observation'))return 'space';if(f.includes('random_markov')||f.includes('random_proximal')||n.id.startsWith('M-')||['FAST-EB','POWER-EB','OB-RES'].includes(n.id))return 'markov';if(f.includes('examples')||f.includes('example_atlas'))return 'examples';if(f.includes('cone_markov')||f.includes('composite'))return 'cone';if(f.includes('range_finite')||f.includes('finite_sample')||f.includes('local_range'))return 'finite';if(f.includes('holder_structure')||f.includes('holder_extension')||f.includes('LITERATURE'))return 'structure';if(/parameter_dictionary|non_tied|closed_graph|all_pairs|named_branch|residual_window|foundations/.test(f))return 'foundations';return 'path';}
+function validate(graph){const ids=new Set();for(const n of graph.nodes){if(!n.id||ids.has(n.id))throw Error('重复或缺失 node ID');ids.add(n.id);}const ei=new Set();for(const e of graph.edges){if(ei.has(e.id))throw Error('重复 edge ID');ei.add(e.id);if(!Array.isArray(e.inputs)||!e.inputs.length||!ids.has(e.output)||e.inputs.some(i=>!ids.has(i)))throw Error('超边端点缺失 '+e.id);}return true;}
+function make(graph,previous){validate(graph);let model={graph:JSON.parse(JSON.stringify(graph)),nodes:[],byId:new Map(),systems:systems.map(s=>({...s})),anchors:{...(previous?.anchors||{})},time:0};const graphIds=new Set(graph.nodes.map(n=>n.id));const refuted=new Set(graph.edges.filter(e=>e.relation==='refutes').map(e=>e.output));for(const raw of graph.nodes){const g=group(raw),s=systems.find(s=>s.id===g),h=hash(raw.id),p=graphIds.has('R02')?orbitIds.indexOf(raw.id):-1;let kind=raw.id==='R02'?'sun':p>=0?'planet':moonParents[raw.id]&&graphIds.has(moonParents[raw.id])?'moon':raw.id==='SIZE'?'galaxy':refuted.has(raw.id)||raw.id.startsWith('OB-')?'hazard':'body';const r=kind==='sun'?34:kind==='planet'?12+[1,3,5,4,8,10,9,6][p]:kind==='moon'?5:kind==='galaxy'?25:kind==='hazard'?9:8+h%6;let a=model.anchors[raw.id];if(!a){const angle=h/4294967296*TAU,dist=s.radius*(.22+.72*(hash(raw.id+'r')/4294967296)**.5);a={x:s.x+Math.cos(angle)*dist,y:s.y+Math.sin(angle)*dist*.78,system:g};model.anchors[raw.id]=a;}let n={...raw,group:g,kind,r,x:a.x,y:a.y,ax:a.x,ay:a.y,color:s.color,phase:(h%10000)/10000*TAU};if(p>=0){n.orbit={parent:'R02',radius:[105,165,230,300,380,465,560,670][p],period:34+p*15,tilt:.56};n.phase=[-1.0,1.6,-2.5,.12,2.35,-.48,-1.8,.75][p];}if(kind==='moon'){n.orbit={parent:moonParents[raw.id],radius:36+(h%4),period:8+(h%6),tilt:1};}if(kind==='sun'){n.fx=0;n.fy=0;n.x=0;n.y=0;}model.nodes.push(n);model.byId.set(n.id,n);}
+const old=previous?.byId;for(const n of model.nodes)if(old?.has(n.id)){const o=old.get(n.id);n.x=o.x;n.y=o.y;n.vx=o.vx||0;n.vy=o.vy||0;}
+model.edges=graph.edges.map(e=>({...e,inputs:[...e.inputs]}));model.time=previous?.time||0;updateOrbits(model,model.time);return model;}
+function updateOrbits(model,time){model.time=time;for(const n of model.nodes.filter(n=>n.kind!=='moon'))if(n.orbit)position(n,model,time);for(const n of model.nodes.filter(n=>n.kind==='moon'))position(n,model,time);avoidOrbitalCollisions(model,time);}
+function avoidOrbitalCollisions(m,time){
+// Moons use the same circular orbital track; phase detours avoid projected overlaps.
+const moons=m.nodes.filter(n=>n.kind==='moon').sort((a,b)=>a.id.localeCompare(b.id));
+for(const n of moons){const p=m.byId.get(n.orbit.parent),base=n.phase+TAU*time/n.orbit.period;
+ const obstacles=m.nodes.filter(q=>q!==n&&(q.kind==='sun'||q.kind==='planet'||(q.kind==='moon'&&q.id<n.id)));
+ for(let i=0;i<65;i++){const offset=i===0?0:Math.ceil(i/2)*.09817477*(i%2?1:-1),a=base+offset,x=p.x+Math.cos(a)*n.orbit.radius,y=p.y+Math.sin(a)*n.orbit.radius;
+ if(obstacles.every(q=>Math.hypot(x-q.x,y-q.y)>=n.r+q.r+3)){n.x=n.fx=x;n.y=n.fy=y;break;}}
+}}
+function position(n,m,time){const o=n.orbit,p=m.byId.get(o.parent),angle=n.phase+TAU*time/o.period;n.fx=p.x+Math.cos(angle)*o.radius;n.fy=p.y+Math.sin(angle)*o.radius*o.tilt;n.x=n.fx;n.y=n.fy;}
+function simulation(model){const links=model.edges.flatMap(e=>e.inputs.map(id=>({source:id,target:e.output})));return d3.forceSimulation(model.nodes).randomSource(d3.randomLcg(.314159)).force('anchorX',d3.forceX(n=>n.ax).strength(.16)).force('anchorY',d3.forceY(n=>n.ay).strength(.16)).force('repulsion',d3.forceManyBody().strength(n=>n.orbit?-15:-24).distanceMax(160)).force('collision',d3.forceCollide(n=>n.r+11).iterations(4)).force('links',d3.forceLink(links).id(n=>n.id).strength(l=>l.source.group===l.target.group?.008:.00003).distance(65)).velocityDecay(.5).alphaDecay(.018).stop();}
+function junction(edge,model){const out=model.byId.get(edge.output),ins=edge.inputs.map(id=>model.byId.get(id)),cx=ins.reduce((s,n)=>s+n.x,0)/ins.length,cy=ins.reduce((s,n)=>s+n.y,0)/ins.length;let x=cx*.6+out.x*.4,y=cy*.6+out.y*.4;const a=(hash(edge.id)%628)/100;return {x:x+Math.cos(a)*34,y:y+Math.sin(a)*34};}
+function curve(a,b,seed=0){const dx=b.x-a.x,dy=b.y-a.y,len=Math.max(1,Math.hypot(dx,dy)),bend=Math.min(90,len*.15)*(seed%2?1:-1);return {a,b,c:{x:(a.x+b.x)/2-dy/len*bend,y:(a.y+b.y)/2+dx/len*bend}};}
+function at(c,t){const u=1-t;return{x:u*u*c.a.x+2*u*t*c.c.x+t*t*c.b.x,y:u*u*c.a.y+2*u*t*c.c.y+t*t*c.b.y};}
+return{systems,orbitIds,moonParents,hash,group,validate,make,updateOrbits,simulation,junction,curve,at};
+});
