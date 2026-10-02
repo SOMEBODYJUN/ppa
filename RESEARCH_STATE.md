@@ -11,7 +11,8 @@
 
 [C08 抽象模传递](research/canonical/solution_selection_rates.md#ss-transfer) 现有局部尺度逐步闭合的独立证明；[C115/C116 二次模型](research/canonical/solution_selection_rates.md#ss-quadratic-object) 把完整两值近端、真全纤维 EB、同一固定 collar 的共同超几何尾，与逐轨道 Q 二次和根对数坏选择分开。SS1 定理 2/3、§5.2 尚未逐项重写。
 
-[C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举步骤；这仍是未执行的盘点计划，不是 100 行之外内容的验收。
+[C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举与验收步骤；来源层已生成索引，语义枚举尚未执行，不是 100 行之外内容的验收。
+[429 个来源位置索引](research/audit/SOURCE_OCCURRENCES.tsv)及[346 个字节内容组](research/audit/PAYLOAD_GROUPS.tsv)现已由可复现生成器建立并双向核哈希与 ZIP 成员；格式/角色、文档解码和逐段语义枚举仍为 `pending-*`，尚不能称分母已建立。后续按计划 P1–P5 逐批给每段去向。
 
 本批 [C108/C109 孤立极点图](research/topics/examples/isolated_pole_relation.md#ip-object) 修正来源的连通域措辞，重算全步长完整纤维和锐模，并证明严格近端 Lipschitz 仍可无非零无限合法路径。[C110/C111 算术阶梯](research/topics/examples/rational_irrational_staircase.md#gx056-object) 区分有理亚临界步长的单值断裂、无理步长的同输入碰撞以及原算子真残差与近端最小步残差。两张卡只验收所列 GX-055/056 单元；在同 ZIP 中尚有其它例卡与历史分类标签。
 

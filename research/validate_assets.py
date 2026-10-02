@@ -81,6 +81,37 @@ if member_path.is_file():
         if len(raw) != int(row["bytes"]) or hashlib.sha256(raw).hexdigest() != row["sha256"]:
             errors.append(f"ZIP member hash/size changed: {row['source_member']}")
 
+occurrence_path = ROOT / "research/audit/SOURCE_OCCURRENCES.tsv"
+payload_path = ROOT / "research/audit/PAYLOAD_GROUPS.tsv"
+if occurrence_path.is_file() and payload_path.is_file():
+    with occurrence_path.open(encoding="utf-8", newline="") as f:
+        occurrences = list(csv.DictReader(f, delimiter="\t"))
+    with payload_path.open(encoding="utf-8", newline="") as f:
+        payloads = list(csv.DictReader(f, delimiter="\t"))
+    expected = {
+        row["source"]: (row["sha256"], row["bytes"])
+        for row in inventory
+    } | {
+        row["source_member"]: (row["sha256"], row["bytes"])
+        for row in members
+    }
+    indexed = {row["locator"]: (row["sha256"], row["bytes"]) for row in occurrences}
+    if len(indexed) != len(occurrences) or indexed != expected:
+        errors.append("source occurrence index differs from the two source inventories")
+    by_hash = {}
+    for row in occurrences:
+        by_hash.setdefault(row["sha256"], []).append(row)
+    grouped = {row["sha256"]: row for row in payloads}
+    if len(grouped) != len(payloads) or set(grouped) != set(by_hash):
+        errors.append("payload groups differ from source occurrence hashes")
+    else:
+        for sha, row in grouped.items():
+            entries = by_hash[sha]
+            if (int(row["occurrence_count"]) != len(entries)
+                    or row["representative_locator"] not in {e["locator"] for e in entries}
+                    or any(e["representative_locator"] != row["representative_locator"] for e in entries)):
+                errors.append(f"invalid payload group: {sha}")
+
 unit_count = 0
 unit_path = ROOT / "research/audit/UNIT_DISPOSITIONS.tsv"
 if unit_path.is_file():
