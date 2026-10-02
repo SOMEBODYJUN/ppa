@@ -6,28 +6,30 @@
 
 - **Exact Statement / Objects / Domain**：非空关系 \(F:H\rightrightarrows H\)，实 Hilbert 空间 \(H\)，\(\lambda,L>0\)，\(0<\gamma<1\)。在**每一对**图点 \((x,v),(y,w)\) 上有 \(\|(x-y)-\lambda(v-w)\|\le L\|(x-y)+\lambda(v-w)\|^\gamma\)，当且仅当 \(D=\{x+\lambda v:(x,v)\in\operatorname{gph}F\}\) 上 \(C(x+\lambda v)=x-\lambda v\) 良定且为 \(L\)-Hölder；反向图重建为 \(((p+C(p))/2,(p-C(p))/(2\lambda))\)。若 \(D=H\) 则图在**同一固定参数**下 maximal。
 - **Dependencies / Evidence**：图点求和、求差和同输入唯一性；[9/23 TeX Lemma `cayley`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 直接给出双向证明。反向“任何极大图必满域”的同常数扩张已在 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 从 Hilbert 雪花正性及[一手 Kirszbraun 引文](research/LITERATURE.md#lit-alm-2021)单独重写。
-- **Objections / Status / Scope**：代数事实，易复核；只说固定参数的 graph-maximal，绝不等同于极大单调；局部图块须重新声明量词。
+- **Objections / Status / Scope**：`derived-checked` 仅针对剪切代数及已核的同常数扩张条件；只说固定参数的 graph-maximal，绝不等同于极大单调；局部图块须重新声明量词。
 
 ## C02 · 9/18 局部 RLEB–PPA 收敛（原稿版本）
 
 - **Exact Statement / Objects / Domain**：\(X=\mathbb R^n\)，\(F:X\rightrightarrows X\)，\(\lambda>0\)，非空闭 \(S\subset F^{-1}(0)\)，图块 \(\mathcal G\)、开域 \(U\)、\(0<\gamma\le1\)、\(L\ge0\)、\(R,\bar t>0\)，非减 \(\psi(0)=0\) 且原点连续，\(0<\kappa<1\)。A1：\(U_R\) 上局部 range coverage 且每个输入有图块中的最近零点；A2：\(\mathcal G\) 在尺度 \(R\) 满足 all-pairs RL；A3：实际输出上的 \(d(y,S)\le\psi(r_F(y))\) 及 gauge domain；A4：对 \(0<t\le R\)，\(\psi((t+Lt^\gamma)/(2\lambda))\le\kappa t\)。初值还需 \(d_0\le R\) 和 \(\mathcal L(d_0)=\tfrac12[d_0/(1-\kappa)+Ld_0^\gamma/(1-\kappa^\gamma)]<\operatorname{dist}(x^0,X\setminus U)\)。
 - **Conclusion**：唯一的**局部** \(J_{\mathcal G}\) 轨道无限继续、留域、有限长度、收敛到 \(S\) 中一点；\(d(x^k,S)\le\kappa^kd_0\)，且 \(\|x^\infty-x^k\|\le\tfrac12[\kappa^kd_0/(1-\kappa)+L\kappa^{\gamma k}d_0^\gamma/(1-\kappa^\gamma)]\)。允许多选择版本改用每个合法 transition 的共同 anchored 估计，不能把多值图与单值局部 \(J\) 混同。
 - **Dependencies / Evidence**：C01 的局部形式、一步能量和 \(s\le(d+Ld^\gamma)/2\)、真实输出残差、A1–A4、归纳留域；[9/18 原投稿 ZIP 的 `sections/theorem_spine.tex`](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RLEB_PPA_submission_assets_2026-09-18.zip)。
-- **Objections / Status / Scope**：**有稿内证明及内部语义核对；本轮未重审全证明**。\(r_F\) 为全部输出纤维的 inf；没有额外证明 \(J_{\mathcal G}=J_{\lambda F}\) 时，不得把定理写成全算子完整 resolvent 结论。旧稿中的数值兼容常数不能代替实际收缩率。
+- **Objections / Status / Scope**：`candidate`：有稿内证明及内部语义核对，尚未重审全部证明。\(r_F\) 为全部输出纤维的 inf；没有额外证明 \(J_{\mathcal G}=J_{\lambda F}\) 时，不得把定理写成全算子完整 resolvent 结论。旧稿中的数值兼容常数不能代替实际收缩率。
 
 ## C03 · 全局双向 simultaneous shadow（9/23 候选）
 
 - **Exact Statement / Objects / Domain**：C01 的实 Hilbert、非空全图全尺度 RL 假设。存在**一个**强单调双 Lipschitz homeomorphism \(A:H\to H\)，对**每个** \((x,v)\in\operatorname{gph}F\) 有 \(\|v-A(x)\|\le R/(\sqrt2\lambda)\)、\(\|x-A^{-1}(v)\|\le R/\sqrt2\)，\(R=L^{1/(1-\gamma)}\)。稿内还给 \(0<\sigma<1\) 的交叉估计与显式 Lipschitz/强单调常数，\(\sigma=\sqrt\gamma\) 取到所列半径，且因子 \(1/\sqrt2\) 是任意维数统一意义下最优；指定锚点版本改为另一问题、最优因子 1。
 - **Dependencies / Evidence**：[9/23 TeX `thm:shadow`, `thm:sharpness`, `lem:crosslift`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 的 quadratic excess、orthogonal lifting、Banach contraction。匹配 PDF 21 页。
-- **Objections / Status / Scope**：**有证明的研究稿候选，尚待独立数学深审**。全图 all-pairs 条件与 C02 的局部条件不同；不据此断言每个精确逆分支稳定，也不据此确定新颖性。
+- **Objections / Status / Scope**：`candidate`：有证明的研究稿，尚待独立数学深审。全图 all-pairs 条件与 C02 的局部条件不同；不据此断言每个精确逆分支稳定，也不据此确定新颖性。
 
 ## C04 · 有限维完整纤维分类（9/23 候选）
 
 - **Exact Statement / Objects / Domain**：固定 \(n\ge1\)、\(\lambda,L>0\)、\(0<\gamma<1\)，取 \(\mathbb R^n\) 上**固定这些参数**图极大的 RL 关系。集合 \(K\) 能作为某个这类关系的完整 \(F^{-1}(0)\)，当且仅当它非空、紧、\(\operatorname{diam}K\le R=L^{1/(1-\gamma)}\)；正向 \(F(0)\) 对应阈值 \(R/\lambda\)。量词是“每一个这样的 \(K\) 都存在某个 \(F\)”以及“每个这类 \(F\) 的纤维必要满足条件”，并非固定 \(F\) 可任意变换纤维。
 - **Dependencies / Evidence**：C01、同常数的 Hölder Hilbert 扩张、有限维 proper map/degree 得全域纤维非空紧、`thm:fixedset` 的精确不动点实现；[9/23 TeX `thm:fibers`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)。
-- **Objections / Status / Scope**：**稿内证明候选**；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。扩张和 fixed-set 的适用条件是独立审查重点。
+- **Objections / Status / Scope**：`candidate`：有稿内证明；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。扩张和 fixed-set 的适用条件是独立审查重点。
 
 ## C05-v1 · 原关系局部值域的有限数据拓扑证书（9/25 稿候选）
+
+- **Status**：`candidate`，仅保留 PDF 原稿的精确候选身份；C05-v2 的条件证明不是对原稿逐行验收。
 
 - **Exact Statement / Objects / Domain**：\(F:\mathbb R^n\rightrightarrows\mathbb R^n\)，完整闭非空零集 \(S=F^{-1}(0)\)；\(\lambda,L>0\)，\(0<\gamma<1\)，\(q\gamma>1\)，\(\kappa>0\)，\(\phi(r)=(r+Lr^\gamma)/2\)、\(c=\kappa\lambda^{-q}\)。指定的实际 proximal 对应 \(T(p)\) 在相关窗满足 \((p-y)/\lambda\in F(y)\)、\(\|p-y\|\le\phi(d(p,S))\)、\(d(y,S)\le c\|p-y\|^q\) **对每个** \(y\in T(p)\)。两个非空紧有限多面体 \(A,B\) 且 \(A\subset\operatorname{int}B\)；\(T\) 在 \(A\) 某邻域 upper semicontinuous，且该邻域每个值非空紧 Čech-\(\mathbb Q\)-acyclic；经验证有限样本定义的包络在 A／B 的 collar 满足 PDF (8.4)：\(\sup_Au_E\le u\)、\(\inf_{B\setminus\operatorname{int}A}g_E\ge m>0\)、\(\phi(u)<d(A,B^c)\)、\(\alpha=c\phi(u)^q<m\)。\(H^j(B;\mathbb Q)\to H^j(A;\mathbb Q)\) 对每个 j 满射，且 \(\chi(A)\ne0\)。
 - **Conclusion**：\(B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A)\)；更一般地，\(\sup_A\|h\|<(m-\alpha)/\lambda\) 的连续 \(h:A\to\mathbb R^n\) 有 \(x\in\operatorname{int}A\) 满足 \(h(x)\in F(x)\)、\(d(x,S)\le\kappa\|h(x)\|^q\)。
@@ -41,6 +43,8 @@
 - **Counterevidence / Objections / Status / Scope**：有限样本仍不能认证指定 \(T\) 在整个窗的非空、usc、acyclic 或 (8.1)–(8.2)；实际原生问题可能无法生成合适的 (8.4)。外部拓扑导入适用门已核，但整条候选的文献新颖性、原生模型和其它定理推广未审。删去 \(q\gamma>1\) 是数学身份变化，不回写 C05-v1 的来源事实；若未来出现 Čech/CAC 的承重异议，应降回候选并隔离拓扑结论。
 
 ## C06 · 固定紧 T-only 图卡的内生观测
+
+- **Status**：`source-report`（来源内部已审）；本仓库尚未独立重构本条完整 proper/quotient 证明。
 
 - **Exact Statement / Objects / Domain**：非空紧 \(K\subset\mathbb R^d\)，非空闭 \(S\subset K\)。令 \(X=\{T\in C(K,K):T|_S=I,\ T^n\to\Pi_T\text{一致},\Pi_T(K)\subset S\}\)，全时间度量 \(\rho(T,U)=\sup_{n\ge0}\|T^n-U^n\|_K\)。定义 \(w_n(T)=\max\{\sup_{k,\ell\ge n}\|T^k-T^\ell\|_K,\ \sup_{k\ge n,x\in K}d(T^kx,S)\}\)：第一项看**所有尾部两迭代差**，不是仅相邻步差。令 \(m_j=\sup_{\|x-y\|\le2^{-j}}\|(2T-I)x-(2T-I)y\|\)。则 \(\Phi:X\to c_0\times c_0\)，\(T\mapsto(w,m)\) 连续 proper；其实际像闭 Polish，非空精确纤维紧/Baire，映射到像 perfect/quotient。
 - **Dependencies / Evidence**：[9/20 `06_math_audit.md` §1](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md) 的 Arzelà–Ascoli、共同尾预算及全时间收敛证明；内部独立审计。
@@ -84,7 +88,7 @@
 
 ## C13 · 冻结面 CRSC 与 MSCQ（锥旁支）
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(X,E\)、闭尖满维 nice 凸锥 \(C\)、\(C^1\) 映射 \(G\) 在 \(\bar x\) 满足 \(G(\bar x)=0\)。设 \(A=DG(\bar x)\)，\(F=F_{\min}(\operatorname{Im}A\cap C)\)，\(H=F^\perp\)，\(S_{\mathrm{dual}}=\operatorname{span}(C^*\cap F^\perp)\)。假设 \(A^*C^*\) 闭、\(\operatorname{rank}(DG(x)^*|_H)\) 在完整邻域恒定，且参考面 \(F\) amenable；保留原包的闭像与常秩局部条件。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(X,E\)、闭尖满维 nice 凸锥 \(C\)、\(C^1\) 映射 \(G\) 在 \(\bar x\) 满足 \(G(\bar x)=0\)。设 \(A=DG(\bar x)\)，\(\mathfrak F=F_{\min}(\operatorname{Im}A\cap C)\)，\(H=\mathfrak F^\perp\)，\(S_{\mathrm{dual}}=\operatorname{span}(C^*\cap\mathfrak F^\perp)\)。假设 \(A^*C^*\) 闭、\(\operatorname{rank}(DG(x)^*|_H)\) 在完整邻域恒定，且参考面 \(\mathfrak F\) amenable；保留原包的闭像与常秩局部条件。
 - **Conclusion**：冻结秩夹逼使面稳定，经共同法向流形与切向修正，存在邻域和 \(\kappa<\infty\)，对其中每个 \(x\) 有 \(d(x,G^{-1}C)\le\kappa d(G(x),C)\)。对固定 proper nice 锥，“每个在顶点冻结 CRSC 的 \(C^1\) 系统均 MSCQ”与 amenability 等价；逆向测试是各面的线性嵌入。
 - **Dependencies / Evidence / Objections / Status / Related Files**：[cone_markov §1](research/cone_markov.md)，S14C 主稿及 CM-C 证明包。内部审计与承重步骤重读；正式版文献和退化常数分支待独立核。该锥距离残差不是 \(r_F\)，不能自动迁移 RLEB。
 
@@ -102,11 +106,13 @@
 
 ## C16 · 匹配公共接口下的 LT→RLEB 能量证书
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限维完整原图且全域单值 \(T=J_{\lambda F}\)，同一目标 \(S\)、同一 coverage/测试域/真实残差和留域接口；公共 all-pairs LT 假设 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\) 和 \(2\tau(\lambda+\rho)^2<\lambda^2\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维完整原图且全域单值 \(T=J_{\lambda F}\)，\(\lambda>0,\tau\ge0,\rho>0\)，同一目标 \(S\)、同一 coverage/测试域/真实残差和留域接口；公共 all-pairs LT 假设 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\) 和 \(2\tau(\lambda+\rho)^2<\lambda^2\)。
 - **Conclusion**：在此接口中取 \(\gamma=1,L^2=1+4\tau,\psi(t)=\rho t\)，能量分支的 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)，故公共 LT 证书类包含于相应 RLEB 能量证书类。不是完整 LTT 框架全部版本的包含，也不保存最佳常数或最大域。
-- **Dependencies / Evidence / Objections / Status / Related Files**：R03 的能量式及归一化代数，[operator_space §2](research/operator_space.md)，S20 OS-H §3.2。内部证明；不推出两类在自然母空间的大小差异。
+- **Dependencies / Evidence / Objections / Status / Related Files**：R03 的能量式及归一化代数，[operator_space §2](research/operator_space.md)，S20 OS-H §3.2。状态 `derived-checked` 只针对上述匹配接口的代数转换；不推出两类在自然母空间的大小差异。\(\rho=0\) 时 \(\alpha(t)=t/\rho\) 无定义，若有退化 EB 须另列版本；signed \(\tau\) 不由此条覆盖。
 
 ## C17 · 固定紧 T-only 图卡的 proper \(\Phi\)（C06 的范围细化）
+
+- **Status**：`source-report`（同 C06 的来源证明）；范围细化不另立一个已独立重证的定理。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：C06 的非空固定紧 \(K\)、闭 \(S\subset K\) 和全时间度量空间 \(X\)；尾 \(w_n\) 同时看所有 \(k,\ell\ge n\) 的迭代差与到 \(S\) 距离，反射模 \(m_j\) 看输入尺度 \(2^{-j}\) 的 \(2T-I\)。
 - **Conclusion**：\(\Phi=(w,m):X\to c_0^2\) 连续 proper，像闭 Polish，非空精确纤维紧；这与 C06 同一数学身份，是释义细化，**不另造较强定理**。
@@ -742,3 +748,15 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C122 同一完整图，所有整数 \(n\ge2\) 的精确循环门是 \(|\theta|\le\pi/n\iff\cos\theta\ge\cos(\pi/n)\)，成立时图也极大 \(n\)-循环单调。GX-062 \(Q_{\pi/3}\) 最高 3 阶、GX-063 \(Q_{\pi/4}\) 最高 4 阶；正强单调及 cocoercivity 系数分别 \(1/2,1/\sqrt2\)，完整逆像的普通 MR/MSR/SMR/SMSR 系数均为 1。两角 \(\ell<1\)，全部近端路径由完整全域相似变换给精确有限长度。
 - **Dependencies / Evidence / Status / Related Files**：[PR-CYCLIC/TWO-ANGLES](research/topics/examples/planar_rotation_family.md#pr-cyclic) 的离散 Fourier 模对角化、全图极大性双侧扰动和完整逆纤维；`derived-checked`。来源 Z07 第 840–908 行分别核入，外部 Voisei 归属不承重。
 - **Counterevidence / Scope**：来源 GX-063 第 902–905 行“循环阶不能由标量强单调模还原”在此旋转族内被 (PR7) **修正**：\(\mu=\cos\theta\) 正好决定所有循环阶。两角只证明相同逆像条件数 1 不决定循环阶；不把该族内关系推广为一般算子定理。
+
+## C124-v1 / SB-GEOMETRY · 斜旋转法锥的图几何
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在实 \(\mathbb R^2\) 取单位闭盘 \(B\)、\(K=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\) 和完整 \(F=K+N_B\)。对**全部**图点对，(SB6) 的内积非负；图单调、rectangular 而非 paramonotone，正强单调及正 cocoercivity 系数均不存在。Rectangular 的固定点量词是 \(\xi\in\operatorname{dom}F=B,\eta\in\operatorname{ran}F\)，不得扩到盘外 \(\xi\)。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[SB-GEOMETRY](research/topics/examples/skew_ball_inverse.md#sb-geometry) 从全部法向射线计算；极大性是另一个依赖 C125 全域 Minty 输入的结论。`derived-checked`，来源 Z07 `work/c_gx053_065.md` GX-058 第 476–504 行，外部 BWY 归属未核。
+- **Counterevidence / Scope**：两个不同内点配对为零，排除正系数；内点 \((x,Kx),(0,0)\) 的交叉图点 \((x,0)\) 不存在。Rectangular、paramonotone、C98/C99 的逆像模与 C125 的反射模是不同性质，不从任一标签无条件转授另一项。
+
+## C125-v1 / SB-PROX · 全部近端纤维和锐全图 RL
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C124 的**同一个完整** \(F\)，任意固定 \(\lambda>0\) 与每个 \(p\in\mathbb R^2\)。完整 \(J_{\lambda F}(p)\) 单值满域且由 (SB8) 的内/外两式给出，分界 \(\|p\|=\sqrt{1+\lambda^2}\) 连续一致；结合 C124 单调性，\(F\) 极大单调。对全部输入对 \(R_\lambda=2J_{\lambda F}-I\) 非扩张，锐全图 \(\mathrm{RL}(\lambda,1,1)\) 常数 1；无界全图不存在有限的 \(0<\gamma<1\) 幂常数。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[SB-PROX](research/topics/examples/skew_ball_inverse.md#sb-prox) 逐法向参数反演、完整纤维及 (SB9) 全对恒等式，`derived-checked`；来源同一 GX-058 第 520–537 行。C124 的图单调性用于反射上界，两个内点给常数 1 取等。
+- **Counterevidence / Scope**：\(\|Jp\|\le1\) 且 \(R_\lambda p=2Jp-p\) 给无界尺度障碍；有界输入对距窗口可另继承小指数。完整反射 RL 不代表 C98/C99 的 MR，亦不提供小于 1 的统一反射因子或一般 RLEB 动力证书。

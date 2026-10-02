@@ -52,7 +52,8 @@ M_+(u,v)=u+\lambda v,\qquad M_-(u,v)=u-\lambda v,\qquad D=M_+(G).
 ## CG-BOUNDARY · 哪些条件不能省
 
 1. **闭图不单独给 coverage。** 在 \(H=\mathbb R\) 取 \(K=[0,1]\)、\(G=K\times\{0\}\)。它闭，\(D=K\) 也闭；全对 \(\mathrm{RL}(\lambda,1,1)\) 成立，但没有任何包含 \(0\) 的开输入球被 \(D\) 覆盖。若用任意有界闭真子集 \(K\subsetneq H\)，在直径为 \(\Delta>0\) 时还可取 \(0<\gamma<1\) 及 \(L=\Delta^{1-\gamma}\)。
-2. **零点处模消失是承重条件。** 取 \(H=\mathbb R,\lambda=1\)，\(G=\{(t,-t):0<t<1\}\)。其 \(D=\{0\}\) 闭而 \(G\) 不闭；\(M_+|_G\) 非单射，不能定义上面的 \(C\)。任何满足 (CG-1) 的消失模都排除此图块。
+2. **稠密不单独给 coverage。** 在 \(H=\mathbb R\) 取 \(G=\mathbb Q\times\{0\}\)，则 \(D=\mathbb Q\) 在 \(H\) 稠密而不等于 \(H\)。全部图点对满足 \(\omega(t)=t\) 的 (CG-1)，但 \(G\) 非闭；闭性不能从稠密性中省去。此例是同一图块 \(G\subset H\times H\)，不是声称 \(\mathbb Q\) 是闭的完整算子域。
+3. **零点处模消失是承重条件。** 取 \(H=\mathbb R,\lambda=1\)，\(G=\{(t,-t):0<t<1\}\)。其 \(D=\{0\}\) 闭而 \(G\) 不闭；\(M_+|_G\) 非单射，不能定义上面的 \(C\)。任何满足 (CG-1) 的消失模都排除此图块。
 
 对完整关系 \(G=\operatorname{gph}F\)，本定理的 \(D\) 是完整 \(\operatorname{ran}(I+\lambda F)\)；对图块 \(G\subsetneq\operatorname{gph}F\)，它只证明图块输入域闭，不使完整 resolvent 单值或排除图块外纤维。Hilbert 完备性在 Cauchy 极限处使用；不把定理未经证明搬到任意不完备范数空间。
 

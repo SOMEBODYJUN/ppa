@@ -7,7 +7,7 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 106 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 108 行来源单元有逐项去向（102 rewritten、3 superseded、3 deferred）；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
 
 [C08 抽象模传递](research/canonical/solution_selection_rates.md#ss-transfer) 现有局部尺度逐步闭合的独立证明；[C115/C116 二次模型](research/canonical/solution_selection_rates.md#ss-quadratic-object) 把完整两值近端、真全纤维 EB、同一固定 collar 的共同超几何尾，与逐轨道 Q 二次和根对数坏选择分开。SS1 定理 2/3、§5.2 尚未逐项重写。
 
@@ -26,6 +26,12 @@
 本轮新增 [C88 同核不同随机表示](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp)：四状态核与唯一不变律固定，逐状态独立开关改变同步 OT 成本与锐系数。它是新构造，不计作旧来源单元验收。空白接收修正了 E115 真残差的局部窗遗漏及 README 对 C15 已完成证书的过期暗示；C05-v2 的拓扑导入已按现有条件核，原生模型的整窗全称认证仍是开放义务。
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
+
+## 本批增量：跨正文符号协调与 GX-058 图几何
+
+[符号契约](research/NOTATION_CONTRACT.md) 固定跨主题调用的 \(\mathrm{RL}(\lambda,\gamma,L;R)\) 顺序、真残差与其它残差的类型；已修正参数字典/例库的顺序冲突，锥最小面与 PPA 原关系的 \(F\) 冲突，以及 C16 的 \(\rho=0\) 端点。条件 Markov 摘要补齐二进制与 Gaussian 残差、采样归一化及成本定义，空白 AI 不再需要从历史原稿猜这些符号。C01–C06、C16/C17 的状态词作明确登记，但没有将来源候选升级为已证定理。
+
+[C124/C125](research/topics/examples/skew_ball_inverse.md#sb-geometry) 对 GX-058 的完整 \(K+N_B\) 图另核极大单调、rectangular、非 paramonotone、全部近端纤维和锐全图 \(L=1\) 反射模；C98/C99 的原算子 MR 量词保留为独立结果。来源 GX-058 仍为 `segmented-partial`，外部 BWY 归属未核。逐源表现在 108 行（102 rewritten、3 superseded、3 deferred）；三个试点之外的语义分母仍未建立。
 
 ## 本批增量：旋转族 GX-062/063 与来源解释纠错
 
@@ -190,7 +196,7 @@
 
 现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前图的精确节点/边数以 [graph.json](research/graph.json) 和结构校验为准，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
 
-**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 106 个数学单元；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
+**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 108 行（其中 3 行 deferred）；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
 **例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。
 
 **例库首批**：C24–C26 的 EX01 旋转、EX02 正紧对角、EX03 三次映射已给完整对象、真实残差和直接证明。尤其 EX02 排除任何趋零 gauge 的统一局部 EB，却保留每个初值的 PPA 强收敛；EX03 将固定目标常数 1、两变量 \(2^{2/3}\) 与算法残差下确界 \(\lambda^{-1/3}\) 分开。此三例只关闭对应 GX-004/009/021 的本轮数学单元，原卡其他性质和其余 GX 尚待重写。

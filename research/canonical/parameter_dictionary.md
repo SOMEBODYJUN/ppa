@@ -149,12 +149,12 @@ C_\eta=(\beta I+\alpha C)\circ Q^{-1}.
 对 \(\Gamma^{-1}=\{(v,u):(u,v)\in\Gamma\}\)，两侧范数各提出 \(1/\lambda\) 得
 
 \[
-\Gamma\in\mathrm{RL}(\lambda,L,\gamma)
-\iff\Gamma^{-1}\in\mathrm{RL}(\lambda^{-1},L\lambda^{\gamma-1},\gamma).
+\Gamma\in\mathrm{RL}(\lambda,\gamma,L)
+\iff\Gamma^{-1}\in\mathrm{RL}(\lambda^{-1},\gamma,L\lambda^{\gamma-1}).
 \]
 
 对 \(c>0\)，\(c\Gamma=\{(u,cv):(u,v)\in\Gamma\}\)，则
-\(\Gamma\in\mathrm{RL}(\lambda,L,\gamma)\iff c\Gamma\in\mathrm{RL}(\lambda/c,L,\gamma)\)，因为乘积 \((\lambda/c)(cv)\) 不变。
+\(\Gamma\in\mathrm{RL}(\lambda,\gamma,L)\iff c\Gamma\in\mathrm{RL}(\lambda/c,\gamma,L)\)，因为乘积 \((\lambda/c)(cv)\) 不变。
 这两条改变了关系本身，不能充当同图换步不变性的证明。来源定位：S1 Theorem 2.1(b,c)。
 
 <a id="pd-scale"></a>

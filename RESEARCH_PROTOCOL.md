@@ -6,7 +6,7 @@
 
 | 新资产 | 位置与进入条件 |
 | --- | --- |
-| 精确定义与约定 | `research/foundations.md` 或 `research/canonical/<topic>.md`。标明空间、参数、局部/全局及依赖；冲突约定并存且各自命名。 |
+| 精确定义与约定 | `research/foundations.md` 或 `research/canonical/<topic>.md`；跨主题调用先核 `research/NOTATION_CONTRACT.md` 的字母类型和 RL 参数顺序。标明空间、参数、局部/全局及依赖；冲突约定并存且各自命名。 |
 | 定理、引理、猜想、反例、桥 | 主题模块 `research/*.md` 或 `research/canonical/*.md` 的独立锚点；精确身份另登 `CLAIMS.md`，图中只为真正承重的关系建节点/边。 |
 | 独立证明、攻击与义务 | 同一主题模块相邻章节；未闭 obligation 放 `RESEARCH_STATE.md`，失败机制进入 `FAILED_ROUTES.md`。不得以评分或审稿意见代替推理。 |
 | 可复现计算 | 新代码放 `research/code/<topic>/`，记录运行命令、环境、参数、seed、精度、误差和输出。[代码登记](research/CODE_REGISTER.md)映射旧验证器与 Claim；历史代码原样留在 `history/sources/`，其执行不自动验证一般命题。 |

@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：100 行逐源数学单元有精确去向，最近的 GX-055–057、SS1 解选择与 S19 signed-Schur 的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 108 行逐源单元有去向（102 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择与 S19 signed-Schur 的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -212,7 +212,7 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 
 [C104/C105](../topics/examples/volterra_integration.md#vo-object) 重写 GX-060 的完整积分图、真残差及反射，另证每个有限近端幂范数为 1 与每初值强收敛并存；真残差和步残差分别给消失 gauge 的高频反例。来源 CCA-M10 指出 GX-061 伴随图酉等价，现又在 [C120/C121](../topics/examples/adjoint_volterra.md#av-object) 验收 GX-061 的端点、残差与完整近端，保留两方向一例型的去重范围；未核外部 BWY 归属和旧目录其它属性。
 
-[C106/C107](../topics/examples/negative_cubic_branch.md#nc-object) 重写 GX-054 的完整远根与受限分支；固定零目标/两目标模和 EX03 正三次有符号变换关系，而全图 RL 碰撞与指定路径越域另行证明。旧二参数分类和其它标签未核。这两条历史逐源行只关闭其明确数学单元；当前总表为 106 行，文件级清单仍不能算数学验收。
+[C106/C107](../topics/examples/negative_cubic_branch.md#nc-object) 重写 GX-054 的完整远根与受限分支；固定零目标/两目标模和 EX03 正三次有符号变换关系，而全图 RL 碰撞与指定路径越域另行证明。旧二参数分类和其它标签未核。这两条历史逐源行只关闭其明确数学单元；该批当时总表为 106 行，现行总表以文件首段与实际 TSV 为准，文件级清单仍不能算数学验收。
 
 ## 增量：Z07 GX-053–065 成员的结构分段
 

@@ -3,7 +3,7 @@
 <a id="sb-object"></a>
 ## 对象、目标和完整纤维
 
-在 \(\mathbb R^2\) 取 \(K=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\)、闭单位盘 \(B\)，定义完整关系 \(F=K+N_B\)。在 \(\|x\|<1\) 时 \(F(x)=\{Kx\}\)，在 \(\|x\|=1\) 时 \(F(x)=\{Kx+\alpha x:\alpha\ge0\}\)，盘外为空。固定边界参考 \(\bar x\in\partial B\) 的目标为 \(\bar y=K\bar x\)，**不是**零目标。来源线索为 9/01 ZIP `work/c_gx053_065.md` §2 的 GX-058；原卡所称“边界平方根转角”在下文重算为完整全局和局部锐常数。其它单调性标签及外部优先权未审。
+在 \(\mathbb R^2\) 取 \(K=\begin{pmatrix}0&1\\-1&0\end{pmatrix}\)、闭单位盘 \(B\)，定义完整关系 \(F=K+N_B\)。在 \(\|x\|<1\) 时 \(F(x)=\{Kx\}\)，在 \(\|x\|=1\) 时 \(F(x)=\{Kx+\alpha x:\alpha\ge0\}\)，盘外为空。固定边界参考 \(\bar x\in\partial B\) 的目标为 \(\bar y=K\bar x\)，**不是**零目标。来源线索为 9/01 ZIP `work/c_gx053_065.md` §2 的 GX-058；原卡的边界逆像、图几何和近端属性在下文分别重算。外部 BWY 例号及优先权未审。
 
 <a id="sb-inverse"></a>
 ## C98-v1：完整逆映射与全域两变量模
@@ -58,3 +58,45 @@ z_\theta=\cos\theta\,\bar x+\sin\theta\,K\bar x,
 \(\theta\downarrow0\) 使半阶比恒为 \(\sqrt2\)，任意 \(q>1/2\) 的比发散。\(\theta=\pi\) 使两种距离均为 2，证 (SB3) 的每个全局锐系数。对 \(0<q<1/2\)，缩小共同邻域中的残差，(SB3) 的半阶版本给局部 \(q\) 阶系数下确界 0（不说在非平凡邻域由系数 0 取到）。
 
 在原点 \((0,0)\) 的足够小输入输出窗口内，\(F(x)=Kx\)，所以通常线性 MR/MSR 的局部系数是 1；边界的半阶断言不能当作零点的同一参考命题。(SB3) 是 \(F^{-1}\) 与**原算子** MR 的模，不是反射 resolvent 的全对 RL。
+
+<a id="sb-geometry"></a>
+## C124-v1：完整图的单调、rectangular 与非 paramonotone
+
+任意两图点写成 \((x,Kx+\alpha x),(z,Kz+\beta z)\)，其中 \(x,z\in B\)、\(\alpha,\beta\ge0\)、\(\alpha(1-\|x\|)=\beta(1-\|z\|)=0\)。反对称性给
+\[
+\langle x-z,(Kx+\alpha x)-(Kz+\beta z)\rangle
+=\alpha(\|x\|^2-\langle x,z\rangle)
+ +\beta(\|z\|^2-\langle x,z\rangle)\ge0.\tag{SB6}
+\]
+边界上的两项由 Cauchy–Schwarz 非负；内点的相应系数为零。这证明完整图单调。取两个不同内点，差值为 \(K(x-z)\)，配对为零而 \(\|K(x-z)\|>0\)，所以正强单调与正 cocoercivity 系数都不存在（相应最优非负系数为 0）。
+
+为核 rectangularity，固定 \(\xi\in\operatorname{dom}F=B\)、\(\eta\in\operatorname{ran}F\)。对任意图点 \((z,Kz+\alpha z)\)，
+\[
+\langle\xi-z,\eta-(Kz+\alpha z)\rangle
+=\langle\xi-z,\eta-Kz\rangle+\alpha(1-\langle\xi,z\rangle)
+\quad(\alpha>0\Rightarrow\|z\|=1).\tag{SB7}
+\]
+第一项在紧盘上有统一下界，第二项非负。因此在标准的 \(\xi\in\operatorname{dom}F,\eta\in\operatorname{ran}F\) 量词下，rectangular infimum 有限。这里**没有**把 \(\xi\) 扩到盘外。取任意非零内点 \(x\)，\((x,Kx),(0,0)\) 配对为零，但交叉点 \((x,0)\notin\operatorname{gph}F\)，故 paramonotonicity 失败。
+
+<a id="sb-prox"></a>
+## C125-v1：全部近端纤维与锐全图反射模
+
+对每个 \(\lambda>0\) 和每个输入 \(p\in\mathbb R^2\)，完整 \(J_{\lambda F}(p)\) 恰有一个点：
+\[
+J_{\lambda F}(p)=
+\begin{cases}
+\dfrac{I-\lambda K}{1+\lambda^2}p,&\|p\|\le\sqrt{1+\lambda^2},\\[2mm]
+\dfrac{hI-\lambda K}{\|p\|^2}p,
+\quad h=\sqrt{\|p\|^2-\lambda^2},&\|p\|>\sqrt{1+\lambda^2}.
+\end{cases}\tag{SB8}
+\]
+内部方程是 \(p=(I+\lambda K)x\)；其解的范数是 \(\|p\|/\sqrt{1+\lambda^2}\)。外部令 \(\|x\|=1\)、\(p=((1+\lambda\alpha)I+\lambda K)x\)，便有 \(h=1+\lambda\alpha>1\) 和 (SB8) 的第二式。阈值处两式一致，且全部法向 \(\alpha\ge0\) 都已反演，故没有漏掉其它输出。单调图又因 \(I+\lambda F\) 对每个输入满射而极大：若 \((z,w)\) 与所有图点单调相关，取 \(x=J_{\lambda F}(z+\lambda w)\)、\(v=(z+\lambda w-x)/\lambda\)，则 \(\langle z-x,w-v\rangle=-\|z-x\|^2/\lambda\ge0\)，迫使 \((z,w)=(x,v)\) 已在图上。
+
+写 \(R_\lambda=2J_{\lambda F}-I\)。若 \(p=x+\lambda u,q=z+\lambda v\)，(SB6) 给
+\[
+\|R_\lambda p-R_\lambda q\|^2
+=\|p-q\|^2-4\lambda\langle x-z,u-v\rangle\le\|p-q\|^2.\tag{SB9}
+\]
+两个不同内点有等号，故**全部输入对距**的全图 \(\mathrm{RL}(\lambda,1,1)\) 常数 1 锐，虽完整 \(J\) 全域单值，反射并非严格收缩。由于 \(\|Jp\|\le1\)，取 \(q=0\) 和 \(\|p\|\to\infty\) 得 \(\|R_\lambda p\|\ge\|p\|-2\)，任何全域 \(0<\gamma<1\) 的有限常数都失败。有界成对输入窗可继承较低指数，属于另一个尺度量词。
+
+来源与范围：GX-058 第 476–504、520–537 行给这组图几何/近端线索；(SB6)–(SB9) 为本页对完整图和全部输入的独立推导，不使用旧稿的 `PASS` 标签或外部 BWY 归属。C98/C99 的原算子逆像 MR 属于另一残差坐标，不能从本节反射模推得。

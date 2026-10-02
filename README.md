@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 288 个数学节点、192 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。[可筛选的 HTML 超边图](research/map.html) 和 [Markdown 关系表](research/HYPERGRAPH.md) 展示 290 个数学节点、194 条关系；[graph.json](research/graph.json) 是可校验的结构数据。原稿保存在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。HTML 在完整仓库检出目录中可打开并沿相对链接进入正文；单独下载 HTML 会丢失被链接的 Markdown 文件。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -18,7 +18,7 @@
 
 ## Mathematical Objects 与 Definition Map
 
-定义域、量词、约定在 [foundations.md](research/foundations.md)。核心坐标为
+定义域、量词、约定在 [foundations.md](research/foundations.md)；跨主题复用的字母、残差类型和统一 \(\mathrm{RL}(\lambda,\gamma,L;R)\) 参数顺序见 [符号与适用域契约](research/NOTATION_CONTRACT.md)。核心坐标为
 
 \[
 J_{\lambda F}(p)=\{u:p-u\in\lambda F(u)\},\quad
@@ -81,7 +81,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 负三次的完整图与图块 | 完整 F=−x³ 的零输入三根否定全对 RL；受限 [−M,M] 在 3λM²<1 才有锐图块线性模 | C106/C107：固定零目标与两目标锐 1/3 系数不同；图块非零路径有限步离开自然域，不能赋给完整多值近端 |
 | 孤立极点图与阶梯图 | 前者完整图的零输入纤维按 λ=ε² 分相，后者全图线性 RL 按 λ=δ 分相，亚临界算术类型决定是否有精确碰撞 | C108–C111：真残差任意幂的零下确界模不提供两变量目标覆盖或非零无限路径；阶梯的完整最小步界需对全部 J 纤维取最小 |
 | 负平方乘阶梯 | 两完整关系在 Euclidean 直积，线性段全图模取分量最大，但临界半阶的完整乘积最优常数须联合优化 | C112–C114/GX-057：零目标真 EB 锐半阶与仅零路径无限合法；临界全图锐系数严格大于 2，图点输出共同窗才为 2，仅限输入的固定窗仍严格大于 2 |
-| 斜旋转法锥的逆像锐界 | 二维完整 \(K+N_B\) 的每个目标有唯一原像；全部图点给 \(\|\Delta x\|^2\le2\|\Delta y\|\) | C98/C99：全域逆像与原算子 MR 的锐 \(q\le1/2\) 系数 \(2^{1-q}\)；非零边界目标局部锐半阶 \(\sqrt2\)，原点则局部线性 |
+| 斜旋转法锥的逆像与全图反射 | 二维完整 \(K+N_B\) 的每个目标有唯一原像；全部图点给 \(\|\Delta x\|^2\le2\|\Delta y\|\)；同图另核单调与全部近端纤维 | C98/C99：原算子 MR 的锐半阶；C124/C125：rectangular 而非 paramonotone、完整近端满域，反射全图线性锐常数 1；两个残差坐标分开 |
 | 负平方根的图身份门 | GX-032 的短受限图 \(F_U\) 有锐全对 \(L=3\) 与真二次 EB，但任一非零输入仅有一步；半直线母图 \(F_\infty\) 有远支，同输入碰撞 | C85–C87 分别重算两个完整关系，F28 禁止把短图证书与母图或无限轨道拼接 |
 | 异维数正则性与两残差 | GX-076 的最近逆点线性但固定/双变量锐半阶；GX-077 的原算子残差跳跃系数下确界 0，但近端步残差锐系数 1 | C76–C79 独立对象卡；不能将 GX-076 赋予同空间 RL，也不能互换原算子与近端残差 |
 | 固定目标随机近端 | 同一全局 prox + 域内平稳律 → 吸收支持；非乘积闭近端图 + fair tie 核 → 有限长非不变极限及完整 \(W_2\) 邻域无 law-step gauge EB | C62/C63；与随机换目标 C22/C23、Markov 同步 OT \(\Psi\) 分离 |
@@ -176,7 +176,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/examples/bounded_negative_identity.md](research/topics/examples/bounded_negative_identity.md) | C96/C97/GX-066：完整有界负恒等图在 \(\lambda=1\) 的零输入多值、各指数锐全对常数及全部合法路径的步长相变；检验近端收缩与反射模、自然域覆盖能否互授时读。 |
 | [research/topics/examples/skew_compact_diagonal.md](research/topics/examples/skew_compact_diagonal.md) | C102/C103/GX-059：完整无限维斜等距加紧对角的锐逆像、非 rectangular 直接反例、近端幂范数及反射锐非严格界；攻击正则性到图几何的逆推时读。 |
 | [research/topics/examples/bounded_negative_square.md](research/topics/examples/bounded_negative_square.md) | C100/C101/GX-053：完整有界负平方图随步长的 Minty 相变、端点全对锐半阶、零点真残差与临界正侧有限步越自然域；检验 coverage 与留域时读。 |
-| [research/topics/examples/skew_ball_inverse.md](research/topics/examples/skew_ball_inverse.md) | C98/C99/GX-058：斜旋转加完整盘法锥的显式全域逆像、全部图点半阶不等式和边界非零目标的取等射线；研究 MR/MSR 与 inverse Hölder 的全域和局部模时读，不能转授反射 RL。 |
+| [research/topics/examples/skew_ball_inverse.md](research/topics/examples/skew_ball_inverse.md) | C98/C99/C124/C125/GX-058：同一完整盘法锥的全域逆像、边界半阶、单调/rectangular 图几何、完整近端和全图反射锐模；研究原算子 MR 与 Cayley RL 的不同量词时读，两者各有独立推导。 |
+| [research/NOTATION_CONTRACT.md](research/NOTATION_CONTRACT.md) | 跨主题符号表：RL 参数顺序、完整图和图块、真/步/算法/概率残差，以及锥、Markov、二参数图的局部字母重绑定；从某个方向引用另一方向结论前读。 |
 | [research/topics/examples/restricted_root_graph.md](research/topics/examples/restricted_root_graph.md) | C85–C87/GX-032：严格分开受限负平方根完整短图与半直线完整母图，给锐成对常数、真二次 EB、受限无续步、母图远支与发散；从受限算法向母图推断时先读。 |
 | [research/topics/examples/hemiregular_piecewise_parabola.md](research/topics/examples/hemiregular_piecewise_parabola.md)、[research/topics/examples/absolute_value_subgradient.md](research/topics/examples/absolute_value_subgradient.md) | C76/C77 与 C78/C79：前者是异维数完整映射的最近逆点与两变量正则对照、局部非闭图；后者把绝对值次梯度的原算子真残差跳跃和软阈值近端步残差分开。研究 MR/MSR 量词或残差模传递时读。 |
 | [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/identity_square_branch_union.md](research/topics/examples/identity_square_branch_union.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C66–C68/C92/C95/GX-068 的完整并图、两种真残差、两变量半阶 MR、跨支碰撞及精确二参数区；C60/C61/GX-069/070 的 DR 算法残差锐模。先区分原算子、选支、完整步和算法残差。 |
@@ -199,7 +200,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/examples/product_splice.md](research/topics/examples/product_splice.md) | C112–C114/GX-057：完整直积的全纤维、零残差与所有合法路径；临界全图、图点输出窗和仅限输入窗的不同锐半阶系数。组合不同例卡或改变图窗口时读。 |
 | [research/audit/SOURCE_OCCURRENCES.tsv](research/audit/SOURCE_OCCURRENCES.tsv)、[PAYLOAD_GROUPS.tsv](research/audit/PAYLOAD_GROUPS.tsv)、[build_occurrence_index.py](research/audit/build_occurrence_index.py) | 429 个物理文件/ZIP 成员位置与 346 个不同字节内容的可复现索引；状态仍待逐段语义枚举，不能把来源组数当数学覆盖。 |
 | [research/audit/SEMANTIC_UNIT_SEED.tsv](research/audit/SEMANTIC_UNIT_SEED.tsv) | 三份来源成员的连续行覆盖试点：S19、SS1 的选定数学单元去向，以及 GX-053–065 的 39 个第一遍结构段；后者卡内属性和文献事实尚须逐项拆分。校验器检查行区间及已填锚点，不能把分段数量当验收率。 |
-| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 106 行分别核定，只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
+| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 108 行有逐项去向（102 rewritten、3 superseded、3 deferred），只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |

@@ -55,7 +55,7 @@ V(t)=t^2+\lambda^2\alpha(t)^2.
 
 \(A(t)\le q_EV(t),q_E<1\) 联合相同接口推出 \(V(d^+)\le q_EV(d)\)。一般 gauge 下不可删去 \(V\) 而声称距离固定 Q 线性。[OS-H §3.1]
 
-**OS-LT：**Luke–Tam 公共 all-pairs 接口是
+**OS-LT：**这里仅取常用的非负 violation 参数 \(\tau\ge0\)、正线性 EB 系数 \(\rho>0\)；signed LT 或退化 \(\rho=0\) 不在此条转换的字面参数域。Luke–Tam 公共 all-pairs 接口是
 
 \[
 \operatorname{Lip}(R_T)\le\sqrt{1+4\tau},\quad

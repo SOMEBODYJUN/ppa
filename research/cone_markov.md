@@ -13,11 +13,11 @@
 有限维欧氏空间 \(X,E\)，闭、尖、满维凸锥 \(C\subset E\)，\(G:V\to E\) 为 \(C^1\)，\(G(\bar x)=0\)。令
 
 \[
-\Omega=G^{-1}(C),\ A=DG(\bar x),\ F=F_{\min}(\operatorname{Im}A\cap C),\quad
-H=F^\perp,\ S=\operatorname{span}(C^*\cap F^\perp).
+\Omega=G^{-1}(C),\ A=DG(\bar x),\ \mathfrak F=F_{\min}(\operatorname{Im}A\cap C),\quad
+H=\mathfrak F^\perp,\ S_{\rm dual}=\operatorname{span}(C^*\cap\mathfrak F^\perp).
 \]
 
-此处 \(S\) 是对偶面子空间，不是 PPA 零集。冻结面 CRSC 要求 \(A^*C^*\) 闭，且 \(\operatorname{rank}(DG(x)^*|_H)\) 在一个完整邻域恒定。锥 nice 指每个面 \(J\) 的 \(C^*+J^\perp\) 闭；amenable 指每个面存在有限 \(a_J\) 使
+此处 \(\mathfrak F\) 是锥的最小面，\(S_{\rm dual}\) 是对偶面子空间；两者都不是 PPA 的原算子或零集。冻结面 CRSC 要求 \(A^*C^*\) 闭，且 \(\operatorname{rank}(DG(x)^*|_H)\) 在一个完整邻域恒定。锥 nice 指每个面 \(J\) 的 \(C^*+J^\perp\) 闭；amenable 指每个面存在有限 \(a_J\) 使
 \(d(y,J)\le a_Jd(y,C)\) 对全部 \(y\in\operatorname{span}J\) 成立。[CM-C §2]
 
 <a id="c-face"></a>
@@ -25,17 +25,17 @@ H=F^\perp,\ S=\operatorname{span}(C^*\cap F^\perp).
 
 | 超边 | 联合前件 | 结论与证明作用 |
 |---|---|---|
-| CM-RANK | nice + 冻结 CRSC + Pataki 闭像判据 | \(\operatorname{rank}(DG(x)^*|_S)=\operatorname{rank}(DG(x)^*|_H)\)：参考点像相等、非零子式持续、包含夹逼 |
-| CM-FACE | CM-RANK + 连续核投影 | 邻域闭像与最小面稳定；局部 \(G^{-1}(C)=G^{-1}(F)\) |
+| CM-RANK | nice + 冻结 CRSC + Pataki 闭像判据 | \(\operatorname{rank}(DG(x)^*|_{S_{\rm dual}})=\operatorname{rank}(DG(x)^*|_H)\)：参考点像相等、非零子式持续、包含夹逼 |
+| CM-FACE | CM-RANK + 连续核投影 | 邻域闭像与最小面稳定；局部 \(G^{-1}(C)=G^{-1}(\mathfrak F)\) |
 | CM-NORMAL | 同上 + 常秩坐标及正法向夹角 | 修正到共同流形 \(M=\{P_HG=0\}\)，\(\|x-\hat x\|\le b d(G(x),C)\) |
 | CM-MSCQ | CM-NORMAL + 参考面 amenability + 同流形切向修正 | \(d(x,\Omega)\le\kappa d(G(x),C)\)，原锥残差 MSCQ |
 
 非退化时可取
 \(b=4/(\sigma\eta)\)，\(\sigma=\sigma_{\min}^+(P_HA)\)，
-\(\eta=\min_{u\in\operatorname{Im}(P_HA),\|u\|=1}d(u,\overline{P_HC})>0\)。若 \(F\ne\{0\}\)，取单位切向方向的像 \(v_0\in\operatorname{ri}F\)，\(\tau_F=d(v_0,\operatorname{rbd}F)>0\)，则
+\(\eta=\min_{u\in\operatorname{Im}(P_HA),\|u\|=1}d(u,\overline{P_HC})>0\)。若 \(\mathfrak F\ne\{0\}\)，取单位切向方向的像 \(v_0\in\operatorname{ri}\mathfrak F\)，\(\tau_{\mathfrak F}=d(v_0,\operatorname{rbd}\mathfrak F)>0\)，则
 
 \[
-\kappa=b+\frac4{\tau_F}a_F(1+L_Gb)
+\kappa=b+\frac4{\tau_{\mathfrak F}}a_{\mathfrak F}(1+L_Gb)
 \]
 
 是局部上界，未声称最佳常数或指定数值半径。秩零、零面、全面、零维约化需分支处理，不能套正奇异值公式。[CM-C §§3–5]
@@ -47,7 +47,7 @@ H=F^\perp,\ S=\operatorname{span}(C^*\cap F^\perp).
 <a id="m-psi"></a>
 ## 2. Markov：必须保留的双层最小化
 
-紧 \(G\subset\mathbb R^d\)，几乎处处连续、联合可测的随机自映射 \(T_\xi\)，实际更新使用独立新噪声。设 \(\mu P=\mathbb E(T_\xi)_\#\mu\)，不变律集 \(\mathcal I\ne\varnothing\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。定义
+紧状态集 \(K_{\rm state}\subset\mathbb R^d\)，几乎处处连续、联合可测的随机自映射 \(T_\xi:K_{\rm state}\to K_{\rm state}\)，实际更新使用独立新噪声。设 \(\mu P=\mathbb E(T_\xi)_\#\mu\)，不变律集 \(\mathcal I\ne\varnothing\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。此处状态集与 §1 的约束映射 \(G:V\to E\) 不同。定义
 
 \[
 c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
@@ -110,22 +110,34 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 <a id="cond-eb"></a>
 ## 3. 条件残差修复与随机提升边界
 
-固定守恒边缘 \(\nu\)，条件运输
+固定守恒边缘 \(\nu\)，二进制纤维 \(X=\{0,1\}^m\)，\(\mu(du,dx)=\nu(du)\mu_u(dx)\)。条件运输
 \(\mathsf W_\nu^2(\mu,\eta)=\int W_2^2(\mu_u,\eta_u)d\nu\)
-只允许保持 \(u\) 的耦合。二进制随机坐标刷新概率 \(p_i(u)>0\)，目标为纤维乘积 Bernoulli 律，定义保持全部其他坐标的条件残差 \(\mathcal R^2=\int\sum_i p_i d_i^2d\nu\)。
+只允许保持 \(u\) 的耦合；纤维平方欧氏成本即 Hamming 成本。取可测 \(b_i(u)\in(0,1)\)、\(p_i(u)>0\)，并要求 \(\sum_i p_i(u)\le1\) 几乎处处，剩余概率执行恒等更新。刷新第 \(i\) 坐标时独立抽 \(\operatorname{Bern}(b_i(u))\)；目标 \(\pi_\nu(du,dx)=\nu(du)\bigotimes_i\operatorname{Bern}(b_i(u))(dx)\)。定义保持 \((u,x_{-i})\) 不变的条件残差
+\[
+d_i(u;\mu)^2=\sum_{x_{-i}}\mu_u(x_{-i})
+\left|\mu_u(X_i=1\mid x_{-i})-b_i(u)\right|,\qquad
+\mathcal R(\mu)^2=\int\sum_i p_i(u)d_i(u;\mu)^2\,\nu(du).
+\]
+零概率条件事件上的版本不影响积分。这是条件重抽样残差，不是 §2 的同步运输 \(\Psi\)。
 
 **CM-BINARY：**\(a_* =\operatorname{ess\,inf}_u\min_i p_i(u)>0\) 当且仅当存在统一线性 EB／一步严格收缩／某固定块严格收缩／统一相对几何率；最佳 EB 常数 \(a_*^{-1/2}\)、最佳 \(k\) 步因子 \((1-a_*)^{k/2}\)。若 \(a_*=0\)，每条律仍收敛，但每个固定 \(k\) 的最坏相对因子为 1。[CM-M Theorem 6]
 
-单 bit 时，\(a=a(u),M=\max(b,1-b)\)，精确最小非降模满足
+单 bit 时，记当前条件成功概率为 \(r(u)=\mu_u(X_1=1)\)、目标概率 \(b(u)=b_1(u)\)、\(a(u)=p_1(u)\)、\(h(u)=|r(u)-b(u)|\)、\(M(u)=\max\{b(u),1-b(u)\}\)。这里 \(0\le h\le M\) 可测，且下列积分均对 \(\nu\)；精确最小非降模满足
 
 \[
-\phi(t)^2=\sup_{0\le h\le M,\int ah\le t^2}\int h
-=\inf_{\lambda\ge0}\left[\lambda t^2+\int M(1-\lambda a)_+\right].
+\phi(t)^2=\sup_{0\le h\le M,\int ah\,d\nu\le t^2}\int h\,d\nu
+=\inf_{\lambda\ge0}\left[\lambda t^2+\int M(1-\lambda a)_+\,d\nu\right].
 \]
 
-这是有饱和区的模，不能当成全局严格增 gauge；精确长度为 \(\sum_k[\int a(1-a)^kh]^{1/2}\)。[CM-M Theorem 7]
+这是有饱和区的模，不能当成全局严格增 gauge；精确长度为 \(\sum_k[\int a(1-a)^kh\,d\nu]^{1/2}\)。[CM-M Theorem 7]
 
-**CM-GAUSSIAN：**目标 \(N(m_0,Q^{-1})\)、\(Q\succ0\)，Gaussian Gibbs 概率 \(p_i>0\)，\(D=\operatorname{diag}(p_i/Q_{ii})\)，\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})\)。在全部有限二阶矩律上，原文条件残差 \(\mathcal R_Q\) 有
+**CM-GAUSSIAN：**目标 \(\beta=N(m_0,Q^{-1})\)、\(Q\succ0\)，Gaussian Gibbs 概率 \(p_i>0,\sum_i p_i=1\)，\(D=\operatorname{diag}(p_i/Q_{ii})\)，\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})\)。这里 \(W_{2,Q}\) 的运输成本为 \((x-y)^TQ(x-y)\)，而原生条件残差是
+\[
+\mathcal R_Q(\mu)^2=\sum_i p_iQ_{ii}\int
+ W_2\!\left(\mu_i(\cdot\mid x_{-i}),\beta_i(\cdot\mid x_{-i})\right)^2
+ \,\mu_{-i}(dx_{-i}).
+\]
+每步按 \(p_i\) 选坐标，用目标 \(\beta\) 的 Gaussian 全条件律重新抽样；上式的条件距离是**一维通常** \(W_2\)，外层才用 \(Q\)-运输成本。在全部有限二阶矩律上，\(\mathcal R_Q\) 有
 \(W_{2,Q}(\mu,\beta)\le\zeta^{-1/2}\mathcal R_Q(\mu)\)，常数局部、全局均锐；收缩因子 \(\sqrt{1-\zeta}\) 有效但原文未宣称锐。[CM-M Theorem 8]
 
 **CM-MOMENT：**共同零点和非零 excursion 存在时，对所有有限支撑概率律的
@@ -134,9 +146,11 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 
 ## 4. 跨线超边：需要什么才能接上
 
+本节的原算子另记 \(F_{\mathrm{PPA}}:X\rightrightarrows X\)，\(r_{F_{\mathrm{PPA}}}(x)=d(0,F_{\mathrm{PPA}}(x))\)。下列第一行只在局部明确识别 \(F_{\mathrm{PPA}}^{-1}(0)=\Omega=G^{-1}(C)\) 后使用；上文的最小面 \(\mathfrak F\) 不参与该残差。
+
 | 拟连接 | 必须额外输入 | 当前状态 |
 |---|---|---|
-| 锥 MSCQ → RLEB 的 EB | 同一局部零集，\(d(G(x),C)\le\chi(r_F(x))\) | 才得 \(\psi_F=\kappa\chi\)；反射、步长、coverage、留域独立 |
+| 锥 MSCQ → RLEB 的 EB | 同一局部零集，\(d(G(x),C)\le\chi(r_{F_{\mathrm{PPA}}}(x))\) | 才得 \(\psi_{F_{\mathrm{PPA}}}=\kappa\chi\)；反射、步长、coverage、留域独立 |
 | 条件残差 → 普通 \(W_2\) EB | \(d_{W_2}\le\mathsf W_\nu\) | 只传充分界；必要性、锐性、相对率不自动传 |
 | 同步耦合能量 → 随机 RL | 同一耦合实现几何、实际目标与残差 | 原生匹配仍是额外假设；不能造概率反射 \(2\mu P-\mu\) |
 | 收缩 → 原 \(\Psi\) 的 EB | 趋近同一 \(\Psi\) inf 的耦合满足 recoupling loss 控制 | 若 \(\Delta_\eta\le\chi D_\eta^2\)，则系数 \((1+\sqrt\chi)/(1-c)\)；非无条件逆定理 |

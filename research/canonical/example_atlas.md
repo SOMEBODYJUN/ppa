@@ -6,7 +6,7 @@
 
 实 Hilbert 范数下，单值满域映射 F 的真残差为 `r_F(x)=‖F(x)‖`，零集 `S=F⁻¹(0)`。固定 `λ>0`：`J=(I+λF)⁻¹`，`R=2J−I`；以下三例均直接验证 J 满域单值。
 
-全图 RL(λ,L,γ) 指对全部 x,y：
+全图 RL(λ,γ,L) 指对全部 x,y；参数顺序与 [D02](../foundations.md#d02) 一致：
 
 \[
 \|(x-y)-\lambda(Fx-Fy)\|\le L\|(x-y)+\lambda(Fx-Fy)\|^\gamma.

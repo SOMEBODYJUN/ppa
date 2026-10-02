@@ -38,7 +38,7 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 ## E17–E19：认证包含不是总体规模比较
 
-在同一有限维完整原图 \(F\)、固定 \(\lambda\)、全域单值 \(T=J_{\lambda F}\)、同一 \(S\)、同一测试域、真实 \(r_F\)、coverage 和留域接口上，LT 公共 all-pairs 证书若满足 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\)、\(2\tau(\lambda+\rho)^2<\lambda^2\)，则该**匹配接口中的** RLEB 能量证书取 \(L^2=1+4\tau,\gamma=1,\psi(t)=\rho t\) 后 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)。这是证书类的包含，不保最佳常数，不包含 LT 的所有 pointwise/多值版本。[OS §2](operator_space.md)。
+在同一有限维完整原图 \(F\)、固定 \(\lambda>0,\tau\ge0,\rho>0\)、全域单值 \(T=J_{\lambda F}\)、同一 \(S\)、同一测试域、真实 \(r_F\)、coverage 和留域接口上，LT 公共 all-pairs 证书若满足 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\)、\(2\tau(\lambda+\rho)^2<\lambda^2\)，则该**匹配接口中的** RLEB 能量证书取 \(L^2=1+4\tau,\gamma=1,\psi(t)=\rho t\) 后 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)。这里 \(\rho>0\) 保证 \(\alpha(t)=t/\rho\) 可用；这是证书类的包含，不保最佳常数，不包含 signed LT 或所有 pointwise/多值版本。[OS §2](operator_space.md)。
 
 固定紧 T-only 图卡上的 proper \(\Phi=(w,m)\) 不推出它保 Baire category，也不恢复域外 \(F\)。因此 E19 的总体规模目标还缺参数中立的完整对象空间、计数单位 \(F\) 或 \((F,\lambda)\)、合法选择、三类共同域，以及不把三类一同判小的量尺。不能从 E17 或 proper 直接推出 E19。[OS §3–5](operator_space.md)。
 
@@ -249,3 +249,8 @@ E177 固定 **同一** 完整 \(A\times B\subset\mathbb R^2\times\mathbb R^2\)�
 E178 固定 \(\lambda=1\)，完整乘积的**所有图点对**半阶锐系数由 (P15) 给出且 \(>2\)。若改成临界参考图点的**输入与输出共同图窗**，第二坐标被 \(|v_2|<1\) 剪去，锐系数才是 2；只限输入而允许全部输出时，每个固定非零窗都严格 \(>2\)，尽管双窗缩小的下确界是 2。这是同一关系的三个不同范围，不是 Claim 数值冲突。[PS-SHARP/WINDOW](topics/examples/product_splice.md#gx057-sharp-product-half)。
 
 E179 的真零残差 EB 使用乘积关系的**全部纤维**，在整个有限残差域的半阶锐系数 1；双侧目标空逆像和每一步完整 J 的合法域另查。第一坐标非零无限迭代将单调增到正极限却违方程；第二坐标非零每步绝对输入至少降 \(\lambda\)。两个机制合取才给唯一无限恒零路径，不能由 EB 或 E178 的 RL 单独推出。[PS-ZERO/PATH](topics/examples/product_splice.md#gx057-zero-eb)。
+## E193–E194：同一盘法锥的图几何与完整近端
+
+E193 固定 \(\mathbb R^2\) 单位闭盘上的**完整** \(F=K+N_B\)；对全部图点的法向参数式给单调性，任意两个内点令强单调及 cocoercivity 正系数失败。Rectangular 的固定 \(\xi\) 只在 \(\operatorname{dom}F=B\)，\(\eta\in\operatorname{ran}F\)；不能把紧盘下界写成任意盘外输入。非 paramonotone 用同一零配对的内点交叉见证。极大性还依赖下一条的满 Minty 输入，不由标签推出。
+
+E194 在同一完整关系上对**每个** \(\lambda>0\) 与每个 \(p\in\mathbb R^2\) 反演全部法向射线；内外闭式在 \(\sqrt{1+\lambda^2}\) 连续接合，给全域完整单值 \(J_{\lambda F}\) 及极大单调。由 E193 的单调性，\(R=2J-I\) 对全部输入对非扩张；两个不同内点取等，故全图线性 RL 锐常数 1。\(Jp\in B\) 且输入无界否定任意全域次线性幂模；有界输入对距窗口不受此否定。C98/C99 的逆像 MR 使用原算子目标残差，不能从反射模互换。[SB 卡](topics/examples/skew_ball_inverse.md#sb-prox)。
