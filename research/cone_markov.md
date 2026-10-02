@@ -81,6 +81,8 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 \iff \exists B<\infty:E\le B\Psi^2.
 \]
 
+完整的固定系统证明、空零面与非空零面分支、分片仿射正则性及动力反例已在独立的 [C15/C80 有限状态证书](topics/random_markov/finite_state_certificate.md#fs-theorem) 重写；此处仅保留路线摘要。
+
 最优平方系数为
 \(B_* =\max_{v\in\mathcal V,R\cdot v>0}E(r(v))/(R\cdot v)\)，空最大值为 0。证明靠精确有限分支与凸性；不需要混合性、唯一不变律或 almost-firmness。只对固定数据给有限判定，不承诺多项式时间或跨系统统一常数。[CM-M Theorem F]
 

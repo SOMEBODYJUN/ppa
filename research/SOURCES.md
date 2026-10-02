@@ -21,7 +21,7 @@
 1. 历史超边图是本次重构的**输入证据**，不是当前图的自动权威。其具体边在 [HYPERGRAPH.md](HYPERGRAPH.md) 重新命名、补齐或降级；新边必须有精确来源。
 2. 嵌套 ZIP 中的 TeX、MD、审计、代码可通过压缩包成员名定位；没有把相似 PDF/TeX 的页码当同一版本，也没有将受限制外部论文原文复制进仓库。
 3. 计算验证需回到原脚本、参数和输出；来源中声称 PASS、已证、全球首创之处在本地图中只按实际证据层叙述。
-4. 全量逐项来源校验仍用 [INGEST_MANIFEST.tsv](../INGEST_MANIFEST.tsv)；本页按数学节点选读，不以原文件树替代研究地图。
+4. 初次导入件的字节校验用 [INGEST_MANIFEST.tsv](../INGEST_MANIFEST.tsv)；现有 251 个原件和 178 个 ZIP 成员的完整路径、字节与哈希分别见 [原件清单](audit/SOURCE_FILE_INVENTORY.tsv) 和 [成员清单](audit/ZIP_MEMBER_INVENTORY.tsv)。数学单元的已裁决范围另见 [逐单元去向](audit/UNIT_DISPOSITIONS.tsv)；这些清单均不能单独证明语义覆盖。
 
 ## 9/21 历史缺件与本轮恢复
 
