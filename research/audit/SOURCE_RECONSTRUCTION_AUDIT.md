@@ -22,6 +22,19 @@
 
 ## 2. 来源簇 → 现有规范层 → 仍需重写
 
+### 下一批可定位的证明单元（局部工作清单）
+
+此表是从**已有原件**中定位的高价值缺口，不是全库有价值单元的穷尽分母；未列入逐单元表的单元仍为待裁决。完成一项后以精确节、版本和正文锚点记入 `UNIT_DISPOSITIONS.tsv`，不能仅凭本表的存在标为 `rewritten`。
+
+| 原件与精确单元 | 当前规范层的不足 | 准入义务 |
+| --- | --- | --- |
+| S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | [RLEB 摘要](../rleb_ppa.md) 尚未按六个单位重写完整 S1–S18 的导数、分支、全纤维和锐性门 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
+| SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | [解选择摘要](../solution_selection.md) 固定了修补接口与反例方向，尚未按这些定理各自重构公式、切换时刻与双初值最优模 | 先核完整 resolvent 与指定图块的一致性，再分别证明统一尾、半代数模型、对数–对数模和 Q-二次坏选择；§6 的一手先行性是另一证据门。 |
+| 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 来源指出增长步长 rate、有限维 converse、inverse 的 PSNC 方向、一般度量 (q>1) 和 Luke–Tam Euclidean scope 的具体风险；当前没有逐项关闭记录 | 对每个原命题与现行正文做对象/维数/量词对照；修正则另立版本，已避免则写带锚点的 `superseded` 或 `duplicate` 理由。不能把旧审计题头当证明。 |
+| 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线，但部分子定理仍缺独立正文及逐源去向 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
+
+GX-055–057、GX-061–063 及 9/01 其余例卡仍须按**完整对象和观察**逐项处理；一张卡的已审属性不关闭其 VI 标签、二参数区和外部先行性。缺失的 I-097–099/I-102 原证明与上表“原件可得但未重写”属于不同障碍。
+
 | 来源簇与定位 | 基线规范入口 | 尚未关闭的内容与验收要求 |
 | --- | --- | --- |
 | 9/01 三个 checkpoint，`research/theory_atlas.md`、`work/a_*` | [foundations](../foundations.md)、[operator_space](../operator_space.md) 仅部分覆盖 | 单调性与正则性完整定义字典、术语冲突、逐边严格性、不同空间的引用条件；逐条保留 MR/MSR 与 inverse Aubin/calm 的对象方向 |
