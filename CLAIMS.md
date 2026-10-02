@@ -38,6 +38,8 @@
 
 ## C05-v2 / LR-RANGE · 去除超临界幂条件的整窗条件定理
 
+- **Status**：`derived-checked`，仅指下述全部整窗假设给定后的条件推导；原生模型的这些假设尚未认证。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：保持 C05-v1 的同一完整 \(F:\mathbb R^n\rightrightarrows\mathbb R^n\)、非空闭 \(S=F^{-1}(0)\)、\(\lambda,L,\kappa>0\)、\(0<\gamma<1\)、两个非空紧有限多面体 \(A,B\) 且 \(A\subset\operatorname{int}B\)、指定 \(T\) 的全部整窗输出 (8.1)–(8.2)、独立核定的非空有限样本与 (8.4) 四项 collar、usc 非空紧有理 Čech-acyclic 值、每阶 \(b^*\) 满射及 \(\chi(A)\ne0\)。**仅把 \(q\gamma>1\) 改为 \(q>0\)**，仍取 \(c=\kappa\lambda^{-q}\)。则对每个 \(\lambda\|h\|_{\infty,A}<m-\alpha\) 的连续 \(h:A\to\mathbb R^n\)，有 \(x\in\operatorname{int}A\) 满足 \(h(x)\in F(x)\)、\(d(x,S)\le\kappa\|h(x)\|^q\)；尤其 \(B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A)\)。所有数字、集合、对应及样本须属于同一实例。
 - **Definitions / Dependencies / Evidence**：[LR-OBJECT/THEOREM](research/canonical/local_range_without_supercriticality.md#lr-theorem) 在 [C70-v1](research/canonical/finite_sample_collar.md) 度量链之后，核紧图、Vietoris–Begle、线段与扰动同伦、上同调满射和 [LIT-GRN-2002](research/LITERATURE.md#lit-grn-2002) 的 coincidence 导入。9/25 PDF §8 是 C05-v1 的来源，不是本版本原文；本版本为新增 derived-checked 条件推导。[LR-FEASIBLE](research/canonical/local_range_without_supercriticality.md#lr-feasible) 给 \(q\gamma=1/2\) 的全项实例，排除删条件后 vacuous 的解释。
 - **Counterevidence / Objections / Status / Scope**：有限样本仍不能认证指定 \(T\) 在整个窗的非空、usc、acyclic 或 (8.1)–(8.2)；实际原生问题可能无法生成合适的 (8.4)。外部拓扑导入适用门已核，但整条候选的文献新颖性、原生模型和其它定理推广未审。删去 \(q\gamma>1\) 是数学身份变化，不回写 C05-v1 的来源事实；若未来出现 Čech/CAC 的承重异议，应降回候选并隔离拓扑结论。
@@ -52,6 +54,8 @@
 
 ## C07 · 原 Baire／多孔性比较量尺的塌缩报告
 
+- **Status**：`source-report`；缺失的原证明不能由来源总账的“verified”标签替代。
+
 - **Exact Statement / Objects / Domain**：9/21 包报告在其先前定义的完整图 Polish／普通 \(C^0\) 与动力度量 \((X_D,d_{\rm dyn})\) 中，正 Hölder 类受共同粗糙化影响；特别 \(\mathcal R_D\subseteq\mathcal H_+\in\sigma\mathcal P^-(X_D,d_{\rm dyn})\)，所以 \(\mathcal R_D\setminus(\mathcal L_D\cup\mathcal M_D)\in\sigma\mathcal P^-\subseteq\sigma\mathcal P^+\)。\(\sigma\mathcal P^-\) 是包内的 σ-lower-porous 类。**域 \(D\)、全部图卡与孔隙常数须在原证明恢复后冻结，不由此摘要补造。**
 - **Dependencies / Evidence**：[9/21 `02_VERIFIED_CORE.md` §6](history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md) 与 [`03_NO_GO_LEDGER.md` N05、N08、N10](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)；v0.9 区分 V-A/V-B、SOURCE-MISSING。
 - **Objections / Status / Scope**：**历史总账报告，尚非本仓库重构的原孔隙证明**；I-097–099 原审计和 I-102 正式表示稿未在盘点文件名中找到。总账另标 SOURCE-MISSING 的 I-001/I-002/I-003–005/I-059/I-075 已以原包或展开件恢复，但这不能替代 N10 原证明。旧目标“差集非 σ-upper-porous”只在其所指空间中被报告为假，不是所有合理量尺均失败。
@@ -64,11 +68,15 @@
 
 ## C09 · 9/19 一般模 RL 的 Dini 点收敛（新增版本）
 
+- **Status**：`candidate`；有稿内证明及关键公式的局部重算，整条证明尚未独立逐项验收。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：\(X=\mathbb R^n\)，\(F:X\rightrightarrows X\)，非空闭 \(S\subset F^{-1}(0)\)，同图块 \(\mathcal G\)，\(U\) 开、\(R,\bar t,\lambda>0\)，连续非减 \(\omega:[0,R]\to[0,\infty)\)、\(\omega(0)=0\)、非减原点连续 \(\psi\)、\(0<\kappa<1\)。对**每个** \(x\in U_R\) 假设图块输入覆盖与最近解点 \((p,0)\in\mathcal G\)；对**每对**图点在输入尺度 \(R\) 有 \(\|\Delta u-\lambda\Delta v\|\le\omega(\|\Delta u+\lambda\Delta v\|)\)；在全部实际输出有真实 \(r_F\) EB；\((R+\omega(R))/(2\lambda)\le\bar t\)；对每个 \(0<t\le R\) 有 \(\psi((t+\omega(t))/(2\lambda))\le\kappa t\)；且 \(\int_0^R\omega(t)dt/t<\infty\)。
 - **Conclusion**：若 \(d_0\le R\) 且 \(d_0/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jd_0)<d(x^0,X\setminus U)\)，则唯一图块轨道全程存在、有限长并收敛于 \(S\)；\(d_k\le\kappa^kd_0\)，步长与尾界按同一模级数。量词不自动覆盖完整 \(J_F\)。
 - **Dependencies / Evidence / Objections / Status / Related Files**：R01 一步估计的一般模版、Dini 等价几何采样求和、闭 \(S\) 与留域归纳；[rleb_ppa](research/rleb_ppa.md)、[holder_structure H04](research/holder_structure.md)。9/19 S19 extensions_moduli_structure.tex 的 thm:modulus-dini 稿内证明，本轮局部重算。C02 是幂次版，C09 改变模与额外条件，不能覆盖旧编号。
 
 ## C10 · 完整对数接缝的 Dini 边界
+
+- **Status**：`candidate`；完整公式已有局部重算，全部图点对与边界仍按稿内证明范围保留。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对**每个** \(a>0\)，\(\ell_a(0)=0\)，在 \(0<t\le e^{-a}\) 为 \([\log(e/t)]^{-a}\)，以后用接点切线延伸。\(F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\) 当 \(y\ge0\)，其余空。步长 1，\(S=\mathbb R\times\{0\}\)。
 - **Conclusion**：完整 \(J_a(p,q)=(p+\ell_a(|q|),|q|/4)\)，整图有非幂次模 \(\Omega_a(t)=\sqrt{(t+2\ell_a(t))^2+9t^2/4}\) 且真实残差 \(r_{F_a}(\xi,y)=\sqrt{\ell_a(4y)^2+9y^2}\)。对每个 \(|q_0|>0\) 距离按 \(4^{-k}\) 收缩，轨道有限长且收敛于一点当且仅当 \(a>1\)；若 \(a\le1\)，切向坐标趋 \(+\infty\)。
@@ -76,11 +84,15 @@
 
 ## C11 · 统一尾给连续极限回缩
 
+- **Status**：`candidate`；依赖 C09 全套局部条件及回缩证明，尚未独立验收整条链。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：C09 整套局部假设在 \(U_R\) 成立，置 \(\ell_\omega(r)=r/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jr)\)，\(\mathcal O=\{x\in U:d(x,S)<R,\ell_\omega(d(x,S))<d(x,X\setminus U)\}\)。
 - **Conclusion**：\(\mathcal O\) 开且正向不变，包含 \(S\cap U\)；每个 \(x\in\mathcal O\) 的极限 \(\Pi(x)\) 构成连续回缩 \(\mathcal O\to S\cap U\)，所以 \(S\cap U\) 为 Euclidean neighborhood retract，并满足原稿所述局部收缩性。
 - **Dependencies / Evidence / Objections / Status / Related Files**：C09 的统一尾、全对输入连续性和精确长度递推；S19 prop:limit-retraction，[holder_structure H05](research/holder_structure.md)。稿内证明及局部重算。C04 的任意紧零集实现未附 C11 假设；Cantor 型零集不能在相应点满足整套条件。
 
 ## C12-v0 / C12-v1 · 随机推论的度量版本
+
+- **Status**：`refuted`（v0，按仅拓扑 Polish 的读法）；`derived-checked`（v1，在指定度量完备的新增假设下）。两个版本不可合并。
 
 - **Original exact statement C12-v0**：S19 thm:stochastic-rleb 取 \((\mathsf X,d)\) “Polish”、闭 \(S\)、适应过程留在 \(0\le D_k\le R\) 的不变域、非减 Dini \(\omega\)、\(0<\kappa<1\)，逐路径 \(s_k\le(D_k+\omega(D_k))/2\) 和 \(\mathbb E[D_{k+1}\mid\mathcal F_k]\le\kappa D_k\)。结论 \(\sum s_k<\infty\) 且 \(X_k\to X_\infty\in S\) 几乎处处。
 - **Counterevidence / Status**：若 Polish 只保证拓扑可完备，结论**错误**。\((0,2)\) 的通常距离、闭 \(S=\{2^{-n}\}\)、确定性 \(X_k=2^{-(k+2)}+4^{-(k+2)}\)、\(\omega(t)=4\sqrt t\)、\(R=1/16,\kappa=1/4\) 满足前件而 \(X_k\to0\notin\mathsf X\)。求和部分不受影响。[FAILED F07](FAILED_ROUTES.md)。
@@ -88,11 +100,15 @@
 
 ## C13 · 冻结面 CRSC 与 MSCQ（锥旁支）
 
+- **Status**：`candidate`；内部证明包和承重步骤已有核读，完整退化分支与外部定理适用门仍待独立审查。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(X,E\)、闭尖满维 nice 凸锥 \(C\)、\(C^1\) 映射 \(G\) 在 \(\bar x\) 满足 \(G(\bar x)=0\)。设 \(A=DG(\bar x)\)，\(\mathfrak F=F_{\min}(\operatorname{Im}A\cap C)\)，\(H=\mathfrak F^\perp\)，\(S_{\mathrm{dual}}=\operatorname{span}(C^*\cap\mathfrak F^\perp)\)。假设 \(A^*C^*\) 闭、\(\operatorname{rank}(DG(x)^*|_H)\) 在完整邻域恒定，且参考面 \(\mathfrak F\) amenable；保留原包的闭像与常秩局部条件。
 - **Conclusion**：冻结秩夹逼使面稳定，经共同法向流形与切向修正，存在邻域和 \(\kappa<\infty\)，对其中每个 \(x\) 有 \(d(x,G^{-1}C)\le\kappa d(G(x),C)\)。对固定 proper nice 锥，“每个在顶点冻结 CRSC 的 \(C^1\) 系统均 MSCQ”与 amenability 等价；逆向测试是各面的线性嵌入。
 - **Dependencies / Evidence / Objections / Status / Related Files**：[cone_markov §1](research/cone_markov.md)，S14C 主稿及 CM-C 证明包。内部审计与承重步骤重读；正式版文献和退化常数分支待独立核。该锥距离残差不是 \(r_F\)，不能自动迁移 RLEB。
 
 ## C14 · 紧 Markov 同步残差的 exact-zero 门槛
+
+- **Status**：`candidate`；来源证明与定义已核读，但整条紧性和零集证明尚未独立重构。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：紧状态集 \(G\subset\mathbb R^d\)，满足 CM-M §1 的 a.e. 连续联合可测随机自映射，独立新噪声定义核 \(P\)，不变律集合 \(\mathcal I\ne\varnothing\)。\(\Psi(\mu)^2=\inf_{\pi\in\mathcal I}\inf_{\eta\in\operatorname{Opt}_{W_2}(\mu,\pi)}\int\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2d\eta\)；两侧**同噪声**，内层必须为该两边缘的平方成本最优耦合。
 - **Conclusion**：在该紧连续设置下，极小值取得、\(\Psi\) 下半连续，且 \(\Psi^{-1}(0)=\mathcal I\) 当且仅当存在严格一般 gauge \(\rho\) 使 \(d_{W_2}(\mu,\mathcal I)\le\rho(\Psi(\mu))\) 对每个概率律成立。没有自动幂次或速率兼容。
@@ -120,23 +136,32 @@
 
 ## C18 · 有限维固定窗口的全纤维值域覆盖
 
+- **Status**：`candidate`；稿内证明和标量根已局部重算，完整 properness/degree 链仍需独立审查。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：\(F\) 为 \(\mathbb R^n\) 上固定 \((\lambda,L,\gamma)\)、\(0<\gamma<1\) 的全局 graph-maximal RL 关系，取任一图锚 \((x_0,v_0)\)，\(R=L^{1/(1-\gamma)}\)。对任意 \(r>R\)，唯一 \(h(r)\in(0,r)\) 解 \(r-h=L(r+h)^\gamma\)。
 - **Conclusion**：对每个 \(v\in B(v_0,h(r)/\lambda)\)，完整 \(F^{-1}(v)\ne\varnothing\) 且整个纤维包含于 \(B(x_0,r)\)，从而该输出球包含于 \(F(B(x_0,r))\)。相对 maximal 窗口 \(G\subset U\times W\) 在原稿的锚、开球包含和 \(s>0\) 条件下，半径变为 \(\min\{s,h(r)/\lambda\}\)；统一半径及严格 \(r>R\) 在一维反例下锐。
 - **Dependencies / Evidence / Objections / Status / Related Files**：C04 的有限维 properness/full range、标量最大根 \(\rho\)、同常数 completion 和相对 maximal 的窗口等式。[range_finite_data W01](research/range_finite_data.md)，S23 lem:rho/thm:coverage/thm:window/prop:coveragesharp。稿内证明与本轮关键计算核读；不是任意非 maximal 子图的 coverage，亦与 S25 的有限观测局部值域不同。
 
 ## C19 · 有限样本的全局一致二次规划影子
 
+- **Status**：`candidate`；关键代数已核读，整条 QP 与全局代理证明仍按稿内证明范围保留。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：有限 \(m\ge1\) 个 \(\mathbb R^n\) 图样本，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，固定 \(0<\sigma<1\) 和 S23 的 \(M_\sigma,a^2=M_\sigma/2\)。对所有样本对有 \(\|c_i-c_j\|^2\le\sigma^2\|p_i-p_j\|^2+M_\sigma\)。按 S23 (6.3)–(6.6) 的 \(Q,d(q),\Delta_m\) 定义唯一 QP 最小解 \(\theta(q)\) 与 \(N_m(q)=V\theta(q)\)。
 - **Conclusion**：同一个 \(N_m:\mathbb R^n\to\mathbb R^n\) 全局 \(\sigma\)-Lipschitz，对每个 \(i,q\) 有 \(\|c_i-N_m(q)\|^2\le\sigma^2\|p_i-q\|^2+a^2\)；其 Cayley 代理 \(A_m\) 为强单调双 Lipschitz 同胚，对全部**样本点**有统一正反误差。对未知原图点还须 C20 的参数 coverage。
 - **Dependencies / Evidence / Objections / Status / Related Files**：严格凸 QP、正交抬升、变分不等式、同一性 contraction。[range_finite_data Q01](research/range_finite_data.md)，S23 thm:finite_qp。稿内证明及关键代数核读；全球定义的代理不等于全球认证原关系。
 
+<a id="c20"></a>
 ## C20 · 参数覆盖与三项可认证误差
 
-- **Exact Statement / Objects / Domain / Quantifiers**：C19 样本来自完整或明确图块 RL，未知图点 \(p=x+\lambda v\) 到样本参数集距离至多 \(\delta\ge0\)，\(b=L\delta^\gamma\)，\(K_\delta\) 为 S23 (6.7) 的显式正根上界。对某一非空完整纤维要求它的**每个图点**参数满足该 coverage；对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 有已认证误差 \(e\)。
-- **Conclusion**：每个被覆盖图点有 \(\lambda\|v-A_m(x)\|,\|x-A_m^{-1}(v)\|\le K_\delta\)；覆盖整个纤维才得对应 Hausdorff singleton 界。对每个 \(x\in F^{-1}(v)\)，\(\|x-\widehat x\|\le K_\delta+\lambda(1+\sigma)\eta/(1-\sigma)+e\)。可行 QP 解的 Frank–Wolfe gap \(G\) 给 \(\|V\widehat\theta-N_m(q)\|\le\sqrt G\)，浮点 gap 需验证容差。
+- **Status**：`candidate`；依赖 C19 的代理与同一纤维的全称 coverage，尚未独立验收整条证明。
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C19 样本来自完整或明确图块 RL，未知图点 \(p=x+\lambda v\) 到样本参数集距离至多 \(\delta\ge0\)，\(b=L\delta^\gamma\)，\(K_\delta\) 为 S23 (6.7) 的显式正根上界。对某一非空完整纤维要求它的**每个图点**参数满足该 coverage；对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 须有 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\) 的独立证书。若以候选参数 \(q\) 计算，取 \(\widehat x=q-\lambda\widetilde v\)，已认证的 \(e_N\ge\|\widehat N(q)-N_m(q)\|\) 还须和固定点残差合并，方得 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\) 的可用上界。
+- **Conclusion**：每个被覆盖图点有 \(\lambda\|v-A_m(x)\|,\|x-A_m^{-1}(v)\|\le K_\delta\)；覆盖整个纤维才得对应 Hausdorff singleton 界。对每个 \(x\in F^{-1}(v)\)，\(\|x-\widehat x\|\le K_\delta+\lambda(1+\sigma)\eta/(1-\sigma)+e_x\)。可行 QP 解的 Frank–Wolfe gap \(G\) 仅给 \(\|V\widehat\theta-N_m(q)\|\le\sqrt G\)；取 \(\widehat N(q)=V\widehat\theta\) 才可置 \(e_N=\sqrt G\)，且还需上述固定点残差。浮点 gap 需验证容差。
 - **Dependencies / Evidence / Objections / Status / Related Files**：C19、原图 Hölder、同输入/同输出交叉估计、逆代理 Lipschitz 常数。[range_finite_data Q02/Q03](research/range_finite_data.md)，S23 thm:covered、cor:coveredfibers、prop:evaluation、cor:totalerror。稿内证明；\(\delta\)-网的获得和维数复杂度不在定理自动保证内。
 
 ## C21 · 有限总查询的全空间信息障碍
+
+- **Status**：`derived-checked`，只对正文的确定性有限点查询模型和全空间误差结论；其余 oracle 模型另立问题。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(n\ge1,L>0,0<\gamma<1\)。对**任何**仅有限次（可自适应）点查询未知全局 \(L\)-Hölder \(C:\mathbb R^n\to\mathbb R^n\)、随后输出单值 \(A\) 且不再访问 oracle 的确定性程序，存在允许的 \(C\) 使 \(A\) 对其 RL 关系没有全空间统一有限正向纤维误差。
 - **Dependencies / Evidence / Counterevidence / Status / Related Files**：零图的有限查询集 \(E\) 与 \(C_1(p)=L d(p,E)^\gamma e\) 给同 transcript 而远端偏差无界。[range_finite_data Q04](research/range_finite_data.md)，S23 prop:information。稿内反例与本轮推理核读。结论不覆盖固定紧域、持续 oracle、随机保证或已知解析映射；它是精确查询模型的障碍。
@@ -243,6 +268,8 @@
 
 ## C39-v1 / M1-SHARP · 同一映射的锐一步距离收缩
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：保留 C38 的**同一** \(T,Z,z_*,R\)。对每个 \(z\in B_R(z_*)\)，\(d(Tz,Z)\le(3/\sqrt {10})d(z,Z)\)。常数 \(3/\sqrt {10}<1\) 为这个球上统一距离因子的最小值：\(z_t=(c+3t,t)\)、\(t\downarrow0\) 实现该距离比。
 - **Definitions / Dependencies / Evidence**：用完整活动关系 \(s=a-3b\) 而不是分别放大两个标量模；分 \(s\le0\) 和 \(s>0\) 的代数证明在 [M1-SHARP](research/topics/path_dynamics/m1_capture.md#m1-sharp)。`derived-checked`；历史较晚的旗舰架构札记 §2 指出这项修正，本轮重新核算。
 - **Counterevidence / Objections / Scope / Related Files**：这**不**直接给出全对 RL、真残差 EB 或局部无限轨道留域；C38 独立地给有限捕获。旧例仍可说明独立最坏标量组合失真，却不能作为“一步距离收缩不存在”的反例。[F14](FAILED_ROUTES.md#f14)。
@@ -285,17 +312,23 @@
 
 ## C46-v1 / IZ-FACTOR · 精确因子的额外归一化门
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C45 的不终止轨道上令 \(w_k=(x^k-x^{k+1})/\lambda\)。如果另有 \(\|x^{k+1}-p\|/\|w_k\|^q\to\mu\in(0,\infty)\)，则 \(\|x^{k+1}-p\|/\|x^k-p\|^q\to\mu/\lambda^q\)。
 - **Definitions / Dependencies / Evidence**：[IZ-FACTOR](research/canonical/isolated_zero_flatness.md#iz-factor) 的三角双边界与 \(q>1\)；derived-checked，从旧 §7.6 重新核算。
 - **Counterevidence / Objections / Scope / Related Files**：归一化极限是额外假设，C45 的上界自身不产生它；不对有限终止或完整 resolvent 的其他分支声称正因子。
 
 ## C47-v1 / DC-GAP · GX-074 的独立 coverage 障碍
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R\) 令 \(K=\{0\}\cup\{1/n:n\ge1\}\)、\(\lambda>0\)、\(F(u)=\{0\}\) 对 \(u\in K\)，域外空值；\(S=K\)。完整紧图在全部图点对上对**每个** \(0<\gamma\le1\) 满足 \(\mathrm{RL}(\lambda,\gamma,1)\)，常数 1 在整个 K 上锐；全部有限残差输出有 \(d(u,S)=r_F(u)=0\)。但是自然输入域恰为 K，任何以 0 为心的开球均不被覆盖。
 - **Definitions / Dependencies / Evidence**：[DC-OBJECT/GAP](research/topics/path_dynamics/discrete_coverage.md#dc-gap) 逐对计算 Cayley、完整纤维、EB 的作用域与域外无步；derived-checked，旧 GX-074 / foundations 注 1.5 是来源。
 - **Counterevidence / Objections / Scope / Related Files**：若把目标换成 \(\{0\}\)，在 \(1/n\) 上真 EB 就失败；不能偷换目标以声称更强结论。反例只否定从 RL 和有限残差 EB 推出输入 coverage，不否定额外假设 coverage 的 PPA 定理。[F16](FAILED_ROUTES.md#f16)。
 
 ## C48-v1 / NA-DRIFT · 输出锚距离与最近点漂移的包络
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间，非空 \(S\subset F^{-1}(0)\)、固定 \(\lambda>0\) 与指定 \(J:D\to H\) 的每个 \(x\in U\subset D\)，取 \(y=Jx\)、\(w=(x-y)/\lambda\in F(y)\)。对整个 \(0<d(x,S)\le r_0\) 家族，假设 \(P_S(x),P_S(y)\ne\varnothing\)。置 \(r_x=d(x,S),a(x)=d(x,P_S(y)),\delta(x)=d(P_S(x),P_S(y))\)。对每个 x，\(r_x\le a(x)\le r_x+\delta(x)\le3a(x)\)，相应非负上包络满足 \(\mathcal A(r)\le\chi(r)\le3\mathcal A(r)\)。
 - **Definitions / Dependencies / Evidence**：[NA-OBJECT/DRIFT](research/canonical/nonisolated_alignment.md#na-drift) 用任意近似实现两集合间 infimum 的点对证明；derived-checked，从旧 foundations §8.1 重写。非空实际距离趋零时 \(\mathcal A(r)\le Kr^\theta\) 必有 \(\theta\le1\)。
@@ -309,17 +342,23 @@
 
 ## C50-v1 / NA-SHARP · 同序列饱和才能得到 \(\theta q\) 见证
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C48 的同一序列 \(x_n\) 上，令 \(r_n=d(x_n,S)\downarrow0,a_n=a(x_n),t_n=\|w(x_n)\|,s_n=d(Jx_n,S)\)。若 \(a_n/r_n^\theta\to A>0,t_n/a_n\to B>0,s_n/t_n^q\to C>0\)，则 \(s_n/r_n^{\theta q}\to CB^qA^q\)；同序列双边 \(\asymp\) 前提给双边阶。在 C49 的小步超线性 EB 下，必有 \(B=1/\lambda\)。
 - **Definitions / Dependencies / Evidence**：[NA-SHARP](research/canonical/nonisolated_alignment.md#na-sharp) 的比值乘积及 NA-COMPOSE 的步长误差 \(o(t_n)\)；derived-checked，从旧 §9.1 重算。
 - **Counterevidence / Objections / Scope / Related Files**：分别在不同序列取得两个最坏指数不足以给 \(\theta q\) 的锐性；C49 的上界不自动提供此序列或正 Q 因子。GX-071 只是一个具体可达构造，不代表普适必要性。
 
 ## C51-v1 / MA-REFLECT · 输出近锚的渐近反射
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间、\(\lambda>0,S\subset F^{-1}(0)\) 非空，任意实际图点 \((y,w)\)、\(0<t=\|w\|<\eta\)，真残差输出 EB \(d(y,S)\le\psi(r_F(y))\)，\(\psi\) 有限非减且 \(o(t)\)。逐点选 \(p\in S\) 满足 \(\|y-p\|\le d(y,S)+e(t)\)，\(e(t)\ge0,e(t)=o(t)\)，\(e(t)>0\) 时不需投影取到，\(e(t)=0\) 时需取到。置 \(x=y+\lambda w,\widehat x=y-\lambda w,\delta_t=(\psi(t)+e(t))/(\lambda t)\)。当 \(\delta_t<1\) 有 MA-1 的双边反射比及相对缺陷界；沿任何 \(t_n\to0\) 的合法序列，比值趋 1。
 - **Definitions / Dependencies / Evidence**：[MA-OBJECT/REFLECT](research/canonical/moving_anchor_reflection.md#ma-reflect) 以同一图点和 p 的三角双边界直接证明；derived-checked，从旧 foundations §6.1 重算。
 - **Counterevidence / Objections / Scope / Related Files**：p 可随图点移动；不能改成固定零点、所有图点对的 reflector 模，或集合距离收缩。[MA-LIMIT](research/canonical/moving_anchor_reflection.md#ma-limit) 给完整具体反例；外部先行性未核。
 
 ## C52-v1 / MA-POWER · 移动锚幂型缺陷
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C51 的同一图点和 p 上，若 \(q>1,\rho,c\ge0\)、真 EB \(d(y,S)\le\rho r_F(y)^q\)、\(\|y-p\|\le d(y,S)+c\|w\|^q\)，令 \(A=\rho+c\)。当 \((A/\lambda)\|w\|^{q-1}\le1/2\)，有 \(\|\widehat x-(2p-x)\|\le2^{q+1}A\lambda^{-q}\|x-p\|^q\)。
 - **Definitions / Dependencies / Evidence**：[MA-POWER](research/canonical/moving_anchor_reflection.md#ma-power) 的 \(\|x-p\|\ge\lambda\|w\|/2\) 和缺陷恒等式；derived-checked，从旧 §6.2 重算。
@@ -333,11 +372,15 @@
 
 ## C54-v1 / NB-POWER · 幂次上界与退化端点
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C53 同一 \(F,T,U,S\) 和所有输出窗口假设下令 \(\psi(t)=\rho t^q\)，\(\rho,q>0\)。当 \(0<\gamma<1,L>0\)，充分门是 \(\gamma q>1\)，或 \(\gamma q=1\) 且 \(\rho(L/(2\lambda))^q<1\)；当 \(\gamma=1\)，充分门是 \(q>1\)，或 \(q=1\) 且 \(\rho(1+L)/(2\lambda)<1\)；当 \(L=0\)，不论打印的 \(\gamma\)，充分门是 \(q>1\)，或 \(q=1\) 且 \(\rho/(2\lambda)<1\)。每种情况还需缩半径及 C53 的实际初值留域预算；结论是相应一步 upper order、C53 有限长度，以及临界系数的 ratio limsup 上界。
 - **Definitions / Dependencies / Evidence**：[NB-POWER](research/canonical/named_branch_local.md#nb-power) 对 C53 的 \(\Phi(r)\) 分别展开并核退化参数；derived-checked，与 R03 的非退化门槛相容，但 C53 的对象与量词不同。
 - **Counterevidence / Objections / Scope / Related Files**：指数低于 1 时此上界不判定收敛或发散；系数只为该证明证书的充分量，不是一般必要界。Upper order 不给双边精确阶或正 Q 因子；\(L=0\) 时不能沿用 \(\gamma q\) 标签。
 
 ## C55-v1 / NB-OSCILLATION · 锚定线性 RL 不推出全对线性 RL
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R,\lambda=1\) 取 \(T(0)=0,T(x)=x[3/10+(1/10)\sin(x^{-2})]\)（\(x\ne0\)），完整定义 \(F(y)=\{x-y:T(x)=y\}\)。对唯一 \(S=\{0\}\) 及每个输入，A 以 \(\gamma=1,L=3/5\) 成立，且真 EB 为 \(|y|\le(2/3)r_F(y)\)，故 C53 的 \(\Phi(r)=(8/15)r\)；但任何零邻域上此完整图的全对 \(\gamma=1\) RL 均失败。
 - **Definitions / Dependencies / Evidence**：[NB-OSCILLATION](research/canonical/named_branch_local.md#nb-oscillation) 以 \(1/5\le a(x)\le2/5\) 控制所有原像的真残差，并以 Cayley 导数沿明确序列无界证明不蕴含；新构造，derived-checked。
@@ -345,11 +388,15 @@
 
 ## C56-v1 / AV-BRIDGE · 全对图块到指定锚接口
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整 \(F\)、\(S=F^{-1}(0)\ne\varnothing\)、\(G\subset\operatorname{gph}F\)、\(\lambda>0\)。若 \(G\) 对任意两图点满足同一 \(L\ge0,0<\gamma\le1\) 的全对 RL，\(U\subset M_+(G)\)，且对 active set \(A\subset U\) 的每个输入 \(d(x,S_G)=d(x,S)<\infty\)，其中 \(S_G=\{p\in S:(p,0)\in G\}\)，则图块唯一指定分支在 \(U\) 上存在；对所有 \(x\in A\) 可取近似最近 \(p_n\in S_G\) 满足 C53 的锚界，且反射在 \(U\) 的任意两输入间有全对 Hölder 模。
 - **Definitions / Dependencies / Evidence**：[AV-OBJECT/BRIDGE](research/canonical/all_pairs_verifier.md#av-bridge) 使用剪切单射、覆盖、同图块零锚及距离 infimum 重算旧 foundations §3.1；derived-checked。若要调用 C53，另加对实际输出的真残差 E、兼容和初值留域预算。
 - **Counterevidence / Objections / Scope / Related Files**：不要求 \(S_G=S\)，但保距离的 (AV-2) 不可凭 RL 与 coverage 删除，见 C57。完整 \(J_{\lambda F}\) 的任意输出还需对完整输入纤维排他；不提供全局 closedness 或算法不变性。
 
 ## C57-v1 / AV-GAP · 失去零锚保距离的完整关系反例
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(H=\mathbb R,\lambda=1,F(y)=\{0,y\}\)、\(G=\{(y,y):y\in\mathbb R\}\)。全图块任意两点以 \(L=0\) 满足每个 \(0<\gamma\le1\) 的 RL，且 \(M_+(G)=\mathbb R\)，但完整 \(S=\mathbb R\)、\(S_G=\{0\}\)，对每个 \(x\ne0\) 有 \(d(x,S_G)=|x|>0=d(x,S)\)。指定 \(T(x)=x/2\) 不固定这些零距离输入；完整 \(J_F(x)\) 还同时含 \(x\) 与 \(x/2\)。
 - **Definitions / Dependencies / Evidence**：[AV-GAP](research/canonical/all_pairs_verifier.md#av-gap) 直接计算全部图值、自然域、反射与零集；新反例，derived-checked。
@@ -362,6 +409,8 @@
 - **Counterevidence / Objections / Scope / Related Files**：闭图单独不足以 coverage，\(G=[0,1]\times\{0\}\) 有完整反例；稠密但不闭也不足，\(G=\mathbb Q\times\{0\}\subset\mathbb R^2\) 的自然域是 \(\mathbb Q\ne\mathbb R\)，并满足模 \(\omega(t)=t\)。后一项由空白接收审查发现总账抄漏合取前提，规范证明与 E102 原已正确。没有零点消失模时闭域亦不保闭图。一般跳跃模只保证延拓/闭性，不声称闭包在跳跃尺度仍保同一模。图块结论不排除完整关系中图块外的纤维；文献先行性未核。[CG-BOUNDARY](research/canonical/closed_graph_minty_domain.md#cg-boundary)。
 
 ## C59-v1 / RW-POSITIVE · 一般 gauge 的窗口到邻域转换
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert \(H\)、完整 \(F:H\rightrightarrows H\)、\(S=F^{-1}(0)\ni\bar u\)、真残差 \(r_F=d(0,F(u))\)。有限非减 \(\psi:[0,\eta)\to[0,\infty)\)、\(\psi(0)=0\)、原点连续。若存在 \(U\ni\bar u\)、\(0<\delta<\eta\)，对 **每个** \(u\in U\) 且 \(r_F(u)<\delta\) 有 \(d(u,S)\le\psi(r_F(u))\)，并且 \(\psi(\delta)>0\)，则在 \(V=U\cap B(\bar u,\psi(\delta))\) 对 **每个** \(r_F(u)<\eta\) 的 \(u\) 成立同一界。若 gauge 另有全域非减延拓，可将无窗口量词扩大至全部可评价的有限残差（空纤维按 \(+\infty\) 约定）。
 - **Definitions / Dependencies / Evidence**：[RW-OBJECT/POSITIVE](research/canonical/residual_window_bridge.md#rw-positive) 用 \(d(u,S)\le\|u-\bar u\|\) 与阈值以上的 gauge 单调性直接证明；derived-checked。旧 foundations 定义0.4 只给正幂特殊情形；本页一般充分门为独立推导。
@@ -381,11 +430,15 @@
 
 ## C62-v1 / PS-ABSORPTION · 固定全局近端的平稳律吸收
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^n\)、\(\lambda>0\)、同一个 proper Borel \(f:\mathbb R^n\to(-\infty,+\infty]\)。对每个 \(x\in\operatorname{dom}f\)，全局最小解集合 \(P_\lambda f(x)\ne\varnothing\)；Borel 核 \(K(x,P_\lambda f(x))=1\)。令 \(A_K=\{x\in\operatorname{dom}f:K(x,\{x\})=1\}\)。对 **每个** 支撑于 \(\operatorname{dom}f\) 的概率律 \(\pi\)，\(\pi K=\pi\) 当且仅当 \(\pi(A_K)=1\)，不要求 \(f\) 可积或二阶矩。若有限多值集合的各最小解均获正选择概率，则 \(A_K=\{x:P_\lambda f(x)=\{x\}\}\)。
 - **Definitions / Dependencies / Evidence**：[PS-ABSORPTION](research/topics/random_markov/proximal_selection_seam.md#ps-absorption) 以同律下有界严格递增 \(\arctan f\) 避免 \(\int|f|\) 的隐藏门，再用平方罚项的严格下降。`derived-checked`；来源 9/14 非乘积近端稿 §3，已重构而非继承标题。
 - **Counterevidence / Objections / Scope**：仅对同一个目标的**全局**近端最小解和域内平稳律；非凸 limiting-subdifferential 的完整 resolvent 可含非最小驻点，随机切换目标亦另需证明。外部新颖性未核。
 
 ## C63-v1 / PS-SEAM · 闭近端图与非不变极限的 law-step 障碍
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(\lambda=1,H=\left(\begin{smallmatrix}2&1\\1&2\end{smallmatrix}\right),b=(3,3)\)，\(f(y)=\tfrac12y^THy-b^Ty+4\mathbf1_{y\ne0}\)，\(Q=H+I\)、\(t(x)=Q^{-1}(b+x)\)、\(g(x)=\tfrac12(b+x)^TQ^{-1}(b+x)\)。完整全局近端图按 \(g<4,=4,>4\) 分别为 \(\{0\},\{0,t(x)\},\{t(x)\}\)；在 tie 各支选概率 \(1/2\) 的核 \(K\) 有唯一平稳律 \(\delta_0\)。沿 \(v=(1,1),a_0>1\) 的真实轨道 \(a_k=1+(a_0-1)4^{-k}\) 有有限总长度却趋向非平稳 \(\delta_v\)。对 **每个** \(W_2\) 邻域 \(B_r(\delta_0)\)，存在固定 \(\epsilon>0\) 与 \(\mu_k=(1-\epsilon)\delta_0+\epsilon\delta_{a_kv}\) 全部在邻域，使 \(W_2(\mu_k,\mu_kK)\to0\) 而 \(W_2(\mu_k,\delta_0)\to\sqrt{2\epsilon}>0\)；故该完整邻域上不存在任何零点消失的 law-step gauge EB。
 - **Definitions / Dependencies / Evidence**：[PS-SEAM/NO-EB](research/topics/random_markov/proximal_selection_seam.md#ps-example) 的全图比较、C62 吸收律和射线上显式最优运输；历史 V10 的有理有限恒等式本轮复跑只作观察。`derived-checked`；来源 9/14 非乘积近端稿 §5，外部优先性未核。
@@ -393,11 +446,15 @@
 
 ## C64-v1 / SL-LIFT · M1 显式映射的新完整 Sign 图实现
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：\(c=2/3\)、\(A(h)=c\operatorname{Sign}(h)+2h^3/3\)，\(\operatorname{Sign}(0)=[-1,1]\)。新关系 \(F_{\rm lift}(u,v)=\varnothing\) 当 \(v\ne0\)；当 \(v=0\)，其**全部**值是 \(\{(h,q):u+h-3q\in A(h)\}\)。对每个 \(z=(p,q)\in\mathbb R^2\)，完整单位步长 resolvent \(J_{F_{\rm lift}}(z)=\{(p-f(p-3q),0)\}=\{Tz\}\)，自然 Minty 域全为 \(\mathbb R^2\)，零集为 \([-c,c]\times\{0\}\)。对 \(0<\delta<1\)，\(r_{F_{\rm lift}}(c+\delta,0)=\delta/3\) 且到零集距离 \(\delta\)，端点线性 EB 常数 3 锐利；左端对称。
 - **Definitions / Dependencies / Evidence**：[SL-INCLUSION/GRAPH/ZERO](research/topics/path_dynamics/m1_sign_lift.md#sl-inclusion) 从 Sign 单调包含的三分支唯一反演并对全部残差纤维取 infimum；`derived-checked`。这是**新构造**，可将 C38/C39 对显式 \(T\) 的结论调用到此新关系的完整 resolvent。
 - **Counterevidence / Objections / Scope**：历史多步 §5 只给外层 \(T\) 与来源声明，不给原生循环方程全部允许分支；本构造绝不认证历史原生图身份。另一同名 M1/SO-06 是不同算子。新图在指定端点输入窗口的全对 RL 另见 C65；无界全图、历史算法路径对应及外部优先性仍未核。
 
 ## C65-v1 / SL-RL · 新 Sign 图端点局部最大全对指数
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C64 **同一个新完整图**上固定 \(\lambda=1,c=2/3\) 和 Minty 输入窗口 \(U=B_\rho((c,0))\)，\(0<\rho<\min\{1/2,c/(2\sqrt{10})\}\)。对所有输入均在 U 的**任意两**图点，有全对 \(\gamma=1/3\) Hölder–RL，常数 \(L_\rho=(2\rho)^{2/3}+2(3/2)^{1/3}10^{1/6}\)；任何包含端点输入的正半径球上、\(\gamma>1/3\) 均失败。
 - **Dependencies / Evidence**：[SL-RL](research/topics/path_dynamics/m1_sign_lift.md#sl-rl) 从完整 \(J_F=T\)、\(C(p,q)=(p-2f(p-3q),-q)\)、立方根不等式与端点 \(x_t=(c+t,0)\) 逐项重算；独立逆向检查常数与球的正侧条件。`derived-checked`。
@@ -405,11 +462,15 @@
 
 ## C66-v1 / IS-OP · 身份与平方并图的真残差锐半阶
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：\(F(x)=\{x,x^2\}\) 在 \(\mathbb R\) 上为完整关系，\(S=\{0\}\)；每个 \(0<|x|<1\) 的 \(r_F(x)=x^2\)、\(d(x,S)=|x|\)。固定目标局部半阶 EB 的收缩邻域最优模为 1，任意指数 \(q>1/2\) 失败。最近逆点 \(d(0,F^{-1}(y))=|y|\) (\(|y|<1\)) 是不同量词；全部局部逆像的最优阶仍仅 \(1/2\)。
 - **Dependencies / Evidence**：[IS-OP](research/topics/examples/identity_square_branch_union.md#is-operator-eb) 重算完整算子及逆纤维；9/01 ZIP `work/c_gx066_077.md` 的 GX-068 是来源线索。`derived-checked`。
 - **Counterevidence / Objections / Scope**：不能把最近逆点线性律当所有原像的线性 calm；同一完整图的两变量半阶 MR 现见 C92，二参数 semimonotonicity 全区域现见 C95，均不改变本固定目标 Claim 的量词。历史 VI 标签与外部先行性未审。
 
 ## C67-v1 / IS-STEP · 同一并图的指定步与完整步残差
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(\lambda>0\)，完整 \(J_{\lambda F}(p)\) 含身份根 \(p/(1+\lambda)\)，当 \(p\ge-1/(4\lambda)\) 另含平方根的近根与远根（\(p=0\) 远根 \(-1/\lambda\)）。指定身份选择 \(J_1\) 的 fixed-point EB 精确线性模 \((1+\lambda)/\lambda\)；完整最小步残差 \(r_J(p)=\inf_{u\in J(p)}|p-u|=\lambda p^2(1+o(1))\)，故收缩邻域最优半阶模 \(1/\sqrt\lambda\)，所有更高幂次失败。
 - **Dependencies / Evidence**：[IS-STEP](research/topics/examples/identity_square_branch_union.md#is-resolvent) 解一元二次方程并比较完整纤维中的三类根，`derived-checked`。
@@ -417,11 +478,15 @@
 
 ## C68-v1 / IS-RL · 同输入跨支碰撞排除全对模
 
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
+
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C66 的完整图及任何固定 \(\lambda>0\)，任意零邻域存在不同两图点 \((x,x)\)、\((y,y^2)\)，其中 \(0<y<1\)、\(x=(y+\lambda y^2)/(1+\lambda)\)，满足同一 Minty 输入而 Cayley 输出不同。因此包含完整局部两支的图块对任意 \(\gamma>0\) 无有限全对 Hölder–RL 常数，完整 J 也不是局部单值。
 - **Dependencies / Evidence**：[IS-RL](research/topics/examples/identity_square_branch_union.md#is-collision) 的同输入零分母计算，`derived-checked`。
 - **Counterevidence / Objections / Scope**：不否定任何一条指定单支可能有良好模；与 C67 的残差分离相关但不是由半阶 EB 自动推出。
 
 ## C69-v1 / SME-ENVELOPE · 硬支持下非线性证书的锐矩提升
+
+- **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(1\le p<\infty,R>0,\ 0\le t\le R\)，连续非减 \(\varphi:[0,R]\to[0,\infty)\) 且 \(\varphi(0)=0\)；对所有概率空间和所有 \(0\le D\le R\) a.s.、\(\|D\|_p\le t\) 的随机变量取最坏 \(\|\varphi(D)\|_p\)。置 \(g(z)=\varphi(z^{1/p})^p\)，精确 p 次方等于 \(\operatorname{cav}g(t^p)\)，每个 \(t\in[0,R]\) 可由至多两个幅度达到。幂次 \(\varphi(u)=Au^\alpha\) 时得 \(At^\alpha\) (\(\alpha\le1\)) 或 \(AR^{\alpha-1}t\) (\(\alpha\ge1\))；同一个 D 上逐点复合 \(S\le CD^\gamma,D_+\le KS^q\) 的临界 \(\gamma q=1\) 先复合提升为 \(KC^qt\)，分开取两个锐包络给 \(KC^qR^{1-\gamma}t^\gamma\)，比值 \((R/t)^{1-\gamma}\) 只对 \(0<t\le R\) 陈述，且两层 gauge 的输入支持需匹配。
 - **Dependencies / Evidence**：[SME-ENVELOPE/POWER](research/topics/random_markov/scalar_moment_envelope.md#sme-envelope) 的紧区间均值集、凹包络、两点极值与同一变量复合；[SME-SUPPORT](research/topics/random_markov/scalar_moment_envelope.md#sme-support) 另证仅小 \(L^p\) 距离无法替代逐点硬支持。`derived-checked`，9/14 质量稀释独立审计 §4 是来源。

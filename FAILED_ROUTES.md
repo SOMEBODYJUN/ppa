@@ -230,3 +230,10 @@
 - **原断言与范围**：Z07 GX-063 第 902–905 行将 GX-062 与 GX-063 的循环阶差异，解释为“不能还原到标量强单调模”。它们的完整逆像模确实都等于 1，但强单调系数分别为 \(1/2\) 与 \(1/\sqrt2\)，并不相同。
 - **断点与修补**：在**这个**全域平面旋转族中 \(\mu=\cos\theta\)，而 [C123](research/topics/examples/planar_rotation_family.md#pr-cyclic) 的完整 Fourier 证明给 \(n\)-循环单调恰当且仅当 \(\mu\ge\cos(\pi/n)\)。因此族内的循环阶可以从该标量还原；可保留的比较只涉及同逆像条件数而不同循环阶。
 - **边界**：这不证明一般算子只凭强单调系数就能识别循环阶。若在更广的图类重新提出“不可还原”，必须给同强模而循环性质不同的两个完整对象，并固定该模的精确定义。
+
+<a id="f35"></a>
+## F35 · 把 QP 输出 gap 直接加到反演总误差
+
+- **尝试与断点**：旧 [Q03 摘要](research/range_finite_data.md#q-eval) 先用 \(e\) 表示候选参数 \(q\) 处 \(\|\widehat N(q)-N_m(q)\|\)，随后把同一个 \(e\) 直接加进 \(\|x-\widehat x\|\) 的三项界。前者仅是代理函数一次求值的误差；后者要求 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\le e_x\)。漏掉候选点的固定点残差及 \(1/(1-\sigma)\) 放大。
+- **精确反向检验**：即使 \(N_m(q)\) 完全精确、\(e_N=0\)，也可任意选择远离 \(A_m^{-1}(\widetilde v)\) 的候选 \(q\)，使 \(\widehat x=q-\lambda\widetilde v\) 很远；只由 gap 无法约束它。若 \(\lambda=1,F=I,C=0\)，单个零样本可取 \(N_m=0\)，\(v=\widetilde v=0\)，取 \(q> K_0\) 就使旧读法 \(\|0-q\|\le K_0+0+0\) 失败，其中 \(K_0=a/\sqrt{1-\sigma^2}\)。
+- **可回收与重启门**：S23 原稿 `prop:evaluation` 与 `cor:totalerror` 分别给正确的两种误差门，并未被此反例否定。取 \(\widehat x=q-\lambda\widetilde v\)，先认证 \(e_N\)，再用 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)；最后在完整逆纤维的共同 coverage 与观测噪声门下调用 [C20/Q03](research/range_finite_data.md#q-total)。这里修的是规范层缩写的类型错位，不是声称原稿定理错误。

@@ -48,6 +48,11 @@ R02 还要求 **每个** \(0<t\le R\) 的 \(\psi((t+Lt^\gamma)/(2\lambda))\le\ka
 
 固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_3\) 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
 
+<a id="e51"></a>
+## E51：有限 QP 输出误差到三项总误差的求值门
+
+E51 的真实输出 \(v\) 必须有**整个非空逆纤维**的 Cayley 参数 \(\delta\)-覆盖，并有 \(\|\widetilde v-v\|\le\eta\)。三项总界里的 \(e_x\) 是已认证的 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\) 上界；可行 QP 的 Frank–Wolfe gap \(G\) 只给同一候选参数 \(q\) 处 \(e_N=\sqrt G\) 的 \(N_m(q)\) 输出误差。若 \(\widehat x=q-\lambda\widetilde v\)，须再证 \(e_x\ge(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)。只给 gap、没有候选点的固定点残差，就不能调用 [Q03](range_finite_data.md#q-eval) 的三项界；这两种 \(e\) 在原稿 prop:evaluation 与 cor:totalerror 中是不同类型。
+
 ## E105–E112：三组新对象的互不替代条件
 
 E105/E106 的共同名称 Douglas–Rachford 只固定公式 \(T=I-P_C+P_DR_C\)、算法残差 \(G=I-T\)：**切触**的 \(D\) 是抛物线，只在 \(b>-1/2\) 统一投影并于零附近有半阶 MSR；**横截**的 \(D\) 是直线，对所有输入有可逆线性 \(G\) 和精确模 \(1/\sin\theta\)。二者不是同一算子的参数版本。E107 的取等输入 \((s,-s^2)\) 只反驳“半阶 EB 自动给统一一步严格距离收缩”；并未否定全投影管不变或判定每条局部轨道。[对象卡](topics/examples/dr_tangency_transversality.md)。

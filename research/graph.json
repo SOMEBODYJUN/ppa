@@ -2070,7 +2070,7 @@
       ],
       "output": "Q-TOTAL",
       "relation": "conditional",
-      "scope": "真输出的全纤维覆盖、已认证 gap、噪声 η 和求值 e",
+      "scope": "真输出的全纤维 Cayley 参数覆盖、观测噪声 η、反演求值证书 e_x≥||xhat−A_m^{-1}(vtilde)||。QP gap 只认证 N_m(q) 的 e_N，还需候选参数 q 的固定点残差除以 1−σ 才能取得 e_x",
       "status": "S23 稿内证明"
     },
     {

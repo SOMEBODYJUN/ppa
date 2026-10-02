@@ -22,6 +22,7 @@
 | [锥](cone_markov.md#c-rank) | \(G:V\to E\) 为约束映射；\(\mathfrak F\) 为最小面；\(S_{\rm dual}\) 为对偶面子空间；\(C\) 为锥 | MSCQ 的 \(d(x,G^{-1}C)\le\kappa d(G(x),C)\) 只有另引原关系 \(F_{\rm PPA}\)、局部零集等同 \(F_{\rm PPA}^{-1}(0)=G^{-1}C\) 及 \(d(G(x),C)\le\chi(r_{F_{\rm PPA}}(x))\)，才给它的真 EB |
 | [Markov](cone_markov.md#m-psi) | \(K_{\rm state}\) 为紧状态集；\(\mathcal I\) 为不变律集；\(\Psi\) 为同噪声且输入 OT 最优的同步残差；\(\mathcal R,\mathcal R_Q\) 为条件刷新残差 | 同一个转移核也可有不同随机表示和不同 \(\Psi\)；\(W_2(\mu,\mu P)\)、\(\Psi\)、\(\mathcal R\) 不互换 |
 | [非 tied 图](canonical/non_tied_cayley.md#nt-object) | \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\) 是该页系数 | 与导数 \(A=DG(\bar x)\)、集合 \(A\) 或其它判别式无身份关系；引用 C89/C91 时连同 \(A>0,\Delta\ge0\) 门 |
+| [有限数据 Q03](range_finite_data.md#q-eval) | \(e_N\) 是某候选参数 \(q\) 处的 \(N_m(q)\) 求值误差；\(e_x\) 是 \(\widehat x\) 到 \(A_m^{-1}(\widetilde v)\) 的反演误差上界 | QP gap 只给 \(e_N\)，必须加候选参数固定点残差并除以 \(1-\sigma\) 才能传给 \(e_x\)；不能把它们叫同一个 \(e\) |
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
 | [例库](topics/examples/README.md) | \(F,K,B,G,R\) 在每张卡内重新绑定 | 必须携带空间、完整/受限图、目标、步长、输入/输出窗、真实或算法残差；GX 编号只标来源观察 |
 
@@ -29,4 +30,4 @@
 
 引用一条边前依次检查：同一完整对象或明确图块？同一 \(\lambda\) 和成对尺度？目标是完整零集还是指定子集？残差取 inf、选中值、步长还是概率耦合？前提对**所有**图点/输出/初值还是仅存在一个选择？条件是在同一窗口合取，还是来自不同稿件的可比实例？最后查 [条件契约](LOGIC_CONTRACTS.md) 与 [现存失败机制](../FAILED_ROUTES.md)。相同字母和相近指数都不能省掉这些问题。
 
-本页由 2026-10-02 跨文件核对建立：修正了 `RL(λ,L,γ)` 与 D02 参数顺序冲突、锥面 \(F\) 与 \(r_F\) 的错位、条件 Markov 摘要缺定义以及 C16 的 \(\rho=0\) 端点。此核对覆盖入口、部分承重链和新增 GX-058；不是对全部 346 个内容组或全部证明的穷尽审稿。
+本页由 2026-10-02 跨文件核对建立：早先出现过的 `RL(λ,L,γ)` 现已统一为 `RL(λ,γ,L)`；锥面 \(F\) 与 \(r_F\) 的错位、条件 Markov 摘要缺定义及 C16 的 \(\rho=0\) 端点也已修正。本轮另将 Q03 的 \(e_N/e_x\) 分型。此核对覆盖入口及部分承重链；不是对全部 346 个内容组或全部证明的穷尽审稿。

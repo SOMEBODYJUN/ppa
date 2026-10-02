@@ -56,7 +56,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 非幂次边界 | 一般模 + Dini + 上述全部局部条件 → 点收敛；对数完整接缝 \(a\le1\) 有距离收缩但点发散 | 9/19 稿内构造与本轮局部重算 |
 | 全局结构 | 全图 RL → Cayley；Hilbert 雪花 + 同常数 Lipschitz 扩张 → 固定参数 graph-maximal 完成；二次 excess + 正交提升 + Banach → 单一正反影子 | 扩张 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 的量词和一手引文已核；C03 仍是独立候选 |
 | 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
-| 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加参数覆盖 → 未观测图点误差 | C18–C20 稿内证明；有限查询不能全空间认证 C21 |
+| 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加 Cayley 参数覆盖、观测噪声界和**反演求值误差** \(e_x\) → 未观测图点三项界 | C18–C20 稿内证明；QP gap 只给 \(N_m(q)\) 误差，须另用固定点残差换算 \(e_x\)；[F35](FAILED_ROUTES.md#f35)；有限查询不能全空间认证 C21 |
 | 拓扑限制 | 局部 all-pairs + EB + Dini + coverage + 不变开域 → 连续极限回缩 | 不由任意紧零集实现自动得到 |
 | 去超临界幂的条件值域 | C70 整窗度量余量 + 同一指定 T 非空紧 usc 有理 acyclic + 每阶上同调满射 + χ(A)≠0 → C05-v2 扰动 coincidence 与原关系局部值域；只需 q>0，原稿 C05-v1 的 qγ>1 仍原样保留 | 新版本的条件拓扑链已重算；存在 qγ=1/2 的完整可行实例，原生整窗模型仍须独立认证 |
 | 有限数据值域 | [C70 样本双包络](research/canonical/finite_sample_collar.md#fsc-envelope) + **另证**整窗每个输出的步界/EB + collar → 内域余量；再加 usc/acyclic、上同调与 Lefschetz → 原关系局部值域球 | C70 度量层已独立重算；原稿 C05-v1 仍是 PDF-only 候选；C05-v2 是保留整窗拓扑条件而去 qγ>1 的独立条件推导。有限样本不认证整窗 \(T\) |
@@ -163,7 +163,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
 | [research/LITERATURE.md](research/LITERATURE.md)、[research/canonical/holder_extension.md](research/canonical/holder_extension.md) | LIT-GRN-2002 核 C05 的一手拓扑门；LIT-ALM-2021 Theorem 1.2 + HE-SNOWFLAKE/EXTENSION 核 H01 的 Hilbert 同常数扩张及固定参数 graph-maximal。引文核验不自动升级整稿。 |
-| [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；要从结构定理走向可计算证书时读。 |
+| [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；[Q03](research/range_finite_data.md#q-eval) 分开 QP 输出误差 \(e_N\) 与反演求值证书 \(e_x\)，要从结构定理走向可计算证书时读。 |
 | [research/solution_selection.md](research/solution_selection.md)、[solution_selection_rates.md](research/canonical/solution_selection_rates.md) | S01–S03、C08、C115/C116：统一尾的有限前缀尺度证明，完整二值半代数模型的共同证书、逐轨道 Q 二次与两点坏选择；主张初值稳定时读。SS1 定理 2/3 仍未重构。 |
 | [research/canonical/signed_schur_growth.md](research/canonical/signed_schur_growth.md) | C117–C119：双支 signed-Schur 的闭参数域图包含、切向球内全对模与完整纤维门；幂次/同修正坐标匹配、平方根原生图及反例。核局部 R04 或把图块结论转成完整近端前读。 |
 | [research/operator_space.md](research/operator_space.md) | LT 嵌入、完整图信息、\(\Phi\) proper、大小量尺塌缩和未解桥；总体比较工作入口。 |

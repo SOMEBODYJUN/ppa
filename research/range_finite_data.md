@@ -81,15 +81,23 @@ K_\delta=
 对可行近似 \(\widehat\theta\in\Delta_m\)，QP 梯度 \(g_q=2Q\widehat\theta+d(q)\) 的 Frank–Wolfe gap
 \(G=\langle g_q,\widehat\theta\rangle-\min_i(g_q)_i\ge0\)，且
 \(\|V\widehat\theta-N_m(q)\|\le\sqrt G\)。
-若 \(\widehat N(q)\) 到 \(N_m(q)\) 的**已认证**误差为 \(e\)，可用除以 \(1-\sigma\) 的固定点残差估计正反求值误差。真实 \(v\) 有观测 \(\widetilde v\)、\(\|\widetilde v-v\|\le\eta\)，且完整 \(F^{-1}(v)\) 的所有参数满足 Q02 的覆盖，则对每个 \(x\in F^{-1}(v)\) 和近似代理 \(\widehat x\)：
+若 \(\|\widehat N(q)-N_m(q)\|\le e_N\) 已认证，这只是**在候选参数 \(q\) 处的 QP 输出误差**；取 \(\widehat N(q)=V\widehat\theta\) 时可由上式取 \(e_N=\sqrt G\)。给定观测 \(\widetilde v\)，取 \(\widehat x=q-\lambda\widetilde v\)。由 \(q_*=2\lambda\widetilde v+N_m(q_*)\) 的 \(\sigma\)-收缩固定点方程，必须再算
+
+\[
+\|\widehat x-A_m^{-1}(\widetilde v)\|\le
+e_x:=\frac{\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N}{1-\sigma}.
+\tag{Q-eval}
+\]
+
+因此只给 \(e_N\) 或 gap 而不控制候选点的固定点残差，**没有**反演求值证书。更一般可直接提供经独立认证的 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\)。真实 \(v\) 有观测 \(\widetilde v\)、\(\|\widetilde v-v\|\le\eta\)，且完整 \(F^{-1}(v)\) 的所有参数满足 Q02 的覆盖，则对每个 \(x\in F^{-1}(v)\) 和这样的 \(\widehat x\)：
 
 \[
 \|x-\widehat x\|\le K_\delta+
-\frac{\lambda(1+\sigma)}{1-\sigma}\eta+e.
+\frac{\lambda(1+\sigma)}{1-\sigma}\eta+e_x.
 \tag{Q03}
 \]
 
-三项分别是覆盖/模型偏差、噪声放大、求值误差。浮点 gap 用于严格证书需验证容差或向外取整；原稿**未给维数无关样本复杂度或运行时间**。来源：prop:evaluation、cor:totalerror。
+三项分别是覆盖/模型偏差、噪声放大、**已换算的反演求值误差**。证明在 \(x,\widehat x\) 间插入 \(A_m^{-1}(v)\) 与 \(A_m^{-1}(\widetilde v)\)，逐项使用 Q02、逆代理 Lipschitz 常数和 \(e_x\)。浮点 gap 用于严格证书需验证容差或向外取整；原稿**未给维数无关样本复杂度或运行时间**。来源：prop:evaluation、cor:totalerror。原稿前一命题的 \(e\) 是 \(e_N\)，后一推论的 \(e\) 是 \(e_x\)，不能直接同一化。
 
 <a id="q-oracle"></a>
 <a id="q-noglobal"></a>
@@ -112,6 +120,6 @@ K_\delta=
 | HE-W03 | {相对 maximal 窗口、同参数全局 completion、W02} → 固定窗口覆盖 | 扩张与窗口等式须核 |
 | HE-Q01 | {有限兼容样本、抬升、严格凸 QP} → 全球一致 \(N_m,A_m\) | 仅采样点有无覆盖的直接界 |
 | HE-Q02 | {Q01、未知参数 \(\delta\)-覆盖、原图 Hölder} → 该区域的正反配对界 | 全纤维需每个图点被覆盖 |
-| HE-Q03 | {Q02、验证过的 QP gap、观测误差} → 三项总误差 | 浮点误差不能只凭机器输出 |
+| HE-Q03 | {Q02 全纤维 coverage、观测误差、反演求值证书 \(e_x\)} → 三项总误差 | QP gap 只给 \(e_N\)；还需候选点固定点残差换算为 \(e_x\)。浮点误差不能只凭机器输出 |
 | HE-Q04 | {确定性有限总查询、无界 Hölder 类} → 全空间统一认证不可能 | 明确不可区分图构造 |
 | HE-B01 | {精确多值逆纤维、解析代理} → 稳定近似与不稳定精确逆的分离 | 单调例，不主张新算法优越 |
