@@ -7,13 +7,13 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 100 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 102 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
 
 [C08 抽象模传递](research/canonical/solution_selection_rates.md#ss-transfer) 现有局部尺度逐步闭合的独立证明；[C115/C116 二次模型](research/canonical/solution_selection_rates.md#ss-quadratic-object) 把完整两值近端、真全纤维 EB、同一固定 collar 的共同超几何尾，与逐轨道 Q 二次和根对数坏选择分开。SS1 定理 2/3、§5.2 尚未逐项重写。
 
 [C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举与验收步骤；来源层已生成索引，两个内容组已逐段试点，第三个只做结构分段，不是 100 行之外内容的验收。
 [429 个来源位置索引](research/audit/SOURCE_OCCURRENCES.tsv)及[346 个字节内容组](research/audit/PAYLOAD_GROUPS.tsv)现已由可复现生成器建立并双向核哈希与 ZIP 成员；格式/角色、文档解码和逐段语义枚举仍为 `pending-*`，尚不能称分母已建立。后续按计划 P1–P5 逐批给每段去向。
-[逐段试点](research/audit/SEMANTIC_UNIT_SEED.tsv) 把 S19 signed-Schur 源成员 452 行和 SS1 修订稿 763 行分成 11 与 19 段，另把 Z07 的 GX-053–065 成员 1219 行分成 39 个连续结构段。前两份有 16 段规范锚点、14 段待裁决；第三份只有 10 张卡有部分对象锚点，所有 39 段仍须按独立观察与文献事实细分。三份成员无行覆盖空隙，另外 343 个内容组及本试点第三份的语义分母均未完成；已分段绝不等于已审定数学内容。
+[逐段试点](research/audit/SEMANTIC_UNIT_SEED.tsv) 把 S19 signed-Schur 源成员 452 行和 SS1 修订稿 763 行分成 11 与 19 段，另把 Z07 的 GX-053–065 成员 1219 行分成 39 个连续结构段。前两份有 16 段规范锚点、14 段待裁决；第三份有 11 张卡有部分对象锚点，所有 39 段仍须按独立观察与文献事实细分。三份成员无行覆盖空隙，另外 343 个内容组及本试点第三份的语义分母均未完成；已分段绝不等于已审定数学内容。
 
 本批 [C108/C109 孤立极点图](research/topics/examples/isolated_pole_relation.md#ip-object) 修正来源的连通域措辞，重算全步长完整纤维和锐模，并证明严格近端 Lipschitz 仍可无非零无限合法路径。[C110/C111 算术阶梯](research/topics/examples/rational_irrational_staircase.md#gx056-object) 区分有理亚临界步长的单值断裂、无理步长的同输入碰撞以及原算子真残差与近端最小步残差。两张卡只验收所列 GX-055/056 单元；在同 ZIP 中尚有其它例卡与历史分类标签。
 
@@ -27,9 +27,13 @@
 
 以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
 
+## 本批增量：GX-061 伴随方向与 GX-060 的等距身份
+
+[C120/C121](research/topics/examples/adjoint_volterra.md#av-object) 核右端点完整逆纤维、直接图几何、原算子与近端步残差、高频与全对反射；时间反射将 C105 的逐点强收敛和有限幂范数精确转移。GX-060/061 是两份来源方向观察，只计一个等距不变量例型；历史其它标签和外部先行性未关闭。空白 Astra 对本单元的端点、核与 CCA-M10 交叉核验未发现错误，并特别指出不能把“independently”误判为历史未纠正的数学反例。
+
 ## 本批增量：GX-060、GX-054 与空白接收修补
 
-[C104/C105](research/topics/examples/volterra_integration.md#vo-object) 从同一完整 Volterra 图分离非 rectangular 的直接见证、真残差与近端步残差的统一消失 gauge 障碍，以及“每个轨道强收敛、任意有限幂范数仍为 1”。强收敛经能量式与稠密值域直接证明，不从图单调性自动推出；GX-061 的伴随图与此图酉等价，未作为独立已审来源单元。
+[C104/C105](research/topics/examples/volterra_integration.md#vo-object) 从同一完整 Volterra 图分离非 rectangular 的直接见证、真残差与近端步残差的统一消失 gauge 障碍，以及“每个轨道强收敛、任意有限幂范数仍为 1”。强收敛经能量式与稠密值域直接证明，不从图单调性自动推出；GX-061 的伴随端点与完整近端现由 [C120/C121](research/topics/examples/adjoint_volterra.md#av-object) 另核；它是独立的来源观察、同一等距不变量例型。
 
 [C106/C107](research/topics/examples/negative_cubic_branch.md#nc-object) 从 GX-054 计算完整近端零输入三根、受限图块的锐线性全对模与非零路径有限步离自然域。其固定零目标与两目标 (1/3) 模和 EX03 正三次在符号变换下对应，不重复计为另一种独立正则机制。首次空白接收对 C56→C53 和 C70→C05-v2 的条件链未见致命缺口，但发现 C06 实际尾定义和本页旧“下一步”有歧义；已逐项修正。接收只覆盖所查链，尚未证明全库完工。
 
@@ -182,7 +186,7 @@
 
 现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前图的精确节点/边数以 [graph.json](research/graph.json) 和结构校验为准，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
 
-**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 100 个数学单元；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
+**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 102 个数学单元；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
 **例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。
 
 **例库首批**：C24–C26 的 EX01 旋转、EX02 正紧对角、EX03 三次映射已给完整对象、真实残差和直接证明。尤其 EX02 排除任何趋零 gauge 的统一局部 EB，却保留每个初值的 PPA 强收敛；EX03 将固定目标常数 1、两变量 \(2^{2/3}\) 与算法残差下确界 \(\lambda^{-1/3}\) 分开。此三例只关闭对应 GX-004/009/021 的本轮数学单元，原卡其他性质和其余 GX 尚待重写。

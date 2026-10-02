@@ -218,6 +218,12 @@ E169 固定**完整** \(V:L^2(0,1)\to L^2(0,1)\)、\(S=\{0\}\)；对每个局部
 
 E171 固定完整 \(F(x)=-x^3\) 和每个固定 \(\lambda>0\)：完整 \(J(0)\) 的三根直接否定零消失全图 RL。**另定义** \(G_M\)、要求 \(3\lambda M^2<1\)，才有该图块内任意两点的锐线性模和仅在 \(D_M\) 上的指定单值 \(T_M\)；图块结论不能改名为完整 \(J\)。E172 的固定零目标真残差与两目标完整逆像是全图命题，其系数分别为 1 与 \(2^{2/3}\)；路径结论却只覆盖 \(T_M\) 的非零逐步合法输入，有限步离开 \(D_M\)。正三次 EX03 的符号对应只传递残差和逆像模，不传递 Minty 分支或轨道。[NC-BRANCH/REGULARITY](topics/examples/negative_cubic_branch.md#nc-branch)。
 
+## E188–E189：伴随 Volterra 的方向与同构范围
+
+E188 固定实 \(L^2(0,1)\) **完整全域** \(V\) 与 \(V^*\)，同一个等距时间反射 \(U\) 满足 \(V^*=UVU\)。它给等距不变图属性和零目标局部 gauge 失败的精确传递；另逐纤维核 \(V^*\) 的右端点 \(y(1)=0\) 与直接非 rectangular 见证。不能把两方向当两次独立等距机制的计数；也不能以来源“标签通过”代替未拆目录属性和外部先行性核验。[AV-GRAPH](topics/examples/adjoint_volterra.md#av-graph)。
+
+E189 再固定**同一个** \(\lambda>0\) 与全输入的完整 \(J\)，而非选定分支或不同参数比较。\(J_{\lambda V^*}=UJ_{\lambda V}U\) 使 C105 的每个固定输入强收敛及每个有限幂范数 1 转移；近端输入步残差的消失 gauge 失败仍有独立高频见证。全图线性 RL 的锐性取等需要零均值**图点差**，不能任意改成零均值输入差；逐点强收敛也不授予单位球统一速率。[AV-PROX](topics/examples/adjoint_volterra.md#av-prox)。
+
 ## E173–E174：极点支的完整近端、残差与逐路径门
 
 E173 对**同一完整关系** \(F(0)=\{0\},F(x)=\{-1/x\}\)（\(0<x\le\varepsilon\)）及每个固定 \(\lambda>0\)，分别检查全部 Minty 纤维和任意两图点。\(\lambda\le\varepsilon^2\) 时 \(J(0)=\{0,\sqrt\lambda\}\)，即使 \(\lambda<\varepsilon^2\) 有零输入球，也没有零消失全对模；\(\lambda>\varepsilon^2\) 时全图锐线性 RL 成立，但零输入是自然域孤立点。输入局部 hypo 失败不等于零图点附近的**乘积图窗**失败，后者只有一个图点。[IP-MINTY](topics/examples/isolated_pole_relation.md#ip-minty)。

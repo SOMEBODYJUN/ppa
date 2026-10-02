@@ -49,4 +49,4 @@ d(x,S)=r,\quad d(Jx,S)=r^\alpha=r^{\gamma q},\quad
 <a id="ps-source"></a>
 ## 证据和使用边界
 
-本页重新计算 [9/01 RL_foundations §9.2 / GX-071](../../../history/sources/次单调论文研究/RL_foundations.md) 的对象、完整图、真残差、比例和切向预算；状态 `derived-checked` 限于上述算术。它展示一个**特意反向校准**使实际法向速率恰为 \(\gamma q\) 的模型，不能推出所有 RL–EB 算法的必要速率、自然性、genericity 或最优全对常数。历史同源冻结稿是版本副本，不算第二个独立见证。下一例 GX-072 的振荡粗糙度与实际轨道分离须另立对象卡并核两尺度估计。
+本页重新计算 [9/01 RL_foundations §9.2 / GX-071](../../../history/sources/次单调论文研究/RL_foundations.md) 的对象、完整图、真残差、比例和切向预算；状态 `derived-checked` 限于上述算术。它展示一个**特意反向校准**使实际法向速率恰为 \(\gamma q\) 的模型，不能推出所有 RL–EB 算法的必要速率、自然性、genericity 或最优全对常数。历史同源冻结稿是版本副本，不算第二个独立见证。相邻的 [GX-072 振荡剪切](oscillatory_shear.md) 已另立对象卡重算两尺度估计；其归一化轨道 Q 因子是否收敛仍是独立义务。

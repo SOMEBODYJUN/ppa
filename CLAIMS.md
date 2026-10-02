@@ -718,3 +718,15 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定完整 (SS-33)、\(\lambda=1\)、\(0<r<R-2T\)，在 \(U=(-r,r)\times(-4T^2,4T^2)\) 的全部完整图纤维等于两支 (SS-34)；给 \(\gamma=1/2\) 的 (SS-38) 和同输入匹配后 (SS-39) 常数，收缩领圈的最优渐近系数 2 与最大指数 \(1/2\)。同一完整关系零集 \(S=\mathbb R\times\{0\}\) 的真实**最小**残差另给锐系数 \(1/4\) 的平方界 (SS-41)。
 - **Dependencies / Evidence / Status**：[SS-SQUARE-ROOT](research/canonical/signed_schur_growth.md#ss-square-root) 对法向输入 \(\pm4y\) 的全部纤维反演和两支图值最小化独立证明，`derived-checked`；固定领圈的 (SS-38)/(SS-39) 不声称是其最小常数。图包含仅在 \(t\ge0\)；不能作为 S19 可能的“延拓邻域也须在图内”读法的实例，不能由此直接宣布 PPA 收敛或先行性。
+
+## C120-v1 / AV-GRAPH · 伴随 Volterra 的方向端点与等距身份
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 \(H=L^2(0,1)\) 全域完整 \(V^*x(t)=\int_t^1x(s)ds\)，与 C104 的 \(V\) 通过 \(Uf(t)=f(1-t)\) 满足 \(V^*=UVU\)。全部逆纤维仅在 \(y\in H^1,y(1)=0\) 为 \(\{-y'\}\)，否则为空。完整图极大单调但非严格、非 paramonotone、非 rectangular；任意局部球及残差窗内，固定零目标的任何右极限零 gauge 真残差 EB 失败。
+- **Dependencies / Evidence / Status / Related Files**：[AV-OBJECT/GRAPH](research/topics/examples/adjoint_volterra.md#av-object) 的换元、积分分部、直接 rectangular 见证和高频余弦；来源 Z07 GX-061 与 CCA-M10 分别作为方向观察及共轭核对，`derived-checked`。C104 是同一等距例型，不能作独立相位样本重复计数。
+- **Counterevidence / Scope**：空逆纤维还否定目标邻域的两变量 MR；旧卡“全部标签通过”不是对未拆属性、外部 BWY 归属或先行性的验收。
+
+## C121-v1 / AV-PROX · 完整伴随近端的点态强收敛与统一障碍
+
+- **Exact Statement / Objects / Domain / Quantifiers**：C120 同一完整图，每个固定 \(\lambda>0\) 的全域单值 \(J_{\lambda V^*}=UJ_{\lambda V}U\) 有显式反向积分核；全图全对线性 RL 锐 \(L=1\)，无界全图任意 \(0<\gamma<1\) 不存在有限常数。每个有限整数 \(k\ge1\) 的算子范数 \(\|J^k\|=1\)，但每个固定 \(p\) 的 \(J^kp\to0\) 强收敛，且每个非零输入单步范数严格缩短。近端输入步残差的任意局部右极限零 gauge EB 也失败。
+- **Dependencies / Evidence / Status / Related Files**：[AV-PROX](research/topics/examples/adjoint_volterra.md#av-prox) 先核全部完整纤维与核公式，再用酉共轭传递 C105 的能量、稠密值域及高频证明；`derived-checked`。来源 GX-061 只给近端公式及 RL 标签，有限幂与点态极限属本库推导。
+- **Counterevidence / Scope**：全图常数的取等条件在**图点差**零均值，不能改写成任意输入差。原算子真残差、近端输入步残差及逐点收敛是三个不同断言；有界输入窗的次线性继承不等于无界全图证书。

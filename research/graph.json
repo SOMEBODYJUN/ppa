@@ -1274,6 +1274,21 @@
       "file": "topics/examples/volterra_integration.md#vo-prox"
     },
     {
+      "id": "VAD-OBJECT",
+      "label": "伴随 Volterra 完整图与时间反射",
+      "file": "topics/examples/adjoint_volterra.md#av-object"
+    },
+    {
+      "id": "VAD-GRAPH",
+      "label": "右端点逆像与消失 gauge 障碍",
+      "file": "topics/examples/adjoint_volterra.md#av-graph"
+    },
+    {
+      "id": "VAD-PROX",
+      "label": "酉共轭近端的点态强收敛",
+      "file": "topics/examples/adjoint_volterra.md#av-prox"
+    },
+    {
       "id": "NC-OBJECT",
       "label": "负三次完整图与三根 Minty 输入",
       "file": "topics/examples/negative_cubic_branch.md#nc-object"
@@ -3529,6 +3544,24 @@
       "relation": "limits",
       "scope": "(SS-42) 缺负支相反定向会同输入双图点碰撞；(SS-43) 若删凸性则同支预算失效；(SS-45) 给满足表示图全部导数界却另添完整纤维的点。三种失败机制不同，不能由局部分支规则自动授予全纤维排他。",
       "status": "C117-v2 的反例范围；源 S19 collision 与新全纤维加点检查"
+    },
+    {
+      "id": "E188",
+      "topic": "例库",
+      "inputs": ["VO-OBJECT", "VAD-OBJECT"],
+      "output": "VAD-GRAPH",
+      "relation": "conditional",
+      "scope": "同一实 L² 完整图，以 U f(t)=f(1−t) 酉共轭 V*=UVU；GX-061 的 y(1)=0 逆像、直接图几何和任意消失 gauge 真残差由完整纤维、高频方向逐项核。GX-060/061 是方向观察，不是两个独立等距不变量例型；未核的目录标签/外部归属不随共轭自动结案。",
+      "status": "C120-v1 Z07 GX-061 与 CCA-M10 独立对照"
+    },
+    {
+      "id": "E189",
+      "topic": "例库",
+      "inputs": ["VAD-OBJECT", "VAD-GRAPH", "VO-PROX"],
+      "output": "VAD-PROX",
+      "relation": "conditional",
+      "scope": "固定同一 λ>0、完整 J_{λV*}=U J_{λV}U 与所有图点对；近端核公式直接反演，酉共轭传递每个固定输入的强收敛和每个有限幂范数 1。输入步残差另以 ae_n 高频序列否定统一消失 gauge EB；不能与原算子真残差或单位球统一收敛混用。",
+      "status": "C121-v1 完整近端与 C105 的同参数酉共轭"
     }
   ]
 }
