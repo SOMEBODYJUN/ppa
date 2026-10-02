@@ -1027,3 +1027,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：紧欧氏状态集、联合可测随机自映射及指定**同一随机表示**，非空不变律集 \(\mathcal I\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。在指定律类 \(\mathcal A\) 上对所有 \(\mu\) 有 \(d(\mu P)\le c_0d(\mu)\)、\(0\le c_0<1\)。对每个 \(\mu\) 存在原 \(\Psi\) 定义所要求的输入 \(W_2\)-最优、同噪声对 \((\pi_j,\eta_j)\)，\(D_{\eta_j}\to\Psi(\mu)\)，且同一个 \(0\le\chi<\infty\) 满足 \(\Delta_{\eta_j}=A_{\eta_j}-d(\mu P)^2\le\chi D_{\eta_j}^2\)。则对所有该律类的 \(\mu\)，\(d(\mu)\le(1+\sqrt\chi)\Psi(\mu)/(1-c_0)\)。同一对上的另一门 \(\Delta_{\eta_j}\le\sigma^2d(\mu)^2,c_0^2+\sigma^2<1\) 给系数 \(1/(1-\sqrt{c_0^2+\sigma^2})\)。
 - **Definitions / Dependencies / Evidence**：[MR-RECOUP](research/topics/random_markov/moment_recoupling.md#mr-recoupling) 明确定义 \(D_\eta,A_\eta,\Delta_\eta\) 与 \(\Psi\)，逐对使用 Minkowski 和输出边缘 \(\pi P=\pi\)，再在同一 inf 的近极小序列取极限。
 - **Counterevidence / Scope**：独立于 C126 的矩门；收缩单独不控制回耦损失，非最优输入运输及条件刷新残差 \(\mathcal R\) 不能替换 \(D_\eta\)。系数仅充分，原生随机多值近端的合法耦合尚未验收。
+
+<a id="c128"></a>
+## C128-v1 / SC-BAIRE · σ-紧度量空间的 Baire 诊断
+
+- **Status**：`derived-checked`；双向证明由规范定义重构，并经独立逆向检查。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意度量空间 \(Z=\bigcup_{n\ge1}K_n\)，其中每个 \(K_n\) 紧，不要求嵌套。\(Z\) 为 Baire 当且仅当 \(\bigcup_n\operatorname{Int}_ZK_n\) 在 \(Z\) 中稠密。
+- **Dependencies / Evidence**：[SC-OBJECT/PROOF](research/canonical/sigma_compact_baire.md#sc-proof) 证明每个紧层闭、正向的开 Baire 子空间反证、反向的稠密开局部紧 Baire 子空间转移；不需历史审计的未写前提。
+- **Counterevidence / Scope**：该式只测试**已给定且覆盖同一 \(Z\)** 的紧层；不证明算子类实际有这类覆盖，也不证明 \(\Phi\) 保纲、目标类余稠或总体规模比较。单个局部紧点不必落在某个指定 \(K_n\) 的内部。
