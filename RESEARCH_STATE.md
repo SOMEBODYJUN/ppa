@@ -7,13 +7,13 @@
 | --- | --- | --- |
 | 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
 | 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 100 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，但尚未执行，不能从单元数/文件数算覆盖率 |
+| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 100 个来源数学单元有逐项去向；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
 
 [C08 抽象模传递](research/canonical/solution_selection_rates.md#ss-transfer) 现有局部尺度逐步闭合的独立证明；[C115/C116 二次模型](research/canonical/solution_selection_rates.md#ss-quadratic-object) 把完整两值近端、真全纤维 EB、同一固定 collar 的共同超几何尾，与逐轨道 Q 二次和根对数坏选择分开。SS1 定理 2/3、§5.2 尚未逐项重写。
 
-[C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举与验收步骤；来源层已生成索引，语义枚举尚未执行，不是 100 行之外内容的验收。
+[C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举与验收步骤；来源层已生成索引，两个内容组已逐段试点，第三个只做结构分段，不是 100 行之外内容的验收。
 [429 个来源位置索引](research/audit/SOURCE_OCCURRENCES.tsv)及[346 个字节内容组](research/audit/PAYLOAD_GROUPS.tsv)现已由可复现生成器建立并双向核哈希与 ZIP 成员；格式/角色、文档解码和逐段语义枚举仍为 `pending-*`，尚不能称分母已建立。后续按计划 P1–P5 逐批给每段去向。
-[逐段试点](research/audit/SEMANTIC_UNIT_SEED.tsv) 把 S19 signed-Schur 源成员 452 行和 SS1 修订稿 763 行分别连续分成 11 与 19 段并核无空隙；共 16 段已有规范锚点、14 段明确待裁决。有限图册链几何、SS1 定理 2/3 与 §5.2 等仍在后者范围，试点不使其余 344 个内容组变成已读。
+[逐段试点](research/audit/SEMANTIC_UNIT_SEED.tsv) 把 S19 signed-Schur 源成员 452 行和 SS1 修订稿 763 行分成 11 与 19 段，另把 Z07 的 GX-053–065 成员 1219 行分成 39 个连续结构段。前两份有 16 段规范锚点、14 段待裁决；第三份只有 10 张卡有部分对象锚点，所有 39 段仍须按独立观察与文献事实细分。三份成员无行覆盖空隙，另外 343 个内容组及本试点第三份的语义分母均未完成；已分段绝不等于已审定数学内容。
 
 本批 [C108/C109 孤立极点图](research/topics/examples/isolated_pole_relation.md#ip-object) 修正来源的连通域措辞，重算全步长完整纤维和锐模，并证明严格近端 Lipschitz 仍可无非零无限合法路径。[C110/C111 算术阶梯](research/topics/examples/rational_irrational_staircase.md#gx056-object) 区分有理亚临界步长的单值断裂、无理步长的同输入碰撞以及原算子真残差与近端最小步残差。两张卡只验收所列 GX-055/056 单元；在同 ZIP 中尚有其它例卡与历史分类标签。
 

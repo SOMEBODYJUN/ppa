@@ -123,13 +123,21 @@ if seed_path.is_file():
     by_member = {}
     for row in seed:
         by_member.setdefault(row["source_member"], []).append(row)
+        valid_seed_status = {
+            "mapped-to-existing", "enumerated-unadjudicated",
+            "segmented-partial", "segmented-needs-unit-split",
+        }
+        if row["enumeration_status"] not in valid_seed_status:
+            errors.append(f"invalid semantic seed status: {row['unit_id']}")
         target = row["canonical_target"]
         if target:
             file, _, anchor = target.partition("#")
             path = ROOT / file
             if not path.is_file() or (anchor and f'id="{anchor}"' not in path.read_text(encoding="utf-8")):
                 errors.append(f"missing semantic seed target: {row['unit_id']}")
-        elif row["enumeration_status"] != "enumerated-unadjudicated":
+        elif row["enumeration_status"] not in {
+            "enumerated-unadjudicated", "segmented-needs-unit-split"
+        }:
             errors.append(f"unmapped semantic seed: {row['unit_id']}")
     for locator, segments in by_member.items():
         container, separator, name = locator.partition("!/")
