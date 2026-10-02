@@ -1043,3 +1043,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意度量空间 \(Z=\bigcup_{n\ge1}K_n\)，其中每个 \(K_n\) 紧，不要求嵌套。\(Z\) 为 Baire 当且仅当 \(\bigcup_n\operatorname{Int}_ZK_n\) 在 \(Z\) 中稠密。
 - **Dependencies / Evidence**：[SC-OBJECT/PROOF](research/canonical/sigma_compact_baire.md#sc-proof) 证明每个紧层闭、正向的开 Baire 子空间反证、反向的稠密开局部紧 Baire 子空间转移；不需历史审计的未写前提。
 - **Counterevidence / Scope**：该式只测试**已给定且覆盖同一 \(Z\)** 的紧层；不证明算子类实际有这类覆盖，也不证明 \(\Phi\) 保纲、目标类余稠或总体规模比较。单个局部紧点不必落在某个指定 \(K_n\) 的内部。
+
+<a id="c129"></a>
+## C129-v1 / CR-BINARY · 守恒边缘二进制刷新残差的锐界
+
+- **Status**：`derived-checked`；条件耦合、五项等价、退化端点与最佳系数已从规范证明独立逆向核验，外部先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定标准 Borel \(U\) 与概率边缘 \(\nu\)、有限 \(X=\{0,1\}^m\)、可测 \(b_i(u)\in(0,1),p_i(u)>0\) 且 \(\sum_i p_i(u)\le1\) 几乎处处。对**全部**固定边缘律 \(\mathscr M_\nu\) 使用仅在同一 \(u\) 内运输的 \(\mathsf W_\nu\)、条件重抽样残差 \(\mathcal R\) 和目标 \(\pi_\nu=\nu\otimes\bigotimes_i\operatorname{Bern}(b_i(u))\)。\(a_*={\rm ess\,inf}_u\min_i p_i(u)\)。精确零集为 \(\{\pi_\nu\}\)，它是此律类唯一不变律。\(a_*>0\) 当且仅当该整个律类有统一线性 \(\mathsf W_\nu/\mathcal R\) EB，当且仅当对目标距离有统一一步严格收缩、某固定块严格收缩或统一相对几何率。最佳 EB 系数 \(a_*^{-1/2}\)，每个固定 \(k\ge1\) 的最佳到目标因子 \((1-a_*)^{k/2}\)，在任意正半径完整目标球仍锐。若 \(a_*=0\)，每条律仍趋于目标，但每个固定 \(k\) 最坏因子为 1。
+- **Definitions / Dependencies / Evidence**：[CR1–CR5](research/topics/random_markov/conditional_refresh.md#cr-binary-object) 固定对象、条件 Bernoulli 顺序耦合、条件 Jensen、同步更新及单坐标扰动见证；来源 CM-M Theorem 6 有证明文本，本页不以其 PASS 标签为证据。
+- **Counterevidence / Objections / Scope**：\(\mathcal R\ne\Psi\)；结论不赋予不同随机表示、普通联合 \(W_2\) 的最佳必要模，或任意两律间的 Lipschitz 因子。审查限固定边缘的有限 bit 对象，未核外部文献优先性。
+
+<a id="c130"></a>
+## C130-v1 / CR-GAUSSIAN · Gaussian Gibbs 条件残差的锐界
+
+- **Status**：`derived-checked`；保持同一两边缘的条件耦合、有限性、谱不等式和局部锐性经独立逆向核验。
+- **Exact Statement / Objects / Domain / Quantifiers**：\(Q\in\mathbb R^{m\times m}\) 对称正定、\(\beta=N(m_0,Q^{-1})\)、\(p_i>0,\sum_i p_i=1\)、\(D=\operatorname{diag}(p_i/Q_{ii})\)、\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})>0\)。每步按 \(p_i\) 使用 \(\beta\) 的全条件律刷新第 \(i\) 位；对**全部有限二阶矩律** \(\mu\)，以 \(Q\) 二次成本的 \(W_{2,Q}\) 和一维条件运输定义的 \(\mathcal R_Q\) 有 \(W_{2,Q}(\mu,\beta)\le\zeta^{-1/2}\mathcal R_Q(\mu)\)、\(W_{2,Q}(\mu P,\beta)\le\sqrt{1-\zeta}\,W_{2,Q}(\mu,\beta)\)。前一系数全局且每个完整正半径目标球上锐；后一因子只称有效。\(\beta\) 是该律类唯一不变律，\(\mathcal R_Q^{-1}(0)=\{\beta\}\)。
+- **Definitions / Dependencies / Evidence**：[CR6–CR10](research/topics/random_markov/conditional_refresh.md#cr-gaussian-object) 分开指定目标条件均值/方差、同噪声投影收缩、使用独立均匀数保持两边缘的条件运输迭代及最小特征向量平移见证。来源 CM-M Theorem 8 有证明文本；本轮空白逆向审查逐项重核可测分位数、边缘与锐性，不把来源 PASS 当作证明。
+- **Counterevidence / Objections / Scope**：没有守恒 \(\nu\) 或二进制 \(\mathsf W_\nu/\mathcal R\)；不把 EB 系数的锐性转授给收缩因子，也不推出原同步 \(\Psi\) 的 EB、随机近端 PPA 或外部新颖性。

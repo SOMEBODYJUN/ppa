@@ -207,8 +207,8 @@
     },
     {
       "id": "M-COND",
-      "label": "守恒边缘条件残差",
-      "file": "cone_markov.md#m-cond"
+      "label": "二进制守恒边缘、Wν 与条件残差 R",
+      "file": "topics/random_markov/conditional_refresh.md#cr-binary-object"
     },
     {
       "id": "R05",
@@ -317,13 +317,18 @@
     },
     {
       "id": "M-BINARY",
-      "label": "bit 刷新 a*>0 判据",
-      "file": "cone_markov.md#m-binary"
+      "label": "二进制刷新 a*>0 门",
+      "file": "topics/random_markov/conditional_refresh.md#cr-binary-theorem"
     },
     {
       "id": "M-GAUSS",
-      "label": "Gaussian 谱隙 ζ",
-      "file": "cone_markov.md#m-gauss"
+      "label": "Gaussian ζ>0 谱门",
+      "file": "topics/random_markov/conditional_refresh.md#cr-gaussian-object"
+    },
+    {
+      "id": "G-COND",
+      "label": "Gaussian Gibbs、W₂,Q 与条件残差 R_Q",
+      "file": "topics/random_markov/conditional_refresh.md#cr-gaussian-object"
     },
     {
       "id": "M-MOMENT",
@@ -362,8 +367,13 @@
     },
     {
       "id": "COND-EB",
-      "label": "守恒边缘条件残差 EB",
-      "file": "cone_markov.md#cond-eb"
+      "label": "二进制 Wν/R 锐 EB 与速率",
+      "file": "topics/random_markov/conditional_refresh.md#cr-binary-theorem"
+    },
+    {
+      "id": "G-COND-EB",
+      "label": "Gaussian W₂,Q/R_Q 锐 EB",
+      "file": "topics/random_markov/conditional_refresh.md#cr-gaussian-theorem"
     },
     {
       "id": "RHO",
@@ -1972,21 +1982,21 @@
         "M-BINARY"
       ],
       "output": "COND-EB",
-      "relation": "conditional",
-      "scope": "固定守恒边缘的 bit 刷新；a*>0 等价条件 EB 与统一速率，不是原 Ψ",
-      "status": "Markov 定理包"
+      "relation": "equivalence",
+      "scope": "C129-v1：固定同一守恒边缘 ν，有限 bit 条件刷新与 Wν/R；a*>0 等价统一线性 EB 和到目标的严格距离率，各锐常数只在此对象及全部律上成立，不是原同步 Ψ",
+      "status": "C129-v1 derived-checked，规范证明与空白逆向核验；来源 CM-M Theorem 6"
     },
     {
       "id": "E43",
       "topic": "Markov",
       "inputs": [
-        "M-COND",
+        "G-COND",
         "M-GAUSS"
       ],
-      "output": "COND-EB",
+      "output": "G-COND-EB",
       "relation": "conditional",
-      "scope": "Gaussian Gibbs、Q>0、ζ>0，条件残差锐 EB 常数 ζ^-1/2",
-      "status": "Markov 定理包"
+      "scope": "C130-v1：同一个 Gaussian Gibbs 核，Q≻0、固定 p_i>0、有限二阶矩律；W₂,Q/R_Q 的锐 EB 系数 ζ^-1/2，到目标收缩因子 √(1−ζ) 只称有效，不是二进制 Wν/R 或同步 Ψ",
+      "status": "C130-v1 derived-checked，规范证明与空白逆向核验；来源 CM-M Theorem 8"
     },
     {
       "id": "E44",

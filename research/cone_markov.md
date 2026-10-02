@@ -102,12 +102,6 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 \(\Theta_\rho(t)^2=(1+\varepsilon_f)t^2-\tau[\rho^{-1}(t)]^2\ge0\)、\(\Theta_\rho(t)<t\) 对所有足够小的正 \(t\)。此处保持来源报告状态，不能说所有速率证书均失败。[CM-M Theorems 2、4，Corollary 5]
 
 <a id="m-cond"></a>
-<a id="ob-res"></a>
-<a id="m-binary"></a>
-<a id="m-gauss"></a>
-<a id="m-moment"></a>
-<a id="m-recoup"></a>
-<a id="cond-eb"></a>
 ## 3. 条件残差修复与随机提升边界
 
 固定守恒边缘 \(\nu\)，二进制纤维 \(X=\{0,1\}^m\)，\(\mu(du,dx)=\nu(du)\mu_u(dx)\)。条件运输
@@ -120,7 +114,9 @@ d_i(u;\mu)^2=\sum_{x_{-i}}\mu_u(x_{-i})
 \]
 零概率条件事件上的版本不影响积分。这是条件重抽样残差，不是 §2 的同步运输 \(\Psi\)。
 
-**CM-BINARY：**\(a_* =\operatorname{ess\,inf}_u\min_i p_i(u)>0\) 当且仅当存在统一线性 EB／一步严格收缩／某固定块严格收缩／统一相对几何率；最佳 EB 常数 \(a_*^{-1/2}\)、最佳 \(k\) 步因子 \((1-a_*)^{k/2}\)。若 \(a_*=0\)，每条律仍收敛，但每个固定 \(k\) 的最坏相对因子为 1。[CM-M Theorem 6]
+<a id="m-binary"></a>
+<a id="cond-eb"></a>
+**CM-BINARY / C129-v1：**\(a_* =\operatorname{ess\,inf}_u\min_i p_i(u)>0\) 当且仅当存在统一线性 EB／**到 \(\pi_\nu\) 距离**的一步严格收缩／某固定块严格收缩／统一相对几何率；最佳 EB 常数 \(a_*^{-1/2}\)、最佳 \(k\) 步因子 \((1-a_*)^{k/2}\)。若 \(a_*=0\)，每条律仍收敛，但每个固定 \(k\) 的最坏相对因子为 1。[独立对象、量词及证明](topics/random_markov/conditional_refresh.md#cr-binary-theorem)；原来源 CM-M Theorem 6。这里的 \(\mathsf W_\nu/\mathcal R\) 不能用于下段 Gaussian 对象。
 
 单 bit 时，记当前条件成功概率为 \(r(u)=\mu_u(X_1=1)\)、目标概率 \(b(u)=b_1(u)\)、\(a(u)=p_1(u)\)、\(h(u)=|r(u)-b(u)|\)、\(M(u)=\max\{b(u),1-b(u)\}\)。这里 \(0\le h\le M\) 可测，且下列积分均对 \(\nu\)；精确最小非降模满足
 
@@ -131,20 +127,24 @@ d_i(u;\mu)^2=\sum_{x_{-i}}\mu_u(x_{-i})
 
 这是有饱和区的模，不能当成全局严格增 gauge；精确长度为 \(\sum_k[\int a(1-a)^kh\,d\nu]^{1/2}\)。[CM-M Theorem 7]
 
-**CM-GAUSSIAN：**目标 \(\beta=N(m_0,Q^{-1})\)、\(Q\succ0\)，Gaussian Gibbs 概率 \(p_i>0,\sum_i p_i=1\)，\(D=\operatorname{diag}(p_i/Q_{ii})\)，\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})\)。这里 \(W_{2,Q}\) 的运输成本为 \((x-y)^TQ(x-y)\)，而原生条件残差是
+<a id="m-gauss"></a>
+**CM-GAUSSIAN / C130-v1：**另取目标 \(\beta=N(m_0,Q^{-1})\)、\(Q\succ0\)，Gaussian Gibbs 概率 \(p_i>0,\sum_i p_i=1\)，\(D=\operatorname{diag}(p_i/Q_{ii})\)，\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})\)。这里 \(W_{2,Q}\) 的运输成本为 \((x-y)^TQ(x-y)\)，而原生条件残差是
 \[
 \mathcal R_Q(\mu)^2=\sum_i p_iQ_{ii}\int
  W_2\!\left(\mu_i(\cdot\mid x_{-i}),\beta_i(\cdot\mid x_{-i})\right)^2
  \,\mu_{-i}(dx_{-i}).
 \]
 每步按 \(p_i\) 选坐标，用目标 \(\beta\) 的 Gaussian 全条件律重新抽样；上式的条件距离是**一维通常** \(W_2\)，外层才用 \(Q\)-运输成本。在全部有限二阶矩律上，\(\mathcal R_Q\) 有
-\(W_{2,Q}(\mu,\beta)\le\zeta^{-1/2}\mathcal R_Q(\mu)\)，常数局部、全局均锐；收缩因子 \(\sqrt{1-\zeta}\) 有效但原文未宣称锐。[CM-M Theorem 8]
+\(W_{2,Q}(\mu,\beta)\le\zeta^{-1/2}\mathcal R_Q(\mu)\)，常数局部、全局均锐；收缩因子 \(\sqrt{1-\zeta}\) 有效但不宣称锐。[独立对象、量词及证明](topics/random_markov/conditional_refresh.md#cr-gaussian-theorem)；原来源 CM-M Theorem 8。此段没有固定守恒边缘 \(\nu\) 或二进制 \(\mathcal R\)。
 
+<a id="m-moment"></a>
 **CM-MOMENT / C126：**[自足陈述与证明](topics/random_markov/moment_recoupling.md#mr-moment) 令非负有限状态函数 \(e,c\) 有共同零点 \(s\) 与 \(e(a),c(a)>0\) 的非零 excursion，\(1\le p,r<\infty,q>0,K<\infty\)。对**全部有限支撑概率律**的
 \(\|e\|_{L^p}\le K\|c\|_{L^r}^q\)
 恰等价于同一 \(K\) 的全部状态点态界 \(e(x)\le Kc(x)^q\) 与 \(pq\le r\)。小质量混合给必要性。故 \(p=r=2,q>1\) 的直接 RMS 提升会失败；要保留高阶幂，可另用 \(r\ge2q\) 的矩或先在合法耦合上复合证书。law-space 必要性还要求不变目标支持于闭 \(S\)、残差在平稳律上为零和更新 excursion 的输出远离 \(S\)；不是任意 Markov 残差的普遍 no-go。[CM-M Proposition M]
 
 ## 4. 跨线超边：需要什么才能接上
+
+<a id="m-recoup"></a>
 
 本节的原算子另记 \(F_{\mathrm{PPA}}:X\rightrightarrows X\)，\(r_{F_{\mathrm{PPA}}}(x)=d(0,F_{\mathrm{PPA}}(x))\)。下列第一行只在局部明确识别 \(F_{\mathrm{PPA}}^{-1}(0)=\Omega=G^{-1}(C)\) 后使用；上文的最小面 \(\mathfrak F\) 不参与该残差。
 
@@ -155,6 +155,7 @@ d_i(u;\mu)^2=\sum_{x_{-i}}\mu_u(x_{-i})
 | 同步耦合能量 → 随机 RL | 同一耦合实现几何、实际目标与残差 | 原生匹配仍是额外假设；不能造概率反射 \(2\mu P-\mu\) |
 | 收缩 → 原 \(\Psi\) 的 EB | [C127](topics/random_markov/moment_recoupling.md#mr-recoupling) 的同一紧状态随机表示、同一不变律集及指定律类中 \(d(\mu P)\le c_0d(\mu)\)、\(c_0<1\)；趋近原 \(\Psi\) inf 的**输入最优**耦合满足 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\) | \(D_\eta\) 是同噪声同步位移差，\(\Delta_\eta=A_\eta-d(\mu P)^2\) 是回耦损失；仅在这些合取条件下给系数 \((1+\sqrt\chi)/(1-c_0)\)，非无条件逆定理 |
 
+<a id="ob-res"></a>
 条件残差一般不满足原同步能量式：二 bit 公平目标、等概率坐标刷新、状态按 \(00,01,10,11\) 排列，输入律为 \((1/2,0,1/4,1/4)\) 时，\(E=d_{W_2}(\mu,\pi)\)、\(E_+=d_{W_2}(\mu P,\pi)\) 满足 \(E^2=1/4,E_+^2=1/8,\mathcal R^2=1/4\)。这是针对 \(E_+^2+\mathcal R^2\le E^2\) 的反例；不能把 \(D_\eta\) 静默替换为 \(\mathcal R\)。[CM-C §10；CM-M §§7–8]
 
 ## 5. 来源与开放门

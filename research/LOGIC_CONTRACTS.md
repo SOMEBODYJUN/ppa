@@ -1,5 +1,11 @@
 # 承重超边的量词与条件契约
 
+## E42–E43：两种条件刷新不能共用残差节点
+
+E42 固定同一标准 Borel 守恒变量的边缘 \(\nu\)、有限 bit 纤维、正的坐标刷新概率及余概率恒等更新。\(\mathsf W_\nu\) 只在同一 \(u\) 内作 Hamming 成本运输，\(\mathcal R\) 是保留 \((u,x_{-i})\) 的条件 Bernoulli 残差。只有对**全部固定边缘律**及同一目标 \(\pi_\nu\)，\(a_*={\rm ess\,inf}_u\min_i p_i(u)>0\) 才与统一线性 EB／到目标的严格率等价；最佳系数与每步因子见 [C129](topics/random_markov/conditional_refresh.md#cr-binary-theorem)。等价不指任意两律间的 Lipschitz 性。
+
+E43 另取 \(\mathbb R^m\) 上 \(Q\succ0\) 的 Gaussian 目标 \(\beta\) 和常数正概率 \(p_i\)，\(W_{2,Q}\) 的成本是 \(Q\) 二次型，\(\mathcal R_Q\) 在**一维条件律**中用普通 \(W_2\)。\(\zeta=\lambda_{\min}(Q^{1/2}\operatorname{diag}(p_i/Q_{ii})Q^{1/2})>0\) 给所有有限二阶矩律的锐 EB \(\zeta^{-1/2}\) 和仅称有效的到目标收缩因子 \(\sqrt{1-\zeta}\)；见 [C130](topics/random_markov/conditional_refresh.md#cr-gaussian-theorem)。它没有 \(\nu\)、二进制 \(\mathsf W_\nu/\mathcal R\) 或原同步 \(\Psi\)。旧 E43 将 `M-COND` 与 Gaussian 合取属于**对象类型错接**，现用 `G-COND` 独立节点。
+
 ## E44–E45：概率矩门与同一回耦对
 
 E44 的 \(e,c\) 是同一状态集上的非负有限函数；存在共同零点及两者都正的 excursion，\(1\le p,r<\infty,q>0\)。[C126/MR1](topics/random_markov/moment_recoupling.md#mr-moment) 的等价式量化**全部有限支撑律**，且点态系数必须是同一 \(K\)。law-space 必要性另需闭支持目标、平稳律在该目标上、状态残差在该律上零，以及非零更新输出离目标；它不把 \(\Psi\) 或条件残差 \(\mathcal R\) 直接等同于标量 \(c\)。
@@ -59,7 +65,7 @@ E18 的输入只是一张固定非空紧 \(K\)、非空闭 \(S\subset K\)、全�
 
 E50/C20-v2 的样本与待认证未知点必须在**同一** RL 认证图中，且每个用于 Hölder 比较的 Cayley 参数点对落在证书的**成对尺度**内：全图全尺度自动满足；局部 \(R_0\) 版以 \(\delta\le R_0\) 为充分门，或逐对另核 \(\|p-p_i\|\le R_0\)。若结论关于完整 \(F^{-1}(v)\)，其中的每个图点都须属于该认证图并逐个满足点对条件。仅有 \(\delta\)-覆盖而把 RL 用在尺度外的旧 C20-v1 已被 [F36](../FAILED_ROUTES.md#f36) 的两点完整图反驳；S23 的全尺度原稿不受影响。
 
-E51 的真实输出 \(v\) 必须有**整个非空逆纤维**的 Cayley 参数 \(\delta\)-覆盖，并有 \(\|\widetilde v-v\|\le\eta\)。三项总界里的 \(e_x\) 是已认证的 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\) 上界；可行 QP 的 Frank–Wolfe gap \(G\) 只给同一候选参数 \(q\) 处 \(e_N=\sqrt G\) 的 \(N_m(q)\) 输出误差。若 \(\widehat x=q-\lambda\widetilde v\)，须再证 \(e_x\ge(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)。只给 gap、没有候选点的固定点残差，就不能调用 [Q03](range_finite_data.md#q-eval) 的三项界；这两种 \(e\) 在原稿 prop:evaluation 与 cor:totalerror 中是不同类型。
+E51 的真实输出 \(v\) 必须有**整个非空逆纤维**的 Cayley 参数 \(\delta\)-覆盖，并有 \(\|\widetilde v-v\|\le\eta\)。三项总界里的 \(e_x\) 是已认证的 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\) 上界；可行 QP 的 Frank–Wolfe gap \(G\) 只给同一候选参数 \(q\) 处 \(e_N=\sqrt G\) 的 \(N_m(q)\) 输出误差。若 \(\widehat x=q-\lambda\widetilde v\) 且打算**从该次 QP 求值**生成证书，可取充分上界 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)；也可对 \(e_x\) 作其它独立认证。只给 gap、没有候选点的固定点残差或另一独立反演认证，就不能调用 [Q03](range_finite_data.md#q-eval) 的三项界；这两种 \(e\) 在原稿 prop:evaluation 与 cor:totalerror 中是不同类型。
 
 ## E105–E112：三组新对象的互不替代条件
 
