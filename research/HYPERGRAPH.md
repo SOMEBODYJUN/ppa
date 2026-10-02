@@ -25,6 +25,9 @@
 | E25 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [GROW · 真实残差幂增长](rleb_ppa.md#grow) | conditional → [CMP · 统一兼容 κ<1](rleb_ppa.md#cmp) | a<γ 自动小尺度；a=γ 要 λm>L/2；a>γ 此标量测试失败；**S19 residual growth** |
 | E26 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [GROW · 真实残差幂增长](rleb_ppa.md#grow) | conditional → [R03 · 能量证书与临界阈值](rleb_ppa.md#r03) | a=γ 的能量阈值 λm>L/√2，另一充分证书；**S19 能量分支** |
 | E27 | [SCHUR · 反向 Schur 定向与全纤维排他](rleb_ppa.md#schur) | conditional → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 切向反演、两支相反 signed growth、完整纤维和统一导数界；**S19 条件验证器** |
+| E184 | [SG-OBJECT · 双支接缝及闭参数域上的图包含](canonical/signed_schur_growth.md#ss-object) ∧ [SG-TANGENT · 同一 Q 的强单调切向反演与导数界](canonical/signed_schur_growth.md#ss-object) ∧ [SG-SIGN · 凸严格增长且两侧相反定向](canonical/signed_schur_growth.md#ss-object) | conditional → [SG-GROWTH · 切向球内覆盖、无碰撞与全对模](canonical/signed_schur_growth.md#ss-growth) | 有限维 n≥2、同一 λ>0；参数化在 Q 邻域 C¹ 但图包含只要求 Q；同一 Q 上公共接缝、强单调切向、Schur 导数界、两侧相反凸严格增长及 0<r<μR−HT 全部合取，得切向输入 B_r 内 coverage、无碰撞与任意所表示图点对的 ω(d) 反射模。U 外和切向球外不赋予此结论。；**C117-v2 从 S19 主定理独立修订证明，敌对审查通过；原文邻域图包含歧义保留** |
+| E185 | [SG-GROWTH · 切向球内覆盖、无碰撞与全对模](canonical/signed_schur_growth.md#ss-growth) ∧ [SG-FIBER · 领圈 U 上完整图与表示图同纤维](canonical/signed_schur_growth.md#ss-growth) | conditional → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 只在开输入领圈 U 内用 G∩X⁻¹(U)=G_rep∩X⁻¹(U) 识别所需图块 J_G；完整 J_λF 还须取 G=gph F 核全部纤维。若要接 R02，另证同一零集的真实输出 EB、最近零点图锚、严格兼容与留域；本边不直接推出轨道收敛。；**C117-v2 SS-13 完整纤维排他门；S19 R04 的范围修正** |
+| E186 | [SG-GROWTH · 切向球内覆盖、无碰撞与全对模](canonical/signed_schur_growth.md#ss-growth) ∧ [SG-POWER · 幂次预算、同修正坐标匹配和双边锐性](canonical/signed_schur_growth.md#ss-power) ∧ [SG-MODEL · 原生平方根完整二值图 (SS-33)](canonical/signed_schur_growth.md#ss-square-root) ∧ [SG-FIBER · 领圈 U 上完整图与表示图同纤维](canonical/signed_schur_growth.md#ss-growth) | conditional → [SG-SQRT · 平方根完整原生图及独立真残差](canonical/signed_schur_growth.md#ss-square-root) | 此边只针对指定完整平方根原生图 (SS-33)：在 U 逐个反演 ±4y 排尽完整纤维，h±=4t²，另核同修正输入的输出匹配。得到输入直径 D 上半阶有效常数与收缩领圈的最大指数 1/2、渐近锐系数 2；真残差 y≤r_F²/4 由两图值最小化独立证明。一般幂次证书不推出该特定原生图。；**C118/C119-v2 S19 幂次、matched-jet、平方根各自重构和逆向核验** |
 
 ## 反例
 
@@ -38,6 +41,7 @@
 | E40 | [M-FALSE · 快混合仍 Ψ 假零](cone_markov.md#m-false) | refutes → [FAST-EB · 快混合必有原 Ψ exact-zero](cone_markov.md#fast-eb) | 公平 bit 一步平稳但相关律 Ψ=0、距不变律>0；**Markov 显式模型** |
 | E41 | [M-NOPOWER · exact-zero 快率无正幂 EB](cone_markov.md#m-nopower) | refutes → [POWER-EB · exact-zero + 快率必有正幂 EB](cone_markov.md#power-eb) | 无限紧可数状态 exact-zero 且快率，却无任何局部正幂 EB；不反驳有限状态定理；**Markov 显式模型** |
 | E52 | [Q-ORACLE · 无界域有限确定性总查询](range_finite_data.md#q-oracle) | implies → [Q-NOGLOBAL · 有限 transcript 无全空间认证](range_finite_data.md#q-noglobal) | 两张全局 Hölder 图在有限自适应查询上同 transcript、远端分离；**S23 不可区分反例** |
+| E187 | [SG-GROWTH · 切向球内覆盖、无碰撞与全对模](canonical/signed_schur_growth.md#ss-growth) | limits → [SG-FIBER · 领圈 U 上完整图与表示图同纤维](canonical/signed_schur_growth.md#ss-growth) | (SS-42) 缺负支相反定向会同输入双图点碰撞；(SS-43) 若删凸性则同支预算失效；(SS-45) 给满足表示图全部导数界却另添完整纤维的点。三种失败机制不同，不能由局部分支规则自动授予全纤维排他。；**C117-v2 的反例范围；源 S19 collision 与新全纤维加点检查** |
 
 ## 结构
 
@@ -84,6 +88,10 @@
 | E15 | [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) ∧ [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) | implies → [S02 · RLEB 极限选择版本](solution_selection.md#s02) | 仅局部 J_G；若要完整 J_F 加 FULL；**修订版** |
 | E16 | [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) ∧ [FULL · 局部与完整 resolvent 一致](solution_selection.md#full) ∧ [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) | conditional → [S02 · RLEB 极限选择版本](solution_selection.md#s02) | 完整 resolvent 的共同轨道区域一致性；**修订版** |
 | E31 | [S01 · 极限解选择的对数模](solution_selection.md#s01) ∧ [SEL-EX · 完整半代数二值例与匹配下界](solution_selection.md#sel-ex) | conditional → [SEL-SHARP · 极限选择无正阶两点 Hölder](solution_selection.md#sel-sharp) | 完整模型、跨支 RL、真 EB、兼容与首次切换下界；**修订包内部审计** |
+| E180 | [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) ∧ [SS-LOCAL · 共同区域上有尺度门的局部 Hölder 单步](canonical/solution_selection_rates.md#ss-transfer) | conditional → [SS-TRANSFER · 局部尺度闭合与统一尾的两种极限模](canonical/solution_selection_rates.md#ss-transfer) | 同一单值 T，初值集合全部轨道留在共同 V；V 上输入对距离至多 R 的局部 γ-Hölder、0<γ<1；全部初值和全部 k 共用 Mσ^k 或 M exp(-c₀ν^k) 点尾。有限前缀必须逐步闭合局部尺度；分别给对数–对数和指数根对数上界。完整 J_F 导入另核局部图块与完整纤维一致性。；**C08-v1 抽象部分从 SS1 定理 1 独立证明，非完整 proximal 的无条件结论** |
+| E181 | [SSQ-OBJECT · 完整二值半代数算子和全域单值近端](canonical/solution_selection_rates.md#ss-quadratic-object) ∧ [SSQ-CERT · 全对 RL、真残差与同一固定 collar 收敛](canonical/solution_selection_rates.md#ss-quadratic-certificate) ∧ [SSQ-SWITCH · 固定初始法向的切换时刻与双边下界](canonical/solution_selection_rates.md#ss-quadratic-selection) | conditional → [SSQ-SELECT · 逐轨道 Q 二次与根对数坏选择](canonical/solution_selection_rates.md#ss-quadratic-selection) | 同一 λ=1、完整 ℝ³ 二值半代数 F；全输入的完整 J_F=T 由两支全纤维反演，固定 R₀<1、D>0、同一个 R>0 完成 all-pairs RL、实际输出真 EB、κ≤1/2 与留域；每轨道 Q 二次比值 1 或 1/√2 与全部 collar 共用超几何点尾分别成立。比较 x₀,xε 用固定 0<r₀≤R；极限差有双边 exp(-C√log(1/ε))，排除正阶两点 Hölder。；**C115/C116-v1 SS1 定理 4 完整重构及独立敌对审查；SS1 定理 2/3 不在此边** |
+| E182 | [SSQ-SELECT · 逐轨道 Q 二次与根对数坏选择](canonical/solution_selection_rates.md#ss-quadratic-selection) ∧ [SSQ-OBJECT · 完整二值半代数算子和全域单值近端](canonical/solution_selection_rates.md#ss-quadratic-object) | conditional → [SSQ-NONSEMI · 极限选择非局部半代数](canonical/solution_selection_rates.md#ss-quadratic-nonsemialgebraic) | 同一固定正 r₀ 的初值直线切片，半代数有限步 T^k 与极限映射 Π 分开；若 Π 图在原点邻域半代数，则一项非零多项式沿切片恒为零，强迫选择差 O(ε^(1/m))，与根对数双边下界矛盾。只对这一模型的局部半代数性断言。；**C116-v1 SS1 §5.1 的独立多项式证明；外部新颖性未核** |
+| E183 | [SSQ-OBJECT · 完整二值半代数算子和全域单值近端](canonical/solution_selection_rates.md#ss-quadratic-object) | conditional → [SSQ-CERT · 全对 RL、真残差与同一固定 collar 收敛](canonical/solution_selection_rates.md#ss-quadratic-certificate) | 固定完整 F 的全部输入纤维反演给全域单值 J_F；另逐项验 0≤y≤R₀² 图块全部点对的 D-局部半阶 RL、全部实际输出的真全纤维 EB、零锚及一个先固定的 R≤R₀/2 上 κ≤1/2 与留域。不是仅由对象定义自动得证，也不授予所有半径。；**C115-v1 SS1 定理 4 的完整量词证书独立证明** |
 
 ## 算子空间
 

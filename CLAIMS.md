@@ -55,8 +55,8 @@
 ## C08 · 解选择稳定性（修订身份）
 
 - **Exact Statement / Objects / Domain**：一族在共同区域有轨道与统一尾界的 \(T\)，满足局部 \(\|Tx-Ty\|\le H\|x-y\|^\gamma\)，\(0<\gamma<1\)。若 \(\|T^kx-\Pi(x)\|\le M\sigma^k\) 对全体初值和 \(k\ge0\) 一致成立，则 \(\|\Pi(x)-\Pi(y)\|\le C(\log\log(1/\delta)/\log(1/\delta))^\beta\)，\(\beta=\log(1/\sigma)/\log(1/\gamma)\)；若统一尾界 \(M e^{-c_0\nu^k}\)，\(\nu>1\)，则是 \(C e^{-c(\log(1/\delta))^\alpha}\)，\(\alpha=\log\nu/\log(\nu/\gamma)\)，足够小 \(\delta=\|x-y\|>0\)。修订包给完整 proximal 的显式半代数例说明即使点误差 Q-二次，\(\Pi\) 也无需正阶 Hölder。
-- **Dependencies / Evidence**：[原 `research_note.md` §1–4](history/sources/次单调论文研究/正式后的研究/research_note.md)，[修订审计 ZIP](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip)，9/21 `02_VERIFIED_CORE.md` §4。
-- **Objections / Status / Scope**：**修订后内部数学审计**。一般 RLEB 推论只能直接用于局部 \(J_{\mathcal G}\)，或另加共同轨道区域 \(J_{\lambda F}=J_{\mathcal G}\)；旧稿无条件升级完整 resolvent 的版本已失效。固定解点的 anchored Hölder calmness 与邻域中任意两初值的 Hölder 连续性不同。
+- **Dependencies / Evidence**：[SS-TRANSFER 独立证明](research/canonical/solution_selection_rates.md#ss-transfer) 给出有限前缀的共同局部尺度闭合及两种平衡指数；来源 [原 `research_note.md` §1–4](history/sources/次单调论文研究/正式后的研究/research_note.md)、[修订审计 ZIP](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip)，9/21 `02_VERIFIED_CORE.md` §4。
+- **Objections / Status / Scope**：抽象模传递部分 `derived-checked`，原修订包的内部审计是来源证据。一般 RLEB 推论只能直接用于局部 \(J_{\mathcal G}\)，或另加共同轨道区域 \(J_{\lambda F}=J_{\mathcal G}\)；旧稿无条件升级完整 resolvent 的版本已失效。固定解点的 anchored Hölder calmness 与邻域中任意两初值的 Hölder 连续性不同。具体二次模型另立 C115/C116，不把来源中两个例子混成同一对象。
 
 ## C09 · 9/19 一般模 RL 的 Dini 点收敛（新增版本）
 
@@ -690,3 +690,31 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C112 同一完整图，固定 \(\lambda=1\)。**完整乘积全部图点对**的锐半阶系数 \(L_{1,1/2}^{\rm full}\) 满足 [PS-P15](research/topics/examples/product_splice.md#gx057-sharp-product-half) 的精确单变量最大式，且 \(L_{1,1/2}^{\rm full}\ge\sqrt{265/(4\sqrt{257})}>2\)。在临界图点 \(((1/2,0),(-1/4,0))\) 同时限制第二**输出**到 \(|v_2|<1\) 的非退化端点图窗，锐半阶系数为 2；只限制第一输入到任意固定端点窗且第二输入到任意小非零窗、保留全部输出时，锐系数严格大于 2，但双窗缩小的系数下确界仍为 2。
 - **Dependencies / Evidence / Status / Related Files**：[PS-SHARP/WINDOW](research/topics/examples/product_splice.md#gx057-sharp-product-half) 的第二坐标类型分解、第一坐标端点优化与全部取等极限；精确 \(H_\delta\) 驻点多项式、阈值由符号微分另核，`derived-checked`。来源 GX-057 原稿仅给图邻域系数 2 和未定的完整乘积模，(P15) 是本库新增推导。
 - **Counterevidence / Scope**：固定图窗的 2 不是仅限输入窗或完整乘积的常数；曲线尖锐处位于右端点，不是零点局部证书。不能用分量锐常数的最大值替换乘积半阶模，也不能从固定目标半阶 EB 推断路径存在。
+
+## C115-v1 / SSQ-FULL-CERT · 完整二值半代数关系的共同局部收敛证书
+
+- **Exact Statement / Objects / Domain / Quantifiers**：实 \(\mathbb R^3\)，固定 \(\lambda=1\)，完整闭图二值关系 \(F\) 如 [SS-Q1](research/canonical/solution_selection_rates.md#ss-quadratic-object)，\(S=\mathbb R^2\times\{0\}\)。对**全部**输入，完整 \(J_F=T\) 是单值全域，具体为 (SS-Q3)。对每个固定 \(0<R_0<1\) 和每个有限比较尺度 \(D>0\)，图块 \(0\le y\le R_0^2\) 的**任意两**图点在输入对距离 \(\le D\) 有 \(\gamma=1/2,L=2\sqrt2+(1+4R_0)\sqrt D\) 的全对 RL；所有实际输出的全纤维真残差满足 \(d(u,S)=y\le r_F(u)^4\)。同一个预先固定 \(R=\min\{R_0/2,8/(2\sqrt2+2+4R_0)^4\}\) 给 \(\kappa=1/2\) 严格兼容、完整 coverage、零锚和不变 collar。对全部初值 \(|r_0|<1\) 轨道有限长收敛；在每个 \(V_{R_0}\) 上有对全部初值与 \(k\ge0\) 一致的 \(M_0e^{-c_0 2^k}\) 点尾。
+- **Dependencies / Evidence / Status / Related Files**：[SSQ-FULL/CERT/TAIL](research/canonical/solution_selection_rates.md#ss-quadratic-full) 从全部两值图纤维反演、负输入、接点、全对图块、真正最小残差和固定半径逐项证明；`derived-checked`，另经独立逆向审查。来源 SS1 修订 ZIP `research_note.md` 定理 4；旧 S03 仅为摘要。C08 的抽象 SS-TRANSFER 对该共同尾可调用，但模型身份另立。
+- **Counterevidence / Scope**：\(|r_0|\ge1\) 不收敛；逐轨道 Q-二次起点可依初值而变，统一的是超几何点尾。图块全对比较尺度 \(D\)、输出 collar 和完整 J 纤维排他不能省，改变参数/关系或仅选一支是新命题。先行性未核。
+
+## C116-v1 / SSQ-BAD-SELECTION · Q-二次点误差与最优根对数选择模并存
+
+- **Exact Statement / Objects / Domain / Quantifiers**：对 C115 同一完整 \(T\)，每个非驻定收敛初值的实际点误差满足 \(\lim_{k\to\infty}e_{k+1}/e_k^2=1\) 若 \(p_0\le0\)，若 \(p_0>0\) 则为 \(1/\sqrt2\)；这是**每条轨道**的渐近，而非共同进入时间。固定任意足够小 \(0<r_0\le R\) 后，比较 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)，\(\varepsilon\downarrow0\)，其极限差有匹配的 \(e^{-C\sqrt{\log(1/\varepsilon)}}\) 上下阶，排除在原点任意邻域的正阶两点 Hölder，亦排除比根对数指数 \(1/2\) 更大的统一伸缩指数。每个有限步 \(T^k\) 半代数，但 \(\Pi\) 在原点任意开邻域非半代数。
+- **Dependencies / Evidence / Status / Related Files**：[SSQ-TAIL/SELECTION/NONSEMIALGEBRAIC](research/canonical/solution_selection_rates.md#ss-quadratic-tail) 的饱和时刻上下界、分离的 overshoot 与尾项、逐轨道极限以及代数多项式反证；依赖 C115 的完整对象和共同局部证书，`derived-checked`，另经独立逆向审查。来源 SS1 定理 4 和 §5.1；非半代数的证明不依赖外部增长引理。
+- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核，SS1 定理 2/3 和 §5.2 仍须逐项重构。
+
+## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
+
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^{n-1}\times\mathbb R\)、固定 \(\lambda>0\) 和两支 \(g_\pm:Q=\overline B_R\times[0,T]\to\operatorname{gph}F\)。参数化在 \(Q\) 的开邻域有 \(C^1\) 延拓，**图包含只在 \(Q\) 上**。同一 \(Q\) 的 (SS-2)–(SS-5) 公共接缝、强单调切向导数、Schur 导数界、相反定向凸严格增长及 \(0<r<\mu R-HT\) 合取，给每个 \(z\in B_r,t\in[0,T]\) 的唯一内点切向反演、开输入领圈 (SS-9) coverage、所表示图在切向输入球内无碰撞；该范围**任意两**图点的反射差由 (SS-10)/(SS-11) 控制，模在零点消失。
+- **Dependencies / Evidence / Status**：[SS-OBJECT/GROWTH](research/canonical/signed_schur_growth.md#ss-object) 的 Brouwer 内点、隐函数、同支凸增量、跨支预算和剪切恒等式经独立重构与敌对审查，`derived-checked`。仅在另外核 (SS-13) 后于领圈 \(U\) 识别所需完整 \(J_{\lambda F}\)；该条件不转移 \(U\) 外的图点，也不产生真残差 EB、零锚、兼容或留域。
+- **版本与反证边界**：S19 原 `thm:signed-schur-growth` 若把“邻域内取图值”作字面强假设，抽象定理可由本版推出，但其平方根原生例在负参数的延拓不满足该读法；本版不默改原命题。失去相反定向、同支增长凸性、切向一致性或完整纤维排他各有[独立反例](research/canonical/signed_schur_growth.md#ss-attacks)。
+
+## C118-v2 / SS-POWER-JET · 幂次预算、匹配改善及最优指数门
+
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C117 的**切向输入均位于 \(B_r\)** 的表示图块上，若 \(h_\sigma=c_\sigma t^p,p>1\)，输入直径 \(\le D\) 的全对指数为 \(1/p\)，有效常数是 (SS-24)/(SS-25)；\(p=1\) 有 (SS-26)。不同幂次只比较预算 (SS-27)，不能伪造更高阶 Schur 导数。若同一个修正切向输入 \(z\) 的两支输出匹配至 \(Et^p\)，(SS-30)/(SS-31) 改善跨支预算。若另有固定 \(z_0\) 的 \(O(t^p)\) 输入法向上界与 \(\Omega(t)\) 输出差下界，\(1/p\) 是最大全对指数；\(p>1\) 时已识别的单值近端在接缝不 calm。
+- **Dependencies / Evidence / Status**：[SS-POWER/JET/EXPONENT](research/canonical/signed_schur_growth.md#ss-power) 的二维 Hölder 预算、同修正坐标匹配和双边弧证据独立证明，`derived-checked`；\(K_z=0\) 的主系数有 (SS-28) 取等。原参数的同位导数比较、单点 Taylor 阶或仅 (SS-5) 均不足替代附加门。
+
+## C119-v2 / SS-SQRT · 完整平方根图的证书与锐性
+
+- **Exact Statement / Objects / Domain / Quantifiers**：固定完整 (SS-33)、\(\lambda=1\)、\(0<r<R-2T\)，在 \(U=(-r,r)\times(-4T^2,4T^2)\) 的全部完整图纤维等于两支 (SS-34)；给 \(\gamma=1/2\) 的 (SS-38) 和同输入匹配后 (SS-39) 常数，收缩领圈的最优渐近系数 2 与最大指数 \(1/2\)。同一完整关系零集 \(S=\mathbb R\times\{0\}\) 的真实**最小**残差另给锐系数 \(1/4\) 的平方界 (SS-41)。
+- **Dependencies / Evidence / Status**：[SS-SQUARE-ROOT](research/canonical/signed_schur_growth.md#ss-square-root) 对法向输入 \(\pm4y\) 的全部纤维反演和两支图值最小化独立证明，`derived-checked`；固定领圈的 (SS-38)/(SS-39) 不声称是其最小常数。图包含仅在 \(t\ge0\)；不能作为 S19 可能的“延拓邻域也须在图内”读法的实例，不能由此直接宣布 PPA 收敛或先行性。

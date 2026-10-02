@@ -1337,6 +1337,81 @@
       "id": "GX57-SHARP",
       "label": "全乘积与图/输入窗口的锐半阶模分离",
       "file": "topics/examples/product_splice.md#gx057-sharp-product-half"
+    },
+    {
+      "id": "SS-TRANSFER",
+      "label": "局部尺度闭合与统一尾的两种极限模",
+      "file": "canonical/solution_selection_rates.md#ss-transfer"
+    },
+    {
+      "id": "SS-LOCAL",
+      "label": "共同区域上有尺度门的局部 Hölder 单步",
+      "file": "canonical/solution_selection_rates.md#ss-transfer"
+    },
+    {
+      "id": "SSQ-OBJECT",
+      "label": "完整二值半代数算子和全域单值近端",
+      "file": "canonical/solution_selection_rates.md#ss-quadratic-object"
+    },
+    {
+      "id": "SSQ-CERT",
+      "label": "全对 RL、真残差与同一固定 collar 收敛",
+      "file": "canonical/solution_selection_rates.md#ss-quadratic-certificate"
+    },
+    {
+      "id": "SSQ-SWITCH",
+      "label": "固定初始法向的切换时刻与双边下界",
+      "file": "canonical/solution_selection_rates.md#ss-quadratic-selection"
+    },
+    {
+      "id": "SSQ-SELECT",
+      "label": "逐轨道 Q 二次与根对数坏选择",
+      "file": "canonical/solution_selection_rates.md#ss-quadratic-selection"
+    },
+    {
+      "id": "SSQ-NONSEMI",
+      "label": "极限选择非局部半代数",
+      "file": "canonical/solution_selection_rates.md#ss-quadratic-nonsemialgebraic"
+    },
+    {
+      "id": "SG-OBJECT",
+      "label": "双支接缝及闭参数域上的图包含",
+      "file": "canonical/signed_schur_growth.md#ss-object"
+    },
+    {
+      "id": "SG-TANGENT",
+      "label": "同一 Q 的强单调切向反演与导数界",
+      "file": "canonical/signed_schur_growth.md#ss-object"
+    },
+    {
+      "id": "SG-SIGN",
+      "label": "凸严格增长且两侧相反定向",
+      "file": "canonical/signed_schur_growth.md#ss-object"
+    },
+    {
+      "id": "SG-GROWTH",
+      "label": "切向球内覆盖、无碰撞与全对模",
+      "file": "canonical/signed_schur_growth.md#ss-growth"
+    },
+    {
+      "id": "SG-FIBER",
+      "label": "领圈 U 上完整图与表示图同纤维",
+      "file": "canonical/signed_schur_growth.md#ss-growth"
+    },
+    {
+      "id": "SG-POWER",
+      "label": "幂次预算、同修正坐标匹配和双边锐性",
+      "file": "canonical/signed_schur_growth.md#ss-power"
+    },
+    {
+      "id": "SG-MODEL",
+      "label": "原生平方根完整二值图 (SS-33)",
+      "file": "canonical/signed_schur_growth.md#ss-square-root"
+    },
+    {
+      "id": "SG-SQRT",
+      "label": "平方根完整原生图及独立真残差",
+      "file": "canonical/signed_schur_growth.md#ss-square-root"
     }
   ],
   "edges": [
@@ -3380,6 +3455,78 @@
       "relation": "conditional",
       "scope": "同一完整乘积与零集 {(0,0)}；所有有限真残差点上锐半阶 EB 系数 1，任意正第一目标/非零小第二目标缺逆像。每个固定 λ>0 的逐步合法完整 J 路径若初值非零必有限步终止，唯一无限路径恒零；残差界与图窗半阶不提供留域。",
       "status": "C112-v1 完整乘积残差和两个坐标的合法步预算证明"
+    },
+    {
+      "id": "E180",
+      "topic": "解选择",
+      "inputs": ["TAIL", "SS-LOCAL"],
+      "output": "SS-TRANSFER",
+      "relation": "conditional",
+      "scope": "同一单值 T，初值集合全部轨道留在共同 V；V 上输入对距离至多 R 的局部 γ-Hölder、0<γ<1；全部初值和全部 k 共用 Mσ^k 或 M exp(-c₀ν^k) 点尾。有限前缀必须逐步闭合局部尺度；分别给对数–对数和指数根对数上界。完整 J_F 导入另核局部图块与完整纤维一致性。",
+      "status": "C08-v1 抽象部分从 SS1 定理 1 独立证明，非完整 proximal 的无条件结论"
+    },
+    {
+      "id": "E181",
+      "topic": "解选择",
+      "inputs": ["SSQ-OBJECT", "SSQ-CERT", "SSQ-SWITCH"],
+      "output": "SSQ-SELECT",
+      "relation": "conditional",
+      "scope": "同一 λ=1、完整 ℝ³ 二值半代数 F；全输入的完整 J_F=T 由两支全纤维反演，固定 R₀<1、D>0、同一个 R>0 完成 all-pairs RL、实际输出真 EB、κ≤1/2 与留域；每轨道 Q 二次比值 1 或 1/√2 与全部 collar 共用超几何点尾分别成立。比较 x₀,xε 用固定 0<r₀≤R；极限差有双边 exp(-C√log(1/ε))，排除正阶两点 Hölder。",
+      "status": "C115/C116-v1 SS1 定理 4 完整重构及独立敌对审查；SS1 定理 2/3 不在此边"
+    },
+    {
+      "id": "E182",
+      "topic": "解选择",
+      "inputs": ["SSQ-SELECT", "SSQ-OBJECT"],
+      "output": "SSQ-NONSEMI",
+      "relation": "conditional",
+      "scope": "同一固定正 r₀ 的初值直线切片，半代数有限步 T^k 与极限映射 Π 分开；若 Π 图在原点邻域半代数，则一项非零多项式沿切片恒为零，强迫选择差 O(ε^(1/m))，与根对数双边下界矛盾。只对这一模型的局部半代数性断言。",
+      "status": "C116-v1 SS1 §5.1 的独立多项式证明；外部新颖性未核"
+    },
+    {
+      "id": "E183",
+      "topic": "解选择",
+      "inputs": ["SSQ-OBJECT"],
+      "output": "SSQ-CERT",
+      "relation": "conditional",
+      "scope": "固定完整 F 的全部输入纤维反演给全域单值 J_F；另逐项验 0≤y≤R₀² 图块全部点对的 D-局部半阶 RL、全部实际输出的真全纤维 EB、零锚及一个先固定的 R≤R₀/2 上 κ≤1/2 与留域。不是仅由对象定义自动得证，也不授予所有半径。",
+      "status": "C115-v1 SS1 定理 4 的完整量词证书独立证明"
+    },
+    {
+      "id": "E184",
+      "topic": "收敛",
+      "inputs": ["SG-OBJECT", "SG-TANGENT", "SG-SIGN"],
+      "output": "SG-GROWTH",
+      "relation": "conditional",
+      "scope": "有限维 n≥2、同一 λ>0；参数化在 Q 邻域 C¹ 但图包含只要求 Q；同一 Q 上公共接缝、强单调切向、Schur 导数界、两侧相反凸严格增长及 0<r<μR−HT 全部合取，得切向输入 B_r 内 coverage、无碰撞与任意所表示图点对的 ω(d) 反射模。U 外和切向球外不赋予此结论。",
+      "status": "C117-v2 从 S19 主定理独立修订证明，敌对审查通过；原文邻域图包含歧义保留"
+    },
+    {
+      "id": "E185",
+      "topic": "收敛",
+      "inputs": ["SG-GROWTH", "SG-FIBER"],
+      "output": "R04",
+      "relation": "conditional",
+      "scope": "只在开输入领圈 U 内用 G∩X⁻¹(U)=G_rep∩X⁻¹(U) 识别所需图块 J_G；完整 J_λF 还须取 G=gph F 核全部纤维。若要接 R02，另证同一零集的真实输出 EB、最近零点图锚、严格兼容与留域；本边不直接推出轨道收敛。",
+      "status": "C117-v2 SS-13 完整纤维排他门；S19 R04 的范围修正"
+    },
+    {
+      "id": "E186",
+      "topic": "收敛",
+      "inputs": ["SG-GROWTH", "SG-POWER", "SG-MODEL", "SG-FIBER"],
+      "output": "SG-SQRT",
+      "relation": "conditional",
+      "scope": "此边只针对指定完整平方根原生图 (SS-33)：在 U 逐个反演 ±4y 排尽完整纤维，h±=4t²，另核同修正输入的输出匹配。得到输入直径 D 上半阶有效常数与收缩领圈的最大指数 1/2、渐近锐系数 2；真残差 y≤r_F²/4 由两图值最小化独立证明。一般幂次证书不推出该特定原生图。",
+      "status": "C118/C119-v2 S19 幂次、matched-jet、平方根各自重构和逆向核验"
+    },
+    {
+      "id": "E187",
+      "topic": "反例",
+      "inputs": ["SG-GROWTH"],
+      "output": "SG-FIBER",
+      "relation": "limits",
+      "scope": "(SS-42) 缺负支相反定向会同输入双图点碰撞；(SS-43) 若删凸性则同支预算失效；(SS-45) 给满足表示图全部导数界却另添完整纤维的点。三种失败机制不同，不能由局部分支规则自动授予全纤维排他。",
+      "status": "C117-v2 的反例范围；源 S19 collision 与新全纤维加点检查"
     }
   ]
 }

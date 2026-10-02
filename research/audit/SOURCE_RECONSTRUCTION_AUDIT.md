@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：90 行逐源数学单元有精确去向，最近的 GX-055–057 完整图、GX-067/068 CCA-M14/二参数区域与非 tied §2.1 选定去向见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。
+**当前覆盖读法**：100 行逐源数学单元有精确去向，最近的 GX-055–057 完整图、GX-067/068 CCA-M14/二参数区域与非 tied §2.1 选定去向见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[分母建立计划](SEMANTIC_INVENTORY_PLAN.md) 已把 429 个出现位置和 346 个内容组分批，但尚未穷尽枚举数学单元。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -28,8 +28,8 @@
 
 | 原件与精确单元 | 当前规范层的不足 | 准入义务 |
 | --- | --- | --- |
-| S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | [RLEB 摘要](../rleb_ppa.md) 尚未按六个单位重写完整 S1–S18 的导数、分支、全纤维和锐性门 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
-| SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | [解选择摘要](../solution_selection.md) 固定了修补接口与反例方向，尚未按这些定理各自重构公式、切换时刻与双初值最优模 | 先核完整 resolvent 与指定图块的一致性，再分别证明统一尾、半代数模型、对数–对数模和 Q-二次坏选择；§6 的一手先行性是另一证据门。 |
+| S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | 六个指定标签现见 [C117–C119 独立重构](../canonical/signed_schur_growth.md#ss-source)；全稿其它单元与原版范围仍未穷尽 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
+| SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | §1 定理 1、§4 定理 4、§5.1 选定单元见 [SS-TRANSFER/SS-Q2](../canonical/solution_selection_rates.md)；§1 推论 1、§2–§3、§5.2 仍缺逐项重构 | 已核所列抽象尾与特定二次完整模型；仍须分别核几何尾模型、§1 推论 1、§2–§3、§5.2 与 §6 的一手先行性。 |
 | 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 来源指出增长步长 rate、有限维 converse、inverse 的 PSNC 方向、一般度量 (q>1) 和 Luke–Tam Euclidean scope 的具体风险；当前没有逐项关闭记录 | 对每个原命题与现行正文做对象/维数/量词对照；修正则另立版本，已避免则写带锚点的 `superseded` 或 `duplicate` 理由。不能把旧审计题头当证明。 |
 | 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线，但部分子定理仍缺独立正文及逐源去向 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
 

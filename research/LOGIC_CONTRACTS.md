@@ -60,6 +60,18 @@ E110/E111 从**新定义** \(F_{\rm lift}\) 的全部图值分别推出完整单
 
 E113 对任意非空子集 \(D\subset H\) 及**全部配对**的相同 \(L,0<\gamma<1\) 建立 \(C:D\to Y\)。[HE-SNOWFLAKE](canonical/holder_extension.md#he-snowflake) 的 Gaussian 正定性给 \(\|Jx-Jy\|=\|x-y\|^\gamma\)，[LIT-ALM-2021](LITERATURE.md#lit-alm-2021) 的正式 Theorem 1.2 只导入**Hilbert 间**同常数 Lipschitz 扩张；二者合取才给同参数 Hölder 扩张。E114 再把它施于 **完整** RL 图的 Cayley \(C\)，固定 \(\lambda,L,\gamma\)，使用剪切反演和同输入唯一性才得到 `graph-maximal ⇔ Minty 域 H`。图块局部模、预定像集或极大单调性不在结论内；该边只支撑 H01 这一子命题，不审 C03 全篇影子证明。
 
+## E184–E187：signed-Schur 的闭域、全纤维与应用门
+
+E184 在固定有限维、同一 \(\lambda\) 与闭参数块 \(Q\) 上合取公共接缝、强单调切向导数、Schur 控制、两侧相反凸严格增长以及 \(0<r<\mu R-HT\)。参数化只需在邻域有 \(C^1\) **延拓**，图包含仅在 \(Q\) 上要求。输出是切向输入在 \(B_r\) 的所表示图的覆盖、无碰撞与全对零消失模，不能延及球外。[SS-GROWTH-v2](canonical/signed_schur_growth.md#ss-growth)。
+
+E185 另以 (SS-13) 核 \(U\) 上**全部**活动图点纤维，才赋予局部 \(J_{\mathcal G}\)；赋予完整 \(J_{\lambda F}\) 须 \(\mathcal G=\operatorname{gph}F\)。真实残差 EB、目标零锚、兼容与留域仍独立，故不把 E185 画成直接的 PPA 收敛箭头。E186 另固定完整平方根图、幂次预算、同修正输入输出匹配和全纤维检验，区分有效常数与收缩领圈的渐近锐常数 2；同图的真残差独立取全部图值最小范数。E187 的碰撞、删凸性及添远支分别测试不同门，所表示图性质不能替完整纤维排他。[C117–C119](canonical/signed_schur_growth.md#ss-obligations)。原 S19-SG-v1 的邻域图包含读法比 v2 强，平方根例的负参数延拓不满足强读法。
+
+## E180–E183：解选择的共同尾、完整纤维与同一初始 collar
+
+E180 固定一个单值 \(T\) 与全部指定初值的共同工作域，**局部** Hölder 单步仅在输入对距离 \(\le R\) 使用；共同几何或超几何点尾的常数对全部初值和全部步数一致。有限前缀逐步验证局部尺度后，才可平衡尾界得到相应对数–对数或指数根对数选择模。若 \(T\) 起于图块 \(J_{\mathcal G}\)，完整 \(J_{\lambda F}\) 的同一轨道区域全纤维一致性是另一个门，不能由共同尾替代。[SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer)。
+
+E183 对 **SS-Q1 同一个完整二值关系** 从两支及负输入全部反演；固定 \(0<R_0<1\)、有限比较尺度 \(D\)，图块内 all-pairs RL、真实最小残差、零锚、预先固定的 \(R\le R_0/2\)、严格兼容和不变 collar 要逐项同时成立，才赋予 C115 的共同尾。E181 还加入在 **固定 \(0<r_0\le R\)** 上的切换时刻上下界，获得 C116 的根对数双边模；每轨道 Q 二次比值与共同超几何尾是不同量词。E182 使用同一选择下界与代数图的多项式恒等式，排除该极限选择的局部半代数性；有限步半代数并不足以推出极限同性质。SS1 定理 2/3、§5.2 和外部新颖性不在这些边内。[完整证明](canonical/solution_selection_rates.md#ss-quadratic-object)。
+
 ## E115–E118：并图三残差与新 Sign 图局部指数
 
 E115–E117 **同一完整** \(F(x)=\{x,x^2\}\)，但残差的下确界不同：E115 的全局公式是 \(r_F(x)=d(0,F(x))=\min\{|x|,x^2\}\)，在 \(|x|\le1\) 的零点局部窗才简化为 \(x^2\)；E116 是 \(r_J(p)=\inf_{u\in J_{\lambda F}(p)}|p-u|\)，必须保留平方分支的近平根与远根；身份指定分支 \(J_1(p)=p/(1+\lambda)\) 的线性界不能替代完整 \(r_J\)。E117 以同输入的**两**图点阻断所有正 Hölder 全对指数；这与 E115 的半阶真 EB 不构成蕴含。历史 GX-068 的两变量 MR 现由 E157/C92 单列，二参数全对区域另由 E160/C95 核定。[IS 卡](topics/examples/identity_square_branch_union.md)。
