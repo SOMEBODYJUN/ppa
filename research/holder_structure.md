@@ -79,8 +79,8 @@ K\ne\varnothing,\qquad K\text{ 紧},\qquad\operatorname{diam}K\le R.
 - **必要性**：全域 Cayley 映射的次线性增长使两坐标投影的 homotopy 一致 proper；有限维 Brouwer degree 为 1，给全域、全值域和非空紧纤维。同输出/同输入的 RL 比较给直径界。来源：S23 `lem:diameters` 293–306 行，`thm:finite_geometry` 624–686 行。
 - **充分性**：对任意非空紧 \(K\) 构造 \(R_K:H\to\overline{\operatorname{conv}}K\)，使 \(\operatorname{Fix}R_K=K\)，Hölder 常数恰可取 \((\operatorname{diam}K)^{1-\gamma}\)。令 \(C=R_K\) 即实现逆零纤维；令 \(C=-R_{\lambda K}\) 实现正向零纤维。来源：`thm:fixedset` 738–838 行；`thm:fibers` 840–871 行。
 
-固定点构造的关键不是未经证明的“任意紧集是 retract”。先证明凸包余量
-\(\sup_{q\in Q}\|p-q\|^2\le D_K^2-d(p,K)^2\)，再用正系数可数 bump 把 \(Q\setminus K\) 上所有点向固定 \(k_0\in K\) 推动，同时保留共同 Hölder 常数；最后复合 \(P_Q\)。本轮核对了 bump 幅度的正性、负指数不等式方向、可数覆盖、级数一致收敛和无额外不动点。来源：`lem:margin` 711–736 行及上述固定点定理。
+固定点构造的关键不是未经证明的“任意紧集是 retract”。令 \(Q=\overline{\operatorname{conv}}K\)、\(D_K=\operatorname{diam}K\)；凸包余量仅对**每个 \(p\in Q\)** 断言
+\(\sup_{q\in Q}\|p-q\|^2\le D_K^2-d(p,K)^2\)。再用正系数可数 bump 把 \(Q\setminus K\) 上所有点向固定 \(k_0\in K\) 推动，同时保留共同 Hölder 常数；最后复合 \(P_Q\)。若任意取 \(p\notin Q\)，该余量式甚至对 \(K=\{0\}\) 不成立。本轮核对了 bump 幅度的正性、负指数不等式方向、可数覆盖、级数一致收敛和无额外不动点。来源：`lem:margin` 711–736 行及上述固定点定理。
 
 **范围门槛**：固定点实现本身允许 Hilbert 空间；完整纤维分类的必要性使用有限维紧性与 Brouwer degree。不得整体推广到无限维。非空完整纤维再与 H02 合取，才得到到 singleton 的 Hausdorff 误差界；H02 单独不保证原纤维非空。
 
@@ -139,7 +139,7 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 <a id="polish-gap"></a>
 ## H06 · 随机推论的给定度量缺口及修补
 
-S19 `thm:stochastic-rleb`，502–554 行，假设路径留在 \(0\le D_k\le R\) 的不变域，且
+S19 `thm:stochastic-rleb`，502–554 行，令适应过程 \(X_k\) 取值于指定度量空间 \((\mathsf X,d)\)，\(D_k=d(X_k,S)\)、\(s_k=d(X_{k+1},X_k)\)。假设路径留在 \(0\le D_k\le R\) 的不变域，且
 
 \[
 s_k\le\tfrac12[D_k+\omega(D_k)],\qquad

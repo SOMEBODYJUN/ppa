@@ -1,5 +1,11 @@
 # 承重超边的量词与条件契约
 
+## E44–E45：概率矩门与同一回耦对
+
+E44 的 \(e,c\) 是同一状态集上的非负有限函数；存在共同零点及两者都正的 excursion，\(1\le p,r<\infty,q>0\)。[C126/MR1](topics/random_markov/moment_recoupling.md#mr-moment) 的等价式量化**全部有限支撑律**，且点态系数必须是同一 \(K\)。law-space 必要性另需闭支持目标、平稳律在该目标上、状态残差在该律上零，以及非零更新输出离目标；它不把 \(\Psi\) 或条件残差 \(\mathcal R\) 直接等同于标量 \(c\)。
+
+E45 的输出是 [C127/MR3](topics/random_markov/moment_recoupling.md#mr-recoupling) 的**线性 EB**，不是 CM-GAUGE 的 exact-zero ⇔ 一般 gauge。必须同时在同一随机表示及指定律类上有 \(d(\mu P)\le c_0d(\mu)\)、\(c_0<1\)，并对每个 \(\mu\) 用输入 \(W_2\)-最优、同噪声的近极小序列 \((\pi_j,\eta_j)\) 逼近原 \(\Psi\) 下确界；同一个 \(\chi\) 控制这些对的 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\)。不能从别的运输对、不同表示或条件刷新残差移植损失界；原生模型尚须单独认证这些量词。
+
 ## E84–E87：孤立零点的分支、正因子与输入覆盖
 
 E84 在同一实 Hilbert 关系 F、局部孤立零点 p、\(q>1,\lambda>0\) 下使用 IZ-GERM 的逐图点剪切和 IZ-FIBERS 的真实 EB 到实际图值方向。此外对输入邻域每个 x 必须指定 \(Tx\in J_{\lambda F}(x)\)，全部实际输出属于同一 EB 输出球，\(\|(x-Tx)/\lambda\|<\eta\) 且 \(\rho\eta^{q-1}\le\lambda/2\)。闭输入球在该邻域中并使 \(C_q\delta^{q-1}<1\) 才有整轨道上阶。IZ-FIBERS 的反向需要全部小残差纤维 (IZ-1)，一条好分支不够；它不自动提供 T 的输入 coverage。[C45](canonical/isolated_zero_flatness.md#iz-ppa)。

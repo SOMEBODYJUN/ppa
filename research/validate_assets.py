@@ -212,6 +212,21 @@ for e in graph["edges"]:
     if not e.get("scope") or not e.get("status") or not e.get("relation"):
         errors.append(f"missing edge contract: {e['id']}")
 
+# Status is a separate typed field, not a word hidden inside Evidence. This
+# checks ledger shape only; a status still requires mathematical review.
+ledger = (ROOT / "CLAIMS.md").read_text(encoding="utf-8")
+claim_blocks = re.split(r"(?=^## C\d+)", ledger, flags=re.MULTILINE)[1:]
+for block in claim_blocks:
+    title = block.splitlines()[0]
+    statuses = re.findall(r"^- \*\*Status\*\*：`([^`]+)`", block, flags=re.MULTILINE)
+    if len(statuses) != 1 or statuses[0] not in {
+        "source-report", "candidate", "derived-checked", "refuted", "open", "canonical"
+    }:
+        # A deliberately split v0/v1 claim may have distinct version statuses.
+        if not (title.startswith("## C12-v0 / C12-v1")
+                and "`refuted`" in block and "`derived-checked`" in block):
+            errors.append(f"missing/ambiguous explicit Claim status: {title}")
+
 # Check only written research layer. Source manuscripts have their own, possibly
 # obsolete relative links and are intentionally immutable.
 normative = list(ROOT.glob("*.md")) + list((ROOT / "research").rglob("*.md"))

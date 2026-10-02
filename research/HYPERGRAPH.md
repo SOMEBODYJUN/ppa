@@ -59,7 +59,7 @@
 | E12 | [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) ∧ [RET · 连续极限回缩](holder_structure.md#ret) | limits → [OB-TOPO · 非局部可缩零集的附加收敛假设障碍](holder_structure.md#ob-topo) | 任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立；**条件障碍** |
 | E21 | [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集；**尚未建立的一般桥** |
 | E24 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
-| E44 | [M-MOMENT · 小质量混合 pq≤r](cone_markov.md#m-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门；**Markov Proposition M** |
+| E44 | [M-MOMENT · C126 全有限支撑律的精确矩门](topics/random_markov/moment_recoupling.md#mr-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需目标支持、平稳残差零值和非零输出距离；不否定任意残差。；**derived-checked / MR1 及小质量更新证明** |
 | E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
 | E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
 | E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
@@ -121,7 +121,7 @@
 | E23 | [FS-OBJECT · 固定有限状态同步 OT 的完整耦合与不变律](topics/random_markov/finite_state_certificate.md#fs-object) | conditional → [M-FIN · 固定有限状态精确零集与锐顶点 EB](topics/random_markov/finite_state_certificate.md#fs-theorem) | 固定互异有限状态、同噪声位移 R、C-最优运输、所有不变律；每个对偶 tight-edge 分支的零成本顶点行边缘不变 iff 精确零集 iff 全律空间线性 W2/Ψ 界；锐常数为顶点比最大值。；**C15-v1 同版本完整独立证明；不推出动力收敛** |
 | E42 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-BINARY · bit 刷新 a*>0 判据](cone_markov.md#m-binary) | conditional → [COND-EB · 守恒边缘条件残差 EB](cone_markov.md#cond-eb) | 固定守恒边缘的 bit 刷新；a*>0 等价条件 EB 与统一速率，不是原 Ψ；**Markov 定理包** |
 | E43 | [M-COND · 守恒边缘条件残差](cone_markov.md#m-cond) ∧ [M-GAUSS · Gaussian 谱隙 ζ](cone_markov.md#m-gauss) | conditional → [COND-EB · 守恒边缘条件残差 EB](cone_markov.md#cond-eb) | Gaussian Gibbs、Q>0、ζ>0，条件残差锐 EB 常数 ζ^-1/2；**Markov 定理包** |
-| E45 | [M-RECOUP · 回耦损失控制](cone_markov.md#m-recoup) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | conditional → [M-EXACT · exact-zero 与一般 gauge](cone_markov.md#m-exact) | 只有趋近同一 Ψ inf 的耦合及损失界，收缩才可反推 EB；**Markov 条件桥** |
+| E45 | [M-RECOUP · C127 同一近极小 OT 对的回耦损失控制](topics/random_markov/moment_recoupling.md#mr-recoupling) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) ∧ [M-CONTRACTION · 同一律类 d(μP)≤c₀d(μ), c₀<1](topics/random_markov/moment_recoupling.md#mr-recoupling) | conditional → [M-LINEAR-EB · C127 原同步 Ψ 的条件线性 EB](topics/random_markov/moment_recoupling.md#mr-recoupling) | C127：同一紧状态随机表示、不变律集与指定律类；对每个 μ 的输入 W₂ 最优同噪声对趋近同一个 Ψ inf，回耦损失 Δ≤χD² 且共同 c₀<1；才得 d≤(1+√χ)Ψ/(1−c₀)，非 exact-zero ⇔ gauge 的一般命题。；**derived-checked / MR2–MR3 同耦合证明；原生模型认证开放** |
 
 ## 随机
 

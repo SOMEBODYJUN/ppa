@@ -327,13 +327,23 @@
     },
     {
       "id": "M-MOMENT",
-      "label": "小质量混合 pq≤r",
-      "file": "cone_markov.md#m-moment"
+      "label": "C126 全有限支撑律的精确矩门",
+      "file": "topics/random_markov/moment_recoupling.md#mr-moment"
     },
     {
       "id": "M-RECOUP",
-      "label": "回耦损失控制",
-      "file": "cone_markov.md#m-recoup"
+      "label": "C127 同一近极小 OT 对的回耦损失控制",
+      "file": "topics/random_markov/moment_recoupling.md#mr-recoupling"
+    },
+    {
+      "id": "M-CONTRACTION",
+      "label": "同一律类 d(μP)≤c₀d(μ), c₀<1",
+      "file": "topics/random_markov/moment_recoupling.md#mr-recoupling"
+    },
+    {
+      "id": "M-LINEAR-EB",
+      "label": "C127 原同步 Ψ 的条件线性 EB",
+      "file": "topics/random_markov/moment_recoupling.md#mr-recoupling"
     },
     {
       "id": "F03",
@@ -1986,20 +1996,21 @@
       ],
       "output": "D04",
       "relation": "limits",
-      "scope": "对有限支撑混合点态 q 阶到 Lp/Lr 需 pq≤r；跨确定性到随机的矩门",
-      "status": "Markov Proposition M"
+      "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需目标支持、平稳残差零值和非零输出距离；不否定任意残差。",
+      "status": "derived-checked / MR1 及小质量更新证明"
     },
     {
       "id": "E45",
       "topic": "Markov",
       "inputs": [
         "M-RECOUP",
-        "M-PSI"
+        "M-PSI",
+        "M-CONTRACTION"
       ],
-      "output": "M-EXACT",
+      "output": "M-LINEAR-EB",
       "relation": "conditional",
-      "scope": "只有趋近同一 Ψ inf 的耦合及损失界，收缩才可反推 EB",
-      "status": "Markov 条件桥"
+      "scope": "C127：同一紧状态随机表示、不变律集与指定律类；对每个 μ 的输入 W₂ 最优同噪声对趋近同一个 Ψ inf，回耦损失 Δ≤χD² 且共同 c₀<1；才得 d≤(1+√χ)Ψ/(1−c₀)，非 exact-zero ⇔ gauge 的一般命题。",
+      "status": "derived-checked / MR2–MR3 同耦合证明；原生模型认证开放"
     },
     {
       "id": "E46",

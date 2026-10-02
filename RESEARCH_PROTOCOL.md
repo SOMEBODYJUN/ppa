@@ -34,6 +34,8 @@
 5. **Counterevidence / Objections**：最危险的退化例、量词攻击、遗漏的定理前提，以及是否 fatal。一个未解决的 fatal objection 阻止可靠状态。
 6. **Status / Scope / Related files**：见下表；指出正文锚点、历史证据精确路径或 ZIP 成员、代码、反例和未闭义务。
 
+总账中每个 Claim 版本须在标题后有单独的 `- **Status**：` 字段；即使 Evidence 句里出现 `derived-checked` 也不能代替它。改变状态要说明新证据及尚未关闭的异议；跨版本状态不得合并。机械校验只检查字段存在和枚举值，不替数学审查赋值。
+
 | 状态 | 准入意义 |
 | --- | --- |
 | `source-report` | 来源文件如此报告；尚未独立重构证明。 |
