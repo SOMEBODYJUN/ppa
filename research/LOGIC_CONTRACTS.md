@@ -55,7 +55,9 @@ E18 的输入只是一张固定非空紧 \(K\)、非空闭 \(S\subset K\)、全�
 固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_3\) 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
 
 <a id="e51"></a>
-## E51：有限 QP 输出误差到三项总误差的求值门
+## E50–E51：有限数据的同图尺度门与反演求值门
+
+E50/C20-v2 的样本与待认证未知点必须在**同一** RL 认证图中，且每个用于 Hölder 比较的 Cayley 参数点对落在证书的**成对尺度**内：全图全尺度自动满足；局部 \(R_0\) 版以 \(\delta\le R_0\) 为充分门，或逐对另核 \(\|p-p_i\|\le R_0\)。若结论关于完整 \(F^{-1}(v)\)，其中的每个图点都须属于该认证图并逐个满足点对条件。仅有 \(\delta\)-覆盖而把 RL 用在尺度外的旧 C20-v1 已被 [F36](../FAILED_ROUTES.md#f36) 的两点完整图反驳；S23 的全尺度原稿不受影响。
 
 E51 的真实输出 \(v\) 必须有**整个非空逆纤维**的 Cayley 参数 \(\delta\)-覆盖，并有 \(\|\widetilde v-v\|\le\eta\)。三项总界里的 \(e_x\) 是已认证的 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\) 上界；可行 QP 的 Frank–Wolfe gap \(G\) 只给同一候选参数 \(q\) 处 \(e_N=\sqrt G\) 的 \(N_m(q)\) 输出误差。若 \(\widehat x=q-\lambda\widetilde v\)，须再证 \(e_x\ge(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)。只给 gap、没有候选点的固定点残差，就不能调用 [Q03](range_finite_data.md#q-eval) 的三项界；这两种 \(e\) 在原稿 prop:evaluation 与 cor:totalerror 中是不同类型。
 

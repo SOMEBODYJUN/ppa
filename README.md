@@ -58,7 +58,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 非幂次边界 | 一般模 + Dini + 上述全部局部条件 → 点收敛；对数完整接缝 \(a\le1\) 有距离收缩但点发散 | 9/19 稿内构造与本轮局部重算 |
 | 全局结构 | 全图 RL → Cayley；Hilbert 雪花 + 同常数 Lipschitz 扩张 → 固定参数 graph-maximal 完成；二次 excess + 正交提升 + Banach → 单一正反影子 | 扩张 [HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 的量词和一手引文已核；C03 仍是独立候选 |
 | 完整纤维 | 有限维 properness/degree + 直径界 → 必要性；紧集 fixed-set + Cayley → 充分性 | C04 候选，两方向分列 |
-| 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加 Cayley 参数覆盖、观测噪声界和**反演求值误差** \(e_x\) → 未观测图点三项界 | C18–C20 稿内证明；QP gap 只给 \(N_m(q)\) 误差，须另用固定点残差换算 \(e_x\)；[F35](FAILED_ROUTES.md#f35)；有限查询不能全空间认证 C21 |
+| 值域与有限数据 | 最大根定位 + 有限维全纤维非空 → 锐值域球；兼容样本 + 同一 QP → 全局代理；再加**同图同尺度** Cayley 参数覆盖、观测噪声界和已认证的反演求值误差 \(e_x\) → 未观测图点三项界 | C18/C19 与 [C20-v2](CLAIMS.md#c20-v2) 保留稿内证明状态；局部 RL 还须逐对在测试尺度内，完整纤维须全体在认证图中。[F36](FAILED_ROUTES.md#f36) 反驳漏尺度 v1；QP gap 与 \(e_x\) 的不同见 [F35](FAILED_ROUTES.md#f35)。有限查询不能全空间认证 C21 |
 | 拓扑限制 | 局部 all-pairs + EB + Dini + coverage + 不变开域 → 连续极限回缩 | 不由任意紧零集实现自动得到 |
 | 去超临界幂的条件值域 | C70 整窗度量余量 + 同一指定 T 非空紧 usc 有理 acyclic + 每阶上同调满射 + χ(A)≠0 → C05-v2 扰动 coincidence 与原关系局部值域；只需 q>0，原稿 C05-v1 的 qγ>1 仍原样保留 | 新版本的条件拓扑链已重算；存在 qγ=1/2 的完整可行实例，原生整窗模型仍须独立认证 |
 | 有限数据值域 | [C70 样本双包络](research/canonical/finite_sample_collar.md#fsc-envelope) + **另证**整窗每个输出的步界/EB + collar → 内域余量；再加 usc/acyclic、上同调与 Lefschetz → 原关系局部值域球 | C70 度量层已独立重算；原稿 C05-v1 仍是 PDF-only 候选；C05-v2 是保留整窗拓扑条件而去 qγ>1 的独立条件推导。有限样本不认证整窗 \(T\) |

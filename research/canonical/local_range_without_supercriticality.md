@@ -52,6 +52,20 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 这里 \(T\) 可以是完整 \(J_{\lambda F}\) 的指定子关系；
 结论不声称全部 resolvent 纤维非空或具拓扑性质。
 
+**外部定理的完整导入接口。** [Górniewicz–Rozpłoch-Nowakowska,
+Theorem 6.2](../LITERATURE.md#lit-grn-2002) 对 Klee-admissible 拓扑向量空间
+\(E\) 中一个开集的回缩 \(X\) 使用 morphism
+\(X\xleftarrow{p}\Gamma\xrightarrow{e}X\)：\(p\) 须为 perfect 满射，
+各纤维在带紧载体的有理 Čech 同调下 acyclic，\(e\) 连续。
+若该 morphism 属于 \(CAC(X)\) 且 Lefschetz 数非零，则存在
+\(z\in X\) 与 \(\omega\in p^{-1}(z)\)，使 \(z=e(\omega)\)。
+该文的紧 morphism 属于 \(CAC(X)\)，所以本页只需核紧性，
+不另假设输出像的每个纤维 acyclic。此处 \(E=\mathbb R^n\)
+是 Klee-admissible，紧有限多面体 \(A\) 是欧氏开邻域的回缩；
+\(p=\pi:\Gamma\to A\)，\(e=e_h\)。下证逐项核 compact/Vietoris、
+自映射和非零 Lefschetz 数。文献卡记录了原文的定义、页码与版本；
+这些导入条件不由有限样本本身保证。
+
 **证明。** C70 的独立度量推导仅需 \(q>0\)；
 (1)–(2) 给每个 \(p\in A,y\in T(p)\) 的
 \([p,y]\subset B,\ y\in\operatorname{int}A\) 和

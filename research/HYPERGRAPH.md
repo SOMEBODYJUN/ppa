@@ -142,7 +142,7 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E49 | [QSAMPLE · 样本交叉兼容](range_finite_data.md#qsample) ∧ [LIFT · 二次 excess 与正交提升](holder_structure.md#lift) | implies → [QP · 严格凸 QP 与全局 N_m](range_finite_data.md#qp) | 同一固定样本的严格凸 QP，所有查询共用 N_m；**S23 稿内构造** |
-| E50 | [QP · 严格凸 QP 与全局 N_m](range_finite_data.md#qp) ∧ [Q-COVER · Cayley 参数 δ-覆盖](range_finite_data.md#q-cover) ∧ [D02 · 全对 RL 与指定尺度](foundations.md#d02) | conditional → [Q-BOUND · 正反纤维配对 Kδ 界](range_finite_data.md#q-bound) | 未知每个图点的 Cayley 参数被 δ-覆盖；全纤维需全部点；**S23 稿内证明** |
+| E50 | [QP · 严格凸 QP 与全局 N_m](range_finite_data.md#qp) ∧ [Q-COVER · Cayley 参数 δ-覆盖](range_finite_data.md#q-cover) ∧ [D02 · 全对 RL 与指定尺度](foundations.md#d02) | conditional → [Q-BOUND · 正反纤维配对 Kδ 界](range_finite_data.md#q-bound) | C20-v2：样本与未知点属同一 RL 图；每个使用的参数点对既被 δ-覆盖又在 RL 测试尺度内（全尺度自动，局部 δ≤R₀ 是充分门）；完整纤维还需其全部图点属于该图并逐个满足覆盖与尺度门；**C20-v2 candidate；无尺度的 C20-v1 已由 F36 反驳，S23 原稿是全图全尺度版本** |
 | E51 | [Q-BOUND · 正反纤维配对 Kδ 界](range_finite_data.md#q-bound) ∧ [Q-EVAL · 已验证 gap、噪声与求值误差](range_finite_data.md#q-eval) | conditional → [Q-TOTAL · 覆盖 + 噪声 + 求值三项界](range_finite_data.md#q-total) | 真输出的全纤维 Cayley 参数覆盖、观测噪声 η、反演求值证书 e_x≥\|\|xhat−A_m^{-1}(vtilde)\|\|。QP gap 只认证 N_m(q) 的 e_N，还需候选参数 q 的固定点残差除以 1−σ 才能取得 e_x；**S23 稿内证明** |
 | E53 | [DEADBAND · deadband 精确逆跳跃与稳定代理](range_finite_data.md#deadband) | refutes → [Q-ADVANTAGE · 影子代理普遍优于定制正则化](range_finite_data.md#q-advantage) | 稳定代理不必是精确逆；恒等代理已有同半径，不能宣称普遍优越；**S23 显式实例** |
 

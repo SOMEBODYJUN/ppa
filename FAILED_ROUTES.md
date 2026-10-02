@@ -238,3 +238,10 @@
 - **尝试与断点**：旧 [Q03 摘要](research/range_finite_data.md#q-eval) 先用 \(e\) 表示候选参数 \(q\) 处 \(\|\widehat N(q)-N_m(q)\|\)，随后把同一个 \(e\) 直接加进 \(\|x-\widehat x\|\) 的三项界。前者仅是代理函数一次求值的误差；后者要求 \(\|\widehat x-A_m^{-1}(\widetilde v)\|\le e_x\)。漏掉候选点的固定点残差及 \(1/(1-\sigma)\) 放大。
 - **精确反向检验**：即使 \(N_m(q)\) 完全精确、\(e_N=0\)，也可任意选择远离 \(A_m^{-1}(\widetilde v)\) 的候选 \(q\)，使 \(\widehat x=q-\lambda\widetilde v\) 很远；只由 gap 无法约束它。若 \(\lambda=1,F=I,C=0\)，单个零样本可取 \(N_m=0\)，\(v=\widetilde v=0\)，取 \(q> K_0\) 就使旧读法 \(\|0-q\|\le K_0+0+0\) 失败，其中 \(K_0=a/\sqrt{1-\sigma^2}\)。
 - **可回收与重启门**：S23 原稿 `prop:evaluation` 与 `cor:totalerror` 分别给正确的两种误差门，并未被此反例否定。取 \(\widehat x=q-\lambda\widetilde v\)，先认证 \(e_N\)，再用 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\)；最后在完整逆纤维的共同 coverage 与观测噪声门下调用 [C20/Q03](research/range_finite_data.md#q-total)。这里修的是规范层缩写的类型错位，不是声称原稿定理错误。
+
+<a id="f36"></a>
+## F36 · 局部 RL 被用于测试尺度外的有限数据点对
+
+- **尝试与断点**：旧 [C20-v1](CLAIMS.md#c20-v1) 允许局部 RL，只要求未知 Cayley 参数到样本的距离不超过 \(\delta\)，便在 Q02 中用 \(\|c-c_i\|\le L\delta^\gamma\)。但局部 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\) 只对**同一认证图上、参数对距不超过 \(R_0\)** 的图点对成立；覆盖半径 \(\delta\) 本身不是这项证书。
+- **完整反例**：在 \(\mathbb R\) 取 \(\lambda=1,\gamma=1/2,L=1,R_0=1\)，完整图恰为 \(\{(0,0),(51,-49)\}\)。两点的 Cayley 参数为 \(p=0,2\)，反射参数为 \(c=0,100\)，故局部 RL 对所有被测试的同点对成立，而跨点对在尺度外。只采样 \((0,0)\)，取 \(\sigma=1/2\)，则 \(M_\sigma=\sup_{t\ge0}(t-t^2/4)=1\)、\(a^2=1/2\)；单样本 QP 给 \(N_m=0,A_m=I\)。未知点参数被 \(\delta=2\) 覆盖，旧公式给 \(K_2<5\)，实际 \(\lambda|v-A_m(x)|=|-49-51|=100\)。全部样本兼容条件都真，失败仅来自越过局部成对尺度。
+- **可回收与重启门**：[C20-v2/Q02](research/range_finite_data.md#q-cover) 保留原稿全图全尺度情形，并允许严格声明的局部版：样本与未知点属于同一 RL 图，每个使用的参数点对在证书尺度内（\(\delta\le R_0\) 是充分门）；要对完整逆纤维结论，须逐个覆盖**所有完整纤维图点**且它们属于该图。此反例不反驳 S23 的全尺度证明，也不把局部证书自动扩成全图性质。

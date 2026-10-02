@@ -165,17 +165,25 @@
 - **Status**：`candidate`；关键代数已核读，整条 QP 与全局代理证明仍按稿内证明范围保留。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：有限 \(m\ge1\) 个 \(\mathbb R^n\) 图样本，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，固定 \(0<\sigma<1\) 和 S23 的 \(M_\sigma,a^2=M_\sigma/2\)。对所有样本对有 \(\|c_i-c_j\|^2\le\sigma^2\|p_i-p_j\|^2+M_\sigma\)。按 S23 (6.3)–(6.6) 的 \(Q,d(q),\Delta_m\) 定义唯一 QP 最小解 \(\theta(q)\) 与 \(N_m(q)=V\theta(q)\)。
-- **Conclusion**：同一个 \(N_m:\mathbb R^n\to\mathbb R^n\) 全局 \(\sigma\)-Lipschitz，对每个 \(i,q\) 有 \(\|c_i-N_m(q)\|^2\le\sigma^2\|p_i-q\|^2+a^2\)；其 Cayley 代理 \(A_m\) 为强单调双 Lipschitz 同胚，对全部**样本点**有统一正反误差。对未知原图点还须 C20 的参数 coverage。
+- **Conclusion**：同一个 \(N_m:\mathbb R^n\to\mathbb R^n\) 全局 \(\sigma\)-Lipschitz，对每个 \(i,q\) 有 \(\|c_i-N_m(q)\|^2\le\sigma^2\|p_i-q\|^2+a^2\)；其 Cayley 代理 \(A_m\) 为强单调双 Lipschitz 同胚，对全部**样本点**有统一正反误差。对未知原图点还须 C20-v2 的同图、同尺度参数 coverage。
 - **Dependencies / Evidence / Objections / Status / Related Files**：严格凸 QP、正交抬升、变分不等式、同一性 contraction。[range_finite_data Q01](research/range_finite_data.md)，S23 thm:finite_qp。稿内证明及关键代数核读；全球定义的代理不等于全球认证原关系。
 
+<a id="c20-v1"></a>
+## C20-v1 · 局部 RL 不限成对尺度的错误扩写
+
+- **Status**：`refuted`。
+- **Exact Statement / Objects / Domain / Quantifiers**：旧总账把 C19 的样本与未知图点放在“完整或明确图块 RL”内，要求未知 Cayley 参数距某样本至多 \(\delta\)，却**没有**要求两点属于同一已认证图块、\(\delta\) 落入局部 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\) 的输入对尺度；仍声称 \(\lambda\|v-A_m(x)\|\le K_\delta\) 及后续全纤维界。
+- **Counterevidence / Scope**：[F36](FAILED_ROUTES.md#f36) 的两点完整图在 \(R_0=1\) 上满足局部全对 RL，未知参数距样本为 \(\delta=2\)，但实际代理偏差为 100，超过旧公式的 \(K_2\)。此反例只否定这次规范总账的无尺度扩写，不否定 S23 全图全尺度原稿。局部图块外完整纤维的同图门另见 [C20-v2](#c20-v2)。
+
 <a id="c20"></a>
-## C20 · 参数覆盖与三项可认证误差
+<a id="c20-v2"></a>
+## C20-v2 · 同图同尺度的参数覆盖与三项误差
 
 - **Status**：`candidate`；依赖 C19 的代理与同一纤维的全称 coverage，尚未独立验收整条证明。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：C19 样本来自完整或明确图块 RL，未知图点 \(p=x+\lambda v\) 到样本参数集距离至多 \(\delta\ge0\)，\(b=L\delta^\gamma\)，\(K_\delta\) 为 S23 (6.7) 的显式正根上界。对某一非空完整纤维要求它的**每个图点**参数满足该 coverage；对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 须有 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\) 的独立证书。若以候选参数 \(q\) 计算，取 \(\widehat x=q-\lambda\widetilde v\)，已认证的 \(e_N\ge\|\widehat N(q)-N_m(q)\|\) 还须和固定点残差合并，方得 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\) 的可用上界。
+- **Exact Statement / Objects / Domain / Quantifiers**：C19 样本与每个待认证未知图点均属于**同一个**完整 RL 图或指定图块，且该点的 Cayley 参数 \(p=x+\lambda v\) 与某个样本参数 \(p_i\) 满足 \(\|p-p_i\|\le\delta\) **并在 RL 成对尺度内**：全尺度版自动满足，局部 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\) 版以 \(\delta\le R_0\) 为充分门，亦可逐对直接验证 \(\|p-p_i\|\le R_0\)。置 \(b=L\delta^\gamma\)，\(K_\delta\) 为 [Q02](research/range_finite_data.md#q-cover) 的显式正根上界。若结论指向完整 \(F^{-1}(v)\)，该非空纤维的**每个图点**还必须属于同一 RL 图且逐个满足该覆盖和尺度门。对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 须有 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\) 的独立证书。若以候选参数 \(q\) 计算，取 \(\widehat x=q-\lambda\widetilde v\)，已认证的 \(e_N\ge\|\widehat N(q)-N_m(q)\|\) 还须和固定点残差合并，方得 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\) 的可用上界。
 - **Conclusion**：每个被覆盖图点有 \(\lambda\|v-A_m(x)\|,\|x-A_m^{-1}(v)\|\le K_\delta\)；覆盖整个纤维才得对应 Hausdorff singleton 界。对每个 \(x\in F^{-1}(v)\)，\(\|x-\widehat x\|\le K_\delta+\lambda(1+\sigma)\eta/(1-\sigma)+e_x\)。可行 QP 解的 Frank–Wolfe gap \(G\) 仅给 \(\|V\widehat\theta-N_m(q)\|\le\sqrt G\)；取 \(\widehat N(q)=V\widehat\theta\) 才可置 \(e_N=\sqrt G\)，且还需上述固定点残差。浮点 gap 需验证容差。
-- **Dependencies / Evidence / Objections / Status / Related Files**：C19、原图 Hölder、同输入/同输出交叉估计、逆代理 Lipschitz 常数。[range_finite_data Q02/Q03](research/range_finite_data.md)，S23 thm:covered、cor:coveredfibers、prop:evaluation、cor:totalerror。稿内证明；\(\delta\)-网的获得和维数复杂度不在定理自动保证内。
+- **Dependencies / Evidence / Objections / Status / Related Files**：C19、**同一可用尺度内的成对**原图 Hölder、同输入/同输出交叉估计、逆代理 Lipschitz 常数。[range_finite_data Q02/Q03](research/range_finite_data.md)，S23 thm:covered、cor:coveredfibers、prop:evaluation、cor:totalerror。全图全尺度是原稿身份；局部版是本库另行固定条件的版本，仍按 `candidate` 保留待审。\(\delta\)-网的获得和维数复杂度不自动保证；[F36](FAILED_ROUTES.md#f36) 阻断漏尺度版本。
 
 ## C21 · 有限总查询的全空间信息障碍
 

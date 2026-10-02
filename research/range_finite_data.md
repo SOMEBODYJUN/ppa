@@ -59,7 +59,11 @@ F^{-1}(v)\subset B(x_0,r)\quad
 <a id="q-bound"></a>
 ## Q02 · 覆盖的对象是 Cayley 参数，不只是原输入
 
-若样本来自 RL 图，且未知图点的 \(p=x+\lambda v\) 离某个样本参数不超过 \(\delta\)，置 \(b=L\delta^\gamma\)，
+**C20-v2 的同图同尺度门。** 样本与未知点必须属于**同一个**满足 RL 的完整图或指定图块；对每个待认证的未知图点，须有样本 \(i\) 使
+\(\|p-p_i\|\le\delta\)，而且这一对图点确实位于 RL 的成对测试尺度内。
+本页的全图全尺度假设自动满足后一项；若仅有
+\(\mathrm{RL}(\lambda,\gamma,L;R_0)\)，必须另有 \(\delta\le R_0\)
+（或逐对直接验证 \(\|p-p_i\|\le R_0\)）。置 \(b=L\delta^\gamma\)，
 
 \[
 K_\delta=
@@ -70,8 +74,9 @@ K_\delta=
 则对**每个此类图点**同时有
 \(\lambda\|v-A_m(x)\|\le K_\delta\)、
 \(\|x-A_m^{-1}(v)\|\le K_\delta\)。
-证明把 Hölder 样本偏差和 Q-cross 相加，再解
-\(t\le b+\sqrt{\sigma^2(t+\delta)^2+a^2}\) 的上根。若非空完整纤维的**所有图点参数**被此网覆盖，才得到到 singleton 的 Hausdorff 界 \(K_\delta/\lambda\) 或 \(K_\delta\)。当 \(\delta=0,\sigma=\sqrt\gamma\) 为 \(R/\sqrt2\)；对固定小 \(\delta\) 不声称常数最优。若完整 \(C(0)\) 已知，原输入 \(\|x\|\le B\) 或输出 \(\lambda\|v\|\le B\) 时有
+证明对上述**同一对图点**用 RL 得 \(\|c-c_i\|\le L\|p-p_i\|^\gamma\le b\)，
+再与 Q-cross 相加，并解
+\(t\le b+\sqrt{\sigma^2(t+\delta)^2+a^2}\) 的上根。若非空完整纤维的**所有图点**也属于该 RL 图且参数被此网覆盖，才得到到 singleton 的 Hausdorff 界 \(K_\delta/\lambda\) 或 \(K_\delta\)。只覆盖某个图块的点，不能把界授予图块外的完整纤维。当 \(\delta=0,\sigma=\sqrt\gamma\) 为 \(R/\sqrt2\)；对固定小 \(\delta\) 不声称常数最优。**以下参数球估计另需完整图全尺度 RL**：若完整 \(C(0)\) 已知，原输入 \(\|x\|\le B\) 或输出 \(\lambda\|v\|\le B\) 时有
 \(\|p\|\le T_B=\max\{4B+2\|C(0)\|,(2L)^{1/(1-\gamma)}\}\)；取得该参数球的 \(\delta\)-网是额外采样假设。来源：thm:covered、cor:coveredfibers，行 1227–1311。
 
 <a id="q-eval"></a>
@@ -119,7 +124,7 @@ e_x:=\frac{\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N}{1-\sigma}.
 | HE-W02 | {有限维 graph-maximal、非空完整纤维、W01、\(r>R\)} → 全纤维值域覆盖 | 稿内证明；非 maximal 无此结论 |
 | HE-W03 | {相对 maximal 窗口、同参数全局 completion、W02} → 固定窗口覆盖 | 扩张与窗口等式须核 |
 | HE-Q01 | {有限兼容样本、抬升、严格凸 QP} → 全球一致 \(N_m,A_m\) | 仅采样点有无覆盖的直接界 |
-| HE-Q02 | {Q01、未知参数 \(\delta\)-覆盖、原图 Hölder} → 该区域的正反配对界 | 全纤维需每个图点被覆盖 |
+| HE-Q02 | {Q01、同一图上的未知参数 \(\delta\)-覆盖、对应点对可用 RL} → 该区域的正反配对界 | 全图全尺度，或局部版逐对在 \(R_0\) 内（充分门 \(\delta\le R_0\)）；全纤维须全部图点属于该图并被覆盖 |
 | HE-Q03 | {Q02 全纤维 coverage、观测误差、反演求值证书 \(e_x\)} → 三项总误差 | QP gap 只给 \(e_N\)；还需候选点固定点残差换算为 \(e_x\)。浮点误差不能只凭机器输出 |
 | HE-Q04 | {确定性有限总查询、无界 Hölder 类} → 全空间统一认证不可能 | 明确不可区分图构造 |
 | HE-B01 | {精确多值逆纤维、解析代理} → 稳定近似与不稳定精确逆的分离 | 单调例，不主张新算法优越 |
