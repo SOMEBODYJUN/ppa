@@ -5,7 +5,7 @@
 <a id="mr-moment"></a>
 ## C126-v1 · 全部有限支撑律的精确矩门
 
-令 \(E\) 为可测状态集，\(e,c:E\to[0,\infty)\) 均有限可测，\(1\le p,r<\infty\)、\(q>0\)、\(K<\infty\)。假设存在 \(s,a\in E\) 使 \(e(s)=c(s)=0\) 且 \(e(a)>0,c(a)>0\)。则
+令 \(E\) 为可测状态集，\(e,c:E\to[0,\infty)\) 均有限可测，\(1\le p,r<\infty\)、\(q>0\)、\(0\le K<\infty\)。假设存在 \(s,a\in E\) 使 \(e(s)=c(s)=0\) 且 \(e(a)>0,c(a)>0\)。则
 
 \[
 \|e\|_{L^p(\mu)}\le K\|c\|_{L^r(\mu)}^q
@@ -35,7 +35,7 @@ D_\eta^2=\int\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2\,d\eta,
 \tag{MR2}
 \]
 
-此处 \(\Psi(\mu)=\inf_{\pi,\eta}D_\eta\) 正是[同步 OT 残差](../../cone_markov.md#m-psi)；输出耦合的第二边缘因 \(\pi P=\pi\) 而留在不变律集。假设对**每个** \(\mu\in\mathcal A\) 都存在这一类合法对 \((\pi_j,\eta_j)\)，使 \(D_{\eta_j}\to\Psi(\mu)\) 且对所有 \(j\) 有同一个有限 \(\chi\ge0\) 的 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\)。则
+此处 \(\Psi(\mu)=\inf_{\pi,\eta}D_\eta\) 正是[同步 OT 残差](../../cone_markov.md#m-psi)；输出耦合的第二边缘因 \(\pi P=\pi\) 而留在不变律集。假设**存在一个** \(0\le\chi<\infty\)，对**每个** \(\mu\in\mathcal A\) 都有这一类合法对的序列 \((\pi_j,\eta_j)\)，使 \(D_{\eta_j}\to\Psi(\mu)\) 且对**所有 \(j\)** 有 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\)。则
 
 \[
 d(\mu)\le\frac{1+\sqrt\chi}{1-c_0}\,\Psi(\mu)

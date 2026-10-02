@@ -1,212 +1,33 @@
-# Research State · 2026-10-02
+# 当前研究状态
+
+本页只记录**现在**可执行的研究前沿与阻塞。精确陈述和状态见 [Claim 总账](CLAIMS.md)，公式及证明见各主题正文，合取边见 [逻辑契约](research/LOGIC_CONTRACTS.md) 和 [超边图](research/HYPERGRAPH.md)。来源谱系和语义覆盖任务在 [审计区](research/audit/SEMANTIC_INVENTORY_PLAN.md)；不要求先阅读 `history/sources/` 才能理解已重写的命题。若某条仍标 `source-report` 或 `candidate`，不得把来源目录当作缺失的规范证明自动补齐。
 
 <a id="active-frontier"></a>
-## 现在从哪里继续
+## 活跃前沿与完成门
 
-| 优先 | 精确待办与输入 | 达成标准 / 真实阻塞 |
+| 方向 | 已可直接调用的规范内容 | 精确未闭义务 / 完成门 |
 | --- | --- | --- |
-| 总体规模比较 | [operator_space](research/operator_space.md#size) 的完整原图、真残差与统一测试域上，冻结计数对象 \(F\) 或 \((F,\lambda)\)、三类成员谓词和一项大小不变量；先用同页的 proper 不保纲、局部观测丢远端图反例攻击 | 目前**没有**冻结的共同母空间与量尺，不能声称总体规模定理；I-097–099/I-102 原证明仍缺件，旧 N10 只作待恢复的来源报告 |
-| 局部值域模型 | [C05-v2 条件证明](research/canonical/local_range_without_supercriticality.md#lr-theorem) 与 [C70 度量链](research/canonical/finite_sample_collar.md) 已重算；下一步给一个目标原生模型逐输出认证整窗 \(T\) 的近端包含、两项估计、非空紧 usc/acyclic 与同一 collar | 有限样本只证包络，不能提供整窗的拓扑/全称门；9/25 原稿 [C05-v1](research/holder_structure.md#h07) 仍保留其 \(q\gamma>1\) 候选身份，外部文献适用门已核 |
-| 清洗未裁决来源 | 按 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv) 选可独立复算的小节；先区分同一对象的不同观察与重复文件 | 目前 108 行来源单元有逐项去向（102 rewritten、3 superseded、3 deferred）；251 原件和 178 ZIP 成员的哈希清点不是验收。[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 已规定全库逐段枚举和两道验收门，目前只对三个内容组作不同深度的试点，不能从单元数/文件数算覆盖率 |
+| **总体规模比较** | [D01–D04](research/foundations.md)、[算子空间的反塌缩测试](research/operator_space.md)；局部观测丢完整图、proper 不保纲 | 冻结自然、参数中立的完整原算子母空间 \(\mathfrak X\)，计数对象 \(F\) 或 \((F,\lambda)\)、RLEB/LT/极大单调的同域成员谓词与非退化大小不变量 \(\mathfrak I\)；在此同一空间证明或反驳总体比较。当前**没有**这样的总体定理。来源报告的孔隙否定缺原证明，不升级为本库结果。 |
+| **局部 RLEB–PPA** | [图块收敛](research/rleb_ppa.md)、[指定分支弱接口](research/canonical/named_branch_local.md)、[全对到锚的桥](research/canonical/all_pairs_verifier.md)、[窗口和闭域门](research/canonical/residual_window_bridge.md) | 对一个**指定的完整原生关系**证明同一轨道区域的全部纤维排他、输入 coverage、真实输出残差 EB、统一兼容与留域；不可由全对 RL 单独推出。一般模的点收敛另需 Dini。M1 历史原生循环方程与已核显式映射的身份桥仍缺完整方程和全部合法选择。 |
+| **全局结构与有限纤维** | [剪切与同常数扩张](research/canonical/holder_extension.md)、[结构候选正文](research/holder_structure.md)、[值域及有限数据](research/range_finite_data.md) | C03/C04、C18–C20 的稿内证明仍为 `candidate`：逐项核有限维 properness/degree、固定点实现、影子锐常数、QP 与完整纤维 coverage。`e_N` 只认证候选参数处的 QP 输出；反演三项误差另需固定点残差换算为 `e_x`。固定维数影子最优因子开放。 |
+| **局部值域** | [C70 样本包络/整窗余量](research/canonical/finite_sample_collar.md) 与 [C05-v2 条件拓扑证明](research/canonical/local_range_without_supercriticality.md)；[一手引文适用门](research/LITERATURE.md#lit-grn-2002) 已核 | 给一个目标原生模型逐输出认证**同一个**指定 \(T\) 的近端包含、两项整窗估计、非空紧 usc/acyclic 值、同一 collar 与上同调门。有限样本不认证这些全称条件。PDF 原稿 C05-v1 的 \(q\gamma>1\) 候选身份不被只需 \(q>0\) 的 v2 悄悄替换。 |
+| **锥、Markov 与随机近端旁支** | [锥/Markov 对象与条件](research/cone_markov.md)、[有限状态顶点证书](research/topics/random_markov/finite_state_certificate.md)、[C126/C127 矩与回耦](research/topics/random_markov/moment_recoupling.md)、[随机近端](research/canonical/random_proximal.md) | 锥 MSCQ 接 PPA 真残差需同一零集及锥残差桥；随机条件残差、同步 \(\Psi\) 与真实 law-step 各有不同目标。原生回耦的**同一输入最优近极小对**、目标边缘和损失界尚未对一般多值算法认证。外部先行性及未重写的旧推论独立待核。 |
+| **来源语义覆盖** | [逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv) 当前有 108 行（102 rewritten、3 superseded、3 deferred），[来源位置/字节组索引](research/audit/SEMANTIC_INVENTORY_PLAN.md) 保持溯源 | 251 个物理文件与 178 个 ZIP 成员只是 429 个出现位置、346 个字节组；尚未穷尽数学及证据单元的分母。三个内容组做了不同深度的逐段试点；其余内容须按 P1–P5 枚举并裁决。不能从 108/251、108/346 或图节点数报告清洗完成率。 |
 
-[C08 抽象模传递](research/canonical/solution_selection_rates.md#ss-transfer) 现有局部尺度逐步闭合的独立证明；[C115/C116 二次模型](research/canonical/solution_selection_rates.md#ss-quadratic-object) 把完整两值近端、真全纤维 EB、同一固定 collar 的共同超几何尾，与逐轨道 Q 二次和根对数坏选择分开。SS1 定理 2/3、§5.2 尚未逐项重写。
+## 条件链的使用顺序
 
-[C117–C119 signed-Schur](research/canonical/signed_schur_growth.md#ss-object) 按 S19 六个标签重构了切向反演、跨支全对模、幂次与 jet、平方根完整原生图；v2 只要求显示参数域上的图包含，S19 邻域全图包含的字面读法及平方根实例冲突保留。完整纤维识别只在开输入领圈 U，真实 EB、零锚、兼容和留域仍各自验证。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定 429 来源位置、346 字节内容组的穷尽枚举与验收步骤；来源层已生成索引，两个内容组已逐段试点，第三个只做结构分段，不是 100 行之外内容的验收。
-[429 个来源位置索引](research/audit/SOURCE_OCCURRENCES.tsv)及[346 个字节内容组](research/audit/PAYLOAD_GROUPS.tsv)现已由可复现生成器建立并双向核哈希与 ZIP 成员；格式/角色、文档解码和逐段语义枚举仍为 `pending-*`，尚不能称分母已建立。后续按计划 P1–P5 逐批给每段去向。
-[逐段试点](research/audit/SEMANTIC_UNIT_SEED.tsv) 把 S19 signed-Schur 源成员 452 行和 SS1 修订稿 763 行分成 11 与 19 段，另把 Z07 的 GX-053–065 成员 1219 行分成 39 个连续结构段。前两份有 16 段规范锚点、14 段待裁决；第三份有 13 张卡及共同旋转族段有部分对象锚点，所有 39 段仍须按独立观察与文献事实细分。三份成员无行覆盖空隙，另外 343 个内容组及本试点第三份的语义分母均未完成；已分段绝不等于已审定数学内容。
+1. **确定对象与残差。** 写完整图还是图块、\(S\subset F^{-1}(0)\) 还是完整零集、输入对距还是输入球、\(r_F\) 还是选中步或概率耦合。跨主题字母按 [符号契约](research/NOTATION_CONTRACT.md) 重新绑定。
+2. **在同一窗口合取前提。** 例如从全对 RL 到 PPA 必须另证 coverage、零锚、实际输出真 EB、兼容与留域；从 Markov 收缩到原同步 \(\Psi\) 的线性 EB，须另证近极小 OT 对上的回耦损失。[条件契约](research/LOGIC_CONTRACTS.md) 不容许把不同对象的证书拼接。
+3. **按证据层调用。** `derived-checked` 只在正文注明的推导和审查范围可继续使用；`candidate` 与 `source-report` 是待审入口，不是规范层已闭证明。单个 fatal objection 阻止升级。[失败路线](FAILED_ROUTES.md) 给明确反例和重启门。
 
-本批 [C108/C109 孤立极点图](research/topics/examples/isolated_pole_relation.md#ip-object) 修正来源的连通域措辞，重算全步长完整纤维和锐模，并证明严格近端 Lipschitz 仍可无非零无限合法路径。[C110/C111 算术阶梯](research/topics/examples/rational_irrational_staircase.md#gx056-object) 区分有理亚临界步长的单值断裂、无理步长的同输入碰撞以及原算子真残差与近端最小步残差。两张卡只验收所列 GX-055/056 单元；在同 ZIP 中尚有其它例卡与历史分类标签。
+## 下一轮具体行动
 
-[C112–C114 乘积剪接](research/topics/examples/product_splice.md#gx057-object) 从 GX-057 同一完整图重算半阶真零 EB、所有路径及全图步长相变；在临界步长完整乘积的锐半阶系数由 (P15) 的一变量最大式给出，严格大于 2。临界点同时限制输出的图窗才有系数 2，仅限输入的固定窗口仍严格大于 2；这是范围差异，不是同一 Claim 的常数矛盾。同包 VI 标签和先行性仍未核。
+1. 先对总体比较写一页 \((\mathfrak X,\mathfrak I,\mathcal R,\mathcal L,\mathcal M)\) 规格；用 [operator_space](research/operator_space.md) 中局部观测、远端自由度与共同塌缩机制立即攻击。若量尺把目标类一同判小，改量尺或表示，不追加孤立成员例。
+2. 为一份目标原生值域模型逐输出验证 C05-v2 的整窗 \(T\)，或给其条件不可同时满足的明确障碍。C70 与文献定理适用门已有规范记录，不重复把样本误当全称证据。
+3. 对 C03/C04、C18–C20 的一个承重稿内步骤作真正独立证明或反例攻击，优先选择有限维 degree/fixed-set 或 QP/反演链；所得结果改变 Claim 状态时同步正文、总账与图。
+4. 按 [语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 继续可验证的来源逐段裁决。每个有价值单元重写成自足正文；重复文件、来源报告、任务书和真实数学证明分开登记。缺失原证明不得补造；新数学研究不必等待覆盖任务全部结束。
+5. 每次改动执行 [增长协议](RESEARCH_PROTOCOL.md) 的 Claim 版本、符号、合取图和验证门；由空白上下文只读规范层复述一条新承重链，发现需要猜原件定义时补正文或降状态。
 
-[C92 两变量半阶 MR](research/topics/examples/identity_square_branch_union.md#is-mr) 在 GX-068 同一完整并图中补共同输入/目标窗口，并严格区分最近逆点与全纤维；[C95 二参数区域](research/topics/examples/identity_square_branch_union.md#is-semimono) 又以全体跨支斜率证明 \(\mu,\rho<0,\mu\rho\ge1/4\) 与 C89 正 \(A\) 门不相交。[C93/C94 闭球法锥](research/topics/examples/ball_normal_cone.md#bn-object) 把 GX-067 的固定目标真空零系数与逆目标不稳定分离。敌对审查纠正了 \(0\cdot\infty\) 和 HREG/UHREG 分母的最初草稿表述。原卡其它观察和全库清洗仍开放。
+## 完成判据
 
-[C89–C91 非 tied 二参数图](research/canonical/non_tied_cayley.md#nt-object) 从 9/01 ZIP §2.1 的三个精确单元重新推导平移 Cayley 球、普适锐模、步长碰撞、可逆单调变换和同参数图极大门；这一批仅关闭登记单元，同稿 §2.2 以后和外部优先性仍开放。
-
-本轮新增 [C88 同核不同随机表示](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp)：四状态核与唯一不变律固定，逐状态独立开关改变同步 OT 成本与锐系数。它是新构造，不计作旧来源单元验收。空白接收修正了 E115 真残差的局部窗遗漏及 README 对 C15 已完成证书的过期暗示；C05-v2 的拓扑导入已按现有条件核，原生模型的整窗全称认证仍是开放义务。
-
-以下为**按时间形成的研究日志**。其中“下一步”“本轮”只表示当时 checkpoint 的判断；当前优先级以上表和文末活跃目标的精确义务为准。
-
-## 本批增量：跨主题状态与有限数据误差类型
-
-全局符号协调及空白接收核了 RL 的 \((\lambda,\gamma,L;R)\) 顺序、完整 \(r_F\)、图块与 Markov 残差的局部重绑定；在受检链中未发现这几类记号的现行冲突。总账对原先缺状态值的 C07、C09–C14、C18–C21 作保守登记，并为二十条已在证据栏写有 `derived-checked`、却没有 `Status` 字段的 Claim 补出显式字段；C12-v0 的反例与 v1 的完备度量修补分别保留。此项是证据层协调，未将稿内候选因排版而升级。
-
-空白接收从仓库入口沿 C56→C53、C70→C05-v2 和有限数据链复读，发现 [Q03](research/range_finite_data.md#q-eval) 原摘要把 QP 输出误差 \(e_N\) 与反演求值误差 \(e_x\) 混为 \(e\)。S23 原稿的 `prop:evaluation` 与 `cor:totalerror` 本来是分立条件；现已恢复候选参数的固定点残差换算，修正 [C20](CLAIMS.md#c20)、[E51](research/LOGIC_CONTRACTS.md#e51) 与 [F35](FAILED_ROUTES.md#f35)。这属于规范层协调错误，**不是**来源材料缺失或总体规模比较的数学开放问题。空白复读只认证受检路径的可接续性，不能充作 346 个内容组的全局数学审稿。
-
-## 本批增量：跨正文符号协调与 GX-058 图几何
-
-[符号契约](research/NOTATION_CONTRACT.md) 固定跨主题调用的 \(\mathrm{RL}(\lambda,\gamma,L;R)\) 顺序、真残差与其它残差的类型；已修正参数字典/例库的顺序冲突，锥最小面与 PPA 原关系的 \(F\) 冲突，以及 C16 的 \(\rho=0\) 端点。条件 Markov 摘要补齐二进制与 Gaussian 残差、采样归一化及成本定义，空白 AI 不再需要从历史原稿猜这些符号。C01–C06、C16/C17 的状态词作明确登记，但没有将来源候选升级为已证定理。
-
-[C124/C125](research/topics/examples/skew_ball_inverse.md#sb-geometry) 对 GX-058 的完整 \(K+N_B\) 图另核极大单调、rectangular、非 paramonotone、全部近端纤维和锐全图 \(L=1\) 反射模；C98/C99 的原算子 MR 量词保留为独立结果。来源 GX-058 仍为 `segmented-partial`，外部 BWY 归属未核。逐源表现在 108 行（102 rewritten、3 superseded、3 deferred）；三个试点之外的语义分母仍未建立。
-
-## 本批增量：旋转族 GX-062/063 与来源解释纠错
-
-[C122/C123](research/topics/examples/planar_rotation_family.md#pr-object) 把 Rot-1–5 的完整参数、唯一 Minty 奇点、对距尺度锐模和离散 Fourier 循环阶重写；GX-062/063 的两个取样角有相同逆像系数 1，却有不同强单调系数与循环阶。[F34](FAILED_ROUTES.md#f34) 修正来源在这个族内声称强模不能决定循环阶的过强句。外部例号和先行性尚未核；14 个结构段有部分锚点不能作全卡已验收。
-
-## 本批增量：GX-061 伴随方向与 GX-060 的等距身份
-
-[C120/C121](research/topics/examples/adjoint_volterra.md#av-object) 核右端点完整逆纤维、直接图几何、原算子与近端步残差、高频与全对反射；时间反射将 C105 的逐点强收敛和有限幂范数精确转移。GX-060/061 是两份来源方向观察，只计一个等距不变量例型；历史其它标签和外部先行性未关闭。空白 Astra 对本单元的端点、核与 CCA-M10 交叉核验未发现错误，并特别指出不能把“independently”误判为历史未纠正的数学反例。
-
-## 本批增量：GX-060、GX-054 与空白接收修补
-
-[C104/C105](research/topics/examples/volterra_integration.md#vo-object) 从同一完整 Volterra 图分离非 rectangular 的直接见证、真残差与近端步残差的统一消失 gauge 障碍，以及“每个轨道强收敛、任意有限幂范数仍为 1”。强收敛经能量式与稠密值域直接证明，不从图单调性自动推出；GX-061 的伴随端点与完整近端现由 [C120/C121](research/topics/examples/adjoint_volterra.md#av-object) 另核；它是独立的来源观察、同一等距不变量例型。
-
-[C106/C107](research/topics/examples/negative_cubic_branch.md#nc-object) 从 GX-054 计算完整近端零输入三根、受限图块的锐线性全对模与非零路径有限步离自然域。其固定零目标与两目标 (1/3) 模和 EX03 正三次在符号变换下对应，不重复计为另一种独立正则机制。首次空白接收对 C56→C53 和 C70→C05-v2 的条件链未见致命缺口，但发现 C06 实际尾定义和本页旧“下一步”有歧义；已逐项修正。接收只覆盖所查链，尚未证明全库完工。
-
-## 本批增量：GX-059 的完整逆像与图几何边界
-
-[C102/C103](research/topics/examples/skew_compact_diagonal.md#scd-object) 从 GX-059 重算无限维 `D+B` 的全部逆纤维和块谱，并以具体谐和级数序列直接否定 rectangularity，取代旧稿尚未核的 BWY 定理调用。其近端全域严格收缩、反射锐模为 1；该对照不因有限维截断转移。外部先行性和同稿其它 GX 仍开放。
-
-## 本批增量：GX-053 与空白接收修订
-
-[C100/C101](research/topics/examples/bounded_negative_square.md#bns-object) 从 GX-053 重算有界负平方完整图的全部点对及近端纤维：步长 1 的全图半阶锐性在右端点，零目标真残差半阶在零点，每个正输入的合法近端路径有限步越域。二者不是零点收敛的合取证书；历史 Spingarn/VI 标签与先行性未审。空白接收还发现 operator-space 的两个不同观测窗被混读和 GX-068 二参数区域的过期待办，已改正。
-
-## 本批增量：GX-066 与空白接收的条件措辞
-
-[C96/C97](research/topics/examples/bounded_negative_identity.md#bni-object) 从有界完整负恒等图重算固定步长的全对锐常数、\(\lambda=1\) 的零输入多值和所有合法路径的分类。\(\lambda>2\) 时近端在其自然域内收敛，但同参数反射仍扩张；固定零目标真 EB 不能给输入覆盖。空白接收能从仓库恢复 C56→C53 的承重合取链；它发现 C70 摘要把有限样本与已假设整窗非空的 v1b 混说，已在正文分版本纠正。逐源表补回此前确已重写却遗漏的 C22/C23、EX01–EX03 来源定位，并修正 C92/C95 的过期待办。这次接收只通过抽查路线，不代表全库清洗或数学全局审稿。
-
-[C98/C99](research/topics/examples/skew_ball_inverse.md#sb-object) 从 GX-058 的完整 \(K+N_B\) 重新求逆，证明全部图点的平方根界、全局每个 \(0<q\le1/2\) 锐系数与边界非零目标的局部锐半阶。来源只提供平方根转角线索，规范正文给可复核的全纤维证明及取等序列；这没有解决反射 RL 或同稿其它 GX 属性。
-
-## 本批增量：GX-032 的受限图与母图拆分
-
-[C85–C87](research/topics/examples/restricted_root_graph.md) 从同一 GX-032 的两种对象重算：短图 \(F_U\) 的锐全对线性 RL \(L=3\)、真二次 EB 和无第二步，与母图 \(F_\infty\) 的完整远支、同输入碰撞、非零路径发散分离。[F28](FAILED_ROUTES.md#f28) 保存把受限图公式转授给母图或无限轨道的具体断点。两份来源成员只裁决了选定 GX-032 单元，不关闭 ZIP 其它卡、历史 LT 引文和外部先行性。
-
-## 本批增量：有界平方图的锐性位置与留域门
-
-[C83/C84](research/topics/examples/bounded_square_minty.md) 将 GX-065 重写为一个固定的完整有界关系：\(\lambda=1/2\) 的全图锐半阶来自 \(x=-1\) 的 Minty 左端点，零目标的真残差锐半阶来自 \(x=0\)。两项不等式在零点小窗可同时成立，但其半阶乘积 \(q\gamma=1/4\) 不给所需收缩门；正侧实际路径 \(kp_k\to2\)，负侧有限步越自然输入域。原 VI 分类和外部先行性尚未审。空白 Astra Ultra 发现 [F10](FAILED_ROUTES.md#f10) 把 EX02 的“算子范数每个有限幂等于 1”写得像“每条轨道范数等于 1”；已按原完整对象修正，固定轨道仍强收敛。空白接收对 C56→C53 路线的通过仅限受检链，不表示全仓证书。
-
-## 本批增量：GX-064 的临界全对模与无零目标边界
-
-[C81/C82](research/topics/examples/positive_sine_phase.md) 从完整 \(F=2+\sin x\) 重算步长三相、\(\lambda=1\) 的全对/固定基点不同锐下确界、非零目标 3 的固定目标半阶及所有近端选择向负无穷。临界图点输出 2 与 EB 目标 3 不同，完整算子零集为空；不能将两个局部指数拼成 PPA 零集速率。CCA-M08 已把来源旧 `C-DISAGREE` 改为 `C-REFINE`，规范层据此只标原对象的观察精化。旧 VI、二参数与先行性仍待核。
-
-## 本批增量：有限状态 §5–§6 与空白接收复测
-
-[FS-HOFFMAN](research/topics/random_markov/finite_state_certificate.md#fs-hoffman) 为 C15 增加不依赖锐顶点比值的备用证明，严格把非空零面的固定矩阵 Hoffman 界与空零面的紧性正下界分开；[LIT-HOFFMAN-1952](research/LITERATURE.md#lit-hoffman-1952) 已按原文核其有解系统门。[C80](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 则是独立身份：固定有限系统的原嵌套 \(\Phi=\Psi^2\) 全域 Lipschitz 且连续分片仿射，无需 exact-zero 判据。两项不能借此升级为无限状态或跨系统统一模。来源 §5/§6 单列逐源去向，外部先行性仍待核。
-
-空白 Astra Ultra 从 README 出发独立重构 C56→C53 的 coverage、零锚保距离、实际输出真 EB、兼容和严格留域合取链，能指出总体规模的共同母空间/量尺尚未冻结，属于真实数学开放；I-097–099/I-102 属来源缺件；其它历史单元是尚未完成的清洗。它发现文末旧计数虽处于历史日志，但易被检索当成现状，现已改为本页活跃数字。该通过只说明**一条受检路线可安全接续**，不认证全仓所有命题。
-
-## 本批增量：C15 完整证书、GX-076/077 与空白接收
-
-[C15-v1](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 保持原命题身份，把摘要重写为有限对偶 tight-edge 计划分支、精确零成本顶点测试和锐全律空间 \(W_2/\Psi\) 系数的完整证明；不从 EB 宣称动力收敛，两点翻转提供同残差反例。来源一般稿 §§1–4、§7 和 §8 当时有逐项去向；其后 §5/§6 已另立去向，先行性仍未验收。
-
-[GX-076 C76/C77](research/topics/examples/hemiregular_piecewise_parabola.md) 以完整异维数映射分开固定目标半阶、最近逆点线性与共同窗口的两变量锐半阶，显式处理负纤维的开放端点和非局部闭图。[GX-077 C78/C79](research/topics/examples/absolute_value_subgradient.md) 将原算子残差跳跃的零下确界模与完整近端步残差的锐系数 1 分开。[F26/F27](FAILED_ROUTES.md#f26) 留下两个不能互授的机制。这五个本轮逐源单元不关闭同 ZIP 的其它 GX。
-
-空白 Astra Ultra 只凭仓库成功恢复主要对象、合取关系和候选状态，并定位 C31 的过期 M1 语句、C69 的硬支持参数遗漏、S25 引文导航与 C05-v1/v2 的含糊表述；已逐项修正。它确认总体规模问题的共同母空间与量尺仍未冻结，属**实际开放数学规格**；I-097–099/I-102 的原证明缺件是材料缺口；其余大量逐项清洗尚未完成是研究工作量，并非仅导航不佳。此处当时待审的 C05-v2 精确 Čech/Vietoris–Begle 导入后来已按其明示条件核验；原生整窗认证仍须审查，不能因空白接收就升级原稿或整个原生模型。
-
-## 本批增量：条件值域的新版本与 GX-075
-
-[新版本 C05-v2](research/canonical/local_range_without_supercriticality.md#lr-theorem) 在保留 C05-v1 全部整窗、collar 和拓扑合取前提下，仅将 qγ>1 改为 q>0；Vietoris–Begle、上同调注入、紧 morphism Lefschetz 与扰动同伦已独立逐步检查。一个 qγ=1/2 的有理网格实例验证此放宽非空。原稿 v1 仍是原稿事实；现实原生模型能否给这些全称前提、优先权及其它拓扑候选依然未闭。
-
-[GX-075 / C72–C75](research/topics/examples/diagonal_spike_relation.md) 从完整图重算真算子/完整步线性 EB、每条合法近端路径的锐有限长收敛、全对同输入碰撞和完整二参数区。[F25](FAILED_ROUTES.md#f25) 保存从收敛逆推全对 RL 的断点。逐源表为此增加一行；同 ZIP 的其它 GX 仍待裁决。
-
-## 本批增量：惰性四循环的最优运输边界
-
-[C71](research/topics/random_markov/lazy_cycle_ot.md#lc-sharp) 从 9/14 有限状态分类稿 §10.2 重算固定四状态模型的同步 OT 残差：位移签名碰撞不妨碍原残差精确识别唯一不变律，整律空间锐 EB 常数为 √(13/p)。同一核放松内层输入 OT 最优性则有假零点。此独立对象卡不关闭来源稿的有限状态一般分类、速率兼容或优先权；该批完成时逐单元表增至 51 行，随后 GX-075 增至 52 行。
-
-## 本批增量：9/25 度量层与拓扑候选分离
-
-[C70](research/canonical/finite_sample_collar.md) 从 S25 §8 独立重算有限样本全空间双包络、整窗全称步界和 EB 加上 collar 后的内域余量。C70 不给固定点或值域球；原稿 C05-v1 当时的 usc/acyclic、上同调和 Lefschetz 合取仍独立；其后 C05-v2 已对条件拓扑链重算。按 (8.3) 与 (8.4)–(8.7) 两个来源单元登记，不把 §8 整节判为已审。
-
-## 当前增量：同常数扩张、GX-068、矩包络和新图的局部指数
-
-[HE-EXTENSION](research/canonical/holder_extension.md#he-extension) 从 Gaussian 正定核重建 Hilbert \(\gamma\) 雪花，导入正式版 [LIT-ALM-2021 Theorem 1.2](research/LITERATURE.md#lit-alm-2021) 的同常数 Hilbert Lipschitz 扩张，闭合 H01 **固定参数 graph-maximal 完成**这一步的适用条件；不由此裁决 C03 整个影子定理或其他外部定理。
-
-[C66–C68 / GX-068](research/topics/examples/identity_square_branch_union.md) 当时把 \(F(x)=\{x,x^2\}\) 的真算子残差锐半阶、指定身份近端的线性步残差、完整多值近端的半阶最小步残差及同输入跨支碰撞分为三个 Claim；当时未核的两变量 MR 和二参数区域**现已**分别重写为 C92、C95。[C65](research/topics/path_dynamics/m1_sign_lift.md#sl-rl) 在**新定义**的完整 Sign 图上，证端点指定输入窗口的最大全对 RL 指数 \(1/3\)；它不认证旧循环方程或无界全图常数。
-
-[C69 标量矩包络](research/topics/random_markov/scalar_moment_envelope.md#sme-envelope) 对硬支持下的全部概率律给精确凹上包络与两点取等。临界 \(\gamma q=1\) 时，若把同变量的两条逐点证书分开取最坏矩再复合，会虚增 \((R/t)^{1-\gamma}\)；[F24](FAILED_ROUTES.md#f24) 保存这个失相关机制。合法随机算法的同耦合、实际支撑和目标边缘仍是独立输入，不能将 C69 当作原生收敛定理。这批数学卡由三条独立代理分工并互相逆向检查；主线核量词、登记来源和依赖。
-
-## 当前增量：三条独立重写与一个原生身份边界
-
-[C60/C61](research/topics/examples/dr_tangency_transversality.md) 重算 9/01 ZIP 的 GX-069/070：同一 Douglas–Rachford 算法残差 \(G=I-T\) 在切触线/抛物线的唯一投影管有全邻域锐半阶 EB 模 1，但不存在统一一步距离严格收缩；横截两线则全域线性可逆，精确模 \(1/\sin\theta\)，轨道因子 \(\cos\theta\)。这是两种对象，该模不能授给法锥和。
-
-[C62/C63](research/topics/random_markov/proximal_selection_seam.md) 对同一 proper Borel 目标的**全局**近端与指定 Borel 选择核重证所有域内平稳律只支撑吸收点，无需 \(f\) 可积。一个二维非乘积 group-\(\ell_0\) 目标有闭完整近端图和唯一不变律，却有有限长度轨道趋非不变点；每个完整 \(W_2\) 零点邻域内的真实 law-step 残差都缺一致消失 gauge EB。历史 V10 有理数脚本本轮复跑，只算有限代数观察；[F22](FAILED_ROUTES.md#f22) 留下闭图与核连续性之间的断点。它与 C22/C23 的随机换目标、同步 OT \(\Psi\) 均不同。
-
-[C64](research/topics/path_dynamics/m1_sign_lift.md) 是从已核显式 T **新反演**出的完整 Sign 多值关系：全部图值与单位步长 resolvent 的所有纤维已算，\(J_{F_{\rm lift}}=T\) 在整个 \(\mathbb R^2\) 成立，端点真残差锐线性模 3。历史多步 §5 只给外层 T、未给原生循环方程全部相位和选择；另一个 M1/SO-06 是不同算子。[F23](FAILED_ROUTES.md#f23) 固定这条仍未闭的身份桥。下一步若得到原生方程，须逐图点和逐路径对照，不得用新构造替它认证。
-
-## 当前增量：一般 gauge 的残差窗口
-
-[C59](research/canonical/residual_window_bridge.md#rw-positive) 将旧 foundations 定义0.4 的正幂缩域推广为有条件的一般非减 gauge 桥：窗口阈值 \(\delta\) 处若 \(\psi(\delta)>0\)，可在半径 \(\psi(\delta)\) 内删除 **\(r_F<\delta\)** 的限制，但仍只对 \(\psi\) 定义域内的残差作陈述。[F21](FAILED_ROUTES.md#f21) 的完整闭图与扁平 gauge 表明不能无条件删除；该例不满足附加全对 RL，不能扩大其否定范围。逐源去向已补 §0.4。下一步可核 §0 其他定义在不同稿件的版本冲突，或优先清洗尚无对象卡的 GX 与 M1 原生多值桥。
-
-## 前一增量：闭图与 Minty 自然域闭性的条件桥
-
-[C58](research/canonical/closed_graph_minty_domain.md#cg-closure) 从旧 foundations §1.1–§1.4 的剪切坐标继续推导：同一非空图块上全对模只需在对角线附近于零点消失，完备 Hilbert 空间中 Cayley 唯一延拓至自然域闭包，图闭 iff 自然输入域闭。**同一图块闭图且自然域在整个空间稠密**才给满输入覆盖；只稠密的非闭图、或只闭的真自然域均不够。E101–E102 明列两层额外门，不能把图块覆盖与完整 resolvent 任意纤维混同。§2 的 tied、inverse、缩放已在参数字典重算，这批将 §1–§2 五个精确单元补入逐源去向；这不是整份 foundations 的验收。随后 §0.4 的残差窗口边界已在上节处理。
-
-## 第二批增量：§3 图块验证器的零锚保距离
-
-[C56](research/canonical/all_pairs_verifier.md#av-bridge) 在实 Hilbert 空间把同图块全对 RL、指定输入 coverage 和 \(d(x,S_G)=d(x,S)\) 对所有活跃输入的保距离，精确接到 C53 的 B/A；实际输出真残差 EB、兼容和留域仍独立。[C57](research/canonical/all_pairs_verifier.md#av-gap) 以完整 \(F(y)=\{0,y\}\)、图块 \(G=\{(y,y)\}\) 表明全对 \(L=0\) 与满输入 coverage 仍可能在所有非零零距离输入失去锚，完整排他亦失败；[F20](FAILED_ROUTES.md#f20) 记录两个缺口。其后 §1.1–§2 的选定接口已按上节裁决；其他 GX 单元及 M1 原生多值桥仍开放。
-
-## 当前增量：§4–§5 的指定分支与全对边界
-
-[C53/C54](research/canonical/named_branch_local.md) 从旧 foundations §4–§5 重写了实 Hilbert 空间的 named PPA：B 整球分支覆盖、A 对所有小距离输入（包括零距离点）的近似最近零点锚、E 对实际输出的真实全纤维残差 EB、兼容与严格留域预算须合取。由 A/B 还可推出 \(U\cap\overline S=U\cap S\)，故无需额外假设全局闭零集或最近点存在。幂次门在 \(0<\gamma<1,L>0\)、\(\gamma=1\)、\(L=0\) 三种参数情形分别记录，只提供上阶和充分条件，不提供普适正 Q 因子。
-
-[C55](research/canonical/named_branch_local.md#nb-oscillation) 是该批新反例：完整闭图有指定分支 anchored \(\gamma=1,L=3/5\)、全图真 EB、实际收缩，但反射在任意零邻域非 Lipschitz。[F19](FAILED_ROUTES.md#f19) 阻止把这条弱接口的结论作为 R02 全对 RL 的证明。该批留下的 §1.3–§2 入口已在本次选定单元中处理；其他 GX 和 M1 原生多值方程仍须核目标对象与全部完整纤维。
-
-## 第三笔增量：逐图点移动锚与固定锚的边界
-
-[C51/C52 移动锚反射](research/canonical/moving_anchor_reflection.md) 从旧 foundations §6 重算实际图点的输出近锚双边比、幂型缺陷及正容差近锚选择。真 EB 是输出 y 的全纤维残差，p 随 y、w 改变；[F18](FAILED_ROUTES.md#f18) 的线性零集完整关系说明不能将它变成任意固定锚的反射或集合距离收缩。下一步从 9/01 其余未验收 GX 或 §5 的局部收敛门选独立单元，继续按同对象、同目标和实际分支逐项裁决。
-
-## 第二笔增量：非孤立解集的锚点漂移与锐性
-
-[C48–C50 / 非孤立 alignment](research/canonical/nonisolated_alignment.md) 重新证明 9/01 foundations §8–§9.1 的锚点界、真 EB 合成与同序列饱和。\(P_S(x)\) 和 \(P_S(Jx)\) 的存在必须覆盖整个输入家族；未取到的集合间 infimum 用近似点对处理。若没有 proximinality，NA-APPROX 用正容差并要求额外 \(\kappa\) 预算。统一 \(\mathcal A(r)\le Kr^\theta\) 与实际输出真 EB 只给 upper \(\theta q\)；[F17](FAILED_ROUTES.md#f17) 记录“不同序列的两个锐指数相乘”的量词断点。下一步选择一个尚未重写的 GX 对象或 §5 的局部收敛门，逐项核图、目标与轨道；不要把 C49 当作它们的普遍最优性证明。
-
-## 本轮增量：孤立零点与输入覆盖的独立门
-
-[C45–C46 / 孤立零点正文](research/canonical/isolated_zero_flatness.md) 重写 9/01 foundations §7.1–7.6：同图 germ 的 B/J/R 平坦性逐点等价，但从有利选中值倒推真实全纤维 EB 必须覆盖所有小残差图值；指定分支的上阶还要全部输入/输出窗口、小步门及闭球留域。正 Q 因子要求另一条归一化极限，不由上阶产生。双值关系已给反向的精确障碍。§8 的非孤立 alignment 已在上节另立 C48–C50，仍须保持孤立与非孤立版本分离。
-
-[C47 / GX-074](research/topics/path_dynamics/discrete_coverage.md) 将全图紧性、全对 RL 和目标 \(S=K\) 的真 EB 与输入 coverage 分离：[F16](FAILED_ROUTES.md#f16) 记录从前两者偷推零点输入球的失败机制。下一步若将此模型用于任何 PPA 结论，先明确初值是否在自然 Minty 域，以及是否另有不变性；更换零集目标会改变 EB 命题。逐源去向新增五个小节，不代表整份 foundations 已裁决。
-
-## 当前新增前沿：规范层继续生长
-
-上一批将 9/09 两份来源按**数学单元**重写为 [合法路径](research/canonical/path_atlas.md) C31–C33 和 [复合次正则](research/canonical/composite_subregularity.md) C34–C37；[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv) 明记哪些旧节被改写、哪些仍未审。历史 C11 复合任务与现 C11 极限回缩保持不同身份。两条新链都可以供未来研究调用，但不宣称旧文件全覆盖或文献新颖性。
-
-路径链的承重条件是每条实际选择的前缀延拓、统一终点收缩、可求和的**块内**位移及初值边界预算。旧札记的无限词逐词幂条件缺统一余量，非平凡周期也不能从整轨道有限总长定理推出；[F12](FAILED_ROUTES.md#f12) 给反例。本批从**显式单值映射**重算 [M1 两步捕获和锐一步收缩](research/topics/path_dynamics/m1_capture.md) C38/C39：它已有一步因子 $3/\sqrt {10}<1$，不能用作现有一步轨道定理必然失败的见证，[F14](FAILED_ROUTES.md#f14) 固定修订。下一步恢复原生多值广义方程，核其隐式求解和全部允许分支是否确与这个 T 一致；当前 C38/C39 只供显式 T 调用。
-
-复合链的承重条件是满行秩修复、凸链式规则和真实残差外层 EB 的合取；局部 PPA 还要全部乘子界、步长、gauge 兼容和留域。[F13](FAILED_ROUTES.md#f13) 的秩亏例阻止无条件传递。本批 [复合主题目录](research/topics/composite_regular/README.md) 对尖点外层给图真多值且局部近端一步识别的定量输入门 C40；[振荡反例](research/topics/composite_regular/oscillating_target.md) C41 给光滑坏驻点序列，证明无弱分离时到二阶目标的 EB 失败，[F15](FAILED_ROUTES.md#f15)。下一步研究带原生不抵消条件的秩亏版本，并单独核外部定理先行性。任何新结果按 [增长协议](RESEARCH_PROTOCOL.md) 直接进入正文及新 Claim 版本，不需等历史区清空。
-
-数学定义、精确命题与来源分别见 [foundations](research/foundations.md)、[CLAIMS](CLAIMS.md)、[SOURCES](research/SOURCES.md)。数学状态以本仓库的精确证据为准。
-## 活跃目标 A：RLEB–LT–极大单调的总体规模比较
-
-**Exact gap**：给自然、参数中立、保留完整原图与真实残差的对象空间 \(\mathfrak X\)，明定计数单位 \(F\) 或 \((F,\lambda)\)、合法选择及局部域量词，再选一个不把目标类一齐压小的大小不变量 \(\mathcal I\)，证明同一母空间中 RLEB、LT 公共 all-pairs 和极大单调类的规模关系。当前没有该总体定理。
-
-**已知组件**：完整全域 \(T=J_{\lambda F}\) 的图反演；匹配接口下 LT→RLEB 能量证书；固定紧 T-only 图卡 \(\Phi=(w,m)\) proper；有受限严格分离构造。均不能单独解决总体问题。[operator_space](research/operator_space.md)
-
-**承重障碍**：
-
-1. proper/quotient 不推出 category-preserving；单一局部 \(T\) 观测不保全局 \(F\) 和 \(r_F\)。
-2. 9/21 总账报告 N05/N08/N10 的共同塌缩与 N09 远端自由度；其中 I-097–099 原孔隙审计及 I-102 正式表示稿未在当前盘点的原件名中发现，保留“来源包报告”而非重构证明。
-3. 同时，9/21 旧 SOURCE-MISSING 是**当时**状态：I-001 已恢复 100/101 的历史展开内容（受限第三方 PDF 未入库）；I-002、I-003–005、I-059 已恢复；I-075 的 73 文件专题包以展开内容恢复，原重复 ZIP 未保留。I-005 实为审计**任务书**，不能当审计通过记录。解选择的实际修补证据在 I-059 内 revision_math_audit 与 revision_math_closure。
-
-**下一判别**：写一页 \((\mathfrak X,\mathcal I,\mathcal R,\mathcal L,\mathcal M)\) 规格，先找 N05/N08/N09/N10 的反塌缩反例；若量尺共同塌缩，换表示或不变量，而非在特殊层追加成员例。
-
-## 活跃目标 B：局部 RLEB 与结构稿的精确边界
-
-- **S19 局部 PPA**：coverage + 同图块全对 RL + 真实输出 EB + gauge 兼容 + 留域，给有限长及尾界；一般模还需 Dini。该组合的缺一条件不能静默删除。[R01–R04](research/rleb_ppa.md)
-- **9/19 新资产**：对数二支完整图 \(a\le1\) 显示几何距离收缩而切向漂移发散；\(a>1\) 收敛。统一尾与同图块全对连续性给局部极限回缩。这使“任意紧零集可实现”和“额外收敛条件下零集为邻域回缩”形成可检验的条件限制。[H04/H05](research/holder_structure.md)
-- **9/19 随机措辞**：原稿写 Polish，证明用给定 \(d_{\mathsf X}\) 完备；\((0,2)\) 上的确定性序列满足其他假设却收敛到空间外。原命题若按拓扑 Polish 解释为假；修订版本明确 complete metric。[H06](research/holder_structure.md)、[FAILED F07](FAILED_ROUTES.md)
-- **S23 全局结构**：同一个强单调双 Lipschitz 影子及有限维完整纤维分类的证明已局部独立重算，未见内部计算致命断点；Hilbert 同常数扩张的导入门已核；有限维 degree/fixed-set 的完整应用及同对象先行性仍是独立门。固定维数的最优因子仍开放。
-- **S23 值域与有限数据**：最大根定位给全局与相对 maximal 窗口的**整个纤维**锐覆盖；有限兼容样本的 QP 给全局一致 \(A_m\)，但未知图点只在 Cayley 参数覆盖下认证。可验证 gap、噪声和求值误差叠加成三项界；有限总查询在无界 Hölder 类不能全空间认证。[range_finite_data](research/range_finite_data.md)。这条链原八条 Claim 未记录，现立 C18–C21。
-- **S25 局部值域**：指定 \(T\) 可以是完整 resolvent 的子关系；有限数据包络和整窗 usc/Čech-acyclic/topological 条件是不同层。Theorem 8.1 的外部引用 [6, Theorem 6.2] 已与[一手原文](research/LITERATURE.md#lit-grn-2002)逐项核 retract、Vietoris span、紧 morphism→CAC 及非零 Lefschetz 数；这不核定整窗模型、有限样本认证以外的假设或新颖性，原稿 C05-v1 仍为 PDF-only 候选；C05-v2 是另立的已重算条件版本。[H07](research/holder_structure.md)
-
-## 独立旁支与依赖门
-
-| 链 | 当前可使用的精确成果 | 不得越过的门 |
-| --- | --- | --- |
-| 锥 | nice + 冻结 CRSC 的秩夹逼、面稳定，参考面 amenability 与法向/切向修正给 MSCQ；nice 非 amenable 的普遍量词边界 | 原锥残差到 \(r_F\) 的桥、同一零集、反射和 coverage 另证；文献正式版优先权待核 |
-| Markov | 紧连续同步 OT \(\Psi\) 的 exact-zero⇔一般 gauge；有限状态顶点测试⇔线性 EB；条件 bit/Gaussian 修复 | 表示依赖、同耦合、守恒边缘、recoupling；不能由快收敛反推原 \(\Psi\) EB |
-| 解选择 | 统一尾 + 局部 Hölder → 对数/超几何极限模；完整显式例的两点非 Hölder | 只对 \(J_{\mathcal G}\) 直接导入；完整 \(J_F\) 须全纤维一致；经典 AGM 先例已覆盖较宽现象 |
-| 不一致随机近端 | 固定守恒边缘与活跃均方谱隙给条件 \(W_2\) 收缩、完整混合核 law-step 的线性 EB 和有限长度；逐分支残差的零集则是共同定点支持律，标量例使统一 EB 系数锐 | C22/C23 的证明和反例在 [RP 模块](research/canonical/random_proximal.md)；不改成普通联合 \(W_2\)、同步缺陷或物理步长；外部优先权、无限维/变参数仍待审 |
-
-各链的定义、量词与反例在 [cone_markov](research/cone_markov.md) 和 [solution_selection](research/solution_selection.md)。
-
-## 证据与下一阶段
-
-现有独立工作只对各模块明确标注的公式、证明链和反例进行了重算；未逐行 referee 全部 251 个来源记录，也未完成外部文献精确适用条件与全球新颖性。历史 HTML/JSON 的 35 条边是搜索种子；当前图的精确节点/边数以 [graph.json](research/graph.json) 和结构校验为准，数目不是数学质量指标。数值代码和审计 PASS 仍保持原证据层。
-
-**覆盖边界**：原件 251 个、ZIP 11 个及成员 178 个已清点，其中 41 个成员与展开件字节相同；这不是数学验收数。逐单元去向当前只覆盖表列的 108 行（其中 3 行 deferred）；GX 余项、随机其他支线、M1 **历史原生图桥**、复合秩亏原生证明和其他外部文献仍待核。十个历史验证器的退出码与环境记录在审计 JSON，不能证明一般命题。
-**例库新增**：[C42 幂次剪切](research/topics/path_dynamics/power_shear.md) 从完整图重算真残差和精确法向速率；只在有界输入窗有全对次线性反射证书，切向余量单独控制轨道留域。[C43 振荡剪切](research/topics/path_dynamics/oscillatory_shear.md) 另给有界窗最大全对指数 γ、但局部双边实际阶 q>γq 的独立对象；真残差与局部零集已核。[C44 自然域逃逸](research/topics/path_dynamics/domain_escape.md) 从同稿另立多值原图对象，核了锚定/全对指数、全纤维线性残差与每条非零轨道有限步越域。三例不能按共享幂指数合并。
-
-**例库首批**：C24–C26 的 EX01 旋转、EX02 正紧对角、EX03 三次映射已给完整对象、真实残差和直接证明。尤其 EX02 排除任何趋零 gauge 的统一局部 EB，却保留每个初值的 PPA 强收敛；EX03 将固定目标常数 1、两变量 \(2^{2/3}\) 与算法残差下确界 \(\lambda^{-1/3}\) 分开。此三例只关闭对应 GX-004/009/021 的本轮数学单元，原卡其他性质和其余 GX 尚待重写。
-
-**定义/参数首批**：[PD 字典](research/canonical/parameter_dictionary.md)重写了全对/锚定、全图/图块、coverage/exclusion、同图换步、线性 RL tied 曲线、有界尺度指数及真残差方向，C27–C30 分别固定数学身份。若要比较不同步长，先核新 Minty 输入 \(Q(D)\) 的单射与 coverage；若要把选中步界写成真 EB，先核全纤维最小残差的方向。这些是当前可直接复用的基础，旧 checkpoint 的完整定义和全部示例尚未逐项关门。
-
-当前主线优先级以上方“现在从哪里继续”表为准：先冻结总体比较的共同母空间、成员谓词和量尺，立即做反塌缩攻击。I-097–099/I-102 的缺件追索与 9/25 原生整窗模型认证可并行推进；C70 数值包络和 [6] 引文适用门已经核过，不重做同一任务。如制作新的投稿版本，应把 C12-v1 已核的**给定度量完备**假设写入新稿；历史原件保留原貌。没有新证据时不新增“已证”节点。
+“一个新研究者可沿**受检链**安全接续”与“全部历史材料已语义验收”是两个不同判断。整个研究地基完工需：规范正文不依赖历史目录补定义或证明；各 Claim 的空间、域、量词、状态及引用版本一致；承重合取边可从正文独立重建；来源单元分母完成并逐项去向明确；若原件缺失或数学仍开放，必须有精确 `source-report`/`open` 边界，不能假称关闭。最近的空白接收范围与修补见 [接收记录](research/audit/BLIND_RECEIPT_2026-10-02.md)。

@@ -4,6 +4,8 @@
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
+**规范层的独立性门**：一条 `derived-checked` 结论应仅靠所链接的规范定义、正文证明及明确导入的一手定理重建；历史路径只说明它从何而来，不补缺失的假设。仍为 `source-report` 或 `candidate` 的命题不能因 README 有箭头便当作已闭定理。[当前状态](RESEARCH_STATE.md) 只保留活跃义务，旧轮次的时间流水不充当研究前沿。
+
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点与验收门；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定来源逐段枚举与数学清洗的两个完成门；[空白接收记录](research/audit/BLIND_RECEIPT_2026-10-02.md) 保存本轮受检路径、发现的错误及复读范围。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
 
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子和有限维纤维分类有候选稿证明及局部独立重算，部分外部定理与先行性门未关闭。9/25 局部值域证书的 Lefschetz 引文适用门已核，但仍有独立整窗拓扑假设和候选证明待审。
@@ -71,7 +73,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 惰性四状态同步 OT | 固定四点循环、0<p<1、同一输入对唯一不变律的 C-最优耦合 + 同步残差成本 → 精确零集与锐 √(13/p) 线性界；放松内层 OT → 同核假零点 | C71 独立重算；一般固定有限状态证书另见下行 C15，来源其余速率结论及优先权待审 |
 | 同核不同随机表示 | 四状态核固定，改为逐状态独立 Bernoulli 的随机映射表示 + 同一 C-最优输入运输 → 同一零集但锐平方系数 13/[p(7−6p)] | [C88](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 新推导；表示会改变同步残差，不能从核身份直接迁移常数 |
 | 固定有限状态同步 OT | 固定互异状态及核 + 同一 C-最优耦合 + 全部不变律 + 零成本 tight-edge 顶点行边缘不变 ⇔ 精确零集 ⇔ 全律空间锐线性 EB | [C15 完整证明](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 已独立重写；不需混合性，也不推动力收敛。§5 备用证明和 §6 正则性另有去向 |
-| 随机矩门与回耦 | 共同零点与正 excursion + 全部有限支撑律的同系数点态界 + \(pq\le r\) ⇔ 标量矩界；另在同一随机表示、同一律类上把收缩 + 原 \(\Psi\) 的输入最优近极小对 + 回耦损失界合取 → 线性 EB | [C126/C127 自足证明](research/topics/random_markov/moment_recoupling.md)；两条是不同接口，条件残差 \(\mathcal R\) 不能替换 \(\Psi\)，原生模型的回耦门仍待认证 |
+| 随机矩门与回耦 | 共同零点与正 excursion + 全部状态的同系数点态界 + \(pq\le r\) ⇔ 全部有限支撑律的标量矩界；另在同一随机表示、同一律类上把收缩 + 原 \(\Psi\) 的输入最优近极小对 + 回耦损失界合取 → 线性 EB | [C126/C127 自足证明](research/topics/random_markov/moment_recoupling.md)；两条是不同接口，条件残差 \(\mathcal R\) 不能替换 \(\Psi\)，原生模型的回耦门仍待认证 |
 | 有限状态残差正则性 | 固定有限数据 + C-最优计划的固定矩阵 Hoffman 界 + 运输成本变化界 → Φ=Ψ² 全域 Lipschitz；有限 tight-edge 分支 → 连续分片仿射 | [C80](research/topics/random_markov/finite_state_certificate.md#fs-regularity) 不要求 C15 的 exact-zero 判据；正则性不推出 EB |
 | 正值正弦的错目标边界 | GX-064 完整 F=2+sin x 在 λ=1 的全对临界 1/3 阶与目标 3 的固定目标半阶属于不同参考图点；F 零集为空 | C81/C82 的缩窗锐常数与每选择向负无穷的完整路径已重算；不能拼成零集 PPA |
 | 有界平方的锐性与留域边界 | GX-065 完整有界图的全图临界半阶锐性见证在左端点，零点真残差半阶在零点；两界可同窗成立但 \(q\gamma=1/4\) | C83/C84 重算全部锐模；正输入路径仅有 \(1/k\) 衰减，负输入有限步越域；粗指数与缺留域不支持统一零点收敛 |
@@ -206,7 +208,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
-| [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 精确身份、当前阻塞、已失败机制；每次进展后同步维护。 |
+| [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 逐版本精确身份与显式状态、当前阻塞与完成门、已失败机制；每次进展后同步维护。研究状态是现行可执行前沿，旧提交记录保留在 Git 历史。 |
 | [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md)、[history/README.md](history/README.md) | 初始校验、旧批次盘点与原件使用约定；用于核原件，不再作为数学地图。原件保留在 `history/sources/`，Git 历史可追初始导入。 |
 
 阅读顺序：本页和超边图 → 依节点进数学模块 → CLAIMS 的精确版本和现存 objection → 必要时 SOURCES 的原稿标签/页码。要写新资产时先读增长协议和当前前沿；图中路线是搜索种子，不是方法白名单。

@@ -2,6 +2,8 @@
 
 本仓库以数学对象、精确定义和可追查的命题为正文。`history/sources/` 保存原始材料，不能替代正文，也不因被收录而获得可信状态。新研究可从文献、计算、反例或新证明直接产生；历史来源只是其中一种输入。README 是地图，不是证明。
 
+**空白接收门**：规范层里标 `derived-checked` 或更强的结论必须让接收者仅沿规范定义、正文与明确的一手导入重构其条件和证明。若必须到历史区猜一个符号、选一支、找被省的量词或补承重步骤，就补写正文；暂时补不了则保守降状态并把义务写入 `RESEARCH_STATE.md`。来源链接是证据谱系，不是规范证明的隐形一页。
+
 ## 新工作放在哪里
 
 | 新资产 | 位置与进入条件 |
@@ -51,7 +53,7 @@
 
 1. 固定 Claim 版本与现有图关系；选择最有信息量的 proof obligation，检查对象良定、隐藏假设、量词顺序、退化情形、外部定理的所有适用条件。
 2. 从原件重写数学内容，或直接写新的推导。把公式和证明放进可读主题模块，来源位置仅用于追溯。对失败路线诚实提取仍成立的引理、反例和障碍，记录具体断点与重启条件。
-3. 更新 `CLAIMS.md`、必要的 `FAILED_ROUTES.md`、`RESEARCH_STATE.md`，再更新 `research/graph.json` 与生成图。README 的数学导航和 File Map 随真实依赖改变，不按日期堆新索引。
+3. 更新 `CLAIMS.md`、必要的 `FAILED_ROUTES.md`、`RESEARCH_STATE.md`，再更新 `research/graph.json` 与生成图。README 的数学导航和 File Map 随真实依赖改变，不按日期堆新索引。`RESEARCH_STATE.md` 保持当前问题、条件门与下一动作；阶段流水由 Git 提交保留，不在活跃状态页无穷追加。
 4. 运行 `python3 research/build_graph.py`、`python3 research/validate_assets.py`，核新代码复现命令。机器检查只能发现链接/身份/哈希/结构错误，不能替代证明。
 5. 对每一批有价值成果建立 `git add`、`commit`、`push` checkpoint 并核对远端。未获得真正认识进展时更新明确障碍即可，不制造新的证明文件。
 

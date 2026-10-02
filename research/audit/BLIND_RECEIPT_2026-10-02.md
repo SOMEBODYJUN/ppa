@@ -33,3 +33,13 @@ E180、E182、E183、E185–E187 在该范围内未见另一个致命箭头错�
 3. **数学缺口**：规模比较的共同母空间/量尺、局部值域的原生整窗认证、SS1 其余定理/结构推论、部分外部适用性和先行性仍待做。
 
 下一位接收者若声称“全部清洗完成”，必须先通过语义分母计划的 §5A 与 §5B，并对新增的承重链再次进行独立空白接收；本记录不能转授给后续未读的内容。
+
+## 全局协调后的独立复读：C126/C127 与三条主链
+
+新的空白上下文接收者仅从 README、现行 RESEARCH_STATE、CLAIMS 和 FAILED_ROUTES 出发，未读对话或 `history/sources/`。它独立恢复 C56→C53 的图块/真实残差/留域链、H02→Q01→Q03 的 \(e_N/e_x\) 链及 C70→C05-v2 的样本/整窗拓扑链；在所查公式中没有发现致命矛盾。**这只验收被读取的链，不能替代全部规范正文的数学审稿。**
+
+首读找到五项规范层协调缺口：H03 的凸包余量漏 \(Q=\overline{\operatorname{conv}}K,D_K=\operatorname{diam}K,p\in Q\)；H06 的 \(D_k,s_k\) 未绑定；CM-MOMENT 的 \(e,c\) 与共同零点/正 excursion 未定义；Markov 回耦的 \(D_\eta,\Delta_\eta,c_0\) 及同一近极小 OT 对没有规范证明；almost-firm 的 \(\alpha,\varepsilon_f,\tau,\rho^{-1}\) 未给定类型。前两项已在 `holder_structure.md` 与 C12 两版修补；后两项由 [C126/C127](../topics/random_markov/moment_recoupling.md) 完整陈述和证明，E45 的输出改为**条件线性 EB**，不再指向一般 exact-zero/gauge；almost-firm 摘要只保留固定参数的来源报告身份。[符号契约](../NOTATION_CONTRACT.md) 记录跨模块重绑定。
+
+第二位全新空白 Astra Ultra 复核了 C126 的小质量指数 \(pq\le r\)、\(pq<1\) 时的矩单调性、Markov 更新下界、C127 同一近极小输入最优对的 \(L^2\) 三角式与两种损失界，还逆核 H03 的凸组合方差式及 C12-v0/v1 完备度量分离；未找到致命漏洞。它提出的 \(\chi\ge0\) 与“状态点态 vs 全律矩”的措辞已同步到正文、Claim 和 README。另一项快速敌对审查要求 \(\chi\) 必须对**全部 \(\mu\)** 统一，现正文明确 \(\exists\chi\,\forall\mu\,\exists(\pi_j,\eta_j)\,\forall j\)。
+
+目前**可从规范层独立接续的是这些受检链**。整体尚未达全库验收：C03/C04、C18–C20 等保留候选或稿内证明范围，C06/C07/C17 等来源报告不能由历史路径“暗补”证明；[语义分母](SEMANTIC_INVENTORY_PLAN.md) 仍未穷尽。缺的是尚未重写/审完的研究内容和若干原始证明，以及总体规模与原生值域认证的数学问题；不是已发现规范符号存在一条全库统一的致命矛盾。现行 RESEARCH_STATE 已移除时间流水，集中这些实际门槛。

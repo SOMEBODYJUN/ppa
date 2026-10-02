@@ -44,6 +44,7 @@
 
 表中 N 编号均指 [9/21 原 no-go ledger](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。网络、工具、审稿模型或编译失败均不在这里当数学反证。
 
+<a id="f07"></a>
 ## F07 · “Polish”被当作给定度量完备
 
 - **原尝试**：9/19 扩展稿 extensions_moduli_structure.tex 的随机推论仅写 \((\mathsf X,d_{\mathsf X})\) Polish；在期望距离收缩和 Dini 步长包络下证明几乎处处有限长度，然后用“completeness”推出空间内极限。
