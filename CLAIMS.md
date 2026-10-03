@@ -1088,7 +1088,7 @@
 ## C131-v1 / OS-TOWER · 紧源统一有限长度塔
 
 - **Status**：`derived-checked`；规范正文给出从精确塔不等式到同固定集和一致极限的自足证明。
-- **Exact Statement / Objects / Domain / Quantifiers**：非空紧度量 \(K\)，连续 \(T,U:K\to K\)；\(T\) 的每条轨道有限长，\(V_j(x)=\sum_{k\ge j}d(T^{k+1}x,T^kx)\) 连续，且 \(L_j=\sup_K V_j\to0\)。对**全部** \(x\in K,j\ge0\)，有 \(d(Ux,x)+V_0(Ux)\le V_0(x)\)、\(V_j(Ux)\le V_{j+1}(x)\)。则 \(S=\operatorname{Fix}T=\operatorname{Fix}U\ne\varnothing\)，\(U\) 的第 \(n\) 步之后全尾长 \(\le V_n(x)\le L_n\)，\(U^n\) 一致收敛至连续回缩 \(\Pi_U:K\to S\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：非空紧度量 \(K\)，连续 \(T,U:K\to K\)；\(T\) 的每条轨道有限长，\(V_j(x)=\sum_{k\ge j}d(T^{k+1}x,T^kx)\)，且 \(L_j=\sup_K V_j\to0\)。此统一尾已使各 \(V_j\) 连续。对**全部** \(x\in K,j\ge0\)，有 \(d(Ux,x)+V_0(Ux)\le V_0(x)\)、\(V_j(Ux)\le V_{j+1}(x)\)。则 \(S=\operatorname{Fix}T=\operatorname{Fix}U\ne\varnothing\)，\(U\) 的第 \(n\) 步之后全尾长 \(\le V_n(x)\le L_n\)，\(U^n\) 一致收敛至连续回缩 \(\Pi_U:K\to S\)。
 - **Dependencies / Evidence**：[OS-TOWER 证明](research/operator_space.md#os-tower-proof) 的固定集、望远镜式及紧完备一致极限；来源 OS-R §1 A.2 是线索而非补前提。
 - **Objections / Scope**：逐点有限长度不蕴含统一尾；塔不等式并不生产丰富 \(U\) 族，亦不证明观测映射保纲或总体 RLEB/LT/极大单调规模比较。
 
@@ -1097,5 +1097,5 @@
 
 - **Status**：`derived-checked`；对紧逆纤维的真残差极小值及同输入反演已在规范层证明。
 - **Exact Statement / Objects / Domain / Quantifiers**：实赋范空间 \(E\) 的非空紧 \(K\)、连续 \(U:K\to K\)、非空 \(S=\operatorname{Fix}U\)、\(\lambda>0\)，非降 \(\psi:[0,\infty)\to[0,\infty)\)。若每个 \(x\in K\) 有 \(d(Ux,S)\le\psi(\|x-Ux\|/\lambda)\)，从头定义 \(F_{U,K}(u)=\{(x-u)/\lambda:x\in K,Ux=u\}\)（无原像则空），则完整近端的自然输入域恰为 \(K\)、\(J_{\lambda F_{U,K}}(x)=\{Ux\}\) 在 \(K\) 上，\(F_{U,K}^{-1}(0)=S\)，且**每个** \(u\in U(K)\) 有 \(d(u,S)\le\psi(r_{F_{U,K}}(u))\)，其中 \(r_{F_{U,K}}(u)=\min_{Ux=u}\|x-u\|/\lambda\)。
-- **Dependencies / Evidence**：[OS-FIBER-EB 证明](research/operator_space.md#os-fiber-eb) 的紧纤维极小值；C131 可另外生成符合其固定集条件的 \(U\)，但本条作为条件引理不依赖塔。来源 OS-R §1 A.3 只作溯源。
-- **Objections / Scope**：在紧源上不需假设 gauge 连续即可取得最小值；不能把新关系的结论转给有域外输入或额外逆纤维的原关系。没有自动 coverage、统一兼容或总体规模结论。
+- **Dependencies / Evidence**：[OS-FIBER-EB 证明](research/operator_space.md#os-fiber-eb) 的紧纤维极小值；若原 \(\psi\) 不满足 D04 的零点/原点连续约定，(OS6) 从紧子水平集构造 \(\phi\le\psi\) 的 D04 型内生 gauge，并保留真残差界。C131 可另外生成符合其固定集条件的 \(U\)，但本条作为条件引理不依赖塔。来源 OS-R §1 A.3 只作溯源。
+- **Objections / Scope**：在紧源上不需假设原 \(\psi\) 连续即可取得最小值；不能把新关系的结论转给有域外输入或额外逆纤维的原关系。已保证输入自然域 \(K\) 的 coverage，**没有自动的环境开邻域 coverage**、统一兼容或总体规模结论。

@@ -111,7 +111,7 @@ V_j(x)=\sum_{k\ge j}d(T^{k+1}x,T^kx),\quad
 L_j=\sup_{x\in K}V_j(x),\quad S=\operatorname{Fix}T.
 \]
 
-另假设每个 \(V_j\) 连续且 \(L_j\to0\)；这些是**统一有限长度尾**的附加条件，不由逐点有限长度自动给出。对所有 \(x\in K,j\ge0\)，要求
+另假设 \(L_j\to0\)；这是**统一有限长度尾**的附加条件，不由逐点有限长度自动给出。每个 \(V_j\) 因连续部分和的余项统一受 \(L_N\) 控制而连续。对所有 \(x\in K,j\ge0\)，要求
 
 \[
 d(Ux,x)+V_0(Ux)\le V_0(x),\qquad V_j(Ux)\le V_{j+1}(x). \tag{OS1}
@@ -123,7 +123,7 @@ d(Ux,x)+V_0(Ux)\le V_0(x),\qquad V_j(Ux)\le V_{j+1}(x). \tag{OS1}
 \]
 因此 \(U^n\) 一致收敛于连续回缩 \(\Pi_U:K\to S\)；对每个 \(x\)，\(d(U^nx,\Pi_Ux)\le V_n(x)\)。
 
-**证明。** 有限长度使 \(T^nx\) 为 Cauchy，紧空间完备，连续 \(T\) 使极限为不动点，故 \(S\ne\varnothing\)。恒等式 \(V_0(x)-V_1(x)=d(Tx,x)\) 成立。若 \(Ux=x\)，(OS1) 第二式在 \(j=0\) 给 \(V_0(x)\le V_1(x)\)，于是 \(Tx=x\)；若 \(Tx=x\)，\(V_0(x)=0\)，(OS1) 第一式给 \(Ux=x\)。归纳第二式给 \(V_0(U^nx)\le V_n(x)\)。第一式沿 \(U\) 轨道从 \(n\) 到 \(N\) 望远镜求和，再令 \(N\to\infty\)，得到 (OS2) 的第一界（剩余 \(V_0(U^{N+1}x)\ge0\)）；其余界由归纳与定义。\(L_n\to0\) 使连续映射 \(U^n\) 一致收敛，极限连续；\(U\Pi_U=\Pi_U\) 由连续性，故极限落在 \(S=\operatorname{Fix}U\)，并对 \(S\) 恒等。此引理**不**给满足 (OS1) 的 \(U\) 的丰富性，也不证明保纲或原算子空间规模。
+**证明。** 对固定 \(j\)，\(V_j\) 的连续部分和到 \(N\) 的余项 \(V_N\le L_N\to0\)，故 \(V_j\) 连续。有限长度使 \(T^nx\) 为 Cauchy，紧空间完备，连续 \(T\) 使极限为不动点，故 \(S\ne\varnothing\)。恒等式 \(V_0(x)-V_1(x)=d(Tx,x)\) 成立。若 \(Ux=x\)，(OS1) 第二式在 \(j=0\) 给 \(V_0(x)\le V_1(x)\)，于是 \(Tx=x\)；若 \(Tx=x\)，\(V_0(x)=0\)，(OS1) 第一式给 \(Ux=x\)。归纳第二式给 \(V_0(U^nx)\le V_n(x)\)。第一式沿 \(U\) 轨道从 \(n\) 到 \(N\) 望远镜求和，再令 \(N\to\infty\)，得到 (OS2) 的第一界（剩余 \(V_0(U^{N+1}x)\ge0\)）；其余界由归纳与定义。\(L_n\to0\) 使连续映射 \(U^n\) 一致收敛，极限连续；\(U\Pi_U=\Pi_U\) 由连续性，故极限落在 \(S=\operatorname{Fix}U\)，并对 \(S\) 恒等。此引理**不**给满足 (OS1) 的 \(U\) 的丰富性，也不证明保纲或原算子空间规模。
 
 <a id="os-fiber-eb"></a>
 ### OS-FIBER-EB / C132：输出步界转为新定义紧源关系的真残差
@@ -143,6 +143,12 @@ r_{F_{U,K}}(u)=\min_{x\in K:Ux=u}\|x-u\|/\lambda,
 \]
 **证明。** (OS3) 的图是紧图 \(\{(Ux,(x-Ux)/\lambda):x\in K\}\)，每个非空逆像 \(U^{-1}(u)\) 紧，故 (OS5) 的最小值由某个 \(x_u\) 取得。将 \(x_u\) 代入 (OS4) 即得真残差 EB；这里不需要把 inf 错当任意一次选择，也不需要 \(\psi\) 连续。\(0\in F_{U,K}(u)\) 当且仅当 \(u=x=Ux\)；由 (OS3) 的同输入反演，恰得完整近端在 \(K\) 上的单值性及自然域。若 \(U\) 满足 C131，那个引理另外提供非空 \(S\) 与一致收敛；本条本身对任意上述连续 \(U\) 成立。它只构造**新的** \(F_{U,K}\)：既有原关系 \(F\) 可能有 \(K\) 外的输入或更多输出纤维，不可将 (OS5) 自动授予它。
 
+这里的原 \(\psi\) 是非降的**传递上界**，未假定 \(\psi(0)=0\) 或原点连续，因此不能未经说明直接称为 D04 型 gauge。若要获得 [D04](foundations.md#d04) 的零点及连续约定，定义内生函数
+\[
+\phi(t)=\max\{d(Ux,S):x\in K,\ \|x-Ux\|/\lambda\le t\},\quad t\ge0. \tag{OS6}
+\]
+每个子水平集非空（含 \(S\)）且紧；\(\phi\) 非降、\(\phi(0)=0\)，并由紧性和 \(U\) 连续得 \(\phi(t)\to0\) 当 \(t\downarrow0\)。由 (OS4) 与 \(\psi\) 非降还得 \(\phi(t)\le\psi(t)\)；对实现 (OS5) 最小值的 \(x_u\)，\(d(u,S)\le\phi(r_{F_{U,K}}(u))\)。这给出同一新关系上的 D04 型真残差 gauge；没有据此得到 \(K\) 外的环境开邻域 coverage。
+
 ### 诊断与仍待重构的接口
 
 下表的 OS-TOWER、OS-FIBER-EB、OS-BAIRE 已有上述或链接中的规范证明；OS-SUCCESSOR、OS-ISOMETRY 仍为 `source-report`，引用前须先独立重构。
@@ -151,7 +157,7 @@ r_{F_{U,K}}(u)=\min_{x\in K:Ux=u}\|x-u\|/\lambda,
 |---|---|---|
 | OS-TOWER / C131 | (OS1) 两条逐点塔不等式加统一尾 \(L_j\to0\) 推出 (OS2)、同固定集与连续极限回缩 | [本页证明](#os-tower-proof)；未证满足塔条件的选择丰富或总体覆盖 |
 | OS-FIBER-EB / C132 | 每个输入的输出步界经紧逆纤维极小值转为新定义 \(F_{U,K}\) 的真 EB | [本页证明](#os-fiber-eb)；不转授给含域外图或额外纤维的原算子 |
-| OS-SUCCESSOR (`source-report`) | 来源提出连续选择 \(Ux\in\overline{\{T^mx:m\ge1\}}\) 保尾及固定集，**尚无规范证明** | 连续选择存在性、丰富性未证明 |
+| OS-SUCCESSOR (`source-report`) | 来源提出连续选择 \(Ux\in\overline{\{T^mx:m\ge1\}}\) 保尾及固定集，**尚无规范证明** | 平凡选择 \(U=T\) 存在；非平凡连续选择的存在与丰富性未证明 |
 | OS-BAIRE | [σ-紧度量空间诊断 C128](canonical/sigma_compact_baire.md#sc-proof)：\(Z=\bigcup K_n\)（紧）为 Baire 当且仅当 \(\bigcup\operatorname{Int}_ZK_n\) 稠密 | 未决定目标认证空间满足哪边，也不要求层递增 |
 | OS-ISOMETRY (`source-report`) | 紧度量空间的满射 1-Lipschitz 自映射是等距映射；**本页尚无独立证明或导入** | 仅排除该种粗糙共轭手法；引用前先补规范证明 |
 

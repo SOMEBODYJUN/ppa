@@ -3821,7 +3821,7 @@
       ],
       "output": "OST-RETRACTION",
       "relation": "conditional",
-      "scope": "C131：同一非空紧度量 K、连续 T/U、每轨有限长度且 V_j 连续、L_j=sup_K V_j→0；全部 x,j 的两条 (OS1) 合取，推出 Fix U=Fix T、全尾 ≤V_n≤L_n 与连续一致极限回缩。不提供 U 族丰富性或保纲性。",
+      "scope": "C131：同一非空紧度量 K、连续 T/U、每轨有限长度且 L_j=sup_K V_j→0（由此 V_j 连续）；全部 x,j 的两条 (OS1) 合取，推出 Fix U=Fix T、全尾 ≤V_n≤L_n 与连续一致极限回缩。不提供 U 族丰富性或保纲性。",
       "status": "derived-checked；OS-TOWER 自足证明"
     },
     {
@@ -3832,7 +3832,7 @@
       ],
       "output": "OSF-TRUE-EB",
       "relation": "conditional",
-      "scope": "C132：同一实赋范 E 的非空紧 K、连续 U:K→K、非空 S=Fix U、λ>0、非降 ψ，以及每个 x∈K 的输出步界；新定义 F_{U,K} 的全部逆纤维紧，u∈U(K) 的真实残差取最小值，J 自然域 K。不转授给既有带域外输入或额外纤维的关系；C131 可提供此 U 的非空 S 但不是本边必要前提。",
+      "scope": "C132：同一实赋范 E 的非空紧 K、连续 U:K→K、非空 S=Fix U、λ>0、非降 ψ，以及每个 x∈K 的输出步界；新定义 F_{U,K} 的全部逆纤维紧，u∈U(K) 的真实残差取最小值，J 自然域 K；原 ψ 未必是 D04 gauge，(OS6) 给 φ(0)=0 且原点连续的内生上界。不转授给既有带域外输入或额外纤维的关系；C131 可提供此 U 的非空 S 但不是本边必要前提。",
       "status": "derived-checked；OS-FIBER-EB 自足证明"
     }
   ]

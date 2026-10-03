@@ -140,13 +140,21 @@ if seed_path.is_file():
         }:
             errors.append(f"unmapped semantic seed: {row['unit_id']}")
     for locator, segments in by_member.items():
+        if locator not in indexed:
+            errors.append(f"semantic seed locator absent from source occurrence index: {locator}")
         container, separator, name = locator.partition("!/")
-        if not separator:
-            errors.append(f"bad semantic seed locator: {locator}")
-            continue
         try:
-            with zipfile.ZipFile(ROOT / container) as archive:
-                line_count = len(archive.read(name).decode("utf-8").splitlines())
+            if separator:
+                with zipfile.ZipFile(ROOT / container) as archive:
+                    source_text = archive.read(name).decode("utf-8")
+            elif locator.startswith("history/sources/"):
+                source_text = (ROOT / locator).read_bytes().decode("utf-8")
+            else:
+                errors.append(f"bad semantic seed locator: {locator}")
+                continue
+            # Source ranges count physical LF lines. Some historical TeX has
+            # literal CR control bytes inside a formula, not new source lines.
+            line_count = source_text.count("\n") + int(bool(source_text) and not source_text.endswith("\n"))
         except (OSError, KeyError, UnicodeDecodeError, zipfile.BadZipFile) as exc:
             errors.append(f"unreadable semantic seed: {locator}: {exc}")
             continue
