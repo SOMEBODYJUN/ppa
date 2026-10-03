@@ -1559,6 +1559,16 @@
       "id": "OSS-SAME-LIMIT",
       "label": "后继选择与原 T 同一极限回缩 C133-v2",
       "file": "operator_space.md#os-successor-proof"
+    },
+    {
+      "id": "OSB-INPUT",
+      "label": "分别认证的乘积闭预算关系与紧实步长区间",
+      "file": "operator_space.md#os-spectrum-proof"
+    },
+    {
+      "id": "OSB-USC",
+      "label": "允许空谱的上半连续与条件 Fσ 谓词 C135",
+      "file": "operator_space.md#os-spectrum-proof"
     }
   ],
   "edges": [
@@ -2341,7 +2351,7 @@
       "inputs": [
         "PD-RESIDUAL"
       ],
-      "relation": "refutes",
+      "relation": "limits",
       "output": "OB-SELECTED",
       "scope": "r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。",
       "status": "本轮代数/反例独立重算；文献命名另核"
@@ -2966,7 +2976,7 @@
         "SME-POWER"
       ],
       "output": "OB-AGGREGATE",
-      "relation": "refutes",
+      "relation": "limits",
       "scope": "0<γ<1、q>1、γq=1、0<t<R：分开最坏包络与先复合的最坏上界比 (R/t)^(1−γ)；各自锐的极值分布未必相同。并非证明任何物理随机轨道发散。",
       "status": "F24 的定量失相关见证"
     },
@@ -3102,7 +3112,7 @@
         "DS-RL"
       ],
       "output": "OB-DYN-RL",
-      "relation": "refutes",
+      "relation": "limits",
       "scope": "同一个闭完整图既有原算子及完整步的锐线性真 EB、全输入覆盖和每条近端选择统一线性有限长，又无任意全对零消失模；收敛不逆推 RL。",
       "status": "F25 由 C72–C74 的同对象证书"
     },
@@ -3905,6 +3915,15 @@
       "relation": "conditional",
       "scope": "C133-v2：保持 E200 的同一非空紧 K、连续 T/U、e_n→0 与每个 x 的正时刻轨道闭包选择；由于 U^n x 与 Π_Tx 均属 A_n(x)，全部 x,n 有 d(U^n x,Π_Tx)≤e_n，故 Π_U=Π_T。新增极限身份，不产生非平凡选择、长度尾或完整原关系的 EB。",
       "status": "derived-checked；空白逆向发现并独立重算 OS8，和来源 C133-v1 分版"
+    },
+    {
+      "id": "E203",
+      "topic": "算子空间",
+      "inputs": ["OSB-INPUT"],
+      "output": "OSB-USC",
+      "relation": "conditional",
+      "scope": "C135：对 LT、direct、energy 分别给 X×[1/j,j] 的乘积闭预算关系，闭性与紧参数给紧或空纤维、允许空值的上半连续及闭投影。仅在这些块恰好穷尽各自实际认证时，其存在谓词为 Fσ；未证明任何一类的原生闭块或总体规模比较。",
+      "status": "derived-checked；OS9 抽象拓扑证明，原生实例化开放"
     }
   ]
 }

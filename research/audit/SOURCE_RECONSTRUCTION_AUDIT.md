@@ -16,15 +16,15 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：当前 119 行逐源单元有去向（113 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 120 行逐源单元有去向（114 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
 ## 2. 来源簇 → 现有规范层 → 仍需重写
 
-### 下一批可定位的证明单元（局部工作清单）
+### 来源簇的已重写范围与下一批未闭单元（局部工作清单）
 
-此表是从**已有原件**中定位的高价值缺口，不是全库有价值单元的穷尽分母；未列入逐单元表的单元仍为待裁决。完成一项后以精确节、版本和正文锚点记入 `UNIT_DISPOSITIONS.tsv`，不能仅凭本表的存在标为 `rewritten`。
+此表同列**已重写的选定范围**与尚待裁决的同簇单元，不能把整行误当下一批未完成任务。此表是从**已有原件**中定位的高价值缺口，不是全库有价值单元的穷尽分母；未列入逐单元表的单元仍为待裁决。完成一项后以精确节、版本和正文锚点记入 `UNIT_DISPOSITIONS.tsv`，不能仅凭本表的存在标为 `rewritten`。
 
 | 原件与精确单元 | 当前规范层的不足 | 准入义务 |
 | --- | --- | --- |
@@ -236,3 +236,7 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 | M-06 Luke–Tam Euclidean 范围外推 | [C16](../../CLAIMS.md) 与[算子空间公共接口](../operator_space.md#lt) 只声明有限维同域 LT→能量证书代数；Hilbert 的同参数剪切/扩张另有本库证明，不冒充原 LT 全套定理 | 原来源的 maximal-extension、存在性与算法结论未在此统一验收 |
 
 以上五项的历史传播风险已有带范围去向，不表示 `a_consistency_audit.md` 其它 M/B 条目、旧 atlas 全文或外部文献已经清洗。尤其 B-01 的旧命题被反证，与“外部作者一定发布勘误”是不同事实。
+
+## 增量：F11 路线 G 的紧步长谱条件引理
+
+F11 `04_research_ideas.md` §7 G.1–G.2 中“固定闭预算块的谱上半连续”已经重写为 [C135 / OS9](../operator_space.md#os-spectrum-proof)：拓扑对象空间、**逐类**乘积闭关系、允许空谱、紧实步长和认证存在谓词的等价可数耗尽均写成显式前提。G.2 原字节含控制字符，规范公式从数学含义重建。对应逐源表新增一行；[结构分段](SEMANTIC_UNIT_SEED.tsv) G.1/G.2 仅标部分锚点。LT/direct/energy 三类的原生闭块、G.2 差集描述及 G.3 reduction 都未因此结案；来源整个 §7 及 F11 其它段仍须逐单元裁决。

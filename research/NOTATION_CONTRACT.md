@@ -28,7 +28,8 @@
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
 | [固定紧源观测](canonical/compact_t_observation.md#ct-object) | \(d_{\mathrm{all}}^K(T,U)=\sup_n\|T^n-U^n\|_K\) 是整个紧源的全时间度量；\(\Phi=(w,m)\) 是实际尾和反射模 | 此度量不写成 LT 线性 EB 系数 \(\rho\)，也不是旧孔隙性账本的 \(d_{\rm dyn}\)；其 proper 证明不授予完整原关系 \(F\) 的空间 |
 | [紧源塔与后继](operator_space.md#os-tower-proof) | \(V_j,L_j\) 是 \(T\) 的长度尾及全源上确界；\(e_n\) 是成对迭代的共同 Cauchy 尾；\(U\) 是同一紧 \(K\) 上已给定的连续自映射 | C131 的长度尾与 C133 的 Cauchy 尾不互换；C133 不产生非平凡连续选择；\(F_{U,K}\) 是由全输入源 \(K\) **新定义**的关系，不代表历史或既有原关系 \(F\) |
-| [紧源真纤维](operator_space.md#os-fiber-eb) | 原 \(\psi\) 仅为非降逐输入传递上界；\(\phi\) 是从紧子水平集取得的 D04 型内生 gauge，\(r_{F_{U,K}}\) 只在 \(u\in U(K)\) 调用 | 原 \(\psi\) 不自动满足 \(\psi(0)=0\) 和原点连续；\(J_{\lambda F_{U,K}}\) 的自然输入域是 \(K\)，不自动覆盖环境开邻域 |
+| [紧源真纤维](operator_space.md#os-fiber-eb) | 原 \(\psi\) 仅为非降逐输入传递上界；\(\phi\) 是从紧子水平集取得的 D04 型内生 gauge；\(\operatorname{dom}F_{U,K}=U(K)\)，\(r_{F_{U,K}}\) 只在该域调用 | 原 \(\psi\) 不自动满足 \(\psi(0)=0\) 和原点连续；\(J_{\lambda F_{U,K}}\) 的自然输入域是 \(K\)，不自动覆盖环境开邻域 |
+| [紧预算步长谱](operator_space.md#os-spectrum-proof) | \(I_j=[1/j,j]\) 是实步长的紧参数域；\(B_{C,j}\subseteq X\times I_j\) 是**逐认证类**声明的闭预算关系，\(\Sigma_{C,j}\) 允许空值 | 闭关系给上半连续和闭存在投影，但不自动给下半连续；LT/direct/energy 三类各自的实际闭性、耗尽性及类别比较尚须证明 |
 | [例库](topics/examples/README.md) | \(F,K,B,G,R\) 在每张卡内重新绑定 | 必须携带空间、完整/受限图、目标、步长、输入/输出窗、真实或算法残差；GX 编号只标来源观察 |
 
 ## 统一验收问题

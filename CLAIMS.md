@@ -1123,3 +1123,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意非空紧度量空间 \(K\)，满射 \(h:K\to K\) 满足 \(d(hx,hy)\le d(x,y)\) 对全部 \(x,y\)。则 \(d(hx,hy)=d(x,y)\) 对全部点对成立。
 - **Dependencies / Evidence**：[OS-ISOMETRY 证明](research/operator_space.md#os-isometry-proof) 的 Arzelà–Ascoli 相对紧迭代、近单位幂和满射代换；来源 OS-R §6 F.2 仅作溯源。
 - **Objections / Scope**：结论只对同一个紧域上的满射全局非扩张映射；未排除轨道点对约束、非满射、非紧域的粗糙变换，也不证明 category-preserving 或 LT/RLEB 总体规模。
+
+<a id="c135"></a>
+## C135-v1 / OS-SPECTRUM · 闭预算关系的紧步长谱上半连续
+
+- **Status**：`derived-checked`，仅限抽象闭预算关系的拓扑引理；LT、direct、energy 的预算块闭性和穷尽性尚未在共同中立母空间认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意拓扑空间 \(X\)，每个 \(j\ge1\) 的紧实步长区间 \(I_j=[1/j,j]\)，给**分别指定**的 \(C\in\{\mathrm{LT},\mathrm{direct},\mathrm{energy}\}\) 与乘积闭集 \(B_{C,j}\subset X\times I_j\)。对每个 \(G\in X\)，\(\Sigma_{C,j}(G)=\{\lambda\in I_j:(G,\lambda)\in B_{C,j}\}\) 为紧集或空集；多值谱（允许空值）上半连续，\(P_{C,j}=\{G:\Sigma_{C,j}(G)\ne\varnothing\}\) 闭。**仅当**某认证存在谓词恰为 \(\bigcup_{j\ge1}P_{C,j}\) 时，它是 \(F_\sigma\)。
+- **Dependencies / Evidence**：[OS9 条件证明与下半连续反例](research/operator_space.md#os-spectrum-proof)：紧参数上的闭集投影闭，同一结论应用于避开谱的紧集；\(X=\mathbb R,B=X\times\{0\}\cup\{(0,1)\}\) 的非空纤维仍无下半连续。来源 OS-R §7 G.1–G.2 仅是线索，其损坏的公式字节没有复制。
+- **Counterevidence / Objections / Scope**：各认证的完整图、coverage、真实全纤维 EB、留域及参数预算能否在选定拓扑下成为闭关系，须分别证明；必要闭块不能当作等价认证。没有下半连续、谱开窗、保纲、尖锐描述复杂度或总体规模结论。改变对象拓扑或证书穷尽条件须立新版本。
