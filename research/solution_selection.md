@@ -22,7 +22,7 @@
 <a id="s02"></a>
 ## S02 · 对 RLEB 的有条件导入
 
-图块全对 RL 给 \(T=J_{\mathcal G}\) 在同一图块的 \(H=(R^{1-\gamma}+L)/2\) Hölder 界。R02 的共同初值球和留域预算给统一尾界，才能应用 S01。若要以**完整** \(T=J_{\lambda F}\) 陈述，须另证它和 \(J_{\mathcal G}\) 在整条轨道可能经过的共同输入区域相等；只在初值处检查不够。SS2 §二 R1、B2。固定解点 \(s\in S\) 的 \(\|\Pi(x)-s\|\lesssim\|x-s\|^\gamma\) 只给 anchored calmness，不给邻域里**任意两个**初值的 Hölder 模。
+图块全对 RL 给 \(T=J_{\mathcal G}\) 在同一图块的 \(H=(R^{1-\gamma}+L)/2\) Hölder 界。[C136 / SS-B1–B5](canonical/solution_selection_rates.md#ss-rleb-ball) 在 R01/R02 的**同一个**零锚、真残差、coverage、兼容和留域窗上，从 \(\varepsilon+\mathcal L(\varepsilon)<\rho\) 构造共同初值球、轨道区域和统一尾，才能应用 S01。若要以**完整** \(T=J_{\lambda F}\) 陈述，须另证它和 \(J_{\mathcal G}\) 在整条轨道可能经过的共同输入区域 \(W\) 上逐纤维相等；只在初值处检查不够。SS2 §二 R1、B2。固定解点 \(s\in S\) 的 \(\|\Pi(x)-s\|\lesssim\|x-s\|^\gamma\) 只给 anchored calmness，不给邻域里**任意两个**初值的 Hölder 模。
 
 <a id="sel-ex"></a>
 <a id="sel-sharp"></a>

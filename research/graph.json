@@ -1569,6 +1569,16 @@
       "id": "OSB-USC",
       "label": "允许空谱的上半连续与条件 Fσ 谓词 C135",
       "file": "operator_space.md#os-spectrum-proof"
+    },
+    {
+      "id": "SSB-BALL",
+      "label": "RLEB 同球图块共同尾与极限模 C136",
+      "file": "canonical/solution_selection_rates.md#ss-rleb-ball"
+    },
+    {
+      "id": "SSB-COMPLETE",
+      "label": "同一共同轨道窗的完整 PPA 转移 C136",
+      "file": "canonical/solution_selection_rates.md#ss-rleb-ball"
     }
   ],
   "edges": [
@@ -2353,7 +2363,7 @@
       ],
       "relation": "limits",
       "output": "OB-SELECTED",
-      "scope": "r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。",
+      "scope": "r_F(u)≤‖v‖；非减 gauge 下真 EB→选中值界还要求 ‖v‖ 落在 gauge 定义域（D04 为 ≤bar t），否则选中端无定义。F(u)={u,u²} 反驳选中值界→真 EB 的无条件逆推。",
       "status": "本轮代数/反例独立重算；文献命名另核"
     },
     {
@@ -3924,6 +3934,24 @@
       "relation": "conditional",
       "scope": "C135：对 LT、direct、energy 分别给 X×[1/j,j] 的乘积闭预算关系，闭性与紧参数给紧或空纤维、允许空值的上半连续及闭投影。仅在这些块恰好穷尽各自实际认证时，其存在谓词为 Fσ；未证明任何一类的原生闭块或总体规模比较。",
       "status": "derived-checked；OS9 抽象拓扑证明，原生实例化开放"
+    },
+    {
+      "id": "E204",
+      "topic": "解选择",
+      "inputs": ["R01", "R02", "SS-TRANSFER"],
+      "output": "SSB-BALL",
+      "relation": "conditional",
+      "scope": "C136：同一有限维 R01/R02 图块的全部 coverage、零锚、全对 RL、实际输出真 EB、gauge 范围、κ<1 和留域预算；另选 bar x∈S∩U、Bρ(bar x)⊂U、0<ε≤R 且 ε+ℒ(ε)<ρ。共同 W 中所有图块轨道有 Mκ^{γk} 点尾，同球极限应用 SS-T2；附加实际距离超几何递推才用 SS-T3。",
+      "status": "derived-checked；SS-B1–B5 条件合成，来源 SS1 Corollary 1"
+    },
+    {
+      "id": "E205",
+      "topic": "解选择",
+      "inputs": ["SSB-BALL", "FULL"],
+      "output": "SSB-COMPLETE",
+      "relation": "conditional",
+      "scope": "C136：同一个 W=U_R∩闭球上的每个输入 u 都须有完整 J_{λF}(u)={J_G(u)}；只核初始 Bε 不够。此等式使图块全部轨道、共同尾和选择模逐步成为完整 PPA 结果，不由图块 RL、闭图或单值图块自动推出。",
+      "status": "derived-checked；F(y)={y,-y} 闭完整图的 J_F(0)=R 阻断漏门"
     }
   ]
 }

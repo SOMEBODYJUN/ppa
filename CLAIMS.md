@@ -1131,3 +1131,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意拓扑空间 \(X\)，每个 \(j\ge1\) 的紧实步长区间 \(I_j=[1/j,j]\)，给**分别指定**的 \(C\in\{\mathrm{LT},\mathrm{direct},\mathrm{energy}\}\) 与乘积闭集 \(B_{C,j}\subset X\times I_j\)。对每个 \(G\in X\)，\(\Sigma_{C,j}(G)=\{\lambda\in I_j:(G,\lambda)\in B_{C,j}\}\) 为紧集或空集；多值谱（允许空值）上半连续，\(P_{C,j}=\{G:\Sigma_{C,j}(G)\ne\varnothing\}\) 闭。**仅当**某认证存在谓词恰为 \(\bigcup_{j\ge1}P_{C,j}\) 时，它是 \(F_\sigma\)。
 - **Dependencies / Evidence**：[OS9 条件证明与下半连续反例](research/operator_space.md#os-spectrum-proof)：紧参数上的闭集投影闭，同一结论应用于避开谱的紧集；\(X=\mathbb R,B=X\times\{0\}\cup\{(0,1)\}\) 的非空纤维仍无下半连续。来源 OS-R §7 G.1–G.2 仅是线索，其损坏的公式字节没有复制。
 - **Counterevidence / Objections / Scope**：各认证的完整图、coverage、真实全纤维 EB、留域及参数预算能否在选定拓扑下成为闭关系，须分别证明；必要闭块不能当作等价认证。没有下半连续、谱开窗、保纲、尖锐描述复杂度或总体规模结论。改变对象拓扑或证书穷尽条件须立新版本。
+
+<a id="c136"></a>
+## C136-v1 / SS-RLEB-BALL · 局部 RLEB 整球共同尾与完整近端门
+
+- **Status**：`derived-checked`，是 R01/R02 与 SS-TRANSFER 的条件合成；不认证具体原关系的全部完整近端分支。
+- **Exact Statement / Objects / Domain / Quantifiers**：在同一有限维 Euclidean \(E\) 中固定 R01/R02 的 \(F,\mathcal G,S,U,U_R,\lambda,R,L,0<\gamma<1,\psi,\kappa\)，保留**全部**图块覆盖、每输入最近零锚、全对 RL、每个实际输出的完整真残差 EB、gauge 定义域与严格直接兼容。取 \(\bar x\in S\cap U\)、\(B_\rho(\bar x)\subset U\) 和 \(0<\varepsilon\le R\) 且 \(\varepsilon+\mathcal L(\varepsilon)<\rho\)。令 \(W=U_R\cap\overline B_{\varepsilon+\mathcal L(\varepsilon)}(\bar x)\)，\(H=(R^{1-\gamma}+L)/2\)。对**每个** \(x\in B_\varepsilon(\bar x),k\ge0\)，图块轨道在 \(W\)，并有 \(\|J_\mathcal G^kx-\Pi_\mathcal G(x)\|\le H\varepsilon^\gamma\kappa^{\gamma k}/(1-\kappa^\gamma)\)；同球的极限映射有 SS-T2 中 \(\beta=\log(1/\kappa^\gamma)/\log(1/\gamma)\) 的两点模。**仅再加** \(J_{\lambda F}(u)=\{J_\mathcal G(u)\}\) 对所有 \(u\in W\)，才把全部轨道与模授予完整 PPA。若同球全部实际输出另满足 \(d_{k+1}\le Kd_k^\nu\)、\(K>0,\nu>1\)，缩 \(\varepsilon\) 使 \(K^{1/(\nu-1)}\varepsilon<1\)，则有 SS-B5 的统一超几何尾与 SS-T3 的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 两点模。
+- **Dependencies / Evidence**：[SS-B1–B5 自足推导](research/canonical/solution_selection_rates.md#ss-rleb-ball) 从 [R01/R02](research/rleb_ppa.md#r01) 取同一局部图块及严格留域，再以 [SS-T1–T3](research/canonical/solution_selection_rates.md#ss-transfer) 的共同尾传递；SS1 来源 §1 Corollary 1 的 105–171 行是重写线索。
+- **Counterevidence / Objections / Scope**：逐初值尾常数不足以得同球极限模；只在初值球上检查完整纤维相等不足以保证漂移后的轨道。闭完整 \(F(y)=\{y,-y\}\) 与对角图块显示完整 \(J_F(0)\) 可含远支。增长条件仅在真实输出与同一留域下提供附加速率，不蕴含无条件完整 PPA 或总体类别比较。

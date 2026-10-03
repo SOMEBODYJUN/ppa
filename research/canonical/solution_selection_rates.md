@@ -2,7 +2,7 @@
 
 本模块为 [C08](../../CLAIMS.md) 和 [S01–S03](../solution_selection.md) 补充可以独立使用的证明。主结果是局部 Hölder 单步与共同尾界的模传递，以及一个完整单值 resolvent 的半代数二值模型：敏感参考轨道自身 Q-二次收敛，初值到极限解却没有正阶两点 Hölder 模。
 
-**来源与证据层级。** 来源为 [SS1 修订包](../../history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip) 内的 research_note.md，定理 1、定理 4 和 §5.1。本模块是逐项独立重构的 derived-checked 证据；下述证明没有调用来源中的审计结论或外部增长二分引理。全图/图块、输入比较尺度、共同尾界及实际点误差的量词均分别写出。未研究先行性。
+**来源与证据层级。** 来源为 [SS1 修订包](../../history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip) 内的 research_note.md，定理 1、§1 推论 1、定理 4 和 §5.1。本模块是逐项独立重构的 derived-checked 证据；下述证明没有调用来源中的审计结论或外部增长二分引理。全图/图块、输入比较尺度、共同尾界及实际点误差的量词均分别写出。未研究先行性。
 
 <a id="ss-transfer"></a>
 ## 1. SS-TRANSFER · 局部 Hölder 单步和共同尾界
@@ -106,6 +106,50 @@ t\gamma^n\ge t^\alpha,\qquad
 这证明 (SS-T3)。
 
 此定理是 \(T\) 的命题。若 \(T=J_{\mathcal G}\) 来自局部图块，要转成完整 \(J_{\lambda F}\) 的结论，仍须在全部比较轨道的共同输入区域证明两者相等；本证明不产生该额外事实。
+
+<a id="ss-rleb-ball"></a>
+## 1a. SS-RLEB-BALL / C136：同一局部 RLEB 窗的共同尾与完整近端门
+
+这是 [R01/R02](../rleb_ppa.md#r01) 与本页 SS-TRANSFER 的**条件合成**，不替任意具体完整原关系验证图块外纤维。令 \(E=\mathbb R^n\)，取 R01/R02 的同一 \(F,\mathcal G,S,U,U_R,\lambda,R,L,0<\gamma<1,\psi,\kappa\) 和全部全对图点、解点锚、逐实际输出真残差、gauge 定义域及严格兼容前提。特别地，\(J_{\mathcal G}:U_R\to E\) 单值，且每个满足 (R02-budget) 的初值均有完整的**图块轨道**。取 \(\bar x\in S\cap U\)，\(\rho>0\) 使 \(B_\rho(\bar x)\subset U\)，再取 \(0<\varepsilon\le R\) 满足
+
+\[
+\varepsilon+\mathcal L(\varepsilon)<\rho,
+\quad\mathcal L(d)=\frac12\left(\frac d{1-\kappa}+\frac{Ld^\gamma}{1-\kappa^\gamma}\right),
+\quad W=U_R\cap\overline B_{\varepsilon+\mathcal L(\varepsilon)}(\bar x). \tag{SS-B1}
+\]
+
+对**每个** \(x\in B_\varepsilon(\bar x)\)，R02 的预算成立：\(d(x,S)\le\varepsilon\)，\(\operatorname{dist}(x,E\setminus U)\ge\rho-\|x-\bar x\|>\rho-\varepsilon>\mathcal L(\varepsilon)\)。其图块轨道全留在 \(W\)，并令 \(\Pi_{\mathcal G}(x)=\lim_kJ_{\mathcal G}^kx\in S\)。设
+
+\[
+H=\tfrac12(R^{1-\gamma}+L),\quad
+M=\frac{H\varepsilon^\gamma}{1-\kappa^\gamma},\quad
+\sigma=\kappa^\gamma. \tag{SS-B2}
+\]
+
+对 \(u,v\in W\) 且 \(\|u-v\|\le R\)，同图块全对 RL 经 \(2(J_{\mathcal G}u-J_{\mathcal G}v)-(u-v)\) 给 \(\|J_{\mathcal G}u-J_{\mathcal G}v\|\le H\|u-v\|^\gamma\)。对轨道输入 \(u\) 与 R01 指定的最近零锚 \(p\in P_S(u)\)，同一不等式还给实际步 \(\|J_{\mathcal G}u-u\|\le H d(u,S)^\gamma\)。由 R02 的 \(d(J_{\mathcal G}^kx,S)\le\kappa^k\varepsilon\)，求和得到
+
+\[
+\|J_{\mathcal G}^kx-\Pi_{\mathcal G}(x)\|
+\le M\sigma^k\quad
+(x\in B_\varepsilon(\bar x),\ k\ge0). \tag{SS-B3}
+\]
+
+因此对**同一个整球** \(B_\varepsilon(\bar x)\)，SS-T2 可用，其极限映射满足指数 \(\beta=\log(1/\sigma)/\log(1/\gamma)\) 的 \(\bigl(\log\log(1/\delta)/\log(1/\delta)\bigr)^\beta\) 两点模，常数不依赖这对初值。这是图块极限结论。若另证
+
+\[
+J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\quad\text{对**每个** }u\in W, \tag{SS-B4}
+\]
+
+则上述全部轨道、尾与选择模也属于同一**完整** PPA；只在初值球上验证等式不足够。由 \(F(y)=\{y,-y\}\)、\(\mathcal G=\{(y,y):y\in\mathbb R\}\)、\(\lambda=1\) 可见接口真实必要：图块 \(J_{\mathcal G}(x)=x/2\)，完整 \(J_F(0)=\mathbb R\)，即使图块步收缩也不能自动移植到完整选择。此例的完整图甚至是闭的，闭图本身不排除同输入跨支碰撞。
+
+还有一条不同的**附加速率门**。若在同一个整球的每一步实际输出上另外有 \(d_{k+1}\le Kd_k^\nu\)，其中 \(K>0,\nu>1\)，并把 \(\varepsilon\) 缩至 \(\vartheta=K^{1/(\nu-1)}\varepsilon<1\)，则 \(d_k\le K^{-1/(\nu-1)}\vartheta^{\nu^k}\)。令 \(a=-\gamma\log\vartheta>0\)，上面的实际步界求和给统一尾
+
+\[
+\|J_{\mathcal G}^kx-\Pi_{\mathcal G}(x)\|
+\le\frac{H K^{-\gamma/(\nu-1)}}{1-e^{-a(\nu-1)}}e^{-a\nu^k}. \tag{SS-B5}
+\]
+
+此时 SS-T3 的指数 \(\alpha=\log\nu/\log(\nu/\gamma)\) 可用于同一个极限映射。若 \(K=0\)，对应一步到 \(S\) 后驻定的退化情形须单独说；若真残差增长 \(r_F(u)\ge m d(u,S)^b\) 仅在上述实际输出上成立且 \(0<b<\gamma\)，则由真实 EB 方向与步界可取 \(\nu=\gamma/b\)、\(K=(H/(\lambda m))^{1/b}\)，但仍须核所有输出与同一留域。\(\mathcal G\) 之外的完整近端分支只有 (SS-B4) 才被排除。
 
 <a id="ss-quadratic-object"></a>
 ## 2. SS-Q2 · 一个完整二值半代数算子

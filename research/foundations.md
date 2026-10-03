@@ -51,7 +51,7 @@ J_{\mathcal G}(p)=(p+C(p))/2.
 ## D04 · 真误差界、兼容和留域
 
 \(\psi:[0,\bar t]\to[0,\infty)\) 非减、\(\psi(0)=0\)、原点连续。输出集合 \(V\) 上的真实 gauge EB 是
-\(d(y,S)\le\psi(r_F(y))\) 对 \(y\in V,r_F(y)\le\bar t\) 成立。它独立于 D02 和 coverage；把已选图值 \(v\) 的范数代入只能凭 \(r_F(y)\le\|v\|\) 与 \(\psi\) 非减推**上界**，不能把两种残差混为定义。
+\(d(y,S)\le\psi(r_F(y))\) 对 \(y\in V,r_F(y)\le\bar t\) 成立。它独立于 D02 和 coverage；只有已选图值 \(v\) 还满足 \(\|v\|\le\bar t\)（或另给明示的 gauge 扩张）时，才能凭 \(r_F(y)\le\|v\|\) 与 \(\psi\) 非减推出 \(d(y,S)\le\psi(\|v\|)\)。选中范数越过定义域时该表达式没有值，不能把两种残差混为定义。
 
 局部收敛还需对实际输出的 EB、\(U_R\subset M_+(\mathcal G)\)、解点图比较、\(\psi((r+Lr^\gamma)/(2\lambda))\le\kappa r\) 与轨道总步长小于离开 \(U\) 的距离。缺任一项不能从 RL 单独推出 PPA。详细量词见 [RLEB–PPA](rleb_ppa.md)。
 

@@ -123,7 +123,7 @@ E59–E61 的输入是**三个不同对象**，其历史 GX 号仅作观察别�
 
 E62–E64 固定同一图块 \(\Gamma\) 后，先区分全对/锚定及自然输入域与 coverage，再在同一步长用 Cayley 代数。E63 仅在 \(\gamma=1\)、相同配对范围上得到 tied \(\rho=\lambda^2\mu\)；\(L=0\) 是允许端点。E64 改**同一图的步长**时 \(Q=\alpha I+\beta C\)；新单值 iff \(Q\) 单射，Lipschitz 上界另需 \(\alpha-|\beta|L>0\)，新目标输入 coverage 不随之自动获得。[PD-STEP](canonical/parameter_dictionary.md#pd-step) 的 \(\eta>\lambda\) 折叠反例阻断无条件换步。
 
-E65 的高指数→低指数只在同一**有界**输入域有统一常数。E66 以 `limits` 指向正确障碍“选中步残差不能倒推真 EB”：方向是“真残差 EB + 非减 gauge → 选中值界”；\(F(u)=\{u,u^2\}\) 阻断逆向，而非反驳障碍本身。E67 的 MR 是移动目标、MSR 是固定目标；MR→MSR，但 MR 与 strong MSR 无条件互推都被显式反例否定。[PD 字典](canonical/parameter_dictionary.md)逐项证明，不把命名惯例当作推理。
+E65 的高指数→低指数只在同一**有界**输入域有统一常数。E66 以 `limits` 指向正确障碍“选中步残差不能倒推真 EB”：正方向是“真残差 EB + 非减 gauge + 选中范数**在该 gauge 定义域内** → 选中值界”；\(F(u)=\{u,u^2\}\) 阻断逆向，而非反驳障碍本身。例如 \(F(u)=\{u,2\}\)、\(\psi:[0,1]\to[0,\infty),\psi(t)=t\) 时，\(u=1/2,v=2\) 的真残差表达式可评价，\(\psi(\|v\|)\) 未定义。E67 的 MR 是移动目标、MSR 是固定目标；MR→MSR，但 MR 与 strong MSR 无条件互推都被显式反例否定。[PD 字典](canonical/parameter_dictionary.md)逐项证明，不把命名惯例当作推理。
 
 任何新版本若改空间、残差、边缘、噪声条件或量词，应修改对应 Claim 版本及图边，保留旧反例；不要通过放宽 `scope` 文本暗中扩大原命题。
 
@@ -277,3 +277,9 @@ E194 在同一完整关系上对**每个** \(\lambda>0\) 与每个 \(p\in\mathbb
 ## E203：紧预算谱只在已闭关系上半连续
 
 E203 固定**一种**认证 \(C\in\{\mathrm{LT},\mathrm{direct},\mathrm{energy}\}\)、拓扑对象空间 \(X\)、正整数 \(j\)、紧实步长区间 \(I_j\) 与**在 \(X\times I_j\) 中闭**的实际预算关系 \(B_{C,j}\)。同一闭关系的纤维 \(\Sigma_{C,j}(G)\) 可空，仍在开集定义下上半连续；非空投影闭。仅当这些预算块**等价穷尽**该认证的真实存在谓词，可数闭投影的并才给 \(F_\sigma\)。[OS9](operator_space.md#os-spectrum-proof) 给抽象证明和下半连续反例。对 LT、direct、energy 各自的完整图、真残差、coverage、留域与证书参数闭性仍是独立义务；本边既不推出三类谱间包含，也不赋予总体大小量尺。
+
+## E204–E205：同一图块的共同整球尾与完整近端门
+
+E204 只在 [R01/R02](rleb_ppa.md#r01) **同一**有限维图块、最近零锚、真残差、gauge 评价域、输入 coverage、直接兼容与严格留域上，选 \(\bar x\in S\cap U\)、\(B_\rho(\bar x)\subset U\)、\(0<\varepsilon\le R\) 及 \(\varepsilon+\mathcal L(\varepsilon)<\rho\)。全部初值 \(B_\varepsilon(\bar x)\) 的轨道进入共同 \(W\)；局部全对 RL 给**该同一个** \(J_{\mathcal G}\) 的 \(H\)-Hölder 单步，逐点距离率和实际步长求和给 SS-B3 的统一**点尾**，才调用 SS-TRANSFER 的 SS-T2。附加超几何距离递推才调用 SS-T3。逐初值不同尾常数不能拼作这一边。
+
+E205 再要求 \(J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\) 对**全部** \(u\in W\)；只有此时 E204 的整球图块轨道、尾和极限模才能逐步成为完整 PPA 结论。仅在初值球上核完整纤维不覆盖后来输入；[F03](solution_selection.md#f03) 的闭完整并图 \(F(y)=\{y,-y\}\) 给 \(J_F(0)=\mathbb R\) 而图块 \(J_{\mathcal G}(0)=0\)。[C136 正文](canonical/solution_selection_rates.md#ss-rleb-ball) 给明确 \(W,H,M,\sigma\) 及附加速率常数。

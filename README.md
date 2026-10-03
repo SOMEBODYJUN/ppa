@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 310 个数学节点、202 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 314 个数学节点、205 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -50,7 +50,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 路线 | 承重节点及联合前件 | 当前状态 |
 | --- | --- | --- |
-| 局部 RLEB | 图块全对 RL + coverage + 最近零点图 + 真实输出 EB → 一步估计；再加兼容 + 留域 → 有限长度 | R01/R02 稿内证明，完整 \(J_F\) 需另证同一性 |
+| 局部 RLEB | 图块全对 RL + coverage + 最近零点图 + 真实输出 EB → 一步估计；再加兼容 + 留域 → 有限长度；固定零点邻域的严格共同预算 + SS-TRANSFER → 同球共同尾与两点极限模 | R01/R02 稿内证明；[C136](research/canonical/solution_selection_rates.md#ss-rleb-ball) 条件合成另要求完整 \(J_{\lambda F}=J_{\mathcal G}\) 在**整个共同轨道输入窗**成立，才能转给完整 PPA |
 | 指定分支弱接口 | 整球 named coverage + 全家族近似零点锚 + 实际输出真 EB + 小尺度兼容 + 初值留域 → Hilbert 有限长度；零距离锚条件还给局部闭零集 | C53/C54 独立重算；C55 证明此接口不蕴含同指数全对 RL，不可回填 R02 的全对输入 |
 | 全对图块到指定锚 | 同图块全对 RL + 指定输入 coverage + 图块零锚对完整零集保距离 → named B/A；实际输出 EB、兼容与留域另接 C53 | C56 条件桥；C57 完整关系说明前两项不能省去零锚保距离，完整排他也独立 |
 | 闭图与自然域 | 近对角线全对消失模 + Hilbert 完备 → 闭图 iff Minty 自然域闭；**同一图块闭图** + 自然域在整个空间稠密 → 满覆盖 | C58 独立推导；仅稠密的非闭图仍可为真子域，图块外完整纤维另证 |
@@ -171,7 +171,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
 | [research/LITERATURE.md](research/LITERATURE.md)、[research/canonical/holder_extension.md](research/canonical/holder_extension.md) | LIT-GRN-2002 核 C05 的一手拓扑门；LIT-ALM-2021 Theorem 1.2 + HE-SNOWFLAKE/EXTENSION 核 H01 的 Hilbert 同常数扩张及固定参数 graph-maximal。引文核验不自动升级整稿。 |
 | [research/range_finite_data.md](research/range_finite_data.md) | W01/Q01–Q04/B01：9/23 的锐值域球、固定窗口、同一有限 QP、参数覆盖、三项误差、有限查询障碍与 deadband；[Q03](research/range_finite_data.md#q-eval) 分开 QP 输出误差 \(e_N\) 与反演求值证书 \(e_x\)，要从结构定理走向可计算证书时读。 |
-| [research/solution_selection.md](research/solution_selection.md)、[solution_selection_rates.md](research/canonical/solution_selection_rates.md) | S01–S03、C08、C115/C116：统一尾的有限前缀尺度证明，完整二值半代数模型的共同证书、逐轨道 Q 二次与两点坏选择；主张初值稳定时读。SS1 定理 2/3 仍未重构。 |
+| [research/solution_selection.md](research/solution_selection.md)、[solution_selection_rates.md](research/canonical/solution_selection_rates.md) | S01–S03、C08、C115/C116、C136：统一尾的有限前缀尺度证明；R01/R02 到共同初值球、共同轨道窗、几何/附加超几何点尾的精确条件，以及完整近端的逐纤维同一性门；完整二值半代数模型的共同证书、逐轨道 Q 二次与两点坏选择。研究初值稳定时先读；SS1 定理 2/3 仍未重构。 |
 | [research/canonical/signed_schur_growth.md](research/canonical/signed_schur_growth.md) | C117–C119：双支 signed-Schur 的闭参数域图包含、切向球内全对模与完整纤维门；幂次/同修正坐标匹配、平方根原生图及反例。核局部 R04 或把图块结论转成完整近端前读。 |
 | [research/operator_space.md](research/operator_space.md)、[固定紧源观测证明](research/canonical/compact_t_observation.md#ct-proper) | LT 嵌入、完整图信息、\(\Phi\) 的自足 proper 证明、C131–C134 四条紧源条件证明，以及 C135 闭预算关系的紧步长谱引理；原关系 \(F_{T,K}\) 的域是 \(T(K)\)，其近端输入域才是 \(K\)。若要把 C135 用于 LT/direct/energy，先分别核预算块闭性与证书穷尽；总体比较工作入口。 |
 | [research/canonical/sigma_compact_baire.md](research/canonical/sigma_compact_baire.md#sc-proof) | C128：已给定 σ-紧度量空间的 Baire 等价判据；判据不替目标算子空间构造紧层或证明保纲。 |
