@@ -272,13 +272,13 @@
     },
     {
       "id": "SEL-EX",
-      "label": "SS1 §3 几何模型的配对初值来源（待核）",
-      "file": "solution_selection.md#sel-ex"
+      "label": "同一完整几何 cap 图的配对初值与首次切换",
+      "file": "canonical/selection_geometric_sharpness.md#gs-sharp"
     },
     {
       "id": "SEL-SHARP",
-      "label": "几何尾极限模的匹配下界待独立核",
-      "file": "solution_selection.md#sel-sharp"
+      "label": "几何尾极限模的匹配对数–对数下界 C138",
+      "file": "canonical/selection_geometric_sharpness.md#gs-sharp"
     },
     {
       "id": "CAT-GAP",
@@ -1974,9 +1974,9 @@
         "SEL-EX"
       ],
       "output": "SEL-SHARP",
-      "relation": "open",
-      "scope": "SS1 §3 的同一几何 cap 完整模型、配对初值、首次切换时刻和双边对数–对数界仍待独立重构。C137 只给共同尾和 β=1 上界；另一 Q 二次模型的无正阶 Hölder 已由 E181/C116 单独证明，不能借给本目标。",
-      "status": "open；来源审计不替代 §3 独立下界证明"
+      "relation": "conditional",
+      "scope": "C138：固定 C137 的同一完整单值 T 和固定 0<r₀<1 的 x₀=(0,0,r₀)、xε=(0,ε,r₀)；GS-3 首次切换、GS-4 两侧门及 GS-6 精确饱和尾给 ||Π(xε)−Π(x₀)||=Θ(loglog(1/ε)/log(1/ε))，匹配 C137/SS-T2 的 β=1 上界。若称在同一 RLEB 固定证书内，再取 0<r₀≤R<R_*；不借用二次模型 C116 的坏选择，也不声称归一化极限存在。",
+      "status": "derived-checked；C138 同一配对的首次切换独立证明与快速逆向审查"
     },
     {
       "id": "E32",
@@ -3944,7 +3944,9 @@
     {
       "id": "E203",
       "topic": "算子空间",
-      "inputs": ["OSB-INPUT"],
+      "inputs": [
+        "OSB-INPUT"
+      ],
       "output": "OSB-USC",
       "relation": "conditional",
       "scope": "C135：对 LT、direct、energy 分别给 X×[1/j,j] 的乘积闭预算关系，闭性与紧参数给紧或空纤维、允许空值的上半连续及闭投影。仅在这些块恰好穷尽各自实际认证时，其存在谓词为 Fσ；未证明任何一类的原生闭块或总体规模比较。",
@@ -3953,7 +3955,11 @@
     {
       "id": "E204",
       "topic": "解选择",
-      "inputs": ["R01", "R02", "SS-TRANSFER"],
+      "inputs": [
+        "R01",
+        "R02",
+        "SS-TRANSFER"
+      ],
       "output": "SSB-BALL",
       "relation": "conditional",
       "scope": "C136：同一有限维 R01/R02 图块的全部 coverage、零锚、全对 RL、实际输出真 EB、gauge 范围、κ<1 和留域预算；另选 bar x∈S∩U、Bρ(bar x)⊂U、0<ε≤R 且 ε+ℒ(ε)<ρ。共同 W 中所有图块轨道有 Mκ^{γk} 点尾，同球极限应用 SS-T2；附加实际距离超几何递推才用 SS-T3。",
@@ -3962,7 +3968,10 @@
     {
       "id": "E205",
       "topic": "解选择",
-      "inputs": ["SSB-BALL", "FULL"],
+      "inputs": [
+        "SSB-BALL",
+        "FULL"
+      ],
       "output": "SSB-COMPLETE",
       "relation": "conditional",
       "scope": "C136 的整窗充分门：若同一个 W=U_R∩闭球上的每个输入 u 有完整 J_{λF}(u)={J_G(u)}，图块全部轨道、共同尾和选择模成为完整 PPA 结果；只核初始 Bε 不够。仅在全部球初值的实际可达输入上逐纤维一致也足够。整窗等式不由图块 RL、闭图或单值图块自动推出，也不声称逻辑必要。",
@@ -3971,7 +3980,9 @@
     {
       "id": "E206",
       "topic": "解选择",
-      "inputs": ["GC-OBJECT"],
+      "inputs": [
+        "GC-OBJECT"
+      ],
       "output": "GC-CERT",
       "relation": "conditional",
       "scope": "C137：同一完整 F 的全部近端纤维反演、正负图支比较与完整最小残差；任意输入对尺度 R>0 给 L_R 的 RL 与系数 1/4 真 EB，另取 0<R<[2(4−2√2)/5]^2 及足够大的 gauge 域才有 κ_R<1。渐近常数不宣称每个有限 R 最优。",
@@ -3980,10 +3991,14 @@
     {
       "id": "E207",
       "topic": "解选择",
-      "inputs": ["GC-OBJECT", "GC-CERT", "SS-TRANSFER"],
+      "inputs": [
+        "GC-OBJECT",
+        "GC-CERT",
+        "SS-TRANSFER"
+      ],
       "output": "GC-TAIL",
       "relation": "conditional",
-      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；显式法向率 1/4 与切向步的共同 M·2^{-k} 点尾，SS-T2 在同一初值家族给 β=1 的上界。未证明此上界锐，不能移植到 SS-Q2 二次模型。",
+      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；显式法向率 1/4 与切向步的共同 M·2^{-k} 点尾，SS-T2 在同一初值家族给 β=1 的上界。本边仅给共同尾上界；同图配对的匹配阶另见 E31/C138，不能移植到 SS-Q2 二次模型。",
       "status": "derived-checked；GC-7–8 与 SS-TRANSFER"
     }
   ]

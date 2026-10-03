@@ -288,4 +288,8 @@ E205 采用充分门 \(J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\) 对**全部** \(
 
 E206 的对象固定为 [GC-1 完整二支图](canonical/selection_geometric_cap.md#gc-object)，\(\lambda=1\)、Euclidean \(\mathbb R^3\)、完整零集 \(S=\mathbb R^2\times\{0\}\)。所有输入及正负图支由唯一完整 \(J_F=T\) 反演；对任意输入对尺度 \(R>0\) 才给 \(L_R=2\sqrt2+3\sqrt R/2\) 的全对半阶 RL 和完整最小残差 \(d(u,S)\le r_F(u)^2/4\)。\(\kappa_R<1\) 另要求**固定** \(0<R<[2(4-2\sqrt2)/5]^2\)，以及选中步的范数在 \(\psi:[0,\bar t]\) 定义域内；最优渐近 RL 常数不声称每个有限 \(R\) 的 \(L_R\) 最优。[GC 证书](canonical/selection_geometric_cap.md#gc-certificates) 逐式区分这三个尺度。
 
-E207 在**同一**完整 \(T\) 上对所有 \(|r_0|\le R\) 取统一 \(M=2\sqrt2\sqrt R+R\) 和 \(\sigma=1/2\) 的点尾，再以 [SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer) 得 \(\beta=1\) 的两点**上界**。实际法向率 \(1/4\)、兼容证书 \(\kappa_R\to1/2\) 和由证书导出的保守尾指数是三种不同数据；旧 §3 的配对下界未审，不能把 \(\beta=1\) 标作已证锐性。C137 与 SS-Q2 是不同完整关系，不能拼它们的证书。
+E207 在**同一**完整 \(T\) 上对所有 \(|r_0|\le R\) 取统一 \(M=2\sqrt2\sqrt R+R\) 和 \(\sigma=1/2\) 的点尾，再以 [SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer) 得 \(\beta=1\) 的两点**上界**。实际法向率 \(1/4\)、兼容证书 \(\kappa_R\to1/2\) 和由证书导出的保守尾指数是三种不同数据；下界属于额外的 E31/C138 配对论证，而非共同尾的自动后果。C137 与 SS-Q2 是不同完整关系，不能拼它们的证书。
+
+## E31：几何 cap 同图配对首次切换
+
+E31 使用 C137 的**同一个**完整 \(F,T\)，另固定 \(0<r_0<1\) 与 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)。[C138](canonical/selection_geometric_sharpness.md#gs-sharp) 证明首次切换 \(N\) 的两侧 \(t2^{-N}=\Theta(N)\)、此后饱和的精确尾及下界；与 E207 的上界匹配。若限定在 C137 严格兼容的**同一个固定半径**，取 \(0<r_0\le R<R_*\)。常数依赖固定 \(r_0\)；不声称归一化极限，不由 C116 的另一完整关系授予。

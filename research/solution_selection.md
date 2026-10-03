@@ -22,15 +22,15 @@
 <a id="s02"></a>
 ## S02 · 对 RLEB 的有条件导入
 
-图块全对 RL 给 \(T=J_{\mathcal G}\) 在同一图块的 \(H=(R^{1-\gamma}+L)/2\) Hölder 界。[C136 / SS-B1–B5](canonical/solution_selection_rates.md#ss-rleb-ball) 在 R01/R02 的**同一个**零锚、真残差、coverage、兼容和留域窗上，从 \(\varepsilon+\mathcal L(\varepsilon)<\rho\) 构造共同初值球、轨道区域和统一尾，才能应用 S01。若要以**完整** \(T=J_{\lambda F}\) 陈述，须另证它和 \(J_{\mathcal G}\) 在整条轨道可能经过的共同输入区域 \(W\) 上逐纤维相等；只在初值处检查不够。SS2 §二 R1、B2。固定解点 \(s\in S\) 的 \(\|\Pi(x)-s\|\lesssim\|x-s\|^\gamma\) 只给 anchored calmness，不给邻域里**任意两个**初值的 Hölder 模。
+图块全对 RL 给 \(T=J_{\mathcal G}\) 在同一图块的 \(H=(R^{1-\gamma}+L)/2\) Hölder 界。[C136 / SS-B1–B5](canonical/solution_selection_rates.md#ss-rleb-ball) 在 R01/R02 的**同一个**零锚、真残差、coverage、兼容和留域窗上，从 \(\varepsilon+\mathcal L(\varepsilon)<\rho\) 构造共同初值球、轨道区域和统一尾，才能应用 S01。若要以**完整** \(T=J_{\lambda F}\) 陈述，须另证它和 \(J_{\mathcal G}\) 在全部实际可达输入上逐纤维相等；在共同输入区域 \(W\) 上逐纤维相等是方便的充分门，只在初值处检查不够。SS2 §二 R1、B2。固定解点 \(s\in S\) 的 \(\|\Pi(x)-s\|\lesssim\|x-s\|^\gamma\) 只给 anchored calmness，不给邻域里**任意两个**初值的 Hölder 模。
 
 <a id="sel-ex"></a>
 <a id="sel-sharp"></a>
 ## S03 · 显式下界与价值边界
 
-修订稿报告两个闭图、至多二值完整 proximal 模型（SS1 §§2–4）：几何尾模型的**匹配对数–对数下界仍是来源报告**，二次尾模型的无正阶 Hölder 两点稳定性已有下段所链的独立证明。这两种证据状态不能合并。几何图的完整反演、负输入和 cap 接点、跨支 all-pairs RL、全纤维最小残差 EB 与严格兼容已在 C137 重算；§3 的配对初值及首次切换下界仍待审。二次模型的 all-pairs 常数依赖输入对尺度 \(D\)，其已核下界固定同一初始 collar。一般实参数族不自动半代数，旧稿的有理指数限制须保留。经典 AGM 的较宽泛机制提示新颖性门仍开放；这里不声称完成先行性判断。
+SS1 §§2–4 有两个不同的闭图、至多二值完整 proximal 模型。几何尾模型的反演、跨支 all-pairs RL、真 EB、固定兼容和共同尾在 C137；**同一图的首次切换匹配下界**在 [C138](canonical/selection_geometric_sharpness.md#gs-sharp) 独立重构。另一二次尾模型的无正阶 Hölder 两点稳定性由 C115/C116 单独证明。两模型的证书和下界不能混用；一般实参数族不自动半代数，旧稿的有理指数限制须保留。经典 AGM 的较宽泛机制提示新颖性门仍开放；这里不声称完成先行性判断。
 
-其中 **SS1 §2 定理 2** 的[完整几何尾二支图](canonical/selection_geometric_cap.md#gc-object)（C137）已有全图反演、全对半阶、真 EB、固定半径及共同几何尾的独立正文，但 §3 的配对下界未审，\(\beta=1\) 只登记为两点上界。**SS1 定理 4 的另一二次模型与 §5.1** 有[完整纤维、共同证书及坏选择的独立正文](canonical/solution_selection_rates.md#ss-quadratic-object)（C115/C116）：逐轨道 Q-二次比值与全部初值的共同超几何尾是不同断言；两点根对数下界固定同一个初始 collar。两模型的 \(F,T\)、法向率和最小残差不能互换；SS1 §3 定理 3 与 §5.2 仍未逐项重构。
+**SS1 §2–§3** 的[完整几何尾二支图](canonical/selection_geometric_cap.md#gc-object)及[指定配对锐阶](canonical/selection_geometric_sharpness.md#gs-sharp)分别是 C137/C138：前者先给共同尾上界，后者在固定 \(r_0\) 的同一 \(T\) 上证匹配下界；若称两者属于同一严格 RLEB 证书，须固定 \(r_0\le R<R_*\)。**SS1 定理 4 的另一二次模型与 §5.1** 有[完整纤维、共同证书及坏选择的独立正文](canonical/solution_selection_rates.md#ss-quadratic-object)（C115/C116）：逐轨道 Q-二次比值与全部初值的共同超几何尾是不同断言；两点根对数下界固定另一个初始 collar。两模型的 \(F,T\)、法向率和最小残差不能互换；§5.2 仍未逐项重构。
 
 <a id="f03"></a>
 ## 反例 F03：不可省的全图一致性
@@ -43,5 +43,5 @@
 | --- | --- | --- |
 | H-S01 | {同一 T 的共同迭代区域 V、V 内同尺度局部 Hölder、全初值全时间统一几何／超几何尾} → S01 对应模 | [SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer) 独立证明；C08 抽象部分 `derived-checked`。图块 RL 转入此边须先核 T=J_G 与同域尺度 |
 | H-S02 | {R02 的局部轨道、共同初值球、留域} → S02 的 \(J_{\mathcal G}\) 版本 | 局部版本；完整版本需再加纤维一致性 |
-| H-S03 / E31 | {C137 的几何模型共同尾、SS1 §3 的同模型配对初值与首次切换下界} → 几何尾极限模匹配锐性目标 | `open`：后两个前提只在来源中报告，尚未独立重构；二次模型的已核无正阶 Hölder 用 E181/C116，不能代替这里的下界 |
+| H-S03 / E31 | {C137 的同一完整几何模型共同尾、C138 固定配对的首次切换与饱和尾} → \(\beta=1\) 上界的匹配阶 | `derived-checked`：GS-1–6 独立重算；二次模型的坏选择另用 E181/C116，先行性另核 |
 | H-F03 | {局部图块 A1–A4、图块外额外输出} → 完整 \(J_F\) 可多值 | 明确反例，否定 SS0 的扩大版本 |

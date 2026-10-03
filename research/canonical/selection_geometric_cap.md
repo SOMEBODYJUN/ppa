@@ -122,12 +122,12 @@ SS-TRANSFER 获得同一极限映射的共同两点对数模，
 直接距离率是 \(d(Tx,S)=d(x,S)/4\)，与证书
 \(\kappa_R\to1/2\) 及其保守尾指数
 \(\log(1/\kappa_R)/(2\log2)\to1/2\) 是不同层的量。
-本页没有证明 \(\beta=1\) 是全部可能模中的锐指数；
-来源下一节的配对下界需另行独立重构。
+本页只证明上界；[C138 的同一完整图配对下界](selection_geometric_sharpness.md#gs-sharp)
+另行证明此对数–对数阶在所显示的固定初值族不可改进。
 
 **来源与边界。** 来源定位 SS1 修订包的
 `research_note.md` §2 定理 2（181–293 行）。
-本页从完整图重新计算，并不借审计 PASS 升格 §3 下界、
-任意参数族或文献优先权。不要把这里的几何尾模型与
+本页从完整图重新计算；§3 的独立重构在 [C138](selection_geometric_sharpness.md#gs-sharp)，
+并不借审计 PASS 升格任意参数族或文献优先权。不要把这里的几何尾模型与
 [不同二次尾模型](solution_selection_rates.md#ss-quadratic-object)
 合并；两者的 \(F,T\)、法向率和最小真残差不同。

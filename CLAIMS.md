@@ -980,7 +980,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C115 同一完整 \(T\)，每个非驻定收敛初值的实际点误差满足 \(\lim_{k\to\infty}e_{k+1}/e_k^2=1\) 若 \(p_0\le0\)，若 \(p_0>0\) 则为 \(1/\sqrt2\)；这是**每条轨道**的渐近，而非共同进入时间。固定任意足够小 \(0<r_0\le R\) 后，比较 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)，\(\varepsilon\downarrow0\)，其极限差有匹配的 \(e^{-C\sqrt{\log(1/\varepsilon)}}\) 上下阶，排除在原点任意邻域的正阶两点 Hölder，亦排除比根对数指数 \(1/2\) 更大的统一伸缩指数。每个有限步 \(T^k\) 半代数，但 \(\Pi\) 在原点任意开邻域非半代数。
 - **Dependencies / Evidence / Status / Related Files**：[SSQ-TAIL/SELECTION/NONSEMIALGEBRAIC](research/canonical/solution_selection_rates.md#ss-quadratic-tail) 的饱和时刻上下界、分离的 overshoot 与尾项、逐轨道极限以及代数多项式反证；依赖 C115 的完整对象和共同局部证书，`derived-checked`，另经独立逆向审查。来源 SS1 定理 4 和 §5.1；非半代数的证明不依赖外部增长引理。
-- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核，SS1 定理 2/3 和 §5.2 仍须逐项重构。
+- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，§5.2 与一般参数族仍待裁决。
 
 ## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
 
@@ -1151,7 +1151,15 @@
 <a id="c137"></a>
 ## C137-v1 / SS-GEOMETRIC-CAP · 完整二支图的几何尾与证书分层
 
-- **Status**：`derived-checked`，范围为本对象的完整纤维反演、全对局部模、真 EB、固定兼容半径及共同几何尾；§3 的配对下界和原创性未审。
+- **Status**：`derived-checked`，范围为本对象的完整纤维反演、全对局部模、真 EB、固定兼容半径及共同几何尾；§3 的同图配对下界另立 C138，外部原创性未审。
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(E=\mathbb R^3,\lambda=1\) 固定 [GC-1](research/canonical/selection_geometric_cap.md#gc-object) 的完整闭半代数二支关系；\(S=\mathbb R^2\times\{0\}\)，完整 \(J_F=T\) 在全部输入上唯一且由 (GC-2) 给出。对每个 \(R>0\)，同一完整图在输入对尺度 \(R\) 满足 \(\mathrm{RL}(1,1/2,L_R;R)\)，\(L_R=2\sqrt2+3\sqrt R/2\)；半阶最大、渐近最佳常数为 \(2\sqrt2\)，不声称每个固定 \(R\) 的 \(L_R\) 最小。完整真残差有 \(d(u,S)\le r_F(u)^2/4\)，系数渐近最优。固定 \(0<R<[2(4-2\sqrt2)/5]^2\) 和 \(\bar t\ge(R+L_R\sqrt R)/2\) 后，\(\psi(t)=t^2/4\) 可在 \([0,\bar t]\) 调用，直接兼容常数 \(\kappa_R=(\sqrt R+L_R)^2/16<1\)；全部输入轨道仍直接满足 \(d(Tx,S)=d(x,S)/4\)，每个 \(|r_0|\le R,k\ge0\) 具有 (GC-8) 的共同点尾，故 SS-T2 可取 \(\sigma=1/2,\beta=1\) 的上界。
 - **Dependencies / Evidence**：[完整三段反演、全对图与尾界的逐式证明](research/canonical/selection_geometric_cap.md#gc-object)；C02-v2、SS-TRANSFER 只用于条件链调用，实际轨道率由显式 \(T\) 单独算得。来源 SS1 `research_note.md` §2 定理 2 的 181–293 行只作定位。
-- **Counterevidence / Objections / Scope**：负输入选中残差较大一支，EB 必须用全部输出纤维的最小值；\(\kappa_R\) 与实际 \(1/4\) 不等，固定半径不受 \(R\downarrow0\) 的极限替代。未将共同尾上界的 \(\beta=1\) 声称为锐两点模，也不把 SS1 §3 的旧下界、§5.2 应用或全部参数族纳入本版本。
+- **Counterevidence / Objections / Scope**：负输入选中残差较大一支，EB 必须用全部输出纤维的最小值；\(\kappa_R\) 与实际 \(1/4\) 不等，固定半径不受 \(R\downarrow0\) 的极限替代。本版本的共同尾只给上界；同模型配对锐阶另立 [C138](#c138)，§5.2 应用或全部参数族不纳入。
+
+<a id="c138"></a>
+## C138-v1 / SS-GEOMETRIC-SHARP · 几何 cap 图极限选择的匹配劣化
+
+- **Status**：`derived-checked`，仅对显示的同一完整关系和同一配对族的首次切换证明；不判文献原创性。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 C137 的完整 \(F\) 和全域唯一 \(T=J_F\)。对**每个固定** \(0<r_0<1\)，比较 \(x_0=(0,0,r_0)\)、\(x_\varepsilon=(0,\varepsilon,r_0)\)。存在仅依赖 \(r_0\) 的 \(c,C,\varepsilon_0>0\)，使全部 \(0<\varepsilon<\varepsilon_0\) 的完整轨道极限满足 \(c\log\log(1/\varepsilon)/\log(1/\varepsilon)\le\|\Pi(x_\varepsilon)-\Pi(x_0)\|\le C\log\log(1/\varepsilon)/\log(1/\varepsilon)\)。故在此配对处没有任何正阶两点 Hölder 模；它匹配 C137/SS-T2 的 \(\beta=1\) 上阶。若称这是同一个 RLEB 固定半径证书**内**的见证，另选 \(0<r_0\le R<[2(4-2\sqrt2)/5]^2\)；一般 \(r_0<1\) 的动力结论不要求该半径。
+- **Dependencies / Evidence**：[GS-1–6 首次切换和精确饱和尾](research/canonical/selection_geometric_sharpness.md#gs-sharp) 从 C137 的同一完整 \(T\) 逐步重建，并保持 \(t2^{-N}=\Theta(N)\) 的两侧门；SS1 来源 §3 定理 3 的 294–358 行只是线索。快速独立逆向审查的范围及异议见本轮接收记录。
+- **Counterevidence / Objections / Scope**：只声称匹配阶，不声称归一化比值收敛；不能把 \(r_0\) 随 \(\varepsilon\) 改变还沿用同一常数，也不把 C115/C116 的 Q 二次坏选择当作此下界证明。一般参数族、§5.2 与全球优先权未审。
