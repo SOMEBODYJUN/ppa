@@ -12,7 +12,7 @@
 | **全局结构与有限纤维** | [剪切与同常数扩张](research/canonical/holder_extension.md)、[结构候选正文](research/holder_structure.md)、[值域及有限数据](research/range_finite_data.md) | C03/C04、C18/C19、**C20-v2** 的稿内证明仍为 `candidate`：逐项核有限维 properness/degree、固定点实现、影子锐常数、QP 与完整纤维 coverage。C20-v1 的局部越尺度版本已被 [F36](FAILED_ROUTES.md#f36) 反驳；v2 的局部调用须同图且每个样本点对在 RL 测试尺度内，完整纤维全体亦须属于认证图。`e_N` 只认证候选参数处的 QP 输出；反演三项误差另需固定点残差换算为 `e_x`。固定维数影子最优因子开放。 |
 | **局部值域** | [C70 样本包络/整窗余量](research/canonical/finite_sample_collar.md) 与 [C05-v2 条件拓扑证明](research/canonical/local_range_without_supercriticality.md)；[一手引文适用门](research/LITERATURE.md#lit-grn-2002) 已核 | 给一个目标原生模型逐输出认证**同一个**指定 \(T\) 的近端包含、两项整窗估计、非空紧 usc/acyclic 值、同一 collar 与上同调门。有限样本不认证这些全称条件。PDF 原稿 C05-v1 的 \(q\gamma>1\) 候选身份不被只需 \(q>0\) 的 v2 悄悄替换。 |
 | **锥、Markov 与随机近端旁支** | [锥/Markov 对象与条件](research/cone_markov.md)、[二进制/Gaussian 条件刷新 C129/C130](research/topics/random_markov/conditional_refresh.md)、[有限状态顶点证书](research/topics/random_markov/finite_state_certificate.md)、[C126/C127 矩与回耦](research/topics/random_markov/moment_recoupling.md)、[随机近端](research/canonical/random_proximal.md) | 锥 MSCQ 接 PPA 真残差需同一零集及锥残差桥；二进制 \(\mathsf W_\nu/\mathcal R\)、Gaussian \(W_{2,Q}/\mathcal R_Q\)、同步 \(\Psi\) 与真实 law-step 属不同对象。C129/C130 的条件证明已独立重构，不认证二者到一般原生同步 \(\Psi\) 的桥。原生回耦的**同一输入最优近极小对**、目标边缘和损失界尚未对一般多值算法认证。外部先行性及未重写的旧推论独立待核。 |
-| **来源语义覆盖** | [逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv) 当前有 125 行（119 rewritten、3 superseded、3 deferred），[来源位置/字节组索引](research/audit/SEMANTIC_INVENTORY_PLAN.md) 保持溯源 | 251 个物理文件与 178 个 ZIP 成员只是 429 个出现位置、346 个字节组；尚未穷尽数学及证据单元的分母。四个内容组做了不同深度的逐段试点；其余内容须按 P1–P5 枚举并裁决。不能从 125/251、125/346 或图节点数报告清洗完成率。 |
+| **来源语义覆盖** | [逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv) 当前有 128 行（122 rewritten、3 superseded、3 deferred），[来源位置/字节组索引](research/audit/SEMANTIC_INVENTORY_PLAN.md) 保持溯源 | 251 个物理文件与 178 个 ZIP 成员只是 429 个出现位置、346 个字节组；尚未穷尽数学及证据单元的分母。四个内容组做了不同深度的逐段试点；其余内容须按 P1–P5 枚举并裁决。不能从 128/251、128/346 或图节点数报告清洗完成率。 |
 
 ## 条件链的使用顺序
 
@@ -27,7 +27,7 @@
 1. 先对总体比较写一页 \((\mathfrak X,\mathfrak I,\mathcal R,\mathcal L,\mathcal M)\) 规格；用 [operator_space](research/operator_space.md) 中局部观测、远端自由度与共同塌缩机制立即攻击。若用 C135 的步长谱方案，先在该同一空间分别证明 LT、direct、energy 的乘积闭预算块及**等价**的可数耗尽；抽象上半连续不提供这一步。若量尺把目标类一同判小，改量尺或表示，不追加孤立成员例。
 2. 为一份目标原生值域模型逐输出验证 C05-v2 的整窗 \(T\)，或给其条件不可同时满足的明确障碍。C70 与文献定理适用门已有规范记录，不重复把样本误当全称证据。
 3. 对 C03/C04、C18/C19、C20-v2 的一个承重稿内步骤作真正独立证明或反例攻击，优先选择有限维 degree/fixed-set 或 QP/反演链；所得结果改变 Claim 状态时同步正文、总账与图。
-4. 按 [语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 继续可验证的来源逐段裁决；SS1 §1 推论 1 已有 C136 的条件重写，§2 定理 2 的 181–293 行与 §3 定理 3 的 294–358 行分别已有 C137/C138 的完整图和同图配对锐阶重算。下一项可审 SS1 §4 前的任意 \(\gamma,q\) 模型族（359–448 行）及 §5.2 切向条件（608–641 行），先核参数范围、半代数性与原生桥，不能把特定两张图的证书复制过去。每个有价值单元重写成自足正文；重复文件、来源报告、任务书和真实数学证明分开登记。缺失原证明不得补造；新数学研究不必等待覆盖任务全部结束。
+4. 按 [语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 继续可验证的来源逐段裁决；SS1 §1 推论 1 已有 C136 的条件重写，§2 定理 2 的 181–293 行与 §3 定理 3 的 294–358 行分别已有 C137/C138 的完整图和同图配对锐阶重算。SS1 359–448 行的任意 \(\gamma,q\) 族已重写为 [C139](research/canonical/selection_parameter_family.md#pf-object)；§5.2 切向三角充分条件已重写为 [C140](research/canonical/selection_tangential_condition.md#tc-triangle)；下一项是另一超线性族 557–582 行，核参数域、半代数性与原生桥。每个有价值单元重写成自足正文；重复文件、来源报告、任务书和真实数学证明分开登记。缺失原证明不得补造；新数学研究不必等待覆盖任务全部结束。
 5. 每次改动执行 [增长协议](RESEARCH_PROTOCOL.md) 的 Claim 版本、符号、合取图和验证门；由空白上下文只读规范层复述一条新承重链，发现需要猜原件定义时补正文或降状态。
 
 ## 完成判据

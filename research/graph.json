@@ -1594,6 +1594,51 @@
       "id": "GC-TAIL",
       "label": "同一 collar 共同几何尾与两点上界 C137",
       "file": "canonical/selection_geometric_cap.md#gc-tail"
+    },
+    {
+      "id": "PF-OBJECT",
+      "label": "任意 γ,q 的完整二支族与全域近端 C139",
+      "file": "canonical/selection_parameter_family.md#pf-object"
+    },
+    {
+      "id": "PF-CERT",
+      "label": "同一参数族的全对 RL、真 EB 与固定严格半径",
+      "file": "canonical/selection_parameter_family.md#pf-certificates"
+    },
+    {
+      "id": "PF-TAIL",
+      "label": "参数族的共同几何尾与 β 上界",
+      "file": "canonical/selection_parameter_family.md#pf-sharp"
+    },
+    {
+      "id": "PF-PAIR",
+      "label": "固定 r₀ 的同图正切向配对与首次切换",
+      "file": "canonical/selection_parameter_family.md#pf-sharp"
+    },
+    {
+      "id": "PF-SHARP",
+      "label": "同一参数族极限选择的匹配 β 阶 C139",
+      "file": "canonical/selection_parameter_family.md#pf-sharp"
+    },
+    {
+      "id": "PF-MOD",
+      "label": "任意指数族在输入对尺度 R 的全对 γ 模 PF-3",
+      "file": "canonical/selection_parameter_family.md#pf-certificates"
+    },
+    {
+      "id": "TC-TRI",
+      "label": "全切向域三角动力学的衰减敏感度条件 C140",
+      "file": "canonical/selection_tangential_condition.md#tc-triangle"
+    },
+    {
+      "id": "TC-HOLDER",
+      "label": "有限长度与全域混合 Lipschitz/Hölder 极限模 C140",
+      "file": "canonical/selection_tangential_condition.md#tc-proof"
+    },
+    {
+      "id": "TC-GAP",
+      "label": "几何 cap 尖点族不满足衰减切向 Lipschitz 门",
+      "file": "canonical/selection_tangential_condition.md#tc-boundary"
     }
   ],
   "edges": [
@@ -4000,6 +4045,87 @@
       "relation": "conditional",
       "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；显式法向率 1/4 与切向步的共同 M·2^{-k} 点尾，SS-T2 在同一初值家族给 β=1 的上界。本边仅给共同尾上界；同图配对的匹配阶另见 E31/C138，不能移植到 SS-Q2 二次模型。",
       "status": "derived-checked；GC-7–8 与 SS-TRANSFER"
+    },
+    {
+      "id": "E208",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT"
+      ],
+      "output": "PF-CERT",
+      "relation": "conditional",
+      "scope": "C139：固定 0<γ,q<1、A,B>0，完整两支 F 在所有输入单值反演；任意 R>0 的全对 γ-RL 和真实最小残差 EB 独立成立。严格兼容另合取 B/A<sqrt(q^{-2γ}−1)、固定 R 的 PF-6 门与 gauge 评价域，κ_R<1；不能从任意 R 的证书自动推出严格率。",
+      "status": "derived-checked；PF-1–6 逐式重算与快速逆向审查"
+    },
+    {
+      "id": "E209",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT",
+        "PF-MOD",
+        "SS-TRANSFER"
+      ],
+      "output": "PF-TAIL",
+      "relation": "conditional",
+      "scope": "C139：同一个完整 T，固定 |r₀|≤R 的共同切向 q^{γk} 点尾及实际法向 q^k；SS-T2 给 β=γ log(1/q)/log(1/γ) 两点上界。本边仅调用 PF-3 的全对模和显式 T 的共同尾，不要求 PF-6 的严格兼容门；κ_R 是保守证书率，不能替换实际 q。",
+      "status": "derived-checked；PF-7–8 与 SS-TRANSFER"
+    },
+    {
+      "id": "E210",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT",
+        "PF-PAIR",
+        "PF-TAIL"
+      ],
+      "output": "PF-SHARP",
+      "relation": "conditional",
+      "scope": "C139：同图固定 0<r₀<1 与 x₀=(0,0,r₀),xε=(0,ε,r₀)；首次切换的两侧 tγ^N=Θ(N) 与切换后的精确饱和尾给 Θ[(loglog(1/ε)/log(1/ε))^β]。在同一严格 RLEB 证书内另取 r₀≤R 满足 PF-6；不宣称归一化极限或 κ_R=q 的更窄类锐性。",
+      "status": "derived-checked；PF-9–12 与独立逆向审查"
+    },
+    {
+      "id": "E211",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT"
+      ],
+      "output": "GC-OBJECT",
+      "relation": "conditional",
+      "scope": "仅在 γ=1/2、q=1/4、A=B=1 的参数特化下，PF-1 的完整图与 C137 GC-1 逐图值相同，完整 T 亦相同；一般参数族不能无条件改称 C137 的固定半径与常数。",
+      "status": "derived-checked；PF-1/GC-1 代入核算"
+    },
+    {
+      "id": "E212",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT"
+      ],
+      "output": "PF-MOD",
+      "relation": "conditional",
+      "scope": "C139：固定 0<γ,q<1、A,B>0，完整 T 的非线性部分在每个输入对距 δ≤R 有 2sqrt(A²+B²)δ^γ 界；线性部分 (z,p,2q|r|−r) 以 1+2q 为 Lipschitz 上界，得 PF-3。此边只授全对模，不需 PF-6 的严格兼容。",
+      "status": "derived-checked；PF-3 完整图点对核算"
+    },
+    {
+      "id": "E213",
+      "topic": "解选择",
+      "inputs": [
+        "TC-TRI"
+      ],
+      "output": "TC-HOLDER",
+      "relation": "conditional",
+      "scope": "C140：全切向 R^m×[0,R]、0<q<1、Cr^η 的同法向切向 Lipschitz 与 H|r−s|^γ 的统一法向 Hölder；乘积界和几何尾给 TC-5 混合模。γ<1 时普通 γ-Hölder 仅在有界点对尺度 D，不能声称无界全域纯 Hölder。子域须另证全部比较轨道留域。",
+      "status": "derived-checked；TC-1–5 与独立快速逆向审查"
+    },
+    {
+      "id": "E214",
+      "topic": "解选择",
+      "inputs": [
+        "PF-OBJECT"
+      ],
+      "output": "TC-GAP",
+      "relation": "limits",
+      "scope": "C139 的非负法向不变半域在任意固定 r>0 取 p=ε 与 p=0，切向增量差除以 ε 等于 B ε^{γ−1}→∞；所以不满足 C140 的同法向 Cr^η 切向 Lipschitz 充分门。C137 为其特例；不能从此推出 C140 条件必要。",
+      "status": "derived-checked；TC 边界逐点反算"
     }
   ]
 }

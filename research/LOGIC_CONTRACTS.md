@@ -293,3 +293,11 @@ E207 在**同一**完整 \(T\) 上对所有 \(|r_0|\le R\) 取统一 \(M=2\sqrt2
 ## E31：几何 cap 同图配对首次切换
 
 E31 使用 C137 的**同一个**完整 \(F,T\)，另固定 \(0<r_0<1\) 与 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)。[C138](canonical/selection_geometric_sharpness.md#gs-sharp) 证明首次切换 \(N\) 的两侧 \(t2^{-N}=\Theta(N)\)、此后饱和的精确尾及下界；与 E207 的上界匹配。若限定在 C137 严格兼容的**同一个固定半径**，取 \(0<r_0\le R<R_*\)。常数依赖固定 \(r_0\)；不声称归一化极限，不由 C116 的另一完整关系授予。
+
+## E208–E212：同一个任意指数族的证书、极限模和特化
+
+E208 的对象固定 [PF-1](canonical/selection_parameter_family.md#pf-object) 的完整 \(\mathbb R^3\) 二支图、\(\lambda=1\)、\(0<\gamma,q<1\)、\(A,B>0\)。全对输入对距 \(R\) 的 RL、完整真残差与严格兼容是**三个门**：前二者对任意 \(R>0\) 成立，严格门另需 \(B/A<\sqrt{q^{-2\gamma}-1}\)、固定 \(R\) 的 PF-6 不等式和选中范数所在的 gauge 域。E212 单独从完整 \(T\) 给 PF-3 的全对模；E209 只取这个模、显式共同尾和 SS-TRANSFER，并不需要 PF-6。\(q\) 是实际法向率，\(\kappa_R>q\) 为保守证书。E210 还需固定正 \(r_0\)、同图配对和首次切换的两侧证明才有匹配 \(\beta=\gamma\log(1/q)/\log(1/\gamma)\) 阶；上界 E209 本身不推出下界。E211 只在 \((\gamma,q,A,B)=(1/2,1/4,1,1)\) 特化时把本图识别为 C137，不把一般参数族的不同常数赋给该特例，也不从特例倒推整族。
+
+## E213–E214：三角切向充分门及其缺失
+
+E213 的 [TC-1](canonical/selection_tangential_condition.md#tc-triangle) 对全部切向点、全部法向 \([0,R]\) 使用一致 \(C,H,\eta,\gamma\)；全切向域的留域自动成立，子域须另证。由 \(B(a,0)=0\) 得逐轨道长度尾，跨初值变常数乘积给 [TC-5](canonical/selection_tangential_condition.md#tc-proof) 的**混合**线性切向/\(\gamma\)-Hölder 法向模；无界切向域、\(\gamma<1\) 时不是全局纯 \(\gamma\)-Hölder。E214 在 C139 的非负法向不变半域逐点算出 \(B\varepsilon^{\gamma-1}\to\infty\)，只说明这个**充分门**缺失；不是对 C139 已核图、尾或选择模的反驳，也不是该门的必要性证明。

@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：当前 125 行逐源单元有去向（119 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 128 行逐源单元有去向（122 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -29,7 +29,7 @@
 | 原件与精确单元 | 当前规范层的不足 | 准入义务 |
 | --- | --- | --- |
 | S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | 六个指定标签现见 [C117–C119 独立重构](../canonical/signed_schur_growth.md#ss-source)；全稿其它单元与原版范围仍未穷尽 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
-| SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | §1 定理 1/推论 1、§4 定理 4、§5.1 选定单元见 [SS-TRANSFER/SS-RLEB-BALL/SS-Q2](../canonical/solution_selection_rates.md)；§2 定理 2 完整图见 [C137](../canonical/selection_geometric_cap.md#gc-object)；§3 定理 3 同图配对见 [C138](../canonical/selection_geometric_sharpness.md#gs-sharp)；§5.2 仍缺逐项重构 | 已核抽象尾、§1 条件整球尾及特定二次完整模型；原生完整关系的共同 W 纤维同一性需逐模型认证，§2 完整反演、RL、真 EB、固定半径、共同尾已独立重算；§3 固定配对首次切换和双边阶已独立重算；§5.2 与 §6 一手先行性仍待核。 |
+| SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | §1 定理 1/推论 1、§4 定理 4、§5.1 选定单元见 [SS-TRANSFER/SS-RLEB-BALL/SS-Q2](../canonical/solution_selection_rates.md)；§2 定理 2 完整图见 [C137](../canonical/selection_geometric_cap.md#gc-object)；§3 定理 3 同图配对见 [C138](../canonical/selection_geometric_sharpness.md#gs-sharp)，359–448 行一般参数族见 [C139](../canonical/selection_parameter_family.md#pf-object)；§5.2 三角充分门见 [C140](../canonical/selection_tangential_condition.md#tc-triangle) | 已核抽象尾、§1 条件整球尾及特定二次完整模型；原生完整关系的共同 W 纤维同一性需逐模型认证，§2 完整反演、RL、真 EB、固定半径、共同尾已独立重算；§3 固定配对首次切换和双边阶已独立重算，一般 0<γ,q<1 族 C139 的完整纤维与匹配阶也已重算；§5.2 全域三角动力学的混合模已核，但原始图块认证和 §6 一手先行性仍待核。 |
 | 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 五项的当前去向见[下文逐项对照](#legacy-a-five)：B-01/M-05 有独立反例 F39/F40，另外三项不在现行承重链；同稿 M-01/M-03 等仍待裁决 | 外部原文及修正版并未因此验收；旧审计题头不能代替证明。 |
 | 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线；conditional bit/Gaussian 的 Theorems 6/8 已见 [C129/C130 独立正文](../topics/random_markov/conditional_refresh.md)，其余子定理仍按逐单元表分别裁决 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
 
@@ -243,4 +243,4 @@ F11 `04_research_ideas.md` §7 G.1–G.2 中“固定闭预算块的谱上半连
 
 ## 增量：SS1 §1 推论 1 的完整近端身份门
 
-SS1 修订 ZIP `research_note.md` 105–171 行的条件推论已见 [C136 / SS-B1–B5](../canonical/solution_selection_rates.md#ss-rleb-ball)：从 R01/R02 的同一图块全对与真残差条件、严格长度预算得到共同初值球 \(B_\varepsilon(\bar x)\)、共同轨道窗 \(W\) 和统一几何点尾；同球附加超几何距离递推另给 SS-T3 的指数。可在 **W 的每个输入**认证完整 \(J_{\lambda F}=\{J_\mathcal G\}\)，作为完整 PPA 的充分门；仅核全部可达输入也足够。来源段对应 seed `SS1-004` 和逐单元去向已更新；具体原生模型的全部纤维、SS1 §3 下界已由独立的 C138 在特定完整图上关闭，§5.2 仍未由这个条件推论关闭。
+SS1 修订 ZIP `research_note.md` 105–171 行的条件推论已见 [C136 / SS-B1–B5](../canonical/solution_selection_rates.md#ss-rleb-ball)：从 R01/R02 的同一图块全对与真残差条件、严格长度预算得到共同初值球 \(B_\varepsilon(\bar x)\)、共同轨道窗 \(W\) 和统一几何点尾；同球附加超几何距离递推另给 SS-T3 的指数。可在 **W 的每个输入**认证完整 \(J_{\lambda F}=\{J_\mathcal G\}\)，作为完整 PPA 的充分门；仅核全部可达输入也足够。来源段对应 seed `SS1-004` 和逐单元去向已更新；具体原生模型的全部纤维、SS1 §3 下界已由独立的 C138 在特定完整图上关闭，§5.2 的不同三角充分条件另见 C140；原生图块认证仍未关闭。

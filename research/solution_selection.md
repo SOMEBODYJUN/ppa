@@ -28,9 +28,9 @@
 <a id="sel-sharp"></a>
 ## S03 · 显式下界与价值边界
 
-SS1 §§2–4 有两个不同的闭图、至多二值完整 proximal 模型。几何尾模型的反演、跨支 all-pairs RL、真 EB、固定兼容和共同尾在 C137；**同一图的首次切换匹配下界**在 [C138](canonical/selection_geometric_sharpness.md#gs-sharp) 独立重构。另一二次尾模型的无正阶 Hölder 两点稳定性由 C115/C116 单独证明。两模型的证书和下界不能混用；一般实参数族不自动半代数，旧稿的有理指数限制须保留。经典 AGM 的较宽泛机制提示新颖性门仍开放；这里不声称完成先行性判断。
+SS1 §§2–4 有几何尾与二次尾两种不同的闭图、至多二值完整 proximal 机制。几何尾特例的反演、跨支 all-pairs RL、真 EB、固定兼容和共同尾在 C137；**同一图的首次切换匹配下界**在 [C138](canonical/selection_geometric_sharpness.md#gs-sharp) 独立重构；[C139](canonical/selection_parameter_family.md#pf-object) 把这**同一几何机制**扩到固定的任意 \(0<\gamma,q<1\)，不把它混成第三个无关对象。另一二次尾模型的无正阶 Hölder 两点稳定性由 C115/C116 单独证明。两种机制的证书和下界不能混用；一般实指数族不自动半代数，只有有理 \(\gamma\) 的断言已核。经典 AGM 的较宽泛机制提示新颖性门仍开放；这里不声称完成先行性判断。
 
-**SS1 §2–§3** 的[完整几何尾二支图](canonical/selection_geometric_cap.md#gc-object)及[指定配对锐阶](canonical/selection_geometric_sharpness.md#gs-sharp)分别是 C137/C138：前者先给共同尾上界，后者在固定 \(r_0\) 的同一 \(T\) 上证匹配下界；若称两者属于同一严格 RLEB 证书，须固定 \(r_0\le R<R_*\)。**SS1 定理 4 的另一二次模型与 §5.1** 有[完整纤维、共同证书及坏选择的独立正文](canonical/solution_selection_rates.md#ss-quadratic-object)（C115/C116）：逐轨道 Q-二次比值与全部初值的共同超几何尾是不同断言；两点根对数下界固定另一个初始 collar。两模型的 \(F,T\)、法向率和最小残差不能互换；§5.2 仍未逐项重构。
+**SS1 §2–§3** 的[完整几何尾二支图](canonical/selection_geometric_cap.md#gc-object)及[指定配对锐阶](canonical/selection_geometric_sharpness.md#gs-sharp)分别是 C137/C138：前者先给共同尾上界，后者在固定 \(r_0\) 的同一 \(T\) 上证匹配下界；若称两者属于同一严格 RLEB 证书，须固定 \(r_0\le R<R_*\)。[C139 任意指数族](canonical/selection_parameter_family.md#pf-object) 另固定 \(A,B,q,\gamma,R\) 的兼容门，不能借 C137 的常数。**SS1 定理 4 的另一二次模型与 §5.1** 有[完整纤维、共同证书及坏选择的独立正文](canonical/solution_selection_rates.md#ss-quadratic-object)（C115/C116）：逐轨道 Q-二次比值与全部初值的共同超几何尾是不同断言；两点根对数下界固定另一个初始 collar。两模型的 \(F,T\)、法向率和最小残差不能互换。[C140 三角切向条件](canonical/selection_tangential_condition.md#tc-triangle) 只给不同结构下的充分稳定性，原生图块认证仍待逐模型核。
 
 <a id="f03"></a>
 ## 反例 F03：不可省的全图一致性

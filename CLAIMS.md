@@ -980,7 +980,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C115 同一完整 \(T\)，每个非驻定收敛初值的实际点误差满足 \(\lim_{k\to\infty}e_{k+1}/e_k^2=1\) 若 \(p_0\le0\)，若 \(p_0>0\) 则为 \(1/\sqrt2\)；这是**每条轨道**的渐近，而非共同进入时间。固定任意足够小 \(0<r_0\le R\) 后，比较 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)，\(\varepsilon\downarrow0\)，其极限差有匹配的 \(e^{-C\sqrt{\log(1/\varepsilon)}}\) 上下阶，排除在原点任意邻域的正阶两点 Hölder，亦排除比根对数指数 \(1/2\) 更大的统一伸缩指数。每个有限步 \(T^k\) 半代数，但 \(\Pi\) 在原点任意开邻域非半代数。
 - **Dependencies / Evidence / Status / Related Files**：[SSQ-TAIL/SELECTION/NONSEMIALGEBRAIC](research/canonical/solution_selection_rates.md#ss-quadratic-tail) 的饱和时刻上下界、分离的 overshoot 与尾项、逐轨道极限以及代数多项式反证；依赖 C115 的完整对象和共同局部证书，`derived-checked`，另经独立逆向审查。来源 SS1 定理 4 和 §5.1；非半代数的证明不依赖外部增长引理。
-- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，§5.2 与一般参数族仍待裁决。
+- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，359–448 行一般几何族另立 C139，§5.2 三角动力学条件另立 C140；另一超线性族仍待裁决。
 
 ## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
 
@@ -1162,4 +1162,20 @@
 - **Status**：`derived-checked`，仅对显示的同一完整关系和同一配对族的首次切换证明；不判文献原创性。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 C137 的完整 \(F\) 和全域唯一 \(T=J_F\)。对**每个固定** \(0<r_0<1\)，比较 \(x_0=(0,0,r_0)\)、\(x_\varepsilon=(0,\varepsilon,r_0)\)。存在仅依赖 \(r_0\) 的 \(c,C,\varepsilon_0>0\)，使全部 \(0<\varepsilon<\varepsilon_0\) 的完整轨道极限满足 \(c\log\log(1/\varepsilon)/\log(1/\varepsilon)\le\|\Pi(x_\varepsilon)-\Pi(x_0)\|\le C\log\log(1/\varepsilon)/\log(1/\varepsilon)\)。故在此配对处没有任何正阶两点 Hölder 模；它匹配 C137/SS-T2 的 \(\beta=1\) 上阶。若称这是同一个 RLEB 固定半径证书**内**的见证，另选 \(0<r_0\le R<[2(4-2\sqrt2)/5]^2\)；一般 \(r_0<1\) 的动力结论不要求该半径。
 - **Dependencies / Evidence**：[GS-1–6 首次切换和精确饱和尾](research/canonical/selection_geometric_sharpness.md#gs-sharp) 从 C137 的同一完整 \(T\) 逐步重建，并保持 \(t2^{-N}=\Theta(N)\) 的两侧门；SS1 来源 §3 定理 3 的 294–358 行只是线索。快速独立逆向审查的范围及异议见本轮接收记录。
-- **Counterevidence / Objections / Scope**：只声称匹配阶，不声称归一化比值收敛；不能把 \(r_0\) 随 \(\varepsilon\) 改变还沿用同一常数，也不把 C115/C116 的 Q 二次坏选择当作此下界证明。一般参数族、§5.2 与全球优先权未审。
+- **Counterevidence / Objections / Scope**：只声称匹配阶，不声称归一化比值收敛；不能把 \(r_0\) 随 \(\varepsilon\) 改变还沿用同一常数，也不把 C115/C116 的 Q 二次坏选择当作此下界证明。任意 \(\gamma,q\) 几何族另见 C139；§5.2 与全球优先权不由本条证明。
+
+<a id="c139"></a>
+## C139-v1 / SS-PARAMETER-FAMILY · 任意幂指数的完整二支几何尾族
+
+- **Status**：`derived-checked`，仅对固定 \(0<\gamma,q<1\)、\(A,B>0\) 的显示关系、全对证书、严格半径及指定配对的双边阶；文献先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 Euclidean \(\mathbb R^3,\lambda=1\)，[PF-1](research/canonical/selection_parameter_family.md#pf-object) 定义的完整闭二支 \(F\) 有 \(S=\mathbb R^2\times\{0\}\)，且**每个**输入的完整近端单值为 \(T(z,p,r)=(z+A|r|^\gamma,p+B\min\{p_+,|r|\}^\gamma,q|r|)\)。任意固定 \(R>0\) 的全对输入尺度证书为 \(L_R=2\sqrt{A^2+B^2}+(1+2q)R^{1-\gamma}\)，渐近最佳系数为 \(2\sqrt{A^2+B^2}\)；完整真残差给 \(d(u,S)\le q(r_F(u)/A)^{1/\gamma}\)。若另取 \(B/A<\sqrt{q^{-2\gamma}-1}\)、固定 \(R^{1-\gamma}<[Aq^{-\gamma}-\sqrt{A^2+B^2}]/(1+q)\) 并保证 gauge 评价域，则直接兼容 \(\kappa_R<1\)。全部 \(|r_0|\le R\) 初值有共同 \(q^{\gamma k}\) 点尾。对固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，极限差为 \(\Theta[(\log\log(1/\varepsilon)/\log(1/\varepsilon))^\beta]\)，\(\beta=\gamma\log(1/q)/\log(1/\gamma)\)；若同证书内调用，另选 \(r_0\le R\) 及上述严格门。
+- **Dependencies / Evidence**：[PF-1–12 自足推导](research/canonical/selection_parameter_family.md#pf-object) 独立重算完整纤维、真残差、同一参数的兼容与首次切换；快速独立逆向核参数范围与不等式。C137/C138 恰为 \(\gamma=1/2,q=1/4,A=B=1\) 的特例；原 SS1 359–448 行只作定位。
+- **Counterevidence / Objections / Scope**：\(q\) 是实际法向率，\(\kappa_R\) 是更保守的证书率；本条不证明把证书率固定等于 \(q\) 的更窄类锐，也不证明每个固定 \(R\) 的 \(L_R\) 最小。图半代数只在有理 \(\gamma\) 这里被声明；§5.2 的不同三角动力学充分条件另见 C140，另一超线性参数族及外部原创性仍未审。
+
+<a id="c140"></a>
+## C140-v1 / SS-TANGENTIAL-DECAY · 衰减切向敏感度的混合稳定性
+
+- **Status**：`derived-checked`，仅对指定的全切向域三角动力学和一致常数；原生完整近端表示及外部先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(m\ge1,0<R<\infty,0<q<1,C,H,\eta>0,0<\gamma\le1\)，令 \(T(a,r)=(a+B(a,r),qr)\) 在 \(\mathbb R^m\times[0,R]\) 上，\(B(a,0)=0\)，对**每个** \(a,b,r,s\) 有 \(\|B(a,r)-B(b,r)\|\le Cr^\eta\|a-b\|\) 与 \(\|B(a,r)-B(a,s)\|\le H|r-s|^\gamma\)。全部轨道有限长，极限 \(\Pi(a,r)=(\Pi_a(a,r),0)\)；同球共同点尾由 (TC-3) 控制，且 \(\|\Pi_a(a,r)-\Pi_a(b,s)\|\le e^{CR^\eta/(1-q^\eta)}[\|a-b\|+H|r-s|^\gamma/(1-q^\gamma)]\)。在有界输入对尺度 \(D\) 上才可合并为纯 \(\gamma\)-Hölder；\(\gamma=1\) 时全局 Lipschitz。
+- **Dependencies / Evidence**：[TC-1–5 离散乘积及统一尾证明](research/canonical/selection_tangential_condition.md#tc-proof)；来源 SS1 §5.2 608–641 行只作定位，快速独立审查核指数与常数。[TC 反向边界](research/canonical/selection_tangential_condition.md#tc-boundary) 证明 C139 的尖点切向增量对固定正法向不能满足所需 Lipschitz 门，C137 是特例。
+- **Counterevidence / Objections / Scope**：\(\gamma<1\) 时 \(\Pi_a(a,0)=a\) 阻止无界全域上的纯 \(\gamma\)-Hölder；切向子域版本须另证轨道留域。C137/C139 缺此**充分**门不说明别的条件不能给好选择，也不认证一般曲面、耦合法向或原始签名 Schur 图块的稳定性。
