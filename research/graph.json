@@ -1542,6 +1542,11 @@
       "id": "OSI-RIGID",
       "label": "全点对等距刚性 C134",
       "file": "operator_space.md#os-isometry-proof"
+    },
+    {
+      "id": "OSS-SAME-LIMIT",
+      "label": "后继选择与原 T 同一极限回缩 C133-v2",
+      "file": "operator_space.md#os-successor-proof"
     }
   ],
   "edges": [
@@ -3876,6 +3881,18 @@
       "relation": "conditional",
       "scope": "C134：非空紧度量 K 上同域满射且全点对 1-Lipschitz 的 h；Arzelà–Ascoli 近单位迭代加满射给每个点对严格等距。仅限制这类全局共轭；不限制轨道点对变换，不推出任何认证类规模。",
       "status": "derived-checked；OS-ISOMETRY 自足证明"
+    },
+    {
+      "id": "E202",
+      "topic": "算子空间",
+      "inputs": [
+        "OSS-INPUT",
+        "OSS-TAIL"
+      ],
+      "output": "OSS-SAME-LIMIT",
+      "relation": "conditional",
+      "scope": "C133-v2：保持 E200 的同一非空紧 K、连续 T/U、e_n→0 与每个 x 的正时刻轨道闭包选择；由于 U^n x 与 Π_Tx 均属 A_n(x)，全部 x,n 有 d(U^n x,Π_Tx)≤e_n，故 Π_U=Π_T。新增极限身份，不产生非平凡选择、长度尾或完整原关系的 EB。",
+      "status": "derived-checked；空白逆向发现并独立重算 OS8，和来源 C133-v1 分版"
     }
   ]
 }

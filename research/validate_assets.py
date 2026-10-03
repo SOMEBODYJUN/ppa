@@ -237,7 +237,11 @@ for block in claim_blocks:
 normative = list(ROOT.glob("*.md")) + list((ROOT / "research").rglob("*.md"))
 link = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
 for page in normative:
-    data = page.read_text(encoding="utf-8")
+    raw = page.read_bytes()
+    bad_controls = {b for b in raw if b < 32 and b not in (9, 10)}
+    if bad_controls:
+        errors.append(f"control bytes in normative text: {page.relative_to(ROOT)} {sorted(bad_controls)}")
+    data = raw.decode("utf-8")
     # Formulae such as M_p[phi](t) are not Markdown links. Exclude math and
     # code spans before applying the deliberately small relative-link check.
     data = re.sub(r"(?s)```.*?```", "", data)
@@ -254,6 +258,10 @@ for page in normative:
             errors.append(f"broken link: {page.relative_to(ROOT)} -> {raw_target}")
         elif marker and anchor and candidate.is_file() and f'id="{unquote(anchor)}"' not in candidate.read_text(encoding="utf-8"):
             errors.append(f"broken explicit anchor: {page.relative_to(ROOT)} -> {raw_target}")
+
+graph_controls = {b for b in (ROOT / "research/graph.json").read_bytes() if b < 32 and b not in (9, 10)}
+if graph_controls:
+    errors.append(f"control bytes in normative graph: {sorted(graph_controls)}")
 
 if errors:
     raise SystemExit("\n".join(errors))

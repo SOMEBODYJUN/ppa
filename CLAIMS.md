@@ -1108,6 +1108,14 @@
 - **Dependencies / Evidence**：[OS-SUCCESSOR 自足证明](research/operator_space.md#os-successor-proof) 的闭尾集前向包含、周期点门和统一 Cauchy 极限；来源 OS-R §1 A.4 仅作溯源。
 - **Objections / Scope**：\(U=T\) 是平凡选择；没有其它连续选择的存在、自由度或母空间位置定理。共同 Cauchy 尾不是长度尾，真全纤维 EB 若需调用必须另合取 C132 的**新关系**条件。原关系和总体大小比较不随此条关闭。
 
+<a id="c133-v2"></a>
+## C133-v2 / OS-SAME-LIMIT · 后继选择保持原极限回缩
+
+- **Status**：`derived-checked`；在 C133-v1 的同一全部前提下新增**极限身份与误差界**，不是对来源旧陈述的静默扩写。
+- **Exact Statement / Objects / Domain / Quantifiers**：保持 C133-v1 的非空紧 \(K\)、连续 \(T,U\)、共同 Cauchy 尾 \(e_n\to0\)，以及对每个 \(x\) 的正时刻轨道闭包选择。令 \(\Pi_T=\lim_nT^n\)，则对**每个** \(x\in K,n\ge0\)，\(d(U^nx,\Pi_Tx)\le e_n\)，故 \(\Pi_U=\Pi_T\)；C133-v1 的同固定集和回缩结论仍成立。
+- **Dependencies / Evidence**：[OS8](research/operator_space.md#os-successor-proof) 由 C133-v1 的 \(U^nx\in A_n(x)\)、同一 \(\Pi_Tx\in A_n(x)\) 与 \(\operatorname{diam}A_n(x)\le e_n\) 直接推出；新版本来自独立空白逆向证明，来源 OS-R §1 A.4 不承担新增结论。
+- **Objections / Scope**：只对**已存在的**连续后继选择；没有构造具有规模意义的新选择、长度尾或原算子真 EB，更没有保纲性。
+
 <a id="c134"></a>
 ## C134-v1 / OS-ISOMETRY · 紧满射非扩张的等距性
 

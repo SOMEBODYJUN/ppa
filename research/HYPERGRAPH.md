@@ -110,6 +110,7 @@
 | E199 | [OSF-INPUT · 紧源连续 U 的逐输入输出步界及新完整关系](operator_space.md#os-fiber-eb) | conditional → [OSF-TRUE-EB · 全逆纤维真残差 EB C132](operator_space.md#os-fiber-eb) | C132：同一实赋范 E 的非空紧 K、连续 U:K→K、非空 S=Fix U、λ>0、非降 ψ，以及每个 x∈K 的输出步界；新定义 F_{U,K} 的全部逆纤维紧，u∈U(K) 的真实残差取最小值，J 自然域 K；原 ψ 未必是 D04 gauge，(OS6) 给 φ(0)=0 且原点连续的内生上界。不转授给既有带域外输入或额外纤维的关系；C131 可提供此 U 的非空 S 但不是本边必要前提。；**derived-checked；OS-FIBER-EB 自足证明** |
 | E200 | [OSS-INPUT · 紧源连续 T 与已给定连续轨道后继 U](operator_space.md#os-successor-proof) | conditional → [OSS-TAIL · 共同 Cauchy 尾与同固定集 C133](operator_space.md#os-successor-proof) | C133：同一非空紧度量 K、连续 T 且实际共同 Cauchy 尾 e_n→0；已给定连续 U 对每个 x 落在 T 的正时刻轨道闭包。闭尾集归纳给 U^n x∈A_n(x)、所有 m≥n 的距离≤e_n、同固定集和连续一致极限；U=T 是平凡选择，不证明额外选择丰富性、长度尾、真 EB 或总体类别比较。；**derived-checked；OS-SUCCESSOR 自足条件证明** |
 | E201 | [OSI-INPUT · 紧度量空间上的满射 1-Lipschitz 自映射](operator_space.md#os-isometry-proof) | conditional → [OSI-RIGID · 全点对等距刚性 C134](operator_space.md#os-isometry-proof) | C134：非空紧度量 K 上同域满射且全点对 1-Lipschitz 的 h；Arzelà–Ascoli 近单位迭代加满射给每个点对严格等距。仅限制这类全局共轭；不限制轨道点对变换，不推出任何认证类规模。；**derived-checked；OS-ISOMETRY 自足证明** |
+| E202 | [OSS-INPUT · 紧源连续 T 与已给定连续轨道后继 U](operator_space.md#os-successor-proof) ∧ [OSS-TAIL · 共同 Cauchy 尾与同固定集 C133](operator_space.md#os-successor-proof) | conditional → [OSS-SAME-LIMIT · 后继选择与原 T 同一极限回缩 C133-v2](operator_space.md#os-successor-proof) | C133-v2：保持 E200 的同一非空紧 K、连续 T/U、e_n→0 与每个 x 的正时刻轨道闭包选择；由于 U^n x 与 Π_Tx 均属 A_n(x)，全部 x,n 有 d(U^n x,Π_Tx)≤e_n，故 Π_U=Π_T。新增极限身份，不产生非平凡选择、长度尾或完整原关系的 EB。；**derived-checked；空白逆向发现并独立重算 OS8，和来源 C133-v1 分版** |
 
 ## 锥
 

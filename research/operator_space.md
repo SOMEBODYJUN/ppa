@@ -160,16 +160,20 @@ e_n=\sup_{x\in K}\sup_{k,\ell\ge n}d(T^kx,T^\ell x)\longrightarrow0.
 \[
 U^nx\in A_n(x),\qquad d(U^mx,U^nx)\le e_n\quad(m\ge n). \tag{OS7}
 \]
-特别地 \(\operatorname{Fix}U=\operatorname{Fix}T\ne\varnothing\)，\(U^n\) 一致收敛到该固定集中的连续回缩。平凡选择 \(U=T\) 存在；本命题**不构造**其它连续选择，也不声称保持长度尾或原关系的真残差 EB。
+特别地 \(\operatorname{Fix}U=\operatorname{Fix}T\ne\varnothing\)，\(U^n\) 一致收敛到该固定集中的连续回缩。这是来源种子引理对应的 C133-v1；同一假设下的新加强 C133-v2 进一步给出**与 \(T\) 的极限相同**：
+\[
+d(U^nx,\Pi_Tx)\le e_n\quad(x\in K,n\ge0),\qquad \Pi_U=\Pi_T. \tag{OS8}
+\]
+平凡选择 \(U=T\) 存在；本命题**不构造**具有比较意义的非平凡选择，也不声称保持长度尾或原关系的真残差 EB。
 
-**证明。** \(e_n\to0\) 使 \(T^n\) 在 \(C(K,K)\) 中一致 Cauchy；紧完备性与连续性给极限 \(\Pi_T\)，且 \(T\Pi_T=\Pi_T\)。若 \(y=T^mx\in A_n(x)\)，则 \(Uy\in A_{m+1}(x)\subset A_{n+1}(x)\)。以轨道点逼近一般 \(y\in A_n(x)\)，连续 \(U\) 与闭 \(A_{n+1}(x)\) 给 \(U(A_n(x))\subset A_{n+1}(x)\)。从 \(x\in A_0(x)\) 归纳得 (OS7) 第一式；尾闭包的直径 \(\le e_n\) 给第二式和一致极限 \(\Pi_U\)。若 \(Tx=x\)，\(A_1(x)=\{x\}\)，故 \(Ux=x\)。反过来若 \(Ux=x\)，则 \(x\in A_1(x)\)：它或为某个 \(T^mx\)（即周期点，收敛的 \(T\) 轨道使其必为不动点），或为轨道唯一的聚点 \(\Pi_Tx\)，也为不动点。\(U\Pi_U=\Pi_U\) 和 \(\Pi_U|_{\operatorname{Fix}U}=I\) 分别由连续性与固定点定义得到。没有使用完整 \(F\) 或改变源外图。
+**证明。** \(e_n\to0\) 使 \(T^n\) 在 \(C(K,K)\) 中一致 Cauchy；紧完备性与连续性给极限 \(\Pi_T\)，且 \(T\Pi_T=\Pi_T\)。对 \(m\ge n\) 的轨道点 \(y=T^mx\)，有 \(Uy\in A_{m+1}(x)\subset A_{n+1}(x)\)。以这些轨道点逼近一般 \(y\in A_n(x)\)，连续 \(U\) 与闭 \(A_{n+1}(x)\) 给 \(U(A_n(x))\subset A_{n+1}(x)\)。从 \(x\in A_0(x)\) 归纳得 (OS7) 第一式；尾闭包的直径 \(\le e_n\) 给第二式。更精确地，\(\Pi_Tx\in A_n(x)\)，故与 \(U^nx\) 的距离 \(\le e_n\)，证明 (OS8)。若 \(Tx=x\)，\(A_1(x)=\{x\}\)，故 \(Ux=x\)；若 \(Ux=x\)，则 \(x=U^nx\to\Pi_Tx\)，所以 \(x\in\operatorname{Fix}T\)。\(\Pi_T\) 为 \(U^n\) 的一致极限且在同一固定集恒等，故是连续回缩。没有使用完整 \(F\) 或改变源外图。
 
 <a id="os-isometry-proof"></a>
 ### OS-ISOMETRY / C134：紧满射非扩张的刚性
 
 任意非空紧度量空间 \((K,d)\) 上，若 \(h:K\to K\) 满射且 1-Lipschitz，则 \(h\) 保所有点对距离。
 
-**证明。** \(\{h^n:n\ge0\}\) 等度连续且值域在紧 \(K\)，由 Arzelà–Ascoli 在一致拓扑中相对紧；因此有 \(n_j>m_j\ge0\) 且 \(\|h^{n_j}-h^{m_j}\|_\infty\to0\)。由于 \(h^{m_j}\) 满射，把 \(z=h^{m_j}x\) 遍历 \(K\) 可得 \(h^{n_j-m_j}\to I\) 一致。令 \(q_j=n_j-m_j\ge1\)，非扩张给
+**证明。** \(\{h^n:n\ge0\}\) 等度连续且值域在紧 \(K\)，由 Arzelà–Ascoli 在一致拓扑中相对紧；因此有 \(n_j>m_j\ge0\) 且 \(d_\infty(h^{n_j},h^{m_j})=\sup_{x\in K}d(h^{n_j}x,h^{m_j}x)\to0\)。由于 \(h^{m_j}\) 满射，把 \(z=h^{m_j}x\) 遍历 \(K\) 可得 \(h^{n_j-m_j}\to I\) 一致。令 \(q_j=n_j-m_j\ge1\)，非扩张给
 \[
 d(x,y)=\lim_j d(h^{q_j}x,h^{q_j}y)\le d(hx,hy)\le d(x,y).
 \]
@@ -183,7 +187,7 @@ d(x,y)=\lim_j d(h^{q_j}x,h^{q_j}y)\le d(hx,hy)\le d(x,y).
 |---|---|---|
 | OS-TOWER / C131 | (OS1) 两条逐点塔不等式加统一尾 \(L_j\to0\) 推出 (OS2)、同固定集与连续极限回缩 | [本页证明](#os-tower-proof)；未证满足塔条件的选择丰富或总体覆盖 |
 | OS-FIBER-EB / C132 | 每个输入的输出步界经紧逆纤维极小值转为新定义 \(F_{U,K}\) 的真 EB | [本页证明](#os-fiber-eb)；不转授给含域外图或额外纤维的原算子 |
-| OS-SUCCESSOR / C133 | 已给定连续后继选择的共同 Cauchy 尾、同固定集与连续回缩 | [本页证明](#os-successor-proof)；非平凡选择的存在与丰富性未证明 |
+| OS-SUCCESSOR / C133-v1/v2 | 已给定连续后继选择的共同 Cauchy 尾、同固定集与连续回缩；v2 另证同一极限 \(\Pi_U=\Pi_T\) | [本页证明](#os-successor-proof)；非平凡选择的存在与丰富性未证明 |
 | OS-BAIRE | [σ-紧度量空间诊断 C128](canonical/sigma_compact_baire.md#sc-proof)：\(Z=\bigcup K_n\)（紧）为 Baire 当且仅当 \(\bigcup\operatorname{Int}_ZK_n\) 稠密 | 未决定目标认证空间满足哪边，也不要求层递增 |
 | OS-ISOMETRY / C134 | 紧度量空间的满射 1-Lipschitz 自映射是等距映射 | [本页证明](#os-isometry-proof)；仅排除该种粗糙共轭手法 |
 
