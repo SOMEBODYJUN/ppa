@@ -17,7 +17,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 \tag{R01}
 \]
 
-第一式用同一图块的 \((p,0)\) 和 proximal 图点作成对比较；第二式用反三角不等式；末式用 \(r_F(x^+)\le s/\lambda\)，不假设 \(s/\lambda=r_F(x^+)\)。同输入唯一只保证图块内 \(J_{\mathcal G}\) 单值。S19 `lem:solution-comparison`。
+证明可在本页重构。置 \(a=x^+-p,\ b=x-x^+\)，则 \(a+b=x-p\)，而同图块的 RL 给 \(\|a-b\|\le Ld^\gamma\)。平行四边形恒等式给 \(2(\|a\|^2+\|b\|^2)\le d^2+L^2d^{2\gamma}\)，且 \(2b=(a+b)-(a-b)\) 给 \(2s\le d+Ld^\gamma\)。最后 \(r_F(x^+)\le s/\lambda\le(R+LR^\gamma)/(2\lambda)\le\bar t\)，选中图值的范数也在 gauge 定义域内；因此用实际输出的真 EB 与 \(\psi\) 单调性得到末式，不假设 \(s/\lambda=r_F(x^+)\)。当 \(d=0\) 时，零锚与同输入唯一强制 \(x^+=x\)。同输入唯一只保证图块内 \(J_{\mathcal G}\) 单值。S19 `lem:solution-comparison` 仅是来源定位。
 
 <a id="cmp"></a>
 <a id="loc"></a>
@@ -37,7 +37,16 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 则唯一**局部图块**轨道 \(x^{k+1}=J_{\mathcal G}x^k\) 全程存在、留在 \(U_R\)、有限长，极限在 \(S\)。精确上界为
 \(d(x^k,S)\le\kappa^kd_0\)，
 \(\|x^{k+1}-x^k\|\le[\kappa^kd_0+L\kappa^{\gamma k}d_0^\gamma]/2\)，
-尾界 \(\mathcal L(\kappa^kd_0)\)。这是 S19 `thm:two-branch-RLEB` 的命题身份；固定 \(F\) 的完整 resolvent 轨道还需 \(J_{\lambda F}=J_{\mathcal G}\) 在共同轨道区域成立。
+尾界 \(\mathcal L(\kappa^kd_0)\)。这是 S19 `thm:two-branch-RLEB` 的单值图块命题身份；固定 \(F\) 的完整 resolvent 轨道还需 \(J_{\lambda F}=J_{\mathcal G}\) 在共同轨道区域成立。
+
+<a id="r02-proof"></a>
+**单值图块版本的独立证明。** R01 与兼容门逐步给 \(d_{k+1}\le\kappa d_k\) 和 \(s_k\le(d_k+Ld_k^\gamma)/2\)。若前 \(k\) 步已经合法，则 \(d_k\le\kappa^kd_0\)，且从初值到第 \(k\) 个点的位移至多
+\[
+\sum_{j<k}s_j\le\frac12\sum_{j<k}
+(\kappa^jd_0+L\kappa^{\gamma j}d_0^\gamma)
+\le\mathcal L(d_0)<\operatorname{dist}(x^0,X\setminus U).
+\]
+故第 \(k\) 个点仍在 \(U\)，距离又不超过 \(R\)，coverage 可用于下一步。归纳给全部图块轨道。步长级数可和使轨道 Cauchy；\(\mathbb R^n\) 完备、\(S\) 闭及 \(d_k\to0\) 给极限属于 \(S\)。从 \(k\) 起求剩余级数即为所写尾界。该证明只关闭同一条件下的单值图块版本，下面的多选择版本和完整 \(J_{\lambda F}\) 不由此授予。
 
 **允许多选择的另一版本**（S19 `cor:selection-extension`）以每个合法 \(x^+\in\mathcal J(x)\subset J_{\lambda F}(x)\) 的统一 anchored 比较、输出 EB、coverage 取代图块 A1–A3；它不声称全对 RL 自动使完整 \(J_{\lambda F}\) 单值。每条合法轨道有同一上界，极限可随选择变化。
 
@@ -45,7 +54,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 <a id="grow"></a>
 ## R03 · 竞争的充分证书与临界边界
 
-若真残差增长 \(r_F(y)\ge m d(y,S)^a\)，\(0<\gamma<1,L>0\)，选择 \(\psi(t)=(t/m)^{1/a}\)。R02 的小尺度直接兼容在 \(a<\gamma\) 成立；\(a=\gamma\) 时恰当 \(\lambda m>L/2\)；\(a>\gamma\) 时这个**标量测试**失败。失败不证明某条轨道发散。S19 `cor:residual-growth`。
+若真残差增长 \(r_F(y)\ge m d(y,S)^a\)，其中 \(m>0,a>0,0<\gamma<1,L>0\)，选择 \(\psi(t)=(t/m)^{1/a}\)。R02 的小尺度直接兼容在 \(a<\gamma\) 成立；\(a=\gamma\) 时恰当 \(\lambda m>L/2\)；\(a>\gamma\) 时这个**标量测试**失败。失败不证明某条轨道发散。S19 `cor:residual-growth`。
 
 同一稿件有另一个能量证书：当 \(\psi\) 连续严格递增且 \(R\le\psi(\bar t)\)，置 \(V(r)=r^2+\lambda^2[\psi^{-1}(r)]^2\)，\(A(r)=(r^2+L^2r^{2\gamma})/2\)。若 \(q_E(R)=\sup_{0<r\le R}A(r)/V(r)\le q<1\) 且 \(\sqrt{qV(d_0)}/(1-\sqrt q)<\operatorname{dist}(x^0,X\setminus U)\)，则 \(V(d_k)\le q^kV(d_0)\) 并有有限长和尾界。\(a=\gamma\) 的小尺度能量阈值 \(\lambda m>L/\sqrt2\) 比直接阈值更强；两者是**证明证书的阈值**，不宣称个别轨道收敛的必要条件。S19 `prop:energy-certificate`, `rem:sharpness-boundary`。
 

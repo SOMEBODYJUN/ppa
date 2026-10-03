@@ -19,6 +19,14 @@
 - **Dependencies / Evidence**：C01 的局部形式、一步能量和 \(s\le(d+Ld^\gamma)/2\)、真实输出残差、A1–A4、归纳留域；[9/18 原投稿 ZIP 的 `sections/theorem_spine.tex`](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RLEB_PPA_submission_assets_2026-09-18.zip)。
 - **Objections / Status / Scope**：`candidate`：有稿内证明及内部语义核对，尚未重审全部证明。\(r_F\) 为全部输出纤维的 inf；没有额外证明 \(J_{\mathcal G}=J_{\lambda F}\) 时，不得把定理写成全算子完整 resolvent 结论。旧稿中的数值兼容常数不能代替实际收缩率。
 
+<a id="c02-v2"></a>
+## C02-v2 · 同图块单值局部 RLEB–PPA 条件定理
+
+- **Status**：`derived-checked`，仅针对以下单值图块版本；C02 原稿身份连同未独立重核的多选择推广仍为 `candidate`。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R^n\) 固定同一 \(F,\mathcal G,S,U,\lambda,L,0<\gamma\le1,R,\bar t,\psi,\kappa\)，其中 \(S\subset F^{-1}(0)\) 非空闭、\(U\) 开、\(\psi:[0,\bar t]\to[0,\infty)\) 非减且在零连续、\(0<\kappa<1\)。对每个 \(x\in U_R=\{x\in U:d(x,S)\le R\}\)，同一图块有 proximal 输出和最近零锚 \((p,0)\)；该图块的每个适用输入点对满足尺度 \(R\) 的全对 RL；每个实际输出满足完整真残差 EB；\((R+LR^\gamma)/(2\lambda)\le\bar t\)，且全部 \(0<t\le R\) 有 \(\psi((t+Lt^\gamma)/(2\lambda))\le\kappa t\)。对每个 \(x^0\in U_R\) 再要求 \(\mathcal L(d_0)<\operatorname{dist}(x^0,\mathbb R^n\setminus U)\)。则唯一图块轨道无限继续、留在 \(U_R\)、有限长并收敛到 \(S\)；\(d_k\le\kappa^kd_0\)、\(s_k\le(\kappa^kd_0+L\kappa^{\gamma k}d_0^\gamma)/2\)，到极限的尾界为 \(\mathcal L(\kappa^kd_0)\)。其中 \(\mathcal L(d)=\tfrac12[d/(1-\kappa)+Ld^\gamma/(1-\kappa^\gamma)]\)。
+- **Dependencies / Evidence**：[R01 代数与 R02 归纳证明](research/rleb_ppa.md#r02-proof) 从同图块零锚、平行四边形、真实输出 EB、严格预算和 Euclidean 完备性逐步重建；[C136](research/canonical/solution_selection_rates.md#ss-rleb-ball) 再加共同球条件才给统一尾与极限选择模。历史原稿仅是来源线索。
+- **Counterevidence / Objections / Scope**：局部单值只对 \(\mathcal G\) 有效；完整 \(J_{\lambda F}\) 可在同输入有额外分支，需在共同可达输入上另证全纤维一致。多选择 extension、能量分支 R03 及一般 Dini 版本不从本版本自动获得；本状态也不判新颖性。
+
 ## C03 · 全局双向 simultaneous shadow（9/23 候选）
 
 - **Status**：`candidate`。
@@ -1135,7 +1143,7 @@
 <a id="c136"></a>
 ## C136-v1 / SS-RLEB-BALL · 局部 RLEB 整球共同尾与完整近端门
 
-- **Status**：`derived-checked`，是 R01/R02 与 SS-TRANSFER 的条件合成；不认证具体原关系的全部完整近端分支。
-- **Exact Statement / Objects / Domain / Quantifiers**：在同一有限维 Euclidean \(E\) 中固定 R01/R02 的 \(F,\mathcal G,S,U,U_R,\lambda,R,L,0<\gamma<1,\psi,\kappa\)，保留**全部**图块覆盖、每输入最近零锚、全对 RL、每个实际输出的完整真残差 EB、gauge 定义域与严格直接兼容。取 \(\bar x\in S\cap U\)、\(B_\rho(\bar x)\subset U\) 和 \(0<\varepsilon\le R\) 且 \(\varepsilon+\mathcal L(\varepsilon)<\rho\)。令 \(W=U_R\cap\overline B_{\varepsilon+\mathcal L(\varepsilon)}(\bar x)\)，\(H=(R^{1-\gamma}+L)/2\)。对**每个** \(x\in B_\varepsilon(\bar x),k\ge0\)，图块轨道在 \(W\)，并有 \(\|J_\mathcal G^kx-\Pi_\mathcal G(x)\|\le H\varepsilon^\gamma\kappa^{\gamma k}/(1-\kappa^\gamma)\)；同球的极限映射有 SS-T2 中 \(\beta=\log(1/\kappa^\gamma)/\log(1/\gamma)\) 的两点模。**仅再加** \(J_{\lambda F}(u)=\{J_\mathcal G(u)\}\) 对所有 \(u\in W\)，才把全部轨道与模授予完整 PPA。若同球全部实际输出另满足 \(d_{k+1}\le Kd_k^\nu\)、\(K>0,\nu>1\)，缩 \(\varepsilon\) 使 \(K^{1/(\nu-1)}\varepsilon<1\)，则有 SS-B5 的统一超几何尾与 SS-T3 的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 两点模。
-- **Dependencies / Evidence**：[SS-B1–B5 自足推导](research/canonical/solution_selection_rates.md#ss-rleb-ball) 从 [R01/R02](research/rleb_ppa.md#r01) 取同一局部图块及严格留域，再以 [SS-T1–T3](research/canonical/solution_selection_rates.md#ss-transfer) 的共同尾传递；SS1 来源 §1 Corollary 1 的 105–171 行是重写线索。
+- **Status**：`derived-checked`，是已独立重构的单值图块 [C02-v2](#c02-v2) 与 SS-TRANSFER 的条件合成；不把原 C02 的其余稿件范围或具体原关系的全部完整近端分支升级。
+- **Exact Statement / Objects / Domain / Quantifiers**：在同一有限维 Euclidean \(E\) 中固定 R01/R02 的 \(F,\mathcal G,S,U,U_R,\lambda,R,L,0<\gamma<1,\psi,\kappa\)，保留**全部**图块覆盖、每输入最近零锚、全对 RL、每个实际输出的完整真残差 EB、gauge 定义域与严格直接兼容。取 \(\bar x\in S\cap U\)、\(B_\rho(\bar x)\subset U\) 和 \(0<\varepsilon\le R\) 且 \(\varepsilon+\mathcal L(\varepsilon)<\rho\)。令 \(W=U_R\cap\overline B_{\varepsilon+\mathcal L(\varepsilon)}(\bar x)\)，\(H=(R^{1-\gamma}+L)/2\)。对**每个** \(x\in B_\varepsilon(\bar x),k\ge0\)，图块轨道在 \(W\)，并有 \(\|J_\mathcal G^kx-\Pi_\mathcal G(x)\|\le H\varepsilon^\gamma\kappa^{\gamma k}/(1-\kappa^\gamma)\)；同球的极限映射有 SS-T2 中 \(\beta=\log(1/\kappa^\gamma)/\log(1/\gamma)\) 的两点模。**充分地，再加** \(J_{\lambda F}(u)=\{J_\mathcal G(u)\}\) 对所有 \(u\in W\)，便把全部轨道与模授予完整 PPA；只在所有球初值的可达输入上逐纤维核同一性也足够。若同球全部实际输出另满足 \(d_{k+1}\le Kd_k^\nu\)、\(K>0,\nu>1\)，缩 \(\varepsilon\) 使 \(K^{1/(\nu-1)}\varepsilon<1\)，则有 SS-B5 的统一超几何尾与 SS-T3 的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 两点模。
+- **Dependencies / Evidence**：[SS-B1–B5 自足推导](research/canonical/solution_selection_rates.md#ss-rleb-ball) 从 [C02-v2 的 R01/R02 自足证明](research/rleb_ppa.md#r02-proof) 取同一局部图块及严格留域，再以 [SS-T1–T3](research/canonical/solution_selection_rates.md#ss-transfer) 的共同尾传递；SS1 来源 §1 Corollary 1 的 105–171 行是重写线索。
 - **Counterevidence / Objections / Scope**：逐初值尾常数不足以得同球极限模；只在初值球上检查完整纤维相等不足以保证漂移后的轨道。闭完整 \(F(y)=\{y,-y\}\) 与对角图块显示完整 \(J_F(0)\) 可含远支。增长条件仅在真实输出与同一留域下提供附加速率，不蕴含无条件完整 PPA 或总体类别比较。

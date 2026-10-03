@@ -126,7 +126,7 @@ M=\frac{H\varepsilon^\gamma}{1-\kappa^\gamma},\quad
 \sigma=\kappa^\gamma. \tag{SS-B2}
 \]
 
-对 \(u,v\in W\) 且 \(\|u-v\|\le R\)，同图块全对 RL 经 \(2(J_{\mathcal G}u-J_{\mathcal G}v)-(u-v)\) 给 \(\|J_{\mathcal G}u-J_{\mathcal G}v\|\le H\|u-v\|^\gamma\)。对轨道输入 \(u\) 与 R01 指定的最近零锚 \(p\in P_S(u)\)，同一不等式还给实际步 \(\|J_{\mathcal G}u-u\|\le H d(u,S)^\gamma\)。由 R02 的 \(d(J_{\mathcal G}^kx,S)\le\kappa^k\varepsilon\)，求和得到
+对 \(u,v\in W\) 且 \(\|u-v\|\le R\)，同图块全对 RL 经 \(2(J_{\mathcal G}u-J_{\mathcal G}v)-(u-v)\) 给 \(\|J_{\mathcal G}u-J_{\mathcal G}v\|\le H\|u-v\|^\gamma\)。对轨道输入 \(u\) 与 R01 指定的最近零锚 \(p\in P_S(u)\)，使用**同一图块**内的 \((p,0)\) 比较：\(2(J_{\mathcal G}u-u)=[2J_{\mathcal G}u-u-p]-(u-p)\)，所以 \(2\|J_{\mathcal G}u-u\|\le Ld(u,S)^\gamma+d(u,S)\)，实际步界为 \(\|J_{\mathcal G}u-u\|\le H d(u,S)^\gamma\)。锚点无需位于 \(W\)，但必须属于比较图块。由 R02 的 \(d(J_{\mathcal G}^kx,S)\le\kappa^k\varepsilon\)，求和得到
 
 \[
 \|J_{\mathcal G}^kx-\Pi_{\mathcal G}(x)\|
@@ -140,7 +140,7 @@ M=\frac{H\varepsilon^\gamma}{1-\kappa^\gamma},\quad
 J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\quad\text{对**每个** }u\in W, \tag{SS-B4}
 \]
 
-则上述全部轨道、尾与选择模也属于同一**完整** PPA；只在初值球上验证等式不足够。由 \(F(y)=\{y,-y\}\)、\(\mathcal G=\{(y,y):y\in\mathbb R\}\)、\(\lambda=1\) 可见接口真实必要：图块 \(J_{\mathcal G}(x)=x/2\)，完整 \(J_F(0)=\mathbb R\)，即使图块步收缩也不能自动移植到完整选择。此例的完整图甚至是闭的，闭图本身不排除同输入跨支碰撞。
+则上述全部轨道、尾与选择模也属于同一**完整** PPA；只在初值球上验证等式不足够。(SS-B4) 是方便核验的**充分**门；仅在该球所有实际轨道输入的可达集合上核逐纤维等式也足够，不声称整窗等式逻辑上必要。由 \(F(y)=\{y,-y\}\)、\(\mathcal G=\{(y,y):y\in\mathbb R\}\)、\(\lambda=1\) 可见某种完整纤维接口真实必要：图块 \(J_{\mathcal G}(x)=x/2\)，完整 \(J_F(0)=\mathbb R\)，即使图块步收缩也不能自动移植到完整选择。此例的完整图甚至是闭的，闭图本身不排除同输入跨支碰撞。
 
 还有一条不同的**附加速率门**。若在同一个整球的每一步实际输出上另外有 \(d_{k+1}\le Kd_k^\nu\)，其中 \(K>0,\nu>1\)，并把 \(\varepsilon\) 缩至 \(\vartheta=K^{1/(\nu-1)}\varepsilon<1\)，则 \(d_k\le K^{-1/(\nu-1)}\vartheta^{\nu^k}\)。令 \(a=-\gamma\log\vartheta>0\)，上面的实际步界求和给统一尾
 
@@ -149,7 +149,7 @@ J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\quad\text{对**每个** }u\in W, \tag{SS-
 \le\frac{H K^{-\gamma/(\nu-1)}}{1-e^{-a(\nu-1)}}e^{-a\nu^k}. \tag{SS-B5}
 \]
 
-此时 SS-T3 的指数 \(\alpha=\log\nu/\log(\nu/\gamma)\) 可用于同一个极限映射。若 \(K=0\)，对应一步到 \(S\) 后驻定的退化情形须单独说；若真残差增长 \(r_F(u)\ge m d(u,S)^b\) 仅在上述实际输出上成立且 \(0<b<\gamma\)，则由真实 EB 方向与步界可取 \(\nu=\gamma/b\)、\(K=(H/(\lambda m))^{1/b}\)，但仍须核所有输出与同一留域。\(\mathcal G\) 之外的完整近端分支只有 (SS-B4) 才被排除。
+此时 SS-T3 的指数 \(\alpha=\log\nu/\log(\nu/\gamma)\) 可用于同一个极限映射。若 \(K=0\)，对应一步到 \(S\) 后驻定的退化情形须单独说；若**存在 \(m>0\)** 使真残差增长 \(r_F(u)\ge m d(u,S)^b\) 仅在上述实际输出上成立且 \(0<b<\gamma\)，则由真实 EB 方向与步界可取 \(\nu=\gamma/b\)、\(K=(H/(\lambda m))^{1/b}\)，但仍须核所有输出与同一留域。本节用 (SS-B4) 排除共同窗口内图块之外的完整近端分支；若改核实际可达输入集合，须先独立确定该集合及其全部完整纤维。
 
 <a id="ss-quadratic-object"></a>
 ## 2. SS-Q2 · 一个完整二值半代数算子

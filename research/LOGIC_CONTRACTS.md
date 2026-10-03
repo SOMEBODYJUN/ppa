@@ -282,4 +282,4 @@ E203 固定**一种**认证 \(C\in\{\mathrm{LT},\mathrm{direct},\mathrm{energy}\
 
 E204 只在 [R01/R02](rleb_ppa.md#r01) **同一**有限维图块、最近零锚、真残差、gauge 评价域、输入 coverage、直接兼容与严格留域上，选 \(\bar x\in S\cap U\)、\(B_\rho(\bar x)\subset U\)、\(0<\varepsilon\le R\) 及 \(\varepsilon+\mathcal L(\varepsilon)<\rho\)。全部初值 \(B_\varepsilon(\bar x)\) 的轨道进入共同 \(W\)；局部全对 RL 给**该同一个** \(J_{\mathcal G}\) 的 \(H\)-Hölder 单步，逐点距离率和实际步长求和给 SS-B3 的统一**点尾**，才调用 SS-TRANSFER 的 SS-T2。附加超几何距离递推才调用 SS-T3。逐初值不同尾常数不能拼作这一边。
 
-E205 再要求 \(J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\) 对**全部** \(u\in W\)；只有此时 E204 的整球图块轨道、尾和极限模才能逐步成为完整 PPA 结论。仅在初值球上核完整纤维不覆盖后来输入；[F03](solution_selection.md#f03) 的闭完整并图 \(F(y)=\{y,-y\}\) 给 \(J_F(0)=\mathbb R\) 而图块 \(J_{\mathcal G}(0)=0\)。[C136 正文](canonical/solution_selection_rates.md#ss-rleb-ball) 给明确 \(W,H,M,\sigma\) 及附加速率常数。
+E205 采用充分门 \(J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\) 对**全部** \(u\in W\)；于是 E204 的整球图块轨道、尾和极限模逐步成为完整 PPA 结论。整窗等式并非逻辑必要：仅在所有球初值的实际可达输入上核全部纤维同一性也足够；但只在初值球上核不覆盖后来输入。[F03](solution_selection.md#f03) 的闭完整并图 \(F(y)=\{y,-y\}\) 给 \(J_F(0)=\mathbb R\) 而图块 \(J_{\mathcal G}(0)=0\)。[C136 正文](canonical/solution_selection_rates.md#ss-rleb-ball) 给明确 \(W,H,M,\sigma\) 及附加速率常数。

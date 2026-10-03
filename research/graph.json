@@ -1605,7 +1605,7 @@
       "output": "R01",
       "relation": "implies",
       "scope": "实际输出、最近解点均在图块；真残差 EB",
-      "status": "S19 稿内证明"
+      "status": "C02-v2 单值图块一步式已在 R01 自足重构；原稿其余范围 candidate"
     },
     {
       "id": "E03",
@@ -1618,7 +1618,7 @@
       "output": "R02",
       "relation": "implies",
       "scope": "局部 J_G 轨道；完整 J_F 另需 FULL",
-      "status": "S19 稿内证明"
+      "status": "C02-v2 单值图块归纳已在 R02 自足重构；完整 J_F 另证"
     },
     {
       "id": "E04",
@@ -3950,7 +3950,7 @@
       "inputs": ["SSB-BALL", "FULL"],
       "output": "SSB-COMPLETE",
       "relation": "conditional",
-      "scope": "C136：同一个 W=U_R∩闭球上的每个输入 u 都须有完整 J_{λF}(u)={J_G(u)}；只核初始 Bε 不够。此等式使图块全部轨道、共同尾和选择模逐步成为完整 PPA 结果，不由图块 RL、闭图或单值图块自动推出。",
+      "scope": "C136 的整窗充分门：若同一个 W=U_R∩闭球上的每个输入 u 有完整 J_{λF}(u)={J_G(u)}，图块全部轨道、共同尾和选择模成为完整 PPA 结果；只核初始 Bε 不够。仅在全部球初值的实际可达输入上逐纤维一致也足够。整窗等式不由图块 RL、闭图或单值图块自动推出，也不声称逻辑必要。",
       "status": "derived-checked；F(y)={y,-y} 闭完整图的 J_F(0)=R 阻断漏门"
     }
   ]
