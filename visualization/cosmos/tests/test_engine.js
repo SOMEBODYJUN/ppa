@@ -16,6 +16,57 @@ test('one conjunction junction per edge with every input and true output',()=>{f
 test('complete systems drift while carrying their stars and retaining canonical anchors',()=>{const x=C.make(graph,{anchors:saved}),system=x.systems.find(s=>s.id==='structure'),star=x.nodes.find(n=>n.group===system.id),anchor=structuredClone(x.anchors[star.id]),from={x:system.x,y:system.y,starX:star.x,starY:star.y},drive=C.systemSimulation(x);for(let i=0;i<480;i++){x.time=i/60;C.advanceSystems(x,drive);}assert.ok(Math.hypot(system.x-from.x,system.y-from.y)>3);assert.ok(Math.abs((star.x-from.starX)-(system.x-from.x))<1e-7);assert.ok(Math.abs((star.y-from.starY)-(system.y-from.y))<1e-7);assert.deepEqual(x.anchors[star.id],anchor);});
 test('system drag translates all members, orbital parents and endpoints together',()=>{const x=C.make(graph),s=x.systems.find(s=>s.id==='solar'),sun=x.byId.get('R02'),planet=x.byId.get('D02'),e=x.edges.find(e=>e.id==='E02'),j=C.junction(e,x),others=x.byId.get('M-COND'),before={x:sun.x,y:sun.y,px:planet.x,py:planet.y,ox:others.x,oy:others.y};C.moveSystem(x,'solar',s.x+170,s.y-80);C.updateOrbits(x,0);assert.equal(sun.x,before.x+170);assert.equal(sun.y,before.y-80);assert.equal(planet.x,before.px+170);assert.equal(planet.y,before.py-80);assert.equal(others.x,before.ox);assert.equal(others.y,before.oy);const jj=C.junction(e,x);assert.ok(Math.hypot(jj.x-j.x,jj.y-j.y)>20);});
 test('invisible drag binding keeps every member on its galaxy through inner force ticks',()=>{for(const id of ['solar','structure','markov','gaussian']){const x=C.make(graph,{anchors:saved}),inner=C.simulation(x),outer=C.systemSimulation(x),s=x.systems.find(v=>v.id===id);inner.tick(20);C.updateOrbits(x,5);const members=x.nodes.filter(n=>n.group===id),offsets=new Map(members.map(n=>[n.id,[n.x-s.x,n.y-s.y]])),anchors=structuredClone(x.anchors);C.beginSystemDrag(x,id);for(const [dx,dy] of [[140,-75],[-210,90],[65,130]]){C.moveSystem(x,id,s.x+dx,s.y+dy);C.advanceSystems(x,outer,3);inner.alpha(.4).tick(15);C.updateOrbits(x,5);for(const n of members){const [ox,oy]=offsets.get(n.id);assert.ok(Math.abs(n.x-s.x-ox)<1e-7,`${id}/${n.id} x detached`);assert.ok(Math.abs(n.y-s.y-oy)<1e-7,`${id}/${n.id} y detached`);}}assert.deepEqual(x.anchors,anchors);C.endSystemDrag(x,id);assert.ok(!s.dragMembers);for(const n of members)if(n.kind!=='sun'&&!n.orbit){assert.equal(n.fx,null);assert.equal(n.fy,null);}if(id==='solar'){assert.equal(x.byId.get('R02').fx,s.x);assert.equal(x.byId.get('R02').fy,s.y);}}});
+test('dragged centers stay at the pointer across complete running frames and pointer holds',()=>{
+  for(const id of ['solar','structure','markov','gaussian']){
+    const x=C.make(graph,{anchors:saved}),inner=C.simulation(x),outer=C.systemSimulation(x),s=x.systems.find(s=>s.id===id);
+    inner.tick(220);C.updateOrbits(x,5);const from={x:s.x,y:s.y},members=x.nodes.filter(n=>n.group===id&&!n.orbit),offsets=members.map(n=>[n.x-s.x,n.y-s.y]);
+    C.beginSystemDrag(x,id);
+    for(const [dx,dy] of [[400,-200],[-230,340],[1000,-650]]){
+      const target={x:from.x+dx,y:from.y+dy};C.moveSystem(x,id,target.x,target.y);
+      for(let frame=0;frame<45;frame++){
+        x.time=5+frame/60;C.advanceSystems(x,outer);inner.alpha(.25).tick();C.updateOrbits(x,x.time);
+        assert.ok(Math.hypot(s.x-target.x,s.y-target.y)<1e-7,`${id}: center left pointer during held frame ${frame}`);
+        members.forEach((n,i)=>assert.ok(Math.hypot(n.x-s.x-offsets[i][0],n.y-s.y-offsets[i][1])<1e-7,`${id}/${n.id}: member detached`));
+      }
+    }
+    C.endSystemDrag(x,id);
+  }
+});
+test('D3 axis forces read changed member anchors, homes and time after initialization',()=>{
+  const x=C.make(graph,{anchors:saved}),inner=C.simulation(x),outer=C.systemSimulation(x),n=x.byId.get('H02'),s=x.systems.find(s=>s.id==='structure'),alpha=.5;
+  n.ax+=800;n.ay-=400;n.vx=n.vy=0;
+  inner.force('anchorX')(alpha);inner.force('anchorY')(alpha);
+  assert.ok(Math.abs(n.vx-(n.ax-n.x)*.16*alpha)<1e-9);
+  assert.ok(Math.abs(n.vy-(n.ay-n.y)*.16*alpha)<1e-9);
+  s.homeX+=900;s.homeY-=500;x.time=35;s.vx=s.vy=0;
+  outer.force('homeX')(alpha);outer.force('homeY')(alpha);
+  assert.ok(Math.abs(s.vx-(s.homeX+65*Math.sin(x.time*.13+C.hash(s.id)*.001)-s.x)*.015*alpha)<1e-9);
+  assert.ok(Math.abs(s.vy-(s.homeY+52*Math.cos(x.time*.11+C.hash(s.id)*.001)-s.y)*.015*alpha)<1e-9);
+});
+test('release keeps moving force targets at the new center through 240 running frames',()=>{
+  for(const id of ['structure','markov','gaussian']){
+    const x=C.make(graph,{anchors:saved}),inner=C.simulation(x),outer=C.systemSimulation(x),s=x.systems.find(s=>s.id===id);
+    inner.tick(350);const start={x:s.x,y:s.y},members=x.nodes.filter(n=>n.group===id),offsets=members.map(n=>[n.x-s.x,n.y-s.y]),anchors=structuredClone(x.anchors);
+    C.beginSystemDrag(x,id);C.moveSystem(x,id,8000,-6000);C.endSystemDrag(x,id);inner.alpha(.6);
+    assert.equal(s.homeX,8000);assert.equal(s.homeY,-6000);
+    for(let frame=0;frame<240;frame++){
+      x.time=frame/60;C.advanceSystems(x,outer);inner.tick();C.updateOrbits(x,x.time);
+      // True cross-system links may move the whole group after release.
+      assert.ok(Math.hypot(s.x-8000,s.y+6000)<Math.hypot(s.x-start.x,s.y-start.y),`${id}: system returned to its old region`);
+      members.forEach((n,i)=>assert.ok(Math.hypot(n.x-s.x-offsets[i][0],n.y-s.y-offsets[i][1])<2*n.r,`${id}/${n.id}: release moved member more than its diameter relative to the center`));
+    }
+    assert.deepEqual(x.anchors,anchors);
+  }
+});
+test('a paused drag commits member and system anchors before force motion resumes',()=>{
+  const x=C.make(graph,{anchors:saved}),inner=C.simulation(x),outer=C.systemSimulation(x),s=x.systems.find(s=>s.id==='gaussian');inner.tick(350);
+  const local=x.nodes.filter(n=>n.group===s.id).map(n=>({n,x:n.x-s.x,y:n.y-s.y}));
+  C.beginSystemDrag(x,s.id);C.moveSystem(x,s.id,s.x-1600,s.y-1300);C.updateOrbits(x,0);C.endSystemDrag(x,s.id);
+  const drop={x:s.x,y:s.y};inner.alpha(.4);
+  for(let frame=0;frame<150;frame++){C.advanceSystems(x,outer);inner.tick();C.updateOrbits(x,frame/60);}
+  assert.ok(Math.hypot(s.x-drop.x,s.y-drop.y)<100);
+  for(const {n,x:ox,y:oy} of local)assert.ok(Math.hypot(n.x-s.x-ox,n.y-s.y-oy)<10);
+});
 test('system collisions recover after overlapping drag',()=>{const x=C.make(graph),a=x.systems.find(s=>s.id==='markov'),b=x.systems.find(s=>s.id==='finite');C.moveSystem(x,a.id,b.x,b.y);a.homeX=a.x;a.homeY=a.y;const drive=C.systemSimulation(x);for(let i=0;i<150;i++)C.advanceSystems(x,drive);assert.ok(Math.hypot(a.x-b.x,a.y-b.y)>=(a.radius+b.radius)*.82+205);});
 test('cross-system bridges are sourced only from complete real hyperedges',()=>{const x=C.make(graph),bridges=C.crossSystemEdges(x);assert.equal(bridges.length,30);for(const e of bridges){assert.ok(graph.edges.some(raw=>raw.id===e.id));assert.ok(new Set([...e.inputs,e.output].map(id=>x.byId.get(id).group)).size>1);}assert.equal(C.crossSystemEdges(x,'gaussian').length,0);assert.ok(C.crossSystemEdges(x,'markov').length>0);});
 test('larger ships seek a clear part of the visible solar routes',()=>{const x=C.make(graph,{anchors:saved});C.simulation(x).tick(250);for(let sec=0;sec<=12;sec+=.5){C.updateOrbits(x,sec);for(const id of ['E02','E03']){const e=x.edges.find(e=>e.id===id),j=C.junction(e,x),out=x.byId.get(e.output),c=C.curve(j,out,1),phase=(sec*.08+C.hash(id)%100/100)%1,q=C.shipWaypoint(c,phase,x,30);assert.ok(x.nodes.every(n=>Math.hypot(q.x-n.x,q.y-n.y)>n.r+30),`${id} t=${sec} near ${x.nodes.find(n=>Math.hypot(q.x-n.x,q.y-n.y)<=n.r+30)?.id}`);}}});
