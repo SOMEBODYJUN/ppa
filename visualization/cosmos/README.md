@@ -4,6 +4,13 @@
 
 当前来源快照：294 个真实节点、194 条真实超边；这个数字来自 `research/graph.json`，以后重建会自动变化。这里没有把 600 个程序素材数量当作已验收美术。
 
+## 像素美术层
+
+- [舰船与星球接触表](art/contact-sheet.png) 同时展示地图尺寸、放大尺寸与单色轮廓。现有 **20 种手写船体构型、12 种星球地貌**；材质、细节与 ID 可稳定组合，但组合数不等于逐件人工验收的独立构型。舰船在航道上的正常尺寸约 22 px，放大细看至约 28 px；总览缩放下隐藏，以免遮盖星系关系。
+- 太阳系八个入口分别指定不同的外观；其余对象依据稳定 ID 选择。小卫星采用简化图形，中央太阳采用像素表面与柔和光晕。外观是**导航与美术**，不编码命题真假、状态、重要性或依赖类型。
+- 美术源码与接口在 `src/visuals.js`：`ship(edgeId)`、`planet(node)`、`shipCatalog`、`planetCatalog`、`visualBounds(node)`；航道实现仍在 `src/app.js`。可展开的舰船图鉴在详情面板内。新增构型时先看 24/40/80 px 与单色轮廓，检查实际路径上的尺寸，再重建页面。
+- 重建接触表：`node visualization/cosmos/art/contact-sheet.cjs`，再以 `node visualization/cosmos/art/rasterize.cjs visualization/cosmos/art/contact-sheet.svg visualization/cosmos/art/contact-sheet.png` 栅格化。SVG 是可编辑的矢量像素图形，PNG 只用于预览。
+
 ## 进入方式
 
 - **太阳系**：`R02` 恒星及八个真实入口 `D01,D02,D03,D04,COV,CMP,LOC,R01`。

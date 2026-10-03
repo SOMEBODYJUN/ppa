@@ -5,11 +5,18 @@
 - `index.html`：完全离线生成物，包含真实图、固定锚点、D3 7.9.0、SVG/Canvas 前端。
 - `src/universe.js`：共享纯逻辑，真实 force simulation、公转、投影碰撞规避、稳定锚点与超边几何。
 - `src/visuals.js`：共享天体及主题星系 SVG，太阳/行星明暗、自转层、不同星系形態。
+- `art/contact-sheet.svg` 与 `.png`：20 种结构船型、12 种星球地貌的 24/40/80 px、轮廓及地图尺寸预览；`contact-sheet.cjs` 与 `rasterize.cjs` 可重复生成。各角色的配色或细节组合不计作已逐件审定的新构型。
 - `src/app.js`：缩放/拖动/搜索/详情/公转控制/沙盒生长/实时图导入。
 - `src/template.html`、`src/style.css`：可再生成页面与响应式面板。
 - `data/anchors.json`：旧 ID 保留的语义锚点，不保存证明状态。
 - `tests/test_engine.js`：12 项结构及数值验证。
 - `tests/render_scene.js`、`qa/`：同引擎同美术静态场景渲染（非浏览器）。
+
+## 像素美术增量与检查
+
+2026-10 的这批前端美术由 Astra 重写：太阳系八个主入口各有不同星球外观，中心太阳是像素表面，微小卫星简化；正向航道使用按超边 ID 稳定选型的舰船。`refutes`、`limits`、`open` 不显示正向证明船。`visualBounds` 只用于绘制航道端点和点击范围，**不改变** D3 碰撞半径、公转或数学图身份。详情面板的舰船图鉴仅展示外观。
+
+重建顺序：`python visualization/cosmos/build.py`；`node visualization/cosmos/tests/test_engine.js`；`node visualization/cosmos/tests/render_scene.js`；用 `node visualization/cosmos/art/rasterize.cjs visualization/cosmos/qa/solar-0.svg visualization/cosmos/qa/solar-0.png` 栅格化，另对 `solar-12` 和 `overview` 执行同样命令。已逐图检查太阳系两个时刻及接触表，**仍未在真实浏览器验收 CSS、触控与帧率**。接触表验证可读性，不代表接近商业游戏逐像素制作的终稿。后续可继续增加具有不同主体结构的船型和天体，并在地图实景尺寸和单色轮廓中审查重复形状。
 
 ## 已核、未核
 
