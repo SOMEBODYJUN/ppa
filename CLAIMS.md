@@ -1099,3 +1099,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：实赋范空间 \(E\) 的非空紧 \(K\)、连续 \(U:K\to K\)、非空 \(S=\operatorname{Fix}U\)、\(\lambda>0\)，非降 \(\psi:[0,\infty)\to[0,\infty)\)。若每个 \(x\in K\) 有 \(d(Ux,S)\le\psi(\|x-Ux\|/\lambda)\)，从头定义 \(F_{U,K}(u)=\{(x-u)/\lambda:x\in K,Ux=u\}\)（无原像则空），则完整近端的自然输入域恰为 \(K\)、\(J_{\lambda F_{U,K}}(x)=\{Ux\}\) 在 \(K\) 上，\(F_{U,K}^{-1}(0)=S\)，且**每个** \(u\in U(K)\) 有 \(d(u,S)\le\psi(r_{F_{U,K}}(u))\)，其中 \(r_{F_{U,K}}(u)=\min_{Ux=u}\|x-u\|/\lambda\)。
 - **Dependencies / Evidence**：[OS-FIBER-EB 证明](research/operator_space.md#os-fiber-eb) 的紧纤维极小值；若原 \(\psi\) 不满足 D04 的零点/原点连续约定，(OS6) 从紧子水平集构造 \(\phi\le\psi\) 的 D04 型内生 gauge，并保留真残差界。C131 可另外生成符合其固定集条件的 \(U\)，但本条作为条件引理不依赖塔。来源 OS-R §1 A.3 只作溯源。
 - **Objections / Scope**：在紧源上不需假设原 \(\psi\) 连续即可取得最小值；不能把新关系的结论转给有域外输入或额外逆纤维的原关系。已保证输入自然域 \(K\) 的 coverage，**没有自动的环境开邻域 coverage**、统一兼容或总体规模结论。
+
+<a id="c133"></a>
+## C133-v1 / OS-SUCCESSOR · 连续轨道后继选择的共同尾
+
+- **Status**：`derived-checked`，仅对**已给定**的连续后继选择证明性质；没有非平凡选择定理。
+- **Exact Statement / Objects / Domain / Quantifiers**：非空紧度量 \(K\)，连续 \(T:K\to K\)，\(e_n=\sup_{x\in K,k,\ell\ge n}d(T^kx,T^\ell x)\to0\)。给定连续 \(U:K\to K\)，对**每个** \(x\) 有 \(Ux\in\overline{\{T^mx:m\ge1\}}\)。则 \(U^nx\in\overline{\{T^mx:m\ge n\}}\)，对所有 \(m\ge n\) 有 \(d(U^mx,U^nx)\le e_n\)；\(\operatorname{Fix}U=\operatorname{Fix}T\ne\varnothing\)，\(U^n\) 一致收敛到连续回缩。
+- **Dependencies / Evidence**：[OS-SUCCESSOR 自足证明](research/operator_space.md#os-successor-proof) 的闭尾集前向包含、周期点门和统一 Cauchy 极限；来源 OS-R §1 A.4 仅作溯源。
+- **Objections / Scope**：\(U=T\) 是平凡选择；没有其它连续选择的存在、自由度或母空间位置定理。共同 Cauchy 尾不是长度尾，真全纤维 EB 若需调用必须另合取 C132 的**新关系**条件。原关系和总体大小比较不随此条关闭。
+
+<a id="c134"></a>
+## C134-v1 / OS-ISOMETRY · 紧满射非扩张的等距性
+
+- **Status**：`derived-checked`；规范正文给出紧等度连续迭代与满射回代的证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意非空紧度量空间 \(K\)，满射 \(h:K\to K\) 满足 \(d(hx,hy)\le d(x,y)\) 对全部 \(x,y\)。则 \(d(hx,hy)=d(x,y)\) 对全部点对成立。
+- **Dependencies / Evidence**：[OS-ISOMETRY 证明](research/operator_space.md#os-isometry-proof) 的 Arzelà–Ascoli 相对紧迭代、近单位幂和满射代换；来源 OS-R §6 F.2 仅作溯源。
+- **Objections / Scope**：结论只对同一个紧域上的满射全局非扩张映射；未排除轨道点对约束、非满射、非紧域的粗糙变换，也不证明 category-preserving 或 LT/RLEB 总体规模。

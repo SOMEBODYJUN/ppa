@@ -149,19 +149,45 @@ r_{F_{U,K}}(u)=\min_{x\in K:Ux=u}\|x-u\|/\lambda,
 \]
 每个子水平集非空（含 \(S\)）且紧；\(\phi\) 非降、\(\phi(0)=0\)，并由紧性和 \(U\) 连续得 \(\phi(t)\to0\) 当 \(t\downarrow0\)。由 (OS4) 与 \(\psi\) 非降还得 \(\phi(t)\le\psi(t)\)；对实现 (OS5) 最小值的 \(x_u\)，\(d(u,S)\le\phi(r_{F_{U,K}}(u))\)。这给出同一新关系上的 D04 型真残差 gauge；没有据此得到 \(K\) 外的环境开邻域 coverage。
 
+<a id="os-successor-proof"></a>
+### OS-SUCCESSOR / C133：连续轨道后继选择保持共同 Cauchy 尾
+
+令 \((K,d)\) 非空紧度量，\(T:K\to K\) 连续，且实际尾
+\[
+e_n=\sup_{x\in K}\sup_{k,\ell\ge n}d(T^kx,T^\ell x)\longrightarrow0.
+\]
+写 \(A_n(x)=\overline{\{T^mx:m\ge n\}}\)。设 \(U:K\to K\) 是**已给定**的连续映射，且对每个 \(x\in K\) 有 \(Ux\in A_1(x)\)。那么
+\[
+U^nx\in A_n(x),\qquad d(U^mx,U^nx)\le e_n\quad(m\ge n). \tag{OS7}
+\]
+特别地 \(\operatorname{Fix}U=\operatorname{Fix}T\ne\varnothing\)，\(U^n\) 一致收敛到该固定集中的连续回缩。平凡选择 \(U=T\) 存在；本命题**不构造**其它连续选择，也不声称保持长度尾或原关系的真残差 EB。
+
+**证明。** \(e_n\to0\) 使 \(T^n\) 在 \(C(K,K)\) 中一致 Cauchy；紧完备性与连续性给极限 \(\Pi_T\)，且 \(T\Pi_T=\Pi_T\)。若 \(y=T^mx\in A_n(x)\)，则 \(Uy\in A_{m+1}(x)\subset A_{n+1}(x)\)。以轨道点逼近一般 \(y\in A_n(x)\)，连续 \(U\) 与闭 \(A_{n+1}(x)\) 给 \(U(A_n(x))\subset A_{n+1}(x)\)。从 \(x\in A_0(x)\) 归纳得 (OS7) 第一式；尾闭包的直径 \(\le e_n\) 给第二式和一致极限 \(\Pi_U\)。若 \(Tx=x\)，\(A_1(x)=\{x\}\)，故 \(Ux=x\)。反过来若 \(Ux=x\)，则 \(x\in A_1(x)\)：它或为某个 \(T^mx\)（即周期点，收敛的 \(T\) 轨道使其必为不动点），或为轨道唯一的聚点 \(\Pi_Tx\)，也为不动点。\(U\Pi_U=\Pi_U\) 和 \(\Pi_U|_{\operatorname{Fix}U}=I\) 分别由连续性与固定点定义得到。没有使用完整 \(F\) 或改变源外图。
+
+<a id="os-isometry-proof"></a>
+### OS-ISOMETRY / C134：紧满射非扩张的刚性
+
+任意非空紧度量空间 \((K,d)\) 上，若 \(h:K\to K\) 满射且 1-Lipschitz，则 \(h\) 保所有点对距离。
+
+**证明。** \(\{h^n:n\ge0\}\) 等度连续且值域在紧 \(K\)，由 Arzelà–Ascoli 在一致拓扑中相对紧；因此有 \(n_j>m_j\ge0\) 且 \(\|h^{n_j}-h^{m_j}\|_\infty\to0\)。由于 \(h^{m_j}\) 满射，把 \(z=h^{m_j}x\) 遍历 \(K\) 可得 \(h^{n_j-m_j}\to I\) 一致。令 \(q_j=n_j-m_j\ge1\)，非扩张给
+\[
+d(x,y)=\lim_j d(h^{q_j}x,h^{q_j}y)\le d(hx,hy)\le d(x,y).
+\]
+故两端取等。此只排除**同一紧域满射且全局不扩张**的粗糙共轭；不限制仅在轨道点对控制的变换，也不提供 LT/RLEB 的类别比较。
+
 ### 诊断与仍待重构的接口
 
-下表的 OS-TOWER、OS-FIBER-EB、OS-BAIRE 已有上述或链接中的规范证明；OS-SUCCESSOR、OS-ISOMETRY 仍为 `source-report`，引用前须先独立重构。
+下表的五个节点均有上述或链接中的规范条件证明；每个只在自己的固定源、尾、纤维及映射范围内调用。
 
 | 数学节点 | 已有内容 | 承重限制 |
 |---|---|---|
 | OS-TOWER / C131 | (OS1) 两条逐点塔不等式加统一尾 \(L_j\to0\) 推出 (OS2)、同固定集与连续极限回缩 | [本页证明](#os-tower-proof)；未证满足塔条件的选择丰富或总体覆盖 |
 | OS-FIBER-EB / C132 | 每个输入的输出步界经紧逆纤维极小值转为新定义 \(F_{U,K}\) 的真 EB | [本页证明](#os-fiber-eb)；不转授给含域外图或额外纤维的原算子 |
-| OS-SUCCESSOR (`source-report`) | 来源提出连续选择 \(Ux\in\overline{\{T^mx:m\ge1\}}\) 保尾及固定集，**尚无规范证明** | 平凡选择 \(U=T\) 存在；非平凡连续选择的存在与丰富性未证明 |
+| OS-SUCCESSOR / C133 | 已给定连续后继选择的共同 Cauchy 尾、同固定集与连续回缩 | [本页证明](#os-successor-proof)；非平凡选择的存在与丰富性未证明 |
 | OS-BAIRE | [σ-紧度量空间诊断 C128](canonical/sigma_compact_baire.md#sc-proof)：\(Z=\bigcup K_n\)（紧）为 Baire 当且仅当 \(\bigcup\operatorname{Int}_ZK_n\) 稠密 | 未决定目标认证空间满足哪边，也不要求层递增 |
-| OS-ISOMETRY (`source-report`) | 紧度量空间的满射 1-Lipschitz 自映射是等距映射；**本页尚无独立证明或导入** | 仅排除该种粗糙共轭手法；引用前先补规范证明 |
+| OS-ISOMETRY / C134 | 紧度量空间的满射 1-Lipschitz 自映射是等距映射 | [本页证明](#os-isometry-proof)；仅排除该种粗糙共轭手法 |
 
-OS-TOWER/OS-FIBER-EB 的来源线索见 OS-A §3 及 OS-H 所引的 `04_research_ideas.md` §1 A.2–A.3；OS-SUCCESSOR、OS-ISOMETRY 的来源为 OS-A §§4–6。塔方案刚性不等于同尾层刚性：**在本例专用的** \(K'=[-1,1]\times[0,1]\)、\(S'=[-1,1]\times\{0\}\) 上，投影 \(P(s,r)=(s,0)\) 的塔只允许自身，但 \(U_a(s,r)=(s+ar(1-r)(1-s^2),0)\)（\(0<a\le1\)）仍把 \(K'\) 映入 \(S'\)：切向增量不超过 \(r(1-r)(1-s^2)\le(1-s)/2\)，也不超过 \(1-r\)。对每个输入它的位移 \(\sqrt{r^2+a^2r^2(1-r)^2(1-s^2)^2}\le1\)，之后步长皆零，故与 \(P\) 同具**全窗取上确界后的**精确尾 \((1,0,0,\dots)\)；它们的逐点首步长一般不同。此 \(K'\) 不是上一段的 \(K=[-1,1]^2\)。
+四项紧源引理的来源线索见 OS-A §§3–6 及 OS-R §1 A.2–A.4、§6 F.2；这里的规范证明独立于来源文本。塔方案刚性不等于同尾层刚性：**在本例专用的** \(K'=[-1,1]\times[0,1]\)、\(S'=[-1,1]\times\{0\}\) 上，投影 \(P(s,r)=(s,0)\) 的塔只允许自身，但 \(U_a(s,r)=(s+ar(1-r)(1-s^2),0)\)（\(0<a\le1\)）仍把 \(K'\) 映入 \(S'\)：切向增量不超过 \(r(1-r)(1-s^2)\le(1-s)/2\)，也不超过 \(1-r\)。对每个输入它的位移 \(\sqrt{r^2+a^2r^2(1-r)^2(1-s^2)^2}\le1\)，之后步长皆零，故与 \(P\) 同具**全窗取上确界后的**精确尾 \((1,0,0,\dots)\)；它们的逐点首步长一般不同。此 \(K'\) 不是上一段的 \(K=[-1,1]^2\)。
 
 <a id="size"></a>
 <a id="no-go"></a>
@@ -187,7 +213,7 @@ OS-TOWER/OS-FIBER-EB 的来源线索见 OS-A §3 及 OS-H 所引的 `04_research
 |---|---|
 | OS-H | `P/01_CANONICAL_HANDOFF/mathematician_handoff/07_final_handoff.md`，§§2–6、§11 来源表 |
 | OS-A | `P/01_CANONICAL_HANDOFF/mathematician_handoff/06_math_audit.md`，§§1–7 |
-| OS-R | `P/01_CANONICAL_HANDOFF/mathematician_handoff/04_research_ideas.md`，§1 A.2–A.3 |
+| OS-R | `P/01_CANONICAL_HANDOFF/mathematician_handoff/04_research_ideas.md`，§1 A.2–A.4、§6 F.2 |
 | OS-E | `P/02_NEUTRAL_PPA_SYSTEM/ppa_system_team/03_certificate_embeddings.md`；`07_embedding_math_audit.md` |
 | OS-N | `history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md`；`03_NO_GO_LEDGER.md` |
 | OS-I | `history/sources/提纯总账_2026-09-21_v0.9/05_INTERNAL_INDEX.md`，恢复清单；路径是历史位置 |

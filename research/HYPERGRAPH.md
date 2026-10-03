@@ -108,6 +108,8 @@
 | E35 | [NO-GO · 旧 Baire/孔隙共同塌缩报告](operator_space.md#no-go) | limits → [SIZE · 中立母空间中的规模比较](operator_space.md#size) | N05/N08/N10 量尺共同塌缩；原孔隙审计未恢复；**S21 历史报告** |
 | E198 | [OST-INPUT · 非空紧 K 的连续 T/U 与统一有限长度塔 (OS1)](operator_space.md#os-tower-proof) | conditional → [OST-RETRACTION · 同固定集、一致尾与连续回缩 C131](operator_space.md#os-tower-proof) | C131：同一非空紧度量 K、连续 T/U、每轨有限长度且 L_j=sup_K V_j→0（由此 V_j 连续）；全部 x,j 的两条 (OS1) 合取，推出 Fix U=Fix T、全尾 ≤V_n≤L_n 与连续一致极限回缩。不提供 U 族丰富性或保纲性。；**derived-checked；OS-TOWER 自足证明** |
 | E199 | [OSF-INPUT · 紧源连续 U 的逐输入输出步界及新完整关系](operator_space.md#os-fiber-eb) | conditional → [OSF-TRUE-EB · 全逆纤维真残差 EB C132](operator_space.md#os-fiber-eb) | C132：同一实赋范 E 的非空紧 K、连续 U:K→K、非空 S=Fix U、λ>0、非降 ψ，以及每个 x∈K 的输出步界；新定义 F_{U,K} 的全部逆纤维紧，u∈U(K) 的真实残差取最小值，J 自然域 K；原 ψ 未必是 D04 gauge，(OS6) 给 φ(0)=0 且原点连续的内生上界。不转授给既有带域外输入或额外纤维的关系；C131 可提供此 U 的非空 S 但不是本边必要前提。；**derived-checked；OS-FIBER-EB 自足证明** |
+| E200 | [OSS-INPUT · 紧源连续 T 与已给定连续轨道后继 U](operator_space.md#os-successor-proof) | conditional → [OSS-TAIL · 共同 Cauchy 尾与同固定集 C133](operator_space.md#os-successor-proof) | C133：同一非空紧度量 K、连续 T 且实际共同 Cauchy 尾 e_n→0；已给定连续 U 对每个 x 落在 T 的正时刻轨道闭包。闭尾集归纳给 U^n x∈A_n(x)、所有 m≥n 的距离≤e_n、同固定集和连续一致极限；U=T 是平凡选择，不证明额外选择丰富性、长度尾、真 EB 或总体类别比较。；**derived-checked；OS-SUCCESSOR 自足条件证明** |
+| E201 | [OSI-INPUT · 紧度量空间上的满射 1-Lipschitz 自映射](operator_space.md#os-isometry-proof) | conditional → [OSI-RIGID · 全点对等距刚性 C134](operator_space.md#os-isometry-proof) | C134：非空紧度量 K 上同域满射且全点对 1-Lipschitz 的 h；Arzelà–Ascoli 近单位迭代加满射给每个点对严格等距。仅限制这类全局共轭；不限制轨道点对变换，不推出任何认证类规模。；**derived-checked；OS-ISOMETRY 自足证明** |
 
 ## 锥
 
