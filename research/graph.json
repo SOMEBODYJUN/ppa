@@ -301,6 +301,18 @@
       "file": "cone_markov.md#c-amen"
     },
     {
+      "id": "C-GLOBAL-AMEN",
+      "label": "固定 proper nice 锥的所有面 amenability",
+      "file": "cone_markov.md#c-global-amen",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "C-VERTEX-CRSC",
+      "label": "逐个顶点系统的冻结 CRSC 与闭像常秩",
+      "file": "cone_markov.md#c-vertex-crsc",
+      "evidence_status": "candidate"
+    },
+    {
       "id": "C-NORMAL",
       "label": "共同法向/切向修正",
       "file": "cone_markov.md#c-normal"
@@ -2003,13 +2015,13 @@
       "id": "E38",
       "topic": "锥",
       "inputs": [
-        "C-AMEN",
-        "C-RANK"
+        "C-GLOBAL-AMEN",
+        "C-VERTEX-CRSC"
       ],
       "output": "C-UNIV",
       "relation": "conditional",
-      "scope": "固定 proper nice 锥的每个顶点冻结 CRSC 系统",
-      "status": "锥证明包内部审计"
+      "scope": "C13 普遍版本：固定 proper nice 锥 C 的每个面 amenable；对每个在顶点满足冻结 CRSC（含闭像与邻域常秩）的 C¹ 系统，分别调用其参考面条件 MSCQ，故所有这类系统均 MSCQ。单系统的 C-AMEN 与 C-RANK 不足以推出全锥普遍量词；逆向的面嵌入证明仍按候选来源范围。",
+      "status": "C13 candidate；来源锥证明包及内部审计，未独立验收全部退化分支"
     },
     {
       "id": "E39",
@@ -2018,9 +2030,9 @@
         "C-NONAMEN"
       ],
       "output": "C-UNIV",
-      "relation": "refutes",
-      "scope": "nice 非 amenable 锥的线性满秩冻结系统失 MSCQ",
-      "status": "来源旧锥加本包路径"
+      "relation": "limits",
+      "scope": "来源的 proper nice 非 amenable 锥与一个冻结 CRSC 线性系统据报失 MSCQ，显示 nice 单独不能保证所有系统 MSCQ；这限制普遍命题缺全锥 amenability 的旧读法，不反驳 E38 附完整前件的候选结论。反例原证明仍按来源报告范围。",
+      "status": "source-report；非 amenable 反例/构造路径未在规范层独立重算"
     },
     {
       "id": "E40",
@@ -3023,7 +3035,7 @@
       ],
       "output": "LR-RANGE",
       "relation": "conditional",
-      "scope": "C05-v1 同一 F,S,A,B,T,E 的所有整窗与拓扑条件、q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。",
+      "scope": "C05-v2：保留 C05-v1 同一 F,S,A,B,T,E 的其余整窗与拓扑条件，仅将 qγ>1 改为 q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。",
       "status": "derived-checked conditional theorem；原生模型与优先性未审"
     },
     {

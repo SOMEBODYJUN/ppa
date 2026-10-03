@@ -192,7 +192,7 @@ L_2s^{\gamma_2}\le L_2\Delta^{\gamma_2-\gamma_1}s^{\gamma_1}
 若对每个 \(v\in F(u)\) 都有 \(d(u,S)\le\kappa\|v\|^q\)，\(q>0\)，取趋于 infimum 的序列并用连续性才得真残差幂 EB；不要求最小范数值取得。
 任意非减 gauge 在正残差点可能有右跳，不能未经右连续性就把“对每个值”改为“在 infimum 取值”。
 
-本页采用残差窗口版 EB：存在输入邻域 \(U\)、\(\delta>0\)，对 \(u\in U\) 且 \(r_F(u)<\delta\) 有界。
+本页采用残差窗口版 EB：固定 \(\bar u\in S\)，存在输入邻域 \(U\ni\bar u\)、\(\delta>0\)，对 \(u\in U\) 且 \(r_F(u)<\delta\) 有界。
 正幂 \(\kappa r^q\) 可缩至 \(U\cap B(\bar u,\kappa\delta^q)\) 得邻域版，因为窗口外
 \(d(u,S)\le\|u-\bar u\|<\kappa\delta^q\le\kappa r_F(u)^q\)。
 一般仅局部定义的 gauge 不作这个无条件等同。来源定位：S1 Definition 0.4、Lemma 4.1。

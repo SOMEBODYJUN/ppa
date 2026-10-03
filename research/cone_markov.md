@@ -5,6 +5,8 @@
 <a id="c-rank"></a>
 <a id="c-mscq"></a>
 <a id="c-amen"></a>
+<a id="c-global-amen"></a>
+<a id="c-vertex-crsc"></a>
 <a id="c-normal"></a>
 <a id="c-univ"></a>
 <a id="c-nonamen"></a>
@@ -40,7 +42,7 @@ H=\mathfrak F^\perp,\ S_{\rm dual}=\operatorname{span}(C^*\cap\mathfrak F^\perp)
 
 是局部上界，未声称最佳常数或指定数值半径。秩零、零面、全面、零维约化需分支处理，不能套正奇异值公式。[CM-C §§3–5]
 
-**普遍量词与反例。** 对固定 proper nice 锥，amenability 等价于每个在顶点满足冻结 CRSC 的 \(C^1\) 系统都有 MSCQ；逆向只需测试各面线性等距嵌入。nice 非 amenable 的来源锥上，线性导数使 full facial CRCQ 全局恒定，但构造路径的输入距离为 \(\Theta(t^3)\)、锥残差至多 \(O(t^5)\)，MSCQ 失败。该锥本身来自既有文献，不能作为新构造计功。[CM-C §7]
+**普遍量词与反例。** 上表单个系统只需它的参考面 \(\mathfrak F\) amenable；若结论量化为固定 proper nice 锥上的**每个**顶点冻结 CRSC 系统，则前件是该锥**每个面** amenable。全锥 amenability 与这类系统普遍 MSCQ 等价；逆向只需测试各面线性等距嵌入。nice 非 amenable 的来源锥上，线性导数使 full facial CRCQ 全局恒定，但构造路径的输入距离为 \(\Theta(t^3)\)、锥残差至多 \(O(t^5)\)，MSCQ 失败。此来源反例说明 nice 单独不足以保证普遍结论，**不反驳**附全锥 amenability 的条件命题。该锥本身来自既有文献，不能作为新构造计功。[CM-C §7]
 
 **实例的数学作用。** 耦合双 SOC 的可行集为 \(s,t\ge0,u=st\)；PSD 例可行集为 \(B\succeq0,u=\operatorname{tr}(B^2)\)。它们检验共同法向修正和高维非多面体面，未从各块 MSCQ 推联合 MSCQ。PSD 参考面 amenability 常数为 1，有限乘积常数取各面的最大值。[CM-C §6]
 

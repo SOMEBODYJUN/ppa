@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：当前 114 行逐源单元有去向（108 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 119 行逐源单元有去向（113 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -30,7 +30,7 @@
 | --- | --- | --- |
 | S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | 六个指定标签现见 [C117–C119 独立重构](../canonical/signed_schur_growth.md#ss-source)；全稿其它单元与原版范围仍未穷尽 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
 | SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | §1 定理 1、§4 定理 4、§5.1 选定单元见 [SS-TRANSFER/SS-Q2](../canonical/solution_selection_rates.md)；§1 推论 1、§2–§3、§5.2 仍缺逐项重构 | 已核所列抽象尾与特定二次完整模型；仍须分别核几何尾模型、§1 推论 1、§2–§3、§5.2 与 §6 的一手先行性。 |
-| 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 来源指出增长步长 rate、有限维 converse、inverse 的 PSNC 方向、一般度量 (q>1) 和 Luke–Tam Euclidean scope 的具体风险；当前没有逐项关闭记录 | 对每个原命题与现行正文做对象/维数/量词对照；修正则另立版本，已避免则写带锚点的 `superseded` 或 `duplicate` 理由。不能把旧审计题头当证明。 |
+| 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 五项的当前去向见[下文逐项对照](#legacy-a-five)：B-01/M-05 有独立反例 F39/F40，另外三项不在现行承重链；同稿 M-01/M-03 等仍待裁决 | 外部原文及修正版并未因此验收；旧审计题头不能代替证明。 |
 | 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线；conditional bit/Gaussian 的 Theorems 6/8 已见 [C129/C130 独立正文](../topics/random_markov/conditional_refresh.md)，其余子定理仍按逐单元表分别裁决 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
 
 GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残差和近端已按 C120/C121 验收，GX-062/063 的旋转族、循环阶和锐模也已按 C122/C123 重写；9/01 其余例卡仍须按**完整对象和观察**逐项处理。一张卡的已审属性不关闭其 VI 标签、二参数区和外部先行性。缺失的 I-097–099/I-102 原证明与上表“原件可得但未重写”属于不同障碍。
@@ -221,3 +221,18 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 ## 增量：旋转族共同公式与 GX-062/063
 
 [C122/C123](../topics/examples/planar_rotation_family.md#pr-object) 从 Z07 765–908 行重建全部旋转参数的完整 Minty 纤维、输入对距模、循环门和两角精确表。GX-063 902–905 行族内“强模不能还原循环阶”的解释已分项 `superseded`，保留同逆像条件数而不同循环阶的比较；来源其它标签及 Voisei 引文未因此关闭。
+
+<a id="legacy-a-five"></a>
+## 增量：9/01 A 组五项历史量词异议的现行去向
+
+来源为 Z07 `work/a_consistency_audit.md` 的 B-01（9–32 行）、M-02（52–69）、M-04（97–111）、M-05（113–135）、M-06（137–151）。另一个 9/01 checkpoint 有同名字节对应，按内容组去重而保留两个出现位置。下面是**现行规范库的使用裁决**，不是来源所引外部定理的全文核验。
+
+| 历史异议 | 本库可独立核实的处置 | 保留义务 |
+| --- | --- | --- |
+| B-01 增长步长 `O(k^s)` 充加速率下界 | [F39](../../FAILED_ROUTES.md#f39) 用完整一维极大单调 `F(x)=x|x|` 与常值步长直接反驳旧 (iii) 量词；现行 C02/C53 为固定步长，不导入该旧速率 | 外部印刷/勘误身份与改用 `Ω/Θ` 后的完整速率未核 |
+| M-02 近端正则性的有限维 converse 被写成 Hilbert iff | 当前 C01/C89 直接从成对图不等式推导，没有调用这个 converse；旧无定位 iff 不纳入规范 Claim | 有限维 proximal-subgradient、attentive localization、截断等一手条件若重新导入须逐项核 |
+| M-04 PSNC 施于 inverse 的方向 | 当前具体 MR/MSR 例从完整逆像估计重算，不调用 Asplund coderivative iff；不得把 PSNC(F) 当作 MR(F) 所需的 PSNC(F⁻¹) | 原始定理的闭图、mixed coderivative 与 inverse 接口未逐项一手核 |
+| M-05 任意度量上的 `q>1` two-variable MR 退化 | [F40](../../FAILED_ROUTES.md#f40) 的雪花输出度量给全域非局部常值 exact `q`-MR；现行 D04 是固定零目标 EB，类型不同 | 若限定赋范/路径空间，须另给精确局部值域与 chaining 证明 |
+| M-06 Luke–Tam Euclidean 范围外推 | [C16](../../CLAIMS.md) 与[算子空间公共接口](../operator_space.md#lt) 只声明有限维同域 LT→能量证书代数；Hilbert 的同参数剪切/扩张另有本库证明，不冒充原 LT 全套定理 | 原来源的 maximal-extension、存在性与算法结论未在此统一验收 |
+
+以上五项的历史传播风险已有带范围去向，不表示 `a_consistency_audit.md` 其它 M/B 条目、旧 atlas 全文或外部文献已经清洗。尤其 B-01 的旧命题被反证，与“外部作者一定发布勘误”是不同事实。

@@ -37,7 +37,7 @@
 | E28 | [COLLIDE · 逐支正则但跨支碰撞](rleb_ppa.md#collide) | limits → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 逐支正则不能替代跨支定向；**S19 collision 反例** |
 | E30 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [POLISH-GAP · 拓扑 Polish 不保指定度量完备](holder_structure.md#polish-gap) | refutes → [STOCH-LIMIT-V0 · C12-v0 仅拓扑 Polish 的空间内极限断言](holder_structure.md#stoch-limit-v0) | 仅反驳 C12-v0 把拓扑 Polish 当作给定度量完备的空间内极限断言；X=(0,2) 通常距离，有限长度而极限在空间外。C12-v1 的完备度量假设未受反驳。；**本轮显式反例** |
 | E32 | [F03 · 图块外额外输出反例](solution_selection.md#f03) | refutes → [FULL · 局部与完整 resolvent 一致](solution_selection.md#full) | F(u)={u,-u} 的图块 A1–A4；J_G(0) 单值、J_F(0) 全实线；**显式反例** |
-| E39 | [C-NONAMEN · nice 非 amenable 边界例](cone_markov.md#c-nonamen) | refutes → [C-UNIV · 顶点系统普遍 MSCQ](cone_markov.md#c-univ) | nice 非 amenable 锥的线性满秩冻结系统失 MSCQ；**来源旧锥加本包路径** |
+| E39 | [C-NONAMEN · nice 非 amenable 边界例](cone_markov.md#c-nonamen) | limits → [C-UNIV · 顶点系统普遍 MSCQ](cone_markov.md#c-univ) | 来源的 proper nice 非 amenable 锥与一个冻结 CRSC 线性系统据报失 MSCQ，显示 nice 单独不能保证所有系统 MSCQ；这限制普遍命题缺全锥 amenability 的旧读法，不反驳 E38 附完整前件的候选结论。反例原证明仍按来源报告范围。；**source-report；非 amenable 反例/构造路径未在规范层独立重算** |
 | E40 | [M-FALSE · 快混合仍 Ψ 假零](cone_markov.md#m-false) | refutes → [FAST-EB · 快混合必有原 Ψ exact-zero](cone_markov.md#fast-eb) | 公平 bit 一步平稳但相关律 Ψ=0、距不变律>0；**Markov 显式模型** |
 | E41 | [M-NOPOWER · exact-zero 快率无正幂 EB](cone_markov.md#m-nopower) | refutes → [POWER-EB · exact-zero + 快率必有正幂 EB](cone_markov.md#power-eb) | 无限紧可数状态 exact-zero 且快率，却无任何局部正幂 EB；不反驳有限状态定理；**Markov 显式模型** |
 | E52 | [Q-ORACLE · 无界域有限确定性总查询](range_finite_data.md#q-oracle) | implies → [Q-NOGLOBAL · 有限 transcript 无全空间认证](range_finite_data.md#q-noglobal) | 两张全局 Hölder 图在有限自适应查询上同 transcript、远端分离；**S23 不可区分反例** |
@@ -119,7 +119,7 @@
 | E20 | [C-RANK · 冻结秩夹逼](cone_markov.md#c-rank) ∧ [C-FACE · 面稳定与共同流形](cone_markov.md#c-face) | conditional → [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) | nice+冻结 CRSC+参考面 amenability+法向/切向修正；**证明包内部审计** |
 | E36 | [C-RANK · 冻结秩夹逼](cone_markov.md#c-rank) | conditional → [C-FACE · 面稳定与共同流形](cone_markov.md#c-face) | nice、闭像及常秩核投影给面稳定；**锥证明包内部审计** |
 | E37 | [C-FACE · 面稳定与共同流形](cone_markov.md#c-face) ∧ [C-NORMAL · 共同法向/切向修正](cone_markov.md#c-normal) ∧ [C-AMEN · 参考面 amenability](cone_markov.md#c-amen) | implies → [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) | 法向流形修正与参考面切向误差界联合；**锥证明包内部审计** |
-| E38 | [C-AMEN · 参考面 amenability](cone_markov.md#c-amen) ∧ [C-RANK · 冻结秩夹逼](cone_markov.md#c-rank) | conditional → [C-UNIV · 顶点系统普遍 MSCQ](cone_markov.md#c-univ) | 固定 proper nice 锥的每个顶点冻结 CRSC 系统；**锥证明包内部审计** |
+| E38 | [C-GLOBAL-AMEN · 固定 proper nice 锥的所有面 amenability](cone_markov.md#c-global-amen) ∧ [C-VERTEX-CRSC · 逐个顶点系统的冻结 CRSC 与闭像常秩](cone_markov.md#c-vertex-crsc) | conditional → [C-UNIV · 顶点系统普遍 MSCQ](cone_markov.md#c-univ) | C13 普遍版本：固定 proper nice 锥 C 的每个面 amenable；对每个在顶点满足冻结 CRSC（含闭像与邻域常秩）的 C¹ 系统，分别调用其参考面条件 MSCQ，故所有这类系统均 MSCQ。单系统的 C-AMEN 与 C-RANK 不足以推出全锥普遍量词；逆向的面嵌入证明仍按候选来源范围。；**C13 candidate；来源锥证明包及内部审计，未独立验收全部退化分支** |
 
 ## Markov
 
@@ -340,7 +340,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E127 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-RANGE · C05-v2 去超临界幂的条件值域](canonical/local_range_without_supercriticality.md#lr-theorem) | C05-v1 同一 F,S,A,B,T,E 的所有整窗与拓扑条件、q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。；**derived-checked conditional theorem；原生模型与优先性未审** |
+| E127 | [FSC-COLLAR · 有限包络与整窗条件给内域余量](canonical/finite_sample_collar.md#fsc-collar) ∧ [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-RANGE · C05-v2 去超临界幂的条件值域](canonical/local_range_without_supercriticality.md#lr-theorem) | C05-v2：保留 C05-v1 同一 F,S,A,B,T,E 的其余整窗与拓扑条件，仅将 qγ>1 改为 q>0；独立核定 collar 后紧 Vietoris span、上同调满射、χ(A)≠0 和 Lefschetz 给 h-coincidence。去 qγ>1 是 C05-v2 新版本；样本不核整窗。；**derived-checked conditional theorem；原生模型与优先性未审** |
 | E128 | [LR-OBJECT · C05-v2 整窗条件与 q>0](canonical/local_range_without_supercriticality.md#lr-object) | conditional → [LR-FEAS · qγ=1/2 的整窗 collar 可行实例](canonical/local_range_without_supercriticality.md#lr-feasible) | n=1、F(x)=10⁴x、γ=1/2、q=1、1401 个有理格点；A,B 区间全部整窗与 collar 精确成立，说明 qγ>1 对该条件结论不必要。；**精确有理数不等式与单值拓扑条件** |
 
 ## 非 tied 二参数
