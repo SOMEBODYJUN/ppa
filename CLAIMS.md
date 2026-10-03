@@ -1048,7 +1048,7 @@
 ## C126-v1 / MR-MOMENT · 全有限支撑律的精确矩门
 
 - **Status**：`derived-checked`，本页的两点必要性与矩单调性充分性已重构；外部先行性未核。
-- **Exact Statement / Objects / Domain / Quantifiers**：在可测状态集 \(E\) 上取有限非负函数 \(e,c\)、\(1\le p,r<\infty,q>0,0\le K<\infty\)，存在共同零点 \(s\) 和 \(e(a),c(a)>0\) 的 excursion。对**每个有限支撑概率律** \(\mu\)，\(\|e\|_{L^p(\mu)}\le K\|c\|_{L^r(\mu)}^q\) 当且仅当对**每个** \(x\in E\) 有 \(e(x)\le Kc(x)^q\) 且 \(pq\le r\)。Markov 推论另以 \(\mathbb R^d\) 为核和 \(W_p\) 的母空间，固定闭目标支持 \(S\subset\mathbb R^d\)、支持于 \(S\) 的不变律 \(\pi\)、\(\pi P=\pi\)、在 \(\pi\) 上消失的状态残差及某 \(a\in\mathbb R^d\) 的 \(P(a,\cdot)\) 远离 \(S\) 的正 \(p\) 阶矩；若在 \(\mathscr P_p(\mathbb R^d)\) 中 \(\pi\) 的**整个** \(W_p\) 邻域（含 \((1-\varepsilon)\pi+\varepsilon\delta_a\)）有输出到不变律集的 \(q\) 阶 \(L^r\) 残差界，则 \(pq\le r\) 必要。仅在 \(\mathscr P_p(S)\) 相对邻域调用须另有 \(a\in S\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：在可测状态集 \(E\) 上取有限非负函数 \(e,c\)、\(1\le p,r<\infty,q>0,0\le K<\infty\)，存在共同零点 \(s\) 和 \(e(a),c(a)>0\) 的 excursion。对**每个有限支撑概率律** \(\mu\)，\(\|e\|_{L^p(\mu)}\le K\|c\|_{L^r(\mu)}^q\) 当且仅当对**每个** \(x\in E\) 有 \(e(x)\le Kc(x)^q\) 且 \(pq\le r\)。Markov 推论另以 \(\mathbb R^d\) 为核和 \(W_p\) 的母空间，固定闭目标支持 \(S\subset\mathbb R^d\)、**全部**目标不变律组成的 \(\mathcal I\subset\mathscr P_p(S)\)、\(\pi\in\mathcal I\) 且 \(\pi P=\pi\)、在 \(\pi\) 上消失的状态残差及某 \(a\in\mathbb R^d\) 的 \(P(a,\cdot)\) 远离 \(S\) 的正 \(p\) 阶矩；若在 \(\mathscr P_p(\mathbb R^d)\) 中 \(\pi\) 的**整个** \(W_p\) 邻域（含 \((1-\varepsilon)\pi+\varepsilon\delta_a\)）有 \(d_{W_p}(\mu P,\mathcal I)\le K\|c\|_{L^r(\mu)}^q\)，则 \(pq\le r\) 必要。仅在 \(\mathscr P_p(S)\) 相对邻域调用须另有 \(a\in S\)。
 - **Definitions / Dependencies / Evidence**：[MR-MOMENT](research/topics/random_markov/moment_recoupling.md#mr-moment) 给 Dirac、两点小质量律、矩单调性和 Markov 更新混合的证明。原 CM-M Proposition M 是线索；计算或近端算法身份不是证明前提。
 - **Counterevidence / Scope**：没有共同零点或正输出 excursion 时，必要性不由此证明；在 law-space 中换成不在平稳律消失的物理残差也改变命题。\(r\ge pq\) 只消除这项矩障碍，不自动构造原生合法耦合或点态证书。
 
@@ -1083,3 +1083,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：\(Q\in\mathbb R^{m\times m}\) 对称正定、\(\beta=N(m_0,Q^{-1})\)、\(p_i>0,\sum_i p_i=1\)、\(D=\operatorname{diag}(p_i/Q_{ii})\)、\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})>0\)。每步按 \(p_i\) 使用 \(\beta\) 的全条件律刷新第 \(i\) 位；对**全部有限二阶矩律** \(\mu\)，以 \(Q\) 二次成本的 \(W_{2,Q}\) 和一维条件运输定义的 \(\mathcal R_Q\) 有 \(W_{2,Q}(\mu,\beta)\le\zeta^{-1/2}\mathcal R_Q(\mu)\)、\(W_{2,Q}(\mu P,\beta)\le\sqrt{1-\zeta}\,W_{2,Q}(\mu,\beta)\)。前一系数全局且每个完整正半径目标球上锐；后一因子只称有效。\(\beta\) 是该律类唯一不变律，\(\mathcal R_Q^{-1}(0)=\{\beta\}\)。
 - **Definitions / Dependencies / Evidence**：[CR6–CR10](research/topics/random_markov/conditional_refresh.md#cr-gaussian-object) 分开指定目标条件均值/方差、同噪声投影收缩、使用独立均匀数保持两边缘的条件运输迭代及最小特征向量平移见证。来源 CM-M Theorem 8 有证明文本；本轮空白逆向审查逐项重核可测分位数、边缘与锐性，不把来源 PASS 当作证明。
 - **Counterevidence / Objections / Scope**：没有守恒 \(\nu\) 或二进制 \(\mathsf W_\nu/\mathcal R\)；不把 EB 系数的锐性转授给收缩因子，也不推出原同步 \(\Psi\) 的 EB、随机近端 PPA 或外部新颖性。
+
+<a id="c131"></a>
+## C131-v1 / OS-TOWER · 紧源统一有限长度塔
+
+- **Status**：`derived-checked`；规范正文给出从精确塔不等式到同固定集和一致极限的自足证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：非空紧度量 \(K\)，连续 \(T,U:K\to K\)；\(T\) 的每条轨道有限长，\(V_j(x)=\sum_{k\ge j}d(T^{k+1}x,T^kx)\) 连续，且 \(L_j=\sup_K V_j\to0\)。对**全部** \(x\in K,j\ge0\)，有 \(d(Ux,x)+V_0(Ux)\le V_0(x)\)、\(V_j(Ux)\le V_{j+1}(x)\)。则 \(S=\operatorname{Fix}T=\operatorname{Fix}U\ne\varnothing\)，\(U\) 的第 \(n\) 步之后全尾长 \(\le V_n(x)\le L_n\)，\(U^n\) 一致收敛至连续回缩 \(\Pi_U:K\to S\)。
+- **Dependencies / Evidence**：[OS-TOWER 证明](research/operator_space.md#os-tower-proof) 的固定集、望远镜式及紧完备一致极限；来源 OS-R §1 A.2 是线索而非补前提。
+- **Objections / Scope**：逐点有限长度不蕴含统一尾；塔不等式并不生产丰富 \(U\) 族，亦不证明观测映射保纲或总体 RLEB/LT/极大单调规模比较。
+
+<a id="c132"></a>
+## C132-v1 / OS-FIBER-EB · 新定义紧输入源的完整纤维 EB
+
+- **Status**：`derived-checked`；对紧逆纤维的真残差极小值及同输入反演已在规范层证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：实赋范空间 \(E\) 的非空紧 \(K\)、连续 \(U:K\to K\)、非空 \(S=\operatorname{Fix}U\)、\(\lambda>0\)，非降 \(\psi:[0,\infty)\to[0,\infty)\)。若每个 \(x\in K\) 有 \(d(Ux,S)\le\psi(\|x-Ux\|/\lambda)\)，从头定义 \(F_{U,K}(u)=\{(x-u)/\lambda:x\in K,Ux=u\}\)（无原像则空），则完整近端的自然输入域恰为 \(K\)、\(J_{\lambda F_{U,K}}(x)=\{Ux\}\) 在 \(K\) 上，\(F_{U,K}^{-1}(0)=S\)，且**每个** \(u\in U(K)\) 有 \(d(u,S)\le\psi(r_{F_{U,K}}(u))\)，其中 \(r_{F_{U,K}}(u)=\min_{Ux=u}\|x-u\|/\lambda\)。
+- **Dependencies / Evidence**：[OS-FIBER-EB 证明](research/operator_space.md#os-fiber-eb) 的紧纤维极小值；C131 可另外生成符合其固定集条件的 \(U\)，但本条作为条件引理不依赖塔。来源 OS-R §1 A.3 只作溯源。
+- **Objections / Scope**：在紧源上不需假设 gauge 连续即可取得最小值；不能把新关系的结论转给有域外输入或额外逆纤维的原关系。没有自动 coverage、统一兼容或总体规模结论。

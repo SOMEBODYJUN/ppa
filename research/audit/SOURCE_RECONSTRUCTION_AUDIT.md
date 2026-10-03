@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：当前 110 行逐源单元有去向（104 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur 与 Markov Theorems 6/8 的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 112 行逐源单元有去向（106 rewritten、3 superseded、3 deferred），最近的 GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间紧塔/真纤维 EB 的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 
@@ -31,11 +31,11 @@
 | S19 ZIP `RLEB_投稿扩展版_2026-09-19/sections/appendix_signed_schur.tex`：`thm:signed-schur-growth`、`cor:schur-power-constants`、`prop:schur-matched-jet`、`prop:schur-sharp-exponent`、`prop:schur-square-root-test`、`prop:schur-collision-counterexample` | 六个指定标签现见 [C117–C119 独立重构](../canonical/signed_schur_growth.md#ss-source)；全稿其它单元与原版范围仍未穷尽 | 逐单位独立核前提及证明，区分局部图块与完整近端。S18 ZIP 的同名成员与 S19 成员 SHA-256 同为 `9927b4006234fa5f435d831a8583c426311906ba8288a60894516f97cea829d2`；数学重算一次、版本归属分别保留。 |
 | SS1 修订 ZIP `research_note.md`：§1 定理 1/推论 1、§2 定理 2、§3 定理 3、§4 定理 4、§5.1–5.2 两个结构推论 | §1 定理 1、§4 定理 4、§5.1 选定单元见 [SS-TRANSFER/SS-Q2](../canonical/solution_selection_rates.md)；§1 推论 1、§2–§3、§5.2 仍缺逐项重构 | 已核所列抽象尾与特定二次完整模型；仍须分别核几何尾模型、§1 推论 1、§2–§3、§5.2 与 §6 的一手先行性。 |
 | 9/01 ZIP `work/a_consistency_audit.md`：B-01、M-02、M-04、M-05、M-06 | 来源指出增长步长 rate、有限维 converse、inverse 的 PSNC 方向、一般度量 (q>1) 和 Luke–Tam Euclidean scope 的具体风险；当前没有逐项关闭记录 | 对每个原命题与现行正文做对象/维数/量词对照；修正则另立版本，已避免则写带锚点的 `superseded` 或 `duplicate` 理由。不能把旧审计题头当证明。 |
-| 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线，但部分子定理仍缺独立正文及逐源去向 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
+| 9/14 锥与 Markov 的原始证明、conditional bit/Gaussian 证书 | [锥/Markov 总述](../cone_markov.md) 可定位路线；conditional bit/Gaussian 的 Theorems 6/8 已见 [C129/C130 独立正文](../topics/random_markov/conditional_refresh.md)，其余子定理仍按逐单元表分别裁决 | 先按面稳定、MSCQ、同步耦合与目标边缘分成不同 Claim，逐条核完整残差桥、全部参数与外部引用；不把有限验证器 PASS 升级为全称结论。 |
 
 GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残差和近端已按 C120/C121 验收，GX-062/063 的旋转族、循环阶和锐模也已按 C122/C123 重写；9/01 其余例卡仍须按**完整对象和观察**逐项处理。一张卡的已审属性不关闭其 VI 标签、二参数区和外部先行性。缺失的 I-097–099/I-102 原证明与上表“原件可得但未重写”属于不同障碍。
 
-| 来源簇与定位 | 基线规范入口 | 尚未关闭的内容与验收要求 |
+| 来源簇与定位 | 基线规范入口 | 基线时的缺口与验收要求（后续进展另列） |
 | --- | --- | --- |
 | 9/01 三个 checkpoint，`research/theory_atlas.md`、`work/a_*` | [foundations](../foundations.md)、[operator_space](../operator_space.md) 仅部分覆盖 | 单调性与正则性完整定义字典、术语冲突、逐边严格性、不同空间的引用条件；逐条保留 MR/MSR 与 inverse Aubin/calm 的对象方向 |
 | 9/01 `research/gap_examples.md`、`example_properties.md`、六份 `work/c_gx*.md` | 尚无完整规范例库 | GX-001–077 逐卡重写、同构/缩放/参考点去重；每卡需完整 F、域、零集、λ、残差、局部窗、最优常数证明或待定标记 |
@@ -44,7 +44,7 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 | 9/01 novelty checkpoint，`RL_novelty_boundary.md`、`novelty_*`、`claim_safe_matrix` | 各模块零散提及先例 | 新颖性对照需独立文献卡：检索日期、访问深度、逐定理对象映射和未读全文门；旧“deepread”标题可能仅为摘要级读取 |
 | 9/09 T4 包，`ATTACK_C11_COMPOSITE_GENERALIZED_SUBREGULARITY.md`、`verify_c11_composite.py` | 基线缺独立模块 | 复合次正则与多步路径应重写；历史 C11 与当前 C11（极限回缩）不同身份，必须有命名空间，禁止直接合并 |
 | 9/14 历史总包，RL 核心及 35 条超边 | [rleb_ppa](../rleb_ppa.md)、[旧边对照](../HISTORICAL_EDGE_CROSSWALK.md) | 旧边逐条对照已存在，但逐源命题/例/失败机制尚非全部覆盖；边有去向不意味着所有原件内容有去向 |
-| 9/14 随机与 Markov 分支 | [cone_markov](../cone_markov.md) | 基线时相关性感知近端、四点耦合、非乘积/吸收障碍、可数紧扩展需独立命题身份及依赖；本轮 RP 子链的新增去向见第 6 节，其余未关闭 |
+| 9/14 随机与 Markov 分支 | [cone_markov](../cone_markov.md) | 基线时相关性感知近端、四点耦合、非乘积/吸收障碍、可数紧扩展需独立命题身份及依赖；RP 子链的新增去向见第 6 节；后续选定单元另见 [固定目标近端 C62-v2/C63](../topics/random_markov/proximal_selection_seam.md)、[四状态 C71](../topics/random_markov/lazy_cycle_ot.md)、[有限状态 C15/C80](../topics/random_markov/finite_state_certificate.md) 与 [条件刷新 C129/C130](../topics/random_markov/conditional_refresh.md)。这些去向仅关闭逐单元表声明的范围，其余来源单元和跨残差桥仍待裁决。 |
 | 9/14 锥分支与 v04 ZIP | [cone_markov](../cone_markov.md) | 原始 CRSC、nice/amenable、面稳定、法向/切向修正的每个依赖及验证器尚需一一关联 |
 | 9/18 投稿与 9/19 扩展 ZIP | [rleb_ppa](../rleb_ppa.md)、[holder_structure](../holder_structure.md) | 主要收敛/Dini/回缩已整理；signed-Schur verifier、锁定台账和来源版本仍需逐项裁决；随机完备性修正版与原措辞保持不同版本 |
 | 9/18 解选择及修订关闭 ZIP | [solution_selection](../solution_selection.md) | 规范层保留修补方向；`Codex_independent_audit.md` 是任务书，真实审计在修订包，不能让文件名替代证据身份；数值 CSV 不是证明 |
@@ -52,7 +52,7 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 | 9/23 正式 TeX | [holder_structure](../holder_structure.md)、[range_finite_data](../range_finite_data.md) | 主要结果覆盖但外部定理适用性与先行性独立；候选稿不是公认定理 |
 | 9/25 PDF | [holder_structure](../holder_structure.md) H07 | 整窗指定 T 的拓扑假设及其实际认证仍未关闭；原引文 Theorem 6.2 的 retract/Vietoris/compact→CAC 适用门后来已在 [LIT-GRN-2002](../LITERATURE.md#lit-grn-2002) 一手核对，不能靠有限数据补足其他前提 |
 
-上述“尚无”按 `2d127c9` 判断。并行新增模块应在后续提交中填写：精确锚点、重写版本、审核者、未闭义务；不直接删除来源簇。
+上表的基线入口与缺口均按 `2d127c9` 判断；后续已重写的范围以本文增量记录、逐单元表及规范正文为准。保留来源簇，不把基线待办重新解释为当前全部未审。
 
 ## 3. 例库增长必须防止的错误
 
@@ -166,7 +166,7 @@ GX-055–057 的指定单元已有 C108–C114 正文；GX-061 的端点、残�
 
 [C60/C61 DR 双对象卡](../topics/examples/dr_tangency_transversality.md) 从 9/01 ZIP 的 `work/c_gx066_077.md` 两张卡独立重算投影管、真算法残差、半阶/线性最优模及各自一步/轨道范围。来源用 `archive.zip!/work/c_gx066_077.md` 在逐单元 TSV 定位，验证器检查 ZIP 成员存在；原卡的其余 primal 标签和外部先行性未验收。
 
-[C62/C63 固定目标近端](../topics/random_markov/proximal_selection_seam.md) 从 9/14 非乘积稿 §3、§5 重写域内平稳律吸收、全局近端完整图及 fair tie 核接缝。历史 V10 有理脚本 2026-10-01 复跑退出码 0，只是有限代数观察；一般平稳律与每个 \(W_2\) 邻域的障碍在正文另给证明。四个选定来源单元在 TSV 新增去向，当前共 45；同稿其他随机机制和其余 ZIP 成员仍未裁决。
+[C62/C63 固定目标近端](../topics/random_markov/proximal_selection_seam.md) 从 9/14 非乘积稿 §3、§5 重写域内平稳律吸收、全局近端完整图及 fair tie 核接缝。历史 V10 有理脚本 2026-10-01 复跑退出码 0，只是有限代数观察；一般平稳律与每个 \(W_2\) 邻域的障碍在正文另给证明。四个选定来源单元在 TSV 新增去向，该批当时共 45；现行总表以文件首段与实际 TSV 为准；同稿其他随机机制和其余 ZIP 成员仍未裁决。
 
 [C64 新 Sign 实现](../topics/path_dynamics/m1_sign_lift.md) 是针对已核显式 T 的**原创反向构造**，不是把历史原生方程作 `rewritten`；因此不新增虚假的历史单元去向，原 §5 原生桥继续 `deferred`。[F23](../../FAILED_ROUTES.md#f23) 记录两份同名 M1 的身份隔离及恢复原生方程的精确义务。9/25 所引 [6, Theorem 6.2] 的一手适用门另由 [LIT-GRN-2002](../LITERATURE.md#lit-grn-2002) 关闭，但 C05 的整窗模型仍候选。
 

@@ -1502,6 +1502,26 @@
       "id": "SG-SQRT",
       "label": "平方根完整原生图及独立真残差",
       "file": "canonical/signed_schur_growth.md#ss-square-root"
+    },
+    {
+      "id": "OST-INPUT",
+      "label": "非空紧 K 的连续 T/U 与统一有限长度塔 (OS1)",
+      "file": "operator_space.md#os-tower-proof"
+    },
+    {
+      "id": "OST-RETRACTION",
+      "label": "同固定集、一致尾与连续回缩 C131",
+      "file": "operator_space.md#os-tower-proof"
+    },
+    {
+      "id": "OSF-INPUT",
+      "label": "紧源连续 U 的逐输入输出步界及新完整关系",
+      "file": "operator_space.md#os-fiber-eb"
+    },
+    {
+      "id": "OSF-TRUE-EB",
+      "label": "全逆纤维真残差 EB C132",
+      "file": "operator_space.md#os-fiber-eb"
     }
   ],
   "edges": [
@@ -2031,7 +2051,7 @@
       ],
       "output": "D04",
       "relation": "limits",
-      "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需以 R^d 为核与 Wp 母空间、目标支持 S、平稳残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。",
+      "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需 R^d 核与 Wp 母空间、所有目标律 I⊂Pp(S)、π∈I 平稳及残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域对 d(μP,I) 断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。",
       "status": "derived-checked / MR1 及小质量更新证明"
     },
     {
@@ -2761,7 +2781,7 @@
       ],
       "output": "FP-ABSORB",
       "relation": "conditional",
-      "scope": "同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫|f|，不适用于完整非凸次梯度 resolvent 或随机换目标。",
+      "scope": "同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的概率律 π，πK=π iff π(A_K)=1。无需 ∫|f|，不适用于完整非凸次梯度 resolvent 或随机换目标。",
       "status": "C62-v2 主吸收等价 derived-checked；C62-v1 的附带纤维等式另由 E195 反驳"
     },
     {
@@ -3453,7 +3473,9 @@
     {
       "id": "E169",
       "topic": "例库",
-      "inputs": ["VO-OBJECT"],
+      "inputs": [
+        "VO-OBJECT"
+      ],
       "output": "VO-GRAPH",
       "relation": "conditional",
       "scope": "同一完整实 L² Volterra 图；全部图点与目标，固定零集 {0}；零均值方向给单调非严格、非 paramonotone 与非 rectangular 直接见证；任意右极限零 gauge、任意小球与残差窗，高频单位向量否定统一真残差 EB。不是近端步残差。",
@@ -3462,7 +3484,10 @@
     {
       "id": "E170",
       "topic": "例库",
-      "inputs": ["VO-OBJECT", "VO-GRAPH"],
+      "inputs": [
+        "VO-OBJECT",
+        "VO-GRAPH"
+      ],
       "output": "VO-PROX",
       "relation": "conditional",
       "scope": "同一完整图、每个固定 λ>0；全域 J 单值，全图全对线性 RL 锐 L=1；对每个整数 k≥1 范数 ||J^k||=1，但对每个固定 p 强收敛。步残差无统一消失 gauge EB 另以高频输入证明，不从真残差失败直接转授。",
@@ -3471,7 +3496,9 @@
     {
       "id": "E171",
       "topic": "例库",
-      "inputs": ["NC-OBJECT"],
+      "inputs": [
+        "NC-OBJECT"
+      ],
       "output": "NC-BRANCH",
       "relation": "conditional",
       "scope": "同一全域 F(x)=−x³；固定 λ>0，完整 J(0) 三根否定任何全图零消失 RL；仅在指定 G_M、M>0、3λM²<1，全部图块点对有锐 L=(1+3λM²)/(1−3λM²)，自然域只 D_M。局部图块绝不认证完整 J 排他。",
@@ -3480,7 +3507,10 @@
     {
       "id": "E172",
       "topic": "例库",
-      "inputs": ["NC-OBJECT", "NC-BRANCH"],
+      "inputs": [
+        "NC-OBJECT",
+        "NC-BRANCH"
+      ],
       "output": "NC-REGULARITY",
       "relation": "conditional",
       "scope": "同一完整原图真残差与全部目标的完整逆像给固定零目标锐 1/3 系数 1、两目标锐 1/3 系数 2^(2/3)；另固定上述 G_M 与每个非零逐步合法输入，指定 T_M 路径有限步越 D_M。路径结论不涉及完整多值 J 的全部选择。",
@@ -3489,7 +3519,9 @@
     {
       "id": "E173",
       "topic": "例库",
-      "inputs": ["IP-OBJECT"],
+      "inputs": [
+        "IP-OBJECT"
+      ],
       "output": "IP-MINTY",
       "relation": "conditional",
       "scope": "同一完整 F(0)={0}, F(x)={−1/x} (0<x≤ε)，0<ε<1；对每个固定 λ>0 的全部图点对及完整 J 纤维。λ≤ε² 的 J(0) 两支排除零消失全对模；λ>ε² 的全图锐线性 L=(λ+ε²)/(λ−ε²)，但自然域不含零输入球，亦无全图次线性模。",
@@ -3498,7 +3530,10 @@
     {
       "id": "E174",
       "topic": "例库",
-      "inputs": ["IP-OBJECT", "IP-MINTY"],
+      "inputs": [
+        "IP-OBJECT",
+        "IP-MINTY"
+      ],
       "output": "IP-RESIDUAL",
       "relation": "conditional",
       "scope": "同一完整图和 S={0}；每个 q>0 的全域有限残差比 x^(q+1) 与局部零系数下确界；小非零目标逆像为空。对每个固定 λ>0、每条逐步合法的完整 J 路径，仅恒零可无限延续；λ>2ε² 的 J 严格 Lipschitz 仍非自然域自映射。",
@@ -3507,7 +3542,9 @@
     {
       "id": "E175",
       "topic": "例库",
-      "inputs": ["RS-OBJECT"],
+      "inputs": [
+        "RS-OBJECT"
+      ],
       "output": "RS-FIBERS",
       "relation": "conditional",
       "scope": "同一完整有理/无理双水平图、0<δ<1/2、每个固定 λ>0、全部图点对及全部 J 纤维；λ>δ 当且仅当全图线性 RL，锐 L=(λ+δ)/(λ−δ)。λ≤δ 零消失模失败；亚临界 λ 的有理/无理性质决定精确碰撞与单值断裂，任何情形零输入均无球覆盖。",
@@ -3516,7 +3553,10 @@
     {
       "id": "E176",
       "topic": "例库",
-      "inputs": ["RS-OBJECT", "RS-FIBERS"],
+      "inputs": [
+        "RS-OBJECT",
+        "RS-FIBERS"
+      ],
       "output": "RS-RESIDUAL",
       "relation": "conditional",
       "scope": "同一完整图 S={0}；每个 q>0 与每个输入缩窗的真全纤维残差 EB 系数下确界 0；另对每个固定 λ>0 的全部自然域最小步残差有锐系数 1+δ/λ。每条非零逐步合法完整 J 路径的位移至少 λ 且有限步终止；近零输入无 coverage，不能从真残差系数转授步界或路径结论。",
@@ -3525,7 +3565,11 @@
     {
       "id": "E177",
       "topic": "例库",
-      "inputs": ["BNS-MINTY", "RS-FIBERS", "GX57-OBJECT"],
+      "inputs": [
+        "BNS-MINTY",
+        "RS-FIBERS",
+        "GX57-OBJECT"
+      ],
       "output": "GX57-PHASE",
       "relation": "conditional",
       "scope": "固定完整 Euclidean 直积 A×B 与同一步长全部图点对；δ<λ<1 的全图线性锐 L 是两坐标锐值最大，λ≤δ 与 λ>1 分别由阶梯近碰撞与第一坐标真碰撞否定零消失模，λ=1 的最大全图指数仅 1/2。完整 J=J_A×J_B；输入窗或图窗是不同范围。",
@@ -3534,7 +3578,10 @@
     {
       "id": "E178",
       "topic": "例库",
-      "inputs": ["GX57-OBJECT", "GX57-PHASE"],
+      "inputs": [
+        "GX57-OBJECT",
+        "GX57-PHASE"
+      ],
       "output": "GX57-SHARP",
       "relation": "sharpness",
       "scope": "同一完整乘积固定 λ=1；全部图点对的半阶锐系数由 (P15) 单变量最大式给出且严格 >2；临界点同时限制第二输出的图邻域锐系数 2，只限制输入的任何固定非零第二窗则锐系数 >2，缩窗下确界 2。不得从分量锐系数逐项取最大替完整半阶模。",
@@ -3543,7 +3590,11 @@
     {
       "id": "E179",
       "topic": "例库",
-      "inputs": ["GX57-OBJECT", "BNS-ZERO", "RS-RESIDUAL"],
+      "inputs": [
+        "GX57-OBJECT",
+        "BNS-ZERO",
+        "RS-RESIDUAL"
+      ],
       "output": "GX57-ZERO",
       "relation": "conditional",
       "scope": "同一完整乘积与零集 {(0,0)}；所有有限真残差点上锐半阶 EB 系数 1，任意正第一目标/非零小第二目标缺逆像。每个固定 λ>0 的逐步合法完整 J 路径若初值非零必有限步终止，唯一无限路径恒零；残差界与图窗半阶不提供留域。",
@@ -3552,7 +3603,10 @@
     {
       "id": "E180",
       "topic": "解选择",
-      "inputs": ["TAIL", "SS-LOCAL"],
+      "inputs": [
+        "TAIL",
+        "SS-LOCAL"
+      ],
       "output": "SS-TRANSFER",
       "relation": "conditional",
       "scope": "同一单值 T，初值集合全部轨道留在共同 V；V 上输入对距离至多 R 的局部 γ-Hölder、0<γ<1；全部初值和全部 k 共用 Mσ^k 或 M exp(-c₀ν^k) 点尾。有限前缀必须逐步闭合局部尺度；分别给对数–对数和指数根对数上界。完整 J_F 导入另核局部图块与完整纤维一致性。",
@@ -3561,7 +3615,11 @@
     {
       "id": "E181",
       "topic": "解选择",
-      "inputs": ["SSQ-OBJECT", "SSQ-CERT", "SSQ-SWITCH"],
+      "inputs": [
+        "SSQ-OBJECT",
+        "SSQ-CERT",
+        "SSQ-SWITCH"
+      ],
       "output": "SSQ-SELECT",
       "relation": "conditional",
       "scope": "同一 λ=1、完整 ℝ³ 二值半代数 F；全输入的完整 J_F=T 由两支全纤维反演，固定 R₀<1、D>0、同一个 R>0 完成 all-pairs RL、实际输出真 EB、κ≤1/2 与留域；每条非驻定收敛轨道（0<|r₀|<1）的 Q 二次比值 1 或 1/√2，与全部 collar 共用超几何点尾分别成立。驻定轨道的 0/0 不定义此比值。比较 x₀,xε 用固定 0<r₀≤R；极限差有双边 exp(-C√log(1/ε))，排除正阶两点 Hölder。",
@@ -3570,7 +3628,10 @@
     {
       "id": "E182",
       "topic": "解选择",
-      "inputs": ["SSQ-SELECT", "SSQ-OBJECT"],
+      "inputs": [
+        "SSQ-SELECT",
+        "SSQ-OBJECT"
+      ],
       "output": "SSQ-NONSEMI",
       "relation": "conditional",
       "scope": "同一固定正 r₀ 的初值直线切片，半代数有限步 T^k 与极限映射 Π 分开；若 Π 图在原点邻域半代数，则一项非零多项式沿切片恒为零，强迫选择差 O(ε^(1/m))，与根对数双边下界矛盾。只对这一模型的局部半代数性断言。",
@@ -3579,7 +3640,9 @@
     {
       "id": "E183",
       "topic": "解选择",
-      "inputs": ["SSQ-OBJECT"],
+      "inputs": [
+        "SSQ-OBJECT"
+      ],
       "output": "SSQ-CERT",
       "relation": "conditional",
       "scope": "固定完整 F 的全部输入纤维反演给全域单值 J_F；另逐项验 0≤y≤R₀² 图块全部点对的 D-局部半阶 RL、全部实际输出的真全纤维 EB、零锚及一个先固定的 R≤R₀/2 上 κ≤1/2 与留域。不是仅由对象定义自动得证，也不授予所有半径。",
@@ -3588,7 +3651,11 @@
     {
       "id": "E184",
       "topic": "收敛",
-      "inputs": ["SG-OBJECT", "SG-TANGENT", "SG-SIGN"],
+      "inputs": [
+        "SG-OBJECT",
+        "SG-TANGENT",
+        "SG-SIGN"
+      ],
       "output": "SG-GROWTH",
       "relation": "conditional",
       "scope": "有限维 n≥2、同一 λ>0；参数化在 Q 邻域 C¹ 但图包含只要求 Q；同一 Q 上公共接缝、强单调切向、Schur 导数界、两侧相反凸严格增长及 0<r<μR−HT 全部合取，得 U 的输入覆盖，以及切向输入 B_r 内任意所表示图点对的无碰撞与 ω(d) 反射模（表示图点可在 U 外）。向完整 J_λF 的纤维转移则仅限 U，切向球外的表示图点对没有此证书。",
@@ -3597,7 +3664,10 @@
     {
       "id": "E185",
       "topic": "收敛",
-      "inputs": ["SG-GROWTH", "SG-FIBER"],
+      "inputs": [
+        "SG-GROWTH",
+        "SG-FIBER"
+      ],
       "output": "R04",
       "relation": "conditional",
       "scope": "只在开输入领圈 U 内用 G∩X⁻¹(U)=G_rep∩X⁻¹(U) 识别所需图块 J_G；完整 J_λF 还须取 G=gph F 核全部纤维。若要接 R02，另证同一零集的真实输出 EB、最近零点图锚、严格兼容与留域；本边不直接推出轨道收敛。",
@@ -3606,7 +3676,12 @@
     {
       "id": "E186",
       "topic": "收敛",
-      "inputs": ["SG-GROWTH", "SG-POWER", "SG-MODEL", "SG-FIBER"],
+      "inputs": [
+        "SG-GROWTH",
+        "SG-POWER",
+        "SG-MODEL",
+        "SG-FIBER"
+      ],
       "output": "SG-SQRT",
       "relation": "conditional",
       "scope": "此边只针对指定完整平方根原生图 (SS-33)：在 U 逐个反演 ±4y 排尽完整纤维，h±=4t²，另核同修正输入的输出匹配。得到输入直径 D 上半阶有效常数与收缩领圈的最大指数 1/2、渐近锐系数 2；真残差 y≤r_F²/4 由两图值最小化独立证明。一般幂次证书不推出该特定原生图。",
@@ -3615,7 +3690,9 @@
     {
       "id": "E187",
       "topic": "反例",
-      "inputs": ["SG-GROWTH"],
+      "inputs": [
+        "SG-GROWTH"
+      ],
       "output": "SG-FIBER",
       "relation": "limits",
       "scope": "(SS-42) 缺负支相反定向会同输入双图点碰撞；(SS-43) 若删凸性则同支预算失效；(SS-45) 给满足表示图全部导数界却另添完整纤维的点。三种失败机制不同，不能由局部分支规则自动授予全纤维排他。",
@@ -3624,7 +3701,10 @@
     {
       "id": "E188",
       "topic": "例库",
-      "inputs": ["VO-OBJECT", "VAD-OBJECT"],
+      "inputs": [
+        "VO-OBJECT",
+        "VAD-OBJECT"
+      ],
       "output": "VAD-GRAPH",
       "relation": "conditional",
       "scope": "同一实 L² 完整图，以 U f(t)=f(1−t) 酉共轭 V*=UVU；GX-061 的 y(1)=0 逆像、直接图几何和任意消失 gauge 真残差由完整纤维、高频方向逐项核。GX-060/061 是方向观察，不是两个独立等距不变量例型；未核的目录标签/外部归属不随共轭自动结案。",
@@ -3633,7 +3713,11 @@
     {
       "id": "E189",
       "topic": "例库",
-      "inputs": ["VAD-OBJECT", "VAD-GRAPH", "VO-PROX"],
+      "inputs": [
+        "VAD-OBJECT",
+        "VAD-GRAPH",
+        "VO-PROX"
+      ],
       "output": "VAD-PROX",
       "relation": "conditional",
       "scope": "固定同一 λ>0、完整 J_{λV*}=U J_{λV}U 与所有图点对；近端核公式直接反演，酉共轭传递每个固定输入的强收敛和每个有限幂范数 1。输入步残差另以 ae_n 高频序列否定统一消失 gauge EB；不能与原算子真残差或单位球统一收敛混用。",
@@ -3642,7 +3726,9 @@
     {
       "id": "E190",
       "topic": "例库",
-      "inputs": ["PROT-OBJECT"],
+      "inputs": [
+        "PROT-OBJECT"
+      ],
       "output": "PROT-CAYLEY",
       "relation": "conditional",
       "scope": "同一实 R² 完整 Qθ，全 θ∈[−π,π] 与 λ>0；若 Δ>0 则全域完整 J、R 和输入对距 R 的锐 L*=√(N/Δ)R^(1−γ)，无界次线性只有 θ=0,λ=1 的零反射例外。若 Δ=0 则 Q=−I,λ=1 的 J(0)=R²，所有零消失模失败。两个参数分支不能合成单值公式。",
@@ -3651,7 +3737,9 @@
     {
       "id": "E191",
       "topic": "例库",
-      "inputs": ["PROT-OBJECT"],
+      "inputs": [
+        "PROT-OBJECT"
+      ],
       "output": "PROT-CYCLIC",
       "relation": "conditional",
       "scope": "固定同一完整 Qθ 与整数 n≥2；所有 n-循环以离散 Fourier 模逐个对角化，首尾模给 |θ|≤π/n 的必要充分门；该范围的全域图极大单调，故也极大 n-循环单调。外部 Voisei 例号不承重。",
@@ -3660,7 +3748,10 @@
     {
       "id": "E192",
       "topic": "例库",
-      "inputs": ["PROT-CAYLEY", "PROT-CYCLIC"],
+      "inputs": [
+        "PROT-CAYLEY",
+        "PROT-CYCLIC"
+      ],
       "output": "PROT-TWO-ANGLES",
       "relation": "conditional",
       "scope": "只对 θ=π/3 和 π/4 的同族完整图及每个固定 λ>0：分别代入 c=1/2,1/√2；同一逆像条件数 1 而循环阶 3/4，强单调模不同。来源 GX-063 所称循环阶不由强模决定，在这个族内被 μ=c 与 n-循环门反驳；不得外推到所有算子。",
@@ -3669,7 +3760,9 @@
     {
       "id": "E193",
       "topic": "例库",
-      "inputs": ["SB-OBJECT"],
+      "inputs": [
+        "SB-OBJECT"
+      ],
       "output": "SB-GEOMETRY",
       "relation": "conditional",
       "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；外部 BWY 归属未核。",
@@ -3678,7 +3771,10 @@
     {
       "id": "E194",
       "topic": "例库",
-      "inputs": ["SB-OBJECT", "SB-GEOMETRY"],
+      "inputs": [
+        "SB-OBJECT",
+        "SB-GEOMETRY"
+      ],
       "output": "SB-PROX",
       "relation": "conditional",
       "scope": "同一完整 F、任意 λ>0、每个输入的全部法向纤维；(SB8) 内外阈值闭式给满域单值 J 和极大单调，(SB6) 给 R 非扩张、不同内点取等 L=1。全域输入无界且 Jp∈B，故无有限 γ<1 全图常数；C98/C99 的逆像 MR 不从此边获得。",
@@ -3687,7 +3783,9 @@
     {
       "id": "E195",
       "topic": "反例",
-      "inputs": ["FP-OBJECT"],
+      "inputs": [
+        "FP-OBJECT"
+      ],
       "output": "FP-FIBER-V0",
       "relation": "refutes",
       "scope": "C62-v1 只对有限多值纤维的成员要求正概率，却对所有输入断言 A_K={x:Pλf(x)={x}}；f(y)=-y²/2 于 [-1,1]、域外 +∞，P₁f(0)=[-1,1] 且 K(0)=δ₀。主平稳律吸收等价不受影响；修补纤维等式须每个完整纤维有限且逐成员正概率。",
@@ -3696,7 +3794,9 @@
     {
       "id": "E196",
       "topic": "反例",
-      "inputs": ["NA-OBJECT"],
+      "inputs": [
+        "NA-OBJECT"
+      ],
       "output": "NA-COMPOSE-V1",
       "relation": "refutes",
       "scope": "F38 的完整实线关系和指定 J：θ=-1 的 A(r)≤(1/8)r^-1 且端点 gauge 门成立，但更小 r 的 ψ(2K/r) 越出 [0,3)；只反驳 C49-v1 包络范围，不反驳逐点 NA-3 或 C49-v2 正指数版本。",
@@ -3705,11 +3805,35 @@
     {
       "id": "E197",
       "topic": "反例",
-      "inputs": ["NA-OBJECT"],
+      "inputs": [
+        "NA-OBJECT"
+      ],
       "output": "NA-SHARP-V1",
       "relation": "refutes",
       "scope": "F38 同一对象的 θ=0 序列满足同序列三正比值、固定小步与 ψ=o(t)，但 t_n→5/4，B=5/4≠1/λ；只反驳 C50-v1 的 B 断言，乘积公式保留，C50-v2 显式要求 t_n→0。",
       "status": "F38 同序列归一化反例"
+    },
+    {
+      "id": "E198",
+      "topic": "算子空间",
+      "inputs": [
+        "OST-INPUT"
+      ],
+      "output": "OST-RETRACTION",
+      "relation": "conditional",
+      "scope": "C131：同一非空紧度量 K、连续 T/U、每轨有限长度且 V_j 连续、L_j=sup_K V_j→0；全部 x,j 的两条 (OS1) 合取，推出 Fix U=Fix T、全尾 ≤V_n≤L_n 与连续一致极限回缩。不提供 U 族丰富性或保纲性。",
+      "status": "derived-checked；OS-TOWER 自足证明"
+    },
+    {
+      "id": "E199",
+      "topic": "算子空间",
+      "inputs": [
+        "OSF-INPUT"
+      ],
+      "output": "OSF-TRUE-EB",
+      "relation": "conditional",
+      "scope": "C132：同一实赋范 E 的非空紧 K、连续 U:K→K、非空 S=Fix U、λ>0、非降 ψ，以及每个 x∈K 的输出步界；新定义 F_{U,K} 的全部逆纤维紧，u∈U(K) 的真实残差取最小值，J 自然域 K。不转授给既有带域外输入或额外纤维的关系；C131 可提供此 U 的非空 S 但不是本边必要前提。",
+      "status": "derived-checked；OS-FIBER-EB 自足证明"
     }
   ]
 }
