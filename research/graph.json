@@ -272,12 +272,12 @@
     },
     {
       "id": "SEL-EX",
-      "label": "完整半代数二值例与匹配下界",
+      "label": "SS1 §3 几何模型的配对初值来源（待核）",
       "file": "solution_selection.md#sel-ex"
     },
     {
       "id": "SEL-SHARP",
-      "label": "极限选择无正阶两点 Hölder",
+      "label": "几何尾极限模的匹配下界待独立核",
       "file": "solution_selection.md#sel-sharp"
     },
     {
@@ -1579,6 +1579,21 @@
       "id": "SSB-COMPLETE",
       "label": "同一共同轨道窗的完整 PPA 转移 C136",
       "file": "canonical/solution_selection_rates.md#ss-rleb-ball"
+    },
+    {
+      "id": "GC-OBJECT",
+      "label": "完整二支 cap 图与全域唯一近端 C137",
+      "file": "canonical/selection_geometric_cap.md#gc-object"
+    },
+    {
+      "id": "GC-CERT",
+      "label": "跨支全对半阶、真 EB 与固定兼容半径 C137",
+      "file": "canonical/selection_geometric_cap.md#gc-certificates"
+    },
+    {
+      "id": "GC-TAIL",
+      "label": "同一 collar 共同几何尾与两点上界 C137",
+      "file": "canonical/selection_geometric_cap.md#gc-tail"
     }
   ],
   "edges": [
@@ -1955,13 +1970,13 @@
       "id": "E31",
       "topic": "解选择",
       "inputs": [
-        "S01",
+        "GC-TAIL",
         "SEL-EX"
       ],
       "output": "SEL-SHARP",
-      "relation": "conditional",
-      "scope": "完整模型、跨支 RL、真 EB、兼容与首次切换下界",
-      "status": "修订包内部审计"
+      "relation": "open",
+      "scope": "SS1 §3 的同一几何 cap 完整模型、配对初值、首次切换时刻和双边对数–对数界仍待独立重构。C137 只给共同尾和 β=1 上界；另一 Q 二次模型的无正阶 Hölder 已由 E181/C116 单独证明，不能借给本目标。",
+      "status": "open；来源审计不替代 §3 独立下界证明"
     },
     {
       "id": "E32",
@@ -3952,6 +3967,24 @@
       "relation": "conditional",
       "scope": "C136 的整窗充分门：若同一个 W=U_R∩闭球上的每个输入 u 有完整 J_{λF}(u)={J_G(u)}，图块全部轨道、共同尾和选择模成为完整 PPA 结果；只核初始 Bε 不够。仅在全部球初值的实际可达输入上逐纤维一致也足够。整窗等式不由图块 RL、闭图或单值图块自动推出，也不声称逻辑必要。",
       "status": "derived-checked；F(y)={y,-y} 闭完整图的 J_F(0)=R 阻断漏门"
+    },
+    {
+      "id": "E206",
+      "topic": "解选择",
+      "inputs": ["GC-OBJECT"],
+      "output": "GC-CERT",
+      "relation": "conditional",
+      "scope": "C137：同一完整 F 的全部近端纤维反演、正负图支比较与完整最小残差；任意输入对尺度 R>0 给 L_R 的 RL 与系数 1/4 真 EB，另取 0<R<[2(4−2√2)/5]^2 及足够大的 gauge 域才有 κ_R<1。渐近常数不宣称每个有限 R 最优。",
+      "status": "derived-checked；GC-1–6 全图重算"
+    },
+    {
+      "id": "E207",
+      "topic": "解选择",
+      "inputs": ["GC-OBJECT", "GC-CERT", "SS-TRANSFER"],
+      "output": "GC-TAIL",
+      "relation": "conditional",
+      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；显式法向率 1/4 与切向步的共同 M·2^{-k} 点尾，SS-T2 在同一初值家族给 β=1 的上界。未证明此上界锐，不能移植到 SS-Q2 二次模型。",
+      "status": "derived-checked；GC-7–8 与 SS-TRANSFER"
     }
   ]
 }

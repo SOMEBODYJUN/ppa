@@ -17,7 +17,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 \tag{R01}
 \]
 
-证明可在本页重构。置 \(a=x^+-p,\ b=x-x^+\)，则 \(a+b=x-p\)，而同图块的 RL 给 \(\|a-b\|\le Ld^\gamma\)。平行四边形恒等式给 \(2(\|a\|^2+\|b\|^2)\le d^2+L^2d^{2\gamma}\)，且 \(2b=(a+b)-(a-b)\) 给 \(2s\le d+Ld^\gamma\)。最后 \(r_F(x^+)\le s/\lambda\le(R+LR^\gamma)/(2\lambda)\le\bar t\)，选中图值的范数也在 gauge 定义域内；因此用实际输出的真 EB 与 \(\psi\) 单调性得到末式，不假设 \(s/\lambda=r_F(x^+)\)。当 \(d=0\) 时，零锚与同输入唯一强制 \(x^+=x\)。同输入唯一只保证图块内 \(J_{\mathcal G}\) 单值。S19 `lem:solution-comparison` 仅是来源定位。
+证明可在本页重构。置 \(a=x^+-p,\ b=x-x^+\)，则 \(a+b=x-p\)，而同图块的 RL 给 \(\|a-b\|\le Ld^\gamma\)。平行四边形恒等式给 \(2(\|a\|^2+\|b\|^2)\le d^2+L^2d^{2\gamma}\)；反三角不等式给 \(|2s-d|\le\|2b-(a+b)\|=\|b-a\|\le Ld^\gamma\)，特别 \(2s\le d+Ld^\gamma\)。最后 \(r_F(x^+)\le s/\lambda\le(R+LR^\gamma)/(2\lambda)\le\bar t\)，选中图值的范数也在 gauge 定义域内；因此用实际输出的真 EB 与 \(\psi\) 单调性得到末式，不假设 \(s/\lambda=r_F(x^+)\)。当 \(d=0\) 时，零锚与同输入唯一强制 \(x^+=x\)。同输入唯一只保证图块内 \(J_{\mathcal G}\) 单值。S19 `lem:solution-comparison` 仅是来源定位。
 
 <a id="cmp"></a>
 <a id="loc"></a>
