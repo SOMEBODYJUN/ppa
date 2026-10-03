@@ -1,0 +1,6 @@
+// Standalone preview of the same original geometry used on the live routes.
+const fs=require('fs'),v=require('../src/visuals.js');
+let svg='<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920"><rect width="1440" height="920" fill="#07111f"/><style>text{font:14px monospace;fill:#bed0df}.title{font-size:25px;fill:#edf0db}.muted{fill:#7893aa}</style><text x="36" y="48" class="title">COSMOS / ORIGINAL 2.5D PIXEL FLEET</text><text x="36" y="77" class="muted">Raised bridge · armored top deck · deep hull · illuminated cabins · split thrusters</text>';
+[0,1,10,13,17,18].forEach((t,i)=>{const x=36+i%3*470,y=130+Math.floor(i/3)*385;svg+=`<rect x="${x}" y="${y}" width="440" height="355" rx="12" fill="#0b192a" stroke="#20374c"/><text x="${x+20}" y="${y+31}">${String(t+1).padStart(2,'0')} / ${v.shipCatalog[t].name}</text><g transform="translate(${x+238} ${y+151}) scale(5)">${v.ship('preview-'+t,{type:t})}</g><text x="${x+20}" y="${y+266}" class="muted">MAP SIZE / 24 · 48 · 96 px</text>`;[24,48,96].forEach((w,j)=>svg+=`<g transform="translate(${x+[45,142,291][j]} ${y+310}) scale(${w/43})">${v.ship('preview-'+t,{type:t})}</g>`);});
+svg+='<text x="36" y="900" class="muted">Navigation artwork only. Hull and color do not encode theorem status or mathematical importance.</text></svg>';
+fs.writeFileSync(__dirname+'/fleet-detail.svg',svg);

@@ -31,22 +31,43 @@ const hullPaths=[
 'M-15-4H-11V-9H-2V-5H2V-9H11V-4H16V4H11V9H2V5H-2V9H-11V4H-15Z',
 'M-13-9H-7V-6H-2V-3H8V-1H16V1H8V3H-2V6H-7V9H-13V5H-8V2H-14V-2H-8V-5H-13Z'];
 function rect(x,y,w,h,c){return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c}"/>`;}
-function ship(value,options={}){const seed=hash(typeof value==='object'?value.id:value),t=Number.isInteger(options.type)?((options.type%20)+20)%20:seed%20,skin=['#bacbd6','#c8d6b8','#dec6a2','#c0b9db'][Math.floor(seed/20)%4],accent=['#ffc06b','#79e2dd','#e8a0d3','#bde37b'][Math.floor(seed/80)%4];let detail='';
-if([1,9].includes(t)){for(let x=-11;x<5;x+=5)detail+=rect(x,-5,4,10,'#52677b')+rect(x,-5,4,2,accent)+rect(x+1,-1,2,4,skin);}
-else if(t===17){for(const x of [-8,1])detail+=rect(x,-9,3,18,skin)+rect(x,-8,3,4,accent)+rect(x,4,3,4,accent);detail+=rect(-12,-2,24,4,skin);}
-else if(t===10){detail+=rect(-14,-6,8,4,skin)+rect(-14,2,8,4,skin)+rect(-5,-8,5,16,accent)+rect(0,-5,12,10,skin)+rect(2,-3,7,2,'#456483')+rect(2,1,7,2,'#456483');}
-else if(t===18){for(const x of [-10,3])detail+=rect(x,-8,7,16,skin)+rect(x+1,-6,5,3,accent)+rect(x+1,3,5,3,accent);detail+=rect(-13,-2,27,4,'#66849a');}
-else if(t===0){detail+=rect(-12,-8,3,5,accent)+rect(-12,3,3,5,accent)+rect(-9,-5,6,10,skin)+rect(-2,-3,10,6,skin)+rect(0,-2,5,3,accent);}
-else if(t===14){detail+=rect(-15,-8,5,4,accent)+rect(-15,4,5,4,accent)+rect(-10,-4,5,8,skin)+rect(-4,-2,16,4,skin)+rect(0,-1,8,2,'#6ccfdf');}
-else if([2,13].includes(t)){for(let x=-11;x<7;x+=5)detail+=rect(x,-7,3,2,accent)+rect(x,5,3,2,accent);detail+=rect(8,-3,3,6,skin);}
-else if([3,15].includes(t)){detail+=rect(-9,-7,13,2,accent)+rect(-9,5,13,2,skin)+rect(7,-2,7,4,skin);}
-else if(t===4){detail+=rect(8,-9,2,18,accent)+rect(4,-5,2,10,skin)+rect(-11,-2,8,4,skin);}
-else if(t===7){for(const x of [-13,4])for(const y of [-9,3])detail+=rect(x,y,8,6,'#426485')+rect(x+1,y+1,2,4,accent)+rect(x+5,y+1,2,4,accent);detail+=rect(-4,-1,9,2,skin);}
-else if(t===11){detail+=rect(-3,-10,4,6,accent)+rect(-3,4,4,6,accent)+rect(-8,-1,20,2,skin);}
-else {detail+=rect(-9,-2,14,4,skin)+rect(-6,-3,5,1,'#edf0d5')+rect(1,-2,5,2,accent);if([0,10,12,19].includes(t))detail+=rect(-4,-5,3,2,accent)+rect(-4,3,3,2,accent);if([5,6,16].includes(t))detail+=rect(-11,-6,5,2,accent)+rect(-11,4,5,2,accent);if(t===8)detail+=rect(-1,-4,2,8,'#e6e5bc')+rect(-4,-1,8,2,'#e6e5bc');if(t===18)detail+=rect(-6,-6,11,3,accent)+rect(-6,4,11,2,'#647e93');}
-// Deterministic optional fittings extend the base silhouettes without changing role.
-if((seed>>>9)%3===0&&[0,1,8,9,10,12,14,18,19].includes(t))detail+=rect(-7,-8,1,5,'#8aa6b9')+rect(-9,-8,5,1,accent);
-return `<g class="pixel-ship ship-${t}" shape-rendering="crispEdges" transform="scale(1 1.25)"><path d="M-14-2H-19V-1H-24V1H-19V2H-14Z" fill="#5baacb" opacity=".6"/>${rect(-18,-1,5,2,'#b5f1e1')}<path d="${hullPaths[t]}" fill="#4b617a" fill-rule="evenodd" stroke="#24374c" stroke-width="1"/>${detail}${rect(10,-1,3,2,'#edf5d9')}</g>`;}
+// All deck plans are original; stepped outlines and separated light planes make
+// volume readable without gradients, imported sprites, or per-frame randomness.
+function ship(value,options={}){
+const seed=hash(typeof value==='object'?value.id:value),t=Number.isInteger(options.type)?((options.type%20)+20)%20:seed%20;
+const skin=['#bdcbd4','#c6d1b4','#dbc5a5','#bfbad4'][Math.floor(seed/20)%4],accent=['#eea857','#65c9cd','#c993b1','#aac773'][Math.floor(seed/80)%4];
+const ink='#111e30',side='#34465c',shade='#60788c',light='#edf0db';
+const slab=(x,y,w,h,z,color=skin)=>`<g class="ship-module">${rect(x,y+z,w,h,ink)}${rect(x,y+h,w,z,side)}${rect(x+w-1,y+1,1,h+z-1,shade)}${rect(x,y,w,h,color)}${rect(x,y,w,1,light)}${rect(x,y+1,1,h-1,shade)}</g>`;
+const cabin=(x,y,w,h)=>slab(x,y,w,h,2)+rect(x+1,y+1,Math.max(1,w-2),1,'#315a71')+rect(x+1,y+1,Math.max(1,w-3),.5,'#99e4db');
+const cargo=(x,y,w=4,h=5)=>slab(x,y,w,h,2,accent)+rect(x+1,y+1,1,h-1,skin)+rect(x+w-1,y+1,1,h-1,'#805a52');
+const vent=(x,y,w=4)=>rect(x,y,w,3,ink)+rect(x+.5,y+.5,w-1,.5,shade)+rect(x+.5,y+1.5,w-1,.5,shade);
+let detail='',engines=[[-15,-3],[-15,3]];
+if(t===0){detail+=slab(-10,-5,10,9,2)+cabin(0,-3,7,5)+cargo(-13,-9,4,4)+cargo(-13,4,4,4)+vent(-8,-3);engines=[[-15,-7],[-15,7]];}
+if(t===1){detail+=slab(-12,-5,19,10,1);for(let x=-11;x<4;x+=5)detail+=cargo(x,-4,4,7);detail+=cabin(7,-3,6,5);}
+if(t===2){for(let x=-12;x<5;x+=5)detail+=slab(x,-7,4,3,2)+rect(x+1,-6,2,1,accent)+slab(x,4,4,3,2);detail+=cabin(7,-4,5,7)+rect(-11,-2,16,1,'#7199a4');engines=[[-15,-6],[-15,6]];}
+if(t===3||t===15){detail+=slab(-8,-8,12,3,2,accent)+slab(-8,5,12,3,2)+cabin(5,-3,5,5)+vent(-12,-2,3);engines=[[-14,0]];}
+if(t===4){detail+=slab(7,-10,4,20,3)+slab(3,-5,4,10,2,accent)+cabin(-9,-2,7,4)+rect(9,-9,1,18,'#b4ecdc');engines=[[-14,0]];}
+if(t===5||t===13){for(const y of [-8,5])detail+=slab(-13,y,18,3,3)+cabin(5,y,6,3)+vent(-10,y,4);detail+=slab(-9,-4,4,8,1,accent);engines=[[-16,-7],[-16,6]];}
+if(t===6||t===16){detail+=slab(-12,-3,8,6,3)+cabin(-8,-4,4,3)+slab(-2,-3,6,6,1,accent);for(const y of [-8,6])detail+=slab(4,y,9,2,2,accent)+rect(10,y,2,2,light);engines=[[-14,0]];}
+if(t===7){for(const x of [-13,4])for(const y of [-9,3]){detail+=slab(x,y,8,6,1,'#284862');for(let i=1;i<8;i+=2)detail+=rect(x+i,y+1,1,4,'#568cac');detail+=rect(x,y,8,1,accent);}detail+=cabin(-4,-2,9,3);engines=[[-15,0]];}
+if(t===8){detail+=slab(-8,-5,18,10,2)+cabin(4,-4,6,5)+slab(-4,-6,6,7,3,accent)+rect(-2,-5,2,5,light)+rect(-3,-3,4,1,light)+vent(-7,1);}
+if(t===9){detail+=slab(-13,-6,10,12,3);for(const y of [-5,1])detail+=cargo(-12,y,8,4);detail+=cabin(-1,-3,7,5)+slab(8,-3,5,5,2,accent);}
+if(t===10){detail+=slab(-14,-6,9,12,2)+slab(-5,-8,6,16,3,accent)+slab(1,-5,11,10,2)+cabin(4,-4,7,6)+vent(-12,-4,5)+vent(-12,1,5);engines=[[-17,-5],[-17,5]];}
+if(t===11){detail+=slab(-4,-10,6,6,2,accent)+slab(-4,4,6,6,2,accent)+cabin(-7,-3,12,5)+rect(-2,-8,2,2,'#3f627e');engines=[[-16,0]];}
+if(t===12){detail+=slab(-12,-2,17,4,2)+slab(5,-9,5,18,3,accent)+cabin(6,-4,6,7)+vent(-10,-1,5);engines=[[-15,0]];}
+if(t===14){detail+=slab(-14,-7,5,5,2,accent)+slab(-14,3,5,5,2,accent)+slab(-10,-3,10,6,2)+cabin(0,-2,10,3);engines=[[-17,-6],[-17,6]];}
+if(t===17){detail+=slab(-12,-4,23,8,2);for(const x of [-8,1])for(const y of [-9,3])detail+=cargo(x,y,4,6);detail+=cabin(7,-3,5,5);}
+if(t===18){for(const x of [-10,3]){detail+=slab(x,-8,7,16,3)+rect(x+1,-7,5,2,light)+rect(x+1,-4,5,2,accent)+rect(x+1,2,5,2,accent)+rect(x+1,6,5,1,shade);}detail+=cabin(-2,-3,5,5);}
+if(t===19){detail+=slab(-11,-7,5,5,2,accent)+slab(-11,3,5,5,2,accent)+slab(-8,-3,11,6,3)+cabin(3,-2,6,4)+vent(-6,-2,4);engines=[[-15,-6],[-15,6]];}
+let exhaust='',ports='';for(const [x,y] of engines){exhaust+=rect(x-8,y+2,7,2,'#254b70')+rect(x-5,y+1,5,3,'#4795b3')+rect(x-3,y+1,3,2,'#b4f1df');ports+=slab(x,y-1,3,4,2,shade)+rect(x,y,1,3,'#90e3dd');}
+// A sheared top plane sits above a six-pixel vertical hull extrusion. The
+// stepped lower edge, portholes and raised cabins remain visible at 48–96px.
+const hull=hullPaths[t];let walls='';for(let z=6;z>=1;z--)walls+=`<path d="${hull}" transform="translate(0 ${z})" fill="${z===6?ink:z>3?side:shade}" fill-rule="evenodd"/>`;
+// Cabin lights belong to the vertical face, below the deck edge.
+const windowRuns=[[-8,7,4],[-10,6,7],[-11,8,6],[-7,8,4],[7,11,1],[-11,8,5],[5,9,3],[5,10,3],[-2,8,3],[-12,7,3],[-4,10,2],[-4,11,2],[5,10,2],[-11,11,5],[-15,9,2],[-4,12,2],[5,10,3],[1,10,2],[3,9,3],[-12,9,2]][t];
+const [wx,wy,wn]=windowRuns;let windows='';for(let i=0;i<wn;i++)windows+=rect(wx+i*2,wy+2,1,1,i%3===0?'#e1bc70':'#77b6c1');
+return `<g class="pixel-ship ship-${t}" shape-rendering="crispEdges" transform="matrix(1 0 -.28 1 0 -2)">${exhaust}<g class="ship-hull">${walls}${windows}<path d="${hull}" fill="${skin}" fill-rule="evenodd" stroke="${light}" stroke-width=".55"/></g><g class="ship-deck">${detail}${ports}</g></g>`;
+}
 const planetCatalog=['Terran','Ocean','Gas giant','Glacial','Volcanic','Ring world','Shattered','Crystal','Mycelium','City world','Desert','Crater moon'].map((name,id)=>({id,name}));
 const worldColors=[['#174568','#317b88','#75ae80','#d0ddbf'],['#143e74','#267ca8','#60c5cb','#ccede4'],['#674878','#bb7985','#dfab88','#f4d6a4'],['#355583','#6a9aba','#b2dada','#e7f5dc'],['#302b40','#614155','#ef794a','#ffc075'],['#3e4c7b','#7183a8','#b8a1be','#dec8ab'],['#3b4759','#687b84','#afa899','#ddcaaa'],['#353e79','#666fba','#a2bcea','#e1e9e9'],['#244c58','#3c8473','#9ebc77','#e8aec2'],['#293d58','#4d6c83','#88b5b4','#efcb88'],['#765463','#b78571','#e4b78b','#f6dca8'],['#37485b','#667c8c','#a4b8bf','#dcdfcd']];
 // Hand-authored cosmetic identities make the eight familiar solar landmarks distinct.

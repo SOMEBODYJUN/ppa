@@ -9,7 +9,7 @@
 - `src/app.js`：缩放/拖动/搜索/详情/公转控制/沙盒生长/实时图导入。
 - `src/template.html`、`src/style.css`：可再生成页面与响应式面板。
 - `data/anchors.json`：旧 ID 保留的语义锚点，不保存证明状态。
-- `tests/test_engine.js`：12 项结构及数值验证。
+- `tests/test_engine.js`：17 项结构及数值验证。
 - `tests/render_scene.js`、`qa/`：同引擎同美术静态场景渲染（非浏览器）。
 
 ## 像素美术增量与检查
@@ -17,6 +17,10 @@
 2026-10 的这批前端美术由 Astra 重写：太阳系八个主入口各有不同星球外观，中心太阳是像素表面，微小卫星简化；正向航道使用按超边 ID 稳定选型的舰船。`refutes`、`limits`、`open` 不显示正向证明船。`visualBounds` 只用于绘制航道端点和点击范围，**不改变** D3 碰撞半径、公转或数学图身份。详情面板的舰船图鉴仅展示外观。
 
 重建顺序：`python visualization/cosmos/build.py`；`node visualization/cosmos/tests/test_engine.js`；`node visualization/cosmos/tests/render_scene.js`；用 `node visualization/cosmos/art/rasterize.cjs visualization/cosmos/qa/solar-0.svg visualization/cosmos/qa/solar-0.png` 栅格化，另对 `solar-12` 和 `overview` 执行同样命令。已逐图检查太阳系两个时刻及接触表，**仍未在真实浏览器验收 CSS、触控与帧率**。接触表验证可读性，不代表接近商业游戏逐像素制作的终稿。后续可继续增加具有不同主体结构的船型和天体，并在地图实景尺寸和单色轮廓中审查重复形状。
+
+## 星系层与跨域关系增量
+
+主题中心现在由第二个 D3 simulation 缓慢漂移并碰撞避让。鸟瞰拖动 glyph 可移动整组星体、局部锚目标和航道端点；空白背景的透明 SVG 命中层支持全宇宙平移。暂停时自动漂移停止，手动拖动仍可操作。跨域关系从原图端点逐条计算，当前 30 条；点其他星域内任一星体可看该星域的跨域桥，详情另列该节点直接参与的关系。Gaussian 当前无跨域超边，灰虚线仅作导航，不进入数学图。飞船近景改为约 48px、原创 2.5D 像素舰体；[近景对照](art/fleet-detail.png)和[全图鉴](art/contact-sheet.png)已检查。
 
 ## 已核、未核
 
@@ -31,8 +35,9 @@
 3. 打开 `E02`：三输入恰为 D02/COV/D04，输出 R01；E03 三输入恰为 R01/CMP/LOC，输出 R02。检查正文相对路径。
 4. 总览进入 Gaussian 与 Binary：标题、正文和残差身份保持分离。
 5. 搜索最末节点与一条 refutes 边：节点可达，范围与状态完整，反驳船不正向航行。
-6. 单击生长演示、拖节点、退出：无原图污染；重新导入任意有效新增图，位置局部松弛。
-7. 实测动画帧率再决定是否需要 Canvas/WebGL。当前 SVG 规模还未取得真实帧率数据，不以猜测升级渲染器。
+6. 鸟瞰拖动任一星系 glyph，观察成员星体与真实桥线同步移动、释放后与其他星系避碰；再拖动空白处确认全宇宙平移。进入 Markov、Binary、Gaussian，点各自星体分别核跨域桥与直接关系的区分；Gaussian 灰色虚线只作导航。
+7. 单击生长演示、拖节点、退出：无原图污染；重新导入任意有效新增图，位置局部松弛。
+8. 实测动画帧率再决定是否需要 Canvas/WebGL。当前 SVG 规模还未取得真实帧率数据，不以猜测升级渲染器。
 
 ## 数学和视觉边界
 
