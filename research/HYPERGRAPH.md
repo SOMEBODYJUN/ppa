@@ -35,13 +35,16 @@
 | --- | --- | --- | --- |
 | E07 | [LOG · 对数接缝精确门槛](holder_structure.md#log) | limits → [R05 · 一般模 RL + Dini 的点收敛](holder_structure.md#r05) | a≤1 的完整接缝：距离收缩仍无点收敛；**显式反例** |
 | E28 | [COLLIDE · 逐支正则但跨支碰撞](rleb_ppa.md#collide) | limits → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 逐支正则不能替代跨支定向；**S19 collision 反例** |
-| E30 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [POLISH-GAP · 拓扑 Polish 不保指定度量完备](holder_structure.md#polish-gap) | refutes → [STOCH-LIMIT · 随机极限在闭 S 内](holder_structure.md#stoch-limit) | X=(0,2) 通常距离；有限长度而极限在空间外；**本轮显式反例** |
+| E30 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [POLISH-GAP · 拓扑 Polish 不保指定度量完备](holder_structure.md#polish-gap) | refutes → [STOCH-LIMIT-V0 · C12-v0 仅拓扑 Polish 的空间内极限断言](holder_structure.md#stoch-limit-v0) | 仅反驳 C12-v0 把拓扑 Polish 当作给定度量完备的空间内极限断言；X=(0,2) 通常距离，有限长度而极限在空间外。C12-v1 的完备度量假设未受反驳。；**本轮显式反例** |
 | E32 | [F03 · 图块外额外输出反例](solution_selection.md#f03) | refutes → [FULL · 局部与完整 resolvent 一致](solution_selection.md#full) | F(u)={u,-u} 的图块 A1–A4；J_G(0) 单值、J_F(0) 全实线；**显式反例** |
 | E39 | [C-NONAMEN · nice 非 amenable 边界例](cone_markov.md#c-nonamen) | refutes → [C-UNIV · 顶点系统普遍 MSCQ](cone_markov.md#c-univ) | nice 非 amenable 锥的线性满秩冻结系统失 MSCQ；**来源旧锥加本包路径** |
 | E40 | [M-FALSE · 快混合仍 Ψ 假零](cone_markov.md#m-false) | refutes → [FAST-EB · 快混合必有原 Ψ exact-zero](cone_markov.md#fast-eb) | 公平 bit 一步平稳但相关律 Ψ=0、距不变律>0；**Markov 显式模型** |
 | E41 | [M-NOPOWER · exact-zero 快率无正幂 EB](cone_markov.md#m-nopower) | refutes → [POWER-EB · exact-zero + 快率必有正幂 EB](cone_markov.md#power-eb) | 无限紧可数状态 exact-zero 且快率，却无任何局部正幂 EB；不反驳有限状态定理；**Markov 显式模型** |
 | E52 | [Q-ORACLE · 无界域有限确定性总查询](range_finite_data.md#q-oracle) | implies → [Q-NOGLOBAL · 有限 transcript 无全空间认证](range_finite_data.md#q-noglobal) | 两张全局 Hölder 图在有限自适应查询上同 transcript、远端分离；**S23 不可区分反例** |
 | E187 | [SG-GROWTH · 切向球内覆盖、无碰撞与全对模](canonical/signed_schur_growth.md#ss-growth) | limits → [SG-FIBER · 领圈 U 上完整图与表示图同纤维](canonical/signed_schur_growth.md#ss-growth) | (SS-42) 缺负支相反定向会同输入双图点碰撞；(SS-43) 若删凸性则同支预算失效；(SS-45) 给满足表示图全部导数界却另添完整纤维的点。三种失败机制不同，不能由局部分支规则自动授予全纤维排他。；**C117-v2 的反例范围；源 S19 collision 与新全纤维加点检查** |
+| E195 | [FP-OBJECT · 同一目标的全局 prox 与指定选择核](topics/random_markov/proximal_selection_seam.md#ps-objects) | refutes → [FP-FIBER-V0 · C62-v1 有限纤维正选择被误授全部纤维（错误）](../CLAIMS.md#c62-v1) | C62-v1 只对有限多值纤维的成员要求正概率，却对所有输入断言 A_K={x:Pλf(x)={x}}；f(y)=-y²/2 于 [-1,1]、域外 +∞，P₁f(0)=[-1,1] 且 K(0)=δ₀。主平稳律吸收等价不受影响；修补纤维等式须每个完整纤维有限且逐成员正概率。；**F37 逐输入完整纤维反例；旧复合 C62-v1 refuted、C62-v2 条件修补** |
+| E196 | [NA-OBJECT · 非孤立零集的输入与输出最近点家族](canonical/nonisolated_alignment.md#na-object) | refutes → [NA-COMPOSE-V1 · C49-v1 未限制指数的包络求值（错误）](../CLAIMS.md#c49-v1) | F38 的完整实线关系和指定 J：θ=-1 的 A(r)≤(1/8)r^-1 且端点 gauge 门成立，但更小 r 的 ψ(2K/r) 越出 [0,3)；只反驳 C49-v1 包络范围，不反驳逐点 NA-3 或 C49-v2 正指数版本。；**F38 显式定义域反例** |
+| E197 | [NA-OBJECT · 非孤立零集的输入与输出最近点家族](canonical/nonisolated_alignment.md#na-object) | refutes → [NA-SHARP-V1 · C50-v1 固定小步强制 B=1/λ（错误）](../CLAIMS.md#c50-v1) | F38 同一对象的 θ=0 序列满足同序列三正比值、固定小步与 ψ=o(t)，但 t_n→5/4，B=5/4≠1/λ；只反驳 C50-v1 的 B 断言，乘积公式保留，C50-v2 显式要求 t_n→0。；**F38 同序列归一化反例** |
 
 ## 结构
 
@@ -59,7 +62,7 @@
 | E12 | [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) ∧ [RET · 连续极限回缩](holder_structure.md#ret) | limits → [OB-TOPO · 非局部可缩零集的附加收敛假设障碍](holder_structure.md#ob-topo) | 任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立；**条件障碍** |
 | E21 | [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集；**尚未建立的一般桥** |
 | E24 | [M-COND · 二进制守恒边缘、Wν 与条件残差 R](topics/random_markov/conditional_refresh.md#cr-binary-object) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
-| E44 | [M-MOMENT · C126 全有限支撑律的精确矩门](topics/random_markov/moment_recoupling.md#mr-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需目标支持、平稳残差零值和非零输出距离；不否定任意残差。；**derived-checked / MR1 及小质量更新证明** |
+| E44 | [M-MOMENT · C126 全有限支撑律的精确矩门](topics/random_markov/moment_recoupling.md#mr-moment) | limits → [D04 · 真实 EB 与 gauge](foundations.md#d04) | C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需以 R^d 为核与 Wp 母空间、目标支持 S、平稳残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。；**derived-checked / MR1 及小质量更新证明** |
 | E87 | [DC-GAP · 全对 RL 加真 EB 不给输入覆盖](topics/path_dynamics/discrete_coverage.md#dc-gap) | limits → [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | GX-074 反驳 D02∧D04→零点输入球 coverage 的无条件跳跃；COV 在局部 PPA 中仍须独立假设，不能改变目标 S=K。；**本轮紧图反例；非对已有 coverage 定理的反驳** |
 | E94 | [MA-LIMIT · 固定锚与集合收缩的反例边界](canonical/moving_anchor_reflection.md#ma-limit) | limits → [MA-REFLECT · 移动零点锚的渐近反射比](canonical/moving_anchor_reflection.md#ma-reflect) | S=R×{0}、y=(1,0)、w_n=(1/n,1/n)、p_n=y；移动锚缺陷零，但固定 p0=0 相对缺陷→2，且两侧到 S 距离相等。不可升级为固定锚或集合收缩。；**本轮完整图值与距离直接计算** |
 | E97 | [NB-OSC · 振荡分支的锚定/全对分离](canonical/named_branch_local.md#nb-oscillation) | refutes → [OB-NB-ALL · 锚定收缩必有全对线性 RL（错误）](canonical/named_branch_local.md#nb-oscillation) | 完整 R 上 λ=1、T(x)=x[3/10+sin(x^-2)/10]；锚 γ=1,L=3/5、真 EB 2/3、实际距离至多 2/5，却无任意零邻域全对线性 RL；只阻断锚定→同指数全对升级。；**新构造，全部原像残差下界与 Cayley 导数独立计算** |
@@ -84,7 +87,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E14 | [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) ∧ [D02 · 全对 RL 与指定尺度](foundations.md#d02) | conditional → [S01 · 极限解选择的对数模](solution_selection.md#s01) | 共同迭代域、统一几何或超几何尾；D02 给局部 Hölder；**修订包内部审计** |
+| E14 | [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) ∧ [SEL-HOLDER · 同一 T 在共同迭代域的局部 Hölder 单步](canonical/solution_selection_rates.md#ss-transfer) | conditional → [S01 · 极限解选择的对数模](solution_selection.md#s01) | C08 抽象版本：同一 T 的所有相关轨道位于 V，T 在 V 上对输入距离 ≤R 有统一 Hölder 模；同一初值类有统一几何或超几何尾。若从 D02 的图 RL 导入单步模，须另证 T=J_G 在共同迭代域并核同一成对尺度；D02 单独不是此输入。；**C08-v1 derived-checked；规范独立证明 SS-TRANSFER，外部先行性未核** |
 | E15 | [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) ∧ [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) | implies → [S02 · RLEB 极限选择版本](solution_selection.md#s02) | 仅局部 J_G；若要完整 J_F 加 FULL；**修订版** |
 | E16 | [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) ∧ [FULL · 局部与完整 resolvent 一致](solution_selection.md#full) ∧ [TAIL · 共同轨道与统一尾界](solution_selection.md#tail) | conditional → [S02 · RLEB 极限选择版本](solution_selection.md#s02) | 完整 resolvent 的共同轨道区域一致性；**修订版** |
 | E31 | [S01 · 极限解选择的对数模](solution_selection.md#s01) ∧ [SEL-EX · 完整半代数二值例与匹配下界](solution_selection.md#sel-ex) | conditional → [SEL-SHARP · 极限选择无正阶两点 Hölder](solution_selection.md#sel-sharp) | 完整模型、跨支 RL、真 EB、兼容与首次切换下界；**修订包内部审计** |
@@ -127,7 +130,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E29 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [METRIC · 所指定度量完备](holder_structure.md#metric) | implies → [STOCH-LIMIT · 随机极限在闭 S 内](holder_structure.md#stoch-limit) | 给定度量完备、闭 S、不变域；期望收缩与 Dini；**9/19 修补版本** |
+| E29 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [METRIC · 所指定度量完备](holder_structure.md#metric) | implies → [STOCH-LIMIT · C12-v1 给定度量完备的随机极限在闭 S 内](holder_structure.md#stoch-limit) | 给定度量完备、闭 S、不变域；期望收缩与 Dini；**9/19 修补版本** |
 
 ## 值域
 
@@ -155,7 +158,7 @@
 | E56 | [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) ∧ [RP-OBJECT · 有限维不一致二次近端与守恒边缘](canonical/random_proximal.md#rp-object) | implies → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 同一固定 ν、条件运输距离、整个混合核的真实 law-step 残差；双边常数 1±c、有限长度；不能换普通物理步长。；**本轮独立推导；未核外部优先权** |
 | E57 | [RP-BRANCH · 分支残差零集是共同固定点](canonical/random_proximal.md#rp-branch) ∧ [RP-CONTRACTION · 条件 Wasserstein 收缩与不变律分类](canonical/random_proximal.md#rp-contraction) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 分支 firmly nonexpansive 且各有固定点时，逐支推前残差零集是共同固定点支持律；混合不变律可存在而该残差严格正。；**本轮独立推导；未核外部优先权** |
 | E58 | [RP-SCALAR · 标量尖锐性与正物理步长](canonical/random_proximal.md#rp-scalar) | sharpness → [RP-EB · 真实条件 law-step 线性误差界](canonical/random_proximal.md#rp-eb) | 在双分支标量子族，c=a 且一般 EB 上界系数 1/(1-c) 与相对收缩 c^k 同时取等；不声称每个固定矩阵模型最优。；**本轮独立推导；未核外部优先权** |
-| E108 | [FP-OBJECT · 同一目标的全局 prox 与指定选择核](topics/random_markov/proximal_selection_seam.md#ps-objects) | conditional → [FP-ABSORB · 固定目标平稳律的吸收支持](topics/random_markov/proximal_selection_seam.md#ps-absorption) | 同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫\|f\|，不适用于完整非凸次梯度 resolvent 或随机换目标。；**C62 有界 arctan 严格下降证明** |
+| E108 | [FP-OBJECT · 同一目标的全局 prox 与指定选择核](topics/random_markov/proximal_selection_seam.md#ps-objects) | conditional → [FP-ABSORB · 固定目标平稳律的吸收支持](topics/random_markov/proximal_selection_seam.md#ps-absorption) | 同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫\|f\|，不适用于完整非凸次梯度 resolvent 或随机换目标。；**C62-v2 主吸收等价 derived-checked；C62-v1 的附带纤维等式另由 E195 反驳** |
 | E109 | [FP-SEAM · 非乘积 prox 的闭图与核接缝](topics/random_markov/proximal_selection_seam.md#ps-example) ∧ [FP-ABSORB · 固定目标平稳律的吸收支持](topics/random_markov/proximal_selection_seam.md#ps-absorption) | conditional → [FP-NOEB · 完整 W2 邻域的 law-step gauge 障碍](topics/random_markov/proximal_selection_seam.md#ps-no-eb) | 固定二维非乘积 group-ℓ0、λ=1 与 fair tie 核；唯一不变律 δ0，μk=(1−ε)δ0+εδakv 在任意给定完整 W2 邻域中可取固定 ε>0，真实 law-step→0 而到不变律距离→√(2ε)>0。非 Feller 接缝与闭 prox 图并存。；**C63 全图、全部平稳点与显式最优运输重算；V10 仅有限代数** |
 
 ## 例库
@@ -267,9 +270,9 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E88 | [NA-OBJECT · 非孤立零集的输入与输出最近点家族](canonical/nonisolated_alignment.md#na-object) | conditional → [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) | 指定同一 J、S，整个 0<d(x,S)≤r0 家族的 P_S(x) 与 P_S(Jx) 非空；集合间 infimum 可不取到；逐点 r≤a≤r+δ≤3a。；**本轮近似点对三角证明** |
-| E89 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | 同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；包络另需 A(r)≤Kr^θ。只给上指数。；**本轮 |a−λt|≤s 逐点重算** |
+| E89 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-COMPOSE · C49-v2 真 EB 和正指数锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | C49-v2：同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；逐点 NA-3 无幂假设，包络另需 K>0、θ>0、A(r)≤Kr^θ 及端点域门。C49-v1 漏 θ>0 时右端可能未定义（F38）。只给上指数。；**C49-v2 derived-checked；F38 反驳旧包络范围** |
 | E90 | [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [NA-APPROX · 无最近点时的正容差近似锚](canonical/nonisolated_alignment.md#na-approx) | 不需 proximinality；对同一实际输出的 t>0 取 e(t)>0，ψ(t)+e(t)≤κλt、κ<1 和 a_e/((1−κ)λ)<ηψ；只替换最近点存在性，不给输入 coverage。；**本轮近似锚 infimum 证明** |
-| E91 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [NA-COMPOSE · 真 EB 和锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | conditional → [NA-SHARP · 同序列 θq 饱和门](canonical/nonisolated_alignment.md#na-sharp) | 上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。；**本轮同序列乘积与步长渐近** |
+| E91 | [NA-DRIFT · 输出锚与最近点漂移包络](canonical/nonisolated_alignment.md#na-drift) ∧ [NA-COMPOSE · C49-v2 真 EB 和正指数锚模的条件合成](canonical/nonisolated_alignment.md#na-compose) | conditional → [NA-SHARP · C50-v2 同序列 θq 饱和与趋零步长门](canonical/nonisolated_alignment.md#na-sharp) | C50-v2：同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0 才有归一化极限 CB^qA^q；只有另外 t_n→0 与 C49-v2 的 ψ=o(t) 才强制 B=1/λ。θ>0 和正比值会给 t_n→0；θ=0 的旧固定小步读法已由 F38 反驳。；**C50-v2 derived-checked；旧 B 门反例见 F38** |
 
 ## 移动锚
 

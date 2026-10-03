@@ -49,7 +49,7 @@ r^\gamma=c_\gamma\int_0^\infty(1-e^{-tr})t^{-1-\gamma}\,dt,
 \frac{p-\widehat C(p)}{2\lambda}\right):p\in H\right\} \tag{HE5}
 \]
 
-是在**相同** `(λ,L,γ)` 下包含原图的完整图；若 `D≠H`，这是严格扩张。反向若 `D=H`，任一兼容新图点与原图中相同 `p=M_+` 的点比较，输入差为零，全对 RL 迫使 `M_-` 相同，所以无法真扩张。因此固定参数 graph-maximal 当且仅当 `D=H`。
+是在**相同** `(λ,γ,L)` 下包含原图的完整图；若 `D≠H`，这是严格扩张。反向若 `D=H`，任一兼容新图点与原图中相同 `p=M_+` 的点比较，输入差为零，全对 RL 迫使 `M_-` 相同，所以无法真扩张。因此固定参数 graph-maximal 当且仅当 `D=H`。
 
 **逻辑边界**：这只定义 RL 类中的 graph-maximal，不声称单调算子意义的 maximal monotone、完整近端轨道收敛或局部输入 coverage；若原条件只在图块或有限输入窗口成立，不能在未证明全局 (HE1) 时调用全域扩张。
 

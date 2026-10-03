@@ -3,7 +3,7 @@
 <a id="de-object"></a>
 ## DE-OBJECT · 关系只在指定 Minty 域上定义
 
-取 \(0<\alpha<1,\beta>0,0<\delta<1,\lambda=1\)。对 \(x\ne0\) 令
+取 \(0<\alpha<1,\beta>0,0<\delta<1,\lambda=1\)，并定义带符号幂 \(P_\alpha(x)=\operatorname{sign}(x)|x|^\alpha\)（\(P_\alpha(0)=0\)）。对 \(x\ne0\) 令
 \[
 C(x)=P_\alpha(x)[2+\sin(|x|^{-\beta})],\quad C(0)=0,\quad
 J(x)=\tfrac12(x+C(x)),\qquad x\in D=[-\delta,\delta].

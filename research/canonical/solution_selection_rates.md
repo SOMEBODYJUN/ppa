@@ -221,7 +221,7 @@ Cx-Cx'=(\Delta z,\Delta p,\Delta g)
 \|(u-u')-(v-v')\|=\|Cx-Cx'\|.
 \]
 因此 (SS-Q4) 正是该图块上、在输入比较尺度 \(D\) 的
-all-pairs \(\mathrm{RL}(1,1/2,L_{R_0,D})\)。
+all-pairs \(\mathrm{RL}(1,1/2,L_{R_0,D};D)\)。
 
 对所有 \(u=(\xi,\eta,y)\in\operatorname{dom}F\)，**完整最小残差**满足
 \[

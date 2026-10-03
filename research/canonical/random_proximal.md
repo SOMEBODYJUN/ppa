@@ -153,7 +153,7 @@ E_\nu(\mu P^k)=a^k\|h\|_{L^2(\nu)}.
 | RP-BRANCH | 每支 firmly nonexpansive、有固定点、有限二阶矩、正权重 | 分支残差零集等于共同固定点支持律 | 不是混合核不变律的一般表示 |
 | RP-SCALAR | 标量双近端模型、条件平移 | EB 与速率尖锐；物理步长反例 | 一般矩阵常数未宣称锐 |
 
-与 [既有 Markov 模块](../cone_markov.md) 的接口：共用条件距离，但 RP-EB 的残差是整个混合核的 law-step；CM-BINARY/CM-GAUSSIAN 的局部条件更新残差不可静默替换。
+与 [既有 Markov 模块](../cone_markov.md) 的接口：RP-EB 在固定边缘上使用其自身的条件 \(W_2\) 距离；C129 的固定边缘二进制距离 \(\mathsf W_\nu\) 与 C130 的 Gaussian \(W_{2,Q}\) 各自定义，不能仅因都按条件律计算而视为同一度量。RP-EB 的残差是整个混合核的 law-step；条件刷新残差与同步 \(\Psi\) 也不可静默替换。
 与确定性 [RLEB–PPA](../rleb_ppa.md) 暂无已证超边：还缺原生图几何、真实残差和耦合之间的桥。
 
 ## RP-SOURCE · 来源、复核与后续增长

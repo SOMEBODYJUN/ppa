@@ -406,20 +406,36 @@
 - **Definitions / Dependencies / Evidence**：[NA-OBJECT/DRIFT](research/canonical/nonisolated_alignment.md#na-drift) 用任意近似实现两集合间 infimum 的点对证明；derived-checked，从旧 foundations §8.1 重写。非空实际距离趋零时 \(\mathcal A(r)\le Kr^\theta\) 必有 \(\theta\le1\)。
 - **Counterevidence / Objections / Scope / Related Files**：未声称投影集合间最近点对取到；定义本身不保证锚包络有幂界。若投影集合不保证非空，用 NA-APPROX 的另一陈述，不把两种前提混写。
 
-## C49-v1 / NA-COMPOSE · 非孤立零集的条件 gauge 合成
+<a id="c49-v1"></a>
+## C49-v1 / NA-COMPOSE · 旧幂包络的未限制指数版本
+
+- **Status**：`refuted`，只针对旧幂包络推论的 gauge 定义域；逐点 NA-3 的真 EB 合成未被否定。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C48 的实 Hilbert 指定分支、完整真残差与有限非减 \(\psi:[0,\eta_\psi)\to[0,\infty)\) 等 C49-v2 基本前提下，允许任意实 \(\theta\) 且 \(\mathcal A(r)\le Kr^\theta\)，仅检查端点 \((2K/\lambda)r_0^\theta<\eta_\psi\)，便对**每个** \(0<r\le r_0\) 写 \(\psi((2K/\lambda)r^\theta)\) 为输出上界。
+- **Counterevidence / Related Files**：[F38](FAILED_ROUTES.md#f38) 的 \(\theta=-1\) 例满足端点门而右端在更小 r 超出 gauge 定义域。正指数必须是额外假设，见 C49-v2；这不是一般 NA-3 的反例。
+
+<a id="c49-v2"></a>
+## C49-v2 / NA-COMPOSE · 非孤立零集的条件 gauge 合成
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：在 C48 同一全体输入家族上，要求每个实际步 \(t=\|w(x)\|<\eta_\psi\)，输出的真实 EB \(d(Jx,S)\le\psi(r_F(Jx))\)，\(\psi\) 有限非减且 \(\psi(t)=o(t)\)，全部达到的 t 有 \(\psi(t)\le\lambda t/2\)。若 \((2/\lambda)[r_x+\delta(x)]<\eta_\psi\)，则 \(d(Jx,S)\le\psi((2/\lambda)a(x))\le\psi((2/\lambda)[r_x+\delta(x)])\)。若对全部 \(0<r\le r_0\) 有 \(\mathcal A(r)\le Kr^\theta\) 且缩域使 \((2K/\lambda)r_0^\theta<\eta_\psi\)，则输出距离包络至多 \(\psi((2K/\lambda)r^\theta)\)；\(\psi(t)=\rho t^q\) 时为上指数 \(\theta q\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C48 同一全体输入家族上，要求每个实际步 \(t=\|w(x)\|<\eta_\psi\)，输出的真实 EB \(d(Jx,S)\le\psi(r_F(Jx))\)，\(\psi\) 有限非减且 \(\psi(t)=o(t)\)，全部达到的 t 有 \(\psi(t)\le\lambda t/2\)。若 \((2/\lambda)[r_x+\delta(x)]<\eta_\psi\)，则 \(d(Jx,S)\le\psi((2/\lambda)a(x))\le\psi((2/\lambda)[r_x+\delta(x)])\)。若另取 **\(K>0,\theta>0\)**，对全部 \(0<r\le r_0\) 有 \(\mathcal A(r)\le Kr^\theta\) 且缩域使 \((2K/\lambda)r_0^\theta<\eta_\psi\)，则输出距离包络至多 \(\psi((2K/\lambda)r^\theta)\)；\(\psi(t)=\rho t^q\) 时为上指数 \(\theta q\)。
 - **Definitions / Dependencies / Evidence**：[NA-COMPOSE](research/canonical/nonisolated_alignment.md#na-compose) 的 \(|a(x)-\lambda t|\le d(Jx,S)\) 是承重引理；同一实际输出的真 infimum 与 gauge 单调性给结论。状态 derived-checked，旧 §8.2 的近锚界重算。
-- **Counterevidence / Objections / Scope / Related Files**：这是指定 J 的逐点/包络上界，未给全轨道留域、完整 resolvent 任意选择或指数最优。无 proximinality 用 [NA-APPROX](research/canonical/nonisolated_alignment.md#na-approx) 的正容差和额外预算；不得省略。外部先行性未核。
+- **Counterevidence / Objections / Scope / Related Files**：这是指定 J 的逐点/包络上界，未给全轨道留域、完整 resolvent 任意选择或指数最优。旧 C49-v1 在 \(\theta<0\) 时右端越过 gauge 域，见 [F38](FAILED_ROUTES.md#f38)。无 proximinality 用 [NA-APPROX](research/canonical/nonisolated_alignment.md#na-approx) 的正容差和额外预算；不得省略。外部先行性未核。
 
-## C50-v1 / NA-SHARP · 同序列饱和才能得到 \(\theta q\) 见证
+<a id="c50-v1"></a>
+## C50-v1 / NA-SHARP · 旧固定小步推出 \(B=1/\lambda\) 的版本
+
+- **Status**：`refuted`，只针对从固定小步窗口推出归一化常数；同序列三个正比值的乘积恒等式保留。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C48/C49 的指定分支和 \(\psi=o(t)\)、\(\psi(t)\le\lambda t/2\) 的实际步窗下，取 \(r_n\downarrow0\) 且 \(a_n/r_n^\theta\to A>0,t_n/a_n\to B>0,s_n/t_n^q\to C>0\)；不要求 \(t_n\to0\)，仍断言 \(B=1/\lambda\)。
+- **Counterevidence / Related Files**：[F38](FAILED_ROUTES.md#f38) 的 \(\theta=0,t_n\to5/4\) 例给 \(B=5/4\ne1\)（\(\lambda=1\)）。修补版 C50-v2 显式要求步长趋零；乘积极限在旧版中也成立。
+
+<a id="c50-v2"></a>
+## C50-v2 / NA-SHARP · 同序列饱和才能得到 \(\theta q\) 见证
 
 - **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：在 C48 的同一序列 \(x_n\) 上，令 \(r_n=d(x_n,S)\downarrow0,a_n=a(x_n),t_n=\|w(x_n)\|,s_n=d(Jx_n,S)\)。若 \(a_n/r_n^\theta\to A>0,t_n/a_n\to B>0,s_n/t_n^q\to C>0\)，则 \(s_n/r_n^{\theta q}\to CB^qA^q\)；同序列双边 \(\asymp\) 前提给双边阶。在 C49 的小步超线性 EB 下，必有 \(B=1/\lambda\)。
-- **Definitions / Dependencies / Evidence**：[NA-SHARP](research/canonical/nonisolated_alignment.md#na-sharp) 的比值乘积及 NA-COMPOSE 的步长误差 \(o(t_n)\)；derived-checked，从旧 §9.1 重算。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C48 的同一序列 \(x_n\) 上，令 \(r_n=d(x_n,S)\downarrow0,a_n=a(x_n),t_n=\|w(x_n)\|,s_n=d(Jx_n,S)\)。若 \(a_n/r_n^\theta\to A>0,t_n/a_n\to B>0,s_n/t_n^q\to C>0\)，则 \(s_n/r_n^{\theta q}\to CB^qA^q\)；同序列双边 \(\asymp\) 前提给双边阶。在 C49-v2 的小步超线性 EB **且 \(t_n\to0\)** 下，必有 \(B=1/\lambda\)；若 \(\theta>0\) 且上述正比值极限成立，步长趋零自动成立。
+- **Definitions / Dependencies / Evidence**：[NA-SHARP](research/canonical/nonisolated_alignment.md#na-sharp) 的比值乘积及 C49-v2/NA-COMPOSE 在 \(t_n\to0\) 下的步长误差 \(o(t_n)\)；derived-checked，从旧 §9.1 重算。
 - **Counterevidence / Objections / Scope / Related Files**：分别在不同序列取得两个最坏指数不足以给 \(\theta q\) 的锐性；C49 的上界不自动提供此序列或正 Q 因子。GX-071 只是一个具体可达构造，不代表普适必要性。
 
 ## C51-v1 / MA-REFLECT · 输出近锚的渐近反射
@@ -510,13 +526,21 @@
 - **Definitions / Dependencies / Evidence**：[DR-TRANS](research/topics/examples/dr_tangency_transversality.md#dr-transverse) 的平面反射复合和奇异值恒等式；状态 `derived-checked`。来源为同一 9/01 ZIP GX-070，不将它和 C60 当作同一算子的改参。
 - **Counterevidence / Objections / Scope**：法锥和 \(N_C+N_D\) 的定义域和残差不同；横截构造不能给任意两集合的普遍模。外部先行性未核。
 
-## C62-v1 / PS-ABSORPTION · 固定全局近端的平稳律吸收
+<a id="c62-v1"></a>
+## C62-v1 / PS-FIBER-IDENTITY · 只核有限纤维的旧推论
+
+- **Status**：`refuted`；这是旧 C62 复合陈述中漏量词的纤维等式，不反驳平稳律吸收主定理。
+- **Exact Statement / Objects / Domain / Quantifiers**：在下列 C62-v2 的同一有限维、固定 \(\lambda>0\)、proper Borel \(f\) 与支持完整全局近端纤维的 Borel 核条件下，仅要求“每个**有限多值** \(P_\lambda f(x)\) 的不同成员均获正选择概率”，便断言对**所有** \(x\in\operatorname{dom}f\)，\(A_K=\{x:P_\lambda f(x)=\{x\}\}\)。无穷纤维未受这一前提约束。
+- **Counterevidence / Related Files**：[F37](FAILED_ROUTES.md#f37) 和 [PS-ABSORPTION](research/topics/random_markov/proximal_selection_seam.md#ps-absorption) 的 \(f(y)=-y^2/2\) 紧区间例在 \(x=0\) 有无穷纤维而 \(K(0)=\delta_0\)。主等价 \(\pi K=\pi\iff\pi(A_K)=1\) 未失败；修补版另立 C62-v2。
+
+<a id="c62-v2"></a>
+## C62-v2 / PS-ABSORPTION · 固定全局近端的平稳律吸收
 
 - **Status**：`derived-checked`，证据强度限于该条所列独立推导；适用范围与未闭义务见下。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^n\)、\(\lambda>0\)、同一个 proper Borel \(f:\mathbb R^n\to(-\infty,+\infty]\)。对每个 \(x\in\operatorname{dom}f\)，全局最小解集合 \(P_\lambda f(x)\ne\varnothing\)；Borel 核 \(K(x,P_\lambda f(x))=1\)。令 \(A_K=\{x\in\operatorname{dom}f:K(x,\{x\})=1\}\)。对 **每个** 支撑于 \(\operatorname{dom}f\) 的概率律 \(\pi\)，\(\pi K=\pi\) 当且仅当 \(\pi(A_K)=1\)，不要求 \(f\) 可积或二阶矩。若有限多值集合的各最小解均获正选择概率，则 \(A_K=\{x:P_\lambda f(x)=\{x\}\}\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^n\)、\(\lambda>0\)、同一个 proper Borel \(f:\mathbb R^n\to(-\infty,+\infty]\)。对每个 \(x\in\operatorname{dom}f\)，全局最小解集合 \(P_\lambda f(x)\ne\varnothing\)；Borel 核 \(K(x,P_\lambda f(x))=1\)。令 \(A_K=\{x\in\operatorname{dom}f:K(x,\{x\})=1\}\)。对 **每个** 支撑于 \(\operatorname{dom}f\) 的概率律 \(\pi\)，\(\pi K=\pi\) 当且仅当 \(\pi(A_K)=1\)，不要求 \(f\) 可积或二阶矩。附加**每个**完整纤维 \(P_\lambda f(x)\) 均有限且其每个成员获正选择概率，才有 \(A_K=\{x:P_\lambda f(x)=\{x\}\}\)。
 - **Definitions / Dependencies / Evidence**：[PS-ABSORPTION](research/topics/random_markov/proximal_selection_seam.md#ps-absorption) 以同律下有界严格递增 \(\arctan f\) 避免 \(\int|f|\) 的隐藏门，再用平方罚项的严格下降。`derived-checked`；来源 9/14 非乘积近端稿 §3，已重构而非继承标题。
-- **Counterevidence / Objections / Scope**：仅对同一个目标的**全局**近端最小解和域内平稳律；非凸 limiting-subdifferential 的完整 resolvent 可含非最小驻点，随机切换目标亦另需证明。外部新颖性未核。
+- **Counterevidence / Objections / Scope**：仅对同一个目标的**全局**近端最小解和域内平稳律；非凸 limiting-subdifferential 的完整 resolvent 可含非最小驻点，随机切换目标亦另需证明。旧 C62-v1 只核有限纤维即断言完整吸收点身份，已由 [F37](FAILED_ROUTES.md#f37) 反驳；主吸收等价保留。外部新颖性未核。
 
 ## C63-v1 / PS-SEAM · 闭近端图与非不变极限的 law-step 障碍
 
@@ -1024,7 +1048,7 @@
 ## C126-v1 / MR-MOMENT · 全有限支撑律的精确矩门
 
 - **Status**：`derived-checked`，本页的两点必要性与矩单调性充分性已重构；外部先行性未核。
-- **Exact Statement / Objects / Domain / Quantifiers**：在可测状态集 \(E\) 上取有限非负函数 \(e,c\)、\(1\le p,r<\infty,q>0,0\le K<\infty\)，存在共同零点 \(s\) 和 \(e(a),c(a)>0\) 的 excursion。对**每个有限支撑概率律** \(\mu\)，\(\|e\|_{L^p(\mu)}\le K\|c\|_{L^r(\mu)}^q\) 当且仅当对**每个** \(x\in E\) 有 \(e(x)\le Kc(x)^q\) 且 \(pq\le r\)。Markov 推论另外固定闭目标支持 \(S\)、支持于 \(S\) 的不变律 \(\pi\)、\(\pi P=\pi\)、在 \(\pi\) 上消失的状态残差及 \(P(a,\cdot)\) 远离 \(S\) 的正 \(p\) 阶矩；若在 \(\pi\) 的**整个** \(W_p\) 邻域有输出到不变律集的 \(q\) 阶 \(L^r\) 残差界，则 \(pq\le r\) 必要。
+- **Exact Statement / Objects / Domain / Quantifiers**：在可测状态集 \(E\) 上取有限非负函数 \(e,c\)、\(1\le p,r<\infty,q>0,0\le K<\infty\)，存在共同零点 \(s\) 和 \(e(a),c(a)>0\) 的 excursion。对**每个有限支撑概率律** \(\mu\)，\(\|e\|_{L^p(\mu)}\le K\|c\|_{L^r(\mu)}^q\) 当且仅当对**每个** \(x\in E\) 有 \(e(x)\le Kc(x)^q\) 且 \(pq\le r\)。Markov 推论另以 \(\mathbb R^d\) 为核和 \(W_p\) 的母空间，固定闭目标支持 \(S\subset\mathbb R^d\)、支持于 \(S\) 的不变律 \(\pi\)、\(\pi P=\pi\)、在 \(\pi\) 上消失的状态残差及某 \(a\in\mathbb R^d\) 的 \(P(a,\cdot)\) 远离 \(S\) 的正 \(p\) 阶矩；若在 \(\mathscr P_p(\mathbb R^d)\) 中 \(\pi\) 的**整个** \(W_p\) 邻域（含 \((1-\varepsilon)\pi+\varepsilon\delta_a\)）有输出到不变律集的 \(q\) 阶 \(L^r\) 残差界，则 \(pq\le r\) 必要。仅在 \(\mathscr P_p(S)\) 相对邻域调用须另有 \(a\in S\)。
 - **Definitions / Dependencies / Evidence**：[MR-MOMENT](research/topics/random_markov/moment_recoupling.md#mr-moment) 给 Dirac、两点小质量律、矩单调性和 Markov 更新混合的证明。原 CM-M Proposition M 是线索；计算或近端算法身份不是证明前提。
 - **Counterevidence / Scope**：没有共同零点或正输出 excursion 时，必要性不由此证明；在 law-space 中换成不在平稳律消失的物理残差也改变命题。\(r\ge pq\) 只消除这项矩障碍，不自动构造原生合法耦合或点态证书。
 
@@ -1048,7 +1072,7 @@
 ## C129-v1 / CR-BINARY · 守恒边缘二进制刷新残差的锐界
 
 - **Status**：`derived-checked`；条件耦合、五项等价、退化端点与最佳系数已从规范证明独立逆向核验，外部先行性未核。
-- **Exact Statement / Objects / Domain / Quantifiers**：固定标准 Borel \(U\) 与概率边缘 \(\nu\)、有限 \(X=\{0,1\}^m\)、可测 \(b_i(u)\in(0,1),p_i(u)>0\) 且 \(\sum_i p_i(u)\le1\) 几乎处处。对**全部**固定边缘律 \(\mathscr M_\nu\) 使用仅在同一 \(u\) 内运输的 \(\mathsf W_\nu\)、条件重抽样残差 \(\mathcal R\) 和目标 \(\pi_\nu=\nu\otimes\bigotimes_i\operatorname{Bern}(b_i(u))\)。\(a_*={\rm ess\,inf}_u\min_i p_i(u)\)。精确零集为 \(\{\pi_\nu\}\)，它是此律类唯一不变律。\(a_*>0\) 当且仅当该整个律类有统一线性 \(\mathsf W_\nu/\mathcal R\) EB，当且仅当对目标距离有统一一步严格收缩、某固定块严格收缩或统一相对几何率。最佳 EB 系数 \(a_*^{-1/2}\)，每个固定 \(k\ge1\) 的最佳到目标因子 \((1-a_*)^{k/2}\)，在任意正半径完整目标球仍锐。若 \(a_*=0\)，每条律仍趋于目标，但每个固定 \(k\) 最坏因子为 1。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定标准 Borel \(U\) 与概率边缘 \(\nu\)、有限 \(X=\{0,1\}^m\)、可测 \(b_i(u)\in(0,1),p_i(u)>0\) 且 \(\sum_i p_i(u)\le1\) 几乎处处。对**全部**固定边缘律 \(\mathscr M_\nu\) 使用仅在同一 \(u\) 内运输的 \(\mathsf W_\nu\)、条件重抽样残差 \(\mathcal R\) 和目标 \(\pi_\nu(du,dx)=\nu(du)\beta_u(dx)\)，其中 \(\beta_u=\bigotimes_i\operatorname{Bern}(b_i(u))\)。\(a_*={\rm ess\,inf}_u\min_i p_i(u)\)。精确零集为 \(\{\pi_\nu\}\)，它是此律类唯一不变律。\(a_*>0\) 当且仅当该整个律类有统一线性 \(\mathsf W_\nu/\mathcal R\) EB，当且仅当对目标距离有统一一步严格收缩、某固定块严格收缩或统一相对几何率。最佳 EB 系数 \(a_*^{-1/2}\)，每个固定 \(k\ge1\) 的最佳到目标因子 \((1-a_*)^{k/2}\)，在任意正半径完整目标球仍锐。若 \(a_*=0\)，每条律仍趋于目标，但每个固定 \(k\) 最坏因子为 1。
 - **Definitions / Dependencies / Evidence**：[CR1–CR5](research/topics/random_markov/conditional_refresh.md#cr-binary-object) 固定对象、条件 Bernoulli 顺序耦合、条件 Jensen、同步更新及单坐标扰动见证；来源 CM-M Theorem 6 有证明文本，本页不以其 PASS 标签为证据。
 - **Counterevidence / Objections / Scope**：\(\mathcal R\ne\Psi\)；结论不赋予不同随机表示、普通联合 \(W_2\) 的最佳必要模，或任意两律间的 Lipschitz 因子。审查限固定边缘的有限 bit 对象，未核外部文献优先性。
 

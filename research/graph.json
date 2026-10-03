@@ -141,6 +141,11 @@
       "file": "solution_selection.md#tail"
     },
     {
+      "id": "SEL-HOLDER",
+      "label": "同一 T 在共同迭代域的局部 Hölder 单步",
+      "file": "canonical/solution_selection_rates.md#ss-transfer"
+    },
+    {
       "id": "S01",
       "label": "极限解选择的对数模",
       "file": "solution_selection.md#s01"
@@ -252,8 +257,13 @@
     },
     {
       "id": "STOCH-LIMIT",
-      "label": "随机极限在闭 S 内",
+      "label": "C12-v1 给定度量完备的随机极限在闭 S 内",
       "file": "holder_structure.md#stoch-limit"
+    },
+    {
+      "id": "STOCH-LIMIT-V0",
+      "label": "C12-v0 仅拓扑 Polish 的空间内极限断言",
+      "file": "holder_structure.md#stoch-limit-v0"
     },
     {
       "id": "POLISH-GAP",
@@ -742,8 +752,13 @@
     },
     {
       "id": "NA-COMPOSE",
-      "label": "真 EB 和锚模的条件合成",
+      "label": "C49-v2 真 EB 和正指数锚模的条件合成",
       "file": "canonical/nonisolated_alignment.md#na-compose"
+    },
+    {
+      "id": "NA-COMPOSE-V1",
+      "label": "C49-v1 未限制指数的包络求值（错误）",
+      "file": "../CLAIMS.md#c49-v1"
     },
     {
       "id": "NA-APPROX",
@@ -752,8 +767,13 @@
     },
     {
       "id": "NA-SHARP",
-      "label": "同序列 θq 饱和门",
+      "label": "C50-v2 同序列 θq 饱和与趋零步长门",
       "file": "canonical/nonisolated_alignment.md#na-sharp"
+    },
+    {
+      "id": "NA-SHARP-V1",
+      "label": "C50-v1 固定小步强制 B=1/λ（错误）",
+      "file": "../CLAIMS.md#c50-v1"
     },
     {
       "id": "MA-OBJECT",
@@ -879,6 +899,11 @@
       "id": "FP-ABSORB",
       "label": "固定目标平稳律的吸收支持",
       "file": "topics/random_markov/proximal_selection_seam.md#ps-absorption"
+    },
+    {
+      "id": "FP-FIBER-V0",
+      "label": "C62-v1 有限纤维正选择被误授全部纤维（错误）",
+      "file": "../CLAIMS.md#c62-v1"
     },
     {
       "id": "FP-SEAM",
@@ -1651,12 +1676,12 @@
       "topic": "解选择",
       "inputs": [
         "TAIL",
-        "D02"
+        "SEL-HOLDER"
       ],
       "output": "S01",
       "relation": "conditional",
-      "scope": "共同迭代域、统一几何或超几何尾；D02 给局部 Hölder",
-      "status": "修订包内部审计"
+      "scope": "C08 抽象版本：同一 T 的所有相关轨道位于 V，T 在 V 上对输入距离 ≤R 有统一 Hölder 模；同一初值类有统一几何或超几何尾。若从 D02 的图 RL 导入单步模，须另证 T=J_G 在共同迭代域并核同一成对尺度；D02 单独不是此输入。",
+      "status": "C08-v1 derived-checked；规范独立证明 SS-TRANSFER，外部先行性未核"
     },
     {
       "id": "E15",
@@ -1844,9 +1869,9 @@
         "STOCH",
         "POLISH-GAP"
       ],
-      "output": "STOCH-LIMIT",
+      "output": "STOCH-LIMIT-V0",
       "relation": "refutes",
-      "scope": "X=(0,2) 通常距离；有限长度而极限在空间外",
+      "scope": "仅反驳 C12-v0 把拓扑 Polish 当作给定度量完备的空间内极限断言；X=(0,2) 通常距离，有限长度而极限在空间外。C12-v1 的完备度量假设未受反驳。",
       "status": "本轮显式反例"
     },
     {
@@ -2006,7 +2031,7 @@
       ],
       "output": "D04",
       "relation": "limits",
-      "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需目标支持、平稳残差零值和非零输出距离；不否定任意残差。",
+      "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需以 R^d 为核与 Wp 母空间、目标支持 S、平稳残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。",
       "status": "derived-checked / MR1 及小质量更新证明"
     },
     {
@@ -2523,8 +2548,8 @@
       ],
       "output": "NA-COMPOSE",
       "relation": "conditional",
-      "scope": "同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；包络另需 A(r)≤Kr^θ。只给上指数。",
-      "status": "本轮 |a−λt|≤s 逐点重算"
+      "scope": "C49-v2：同一指定步、全家族实际输出的真 EB、ψ=o(id) 非减、全部 attained t 上 ψ(t)≤λt/2、gauge 参数在定义域；逐点 NA-3 无幂假设，包络另需 K>0、θ>0、A(r)≤Kr^θ 及端点域门。C49-v1 漏 θ>0 时右端可能未定义（F38）。只给上指数。",
+      "status": "C49-v2 derived-checked；F38 反驳旧包络范围"
     },
     {
       "id": "E90",
@@ -2546,8 +2571,8 @@
       ],
       "output": "NA-SHARP",
       "relation": "conditional",
-      "scope": "上指数 θq 的下界需同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0；归一化极限 CB^qA^q；超线性 EB 还强制 B=1/λ。",
-      "status": "本轮同序列乘积与步长渐近"
+      "scope": "C50-v2：同一 x_n 的 a_n/r_n^θ→A>0、t_n/a_n→B>0、s_n/t_n^q→C>0 才有归一化极限 CB^qA^q；只有另外 t_n→0 与 C49-v2 的 ψ=o(t) 才强制 B=1/λ。θ>0 和正比值会给 t_n→0；θ=0 的旧固定小步读法已由 F38 反驳。",
+      "status": "C50-v2 derived-checked；旧 B 门反例见 F38"
     },
     {
       "id": "E92",
@@ -2737,7 +2762,7 @@
       "output": "FP-ABSORB",
       "relation": "conditional",
       "scope": "同一个 proper Borel f 的全局 proximal 最小解、每个域内输入有非空解且 K 只选该集合；对每个支撑于 dom f 的平稳概率律 π，πK=π iff π(A_K)=1。无需 ∫|f|，不适用于完整非凸次梯度 resolvent 或随机换目标。",
-      "status": "C62 有界 arctan 严格下降证明"
+      "status": "C62-v2 主吸收等价 derived-checked；C62-v1 的附带纤维等式另由 E195 反驳"
     },
     {
       "id": "E109",
@@ -3658,6 +3683,33 @@
       "relation": "conditional",
       "scope": "同一完整 F、任意 λ>0、每个输入的全部法向纤维；(SB8) 内外阈值闭式给满域单值 J 和极大单调，(SB6) 给 R 非扩张、不同内点取等 L=1。全域输入无界且 Jp∈B，故无有限 γ<1 全图常数；C98/C99 的逆像 MR 不从此边获得。",
       "status": "C125-v1 完整反演、极大性与全对锐模独立重算"
+    },
+    {
+      "id": "E195",
+      "topic": "反例",
+      "inputs": ["FP-OBJECT"],
+      "output": "FP-FIBER-V0",
+      "relation": "refutes",
+      "scope": "C62-v1 只对有限多值纤维的成员要求正概率，却对所有输入断言 A_K={x:Pλf(x)={x}}；f(y)=-y²/2 于 [-1,1]、域外 +∞，P₁f(0)=[-1,1] 且 K(0)=δ₀。主平稳律吸收等价不受影响；修补纤维等式须每个完整纤维有限且逐成员正概率。",
+      "status": "F37 逐输入完整纤维反例；旧复合 C62-v1 refuted、C62-v2 条件修补"
+    },
+    {
+      "id": "E196",
+      "topic": "反例",
+      "inputs": ["NA-OBJECT"],
+      "output": "NA-COMPOSE-V1",
+      "relation": "refutes",
+      "scope": "F38 的完整实线关系和指定 J：θ=-1 的 A(r)≤(1/8)r^-1 且端点 gauge 门成立，但更小 r 的 ψ(2K/r) 越出 [0,3)；只反驳 C49-v1 包络范围，不反驳逐点 NA-3 或 C49-v2 正指数版本。",
+      "status": "F38 显式定义域反例"
+    },
+    {
+      "id": "E197",
+      "topic": "反例",
+      "inputs": ["NA-OBJECT"],
+      "output": "NA-SHARP-V1",
+      "relation": "refutes",
+      "scope": "F38 同一对象的 θ=0 序列满足同序列三正比值、固定小步与 ψ=o(t)，但 t_n→5/4，B=5/4≠1/λ；只反驳 C50-v1 的 B 断言，乘积公式保留，C50-v2 显式要求 t_n→0。",
+      "status": "F38 同序列归一化反例"
     }
   ]
 }

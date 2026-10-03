@@ -134,9 +134,6 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 **跨主线关系**：H03 可实现任意非空紧零集，包括 Cantor 型集合；H05 的收敛假设则迫使零集局部可缩。两者并不矛盾：在这类非局部可缩零点附近，H04 的整套附加假设不能全部成立。地图应将此标为“合取假设的拓扑限制”，不能标成 H03 被 H05 否定。
 
 <a id="stoch"></a>
-<a id="metric"></a>
-<a id="stoch-limit"></a>
-<a id="polish-gap"></a>
 ## H06 · 随机推论的给定度量缺口及修补
 
 S19 `thm:stochastic-rleb`，502–554 行，令适应过程 \(X_k\) 取值于指定度量空间 \((\mathsf X,d)\)，\(D_k=d(X_k,S)\)、\(s_k=d(X_{k+1},X_k)\)。假设路径留在 \(0\le D_k\le R\) 的不变域，且
@@ -148,7 +145,9 @@ s_k\le\tfrac12[D_k+\omega(D_k)],\qquad
 
 稿内用截断阈值 \(R\kappa^{k/2}\) 与 Markov 不等式证明 \(\sum_k\mathbb E\omega(D_k)<\infty\)，再由 Tonelli 得几乎处处有限长度。该计算不要求 \(\omega\) 凹，已核对。
 
-**缺口**：第 504 行仅写度量空间“Polish”，第 550 行直接用完备性。若 Polish 仅指拓扑可完备，不保证所指定的度量完备，则极限存在结论错误。
+<a id="polish-gap"></a>
+<a id="stoch-limit-v0"></a>
+**C12-v0 的缺口**：第 504 行仅写度量空间“Polish”，第 550 行直接用完备性。若 Polish 仅指拓扑可完备，不保证所指定的度量完备，则“极限在空间内的闭集 S”这一结论错误；有限长度部分不受此反例否定。
 
 **独立反例**：取 \(\mathsf X=(0,2)\) 配通常距离，\(S=\{2^{-n}:n\ge1\}\) 在该空间中闭；确定性过程
 
@@ -166,7 +165,9 @@ s_k=2^{-(k+3)}+3\cdot4^{-(k+3)}
 
 取 Dini 模 \(\omega(r)=4\sqrt r\)、\(R=1/16\)；所有显示的路径条件成立，\(\mathsf X\) 拓扑 Polish，但 \(X_k\to0\notin\mathsf X\)。有限长度仍成立，空间内收敛结论失败。
 
-**规范修补版本**：明确要求“给定度量 \(d_{\mathsf X}\) 完备”，可写 complete separable metric space，再用 \(S\) 闭得到极限在 \(S\)。本页将原稿标为待修条件，将修补版标为本轮推导；不静默改写原文。S19 的确定性 `prop:complete-metric-transfer`（404–435 行）已经明确要求 complete，不受此措辞问题影响。
+<a id="metric"></a>
+<a id="stoch-limit"></a>
+**C12-v1 规范修补版本**：明确要求“给定度量 \(d_{\mathsf X}\) 完备”，可写 complete separable metric space，再用 \(S\) 闭得到极限在 \(S\)。本页将原稿标为待修条件，将修补版标为本轮推导；不静默改写原文。S19 的确定性 `prop:complete-metric-transfer`（404–435 行）已经明确要求 complete，不受此措辞问题影响。
 
 <a id="sample"></a>
 <a id="window"></a>
