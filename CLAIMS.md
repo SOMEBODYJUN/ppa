@@ -32,16 +32,16 @@
 - **Status**：`candidate`。
 
 - **Exact Statement / Objects / Domain**：C01 的实 Hilbert、非空全图全尺度 RL 假设。存在**一个**强单调双 Lipschitz homeomorphism \(A:H\to H\)，对**每个** \((x,v)\in\operatorname{gph}F\) 有 \(\|v-A(x)\|\le R/(\sqrt2\lambda)\)、\(\|x-A^{-1}(v)\|\le R/\sqrt2\)，\(R=L^{1/(1-\gamma)}\)。稿内还给 \(0<\sigma<1\) 的交叉估计与显式 Lipschitz/强单调常数，\(\sigma=\sqrt\gamma\) 取到所列半径，且因子 \(1/\sqrt2\) 是任意维数统一意义下最优；指定锚点版本改为另一问题、最优因子 1。
-- **Dependencies / Evidence**：[9/23 TeX `thm:shadow`, `thm:sharpness`, `lem:crosslift`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 的 quadratic excess、orthogonal lifting、Banach contraction。匹配 PDF 21 页。
-- **Objections / Status / Scope**：`candidate`：有证明的研究稿，尚待独立数学深审。全图 all-pairs 条件与 C02 的局部条件不同；不据此断言每个精确逆分支稳定，也不据此确定新颖性。
+- **Dependencies / Evidence**：[9/23 TeX `thm:shadow`, `thm:sharpness`, `lem:crosslift`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 的 quadratic excess、orthogonal lifting、Banach contraction。匹配 PDF 21 页。 [H02 的规范证明梗概与局部独立核对](research/holder_structure.md#h02)已复算标量极值、提升距离、两次收缩及所列常数；[HE-EXTENSION](research/canonical/holder_extension.md#he-extension)另核同常数扩张的一手适用门。
+- **Objections / Status / Scope**：`candidate`：上述步骤已有局部独立重算，但整个 simultaneous shadow 与统一最优性仍未按完整证明链完成独立验收；不能把局部计算核对当作整条定理升级。全图 all-pairs 条件与 C02 的局部条件不同；不据此断言每个精确逆分支稳定，也不据此确定新颖性。
 
 ## C04 · 有限维完整纤维分类（9/23 候选）
 
 - **Status**：`candidate`。
 
 - **Exact Statement / Objects / Domain**：固定 \(n\ge1\)、\(\lambda,L>0\)、\(0<\gamma<1\)，取 \(\mathbb R^n\) 上**固定这些参数**图极大的 RL 关系。集合 \(K\) 能作为某个这类关系的完整 \(F^{-1}(0)\)，当且仅当它非空、紧、\(\operatorname{diam}K\le R=L^{1/(1-\gamma)}\)；正向 \(F(0)\) 对应阈值 \(R/\lambda\)。量词是“每一个这样的 \(K\) 都存在某个 \(F\)”以及“每个这类 \(F\) 的纤维必要满足条件”，并非固定 \(F\) 可任意变换纤维。
-- **Dependencies / Evidence**：C01、同常数的 Hölder Hilbert 扩张、有限维 proper map/degree 得全域纤维非空紧、`thm:fixedset` 的精确不动点实现；[9/23 TeX `thm:fibers`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)。
-- **Objections / Status / Scope**：`candidate`：有稿内证明；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。扩张和 fixed-set 的适用条件是独立审查重点。
+- **Dependencies / Evidence**：C01、同常数的 Hölder Hilbert 扩张、有限维 proper map/degree 得全域纤维非空紧、`thm:fixedset` 的精确不动点实现；[9/23 TeX `thm:fibers`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)。 [H03](research/holder_structure.md#h03)已经局部复算固定点构造的凸包余量、bump 正性和无额外不动点；[HE-EXTENSION](research/canonical/holder_extension.md#he-extension)另核扩张适用门。
+- **Objections / Status / Scope**：`candidate`：扩张的外部适用门及 fixed-set 的若干内部步骤已核，有限维 properness/degree 的整条必要性和 fixed-set 到双向完整纤维的整条充分性仍待独立证明链验收；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。
 
 ## C05-v1 · 原关系局部值域的有限数据拓扑证书（9/25 稿候选）
 
@@ -980,7 +980,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C115 同一完整 \(T\)，每个非驻定收敛初值的实际点误差满足 \(\lim_{k\to\infty}e_{k+1}/e_k^2=1\) 若 \(p_0\le0\)，若 \(p_0>0\) 则为 \(1/\sqrt2\)；这是**每条轨道**的渐近，而非共同进入时间。固定任意足够小 \(0<r_0\le R\) 后，比较 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)，\(\varepsilon\downarrow0\)，其极限差有匹配的 \(e^{-C\sqrt{\log(1/\varepsilon)}}\) 上下阶，排除在原点任意邻域的正阶两点 Hölder，亦排除比根对数指数 \(1/2\) 更大的统一伸缩指数。每个有限步 \(T^k\) 半代数，但 \(\Pi\) 在原点任意开邻域非半代数。
 - **Dependencies / Evidence / Status / Related Files**：[SSQ-TAIL/SELECTION/NONSEMIALGEBRAIC](research/canonical/solution_selection_rates.md#ss-quadratic-tail) 的饱和时刻上下界、分离的 overshoot 与尾项、逐轨道极限以及代数多项式反证；依赖 C115 的完整对象和共同局部证书，`derived-checked`，另经独立逆向审查。来源 SS1 定理 4 和 §5.1；非半代数的证明不依赖外部增长引理。
-- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，359–448 行一般几何族另立 C139，§5.2 三角动力学条件另立 C140；另一超线性族见 C141 候选，独立空白接收待核。
+- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，359–448 行一般几何族另立 C139，§5.2 三角动力学条件另立 C140；另一超线性族见 C141 的限定 `derived-checked` 版本。
 
 ## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
 
@@ -1170,7 +1170,7 @@
 - **Status**：`derived-checked`，仅对固定 \(0<\gamma,q<1\)、\(A,B>0\) 的显示关系、全对证书、严格半径及指定配对的双边阶；文献先行性未核。
 - **Exact Statement / Objects / Domain / Quantifiers**：在 Euclidean \(\mathbb R^3,\lambda=1\)，[PF-1](research/canonical/selection_parameter_family.md#pf-object) 定义的完整闭二支 \(F\) 有 \(S=\mathbb R^2\times\{0\}\)，且**每个**输入的完整近端单值为 \(T(z,p,r)=(z+A|r|^\gamma,p+B\min\{p_+,|r|\}^\gamma,q|r|)\)。任意固定 \(R>0\) 的全对输入尺度证书为 \(L_R=2\sqrt{A^2+B^2}+(1+2q)R^{1-\gamma}\)，渐近最佳系数为 \(2\sqrt{A^2+B^2}\)；完整真残差给 \(d(u,S)\le q(r_F(u)/A)^{1/\gamma}\)。若另取 \(B/A<\sqrt{q^{-2\gamma}-1}\)、固定 \(R^{1-\gamma}<[Aq^{-\gamma}-\sqrt{A^2+B^2}]/(1+q)\) 并保证 gauge 评价域，则直接兼容 \(\kappa_R<1\)。全部 \(|r_0|\le R\) 初值有共同 \(q^{\gamma k}\) 点尾。对固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，极限差为 \(\Theta[(\log\log(1/\varepsilon)/\log(1/\varepsilon))^\beta]\)，\(\beta=\gamma\log(1/q)/\log(1/\gamma)\)；若同证书内调用，另选 \(r_0\le R\) 及上述严格门。
 - **Dependencies / Evidence**：[PF-1–12 自足推导](research/canonical/selection_parameter_family.md#pf-object) 独立重算完整纤维、真残差、同一参数的兼容与首次切换；快速独立逆向核参数范围与不等式。C137/C138 恰为 \(\gamma=1/2,q=1/4,A=B=1\) 的特例；原 SS1 359–448 行只作定位。
-- **Counterevidence / Objections / Scope**：\(q\) 是实际法向率，\(\kappa_R\) 是更保守的证书率；本条不证明把证书率固定等于 \(q\) 的更窄类锐，也不证明每个固定 \(R\) 的 \(L_R\) 最小。图半代数只在有理 \(\gamma\) 这里被声明；§5.2 的不同三角动力学充分条件另见 C140，另一超线性参数族另立 C141 候选；外部原创性仍未审。
+- **Counterevidence / Objections / Scope**：\(q\) 是实际法向率，\(\kappa_R\) 是更保守的证书率；本条不证明把证书率固定等于 \(q\) 的更窄类锐，也不证明每个固定 \(R\) 的 \(L_R\) 最小。图半代数只在有理 \(\gamma\) 这里被声明；§5.2 的不同三角动力学充分条件另见 C140，另一超线性参数族另立 C141，已按 SF-1–12 的范围独立接收；外部原创性仍未审。
 
 <a id="c140"></a>
 ## C140-v1 / SS-TANGENTIAL-DECAY · 衰减切向敏感度的混合稳定性
@@ -1183,7 +1183,7 @@
 <a id="c141"></a>
 ## C141-v1 / SS-SUPERLINEAR-FAMILY · 任意超线性法向尾的完整二支图
 
-- **Status**：`candidate`；规范层已重算显示关系与条件链，独立逆向审查尚在进行。
+- **Status**：`derived-checked`，仅限 SF-1–12 固定参数完整关系、图块证书与显示的共同尾及配对指数；两轮空白独立重建了完整纤维、最小真残差、尺度/半径、首次切换和 overshoot，未发现受检证明的致命异议。外部先行性、其它原生关系的纤维桥及全库审查仍未核。
 - **Exact Statement / Objects / Domain / Quantifiers**：Euclidean \(\mathbb R^3\)、\(\lambda=1\)、固定 \(0<\gamma<1,\nu>1,A,B>0\)。[SF-1](research/canonical/selection_superlinear_family.md#sf-object) 给完整闭二支关系，零集 \(S=\mathbb R^2\times\{0\}\)，对**每个**输入有完整单值 \(J_F=T\) 如 SF-2。对固定 \(0<R_0<1,0<D<\infty\)，完整输出 collar \(0\le y\le R_0^\nu\) 的任意图点对若输入对距 \(\le D\)，有 \(\mathrm{RL}(1,\gamma,L_{R_0,D};D)\) 的 SF-3 证书；全图真实残差给 \(d(u,S)\le(r_F(u)/A)^{\nu/\gamma}\)。存在仅依赖固定参数与 \(R_0\) 的充分小 \(0<R\le R_0\)，使全域 gauge、同图零锚、完整覆盖和 SF-5 的 \(\kappa_R<1\) 同时成立。对全部 \(|r_0|\le R_0\) 有共同 \(Me^{-c\nu^k}\) 点尾；每个 \(0<|r_0|<1\) 的逐轨道点误差满足 SF-7 的确切 Q-\(\nu\) 比值。对每个固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，当 \(\varepsilon\downarrow0\) 时，极限差夹在两个 \(e^{-c(\log(1/\varepsilon))^\alpha}\) 型界之间，\(\alpha=\log\nu/\log(\nu/\gamma)\)。若要把配对放在**同一个**严格证书内，另选 \(r_0\le R\)；有理 \(\gamma,\nu\) 才声明半代数。
 - **Definitions / Dependencies / Evidence**：[SF-1–12 的完整反演、全部图值最小残差、兼容、共同尾及双侧首次切换](research/canonical/selection_superlinear_family.md#sf-object)；C02-v2 只用于已经另外核过的固定严格证书，C08/SS-TRANSFER 只传共同尾上界，配对下界在本页独立重算。\(\nu=2,\gamma=1/2,A=B=1\) 给 C115/C116 的同图特例。SS1 修订包 `research_note.md` 557–582 行仅为来源定位。
 - **Counterevidence / Objections / Scope / Related Files**：\(\kappa_R\) 不是实际法向率；共同尾与 Q-\(\nu\) 比值的统一起点不能混写。SF-11 分开估计 overshoot \(p_N\) 与饱和尾，不把前者误估为 \(O(r_N^\gamma)\)。本条不覆盖 \(|r_0|\ge1\) 的收敛，也不转移到任意原生多值方程；外部先行性未核。来源去向见 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv)。
@@ -1194,4 +1194,4 @@
 - **Status**：`derived-checked`；显式加点证明已由独立空白接收逆向重建。
 - **Exact Statement / Objects / Domain / Quantifiers**：对任意**非零实 Hilbert 空间** \(H\) 和任意非空紧集 \(G\subset H\times H\)，\(G\) 不是极大单调关系的完整图；若它单调，存在与其中全部图点构成严格正内积的一个新图点，故可真单调扩张。特别地，任意非空紧 \(K\subset H\)、连续 \(U:K\to K\)、\(\lambda>0\) 从 (OS3) 定义的完整 \(F_{U,K}\) 不是极大单调，无需 C132 的 \(S\)、步界或 gauge 前提。
 - **Definitions / Dependencies / Evidence**：[OS-COMPACT-BARRIER 的 (OS6a)](research/operator_space.md#os-compact-barrier) 从两个坐标的一致界直接构造 \(u=(a+1)e,v=te\)，对任意图点严格满足单调加点不等式。C132 的 (OS3) 给出应用所需紧图；证明不导入 Minty 满值定理，也不将 C132 的 EB 误当成单调性。
-- **Counterevidence / Objections / Scope / Related Files**：零维空间不在量词内；若 \(G\) 不单调，结论更直接。只排除**紧图本身**充当极大单调关系，不排除重新设计非紧完整母空间或加点延拓；一旦加点，完整近端和真最小残差须重核。见 [F41](FAILED_ROUTES.md#f41)；不从此推出 RLEB/LT/极大单调的总体规模比较。
+- **Counterevidence / Objections / Scope / Related Files**：零维空间不在量词内；若 \(G\) 不单调，结论更直接。只排除**紧图本身**充当极大单调关系，不排除一个更大的共同母空间同时容纳紧图及非紧极大单调图，也不排除加点延拓；一旦加点，完整近端和真最小残差须重核。见 [F41](FAILED_ROUTES.md#f41)；不从此推出 RLEB/LT/极大单调的总体规模比较。

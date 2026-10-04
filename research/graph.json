@@ -4182,7 +4182,7 @@
       "output": "SF-CERT",
       "relation": "conditional",
       "scope": "C141：固定 0<γ<1、ν>1、A,B>0，输出图块 0≤y≤R₀^ν、0<R₀<1、输入对距 δ≤D、0<D<∞ 的全对 γ 模；全图真最小残差给 ν/γ EB。另取预先固定的充分小 R≤R₀、全域 gauge、U=R³、完整纤维与零锚同图，SF-5 才给 κ_R<1 的严格局部证书；不把此局部模授予全图。",
-      "status": "candidate；SF-1–5 已重算，独立接收待复核"
+      "status": "derived-checked；SF-1–5 规范证明与空白独立重建，外部先行性未核"
     },
     {
       "id": "E216",
@@ -4195,7 +4195,7 @@
       "output": "SF-TAIL",
       "relation": "conditional",
       "scope": "C141：同一个完整 T，对全部 |r₀|≤R₀<1 与所有 k 的实际超几何共同点尾；SF-3 的同 collar 全对 γ 模（仅 0<D<∞）和 SS-TRANSFER 只给 α=logν/log(ν/γ) 的两点上界。逐轨道 Q-ν 比值由 SF-7 单独算出，不从共同尾推出，也不要求先有 SF-5 严格证书。",
-      "status": "candidate；SF-6–7 条件证明"
+      "status": "derived-checked；SF-6–7 共同尾与逐轨道比值独立重建"
     },
     {
       "id": "E217",
@@ -4208,7 +4208,7 @@
       "output": "SF-SHARP",
       "relation": "conditional",
       "scope": "C141：固定 0<r₀<1，x₀=(0,0,r₀)、xε=(0,ε,r₀)，首次切换 γ^N log(1/ε)=Θ(ν^N)；overshoot p_N 与饱和尾分开给 e^{-C t^α}≤极限差≤e^{-c t^α}。同一严格 RLEB 证书另需预选 r₀≤R、SF-5；只匹配指数，不称前常数最优。",
-      "status": "candidate；SF-8–12 双侧证明"
+      "status": "derived-checked；SF-8–12 首次切换及 overshoot 双侧独立重建"
     },
     {
       "id": "E218",
@@ -4219,7 +4219,7 @@
       "output": "SSQ-OBJECT",
       "relation": "conditional",
       "scope": "仅当 (γ,ν,A,B)=(1/2,2,1,1) 时，SF-1 与 C115 的完整图及其全部输入纤维相同；不能把此特例的半代数性或具体 Q-二次比值赋给其它实指数参数。",
-      "status": "candidate；SF-1 与 SS-Q1 参数代入"
+      "status": "derived-checked；SF-1 与 SS-Q1 全纤维同参数核算"
     },
     {
       "id": "E219",
@@ -4230,7 +4230,7 @@
       "output": "SF-MOD",
       "relation": "conditional",
       "scope": "C141 的同一完整关系在输出 0≤y≤R₀^ν、0<R₀<1 的图块上，对所有输入点对距离 δ≤D、0<D<∞，由 SF-3 得局部全对 γ 模；此结论不以 SF-4 真 EB 或 SF-5 严格兼容为前件，也不声称全图同常数。",
-      "status": "candidate；SF-3 直接两坐标 Hölder 与法向 Lipschitz 估计，独立接收待复核"
+      "status": "derived-checked；SF-3 直接两坐标 Hölder 与法向 Lipschitz 估计经空白独立重建"
     },
     {
       "id": "E220",
@@ -4241,7 +4241,7 @@
       "output": "OSG-NONMAX",
       "relation": "limits",
       "scope": "C142：任意非零实 Hilbert H 的非空紧图 G，若单调，可取坐标界 a,b、单位 e、u=(a+1)e、v=te 且 t>(2a+1)b，得到对 G 全部图点的严格正单调加点；若不单调本已不是极大单调。C132 的新定义 F_{U,K} 是紧图的特例，不需其 S、EB 或 gauge 前提。延拓到非紧图属于不同完整对象，须重审真残差与近端纤维。",
-      "status": "derived-checked；OS6a 显式加点与空白独立逆向核验；F41 排除直接母空间升级"
+      "status": "derived-checked；OS6a 显式加点与空白独立逆向核验；F41 只排除直接充当极大单调子类成员"
     }
   ]
 }
