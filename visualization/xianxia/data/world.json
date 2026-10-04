@@ -3690,6 +3690,61 @@
       "y": 311,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "SF-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SF-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 584,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SF-PAIR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SF-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "SF-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
     }
   },
   "edges": {
@@ -4548,6 +4603,22 @@
     "E214": {
       "x": 2341.96,
       "y": 694.1
+    },
+    "E215": {
+      "x": 2334.14,
+      "y": 424.98
+    },
+    "E216": {
+      "x": 2471.85,
+      "y": 722.3
+    },
+    "E217": {
+      "x": 2034.3,
+      "y": 534.4
+    },
+    "E218": {
+      "x": 1857.72,
+      "y": 1579.94
     }
   },
   "bounds": {

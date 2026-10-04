@@ -301,3 +301,9 @@ E208 的对象固定 [PF-1](canonical/selection_parameter_family.md#pf-object) �
 ## E213–E214：三角切向充分门及其缺失
 
 E213 的 [TC-1](canonical/selection_tangential_condition.md#tc-triangle) 对全部切向点、全部法向 \([0,R]\) 使用一致 \(C,H,\eta,\gamma\)；全切向域的留域自动成立，子域须另证。由 \(B(a,0)=0\) 得逐轨道长度尾，跨初值变常数乘积给 [TC-5](canonical/selection_tangential_condition.md#tc-proof) 的**混合**线性切向/\(\gamma\)-Hölder 法向模；无界切向域、\(\gamma<1\) 时不是全局纯 \(\gamma\)-Hölder。E214 在 C139 的非负法向不变半域逐点算出 \(B\varepsilon^{\gamma-1}\to\infty\)，只说明这个**充分门**缺失；不是对 C139 已核图、尾或选择模的反驳，也不是该门的必要性证明。
+
+## E215–E218：超线性族的图块证书、共同尾与特例
+
+E215 固定 [SF-1](canonical/selection_superlinear_family.md#sf-object) 的**完整**二支关系，\(0<\gamma<1,\nu>1,A,B>0\)。\(\operatorname{gph}F\) 的输出 collar \(0\le y\le R_0^\nu\)、\(R_0<1\) 对应输入 \(|r|\le R_0\)；任意输入点对距 \(\delta\le D<\infty\) 才可用 (SF-3) 的局部全对模。完整真残差 (SF-4) 与选中步是不同范数；另选固定 \(R\le R_0\)、\(U=\mathbb R^3\)、同图零锚、全域 gauge 和完整纤维，(SF-5) 给严格兼容。\(\nu>1\) 使 \(\kappa_R\to0\)，不要求 \(A/B\) 额外小量门；\(\bar t\) 及留域预算见正文。
+
+E216 的共同 \(Me^{-c\nu^k}\) 尾、逐轨道 Q-\(\nu\) 比值及 SS-TRANSFER 的两点**上界**共用同一个完整 \(T\)，却分别有全初值/全时间和逐轨道/最终时间的量词。E217 另固定 \(r_0>0\) 和两条初值相差 \(\varepsilon\) 的轨道，必须独立控制首次切换 \(N\)、overshoot \(p_N\) 与饱和尾，才有匹配的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 指数下界。若称同一严格 RLEB 证书的例子，需预选 \(r_0\le R\)；不能把已固定的 \(r_0\) 事后依 \(\varepsilon\) 改变。E218 仅在 \((\gamma,\nu,A,B)=(1/2,2,1,1)\) 才识别为 C115 的**同图**特例，C139 的几何率 \(q\) 与此处幂 \(\nu\) 不同型。此组边的状态随 C141 独立接收更新。

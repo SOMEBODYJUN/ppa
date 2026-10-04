@@ -1639,6 +1639,31 @@
       "id": "TC-GAP",
       "label": "几何 cap 尖点族不满足衰减切向 Lipschitz 门",
       "file": "canonical/selection_tangential_condition.md#tc-boundary"
+    },
+    {
+      "id": "SF-OBJECT",
+      "label": "超线性完整二支关系及全输入唯一近端 C141",
+      "file": "canonical/selection_superlinear_family.md#sf-object"
+    },
+    {
+      "id": "SF-CERT",
+      "label": "固定 collar 全对 RL、真 EB 与严格兼容 C141",
+      "file": "canonical/selection_superlinear_family.md#sf-certificates"
+    },
+    {
+      "id": "SF-TAIL",
+      "label": "共同超几何尾、逐轨道 Q-ν 与选择模上界 C141",
+      "file": "canonical/selection_superlinear_family.md#sf-tail"
+    },
+    {
+      "id": "SF-PAIR",
+      "label": "同一完整图固定法向初值配对",
+      "file": "canonical/selection_superlinear_family.md#sf-sharp"
+    },
+    {
+      "id": "SF-SHARP",
+      "label": "超线性族的匹配根对数指数下界 C141",
+      "file": "canonical/selection_superlinear_family.md#sf-sharp"
     }
   ],
   "edges": [
@@ -4126,6 +4151,54 @@
       "relation": "limits",
       "scope": "C139 的非负法向不变半域在任意固定 r>0 取 p=ε 与 p=0，切向增量差除以 ε 等于 B ε^{γ−1}→∞；所以不满足 C140 的同法向 Cr^η 切向 Lipschitz 充分门。C137 为其特例；不能从此推出 C140 条件必要。",
       "status": "derived-checked；TC 边界逐点反算"
+    },
+    {
+      "id": "E215",
+      "topic": "解选择",
+      "inputs": [
+        "SF-OBJECT"
+      ],
+      "output": "SF-CERT",
+      "relation": "conditional",
+      "scope": "C141：固定 0<γ<1、ν>1、A,B>0，输出图块 0≤y≤R₀^ν、0<R₀<1、输入对距 δ≤D 的全对 γ 模；全图真最小残差给 ν/γ EB。另取预先固定的充分小 R≤R₀、全域 gauge、U=R³、完整纤维与零锚同图，SF-5 才给 κ_R<1 的严格局部证书；不把此局部模授予全图。",
+      "status": "candidate；SF-1–5 已重算，独立接收待复核"
+    },
+    {
+      "id": "E216",
+      "topic": "解选择",
+      "inputs": [
+        "SF-OBJECT",
+        "SF-CERT",
+        "SS-TRANSFER"
+      ],
+      "output": "SF-TAIL",
+      "relation": "conditional",
+      "scope": "C141：同一个完整 T，对全部 |r₀|≤R₀<1 与所有 k 的实际超几何共同点尾；同 collar 全对 γ 模和 SS-TRANSFER 只给 α=logν/log(ν/γ) 的两点上界。逐轨道 Q-ν 比值由 SF-7 单独算出，不从共同尾推出，也不要求先有 SF-5 严格证书。",
+      "status": "candidate；SF-6–7 条件证明"
+    },
+    {
+      "id": "E217",
+      "topic": "解选择",
+      "inputs": [
+        "SF-OBJECT",
+        "SF-PAIR",
+        "SF-TAIL"
+      ],
+      "output": "SF-SHARP",
+      "relation": "conditional",
+      "scope": "C141：固定 0<r₀<1，x₀=(0,0,r₀)、xε=(0,ε,r₀)，首次切换 γ^N log(1/ε)=Θ(ν^N)；overshoot p_N 与饱和尾分开给 e^{-C t^α}≤极限差≤e^{-c t^α}。同一严格 RLEB 证书另需预选 r₀≤R、SF-5；只匹配指数，不称前常数最优。",
+      "status": "candidate；SF-8–12 双侧证明"
+    },
+    {
+      "id": "E218",
+      "topic": "解选择",
+      "inputs": [
+        "SF-OBJECT"
+      ],
+      "output": "SSQ-OBJECT",
+      "relation": "conditional",
+      "scope": "仅当 (γ,ν,A,B)=(1/2,2,1,1) 时，SF-1 与 C115 的完整图及其全部输入纤维相同；不能把此特例的半代数性或具体 Q-二次比值赋给其它实指数参数。",
+      "status": "candidate；SF-1 与 SS-Q1 参数代入"
     }
   ]
 }

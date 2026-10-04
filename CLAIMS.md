@@ -76,7 +76,7 @@
 - **Dependencies / Evidence**：[9/21 `02_VERIFIED_CORE.md` §6](history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md) 与 [`03_NO_GO_LEDGER.md` N05、N08、N10](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)；v0.9 区分 V-A/V-B、SOURCE-MISSING。
 - **Objections / Status / Scope**：**历史总账报告，尚非本仓库重构的原孔隙证明**；I-097–099 原审计和 I-102 正式表示稿未在盘点文件名中找到。总账另标 SOURCE-MISSING 的 I-001/I-002/I-003–005/I-059/I-075 已以原包或展开件恢复，但这不能替代 N10 原证明。旧目标“差集非 σ-upper-porous”只在其所指空间中被报告为假，不是所有合理量尺均失败。
 
-## C08 · 解选择稳定性（修订身份）
+## C08-v1 · 解选择稳定性（修订身份）
 
 - **Status**：`derived-checked`。
 
@@ -980,7 +980,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C115 同一完整 \(T\)，每个非驻定收敛初值的实际点误差满足 \(\lim_{k\to\infty}e_{k+1}/e_k^2=1\) 若 \(p_0\le0\)，若 \(p_0>0\) 则为 \(1/\sqrt2\)；这是**每条轨道**的渐近，而非共同进入时间。固定任意足够小 \(0<r_0\le R\) 后，比较 \(x_0=(0,0,r_0),x_\varepsilon=(0,\varepsilon,r_0)\)，\(\varepsilon\downarrow0\)，其极限差有匹配的 \(e^{-C\sqrt{\log(1/\varepsilon)}}\) 上下阶，排除在原点任意邻域的正阶两点 Hölder，亦排除比根对数指数 \(1/2\) 更大的统一伸缩指数。每个有限步 \(T^k\) 半代数，但 \(\Pi\) 在原点任意开邻域非半代数。
 - **Dependencies / Evidence / Status / Related Files**：[SSQ-TAIL/SELECTION/NONSEMIALGEBRAIC](research/canonical/solution_selection_rates.md#ss-quadratic-tail) 的饱和时刻上下界、分离的 overshoot 与尾项、逐轨道极限以及代数多项式反证；依赖 C115 的完整对象和共同局部证书，`derived-checked`，另经独立逆向审查。来源 SS1 定理 4 和 §5.1；非半代数的证明不依赖外部增长引理。
-- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，359–448 行一般几何族另立 C139，§5.2 三角动力学条件另立 C140；另一超线性族仍待裁决。
+- **Counterevidence / Scope**：比较轨道使用相同固定 collar 的 \(r_0\le R\)，不能事后令半径依 \(\varepsilon\) 改变；坏的是**两初值**选择，不否定相对单个固定解点的 anchored calmness，也不否定别的结构条件下的好极限映射。外部新颖性未核；SS1 定理 2/3 已分别另立 C137/C138，359–448 行一般几何族另立 C139，§5.2 三角动力学条件另立 C140；另一超线性族见 C141 候选，独立空白接收待核。
 
 ## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
 
@@ -1004,7 +1004,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定完整 (SS-33)、\(\lambda=1\)、\(0<r<R-2T\)，在 \(U=(-r,r)\times(-4T^2,4T^2)\) 的全部完整图纤维等于两支 (SS-34)；给 \(\gamma=1/2\) 的 (SS-38) 和同输入匹配后 (SS-39) 常数，收缩领圈的最优渐近系数 2 与最大指数 \(1/2\)。同一完整关系零集 \(S=\mathbb R\times\{0\}\) 的真实**最小**残差另给锐系数 \(1/4\) 的平方界 (SS-41)。
 - **Dependencies / Evidence / Status**：[SS-SQUARE-ROOT](research/canonical/signed_schur_growth.md#ss-square-root) 对法向输入 \(\pm4y\) 的全部纤维反演和两支图值最小化独立证明，`derived-checked`；固定领圈的 (SS-38)/(SS-39) 不声称是其最小常数。图包含仅在 \(t\ge0\)；不能作为 S19 可能的“延拓邻域也须在图内”读法的实例，不能由此直接宣布 PPA 收敛或先行性。
 
-## C120-v1 / AV-GRAPH · 伴随 Volterra 的方向端点与等距身份
+## C120-v1 / VAD-GRAPH · 伴随 Volterra 的方向端点与等距身份
 
 - **Status**：`derived-checked`。
 
@@ -1012,7 +1012,7 @@
 - **Dependencies / Evidence / Status / Related Files**：[AV-OBJECT/GRAPH](research/topics/examples/adjoint_volterra.md#av-object) 的换元、积分分部、直接 rectangular 见证和高频余弦；来源 Z07 GX-061 与 CCA-M10 分别作为方向观察及共轭核对，`derived-checked`。C104 是同一等距例型，不能作独立相位样本重复计数。
 - **Counterevidence / Scope**：空逆纤维还否定目标邻域的两变量 MR；旧卡“全部标签通过”不是对未拆属性、外部 BWY 归属或先行性的验收。
 
-## C121-v1 / AV-PROX · 完整伴随近端的点态强收敛与统一障碍
+## C121-v1 / VAD-PROX · 完整伴随近端的点态强收敛与统一障碍
 
 - **Status**：`derived-checked`。
 
@@ -1170,7 +1170,7 @@
 - **Status**：`derived-checked`，仅对固定 \(0<\gamma,q<1\)、\(A,B>0\) 的显示关系、全对证书、严格半径及指定配对的双边阶；文献先行性未核。
 - **Exact Statement / Objects / Domain / Quantifiers**：在 Euclidean \(\mathbb R^3,\lambda=1\)，[PF-1](research/canonical/selection_parameter_family.md#pf-object) 定义的完整闭二支 \(F\) 有 \(S=\mathbb R^2\times\{0\}\)，且**每个**输入的完整近端单值为 \(T(z,p,r)=(z+A|r|^\gamma,p+B\min\{p_+,|r|\}^\gamma,q|r|)\)。任意固定 \(R>0\) 的全对输入尺度证书为 \(L_R=2\sqrt{A^2+B^2}+(1+2q)R^{1-\gamma}\)，渐近最佳系数为 \(2\sqrt{A^2+B^2}\)；完整真残差给 \(d(u,S)\le q(r_F(u)/A)^{1/\gamma}\)。若另取 \(B/A<\sqrt{q^{-2\gamma}-1}\)、固定 \(R^{1-\gamma}<[Aq^{-\gamma}-\sqrt{A^2+B^2}]/(1+q)\) 并保证 gauge 评价域，则直接兼容 \(\kappa_R<1\)。全部 \(|r_0|\le R\) 初值有共同 \(q^{\gamma k}\) 点尾。对固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，极限差为 \(\Theta[(\log\log(1/\varepsilon)/\log(1/\varepsilon))^\beta]\)，\(\beta=\gamma\log(1/q)/\log(1/\gamma)\)；若同证书内调用，另选 \(r_0\le R\) 及上述严格门。
 - **Dependencies / Evidence**：[PF-1–12 自足推导](research/canonical/selection_parameter_family.md#pf-object) 独立重算完整纤维、真残差、同一参数的兼容与首次切换；快速独立逆向核参数范围与不等式。C137/C138 恰为 \(\gamma=1/2,q=1/4,A=B=1\) 的特例；原 SS1 359–448 行只作定位。
-- **Counterevidence / Objections / Scope**：\(q\) 是实际法向率，\(\kappa_R\) 是更保守的证书率；本条不证明把证书率固定等于 \(q\) 的更窄类锐，也不证明每个固定 \(R\) 的 \(L_R\) 最小。图半代数只在有理 \(\gamma\) 这里被声明；§5.2 的不同三角动力学充分条件另见 C140，另一超线性参数族及外部原创性仍未审。
+- **Counterevidence / Objections / Scope**：\(q\) 是实际法向率，\(\kappa_R\) 是更保守的证书率；本条不证明把证书率固定等于 \(q\) 的更窄类锐，也不证明每个固定 \(R\) 的 \(L_R\) 最小。图半代数只在有理 \(\gamma\) 这里被声明；§5.2 的不同三角动力学充分条件另见 C140，另一超线性参数族另立 C141 候选；外部原创性仍未审。
 
 <a id="c140"></a>
 ## C140-v1 / SS-TANGENTIAL-DECAY · 衰减切向敏感度的混合稳定性
@@ -1179,3 +1179,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(m\ge1,0<R<\infty,0<q<1,C,H,\eta>0,0<\gamma\le1\)，令 \(T(a,r)=(a+B(a,r),qr)\) 在 \(\mathbb R^m\times[0,R]\) 上，\(B(a,0)=0\)，对**每个** \(a,b,r,s\) 有 \(\|B(a,r)-B(b,r)\|\le Cr^\eta\|a-b\|\) 与 \(\|B(a,r)-B(a,s)\|\le H|r-s|^\gamma\)。全部轨道有限长，极限 \(\Pi(a,r)=(\Pi_a(a,r),0)\)；同球共同点尾由 (TC-3) 控制，且 \(\|\Pi_a(a,r)-\Pi_a(b,s)\|\le e^{CR^\eta/(1-q^\eta)}[\|a-b\|+H|r-s|^\gamma/(1-q^\gamma)]\)。在有界输入对尺度 \(D\) 上才可合并为纯 \(\gamma\)-Hölder；\(\gamma=1\) 时全局 Lipschitz。
 - **Dependencies / Evidence**：[TC-1–5 离散乘积及统一尾证明](research/canonical/selection_tangential_condition.md#tc-proof)；来源 SS1 §5.2 608–641 行只作定位，快速独立审查核指数与常数。[TC 反向边界](research/canonical/selection_tangential_condition.md#tc-boundary) 证明 C139 的尖点切向增量对固定正法向不能满足所需 Lipschitz 门，C137 是特例。
 - **Counterevidence / Objections / Scope**：\(\gamma<1\) 时 \(\Pi_a(a,0)=a\) 阻止无界全域上的纯 \(\gamma\)-Hölder；切向子域版本须另证轨道留域。C137/C139 缺此**充分**门不说明别的条件不能给好选择，也不认证一般曲面、耦合法向或原始签名 Schur 图块的稳定性。
+
+<a id="c141"></a>
+## C141-v1 / SS-SUPERLINEAR-FAMILY · 任意超线性法向尾的完整二支图
+
+- **Status**：`candidate`；规范层已重算显示关系与条件链，独立逆向审查尚在进行。
+- **Exact Statement / Objects / Domain / Quantifiers**：Euclidean \(\mathbb R^3\)、\(\lambda=1\)、固定 \(0<\gamma<1,\nu>1,A,B>0\)。[SF-1](research/canonical/selection_superlinear_family.md#sf-object) 给完整闭二支关系，零集 \(S=\mathbb R^2\times\{0\}\)，对**每个**输入有完整单值 \(J_F=T\) 如 SF-2。对固定 \(0<R_0<1,D<\infty\)，完整输出 collar \(0\le y\le R_0^\nu\) 的任意图点对若输入对距 \(\le D\)，有 \(\mathrm{RL}(1,\gamma,L_{R_0,D};D)\) 的 SF-3 证书；全图真实残差给 \(d(u,S)\le(r_F(u)/A)^{\nu/\gamma}\)。存在仅依赖固定参数与 \(R_0\) 的充分小 \(0<R\le R_0\)，使全域 gauge、同图零锚、完整覆盖和 SF-5 的 \(\kappa_R<1\) 同时成立。对全部 \(|r_0|\le R_0\) 有共同 \(Me^{-c\nu^k}\) 点尾；每个 \(0<|r_0|<1\) 的逐轨道点误差满足 SF-7 的确切 Q-\(\nu\) 比值。对每个固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，当 \(\varepsilon\downarrow0\) 时，极限差夹在两个 \(e^{-c(\log(1/\varepsilon))^\alpha}\) 型界之间，\(\alpha=\log\nu/\log(\nu/\gamma)\)。若要把配对放在**同一个**严格证书内，另选 \(r_0\le R\)；有理 \(\gamma,\nu\) 才声明半代数。
+- **Definitions / Dependencies / Evidence**：[SF-1–12 的完整反演、全部图值最小残差、兼容、共同尾及双侧首次切换](research/canonical/selection_superlinear_family.md#sf-object)；C02-v2 只用于已经另外核过的固定严格证书，C08/SS-TRANSFER 只传共同尾上界，配对下界在本页独立重算。\(\nu=2,\gamma=1/2,A=B=1\) 给 C115/C116 的同图特例。SS1 修订包 `research_note.md` 557–582 行仅为来源定位。
+- **Counterevidence / Objections / Scope / Related Files**：\(\kappa_R\) 不是实际法向率；共同尾与 Q-\(\nu\) 比值的统一起点不能混写。SF-11 分开估计 overshoot \(p_N\) 与饱和尾，不把前者误估为 \(O(r_N^\gamma)\)。本条不覆盖 \(|r_0|\ge1\) 的收敛，也不转移到任意原生多值方程；外部先行性未核。来源去向见 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv)。
