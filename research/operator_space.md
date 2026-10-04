@@ -149,6 +149,27 @@ r_{F_{U,K}}(u)=\min_{x\in K:Ux=u}\|x-u\|/\lambda,
 \]
 每个子水平集非空（含 \(S\)）且紧；\(\phi\) 非降、\(\phi(0)=0\)，并由紧性和 \(U\) 连续得 \(\phi(t)\to0\) 当 \(t\downarrow0\)。由 (OS4) 与 \(\psi\) 非降还得 \(\phi(t)\le\psi(t)\)；对实现 (OS5) 最小值的 \(x_u\)，\(d(u,S)\le\phi(r_{F_{U,K}}(u))\)。这给出同一新关系上的 D04 型真残差 gauge；没有据此得到 \(K\) 外的环境开邻域 coverage。
 
+<a id="os-compact-barrier"></a>
+### OS-COMPACT-BARRIER / C142：紧源关系不能直接成为极大单调图
+
+在任意**非零实 Hilbert 空间** \(H\) 中，非空紧图
+\(G\subset H\times H\) 不可能是极大单调关系的完整图。
+设 \(a=\max_{(x,y)\in G}\|x\|\)、
+\(b=\max_{(x,y)\in G}\|y\|\)，取单位向量 \(e\)，令
+\(u=(a+1)e\)、\(v=te\)，其中 \(t>(2a+1)b\)。对全部
+\((x,y)\in G\)，有
+\[
+\langle u-x,v-y\rangle
+\ge t\bigl((a+1)-a\bigr)-(2a+1)b>0. \tag{OS6a}
+\]
+\(\|u\|=a+1\) 使 \((u,v)\notin G\)。若 \(G\) 单调，
+将此点加入会得到真单调扩张；若 \(G\) 原本不单调，更不可能
+极大单调。因此 C132 的 \(F_{U,K}\) 虽给紧图、完整近端在
+**紧源 \(K\) 上**单值和真残差 EB，却不能直接充当同时包含
+非空极大单调子类的完整母空间成员。补上源外图以获得极大单调性
+会改变完整输入/输出纤维，必须重新证明 coverage、真残差和
+原有证书；本引理不否定存在某种经过明确控制的延拓。
+
 <a id="os-successor-proof"></a>
 ### OS-SUCCESSOR / C133：连续轨道后继选择保持共同 Cauchy 尾
 

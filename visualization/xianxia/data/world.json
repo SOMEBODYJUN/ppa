@@ -964,11 +964,11 @@
       "realm": "structure"
     },
     "FULL": {
-      "role": "refuted-target",
-      "kind": "barrier",
-      "object": "broken_bridge",
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
       "evidence": "unspecified",
-      "reason": "incoming-refutes-relation",
+      "reason": "neutral-default",
       "x": 2198,
       "y": 2067,
       "region": "paths",
@@ -3745,6 +3745,50 @@
       "y": 675,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "FULL-AUTO-V0": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "rift",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 2104,
+      "y": 2158,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "OSG-COMPACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 766,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "OSG-NONMAX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 857,
+      "region": "frontier",
+      "realm": "frontier"
+    },
+    "SF-MOD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 766,
+      "region": "convergence",
+      "realm": "convergence"
     }
   },
   "edges": {
@@ -4619,6 +4663,14 @@
     "E218": {
       "x": 1857.72,
       "y": 1579.94
+    },
+    "E219": {
+      "x": 2492.42,
+      "y": 719.64
+    },
+    "E220": {
+      "x": 4222.59,
+      "y": 809.78
     }
   },
   "bounds": {

@@ -46,7 +46,7 @@ p+B\min\{p_+,|r|\}^\gamma,|r|^\nu\bigr).          \tag{SF-2}
 \(\mathcal G_{R_0}=\operatorname{gph}F\cap\{0\le y\le R_0^\nu\}\)。
 其自然输入域恰为 \(\mathbb R^2\times[-R_0,R_0]\)，且
 \(T\) 保持这一输入 collar。对该图块的任意两点，
-其输入对距 \(\delta\le D<\infty\) 时，
+其输入对距 \(\delta\le D\)，其中 \(0<D<\infty\)，
 \(C=2T-I\) 的非线性前两坐标差至多
 \(2\sqrt{A^2+B^2}\,\delta^\gamma\)；
 第三坐标 \(2|r|^\nu-r\) 在 collar 上的 Lipschitz

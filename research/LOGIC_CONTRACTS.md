@@ -34,7 +34,7 @@ E92 固定一个实际 \((y,w)\in\operatorname{gph}F\)、\(t=\|w\|>0\)、步长 
 
 E94 的完整关系具有线性零集并在每个零点均含 0 及趋零的非零图值；取 y 固定、p=y 给移动锚零缺陷，但固定 \(p_0=0\) 的相对缺陷趋 2，反射前后到 S 距离相等。它限制把 E92 读成固定锚或集合距离收缩，不反驳 E92 自身。[MA-LIMIT](canonical/moving_anchor_reflection.md#ma-limit)、[F18](../FAILED_ROUTES.md#f18)。
 
-本页按 [graph.json](graph.json) 的边 ID 解释合取输入。图只存摘要；调用一个 Claim 时必须读 [总账](../CLAIMS.md) 与对应证明。`∧` 表示**同一对象、同一参数及同一合法区域上的同时成立**，不允许用不同稿件各取一半前提。`source-report`、`candidate`、`derived-checked` 不能因画了箭头自动升为 `canonical`。
+本页按 [graph.json](graph.json) 的边 ID 解释合取输入。图只存摘要；调用一个 Claim 时必须读 [总账](../CLAIMS.md) 与对应证明。 E32 的 [F03](solution_selection.md#f03) 只反驳旧版「局部 A1–A4 自动推出完整 resolvent 一致」；[FULL](solution_selection.md#full) 是须另证的正向纤维等式，不能成为 `refutes` 输出。`∧` 表示**同一对象、同一参数及同一合法区域上的同时成立**，不允许用不同稿件各取一半前提。`source-report`、`candidate`、`derived-checked` 不能因画了箭头自动升为 `canonical`。
 
 ## E02→E03：局部 RLEB 的完整收敛链
 
@@ -302,8 +302,12 @@ E208 的对象固定 [PF-1](canonical/selection_parameter_family.md#pf-object) �
 
 E213 的 [TC-1](canonical/selection_tangential_condition.md#tc-triangle) 对全部切向点、全部法向 \([0,R]\) 使用一致 \(C,H,\eta,\gamma\)；全切向域的留域自动成立，子域须另证。由 \(B(a,0)=0\) 得逐轨道长度尾，跨初值变常数乘积给 [TC-5](canonical/selection_tangential_condition.md#tc-proof) 的**混合**线性切向/\(\gamma\)-Hölder 法向模；无界切向域、\(\gamma<1\) 时不是全局纯 \(\gamma\)-Hölder。E214 在 C139 的非负法向不变半域逐点算出 \(B\varepsilon^{\gamma-1}\to\infty\)，只说明这个**充分门**缺失；不是对 C139 已核图、尾或选择模的反驳，也不是该门的必要性证明。
 
-## E215–E218：超线性族的图块证书、共同尾与特例
+## E215–E219：超线性族的图块证书、共同尾与特例
 
-E215 固定 [SF-1](canonical/selection_superlinear_family.md#sf-object) 的**完整**二支关系，\(0<\gamma<1,\nu>1,A,B>0\)。\(\operatorname{gph}F\) 的输出 collar \(0\le y\le R_0^\nu\)、\(R_0<1\) 对应输入 \(|r|\le R_0\)；任意输入点对距 \(\delta\le D<\infty\) 才可用 (SF-3) 的局部全对模。完整真残差 (SF-4) 与选中步是不同范数；另选固定 \(R\le R_0\)、\(U=\mathbb R^3\)、同图零锚、全域 gauge 和完整纤维，(SF-5) 给严格兼容。\(\nu>1\) 使 \(\kappa_R\to0\)，不要求 \(A/B\) 额外小量门；\(\bar t\) 及留域预算见正文。
+E215 固定 [SF-1](canonical/selection_superlinear_family.md#sf-object) 的**完整**二支关系，\(0<\gamma<1,\nu>1,A,B>0\)。\(\operatorname{gph}F\) 的输出 collar \(0\le y\le R_0^\nu\)、\(R_0<1\) 对应输入 \(|r|\le R_0\)；任意输入点对距 \(\delta\le D\)、\(0<D<\infty\) 才可用 (SF-3) 的局部全对模。完整真残差 (SF-4) 与选中步是不同范数；另选固定 \(R\le R_0\)、\(U=\mathbb R^3\)、同图零锚、全域 gauge 和完整纤维，(SF-5) 给严格兼容。\(\nu>1\) 使 \(\kappa_R\to0\)，不要求 \(A/B\) 额外小量门；\(\bar t\) 及留域预算见正文。
 
-E216 的共同 \(Me^{-c\nu^k}\) 尾、逐轨道 Q-\(\nu\) 比值及 SS-TRANSFER 的两点**上界**共用同一个完整 \(T\)，却分别有全初值/全时间和逐轨道/最终时间的量词。E217 另固定 \(r_0>0\) 和两条初值相差 \(\varepsilon\) 的轨道，必须独立控制首次切换 \(N\)、overshoot \(p_N\) 与饱和尾，才有匹配的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 指数下界。若称同一严格 RLEB 证书的例子，需预选 \(r_0\le R\)；不能把已固定的 \(r_0\) 事后依 \(\varepsilon\) 改变。E218 仅在 \((\gamma,\nu,A,B)=(1/2,2,1,1)\) 才识别为 C115 的**同图**特例，C139 的几何率 \(q\) 与此处幂 \(\nu\) 不同型。此组边的状态随 C141 独立接收更新。
+E219 将 (SF-3) 在正有限比较尺度 \(D\) 上的全对模单列为 [SF-MOD](canonical/selection_superlinear_family.md#sf-certificates)；E216 只合取此模、同一完整 \(T\) 和 SS-TRANSFER。严格兼容 SF-5 属 E215 的局部 RLEB 证书，不是共同尾的前件。共同 \(Me^{-c\nu^k}\) 尾、逐轨道 Q-\(\nu\) 比值及 SS-TRANSFER 的两点**上界**共用同一个完整 \(T\)，却分别有全初值/全时间和逐轨道/最终时间的量词。E217 另固定 \(r_0>0\) 和两条初值相差 \(\varepsilon\) 的轨道，必须独立控制首次切换 \(N\)、overshoot \(p_N\) 与饱和尾，才有匹配的 \(\alpha=\log\nu/\log(\nu/\gamma)\) 指数下界。若称同一严格 RLEB 证书的例子，需预选 \(r_0\le R\)；不能把已固定的 \(r_0\) 事后依 \(\varepsilon\) 改变。E218 仅在 \((\gamma,\nu,A,B)=(1/2,2,1,1)\) 才识别为 C115 的**同图**特例，C139 的几何率 \(q\) 与此处幂 \(\nu\) 不同型。此组边的状态随 C141 独立接收更新。
+
+## E220：紧源关系不能直接进入极大单调类
+
+[C142](operator_space.md#os-compact-barrier) 对非零实 Hilbert 空间的任意非空紧图作严格单调加点，不需要 C132 的真 EB、零集或 gauge 条件。E220 只阻断**这张完整紧图本身**成为极大单调图；重新延拓属于新完整对象，不继承原紧逆纤维的最小残差结论，也不凭此障碍决定三类的总体大小关系。[F41](../FAILED_ROUTES.md#f41) 记录重启门。
