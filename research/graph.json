@@ -4084,12 +4084,11 @@
       "topic": "解选择",
       "inputs": [
         "GC-OBJECT",
-        "GC-CERT",
         "SS-TRANSFER"
       ],
       "output": "GC-TAIL",
       "relation": "conditional",
-      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；显式法向率 1/4 与切向步的共同 M·2^{-k} 点尾，SS-T2 在同一初值家族给 β=1 的上界。本边仅给共同尾上界；同图配对的匹配阶另见 E31/C138，不能移植到 SS-Q2 二次模型。",
+      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；由 GC-2 显式迭代得法向率 1/4、共同 M·2^{-k} 点尾，再以 SS-T2 给 β=1 的两点上界。GC-CERT 的严格兼容另授同图 RLEB 证书，并非此共同尾的前提；同图配对匹配阶另见 E31/C138。",
       "status": "derived-checked；GC-7–8 与 SS-TRANSFER"
     },
     {
