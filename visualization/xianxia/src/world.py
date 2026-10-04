@@ -2,7 +2,7 @@
 import hashlib, math
 SEED='ppa-yunxiu-1'
 # Editorial metaphors for exact IDs. Art only: never changes role/evidence.
-ART_OVERRIDES={'SIZE':'ocean','STOCH-LIMIT':'broken_bridge','D01':'archive','D02':'gate','D03':'pavilion','R02':'pavilion','H02':'mountain','OB-AV-ANCHOR':'broken_bridge'}
+ART_OVERRIDES={'SIZE':'ocean','STOCH-LIMIT-V0':'broken_bridge','D01':'archive','D02':'gate','D03':'pavilion','R02':'pavilion','H02':'mountain','OB-AV-ANCHOR':'broken_bridge'}
 REALMS=[
  dict(id='foundation',name='太初书院',subtitle='对象 · 参数 · 量词',x=720,y=650,rx=590,ry=505,color='#84a996',dark='#568c80'),
  dict(id='convergence',name='问道山径',subtitle='覆盖 · 兼容 · 留域',x=2010,y=650,rx=590,ry=505,color='#91b19a',dark='#648e7b'),

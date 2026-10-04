@@ -6,7 +6,7 @@
 
 - **32 个独立 SVG 物件**：书院建筑 8 种、法器灵物 8 种、山海秘境 8 种、禁制断路 8 种。不是仅更换颜色；书阁可见藏书、山门保留通行空洞、断桥有中断桥面、封印有符纸，均有独立轮廓。
 - **独立美术图鉴**：每件物品同时展示放大图和 82 px 地图尺寸；可点开透明背景 SVG 原件。统一 144×144 画布、(72,122) 地面落点、青绿金石色板。当前是清晰的二维矢量仙侠美术，不称为已完成的逐像素精灵美术。
-- **真实图谱**：294 个节点和 194 条超边全部来自原数据；点击节点或 ∧ 看完整 inputs、output、relation、scope、status。搜索、主题过滤、悬停、拖拽、缩放、小地图、WASD 漫游、键盘目录与深链接保留。
+- **真实图谱**：当前 326 个节点和 214 条超边全部来自权威图（增长后以 `research/graph.json` 为准）；点击节点或 ∧ 看完整 inputs、output、relation、scope、status。搜索、主题过滤、悬停、拖拽、缩放、小地图、WASD 漫游、键盘目录与深链接保留。
 - **持久世界**：`data/world.json` 固定节点坐标和变体，固定超边阵眼。新增内容优先填入同主题空位，满后添加外山。删除条目保留空地；恢复相同 ID 回到原地。数据数组重排不会重排世界。
 - **多变外观与严格状态分离**：无显式状态就显示“未单列”，不按建筑高低、地图面积或物件发光推定已证/高价值。既有状态改变时，徽记和导航角色会刷新，位置不变。
 
@@ -39,7 +39,7 @@ node --check visualization/xianxia/src/map.js
 node visualization/xianxia/tests/test_runtime.js
 ```
 
-修改数学图之后只需运行 `build.py` 和测试；修改物件才需重跑 `create_objects.py`。`research/map.html` 及其原生成器保持兼容；这个新目录是可以独立迭代的修仙表现层。
+修改数学图之后重建此页、宇宙视图和关系表，运行 `research/validate_assets.py` 对比三处内嵌图；修改物件才需重跑 `create_objects.py`。`research/map.html` 及其原生成器保持兼容；这个目录是可以独立迭代的修仙表现层。
 
 ## 世界怎么长
 
@@ -61,6 +61,6 @@ node visualization/xianxia/tests/test_runtime.js
 
 ## 美术锚点与预览
 
-`src/world.py` 的 `ART_OVERRIDES` 为少量精确 ID 指定造型：SIZE 是未定航线的海，STOCH-LIMIT 是被阻断的桥，D01–D03 用书阁/山门/亭分别承接入口，R02 为研修山亭。它们只改外观，不改变 role、evidence 或数学数据。其余变体继续稳定选择。
+`src/world.py` 的 `ART_OVERRIDES` 为少量精确 ID 指定造型：SIZE 是未定航线的海，STOCH-LIMIT-V0 是原错误版本被阻断的桥，D01–D03 用书阁/山门/亭分别承接入口，R02 为研修山亭。它们只改外观，不改变 role、evidence 或数学数据。其余变体继续稳定选择。
 
 [静态物件总览](assets/preview.png) 由同一组 SVG 栅格化得到，没有另画一套图。可安装 Node `sharp` 后运行 `node visualization/xianxia/src/render_preview.js` 重新生成；当前运行环境也可从 `CODEX_PRIMARY_RUNTIME_NODE_MODULES` 加载该包。Sharp 只用于这个 PNG 预览，网页本身没有该依赖。

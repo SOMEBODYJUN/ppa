@@ -51,7 +51,7 @@
 | `R02` | 局部山亭 | 局部 PPA 有限长度，完整 resolvent 另需纤维同一性 |
 | `H02` | 待修云台与候选旗 | 图中标明 candidate，不能画成已经封顶的定理大殿 |
 | `E19` 的输出 `SIZE` | 尚未定航线的广海 | 总体大小比较是开放目标，入海要共同母空间与量尺 |
-| `E30` | 指向 `STOCH-LIMIT` 的坍塌栈道 | 反例阻断给定度量未完备时的路径极限推理；不阻断所有随机定理 |
+| `E30` | 指向 `STOCH-LIMIT-V0` 的坍塌栈道 | 只反驳原 Polish 措辞的 C12-v0；给定度量完备的 C12-v1 不被此边反驳 |
 | `E42` | 二输入的双符阵盘 | 固定边缘二进制条件残差的等价，不能接到 Gaussian 或同步 OT 残差 |
 | `E100` | 错位零锚的破桥 | 全对图块与 coverage 仍缺完整零集保距离；点击读完整反例 |
 | `E133` | 会收缩却缺全对 RL 的试炼门 | 动力证书不能逆推整个完整图的全对模 |
@@ -65,7 +65,7 @@
 3. **增量扩地。** 新节点优先落在相关主题、依赖邻居附近的保留空位；没有合适位置就打开相邻区块。给路径与文字留碰撞缓冲。手工置入的地标权重大于自动位置。新关系可以新建阵眼与道路，不需要搬旧建筑。
 4. **随机可重复。** 世界 seed、区块坐标、稳定 ID 与资产版本共同决定装饰；相同输入得相同输出。装饰噪声和物件变体不依赖节点数组顺序。未读的区块可按需生成，生成后应固定其关键路径与地标。
 5. **有约束的自然感。** 先固定主题邻接、山脊/水岸、渡口和跨域路线，再对区块地表分层生成噪声与植被。最后检查断路、重叠、视野遮挡、不可达与标签冲突；失败时在局部换候选，不全图洗牌。
-6. **双重真实。** 地图图像和搜索/详情都从同一图快照产生；所有 294 个现有节点与 194 条超边必须可检索。每条输入合取、relation、scope、status 与规范链接逐字保留；图像角色不得覆盖证据字段。
+6. **双重真实。** 地图图像和搜索/详情都从同一权威图快照产生；当前图的全部节点与超边必须可检索。每条输入合取、relation、scope、status 与规范链接逐字保留；图像角色不得覆盖证据字段。每次改图后重建页面并用校验器核内嵌数据一致。
 7. **可读性层级。** 全局缩放显示区域与前沿；中景显示物件类别和选中路线；近景才显示每个节点、合取阵眼和装饰。键盘搜索可直达任一节点，不能因“未发现的迷雾”藏掉研究资产。
 
 对游戏生成技术的参考是“有约束的空间数据 → 带 seed 的点与属性 → 分区/分层生成 → 验证”。这是对本项目的设计选择，不声称商业游戏都采用同一种算法。参见 [Unreal PCG Overview](https://dev.epicgames.com/documentation/unreal-engine/procedural-content-generation-overview)、[Generation Modes](https://dev.epicgames.com/documentation/en-us/unreal-engine/using-pcg-generation-modes-in-unreal-engine) 与 [PCG Data Types](https://dev.epicgames.com/documentation/en-us/unreal-engine/procedural-content-generation-framework-data-types-reference-in-unreal-engine)。

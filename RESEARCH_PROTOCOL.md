@@ -66,7 +66,7 @@
 1. 固定 Claim 版本与现有图关系；选择最有信息量的 proof obligation，检查对象良定、隐藏假设、量词顺序、退化情形、外部定理的所有适用条件。
 2. 从原件重写数学内容，或直接写新的推导。把公式和证明放进可读主题模块，来源位置仅用于追溯。对失败路线诚实提取仍成立的引理、反例和障碍，记录具体断点与重启条件。
 3. 更新 `CLAIMS.md`、必要的 `FAILED_ROUTES.md`、`RESEARCH_STATE.md`，再更新 `research/graph.json` 与生成图。README 的数学导航和 File Map 随真实依赖改变，不按日期堆新索引。`RESEARCH_STATE.md` 保持当前问题、条件门与下一动作；阶段流水由 Git 提交保留，不在活跃状态页无穷追加。
-4. 运行 `python3 research/build_graph.py`、`python3 research/validate_assets.py`，核新代码复现命令。机器检查只能发现链接/身份/哈希/结构错误，不能替代证明。
+4. 运行 `python3 research/build_graph.py`、`python3 visualization/cosmos/build.py`、`python3 visualization/xianxia/build.py`，再运行 `python3 research/validate_assets.py`，核新代码复现命令。校验器比较三个离线视图内嵌的完整图与权威 `graph.json`，防止过时反驳边误指修补后的版本。机器检查只能发现链接/身份/哈希/结构错误，不能替代证明。
 5. 对每一批有价值成果建立 `git add`、`commit`、`push` checkpoint 并核对远端。未获得真正认识进展时更新明确障碍即可，不制造新的证明文件。
 
 ## 图的逻辑约定

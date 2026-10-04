@@ -201,6 +201,26 @@ if unit_path.is_file():
             errors.append(f"missing unit target: {key}")
 
 graph = json.loads((ROOT / "research/graph.json").read_text(encoding="utf-8"))
+for relative in (
+    "research/map.html",
+    "visualization/cosmos/index.html",
+    "visualization/xianxia/index.html",
+):
+    page = (ROOT / relative).read_text(encoding="utf-8")
+    matches = re.findall(
+        r'<script\b[^>]*\bid="graph-data"[^>]*>(.*?)</script>',
+        page, flags=re.DOTALL,
+    )
+    if len(matches) != 1:
+        errors.append(f"missing/ambiguous embedded graph: {relative}")
+        continue
+    try:
+        embedded_graph = json.loads(matches[0])
+    except json.JSONDecodeError as exc:
+        errors.append(f"invalid embedded graph: {relative}: {exc}")
+        continue
+    if embedded_graph != graph:
+        errors.append(f"stale embedded graph: {relative}; rebuild from research/graph.json")
 node_ids = [n["id"] for n in graph["nodes"]]
 edge_ids = [e["id"] for e in graph["edges"]]
 if len(node_ids) != len(set(node_ids)) or len(edge_ids) != len(set(edge_ids)):

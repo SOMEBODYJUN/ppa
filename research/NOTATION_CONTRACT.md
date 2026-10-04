@@ -28,6 +28,8 @@
 | [非 tied 图](canonical/non_tied_cayley.md#nt-object) | \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\) 是该页系数 | 与导数 \(A=DG(\bar x)\)、集合 \(A\) 或其它判别式无身份关系；引用 C89/C91 时连同 \(A>0,\Delta\ge0\) 门 |
 | [有限数据 Q03](range_finite_data.md#q-eval) | \(e_N\) 是某候选参数 \(q\) 处的 \(N_m(q)\) 求值误差；\(e_x\) 是 \(\widehat x\) 到 \(A_m^{-1}(\widetilde v)\) 的反演误差上界 | QP gap 只给 \(e_N\)，必须加候选参数固定点残差并除以 \(1-\sigma\) 才能传给 \(e_x\)；不能把它们叫同一个 \(e\) |
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
+| [参数几何尾族](canonical/selection_parameter_family.md#pf-object) | \(A,B>0\) 均为标量增量系数，\(q\in(0,1)\) 为实际法向率；\(R\) 在 PF-3 是输入对尺度 | \(q^\gamma\) 才是共同点尾率，\(\kappa_R\) 是另一保守证书率；这里的 \(B\) 不是下行的向量值函数 |
+| [三角切向充分门](canonical/selection_tangential_condition.md#tc-triangle) | \(B(a,r)\in\mathbb R^m\) 是切向增量，\(R\) 是法向域上界；\(qr\) 只在非负法向域上定义 | C139 的全符号 \(q|r|\) 须限制到 \(r\ge0\) 才能比较；(TC-1) 是充分条件，不从尖点例的失败推出必要性 |
 | [固定紧源观测](canonical/compact_t_observation.md#ct-object) | \(d_{\mathrm{all}}^K(T,U)=\sup_n\|T^n-U^n\|_K\) 是整个紧源的全时间度量；\(\Phi=(w,m)\) 是实际尾和反射模 | 此度量不写成 LT 线性 EB 系数 \(\rho\)，也不是旧孔隙性账本的 \(d_{\rm dyn}\)；其 proper 证明不授予完整原关系 \(F\) 的空间 |
 | [紧源塔与后继](operator_space.md#os-tower-proof) | \(V_j,L_j\) 是 \(T\) 的长度尾及全源上确界；\(e_n\) 是成对迭代的共同 Cauchy 尾；\(U\) 是同一紧 \(K\) 上已给定的连续自映射 | C131 的长度尾与 C133 的 Cauchy 尾不互换；C133 不产生非平凡连续选择；\(F_{U,K}\) 是由全输入源 \(K\) **新定义**的关系，不代表历史或既有原关系 \(F\) |
 | [紧源真纤维](operator_space.md#os-fiber-eb) | 原 \(\psi\) 仅为非降逐输入传递上界；\(\phi\) 是从紧子水平集取得的 D04 型内生 gauge；\(\operatorname{dom}F_{U,K}=U(K)\)，\(r_{F_{U,K}}\) 只在该域调用 | 原 \(\psi\) 不自动满足 \(\psi(0)=0\) 和原点连续；\(J_{\lambda F_{U,K}}\) 的自然输入域是 \(K\)，不自动覆盖环境开邻域 |
