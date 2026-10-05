@@ -27,21 +27,21 @@
 - **Dependencies / Evidence**：[R01 代数与 R02 归纳证明](research/rleb_ppa.md#r02-proof) 从同图块零锚、平行四边形、真实输出 EB、严格预算和 Euclidean 完备性逐步重建；[C136](research/canonical/solution_selection_rates.md#ss-rleb-ball) 再加共同球条件才给统一尾与极限选择模。历史原稿仅是来源线索。
 - **Counterevidence / Objections / Scope**：局部单值只对 \(\mathcal G\) 有效；完整 \(J_{\lambda F}\) 可在同输入有额外分支，需在共同可达输入上另证全纤维一致。多选择 extension、能量分支 R03 及一般 Dini 版本不从本版本自动获得；本状态也不判新颖性。
 
-## C03 · 全局双向 simultaneous shadow（9/23 候选）
+<a id="c03"></a>
+## C03 · 全局双向 simultaneous shadow
 
-- **Status**：`candidate`。
+- **Status**：`derived-checked`；原全图 Hilbert 身份、同一正反影子、σ 族常数与任意维数统一最优性均有独立完整证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H，允许无限维及非可分；非空完整关系图满足固定 λ,L>0、0<γ<1 的全对全尺度 RL。R=L^{1/(1−γ)}。存在一个强单调双 Lipschitz 同胚 A:H→H，对每个原图点同时有 ‖v−A(x)‖≤R/(√2λ)、‖x−A⁻¹(v)‖≤R/√2。更一般每个 0<σ<1 有同一个 Aσ 及 GSH-3/10/11/13 的半径与常数；σ=√γ 最小化显示半径。
+- **Definitions / Dependencies / Evidence**：[GSH-1–22 全部证明](research/canonical/global_shadow.md#gsh-object) 将任意指标集 ℓ²(D) 提升、任意 Hilbert 间同常数 Lipschitz 扩张的准确接口、双 Banach 反演、全图交叉配对和正则单纯形双向下界展开。C03 不依赖有限 QP 的 C19、graph-maximal、原图闭或 C04 的满纤维。[来源 S23 §3](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 仅作同身份溯源。
+- **Counterevidence / Scope**：1/√2 是所有有限维共同常数的最优因子，不决定每个固定维数最优值或 conditioning 锐性。保留指定图锚的不同命题由 [GSH-19–22](research/canonical/global_shadow.md#gsh-anchor) 另证最优因子 1；不能把它与无锚结论合并。逐图点界不提供原纤维非空、局部 RL 推广、真实逆分支选择稳定或外部新颖性。
 
-- **Exact Statement / Objects / Domain**：C01 的实 Hilbert、非空全图全尺度 RL 假设。存在**一个**强单调双 Lipschitz homeomorphism \(A:H\to H\)，对**每个** \((x,v)\in\operatorname{gph}F\) 有 \(\|v-A(x)\|\le R/(\sqrt2\lambda)\)、\(\|x-A^{-1}(v)\|\le R/\sqrt2\)，\(R=L^{1/(1-\gamma)}\)。稿内还给 \(0<\sigma<1\) 的交叉估计与显式 Lipschitz/强单调常数，\(\sigma=\sqrt\gamma\) 取到所列半径，且因子 \(1/\sqrt2\) 是任意维数统一意义下最优；指定锚点版本改为另一问题、最优因子 1。
-- **Dependencies / Evidence**：[9/23 TeX `thm:shadow`, `thm:sharpness`, `lem:crosslift`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 的 quadratic excess、orthogonal lifting、Banach contraction。匹配 PDF 21 页。 [H02 的规范证明梗概与局部独立核对](research/holder_structure.md#h02)已复算标量极值、提升距离、两次收缩及所列常数；[HE-EXTENSION](research/canonical/holder_extension.md#he-extension)另核同常数扩张的一手适用门。
-- **Objections / Status / Scope**：`candidate`：上述步骤已有局部独立重算，但整个 simultaneous shadow 与统一最优性仍未按完整证明链完成独立验收；不能把局部计算核对当作整条定理升级。全图 all-pairs 条件与 C02 的局部条件不同；不据此断言每个精确逆分支稳定，也不据此确定新颖性。
+<a id="c04"></a>
+## C04 · 有限维完整纤维分类
 
-## C04 · 有限维完整纤维分类（9/23 候选）
-
-- **Status**：`candidate`。
-
-- **Exact Statement / Objects / Domain**：固定 \(n\ge1\)、\(\lambda,L>0\)、\(0<\gamma<1\)，取 \(\mathbb R^n\) 上**固定这些参数**图极大的 RL 关系。集合 \(K\) 能作为某个这类关系的完整 \(F^{-1}(0)\)，当且仅当它非空、紧、\(\operatorname{diam}K\le R=L^{1/(1-\gamma)}\)；正向 \(F(0)\) 对应阈值 \(R/\lambda\)。量词是“每一个这样的 \(K\) 都存在某个 \(F\)”以及“每个这类 \(F\) 的纤维必要满足条件”，并非固定 \(F\) 可任意变换纤维。
-- **Dependencies / Evidence**：C01、同常数的 Hölder Hilbert 扩张、有限维 proper map/degree 得全域纤维非空紧、`thm:fixedset` 的精确不动点实现；[9/23 TeX `thm:fibers`](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex)。 [H03](research/holder_structure.md#h03)已经局部复算固定点构造的凸包余量、bump 正性和无额外不动点；[HE-EXTENSION](research/canonical/holder_extension.md#he-extension)另核扩张适用门。
-- **Objections / Status / Scope**：`candidate`：扩张的外部适用门及 fixed-set 的若干内部步骤已核，有限维 properness/degree 的整条必要性和 fixed-set 到双向完整纤维的整条充分性仍待独立证明链验收；不把有限维 compactness 移到一般 Hilbert，不把 graph-maximal 改成 maximal monotone。
+- **Status**：`derived-checked`；原固定参数有限维双向分类在 FF1–27 完整重构并独立逐式接收，未扩大必要性的维数。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 n≥1、λ,L>0、0<γ<1、R=L^{1/(1−γ)}。在 Rⁿ 的固定参数 graph-maximal 全尺度 RL 关系中，K 能作为某个关系的完整 F⁻¹(0)，当且仅当 K 非空紧且 diam K≤R；完整 F(0) 的对应门为 diam K≤R/λ。每个这样的关系对全部输入/输出有非空紧纤维；反向是每个合法 K 分别存在某个关系，不同时任意指定一个关系的两种纤维。
+- **Definitions / Dependencies / Evidence**：[FF1–27 全部证明](research/canonical/finite_fiber_classification.md#ff-object) 给同参数 Cayley 极大性、显式有限维 Brouwer 闭球满射、properness/闭图/usc、完整纤维直径；Hilbert 投影短证明、凸包余量、全对正 bump、正权一致级数与无额外 fixed point；最后完整双向 pullback。原 S23 finite_geometry/margin/fixedset/fibers 仅溯源。该证明显式导入已声明前件的 Brouwer；不以 degree 摘要作为证明。
+- **Counterevidence / Scope**：任意 Hilbert 空间上的紧 K 同常数 fixed-set 实现与双向实现是已证充分性；每个关系的纤维非空紧必要性只在有限维。实现图极大性允许最小 Hölder 常数小于参数上界 L，包括 singleton。R_K 的像只包含于闭凸包，未声称满射该凸包。graph-maximal 不是极大单调，不授予 PPA 真 EB、收敛、回缩、degree 数值或外部先行性。
 
 ## C05-v1 · 原关系局部值域的有限数据拓扑证书（9/25 稿候选）
 
@@ -84,29 +84,32 @@
 - **Dependencies / Evidence**：[SS-TRANSFER 独立证明](research/canonical/solution_selection_rates.md#ss-transfer) 给出有限前缀的共同局部尺度闭合及两种平衡指数；来源 [原 `research_note.md` §1–4](history/sources/次单调论文研究/正式后的研究/research_note.md)、[修订审计 ZIP](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/solution_selection_revised_v1_delivery.zip)，9/21 `02_VERIFIED_CORE.md` §4。
 - **Objections / Status / Scope**：抽象模传递部分 `derived-checked`，原修订包的内部审计是来源证据。一般 RLEB 推论只能直接用于局部 \(J_{\mathcal G}\)，或另加共同轨道区域 \(J_{\lambda F}=J_{\mathcal G}\)；旧稿无条件升级完整 resolvent 的版本已失效。固定解点的 anchored Hölder calmness 与邻域中任意两初值的 Hölder 连续性不同。具体二次模型另立 C115/C116，不把来源中两个例子混成同一对象。
 
+<a id="c09"></a>
 ## C09 · 9/19 一般模 RL 的 Dini 点收敛（新增版本）
 
-- **Status**：`candidate`；有稿内证明及关键公式的局部重算，整条证明尚未独立逐项验收。
+- **Status**：`derived-checked`；GM1–18 在原有限维同图块量词下完整重构并独立逐式接收。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：\(X=\mathbb R^n\)，\(F:X\rightrightarrows X\)，非空闭 \(S\subset F^{-1}(0)\)，同图块 \(\mathcal G\)，\(U\) 开、\(R,\bar t,\lambda>0\)，连续非减 \(\omega:[0,R]\to[0,\infty)\)、\(\omega(0)=0\)、非减原点连续 \(\psi\)、\(0<\kappa<1\)。对**每个** \(x\in U_R\) 假设图块输入覆盖与最近解点 \((p,0)\in\mathcal G\)；对**每对**图点在输入尺度 \(R\) 有 \(\|\Delta u-\lambda\Delta v\|\le\omega(\|\Delta u+\lambda\Delta v\|)\)；在全部实际输出有真实 \(r_F\) EB；\((R+\omega(R))/(2\lambda)\le\bar t\)；对每个 \(0<t\le R\) 有 \(\psi((t+\omega(t))/(2\lambda))\le\kappa t\)；且 \(\int_0^R\omega(t)dt/t<\infty\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：\(X=\mathbb R^n\)，\(F:X\rightrightarrows X\)，非空闭 \(S\subset F^{-1}(0)\)，同图块 \(\mathcal G\)，\(U\) 开、\(R,\bar t,\lambda>0\)，连续非减 \(\omega:[0,R]\to[0,\infty)\)、\(\omega(0)=0\)、非减 \(\psi:[0,\bar t]\to[0,\infty)\)，\(\psi(0)=0\) 且在原点右连续、\(0<\kappa<1\)。对**每个** \(x\in U_R\) 假设图块输入覆盖与最近解点 \((p,0)\in\mathcal G\)；对**每对**图点在输入尺度 \(R\) 有 \(\|\Delta u-\lambda\Delta v\|\le\omega(\|\Delta u+\lambda\Delta v\|)\)；在全部实际输出有真实 \(r_F\) EB；\((R+\omega(R))/(2\lambda)\le\bar t\)；对每个 \(0<t\le R\) 有 \(\psi((t+\omega(t))/(2\lambda))\le\kappa t\)；且 \(\int_0^R\omega(t)dt/t<\infty\)。
 - **Conclusion**：若 \(d_0\le R\) 且 \(d_0/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jd_0)<d(x^0,X\setminus U)\)，则唯一图块轨道全程存在、有限长并收敛于 \(S\)；\(d_k\le\kappa^kd_0\)，步长与尾界按同一模级数。量词不自动覆盖完整 \(J_F\)。
-- **Dependencies / Evidence / Objections / Status / Related Files**：R01 一步估计的一般模版、Dini 等价几何采样求和、闭 \(S\) 与留域归纳；[rleb_ppa](research/rleb_ppa.md)、[holder_structure H04](research/holder_structure.md)。9/19 S19 extensions_moduli_structure.tex 的 thm:modulus-dini 稿内证明，本轮局部重算。C02 是幂次版，C09 改变模与额外条件，不能覆盖旧编号。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[GM1–18 完整证明](research/canonical/general_modulus_dynamics.md#gm-data) 给一步真残差评价域、Dini/采样等价、连续长度函数和严格剩余预算归纳；9/19 S19 thm:modulus-dini 仅作溯源。C02 是幂次版，C09 改变模与额外条件，不能覆盖旧编号。
 
+<a id="c10"></a>
 ## C10 · 完整对数接缝的 Dini 边界
 
-- **Status**：`candidate`；完整公式已有局部重算，全部图点对与边界仍按稿内证明范围保留。
+- **Status**：`derived-checked`；GM26–39 给每个固定正参数的完整双支、全对模、真残差和动力边界证明。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对**每个** \(a>0\)，\(\ell_a(0)=0\)，在 \(0<t\le e^{-a}\) 为 \([\log(e/t)]^{-a}\)，以后用接点切线延伸。\(F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\) 当 \(y\ge0\)，其余空。步长 1，\(S=\mathbb R\times\{0\}\)。
-- **Conclusion**：完整 \(J_a(p,q)=(p+\ell_a(|q|),|q|/4)\)，整图有非幂次模 \(\Omega_a(t)=\sqrt{(t+2\ell_a(t))^2+9t^2/4}\) 且真实残差 \(r_{F_a}(\xi,y)=\sqrt{\ell_a(4y)^2+9y^2}\)。对每个 \(|q_0|>0\) 距离按 \(4^{-k}\) 收缩，轨道有限长且收敛于一点当且仅当 \(a>1\)；若 \(a\le1\)，切向坐标趋 \(+\infty\)。
-- **Dependencies / Evidence / Objections / Status / Related Files**：完整双支反演、全对模、对数级数判别；S19 thm:logarithmic-seam，[holder_structure H04](research/holder_structure.md)。稿内证明且本轮核了关键公式。必要性只对**此族**，不是“非 Dini 必发散”的一般断言。
+- **Conclusion**：完整 \(J_a(p,q)=(p+\ell_a(|q|),|q|/4)\)，整图有非幂次模 \(\Omega_a(t)=\sqrt{(t+2\ell_a(t))^2+9t^2/4}\) 且真实残差在 \(y\ge0\) 为 \(r_{F_a}(\xi,y)=\sqrt{\ell_a(4y)^2+9y^2}\)，域外为 \(+\infty\)。对每个 \(|q_0|>0\) 距离按 \(4^{-k}\) 收缩，轨道有限长且收敛于一点当且仅当 \(a>1\)；若 \(a\le1\)，切向坐标趋 \(+\infty\)。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[GM26–39 完整证明](research/canonical/general_modulus_dynamics.md#gm-log-object) 重构切线延拓凹性/次可加、完整正负支反演、跨支全对模、真残差与逆 gauge、小尺度兼容和正负初值长度；S19 thm:logarithmic-seam 只溯源。必要性只对**此族**，不是“非 Dini 必发散”的一般断言。
 
+<a id="c11"></a>
 ## C11 · 统一尾给连续极限回缩
 
-- **Status**：`candidate`；依赖 C09 全套局部条件及回缩证明，尚未独立验收整条链。
+- **Status**：`derived-checked`；同一 C09 前件下 GM19–25 的精确预算、开域、共同尾及显式局部同伦完整重构。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 C09 的 \(X=\mathbb R^n\)，其整套局部假设在 \(U_R\) 成立，置 \(\ell_\omega(r)=r/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jr)\)，\(\mathcal O=\{x\in U:d(x,S)<R,\ell_\omega(d(x,S))<d(x,X\setminus U)\}\)。
-- **Conclusion**：\(\mathcal O\) 开且正向不变，包含 \(S\cap U\)；每个 \(x\in\mathcal O\) 的极限 \(\Pi(x)\) 构成连续回缩 \(\mathcal O\to S\cap U\)，所以 \(S\cap U\) 为 Euclidean neighborhood retract，并满足原稿所述局部收缩性。
-- **Dependencies / Evidence / Objections / Status / Related Files**：C09 的统一尾、全对输入连续性和精确长度递推；S19 prop:limit-retraction，[holder_structure H05](research/holder_structure.md)。稿内证明及局部重算。C04 的任意紧零集实现未附 C11 假设；Cantor 型零集不能在相应点满足整套条件。
+- **Conclusion**：\(\mathcal O\) 开且正向不变，包含 \(S\cap U\)；每个 \(x\in\mathcal O\) 的极限 \(\Pi(x)\) 构成连续回缩 \(\mathcal O\to S\cap U\)，所以 \(S\cap U\) 为 Euclidean neighborhood retract。局部可缩的明确量词是：每个 p 及其相对邻域 V 存在更小 W⊂V，使包含 W→V 在 V 内同伦于常值 p；未声称 W 本身可缩或强形变回缩。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[GM19–25 完整证明](research/canonical/general_modulus_dynamics.md#gm-retraction) 用 s+ℓω(d⁺)≤ℓω(d) 得前向不变，在整个 O 上用同一 ℓω(κᵏR) 尾；线段后复合 Π 给局部同伦。S19 prop:limit-retraction 只溯源；不需增加完整纤维等式或 S=F⁻¹(0)。C04 的任意紧零集实现未附 C11 假设；Cantor 型零集不能在相应点满足整套条件。
 
 ## C12-v0 · 随机推论的原 Polish 措辞
 
@@ -160,18 +163,18 @@
 - **Conclusion**：\(\Phi=(w,m):X\to c_0^2\) 连续 proper，像闭 Polish，非空精确纤维紧；这与 C06 同一数学身份，是释义细化，**不另造较强定理**。
 - **Dependencies / Evidence / Objections / Status / Related Files**：[CT-PROPER](research/canonical/compact_t_observation.md#ct-proper) 与 [operator_space §3](research/operator_space.md#phi)；S20 OS-A §1 只作溯源。Arzelà–Ascoli 需紧参数集在 \(c_0\) 中的一致趋零预算；proper/quotient 不推出 category-preserving，局部图卡不恢复完整全局 \(F\)。
 
+<a id="c18"></a>
 ## C18 · 有限维固定窗口的全纤维值域覆盖
 
-- **Status**：`candidate`；稿内证明和标量根已局部重算，完整 properness/degree 链仍需独立审查。
-
-- **Exact Statement / Objects / Domain / Quantifiers**：\(F\) 为 \(\mathbb R^n\) 上固定 \((\lambda,L,\gamma)\)、\(0<\gamma<1\) 的全局 graph-maximal RL 关系，取任一图锚 \((x_0,v_0)\)，\(R=L^{1/(1-\gamma)}\)。对任意 \(r>R\)，唯一 \(h(r)\in(0,r)\) 解 \(r-h=L(r+h)^\gamma\)。
-- **Conclusion**：对每个 \(v\in B(v_0,h(r)/\lambda)\)，完整 \(F^{-1}(v)\ne\varnothing\) 且整个纤维包含于 \(B(x_0,r)\)，从而该输出球包含于 \(F(B(x_0,r))\)。相对 maximal 窗口 \(G\subset U\times W\) 在原稿的锚、开球包含和 \(s>0\) 条件下，半径变为 \(\min\{s,h(r)/\lambda\}\)；统一半径及严格 \(r>R\) 在一维反例下锐。
-- **Dependencies / Evidence / Objections / Status / Related Files**：C04 的有限维 properness/full range、标量最大根 \(\rho\)、同常数 completion 和相对 maximal 的窗口等式。[range_finite_data W01](research/range_finite_data.md)，S23 lem:rho/thm:coverage/thm:window/prop:coveragesharp。稿内证明与本轮关键计算核读；不是任意非 maximal 子图的 coverage，亦与 S25 的有限观测局部值域不同。
+- **Status**：`derived-checked`；FC1–12 完整重构并独立接收，限定于全尺度同参数关系、全部纤维与显示窗口。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 n≥1、λ,L>0、0<γ<1，R=L^{1/(1−γ)}。全局 graph-maximal RL 关系 F 取任意图锚 (x₀,v₀)；每个 r>R 有唯一 h(r)∈(0,r) 解 r−h=L(r+h)^γ。则对每个 v∈B(v₀,h(r)/λ)，整个非空 F⁻¹(v)⊂B(x₀,r)，因此该输出球⊂F(B(x₀,r))。固定窗版本另取任意 U,W⊂Rⁿ 与非空全尺度 RL 图 G⊂U×W，在该同窗中相对 graph-maximal，锚属于 G、B(x₀,r)⊂U、B(v₀,s)⊂W、r>R、s>0；则每个 v∈B(v₀,min{s,h(r)/λ}) 的整个非空 G⁻¹(v) 在该输入球，且等于任一同参数 completion 的对应完整纤维。
+- **Definitions / Dependencies / Evidence**：[FC1–12](research/canonical/full_fiber_coverage.md#fc-object) 展开最大根定位、严格增性、有限维 Brouwer 全目标满射、同参数 completion 与窗口限制身份、全纤维全称界，以及一维 C(p)=L(p₊)^γ 同对象的半径与严格门锐性。C04 的 [FF-COERCIVITY](research/canonical/finite_fiber_classification.md#ff-coercivity) 另给同一全值域证明；来源 S23 lem:rho/coverage/window/coveragesharp 只溯源。
+- **Counterevidence / Scope**：统一半径不可提高，r≤R 下没有全类统一的正中心输出球；不声称每个指定关系最佳半径相等。不是任意非相对极大子图、仅局部测试 RL 的覆盖，亦不认证 S25 指定整窗拓扑 T。全部纤维身份只授予列出的目标球，未认定窗口外完整关系相等；外部新颖性未核。
 
 <a id="c19"></a>
 ## C19 · 有限样本的全局一致二次规划影子
 
-- **Status**：`derived-checked`；仅限下列固定有限样本及已认证条件，完整自足证明已独立重构和攻击；不升级 C03/C04/C18。
+- **Status**：`derived-checked`；仅限下列固定有限样本及已认证条件，完整自足证明已独立重构和攻击；其有限证明不依赖 C03/C04/C18。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(n,m\ge1,\lambda,L>0,0<\gamma<1\)，有限 \(m\) 个 \(\mathbb R^n\) 图样本，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，固定 \(0<\sigma<1\) 和 S23 的 \(M_\sigma,a^2=M_\sigma/2\)。对所有样本对有 \(\|c_i-c_j\|^2\le\sigma^2\|p_i-p_j\|^2+M_\sigma\)。按 [FD-1–3 规范定义](research/canonical/finite_data_proxy.md#fd-object) 的 \(Q,d(q),\Delta_m\) 定义唯一 QP 最小解 \(\theta(q)\) 与 \(N_m(q)=V\theta(q)\)。
 - **Conclusion**：同一个 \(N_m:\mathbb R^n\to\mathbb R^n\) 全局 \(\sigma\)-Lipschitz，对每个 \(i,q\) 有 \(\|c_i-N_m(q)\|^2\le\sigma^2\|p_i-q\|^2+a^2\)；其 Cayley 代理 \(A_m\) 为强单调双 Lipschitz 同胚，对全部**样本点**有统一正反误差。对未知原图点还须 C20-v2 的同图、同尺度参数 coverage。

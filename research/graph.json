@@ -59,18 +59,21 @@
     },
     {
       "id": "DIN",
-      "label": "一般模与 Dini 条件",
-      "file": "holder_structure.md#din"
+      "label": "Dini 与全部几何采样等价",
+      "file": "canonical/general_modulus_dynamics.md#gm-dini-length",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "LOG",
-      "label": "对数接缝精确门槛",
-      "file": "holder_structure.md#log"
+      "label": "C10 完整对数图的精确 Dini 门",
+      "file": "canonical/general_modulus_dynamics.md#gm-log-object",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "RET",
-      "label": "连续极限回缩",
-      "file": "holder_structure.md#ret"
+      "label": "C11 连续极限回缩与局部同伦",
+      "file": "canonical/general_modulus_dynamics.md#gm-retraction",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "H01",
@@ -79,30 +82,33 @@
     },
     {
       "id": "LIFT",
-      "label": "二次 excess 与正交提升",
-      "file": "holder_structure.md#lift"
+      "label": "二次 excess 与全 Hilbert 正交提升",
+      "file": "canonical/global_shadow.md#gsh-lift",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "H02",
-      "label": "同一强单调影子 [候选]",
-      "file": "holder_structure.md#h02",
-      "evidence_status": "candidate"
+      "label": "C03 同一强单调正反影子",
+      "file": "canonical/global_shadow.md#gsh-shadow",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "PROPER",
-      "label": "有限维 properness、degree",
-      "file": "holder_structure.md#proper"
+      "label": "有限维全纤维非空与 properness",
+      "file": "canonical/finite_fiber_classification.md#ff-coercivity",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "FIX",
-      "label": "任意紧集精确固定点构造",
-      "file": "holder_structure.md#fix"
+      "label": "任意紧集同常数完整 fixed-set",
+      "file": "canonical/finite_fiber_classification.md#ff-fixedset",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "H03",
-      "label": "有限维完整纤维分类 [候选]",
-      "file": "holder_structure.md#h03",
-      "evidence_status": "candidate"
+      "label": "C04 有限维完整纤维分类",
+      "file": "canonical/finite_fiber_classification.md#ff-classification",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "SAMPLE",
@@ -223,13 +229,15 @@
     },
     {
       "id": "R05",
-      "label": "一般模 RL + Dini 的点收敛",
-      "file": "holder_structure.md#r05"
+      "label": "C09 一般模同图块有限长度",
+      "file": "canonical/general_modulus_dynamics.md#gm-dini-theorem",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "OB-TOPO",
-      "label": "非局部可缩零集的附加收敛假设障碍",
-      "file": "holder_structure.md#ob-topo"
+      "label": "非局部可缩零集的合取收敛障碍",
+      "file": "canonical/general_modulus_dynamics.md#gm-local-contractibility",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "OB-RES",
@@ -406,22 +414,26 @@
     {
       "id": "RHO",
       "label": "最大根 ρ 与 h(r) 标量定位",
-      "file": "range_finite_data.md#rho"
+      "file": "canonical/full_fiber_coverage.md#fc-root",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "W01",
-      "label": "全纤维值域球",
-      "file": "range_finite_data.md#w01"
+      "label": "C18 全纤维锐值域球",
+      "file": "canonical/full_fiber_coverage.md#fc-global",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "REL-MAX",
-      "label": "相对 maximal 窗口",
-      "file": "range_finite_data.md#rel-max"
+      "label": "同参数相对 graph-maximal 窗口",
+      "file": "canonical/full_fiber_coverage.md#fc-object",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "W02",
-      "label": "固定窗口全纤维覆盖",
-      "file": "range_finite_data.md#w02"
+      "label": "C18 固定窗完整纤维覆盖",
+      "file": "canonical/full_fiber_coverage.md#fc-window",
+      "evidence_status": "derived-checked"
     },
     {
       "id": "QSAMPLE",
@@ -1705,6 +1717,24 @@
       "id": "FD-LIFT",
       "label": "有限 QP 的抬升插值与样本交叉界",
       "file": "canonical/finite_data_proxy.md#fd-cross"
+    },
+    {
+      "id": "GM-RL",
+      "label": "同图块一般模的全对条件",
+      "file": "canonical/general_modulus_dynamics.md#gm-data",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GM-CMP",
+      "label": "一般模同尺度兼容与真残差域",
+      "file": "canonical/general_modulus_dynamics.md#gm-one-step",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GM-LOC",
+      "label": "Dini 连续长度预算与严格留域",
+      "file": "canonical/general_modulus_dynamics.md#gm-dini-length",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -1781,14 +1811,15 @@
       "inputs": [
         "COV",
         "D04",
-        "CMP",
-        "LOC",
+        "GM-RL",
+        "GM-CMP",
+        "GM-LOC",
         "DIN"
       ],
       "output": "R05",
       "relation": "conditional",
-      "scope": "一般模全对 RL；有限长度另需 Dini",
-      "status": "S19 一般模版本"
+      "scope": "C09：同一有限维F/S/图块/U/λ/R；闭非空子零集、每输入最近零锚/coverage、尺度R全部点对ω、每实际输出真残差EB及gauge域、全部小t直接κ兼容、Dini和初值严格ℓω预算，共同给唯一图块轨道留域有限长；不授予完整J。",
+      "status": "derived-checked / GM1–18 完整规范证明与独立空白接收"
     },
     {
       "id": "E07",
@@ -1798,8 +1829,8 @@
       ],
       "output": "R05",
       "relation": "limits",
-      "scope": "a≤1 的完整接缝：距离收缩仍无点收敛",
-      "status": "显式反例"
+      "scope": "C10：同一个每a>0完整对数双支图与λ=1完整prox；a≤1且非零法向初值时距集合仍每步1/4，但切向发散；a>1恰有限长。这里只限制删Dini的推理，不反驳C09合取定理或任意非Dini模。",
+      "status": "derived-checked / GM26–39 全图与全部参数/正负初值证明"
     },
     {
       "id": "E08",
@@ -1810,8 +1841,8 @@
       ],
       "output": "H02",
       "relation": "implies",
-      "scope": "全图全尺度；正交扩张与 Banach contraction",
-      "status": "candidate / S23 稿内证明、局部重算"
+      "scope": "C03：非空完整图在任意实 Hilbert（允许非可分）满足全对全尺度固定 λ,L,γ；任意指标集正交提升+准确 Hilbert Lipschitz 扩张+双 Banach 给同一个正反影子，显式常数、任意维统一锐性；指定锚另有因子1。",
+      "status": "derived-checked / GSH-1–22 完整规范重构和独立逐式接收"
     },
     {
       "id": "E09",
@@ -1822,8 +1853,8 @@
       ],
       "output": "H03",
       "relation": "necessary",
-      "scope": "有限维、graph-maximal、直径界",
-      "status": "candidate / S23 稿内证明"
+      "scope": "C04 必要性：固定参数 graph-maximal、n≥1有限维；Cayley满域、明示Brouwer闭球全目标、proper给全部非空紧双向纤维，再用全对同输入/同输出直径比较；不输出degree数值。",
+      "status": "derived-checked / FF1–12 必要性"
     },
     {
       "id": "E10",
@@ -1834,21 +1865,20 @@
       ],
       "output": "H03",
       "relation": "sufficient",
-      "scope": "每个非空紧 K、diam K≤R，存在某个 F",
-      "status": "candidate / S23 稿内构造"
+      "scope": "C04 充分性：每个有限维非空紧K、diamK≤R（正向门R/λ），FF13–25凸包余量、正bump和正权一致级数完整实现fixedset；全域Cayley±重建给各自某个同参数图极大关系及整个纤维。",
+      "status": "derived-checked / FF13–27 同常数实现与全部双向纤维"
     },
     {
       "id": "E11",
       "topic": "交叉限制",
       "inputs": [
         "R05",
-        "D03",
-        "COV"
+        "GM-RL"
       ],
       "output": "RET",
       "relation": "implies",
-      "scope": "一般模版本的同图块 all-pairs 连续性、共同开域与统一尾界",
-      "status": "S19 稿内证明"
+      "scope": "C11：C09同一全部前件；连续ℓω精确剩余预算使O={d<R,ℓω(d)<dist(Uc)}开放前向不变，整个O统一尾≤ℓω(κ^kR)，同图块全对连续给连续极限回缩至S∩U；小邻域W→V在V内同伦，不声称W自身可缩。",
+      "status": "derived-checked / GM19–25 完整证明；不需额外完整纤维或完整零集"
     },
     {
       "id": "E12",
@@ -1859,8 +1889,8 @@
       ],
       "output": "OB-TOPO",
       "relation": "limits",
-      "scope": "任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立",
-      "status": "条件障碍"
+      "scope": "C04任意紧零集实现不附C09/C11条件；C11在同一局部合取上强制GM24的局部同伦量词。因此非局部可缩零集附近这些附加条件不能全部成立；不是H03与RET矛盾。",
+      "status": "derived-checked / FF26–27 与 GM19–25 的条件边界"
     },
     {
       "id": "E13",
@@ -2255,24 +2285,26 @@
       "topic": "值域",
       "inputs": [
         "H01",
-        "RHO"
+        "RHO",
+        "PROPER"
       ],
       "output": "W01",
       "relation": "conditional",
-      "scope": "有限维 graph-maximal、非空完整逆纤维、r>R",
-      "status": "S23 稿内证明"
+      "scope": "C18：n≥1、固定同参数全尺度graph-maximal，明确全目标完整纤维非空前件；任意锚、r>R、v严格在输出球内，FC2–7定位整个纤维。",
+      "status": "derived-checked / FC1–8 完整重构和独立接收"
     },
     {
       "id": "E47",
       "topic": "值域",
       "inputs": [
         "W01",
-        "REL-MAX"
+        "REL-MAX",
+        "HE-EXT"
       ],
       "output": "W02",
       "relation": "conditional",
-      "scope": "同参数全局 completion、窗口球包含与目标窗口",
-      "status": "S23 稿内证明"
+      "scope": "C18固定窗：任意U/W、G同窗相对图极大，全尺度同参数completion；锚∈G、B(x0,r)⊂U、B(v0,s)⊂W、r>R、s>0。显示目标球内G的整个非空逆纤维等于completion完整纤维；不认定窗外身份。",
+      "status": "derived-checked / FC9–10 完整窗口证明"
     },
     {
       "id": "E48",
@@ -2282,8 +2314,8 @@
       ],
       "output": "W01",
       "relation": "limits",
-      "scope": "一维 C(p)=L(p_+)^γ 给 r>R 严格门和半径锐性",
-      "status": "S23 锐性反例"
+      "scope": "C18统一锐性：同参数一维C(p)=L(p_+)^γ，正目标唯一逆点；r≤R无正中心输出球，r>R时输出h(r)/λ唯一逆点x=r不属开球，故统一半径不能增大。",
+      "status": "derived-checked / FC11–12 同对象严格门与开球锐性"
     },
     {
       "id": "E49",

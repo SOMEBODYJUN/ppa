@@ -21,7 +21,7 @@
 | E03 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [CMP · 统一兼容 κ<1](rleb_ppa.md#cmp) ∧ [LOC · 留域预算与闭零集](rleb_ppa.md#loc) | implies → [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) | 局部 J_G 轨道；完整 J_F 另需 FULL；**C02-v2 单值图块归纳已在 R02 自足重构；完整 J_F 另证** |
 | E04 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [LOC · 留域预算与闭零集](rleb_ppa.md#loc) | implies → [R03 · 能量证书与临界阈值](rleb_ppa.md#r03) | ψ 连续严格增、q_E<1、能量分支预算；**S19 稿内证明** |
 | E05 | [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) ∧ [SG-POWER · 幂次预算、同修正坐标匹配和双边锐性](canonical/signed_schur_growth.md#ss-power) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [CMP · 统一兼容 κ<1](rleb_ppa.md#cmp) ∧ [LOC · 留域预算与闭零集](rleb_ppa.md#loc) | conditional → [R02 · 局部 PPA 有限长度](rleb_ppa.md#r02) | 同一 λ、同一有限维图块和初始轨道领圈：R04 的 signed-Schur 表示须另有幂次预算/输入直径以给 R01 所用的全对 γ,L；再合取最近零点图锚与 coverage、全部实际输出的真 EB、对每个小 t 的 κ<1 兼容、闭 S 与长度留域。完整 J_λF 另须该轨道区域全纤维排他；Schur 几何单独不推出 R02。；**C117/C118-v2 的条件验证器，空白接收补齐 COV 与幂次门** |
-| E06 | [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [CMP · 统一兼容 κ<1](rleb_ppa.md#cmp) ∧ [LOC · 留域预算与闭零集](rleb_ppa.md#loc) ∧ [DIN · 一般模与 Dini 条件](holder_structure.md#din) | conditional → [R05 · 一般模 RL + Dini 的点收敛](holder_structure.md#r05) | 一般模全对 RL；有限长度另需 Dini；**S19 一般模版本** |
+| E06 | [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [GM-RL · 同图块一般模的全对条件](canonical/general_modulus_dynamics.md#gm-data) ∧ [GM-CMP · 一般模同尺度兼容与真残差域](canonical/general_modulus_dynamics.md#gm-one-step) ∧ [GM-LOC · Dini 连续长度预算与严格留域](canonical/general_modulus_dynamics.md#gm-dini-length) ∧ [DIN · Dini 与全部几何采样等价](canonical/general_modulus_dynamics.md#gm-dini-length) | conditional → [R05 · C09 一般模同图块有限长度](canonical/general_modulus_dynamics.md#gm-dini-theorem) | C09：同一有限维F/S/图块/U/λ/R；闭非空子零集、每输入最近零锚/coverage、尺度R全部点对ω、每实际输出真残差EB及gauge域、全部小t直接κ兼容、Dini和初值严格ℓω预算，共同给唯一图块轨道留域有限长；不授予完整J。；**derived-checked / GM1–18 完整规范证明与独立空白接收** |
 | E25 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [GROW · 真实残差幂增长](rleb_ppa.md#grow) | conditional → [CMP · 统一兼容 κ<1](rleb_ppa.md#cmp) | a<γ 自动小尺度；a=γ 要 λm>L/2；a>γ 此标量测试失败；**S19 residual growth** |
 | E26 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) ∧ [GROW · 真实残差幂增长](rleb_ppa.md#grow) | conditional → [R03 · 能量证书与临界阈值](rleb_ppa.md#r03) | a=γ 的能量阈值 λm>L/√2，另一充分证书；**S19 能量分支** |
 | E27 | [SCHUR · 反向 Schur 定向与全纤维排他](rleb_ppa.md#schur) | conditional → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 历史摘要：同一切向输入球的反演、两侧相反凸增长及统一导数界只认证所表示图；完整纤维还需 U 上 (SS-13)，精确合取见 E184/E185。此边本身不供 R02 的最近零锚和幂次 RL。；**S19 条件验证器；C117-v2 将表示图与完整图分版本拆开** |
@@ -33,7 +33,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E07 | [LOG · 对数接缝精确门槛](holder_structure.md#log) | limits → [R05 · 一般模 RL + Dini 的点收敛](holder_structure.md#r05) | a≤1 的完整接缝：距离收缩仍无点收敛；**显式反例** |
+| E07 | [LOG · C10 完整对数图的精确 Dini 门](canonical/general_modulus_dynamics.md#gm-log-object) | limits → [R05 · C09 一般模同图块有限长度](canonical/general_modulus_dynamics.md#gm-dini-theorem) | C10：同一个每a>0完整对数双支图与λ=1完整prox；a≤1且非零法向初值时距集合仍每步1/4，但切向发散；a>1恰有限长。这里只限制删Dini的推理，不反驳C09合取定理或任意非Dini模。；**derived-checked / GM26–39 全图与全部参数/正负初值证明** |
 | E28 | [COLLIDE · 逐支正则但跨支碰撞](rleb_ppa.md#collide) | limits → [R04 · signed-Schur 跨支验证](rleb_ppa.md#r04) | 逐支正则不能替代跨支定向；**S19 collision 反例** |
 | E30 | [STOCH · 期望距离收缩与路径 Dini 步长](holder_structure.md#stoch) ∧ [POLISH-GAP · 拓扑 Polish 不保指定度量完备](holder_structure.md#polish-gap) | refutes → [STOCH-LIMIT-V0 · C12-v0 仅拓扑 Polish 的空间内极限断言](holder_structure.md#stoch-limit-v0) | 仅反驳 C12-v0 把拓扑 Polish 当作给定度量完备的空间内极限断言；X=(0,2) 通常距离，有限长度而极限在空间外。C12-v1 的完备度量假设未受反驳。；**本轮显式反例** |
 | E32 | [F03 · 图块外额外输出反例](solution_selection.md#f03) | refutes → [FULL-AUTO-V0 · 旧 A1–A4 自动推出完整 resolvent 一致（错误）](solution_selection.md#f03) | F(u)={u,-u} 的同一完整关系与指定图块满足局部 A1–A4，但 J_G(0) 单值、J_F(0) 全实线；仅反驳旧版「A1–A4 自动授予完整纤维一致」的无条件升级，不反驳 FULL 作为另证的充分门。；**显式反例** |
@@ -50,16 +50,16 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E08 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [LIFT · 二次 excess 与正交提升](holder_structure.md#lift) | implies → [H02 · 同一强单调影子 [候选]](holder_structure.md#h02) | 全图全尺度；正交扩张与 Banach contraction；**candidate / S23 稿内证明、局部重算** |
-| E09 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [PROPER · 有限维 properness、degree](holder_structure.md#proper) | necessary → [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) | 有限维、graph-maximal、直径界；**candidate / S23 稿内证明** |
-| E10 | [FIX · 任意紧集精确固定点构造](holder_structure.md#fix) ∧ [D03 · Cayley 表示](foundations.md#d03) | sufficient → [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) | 每个非空紧 K、diam K≤R，存在某个 F；**candidate / S23 稿内构造** |
+| E08 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [LIFT · 二次 excess 与全 Hilbert 正交提升](canonical/global_shadow.md#gsh-lift) | implies → [H02 · C03 同一强单调正反影子](canonical/global_shadow.md#gsh-shadow) | C03：非空完整图在任意实 Hilbert（允许非可分）满足全对全尺度固定 λ,L,γ；任意指标集正交提升+准确 Hilbert Lipschitz 扩张+双 Banach 给同一个正反影子，显式常数、任意维统一锐性；指定锚另有因子1。；**derived-checked / GSH-1–22 完整规范重构和独立逐式接收** |
+| E09 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [PROPER · 有限维全纤维非空与 properness](canonical/finite_fiber_classification.md#ff-coercivity) | necessary → [H03 · C04 有限维完整纤维分类](canonical/finite_fiber_classification.md#ff-classification) | C04 必要性：固定参数 graph-maximal、n≥1有限维；Cayley满域、明示Brouwer闭球全目标、proper给全部非空紧双向纤维，再用全对同输入/同输出直径比较；不输出degree数值。；**derived-checked / FF1–12 必要性** |
+| E10 | [FIX · 任意紧集同常数完整 fixed-set](canonical/finite_fiber_classification.md#ff-fixedset) ∧ [D03 · Cayley 表示](foundations.md#d03) | sufficient → [H03 · C04 有限维完整纤维分类](canonical/finite_fiber_classification.md#ff-classification) | C04 充分性：每个有限维非空紧K、diamK≤R（正向门R/λ），FF13–25凸包余量、正bump和正权一致级数完整实现fixedset；全域Cayley±重建给各自某个同参数图极大关系及整个纤维。；**derived-checked / FF13–27 同常数实现与全部双向纤维** |
 
 ## 交叉限制
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E11 | [R05 · 一般模 RL + Dini 的点收敛](holder_structure.md#r05) ∧ [D03 · Cayley 表示](foundations.md#d03) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | implies → [RET · 连续极限回缩](holder_structure.md#ret) | 一般模版本的同图块 all-pairs 连续性、共同开域与统一尾界；**S19 稿内证明** |
-| E12 | [H03 · 有限维完整纤维分类 [候选]](holder_structure.md#h03) ∧ [RET · 连续极限回缩](holder_structure.md#ret) | limits → [OB-TOPO · 非局部可缩零集的附加收敛假设障碍](holder_structure.md#ob-topo) | 任意紧零集实现不保证回缩；额外局部收敛假设排除 Cantor 型零集附近同时成立；**条件障碍** |
+| E11 | [R05 · C09 一般模同图块有限长度](canonical/general_modulus_dynamics.md#gm-dini-theorem) ∧ [GM-RL · 同图块一般模的全对条件](canonical/general_modulus_dynamics.md#gm-data) | implies → [RET · C11 连续极限回缩与局部同伦](canonical/general_modulus_dynamics.md#gm-retraction) | C11：C09同一全部前件；连续ℓω精确剩余预算使O={d<R,ℓω(d)<dist(Uc)}开放前向不变，整个O统一尾≤ℓω(κ^kR)，同图块全对连续给连续极限回缩至S∩U；小邻域W→V在V内同伦，不声称W自身可缩。；**derived-checked / GM19–25 完整证明；不需额外完整纤维或完整零集** |
+| E12 | [H03 · C04 有限维完整纤维分类](canonical/finite_fiber_classification.md#ff-classification) ∧ [RET · C11 连续极限回缩与局部同伦](canonical/general_modulus_dynamics.md#gm-retraction) | limits → [OB-TOPO · 非局部可缩零集的合取收敛障碍](canonical/general_modulus_dynamics.md#gm-local-contractibility) | C04任意紧零集实现不附C09/C11条件；C11在同一局部合取上强制GM24的局部同伦量词。因此非局部可缩零集附近这些附加条件不能全部成立；不是H03与RET矛盾。；**derived-checked / FF26–27 与 GM19–25 的条件边界** |
 | E21 | [C-MSCQ · 原锥残差 MSCQ](cone_markov.md#c-mscq) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [D04 · 真实 EB 与 gauge](foundations.md#d04) | 需额外 d(G(x),C)≤χ(r_F(x)) 与同一零集；**尚未建立的一般桥** |
 | E24 | [M-COND · 二进制守恒边缘、Wν 与条件残差 R](topics/random_markov/conditional_refresh.md#cr-binary-object) ∧ [M-PSI · 同步 OT 残差 Ψ](cone_markov.md#m-psi) | limits → [OB-RES · 条件残差不可代入同步 OT 能量](cone_markov.md#ob-res) | 条件残差不能直接替换同步 OT 残差；需同一耦合和回耦损失控制；**显式两 bit 障碍** |
 | E44 | [M-MOMENT · C126 全有限支撑律的精确矩门](topics/random_markov/moment_recoupling.md#mr-moment) | limits → [MOMENT-LIFT-GAP · 小质量矩提升须满足 pq≤r](topics/random_markov/moment_recoupling.md#mr-moment-gap) | C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需 R^d 核与 Wp 母空间、所有目标律 I⊂Pp(S)、π∈I 平稳及残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域对 d(μP,I) 断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。；**derived-checked / MR1 及小质量更新证明** |
@@ -160,9 +160,9 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E46 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [RHO · 最大根 ρ 与 h(r) 标量定位](range_finite_data.md#rho) | conditional → [W01 · 全纤维值域球](range_finite_data.md#w01) | 有限维 graph-maximal、非空完整逆纤维、r>R；**S23 稿内证明** |
-| E47 | [W01 · 全纤维值域球](range_finite_data.md#w01) ∧ [REL-MAX · 相对 maximal 窗口](range_finite_data.md#rel-max) | conditional → [W02 · 固定窗口全纤维覆盖](range_finite_data.md#w02) | 同参数全局 completion、窗口球包含与目标窗口；**S23 稿内证明** |
-| E48 | [RHO · 最大根 ρ 与 h(r) 标量定位](range_finite_data.md#rho) | limits → [W01 · 全纤维值域球](range_finite_data.md#w01) | 一维 C(p)=L(p_+)^γ 给 r>R 严格门和半径锐性；**S23 锐性反例** |
+| E46 | [H01 · 全局 RL 与固定参数 maximal](holder_structure.md#h01) ∧ [RHO · 最大根 ρ 与 h(r) 标量定位](canonical/full_fiber_coverage.md#fc-root) ∧ [PROPER · 有限维全纤维非空与 properness](canonical/finite_fiber_classification.md#ff-coercivity) | conditional → [W01 · C18 全纤维锐值域球](canonical/full_fiber_coverage.md#fc-global) | C18：n≥1、固定同参数全尺度graph-maximal，明确全目标完整纤维非空前件；任意锚、r>R、v严格在输出球内，FC2–7定位整个纤维。；**derived-checked / FC1–8 完整重构和独立接收** |
+| E47 | [W01 · C18 全纤维锐值域球](canonical/full_fiber_coverage.md#fc-global) ∧ [REL-MAX · 同参数相对 graph-maximal 窗口](canonical/full_fiber_coverage.md#fc-object) ∧ [HE-EXT · 同常数 Hölder 扩张与固定参数图完成](canonical/holder_extension.md#he-extension) | conditional → [W02 · C18 固定窗完整纤维覆盖](canonical/full_fiber_coverage.md#fc-window) | C18固定窗：任意U/W、G同窗相对图极大，全尺度同参数completion；锚∈G、B(x0,r)⊂U、B(v0,s)⊂W、r>R、s>0。显示目标球内G的整个非空逆纤维等于completion完整纤维；不认定窗外身份。；**derived-checked / FC9–10 完整窗口证明** |
+| E48 | [RHO · 最大根 ρ 与 h(r) 标量定位](canonical/full_fiber_coverage.md#fc-root) | limits → [W01 · C18 全纤维锐值域球](canonical/full_fiber_coverage.md#fc-global) | C18统一锐性：同参数一维C(p)=L(p_+)^γ，正目标唯一逆点；r≤R无正中心输出球，r>R时输出h(r)/λ唯一逆点x=r不属开球，故统一半径不能增大。；**derived-checked / FC11–12 同对象严格门与开球锐性** |
 
 ## 有限数据
 

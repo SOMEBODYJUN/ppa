@@ -330,7 +330,7 @@ E51 的一般前件是独立认证的 \(e_x\)。QP gap 给的是查询处 \(e_N\
 真 \(v\) 的完整纤维已认证、噪声 \(\|\widetilde v-v\|\le\eta\) 和 \(e_x\)
 才推出 [FD-18](canonical/finite_data_proxy.md#fd-total) 的三项界。
 观测 \(\widetilde v\) 无需属于原 \(F\) 的值域，代理逆映射全域定义。
-C19/C20-v2 在上述范围为 derived-checked；C18、C03/C04、最优 \(K_\delta\)、
+C19/C20-v2 在上述范围为 derived-checked；C03/C04/C18 的独立状态另见下列契约。最优 \(K_\delta\)、
 采样可获得性与维数复杂度未因此升级。
 
 
@@ -344,3 +344,23 @@ E41 的 [C143](topics/random_markov/compact_residual_boundaries.md#crb-object) �
 ## E22 · C14 的共同 a.e. 连续量词与全部不变目标
 
 [C14 的 CG1–CG7](topics/random_markov/compact_residual_boundaries.md#crb-general-gauge) 固定任意概率噪声域及联合可测自映射，并先取一个满概率噪声集，再量化其内每个映射在整个非空紧 G 连续。两次有界控制收敛给核和同噪声 c_R 连续；联合可行关系保留全部不变目标以及各自的输入 OT 最优条件。因此 Ψ 取得且下半连续，exact-zero 与全律严格一般 gauge 等价。逐状态换异常集、先选最近不变律、放松输入最优计划、幂次升级和速率兼容都不由 E22 赋予。独立 Cesàro 存在性不需要轨道收敛假设。
+
+
+## E08–E10 · 全局影子与有限维完整纤维分开
+
+E08 的 [C03/GSH-1–22](canonical/global_shadow.md#gsh-object) 不需要 graph-maximal、闭图或有限维；同一个 Hilbert 扩张先固定整个 N，再双 Banach 反演，才能同时对全部原图点给正反界。任意指标集提升不需可分性。无锚的任意维统一最优因子 1/√2 与指定锚的因子 1 分属不同量词；固定维数最优因子仍开放。
+
+E09 的 [C04/FF-COERCIVITY](canonical/finite_fiber_classification.md#ff-coercivity) 另要求有限维和固定参数图极大：同参数扩张给全域 Cayley；逐目标有限维 Brouwer 闭球满射、coercivity/properness 给全部非空紧纤维；同输入/同输出的原全对比较给两种直径门。E10 的 [FF-FIXEDSET/CLASSIFICATION](canonical/finite_fiber_classification.md#ff-fixedset) 是反向存在性，每个合法紧 K 分别构造某个关系；bump 的完整像只包含于凸包，不声称任意紧 K 是 retract，也不同时任意指定一个关系的双向纤维。任意 Hilbert 的此充分性不授权有限维必要性扩张；本证明不输出 degree 数值。
+
+## E46–E48 · 最大根定位、全纤维非空和窗口 completion
+
+E46 显式合取 PROPER 的有限维全目标非空门，不能从 RHO 的逐图点上界制造原纤维存在性。FC2–7 的最大根分支在 t=0 取 R；严格 r>R 和严格输出开球给每个完整逆点都在开输入球。E47 另合取 HE-EXT 同参数 completion、同窗相对图极大、锚及两开球包含，才在显示目标球上取得 G⁻¹(v)=Fhat⁻¹(v)。E48 是同一个一维正部幂次系统的统一半径和严格门边界，不把某个指定关系的最好半径判为统一值。[FC1–12](canonical/full_fiber_coverage.md#fc-object) 全部证明。
+
+
+## E06/E07/E11 · 一般模的剩余预算与回缩量词
+
+E06 的 [C09/GM1–18](canonical/general_modulus_dynamics.md#gm-data) 单独使用 GM-RL、GM-CMP、GM-LOC，不借幂次版本的 CMP/LOC 偷换 ω。同一图块全对尺度、零锚/coverage、每实际输出的完整真残差 EB、gauge 域、全部小参数严格兼容、Dini 与初值长度预算全部合取。hω 是实际步长的上界；ℓω=hω+ℓω∘κ 是预算函数恒等式，所以实际 s+ℓω(d⁺)≤ℓω(d)。
+
+E11 的 [C11/GM19–25](canonical/general_modulus_dynamics.md#gm-retraction) 用这项精确预算保持同一个开域 O；整个 O 的统一尾与同图块全对连续性才给回缩。只对该 T，不需把 S 换成完整零集；全部完整近端路径另须全可达纤维一致。局部结论是每个邻域 V 有更小 W，使 W→V 在 V 中同伦于常值；不声称 W 自身可缩或强形变回缩。
+
+E07 的 [C10/GM26–39](canonical/general_modulus_dynamics.md#gm-log-object) 另固定完整双支、切线延拓剖面与λ=1。完整最小残差在y≥0取第一支、域外∞，负输入的实际选支不能代替真最小值。a≤1且非零法向的距离几何率/切向发散只限制删Dini推理；a>1恰有限长，不判所有非Dini模型。

@@ -1,6 +1,6 @@
 # 全局值域定位、有限数据影子与信息边界
 
-来源 S23 结构稿 TeX §5–§7（行 952–1572），21 页 PDF 同版；中文教学稿帮助解释机制，不作为证明。这里的全局/固定窗口值域结果属于**全图全尺度 RL 的有限维结构线**；9/25 §8 的局部拓扑证书是另一套假设，见 [holder_structure H07](holder_structure.md)。本轮逐式核对了定位函数、二次规划构造、覆盖不等式与有限信息反例的推理；外部扩张/degree 定理及先行性仍是门。
+来源 S23 结构稿 TeX §5–§7（行 952–1572），21 页 PDF 同版；中文教学稿帮助解释机制，不作为证明。这里的全局/固定窗口值域结果属于**全图全尺度 RL 的有限维结构线**；9/25 §8 的局部拓扑证书是另一套假设，见 [holder_structure H07](holder_structure.md)。本轮逐式核对了定位函数、二次规划构造、覆盖不等式与有限信息反例的推理；C18 已在 [FC1–12](canonical/full_fiber_coverage.md#fc-object) 完整重证并独立接收，满值域用明示的有限维 Brouwer 接口，不以 degree 摘要补证明；外部先行性仍独立待核。
 
 <a id="rho"></a>
 <a id="w01"></a>
@@ -17,7 +17,7 @@
 \tag{W01}
 \]
 
-若 \(r>R\)，唯一 \(h(r)\in(0,r)\) 满足 \(r-h=L(r+h)^\gamma\)，且 \(\rho(h(r))=r\)。有限维 graph-maximal 全局关系先由 S23 finite_geometry 得所有逆纤维非空，再有
+若 \(r>R\)，唯一 \(h(r)\in(0,r)\) 满足 \(r-h=L(r+h)^\gamma\)，且 \(\rho(h(r))=r\)。有限维 graph-maximal 全局关系先由 [FF-COERCIVITY](canonical/finite_fiber_classification.md#ff-coercivity) 的显式闭球不动点证明得所有逆纤维非空，再有
 
 \[
 B(v_0,h(r)/\lambda)\subset F(B(x_0,r)),\quad
@@ -32,7 +32,7 @@ F^{-1}(v)\subset B(x_0,r)\quad
 <a id="qp"></a>
 ## Q01 · 一个有限样本构造的全局一致影子
 
-完整自足证明见 [FD-OBJECT→FD-SHADOW](canonical/finite_data_proxy.md#fd-object)：全部查询共用 QP，由双变分不等式给全局 Lipschitz，有限抬升顶点插值给交叉估计。C19 在这些固定前件下为 `derived-checked`；无需 C03/C04 的候选证明。
+完整自足证明见 [FD-OBJECT→FD-SHADOW](canonical/finite_data_proxy.md#fd-object)：全部查询共用 QP，由双变分不等式给全局 Lipschitz，有限抬升顶点插值给交叉估计。C19 在这些固定前件下为 `derived-checked`；无需 C03/C04 的全局证明。
 
 给 \(m\ge1\) 个图样本 \((x_i,v_i)\)，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，重复且一致的 \(p_i\) 可合并。固定 \(0<\sigma<1\)，取 H02 的 \(M_\sigma\)、\(a^2=M_\sigma/2>0\)，矩阵 \(P=[p_i]\)、\(V=[c_i]\)。**只需样本兼容**
 

@@ -29,6 +29,7 @@
 | [非 tied 图](canonical/non_tied_cayley.md#nt-object) | \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\) 是该页系数 | 与导数 \(A=DG(\bar x)\)、集合 \(A\) 或其它判别式无身份关系；引用 C89/C91 时连同 \(A>0,\Delta\ge0\) 门 |
 | [有限数据 Q03](range_finite_data.md#q-eval) | \(e_N\) 是某候选参数 \(q\) 处的 \(N_m(q)\) 求值误差；\(e_x\) 是 \(\widehat x\) 到 \(A_m^{-1}(\widetilde v)\) 的反演误差上界 | QP gap 只给 \(e_N\)；若从该次查询生成反演证书，须合并候选参数固定点残差并除以 \(1-\sigma\)。也可另给独立的 \(e_x\)；两种误差不能同称 \(e\) |
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
+| [一般模动力 C09/C10/C11](canonical/general_modulus_dynamics.md#gm-data) | ω 是同图块成对零消失模；hω=(id+ω)/2 为实际步长上界；ℓω 是可和长度预算。C10 另取对数剖面 ℓ_a、完整真残差 χ_a 与逆 gauge ψ_a | ℓω=hω+ℓω∘κ 是预算函数恒等式，实际 s+ℓω(d⁺) 只有≤。C09/C11只给图块T，C10经全支反演才给完整J；不同ℓ及不同残差不能同形替换 |
 | [参数几何尾族](canonical/selection_parameter_family.md#pf-object) | \(A,B>0\) 均为标量增量系数，\(q\in(0,1)\) 为实际法向率；\(R\) 在 PF-3 是输入对尺度 | \(q^\gamma\) 才是共同点尾率，\(\kappa_R\) 是另一保守证书率；这里的 \(B\) 不是下行的向量值函数 |
 | [三角切向充分门](canonical/selection_tangential_condition.md#tc-triangle) | \(B(a,r)\in\mathbb R^m\) 是切向增量，\(R\) 是法向域上界；\(qr\) 只在非负法向域上定义 | C139 的全符号 \(q|r|\) 须限制到 \(r\ge0\) 才能比较；(TC-1) 是充分条件，不从尖点例的失败推出必要性 |
 | [超线性法向族](canonical/selection_superlinear_family.md#sf-object) | \(\nu>1\) 是法向递推的幂，\(\gamma\in(0,1)\) 是全对反射的局部指数；\(A,B>0\) 是标量增量系数；输入 \(r\)、图点输出 \(y=|r|^\nu\) | \(\nu\) 不是 C139 的几何率 \(q\)；局部图块全对模依赖输出 collar 和输入对距 \(D\)，真残差取完整两值纤维的最小值；\(\kappa_R\) 不等于实际超线性递推 |

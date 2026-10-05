@@ -1,6 +1,6 @@
 # Hölder–RL：整体结构、局部收敛与拓扑条件
 
-本页将原稿重构为数学节点及合取依赖。**审读状态**：本轮独立核读并局部重算了下列 shadow、纤维实现、Dini、对数接缝和回缩的稿内证明，未发现所列内部计算的致命断点；这不等于完成外部引理适用条件、优先权或整篇论文的独立审稿。随机推论另有明确的度量完备性修补。9/25 引用的 rational morphism Lefschetz 定理适用门已有一手核验；整窗模型和其余拓扑证明义务仍未关闭。
+本页将原稿重构为数学节点及合取依赖。C03 和 C04 现各有完整独立规范证明：[GSH-1–22](canonical/global_shadow.md#gsh-object) 与 [FF1–27](canonical/finite_fiber_classification.md#ff-object)，状态与总账同步；原稿其余命题仍分别核范围。**审读状态**：本轮独立核读并局部重算了下列 shadow、纤维实现、Dini、对数接缝和回缩的稿内证明，未发现所列内部计算的致命断点；这不等于完成外部引理适用条件、优先权或整篇论文的独立审稿。随机推论另有明确的度量完备性修补。9/25 引用的 rational morphism Lefschetz 定理适用门已有一手核验；整窗模型和其余拓扑证明义务仍未关闭。
 
 ## 来源与版本
 
@@ -55,9 +55,9 @@ r_\sigma=\sqrt{\frac{M_\sigma}{2(1-\sigma^2)}}.
 2. 将每个 \(p\in D\) 提升为 \((p,re_p)\)，其中 \(r^2=M_\sigma/(2\sigma^2)\)。同常数 Lipschitz 扩张后，限制到基平面得到一个 \(\sigma\)-Lipschitz 映射 \(N\)，满足
    \(\|C(p)-N(q)\|^2\le\sigma^2\|p-q\|^2+M_\sigma/2\)。
 3. \(X(q)=(q+N(q))/2\)、\(V(q)=(q-N(q))/(2\lambda)\) 均由 Banach 不动点定理成为双射；取 \(A_\sigma=V\circ X^{-1}\)。
-4. 同一交叉估计分别代入相同输入和相同输出来得到两条误差界。
+4. 同一交叉估计分别代入相同输入和相同输出来得到两条误差界。完整展开、非可分提升和精确导入门见 GSH-LIFT/SHADOW/PAIRED。
 
-**独立核对**：标量极值、提升距离的因子 2、两次 contraction、强单调常数及 \(\sigma=\sqrt\gamma\) 的优化均已局部重算。证据：S23 §3，`lem:excess`、`lem:crosslift`、`thm:shadow`，313–468 行。
+**完整独立证明**：[GSH-1–22](canonical/global_shadow.md#gsh-object) 已逐式重构任意 Hilbert 全图上界、同一映射双反演和维数统一锐性；以下原页记录的是早先局部核对。标量极值、提升距离的因子 2、两次 contraction、强单调常数及 \(\sigma=\sqrt\gamma\) 的优化均已局部重算。证据：S23 §3，`lem:excess`、`lem:crosslift`、`thm:shadow`，313–468 行。
 
 **最优性的精确范围**：正则单纯形半径 \(R\sqrt{n/[2(n+1)]}\) 给所有维数统一常数的下界，令 \(n\to\infty\) 得 \(1/\sqrt2\)。原稿没有证明每个固定维数的最优因子，也没有证明 conditioning 常数最优。指定锚点是另一问题，原稿的最优因子为 1。证据：`thm:sharpness`，506–557 行；`thm:anchor`，561–617 行。
 
@@ -74,20 +74,24 @@ K\ne\varnothing,\qquad K\text{ 紧},\qquad\operatorname{diam}K\le R.
 
 完整正向纤维 \(F(0)\) 的阈值为 \(R/\lambda\)。这里的存在量词不是说固定一个 \(F\) 后可任意指定其纤维。
 
+完整证明见 [FF1–27](canonical/finite_fiber_classification.md#ff-object)。必要性的满射已用有限维 Brouwer 闭球自映射直接重证，properness、所有纤维、fixed-set 构造和双向 pullback 均展开；本规范证明不导入或输出 degree 数值。
+
 ### 必要性与充分性分开
 
-- **必要性**：全域 Cayley 映射的次线性增长使两坐标投影的 homotopy 一致 proper；有限维 Brouwer degree 为 1，给全域、全值域和非空紧纤维。同输出/同输入的 RL 比较给直径界。来源：S23 `lem:diameters` 293–306 行，`thm:finite_geometry` 624–686 行。
+- **必要性**：[FF-COERCIVITY](canonical/finite_fiber_classification.md#ff-coercivity) 用全域 Cayley 次线性增长逐目标构造有限维 Brouwer 闭球自映射，给全域/全值域；coercivity 与连续性给 proper 及全部非空紧纤维，同输出/同输入全对 RL 给直径界。S23 的 finite_geometry 624–686 行另使用 degree 路线并陈述 degree=1；这条附加数值没有纳入本次 C04 验收，不以其摘要承担现规范证明。
 - **充分性**：对任意非空紧 \(K\) 构造 \(R_K:H\to\overline{\operatorname{conv}}K\)，使 \(\operatorname{Fix}R_K=K\)，Hölder 常数恰可取 \((\operatorname{diam}K)^{1-\gamma}\)。令 \(C=R_K\) 即实现逆零纤维；令 \(C=-R_{\lambda K}\) 实现正向零纤维。来源：`thm:fixedset` 738–838 行；`thm:fibers` 840–871 行。
 
 固定点构造的关键不是未经证明的“任意紧集是 retract”。令 \(Q=\overline{\operatorname{conv}}K\)、\(D_K=\operatorname{diam}K\)；凸包余量仅对**每个 \(p\in Q\)** 断言
 \(\sup_{q\in Q}\|p-q\|^2\le D_K^2-d(p,K)^2\)。再用正系数可数 bump 把 \(Q\setminus K\) 上所有点向固定 \(k_0\in K\) 推动，同时保留共同 Hölder 常数；最后复合 \(P_Q\)。若任意取 \(p\notin Q\)，该余量式甚至对 \(K=\{0\}\) 不成立。本轮核对了 bump 幅度的正性、负指数不等式方向、可数覆盖、级数一致收敛和无额外不动点。来源：`lem:margin` 711–736 行及上述固定点定理。
 
-**范围门槛**：固定点实现本身允许 Hilbert 空间；完整纤维分类的必要性使用有限维紧性与 Brouwer degree。不得整体推广到无限维。非空完整纤维再与 H02 合取，才得到到 singleton 的 Hausdorff 误差界；H02 单独不保证原纤维非空。
+**范围门槛**：固定点实现本身允许 Hilbert 空间；完整纤维分类的规范必要性使用有限维紧性与 Brouwer 闭球不动点定理。不得整体推广到无限维。非空完整纤维再与 H02 合取，才得到到 singleton 的 Hausdorff 误差界；H02 单独不保证原纤维非空。
 
 <a id="din"></a>
 <a id="log"></a>
 <a id="r05"></a>
 ## H04 · 一般模、Dini 门槛与对数反例
+
+[GM1–39](canonical/general_modulus_dynamics.md#gm-data) 已在 C09/C10/C11 原身份下把全前件、Dini 精确预算、对数完整图和局部同伦完整重构并独立接收。以下保留原路线摘要，完整可调用正文以前述独立页为准。
 
 本节的局部收敛命题固定 \(X=\mathbb R^n\)，沿用 [R01/R02](rleb_ppa.md#r01) 的同一图块、闭零集、开域与完整真残差约定；其精确版本为 [C09](../CLAIMS.md)。不沿用 H01 的任意 Hilbert 空间量词。将局部 all-pairs 右侧替换为连续非减 \(\omega\)，\(\omega(0)=0\)。保留局部 range coverage、最近零点比较、真实输出误差界及 gauge 范围；要求
 
@@ -129,7 +133,7 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 \mathcal O=\{x\in U:d(x,S)<R,\ \ell_\omega(d(x,S))<d(x,U^c)\}.
 \]
 
-\(\mathcal O\) 开、正向不变，包含 \(S\cap U\)。局部 all-pairs 保证 \(J_{\mathcal G}\) 连续；统一尾界保证迭代一致收敛，故 \(\Pi(x)=\lim_kJ_{\mathcal G}^kx\) 是到 \(S\cap U\) 的连续回缩。该零集是 Euclidean neighborhood retract，并具有原稿明确给出的局部收缩性质。来源：S19 `prop:limit-retraction`，322–394 行。
+\(\mathcal O\) 开、正向不变，包含 \(S\cap U\)。局部 all-pairs 保证 \(J_{\mathcal G}\) 连续；[GM19–25](canonical/general_modulus_dynamics.md#gm-retraction) 以实际 s+ℓω(d⁺)≤ℓω(d) 闭合开域不变；整个 O 的同一尾界保证迭代一致收敛，故 \(\Pi(x)=\lim_kJ_{\mathcal G}^kx\) 是到 \(S\cap U\) 的连续回缩。该零集是 Euclidean neighborhood retract，并具有原稿明确给出的局部收缩性质。来源：S19 `prop:limit-retraction`，322–394 行。
 
 **跨主线关系**：H03 可实现任意非空紧零集，包括 Cantor 型集合；H05 的收敛假设则迫使零集局部可缩。两者并不矛盾：在这类非局部可缩零点附近，H04 的整套附加假设不能全部成立。地图应将此标为“合取假设的拓扑限制”，不能标成 H03 被 H05 否定。
 
@@ -217,13 +221,13 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 |---|---|---|---|
 | HE-H01 | 全图 RL；图和坐标同输入唯一性 | Hölder Cayley 表示 | 代数等价 |
 | HE-H02 | Cayley 表示；同常数 Hölder 扩张 | maximal iff 全输入；存在 completion | 外部扩张支撑 |
-| HE-H03 | 二次 excess；正交提升；Kirszbraun | 单个 cross-lift N | 稿内构造，已局部重算 |
-| HE-H04 | Cayley；cross-lift；Banach contraction | C03 同时正反 shadow | 合取蕴含 |
-| HE-H05 | 单纯形半径；投影 Hölder 模；全域重建 | 维数统一最优因子 | 反向下界 |
-| HE-H06 | maximal；次线性增长；有限维；degree | 非空紧纤维、properness | 维数限制 |
-| HE-H07 | 凸包余量；正 bump；投影 | 任意紧集精确固定点实现 | 构造 |
-| HE-H08 | properness；直径界 | C04 必要性 | 必要条件 |
-| HE-H09 | 固定点实现；Cayley 重建 | C04 充分性 | 存在性 |
+| HE-H03 | 二次 excess；任意指标正交提升；准确 Hilbert Lipschitz 扩张 | 同一个全域 cross-lift N | GSH-1–7 完整独立证明 |
+| HE-H04 | Cayley；同一个 cross-lift；双 Banach contraction | C03 同时正反影子 | GSH-8–14 完整独立证明 |
+| HE-H05 | 单纯形任意中心半径；正负投影 Hölder；全域重建 | 维数统一最优因子 | GSH-15–18 独立匹配下界 |
+| HE-H06 | 固定参数图极大；次线性增长；有限维；Brouwer 闭球接口 | 非空紧全部纤维、properness | FF-COERCIVITY 完整证明；不输出原 degree 数值 |
+| HE-H07 | 凸包余量；全对正 bump；正权一致级数；Hilbert 投影 | 任意紧集同常数精确 fixed-set | FF13–25 完整构造 |
+| HE-H08 | 有限维全部非空紧纤维；直径界 | C04 必要性 | FF1–12 完整证明 |
+| HE-H09 | 同常数固定点实现；全域正负 Cayley 重建 | C04 双向充分性 | FF26–27 完整存在性 |
 | HE-H10 | 局部 coverage；RL 模；输出 EB；兼容；Dini；留域 | 有限长度及点收敛 | 条件收敛 |
 | HE-H11 | 全对连续性；统一尾界；不变开域 | 连续极限回缩 | 拓扑限制 |
 | HE-H12 | 对数完整接缝；a≤1；非零初始高度 | 距离收缩而点发散 | 反例 |
@@ -233,6 +237,6 @@ B(0,(m-\alpha)/\lambda)\subset F(\operatorname{int}A).
 
 ## 下一步证明工作
 
-1. H01 的同常数扩张与 H07 的 rational morphism 导入门已分别在 HE-EXTENSION、LIT-GRN-2002 核过；继续独立核 C03 的 cross-lift/影子锐性、C04 的 degree/fixed-set 构造，以及 C05-v2 的原生整窗模型认证、C05-v1 的来源版本核对。
+1. H01 同常数扩张、C03 完整影子与统一锐性、C04 双向完整纤维分类已各有独立规范证明；继续 C05-v2 原生整窗认证、C05-v1 来源版本核对及固定维数影子最优因子。Brouwer 是本轮满纤维的明确基础接口，来源 degree 数值不由此宣称已核。
 2. 在随机推论正式版本中补上给定度量完备性，并保留反例作为修订原因。
 3. 用 H05 的拓扑限制逐个审查 H03 中病态紧零集实现能满足哪些 EB/coverage 条件，避免把结构存在性误读为 PPA 收敛。
