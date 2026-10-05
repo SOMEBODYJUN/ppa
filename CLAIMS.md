@@ -127,7 +127,7 @@
 
 - **Status**：`candidate`；内部证明包和承重步骤已有核读，完整退化分支与外部定理适用门仍待独立审查。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(X,E\)、闭尖满维 nice 凸锥 \(C\)、\(C^1\) 映射 \(G\) 在 \(\bar x\) 满足 \(G(\bar x)=0\)。设 \(A=DG(\bar x)\)，\(\mathfrak F=F_{\min}(\operatorname{Im}A\cap C)\)，\(H=\mathfrak F^\perp\)，\(S_{\mathrm{dual}}=\operatorname{span}(C^*\cap\mathfrak F^\perp)\)。假设 \(A^*C^*\) 闭、\(\operatorname{rank}(DG(x)^*|_H)\) 在完整邻域恒定，且参考面 \(\mathfrak F\) amenable；保留原包的闭像与常秩局部条件。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(X,E\)、闭尖满维 nice 凸锥 \(C\)、\(C^1\) 映射 \(G\) 在 \(\bar x\) 满足 \(G(\bar x)=0\)。设 \(A=DG(\bar x)\)，\(\mathfrak F=F_{\min}(\operatorname{Im}A\cap C)\)，\(H=\mathfrak F^\perp\)，\(S_{\mathrm{dual}}=\operatorname{span}(C^*\cap\mathfrak F^\perp)\)。假设 \(A^*C^*\) 闭、存在 \(\bar x\) 的开邻域使 \(\operatorname{rank}(DG(x)^*|_H)\) 对其中每个 \(x\) 恒定，且参考面 \(\mathfrak F\) amenable。闭像与邻域常秩前件即这里列明的两项。
 - **Conclusion**：冻结秩夹逼使面稳定，经共同法向流形与切向修正，存在邻域和 \(\kappa<\infty\)，对其中每个 \(x\) 有 \(d(x,G^{-1}C)\le\kappa d(G(x),C)\)。此为**当前单系统参考面**的条件结论。另对固定 proper nice 锥，“每个在顶点冻结 CRSC 的 \(C^1\) 系统均 MSCQ”与**整个锥每个面 amenable** 等价；逆向测试是各面的线性嵌入。单个参考面 amenable 不蕴含全锥的普遍结论。
 - **Dependencies / Evidence / Objections / Status / Related Files**：[cone_markov §1](research/cone_markov.md)，S14C 主稿及 CM-C 证明包。内部审计与承重步骤重读；正式版文献和退化常数分支待独立核。该锥距离残差不是 \(r_F\)，不能自动迁移 RLEB。
 
@@ -690,7 +690,7 @@
 - **Dependencies / Evidence / Status**：[AV-PROX](research/topics/examples/absolute_value_subgradient.md#av-prox) 完整解近端包含式及分段反射证明，`derived-checked`。
 - **Counterevidence / Scope**：原算子残差局部系数下确界 0 不转移到近端步残差；全域步 EB 不成立，局部 \(\gamma<1\) 可继承界不表示全图次线性 RL。
 
-## C80-v1 / FS-REGULARITY · 有限状态同步残差的连续分片仿射性
+## C80-v1 / FS-REGULARITY · 有限状态同步残差平方的连续分片仿射性
 
 - **Status**：`derived-checked`。
 
@@ -1215,3 +1215,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：G=[0,1]²，T_j(x,y)=(x,j)，每步独立公平 j∈{0,1}。全部不变律为 ν⊗β，β=(δ₀+δ₁)/2；任意 μ 一步平稳，原 Ψ(μ)=W₂(μ_y,β)，其零集 ZΨ 是所有第二边缘 β 的律，且 d_W₂(μ,ZΨ)=Ψ(μ)。对每个 0<t<1/2，μ_t=[δ_(1/2−t,0)+δ_(1/2+t,1)]/2 趋于 π̄=δ_(1/2)⊗β，Ψ(μ_t)=0 而 d_W₂(μ_t,全部不变律)=W₂(μ_t,π̄)=t>0。
 - **Definitions / Dependencies / Evidence**：[B31 完整定义及最优提升](research/topics/random_markov/compact_residual_boundaries.md#crb-false-zero-object)、[B32–B33 所有不变目标的下界](research/topics/random_markov/compact_residual_boundaries.md#crb-false-zero-witness)。最近锚 π̄ 和实际极限 μ_tP 各有合法输入最优零残差计划；同共同噪声复合及本文明确定义的逐步位移代价仍为零。来源 CM-M Theorem 2，仅作溯源。
 - **Counterevidence / Scope**：任何零处取零的局部不变集 gauge 都失败；到 ZΨ 的线性界却以系数 1 成立。此对象是原始 OT 残差假零，与 C71 删除输入最优约束后的假零不同；不改变条件刷新残差或原算子 r_F。
+
+<a id="c145"></a>
+## C145-v1 / BIT-ENVELOPE · 非均匀单 bit 的最小非降模与精确律长度
+
+- **Status**：`derived-checked`；BIT1–18 从同一标量核独立重构；核心可测实现、原子阈值强对偶、端点和精确步长已有另一路逐式复核，最终空白接收的实际范围另记。
+- **Exact Statement / Objects / Domain / Quantifiers**：标准 Borel 守恒变量 \(u\) 的固定概率边缘 \(\nu\)，可测 \(0<a(u)\le1\)、\(0<b(u)<1\)。以概率 \(a(u)\) 重抽目标 Bernoulli\((b(u))\)，否则保留 bit；全部条件律 \(\mu_r(du,dx)=\nu(du)\operatorname{Bern}(r(u))(dx)\)，\(r:U\to[0,1]\) 可测，以保持 \(u\) 的 \(\mathsf W_\nu\) 比较。\(h=|r-b|\)、\(M=\max(b,1-b)\)、\(E^2=\int h\)、\(\mathcal R^2=\int ah\)。全律最小非降模恰为 \(\phi(t)^2=\sup_{0\le h\le M,\int ah\le t^2}\int h=\inf_{\ell\ge0}[\ell t^2+\int M(1-\ell a)_+]\)，原问题取得，\(\phi(0)=0\) 且原点连续，最终饱和。对每个初律及 \(k\ge0\)，law-step 平方恰为 \(\mathcal R_k^2=E_k^2-E_{k+1}^2=\int a(1-a)^kh\)；精确律长度为该量平方根的级数，允许∞。全初律最大绝对误差平方为 \(\sup_\mu E(\mu P^k)^2=\int M(1-a)^k\to0\)。
+- **Definitions / Dependencies / Evidence**：[BIT1–18 独立正文](research/topics/random_markov/one_bit_envelope.md#bit-object) 给全幅度可测实现、有限测度分位与原子填充对偶、全部初律的精确更新，另给 \(a(u)=u^p\) 的饱和幂模与长度阈值 \(p<1\)，以及 \(a(u)=e^{-1/u}\) 的每个局部正幂 EB 失败；公平 bit 的指定补空间谱身份与最小有界余项也独立证明。现存 CM-M Theorem 7 只作来源，不扩写 C129/C130 身份。
+- **Counterevidence / Scope**：\(t=0\) 对偶 inf 未必在有限乘子取得；\(\phi\) 不是全局严格增 gauge。绝对共同尾不等于统一相对几何率；律长度不等于样本路径长度。此条件残差的精确能量等式不移植到多 bit、Gaussian 或原同步 \(\Psi\)。原生连续随机映射实现、弱 Poincaré 文献对照与新颖性另核。

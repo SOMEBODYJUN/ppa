@@ -1,5 +1,11 @@
 # 承重超边的量词与条件契约
 
+## E20/E36–E39：锥候选路线不随 Markov 验收升级
+
+这些边对应 C13 的原锥证明包候选。E20 显式合取同一系统的 C-RANK、C-FACE、C-NORMAL、C-AMEN；单有秩夹逼和面稳定不能制造参考面误差界或法向/切向修正。E36/E37 的箭头记录候选路线，不能用 `conditional` 或 `implies` 的关系名取代其 `candidate` 证据状态。Pataki 闭像接口、面稳定、常秩修正和秩零/零面/全面等退化分支仍须独立展开。
+
+E38 对固定 proper nice 锥量化全部顶点冻结 CRSC 系统，须该锥每个面 amenable；它与单系统的 C-AMEN 有不同量词。E39 是尚未在规范层重构原构造的 `source-report` 反例，攻击缺 amenability 的旧读法，不能反驳 E38 的完整候选前件。锥 MSCQ 接确定性真残差的 E21 还另需同一零集及残差桥，不能借同页 Markov 的已证链闭合。
+
 ## E42–E43：两种条件刷新不能共用残差节点
 
 E42 固定同一标准 Borel 守恒变量的边缘 \(\nu\)、有限 bit 纤维、正的坐标刷新概率及余概率恒等更新。\(\mathsf W_\nu\) 只在同一 \(u\) 内作 Hamming 成本运输，\(\mathcal R\) 是保留 \((u,x_{-i})\) 的条件 Bernoulli 残差。只有对**全部固定边缘律**及同一目标 \(\pi_\nu\)，\(a_*={\rm ess\,inf}_u\min_i p_i(u)>0\) 才与统一线性 EB／到目标的严格率等价；最佳系数与每步因子见 [C129](topics/random_markov/conditional_refresh.md#cr-binary-theorem)。等价不指任意两律间的 Lipschitz 性。
@@ -11,6 +17,12 @@ E43 另取 \(\mathbb R^m\) 上 \(Q\succ0\) 的 Gaussian 目标 \(\beta\) 和常�
 E44 的 \(e,c\) 是同一状态集上的非负有限函数；存在共同零点及两者都正的 excursion，\(1\le p,r<\infty,q>0\)。[C126/MR1](topics/random_markov/moment_recoupling.md#mr-moment) 的等价式量化**全部有限支撑律**，且点态系数必须是同一 \(K\)。law-space 必要性另需闭支持目标、平稳律在该目标上、状态残差在该律上零，以及非零更新输出离目标；它不把 \(\Psi\) 或条件残差 \(\mathcal R\) 直接等同于标量 \(c\)。E44 输出专记 [MOMENT-LIFT-GAP](topics/random_markov/moment_recoupling.md#mr-moment-gap)；没有原算子桥时不连到 D04。
 
 E45 的输出是 [C127/MR3](topics/random_markov/moment_recoupling.md#mr-recoupling) 的**线性 EB**，不是 CM-GAUGE 的 exact-zero ⇔ 一般 gauge。必须同时在同一随机表示及指定律类上有 \(d(\mu P)\le c_0d(\mu)\)、\(c_0<1\)，并对每个 \(\mu\) 用输入 \(W_2\)-最优、同噪声的近极小序列 \((\pi_j,\eta_j)\) 逼近原 \(\Psi\) 下确界；同一个 \(\chi\) 控制这些对的 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\)。不能从别的运输对、不同表示或条件刷新残差移植损失界；原生模型尚须单独认证这些量词。
+
+## E222/E223：单 bit 的绝对尾、最小模与实际律长度
+
+E222 将 M-COND 限定为 [C145/BIT1](topics/random_markov/one_bit_envelope.md#bit-object) 的**同一**单 bit 核：固定守恒 \(\nu\)、可测 \(0<a\le1,0<b<1\)、全部可测 Bernoulli 初律。BIT3 的全幅度实现与 BIT7 的有原子阈值填充才给最小非降包络和强对偶，\(t=0\) 仅是对偶 inf，饱和模不称全域严格增 gauge。
+
+E223 在保持 \(u\) 的 \(\mathsf W_\nu\) 中计算实际 law-step；其平方恰为条件 \(\mathcal R_k^2=E_k^2-E_{k+1}^2\)。最远端点律实现所有时间的最大**绝对**尾，仍不授予刷新概率下确界为零时的统一**相对**率。精确长度级数允许∞；幂剖面在 \(p\ge1\) 给点收敛却无限律长度。此标量核能量等式不回写给多 bit、Gaussian、原同步 \(\Psi\) 或确定性 PPA，BIT16–18 的谱身份还另限公平 bit 的逐纤维中心子空间。
 
 ## E84–E87：孤立零点的分支、正因子与输入覆盖
 

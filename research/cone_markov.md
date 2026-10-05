@@ -12,6 +12,8 @@
 <a id="c-nonamen"></a>
 ## 1. 锥：冻结最小面的精确对象
 
+**证据范围：本节是 C13 的候选证明路线。** 冻结秩、面稳定与共同修正尚未在规范层给出全部独立证明和退化分支；下列公式与箭头记录原证明包的精确条件，不能因摘要措辞或内部审计标签当作 `derived-checked`。nice 非 amenable 反例仍是 `source-report`。这些未闭门属于可得原件尚须重构的工作，而不是本页已验收结论。
+
 有限维欧氏空间 \(X,E\)，闭、尖、满维凸锥 \(C\subset E\)，\(G:V\to E\) 为 \(C^1\)，\(G(\bar x)=0\)。令
 
 \[
@@ -42,7 +44,7 @@ H=\mathfrak F^\perp,\ S_{\rm dual}=\operatorname{span}(C^*\cap\mathfrak F^\perp)
 
 是局部上界，未声称最佳常数或指定数值半径。秩零、零面、全面、零维约化需分支处理，不能套正奇异值公式。[CM-C §§3–5]
 
-**普遍量词与反例。** 上表单个系统只需它的参考面 \(\mathfrak F\) amenable；若结论量化为固定 proper nice 锥上的**每个**顶点冻结 CRSC 系统，则前件是该锥**每个面** amenable。全锥 amenability 与这类系统普遍 MSCQ 等价；逆向只需测试各面线性等距嵌入。nice 非 amenable 的来源锥上，线性导数使 full facial CRCQ 全局恒定，但构造路径的输入距离为 \(\Theta(t^3)\)、锥残差至多 \(O(t^5)\)，MSCQ 失败。此来源反例说明 nice 单独不足以保证普遍结论，**不反驳**附全锥 amenability 的条件命题。该锥本身来自既有文献，不能作为新构造计功。[CM-C §7]
+**候选普遍量词与来源反例。** 上表单个系统只需它的参考面 \(\mathfrak F\) amenable；若结论量化为固定 proper nice 锥上的**每个**顶点冻结 CRSC 系统，则前件是该锥**每个面** amenable。原包主张全锥 amenability 与这类系统普遍 MSCQ 等价；逆向路线只需测试各面线性等距嵌入，此等价仍按 C13 的候选范围核。nice 非 amenable 的来源锥上，据原包报告，线性导数使 full facial CRCQ 全局恒定，但构造路径的输入距离为 \(\Theta(t^3)\)、锥残差至多 \(O(t^5)\)，MSCQ 失败。此来源反例指向 nice 单独不足以保证普遍结论，**不反驳**附全锥 amenability 的条件命题；其原构造尚未在规范层独立重算。该锥本身来自既有文献，不能作为新构造计功。[CM-C §7]
 
 **实例的数学作用。** 耦合双 SOC 的可行集为 \(s,t\ge0,u=st\)；PSD 例可行集为 \(B\succeq0,u=\operatorname{tr}(B^2)\)。它们检验共同法向修正和高维非多面体面，未从各块 MSCQ 推联合 MSCQ。PSD 参考面 amenability 常数为 1，有限乘积常数取各面的最大值。[CM-C §6]
 
@@ -83,7 +85,7 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 \iff \exists B<\infty:E\le B\Psi^2.
 \]
 
-完整的固定系统证明、空零面与非空零面分支及动力反例已在独立的 [C15 有限状态证书](topics/random_markov/finite_state_certificate.md#fs-theorem) 重写；[C80 正则性](topics/random_markov/finite_state_certificate.md#fs-regularity) 另证分片仿射与 Lipschitz，此处仅保留路线摘要。
+完整的固定系统证明、空零面与非空零面分支及动力反例已在独立的 [C15 有限状态证书](topics/random_markov/finite_state_certificate.md#fs-theorem) 重写；[C80 正则性](topics/random_markov/finite_state_certificate.md#fs-regularity) 另证平方残差 \(\Phi=\Psi^2\) 的连续分片仿射与全域 Lipschitz，此处仅保留路线摘要。
 
 最优平方系数为
 \(B_* =\max_{v\in\mathcal V,R\cdot v>0}E(r(v))/(R\cdot v)\)，空最大值为 0。证明靠精确有限分支与凸性；不需要混合性、唯一不变律或 almost-firmness。只对固定数据给有限判定，不承诺多项式时间或跨系统统一常数。[CM-M Theorem F]
@@ -120,14 +122,15 @@ d_i(u;\mu)^2=\sum_{x_{-i}}\mu_u(x_{-i})
 <a id="cond-eb"></a>
 **CM-BINARY / C129-v1：**\(a_* =\operatorname{ess\,inf}_u\min_i p_i(u)>0\) 当且仅当存在统一线性 EB／**到 \(\pi_\nu\) 距离**的一步严格收缩／某固定块严格收缩／统一相对几何率；最佳 EB 常数 \(a_*^{-1/2}\)、最佳 \(k\) 步因子 \((1-a_*)^{k/2}\)。若 \(a_*=0\)，每条律仍收敛，但每个固定 \(k\) 的最坏相对因子为 1。[独立对象、量词及证明](topics/random_markov/conditional_refresh.md#cr-binary-theorem)；原来源 CM-M Theorem 6。这里的 \(\mathsf W_\nu/\mathcal R\) 不能用于下段 Gaussian 对象。
 
-单 bit 时，记当前条件成功概率为 \(r(u)=\mu_u(X_1=1)\)、目标概率 \(b(u)=b_1(u)\)、\(a(u)=p_1(u)\)、\(h(u)=|r(u)-b(u)|\)、\(M(u)=\max\{b(u),1-b(u)\}\)。这里 \(0\le h\le M\) 可测，且下列积分均对 \(\nu\)；精确最小非降模满足
+<a id="m-one-bit"></a>
+**CM-ONE-BIT / C145-v1：**单 bit 时，记当前条件成功概率为 \(r(u)=\mu_u(X_1=1)\)、目标概率 \(b(u)=b_1(u)\)、\(a(u)=p_1(u)\)、\(h(u)=|r(u)-b(u)|\)、\(M(u)=\max\{b(u),1-b(u)\}\)。这里 \(0\le h\le M\) 可测，且下列积分均对 \(\nu\)；精确最小非降模满足
 
 \[
 \phi(t)^2=\sup_{0\le h\le M,\int ah\,d\nu\le t^2}\int h\,d\nu
-=\inf_{\lambda\ge0}\left[\lambda t^2+\int M(1-\lambda a)_+\,d\nu\right].
+=\inf_{\ell\ge0}\left[\ell t^2+\int M(1-\ell a)_+\,d\nu\right].
 \]
 
-这是有饱和区的模，不能当成全局严格增 gauge；精确长度为 \(\sum_k[\int a(1-a)^kh\,d\nu]^{1/2}\)。[CM-M Theorem 7]
+\(\ell\) 是对偶乘子。这是有饱和区的模，不能当成全局严格增 gauge；精确**律空间**长度为 \(\sum_k[\int a(1-a)^kh\,d\nu]^{1/2}\)，允许∞。所有可测幅度的实现、含原子和零预算的强对偶、逐步距离等式及两个非均匀剖面的边界已在 [C145/BIT1–18](topics/random_markov/one_bit_envelope.md#bit-object) 独立重构；不借 C129 的证据标签升级。来源为 CM-M Theorem 7。
 
 <a id="m-gauss"></a>
 **CM-GAUSSIAN / C130-v1：**另取目标 \(\beta=N(m_0,Q^{-1})\)、\(Q\succ0\)，Gaussian Gibbs 概率 \(p_i>0,\sum_i p_i=1\)，\(D=\operatorname{diag}(p_i/Q_{ii})\)，\(\zeta=\lambda_{\min}(Q^{1/2}DQ^{1/2})\)。这里 \(W_{2,Q}\) 的运输成本为 \((x-y)^TQ(x-y)\)，而原生条件残差是

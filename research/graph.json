@@ -195,17 +195,20 @@
     {
       "id": "C-RANK",
       "label": "冻结秩夹逼",
-      "file": "cone_markov.md#c-rank"
+      "file": "cone_markov.md#c-rank",
+      "evidence_status": "candidate"
     },
     {
       "id": "C-FACE",
       "label": "面稳定与共同流形",
-      "file": "cone_markov.md#c-face"
+      "file": "cone_markov.md#c-face",
+      "evidence_status": "candidate"
     },
     {
       "id": "C-MSCQ",
       "label": "原锥残差 MSCQ",
-      "file": "cone_markov.md#c-mscq"
+      "file": "cone_markov.md#c-mscq",
+      "evidence_status": "candidate"
     },
     {
       "id": "M-PSI",
@@ -329,17 +332,20 @@
     {
       "id": "C-NORMAL",
       "label": "共同法向/切向修正",
-      "file": "cone_markov.md#c-normal"
+      "file": "cone_markov.md#c-normal",
+      "evidence_status": "candidate"
     },
     {
       "id": "C-UNIV",
       "label": "顶点系统普遍 MSCQ",
-      "file": "cone_markov.md#c-univ"
+      "file": "cone_markov.md#c-univ",
+      "evidence_status": "candidate"
     },
     {
       "id": "C-NONAMEN",
       "label": "nice 非 amenable 边界例",
-      "file": "cone_markov.md#c-nonamen"
+      "file": "cone_markov.md#c-nonamen",
+      "evidence_status": "source-report"
     },
     {
       "id": "M-FALSE",
@@ -1105,7 +1111,7 @@
     },
     {
       "id": "FS-REGULARITY",
-      "label": "固定有限状态同步残差连续分片仿射",
+      "label": "固定有限状态 Φ=Ψ² 连续分片仿射",
       "file": "topics/random_markov/finite_state_certificate.md#fs-regularity"
     },
     {
@@ -1735,6 +1741,24 @@
       "label": "Dini 连续长度预算与严格留域",
       "file": "canonical/general_modulus_dynamics.md#gm-dini-length",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "BIT-ONE",
+      "label": "固定守恒边缘的非均匀单 bit 核",
+      "file": "topics/random_markov/one_bit_envelope.md#bit-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "BIT-MOD",
+      "label": "全律最小非降模与原子强对偶",
+      "file": "topics/random_markov/one_bit_envelope.md#bit-modulus",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "BIT-FLOW",
+      "label": "全初律绝对尾与精确律空间长度",
+      "file": "topics/random_markov/one_bit_envelope.md#bit-length",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -1984,12 +2008,14 @@
       "topic": "锥",
       "inputs": [
         "C-RANK",
-        "C-FACE"
+        "C-FACE",
+        "C-NORMAL",
+        "C-AMEN"
       ],
       "output": "C-MSCQ",
       "relation": "conditional",
-      "scope": "nice+冻结 CRSC+参考面 amenability+法向/切向修正",
-      "status": "证明包内部审计"
+      "scope": "C13 单系统候选：同一个 proper nice 锥、冻结 CRSC、面稳定、法向/切向修正和该参考面 amenability 同时成立；不能只从秩与面稳定取得 MSCQ。退化分支与外部闭像接口仍须独立重构。",
+      "status": "candidate；原锥证明包路线及内部审计，不是规范层完整验收"
     },
     {
       "id": "E21",
@@ -2172,7 +2198,7 @@
       "output": "C-FACE",
       "relation": "conditional",
       "scope": "nice、闭像及常秩核投影给面稳定",
-      "status": "锥证明包内部审计"
+      "status": "candidate；C13 原锥证明包路线，完整步骤与退化分支尚待独立重构"
     },
     {
       "id": "E37",
@@ -2185,7 +2211,7 @@
       "output": "C-MSCQ",
       "relation": "implies",
       "scope": "法向流形修正与参考面切向误差界联合",
-      "status": "锥证明包内部审计"
+      "status": "candidate；C13 原锥证明包路线，完整步骤与退化分支尚待独立重构"
     },
     {
       "id": "E38",
@@ -4305,6 +4331,29 @@
       "relation": "limits",
       "scope": "C142：任意非零实 Hilbert H 的非空紧图 G，若单调，可取坐标界 a,b、单位 e、u=(a+1)e、v=te 且 t>(2a+1)b，得到对 G 全部图点的严格正单调加点；若不单调本已不是极大单调。C132 的新定义 F_{U,K} 是紧图的特例，不需其 S、EB 或 gauge 前提。延拓到非紧图属于不同完整对象，须重审真残差与近端纤维。",
       "status": "derived-checked；OS6a 显式加点与空白独立逆向核验；F41 只排除直接充当极大单调子类成员"
+    },
+    {
+      "id": "E222",
+      "topic": "Markov",
+      "inputs": [
+        "M-COND",
+        "BIT-ONE"
+      ],
+      "output": "BIT-MOD",
+      "relation": "implies",
+      "scope": "C145：同一守恒边缘 ν 的 m=1 条件核，全部可测 Bernoulli 初律，0<a≤1、0<b<1；全部幅度 h≤M 可实现，有限测度分位与原子填充给 t≥0 的最小非降包络及对偶 inf。t=0 的 inf 未必有限乘子取得；饱和包络不是严格增 gauge，不是原 Ψ。",
+      "status": "derived-checked；BIT1–8 独立重构和逐式复核，最终空白范围另记"
+    },
+    {
+      "id": "E223",
+      "topic": "Markov",
+      "inputs": [
+        "BIT-ONE"
+      ],
+      "output": "BIT-FLOW",
+      "relation": "implies",
+      "scope": "C145 同一单 bit 核与保持 u 的 Wν：全部初律、全部 k≥0 的实际 law-step 平方恰为 R_k²=E_k²−E_{k+1}²，精确律长度级数允许∞；最远端点初律同时取到每个时间最大绝对尾，尾趋0不授予相对几何率或样本路径有限长度。",
+      "status": "derived-checked；BIT9–15 独立推导，不转授多 bit、Gaussian 或原 Ψ"
     }
   ]
 }

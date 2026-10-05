@@ -16,7 +16,7 @@
 
 本次 11 个 ZIP 内未发现更深 ZIP。外层上传包与历史已展开包不在这 11 个仓库 ZIP 的计数中。每个来源的具体路径见 [原件清单](SOURCE_FILE_INVENTORY.tsv)；每个包内小文件见 [成员清单](ZIP_MEMBER_INVENTORY.tsv)。清单中的 `semantic_disposition=unreviewed` 是**逐项验收未关闭**，不等于从未有人读过该文本。不能把哈希去重填成 `proved`。
 
-**当前覆盖读法**：当前 153 行逐源单元有去向（147 rewritten、3 superseded、3 deferred），最近的 [C03 全局影子](../canonical/global_shadow.md#gsh-object)、[C04 完整纤维](../canonical/finite_fiber_classification.md#ff-object)、[C18 固定窗覆盖](../canonical/full_fiber_coverage.md#fc-object) 及 [C19/C20-v2 有限 QP 自足重写](../canonical/finite_data_proxy.md#fd-object)、GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
+**当前覆盖读法**：当前 156 行逐源单元有去向（150 rewritten、3 superseded、3 deferred），最近的 [C03 全局影子](../canonical/global_shadow.md#gsh-object)、[C04 完整纤维](../canonical/finite_fiber_classification.md#ff-object)、[C18 固定窗覆盖](../canonical/full_fiber_coverage.md#fc-object) 及 [C19/C20-v2 有限 QP 自足重写](../canonical/finite_data_proxy.md#fd-object)、GX-055–058、SS1 解选择、S19 signed-Schur、Markov Theorems 6/8、[Theorem 7 的单 bit 规范证明 C145](../topics/random_markov/one_bit_envelope.md#bit-object) 与算子空间四个紧源引理的选定单元见逐单元表；文件级、ZIP 成员级的 `unreviewed` 保留至该来源的全部有价值单元均有理由明确的去向。逐源行数除以 251 不是覆盖率：分子是章节/命题，分母是文件，且数份历史稿重复同一对象；目前尚无全部有价值单元的语义分母。[来源位置表](SOURCE_OCCURRENCES.tsv)与[内容组表](PAYLOAD_GROUPS.tsv)已由[生成器](build_occurrence_index.py)精确对账，仍只有格式提示及待枚举状态；[分母计划](SEMANTIC_INVENTORY_PLAN.md) 中逐段数学枚举尚未完成。
 
 所有历史路径统一指向 `history/sources/`。迁移只改变位置，原件字节不得改变。每次新导入记录独立批次，不重写初次导入哈希。
 

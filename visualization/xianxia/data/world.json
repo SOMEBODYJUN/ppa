@@ -315,22 +315,22 @@
       "realm": "composite"
     },
     "C-FACE": {
-      "role": "object",
-      "kind": "mine",
-      "object": "spring",
-      "evidence": "unspecified",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "constellation",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 532,
       "y": 2067,
       "region": "composite",
       "realm": "composite"
     },
     "C-MSCQ": {
-      "role": "object",
-      "kind": "mine",
-      "object": "crystal",
-      "evidence": "unspecified",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "portal",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 720,
       "y": 1976,
       "region": "composite",
@@ -340,7 +340,7 @@
       "role": "object",
       "kind": "mine",
       "object": "stele",
-      "evidence": "unspecified",
+      "evidence": "source-report",
       "reason": "neutral-default",
       "x": 250,
       "y": 1885,
@@ -348,33 +348,33 @@
       "realm": "composite"
     },
     "C-NORMAL": {
-      "role": "object",
-      "kind": "mine",
-      "object": "spring",
-      "evidence": "unspecified",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "constellation",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 720,
       "y": 1885,
       "region": "composite",
       "realm": "composite"
     },
     "C-RANK": {
-      "role": "object",
-      "kind": "mine",
-      "object": "spring",
-      "evidence": "unspecified",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "constellation",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 626,
       "y": 1976,
       "region": "composite",
       "realm": "composite"
     },
     "C-UNIV": {
-      "role": "object",
-      "kind": "mine",
-      "object": "sword",
-      "evidence": "unspecified",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "ocean",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 626,
       "y": 1885,
       "region": "composite",
@@ -3866,6 +3866,39 @@
       "y": 584,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "BIT-FLOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "BIT-MOD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 1521,
+      "region": "random",
+      "realm": "random"
+    },
+    "BIT-ONE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 1794,
+      "region": "random",
+      "realm": "random"
     }
   },
   "edges": {
@@ -4752,6 +4785,14 @@
     "E221": {
       "x": 1866.92,
       "y": 509.91
+    },
+    "E222": {
+      "x": 4607.57,
+      "y": 1565.67
+    },
+    "E223": {
+      "x": 4946.36,
+      "y": 2023.2
     }
   },
   "bounds": {
