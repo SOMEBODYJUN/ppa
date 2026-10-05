@@ -90,7 +90,9 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 <a id="lit-grn-2002"></a>
 ## LIT-GRN-2002 · Górniewicz–Rozpłoch-Nowakowska 的 morphism Lefschetz 定理
 
-**Paper fact.** L. Górniewicz and D. Rozpłoch-Nowakowska, “The Lefschetz Fixed Point Theory for Morphisms in Topological Vector Spaces,” *Topological Methods in Nonlinear Analysis* **20** (2002), 315–333, [期刊原版 PDF](https://www.tmna.ncu.pl/static/files/v20n2-07.pdf), DOI [10.12775/TMNA.2002.039](https://doi.org/10.12775/TMNA.2002.039). 该文印刷页 327 的 Theorem 6.2：若 \(X\) 是 Klee-admissible 拓扑向量空间 \(E\) 中某个开集的 retract，且 \(\varphi\in M(X,X)\) 属于 \(CAC(X)\)，则其 Lefschetz 数有定义；若数不为零，\(\varphi\) 有固定点。印刷页 315–318 的 Definition 1.1、2.1–2.4 把 morphism 表示为 \(X\xleftarrow{p}\Gamma\xrightarrow{q}X\)：\(p\) 是 perfect surjection 且每个纤维在**有理 Čech homology with compact carriers** 下 acyclic，\(q\) 连续。印刷页 320–322 的 Definition 2.6、3.1 与紧类包含关系 \(K(X)\subset CAC(X)\) 表明紧 morphism 足以满足 Theorem 6.2 的动力条件。此定理本身不要求 morphism 的输出纤维 acyclic。
+**Paper fact.** L. Górniewicz and D. Rozpłoch-Nowakowska, “The Lefschetz Fixed Point Theory for Morphisms in Topological Vector Spaces,” *Topological Methods in Nonlinear Analysis* **20** (2002), 315–333, [期刊原版 PDF](https://www.tmna.ncu.pl/static/files/v20n2-07.pdf), DOI [10.12775/TMNA.2002.039](https://doi.org/10.12775/TMNA.2002.039). 该文印刷页 327 的 Theorem 6.2：若 \(X\) 是 Klee-admissible 拓扑向量空间 \(E\) 中某个开集的 retract，且 \(\varphi\in M(X,X)\) 属于 \(CAC(X)\)，则其 Lefschetz 数有定义；若数不为零，\(\varphi\) 有固定点。印刷页 315–318 的 Definitions 1.1、2.1–2.3 及印刷 p.319 的 Theorem 2.4 把 morphism 表示为 \(X\xleftarrow{p}\Gamma\xrightarrow{q}X\)：\(p\) 是 perfect surjection 且每个纤维在**有理 Čech homology with compact carriers** 下 acyclic，\(q\) 连续。印刷页 320–322 的 Definition 2.6、3.1 与紧类包含关系 \(K(X)\subset CAC(X)\) 表明紧 morphism 足以满足 Theorem 6.2 的动力条件。此定理本身不要求 morphism 的输出纤维 acyclic。
+
+**Vietoris–Begle 精确接口（2026-10-05）。** 同文 p.316 Theorem 1.2 明确保证 Definition 1.1 的 Vietoris 映射在带紧载体的有理 Čech 同调上诱导同构。紧纤维的上同调假设经原引 [15] Górniewicz 1976 I.§1 Theorem (1.1)（p.8）的自然对偶及 I.§3（p.12）的紧载体识别转为该同调条件；是同调等于上同调代数对偶的方向，不把无限维空间与双对偶识别。原始 PDF、页码及 C05-v2 每项图条件见[完整导入卡](audit/VIETORIS_IMPORT.md)。
 
 **Interpretation / C05-v1 import check (2026-10-01).** 对 [9/25 候选稿 §8, Theorem 8.1](../history/sources/次单调论文研究/最新成果/2026_09_25_siopt_combined_candidate.pdf)，取 \(X=A\subset\mathbb R^n\)，\(\Gamma=\{(p,y):p\in A,y\in T(p)\}\)，\(p=\pi(p,y)\)，\(q=e_h(p,y)=y+\lambda h(y)\)。逐项门如下：
 
@@ -124,3 +126,12 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 **Paper fact。** Bauschke–Moursi–Wang, *Generalized monotone operators and their averaged resolvents*，[arXiv:1902.09827v1](https://arxiv.org/abs/1902.09827v1)，[v1 PDF](https://arxiv.org/pdf/1902.09827v1)，2019-02-26，Fact 2.1，印刷 pp.3–4：非空D⊂H、单值T:D→H，A=T⁻¹−I给J_A=T，故自然输入域恰D。
 
 **项目接口。** C146直接证明该关系身份。AGM的D输入在其本页记P，输出域记D，引用时重绑定；Fact2.1附带单调/firm等价条件不自动授给AGM。
+
+<a id="lit-selection-primary"></a>
+## LIT-SELECTION-PRIMARY · LP22 / LMZ / P16 指定接口
+
+[一手逐条卡](canonical/selection_primary_interfaces.md) 给准确版本与页码。LP22 arXiv2004.02188v2 Lemma2.2 为非零一元半代数函数的有理幂主项；正系数与正指数需应用中另有正性及趋零。Prop3.1/Th3.1/Cor3.1 是有限维闭半代数关系的存在性正则接口，不给指定图数值常数或严格兼容，也不证明无穷迭代极限半代数；SIAM书目已核，刊本文字/数学跨号未穷尽。
+
+LMZ arXiv2406.13207v1 4.3 的有限长框架与 4.4 的实际点率分开。Example4.6 原初值1、目标 |t|^(3/2)+λ_L(t−t_k)²/2，其项目步长 h=1/λ_L；全实初值唯一完整近端到0及恒定选择由本库直接证明，不能归作原例量词。正式版差异仍未闭。
+
+P16 v1 Theorems1–2对应正式版Theorems3.2–3.3；指定负起步公式在小非零直径有[解析反例 F44](../FAILED_ROUTES.md#f44)，原读取状态与数学验收分开。[C158](canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 用非负N独立修复共同尾，并独立证明同域两初值Lipschitz界。v1 Theorem3的φ段不归给无对应段的刊本；既不授予任意粗糙M，也不关闭全篇版本差异及全球优先权。

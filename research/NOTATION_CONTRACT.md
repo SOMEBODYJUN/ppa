@@ -55,3 +55,9 @@
 引用一条边前依次检查：同一完整对象或明确图块？同一 \(\lambda\) 和成对尺度？目标是完整零集还是指定子集？残差取 inf、选中值、步长还是概率耦合？前提对**所有**图点/输出/初值还是仅存在一个选择？条件是在同一窗口合取，还是来自不同稿件的可比实例？最后查 [条件契约](LOGIC_CONTRACTS.md) 与 [现存失败机制](../FAILED_ROUTES.md)。相同字母和相近指数都不能省掉这些问题。
 
 本页由 2026-10-02 跨文件核对建立：早先出现过的 `RL(λ,L,γ)` 现已统一为 `RL(λ,γ,L)`；锥面 \(F\) 与 \(r_F\) 的错位、条件 Markov 摘要缺定义及 C16 的 \(\rho=0\) 端点也已修正。本轮另将 Q03 的 \(e_N/e_x\) 分型。此核对覆盖入口及部分承重链；不是对全部 346 个内容组或全部证明的穷尽审稿。
+
+## 同 gauge 与文献算法参数的新增接口
+
+[C157](canonical/gauge_dilation_boundary.md#gd-theorem) 的 ψ 是固定逐点函数，ψ(2t) 不能无条件换为 Cψ(t)；其离散自然输入域 D不含邻域 coverage，正点不连续不得混入要求连续 gauge 的定理。[C158](canonical/selection_quasi_arithmetic_boundary.md#qa-object) 的 D 是均值初值直径预算、K 是生成元对数导数界、q=αℓ是修复尾的辅助系数；都不等于RLEB的输入对尺度、RL常数或实际法向率。N是非负起步，不能使用负迭代次数。QA使用∞范数，转Euclidean点尾须乘√k。
+
+[LMZ接口](canonical/selection_primary_interfaces.md) 的 λ_L 乘在目标二次项上，项目 prox 步长 h=1/λ_L。其 ψ(d)≤γr 是距离侧函数方向，与本库残差侧 d≤ψ(r) 比较时须先求逆并核定义域，不能直接同形代入。P16的 φ 是固定 M 的外层复合函数；QA-COMPARISON中的 F为不变标量函数，与PPA完整集值关系 F 不同型，跨页调用时重命名为 f_inv。

@@ -1834,6 +1834,36 @@
       "id": "BS-COMPLETION",
       "label": "平方VI分离和亚临界完整近端 C156",
       "file": "topics/examples/gx059_065_property_completion.md#gxp-square-inverse"
+    },
+    {
+      "id": "GD-OBJECT",
+      "label": "完整阶梯gauge与紧标量图 C157",
+      "file": "canonical/gauge_dilation_boundary.md#gd-object"
+    },
+    {
+      "id": "GD-BOUNDARY",
+      "label": "同gauge跨Minty失败与重标度界 C157",
+      "file": "canonical/gauge_dilation_boundary.md#gd-theorem"
+    },
+    {
+      "id": "QA-OBJECT",
+      "label": "正则拟算术均值固定函数类和凸域 C158",
+      "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-object"
+    },
+    {
+      "id": "QA-TAIL",
+      "label": "非负起步共同超几何尾 C158",
+      "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail"
+    },
+    {
+      "id": "QA-SELECTION",
+      "label": "同域两初值Lipschitz极限回缩 C158",
+      "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-selection"
+    },
+    {
+      "id": "QA-PRINT-BOUNDARY",
+      "label": "P16指定负索引打印尾反例 F44",
+      "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-first-round"
     }
   ],
   "edges": [
@@ -4081,7 +4111,7 @@
       ],
       "output": "SB-GEOMETRY",
       "relation": "conditional",
-      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；外部 BWY 归属未核。",
+      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；BWY 指定版本的对象归属已核，优先权另核。",
       "status": "C124-v1 全图点对、紧盘下界与交叉反例独立重算"
     },
     {
@@ -4576,6 +4606,50 @@
       "relation": "implies",
       "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一正根分支及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
       "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E237",
+      "topic": "基础接口",
+      "inputs": [
+        "GD-OBJECT"
+      ],
+      "output": "GD-BOUNDARY",
+      "relation": "limits",
+      "scope": "C157 固定λ=1、完整紧标量图、真实残差EB取等；每个零点graph germ不满足任意有限C的不重标度同gauge界，而全自然域仍有ψ(2|x|)界。离散自然域无邻域coverage，正点不连续ψ不反驳额外连续版本。",
+      "status": "derived-checked；GD-1–7直接证明，不认证原生全输入PPA或先行性"
+    },
+    {
+      "id": "E238",
+      "topic": "解选择",
+      "inputs": [
+        "QA-OBJECT"
+      ],
+      "output": "QA-TAIL",
+      "relation": "implies",
+      "scope": "C158 / F44 同一完整均值T，固定I,k,K>0、全部生成元函数类与D>0凸域；先定ℓ<1/α和非负N，全部初值全部n的共同超几何点尾。实际点Q二次只上界4αK，零直径/零K分开处理。",
+      "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
+    },
+    {
+      "id": "E239",
+      "topic": "解选择",
+      "inputs": [
+        "QA-OBJECT"
+      ],
+      "output": "QA-SELECTION",
+      "relation": "implies",
+      "scope": "C158 / F44 同一凸初值域X_D、固定K,D，全部有限迭代导数乘积包含首步j=0；全部初值对极限∞范数Lipschitz系数exp[2(e^(KD)−1)]。不是P16原定理，也不授完整PPA/RL/EB认证。",
+      "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
+    },
+    {
+      "id": "E240",
+      "topic": "解选择",
+      "inputs": [
+        "QA-OBJECT"
+      ],
+      "output": "QA-PRINT-BOUNDARY",
+      "relation": "limits",
+      "scope": "C158 / F44 合规f±=exp(±t)、K=1，任意小非零初始直径d；实际d1∼d²/4而指定打印负n0尾o(d²)。仅指定P16公式量词失败，修复N和共同尾另见E238；不否定全部论文结论。",
+      "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
     }
   ]
 }

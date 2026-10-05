@@ -17,7 +17,7 @@ collar 和拓扑条件均保留。原稿 C05-v1 仍按原文记录。下述证�
 \]
 取两个非空紧有限多面体 \(A,B\subset\mathbb R^n\)，且
 \(A\subset\operatorname{int}B\)，及在 \(A\) 某邻域上 upper semicontinuous 的指定对应 \(T\)，
-其在该邻域的每个值非空紧且有理 Čech-acyclic。对 **所有** \(p\in A,y\in T(p)\)，假设
+其在该邻域的每个值非空紧且有理 Čech-acyclic；本页该词指非空且所有约化有理 Čech **上同调**为零。对 **所有** \(p\in A,y\in T(p)\)，假设
 \[
 (p-y)/\lambda\in F(y),\quad
 \|p-y\|\le\phi(d(p,S)),\quad
@@ -72,12 +72,12 @@ Theorem 6.2](../LITERATURE.md#lit-grn-2002) 对 Klee-admissible 拓扑向量空�
 \(d(y,A^c)\ge\delta:=m-\alpha>0\)。
 令 \(\Gamma=\{(p,y)\in A^2:y\in T(p)\}\)；
 usc 和紧值使其为紧图。投影 \(\pi:\Gamma\to A\) 满射，
-各纤维同胚于 \(T(p)\) 并在有理 Čech 同调中 acyclic。
-对紧度量纤维，有限 nerve 的有理线性对偶与极限交换：
-\(\operatorname{Hom}(\varinjlim V_i,\mathbb Q)
-=\varprojlim\operatorname{Hom}(V_i,\mathbb Q)\)；
-故所假定的 Čech 上同调 acyclicity 给导入的同调版本。
-Vietoris–Begle 定理使 \(\pi_*\) 为同构。
+各纤维同胚于 \(T(p)\)。对紧纤维 \(K\)，带紧载体的有理 Čech 同调等于普通 Čech 同调，且
+\(\check H_j(K;\mathbb Q)\cong\operatorname{Hom}_{\mathbb Q}(\check H^j(K;\mathbb Q),\mathbb Q)\)
+自然成立（Górniewicz 1976，I.§1 Theorem (1.1)，p.8；I.§3，p.12）。故上同调 acyclicity 给所需的同调 acyclicity。
+紧 Hausdorff 图到 \(A\) 的连续满射 \(\pi\) 为闭映射且有紧纤维，因而是 GRN2002 Definition 1.1（p.315）的 Vietoris 映射。
+对 \((\Gamma,\varnothing)\to(A,\varnothing)\) 应用同文 Theorem 1.2（p.316），得 \(\pi_*\) 在上述有理 Čech 同调的每一阶均为同构。
+准确来源、紧载体识别及对偶方向见[导入卡](../audit/VIETORIS_IMPORT.md)；不把任意无限维向量空间与其双对偶识别，也不把紧图同调换成奇异同调。
 
 线段同伦 \((p,y)\mapsto(1-t)p+ty\) 位于 \(B\)，
 故 \(b_*\pi_*=b_*e_*\)，其中 \(e(p,y)=y\)。

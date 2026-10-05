@@ -310,7 +310,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：c:ℝⁿ→ℝᵐ 在闭球 B̄_R(x̄) 的开邻域 C^{1,1}，Dc 的 β-Lipschitz 预算；A=Dc(x̄) 满行秩，σ₀=σ_min(A)>βR，σ=σ₀−βR>0，J=||A||+βR，r=R/[2(1+J/σ)]。φ:ℝᵐ→ℝ 有限凸，C=argmin φ 非空、c(x̄)∈C；f=φ∘c，S=c^{-1}(C)，F=∂f。对每个 z∈c(B_R) 外层有 d(z,C)≤Ψφ(d(0,∂φ(z)))，Ψφ 非减并趋零。则对每个 x∈B_r(x̄)，d(x,S)≤σ^{-1}Ψφ(r_F(x)/σ)，且局部 Γ=Θ₂=S。
+- **Exact Statement / Objects / Domain / Quantifiers**：c:ℝⁿ→ℝᵐ 在全域连续，且在闭球 B̄_R(x̄) 的开邻域 C^{1,1}，Dc 的 β-Lipschitz 预算；A=Dc(x̄) 满行秩，σ₀=σ_min(A)>βR，σ=σ₀−βR>0，J=||A||+βR，r=R/[2(1+J/σ)]。φ:ℝᵐ→ℝ 有限凸，C=argmin φ 非空、c(x̄)∈C；f=φ∘c，S=c^{-1}(C)，F=∂f。对每个 z∈c(B_R) 外层有 d(z,C)≤Ψφ(d(0,∂φ(z)))，Ψφ 非减并趋零。则对每个 x∈B_r(x̄)，d(x,S)≤σ^{-1}Ψφ(r_F(x)/σ)，且局部 Γ=Θ₂=S。全域连续性保证 S 闭，与 C36 最近零点步骤使用的同一前提一致。
 - **Dependencies / Evidence / Status**：[CS-EB](research/canonical/composite_subregularity.md#cs-eb) 分开证明满秩切片修复的闭球自映射、凸链式规则、最小奇异值对全部次梯度的下界。状态 derived-checked；外部先行性未审。
 - **Counterevidence / Scope**：c(x)=x²,φ(z)=z²/2 使原生线性 EB 不传递为复合线性 EB；秩亏版本是独立开放问题。若外层幂增长 r_{∂φ}(z)≥m₀d(z,C)^a，才取得 q=1/a 与 K=σ^{-1-1/a}m₀^{-1/a}。历史验证脚本不是证明。
 
@@ -1045,7 +1045,7 @@
 - **Status**：`derived-checked`。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：在实 \(\mathbb R^2\) 取单位闭盘 \(B\)、\(K=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)\) 和完整 \(F=K+N_B\)。对**全部**图点对，(SB6) 的内积非负；图单调、rectangular 而非 paramonotone，正强单调及正 cocoercivity 系数均不存在。Rectangular 的固定点量词是 \(\xi\in\operatorname{dom}F=B,\eta\in\operatorname{ran}F\)，不得扩到盘外 \(\xi\)。
-- **Definitions / Dependencies / Evidence / Status / Related Files**：[SB-GEOMETRY](research/topics/examples/skew_ball_inverse.md#sb-geometry) 从全部法向射线计算；极大性是另一个依赖 C125 全域 Minty 输入的结论。`derived-checked`，来源 Z07 `work/c_gx053_065.md` GX-058 第 476–504 行，外部 BWY 归属未核。
+- **Definitions / Dependencies / Evidence / Status / Related Files**：[SB-GEOMETRY](research/topics/examples/skew_ball_inverse.md#sb-geometry) 从全部法向射线计算；极大性是另一个依赖 C125 全域 Minty 输入的结论。`derived-checked`，来源 Z07 `work/c_gx053_065.md` GX-058 第 476–504 行；BWY arXiv v1 Proposition 3.4 / Example 3.5（作者站稿 Proposition 3.6 / Example 3.7）的对象归属已按 [LIT-BWY-2012](research/LITERATURE.md#lit-bwy-2012) 核验，优先权另核。
 - **Counterevidence / Scope**：两个不同内点配对为零，排除正系数；内点 \((x,Kx),(0,0)\) 的交叉图点 \((x,0)\) 不存在。Rectangular、paramonotone、C98/C99 的逆像模与 C125 的反射模是不同性质，不从任一标签无条件转授另一项。
 
 ## C125-v1 / SB-PROX · 全部近端纤维和锐全图 RL
@@ -1312,3 +1312,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：完整F=x²在[−1,1]、域外空，VI类quasi而非pseudo；GP8给全部原纤维，非负hypo锐2且无有限cohypo。0<λ<1/2时完整自然输入域[λ−1,λ+1]，J恰GP9显示正根分支，τ锐2λ/(1−2λ)²；域外无输出。0<|x̄|<1时ordinary SMR缩窗模1/(2|x̄|)。零目标的固定半阶、负目标空逆像及两侧路径边界不改变C84。
 - **Dependencies / Evidence**：[GP8](research/topics/examples/gx059_065_property_completion.md#gxp-square-inverse)、[GP9–10](research/topics/examples/gx059_065_property_completion.md#gxp-square-subcritical)、[GP11](research/topics/examples/gx059_065_property_completion.md#gxp-square-regular-points)。
 - **Objections / Scope**：非零参考点须内点，域端点不获得双侧目标coverage；完整有界图不可当全实线映射。
+
+<a id="c157"></a>
+## C157-v1 / GD-BOUNDARY · 同 gauge 跨 Minty 坐标失败
+
+- **Status**：`derived-checked`，GD-1–7 的完整显式计算。
+- **Exact Statement / Objects / Domain / Quantifiers**：实标量、固定 λ=1，t₀=1/2、tₙ=2^(−2ⁿ)、ψ(t)=tₙ² 对 tₙ≤t<tₙ₋₁、ψ(0)=0。ψ 有限非减且 o(t)，完整紧图 Γ={(0,0)}∪{(−tₙ²,tₙ):n≥1} 的零集 {0}，所有有限真实残差点满足 |y|=ψ(r_F(y))。完整 resolvent 在 D={0}∪{tₙ−tₙ²} 唯一；每个零点 graph germ 和每个有限 C 均有 |J_Fx|>Cψ(|x|)，而全 D 上 |J_Fx|≤ψ(2|x|)。ψ(2sₙ)/ψ(sₙ)→∞，sₙ=tₙ/2。
+- **Dependencies / Evidence**：[完整 gauge、图和证明](research/canonical/gauge_dilation_boundary.md#gd-theorem)；带重标度正向门为 [IZ-GERM](research/canonical/isolated_zero_flatness.md#iz-germ)。补足最终 foundations §7.2 的阶梯见证。
+- **Objections / Scope**：D 不含零点的输入邻域，不认证局部全输入 PPA；ψ 在正点不连续，不反驳额外要求正点连续 gauge 的版本。只证明固定同一 gauge 的失败，不否定重标度 gauge 或额外 dilation 控制。
+
+<a id="c158"></a>
+## C158-v1 / QA-TAIL-SELECTION · 正则拟算术均值的共同尾与选择界
+
+- **Status**：`derived-checked`，QA1–13 自足证明；指定原文事实另为 `primary-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：开区间 I、k≥1、K>0、全部生成元 fᵢ∈C²(I)、fᵢ′处处非零、fᵢ″局部有界变差、|fᵢ″/fᵢ′|≤K；完整均值映射 T=(fᵢ⁻¹(k⁻¹∑ⱼfᵢ(xⱼ)))ᵢ。先固定 D>0 和 X_D={x∈Iᵏ:diam x≤D}；令 α=(3+7e)/3、0<ℓ<1/α、q=αℓ、N=max(0,ceil log₂[(e^(KD)−1)/(e^ℓ−1)])。全部 x∈X_D 的唯一对角极限 Π(x)=M(x)1 满足全部 n≥N 的 ‖Tⁿx−Πx‖∞≤diam Tⁿx≤(αK)⁻¹q^(2^(n−N))；全文给全部 n≥0 的共同 A exp(−b2ⁿ) 界。同一凸域的全部初值对满足 ‖Πx−Πy‖∞≤exp[2(e^(KD)−1)]‖x−y‖∞。实际点误差仅授共同 Q二次上界 eₙ₊₁≤4αKeₙ²，不宣称逐轨道锐因子。
+- **Dependencies / Evidence**：[QA-OBJECT](research/canonical/selection_quasi_arithmetic_boundary.md#qa-object)、[非负起步共同尾](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail)、[同域两初值界](research/canonical/selection_quasi_arithmetic_boundary.md#qa-selection)。直接 Jensen、Taylor 和全部导数乘积证明不依赖 P16 打印尾公式。原文版本与反例接口见 [规范一手接口](research/canonical/selection_primary_interfaces.md)。
+- **Objections / Scope**：D=0 的对角族、K=0 的仿射族另行处理，均不代入 log0 或 1/K。AGM 只在固定正闭窗局部化，K=1/a 不移到含轴窗。未编码完整 PPA 关系或授予 RL、真实 EB、严格兼容与新颖性；任意连续 φ属于复合 φ∘M，不代表 M 可任意粗糙。

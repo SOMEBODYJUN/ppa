@@ -151,6 +151,19 @@ J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\quad\text{对**每个** }u\in W, \tag{SS-
 
 此时 SS-T3 的指数 \(\alpha=\log\nu/\log(\nu/\gamma)\) 可用于同一个极限映射。若 \(K=0\)，对应一步到 \(S\) 后驻定的退化情形须单独说；若**存在 \(m>0\)** 使真残差增长 \(r_F(u)\ge m d(u,S)^b\) 仅在上述实际输出上成立且 \(0<b<\gamma\)，则由真实 EB 方向与步界可取 \(\nu=\gamma/b\)、\(K=(H/(\lambda m))^{1/b}\)，但仍须核所有输出与同一留域。本节用 (SS-B4) 排除共同窗口内图块之外的完整近端分支；若改核实际可达输入集合，须先独立确定该集合及其全部完整纤维。
 
+<a id="ss-calmness"></a>
+### SS-CALMNESS · 固定零锚与两初值模分开
+
+保留 SS-B1 的全部同窗条件，以指定 \(s\in S\cap U\) 为球心，令 \(0<\varepsilon\le R\) 满足同一严格长度预算。零锚使 \(J_{\mathcal G}s=s\)，故 \(\Pi_{\mathcal G}(s)=s\)。对每个 \(x\in B_\varepsilon(s)\)，置 \(\delta=\|x-s\|\)，则 \(d(x,S)\le\delta\) 和 R02 的总长界给
+\[
+\|\Pi_{\mathcal G}(x)-s\|\le\delta+\mathcal L(d(x,S))
+\le\left[\varepsilon^{1-\gamma}
++\frac12\left(\frac{\varepsilon^{1-\gamma}}{1-\kappa}
++\frac L{1-\kappa^\gamma}\right)\right]\delta^\gamma.
+\tag{SS-B6}
+\]
+\(\delta=0\) 时两边均零。常数只依赖已固定的球和同窗参数。这证明在固定零点的 Hölder calmness；球内任意两个非零初值之间没有这一零锚比较，不能由 SS-B6 推出两点 Hölder 模。若要把 \(\Pi_{\mathcal G}\) 改成完整 \(\Pi_F\)，仍须 SS-B4 或全部实际可达输入上的完整纤维等式。几何及超线性显式模型另已反演全部纤维，因此其已证收敛区域内可调用此结论。
+
 <a id="ss-quadratic-object"></a>
 ## 2. SS-Q2 · 一个完整二值半代数算子
 

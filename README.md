@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 360 个数学节点、236 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 366 个数学节点、240 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -31,7 +31,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 对同一图块任意**两**图点、同一步长和输入对尺度，全对 RL 写成
 \(\|\Delta u-\lambda\Delta v\|\le L\|\Delta u+\lambda\Delta v\|^\gamma\)。
 它给部分定义的 Cayley 映射与图块单值 \(J_{\mathcal G}\)，**不提供输入 coverage**。
-更完整的[参数与正则性字典](research/canonical/parameter_dictionary.md)把全对/锚定、图块/全图、输入尺度、同图换步与改变关系分开；\(\gamma=1\) 的 tied 曲线包括 \(L=0\) 端点。[非 tied 二参数图](research/canonical/non_tied_cayley.md#nt-object) 另保留交叉项及 \(A>0,\Delta\ge0\) 的门，不能用 tied 曲线代替。真残差 EB 与选中步界只有一个无条件方向。
+更完整的[参数与正则性字典](research/canonical/parameter_dictionary.md)把全对/锚定、图块/全图、输入尺度、同图换步与改变关系分开；\(\gamma=1\) 的 tied 曲线包括 \(L=0\) 端点。[非 tied 二参数图](research/canonical/non_tied_cayley.md#nt-object) 另保留交叉项及 \(A>0,\Delta\ge0\) 的门，不能用 tied 曲线代替。真残差 EB 可推选中值界，仍须选中范数落在 gauge 定义域并满足同一 EB 窗；逆向还需完整纤维门。
 局部 RLEB 另用实际输出上的 \(d(u,S)\le\psi(r_F(u))\)、兼容及初值长度预算。
 全局结构稿取实 Hilbert 空间、非空完整图、\(L>0,0<\gamma<1\)、全部尺度；其中 graph-maximal 固定 \((\lambda,L,\gamma)\)，不是极大单调。有限维完整纤维分类再增加 \(H=\mathbb R^n\)。
 
@@ -220,7 +220,10 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [GX053–065 逐单元覆盖](research/audit/GX053_065_COVERAGE.md#gx-scope)、[专用表登记](research/audit/ATOMIC_SCOPE_REGISTRY.tsv) | 该成员1219物理LF行全部由独立属性、证据或组织余项覆盖。命名与不可复跑网格明确deferred；这一内容关闭枚举门，其他历史内容仍须逐项推进。 |
 | [research/audit/SOURCE_OCCURRENCES.tsv](research/audit/SOURCE_OCCURRENCES.tsv)、[PAYLOAD_GROUPS.tsv](research/audit/PAYLOAD_GROUPS.tsv)、[build_occurrence_index.py](research/audit/build_occurrence_index.py) | 429 个物理文件/ZIP 成员位置与 346 个不同字节内容的可复现索引；状态仍待逐段语义枚举，不能把来源组数当数学覆盖。 |
 | [research/audit/SEMANTIC_UNIT_SEED.tsv](research/audit/SEMANTIC_UNIT_SEED.tsv)、[SS1 数值来源复跑](research/audit/SS1_NUMERICAL_PROVENANCE.md) | 四个来源内容的连续行覆盖试点：S19（11 段）、SS1（19 段）、GX-053–065（39 段）及 F11 `04_research_ideas.md`（46 段）。C135 仅重写其中 G.1–G.2 的条件拓扑引理，G.3 reduction 仍开放；SS1 §7 的旧程序与结果逐字节复跑只属有限观察，修订文稿与旧程序的逐行版本同一性未证明。结构段内的独立属性和文献事实尚须逐项拆分。校验器检查行区间及已填锚点，不能把分段数量当验收率。 |
-| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 605 行有逐项去向（含数学、重复、组织用途及明确待核；不是独立成果数），只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
+| [research/canonical/selection_primary_interfaces.md](research/canonical/selection_primary_interfaces.md)、[selection_quasi_arithmetic_boundary.md](research/canonical/selection_quasi_arithmetic_boundary.md) | LP22/LMZ/P16 的完整原定理接口、准确版本与映射均在规范层；C158 独立修复 P16 的负起步边界，证明共同超几何尾和同域 Lipschitz 选择界。刊本未核范围、完整 PPA 与优先权分开。 |
+| [research/canonical/gauge_dilation_boundary.md](research/canonical/gauge_dilation_boundary.md) | C157/GD-1–7：完整紧图上的真实超线性 gauge EB 不授予不重标度的同 gauge Minty 界；每个 graph germ 的完整反例及正确重标度界。离散自然域不等于邻域输入 coverage。 |
+| [SS1 全文枚举](research/audit/SS1_FULL_COVERAGE.md)、[foundations 最终正文枚举](research/audit/FOUNDATIONS_FINAL_COVERAGE.md) | SS1 的 763 行与最终 foundations 的 2096 行全部逐断言去向可查；具体文献、最佳常数及数值版本义务仍分别保留。仅关闭两个内容组的枚举门，不关闭全部历史包。 |
+| [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 1170 行有逐项去向（含数学、重复、组织用途及明确待核；不是独立成果数），只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |

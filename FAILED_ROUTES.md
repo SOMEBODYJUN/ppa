@@ -289,3 +289,17 @@
 - **同一完整对象**：[C146](research/topics/examples/arithmetic_geometric_mean.md#agm-object) 的F=G⁻¹−I，完整近端输入域P，工作窗W_R=[0,R]²。闭半代数完整图、唯一近端、半阶全对反射、线性真EB及共同几何点尾均直接成立。
 - **断点**：[C148 / AGM18–20](research/topics/examples/arithmetic_geometric_mean.md#agm-compatibility) 用同窗输入(c,δ),(c,0)迫使ω(δ)≥√(cδ)，轴上实际输出又迫使非减EB gauge ψ(h)≥h/√2；兼容比值至少√c/(2√2√δ)而发散。换安全常数无法产生κ<1。
 - **保留与重启门**：[C147](research/topics/examples/arithmetic_geometric_mean.md#agm-selection) 的共同几何尾和坏极限选择保持成立，正初值Q二次却不跨坏轴统一。若改变量、提升、完整关系或工作窗，须重新核全纤维、真残差和同窗全部点对；本条不排除这些新对象，也不否定其它收敛证明。
+
+<a id="f43"></a>
+## F43 · 仅凭超线性 gauge 就不重标度地跨 Minty 坐标
+
+- **被否定的接口**：同一 graph germ 的 |y−p|≤ψ(‖w‖)、ψ=o(id)，就推出某个有限 C 的 |y−p|≤Cψ(‖y+λw−p‖)。
+- **完整见证**：[C157](research/canonical/gauge_dilation_boundary.md#gd-theorem) 固定 λ=1；完整紧图上真实残差 EB 取等，但 xₙ=tₙ−tₙ² 处 ψ(xₙ)=tₙ⁴，|J_Fxₙ|/ψ(xₙ)=tₙ⁻²→∞，任意缩小 germ 仍失败。
+- **重启门**：保留正确的 ψ((2/λ)‖x−p‖)，或另证所需固定 dilation 控制。正点连续 gauge、邻域输入 coverage、原生 PPA 等额外要求须另核；本例不认证它们。
+
+<a id="f44"></a>
+## F44 · P16 的负起步索引公式被原样移植为共同尾
+
+- **指定旧接口**：arXiv1412.2997v1 Theorems1–2及正式版 Theorems3.2–3.3 的打印 n₀=ceil log₂[(e^(Kd)−1)/(e^ℓ−1)] 没有夹到非负；小非零直径下 n₀→−∞。读取原页只认证打印事实，不认证该公式在全部初值上成立。
+- **解析反例**：[QA-FIRST-ROUND](research/canonical/selection_quasi_arithmetic_boundary.md#qa-first-round) 取合规 f±(t)=e^(±t)、K=1、初值(d/2,−d/2)。实际 d₁=2log cosh(d/2)∼d²/4，原合法 n=1 的尾却是 o(d²)；优化式在任何固定超过其极限起步阈值的整数 n 同样与 dₙ∼4^(1−2ⁿ)d^(2ⁿ) 矛盾。只否定指定打印公式的小直径量词，不否定作者全部结果或宣称正式勘误。
+- **已闭修补**：[C158](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 先固定共同K,D及ℓ<1/α，使用 N=max(0,ceil(...))；另独立证明共同超几何尾与同域Lipschitz选择界，处理首步和退化情形。固定正AGM窗的结论不移到坏轴，编码成完整PPA仍须另验。

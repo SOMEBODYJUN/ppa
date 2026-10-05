@@ -26,7 +26,7 @@
 \|y-p\|\le\alpha(\|x-p\|)
 \Longrightarrow\|y-p\|\le\alpha(2\lambda\|w\|).
 \]
-须保证缩域后重标度自变量仍在 gauge 定义域。若要换成同一个 gauge 仅乘常数的界，还需对应固定 dilation 的 \(\psi(ct)=O(\psi(t))\)；单凭 \(\psi=o(t)\) 不给这一性质。
+须保证缩域后重标度自变量仍在 gauge 定义域。若要换成同一个 gauge 仅乘常数的界，还需对应固定 dilation 的 \(\psi(ct)=O(\psi(t))\)；单凭 \(\psi=o(t)\) 不给这一性质。[C157 的完整阶梯图](gauge_dilation_boundary.md#gd-theorem)给每个缩小 graph germ 的反例，真实全纤维 EB 取等；带重标度的正向界仍成立。
 
 <a id="iz-fibers"></a>
 ## IZ-FIBERS · 从完整残差到分支以及反向的缺门
