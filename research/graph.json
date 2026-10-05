@@ -209,7 +209,7 @@
     {
       "id": "M-EXACT",
       "label": "exact-zero 与一般 gauge",
-      "file": "cone_markov.md#m-exact"
+      "file": "topics/random_markov/compact_residual_boundaries.md#crb-general-gauge"
     },
     {
       "id": "M-FIN",
@@ -335,13 +335,13 @@
     },
     {
       "id": "M-FALSE",
-      "label": "快混合仍 Ψ 假零",
-      "file": "cone_markov.md#m-false"
+      "label": "C144 原 OT 快率假零",
+      "file": "topics/random_markov/compact_residual_boundaries.md#crb-false-zero-object"
     },
     {
       "id": "M-NOPOWER",
-      "label": "exact-zero 快率无正幂 EB",
-      "file": "cone_markov.md#m-nopower"
+      "label": "C143 exact-zero 快率无正幂 EB",
+      "file": "topics/random_markov/compact_residual_boundaries.md#crb-object"
     },
     {
       "id": "M-BINARY",
@@ -1981,8 +1981,8 @@
       ],
       "output": "M-EXACT",
       "relation": "conditional",
-      "scope": "紧连续随机映射；exact-zero 等价一般 gauge",
-      "status": "证明包内部审计"
+      "scope": "C14 原量词：非空紧 G，任意概率噪声域的联合可测自映射；同一个满概率噪声集内每个 Tξ 全 G 连续。CG1–CG7 独立证明核/cR 连续、不变律紧、全部不变目标及对应输入最优计划联合闭、取得/lsc；exact-zero iff 全律严格一般 gauge，不授予幂次或速率兼容。",
+      "status": "C14 同身份 CG1–CG7 完整独立重构；derived-checked"
     },
     {
       "id": "E23",
@@ -2188,8 +2188,8 @@
       ],
       "output": "FAST-EB",
       "relation": "refutes",
-      "scope": "公平 bit 一步平稳但相关律 Ψ=0、距不变律>0",
-      "status": "Markov 显式模型"
+      "scope": "C144：固定正方形、公平投影及原输入 OT 最优计划；每律一步平稳，但同一相关见证在每个 π̄ 邻域 Ψ=0、距全部不变律=t>0；最近和实际极限锚各有最优零残差计划，不是 C71 放松 OT。",
+      "status": "C144-v1 完整规范对象与所有目标距离的独立证明；derived-checked"
     },
     {
       "id": "E41",
@@ -2199,8 +2199,8 @@
       ],
       "output": "POWER-EB",
       "relation": "refutes",
-      "scope": "无限紧可数状态 exact-zero 且快率，却无任何局部正幂 EB；不反驳有限状态定理",
-      "status": "Markov 显式模型"
+      "scope": "C143：固定 B5–B6 一个紧可数系统与原 Ψ；全域最优运输分解、attained exact-zero、严格一般 gauge、全部初值全部时间的统一几何尾及律空间长度；同序列趋 δ₀ 并对每个 q>0、K≥0、r>0 否定局部正幂 EB，不反驳有限状态 C15。",
+      "status": "C143-v1 B13–B28 完整独立重构及有理证书；derived-checked"
     },
     {
       "id": "E42",

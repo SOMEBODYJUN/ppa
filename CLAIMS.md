@@ -130,11 +130,11 @@
 
 ## C14 · 紧 Markov 同步残差的 exact-zero 门槛
 
-- **Status**：`candidate`；来源证明与定义已核读，但整条紧性和零集证明尚未独立重构。
+- **Status**：`derived-checked`；原 a.e. 连续量词下的整条紧性、取得、下半连续和严格 gauge 证明已在 CG1–CG7 独立重构。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：紧状态集 \(G\subset\mathbb R^d\)，满足 CM-M §1 的 a.e. 连续联合可测随机自映射，独立新噪声定义核 \(P\)，不变律集合 \(\mathcal I\ne\varnothing\)。\(\Psi(\mu)^2=\inf_{\pi\in\mathcal I}\inf_{\eta\in\operatorname{Opt}_{W_2}(\mu,\pi)}\int\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2d\eta\)；两侧**同噪声**，内层必须为该两边缘的平方成本最优耦合。
+- **Exact Statement / Objects / Domain / Quantifiers**：非空紧状态集 \(G\subset\mathbb R^d\)，任意概率噪声域上联合可测的随机自映射；存在同一个可测满概率噪声集，使其中每个 \(T_\xi:G\to G\) 在整个 \(G\) 连续。独立新噪声定义核 \(P\)，保留原不变律集合 \(\mathcal I\ne\varnothing\) 假设；其非空性另由 Cesàro 证明。\(\Psi(\mu)^2=\inf_{\pi\in\mathcal I}\inf_{\eta\in\operatorname{Opt}_{W_2}(\mu,\pi)}\int\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2d\eta\)；两侧**同噪声**，内层必须为该两边缘的平方成本最优耦合。
 - **Conclusion**：在该紧连续设置下，极小值取得、\(\Psi\) 下半连续，且 \(\Psi^{-1}(0)=\mathcal I\) 当且仅当存在严格一般 gauge \(\rho\) 使 \(d_{W_2}(\mu,\mathcal I)\le\rho(\Psi(\mu))\) 对每个概率律成立。没有自动幂次或速率兼容。
-- **Dependencies / Evidence / Objections / Status / Related Files**：紧性与零集包络，CM-M Theorem 1，[cone_markov §2](research/cone_markov.md)。内部证明包和本轮关键定义核读；\(\Psi\) 表示依赖，不是 \(W_2(\mu,\mu P)\)。
+- **Dependencies / Evidence / Objections / Status / Related Files**：[CG1–CG7 完整证明](research/topics/random_markov/compact_residual_boundaries.md#crb-general-gauge) 给核和同步成本的有界控制收敛、全部目标的联合最优计划闭性、取得/lsc、严格包络及两个方向；CM-M Theorem 1 仅作来源。此共同噪声异常集量词不能换成逐状态异常集；\(\Psi\) 表示依赖，不是 \(W_2(\mu,\mu P)\)，也不从本条推出上半连续、幂次界或速率兼容。
 
 ## C15-v1 · 固定有限状态的顶点判定
 
@@ -148,7 +148,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限维完整原图且全域单值 \(T=J_{\lambda F}\)，\(\lambda>0,\tau\ge0,\rho>0\)，同一目标 \(S\)、同一 coverage/测试域/真实残差和留域接口；公共 all-pairs LT 假设 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\) 和 \(2\tau(\lambda+\rho)^2<\lambda^2\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维完整原图且全域单值 \(T=J_{\lambda F}\)，\(\lambda>0,\tau\ge0,\rho>0\)，同一非空闭目标 \(S\subset F^{-1}(0)\)、同域最近零锚、同一 coverage/测试域/真实残差、gauge 评价域和留域接口；公共 all-pairs LT 假设 \(\operatorname{Lip}(2T-I)\le\sqrt{1+4\tau}\)、\(d(u,S)\le\rho r_F(u)\) 和 \(2\tau(\lambda+\rho)^2<\lambda^2\)。
 - **Conclusion**：在此接口中取 \(\gamma=1,L^2=1+4\tau,\psi(t)=\rho t\)，能量分支的 \(q_E=(1+2\tau)\rho^2/(\rho^2+\lambda^2)<1\)，故公共 LT 证书类包含于相应 RLEB 能量证书类。不是完整 LTT 框架全部版本的包含，也不保存最佳常数或最大域。
 - **Dependencies / Evidence / Objections / Status / Related Files**：R03 的能量式及归一化代数，[operator_space §2](research/operator_space.md)，S20 OS-H §3.2。状态 `derived-checked` 只针对上述匹配接口的代数转换；不推出两类在自然母空间的大小差异。\(\rho=0\) 时 \(\alpha(t)=t/\rho\) 无定义，若有退化 EB 须另列版本；signed \(\tau\) 不由此条覆盖。
 
@@ -819,7 +819,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：完整实关系 \(F(x)=\{-x\}\) 对 \(|x|\le1\)，其余为空。每个固定 \(\lambda>0\)，任意两图点、同一 \(\lambda\)：若 \(\lambda\ne1\)，自然输入域 \(D_\lambda=(1-\lambda)[-1,1]\)，完整 \(J(p)=p/(1-\lambda)\)，完整反射 \(C(p)=(1+\lambda)p/(1-\lambda)\)。全图线性 RL 锐常数 \((1+\lambda)/|1-\lambda|\)，每个 \(0<\gamma<1\) 的锐常数 \(2^{1-\gamma}(1+\lambda)|1-\lambda|^{-\gamma}\)。\(\lambda=1\) 时 \(D_1=\{0\},J_F(0)=[-1,1]\)，同输入不同输出排除任意零消失全对模。完整真残差 \(r_F(x)=|x|=d(x,\{0\})\) 只作固定零目标 EB。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整实关系 \(F(x)=\{-x\}\) 对 \(|x|\le1\)，其余为空。每个固定 \(\lambda>0\)，任意两图点、同一 \(\lambda\)：若 \(\lambda\ne1\)，自然输入域 \(D_\lambda=(1-\lambda)[-1,1]\)，完整 \(J(p)=p/(1-\lambda)\)，完整反射 \(C(p)=(1+\lambda)p/(1-\lambda)\)。全图线性 RL 锐常数 \((1+\lambda)/|1-\lambda|\)，每个 \(0<\gamma<1\) 的锐常数 \(2^{1-\gamma}(1+\lambda)|1-\lambda|^{-\gamma}\)。\(\lambda=1\) 时 \(D_1=\{0\},J_F(0)=[-1,1]\)，同输入不同输出排除任意零消失全对模。完整真残差在 \(|x|\le1\) 为 \(r_F(x)=|x|=d(x,\{0\})\)，域外为 \(+\infty\)；此处只作固定零目标 EB。
 - **Dependencies / Evidence / Status / Related Files**：[BNI-MINTY](research/topics/examples/bounded_negative_identity.md#bni-minty) 由全部完整图点剪切重算，来源 9/01 ZIP `work/c_gx066_077.md` GX-066；`derived-checked`，无外部定理调用。
 - **Counterevidence / Scope**：低于一阶的常数使用图直径 2；换成无界母图即是新对象。\(\lambda=1\) 的残差 EB 不产生输入覆盖；不能拼接不同步长的纤维。
 
@@ -1196,3 +1196,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对任意**非零实 Hilbert 空间** \(H\) 和任意非空紧集 \(G\subset H\times H\)，\(G\) 不是极大单调关系的完整图；若它单调，存在与其中全部图点构成严格正内积的一个新图点，故可真单调扩张。特别地，任意非空紧 \(K\subset H\)、连续 \(U:K\to K\)、\(\lambda>0\) 从 (OS3) 定义的完整 \(F_{U,K}\) 不是极大单调，无需 C132 的 \(S\)、步界或 gauge 前提。
 - **Definitions / Dependencies / Evidence**：[OS-COMPACT-BARRIER 的 (OS6a)](research/operator_space.md#os-compact-barrier) 从两个坐标的一致界直接构造 \(u=(a+1)e,v=te\)，对任意图点严格满足单调加点不等式。C132 的 (OS3) 给出应用所需紧图；证明不导入 Minty 满值定理，也不将 C132 的 EB 误当成单调性。
 - **Counterevidence / Objections / Scope / Related Files**：零维空间不在量词内；若 \(G\) 不单调，结论更直接。只排除**紧图本身**充当极大单调关系，不排除一个更大的共同母空间同时容纳紧图及非紧极大单调图，也不排除加点延拓；一旦加点，完整近端和真最小残差须重核。见 [F41](FAILED_ROUTES.md#f41)；不从此推出 RLEB/LT/极大单调的总体规模比较。
+
+<a id="c143"></a>
+## C143-v1 / CM-NO-POWER · 紧可数模型的快率与所有正幂 EB 失败
+
+- **Status**：`derived-checked`；限定于下述同一完整对象，规范逐式重构和独立有理证书复核；不认证来源整篇或新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：[B5–B6](research/topics/random_markov/compact_residual_boundaries.md#crb-object) 固定紧可数实状态集、每块四点、明确映射 T 与恒等/主动概率 7/8、1/8；不变律集遍历全部平稳律，Ψ 使用全部不变目标和每对边缘的完整平方成本最优计划、同一个噪声。对每个输入律 μ，原 Ψ 恰以不变律集为零集并有严格一般 gauge；d(μP)²≤(3125/3267)d(μ)²。同一显式 Πμ=(T#μ+T#²μ)/2 是极限，统一 C、r₀=√(7/8) 对全部 μ、全部 k 给相对几何尾及律空间有限长度。与此同时，对每个 q>0、K≥0、r>0，在 δ₀ 的 r 球内都有同一系统的 ν 使 d(ν)>KΨ(ν)^q。
+- **Definitions / Dependencies / Evidence**：[B13–B20 全域运输证书](research/topics/random_markov/compact_residual_boundaries.md#crb-global-transport)、[B21 exact-zero](research/topics/random_markov/compact_residual_boundaries.md#crb-exact-zero)、[B22–B24 全律统一率](research/topics/random_markov/compact_residual_boundaries.md#crb-rate)、[B25–B28 同序列发散](research/topics/random_markov/compact_residual_boundaries.md#crb-no-power)。来源 CM-M Lemma 3/Theorem 4 仅作溯源，不以脚本 PASS 代替证明。
+- **Counterevidence / Scope**：不排除一般 gauge、不反驳固定有限状态 C15、不宣称样本路径有限长度或常数锐。B29–B30 另在完整相对状态邻域上固定有效 almost-firm 参数，只排除其指定严格兼容公式，不排除其它速率证明；对应 CM-M Corollary 5。
+
+<a id="c144"></a>
+## C144-v1 / CM-FALSE-ZERO · 原同步 OT 残差的投影假零
+
+- **Status**：`derived-checked`；仅限下述完整正方形对象与原始最优计划域，两个锚点和目标距离已逐式重构。
+- **Exact Statement / Objects / Domain / Quantifiers**：G=[0,1]²，T_j(x,y)=(x,j)，每步独立公平 j∈{0,1}。全部不变律为 ν⊗β，β=(δ₀+δ₁)/2；任意 μ 一步平稳，原 Ψ(μ)=W₂(μ_y,β)，其零集 ZΨ 是所有第二边缘 β 的律，且 d_W₂(μ,ZΨ)=Ψ(μ)。对每个 0<t<1/2，μ_t=[δ_(1/2−t,0)+δ_(1/2+t,1)]/2 趋于 π̄=δ_(1/2)⊗β，Ψ(μ_t)=0 而 d_W₂(μ_t,全部不变律)=W₂(μ_t,π̄)=t>0。
+- **Definitions / Dependencies / Evidence**：[B31 完整定义及最优提升](research/topics/random_markov/compact_residual_boundaries.md#crb-false-zero-object)、[B32–B33 所有不变目标的下界](research/topics/random_markov/compact_residual_boundaries.md#crb-false-zero-witness)。最近锚 π̄ 和实际极限 μ_tP 各有合法输入最优零残差计划；同共同噪声复合及本文明确定义的逐步位移代价仍为零。来源 CM-M Theorem 2，仅作溯源。
+- **Counterevidence / Scope**：任何零处取零的局部不变集 gauge 都失败；到 ZΨ 的线性界却以系数 1 成立。此对象是原始 OT 残差假零，与 C71 删除输入最优约束后的假零不同；不改变条件刷新残差或原算子 r_F。

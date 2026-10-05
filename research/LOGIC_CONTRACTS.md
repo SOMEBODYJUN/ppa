@@ -332,3 +332,15 @@ E51 的一般前件是独立认证的 \(e_x\)。QP gap 给的是查询处 \(e_N\
 观测 \(\widetilde v\) 无需属于原 \(F\) 的值域，代理逆映射全域定义。
 C19/C20-v2 在上述范围为 derived-checked；C18、C03/C04、最优 \(K_\delta\)、
 采样可获得性与维数复杂度未因此升级。
+
+
+## E40/E41 · 快率、exact-zero 与幂界分别受哪个对象反驳
+
+E40 的 [C144](topics/random_markov/compact_residual_boundaries.md#crb-false-zero-object) 固定正方形、公平投影核和原始输入 OT 最优计划域：全部律一步平稳，相关见证却 Ψ=0、距全部不变律=t>0。最近不变锚和指定实际极限锚都不能修这个零集；输出仅否定“快率必使原 Ψ exact-zero”。C71 的假零来自删除 OT 约束，是另一个残差，不得替换 E40。
+
+E41 的 [C143](topics/random_markov/compact_residual_boundaries.md#crb-object) 固定 B5–B6 一个紧可数系统及原 Ψ；B20 对全部不变目标给全域距离，B21 确保 attained exact-zero，B22–B24 给全部初值、全部时间的同常数律空间率与长度。B25–B28 的同序列趋同一个 δ₀，并对每个 q>0、K≥0、r>0 严格违界。输出只否定“exact-zero 加快率必给局部正幂 EB”；一般 gauge 仍成立，有限状态 C15 不受此边反驳。B29–B30 的固定参数公式失败不迁移到所有速率证书。
+
+
+## E22 · C14 的共同 a.e. 连续量词与全部不变目标
+
+[C14 的 CG1–CG7](topics/random_markov/compact_residual_boundaries.md#crb-general-gauge) 固定任意概率噪声域及联合可测自映射，并先取一个满概率噪声集，再量化其内每个映射在整个非空紧 G 连续。两次有界控制收敛给核和同噪声 c_R 连续；联合可行关系保留全部不变目标以及各自的输入 OT 最优条件。因此 Ψ 取得且下半连续，exact-zero 与全律严格一般 gauge 等价。逐状态换异常集、先选最近不变律、放松输入最优计划、幂次升级和速率兼容都不由 E22 赋予。独立 Cesàro 存在性不需要轨道收敛假设。

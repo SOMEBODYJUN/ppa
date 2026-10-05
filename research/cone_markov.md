@@ -1,6 +1,6 @@
 # 锥优化与 Markov：两条独立的残差研究链
 
-本页从证明包重构数学内容。来源报告的内部审计与本轮阅读分开：本轮核对主要定义、结论和依赖，没有重新完成一般锥定理的全部拓扑细节、全部运输多面体计算或全球优先权审计。这里的结论不能自动接入确定性 RLEB–PPA。
+本页从证明包重构数学内容。来源报告的内部审计与本轮阅读分开：本轮核对主要定义、结论和依赖；C143/C144 的紧可数无幂界与正方形原残差假零已有独立完整规范证明。一般锥定理的全部拓扑细节、其余运输多面体计算或全球优先权审计仍未完成。这里的结论不能自动接入确定性 RLEB–PPA。
 
 <a id="c-rank"></a>
 <a id="c-mscq"></a>
@@ -49,7 +49,7 @@ H=\mathfrak F^\perp,\ S_{\rm dual}=\operatorname{span}(C^*\cap\mathfrak F^\perp)
 <a id="m-psi"></a>
 ## 2. Markov：必须保留的双层最小化
 
-紧状态集 \(K_{\rm state}\subset\mathbb R^d\)，几乎处处连续、联合可测的随机自映射 \(T_\xi:K_{\rm state}\to K_{\rm state}\)，实际更新使用独立新噪声。设 \(\mu P=\mathbb E(T_\xi)_\#\mu\)，不变律集 \(\mathcal I\ne\varnothing\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。此处状态集与 §1 的约束映射 \(G:V\to E\) 不同。定义
+紧状态集 \(K_{\rm state}\subset\mathbb R^d\)，联合可测的随机自映射 \(T_\xi:K_{\rm state}\to K_{\rm state}\)，且存在同一个满概率噪声集使其中每个映射在整个状态集连续，实际更新使用独立新噪声。设 \(\mu P=\mathbb E(T_\xi)_\#\mu\)，不变律集 \(\mathcal I\ne\varnothing\)，\(d(\mu)=d_{W_2}(\mu,\mathcal I)\)。此处状态集与 §1 的约束映射 \(G:V\to E\) 不同。定义
 
 \[
 c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
@@ -70,7 +70,7 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 \iff\exists\text{严格一般 gauge }\rho:\ d(\mu)\le\rho(\Psi(\mu))\quad\forall\mu.
 \]
 
-证明先用紧性推出 \(\omega(s)=\sup_{\Psi(\mu)\le s}d(\mu)\to0\)，再作连续严格增大函数包络；不需要轨道收敛假设，不给可计算或速率兼容 gauge。[CM-M Theorem 1]
+[C14 的 CG1–CG7 完整规范证明](topics/random_markov/compact_residual_boundaries.md#crb-general-gauge) 已在原共同 a.e. 连续量词下独立重构，包含核与同步成本连续、联合最优计划闭性、取得和下半连续。证明先用紧性推出 \(\omega(s)=\sup_{\Psi(\mu)\le s}d(\mu)\to0\)，再作连续严格增大函数包络；不需要轨道收敛假设，不给可计算或速率兼容 gauge。[CM-M Theorem 1]
 
 <a id="m-fin"></a>
 ### CM-FINITE：有限状态 exact-zero ⇔ 全局线性 EB
@@ -99,9 +99,9 @@ c_R(x,y)=\mathbb E\|(x-T_\xi x)-(y-T_\xi y)\|^2,
 | \(T_j(x,y)=(x,j)\)，公平 \(j=0,1\) | 一步变成不变律；\(\Psi(\mu)=W_2(\mu_y,\mathrm{Bern}(1/2))\)；相关律可有 \(\Psi=0,d>0\) | 轨道快速收敛 ⇒ 此残差识别不变律 |
 | 紧可数状态的二映射模型 | exact-zero、统一相对几何率、law-space 有限长度；对每个 \(q>0,K<\infty,r>0\) 都有 \(W_2(\nu,\delta_0)<r,d(\nu)>K\Psi(\nu)^q\) | exact-zero ＋ 快收敛 ⇒ 正 Hölder EB |
 
-第二例仍由 CM-GAUGE 保证一般 gauge。来源的更窄 Corollary 5 固定有效的期望 almost-firm 参数 \(0<\alpha<1\)、\(\varepsilon_f\ge0\)、\(\tau=(1-\alpha)/\alpha\)，其图点对界为
+两例的完整状态域、映射、全部不变律、合法输入最优计划和逐式证书见 [C143/C144 独立正文](topics/random_markov/compact_residual_boundaries.md#crb-object)。第二例的一般 gauge、全域距离分解、同一极限锚的统一率及任意正幂见证均已独立重建；不是只凭来源标题调用。第二例仍由 CM-GAUGE 保证一般 gauge。来源的更窄 Corollary 5 固定有效的期望 almost-firm 参数 \(0<\alpha<1\)、\(\varepsilon_f\ge0\)、\(\tau=(1-\alpha)/\alpha\)，其图点对界为
 \(\mathbb E\|T_\xi x-T_\xi y\|^2+\tau c_R(x,y)\le(1+\varepsilon_f)\|x-y\|^2\)，并取定义在局部值域上可逆的严格增 gauge \(\rho\)。它只排除该例在一个完整状态邻域上有效的**固定参数**与局部 \(d\le\rho(\Psi)\) 同时满足
-\(\Theta_\rho(t)^2=(1+\varepsilon_f)t^2-\tau[\rho^{-1}(t)]^2\ge0\)、\(\Theta_\rho(t)<t\) 对所有足够小的正 \(t\)。此处保持来源报告状态，不能说所有速率证书均失败。[CM-M Theorems 2、4，Corollary 5]
+\(\Theta_\rho(t)^2=(1+\varepsilon_f)t^2-\tau[\rho^{-1}(t)]^2\ge0\)、\(\Theta_\rho(t)<t\) 对所有足够小的正 \(t\)。此固定公式的限定结论已在 [B29–B30](topics/random_markov/compact_residual_boundaries.md#crb-fixed-formula) 独立重证，不能说所有速率证书均失败。[CM-M Theorems 2、4，Corollary 5]
 
 <a id="m-cond"></a>
 ## 3. 条件残差修复与随机提升边界
