@@ -104,7 +104,7 @@
 
 - **Status**：`candidate`；依赖 C09 全套局部条件及回缩证明，尚未独立验收整条链。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：C09 整套局部假设在 \(U_R\) 成立，置 \(\ell_\omega(r)=r/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jr)\)，\(\mathcal O=\{x\in U:d(x,S)<R,\ell_\omega(d(x,S))<d(x,X\setminus U)\}\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 C09 的 \(X=\mathbb R^n\)，其整套局部假设在 \(U_R\) 成立，置 \(\ell_\omega(r)=r/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jr)\)，\(\mathcal O=\{x\in U:d(x,S)<R,\ell_\omega(d(x,S))<d(x,X\setminus U)\}\)。
 - **Conclusion**：\(\mathcal O\) 开且正向不变，包含 \(S\cap U\)；每个 \(x\in\mathcal O\) 的极限 \(\Pi(x)\) 构成连续回缩 \(\mathcal O\to S\cap U\)，所以 \(S\cap U\) 为 Euclidean neighborhood retract，并满足原稿所述局部收缩性。
 - **Dependencies / Evidence / Objections / Status / Related Files**：C09 的统一尾、全对输入连续性和精确长度递推；S19 prop:limit-retraction，[holder_structure H05](research/holder_structure.md)。稿内证明及局部重算。C04 的任意紧零集实现未附 C11 假设；Cantor 型零集不能在相应点满足整套条件。
 
@@ -1183,7 +1183,7 @@
 <a id="c141"></a>
 ## C141-v1 / SS-SUPERLINEAR-FAMILY · 任意超线性法向尾的完整二支图
 
-- **Status**：`derived-checked`，仅限 SF-1–12 固定参数完整关系、图块证书与显示的共同尾及配对指数；两轮空白独立重建了完整纤维、最小真残差、尺度/半径、首次切换和 overshoot，未发现受检证明的致命异议。外部先行性、其它原生关系的纤维桥及全库审查仍未核。
+- **Status**：`derived-checked`，仅限 SF-1–12 固定参数完整关系、图块证书与显示的共同尾及配对指数；[10/05 可追溯空白复读](research/audit/BLIND_RECEIPT_2026-10-05.md)重建了完整纤维、最小真残差、尺度/半径、首次切换和 overshoot，未发现受检证明的致命异议。旧有“两轮”审查的逐项记录未随仓库保存，不能据此扩大受检范围。外部先行性、其它原生关系的纤维桥及全库审查仍未核。
 - **Exact Statement / Objects / Domain / Quantifiers**：Euclidean \(\mathbb R^3\)、\(\lambda=1\)、固定 \(0<\gamma<1,\nu>1,A,B>0\)。[SF-1](research/canonical/selection_superlinear_family.md#sf-object) 给完整闭二支关系，零集 \(S=\mathbb R^2\times\{0\}\)，对**每个**输入有完整单值 \(J_F=T\) 如 SF-2。对固定 \(0<R_0<1,0<D<\infty\)，完整输出 collar \(0\le y\le R_0^\nu\) 的任意图点对若输入对距 \(\le D\)，有 \(\mathrm{RL}(1,\gamma,L_{R_0,D};D)\) 的 SF-3 证书；全图真实残差给 \(d(u,S)\le(r_F(u)/A)^{\nu/\gamma}\)。存在仅依赖固定参数与 \(R_0\) 的充分小 \(0<R\le R_0\)，使全域 gauge、同图零锚、完整覆盖和 SF-5 的 \(\kappa_R<1\) 同时成立。对全部 \(|r_0|\le R_0\) 有共同 \(Me^{-c\nu^k}\) 点尾；每个 \(0<|r_0|<1\) 的逐轨道点误差满足 SF-7 的确切 Q-\(\nu\) 比值。对每个固定 \(0<r_0<1\) 的 \((0,0,r_0),(0,\varepsilon,r_0)\)，当 \(\varepsilon\downarrow0\) 时，极限差夹在两个 \(e^{-c(\log(1/\varepsilon))^\alpha}\) 型界之间，\(\alpha=\log\nu/\log(\nu/\gamma)\)。若要把配对放在**同一个**严格证书内，另选 \(r_0\le R\)；有理 \(\gamma,\nu\) 才声明半代数。
 - **Definitions / Dependencies / Evidence**：[SF-1–12 的完整反演、全部图值最小残差、兼容、共同尾及双侧首次切换](research/canonical/selection_superlinear_family.md#sf-object)；C02-v2 只用于已经另外核过的固定严格证书，C08/SS-TRANSFER 只传共同尾上界，配对下界在本页独立重算。\(\nu=2,\gamma=1/2,A=B=1\) 给 C115/C116 的同图特例。SS1 修订包 `research_note.md` 557–582 行仅为来源定位。
 - **Counterevidence / Objections / Scope / Related Files**：\(\kappa_R\) 不是实际法向率；共同尾与 Q-\(\nu\) 比值的统一起点不能混写。SF-11 分开估计 overshoot \(p_N\) 与饱和尾，不把前者误估为 \(O(r_N^\gamma)\)。本条不覆盖 \(|r_0|\ge1\) 的收敛，也不转移到任意原生多值方程；外部先行性未核。来源去向见 [逐单元表](research/audit/UNIT_DISPOSITIONS.tsv)。
@@ -1191,7 +1191,7 @@
 <a id="c142"></a>
 ## C142-v1 / OS-COMPACT-BARRIER · 紧图不可能是极大单调完整图
 
-- **Status**：`derived-checked`；显式加点证明已由独立空白接收逆向重建。
+- **Status**：`derived-checked`；显式加点证明的独立空白复读范围见[10/05 接收记录](research/audit/BLIND_RECEIPT_2026-10-05.md)，旧有审查的逐项记录未随仓库保存。
 - **Exact Statement / Objects / Domain / Quantifiers**：对任意**非零实 Hilbert 空间** \(H\) 和任意非空紧集 \(G\subset H\times H\)，\(G\) 不是极大单调关系的完整图；若它单调，存在与其中全部图点构成严格正内积的一个新图点，故可真单调扩张。特别地，任意非空紧 \(K\subset H\)、连续 \(U:K\to K\)、\(\lambda>0\) 从 (OS3) 定义的完整 \(F_{U,K}\) 不是极大单调，无需 C132 的 \(S\)、步界或 gauge 前提。
 - **Definitions / Dependencies / Evidence**：[OS-COMPACT-BARRIER 的 (OS6a)](research/operator_space.md#os-compact-barrier) 从两个坐标的一致界直接构造 \(u=(a+1)e,v=te\)，对任意图点严格满足单调加点不等式。C132 的 (OS3) 给出应用所需紧图；证明不导入 Minty 满值定理，也不将 C132 的 EB 误当成单调性。
 - **Counterevidence / Objections / Scope / Related Files**：零维空间不在量词内；若 \(G\) 不单调，结论更直接。只排除**紧图本身**充当极大单调关系，不排除一个更大的共同母空间同时容纳紧图及非紧极大单调图，也不排除加点延拓；一旦加点，完整近端和真最小残差须重核。见 [F41](FAILED_ROUTES.md#f41)；不从此推出 RLEB/LT/极大单调的总体规模比较。

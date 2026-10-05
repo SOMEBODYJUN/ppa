@@ -89,7 +89,7 @@ K\ne\varnothing,\qquad K\text{ 紧},\qquad\operatorname{diam}K\le R.
 <a id="r05"></a>
 ## H04 · 一般模、Dini 门槛与对数反例
 
-将局部 all-pairs 右侧替换为连续非减 \(\omega\)，\(\omega(0)=0\)。保留局部 range coverage、最近零点比较、真实输出误差界及 gauge 范围；要求
+本节的局部收敛命题固定 \(X=\mathbb R^n\)，沿用 [R01/R02](rleb_ppa.md#r01) 的同一图块、闭零集、开域与完整真残差约定；其精确版本为 [C09](../CLAIMS.md)。不沿用 H01 的任意 Hilbert 空间量词。将局部 all-pairs 右侧替换为连续非减 \(\omega\)，\(\omega(0)=0\)。保留局部 range coverage、最近零点比较、真实输出误差界及 gauge 范围；要求
 
 \[
 \psi\!\left(\frac{r+\omega(r)}{2\lambda}\right)\le\kappa r,
@@ -123,7 +123,7 @@ F_a(\xi,y)=\{(-\ell_a(4y),3y),(-\ell_a(4y),-5y)\}\quad(y\ge0),
 <a id="ob-topo"></a>
 ## H05 · 连续极限回缩与任意紧零集的条件限制
 
-在 H04 整套局部假设下，令 \(\ell_\omega=\mathcal L_\omega\)，
+在 H04 的 \(X=\mathbb R^n\) 及整套局部假设下，令 \(\ell_\omega=\mathcal L_\omega\)，
 
 \[
 \mathcal O=\{x\in U:d(x,S)<R,\ \ell_\omega(d(x,S))<d(x,U^c)\}.
