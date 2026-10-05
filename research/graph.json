@@ -1602,6 +1602,11 @@
       "file": "canonical/selection_geometric_cap.md#gc-object"
     },
     {
+      "id": "GC-MOD",
+      "label": "完整 cap 图有限输入对尺度的全对模与单步 Hölder",
+      "file": "canonical/selection_geometric_cap.md#gc-certificates"
+    },
+    {
       "id": "GC-CERT",
       "label": "跨支全对半阶、真 EB 与固定兼容半径 C137",
       "file": "canonical/selection_geometric_cap.md#gc-certificates"
@@ -4080,16 +4085,28 @@
       "status": "derived-checked；GC-1–6 全图重算"
     },
     {
+      "id": "E221",
+      "topic": "解选择",
+      "inputs": [
+        "GC-OBJECT"
+      ],
+      "output": "GC-MOD",
+      "relation": "conditional",
+      "scope": "C137：同一完整二支 cap 图，任意固定 R>0、所有完整图点对应的输入对 δ≤R；GC-3 给反射 C=2T−I 的 L_R√δ 全对模，由 T=(I+C)/2 得 GC-3a 的 H_R√δ 单步模，H_R=(√R+L_R)/2。这不调用 GC-4 真 EB、GC-5 严格兼容或有限 gauge 域。",
+      "status": "derived-checked；GC-3/3a 同图全对估计"
+    },
+    {
       "id": "E207",
       "topic": "解选择",
       "inputs": [
         "GC-OBJECT",
+        "GC-MOD",
         "SS-TRANSFER"
       ],
       "output": "GC-TAIL",
       "relation": "conditional",
-      "scope": "C137：同一完整单值 T 与固定 |r_0|≤R collar；由 GC-2 显式迭代得法向率 1/4、共同 M·2^{-k} 点尾，再以 SS-T2 给 β=1 的两点上界。GC-CERT 的严格兼容另授同图 RLEB 证书，并非此共同尾的前提；同图配对匹配阶另见 E31/C138。",
-      "status": "derived-checked；GC-7–8 与 SS-TRANSFER"
+      "scope": "C137：同一完整单值 T，GC-MOD 的 GC-3a 在任意固定 R>0 的输入对尺度提供 SS-T1 的 H_R,R,γ=1/2；GC-2 显式迭代对全部 |r₀|≤R 给共同 M·2^{-k} 点尾，故 SS-T2 给 β=1 的两点上界。GC-CERT 的真 EB、严格兼容和 gauge 半径另授同图 RLEB 证书，不是此尾界的前提；同图配对下界另见 E31/C138。",
+      "status": "derived-checked；GC-3/3a、GC-7–8 与 SS-TRANSFER"
     },
     {
       "id": "E208",

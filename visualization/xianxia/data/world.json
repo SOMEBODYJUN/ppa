@@ -3789,6 +3789,17 @@
       "y": 766,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "GC-MOD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
     }
   },
   "edges": {
@@ -4671,6 +4682,10 @@
     "E220": {
       "x": 4222.59,
       "y": 809.78
+    },
+    "E221": {
+      "x": 1866.92,
+      "y": 509.91
     }
   },
   "bounds": {

@@ -1153,7 +1153,7 @@
 
 - **Status**：`derived-checked`，范围为本对象的完整纤维反演、全对局部模、真 EB、固定兼容半径及共同几何尾；§3 的同图配对下界另立 C138，外部原创性未审。
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(E=\mathbb R^3,\lambda=1\) 固定 [GC-1](research/canonical/selection_geometric_cap.md#gc-object) 的完整闭半代数二支关系；\(S=\mathbb R^2\times\{0\}\)，完整 \(J_F=T\) 在全部输入上唯一且由 (GC-2) 给出。对每个 \(R>0\)，同一完整图在输入对尺度 \(R\) 满足 \(\mathrm{RL}(1,1/2,L_R;R)\)，\(L_R=2\sqrt2+3\sqrt R/2\)；半阶最大、渐近最佳常数为 \(2\sqrt2\)，不声称每个固定 \(R\) 的 \(L_R\) 最小。完整真残差有 \(d(u,S)\le r_F(u)^2/4\)，系数渐近最优。固定 \(0<R<[2(4-2\sqrt2)/5]^2\) 和 \(\bar t\ge(R+L_R\sqrt R)/2\) 后，\(\psi(t)=t^2/4\) 可在 \([0,\bar t]\) 调用，直接兼容常数 \(\kappa_R=(\sqrt R+L_R)^2/16<1\)；全部输入轨道仍直接满足 \(d(Tx,S)=d(x,S)/4\)，每个 \(|r_0|\le R,k\ge0\) 具有 (GC-8) 的共同点尾，故 SS-T2 可取 \(\sigma=1/2,\beta=1\) 的上界。
-- **Dependencies / Evidence**：[完整三段反演、全对图与尾界的逐式证明](research/canonical/selection_geometric_cap.md#gc-object)；C02-v2、SS-TRANSFER 只用于条件链调用，实际轨道率由显式 \(T\) 单独算得。来源 SS1 `research_note.md` §2 定理 2 的 181–293 行只作定位。
+- **Dependencies / Evidence**：[完整三段反演、全对图与尾界的逐式证明](research/canonical/selection_geometric_cap.md#gc-object)；GC-3 的全对反射模经 GC-3a 给同一完整 \(T\) 的 \(H_R=(\sqrt R+L_R)/2\) 单步半阶模，和显式共同尾**合取**后才调用 SS-TRANSFER。C02-v2 只用于另一个固定小半径的严格证书链；实际轨道率由显式 \(T\) 单独算得。来源 SS1 `research_note.md` §2 定理 2 的 181–293 行只作定位。
 - **Counterevidence / Objections / Scope**：负输入选中残差较大一支，EB 必须用全部输出纤维的最小值；\(\kappa_R\) 与实际 \(1/4\) 不等，固定半径不受 \(R\downarrow0\) 的极限替代。本版本的共同尾只给上界；同模型配对锐阶另立 [C138](#c138)，§5.2 应用或全部参数族不纳入。
 
 <a id="c138"></a>

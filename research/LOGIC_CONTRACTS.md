@@ -284,11 +284,11 @@ E204 只在 [R01/R02](rleb_ppa.md#r01) **同一**有限维图块、最近零锚�
 
 E205 采用充分门 \(J_{\lambda F}(u)=\{J_{\mathcal G}(u)\}\) 对**全部** \(u\in W\)；于是 E204 的整球图块轨道、尾和极限模逐步成为完整 PPA 结论。整窗等式并非逻辑必要：仅在所有球初值的实际可达输入上核全部纤维同一性也足够；但只在初值球上核不覆盖后来输入。[F03](solution_selection.md#f03) 的闭完整并图 \(F(y)=\{y,-y\}\) 给 \(J_F(0)=\mathbb R\) 而图块 \(J_{\mathcal G}(0)=0\)。[C136 正文](canonical/solution_selection_rates.md#ss-rleb-ball) 给明确 \(W,H,M,\sigma\) 及附加速率常数。
 
-## E206–E207：完整几何尾图的证书与实际速率
+## E206–E207、E221：完整几何尾图的证书、单步模与实际速率
 
 E206 的对象固定为 [GC-1 完整二支图](canonical/selection_geometric_cap.md#gc-object)，\(\lambda=1\)、Euclidean \(\mathbb R^3\)、完整零集 \(S=\mathbb R^2\times\{0\}\)。所有输入及正负图支由唯一完整 \(J_F=T\) 反演；对任意输入对尺度 \(R>0\) 才给 \(L_R=2\sqrt2+3\sqrt R/2\) 的全对半阶 RL 和完整最小残差 \(d(u,S)\le r_F(u)^2/4\)。\(\kappa_R<1\) 另要求**固定** \(0<R<[2(4-2\sqrt2)/5]^2\)，以及选中步的范数在 \(\psi:[0,\bar t]\) 定义域内；最优渐近 RL 常数不声称每个有限 \(R\) 的 \(L_R\) 最优。[GC 证书](canonical/selection_geometric_cap.md#gc-certificates) 逐式区分这三个尺度。
 
-E207 在**同一**完整 \(T\) 上由 GC-2 的显式迭代对所有 \(|r_0|\le R\) 取统一 \(M=2\sqrt2\sqrt R+R\) 和 \(\sigma=1/2\) 的点尾，再以 [SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer) 得 \(\beta=1\) 的两点**上界**。这个共同尾不需要 E206 中的严格兼容半径；若另称它处在同图 RLEB 证书内，才需逐项核 E206。实际法向率 \(1/4\)、兼容证书 \(\kappa_R\to1/2\) 和由证书导出的保守尾指数是三种不同数据；下界属于额外的 E31/C138 配对论证，而非共同尾的自动后果。C137 与 SS-Q2 是不同完整关系，不能拼它们的证书。
+E221 从同一完整 \(T\) 的 GC-3 全对反射模和 \(T=(I+C)/2\) 得 GC-3a：任意固定 \(R>0\)，在输入对距 \(\delta\le R\) 有单步 \(H_R\sqrt\delta\)，\(H_R=(\sqrt R+L_R)/2\)。这项 GC-MOD 不要求 E206 的真 EB、gauge 域或严格兼容半径。E207 **合取 GC-MOD**、完整 \(T\) 和 [SS-TRANSFER](canonical/solution_selection_rates.md#ss-transfer)：GC-2 的显式迭代对所有 \(|r_0|\le R\) 取统一 \(M=2\sqrt2\sqrt R+R\) 和 \(\sigma=1/2\) 的点尾；GC-3a 给 SS-T1 所需的同一比较轨道区域单步模，SS-T2 遂给 \(\beta=1\) 的两点**上界**。若另称它处在同图 RLEB 证书内，才需逐项核 E206。实际法向率 \(1/4\)、兼容证书 \(\kappa_R\to1/2\) 和由证书导出的保守尾指数是三种不同数据；下界属于额外的 E31/C138 配对论证，而非共同尾的自动后果。C137 与 SS-Q2 是不同完整关系，不能拼它们的证书。
 
 ## E31：几何 cap 同图配对首次切换
 
