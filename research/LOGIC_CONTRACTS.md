@@ -8,7 +8,7 @@ E43 另取 \(\mathbb R^m\) 上 \(Q\succ0\) 的 Gaussian 目标 \(\beta\) 和常�
 
 ## E44–E45：概率矩门与同一回耦对
 
-E44 的 \(e,c\) 是同一状态集上的非负有限函数；存在共同零点及两者都正的 excursion，\(1\le p,r<\infty,q>0\)。[C126/MR1](topics/random_markov/moment_recoupling.md#mr-moment) 的等价式量化**全部有限支撑律**，且点态系数必须是同一 \(K\)。law-space 必要性另需闭支持目标、平稳律在该目标上、状态残差在该律上零，以及非零更新输出离目标；它不把 \(\Psi\) 或条件残差 \(\mathcal R\) 直接等同于标量 \(c\)。
+E44 的 \(e,c\) 是同一状态集上的非负有限函数；存在共同零点及两者都正的 excursion，\(1\le p,r<\infty,q>0\)。[C126/MR1](topics/random_markov/moment_recoupling.md#mr-moment) 的等价式量化**全部有限支撑律**，且点态系数必须是同一 \(K\)。law-space 必要性另需闭支持目标、平稳律在该目标上、状态残差在该律上零，以及非零更新输出离目标；它不把 \(\Psi\) 或条件残差 \(\mathcal R\) 直接等同于标量 \(c\)。E44 输出专记 [MOMENT-LIFT-GAP](topics/random_markov/moment_recoupling.md#mr-moment-gap)；没有原算子桥时不连到 D04。
 
 E45 的输出是 [C127/MR3](topics/random_markov/moment_recoupling.md#mr-recoupling) 的**线性 EB**，不是 CM-GAUGE 的 exact-zero ⇔ 一般 gauge。必须同时在同一随机表示及指定律类上有 \(d(\mu P)\le c_0d(\mu)\)、\(c_0<1\)，并对每个 \(\mu\) 用输入 \(W_2\)-最优、同噪声的近极小序列 \((\pi_j,\eta_j)\) 逼近原 \(\Psi\) 下确界；同一个 \(\chi\) 控制这些对的 \(\Delta_{\eta_j}\le\chi D_{\eta_j}^2\)。不能从别的运输对、不同表示或条件刷新残差移植损失界；原生模型尚须单独认证这些量词。
 
@@ -22,7 +22,7 @@ E86 的全部输入使用一张完整紧图 \(\operatorname{gph}F=K\times\{0\}\)
 
 ## E88–E91：非孤立解集的锚点、近似点和锐性
 
-E88 固定同一个 \(S\subset F^{-1}(0)\)、指定 \(J\) 和整个 \(0<d(x,S)\le r_0\) 的输入家族；对家族每个 x 同时要求 \(P_S(x),P_S(Jx)\ne\varnothing\)。集合间漂移的 infimum 不需取到，用近似点对即可得 \(r\le a\le r+\delta\le3a\)。E89 还需在**同一家族每个实际输出**的真 EB、非减超线性 gauge、全部实际步的 \(\psi(t)\le\lambda t/2\)、重标度在定义域内；包络版另需统一 \(\mathcal A(r)\le Kr^\theta\)。只得 upper \(\theta q\)，不含全轨道留域。[C48/C49](canonical/nonisolated_alignment.md)。
+E88 固定同一个 \(S\subset F^{-1}(0)\)、指定 \(J\) 和整个 \(0<d(x,S)\le r_0\) 的输入家族；对家族每个 x 同时要求 \(P_S(x),P_S(Jx)\ne\varnothing\)。集合间漂移的 infimum 不需取到，用近似点对即可得 \(r\le a\le r+\delta\le3a\)。E89 还需在**同一家族每个实际输出**的真 EB、非减超线性 gauge、全部实际步的 \(\psi(t)\le\lambda t/2\)、重标度在定义域内；包络版另需 \(K>0,\theta>0\)、对所有 \(0<r\le r_0\) 的统一 \(\mathcal A(r)\le Kr^\theta\)，且 \((2K/\lambda)r_0^\theta<\eta_\psi\)；正指数才保证所有更小半径的 gauge 求值仍在域内。只得 upper \(\theta q\)，不含全轨道留域。[C48/C49](canonical/nonisolated_alignment.md)。
 
 E90 不以 E88 的 proximinality 为前提：正的 \(e(t)\) 或另证近似投影非空，并对每个实际 \(t>0\) 有 \(\psi(t)+e(t)\le\kappa\lambda t,\kappa<1\)，才把同一真 EB 写成近似锚的 gauge 界。近似点的存在不提供 Minty 输入 coverage。[NA-APPROX](canonical/nonisolated_alignment.md#na-approx)。
 
@@ -58,7 +58,7 @@ E18 的输入只是一张固定非空紧 \(K\)、非空闭 \(S\subset K\)、全�
 
 9/25 的有限样本 \((p_i,y_i)_{i=1}^m\) 只给到 \(d(\cdot,S)\) 的[可验证上下包络 C70-v1a](canonical/finite_sample_collar.md#fsc-envelope)。另有**指定的整个** \(T\) 对每个 \(p\in A,y\in T(p)\) 的步界/输出 EB，加上经验证的 collar 数值，才给 [C70-v1b 内域余量](canonical/finite_sample_collar.md#fsc-collar)；这个结果没有 fixed point 结论。C05-v1 还需要 \(T\) 在 \(A\) 邻域 usc、各值非空紧且 Čech–\(\mathbb Q\)-acyclic，以及上同调满射与 Euler 特征条件。\(T\) 可是完整 resolvent 的子关系；不能暗换成全纤维。外部 Lefschetz [6, Theorem 6.2] 的适用条件已在[一手文献卡](LITERATURE.md#lit-grn-2002)按紧图/Vietoris/CAC 逐项核对；它不建立任何整窗模型假设，原稿 C05-v1 仍是 PDF-only 候选。[H07](holder_structure.md#h07)。保留全部这些合取前提而将 \(q\gamma>1\) 放宽成 \(q>0\) 的独立新版本见 [C05-v2](canonical/local_range_without_supercriticality.md#lr-theorem)。
 
-固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_3\) 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
+固定惰性四循环的 [C71](topics/random_markov/lazy_cycle_ot.md#lc-sharp) 使用唯一不变律 \(\pi\) 与输入 \(\mu\) 之间的 **\(C\)-最优计划**，并在这些计划上才最小化同步残差成本 \(R\)。位移签名 \(d_0=d_2=-1\)，这里 \(g_0=0,g_2=3\)，运输边标签 \(0\leftrightarrow3\) 使用状态值 本身不能识别 \(\mu=\pi\)，但最优运输的无交叉交换排除零成本跨边；去掉内层 OT 约束的 [LC-RELAX](topics/random_markov/lazy_cycle_ot.md#lc-relax) 则有非不变输入残差零。核 \(P_p\)、边缘、成本和最优计划域都须保持相同，才能调用锐 \(\sqrt{13/p}\) 界。
 
 <a id="e51"></a>
 ## E50–E51：有限数据的同图尺度门与反演求值门
@@ -115,7 +115,7 @@ E119 固定 \(p,R,\varphi\) 的连续非减硬支持对象，取**所有**概率
 
 RP-OBJECT 固定有限维二次近端、正权重、共同核 \(U\)、非零活跃空间 \(V\) 和与当前状态独立的新噪声；RP-GAP 仅在 \(V\) 上给 \(c<1\)。对**每个固定**守恒边缘 \(\nu\in\mathscr P_2(U)\)、**所有** \(\mu\in\mathscr M_\nu\)，RP-CONTRACTION 给完整混合核的条件 \(\mathsf W_\nu\) 收缩。RP-EB 才使用 \(\mathcal R_\nu(\mu)=\mathsf W_\nu(\mu,\mu P)\) 推出 \((1-c)E_\nu\le\mathcal R_\nu\le(1+c)E_\nu\) 与有限长度。[完整证明](canonical/random_proximal.md)。
 
-RP-BRANCH 的对象更宽：每支 firmly nonexpansive、有不动点且正权重，则 \(\sum_i p_iW_2(\mu,(S_i)_\#\mu)^2=0\) 等价于 \(\mu\) 支持于**所有**分支的共同固定点。RP-SCALAR 在一个不一致近端子族同时实现混合不变律、严格正物理步长及统一 EB 系数的尖锐性。分支残差、物理步长和完整核 law-step 各有不同零集或量纲；E57 是阻断替换的限制边，E58 只证明整个模型类的统一常数不能降低。[F09](../FAILED_ROUTES.md)。
+RP-BRANCH 的对象更宽：每支 firmly nonexpansive、有不动点且正权重，则 \(\sum_i p_iW_2(\mu,(S_i)_\#\mu)^2=0\) 等价于 \(\mu\) 支持于**所有**分支的共同固定点。图的 E57 输出已专记 [OB-RP-BRANCH](canonical/random_proximal.md#rp-branch-gap)，与二 bit 的 OB-RES 分离。RP-SCALAR 在一个不一致近端子族同时实现混合不变律、严格正物理步长及统一 EB 系数的尖锐性。分支残差、物理步长和完整核 law-step 各有不同零集或量纲；E57 是阻断替换的限制边，E58 只证明整个模型类的统一常数不能降低。[F09](../FAILED_ROUTES.md)。
 
 ## E59–E67：例子、参数及方向
 
@@ -311,3 +311,24 @@ E219 将 (SF-3) 在正有限比较尺度 \(D\) 上的全对模单列为 [SF-MOD]
 ## E220：紧源关系不能直接进入极大单调类
 
 [C142](operator_space.md#os-compact-barrier) 对非零实 Hilbert 空间的任意非空紧图作严格单调加点，不需要 C132 的真 EB、零集或 gauge 条件。E220 只阻断**这张完整紧图本身**成为极大单调图；重新延拓属于新完整对象，不继承原紧逆纤维的最小残差结论，也不凭此障碍决定三类的总体大小关系。[F41](../FAILED_ROUTES.md#f41) 记录重启门。
+
+## E49–E51：有限 QP 的独立链和反演证书的充分路线
+
+E49 的 QSAMPLE 是固定 \(n,m,\lambda,L,\gamma,\sigma,a\) 与**全部样本对**兼容，
+FD-LIFT 是有限抬升的顶点插值和交叉估计；[FD-1–12](canonical/finite_data_proxy.md#fd-object)
+独立给唯一 QP、同一个全局 \(N_m\)、强单调双 Lipschitz \(A_m\) 及样本配对误差。
+它不调用 H02 的无限图扩张或 C03/C04。
+
+E50 先继承样本兼容，另对每个未知图点指定同一认证图和同一步长，
+用一个样本在 RL 测试尺度内的参数覆盖，才由 [FD-13–16](canonical/finite_data_proxy.md#fd-cover)
+得到 \(K_\delta\)。局部 RL 不自动供给远距样本对兼容；
+完整纤维结论必须对**非空完整纤维的每个图点**满足同图、覆盖和尺度门。
+
+E51 的一般前件是独立认证的 \(e_x\)。QP gap 给的是查询处 \(e_N\)；
+**若从该次查询生成**反演证书，须用 [FD-17](canonical/finite_data_proxy.md#fd-eval)
+合并候选固定点残差；它不是唯一允许的认证算法。
+真 \(v\) 的完整纤维已认证、噪声 \(\|\widetilde v-v\|\le\eta\) 和 \(e_x\)
+才推出 [FD-18](canonical/finite_data_proxy.md#fd-total) 的三项界。
+观测 \(\widetilde v\) 无需属于原 \(F\) 的值域，代理逆映射全域定义。
+C19/C20-v2 在上述范围为 derived-checked；C18、C03/C04、最优 \(K_\delta\)、
+采样可获得性与维数复杂度未因此升级。

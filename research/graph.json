@@ -426,12 +426,12 @@
     {
       "id": "QSAMPLE",
       "label": "样本交叉兼容",
-      "file": "range_finite_data.md#qsample"
+      "file": "canonical/finite_data_proxy.md#fd-object"
     },
     {
       "id": "QP",
       "label": "严格凸 QP 与全局 N_m",
-      "file": "range_finite_data.md#qp"
+      "file": "canonical/finite_data_proxy.md#fd-qp"
     },
     {
       "id": "Q-COVER",
@@ -441,17 +441,17 @@
     {
       "id": "Q-BOUND",
       "label": "正反纤维配对 Kδ 界",
-      "file": "range_finite_data.md#q-bound"
+      "file": "canonical/finite_data_proxy.md#fd-cover"
     },
     {
       "id": "Q-EVAL",
       "label": "已验证 gap、噪声与求值误差",
-      "file": "range_finite_data.md#q-eval"
+      "file": "canonical/finite_data_proxy.md#fd-eval"
     },
     {
       "id": "Q-TOTAL",
       "label": "覆盖 + 噪声 + 求值三项界",
-      "file": "range_finite_data.md#q-total"
+      "file": "canonical/finite_data_proxy.md#fd-total"
     },
     {
       "id": "Q-ORACLE",
@@ -1690,6 +1690,21 @@
       "id": "SF-SHARP",
       "label": "超线性族的匹配根对数指数下界 C141",
       "file": "canonical/selection_superlinear_family.md#sf-sharp"
+    },
+    {
+      "id": "OB-RP-BRANCH",
+      "label": "逐分支残差不识别混合不变律",
+      "file": "canonical/random_proximal.md#rp-branch-gap"
+    },
+    {
+      "id": "MOMENT-LIFT-GAP",
+      "label": "小质量矩提升须满足 pq≤r",
+      "file": "topics/random_markov/moment_recoupling.md#mr-moment-gap"
+    },
+    {
+      "id": "FD-LIFT",
+      "label": "有限 QP 的抬升插值与样本交叉界",
+      "file": "canonical/finite_data_proxy.md#fd-cross"
     }
   ],
   "edges": [
@@ -2217,7 +2232,7 @@
       "inputs": [
         "M-MOMENT"
       ],
-      "output": "D04",
+      "output": "MOMENT-LIFT-GAP",
       "relation": "limits",
       "scope": "C126：同一非负有限 e,c 有共同零点及正 excursion；全部有限支撑律的同 K 矩界需要逐点界与 pq≤r。Markov law-space 必要性另需 R^d 核与 Wp 母空间、所有目标律 I⊂Pp(S)、π∈I 平稳及残差零值、a∈R^d 的正输出距离，并在含稀释律的整个 Wp 邻域对 d(μP,I) 断言；相对 Pp(S) 邻域还须 a∈S。不否定任意残差。",
       "status": "derived-checked / MR1 及小质量更新证明"
@@ -2275,12 +2290,12 @@
       "topic": "有限数据",
       "inputs": [
         "QSAMPLE",
-        "LIFT"
+        "FD-LIFT"
       ],
       "output": "QP",
       "relation": "implies",
-      "scope": "同一固定样本的严格凸 QP，所有查询共用 N_m",
-      "status": "S23 稿内构造"
+      "scope": "固定有限样本、λ>0、0<σ<1、a²=Mσ/2>0、全部样本对兼容；同一严格凸 QP 的有限抬升与变分不等式给全局 N_m/A_m，不依赖 C03 的无限图扩张或 C04。",
+      "status": "C19 derived-checked / FD-1–12 独立完整重建"
     },
     {
       "id": "E50",
@@ -2292,8 +2307,8 @@
       ],
       "output": "Q-BOUND",
       "relation": "conditional",
-      "scope": "C20-v2：样本与未知点属同一 RL 图；每个使用的参数点对既被 δ-覆盖又在 RL 测试尺度内（全尺度自动，局部 δ≤R₀ 是充分门）；完整纤维还需其全部图点属于该图并逐个满足覆盖与尺度门",
-      "status": "C20-v2 candidate；无尺度的 C20-v1 已由 F36 反驳，S23 原稿是全图全尺度版本"
+      "scope": "C20-v2：先继承 C19 的全部样本对兼容；样本与未知点属同一 RL 图，每个使用点对被 δ-覆盖且在测试尺度内（局部 δ≤R₀ 是充分门）。完整非空纤维须全部图点属该图并逐个覆盖；局部近对 RL 不自动认证远样本对兼容。",
+      "status": "C20-v2 derived-checked / FD-13–16；无尺度 v1 仍由 F36 反驳"
     },
     {
       "id": "E51",
@@ -2304,8 +2319,8 @@
       ],
       "output": "Q-TOTAL",
       "relation": "conditional",
-      "scope": "真输出的全纤维 Cayley 参数覆盖、观测噪声 η、反演求值证书 e_x≥||xhat−A_m^{-1}(vtilde)||。QP gap 只认证 N_m(q) 的 e_N，还需候选参数 q 的固定点残差除以 1−σ 才能取得 e_x",
-      "status": "S23 稿内证明"
+      "scope": "真输出 v 的完整非空纤维逐图点 Cayley 参数覆盖、观测噪声 η、独立反演证书 e_x≥||xhat−A_m^{-1}(vtilde)||。若从单次 QP 求值生成 e_x，须合并 e_N 与候选参数固定点残差除以 1−σ；也可另给独立 e_x。噪声目标 vtilde 无需属原值域。",
+      "status": "C20-v2 derived-checked / FD-17–18；浮点误差须另认证"
     },
     {
       "id": "E52",
@@ -2372,8 +2387,8 @@
         "RP-CONTRACTION"
       ],
       "relation": "limits",
-      "output": "OB-RES",
-      "scope": "分支 firmly nonexpansive 且各有固定点时，逐支推前残差零集是共同固定点支持律；混合不变律可存在而该残差严格正。",
+      "output": "OB-RP-BRANCH",
+      "scope": "同一 RP-OBJECT 的不一致子模型中共同不动点为空；RP-BRANCH 使逐支推前残差在全部 P2 律上严格正，RP-CONTRACTION 仍给混合不变律。故分支残差不识别混合 law-step 零集；不同于二 bit 条件残差的 OB-RES。",
       "status": "本轮独立推导；未核外部优先权"
     },
     {
@@ -3727,7 +3742,7 @@
       ],
       "output": "RS-RESIDUAL",
       "relation": "conditional",
-      "scope": "同一完整图 S={0}；每个 q>0 与每个输入缩窗的真全纤维残差 EB 系数下确界 0；另对每个固定 λ>0 的全部自然域最小步残差有锐系数 1+δ/λ。每条非零逐步合法完整 J 路径的位移至少 λ 且有限步终止；近零输入无 coverage，不能从真残差系数转授步界或路径结论。",
+      "scope": "同一完整图 S={0}；每个 q>0 和固定 0<η≤δ 输入窗 |x|<η 的真全纤维 EB 最小系数恰为η>0，只有η↓0的缩窗下确界为0。另对每个固定λ>0全部自然域最小步残差有锐系数1+δ/λ；每条非零合法完整J路径有限步终止。近零输入无coverage，不能互授残差/步/路径结论。",
       "status": "C111-v1 完整逆像、最小步纤维及有限路径独立重算"
     },
     {

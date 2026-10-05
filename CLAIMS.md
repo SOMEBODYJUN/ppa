@@ -168,13 +168,14 @@
 - **Conclusion**：对每个 \(v\in B(v_0,h(r)/\lambda)\)，完整 \(F^{-1}(v)\ne\varnothing\) 且整个纤维包含于 \(B(x_0,r)\)，从而该输出球包含于 \(F(B(x_0,r))\)。相对 maximal 窗口 \(G\subset U\times W\) 在原稿的锚、开球包含和 \(s>0\) 条件下，半径变为 \(\min\{s,h(r)/\lambda\}\)；统一半径及严格 \(r>R\) 在一维反例下锐。
 - **Dependencies / Evidence / Objections / Status / Related Files**：C04 的有限维 properness/full range、标量最大根 \(\rho\)、同常数 completion 和相对 maximal 的窗口等式。[range_finite_data W01](research/range_finite_data.md)，S23 lem:rho/thm:coverage/thm:window/prop:coveragesharp。稿内证明与本轮关键计算核读；不是任意非 maximal 子图的 coverage，亦与 S25 的有限观测局部值域不同。
 
+<a id="c19"></a>
 ## C19 · 有限样本的全局一致二次规划影子
 
-- **Status**：`candidate`；关键代数已核读，整条 QP 与全局代理证明仍按稿内证明范围保留。
+- **Status**：`derived-checked`；仅限下列固定有限样本及已认证条件，完整自足证明已独立重构和攻击；不升级 C03/C04/C18。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：有限 \(m\ge1\) 个 \(\mathbb R^n\) 图样本，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，固定 \(0<\sigma<1\) 和 S23 的 \(M_\sigma,a^2=M_\sigma/2\)。对所有样本对有 \(\|c_i-c_j\|^2\le\sigma^2\|p_i-p_j\|^2+M_\sigma\)。按 S23 (6.3)–(6.6) 的 \(Q,d(q),\Delta_m\) 定义唯一 QP 最小解 \(\theta(q)\) 与 \(N_m(q)=V\theta(q)\)。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(n,m\ge1,\lambda,L>0,0<\gamma<1\)，有限 \(m\) 个 \(\mathbb R^n\) 图样本，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，固定 \(0<\sigma<1\) 和 S23 的 \(M_\sigma,a^2=M_\sigma/2\)。对所有样本对有 \(\|c_i-c_j\|^2\le\sigma^2\|p_i-p_j\|^2+M_\sigma\)。按 [FD-1–3 规范定义](research/canonical/finite_data_proxy.md#fd-object) 的 \(Q,d(q),\Delta_m\) 定义唯一 QP 最小解 \(\theta(q)\) 与 \(N_m(q)=V\theta(q)\)。
 - **Conclusion**：同一个 \(N_m:\mathbb R^n\to\mathbb R^n\) 全局 \(\sigma\)-Lipschitz，对每个 \(i,q\) 有 \(\|c_i-N_m(q)\|^2\le\sigma^2\|p_i-q\|^2+a^2\)；其 Cayley 代理 \(A_m\) 为强单调双 Lipschitz 同胚，对全部**样本点**有统一正反误差。对未知原图点还须 C20-v2 的同图、同尺度参数 coverage。
-- **Dependencies / Evidence / Objections / Status / Related Files**：严格凸 QP、正交抬升、变分不等式、同一性 contraction。[range_finite_data Q01](research/range_finite_data.md)，S23 thm:finite_qp。稿内证明及关键代数核读；全球定义的代理不等于全球认证原关系。
+- **Dependencies / Evidence / Objections / Status / Related Files**：严格凸 QP、有限抬升插值、双变分不等式、两次 contraction 及强单调代数，完整证明 [FD-1–12](research/canonical/finite_data_proxy.md#fd-qp)。独立 reviewer 先从规范陈述重建加权/VI 证明，再核 S23 thm:finite_qp 的同一身份，逐式攻击本页正文；审查范围见 [本次记录](research/audit/BLIND_RECEIPT_2026-10-05_QP.md)。不依赖 C03/C04 或无限图 Kirszbraun 扩张；全球定义的代理不等于全球认证原关系，外部先行性未核。
 
 <a id="c20-v1"></a>
 ## C20-v1 · 局部 RL 不限成对尺度的错误扩写
@@ -187,11 +188,11 @@
 <a id="c20-v2"></a>
 ## C20-v2 · 同图同尺度的参数覆盖与三项误差
 
-- **Status**：`candidate`；依赖 C19 的代理与同一纤维的全称 coverage，尚未独立验收整条证明。
+- **Status**：`derived-checked`；在 C19 全部样本兼容、同图同尺度、完整非空纤维的全称 coverage 及独立反演误差证书下，FD-13–18 全链已独立重构。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：C19 样本与每个待认证未知图点均属于**同一个**完整 RL 图或指定图块，且该点的 Cayley 参数 \(p=x+\lambda v\) 与某个样本参数 \(p_i\) 满足 \(\|p-p_i\|\le\delta\) **并在 RL 成对尺度内**：全尺度版自动满足，局部 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\) 版以 \(\delta\le R_0\) 为充分门，亦可逐对直接验证 \(\|p-p_i\|\le R_0\)。置 \(b=L\delta^\gamma\)，\(K_\delta\) 为 [Q02](research/range_finite_data.md#q-cover) 的显式正根上界。若结论指向完整 \(F^{-1}(v)\)，该非空纤维的**每个图点**还必须属于同一 RL 图且逐个满足该覆盖和尺度门。对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 须有 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\) 的独立证书。若以候选参数 \(q\) 计算，取 \(\widehat x=q-\lambda\widetilde v\)，已认证的 \(e_N\ge\|\widehat N(q)-N_m(q)\|\) 还须和固定点残差合并，方得 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\) 的可用上界。
+- **Exact Statement / Objects / Domain / Quantifiers**：先继承 C19 的全部样本对兼容条件（局部 RL 不自动认证远距样本对）；C19 样本与每个待认证未知图点均属于**同一个**完整 RL 图或指定图块，且该点的 Cayley 参数 \(p=x+\lambda v\) 与某个样本参数 \(p_i\) 满足 \(\|p-p_i\|\le\delta\) **并在 RL 成对尺度内**：全尺度版自动满足，局部 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\) 版以 \(\delta\le R_0\) 为充分门，亦可逐对直接验证 \(\|p-p_i\|\le R_0\)。置 \(b=L\delta^\gamma\)，\(K_\delta\) 为 [Q02](research/range_finite_data.md#q-cover) 的显式正根上界。若结论指向完整 \(F^{-1}(v)\)，该非空纤维的**每个图点**还必须属于同一 RL 图且逐个满足该覆盖和尺度门。对反演目标 \(v\) 的观测 \(\widetilde v\) 有 \(\|\widetilde v-v\|\le\eta\)，代理求值 \(\widehat x\) 须有 \(e_x\ge\|\widehat x-A_m^{-1}(\widetilde v)\|\) 的独立证书。若以候选参数 \(q\) 计算，取 \(\widehat x=q-\lambda\widetilde v\)，已认证的 \(e_N\ge\|\widehat N(q)-N_m(q)\|\) 还须和固定点残差合并，方得 \(e_x=(\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N)/(1-\sigma)\) 的可用上界。
 - **Conclusion**：每个被覆盖图点有 \(\lambda\|v-A_m(x)\|,\|x-A_m^{-1}(v)\|\le K_\delta\)；覆盖整个纤维才得对应 Hausdorff singleton 界。对每个 \(x\in F^{-1}(v)\)，\(\|x-\widehat x\|\le K_\delta+\lambda(1+\sigma)\eta/(1-\sigma)+e_x\)。可行 QP 解的 Frank–Wolfe gap \(G\) 仅给 \(\|V\widehat\theta-N_m(q)\|\le\sqrt G\)；取 \(\widehat N(q)=V\widehat\theta\) 才可置 \(e_N=\sqrt G\)，且还需上述固定点残差。浮点 gap 需验证容差。
-- **Dependencies / Evidence / Objections / Status / Related Files**：C19、**同一可用尺度内的成对**原图 Hölder、同输入/同输出交叉估计、逆代理 Lipschitz 常数。[range_finite_data Q02/Q03](research/range_finite_data.md)，S23 thm:covered、cor:coveredfibers、prop:evaluation、cor:totalerror。全图全尺度是原稿身份；局部版是本库另行固定条件的版本，仍按 `candidate` 保留待审。\(\delta\)-网的获得和维数复杂度不自动保证；[F36](FAILED_ROUTES.md#f36) 阻断漏尺度版本。
+- **Dependencies / Evidence / Objections / Status / Related Files**：C19、**同一可用尺度内的成对**原图 Hölder、同输入/同输出交叉估计、逆代理 Lipschitz 常数。[range_finite_data Q02/Q03](research/range_finite_data.md)，S23 thm:covered、cor:coveredfibers、prop:evaluation、cor:totalerror 只作溯源；[本次审查](research/audit/BLIND_RECEIPT_2026-10-05_QP.md) 独立重建正根、gap、反演与噪声链。完整规范证明 [FD-13–18](research/canonical/finite_data_proxy.md#fd-cover) 已独立逐式复核；全图全尺度是原稿身份，局部版是 C20-v2 原已固定的同图同尺度范围，身份未改变。\(\delta\)-网的获得和维数复杂度不自动保证；[F36](FAILED_ROUTES.md#f36) 阻断漏尺度版本。
 
 ## C21 · 有限总查询的全空间信息障碍
 
@@ -267,7 +268,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：任意关系 \(F\) 的非空零集 \(S\)，\(r_F(u)=\inf_{v\in F(u)}\|v\|\)，固定合法步 \(x=u+\lambda v\)。总有 \(r_F(u)\le\|v\|\)。若 \(\psi\) 非减，**已有**对实际输出的 \(d(u,S)\le\psi(r_F(u))\) 才可推出 \(d(u,S)\le\psi(\|v\|)\)；反向不成立。若对该纤维**每个** \(v\) 有 \(d(u,S)\le\kappa\|v\|^q\)，\(q>0\)，取 inf 可得真残差幂 EB；一般非减 gauge 需额外右连续性或实际下确界可取。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意关系 \(F\) 的非空零集 \(S\)，\(r_F(u)=\inf_{v\in F(u)}\|v\|\)，固定合法步 \(x=u+\lambda v\)。总有 \(r_F(u)\le\|v\|\)。若有限 \(\psi:[0,\eta_\psi)\to[0,\infty)\) 非减、所选 \(\|v\|<\eta_\psi\)，**已有**对实际输出的 \(d(u,S)\le\psi(r_F(u))\) 才可推出 \(d(u,S)\le\psi(\|v\|)\)；反向不成立。若对该纤维**每个** \(v\) 有 \(d(u,S)\le\kappa\|v\|^q\)，\(q>0\)，取 inf 可得真残差幂 EB；一般非减 gauge 需额外右连续性或实际下确界可取。
 - **Dependencies / Evidence / Counterevidence / Status**：infimum 定义及趋近序列；\(F(u)=\{u,u^2\}\) 选 \(v=u\) 时有选中值线性界，而在零附近 \(r_F(u)=u^2\) 不支持真线性 EB。[PD-RESIDUAL](research/canonical/parameter_dictionary.md#pd-residual)，`derived-checked`。零点、输出窗口与空纤维约定随新问题重新固定；不能从算法步长推回完整图条件。
 
 ## C31-v1 / PA-WHOLE · 合法块收缩与整条轨道
@@ -940,7 +941,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C110 同一完整图，\(S=\{0\}\)，任意 \(q>0\) 与 \(0<\eta\le\delta\)，在 \(|x|<\eta\) 的固定零目标真残差 EB 最小系数是 \(\eta\)，故缩窗下确界 0；邻近非零目标的完整逆像为空，MR/SMR 失败。对每个 \(\lambda>0\)，完整近端**最小步残差** \(s_\lambda(p)=d(p,J_{\lambda F}(p))\) 在自然域上给锐 \(|p|\le(1+\delta/\lambda)s_\lambda(p)\)。每条从非零合法输入出发的完整 J 路径都有限步终止、不能达到零；从零唯一无限路径恒零；\(\lambda\ge\delta\) 时每个非零输入恰有一步。
 - **Dependencies / Evidence / Status / Related Files**：[RS-RESIDUAL/PATH](research/topics/examples/rational_irrational_staircase.md#gx056-residual) 的全纤维、取等序列及每步位移 \(\ge\lambda\) 证明；依赖 C110 的完整纤维，`derived-checked`。原稿 GX-056 的真残差与全对模为线索，最小步锐系数和算术路径边界由本库推导。
-- **Counterevidence / Scope**：真残差跳跃的零系数下确界与 C78/C79 的绝对值次梯度相似，但此图缺完整目标纤维与近零输入覆盖；步残差、MR 和路径不能由残差跳跃类比转授。端点 \(\pm\delta\) 未包含，非零图点的闭性和历史二参数区仍待核。
+- **Counterevidence / Scope**：真残差跳跃的零系数下确界与 C78/C79 的绝对值次梯度相似，但此图缺完整目标纤维与近零输入覆盖；步残差、MR 和路径不能由残差跳跃类比转授。端点 \(\pm\delta\) 未包含，C110 已证明非零图点不局部闭；历史二参数区仍待核。
 
 ## C112-v1 / PS-ZERO-PATH · 负平方与阶梯完整乘积的残差和路径
 
@@ -994,7 +995,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：在 C117 的**切向输入均位于 \(B_r\)** 的表示图块上，若 \(h_\sigma=c_\sigma t^p,p>1\)，输入直径 \(\le D\) 的全对指数为 \(1/p\)，有效常数是 (SS-24)/(SS-25)；\(p=1\) 有 (SS-26)。不同幂次只比较预算 (SS-27)，不能伪造更高阶 Schur 导数。若同一个修正切向输入 \(z\) 的两支输出匹配至 \(Et^p\)，(SS-30)/(SS-31) 改善跨支预算。若另有固定 \(z_0\) 的 \(O(t^p)\) 输入法向上界与 \(\Omega(t)\) 输出差下界，\(1/p\) 是最大全对指数；\(p>1\) 时已识别的单值近端在接缝不 calm。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C117 的**切向输入均位于 \(B_r\)** 的表示图块上，若 \(h_\sigma=c_\sigma t^p,p>1\)，输入直径 \(\le D\) 的全对指数为 \(1/p\)，有效常数是 (SS-24)/(SS-25)；\(p=1\) 有 (SS-26)。不同幂次只比较预算 (SS-27)，不能伪造更高阶 Schur 导数。若同一个修正切向输入 \(z\) 的两支输出匹配至 \(Et^p\)，以共同增长下界 \(c=\min\{c_+,c_-\}>0\) 调用 (SS-30)/(SS-31) 改善跨支预算。若另有固定 \(z_0\) 的 \(O(t^p)\) 输入法向上界与 \(\Omega(t)\) 输出差下界，\(1/p\) 是最大全对指数；\(p>1\) 时已识别的单值近端在接缝不 calm。
 - **Dependencies / Evidence / Status**：[SS-POWER/JET/EXPONENT](research/canonical/signed_schur_growth.md#ss-power) 的二维 Hölder 预算、同修正坐标匹配和双边弧证据独立证明，`derived-checked`；\(K_z=0\) 的主系数有 (SS-28) 取等。原参数的同位导数比较、单点 Taylor 阶或仅 (SS-5) 均不足替代附加门。
 
 ## C119-v2 / SS-SQRT · 完整平方根图的证书与锐性

@@ -32,6 +32,8 @@ F^{-1}(v)\subset B(x_0,r)\quad
 <a id="qp"></a>
 ## Q01 · 一个有限样本构造的全局一致影子
 
+完整自足证明见 [FD-OBJECT→FD-SHADOW](canonical/finite_data_proxy.md#fd-object)：全部查询共用 QP，由双变分不等式给全局 Lipschitz，有限抬升顶点插值给交叉估计。C19 在这些固定前件下为 `derived-checked`；无需 C03/C04 的候选证明。
+
 给 \(m\ge1\) 个图样本 \((x_i,v_i)\)，\(p_i=x_i+\lambda v_i,c_i=x_i-\lambda v_i\)，重复且一致的 \(p_i\) 可合并。固定 \(0<\sigma<1\)，取 H02 的 \(M_\sigma\)、\(a^2=M_\sigma/2>0\)，矩阵 \(P=[p_i]\)、\(V=[c_i]\)。**只需样本兼容**
 
 \[
@@ -59,7 +61,7 @@ F^{-1}(v)\subset B(x_0,r)\quad
 <a id="q-bound"></a>
 ## Q02 · 覆盖的对象是 Cayley 参数，不只是原输入
 
-**C20-v2 的同图同尺度门。** 样本与未知点必须属于**同一个**满足 RL 的完整图或指定图块；对每个待认证的未知图点，须有样本 \(i\) 使
+**C20-v2 的同图同尺度门。** 完整证明见 [FD-COVER→FD-TOTAL](canonical/finite_data_proxy.md#fd-cover)，状态为限定前件的 `derived-checked`。仍须 C19 的全部样本对兼容性；局部 RL 的近对估计不自动认证远距样本对。 样本与未知点必须属于**同一个**满足 RL 的完整图或指定图块；对每个待认证的未知图点，须有样本 \(i\) 使
 \(\|p-p_i\|\le\delta\)，而且这一对图点确实位于 RL 的成对测试尺度内。
 本页的全图全尺度假设自动满足后一项；若仅有
 \(\mathrm{RL}(\lambda,\gamma,L;R_0)\)，必须另有 \(\delta\le R_0\)
@@ -123,7 +125,7 @@ e_x:=\frac{\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N}{1-\sigma}.
 | HE-W01 | {全局 RL、锚点、标量 \(\rho\)} → 成对原坐标定位 | 稿内标量证明 |
 | HE-W02 | {有限维 graph-maximal、非空完整纤维、W01、\(r>R\)} → 全纤维值域覆盖 | 稿内证明；非 maximal 无此结论 |
 | HE-W03 | {相对 maximal 窗口、同参数全局 completion、W02} → 固定窗口覆盖 | 扩张与窗口等式须核 |
-| HE-Q01 | {有限兼容样本、抬升、严格凸 QP} → 全球一致 \(N_m,A_m\) | 仅采样点有无覆盖的直接界 |
+| HE-Q01 | {有限兼容样本、抬升、严格凸 QP} → 全球一致 \(N_m,A_m\) | FD-1–12 自足证明；仅采样点有无覆盖的直接界 |
 | HE-Q02 | {Q01、同一图上的未知参数 \(\delta\)-覆盖、对应点对可用 RL} → 该区域的正反配对界 | 全图全尺度，或局部版逐对在 \(R_0\) 内（充分门 \(\delta\le R_0\)）；全纤维须全部图点属于该图并被覆盖 |
 | HE-Q03 | {Q02 全纤维 coverage、观测误差、反演求值证书 \(e_x\)} → 三项总误差 | QP gap 只给 \(e_N\)；还需候选点固定点残差换算为 \(e_x\)。浮点误差不能只凭机器输出 |
 | HE-Q04 | {确定性有限总查询、无界 Hölder 类} → 全空间统一认证不可能 | 明确不可区分图构造 |

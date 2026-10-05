@@ -3800,6 +3800,39 @@
       "y": 493,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "FD-LIFT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "MOMENT-LIFT-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
+    },
+    "OB-RP-BRANCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 1612,
+      "region": "random",
+      "realm": "random"
     }
   },
   "edges": {

@@ -112,6 +112,16 @@ E_\nu(\mu P^k)\le c^k E_\nu(\mu),\qquad
 因此不一致二次近端模型若共同不动点为空，上式残差在每一个有限二阶矩律上都严格正，包含真正的混合不变律。
 零集检验应先于任何 EB 或速率论证。这个结论针对指定的分组；将所有分支合成整个核后的 law-step 残差是另一残差。
 
+<a id="rp-branch-gap"></a>
+## OB-RP-BRANCH · 分支残差与混合 law-step 的替换障碍
+
+在 RP-OBJECT 的共同不动点为空的子模型中，RP-CONTRACTION 仍给混合不变律。
+RP-BRANCH 却使逐支推前残差在**每个**有限二阶矩律上严格正，
+故在混合不变律上也不为零；真实完整核 law-step \(\mathcal R_\nu\) 在该律上为零。
+RP-SCALAR 给同一模型的显式见证。因此二者不能互换。
+此为 [C23](../../CLAIMS.md) 的限制关系，图节点专记 OB-RP-BRANCH；
+二 bit 的条件残差不能代入同步能量是另一对象的 OB-RES，见 [锥/Markov 页](../cone_markov.md#ob-res)。
+
 <a id="rp-scalar"></a>
 ## RP-SCALAR · 尖锐例与持续物理运动
 

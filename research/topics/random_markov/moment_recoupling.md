@@ -23,6 +23,16 @@
 \(e(a)=(\int d(y,S)^pP(a,dy))^{1/p}>0\)。令 \(\mathcal R_r(\mu)=\|c\|_{L^r(\mu)}\)，并假设所用律均有有限的该矩。若在 \(\pi\) 的整个 \(W_p\) 邻域有
 \(d_{W_p}(\mu P,\mathcal I)\le K\mathcal R_r(\mu)^q\)，其中邻域取 \(\mathscr P_p(\mathbb R^d)\) 的整个 \(W_p\) 球并包含下述稀释律，则必有 \(pq\le r\)。事实上 \(\mu_\varepsilon=(1-\varepsilon)\pi+\varepsilon\delta_a\to\pi\) 于该母空间的 \(W_p\)，而左边至少 \(\varepsilon^{1/p}e(a)\)，右边是 \(K\varepsilon^{q/r}c(a)^q\)。若只在支持于 \(S\) 的相对邻域断言此界，必须另要求 \(a\in S\)，不可直接使用域外稀释。此为上述条件下的**必要性**；不声称对任意 Markov 残差、任意不变律支持或任意物理步长的普遍否定。充分性须另证实际状态上的逐点界与合法目标匹配。
 
+<a id="mr-moment-gap"></a>
+## MOMENT-LIFT-GAP · 小质量的矩匹配障碍
+
+在 MR1 的共同零点及正 excursion 条件下，若 \(pq>r\)，
+稀释律 \((1-\varepsilon)\delta_s+\varepsilon\delta_a\) 对任何固定有限 \(K\)
+都会在足够小 \(\varepsilon>0\) 违反全律矩界。
+Markov 更新版本只在上节另列的同一核、支持目标和整邻域量词下适用。
+E44 限制的是这些标量/律空间提升；它不指向确定性原算子 \(r_F\) 的 D04，
+从实际概率对象转回原算子 EB 仍须独立的同对象桥。
+
 <a id="mr-recoupling"></a>
 ## C127-v1 · 同一近极小运输对上的条件回耦界
 

@@ -62,4 +62,4 @@ h(x_n)-h(y_n)\sim2s_n^{-q/\beta}.
 <a id="os-source"></a>
 ## 来源、状态与下一义务
 
-从 [9/01 RL_foundations §9.3 / GX-072](../../../history/sources/次单调论文研究/RL_foundations.md) 重写映射、双边常数、真实残差、两尺度证明和锐相位序列。状态 derived-checked 限于本页计算；不对该构造的文献新颖性下结论。与 [GX-071](power_shear.md) 是两个不同的算子，前者保守指数、后者可达性，不能只按共享 \(q,\gamma\) 合并对象。GX-073 的定义域逃逸仍须另立单元审查。
+从 [9/01 RL_foundations §9.3 / GX-072](../../../history/sources/次单调论文研究/RL_foundations.md) 重写映射、双边常数、真实残差、两尺度证明和锐相位序列。状态 derived-checked 限于本页计算；不对该构造的文献新颖性下结论。与 [GX-071](power_shear.md) 是两个不同的算子，前者保守指数、后者可达性，不能只按共享 \(q,\gamma\) 合并对象。GX-073 的定义域逃逸已有独立 [C44 对象卡](domain_escape.md#de-object)；其自然输入域和全纤维残差不能由本页转授。

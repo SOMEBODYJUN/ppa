@@ -64,7 +64,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 ## R04 · 可检验图块、实例与条件拓展
 
 - S19 `thm:square-root-seam` 反演一个闭图、正法向处二值的完整 proximal 关系；反射在接缝呈平方根阶，完整图跨支满足 RL，真实最小残差与覆盖各自验算。`prop:seam-quadratic-separation` 排除的是**指定**二次 \(J\)-side 证书，不是所有可能的 LT 定理。
-- S19 `thm:signed-schur-growth` 的双支参数化先作切向反演，再要求两侧 Schur 导数有相反定向与定量增长，另加 complete-fiber 条件；得到覆盖、同输入唯一、跨支 Hölder 指数 \(1/p\)。仅有每支光滑或每支 Hölder 不足够，见 `prop:schur-collision-counterexample`。真残差 EB 仍要另证。
+- S19 `thm:signed-schur-growth` 的双支参数化先作切向反演，再要求两侧 Schur 导数有相反定向与定量增长，另加 complete-fiber 条件；得到覆盖、同输入唯一及一般零消失模；另取同支增长 \(h_\pm(t)=c_\pm t^p\)、\(c_\pm>0,p>1\) 才得到跨支 Hölder 指数 \(1/p\)（\(p=1\) 是另列的线性门）。仅有每支光滑或每支 Hölder 不足够，见 `prop:schur-collision-counterexample`。真残差 EB 仍要另证。
 - [SS-GROWTH-v2 独立证明](canonical/signed_schur_growth.md#ss-growth) 把切向输入球、同支凸增量、两支输入领圈和 (SS-13) 完整纤维门分别写明；[幂次常数](canonical/signed_schur_growth.md#ss-power)、[同修正输入的输出匹配](canonical/signed_schur_growth.md#ss-jet)、[平方根完整原生图](canonical/signed_schur_growth.md#ss-square-root) 各有独立推导。其图包含只在显示参数域上要求；S19 原稿可能要求整个邻域图包含的措辞保留为旧版本身份，不能不说明就将平方根实例赋给那种读法。
 - S19 `thm:modulus-dini` 用非减 \(\omega\) 代替 \(Lt^\gamma\)，保留 coverage、输出 EB、兼容、留域，并加 \(\int_0^R\omega(t)dt/t<\infty\) 得有限长度。`thm:logarithmic-seam` 以完整对数二支图显示 \(a\le1\) 时距离以 \(1/4\) 收缩而切向坐标发散，\(a>1\) 才有限长；门槛对该族精确。拓扑后果和随机措辞异议见 [holder_structure.md](holder_structure.md)。
 
