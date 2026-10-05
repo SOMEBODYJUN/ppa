@@ -463,12 +463,12 @@
     },
     {
       "id": "Q-EVAL",
-      "label": "已验证 gap、噪声与求值误差",
+      "label": "独立近端反演证书与误差分型",
       "file": "canonical/finite_data_proxy.md#fd-eval"
     },
     {
       "id": "Q-TOTAL",
-      "label": "覆盖 + 噪声 + 求值三项界",
+      "label": "覆盖、观测与反演三项总误差",
       "file": "canonical/finite_data_proxy.md#fd-total"
     },
     {
@@ -1836,34 +1836,70 @@
       "file": "topics/examples/gx059_065_property_completion.md#gxp-square-inverse"
     },
     {
+      "id": "SL-ANCHOR",
+      "label": "锚averaged及线性EB却无全对单步模 C157",
+      "file": "canonical/selection_literature_boundaries.md#sl-witnesses"
+    },
+    {
+      "id": "SL-DISCONT",
+      "label": "一步驻定和共同零尾却不连续选择 C157",
+      "file": "canonical/selection_literature_boundaries.md#sl-witnesses"
+    },
+    {
+      "id": "QP-COMMON",
+      "label": "固定K/直径的安全共同双指数点尾 C158",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16"
+    },
+    {
+      "id": "QP-PRINTED",
+      "label": "P16分母e^{KD}−1精确上界（受阻）",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "QP-COUNTER",
+      "label": "合法算术/指数均值的解析阻断 C158",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16"
+    },
+    {
       "id": "GD-OBJECT",
-      "label": "完整阶梯gauge与紧标量图 C157",
+      "label": "完整阶梯gauge与紧标量图 C159",
       "file": "canonical/gauge_dilation_boundary.md#gd-object"
     },
     {
       "id": "GD-BOUNDARY",
-      "label": "同gauge跨Minty失败与重标度界 C157",
+      "label": "同gauge跨Minty失败与重标度界 C159",
       "file": "canonical/gauge_dilation_boundary.md#gd-theorem"
     },
     {
       "id": "QA-OBJECT",
-      "label": "正则拟算术均值固定函数类和凸域 C158",
+      "label": "正则拟算术均值固定函数类和凸域 C160",
       "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-object"
     },
     {
       "id": "QA-TAIL",
-      "label": "非负起步共同超几何尾 C158",
+      "label": "非负起步共同超几何尾 C160",
       "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail"
     },
     {
       "id": "QA-SELECTION",
-      "label": "同域两初值Lipschitz极限回缩 C158",
+      "label": "同域两初值Lipschitz极限回缩 C160",
       "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-selection"
     },
     {
       "id": "QA-PRINT-BOUNDARY",
       "label": "P16指定负索引打印尾反例 F44",
       "file": "canonical/selection_quasi_arithmetic_boundary.md#qa-first-round"
+    },
+    {
+      "id": "SC-SPACE",
+      "label": "给定σ紧度量空间及同一紧覆盖 C128",
+      "file": "canonical/sigma_compact_baire.md#sc-object"
+    },
+    {
+      "id": "SC-BAIRE",
+      "label": "紧层相对内点并稠密当且仅当Baire C128",
+      "file": "canonical/sigma_compact_baire.md#sc-proof"
     }
   ],
   "edges": [
@@ -1915,7 +1951,7 @@
       ],
       "output": "R03",
       "relation": "implies",
-      "scope": "ψ 连续严格增、q_E<1、能量分支预算",
+      "scope": "保留R01全部前件，初值x⁰∈U_R且d₀≤R；ψ连续严格增、R≤ψ(t̄)、q_E<1、能量分支留域预算",
       "status": "S19 稿内证明"
     },
     {
@@ -4111,7 +4147,7 @@
       ],
       "output": "SB-GEOMETRY",
       "relation": "conditional",
-      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；BWY 指定版本的对象归属已核，优先权另核。",
+      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；已列BWY归属/版本编号见LIT-BWY-2012；不承担本页直接证明，优先权未审。",
       "status": "C124-v1 全图点对、紧盘下界与交叉反例独立重算"
     },
     {
@@ -4604,52 +4640,107 @@
       ],
       "output": "BS-COMPLETION",
       "relation": "implies",
-      "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一正根分支及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
+      "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一加号根分支（输出可负）及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
       "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
     },
     {
       "id": "E237",
+      "topic": "解选择",
+      "inputs": [
+        "SL-ANCHOR"
+      ],
+      "output": "SEL-HOLDER",
+      "relation": "limits",
+      "scope": "C157实线完整T在零点锚averaged且步残差EB，但任意0邻域无正阶全对单步Hölder；锚条件不供应SS-T1。不反驳具全对前提的SS-TRANSFER。",
+      "status": "derived-checked；完整自映射见证，未编码PPA"
+    },
+    {
+      "id": "E238",
+      "topic": "解选择",
+      "inputs": [
+        "SL-DISCONT"
+      ],
+      "output": "SS-TRANSFER",
+      "relation": "limits",
+      "scope": "C157实平面T在U留域，集合距离一步归零、残差EB与第一步后共同零点尾，极限Π仍不连续；点尾/集合距离单独不足，缺全对输入模。不是SS-TRANSFER全部前件下的反例。",
+      "status": "derived-checked；完整自映射见证，未认证同图RL/严格兼容"
+    },
+    {
+      "id": "E239",
+      "topic": "解选择",
+      "inputs": [
+        "QP-COUNTER"
+      ],
+      "output": "QP-PRINTED",
+      "relation": "refutes",
+      "scope": "C158固定合法f1=t,f2=exp t、K=1，固定N且d↓0时实际直径为正幂d^{2^N}，所印精确式为exp(−c/d)，比值发散。仅阻断该精确全量词式，不否定安全共同尾或不变表示。",
+      "status": "derived-checked；v1/正式Th3.3印刷公式身份primary-checked；不将v1 Th3应用与刊本混号"
+    },
+    {
+      "id": "E240",
+      "topic": "解选择",
+      "inputs": [
+        "QP-COMMON"
+      ],
+      "output": "TAIL",
+      "relation": "implies",
+      "scope": "C158同一正整数k≥1的拟算术均值积Q，全部生成元属同一S_K、初始直径≤R<∞；指数半减与平方直径递推给全初值共同实际点尾Aexp(−c2^n)，常数依赖冻结K/R/k。位置可无界；不提供全对单步模或完整PPA身份。",
+      "status": "derived-checked；SL3由函数类直接证明；外部精确印刷公式身份另为primary-checked"
+    },
+    {
+      "id": "E241",
       "topic": "基础接口",
       "inputs": [
         "GD-OBJECT"
       ],
       "output": "GD-BOUNDARY",
       "relation": "limits",
-      "scope": "C157 固定λ=1、完整紧标量图、真实残差EB取等；每个零点graph germ不满足任意有限C的不重标度同gauge界，而全自然域仍有ψ(2|x|)界。离散自然域无邻域coverage，正点不连续ψ不反驳额外连续版本。",
+      "scope": "C159 固定λ=1、完整紧标量图、真实残差EB取等；每个零点graph germ不满足任意有限C的不重标度同gauge界，而全自然域仍有ψ(2|x|)界。离散自然域无邻域coverage，正点不连续ψ不反驳额外连续版本。",
       "status": "derived-checked；GD-1–7直接证明，不认证原生全输入PPA或先行性"
     },
     {
-      "id": "E238",
+      "id": "E242",
       "topic": "解选择",
       "inputs": [
         "QA-OBJECT"
       ],
       "output": "QA-TAIL",
       "relation": "implies",
-      "scope": "C158 / F44 同一完整均值T，固定I,k,K>0、全部生成元函数类与D>0凸域；先定ℓ<1/α和非负N，全部初值全部n的共同超几何点尾。实际点Q二次只上界4αK，零直径/零K分开处理。",
+      "scope": "C160 / F44 同一完整均值T，固定I,k,K>0、全部生成元函数类与D>0凸域；先定ℓ<1/α和非负N，全部初值全部n的共同超几何点尾。实际点Q二次只上界4αK，零直径/零K分开处理。",
       "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
     },
     {
-      "id": "E239",
+      "id": "E243",
       "topic": "解选择",
       "inputs": [
         "QA-OBJECT"
       ],
       "output": "QA-SELECTION",
       "relation": "implies",
-      "scope": "C158 / F44 同一凸初值域X_D、固定K,D，全部有限迭代导数乘积包含首步j=0；全部初值对极限∞范数Lipschitz系数exp[2(e^(KD)−1)]。不是P16原定理，也不授完整PPA/RL/EB认证。",
+      "scope": "C160 / F44 同一凸初值域X_D、固定K,D，全部有限迭代导数乘积包含首步j=0；全部初值对极限∞范数Lipschitz系数exp[2(e^(KD)−1)]。不是P16原定理，也不授完整PPA/RL/EB认证。",
       "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
     },
     {
-      "id": "E240",
+      "id": "E244",
       "topic": "解选择",
       "inputs": [
         "QA-OBJECT"
       ],
       "output": "QA-PRINT-BOUNDARY",
       "relation": "limits",
-      "scope": "C158 / F44 合规f±=exp(±t)、K=1，任意小非零初始直径d；实际d1∼d²/4而指定打印负n0尾o(d²)。仅指定P16公式量词失败，修复N和共同尾另见E238；不否定全部论文结论。",
+      "scope": "C160 / F44 合规f±=exp(±t)、K=1，任意小非零初始直径d；实际d1∼d²/4而指定打印负n0尾o(d²)。仅指定P16公式量词失败，修复N和共同尾另见E242；不否定全部论文结论。",
       "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
+    },
+    {
+      "id": "E245",
+      "topic": "算子空间",
+      "inputs": [
+        "SC-SPACE"
+      ],
+      "output": "SC-BAIRE",
+      "relation": "equivalence",
+      "scope": "C128 给定同一度量Z及确实穷尽Z的可数紧覆盖K_n；Z为Baire当且仅当各Int_Z K_n之并稠密。仅拓扑诊断，不给任何原生完整算子空间、保纲观测或总体规模比较。",
+      "status": "derived-checked；SC1–2双向证明，原生空间认证另核"
     }
   ]
 }

@@ -23,8 +23,7 @@ V^{-1}(y)=
 对象来自 9/01 ZIP 的 work/c_gx053_065.md §2 GX-060；精确
 成员路径见[逐源去向](../../audit/UNIT_DISPOSITIONS.tsv)。
 以下只裁决 GX-060 这张卡的指定单元；GX-061 的端点和完整近端
-已在[伴随方向卡](adjoint_volterra.md#av-object)另核，外部 BWY
-归属仍未审。同包 CCA-M10 给 \(V^*=UVU\)，
+已在[伴随方向卡](adjoint_volterra.md#av-object)另核。BWY的V/V*例归属及v1/作者稿编号已核于[LIT-BWY-2012](../../LITERATURE.md#lit-bwy-2012)，不承担本页直接证明；优先权未审。同包 CCA-M10 给 \(V^*=UVU\)，
 \((Uf)(t)=f(1-t)\)，两方向不计为独立等距不变量机制。
 
 <a id="vo-graph"></a>

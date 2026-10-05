@@ -31,24 +31,25 @@
 | [锥](cone_markov.md#c-rank) | \(G:V\to E\) 为约束映射；\(\mathfrak F\) 为最小面；\(S_{\rm dual}\) 为对偶面子空间；\(C\) 为锥 | MSCQ 的 \(d(x,G^{-1}C)\le\kappa d(G(x),C)\) 只有另引原关系 \(F_{\rm PPA}\)、局部零集等同 \(F_{\rm PPA}^{-1}(0)=G^{-1}C\) 及 \(d(G(x),C)\le\chi(r_{F_{\rm PPA}}(x))\)，才给它的真 EB |
 | [Markov](cone_markov.md#m-psi) | \(K_{\rm state}\) 为紧状态集；\(\mathcal I\) 为不变律集；\(\Psi\) 为同噪声且输入 OT 最优的同步残差。C129 的 \(\mathcal R\) 属固定守恒边缘的有限 bit \(\mathsf W_\nu\)；C130 的 \(\mathcal R_Q\) 属 Gaussian \(W_{2,Q}\)，其中条件律用一维通常 \(W_2\)。C126 的 \(e,c\) 是另起的标量函数；C127 的 \(c_0\) 是 law-space 收缩系数，\(D_\eta,\Delta_\eta\) 是同一运输对的位移与回耦损失 | 同一个转移核也可有不同随机表示和不同 \(\Psi\)；\(W_2(\mu,\mu P)\)、\(\Psi\)、\(\mathcal R\)、\(\mathcal R_Q\) 不互换；[条件刷新](topics/random_markov/conditional_refresh.md) 与 [同步回耦](topics/random_markov/moment_recoupling.md) 各有对象 |
 | [Markov 边界 C143/C144](topics/random_markov/compact_residual_boundaries.md#crb-object) | C143 的 δ_n 是块尺度、δ_x 是 Dirac 律；Π 是该核的显式极限，d 是到全部不变律距离。C144 重新绑定 G=[0,1]²、β 为公平 bit，ZΨ 是原残差零集 | 两对象各自定义 Ψ、P、全部不变律；一般 gauge、正幂界、law-space 尾和样本路径长度分别量化。C144 原最优计划假零不能与 C71 放松 OT 的假零合并 |
-| [单 bit C145](topics/random_markov/one_bit_envelope.md#bit-object) | \(a(u)\) 是刷新概率，\(b(u)\) 是目标 bit 概率，\(h=|r-b|\) 是幅度，\(M=\max(b,1-b)\) 是容量；\(\ell\) 是对偶乘子，\(c\) 是刷新概率阈值，\(p\) 是例子的刷新剖面指数 | \(\ell\) 不写成 PPA 步长；\(h,M,c\) 不移作一般模、图代理或 law-space 收缩系数。\(\phi\) 是饱和的最小非降模，\(\mathcal R\) 专指本单 bit 条件残差；law-step 能量等式只在此核成立 |
+| [单 bit C145](topics/random_markov/one_bit_envelope.md#bit-object) | \(a(u)\) 是刷新概率，\(b(u)\) 是目标 bit 概率，\(h=\lvert r-b\rvert\) 是幅度，\(M=\max(b,1-b)\) 是容量；\(\ell\) 是对偶乘子，\(c\) 是刷新概率阈值，\(p\) 是例子的刷新剖面指数 | \(\ell\) 不写成 PPA 步长；\(h,M,c\) 不移作一般模、图代理或 law-space 收缩系数。\(\phi\) 是饱和的最小非降模，\(\mathcal R\) 专指本单 bit 条件残差；law-step 能量等式只在此核成立 |
 | [非 tied 图](canonical/non_tied_cayley.md#nt-object) | \(A=1+\lambda\mu+\rho/\lambda\)、\(\Delta=1-4\mu\rho\) 是该页系数 | 与导数 \(A=DG(\bar x)\)、集合 \(A\) 或其它判别式无身份关系；引用 C89/C91 时连同 \(A>0,\Delta\ge0\) 门 |
 | [有限数据 Q03](range_finite_data.md#q-eval) | \(e_N\) 是某候选参数 \(q\) 处的 \(N_m(q)\) 求值误差；\(e_x\) 是 \(\widehat x\) 到 \(A_m^{-1}(\widetilde v)\) 的反演误差上界 | QP gap 只给 \(e_N\)；若从该次查询生成反演证书，须合并候选参数固定点残差并除以 \(1-\sigma\)。也可另给独立的 \(e_x\)；两种误差不能同称 \(e\) |
 | [解选择](canonical/solution_selection_rates.md#ss-transfer) | \(T\) 是指定同一映射，\(\Pi\) 是它的极限选择 | 要赋给原关系的全部路径，须另证 \(T=J_{\lambda F}\) 的完整纤维和共同留域 |
 | [一般模动力 C09/C10/C11](canonical/general_modulus_dynamics.md#gm-data) | ω 是同图块成对零消失模；hω=(id+ω)/2 为实际步长上界；ℓω 是可和长度预算。C10 另取对数剖面 ℓ_a、完整真残差 χ_a 与逆 gauge ψ_a | ℓω=hω+ℓω∘κ 是预算函数恒等式，实际 s+ℓω(d⁺) 只有≤。C09/C11只给图块T，C10经全支反演才给完整J；不同ℓ及不同残差不能同形替换 |
 | [参数几何尾族](canonical/selection_parameter_family.md#pf-object) | \(A,B>0\) 均为标量增量系数，\(q\in(0,1)\) 为实际法向率；\(R\) 在 PF-3 是输入对尺度 | \(q^\gamma\) 才是共同点尾率，\(\kappa_R\) 是另一保守证书率；这里的 \(B\) 不是下行的向量值函数 |
-| [三角切向充分门](canonical/selection_tangential_condition.md#tc-triangle) | \(B(a,r)\in\mathbb R^m\) 是切向增量，\(R\) 是法向域上界；\(qr\) 只在非负法向域上定义 | C139 的全符号 \(q|r|\) 须限制到 \(r\ge0\) 才能比较；(TC-1) 是充分条件，不从尖点例的失败推出必要性 |
-| [超线性法向族](canonical/selection_superlinear_family.md#sf-object) | \(\nu>1\) 是法向递推的幂，\(\gamma\in(0,1)\) 是全对反射的局部指数；\(A,B>0\) 是标量增量系数；输入 \(r\)、图点输出 \(y=|r|^\nu\) | \(\nu\) 不是 C139 的几何率 \(q\)；局部图块全对模依赖输出 collar 和输入对距 \(D\)，真残差取完整两值纤维的最小值；\(\kappa_R\) 不等于实际超线性递推 |
+| [三角切向充分门](canonical/selection_tangential_condition.md#tc-triangle) | \(B(a,r)\in\mathbb R^m\) 是切向增量，\(R\) 是法向域上界；\(qr\) 只在非负法向域上定义 | C139 的全符号 \(q\lvert r\rvert\) 须限制到 \(r\ge0\) 才能比较；(TC-1) 是充分条件，不从尖点例的失败推出必要性 |
+| [超线性法向族](canonical/selection_superlinear_family.md#sf-object) | \(\nu>1\) 是法向递推的幂，\(\gamma\in(0,1)\) 是全对反射的局部指数；\(A,B>0\) 是标量增量系数；输入 \(r\)、图点输出 \(y=\lvert r\rvert^\nu\) | \(\nu\) 不是 C139 的几何率 \(q\)；局部图块全对模依赖输出 collar 和输入对距 \(D\)，真残差取完整两值纤维的最小值；\(\kappa_R\) 不等于实际超线性递推 |
 | [固定紧源观测](canonical/compact_t_observation.md#ct-object) | \(d_{\mathrm{all}}^K(T,U)=\sup_n\|T^n-U^n\|_K\) 是整个紧源的全时间度量；\(\Phi=(w,m)\) 是实际尾和反射模 | 此度量不写成 LT 线性 EB 系数 \(\rho\)，也不是旧孔隙性账本的 \(d_{\rm dyn}\)；其 proper 证明不授予完整原关系 \(F\) 的空间 |
 | [紧源塔与后继](operator_space.md#os-tower-proof) | \(V_j,L_j\) 是 \(T\) 的长度尾及全源上确界；\(e_n\) 是成对迭代的共同 Cauchy 尾；\(U\) 是同一紧 \(K\) 上已给定的连续自映射 | C131 的长度尾与 C133 的 Cauchy 尾不互换；C133 不产生非平凡连续选择；\(F_{U,K}\) 是由全输入源 \(K\) **新定义**的关系，不代表历史或既有原关系 \(F\) |
 | [紧源真纤维](operator_space.md#os-fiber-eb) | 原 \(\psi\) 仅为非降逐输入传递上界；\(\phi\) 是从紧子水平集取得的 D04 型内生 gauge；\(\operatorname{dom}F_{U,K}=U(K)\)，\(r_{F_{U,K}}\) 只在该域调用 | 原 \(\psi\) 不自动满足 \(\psi(0)=0\) 和原点连续；\(J_{\lambda F_{U,K}}\) 的自然输入域是 \(K\)，不自动覆盖环境开邻域 |
 | [紧图极大障碍](operator_space.md#os-compact-barrier) | C142 的 \(G\) 是**非零实 Hilbert** 中任意非空紧完整图，结论与 C132 的步界、零集及 gauge 无关 | C132 的紧源新图不可直接作为极大单调类成员；加点延拓后它不再是同一完整图，纤维和残差必须重核 |
 | [紧预算步长谱](operator_space.md#os-spectrum-proof) | \(I_j=[1/j,j]\) 是实步长的紧参数域；\(B_{C,j}\subseteq X\times I_j\) 是**逐认证类**声明的闭预算关系，\(\Sigma_{C,j}\) 允许空值 | 闭关系给上半连续和闭存在投影，但不自动给下半连续；LT/direct/energy 三类各自的实际闭性、耗尽性及类别比较尚须证明 |
 | [例库](topics/examples/README.md) | \(F,K,B,G,R\) 在每张卡内重新绑定 | 必须携带空间、完整/受限图、目标、步长、输入/输出窗、真实或算法残差；GX 编号只标来源观察 |
-
 | [AGM C146–C148](topics/examples/arithmetic_geometric_mean.md#agm-object) | P=[0,∞)²是完整近端输入域，D={s≥t≥0}是输出/原算子域，G是AGM自映射；R是W_R的位置窗上界，M是AGM标量极限 | P不是Markov核，D不是数据尺度，R不是仅对距上限；d=√(s²−t²)是该页标量，r_F仍取完整纤维inf。Π轴处坏模与正初值Q二次不统一 |
 | [共同尾 C149](canonical/selection_truncation_prior_tools.md#st-lipschitz) | L:X→X是映射，k是其Lipschitz常数，ρ是共同增量的几何率；辅助版本T和u为不同映射 | L不代入RL系数，ρ不是EB系数；只沿uⁿ收敛，不将其尾换成Tⁿ |
 | [GX 图缺陷 C150–C156](canonical/parameter_dictionary.md#pd-geometry) | hypo/cohypo为非负单参数缺陷，signed τ另允许负数；每卡λ固定，MR目标重新指定 | inner product/范数写法覆盖Hilbert；标量才简写ab。固定窗锐系数与缩窗下确界分开，非零原算子目标不默认零集PPA |
+| [选择文献 C157/C158](canonical/selection_literature_boundaries.md) | LT的τ是非负标量；LMZ的τ(t)是误差率函数；KR的τ(q)是相位支配指标；P16的α=(3+7e)/3，与averaged参数α无关 | 每节独立绑定，跨节写τ_LT、τ_LMZ、τ_KR和α_P16。LMZ惩罚系数μ与标准步长h=1/μ为倒数；C157每个见证分别定义T/Π，不合并成同一算子 |
+| [Spingarn作者版本](canonical/spingarn_author_definitions.md#sp-first-order) | SP80-A固定输入仍量化全部锚输出，SP80-S只令两输入趋近；SP81-H每bounded K另取k_K | 输出不要求共同趋一图点；图闭/凸值是SP80声明类门。SP81全类极大性允许变局部系数，不等于固定σ或固定LT窗口极大性 |
 
 ## 统一验收问题
 
@@ -58,6 +59,6 @@
 
 ## 同 gauge 与文献算法参数的新增接口
 
-[C157](canonical/gauge_dilation_boundary.md#gd-theorem) 的 ψ 是固定逐点函数，ψ(2t) 不能无条件换为 Cψ(t)；其离散自然输入域 D不含邻域 coverage，正点不连续不得混入要求连续 gauge 的定理。[C158](canonical/selection_quasi_arithmetic_boundary.md#qa-object) 的 D 是均值初值直径预算、K 是生成元对数导数界、q=αℓ是修复尾的辅助系数；都不等于RLEB的输入对尺度、RL常数或实际法向率。N是非负起步，不能使用负迭代次数。QA使用∞范数，转Euclidean点尾须乘√k。
+[C159](canonical/gauge_dilation_boundary.md#gd-theorem) 的 ψ 是固定逐点函数，ψ(2t) 不能无条件换为 Cψ(t)；其离散自然输入域 D不含邻域 coverage，正点不连续不得混入要求连续 gauge 的定理。[C160](canonical/selection_quasi_arithmetic_boundary.md#qa-object) 的 D 是均值初值直径预算、K 是生成元对数导数界、q=αℓ是修复尾的辅助系数；都不等于RLEB的输入对尺度、RL常数或实际法向率。N是非负起步，不能使用负迭代次数。QA使用∞范数，转Euclidean点尾须乘√k。
 
 [LMZ接口](canonical/selection_primary_interfaces.md) 的 λ_L 乘在目标二次项上，项目 prox 步长 h=1/λ_L。其 ψ(d)≤γr 是距离侧函数方向，与本库残差侧 d≤ψ(r) 比较时须先求逆并核定义域，不能直接同形代入。P16的 φ 是固定 M 的外层复合函数；QA-COMPARISON中的 F为不变标量函数，与PPA完整集值关系 F 不同型，跨页调用时重命名为 f_inv。

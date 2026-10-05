@@ -153,7 +153,8 @@ K_\lambda^*=\frac{\varepsilon^2}{\lambda-\varepsilon^2}.
 \tag{IP10}
 \]
 同一固定端序列也排除允许该端点的两移动输入一阶商条件。
-此结论仅指 (IP10) 所示量词；不声称已经核实 Spingarn 原始命名，
+此结论的输出逃逸也符合[1980作者稿的准确量词](../../canonical/spingarn_author_definitions.md#sp-gx-match)；
+两正式刊本对应仍未闭，
 也不把输出逃逸序列当作趋向 \((0,0)\) 的图点序列。
 
 <a id="ip-residual"></a>

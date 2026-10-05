@@ -15,12 +15,12 @@
 
 | 去向 | 记录数 |
 | --- | ---: |
-| `rewritten` | 226 |
-| `superseded` | 7 |
+| `rewritten` | 230 |
+| `superseded` | 9 |
 | `refuted` | 1 |
-| `duplicate` | 26 |
+| `duplicate` | 27 |
 | `nonmathematical` | 64 |
-| `deferred` | 8 |
+| `deferred` | 1 |
 
 合计332条记录。这是本内容的可审计单元表，不作为全库数学成果分母；同义重复、来源评级和纯组织用途都包含在这个合计中。规范总表沿用新unit_id索引，同一断言已有较粗范围旧行时保留旧谱系，并不追加一个数学结果。
 
@@ -37,7 +37,12 @@
 
 BWY三例及连续线性**单调**等价接口、Voisei旋转v2、Lei–He VI定义/平方例、Luke–Tam非负violation定义已由[一手事实表](../LITERATURE.md#lit-bwy-2012)逐版本登记。直接证明不因原文件VERIFIED_SOURCE、ALG或PASS标签自动通过。
 
-本内容8条deferred记录对应两类具体义务：七个源位置的Spingarn历史mapping/maximality命名与准确原文身份；一个无代码、网格参数或输出定位的旧网格执行报告。七个位置不是七个缺失定理。打印的一阶商已按数学公式重算，但不能从它们恢复原历史命名。Luke–Tam参考文献中的作者缩写与来源R.不同，仅是二手线索，原页未取得。本次不将旧EXECUTED_LOCAL升级为可复跑观察；相关锐常数已由解析证明承担。
+本内容仅剩1条deferred记录：无代码、网格参数或输出定位的旧网格执行报告。
+七个Spingarn出现位置现已取得明确的[1980完整作者稿/1981作者报告](../canonical/spingarn_author_definitions.md#sp-versions)，
+分别重写、纠正或去重；1981/1982正式刊本版本对应另保留一项共享义务，
+不将作者稿页码冒称刊本原页，也不把非闭例授予作者稿闭关系类成员身份。
+作者缩写已由AMS和作者机构材料纠正为Jonathan E./J.E.。本次不将旧EXECUTED_LOCAL升级为
+可复跑观察；相关锐常数已由解析证明承担。
 
 旧YAML合同中的COMPLETE、PASS_CANDIDATE、merge_permission和“全文已读”只是来源流程记录。其质量检查、冲突、自报和待核名字各有独立记录，不承担本次数学验收。
 

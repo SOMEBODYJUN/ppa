@@ -44,7 +44,7 @@
 <a id="ff-math"></a>
 ## 已重构的缺口与版本边界
 
-原稿 §7.2 LF 1117–1126 只提示“阶梯 gauge”可阻止同 gauge 转移，旧规范 IZ-GERM 也未给完整见证。本次 [C157/GD-1–7](../canonical/gauge_dilation_boundary.md#gd-theorem) 写出 \(t_{n+1}=t_n^2\) 的有限非减超线性 \(\psi\)，并在 **\(\lambda=1\)** 的紧完整标量图上证明：真实残差 EB 精确成立，每个自然输入的完整 resolvent 唯一，但每个 graph germ 的 \(|y|\le C\psi(|x|)\) 对所有有限 \(C\) 都失败；带自变量重标度的 \(|y|\le\psi(2|x|)\) 仍成立。这是原有 foundations 证明义务的补足，不把离散输入域当成邻域覆盖。
+原稿 §7.2 LF 1117–1126 只提示“阶梯 gauge”可阻止同 gauge 转移，旧规范 IZ-GERM 也未给完整见证。本次 [C159/GD-1–7](../canonical/gauge_dilation_boundary.md#gd-theorem) 写出 \(t_{n+1}=t_n^2\) 的有限非减超线性 \(\psi\)，并在 **\(\lambda=1\)** 的紧完整标量图上证明：真实残差 EB 精确成立，每个自然输入的完整 resolvent 唯一，但每个 graph germ 的 \(|y|\le C\psi(|x|)\) 对所有有限 \(C\) 都失败；带自变量重标度的 \(|y|\le\psi(2|x|)\) 仍成立。这是原有 foundations 证明义务的补足，不把离散输入域当成邻域覆盖。
 
 原稿绝大部分数学已分别进入参数字典、指定分支、孤立零点、移动锚、非孤立 alignment 与三张路径卡。本次把每一项精确回连，并保留两项措辞修订：
 

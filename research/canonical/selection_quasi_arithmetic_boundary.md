@@ -1,6 +1,6 @@
 # 正则拟算术均值：非负起步的共同尾与极限选择界
 
-本页给 C158-v1 的独立证明。P16 指定打印公式的小直径问题只作为
+本页给 C160-v1 的独立证明。P16 指定打印公式的小直径问题只作为
 移植边界记录；这里的共同尾和两初值 Lipschitz 界不依赖该公式的正确性。
 一手版本与条目核验见 [PRIMARY_SELECTION_IMPORTS](selection_primary_interfaces.md)。
 

@@ -4077,10 +4077,21 @@
       "region": "convergence",
       "realm": "convergence"
     },
-    "GD-BOUNDARY": {
+    "QP-COMMON": {
       "role": "object",
       "kind": "mine",
-      "object": "sword",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "QP-COUNTER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
       "evidence": "unspecified",
       "reason": "neutral-default",
       "x": 1728,
@@ -4088,16 +4099,60 @@
       "region": "convergence",
       "realm": "convergence"
     },
+    "QP-PRINTED": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thorn",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 1822,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SL-ANCHOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SL-DISCONT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "GD-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
     "GD-OBJECT": {
       "role": "object",
       "kind": "mine",
       "object": "stele",
       "evidence": "unspecified",
       "reason": "neutral-default",
-      "x": 1728,
-      "y": 857,
+      "x": 1916,
+      "y": 3004,
       "region": "convergence",
-      "realm": "convergence"
+      "realm": "convergence-annex-2"
     },
     "QA-OBJECT": {
       "role": "object",
@@ -4140,6 +4195,28 @@
       "reason": "neutral-default",
       "x": 1634,
       "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SC-BAIRE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SC-SPACE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 3186,
       "region": "convergence",
       "realm": "convergence-annex-2"
     }
@@ -5090,20 +5167,40 @@
       "y": 2986.05
     },
     "E237": {
-      "x": 1719.41,
-      "y": 449.22
+      "x": 1820.11,
+      "y": 2205.96
     },
     "E238": {
-      "x": 1590.78,
-      "y": 3074.12
+      "x": 2263.69,
+      "y": 2105.76
     },
     "E239": {
-      "x": 1527.2,
-      "y": 3050.26
+      "x": 1832.93,
+      "y": 2684.26
     },
     "E240": {
-      "x": 1544.31,
-      "y": 3138.19
+      "x": 2003.35,
+      "y": 2019.46
+    },
+    "E241": {
+      "x": 1924.59,
+      "y": 2960.22
+    },
+    "E242": {
+      "x": 1589.08,
+      "y": 3111.91
+    },
+    "E243": {
+      "x": 1519.12,
+      "y": 3047.22
+    },
+    "E244": {
+      "x": 1552.8,
+      "y": 3139.74
+    },
+    "E245": {
+      "x": 1903.2,
+      "y": 3141.26
     }
   },
   "bounds": {

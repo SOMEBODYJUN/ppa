@@ -114,7 +114,7 @@ f_i\in\mathcal S_K(I),\quad
 | --- | --- | --- |
 | Theorem 1 | p.4：\(0<\ell<1\)，\(n_0=\lceil\log_2((e^{Kd_0}-1)/(e^\ell-1))\rceil\)；对 \(n\ge n_0\) 打印 \(d_n<(\alpha K)^{-1}(\alpha\ell)^{2^{n-n_0}}\) | Theorem 3.2，PDF p.5／印刷 p.219，保留相同公式；正式版 §3 起首排除常向量，却仍未排除小非零直径导致 \(n_0<0\) |
 | Theorem 2 | p.4：\(\mu=\min_{0<\ell<1}(\alpha\ell)^{(e^\ell-1)/2}\)，在 \(\ell=\xi\) 达到；打印 \(d_n<(\alpha K)^{-1}\mu^{2^n/(e^{Kd_0}-1)}\)，\(n\ge n_1=(\log_2 e)Kd_0-\log_2(e^\xi-1)+1\) | Theorem 3.3，PDF p.5／印刷 p.219；所列参数、阈值和包络相同 |
-| Lemma 4.3 | p.11：\(d(x)<\min\{1/K,1\}\) 时，\(|A_f(x)-\bar x|<(\alpha K/2)d(x)^2\) | 仍为 Lemma 4.3，PDF p.10／印刷 p.224；改为 \(f\in\mathcal S_1(I)\) 的全直径式，对 \(d\ge1\) 补平凡估计，不能说两个版本逐字一致 |
+| Lemma 4.3 | p.11：\(d(x)<\min\{1/K,1\}\) 时，\(\lvert A_f(x)-\bar x\rvert<(\alpha K/2)d(x)^2\) | 仍为 Lemma 4.3，PDF p.10／印刷 p.224；改为 \(f\in\mathcal S_1(I)\) 的全直径式，对 \(d\ge1\) 补平凡估计，不能说两个版本逐字一致 |
 | Theorem 3／§3.1 | pp.5–6，见下段的不变函数及同初值近似 | 指定章节检查及全文检索未找到正式对应；正式版没有此 \(\varphi\) 段，不授正式版这个定理 |
 | §3.2 AGM | pp.6–7，生成元 \(t,\log t\)，\(K=1/x_{\min}\) | 正式 §5，PDF pp.12–13／印刷 pp.226–227；记较小初值为 \(y_0\)，\(K=1/y_0\) |
 
@@ -328,7 +328,7 @@ T(t)=\operatorname{sign}(t)(\sqrt{|t|+a^2}-a)^2.
 | U060 | v2 Prop.3.1／Th.3.1／Cor.3.1 `primary-checked` | 刊本数学跨号仍 `deferred`；“有限图”须改成有限维闭半代数关系 |
 | U061 | 保持 AGM 自足推导的 `derived-checked` | 不改成论文证明的无限迭代闭包定理 |
 | U062 | 已核存在性量词支持的有限比较 `derived-checked` | 未给具体图数值常数或严格兼容 |
-| U066 | 拆成“原打印公式已核且存在小直径漏洞”与 C158 修复共同尾 `derived-checked` | **不能**把原 Theorem 2 包络全初值原样记为正确／已验收 |
+| U066 | 拆成“原打印公式已核且存在小直径漏洞”与 C160 修复共同尾 `derived-checked` | **不能**把原 Theorem 2 包络全初值原样记为正确／已验收 |
 | U067 | 两版本完整 \(\mathcal S_K\) 条件 `primary-checked` | 补回 \(f_i''\) 局部 BV；不误改为全域导数共同正下界 |
 | U068 | 两版本 AGM 生成元、\(K=1/x_{\min}\) `primary-checked`；轴不统一为直接推论 | 不接收其继承有问题包络的全部定量式 |
 | U069 | v1 的 \(\varphi\circ M\) 表示身份与对象 `primary-checked` | 定量式须用修复尾；正式版不授此 Theorem 3 |

@@ -56,7 +56,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 
 若真残差增长 \(r_F(y)\ge m d(y,S)^a\)，其中 \(m>0,a>0,0<\gamma<1,L>0\)，选择 \(\psi(t)=(t/m)^{1/a}\)。R02 的小尺度直接兼容在 \(a<\gamma\) 成立；\(a=\gamma\) 时恰当 \(\lambda m>L/2\)；\(a>\gamma\) 时这个**标量测试**失败。失败不证明某条轨道发散。S19 `cor:residual-growth`。
 
-同一稿件有另一个能量证书：当 \(\psi\) 连续严格递增且 \(R\le\psi(\bar t)\)，置 \(V(r)=r^2+\lambda^2[\psi^{-1}(r)]^2\)，\(A(r)=(r^2+L^2r^{2\gamma})/2\)。若 \(q_E(R)=\sup_{0<r\le R}A(r)/V(r)\le q<1\) 且 \(\sqrt{qV(d_0)}/(1-\sqrt q)<\operatorname{dist}(x^0,X\setminus U)\)，则 \(V(d_k)\le q^kV(d_0)\) 并有有限长和尾界。\(a=\gamma\) 的小尺度能量阈值 \(\lambda m>L/\sqrt2\) 比直接阈值更强；两者是**证明证书的阈值**，不宣称个别轨道收敛的必要条件。S19 `prop:energy-certificate`, `rem:sharpness-boundary`。
+同一稿件有另一个能量证书：保留R01全部前件，并取 \(x^0\in U_R\)（特别 \(d_0\le R\)）；当 \(\psi\) 连续严格递增且 \(R\le\psi(\bar t)\)，置 \(V(r)=r^2+\lambda^2[\psi^{-1}(r)]^2\)，\(A(r)=(r^2+L^2r^{2\gamma})/2\)。若 \(q_E(R)=\sup_{0<r\le R}A(r)/V(r)\le q<1\) 且 \(\sqrt{qV(d_0)}/(1-\sqrt q)<\operatorname{dist}(x^0,X\setminus U)\)，则 \(V(d_k)\le q^kV(d_0)\) 并有有限长和尾界。\(a=\gamma\) 的小尺度能量阈值 \(\lambda m>L/\sqrt2\) 比直接阈值更强；两者是**证明证书的阈值**，不宣称个别轨道收敛的必要条件。S19 `prop:energy-certificate`, `rem:sharpness-boundary`。
 
 <a id="r04"></a>
 <a id="schur"></a>
@@ -74,7 +74,7 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 | --- | --- | --- |
 | H-R01 | {同图块全对 RL、coverage、解点图、实际输出真 EB} → R01 | R01 已独立重构；只对上述单值图块范围 |
 | H-R02 | {R01、统一兼容 \(\kappa<1\)、初值留域预算、闭 \(S\)} → R02 | C02-v2 单值图块归纳已独立重构；原稿多选择版仍是候选，完整 resolvent 量词不扩大 |
-| H-R03 | {R01、\(\psi^{-1}\) 存在、\(q_E<1\)、另一留域预算} → 能量分支 | 稿内证明；与 H-R02 平行 |
+| H-R03 | {R01全部前件、\(x^0\in U_R\)、\(\psi^{-1}\) 存在、\(q_E<1\)、另一留域预算} → 能量分支 | 稿内证明；与 H-R02 平行 |
 | H-R04 | {signed-Schur 定向、全纤维排他、跨支估计} → RL 图块与 coverage | 条件验证器；EB 独立 |
 | H-R05 | {R01 的 \(\omega\) 版、Dini、兼容、留域} → 点收敛 | [C09/GM1–18 完整独立证明](canonical/general_modulus_dynamics.md#gm-dini-theorem)；C10 对数接缝限定此族的 Dini 边界 |
 

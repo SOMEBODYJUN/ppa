@@ -294,7 +294,7 @@
 ## F43 · 仅凭超线性 gauge 就不重标度地跨 Minty 坐标
 
 - **被否定的接口**：同一 graph germ 的 |y−p|≤ψ(‖w‖)、ψ=o(id)，就推出某个有限 C 的 |y−p|≤Cψ(‖y+λw−p‖)。
-- **完整见证**：[C157](research/canonical/gauge_dilation_boundary.md#gd-theorem) 固定 λ=1；完整紧图上真实残差 EB 取等，但 xₙ=tₙ−tₙ² 处 ψ(xₙ)=tₙ⁴，|J_Fxₙ|/ψ(xₙ)=tₙ⁻²→∞，任意缩小 germ 仍失败。
+- **完整见证**：[C159](research/canonical/gauge_dilation_boundary.md#gd-theorem) 固定 λ=1；完整紧图上真实残差 EB 取等，但 xₙ=tₙ−tₙ² 处 ψ(xₙ)=tₙ⁴，|J_Fxₙ|/ψ(xₙ)=tₙ⁻²→∞，任意缩小 germ 仍失败。
 - **重启门**：保留正确的 ψ((2/λ)‖x−p‖)，或另证所需固定 dilation 控制。正点连续 gauge、邻域输入 coverage、原生 PPA 等额外要求须另核；本例不认证它们。
 
 <a id="f44"></a>
@@ -302,4 +302,4 @@
 
 - **指定旧接口**：arXiv1412.2997v1 Theorems1–2及正式版 Theorems3.2–3.3 的打印 n₀=ceil log₂[(e^(Kd)−1)/(e^ℓ−1)] 没有夹到非负；小非零直径下 n₀→−∞。读取原页只认证打印事实，不认证该公式在全部初值上成立。
 - **解析反例**：[QA-FIRST-ROUND](research/canonical/selection_quasi_arithmetic_boundary.md#qa-first-round) 取合规 f±(t)=e^(±t)、K=1、初值(d/2,−d/2)。实际 d₁=2log cosh(d/2)∼d²/4，原合法 n=1 的尾却是 o(d²)；优化式在任何固定超过其极限起步阈值的整数 n 同样与 dₙ∼4^(1−2ⁿ)d^(2ⁿ) 矛盾。只否定指定打印公式的小直径量词，不否定作者全部结果或宣称正式勘误。
-- **已闭修补**：[C158](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 先固定共同K,D及ℓ<1/α，使用 N=max(0,ceil(...))；另独立证明共同超几何尾与同域Lipschitz选择界，处理首步和退化情形。固定正AGM窗的结论不移到坏轴，编码成完整PPA仍须另验。
+- **已闭修补**：[C160](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 先固定共同K,D及ℓ<1/α，使用 N=max(0,ceil(...))；另独立证明共同超几何尾与同域Lipschitz选择界，处理首步和退化情形。固定正AGM窗的结论不移到坏轴，编码成完整PPA仍须另验。

@@ -1030,7 +1030,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：实 \(\mathbb R^2\) 全域完整 \(Q_\theta=\cos\theta I+\sin\theta K\)，\(-\pi\le\theta\le\pi,\lambda>0\)。令 \(\Delta=1+2\lambda\cos\theta+\lambda^2,N=1-2\lambda\cos\theta+\lambda^2\)。唯一奇点 \(Q=-I,\lambda=1\) 时自然域 \(\{0\}\)，完整 \(J(0)=\mathbb R^2\)；否则 \(J,R\) 全域线性单值，\(\|J\|=\Delta^{-1/2}\)，反射锐线性模 \(\ell=\sqrt{N/\Delta}\)。在任意 Minty 输入对距不超过 \(R>0\) 的窗内，\(0<\gamma\le1\) 的最小全对常数为 \(\ell R^{1-\gamma}\)；无界全图次线性失败，唯 \(Q=I,\lambda=1\) 的零反射例外。
 - **Dependencies / Evidence / Status / Related Files**：[PR-CAYLEY](research/topics/examples/planar_rotation_family.md#pr-cayley) 用矩阵逆、所有可实现差距与完整奇点纤维直接证明，`derived-checked`；来源 Z07 旋转族第 765–839 行。D02 尺度是输入对距，不是球半径。
-- **Counterevidence / Scope**：仅在 \(\Delta>0\) 的同参数 signed LT 锐数为 \(-\lambda\cos\theta/\Delta\)，若只允许非负 \(\tau\) 则为 \(\max\{0,-\lambda\cos\theta/\Delta\}\)；仅在 \(\cos\theta\ge0\) 时截为 0。不能把二者写成同一个常数。来源外部例号和优先性未核。
+- **Counterevidence / Scope**：仅在 \(\Delta>0\) 的同参数 signed LT 锐数为 \(-\lambda\cos\theta/\Delta\)，若只允许非负 \(\tau\) 则为 \(\max\{0,-\lambda\cos\theta/\Delta\}\)；仅在 \(\cos\theta\ge0\) 时截为 0。不能把二者写成同一个常数。Voisei v2 Example43的归属/编号已核，见[LIT-VOISEI-2024](research/LITERATURE.md#lit-voisei-2024)；优先性仍未审。
 
 ## C123-v1 / PR-CYCLIC · 循环阶与两张取样角的可保留结论
 
@@ -1239,7 +1239,7 @@
 - **Status**：`derived-checked`，AGM7–16 的直接递推、完整路径及多项式证明；精确渐近常数另以已核 Brent 公式为外部前件。
 - **Exact Statement / Objects / Domain / Quantifiers**：对每个固定 R>0，C146 的 G 在 W_R=[0,R]² 自映射且完整路径唯一。全部 p∈W_R,n≥0 有 ‖Gⁿp−Π(p)‖≤|p₁−p₂|2⁻ⁿ；Π=(M,M) 为连续回缩，单步半阶安全系数 H_R=√(3R/√2)。M(1,ε)=Θ(1/log(1/ε)) 由 AGM10–11 直接证明；每个固定 0<c<R 的 (c,0) 处 Π 无任何正阶 Hölder 模，任一相对邻域限制不半代数。固定正下坐标 b₀>0 时实际点误差 eₙ₊₁≤eₙ²/(4b₀)，系数不跨轴统一；轴轨道恰 (c2⁻ⁿ,0)。若另调用 Brent 1976 印刷245–246页 (4.16)–(4.18)，则 M(1,ε)∼π/[2log(1/ε)]。
 - **Dependencies / Evidence**：[AGM7–16](research/topics/examples/arithmetic_geometric_mean.md#agm-selection) 的差递推、有限乘积界与非零多项式首项；[可选 Brent 接口](research/LITERATURE.md#lit-brent-1976)。
-- **Objections / Scope**：同窗共同几何尾不等于共同超几何尾，正初值Q二次不可授予坏参考轴；有界输入位置窗不是仅输入对距窗。Cox原定理未核，不承担本条证明。
+- **Objections / Scope**：同窗共同几何尾不等于共同超几何尾，正初值Q二次不可授予坏参考轴；有界输入位置窗不是仅输入对距窗。Cox指定Th1.1及正数门已核；本条闭轴和坏模由本页直接证明。
 
 <a id="c148"></a>
 ## C148-v1 / AGM-COMPATIBILITY · 完整直接编码的严格兼容障碍
@@ -1309,20 +1309,36 @@
 ## C156-v1 / GX065-COMPLETION · 有界平方的VI分离及亚临界完整近端
 
 - **Status**：`derived-checked`，GP8–11直接全部解与符号计算。
-- **Exact Statement / Objects / Domain / Quantifiers**：完整F=x²在[−1,1]、域外空，VI类quasi而非pseudo；GP8给全部原纤维，非负hypo锐2且无有限cohypo。0<λ<1/2时完整自然输入域[λ−1,λ+1]，J恰GP9显示正根分支，τ锐2λ/(1−2λ)²；域外无输出。0<|x̄|<1时ordinary SMR缩窗模1/(2|x̄|)。零目标的固定半阶、负目标空逆像及两侧路径边界不改变C84。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整F=x²在[−1,1]、域外空，VI类quasi而非pseudo；GP8给全部原纤维，非负hypo锐2且无有限cohypo。0<λ<1/2时完整自然输入域[λ−1,λ+1]，J恰GP9显示加号根分支，τ锐2λ/(1−2λ)²；域外无输出。0<|x̄|<1时ordinary SMR缩窗模1/(2|x̄|)。零目标的固定半阶、负目标空逆像及两侧路径边界不改变C84。
 - **Dependencies / Evidence**：[GP8](research/topics/examples/gx059_065_property_completion.md#gxp-square-inverse)、[GP9–10](research/topics/examples/gx059_065_property_completion.md#gxp-square-subcritical)、[GP11](research/topics/examples/gx059_065_property_completion.md#gxp-square-regular-points)。
 - **Objections / Scope**：非零参考点须内点，域端点不获得双侧目标coverage；完整有界图不可当全实线映射。
 
 <a id="c157"></a>
-## C157-v1 / GD-BOUNDARY · 同 gauge 跨 Minty 坐标失败
+## C157-v1 / SELECTION-INTERFACE-BOUNDARIES · 锚、集合距离与选择模
+
+- **Status**：`derived-checked`，两个完整自映射的直接证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：实线有理点x/2、无理点0的完整单值T满足零点锚averaged和全域线性步残差EB，全部轨道趋零，但任意0邻域不满足任何正阶全对Hölder单步模。实平面T(x,0)=(x,0)、T(x,y)=(sgn y,0)（y≠0），在U=[−1,1]²留域；FixT=R×{0}，集合距离一步归零、残差EB系数1、T²=T，第一步起共同点尾零，极限选择Π=T却在原点不连续。
+- **Dependencies / Evidence**：[SL完整见证](research/canonical/selection_literature_boundaries.md#sl-witnesses)。外部锚/Th4对象边界在同页，直接证明不依赖文献证明。
+- **Objections / Scope**：只证接口不蕴含；没有把见证编码成完整PPA，不认证SS1同图RL或严格兼容，更不反驳SS-TRANSFER的全对前提。
+
+<a id="c158"></a>
+## C158-v1 / QUASI-MEAN-TAIL-BOUNDARY · 安全共同尾与精确式阻断
+
+- **Status**：`derived-checked`；P16精确印刷公式身份另为`primary-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定K>0、正整数k≥1、共同S_K(I)生成元和初始直径上界R<∞，SL3的指数直径半减与局部平方递推给同一初值类共同实际点尾A exp(−c2^n)；常数依赖冻结的K/R/k，不要求输入位置有界。合法f1=t,f2=exp t、K=1的直径递推log cosh(d/2)在固定N、小d处，解析阻断P16 v1 Th2/正式Th3.3的分母e^{KD}−1精确上界及v1 Th3相应精确近似式。
+- **Dependencies / Evidence**：[SL3–SL5及解析证书](research/canonical/selection_literature_boundaries.md#sl-p16)；P16版本/印页在LITERATURE。
+- **Objections / Scope**：不否定不变表示F=φ∘M，也不否定安全定性共同尾；AGM轴边界不能冻结K。刊本逐式对应以文献卡实际核得状态为准。
+
+<a id="c159"></a>
+## C159-v1 / GD-BOUNDARY · 同 gauge 跨 Minty 坐标失败
 
 - **Status**：`derived-checked`，GD-1–7 的完整显式计算。
 - **Exact Statement / Objects / Domain / Quantifiers**：实标量、固定 λ=1，t₀=1/2、tₙ=2^(−2ⁿ)、ψ(t)=tₙ² 对 tₙ≤t<tₙ₋₁、ψ(0)=0。ψ 有限非减且 o(t)，完整紧图 Γ={(0,0)}∪{(−tₙ²,tₙ):n≥1} 的零集 {0}，所有有限真实残差点满足 |y|=ψ(r_F(y))。完整 resolvent 在 D={0}∪{tₙ−tₙ²} 唯一；每个零点 graph germ 和每个有限 C 均有 |J_Fx|>Cψ(|x|)，而全 D 上 |J_Fx|≤ψ(2|x|)。ψ(2sₙ)/ψ(sₙ)→∞，sₙ=tₙ/2。
 - **Dependencies / Evidence**：[完整 gauge、图和证明](research/canonical/gauge_dilation_boundary.md#gd-theorem)；带重标度正向门为 [IZ-GERM](research/canonical/isolated_zero_flatness.md#iz-germ)。补足最终 foundations §7.2 的阶梯见证。
 - **Objections / Scope**：D 不含零点的输入邻域，不认证局部全输入 PPA；ψ 在正点不连续，不反驳额外要求正点连续 gauge 的版本。只证明固定同一 gauge 的失败，不否定重标度 gauge 或额外 dilation 控制。
 
-<a id="c158"></a>
-## C158-v1 / QA-TAIL-SELECTION · 正则拟算术均值的共同尾与选择界
+<a id="c160"></a>
+## C160-v1 / QA-TAIL-SELECTION · 正则拟算术均值的共同尾与选择界
 
 - **Status**：`derived-checked`，QA1–13 自足证明；指定原文事实另为 `primary-checked`。
 - **Exact Statement / Objects / Domain / Quantifiers**：开区间 I、k≥1、K>0、全部生成元 fᵢ∈C²(I)、fᵢ′处处非零、fᵢ″局部有界变差、|fᵢ″/fᵢ′|≤K；完整均值映射 T=(fᵢ⁻¹(k⁻¹∑ⱼfᵢ(xⱼ)))ᵢ。先固定 D>0 和 X_D={x∈Iᵏ:diam x≤D}；令 α=(3+7e)/3、0<ℓ<1/α、q=αℓ、N=max(0,ceil log₂[(e^(KD)−1)/(e^ℓ−1)])。全部 x∈X_D 的唯一对角极限 Π(x)=M(x)1 满足全部 n≥N 的 ‖Tⁿx−Πx‖∞≤diam Tⁿx≤(αK)⁻¹q^(2^(n−N))；全文给全部 n≥0 的共同 A exp(−b2ⁿ) 界。同一凸域的全部初值对满足 ‖Πx−Πy‖∞≤exp[2(e^(KD)−1)]‖x−y‖∞。实际点误差仅授共同 Q二次上界 eₙ₊₁≤4αKeₙ²，不宣称逐轨道锐因子。

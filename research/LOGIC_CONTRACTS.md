@@ -377,6 +377,6 @@ E11 的 [C11/GM19–25](canonical/general_modulus_dynamics.md#gm-retraction) 用
 
 E07 的 [C10/GM26–39](canonical/general_modulus_dynamics.md#gm-log-object) 另固定完整双支、切线延拓剖面与λ=1。完整最小残差在y≥0取第一支、域外∞，负输入的实际选支不能代替真最小值。a≤1且非零法向的距离几何率/切向发散只限制删Dini推理；a>1恰有限长，不判所有非Dini模型。
 
-## E237–E240：同 gauge 边界与文献模型的独立修复
+## E241–E244：同 gauge 边界与文献模型的独立修复
 
-E237在C157同一完整紧图与λ=1上取真实残差最小值，固定ψ的输入改变量不能由o(id)吸收；保留重标度才得正确界，离散D不认证邻域输入覆盖。E238/E239在C158同一完整均值映射、固定生成元及凸域X_D上独立使用Jensen/Taylor/全部导数积，非负N与首步j=0不可丢；共同超几何尾和Lipschitz选择不认证完整PPA、RL、EB或严格兼容。E240仅反驳P16指定打印负起步公式的小直径量词，不否定全文；读取原式和通过数学验收是不同状态。[规范接口](canonical/selection_primary_interfaces.md)保留LP22/LMZ/P16的准确版本、原定理条件与对象映射，审计记录不承担缺失定义。
+E241在C159同一完整紧图与λ=1上取真实残差最小值，固定ψ的输入改变量不能由o(id)吸收；保留重标度才得正确界，离散D不认证邻域输入覆盖。E242/E243在C160同一完整均值映射、固定生成元及凸域X_D上独立使用Jensen/Taylor/全部导数积，非负N与首步j=0不可丢；共同超几何尾和Lipschitz选择不认证完整PPA、RL、EB或严格兼容。E244仅反驳P16指定打印负起步公式的小直径量词，不否定全文；读取原式和通过数学验收是不同状态。[规范接口](canonical/selection_primary_interfaces.md)保留LP22/LMZ/P16的准确版本、原定理条件与对象映射，审计记录不承担缺失定义。
