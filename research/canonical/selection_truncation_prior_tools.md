@@ -2,7 +2,7 @@
 
 本页裁决 SS1 `research_note.md` §6.1（646–665 行）的文献和方法断言。
 一手事实是下述两个已核引理；其量词均为共同域上的全称条件。
-末节另枚举 §6.4–6.5 的未闭比较接口；§6.2–6.3 的数学在
+末节登记 §6.4–6.5 的已核比较与具体未闭接口；§6.2–6.3 的数学在
 [AGM 独立对象卡](../topics/examples/arithmetic_geometric_mean.md)。
 `ST-LIPSCHITZ` 的规范推导写全，以便调用不依赖历史目录。
 正文推导为 `derived-checked`，空白接收范围另记；一手原文访问范围与未取得原页另列。
@@ -117,24 +117,25 @@ SS1 的 `research_note.md` 成员 SHA-256 为
 <a id="st-open-comparisons"></a>
 ## §6.4–6.5：精确来源报告与未闭的比较接口
 
-下表只记录 SS1 报告的文献断言，**不是本页核过的 paper fact**。
-它们的实际前提、编号与适用范围须回到指定版本的一手原文；
-来源声称“已读全文”只作为历史访问报告保留，不能继承当前规范层的已核状态。
+下表登记本次固定版本的一手复核去向。具体条件与直接证书在
+[选择文献接口](selection_literature_boundaries.md)，版本和印页在
+[LITERATURE](../LITERATURE.md#lit-selection-interfaces)。
+历史“已读全文”不继承为当前数学认证，指定陈述比较也不替代全球先行性。
 
-| 原件引用及位置 | 来源所报告的独立断言 | 准确未闭义务 |
+| 原件引用及位置 | 当前已核去向 | 准确剩余义务 |
 | --- | --- | --- |
-| LT，705 行；755 行书目 | Lemma 2 / Theorem 2 给局部 PPA 收敛与点尾，未给本稿指定的两初值极限模 | 当前 [LIT-LT-2025](../LITERATURE.md#lit-lt-2025) 已核的是 Definition 2 / (10)，不是这两个收敛结论；须核其完整假设、尾式和与 SS-TRANSFER 的对象比较 |
-| LTTQ，705、756 行 | arXiv:1605.05725v2 Theorems 2.15、2.18、Corollary 2.19 的 almost-averaged/次正则率；正式版相应为 2.1、2.2、2.3 | 对两版本逐号核陈述；另判断点态条件与共同域全对 Hölder 条件的差异，不凭术语相近就作替换 |
-| LTTP，705、757 行 | Theorems 1–2 的非扩张/averaged 极限继承非扩张；Theorem 4 不要求非扩张；来源声称已读全文且没有坏选择结论 | 三项分别核全文和 Theorem 4 的实际假设；历史“全文缺口已关闭”不证明任何当前断言已验收 |
-| LMZ，707、758、722 行 | arXiv:2406.13207v1 Theorems 4.3–4.4、Remark 4.5、Example 4.6；高阶实际点收敛，例的 PPA Q-二次但唯一极限 0；正式 DOI 版差异未闭 | 先读 v1 完整对象及全部参数，再核刊本修改和编号；若例确实只有一个可能极限，恒定选择是逻辑推论，但这里不先承认那个例的对象身份 |
-| LP22，707、754 行 | 一元半代数增长与有限图正则性工具 | arXiv:2004.02188v2 Lemma 2.2、Proposition 3.1、Theorem 3.1、Corollary 3.1 的原文未在本页导入。单步半代数不保证极限半代数已由 AGM 直接反证；工具不能替具体完整图的 EB 系数及严格兼容认证 |
-| B93，709、759 行 | 满秩光滑零流形上 Gauss–Newton 有共同二次点尾与 \(C^k\) 初值–极限映射 | Theorems 2.1–2.2、3.1、(2.1) 的完整假设及一致范围未核；把它定位为精确同对象前身仍需原文证明 |
-| P16，709、760 行 | 正则拟算术均值的共同双指数尾；生成元导数不退化且 \(|f_i''/f_i'|\le K\)；AGM 的 \(K=1/x_{\min}\) 在轴边界不统一；任意连续 \(\varphi\) 只进入 \(\varphi\circ M\) | 分别核 arXiv:1412.2997v1 Theorems 1–3、Lemma 4.3、§3.2 的共同域和常数。某固定 \(M\) 可与任意 \(\varphi\) 复合，不证明 \(M\) 可任意粗糙；这条逻辑边界与原文是否含此表述分开 |
-| CHH，711、761 行 | clean intersection 和切法向导数条件给光滑极限回缩；二阶回缩不等于点误差 Q-二次 | arXiv:2605.17384v2 的全文、Assumptions 1–3、Proposition 2、Theorems 2–3、Lemma 4.9 的身份及定义均未在本页核；不能从标题补导数/速率假设 |
-| KR，711、762 行 | 一般 NHIM 先给连续相位；逆向构造预设光滑相位并用法向支配保持正则性 | arXiv:1608.08442v1 Proposition 1、§3.2.2、Propositions 6、8、Theorem 2 的原文未在本页核。一个定理只保证连续，不等于已经构造非任意 Hölder 的反例 |
-| BL00，665、721、763 行 | Proposition 1.10 是可能覆盖截断一般性的更早入口 | 命题与证明原页未取得；检查任意有限步模和任意共同尾的允许范围、以及是否算出指定非幂量级，不能以 W14 的特例反推 |
-| Chicone–Liu，723 行 | *Asymptotic phase revisited*，JDE 204 (2004), 227–246 是未排除入口 | 书目原始身份、DOI、全文及实际定理号未核；不把候选入口叫作已证相同先例 |
-| Battelli–Palmer，723 行 | *Smoothness of Asymptotic Phase Revisited* 是未排除入口 | 作者原文、准确版本、定理号和覆盖范围未核；不从标题补光滑性条件 |
+| LT，705、755 | [SL-LT](selection_literature_boundaries.md#sl-lt)：六处正式陈述已读；受限图近端、球内选路径和真残差分开；Lemma2尾可独立求和 | T2的邻域/不变窗/精确尾，以及P1严格上端门，均不可无条件导入；两指定选择模未在该正式版主文陈述，非全球首创结论 |
+| LTTQ，705、756 | [SL-LTT](selection_literature_boundaries.md#sl-ltt)：v2三号与刊本2.1/2.2/2.3逐陈述跨号已核；固定锚、全部输出及环域条件分开 | 不扩大成一般点尾或共同域全对Hölder；指定三条对应不证明整篇逐字等同 |
+| LTTP，705、757 | 作者公开全文Th1–4/Remark1已读；Th1–2强极限的非扩张性由SL2独立传递；Th4仅EB；[C157](selection_literature_boundaries.md#sl-witnesses)给两个接口见证 | 正式issue印页与作者上传版对应未闭；一般φ率的可评价/比较迭代门不授derived；历史访问事件只保留报告 |
+| LMZ，707、758、722 | [SL-LMZ](selection_literature_boundaries.md#sl-lmz-lp)：v1 Th4.3/4.4/4.5/4.6已读；4.4确为点误差，4.6直接核完整唯一输出、实际Q2和恒零选择 | 刊本编号/条件增改对应未闭；不删除站立假设，不把惩罚系数当同方向步长，不排除其它坏选择先例 |
+| LP22，707、754 | v2 Lem2.2/Prop3.1/Th3.1/Cor3.1已读；闭半代数图紧集EB无需有限纤维；多值continuity为开逆像式 | 刊本逐号/条件对应未闭；存在性不补SS1数值EB或严格兼容，单步图不给无限极限半代数 |
+| B93，709、759 | [SL-B93](selection_literature_boundaries.md#sl-b93-chh-kr)：原刊Th2.1–2.2/3.1及式2.1已读；真正局部初值–极限先例，原假设只给C^{k−1}，旧C^k已纠正 | 共同双指数尾须局部收小并冻结常数；不扩到整个零流形，不称同一PPA/坏选择联合定理 |
+| P16，709、760 | [C158](selection_literature_boundaries.md#sl-p16)：v1生成元/AGM/不变表示已核；安全共同双指数尾独立重建，精确分母式另有解析阻断 | 刊本Th3.2/3.3、引理/AGM对应已核；Th3.3分母精确界仍受解析阻断，v1 Th3应用单独引用；固定直径R/K不可省，轴上K不统一；任意φ不使固定M任意粗糙 |
+| CHH，711、761 | v2 Ass1–3/Prop2/Lem4.9/Th2–3已读；安全接口为局部切初始化束域C1/C2及共同几何点尾 | 高p全C^{p−1}未由指定证明闭合；二阶回缩是初始化导数概念，不等于迭代Q2 |
+| KR，711、762 | v1 Prop1/§3.2.2/Prop6/8/Th2已读；连续轨道相位、预设光滑相位、集合距离尾分别记录 | 精确k1/k3支配阈值与L身份仍未闭；只保证连续不是已给坏Hölder例；历史访问日志不作为数学调用门 |
+| BL00，665、721、763 | 书目身份和AMS许可Google Books预览已核；W14只称其引理是Prop1.10的variant | 命题/证明原页未取得；任意有限步模、任意共同尾及是否算出两指定非幂模均具体deferred，不能由W14倒推 |
+| Chicone–Liu，723 | Asymptotic phase revisited，JDE204(2004)227–246为待比较入口 | [作者2003-12-23预印本](../LITERATURE.md#lit-phase-candidates)全文及指定号已核；余刊本对应、Th2.8 C2余项证明门和SS静止点身份桥 |
+| Battelli–Palmer，723 | Smoothness of Asymptotic Phase Revisited为待比较入口 | [机构书目/摘要](../LITERATURE.md#lit-phase-candidates)已核，无关联文件；正文、定理号和精确正则门仍未取得 |
 
 来源 717–719 行的 NO-EXACT-PRIOR-FOUND 仅是一个带 2026-09-19 截止日的
 有限阴性检索报告。本页没有复核其全部检索过程，更没有把它变成全球首创证明。

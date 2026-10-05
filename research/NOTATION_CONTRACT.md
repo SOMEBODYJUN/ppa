@@ -45,10 +45,11 @@
 | [紧图极大障碍](operator_space.md#os-compact-barrier) | C142 的 \(G\) 是**非零实 Hilbert** 中任意非空紧完整图，结论与 C132 的步界、零集及 gauge 无关 | C132 的紧源新图不可直接作为极大单调类成员；加点延拓后它不再是同一完整图，纤维和残差必须重核 |
 | [紧预算步长谱](operator_space.md#os-spectrum-proof) | \(I_j=[1/j,j]\) 是实步长的紧参数域；\(B_{C,j}\subseteq X\times I_j\) 是**逐认证类**声明的闭预算关系，\(\Sigma_{C,j}\) 允许空值 | 闭关系给上半连续和闭存在投影，但不自动给下半连续；LT/direct/energy 三类各自的实际闭性、耗尽性及类别比较尚须证明 |
 | [例库](topics/examples/README.md) | \(F,K,B,G,R\) 在每张卡内重新绑定 | 必须携带空间、完整/受限图、目标、步长、输入/输出窗、真实或算法残差；GX 编号只标来源观察 |
-
 | [AGM C146–C148](topics/examples/arithmetic_geometric_mean.md#agm-object) | P=[0,∞)²是完整近端输入域，D={s≥t≥0}是输出/原算子域，G是AGM自映射；R是W_R的位置窗上界，M是AGM标量极限 | P不是Markov核，D不是数据尺度，R不是仅对距上限；d=√(s²−t²)是该页标量，r_F仍取完整纤维inf。Π轴处坏模与正初值Q二次不统一 |
 | [共同尾 C149](canonical/selection_truncation_prior_tools.md#st-lipschitz) | L:X→X是映射，k是其Lipschitz常数，ρ是共同增量的几何率；辅助版本T和u为不同映射 | L不代入RL系数，ρ不是EB系数；只沿uⁿ收敛，不将其尾换成Tⁿ |
 | [GX 图缺陷 C150–C156](canonical/parameter_dictionary.md#pd-geometry) | hypo/cohypo为非负单参数缺陷，signed τ另允许负数；每卡λ固定，MR目标重新指定 | inner product/范数写法覆盖Hilbert；标量才简写ab。固定窗锐系数与缩窗下确界分开，非零原算子目标不默认零集PPA |
+| [选择文献 C157/C158](canonical/selection_literature_boundaries.md) | LT的τ是非负标量；LMZ的τ(t)是误差率函数；KR的τ(q)是相位支配指标；P16的α=(3+7e)/3，与averaged参数α无关 | 每节独立绑定，跨节写τ_LT、τ_LMZ、τ_KR和α_P16。LMZ惩罚系数μ与标准步长h=1/μ为倒数；C157每个见证分别定义T/Π，不合并成同一算子 |
+| [Spingarn作者版本](canonical/spingarn_author_definitions.md#sp-first-order) | SP80-A固定输入仍量化全部锚输出，SP80-S只令两输入趋近；SP81-H每bounded K另取k_K | 输出不要求共同趋一图点；图闭/凸值是SP80声明类门。SP81全类极大性允许变局部系数，不等于固定σ或固定LT窗口极大性 |
 
 ## 统一验收问题
 

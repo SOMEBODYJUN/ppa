@@ -102,6 +102,18 @@
       "color": "#b0b5a0",
       "dark": "#85998b",
       "parent": "examples"
+    },
+    {
+      "id": "convergence-annex-2",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 2010,
+      "y": 3070,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -4064,6 +4076,61 @@
       "y": 493,
       "region": "convergence",
       "realm": "convergence"
+    },
+    "QP-COMMON": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 857,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "QP-COUNTER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 402,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "QP-PRINTED": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thorn",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 1822,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SL-ANCHOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SL-DISCONT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
     }
   },
   "edges": {
@@ -5010,6 +5077,22 @@
     "E236": {
       "x": 1140.52,
       "y": 2986.05
+    },
+    "E237": {
+      "x": 1820.11,
+      "y": 2205.96
+    },
+    "E238": {
+      "x": 2263.69,
+      "y": 2105.76
+    },
+    "E239": {
+      "x": 1832.93,
+      "y": 2684.26
+    },
+    "E240": {
+      "x": 2003.35,
+      "y": 2019.46
     }
   },
   "bounds": {

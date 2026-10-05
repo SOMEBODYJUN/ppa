@@ -48,6 +48,55 @@ d(Tz,Z)\le\frac3{\sqrt {10}}d(z,Z),
 
 这说明两步捕获**不是**本例缺乏一步距离收缩的证据。其有价值的区别是：联合活动关系 \(s=a-3b\) 给出实际一步因子，而将最坏反射指数和最弱输出误差界分开组合会丢失这一关系；后一句的指数身份仍须回原生图独立审查，不能由本页推导。
 
+<a id="m1-point-boundary"></a>
+## 显式外层的长度与固定点锚障碍
+
+仍只取本页的 \(T,c,R,z_*\)。捕获证明给第一步长度
+\(\sqrt{h^2+b^2}\le h+|b|<1/4+R\)，第二步若存在，长度小于 \(1/4\)，
+之后为零。因此每条显式外层轨道的总长度小于
+\[
+\tfrac12+R<\tfrac{49}{96}<\tfrac{73}{96}.
+\]
+这是有效粗界，不声明最优，也不计算未知原生内部相位的长度。
+
+令 \(\kappa=(3/2)^{1/3}\)，取 \(z_t=(c+t,0)\)、\(0<t<R\)。
+直接代入得
+\[
+Tz_t-z_*=(t-\kappa t^{1/3},0),\qquad
+\frac{\|Tz_t-z_*\|}{\|z_t-z_*\|}
+=|1-\kappa t^{-2/3}|\longrightarrow\infty.
+\]
+因此在这个固定点锚处没有有限 calm 常数，也没有
+\(\|Tz-z_*\|^2\le(1+\varepsilon)\|z-z_*\|^2\)、\(\varepsilon<\infty\)
+的 pointwise almost-nonexpansive 上界。任何蕴含此有限平方上界的
+averaged 或 almost-\(\alpha\)-firm 定义也在此失败；调用具体文献时仍要核其定义和 metric。
+
+充分小 \(0<t<\min\{R,1/96\}\) 有
+\(t<\kappa t^{1/3}<1/4\)，故 \(Tz_t\in(-c,c)\times\{0\}\)，
+\(T^2z_t=Tz_t\)；同一发散商也排除 \(T^2\) 的上述有限上界。
+以 \(z_*\) 为反例足以否定要求相对于全部固定点严格降距的 paracontraction 性质。
+这不声称相对于每个固定点都会增距；增距比发散时绝对点距仍趋零。
+它也不妨碍本页已证明的一步集合距离收缩或有限捕获。
+
+<a id="m1-block-residual"></a>
+## 两步块的残差与局部固定集
+
+由 \(T^2z\in Z\)，对 \(z\in B_R(z_*)\) 立即有
+\[
+d(z,Z)\le\|z-T^2z\|.
+\]
+若 \(T^2z=z\)，捕获给 \(z\in Z\)；反向由 \(T|_Z=I\)，所以
+\[
+\operatorname{Fix}T^2\cap B_R(z_*)=Z\cap B_R(z_*).
+\]
+全局 \(Z\subset\operatorname{Fix}T^2\)，故在同球还有
+\[
+d(z,\operatorname{Fix}T^2)\le\|(I-T^2)z\|.
+\]
+因此 \(I-T^2\) 在该局部有 metric-subregularity 有效常数1。
+不声明它最优；这是两步块残差，不是尚未重建的原生 \(F\) 的真实残差。
+外部 composition 定理的其它几何条件及原生完整纤维身份须另外核验。
+
 <a id="m1-obligation"></a>
 ## 尚未关闭的桥
 

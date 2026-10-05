@@ -323,3 +323,5 @@ CCA-M08 把旧 `C-DISAGREE-056` 分成两项：旧 B 值
 \((1+2\delta)/(1-2\delta)\) 原本明确是安全界，替换为锐值应标
 `C-SHARPEN`；零点局部闭图属于范围修正 `C-DISAGREE-SCOPE`。
 本草案确认这些数学区别，不把较松上界报告为原稿的虚假锐性声明。
+
+作者版本的定义与本对象的非闭门另见[Spingarn逐对象匹配](../../canonical/spingarn_author_definitions.md#sp-gx-match)；不把打印商满足与原作者闭关系类成员身份混同。

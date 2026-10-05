@@ -1834,6 +1834,32 @@
       "id": "BS-COMPLETION",
       "label": "平方VI分离和亚临界完整近端 C156",
       "file": "topics/examples/gx059_065_property_completion.md#gxp-square-inverse"
+    },
+    {
+      "id": "SL-ANCHOR",
+      "label": "锚averaged及线性EB却无全对单步模 C157",
+      "file": "canonical/selection_literature_boundaries.md#sl-witnesses"
+    },
+    {
+      "id": "SL-DISCONT",
+      "label": "一步驻定和共同零尾却不连续选择 C157",
+      "file": "canonical/selection_literature_boundaries.md#sl-witnesses"
+    },
+    {
+      "id": "QP-COMMON",
+      "label": "固定K/直径的安全共同双指数点尾 C158",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16"
+    },
+    {
+      "id": "QP-PRINTED",
+      "label": "P16分母e^{KD}−1精确上界（受阻）",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "QP-COUNTER",
+      "label": "合法算术/指数均值的解析阻断 C158",
+      "file": "canonical/selection_literature_boundaries.md#sl-p16"
     }
   ],
   "edges": [
@@ -1885,7 +1911,7 @@
       ],
       "output": "R03",
       "relation": "implies",
-      "scope": "ψ 连续严格增、q_E<1、能量分支预算",
+      "scope": "保留R01全部前件，初值x⁰∈U_R且d₀≤R；ψ连续严格增、R≤ψ(t̄)、q_E<1、能量分支留域预算",
       "status": "S19 稿内证明"
     },
     {
@@ -4081,7 +4107,7 @@
       ],
       "output": "SB-GEOMETRY",
       "relation": "conditional",
-      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；外部 BWY 归属未核。",
+      "scope": "同一完整二维 F=K+N_B 的全部图点：法向参数给单调及零正强模/余强制系数；rectangular 只对 ξ∈dom F=B、η∈ran F，内点交叉点证明非 paramonotone。此边不宣称极大性；已列BWY归属/版本编号见LIT-BWY-2012；不承担本页直接证明，优先权未审。",
       "status": "C124-v1 全图点对、紧盘下界与交叉反例独立重算"
     },
     {
@@ -4574,8 +4600,52 @@
       ],
       "output": "BS-COMPLETION",
       "relation": "implies",
-      "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一正根分支及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
+      "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一加号根分支（输出可负）及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
       "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E237",
+      "topic": "解选择",
+      "inputs": [
+        "SL-ANCHOR"
+      ],
+      "output": "SEL-HOLDER",
+      "relation": "limits",
+      "scope": "C157实线完整T在零点锚averaged且步残差EB，但任意0邻域无正阶全对单步Hölder；锚条件不供应SS-T1。不反驳具全对前提的SS-TRANSFER。",
+      "status": "derived-checked；完整自映射见证，未编码PPA"
+    },
+    {
+      "id": "E238",
+      "topic": "解选择",
+      "inputs": [
+        "SL-DISCONT"
+      ],
+      "output": "SS-TRANSFER",
+      "relation": "limits",
+      "scope": "C157实平面T在U留域，集合距离一步归零、残差EB与第一步后共同零点尾，极限Π仍不连续；点尾/集合距离单独不足，缺全对输入模。不是SS-TRANSFER全部前件下的反例。",
+      "status": "derived-checked；完整自映射见证，未认证同图RL/严格兼容"
+    },
+    {
+      "id": "E239",
+      "topic": "解选择",
+      "inputs": [
+        "QP-COUNTER"
+      ],
+      "output": "QP-PRINTED",
+      "relation": "refutes",
+      "scope": "C158固定合法f1=t,f2=exp t、K=1，固定N且d↓0时实际直径为正幂d^{2^N}，所印精确式为exp(−c/d)，比值发散。仅阻断该精确全量词式，不否定安全共同尾或不变表示。",
+      "status": "derived-checked；v1/正式Th3.3印刷公式身份primary-checked；不将v1 Th3应用与刊本混号"
+    },
+    {
+      "id": "E240",
+      "topic": "解选择",
+      "inputs": [
+        "QP-COMMON"
+      ],
+      "output": "TAIL",
+      "relation": "implies",
+      "scope": "C158同一正整数k≥1的拟算术均值积Q，全部生成元属同一S_K、初始直径≤R<∞；指数半减与平方直径递推给全初值共同实际点尾Aexp(−c2^n)，常数依赖冻结K/R/k。位置可无界；不提供全对单步模或完整PPA身份。",
+      "status": "derived-checked；SL3由函数类直接证明；外部精确印刷公式身份另为primary-checked"
     }
   ]
 }

@@ -122,9 +122,9 @@ e_x:=\frac{\|q-2\lambda\widetilde v-\widehat N(q)\|+e_N}{1-\sigma}.
 
 | ID | 合取前件 → 后件 | 证据/限制 |
 | --- | --- | --- |
-| HE-W01 | {全局 RL、锚点、标量 \(\rho\)} → 成对原坐标定位 | 稿内标量证明 |
-| HE-W02 | {有限维 graph-maximal、非空完整纤维、W01、\(r>R\)} → 全纤维值域覆盖 | 稿内证明；非 maximal 无此结论 |
-| HE-W03 | {相对 maximal 窗口、同参数全局 completion、W02} → 固定窗口覆盖 | 扩张与窗口等式须核 |
+| HE-W01 | {全局 RL、锚点、标量 \(\rho\)} → 成对原坐标定位 | [FC-ROOT自足证明](canonical/full_fiber_coverage.md#fc-root) |
+| HE-W02 | {有限维 graph-maximal、非空完整纤维、W01、\(r>R\)} → 全纤维值域覆盖 | [FC-GLOBAL自足证明](canonical/full_fiber_coverage.md#fc-global)；任意非极大子图不能仅据RL获得覆盖 |
+| HE-W03 | {相对 maximal 窗口、同参数全局 completion、W02} → 固定窗口覆盖 | [HE-EXTENSION](canonical/holder_extension.md#he-extension)与[FC9–10](canonical/full_fiber_coverage.md#fc-window)已证；保持同一窗口、全尺度RL与显示目标球 |
 | HE-Q01 | {有限兼容样本、抬升、严格凸 QP} → 全球一致 \(N_m,A_m\) | FD-1–12 自足证明；仅采样点有无覆盖的直接界 |
 | HE-Q02 | {Q01、同一图上的未知参数 \(\delta\)-覆盖、对应点对可用 RL} → 该区域的正反配对界 | 全图全尺度，或局部版逐对在 \(R_0\) 内（充分门 \(\delta\le R_0\)）；全纤维须全部图点属于该图并被覆盖 |
 | HE-Q03 | {Q02 全纤维 coverage、观测误差、反演求值证书 \(e_x\)} → 三项总误差 | QP gap 只给 \(e_N\)；还需候选点固定点残差换算为 \(e_x\)。浮点误差不能只凭机器输出 |

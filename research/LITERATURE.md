@@ -2,6 +2,60 @@
 
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
+<a id="lit-selection-interfaces"></a>
+## LIT-SELECTION-INTERFACES · 本轮固定版本与逐陈述定位
+
+核验日期为 2026-10-05。完整对象边界和直接证书在
+[选择文献接口](canonical/selection_literature_boundaries.md)；历史“已读全文”是独立的访问报告。
+
+| 代号 | 实读的一手版本、编号与印页 | 当前准入边界 |
+| --- | --- | --- |
+| LTTQ | Luke–Thao–Tam, *Quantitative convergence analysis of iterated expansive, set-valued mappings*：[arXiv1605.05725v2](https://arxiv.org/abs/1605.05725v2)，实读PDF40页；2.15 pp.11–12、2.18 pp.14–15、2.19 pp.15–16；[正式PDF](https://pubsonline.informs.org/doi/epdf/10.1287/moor.2017.0898)，MOR43(4)(2018)1143–1176，分别2.1 pp.1152–1153、2.2 p.1155、2.3 p.1156 | 指定三条逐陈述跨号已核；固定锚和环域量词不替代全对 Hölder。非整篇逐字等同 |
+| LTTP | Luke–Thao–Tam, *Implicit Error Bounds for Picard Iterations on Hilbert Spaces*：[Springer书目](https://link.springer.com/article/10.1007/s10013-018-0279-x)，VJM46(2018)243–258；[Nguyen H. Thao作者上传全文](https://www.researchgate.net/publication/323317906_Implicit_Error_Bounds_for_Picard_Iterations_on_Hilbert_Spaces)，2018-02-22公开上传、同DOI；Th1在线321–334、Th2 394–415、Remark1 455–522、Th4 902–917、Prop3 1188–1197行 | 作者 typeset全文已读；提取稿无正式印页，保留issue页码/版本对应门。Th4无非扩张前提，仅EB；一般φ率不升级独立证明 |
+| LMZ | Li–Mordukhovich–Zhu, *Generalized Metric Subregularity with Applications to High-Order Regularized Newton Methods*：[v1](https://arxiv.org/abs/2406.13207v1)，实读33页PDF首页v1；BA p.7、4.3 pp.8–9、4.4 p.10、4.5/4.6 p.11；[正式DOI](https://pubsonline.informs.org/doi/10.1287/moor.2024.0570)于2026-04-07上线、Articles in Advance | v1指定内容门已闭，刊本编号/条件对应未闭。4.4确为实际点误差；4.6惩罚系数与标准步长互为倒数 |
+| LP22 | Lee–Pham, *Openness, Hölder Metric Regularity, and Hölder Continuity Properties of Semialgebraic Set-Valued Maps*：[v2](https://arxiv.org/abs/2004.02188v2)，实读23页PDF首页v2；Def2.1 pp.5–6、Lem2.2 p.7、Th3.1 pp.12–14、Cor3.1 p.14、Prop3.1 pp.14–15；[正式DOI](https://epubs.siam.org/doi/10.1137/20M1331901)，SIOPT32(1)(2022)56–74 | 刊本书目已核，刊本逐条对应未闭。闭半代数图紧集EB不要求有限纤维；多值continuity按原文开逆像定义 |
+| B93 | W.-J. Beyn, *On smoothness and invariance properties of the Gauss–Newton method*，NFAO14(5–6)(1993)503–514：[原刊扫描](https://scispace.com/pdf/on-smoothness-and-invariance-properties-of-the-gauss-newton-1ufiov541u.pdf)，[机构入口](https://pub.uni-bielefeld.de/download/1784250/2314357/OCT3780.pdf)当前防机器人；Th2.1/(2.1) p.505、Th2.2 p.507、Th3.1 pp.507–509 | 原刊数学接口已读；\(F\in C^k,G\in C^{k-1}\)只给极限\(C^{k-1}\)。共同尾须局部收小，不能授全流形常数 |
+| P16 | P. Pasteczka, *Iterated quasi-arithmetic mean-type mappings*：[arXiv1412.2997v1](https://arxiv.org/abs/1412.2997v1)，实读13页；函数类p.3、Th1–2 p.4、Th3 p.5、§3.2 pp.6–7、Lem4.3–4.4 p.11；登记的刊本为Colloq.Math.144(2)(2016)215–228，DOI10.4064/cm6479-2-2016 | 指定v1内容已核；精确Th2/Th3分母式被C158独立解析证书阻断，安全共同双指数尾由SL3直接证明重建；刊本Th3.3精确式同受解析阻断，详见下方补核 |
+| CHH | Chen–He–Huang, *Retractions by Alternating Projections*：[明确v2全文](https://arxiv.org/html/2605.17384v2)，PDF63页；Ass1 p.5、Ass2 p.14、Ass3 pp.20–21、Prop2 pp.19–20、Lem4.9 p.27、Th2 p.28、Th3 p.33 | 安全接口为紧局部切束域上的C1/C2；高p全C^{p−1}不能从指定证明补足，二阶回缩不是点误差Q2 |
+| KR | Kvalheim–Revzen, *Reverse-engineering invariant manifolds with asymptotic phase*：[v1](https://arxiv.org/abs/1608.08442v1)，实读29页官方PDF；Prop1 pp.4–5/AppendixF p.25、§3.2.2 p.6、Prop6 pp.8–9、Prop8 pp.10–11、Th2 p.11/AppendixG p.28 | 相位对象及预设光滑相位已核；k1/k3支配阈值与L身份仍有具体未闭门，不能当成已证数值预算 |
+
+arXiv未带版本PDF只在实际首页和登记页同时锁定版本后使用。
+LMZ/LP22官方全文入口当前返回摘要/访问选项；不把摘要当成刊本定理。
+上述有限陈述比较不认证“全球没有同类先例”。
+
+**P16 刊本补核。** [IM PAN官方14页全文](https://www.impan.pl/shop/publication/transaction/download/product/91474)
+为上述DOI，印刷215–228，线上2016-03-16。函数类p.218；
+v1 Th1→刊本Th3.2、Th2→Th3.3均p.219，Lem4.3/4.4在p.224/p.225，
+AGM→§5 pp.226–227。正式Th3.3保留同一分母精确式，C158的非恒定合法输入证书仍适用。
+正式证明p.226更换代换链，不能沿用v1的特定证明批评；v1 Th3表示应用仍按v1引用。
+
+<a id="lit-cox-1984"></a>
+## LIT-COX-1984 · 正实数AGM积分接口
+
+David A. Cox, *The Arithmetic-Geometric Mean of Gauss*，L’Enseignement Mathématique30(1984)275–330，
+DOI10.5169/seals-53831。[官方§1分章PDF](https://www.e-periodica.ch/cntmng?bot=1&pid=ens-001%3A1984%3A30%3A%3A89)
+由官方验证页公开的crawler链接取得，9数字化页（元数据页加原刊276–283）；
+Th1.1 p.278及证明已读，条件 \(a\ge b>0\)、正平方根。
+同一正实数AGM的椭圆积分身份已核；闭象限/零轴与坏模仍由C146–C148自证，
+不把原定理外推至 \(b=0\)，不声称全56页逐命题审结。
+
+<a id="lit-phase-candidates"></a>
+## LIT-PHASE-CANDIDATES · 周期相位入口与当前访问范围
+
+Chicone–Liu, *Asymptotic phase revisited*，JDE204(1)(2004)227–246，
+DOI10.1016/j.jde.2004.03.011。[Missouri作者目录](https://math.missouri.edu/people/emeritus/chicone)
+列Revised12/23/03；[作者公开上传原作](https://www.academia.edu/8166140/Asymptotic_phase_revisited)
+为2003-12-23、22页手稿，定义p.2、Th2.5 p.5、Th2.8 p.10、Th3.1 p.14、
+Ex1 p.18、Prop3.6 p.19已读。对象是随周期轨道运动的相位，不是静止点极限。
+刊本逐号对应仍未闭；Th2.8声明C2却使用三阶大O Taylor余项的证明步骤，
+须刊本或独立证明另闭，不判定理错误。
+
+Battelli–Palmer, *Smoothness of Asymptotic Phase Revisited*：
+[作者机构条目](https://iris.univpm.it/handle/11566/64420)列ANS11(4)(2011)837–851，
+摘要指hyperbolic periodic solution稳定流形上的相位，文件栏明确无关联文件。
+正式/作者全文及定理号、精确正则条件未取得；只授书目/摘要身份，不从摘要补定理。
+这两个入口不能机械移成SS静态选择映射，更不构成全球阴性优先权证明。
+
 <a id="lit-bwy-2012"></a>
 ## LIT-BWY-2012 · 三种图例的来源及版本编号
 
@@ -24,6 +78,7 @@ Prop5.4 的一般构造另要求反身空间、连续线性单调 A/B、A paramo
 直接规范证明。Proposition 5.1 不是非线性、多值或受限图的无条件接口。
 此核验关闭列出的原文归属和编号，不认证例卡后来增加的锐 RL、残差或路径结果，
 也不判定本项目新颖性。不能把作者站稿编号直接拼到 v1 引用上。
+最后一行作者稿的跨号只核 Example 5.7，不宣称一般 Proposition 5.4 的作者稿对应号已核。
 
 <a id="lit-voisei-2024"></a>
 ## LIT-VOISEI-2024 · 旋转的有限循环阶
@@ -70,8 +125,15 @@ Prop5.4 的一般构造另要求反身空间、连续线性单调 A/B、A paramo
 在同一图给 \(L^2=1+4\tau\) 的参数转换；若锐反射模小于 1，最小**非负**
 violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 \(\tau<1/2\) 范围分别记录，不把该命题的原范围偷偷放宽。
-§3 和参考文献 [38] 只给 Spingarn 名称的二手定位；1981 原文全文本次仍被
-访问门阻挡，因此没有认证其完整映射、极大性或一阶商与该名称等价。
+§3 和参考文献 [38] 本身只给 Spingarn 的二手定位；本次另取得
+[1980完整作者稿及1981作者报告](canonical/spingarn_author_definitions.md#sp-versions)，
+已核一阶定义与极大性对象。两正式刊本正文仍受访问门阻挡，不能混称相同版本。
+
+本次进一步核正式版 Proposition1 p.3、Proposition4 p.5、Example2 p.8、
+Lemma2 pp.9–10、Assumption2 p.10、Theorem2 pp.10–11。
+指定印刷事实及有效导入的四项边界在
+[SL-LT](canonical/selection_literature_boundaries.md#sl-lt)；其中收敛定理的导入仍有具体待证门，
+不因正文可读就授予完整算法认证。
 
 <a id="lit-hoffman-1952"></a>
 ## LIT-HOFFMAN-1952 · 固定线性系统的一致右端误差界
@@ -107,7 +169,7 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 <a id="lit-common-tail"></a>
 ## LIT-COMMON-TAIL · Lipschitz 前缀加共同尾的一手先例
 
-**Paper facts。** Wiśnicki 的 [arXiv:1204.6464](https://arxiv.org/abs/1204.6464) 预印本 Lemma 1（PDF pp.2–3），对应 [正式 TMNA 43 (2014) 原文](https://www.tmna.ncu.pl/static/published/2014/v43n1-06.pdf) 印刷 p.91 Lemma 2.1：完备有界度量空间、k-Lipschitz 自映射、全初值共同几何增量，给 Hölder 极限；证明使用有限前缀加两条共同尾。[Pérez García–Fetter 2010 正式 PDF](https://journals.umcs.pl/a/article/download/3985/2887) 印刷 pp.38–40 Lemma 2.1，特别(c)，对连续T和p-Lipschitz辅助u、ST5全部点约束给uⁿ的极限回缩；p>1的幂指数是log(1/A)/(log p+log(1/A))，要求有限直径。
+**Paper facts。** Wiśnicki 的 [arXiv:1204.6464v2](https://arxiv.org/abs/1204.6464v2) 预印本 Lemma 1（PDF pp.2–3），对应 [正式 TMNA 43 (2014) 原文](https://www.tmna.ncu.pl/static/published/2014/v43n1-06.pdf) 印刷 p.91 Lemma 2.1：完备有界度量空间、k-Lipschitz 自映射、全初值共同几何增量，给 Hölder 极限；证明使用有限前缀加两条共同尾。[Pérez García–Fetter 2010 正式 PDF](https://journals.umcs.pl/a/article/download/3985/2887) 印刷 pp.38–40 Lemma 2.1，特别(c)，对连续T和p-Lipschitz辅助u、ST5全部点约束给uⁿ的极限回缩；p>1的幂指数是log(1/A)/(log p+log(1/A))，要求有限直径。
 
 **项目接口。** [C149 的 ST1–6](canonical/selection_truncation_prior_tools.md#st-lipschitz) 独立写出量词、指数和辅助对象；本页无界版是本项目证明，非原引理删条件。已核引理未陈述指定 Hölder 单步的两种非幂包络；一般先行性及转引 BL00 Proposition 1.10 的原页仍未核。
 
@@ -116,7 +178,7 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 
 **Paper fact。** Richard P. Brent, *Fast Multiple-Precision Evaluation of Elementary Functions*，Journal of the ACM 23 (1976), 242–251，[作者站原文](https://maths-people.anu.edu.au/~brent/pd/rpb034.pdf)，[DOI](https://doi.org/10.1145/321941.321944)。印刷 pp.245–246，(4.16)–(4.18)：a₀=1、b₀=cosφ>0的算术–几何平均递推极限为π/[2F(φ)]，其中F是原页第一类椭圆积分。
 
-**项目接口。** [AGM13–14](topics/examples/arithmetic_geometric_mean.md#agm-selection) 取cosφ=ε并逐步估计积分得π/[2log(1/ε)]；积分渐近是项目推导。非任意 Hölder、非半代数及严格兼容障碍的主要证明已由递推自足给出，不依赖此可选系数或未核Cox原页。
+**项目接口。** [AGM13–14](topics/examples/arithmetic_geometric_mean.md#agm-selection) 取cosφ=ε并逐步估计积分得π/[2log(1/ε)]；积分渐近是项目推导。非任意 Hölder、非半代数及严格兼容障碍由递推自足证明；该积分系数是补充。Cox指定Th1.1原页已核，见[LIT-COX-1984](#lit-cox-1984)。
 
 <a id="lit-bmw-2019"></a>
 ## LIT-BMW-2019 · 逆图编码的自然输入域
@@ -124,3 +186,17 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 **Paper fact。** Bauschke–Moursi–Wang, *Generalized monotone operators and their averaged resolvents*，[arXiv:1902.09827v1](https://arxiv.org/abs/1902.09827v1)，[v1 PDF](https://arxiv.org/pdf/1902.09827v1)，2019-02-26，Fact 2.1，印刷 pp.3–4：非空D⊂H、单值T:D→H，A=T⁻¹−I给J_A=T，故自然输入域恰D。
 
 **项目接口。** C146直接证明该关系身份。AGM的D输入在其本页记P，输出域记D，引用时重绑定；Fact2.1附带单调/firm等价条件不自动授给AGM。
+
+<a id="lit-c11-m1-fixed"></a>
+## C11/M1的固定比较范围
+
+[逐来源范围](audit/C11_M1_SOURCE_SCOPES.md#cm-scope)及[16张一手卡](audit/C11_M1_LITERATURE_INTERFACES.md)
+给出版本、位置和必要门。原句宽paper-facts按专表收紧；不把旧“已查”标签当本次访问证明。
+以下事实不授予新项目Claim或全球先行性结论。
+
+| 固定文献组 | 本次核到的接口 | 保留门 |
+| --- | --- | --- |
+| BAP v1、WX v1、LPQ v4、LDZ v2、WANG v1、MA v1、LP 2024 | 分别核实际二阶目标、可识别流形EB、特殊二阶目标的假定EB/近端Newton、弱凸同level转换、uniformized level-set三条件、可行域增长及特殊目标KL+growth EB | \(\Theta_2\)、argmin、level set、特殊 \(X^*\) 不自动同一；ordinary \(\partial\) 真残差与prox residual不自动同一；完整原生数据验证及刊本/精确公式另核 |
+| LW官方2026-02-11 | GE和resolvent residual的setup及假定Hölder EB | 各弱Jacobian速率定理的全部门尚未读完 |
+| BLL正式2022、KLAN作者2019-04-28、FM指定PDF、LTT v2、DJL v1 | 分别核有限composition的共同Fix门、gauge迭代可和门、Fejér+modulus及额外gap终止门、连续paracontraction有限family、LTT有限violation/patch定理、DJL具体reflector patch与 \(\theta\) 迭代条件 | 原生M1/投影/RAAR的完整选择、实际前缀和目标身份另证；部分具体应用全文门仍未闭 |
+| GAO、DTT v1、TT | 官方元数据/摘要主题，访问程度逐卡记录 | 定义、定理量词/方向、gauge、共同尾及精确非覆盖均deferred；不凭摘要写正文阴性 |

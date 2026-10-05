@@ -8,7 +8,7 @@
 C(x)=P_\alpha(x)[2+\sin(|x|^{-\beta})],\quad C(0)=0,\quad
 J(x)=\tfrac12(x+C(x)),\qquad x\in D=[-\delta,\delta].
 \]
-只定义关系 \(\operatorname{gph}F=\{(Jx,x-Jx):x\in D\}\)。输入自然域是 **D**；\(J\) 可因振荡而非单射，\(F(u)\) 允许多个值。\(J\) 连续且保持符号，\(Jx=0\) 仅在 \(x=0\)，所以 \(\operatorname{zer}F=\{0\}\)。图是紧的，任意实际输出纤维非空时真残差 \(r_F(u)=\min\{|x-u|:x\in D,Jx=u\}\)，不能先指定一个有利分支。
+只定义关系 \(\operatorname{gph}F=\{(Jx,x-Jx):x\in D\}\)。输入自然域是 **D**；\(J\) 可因振荡而非单射，\(F(u)\) 允许多个值。\(J\) 连续且保持符号。零值图点要求 \(x-Jx=0\)，即 \(Jx=x\)；对 \(0<|x|\le\delta<1\)，有 \(|C(x)|\ge|x|^\alpha>|x|\)，且 \(C(x)\) 与 \(x\) 同号，故 \(|Jx|>|x|\)。因此唯一固定输入是0，\(\operatorname{zer}F=\{0\}\)。图是紧的，任意实际输出纤维非空时真残差 \(r_F(u)=\min\{|x-u|:x\in D,Jx=u\}\)，不能先指定一个有利分支。
 
 <a id="de-exponent"></a>
 ## 锚定与全对反射的两个指数
