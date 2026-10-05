@@ -2,6 +2,75 @@
 
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
+<a id="lit-bwy-2012"></a>
+## LIT-BWY-2012 · 三种图例的来源及版本编号
+
+**Paper fact / 本次原文核验。** H. H. Bauschke, X. Wang, L. Yao,
+*Rectangularity and paramonotonicity of maximally monotone operators*，
+[arXiv:1201.4220v1](https://arxiv.org/abs/1201.4220v1)，
+[v1 PDF](https://arxiv.org/pdf/1201.4220v1)。核对的是该 v1；
+[作者站 074.pdf](https://bauschke.ca/publications) 所链接的 22 页稿有不同编号：
+
+| v1 的精确位置 | 已核内容 | 作者站稿的对应编号 |
+| --- | --- | --- |
+| p.9，Proposition 3.4 / Example 3.5 | 平面斜旋转加单位球法锥：极大单调、rectangular、非 paramonotone | Proposition 3.6 / Example 3.7 |
+| p.14，Proposition 5.1 | 连续、线性、单调 \(A:X\to X^*\) 的 rectangularity 等价于存在正 cocoercivity 系数；实 Hilbert 情形另有等价项 | Proposition 5.2 |
+| pp.15–16，Example 5.3 | \(L^2[0,1]\) 的 Volterra 及其伴随均非 rectangular、非 paramonotone | Example 5.4 |
+| p.17，Example 5.5 | \(\ell^2\) 上对角 \(1/n\) 与成对斜旋转的**和**：严格且极大单调、paramonotone、非 rectangular | Example 5.7 |
+
+**项目身份。** 分别对应 GX-058、GX-060/061、GX-059；这些例卡的结论已有
+直接规范证明。Proposition 5.1 不是非线性、多值或受限图的无条件接口。
+此核验关闭列出的原文归属和编号，不认证例卡后来增加的锐 RL、残差或路径结果，
+也不判定本项目新颖性。不能把作者站稿编号直接拼到 v1 引用上。
+
+<a id="lit-voisei-2024"></a>
+## LIT-VOISEI-2024 · 旋转的有限循环阶
+
+**Paper fact。** M. D. Voisei, *General monotonicity*，
+[arXiv:2411.04212v2](https://arxiv.org/abs/2411.04212v2)，
+[v2 PDF](https://arxiv.org/pdf/2411.04212v2)，当前入口已核为 2024-11-18 的 v2。
+印刷页 31，Example 43 (Rotation)：全域平面旋转 \(R_\theta\)，
+\(-\pi\le\theta\le\pi\)，对每个整数 \(n\ge2\)，
+\(n\)-monotone（并为该类极大）当且仅当 \(|\theta|\le\pi/n\)；
+全循环单调当且仅当 \(\theta=0\)。v1 的同号例不是同一定位，须带版本引用。
+
+**项目身份。** [C123](topics/examples/planar_rotation_family.md#pr-cyclic)
+在规范页以循环二次型独立证明相同阈值。此文献事实不认证该页的完整 Minty
+奇点、RL 常数、MR 或任何总体类大小结论。
+
+<a id="lit-lei-he-2020"></a>
+## LIT-LEI-HE-2020 · VI 伪单调与拟单调的严格前件
+
+**Paper fact。** Ming Lei, Yiran He,
+*A hybrid projection-proximal point algorithm for solving nonmonotone variational inequality problems*，
+[作者提交的 Optimization Online PDF](https://optimization-online.org/wp-content/uploads/2020/02/7602.pdf)，
+印刷页 3，Definitions 2.2–2.3：有限维单值 \(F\) 在 \(C\) 上，对所有
+\(x,y\in C\)，pseudo 的符号前件为非负，quasi 的前件为严格正，
+后件均为 \(\langle F(y),y-x\rangle\ge0\)。同页给
+\(F(x)=x^2,C=[-1,1]\) 的 quasi 非 pseudo 例。
+
+**项目身份。** [PD-GEOMETRY](canonical/parameter_dictionary.md#pd-geometry)
+冻结所用的 VI 类型；GX-064 的正值函数和 GX-065 的平方例须用各自直接证明。
+这里没有导入该文算法收敛定理，也不把 VI 条件换成弱序列或多值版本。
+
+<a id="lit-lt-2025"></a>
+## LIT-LT-2025 · 非负 LT violation 的准确对象
+
+**Paper fact。** D. Russell Luke, Matthew K. Tam,
+*Generalized Monotonicity and the Proximal Point Algorithm*，
+[出版社完整正文](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863)，
+§3 Definition 2 / (10)：在 \(U\times W\) 的全部图点对上，\(\tau\ge0\)
+且 \(\langle\Delta u,\Delta v\rangle\ge-\tau\|\Delta u+\Delta v\|^2\)。
+文献的这一显示式步长为 1；固定 \(\lambda\) 的项目式用于关系 \(\lambda F\)，
+不是不声明变换就移动步长。
+
+**项目推导。** [PD-TIED](canonical/parameter_dictionary.md#pd-tied) 的平方恒等式
+在同一图给 \(L^2=1+4\tau\) 的参数转换；若锐反射模小于 1，最小**非负**
+violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
+\(\tau<1/2\) 范围分别记录，不把该命题的原范围偷偷放宽。
+§3 和参考文献 [38] 只给 Spingarn 名称的二手定位；1981 原文全文本次仍被
+访问门阻挡，因此没有认证其完整映射、极大性或一阶商与该名称等价。
+
 <a id="lit-hoffman-1952"></a>
 ## LIT-HOFFMAN-1952 · 固定线性系统的一致右端误差界
 

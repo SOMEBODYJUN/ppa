@@ -1,5 +1,13 @@
 # 随机与 Markov 的独立对象
 
+以下新增主入口分别固定自己的距离、残差和目标，不能借“Markov”同名合并：
+
+| 规范正文 | 可调用身份与边界 |
+| --- | --- |
+| [二进制与 Gaussian 条件刷新](conditional_refresh.md) | C129 的固定边缘 \(\mathsf W_\nu/\mathcal R\) 与 C130 的 \(W_{2,Q}/\mathcal R_Q\) 分别有完整证明；二者都不自动给原同步 \(\Psi\) 的 EB。 |
+| [紧可数与投影的残差边界](compact_residual_boundaries.md#crb-object) | C143 在同一核有一般 gauge 和统一几何尾却没有正幂 EB；C144 在保留原 OT 最优性的投影模型已有假零。后者不等同于 C71 删除 OT 条件的假零。 |
+| [非均匀单 bit 的最小模和律长度](one_bit_envelope.md#bit-object) | C145 的饱和最小非降模、精确 law-step 和允许无穷的律长度；条件残差与公平 bit 补空间谱分别量化，不移作一般同步残差结论。 |
+
 [固定有限状态顶点证书](finite_state_certificate.md) 为原 C15 摘要补上同一同步 OT 残差的完整 LP 对偶 tight-edge 证明、精确零集与锐全域误差界；同页 [FS-HOFFMAN](finite_state_certificate.md#fs-hoffman) 是非锐备用证明，[C80](finite_state_certificate.md#fs-regularity) 另证 \(\Psi^2\) 连续分片仿射且全域 Lipschitz，**不需要**精确零集条件。调用 [惰性四循环](lazy_cycle_ot.md) 的具体常数前，先核其内层耦合仍为原成本的最优计划。两点翻转说明 C15 的误差界不能直接宣称动力收敛。
 
 [固定目标全局近端的选择接缝](proximal_selection_seam.md)给出吸收律、非乘积二维图、有限长非不变极限及真实 \(W_2\) law-step 的局部 gauge 障碍。它使用**同一个目标函数的全局近端最小解**及指定 Borel 核。

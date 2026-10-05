@@ -224,11 +224,38 @@ RL 与上述原关系正则性没有无条件替代：
 \(\kappa r^{q_2}\le\kappa\delta^{q_2-q_1}r^{q_1}\)：较大残差指数更强；这与 PD-SCALE 的模连续性指数使用位置不同，不能只凭“指数变大”叙述。
 来源定位：S2 `work/a_regularity.md` 的定义表与 implication map；此处所有反例独立直接代入。
 
+<a id="pd-geometry"></a>
+## PD-GEOMETRY · 例卡的图几何与 VI 类型
+
+以下条件均携带声明的完整图或图块。对任意两个图点写
+\(a=x-y\)、\(b=u-v\)。非负 hypomonotonicity 系数 \(\sigma\)
+表示 \(\langle a,b\rangle\ge-\sigma\|a\|^2\)；非负
+cohypomonotonicity 系数 \(\eta\) 表示
+\(\langle a,b\rangle\ge-\eta\|b\|^2\)。后者是逆关系的前者，
+不是 LT 的 \(\|a+\lambda b\|^2\) 分母。局部窗口、全图最小系数、
+缩窗系数下确界及某个固定参考点的性质分别量化。
+一个非单调关系不能称为“非极大单调但单调”；在某个
+\(\sigma\)-hypomonotone 类可加点，也只是在该类的非极大性。
+
+来源例卡计算的 \(\langle a,b\rangle/\|a\|\) 只对 \(a\ne0\)
+有定义。固定一个图点再令另一点趋近，与两个图点同时趋近是不同测试。
+这些打印公式的极限可直接重算；若要以历史 Spingarn 名称判定映射或
+极大性，还须原定义、趋近域及全部量词，不能从这个商单独补出。
+
+VI 条件在这里专指有限维、单值 \(F:C\to\mathbb R^n\) 的成对符号条件：
+对全部 \(x,y\in C\)，pseudomonotone 的前件为
+\(\langle F(x),y-x\rangle\ge0\)，quasimonotone 的前件为严格
+\(>0\)，二者后件均为 \(\langle F(y),y-x\rangle\ge0\)。
+它们不是 Brézis 的弱序列 pseudomonotonicity，也不默认推广到多值图。
+一手定义和版本入口见 [LIT-LEI-HE](../LITERATURE.md#lit-lei-he-2020)；
+标量正弦、平方例的直接证明见各规范例卡的补全页。
+
 ## PD-SOURCES · 逐条溯源与下一步
 
 - **S1**：[9/01 foundations checkpoint](../../history/sources/次单调论文研究/RL_novelty_boundary_checkpoint_2026-09-01.zip)，成员 `research/RL_foundations.md`，Definition 0.1–0.5，Theorem 1.1，Propositions 1.3–1.4，Theorem 2.1，Lemma 4.1。
 - **S2**：[9/01 monotonicity checkpoint](../../history/sources/次单调论文研究/RL_monotonicity_regularity_research_checkpoint_2026-09-01.zip)，成员 `work/a_rl_position.md` §§1–4、`work/a_regularity.md`，`research/gap_examples.md` GX-015，`work/b_scalar_nonlinear.md` EX-11。
 - **本轮证据**：实际读取上述 ZIP 成员后重新推导本页公式；不把 checkpoint 的 `VERIFIED` 标记当成本轮数学审查。
-- **未吸收范围**：一般二参数 semimonotonicity 的最优换算、coderivative 判据、完整 GX 例库的所有锐常数，未在本页重新证明，保持来源报告层，不能由本字典批准。
+- **二参数转接**：[C89–C91](non_tied_cayley.md#nt-object) 已独立证明非 tied 二参数条件的平移 Cayley 球、锐普适常数、步长门及同参数图极大性；调用时携带该页 \(A>0,\Delta\ge0\) 和完整对象门，本页不重复证明。
+- **未吸收范围**：本页未给 coderivative 判据或全部 GX 属性的统一证明；具体例卡及补全页按各自 Claim 状态使用，剩余未重写断言保持明确来源或候选身份，不能由本字典批准。
 - **增长义务 PD-O1**：任一新参数转换卡先写清“同图换步”还是“改关系坐标”；记录域像、单射、coverage 与尺度，分别证明。
 - **增长义务 PD-O2**：每个新残差引用必须指定完整目标集、infimum 范围、窗口与 gauge 正则性；改变任一项须新版本及零集反例检查。
