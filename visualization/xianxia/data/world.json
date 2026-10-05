@@ -3899,6 +3899,171 @@
       "y": 1794,
       "region": "random",
       "realm": "random"
+    },
+    "AGM-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 2731,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "AGM-NOCMP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 2822,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "AGM-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 2731,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "AGM-SELECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 2822,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "BNS-ENDPOINT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 3004,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "BNS-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 3095,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "BS-COMPLETION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 3004,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "GX-NONNEG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 3095,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "NC-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 2913,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "NC-NONZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 3004,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "SB-ZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 2913,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "SCD-UPSTREAM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 3095,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "SIN-COMPLETION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 3186,
+      "region": "examples",
+      "realm": "examples-annex-1"
+    },
+    "ST-ASSUMPTIONS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 675,
+      "region": "convergence",
+      "realm": "convergence"
+    },
+    "ST-LIMIT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 493,
+      "region": "convergence",
+      "realm": "convergence"
     }
   },
   "edges": {
@@ -4793,6 +4958,58 @@
     "E223": {
       "x": 4946.36,
       "y": 2023.2
+    },
+    "E224": {
+      "x": 860.19,
+      "y": 2726.69
+    },
+    "E225": {
+      "x": 962.09,
+      "y": 2795.33
+    },
+    "E226": {
+      "x": 932.33,
+      "y": 2780.62
+    },
+    "E227": {
+      "x": 1611.97,
+      "y": 535.65
+    },
+    "E228": {
+      "x": 1235.36,
+      "y": 3079.31
+    },
+    "E229": {
+      "x": 1227.86,
+      "y": 2974.49
+    },
+    "E230": {
+      "x": 1048.68,
+      "y": 2901.84
+    },
+    "E231": {
+      "x": 1043.08,
+      "y": 2979.17
+    },
+    "E232": {
+      "x": 955.91,
+      "y": 2910.1
+    },
+    "E233": {
+      "x": 1049.32,
+      "y": 3086.95
+    },
+    "E234": {
+      "x": 1135.07,
+      "y": 3067.11
+    },
+    "E235": {
+      "x": 1033.08,
+      "y": 3149.42
+    },
+    "E236": {
+      "x": 1140.52,
+      "y": 2986.05
     }
   },
   "bounds": {

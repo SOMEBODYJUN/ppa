@@ -18,3 +18,6 @@
 [负平方根短图与母图](restricted_root_graph.md) 从 GX-032 拆开两种完整关系；短图有锐全对常数和真二次 EB 却无第二步，母图另有远支及发散路径。
 
 [平面旋转族](planar_rotation_family.md) 从 GX-062/063 和共同公式独立重算全部步长 Minty 纤维、输入对距锐 RL、循环阶门与两角的同逆像模差异；来源末句将族内循环阶说成不由强单调系数决定已由 C123/F34 修正。外部 Voisei 例号及优先性待一手核。
+
+
+[AGM C146–C148](arithmetic_geometric_mean.md#agm-object) 把完整编码、真残差、同窗共同尾与严格兼容障碍放在同一对象上。[GX053–065补项 C150–C156](gx059_065_property_completion.md#gxp-conventions) 及三张扩写旧卡统一hypo/cohypo、signed/非负τ、完整逆纤维和非零参考点；来源逐行范围见[专用覆盖表](../../audit/GX053_065_COVERAGE.md#gx-scope)。

@@ -167,6 +167,82 @@ if seed_path.is_file():
         if cursor != line_count + 1:
             errors.append(f"semantic seed does not cover all {line_count} source lines: {locator}")
 
+# Atomic source scopes have their own denominator. A full source scope is not
+# inferred from the number of ledger rows or from a title-level seed segment.
+atomic_count = 0
+atomic_seen = set()
+scope_registry = ROOT / "research/audit/ATOMIC_SCOPE_REGISTRY.tsv"
+if scope_registry.is_file():
+    with scope_registry.open(encoding="utf-8", newline="") as f:
+        scopes = list(csv.DictReader(f, delimiter="\t"))
+    if len({s["scope_id"] for s in scopes}) != len(scopes):
+        errors.append("duplicate atomic scope identity")
+    for scope in scopes:
+        locator = scope["source_locator"]
+        container, sep, name = locator.partition("!/")
+        try:
+            if sep:
+                with zipfile.ZipFile(ROOT / container) as archive:
+                    raw = archive.read(name)
+            else:
+                raw = (ROOT / container).read_bytes()
+            source_text = raw.decode("utf-8")
+        except (OSError, KeyError, UnicodeDecodeError, zipfile.BadZipFile) as exc:
+            errors.append(f"unreadable atomic scope: {locator}: {exc}")
+            continue
+        lines = source_text.count("\n") + int(bool(source_text) and not source_text.endswith("\n"))
+        if hashlib.sha256(raw).hexdigest() != scope["payload_sha256"] or lines != int(scope["total_lf_lines"]):
+            errors.append(f"atomic scope hash/line mismatch: {scope['scope_id']}")
+        declared = set()
+        for interval in scope["covered_ranges"].split(";"):
+            first, last = map(int, interval.split("-"))
+            if not 1 <= first <= last <= lines:
+                errors.append(f"invalid atomic declared range: {scope['scope_id']}")
+            new_lines = set(range(first, last + 1))
+            if declared & new_lines:
+                errors.append(f"overlapping atomic declared ranges: {scope['scope_id']}")
+            declared.update(new_lines)
+        covered = set()
+        for table in scope["unit_tables"].split(";"):
+            path = ROOT / table
+            if not path.is_file():
+                errors.append(f"missing atomic unit table: {table}")
+                continue
+            with path.open(encoding="utf-8", newline="") as f:
+                reader = csv.DictReader(f, delimiter="\t")
+                required = {"unit_id", "source_locator", "line_start", "line_end", "source_label", "unit_type", "exact_payload", "evidence_state", "disposition", "canonical_anchor", "claim_ids", "reason", "remaining_obligation"}
+                if set(reader.fieldnames or []) != required:
+                    errors.append(f"invalid atomic columns: {table}")
+                    continue
+                atomic_rows = list(reader)
+            for row in atomic_rows:
+                uid = row["unit_id"]
+                if uid in atomic_seen:
+                    errors.append(f"duplicate atomic identity: {uid}")
+                atomic_seen.add(uid)
+                atomic_count += 1
+                first, last = int(row["line_start"]), int(row["line_end"])
+                unit_lines = set(range(first, last + 1))
+                if row["source_locator"] != locator or first > last or not unit_lines <= declared:
+                    errors.append(f"atomic unit outside declared source scope: {uid}")
+                covered.update(unit_lines)
+                if row["disposition"] not in {"rewritten", "superseded", "refuted", "duplicate", "nonmathematical", "deferred"}:
+                    errors.append(f"invalid atomic disposition: {uid}")
+                if not row["exact_payload"] or not row["reason"]:
+                    errors.append(f"missing atomic payload/reason: {uid}")
+                if row["disposition"] == "deferred" and not row["remaining_obligation"]:
+                    errors.append(f"missing exact deferred obligation: {uid}")
+                anchors = row["canonical_anchor"].split(";") if row["canonical_anchor"] else []
+                if not anchors and row["disposition"] in {"rewritten", "superseded", "refuted"}:
+                    errors.append(f"missing atomic canonical target: {uid}")
+                for target in anchors:
+                    file, _, anchor = target.partition("#")
+                    path = ROOT / file
+                    if not path.is_file() or (anchor and f'id="{anchor}"' not in path.read_text(encoding="utf-8")):
+                        errors.append(f"missing atomic target: {uid} -> {target}")
+        if covered != declared:
+            errors.append(f"atomic coverage differs: {scope['scope_id']}: {len(declared-covered)} missing, {len(covered-declared)} extra lines")
+
 unit_path = ROOT / "research/audit/UNIT_DISPOSITIONS.tsv"
 if unit_path.is_file():
     with unit_path.open(encoding="utf-8", newline="") as f:
@@ -287,4 +363,5 @@ if errors:
     raise SystemExit("\n".join(errors))
 print(f"Verified {sum(r['status'] == 'imported' for r in rows)} initial-manifest hashes, "
       f"{source_count} audited source files, {member_count} ZIP members, "
-      f"{unit_count} source units, {len(node_ids)} nodes, {len(edge_ids)} edges and {len(normative)} Markdown files.")
+      f"{unit_count} source units, {atomic_count} atomic records in declared scopes, "
+      f"{len(node_ids)} nodes, {len(edge_ids)} edges and {len(normative)} Markdown files.")

@@ -16,7 +16,9 @@
 | p.9，Proposition 3.4 / Example 3.5 | 平面斜旋转加单位球法锥：极大单调、rectangular、非 paramonotone | Proposition 3.6 / Example 3.7 |
 | p.14，Proposition 5.1 | 连续、线性、单调 \(A:X\to X^*\) 的 rectangularity 等价于存在正 cocoercivity 系数；实 Hilbert 情形另有等价项 | Proposition 5.2 |
 | pp.15–16，Example 5.3 | \(L^2[0,1]\) 的 Volterra 及其伴随均非 rectangular、非 paramonotone | Example 5.4 |
-| p.17，Example 5.5 | \(\ell^2\) 上对角 \(1/n\) 与成对斜旋转的**和**：严格且极大单调、paramonotone、非 rectangular | Example 5.7 |
+| pp.16–17，Proposition 5.4 / Example 5.5 | \(\ell^2\) 上对角 \(1/n\) 与成对斜旋转的**和**：严格且极大单调、paramonotone、非 rectangular | Example 5.7 |
+
+Prop5.4 的一般构造另要求反身空间、连续线性单调 A/B、A paramonotone 且值域稠密真、B 双射且 skew；本项目不把这些前提删除。
 
 **项目身份。** 分别对应 GX-058、GX-060/061、GX-059；这些例卡的结论已有
 直接规范证明。Proposition 5.1 不是非线性、多值或受限图的无条件接口。
@@ -100,3 +102,25 @@ violation 为 0。这个直接代数结论与文献 Proposition 4 自带的
 | 非零 Lefschetz 数 | 原稿要求 \(b^*:H^j(B;\mathbb Q)\to H^j(A;\mathbb Q)\) 全阶满射，并用 \([p,y]\subset B\) 得 \(e^*=\pi^*\)；\(e_{th}\) 全在 \(A\) 中，同伦不改诱导映射。有限多面体上的有理同调与上同调维数有限，因此 \(\Lambda=\chi(A)\ne0\)。 |
 
 **审查结论与边界。** 原引文确实适用于上述**紧 span**，不需要另证明非线性像 \(e_h(T(p))\) acyclic。这里关闭的是“[6, Theorem 6.2] 是否有 CAC/图/回缩适用门”这一个导入问题。原稿整条 C05-v1 仍是候选：有限观测不能证明整窗 (8.1)–(8.2)、\(T\) 的存在、usc 与 acyclicity，也没有逐行 referee 其余数值包络或核外部先行性。若换成非紧 \(A\)、放弃全部纤维 acyclicity、或只凭有限样本声称整窗条件，就不再是同一导入。稿件的 Čech cohomology/homology 等价是单独的标准拓扑事实，本次只在紧度量纤维范围使用，没有把它扩张到任意空间。 同一导入门在保留整窗与拓扑假设、仅改 q>0 的 [C05-v2](canonical/local_range_without_supercriticality.md#lr-theorem) 中亦适用；这项新版本不是该论文或 9/25 原稿的陈述。
+
+
+<a id="lit-common-tail"></a>
+## LIT-COMMON-TAIL · Lipschitz 前缀加共同尾的一手先例
+
+**Paper facts。** Wiśnicki 的 [arXiv:1204.6464](https://arxiv.org/abs/1204.6464) 预印本 Lemma 1（PDF pp.2–3），对应 [正式 TMNA 43 (2014) 原文](https://www.tmna.ncu.pl/static/published/2014/v43n1-06.pdf) 印刷 p.91 Lemma 2.1：完备有界度量空间、k-Lipschitz 自映射、全初值共同几何增量，给 Hölder 极限；证明使用有限前缀加两条共同尾。[Pérez García–Fetter 2010 正式 PDF](https://journals.umcs.pl/a/article/download/3985/2887) 印刷 pp.38–40 Lemma 2.1，特别(c)，对连续T和p-Lipschitz辅助u、ST5全部点约束给uⁿ的极限回缩；p>1的幂指数是log(1/A)/(log p+log(1/A))，要求有限直径。
+
+**项目接口。** [C149 的 ST1–6](canonical/selection_truncation_prior_tools.md#st-lipschitz) 独立写出量词、指数和辅助对象；本页无界版是本项目证明，非原引理删条件。已核引理未陈述指定 Hölder 单步的两种非幂包络；一般先行性及转引 BL00 Proposition 1.10 的原页仍未核。
+
+<a id="lit-brent-1976"></a>
+## LIT-BRENT-1976 · AGM 与椭圆积分的精确接口
+
+**Paper fact。** Richard P. Brent, *Fast Multiple-Precision Evaluation of Elementary Functions*，Journal of the ACM 23 (1976), 242–251，[作者站原文](https://maths-people.anu.edu.au/~brent/pd/rpb034.pdf)，[DOI](https://doi.org/10.1145/321941.321944)。印刷 pp.245–246，(4.16)–(4.18)：a₀=1、b₀=cosφ>0的算术–几何平均递推极限为π/[2F(φ)]，其中F是原页第一类椭圆积分。
+
+**项目接口。** [AGM13–14](topics/examples/arithmetic_geometric_mean.md#agm-selection) 取cosφ=ε并逐步估计积分得π/[2log(1/ε)]；积分渐近是项目推导。非任意 Hölder、非半代数及严格兼容障碍的主要证明已由递推自足给出，不依赖此可选系数或未核Cox原页。
+
+<a id="lit-bmw-2019"></a>
+## LIT-BMW-2019 · 逆图编码的自然输入域
+
+**Paper fact。** Bauschke–Moursi–Wang, *Generalized monotone operators and their averaged resolvents*，[arXiv:1902.09827v1](https://arxiv.org/abs/1902.09827v1)，[v1 PDF](https://arxiv.org/pdf/1902.09827v1)，2019-02-26，Fact 2.1，印刷 pp.3–4：非空D⊂H、单值T:D→H，A=T⁻¹−I给J_A=T，故自然输入域恰D。
+
+**项目接口。** C146直接证明该关系身份。AGM的D输入在其本页记P，输出域记D，引用时重绑定；Fact2.1附带单调/firm等价条件不自动授给AGM。

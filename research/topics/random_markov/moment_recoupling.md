@@ -19,7 +19,7 @@
 \(\varepsilon^{1/p}e(a)\le K\varepsilon^{q/r}c(a)^q\)，\(\varepsilon\downarrow0\) 强迫 \(1/p\ge q/r\)。反过来，先在每个状态用逐点界，再对概率律用矩单调性：
 \(\|e\|_p\le K(\int c^{pq}d\mu)^{1/p}=K\|c\|_{pq}^{q}\le K\|c\|_r^q\)。即使 \(pq<1\)，最后一步仍是非负随机变量的矩单调性，并未把它当作范数三角不等式。证毕。
 
-**律空间障碍的精确版本。** 另以整个 \(\mathbb R^d\) 为核 \(P\) 的状态空间和 \(W_p\) 的母空间；\(S\subset\mathbb R^d\) 仅是非空闭的目标支持集。令 \(\mathcal I\subset\mathscr P_p(S)\)，固定 \(\pi\in\mathcal I\) 且 \(\pi P=\pi\)。设非负有限状态残差 \(c:\mathbb R^d\to[0,\infty)\) 在 \(\pi\)-几乎处处为零；某个 \(a\in\mathbb R^d\) 有 \(0<c(a)<\infty\)、\(P(a,\cdot)\in\mathscr P_p(\mathbb R^d)\)，且
+**律空间障碍的精确版本。** 另以整个 \(\mathbb R^d\) 为核 \(P\) 的状态空间和 \(W_p\) 的母空间；\(S\subset\mathbb R^d\) 仅是非空闭的目标支持集。令 \(\mathcal I\subset\mathscr P_p(S)\)，固定 \(\pi\in\mathcal I\) 且 \(\pi P=\pi\)。设有限值非负状态残差 \(c:\mathbb R^d\to[0,\infty)\) 在 \(\pi\)-几乎处处为零；某个 \(a\in\mathbb R^d\) 有 \(0<c(a)<\infty\)、\(P(a,\cdot)\in\mathscr P_p(\mathbb R^d)\)，且
 \(e(a)=(\int d(y,S)^pP(a,dy))^{1/p}>0\)。令 \(\mathcal R_r(\mu)=\|c\|_{L^r(\mu)}\)，并假设所用律均有有限的该矩。若在 \(\pi\) 的整个 \(W_p\) 邻域有
 \(d_{W_p}(\mu P,\mathcal I)\le K\mathcal R_r(\mu)^q\)，其中邻域取 \(\mathscr P_p(\mathbb R^d)\) 的整个 \(W_p\) 球并包含下述稀释律，则必有 \(pq\le r\)。事实上 \(\mu_\varepsilon=(1-\varepsilon)\pi+\varepsilon\delta_a\to\pi\) 于该母空间的 \(W_p\)，而左边至少 \(\varepsilon^{1/p}e(a)\)，右边是 \(K\varepsilon^{q/r}c(a)^q\)。若只在支持于 \(S\) 的相对邻域断言此界，必须另要求 \(a\in S\)，不可直接使用域外稀释。此为上述条件下的**必要性**；不声称对任意 Markov 残差、任意不变律支持或任意物理步长的普遍否定。充分性须另证实际状态上的逐点界与合法目标匹配。
 

@@ -1223,3 +1223,92 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：标准 Borel 守恒变量 \(u\) 的固定概率边缘 \(\nu\)，可测 \(0<a(u)\le1\)、\(0<b(u)<1\)。以概率 \(a(u)\) 重抽目标 Bernoulli\((b(u))\)，否则保留 bit；全部条件律 \(\mu_r(du,dx)=\nu(du)\operatorname{Bern}(r(u))(dx)\)，\(r:U\to[0,1]\) 可测，以保持 \(u\) 的 \(\mathsf W_\nu\) 比较。\(h=|r-b|\)、\(M=\max(b,1-b)\)、\(E^2=\int h\)、\(\mathcal R^2=\int ah\)。全律最小非降模恰为 \(\phi(t)^2=\sup_{0\le h\le M,\int ah\le t^2}\int h=\inf_{\ell\ge0}[\ell t^2+\int M(1-\ell a)_+]\)，原问题取得，\(\phi(0)=0\) 且原点连续，最终饱和。对每个初律及 \(k\ge0\)，law-step 平方恰为 \(\mathcal R_k^2=E_k^2-E_{k+1}^2=\int a(1-a)^kh\)；精确律长度为该量平方根的级数，允许∞。全初律最大绝对误差平方为 \(\sup_\mu E(\mu P^k)^2=\int M(1-a)^k\to0\)。
 - **Definitions / Dependencies / Evidence**：[BIT1–18 独立正文](research/topics/random_markov/one_bit_envelope.md#bit-object) 给全幅度可测实现、有限测度分位与原子填充对偶、全部初律的精确更新，另给 \(a(u)=u^p\) 的饱和幂模与长度阈值 \(p<1\)，以及 \(a(u)=e^{-1/u}\) 的每个局部正幂 EB 失败；公平 bit 的指定补空间谱身份与最小有界余项也独立证明。现存 CM-M Theorem 7 只作来源，不扩写 C129/C130 身份。
 - **Counterevidence / Scope**：\(t=0\) 对偶 inf 未必在有限乘子取得；\(\phi\) 不是全局严格增 gauge。绝对共同尾不等于统一相对几何率；律长度不等于样本路径长度。此条件残差的精确能量等式不移植到多 bit、Gaussian 或原同步 \(\Psi\)。原生连续随机映射实现、弱 Poincaré 文献对照与新颖性另核。
+
+
+<a id="c146"></a>
+## C146-v1 / AGM-GRAPH · 同一 AGM 编码的完整纤维与锐真残差
+
+- **Status**：`derived-checked`，限本页直接完整反演与残差证明；不判先行性。
+- **Exact Statement / Objects / Domain / Quantifiers**：欧氏 R²、λ=1，P=[0,∞)²，D={(s,t):s≥t≥0}；G(a,b)=((a+b)/2,√ab)。完整 F=G⁻¹−I 在 D 给 (AGM2) 全部两值、域外空。图闭且半代数，零集 S={(h,h):h≥0}，完整自然输入域恰 P，J_F(p)={G(p)} 对每个 p∈P、域外空。每个 u=(s,t)∈D 的完整真残差为 (AGM5)，d(u,S)≤r_F(u)/√2，系数全域最优且轴上取等。
+- **Dependencies / Evidence**：[AGM1–6 逐项证明](research/topics/examples/arithmetic_geometric_mean.md#agm-graph)；关系恒等式直接证明，BMW 只作标准身份的已核文献接口。
+- **Objections / Scope**：输入 P 与输出 D 不同，不授予整个 R² 满输入；空纤维不以0·∞处理。绝对值延拓是另一完整关系。
+
+<a id="c147"></a>
+## C147-v1 / AGM-SELECTION · 共同几何尾与轴处非任意 Hölder 极限
+
+- **Status**：`derived-checked`，AGM7–16 的直接递推、完整路径及多项式证明；精确渐近常数另以已核 Brent 公式为外部前件。
+- **Exact Statement / Objects / Domain / Quantifiers**：对每个固定 R>0，C146 的 G 在 W_R=[0,R]² 自映射且完整路径唯一。全部 p∈W_R,n≥0 有 ‖Gⁿp−Π(p)‖≤|p₁−p₂|2⁻ⁿ；Π=(M,M) 为连续回缩，单步半阶安全系数 H_R=√(3R/√2)。M(1,ε)=Θ(1/log(1/ε)) 由 AGM10–11 直接证明；每个固定 0<c<R 的 (c,0) 处 Π 无任何正阶 Hölder 模，任一相对邻域限制不半代数。固定正下坐标 b₀>0 时实际点误差 eₙ₊₁≤eₙ²/(4b₀)，系数不跨轴统一；轴轨道恰 (c2⁻ⁿ,0)。若另调用 Brent 1976 印刷245–246页 (4.16)–(4.18)，则 M(1,ε)∼π/[2log(1/ε)]。
+- **Dependencies / Evidence**：[AGM7–16](research/topics/examples/arithmetic_geometric_mean.md#agm-selection) 的差递推、有限乘积界与非零多项式首项；[可选 Brent 接口](research/LITERATURE.md#lit-brent-1976)。
+- **Objections / Scope**：同窗共同几何尾不等于共同超几何尾，正初值Q二次不可授予坏参考轴；有界输入位置窗不是仅输入对距窗。Cox原定理未核，不承担本条证明。
+
+<a id="c148"></a>
+## C148-v1 / AGM-COMPATIBILITY · 完整直接编码的严格兼容障碍
+
+- **Status**：`derived-checked`，同窗反射下界、实际输出真EB与非减gauge的直接反证。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 C146 同一完整关系及每个 R>0 的 W_R，C=2G−I。任意固定 0<c<R，全部充分小 δ>0 的同窗输入 (c,δ),(c,0) 强制 ω(δ)≥√(cδ)。任何在全部实际输出上提供真EB的非减 ψ:[0,η)→[0,∞) 满足 ψ(h)≥h/√2（0<h<min(η,R/2)）。每当兼容求值有定义，ψ((δ+ω(δ))/2)/δ≥√c/(2√2√δ)→∞；否则已缺求值域。因此不存在同窗全对模与该真EB gauge满足任何固定 κ<1 的小尺度直接兼容。
+- **Dependencies / Evidence**：[AGM17–21](research/topics/examples/arithmetic_geometric_mean.md#agm-compatibility)；反射半阶确实可用，否定不是缺一个上界。失败路线 [F42](FAILED_ROUTES.md#f42)。
+- **Objections / Scope**：只排除此对象此窗的直接编码；不排除换变量、提升、新关系或不含轴的另一窗。C147动力结果不经严格兼容推得。
+
+<a id="c149"></a>
+## C149-v1 / ST-LIPSCHITZ · 共同增量的 Hölder 极限与辅助迭代接口
+
+- **Status**：`derived-checked`，ST1–6规范证明；两篇已核先例和本页去有界性推导分开。
+- **Exact Statement / Objects / Domain / Quantifiers**：非空完备度量空间 X，k>1 的全域 k-Lipschitz 自映射 L，c>0、0<ρ<1；每个 x,n≥0 有 d(Lⁿ⁺¹x,Lⁿx)≤cρⁿ。全部轨道极限 R_L 是到Fix L的连续回缩，尾≤cρⁿ/(1−ρ)；0<δ=d(x,y)<1 时 d(R_Lx,R_Ly)≤[1+2c/(ρ(1−ρ))]δ^θ，θ=log(1/ρ)/(log k+log(1/ρ))。有界X另得全域幂界。辅助版本在完备有界X固定连续T、p>1的p-Lipschitz u、0<A<1、B>0及全部x的ST5；只沿uⁿ收敛，给到FixT=Fixu的回缩及θ=log(1/A)/(log p+log(1/A))。
+- **Dependencies / Evidence**：[ST1–6](research/canonical/selection_truncation_prior_tools.md#st-lipschitz) 的有限前缀加两条尾与floor估计；[一手先例](research/LITERATURE.md#lit-common-tail) 的准确版本/辅助对象。
+- **Objections / Scope**：辅助u不是T；有界空间先例不被冒称无界原定理。BL00原命题及全球先行性未核；Hölder单步的非幂包络另由C08/SS-TRANSFER承担。
+
+<a id="c150"></a>
+## C150-v1 / GX053-GEOMETRY · 负平方的图缺陷、扩图与端点目标
+
+- **Status**：`derived-checked`，NS7–10直接计算；历史Spingarn命名不纳入。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整F(x)=−x²在[0,1/2]，域外空。非负hypo锐缺陷1，无有限cohypo；打印的锚/双移动一阶商趋0。NS8给真包含本图的全域1-hypo图，故原图不是该明定类别的极大图。0<λ<1的非负LT锐τ=λ/(1−λ)²，λ≥1无有限τ。固定目标(1/2,−1/4)在输入窗[1/2−η,1/2]、0<η≤1/2的MSR/SMSR锐线性系数1/(1−η)，缩窗下确界1但固定非退化窗不取1；最大固定目标幂1。双侧目标正幂MR/SMR皆因空纤维失败。
+- **Dependencies / Evidence**：[图几何](research/topics/examples/bounded_negative_square.md#bns-geometry)、[端点目标](research/topics/examples/bounded_negative_square.md#bns-endpoint)；C100/C101原身份不扩大。
+- **Objections / Scope**：固定端点目标不是零目标；缩窗模不当作固定窗系数。普通非单调与1-hypo可扩性分别证明。
+
+<a id="c151"></a>
+## C151-v1 / GX054-GEOMETRY · 负三次的全图缺陷与非零逆稳定
+
+- **Status**：`derived-checked`，NC5–9完整纤维及局部目标证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整全域F=−x³无有限全图hypo/cohypo；[−M,M]图块hypo锐3M²，任意零邻域无有限cohypo。每个λ>0完整J(p)恰三次方程全部实根，自然输入全R；完整碰撞排除有限LT。3λM²<1时图块τ锐3λM²/(1−3λM²)²。每个x₀≠0,y₀=−x₀³，完整逆G=−∛y在不含零的目标窗Vη=[y₀−η,y₀+η]、0<η<|y₀|，锐Lipschitz系数Kη=1/[3(|y₀|−η)^(2/3)]；Uη=G(Vη)上全部x,y给MR/SMR，缩窗模1/(3x₀²)。
+- **Dependencies / Evidence**：[NC5–7](research/topics/examples/negative_cubic_branch.md#nc-geometry)、[NC8–9](research/topics/examples/negative_cubic_branch.md#nc-nonzero)；C106/C107零点与图块路径另保留。
+- **Objections / Scope**：全图、图块和非零局部目标不混同；完整J非空不推出单值。
+
+<a id="c152"></a>
+## C152-v1 / GX058-ZERO · 斜旋转法锥的真零残差与四种局部模
+
+- **Status**：`derived-checked`，SB10–11完整法向纤维证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：C98/C124同一完整F=K+N_B，零集{0}；每个x∈B有r_F(x)=‖x‖=d(x,{0})，固定零目标全域MSR/SMSR锐系数1。对任意0<ε<1的共同窗‖x‖,‖y‖<ε，完整F(x)={Kx}、F⁻¹(y)={−Ky}，‖x+Ky‖=‖Kx−y‖，MR/SMR/MSR/SMSR局部锐系数均1。每个λ>0的signed及非负LT锐系数0。完整图非线性关系，因其输入投影B不是线性子空间。
+- **Dependencies / Evidence**：[SB10–11](research/topics/examples/skew_ball_inverse.md#sb-zero)；边界法向配对的最小范数直接计算。
+- **Objections / Scope**：C99非零边界目标的半阶稳定不被原点线性模覆盖；τ=0不证明正强模或正cocoercivity。
+
+<a id="c153"></a>
+## C153-v1 / GX059-UPSTREAM · 对角值域与有限截断的属性边界
+
+- **Status**：`derived-checked`，GP3–4及显式有限块计算。
+- **Exact Statement / Objects / Domain / Quantifiers**：实ℓ²完整D(xₙ)=(xₙ/n)，ranD={y∈ℓ²:(nyₙ)∈ℓ²}稠密真且非闭；cocoercivity锐1并rectangular。它不继承C102完整F=D+B的非rectangular性。截取F前K二坐标块：强单调锐1/(2K)、‖F^(K)‖=3/2、逆锐1且rectangular，安全正cocoercivity2/(9K)；无维数统一正强模。有限D截断满射。
+- **Dependencies / Evidence**：[GP3–4](research/topics/examples/gx059_065_property_completion.md#gxp-diagonal) 完成平方及块奇异值。
+- **Objections / Scope**：D的非闭值域不是D+B的值域；有限维证书不恢复无限维正强模。
+
+<a id="c154"></a>
+## C154-v1 / GX059–063-DEFECTS · 非负缺陷与 signed τ 分型
+
+- **Status**：`derived-checked`，同一完整对象的单调配对与锐极限。
+- **Exact Statement / Objects / Domain / Quantifiers**：GX059 D+B、GX060 V、GX061 V*的非负hypo缺陷0；每个固定λ>0的signed τ下确界亦0，前者由高块极限，后两者由零均值非零方向。平面旋转Qθ的非负hypo缺陷max(0,−cosθ)；GX062/063两角signed τ<0但非负τ=0，原C122/C123锐式不改变。
+- **Dependencies / Evidence**：[非负缺陷](research/topics/examples/gx059_065_property_completion.md#gxp-nonnegative-defects) 与已有完整图证明。
+- **Objections / Scope**：非负缺陷0不否定正强单调，signed τ和非负violation不得互换。
+
+<a id="c155"></a>
+## C155-v1 / GX064-COMPLETION · 正值正弦的VI类、全纤维与普通SMR
+
+- **Status**：`derived-checked`，GP5–7及类型/空纤维证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整F=2+sinx在R按PD-GEOMETRY的VI点对定义pseudo且quasi而非普通单调。GP5给每个v∈[1,3]的全部周期逆纤维，域外空。非负hypo锐1、无有限cohypo；0<λ<1的τ锐λ/(1−λ)²。cos x̄≠0时完整局部逆在同一个U中单值且所有附近目标可达，ordinary SMR缩窗模1/|cos x̄|。目标3的固定半阶与双側目标空纤维/下侧两支失败仍按C82。
+- **Dependencies / Evidence**：[完整纤维与VI](research/topics/examples/gx059_065_property_completion.md#gxp-sine-inverse)、[缺陷](research/topics/examples/gx059_065_property_completion.md#gxp-sine-hypo)、[局部逆](research/topics/examples/gx059_065_property_completion.md#gxp-sine-regular-points)。
+- **Objections / Scope**：原算子目标与Minty临界输入不同；零集为空，不能新增零集PPA结论。
+
+<a id="c156"></a>
+## C156-v1 / GX065-COMPLETION · 有界平方的VI分离及亚临界完整近端
+
+- **Status**：`derived-checked`，GP8–11直接全部解与符号计算。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整F=x²在[−1,1]、域外空，VI类quasi而非pseudo；GP8给全部原纤维，非负hypo锐2且无有限cohypo。0<λ<1/2时完整自然输入域[λ−1,λ+1]，J恰GP9显示正根分支，τ锐2λ/(1−2λ)²；域外无输出。0<|x̄|<1时ordinary SMR缩窗模1/(2|x̄|)。零目标的固定半阶、负目标空逆像及两侧路径边界不改变C84。
+- **Dependencies / Evidence**：[GP8](research/topics/examples/gx059_065_property_completion.md#gxp-square-inverse)、[GP9–10](research/topics/examples/gx059_065_property_completion.md#gxp-square-subcritical)、[GP11](research/topics/examples/gx059_065_property_completion.md#gxp-square-regular-points)。
+- **Objections / Scope**：非零参考点须内点，域端点不获得双侧目标coverage；完整有界图不可当全实线映射。

@@ -1759,6 +1759,81 @@
       "label": "全初律绝对尾与精确律空间长度",
       "file": "topics/random_markov/one_bit_envelope.md#bit-length",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AGM-OBJECT",
+      "label": "完整 AGM 逆图与输入/输出域",
+      "file": "topics/examples/arithmetic_geometric_mean.md#agm-object"
+    },
+    {
+      "id": "AGM-FIBER",
+      "label": "全部纤维、零集及锐线性真EB C146",
+      "file": "topics/examples/arithmetic_geometric_mean.md#agm-graph"
+    },
+    {
+      "id": "AGM-SELECT",
+      "label": "共同几何尾与坏轴极限选择 C147",
+      "file": "topics/examples/arithmetic_geometric_mean.md#agm-selection"
+    },
+    {
+      "id": "AGM-NOCMP",
+      "label": "同一完整编码的严格兼容障碍 C148",
+      "file": "topics/examples/arithmetic_geometric_mean.md#agm-compatibility"
+    },
+    {
+      "id": "ST-ASSUMPTIONS",
+      "label": "完备域全点 Lipschitz 与共同几何增量",
+      "file": "canonical/selection_truncation_prior_tools.md#st-lipschitz"
+    },
+    {
+      "id": "ST-LIMIT",
+      "label": "Hölder 回缩及不同辅助迭代器 C149",
+      "file": "canonical/selection_truncation_prior_tools.md#st-auxiliary"
+    },
+    {
+      "id": "BNS-GEOMETRY",
+      "label": "负平方锐缺陷和明定1-hypo扩图 C150",
+      "file": "topics/examples/bounded_negative_square.md#bns-geometry"
+    },
+    {
+      "id": "BNS-ENDPOINT",
+      "label": "非零端点固定窗与缩窗锐模 C150",
+      "file": "topics/examples/bounded_negative_square.md#bns-endpoint"
+    },
+    {
+      "id": "NC-GEOMETRY",
+      "label": "负三次图块缺陷及完整满输入 C151",
+      "file": "topics/examples/negative_cubic_branch.md#nc-geometry"
+    },
+    {
+      "id": "NC-NONZERO",
+      "label": "非零目标完整逆的SMR锐缩窗模 C151",
+      "file": "topics/examples/negative_cubic_branch.md#nc-nonzero"
+    },
+    {
+      "id": "SB-ZERO",
+      "label": "原算子真零残差与四种锐线性模 C152",
+      "file": "topics/examples/skew_ball_inverse.md#sb-zero"
+    },
+    {
+      "id": "SCD-UPSTREAM",
+      "label": "D的非闭值域/矩形性与有限截断 C153",
+      "file": "topics/examples/gx059_065_property_completion.md#gxp-diagonal"
+    },
+    {
+      "id": "GX-NONNEG",
+      "label": "GX059–063非负缺陷与signed τ C154",
+      "file": "topics/examples/gx059_065_property_completion.md#gxp-nonnegative-defects"
+    },
+    {
+      "id": "SIN-COMPLETION",
+      "label": "正弦完整逆纤维、VI及局部SMR C155",
+      "file": "topics/examples/gx059_065_property_completion.md#gxp-sine-inverse"
+    },
+    {
+      "id": "BS-COMPLETION",
+      "label": "平方VI分离和亚临界完整近端 C156",
+      "file": "topics/examples/gx059_065_property_completion.md#gxp-square-inverse"
     }
   ],
   "edges": [
@@ -4354,6 +4429,153 @@
       "relation": "implies",
       "scope": "C145 同一单 bit 核与保持 u 的 Wν：全部初律、全部 k≥0 的实际 law-step 平方恰为 R_k²=E_k²−E_{k+1}²，精确律长度级数允许∞；最远端点初律同时取到每个时间最大绝对尾，尾趋0不授予相对几何率或样本路径有限长度。",
       "status": "derived-checked；BIT9–15 独立推导，不转授多 bit、Gaussian 或原 Ψ"
+    },
+    {
+      "id": "E224",
+      "topic": "解选择",
+      "inputs": [
+        "AGM-OBJECT"
+      ],
+      "output": "AGM-FIBER",
+      "relation": "implies",
+      "scope": "C146 同一欧氏完整F=G⁻¹−I、λ=1：全部非空原纤维至多二值，完整J输入恰P=[0,∞)²且唯一为G；全部D输出用完整inf残差给锐1/√2线性EB。域外空不扩为满R²。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E225",
+      "topic": "解选择",
+      "inputs": [
+        "AGM-FIBER"
+      ],
+      "output": "AGM-SELECT",
+      "relation": "implies",
+      "scope": "C147 同一G在每个固定W_R位置窗：全部初值及时间共同几何点尾，单步半阶；轴处极限差Θ(1/log(1/ε))且非任意正幂/非半代数。正初值Q二次常数依赖b₀，不跨轴统一。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E226",
+      "topic": "解选择",
+      "inputs": [
+        "AGM-FIBER",
+        "AGM-SELECT"
+      ],
+      "output": "AGM-NOCMP",
+      "relation": "limits",
+      "scope": "C148 固定同一完整编码及含轴W_R：全对反射模下界与实际轴输出真EB、非减gauge合取强制兼容比值发散；几何尾和线性EB不能提供κ<1。只排除此对象此窗，不排除新提升关系。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E227",
+      "topic": "解选择",
+      "inputs": [
+        "ST-ASSUMPTIONS"
+      ],
+      "output": "ST-LIMIT",
+      "relation": "conditional",
+      "scope": "C149 ST1全部点全部时间共同几何增量与全域k-Lipschitz、完备性合取给θ幂回缩；辅助版本另要求有界X、连续T、p-Lipschitz u及ST5全部点两不等式。只沿uⁿ，不能换成Tⁿ。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E228",
+      "topic": "例库",
+      "inputs": [
+        "BNS-OBJECT"
+      ],
+      "output": "BNS-GEOMETRY",
+      "relation": "implies",
+      "scope": "C150 同一完整−x²/[0,1/2]：hypo锐1、无有限cohypo、打印一阶商趋0，NS8明定1-hypo真扩图；0<λ<1的τ锐λ/(1−λ)²、λ≥1失败。不认证Spingarn命名。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E229",
+      "topic": "例库",
+      "inputs": [
+        "BNS-OBJECT"
+      ],
+      "output": "BNS-ENDPOINT",
+      "relation": "implies",
+      "scope": "C150 固定非零目标−1/4：输入窗η的MSR/SMSR锐1/(1−η)，缩窗下确界1；双侧目标因域外空纤维使任意正幂MR/SMR失败。不可换成零目标。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E230",
+      "topic": "例库",
+      "inputs": [
+        "NC-OBJECT"
+      ],
+      "output": "NC-GEOMETRY",
+      "relation": "implies",
+      "scope": "C151 完整负三次全部三次方程实根给满R自然输入；全图缺陷及LT失败，图块hypo锐3M²、3λM²<1时τ锐3λM²/(1−3λM²)²。图块单值不消除完整零输入三根。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E231",
+      "topic": "例库",
+      "inputs": [
+        "NC-OBJECT"
+      ],
+      "output": "NC-NONZERO",
+      "relation": "implies",
+      "scope": "C151 固定x₀≠0，目标窗避零时完整立方根逆单值，Kη=1/[3(|y₀|−η)^(2/3)]锐，缩窗SMR模1/(3x₀²)；零目标另按C107。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E232",
+      "topic": "例库",
+      "inputs": [
+        "SB-OBJECT"
+      ],
+      "output": "SB-ZERO",
+      "relation": "implies",
+      "scope": "C152 同一K+N_B：盘上完整真残差恰‖x‖，零目标全域及原点四局部锐线性模均1；signed/非负τ均0。原点目标与C99边界非零目标分开。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E233",
+      "topic": "例库",
+      "inputs": [
+        "SCD-OBJECT"
+      ],
+      "output": "SCD-UPSTREAM",
+      "relation": "limits",
+      "scope": "C153 明定D的稠密真非闭range、锐cocoercivity1及rectangular；D+B原属性不转给D。前K块截断强模1/(2K)、逆模1并rectangular，不能提供维数统一正强模或保留无限维非矩形病态。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E234",
+      "topic": "例库",
+      "inputs": [
+        "SCD-OBJECT",
+        "VO-OBJECT",
+        "VAD-OBJECT",
+        "PROT-OBJECT"
+      ],
+      "output": "GX-NONNEG",
+      "relation": "implies",
+      "scope": "C154 各图各自绑定：D+B/V/V* signed及非负τ锐0；旋转hypo非负缺陷max(0,−cosθ)，两正cos取样角signed τ<0而非负τ=0。不是同形字母之间换对象。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E235",
+      "topic": "例库",
+      "inputs": [
+        "SIN-OBJECT"
+      ],
+      "output": "SIN-COMPLETION",
+      "relation": "implies",
+      "scope": "C155 同一F=2+sinx全域VI pseudo/quasi、全部周期逆纤维；hypo锐1、无有限cohypo、subcritical τ锐式；cos x̄≠0时完整局部SMR缩窗模1/|cos x̄|。零集仍空，不给PPA零点结论。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
+    },
+    {
+      "id": "E236",
+      "topic": "例库",
+      "inputs": [
+        "BS-OBJECT"
+      ],
+      "output": "BS-COMPLETION",
+      "relation": "implies",
+      "scope": "C156 同一有界平方：quasi非pseudo、完整原纤维，hypo锐2、cohypo失败；0<λ<1/2完整自然输入域和唯一正根分支及锐τ。SMR模1/(2|x̄|)只在非零内点，端点双侧coverage不授。",
+      "status": "derived-checked；限定于规范正文的直接证明，不认证历史命名或先行性"
     }
   ]
 }
