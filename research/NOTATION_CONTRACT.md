@@ -56,7 +56,7 @@
 
 | 模块 | 固定绑定 | 跨页使用门 |
 | --- | --- | --- |
-| [signed-Schur](canonical/signed_schur_growth.md#ss-interface) | 参数片 Q、表示图 Γ_rep、原完整关系 F 及领圈 U 分开；一般模 ω 与附加幂增长 p 的 RL 指数 1/p 分开 | 全表示图点对的一般模不自动成为幂型 RL；转给完整 J 须 U 上全部纤维同一。仅选中输出在图册重叠处一致只支持该选择 |
+| [signed-Schur](canonical/signed_schur_growth.md#ss-interface) | 参数片 Q、全表示图 G_rep、切向输入片上的 Γ=G_rep∩X⁻¹(B_r×ℝ)、原完整关系 F 及领圈 U 分开；一般模 ω 与附加幂增长 p 的 RL 指数 1/p 分开 | 切向输入片内表示图点对的一般模不自动成为幂型 RL；转给完整 J 须 U 上全部纤维同一。仅选中输出在图册重叠处一致只支持该选择 |
 | [块路径 C163/C164](canonical/path_atlas.md#pa-lift) | B_m 是全部合法末点关系，B(t) 是标量步界；Λ 是新关系的块编码步长；G 是块长度包络、H 是级数预算 | 记忆/相位规则及空间度量固定；新定义 F_{m,Λ} 不等于原生生成 F。有限进入、吸收、首次进入即停、全部后继驻定分别使用 |
 | [复合 C161/C162/C165](canonical/composite_subregularity.md#cs-local-target) | Γ=zer ∂f，Θ₂ 使用实际 second subderivative；S=c⁻¹(argmin φ)，T 是闭 stationary 子目标；A=Dc(x̄)，B=A† | T 不是近端映射，Γ 不是随意图块；Clarke PSD 不替代 Θ₂。局部集合相等经球外隔离才给实际窗内全局距离相等 |
 

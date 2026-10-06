@@ -327,7 +327,7 @@
 - **Status**：`derived-checked`。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：c(s,t)=t−(s_+)²，S={(s,(s_+)²):s∈ℝ}；对连续严格增无界 η、η(0)=0 取 φ(z)=∫₀^{|z|}η(u)du，F=∂(φ∘c)。每点 r_F=η(|c|)√(1+4s_+²)，d((s,t),S)≤η^{-1}(r_F)。η(u)=u^a、0<a<1 时，幂 q=1/a 的最佳常数 1；η(u)=u log(e/u) 于 0≤u≤1、随后 η(u)=u 时有趋零 gauge η^{-1}(r)∼r/log(1/r)，但任何 q>1 的幂 EB 失败。
-- **Dependencies / Evidence / Status**：[CS-MODEL](research/canonical/composite_subregularity.md#cs-model) 逐点公式、竖线锐性和标量近端方程；状态 derived-checked。对后一模型的局部轨道还需 C36 的 λh<1、gauge 兼容和留域；其收敛为超线性但无任意固定 p>1 的 Q-order。
+- **Dependencies / Evidence / Status**：[CS-MODEL](research/canonical/composite_subregularity.md#cs-model) 逐点公式、竖线锐性和标量近端方程；状态 derived-checked。对后一模型保持 C36 的全部 λh<1、gauge 兼容和严格留域预算；每条非驻定局部轨道的集合距离和实际点误差均超线性，且每个固定 p>1 的下一步误差/当前误差^p 比值趋∞。[CS-Q1–4](research/canonical/composite_subregularity.md#cs-model-q)用完整近端坐标、真实距离线性化和同轨道长度尾补足一般轨道证明；不是仅由竖线例外推。
 - **Objections / Scope**：这里 c 为 C^{1,1} 而非 C²；源文的其他真多值变体未纳入本命题，外部新颖性未审。
 
 ## C38-v1 / M1-CAPTURE · 显式外层映射的两步捕获

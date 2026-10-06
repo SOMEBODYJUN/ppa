@@ -4417,6 +4417,17 @@
       "y": 1612,
       "region": "paths",
       "realm": "paths"
+    },
+    "CS-LOG-RATE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 1794,
+      "region": "composite",
+      "realm": "composite"
     }
   },
   "edges": {
@@ -5439,6 +5450,10 @@
     "E255": {
       "x": 653.95,
       "y": 1663.98
+    },
+    "E256": {
+      "x": 481.22,
+      "y": 1773.12
     }
   },
   "bounds": {

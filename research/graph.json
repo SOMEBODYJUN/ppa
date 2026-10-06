@@ -1990,6 +1990,11 @@
       "id": "CS-TARGET-PROX",
       "label": "替换目标的同图零锚与局部轨道 C165",
       "file": "canonical/composite_subregularity.md#cs-local-target"
+    },
+    {
+      "id": "CS-LOG-RATE",
+      "label": "认证非驻定局部轨道的真实点超线性及无高阶Q C37",
+      "file": "canonical/composite_subregularity.md#cs-model-q"
     }
   ],
   "edges": [
@@ -3662,7 +3667,7 @@
       ],
       "output": "SIN-TARGET",
       "relation": "conditional",
-      "scope": "同一完整映射，但目标为 3、参考输入 π/2；固定目标锐半阶模 √2；双侧扰动目标 y>3 为空逆像，不能扩成两变量 MR。",
+      "scope": "同一完整映射，但目标为3、参考输入π/2；固定目标最高局部幂1/2，缩窗可行系数下确界√2，不称固定正窗取到该系数；双侧扰动目标y>3为空逆像，不能扩成两变量MR。",
       "status": "C82 完整逆纤维与余弦渐近重算"
     },
     {
@@ -3741,7 +3746,7 @@
       ],
       "output": "SR-PARENT",
       "relation": "conditional",
-      "scope": "改为另一个半直线完整母关系 F∞ 时须重新求全部根：J(0)={0,1} 同输入碰撞排除零消失全对 RL；非零路径第一步后为正且趋 +∞。",
+      "scope": "改为另一个半直线完整母关系F∞(x)={−√x}当x≥0、否则为空，固定λ=1时须重新求全部根：J(0)={0,1}同输入碰撞排除零消失全对RL；非零路径第一步后为正且趋+∞。",
       "status": "C87-v1 新对象完整根和动力重算"
     },
     {
@@ -4944,6 +4949,18 @@
       "relation": "conditional",
       "scope": "C165继续保持CS-PROX全部条件；x∈B_r/2、最近T点p满足||p−x̄||<r且0∈F(p)，同图零锚和严格轨道预算保持。仅局部近端，不排除完整J的球外纤维。",
       "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E256",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-MODEL",
+        "CS-PROX"
+      ],
+      "output": "CS-LOG-RATE",
+      "relation": "conditional",
+      "scope": "C37同一非幂η(u)=u log(e/u)模型、固定λ>0，保留全部CS-PROX乘子/步长/兼容/严格初值预算；每条非驻定局部轨道到S收敛，d_{k+1}∼d_k/[λA∞log(1/d_k)]，A∞=1+4(s∞)_+²，实际点误差e_{k+1}/e_k→0且对每个p>1有e_{k+1}/e_k^p→∞。不含驻定零比值或球外完整分支。",
+      "status": "derived-checked；CS-Q1–4直接证明，经最后隔离Astra的反馈修补复核"
     }
   ]
 }
