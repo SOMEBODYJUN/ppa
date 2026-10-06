@@ -14,7 +14,7 @@
 | 多步路径札记 §6–§9，LF426–524；与§5同一字节原件 | [M1_MS_SECTIONS6_9_UNITS.tsv](M1_MS_SECTIONS6_9_UNITS.tsv)，162项 | 52 rewritten、21 duplicate、6 superseded、38 nonmathematical、45 deferred；99物理LF无缺口 |
 
 物理来源的完整相对路径写在各专表的 source_locator，不用不存在的ZIP入口替换它。
-M1 LF326–524连续覆盖§5–§9共199行；1–325未被这些专表枚举。C11只有§8的26行被本表枚举。LF14的来源声明虽作为依赖读过，不计入§5枚举。三范围共273条来源记录，不表示273个独立数学结果。
+本页保留首批三个局部范围及其273条记录。现由[路径核心表](PATH_CORE_UNITS.tsv)补LF1–325、[复合核心表](COMPOSITE_CORE_UNITS.tsv)补LF1–311及338–420，分别与上表并为[路径完整524行](PATH_FULL_COVERAGE.md#path-full)和[复合完整420行](COMPOSITE_FULL_COVERAGE.md#composite-full)。LF14已由核心表独立枚举，不计入§5范围。完整枚举不关闭本页的原生、文献或旧行为义务；当前数值统一见[覆盖快照](CURRENT_COVERAGE.md)。
 
 <a id="cm-native"></a>
 ## M1：外层已证与原生未给分开

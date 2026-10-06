@@ -4219,6 +4219,204 @@
       "y": 3186,
       "region": "convergence",
       "realm": "convergence-annex-2"
+    },
+    "OB-GROWTH-O-RATE": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1822,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "OB-METRIC-Q-DEGENERACY": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2292,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "SNOWFLAKE-MR-WITNESS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "STEP-GROWTH-WITNESS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-2"
+    },
+    "CS-ALL-CLARKE-PSD": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1002,
+      "y": 2067,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-CLARKE-WITNESS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 2158,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-LSC-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 2067,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-LSC-DISTANCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 2158,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-SOME-CLARKE-PSD": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thunder",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 908,
+      "y": 2158,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-TARGET-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 1794,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-TARGET-EQUALITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 1612,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "CS-TARGET-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 1703,
+      "region": "composite",
+      "realm": "composite"
+    },
+    "PA-CAPTURE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-CAPTURE-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 1703,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-ENDPOINT-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-LIFT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 1794,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-STATIONARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
+    },
+    "PA-STATIONARY-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 1612,
+      "region": "paths",
+      "realm": "paths"
     }
   },
   "edges": {
@@ -5201,6 +5399,46 @@
     "E245": {
       "x": 1903.2,
       "y": 3141.26
+    },
+    "E246": {
+      "x": 1813.41,
+      "y": 2869.22
+    },
+    "E247": {
+      "x": 2279.2,
+      "y": 3050.26
+    },
+    "E248": {
+      "x": 425.2,
+      "y": 2111.74
+    },
+    "E249": {
+      "x": 985.09,
+      "y": 2111.92
+    },
+    "E250": {
+      "x": 951.22,
+      "y": 2137.12
+    },
+    "E251": {
+      "x": 2202.31,
+      "y": 1841.81
+    },
+    "E252": {
+      "x": 2402.91,
+      "y": 1656.92
+    },
+    "E253": {
+      "x": 2336.92,
+      "y": 1628.91
+    },
+    "E254": {
+      "x": 891.47,
+      "y": 1657.06
+    },
+    "E255": {
+      "x": 653.95,
+      "y": 1663.98
     }
   },
   "bounds": {

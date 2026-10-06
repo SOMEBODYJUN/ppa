@@ -126,6 +126,7 @@ if seed_path.is_file():
         valid_seed_status = {
             "mapped-to-existing", "enumerated-unadjudicated",
             "segmented-partial", "segmented-needs-unit-split",
+            "superseded-by-atomic-table",
         }
         if row["enumeration_status"] not in valid_seed_status:
             errors.append(f"invalid semantic seed status: {row['unit_id']}")

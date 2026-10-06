@@ -116,7 +116,7 @@ PDF/TeX/讲稿、同名不同哈希文件、同构/缩放例都不是自动 dupl
 
 ## 4. 有限、可审计的单元枚举方法
 
-来源层的首批索引由 build_occurrence_index.py 从原清单和实际字节重建为 429 个位置及 346 个内容组；生成器核哈希、成员集合与 F/Z 分区，validate_assets.py 对已生成索引做双向对账。索引现按精确范围登记的逐LF并集显示全部/部分枚举；没有登记的内容保持pending，任何枚举状态都不是数学真值或全量清洗判定。最新数值见[覆盖快照](CURRENT_COVERAGE.md)。SEMANTIC_UNIT_SEED.tsv 的前两个试点把 S19 signed-Schur 成员 1–452 行分为 11 段、SS1 修订 research_note.md 1–763 行分为 19 段；共 30 段连续不重叠，24 段有规范锚点，6 段待逐项裁决；SS1 §1 推论 1 的条件版本见 [C136](../canonical/solution_selection_rates.md#ss-rleb-ball)，§2 定理 2 的完整几何尾图见 [C137](../canonical/selection_geometric_cap.md#gc-object)，§3 定理 3 的同图配对下界见 [C138](../canonical/selection_geometric_sharpness.md#gs-sharp)，随后一般 0<γ,q<1 族见 [C139](../canonical/selection_parameter_family.md#pf-object)，§5.2 全域三角充分门见 [C140](../canonical/selection_tangential_condition.md#tc-triangle)，§4 后续超线性族见 [C141 已限定验收的 SF-1–12](../canonical/selection_superlinear_family.md#sf-object)，具体完整原关系的纤维同一性仍须逐模型另证。S19 的 332–341 行有限图册 remark 和 SS1 §6 文献/数值证据、§5.2 原生图块认证的未闭范围仍保持具体状态。
+来源层的首批索引由 build_occurrence_index.py 从原清单和实际字节重建为 429 个位置及 346 个内容组；生成器核哈希、成员集合与 F/Z 分区，validate_assets.py 对已生成索引做双向对账。索引现按精确范围登记的逐LF并集显示全部/部分枚举；没有登记的内容保持pending，任何枚举状态都不是数学真值或全量清洗判定。最新数值见[覆盖快照](CURRENT_COVERAGE.md)。SEMANTIC_UNIT_SEED.tsv 保留早期结构分段，不作当前逐断言状态的另一份总账。已全量原子枚举的S19、SS1和GX结构段统一标为 `superseded-by-atomic-table`，链接各完整范围记录；原来的“待拆”不能反向抹去细表进度。尚未完整枚举的F11结构段仍保持部分状态。每个来源的证明、版本和deferred以独立断言表为准。
 
 第三个试点把 Z07 的 work/c_gx053_065.md 1–1219 行分成 39 个无缺口结构段：13 张 GX 卡、共同约定、交叉审计逐行、五项来源所声称的文献记录、数值说明及 YAML 返回合同。其中 14 段有规范对象锚点，只表示选定观察已重写；其余 25 段无锚点。第四个试点把 F11 的 `04_research_ideas.md` 1–578 **物理 LF 行**分成 46 个无缺口标题结构段；A.2/A.3/A.4/A.6/B.2a/C.2/F.2/G.1/G.2 的九段有部分规范锚点，其余 37 段无锚点。G.1/G.2 只对应 [C135 抽象条件闭预算引理](../operator_space.md#os-spectrum-proof)，不表示 LT/direct/energy 原生预算块已闭或 G.2 差集结论已证。A.4 的非平凡选择、F.2 以外的共轭路线、各路线的开放桥和文献断言仍须逐项审查，标题结构分段不是数学结案。原件 G.2 的 `\Sigma_{\rm LT}`/`\Sigma_{\rm RLEB}` 含字节级 CR 控制字符；定位在 486–500 行，引用时须从数学语义重建公式，不能复制原字节至规范层。segmented-partial 和 segmented-needs-unit-split 都表示尚须按独立命题、审计判断和文献事实继续拆分，不能把有锚点的整节关闭。验证器检查四个内容的完整物理行数、连续覆盖和已填锚点。四个试点只涉及 346 个内容组中的四个；全库语义分母尚未建立。
 
@@ -176,8 +176,8 @@ I-097–099/I-102 等缺失原证明属于外部来源义务，不凭空加入�
 
 ## 已实行的独立断言表
 
-[专表范围登记](ATOMIC_SCOPE_REGISTRY.tsv) 是结构seed之外的逐断言层，写成员哈希、物理LF总行数、精确覆盖范围及专用表。GX053–065的整个1219行已有[332条独立属性/证据/组织记录](GX053_065_COVERAGE.md#gx-scope)；SS1的[两表完整范围](SS1_FULL_COVERAGE.md#ss1-full)现覆盖全部763行，核心/数值281条、§6/书目119条；[最终foundations](FOUNDATIONS_FINAL_COVERAGE.md#ff-scope)的全部2096行有282条记录。每条包括证据类型、具体去向和剩余义务，组织余项及重复不当数学成果。validate_assets核表形状、原hash/行数、范围并集、锚和deferred义务；不从行覆盖推导数学真值。GX、SS1和最终foundations三个内容的全量枚举门关闭，作者版本名称已核，刊本对应与旧执行证据仍有具体义务；全库346内容组的穷尽语义分母与逐项数学验收仍未完成。生成的字节索引保留字节用途状态，新的局部语义状态由本登记给出，不由pending格式提示抹去已完成范围。
+[专表范围登记](ATOMIC_SCOPE_REGISTRY.tsv) 是结构seed之外的逐断言层，写成员哈希、物理LF总行数、精确覆盖范围及专用表。GX053–065的整个1219行已有[332条独立属性/证据/组织记录](GX053_065_COVERAGE.md#gx-scope)；SS1的[两表完整范围](SS1_FULL_COVERAGE.md#ss1-full)现覆盖全部763行，核心/数值281条、§6/书目119条；[最终foundations](FOUNDATIONS_FINAL_COVERAGE.md#ff-scope)的全部2096行有282条记录。每条包括证据类型、具体去向和剩余义务，组织余项及重复不当数学成果。validate_assets核表形状、原hash/行数、范围并集、锚和deferred义务；不从行覆盖推导数学真值。GX、SS1、最终foundations及下文新增三份内容的全量枚举门关闭，作者版本名称已核，刊本对应与旧执行证据仍有具体义务；全库346内容组的穷尽语义分母与逐项数学验收仍未完成。生成的字节索引保留字节用途状态，新的局部语义状态由本登记给出，不由pending格式提示抹去已完成范围。
 
 ## C11/M1增量的精确范围
 
-[C11/M1范围记录](C11_M1_SOURCE_SCOPES.md#cm-scope)把旧三个笼统待核条目拆成273条记录：C11的LF312–337为72项，M1的LF326–425为39项、426–524为162项。与GX/SS1既有专表合计722条原子记录，五个独立范围；M1 §5及§6–§9来自同一个524 LF原件，不能计作两个独立字节内容。C11整件420 LF，其它范围未被此专表关闭。新增范围仍含具体deferred；旧父条目superseded表示拆分完成，不表示未闭原生模型、外部文献和历史行为被证明。全库语义分母不因此完成。
+[C11/M1范围记录](C11_M1_SOURCE_SCOPES.md#cm-scope)保留首次拆分的三个局部范围。现[路径核心及完整范围](PATH_FULL_COVERAGE.md#path-full)、[复合核心及完整范围](COMPOSITE_FULL_COVERAGE.md#composite-full)补齐各自原件全部524、420 LF；[signed-Schur完整范围](SIGNED_SCHUR_FULL_COVERAGE.md#ssg-full-scope)补全部452 LF。登记时保留原局部scope身份，增加互不重复的核心范围；同字节出现位置继承行覆盖，不重复计独立内容。最新总数与状态由[CURRENT_COVERAGE.md](CURRENT_COVERAGE.md)生成，不在本文另维护数字。各细表的deferred仍须逐项处理，枚举完成不表示原生桥、外部定理、历史行为或全库清洗已完成。

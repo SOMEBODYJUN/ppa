@@ -1920,6 +1920,76 @@
       "id": "OB-METRIC-Q-DEGENERACY",
       "label": "任意度量空间的q>1 MR必局部常值（错误）",
       "file": "../FAILED_ROUTES.md#f40"
+    },
+    {
+      "id": "CS-LSC-DATA",
+      "label": "proper lsc有限值基点、局部下界、弱分离和目标夹层",
+      "file": "canonical/composite_subregularity.md#cs-transfer-lsc"
+    },
+    {
+      "id": "CS-LSC-DISTANCE",
+      "label": "三个全局目标距离的同窗转移 C161",
+      "file": "canonical/composite_subregularity.md#cs-transfer-lsc"
+    },
+    {
+      "id": "CS-CLARKE-WITNESS",
+      "label": "C1,1强极小/极大与实际二阶次导数 C162",
+      "file": "canonical/composite_subregularity.md#cs-clarke"
+    },
+    {
+      "id": "CS-ALL-CLARKE-PSD",
+      "label": "实际Θ₂等同全部Clarke Hessian PSD（错误）",
+      "file": "canonical/composite_subregularity.md#cs-clarke"
+    },
+    {
+      "id": "CS-SOME-CLARKE-PSD",
+      "label": "实际Θ₂等同存在Clarke Hessian PSD（错误）",
+      "file": "canonical/composite_subregularity.md#cs-clarke"
+    },
+    {
+      "id": "PA-ENDPOINT-DATA",
+      "label": "固定边界规则的全部合法块末点关系",
+      "file": "canonical/path_atlas.md#pa-lift"
+    },
+    {
+      "id": "PA-LIFT",
+      "label": "完整新关系的J/零集与AP-RL等价 C163",
+      "file": "canonical/path_atlas.md#pa-lift"
+    },
+    {
+      "id": "PA-CAPTURE-DATA",
+      "label": "全部首块前缀覆盖、严格长度预算及末点在S",
+      "file": "canonical/path_atlas.md#pa-capture"
+    },
+    {
+      "id": "PA-CAPTURE",
+      "label": "每条合法路径至多m步进入S C164",
+      "file": "canonical/path_atlas.md#pa-capture"
+    },
+    {
+      "id": "PA-STATIONARY-DATA",
+      "label": "每个可达目标状态/相位都有一步且仅自身为后继",
+      "file": "canonical/path_atlas.md#pa-capture"
+    },
+    {
+      "id": "PA-STATIONARY",
+      "label": "进入后恒定、首块总长及点极限 C164",
+      "file": "canonical/path_atlas.md#pa-capture"
+    },
+    {
+      "id": "CS-TARGET-DATA",
+      "label": "闭T⊂Γ且同球内T=S",
+      "file": "canonical/composite_subregularity.md#cs-local-target"
+    },
+    {
+      "id": "CS-TARGET-EQUALITY",
+      "label": "局部完整零集替换保持同窗真EB C165",
+      "file": "canonical/composite_subregularity.md#cs-local-target"
+    },
+    {
+      "id": "CS-TARGET-PROX",
+      "label": "替换目标的同图零锚与局部轨道 C165",
+      "file": "canonical/composite_subregularity.md#cs-local-target"
     }
   ],
   "edges": [
@@ -4783,6 +4853,97 @@
       "relation": "refutes",
       "scope": "F40对每个q>1取X=(R,通常度量)、Y=(R,|·|^(1/q))及恒等映射；全部x,y满足d_X(x,F⁻¹y)=d_Y(y,Fx)^q且非局部常值。只反驳任意度量版本；不判断赋范/长度空间或额外inverse localization版本。",
       "status": "derived-checked；合法雪花度量和全域恒等式直接证明"
+    },
+    {
+      "id": "E248",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-LSC-DATA"
+      ],
+      "output": "CS-LSC-DISTANCE",
+      "relation": "implies",
+      "scope": "C161 proper lsc、有限f(x̄)、球内局部最小及Γ弱分离、local-min⊂S⊂Γ；0<R<min(α,ς)、x∈B_R/4。仅三个全局距离相等，不提供链式/coverage/轨道。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E249",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-CLARKE-WITNESS"
+      ],
+      "output": "CS-ALL-CLARKE-PSD",
+      "relation": "refutes",
+      "scope": "C162 g=x²(11/10+sin log|x|)在0强极小且实际d²非负；Clarke Hessian区间含负数。只否定全部PSD等同实际Θ₂。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E250",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-CLARKE-WITNESS"
+      ],
+      "output": "CS-SOME-CLARKE-PSD",
+      "relation": "refutes",
+      "scope": "C162 −g在0严格极大，实际d²在每个非零方向为负，但Clarke区间含正数。只否定存在PSD等同实际Θ₂。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E251",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-ENDPOINT-DATA"
+      ],
+      "output": "PA-LIFT",
+      "relation": "implies",
+      "scope": "C163固定相位/记忆、Λ>0、全部合法末点B_m；新定义完整F_{m,Λ}给J=B_m及zerF=FixB_m，输入片全部图点对AP-RL等价。至多一末点另需coverage才有映射；不认证原生身份/内部唯一。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E252",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-CAPTURE-DATA"
+      ],
+      "output": "PA-CAPTURE",
+      "relation": "implies",
+      "scope": "C164同一x0、S,V,m；全部合法首块前缀的D<η、实际覆盖及允许转移可延拓；L0<距边界、所有末点在S。给首块留域及≤m步进入，不给进入后的coverage/驻定。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E253",
+      "topic": "路径图集",
+      "inputs": [
+        "PA-CAPTURE",
+        "PA-STATIONARY-DATA"
+      ],
+      "output": "PA-STATIONARY",
+      "relation": "conditional",
+      "scope": "C164沿同一允许状态/相位的全部后继；驻定门需每个实际可达目标点有一步且只能后继自身，非仅吸收。轨道以后恒定、极限在S∩V、总长≤L0。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E254",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-EB",
+        "CS-TARGET-DATA"
+      ],
+      "output": "CS-TARGET-EQUALITY",
+      "relation": "conditional",
+      "scope": "C165保留CS-EB全部同一数据；闭T⊂Γ且T∩B_R=S∩B_R。B_R/4全局距离相等、r≤R/4，故B_r的同一gauge/常数真EB可换目标。不是必要条件。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
+    },
+    {
+      "id": "E255",
+      "topic": "复合次正则",
+      "inputs": [
+        "CS-TARGET-EQUALITY",
+        "CS-PROX"
+      ],
+      "output": "CS-TARGET-PROX",
+      "relation": "conditional",
+      "scope": "C165继续保持CS-PROX全部条件；x∈B_r/2、最近T点p满足||p−x̄||<r且0∈F(p)，同图零锚和严格轨道预算保持。仅局部近端，不排除完整J的球外纤维。",
+      "status": "derived-checked；自足证明及独立Astra逐式复读，先行性另核"
     }
   ]
 }

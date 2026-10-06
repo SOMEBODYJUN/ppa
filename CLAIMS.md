@@ -287,7 +287,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：固定 m，对每个合法词 w=(σ₀,…,σ_{m−1}) 逐边有 d_{j+1}≤c_{σ_j}d_j^{α_{σ_j}}，正系数与正指数。则 d_m≤C_w d₀^{A_w}，其中 A_w=Π_j α_{σ_j}，C_w=Π_j c_{σ_j}^{Π_{ℓ>j}α_{σ_ℓ}}。有限词集的全体 A_w>1 给共同小半径；无限词集的充分条件是 inf_w A_w>1 与 sup_w C_w<∞，才可对预设 0<κ<1 给统一小半径收缩。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 m，对每个合法词 w=(σ₀,…,σ_{m−1}) 逐边有 d_{j+1}≤c_{σ_j}d_j^{α_{σ_j}}，正系数与正指数。则 d_m≤C_w d₀^{A_w}，其中 A_w=Π_j α_{σ_j}，C_w=Π_j c_{σ_j}^{Π_{ℓ>j}α_{σ_ℓ}}。有限词集的全体 A_w>1 给共同小半径；无限词集的一组充分条件是 inf_w A_w>1 与 sup_w C_w<∞，由这组条件可对预设 0<κ<1 给统一小半径收缩。
 - **Dependencies / Evidence / Status**：逐次代入及 m=1、A_j=1+1/j、C_j=1 的反例见 [PA-POWER](research/canonical/path_atlas.md#pa-power)；状态 derived-checked。
 - **Counterevidence / Scope**：A_w<1 只说明分离上界不能证收缩；联合路径仍可能有限捕获。A_w=1 还要统一控制 C_w。[F12](FAILED_ROUTES.md#f12)。
 
@@ -988,7 +988,7 @@
 
 ## C117-v2 / SS-GROWTH · 双支 signed-Schur 的表示图证书
 
-- **Status**：`derived-checked`。
+- **Status**：`derived-checked`。前驱身份范围见 [SS-VERSION-RECOVERY](research/canonical/signed_schur_growth.md#ss-version-recovery)：来源 S19-SG-v1 不等于未恢复的 C117–C119-v1 卡；当前只调用本 v2。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(\mathbb R^{n-1}\times\mathbb R\)、固定 \(\lambda>0\) 和两支 \(g_\pm:Q=\overline B_R\times[0,T]\to\operatorname{gph}F\)。参数化在 \(Q\) 的开邻域有 \(C^1\) 延拓，**图包含只在 \(Q\) 上**。同一 \(Q\) 的 (SS-2)–(SS-5) 公共接缝、强单调切向导数、Schur 导数界、相反定向凸严格增长及 \(0<r<\mu R-HT\) 合取，给每个 \(z\in B_r,t\in[0,T]\) 的唯一内点切向反演、开输入领圈 (SS-9) coverage、所表示图在切向输入球内无碰撞；该范围**任意两**图点的反射差由 (SS-10)/(SS-11) 控制，模在零点消失。
 - **Dependencies / Evidence / Status**：[SS-OBJECT/GROWTH](research/canonical/signed_schur_growth.md#ss-object) 的 Brouwer 内点、隐函数、同支凸增量、跨支预算和剪切恒等式经独立重构与敌对审查，`derived-checked`。仅在另外核 (SS-13) 后于领圈 \(U\) 识别所需完整 \(J_{\lambda F}\)；该条件不转移 \(U\) 外的图点，也不产生真残差 EB、零锚、兼容或留域。
@@ -996,14 +996,14 @@
 
 ## C118-v2 / SS-POWER-JET · 幂次预算、匹配改善及最优指数门
 
-- **Status**：`derived-checked`。
+- **Status**：`derived-checked`。前驱身份范围见 [SS-VERSION-RECOVERY](research/canonical/signed_schur_growth.md#ss-version-recovery)：来源 S19-SG-v1 不等于未恢复的 C117–C119-v1 卡；当前只调用本 v2。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：在 C117 的**切向输入均位于 \(B_r\)** 的表示图块上，若 \(h_\sigma=c_\sigma t^p,p>1\)，输入直径 \(\le D\) 的全对指数为 \(1/p\)，有效常数是 (SS-24)/(SS-25)；\(p=1\) 有 (SS-26)。不同幂次只比较预算 (SS-27)，不能伪造更高阶 Schur 导数。若同一个修正切向输入 \(z\) 的两支输出匹配至 \(Et^p\)，以共同增长下界 \(c=\min\{c_+,c_-\}>0\) 调用 (SS-30)/(SS-31) 改善跨支预算。若另有固定 \(z_0\) 的 \(O(t^p)\) 输入法向上界与 \(\Omega(t)\) 输出差下界，\(1/p\) 是最大全对指数；\(p>1\) 时已识别的单值近端在接缝不 calm。
 - **Dependencies / Evidence / Status**：[SS-POWER/JET/EXPONENT](research/canonical/signed_schur_growth.md#ss-power) 的二维 Hölder 预算、同修正坐标匹配和双边弧证据独立证明，`derived-checked`；\(K_z=0\) 的主系数有 (SS-28) 取等。原参数的同位导数比较、单点 Taylor 阶或仅 (SS-5) 均不足替代附加门。
 
 ## C119-v2 / SS-SQRT · 完整平方根图的证书与锐性
 
-- **Status**：`derived-checked`。
+- **Status**：`derived-checked`。前驱身份范围见 [SS-VERSION-RECOVERY](research/canonical/signed_schur_growth.md#ss-version-recovery)：来源 S19-SG-v1 不等于未恢复的 C117–C119-v1 卡；当前只调用本 v2。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：固定完整 (SS-33)、\(\lambda=1\)、\(0<r<R-2T\)，在 \(U=(-r,r)\times(-4T^2,4T^2)\) 的全部完整图纤维等于两支 (SS-34)；给 \(\gamma=1/2\) 的 (SS-38) 和同输入匹配后 (SS-39) 常数，收缩领圈的最优渐近系数 2 与最大指数 \(1/2\)。同一完整关系零集 \(S=\mathbb R\times\{0\}\) 的真实**最小**残差另给锐系数 \(1/4\) 的平方界 (SS-41)。
 - **Dependencies / Evidence / Status**：[SS-SQUARE-ROOT](research/canonical/signed_schur_growth.md#ss-square-root) 对法向输入 \(\pm4y\) 的全部纤维反演和两支图值最小化独立证明，`derived-checked`；固定领圈的 (SS-38)/(SS-39) 不声称是其最小常数。图包含仅在 \(t\ge0\)；不能作为 S19 可能的“延拓邻域也须在图内”读法的实例，不能由此直接宣布 PPA 收敛或先行性。
@@ -1344,3 +1344,43 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：开区间 I、k≥1、K>0、全部生成元 fᵢ∈C²(I)、fᵢ′处处非零、fᵢ″局部有界变差、|fᵢ″/fᵢ′|≤K；完整均值映射 T=(fᵢ⁻¹(k⁻¹∑ⱼfᵢ(xⱼ)))ᵢ。先固定 D>0 和 X_D={x∈Iᵏ:diam x≤D}；令 α=(3+7e)/3、0<ℓ<1/α、q=αℓ、N=max(0,ceil log₂[(e^(KD)−1)/(e^ℓ−1)])。全部 x∈X_D 的唯一对角极限 Π(x)=M(x)1 满足全部 n≥N 的 ‖Tⁿx−Πx‖∞≤diam Tⁿx≤(αK)⁻¹q^(2^(n−N))；全文给全部 n≥0 的共同 A exp(−b2ⁿ) 界。同一凸域的全部初值对满足 ‖Πx−Πy‖∞≤exp[2(e^(KD)−1)]‖x−y‖∞。实际点误差对全部n≥N仅授共同 Q二次上界 eₙ₊₁≤4αKeₙ²，不宣称逐轨道锐因子。
 - **Dependencies / Evidence**：[QA-OBJECT](research/canonical/selection_quasi_arithmetic_boundary.md#qa-object)、[非负起步共同尾](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail)、[同域两初值界](research/canonical/selection_quasi_arithmetic_boundary.md#qa-selection)。直接 Jensen、Taylor 和全部导数乘积证明不依赖 P16 打印尾公式。原文版本与反例接口见 [规范一手接口](research/canonical/selection_primary_interfaces.md)。
 - **Objections / Scope**：D=0 的对角族、K=0 的仿射族另行处理，均不代入 log0 或 1/K。AGM 只在固定正闭窗局部化，K=1/a 不移到含轴窗。未编码完整 PPA 关系或授予 RL、真实 EB、严格兼容与新颖性；任意连续 φ属于复合 φ∘M，不代表 M 可任意粗糙。
+
+<a id="c161"></a>
+## C161-v1 / CS-TRANSFER-LSC · 扩展实值函数的局部目标距离转移
+
+- **Status**：`derived-checked`，自足证明及独立逐式复读。
+- **Exact Statement / Objects / Domain / Quantifiers**：proper lsc f:ℝⁿ→(−∞,+∞]，x̄∈dom f；在 B_α(x̄) 有 f≥f(x̄)，且每个 y∈Γ∩B_ς(x̄) 有 f(y)≤f(x̄)，Γ=zer ∂f、∂ 为 limiting 次微分。指定 S⊂Γ 且包含所有局部极小点。任取 0<R<min(α,ς)，全部 x∈B_{R/4}(x̄) 有 d(x,S)=d(x,Γ)=d(x,{f≤f(x̄)})。以有限值 stationary 点上的实际二阶次导数定义 Θ₂，则 S=Θ₂ 可用。
+- **Dependencies / Evidence**：[CS-TRANSFER-LSC](research/canonical/composite_subregularity.md#cs-transfer-lsc) 证明局部三个集合一致，再以共同点 x̄ 及球外距离隔离证明三个全局距离相等；局部极小的 regular Fermat 条件与非负差商直接写明。
+- **Objections / Scope**：C34-v1 的有限连续身份保持不变；此较宽版本不赋予扩展实值复合链式规则、近端 coverage 或轨道结论。距离相等不需要三个集合闭或投影存在；用于后续投影时须另核闭性。外部先行性未核。
+
+<a id="c162"></a>
+## C162-v1 / CS-CLARKE · 两种 Clarke PSD 替代标准的反例
+
+- **Status**：`derived-checked`，显式公式及独立逐式复读。
+- **Exact Statement / Objects / Domain / Quantifiers**：实标量 a=11/10，g(0)=0、g(x)=x²(a+sin log|x|) 于 x≠0。g∈C^{1,1} 且零点强极小；∂_C g′(0)=[2a−√10,2a+√10] 同时含正负数，而每个 w 有 d²g(0|0)(w)=2(a−1)w²。−g 在零点严格极大，∂_C(−g)′(0) 仍含正数，实际二阶次导数为 −2(a+1)w²。
+- **Dependencies / Evidence**：[CS-CLARKE](research/canonical/composite_subregularity.md#cs-clarke) 直接计算 g′、g″、全部相位聚值、导数 Lipschitz 界及达到差商下确界的序列。
+- **Objections / Scope**：要求全部 Clarke Hessian PSD 会漏掉真实极小点；要求存在 PSD 会纳入上述极大点。只反驳把这两种标准等同于实际 Θ₂ 的身份，不反驳局部极小的二阶必要条件或附加假设下的二阶充分条件。外部先行性未核。
+
+<a id="c163"></a>
+## C163-v1 / PA-LIFT · 全部合法块末点的完整反向编码
+
+- **Status**：`derived-checked`，集合关系的双向代数证明及独立复读。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=ℝⁿ，固定长度 m≥1 及块边界相位/记忆规则；B_m(x) 枚举从 x 出发的全部合法长度 m 路径末点。对 Λ>0 定义 F_{m,Λ}(y)={(x−y)/Λ:x∈X,y∈B_m(x)}。在全部输入上完整 J_{ΛF_{m,Λ}}=B_m，zer F_{m,Λ}=Fix B_m，包含空纤维。对 U⊂X、L>0、γ>0，输入位于 U 的全部图点对 AP-RL 等价于全部 y∈B_m(x)、y′∈B_m(x′)、x,x′∈U 的 ‖2(y−y′)−(x−x′)‖≤L‖x−x′‖^γ；因此每个输入至多一个末点。
+- **Dependencies / Evidence**：[PA-LIFT](research/canonical/path_atlas.md#pa-lift) 对全部纤维双向替换 v=(x−y)/Λ，不靠指定选择；同输入代入给唯一性。
+- **Objections / Scope**：还须另证 U⊂dom B_m 才称 U 上单值映射；末点唯一不保证内部路径唯一。F_{m,Λ} 是新定义关系，不自动等于原生生成关系。B_m=T^m 须完整合法路径枚举；Fix T^m 与 Fix T 及到全局目标的距离各自另核。不同相位/记忆、增广状态或度量必须重新声明。
+
+<a id="c164"></a>
+## C164-v1 / PA-CAPTURE · 首块有限进入与后续驻定的分层结论
+
+- **Status**：`derived-checked`，有限前缀归纳及独立复读。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留 PA-DEF 的 X,S,V,m 与真实合法转移，给初值 x₀∈V、t₀=d(x₀,S)。首块所有合法前缀均有距离/位移界 D_{w,j},G_{w,j}，在 V 中且距 S<η 的每个可达前缀有下一步，每个允许转移可延成合法完整词。全部 j<m,w 有 D_{w,j}(t₀)<η；L₀=sup_wΣ_{j<m}G_{w,j}(t₀)<dist(x₀,X\V)。若全部合法完整路径末点在 S，则每条轨道能构造到 m，首块留在 V，总长≤L₀，并在至多 m 步进入 S。若每个目标点另有至少一步且全部允许后继等于自身，则以后恒定，极限在 S∩V，总长仍≤L₀。
+- **Dependencies / Evidence**：[PA-CAPTURE](research/canonical/path_atlas.md#pa-capture) 的有限归纳及吸收集上两点往返反例；RL 只是步界的一种生产方式，并非本结论所需。
+- **Objections / Scope**：吸收性只保持已存在的后续路径在 S，不能代替后续 coverage、驻定、留域、有限长或点收敛。另行规定首次进入即停也可有限停机；这与继续迭代后驻定是两种明确算法含义。内部某步进入 S 不能省掉剩余边的吸收条件。
+
+<a id="c165"></a>
+## C165-v1 / CS-LOCAL-TARGET · 同一复合数据上的局部零集替换
+
+- **Status**：`derived-checked`，距离隔离及最近点证明经独立复读。
+- **Exact Statement / Objects / Domain / Quantifiers**：保持 C35/CS-EB 的全部同一数据、Γ=zer ∂f、S=c⁻¹(argmin φ)、R,σ,J,r。若闭集 T⊂Γ 满足 T∩B_R(x̄)=S∩B_R(x̄)，则全部 x∈B_{R/4}(x̄) 有 d(x,T)=d(x,S)。J≥σ 给 r≤R/4，故 C35 在 B_r 的 EB 保持同一 gauge/常数。另保持 C36 的全部前提时，x∈B_{r/2} 的任意 p∈P_T(x) 满足 ‖p−x̄‖≤2‖x−x̄‖<r，故为同图块零锚；C36 的轨道结论和留域预算可同样使用 T。
+- **Dependencies / Evidence**：[CS-LOCAL-TARGET](research/canonical/composite_subregularity.md#cs-local-target) 以同一球内目标及共同点隔离球外距离，闭性提供投影及极限入集。
+- **Objections / Scope**：这是替换的充分条件，不是所有替换的必要条件。保留 T⊂Γ 时，S∩B_R⊂T 已强迫局部相等；删去 T⊂Γ 后，单向包含不足。不能遗漏局部零点、把同域 EB 变成缩小目标的未经证明的 EB，或授予完整 J_F 的全部球外纤维身份。

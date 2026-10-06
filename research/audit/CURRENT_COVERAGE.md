@@ -8,9 +8,9 @@
 
 | 内容组的枚举状态 | 组数 | 精确含义 |
 | --- | ---: | --- |
-| 全LF已有登记去向 | 3 | 同字节全部行被已登记范围的并集覆盖；可仍有deferred、source-report、候选或开放义务 |
-| 部分LF已有登记去向 | 2 | 尚有未逐断言枚举的行；不能用选定章节推整稿完成 |
-| 尚无登记逐断言范围 | 341 | 格式提示、历史阅读、规范链接和标题分段均不能替代全内容枚举 |
+| 全LF已有登记去向 | 6 | 同字节全部行被已登记范围的并集覆盖；可仍有deferred、source-report、候选或开放义务 |
+| 部分LF已有登记去向 | 0 | 尚有未逐断言枚举的行；不能用选定章节推整稿完成 |
+| 尚无登记逐断言范围 | 340 | 格式提示、历史阅读、规范链接和标题分段均不能替代全内容枚举 |
 
 ## 精确登记范围
 
@@ -22,20 +22,23 @@
 | MP69-literature-scope | 524 | 426-524 | 162 | specific-primary-source-and-native-gates |
 | SS1-full | 763 | 1-763 | 400 | explicit-deferred-comparisons |
 | FOUNDATIONS-final-full | 2096 | 1-2096 | 282 | explicit-deferred-prior-art-and-optimality |
+| S19-SIGNED-SCHUR-full | 452 | 1-452 | 139 | explicit-original-version-and-atlas-gates |
+| PATH-core | 524 | 1-325 | 143 | explicit-native-fiber-and-literature-gates |
+| COMPOSITE-core | 420 | 1-311;338-420 | 264 | explicit-target-and-external-evidence-gates |
 
-以上 6 个范围共 1287 条原子记录；范围可能属于同一字节内容，不能当独立成果或文件数。
+以上 9 个范围共 1833 条原子记录；范围可能属于同一字节内容，不能当独立成果或文件数。
 
 ## 逐单元去向
 
 | 去向 | 行数 |
 | --- | ---: |
-| rewritten | 811 |
-| superseded | 25 |
-| duplicate | 118 |
+| rewritten | 1082 |
+| superseded | 48 |
+| duplicate | 158 |
 | refuted | 2 |
-| nonmathematical | 362 |
-| deferred | 125 |
+| nonmathematical | 523 |
+| deferred | 176 |
 
-合计 1443 行；同一内容可以有章节、原子断言、版本与重复位置的多种记录。这些行数不是独立成果数，不能除以文件、字节组或节点数报告数学清洗率。
+合计 1989 行；同一内容可以有章节、原子断言、版本与重复位置的多种记录。这些行数不是独立成果数，不能除以文件、字节组或节点数报告数学清洗率。
 
 已枚举来源按相同SHA-256回连到全部出现位置，来源角色仍由原位置保留；原件与成员初始清单的 `unreviewed` 是旧文件级关闭门，当前细粒度进度以本页、[登记表](ATOMIC_SCOPE_REGISTRY.tsv)和[逐单元去向](UNIT_DISPOSITIONS.tsv)为准。尚未关闭全库语义分母，也未证明总体规模比较。
