@@ -32,12 +32,12 @@
 
 | 去向 | 行数 |
 | --- | ---: |
-| rewritten | 1082 |
-| superseded | 48 |
+| rewritten | 1106 |
+| superseded | 49 |
 | duplicate | 158 |
 | refuted | 2 |
-| nonmathematical | 523 |
-| deferred | 176 |
+| nonmathematical | 526 |
+| deferred | 148 |
 
 合计 1989 行；同一内容可以有章节、原子断言、版本与重复位置的多种记录。这些行数不是独立成果数，不能除以文件、字节组或节点数报告数学清洗率。
 

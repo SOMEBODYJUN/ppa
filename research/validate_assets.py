@@ -172,6 +172,7 @@ if seed_path.is_file():
 # inferred from the number of ledger rows or from a title-level seed segment.
 atomic_count = 0
 atomic_seen = set()
+atomic_by_key = {}
 scope_registry = ROOT / "research/audit/ATOMIC_SCOPE_REGISTRY.tsv"
 if scope_registry.is_file():
     with scope_registry.open(encoding="utf-8", newline="") as f:
@@ -225,6 +226,7 @@ if scope_registry.is_file():
                     errors.append(f"duplicate atomic identity: {uid}")
                 atomic_seen.add(uid)
                 atomic_count += 1
+                atomic_by_key[(row["source_locator"], uid)] = row
                 first, last = int(row["line_start"]), int(row["line_end"])
                 unit_lines = set(range(first, last + 1))
                 if row["source_locator"] != locator or first > last or not unit_lines <= declared:
@@ -303,6 +305,24 @@ if unit_path.is_file():
                 errors.append(f"missing unit target: {key} -> {target}")
         elif row["disposition"] in {"rewritten", "superseded", "refuted"}:
             errors.append(f"missing unit target: {key}")
+
+    # Atomic tables own the fine-grained assertion decisions. The global ledger
+    # must mirror their exact source identity, disposition and current target;
+    # extra legacy chapter/version rows do not claim atomic source coverage.
+    global_by_key = {(row["source"], row["unit"]): row for row in units}
+    for key, atomic in atomic_by_key.items():
+        global_row = global_by_key.get(key)
+        if global_row is None:
+            errors.append(f"atomic unit missing from global disposition ledger: {key}")
+            continue
+        if global_row["disposition"] != atomic["disposition"]:
+            errors.append(f"atomic/global disposition drift: {atomic['unit_id']}")
+        targets = atomic["canonical_anchor"].split(";") if atomic["canonical_anchor"] else []
+        if targets and global_row["canonical_target"] not in targets:
+            errors.append(f"atomic/global canonical-target drift: {atomic['unit_id']}")
+    for row in units:
+        if row["unit"] in atomic_seen and (row["source"], row["unit"]) not in atomic_by_key:
+            errors.append(f"atomic/global source-identity drift: {row['unit']}")
 
 graph = json.loads((ROOT / "research/graph.json").read_text(encoding="utf-8"))
 for relative in (

@@ -4,6 +4,9 @@
 
 | 单元 | 可用结论 | 不可省的门 |
 | --- | --- | --- |
+| [C161：proper-lsc目标转移](../../canonical/composite_subregularity.md#cs-transfer-lsc) | 同一小球内三个全局目标距离一致 | 有限值基点、局部下界、驻点弱分离及目标夹层；不从距离转移取得复合链式或coverage |
+| [C162：实际二阶与Clarke反例](../../canonical/composite_subregularity.md#cs-clarke) | 全部/存在Clarke PSD均不能等同实际Θ₂ | 指定完整标量函数及实际second subderivative；不否定局部极小的二阶必要条件 |
+| [C165：保留局部零集的替换](../../canonical/composite_subregularity.md#cs-local-target) | 同窗真EB、最近零锚和局部轨道保持 | 全部CS-EB/PROX数据、闭T⊂Γ及同球T=S；不能遗漏局部零点或授予球外完整纤维 |
 | [尖点外层的多值次梯度](cusp_identification.md) | 给定满秩曲面及 \(\nu>0\)，图在解集上真多值；局部近端在明确距离门槛内一步识别整条非孤立解曲线 | 全部外层乘子界、\(\lambda h<1\)、同图局部输出与输入位置 |
 | [振荡弱分离反例](oscillating_target.md) | 光滑非负函数在零点附近有驻点严格极大序列，到 \(\Theta_2\) 的任何 \(\Psi(0)=0\) 误差界失败 | 目标为完整 \(\Theta_2\)，不能换成驻点集 \(\Gamma\) |
 | [CS-OPEN-RANK](../../canonical/composite_subregularity.md#cs-objections) | 秩亏、活动面变换时的原生目标正确验证器仍开放 | 新桥不能把待证的复合真实残差增长作为前提 |
