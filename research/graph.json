@@ -2172,13 +2172,13 @@
     {
       "id": "CF-REAL-DATA",
       "label": "有限实坐标P2乘积目标及实际刷新核",
-      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-supplements",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-real-product",
       "evidence_status": "derived-checked"
     },
     {
       "id": "CF-REAL-TOOLS",
-      "label": "CF15可测分位数/条件混合EB/实际核收缩",
-      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-supplements",
+      "label": "C176 / CF15 可测分位数、条件误差界与实际核收缩",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-real-product",
       "evidence_status": "derived-checked"
     },
     {
@@ -2506,7 +2506,7 @@
       "output": "OS-E",
       "relation": "conditional",
       "scope": "同 S、同 coverage/留域；公共 all-pairs LT 归一化",
-      "status": "S20 内部证明"
+      "status": "derived-checked；C16匹配公共all-pairs接口的规范代数转换；不涵盖完整LT框架或总体规模比较"
     },
     {
       "id": "E18",
@@ -5448,7 +5448,7 @@
       ],
       "output": "CF-REAL-TOOLS",
       "relation": "implies",
-      "scope": "CF15有限m实坐标及P2目标/初律、pi>0和总概率≤1；分位数可测/层积分最优/条件混合保持同β_i边缘，实际共享刷新核收缩。只给有效常数，不是一般纤维结论。",
+      "scope": "C176-v1 / CF15有限m实坐标及P2目标/初律、pi>0和总概率≤1；分位数可测/层积分最优/条件混合保持同β_i边缘，实际共享刷新核收缩。只给有效常数，不是一般纤维结论。",
       "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
     },
     {

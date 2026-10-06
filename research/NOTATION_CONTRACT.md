@@ -75,7 +75,7 @@
 
 [C169–C171](topics/random_markov/finite_state_completion.md#fsc-object)的 \(\mathcal J\) 是明确给定的紧凸多面体目标，可不同于不变律集；\(E_{\mathcal J}\) 和 \(\Phi_{\mathcal J}\) 都是平方量，\(B_*\) 是平方EB系数、\(K_*=\sqrt{B_*}\)。概率列向量的更新是\(P^\top\mu\)。真实核率和显示的almost-firm标量充分公式分别判断。
 
-[C173–C175](topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-object)的 \(C\) 是非负影响矩阵，\(w\) 是状态差成本权重；CF3的任意\(w>0\)与CF4的特定构造权重不得互换。\(D_{\rm cond}\)只是在各明确模型里重绑定的条件残差，不是同步\(\Psi\)；\(\epsilon_*\)固定同一随机映射表示和Euclidean成本。[C177](canonical/topological_repair_obstructions.md#tr-germ)的\(Q\)是germ商，不是Gaussian正定矩阵；商Baire性和Polish性分别判断。
+[C173–C176](topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-object)的 \(C\) 是非负影响矩阵，\(w\) 是状态差成本权重；CF3的任意\(w>0\)与CF4的特定构造权重不得互换。\(D_{\rm cond}\)只是在各明确模型里重绑定的条件残差，不是同步\(\Psi\)；\(\epsilon_*\)固定同一随机映射表示和Euclidean成本。[C177](canonical/topological_repair_obstructions.md#tr-germ)的\(Q\)是germ商，不是Gaussian正定矩阵；商Baire性和Polish性分别判断。
 
 图坐标变换另严格区分：`operator_space` 的 \(L_\lambda(u,v)=(u+\lambda v,u)\) 给输入/输出图；构造前沿的 \(\mathscr C_\lambda(u,v)=(u+\lambda v,u-\lambda v)\) 给输入/反射图。二者不可用同一名称替代。
 

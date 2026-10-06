@@ -151,7 +151,10 @@ E(\mu)^2=1/4,\quad E(\mu P)^2=1/8,
 \]
 C129 取 \(c=\sqrt{1-a_*}\)。此项是上界，未称最小。其最佳 EB 与最佳到目标率满足 \(c_*^2=1-K_*^{-2}\)，只是 C129 两个已证常数的代数身份。
 
-**实值坐标乘积的充分推广。** 取固定纤维 \(\mathbb R^m\)、\(m\ge1\)，每个 \(\beta_i\) 为 \(\mathbb R\) 上有限二阶矩概率律，\(\beta=\bigotimes_i\beta_i\)。固定 \(p_i>0\)、\(\sum_i p_i\le1\)；核 \(P\) 以概率 \(p_i\) 独立按 \(\beta_i\) 重抽第 \(i\) 位，余概率保持。对 \(\mu\in\mathcal P_2(\mathbb R^m)\)，使用标准 Borel 空间的常规条件概率分解，令
+<a id="cfi-real-product"></a>
+### C176-v1 · 实值坐标乘积的充分推广
+
+ 取固定纤维 \(\mathbb R^m\)、\(m\ge1\)，每个 \(\beta_i\) 为 \(\mathbb R\) 上有限二阶矩概率律，\(\beta=\bigotimes_i\beta_i\)。固定 \(p_i>0\)、\(\sum_i p_i\le1\)；核 \(P\) 以概率 \(p_i\) 独立按 \(\beta_i\) 重抽第 \(i\) 位，余概率保持。对 \(\mu\in\mathcal P_2(\mathbb R^m)\)，使用标准 Borel 空间的常规条件概率分解，令
 \[
 d_i^2=\int W_2(\mu_i(\cdot\mid x_{-i}),\beta_i)^2\,\mu_{-i}(dx_{-i}),
 \qquad D_{\rm cond}^2=\sum_ip_id_i^2.
@@ -236,4 +239,4 @@ E_k^2=\frac1{2p}\int_0^1v^{1/p-1}(1-v)^k\,dv
 
 ## 来源范围与未闭门
 
-原件为 `条件残差修复_相关性与块刷新定理.md`，本页对应其 §4、§3 可数连续实现、§6 和逐式补充；[全部519 LF审计](../../audit/CONDITIONAL_REPAIR_FULL_COVERAGE.md#cfr-full)逐项记录源陈述、证明、文献与执行报告。C173–C175 的状态为 `derived-checked`，限于本页完整有限证明及指定模型，不由原稿的 PROJECT_PROOF/PASS 获得。来源外部文献、历史检索行为、程序运行身份和全球先行性仍分别列明义务；没有一般原生核上 \(D_{\rm cond}\to\Psi\) 的桥。
+原件为 `条件残差修复_相关性与块刷新定理.md`，本页对应其 §4、§3 可数连续实现、§6 和逐式补充；[全部519 LF审计](../../audit/CONDITIONAL_REPAIR_FULL_COVERAGE.md#cfr-full)逐项记录源陈述、证明、文献与执行报告。C173–C176 的状态为 `derived-checked`，限于本页完整有限证明及指定模型，不由原稿的 PROJECT_PROOF/PASS 获得。来源外部文献、历史检索行为、程序运行身份和全球先行性仍分别列明义务；没有一般原生核上 \(D_{\rm cond}\to\Psi\) 的桥。

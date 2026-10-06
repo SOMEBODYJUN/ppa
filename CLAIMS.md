@@ -1469,6 +1469,14 @@
 - **Definitions / Dependencies / Evidence**：[CF11–CF13](research/topics/random_markov/conditional_refresh_interfaces.md#cfi-boundary-object)，C144只供应已证明的原输入最优Ψ身份和两原子见证。条件拓扑反例显式保持同一ν；三模型在正文分别声明。
 - **Counterevidence / Objections / Scope**：不否定C129/C130的条件EB，不否定实际同步配对能量；不把D_cond当Ψ或一般law-step。跨ν不直接定义Wν，绝对尾不等于相对率。没有通用非线性RL结论。
 
+<a id="c176"></a>
+## C176-v1 / CONDITIONAL-REAL-PRODUCT · 有限实坐标乘积刷新的条件误差界
+
+- **Status**：`derived-checked`，CF15 的可测分位数、条件混合与实际核证明经独立重构及本轮协调复核；本次补全既有正文/图关系的身份登记。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定整数 m≥1、β_i∈𝒫₂(ℝ)、β=⊗ᵢβ_i，以及 p_i>0、Σᵢp_i≤1。核 P 以概率 p_i 独立重抽第 i 坐标为 β_i，余概率保持。对全部 μ∈𝒫₂(ℝᵐ)，以标准Borel常规条件律定义 d_i²=∫W₂(μ_i(·|x₋ᵢ),β_i)²dμ₋ᵢ 和 D_cond²=Σᵢp_id_i²，a_*=minᵢp_i。全部条件成本可测且有限，并有 W₂(μ,β)²≤Σᵢd_i²≤D_cond²/a_*、W₂(μP,β)²≤(1−a_*)W₂(μ,β)²。因此残差零集恰为{β}，β是𝒫₂内唯一不变律，且 W₂(μPᵏ,β)≤(1−a_*)^(k/2)W₂(μ,β)。a_*=1时k=0另取因子1。
+- **Definitions / Dependencies / Evidence**：[CF15完整自足证明](research/topics/random_markov/conditional_refresh_interfaces.md#cfi-real-product)：一维共同分位数的可测性、截断/层积分最优性、条件混合保持同β_i第二边缘及顺序耦合给第一界；共享实际重抽给收缩。仅导入标准Borel常规条件概率分解和基本积分事实，不借有限bit的最优常数迁移。
+- **Counterevidence / Objections / Scope / Related Files**：这是有限个实坐标、同一个乘积目标和核上的有效常数，不声明锐性、相关非乘积目标、任意纤维或一般Ψ界。D_cond不等于law-step或同步输入最优OT残差Ψ；普通联合W₂是本对象的距离，不与守恒变量下的条件距离混用。来源519LF去向在[条件修复审计](research/audit/CONDITIONAL_REPAIR_FULL_COVERAGE.md)；既有图E273不改变数学范围，新颖性未核。
+
 <a id="c177"></a>
 ## C177-v1 / NG-GERM · 固定零点连续自映射的germ商：非Polish而仍Baire
 
