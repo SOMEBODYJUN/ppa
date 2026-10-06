@@ -12,7 +12,7 @@
 
 - **尝试及机制**：只看 \(T|_U\) 的轨道和反射模，或以选中的 proximal step 残差代替 \(r_F(u)=\inf_{v\in F(u)}\|v\|\)，再在原对象上使用误差界／类别结论。
 - **失败点**：域外完整图点仍可改变逆纤维和最小残差；proper/quotient 的 T-only 观测也不自动 category-preserving。**信息损失和缺少提升定理**，不是“全域 T 不决定 F”。
-- **salvage / 重启条件**：固定步长的全域完整 \(T\) 可由 \(F(u)=\{(p-u)/\lambda:Tp=u\}\) 反演。可从一开始采用完整紧源 \(F_{T,K}\)，或证明局部图卡的保真及类别保持条件。[9/20 07_final_handoff §2, §5](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/07_final_handoff.md)。
+- **salvage / 重启条件**：固定步长的全域完整 \(T\) 可由 \(F(u)=\{(p-u)/\lambda:p\in\operatorname{dom}T,\ u\in T(p)\}\) 反演。可从一开始采用完整紧源 \(F_{T,K}\)，或证明局部图卡的保真及类别保持条件。[9/20 07_final_handoff §2, §5](history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/01_CANONICAL_HANDOFF/mathematician_handoff/07_final_handoff.md)。
 
 ## F03 · 旧解选择稿把 \(J_{\mathcal G}\) 无条件升级为 \(J_{\lambda F}\)
 
@@ -24,13 +24,13 @@
 
 - **尝试及机制**：在中立无参数的宽图空间或普通一致收敛动力空间直接比较“多少对象”有 LT / RLEB 证书。
 - **来源包报告的失败点**：局部完整连续 resolvent 类本身第一纲；粗糙近恒等扰动把全部正 Hölder 类一起判小。测到野生连续动力与正则动力的差，而不是两套认证的相对能力。
-- **salvage / 重启条件**：保留这些塌缩定理作为新母空间的反例测试；若要另用 Baire，应给非退化分母及结构上有理由的拓扑，并追齐原证明的精确图卡。[9/21 N05](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)；部分原审计文件本次未附。
+- **salvage / 重启条件**：将这些来源报告作为新母空间的待恢复反塌缩测试；当前不能作已证反定理调用；若要另用 Baire，应给非退化分母及结构上有理由的拓扑，并追齐原证明的精确图卡。[9/21 N05](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)；部分原审计文件本次未附。
 
 ## F05 · 原动力度量的“差集非 σ-upper-porous”目标
 
 - **尝试及机制**：对 \((X_D,d_{\rm dyn})\) 的 \(\mathcal R_D\setminus(\mathcal L_D\cup\mathcal M_D)\) 证明绝对孔隙意义下不小。
 - **来源包报告的反定理**：\(\mathcal R_D\subseteq\mathcal H_+\in\sigma\mathcal P^-\subseteq\sigma\mathcal P^+\)，差集作为子集也被判小；整个原目标在该环境中被否定。机制是正 Hölder 层可制造统一微观孔洞。
-- **salvage / 重启条件**：保存负定理和量尺诊断；不再用同一 \(X_D,d_{\rm dyn}\) 重提原目标。若新度量／等价关系改变，须先解释其自然性并核验相应孔隙传递条件。原精确定义、常数和证明需从历史 PRO 包恢复。[9/21 N10](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。
+- **salvage / 重启条件**：保留所报告的负结论和量尺诊断；同一 \(X_D,d_{\rm dyn}\) 上的原目标与报告冲突，须先恢复精确定义与证明，或明确反驳该报告；摘要本身不是已证禁止门。若新度量／等价关系改变，须先解释其自然性并核验相应孔隙传递条件。原精确定义、常数和证明需从历史 PRO 包恢复。[9/21 N10](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。
 
 ## F06 · 其他量尺／结构捷径
 

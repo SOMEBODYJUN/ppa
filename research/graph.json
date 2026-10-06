@@ -1900,6 +1900,26 @@
       "id": "SC-BAIRE",
       "label": "紧层相对内点并稠密当且仅当Baire C128",
       "file": "canonical/sigma_compact_baire.md#sc-proof"
+    },
+    {
+      "id": "STEP-GROWTH-WITNESS",
+      "label": "常步长完整单调平方图的实际1/k尾",
+      "file": "../FAILED_ROUTES.md#f39"
+    },
+    {
+      "id": "OB-GROWTH-O-RATE",
+      "label": "仅λ_k=O(k²)就有半阶EB的k^(-3/2)尾（错误）",
+      "file": "../FAILED_ROUTES.md#f39"
+    },
+    {
+      "id": "SNOWFLAKE-MR-WITNESS",
+      "label": "雪花输出度量上的非恒定全域q>1 MR",
+      "file": "../FAILED_ROUTES.md#f40"
+    },
+    {
+      "id": "OB-METRIC-Q-DEGENERACY",
+      "label": "任意度量空间的q>1 MR必局部常值（错误）",
+      "file": "../FAILED_ROUTES.md#f40"
     }
   ],
   "edges": [
@@ -4706,7 +4726,7 @@
       ],
       "output": "QA-TAIL",
       "relation": "implies",
-      "scope": "C160 / F44 同一完整均值T，固定I,k,K>0、全部生成元函数类与D>0凸域；先定ℓ<1/α和非负N，全部初值全部n的共同超几何点尾。实际点Q二次只上界4αK，零直径/零K分开处理。",
+      "scope": "C160 / F44 同一完整均值T，固定I,k,K>0、全部生成元函数类与D>0凸域；先定ℓ<1/α和非负N，全部初值全部n的共同超几何点尾。实际点Q二次对全部n≥N仅授上界4αK，零直径/零K分开处理。",
       "status": "derived-checked；QA1–13直接证明，原版本事实primary-checked；先行性另核"
     },
     {
@@ -4741,6 +4761,28 @@
       "relation": "equivalence",
       "scope": "C128 给定同一度量Z及确实穷尽Z的可数紧覆盖K_n；Z为Baire当且仅当各Int_Z K_n之并稠密。仅拓扑诊断，不给任何原生完整算子空间、保纲观测或总体规模比较。",
       "status": "derived-checked；SC1–2双向证明，原生空间认证另核"
+    },
+    {
+      "id": "E246",
+      "topic": "基础接口",
+      "inputs": [
+        "STEP-GROWTH-WITNESS"
+      ],
+      "output": "OB-GROWTH-O-RATE",
+      "relation": "refutes",
+      "scope": "F39同一完整F(x)=x|x|、S={0}、真半阶EB、λ_k=1∈O(k²)；全部正初值x_k∼1/k，反驳仅上增长界推出k^(-3/2)的指定旧量词。不判定外部勘误；Ω/Θ新版本须另审。",
+      "status": "derived-checked；完整递推与倒数增量解析反例，外部版本状态另核"
+    },
+    {
+      "id": "E247",
+      "topic": "基础接口",
+      "inputs": [
+        "SNOWFLAKE-MR-WITNESS"
+      ],
+      "output": "OB-METRIC-Q-DEGENERACY",
+      "relation": "refutes",
+      "scope": "F40对每个q>1取X=(R,通常度量)、Y=(R,|·|^(1/q))及恒等映射；全部x,y满足d_X(x,F⁻¹y)=d_Y(y,Fx)^q且非局部常值。只反驳任意度量版本；不判断赋范/长度空间或额外inverse localization版本。",
+      "status": "derived-checked；合法雪花度量和全域恒等式直接证明"
     }
   ]
 }

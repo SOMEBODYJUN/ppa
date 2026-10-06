@@ -22,6 +22,7 @@
 
 本轮协调检查新增两个版本边界：C49-v1 的负指数包络可把 gauge 求值推出定义域，C50-v1 的固定小步不足以强制渐近系数；改用 [C49-v2/C50-v2](research/canonical/nonisolated_alignment.md) 的正指数与趋零步长门。固定目标随机近端的 C62-v1 只核有限纤维却断言全部纤维身份，[F37](FAILED_ROUTES.md#f37) 已反驳；[C62-v2](CLAIMS.md#c62-v2) 保留吸收主定理并对附带纤维等式加完整量词。C12 的反例边现在只指向 v0，不能用于否定给定度量完备的 v1。
 
+<a id="next-actions"></a>
 ## 下一轮具体行动
 
 1. 先对总体比较写一页 \((\mathfrak X,\mathfrak I,\mathcal R,\mathcal L,\mathcal M)\) 规格；用 [operator_space](research/operator_space.md) 中局部观测、远端自由度、紧图非极大单调 C142 与共同塌缩机制立即攻击。若用 C135 的步长谱方案，先在该同一空间分别证明 LT、direct、energy 的乘积闭预算块及**等价**的可数耗尽；抽象上半连续不提供这一步。若量尺把目标类一同判小，改量尺或表示，不追加孤立成员例。

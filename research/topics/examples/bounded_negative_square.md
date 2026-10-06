@@ -19,7 +19,7 @@ F(x)=\begin{cases}\{-x^2\},&0\le x\le1/2,\\
 
 来源线索为 9/01 ZIP `work/c_gx053_065.md` 的 GX-053，精确成员路径见
 [逐源去向](../../audit/UNIT_DISPOSITIONS.tsv)。下列断言重新从 (NS1)
-计算；旧稿对 Spingarn 名称、VI 标签及外部先行性的归类不在本卡审查范围。
+计算；1980作者稿的strict命名已在[规范定义卡](../../canonical/spingarn_author_definitions.md#sp-first-order)核对；刊本对应及其它历史归属与先行性仍各自保留调用门。
 
 <a id="bns-minty"></a>
 ## C100-v1：全图成对模随步长的相变
@@ -171,4 +171,4 @@ H(x)=\begin{cases}x,&x<0,\\x-x^2,&0\le x\le1/2,\\1/4,&x>1/2,\end{cases}
 上述固定目标模没有改变目标覆盖量词，也不把该参考点误作零目标。
 
 本次补项状态为 `derived-checked`，仅指 (NS7)–(NS10) 的独立
-代数、扩图与目标纤维证明；Claim 身份由总账另登记，历史命名仍待核。
+代数、扩图与目标纤维证明；Claim 身份由总账另登记，1980作者稿strict命名已核；后续刊本对应与其它历史命名仍待核。

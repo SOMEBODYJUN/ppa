@@ -264,7 +264,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：固定同一 Cayley 输入域 \(D\)、同一 \(C:D\to H\)。若 \(\operatorname{diam}D\le\Delta<\infty\)，\(0<\gamma_1\le\gamma_2\le1\) 且 \(C\) 是 \((L_2,\gamma_2)\)-Hölder，则它在同一域是 \((L_2\Delta^{\gamma_2-\gamma_1},\gamma_1)\)-Hölder。无界 \(D\) 上没有这条一般包含：\(C(s)=s\) 的更小指数全局失败；\(C(s)=\operatorname{sgn}(s)|s|^\gamma\) 在零点对更大指数、无穷远对更小指数失败。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定同一 Cayley 输入域 \(D\)、同一 \(C:D\to H\)。若 \(0<\Delta<\infty\)且\(\operatorname{diam}D\le\Delta\)，\(0<\gamma_1\le\gamma_2\le1\) 且 \(C\) 是 \((L_2,\gamma_2)\)-Hölder，则它在同一域是 \((L_2\Delta^{\gamma_2-\gamma_1},\gamma_1)\)-Hölder。无界 \(D\) 上没有这条一般包含：\(C(s)=s\) 的更小指数全局失败；\(C(s)=\operatorname{sgn}(s)|s|^\gamma\) 在零点对更大指数、无穷远对更小指数失败。
 - **Dependencies / Evidence / Counterevidence / Status**：尺度幂代数及相反数给凹幂的全局锐常数 \(2^{1-\gamma}\)，见[PD-SCALE](research/canonical/parameter_dictionary.md#pd-scale)；`derived-checked`。单点域真空，局部下界配对只给远离对角线的估计，不冒充邻域 Lipschitz。
 
 ## C30-v1 / PD-RESIDUAL · 完整最小残差的推理方向
@@ -766,7 +766,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：实非零 Hilbert 空间、固定 \(\lambda>0,\mu,\rho\in\mathbb R\)、非空完整关系图或指定图块 \(\Gamma\)。对**任意两**图点以 \(a=\Delta x,b=\Delta v\) 要求 \(\langle a,b\rangle\ge\mu\|a\|^2+\rho\|b\|^2\)。令 \(m=\lambda\mu,s=\rho/\lambda,A=1+m+s,B=m-s,\Delta=1-4\mu\rho\)。无参数门时它等价于 \(A\|r\|^2+2B\langle d,r\rangle\le(1-m-s)\|d\|^2\)；若 \(A>0,\Delta\ge0\)，则等价于 \(\|r+(B/A)d\|\le(\sqrt\Delta/A)\|d\|\)，自然域上的 Cayley 单值，普适锐反射和近端 Lipschitz 上界分别为 \((|B|+\sqrt\Delta)/A\) 与 \((|1+2s|+\sqrt\Delta)/(2A)\)。\(\Delta>0\) 时此类统一保证单射的锐步长门是 NT9 的开区间；端点 \(A\le0\) 存在完整碰撞图。
+- **Exact Statement / Objects / Domain / Quantifiers**：实非零 Hilbert 空间、固定 \(\lambda>0,\mu,\rho\in\mathbb R\)、非空完整关系图或指定图块 \(\Gamma\)。对**任意两**图点以 \(a=\Delta x,b=\Delta v\) 要求 \(\langle a,b\rangle\ge\mu\|a\|^2+\rho\|b\|^2\)。令 \(m=\lambda\mu,s=\rho/\lambda,A=1+m+s,B=m-s,\Delta=1-4\mu\rho\)。另记 \(d=a+\lambda b,r=a-\lambda b\)。无参数门时它等价于 \(A\|r\|^2+2B\langle d,r\rangle\le(1-m-s)\|d\|^2\)；若 \(A>0,\Delta\ge0\)，则等价于 \(\|r+(B/A)d\|\le(\sqrt\Delta/A)\|d\|\)，自然域上的 Cayley 单值，普适锐反射和近端 Lipschitz 上界分别为 \((|B|+\sqrt\Delta)/A\) 与 \((|1+2s|+\sqrt\Delta)/(2A)\)。\(\Delta>0\) 时此类统一保证单射的锐步长门是 NT9 的开区间；端点 \(A\le0\) 存在完整碰撞图。
 - **Dependencies / Evidence / Status / Related Files**：[NT-QUADRATIC/SHARP/STEP](research/canonical/non_tied_cayley.md#nt-quadratic) 的配方、完整 Minty 域线性取等图和端点反例逐项证明。来源是 9/01 ZIP `work/a_monotonicity.md` §2.1 精确单元，哈希和另一字节相同 checkpoint 见正文；`derived-checked` 限数学推导，文献新颖性未核。
 - **Counterevidence / Scope**：反射一个未平移的 Lipschitz 常数不能恢复非 tied 交叉项；只在图块得图块近端单值，不产生完整 \(J_{\lambda F}\) 的 coverage、排他或真残差 EB。\(\Delta<0\)、\(A\le0\) 不套平方根上界。
 
@@ -1269,7 +1269,7 @@
 ## C151-v1 / GX054-GEOMETRY · 负三次的全图缺陷与非零逆稳定
 
 - **Status**：`derived-checked`，NC5–9完整纤维及局部目标证明。
-- **Exact Statement / Objects / Domain / Quantifiers**：完整全域F=−x³无有限全图hypo/cohypo；[−M,M]图块hypo锐3M²，任意零邻域无有限cohypo。每个λ>0完整J(p)恰三次方程全部实根，自然输入全R；完整碰撞排除有限LT。3λM²<1时图块τ锐3λM²/(1−3λM²)²。每个x₀≠0,y₀=−x₀³，完整逆G=−∛y在不含零的目标窗Vη=[y₀−η,y₀+η]、0<η<|y₀|，锐Lipschitz系数Kη=1/[3(|y₀|−η)^(2/3)]；Uη=G(Vη)上全部x,y给MR/SMR，缩窗模1/(3x₀²)。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整全域F=−x³无有限全图hypo/cohypo；每个M>0的[−M,M]图块hypo锐3M²，任意零邻域无有限cohypo。每个λ>0完整J(p)恰三次方程全部实根，自然输入全R；完整碰撞排除有限LT。3λM²<1时图块τ锐3λM²/(1−3λM²)²。每个x₀≠0,y₀=−x₀³，完整逆G=−∛y在不含零的目标窗Vη=[y₀−η,y₀+η]、0<η<|y₀|，锐Lipschitz系数Kη=1/[3(|y₀|−η)^(2/3)]；全部x∈Uη=G(Vη)、y∈Vη给MR/SMR，缩窗模1/(3x₀²)。
 - **Dependencies / Evidence**：[NC5–7](research/topics/examples/negative_cubic_branch.md#nc-geometry)、[NC8–9](research/topics/examples/negative_cubic_branch.md#nc-nonzero)；C106/C107零点与图块路径另保留。
 - **Objections / Scope**：全图、图块和非零局部目标不混同；完整J非空不推出单值。
 
@@ -1333,7 +1333,7 @@
 ## C159-v1 / GD-BOUNDARY · 同 gauge 跨 Minty 坐标失败
 
 - **Status**：`derived-checked`，GD-1–7 的完整显式计算。
-- **Exact Statement / Objects / Domain / Quantifiers**：实标量、固定 λ=1，t₀=1/2、tₙ=2^(−2ⁿ)、ψ(t)=tₙ² 对 tₙ≤t<tₙ₋₁、ψ(0)=0。ψ 有限非减且 o(t)，完整紧图 Γ={(0,0)}∪{(−tₙ²,tₙ):n≥1} 的零集 {0}，所有有限真实残差点满足 |y|=ψ(r_F(y))。完整 resolvent 在 D={0}∪{tₙ−tₙ²} 唯一；每个零点 graph germ 和每个有限 C 均有 |J_Fx|>Cψ(|x|)，而全 D 上 |J_Fx|≤ψ(2|x|)。ψ(2sₙ)/ψ(sₙ)→∞，sₙ=tₙ/2。
+- **Exact Statement / Objects / Domain / Quantifiers**：实标量、固定 λ=1，t₀=1/2、tₙ=2^(−2ⁿ)，ψ:[0,1/2)→[0,∞)取ψ(t)=tₙ² 对 tₙ≤t<tₙ₋₁、n≥1，ψ(0)=0。ψ 有限非减且 o(t)，完整紧图 Γ={(0,0)}∪{(−tₙ²,tₙ):n≥1} 的零集 {0}，所有有限真实残差点满足 |y|=ψ(r_F(y))。完整 resolvent 在 D={0}∪{tₙ−tₙ²:n≥1} 唯一；每个零点 graph germ 和每个有限 C 均有 |J_Fx|>Cψ(|x|)，而全 D 上 |J_Fx|≤ψ(2|x|)。ψ(2sₙ)/ψ(sₙ)→∞，sₙ=tₙ/2。
 - **Dependencies / Evidence**：[完整 gauge、图和证明](research/canonical/gauge_dilation_boundary.md#gd-theorem)；带重标度正向门为 [IZ-GERM](research/canonical/isolated_zero_flatness.md#iz-germ)。补足最终 foundations §7.2 的阶梯见证。
 - **Objections / Scope**：D 不含零点的输入邻域，不认证局部全输入 PPA；ψ 在正点不连续，不反驳额外要求正点连续 gauge 的版本。只证明固定同一 gauge 的失败，不否定重标度 gauge 或额外 dilation 控制。
 
@@ -1341,6 +1341,6 @@
 ## C160-v1 / QA-TAIL-SELECTION · 正则拟算术均值的共同尾与选择界
 
 - **Status**：`derived-checked`，QA1–13 自足证明；指定原文事实另为 `primary-checked`。
-- **Exact Statement / Objects / Domain / Quantifiers**：开区间 I、k≥1、K>0、全部生成元 fᵢ∈C²(I)、fᵢ′处处非零、fᵢ″局部有界变差、|fᵢ″/fᵢ′|≤K；完整均值映射 T=(fᵢ⁻¹(k⁻¹∑ⱼfᵢ(xⱼ)))ᵢ。先固定 D>0 和 X_D={x∈Iᵏ:diam x≤D}；令 α=(3+7e)/3、0<ℓ<1/α、q=αℓ、N=max(0,ceil log₂[(e^(KD)−1)/(e^ℓ−1)])。全部 x∈X_D 的唯一对角极限 Π(x)=M(x)1 满足全部 n≥N 的 ‖Tⁿx−Πx‖∞≤diam Tⁿx≤(αK)⁻¹q^(2^(n−N))；全文给全部 n≥0 的共同 A exp(−b2ⁿ) 界。同一凸域的全部初值对满足 ‖Πx−Πy‖∞≤exp[2(e^(KD)−1)]‖x−y‖∞。实际点误差仅授共同 Q二次上界 eₙ₊₁≤4αKeₙ²，不宣称逐轨道锐因子。
+- **Exact Statement / Objects / Domain / Quantifiers**：开区间 I、k≥1、K>0、全部生成元 fᵢ∈C²(I)、fᵢ′处处非零、fᵢ″局部有界变差、|fᵢ″/fᵢ′|≤K；完整均值映射 T=(fᵢ⁻¹(k⁻¹∑ⱼfᵢ(xⱼ)))ᵢ。先固定 D>0 和 X_D={x∈Iᵏ:diam x≤D}；令 α=(3+7e)/3、0<ℓ<1/α、q=αℓ、N=max(0,ceil log₂[(e^(KD)−1)/(e^ℓ−1)])。全部 x∈X_D 的唯一对角极限 Π(x)=M(x)1 满足全部 n≥N 的 ‖Tⁿx−Πx‖∞≤diam Tⁿx≤(αK)⁻¹q^(2^(n−N))；全文给全部 n≥0 的共同 A exp(−b2ⁿ) 界。同一凸域的全部初值对满足 ‖Πx−Πy‖∞≤exp[2(e^(KD)−1)]‖x−y‖∞。实际点误差对全部n≥N仅授共同 Q二次上界 eₙ₊₁≤4αKeₙ²，不宣称逐轨道锐因子。
 - **Dependencies / Evidence**：[QA-OBJECT](research/canonical/selection_quasi_arithmetic_boundary.md#qa-object)、[非负起步共同尾](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail)、[同域两初值界](research/canonical/selection_quasi_arithmetic_boundary.md#qa-selection)。直接 Jensen、Taylor 和全部导数乘积证明不依赖 P16 打印尾公式。原文版本与反例接口见 [规范一手接口](research/canonical/selection_primary_interfaces.md)。
 - **Objections / Scope**：D=0 的对角族、K=0 的仿射族另行处理，均不代入 log0 或 1/K。AGM 只在固定正闭窗局部化，K=1/a 不移到含轴窗。未编码完整 PPA 关系或授予 RL、真实 EB、严格兼容与新颖性；任意连续 φ属于复合 φ∘M，不代表 M 可任意粗糙。

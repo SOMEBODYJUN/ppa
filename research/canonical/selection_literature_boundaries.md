@@ -273,7 +273,7 @@ L=\max_M\|Df\|=\max_M\|Df_0\|
 f_i''\text{ 局部有界变差},\qquad\sup_I|f_i''/f_i'|\le K.
 \]
 
-导数逐点非零不等于全域统一正下界。令 \(Q\) 为这些拟算术均值的积，
+导数逐点非零不等于全域统一正下界。\(I\subset\mathbb R\)是本节指定的实区间，对\(x\in I^k\)明确写\(Q_i(x)=f_i^{-1}(k^{-1}\sum_j f_i(x_j))\)，\(Q=(Q_1,\ldots,Q_k)\)；与[QA1–QA3的均值定义](selection_quasi_arithmetic_boundary.md#qa-object)同型，本节仍用\(Q,D\)作为局部记号。
 
 \[
 D(x)=\max_i x_i-\min_i x_i,\quad\alpha=(3+7e)/3.

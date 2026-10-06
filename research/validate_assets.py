@@ -177,6 +177,9 @@ if scope_registry.is_file():
         scopes = list(csv.DictReader(f, delimiter="\t"))
     if len({s["scope_id"] for s in scopes}) != len(scopes):
         errors.append("duplicate atomic scope identity")
+    enumerated_lines = {}
+    scope_ids_by_hash = {}
+    total_lines_by_hash = {}
     for scope in scopes:
         locator = scope["source_locator"]
         container, sep, name = locator.partition("!/")
@@ -242,6 +245,30 @@ if scope_registry.is_file():
                         errors.append(f"missing atomic target: {uid} -> {target}")
         if covered != declared:
             errors.append(f"atomic coverage differs: {scope['scope_id']}: {len(declared-covered)} missing, {len(covered-declared)} extra lines")
+        sha = scope["payload_sha256"]
+        enumerated_lines.setdefault(sha, set()).update(declared)
+        scope_ids_by_hash.setdefault(sha, set()).add(scope["scope_id"])
+        if sha in total_lines_by_hash and total_lines_by_hash[sha] != lines:
+            errors.append(f"inconsistent atomic line count for content: {sha}")
+        total_lines_by_hash[sha] = lines
+
+    # Every exact-byte alias inherits the registered enumeration coverage,
+    # while proof/evidence status remains attached to individual assertions.
+    for row in payloads + occurrences:
+        sha = row["sha256"]
+        expected_ids = ";".join(sorted(scope_ids_by_hash.get(sha, set()))) or "none"
+        if row.get("atomic_scope_ids", "") != expected_ids:
+            errors.append(f"source index atomic-scope drift: {sha}")
+        if sha in enumerated_lines:
+            expected_status = ("enumerated-with-dispositions"
+                if len(enumerated_lines[sha]) == total_lines_by_hash[sha]
+                else "partially-enumerated-with-dispositions")
+            if row["enumeration_status"] != expected_status:
+                errors.append(f"source index enumeration-status drift: {sha}")
+        elif row["enumeration_status"] in {
+            "enumerated-with-dispositions", "partially-enumerated-with-dispositions"
+        }:
+            errors.append(f"unregistered enumeration status: {sha}")
 
 unit_path = ROOT / "research/audit/UNIT_DISPOSITIONS.tsv"
 if unit_path.is_file():

@@ -17,7 +17,7 @@
 [负平方×阶梯的完整乘积](product_splice.md) 从 GX-057 按全对象重算 Euclidean 直积的残差、完整近端与临界半阶常数：两个分量的线性模可取最大，但完整乘积半阶锐系数严格超过临界图点输出窗的 2；只限输入窗也不同。它不是把 GX-053/056 两张卡的常数机械并列。
 [负平方根短图与母图](restricted_root_graph.md) 从 GX-032 拆开两种完整关系；短图有锐全对常数和真二次 EB 却无第二步，母图另有远支及发散路径。
 
-[平面旋转族](planar_rotation_family.md) 从 GX-062/063 和共同公式独立重算全部步长 Minty 纤维、输入对距锐 RL、循环阶门与两角的同逆像模差异；来源末句将族内循环阶说成不由强单调系数决定已由 C123/F34 修正。外部 Voisei 例号及优先性待一手核。
+[平面旋转族](planar_rotation_family.md) 从 GX-062/063 和共同公式独立重算全部步长 Minty 纤维、输入对距锐 RL、循环阶门与两角的同逆像模差异；来源末句将族内循环阶说成不由强单调系数决定已由 C123/F34 修正。Voisei v2 Example43 的归属/编号已核；优先性仍待核。
 
 
 [AGM C146–C148](arithmetic_geometric_mean.md#agm-object) 把完整编码、真残差、同窗共同尾与严格兼容障碍放在同一对象上。[GX053–065补项 C150–C156](gx059_065_property_completion.md#gxp-conventions) 及三张扩写旧卡统一hypo/cohypo、signed/非负τ、完整逆纤维和非零参考点；来源逐行范围见[专用覆盖表](../../audit/GX053_065_COVERAGE.md#gx-scope)。

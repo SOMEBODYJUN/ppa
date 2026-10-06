@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 373 个数学节点、245 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 377 个数学节点、247 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -143,11 +143,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-1. 冻结总体比较的**计数对象、三类认证量词和大小不变量**的一页规格，先用 N05/N08/N09/N10 及远端自由度反例攻击，再尝试总体定理。
-2. 逐项追索 9/21 的 I-097–099、I-102；可恢复者重构证明，缺者保持报告状态。已恢复的 I-001/I-002/I-003–005/I-059/I-075 也分别核版本和证据身份。
-3. 为 9/25 §8 配对可编译源，并为一个目标原生模型逐输出认证整窗指定 \(T\) 的近端包含、两项估计、紧 usc/acyclic、上同调及同一 collar；[C70 包络](research/canonical/finite_sample_collar.md)与[引文适用门](research/LITERATURE.md#lit-grn-2002)已核，不能把有限样本认证当成这些全称条件。
-4. 若制作 9/19 新投稿版本，明写随机推论所用**给定度量完备**假设并保留原措辞反例；分别推进结构、锥、Markov 的外部先行性核验。
-5. 从[逐单元去向](research/audit/UNIT_DISPOSITIONS.tsv)继续核 foundations 尚未分项裁决的定义、其余 GX 单元，以及 M1 **历史原生循环图到已验显式 T 的桥**；新构造 C64 只说明一个可行 Sign 实现。GX-069/070 和非乘积随机近端的选定单元已有明确去向，不代表整个来源包关闭。下一步还应核复合秩亏原生桥和未审外部文献。新证明按[增长协议](RESEARCH_PROTOCOL.md)进入主题目录，再更新 Claim、图与前沿。
+现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：总体比较先冻结同一母空间及量尺，原生算法先认证完整纤维/整窗条件，来源清洗按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
 
 ## File Map
 
@@ -224,7 +220,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/gauge_dilation_boundary.md](research/canonical/gauge_dilation_boundary.md) | C159/GD-1–7：完整紧图上的真实超线性 gauge EB 不授予不重标度的同 gauge Minty 界；每个 graph germ 的完整反例及正确重标度界。离散自然域不等于邻域输入 coverage。 |
 | [SS1 全文枚举](research/audit/SS1_FULL_COVERAGE.md)、[foundations 最终正文枚举](research/audit/FOUNDATIONS_FINAL_COVERAGE.md) | SS1 的 763 行与最终 foundations 的 2096 行全部逐断言去向可查；具体文献、最佳常数及数值版本义务仍分别保留。仅关闭两个内容组的枚举门，不关闭全部历史包。 |
 | [research/audit/UNIT_DISPOSITIONS.tsv](research/audit/UNIT_DISPOSITIONS.tsv) | 逐源单元的来源节、规范身份、精确锚点及未闭义务；目前 1443 行有逐项去向（含数学、重复、组织用途及明确待核；不是独立成果数），只关闭列出的单元，不把整份原件标为已重写；[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 另给全库逐段验收路径。新增历史单元时续记，原创工作直接从增长协议进入。 |
-| [research/audit/C11_M1_SOURCE_SCOPES.md](research/audit/C11_M1_SOURCE_SCOPES.md)、[ATOMIC_SCOPE_REGISTRY.tsv](research/audit/ATOMIC_SCOPE_REGISTRY.tsv) | GX、SS1、C11 §8、M1 §5及§6–§9五个精确逐断言范围共722条原子记录；有逐项去向，不代表全库346内容组已验收。 |
+| [research/audit/C11_M1_SOURCE_SCOPES.md](research/audit/C11_M1_SOURCE_SCOPES.md)、[ATOMIC_SCOPE_REGISTRY.tsv](research/audit/ATOMIC_SCOPE_REGISTRY.tsv) | GX、SS1、最终foundations、C11 §8、M1 §5及§6–§9的精确逐断言范围；当前范围和原子记录以登记表及[覆盖快照](research/audit/CURRENT_COVERAGE.md)为准；有逐项去向，不代表全库346内容组已验收。 |
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
