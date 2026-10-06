@@ -1384,3 +1384,103 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：保持 C35/CS-EB 的全部同一数据、Γ=zer ∂f、S=c⁻¹(argmin φ)、R,σ,J,r。若闭集 T⊂Γ 满足 T∩B_R(x̄)=S∩B_R(x̄)，则全部 x∈B_{R/4}(x̄) 有 d(x,T)=d(x,S)。J≥σ 给 r≤R/4，故 C35 在 B_r 的 EB 保持同一 gauge/常数。另保持 C36 的全部前提时，x∈B_{r/2} 的任意 p∈P_T(x) 满足 ‖p−x̄‖≤2‖x−x̄‖<r，故为同图块零锚；C36 的轨道结论和留域预算可同样使用 T。
 - **Dependencies / Evidence**：[CS-LOCAL-TARGET](research/canonical/composite_subregularity.md#cs-local-target) 以同一球内目标及共同点隔离球外距离，闭性提供投影及极限入集。
 - **Objections / Scope**：这是替换的充分条件，不是所有替换的必要条件。保留 T⊂Γ 时，S∩B_R⊂T 已强迫局部相等；删去 T⊂Γ 后，单向包含不足。不能遗漏局部零点、把同域 EB 变成缩小目标的未经证明的 EB，或授予完整 J_F 的全部球外纤维身份。
+
+<a id="c166"></a>
+## C166-v1 / OP-PROFILE · 完整图残差剖面的同 gauge 门
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：实Hilbert空间H，完整F，任意输出窗V，非空闭S，有限非减ψ:[0,∞)→[0,∞)。B(t)=sup{d(u,S):u∈V,v∈F(u),‖v‖≤t}，空sup0。B≤ψ逐点等价于全部图值界；有限真残差EB推出二者。反向总得d(u,S)≤ψ(r_F(u)+)，每个有限残差取到或ψ在该值右连续时才由本工具得到同ψ的真EB；不是必要条件宣告。
+- **Definitions / Dependencies / Evidence**：[OP1–5完整证明](research/canonical/operator_profile_tools.md#op-profile)及强闭ℓ²完整图反例由独立Astra从定义重算。有限维闭纤维取到的充分门明确；有限gauge上端点另核。
+- **Counterevidence / Scope / Related Files**：仅原点连续和Hilbert闭图不足，反例r=1不达且ψ正点右跳。此是图值到inf桥，不与C59窗口缩域混同；不认证RL、coverage、算法留域或总体比较，外部新颖性未核。
+
+<a id="c167"></a>
+## C167-v1 / OP-COMPACTNESS · 同一紧对象块的闭约束相容性
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定非空紧拓扑对象块𝒦，固定闭子集C_i⊂𝒦(i≥1)，全部交非空当且仅当每个前N项交非空。用于严格认证须在同一实际对象块内预先固定可保留的闭余量条件。
+- **Definitions / Dependencies / Evidence**：[OP6及两个边界反例](research/canonical/operator_profile_tools.md#op-compactness)为紧开覆盖证明，独立重构。
+- **Counterevidence / Scope / Related Files**：非紧𝒦=ℝ、C_i=[i,∞)或非闭C_i=(0,1/i)均失败；随N改块/退化余量不满足条件。有限可行、闭性、原生身份、全部图点升级须另证；不是总体比较或实际拼接定理。
+
+<a id="c168"></a>
+## C168-v1 / OP-HOLE · 鲁棒越界见证与相对孔洞
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定紧度量K、非空闭S⊂K，𝔛⊂C(K,K)配一致度量，M≥0；A_M由所有x的d(Tx,x)≤Md(x,S)定义。若U∈𝔛在某x_*有余量a>0，则相对球B𝔛(U,a/2)避开A_M。若另有同c∈(0,1)对所有声明中心T和全部足够小r构造同𝔛中的U,a，使d∞(T,U)+cr≤r且a≥2cr，则B𝔛(U,cr)⊂B𝔛(T,r)\A_M。
+- **Definitions / Dependencies / Evidence**：[OP7–9三角证明](research/canonical/operator_profile_tools.md#op-hole)；独立审查同时攻击全中心/全小尺度量词及实际母空间保持门。
+- **Counterevidence / Scope / Related Files**：一个鲁棒见证不保证统一孔洞；别的对象度量需独立控制评价误差。本条不认证历史σ-upper/lower-porosity定理，也不提供同尾完整对象构造、LT统一必要常数或总体比较。
+
+<a id="c169"></a>
+## C169-v1 / FINITE-POLYHEDRAL-TARGET · 多面体目标的锐嵌套OT证书
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定N≥1个互异Euclidean状态、平方距离成本C、固定R≥0且零对角、非空紧凸多面体J⊂Δ_N。对全部μ，Φ_J取外层全部J、内层实际两边缘的C最优计划的最小R成本；E_J=d_W2(μ,J)²。对正规化运输对偶全部tight-edge分支F_k^J及全部顶点V_J，exact-zero Φ_J^-1(0)=J、零R顶点的行边缘在J、全simplex有限线性W2 EB三者等价。
+- **Conclusion**：最小平方系数B*=max_{v∈V_J,Rv>0}E_J(rv)/(Rv)，空最大值0；各非空零面上的有限LP可判定目标成员资格。有理C,R及目标约束给有理B*，K*=√B*未必有理。不要求exact-zero时，Φ_J仍全域Lipschitz且连续有限PWA。
+- **Dependencies / Evidence**：[FSC1–4及完整证明](research/topics/random_markov/finite_state_completion.md#fsc-polyhedral)；完整计划并、凸E、零顶点及锐下界重构；正则性明确调用C80规范FS9–FS10和已核Hoffman接口，锐证书不依赖Hoffman。来源LF325–327，补目标非空门。
+- **Counterevidence / Scope**：J不自动是平稳律集，R不自动有随机映射表示；不承诺多项式算法、跨系统统一系数、动力收敛或非凸目标。不能删除输入最优性或把外层只限E最近目标。C15在J=I时是特例，C80是平稳目标的正则性特例。
+
+<a id="c170"></a>
+## C170-v1 / FINITE-SUPPORT-IDENTIFICATION · 三状态支撑识别与最近目标分离
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：完整G=(0,1,2)，确定T=(0,1,0)，全部律μ=(a,b,c)∈Δ3；平方Euclidean运输成本和同映射同步位移残差，外层遍历完整I={(q,1−q,0)}、内层C最优。对全部μ，E=c、Φ=4c、锐K=1/2。
+- **Conclusion**：0与1位移签名相同，故不存在全状态R≥c0C的正系数，但原残差仍精确识别完整I。c>0时最近目标(a,b+c,0)与实际一步极限(a+c,b,0)不同。两个状态的R_xy=0迫使每个正概率映射恒等，故三状态在“存在位移碰撞而I是真子集”的意义下最小。
+- **Dependencies / Evidence**：[FSC5–6完整证明](research/topics/random_markov/finite_state_completion.md#fsc-support)逐全部目标和耦合算R成本，目标支撑给C下界，显式计划取到；两状态自映射完整枚举。
+- **Counterevidence / Scope**：这个例子的识别只靠目标支撑，不需OT限制；C71另证明真正依赖OT的例子。最小状态数仅针对明确碰撞条件，不是所有有限状态模型分类。不同目标、law-step或条件残差不由本结果覆盖。
+
+<a id="c171"></a>
+## C171-v1 / LAZY-CYCLE-RATE-COMPATIBILITY · 四循环的真实几何率与标量兼容障碍
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：同C71完整模型G=(0,1,3,4)，循环T，独立新噪声以(1−p,p)选择(I,T)，p∈(0,1)，π公平律，原输入最优同步Ψ与普通W2。γ_p=√((1−p)²+p²)。对全部μ及全部k≥0，W2((P_p^T)^kμ,π)≤4·2^(1/4)γ_p^(k/2)W2(μ,π)。
+- **Conclusion**：对全部状态对的E(output差²)+τE(位移差²)≤(1+ε)input差²，任意τ>0的最小非负ε恰为p(15+25τ)。任一π邻域内连续严格递增、ρ(0)=0的可逆局部EB gauge均不可能与同一有效τ,ε使指定式θ(t)²=(1+ε)t²−τ[ρ^-1(t)]²<t²对所有充分小t>0成立。邻接质量族给ρ(r)≥2r/√p，但该式要求ρ(r)<r/(5√p)。
+- **Dependencies / Evidence**：[全初律率证明](research/topics/random_markov/finite_state_completion.md#fsc-lazy-rate)、[六对精确参数及局部障碍](research/topics/random_markov/finite_state_completion.md#fsc-compatibility)；Fourier谱、W2²与TV双界、零和范数比较、全部六状态对、唯一有序局部计划。补[全局锐点径向缩放的反算](research/topics/random_markov/finite_state_completion.md#fsc-cell-grid)：前半段平方比3/p而非13/p。
+- **Counterevidence / Scope**：C71的线性EB和本条真实收敛仍成立；只阻断显示的特定标量公式及全状态pointwise参数，未排其它metrics/residuals/measure-level dissipation。ρ仅非降时必须另定义广义逆，本条不代猜。p=1不属几何率结论；换同核随机表示也须重算R。该公式外部论文归属仍deferred，直接数学反证不依赖它。
+
+<a id="c172"></a>
+## C172-v1 / OP-POWER · 双侧实际剖面的 direct 幂门
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定λ>0、0<γ≤1、p>0，所有足够小t,r有正常数双侧界a_Mt^γ≤M(t)≤b_Mt^γ及a_Br^p≤B(r)≤b_Br^p；B为C166同一剖面。对bλ(t)=(t+M(t))/(2λ)，存在固定κ∈(0,1)的全小尺度B(bλ(t))≤κt在γp>1成立、γp<1不可能；γp=1须保系数。
+- **Definitions / Dependencies / Evidence**：[OP10–11](research/canonical/operator_profile_tools.md#op-power)逐项双侧幂比较；端点c/λ正好可跨1。
+- **Counterevidence / Scope / Related Files**：只有上界阶不提供必要性；真实PPA还需同图/零锚、C166真残差桥、coverage与留域。该函数复合的门不是普适实际轨道阶或完整算子类大小结论。
+
+<a id="c173"></a>
+## C173-v1 / CF-GIBBS · 有限相关Gibbs的条件比较与两律收缩
+
+- **Status**：`derived-checked`；有限平稳配对、边缘保持、Neumann比较和显式加权范数证明独立重建。
+- **Exact Statement / Objects / Domain / Quantifiers**：X={0,1}^m，m≥1，β为X上的严格正概率律（所有β(x)>0且Σ_(x∈X)β(x)=1），p_i>0，Σp_i≤1，实际随机坐标核按β的full conditional刷新，余概率恒等。非负C、c_ii=0，对全部x,y满足TV(β_i(.|x_-i),β_i(.|y_-i))≤Σ_j c_ij 1_(x_j≠y_j)，ρ(C)<1。对全部概率律μ及任意w>0，r_i=E_μTV(μ_i(.|X_-i),β_i(.|X_-i))，E_w²为加权Hamming最优成本，D_cond,w²=Σp_iw_ir_i。有E_w²≤wᵀ(I-C)^-1r≤K_w²D_cond,w²，K_w²=max_i [wᵀ(I-C)^-1]_i/(p_iw_i)。零集{β}。令B=I-D_p+D_pC，取wᵀ=1ᵀ(I-B)^-1、θ=max_j(w_j-1)/w_j∈[0,1)，则对全部两律μ,η，W_w(μP,ηP)≤√θ W_w(μ,η)。β为唯一不变律。纤维积分只在共同w,K,θ和可测门下成立。
+- **Definitions / Dependencies / Evidence**：[CF1–CF5](research/topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-object)。条件比较保持同一两边缘的Cesàro平稳配对；收缩权重直接由v=(I-C)^-1 1和加权范数得，无未列外部M-matrix定理调用。
+- **Counterevidence / Objections / Scope**：C条件只充分，不声称必要；K_w、θ不声称锐，收缩不是对任意权重；残差为条件TV/Hamming接口，不是Ψ；共同纤维常数不能由逐点有限性推得。外部优先权未核。
+- **Related source**：上述519 LF原件§4 270–321。独立敌对审计原件不在此范围。
+
+<a id="c174"></a>
+## C174-v1 / CF-COMPACT · 可数连续刷新与锐期望能量常数
+
+- **Status**：`derived-checked`；实际映射的连续性、概率合法性、全纤维能量与最佳常数逐项计算。
+- **Exact Statement / Objects / Domain / Quantifiers**：K=({0}∪{2^-n:n≥1})×{0,1}⊂R²。对n,j映射仅在第n纤维将bit置j，概率a_n/2，a_n=2^(-n²-4n-4)，余概率恒等；每步独立。全部映射连续，表示可数。固定ν(2^-n)=2^-n、ν(0)=0，全固定边缘律的公平目标π唯一不变，D_cond²=Σ2^-n a_n|r_n-1/2|，E²=Σ2^-n|r_n-1/2|。最小非降模与精确law-step/积分尾按C145成立；最大绝对误差平方为(1/2)Σ2^-n(1-a_n)^k→0，任意正半径完整条件目标球上无任何正幂EB。同时全部z,z'∈K，同一随机映射T下E[||Tz-Tz'||²+||(z-Tz)-(z'-Tz')||²]≤(1+ε*)||z-z'||²的最小ε*=129/4096（α=1/2约定）。
+- **Definitions / Dependencies / Evidence**：[CF6–CF10](research/topics/random_markov/conditional_refresh_interfaces.md#cfi-compact-object)，条件gauge/律长度依赖C145指定单bit接口；常数按同纤维/异纤维异bit/同bit三类全部计算，最坏在n=1,m=2同bit。
+- **Counterevidence / Objections / Scope**：来源17/256仍有效但非最优；这里有限地图实现未宣称，不能移植到原Ψ。固定ν不含0，未说全K不变律唯一；不同ν和极限纤维是其它不变类。外部先行性未核。
+
+<a id="c175"></a>
+## C175-v1 / CF-TYPED-BOUNDARIES · 条件残差与同步能量及联合拓扑的分离
+
+- **Status**：`derived-checked`；有理数OT上下界、条件概率及显式同边缘运输独立重算。
+- **Exact Statement / Objects / Domain / Quantifiers**：第一对象为二bit公平乘积、等概率随机坐标刷新、μ=(1/2,0,1/4,1/4)按00,01,10,11排列：μP=(5/16,3/16,5/16,3/16)，E²=1/4，E+²=1/8，D_cond²=1/4，因此E+²+D_cond²≤E²失败；同一同步坐标/新bit配对的输出+位移差能量恒等式仍成立。边缘公平对角律的坐标边缘距离皆零但D_cond²=1/2，任一刷新即目标。第二对象冻结ν=Leb([0,1])、一步完整公平bit刷新：每个长1/N小区间左半确定0右半确定1的μ_N满足条件Wν²=D_cond²=1/2而普通W2(μ_N,ν⊗fair)≤1/(2N)→0。所有同ν两律普通W2≤条件Wν。另对C144同一两原子μ_t，原Ψ=0而D_cond=1/√2，故该族不存在D_cond≤KΨ的有限K。
+- **Definitions / Dependencies / Evidence**：[CF11–CF13](research/topics/random_markov/conditional_refresh_interfaces.md#cfi-boundary-object)，C144只供应已证明的原输入最优Ψ身份和两原子见证。条件拓扑反例显式保持同一ν；三模型在正文分别声明。
+- **Counterevidence / Objections / Scope**：不否定C129/C130的条件EB，不否定实际同步配对能量；不把D_cond当Ψ或一般law-step。跨ν不直接定义Wν，绝对尾不等于相对率。没有通用非线性RL结论。
+
+<a id="c177"></a>
+## C177-v1 / NG-GERM · 固定零点连续自映射的germ商：非Polish而仍Baire
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：X={f∈C([0,1],[0,1]):f(0)=0}配一致拓扑，f~g iff某ε>0使二者在[0,ε]相等，Q=X/~配商拓扑。每类在X稠密，Q至少两点且仅空集/全空间为开集；故非T0/T1/Hausdorff/Polish，但Q仍Baire。
+- **Definitions / Dependencies / Evidence**：[NG-GERM完整证明](research/canonical/topological_repair_obstructions.md#tr-germ)；近0连续凸拼接保持值域和固定0并一致逼近任意g；每类稠密使非空开饱和集必为全体；平凡拓扑直接核Baire。
+- **Counterevidence / Scope / Related Files**：不移植为历史完整图/收敛动力/全时间拓扑或所有germ商；否定非Hausdorff⇒非Baire的过宽读法，不否定全部比较方案。 外部新颖性未核。
+
+<a id="c178"></a>
+## C178-v1 / NG-CLOSED-REPAIR · 两个闭集不保证局部线性相交误差界
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：R²中A=R×{0}、B={(t,t²):t∈R}闭且A∩B={0}；对任意r>0和有限κ≥0，存在0<||z||<r使d(z,A∩B)>κ(d(z,A)+d(z,B))，右端换成max亦失败。
+- **Definitions / Dependencies / Evidence**：[NG-CLOSED-REPAIR完整证明](research/canonical/topological_repair_obstructions.md#tr-intersection)；z=(t,0)有相交距离t、d(z,A)=0、d(z,B)≤t²，取0<t<r且κt<1。
+- **Counterevidence / Scope / Related Files**：只排除闭性单独供应线性相交界；不构造历史fixed-E纤维/父层/1/3修补或Foran递归。距离不达直接复用C166，不计本Claim新结论。 外部新颖性未核。

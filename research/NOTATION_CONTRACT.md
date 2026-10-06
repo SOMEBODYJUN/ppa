@@ -69,3 +69,10 @@
 [C159](canonical/gauge_dilation_boundary.md#gd-theorem) 的 ψ 是固定逐点函数，ψ(2t) 不能无条件换为 Cψ(t)；其离散自然输入域 D不含邻域 coverage，正点不连续不得混入要求连续 gauge 的定理。[C160](canonical/selection_quasi_arithmetic_boundary.md#qa-object) 的 D 是均值初值直径预算、K 是生成元对数导数界、q=αℓ是修复尾的辅助系数；都不等于RLEB的输入对尺度、RL常数或实际法向率。N是非负起步，不能使用负迭代次数。QA使用∞范数，转Euclidean点尾须乘√k。
 
 [LMZ接口](canonical/selection_primary_interfaces.md) 的 λ_L 乘在目标二次项上，项目 prox 步长 h=1/λ_L。其 ψ(d)≤γr 是距离侧函数方向，与本库残差侧 d≤ψ(r) 比较时须先求逆并核定义域，不能直接同形代入。P16的 φ 是固定 M 的外层复合函数；QA-COMPARISON中的 F为不变标量函数，与PPA完整集值关系 F 不同型，跨页调用时重命名为 f_inv。
+## 完整母空间工具与条件刷新新增绑定
+
+[C166–C168/C172](canonical/operator_profile_tools.md#op-profile)的 \(\mathcal B_{F,V,S}\) 是完整图值剖面，真残差仍为inf；\(\psi(r+)\) 不默认等于 \(\psi(r)\)。\(\mathcal K\) 是实际对象的统一紧块，不是状态域；\(C_i\) 是闭约束；\(\mathcal A_M\) 是固定评价必要层，\(M\) 不代入RL系数。C172的\(p\)是剖面阶，兼容量词为存在正\(\kappa<1\)和共同小窗。
+
+[C169–C171](topics/random_markov/finite_state_completion.md#fsc-object)的 \(\mathcal J\) 是明确给定的紧凸多面体目标，可不同于不变律集；\(E_{\mathcal J}\) 和 \(\Phi_{\mathcal J}\) 都是平方量，\(B_*\) 是平方EB系数、\(K_*=\sqrt{B_*}\)。概率列向量的更新是\(P^\top\mu\)。真实核率和显示的almost-firm标量充分公式分别判断。
+
+[C173–C175](topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-object)的 \(C\) 是非负影响矩阵，\(w\) 是状态差成本权重；CF3的任意\(w>0\)与CF4的特定构造权重不得互换。\(D_{\rm cond}\)只是在各明确模型里重绑定的条件残差，不是同步\(\Psi\)；\(\epsilon_*\)固定同一随机映射表示和Euclidean成本。[C177](canonical/topological_repair_obstructions.md#tr-germ)的\(Q\)是germ商，不是Gaussian正定矩阵；商Baire性和Polish性分别判断。

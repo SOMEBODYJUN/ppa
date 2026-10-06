@@ -7,6 +7,8 @@
 | [二进制与 Gaussian 条件刷新](conditional_refresh.md) | C129 的固定边缘 \(\mathsf W_\nu/\mathcal R\) 与 C130 的 \(W_{2,Q}/\mathcal R_Q\) 分别有完整证明；二者都不自动给原同步 \(\Psi\) 的 EB。 |
 | [紧可数与投影的残差边界](compact_residual_boundaries.md#crb-object) | C143 在同一核有一般 gauge 和统一几何尾却没有正幂 EB；C144 在保留原 OT 最优性的投影模型已有假零。后者不等同于 C71 删除 OT 条件的假零。 |
 | [非均匀单 bit 的最小模和律长度](one_bit_envelope.md#bit-object) | C145 的饱和最小非降模、精确 law-step 和允许无穷的律长度；条件残差与公平 bit 补空间谱分别量化，不移作一般同步残差结论。 |
+| [相关Gibbs与条件边界](conditional_refresh_interfaces.md#cfi-gibbs-object) | C173有限相关概率律的有效条件EB与特定权重收缩；C174可数连续表示的锐期望能量常数；C175条件残差、同步能量及同固定边缘拓扑的分离。逐节重新绑定目标、权重和表示。 |
+| [有限状态证书的完整增量](finite_state_completion.md#fsc-object) | C169紧多面体目标的锐顶点/有理证书；C170三状态支撑识别；C171四循环实际率与指定可逆gauge标量公式的障碍。实际收敛不等于该公式兼容。 |
 
 [固定有限状态顶点证书](finite_state_certificate.md) 为原 C15 摘要补上同一同步 OT 残差的完整 LP 对偶 tight-edge 证明、精确零集与锐全域误差界；同页 [FS-HOFFMAN](finite_state_certificate.md#fs-hoffman) 是非锐备用证明，[C80](finite_state_certificate.md#fs-regularity) 另证 \(\Psi^2\) 连续分片仿射且全域 Lipschitz，**不需要**精确零集条件。调用 [惰性四循环](lazy_cycle_ot.md) 的具体常数前，先核其内层耦合仍为原成本的最优计划。两点翻转说明 C15 的误差界不能直接宣称动力收敛。
 

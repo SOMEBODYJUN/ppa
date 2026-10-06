@@ -38,8 +38,8 @@
 | --- | --- | --- |
 | 轨道小集理想 \(\mathcal J_{\rm orb}^B\) | 来源包报告 LT、RLEB 和差集同时小；比第一纲细仍无鉴别力 | 用作候选大小不变量的反塌缩测试，N08 |
 | 可数紧包络 | LT 的闭无限维 Banach 球“大”来自远端无关自由度 | 新尺度须对该自由度稳定，N09 |
-| 局部 germ 直接商 | 自然商常非 Hausdorff，不能直接称 Polish/Baire | 在后置关联谓词或严格规范表示中处理局部性，N06 |
-| fixed-\(E\) Foran 修复 | 闭性不保证线性正则相交、下确界实现及一般合法修复 | orbit-code 和 Poisson 势预算可用，但需先处理 \(\forall U\exists V\)，N11–N12 |
+| 局部 germ 直接商 | 非Hausdorff排除Polish，但不自动排除Baire；[C177](research/canonical/topological_repair_obstructions.md#tr-germ)给多点平凡拓扑且仍Baire的精确商 | 分别核分离性和Baire性；不能借该例认证历史完整图/全时间空间，N06 |
+| fixed-\(E\) Foran 修复 | 闭性不保证线性正则相交；[C178](research/canonical/topological_repair_obstructions.md#tr-intersection)给轴/抛物线反例，[C166](research/canonical/operator_profile_tools.md#op-nonattainment)给闭纤维残差不达 | 历史orbit-code/Poisson预算仍为来源报告，先恢复精确对象与原证明，再核 \(\forall U\exists V\)，N11–N12 |
 | 为锥、Markov、RL 强设一个母定理 | 锥 MSCQ 缺同目标和反射接口，Markov \(\Psi\) 非 ordinary RL residual | 可统一叙事，数学定理保持独立，N04 |
 
 表中 N 编号均指 [9/21 原 no-go ledger](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。网络、工具、审稿模型或编译失败均不在这里当数学反证。
@@ -303,3 +303,9 @@
 - **指定旧接口**：arXiv1412.2997v1 Theorems1–2及正式版 Theorems3.2–3.3 的打印 n₀=ceil log₂[(e^(Kd)−1)/(e^ℓ−1)] 没有夹到非负；小非零直径下 n₀→−∞。读取原页只认证打印事实，不认证该公式在全部初值上成立。
 - **解析反例**：[QA-FIRST-ROUND](research/canonical/selection_quasi_arithmetic_boundary.md#qa-first-round) 取合规 f±(t)=e^(±t)、K=1、初值(d/2,−d/2)。实际 d₁=2log cosh(d/2)∼d²/4，原合法 n=1 的尾却是 o(d²)；优化式在任何固定超过其极限起步阈值的整数 n 同样与 dₙ∼4^(1−2ⁿ)d^(2ⁿ) 矛盾。只否定指定打印公式的小直径量词，不否定作者全部结果或宣称正式勘误。
 - **已闭修补**：[C160](research/canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 先固定共同K,D及ℓ<1/α，使用 N=max(0,ceil(...))；另独立证明共同超几何尾与同域Lipschitz选择界，处理首步和退化情形。固定正AGM窗的结论不移到坏轴，编码成完整PPA仍须另验。
+<a id="f45"></a>
+## F45 · 全部图值界被无条件换成同 gauge 真残差界
+
+- **尝试/断点**：对完整图每个v∈F(u)都有d(u,S)≤ψ(‖v‖)，直接把范数换成r_F(u)=inf‖v‖。一般非减且原点连续的ψ在正点可右跳，Hilbert闭纤维也可不取到inf。
+- **完整反例**：[C166 OP3–5](research/canonical/operator_profile_tools.md#op-nonattainment)固定强闭ℓ²图、完整S={0}、r(e0)=1不达及ψ(t)=0(t≤1),1(t>1)。全部图值界成立、真EB失败。
+- **salvage/重启门**：总可得ψ(r+)，逐输出取到或该残差处右连续足够恢复同ψ；有限定义域的上端点另核。紧源C132已经有极小值取得，未被反例否定；不同的窗口桥C59身份保持。

@@ -211,3 +211,9 @@ Lemma2 pp.9–10、Assumption2 p.10、Theorem2 pp.10–11。
 LMZ arXiv2406.13207v1 4.3 的有限长框架与 4.4 的实际点率分开。Example4.6 原初值1、目标 |t|^(3/2)+λ_L(t−t_k)²/2，其项目步长 h=1/λ_L；全实初值唯一完整近端到0及恒定选择由本库直接证明，不能归作原例量词。正式版差异仍未闭。
 
 P16 v1 Theorems1–2对应正式版Theorems3.2–3.3；指定负起步公式在小非零直径有[解析反例 F44](../FAILED_ROUTES.md#f44)，原读取状态与数学验收分开。[C160](canonical/selection_quasi_arithmetic_boundary.md#qa-uniform-tail) 用非负N独立修复共同尾，并独立证明同域两初值Lipschitz界。v1 Theorem3的φ段不归给无对应段的刊本；既不授予任意粗糙M，也不关闭全篇版本差异及全球优先权。
+<a id="lit-mt-category"></a>
+## LIT-MT-CATEGORY · 类别转移的准确导入
+
+Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and extreme amenability*，[作者PDF](https://math.univ-lyon1.fr/~melleray/ext-amenability.pdf)，Appendix A、印刷p.25（PDF第25页）；2026-10-06核原页及证明。Proposition A.3给连续Polish映射的非空开像非第一纲判据；Theorem A.5还要求比较集合Baire可测，给母空间余稀与余稀参数下的纤维余稀等价。准确量词和项目逐项适用门见[规范接口](canonical/operator_space_construction_frontier.md#ocf-category-import)。
+
+**边界**：外部定理不认证特定尾/反射模观测的保纲性。此核验不证明来源当年的访问行为，不等同于另一Melleray Theorem2.9版本核验，也不产生项目新颖性结论。

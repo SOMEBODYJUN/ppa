@@ -195,3 +195,10 @@ E(\mu)\le\sum_v\alpha_v E(r(v))
 固定矩阵、**有解**右端的距离界；(FS10) 逐目标核有解，(FS8)
 对空零面改用紧性。外部优先权、无限状态极限与跨固定系统的
 统一 Lipschitz 系数未由此验收。
+
+来源全件638 LF的逐单元覆盖与未闭证据见
+[完整范围记录](../../audit/FINITE_STATE_FULL_COVERAGE.md#fst-full)。
+同一主题的 [C169多面体目标与有理证书](finite_state_completion.md#fsc-polyhedral)、
+[C170支撑识别例](finite_state_completion.md#fsc-support)和
+[C171真实核速率及标量兼容障碍](finite_state_completion.md#fsc-lazy-rate)
+已另给完整证明；它们不改变本页C15/C80的数学身份。

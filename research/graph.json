@@ -1995,6 +1995,214 @@
       "id": "CS-LOG-RATE",
       "label": "认证非驻定局部轨道的真实点超线性及无高阶Q C37",
       "file": "canonical/composite_subregularity.md#cs-model-q"
+    },
+    {
+      "id": "OP-PROFILE-OBJECT",
+      "label": "完整F/V/S与非减ψ的图值剖面",
+      "file": "canonical/operator_profile_tools.md#op-profile"
+    },
+    {
+      "id": "OP-ALL-VALUES",
+      "label": "同ψ的全部图值界",
+      "file": "canonical/operator_profile_tools.md#op-profile"
+    },
+    {
+      "id": "OP-INF-GATE",
+      "label": "有限残差取到或ψ在该值右连续",
+      "file": "canonical/operator_profile_tools.md#op-profile"
+    },
+    {
+      "id": "OP-TRUE-EB",
+      "label": "同ψ完整真残差EB C166",
+      "file": "canonical/operator_profile_tools.md#op-profile"
+    },
+    {
+      "id": "OP-CLOSED-ENOUGH",
+      "label": "闭图与原点连续ψ足以转同ψ真EB",
+      "file": "canonical/operator_profile_tools.md#op-nonattainment"
+    },
+    {
+      "id": "OP-INF-GAP",
+      "label": "完整强闭ℓ²图的inf正点跳跃反例",
+      "file": "canonical/operator_profile_tools.md#op-nonattainment"
+    },
+    {
+      "id": "OP-FINITE-FEASIBLE",
+      "label": "同一紧对象块/闭约束/全部有限交可行",
+      "file": "canonical/operator_profile_tools.md#op-compactness"
+    },
+    {
+      "id": "OP-COMPACT-SOLUTION",
+      "label": "全部约束的共同对象 C167",
+      "file": "canonical/operator_profile_tools.md#op-compactness"
+    },
+    {
+      "id": "OP-EXCESS",
+      "label": "固定一致映射空间评价点余量a>0",
+      "file": "canonical/operator_profile_tools.md#op-hole"
+    },
+    {
+      "id": "OP-HOLE",
+      "label": "相对球a/2稳定越界 C168",
+      "file": "canonical/operator_profile_tools.md#op-hole"
+    },
+    {
+      "id": "OP-POWER-DATA",
+      "label": "同λ双侧实际M/B正幂剖面",
+      "file": "canonical/operator_profile_tools.md#op-power"
+    },
+    {
+      "id": "OP-POWER-GATE",
+      "label": "γp严格两侧与端点系数 C172",
+      "file": "canonical/operator_profile_tools.md#op-power"
+    },
+    {
+      "id": "OCF-ROUTES",
+      "label": "自然完整母空间八项开放构造义务",
+      "file": "canonical/operator_space_construction_frontier.md#ocf-specification"
+    },
+    {
+      "id": "MT-CATEGORY",
+      "label": "已核Polish连续保纲的纤维类别转移",
+      "file": "canonical/operator_space_construction_frontier.md#ocf-category-import"
+    },
+    {
+      "id": "FS-POLY-DATA",
+      "label": "有限互异状态/C/R及非空紧凸多面体J",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-POLY-CERT",
+      "label": "C169零顶点/原OT精确零/锐有理平方证书",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-polyhedral",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-SUPPORT-DATA",
+      "label": "完整三状态T=(0,1,0)及全部平稳目标",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-support",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-SUPPORT-ID",
+      "label": "C170 Φ=4c/E=c/碰撞不阻断支撑识别",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-support",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-LAZY-DATA",
+      "label": "同C71四循环p∈(0,1)及Fourier/TV比较",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-lazy-rate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-LAZY-RATE",
+      "label": "C171全初律相对W2几何率",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-lazy-rate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-SCALAR-DATA",
+      "label": "六对完整参数及唯一最优邻接质量族",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-compatibility",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FS-SCALAR-BARRIER",
+      "label": "C171指定可逆gauge标量式不可兼容",
+      "file": "topics/random_markov/finite_state_completion.md#fsc-compatibility",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-GIBBS-DATA",
+      "label": "严格正概率β/有效pi/相关矩阵ρ(C)<1",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-GIBBS-EB",
+      "label": "C173任意正权重条件Hamming EB",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-GIBBS-WEIGHT",
+      "label": "指定wᵀ=1ᵀ(I-B)^-1及同一核",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-GIBBS-CONTRACT",
+      "label": "C173指定加权两律收缩与唯一β",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-gibbs-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-COMPACT-DATA",
+      "label": "固定ν的可数连续bit刷新完整对象",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-compact-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-COMPACT-NOPOWER",
+      "label": "C174固定ν全律尾却无任何正幂EB",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-compact-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-COMPACT-ENERGY",
+      "label": "C174全部点对锐期望违约129/4096",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-compact-energy",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-TYPED-DATA",
+      "label": "二bit能量/固定ν拓扑/原Ψ假零三个见证",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-boundary-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-TYPED-BARRIERS",
+      "label": "C175条件残差/同步能量/联合拓扑分离",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-topology",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-REAL-DATA",
+      "label": "有限实坐标P2乘积目标及实际刷新核",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-supplements",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CF-REAL-TOOLS",
+      "label": "CF15可测分位数/条件混合EB/实际核收缩",
+      "file": "topics/random_markov/conditional_refresh_interfaces.md#cfi-supplements",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-GERM-DATA",
+      "label": "固定0的连续自映射一致空间及germ商",
+      "file": "canonical/topological_repair_obstructions.md#tr-germ-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-GERM-TOPOLOGY",
+      "label": "C177商非Polish而仍Baire",
+      "file": "canonical/topological_repair_obstructions.md#tr-germ",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-INTERSECTION-DATA",
+      "label": "闭轴/抛物线及共同原点",
+      "file": "canonical/topological_repair_obstructions.md#tr-closed-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-INTERSECTION-BARRIER",
+      "label": "C178任意局部窗无有限线性相交界",
+      "file": "canonical/topological_repair_obstructions.md#tr-intersection",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -4961,6 +5169,224 @@
       "relation": "conditional",
       "scope": "C37同一非幂η(u)=u log(e/u)模型、固定λ>0，保留全部CS-PROX乘子/步长/兼容/严格初值预算；每条非驻定局部轨道到S收敛，d_{k+1}∼d_k/[λA∞log(1/d_k)]，A∞=1+4(s∞)_+²，实际点误差e_{k+1}/e_k→0且对每个p>1有e_{k+1}/e_k^p→∞。不含驻定零比值或球外完整分支。",
       "status": "derived-checked；CS-Q1–4直接证明，经最后隔离Astra的反馈修补复核"
+    },
+    {
+      "id": "E257",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-PROFILE-OBJECT",
+        "OP-ALL-VALUES",
+        "OP-INF-GATE"
+      ],
+      "output": "OP-TRUE-EB",
+      "relation": "conditional",
+      "scope": "C166完整F/输出窗V/非空闭S，ψ全域有限非减；每个有限残差取到或在该值右连续。gauge有限上端点另核。不认证coverage/RL/留域。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E258",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-PROFILE-OBJECT",
+        "OP-TRUE-EB"
+      ],
+      "output": "OP-ALL-VALUES",
+      "relation": "implies",
+      "scope": "C166同一完整F及同V/S/ψ；有限真残差≤每个图值范数与非减性，只向逐图值界。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E259",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-INF-GAP"
+      ],
+      "output": "OP-CLOSED-ENOUGH",
+      "relation": "refutes",
+      "scope": "C166完整ℓ²强闭图，S={0}，r(e0)=1不达；ψ(t)=0(t≤1),1(t>1)原点连续，全部图值界真而同ψ真EB假。只否定无取到/右连续门的版本。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E260",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-FINITE-FEASIBLE"
+      ],
+      "output": "OP-COMPACT-SOLUTION",
+      "relation": "conditional",
+      "scope": "C167同一个非空紧拓扑实际对象块，固定C_i在块中闭，每个前N项交非空；不构造有限可行或原生完整图，严格余量须预先内建闭条件。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E261",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-EXCESS"
+      ],
+      "output": "OP-HOLE",
+      "relation": "implies",
+      "scope": "C168固定紧度量K/S、同𝔛⊂C(K,K)一致度量、M≥0和评价点x*余量a>0；仅相对a/2球避开必要条件层。全中心/全小尺度孔隙构造另证。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E262",
+      "topic": "算子空间",
+      "inputs": [
+        "OP-POWER-DATA"
+      ],
+      "output": "OP-POWER-GATE",
+      "relation": "conditional",
+      "scope": "C172λ>0,0<γ≤1,p>0，同一实际剖面全部小t/r双侧正幂界；B((t+M(t))/(2λ))的γp>1充分、<1不可能、=1保系数。不是实际轨道阶或单侧指数必要性。",
+      "status": "derived-checked；自足条件证明/一手接口，适用与先行性分别判定"
+    },
+    {
+      "id": "E263",
+      "topic": "算子空间",
+      "inputs": [
+        "OCF-ROUTES",
+        "MT-CATEGORY"
+      ],
+      "output": "SIZE",
+      "relation": "open",
+      "scope": "先在同一自然完整原关系空间冻结𝔛/量尺/三类谓词；对实际内生映射核Polish/连续/保纲及Baire可测后才调用纤维转移。外部工具不认证特定Φ保纲或总体比较。",
+      "status": "open"
+    },
+    {
+      "id": "E264",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-POLY-DATA"
+      ],
+      "output": "FS-POLY-CERT",
+      "relation": "implies",
+      "scope": "C169固定N/C/R/J，J非空紧凸多面体；外层全部J及内层实际两边缘C最优计划。tight-edge全分支及全部顶点精确覆盖；平方B*有理需数据有理。不是动力或复杂度定理。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E265",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-SUPPORT-DATA"
+      ],
+      "output": "FS-SUPPORT-ID",
+      "relation": "implies",
+      "scope": "C170完整三状态及同映射同步R，全部律μ=(a,b,c)及完整I；最近目标不同于实际极限，状态碰撞不阻断此例识别。三状态最小仅针对明确碰撞条件。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E266",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-LAZY-DATA"
+      ],
+      "output": "FS-LAZY-RATE",
+      "relation": "implies",
+      "scope": "C171同C71完整四循环、独立新噪声和0<p<1；全部初律/全部k，常数4·2^(1/4)、因子γ_p^(k/2)。不只从线性EB推出，不含p=1。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E267",
+      "topic": "有限状态 Markov",
+      "inputs": [
+        "FS-LAZY-DATA",
+        "FS-SCALAR-DATA"
+      ],
+      "output": "FS-SCALAR-BARRIER",
+      "relation": "conditional",
+      "scope": "C171同模型，τ>0、全状态pointwise参数最小ε=p(15+25τ)；π邻域可逆严格递增ρ需ρ(r)≥2r/√p，指定θ式要求ρ(r)<r/(5√p)，故不兼容。只阻断该标量公式，真实率与EB仍成立。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E268",
+      "topic": "Markov",
+      "inputs": [
+        "CF-GIBBS-DATA"
+      ],
+      "output": "CF-GIBBS-EB",
+      "relation": "implies",
+      "scope": "C173同一严格正概率β、有效实际Gibbs核、ρ(C)<1；全部律μ、任意w>0，有限条件TV r、加权Hamming成本与D_cond,w。K_w只为有效上界，不是原Ψ。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E269",
+      "topic": "Markov",
+      "inputs": [
+        "CF-GIBBS-DATA",
+        "CF-GIBBS-WEIGHT"
+      ],
+      "output": "CF-GIBBS-CONTRACT",
+      "relation": "conditional",
+      "scope": "C173两律收缩只在构造的同w成立，θ∈[0,1)；β唯一不变。纤维应用另需共同常数/可测性。不把任意w的EB冒称任意w收缩。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E270",
+      "topic": "Markov",
+      "inputs": [
+        "CF-COMPACT-DATA",
+        "BIT-ONE",
+        "BIT-MOD",
+        "BIT-FLOW"
+      ],
+      "output": "CF-COMPACT-NOPOWER",
+      "relation": "conditional",
+      "scope": "C174固定ν(2^-n)=2^-n、ν(0)=0与a_n=2^(-n²-4n-4)；调用同bit条件接口C145，全固定边缘律绝对尾趋零但每个目标球无任何正幂EB；不认证原Ψ或全K唯一不变。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E271",
+      "topic": "Markov",
+      "inputs": [
+        "CF-COMPACT-DATA"
+      ],
+      "output": "CF-COMPACT-ENERGY",
+      "relation": "implies",
+      "scope": "C174全部K点对、同一个随机映射、输出和位移差同耦合，α=1/2约定的最小ε=129/4096。不是条件D_cond的律能量递推。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E272",
+      "topic": "Markov",
+      "inputs": [
+        "CF-TYPED-DATA"
+      ],
+      "output": "CF-TYPED-BARRIERS",
+      "relation": "implies",
+      "scope": "C175三个对象分别冻结：二bitD_cond不能替入同步律能量；固定Leb ν的普通W2趋零不推Wν趋零；C144两原子原Ψ=0而D_cond>0。全部保持各自目标/边缘身份，不否定条件EB。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E273",
+      "topic": "Markov",
+      "inputs": [
+        "CF-REAL-DATA"
+      ],
+      "output": "CF-REAL-TOOLS",
+      "relation": "implies",
+      "scope": "CF15有限m实坐标及P2目标/初律、pi>0和总概率≤1；分位数可测/层积分最优/条件混合保持同β_i边缘，实际共享刷新核收缩。只给有效常数，不是一般纤维结论。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E274",
+      "topic": "算子空间",
+      "inputs": [
+        "NG-GERM-DATA"
+      ],
+      "output": "NG-GERM-TOPOLOGY",
+      "relation": "implies",
+      "scope": "C177明确一致拓扑X及near-0 germ等价；每类稠密且至少两类，商为平凡拓扑，非T0故非Polish但仍Baire。不替代历史其它商空间。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E275",
+      "topic": "算子空间",
+      "inputs": [
+        "NG-INTERSECTION-DATA"
+      ],
+      "output": "NG-INTERSECTION-BARRIER",
+      "relation": "implies",
+      "scope": "C178每个r>0和有限κ≥0均有z=(t,0)破线性相交界；sum或max均失败。仅否定闭性单独足够，不认证历史fixed-E/Foran递归。",
+      "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
     }
   ]
 }
