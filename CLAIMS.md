@@ -74,7 +74,7 @@
 
 - **Exact Statement / Objects / Domain**：9/21 包报告在其先前定义的完整图 Polish／普通 \(C^0\) 与动力度量 \((X_D,d_{\rm dyn})\) 中，正 Hölder 类受共同粗糙化影响；特别 \(\mathcal R_D\subseteq\mathcal H_+\in\sigma\mathcal P^-(X_D,d_{\rm dyn})\)，所以 \(\mathcal R_D\setminus(\mathcal L_D\cup\mathcal M_D)\in\sigma\mathcal P^-\subseteq\sigma\mathcal P^+\)。\(\sigma\mathcal P^-\) 是包内的 σ-lower-porous 类。**域 \(D\)、全部图卡与孔隙常数须在原证明恢复后冻结，不由此摘要补造。**
 - **Dependencies / Evidence**：[9/21 `02_VERIFIED_CORE.md` §6](history/sources/提纯总账_2026-09-21_v0.9/02_VERIFIED_CORE.md) 与 [`03_NO_GO_LEDGER.md` N05、N08、N10](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)；v0.9 区分 V-A/V-B、SOURCE-MISSING。
-- **Objections / Status / Scope**：**历史总账报告，尚非本仓库重构的原孔隙证明**；I-097–099 原审计和 I-102 正式表示稿未在盘点文件名中找到。总账另标 SOURCE-MISSING 的 I-001/I-002/I-003–005/I-059/I-075 已以原包或展开件恢复，但这不能替代 N10 原证明。旧目标“差集非 σ-upper-porous”只在其所指空间中被报告为假，不是所有合理量尺均失败。
+- **Objections / Status / Scope**：**历史总账报告，尚非本仓库重构的原孔隙证明**；I-097–099 原审计和 I-102 正式表示稿未在盘点文件名中找到。总账另标 SOURCE-MISSING 的 I-001/I-002/I-003–005/I-059/I-075 已以原包或展开件恢复，但这不能替代 N10 原证明。旧目标“差集非 σ-upper-porous”只在其所指空间中被报告为假，不是所有合理量尺均失败。 有限维AW固定输入前身与一致拓扑Hölder前身现分别有[C179](research/canonical/attouch_wets_fixed_input_thinness.md#aw-object)/[C180](research/canonical/uniform_holder_thinness.md#uht-object)的自足受限证明；不把这两个不同母空间的结论合并为本条动态孔隙定理。
 
 ## C08-v1 · 解选择稳定性（修订身份）
 
@@ -1484,3 +1484,20 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：R²中A=R×{0}、B={(t,t²):t∈R}闭且A∩B={0}；对任意r>0和有限κ≥0，存在0<||z||<r使d(z,A∩B)>κ(d(z,A)+d(z,B))，右端换成max亦失败。
 - **Definitions / Dependencies / Evidence**：[NG-CLOSED-REPAIR完整证明](research/canonical/topological_repair_obstructions.md#tr-intersection)；z=(t,0)有相交距离t、d(z,A)=0、d(z,B)≤t²，取0<t<r且κt<1。
 - **Counterevidence / Scope / Related Files**：只排除闭性单独供应线性相交界；不构造历史fixed-E纤维/父层/1/3修补或Foran递归。距离不达直接复用C166，不计本Claim新结论。 外部新颖性未核。
+
+<a id="c179"></a>
+## C179-v1 / AW-FIXED-INPUT · 有限维宽闭图空间的一步可解薄性
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定E=R^d、d≥1，全部非空闭完整关系图配AW1距离函数拓扑。固定λ>0,p0∈E，{F:JλF(p0)≠∅}是Fσ第一纲集，补集稠密。另固定非空闭真S⊊E并在zerF=S的相对AW空间中取p0∉S，同样成立；每个有界输出紧切片的hit类相对闭且无处稠密。
+- **Definitions / Dependencies / Evidence**：[AW1–AW9及完整证明](research/canonical/attouch_wets_fixed_input_thinness.md#aw-object)；定量有限网逼近误差≤2δ+2^(-R)，保留整个无界S锚、扰网点避输入切片与固定对角线、线性Lλ的完整AW同胚。证据为自足重建及独立逐式复算；源前身LF117–155与历史审查报告分开。
+- **Counterevidence / Scope / Related Files**：固定S版本p0∈S时可解类为整个相对空间；预定可数步长的并仍第一纲，但存在任意实步长不能据不可数并推出。相对已良定算法子层也不能自动传薄性。未预设单值、满域、单调、收敛或Polish/Baire；不证明无限维AW、轨道理想、σ孔隙、统一常数或总体RLEB–LT–极大单调比较；C07动态报告仍独立未闭。全球先行性未核。
+
+<a id="c180"></a>
+## C180-v1 / UNIFORM-HOLDER-THINNESS · 精确固定集连续母层中的正 Hölder 薄性
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定有限维实赋范E、非空紧凸K且int_E K非空、非空闭真子集S⊊K且int_E(K\S)非空、非空𝔛={T∈C(K,K):FixT=S}，赋相对一致拓扑。非空S在请求的紧凸非空𝔛情形由Brouwer固定点定理推出，故明列不补额外对象限制。对全部固定α>0、0≤M<∞，全K全部对的M-Hölder-α块闭且无处稠密。所有正Hölder映射恰由H_(1/m,n)、m,n≥1可数耗尽，故第一纲；𝔛本身完全可度量/Baire，因此其补集稠密Gδ。
+- **Explicit Interfaces / Conclusion**：同T、同K若存在0<γ≤1、0≤L<∞、R>0，使全部距离≤R的点对满足||2Tx−x−2Ty+y||≤L||x−y||^γ，则全域γ-Hölder预算可取max{(D^(1−γ)+L)/2,D/R^γ}，D=diamK。若同T全部点对满足||ΔT||²+τ||Δ(I−T)||²≤(1+ε)||Δx||²、τ,ε≥0，则T为√(1+ε)-Lipschitz。两种明定不等式的存在参数并类均在本𝔛第一纲。
+- **Definitions / Dependencies / Evidence**：[UH1–UH14、UH-B及自足证明](research/canonical/uniform_holder_thinness.md#uht-object)；闭球位移δ、局部凸混合μρ值域余量、双cutoff、幅度预算和反三角cusp比值全部显式，兼容完备度量证明Baire门。来源05_obstruction_audit.md §7.1 LF400–404、§1 LF13–50、有限维门LF390；07_stage_synthesis.md B1 LF97–104。完整源枚举另见[专用审计](research/audit/UNIFORM_HOLDER_FULL_COVERAGE.md#uht-audit-source)。
+- **Counterevidence / Scope / Related Files**：K=[−1,1],S=K的单点恒等层反驳删除离S开区域门；同K,S={0},e_0=2,e_n=0(n≥1)的共同尾层只有T=0，全部Hölder且在自身非第一纲，故不自动下传收敛/全时间/共同尾子层。未核全部无速率收敛类的类别、具体原生RLEB/LT认证类是否满足同图同域接口，也未授予AW/germ/变步长/极大单调总体比较、严格包含或比例。全球先行性和历史审查行为未核。

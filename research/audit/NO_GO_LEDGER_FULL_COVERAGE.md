@@ -70,7 +70,7 @@ LF8–9的L、p、加权函数空间、resolvent参数、极限方向和主例�
 <a id="ng-n05"></a>
 ### N05：两个Baire塌缩报告
 
-I-076/077所指完整图母空间和动力母空间的域、图卡、拓扑、Polish/Baire证明、存在证书投影及第一纲分解未在本源给出。近恒等粗糙化须对全部目标指数/步长并保持真实结构。C07的现有source-report足以定位这些声称，不足以调用反定理；C177的普通germ商不替代这两个空间。
+I-076/077所指完整图母空间和动力母空间的域、图卡、拓扑、Polish/Baire证明、存在证书投影及第一纲分解未在本源给出。 现有其它材料的固定输入AW前身与一致映射Hölder前身已分别恢复为[C179](../canonical/attouch_wets_fixed_input_thinness.md#aw-object)/[C180](../canonical/uniform_holder_thinness.md#uht-object)，精确范围见[恢复报告](MOTHER_SPACE_PROOF_RECOVERY.md)；原N05较强完整句仍deferred。近恒等粗糙化须对全部目标指数/步长并保持真实结构。C07的现有source-report足以定位这些声称，不足以调用反定理；C177的普通germ商不替代这两个空间。
 
 <a id="ng-n06"></a>
 ### N06：germ商

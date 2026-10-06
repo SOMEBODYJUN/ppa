@@ -211,9 +211,9 @@ E_{k+1}\le\sqrt{E_k^2-[\phi^{\leftarrow}(E_k)]^2}.
 \]
 根号非负由同一个实际残差小于等于 \(E_k\) 保证；不把饱和 \(\phi\) 当严格增函数。取 BIT12 的 \(a(u)=u^p,b=1/2,h=1/2\)，换元 \(v=u^p\) 给
 \[
-E_k^2=\frac1{2p}\int_0^1v^{1/p-1}(1-v)^k\\,dv
+E_k^2=\frac1{2p}\int_0^1v^{1/p-1}(1-v)^k\,dv
 \sim\frac{\Gamma(1+1/p)}2k^{-1/p},
-\quad D_{{\rm cond},k}^2=\frac1{2p}\int_0^1v^{1/p}(1-v)^k\\,dv
+\quad D_{{\rm cond},k}^2=\frac1{2p}\int_0^1v^{1/p}(1-v)^k\,dv
 \sim\frac{\Gamma(1+1/p)}{2p}k^{-1-1/p}.
 \tag{CF17}
 \]

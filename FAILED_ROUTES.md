@@ -309,3 +309,10 @@
 - **尝试/断点**：对完整图每个v∈F(u)都有d(u,S)≤ψ(‖v‖)，直接把范数换成r_F(u)=inf‖v‖。一般非减且原点连续的ψ在正点可右跳，Hilbert闭纤维也可不取到inf。
 - **完整反例**：[C166 OP3–5](research/canonical/operator_profile_tools.md#op-nonattainment)固定强闭ℓ²图、完整S={0}、r(e0)=1不达及ψ(t)=0(t≤1),1(t>1)。全部图值界成立、真EB失败。
 - **salvage/重启门**：总可得ψ(r+)，逐输出取到或该残差处右连续足够恢复同ψ；有限定义域的上端点另核。紧源C132已经有极小值取得，未被反例否定；不同的窗口桥C59身份保持。
+
+<a id="f46"></a>
+## F46 · 宽母空间的第一纲不能自动传到算法或共同尾子层
+
+[C179](research/canonical/attouch_wets_fixed_input_thinness.md#aw-boundary)在有限维宽AW空间证明固定λ、固定输入的可解类第一纲；限制到已经要求该输入可解的算法层后，该事件成为整个子层。不可数实步长的并也不能由可数并法推出第一纲。
+
+[C180](research/canonical/uniform_holder_thinness.md#uht-boundary)在精确FixS的一致映射空间证明全部正Hölder并类第一纲；但K=[−1,1]、S={0}、e_n=0(n≥1)的共同尾层只含T=0，Hölder类在它内就是全空间。重启须证明同一实际子层中的扰动保持，或给确切范畴转移；两个不同母空间的薄性不构成总体RLEB–LT–极大单调比较。

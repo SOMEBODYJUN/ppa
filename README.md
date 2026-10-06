@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 429 个数学节点、275 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 443 个数学节点、283 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -52,6 +52,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | --- | --- | --- |
 | 图值剖面与自然母空间工具 | [C166–C168/C172](research/canonical/operator_profile_tools.md)：完整图值剖面→真残差需取到或右连续门；同一紧对象块闭约束；鲁棒孔洞及双侧实际幂门。[八项构造前沿](research/canonical/operator_space_construction_frontier.md)列清总体比较的实际义务 | 工具证明已重构；没有自动获得自然母空间、孔隙定理或总体规模比较 |
 | 有限状态与条件刷新完整接口 | [C169–C171](research/topics/random_markov/finite_state_completion.md)：多面体目标锐证书、三状态支撑识别、四循环真实率和指定标量公式障碍；[C173–C175](research/topics/random_markov/conditional_refresh_interfaces.md)：相关Gibbs、连续可数刷新、三种残差/拓扑分离 | 自足证明及独立复算；目标、同输入最优性、固定边缘和权重门分别保留，条件残差不换成原Ψ |
+| 恢复的两种宽母空间薄性 | [C179固定输入AW薄性](research/canonical/attouch_wets_fixed_input_thinness.md#aw-object)、[C180一致映射Hölder薄性与显式证书接口](research/canonical/uniform_holder_thinness.md#uht-object) | 两个不同母空间均有自足证明；固定步长/固定输入与精确S门明列，不转移到任意算法或共同尾子层，不替代总体比较 |
 | 商拓扑与闭性修补的障碍 | [C177/C178](research/canonical/topological_repair_obstructions.md)：明确germ商非Polish而仍Baire；闭轴/抛物线无局部线性相交界 | 直接证明；不把历史未给原空间/父层的报告当作已证原定理 |
 | AGM 与经典共同尾先例 | [C146–C148](research/topics/examples/arithmetic_geometric_mean.md#agm-object) 完整编码→锐真EB/共同几何尾/坏选择，另由同窗配对证明严格兼容失败；[C149](research/canonical/selection_truncation_prior_tools.md#st-lipschitz) 全点Lipschitz+共同增量→Hölder回缩 | 直接证明已重构；AGM输入P与输出D分开，正初值Q二次不跨轴；辅助迭代u与T分开。文献先例只在已核原页范围调用，全球先行性未核 |
 | 超线性法向选择 | 完整二支图 C141 + 输出 collar 的全对 γ 模 + 真 EB + 固定小 R 兼容 → 局部严格证书；同图超几何共同尾 + SS-TRANSFER → α 指数上界；固定初值配对的首次切换与 overshoot/饱和尾 → 匹配下界 | [C141 规范正文](research/canonical/selection_superlinear_family.md#sf-object) 在 SF-1–12 的固定参数范围为 `derived-checked`；ν=2、γ=1/2、A=B=1 是 C115/C116 同图特例，ν 与 C139 的 q 不互换 |
@@ -75,7 +76,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 对角竖支闭图 | 完整原图的线性真 EB + 满输入完整近端的线性步 EB + 每选择线性有限长，与零锚 RL 同时成立；同输入跨支碰撞排除任意全对零消失模 | C72–C75/GX-075 独立对象卡；F25 阻断从动力逆推全对 RL |
 | 身份与平方并图 | 同一完整 \(F(x)=\{x,x^2\}\) 的真残差锐半阶、完整目标窗两变量半阶 MR、二参数图区域；指定身份近端线性步 EB 与完整最小步半阶分离，跨支同输入碰撞 | C66–C68、C92、C95/GX-068；\(\mu,\rho<0,\mu\rho\ge1/4\) 的区域与 C89 的 \(A>0\) 门不交，不能从 MR 补全对 RL |
 | 闭球法锥 | 完整 \(N_B\) 的锐全域非扩张反射与二参数区；固定零目标真空 MSR 系数下确界 0，却无任意正指数两变量 MR/HREG | C93/C94/GX-067、F29；先核域外残差与非孤立零集，不能把真空 EB 当逆稳定 |
-| 惰性四状态同步 OT | 固定四点循环、0<p<1、同一输入对唯一不变律的 C-最优耦合 + 同步残差成本 → 精确零集与锐 √(13/p) 线性界；放松内层 OT → 同核假零点 | C71 独立重算；一般固定有限状态证书另见下行 C15，来源其余速率结论及优先权待审 |
+| 惰性四状态同步 OT | 固定四点循环、0<p<1、同一输入对唯一不变律的 C-最优耦合 + 同步残差成本 → 精确零集与锐 √(13/p) 线性界；放松内层 OT → 同核假零点 | C71独立重算；[C171](research/topics/random_markov/finite_state_completion.md#fsc-lazy-rate)另给全初律相对几何率及指定标量公式障碍。一般固定有限状态证书见C15/C169，历史执行身份和优先权仍待核 |
 | 同核不同随机表示 | 四状态核固定，改为逐状态独立 Bernoulli 的随机映射表示 + 同一 C-最优输入运输 → 同一零集但锐平方系数 13/[p(7−6p)] | [C88](research/topics/random_markov/lazy_cycle_representations.md#lcr-sharp) 新推导；表示会改变同步残差，不能从核身份直接迁移常数 |
 | 固定有限状态同步 OT | 固定互异状态及核 + 同一 C-最优耦合 + 全部不变律 + 零成本 tight-edge 顶点行边缘不变 ⇔ 精确零集 ⇔ 全律空间锐线性 EB | [C15 完整证明](research/topics/random_markov/finite_state_certificate.md#fs-theorem) 已独立重写；不需混合性，也不推动力收敛。§5 备用证明和 §6 正则性另有去向 |
 | 随机矩门与回耦 | 共同零点与正 excursion + 全部状态的同系数点态界 + \(pq\le r\) ⇔ 全部有限支撑律的标量矩界；另在同一随机表示、同一律类上把收缩 + 原 \(\Psi\) 的输入最优近极小对 + 回耦损失界合取 → 线性 EB | [C126/C127 自足证明](research/topics/random_markov/moment_recoupling.md)；两条是不同接口，条件残差 \(\mathcal R\) 不能替换 \(\Psi\)，原生模型的回耦门仍待认证 |
@@ -228,6 +229,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [图值/紧约束/孔洞/幂门工具](research/canonical/operator_profile_tools.md)、[完整原算子空间构造前沿](research/canonical/operator_space_construction_frontier.md)、[拓扑与闭性障碍](research/canonical/topological_repair_obstructions.md) | C166–C168/C172/C177/C178的精确定义、证明和开放边界；读总体规模比较前先冻结同一个对象空间、量尺与类别谓词。 |
 | [有限状态补全](research/topics/random_markov/finite_state_completion.md)、[条件刷新补全](research/topics/random_markov/conditional_refresh_interfaces.md) | C169–C171/C173–C175及可测耦合、分位数和Gaussian补充；全部保持实际目标、输入最优性与残差类型。 |
 | [F11路线完整来源](research/audit/OPERATOR_IDEAS_FULL_COVERAGE.md)、[有限状态完整来源](research/audit/FINITE_STATE_FULL_COVERAGE.md)、[条件修复完整来源](research/audit/CONDITIONAL_REPAIR_FULL_COVERAGE.md)、[NO-GO完整来源](research/audit/NO_GO_LEDGER_FULL_COVERAGE.md)、[本批接收](research/audit/BLIND_RECEIPT_2026-10-06_INVENTORIES.md) | 本批四个内容组逐独立断言覆盖；数学重建、旧身份/文献证据与历史报告分别裁决。接收记录只认证实际受检范围。 |
+| [恢复的AW薄性](research/canonical/attouch_wets_fixed_input_thinness.md)、[恢复的一致Hölder薄性](research/canonical/uniform_holder_thinness.md)、[原母空间证明恢复范围](research/audit/MOTHER_SPACE_PROOF_RECOVERY.md)、[M1原生缺件检查](research/audit/M1_NATIVE_RECOVERY_CHECK.md) | C179/C180及新增两份完整原子来源、一个B1部分范围；现有材料可恢复的受限证明与确切未恢复身份分别记账。501位置检索不是501份数学验收；历史HTML内嵌载荷已核读，未新增原件。 |
 | [research/CODE_REGISTER.md](research/CODE_REGISTER.md) | 十个历史验证器 V01–V10 到当前 Claim/待重写对象的映射、执行范围和盲区；检查计算证据或重写可维护代码时读。新代码按协议进入 `research/code/<topic>/`。 |
 | [research/code/README.md](research/code/README.md) | 新可复现实验的 Claim 绑定、seed、精度、运行与盲区模板；只有新程序经重新编写和验收后才进入此树。 |
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |

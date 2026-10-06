@@ -21,6 +21,14 @@ r_F(u)=\lambda^{-1}\inf_{Tx=u}\|x-u\|.
 局部 \(T|_U\) 一般不决定完整 \(F\)，所选步只保证 \(r_F(Tx)\le\|x-Tx\|/\lambda\)。另一种合法对象是从一开始对所有 \(u\in E\) 定义
 \(F_{T,K}(u)=\{(x-u)/\lambda:x\in K,Tx=u\}\)，其中紧 \(K\subset E\) 上 \(T:K\to K\)；**原关系的定义域为 \(T(K)\)，完整近端的自然输入域为 \(K\)**。裁去既有算子的域外图不属于无损改坐标。[OS-H §2]
 
+<a id="os-full-identity"></a>
+**完整纤维身份的精确门。** 固定上述空间、同一 \(\lambda>0\)、输入集 \(U\) 和映射 \(T:U\to E\)，令
+\[
+G_T^U=\{(Tz,(z-Tz)/\lambda):z\in U\},\qquad
+\mathcal M_U=\{(u,v):u+\lambda v\in U\}.
+\]
+只有 \(Tz\in J_{\lambda F}(z)\) 时只能推出 \(G_T^U\subseteq\operatorname{gph}F\cap\mathcal M_U\)。等号当且仅当全部 \(z\in U\) 的完整纤维均为 \(\{Tz\}\)：正向取任意图点并令 \(z=u+\lambda v\)，得到 \(u=Tz\)；反向逐图点代入定义。全域 \(U=E\) 的等号唯一确定完整原图，局部输入集仍不确定其余图点；若 \(T\) 是相位组合或投影，首先须证明该单步选择前提。
+
 | 必须固定的量词 | 不同问题 |
 |---|---|
 | \((F,\lambda)\) 或 \(F\) | 固定算法实例，或存在真实步长的原算子 |
@@ -246,7 +254,9 @@ P_{C,j}=\{G:\Sigma_{C,j}(G)\ne\varnothing\}. \tag{OS9}
 
 故旧“差集非 σ-upper-porous”目标在那里为假。**本页不补造这些空间、孔隙常数或原证明。** 总账的内禀联合模谱“完整双向恢复”也仍是报告结果，不能因更新日期而替代正文。[OS-N §§6–7；OS-I I-076–103]
 
-本次附件已提供总账当时称缺失的 I-001（9/14，仓库展开保留 100/101 项，第三方 Frankowska PDF 未入库）、I-002（9/18）、I-003–005、I-059（selection 修订包）、I-075（9/20 展开包）。I-005 虽名为 `Codex_independent_audit.md`，正文实际是待执行审计任务，不支持“审计已通过”；I-004 为旧稿，修订结论须用 I-059 的主稿与关闭记录。I-097–099 孔隙否定审计、I-102 正式表示稿未在已盘点的仓库和 ZIP 文件名中发现；不能把所有 `SOURCE-MISSING` 原样复制为当前事实。
+本次附件已提供总账当时称缺失的 I-001（9/14，仓库展开保留 100/101 项，第三方 Frankowska PDF 未作独立展开文件入库；其原字节已确认内嵌于现有历史HTML，适用性未核）、I-002（9/18）、I-003–005、I-059（selection 修订包）、I-075（9/20 展开包）。I-005 虽名为 `Codex_independent_audit.md`，正文实际是待执行审计任务，不支持“审计已通过”；I-004 为旧稿，修订结论须用 I-059 的主稿与关闭记录。I-097–099 孔隙否定审计、I-102 正式表示稿未在已盘点的仓库和 ZIP 文件名中发现；不能把所有 `SOURCE-MISSING` 原样复制为当前事实。
+
+有限维AW的固定输入一步可解薄性已从现有来源恢复为[C179](canonical/attouch_wets_fixed_input_thinness.md#aw-object)，精确固定集连续自映射一致空间的正Hölder并类薄性已恢复为[C180](canonical/uniform_holder_thinness.md#uht-object)。前者固定λ与输入，后者不保证保持全时间尾；二者只关闭各自明确母空间中的受限结论，不替代上述动态/轨道理想/孔隙报告。材料恢复的实际范围及缺件在[恢复记录](audit/MOTHER_SPACE_PROOF_RECOVERY.md)；原生M1的模型与完整纤维门见[规范Sign页](topics/path_dynamics/m1_sign_lift.md#sl-scope)及[具体缺件检查](audit/M1_NATIVE_RECOVERY_CHECK.md#m1r-minimal-gap)。
 
 **当前主问题：**在不把 \((L,\gamma,\psi)\) 当作空间坐标的自然完整对象体系中，给有鉴别力且不受远端无关自由度污染的大小量尺，并证明三类的真实规模比较。受限仿射漂移层中的严格成员、任意步长 LT 排除和层内余稀都是有用构造；提升到中立母空间仍需独立证明。
 

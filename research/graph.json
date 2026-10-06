@@ -2018,8 +2018,9 @@
     },
     {
       "id": "OP-CLOSED-ENOUGH",
-      "label": "闭图与原点连续ψ足以转同ψ真EB",
-      "file": "canonical/operator_profile_tools.md#op-nonattainment"
+      "label": "闭图与原点连续ψ足以转同ψ真EB（错误）",
+      "file": "canonical/operator_profile_tools.md#op-nonattainment",
+      "evidence_status": "refuted"
     },
     {
       "id": "OP-INF-GAP",
@@ -2202,6 +2203,90 @@
       "id": "NG-INTERSECTION-BARRIER",
       "label": "C178任意局部窗无有限线性相交界",
       "file": "canonical/topological_repair_obstructions.md#tr-intersection",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-OBJECT",
+      "label": "有限维非空闭图AW距离函数空间",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-HIT",
+      "label": "C179固定输入可解类Fσ第一纲",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-FIXS",
+      "label": "精确固定集S与p0∉S的相对AW空间",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-REL-HIT",
+      "label": "C179精确S空间中的固定输入薄性",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-SHEAR",
+      "label": "固定λ完整Lλ输入/输出剪切AW同胚",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-shear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-ORIG-HIT",
+      "label": "C179完整原图固定λ,p0一步可解薄性",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-shear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AW-REL-ORIG-HIT",
+      "label": "C179精确zerF=S的原图相对薄性",
+      "file": "canonical/attouch_wets_fixed_input_thinness.md#aw-shear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-OBJECT",
+      "label": "满维紧凸K/精确FixS一致映射空间",
+      "file": "canonical/uniform_holder_thinness.md#uht-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-THIN",
+      "label": "C180全部正Hölder并类第一纲/补集稠密",
+      "file": "canonical/uniform_holder_thinness.md#uht-countable",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-TAIL",
+      "label": "K=[−1,1],S={0},一步终止单点尾层",
+      "file": "canonical/uniform_holder_thinness.md#uht-boundary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-NO-TRANSFER",
+      "label": "C180宽空间薄性不自动传共同尾子层",
+      "file": "canonical/uniform_holder_thinness.md#uht-boundary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-RL-DATA",
+      "label": "同T/K全对近距反射γ模的明定类",
+      "file": "canonical/uniform_holder_thinness.md#uht-interfaces",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-ENERGY-DATA",
+      "label": "同T/K全对非负τ平方能量界的明定类",
+      "file": "canonical/uniform_holder_thinness.md#uht-interfaces",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UHT-CERT-THIN",
+      "label": "C180两个明定不等式类包含于H+而薄",
+      "file": "canonical/uniform_holder_thinness.md#uht-interfaces",
       "evidence_status": "derived-checked"
     }
   ],
@@ -5387,6 +5472,103 @@
       "relation": "implies",
       "scope": "C178每个r>0和有限κ≥0均有z=(t,0)破线性相交界；sum或max均失败。仅否定闭性单独足够，不认证历史fixed-E/Foran递归。",
       "status": "derived-checked；自足证明及独立Astra复算，外部先行性另核"
+    },
+    {
+      "id": "E276",
+      "topic": "算子空间",
+      "inputs": [
+        "AW-OBJECT"
+      ],
+      "output": "AW-HIT",
+      "relation": "implies",
+      "scope": "C179 d≥1有限维、全部非空闭输入/输出关系图及AW1；固定p0，bounded output compact slices闭；有限网扰动完全避输入纤维。未认证算法子空间相对第一纲。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E277",
+      "topic": "算子空间",
+      "inputs": [
+        "AW-OBJECT",
+        "AW-FIXS"
+      ],
+      "output": "AW-REL-HIT",
+      "relation": "conditional",
+      "scope": "C179固定非空闭真S，图与对角线交恰ΔS，p0∉S；保留完整无界ΔS锚并扰有限网，精确固定集相对AW第一纲。p0∈S时结论失效。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E278",
+      "topic": "算子空间",
+      "inputs": [
+        "AW-OBJECT",
+        "AW-HIT",
+        "AW-SHEAR"
+      ],
+      "output": "AW-ORIG-HIT",
+      "relation": "conditional",
+      "scope": "C179同λ>0固定，Lλ(u,v)=(u+λv,u)是完整AW hyperspace同胚；原关系非空闭完整图，固定proximal输入p0，不是原输出纤维。不可数步长存在不能用可数并推。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E279",
+      "topic": "算子空间",
+      "inputs": [
+        "AW-REL-HIT",
+        "AW-SHEAR"
+      ],
+      "output": "AW-REL-ORIG-HIT",
+      "relation": "conditional",
+      "scope": "C179同S/λ/p0，剪切保持S×{0}↔ΔS及全部原图/近端纤维；精确zerF=S相对空间，p0∉S。不改变为已良定算法子层。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E280",
+      "topic": "算子空间",
+      "inputs": [
+        "UHT-OBJECT"
+      ],
+      "output": "UHT-THIN",
+      "relation": "implies",
+      "scope": "C180有限维满维紧凸K、非空闭真S且int(K\\S)非空，同𝔛={连续T:FixT=S}一致拓扑；完备兼容度量证Baire，固定α/M块闭无处稠密、可数耗尽全部正Hölder。未保持收敛或全时间尾。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E281",
+      "topic": "算子空间",
+      "inputs": [
+        "UHT-OBJECT",
+        "UHT-TAIL"
+      ],
+      "output": "UHT-NO-TRANSFER",
+      "relation": "conditional",
+      "scope": "C180同K=[−1,1]/S={0}在宽一致空间H+第一纲，但指定e_n=0(n≥1)实际共同尾层只含T=0，H+在子层为全体；只阻断自动相对转移，不判全部收敛层。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E282",
+      "topic": "算子空间",
+      "inputs": [
+        "UHT-OBJECT",
+        "UHT-THIN",
+        "UHT-RL-DATA"
+      ],
+      "output": "UHT-CERT-THIN",
+      "relation": "conditional",
+      "scope": "C180同T/K/范数，0<γ≤1,L有限,R>0，全部近距输入对反射模；近对三角、远对diamK给明确全域Hölder常数。该明定类第一纲，原生RLEB身份另核。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E283",
+      "topic": "算子空间",
+      "inputs": [
+        "UHT-OBJECT",
+        "UHT-THIN",
+        "UHT-ENERGY-DATA"
+      ],
+      "output": "UHT-CERT-THIN",
+      "relation": "conditional",
+      "scope": "C180同T/K/范数，全对显示平方界且τ≥0,ε≥0；丢非负项给Lip√(1+ε)。该明定类第一纲，原生LT身份另核；两个不同母空间不产生总体比较。",
+      "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
     }
   ]
 }

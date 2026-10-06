@@ -56,7 +56,7 @@ proper 不给保纲，连续像不自动 Polish；[局部观测的域外自由�
 <a id="ocf-f"></a>
 ## F · 仅沿轨道约束的完整图共轭
 
-固定步长剪切 \(L_\lambda(u,v)=(u+\lambda v,u-\lambda v)\)，同胚 \(h\) 的完整图作用可写 \(G^h=L_\lambda^{-1}(h\times h)L_\lambda G\)。但它不自动保真残差、同一零集距离、精确尾或换步相容。[C134](../operator_space.md#os-isometry-proof) 只阻止同紧域满射的全局非扩张粗糙共轭。
+固定步长的反射图坐标变换 \(\mathscr C_\lambda(u,v)=(u+\lambda v,u-\lambda v)\)，同胚 \(h\) 的完整图作用可写 \(G^h=\mathscr C_\lambda^{-1}(h\times h)\mathscr C_\lambda G\)。但它不自动保真残差、同一零集距离、精确尾或换步相容。[C134](../operator_space.md#os-isometry-proof) 只阻止同紧域满射的全局非扩张粗糙共轭。
 
 开放任务是给仅沿全部实际轨道点对的尾约束、完整transition真EB及同一初值域的非平凡变换；或证明这种特定约束体系的必要刚性。若允许尾预算从 \(e\) 到 \(ce\)，层间连续箭头仍须另核保纲。只控制正向Lipschitz的一族同胚不自动对取逆闭合，不称其为已定义群。
 
