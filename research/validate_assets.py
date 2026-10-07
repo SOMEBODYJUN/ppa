@@ -234,7 +234,15 @@ if scope_registry.is_file():
                 covered.update(unit_lines)
                 if row["disposition"] not in {"rewritten", "superseded", "refuted", "duplicate", "nonmathematical", "deferred"}:
                     errors.append(f"invalid atomic disposition: {uid}")
-                if not row["exact_payload"] or not row["reason"]:
+                # A physical blank LF has an empty exact payload. Accept it
+                # only as a nonmathematical unit whose actual source slice is
+                # all whitespace; mathematical/evidence units still need text.
+                blank_source_unit = (
+                    row["disposition"] == "nonmathematical"
+                    and 1 <= first <= last <= lines
+                    and not "\n".join(source_text.split("\n")[first - 1:last]).strip()
+                )
+                if (not row["exact_payload"] and not blank_source_unit) or not row["reason"]:
                     errors.append(f"missing atomic payload/reason: {uid}")
                 if row["disposition"] == "deferred" and not row["remaining_obligation"]:
                     errors.append(f"missing exact deferred obligation: {uid}")

@@ -25,8 +25,7 @@ work/c_gx053_065.md §GX-055（行 221–310）；对象在
 research/gap_examples.md §GX-055（行 579–586）及
 research/example_properties.md §GX-055（行 814–822）重述。
 以下从 (IP1) 独立计算。来源的“disconnected domain”应改为
-“disconnected graph”；历史 Spingarn 名称、最大性名称和外部先行性
-均不在这里验收。
+“disconnected graph”；1980/1981作者版本的Spingarn判别另见[逐对象匹配](../../canonical/spingarn_author_definitions.md#sp-gx-match)，正式刊本、其它最大性命名及外部先行性不由本卡验收。
 
 全部逆纤维为
 \[
@@ -232,5 +231,4 @@ p_{k+1}-p_k=\lambda/p_{k+1}\ge\lambda/\varepsilon>0.
 锐 RL/LT 与两种单参数图模、固定零目标的真实残差系数、
 缺失目标纤维以及全部无限合法路径的分类。
 路径分类与 (IP8) 是本卡从原对象新增的直接推导。
-没有数值网格或外部定理承担一般量词证明；历史名称、最大性
-类别及外部优先性仍未审，也不关闭同 ZIP 的其它 GX 卡。
+没有数值网格或外部定理承担一般量词证明；1980/1981作者版本的限定判别已有上列规范接口，正式刊本、其它最大性类别及外部先行性仍未核，也不关闭同 ZIP 的其它 GX 卡。

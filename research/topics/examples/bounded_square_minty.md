@@ -18,7 +18,7 @@ L|g_\lambda(x)-g_\lambda(y)|^\gamma\)。
 
 来源线索：9/01 ZIP `work/c_gx053_065.md` 的 GX-065；见
 [逐源去向](../../audit/UNIT_DISPOSITIONS.tsv)。以下恒等式、最优常数
-和实际路径从 (BS1) 重算。旧卡的 VI 分类与外部文献先行性仍未验收。
+和实际路径从 (BS1) 重算。同一完整关系的 VI 分类现已由[C156/GP8–GP11](gx059_065_property_completion.md#gxp-square-inverse)补齐：quasimonotone而非pseudomonotone；外部文献先行性仍未验收。
 
 <a id="bs-phase"></a>
 ## C83-v1：固定步长的全图相变与锐全对模

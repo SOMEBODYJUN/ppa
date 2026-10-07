@@ -1,12 +1,12 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 480 个数学节点、303 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 504 个数学节点、323 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
 **规范层的独立性门**：一条 `derived-checked` 结论应仅靠所链接的规范定义、正文证明及明确导入的一手定理重建；历史路径只说明它从何而来，不补缺失的假设。仍为 `source-report` 或 `candidate` 的命题不能因 README 有箭头便当作已闭定理。[当前状态](RESEARCH_STATE.md) 只保留活跃义务，旧轮次的时间流水不充当研究前沿。
 
-**这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点；[全库协调验收门](RESEARCH_PROTOCOL.md#global-coordination-gate) 逐项核符号类型、量词、证据与独立性；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定来源逐段枚举与数学清洗的两个完成门；[本批全库协调与隔离接收记录](research/audit/BLIND_RECEIPT_2026-10-06_INVENTORIES.md) 保存本批实际阅读范围、修补及完成边界；[GX/AGM 记录](research/audit/BLIND_RECEIPT_2026-10-05_GX_AGM.md) 保存先前范围，较早范围见[10/03 记录](research/audit/BLIND_RECEIPT_2026-10-03.md)。历史材料的清点不等于数学验收，未来工作也无需先清空历史待办才可进入规范正文。
+**这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点；[全库协调验收门](RESEARCH_PROTOCOL.md#global-coordination-gate) 逐项核符号类型、量词、证据与独立性；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定来源逐段枚举与数学清洗的两个完成门；[本批清洗与空白接收记录](research/audit/BLIND_RECEIPT_2026-10-07_CLEANUP.md) 保存本批实际阅读范围、修补及完成边界；[GX/AGM 记录](research/audit/BLIND_RECEIPT_2026-10-05_GX_AGM.md) 保存先前范围，较早范围见[10/03 记录](research/audit/BLIND_RECEIPT_2026-10-03.md)。历史材料的清点不等于数学验收。**当前阶段先按[清洗顺序](RESEARCH_STATE.md#next-actions)完成来源去向、规范协调和空白接收，再启动新研究；**增长协议说明后续写入方法，不把开放研究项提前变成本轮行动。
 
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子、有限维完整纤维分类、固定窗口锐覆盖与有限 QP 已有完整独立规范证明；实际原生认证和外部先行性分别保留门。9/25 局部值域证书的 Lefschetz 引文适用门已核，但仍有独立整窗拓扑假设和候选证明待审。
 
@@ -53,6 +53,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 图值剖面与自然母空间工具 | [C166–C168/C172](research/canonical/operator_profile_tools.md)：完整图值剖面→真残差需取到或右连续门；同一紧对象块闭约束；鲁棒孔洞及双侧实际幂门。[八项构造前沿](research/canonical/operator_space_construction_frontier.md)列清总体比较的实际义务 | 工具证明已重构；没有自动获得自然母空间、孔隙定理或总体规模比较 |
 | 有限状态与条件刷新完整接口 | [C169–C171](research/topics/random_markov/finite_state_completion.md)：多面体目标锐证书、三状态支撑识别、四循环真实率和指定标量公式障碍；[C173–C176](research/topics/random_markov/conditional_refresh_interfaces.md)：相关Gibbs、连续可数刷新、三种残差/拓扑分离 | 自足证明及独立复算；目标、同输入最优性、固定边缘和权重门分别保留，条件残差不换成原Ψ |
 | 恢复的两种宽母空间薄性 | [C179固定输入AW薄性](research/canonical/attouch_wets_fixed_input_thinness.md#aw-object)、[C180一致映射Hölder薄性与显式证书接口](research/canonical/uniform_holder_thinness.md#uht-object) | 两个不同母空间均有自足证明；固定步长/固定输入与精确S门明列，不转移到任意算法或共同尾子层，不替代总体比较 |
+| 自然支撑函数/法锥的完整实例 | [C191](research/canonical/support_normal_natural_class.md#sn-triangular)：全部完整纤维→独立全对RL与真EB→同δ/r严格匹配；法向/切向另给无匹配门的全域长度。[C192](research/canonical/support_normal_natural_class.md#sn-feedback)分开反馈全域存在/全部选择和小条带唯一；[C193](research/canonical/support_normal_natural_class.md#sn-failures)给非退化最佳指数与固定二次锚失败 | 同一原图的推导自足，圆盘解析轨道携τ≥0；全域单值扩大与C={0}漏门有明确反例，工程应用身份仍独立待核 |
+| 全局随机近端的选择合同 | [C187–C190](research/canonical/global_proximal_selection.md#npr-objects)：真实物理零参考吸收、共同极小点锚界、a.e.唯一/密度卷积、坐标稀疏全部支撑 | 完整直接证明；全局近端最小解不等于非凸次梯度resolvent，强Feller新核不授予不变律或速率 |
 | 相同一步层的相对薄性 | [C186](research/canonical/relative_holder_thinness.md#rht-object)：矩形底边回缩，正Hölder块内低指数扰动仍保全同一一步尾 → H+自身第一纲 | 精确相对结论已证；原生RLEB名称等价仍独立待核，不能推出任意K/S或总体比较 |
 | 商拓扑与闭性修补的障碍 | [C177/C178](research/canonical/topological_repair_obstructions.md)：明确germ商非Polish而仍Baire；闭轴/抛物线无局部线性相交界 | 直接证明；不把历史未给原空间/父层的报告当作已证原定理 |
 | AGM 与经典共同尾先例 | [C146–C148](research/topics/examples/arithmetic_geometric_mean.md#agm-object) 完整编码→锐真EB/共同几何尾/坏选择，另由同窗配对证明严格兼容失败；[C149](research/canonical/selection_truncation_prior_tools.md#st-lipschitz) 全点Lipschitz+共同增量→Hölder回缩 | 直接证明已重构；AGM输入P与输出D分开，正初值Q二次不跨轴；辅助迭代u与T分开。文献先例只在已核原页范围调用，全球先行性未核 |
@@ -151,7 +153,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：总体比较先冻结同一母空间及量尺，原生算法先认证完整纤维/整窗条件，来源清洗按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
+现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：当前先做来源清洗、规范协调和空白接收，按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围；清洗完成后，再开展总体母空间/量尺和原生完整纤维/整窗研究。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
 
 ## File Map
 
@@ -191,6 +193,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/cone_markov.md](research/cone_markov.md) | 锥秩–面–MSCQ 和 Markov 同步/条件残差链、反例与跨线桥；研究旁支时读。 |
 | [research/topics/random_markov/conditional_refresh.md](research/topics/random_markov/conditional_refresh.md) | C129/C130 的两种独立条件刷新模型：二进制固定边缘 \(\mathsf W_\nu/\mathcal R\) 的等价判据和锐系数；Gaussian \(W_{2,Q}/\mathcal R_Q\) 的条件耦合、谱门与局部锐性。跨模型调用或辨别旧图 E42/E43 时读，不把它们接成原同步 \(\Psi\)。 |
 | [research/topics/random_markov/moment_recoupling.md](research/topics/random_markov/moment_recoupling.md) | C126 的非负标量矩门及更新后律空间小质量障碍；C127 的同步 \(D_\eta\)、回耦损失 \(\Delta_\eta\) 与同一近极小 OT 对的条件线性 EB。研究从收缩反推 \(\Psi\) 的 EB 或随机幂次提升时读；原生耦合仍是独立义务。 |
+| [research/canonical/global_proximal_selection.md](research/canonical/global_proximal_selection.md) | C187–C190：物理/支持/运输合同，全部全局prox锚界，有限维a.e.唯一及指定模型密度卷积，坐标ℓ0全部完整支撑与平稳支持分类；复用C62-v2/C63但不互换残差。 |
+| [research/canonical/support_normal_natural_class.md](research/canonical/support_normal_natural_class.md) | C191–C193：三角和反馈完整原图、全对模与真EB独立、同尺度匹配、全部选择长度，以及最大指数、固定二次锚失败和退化例外；圆盘/多面体为同图实例。 |
 | [research/canonical/random_proximal.md](research/canonical/random_proximal.md) | RP-OBJECT/GAP/CONTRACTION/EB/BRANCH/SCALAR 的全证明、尖锐例和残差替换障碍；研究随机近端或条件 \(W_2\) 时读，改假设须另立版本。 |
 | [research/canonical/example_atlas.md](research/canonical/example_atlas.md) | EX01 旋转、EX02 正紧对角、EX03 三次映射的完整对象卡、真残差、参数、证明及历史别名；检验某个逆推、EB 或常数边界时读，新增 GX 先区分对象与观察。 |
 | [research/topics/examples/diagonal_spike_relation.md](research/topics/examples/diagonal_spike_relation.md) | C72–C75/GX-075：对角图加离散竖支的完整残差、每条近端路径、零锚/全对分离及精确二参数区；攻击“收敛或 EB 逆推全对 RL”时读。 |
@@ -219,6 +223,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/composite_subregularity.md](research/canonical/composite_subregularity.md) | C34–C37及C161/C162/C165：满行秩真残差及局部近端；proper-lsc目标转移、实际二阶/Clarke反例、局部完整零集替换和曲面幂/非幂锐例。秩亏扩展仍开放。研究复合目标或调用历史 C11 时先辨身份。 |
 | [research/topics/composite_regular/README.md](research/topics/composite_regular/README.md)、[research/topics/composite_regular/cusp_identification.md](research/topics/composite_regular/cusp_identification.md)、[research/topics/composite_regular/oscillating_target.md](research/topics/composite_regular/oscillating_target.md) | 复合主题可扩写入口与 C40/C41 独立证明：真多值次梯度的局部一步识别门、弱分离缺失时驻点极大序列的目标正确 EB 障碍。新增秩亏机制或目标反例时分别开卡，先核同一目标和真实残差。 |
 | [research/audit/SOURCE_RECONSTRUCTION_AUDIT.md](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md)、[SOURCE_FILE_INVENTORY.tsv](research/audit/SOURCE_FILE_INVENTORY.tsv)、[ZIP_MEMBER_INVENTORY.tsv](research/audit/ZIP_MEMBER_INVENTORY.tsv)、[LEGACY_VERIFIER_RUNS.json](research/audit/LEGACY_VERIFIER_RUNS.json) | 251 个原件及 178 个包内成员的路径/哈希/语义未决字段，旧验证器环境与运行输出；逐源重写时更新 disposition 与规范锚点，不能将盘点算验收。 |
+| [10/07清洗与空白接收](research/audit/BLIND_RECEIPT_2026-10-07_CLEANUP.md)、[逐文件接收范围](research/audit/COORDINATION_SCOPE_2026_10_07.tsv) | 四个全源范围、C185–C193独立证明、全局入口/Claim/图协调与修补循环；明确区分受检链可接续与全库仍有330个字节组未枚举，不把机械校验或局部接收当全库完工。 |
 | [10/05 空白接收](research/audit/BLIND_RECEIPT_2026-10-05.md)、[10/03 接收](research/audit/BLIND_RECEIPT_2026-10-03.md) | 逐次记录空白读者实际阅读的链、反向复算、发现和修补；10/05 明确 C137 的 E221→E207、C141/C142 的本次受检证据、H04/H05 有限维接线及三类未闭缺口。核某条 Claim 的审查范围时读，不把局部接收当全库验收。 |
 | [research/topics/examples/volterra_integration.md](research/topics/examples/volterra_integration.md)、[adjoint_volterra.md](research/topics/examples/adjoint_volterra.md)、[negative_cubic_branch.md](research/topics/examples/negative_cubic_branch.md) | C104/C105 与 C120/C121：Volterra 和伴随方向作为一个等距例型，右端点逆像另核；完整近端逐点强收敛而统一 gauge/有限幂界失败。C106/C107：负三次完整远支、图块锐模和路径越域。研究局部证书与完整算法时读。 |
 | [research/topics/examples/planar_rotation_family.md](research/topics/examples/planar_rotation_family.md) | C122/C123：完整旋转族唯一 Minty 奇点、锐全对输入对距模、Fourier 循环阶与 GX-062/063 两角；修正旧稿“族内强模不决定循环阶”的过强解释。 |

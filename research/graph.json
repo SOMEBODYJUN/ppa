@@ -2510,6 +2510,150 @@
       "label": "单点投影P的自身Baire边界",
       "file": "canonical/relative_holder_thinness.md#rht-boundary",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-OBJECT",
+      "label": "全局prox、物理/支持/运输选择合同",
+      "file": "canonical/global_proximal_selection.md#npr-objects",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-PHYSICAL",
+      "label": "同物理联合律零参考强制吸收",
+      "file": "canonical/global_proximal_selection.md#npr-physical",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-ANCHORED",
+      "label": "全局极小点的1/2/3锚界",
+      "file": "canonical/global_proximal_selection.md#npr-common-minimizer",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-AE",
+      "label": "有限维完整prox几乎处处单值",
+      "file": "canonical/global_proximal_selection.md#npr-ae-singleton",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-NOISE",
+      "label": "指定二维密度卷积政策无关且强Feller",
+      "file": "canonical/global_proximal_selection.md#npr-convolution",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NP-SUPPORT",
+      "label": "坐标稀疏二次全部支撑及平稳分类",
+      "file": "canonical/global_proximal_selection.md#npr-finite-support",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-OBJECT",
+      "label": "支撑函数与完整法锥的共同数据",
+      "file": "canonical/support_normal_natural_class.md#sn-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-SUPPORT-COMPARE",
+      "label": "全部支撑面参数prox及反射比较",
+      "file": "canonical/support_normal_natural_class.md#sn-elementary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-A-FIBERS",
+      "label": "三角原图全输入唯一完整纤维",
+      "file": "canonical/support_normal_natural_class.md#sn-triangular",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-A-RL",
+      "label": "三角全图同δ的全对RL",
+      "file": "canonical/support_normal_natural_class.md#sn-triangular",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-A-EB",
+      "label": "三角完整真残差高阶EB",
+      "file": "canonical/support_normal_natural_class.md#sn-triangular",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-MATCH",
+      "label": "同δ/r严格兼容半径",
+      "file": "canonical/support_normal_natural_class.md#sn-compatible",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-A-LOCAL",
+      "label": "三角原图的完整局部RLEB实例",
+      "file": "canonical/support_normal_natural_class.md#sn-compatible",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-DIRECT-TAIL",
+      "label": "三角全初值独立有限长度尾",
+      "file": "canonical/support_normal_natural_class.md#sn-direct",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-OBJECT",
+      "label": "反馈原图与全局a(t)数据",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-EXISTS",
+      "label": "反馈全输入非空紧完整纤维",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-UNIQUE-RL",
+      "label": "小载荷条带完整唯一及全对RL",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-EB",
+      "label": "反馈完整真残差高阶EB",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-ALL-TAIL",
+      "label": "反馈全域全部选择有限长",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-MULTI",
+      "label": "反馈同输入三个完整输出见证",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-B-GLOBAL-UNIQUE-FALSE",
+      "label": "反馈由小条带自动全域单值的错误扩大",
+      "file": "canonical/support_normal_natural_class.md#sn-feedback",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "SN-ANCHOR-FAIL",
+      "label": "非退化α最优指数及固定二次锚失败",
+      "file": "canonical/support_normal_natural_class.md#sn-failures",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-DEGENERATE",
+      "label": "C={0}的完整投影及τ=0证书",
+      "file": "canonical/support_normal_natural_class.md#sn-failures",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SN-UNQUALIFIED-FAIL-FALSE",
+      "label": "删除非零C门仍排除锚证书的错误概括",
+      "file": "canonical/support_normal_natural_class.md#sn-failures",
+      "evidence_status": "refuted"
     }
   ],
   "edges": [
@@ -6027,6 +6171,238 @@
       "relation": "refutes",
       "scope": "单点{P}在自身拓扑为Baire；每个子集在环境H+第一纲不能改写成每个子集自第一纲。",
       "status": "derived-checked；准确矩形一步层独立完整证明与空白复算"
+    },
+    {
+      "id": "E304",
+      "topic": "随机近端",
+      "inputs": [
+        "NP-OBJECT"
+      ],
+      "output": "NP-PHYSICAL",
+      "relation": "conditional",
+      "scope": "实际条件核、零L2参考及a.s.消失反射；近似版固定同一物理联合律并有实际L2趋零界，点态幂转L2仅γ≤1；m步仅得K^m=δx。",
+      "status": "derived-checked；直接完整证明、父级与独立空白复算"
+    },
+    {
+      "id": "E305",
+      "topic": "随机近端",
+      "inputs": [
+        "NP-OBJECT"
+      ],
+      "output": "NP-ANCHORED",
+      "relation": "conditional",
+      "scope": "p为当前proper目标全局极小点，输出为完整全局近端最小解；全部λ、输入与选择，最近锚另需存在；不输出Fejer或全对模。",
+      "status": "derived-checked；直接完整证明、父级与独立空白复算"
+    },
+    {
+      "id": "E306",
+      "topic": "随机近端",
+      "inputs": [
+        "NP-OBJECT"
+      ],
+      "output": "NP-AE",
+      "relation": "conditional",
+      "scope": "n有限、f proper lsc、h*= (λf+||·||²/2)*在开U有限且每输入prox非空；a.e.单值，政策同律另需实际条件输入由U支撑且绝对连续。",
+      "status": "derived-checked；直接完整证明、父级与独立空白复算"
+    },
+    {
+      "id": "E307",
+      "topic": "随机近端",
+      "inputs": [
+        "FP-SEAM"
+      ],
+      "output": "NP-NOISE",
+      "relation": "conditional",
+      "scope": "同一C63二维完整prox、Borel支持政策与L1概率密度；直接证明椭圆tie集零测及密度平移L1连续，只给改变输入的新核强Feller/政策无关。",
+      "status": "derived-checked；直接完整证明、父级与独立空白复算"
+    },
+    {
+      "id": "E308",
+      "topic": "随机近端",
+      "inputs": [
+        "NP-OBJECT",
+        "FP-ABSORB"
+      ],
+      "output": "NP-SUPPORT",
+      "relation": "conditional",
+      "scope": "有限维坐标ℓ0、H正定、κ/λ>0；全部支撑含空集，实际证明每个完整纤维非空有限及每成员正概率；吸收须每个其他支撑严格败分。",
+      "status": "derived-checked；直接完整证明、父级与独立空白复算"
+    },
+    {
+      "id": "E309",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-OBJECT"
+      ],
+      "output": "SN-SUPPORT-COMPARE",
+      "relation": "implies",
+      "scope": "全部s≥0含s=0、全部切向p与支撑面；投影构造精确全局prox，固定s反射非扩张，跨s界λR_D|s−s′|。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E310",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-OBJECT",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-A-FIBERS",
+      "relation": "implies",
+      "scope": "三角完整F_A，C闭凸含0、symM≥aI，法向投影收缩在每个输入存在唯一；SN7给完整集合纤维={T_A}，不是所选支。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E311",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-A-FIBERS",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-A-RL",
+      "relation": "implies",
+      "scope": "同λ/α的全部完整图点对，Minty输入对距≤δ，Lδ=δ^(1−α)+2λbR_Dk^α；不称无界全尺度次线性模。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E312",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-OBJECT"
+      ],
+      "output": "SN-A-EB",
+      "relation": "conditional",
+      "scope": "固定同一F_A、f∉D；每个切向图值下界bd_D||y||^α后才取完整inf；域外空纤维按∞处理。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E313",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-A-RL",
+        "SN-A-EB"
+      ],
+      "output": "SN-MATCH",
+      "relation": "conditional",
+      "scope": "R_Dk^α<d_D；先选δ使Lδ<2λbd_D，再选0<r≤δ满足r^(1−α)+Lδ<2λbd_D；κ_r为SN10实际合成系数。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E314",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-A-FIBERS",
+        "SN-A-RL",
+        "SN-A-EB",
+        "SN-MATCH"
+      ],
+      "output": "SN-A-LOCAL",
+      "relation": "implies",
+      "scope": "同一完整F_A、最近零锚属于图、全域coverage、全域gauge与V=E；只在d0≤r窗调用C185，保持全部完整输出。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E315",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-A-FIBERS",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-DIRECT-TAIL",
+      "relation": "implies",
+      "scope": "同图法向k收缩与切向增量λbR_D||y+||^α；全部初值SN12尾及有限长，不合取SN-MATCH；点R因子不作点Q因子。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E316",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-OBJECT",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-B-EXISTS",
+      "relation": "implies",
+      "scope": "全局ℓ-Lipschitz a≥a0>0；ξ≤0唯一(p,0)，ξ>0连续h在[0,kξ]跨ξ给全部根非空紧。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E317",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-OBJECT",
+        "SN-B-EXISTS",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-B-UNIQUE-RL",
+      "relation": "conditional",
+      "scope": "固定Q>0且θ=αλ²bR_Dℓk^(α+1)Q^α<1；仅E_Q={ξ+≤Q}全部完整纤维唯一；图块G_Q同δ的SN15，条带外不声称单值。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E318",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-OBJECT"
+      ],
+      "output": "SN-B-EB",
+      "relation": "conditional",
+      "scope": "固定同一F_B、f∉D、半直线法向；每个完整图值的切向gap下界独立给同ψ真EB，不从RL推导。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E319",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-EXISTS",
+        "SN-SUPPORT-COMPARE"
+      ],
+      "output": "SN-B-ALL-TAIL",
+      "relation": "implies",
+      "scope": "每个完整合法输出满足0≤y+≤k(y)+；全初值、全部选择SN12有限尾，不要求θ<1或严格聚合匹配。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E320",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-MULTI"
+      ],
+      "output": "SN-B-GLOBAL-UNIQUE-FALSE",
+      "relation": "refutes",
+      "scope": "固定m=1,D=[−1,1],f=2,b=λ=1,α=1/2,a的分段8-Lipschitz数据；输入(0,9)至少三个完整输出，不反驳已带θ<1的小条带。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E321",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-OBJECT"
+      ],
+      "output": "SN-ANCHOR-FAIL",
+      "relation": "conditional",
+      "scope": "同一三角F_A另须C≠{0}；每个解锚与固定有限矩阵V，实际趋零完整图点否定SN17，完整近端给α最佳指数。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E322",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-DEGENERATE"
+      ],
+      "output": "SN-UNQUALIFIED-FAIL-FALSE",
+      "relation": "refutes",
+      "scope": "合法A数据C={0}时T(p,ξ)=(p,0)、反射等距、SN17用V=τI=0成立；只反驳漏门摘要，不否定C193非退化版本。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E323",
+      "topic": "自然类完整证书",
+      "inputs": [
+        "SN-B-OBJECT"
+      ],
+      "output": "SN-ANCHOR-FAIL",
+      "relation": "conditional",
+      "scope": "同一反馈F_B半直线法向；逐解小条带唯一已证，完整近端α最佳及每个固定有限矩阵V的SN17失败；不把两种原图拼为同一合取。",
+      "status": "derived-checked；完整直接证明、父级与独立空白复算"
     }
   ]
 }

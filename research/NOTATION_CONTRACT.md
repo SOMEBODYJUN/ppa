@@ -88,3 +88,11 @@
 [C181/C182](canonical/l1_markov_extension.md#lm-mn-definitions) 的 \(M_2,N_2\) 分别是源 Markov type 和目标 metric Markov cotype 常数，平方系数按显示定义；\(K\) 是统一扩张损失，跨页可写 \(K_{\rm ext}\)，不是紧输入集。概率回缩 \(\mathcal P\) 跨页写 \(\mathcal P_\Delta\)，其 2-Lipschitz 性属于 \(\ell^1\)；重心导入的 \(W_2\) 也以该目标距离计，不与条件律距离或同步 \(\Psi\) 混用。
 
 [C183/C184](canonical/infinite_fiber_boundary.md#if-counterexample) 的右移 \(S\) 跨页写 \(S_{\rm shift}\)，与零集 \(S\) 分开；\(P_a\) 是半径 \(a\) 球的径向投影。完整纤维的弱紧、范数紧、单点零集和满 Minty 输入分别判定，不能从其中一项省略其余门。
+
+## 本轮恢复链的新增绑定
+
+[C185](canonical/allowed_transition_local.md#at-object)的A是允许三元转移族，B(t)是标量步界，H(t)是允许∞的级数预算；ψ作用在所选v上，不能默认是完整r_F的证书。[C186](canonical/relative_holder_thinness.md#rht-object)的𝓜是矩形一步回缩空间，H+是正Hölder并类，M₀为固定块系数；自身第一纲、在H+环境第一纲与单点子空间第一纲分别判定。
+
+[C187–C190](canonical/global_proximal_selection.md#npr-objects)的P_λf是全部全局近端最小解，与完整非凸次梯度resolvent分开。集合指标δ_A取0/+∞，数值特征函数1_A取0/1；坐标ℓ0与C63组ℓ0分别定义。K是物理Borel核，π是其平稳律；改变输入的K_p不继承原核的吸收/速率结论。支撑索引J、候选T_J和得分V_J只用于同一正定二次数据。
+
+[C191–C193](canonical/support_normal_natural_class.md#sn-object)的D为切向紧凸支撑集，C为法向闭凸集，M为矩阵；d_D与R_D为不同原数据距离量，δ为RL输入对尺度。图点输出(t,y)、近端输入(p,ξ)、参数s=b||y||^α分开。反馈a(t)另绑定为正Lipschitz系数，E_Q是载荷条带，θ是收缩系数；条带全纤维单值不写成全域单值。证书障碍携带C≠{0}或固定半直线门。

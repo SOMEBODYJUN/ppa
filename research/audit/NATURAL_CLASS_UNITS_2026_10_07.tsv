@@ -1,0 +1,529 @@
+unit_id	source_locator	line_start	line_end	source_label	unit_type	exact_payload	evidence_state	disposition	canonical_anchor	claim_ids	reason	remaining_obligation
+NAT-U0001	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	1	3	项目、日期与任务身份	provenance	"# Phase 2：自然多值本构类的两条独立 RL–PPA 证书
+
+项目 `RL-PPA-VERIFY`；理论路线 T，T3；任务 `Goal5`。日期：2026-09-06。"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		保留来源自述；不回溯认证旧任务执行	历史任务及日期身份不参与数学证明
+NAT-U0002	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	4	4	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0003	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	5	5	两类自足及未解决完整PDE的状态报告	status	状态：**两个结构类已给自足数学证明；自然来源只验证到本构构件，尚未声称解决某篇文献的完整离散接触问题或 PDE。** 本模块不改主报告或阶段状态。	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		新直接证明另行给出；旧审查状态不等于新接收	来源原审查行为未核，完整工程模型未匹配
+NAT-U0004	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	6	8	标题、空行、表头或连续排版	organization	"
+## 1. 结论先行
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0005	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	9	9	自然来源及非固定shear的摘要	interpretation	找到一个不是固定方向 shear 换名字的类：**载荷依赖的凸屈服/摩擦集合，带超阈值外驱动、法向锥约束、完整静止/滑动活动集**。它的两个证书分别只需要：	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-source		保留显式原关系；自然性不是已核外部应用定理	四份原论文与完整工程方程另核
+NAT-U0006	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	10	12	标题、空行、表头或连续排版	organization	"
+| 证书 | 可直接获得的原生信息 | 输出 |
+| --- | --- | --- |"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0007	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	13	13	独立RL和完整存在系数摘要	theorem	| RL 与存在性 | 法向 VI 强单调常数 (a)、步长 \(\lambda\)、屈服集对驱动力的最远距离 (R)、载荷律 \(b\|y\|^\alpha\) | 唯一完整 resolvent；\(\gamma=\alpha,\quad L_\delta=\delta^{1-\alpha}+2\lambda bR(1+\lambda a)^{-\alpha}\) |	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN2–8重构全输入法向逆及全活动面比较	无同对象数学缺口；先行性未核
+NAT-U0008	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	14	14	独立高阶ordinary EB系数	theorem	| 高阶 ordinary EB | 驱动力到屈服集的最近距离 \(d>0\)、同一载荷律 | \(q=1/\alpha,\quad K=(bd)^{-1/\alpha}\) |	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN9对完整图全部值取inf	不把最近距离和最远距离互换
+NAT-U0009	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	15	15	两证书严格匹配门	corollary	| 接入理论时唯一需要做的匹配 | 上两行各自得到的系数 | \(R(1+\lambda a)^{-\alpha}<d\)，再选定量局部半径 |	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	SN10分开输入对尺度与实际距离窗	该门只是聚合证书充分条件
+NAT-U0010	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	16	16	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0011	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	17	17	三个原生输入可分别判定	interpretation	**不需要创造一个同时判定两种性质的统一微分条件。** (R) 和 (d) 是不同优化问题，各算各的；法向强单调性又是第三种独立原生输入。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	RL上界、EB下界与法向强单调性分别证明	不声称一般模型自动可计算
+NAT-U0012	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	18	18	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0013	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	19	19	反馈类的独立存在与EB摘要	theorem	第二个类允许法向刚度 (a(t)) 随切向变量变化，形成真正的双向反馈；用一个小邻域 contraction 证书给存在唯一性，误差界不变。详见第 5 节。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	SN13–16给全域存在和小条带唯一性	不把小条带单值性移至全域
+NAT-U0014	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	20	20	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0015	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	21	21	两类一概排除固定旧证书但partial可用	boundary	必须保留的贡献边界：这两类确实排除固定有限 oblique weak-Minty 与有限 anchored calmness/almost-averaging 证书，但法向 partial-monotonicity 加切向增量求和仍可证明收敛。因此不能把它们写成“所有旧理论都做不了”。它们是“把现成工具分别接入，覆盖若干完整旧证书不覆盖的自然结构”的明确正例。	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	A须C非零；C={0}时J为投影且τ=0有效；只定义SN17和直接更新界	旧命名PSM/almost-averaged定理未导入
+NAT-U0016	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	22	26	标题、空行、表头或连续排版	organization	"
+## 2. 自然来源：哪些是真正来源，哪些是本项目模型化
+
+### 2.1 已核原始文献
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0017	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	27	27	Carpick原文及Hertz面积阶数paper fact	literature	1. Carpick–Ogletree–Salmeron, *A General Equation for Fitting Contact Area and Friction vs Load Measurements*, Journal of Colloid and Interface Science **211**, 395–400 (1999)。原文 Section 2 给接触半径与面积关系；Section 5–6 明确以摩擦力正比接触面积作为建模假设，并讨论其失效范围。无黏附 Hertz 极限的面积—载荷阶数为 (2/3)，因而阈值 (b y^{2/3}) 有已知单微凸体本构来源。不能据此推广到任意多微凸体、有磨损或黏附接触。[作者机构 PDF](https://alliance.seas.upenn.edu/~carpickg/dynamic/wordpress/wp-content/uploads/2014/01/Carpick_JColIntSci_1999.pdf)	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		本轮未读取该一手原页；不从源已核标签升级	原页版本、公式、量词和应用门待核
+NAT-U0018	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	28	28	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0019	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	29	29	Gfrerer–Outrata–Valdman摘要paper fact	literature	2. Gfrerer–Outrata–Valdman, *On the solution of contact problems with Tresca friction by the semismooth\* Newton method* (arXiv:2103.02208, 2021)。已核摘要说明：离散接触模型是广义方程，多值部分由摩擦与接触条件产生的凸次微分表示，并用 limiting coderivative 处理。[原始论文记录](https://arxiv.org/abs/2103.02208) 本次未据摘要转述其具体 coderivative 定理或常数。	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		本轮未重验摘要；不得据此导入coderivative定理	原始摘要及任何具体定理另核
+NAT-U0020	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	30	30	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0021	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	31	31	Carstensen塑性支撑函数/法向律paper fact	literature	3. Carstensen 等，*Some properties of the dissipative model of Strain-Gradient Plasticity*。已核全文 Section 2，式 (2.15)–(2.16)：凸弹性域的法向流动律与作为该域支撑函数的耗散势是对偶表达。这支持下文任意紧凸集合 (D) 与 \(\partial\sigma_D\) 的屈服/耗散解释。[机构全文](https://eprints.gla.ac.uk/135015/7/135015.pdf), [原始预印本全文](https://arxiv.org/html/1608.01342v1)	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		数学定义已独立证明；外部归属未本轮核验	指定全文式2.15–2.16及版本另核
+NAT-U0022	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	32	32	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0023	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	33	33	Kanno完整接触模型及不冒称解决	literature	4. Kanno, *Primal-dual algorithm for quasi-static contact problem with Coulomb's friction* (arXiv:2101.11763, 2021)，研究三维拟静态接触及二阶锥互补表达。[原始记录](https://arxiv.org/abs/2101.11763) 它说明完整接触问题的正常/切向力与结构耦合远比下文 reduced law 复杂；**本文不借其应用名称宣称已解决其完整模型。**	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		保留工程边界；本轮不认证论文数学陈述	原文模型与本页F的逐项身份桥未闭
+NAT-U0024	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	34	36	标题、空行、表头或连续排版	organization	"
+### 2.2 模型化边界
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0025	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	37	44	reduced本构变量、外驱动、法向及应用边界	model-definition	"下文 (F) 是从“载荷依赖摩擦阈值 + 外驱动 + 法向卸载/恢复广义方程”组成的 reduced constitutive generalized equation，不是从预先希望的 resolvent 倒造出来。
+
+- (t)：切向滑动/耗散变量；(y)：非负载荷或法向内部变量。
+- \(\partial\sigma_D(t)\)：具有完整静止、滑动及多面体活动面的本构部分。
+- \(b\|y\|^\alpha f\)：按同一面积/载荷尺度施加的外驱动；条件 (f\notin D) 表示驱动严格超出单位屈服集合。
+- \(My+N_C(y)\)：带约束的法向恢复/卸载方程。
+
+这些构件有自然来源；**它们这一特定耦合、零载荷平衡设定和全部定量系数是本项目推导。** 尚需作者选择具体应用、变量单位和边界条件，才能把 reduced law 升级成某个实际工程模型的定理。"	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-object	C191-v1;C192-v1	完整原图直接定义；变量解释不作原生工程已解身份	单位、边界条件、完整原方程和应用证据另核
+NAT-U0026	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	45	49	标题、空行、表头或连续排版	organization	"
+## 3. 候选 A：锥约束的载荷依赖屈服/摩擦广义方程
+
+### 定理 A（全活动集、非孤立解集、两条独立证书）
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0027	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	50	57	紧凸D、支撑函数、f外点和d/R	definition	"令 (D\subset\mathbb R^m) 非空紧凸，
+
+\[
+\sigma_D(t)=\max_{v\in D}\langle t,v\rangle,
+\qquad f\notin D,
+\qquad d=\operatorname{dist}(f,D)>0,
+\qquad R=\max_{v\in D}\|f-v\|.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-object	C191-v1	SN1分型d_D与R_D，支撑面在SN2–5直接证明	无
+NAT-U0028	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	58	58	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0029	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	59	63	含0闭凸法向集和非对称强单调矩阵	definition	"令 (C\subset\mathbb R^r) 为含 (0) 的非空闭凸集合（特别允许多面体锥、二阶锥），(M\in\mathbb R^{r\times r}) 满足
+
+\[
+\frac{M+M^\top}{2}\succeq aI,\qquad a>0.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-object	C191-v1	允许C={0}；对称部分强下界明确	障碍结论另加C非零
+NAT-U0030	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	64	64	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0031	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	65	75	完整多值原算子A1	definition	"给定 (b>0,0<\alpha<1,\lambda>0)，定义完整多值算子
+
+\[
+F(t,y)=
+\begin{cases}
+\bigl\{(b\|y\|^\alpha(v-f),\ My+n):
+v\in\partial\sigma_D(t),\ n\in N_C(y)\bigr\},&y\in C,\\
+\varnothing,&y\notin C.
+\end{cases}
+\tag{A1}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN6声明全部支撑面、全部法锥、域外空；图闭证明	无
+NAT-U0032	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	76	76	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0033	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	77	77	法向逆及k的记号	definition	记 \(A=M+N_C\)、\(K_A=(I+\lambda A)^{-1}\)、\(k=(1+\lambda a)^{-1}\)。则：	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	法向逆全部输入的存在另由SN2收缩构造	无
+NAT-U0034	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	78	78	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0035	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	79	79	完整零集及非孤立性	theorem	1. (S=\operatorname{zer}F=\mathbb R^m\times\{0\})，因而当 (m\ge1) 时解集非孤立。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	切向严格分离及y=0完整图值给精确零集	m≥1已明示
+NAT-U0036	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	80	90	A完整全输入唯一近端及s=0	theorem	"2. (J_{\lambda F}) 在全输入空间上存在且单值，且
+
+\[
+z=K_Aq,\qquad s=b\|z\|^\alpha,
+\qquad
+J_{\lambda F}(p,q)
+=\left(\operatorname{prox}_{\lambda s\sigma_D}(p+\lambda sf),z\right).
+\tag{A2}
+\]
+
+这里 (s=0) 时第一分量就是 (p)，并无未定义情况。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN7精确集合纤维等式；SN3–4处理s=0	不只认证一个选择
+NAT-U0037	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	91	91	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0038	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	92	102	全部活动面图点对局部RL	theorem	"3. 对任意两图点，其 Minty 输入 (x,x') 满足 \(\|x-x'\|\le\delta\) 时，有
+
+\[
+\|Q_{\lambda F}x-Q_{\lambda F}x'\|
+\le L_\delta\|x-x'\|^\alpha,
+\qquad
+L_\delta=\delta^{1-\alpha}+2\lambda bRk^\alpha.
+\tag{A3}
+\]
+
+因此在每个直径不大于 \(\delta\) 的 Minty 输入邻域上有 AP-RL，且常数不依赖邻域中心。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN8作用全部输入对距≤δ，任意中心	无界全尺度有限α常数不成立
+NAT-U0039	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	103	103	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0040	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	104	110	全域ordinary真残差EB	theorem	"4. 全域普通集合误差界独立成立：
+
+\[
+d((t,y),S)=\|y\|
+\le (bd)^{-1/\alpha}\,d(0,F(t,y))^{1/\alpha}.
+\tag{A4}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	SN9完整残差inf；空纤维单列扩展语义	无
+NAT-U0041	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	111	111	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0042	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	112	119	临界聚合严格门A5	corollary	"5. 若
+
+\[
+Rk^\alpha<d,
+\tag{A5}
+\]
+
+则存在明确的小 \(\delta\) 使 \(L_\delta<2\lambda bd\)，从而用户的非线性临界 RL–EB 条件成立。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	R_D k^α<d_D只用于SN10	不当作实际动力必要条件
+NAT-U0043	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	120	120	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0044	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	121	121	非calm和最大RL指数的非零法向门	theorem	6. 若 (C\ne\{0\})，则在任意解输入处 (J) 与 (Q) 都不 calm，更不 locally Lipschitz；任何 AP-RL 幂指数 \(\gamma>\alpha\) 都不可能成立。故 \(\alpha\) 是 genuine 最佳局部幂阶，而不是把 Lipschitz 条件人为降阶。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	携带C≠{0}；逐解输入序列证明	不能沿用至C={0}
+NAT-U0045	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	122	124	标题、空行、表头或连续排版	organization	"
+### 证明：存在性与唯一性这条管线
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0046	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	125	141	法向全输入VI收缩与k界	proof	"先证明法向方程 \(q\in z+\lambda(Mz+N_C(z))\) 全局唯一可解。算子 (B=I+\lambda M) 满足强单调下界 (1+\lambda a)，且为有界线性映射。取
+
+\[
+0<\eta<\frac{2(1+\lambda a)}{\|B\|^2}.
+\]
+
+映射 \(z\mapsto P_C(z-\eta(Bz-q))\) 是 contraction，因其 Lipschitz 常数不超过
+
+\[
+\sqrt{1-2\eta(1+\lambda a)+\eta^2\|B\|^2}<1.
+\]
+
+其唯一不动点恰为法向 VI 解。两解相减并用法向锥单调性，得到
+
+\[
+\|K_Aq-K_Aq'\|\le k\|q-q'\|,\qquad K_A0=0.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	投影表征和几何Cauchy级数给全部输入唯一逆	不需M对称，不借未核最大单调定理
+NAT-U0047	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	142	142	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0048	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	143	143	切向严格凸prox处理完整活动集	proof	切向方程为 \(p\in t+\lambda s(\partial\sigma_D(t)-f)\)，这是凸函数 \(\lambda s\sigma_D\) 的 proximal 方程，因严格二次项而唯一可解，给 (A2)。这处理的是完整图，而非挑选一个方便分支。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-elementary	C191-v1	SN3–4用到λsD的投影直接构造并证明极小性	无
+NAT-U0049	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	144	146	标题、空行、表头或连续排版	organization	"
+### 证明：RL 这条管线
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0050	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	147	153	参数化prox和固定参数反射非扩张	lemma	"对参数 \(s\ge0\) 定义
+
+\[
+T_s(p)=\operatorname{prox}_{\lambda s\sigma_D}(p+\lambda sf).
+\]
+
+由于 \(T_s(p)\) 也是凸函数 \(\lambda s(\sigma_D-\langle f,\cdot\rangle)\) 的 prox，固定 (s) 时反射 \(2T_s-I\) 非扩张。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-elementary	C191-v1	两次梯度不等式相加直接证明firm不等式	无
+NAT-U0051	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	154	154	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0052	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	155	167	跨参数prox灵敏度A6	lemma	"若 (t=T_s(p),t'=T_{s'}(p))，存在 \(v\in\partial\sigma_D(t),v'\in\partial\sigma_D(t')\)，且
+
+\[
+t+\lambda s(v-f)=p,
+\qquad t'+\lambda s'(v'-f)=p.
+\]
+
+利用 \(\partial\sigma_D\) 单调性和 \(\|v'-f\|\le R\)，得到
+
+\[
+\|T_s(p)-T_{s'}(p)\|\le\lambda R|s-s'|.
+\tag{A6}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-elementary	C191-v1	SN5以s(v−v′)分解，包含s=0	无
+NAT-U0053	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	168	168	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0054	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	169	183	乘积反射与α模的全对组合	proof	"法向 \(2K_A-I\) 非扩张，因为 (A) 单调。再用
+
+\[
+|\|K_Aq\|^\alpha-\|K_Aq'\|^\alpha|
+\le k^\alpha\|q-q'\|^\alpha,
+\]
+
+把两个输出之间的差分成固定 (s') 的乘积反射差和参数差，得
+
+\[
+\|Qx-Qx'\|\le\|x-x'\|
++2\lambda bRk^\alpha\|x-x'\|^\alpha.
+\]
+
+在 \(\|x-x'\|\le\delta\) 时即为 (A3)。无需逐个枚举 \(\partial\sigma_D\) 的活动面，也未遗漏跨活动面图点对。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	固定参数乘积非扩张，再加参数差	量化跨全部活动面
+NAT-U0055	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	184	186	标题、空行、表头或连续排版	organization	"
+### 证明：EB 这条管线
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0056	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	187	193	全部图值下界和精确零集证明	proof	"任意 \(v\in\partial\sigma_D(t)\subset D\) 都满足 \(\|v-f\|\ge d\)。因此
+
+\[
+d(0,F(t,y))\ge bd\|y\|^\alpha.
+\]
+
+当 (y\ne0) 时切向分量不含零；当 (y=0) 时 (0\in My+N_C(y))，切向分量恰为零。因此解集和 (A4) 同时成立。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	逐值下界保真残差inf	无
+NAT-U0057	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	194	194	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0058	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	195	195	EB与法向参数独立	boundary	注意：这一步**完全不需要**法向单调常数 (a)、Jacobian 或 resolvent；(d) 可以由屈服集的一个凸投影问题独立算出。RL 用的是最大距离 (R)，EB 用的是最小距离 (d)，没有理由强行把二者当成同一个系数。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-triangular	C191-v1	EB证明不使用M、a或近端反演	只对所声明D/f/载荷律
+NAT-U0059	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	196	198	标题、空行、表头或连续排版	organization	"
+### 证明：genuine 非 Lipschitz
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0060	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	199	207	非calm输入序列与更高指数失败	proof	"取 \(0\ne w\in C\)，令 \(y_\varepsilon=\varepsilon w\)，\(q_\varepsilon=(I+\lambda M)y_\varepsilon\)，\(0<\varepsilon\le1\)。因为 \(0\in N_C(y_\varepsilon)\)，有 \(K_Aq_\varepsilon=y_\varepsilon\)。对任意固定 (p)，切向 proximal 方程给
+
+\[
+\|T_{b\|y_\varepsilon\|^\alpha}(p)-p\|
+=\lambda b\|y_\varepsilon\|^\alpha\|f-v_\varepsilon\|
+\ge\lambda bd\|y_\varepsilon\|^\alpha.
+\]
+
+输入差为 \(O(\varepsilon)\)，输出差至少为正数倍 \(\varepsilon^\alpha\)，因此任意更大指数失败。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	C凸含0使εw可行；法锥0及切向分离给阶差	必须有非零w∈C
+NAT-U0061	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	208	212	标题、空行、表头或连续排版	organization	"
+## 4. 定量接入、实例与真实收敛率
+
+### 4.1 明确的局部半径与理论因子
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0062	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	213	225	严格余量与先选输入对尺度	corollary	"由 (A5) 定义余量
+
+\[
+\Delta=d-Rk^\alpha>0.
+\]
+
+任取
+
+\[
+0<\delta<(2\lambda b\Delta)^{1/(1-\alpha)}
+\]
+
+即可确保 \(L_\delta<2\lambda bd\)。如果用户定理采用 RL step 与 EB 的保守一步合成，则对 \(d(x,S)\le r\le\delta\)，可用"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	分清δ与r；不把Lδ小于阈值直接当所有半径兼容	无
+NAT-U0063	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	226	226	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0064	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	227	238	实际距离窗上的κr合成	proof	"\[
+\kappa_r=
+\left(\frac{r^{1-\alpha}+L_\delta}{2\lambda bd}\right)^{1/\alpha}<1,
+\tag{A7}
+\]
+
+其中进一步取 \(r^{1-\alpha}<2\lambda bd-L_\delta\)。这来自
+
+\[
+d(Jx,S)\le (bd)^{-1/\alpha}
+\left(\frac{d(x,S)+L_\delta d(x,S)^\alpha}{2\lambda}\right)^{1/\alpha}.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	SN10逐d≤r核非线性临界界	无
+NAT-U0065	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	239	239	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0066	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	240	240	切向全局统一及截图留域	boundary	本例全部原生估计在切向变量上全局统一，所以不存在一个已证邻域之外偷偷选分支的问题。若只保留某个固定局部图块，则可用下面有限长度界选足够小初值，保证轨道始终留块。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	完整图取E；截图须重核纤维和预算	不能自动给任意截图完整路径
+NAT-U0067	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	241	243	标题、空行、表头或连续排版	organization	"
+### 4.2 原生分块信息给更好的实际结论
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0068	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	244	251	独立法向递推与切向步长	lemma	"直接保留法向证书，而不把它丢进最坏的标量包络，得到
+
+\[
+\|y_{k+1}\|\le k\|y_k\|,
+\qquad
+\|t_{k+1}-t_k\|\le\lambda bR\|y_{k+1}\|^\alpha.
+\tag{A8}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-direct	C191-v1	SN11直接来自全部唯一输出	无
+NAT-U0069	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	252	252	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0070	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	253	263	两坐标全路径长度上界	corollary	"所以
+
+\[
+\sum_{j\ge0}\|t_{j+1}-t_j\|
+\le\frac{\lambda bRk^\alpha}{1-k^\alpha}\|y_0\|^\alpha,
+\]
+
+\[
+\sum_{j\ge0}\|y_{j+1}-y_j\|
+\le\frac{1+k}{1-k}\|y_0\|.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-direct	C191-v1	SN12给全部尾，控制Euclidean长度	上界未称最优
+NAT-U0071	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	264	264	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0072	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	265	265	距离Q因子与点R因子	corollary	轨道收敛到某个 \( (t_\infty,0)\)，集合距离 Q-linear 因子不超过 (k)，点收敛 R-linear 因子不超过 \(k^\alpha\)。在标量 \(C=\mathbb R_+,M=a\) 情形，非负法向初值的距离因子恰为 (k)。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-direct	C191-v1	严格区分Q距离与R点尾；标量非负法向取等	不声称点Q因子
+NAT-U0073	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	266	266	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0074	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	267	267	实际动力不需匹配门或f外点	boundary	这里 (A8) 实际不要求 (A5)，甚至不要求 (f\notin D)。因此 (A5) 只是**使用当前聚合 RL–高阶 EB 定理的充分认证条件**，绝非真实 PPA 收敛的必要条件。这是应当保留原生信息、也应诚实承认旧 partial 分析仍能发挥作用的又一例证。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-direct	C191-v1	保留原生递推；无f外点时高阶EB与障碍不继承	非退化大小/新颖性另核
+NAT-U0075	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	268	270	标题、空行、表头或连续排版	organization	"
+### 4.3 真多值圆盘摩擦：一个全部常数可算的实例
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0076	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	271	282	圆盘完整例与全部数据	example	"取 \(m\ge1,D=\overline B_1(0),C=\mathbb R_+\)，\(\|f\|=3\)，\(b=\lambda=1,\alpha=2/3,a=7\)。则
+
+\[
+\sigma_D(t)=\|t\|,\quad
+d=2,\quad R=4,\quad k=1/8,\quad k^\alpha=1/4.
+\]
+
+\[
+F(t,y)=
+\left(y^{2/3}(\partial\|t\|-f),\ 7y+N_{\mathbb R_+}(y)\right).
+\tag{A9}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	完整图SN6的m维球特例，精确d/R/k	无
+NAT-U0077	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	283	283	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0078	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	284	284	静止滑动完整面及非固定方向	example-property	当 (t\ne0)，\(\partial\|t\|=\{t/\|t\|\}\)；当 (t=0)，它是整个闭单位球。这包含真正的静止与滑动活动集，且方向随 (t) 改变，不是固定向量 shear。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	支撑面完整定义含球和单点方向	不据此认证物理应用
+NAT-U0079	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	285	285	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0080	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	286	295	圆盘完整shrink近端	example-property	"令 \(z=q_+/8,s=z^{2/3}\)，则
+
+\[
+J(p,q)=\left(\operatorname{shrink}(p+sf,s),z\right),
+\]
+
+\[
+\operatorname{shrink}(u,s)=
+\begin{cases}(1-s/\|u\|)u,&\|u\|>s,\\0,&\|u\|\le s.\end{cases}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	SN3球投影直接给全部纤维	无
+NAT-U0081	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	296	296	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0082	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	297	303	数值参数的精确兼容与法向率	calculation	"两条证书分别为 \(\gamma=2/3,L_\delta=2+\delta^{1/3}\) 与 \(q=3/2,K=2^{-3/2}\)。例如 \(\delta=r=1/8\)，有 \(L_\delta=5/2\) 及
+
+\[
+\kappa_r=(3/4)^{3/2}<1,
+\]
+
+而精确法向距离因子为 (1/8)，点收敛的原生速率上界为 (1/4)。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	用分数和幂精确重算L=5/2和κ=(3/4)^(3/2)	历史浮点执行未回溯认证
+NAT-U0083	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	304	306	标题、空行、表头或连续排版	organization	"
+### 4.4 多面体屈服与活动集
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0084	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	307	315	多面体支撑面、d/R及应用形态	example	"若 \(D=\operatorname{conv}\{v_1,\ldots,v_N\}\)，则
+
+\[
+\sigma_D(t)=\max_i\langle v_i,t\rangle,
+\qquad
+\partial\sigma_D(t)=\operatorname{conv}\{v_i:i\in I(t)\}.
+\]
+
+这是全活动面的多值 law。(R=\max_i\|f-v_i\|) 只需检查顶点；(d) 来自凸二次投影问题。法向 (C\) 若多面体，则其正常/活动约束来自标准线性互补/VI 数据；(C) 也可为二阶锥。证明不要求先统一每个活动面上的导数或把分支点排除。它是第二种应用形态，但与圆盘摩擦共享定理 A，不应把二者冒充两个独立新定理。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1	凸组合支持面及最大距离在顶点证明；与圆盘同一定理	SOCP/工程具体数据不是此证明前件
+NAT-U0085	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	316	318	标题、空行、表头或连续排版	organization	"
+## 5. 候选 B：切向相关法向刚度——非三角反馈
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0086	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	319	327	反馈完整原图和全局a假设	definition	"为了不止于可显式三角消元的类，令 (y\in\mathbb R_+\)，而法向刚度依赖 (t)：
+
+\[
+F(t,y)=
+\left(b y^\alpha(\partial\sigma_D(t)-f),\ a(t)y+N_{\mathbb R_+}(y)\right).
+\tag{B1}
+\]
+
+假定 \(a(t)\ge a_0>0\)，且 (a) 全局 \(\ell\)-Lipschitz。全局条件可以改为带自映射检查的局部条件；此处采用全局形式避免省略该检查。(D,f,d,R,b,\alpha,\lambda) 如定理 A，令"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	SN13声明完整半直线图及全局Lipschitz门	局部a版本须自映射等新门，未自动接纳
+NAT-U0087	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	328	328	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0088	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	329	334	k/θ/β的反馈预算	definition	"\[
+k=(1+\lambda a_0)^{-1},\qquad
+\theta=\alpha\lambda^2 bR\ell k^{\alpha+1}Q^\alpha,
+\qquad
+\beta=\lambda\ell k^2 Q.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	SN14分清条带Q、RL尺度δ及两个预算	无
+NAT-U0089	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	335	337	标题、空行、表头或连续排版	organization	"
+### 定理 B
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0090	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	338	338	双侧小条带完整唯一逆	theorem	若 \(\theta<1\)，则在完整双侧输入区域 \(q_+\le Q\) 内，\(I+\lambda F\) 的逆唯一存在。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	全空间Φ收缩给全纤维唯一，不只构造一支	全域存在新增IVT证明；全域唯一有三输出反例
+NAT-U0091	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	339	339	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0092	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	340	347	反馈全对RL系数B2	theorem	"令 \(\delta\) 为两 Minty 输入的最大比较距离，则有效 AP-RL 常数为
+
+\[
+L_{\delta,Q}
+=\frac{2\lambda bRk^\alpha(1+\beta)}{1-\theta}
++\left(\frac{2(1+\beta)}{1-\theta}+2k+1\right)\delta^{1-\alpha}.
+\tag{B2}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	SN15–16核全部点对的分参数界	图块G_Q，不赋全图
+NAT-U0093	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	348	348	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0094	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	349	355	反馈精确零集和真EB	theorem	"误差界完全不变：
+
+\[
+S=\mathbb R^m\times\{0\},\qquad
+d((t,y),S)\le (bd)^{-1/\alpha}d(0,F(t,y))^{1/\alpha}.
+\tag{B3}
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	与A同一切向全图值下界，单独核a连续	无
+NAT-U0095	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	356	356	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0096	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	357	357	反馈先Q后δ的严格匹配	corollary	若 \(Rk^\alpha<d\)，则先缩小 (Q)，再缩小 \(\delta\)，可使 \(L_{\delta,Q}<2\lambda bd\)，接入同一个 RL–EB 临界定理。这里存在性、RL 常数及 EB 仍是分开判定。	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	θ,β趋0后主项留严格余量，再选r	按同条带检查实际轨道
+NAT-U0097	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	358	360	标题、空行、表头或连续排版	organization	"
+### 证明
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0098	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	361	375	完整反馈方程等价与收缩存在唯一	proof	"给定候选切向输出 (t)，法向方程唯一给
+
+\[
+z(t,q)=\frac{q_+}{1+\lambda a(t)},\qquad
+s(t,q)=b q_+^\alpha(1+\lambda a(t))^{-\alpha}.
+\]
+
+完整 PPA 方程等价于
+
+\[
+t=\Phi_{p,q}(t):=
+\operatorname{prox}_{\lambda s(t,q)\sigma_D}(p+\lambda s(t,q)f).
+\]
+
+标量函数 \(u\mapsto(1+\lambda u)^{-\alpha}\) 在 \(u\ge a_0\) 上 Lipschitz 常数为 \(\alpha\lambda k^{\alpha+1}\)。再用 (A6)，\(\Phi_{p,q}\) 的 Lipschitz 常数不超过 \(\theta<1\)。故全空间 Banach 定理给唯一 (t)，进而给唯一完整 (z)。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	法向全部解反演；Φ定义在整个R^m	θ<1只用于唯一和定量比较
+NAT-U0099	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	376	376	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0100	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	377	386	两输入的切向/法向灵敏度	lemma	"两组输入及输出满足
+
+\[
+\|t-t'\|\le
+\frac{\|p-p'\|+\lambda bRk^\alpha|q-q'|^\alpha}{1-\theta},
+\]
+
+\[
+|z-z'|\le k|q-q'|+\beta\|t-t'\|.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	SN16逐项保持相同Q和k	无
+NAT-U0101	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	387	387	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0102	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	388	395	Euclidean反射预算及EB独立	proof	"用 \(Q_F=2J_F-I\) 及欧氏范数的三角不等式，有
+
+\[
+\|Q_Fx-Q_Fx'\|
+\le2(1+\beta)\|t-t'\|+(2k+1)\|x-x'\|,
+\]
+
+从而得到 (B2)。系数较保守，但其 \(Q,\delta\downarrow0\) 极限主项仍为 \(2\lambda bRk^\alpha\)。EB 的证明只用 \(\|v-f\|\ge d\)，无需重做任何法向逆分析。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	保持原λ；不采用源Q_F/J_F的省步长缩写	无
+NAT-U0103	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	396	396	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0104	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	397	404	双侧输入的实际递推及有限长度	corollary	"实际 PPA 还满足
+
+\[
+0\le y_{j+1}\le ky_j,\qquad
+\|t_{j+1}-t_j\|\le\lambda bR y_{j+1}^\alpha,
+\]
+
+所以同样有有限长度与非孤立点收敛。这一直接分块证明仍不是新颖性排除证据。"	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1	负初值须用k(y_j)_+；全域IVT支持全部选择无限延续	不把全选择有限长解释为完整单值
+NAT-U0105	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	405	405	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0106	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	406	413	反馈每个解输入的最大指数	proof	"若 (a) 在解点附近有界（由 Lipschitz 性自动得到），取 \(q\downarrow0\) 且 (p) 固定，\(t-p=O(q^\alpha)\)，进而
+
+\[
+z\sim\frac{q}{1+\lambda a(p)},\qquad
+\|t-p\|\ge\lambda bd z^\alpha.
+\]
+
+因此最优局部幂指数仍恰为 \(\alpha\)。"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	a局部有界且t→p，法向渐近及切向下界	无
+NAT-U0107	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	414	416	标题、空行、表头或连续排版	organization	"
+### 自然性与缺口
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0108	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	417	417	反馈本构解释与完整工程缺口	interpretation	(a(t)) 可解释为沿切向状态变化的法向恢复刚度/柔度；它造成双向耦合，不能再先独立求法向 (y)。本次没有核实一个原始接触论文恰好采用 (B1) 的全部方程；故它应标为**有本构动机的理论候选**，而非“某成熟工程模型已经完整解决”。论文若要求强应用贡献，下一步应对一份实际模型逐项对照，保留其交叉刚度与载荷条件，不可用这里的简化方程替换后宣称解决原问题。	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		不从本页理论F推出现存原论文使用同方程	完整应用模型身份逐项待核
+NAT-U0109	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	418	422	标题、空行、表头或连续排版	organization	"
+## 6. 指定旧证书的严格失败与必须保留的例外
+
+### 6.1 任意固定解锚点的 finite oblique weak-Minty 失败
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0110	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	423	427	投影分离方向	lemma	"令 \(v_0=P_Df\)，\(e=(f-v_0)/d\)。投影分离性质给任意 \(v\in D\)
+
+\[
+\langle e,v-f\rangle\le-d.
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	SN2给面值统一负投影界	无
+NAT-U0111	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	428	428	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0112	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	429	439	任意锚的趋零图点与两种阶	proof	"固定任意解 \(\bar x=(\bar t,0)\)。取 \(0<\eta<\alpha\)、\(t_r=\bar t+r^\eta e\)、\(y_r=rw\)，其中 \(0\ne w\in C\) 固定。选 \(v_r\in\partial\sigma_D(t_r)\) 及法向锥元素 (0)。在定理 A 中，图值 (u_r^*\in F(t_r,y_r)) 满足
+
+\[
+\langle (t_r,y_r)-\bar x,u_r^*\rangle
+\le-bd\|w\|^\alpha r^{\alpha+\eta}+O(r^2),
+\]
+
+\[
+\|u_r^*\|^2=O(r^{2\alpha}),\qquad
+(t_r,y_r,u_r^*)\to(\bar t,0,0).
+\]"	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	C191明确另加C非零；C192用半直线	源§1须修复退化遗漏
+NAT-U0113	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	440	440	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0114	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	441	441	固定有限oblique二次项的失败	theorem	因 \(\eta<\alpha\)，配对除以 \(\|u_r^*\|^2\) 趋于 \(-\infty\)。任何固定有限矩阵 (V) 的二次项 \(\langle u_r^*,Vu_r^*\rangle\) 只有 \(O(r^{2\alpha})\)，都不能补偿。故任何固定有限 oblique weak-Minty anchored certificate 在每个解图邻域均失败。定理 B 中 (a(t_r)) 有界，同一标量 (y_r=r) 序列同样成立。	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	只排除明确SN17；包括τI与τ≥0；不代替外部命名定义	未知退化度量/变参数命名证书未排除
+NAT-U0115	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	442	444	标题、空行、表头或连续排版	organization	"
+### 6.2 finite anchored calmness / almost-averaging 失败
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0116	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	445	445	anchored calmness/almost-averaging范围	boundary	第 3 节 genuine 证明已经在每个解输入 \(x_\star\) 给出 \(\|Jx-Jx_\star\|/\|x-x_\star\|\to\infty\)。任何在该锚点推出有限局部 Lipschitz/calmness 常数的 almost-averaging 定理都不能直接认证这个 (J)。具体竞品需要使用其原定义与量词；不能据名称一概排除所有变参数或退化度量版本。	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-failures	C193-v1	不calm直接证明；只排除确实推出calm的具体前提组合	命名竞品须另核原定义
+NAT-U0117	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	446	448	标题、空行、表头或连续排版	organization	"
+### 6.3 不应隐瞒的 partial 旧工具
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0118	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	449	451	partial可用与不得普遍排除	boundary	"法向方程本身强单调、法向距离收缩；切向步长可求和。因此使用退化法向度量的 partial-monotonicity/PSM 证书，再补充这条增量估计，仍能证明同一个 Euclidean PPA 收敛。
+
+正确结论是：**完整各向同性固定二次证书失效，但分别提取法向与切向信息后可以成功。** 这与用户“分别判定系数，再接入自己的定理”的方向完全一致；它不支持“所有旧思路均不可能处理该类”的宣传。"	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-feedback	C192-v1;C193-v1	直接法向更新足够；B联合全对法向单调性以−7反例否定	不授予未定义PSM类别身份
+NAT-U0119	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	452	454	标题、空行、表头或连续排版	organization	"
+## 7. 为什么不继续盲找光滑 KKT 作为 genuine 来源
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0120	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	455	457	光滑零流形的局部逆筛选	lemma	"对抗审计提供了一个自足筛选障碍：如果 (F) 单值 (C^1)、零集 (S) 在解点 (p) 附近为 (C^1) 流形，Minty 映射 (G=I+\lambda F) 有完整局部单值逆，且该逆在全输入邻域上满足 \(d(Jx,S)\le\kappa d(x,S)\)、\(\kappa<1\)，则 \(DG(p)\) 必可逆，因此 (J) 局部 (C^1)/Lipschitz。
+
+若 \(DG(p)v=0\)、\(v\ne0\)，则 \(DF(p)v=-v/\lambda\)；而 \(DF(p)\) 在 \(T_pS\) 上为零，所以 \(v\notin T_pS\)。沿 \(u=p+tv\)，\(G(u)=p+o(t)\)，但 \(d(u,S)=|t|\operatorname{dist}(v,T_pS)+o(|t|)\)，违反该收缩。这说明平滑 KKT + 平滑零流形通常不是 genuine \(\gamma<1\) 新区域的好靶子；应优先找多值、尖点载荷律或奇异解集。"	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-smooth		补双侧局部逆J(G(u))=u；用图表示距离和收缩构造证明局部Lipschitz	不为原生KKT核流形/coverage；不判全球优先权
+NAT-U0121	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	458	460	标题、空行、表头或连续排版	organization	"
+## 8. 检索与证据账本
+"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0122	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	461	468	历史搜索行为和四条查询	search-provenance	"本次为代表性来源核验，不称系统综述。日期 2026-09-06；平台原生 web 搜索；无第三方 API。主要完整查询：
+
+- `friction force normal load two thirds Hertz contact area shear strength 2/3 paper`
+- `Tresca Coulomb friction normal load power law variational inequality non associated contact`
+- `rate independent plasticity dissipation potential support function yield surface normality convex dual paper`
+- `""friction"" ""load"" ""2/3"" ""Carpick""`
+
+未报告总命中数，因为搜索工具未提供稳定数据库式总计。只引用作者机构 PDF、原始预印本和论文记录；未把二次网页当成证明来源。"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		保留可定位报告；本轮未执行或复原历史检索	不认证原执行平台、覆盖率或系统综述
+NAT-U0123	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	469	471	标题、空行、表头或连续排版	organization	"
+| 内容 | 证据状态 |
+| --- | --- |"	nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0124	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	472	472	用户材料VERIFIED标签	status	| RL 定义、PPA 接口及临界常数 | VERIFIED_USER_MATERIAL：现有主报告与模块 |	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		规范C185等另有精确身份，源状态不自动传递	历史用户输入范围不复原
+NAT-U0125	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	473	473	Carpick验证状态重述	literature-status	| 摩擦阈值/面积关系与适用限制 | VERIFIED_SOURCE：Carpick 原始 PDF，Section 2、5–6 |	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		同LF27未验一手事实	原页待核
+NAT-U0126	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	474	474	接触摘要验证状态重述	literature-status	| 真实接触方程含凸次微分/coderivative 可用 | VERIFIED_SOURCE：Gfrerer–Outrata–Valdman 原始摘要；仅摘要层证据 |	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		同LF29仅保留来源报告	原摘要待核
+NAT-U0127	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	475	475	塑性全文验证状态重述	literature-status	| 屈服集支撑函数与耗散法向律 | VERIFIED_SOURCE：Carstensen 等全文，(2.15)–(2.16) |	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		同LF31仅保留来源报告	原页待核
+NAT-U0128	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	476	478	定理A/B及代理审查执行标签	review-provenance	"| 定理 A、B，常数、指数障碍与失败序列 | AI_INFERENCE：本模块自足推导，已请求独立数学审计；不是文献原定理 |
+| 定理 A 的初版一般凸 Lipschitz 势证明 | 对抗代理已独立确认；支撑函数版是更尖锐的同一证明 |
+| 定理 B 的存在性与全部系数 | 对抗代理独立快审确认，且明确保留退化 partial 证书替代 |"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		新规范直接证明独立于旧代理声称	历史代理审查行为未核
+NAT-U0129	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	479	479	解析实例浮点与calmness旧执行报告	numerical-provenance	| 例 A9 的常数与解析 resolvent 数值自检 | EXECUTED_LOCAL：k=0.125，k^alpha=0.25，L=2.5，K=0.3535533905932738，kappa=0.649519052838329；q=1e-3,1e-6,1e-9 时原图方程法向误差为0，calmness 比约5、50、500 |	derived-checked-with-source-scope-repair	superseded	research/canonical/support_normal_natural_class.md#sn-compatible	C191-v1;C193-v1	常数和发散比的数学另直接证明；旧执行仍报告	旧程序、输入p/方向与执行输出身份未核
+NAT-U0130	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	480	480	完整工程/PDE应用待核	open-obligation	| 某个现成完整工程/PDE实例已由本理论解决 | PENDING_VERIFICATION；当前不可宣称 |	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		保留实际模型身份未闭	逐方程与原数据核对
+NAT-U0131	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	481	481	所有partial均失败已否定	boundary	| 排除所有 partial 或退化度量旧理论 | 已否定：法向证书 + 增量求和可用 |	derived-checked	rewritten	research/canonical/support_normal_natural_class.md#sn-direct	C191-v1;C192-v1	完整原图直接递推给独立有限长度	不将此事实包装为外部PSM定理
+NAT-U0132	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	482	482	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0133	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	483	492	返回合同任务字段和PROVISIONAL	provenance	"## 9. SCI 返回合同
+
+```yaml
+contract_version: ""1.0""
+expert_skill: sci-skills-literature-search
+project_id: RL-PPA-VERIFY
+paper_family: T
+stage_id: T3
+task_id: Goal5
+task_status: PROVISIONAL"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		合同作为历史元数据，非当前研究权限或证据	历史任务行为不复原
+NAT-U0134	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	493	499	历史输入及原文阅读清单	provenance	"inputs_reviewed:
+  - visible conversation and delegated natural-class task
+  - agent_nonlinear_crossbranch.md sections 5-6
+  - RL_PPA_partial_information_verification_report_2026-09-06.md
+  - Carpick et al. 1999 original full text
+  - Carstensen et al. original full text
+  - Gfrerer-Outrata-Valdman original abstract"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		不读取历史聊天，不采信旧已读标签作paper fact	列举输入的旧审查范围未核
+NAT-U0135	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	500	505	旧输出文件与三类证据字段	status	"outputs:
+  - phase2_natural_classes.md
+evidence_status:
+  - VERIFIED_SOURCE for specified constitutive building blocks
+  - AI_INFERENCE for all new quantitative theorems and separation proofs
+  - PENDING_VERIFICATION for identification with an unchanged full engineering model"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		当前资产独立定义；工程身份仍未闭	原输出/外部访问执行不认证
+NAT-U0136	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	506	510	合同中的共同假设摘要	definition-summary	"assumptions:
+  - finite-dimensional Euclidean PPA with one fixed lambda
+  - 0 < alpha < 1
+  - compact convex yield set D and f outside D
+  - strong normal restoration and uniform declared coefficient bounds"	same-canonical-identity	duplicate	research/canonical/support_normal_natural_class.md#sn-object	C191-v1;C192-v1	完整假设已在SN1/SN6/SN13逐项承接	C非零只用于C193
+NAT-U0137	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	511	513	作者应用选择和人工动作字段	organization	"author_input_needed:
+  - choose whether reduced constitutive applications suffice or supply a full target model
+manual_actions: []"	nonmathematical	nonmathematical	research/canonical/support_normal_natural_class.md#sn-source		研究建议不构成已证应用	无新增数学断言
+NAT-U0138	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	514	520	六项旧质量检查自述	review-provenance	"quality_checks:
+  - existence and uniqueness proven for complete graph rather than a selection
+  - RL and EB derived in separate pipelines
+  - cross-active-set pairs included
+  - nonisolated zero set and genuine Holder exponent proven
+  - explicit constants and one fully numerical parameter instance given
+  - normal partial-theory escape route explicitly retained"	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		当前完整纤维/双证书/指数证明分别给出；旧检查日志未核	历史执行不回溯认证
+NAT-U0139	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	521	526	旧冲突/合并/下一动作合同	organization	"conflicts: []
+conflict_resolution_status: NOT_REQUIRED
+merge_permission: orchestrator_only
+recommended_next_action: independently audit Theorems A and B, then choose one unchanged application model for full-data matching
+stage_acceptance_recommendation: NOT_ASSESSED
+```"	nonmathematical	nonmathematical	research/canonical/support_normal_natural_class.md#sn-source		历史合同无当前权限效力；保留原应用待核门	无新增数学断言
+NAT-U0140	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	527	527	标题、空行、表头或连续排版	organization		nonmathematical	nonmathematical	research/audit/NATURAL_CLASS_COVERAGE_2026_10_07.md#sn-audit		附随排版，不新增独立实质断言	无
+NAT-U0141	history/sources/历史总包_2026-09-14/菠萝_RL与广义次正则研究资产_2026-09-14_v2_真实超边图/01_RL_PPA核心理论/05_实例与反例/支撑函数与法锥_自然类推导.md	528	528	原稿下一步完整模型对照	open-obligation	唯一下一步：对定理 A/B 完成独立审计后，选一份实际接触/屈服广义方程逐项保留其原方程并匹配原生数据；不要先宣布已解决完整接触难题。	source-report	deferred	research/canonical/support_normal_natural_class.md#sn-source		数学已重构不等于原生工程模型身份已闭	应用原方程逐项核对仍开放

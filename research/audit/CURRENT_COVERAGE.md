@@ -8,9 +8,9 @@
 
 | 内容组的枚举状态 | 组数 | 精确含义 |
 | --- | ---: | --- |
-| 全LF已有登记去向 | 14 | 同字节全部行被已登记范围的并集覆盖；可仍有deferred、source-report、候选或开放义务 |
+| 全LF已有登记去向 | 16 | 同字节全部行被已登记范围的并集覆盖；可仍有deferred、source-report、候选或开放义务 |
 | 部分LF已有登记去向 | 0 | 尚有未逐断言枚举的行；不能用选定章节推整稿完成 |
-| 尚无登记逐断言范围 | 332 | 格式提示、历史阅读、规范链接和标题分段均不能替代全内容枚举 |
+| 尚无登记逐断言范围 | 330 | 格式提示、历史阅读、规范链接和标题分段均不能替代全内容枚举 |
 
 ## 精确登记范围
 
@@ -31,22 +31,24 @@
 | FINITE-STATE-full | 638 | 1-638 | 259 | explicit-historical-and-literature-evidence-gates |
 | F11-VALUE-AUDIT-full | 285 | 1-285 | 195 | fixed-input-AW-restored-and-explicit-original-gates |
 | UHT-OA-full | 475 | 1-475 | 638 | explicit-native-certificate-historical-and-dynamic-gates |
-| CORE-ALLOWED-TRANSITIONS-full | 150 | 1-150 | 101 | explicit-natural-model-and-execution-gates |
+| CORE-ALLOWED-TRANSITIONS-full | 150 | 1-150 | 101 | allowed-and-natural-mathematics-reconstructed-sharpness-and-history-gates |
 | UHT-SYNTH-full | 202 | 1-202 | 274 | relative-holder-reconstructed-native-certificates-and-source-reports-separated |
+| NONPRODUCT-full | 573 | 1-573 | 272 | explicit-literature-and-historical-evidence-gates |
+| NATURAL-CLASS-full | 528 | 1-528 | 141 | two-native-graphs-reconstructed-external-application-and-execution-separated |
 
-以上 17 个范围共 4258 条原子记录；范围可能属于同一字节内容，不能当独立成果或文件数。
+以上 19 个范围共 4671 条原子记录；范围可能属于同一字节内容，不能当独立成果或文件数。
 
 ## 逐单元去向
 
 | 去向 | 行数 |
 | --- | ---: |
-| rewritten | 1622 |
-| superseded | 64 |
-| duplicate | 254 |
+| rewritten | 1728 |
+| superseded | 85 |
+| duplicate | 324 |
 | refuted | 3 |
-| nonmathematical | 1582 |
-| deferred | 889 |
+| nonmathematical | 1760 |
+| deferred | 927 |
 
-合计 4414 行；同一内容可以有章节、原子断言、版本与重复位置的多种记录。这些行数不是独立成果数，不能除以文件、字节组或节点数报告数学清洗率。
+合计 4827 行；同一内容可以有章节、原子断言、版本与重复位置的多种记录。这些行数不是独立成果数，不能除以文件、字节组或节点数报告数学清洗率。
 
 已枚举来源按相同SHA-256回连到全部出现位置，来源角色仍由原位置保留；原件与成员初始清单的 `unreviewed` 是旧文件级关闭门，当前细粒度进度以本页、[登记表](ATOMIC_SCOPE_REGISTRY.tsv)和[逐单元去向](UNIT_DISPOSITIONS.tsv)为准。尚未关闭全库语义分母，也未证明总体规模比较。

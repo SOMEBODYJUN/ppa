@@ -856,7 +856,7 @@
 
 - **Exact Statement / Objects / Domain / Quantifiers**：实完整关系 \(F(x)=\{-x^2\}\) 当 \(0\le x\le1/2\)、其余为空；固定每个 \(\lambda>0\)，对**全部**两图点且同一步长：\(0<\lambda<1\) 的完整 Minty 自然域为 \([0,1/2-\lambda/4]\)，单值且全图线性 RL 锐常数 \((1+\lambda)/(1-\lambda)\)；\(\lambda=1\) 的自然域 \([0,1/4]\)，单值但全图临界指数 \(1/2\) 锐常数 2，低指数锐值为 (NS5)；\(\lambda>1\) 有完整图同输入跨点碰撞，排除任意零消失全对反射模。
 - **Definitions / Dependencies / Evidence / Status / Related Files**：[BNS-OBJECT/MINTY](research/topics/examples/bounded_negative_square.md#bns-minty) 从所有区间点对、可实现差值和端点序列重算；来源是 9/01 ZIP `work/c_gx053_065.md` 的 GX-053 选定观察；`derived-checked`，不调用外部定理。
-- **Counterevidence / Scope**：全图半阶锐性发生在 \(1/2\) 端点，不是零点局部指数；临界 \(J\) 只在自然域定义；局部缩图的 RL 与完整母图的全对条件是不同命题。历史 Spingarn 名称、VI 分类和先行性未审。
+- **Counterevidence / Scope**：全图半阶锐性发生在 \(1/2\) 端点，不是零点局部指数；临界 \(J\) 只在自然域定义；局部缩图的 RL 与完整母图的全对条件是不同命题。[1980/1981作者版本的限定Spingarn命名](research/canonical/spingarn_author_definitions.md#sp-gx-match)已核；正式刊本对应、其余VI分类和外部先行性仍未核。
 
 ## C101-v1 / BNS-ZERO-PATH · 真零残差与临界合法路径越域
 
@@ -1546,9 +1546,9 @@
 ## C185-v1 / ALLOWED-TRANSITION · 允许多选择的共同证书与有限长度
 
 - **Status**：`derived-checked`；限于下列允许转移身份，原 C02 的其它候选版本不整体升级。
-- **Exact Statement / Objects / Domain / Quantifiers**：固定 X=ℝⁿ、n≥1、F:X⇉X、λ>0、非空闭 S⊆zerF、开 V、η>0，以及 A⊆{(x,y,v):x=y+λv,v∈F(y)}。对全部 x∈V 且 d(x,S)<η，A(x)非空；每个允许(y,v)存在其自己的最近锚z∈P_S(x)，有||(y−z)−λv||≤ω(d(x,S))及d(y,S)≤ψ(||v||)，其中ω:[0,η)→[0,∞)、ψ:[0,∞)→[0,∞)有限非减且零点为0。另对全部这些转移有d(y,S)≤κd(x,S)、0<κ<1。定义B(t)=(t+ω(t))/2，H(t)=ΣⱼB(κʲt)∈[0,∞]。任意x⁰∈V、d₀<η且H(d₀)<d(x⁰,X\V)、H(d₀)<∞，其全部允许选择轨道均无限合法、留在V、有限长、收敛于S∩V；dₖ≤κᵏd₀、总长≤H(d₀)、点尾≤H(dₖ)≤H(κᵏd₀)。ψ有限定义域时另核B(d₀)/λ在域内。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 X=ℝⁿ、n≥1、F:X⇉X、λ>0、非空闭 S⊆zerF、开 V、η>0，以及 A⊆{(x,y,v):x=y+λv,v∈F(y)}。对全部 x∈V 且 d(x,S)<η，A(x)非空；每个允许(y,v)存在其自己的最近锚z∈P_S(x)，有||(y−z)−λv||≤ω(d(x,S))及d(y,S)≤ψ(||v||)，其中ω:[0,η)→[0,∞)、ψ:[0,∞)→[0,∞)有限非减且零点为0。另对全部这些转移有d(y,S)≤κd(x,S)、0<κ<1。定义B(t)=(t+ω(t))/2，H(t)=ΣⱼB(κʲt)∈[0,∞]。任意x⁰∈V、d₀<η且H(d₀)<d(x⁰,X\V)、H(d₀)<∞，其全部允许选择轨道均无限合法、留在V、有限长、收敛于S∩V；dₖ≤κᵏd₀、总长≤H(d₀)、点尾≤H(dₖ)≤H(κᵏd₀)。
 - **Definitions / Dependencies / Evidence**：[AT1–AT8 完整证明与实际幂半径](research/canonical/allowed_transition_local.md#at-theorem)：三角恒等式给步长，非减B及严格预算逐步保证留域与coverage，完备性和闭目标给极限；独立空白复算含零距离、H域及小半径量词。0<γ<1、ω=Lt^γ、ψ=Ks^q时实际β(r)公式、临界iff与距离Q/点R率分开；缩窗后只对d≤r认证。
-- **Counterevidence / Objections / Scope / Related Files**：EB仅对允许的所选值，不等于完整真残差；F(y)={y,3y}与选择y=x/4满足全部前件，却不能以连续ψ(s)=s/3获得真残差EB，见[F48](FAILED_ROUTES.md#f48)。不要求单值图块或全对RL，不提供完整J_{λF}所有选择的身份；若需该结论，须使允许集包含全部相关完整纤维并逐选择核前件。自然屈服模型、锐性可达族及来源执行状态另有deferred；[150 LF全文去向](research/audit/CORE_TRANSITIONS_FULL_COVERAGE.md#at-source)。外部新颖性未核。
+- **Counterevidence / Objections / Scope / Related Files**：EB仅对允许的所选值，不等于完整真残差；F(y)={y,3y}与选择y=x/4满足全部前件，却不能以连续ψ(s)=s/3获得真残差EB，见[F48](FAILED_ROUTES.md#f48)。不要求单值图块或全对RL，不提供完整J_{λF}所有选择的身份；若需该结论，须使允许集包含全部相关完整纤维并逐选择核前件。自然屈服三角原图现由C191/C193恢复；锐性可达族及来源执行状态仍各有deferred；[150 LF全文去向](research/audit/CORE_TRANSITIONS_FULL_COVERAGE.md#at-source)。外部新颖性未核。
 
 <a id="c186"></a>
 ## C186-v1 / RELATIVE-HOLDER-THINNESS · 矩形一步回缩正Hölder类自第一纲
@@ -1557,3 +1557,59 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：在Euclidean平面固定K=[−1,1]×[0,1]、S=[−1,1]×{0}，M={T∈C(K,S):T|S=I}配一致距离。对全部α>0、0≤M₀<∞，H_{α,M₀}={T∈M:||Tz−Tw||≤M₀||z−w||^α对全部z,w∈K}在H₊=∪_{α>0,M₀<∞}H_{α,M₀}的相对一致拓扑中闭且无处稠密；H₊非空、自第一纲。全部A⊆H₊在环境H₊中第一纲，不声明A自身第一纲。该M中Tⁿ=T(n≥1)、FixT=S、极限Π_T=T，固定一步共同零尾的全时间距离恰为一致距离。
 - **Definitions / Dependencies / Evidence**：[RH1–RH11完整证明](research/canonical/relative_holder_thinness.md#rht-object)：全域可数Hölder块，离底边的值域余量与双cutoff，较低β<α尖点仍留H₊且退出固定α块。独立空白Astra和父代理复算同一类扰动、反三角下界、共同尾及完整图代数；没有从C180宽层薄性限制到子层。RH10另给同λ紧完整F_{T,K}，在K上完整J={T}、域外空，domF=S且输出真残差0。
 - **Counterevidence / Objections / Scope / Related Files**：单点{P}在自己拓扑非第一纲；K=[−1,1],S={0}唯一回缩T=0反驳任意K,S推广。来源把H₊称为全部RLEB成员的等价仍须同对象gauge、direct/energy及边界coverage认证。无总体比较、一般全时间孔隙或任意步长结论；[202 LF全文去向](research/audit/RELATIVE_HOLDER_COVERAGE_2026_10_07.md)。外部新颖性未核。
+
+<a id="c187"></a>
+## C187-v1 / NP-PHYSICAL · 零距离物理证书强制吸收
+
+- **Status**：`derived-checked`；实际独立证明范围见正文。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维Borel核K，X的律为π且πK=π，实际转移满足L(X⁺∣X)=K(X,·)。若同一概率实现的参考Y满足E‖X−Y‖²=0及‖2X⁺−X−Y‖≤ω(‖X−Y‖) a.s.、ω(0)=0，则X⁺=X a.s.及K(x,{x})=1 π-a.e.。固定相同(X,X⁺)联合律、L2参考距d_j→0及反射L2上界Ld_j^γ（L有限、γ>0）同样足够。点态幂界经Jensen自动给此L2界仅对0<γ≤1。m步版本只强制K^m(x)=δ_x；支持合同只给输入属于自己的prox纤维。
+- **Definitions / Dependencies / Evidence**：[完整对象和证明](research/canonical/global_proximal_selection.md#npr-physical)，零距离代入、条件化、L2三角/Jensen，及非Dirac平稳链的km时刻事件相关。没有调用未核外部定理；源LF49–116。
+- **Counterevidence / Objections / Scope**：平稳性只是指定应用，零距代入本身无需它；不禁止使用移动参考的另一残差，也不否定律收敛。m步可以保留整除m的确定周期；若改变物理联合律，近似参考结论不自动成立。外部优先权和一般原生回耦未核。
+
+<a id="c188"></a>
+## C188-v1 / NP-ANCHORED · 共同全局极小点的线性锚界
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意proper目标f_i、每个全局极小点p、每个λ>0、每个x和每个存在的全局近端最小解x⁺∈P_λf_i(x)，有‖x−x⁺‖≤‖x−p‖、‖x⁺−p‖≤2‖x−p‖、‖2x⁺−x−p‖≤3‖x−p‖。对共同全局极小集S中每个p同时成立；仅在最近点存在时才写p∈P_S(x)。不需f_i凸或x在其有效域内。
+- **Definitions / Dependencies / Evidence**：[NP3完整证明](research/canonical/global_proximal_selection.md#npr-common-minimizer)，只用与全局极小点的目标比较及三角不等式；源LF172–192。扩展值集合指标写δ_A=0/+∞，与组惩罚的数值特征函数区别。
+- **Counterevidence / Objections / Scope**：这是锚比较，不是全对Lipschitz或Fejér/收敛定理。两点集指标的最近投影在中点两侧跳跃且可增大到指定极小点的距离。没有声称最优常数或新颖性。
+
+<a id="c189"></a>
+## C189-v1 / NP-NOISE · 几乎处处唯一近端与密度卷积
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：n有限、λ>0、f proper lsc，h=λf+‖·‖²/2；开集U上h*有限且P_λf(x)对每个x∈U非空，则P_λf在U Lebesgue-a.e.单值。每个已认证由U支撑且对Lebesgue绝对连续的条件输入律，使任意Borel全局prox tie政策产生相同输出律。对C63同一二维完整图，任意Borel支持政策k和L1概率密度p，K_p(x,A)=∫k(u,A)p(u−x)du与tie政策无关，并且对全部有界Borelφ满足|K_pφ(x)−K_pφ(y)|≤‖φ‖∞‖p(·−x)−p(·−y)‖1，所以强Feller。
+- **Definitions / Dependencies / Evidence**：[a.e.唯一证明](research/canonical/global_proximal_selection.md#npr-ae-singleton)和[卷积证明](research/canonical/global_proximal_selection.md#npr-convolution)。先每个prox最小解给凸共轭支撑不等式，再用一维凸左右斜率异常点可数及Fubini证明唯一；L1矩形阶梯逼近证明平移连续。未使用未核Gribonval–Nikolova或HLS全文。源LF378–418。
+- **Counterevidence / Objections / Scope**：不声称所有噪声绝对连续、无噪prox处处单值或全局Lipschitz。K_p是改变输入机制的新核；不由强Feller推不变律存在、唯一、速率或RL–EB。有限维与h*有限/非空门不可省。
+
+<a id="c190"></a>
+## C190-v1 / NP-SUPPORT · 坐标稀疏二次目标的全部支撑分类
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain / Quantifiers**：n有限、H=Hᵀ≻0、b任意、κ>0、λ>0，f(y)=yᵀHy/2−bᵀy+κ‖y‖0。置Q=H+λ⁻¹I、c=b+λ⁻¹x，对全部J⊂{1,…,n}，(T_Jx)_J=Q_JJ⁻¹c_J、J外为0，V_J=κ|J|−c_JᵀQ_JJ⁻¹c_J/2；空支撑约定T∅=0,V∅=0。完整P_λf(x)恰为最小V_J的全部T_Jx，每个获胜候选精确支撑J，故全纤维非空有限。均匀或任一Borel逐成员正概率政策的吸收点恰为x^J_J=H_JJ⁻¹b_J、J外0的候选中活动坐标全非零且V_J(x^J)<V_I(x^J)对每个I≠J成立者。全部平稳概率律恰为该有限吸收集的支持律。
+- **Definitions / Dependencies / Evidence**：[NP10–NP12双向证明](research/canonical/global_proximal_selection.md#npr-finite-support)。平方完成及删零活动坐标省κ证明全部获胜输出；有限连续得分比较给Borel；实际证明全部纤维有限后调用C62-v2，再求完整固定点方程。源LF420–445。
+- **Counterevidence / Objections / Scope**：非严格胜分只说明一个prox固定点，不能保证全支撑随机政策吸收。不得只检查已经有限的纤维；本命题实际证明每个完整纤维有限。组ℓ0 C63与坐标ℓ0本命题是不同完整对象；无限维、其它目标或概率政策不继承。
+
+<a id="c191"></a>
+## C191-v1 / SN-A-COMPLETE · 支撑函数与法锥原图的两条独立证书
+
+- **Status**：`derived-checked`；完整原关系、投影与凸近端、法向逆、全对模和真EB由SN1–12独立重构，并经全文复算。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定Euclidean R^m×R^r，m,r≥1；D⊂R^m非空紧凸，f∉D，d_D=dist(f,D)>0，R_D=max_D‖f−v‖；C⊂R^r非空闭凸含0，(M+Mᵀ)/2≽aI，a,b,λ>0、0<α<1。SN6定义完整F_A，零集恰S_A=R^m×{0}；完整J_{λF_A}在全部输入非空单值，由SN7给出。每个δ>0，全部图点对在Minty输入对距≤δ时满足RL(λ,α,Lδ;δ)，Lδ=δ^(1−α)+2λbR_D(1+λa)^(−α)。完整真残差满足d(u,S_A)≤(bd_D)^(−1/α)r_F(u)^(1/α)，域外空纤维按扩展值处理。若R_Dk^α<d_D，SN10给同δ/r严格兼容及完整RLEB实例。独立于该匹配门，任意初值的完整轨道都有限长，SN12给所有尾：距离Q因子上界k=(1+λa)^−1，点误差R因子上界k^α。圆盘与多面体为同一定理实例；圆盘τ≥0,y0>0的完整解析轨道见SN-CIRCLE。
+- **Definitions / Dependencies / Evidence**：[完整定义、凸几何及SN6–9](research/canonical/support_normal_natural_class.md#sn-triangular)、[同实例临界半径](research/canonical/support_normal_natural_class.md#sn-compatible)、[独立直接尾](research/canonical/support_normal_natural_class.md#sn-direct)。所用投影、支撑面、凸近端和法向VI逆均在正文初等证明；原件528LF只作来源。
+- **Counterevidence / Objections / Scope**：RL是有输入对尺度的全图证书，不是无界全尺度次线性模。d_D与R_D不能互换，严格匹配不是动力必要条件。C={0}允许，但C193的非calm/二次锚障碍须另加C≠{0}。未认证外部接触/塑性论文或某完整工程模型身份；不主张新颖性。
+
+<a id="c192"></a>
+## C192-v1 / SN-B-COMPLETE · 反馈原图的全输入存在、小条带唯一及全部选择收敛
+
+- **Status**：`derived-checked`；SN13–16、全域标量中间值证明与三输出反例已完整重构、全文复算。
+- **Exact Statement / Objects / Domain / Quantifiers**：Euclidean R^m×R，m≥1；D,f,d_D,R_D,b,λ,α如C191，另固定全局ℓ-Lipschitz a(t)≥a0>0。完整F_B如SN13，域为y≥0，零集恰R^m×{0}，同一完整真残差EB仍成立。对每个输入，全部近端纤维非空紧；当输入法向ξ≤0时唯一输出(p,0)。设k=(1+λa0)^−1，Q>0，θ=αλ²bR_Dℓk^(α+1)Q^α<1、β=λℓk²Q，则完整纤维在E_Q={ξ_+≤Q}唯一；其完整输入片图块G_Q在任意对距δ内有SN15全对RL常数。R_Dk^α<d_D时先缩Q再缩δ/r得到同窗严格兼容。对全部初值、每个完整近端选择，实际递推0≤y_{j+1}≤k(y_j)_+与切向步界给SN12全域有限长度及到某个零点的点尾；不要求θ<1。SN-B三输出例证明全域唯一和全图零消失RL不能自动得到。
+- **Definitions / Dependencies / Evidence**：[完整反馈原图与全部证明](research/canonical/support_normal_natural_class.md#sn-feedback)；复用正文SN3–5支撑函数近端比较。全域存在是从相同原方程补出的独立推导，未假称原稿已经给出。
+- **Counterevidence / Objections / Scope**：条带单值与全域存在/全部选择收敛为不同量词；负初值须取正部，且一步归零后驻定。反馈法向并不自动在联合变量上全对部分单调，正文有−7配对。只能调用已证递推，未授予未定义PSM或外部模型身份。
+
+<a id="c193"></a>
+## C193-v1 / SN-ANCHOR-BOUNDARY · 非退化自然类的最优指数及固定二次锚障碍
+
+- **Status**：`derived-checked`；明确SN17的逐图点序列、最佳指数及C={0}例外已独立证明和全文复算。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C191同一完整F_A并另加C≠{0}，或固定C192的完整F_B。在每个解输入(p,0)的相应唯一局部近端与反射上，最大局部Hölder幂指数恰为α；任何γ>α的锚界、因而全对界都失败，尤其不calm。对每个解锚ū和每个固定有限矩阵V，不存在图邻域使全部完整图点都满足SN17：〈u−ū,w*〉≥−〈w*,Vw*〉。这包含每个固定有限τ≥0的V=τI。反之若C191取C={0}，完整J(p,ξ)={(p,0)}、反射(p,−ξ)均1-Lipschitz，SN17以V=0、τ=0成立；不能删除非零门。C191/C192的独立法向加切向有限长度证明始终保留。
+- **Definitions / Dependencies / Evidence**：[sn-failures](research/canonical/support_normal_natural_class.md#sn-failures)在同一原图选择趋零全部合法图点，以投影分离给负的α+η阶配对和2α阶残差平方；近端非calm则使用实际完整纤维。来源摘要LF21漏门，在本次原子表明确superseded。
+- **Counterevidence / Objections / Scope**：仅排除精确SN17及确实推出有限calmness的前提组合，不据名称排除所有weak-Minty、partial、变度量或almost-averaged理论，不作先行性结论。[光滑筛选辅助引理](research/canonical/support_normal_natural_class.md#sn-smooth)另明定双侧局部逆与同一C^1零流形，给DG(p)可逆及局部Lipschitz；不为任何KKT模型自动认证这些门。
