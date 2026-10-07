@@ -217,3 +217,45 @@ P16 v1 Theorems1–2对应正式版Theorems3.2–3.3；指定负起步公式在�
 Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and extreme amenability*，[作者PDF](https://math.univ-lyon1.fr/~melleray/ext-amenability.pdf)，Appendix A、印刷p.25（PDF第25页）；2026-10-06核原页及证明。Proposition A.3给连续Polish映射的非空开像非第一纲判据；Theorem A.5还要求比较集合Baire可测，给母空间余稀与余稀参数下的纤维余稀等价。准确量词和项目逐项适用门见[规范接口](canonical/operator_space_construction_frontier.md#ocf-category-import)。
 
 **边界**：外部定理不认证特定尾/反射模观测的保纲性。此核验不证明来源当年的访问行为，不等同于另一Melleray Theorem2.9版本核验，也不产生项目新颖性结论。
+
+<a id="lit-oai-catalog-2026"></a>
+## LIT-OAI-CATALOG-2026 · 外部目录与 PPA 的六个候选接口
+
+**来源与实读范围。** 目录 *OpenAI Research Catalog*，2026-10-06，41页、372组结果、722稿件；本次扫描全目录并目读pp.35–36，另从公开仓库取得下面六份原稿及其TeX。固定外部仓库版本为 [`adc7f1241b42e322a6451854ab7e4b4c146bf78a`](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a)，核验日期2026-10-07 UTC。目录与原稿分开：条目编号不是定理编号。
+
+**证据层。** 以下 paper fact 只认证“固定原稿在该位置如此陈述”，主定理证明尚未逐行独立验收，相关Lean形式化的实际覆盖也未核。公开仓库README明确说明各结果验证阶段不同，未形式化结果可能有问题。因此这些是外部 `source-report` / 待核工具，不新增已证项目Claim，不改变C02/C03/C04/C11/C179/C180状态。适用性分析是本库interpretation；没有把它们导入任何承重证明。PPA对照基线为 `ac68013`。
+
+### 332 · ℓ¹ 的 metric Markov cotype 与目标扩张
+
+- **Paper fact / exact identity**：[2026-10-05原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Metric-Markov-Cotype-Two-of-l1-October-5-2026/l1-markov-cotype.pdf)，9页。Definition1.1/Theorem1.2 p.1声称：对每个有限可逆随机矩阵A、其可逆概率向量π、整数t≥1及每组xᵢ∈ℓ¹，存在yᵢ∈ℓ¹，使
+  \[
+  \sum_i\pi_i\|x_i-y_i\|_1^2+t\sum_{i,j}\pi_i a_{ij}\|y_i-y_j\|_1^2
+  \le3024\sum_{i,j}\pi_i\left(\frac1t\sum_{s=1}^t A^s\right)_{ij}\|x_i-x_j\|_1^2.
+  \]
+  Corollary6.2 p.9声称：存在统一K<∞，对每个实Hilbert H、子集D⊂H和Lipschitz f:D→ℓ¹，存在扩张f̂:H→ℓ¹，Lip(f̂)≤K Lip(f)。p.2/§6明确区分允许自由选择yᵢ的metric条件和指定线性平均的更强条件。
+- **Interpretation / possible bridge**：最接近[HE-SNOWFLAKE/EXTENSION](canonical/holder_extension.md#he-snowflake)。若上述扩张命题验收，可对0<γ<1的Hölder f:D→ℓ¹先用Hilbert雪花嵌入，再扩张，得到全H上的K L-Hölder扩张。这是依赖未验收外部命题的条件推导。
+- **Obligations / boundaries**：扩张常数不是L；目标是ℓ¹，不能直接替换H→H的Cayley自映射，也不能证明固定(λ,L,γ)图极大必满域。yᵢ不保证留在原数据子空间或概率单纯形。metric Markov cotype不等于本库同步OT残差Ψ、条件残差或law-step误差界。优先核§3的鞅估计、§4的几何停止与Cesàro比较，以及Cor6.2导入的一手扩张定理全部条件。
+
+### 328 · 反身Banach中的不动点与非扩张回缩
+
+- **Paper fact / exact identity**：[2026-09-24原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Fixed-Points-of-Nonexpansive-Maps-in-Reflexive-Banach-Spaces-September-24-2026/paper.pdf)，19页。Theorem1.1 p.1声称：每个实反身Banach X、非空范数闭有界凸C⊂X、原范数下每个非扩张自映射T:C→C有不动点。Corollary1.2同页声称：任意两两交换的此类映射族有非空共同固定集，并存在C到该集的非扩张回缩；证明明确另导入Bruck定理。已读pp.1–3的陈述、推论及证明路线，未审其全部关键引理。
+- **Interpretation**：与[C11的一致极限回缩](canonical/general_modulus_dynamics.md)有对象接点，可作为Banach推广的候选工具。Hilbert非扩张固定点存在已有经典接口，本稿的扩大范围是任意给定范数的反身Banach。
+- **Boundary / independent check**：存在一个回缩不说明它等于lim Tⁿ，也不给真实残差EB、轨道有限长或RLEB兼容。T=−I在实Hilbert闭单位球上非扩张且FixT={0}，非零轨道为二周期；对应完整关系F=−2I/λ的J_{λF}=−I。这直接阻断“固定点存在⇒完整PPA点收敛”的替换。一般Hölder–RL图的T=(I+C)/2也未必非扩张；闭凸不变域另证。优先核原稿adaptive-anchor/tree/switching承重引理及Bruck适用门。
+
+### 098 · doubling不能认证有限维双Lipschitz表示
+
+- **Paper fact / exact identity**：[2026-09-25原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/A-doubling-Hilbert-subset-with-no-finite-dimensional-bi-Lipschitz-embedding-September-25-2026/main.pdf)，13页。Theorem1 p.2声称存在ℓ²子集S，doubling常数≤76800，对每个有限目标维数和每个有限失真均无Euclidean双Lipschitz嵌入。§7 Corollary6 pp.10–12另声称：存在统一Λ，每个无限维实Banach B中都有一个紧Λ-doubling K_B，对全部有限维实赋范目标均无任何有限失真的双Lipschitz嵌入。已读pp.1–2及§7，不视为完整基础障碍证明验收。
+- **Interpretation / scope**：可用于攻击把有限覆盖复杂度当作有限维坐标认证的路线，与[C04有限维必要性](canonical/finite_fiber_classification.md#ff-object)、[C20实际参数覆盖](canonical/finite_data_proxy.md)相关。doubling不是紧性，更不是有限维假设的替代。
+- **Obligations**：先审原稿§2–5的核心构造与导数障碍。即使命题可靠，也不否定有限样本近似、允许失真随尺度变化的表示、雪花表示或特定RL图的额外结构；不自动给C04无限维纤维反例。
+
+### 329 · 对偶化不保证统一覆盖熵常数
+
+- **Paper fact / exact identity**：[2026-09-24原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Counterexamples-to-the-duality-conjecture-for-metric-entropy-September-24-2026/main.pdf)，15页。Theorem1.1 p.1声称：对每个a,b≥1，存在维数n及原点对称凸体K⊂ℝⁿ，令L=[−1,1]ⁿ，有log N(K,L)>b log N(L° ,a⁻¹K°)。N为任意平移的覆盖数，凸体紧且内部非空，°为线性极体。已读pp.1–2及定理身份，未验收构造证明。
+- **Interpretation / scope**：若以后以覆盖熵比较正反表示或认证类的复杂度，这是“维数统一常数不能凭对偶直觉给出”的待核障碍。它不是[RLEB–LT总体类别比较](canonical/operator_space_construction_frontier.md)的答案：极体不同于F⁻¹，覆盖数不同于Baire纲、孔隙性或prevalence，母空间和图编码仍另证。原稿还明确不声称固定维数反例。
+
+### 327 / 324 · Banach几何与换表示的次级接口
+
+- **327 paper fact**：[2026-09-23原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf)，14页，Theorem1.1 p.1声称每个对至少一个p>1有Markov type p的实Banach空间均superreflexive，即可等价一致凸重赋范。Markov type量化全部有限平稳可逆链、全部链状态到空间的映射及全部整数时刻。已读pp.1–2；完整证明未审。**Interpretation**：是Banach随机几何的候选约束，不能由一个指定核的收缩或同步Ψ误差界得到该空间性质；等价范数也不保持本库的原常数或Hilbert平行四边形恒等式。
+- **324 paper fact**：[2026-09-24原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lipschitz-Equivalent-Separable-Banach-Spaces-Need-Not-Be-Linearly-Isomorphic-September-24-2026/paper.pdf)，23页，Theorem1.1 p.1声称存在全局双Lipschitz等价而不线性同构的可分实Banach X,Y。已读pp.1–2的身份，未审完整构造。**Interpretation**：与[完整图共轭义务](canonical/operator_space_construction_frontier.md#ocf-specification)相邻，但具体共轭保EB、零集、尾界和单调性须独立认证；本结果不证明任意某个共轭破坏这些性质，也不替代保纲桥。
+
+**当前决策。** 在已筛查目录与上述主命题范围，未找到直接陈述同一自然完整算子母空间中RLEB/LT/极大单调总体比较的结果，也未找到直接替代C02-v2全部局部前提的结果。优先332的扩张/停止时刻工具，其次328的回缩接口；098/329作为表示或新量尺路线被实际采用时的攻击种子，327/324保持次级。此判断是相关性筛查，既不证明全球文献无先例，也不声称所有722稿件均已审完。
