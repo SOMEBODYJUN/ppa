@@ -90,7 +90,7 @@
 - **Status**：`derived-checked`；GM1–18 在原有限维同图块量词下完整重构并独立逐式接收。
 
 - **Exact Statement / Objects / Domain / Quantifiers**：\(X=\mathbb R^n\)，\(F:X\rightrightarrows X\)，非空闭 \(S\subset F^{-1}(0)\)，同图块 \(\mathcal G\)，\(U\) 开、\(R,\bar t,\lambda>0\)，连续非减 \(\omega:[0,R]\to[0,\infty)\)、\(\omega(0)=0\)、非减 \(\psi:[0,\bar t]\to[0,\infty)\)，\(\psi(0)=0\) 且在原点右连续、\(0<\kappa<1\)。对**每个** \(x\in U_R\) 假设图块输入覆盖与最近解点 \((p,0)\in\mathcal G\)；对**每对**图点在输入尺度 \(R\) 有 \(\|\Delta u-\lambda\Delta v\|\le\omega(\|\Delta u+\lambda\Delta v\|)\)；在全部实际输出有真实 \(r_F\) EB；\((R+\omega(R))/(2\lambda)\le\bar t\)；对每个 \(0<t\le R\) 有 \(\psi((t+\omega(t))/(2\lambda))\le\kappa t\)；且 \(\int_0^R\omega(t)dt/t<\infty\)。
-- **Conclusion**：若 \(d_0\le R\) 且 \(d_0/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jd_0)<d(x^0,X\setminus U)\)，则唯一图块轨道全程存在、有限长并收敛于 \(S\)；\(d_k\le\kappa^kd_0\)，步长与尾界按同一模级数。量词不自动覆盖完整 \(J_F\)。
+- **Conclusion**：若 \(d_0\le R\) 且 \(d_0/[2(1-\kappa)]+\frac12\sum_{j\ge0}\omega(\kappa^jd_0)<d(x^0,X\setminus U)\)，则唯一图块轨道全程存在、有限长并收敛于 \(S\)；\(d_k\le\kappa^kd_0\)，步长与尾界按同一模级数。量词不自动覆盖完整 \(J_{\lambda F}\)。
 - **Dependencies / Evidence / Objections / Status / Related Files**：[GM1–18 完整证明](research/canonical/general_modulus_dynamics.md#gm-data) 给一步真残差评价域、Dini/采样等价、连续长度函数和严格剩余预算归纳；9/19 S19 thm:modulus-dini 仅作溯源。C02 是幂次版，C09 改变模与额外条件，不能覆盖旧编号。
 
 <a id="c10"></a>
@@ -318,7 +318,7 @@
 
 - **Status**：`derived-checked`。
 
-- **Exact Statement / Objects / Domain / Quantifiers**：保留 C35 全部前提，再对每个 z∈c(B̄_R)、每个 w∈∂φ(z) 设 ||w||≤M。令 h=βM、λ>0、λh<1。对每对 u,u'∈B_R 和每个 v∈F(u),v'∈F(u')，有〈u−u',v−v'〉≥−h||u−u'||²，故同图块、同 λ 的全对 RL 指数 1、常数 (1+λh)/(1−λh)。每个 x∈B_{R/2} 有唯一 B_R 内局部近端输出，x∈B_{r/2} 则输出在 B_r；不声称完整 J_F 无其他球外纤维。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留 C35 全部前提，再对每个 z∈c(B̄_R)、每个 w∈∂φ(z) 设 ||w||≤M。令 h=βM、λ>0、λh<1。对每对 u,u'∈B_R 和每个 v∈F(u),v'∈F(u')，有〈u−u',v−v'〉≥−h||u−u'||²，故同图块、同 λ 的全对 RL 指数 1、常数 (1+λh)/(1−λh)。每个 x∈B_{R/2} 有唯一 B_R 内局部近端输出，x∈B_{r/2} 则输出在 B_r；不声称完整 J_{λF} 无其他球外纤维。
 - **Conditional convergence / Evidence**：再加 Ψ_F(bd)≤κd 对 0≤d≤δ，b=1/[λ(1−λh)]、0<κ<1，以及 d₀≤δ、||x⁰−x̄||+d₀/[(1−λh)(1−κ)]<r/2，才有每条该局部轨道 d_k≤κ^kd₀、有限总长、极限在 S。[CS-PROX](research/canonical/composite_subregularity.md#cs-prox) 的弱凸、最近零点、覆盖和位置预算证明；状态 derived-checked。
 - **Objections / Scope**：满秩 EB 单独不提供轨道结论；删除乘子上界或留域、把局部输出升级完整 resolvent 均是新 Claim。
 
@@ -1516,7 +1516,7 @@
 - **Status**：`derived-checked`；固定外部332实数主定理的承重链已在本库逐式重构。
 - **Exact Statement / Objects / Domain / Quantifiers**：每个n,t≥1、每个n阶随机矩阵A、每个平稳概率π（允许零分量，不要求可逆）、每组x_i∈ℓ¹(ℝ)，存在y_i∈ℓ¹，使Σπ_i||x_i−y_i||₁²+tΣπ_i a_ij||y_i−y_j||₁²≤3024Σπ_i(t⁻¹Σ_(s=1)^t A^s)_ij||x_i−x_j||₁²。故可逆范围的metric Markov cotype2常数≤12√21。
 - **Definitions / Dependencies / Evidence**：[LM1–LM4完整证明](research/canonical/l1_markov_extension.md#lm-proof)：有限二元编码、平坦三次函数、四次势余量108、几何停止与平稳Cesàro比较28。外部固定版本与SHA见[LIT-OAI-CATALOG-2026](research/LITERATURE.md#lit-oai-catalog-2026)；平稳非可逆范围原稿Remark5.1已给，不称本库新颖性。
-- **Counterevidence / Scope / Related Files**：退化相同数据、零π与t=1包含；y_i自由选择，不是指定算法输出、原线性子空间中的点或真实残差EB。复数推论、Lean实际覆盖与全球先行性未验收；无独立代理接收。概率值域需C182的显式回缩并损失常数。
+- **Counterevidence / Scope / Related Files**：退化相同数据、零π与t=1包含；y_i自由选择，不是指定算法输出、原线性子空间中的点或真实残差EB。复数推论、Lean实际覆盖与全球先行性未验收；C181显示的实数承重链已由本轮空白Astra完整复算。概率值域需C182的显式回缩并损失常数。
 
 <a id="c182"></a>
 ## C182-v1 / L1-HOLDER-COMPLETION · 扩张、概率值域与放宽预算的关系完成
@@ -1532,7 +1532,7 @@
 - **Status**：`derived-checked`；完整对象、固定集及空纤维均由显式坐标证明。
 - **Exact Statement / Objects / Domain / Quantifiers**：每个λ,L>0、0<γ<1，在实ℓ²存在非空闭完整关系F，全图全尺度满足同参数RL、固定参数图极大、完整J_λF在全部ℓ²非空单值、完整zerF={u_*}，但F(ae₁)=∅且F⁻¹(ae₁/λ)=∅。a与u_*按IF5–6。Cayley全域L-Hölder且√2-Lipschitz，明确不是非扩张。
 - **Definitions / Dependencies / Evidence**：[IF1–IF6](research/canonical/infinite_fiber_boundary.md#if-counterexample)：单位球径向投影与右移；A和−A均无不动点；平移缩放匹配每组参数；完整FixC坐标递推给唯一零点。图极大由全Minty输入直接证明，不借未验收外部328。
-- **Counterevidence / Scope / Related Files**：仅否定C04有限维必要性的无条件无限维推广，即使另加非空单点零集亦失败；[F47](FAILED_ROUTES.md#f47)。不反驳有限维C04、全局影子C03或另具真EB/兼容的C02。外部先行性与独立代理接收未核。
+- **Counterevidence / Scope / Related Files**：仅否定C04有限维必要性的无条件无限维推广，即使另加非空单点零集亦失败；[F47](FAILED_ROUTES.md#f47)。不反驳有限维C04、全局影子C03或另具真EB/兼容的C02。外部先行性未核；IF1–IF6已由本轮空白Astra完整复算。
 
 <a id="c184"></a>
 ## C184-v1 / NONEXPANSIVE-WEAK-FIBERS · 任意Hilbert的非空弱紧纤维
@@ -1541,3 +1541,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意实Hilbert H、固定λ,L>0、0<γ<1、全域L-Hölder且非扩张C:H→H，以IF1定义完整F_C。则I±C均满射；每个完整正向/逆向纤维非空、范数闭凸有界、弱紧，直径分别≤L^(1/(1−γ))/λ与L^(1/(1−γ))。范数紧性在无限维即使同门下也可失败。
 - **Definitions / Dependencies / Evidence**：[IF-NONEXPANSIVE与IF-NOT-COMPACT](research/canonical/infinite_fiber_boundary.md#if-nonexpansive)；次线性增长给共同不变球，r_n(±C+b)压缩、不动点弱子列与消失缺陷给满射；严格凸给固定集凸，Hilbert反身给弱紧。球投影的完整零纤维给非范数紧反例。
 - **Counterevidence / Scope / Related Files**：额外非扩张门不可由Hölder单独推出，C183明确击中；不声称一般反身Banach结果，不给指定轨道点收敛、EB、兼容或极限回缩，不升级外部328。有限维C04任意紧零集实现不受此凸性子类结论约束。外部先行性未核。
+
+<a id="c185"></a>
+## C185-v1 / ALLOWED-TRANSITION · 允许多选择的共同证书与有限长度
+
+- **Status**：`derived-checked`；限于下列允许转移身份，原 C02 的其它候选版本不整体升级。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 X=ℝⁿ、n≥1、F:X⇉X、λ>0、非空闭 S⊆zerF、开 V、η>0，以及 A⊆{(x,y,v):x=y+λv,v∈F(y)}。对全部 x∈V 且 d(x,S)<η，A(x)非空；每个允许(y,v)存在其自己的最近锚z∈P_S(x)，有||(y−z)−λv||≤ω(d(x,S))及d(y,S)≤ψ(||v||)，其中ω:[0,η)→[0,∞)、ψ:[0,∞)→[0,∞)有限非减且零点为0。另对全部这些转移有d(y,S)≤κd(x,S)、0<κ<1。定义B(t)=(t+ω(t))/2，H(t)=ΣⱼB(κʲt)∈[0,∞]。任意x⁰∈V、d₀<η且H(d₀)<d(x⁰,X\V)、H(d₀)<∞，其全部允许选择轨道均无限合法、留在V、有限长、收敛于S∩V；dₖ≤κᵏd₀、总长≤H(d₀)、点尾≤H(dₖ)≤H(κᵏd₀)。ψ有限定义域时另核B(d₀)/λ在域内。
+- **Definitions / Dependencies / Evidence**：[AT1–AT8 完整证明与实际幂半径](research/canonical/allowed_transition_local.md#at-theorem)：三角恒等式给步长，非减B及严格预算逐步保证留域与coverage，完备性和闭目标给极限；独立空白复算含零距离、H域及小半径量词。0<γ<1、ω=Lt^γ、ψ=Ks^q时实际β(r)公式、临界iff与距离Q/点R率分开；缩窗后只对d≤r认证。
+- **Counterevidence / Objections / Scope / Related Files**：EB仅对允许的所选值，不等于完整真残差；F(y)={y,3y}与选择y=x/4满足全部前件，却不能以连续ψ(s)=s/3获得真残差EB，见[F48](FAILED_ROUTES.md#f48)。不要求单值图块或全对RL，不提供完整J_{λF}所有选择的身份；若需该结论，须使允许集包含全部相关完整纤维并逐选择核前件。自然屈服模型、锐性可达族及来源执行状态另有deferred；[150 LF全文去向](research/audit/CORE_TRANSITIONS_FULL_COVERAGE.md#at-source)。外部新颖性未核。
+
+<a id="c186"></a>
+## C186-v1 / RELATIVE-HOLDER-THINNESS · 矩形一步回缩正Hölder类自第一纲
+
+- **Status**：`derived-checked`；限于下列固定矩形一步层，不推所有回缩或原生RLEB母空间。
+- **Exact Statement / Objects / Domain / Quantifiers**：在Euclidean平面固定K=[−1,1]×[0,1]、S=[−1,1]×{0}，M={T∈C(K,S):T|S=I}配一致距离。对全部α>0、0≤M₀<∞，H_{α,M₀}={T∈M:||Tz−Tw||≤M₀||z−w||^α对全部z,w∈K}在H₊=∪_{α>0,M₀<∞}H_{α,M₀}的相对一致拓扑中闭且无处稠密；H₊非空、自第一纲。全部A⊆H₊在环境H₊中第一纲，不声明A自身第一纲。该M中Tⁿ=T(n≥1)、FixT=S、极限Π_T=T，固定一步共同零尾的全时间距离恰为一致距离。
+- **Definitions / Dependencies / Evidence**：[RH1–RH11完整证明](research/canonical/relative_holder_thinness.md#rht-object)：全域可数Hölder块，离底边的值域余量与双cutoff，较低β<α尖点仍留H₊且退出固定α块。独立空白Astra和父代理复算同一类扰动、反三角下界、共同尾及完整图代数；没有从C180宽层薄性限制到子层。RH10另给同λ紧完整F_{T,K}，在K上完整J={T}、域外空，domF=S且输出真残差0。
+- **Counterevidence / Objections / Scope / Related Files**：单点{P}在自己拓扑非第一纲；K=[−1,1],S={0}唯一回缩T=0反驳任意K,S推广。来源把H₊称为全部RLEB成员的等价仍须同对象gauge、direct/energy及边界coverage认证。无总体比较、一般全时间孔隙或任意步长结论；[202 LF全文去向](research/audit/RELATIVE_HOLDER_COVERAGE_2026_10_07.md)。外部新颖性未核。

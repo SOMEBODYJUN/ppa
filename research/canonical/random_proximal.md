@@ -12,7 +12,7 @@
 
 \[
 f_i(z)=\tfrac12\langle z,H_i z\rangle-\langle b_i,z\rangle,
-\quad T_i=\operatorname{prox}_{\lambda f_i}=A_i z+c_i,
+\quad T_i(z)=\operatorname{prox}_{\lambda f_i}(z)=A_i z+c_i,
 \quad A_i=(I+\lambda H_i)^{-1},\quad c_i=\lambda A_i b_i.
 \]
 

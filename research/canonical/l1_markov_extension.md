@@ -48,6 +48,10 @@
 <a id="lm-extension"></a>
 ## LM-EXTENSION · C182 的两个源空间范围
 
+<a id="lm-mn-definitions"></a>
+**导入定理的常数约定。** 源空间 \((X,d)\) 的 Markov type 2 常数 \(M_2\) 指：对全部有限平稳可逆链 \((Z_s)\)、全部状态数据 \(x_i\in X\) 和整数 \(t\ge1\)，有
+\(\mathbb E d(x_{Z_t},x_{Z_0})^2\le M_2^2 t\,\mathbb E d(x_{Z_1},x_{Z_0})^2\)。目标的 metric Markov cotype 2 常数 \(N_2\) 使用 (LM1) 的同一 Cesàro 归一化，将 3024 换成 \(N_2^2\)，量化全部有限平稳可逆链和目标数据，并允许逐组选择平滑点；C181 更强的非可逆范围并非扩张导入所需。\(W_2\)-barycenter 常数 \(\Gamma\) 指有限支撑概率律上的映射 \(\beta\)，满足 \(\beta(\delta_y)=y\) 和 \(d(\beta\mu,\beta\nu)\le\Gamma W_2(\mu,\nu)\)。此处目标为实 \(\ell^1\)，\(\beta\) 为均值且 \(\Gamma=1\)。该 \(W_2\) 是以目标 \(\ell^1\) 距离定义的运输距离，不是 PPA 旁支的条件距离或同步残差。
+
 导入 [LIT-MN-EXTENSION](../LITERATURE.md#lit-mn-extension) 的 Theorem1.11 / Corollary1.13：源有 Markov type2，目标有 metric Markov cotype2、W₂ barycenter，且为对偶Banach时，任意子集的 Lipschitz 映射可全域扩张，常数≤c M₂ N₂，其中c是统一绝对常数。ℓ¹=c₀*，均值重心由 Jensen/任意耦合给 W₂ 常数1；C181给N₂≤12√21。固定一个共同 K≥1，使 K≥c·12√21。
 
 1. **Hilbert 源、0<γ≤1。** γ=1 时 Hilbert 的M₂=1：有限可逆链上对向量坐标用自伴随A的谱及1−r^t≤t(1−r)，r∈[−1,1]，再加总即可。0<γ<1 时先用 [HE-SNOWFLAKE](holder_extension.md#he-snowflake) 把(H,||·||^γ)等距嵌入Hilbert，扩张后拉回。故任意 D⊂H、f:D→ℓ¹、||f(x)−f(y)||_1≤L||x−y||^γ，存在全H上的同数据扩张，系数≤KL。

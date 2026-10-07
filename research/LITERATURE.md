@@ -265,6 +265,6 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
 
 **Primary paper fact。** Manor Mendel and Assaf Naor, *Spectral calculus and Lipschitz extension for barycentric metric spaces*, 以下固定作者公开原稿版本；已读作者[53页公开原稿](https://web.math.princeton.edu/~naor/homepage%20files/cat0-extension.pdf) Theorem1.11（PDF p.8）、Corollary1.13（PDF p.10）及p.11的snowflake说明，核验2026-10-07。Theorem1.11对p,Γ≥1、Markov type p源、metric Markov cotype p且W_p-barycentric常数Γ目标，给任意子集映射到任意有限输入集的扩张，Lip≤cΓM_pN_p。Corollary1.13在目标为对偶Banach时给全源扩张e(X,Y)≤cM_pN_p，c为统一绝对常数。p.11同时明确α-snowflake具有常数1的Markov type p，范围1<p≤1/α。
 
-**Exact import / all gates。** C182取p=2、Y=ℓ¹(ℝ)=c₀*；均值重心由Jensen及任意耦合给W₂常数1，C181给N₂≤12√21。Hilbert源M₂=1；其0<γ<1雪花由HE-SNOWFLAKE等距嵌入Hilbert，γ=1直接用Hilbert。任意度量源在γ≤1/2用路径三角及2γ≤1独立给M₂≤1。子集任意、目标为完整ℓ¹而非任意闭子空间、弱星紧性所需对偶身份明确，故满足Corollary1.13的全部条件。此处使用存在统一K而非估计最优K。
+**Exact import / all gates。** 常数平方归一化及重心量词见[LM-MN-DEFINITIONS](canonical/l1_markov_extension.md#lm-mn-definitions)。C182取p=2、Y=ℓ¹(ℝ)=c₀*；均值重心由Jensen及任意耦合给W₂常数1，C181给N₂≤12√21。Hilbert源M₂=1；其0<γ<1雪花由HE-SNOWFLAKE等距嵌入Hilbert，γ=1直接用Hilbert。任意度量源在γ≤1/2用路径三角及2γ≤1独立给M₂≤1。子集任意、目标为完整ℓ¹而非任意闭子空间、弱星紧性所需对偶身份明确，故满足Corollary1.13的全部条件。此处使用存在统一K而非估计最优K。
 
 **Boundary。** 该文Theorem1.14给某个ℓ¹闭线性子空间缺少所有metric Markov cotype，是关于子空间自身的目标性质；C181中自由平滑点可离开子空间，不与之矛盾。本接口不提供概率值域、EB、守恒边缘或同常数Cayley完成；这些须分别证明，C182仅提供明确损失常数的部分。

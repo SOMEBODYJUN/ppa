@@ -15,6 +15,8 @@
 
 统一写 \(\mathrm{RL}(\lambda,\gamma,L;R)\)：**步长、指数、系数、输入对距离上界**依次排列。无 \(R\) 只在正文已明示全尺度时省略；\(L=0\) 允许，局部窗的 \(R\) 不是输入球半径。对任意两图点，\(\|\Delta M_-\|\le L\|\Delta M_+\|^\gamma\) 只在所列尺度成立。[参数字典](canonical/parameter_dictionary.md#pd-quantifiers) 的同图换步、逆关系、缩放与 [非 tied 二参数](canonical/non_tied_cayley.md#nt-object) 是不同变换；\(\gamma=1\) 的 tied 曲线不能代替任意 \((\mu,\rho)\) 区域。
 
+\(J_{\lambda F}\) 与图块 \(J_{\mathcal G}\) 首先都是集合值关系。仅在已证明指定输入域的全部相关纤维为单点后，才可识别为唯一输出映射 \(T\)；完整纤维身份仍显式写 \(J_{\lambda F}(p)=\{T(p)\}\)。通用步长接口不省成 \(J_F\)；明确固定 \(\lambda=1\) 的例卡可以使用该简写。
+
 ## 局部重绑定必须写明的对象
 
 总体算子空间比较若需记尚待选择的大小不变量，用 \(\mathfrak I\)；Markov 的 \(\mathcal I\) 专指不变律集。二者既不同型也没有默认桥。
@@ -80,3 +82,9 @@
 图坐标变换另严格区分：`operator_space` 的 \(L_\lambda(u,v)=(u+\lambda v,u)\) 给输入/输出图；构造前沿的 \(\mathscr C_\lambda(u,v)=(u+\lambda v,u-\lambda v)\) 给输入/反射图。二者不可用同一名称替代。
 
 [C179](canonical/attouch_wets_fixed_input_thinness.md#aw-object)的AW1是非空闭集**距离函数**的有界一致拓扑；输入/输出图中的Δ_S与原图S×{0}经固定Lλ对应，p0是近端输入。它不等于全时间d_dyn。[C180](canonical/uniform_holder_thinness.md#uht-object)的𝔛是精确FixS连续自映射的**单步一致拓扑**，D=diamK、m_j是紧离S块上的位移最小值、μ/c/β为局部扰动预算；不把H+第一纲移到另一尾层。
+
+## 扩张与无限维纤维的新增绑定
+
+[C181/C182](canonical/l1_markov_extension.md#lm-mn-definitions) 的 \(M_2,N_2\) 分别是源 Markov type 和目标 metric Markov cotype 常数，平方系数按显示定义；\(K\) 是统一扩张损失，跨页可写 \(K_{\rm ext}\)，不是紧输入集。概率回缩 \(\mathcal P\) 跨页写 \(\mathcal P_\Delta\)，其 2-Lipschitz 性属于 \(\ell^1\)；重心导入的 \(W_2\) 也以该目标距离计，不与条件律距离或同步 \(\Psi\) 混用。
+
+[C183/C184](canonical/infinite_fiber_boundary.md#if-counterexample) 的右移 \(S\) 跨页写 \(S_{\rm shift}\)，与零集 \(S\) 分开；\(P_a\) 是半径 \(a\) 球的径向投影。完整纤维的弱紧、范数紧、单点零集和满 Minty 输入分别判定，不能从其中一项省略其余门。
