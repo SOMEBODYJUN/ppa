@@ -1509,3 +1509,35 @@
 - **Explicit Interfaces / Conclusion**：同T、同K若存在0<γ≤1、0≤L<∞、R>0，使全部距离≤R的点对满足||2Tx−x−2Ty+y||≤L||x−y||^γ，则全域γ-Hölder预算可取max{(D^(1−γ)+L)/2,D/R^γ}，D=diamK。若同T全部点对满足||ΔT||²+τ||Δ(I−T)||²≤(1+ε)||Δx||²、τ,ε≥0，则T为√(1+ε)-Lipschitz。两种明定不等式的存在参数并类均在本𝔛第一纲。
 - **Definitions / Dependencies / Evidence**：[UH1–UH14、UH-B及自足证明](research/canonical/uniform_holder_thinness.md#uht-object)；闭球位移δ、局部凸混合μρ值域余量、双cutoff、幅度预算和反三角cusp比值全部显式，兼容完备度量证明Baire门。来源05_obstruction_audit.md §7.1 LF400–404、§1 LF13–50、有限维门LF390；07_stage_synthesis.md B1 LF97–104。完整源枚举另见[专用审计](research/audit/UNIFORM_HOLDER_FULL_COVERAGE.md#uht-audit-source)。
 - **Counterevidence / Scope / Related Files**：K=[−1,1],S=K的单点恒等层反驳删除离S开区域门；同K,S={0},e_0=2,e_n=0(n≥1)的共同尾层只有T=0，全部Hölder且在自身非第一纲，故不自动下传收敛/全时间/共同尾子层。未核全部无速率收敛类的类别、具体原生RLEB/LT认证类是否满足同图同域接口，也未授予AW/germ/变步长/极大单调总体比较、严格包含或比例。全球先行性和历史审查行为未核。
+
+<a id="c181"></a>
+## C181-v1 / L1-STATIONARY-SMOOTHING · ℓ¹的平稳链平方平滑
+
+- **Status**：`derived-checked`；固定外部332实数主定理的承重链已在本库逐式重构。
+- **Exact Statement / Objects / Domain / Quantifiers**：每个n,t≥1、每个n阶随机矩阵A、每个平稳概率π（允许零分量，不要求可逆）、每组x_i∈ℓ¹(ℝ)，存在y_i∈ℓ¹，使Σπ_i||x_i−y_i||₁²+tΣπ_i a_ij||y_i−y_j||₁²≤3024Σπ_i(t⁻¹Σ_(s=1)^t A^s)_ij||x_i−x_j||₁²。故可逆范围的metric Markov cotype2常数≤12√21。
+- **Definitions / Dependencies / Evidence**：[LM1–LM4完整证明](research/canonical/l1_markov_extension.md#lm-proof)：有限二元编码、平坦三次函数、四次势余量108、几何停止与平稳Cesàro比较28。外部固定版本与SHA见[LIT-OAI-CATALOG-2026](research/LITERATURE.md#lit-oai-catalog-2026)；平稳非可逆范围原稿Remark5.1已给，不称本库新颖性。
+- **Counterevidence / Scope / Related Files**：退化相同数据、零π与t=1包含；y_i自由选择，不是指定算法输出、原线性子空间中的点或真实残差EB。复数推论、Lean实际覆盖与全球先行性未验收；无独立代理接收。概率值域需C182的显式回缩并损失常数。
+
+<a id="c182"></a>
+## C182-v1 / L1-HOLDER-COMPLETION · 扩张、概率值域与放宽预算的关系完成
+
+- **Status**：`derived-checked`；C181与Mendel–Naor一手扩张接口的全部对象条件已核，三个转接分别证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：存在统一K≥1，对全部实Hilbert源、0<γ≤1，以及全部任意度量源、0<γ≤1/2，任意子集上的L-Hölder ℓ¹值数据都可全域扩张，系数≤KL。若原值域为可数或有限概率单纯形Δ，扩张可保持Δ且系数≤2KL。另对ℓ¹⇉ℓ¹完整非空关系、固定λ,L>0及0<γ≤1/2、全图全尺度RL，存在包含原图的完成关系，完整近端在全部ℓ¹非空单值，且在新预算(λ,γ,KL)下图极大。
+- **Definitions / Dependencies / Evidence**：[LM-EXTENSION/LM-SIMPLEX/LM-CAYLEY](research/canonical/l1_markov_extension.md#lm-extension)；C181、[Mendel–Naor Theorem1.11/Corollary1.13](research/LITERATURE.md#lit-mn-extension)、Hilbert雪花、ℓ¹=c₀*及均值W₂重心；任意度量源的半阶Markov type2直接路径证明，显式2-Lipschitz概率回缩和完整图代数。
+- **Counterevidence / Scope / Related Files**：K未取1，故不反推原预算图极大必满域；γ>1/2的任意度量源未证。概率回缩不保固定边缘/不变律/W₂；完成可改变零集、逆纤维与真残差，没有自动RLEB证书或Banach能量恒等式。全球先行性未核。
+
+<a id="c183"></a>
+## C183-v1 / INFINITE-FIBER-OBSTRUCTION · 单点零集的无限维空纤维
+
+- **Status**：`derived-checked`；完整对象、固定集及空纤维均由显式坐标证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：每个λ,L>0、0<γ<1，在实ℓ²存在非空闭完整关系F，全图全尺度满足同参数RL、固定参数图极大、完整J_λF在全部ℓ²非空单值、完整zerF={u_*}，但F(ae₁)=∅且F⁻¹(ae₁/λ)=∅。a与u_*按IF5–6。Cayley全域L-Hölder且√2-Lipschitz，明确不是非扩张。
+- **Definitions / Dependencies / Evidence**：[IF1–IF6](research/canonical/infinite_fiber_boundary.md#if-counterexample)：单位球径向投影与右移；A和−A均无不动点；平移缩放匹配每组参数；完整FixC坐标递推给唯一零点。图极大由全Minty输入直接证明，不借未验收外部328。
+- **Counterevidence / Scope / Related Files**：仅否定C04有限维必要性的无条件无限维推广，即使另加非空单点零集亦失败；[F47](FAILED_ROUTES.md#f47)。不反驳有限维C04、全局影子C03或另具真EB/兼容的C02。外部先行性与独立代理接收未核。
+
+<a id="c184"></a>
+## C184-v1 / NONEXPANSIVE-WEAK-FIBERS · 任意Hilbert的非空弱紧纤维
+
+- **Status**：`derived-checked`；Hilbert压缩正则化与弱极限证明自足。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意实Hilbert H、固定λ,L>0、0<γ<1、全域L-Hölder且非扩张C:H→H，以IF1定义完整F_C。则I±C均满射；每个完整正向/逆向纤维非空、范数闭凸有界、弱紧，直径分别≤L^(1/(1−γ))/λ与L^(1/(1−γ))。范数紧性在无限维即使同门下也可失败。
+- **Definitions / Dependencies / Evidence**：[IF-NONEXPANSIVE与IF-NOT-COMPACT](research/canonical/infinite_fiber_boundary.md#if-nonexpansive)；次线性增长给共同不变球，r_n(±C+b)压缩、不动点弱子列与消失缺陷给满射；严格凸给固定集凸，Hilbert反身给弱紧。球投影的完整零纤维给非范数紧反例。
+- **Counterevidence / Scope / Related Files**：额外非扩张门不可由Hölder单独推出，C183明确击中；不声称一般反身Banach结果，不给指定轨道点收敛、EB、兼容或极限回缩，不升级外部328。有限维C04任意紧零集实现不受此凸性子类结论约束。外部先行性未核。

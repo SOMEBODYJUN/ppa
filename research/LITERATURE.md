@@ -223,7 +223,7 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
 
 **来源与实读范围。** 目录 *OpenAI Research Catalog*，2026-10-06，41页、372组结果、722稿件；本次扫描全目录并目读pp.35–36，另从公开仓库取得下面六份原稿及其TeX。固定外部仓库版本为 [`adc7f1241b42e322a6451854ab7e4b4c146bf78a`](https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a)，核验日期2026-10-07 UTC。目录与原稿分开：条目编号不是定理编号。
 
-**证据层。** 以下 paper fact 只认证“固定原稿在该位置如此陈述”，主定理证明尚未逐行独立验收，相关Lean形式化的实际覆盖也未核。公开仓库README明确说明各结果验证阶段不同，未形式化结果可能有问题。因此这些是外部 `source-report` / 待核工具，不新增已证项目Claim，不改变C02/C03/C04/C11/C179/C180状态。适用性分析是本库interpretation；没有把它们导入任何承重证明。PPA对照基线为 `ac68013`。
+**证据层与后续接收范围。** 初筛基线为 `ac68013`，六项陈述定位由 `2a5030e` 固定。2026-10-07后续已完整读332的构建TeX，并在[C181](canonical/l1_markov_extension.md#lm-proof)独立重构其实数平稳链主结论；C182再与下方Mendel–Naor一手接口合取。其余五稿仍仅是 `source-report` / 待核工具；332的复数推论、Lean实际覆盖及全部稿件未升级。选定证明的接收不改变C02/C03/C04/C11/C179/C180身份，也不代表外部全部结果或全球先行性验收。
 
 ### 332 · ℓ¹ 的 metric Markov cotype 与目标扩张
 
@@ -233,8 +233,8 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
   \le3024\sum_{i,j}\pi_i\left(\frac1t\sum_{s=1}^t A^s\right)_{ij}\|x_i-x_j\|_1^2.
   \]
   Corollary6.2 p.9声称：存在统一K<∞，对每个实Hilbert H、子集D⊂H和Lipschitz f:D→ℓ¹，存在扩张f̂:H→ℓ¹，Lip(f̂)≤K Lip(f)。p.2/§6明确区分允许自由选择yᵢ的metric条件和指定线性平均的更强条件。
-- **Interpretation / possible bridge**：最接近[HE-SNOWFLAKE/EXTENSION](canonical/holder_extension.md#he-snowflake)。若上述扩张命题验收，可对0<γ<1的Hölder f:D→ℓ¹先用Hilbert雪花嵌入，再扩张，得到全H上的K L-Hölder扩张。这是依赖未验收外部命题的条件推导。
-- **Obligations / boundaries**：扩张常数不是L；目标是ℓ¹，不能直接替换H→H的Cayley自映射，也不能证明固定(λ,L,γ)图极大必满域。yᵢ不保证留在原数据子空间或概率单纯形。metric Markov cotype不等于本库同步OT残差Ψ、条件残差或law-step误差界。优先核§3的鞅估计、§4的几何停止与Cesàro比较，以及Cor6.2导入的一手扩张定理全部条件。
+- **Proof receipt / exact version**：完整读取同一固定提交下[build/main.tex](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Metric-Markov-Cotype-Two-of-l1-October-5-2026/build/main.tex)，648行，SHA256 `656a6f35bf6543ecf0cf2dbc38a83a7a05427592123a5eb817be24250e2e6953`。C181完整重构二元编码、四次余量108、停止鞅及几何/Cesàro比较28；仅用平稳πA=π，非可逆范围原Remark5.1已有。C182的Hilbert Hölder扩张、任意度量源γ≤1/2扩张、显式概率回缩及ℓ¹预算放宽完成均在[规范正文](canonical/l1_markov_extension.md)逐项证明；非原稿新颖性主张。
+- **Boundaries**：常数为KL，不能证明原(λ,L,γ)图极大必满域。原平滑点不保证在数据子空间；概率值域可由本库显式2-Lipschitz回缩保持但另损常数，固定边缘/不变律不随之保持。metric Markov cotype不是同步OT残差Ψ、条件残差或law-step误差界。复数与形式化覆盖仍未核。
 
 ### 328 · 反身Banach中的不动点与非扩张回缩
 
@@ -258,4 +258,13 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
 - **327 paper fact**：[2026-09-23原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Nontrivial-Markov-Type-Forces-Superreflexivity-September-23-2026/paper.pdf)，14页，Theorem1.1 p.1声称每个对至少一个p>1有Markov type p的实Banach空间均superreflexive，即可等价一致凸重赋范。Markov type量化全部有限平稳可逆链、全部链状态到空间的映射及全部整数时刻。已读pp.1–2；完整证明未审。**Interpretation**：是Banach随机几何的候选约束，不能由一个指定核的收缩或同步Ψ误差界得到该空间性质；等价范数也不保持本库的原常数或Hilbert平行四边形恒等式。
 - **324 paper fact**：[2026-09-24原稿](https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Lipschitz-Equivalent-Separable-Banach-Spaces-Need-Not-Be-Linearly-Isomorphic-September-24-2026/paper.pdf)，23页，Theorem1.1 p.1声称存在全局双Lipschitz等价而不线性同构的可分实Banach X,Y。已读pp.1–2的身份，未审完整构造。**Interpretation**：与[完整图共轭义务](canonical/operator_space_construction_frontier.md#ocf-specification)相邻，但具体共轭保EB、零集、尾界和单调性须独立认证；本结果不证明任意某个共轭破坏这些性质，也不替代保纲桥。
 
-**当前决策。** 在已筛查目录与上述主命题范围，未找到直接陈述同一自然完整算子母空间中RLEB/LT/极大单调总体比较的结果，也未找到直接替代C02-v2全部局部前提的结果。优先332的扩张/停止时刻工具，其次328的回缩接口；098/329作为表示或新量尺路线被实际采用时的攻击种子，327/324保持次级。此判断是相关性筛查，既不证明全球文献无先例，也不声称所有722稿件均已审完。
+**当前决策。** 332已接成C181/C182的具体工具；328的非扩张前提不能由一般Hölder图补出，[C183](canonical/infinite_fiber_boundary.md#if-counterexample)甚至给单点零集但空纤维，另由Hilbert自足证明C184得到额外非扩张下的弱紧补救，未调用328的一般Banach定理。098/329在实际表示/量尺路线被采用时再审，327/324仍次级。筛查与接入范围没有直接关闭自然完整母空间中的总体比较，也没有替代C02-v2全部局部门；不证明全球无先例或722稿件均已审完。
+
+<a id="lit-mn-extension"></a>
+## LIT-MN-EXTENSION · metric Markov cotype到全域扩张
+
+**Primary paper fact。** Manor Mendel and Assaf Naor, *Spectral calculus and Lipschitz extension for barycentric metric spaces*, 以下固定作者公开原稿版本；已读作者[53页公开原稿](https://web.math.princeton.edu/~naor/homepage%20files/cat0-extension.pdf) Theorem1.11（PDF p.8）、Corollary1.13（PDF p.10）及p.11的snowflake说明，核验2026-10-07。Theorem1.11对p,Γ≥1、Markov type p源、metric Markov cotype p且W_p-barycentric常数Γ目标，给任意子集映射到任意有限输入集的扩张，Lip≤cΓM_pN_p。Corollary1.13在目标为对偶Banach时给全源扩张e(X,Y)≤cM_pN_p，c为统一绝对常数。p.11同时明确α-snowflake具有常数1的Markov type p，范围1<p≤1/α。
+
+**Exact import / all gates。** C182取p=2、Y=ℓ¹(ℝ)=c₀*；均值重心由Jensen及任意耦合给W₂常数1，C181给N₂≤12√21。Hilbert源M₂=1；其0<γ<1雪花由HE-SNOWFLAKE等距嵌入Hilbert，γ=1直接用Hilbert。任意度量源在γ≤1/2用路径三角及2γ≤1独立给M₂≤1。子集任意、目标为完整ℓ¹而非任意闭子空间、弱星紧性所需对偶身份明确，故满足Corollary1.13的全部条件。此处使用存在统一K而非估计最优K。
+
+**Boundary。** 该文Theorem1.14给某个ℓ¹闭线性子空间缺少所有metric Markov cotype，是关于子空间自身的目标性质；C181中自由平滑点可离开子空间，不与之矛盾。本接口不提供概率值域、EB、守恒边缘或同常数Cayley完成；这些须分别证明，C182仅提供明确损失常数的部分。

@@ -2288,6 +2288,114 @@
       "label": "C180两个明定不等式类包含于H+而薄",
       "file": "canonical/uniform_holder_thinness.md#uht-interfaces",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-OBJECT",
+      "label": "实ℓ¹有限平稳链全量词",
+      "file": "canonical/l1_markov_extension.md#lm-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-SMOOTH",
+      "label": "C181自由平滑的3024平方界",
+      "file": "canonical/l1_markov_extension.md#lm-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-MN-GATES",
+      "label": "Markov type/cotype/重心/对偶目标全部扩张门",
+      "file": "canonical/l1_markov_extension.md#lm-extension",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-EXT",
+      "label": "C182两种源范围的KL-Hölder扩张",
+      "file": "canonical/l1_markov_extension.md#lm-extension",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-RETRACT",
+      "label": "概率单纯形显式2-Lipschitz回缩",
+      "file": "canonical/l1_markov_extension.md#lm-simplex",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-PROB",
+      "label": "C182概率值域全域扩张与2KL",
+      "file": "canonical/l1_markov_extension.md#lm-simplex",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-RL-DATA",
+      "label": "ℓ¹完整全局RL关系与半阶指数",
+      "file": "canonical/l1_markov_extension.md#lm-cayley",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LM-COMPLETE",
+      "label": "C182新预算KL的ℓ¹满输入完成",
+      "file": "canonical/l1_markov_extension.md#lm-cayley",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-OBJECT",
+      "label": "全域Hilbert Hölder-Cayley完整关系",
+      "file": "canonical/infinite_fiber_boundary.md#if-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-SHIFT",
+      "label": "每组参数的平移径向右移构造",
+      "file": "canonical/infinite_fiber_boundary.md#if-counterexample",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-EMPTY",
+      "label": "C183单点完整零集但空正反纤维",
+      "file": "canonical/infinite_fiber_boundary.md#if-counterexample",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-NONEXP-DATA",
+      "label": "同C原Hilbert范数下额外非扩张",
+      "file": "canonical/infinite_fiber_boundary.md#if-nonexpansive",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-ONTO",
+      "label": "C184的I±C同时满射",
+      "file": "canonical/infinite_fiber_boundary.md#if-nonexpansive",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-WEAK-FIBERS",
+      "label": "C184全部纤维非空闭凸弱紧与直径",
+      "file": "canonical/infinite_fiber_boundary.md#if-nonexpansive",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-BALL",
+      "label": "同预算非扩张球投影完整图",
+      "file": "canonical/infinite_fiber_boundary.md#if-not-compact",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-NONCOMPACT",
+      "label": "C184无限维零纤维非范数紧",
+      "file": "canonical/infinite_fiber_boundary.md#if-not-compact",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IF-UNRESTRICTED",
+      "label": "被否定的无条件无限维满纤维推广",
+      "file": "canonical/infinite_fiber_boundary.md#if-boundaries",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "IF-NORM-COMPACT",
+      "label": "被否定的非扩张无限维范数紧推广",
+      "file": "canonical/infinite_fiber_boundary.md#if-not-compact",
+      "evidence_status": "refuted"
     }
   ],
   "edges": [
@@ -5569,6 +5677,125 @@
       "relation": "conditional",
       "scope": "C180同T/K/范数，全对显示平方界且τ≥0,ε≥0；丢非负项给Lip√(1+ε)。该明定类第一纲，原生LT身份另核；两个不同母空间不产生总体比较。",
       "status": "derived-checked；自足恢复证明及独立复算，历史动态/孔隙报告另核"
+    },
+    {
+      "id": "E284",
+      "topic": "Markov",
+      "inputs": [
+        "LM-OBJECT"
+      ],
+      "output": "LM-SMOOTH",
+      "relation": "conditional",
+      "scope": "C181全部n,t≥1、随机A、平稳π及实ℓ¹数据；存在自由y_i，3024平方界；不要求可逆，不是指定算法输出。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E285",
+      "topic": "全局结构",
+      "inputs": [
+        "LM-SMOOTH",
+        "LM-MN-GATES",
+        "HE-SNOW"
+      ],
+      "output": "LM-EXT",
+      "relation": "conditional",
+      "scope": "C182同ℓ¹对偶目标与均值重心；Hilbert源0<γ≤1（γ=1直接，γ<1用HE-SNOW），任意度量源0<γ≤1/2直接Markov type2；全子集全域扩张，统一KL。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E286",
+      "topic": "全局结构",
+      "inputs": [
+        "LM-EXT",
+        "LM-RETRACT"
+      ],
+      "output": "LM-PROB",
+      "relation": "conditional",
+      "scope": "C182原数据属于同一有限或可数概率单纯形；复合同一2-Lipschitz恒等回缩，统一2KL/TV同因子；不保固定边缘或不变律。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E287",
+      "topic": "全局结构",
+      "inputs": [
+        "LM-EXT",
+        "LM-RL-DATA"
+      ],
+      "output": "LM-COMPLETE",
+      "relation": "conditional",
+      "scope": "C182完整ℓ¹⇉ℓ¹关系、λ,L>0、0<γ≤1/2、全图全尺度；扩Ĉ后拉回包含原图并满输入单值，图极大预算KL，非原预算L。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E288",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-OBJECT",
+        "IF-SHIFT"
+      ],
+      "output": "IF-EMPTY",
+      "relation": "conditional",
+      "scope": "C183每组λ,L>0、0<γ<1，在ℓ²给闭完整图、固定参数极大、全输入单值J、精确单点zer；F(ae1)与F^-1(ae1/λ)均空。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E289",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-EMPTY"
+      ],
+      "output": "IF-UNRESTRICTED",
+      "relation": "refutes",
+      "scope": "仅反驳无附加非扩张的无限维满正反纤维推广，即使非空单点零集；不反驳有限维C04或C03。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E290",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-OBJECT",
+        "IF-NONEXP-DATA"
+      ],
+      "output": "IF-ONTO",
+      "relation": "conditional",
+      "scope": "C184任意实Hilbert且同C原范数下非扩张；次线性增长给不变球，压缩正则化/弱极限给I±C对每个目标满射。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E291",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-OBJECT",
+        "IF-NONEXP-DATA",
+        "IF-ONTO"
+      ],
+      "output": "IF-WEAK-FIBERS",
+      "relation": "conditional",
+      "scope": "C184同一完整F_C的每个正/逆纤维非空闭凸有界弱紧，直径R/λ与R；非扩张不得由一般Hölder推出。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E292",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-OBJECT",
+        "IF-BALL"
+      ],
+      "output": "IF-NONCOMPACT",
+      "relation": "conditional",
+      "scope": "C184无限维ℓ²球投影、a按同L/γ匹配、非扩张；完整零逆纤维为正半径闭球，ae_n阻断范数紧。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
+    },
+    {
+      "id": "E293",
+      "topic": "全局结构",
+      "inputs": [
+        "IF-NONCOMPACT"
+      ],
+      "output": "IF-NORM-COMPACT",
+      "relation": "refutes",
+      "scope": "只反驳额外非扩张仍可自动推出无限维范数紧，不反驳C184弱紧或有限维C04。",
+      "status": "derived-checked；规范自足重构及全部列明导入门核验，未作独立代理接收"
     }
   ]
 }

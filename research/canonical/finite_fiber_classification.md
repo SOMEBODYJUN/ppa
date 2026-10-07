@@ -33,6 +33,8 @@ F(A)=\bigcup_{x\in A}F(x).
 
 后两项为分别存在的关系，不同时指定同一个关系的两种纤维。也不要求实现关系的最小 Hölder 常数必须等于给定上界 \(L\)。
 
+无限维边界现由 [C183](infinite_fiber_boundary.md#if-counterexample) 明确关闭：即使满Minty输入、闭完整图和单点完整零集，也可同时有空的正向与逆向纤维。若同一C另非扩张，[C184](infinite_fiber_boundary.md#if-nonexpansive)恢复任意Hilbert的非空闭凸弱紧纤维；范数紧仍不能一般恢复。这里不改变C04的有限维身份。
+
 <a id="ff-cayley"></a>
 ## FF-CAYLEY · 全图坐标与固定参数极大性
 

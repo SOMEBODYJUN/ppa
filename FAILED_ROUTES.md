@@ -316,3 +316,10 @@
 [C179](research/canonical/attouch_wets_fixed_input_thinness.md#aw-boundary)在有限维宽AW空间证明固定λ、固定输入的可解类第一纲；限制到已经要求该输入可解的算法层后，该事件成为整个子层。不可数实步长的并也不能由可数并法推出第一纲。
 
 [C180](research/canonical/uniform_holder_thinness.md#uht-boundary)在精确FixS的一致映射空间证明全部正Hölder并类第一纲；但K=[−1,1]、S={0}、e_n=0(n≥1)的共同尾层只含T=0，Hölder类在它内就是全空间。重启须证明同一实际子层中的扰动保持，或给确切范畴转移；两个不同母空间的薄性不构成总体RLEB–LT–极大单调比较。
+
+<a id="f47"></a>
+## F47 · 满Minty输入与非空零集被当成无限维正反满纤维
+
+- **指定失败接口**：将有限维C04的必要性只凭全图全尺度Hölder–RL、固定参数图极大、闭图和非空零集推广到无限维Hilbert；满近端输入并不是I±C分别满射。
+- **完整反例**：[C183 / IF3–6](research/canonical/infinite_fiber_boundary.md#if-counterexample)对每组λ,L>0、0<γ<1给同预算ℓ²完整图、全部输入单值J、精确单点零集，但F(ae₁)=∅与F⁻¹(ae₁/λ)=∅。非扩张前提实际失败：两个指定输入的输出距离比为√2。
+- **保留与重启门**：有限维C04与任意HilbertC03仍成立。增加同一C原范数下非扩张，C184可在任意Hilbert恢复全部纤维非空闭凸弱紧；球投影仍反驳无限维范数紧性。换图、等价范数或外部328的未验收Banach定理不能默补原对象门；轨道EB/兼容和总体比较另证。
