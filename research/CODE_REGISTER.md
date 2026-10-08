@@ -22,3 +22,7 @@
 从仓库根运行 JSON 中对应的 `command`；执行时不改动历史原件。若环境/依赖不同，记录新环境和差异，不覆盖旧结果。涉及随机数据的脚本必须先核内部 seed；没有可复现 seed 的抽样只作一次 observation。
 
 新代码须声明绑定的 Claim **版本**、测试的有限对象、输入/seed/精度/误差、断言与盲区。验证器可否定某个精确有限断言，也可提示一般证明的漏洞；“PASS”本身不能把全称命题从 `candidate` 提升为 `canonical`。历史 V01 的 “C11” 仅是旧复合次正则编号，现 C11 为极限回缩，绝不能据脚本名关联。
+
+## 2026-10-08 文献接口的精确检查
+
+[check_scope.py](code/literature_refresh/check_scope.py) 绑定 C197-v1 / C198-v1 及 GPPA v1 Example1 校勘记录；[正文](literature_refresh_2026_10_08.md#lr-repro) 给复跑命令和全部一般证明。整数 / Fraction 精确算术，无随机 seed 或容差；只核 GPPA k=0,…,8 的合法性和能量式、四个有理点的16对 Hölder估计、参照1-Lipschitz两点失败和 Example1 的内积−1，以及日期差。[results.json](code/literature_refresh/results.json) 记录环境和代码hash，[sources.json](code/literature_refresh/sources.json) 记录六份已取得一手原稿的版本hash。有限PASS不认证全称结论、外部完整证明或全球新颖性。

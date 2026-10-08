@@ -26,6 +26,8 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
+**2026-10-08 外部比较义务。** [近期文献刷新](research/literature_refresh_2026_10_08.md#lr-actions) 新增 adaptive / warped GPPA、半单调 NFB、oblique weak Minty PPPA 的逐定理对照，以及 Ciosmak 2024/2026 扩张结果与 C03 的先行性核验。C197/C198 只给明确接口反例；C193 排除同一完整原图邻域中的固定二次锚直接代入，不排除另核保真的分裂或升维。10/06 KKT 稿是凸复合真 EB 的候选接口，未关闭一般秩亏门。本轮定向刷新未发现可直接关闭总体规模问题的结果，亦不认证全球新颖性；原主 Claim 与来源清洗完成门保持原身份。
+
 **已接入的外部工具与边界。** [C181/C182](research/canonical/l1_markov_extension.md)已重构332实数平稳链主证明并核Mendel–Naor扩张门：可直接使用任意度量源γ≤1/2的ℓ¹/概率值域扩张及新预算的ℓ¹满输入完成；Hilbert源允许γ≤1。常数放大，完成后零集/真残差另认证。[C183/C184](research/canonical/infinite_fiber_boundary.md)进一步明确：满Minty输入加单点零集仍不能推广有限维满正反纤维；额外非扩张在任意Hilbert恢复非空闭凸弱紧，范数紧仍失败。外部328的一般反身Banach证明没有调用，098/329/327/324仍候选；复数/Lean/全球先行性未核。这些认识不关闭下面的原生认证或总体比较义务。
 
 1. **先完成清洗，再启动新研究。** 按[当前覆盖快照](research/audit/CURRENT_COVERAGE.md)和[语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md)逐份读取剩余来源，拆开数学、版本、历史行为与组织单元。每个有价值单元补自足定义/证明并回连 Claim、图和总账；已完整枚举的组不重复列为未开始。

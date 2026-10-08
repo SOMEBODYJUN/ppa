@@ -1634,3 +1634,19 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：q>1，H=R²，S=R×{0}，a_q(t)=sign(t)|t|^(1/q)，F₀(s,t)={(0,a_q(t))}，h(s,t)=(0,t−a_q(t))，H₂(s,t)={0,h(s,t)}。G₁=F₀+h，G₂=F₀+H₂ 均为完整闭图关系、全域非空，并与 F₀ 有同一零集 S。
 - **Conclusion**：d(x,S)=r_F₀(x)^q，r_H₂≡0；但对0<|t|≤1，两种 G 的真残差均为|t|，d/r_G^q=|t|^(1−q)→∞，故无局部 q-EB。零值扰动残差本身不能控制所有扰动值的破坏作用。
 - **Evidence / Scope**：[SP5–SP6](research/canonical/secondary_problem_interfaces.md#sp-perturbation)；q=1 边界不具有此发散，不把原标量 H→R 例直接授予 PPA，也未声称G仍最大单调或算法发散。
+
+<a id="c197"></a>
+## C197-v1 / LR-GPPA-PHYSICAL · 核坐标线性收敛不保证原轨道点收敛
+
+- **Status**：`derived-checked`；仅为明定对象的完整初等反例。
+- **Exact Statement / Objects / Domain / Quantifiers**：H=R²，完整单值 F(x₁,x₂)=v(x₁,x₂)=(x₁,0)，η=ε=1。零集 S={0}×R，pair 为 ε-adaptively strongly monotone，ran v=ran(ηF+v)，F⁻¹ 在0全局 R-Lipschitz 常数1。全部 k≥0 的合法完整 GPPA 轨道 x_k=(2⁻ᵏ,(−1)ᵏ) 到 S 距离 Q-线性下降且 v(x_k)→0，但原轨道不点收敛、长度无限。
+- **Definitions / Dependencies / Evidence**：[完整对象、全图条件及逐 k 证明](research/literature_refresh_2026_10_08.md#lr-gppa-physical)；只用原 GPPA 更新定义和初等代数，有限 Fraction 校验不是无限轨道证明。外部 Theorem 2 只作比较对象，不作为本反例的真值依赖。
+- **Counterevidence / Objections / Scope**：不反驳 GPPA 原稿已述核坐标 / 集合距离结论；不证明与 RLEB 的总体类包含或不可比。增加核反演控制或选择条件后的物理点收敛另核；失败接口见[F49](FAILED_ROUTES.md#f49)。与 C194 的非单射压缩边界同机制，未升级 C02 或任何外部全文。
+
+<a id="c198"></a>
+## C198-v1 / LR-HOLDER-REFERENCE · 全局 Hölder–RL 不自动给保距扩张的参照门
+
+- **Status**：`derived-checked`；全部点对 Hölder 性与指定两点反证在正文完整证明。
+- **Exact Statement / Objects / Domain / Quantifiers**：H=R²，h(t)=min{1,max{0,t}}，C(p)=(√h(p₁),0)，完整 gphF={((p+C(p))/2,(p−C(p))/2):p∈H}。同一 F 满足 λ=L=1、γ=1/2 的全图全尺度 Hölder–RL；但 C 在 p=(1/100,0),q=0 的输出距1/10大于输入距1/100。因此将 C 本身作参照，Ciosmak 2607.17672v1 Theorem1.1 的 k=1 参照条件失败。
+- **Definitions / Dependencies / Evidence**：[完整图、全称估计与两点反证](research/literature_refresh_2026_10_08.md#lr-holder-reference)；平方根差及 clipping 的 Lipschitz 估计，Minty输入同一 p。外部充要定理未作为本两点反证的依赖，只核其准确条件。
+- **Counterevidence / Objections / Scope**：只阻断一般 C 的直接参照代入；不否定 C03 影子，不排除另选参照 / 附加条件导入，不认证影子定理新颖性。见[F50](FAILED_ROUTES.md#f50)；外部全部应用与全球先行性仍未核。

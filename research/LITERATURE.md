@@ -2,6 +2,13 @@
 
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
+<a id="lit-refresh-2026-10-08"></a>
+## LIT-REFRESH-2026-10-08 · 近期非单调近端、误差界与扩张比较
+
+[定向刷新与逐项适用门](literature_refresh_2026_10_08.md#lr-scope) 固定 2026-10-08 截止、8–10 月主窗口及 7 月补查。核 GPPA v1 的 Theorems 2/4、NFB v1 的 Assumption 3.1 / Theorem 3.10、Spingarn 2025 v1 的局部 PPPA 接口及 2026-08-27 刊本日期、10/06 KKT v1 的指定推论、Ciosmak 7 月扩张的核心定理；9 月纤维稿仅核陈述，ORL HVP-EB 仅核出版社摘要 / 预览。
+
+本库直接给 [C197 核坐标与物理点收敛边界](literature_refresh_2026_10_08.md#lr-gppa-physical)、[C198 Hölder参照与保距扩张门边界](literature_refresh_2026_10_08.md#lr-holder-reference)，另定位 GPPA v1 Example 1 的负内积。C193 只用于同一原图完整邻域的固定二次锚接口比较。新增外部比较义务，不升级外部全篇证明或项目新颖性；没有由此关闭总体规模、复合秩亏或全库来源覆盖门。
+
 <a id="lit-selection-interfaces"></a>
 ## LIT-SELECTION-INTERFACES · 本轮固定版本与逐陈述定位
 

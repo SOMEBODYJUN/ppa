@@ -159,6 +159,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 仓库根相对完整路径 | 数学资产、目的、何时读取或更新 |
 | --- | --- |
+| [research/literature_refresh_2026_10_08.md](research/literature_refresh_2026_10_08.md)、[精确检查](research/code/literature_refresh/check_scope.py) | 2026-10-08 近期文献刷新：GPPA / NFB / Spingarn、KKT EB、Kirszbraun与单调纤维；C197/C198给核坐标和参照扩张边界。定位与候选工具分开，外部全篇 / 全球新颖性未验收。 |
 | [research/canonical/isolated_zero_flatness.md](research/canonical/isolated_zero_flatness.md) | IZ-GERM/FIBERS 与 C45/C46：孤立零点的图 germ 换算、真残差全部小纤维门、分支上阶及正 Q 因子的额外极限；研究孤立解 PPA 时读。 |
 | [research/canonical/nonisolated_alignment.md](research/canonical/nonisolated_alignment.md) | NA-OBJECT/DRIFT/COMPOSE/APPROX/SHARP 与 C48、C49-v2、C50-v2：非孤立零集的锚漂移、正指数下的统一 gauge 上界、无最近点的正容差修补、同序列锐性；研究 \(\theta q\) 或 tangent drift 时读。旧量词版本及反例在 [F38](FAILED_ROUTES.md#f38)。 |
 | [research/canonical/moving_anchor_reflection.md](research/canonical/moving_anchor_reflection.md) | MA-OBJECT/REFLECT/POWER/LIMIT 与 C51/C52：实际图点的输出近锚反射、幂型系数、固定锚及集合收缩反例；把局部 EB 用于反射或选锚时读。 |

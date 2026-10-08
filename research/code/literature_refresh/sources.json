@@ -1,0 +1,86 @@
+{
+  "review_cutoff_utc": "2026-10-08",
+  "repository_baseline": "e9f918c1929831496e4b9caae66a2e7eb597054d",
+  "scope": "Version identities only; read-depth and proof boundaries are in the linked report.",
+  "sources": [
+    {
+      "key": "gppa",
+      "arxiv_id": "2608.01584",
+      "version": "v1",
+      "v1_submission_date": "2026-08-03",
+      "primary_url": "https://arxiv.org/abs/2608.01584",
+      "version_pdf_url": "https://arxiv.org/pdf/2608.01584v1",
+      "pdf_pages": 14,
+      "retrieved_pdf_bytes": 313113,
+      "retrieved_pdf_sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91"
+    },
+    {
+      "key": "nfb",
+      "arxiv_id": "2608.22687",
+      "version": "v1",
+      "v1_submission_date": "2026-08-24",
+      "primary_url": "https://arxiv.org/abs/2608.22687",
+      "version_pdf_url": "https://arxiv.org/pdf/2608.22687v1",
+      "pdf_pages": 35,
+      "retrieved_pdf_bytes": 760737,
+      "retrieved_pdf_sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9"
+    },
+    {
+      "key": "spingarn",
+      "arxiv_id": "2504.00836",
+      "version": "v1",
+      "v1_submission_date": "2025-04-01",
+      "primary_url": "https://arxiv.org/abs/2504.00836",
+      "version_pdf_url": "https://arxiv.org/pdf/2504.00836v1",
+      "pdf_pages": 27,
+      "retrieved_pdf_bytes": 520315,
+      "retrieved_pdf_sha256": "4344181ee2456b040161b766f01475e542dfe4cecf8284984e60e44ee73b98a9"
+    },
+    {
+      "key": "kkt",
+      "arxiv_id": "2610.08587",
+      "version": "v1",
+      "v1_submission_date": "2026-10-06",
+      "primary_url": "https://arxiv.org/abs/2610.08587",
+      "version_pdf_url": "https://arxiv.org/pdf/2610.08587v1",
+      "pdf_pages": 53,
+      "retrieved_pdf_bytes": 662926,
+      "retrieved_pdf_sha256": "e4514b326ad8e8418e4395a41a0da50ccbb2dfc491bb87b02ee87b528e3b9cb1"
+    },
+    {
+      "key": "ciosmak",
+      "arxiv_id": "2607.17672",
+      "version": "v1",
+      "v1_submission_date": "2026-07-20",
+      "primary_url": "https://arxiv.org/abs/2607.17672",
+      "version_pdf_url": "https://arxiv.org/pdf/2607.17672v1",
+      "pdf_pages": 17,
+      "retrieved_pdf_bytes": 427473,
+      "retrieved_pdf_sha256": "e2546b6fddf9d52a42619668983752ee1decbca73fd5153d4c9f5be053d7b502"
+    },
+    {
+      "key": "monotone_fibres",
+      "arxiv_id": "2609.21510",
+      "version": "v1",
+      "v1_submission_date": "2026-09-18",
+      "primary_url": "https://arxiv.org/abs/2609.21510",
+      "version_pdf_url": "https://arxiv.org/pdf/2609.21510v1",
+      "pdf_pages": 38,
+      "retrieved_pdf_bytes": 633822,
+      "retrieved_pdf_sha256": "3c4ea67682e0b533ad6e08cc48cf4129c41f5b600d093e94bd4ec2d826dc57f5"
+    }
+  ],
+  "additional_primary_sources": [
+    {
+      "url": "https://link.springer.com/article/10.1007/s10589-026-00812-1",
+      "journal_publication_date": "2026-08-27",
+      "full_published_version_audited": false
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0167637726000854",
+      "issue_month": "2026-09",
+      "first_online_date_confirmed": false,
+      "full_text_audited": false
+    }
+  ]
+}
