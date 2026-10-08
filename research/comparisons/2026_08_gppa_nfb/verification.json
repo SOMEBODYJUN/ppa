@@ -1,0 +1,91 @@
+{
+  "kind": "integration execution evidence",
+  "scope": "Finite algebra and arithmetic checks; universal proofs and reading scope are in the reports. Does not certify global novelty.",
+  "runs": [
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/gppa_check.py",
+      "exit_code": 0,
+      "output": "{\n  \"overlap\": {\n    \"q\": \"1/8\",\n    \"q_alpha\": \"1/4\",\n    \"u\": \"1/5\",\n    \"w\": \"3/10\",\n    \"adaptive_epsilon\": \"10\",\n    \"R\": \"1/8\",\n    \"L_R\": \"3/2\",\n    \"kappa\": 0.3535533905932738,\n    \"max_ASM_deficit\": \"0\"\n  },\n  \"cap\": {\n    \"R\": \"1/16\",\n    \"r0\": \"1/64\",\n    \"L_R\": 3.2034271247461903,\n    \"kappa\": 0.7453849316207962,\n    \"strict_R_upper_bound\": 0.21961328032487662\n  },\n  \"T4_constants\": [\n    {\n      \"gamma_epsilon\": 0.01,\n      \"kappa_over_1_minus_kappa\": 100.49752469181018,\n      \"paper_bound_2_over_s\": 200.0,\n      \"paper_inequality_holds\": true,\n      \"sharp_ratio\": 99.99999999999991,\n      \"exact_sharp_1_over_s\": 100.0\n    },\n    {\n      \"gamma_epsilon\": 0.5,\n      \"kappa_over_1_minus_kappa\": 2.4142135623730945,\n      \"paper_bound_2_over_s\": 4.0,\n      \"paper_inequality_holds\": true,\n      \"sharp_ratio\": 1.9999999999999998,\n      \"exact_sharp_1_over_s\": 2.0\n    },\n    {\n      \"gamma_epsilon\": 1,\n      \"kappa_over_1_minus_kappa\": 1.366025403784439,\n      \"paper_bound_2_over_s\": 2.0,\n      \"paper_inequality_holds\": true,\n      \"sharp_ratio\": 1.0,\n      \"exact_sharp_1_over_s\": 1.0\n    },\n    {\n      \"gamma_epsilon\": 4,\n      \"kappa_over_1_minus_kappa\": 0.49999999999999994,\n      \"paper_bound_2_over_s\": 0.5,\n      \"paper_inequality_holds\": true,\n      \"sharp_ratio\": 0.25,\n      \"exact_sharp_1_over_s\": 0.25\n    },\n    {\n      \"gamma_epsilon\": 5,\n      \"kappa_over_1_minus_kappa\": 0.43166247903554,\n      \"paper_bound_2_over_s\": 0.4,\n      \"paper_inequality_holds\": false,\n      \"sharp_ratio\": 0.19999999999999998,\n      \"exact_sharp_1_over_s\": 0.2\n    },\n    {\n      \"gamma_epsilon\": 10,\n      \"kappa_over_1_minus_kappa\": 0.279128784747792,\n      \"paper_bound_2_over_s\": 0.2,\n      \"paper_inequality_holds\": false,\n      \"sharp_ratio\": 0.1,\n      \"exact_sharp_1_over_s\": 0.1\n    }\n  ]\n}\n"
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/nfb_check.py",
+      "exit_code": 0,
+      "output": "{\"result_file\": \"/workspace/scratch/f12dce081c09/ppa/research/comparisons/2026_08_gppa_nfb/nfb_results.json\", \"all_assertions_pass\": true, \"completion_cases\": 1200, \"negative_identity_source_gap\": 0.2655881361644759}\n"
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/independent_attack_checks.py",
+      "exit_code": 0,
+      "output": "NFB identity example: lambda = 1/2\nNFB pure rotation example: lambda = 1/3\nNFB negative identity, PPA step 3: lambda = 788/2967\nFinite rational checks of anchored square completion: passed\nFinite rational checks of GPPA Theorem 4 strict margin: passed\nQuadratic-anchor quotients at exact graph points (finite illustrations):\n1 C137 -61/73 C191 -57/65 C141 -8177/4321\n2 C137 -2045/1033 C191 -4089/305 C141 -67108609/16842241\n3 C137 -5041/1261 C191 -262137/4145 C141 -549755809793/68736245761\n4 C137 -2097149/262153 C191 -16777209/65585 C141 -4503599627304961/281479271546881\n5 C137 -67108861/4194313 C191 -1073741817/1048625 C141 -36893488147418054657/1152922604116377601\n6 C137 -2147483645/67108873 C191 -68719476729/16777265 C141 -302231454903657276899329/4722366764344588369921\nAll finite checks passed; these checks do not prove universal exclusions.\n"
+    }
+  ],
+  "run_utc": "2026-10-08T15:24:47.812367+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "baseline": "3dd02110d7666ba77b561bf2ab26641013a79fd3",
+  "scripts": {
+    "gppa_check.py": "ed9a9c82fc4049a5ae3be4b46e00a361843a0c42268b4d82e19cc0264ffd49ce",
+    "nfb_check.py": "ebec56b49f70702cffe28bff53270e014b3ee358f26bf770e12ff7dc7cf9e806",
+    "independent_attack_checks.py": "c4aa9ca0e0e2c65e1b6dc216d58f6023bc4252a4f02888338727b895bc3fefd6"
+  },
+  "sources": {
+    "nfb_2608.22687v1.pdf": {
+      "sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+      "bytes": 760737
+    },
+    "gppa_2608.01584v1.pdf": {
+      "sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91",
+      "bytes": 313113
+    }
+  },
+  "checks": {
+    "all_run_exit_zero": true,
+    "reports_cross_reviewed": true,
+    "claims": [
+      "C199-v1",
+      "C200-v1",
+      "C201-v1",
+      "C202-v1",
+      "C203-v1"
+    ]
+  },
+  "source_manifest_verified": true,
+  "asset_validation": {
+    "command": "python3 research/validate_assets.py",
+    "exit_code": 0,
+    "scope": "Machine hashes, links, claim status fields, graph structure and identical generated offline graph payloads; not a mathematical or novelty proof.",
+    "nodes": 521,
+    "edges": 341,
+    "markdown_files": 159
+  },
+  "graph_generation": [
+    {
+      "command": "python3 research/build_graph.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 visualization/cosmos/build.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python3 visualization/xianxia/build.py",
+      "exit_code": 0
+    }
+  ],
+  "review_scope": {
+    "primary_tasks": 3,
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "ultra",
+    "independent_registration_receipt": "independent_attack.md section 8",
+    "claims": "C199-v1 through C203-v1",
+    "edges": "E327 through E341",
+    "fatal_objections_remaining_within_scope": 0,
+    "global_prior_art_audit_complete": false,
+    "arbitrary_lift_exclusion_proved": false
+  },
+  "final_report_hashes": {
+    "COMPARISON.md": "3e200358b7e0858649c4ca0a2c6ed9b843b304992d368c750838ed6ac5cc7834",
+    "gppa_review.md": "608a0e6e40b8cc4ef85abadaa01877c6297b953d90f9477a1d88a90c4b59dfed",
+    "nfb_review.md": "0653dc38349e3f6e8441211154c4a34931ba08b6f35f993f6f14f53ca840c5bb",
+    "independent_attack.md": "4fa1d712706893eebe0bca8bd0813e9718eb4c2e988a628969fe3bf53de5ca11"
+  }
+}

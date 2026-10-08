@@ -1642,6 +1642,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：H=R²，完整单值 F(x₁,x₂)=v(x₁,x₂)=(x₁,0)，η=ε=1。零集 S={0}×R，pair 为 ε-adaptively strongly monotone，ran v=ran(ηF+v)，F⁻¹ 在0全局 R-Lipschitz 常数1。全部 k≥0 的合法完整 GPPA 轨道 x_k=(2⁻ᵏ,(−1)ᵏ) 到 S 距离 Q-线性下降且 v(x_k)→0，但原轨道不点收敛、长度无限。
 - **Definitions / Dependencies / Evidence**：[完整对象、全图条件及逐 k 证明](research/literature_refresh_2026_10_08.md#lr-gppa-physical)；只用原 GPPA 更新定义和初等代数，有限 Fraction 校验不是无限轨道证明。外部 Theorem 2 只作比较对象，不作为本反例的真值依赖。
 - **Counterevidence / Objections / Scope**：不反驳 GPPA 原稿已述核坐标 / 集合距离结论；不证明与 RLEB 的总体类包含或不可比。增加核反演控制或选择条件后的物理点收敛另核；失败接口见[F49](FAILED_ROUTES.md#f49)。与 C194 的非单射压缩边界同机制，未升级 C02 或任何外部全文。
+- **已核接口补充**：[C199](#c199) 给同一完整非单调自然子类全部普通轨道的合法 GPPA 核和精确物理桥。因此本反例不能充当所有 RLEB 实例均避开 GPPA 的证明；特定完整双支同轨道排除另见 [C200](#c200)。
 
 <a id="c198"></a>
 ## C198-v1 / LR-HOLDER-REFERENCE · 全局 Hölder–RL 不自动给保距扩张的参照门
@@ -1650,3 +1651,48 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：H=R²，h(t)=min{1,max{0,t}}，C(p)=(√h(p₁),0)，完整 gphF={((p+C(p))/2,(p−C(p))/2):p∈H}。同一 F 满足 λ=L=1、γ=1/2 的全图全尺度 Hölder–RL；但 C 在 p=(1/100,0),q=0 的输出距1/10大于输入距1/100。因此将 C 本身作参照，Ciosmak 2607.17672v1 Theorem1.1 的 k=1 参照条件失败。
 - **Definitions / Dependencies / Evidence**：[完整图、全称估计与两点反证](research/literature_refresh_2026_10_08.md#lr-holder-reference)；平方根差及 clipping 的 Lipschitz 估计，Minty输入同一 p。外部充要定理未作为本两点反证的依赖，只核其准确条件。
 - **Counterevidence / Objections / Scope**：只阻断一般 C 的直接参照代入；不否定 C03 影子，不排除另选参照 / 附加条件导入，不认证影子定理新颖性。见[F50](FAILED_ROUTES.md#f50)；外部全部应用与全球先行性仍未核。
+
+<a id="c199"></a>
+## C199-v1 / AUG-GPPA-OVERLAP · 非单调非 calm 自然子类的真实 GPPA 物理重合
+
+- **Status**：`derived-checked`；全图边界、完整纤维及不变量桥的直接证明，专篇与独立攻击互核。
+- **Exact Statement / Objects / Domain / Quantifiers**：H=R²，a,c,λ,h>0，0<α<1；完整 F(t,y)={(-cy^α,ay+n):n∈N_R+(y)} 对y≥0，域外为空。q=(1+λa)⁻¹、K=λc q^α/(1−q^α)，普通完整 T(t,y)=(t+λc(qy_+)^α,qy_+)。取 v(t,y)=(h/λ)(−K(y_+)^α,y_+)，ε=min{λc/(hK),λa/h}>0；完整 pair 为ε-ASM、F⁻¹全局R-Lipschitz常数1/a、完整 warped纤维为R×{qy_+}，全输入coverage。
+- **Conclusion**：每条完整普通PPA轨道均是同一F、同一物理变量的合法GPPA选择。对y₀≥0，一步不变量I=t_k+Ky_k^α给预先固定零锚x*=(I,0)，且v(x_k)−v(x*)=(h/λ)(x_k−x*)；GPPA v1 Theorem2(a)的核率遂给物理R-linear及有限长。y₀<0一步驻定。另选R使R^(1−α)<λc(1−q^α)时，全部C02-v2严格门成立；具体α=2/3,a=7,c=2,λ=1,h=3/10,R=1/8可核ε=10,L_R=3/2,κ=1/(2√2)。
+- **Definitions / Dependencies / Evidence**：[综合精确实例](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-overlap)、[专篇§5](research/comparisons/2026_08_gppa_nfb/gppa_review.md)、[独立物理桥](research/comparisons/2026_08_gppa_nfb/independent_attack.md)、[Fraction复算](research/comparisons/2026_08_gppa_nfb/gppa_check.py)；C191同一单点支撑数据及完整边界法锥保留。外部导入严格限v1 Theorem2(a)已列的全图ASM、非空零集及coverage，不借未核历史参考定理。
+- **Counterevidence / Objections / Scope**：该F非单调、T在零法向非calm；这些标签不排除GPPA。warped纤维比普通纤维大，不是完整算法相等，任意warped选择未必保持不变量。一般C191/C192核分类与全球先行性未闭。
+
+<a id="c200"></a>
+## C200-v1 / AUG-GPPA-TWO-BRANCH · 完整双支普通轨道不能由任意 ASM 核保持
+
+- **Status**：`derived-checked`；不预设核连续性的全图证明、同支局部Lipschitz推导与分割攻击独立核验。
+- **Exact Statement / Objects / Domain / Quantifiers**：C137完整cap F:R³⇉R³、普通λ=1；在η≤0两值为f₊(y)=(-2√y,0,3y)、f₋(y)=(-2√y,0,-5y)，完整其它区域与边界保持GC-1。普通唯一轨道自(0,−1,1/64)满足η_k=−1,y_k=4⁻ᵏ/64,ξ_{k+1}−ξ_k=√y_k；R=1/16给全部严格RLEB门。
+- **Conclusion**：不存在任何h>0、ε>0、任意单值v:R³→R³，使完整(F,v)满足ε-ASM且该同一普通物理轨道成为GPPA选择；即使每步允许另选完整F的另一图值也不可能。同y同支强迫切向核折叠，同支给正轴局部Lipschitz，完整跨支给正常核差O(|Δy|²)，细分迫其恒定，但更新正常值须为h·3y或−h·5y非零。对正轴局部Lipschitz且间隙>0的共同切向双支剖面同证明成立，故也排除C141在p₀≤0、0<r₀<1的指定正法向轨道，以及C10全部a>0的非驻定正法向轨道。
+- **Definitions / Dependencies / Evidence**：[完整排除](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-barrier)、[专篇§6–7](research/comparisons/2026_08_gppa_nfb/gppa_review.md)、[独立攻击§5](research/comparisons/2026_08_gppa_nfb/independent_attack.md)；C137 GC-1–6认证同一完整F的RL、真残差及普通纤维，C141/C10正文认证其指定完整双支及普通轨道。有限计算仅核具体常数/步，分割证明承担任意核量词。
+- **Counterevidence / Objections / Scope**：不是“F无合格核”：常量核可一步跳入zerF，但不保持此轨道。局部版本须保留切向开片、连通正法向区间及完整两支。mere pair-monotone无核正则性、删支/换图、F+εv正则化、任意lift均未被这条证明排除；一个分离例不解总体类大小或全球先行性。
+
+<a id="c201"></a>
+## C201-v1 / AUG-NFB-ANCHOR · 任意同空间 NFB 拆分的原图必要二次锚
+
+- **Status**：`derived-checked`；solution-anchored平方配方及各完整图失败序列经专篇和独立攻击核验。
+- **Exact Statement / Objects / Domain / Quantifiers**：实Hilbert H、完整F=A+C；S有界自伴强单调、β>0、ρ>−β；C全局β-cocoercive w.r.t.S，A在每个(z,−Cz)、z∈zerF上ρS⁻¹-comonotone。对每个零锚z和每个(x,f)∈gphF，必有〈x−z,f〉≥q||f||²_{S⁻¹}，q=βρ/(β+ρ)。因此V=max{0,−q}S⁻¹固定有界PSD给〈x−z,f〉≥−〈f,Vf〉。
+- **Conclusion / Quantifiers**：任何候选拆分均生成这样的固定V，且推导与M/τ/θ无关。非退化C193（C191法向集合非{0}，C192原非退化数据）、C137、C141指定完整图及C10每个a>0违反每个固定有限V的局部二次锚，故不存在任何满足NFB v1 Assumption3.1的同空间完整A+C分解、任何合法固定度量或核。C141可在η≤0选任意ξ零锚、y=ε、ξ位移ε^δ，0<δ<γ/ν；负配对阶γ/ν+δ小于残差平方阶2γ/ν，正常正项阶1+1/ν更大，故同样失败。
+- **Definitions / Dependencies / Evidence**：[平方配方与自然类失败](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-necessary)、[NFB专篇N4–N8](research/comparisons/2026_08_gppa_nfb/nfb_review.md)、[独立攻击§4](research/comparisons/2026_08_gppa_nfb/independent_attack.md)、[精确SPD校验](research/comparisons/2026_08_gppa_nfb/nfb_check.py)；引用原文(2.1)/(2.3)/Assumption3.1(iii)，无需误用全对Proposition3.3。
+- **Counterevidence / Objections / Scope**：固定有界度量及ρ>−β是必要门；不排除变度量、别的算法、只保零集或任意lift。C191退化法向集合{0}是投影重合，不能删非零门。NFB结论不是被反驳，反例恰违反其前件；全球先行性未判。
+
+<a id="c202"></a>
+## C202-v1 / AUG-NFB-OVERLAP · 非单调普通 PPA 与 NFB 的完整同一子类
+
+- **Status**：`derived-checked`；完整线性图、全部算法等式/初始化及原文下降系数精确复算和独立审查。
+- **Exact Statement / Objects / Domain / Quantifiers**：H=Rⁿ，完整F=−Id，普通λ=3，J_{3F}=−Id/2；NFB v1取A=F,C=0,S=Id,M=Id/3,τ=3,θ=1,u₀=0,ζ=0,ζ_M=1/3,ρ=−11/10,μ=1/10,β=100。完整(M+A)可逆、完整图闭、μ+ρ=−1使解锚半单调成立、ρ>−β及所有步长门成立，原式(3.8)下降系数约0.2655881361644759>0。
+- **Conclusion**：全部x₀下NFB Algorithm3.7逐步等于同一完整普通PPA，Theorem3.10(ii)覆盖其唯一零点物理R-linear及随附有限长度；C02-v2以γ=1,L=2,ψ(s)=s,κ=1/2又满足全部严格门。二维纯旋转F=K、普通λ=1也有source rate证书μ=1/4,ρ=−1/4,β=τ=θ=1,S=M=Id,ζ=0,u₀=0，完整下降系数1/3；此为C24收敛结论覆盖，因本库该参数直接兼容等1，不称严格C02重合。
+- **Definitions / Dependencies / Evidence**：[综合重合](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-overlap)、[专篇§6完整参数与四种算法实例](research/comparisons/2026_08_gppa_nfb/nfb_review.md)、[独立攻击§3](research/comparisons/2026_08_gppa_nfb/independent_attack.md)、[复算](research/comparisons/2026_08_gppa_nfb/nfb_check.py)。原文Assumption3.1、(3.8)及Theorem3.10(ii)全部门已在使用处明列；有限步检查辅助一般线性归纳。
+- **Counterevidence / Objections / Scope**：普通PPA还可在非零C和适当memory初始化下与NFB相等，不能把C=0,θ=1,τM=S误写成所有实例必要条件。物理几何尾自动有限长，不能单独创新；source(i)有限维weak=strong但没有自动几何率/有限长。不是对全部非单调图的包含或全球新颖性判断。
+
+<a id="c203"></a>
+## C203-v1 / AUG-NFB-STANDARD-LIFT · 标准完整 primal–dual lift 的二次锚压缩
+
+- **Status**：`derived-checked`；逐图值lift、product零锚及固定矩阵压缩直接证明经独立交叉审查。
+- **Exact Statement / Objects / Domain / Quantifiers**：实Hilbert H,G，L:H→G有界线性；完整原图逐值等于F=A+C+D+L*BL。标准product总关系K(z,v)=((A+C+D)z+L*v,B⁻¹v−Lz)满足NFB v1 Assumption3.1。每个(z,f)∈gphF可选v∈BLz使((z,v),(f,0))∈gphK；每个s∈zerF可选product零锚(s,v*)。
+- **Conclusion**：若I_H:f↦(f,0)，则C201在product空间给〈z−s,f〉≥q〈f,Qf〉，Q=I_H^* S_prod⁻¹I_H固定有界正定；因此原图有固定有界PSD二次锚V=max{0,−q}Q。C201列明的局部失败完整对象，因而也不能通过此标准full-graph product拆分满足原文§4收敛前件。
+- **Definitions / Dependencies / Evidence**：[精确lift门](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift)、[NFB专篇N9–N11及§4逐结果条件](research/comparisons/2026_08_gppa_nfb/nfb_review.md)、[独立攻击IA-N2](research/comparisons/2026_08_gppa_nfb/independent_attack.md)。外部Notation4.1与Theorem4.10归约3.10的全图量词已核；固定非对角product度量有限检查不代替一般证明。
+- **Counterevidence / Objections / Scope**：源全图锚界不要求lift变量靠近零锚；若另立局部lift定理，需新增近锚全图lift门。只保零集、残差不等(f,0)、非线性变坐标、任意别的lift或算法的排除均未获。满足某个product算法也不自动证明投影逐步等原普通PPA；本条排除在此前已经生效。

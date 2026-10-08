@@ -1,0 +1,13 @@
+NFB identity example: lambda = 1/2
+NFB pure rotation example: lambda = 1/3
+NFB negative identity, PPA step 3: lambda = 788/2967
+Finite rational checks of anchored square completion: passed
+Finite rational checks of GPPA Theorem 4 strict margin: passed
+Quadratic-anchor quotients at exact graph points (finite illustrations):
+1 C137 -61/73 C191 -57/65 C141 -8177/4321
+2 C137 -2045/1033 C191 -4089/305 C141 -67108609/16842241
+3 C137 -5041/1261 C191 -262137/4145 C141 -549755809793/68736245761
+4 C137 -2097149/262153 C191 -16777209/65585 C141 -4503599627304961/281479271546881
+5 C137 -67108861/4194313 C191 -1073741817/1048625 C141 -36893488147418054657/1152922604116377601
+6 C137 -2147483645/67108873 C191 -68719476729/16777265 C141 -302231454903657276899329/4722366764344588369921
+All finite checks passed; these checks do not prove universal exclusions.

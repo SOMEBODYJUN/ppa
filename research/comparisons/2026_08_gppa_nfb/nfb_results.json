@@ -1,0 +1,221 @@
+{
+  "source_pdf_sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+  "scope": "Independent arithmetic and witness checks, not a proof by finite search.",
+  "completion": {
+    "exact_fraction_cases": 1200,
+    "all_equalities_and_inequalities_pass": true,
+    "S": [
+      [
+        2.0,
+        0.6
+      ],
+      [
+        0.6,
+        1.3
+      ]
+    ]
+  },
+  "exact_PPA_overlaps": {
+    "pure_rotation": {
+      "source_gap_exact": "1/3",
+      "physical_PPA_norm_factor": 0.7071067811865475,
+      "C02_compatibility_test_at_lambda_1": 1
+    },
+    "negative_identity": {
+      "source_gap_exact": "788/2967",
+      "source_gap": 0.2655881361644759,
+      "physical_PPA_factor": -0.5,
+      "RL_L": 2,
+      "compatibility_kappa": 0.5
+    },
+    "nonzero_C_affine_absorption": {
+      "source_gap_exact": "5/6",
+      "physical_PPA_factor": 0.3333333333333333
+    },
+    "nonzero_C_memory_compensation": {
+      "source_gap_exact": "3/4",
+      "physical_PPA_factor": 0.5
+    },
+    "exact_iterations_per_example": 20
+  },
+  "obstruction_witnesses": {
+    "natural_C191": [
+      {
+        "epsilon": 0.001,
+        "anchor_ratio": -6.6644295302013425,
+        "gap_for_large_PSD_V": 1.5590070000000003
+      },
+      {
+        "epsilon": 1e-06,
+        "anchor_ratio": -99.51169270574185,
+        "gap_for_large_PSD_V": 9.578000700000009e-05
+      },
+      {
+        "epsilon": 1e-09,
+        "anchor_ratio": -999.950995401225,
+        "gap_for_large_PSD_V": 8.958980007000016e-09
+      },
+      {
+        "epsilon": 1e-12,
+        "anchor_ratio": -9999.995099932396,
+        "gap_for_large_PSD_V": -4.190199929993701e-16
+      },
+      {
+        "epsilon": 1e-15,
+        "anchor_ratio": -99999.99950999924,
+        "gap_for_large_PSD_V": -9.000041990199946e-16
+      },
+      {
+        "epsilon": 1e-18,
+        "anchor_ratio": -999999.9999509993,
+        "gap_for_large_PSD_V": -9.900000419990223e-19
+      }
+    ],
+    "cap_C137": [
+      {
+        "epsilon": 0.001,
+        "anchor_ratio": -2.8046461720646008
+      },
+      {
+        "epsilon": 1e-06,
+        "anchor_ratio": -15.811351975299955
+      },
+      {
+        "epsilon": 1e-09,
+        "anchor_ratio": -88.91397030113973
+      },
+      {
+        "epsilon": 1e-12,
+        "anchor_ratio": -499.9999999988744
+      },
+      {
+        "epsilon": 1e-15,
+        "anchor_ratio": -2811.70662595174
+      }
+    ],
+    "superlinear_C141": [
+      {
+        "epsilon": 0.001,
+        "anchor_ratio": -2.302136843070382
+      },
+      {
+        "epsilon": 1e-06,
+        "anchor_ratio": -5.61780567721982
+      },
+      {
+        "epsilon": 1e-09,
+        "anchor_ratio": -13.334792664132987
+      },
+      {
+        "epsilon": 1e-12,
+        "anchor_ratio": -31.622744979001062
+      },
+      {
+        "epsilon": 1e-15,
+        "anchor_ratio": -74.9894185618721
+      },
+      {
+        "epsilon": 1e-18,
+        "anchor_ratio": -177.82794082606435
+      }
+    ],
+    "logarithmic_C10": [
+      {
+        "a": 0.5,
+        "rows": [
+          {
+            "s": 10,
+            "anchor_ratio": -1.8211602593607792,
+            "asymptotic_ratio": -1.8211602868378718
+          },
+          {
+            "s": 30,
+            "anchor_ratio": -2.359611061770567,
+            "asymptotic_ratio": -2.359611061770567
+          },
+          {
+            "s": 100,
+            "anchor_ratio": -3.170153879722701,
+            "asymptotic_ratio": -3.1701538797227005
+          },
+          {
+            "s": 300,
+            "anchor_ratio": -4.165255283040581,
+            "asymptotic_ratio": -4.165255283040581
+          },
+          {
+            "s": 500,
+            "anchor_ratio": -4.7310706278388395,
+            "asymptotic_ratio": -4.7310706278388395
+          }
+        ]
+      },
+      {
+        "a": 1.0,
+        "rows": [
+          {
+            "s": 10,
+            "anchor_ratio": -3.316624278312817,
+            "asymptotic_ratio": -3.3166247903554
+          },
+          {
+            "s": 30,
+            "anchor_ratio": -5.567764362830022,
+            "asymptotic_ratio": -5.5677643628300215
+          },
+          {
+            "s": 100,
+            "anchor_ratio": -10.04987562112089,
+            "asymptotic_ratio": -10.04987562112089
+          },
+          {
+            "s": 300,
+            "anchor_ratio": -17.349351572897472,
+            "asymptotic_ratio": -17.349351572897472
+          },
+          {
+            "s": 500,
+            "anchor_ratio": -22.383029285599388,
+            "asymptotic_ratio": -22.38302928559939
+          }
+        ]
+      },
+      {
+        "a": 2.0,
+        "rows": [
+          {
+            "s": 10,
+            "anchor_ratio": -10.999807622658123,
+            "asymptotic_ratio": -11.0
+          },
+          {
+            "s": 30,
+            "anchor_ratio": -30.999999999999996,
+            "asymptotic_ratio": -31.0
+          },
+          {
+            "s": 100,
+            "anchor_ratio": -101.00000000000001,
+            "asymptotic_ratio": -101.0
+          },
+          {
+            "s": 300,
+            "anchor_ratio": -301.0,
+            "asymptotic_ratio": -301.0
+          },
+          {
+            "s": 500,
+            "anchor_ratio": -501.0,
+            "asymptotic_ratio": -501.0
+          }
+        ]
+      }
+    ],
+    "status": "Finite evidence only; divergence and universal metric exclusion are proved analytically in nfb_review.md."
+  },
+  "standard_product_compression": {
+    "exact_fraction_cases": 15,
+    "non_diagonal_metric": true,
+    "arbitrarily_large_lifted_variable_changes_neither_pairing_nor_residual_quadratic": true
+  }
+}

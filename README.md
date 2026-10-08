@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 504 个数学节点、323 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 521 个数学节点、341 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -50,6 +50,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 路线 | 承重节点及联合前件 | 当前状态 |
 | --- | --- | --- |
+| 与8月GPPA/NFB的精确关系 | [C199–C203综合比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table)：同一非单调普通轨道的真实重合；完整双支→任意ASM核同轨道障碍；任意NFB拆分→固定二次原图锚，标准full-graph product→同锚压缩 | 已核明确v1与证明范围；物理几何尾自动有限长。既不完全重合，也不全无重合；一般核分类、任意其它lift及结构线/全球先行性仍开放 |
 | 图值剖面与自然母空间工具 | [C166–C168/C172](research/canonical/operator_profile_tools.md)：完整图值剖面→真残差需取到或右连续门；同一紧对象块闭约束；鲁棒孔洞及双侧实际幂门。[八项构造前沿](research/canonical/operator_space_construction_frontier.md)列清总体比较的实际义务 | 工具证明已重构；没有自动获得自然母空间、孔隙定理或总体规模比较 |
 | 有限状态与条件刷新完整接口 | [C169–C171](research/topics/random_markov/finite_state_completion.md)：多面体目标锐证书、三状态支撑识别、四循环真实率和指定标量公式障碍；[C173–C176](research/topics/random_markov/conditional_refresh_interfaces.md)：相关Gibbs、连续可数刷新、三种残差/拓扑分离 | 自足证明及独立复算；目标、同输入最优性、固定边缘和权重门分别保留，条件残差不换成原Ψ |
 | 恢复的两种宽母空间薄性 | [C179固定输入AW薄性](research/canonical/attouch_wets_fixed_input_thinness.md#aw-object)、[C180一致映射Hölder薄性与显式证书接口](research/canonical/uniform_holder_thinness.md#uht-object) | 两个不同母空间均有自足证明；固定步长/固定输入与精确S门明列，不转移到任意算法或共同尾子层，不替代总体比较 |
@@ -159,6 +160,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 仓库根相对完整路径 | 数学资产、目的、何时读取或更新 |
 | --- | --- |
+| [research/comparisons/2026_08_gppa_nfb/](research/comparisons/2026_08_gppa_nfb/README.md)、[综合裁决](research/comparisons/2026_08_gppa_nfb/COMPARISON.md) | 固定两篇v1原文/hash/数学基线；逐篇原式、真实非单调重合、任意ASM核双支障碍、任意NFB拆分必要锚与标准lift压缩；三份审查与独立复算。C199–C203为精确接口，结构/纤维线先行性另核。 |
 | [research/literature_refresh_2026_10_08.md](research/literature_refresh_2026_10_08.md)、[精确检查](research/code/literature_refresh/check_scope.py) | 2026-10-08 近期文献刷新：GPPA / NFB / Spingarn、KKT EB、Kirszbraun与单调纤维；C197/C198给核坐标和参照扩张边界。定位与候选工具分开，外部全篇 / 全球新颖性未验收。 |
 | [research/canonical/isolated_zero_flatness.md](research/canonical/isolated_zero_flatness.md) | IZ-GERM/FIBERS 与 C45/C46：孤立零点的图 germ 换算、真残差全部小纤维门、分支上阶及正 Q 因子的额外极限；研究孤立解 PPA 时读。 |
 | [research/canonical/nonisolated_alignment.md](research/canonical/nonisolated_alignment.md) | NA-OBJECT/DRIFT/COMPOSE/APPROX/SHARP 与 C48、C49-v2、C50-v2：非孤立零集的锚漂移、正指数下的统一 gauge 上界、无最近点的正容差修补、同序列锐性；研究 \(\theta q\) 或 tangent drift 时读。旧量词版本及反例在 [F38](FAILED_ROUTES.md#f38)。 |

@@ -2690,6 +2690,72 @@
       "label": "C196零扰动残差仍失高阶EB",
       "file": "canonical/secondary_problem_interfaces.md#sp-perturbation",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-DATA",
+      "label": "C199完整自然子类及显式核/不变量",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-overlap",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "AUG-GPPA-OVERLAP",
+      "label": "C199同原图普通选择的GPPA物理重合",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-overlap",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-EXCLUDE",
+      "label": "C200完整双支普通轨道无ASM核保持",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-barrier",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-NFB-DATA",
+      "label": "C201同空间完整拆分及固定NFB锚前件",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-necessary",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "AUG-NFB-ANCHOR",
+      "label": "C201任意合格拆分强迫原图二次锚",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-necessary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-NFB-EXCLUDE",
+      "label": "C201完整失败图无合格同空间拆分",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-necessary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-NFB-OVERLAP-DATA",
+      "label": "C202负恒等/旋转完整图及合法参数",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-overlap",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "AUG-NFB-OVERLAP",
+      "label": "C202非单调普通PPA与NFB真实重合",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-overlap",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-NFB-LIFT-DATA",
+      "label": "C203完整标准lift及product NFB全部前件",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "AUG-NFB-LIFT-ANCHOR",
+      "label": "C203固定product二次锚压缩回原图",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-NFB-LIFT-EXCLUDE",
+      "label": "C203完整失败图无合格标准lift",
+      "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -6472,6 +6538,180 @@
       "relation": "implies",
       "scope": "q>1；同一S=R×0、完整F0+h与F0+{0,h}；rH2=0但真残差|t|使高阶EB比值发散；不认证PPA发散",
       "status": "derived-checked；规范自足推导与独立空白增量接收，外部优先性未核"
+    },
+    {
+      "id": "E327",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-GPPA-DATA"
+      ],
+      "output": "AUG-GPPA-OVERLAP",
+      "relation": "implies",
+      "scope": "同一完整F(t,y)={(-c y^α,ay+n):n∈N_R+(y)}，全部a,c,λ,h>0及0<α<1；显式核v=(h/λ)(-K y_+^α,y_+)；含边界法锥与coverage。普通轨道不变量给物理率/有限长；warped纤维更大，不称完整算法相等。严格RLEB另取明列小R。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E328",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "GC-OBJECT"
+      ],
+      "output": "AUG-GPPA-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C137完整cap、λ=1、初值(0,-1,1/64)，R=1/16严格RLEB已核；对任意h,ε>0及任何完整ε-ASM核，完整跨支迫正常核恒定，不能保持该普通轨道，允许另选支亦矛盾；不排mere-monotone无正则性或任意lift。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E329",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SF-OBJECT"
+      ],
+      "output": "AUG-GPPA-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C141固定参数及完整双支保持；p0≤0、0<r0<1的指定普通轨道；正法向紧区间剖面局部Lipschitz、间隙>0，任意完整ASM核正常恒定，非零正常更新矛盾。只针对此原图/轨道，不由cap数据推出另一图。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E330",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "LOG"
+      ],
+      "output": "AUG-GPPA-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C10全部a>0的完整对数双支及非驻定正法向普通轨道；正轴光滑与双支间隙8y触发同一正常核恒定证明；a>1才为Dini有限長实例，a≤1不赋C09正面结论。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E331",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-NFB-DATA"
+      ],
+      "output": "AUG-NFB-ANCHOR",
+      "relation": "implies",
+      "scope": "完整F=A+C；S固定有界自伴强单调，β>0，ρ>−β，C全局β-cocoercive，A在每个解图锚ρS^-1-comonotone；对每个完整(x,f)及零锚z，经平方配方得〈x−z,f〉≥βρ/(β+ρ)||f||²_S^-1；与M/算法门无关。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E332",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SN-ANCHOR-FAIL",
+        "AUG-NFB-ANCHOR"
+      ],
+      "output": "AUG-NFB-EXCLUDE",
+      "relation": "implies",
+      "scope": "C193非退化自然类每个固定有限V局部失败；任一候选完整同空间NFB拆分都生成某固定V，故全部排除。C191法向集合={0}退化门不能删除；不排任意lift。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E333",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "GC-OBJECT",
+        "AUG-NFB-ANCHOR"
+      ],
+      "output": "AUG-NFB-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C137任意零锚取法向ε、第一切向位移ε^δ，0<δ<1/2，合法正支负配对阶1/2+δ小于残差平方阶1；显式局部序列排除每个固定V，因此无任意合格同空间完整拆分。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E334",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SF-OBJECT",
+        "AUG-NFB-ANCHOR"
+      ],
+      "output": "AUG-NFB-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C141同一固定参数完整原图，任意零锚、法向ε、第一切向位移ε^δ，0<δ<γ/ν，第二坐标不移；负配对阶γ/ν+δ小于残差平方阶2γ/ν，正常正项阶1+1/ν更大，故每个固定V失败。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E335",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "LOG",
+        "AUG-NFB-ANCHOR"
+      ],
+      "output": "AUG-NFB-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C10每个a>0完整原图，h=ℓ_a(4y)，切向位移√h，合法正支给(-h^(3/2)+3y²)/(h²+9y²)→−∞；每个固定V局部失败，故任意合格同空间拆分排除，不反驳source theorem。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E336",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-NFB-OVERLAP-DATA"
+      ],
+      "output": "AUG-NFB-OVERLAP",
+      "relation": "implies",
+      "scope": "C202负恒等F=−Id、普通λ3与明列ρ−11/10,μ1/10,β100,NFBτ3,θ1,u0=0等全部门；Algorithm3.7完整逐步相等且source下降788/2967>0。本库C02严格兼容成立。纯旋转另有source下降1/3，但本库直接兼容等1，只标C24覆盖。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E337",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-NFB-LIFT-DATA",
+        "AUG-NFB-ANCHOR"
+      ],
+      "output": "AUG-NFB-LIFT-ANCHOR",
+      "relation": "implies",
+      "scope": "同一product K满足NFB v1 Assumption3.1，特别product前向β-cocoercive、β>0、ρ>−β、全部product解锚comonotone及固定有界自伴强单调度量；标准完整F=A+C+D+L*BL、product关系((A+C+D)z+L*v,B^-1v−Lz)，全部原图值lift成(f,0)，零锚也lift；应用同一product空间C201才可压缩得原固定二次锚。源全图量词不要求辅助变量近锚；局部新定理另核近锚保真門。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E338",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SN-ANCHOR-FAIL",
+        "AUG-NFB-LIFT-ANCHOR"
+      ],
+      "output": "AUG-NFB-LIFT-EXCLUDE",
+      "relation": "implies",
+      "scope": "C193非退化同一完整自然原图与标准full-graph lift合同；局部每固定矩阵锚失败对压缩矩阵矛盾。只排此标准表示，不排任意改变输出/配对的lift。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E339",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "GC-OBJECT",
+        "AUG-NFB-LIFT-ANCHOR"
+      ],
+      "output": "AUG-NFB-LIFT-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C137全部零锚合法局部序列的负配对阶与残差平方阶矛盾；保持全部原图值及product零锚的标准lift必须产生固定原二次锚，故不存在合格表示；任意其它lift仍开放。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E340",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SF-OBJECT",
+        "AUG-NFB-LIFT-ANCHOR"
+      ],
+      "output": "AUG-NFB-LIFT-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C141指定完整图合法局部序列γ/ν+δ<2γ/ν的阶矛盾；保持全部原图值及product零锚的标准lift必须产生固定原二次锚，故不存在合格表示；任意其它lift仍开放。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E341",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "LOG",
+        "AUG-NFB-LIFT-ANCHOR"
+      ],
+      "output": "AUG-NFB-LIFT-EXCLUDE",
+      "relation": "conditional",
+      "scope": "C10每个a>0完整图的h=ℓ_a(4y)负商发散；保持全部原图值及product零锚的标准lift必须产生固定原二次锚，故不存在合格表示；任意其它lift仍开放。",
+      "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
     }
   ]
 }

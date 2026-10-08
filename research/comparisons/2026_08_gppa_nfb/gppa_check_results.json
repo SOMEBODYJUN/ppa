@@ -1,0 +1,187 @@
+{
+  "note": "Finite algebra checks only; general proofs are in gppa_review.md.",
+  "overlap": {
+    "q": "1/8",
+    "q_alpha": "1/4",
+    "u": "1/5",
+    "w": "3/10",
+    "adaptive_epsilon": "10",
+    "R": "1/8",
+    "L_R": "3/2",
+    "kappa": 0.3535533905932738,
+    "max_ASM_deficit": "0",
+    "rows": [
+      {
+        "k": 0,
+        "y": "1/512",
+        "t": "-1",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 1,
+        "y": "1/4096",
+        "t": "-127/128",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 2,
+        "y": "1/32768",
+        "t": "-507/512",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 3,
+        "y": "1/262144",
+        "t": "-2027/2048",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 4,
+        "y": "1/2097152",
+        "t": "-8107/8192",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 5,
+        "y": "1/16777216",
+        "t": "-32427/32768",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 6,
+        "y": "1/134217728",
+        "t": "-129707/131072",
+        "kernel_update_exact": true
+      },
+      {
+        "k": 7,
+        "y": "1/1073741824",
+        "t": "-518827/524288",
+        "kernel_update_exact": true
+      }
+    ]
+  },
+  "cap": {
+    "R": "1/16",
+    "r0": "1/64",
+    "L_R": 3.2034271247461903,
+    "kappa": 0.7453849316207962,
+    "strict_R_upper_bound": 0.21961328032487662,
+    "rows": [
+      {
+        "k": 0,
+        "input_normal": "1/64",
+        "output_normal": "1/256",
+        "plus_normal": "3/256",
+        "minus_normal": "-5/256",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 1,
+        "input_normal": "1/256",
+        "output_normal": "1/1024",
+        "plus_normal": "3/1024",
+        "minus_normal": "-5/1024",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 2,
+        "input_normal": "1/1024",
+        "output_normal": "1/4096",
+        "plus_normal": "3/4096",
+        "minus_normal": "-5/4096",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 3,
+        "input_normal": "1/4096",
+        "output_normal": "1/16384",
+        "plus_normal": "3/16384",
+        "minus_normal": "-5/16384",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 4,
+        "input_normal": "1/16384",
+        "output_normal": "1/65536",
+        "plus_normal": "3/65536",
+        "minus_normal": "-5/65536",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 5,
+        "input_normal": "1/65536",
+        "output_normal": "1/262144",
+        "plus_normal": "3/262144",
+        "minus_normal": "-5/262144",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 6,
+        "input_normal": "1/262144",
+        "output_normal": "1/1048576",
+        "plus_normal": "3/1048576",
+        "minus_normal": "-5/1048576",
+        "ordinary_PPA_update_exact": true
+      },
+      {
+        "k": 7,
+        "input_normal": "1/1048576",
+        "output_normal": "1/4194304",
+        "plus_normal": "3/4194304",
+        "minus_normal": "-5/4194304",
+        "ordinary_PPA_update_exact": true
+      }
+    ]
+  },
+  "T4_constants": [
+    {
+      "gamma_epsilon": 0.01,
+      "kappa_over_1_minus_kappa": 100.49752469181018,
+      "paper_bound_2_over_s": 200.0,
+      "paper_inequality_holds": true,
+      "sharp_ratio": 99.99999999999991,
+      "exact_sharp_1_over_s": 100.0
+    },
+    {
+      "gamma_epsilon": 0.5,
+      "kappa_over_1_minus_kappa": 2.4142135623730945,
+      "paper_bound_2_over_s": 4.0,
+      "paper_inequality_holds": true,
+      "sharp_ratio": 1.9999999999999998,
+      "exact_sharp_1_over_s": 2.0
+    },
+    {
+      "gamma_epsilon": 1,
+      "kappa_over_1_minus_kappa": 1.366025403784439,
+      "paper_bound_2_over_s": 2.0,
+      "paper_inequality_holds": true,
+      "sharp_ratio": 1.0,
+      "exact_sharp_1_over_s": 1.0
+    },
+    {
+      "gamma_epsilon": 4,
+      "kappa_over_1_minus_kappa": 0.49999999999999994,
+      "paper_bound_2_over_s": 0.5,
+      "paper_inequality_holds": true,
+      "sharp_ratio": 0.25,
+      "exact_sharp_1_over_s": 0.25
+    },
+    {
+      "gamma_epsilon": 5,
+      "kappa_over_1_minus_kappa": 0.43166247903554,
+      "paper_bound_2_over_s": 0.4,
+      "paper_inequality_holds": false,
+      "sharp_ratio": 0.19999999999999998,
+      "exact_sharp_1_over_s": 0.2
+    },
+    {
+      "gamma_epsilon": 10,
+      "kappa_over_1_minus_kappa": 0.279128784747792,
+      "paper_bound_2_over_s": 0.2,
+      "paper_inequality_holds": false,
+      "sharp_ratio": 0.1,
+      "exact_sharp_1_over_s": 0.1
+    }
+  ]
+}

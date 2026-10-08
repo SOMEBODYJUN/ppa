@@ -26,7 +26,7 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**2026-10-08 外部比较义务。** [近期文献刷新](research/literature_refresh_2026_10_08.md#lr-actions) 新增 adaptive / warped GPPA、半单调 NFB、oblique weak Minty PPPA 的逐定理对照，以及 Ciosmak 2024/2026 扩张结果与 C03 的先行性核验。C197/C198 只给明确接口反例；C193 排除同一完整原图邻域中的固定二次锚直接代入，不排除另核保真的分裂或升维。10/06 KKT 稿是凸复合真 EB 的候选接口，未关闭一般秩亏门。本轮定向刷新未发现可直接关闭总体规模问题的结果，亦不认证全球新颖性；原主 Claim 与来源清洗完成门保持原身份。
+**外部收敛比较的当前完成门。** [8月GPPA/NFB综合比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table) 已核固定v1逐结果门及真实重合：C199构造同一非单调自然子类的GPPA核和物理不变量桥，C202给非单调普通PPA/NFB完整同一例；物理几何尾下有限长度不另作创新。C200排除保留C137/C141/C10指定普通轨道的任意ASM核；C201由平方配方把C193等完整图的固定二次锚失败强化为**任意合格同空间NFB拆分**排除，C203另核指定标准full-graph primal–dual lift压缩。C197仍只限制无物理桥的核率推断，不能当GPPA总体排除。仍需核一般C191/C192核分类、无核正则性的mere-monotone GPPA、任意其它保真lift、Spingarn等其它框架及全球先行性。[近期刷新](research/literature_refresh_2026_10_08.md#lr-actions) 的Ciosmak 2024/2026与C03结构线逐定理比较仍开放；不能把收敛子类重合改写为附件结构稿重复。10/06 KKT稿仍为凸复合真EB候选接口，一般秩亏门、总体规模及来源覆盖未由本轮关闭。
 
 **已接入的外部工具与边界。** [C181/C182](research/canonical/l1_markov_extension.md)已重构332实数平稳链主证明并核Mendel–Naor扩张门：可直接使用任意度量源γ≤1/2的ℓ¹/概率值域扩张及新预算的ℓ¹满输入完成；Hilbert源允许γ≤1。常数放大，完成后零集/真残差另认证。[C183/C184](research/canonical/infinite_fiber_boundary.md)进一步明确：满Minty输入加单点零集仍不能推广有限维满正反纤维；额外非扩张在任意Hilbert恢复非空闭凸弱紧，范数紧仍失败。外部328的一般反身Banach证明没有调用，098/329/327/324仍候选；复数/Lean/全球先行性未核。这些认识不关闭下面的原生认证或总体比较义务。
 

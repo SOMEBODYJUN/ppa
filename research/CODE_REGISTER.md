@@ -26,3 +26,15 @@
 ## 2026-10-08 文献接口的精确检查
 
 [check_scope.py](code/literature_refresh/check_scope.py) 绑定 C197-v1 / C198-v1 及 GPPA v1 Example1 校勘记录；[正文](literature_refresh_2026_10_08.md#lr-repro) 给复跑命令和全部一般证明。整数 / Fraction 精确算术，无随机 seed 或容差；只核 GPPA k=0,…,8 的合法性和能量式、四个有理点的16对 Hölder估计、参照1-Lipschitz两点失败和 Example1 的内积−1，以及日期差。[results.json](code/literature_refresh/results.json) 记录环境和代码hash，[sources.json](code/literature_refresh/sources.json) 记录六份已取得一手原稿的版本hash。有限PASS不认证全称结论、外部完整证明或全球新颖性。
+
+## GPPA / NFB 完整对象比较的独立复算
+
+按本轮集中保存比较证据的要求，脚本与结果同存 [专用比较目录](comparisons/2026_08_gppa_nfb/README.md#reproduce)，不修改历史程序。绑定C199–C203-v1；[verification.json](comparisons/2026_08_gppa_nfb/verification.json) 给Python环境、各脚本hash、实际命令及退出码。
+
+| 脚本及输出 | 有限验证与误差范围 |
+| --- | --- |
+| [gppa_check.py](comparisons/2026_08_gppa_nfb/gppa_check.py)、[结果](comparisons/2026_08_gppa_nfb/gppa_check_results.json) | Fraction核显式核、边界法锥样本、普通/warped步及不变量/物理桥；完整cap合法步；binary64仅展示严格兼容常数及T4系数。一般ASM和无限分割由专篇证明，不由抽样证明。 |
+| [nfb_check.py](comparisons/2026_08_gppa_nfb/nfb_check.py)、[结果](comparisons/2026_08_gppa_nfb/nfb_results.json) | 固定seed的1200组非对角SPD平方配方精确Fraction；四例逐20步PPA/NFB等式、source完整下降常数；15组product压缩；局部失败序列有限趋势及固定PDFhash。一般必要性靠N6/N11及解析阶比较，binary64趋势不是无限序列证明。 |
+| [independent_attack_checks.py](comparisons/2026_08_gppa_nfb/independent_attack_checks.py)、[结果](comparisons/2026_08_gppa_nfb/independent_attack_results.txt) | 独立Fraction核source下降系数（旋转1/3，负恒等788/2967）、平方配方、T4严格余量和自然类/cap/超线性合法图点商；无随机容差。有限PASS不涵盖所有核/拆分/lift，正文明确量词。 |
+
+复现命令见比较README；计算只是独立算术检查，不认证外部全球先行性或任意表示排除。
