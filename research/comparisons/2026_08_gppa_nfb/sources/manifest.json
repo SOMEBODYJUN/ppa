@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2608.01584",
+    "version": "v1",
+    "url": "https://arxiv.org/pdf/2608.01584v1",
+    "file": "gppa_2608.01584v1.pdf",
+    "sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91",
+    "bytes": 313113,
+    "title": "Convergence and Stability Analysis of a Generalized Proximal Point Algorithm and Its Inexact Version",
+    "retrieved_at_utc": "2026-10-08T14:21:53.313465+00:00",
+    "baseline_commit": "3dd02110d7666ba77b561bf2ab26641013a79fd3",
+    "primary_abstract": "https://arxiv.org/abs/2608.01584v1"
+  },
+  {
+    "id": "2608.22687",
+    "version": "v1",
+    "url": "https://arxiv.org/pdf/2608.22687v1",
+    "file": "nfb_2608.22687v1.pdf",
+    "sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+    "bytes": 760737,
+    "title": "Nonlinear Forward-Backward Algorithm for Solving Non-monotone+Lipschitz Inclusions with Applications to Adjoint Mismatch Problems",
+    "retrieved_at_utc": "2026-10-08T14:21:53.318105+00:00",
+    "baseline_commit": "3dd02110d7666ba77b561bf2ab26641013a79fd3",
+    "primary_abstract": "https://arxiv.org/abs/2608.22687v1"
+  }
+]
