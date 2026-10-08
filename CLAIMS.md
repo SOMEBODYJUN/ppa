@@ -119,7 +119,7 @@
 
 ## C12-v1 · 给定度量完备的修补推论
 
-- **Status**：`derived-checked`，仅指补充指定度量完备后从有限长度到空间内极限的修补；原稿未据此自动改版。
+- **Status**：`derived-checked`，覆盖 H06 中独立写出的截断、Dini 求和、Tonelli 有限长度及指定度量完备后的空间内极限证明；原稿未据此自动改版。
 - **Exact Statement / Objects / Domain / Quantifiers**：在**给定度量 \(d\) 完备**的 \((\mathsf X,d)\) 上取非空闭 \(S\)，适应过程 \(X_k\)，\(D_k=d(X_k,S)\)、\(s_k=d(X_{k+1},X_k)\)。假设过程留在 \(0\le D_k\le R\) 的不变域、\(\omega\) 非减且 Dini、\(0<\kappa<1\)，逐路径有 \(s_k\le(D_k+\omega(D_k))/2\)，并且 \(\mathbb E[D_{k+1}\mid\mathcal F_k]\le\kappa D_k\)。则 \(\sum_k s_k<\infty\)，\(X_k\to X_\infty\in S\) 几乎处处。
 - **Dependencies / Evidence / Scope**：[H06](research/holder_structure.md#stoch) 的截断阈值、Dini 求和与 Tonelli 给有限长度；指定度量完备给 Cauchy 极限，闭 \(S\) 给极限归属。仅拓扑 Polish 的 C12-v0 被反例否定，不得混成同一假设集。修补不代表原稿其它随机断言或外部先行性已验收。
 
@@ -1516,7 +1516,7 @@
 - **Status**：`derived-checked`；固定外部332实数主定理的承重链已在本库逐式重构。
 - **Exact Statement / Objects / Domain / Quantifiers**：每个n,t≥1、每个n阶随机矩阵A、每个平稳概率π（允许零分量，不要求可逆）、每组x_i∈ℓ¹(ℝ)，存在y_i∈ℓ¹，使Σπ_i||x_i−y_i||₁²+tΣπ_i a_ij||y_i−y_j||₁²≤3024Σπ_i(t⁻¹Σ_(s=1)^t A^s)_ij||x_i−x_j||₁²。故可逆范围的metric Markov cotype2常数≤12√21。
 - **Definitions / Dependencies / Evidence**：[LM1–LM4完整证明](research/canonical/l1_markov_extension.md#lm-proof)：有限二元编码、平坦三次函数、四次势余量108、几何停止与平稳Cesàro比较28。外部固定版本与SHA见[LIT-OAI-CATALOG-2026](research/LITERATURE.md#lit-oai-catalog-2026)；平稳非可逆范围原稿Remark5.1已给，不称本库新颖性。
-- **Counterevidence / Scope / Related Files**：退化相同数据、零π与t=1包含；y_i自由选择，不是指定算法输出、原线性子空间中的点或真实残差EB。复数推论、Lean实际覆盖与全球先行性未验收；C181显示的实数承重链已由本轮空白Astra完整复算。概率值域需C182的显式回缩并损失常数。
+- **Counterevidence / Scope / Related Files**：退化相同数据、零π与t=1包含；y_i自由选择，不是指定算法输出、原线性子空间中的点或真实残差EB。复数推论、Lean实际覆盖与全球先行性未验收；C181显示的实数承重链有本页自足重构；独立接收与外部复核的实际范围分别以审计记录为准。概率值域需C182的显式回缩并损失常数。
 
 <a id="c182"></a>
 ## C182-v1 / L1-HOLDER-COMPLETION · 扩张、概率值域与放宽预算的关系完成
@@ -1532,7 +1532,7 @@
 - **Status**：`derived-checked`；完整对象、固定集及空纤维均由显式坐标证明。
 - **Exact Statement / Objects / Domain / Quantifiers**：每个λ,L>0、0<γ<1，在实ℓ²存在非空闭完整关系F，全图全尺度满足同参数RL、固定参数图极大、完整J_λF在全部ℓ²非空单值、完整zerF={u_*}，但F(ae₁)=∅且F⁻¹(ae₁/λ)=∅。a与u_*按IF5–6。Cayley全域L-Hölder且√2-Lipschitz，明确不是非扩张。
 - **Definitions / Dependencies / Evidence**：[IF1–IF6](research/canonical/infinite_fiber_boundary.md#if-counterexample)：单位球径向投影与右移；A和−A均无不动点；平移缩放匹配每组参数；完整FixC坐标递推给唯一零点。图极大由全Minty输入直接证明，不借未验收外部328。
-- **Counterevidence / Scope / Related Files**：仅否定C04有限维必要性的无条件无限维推广，即使另加非空单点零集亦失败；[F47](FAILED_ROUTES.md#f47)。不反驳有限维C04、全局影子C03或另具真EB/兼容的C02。外部先行性未核；IF1–IF6已由本轮空白Astra完整复算。
+- **Counterevidence / Scope / Related Files**：仅否定C04有限维必要性的无条件无限维推广，即使另加非空单点零集亦失败；[F47](FAILED_ROUTES.md#f47)。不反驳有限维C04、全局影子C03或另具真EB/兼容的C02。外部先行性未核；IF1–IF6有本页自足坐标证明；独立接收范围以明确记录为准，不倒推未记录的历史审查。
 
 <a id="c184"></a>
 ## C184-v1 / NONEXPANSIVE-WEAK-FIBERS · 任意Hilbert的非空弱紧纤维
@@ -1613,3 +1613,24 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定C191同一完整F_A并另加C≠{0}，或固定C192的完整F_B。在每个解输入(p,0)的相应唯一局部近端与反射上，最大局部Hölder幂指数恰为α；任何γ>α的锚界、因而全对界都失败，尤其不calm。对每个解锚ū和每个固定有限矩阵V，不存在图邻域使全部完整图点都满足SN17：〈u−ū,w*〉≥−〈w*,Vw*〉。这包含每个固定有限τ≥0的V=τI。反之若C191取C={0}，完整J(p,ξ)={(p,0)}、反射(p,−ξ)均1-Lipschitz，SN17以V=0、τ=0成立；不能删除非零门。C191/C192的独立法向加切向有限长度证明始终保留。
 - **Definitions / Dependencies / Evidence**：[sn-failures](research/canonical/support_normal_natural_class.md#sn-failures)在同一原图选择趋零全部合法图点，以投影分离给负的α+η阶配对和2α阶残差平方；近端非calm则使用实际完整纤维。来源摘要LF21漏门，在本次原子表明确superseded。
 - **Counterevidence / Objections / Scope**：仅排除精确SN17及确实推出有限calmness的前提组合，不据名称排除所有weak-Minty、partial、变度量或almost-averaged理论，不作先行性结论。[光滑筛选辅助引理](research/canonical/support_normal_natural_class.md#sn-smooth)另明定双侧局部逆与同一C^1零流形，给DG(p)可逆及局部Lipschitz；不为任何KKT模型自动认证这些门。
+# C194–C196 · 次问题的完整对象接口
+
+## C194 · 退化预条件的完整压缩纤维与实际覆盖
+
+- **Status**：`derived-checked`；SP1–SP3 自足代数证明及独立空白增量接收。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H,H′、有界线性满射 C:H→H′、Q=C*C，任意完整 A:H⇉H。置 T_Q(x)={y:Q(x−y)∈A(y)}、F_red=(CA⁻¹C*)⁻¹；完整 J_Fred(p)=C(A+Q)⁻¹C*p，步长固定1。
+- **Conclusion**：T_Q 全输入非空、ranQ⊂ran(A+Q)、J_Fred 全输入非空三者等价；zerF_red=C(zerA)，||Cx||²=〈x,Qx〉。压缩等式包括空/多值纤维，不能改成闭值域或选定分支。
+- **Evidence / Scope**：[SP1–SP3](research/canonical/secondary_problem_interfaces.md#sp-preconditioned)；同页明确非单射 C 不认证核方向收敛或唯一输出。有限输入精确检查只作校验，不替代证明。
+
+## C195 · 凸退化子问题的值域与实际取到性
+
+- **Status**：`derived-checked`；SP4 的双向凸次梯度证明及空白增量接收。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H、proper lsc 凸 f、 bounded self-adjoint Q⪰0、a∈H。a∈ran(∂f+Q) 当且仅当 f(y)+〈y,Qy〉/2−〈a,y〉在 H 上实际取得最小值。
+- **Evidence / Scope**：[SP4](research/canonical/secondary_problem_interfaces.md#sp-attainment) 的凸线段 t↓0 推导；不能将下确界存在或值域闭包归属换成取到性，不认证一般非凸扰动。
+
+## C196 · 同一非孤立零集的零残差扰动仍可失去高阶 EB
+
+- **Status**：`derived-checked`；SP5–SP6 的完整向量关系证明及空白增量接收。
+- **Exact Statement / Objects / Domain / Quantifiers**：q>1，H=R²，S=R×{0}，a_q(t)=sign(t)|t|^(1/q)，F₀(s,t)={(0,a_q(t))}，h(s,t)=(0,t−a_q(t))，H₂(s,t)={0,h(s,t)}。G₁=F₀+h，G₂=F₀+H₂ 均为完整闭图关系、全域非空，并与 F₀ 有同一零集 S。
+- **Conclusion**：d(x,S)=r_F₀(x)^q，r_H₂≡0；但对0<|t|≤1，两种 G 的真残差均为|t|，d/r_G^q=|t|^(1−q)→∞，故无局部 q-EB。零值扰动残差本身不能控制所有扰动值的破坏作用。
+- **Evidence / Scope**：[SP5–SP6](research/canonical/secondary_problem_interfaces.md#sp-perturbation)；q=1 边界不具有此发散，不把原标量 H→R 例直接授予 PPA，也未声称G仍最大单调或算法发散。

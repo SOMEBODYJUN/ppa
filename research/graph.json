@@ -2654,6 +2654,42 @@
       "label": "删除非零C门仍排除锚证书的错误概括",
       "file": "canonical/support_normal_natural_class.md#sn-failures",
       "evidence_status": "refuted"
+    },
+    {
+      "id": "SP-QDATA",
+      "label": "C194完整退化预条件数据",
+      "file": "canonical/secondary_problem_interfaces.md#sp-preconditioned",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SP-QFIBER",
+      "label": "C194压缩完整纤维及实际覆盖",
+      "file": "canonical/secondary_problem_interfaces.md#sp-preconditioned",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SP-ATT-DATA",
+      "label": "C195凸目标/半正定Q/线性项",
+      "file": "canonical/secondary_problem_interfaces.md#sp-attainment",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SP-ATT",
+      "label": "C195值域等价于实际取到",
+      "file": "canonical/secondary_problem_interfaces.md#sp-attainment",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SP-PERT-DATA",
+      "label": "C196同维完整扰动族q>1",
+      "file": "canonical/secondary_problem_interfaces.md#sp-perturbation",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SP-PERT-FAIL",
+      "label": "C196零扰动残差仍失高阶EB",
+      "file": "canonical/secondary_problem_interfaces.md#sp-perturbation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -5945,7 +5981,7 @@
       "output": "LM-SMOOTH",
       "relation": "conditional",
       "scope": "C181全部n,t≥1、随机A、平稳π及实ℓ¹数据；存在自由y_i，3024平方界；不要求可逆，不是指定算法输出。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E285",
@@ -5958,7 +5994,7 @@
       "output": "LM-HILBERT-EXT",
       "relation": "conditional",
       "scope": "C182实Hilbert源0<γ≤1；γ=1直接M2=1，γ<1借HE-SNOW等距嵌入；ℓ¹对偶、均值与同一cotype门合取，统一KL。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E286",
@@ -5970,7 +6006,7 @@
       "output": "LM-PROB",
       "relation": "conditional",
       "scope": "C182原数据属于同一有限或可数概率单纯形；复合同一2-Lipschitz恒等回缩，统一2KL/TV同因子；不保固定边缘或不变律。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E287",
@@ -5982,7 +6018,7 @@
       "output": "LM-COMPLETE",
       "relation": "conditional",
       "scope": "C182完整ℓ¹⇉ℓ¹关系、λ,L>0、0<γ≤1/2、全图全尺度；扩Ĉ后拉回包含原图并满输入单值，图极大预算KL，非原预算L。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E288",
@@ -5994,7 +6030,7 @@
       "output": "IF-EMPTY",
       "relation": "conditional",
       "scope": "C183每组λ,L>0、0<γ<1，在ℓ²给闭完整图、固定参数极大、全输入单值J、精确单点zer；F(ae1)与F^-1(ae1/λ)均空。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E289",
@@ -6005,7 +6041,7 @@
       "output": "IF-UNRESTRICTED",
       "relation": "refutes",
       "scope": "仅反驳无附加非扩张的无限维满正反纤维推广，即使非空单点零集；不反驳有限维C04或C03。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E290",
@@ -6017,7 +6053,7 @@
       "output": "IF-ONTO",
       "relation": "conditional",
       "scope": "C184任意实Hilbert且同C原范数下非扩张；次线性增长给不变球，压缩正则化/弱极限给I±C对每个目标满射。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E291",
@@ -6030,7 +6066,7 @@
       "output": "IF-WEAK-FIBERS",
       "relation": "conditional",
       "scope": "C184同一完整F_C的每个正/逆纤维非空闭凸有界弱紧，直径R/λ与R；非扩张不得由一般Hölder推出。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E292",
@@ -6042,7 +6078,7 @@
       "output": "IF-NONCOMPACT",
       "relation": "conditional",
       "scope": "C184无限维ℓ²球投影、a按同L/γ匹配、非扩张；完整零逆纤维为正半径闭球，ae_n阻断范数紧。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E293",
@@ -6053,7 +6089,7 @@
       "output": "IF-NORM-COMPACT",
       "relation": "refutes",
       "scope": "只反驳额外非扩张仍可自动推出无限维范数紧，不反驳C184弱紧或有限维C04。",
-      "status": "derived-checked；规范自足重构及全部列明导入门核验，本轮空白Astra独立重构显示证明链；外部全文不重复审稿"
+      "status": "derived-checked；规范自足证明及列明导入门；独立接收范围按实际记录，不认证未读外部证明或历史行为"
     },
     {
       "id": "E294",
@@ -6403,6 +6439,39 @@
       "relation": "conditional",
       "scope": "同一反馈F_B半直线法向；逐解小条带唯一已证，完整近端α最佳及每个固定有限矩阵V的SN17失败；不把两种原图拼为同一合取。",
       "status": "derived-checked；完整直接证明、父级与独立空白复算"
+    },
+    {
+      "id": "E324",
+      "topic": "次问题与完整对象边界",
+      "inputs": [
+        "SP-QDATA"
+      ],
+      "output": "SP-QFIBER",
+      "relation": "implies",
+      "scope": "实Hilbert；C有界线性满射，Q=C*C，A任意完整关系；步长1；等式保留空及多值，不认证核方向收敛",
+      "status": "derived-checked；规范自足推导与独立空白增量接收，外部优先性未核"
+    },
+    {
+      "id": "E325",
+      "topic": "次问题与完整对象边界",
+      "inputs": [
+        "SP-ATT-DATA"
+      ],
+      "output": "SP-ATT",
+      "relation": "implies",
+      "scope": "proper lsc凸f、bounded self-adjoint Q⪰0；实际取得最小值与a∈ran(∂f+Q)双向；不是值域闭包",
+      "status": "derived-checked；规范自足推导与独立空白增量接收，外部优先性未核"
+    },
+    {
+      "id": "E326",
+      "topic": "次问题与完整对象边界",
+      "inputs": [
+        "SP-PERT-DATA"
+      ],
+      "output": "SP-PERT-FAIL",
+      "relation": "implies",
+      "scope": "q>1；同一S=R×0、完整F0+h与F0+{0,h}；rH2=0但真残差|t|使高阶EB比值发散；不认证PPA发散",
+      "status": "derived-checked；规范自足推导与独立空白增量接收，外部优先性未核"
     }
   ]
 }

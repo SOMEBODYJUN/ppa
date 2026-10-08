@@ -147,7 +147,26 @@ s_k\le\tfrac12[D_k+\omega(D_k)],\qquad
 \mathbb E[D_{k+1}\mid\mathcal F_k]\le\kappa D_k.
 \]
 
-稿内用截断阈值 \(R\kappa^{k/2}\) 与 Markov 不等式证明 \(\sum_k\mathbb E\omega(D_k)<\infty\)，再由 Tonelli 得几乎处处有限长度。该计算不要求 \(\omega\) 凹，已核对。
+这里另明确 \(0<\kappa<1\)、\(R>0\)，以及 \(\omega:[0,R]\to[0,\infty)\) 有限、非减、\(\omega(0)=0\)、\(\int_0^R\omega(t)\,dt/t<\infty\)。若 \(R=0\)，则 \(D_k=s_k=0\)，结论直接成立。以下给出不依赖稿内证明的求和。
+
+取全期望并归纳，\(\mathbb E D_k\le R\kappa^k\)。置 \(a_k=R\kappa^{k/2}\)，Markov 不等式给 \(\mathbb P(D_k>a_k)\le\kappa^{k/2}\)；把期望在此事件两侧拆分，得到
+
+\[
+\mathbb E\omega(D_k)\le
+\omega(R\kappa^{k/2})+\omega(R)\kappa^{k/2}.
+\]
+
+令 \(\rho=\sqrt\kappa\)。对 \(k\ge1\)，非减性给
+\(\omega(R\rho^k)\log(1/\rho)\le
+\int_{R\rho^k}^{R\rho^{k-1}}\omega(t)\,dt/t\)。这些积分区间互不重叠，Dini 条件遂给 \(\sum_k\omega(R\rho^k)<\infty\)，包括有限的第零项。因此
+
+\[
+\sum_k\mathbb E D_k<\infty,\qquad
+\sum_k\mathbb E\omega(D_k)<\infty,\qquad
+\mathbb E\sum_k s_k<\infty.
+\]
+
+非负项的 Tonelli 等式保证 \(\sum_kD_k<\infty\) 及 \(\sum_ks_k<\infty\) 几乎处处，特别是 \(D_k\to0\)。这同时证明有限长度，不要求 \(\omega\) 凹，也未交换未经支配的极限。若指定度量完备，三角不等式使 \(X_k\) 为 Cauchy 序列，故有空间内极限；距离函数的 1-Lipschitz 性给极限到 \(S\) 的距离为零，闭性给极限属于 \(S\)。指定度量的完备性正是下述旧版缺口的修补门。
 
 <a id="polish-gap"></a>
 <a id="stoch-limit-v0"></a>

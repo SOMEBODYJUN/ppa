@@ -1,0 +1,61 @@
+{
+  "reader": "root",
+  "role": "source content/formula reception, not blank mathematical review",
+  "records": [
+    {
+      "source_locator": "history/sources/次单调论文研究/RLEB_多值分支接缝_菠萝.pdf",
+      "payload_sha256": "715f8083bc13176a5d7a3b06e4fac67f2001baaf7bd955066814bab943cc13e6",
+      "pages": 20,
+      "semantic_read": "1-20",
+      "visual_pages": [
+        7,
+        14,
+        18
+      ],
+      "method": "full PDF text extraction read; #60 additionally exact-line comparison to fully read #58 plus every changed line; rendered exact PDF pages viewed",
+      "findings": "H/E Lyapunov branches have distinct budgets, full input-completeness explicit; seam true residual minimum and orbit factors separated; scalar optimality not class-wide"
+    },
+    {
+      "source_locator": "history/sources/次单调论文研究/分类集研究/RLEB_LT_operator_space_research_asset_v1/RLEB_LT_operator_space_research_asset_v1/06_RELATED_MANUSCRIPT_ASSETS/source_inputs/RLEB_PPA_submission_assets_2026-09-18.zip!/RLEB_PPA_投稿资产_2026-09-18/RLEB_PPA_投稿稿_菠萝.pdf",
+      "payload_sha256": "c054470b0e17064e8f6fc04ce40916578a7ff519f5e4c7a8111b68fa33ecdd51",
+      "pages": 23,
+      "semantic_read": "1-23",
+      "visual_pages": [
+        6,
+        18,
+        20
+      ],
+      "method": "full PDF text extraction read; #60 additionally exact-line comparison to fully read #58 plus every changed line; rendered exact PDF pages viewed",
+      "findings": "selection-uniform transition extension keeps full residual EB; signed-Schur uniform/complete fiber gates and matched-jet constants explicit; finite atlas chaining remains extra gate"
+    },
+    {
+      "source_locator": "history/sources/次单调论文研究/RLEB_投稿扩展版_完整源码_2026-09-19.zip!/RLEB_投稿扩展版_2026-09-19/RLEB_投稿扩展版_菠萝.pdf",
+      "payload_sha256": "c7e3b130b1a5e9e6a88a584a2fe5ae1e5ef94cd156499db12ddd1da27abb8330",
+      "pages": 30,
+      "semantic_read": "1-30",
+      "visual_pages": [
+        14,
+        17,
+        18,
+        19
+      ],
+      "method": "full PDF text extraction read; #60 additionally exact-line comparison to fully read #58 plus every changed line; rendered exact PDF pages viewed",
+      "findings": "general-modulus/Dini/logarithmic/retraction chains match self-contained canonical; stochastic Polish wording retains C12-v0 specified-metric gap and v1 repair; Hadamard cosine transfer imported independently, not intrinsic all-pairs graph calculus"
+    },
+    {
+      "source_locator": "history/sources/次单调论文研究/RL_research_讲解版本.pdf",
+      "payload_sha256": "7dcb3068b0e8eb409669ccd088ae4aca3d66d50960a283bcbace5446857739a3",
+      "pages": 18,
+      "semantic_read": "1-18",
+      "visual_pages": [
+        9,
+        15
+      ],
+      "method": "full PDF text extraction read; #60 additionally exact-line comparison to fully read #58 plus every changed line; rendered exact PDF pages viewed",
+      "findings": "endpoint coverage+approximate zero-distance anchor yields local closure without prior S closed; §2.6 constructive assertions summarized without constructed graph, remain source-report; higher-order MM and all-pairs/allowed-output boundaries retained"
+    }
+  ],
+  "total_semantic_pages": 91,
+  "total_visual_pages": 12,
+  "external_fulltext_reproved": false
+}
