@@ -1,0 +1,110 @@
+{
+  "cases": [
+    {
+      "name": "negative_identity",
+      "delta_exact": "788/2967",
+      "delta_float": 0.2655881361644759,
+      "ordinary_factor_exact": "-1/2",
+      "mu": "1/10",
+      "rho": "-11/10",
+      "physical_factor": 0.5,
+      "all_source_scalar_gates": true,
+      "24_step_identity": true
+    },
+    {
+      "name": "nonzero_forward",
+      "delta_exact": "5/6",
+      "delta_float": 0.8333333333333334,
+      "ordinary_factor_exact": "1/3",
+      "mu": "1",
+      "rho": "0",
+      "physical_factor": 0.3333333333333333,
+      "all_source_scalar_gates": true,
+      "24_step_identity": true
+    },
+    {
+      "name": "memory_compensation",
+      "delta_exact": "3/4",
+      "delta_float": 0.75,
+      "ordinary_factor_exact": "1/2",
+      "mu": "9/10",
+      "rho": "0",
+      "physical_factor": 0.5,
+      "all_source_scalar_gates": true,
+      "24_step_identity": true
+    },
+    {
+      "name": "rotation",
+      "delta_exact": "1/3",
+      "physical_factor": 0.7071067811865475,
+      "strong_anchor_equality": true,
+      "24_step_identity": true
+    }
+  ],
+  "cubic_exact_checks": 324,
+  "square_exact_checks": 36,
+  "negative_identity_boundaries": [
+    {
+      "lambda": "1/2",
+      "ordinary_factor": "2",
+      "contractive": false
+    },
+    {
+      "lambda": "1",
+      "resolvent": "not invertible"
+    },
+    {
+      "lambda": "3/2",
+      "ordinary_factor": "-2",
+      "contractive": false
+    },
+    {
+      "lambda": "2",
+      "ordinary_factor": "-1",
+      "contractive": false
+    },
+    {
+      "lambda": "5/2",
+      "ordinary_factor": "-2/3",
+      "contractive": true
+    },
+    {
+      "lambda": "3",
+      "ordinary_factor": "-1/2",
+      "contractive": true
+    },
+    {
+      "lambda": "100",
+      "ordinary_factor": "-1/99",
+      "contractive": true
+    }
+  ],
+  "illustrations_only": [
+    {
+      "epsilon": 0.0001,
+      "natural_pairing_over_residual_sq": -10.491513014482656,
+      "cap_pairing_over_residual_sq": -4.998800269939264,
+      "superlinear_pairing_over_residual_sq": -3.1314869565076475
+    },
+    {
+      "epsilon": 1e-08,
+      "natural_pairing_over_residual_sq": -232.06623839611342,
+      "cap_pairing_over_residual_sq": -49.99999886750002,
+      "superlinear_pairing_over_residual_sq": -9.999000289942012
+    },
+    {
+      "epsilon": 1e-12,
+      "natural_pairing_over_residual_sq": -4999.999387482564,
+      "cap_pairing_over_residual_sq": -499.9999999988744,
+      "superlinear_pairing_over_residual_sq": -31.622744979001062
+    },
+    {
+      "epsilon": 1e-16,
+      "natural_pairing_over_residual_sq": -107721.73447316414,
+      "cap_pairing_over_residual_sq": -4999.999999999999,
+      "superlinear_pairing_over_residual_sq": -99.99999900000002
+    }
+  ],
+  "source_pdf_sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+  "status": "PASS; no finite check proves the universal exclusion"
+}

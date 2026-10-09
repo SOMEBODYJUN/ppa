@@ -1,5 +1,7 @@
 # GPPA 2608.01584v1 与 RLEB–PPA 的独立逐定理比较
 
+**2026-10-09 接续审查修正范围。** 本文保留原ASM证明身份；[C204无正则性配对单调证明](pair_monotone_barrier.md)另关闭所述标量双支缺口。[C205–C207保零集删支证明](sol61_branch_restriction.md)已给指定原轨道的GPPA导入，所以本文完整图不涵盖不可解释成收敛无法借GPPA证明。当前裁决以[综合比较](COMPARISON.md)为准。
+
 审查对象：Ba Khiet Le–Boris S. Mordukhovich–Michel A. Théra, *Convergence and Stability Analysis of a Generalized Proximal Point Algorithm and Its Inexact Version*, [arXiv:2608.01584](https://arxiv.org/abs/2608.01584)，v1 的 arXiv 首日为 2026-08-03，所存 PDF 首页另印 August 4, 2026。本文只审查仓库存档 v1，不推测后续版本。原件：[PDF](sources/gppa_2608.01584v1.pdf)。以下页码是 PDF 印刷页码，和文件页序一致。
 
 本审查独立读取 README、RESEARCH_STATE、CLAIMS、FAILED_ROUTES 的相关身份与异议，以及 C02-v2、C09/C10/C11、C137、C141、C191–C193 的规范正文。数值与有限精确代数先用 [gppa_check.py](gppa_check.py) 复算，结果在 [gppa_check_results.json](gppa_check_results.json)；一般包含与排除由下文证明承担，计算不能替代这些证明。PDF pp. 5、7、9–11 已另渲染目读关键原式。
@@ -362,7 +364,7 @@ v(x_k)_3-v(x_{k+1})_3
 
 右边两个数都非零，矛盾。外部步长h任意正；允许完整纤维改选另一支已经包含在GR26内。因此该普通物理轨道不能代入Theorem2的任何合格kernel，甚至无需继续检查range条件。严格排除的力量来自完整graph的跨支量词，不是v=Id的某个负配对。
 
-**局部及其它kernel条件的范围。** 同一分割证明只须一个切向开片W⊂{η<0}和连接正法向区间I上的产品邻域W×I保留完整两支，并包含待比较的相邻物理轨道点；同y比较仅在W内进行，不要求整个切向平面。也可沿重叠产品片传播正常核常值。仅沿离散轨道点声明ASM而漏掉中间完整图点，不能使用GR25，也不符合原文全图ASM。对mere pair monotone而无核连续门，本证明没有GR21，不声称同样排除Theorem1。若pair monotone且v全局Lipschitz，则在固定切向点上已有||Δv||≤L|y−z|，GR22–25仍把正常分量迫成常数；可排除这样的核保持GR20为**未正则化**GPPA，但不能借此否定Theorem4更换为F+εv后的算法。
+**局部及其它kernel条件的范围。** 同一分割证明只须一个切向开片W⊂{η<0}和连接正法向区间I上的产品邻域W×I保留完整两支，并包含待比较的相邻物理轨道点；同y比较仅在W内进行，不要求整个切向平面。也可沿重叠产品片传播正常核常值。仅沿离散轨道点声明ASM而漏掉中间完整图点，不能使用GR25，也不符合原文全图ASM。对mere pair monotone而无核连续门，本节ASM证明没有GR21；接续[C204](pair_monotone_barrier.md)改用标量单调性与总变差，另排除所述同完整图Theorem1表示。若pair monotone且v全局Lipschitz，则在固定切向点上已有||Δv||≤L|y−z|，GR22–25仍把正常分量迫成常数；可排除这样的核保持GR20为**未正则化**GPPA，但不能借此否定Theorem4更换为F+εv后的算法。
 
 删去−5y支会删掉GR22之一，排除失效；保留正输入轨道不等于保存完整F。升维、改变算子或新增selection规则也超出GR26的同对象结论，需要独立桥。
 
@@ -409,6 +411,6 @@ H,a,b在正轴局部Lipschitz，切向变量不出现在两支值中。任意ε-
 * 把C193固定二次锚排除当所有GPPA核排除，§5直接反驳。
 * 把本文一个完整分离例升级为总体RLEB类更大、自然母空间的Baire/测度规模比较或全球创新性，证据不足。
 
-剩余门：一般C191支撑面与C192 feedback是否有其它保真同轨道kernel，尚无全分类；mere-monotone且无核正则性的Theorem1表示未被§6证明排除；任意lift/分裂/压缩的物理回代需要独立桥；原文[13,14]被引用的所有历史定理未在本文逐篇审查；这两个2026年方向以外的全球先行性检索没有完成。Theorem4所指出的技术漏门有上文严格修补，不把它们夸大为致命数学错误。
+剩余门：一般C191支撑面与C192 feedback是否有其它保真同轨道kernel，尚无全分类；§6原ASM证明之外的标量双支mere-monotone表示已由C204排除，但C205–C207子关系导入成立；任意lift/分裂/压缩的物理回代需要独立桥；原文[13,14]被引用的所有历史定理未在本文逐篇审查；这两个2026年方向以外的全球先行性检索没有完成。Theorem4所指出的技术漏门有上文严格修补，不把它们夸大为致命数学错误。
 
 复现：在仓库根运行 `python research/comparisons/2026_08_gppa_nfb/gppa_check.py`。本稿及脚本为独立比较文件，不更改任何原Claim状态，不commit/push。

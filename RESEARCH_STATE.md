@@ -26,7 +26,7 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**外部收敛比较的当前完成门。** [8月GPPA/NFB综合比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table) 已核固定v1逐结果门及真实重合：C199构造同一非单调自然子类的GPPA核和物理不变量桥，C202给非单调普通PPA/NFB完整同一例；物理几何尾下有限长度不另作创新。C200排除保留C137/C141/C10指定普通轨道的任意ASM核；C201由平方配方把C193等完整图的固定二次锚失败强化为**任意合格同空间NFB拆分**排除，C203另核指定标准full-graph primal–dual lift压缩。C197仍只限制无物理桥的核率推断，不能当GPPA总体排除。仍需核一般C191/C192核分类、无核正则性的mere-monotone GPPA、任意其它保真lift、Spingarn等其它框架及全球先行性。[近期刷新](research/literature_refresh_2026_10_08.md#lr-actions) 的Ciosmak 2024/2026与C03结构线逐定理比较仍开放；不能把收敛子类重合改写为附件结构稿重复。10/06 KKT稿仍为凸复合真EB候选接口，一般秩亏门、总体规模及来源覆盖未由本轮关闭。
+**外部收敛比较的当前完成门。** [8月GPPA/NFB比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table)已复核固定v1：C199/C202是真实非单调重合，物理几何尾自动有限长。C204把C200完整标量双支障碍加强到任意无正则性配对单调核；但C205–C207又构造保零集子关系，分别将cap、C141小尾和a>1对数尾的原物理轨道导入GPPA。**完整图表示不涵盖不等于收敛不能借外文证明**；cap/超线性T2物理率需显式不变量桥，log T1物理有限长需额外可和尾桥。C201任意同空间NFB拆分及C203指定标准full-graph lift的必要二次锚仍成立。C197只限制无物理桥的核率推断。尚未解决一般RL+真EB是否有统一GPPA导入、一般C191/C192全部核/子关系分类、任意其它保真lift、精确尾和选择锐模先行性、Spingarn等其它框架。附件是全尺度次线性结构稿，上述无界零片例不在其类中；Ciosmak/Levy–Rice/Ajiev等结构线逐定理先行性另核。10/06 KKT稿仍为凸复合真EB候选接口，总体规模、秩亏和来源覆盖未关闭。
 
 **已接入的外部工具与边界。** [C181/C182](research/canonical/l1_markov_extension.md)已重构332实数平稳链主证明并核Mendel–Naor扩张门：可直接使用任意度量源γ≤1/2的ℓ¹/概率值域扩张及新预算的ℓ¹满输入完成；Hilbert源允许γ≤1。常数放大，完成后零集/真残差另认证。[C183/C184](research/canonical/infinite_fiber_boundary.md)进一步明确：满Minty输入加单点零集仍不能推广有限维满正反纤维；额外非扩张在任意Hilbert恢复非空闭凸弱紧，范数紧仍失败。外部328的一般反身Banach证明没有调用，098/329/327/324仍候选；复数/Lean/全球先行性未核。这些认识不关闭下面的原生认证或总体比较义务。
 

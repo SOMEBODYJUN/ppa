@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-09T00:55:17.458594+00:00",
+  "metadata_sources": [
+    "https://arxiv.org/abs/2608.01584",
+    "https://arxiv.org/abs/2608.22687"
+  ],
+  "metadata_status": "both submission histories currently list only v1",
+  "files": [
+    {
+      "id": "2608.01584",
+      "version": "v1",
+      "url": "https://arxiv.org/pdf/2608.01584v1",
+      "archived_sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91",
+      "download_bytes": 313113,
+      "download_sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91",
+      "identical_to_archive": true
+    },
+    {
+      "id": "2608.22687",
+      "version": "v1",
+      "url": "https://arxiv.org/pdf/2608.22687v1",
+      "archived_sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+      "download_bytes": 760737,
+      "download_sha256": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+      "identical_to_archive": true
+    }
+  ]
+}

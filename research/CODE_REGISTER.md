@@ -38,3 +38,13 @@
 | [independent_attack_checks.py](comparisons/2026_08_gppa_nfb/independent_attack_checks.py)、[结果](comparisons/2026_08_gppa_nfb/independent_attack_results.txt) | 独立Fraction核source下降系数（旋转1/3，负恒等788/2967）、平方配方、T4严格余量和自然类/cap/超线性合法图点商；无随机容差。有限PASS不涵盖所有核/拆分/lift，正文明确量词。 |
 
 复现命令见比较README；计算只是独立算术检查，不认证外部全球先行性或任意表示排除。
+
+本轮指定6.1-sol ultra复审新增C204–C207正反接口，脚本仍集中在同一比较目录。[sol61_verification.json](comparisons/2026_08_gppa_nfb/sol61_verification.json)记录实际复跑命令、Python环境、脚本/结果hash及原文指纹；原verification记录保留初轮身份。
+
+| 脚本与相邻JSON | 有限检查范围 |
+| --- | --- |
+| [pair_monotone_checks.py](comparisons/2026_08_gppa_nfb/pair_monotone_checks.py) | C204加权消元、跨支乘积界、带跳跃单调剖面的总变差分割；原cap与改图仿射更新 |
+| [sol61_gppa_check.py](comparisons/2026_08_gppa_nfb/sol61_gppa_check.py) | C199非单位步长/完整边界、T4严格余量修补、C204分割；C205正支ASM/coverage/物理桥，C206级数严格安全常数，C207积分尾界 |
+| [sol61_nfb_check.py](comparisons/2026_08_gppa_nfb/sol61_nfb_check.py) | 原source步长门、负恒等精确下降788/2967、旋转1/3，完整拆分平方配方、合法锚失败点及算法等式 |
+| [sol61_independent_checks.py](comparisons/2026_08_gppa_nfb/sol61_independent_checks.py) | 独立C199/C202及改变原图的仿射同轨道校验，明确改变零集/完整纤维 |
+| [sol61_branch_checks.py](comparisons/2026_08_gppa_nfb/sol61_branch_checks.py) | C205原正轨道及负首步；C206有限尾恒等与严格K上界；C207有积分剩余界的有限尾区间。一般系列/全图结论由独立证明承担 |

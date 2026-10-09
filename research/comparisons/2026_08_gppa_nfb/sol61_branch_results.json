@@ -1,0 +1,59 @@
+{
+  "proof_boundary": "Finite exact arithmetic or bounded numeric tail checks. Infinite-series coverage and all-pairs hypotheses are proved in sol61_branch_restriction.md.",
+  "cap_exact_positive_original_warped_steps": 24,
+  "cap_exact_asm_pairs": 36,
+  "cap_finite_all_input_warped_coverage_witnesses": 8,
+  "cap_negative_prefix_then_restriction": true,
+  "c141_finite_truncated_series_asm_pairs": 9,
+  "c141_rigorous_safe_constants": {
+    "R": "1/4",
+    "m": "1",
+    "K_upper": "11/7",
+    "K_safe": "2",
+    "epsilon_safe": "1/2"
+  },
+  "c141_exact_finite_telescoping_identities": 2,
+  "log_finite_tail_checks": [
+    {
+      "k": 2,
+      "kernel_tail_interval": [
+        0.23053503467197273,
+        0.23053516440424726
+      ],
+      "zero_anchor_asm_quotient": 0.9079715573714646
+    },
+    {
+      "k": 4,
+      "kernel_tail_interval": [
+        0.12269883926883433,
+        0.1226989687423845
+      ],
+      "zero_anchor_asm_quotient": 0.3089576142595546
+    },
+    {
+      "k": 16,
+      "kernel_tail_interval": [
+        0.03206741203943328,
+        0.03206753997676704
+      ],
+      "zero_anchor_asm_quotient": 0.06565151799794375
+    },
+    {
+      "k": 64,
+      "kernel_tail_interval": [
+        0.00810210051167084,
+        0.008102222569654257
+      ],
+      "zero_anchor_asm_quotient": 0.015816787727553343
+    },
+    {
+      "k": 128,
+      "kernel_tail_interval": [
+        0.004058078120272483,
+        0.004058192949238899
+      ],
+      "zero_anchor_asm_quotient": 0.007860235446489538
+    }
+  ],
+  "log_count": 5
+}

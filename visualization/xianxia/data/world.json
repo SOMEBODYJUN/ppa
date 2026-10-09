@@ -5859,6 +5859,94 @@
       "y": 2913,
       "region": "convergence",
       "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-CAP-IMPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-CAP-POS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-LOG-IMPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-LOG-POS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-PM-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-PM-EXCLUDE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-SF-IMPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
+    },
+    "AUG-GPPA-SF-POS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-3"
     }
   },
   "edges": {
@@ -7225,6 +7313,42 @@
     "E341": {
       "x": 3004.76,
       "y": 2775.86
+    },
+    "E342": {
+      "x": 3478.09,
+      "y": 2684.03
+    },
+    "E343": {
+      "x": 3457.28,
+      "y": 2694.12
+    },
+    "E344": {
+      "x": 3503.76,
+      "y": 2685.66
+    },
+    "E345": {
+      "x": 3000.13,
+      "y": 2868.45
+    },
+    "E346": {
+      "x": 3347.71,
+      "y": 3173.29
+    },
+    "E347": {
+      "x": 3480.68,
+      "y": 2774.56
+    },
+    "E348": {
+      "x": 3628.0,
+      "y": 2822.0
+    },
+    "E349": {
+      "x": 3010.91,
+      "y": 3229.53
+    },
+    "E350": {
+      "x": 3038.88,
+      "y": 3229.22
     }
   },
   "bounds": {

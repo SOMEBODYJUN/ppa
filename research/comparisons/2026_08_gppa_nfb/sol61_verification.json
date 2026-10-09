@@ -1,0 +1,80 @@
+{
+  "audited_at_utc": "2026-10-09T01:07:26.224686+00:00",
+  "baseline_commit": "007ce8cb4b86601c3bf6af45a90601fcd871ca74",
+  "model_request": "gpt-6.1-sol; reasoning effort ultra; three independent subagents",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "runs": [
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/gppa_check.py",
+      "script_sha256": "ed9a9c82fc4049a5ae3be4b46e00a361843a0c42268b4d82e19cc0264ffd49ce",
+      "exit_code": 0,
+      "stdout_sha256": "126e09c6bda1d82686e2d5a2bdd877d3bcf7e0a66ba5328b0db11ba7fd745cc6",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/nfb_check.py",
+      "script_sha256": "ebec56b49f70702cffe28bff53270e014b3ee358f26bf770e12ff7dc7cf9e806",
+      "exit_code": 0,
+      "stdout_sha256": "5c35082006631dcaa2dc44fd15efc8d16adc42c6b2eef1cd1beaf8f9446cd727",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/independent_attack_checks.py",
+      "script_sha256": "c4aa9ca0e0e2c65e1b6dc216d58f6023bc4252a4f02888338727b895bc3fefd6",
+      "exit_code": 0,
+      "stdout_sha256": "7df4dbc5729a36f681668e27eff739ab2dc3b0f4175db629d8b2b149b78066cc",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/pair_monotone_checks.py",
+      "script_sha256": "d320816d753003be4fa5c8e37b7e17c2d92743a203ec656c9aa75fc2f0e7b8ef",
+      "exit_code": 0,
+      "stdout_sha256": "bd8b02b78a21e419e75ebf170492c311fca6588019114fcc061a3b75da73e30c",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/sol61_gppa_check.py",
+      "script_sha256": "1171ab373938b3b914849802ea64995a05caf533f24d63679606b5aa8e9157a6",
+      "exit_code": 0,
+      "stdout_sha256": "4345e01874cdbca65ae7d2a5749d0e4edfcb6cbb6c16febc5aa1a45104db5b7b",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/sol61_nfb_check.py",
+      "script_sha256": "edaae0e7eae358041793f5ab385caa28e0dd0c96774d9b62034e622bb0e4224b",
+      "exit_code": 0,
+      "stdout_sha256": "4da453e9f68afbe602d829e8c54c61eb330dbf0cc85d0e89480031ec9268fc45",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/sol61_independent_checks.py",
+      "script_sha256": "f0d1c3f1d19c3140e608aa5b296f34f7ce744a57d2b325532ec5074e7c55474d",
+      "exit_code": 0,
+      "stdout_sha256": "2f643672ce06a3cc0fd5e59f613f3479f7652b8ac2145637eadc8668ccbbddc5",
+      "stderr": ""
+    },
+    {
+      "command": "python3 research/comparisons/2026_08_gppa_nfb/sol61_branch_checks.py",
+      "script_sha256": "60a6ea64e0b156f6e6ab44ea480d3501e3e642b9d423f4b266a94b7a6e18fc4e",
+      "exit_code": 0,
+      "stdout_sha256": "bed6fc6e633a39e19ac8056c24c2abe239da7b32f12522c98a3e4bbf61c9303b",
+      "stderr": ""
+    }
+  ],
+  "result_sha256": {
+    "sol61_branch_results.json": "fb0606fa830887b599aad7d35f5655f77dadf3ae6051ca72ed3dbfe47a2d9d95",
+    "nfb_results.json": "5b4f408d58c36d8ebb5bc3a87857aaa431d1753f2453362ad36d38e4efbf079f",
+    "sol61_nfb_results.json": "744be7ade2c38b80935115421eac8f7d0822e62b76e7f5692298f82f43d702d2",
+    "sol61_gppa_results.json": "fa3c168a7f7446eb5593e7d117a2338737d8c8efaabe81c355a01ce16258f971",
+    "independent_attack_results.txt": "7df4dbc5729a36f681668e27eff739ab2dc3b0f4175db629d8b2b149b78066cc",
+    "pair_monotone_results.json": "1a7638ea2187829244d40163ff49b842f207f824e4538bee2edc8003ae8eb841",
+    "gppa_check_results.json": "0bed6db1606fa13b0ce8d1d2df0050dbf4c94fc0ddd297cf9e641f9c28958525",
+    "sol61_independent_results.json": "8ac4771ada7582f06b443564fc6436af3ddc67dd0de0b591b65467c0d126a1f6"
+  },
+  "source_sha256": {
+    "nfb_2608.22687v1.pdf": "14db75596189d898d97aa9389b3e1a50bbe2ed70e207a3257d681cb4d01077b9",
+    "gppa_2608.01584v1.pdf": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91"
+  },
+  "claim_scope": "C199–C207; explicit same-F barriers and zero-set-preserving subrelation imports are distinct. Finite computations do not prove universal claims or global novelty."
+}

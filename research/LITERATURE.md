@@ -7,7 +7,7 @@
 
 | 一手版本及实读位置 | Paper fact | 本库推导与明确限域 |
 | --- | --- | --- |
-| Le–Mordukhovich–Théra，[2608.01584v1](https://arxiv.org/abs/2608.01584v1)，首发2026-08-03；Def1/3/4/5/6、T1 p6、T2 pp7–8、Lemma3 pp8–9、T4 pp9–11 | T2允许非线性非单射kernel、完整all-pairs adaptive强门与warped coverage，给核率；逆像R-Lipschitz另给集合距离率。T4换到F+εv、均匀不消失误差δ=ε²，给原零集的双极限邻近界 | [逐篇报告](comparisons/2026_08_gppa_nfb/gppa_review.md) 重构T2及T4小技术门修补；C199保同原图普通选择并输送物理率，C200任意ASM核双支同轨道排除。不排mere-monotone无正则性或任意lift。 |
+| Le–Mordukhovich–Théra，[2608.01584v1](https://arxiv.org/abs/2608.01584v1)，首发2026-08-03；Def1/3/4/5/6、T1 p6、T2 pp7–8、Lemma3 pp8–9、T4 pp9–11 | T2允许非线性非单射kernel、完整all-pairs adaptive强门与warped coverage，给核率；逆像R-Lipschitz另给集合距离率。T4换到F+εv、均匀不消失误差δ=ε²，给原零集的双极限邻近界 | [逐篇报告](comparisons/2026_08_gppa_nfb/gppa_review.md) 重构T2及T4小技术门修补；C199保同原图普通选择并输送物理率，C200为ASM完整图障碍，C204另加强到无正则性配对单调；C205–C207保零集子关系可导入指定cap/超线性/log原尾。完整图障碍不能当收敛不可导入；任意lift和一般统一涵盖仍未核。 |
 | Pesquet–Roldán，[2608.22687v1](https://arxiv.org/abs/2608.22687v1)，首发2026-08-24；§3 p6–17、§4 p17–29、§5 p29–31相关定义、定理及证明 | Assumption3.1含全域cocoercive前向、solution-anchored comonotone、固定正定metric、满域单值warped inverse、总图闭与kernel/步长门。T3.10(i)弱收敛，(ii)正μ锚给唯一物理解及范数R-linear；T4.10为标准product归约 | [逐篇报告](comparisons/2026_08_gppa_nfb/nfb_review.md) 明列每个门；C201任意同空间拆分的必要原图二次锚，C203标准full-graph lift压缩，C202真实非单调算法重合。有限维weak=strong；物理几何点尾自动有限长。 |
 
 [版本、附件、基线与哈希](comparisons/2026_08_gppa_nfb/BASELINE.md) 和 [综合定位](comparisons/2026_08_gppa_nfb/COMPARISON.md#positioning) 将paper fact、本库推导、有限计算及新颖性分开。任意kernel/拆分量词靠正文证明，不靠有限PASS。两篇收敛框架未给本库结构线同身份定理，不据此认证C03/C04/C18/C19/C20全球首创。

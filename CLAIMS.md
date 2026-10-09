@@ -1668,7 +1668,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C137完整cap F:R³⇉R³、普通λ=1；在η≤0两值为f₊(y)=(-2√y,0,3y)、f₋(y)=(-2√y,0,-5y)，完整其它区域与边界保持GC-1。普通唯一轨道自(0,−1,1/64)满足η_k=−1,y_k=4⁻ᵏ/64,ξ_{k+1}−ξ_k=√y_k；R=1/16给全部严格RLEB门。
 - **Conclusion**：不存在任何h>0、ε>0、任意单值v:R³→R³，使完整(F,v)满足ε-ASM且该同一普通物理轨道成为GPPA选择；即使每步允许另选完整F的另一图值也不可能。同y同支强迫切向核折叠，同支给正轴局部Lipschitz，完整跨支给正常核差O(|Δy|²)，细分迫其恒定，但更新正常值须为h·3y或−h·5y非零。对正轴局部Lipschitz且间隙>0的共同切向双支剖面同证明成立，故也排除C141在p₀≤0、0<r₀<1的指定正法向轨道，以及C10全部a>0的非驻定正法向轨道。
 - **Definitions / Dependencies / Evidence**：[完整排除](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#gppa-barrier)、[专篇§6–7](research/comparisons/2026_08_gppa_nfb/gppa_review.md)、[独立攻击§5](research/comparisons/2026_08_gppa_nfb/independent_attack.md)；C137 GC-1–6认证同一完整F的RL、真残差及普通纤维，C141/C10正文认证其指定完整双支及普通轨道。有限计算仅核具体常数/步，分割证明承担任意核量词。
-- **Counterevidence / Objections / Scope**：不是“F无合格核”：常量核可一步跳入zerF，但不保持此轨道。局部版本须保留切向开片、连通正法向区间及完整两支。mere pair-monotone无核正则性、删支/换图、F+εv正则化、任意lift均未被这条证明排除；一个分离例不解总体类大小或全球先行性。
+- **Counterevidence / Objections / Scope**：不是“F无合格核”：常量核可一步跳入zerF，但不保持此轨道。局部版本须保留切向开片、连通正法向区间及完整两支。本v1证明只处理ASM；无正则性配对单调加强另登[C204](#c204)，不改变本版本身份。删支/换图、F+εv正则化、任意lift不被本证明排除。尤其[C205–C207](#c205)已给保零集子关系的原轨道导入，故不能以本障碍声明其收敛无法借GPPA证明；总体类大小与全球先行性仍开放。
 
 <a id="c201"></a>
 ## C201-v1 / AUG-NFB-ANCHOR · 任意同空间 NFB 拆分的原图必要二次锚
@@ -1696,3 +1696,39 @@
 - **Conclusion**：若I_H:f↦(f,0)，则C201在product空间给〈z−s,f〉≥q〈f,Qf〉，Q=I_H^* S_prod⁻¹I_H固定有界正定；因此原图有固定有界PSD二次锚V=max{0,−q}Q。C201列明的局部失败完整对象，因而也不能通过此标准full-graph product拆分满足原文§4收敛前件。
 - **Definitions / Dependencies / Evidence**：[精确lift门](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift)、[NFB专篇N9–N11及§4逐结果条件](research/comparisons/2026_08_gppa_nfb/nfb_review.md)、[独立攻击IA-N2](research/comparisons/2026_08_gppa_nfb/independent_attack.md)。外部Notation4.1与Theorem4.10归约3.10的全图量词已核；固定非对角product度量有限检查不代替一般证明。
 - **Counterevidence / Objections / Scope**：源全图锚界不要求lift变量靠近零锚；若另立局部lift定理，需新增近锚全图lift门。只保零集、残差不等(f,0)、非线性变坐标、任意别的lift或算法的排除均未获。满足某个product算法也不自动证明投影逐步等原普通PPA；本条排除在此前已经生效。
+
+<a id="c204"></a>
+## C204-v1 / AUG-GPPA-PAIR-BV · 无核正则性的完整标量双支同轨道障碍
+
+- **Status**：`derived-checked`；根证明、两名独立接收者的总变差分割重构与边界复算均支持下述精确陈述。
+- **Exact Statement / Objects / Domain / Quantifiers**：同一完整C137 cap在η≤0,y>0的两支为(-2√y,0,3y)、(-2√y,0,-5y)。任意有限单值v:R³→R³只满足全部原图点对的〈Δf,Δv〉≥0；不加连续、可测、局部有界、Lipschitz或正ASM常数。其正常分量在整个η≤0,y>0片恒定。因此普通λ1、初值(0,-1,1/64)的非驻定轨道不能满足任何逐步正h_k的GPPA更新，即使允许另选完整F图值。
+- **Definitions / Dependencies / Evidence**：[PM1–PM9](research/comparisons/2026_08_gppa_nfb/pair_monotone_barrier.md#pm-proof)；同高对支迫正常核只依赖y，加权同支迫第一核分量非增，跨支给|Δv_normal|≤C|Δy||Δv_first|，网格宽度×有限总变差→0。此证明允许端点/内部跳跃，完整两支和连通区间为承重门；精确Fraction只核有限代数。
+- **Generalization / Quantifiers**：[PM-PROFILE](research/comparisons/2026_08_gppa_nfb/pair_monotone_barrier.md#pm-profile) 在切向产品片W×连通正区间I，共同标量切向值(-cφ(y),0)、c>0、φ严格递增且局部Lipschitz、连续异号正常值a₊>0>a₋下成立。跨支加权迫单调性，无正常导数符号门。由规范定义核C141的η≤0,0<y<1及C10每个a>0的指定非驻定正尾；不外推任意向量剖面。
+- **Counterevidence / Objections / Scope**：这是同完整F配对核表示的障碍，包含源T1/T2，不证明F无合格核，也不排删支、正则化或任意lift。[C205–C207](#c205)保零集子关系恰能导入上述指定原轨道的收敛，因此不得以本障碍认证收敛新颖性或不可由GPPA证明。C200-v1原ASM陈述保持原身份。
+
+<a id="c205"></a>
+## C205-v1 / AUG-GPPA-CAP-RESTRICTION · 保零集正支的 cap 原轨道 GPPA 导入
+
+- **Status**：`derived-checked`；独立反向构造、GPPA专篇接收与根代数复核完成。
+- **Exact Statement / Objects / Domain / Quantifiers**：从C137完整F仅删负支，定义完整F₊(ξ,η,y)={(-2√y,-D_y(η),3y)}对y≥0、域外空。zerF₊=zerF=R²×{0}，全部法向输入r≥0的完整J_F₊=J_F，r<0则J_F₊为空。取v=(-2√y₊,0,y₊)、h1。完整pair为1-ASM，F₊⁻¹在0全局R-Lipschitz1/3；完整warped输出为R×(-∞,0]×{r₊/4}若r>0，否则整零片，故所有输入覆盖。
+- **Conclusion / Quantifiers**：对原F每个η₀≤0,r₀≥0的普通轨道，预先I=ξ₀+2√r₀、x*=(I,η₀,0)给v(x_k)=x_k-x*，每步为该子关系GPPA选择。源v1 T2(a)给同一原物理序列的R-linear上界与随附有限长。r₀<0的原负支首步之后可导入同一正尾，I=ξ₀+2√|r₀|；r₀=0驻定。
+- **Definitions / Dependencies / Evidence**：[完整删支关系与源门](research/comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-cap)、[专篇独立接收](research/comparisons/2026_08_gppa_nfb/sol61_gppa_audit.md)；配对内积=4(Δ√y)²+3(Δy)²≥||Δv||²。有限检查只验证参数、纤维及桥，不代替全图证明。
+- **Counterevidence / Objections / Scope**：源率上界1/√3不自动给原精确1/2锐率；η₀>0通常不是此核的原普通选择。它保全零片和指定盆地/尾的原轨道，却改变完整图和负输入完整算法；不反驳C200/C204。但它确实反驳“cap指定轨道的收敛无法借GPPA合法导入”。全球先行性与统一一般定理比较未闭。
+
+<a id="c206"></a>
+## C206-v1 / AUG-GPPA-SUPERLINEAR-RESTRICTION · 小窗正支及 clip 尾和核的原轨道导入
+
+- **Status**：`derived-checked`；独立构造及专篇、根接收核全部ASM/coverage/物理桥前件。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C141的0<γ<1,ν>1,A,B>0，0<R<min(1,ν^(-1/(ν-1)))，任意h>0。完整G为正支(-Ay^(γ/ν),τ_{y^(1/ν)}(η)-η,y^(1/ν)-y)在0≤y≤R^ν的全切向图，域外空；零片不变。b(y)=clip(y,0,R)，E(y)=Σ_{j≥0}y^(γν^j)，v=(-hAE(b(y)),0,hb(y))全空间有限。K_R=Σ_{j≥1}ν^jR^(γ(ν^j-1))<∞，m_R=R^(1-ν)/ν-1>0，则全pair为ε-ASM，ε=min(1/(hK_R),m_R/h)>0；G⁻¹全局R-Lipschitz1/m_R。任意输入r的warped正常输出b(r)^ν、第二切向可选η≤0，全部输入覆盖。
+- **Conclusion / Quantifiers**：对原完整F每个η₀≤0,0<r₀≤R的普通轨道，I=ξ₀+AE(r₀)和E(r)-E(r^ν)=r^γ给v(x_k)-v(I,η₀,0)=h(x_k-(I,η₀,0))，每步为G-GPPA选择。源T2(a)给同一物理轨道的几何上界与有限长。每个η₀≤0,0<|r₀|<1的原轨道最终进入此固定窗，有限前缀后同结论。
+- **Definitions / Dependencies / Evidence**：[完整构造、导数级数与源门](research/comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-superlinear)；在图高y≤R^ν，E对φ=y^(γ/ν)的导数级数一致收敛，差比≤K_R，正常差乘积≥m_R(Δy)²。全部源适用门由此重构，不借原轨道已经收敛作前提。
+- **Counterevidence / Objections / Scope**：η₀>0不由此物理桥控制；截断及正支子关系改变完整原图。T2的较弱几何上界不自动给C141精确Q-ν/共同超几何尾、两点选择模及锐下界。C204同完整图障碍仍成立，但不能阻止此导入；一般自然类与全球先行性未闭。
+
+<a id="c207"></a>
+## C207-v1 / AUG-GPPA-LOG-RESTRICTION · 可和对数正支的 T1 及额外物理长度桥
+
+- **Status**：`derived-checked`；独立全图构造、积分尾比较、专篇及根接收完成。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C10每个a>1的规范ℓ_a，完整F_{a,+}(t,y)={(-ℓ_a(4y),3y)}在y≥0、域外空，保原零线，非负输入的完整普通J与原F_a同。E_a(y)=Σ_{j≥0}ℓ_a(4^-j y)，E_a(0)=0；v=(-E_a(y₊),y₊)、h1。完整pair配对单调但此核没有任何正ASM常数；全部warped输入覆盖，正常输出r₊/4，逆像在0全局R-Lipschitz1/3且图闭。
+- **Conclusion / Quantifiers**：对每个原正初值r₀>0，预先I=t₀+E_a(r₀)，E_a(r)-E_a(r/4)=ℓ_a(r)给v(x_k)=x_k-(I,0)。源T1(c)给正常距趋零；E_a在0连续给同一原物理点收敛。额外正切向尾和与正常望远镜给总物理长度≤E_a(r₀)+r₀。负初值首步后导入正尾，I=t₀+E_a(|r₀|)；零初值驻定。
+- **Definitions / Dependencies / Evidence**：[完整对数导入](research/comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-log)；对小y，A=log(e/y),b=log4有A^(1-a)/(b(a-1))≤E_a(y)≤A^-a+A^(1-a)/(b(a-1))，证明有限性、0连续与a>1门，且ASM内积比∼b(a-1)/A→0。有限截断数值不证明无限尾，其尾由此积分严格控制。
+- **Counterevidence / Objections / Scope**：有限长来自额外尾和恒等式和坐标单调性，不是源T1单独结论；定制核已编码Dini可和门，不表示外文直接给了本库一般模定理、精确尾或锐选择模。a≤1时E_a对每个正y发散，本构造不存在。原完整双支的C204障碍不变；不能用它断言正面收敛在GPPA外。

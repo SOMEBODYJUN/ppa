@@ -2756,6 +2756,54 @@
       "label": "C203完整失败图无合格标准lift",
       "file": "comparisons/2026_08_gppa_nfb/COMPARISON.md#nfb-lift",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-PM-DATA",
+      "label": "C204标量递增剖面及连续异号双支",
+      "file": "comparisons/2026_08_gppa_nfb/pair_monotone_barrier.md#pm-profile",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-PM-EXCLUDE",
+      "label": "C204无核正则性完整图同轨道障碍",
+      "file": "comparisons/2026_08_gppa_nfb/pair_monotone_barrier.md#pm-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-CAP-POS",
+      "label": "C205保零集cap完整正支及显式ASM核",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-cap",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-CAP-IMPORT",
+      "label": "C205指定cap原轨道由正支T2导入",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-cap",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-SF-POS",
+      "label": "C206完整截断正支及clip尾和ASM核",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-superlinear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-SF-IMPORT",
+      "label": "C206指定超线性原尾的T2物理导入",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-superlinear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-LOG-POS",
+      "label": "C207可和对数正支及配对单调尾和核",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-log",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AUG-GPPA-LOG-IMPORT",
+      "label": "C207对数原尾的T1加物理长度桥",
+      "file": "comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-log",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -6558,7 +6606,7 @@
       ],
       "output": "AUG-GPPA-EXCLUDE",
       "relation": "conditional",
-      "scope": "C137完整cap、λ=1、初值(0,-1,1/64)，R=1/16严格RLEB已核；对任意h,ε>0及任何完整ε-ASM核，完整跨支迫正常核恒定，不能保持该普通轨道，允许另选支亦矛盾；不排mere-monotone无正则性或任意lift。",
+      "scope": "C137完整cap、λ=1、初值(0,-1,1/64)，R=1/16严格RLEB已核；对任意h,ε>0及任何完整ε-ASM核，完整跨支迫正常核恒定，不能保持该普通轨道，允许另选支亦矛盾；此C200-v1只为ASM证明；mere配对单调加强另见C204。不排删支或任意lift，C205正支导入已成立。",
       "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
     },
     {
@@ -6569,7 +6617,7 @@
       ],
       "output": "AUG-GPPA-EXCLUDE",
       "relation": "conditional",
-      "scope": "C141固定参数及完整双支保持；p0≤0、0<r0<1的指定普通轨道；正法向紧区间剖面局部Lipschitz、间隙>0，任意完整ASM核正常恒定，非零正常更新矛盾。只针对此原图/轨道，不由cap数据推出另一图。",
+      "scope": "C141固定参数及完整双支保持；p0≤0、0<r0<1的指定普通轨道；正法向紧区间剖面局部Lipschitz、间隙>0，任意完整ASM核正常恒定，非零正常更新矛盾。只针对此原图/轨道，不由cap数据推出另一图。 C204另加强配对单调；C206/C207子关系导入不被此同完整图障碍排除。",
       "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
     },
     {
@@ -6580,7 +6628,7 @@
       ],
       "output": "AUG-GPPA-EXCLUDE",
       "relation": "conditional",
-      "scope": "C10全部a>0的完整对数双支及非驻定正法向普通轨道；正轴光滑与双支间隙8y触发同一正常核恒定证明；a>1才为Dini有限長实例，a≤1不赋C09正面结论。",
+      "scope": "C10全部a>0的完整对数双支及非驻定正法向普通轨道；正轴光滑与双支间隙8y触发同一正常核恒定证明；a>1才为Dini有限長实例，a≤1不赋C09正面结论。 C204另加强配对单调；C206/C207子关系导入不被此同完整图障碍排除。",
       "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
     },
     {
@@ -6712,6 +6760,108 @@
       "relation": "conditional",
       "scope": "C10每个a>0完整图的h=ℓ_a(4y)负商发散；保持全部原图值及product零锚的标准lift必须产生固定原二次锚，故不存在合格表示；任意其它lift仍开放。",
       "status": "derived-checked；固定v1相关原式、专篇与独立攻击交叉核验；全球先行性未核"
+    },
+    {
+      "id": "E342",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "GC-OBJECT",
+        "AUG-GPPA-PM-DATA"
+      ],
+      "output": "AUG-GPPA-PM-EXCLUDE",
+      "relation": "conditional",
+      "scope": "同C137完整双支、η≤0,y>0标量φ=√y；全pair仅〈Δf,Δv〉≥0、不加任何核正则性。正常核恒定，与初值(0,-1,1/64)普通非驻定更新矛盾，任意正逐步h_k及重新选支亦不可能。只排同完整F；C205保零集删支导入不被排除。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E343",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SF-OBJECT",
+        "AUG-GPPA-PM-DATA"
+      ],
+      "output": "AUG-GPPA-PM-EXCLUDE",
+      "relation": "conditional",
+      "scope": "同C141全部参数，η≤0,0<y<1，φ=y^(γ/ν)递增且正轴局部Lipschitz，a±=±y^(1/ν)-y连续异号。跨支加权迫核第一分量非增，网格×总变差迫正常核恒定，不能保持p0≤0,0<r0<1指定正尾。C206删支/截窗导入不被排除。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E344",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "LOG",
+        "AUG-GPPA-PM-DATA"
+      ],
+      "output": "AUG-GPPA-PM-EXCLUDE",
+      "relation": "conditional",
+      "scope": "同C10每a>0、φ=ℓ_a(4y)严格递增局部Lipschitz、正常3y/-5y异号，完整图配对单调正常核恒定；非驻定正尾不能保持。a>1正面轨道仍有C207正支T1及额外物理桥导入；a≤1不称收敛实例。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E345",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "GC-OBJECT"
+      ],
+      "output": "AUG-GPPA-CAP-POS",
+      "relation": "implies",
+      "scope": "C205仅删原负支保全部切向图，零片不变，全部r≥0完整普通J与原图同；r<0完整普通J空。v=(-2√y+,0,y+),h1，全pair1-ASM、全输入warped coverage及完整逆像R-Lipschitz1/3。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E346",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-GPPA-CAP-POS"
+      ],
+      "output": "AUG-GPPA-CAP-IMPORT",
+      "relation": "conditional",
+      "scope": "原普通初值η0≤0,r0≥0，I=ξ0+2√r0预先固定，v(xk)=xk-(I,η0,0)，每原步为F+ GPPA选择；源T2(a)全部门满足，给物理R-linear及有限长。r0<0原首步后导入正尾。η0>0不由此桥覆盖；原精确1/2率不由源1/√3上界自动给出。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E347",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "SF-OBJECT"
+      ],
+      "output": "AUG-GPPA-SF-POS",
+      "relation": "conditional",
+      "scope": "C206全部0<γ<1,ν>1,A,B>0；固定0<R<min(1,ν^(-1/(ν-1)))。保0≤y≤R^ν完整正支，E=Σy^(γν^j),v=(-hAE(clip_[0,R]y),0,hclipy),h>0；K_R有限、m_R>0给全pair ASM，完整逆像R-Lipschitz及所有warped输入覆盖，零片不变。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E348",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-GPPA-SF-POS"
+      ],
+      "output": "AUG-GPPA-SF-IMPORT",
+      "relation": "conditional",
+      "scope": "原普通初值η0≤0,0<r0≤R，不变量I=ξ0+AE(r0)、E(r)-E(r^ν)=r^γ给精确物理桥h(xk-x*)；源T2给同原尾的几何上界/有限长。所有η0≤0,0<|r0|<1有限前缀后进入窗。非全原图表示，η0>0及精确超线性尾/选择锐模不由此导入。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E349",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "LOG"
+      ],
+      "output": "AUG-GPPA-LOG-POS",
+      "relation": "conditional",
+      "scope": "C207仅a>1，完整正支(-ℓ_a(4y),3y),y≥0，原零线不变。E_a=Σℓ_a(4^-j y)积分尾界有限且0连续，v=(-E_a(y+),y+),h1；全pair单调、全部warped coverage及完整逆像R-Lipschitz1/3。该核无正ASM常数，a≤1级数发散。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
+    },
+    {
+      "id": "E350",
+      "topic": "8月外部框架比较",
+      "inputs": [
+        "AUG-GPPA-LOG-POS"
+      ],
+      "output": "AUG-GPPA-LOG-IMPORT",
+      "relation": "conditional",
+      "scope": "原正初值r0>0，预先I=t0+E_a(r0)及尾恒等给v=x-x*；源T1(c)仅给零集距离趋零，E_a在0连续另给物理点收敛，正切向尾和/正常望远镜另给长度≤E_a(r0)+r0。负初值保有限原首步后导入。有限长不是源T1单独输出，不宣称一般Dini theorem已被原文发表。",
+      "status": "derived-checked；完整证明及独立6.1-sol接收，有限检查仅作算术佐证；全球先行性未核"
     }
   ]
 }

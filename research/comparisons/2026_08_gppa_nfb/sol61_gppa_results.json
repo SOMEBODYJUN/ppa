@@ -1,0 +1,171 @@
+{
+  "proof_warning": "Finite checks only; arbitrary kernel and partition statements are proved in the audit.",
+  "source_sha256": "5f07147a258e441193dd918452909ddc2fec8781257d6005348f233016653e91",
+  "overlap_2_3": {
+    "q": "1/8",
+    "q_alpha": "1/4",
+    "K": "2/3",
+    "epsilon": "10",
+    "all_pair_samples": 36,
+    "exact_orbit_steps": 36
+  },
+  "overlap_1_2_nonunit_steps": {
+    "q": "1/4",
+    "q_alpha": "1/2",
+    "K": "6",
+    "epsilon": "1/7",
+    "all_pair_samples": 36,
+    "exact_orbit_steps": 36
+  },
+  "cross_branches": {
+    "cross_branch_coefficient_checks": [
+      {
+        "y": "1/64",
+        "z": "1/256",
+        "lower_normal_difference": -0.11764705882352941,
+        "upper_normal_difference": 0.08695652173913043
+      },
+      {
+        "y": "1",
+        "z": "1/4",
+        "lower_normal_difference": -0.11764705882352941,
+        "upper_normal_difference": 0.08695652173913043
+      },
+      {
+        "y": "4",
+        "z": "1",
+        "lower_normal_difference": -0.11764705882352941,
+        "upper_normal_difference": 0.08695652173913043
+      }
+    ],
+    "jump_profile_partition_bounds": [
+      {
+        "N": 2,
+        "variation_exact": "8",
+        "normal_bound": 0.5
+      },
+      {
+        "N": 4,
+        "variation_exact": "8",
+        "normal_bound": 0.25
+      },
+      {
+        "N": 8,
+        "variation_exact": "8",
+        "normal_bound": 0.125
+      },
+      {
+        "N": 32,
+        "variation_exact": "8",
+        "normal_bound": 0.03125
+      },
+      {
+        "N": 128,
+        "variation_exact": "8",
+        "normal_bound": 0.0078125
+      },
+      {
+        "N": 1024,
+        "variation_exact": "8",
+        "normal_bound": 0.0009765625
+      }
+    ]
+  },
+  "theorem4": {
+    "strict_modulus_slack": [
+      {
+        "h": "1",
+        "epsilon": "1/10",
+        "slack_exact": "21/100"
+      },
+      {
+        "h": "3/10",
+        "epsilon": "1/20",
+        "slack_exact": "2821/360"
+      },
+      {
+        "h": "10",
+        "epsilon": "1/100",
+        "slack_exact": "63/200000"
+      }
+    ],
+    "printed_factor_threshold": [
+      {
+        "h_epsilon": 0.1,
+        "printed_inequality_holds": true
+      },
+      {
+        "h_epsilon": 4.0,
+        "printed_inequality_holds": true
+      },
+      {
+        "h_epsilon": 5.0,
+        "printed_inequality_holds": false
+      },
+      {
+        "h_epsilon": 100.0,
+        "printed_inequality_holds": false
+      }
+    ],
+    "right_jump_counterexample_to_naive_limit_step": true
+  },
+  "zero_set_preserving_positive_subrelation": {
+    "pair_samples_exact": 256,
+    "warped_coverage_samples": 16,
+    "ordinary_eta_negative_physical_bridge_steps": 24,
+    "positive_eta_noninclusion_boundary_checked": true,
+    "inverse_R_Lipschitz": "1/3"
+  },
+  "scalar_tail_branch_restrictions": {
+    "superlinear_R": "1/4",
+    "superlinear_graph_height": "1/16",
+    "m_R_exact": "1",
+    "K_R_exact_lower": "3201/2048",
+    "K_R_exact_upper": "819431/524272",
+    "safe_epsilon_h1": "1/2",
+    "superlinear_exact_shift_cases": [
+      {
+        "input_normal": "0",
+        "graph_output_height": "0",
+        "tail_shift_partial_sums_exact": true
+      },
+      {
+        "input_normal": "1/64",
+        "graph_output_height": "1/4096",
+        "tail_shift_partial_sums_exact": true
+      },
+      {
+        "input_normal": "1/16",
+        "graph_output_height": "1/256",
+        "tail_shift_partial_sums_exact": true
+      },
+      {
+        "input_normal": "1/4",
+        "graph_output_height": "1/16",
+        "tail_shift_partial_sums_exact": true
+      }
+    ],
+    "log_a2_tail_bounds": [
+      {
+        "log_e_over_y": 10.0,
+        "E_lower": 0.07213475204444816,
+        "E_upper": 0.08213475204444816,
+        "zero_anchor_ASM_ratio_upper": 0.18685116653024947
+      },
+      {
+        "log_e_over_y": 100.0,
+        "E_lower": 0.0072134752044448166,
+        "E_upper": 0.007313475204444817,
+        "zero_anchor_ASM_ratio_upper": 0.014255448951775015
+      },
+      {
+        "log_e_over_y": 500.0,
+        "E_lower": 0.0014426950408889636,
+        "E_upper": 0.0014466950408889637,
+        "zero_anchor_ASM_ratio_upper": 0.0027880273966154347
+      }
+    ],
+    "warning": "Infinite series, arbitrary pair inequalities and limits are proved in the audit, not by these samples."
+  },
+  "cap_R_1_16_kappa": 0.7453849316207962
+}
