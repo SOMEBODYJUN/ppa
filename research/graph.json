@@ -3158,6 +3158,42 @@
       "label": "错误：无共同固定点加精确零集与统一几何尾必有局部正幂EB",
       "file": "topics/random_markov/fixed_point_free_no_power.md#fpf-no-power",
       "evidence_status": "refuted"
+    },
+    {
+      "id": "SPARSE-DATA",
+      "label": "真实least-squares l1−lp、A无零列及非零局部极小",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-object",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SPARSE-AUTO",
+      "label": "C224 automatic strict comp/active PD，1<p≤3/2",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-CERT",
+      "label": "C226显式正窗口与共同正步长区间",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-full-resolvent",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-FULL-PPA",
+      "label": "完整J coverage/排他/identification/变步局部线性率",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-SHARP",
+      "label": "C225全p>3/2退化严格极小及q>1/3排除",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-sharpness",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-SHARP-DATA",
+      "label": "3/2<p<2的二维Gram族及径向消元K>0",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-sharpness",
+      "evidence_status": "canonical"
     }
   ],
   "edges": [
@@ -7707,6 +7743,51 @@
       "relation": "refutes",
       "scope": "无共同固定点且原同步输入最优残差零集恰为全部不变律；统一相对R-linear law convergence不能推出每个不变律附近某个正幂EB。仅反驳此精确版本，不反驳一般gauge，不加入源3(c)兼容EB。",
       "status": "C223-v1同一锚点见证序列；derived-checked"
+    },
+    {
+      "id": "E392",
+      "topic": "稀疏恢复自动结构",
+      "inputs": [
+        "SPARSE-DATA"
+      ],
+      "output": "SPARSE-AUTO",
+      "relation": "implies",
+      "scope": "1<p≤3/2；每个非零局部min，无RIP/泛性；strict inactive、active Hessian PD、support列独立；c=Aᵀb和无零列为真前件。",
+      "status": "C224自足Pearson+端点六阶证明，derived-checked；优先未核"
+    },
+    {
+      "id": "E393",
+      "topic": "稀疏恢复自动结构",
+      "inputs": [
+        "SPARSE-AUTO"
+      ],
+      "output": "SPARSE-CERT",
+      "relation": "implies",
+      "scope": "固定数据/极小点；欧氏球rho由显示L_H、active最小坐标及inactive gap保守预算计算；共同lambda_min>0与lambda_max M<rho/2，r<min(rho/4,lambda_min delta/2)。",
+      "status": "C226 explicit预算独立受检，derived-checked"
+    },
+    {
+      "id": "E394",
+      "topic": "稀疏恢复完整近端",
+      "inputs": [
+        "SPARSE-DATA",
+        "SPARSE-CERT"
+      ],
+      "output": "SPARSE-FULL-PPA",
+      "relation": "conditional",
+      "scope": "完整limiting subdiff包含原点；globally bounded penalty subgradient先拉所有输出入窗，再排全部inactive输出，active单调唯一；prox独立存在补coverage，任意共同区间步长及B_r初值。",
+      "status": "C226全部量词受检，derived-checked"
+    },
+    {
+      "id": "E395",
+      "topic": "稀疏恢复锐阈值",
+      "inputs": [
+        "SPARSE-SHARP-DATA"
+      ],
+      "output": "SPARSE-SHARP",
+      "relation": "implies",
+      "scope": "每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。matching1/3及实际慢尾未闭。",
+      "status": "C225构造和混合消元独立受检，derived-checked"
     }
   ]
 }

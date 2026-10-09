@@ -351,3 +351,17 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 **Paper Fact，实际读取于 2026-10-09。** Luke–Schultze–Grubmüller，[正式刊本 DOI 10.1007/s10107-025-02319-9](https://link.springer.com/article/10.1007/s10107-025-02319-9)，Assumption 3、式 (15)–(17)：状态 G 紧、有限连续自映射与独立新指标；(15) 外层全部不变律，内层输入 W₂ 最优计划，共同指标；(16) ε∈[0,1)、α∈(0,1)、τ=(1−α)/α，全部 x∈G 与全部不变支撑点 y。§3.1 (27) 给全部基点的更强期望 almost-firm 定义；此处不要求各个分支单独满足同一参数。
 
 **本库推导与使用边界。** [C223 FP7–FP8](topics/random_markov/fixed_point_free_no_power.md#fpf-source) 在全部 G×G 验证 α=1/2、ε=45/64；原残差及 exact-zero 独立证明。源 3(c)/(10)/(17) 另外假设兼容 gauge，不是本例的前件，不用于反推正幂界。本文不据一次读源认证原作者非形式化公开问题的全部解释或全球首创。
+
+
+<a id="lit-sparse-automatic-threshold"></a>
+## LIT-SPARSE-AUTOMATIC-THRESHOLD · 模型族先行、自动阈值待核
+
+核查2026-10-09；模型先行与本库C224–C226数学推导严格分开。
+
+1. **Paper Fact，全文实读**：Yingnan Wang, *New Improved Penalty Methods for Sparse Reconstruction Based on Difference of Two Norms*, [Optimization Online作者报告（2015上传）](https://optimization-online.org/wp-content/uploads/2015/03/4849.pdf)，封面注明2013首稿、2014二次修订。式(5)含l1−epsilon lr、r>1、epsilon∈(0,1]；§III式(14)含其least-squares penalty族；Algorithm 3.2取0<epsilon<1，Theorem3.3证明下降、boundedness与cluster stationarity。模型族早已存在；不能把该epsilon<1算法结论无条件改成epsilon=1的全部原图PPA定理。
+2. **Paper Fact，正式摘要实读，主体全文门未闭**：Wang–Zhang (2017), [DOI10.1007/s00034-017-0532-7](https://link.springer.com/article/10.1007/s00034-017-0532-7)研究l1−lp模型；公开摘要的RIP/recovery与neurodynamic结论不认证主文没有同自动Hessian定理。不得以检索不到取代全文核验。
+3. **Paper Fact，全文实读**：Lou–Yan, *Fast L1-L2 Minimization via a Proximal Operator*, [作者arXiv全文v4](https://arxiv.org/html/1609.09530v4)，给l1−l2 prox及FBS/ADMM分析，是必须比较的邻近先行，p=2不能自动换成p=3/2。
+4. **Paper Fact，仅正式摘要和机构记录实读**：Huo–Chen–Ge–Ng, *L1−beta Lq Minimization for Signal and Image Recovery*, SIAM J. Imaging Sci.16(4)1886–1928 (2023), [DOI10.1137/22M1525363](https://epubs.siam.org/doi/10.1137/22M1525363)；[机构正式记录](https://scholars.hkbu.edu.hk/en/publications/lsub1sub-%CE%B2lsubqsub-minimization-for-signal-and-image-recovery/)明确beta∈[0,1],q≥1（排(1,1)）、convex-hull decomposition及RIP recovery/error分析。**主体全文未取得，是精确自动阈值优先性核验首要缺口**；不宣称该文没有C224，也不导入摘要未展示的定理。
+5. **已读公开动机**：Luke–Tam, [Generalized Monotonicity and the Proximal Point Algorithm, MOR2025 DOI10.1287/moor.2025.0863](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863) §5提出把负l2替为负l3/2作为future study；只是动机，不意味着该模型或C224为已认证新颖，也不表示作者已提出本库精确锐阈值命题。
+
+**本库 Interpretation**：C224的候选贡献是无需RIP/泛性/预设SOSC而全部非零局部极小点自动strict comp/active-PD的锐3/2阈值，C225给上侧严格极小退化。C226的完整fiber认证是应用后果，经典强单调/KL等工具可能给同样局部率，不宣称RLEB不可替代。matching upper-side EB/dynamics仍开放；模型名、普通条件线性率、二维四次退化的预期指数不作为独立首创。

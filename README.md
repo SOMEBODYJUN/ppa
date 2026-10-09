@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 588 个数学节点、391 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 594 个数学节点、395 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -58,6 +58,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 路线 | 承重节点及联合前件 | 当前状态 |
 | --- | --- | --- |
+| **稀疏恢复的自动结构与完整近端** | [C224–C226](research/topics/sparse_recovery/automatic_regularity.md)：无零列A、1<p≤3/2的全部非零局部极小点自动strict comp/active-PD/support独立；3/2<p<2退化严格极小族；显式保守完整J窗口及共同正步长局部线性率 | 模型族已有先行，自动阈值的精确公开优先尚未核：2017及2023全文门见[文献记录](research/LITERATURE.md#lit-sparse-automatic-threshold)。上侧二维族匹配真EB指数1/3与真实fullPPA轨道锐尾仍未闭；不能将minima结构提升为任意初值达极小点。 |
 | 与8月GPPA/NFB的精确关系 | [C199–C207综合比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table)：真实重合；完整双支→无正则性配对核同轨道障碍；保零集子关系→cap/超线性/log原尾GPPA导入；任意NFB拆分与标准full-graph product→原二次锚 | 已核明确v1与证明范围；物理几何尾自动有限长。完整图不涵盖不等于收敛不可导入；固定核一般模 GPPA 已由 C208–C214 完成；任意其它lift及结构线/全球先行性仍开放 |
 | 图值剖面与自然母空间工具 | [C166–C168/C172](research/canonical/operator_profile_tools.md)：完整图值剖面→真残差需取到或右连续门；同一紧对象块闭约束；鲁棒孔洞及双侧实际幂门。[八项构造前沿](research/canonical/operator_space_construction_frontier.md)列清总体比较的实际义务 | 工具证明已重构；没有自动获得自然母空间、孔隙定理或总体规模比较 |
 | 有限状态与条件刷新完整接口 | [C169–C171](research/topics/random_markov/finite_state_completion.md)：多面体目标锐证书、三状态支撑识别、四循环真实率和指定标量公式障碍；[C173–C176](research/topics/random_markov/conditional_refresh_interfaces.md)：相关Gibbs、连续可数刷新、三种残差/拓扑分离 | 自足证明及独立复算；目标、同输入最优性、固定边缘和权重门分别保留，条件残差不换成原Ψ |
@@ -164,7 +165,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
-现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：优先核随机律收敛与原同步 OT 误差界必要性的精确版本，明确区分不变目标、残差零集和兼容 gauge；[C223 完整新反例](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 已关闭无共同固定点且 exact-zero 的正幂必要性版本；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
+现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：随机律收敛与原同步 OT 误差界必要性的精确版本须区分不变目标、残差零集和兼容 gauge；[C223 完整新反例](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 已关闭无共同固定点且 exact-zero 的正幂必要性版本；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。新正向模型进展见[C224–C226锐自动正则性](research/topics/sparse_recovery/automatic_regularity.md)；精确先行与上侧真实轨道边界按实际数学缺口接续。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
 
 ## File Map
 
@@ -235,6 +236,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/examples/hemiregular_piecewise_parabola.md](research/topics/examples/hemiregular_piecewise_parabola.md)、[research/topics/examples/absolute_value_subgradient.md](research/topics/examples/absolute_value_subgradient.md) | C76/C77 与 C78/C79：前者是异维数完整映射的最近逆点与两变量正则对照、局部非闭图；后者把绝对值次梯度的原算子真残差跳跃和软阈值近端步残差分开。研究 MR/MSR 量词或残差模传递时读。 |
 | [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/identity_square_branch_union.md](research/topics/examples/identity_square_branch_union.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C66–C68/C92/C95/GX-068 的完整并图、两种真残差、两变量半阶 MR、跨支碰撞及精确二参数区；C60/C61/GX-069/070 的 DR 算法残差锐模。先区分原算子、选支、完整步和算法残差。 |
 | [research/topics/examples/ball_normal_cone.md](research/topics/examples/ball_normal_cone.md) | C93/C94/GX-067：完整法锥的全域投影/反射、二参数区，以及固定零目标的真空模与扰动逆像跳变；要用非孤立零集的 EB 或从反射稳定逆推 MR 时读。 |
+| [research/topics/sparse_recovery/automatic_regularity.md](research/topics/sparse_recovery/automatic_regularity.md) | C224–C226：自动strict comp与active Hessian正定的锐3/2阈值、上侧全空间退化严格极小族、可计算全部完整纤维近端窗口与变步局部线性率；有限复算见research/code/sparse_regularity/README.md，公开先行仍独立待核。 |
 | [research/topics/random_markov/fixed_point_free_no_power.md](research/topics/random_markov/fixed_point_free_no_power.md) | C223：三点紧可数块 × 公平刷新；完整四映射与源参数、位移单射及原 OT 取得、全部初律相对几何尾、同一锚点全部正幂失败。研究无共同固定点的必要性时直接读；复算入口在 research/code/fixed_point_free_no_power/README.md，不继承 C143 B8。 |
 | [research/topics/random_markov/compact_residual_boundaries.md](research/topics/random_markov/compact_residual_boundaries.md) | C143/C144：完整紧可数模型的全域运输、统一率、律空间长度与所有正幂失败；正方形投影原残差的假零、最近和实际极限锚；末节与 C71 的放松 OT 假零逐对象区分。 |
 | [research/topics/random_markov/lazy_cycle_ot.md](research/topics/random_markov/lazy_cycle_ot.md) | C71：惰性四循环的原同步 OT 残差、锐全律空间误差界及放松最优运输后的假零点；判断有限状态残差是否保留输入 OT 约束时读。 |

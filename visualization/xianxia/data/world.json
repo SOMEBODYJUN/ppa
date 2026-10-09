@@ -6608,6 +6608,72 @@
       "y": 1885,
       "region": "random",
       "realm": "random"
+    },
+    "SPARSE-AUTO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-FULL-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-SHARP-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8174,6 +8240,22 @@
     "E391": {
       "x": 4487.41,
       "y": 1932.22
+    },
+    "E392": {
+      "x": 5068.59,
+      "y": 3047.78
+    },
+    "E393": {
+      "x": 5068.59,
+      "y": 3138.78
+    },
+    "E394": {
+      "x": 5013.81,
+      "y": 3090.69
+    },
+    "E395": {
+      "x": 4675.41,
+      "y": 3320.78
     }
   },
   "bounds": {

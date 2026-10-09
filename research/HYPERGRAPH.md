@@ -595,6 +595,25 @@
 | E390 | [FPF-DATA · 三点紧可数块与独立二状态刷新](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | implies → [FPF-NOPOWER · C223无共同固定点/exact-zero/统一相对几何尾仍无正幂](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | 固定FP2–FP6完整四映射，删除C143中点后位移标签单射；α=1/2,ε=45/64在全部状态对成立，原输入OT残差exact-zero，C=√2L²(1+L²),r=√(7/8)对全部初律和k≥0成立；同一barπ全部q/K/a违界。；**C223-v1 FP1–FP21自足证明，两路独立接收及有限有理复算；derived-checked** |
 | E391 | [FPF-NOPOWER · C223无共同固定点/exact-zero/统一相对几何尾仍无正幂](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | refutes → [FPF-POWER-NECESSITY · 错误：无共同固定点加精确零集与统一几何尾必有局部正幂EB](topics/random_markov/fixed_point_free_no_power.md#fpf-no-power) | 无共同固定点且原同步输入最优残差零集恰为全部不变律；统一相对R-linear law convergence不能推出每个不变律附近某个正幂EB。仅反驳此精确版本，不反驳一般gauge，不加入源3(c)兼容EB。；**C223-v1同一锚点见证序列；derived-checked** |
 
+## 稀疏恢复自动结构
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E392 | [SPARSE-DATA · 真实least-squares l1−lp、A无零列及非零局部极小](topics/sparse_recovery/automatic_regularity.md#sr-object) | implies → [SPARSE-AUTO · C224 automatic strict comp/active PD，1<p≤3/2](topics/sparse_recovery/automatic_regularity.md#sr-object) | 1<p≤3/2；每个非零局部min，无RIP/泛性；strict inactive、active Hessian PD、support列独立；c=Aᵀb和无零列为真前件。；**C224自足Pearson+端点六阶证明，derived-checked；优先未核** |
+| E393 | [SPARSE-AUTO · C224 automatic strict comp/active PD，1<p≤3/2](topics/sparse_recovery/automatic_regularity.md#sr-object) | implies → [SPARSE-CERT · C226显式正窗口与共同正步长区间](topics/sparse_recovery/automatic_regularity.md#sr-full-resolvent) | 固定数据/极小点；欧氏球rho由显示L_H、active最小坐标及inactive gap保守预算计算；共同lambda_min>0与lambda_max M<rho/2，r<min(rho/4,lambda_min delta/2)。；**C226 explicit预算独立受检，derived-checked** |
+
+## 稀疏恢复完整近端
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E394 | [SPARSE-DATA · 真实least-squares l1−lp、A无零列及非零局部极小](topics/sparse_recovery/automatic_regularity.md#sr-object) ∧ [SPARSE-CERT · C226显式正窗口与共同正步长区间](topics/sparse_recovery/automatic_regularity.md#sr-full-resolvent) | conditional → [SPARSE-FULL-PPA · 完整J coverage/排他/identification/变步局部线性率](topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps) | 完整limiting subdiff包含原点；globally bounded penalty subgradient先拉所有输出入窗，再排全部inactive输出，active单调唯一；prox独立存在补coverage，任意共同区间步长及B_r初值。；**C226全部量词受检，derived-checked** |
+
+## 稀疏恢复锐阈值
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E395 | [SPARSE-SHARP-DATA · 3/2<p<2的二维Gram族及径向消元K>0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | implies → [SPARSE-SHARP · C225全p>3/2退化严格极小及q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | 每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。matching1/3及实际慢尾未闭。；**C225构造和混合消元独立受检，derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

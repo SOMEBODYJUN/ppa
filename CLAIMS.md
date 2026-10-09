@@ -1882,3 +1882,28 @@
 - **Conclusion / Scope**：Πμ=[(T#μ_x+T#²μ_x)/2]⊗β、β=(δ₀+δ₁)/2 为不变极限；L=5/4，C=√2 L²(1+L²)、r=√(7/8) 对全部 μ 和 k≥0 给 W₂(μPᵏ,Πμ)≤Crᵏd_W₂(μ,I)。但同一 barπ=δ₀⊗β 的每个正半径球内，每个 q,K,a>0 都有 μ 使 W₂(μ,barπ)<a 且 d_W₂(μ,I)>KΨ(μ)^q。
 - **Definitions / Dependencies / Evidence**：[FP2–FP8](research/topics/random_markov/fixed_point_free_no_power.md#fpf-source) 固定完整对象与源参数；[FP9–FP10](research/topics/random_markov/fixed_point_free_no_power.md#fpf-zero) 用位移单射与紧联合最优可行集取得证明 exact-zero；[FP11–FP16](research/topics/random_markov/fixed_point_free_no_power.md#fpf-rate) 从 T³=T 自足导出全部初律相对率及 k=0；[FP17–FP21](research/topics/random_markov/fixed_point_free_no_power.md#fpf-no-power) 对全部不变目标支撑给下界，合法输入最优见证有 d=(1−e_n)δ_n/√2、0<Ψ≤δ_nⁿ⁺¹/4。C143/C144 只提供构造动机，不作为正文缺失步骤的依赖。
 - **Counterevidence / Objections / Related Files**：[F64](FAILED_ROUTES.md#f64) 记录完整 C143 直接乘刷新仍有假零的 fatal 机制及本例的中点删除修补。本条仅给统一相对 R-linear，不继承 C143 B8 的一步距离收缩；不反驳一般 gauge、不声明各分支单独 almost-firm、凸/连通 G 或样本路径收敛。[代码及实际有限结果](research/code/fixed_point_free_no_power/README.md) 仅为精确有限证据；无限量词由证明承担。
+
+
+<a id="c224"></a>
+## C224-v1 / SPARSE-AUTO-REGULARITY · 非零局部极小点的锐自动正则性
+
+- **Status**：`derived-checked`；独立实读与重建，包括 p=3/2 四阶等号后的六阶排除。发表优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：任意有限维 A∈R^(m×n)、b∈R^m、eta>0，A无零列，1<p≤3/2；Phi_p(x)=0.5||Ax−b||²+eta(||x||₁−||x||_p)，F=partial_lim Phi_p。对**每个非零局部极小点** xbar，I=supp xbar，所有 inactive j 有 |(Aᵀ(Axbar−b))_j|<eta，H_I=A_IᵀA_I−eta Hess||xbar_I||_p正定，因此 A_I满列秩、|I|≤rank A。无RIP/泛性/预设SOSC或EB。
+- **Definitions / Dependencies / Evidence**：[对象及完整证明](research/topics/sparse_recovery/automatic_regularity.md#sr-object)以Pearson平方恒等式和端点六阶展开自足证明；[实际有限复算](research/code/sparse_regularity/README.md)。C226给孤立性、强真残差线性EB和完整近端后果。
+- **Counterevidence / Scope**：A无零列与c=Aᵀb是真前件；零列例、原点与非极小驻点明确分开。不将局部极小点定理提升为全部驻点/全部PPA极限或真实信号恢复。[文献已读范围与未闭门](research/LITERATURE.md#lit-sparse-automatic-threshold)不认证全局首创。
+
+<a id="c225"></a>
+## C225-v1 / SPARSE-SHARP-THRESHOLD · 3/2上侧的严格极小点退化族
+
+- **Status**：`derived-checked`；全空间径向消元、正四阶下界、局部驻点孤立性均独立受检。
+- **Exact Statement / Quantifiers**：对每个3/2<p<2，存在二维可逆A、b、eta=1和非零**严格局部极小点**xbar=(1,1)，active Hessian奇异。R=2^(1/p)，Gram径向/切向特征值alpha和beta=R(p−1)/2，c=Qxbar+(1−R/2)(1,1)，c4=−(p−1)(2p−3)(p+1)/24<0，alpha>beta²/(−4R c4)。真正径向极小化后 reduced目标为K t⁴+O(t⁶)，K=−R c4−beta²/(4alpha)>0。
+- **Conclusion / Evidence**：[完整构造与全空间严格极小证明](research/topics/sparse_recovery/automatic_regularity.md#sr-sharpness)；对S=zerF的同一真残差，所有指数q>1/3的局部强EB均失败；先证明缩窗后唯一驻点，再比较距离。与C224共同认证(1,2)范围内自动active正定的锐阈值3/2。
+- **Scope / Open**：不宣称全部p>3/2模型有统一指数1/3；此族的匹配EB=1/3和实际fullPPA慢尾尚未证明。径向极小化曲线不默认为PPA不变曲线，径向轴初值不可一并宣称慢尾。
+
+<a id="c226"></a>
+## C226-v1 / SPARSE-COMPLETE-PROX · 可计算窗口、完整纤维与变步局部线性率
+
+- **Status**：`derived-checked`；global subgradient界、全部远输出排除、独立coverage、explicit L_H与共同正步长区间均受检。属于自动结构后的定量后果，不自称独占机制。
+- **Exact Statement / Dependencies**：C224同一模型与固定xbar，正文显示rho由active最小坐标、R、inactive严格余量delta、Gram行范数、h_min及Hessian Lipschitz上界计算，m=h_min/2（单active坐标可取Gram曲率）。M=||Qxbar−c||+||Q||rho/4+eta(sqrt(n)+n^(1/p−1/2))；0<lambda_min≤lambda_max、lambda_max M<rho/2，0<r<min(rho/4,lambda_min delta/2)，满support时省略delta门。
+- **Conclusion / Objects / Quantifiers**：全部lambda∈[lambda_min,lambda_max]、全部输入z∈B_r(xbar)，**完整**J_(lambda F)(z)非空唯一且等于全球prox argmin，全部完整输出一步识别support/sign并留B_r，距离收缩因子≤(1+lambda_min m)^−1。任意该区间步长序列给唯一普通PPA及统一局部几何率。正文rho窗强真残差EB常数max(1/m,2rho/delta)，并给xbar孤立驻点与严格极小。
+- **Evidence / Scope**：[自足完整近端证明](research/topics/sparse_recovery/automatic_regularity.md#sr-full-resolvent)、[共同区间](research/topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps)、[代码范围](research/code/sparse_regularity/README.md)。先证明all-output唯一，再用prox全球极小存在取得coverage与等式。常数仅对固定数据/极小点，不对全部实例统一；保守半径不声称最佳，不授予任意初值到极小点或全局最优。
