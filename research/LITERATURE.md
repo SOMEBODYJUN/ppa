@@ -333,3 +333,13 @@ C211/C212 给固定完整关系/核的严格新增实例和精确物理阶，C21
 [四路当前裁决](novelty/2026_10_09/PRIORITY_FOLLOWUP.md)和[独立接收](audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md)补核94cbbbd之后的实际阅读范围。GPPA：Rockafellar1976 (1.13)–(1.15)、2025 pair-v1、2606.01536六月v1/九月v2 T3逐项；完整union/强极大扩张桥是本次推导，不冒称旧文逐字发表。NFB：MBG2021v1、RV2024v1 Algorithm2.2、Evens2023/2024 PPPA/CP、2023 mismatch-v1明确更新/几何/点率先行；相同更新不否定不同前提的新收敛定理。源URL、版本hash、读页与未读门在四分报告。
 
 C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只对显示合同授予结论；LM2012 (7.7)/T7.3的dyadic推论关闭q>1/2长度机制的首创隔离。C222核Goebel2016 Claim1、Barroso-v3和正式TeX，平方距离/方差余量是本次独立推导；数学可导性与旧公开同式表述分开。Wang全文、OPT2023、RV刊本、若干老扩张/固定集正文未取得，不以访问失败认证新颖。
+
+
+<a id="lit-public-rfi-necessity"></a>
+## 公开问题：随机律定量收敛的误差界必要性
+
+核查 2026-10-09。一手源：Luke–Schultze–Grubmüller，[正式2026刊本](https://link.springer.com/article/10.1007/s10107-025-02319-9) §3.2 (39) 后；Luke，[2024在线/2025卷刊本](https://link.springer.com/article/10.1007/s10107-024-02124-w) §6。实际读 Assumption3/(10)/(15)–(18)/(39)，以及旧刊 (46)、Theorem9、§6：作者提出原 Markov 运输残差的 metric-subregularity 必要性，后者明确讨论非 paracontraction；已有必要性定理有额外前提。
+
+**Interpretation 与本库接口**见[选题卡](topics/random_markov/public_necessity_target.md#pnt-exact)：不变律目标 EB、exact-zero 下任意一般 gauge、源公式兼容 gauge 三者不同。C144 到不变目标失败而到自身零集线性 EB 成立；C14 紧性给任意一般 gauge；C143 否定正幂和指定参数兼容性。没有宣布整个作者问题已解或此前未有人回答。假零可能性已有2023源说明，发表先行必须单独核。
+
+确定性备用公开任务：Luke–Tam，[2025 MOR刊本](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863) §5 提出 ℓ1−ℓ3/2 稀疏恢复替换；实际读取该节。它是 future research task，非形式猜想；本库的完整普通 PPA 目标是另行提出的精确版本，详见选题卡。

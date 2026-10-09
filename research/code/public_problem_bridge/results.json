@@ -1,0 +1,60 @@
+{
+  "python": "3.12.14",
+  "arithmetic": "fractions.Fraction",
+  "seed": null,
+  "tolerance": "none; exact",
+  "status": "PASS",
+  "firmness_pairs": 625,
+  "quarter_mass_laws": 35,
+  "transport_cases": [
+    {
+      "t": "0",
+      "nearest_cost_squared": "0",
+      "limit_cost_squared": "0",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "0",
+      "enumerated_vertices": 8
+    },
+    {
+      "t": "1/100",
+      "nearest_cost_squared": "1/10000",
+      "limit_cost_squared": "1/5000",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "1/10000",
+      "enumerated_vertices": 8
+    },
+    {
+      "t": "1/16",
+      "nearest_cost_squared": "1/256",
+      "limit_cost_squared": "1/128",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "1/256",
+      "enumerated_vertices": 8
+    },
+    {
+      "t": "1/4",
+      "nearest_cost_squared": "1/16",
+      "limit_cost_squared": "1/8",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "1/16",
+      "enumerated_vertices": 8
+    },
+    {
+      "t": "49/100",
+      "nearest_cost_squared": "2401/10000",
+      "limit_cost_squared": "2401/5000",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "2401/10000",
+      "enumerated_vertices": 8
+    },
+    {
+      "t": "1/2",
+      "nearest_cost_squared": "1/4",
+      "limit_cost_squared": "1/2",
+      "optimal_residual_squared": "0",
+      "after_update_nearest_cost_squared": "1/4",
+      "enumerated_vertices": 8
+    }
+  ],
+  "limits": "Finite checks do not prove arbitrary-law OT optimality, general necessity, or literature novelty; see canonical proof."
+}

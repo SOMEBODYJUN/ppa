@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 572 个数学节点、379 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 585 个数学节点、389 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -164,12 +164,13 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
-现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：当前先做来源清洗、规范协调和空白接收，按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围；清洗完成后，再开展总体母空间/量尺和原生完整纤维/整窗研究。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
+现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：优先核随机律收敛与原同步 OT 误差界必要性的精确版本，明确区分不变目标、残差零集和兼容 gauge；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
 
 ## File Map
 
 | 新增研究入口 | 用途 |
 | --- | --- |
+| [公开必要性问题与选题](research/topics/random_markov/public_necessity_target.md)、[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md) | 2026/2024 正式公开问题、A/B/C 精确解释、C14/C143/C144 对接和未闭优先义务；GPPA 发布编排与确定性备选。不是整个作者问题已解的声明。 |
 | [当前首创性裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)、[初次六分工快照](research/novelty/2026_10_09/README.md) | 四路逐篇版本核对、经典可导性/发表优先区分、剩余精确候选和未读门；算法/全尺度结构分开 |
 | [C221](research/canonical/gppa_tail_lyapunov_bridge.md)、[C222](research/canonical/sharp_holder_lipschitz_realization.md)、[独立接收](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md) | 前验标量势、完整SF直接C¹/KL分界、任意Hilbert紧K精确预算全域Lip充分实现；不认证全球先行 |
 | [C218](research/canonical/gppa_almost_averaged_bridge.md)、[C219](research/canonical/gppa_spiral_resonance.md)、[C220](research/canonical/gppa_regularized_inverse_branch.md) | 自足证明与域/窗口/完整纤维量词；各有独立审查 |
