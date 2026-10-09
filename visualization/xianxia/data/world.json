@@ -6344,6 +6344,94 @@
       "y": 3186,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "GP-AA-LINEAR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-AA-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-EB-STEP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-NONCALM-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-REG-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-REG-INVERSE-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-RESONANCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-RESONANCE-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -7834,6 +7922,34 @@
     "E372": {
       "x": 3535.65,
       "y": 3009.8
+    },
+    "E373": {
+      "x": 4174.12,
+      "y": 3030.71
+    },
+    "E374": {
+      "x": 4166.14,
+      "y": 3280.64
+    },
+    "E375": {
+      "x": 4257.22,
+      "y": 3074.12
+    },
+    "E376": {
+      "x": 4262.01,
+      "y": 3263.25
+    },
+    "E377": {
+      "x": 4350.3,
+      "y": 2981.32
+    },
+    "E378": {
+      "x": 3525.96,
+      "y": 3033.37
+    },
+    "E379": {
+      "x": 4155.34,
+      "y": 3218.48
     }
   },
   "bounds": {

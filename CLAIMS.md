@@ -33,7 +33,7 @@
 - **Status**：`derived-checked`；原全图 Hilbert 身份、同一正反影子、σ 族常数与任意维数统一最优性均有独立完整证明。
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H，允许无限维及非可分；非空完整关系图满足固定 λ,L>0、0<γ<1 的全对全尺度 RL。R=L^{1/(1−γ)}。存在一个强单调双 Lipschitz 同胚 A:H→H，对每个原图点同时有 ‖v−A(x)‖≤R/(√2λ)、‖x−A⁻¹(v)‖≤R/√2。更一般每个 0<σ<1 有同一个 Aσ 及 GSH-3/10/11/13 的半径与常数；σ=√γ 最小化显示半径。
 - **Definitions / Dependencies / Evidence**：[GSH-1–22 全部证明](research/canonical/global_shadow.md#gsh-object) 将任意指标集 ℓ²(D) 提升、任意 Hilbert 间同常数 Lipschitz 扩张的准确接口、双 Banach 反演、全图交叉配对和正则单纯形双向下界展开。C03 不依赖有限 QP 的 C19、graph-maximal、原图闭或 C04 的满纤维。[来源 S23 §3](history/sources/次单调论文研究/最新成果/Holder_RL_Formal_Manuscript.tex) 仅作同身份溯源。
-- **Counterevidence / Scope**：1/√2 是所有有限维共同常数的最优因子，不决定每个固定维数最优值或 conditioning 锐性。保留指定图锚的不同命题由 [GSH-19–22](research/canonical/global_shadow.md#gsh-anchor) 另证最优因子 1；不能把它与无锚结论合并。逐图点界不提供原纤维非空、局部 RL 推广、真实逆分支选择稳定或外部新颖性。
+- **Counterevidence / Scope**：1/√2 是所有有限维共同常数的最优因子，不决定每个固定维数最优值或 conditioning 锐性。保留指定图锚的不同命题由 [GSH-19–22](research/canonical/global_shadow.md#gsh-anchor) 另证最优因子 1；不能把它与无锚结论合并。逐图点界不提供原纤维非空、局部 RL 推广、真实逆分支选择稳定或外部新颖性。新增[结构先行攻击](research/novelty/2026_10_09/structure_prior_art.md)：弱双向影子为旧 Lipschitz 逼近加 Cayley 推论，精确 cross 为经典 Kirszbraun 提升推论；不能称新扩张原理。锐同底点表述的全球优先性仍未核。
 
 <a id="c04"></a>
 ## C04 · 有限维完整纤维分类
@@ -41,7 +41,7 @@
 - **Status**：`derived-checked`；原固定参数有限维双向分类在 FF1–27 完整重构并独立逐式接收，未扩大必要性的维数。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 n≥1、λ,L>0、0<γ<1、R=L^{1/(1−γ)}。在 Rⁿ 的固定参数 graph-maximal 全尺度 RL 关系中，K 能作为某个关系的完整 F⁻¹(0)，当且仅当 K 非空紧且 diam K≤R；完整 F(0) 的对应门为 diam K≤R/λ。每个这样的关系对全部输入/输出有非空紧纤维；反向是每个合法 K 分别存在某个关系，不同时任意指定一个关系的两种纤维。
 - **Definitions / Dependencies / Evidence**：[FF1–27 全部证明](research/canonical/finite_fiber_classification.md#ff-object) 给同参数 Cayley 极大性、显式有限维 Brouwer 闭球满射、properness/闭图/usc、完整纤维直径；Hilbert 投影短证明、凸包余量、全对正 bump、正权一致级数与无额外 fixed point；最后完整双向 pullback。原 S23 finite_geometry/margin/fixedset/fibers 仅溯源。该证明显式导入已声明前件的 Brouwer；不以 degree 摘要作为证明。
-- **Counterevidence / Scope**：任意 Hilbert 空间上的紧 K 同常数 fixed-set 实现与双向实现是已证充分性；每个关系的纤维非空紧必要性只在有限维。实现图极大性允许最小 Hölder 常数小于参数上界 L，包括 singleton。R_K 的像只包含于闭凸包，未声称满射该凸包。graph-maximal 不是极大单调，不授予 PPA 真 EB、收敛、回缩、degree 数值或外部先行性。
+- **Counterevidence / Scope**：任意 Hilbert 空间上的紧 K 同常数 fixed-set 实现与双向实现是已证充分性；每个关系的纤维非空紧必要性只在有限维。实现图极大性允许最小 Hölder 常数小于参数上界 L，包括 singleton。R_K 的像只包含于闭凸包，未声称满射该凸包。graph-maximal 不是极大单调，不授予 PPA 真 EB、收敛、回缩、degree 数值或外部先行性。[Goebel2016先行桥](research/novelty/2026_10_09/structure_prior_art.md)已覆盖严格直径余量的紧固定集实现，候选差别收紧到精确最小 Hölder 预算和边界达到性；正式附件 Lipschitz 单值 F 加强本轮未接收。
 
 ## C05-v1 · 原关系局部值域的有限数据拓扑证书（9/25 稿候选）
 
@@ -1795,7 +1795,7 @@
 - **Exact Statement / Objects / Domain**：每个 a>1 的 ℝ³ 完整 G_a(w)={(-ℓ_a(4y),0,3y),(-ℓ_a(4y),0,-5y)}，y≥0；负 y 空。固定 λ=1，g(z)=exp(ic/|z|)z、g(0)=0，v=(g⁻¹ tangential,y)、F_a=G_a∘v，c>0；ℓ_a 为明示凹延拓。完整单值 warped coverage、核 RL、真残差与小窗严格兼容成立。
 - **Conclusion**：g 及 g⁻¹ 的两点最佳零邻域 Hölder 指数为1/2（对零单点保径且 Lipschitz）；完整 log 核 Dini 门 a>1。取 yₖ=4⁻ᵏy₀、ρₖ=∑_{j≥k}ℓ_a(yⱼ)、xₖ=(g(-ρₖ),yₖ)，核有限长且物理点趋0；1<a<2 的物理步∼c(a−1)/k，长度无限。a=2 明确校准 c=π/(log4)² 仍无限；a>2 半径可和故有限长。此校准完整族的物理长度门恰 a>2，匹配半阶复合 Dini。全输入有显式连续极限回缩。
 - **Definitions / Dependencies / Evidence**：[GP28–40 完整证明](research/comparisons/2026_08_gppa_nfb/gppa_physical_transfer.md#gp-spiral)、C10 凹剖面、[独立审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。有限积分剩余界和弦长反代仅作佐证。
-- **Counterevidence / Scope**：[F56](FAILED_ROUTES.md#f56)是 C210 无复合步门的障碍；a=2 任意 c 可能共振，不能省略校准。真残差公式只在非空 y≥0 纤维有限；全域零距离是 |y|。点/回缩不意味着物理有限长。
+- **Counterevidence / Scope**：[F56](FAILED_ROUTES.md#f56)是 C210 无复合步门的障碍；[C219](#c219)已精确分类a=2任意c的共振，不能省略原校准。真残差公式只在非空 y≥0 纤维有限；全域零距离是 |y|。点/回缩不意味着物理有限长。
 
 <a id="c215"></a>
 ## C215-v1 / GP-REFORM · 二维完整超线性族的正盆地线性共轭与坐标阶边界
@@ -1810,12 +1810,12 @@
 <a id="c216"></a>
 ## C216-v1 / GP-REG · 正则化持续误差的原残差抵消、距离管与源 T4 包含
 
-- **Status**：`derived-checked`；主代理完整重构，精确向量反代、源 PDF 公式目读与退化审查；无新增子代理审查，全球先行性未核。
+- **Status**：`derived-checked`；主代理完整重构，精确向量反代、源 PDF 公式目读与退化审查；首次接收无新增子代理审查；后续团队复核见新颖性报告，全球先行性未核。
 - **Exact Statement / Objects / Domain / Assumptions**：任意实 Hilbert H、完整 F、全域 L-Lipschitz 核 v（L≥0）且 (F,v) 全图 pair-monotone；λ,ε>0、δ≥0；S=zer F 与 Sε=zer(F+εv) 非空，a=inf_S||v||；F⁻¹ 的 R-continuity 具有残差半径σ及非减ρ，ρ(0)=ρ(0+)=0。每条已存在合法 xₖ₊₁=hat xₖ₊₁+eₖ₊₁、||e||≤δ、v(xₖ)−v(hat xₖ₊₁)∈λ(F(hat xₖ₊₁)+εv(hat xₖ₊₁))。任意初值存在另加正则化 warped coverage。
 - **Conclusion / Quantifiers**：正则化核零值cε唯一且||cε||≤a；q=(1+λε)⁻¹、Dₖ=||v(xₖ)−cε|| 满足Dₖ≤qᵏD₀+Lδ(1−qᵏ)/(1−q)。实际原图值fₖ₊₁有||f||≤Dₖ/λ+εa。b=Lδ(1+λε)/(λ²ε)+εa<σ 给limsup d(xₖ,S)≤δ+ρ(b+)；右连续可去+。δ=ε²给bε=Lε/λ²+Lε²/λ+εa，低于源印Bε=4Lε/λ²+3Lε²/λ+εa。L>0利用严格裕度恢复ρ(Bε)而不补正点连续；L=0直接用真实值−εc。每个小ε的合法轨道族给原源T4双极限0。
 - **Definitions / Dependencies**：原图值在hat x而不是误差后的x；RS1–13保留所有完整纤维和物理误差。零锚抵消平方是独立证明，核卷积为C213机制的正则化特例。源2608.01584v1 Lemma3、T4仅作比较，不补存在门。[完整证明](research/canonical/gppa_regularized_stability.md#grs-data)。
 - **Evidence / Related Files**：[抵消](research/canonical/gppa_regularized_stability.md#grs-proof)、[jump-gauge与T4包含](research/canonical/gppa_regularized_stability.md#grs-tube)、[Fraction枚举/反代](research/code/gppa_scope/README.md)、[本轮实际范围](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-receipt)。
-- **Counterevidence / Scope**：不要求ρ正点连续；+不能无条件删。较小残差预算不保证有平台的ρ给严格较小距离管。不保证物理点或长度，不是逐步εₖ→0算法，不自动包含源T1、其它表示或整篇外文。C213原对象和原稿范围不被改写。
+- **Counterevidence / Scope**：不要求ρ正点连续；+不能无条件删。较小残差预算不保证有平台的ρ给严格较小距离管。不保证物理点或长度，不是逐步εₖ→0算法，不自动包含源T1、其它表示或整篇外文。C213原对象和原稿范围不被改写。[团队先行攻击](research/novelty/2026_10_09/stability_review.md)已核普通Id角有更早物理管，C216非全局最佳；有逆核时另接[C220](#c220)，无逆核时保留本原残差管。
 
 <a id="c217"></a>
 ## C217-v1 / GP-SATURATION · 保真改写饱和后的存在性严格分离与全球先行性
@@ -1826,3 +1826,30 @@
 - **Dependencies / Evidence**：C209固定核源T2包含，C204/C211同完整图障碍，C205–C207删支导入，C215全正盆地共轭，C216源T4稳定性补充；[量词合同](research/canonical/gppa_reformulation_boundary.md#grb-contract)与[有界先行检索](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations)。
 - **Counterevidence / Objections**：现有cap/SF/log收敛见证不足以证明任意改写不导入；“已有重合”不足以反驳存在其它非导入实例。一般gauge、warped kernel、标量尾和留域已有先行接口，不能单独作全球创新点。当前缺少共同类和穷尽回代规则。
 - **Scope / Related Files / Next Action**：限固定核局部算法研究，不判正式全尺度结构稿。优先冻结双Lipschitz且保完整纤维的族，再寻找不导入见证；或对一般目标函数桥作逐定理反查，正文与审查入口如上。
+
+<a id="c218"></a>
+## C218-v1 / GP-ALMOST-BRIDGE · 输出真残差的步桥及非 calm 的双 Lipschitz 障碍
+
+- **Status**：`derived-checked`；两次独立重构；最初薄相对域反例已修复复验，不承担全球新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H，同一关系 A、λ>0、非空闭 Z⊂zer A；同一图块有零锚与指定 E 的单值 proximal coverage。全部实际 y=Tz 满足完整真 EB ψ，s=||z−Tz|| 与 s/λ 在同一 gauge 窗。另取 C215 完整二维 SF 的正常输入 z_r=(ξ0,r)→p=(ξ0,0)，ν>1、0<γ<1、A0>0；负面域必须包含该正正常序列，双 Lipschitz H0 在这些输入/输出/锚上合法。
+- **Conclusion**：d(z,Z)≤s+ψ(s/λ)，不需最小残差/最近零点取得；接相对步 EB 还须同目标 Fix T∩Λ 保距离。线性反射 L 给 α=1/2、ε=max{0,(L²−1)/2} 的平方 AA 界，所引 LTT-v2 的 ε<1 只允许 L<√3。SF 实际零锚比至少 A0r^(γ−1)→∞，双 Lipschitz 共轭给 (m/M) 倍下界；因此含该序列的域没有任何固定 α∈(0,1)、有限 violation 的 AA 证书。
+- **Dependencies / Evidence**：[AB1–5 自足证明](research/canonical/gppa_almost_averaged_bridge.md#gab-data)、[源接口实读](research/novelty/2026_10_09/core_prior_art.md)、[独立复核及修复](research/novelty/2026_10_09/new_claim_review.md)、[独立总攻击](research/novelty/2026_10_09/independent_review.md)。
+- **Counterevidence / Scope**：Λ=S 上 T=Id 是 averaged，故不量化任意薄相对域。有限环域斜率不修补整邻管门；不排换 warped 更新、额外核、任意目标函数/升维或一般 homeomorphism。正面残差与线性桥已有先行，不称首创；有限 Fraction 检查不担任全称证明。
+
+<a id="c219"></a>
+## C219-v1 / GP-SPIRAL-RESONANCE · 临界完整 GPPA 的整圈共振充要长度判据
+
+- **Status**：`derived-checked`；两份独立审查分别重构全部相邻逆尾常数、径向主步与无限求和；全球优先性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：保持 C214 的完整 a=2 对数双支 G2、λ=1 与双射 twist 拉回 F2,c=G2∘vc；c∈R，0<y0≤e^−2，h=log4、q=log(e/y0)/h>1、yk=4^−ky0、uk=k+q、ρk=h^−2Σj≥0(uk+j)^−2，指定合法完整轨道 xk=(gc(−ρk),yk)。
+- **Conclusion**：核有限长、物理点趋零；物理长度有限当且仅当 ch²∈2πZ。非共振步∼2|sin(ch²/2)|/(h²uk)，共振步∼1/(h²uk²)。EM 余项与精确 tail-shift 给相邻 inverse-tail 误差≤701/(1800u⁴)；共振实际步≤h^−2u^−2+|c|u^−3+3yk/4，SR15 给显式剩余总长度预算。
+- **Definitions / Dependencies / Evidence**：[SR1–15 完整证明](research/canonical/gppa_spiral_resonance.md#gsr-statement)、[独立敌对审查](research/novelty/2026_10_09/new_claim_review.md)、[独立总审](research/novelty/2026_10_09/independent_review.md)、[源几何先行及范围](research/novelty/2026_10_09/physical_prior_art.md)、[Decimal有限复算](research/code/gppa_novelty/README.md)。
+- **Counterevidence / Scope**：只授予指定临界尾轨道，不分类任意初值或 twist 功率。c=0 是恒等核、最佳指数1；c≠0 的射线半阶已有 Fraser先行。原C214校准c=π/h²仍无限长，原身份不变；共振表明复合Dini是统一充分包络而非个别轨道必要门。
+
+<a id="c220"></a>
+## C220-v1 / GP-REG-INVERSE · 正则化固定零锚的真实输出逆核距离管
+
+- **Status**：`derived-checked`；独立重构 RI1–12、jump-gauge、标量锐管；零维预算比较边界已修并复验。桥与组合，不称首创。
+- **Exact Statement / Objects / Domain / Quantifiers**：沿用 C216 的完整 pair-monotone F,v、全域 L-Lipschitz v、S/Sε 非空、λ/ε>0、δ≥0、a=inf_S||v||、原点 R-continuity 半径σ与非减ρ；每条已存在真实物理误差轨道。追加逆 Lipschitz 门||x−y||≤||v(x)−v(y)||/m，m>0，及独立窗口εa<σ；局部版本须在所用 actual 或 hat 与所选sε的全部点对上预先认证。
+- **Conclusion**：固定真实原值−εcε∈F(sε)给 d(sε,S)≤ρ(εa)，无需ρ正点右连续。actual门给 limsup d(xk,S)≤(Lδ/m)(1+1/(λε))+ρ(εa)；hat门给更紧 δ+Lδ/(mλε)+ρ(εa)。若C216的b<σ亦合法可与δ+ρ(b+)取min；若仅εa<σ合法仍能用本分支。δ(ε)→0且δ/ε→0给合法轨道族双极限0。
+- **Definitions / Dependencies / Evidence**：[RI1–12 自足证明](research/canonical/gppa_regularized_inverse_branch.md#gri-data)、[源T3完整实读及锐子族](research/novelty/2026_10_09/stability_review.md)、[独立接收](research/novelty/2026_10_09/new_claim_review.md)、[复算说明](research/code/gppa_novelty/README.md)。Id核角恢复已读2606.01536v2 §3 T3。
+- **Counterevidence / Scope**：全域门迫单射，不授予满射/coverage。只有actual点对认证不授予hat管；H={0}真实距离0，两预算仍合法但不比较大小。指定仿射对象RI11–12可取等且一般更低，不把本管称逐对象最佳；不推出点收敛/长度，也不改成一条逐步εk算法。

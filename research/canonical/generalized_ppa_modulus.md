@@ -3,6 +3,8 @@
 <a id="gpm-verdict"></a>
 ## 完成结论与精确比较对象
 
+**本轮首创性研究入口**：[团队精确裁决](../novelty/2026_10_09/README.md)、[C218既有接口与非calm障碍](gppa_almost_averaged_bridge.md)、[C219临界共振分类](gppa_spiral_resonance.md)、[C220逆核稳定性分支](gppa_regularized_inverse_branch.md)。单个gauge/核/长度机制已有先行；精确完整非calm组合和共振分类仍是有界查证候选，全球优先性未认证。
+
 **当前补充入口**：[C215改写量词与正盆地共轭](gppa_reformulation_boundary.md)、[C216正则化稳定性](gppa_regularized_stability.md)、[有界先行审查](../audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。本页C208–C214身份保持；源T4正则化距离输出由独立C216补充包含，不冒用C213旧对象。任意改写的总体分离仍开放，现有完整图见证的收敛已有合法改写导入。
 
 **我们的一般模反射几何和真残差理论已经接到固定核的完整 GPPA。** 新条件不是把普通变量机械换一个名字，而是核完整纤维、残差评价域、标量能量、物理提升和留域的合取。保留能量分支后，它涵盖 Le–Mordukhovich–Théra 2608.01584v1 Theorem 2 的全部核收敛实例，并有严格增加的固定核实例。还构造了非线性强单调核下的完整双支族：在同一完整图和指定广义算法上，任意源配对单调核都不能保持这些轨道，而新证书成立。

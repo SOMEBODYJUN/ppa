@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 564 个数学节点、372 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 572 个数学节点、379 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -49,6 +49,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 条件 Markov 残差 | 同步 OT 残差 \(\Psi\) | 同一耦合、目标和回耦损失界 |
 
 ## Claim Map 与 Dependency Graph
+
+**首创性查证已形成可审阅结论**：[团队总报告](research/novelty/2026_10_09/README.md)逐项区分先行机制、固定核严格扩张与精确候选；[C218–C220](CLAIMS.md#c218)给既有接口/非calm保真障碍、完整临界共振分类与逆核稳定性分支。全球优先性未认证，具体源位置、已关闭反例和下一缺口均在报告。
 
 本轮可直接接续：[C208–C214 一般模 GPPA](research/canonical/generalized_ppa_modulus.md)包含完整核关系、direct/energy/anchor 三分支、全部正 ASM 源 T2 核包含、非线性强单调核完整严格例、任意指定精确 Q-ν、壳层弱 EB、物理复合 Dini 锐门及误差管；[独立受检范围](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)与[可复算代码](research/code/gppa_modulus/README.md)同时保存。比较固定完整图/算法和 T2 假设类，不宣称整篇外文或全部改写的绝对优越。
 
@@ -160,11 +162,17 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-固定核GPPA下一步先冻结[C217的允许改写族和物理输出](research/canonical/gppa_reformulation_boundary.md#grb-contract)，再寻找改写饱和后的非导入见证；定量机制的先行性按[逐Claim义务](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations)查证。不要重复把已可导入的cap/SF/log收敛当作任意改图排除；源T4距离稳定性包含门已由C216闭合。
+固定核GPPA下一步按[团队首创性报告的具体义务](research/novelty/2026_10_09/README.md#nov-obligations)取得关键未读全文，核非calm完整定理的nonsmooth/metric桥、C03锐配对及C04精确最小预算的旧构造，并冻结C217保真合同。C218关闭有限AA直接门，C219补完整临界共振，C220吸收较早物理分支；这些进展不提升为任意改写分离或全球首次。
 
 现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：当前先做来源清洗、规范协调和空白接收，按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围；清洗完成后，再开展总体母空间/量尺和原生完整纤维/整窗研究。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
 
 ## File Map
+
+| 新增研究入口 | 用途 |
+| --- | --- |
+| [团队首创性总报告](research/novelty/2026_10_09/README.md) | 六分工一级先行、独立攻击、精确候选与未读范围；固定核算法/全尺度结构分开 |
+| [C218](research/canonical/gppa_almost_averaged_bridge.md)、[C219](research/canonical/gppa_spiral_resonance.md)、[C220](research/canonical/gppa_regularized_inverse_branch.md) | 自足证明与域/窗口/完整纤维量词；各有独立审查 |
+| [可复算代码和结果](research/code/gppa_novelty/README.md) | 标准库精确与高精度算术、指定轨道、脚本/正文hash；不以有限计算证明无穷结论 |
 
 | 仓库根相对完整路径 | 数学资产、目的、何时读取或更新 |
 | --- | --- |

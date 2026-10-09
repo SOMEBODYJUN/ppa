@@ -1,0 +1,91 @@
+{
+  "date_utc": "2026-10-09",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "base_commit": "5726c10083cb2dbaef52e2ec802d89c8fd9d39c1",
+  "records": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/almost_averaged_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "c13d0c1de5676b8d92352f3bde3673c62759b04a7c81d59184339757cffd251b",
+      "stdout": "{\n  \"python\": \"3.12.14\",\n  \"seed\": null,\n  \"arithmetic\": \"fractions.Fraction, exact; deterministic finite enumeration\",\n  \"identity_cases\": 216,\n  \"sharp_bridge_cases\": 48,\n  \"noncalm_boundary\": [\n    {\n      \"r\": \"1/4\",\n      \"noncalm_lower_ratio\": \"2\"\n    },\n    {\n      \"r\": \"1/16\",\n      \"noncalm_lower_ratio\": \"4\"\n    },\n    {\n      \"r\": \"1/256\",\n      \"noncalm_lower_ratio\": \"16\"\n    },\n    {\n      \"r\": \"1/65536\",\n      \"noncalm_lower_ratio\": \"256\"\n    },\n    {\n      \"r\": \"1/4294967296\",\n      \"noncalm_lower_ratio\": \"65536\"\n    },\n    {\n      \"r\": \"1/18446744073709551616\",\n      \"noncalm_lower_ratio\": \"4294967296\"\n    }\n  ],\n  \"source_violation_domain\": [\n    {\n      \"L\": \"0\",\n      \"epsilon\": \"0\",\n      \"admitted_definition_2_3\": true\n    },\n    {\n      \"L\": \"1\",\n      \"epsilon\": \"0\",\n      \"admitted_definition_2_3\": true\n    },\n    {\n      \"L\": \"3/2\",\n      \"epsilon\": \"5/8\",\n      \"admitted_definition_2_3\": true\n    },\n    {\n      \"L\": \"7/4\",\n      \"epsilon\": \"33/32\",\n      \"admitted_definition_2_3\": false\n    },\n    {\n      \"L\": \"2\",\n      \"epsilon\": \"3/2\",\n      \"admitted_definition_2_3\": false\n    }\n  ],\n  \"source_sha256\": \"33aa60c4e1ec7a23362b989d1b4a44d5d8cd54ea8d556335f040215ee73d5750\",\n  \"scope\": \"Finite algebra and representative boundaries; no universal proof or priority certification.\",\n  \"all_checks_passed\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/core_prior_art_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "2604349fc1ac6e044ff6d77278badc7388ba8001ba6014a1d73727bc19f8e129",
+      "stdout": "{\n  \"linear_reduction\": [\n    {\n      \"L\": \"1/2\",\n      \"epsilon_alpha_half\": \"0\",\n      \"submonotonicity_tau\": \"0\",\n      \"in_LTT_v2_epsilon_range\": true\n    },\n    {\n      \"L\": \"1\",\n      \"epsilon_alpha_half\": \"0\",\n      \"submonotonicity_tau\": \"0\",\n      \"in_LTT_v2_epsilon_range\": true\n    },\n    {\n      \"L\": \"3/2\",\n      \"epsilon_alpha_half\": \"5/8\",\n      \"submonotonicity_tau\": \"5/16\",\n      \"in_LTT_v2_epsilon_range\": true\n    },\n    {\n      \"L\": \"2\",\n      \"epsilon_alpha_half\": \"3/2\",\n      \"submonotonicity_tau\": \"3/4\",\n      \"in_LTT_v2_epsilon_range\": false\n    }\n  ],\n  \"shell_vs_naive\": {\n    \"q\": \"3/5\",\n    \"LM2012_distance_power\": \"3/4\",\n    \"shell_series_power\": \"1/3\"\n  },\n  \"SF_anchor\": [\n    {\n      \"r\": \"0.01\",\n      \"output_input_ratio\": \"10.00000000049999999998750000000062499999996093750000273437499979492188\",\n      \"epsilon_needed_alpha_half\": \"199.99980002\"\n    },\n    {\n      \"r\": \"0.0001\",\n      \"output_input_ratio\": \"100.0000000000000000004999999999999999999987500000000000000000062500000\",\n      \"epsilon_needed_alpha_half\": \"19999.9999999800000002\"\n    },\n    {\n      \"r\": \"1E-8\",\n      \"output_input_ratio\": \"10000.00000000000000000000000000000000000050000000000000000000000000000\",\n      \"epsilon_needed_alpha_half\": \"199999999.99999999999999980000000000000002\"\n    },\n    {\n      \"r\": \"1E-12\",\n      \"output_input_ratio\": \"1000000.000000000000000000000000000000000000000000000000000000500000000\",\n      \"epsilon_needed_alpha_half\": \"1999999999999.999999999999999999999998000000000000000000000002\"\n    }\n  ],\n  \"LMZ_shrinking_log_obstruction\": [\n    {\n      \"log_inverse_t\": 10,\n      \"uniform_sum_ratio_lower_bound\": \"10\"\n    },\n    {\n      \"log_inverse_t\": 100,\n      \"uniform_sum_ratio_lower_bound\": \"100\"\n    },\n    {\n      \"log_inverse_t\": 1000,\n      \"uniform_sum_ratio_lower_bound\": \"1000\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/spiral_resonance_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "9cd32e8b60a08012b81099e24e3b1bb70c6bd132711f6845d6d5556f6519170f",
+      "stdout": "{\n  \"result\": \"passed\",\n  \"residual_checks\": 12,\n  \"step_checks\": 72,\n  \"maximum_em_truncation_bound\": \"3.528919501234482714E-83\",\n  \"q3_final_ratios\": {\n    \"zero\": \"1.000000000000000000E+0\",\n    \"calibrated_half_turn\": \"1.000000001665667112E+0\",\n    \"one_full_turn\": \"1.000000001369956277E+0\",\n    \"two_full_turns\": \"1.000000005479825097E+0\",\n    \"negative_full_turn\": \"1.000000001369956277E+0\",\n    \"off_resonance\": \"1.000000108155305120E+0\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/stability_review.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "b632db509fd79397ba6b2d1736caf5074d62ffc44c3d117576a76be5ae9f5ef8",
+      "stdout": "{\n  \"exact_checks\": {\n    \"affine_exact_distance\": \"221/1100\",\n    \"affine_exact_residual\": \"21/110\",\n    \"earlier_t3_distance\": \"31/100\",\n    \"c216_distance\": \"8/25\",\n    \"actual_minus_hat_noise\": \"1/200\"\n  },\n  \"skew_family\": [\n    {\n      \"alpha\": 1.0001,\n      \"lambda_beta_at_maximum\": 0.01414390342161658,\n      \"skew_sharp_residual\": 3.0306849132448597,\n      \"c216_residual\": 428.61428571433294\n    },\n    {\n      \"alpha\": 1.01,\n      \"lambda_beta_at_maximum\": 0.14319221347545405,\n      \"skew_sharp_residual\": 0.30531388800736464,\n      \"c216_residual\": 4.328571428571425\n    },\n    {\n      \"alpha\": 1.1,\n      \"lambda_beta_at_maximum\": 0.5040833264451426,\n      \"skew_sharp_residual\": 0.10287414825411065,\n      \"c216_residual\": 0.47142857142857103\n    },\n    {\n      \"alpha\": 2.0,\n      \"lambda_beta_at_maximum\": 3.4641016151377544,\n      \"skew_sharp_residual\": 0.049487165930539354,\n      \"c216_residual\": 0.08571428571428572\n    },\n    {\n      \"alpha\": 10.0,\n      \"lambda_beta_at_maximum\": 99.498743710662,\n      \"skew_sharp_residual\": 0.04307304922539481,\n      \"c216_residual\": 0.04761904761904762\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/structure_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "4190c3ebb36378f0d5731d9700dbb3f87b327ff4e33ea7123389d9736d420c27",
+      "stdout": "1/4 0.7071067811865475 4.233069471915198 7.999999999999999\n1/2 0.7071067811865476 8.0 24.0\n3/4 0.7071067811865475 18.962962962962962 227.55555555555554\n1 0.5\n2 0.5773502691896257\n100 0.7035975447302919\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_modulus/verify.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "bb2cb02795e16b24df835ab9b4441ce67c4538cd7cb763bc132bedb5d64120d6",
+      "stdout": "{\"status\": \"PASS\", \"check_groups\": 6, \"output\": \"research/code/gppa_modulus/results.json\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_scope/verify.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "5d1cebcd974a5830f40eb5b0d3841c39da35f98278849fe0b02a0c38f41b2a92",
+      "stdout": "{\"status\": \"PASS\", \"conjugacy_cases_per_precision\": 96, \"cancellation_cases\": 1161, \"scalar_cases\": 216}\n",
+      "stderr": ""
+    }
+  ],
+  "source_sha256": {
+    "research/novelty/2026_10_09/independent_review.md": "8f1cf58d166a33540421130c779a7619238530becc37380041eafbcab443c9f9",
+    "research/novelty/2026_10_09/README.md": "e04d545b3f101a4d9e4062fc9d28ab30ca7d1ffabf822cc62713b6d97822c30c",
+    "research/novelty/2026_10_09/stability_review.md": "ebe665f809289e650b02dafd4fd39cf0b86480ba072ca9fb6a69fc5ff04f2a6f",
+    "research/novelty/2026_10_09/physical_prior_art.md": "0c185c35671981599259f0f3b3450aff3a192ef5330d9afb350fbf859b06e6e0",
+    "research/novelty/2026_10_09/structure_prior_art.md": "80fff4e1d34540723bd3122d04457550ed7150ab9103cd7146355d777fd00bb0",
+    "research/novelty/2026_10_09/new_claim_review.md": "511e9d6db2c1761654dc9624fbe2fd9b3d36b49e97f78fbc3f334cf6eecac514",
+    "research/novelty/2026_10_09/core_prior_art.md": "e4fc867e821006885a64a141db47f0725895a729c7904278c0948a1e449f690a",
+    "research/canonical/gppa_almost_averaged_bridge.md": "33aa60c4e1ec7a23362b989d1b4a44d5d8cd54ea8d556335f040215ee73d5750",
+    "research/canonical/gppa_spiral_resonance.md": "59cfd51c26bb07d580e1c9919f940bd8452b2876d54e003a340d010a6ea40c3a",
+    "research/canonical/gppa_regularized_inverse_branch.md": "6f7c5d7c20baeacb936508f1bebc6964d2f249379ff6a9fc7afc5febc2239cd5"
+  },
+  "evidence_scope": "Finite arithmetic evidence, not proof of general claims or global novelty."
+}

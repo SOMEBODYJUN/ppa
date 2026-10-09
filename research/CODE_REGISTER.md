@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## 本轮新增：GPPA 首创性核查与精确边界
+
+[gppa_novelty/README.md](code/gppa_novelty/README.md)登记 C218–C220 与先行比较中的五个标准库有限复算程序，精确Fraction/Decimal与binary64范围分别声明。[verification.json](code/gppa_novelty/verification.json)给实际命令、版本、退出码和hash。脚本检查显示恒等式、指定轨道、共振余项常数和锐线性子族；不认证全球首创或任意非线性关系锐性。
+
 此登记只让代码可找、可复跑、可判断证据范围。原程序保留在 `history/sources/`，不是规范证明或自动升级的定理。新计算若有长期价值，按 [增长协议](../RESEARCH_PROTOCOL.md) 写入 `research/code/<topic>/` 并保存参数、seed、依赖、精度和输出。
 
 [完整运行记录](audit/LEGACY_VERIFIER_RUNS.json)含 Python 3.12.14、NumPy 2.3.5、SciPy 1.17.0、每脚本 SHA-256、执行命令、stdout/stderr 与退出码。本轮十个退出码均为 0。

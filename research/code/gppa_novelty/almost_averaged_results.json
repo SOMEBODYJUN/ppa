@@ -1,0 +1,63 @@
+{
+  "python": "3.12.14",
+  "seed": null,
+  "arithmetic": "fractions.Fraction, exact; deterministic finite enumeration",
+  "identity_cases": 216,
+  "sharp_bridge_cases": 48,
+  "noncalm_boundary": [
+    {
+      "r": "1/4",
+      "noncalm_lower_ratio": "2"
+    },
+    {
+      "r": "1/16",
+      "noncalm_lower_ratio": "4"
+    },
+    {
+      "r": "1/256",
+      "noncalm_lower_ratio": "16"
+    },
+    {
+      "r": "1/65536",
+      "noncalm_lower_ratio": "256"
+    },
+    {
+      "r": "1/4294967296",
+      "noncalm_lower_ratio": "65536"
+    },
+    {
+      "r": "1/18446744073709551616",
+      "noncalm_lower_ratio": "4294967296"
+    }
+  ],
+  "source_violation_domain": [
+    {
+      "L": "0",
+      "epsilon": "0",
+      "admitted_definition_2_3": true
+    },
+    {
+      "L": "1",
+      "epsilon": "0",
+      "admitted_definition_2_3": true
+    },
+    {
+      "L": "3/2",
+      "epsilon": "5/8",
+      "admitted_definition_2_3": true
+    },
+    {
+      "L": "7/4",
+      "epsilon": "33/32",
+      "admitted_definition_2_3": false
+    },
+    {
+      "L": "2",
+      "epsilon": "3/2",
+      "admitted_definition_2_3": false
+    }
+  ],
+  "source_sha256": "33aa60c4e1ec7a23362b989d1b4a44d5d8cd54ea8d556335f040215ee73d5750",
+  "scope": "Finite algebra and representative boundaries; no universal proof or priority certification.",
+  "all_checks_passed": true
+}

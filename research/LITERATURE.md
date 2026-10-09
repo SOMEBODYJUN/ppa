@@ -1,5 +1,24 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-novelty-2026"></a>
+## 团队首创性查证的补充先行接口
+
+本表只登记本次团队实际读取的一手陈述及其范围；[综合判断](novelty/2026_10_09/README.md)与[各分工阅读回执](novelty/2026_10_09/README.md#nov-evidence)区分 paper fact、独立推导、未读全文和优先性义务。不是整篇外部论文的验收。
+
+| 一级来源与实读定位 | 可使用事实及必要门 |
+| --- | --- |
+| [Lauster–Luke 2021](https://link.springer.com/article/10.1186/s13663-021-00698-0)，D13/D15、T16、L17及证明 | 非目标函数的gauge固定点收敛已有；证明中的可和步界直接蕴含有限长度，不能因未另立length theorem忽略 |
+| [Luke–Tam 2025](https://doi.org/10.1287/moor.2023.0334)，P3、L1/L2、T2；[LTT v2](https://arxiv.org/html/1605.05725v2)，D2.3/P2.4/T2.18 | 线性反射到almost-firm/submonotone及完整原图真残差到步EB的接口已存在。v2 ε<1与整邻管AA门独立；[C218](canonical/gppa_almost_averaged_bridge.md)给精确代换和非calm障碍 |
+| [Le–Mordukhovich–Théra 2606.01536v2](https://arxiv.org/html/2606.01536v2)，2026-09-08，§3 T3完整陈述/证明 | 普通极大单调、Id核、原点R-continuity下持续Tikhonov误差管δ(1+1/(λε))+ρ(εa)。本次未取得v1定理，不倒推同式至June；[C220](canonical/gppa_regularized_inverse_branch.md)是明确逆核组合 |
+| [Le 2311.13096v1](https://arxiv.org/pdf/2311.13096)，T1、Eq12–17 | 普通极大单调Tikhonov零点范数及真实固定原值上的ρ(εa)偏移；不自动覆盖任意非单射warped核 |
+| [Fraser 1905.07563v1](https://arxiv.org/pdf/1905.07563)，T2.3/§3 | 射线r exp(i/r)锐半阶已有；其curve→interval inverse与平面反向twist不同，不自动给完整GPPA编码/离散共振 |
+| [Chrontsios-Garitsis–Vellis 2502.18788v3](https://arxiv.org/html/2502.18788v3)，T1.1/P2.1/T3.1 | 连续arc的s-variation及整圈半径求和条件；连续弧无限长不授予指定离散采样无限长 |
+| [Levy–Rice 1983](https://dml.cz/bitstream/handle/10338.dmlcz/106224/CommentatMathUnivCarol_024-1983-2_6.pdf)，L4 p258、T3 p260、Cor2 p261；[Ajiev 2014 II](https://emj.enu.kz/index.php/main/article/download/569/371/908)，L10.1 p29 | Hölder/uniformly continuous映射的Lipschitz一致逼近已有；幂模网特化加Cayley直接推出同一个原输入/输出有限误差强单调影子，常数较粗 |
+| [Ciosmak 2402.14699v2](https://arxiv.org/pdf/2402.14699v2)，T1.2 pp2–3/T1.3 pp4–5；[2607.17672v1](https://arxiv.org/pdf/2607.17672)，T1.1 pp2–3 | barycentric参照门下保距扩张；2026必要性补全。合格零参照退回Kirszbraun，加指定lift直接给C03 cross，不可用raw Hölder参照失败声称排全部导入 |
+| [Goebel 2016](https://www.cs.ubbcluj.ro/journal/studia-mathematica/journal/article/view/159/pdf)，Claim1 pp431–432 | 闭有界凸Q中的任意非空闭K有(1+η)-Lipschitz自映射、Fix恰K；投影后预算(1+η)^γD^(1−γ)，覆盖C04严格余量。精确边界不能由一致极限自动推出 |
+
+Wang–Li–Ng 2023 DOI [10.1137/22M152147X](https://epubs.siam.org/doi/10.1137/22M152147X)、Zaslavski2010 DOI [10.1137/090766930](https://epubs.siam.org/doi/10.1137/090766930)仅取得官方摘要；这里只登记线索和获取边界，不作具体定理导入。核心LM2012/LMZ2024、KL/variation的详细实读条件见分报告。所有全球首创判断仍开放。
+
 本页只把已经读到原文的**确切语句**与本项目的解释分开记录。文献事实不证明项目稿件中的其他前提，也不判定新颖性。后续新增文献时给版本、页码、原定理假设和逐项对象映射。
 
 <a id="lit-august-gppa-nfb"></a>

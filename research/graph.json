@@ -2999,14 +2999,14 @@
     },
     {
       "id": "GP-PRIORITY-READ",
-      "label": "有界一级文献检索及实际阅读层",
-      "file": "audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-scope",
+      "label": "团队实读一级先行与已闭具体桥",
+      "file": "novelty/2026_10_09/README.md#nov-prior",
       "evidence_status": "canonical"
     },
     {
       "id": "GP-PRIORITY-OPEN",
-      "label": "C217逐Claim全球先行性未认证",
-      "file": "audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations",
+      "label": "C217精确Claim优先性及未读源义务",
+      "file": "novelty/2026_10_09/README.md#nov-obligations",
       "evidence_status": "open"
     },
     {
@@ -3014,6 +3014,54 @@
       "label": "C217保真改写饱和类存在性分离开放",
       "file": "canonical/gppa_reformulation_boundary.md#grb-verdict",
       "evidence_status": "open"
+    },
+    {
+      "id": "GP-EB-STEP",
+      "label": "C218完整真残差到输入步EB",
+      "file": "canonical/gppa_almost_averaged_bridge.md#gab-residual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-AA-LINEAR",
+      "label": "C218线性反射与AA/submonotone接口",
+      "file": "canonical/gppa_almost_averaged_bridge.md#gab-linear",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-NONCALM-DATA",
+      "label": "完整SF正常输入序列及双Lipschitz合法域",
+      "file": "canonical/gppa_almost_averaged_bridge.md#gab-obstruction",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-AA-OBSTRUCTION",
+      "label": "C218正常序列上的AA非calm障碍",
+      "file": "canonical/gppa_almost_averaged_bridge.md#gab-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-RESONANCE-DATA",
+      "label": "临界完整log轨道/任意c/对数段初值",
+      "file": "canonical/gppa_spiral_resonance.md#gsr-statement",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-RESONANCE",
+      "label": "C219临界整圈共振iff物理有限长",
+      "file": "canonical/gppa_spiral_resonance.md#gsr-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-REG-INVERSE-DATA",
+      "label": "实际hat零锚逆核门及独立εa窗",
+      "file": "canonical/gppa_regularized_inverse_branch.md#gri-data",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-REG-INVERSE",
+      "label": "C220真实hat逆核管及合法min分支",
+      "file": "canonical/gppa_regularized_inverse_branch.md#gri-proof",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -7342,6 +7390,89 @@
       "relation": "limits",
       "scope": "C216正面源T4包含和更紧残差预算不等于全球新颖或全篇/任意表示严格支配；C215限制现有见证的改写非导入性，C209/C211原固定对象身份保留。",
       "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E373",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-OBJECT",
+        "GP-DATA"
+      ],
+      "output": "GP-EB-STEP",
+      "relation": "conditional",
+      "scope": "同一图块输出真EB及s/λ合法窗，d(z,Z)≤s+ψ(s/λ)；导入相对FixT∩Λ步EB另须目标保距离，不把延长gauge当域外EB。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E374",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-DATA"
+      ],
+      "output": "GP-AA-LINEAR",
+      "relation": "conditional",
+      "scope": "仅在线性反射ω(t)=Lt的所用点对，α=1/2、ε=max(0,(L²−1)/2)；所引LTT-v2定义ε<1故L<√3，更大L只保代数界而不授予该源定理。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E375",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-NONCALM-DATA"
+      ],
+      "output": "GP-AA-OBSTRUCTION",
+      "relation": "conditional",
+      "scope": "ν>1、0<γ<1、A0>0；域包含正正常z_r→p，原T零锚比≥A0r^(γ−1)；双Lipschitz在这些输入/输出/锚上合法时保(m/M)下界。薄域Λ=S不在否定范围。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E376",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-OBJECT",
+        "GP-RESONANCE-DATA"
+      ],
+      "output": "GP-RESONANCE",
+      "relation": "conditional",
+      "scope": "保持a=2完整双支及指定负射线核尾，0<y0≤e^−2、任意固定c∈R；物理长度有限iff c(log4)²∈2πZ，非共振调和、共振径向平方主步及SR15余尾。c=0恒等核；不量化任意物理初值。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E377",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-REG-DATA",
+        "GP-REG-INVERSE-DATA"
+      ],
+      "output": "GP-REG-INVERSE",
+      "relation": "conditional",
+      "scope": "每条已存在合法轨道，hat与固定sε全点对逆门m及εa<σ给δ+Lδ/(mλε)+ρ(εa)；actual-only门只给RI6。无正点连续，存在/coverage独立，不授予非单射核。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E378",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-REG-INVERSE",
+        "GP-REG-TUBE"
+      ],
+      "output": "GP-STRICT-SCOPE",
+      "relation": "limits",
+      "scope": "同对象且两残差窗均合法时取min，逆核分支Id角为已读较早T3；C216降低August印式不等于全类/逐对象最佳或首创。",
+      "status": "derived-checked；正文及独立敌对重构，全球优先性未核"
+    },
+    {
+      "id": "E379",
+      "topic": "GPPA首创性查证与精确边界",
+      "inputs": [
+        "GP-AA-OBSTRUCTION",
+        "GP-RESONANCE",
+        "GP-PRIORITY-READ"
+      ],
+      "output": "GP-PRIORITY-OPEN",
+      "relation": "open",
+      "scope": "AA直接门有具体障碍、完整共振有新证明；仍须核其它目标/metric桥、结构最小预算及公开优先版本。有限已读源无同式命中不产生全球不存在先行。",
+      "status": "open；精确先行/导入义务未闭"
     }
   ]
 }

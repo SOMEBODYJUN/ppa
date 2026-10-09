@@ -1,0 +1,41 @@
+{
+  "exact_checks": {
+    "affine_exact_distance": "221/1100",
+    "affine_exact_residual": "21/110",
+    "earlier_t3_distance": "31/100",
+    "c216_distance": "8/25",
+    "actual_minus_hat_noise": "1/200"
+  },
+  "skew_family": [
+    {
+      "alpha": 1.0001,
+      "lambda_beta_at_maximum": 0.01414390342161658,
+      "skew_sharp_residual": 3.0306849132448597,
+      "c216_residual": 428.61428571433294
+    },
+    {
+      "alpha": 1.01,
+      "lambda_beta_at_maximum": 0.14319221347545405,
+      "skew_sharp_residual": 0.30531388800736464,
+      "c216_residual": 4.328571428571425
+    },
+    {
+      "alpha": 1.1,
+      "lambda_beta_at_maximum": 0.5040833264451426,
+      "skew_sharp_residual": 0.10287414825411065,
+      "c216_residual": 0.47142857142857103
+    },
+    {
+      "alpha": 2.0,
+      "lambda_beta_at_maximum": 3.4641016151377544,
+      "skew_sharp_residual": 0.049487165930539354,
+      "c216_residual": 0.08571428571428572
+    },
+    {
+      "alpha": 10.0,
+      "lambda_beta_at_maximum": 99.498743710662,
+      "skew_sharp_residual": 0.04307304922539481,
+      "c216_residual": 0.04761904761904762
+    }
+  ]
+}
