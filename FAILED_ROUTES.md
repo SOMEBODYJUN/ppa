@@ -456,3 +456,11 @@
 - **尝试 / 致命门**：对非零局部极小点假定inactive阈值等号能产生稳定退化，或由1<p≤3/2局部极小点自动PD声称全部驻点非退化、任意初始化PPA到极小点。
 - **真实反驳**：[C224证明](research/topics/sparse_recovery/automatic_regularity.md#sr-object)阈值等号时激活坐标使DeltaPhi=0.5||A_j||²t²−eta[(R^p+t^p)^(1/p)−R]<0；所以等号不能出现在非零局部极小点。另一方面[同模型明确驻点反例](research/topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps)给正定Gram、p=3/2、H=diag(0,alpha)且非零三阶项的非极小驻点。
 - **salvage / 边界**：量词固定为非零局部极小点；算法保证固定经认证球内初值。零列给平坦极小ray的精确反例，原点需另算。没有证明非极小驻点的吸引basin，也没有证明全局或几乎处处收敛到极小点。
+
+
+<a id="f66"></a>
+## F66 · 将径向极小化曲线当作真实PPA不变曲线
+
+- **尝试 / 关键机制**：在p=7/4二维退化严格极小例中，先径向消元获得h_*(t)=−3t²/32+O(t⁴)，再假定PPA每步落在此曲线，以 reduced 四次目标直接推真实轨道。
+- **精确断点**：曲线上varphi_h=0使真实prox输入/输出的h相等，但t输入=t输出+(lambda/2)varphi_t>t输出>0；h_*'(t)<0使两端不能同时在曲线上。负t对称。inverse-prox输入临界h差为−39lambda R t⁴/4096+O(t⁶)，明确非零。见[非不变证书](research/topics/sparse_recovery/sharp_instance_dynamics.md#sd-critical-not-invariant)。失败是算法对象被换成标量消元迭代，并非慢尾本身错误。
+- **Honest salvage / 已闭修补**：临界曲线仍给1/3指数的反向见证与 reduced 四次系数；C227真实二维方程先留域，再从不预设有界的w_k=h_k/t_k²得到affine渐近收缩，证明w_k→−3/32，随后才推真实k^(−1/2)尾及常数。径向轴单列，不扩张到全部上侧模型或任意初始化。

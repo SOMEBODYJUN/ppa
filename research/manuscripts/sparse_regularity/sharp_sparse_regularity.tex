@@ -1,0 +1,822 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\zer}{\operatorname{zer}}
+\newcommand{\prox}{\operatorname{prox}}
+\newcommand{\Id}{\operatorname{Id}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\title{A sharp automatic Hessian threshold and complete proximal dynamics\\for least-squares norm-difference regularization}
+\author{PPA research project}
+\date{October 9, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For least-squares regularization by $\norm{x}_1-\norm{x}_p$, we prove
+that every nonzero local minimum has a positive definite active Hessian
+when $1<p\le3/2$, assuming only that the sensing matrix has no zero
+columns. A moment identity excludes null directions below the threshold;
+at its endpoint the quartic equality case is excluded by a negative
+sixth-order objective term. For every $3/2<p<2$, an invertible
+ two-dimensional example has a strict local minimum with singular active
+Hessian. Strict complementarity and support independence have wider
+ranges and are stated separately. An explicit common radius and positive
+step interval certify the complete limiting-subdifferential resolvent,
+including exclusion of every remote output, equality with the global
+proximal map, identification, invariance, and variable-step local linear
+convergence. For a specified $p=7/4$ example we obtain the sharp true
+residual exponent $1/3$ and an exact $k^{-1/2}$ asymptotic for the actual
+complete proximal iteration, with a separate geometric law on the radial
+axis. No invariance of the radial critical curve is assumed.
+\end{abstract}
+
+\section{Model, scope, and relation to earlier work}
+Let $A\in\mathbb R^{m\times n}$, $b\in\mathbb R^m$, and $\eta>0$.
+Throughout the structural statements, every column of $A$ is nonzero.
+For $p>1$ set
+\begin{equation}\label{eq:model}
+ \Phi_p(x)=\tfrac12\norm{Ax-b}_2^2+
+ \eta(\norm{x}_1-\norm{x}_p),\qquad F_p=\partial_{\rm lim}\Phi_p,
+ \qquad Q=A^TA,\quad c=A^Tb.
+\end{equation}
+Here $\partial_{\rm lim}$ denotes the limiting subdifferential. The
+least-squares compatibility $c=A^Tb$ is retained, including for singular
+$Q$. For every $\lambda>0$ we use the complete relation
+\begin{equation}\label{eq:complete}
+ J_{\lambda F_p}(z)=\{y\in\mathbb R^n:z-y\in\lambda F_p(y)\},
+ \qquad r_{F_p}(x)=\dist(0,F_p(x)).
+\end{equation}
+Its outputs are unrestricted until an exclusion argument localizes them.
+The global proximal map is the set of global minimizers of
+$\Phi_p(y)+\norm{y-z}^2/(2\lambda)$; for a nonconvex function it need
+not equal \eqref{eq:complete} without proof. All norms without subscripts
+on points, matrices, or gradients are Euclidean norms or their operator
+norms.
+
+The norm-difference model is established prior work. Wang's penalty
+formulation includes $\ell_1-\epsilon\ell_r$ for $r>1$\cite{WangPenalty}.
+Wang--Zhang study $1<p\le2$ and a smoothed neural optimization
+method\cite{WangZhang}; Huo--Chen--Ge--Ng study
+$\ell_1-\beta\ell_q$ and recovery estimates\cite{Huo}.
+Support-column independence for the $p=2$ constrained and penalized models
+is already given by Yin--Lou--He--Xin, Theorems~2.3--2.4\cite{Yin};
+we do not present support independence as a new standalone principle.
+Lou--Yan derive a proximal operator and analyze related algorithms for
+$p=2$\cite{LouYan}. The proposed model-specific contribution is the
+universal automatic active-Hessian threshold and its endpoint mechanism.
+The quantitative complete-resolvent conclusions are consequences of
+that structure; ordinary local strong-monotonicity and analytic/KL
+methods remain applicable where their conditions hold.
+
+\paragraph{Priority boundary.}
+The original published 2015 support-independence proofs have been read.
+For Wang--Zhang (2017), the publisher abstract, reference list, and
+Appendix proofs were available, but the main body and theorem statements
+were not. For Huo et al.\ (2023), only the publisher abstract/reference
+list and institutional metadata were available. Accordingly this paper
+makes no claim of certified first publication of the threshold. The
+mathematical statements below do not depend on either inaccessible body.
+The separate source audit records the precise access boundary and
+comparison obligations; inability to retrieve a source is not evidence
+that it contains no matching theorem.
+
+\section{Automatic structure and the sharp threshold}
+\begin{theorem}\label{thm:automatic}
+For \eqref{eq:model} with no zero columns of $A$, the following statements
+hold at every nonzero local minimum $\bar x$, with $I=\supp\bar x$.
+\begin{enumerate}
+\item For $1<p<2$, strict complementarity is automatic:
+$|(Q\bar x-c)_j|<\eta$ for every $j\notin I$.
+\item For every $p>1$, $A_I$ has linearly independent columns.
+\item For $1<p\le3/2$, the active Hessian
+\begin{equation}\label{eq:activeH}
+ H_I=Q_{II}-\eta\nabla^2\norm{\bar x_I}_p
+\end{equation}
+is positive definite. In particular $|I|\le\operatorname{rank}A$.
+\end{enumerate}
+The exponent $3/2$ in item~3 is sharp in $(1,2)$: for each
+$3/2<p<2$, there is a two-dimensional example with invertible $A$
+and a nonzero strict local minimum whose active Hessian is singular.
+\end{theorem}
+\begin{proof}[Strict complementarity]
+At a nonzero point the $p$-norm is $C^1$, including at zero coordinates,
+and the exact smooth sum rule gives
+\begin{equation}\label{eq:Fnonzero}
+ F_p(x)=Qx-c+\eta(\partial\norm{x}_1-\nabla\norm{x}_p),\quad x\ne0.
+\end{equation}
+Fermat's rule yields $|(Q\bar x-c)_j|\le\eta$ off $I$.
+If equality holds, choose $\sigma\in\{-1,1\}$ so that
+$\sigma(Q\bar x-c)_j=-\eta$, and let $R=\norm{\bar x}_p>0$.
+For $t>0$ the exact difference is
+\[
+ \Phi_p(\bar x+\sigma t e_j)-\Phi_p(\bar x)
+ =\tfrac12\norm{A_j}^2t^2-
+ \eta\big((R^p+t^p)^{1/p}-R\big).
+\]
+The second term is $-\eta R^{1-p}t^p/p+O(t^{2p})$.
+For $p<2$ this is negative for all sufficiently small positive $t$,
+contradicting local minimality.
+\end{proof}
+\begin{proof}[Support independence]
+On the fixed active face the objective is analytic and the local-minimum
+second-order condition gives $H_I\succeq0$. At a vector all of whose
+active coordinates are nonzero, the Hessian of the $p$-norm is positive
+semidefinite, with kernel precisely the radial line. Indeed, for
+$R=\norm{u}_p$, $w_i=|u_i|^p/R^p$, and $r_i=z_i/u_i$,
+\begin{equation}\label{eq:normkernel}
+ z^T\nabla^2\norm{u}_p z
+ =(p-1)R\left(\sum_iw_i r_i^2-
+                    \left(\sum_iw_i r_i\right)^2\right).
+\end{equation}
+If $A_Iz=0$ for nonzero $z$, positivity of $H_I$ and
+\eqref{eq:normkernel} force $z=a\bar x_I$ for $a\ne0$; hence
+$A\bar x=0$. Dot active stationarity with $\bar x$:
+\begin{equation}\label{eq:radialcompat}
+ 0=\norm{A\bar x}^2-b^TA\bar x+
+                 \eta(\norm{\bar x}_1-\norm{\bar x}_p).
+\end{equation}
+For $|I|\ge2$ the last term is positive. For $|I|=1$,
+$A\bar x=0$ contradicts the nonzero column assumption. Both cases
+exclude $z$. This argument holds for every $p>1$.
+\end{proof}
+\begin{proof}[Positive definiteness up to the endpoint]
+Suppose that $H_I\succeq0$ is singular and choose nonzero
+$z\in\ker H_I$. Apply an orthogonal sign change, assume the active coordinates are positive, and put
+$x_i=|\bar x_i|>0$, $R=(\sum_i x_i^p)^{1/p}$,
+\[
+ w_i=x_i^p/R^p,\quad r_i=z_i/x_i,\quad
+ a=\sum_iw_i r_i,\quad s_i=r_i-a,\quad
+ \mu_k=\sum_iw_i s_i^k.
+\]
+Thus $\mu_1=0$. If $\mu_2=0$, $z$ is radial; norm homogeneity and
+$H_Iz=0$ imply $A\bar x=0$, contradicting
+\eqref{eq:radialcompat} as above. Hence $\mu_2>0$.
+Factor the radial part exactly, for sufficiently small real $t$:
+\[
+ \frac{\norm{\bar x+tz}_p}{R}
+ =(1+at)f\left(\frac{t}{1+at}\right),\qquad
+ f(u)=\left(\sum_iw_i(1+us_i)^p\right)^{1/p}.
+\]
+Writing $f(u)=1+c_2u^2+c_3u^3+c_4u^4+O(u^5)$ gives
+\begin{align}\label{eq:coeffs}
+ c_2&=\tfrac12(p-1)\mu_2,&
+ c_3&=\tfrac16(p-1)(p-2)\mu_3,\nonumber\\
+ c_4&=\tfrac1{24}(p-1)(p-2)(p-3)\mu_4
+                         -\tfrac18(p-1)^3\mu_2^2.
+\end{align}
+Along the original line the cubic coefficient of the norm is
+$c_3-ac_2$. The objective's linear term vanishes by stationarity and
+its quadratic term vanishes since $z\in\ker H_I$. All coefficients
+from degree three onwards are minus $\eta R$ times the corresponding
+norm coefficients. Local minimality on both sides therefore requires
+$a=c_3/c_2$, and the norm's quartic coefficient becomes
+$C_4=c_4-c_3^2/c_2$.
+
+The following exact square identity supplies its sign:
+\begin{equation}\label{eq:pearson}
+ \mu_4-\mu_2^2-\frac{\mu_3^2}{\mu_2}
+ =\sum_iw_i\left(s_i^2-\mu_2-\frac{\mu_3}{\mu_2}s_i\right)^2\ge0.
+\end{equation}
+Substitution in \eqref{eq:coeffs} yields
+\begin{equation}\label{eq:C4}
+ C_4\ge(p-1)\left(
+ \frac{(3-2p)(p+1)}{24}\mu_2^2+
+ \frac{(2-p)(p+1)}{72}\frac{\mu_3^2}{\mu_2}\right).
+\end{equation}
+For $1<p<3/2$ it is strictly positive, so the objective has a negative
+quartic term, a contradiction.
+
+At $p=3/2$ the right side is $5\mu_3^2/(576\mu_2)$.
+If $C_4>0$, the same contradiction applies. Otherwise
+$\mu_3=0$, $\mu_4=\mu_2^2$, and \eqref{eq:pearson} forces
+$s_i^2=\mu_2$ at every coordinate. The values $s_i=\pm d$,
+$d=\sqrt{\mu_2}>0$, have total weight $1/2$ each, and $a=0$.
+The exact norm along the line is consequently
+\begin{align}\label{eq:endpoint}
+ \frac{\norm{\bar x+tz}_p}{R}
+ &=\left(\frac{(1+dt)^{3/2}+(1-dt)^{3/2}}2\right)^{2/3}\nonumber\\
+ &=1+\frac{d^2t^2}4+\frac{d^6t^6}{192}+O(t^8).
+\end{align}
+Its cubic, quartic, and fifth-order terms vanish. After the quadratic
+cancellation, the objective has strictly negative sixth-order coefficient
+$-\eta R d^6/192$, again impossible at a local minimum. Thus $H_I\succ0$.
+\end{proof}
+
+\begin{proposition}\label{prop:sharpfamily}
+For each $3/2<p<2$, let $R=2^{1/p}$,
+$\beta=R(p-1)/2$, $c_4=-(p-1)(2p-3)(p+1)/24<0$, and choose
+\[
+ \alpha>\frac{\beta^2}{-4Rc_4}.
+\]
+Let $Q\succ0$ have eigenvalues $\alpha$ in direction $(1,1)$ and
+$\beta$ in direction $(1,-1)$, and put
+$A=Q^{1/2}$, $\bar x=(1,1)$,
+$c=Q\bar x+(1-R/2)(1,1)$, $b=A^{-T}c$, and $\eta=1$.
+Then $\bar x$ is a strict local minimum, with singular active Hessian.
+It is an isolated stationary point. No local true-residual error bound
+at $\bar x$ has exponent greater than $1/3$.
+\end{proposition}
+\begin{proof}
+Stationarity is immediate; the norm Hessian has radial eigenvalue zero
+and tangent eigenvalue $\beta$. Thus the active Hessian eigenvalues are
+$\alpha$ and zero. Write $x=(1+h+t,1+h-t)$ and let
+$V(h,t)=\Phi(x)-\Phi(\bar x)$. Analytic expansion gives
+\begin{equation}\label{eq:generalquartic}
+ V(h,t)=\alpha h^2+\beta ht^2-Rc_4t^4+
+            O(h^2t^2+|h|t^4+t^6).
+\end{equation}
+The analytic implicit function theorem solves $V_h=0$ as an even
+curve $h=g(t)=-\beta t^2/(2\alpha)+O(t^4)$. Its reduced objective is
+\[
+ V(g(t),t)=Kt^4+O(t^6),\qquad K=-Rc_4-\beta^2/(4\alpha)>0.
+\]
+Shrink the neighborhood so that $V_{hh}\ge\alpha$ and the reduced
+objective is at least $Kt^4/2$. Taylor's integral formula gives
+$V(h,t)\ge\alpha|h-g(t)|^2/2+Kt^4/2$, proving full-space strictness.
+Every nearby stationary point lies on $g$, where the reduced derivative
+is $4Kt^3+O(t^5)$; hence only $t=0$ is stationary after shrinking.
+Along $g$, $\norm{x-\bar x}\sim\sqrt2|t|$ while
+$r_F(x)=|V_t(g(t),t)|/\sqrt2=O(|t|^3)$.
+If $q>1/3$, the quotient $\norm{x-\bar x}/r_F(x)^q$ diverges.
+Stationary isolation makes the same statement valid for distance to the
+entire stationary set in a sufficiently small ball. This proof gives no
+uniform exponent for all models with $p>3/2$.
+\end{proof}
+
+\begin{remark}[Zero columns, the origin, and other stationary points]
+If $A=[0,1]$, $b=0$, and $\eta=1$, every $(a,0)$, $a\ne0$, is a
+local minimum with zero active Hessian: on its active ray the objective
+is constant, and off the ray the positive $|y|$ term dominates the
+negative $O(|y|^p)$ correction. This is a material exception.
+At the origin, examination of both directions on every coordinate axis
+shows that local minimality requires $A^Tb=0$. Conversely, if $A^Tb=0$
+and $A$ has no zero columns, the origin is the unique global minimum:
+the norm-difference is nonnegative, and it vanishes only at one-sparse
+vectors, where the data quadratic is positive. Dotting stationarity
+with a nonzero $x$ excludes every other stationary point. Formula
+\eqref{eq:Fnonzero} must not be used at zero. The theorem's quantifier is
+local minima, not arbitrary stationary points or arbitrary PPA limits.
+For example at $p=3/2$ put $R=2^{2/3}$, $d=R/8$, $\alpha>0$,
+\[
+ Q=\begin{pmatrix}d&-d\\-d&\alpha+d\end{pmatrix},\qquad
+ c=(1-R/2,\alpha+1-R/2),\qquad \bar x=(1,1).
+\]
+Taking $A=Q^{1/2}$ and $b=A^{-T}c$ gives stationarity and
+$H=\operatorname{diag}(0,\alpha)$, but
+$\Phi(\bar x+te_1)-\Phi(\bar x)=Rt^3/32+O(t^4)$.
+It is a stationary nonminimum.
+\end{remark}
+
+\section{An explicit certificate for the complete resolvent}
+Fix any nonzero local minimum in Theorem~\ref{thm:automatic} with
+$1<p\le3/2$. Let $R=\norm{\bar x}_p$, $a_*=\min_{i\in I}|\bar x_i|$,
+$s=|I|$, $C_n=n^{1/p-1/2}$, $C_s=s^{1/p-1/2}$, and
+$h_* =\lambda_{\min}(H_I)>0$. If $I\ne\{1,\ldots,n\}$ set
+\[
+ \delta=\min_{j\notin I}\{\eta-|(Q\bar x-c)_j|\}>0,
+ \qquad B_Q=\max_{j\notin I}\norm{Q_j}.
+\]
+Every condition containing $\delta$ or $B_Q$ is omitted for full support.
+Put
+\[
+ r_0=\min\{a_*/2,R/(2C_n)\},\quad d=a_*/2,\quad N_0=R/2,
+ \quad U=\max_{i\in I}|\bar x_i|+r_0,\quad W=\sqrt{s}\,U^{p-1}.
+\]
+For $s\ge2$, define the finite explicit bound
+\begin{align}\label{eq:LH}
+ L_H=(p-1)\big[&N_0^{1-p}(2-p)d^{p-3}
+ +(p-1)N_0^{-p}C_s d^{p-2}\nonumber\\
+ &+2N_0^{1-2p}W(p-1)d^{p-2}
+ +(2p-1)N_0^{-2p}C_s W^2\big].
+\end{align}
+Choose any positive $\rho$ not exceeding each applicable member of
+\begin{equation}\label{eq:rho}
+ r_0,\qquad \frac{h_*}{2\eta L_H},\qquad
+ \frac{\delta}{4B_Q},\qquad
+ \frac R2\left(\frac{\delta}{4\eta}\right)^{1/(p-1)}.
+\end{equation}
+The $B_Q$ quotient is omitted if $B_Q=0$; the $L_H$ quotient is omitted
+for $s=1$. Set $m=h_*/2$ for $s\ge2$, and
+$m=\norm{A_I}^2$ for $s=1$. Finally set
+\begin{equation}\label{eq:M}
+ L_p=\sqrt n+C_n,\qquad
+ M=\norm{Q\bar x-c}+\norm Q\rho/4+\eta L_p.
+\end{equation}
+
+\begin{theorem}\label{thm:fullprox}
+For any $0<\lambda_-\le\lambda_+$ and $r>0$ satisfying
+\begin{equation}\label{eq:windows}
+ \lambda_+ M<\rho/2,\qquad
+ r<\min\{\rho/4,\lambda_-\delta/2\},
+\end{equation}
+with the second entry omitted for full support, every
+$\lambda\in[\lambda_-,\lambda_+]$ and every $z\in B_r(\bar x)$ have
+exactly one complete resolvent output. It equals the global proximal
+map, has support $I$ and the signs of $\bar x_I$, and obeys
+\begin{equation}\label{eq:linear}
+ \norm{J_{\lambda F_p}(z)-\bar x}
+ \le(1+\lambda m)^{-1}\norm{z-\bar x}<r.
+\end{equation}
+For any $\lambda_k\in[\lambda_-,\lambda_+]$ and $x_0\in B_r(\bar x)$,
+the complete PPA exists uniquely and
+\[
+ \norm{x_k-\bar x}\le(1+\lambda_-m)^{-k}\norm{x_0-\bar x}.
+\]
+In $B_\rho(\bar x)$ the strong true-residual error bound is
+\begin{equation}\label{eq:linearEB}
+ \norm{x-\bar x}\le\max\{1/m,2\rho/\delta\}\,r_{F_p}(x),
+\end{equation}
+with the second constant omitted for full support. In particular
+$\bar x$ is an isolated stationary point and a strict local minimum.
+All constants are computable for the specified data and minimum;
+none is uniform over all models or minima.
+\end{theorem}
+\begin{proof}[Continuity and curvature budgets]
+For $y\in B_\rho(\bar x)$, $\norm y_p\ge R-C_n\rho\ge R/2$.
+Signs of active coordinates are preserved. Off support,
+\[
+ |(Qy-c)_j-\eta\nabla_j\norm y_p|
+ \le |(Q\bar x-c)_j|+B_Q\rho+
+                           \eta(2\rho/R)^{p-1}\le\eta-\delta/2.
+\]
+For active vectors $u$, with $v_i=\operatorname{sign}(u_i)|u_i|^{p-1}$,
+\[
+ \nabla^2\norm u_p=(p-1)
+ \big[\norm u_p^{1-p}\operatorname{diag}(|u_i|^{p-2})
+                  -\norm u_p^{1-2p}vv^T\big].
+\]
+On the active $r_0$ ball, the diagonal-power difference is bounded by
+$(2-p)d^{p-3}\norm{u-\tilde u}$, the vector difference by
+$(p-1)d^{p-2}\norm{u-\tilde u}$, and $\norm v\le W$.
+The norm powers have mean-value constants
+$(p-1)N_0^{-p}C_s$ and $(2p-1)N_0^{-2p}C_s$.
+Apply these bounds to the two products, with
+$\norm{vv^T-\tilde v\tilde v^T}\le2W\norm{v-\tilde v}$.
+This gives exactly \eqref{eq:LH}, hence
+$H_I(u)\succeq m\Id$ by \eqref{eq:rho}. For $s=1$ the active norm is
+linear and its Hessian is identically zero.
+\end{proof}
+\begin{proof}[All outputs, independent existence, and dynamics]
+The penalty $g_p=\norm{\cdot}_1-\norm{\cdot}_p$ is globally
+$L_p$-Lipschitz. Every Fr\'echet subgradient has norm at most $L_p$:
+combine its lower first-order bound in any unit direction with the
+upper Lipschitz difference bound. Limiting subgradients inherit this
+bound. Thus, including at $y=0$, the smooth sum rule gives
+$F_p(y)=Qy-c+\eta\partial_{\rm lim}g_p(y)$ and any complete output
+satisfies $z=y+\lambda(Qy-c+\eta w)$ with $\norm w\le L_p$.
+Consequently
+\begin{align}\label{eq:remote}
+ (\Id+\lambda Q)(y-z)&=\lambda(c-Qz-\eta w),\nonumber\\
+ \norm{y-z}&\le\lambda(\norm{Qz-c}+\eta L_p)\le\lambda M<\rho/2,
+\end{align}
+because $Q\succeq0$ and $\norm{(\Id+\lambda Q)^{-1}}\le1$.
+Every complete output is therefore in $B_{3\rho/4}(\bar x)$,
+where \eqref{eq:Fnonzero} is valid. If $j\notin I$ and $y_j\ne0$,
+the offsupport bound and the resolvent equation give
+\[
+ \operatorname{sign}(y_j)z_j\ge |y_j|+\lambda\delta/2
+ >\lambda\delta/2\ge\lambda_-\delta/2>r,
+\]
+contradicting $|z_j|\le\norm{z-\bar x}<r$.
+All outputs are identified on the active face. Strong monotonicity on
+that face, compared to $\bar x$, gives \eqref{eq:linear}; comparison
+of two outputs at the same input gives uniqueness. No existence was
+presumed in either argument.
+
+Independently, the global proximal objective is continuous and coercive:
+both data loss and penalty are nonnegative and its added quadratic is
+coercive. It attains a global minimum. Fermat's rule places every such
+minimum in the complete resolvent. Thus the resolvent is nonempty and
+the two maps equal the singleton already proved unique. Invariance and
+the variable-step estimate follow by induction.
+
+For the residual bound, a nonzero inactive coordinate forces every
+subgradient's corresponding component to have modulus at least
+$\delta/2$, giving \eqref{eq:linearEB}. On the active face all inactive
+intervals contain zero; the true residual equals the norm of the active
+gradient, which is at least $m\norm{x-\bar x}$ by strong monotonicity.
+This also proves isolation. To prove strictness, take a local-minimum
+neighborhood. An interior point with the same objective value would
+itself be a local minimum and hence stationary, contradicting isolation.
+\end{proof}
+
+\begin{remark}[One completely specified positive interval]
+For the computed $\rho,m,\delta,M$, one may choose
+$\lambda_+=\rho/(4M)$, $\lambda_-=\lambda_+/2$, and
+$r=\min\{\rho/8,\lambda_-\delta/4\}$, omitting the gap entry for full
+support. These choices satisfy all strict inequalities in
+\eqref{eq:windows}. No SOSC, residual error bound, or resolvent
+single-valuedness is assumed in advance.
+\end{remark}
+
+
+\section{A quartic minimum: sharp true residual and complete PPA}
+\begin{theorem}\label{thm:slow}
+
+Fix
+
+\[
+p=7/4,\quad \eta=1,\quad R=2^{4/7},\quad
+Q=\frac R{16}\begin{pmatrix}19&13\\13&19\end{pmatrix},\quad
+\bar x=(1,1),\quad c=(1+3R/2)(1,1),
+\]
+
+and take \(A=Q^{1/2}\), \(b=A^{-T}c\). In particular \(A^TA=Q\), \(A^Tb=c\), and both columns of \(A\) are nonzero. Define on all of \(\mathbb R^2\)
+
+\[
+\Phi(x)=\tfrac12\|Ax-b\|_2^2+\|x\|_1-\|x\|_{7/4},\quad
+F=\partial_{\rm lim}\Phi,\quad S=F^{-1}(0),\quad
+r_F(x)=\inf_{v\in F(x)}\|v\|_2.
+\]
+
+The complete resolvent is \(J_{\lambda F}(z)=\{y:z-y\in\lambda F(y)\}\), with every output \(y\in\mathbb R^2\) initially allowed. Put
+
+\[
+\mathcal B=\{x=(1+h+t,1+h-t): |h|,|t|\le 1/32\},\qquad
+\mathcal U=\overline B_{1/64}(\bar x).
+\]
+
+The following assertions hold.
+
+\begin{enumerate}
+\item \(\bar x\) is a strict local minimum and is the sole stationary point in \(\mathcal B\). The active Hessian at \(\bar x\) has eigenvalues \(2R\) and \(0\).
+\item On \(\mathcal B\) the \textbf{strong true-residual error bound} is
+   \[
+   \|x-\bar x\|_2\le (512/R)^{1/3}r_F(x)^{1/3}.
+   \]
+   The exponent \(1/3\) is optimal: no exponent greater than \(1/3\), with any finite constant and any neighborhood of \(\bar x\), satisfies this bound. On \(\mathcal U\), \(d(x,S)=\|x-\bar x\|_2\), so the same statement also gives the ordinary error bound to the entire stationary set.
+\item For \textbf{every} \(0<\lambda\le 1/128\) and \textbf{every} \(z\in\mathcal U\), the complete \(J_{\lambda F}(z)\) is a singleton, equals the global minimizing proximal map
+   \[
+   \mathop{\rm argmin}_{y\in\mathbb R^2}
+   \left\{\Phi(y)+\frac{\|y-z\|_2^2}{2\lambda}\right\},
+   \]
+   and belongs to \(\mathcal U\). Thus this is an invariant nonempty input ball for the same original complete graph, not just a local inverse or a selected stationary branch.
+\item Fix any one \(\lambda\in(0,1/128]\), and run the ordinary complete PPA from \textbf{any} \(x_0\in\mathcal U\): \(x_{k+1}\in J_{\lambda F}(x_k)\). This trajectory is unique and converges to \(\bar x\). Writing \(x_k=(1+h_k+t_k,1+h_k-t_k)\), if \(t_0\ne0\), then \(t_k\) keeps its initial sign, and
+   \[
+   \frac{h_k}{t_k^2}\longrightarrow-\frac3{32},\qquad
+   \sqrt{k}|t_k|\longrightarrow\sqrt{\frac{128}{13\lambda R}},\qquad
+   \boxed{\sqrt{k}\|x_k-\bar x\|_2\longrightarrow
+   \frac{16}{\sqrt{13\lambda R}}.}
+   \]
+   Consequently every off-axis input in this ball produces a genuine \(\Theta(k^{-1/2})\) complete-PPA tail. If \(t_0=0\), the exact separate formula is \(t_k=0\), \(h_k=(1+2\lambda R)^{-k}h_0\). The origin of the \((h,t)\) coordinates is the stationary trajectory.
+
+\end{enumerate}
+
+The constants \(1/64\) and \(1/128\) below are certified sufficient values, not maximal basin or step bounds. The asymptotic assertions fix \(\lambda\); they do not assert this particular constant for an arbitrary variable-step sequence.
+
+\end{theorem}
+\subsection{Exact scalar formula and analytic remainder certificate}
+
+Throughout \(\mathcal B\), the two coordinates of \(x\) are positive. Put \(s=1+h\), \(u=t/s\), and
+
+\[
+f(u)=\left(\frac{(1+u)^{7/4}+(1-u)^{7/4}}2\right)^{4/7},\qquad
+\varphi(h,t)=\Phi(1+h+t,1+h-t)-\Phi(\bar x).
+\]
+
+The eigenvalues of \(Q\) are \(2R\) in the radial direction \((1,1)\) and \(3R/8\) in the tangent direction \((1,-1)\). Substitution, including \(c=A^Tb\), gives the exact identity
+
+\[
+\frac{\varphi(h,t)}R=2h^2+\frac38t^2-s(f(u)-1). \tag{D.1}\label{eq:dyn1}
+\]
+
+In particular \(\nabla\Phi(\bar x)=0\). The symmetric binomial expansion gives
+
+\[
+f(u)=1+\frac38u^2-\frac{11}{256}u^4+E(u). \tag{D.2}\label{eq:dyn2}
+\]
+
+Here, for \textbf{all real} \(|u|\le1/16\),
+
+\[
+|E(u)|\le5|u|^6,\quad |E'(u)|\le28|u|^5,\quad
+|E''(u)|\le140|u|^4. \tag{D.3}\label{eq:dyn3}
+\]
+
+For completeness these bounds have an analytic certificate, rather than a sampled verification. Let \(G(u)=((1+u)^{7/4}+(1-u)^{7/4})/2\). Its even binomial coefficients from degree two onward are positive; after degree four their absolute values decrease. For complex \(|u|\le r=7/8\),
+
+\[
+|G(u)-1|\le \frac{21}{32}r^2+
+\frac{35}{2048}\frac{r^4}{1-r^2}
+=\frac{214375}{393216}<1.
+\]
+
+Therefore the analytic branch \(G^{4/7}\) with value one at zero is defined on a neighborhood of this closed disk and has modulus at most \(2\). If \(f=\sum a_{2j}u^{2j}\), the Cauchy coefficient estimate is \(|a_{2j}|\le2r^{-2j}\). After removal of the displayed terms through degree four, put \(v=(u/r)^2\le1/196\). Summing the majorant series and its two derivatives gives
+
+\[
+\begin{aligned}
+|E|/|u|^6&\le 2r^{-6}/(1-v)<5,\\
+|E'|/|u|^5&\le 2r^{-6}\left[6/(1-v)+2v/(1-v)^2\right]<28,\\
+|E''|/|u|^4&\le 2r^{-6}\left[30/(1-v)+26v/(1-v)^2
+                         +8v^2/(1-v)^3\right]<140.
+\end{aligned}
+\]
+
+The inequalities at zero are interpreted by continuity. This proves \eqref{eq:dyn3} on the full interval. Direct expansion of \eqref{eq:dyn1} consequently gives
+
+\[
+\frac{\varphi}R=2h^2+\frac38ht^2+\frac{11}{256}t^4
++O(h^2t^2+|h|t^4+t^6). \tag{D.4}\label{eq:dyn4}
+\]
+
+\subsection{Star inequality, strictness, and the sharp residual exponent}
+
+The quantity needed for invariance is the gradient inner product with the displacement, not the objective in \eqref{eq:dyn4}. Exactly,
+
+\[
+D(h,t):=\langle x-\bar x,\nabla\Phi(x)\rangle
+=h\varphi_h+t\varphi_t.
+\]
+
+Differentiating \eqref{eq:dyn1} and using \eqref{eq:dyn2} gives
+
+\[
+\frac DR=4h^2+\frac98hu^2+\frac34h^2u^2
++\left(\frac{11}{64}+\frac{11h}{256}\right)u^4-hE(u)-uE'(u).
+\tag{D.5}\label{eq:dyn5}
+\]
+
+On \(\mathcal B\), \(|u|\le1/31<1/16\), so \eqref{eq:dyn3} applies. Complete the first square in \eqref{eq:dyn5}, discard the nonnegative term \(3h^2u^2/4\), and bound the remaining terms:
+
+\[
+\frac DR\ge4\left(h+\frac9{64}u^2\right)^2+
+\left[\frac{95}{1024}-\frac{11}{8192}
+-\frac{28+5/32}{961}\right]u^4
+\ge4\left(h+\frac9{64}u^2\right)^2+\frac1{32}u^4.
+\tag{D.6}\label{eq:dyn6}
+\]
+
+The last rational bracket exceeds \(1/32\). Also \((33/32)^4<2\), so
+
+\[
+h^2+t^4\le2\left(h+\frac9{64}u^2\right)^2+
+\left(2\left(\frac9{64}\right)^2+2\right)u^4.
+\]
+
+Comparison with \eqref{eq:dyn6} yields the conservative full-box bound
+
+\[
+\boxed{D(h,t)\ge\frac R{128}(h^2+t^4).} \tag{D.7}\label{eq:dyn7}
+\]
+
+One can sharpen \eqref{eq:dyn7} to \(R(h^2+t^4)/64\) by keeping \((33/32)^4\) rather than replacing it by two: the required rational check is
+\((2(9/64)^2+(33/32)^4)/64<1/32\). We use this certified sharper bound below:
+
+\[
+D(h,t)\ge\frac R{64}(h^2+t^4). \tag{D.8}\label{eq:dyn8}
+\]
+
+Every ray segment from \(\bar x\) to a point of \(\mathcal B\) stays in \(\mathcal B\). Integrating \eqref{eq:dyn8} along that segment gives
+
+\[
+\varphi(h,t)\ge \frac R{128}h^2+\frac R{256}t^4>0
+\quad\text{when }(h,t)\ne(0,0).
+\]
+
+This proves strict local minimality. A stationary point in the box has \(D=0\), so \eqref{eq:dyn8} proves stationarity isolation there. The Hessian eigenvalues stated in the theorem follow from \eqref{eq:dyn1} or from cancellation of the tangent norm Hessian against \(3R/8\).
+
+Since \(\mathcal B\) has positive coordinates, \(F(x)=\{\nabla\Phi(x)\}\) there: this is the actual complete residual. Put \(d=\|x-\bar x\|_2=\sqrt{2(h^2+t^2)}\). Since \(|h|<1\),
+
+\[
+h^2+t^4\ge h^4+t^4\ge\tfrac12(h^2+t^2)^2=d^4/8.
+\]
+
+Consequently \(d\,r_F(x)\ge D(h,t)\ge Rd^4/512\), proving the strong exponent-\(1/3\) error bound, including \(d=0\). Every other stationary point is outside \(\mathcal B\), hence at distance greater than \(\sqrt2/32\) from \(\bar x\). For \(x\in\mathcal U\), its distance to such a point exceeds \(\sqrt2/32-1/64>1/64\ge d\), proving the asserted equality with distance to the entire \(S\).
+
+To prove optimality, \(\varphi_{hh}(0,0)=4R>0\), and the analytic implicit function theorem gives the unique even radial critical curve near zero:
+
+\[
+\varphi_h(h_*(t),t)=0,\qquad
+h_*(t)=-\frac3{32}t^2+O(t^4).
+\]
+
+Substitution into \eqref{eq:dyn4} gives
+
+\[
+\varphi(h_*(t),t)=\frac{13R}{512}t^4+O(t^6),\qquad
+\varphi_t(h_*(t),t)=\frac{13R}{128}t^3+O(t^5).
+\]
+
+The exact gradient-coordinate transformation is
+\(\|\nabla\Phi\|_2=\sqrt{\varphi_h^2+\varphi_t^2}/\sqrt2\).
+Thus on this curve \(d\sim\sqrt2|t|\) whereas
+\(r_F\sim13R|t|^3/(128\sqrt2)\). For any \(q>1/3\), \(d/r_F^q\) tends to infinity. The critical curve is used only to test sharpness; it is not declared invariant under PPA.
+
+\subsection{Complete-fiber exclusion, global proximal equality, and invariance}
+
+Let \(g(x)=\|x\|_1-\|x\|_{7/4}\). It is globally Euclidean-Lipschitz with constant
+\(L_p=\sqrt2+2^{1/14}\). Every Fr\'echet subgradient has norm at most \(L_p\), by testing the subgradient inequality in unit directions against the Lipschitz upper bound; every limiting subgradient inherits this bound. The exact smooth-sum rule, valid including at zero, is
+
+\[
+F(y)=Qy-c+\partial_{\rm lim}g(y).
+\]
+
+This does not assert the invalid norm-gradient formula at zero. Given \textbf{any} complete resolvent output \(y\) at \(z\), choose \(w\in\partial_{\rm lim}g(y)\) with \(z-y=\lambda(Qy-c+w)\). Then
+
+\[
+(I+\lambda Q)(y-z)=\lambda(c-Qz-w),\qquad
+\|y-z\|_2\le\lambda(\|Qz-c\|_2+L_p), \tag{D.9}\label{eq:dyn9}
+\]
+
+because \(Q\succ0\). The elementary bounds
+
+\[
+7/5<R<3/2,\quad \sqrt2<10/7,\quad 2^{1/14}<15/14
+\]
+
+give, for \(z\in\mathcal U\),
+
+\[
+\|Qz-c\|_2+L_p
+\le\sqrt2(1-R/2)+2R/64+L_p
+<\frac37+\frac3{64}+\frac52<3. \tag{D.10}\label{eq:dyn10}
+\]
+
+Therefore \textbf{every} complete output satisfies
+
+\[
+\|y-\bar x\|_2<1/64+3/128=5/128,
+\quad |h_y|,|t_y|<5/(128\sqrt2)<1/32. \tag{D.11}\label{eq:dyn11}
+\]
+
+No localization of outputs was assumed in deriving \eqref{eq:dyn9}. In particular remote nonsmooth outputs and zero are excluded before using any smooth formula.
+
+On the convex box \(\mathcal B\), both individual coordinates are at least \(15/16\). The usual norm Hessian formula gives
+
+\[
+0\preceq\nabla^2\|y\|_{7/4}
+\preceq\tfrac34\|y\|_{7/4}^{-3/4}
+\operatorname{diag}(y_i^{-1/4}).
+\]
+
+Here \(\|y\|_{7/4}\ge(15/16)R>1\) and
+\((3/4)(16/15)^{1/4}<1\). Thus
+\(\nabla^2\Phi(y)=Q-\nabla^2\|y\|_{7/4}\succ-I\).
+The map \(y\mapsto y+\lambda\nabla\Phi(y)\) is strictly monotone on this convex box, because its Jacobian is at least \((1-\lambda)I\succ0\). All complete outputs from \eqref{eq:dyn11} lie in this box, so two such outputs at the same input must coincide.
+
+For existence, \(\Phi\) is continuous and nonnegative; hence its proximal objective is continuous and coercive for every input and every positive step. A global minimizer exists, and Fermat places every global minimizer in the complete \(J_{\lambda F}\). The proved at-most-one output therefore gives exactly one complete output and exactly one global minimizer, and the two maps coincide.
+
+Finally, write \(z=y+\lambda\nabla\Phi(y)\). By \eqref{eq:dyn8},
+
+\[
+\|z-\bar x\|_2^2
+=\|y-\bar x\|_2^2+2\lambda D(h_y,t_y)
++\lambda^2\|\nabla\Phi(y)\|_2^2
+\ge\|y-\bar x\|_2^2. \tag{D.12}\label{eq:dyn12}
+\]
+
+Thus \(y\in\mathcal U\), establishing the stated invariant ball for the complete resolvent and global proximal map.
+
+\subsection{Actual PPA tracking and the exact slow-tail constant}
+
+Fix \(0<\lambda\le1/128\). By complete coverage, uniqueness, and \eqref{eq:dyn12}, the trajectory starting at any \(x_0\in\mathcal U\) is defined uniquely for every integer \(k\ge0\) and stays in that ball. Summing \eqref{eq:dyn12} and using \eqref{eq:dyn8} gives
+
+\[
+\sum_{k=0}^{\infty}(h_{k+1}^2+t_{k+1}^4)<\infty.
+\]
+
+Therefore \(h_k,t_k\to0\), and \(x_k\to\bar x\). This argument uses the ordinary proximal equations, not a reduced scalar minimization algorithm.
+
+The exact coordinate form of those equations is
+
+\[
+h_k=h_{k+1}+\frac\lambda2\varphi_h(h_{k+1},t_{k+1}),\qquad
+t_k=t_{k+1}+\frac\lambda2\varphi_t(h_{k+1},t_{k+1}). \tag{D.13}\label{eq:dyn13}
+\]
+
+The factor \(1/2\) comes from the Euclidean metric
+\(\|x-x_k\|_2^2=2[(h-h_k)^2+(t-t_k)^2]\).
+From \eqref{eq:dyn1}--\eqref{eq:dyn3}, on the box,
+
+\[
+\begin{aligned}
+\varphi_h/R&=4h+\tfrac38t^2+O(|h|t^2+t^4),\\
+\varphi_t/R&=\tfrac34ht+\tfrac{11}{64}t^3
+ +O(h^2|t|+|h||t|^3+|t|^5). \end{aligned}
+\tag{D.14}\label{eq:dyn14}
+\]
+
+All remainders here are analytic with uniform bounds on the box; these are local asymptotic estimates derived from the explicit certificate, not assumptions about the trajectory.
+
+If \(t\ne0\), its exact tangent derivative is
+
+\[
+\frac{\varphi_t}{Rt}=\frac34\frac h{s}
++\frac{11}{64}\frac{t^2}{s^3}-\frac{E'(t/s)}t.
+\]
+
+By \eqref{eq:dyn3}, \(|h|,|t|\le1/32\), and \(s\ge31/32\), the absolute value is at most
+
+\[
+\frac3{124}+\frac{11}{64\cdot32^2}(32/31)^3
++\frac{28}{32^4}(32/31)^5<\frac1{32}. \tag{D.15}\label{eq:dyn15}
+\]
+
+The bound extends continuously to \(t=0\). Since \(\lambda R/64<1\), the factor in the second equation of \eqref{eq:dyn13},
+\(1+(\lambda/2)(\varphi_t/t)\), is positive everywhere in the box. Consequently \(t_{k+1}=0\) if and only if \(t_k=0\), and nonzero tangent coordinates keep their sign. On the axis \(t=0\), \eqref{eq:dyn1} gives \(\varphi=2Rh^2\), so \eqref{eq:dyn13} gives exactly the geometric formula in the theorem.
+
+Now suppose \(t_0\ne0\). The tangent multiplier tends to one as \(h_k,t_k\to0\), and therefore
+
+\[
+\frac{t_k}{t_{k+1}}\longrightarrow1. \tag{D.16}\label{eq:dyn16}
+\]
+
+Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). The first equation of \eqref{eq:dyn13} and \eqref{eq:dyn14} give
+
+\[
+h_k=a h_{k+1}+b_0t_{k+1}^2+
+O(|h_{k+1}|t_{k+1}^2+t_{k+1}^4).
+\]
+
+Divide by the nonzero \(t_{k+1}^2\) and put \(w_k=h_k/t_k^2\). The exact consequence is an affine recurrence with vanishing forcing:
+
+\[
+w_{k+1}=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k-qb_0+\epsilon_k,
+\qquad \epsilon_k\to0. \tag{D.17}\label{eq:dyn17}
+\]
+
+Importantly, the divided remainder is \(O(|h_{k+1}|+t_{k+1}^2)\to0\); obtaining \eqref{eq:dyn17} does \textbf{not} presume boundedness of \(w_k\). By \eqref{eq:dyn16}, the coefficient in \eqref{eq:dyn17} tends to \(q<1\). Choose any \(\theta\in(q,1)\); eventually its absolute value is below \(\theta\), and the forcing is bounded. Iterating the scalar inequality proves \(w_k\) bounded. Subtract the fixed point \(-qb_0/(1-q)\): the remaining forcing tends to zero, and iteration of the same contraction proves convergence. Hence
+
+\[
+\frac{h_k}{t_k^2}\to-\frac{qb_0}{1-q}=-\frac3{32}. \tag{D.18}\label{eq:dyn18}
+\]
+
+This is the required radial-following proof. It is valid for all off-axis initial points in the certified ball; it neither assumes nor requires invariance of the radial critical curve.
+
+Substitute \eqref{eq:dyn18} into the second equation of \eqref{eq:dyn13}, using \eqref{eq:dyn14} at the actual output. The remainders become \(o(t_{k+1}^2)\) after division by \(t_{k+1}\), and
+
+\[
+t_k=t_{k+1}\left[1+
+\frac{13\lambda R}{256}t_{k+1}^2+o(t_{k+1}^2)\right]. \tag{D.19}\label{eq:dyn19}
+\]
+
+Writing \(\tau_k=|t_k|>0\), expansion of the reciprocal square gives
+
+\[
+\tau_{k+1}^{-2}-\tau_k^{-2}\longrightarrow
+\frac{13\lambda R}{128}.
+\]
+
+Telescoping and taking Ces\`aro means yields
+\(\tau_k^{-2}/k\to13\lambda R/128\), proving the tangent limit. Finally \eqref{eq:dyn18} implies \(h_k/t_k\to0\), and
+\(\|x_k-\bar x\|_2=\sqrt2\sqrt{h_k^2+t_k^2}\sim\sqrt2\tau_k\).
+This proves the stated exact distance limit.
+
+
+\section{Interpretation and verification boundaries}
+The structural transition concerns active curvature at every local minimum.
+It does not imply that all stationary points are minima, that arbitrary
+PPA initializations reach a minimum, or that a sparse ground-truth signal
+is recovered. Nondegenerate local rates have their ordinary
+strong-monotonicity interpretation. The quartic example also admits the
+classical analytic gradient/KL interpretation. Here its complete-map
+certification and exact actual-trajectory asymptotic distinguish the
+algorithmic assertion from a reduced scalar curve calculation.
+No exponent or tail is asserted uniformly across all upper-side models.
+The step and basin constants are sufficient rather than optimal.
+
+The accompanying Python checks verify exact finite rational identities,
+analytic-majorant arithmetic, high-precision boundary expansions, and
+actual two-variable implicit proximal equations. These corroborate the
+analytic proofs, which carry the universal claims. The central
+publication-priority gate remains subject to the two explicit primary-text
+access gaps in Section 1. An exact antecedent, if found, must be credited.
+Renaming standard local consequences as PPA cannot replace lost novelty.
+
+\begin{thebibliography}{9}
+\bibitem{WangPenalty}
+Y. Wang, \emph{New improved penalty methods for sparse reconstruction
+based on difference of two norms}, author report, March 2013; revised
+August 2014; Optimization Online upload, 2015.
+\url{https://optimization-online.org/wp-content/uploads/2015/03/4849.pdf}.
+\bibitem{Yin}
+P. Yin, Y. Lou, Q. He, and J. Xin,
+\emph{Minimization of $\ell_{1-2}$ for compressed sensing},
+SIAM J. Sci. Comput. \textbf{37} (2015), A536--A563.
+\href{https://doi.org/10.1137/140952363}{doi:10.1137/140952363}.
+\bibitem{WangZhang}
+D. Wang and Z. Zhang,
+\emph{Generalized sparse recovery model and its neural dynamical
+optimization method for compressed sensing},
+Circuits Syst. Signal Process. \textbf{36} (2017), 4326--4353.
+\href{https://doi.org/10.1007/s00034-017-0532-7}{doi:10.1007/s00034-017-0532-7}.
+\bibitem{LouYan}
+Y. Lou and M. Yan, \emph{Fast $L_1-L_2$ minimization via a proximal
+operator}, J. Sci. Comput. \textbf{74} (2018), 767--785.
+\href{https://arxiv.org/abs/1609.09530v4}{Author manuscript, arXiv:1609.09530v4}.
+\bibitem{Huo}
+L. Huo, W. Chen, H. Ge, and M. Ng,
+\emph{$L_1-\beta L_q$ minimization for signal and image recovery},
+SIAM J. Imaging Sci. \textbf{16} (2023), 1886--1928.
+\href{https://doi.org/10.1137/22M1525363}{doi:10.1137/22M1525363}.
+\end{thebibliography}
+\end{document}

@@ -703,3 +703,198 @@ records an existing model family and unresolved full-text priority checks.
 Those checks remain necessary before describing the threshold as novel or
 judging a specific journal submission ready. Internal mathematical reception
 is neither a priority result nor external peer review.
+
+<a id="sr-cross-dynamics"></a>
+## 10. Cross-reception of the specified singular-minimum dynamics
+
+After the threshold review was completed, a separate researcher supplied
+[the explicit \(p=7/4\) dynamics proof](../topics/sparse_recovery/sharp_instance_dynamics.md).
+The following records an actual independent reading and reconstruction of that
+module on 2026-10-09. It is additional reception of that specified instance,
+not an extension of C226's positive-Hessian hypotheses to singular minima.
+
+**Cross-reception verdict:** no fatal issue was found in the stated explicit
+instance. The matching exponent \(1/3\), complete proximal ball, and exact
+off-axis tail are supported by its displayed proof. The checks below identify
+the steps actually reconstructed; they do not certify external publication
+priority or a result for all \(p>3/2\) models.
+
+### 10.1 The scalar certificate and the star product
+
+For \(R=2^{4/7}\), the new instance has radial Gram eigenvalue \(2R\) and
+tangent eigenvalue \(3R/8\). Its exact local objective, with
+\(s=1+h\) and \(u=t/s\), is
+
+\[
+ \frac{\varphi(h,t)}R=2h^2+\frac38t^2-s(f(u)-1),\qquad
+ f(u)=\left(\frac{(1+u)^{7/4}+(1-u)^{7/4}}2\right)^{4/7}.
+\]
+
+The coefficients \(3/8\) and \(-11/256\) in
+\(f(u)=1+3u^2/8-11u^4/256+E(u)\) were recomputed. For the Cauchy certificate,
+the even coefficients of the inner average are positive and decrease after
+degree four. At complex radius \(r=7/8\), the geometric majorant is exactly
+
+\[
+ \frac{21}{32}r^2+\frac{35}{2048}\frac{r^4}{1-r^2}
+ =\frac{214375}{393216}<1.
+\]
+
+Thus the inner function stays in the disk centered at one of radius less than
+one. Its branch with value one at zero is analytic on a neighborhood of the
+closed disk, and its \(4/7\) power has modulus less than two. The Cauchy
+coefficient estimate therefore applies without a hidden branch singularity.
+For \(|u|\leq1/16\), let \(v=(u/r)^2\leq1/196\). Exact rational evaluation of
+the three stated geometric-series majorants at \(v=1/196\) gives
+
+| Remainder quotient | Exact upper majorant | Required bound |
+| --- | --- | --- |
+| \(|E|/|u|^6\) | \(2097152/468195\) | \(<5\) |
+| \(|E'|/|u|^5\) | \(2457862144/91298025\) | \(<28\) |
+| \(|E''|/|u|^4\) | \(2402975481856/17803114875\) | \(<140\) |
+
+For the last row, differentiating the majorant really gives
+\(30/(1-v)+26v/(1-v)^2+8v^2/(1-v)^3\); the coefficients account for both
+derivatives. These are uniform analytic bounds, rather than sampled values of
+the remainder.
+
+Independent differentiation gives, for the actual Euclidean gradient,
+
+\[
+ \frac{\langle x-\bar x,\nabla\Phi(x)\rangle}R
+ =4h^2+\frac98hu^2+\frac34h^2u^2
+  +\left(\frac{11}{64}+\frac{11h}{256}\right)u^4-hE-uE'.
+\]
+
+In particular this is a gradient inner product, not the objective's quartic
+expansion. On \(|h|,|t|\leq1/32\), one has \(|u|\leq1/31\), and the quartic
+coefficient after completing the square has the exact lower bound
+
+\[
+ \frac{95}{1024}-\frac{11}{8192}-\frac{28+5/32}{961}
+ =\frac{489133}{7872512}>\frac1{32}.
+\]
+
+The sharper comparison used subsequently is also valid:
+
+\[
+ \frac{2(9/64)^2+(33/32)^4}{64}
+ =\frac{1227393}{67108864}<\frac1{32}.
+\]
+
+It follows that the stated bound
+\(D\geq R(h^2+t^4)/64\) holds on the entire closed box. Integrating on radial
+segments gives strict local minimality. Combining
+\(d^4\leq8(h^2+t^4)\), where \(d=\sqrt{2(h^2+t^2)}\), with
+\(d\,r_F\geq D\) gives exactly
+\(d\leq(512/R)^{1/3}r_F^{1/3}\). Since every point of this box has positive
+coordinates, this is the full limiting-subdifferential residual, equal there
+to the smooth gradient norm. The outer stationary-point distance exclusion
+used to identify distance to the entire stationary set also checks out.
+
+### 10.2 Full outputs and the explicit historical constants
+
+For the specified input ball of Euclidean radius \(1/64\) and any
+\(0<\lambda\leq1/128\), the global subgradient bound applies at every possible
+output, including zero and nonsmooth remote points. The independent estimate
+is
+
+\[
+ \|Qz-c\|+\sqrt2+2^{1/14}
+ <\frac37+\frac3{64}+\frac52<3.
+\]
+
+It follows that every complete output satisfies
+\(\|y-\bar x\|<5/128\), hence
+\(|h_y|,|t_y|<5/(128\sqrt2)<1/32\). This localization precedes all smooth
+arguments. On that convex box, the norm Hessian has operator norm less than
+one, so \(\nabla^2\Phi\succ-I\). Therefore
+\(I+\lambda\nabla^2\Phi\succ(1-\lambda)I\succ0\): the smooth resolvent
+equation has at most one output in the box. This uses local weak convexity of
+the objective, not positive definiteness of its Hessian.
+
+The independent coercive global proximal subproblem supplies existence, and
+Fermat places its minimizer in this complete resolvent. Thus the full
+resolvent is exactly the singleton global minimizer. The star bound then
+proves ball invariance through
+
+\[
+ \|z-\bar x\|^2-\|y-\bar x\|^2
+ =2\lambda D(h_y,t_y)+\lambda^2\|\nabla\Phi(y)\|^2\geq0.
+\]
+
+There is no circular assumption that the output already lies in the invariant
+input ball. The radii \(1/64\) and \(1/32\), and the upper step \(1/128\),
+have all been checked in their respective input/output roles.
+
+### 10.3 Actual tracking and the exact normalization
+
+For a fixed positive step, summing the last displayed identity and the star
+bound proves \(\sum_k(h_{k+1}^2+t_{k+1}^4)<\infty\), hence convergence to the
+specified minimum. The Euclidean metric under the coordinate change is
+\(\|\Delta x\|^2=2(\Delta h^2+\Delta t^2)\), so the genuine proximal
+equations contain \(\lambda/2\), not \(\lambda\):
+
+\[
+ h_k=h_{k+1}+\frac\lambda2\varphi_h(h_{k+1},t_{k+1}),\quad
+ t_k=t_{k+1}+\frac\lambda2\varphi_t(h_{k+1},t_{k+1}).
+\]
+
+The exact tangent multiplier is positive throughout the box; the numerical
+comparison in its proof is the rational inequality
+
+\[
+ \frac3{124}+\frac{11}{64\,32^2}(32/31)^3
+ +\frac{28}{32^4}(32/31)^5
+ =\frac{2795289}{114516604}<\frac1{32}.
+\]
+
+Thus every off-axis input remains off-axis with a fixed sign. The ratio
+\(t_k/t_{k+1}\to1\) follows from convergence to the minimum. Put
+\(w_k=h_k/t_k^2\), \(q=(1+2\lambda R)^{-1}\), and
+\(b_0=3\lambda R/16\). Dividing the radial equation gives
+
+\[
+ w_{k+1}=q(t_k/t_{k+1})^2w_k-qb_0+\epsilon_k,\qquad
+ \epsilon_k\to0.
+\]
+
+The divided remainder is \(O(|h_{k+1}|+t_{k+1}^2)\), so this step does not
+assume boundedness of \(w_k\). Its coefficient tends to \(q<1\). An eventual
+uniform contraction first proves boundedness and then convergence to
+\(-qb_0/(1-q)=-3/32\). This closes the potentially circular tracking step.
+
+Substitution into the actual tangent equation gives
+
+\[
+ t_k=t_{k+1}\left(1+\frac{13\lambda R}{256}t_{k+1}^2
+                  +o(t_{k+1}^2)\right).
+\]
+
+Hence \(|t_{k+1}|^{-2}-|t_k|^{-2}\to13\lambda R/128\), and telescoping gives
+
+\[
+ \sqrt{k}|t_k|\longrightarrow\sqrt{\frac{128}{13\lambda R}},\qquad
+ \sqrt{k}\|x_k-\bar x\|\longrightarrow\frac{16}{\sqrt{13\lambda R}}.
+\]
+
+The radial axis instead has exactly
+\(t_k=0\), \(h_k=(1+2\lambda R)^{-k}h_0\). No claim that the radial critical
+curve is invariant, and no asymptotic for the residual along actual iterates,
+was needed or inferred. The constants above are for a fixed step; the proof
+does not silently assert them for an arbitrary variable-step sequence.
+
+### 10.4 Manuscript transcription check
+
+The threshold and complete-prox sections of
+[the manuscript source](../manuscripts/sparse_regularity/sharp_sparse_regularity.tex)
+were independently read after Sections 1–9 of this review were written. The
+theorem quantifiers, wider strict-complementarity/support ranges, endpoint
+equality proof, general upper-side family, explicit \(L_H\), radius gates,
+global output exclusion, separate existence argument, error bound, and
+variable-step conclusion faithfully transcribe the checked mathematics.
+Only minor notation/wording corrections were reported to the coordinating
+researcher; no mathematical defect was found in those inspected sections.
+This check does not audit the manuscript's paper facts, bibliography, or any
+subsequently added sections. The new dynamics module was checked separately
+as recorded above.

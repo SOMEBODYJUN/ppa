@@ -20,7 +20,7 @@ F=partial_lim Phi_p, S={x:0 in F(x)}.
 4. xbar is an isolated stationary point and a strict local minimizer; the local strong linear true-residual error bound is proved separately below;
 5. C226 below gives a computable conservative ball and a small-step interval on which the FULL resolvent J_(lambda F), with all output points in R^n allowed initially, is a singleton, equals the global proximal argmin, maps the input ball into itself, identifies I and its signs in one step, and contracts linearly.
 
-Items 1-3 are the potentially model-specific mathematical content. Items 4-5 are classical consequences once the automatic margins have been proved, but item 5 requires full-fiber exclusion and not merely a localized graph argument. Quantitative constants below are conservative, not claimed optimal.
+Only item 2 has the sharp 3/2 threshold: strict complementarity extends to 1<p<2 and support independence to every finite p>1, as C228 below proves. Support independence at p=2 is established prior art; exact active-PD publication priority remains open. Items 4-5 are classical consequences once the automatic margins have been proved, but item 5 requires full-fiber exclusion and not merely a localized graph argument. Quantitative constants below are conservative, not claimed optimal.
 
 ## Proof of automatic strict complementarity
 
@@ -163,7 +163,7 @@ Phi(h,t)-Phi(h(t),t)>=(alpha/2)|h-h(t)|^2.
 
 These two inequalities prove a strict full-space local minimum with singular active Hessian, rather than a minimum restricted to h=0. This makes p=3/2 a sharp universal automatic-nondegeneracy threshold in the range 1<p<2. The p=5/3, alpha=10 instance is additionally checked in the linked reproducible code, but the all-nearby-points claim is carried by this analytic proof.
 
-For these examples the smooth true-residual EB cannot have exponent greater than 1/3. The radial critical curve is analytic and even, and along it partial_h Phi=0 while partial_t Phi=4Kt^3+O(t^5). All nearby stationary points must lie on this curve, and its reduced derivative has no zero except t=0 after shrinking. Thus xbar is an isolated stationary point. In a yet smaller ball, the distance to the entire stationary set S equals the distance to xbar. Along the curve this distance is asymptotic sqrt(2)|t| while r_F=O(|t|^3), excluding every exponent q>1/3. The matching lower EB with exponent 1/3 and the actual full PPA tail are not proved here. The radial minimization curve is not asserted to be invariant under PPA.
+For these examples the smooth true-residual EB cannot have exponent greater than 1/3. The radial critical curve is analytic and even, and along it partial_h Phi=0 while partial_t Phi=4Kt^3+O(t^5). All nearby stationary points must lie on this curve, and its reduced derivative has no zero except t=0 after shrinking. Thus xbar is an isolated stationary point. In a yet smaller ball, the distance to the entire stationary set S equals the distance to xbar. Along the curve this distance is asymptotic sqrt(2)|t| while r_F=O(|t|^3), excluding every exponent q>1/3. For the fixed p=7/4 instance, the matching lower EB and genuine complete-PPA tail are now proved in [C227](sharp_instance_dynamics.md#sd-theorem). No corresponding actual-trajectory theorem for every member of this family is asserted here. The radial minimization curve is not asserted to be invariant under PPA.
 
 
 
@@ -192,5 +192,21 @@ Q is positive definite with determinant d alpha; take A=Q^(1/2), b=A^(-T)c. Acti
 - [Exact Fraction and high-precision checks](../../code/sparse_regularity/README.md) independently recompute Pearson's identity, the cubic/quartic algebra, the endpoint sixth coefficient, an upper-threshold strict-minimum instance and a complete small-step certificate. Finite computation is not the proof of universal quantifiers.
 - Two mathematical readers checked the whole initial proof and full-fiber argument; the second reader additionally checked every term of the appended explicit L_H bound. The coordinating reader removed unsupported tilt-stability terminology, changed a misleading box to an Euclidean ball, supplied the global limiting-subgradient bound and full-space IFT inequality, and clarified isolation and full positive-step interval quantifiers.
 - [Read primary literature and unclosed full-text gates](../../LITERATURE.md#lit-sparse-automatic-threshold). The model family and ordinary conditional local convergence are not asserted to be new. Exact published priority of the automatic PD threshold is open.
-- C225 proves only the impossibility of EB exponents greater than 1/3 in its explicit two-dimensional family. Matching exponent 1/3, genuine full-PPA polynomial tails and their constants remain unproved. Symmetric radial initial points must be separated from slow trajectories; reduced critical curves cannot be presumed invariant.
+- C225 retains its all-3/2<p<2 sharpness family. [C227](sharp_instance_dynamics.md#sd-theorem) closes the fixed p=7/4 matching strong true-residual exponent 1/3 and complete-PPA slow tail, with an explicit invariant ball and exact norm constant. It separates the geometric radial axis and proves radial following; no general upper-side uniform exponent is asserted.
 - The conservative basin is computable; no optimal conditioning law or maximal basin/fold classification has been proved. Those questions are separate from basic existence.
+
+
+<a id="sr-wide-ranges"></a>
+## C228: Separate ranges of strict complementarity and support rank
+
+**Exact statement.** In the same least-squares model with eta>0 and no zero columns, every nonzero local minimum has independent support columns for every finite p>1. Its inactive inequalities are strict whenever 1<p<2. These conclusions do not have a sharp 3/2 threshold; that threshold belongs to automatic active-Hessian positive definiteness. This is a range refinement, not a change to the narrower C224-v1 identity or a standalone priority claim.
+
+**Proof.** The inactive-coordinate descent proof above uses only p<2 and a nonzero base point, so it gives the stated wider strict-complementarity range. For support rank, the second-order necessary condition on the active orthant gives H=Q_II−eta Hess||xbar_I||_p positive semidefinite, without assuming it positive definite. For active u with no zero coordinates, R=||u||_p, w_i=|u_i|^p/R^p and r_i=z_i/u_i, direct differentiation gives
+
+\[
+z^T\nabla^2\|u\|_p z=(p-1)R\left[\sum_iw_ir_i^2-\left(\sum_iw_ir_i\right)^2\right].
+\]
+
+All weights are positive. Thus the norm Hessian is positive semidefinite with kernel exactly span{u}, for every finite p>1. If A_I z=0 for a nonzero z, then 0≤z^T H z=−eta z^T Hess||xbar_I||_p z≤0, forcing z=a xbar_I, a≠0. Hence A xbar=0. Dot active stationarity with xbar; because c=A^Tb it yields 0=eta(||xbar||_1−||xbar||_p). For at least two nonzero coordinates that difference is strictly positive; for one coordinate A xbar=0 contradicts its nonzero column. No such z exists, proving full column rank and |I|≤rank A.
+
+**Scope and prior art.** The no-zero-column and least-squares compatibility gates remain material, with the examples above and in [the independent review](../../audit/SPARSE_THRESHOLD_REVIEW_2026_10_09.md). Yin–Lou–He–Xin (2015), Theorem 2.4 and Corollary 2.1(a), p.A543, provide the explicit p=2 support antecedent. The wider norm-curvature mechanism is credited as an extension, not confused with the novel-threshold candidate. Exact publication priority of the all-p range is not certified.

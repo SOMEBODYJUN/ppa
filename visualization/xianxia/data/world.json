@@ -6674,6 +6674,61 @@
       "y": 3277,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "SPARSE-QUARTIC-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-QUARTIC-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-QUARTIC-PROX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-QUARTIC-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-WIDE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8256,6 +8311,22 @@
     "E395": {
       "x": 4675.41,
       "y": 3320.78
+    },
+    "E396": {
+      "x": 5010.92,
+      "y": 3020.91
+    },
+    "E397": {
+      "x": 4381.12,
+      "y": 2774.22
+    },
+    "E398": {
+      "x": 4454.85,
+      "y": 2755.71
+    },
+    "E399": {
+      "x": 4542.0,
+      "y": 2731.0
     }
   },
   "bounds": {

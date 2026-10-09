@@ -1,0 +1,235 @@
+{
+  "python": "3.12.14",
+  "arithmetic": "Fraction exact; float genuine 2D iterations; Decimal 50/80 digit repetitions",
+  "seed": null,
+  "p": "7/4",
+  "lambda": "1/128",
+  "input_radius": "1/64",
+  "exact_certificate": {
+    "analytic_disk": "7/8",
+    "G_minus_one_majorant": "214375/393216",
+    "E_Eprime_Edoubleprime_majorants": [
+      "2097152/468195",
+      "2457862144/91298025",
+      "2402975481856/17803114875"
+    ],
+    "star_square_quartic_lower_coefficient": "489133/7872512",
+    "star_comparison_required_less_than_1_32": "1227393/67108864",
+    "tangent_factor_derivative_majorant": "2795289/114516604",
+    "symmetric_norm_series": {
+      "0": "1",
+      "2": "3/8",
+      "4": "-11/256",
+      "6": "33/2048",
+      "8": "-165/32768",
+      "10": "737/262144",
+      "12": "-16199/16777216"
+    },
+    "radial_quadratic_coefficient": "-3/32",
+    "reduced_quartic_over_R": "13/512",
+    "actual_tangent_cubic_after_tracking_over_R": "13/128",
+    "all_exact_checks_passed": true
+  },
+  "decimal_checks": [
+    {
+      "precision_digits": 50,
+      "steps": 300,
+      "h_over_t2": "-0.093749990122419177432740946688812905525259794501239",
+      "inverse_square_slope": "0.0011790720520960461746317563640843201983716266666667",
+      "proved_slope_limit": "0.0011790726171130572218260554643121157154668119917409",
+      "relative_slope_difference": "-4.7920459083396452024824534082397602191875192E-7",
+      "largest_proximal_coordinate_residual": "4E-53",
+      "axis_steps": 30,
+      "axis_formula_error": "3E-52"
+    },
+    {
+      "precision_digits": 80,
+      "steps": 300,
+      "h_over_t2": "-0.093749990122419177432740946688812905525259794311449895414939317847867287474940449",
+      "inverse_square_slope": "0.001179072052096046174631756364084320198371630312725141643312722630082800899",
+      "proved_slope_limit": "0.0011790726171130572218260554643121157154668119917408707601095301246923999730485370",
+      "relative_slope_difference": "-4.7920459083396452024824534082397601882644155922837695865726362257516184718E-7",
+      "largest_proximal_coordinate_residual": "1E-83",
+      "axis_steps": 30,
+      "axis_formula_error": "4E-82"
+    }
+  ],
+  "floating_trajectories": [
+    {
+      "initial_h": 0.00390625,
+      "initial_t": 0.01,
+      "steps": 100000,
+      "largest_proximal_coordinate_residual": 2.5783682914420902e-18,
+      "checkpoints": [
+        {
+          "k": 0,
+          "h": 0.00390625,
+          "t": 0.01,
+          "h_over_t2": 39.0625,
+          "sqrt_k_distance": 0.0,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100,
+          "h": 0.00038506838297459596,
+          "t": 0.009993355359443207,
+          "h_over_t2": 3.855806216632624,
+          "sqrt_k_distance": 0.14143226576681783,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 1000,
+          "h": -9.360070287144821e-06,
+          "t": 0.009992087145230685,
+          "h_over_t2": -0.09374900863013926,
+          "sqrt_k_distance": 0.4468599179358115,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 10000,
+          "h": -9.350164901131284e-06,
+          "t": 0.009986798353336166,
+          "h_over_t2": -0.09374901389357515,
+          "sqrt_k_distance": 1.4123471866066193,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.001179017466434339,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100000,
+          "h": -9.25224789636603e-06,
+          "t": 0.009934368195438612,
+          "h_over_t2": -0.09374902421986682,
+          "sqrt_k_distance": 4.442786446513795,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.0011790177561159531,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        }
+      ]
+    },
+    {
+      "initial_h": -0.00390625,
+      "initial_t": -0.01,
+      "steps": 100000,
+      "largest_proximal_coordinate_residual": 2.5732860937585644e-18,
+      "checkpoints": [
+        {
+          "k": 0,
+          "h": -0.00390625,
+          "t": -0.01,
+          "h_over_t2": -39.0625,
+          "sqrt_k_distance": 0.0,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100,
+          "h": -0.00040192934931555633,
+          "t": -0.010006527517332088,
+          "h_over_t2": -4.014051424779735,
+          "sqrt_k_distance": 0.14162777987172256,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 1000,
+          "h": -9.387528949932835e-06,
+          "t": -0.01000673249035564,
+          "h_over_t2": -0.09374901413954141,
+          "sqrt_k_distance": 0.4475148785442535,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 10000,
+          "h": -9.377564553086426e-06,
+          "t": -0.010001420422202667,
+          "h_over_t2": -0.09374901100404327,
+          "sqrt_k_distance": 1.4144150621396079,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.00117901730436784,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100000,
+          "h": -9.279075872600595e-06,
+          "t": -0.009948760851884418,
+          "h_over_t2": -0.0937490213905876,
+          "sqrt_k_distance": 4.449223046538284,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.0011790175960822392,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        }
+      ]
+    },
+    {
+      "initial_h": 0.0,
+      "initial_t": 0.01,
+      "steps": 100000,
+      "largest_proximal_coordinate_residual": 2.5766742255475816e-18,
+      "checkpoints": [
+        {
+          "k": 0,
+          "h": 0.0,
+          "t": 0.01,
+          "h_over_t2": 0.0,
+          "sqrt_k_distance": 0.0,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100,
+          "h": -8.430403280564801e-06,
+          "t": 0.009999925243248678,
+          "h_over_t2": -0.08430529327890551,
+          "sqrt_k_distance": 0.14142034927284092,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 1000,
+          "h": -9.373763003345354e-06,
+          "t": 0.009999392969234822,
+          "h_over_t2": -0.09374901139482555,
+          "sqrt_k_distance": 0.4471866447482877,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": null,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 10000,
+          "h": -9.363828210752754e-06,
+          "t": 0.009994092574499618,
+          "h_over_t2": -0.09374901245266058,
+          "sqrt_k_distance": 1.413378746613569,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.0011790173856309897,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        },
+        {
+          "k": 100000,
+          "h": -9.26562633581576e-06,
+          "t": 0.009941548056988886,
+          "h_over_t2": -0.09374902280897096,
+          "sqrt_k_distance": 4.445997382393537,
+          "sqrt_k_distance_proved_limit": 41.185535881580606,
+          "post_transient_inverse_square_slope": 0.0011790176763050186,
+          "inverse_square_slope_proved_limit": 0.0011790726171130572
+        }
+      ]
+    }
+  ],
+  "scope": "Finite exact arithmetic and actual two-variable PPA trajectory checks. The norm-limit value is analytic: the finite raw sqrt(k) distances remain far from it because the certified step and input scale have a long transient. The post-transient reciprocal-square slopes check the asymptotic drift without claiming a finite run proves the limit. Complete-fiber uniqueness and global proximal equality are proved in research/topics/sparse_recovery/sharp_instance_dynamics.md.",
+  "elapsed_seconds": 1.8976892909995513
+}

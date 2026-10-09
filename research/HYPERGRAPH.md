@@ -612,7 +612,21 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E395 | [SPARSE-SHARP-DATA · 3/2<p<2的二维Gram族及径向消元K>0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | implies → [SPARSE-SHARP · C225全p>3/2退化严格极小及q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | 每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。matching1/3及实际慢尾未闭。；**C225构造和混合消元独立受检，derived-checked** |
+| E395 | [SPARSE-SHARP-DATA · 3/2<p<2的二维Gram族及径向消元K>0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | implies → [SPARSE-SHARP · C225全p>3/2退化严格极小及q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | 每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。指定p7/4 matching1/3与真实慢尾另由C227闭合，不将其量词扩到此全族。；**C225构造和混合消元独立受检，derived-checked** |
+
+## 稀疏恢复范围分离
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E396 | [SPARSE-DATA · 真实least-squares l1−lp、A无零列及非零局部极小](topics/sparse_recovery/automatic_regularity.md#sr-object) | implies → [SPARSE-WIDE · C228 strict comp1<p<2与support rank全部有限p>1](topics/sparse_recovery/automatic_regularity.md#sr-wide-ranges) | 每个非零局部min；strict comp仅1<p<2；support rank全部有限p>1。只需二阶PSD和least-squares径向排除，不用active-PD。；**C228-v1独立重构，derived-checked；2015 p2 support有先行** |
+
+## 稀疏恢复完整退化动力学
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E397 | [SPARSE-QUARTIC-DATA · 指定p7/4真实least-squares与B/U窗口](topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem) | implies → [SPARSE-QUARTIC-EB · C227强真EB锐1/3与全零集局部距离](topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb) | 完整limiting F；全B的Cauchy证书及star≥R(h²+t⁴)/64给强EB常数(512/R)^(1/3)；临界曲线反向见证排q>1/3；U到全zerF距离等于到xbar。；**C227-v1两路独立接收，derived-checked** |
+| E398 | [SPARSE-QUARTIC-DATA · 指定p7/4真实least-squares与B/U窗口](topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem) ∧ [SPARSE-QUARTIC-EB · C227强真EB锐1/3与全零集局部距离](topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb) | conditional → [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) | 全部0<lambda≤1/128及闭球U输入。全域subgradient bound排全部远输出；local prox Hessian正定给唯一；globalprox独立存在补coverage与等式；star恒等式留同U。；**C227-v1全纤维与留域已核，derived-checked** |
+| E399 | [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) ∧ [SPARSE-QUARTIC-EB · C227强真EB锐1/3与全零集局部距离](topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb) | conditional → [SPARSE-QUARTIC-TAIL · C227真实非轴k^−1/2精确常数、径向轴几何](topics/sparse_recovery/sharp_instance_dynamics.md#sd-actual-tail) | 固定0<lambda≤1/128，任意U初值；真实二维方程h/t²非循环跟随→非轴sqrt(k)\|\|xk−xbar\|\|→16/sqrt(13lambdaR)；t0=0精确几何。无曲线不变假设，不扩大到全部上侧模型/变量步。；**C227-v1实际轨道解析证明及两路审查，derived-checked** |
 
 ## 不蕴含关系
 

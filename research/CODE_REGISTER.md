@@ -68,3 +68,8 @@
 ## C223：无共同固定点的正幂必要性边界
 
 [verify.py](code/fixed_point_free_no_power/verify.py)、[范围和运行](code/fixed_point_free_no_power/README.md)、[实际结果](code/fixed_point_free_no_power/results.json) 使用标准库 Fraction，检查八块加原点的二状态积空间、全部有序点对、0–80矩阵时刻与两种混合区间、见证最优成本、e=0边界碰撞及指定小正幂指数反算。无随机性和浮点误差。有限精确证据不证明无限域、所有概率律或任意正幂；承重证明在 C223 正文 FP1–FP21。
+
+
+## C224–C228: sparse threshold and complete dynamics
+
+[Code entry](code/sparse_regularity/README.md) and [fingerprint manifest](code/sparse_regularity/verification_manifest.json) fix the actual runnable scripts, outputs, Python version, precision and diagnostic tolerances. `verify.py` independently checks268200 finite moment cases and60/100-digit boundaries. `sharp_dynamics_verify.py` uses exact Fraction certificates, three100000-step genuine implicit trajectories and Decimal50/80-digit repetitions. `independent_complete_review.py` supplies a separate50000-step two-variable recurrence and exact rational majorant check. No randomness, no substitution of scalar radial minimization for the actual update. The displayed analytic proofs and independent mathematical reception, not computationalPASS, carry all complete-fiber and infinite-time quantifiers. The manuscript is real LaTeX, with source/PDF fingerprints and visual check scope in[its entry](manuscripts/sparse_regularity/README.md).

@@ -1,0 +1,27 @@
+{
+  "verification_date": "2026-10-09",
+  "files": [
+    {
+      "path": "sharp_sparse_regularity.tex",
+      "size_bytes": 37123,
+      "sha256": "1455f28f1e22757ee2f4e5e17e6387051a9fad96c8b83e3af2a2e3298afb95b9"
+    },
+    {
+      "path": "sharp_sparse_regularity.pdf",
+      "size_bytes": 313219,
+      "sha256": "f435c5ec5696f24635780aaab851f55f9061d06e8eabd5b9b4a4510ec81dff2d"
+    }
+  ],
+  "pdf_pages": 12,
+  "compiler": "pdfTeX 1.40.25 / actual pdflatex compilation (two completed passes)",
+  "layout_review": "All 12 final pages rendered with system Poppler at 80 dpi and visually inspected; no clipped content or equations.",
+  "latex_checks": {
+    "errors": 0,
+    "undefined_references": 0,
+    "undefined_citations": 0,
+    "overfull_boxes": 0,
+    "warnings": 0
+  },
+  "independent_source_review": "All 41 dynamics displays, complete resolvent definitions, constants, quantifiers, actual radial tracking and exact asymptotic independently compared with the canonical proof module. Threshold/complete certificate separately independently reconstructed.",
+  "scope": "Compilation and finite/visual review do not certify publication priority. Wang-Zhang 2017 main body and Huo et al. 2023 full body remain unavailable."
+}

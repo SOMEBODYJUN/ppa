@@ -3194,6 +3194,36 @@
       "label": "3/2<p<2的二维Gram族及径向消元K>0",
       "file": "topics/sparse_recovery/automatic_regularity.md#sr-sharpness",
       "evidence_status": "canonical"
+    },
+    {
+      "id": "SPARSE-WIDE",
+      "label": "C228 strict comp1<p<2与support rank全部有限p>1",
+      "file": "topics/sparse_recovery/automatic_regularity.md#sr-wide-ranges",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-QUARTIC-DATA",
+      "label": "指定p7/4真实least-squares与B/U窗口",
+      "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SPARSE-QUARTIC-EB",
+      "label": "C227强真EB锐1/3与全零集局部距离",
+      "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-QUARTIC-PROX",
+      "label": "C227完整J=globalprox、lambda≤1/128及闭球留域",
+      "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-QUARTIC-TAIL",
+      "label": "C227真实非轴k^−1/2精确常数、径向轴几何",
+      "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-actual-tail",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -7786,8 +7816,54 @@
       ],
       "output": "SPARSE-SHARP",
       "relation": "implies",
-      "scope": "每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。matching1/3及实际慢尾未闭。",
+      "scope": "每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。指定p7/4 matching1/3与真实慢尾另由C227闭合，不将其量词扩到此全族。",
       "status": "C225构造和混合消元独立受检，derived-checked"
+    },
+    {
+      "id": "E396",
+      "topic": "稀疏恢复范围分离",
+      "inputs": [
+        "SPARSE-DATA"
+      ],
+      "output": "SPARSE-WIDE",
+      "relation": "implies",
+      "scope": "每个非零局部min；strict comp仅1<p<2；support rank全部有限p>1。只需二阶PSD和least-squares径向排除，不用active-PD。",
+      "status": "C228-v1独立重构，derived-checked；2015 p2 support有先行"
+    },
+    {
+      "id": "E397",
+      "topic": "稀疏恢复完整退化动力学",
+      "inputs": [
+        "SPARSE-QUARTIC-DATA"
+      ],
+      "output": "SPARSE-QUARTIC-EB",
+      "relation": "implies",
+      "scope": "完整limiting F；全B的Cauchy证书及star≥R(h²+t⁴)/64给强EB常数(512/R)^(1/3)；临界曲线反向见证排q>1/3；U到全zerF距离等于到xbar。",
+      "status": "C227-v1两路独立接收，derived-checked"
+    },
+    {
+      "id": "E398",
+      "topic": "稀疏恢复完整退化动力学",
+      "inputs": [
+        "SPARSE-QUARTIC-DATA",
+        "SPARSE-QUARTIC-EB"
+      ],
+      "output": "SPARSE-QUARTIC-PROX",
+      "relation": "conditional",
+      "scope": "全部0<lambda≤1/128及闭球U输入。全域subgradient bound排全部远输出；local prox Hessian正定给唯一；globalprox独立存在补coverage与等式；star恒等式留同U。",
+      "status": "C227-v1全纤维与留域已核，derived-checked"
+    },
+    {
+      "id": "E399",
+      "topic": "稀疏恢复完整退化动力学",
+      "inputs": [
+        "SPARSE-QUARTIC-PROX",
+        "SPARSE-QUARTIC-EB"
+      ],
+      "output": "SPARSE-QUARTIC-TAIL",
+      "relation": "conditional",
+      "scope": "固定0<lambda≤1/128，任意U初值；真实二维方程h/t²非循环跟随→非轴sqrt(k)||xk−xbar||→16/sqrt(13lambdaR)；t0=0精确几何。无曲线不变假设，不扩大到全部上侧模型/变量步。",
+      "status": "C227-v1实际轨道解析证明及两路审查，derived-checked"
     }
   ]
 }

@@ -1,0 +1,26 @@
+{
+  "exact": {
+    "complex_zero_free_bound": "214375/393216",
+    "cauchy_tail_constants": [
+      4.4792276722305875,
+      26.921306830021788,
+      134.9750028985307
+    ],
+    "star_square_remainder_coefficient": 0.062131756674362645,
+    "coordinate_comparison": 1.1705331802368164,
+    "global_M_upper_bound": 2.9754464285714284,
+    "tangent_gradient_cubic_coefficient_over_R": "13/128",
+    "t_tail_squared_constant_times_lambda_R": "128/13",
+    "distance_tail_squared_constant_times_lambda_R": "256/13",
+    "tangent_sign_bound": 0.024409464674659754
+  },
+  "recurrence": {
+    "steps": 50000,
+    "h_over_t_squared": -0.09374901781425148,
+    "limiting_ratio": -0.09375,
+    "measured_inverse_t_squared_increment": 0.0011790176824553783,
+    "predicted_increment": 0.0011790726171130572,
+    "relative_increment_error": -4.659141165830327e-05,
+    "radial_exact_step_error": 0.0
+  }
+}

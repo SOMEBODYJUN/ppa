@@ -1,0 +1,44 @@
+{
+  "python": "3.12.14",
+  "seed": null,
+  "claim_versions": [
+    "C224-v1",
+    "C225-v1",
+    "C226-v1",
+    "C227-v1",
+    "C228-v1"
+  ],
+  "commands": [
+    "python3 research/code/sparse_regularity/verify.py",
+    "python3 research/code/sparse_regularity/sharp_dynamics_verify.py",
+    "python3 research/code/sparse_regularity/independent_complete_review.py > research/code/sparse_regularity/independent_complete_results.json"
+  ],
+  "precision": "Fraction exact; original Decimal60/100 and dynamics Decimal50/80; binary64 recurrence diagnostics",
+  "scope": "Finite checks corroborate arithmetic and actual implicit updates; analytic proofs and independent reconstruction carry all mathematical quantifiers. No publication priority certificate.",
+  "files": {
+    "verify.py": {
+      "bytes": 6153,
+      "sha256": "424d482a67952dd51c5c0a0e46431ee6bc0143253cf13e286dc6729ea7ff128d"
+    },
+    "automatic_regularity_results.json": {
+      "bytes": 10354,
+      "sha256": "034f634fa9777c462d54cdf352290b5d1aebaf20b04735880d6b7c9c105e389d"
+    },
+    "sharp_dynamics_verify.py": {
+      "bytes": 9584,
+      "sha256": "2bcf6c220b30b23578e97eaaa63311e64d145af7bdd76be367394c00eed1462d"
+    },
+    "sharp_dynamics_results.json": {
+      "bytes": 9196,
+      "sha256": "92211957bfd008ce2f497e7487ce9af371e433bb7ea42722a361c6a486f3fb4a"
+    },
+    "independent_complete_review.py": {
+      "bytes": 4184,
+      "sha256": "41bd6fb0d864761c8947308f7055d8604279c4704a2552d1124bf8fce4e2706f"
+    },
+    "independent_complete_results.json": {
+      "bytes": 897,
+      "sha256": "b9693616b2ad0125b9195ccc6457e5a33d406dbc09192ec08bc9219efc993365"
+    }
+  }
+}
