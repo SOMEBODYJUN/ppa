@@ -1,0 +1,959 @@
+
+
+        Generalized Sparse Recovery Model and Its Neural Dynamical Optimization Method for Compressed Sensing | Circuits, Systems, and Signal Processing | Springer Nature Link
+
+    Skip to main content
+
+Advertisement
+
+        Log in
+
+                        Menu
+
+                            Find a journal
+
+                            Publish with us
+
+                            Track your research
+
+                                Search
+
+                                Saved research
+
+  Cart
+
+                        Home
+
+                        Circuits, Systems, and Signal Processing
+
+                        Article
+
+Generalized Sparse Recovery Model and Its Neural Dynamical Optimization Method for Compressed Sensing
+
+                            Published: 15 March 2017
+
+                            Volume 36, pages 4326–4353 (2017)
+
+                            Cite this article
+
+            Save article
+
+                View saved research
+
+                            Circuits, Systems, and Signal Processing
+
+                                Aims and scope
+
+                                Submit manuscript
+
+Dan Wang1,3 & 
+
+Zhuhong Zhang2 
+
+                    721 Accesses
+
+                    12 Citations
+
+Explore all metrics 
+
+Abstract
+
+This work investigates a sparse recovery minimization model and its neural network optimization method for the compressed sensing problem. One such nonsmooth and nonconvex model with \(l_1\)- and \(l_p\)-norms (\(1< p \le 2\)) is theoretically discussed for the uniqueness of its solutions with sparsity S under the restricted isometry property. A generalized gradient projection smoothing neural network based on smoothing approximation and gradient projection is designed to solve the model, due to the requirement of real-time problem solving. The existence, uniqueness and limit behavior of solutions of the neural network are well studied by means of the properties of gradient projection and function smoothness. Experimentally, the neural network is sufficiently examined, relying upon several state-of-the-art discrete numerical methods and neural network optimizers as well as multiple settings of p and different kinds of randomly generated sensing matrices. Numerical results have validated that the smaller/larger the p, the more effective the sparse recovery model under low/high coherent sensing matrices, and also that it can find sparse solutions and perform well over the compared neural networks and multiple discrete numerical solvers; especially, when the related sensing matrix with high coherence is non-RIP satisfying, it can recover the sparse signal with a high success rate.
+
+                                            This is a preview of subscription content, log in via an institution
+
+                                         to check access.
+
+Access this article
+
+                                                        Log in via an institution
+
+Subscribe and save
+
+       Springer+
+
+from $39.99 /Month
+
+Starting from 10 chapters or articles per month
+
+Access and download chapters and articles from more than 300k books and 2,500 journals
+
+Cancel anytime
+
+     View plans 
+
+Buy Now
+
+      Buy article PDF USD 39.95
+
+Price excludes VAT (USA)
+
+     Tax calculation will be finalised during checkout.
+
+Instant access to the full article PDF.
+
+Institutional subscriptions 
+
+Fig. 1
+
+Fig. 2
+
+Fig. 3
+
+Fig. 4
+
+Fig. 5
+
+Fig. 6
+
+Fig. 7
+
+Fig. 8
+
+Fig. 9
+
+Similar content being viewed by others
+
+                                        A comparative analysis of optimization and generalization properties of two-layer neural network and random feature models under gradient descent dynamics
+
+                                        Article
+
+                                         08 January 2020
+
+                                        Reconstruction of sparse signals via neurodynamic optimization
+
+                                        Article
+
+                                         18 May 2017
+
+                                        Sparse evolutionary deep learning with over one million artificial neurons on commodity hardware
+
+                                        Article
+                                         Open access
+                                         06 July 2020
+
+Explore related subjects
+
+        Discover the latest articles, books and news in related subjects, suggested using machine learning.
+
+                Continuous Optimization
+
+                Mathematical Models of Cognitive Processes and Neural Networks
+
+                Neural decoding
+
+                3-D Image Reconstruction
+
+                Computational Neuroscience
+
+                Calculus of Variations and Optimization
+
+                Compressive Sensing Techniques in Signal Processing
+
+References
+
+J.P. Aubin, A. Cellina, Differential inclusions: set-valued maps and viability theory (Springer, New York, 1984)
+
+Book 
+    MATH 
+
+                    Google Scholar 
+
+W. Bian, X. Chen, Smoothing neural network for constrained non-Lipschitz optimization with applications. IEEE Trans. Neural Netw. Learn Syst. 23(3), 399–411 (2012)
+
+Article 
+    MathSciNet 
+
+                    Google Scholar 
+
+T. Blumensath, M.E. Davies, Iterative hard thresholding for compressed sensing. Appl. Comput. Harmon. Anal. 27(3), 265–274 (2009)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+T. Blumensath, Accelerated iterative hard thresholding. Signal Process. 92(3), 752–756 (2012)
+
+Article 
+
+                    Google Scholar 
+
+M. Bogdan, E. Berg, W. Su, E.J. Candès, Statistical estimation and testing via the sorted \(l_1\) norm. Preprint. arXiv:1310.1969 (2013)
+
+S. Boyd, N. Parikh, E. Chu, B. Peleato, J. Eckstein, Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. Learn. 3(1), 1–122 (2011)
+
+Article 
+    MATH 
+
+                    Google Scholar 
+
+E.J. Candès, J. Romberg, T. Tao, Robust uncertainty principles: exact signal reconstruction from highly incomplete frequency information. IEEE Trans. Inf. Theory 52(2), 489–509 (2006)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+E.J. Candès, T. Tao, Decoding by linear programming. IEEE Trans. Inf. Theory 51(12), 4203–4215 (2005)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+E.J. Candès, M.B. Wakin, S.P. Boyd, Enhancing sparsity by reweighted \(l_1\) minimization. J. Fourier Anal. Appl. 14(5), 877–905 (2008)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+E.J. Candès, M. Rudelson, T. Tao, R. Vershynin, Error correction via linear programming. in 46th Annual IEEE Symposium on Foundations of Computer Science (2005), pp. 668–681
+
+R. Chartrand, Exact reconstruction of sparse signals via nonconvex minimization. IEEE Signal Process. Lett. 14(10), 707–710 (2007)
+
+Article 
+
+                    Google Scholar 
+
+R. Chartrand, V. Staneva, Restricted isometry properties and nonconvex compressive sensing. Inverse Probl. 24(3), 1–14 (2008)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+S.S. Chen, D.L. Donoho, M.A. Saunders, Atomic decomposition by basis pursuit. SIAM Rev. 43(1), 129–159 (2001)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+X. Chen, Smoothing methods for nonsmooth, nonconvex minimization. Math. Program. 134(1), 71–99 (2012)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+F.H. Clarke, Optimization and Nonsmooth Analysis (Wiley, New York, 1983)
+
+MATH 
+
+                    Google Scholar 
+
+Z. Dong, W. Zhu, An improvement of the penalty decomposition method for sparse approximation. Signal Process. 113, 52–60 (2015)
+
+Article 
+
+                    Google Scholar 
+
+D.L. Donoho, Compressed sensing. IEEE Trans. Inf. Theory 52(4), 1289–1306 (2006)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+D.L. Donoho, Y. Tsaig, I. Drori, J. Starck, Sparse solution of underdetermined systems of linear equations by stagewise orthogonal matching pursuit. IEEE Trans. Inf. Theory 58(2), 1094–1121 (2012)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+D.L. Donoho, A. Maleki, A. Montanari, Message-passing algorithms for compressed sensing. Proc. Nat. Acad. Sci. 106(45), 18914–18919 (2009)
+
+Article 
+
+                    Google Scholar 
+
+A. Fannjiang, W. Liao, Coherence pattern-guided compressive sensing with unresolved grids. SIAM J. Imaging Sci. 5(1), 179–202 (2012)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+S. Foucart, M.J. Lai, Sparsest solutions of underdetermined linear systems via \(l_q\)-minimization for \(0 < q \le 1\). Appl. Comput. Harmon. Anal. 26(3), 395–407 (2009)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+S. Foucart, H. Rauhut, A Mathematical Introduction to Compressive Sensing (Birkhäuser, Basel, 2013)
+
+Book 
+    MATH 
+
+                    Google Scholar 
+
+G. Gasso, A. Rakotomamonjy, S. Canu, Recovering sparse signals with a certain family of nonconvex penalties and DC programming. IEEE Trans. Signal Process. 57(12), 4686–4698 (2009)
+
+Article 
+    MathSciNet 
+
+                    Google Scholar 
+
+Z. Guo, J. Wang, A neurodynamic optimization approach to constrained sparsity maximization based on alternative objective functions. in Proceedings of the International Conference on Neural Networks, Barcelona, Spain (2010), pp. 18–23
+
+C. Guo, Q. Yang, A neurodynamic optimization method for recovery of compressive sensed signals with globally converged solution approximating to \(l_0\) minimization. IEEE Trans. Neural Netw. Learn Syst. 26(7), 1363–1374 (2015)
+
+Article 
+    MathSciNet 
+
+                    Google Scholar 
+
+X. Huang, Y. Liu, L. Shi, S.V. Huffel, J.A.K. Suykens, Two-level \(l_1\) minimization for compressed sensing. Signal Process. 108, 459–475 (2015)
+
+Article 
+
+                    Google Scholar 
+
+X.L. Huang, L. Shi, M. Yan, Nonconvex Sorted \(l_1\) Minimization for Sparse Approximation. J. Oper. Res. Soc. China 3(2), 207–229 (2015)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+S.J. Kim, K. Koh, M. Lustig, S. Boyd, D. Gorinevsky, An interior-point method for large-scale \(l_1\)-regularized least squares. IEEE J. Sel. Top. Signal Process. 1(4), 606–617 (2007)
+
+Article 
+
+                    Google Scholar 
+
+D. Kinderlehrer, G. Stampacchia, An Introduction to Variational Inequalities and Their Applications (SIAM, New York, 1980)
+
+MATH 
+
+                    Google Scholar 
+
+J. Kreimer, R.Y. Rubinstein, Nondifferentiable optimization via smooth approximation: general analytical approach. Ann. Oper. Res. 39(1), 97–119 (1992)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+M.J. Lai, Y. Xu, W. Yin, Improved iteratively reweighted least squares for unconstrained smoothed \(l_q\) minimization. SIAM J. Numer. Anal. 51(2), 927–957 (2013)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+P.M. Lam, C.S. Leung, J. Sum, A.G Constantinidese, Lagrange programming neural networks for compressive sampling, in Proceedings of the 17th International Conference on Neural Information Processing: Models and Applications ICONIP’10, (Springer, Berlin, 2010), pp. 177–184
+
+C.S. Leung, J. Sum, A.G. Constantinides, Recurrent networks for compressive sampling. Neurocomputing 129, 298–305 (2014)
+
+Article 
+
+                    Google Scholar 
+
+Y. Liu, J. Hu, A neural network for \(\ell _1-\ell _2\) minimization based on scaled gradient projection: Application to compressed sensing. Neurocomputing 173, 988–993 (2016)
+
+Article 
+
+                    Google Scholar 
+
+Y. Lou, P. Yin, Q. He, J. Xin, Computing sparse representation in a highly coherent dictionary based on difference of \(L_1\) and \(L_2\). J. Sci. Comput. 64(1), 178–196 (2015)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+Y. Lou, S. Osher, J. Xin, Computational aspects of constrained L1–L2 minimization for compressive sensing. Model. Comput. Optim. Inf. Syst. Manag. Sci. 359, 169–180 (2015)
+
+MATH 
+
+                    Google Scholar 
+
+Z. Lu, Y. Zhang, Sparse approximation via penalty decomposition methods. SIAM J. Optim. 23(4), 2448–2478 (2013)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+B.K. Natarajan, Sparse approximate solutions to linear systems. SIAM J. Comput. 24(2), 227–234 (1995)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+D. Needell, J.A. Tropp, CoSaMP: iterative signal recovery from incomplete and inaccurate samples. Appl. Comput. Harmon. Anal. 26(3), 301–321 (2009)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+L. Qin, Z. Lin, Y. She, C. Zhang, A comparison of typical \(l_p\) minimization algorithms. Neurocomputing 119(16), 413–424 (2013)
+
+                    Google Scholar 
+
+C.J. Rozell, P. Garrigues, Analog sparse approximation for compressed sensing recovery. in Proceedings of the ASILOMAR Conference Signals Systems and Computers vol. 2010, pp. 822–826 (2010)
+
+C.J. Rozell, D.H. Johnson, R.G. Baraniuk, B.A. Olshausen, Sparse coding via thresholding and local competition in neural circuits. Neural comput. 20(10), 2526–2563 (2008)
+
+Article 
+    MathSciNet 
+
+                    Google Scholar 
+
+Y. She, Thresholding-based iterative selection procedures for model selection and shrinkage. Electron. J. Stat. 3, 384–415 (2009)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+B. Shen, S.X. Ding, Z. Wang, Finite-horizon \(\text{ H }_\infty \) fault estimation for linear discrete time-varying systems with delayed measurements. Automatica 49(1), 293–296 (2013)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+B. Shen, S.X. Ding, Z. Wang, Finite-horizon \(\text{ H }_\infty \) fault estimation for uncertain linear discrete time-varying systems with known inputs. IEEE Trans. Circuits Syst. II, Exp. Briefs 60(12), 902–906 (2013)
+
+Article 
+
+                    Google Scholar 
+
+P.D. Tao, L.T.H. An, Convex analysis approach to dc programming: theory, algorithms and applications. Acta Math. Vietnam. 22(1), 289–355 (1997)
+
+MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+J. Tropp, A.C. Gilbert, Signal recovery from random measurements via orthogonal matching pursuit. IEEE Trans. Inf. Theory 53(12), 4655–4666 (2007)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+J.A. Tropp, Greed is good: algorithmic results for sparse approximation. IEEE Trans. Inf. Theory 50(10), 2231–2242 (2004)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+Z. Xu, X. Chang, F. Xu, H. Zhang, \(L_{1/2}\) regularization: a thresholding representation theory and a fast solver. IEEE Trans. Neural Netw. Learn Syst. 23(7), 1013–1027 (2012)
+
+Article 
+
+                    Google Scholar 
+
+J.F. Yang, Y. Zhang, Alternating direction algorithms for \(l_1\) problems in compressive sensing. SIAM J. Sci. Comput. 33(1), 250–278 (2011)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+A.Y. Yang, Z. Zhou, A.G. Balasubramanian, S. Sastry, Y. Ma, Fast \(l_1\)-minimization algorithms for robust face recognition. IEEE Trans. Image Process. 22(8), 3234–3246 (2013)
+
+Article 
+
+                    Google Scholar 
+
+P. Yin, Y. Lou, Q. He, J. Xin, Minimization of \(l_{1-2}\) for compressed sensing. SIAM J. Sci. Comput. 37(1), A536–A563 (2015)
+
+Article 
+    MATH 
+
+                    Google Scholar 
+
+W. Yin, S. Osher, D. Goldfarb, J. Darbon, Bregman iterative algorithms for \(l_1\)-minimization with applications to compressed sensing. SIAM J. Imaging Sci. 1(1), 143–168 (2008)
+
+Article 
+    MathSciNet 
+    MATH 
+
+                    Google Scholar 
+
+S. Zhang, J. Xin, Minimization of Transformed \(L_1\) Penalty: Theory, Difference of Convex Function Algorithm, and Robust Application in Compressed Sensing. Preprint. arXiv:1411.5735, 2014
+
+Download references
+
+Acknowledgements
+
+This work was supported by the National Natural Science Foundation of China under Grant No. 61563009 and by the Science and Technology Foundation of Guizhou Province No. LKQS201314. The authors would like to thank the Editor in Chief, Associate Editors, and the reviewers for their insightful and constructive comments. Their cordial suggestions have made the whole paper gain great improvements.
+
+Author information
+
+Authors and Affiliations
+
+College of Computer Science and Technology, Guizhou University, Guiyang, 550025, China
+
+Dan Wang
+
+College of Big Data and Information Engineering, Guizhou University, Guiyang, 550025, China
+
+Zhuhong Zhang
+
+School of Mathematics and Statistics, Qiannan Normal University for Nationalities, Duyun, 558000, China
+
+Dan Wang
+
+Authors
+Dan Wang
+
+View author publications
+
+Search author on:PubMed Google Scholar
+
+Zhuhong Zhang
+
+View author publications
+
+Search author on:PubMed Google Scholar
+
+Corresponding author
+
+Correspondence to
+                Zhuhong Zhang.
+
+Appendix
+
+Appendix
+
+Proof of Lemma 1
+
+By using the Hölder inequality, we can obtain
+
+$$\begin{aligned} \left\| \mathbf x \right\| _{q}\le N^{\frac{1}{q}-\frac{1}{p}}\left\| \mathbf x \right\| _{p}, \end{aligned}$$
+
+                    (24)
+
+with \(0<q<p\) [22], and thus \(\left\| \mathbf x \right\| _{1}\le N^{1-\frac{1}{p}}\left\| \mathbf x \right\| _{p}.\) This makes the right inequality of (13) true. On the other hand, we prove that the left inequality of (13) is right. To this end, when \(N = 1\) or \(\left\| \mathbf x \right\| _0 < N\), it is easy to see that the conclusion holds; conversely, when \(\left\| \mathbf x \right\| _0=N\) and \(N>1\), we let \(x_{i}>0\) for the convenience of notation, since \(f(\mathbf x )\) is represented by \(|x_{i}|\) with \(|x_{i}|>0\) and \(1\le i\le N\), we have
+
+$$\begin{aligned} \nabla _{x_{i}} f(\mathbf x ) = 1 - x_i^{p - 1}\left( \sum _{k=1}^{N} x_{k}^{p}\right) ^{\frac{1}{p}-1}>0. \end{aligned}$$
+
+                    (25)
+
+Hence, \(f(\mathbf x )\) is a monotone increasing function with respect to \({x_i}\). Consequently,
+
+$$\begin{aligned} f(\mathbf x ) \ge f\left( \mathop {\min }\limits _{1 \le i \le N} {x_i},..., \mathop {\min }\limits _{1 \le i \le N} {x_i}\right) = \left( {N - {N^\frac{1}{p}}} \right) \mathop {\min }\limits _{1 \le i \le N} {x_i}. \end{aligned}$$
+
+                    (26)
+
+This illustrates that the conclusion is true. \(\square \)
+
+Proof of Theorem 1
+
+The proof here follows the spirit of arguments in [10] and [52]. Let \(\bar{\mathbf{x }}\) and \(\mathbf x \) be two solutions with sparsity S. We decompose \(\mathbf x \) as \(\mathbf x = \bar{\mathbf{x }} + \mathbf e \), and then prove \(\mathbf e =\mathbf 0 \). To this end, let \({\varLambda }= {\mathrm{supp}}(\bar{\mathbf{x }})\), and thus acquire \(\left| {\varLambda }\right| = S\). Subsequently, rewrite \(\mathbf e \) as \(\mathbf e = \mathbf{e _{\varLambda }} + \mathbf{e _{{{\varLambda }^c}}}\), where \(\mathbf e _{\varLambda }\) stands for the vector that, if \(i\in {\varLambda }\), then \(\mathbf e _{\varLambda }(i)=\mathbf e (i)\), and \(\mathbf e _{\varLambda }(i)=0\) otherwise. For instance, if taking \(\mathbf e =(1.4,1.1,1.5)^{T}\) and \(\bar{\mathbf{x }}=(0,1,0)^{T}\), we get \({\varLambda }=\{2\}\), \({\varLambda }^{c}=\{1,3\}\). Accordingly, \(\mathbf e _{{\varLambda }}=(0,1.1,0)^{T}\), and \(\mathbf e _{{\varLambda }^{c}}=(1.4,0,1.5)^{T}\). Such vector decomposition yields
+
+$$\begin{aligned} f(\mathbf x )= & {} \left\| \bar{\mathbf{x }} + \mathbf e _{{\varLambda }} + \mathbf e _{{\varLambda }^c}\right\| _{1} -\left\| \bar{\mathbf{x }} + \mathbf e _{{\varLambda }} + \mathbf e _{{\varLambda }^c}\right\| _{p} \\\ge & {} \left\| \bar{\mathbf{x }} + \mathbf e _{{\varLambda }}\right\| _{1} -\left\| \bar{\mathbf{x }} + \mathbf e _{{\varLambda }}\right\| _{p}+f(\mathbf e _{{\varLambda }^c}) \\\ge & {} f(\bar{\mathbf{x }})+f(\mathbf e _{{\varLambda }^c})-\left\| \mathbf e _{{\varLambda }}\right\| _{1}-\left\| \mathbf e _{{\varLambda }}\right\| _{p}, \end{aligned}$$
+
+which, along with \(f(\mathbf x )=f(\bar{\mathbf{x }})\), follows that
+
+$$\begin{aligned} {\left\| \mathbf{e _{\varLambda }} \right\| _1} + {\left\| \mathbf{e _{\varLambda }}\right\| _p} \ge {\left\| {\mathbf{e _{{\varLambda }^c}}} \right\| _1} - {\left\| \mathbf{e _{{\varLambda }^c}} \right\| _p}. \end{aligned}$$
+
+                    (27)
+
+Let us arrange decreasingly the elements in \(\mathbf e _{{\varLambda }^c}\) based on their absolute values, and divide \({{\varLambda }^c}\) into l subsets \( {{\varLambda }_i}\) with \(1\le i\le l\), where each subset contains 3S indices but probably except \({{\varLambda }_l}\) with less indices. This way, \(\mathbf e _{{\varLambda }_1}\) involves the 3S largest elements in \(\mathbf e _{{\varLambda }^c}\). Hence, it follows from the RIP of matrix A and the notation of \({{\varLambda }_0} = {\varLambda }\cup {{\varLambda }_1}\) that
+
+$$\begin{aligned} 0= & {} \left\| A\mathbf e \right\| _{2} = \left\| A\mathbf e _{{\varLambda }_0}+ \sum \limits _{i = 2}^{l}A\mathbf e _{{\varLambda }_i} \right\| _{2} \nonumber \\\ge & {} \left\| A\mathbf e _{{\varLambda }_0}\right\| _{2} - \left\| \sum \limits _{i = 2}^{l}A\mathbf e _{{\varLambda }_i}\right\| _{2} \nonumber \\\ge & {} \sqrt{1 - \delta _{4S}}\left\| \mathbf e _{{\varLambda }_{0}} \right\| _{2} - \sqrt{1 + \delta _{3S}} \sum \limits _{i = 2}^{l}\left\| \mathbf e _{{\varLambda }_i}\right\| _{2}. \end{aligned}$$
+
+                    (28)
+
+Additionally, as related to the fashion of the division in \({\varLambda }^{c}\), one can acquire \(|e_{k}|\le |e_{r}|\) with \(k\in {\varLambda }_{i}\) and \(r\in {\varLambda }_{i-1}\) under \(i\ge 2\), where \(e_{k}\) and \(e_{r}\) are the kth and rth elements in \(\mathbf e _{{\varLambda }^c}\), respectively. Now, together with Lemma 1 with \(\left\| \mathbf e _{{\varLambda }_{i-1}}\right\| _{0}\le 3S\), we have
+
+$$\begin{aligned} |e_k| \le \mathop {\min }\limits _{r \in {\varLambda }_{i-1}}|e_r| \le \frac{{{\left\| \mathbf e _{{\varLambda }_{i-1}} \right\| }_1} - {{\left\| \mathbf e _{{\varLambda }_{i - 1}} \right\| }_p}}{3S - (3S)^{\frac{1}{p}}}, \end{aligned}$$
+
+                    (29)
+
+and accordingly,
+
+$$\begin{aligned} \sum \limits _{i=2}^{l}\left\| \mathbf e _{{\varLambda }_i}\right\| _{2}\le & {} \sqrt{3S}\sum \limits _{i=2}^{l}\mathop {\max }\limits _{k \in {\varLambda }_i}|e_{k}| \nonumber \\\le & {} \sqrt{3S}\sum \limits _{i=2}^{l} \frac{\left\| \mathbf e _{{\varLambda }_{i -1}}\right\| _{1} - \left\| \mathbf e _{{\varLambda }_{i - 1}}\right\| _{p}}{3S-(3S)^{\frac{1}{p}}} \nonumber \\= & {} \frac{{\sum _{i=1}^{l}{{\left\| {\mathbf{e _{{\varLambda }_i}}}\right\| }_1} - {\sum _{i=1}^{l}{\left\| {\mathbf{e _{{\varLambda }_i}}}\right\| }_p}}}{{\sqrt{3S} -{{(3S)}^{\frac{1}{p}-\frac{1}{2}}}}}. \end{aligned}$$
+
+                    (30)
+
+Again, since \({\varLambda }^{c}={\varLambda }_{1}\cup {\varLambda }_{2}\cup ...\cup {\varLambda }_{l}\), we derive \(\left\| \mathbf e _{{\varLambda }^c}\right\| _{1}=\sum \limits _{i = 1}^{l}\left\| \mathbf e _{{\varLambda }_{i}}\right\| _{1}\) and \(\left\| \mathbf e _{{\varLambda }^c}\right\| _{p}\le \sum \limits _{i = 1}^{l}\left\| \mathbf e _{{\varLambda }_i}\right\| _{p}\). In addition, according to Eqs. (13), (27), (29), (30) and \(\left\| \mathbf e _{{\varLambda }}\right\| _{0}= S\), we have
+
+$$\begin{aligned} \sum \limits _{i = 2}^{l}\left\| \mathbf e _{{\varLambda }_i}\right\| _2\le & {} \frac{{{\left\| \mathbf{e _{{\varLambda }^c}} \right\| }_1} - {{\left\| \mathbf{e _{{\varLambda }^c}} \right\| }_p}}{\sqrt{3S}- {(3S)}^{\frac{1}{p}-\frac{1}{2}}} \le \frac{{{\left\| {\mathbf{e _{\varLambda }}} \right\| }_1} + {{\left\| \mathbf{e _{\varLambda }} \right\| }_p}}{\sqrt{3S} - (3S)^{\frac{1}{p}-\frac{1}{2}}} \nonumber \\\le & {} \frac{\left( {{S^{\frac{1}{p}-\frac{1}{2}}} + S^{1-\frac{1}{2}} } \right) {{\left\| \mathbf{e _{\varLambda }} \right\| }_2}}{\sqrt{3S} - (3S)^{\frac{1}{p}-\frac{1}{2}}}. \end{aligned}$$
+
+                    (31)
+
+By substituting (31) into (28), it yields from Eq. (15), \(\left\| \mathbf e _{{\varLambda }}\right\| _{2}\le \left\| \mathbf e _{{\varLambda }_{0}}\right\| _{2}\) and \(\left\| \mathbf e _{{\varLambda }_{0}}\right\| _{0}\le 4S \) that
+
+$$\begin{aligned} 0\ge & {} \sqrt{1 - \delta _{4S}} {\left\| \mathbf e _{{\varLambda }_0}\right\| _2} - \frac{\sqrt{1 + \delta _{3S}} \left( S^{\frac{1}{p}-\frac{1}{2}} + \sqrt{S} \right) }{\sqrt{3S} - (3S)^{\frac{1}{p}-\frac{1}{2}}} {\left\| \mathbf{e _{\varLambda }} \right\| _2} \nonumber \\\ge & {} \sqrt{1 - \delta _{4S}} \left\| \mathbf e _{{\varLambda }_0} \right\| _2 - \frac{\sqrt{1 + \delta _{3S}}}{\sqrt{\hat{a}(S)}} \left\| \mathbf e _{{\varLambda }_0}\right\| _2. \end{aligned}$$
+
+                    (32)
+
+Hence, Eqs.(14) and (32) imply \(\mathbf e _{{\varLambda }_0} = \mathbf 0 \). This shows that \(\mathbf e _{{\varLambda }}\) and \(\mathbf e _{{\varLambda }_1}\) are two zero vectors. Further, it follows from the division fashion of \({\varLambda }^{c}\) that \(\mathbf e _{{\varLambda }^c}=\mathbf 0 \), and accordingly we get \(\mathbf e =\mathbf 0 \). Therefore, the conclusion is true. \(\square \)
+
+Proof of Lemma 2
+
+Rewrite the \(\mathrm {SNNL}_{1-p}\) (22) as
+
+$$\begin{aligned} \varepsilon \dot{\mathbf{x }}(t) + \mathbf x (t) =\mathbf h (t), \end{aligned}$$
+
+                    (33)
+
+where \(\mathbf h (t)=(I_N-P)\left( \mathbf x (t)-\lambda {\nabla _\mathbf x }\tilde{f}(\mathbf x (t),\mu (t)) \right) + {\varvec{q}}\) is a continuous function. Hence, we acquire a simple integration equation given by
+
+$$\begin{aligned} \mathbf x (t)=e^{-\frac{t}{\varepsilon }}{} \mathbf x _0+\frac{1}{\varepsilon }e^{-\frac{t}{\varepsilon }}\int _0^t\mathbf{h (s)e^{\frac{s}{\varepsilon }}}\text {d}s, \end{aligned}$$
+
+that is
+
+$$\begin{aligned} \mathbf x (t)= & {} e^{-\frac{t}{\varepsilon }}\mathbf{x _0} + \frac{1}{\varepsilon }\int _0^t{{e^{-\frac{t-s}{\varepsilon }}} \left[ {( I_N - P )\left( \mathbf x (s) - \lambda {\nabla _\mathbf x }\tilde{f}( \mathbf{x (s),\mu (s) } ) \right) + {{\varvec{q}}}} \right] } \text {d}s \nonumber \\= & {} {e^{-\frac{t}{\varepsilon }}}\mathbf{x _0} +\frac{1}{\varepsilon }\int _0^t e^{-\frac{t-s}{\varepsilon }}( I_N - P)\mathbf x (s) \text {d}s \nonumber \\&\quad +\,\frac{1}{\varepsilon }\int _0^t {e^{-\frac{t-s}{\varepsilon }}} \left( {\lambda ( P - I_N) {\nabla _\mathbf x }\tilde{f} (\mathbf x (s),\mu (s) ) + {{\varvec{q}}}} \right) \text {d}s. \end{aligned}$$
+
+                    (34)
+
+Hence, it follows from the property of norm that
+
+$$\begin{aligned} \left\| \mathbf x (t)\right\| _{2}\le & {} \left\| \mathbf x _{0}\right\| _{2}+\frac{1}{\varepsilon }\int _0^t e^{-\frac{t-s}{\varepsilon }}\left\| I_N - P\right\| _{2}.\left\| \mathbf x (s)\right\| _{2} \text {d}s \nonumber \\&\quad +\,\frac{1}{\varepsilon }\int _0^t {e^{-\frac{t-s}{\varepsilon }}} \left( {\lambda \left\| I_N-P\right\| _{2}.\left\| {\nabla _\mathbf x }\tilde{f} (\mathbf x (s),\mu (s) )\right\| _{2} +\left\| {{\varvec{q}}}\right\| _{2}}\right) \text {d}s.\nonumber \\ \end{aligned}$$
+
+                    (35)
+
+Again, since \(\left| \nabla _{x_i}\phi (x_i,\mu )\right| \le 1\) and
+
+$$\begin{aligned} \nabla _{x_{i}} f\left( \mathbf{x ,\mu }\right) ={\nabla _{x_{i}}\phi \left( {{x_i},\mu } \right) \left[ {1 - {\phi ^{p - 1}}\left( {{x_i},\mu } \right) {{\left( {\sum \limits _{k = 1}^N {{\phi ^p}\left( {{x_k},\mu } \right) } } \right) }^{\frac{1}{p}- 1}}} \right] ,} \end{aligned}$$
+
+                    (36)
+
+we obtain
+
+$$\begin{aligned} \left| \nabla _{x_i} f(\mathbf x ,\mu )\right| \le 1 + \frac{{\phi ^{p-1}}(x_i,\mu )}{{\left( {\sum \limits _{k = 1}^N {{\phi ^p} (x_k,\mu )}} \right) }^{1 - \frac{1}{p}}} \le 2, \end{aligned}$$
+
+which hints
+
+$$\begin{aligned} \left\| {{\nabla _\mathbf x }\tilde{f}( \mathbf x (t),\mu (t) )} \right\| _2\le 2\sqrt{N}. \end{aligned}$$
+
+                    (37)
+
+Consequently, Eqs. (35) and (37) yield
+
+$$\begin{aligned} \left\| \mathbf x (t)\right\| _2\le C+\frac{1}{\varepsilon }\left\| I_N - P\right\| _ 2 \int _0^t e^{-\frac{t-s}{\varepsilon }}\left\| \mathbf x (s)\right\| _{2} \text {d}s, \end{aligned}$$
+
+                    (38)
+
+where
+
+$$\begin{aligned} C=\left\| \mathbf x _0\right\| _2+2\lambda \sqrt{N}\left\| I_N-P\right\| _2+\left\| {{\varvec{q}}}\right\| _{2}. \end{aligned}$$
+
+                    (39)
+
+Hence, Eq. (38) and the Grönwall’s inequality derive that there exists \(\rho >0\) such that \(\left\| \mathbf x (t)\right\| _{2}\le \rho \). Thereby, the conclusion holds. \(\square \)
+
+Proof of Theorem 2
+
+Equation (18) indicates that \(\nabla _{s}\phi (s,\mu )\) is continuous in s, which, along with Eq. (19), implies that \(\nabla _\mathbf{x }\tilde{f}(\mathbf x ,\mu )\) is continuous in \(\mathbf x \). Hence, there exists \(T > 0\) such that the \(\mathrm {SNNL}_{1-p}\) model has at least a local solution \(\bar{\mathbf{x }}\) in \({C^1}\left( [0,T),\mathbb {R}^N \right) \). On the other hand, denote \(B\left( \bar{\mathbf{x }} \right) =\frac{1}{2}\left\| {A\bar{\mathbf{x }} - \mathbf b } \right\| _2^2\). Then, we easily have \({\nabla _{\bar{\mathbf{x }}}}B\left( \bar{\mathbf{x }} \right) = {A^T}\left( {A\bar{\mathbf{x }} - \mathbf b }\right) \). According to the definitions of P and \({{\varvec{q}}}\) above, we have \(A(I_N- P)=\mathbf 0 \) and \(A{{\varvec{q}}}=\mathbf b \). Thereby, as related to the \(\mathrm {SNNL}_{1-p}\) model, we get
+
+$$\begin{aligned} \frac{d}{{dt}}B(\bar{\mathbf{x }}(t))= & {} {\nabla _{\bar{\mathbf{x }}}}{B(\bar{\mathbf{x }}(t))}^T {\dot{\bar{\mathbf{x }}}}(t) = {\left( {A\bar{\mathbf{x }}(t)-\mathbf b } \right) ^T}A{\dot{\bar{\mathbf{x }}}}(t) \\= & {} \frac{1}{\varepsilon }{\left( {A\bar{\mathbf{x }}(t)-\mathbf b }\right) ^T}A\left[ -\bar{\mathbf{x }}(t)+(I_N - P) \left( \bar{\mathbf{x }}(t)-\lambda {\nabla _{\bar{\mathbf{x }}}}\tilde{f}(\bar{\mathbf{x }}(t),\mu (t))\right) +{{\varvec{q}}} \right] \\= & {} -\frac{1}{\varepsilon }{\left( {A\bar{\mathbf{x }}(t)-\mathbf b } \right) ^T}A(\bar{\mathbf{x }}(t)-{{\varvec{q}}}) \\= & {} -\frac{1}{\varepsilon }{\left( {A\bar{\mathbf{x }}(t)-\mathbf b } \right) ^T}\left( {A\bar{\mathbf{x }}(t)- \mathbf b }\right) = - \frac{2}{\varepsilon }B(\bar{\mathbf{x }}(t)). \end{aligned}$$
+
+This implies \(B(\bar{\mathbf{x }}(t))= B(\mathbf x _0)e^{-\frac{2t}{\varepsilon }}\). Again, since \(\mathbf x _{0}\in {\mathbb {X}}\), we have \(\bar{\mathbf{x }}\in {C^1}\left( [0,T),{\mathbb {X}}\right) \). Furthermore, if [0, T) is the maximal existence interval of \(\bar{\mathbf{x }}\) with \(T < \infty \), \(\bar{\mathbf{x }}\) can be extended by using Lemma 2 and the extension theorem, which yields a contradiction. Thus, the conclusion is true. \(\square \)
+
+Proof of Lemma 3
+
+It is sufficient to prove that the generalized Hessian matrix of \(\tilde{f}\left( \mathbf{x ,\gamma } \right) \) is globally bounded in the sense of 2-norm, namely there exists \(m>0\) such that the upper bound of the 2-norm of such Hessian matrix for \(\forall \mathbf x \) is smaller than m. Whereas \({\nabla _\mathbf x }\tilde{f}(\mathbf x ,\gamma )\) is nondifferentiable in the case where there exists some i such that \(|x_i| = \gamma \) with \(1\le i\le N\), the definition of the Clarke generalized gradient (i.e., Eq. (4)) shows that we only need to prove that when \(\left| x_i\right| \ne \gamma \) and \(\left| x_j\right| \ne \gamma \) with \(i\ne j\), \(\nabla ^2_{x_i}\tilde{f}(\mathbf x ,\gamma )\) and \(\nabla ^2_{x_i x_j}\tilde{f}(\mathbf x ,\gamma )\) are globally bounded. For simplicity, write \(\phi _k=\phi (x_k,\gamma )\) and \(\phi _k^p={\phi }^p(x_k,\gamma )\). Also since \(\phi _k \ge 0\) by Eq. (17), we consider the following three cases.
+
+Case (i): \(|x_i| > \gamma \). Eq. (36) can be rewritten by
+
+$$\begin{aligned} \nabla _{x_i} f(\mathbf x ,\gamma )= \mathrm {sign}(x_i)\left[ 1 -|x_i|^{p - 1}{{\left( \sum \limits _{k = 1}^N {\phi _k^p} \right) }^{\frac{1}{p}- 1}}\right] , \end{aligned}$$
+
+                    (40)
+
+and accordingly by simple computation, we can derive
+
+$$\begin{aligned} {\nabla _{x_i}^2\tilde{f}(\mathbf x ,\gamma )} =(p-1)\left| -|x_i|^{p-2} \left( \sum \limits _{k = 1}^N {\phi _k^p}\right) ^{\frac{1}{p}-1} + \left( \sum \limits _{k=1}^N {\phi _k^p} \right) ^{\frac{1}{p} - 2} |x_i|^{2p - 2}\right| . \end{aligned}$$
+
+                    (41)
+
+Hence, it follows from \(\phi _i=|x_i|\) that
+
+$$\begin{aligned} \left| {\nabla _{x_i}^2\tilde{f}(\mathbf x ,\gamma )}\right|= & {} (p-1)\left| \left( \sum \limits _{k = 1}^N {\phi _k^p}\right) ^{\frac{1}{p}- 2} |x_i|^{p-2}\left( \sum \limits _{k = 1}^N {\phi _k^p}-|x_i|^p \right) \right| \nonumber \\\le & {} (p - 1) \left( \sum \limits _{k = 1}^N {\phi _k^p} \right) ^{\frac{1}{p}- 1}|x_i|^{p - 2} \le (p-1)\frac{|x_i|^{p - 2}}{|x_i|^{p - 1}} \le \frac{p-1}{\gamma }. \end{aligned}$$
+
+                    (42)
+
+Case (ii): \(|x_i| < \gamma \). Eq. (36) is equivalent to the following formula,
+
+$$\begin{aligned} \nabla _{x_i}\tilde{f}(\mathbf x ,\gamma ) = \frac{x_i}{\gamma }\left[ 1-\left( \frac{x_i^2}{2\gamma } +\frac{\gamma }{2}\right) ^{p - 1} \left( \sum \limits _{k = 1}^N {\phi _k^p} \right) ^{\frac{1}{p}- 1} \right] , \end{aligned}$$
+
+                    (43)
+
+and thus
+
+$$\begin{aligned} \nabla _{x_i}^2\tilde{f}(\mathbf x ,\gamma )= & {} \frac{1}{\gamma }- \frac{\phi _i^{p-1}}{\gamma } \left( \sum \limits _{k = 1}^N {\phi ^p_k} \right) ^{\frac{1}{p} - 1} \nonumber \\&-\frac{(p - 1)x_i^2}{\gamma ^2} \left( \sum \limits _{k = 1}^N {\phi ^p_k}\right) ^{\frac{1}{p}- 2} \phi _i^{p-2} \sum \limits _{k = 1,k \ne i}^N {\phi ^p_k}. \end{aligned}$$
+
+                    (44)
+
+By integrating Eq. (17) with \(\phi _i<\gamma \), this implies
+
+$$\begin{aligned} \left| \nabla _{x_i}^2\tilde{f}(\mathbf x ,\gamma )\right|< & {} \frac{1}{\gamma } + \frac{\phi _i^{p-1}}{\gamma } \left( \sum \limits _{k=1}^N \phi _k^p \right) ^{\frac{1}{p}-1} + \frac{(p - 1)x_i^2}{\gamma ^2} \left( \sum \limits _{k=1}^N \phi _k^p \right) ^{\frac{1}{p}-1} \phi _i^{p-2} \nonumber \\= & {} \frac{1}{\gamma } + \phi _i^{p-2} \left( \sum \limits _{k=1}^N{\phi _k^p}\right) ^{\frac{1}{p}-1} \left( \frac{\phi _i}{\gamma } + \frac{(p-1)x_i^2}{\gamma ^2}\right) \nonumber \\< & {} \frac{1}{\gamma } + \frac{p}{\phi _{i}}<\frac{1}{\gamma }+\frac{p}{\frac{\gamma }{2}}=\frac{2p+1}{\gamma }. \end{aligned}$$
+
+                    (45)
+
+Case (iii): \(i \ne j\). We gain
+
+$$\begin{aligned} \nabla _{x_i x_j}^{2} f(\mathbf x ,\gamma ) = (p - 1)\phi _i^{p - 1} \phi _j^{p - 1}\nabla _{x_i}\phi (x_i,\gamma ) \nabla _{x_j}\phi (x_j,\gamma ) \left( \sum \limits _{k = 1}^N {\phi _k ^p}\right) ^{\frac{1}{p}-2}. \end{aligned}$$
+
+                    (46)
+
+Since \(\nabla _{x_k}\phi (x_k,\gamma )\le 1\) with \(k=i,j\), we can similarly prove that the following inequality is true,
+
+$$\begin{aligned} \left| \nabla _{x_i x_j}^{2} f(\mathbf x ,\gamma )\right| \le \frac{(p - 1)\phi _i^{p - 1} \phi _j^{p -1}}{(\phi _i^p)^{2-\frac{1}{p}}} \le \frac{2^p(p-1)}{\gamma }, \end{aligned}$$
+
+                    (47)
+
+Finally, since the property of matrix norm [22] indicates
+
+$$\begin{aligned} \left\| \nabla _x^2\tilde{f}(\mathbf x ,\gamma ) \right\| _2 \le \sqrt{{\left\| \nabla _x^2\tilde{f}(\mathbf x ,\gamma )\right\| _1} {\left\| {\nabla _x^2\tilde{f}(\mathbf x ,\gamma )}\right\| _\infty }} \le L_{\gamma }, \end{aligned}$$
+
+                    (48)
+
+we can obtain the conclusion is true by Eq. (48) and the above discussion. \(\square \)
+
+Proof of Theorem 3
+
+Let \(\mathbf x ,\hat{\mathbf{x }} \in {C^1}\left( [0,\infty ),{\mathbb {X}}\right) \) be two solutions of the \(\mathrm {SNNL}_{1-p}\) with the same initial state \(\mathbf{x _0}\). If \(\mathbf x \ne \hat{\mathbf{x }}\), there exist \(\hat{t}>0\) and \(\delta >0\) such that \(\mathbf x (t)\ne \hat{\mathbf{x }}(t)\) for \(\forall t\in [\hat{t}, \hat{t} +\delta ]\). Write
+
+$$\begin{aligned} \psi \left( \mathbf x (t),\gamma \right) = \frac{1}{\varepsilon }\left[ -\mathbf x (t)+(I - P)\left( \mathbf x (t)-\lambda {\nabla _\mathbf x }\tilde{f}\left( \mathbf x (t),\gamma \right) \right) +{{\varvec{q}}}\right] . \end{aligned}$$
+
+                    (49)
+
+Since \({\nabla _\mathbf x }\tilde{f}(\mathbf x ,\gamma )\) is globally Lipschitz in \(\mathbf x \) for any fixed \(\gamma >0\) by Lemma 3, so is \(\psi (\mathbf x ,\gamma )\). Because \(\mathbf x (t),\hat{\mathbf{x }}(t)\) and \(\mu (t)\) are continuous and bounded on \([0,\hat{t}+\delta ]\), there exists \(L>0\) such that
+
+$$\begin{aligned} {\left\| {\psi \left( \mathbf x (t),\mu (t) \right) - \psi \left( {\hat{\mathbf{x }}(t),\mu (t)}\right) } \right\| _2} \le L{\left\| \mathbf{x (t)-\hat{\mathbf{x }}(t)}\right\| _2},\forall t\in [0,\hat{t}+\delta ]. \end{aligned}$$
+
+                    (50)
+
+This yields
+
+$$\begin{aligned} \frac{1}{2}\frac{d}{dt}\left\| \mathbf x (t)- \hat{\mathbf{x }}(t)\right\| _2^2= & {} \left( \mathbf x (t)- \hat{\mathbf{x }}(t) \right) ^T \left( \dot{\mathbf{x }}(t) - {\dot{\hat{\mathbf{x }}}}(t)\right) \nonumber \\= & {} \left( \mathbf x (t)- \hat{\mathbf{x }}(t) \right) ^T \left( \psi (\mathbf x (t),\mu (t))-\psi ( \hat{\mathbf{x }}(t),\mu (t) )\right) \nonumber \\\le & {} L\left\| \mathbf x (t)- \hat{\mathbf{x }}(t) \right\| _2^2,\forall t\in [0,\hat{t}+\delta ]. \end{aligned}$$
+
+                    (51)
+
+Accordingly, we acquire \(\mathbf x (t)=\hat{\mathbf{x }}(t)\) for \(\forall t\in [0,\hat{t}+\delta ]\) because of \(\mathbf x (0)=\hat{\mathbf{x }}(0)\). This yields a contradiction. Thus, the conclusion is true. \(\square \)
+
+Proof of Theorem 4
+
+(a) Set \(\eta (t) = \mathbf x (t)- \lambda {\nabla _\mathbf x }\tilde{f}(\mathbf x (t),\mu (t))\). By Eq. (8) and the definition of \(P_\mathbb {X}(.)\) above, we have
+
+$$\begin{aligned} \left\langle \mathbf x (t)- P_\mathbb {X}(\eta (t)),\eta (t) - P_\mathbb {X}(\eta (t)) \right\rangle \le 0. \end{aligned}$$
+
+                    (52)
+
+Since \(\mathbf x (t) - P_\mathbb {X}(\eta (t)) = - \varepsilon \dot{\mathbf{x }}(t) \) and \(\eta (t) - {P_\mathbb {X}}(\eta (t)) = - \lambda {\nabla _\mathbf x }\tilde{f}( \mathbf x (t),\mu (t)) - \varepsilon \dot{\mathbf{x }}(t)\), we derive
+
+$$\begin{aligned} \left\langle { - \varepsilon \dot{\mathbf{x }}(t), - \lambda {\nabla _\mathbf x }\tilde{f}\left( \mathbf x (t),\mu (t) \right) - \varepsilon \dot{\mathbf{x }}(t)} \right\rangle \le 0, \end{aligned}$$
+
+                    (53)
+
+namely
+
+$$\begin{aligned} \lambda \dot{\mathbf{x }}(t){\nabla _\mathbf x }\tilde{f}\left( \mathbf x (t),\mu (t) \right) + \varepsilon \left\| {\dot{\mathbf{x }}(t)} \right\| _2^2 \le 0. \end{aligned}$$
+
+                    (54)
+
+From Definition 1, there exists a \(\kappa _{\tilde{f}} > 0\) such that \(\left| \nabla _\mu \tilde{f}(\mathbf x (t),\mu (t)) \right| \le \kappa _{\tilde{f}}\). This yields \(\nabla _\mu \tilde{f}(\mathbf x (t),\mu (t))\dot{\mu }(t) \le - {\kappa _{\tilde{f}}}\dot{\mu }(t) \) by \(\dot{\mu } \left( t \right) < 0\). Consequently,
+
+$$\begin{aligned} \frac{d}{dt}\left( \tilde{f}(\mathbf x (t),\mu (t))+\kappa _{\tilde{f}}\mu (t)\right) \le -\frac{\varepsilon }{\lambda }\left\| {\dot{\mathbf{x }}(t)} \right\| _2^2\le 0. \end{aligned}$$
+
+                    (55)
+
+In addition, Eq. (34) and Lemmas 2 and 3 illustrate that \(\Phi _{p}\) is bounded and closed. Thus, there exists \(\nu >0\) such that \(f(\mathbf x (t))\ge \nu \). Hence, by Eq. (10) we note that \( \tilde{f}(\mathbf x (t),\mu (t)) + {\kappa _{\tilde{f}}}\mu (t) \ge f(\mathbf x (t))\ge \nu \), and therefore Eq. (55) derives that \(\lim \limits _{t \rightarrow \infty } \left( \tilde{f}\left( \mathbf x (t),\mu (t) \right) + \kappa _{\tilde{f}}\mu (t) \right) \) exists and accordingly \(\int _0^\infty {\left\| {\dot{\mathbf{x }}\left( t \right) } \right\| _2^2} dt < \infty \). This implies \(\lim \limits _{t \rightarrow \infty } {\left\| \dot{\mathbf{x }} (t) \right\| _2} = 0\).
+
+(b) Since \(\mathbf x ^*=\overline{\lim \limits _{t \rightarrow \infty }}{} \mathbf x (t) \), there exists a sequence \(\{t_k\}_{k=0}^{\infty }\) such that \(\lim \limits _{k\rightarrow \infty } \mathbf x (t_k) = \mathbf x ^*\) as \(\lim \limits _{k \rightarrow \infty }{t_k}= {\infty } \). Hence, we gain \(\mathbf x ^* \in \mathbb {X}\) because of \(\mathbf x (t_{k})\in \mathbb {X}\). On the other hand, by Eq. (5) we obtain \({N_\mathbb {X}}\left( \mathbf u \right) = \left\{ {{A^T}\zeta \left| {\zeta \in {\mathbb {R}^M}} \right. } \right\} \) for all \(\mathbf u \in \mathbb {X}\). Moreover, since \(\mathop {\lim }\limits _{k \rightarrow \infty } {\nabla _\mathbf x }\tilde{f}\left( \mathbf{x \left( t_k\right) ,\mu (t_k)} \right) \in \partial f\left( \mathbf{x ^*} \right) \), we derive by Eq. (22) and Case (a) that
+
+$$\begin{aligned} \mathbf 0= & {} \lim \limits _{k \rightarrow \infty } \frac{1}{\varepsilon }\left[ \mathbf x (t_k)- (I_N - P)\left( \mathbf x (t_k)-\lambda {\nabla _\mathbf x }\tilde{f}\left( \mathbf x (t_k),\mu (t_k) \right) \right) -{{\varvec{q}}}\right] \frac{\varepsilon }{\lambda } \\= & {} \lim \limits _{k \rightarrow \infty } \left[ (I_N - P){\nabla _\mathbf x }\tilde{f}\left( \mathbf x (t_k),\mu (t_k) \right) + \frac{1}{\lambda } \left( P\mathbf x (t_k) - {{\varvec{q}}}\right) \right] \\= & {} \lim \limits _{k \rightarrow \infty } \left[ \nabla _\mathbf x \tilde{f} \left( \mathbf x (t_k),\mu (t_k) \right) +\frac{1}{\lambda } A^T (AA^T)^{-1} \right. \\&\left. \left( A\mathbf x (t_k) - \lambda A{\nabla _\mathbf x }\tilde{f} \left( \mathbf x (t_k),\mu (t_k) \right) - \mathbf b \right) \right] \\&\in \partial f(\mathbf x ^*) + {N_\mathbb {X}}(\mathbf x ^*). \end{aligned}$$
+
+Thereby, \(\mathbf 0 \in \partial f(\mathbf x ^*) + {N_ \mathbb {X}}(\mathbf x ^*)\), which implies that there exist \(\xi \in \partial f(\mathbf x ^*)\) and \(\mathbf v \in N_\mathbb {X}(\mathbf x ^*)\) such that \(\mathbf 0 =\xi + \mathbf v \). Hence, by Eq. (5) we get \(\langle \mathbf w -\mathbf x ^*, \mathbf v \rangle \le 0\), and thus \(\left\langle \mathbf{w - \mathbf{x ^*} ,\xi }\right\rangle \ge 0\) for any \(\mathbf w \in \mathbb {X}\). This shows that \(\mathbf x ^*\) is a Clarke stationary point of NOM. \(\square \)
+
+Rights and permissions
+
+Reprints and permissions
+
+About this article
+
+Cite this article
+
+Wang, D., Zhang, Z. Generalized Sparse Recovery Model and Its Neural Dynamical Optimization Method for Compressed Sensing.
+                    Circuits Syst Signal Process 36, 4326–4353 (2017). https://doi.org/10.1007/s00034-017-0532-7
+
+Download citation
+
+Received: 25 April 2016
+
+Revised: 21 February 2017
+
+Accepted: 23 February 2017
+
+Published: 15 March 2017
+
+Issue date: November 2017
+
+DOI: https://doi.org/10.1007/s00034-017-0532-7
+
+Share this article
+
+Anyone you share the following link with will be able to read this content:
+Get shareable link
+
+Sorry, a shareable link is not currently available for this article.
+
+Copy shareable link to clipboard
+
+                            Provided by the Springer Nature SharedIt content-sharing initiative
+
+Keywords
+
+Compressed sensing
+
+                        \(l_{1-p}\) minimization
+
+Smoothing approximation
+
+Neural network optimization
+
+Gradient projection
+
+Access this article
+
+                                                    Log in via an institution
+
+Subscribe and save
+
+       Springer+
+
+from $39.99 /Month
+
+Starting from 10 chapters or articles per month
+
+Access and download chapters and articles from more than 300k books and 2,500 journals
+
+Cancel anytime
+
+     View plans 
+
+Buy Now
+
+      Buy article PDF USD 39.95
+
+Price excludes VAT (USA)
+
+     Tax calculation will be finalised during checkout.
+
+Instant access to the full article PDF.
+
+Institutional subscriptions 
+
+Advertisement
+
+Search
+
+                        Search by keyword or author
+
+                                Search
+
+Navigation
+
+                        Find a journal
+
+                        Publish with us
+
+                        Track your research
+
+Footer Navigation
+
+Discover content
+
+Journals A-Z
+
+Books A-Z
+
+Subjects A-Z
+
+Publish with us
+
+Journal finder
+
+Publish your research
+
+Language editing
+
+Open access publishing
+
+Products and services
+
+Our products
+
+Librarians
+
+Societies
+
+Partners and advertisers
+
+Our brands
+
+Springer
+
+Nature Portfolio
+
+BMC
+
+Palgrave Macmillan
+
+Apress
+
+Discover
+
+Corporate Navigation
+
+						Your privacy choices/Manage cookies
+
+						Your US state privacy rights
+
+						Accessibility statement
+
+						Terms and conditions
+
+						Privacy policy
+
+						Help and support
+
+						Legal notice
+
+						Cancel contracts here
+
+							90.96.176.60
+
+Not affiliated
+
+© 2026 Springer Nature
+

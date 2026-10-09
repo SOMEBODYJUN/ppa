@@ -1,0 +1,51 @@
+{
+  "audit_date": "2026-10-09",
+  "files": [
+    {
+      "file": "yin_lou_he_xin_2015_author.pdf",
+      "source_url": "https://www.math.uci.edu/~jxin/cam14-01.pdf",
+      "scope": "Complete author manuscript, revised June 24 2014; 25 pages",
+      "bytes": 457215,
+      "sha256": "6b389dce46bc0f6148019d1cf6c00ffea80deb9b8271ed7d54581fe3c6dd0f0e"
+    },
+    {
+      "file": "yin_lou_he_xin_2015_published.pdf",
+      "source_url": "https://www.math.uci.edu/~jxin/DL12_sisc_2015.pdf",
+      "scope": "Complete published SISC 37(1), A536-A563 (2015); 28 pages",
+      "bytes": 953434,
+      "sha256": "86cc4eb099e40a83b5e737697a1085289245cdadf61f99571802ba881debedc5"
+    },
+    {
+      "file": "wang_2015_optimization_online.pdf",
+      "source_url": "https://optimization-online.org/wp-content/uploads/2015/03/4849.pdf",
+      "scope": "Complete author report, cover revision August 2014; 11 pages",
+      "bytes": 397889,
+      "sha256": "c6f2d36ca646e06e455c5d59eadd6a8954159f517a83a10b8c9892b89198eb10"
+    },
+    {
+      "file": "lou_yan_2018_arxiv_v4.pdf",
+      "source_url": "https://arxiv.org/pdf/1609.09530v4",
+      "scope": "Complete arXiv v4 author manuscript; 21 pages",
+      "bytes": 535138,
+      "sha256": "03a898e8891b799afa8666741d22faec34f8cef7718eedb13f40cc41a55ce75b"
+    },
+    {
+      "file": "wang_zhang_2017.publisher.html",
+      "source_url": "https://link.springer.com/article/10.1007/s00034-017-0532-7",
+      "scope": "Official subscription preview with exposed Appendix; NOT complete article",
+      "bytes": 416282,
+      "sha256": "920a16a4f7593641247c5cbca422950188317347d353d2583623d5cae0eea84f"
+    },
+    {
+      "file": "wang_zhang_2017.publisher.txt",
+      "source_url": "https://link.springer.com/article/10.1007/s00034-017-0532-7",
+      "scope": "Extracted official subscription preview including Appendix; NOT complete article",
+      "bytes": 44855,
+      "sha256": "06144add2c73dda92e1f14c928485829440e1732fe032ffb96133d46f802463c"
+    }
+  ],
+  "unobtained_full_bodies": [
+    "Wang-Zhang 2017 DOI10.1007/s00034-017-0532-7",
+    "Huo-Chen-Ge-Ng 2023 DOI10.1137/22M1525363"
+  ]
+}
