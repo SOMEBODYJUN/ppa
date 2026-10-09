@@ -5,6 +5,7 @@
 | 规范正文 | 可调用身份与边界 |
 | --- | --- |
 | [二进制与 Gaussian 条件刷新](conditional_refresh.md) | C129 的固定边缘 \(\mathsf W_\nu/\mathcal R\) 与 C130 的 \(W_{2,Q}/\mathcal R_Q\) 分别有完整证明；二者都不自动给原同步 \(\Psi\) 的 EB。 |
+| [无共同固定点的正幂必要性反例](fixed_point_free_no_power.md#fpf-theorem) | C223 的原 Ψ exact-zero、四正概率、全状态对 almost-firm 与全部初律相对几何率均成立，同一不变律附近所有正幂 EB 仍失败；直接 C143×刷新有假零，须先删除中点。 |
 | [紧可数与投影的残差边界](compact_residual_boundaries.md#crb-object) | C143 在同一核有一般 gauge 和统一几何尾却没有正幂 EB；C144 在保留原 OT 最优性的投影模型已有假零。后者不等同于 C71 删除 OT 条件的假零。 |
 | [非均匀单 bit 的最小模和律长度](one_bit_envelope.md#bit-object) | C145 的饱和最小非降模、精确 law-step 和允许无穷的律长度；条件残差与公平 bit 补空间谱分别量化，不移作一般同步残差结论。 |
 | [相关Gibbs与条件边界](conditional_refresh_interfaces.md#cfi-gibbs-object) | C173有限相关概率律的有效条件EB与特定权重收缩；C174可数连续表示的锐期望能量常数；C175条件残差、同步能量及同固定边缘拓扑的分离。逐节重新绑定目标、权重和表示。 |

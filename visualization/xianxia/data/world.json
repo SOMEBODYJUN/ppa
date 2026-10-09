@@ -6575,6 +6575,39 @@
       "y": 948,
       "region": "structure",
       "realm": "structure"
+    },
+    "FPF-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 2067,
+      "region": "random",
+      "realm": "random"
+    },
+    "FPF-NOPOWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 1976,
+      "region": "random",
+      "realm": "random"
+    },
+    "FPF-POWER-NECESSITY": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "wall",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 4496,
+      "y": 1885,
+      "region": "random",
+      "realm": "random"
     }
   },
   "edges": {
@@ -8133,6 +8166,14 @@
     "E389": {
       "x": 4354.19,
       "y": 3181.69
+    },
+    "E390": {
+      "x": 4461.51,
+      "y": 2009.39
+    },
+    "E391": {
+      "x": 4487.41,
+      "y": 1932.22
     }
   },
   "bounds": {

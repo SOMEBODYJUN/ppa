@@ -3140,6 +3140,24 @@
       "label": "全纤维ASM核轨道精确导入经典强单调PPA",
       "file": "novelty/2026_10_09/gppa_source_priority_followup.md#source-classic",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FPF-DATA",
+      "label": "三点紧可数块与独立二状态刷新",
+      "file": "topics/random_markov/fixed_point_free_no_power.md#fpf-theorem",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "FPF-NOPOWER",
+      "label": "C223无共同固定点/exact-zero/统一相对几何尾仍无正幂",
+      "file": "topics/random_markov/fixed_point_free_no_power.md#fpf-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FPF-POWER-NECESSITY",
+      "label": "错误：无共同固定点加精确零集与统一几何尾必有局部正幂EB",
+      "file": "topics/random_markov/fixed_point_free_no_power.md#fpf-no-power",
+      "evidence_status": "refuted"
     }
   ],
   "edges": [
@@ -7667,6 +7685,28 @@
       "relation": "conditional",
       "scope": "同完整union A、全图ε-ASM、非空原零集与Q coverage；A−εId作极大扩张再加εId，J_M|Q=J_A保每条核轨道，经典q=(1+λε)^−1。物理距离另回原selected F值，不假定v可逆/扩张后物理EB。",
       "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E390",
+      "topic": "随机律必要性边界",
+      "inputs": [
+        "FPF-DATA"
+      ],
+      "output": "FPF-NOPOWER",
+      "relation": "implies",
+      "scope": "固定FP2–FP6完整四映射，删除C143中点后位移标签单射；α=1/2,ε=45/64在全部状态对成立，原输入OT残差exact-zero，C=√2L²(1+L²),r=√(7/8)对全部初律和k≥0成立；同一barπ全部q/K/a违界。",
+      "status": "C223-v1 FP1–FP21自足证明，两路独立接收及有限有理复算；derived-checked"
+    },
+    {
+      "id": "E391",
+      "topic": "随机律必要性边界",
+      "inputs": [
+        "FPF-NOPOWER"
+      ],
+      "output": "FPF-POWER-NECESSITY",
+      "relation": "refutes",
+      "scope": "无共同固定点且原同步输入最优残差零集恰为全部不变律；统一相对R-linear law convergence不能推出每个不变律附近某个正幂EB。仅反驳此精确版本，不反驳一般gauge，不加入源3(c)兼容EB。",
+      "status": "C223-v1同一锚点见证序列；derived-checked"
     }
   ]
 }

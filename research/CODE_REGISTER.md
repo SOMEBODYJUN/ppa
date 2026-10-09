@@ -64,3 +64,7 @@
 ## GP-SCOPE：C215/C216与比较量词
 
 [research/code/gppa_scope/README.md](code/gppa_scope/README.md)记录标准库复算入口；`verify.py`确定性运行，`results.json`保存80/120位Decimal、解析余尾、Fraction抵消反代、原图值、偏移/零/恒定/非单射核边界和跳跃gauge。有限集合模型仅检查比较量词不被混同，不决定算子类真值。正文先完成、计算佐证，外部先行性保持开放。
+
+## C223：无共同固定点的正幂必要性边界
+
+[verify.py](code/fixed_point_free_no_power/verify.py)、[范围和运行](code/fixed_point_free_no_power/README.md)、[实际结果](code/fixed_point_free_no_power/results.json) 使用标准库 Fraction，检查八块加原点的二状态积空间、全部有序点对、0–80矩阵时刻与两种混合区间、见证最优成本、e=0边界碰撞及指定小正幂指数反算。无随机性和浮点误差。有限精确证据不证明无限域、所有概率律或任意正幂；承重证明在 C223 正文 FP1–FP21。

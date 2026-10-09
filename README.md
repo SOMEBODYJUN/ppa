@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 585 个数学节点、389 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 588 个数学节点、391 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -84,7 +84,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 去超临界幂的条件值域 | C70 整窗度量余量 + 同一指定 T 非空紧 usc 有理 acyclic + 每阶上同调满射 + χ(A)≠0 → C05-v2 扰动 coincidence 与原关系局部值域；只需 q>0，原稿 C05-v1 的 qγ>1 仍原样保留 | 新版本的条件拓扑链已重算；存在 qγ=1/2 的完整可行实例，原生整窗模型仍须独立认证 |
 | 有限数据值域 | [C70 样本双包络](research/canonical/finite_sample_collar.md#fsc-envelope) + **另证**整窗每个输出的步界/EB + collar → 内域余量；再加 usc/acyclic、上同调与 Lefschetz → 原关系局部值域球 | C70 度量层已独立重算；原稿 C05-v1 仍是 PDF-only 候选；C05-v2 是保留整窗拓扑条件而去 qγ>1 的独立条件推导。有限样本不认证整窗 \(T\) |
 | 大小比较 | LT 公共接口 → RLEB 能量证书；紧 T-only \(\Phi\) proper；C131 塔给一致回缩，C132 在新定义紧源关系上把输出步界转为真 EB；C133-v1/v2 后继选择保共同尾与同一极限，C134 紧满射非扩张仅有等距变换；C135 给已证闭预算块的紧步长谱上半连续；C142 排除紧图直接充当极大单调成员；还缺自然完整母空间与保纲桥 | [算子空间证明](research/operator_space.md#os-tower-proof) 的 C131–C134 仅在所述紧源前提下成立；[C135](research/operator_space.md#os-spectrum-proof) 尚未对 LT/direct/energy 原生预算块认证闭性和穷尽性；总体规模命题开放 |
-| 锥与 Markov | C13 候选路线为冻结秩→面稳定→MSCQ，未闭的独立证明与退化分支明示；同步 OT exact-zero→一般 gauge，有限状态顶点→线性 EB；C143 紧可数模型有统一几何率却无任何正幂 EB；C144 原 OT 残差有局部假零 | 各自证据状态独立；[两个完整边界证明](research/topics/random_markov/compact_residual_boundaries.md#crb-theorem) 已重构，锥候选与跨线桥不随之升级 |
+| 锥与 Markov | C13 候选路线为冻结秩→面稳定→MSCQ，未闭的独立证明与退化分支明示；同步 OT exact-zero→一般 gauge，有限状态顶点→线性 EB；C143 紧可数模型有统一几何率却无任何正幂 EB；C144 原 OT 残差有局部假零；[C223](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 无共同固定点且 exact-zero，全部初律相对几何率仍无任何局部正幂 EB | 各自证据状态独立；[两个完整边界证明](research/topics/random_markov/compact_residual_boundaries.md#crb-theorem) 已重构，锥候选与跨线桥不随之升级 |
 | 不一致随机近端 | 有限维二次近端 + 正权重 + 固定守恒边缘 + 独立新噪声 → 活跃谱隙 → 条件 \(W_2\) 收缩 → 真实 law-step EB；逐分支残差零集另由共同定点决定 | C22/C23 本轮独立推导；与普通 \(W_2\)、物理步长、Markov 同步缺陷的替换不成立 |
 | 规范例库 | 纯旋转：完整 J 严格收缩而 F 无强单调；正紧对角：严格单调+cocoercive 而无任意趋零 gauge EB；三次映射：固定目标/两变量/算法残差的精确模不同 | C24–C26 的三个对象及证明；历史 GX 编号是观察别名，不代表 77 个独立算子 |
 | DR 切触与横截 | 同一算法残差 \(I-T\) 在切触线/抛物线有锐半阶 MSR 模 1、无统一一步距离严格收缩；横截两线有全域线性 MR/MSR 模 \(1/\sin\theta\) 和轨道因子 \(\cos\theta\) | C60/C61 是两个对象；不能把算法模换成法锥和的模 |
@@ -164,7 +164,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
-现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：优先核随机律收敛与原同步 OT 误差界必要性的精确版本，明确区分不变目标、残差零集和兼容 gauge；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
+现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：优先核随机律收敛与原同步 OT 误差界必要性的精确版本，明确区分不变目标、残差零集和兼容 gauge；[C223 完整新反例](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 已关闭无共同固定点且 exact-zero 的正幂必要性版本；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
 
 ## File Map
 
@@ -235,6 +235,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/examples/hemiregular_piecewise_parabola.md](research/topics/examples/hemiregular_piecewise_parabola.md)、[research/topics/examples/absolute_value_subgradient.md](research/topics/examples/absolute_value_subgradient.md) | C76/C77 与 C78/C79：前者是异维数完整映射的最近逆点与两变量正则对照、局部非闭图；后者把绝对值次梯度的原算子真残差跳跃和软阈值近端步残差分开。研究 MR/MSR 量词或残差模传递时读。 |
 | [research/topics/examples/README.md](research/topics/examples/README.md)、[research/topics/examples/identity_square_branch_union.md](research/topics/examples/identity_square_branch_union.md)、[research/topics/examples/dr_tangency_transversality.md](research/topics/examples/dr_tangency_transversality.md) | C66–C68/C92/C95/GX-068 的完整并图、两种真残差、两变量半阶 MR、跨支碰撞及精确二参数区；C60/C61/GX-069/070 的 DR 算法残差锐模。先区分原算子、选支、完整步和算法残差。 |
 | [research/topics/examples/ball_normal_cone.md](research/topics/examples/ball_normal_cone.md) | C93/C94/GX-067：完整法锥的全域投影/反射、二参数区，以及固定零目标的真空模与扰动逆像跳变；要用非孤立零集的 EB 或从反射稳定逆推 MR 时读。 |
+| [research/topics/random_markov/fixed_point_free_no_power.md](research/topics/random_markov/fixed_point_free_no_power.md) | C223：三点紧可数块 × 公平刷新；完整四映射与源参数、位移单射及原 OT 取得、全部初律相对几何尾、同一锚点全部正幂失败。研究无共同固定点的必要性时直接读；复算入口在 research/code/fixed_point_free_no_power/README.md，不继承 C143 B8。 |
 | [research/topics/random_markov/compact_residual_boundaries.md](research/topics/random_markov/compact_residual_boundaries.md) | C143/C144：完整紧可数模型的全域运输、统一率、律空间长度与所有正幂失败；正方形投影原残差的假零、最近和实际极限锚；末节与 C71 的放松 OT 假零逐对象区分。 |
 | [research/topics/random_markov/lazy_cycle_ot.md](research/topics/random_markov/lazy_cycle_ot.md) | C71：惰性四循环的原同步 OT 残差、锐全律空间误差界及放松最优运输后的假零点；判断有限状态残差是否保留输入 OT 约束时读。 |
 | [research/topics/random_markov/lazy_cycle_representations.md](research/topics/random_markov/lazy_cycle_representations.md) | C88：同一四状态核与不变律在共同开关及逐状态独立开关表示下的同步成本、零集和两个不同的锐模；改随机表示或比较核与残差时读。 |

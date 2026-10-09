@@ -343,3 +343,11 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 **Interpretation 与本库接口**见[选题卡](topics/random_markov/public_necessity_target.md#pnt-exact)：不变律目标 EB、exact-zero 下任意一般 gauge、源公式兼容 gauge 三者不同。C144 到不变目标失败而到自身零集线性 EB 成立；C14 紧性给任意一般 gauge；C143 否定正幂和指定参数兼容性。没有宣布整个作者问题已解或此前未有人回答。假零可能性已有2023源说明，发表先行必须单独核。
 
 确定性备用公开任务：Luke–Tam，[2025 MOR刊本](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863) §5 提出 ℓ1−ℓ3/2 稀疏恢复替换；实际读取该节。它是 future research task，非形式猜想；本库的完整普通 PPA 目标是另行提出的精确版本，详见选题卡。
+
+
+<a id="lit-rfi-expectation-2026"></a>
+## LIT-RFI-EXPECTATION-2026 · C223 使用的原残差与期望不等式范围
+
+**Paper Fact，实际读取于 2026-10-09。** Luke–Schultze–Grubmüller，[正式刊本 DOI 10.1007/s10107-025-02319-9](https://link.springer.com/article/10.1007/s10107-025-02319-9)，Assumption 3、式 (15)–(17)：状态 G 紧、有限连续自映射与独立新指标；(15) 外层全部不变律，内层输入 W₂ 最优计划，共同指标；(16) ε∈[0,1)、α∈(0,1)、τ=(1−α)/α，全部 x∈G 与全部不变支撑点 y。§3.1 (27) 给全部基点的更强期望 almost-firm 定义；此处不要求各个分支单独满足同一参数。
+
+**本库推导与使用边界。** [C223 FP7–FP8](topics/random_markov/fixed_point_free_no_power.md#fpf-source) 在全部 G×G 验证 α=1/2、ε=45/64；原残差及 exact-zero 独立证明。源 3(c)/(10)/(17) 另外假设兼容 gauge，不是本例的前件，不用于反推正幂界。本文不据一次读源认证原作者非形式化公开问题的全部解释或全球首创。

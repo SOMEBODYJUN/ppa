@@ -1872,3 +1872,13 @@
 - **Conclusion**：完整Cayley C的值域包含于Q、FixC=K、最小全域γ-Hölder常数恰D^(1−γ)。每个L≥D^(1−γ)、L>0的同(λ,L,γ)全尺度RL类内graF graph-maximal，包括D=L^(1/(1−γ))边界。D0用常值C与F(u)=(u−k0)/λ，逼近误差0。未声称原F强单调或极大单调。
 - **Construction / Dependencies**：平方距离混合E(y)=−αd(y,K)²(y−k0)/D²、0<α≤min((1−γ)/6,η/3)，Hilbert凸包方差余量支付精确预算；R=(Id+E)∘P_Q、G=(Id+R)/2强单调/全域Banach反演、F=(G⁻¹−Id)/λ。完整p覆盖使同参数RL增加点被零输入差迫等同；参照符号必须为+(Id−P_Q)/λ。[完整正文](research/canonical/sharp_holder_lipschitz_realization.md#shlr-object)。
 - **Evidence / Scope**：[接收记录](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md)、[正式TeX与旧构造比较](research/novelty/2026_10_09/structure_priority_followup.md)。旧Goebel2016混合未陈述平方距离精确边界；本次独立推导不倒归旧文。只给compactK充分实现，不把C04有限维必要性扩到无限维，不同时预设正向纤维。最小预算达到性不同于η→0极限保持固定集。
+
+
+<a id="c223"></a>
+## C223-v1 / CM-FIXED-POINT-FREE-NO-POWER · 无共同固定点与精确零集的快率反例
+
+- **Status**：`derived-checked`；[FP1–FP21 自足证明及实际接收范围](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 经两路独立逐门接收及精确有限复算；外部发表优先未核。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定一个紧可数 H⊂ℝ，每个 n≥1 的三点块为 t_n+δ_n{0,1,2−e_n}，另有原点，其中 t_n=2⁻ⁿ、δ_n=2⁻³ⁿ⁻¹⁰、e_n=δ_nⁿ；T 块内为 (1,0,1)，原点固定。G=H×{0,1}，四个 F_ij(x,z)=(T^i x,j)，p_0j=7/16、p_1j=1/16，每步新指标独立。原 Ψ 遍历全部不变目标及对应输入 W₂ 最优计划、同一指标；不存在共同固定点，Ψ⁻¹(0)=I；期望 almost-firm 以 α=1/2、τ=1、ε=45/64<1 在全部 G×G 成立。
+- **Conclusion / Scope**：Πμ=[(T#μ_x+T#²μ_x)/2]⊗β、β=(δ₀+δ₁)/2 为不变极限；L=5/4，C=√2 L²(1+L²)、r=√(7/8) 对全部 μ 和 k≥0 给 W₂(μPᵏ,Πμ)≤Crᵏd_W₂(μ,I)。但同一 barπ=δ₀⊗β 的每个正半径球内，每个 q,K,a>0 都有 μ 使 W₂(μ,barπ)<a 且 d_W₂(μ,I)>KΨ(μ)^q。
+- **Definitions / Dependencies / Evidence**：[FP2–FP8](research/topics/random_markov/fixed_point_free_no_power.md#fpf-source) 固定完整对象与源参数；[FP9–FP10](research/topics/random_markov/fixed_point_free_no_power.md#fpf-zero) 用位移单射与紧联合最优可行集取得证明 exact-zero；[FP11–FP16](research/topics/random_markov/fixed_point_free_no_power.md#fpf-rate) 从 T³=T 自足导出全部初律相对率及 k=0；[FP17–FP21](research/topics/random_markov/fixed_point_free_no_power.md#fpf-no-power) 对全部不变目标支撑给下界，合法输入最优见证有 d=(1−e_n)δ_n/√2、0<Ψ≤δ_nⁿ⁺¹/4。C143/C144 只提供构造动机，不作为正文缺失步骤的依赖。
+- **Counterevidence / Objections / Related Files**：[F64](FAILED_ROUTES.md#f64) 记录完整 C143 直接乘刷新仍有假零的 fatal 机制及本例的中点删除修补。本条仅给统一相对 R-linear，不继承 C143 B8 的一步距离收缩；不反驳一般 gauge、不声明各分支单独 almost-firm、凸/连通 G 或样本路径收敛。[代码及实际有限结果](research/code/fixed_point_free_no_power/README.md) 仅为精确有限证据；无限量词由证明承担。

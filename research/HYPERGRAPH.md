@@ -588,6 +588,13 @@
 | E388 | [GP-EXT-EB-WITNESS · F63合法极大扩张改变原目标/真残差](../FAILED_ROUTES.md#f63) | refutes → [GP-EXT-EB-ASSERT · 错误：任意极大扩张自动保原Z真EB](../FAILED_ROUTES.md#f63) | F63原图{(0,0),(1,1)}及Z{0}的EB，被包含它的M=∂h在1新增零值破坏；只反驳自动转移，不否定保selected原F残差的GPPA经典桥。；**derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核** |
 | E389 | [GP-ASM-DATA · 源完整ASM/非空零集/Q coverage](comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-source-inclusion) | conditional → [GP-SOURCE-CLASSIC · 全纤维ASM核轨道精确导入经典强单调PPA](novelty/2026_10_09/gppa_source_priority_followup.md#source-classic) | 同完整union A、全图ε-ASM、非空原零集与Q coverage；A−εId作极大扩张再加εId，J_M\|Q=J_A保每条核轨道，经典q=(1+λε)^−1。物理距离另回原selected F值，不假定v可逆/扩张后物理EB。；**derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核** |
 
+## 随机律必要性边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E390 | [FPF-DATA · 三点紧可数块与独立二状态刷新](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | implies → [FPF-NOPOWER · C223无共同固定点/exact-zero/统一相对几何尾仍无正幂](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | 固定FP2–FP6完整四映射，删除C143中点后位移标签单射；α=1/2,ε=45/64在全部状态对成立，原输入OT残差exact-zero，C=√2L²(1+L²),r=√(7/8)对全部初律和k≥0成立；同一barπ全部q/K/a违界。；**C223-v1 FP1–FP21自足证明，两路独立接收及有限有理复算；derived-checked** |
+| E391 | [FPF-NOPOWER · C223无共同固定点/exact-zero/统一相对几何尾仍无正幂](topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) | refutes → [FPF-POWER-NECESSITY · 错误：无共同固定点加精确零集与统一几何尾必有局部正幂EB](topics/random_markov/fixed_point_free_no_power.md#fpf-no-power) | 无共同固定点且原同步输入最优残差零集恰为全部不变律；统一相对R-linear law convergence不能推出每个不变律附近某个正幂EB。仅反驳此精确版本，不反驳一般gauge，不加入源3(c)兼容EB。；**C223-v1同一锚点见证序列；derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
