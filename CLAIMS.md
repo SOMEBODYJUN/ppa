@@ -1796,3 +1796,33 @@
 - **Conclusion**：g 及 g⁻¹ 的两点最佳零邻域 Hölder 指数为1/2（对零单点保径且 Lipschitz）；完整 log 核 Dini 门 a>1。取 yₖ=4⁻ᵏy₀、ρₖ=∑_{j≥k}ℓ_a(yⱼ)、xₖ=(g(-ρₖ),yₖ)，核有限长且物理点趋0；1<a<2 的物理步∼c(a−1)/k，长度无限。a=2 明确校准 c=π/(log4)² 仍无限；a>2 半径可和故有限长。此校准完整族的物理长度门恰 a>2，匹配半阶复合 Dini。全输入有显式连续极限回缩。
 - **Definitions / Dependencies / Evidence**：[GP28–40 完整证明](research/comparisons/2026_08_gppa_nfb/gppa_physical_transfer.md#gp-spiral)、C10 凹剖面、[独立审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。有限积分剩余界和弦长反代仅作佐证。
 - **Counterevidence / Scope**：[F56](FAILED_ROUTES.md#f56)是 C210 无复合步门的障碍；a=2 任意 c 可能共振，不能省略校准。真残差公式只在非空 y≥0 纤维有限；全域零距离是 |y|。点/回缩不意味着物理有限长。
+
+<a id="c215"></a>
+## C215-v1 / GP-REFORM · 二维完整超线性族的正盆地线性共轭与坐标阶边界
+
+- **Status**：`derived-checked`；主代理从完整关系独立重构、反算与边界审查，无新增子代理或外部同行审查；全球先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：所有 ν>1、0<γ<1、A>0、0<ρ<1；完整二维 F(ξ,y) 的两个图值为 (-Ay^(γ/ν),±y^(1/ν)−y)，y≥0，负 y 空；λ=1，全部完整 J 为 T(ξ,r)=(ξ+A|r|^γ,|r|^ν)，S=ℝ×{0}。正盆地 V=ℝ×[0,ρ]，E(y)=∑y^(γν^j)、h(y)=1/log(1/y)、零值定义为0，H=(ξ+AE(y),h(y))。
+- **Conclusion**：H 为 V 到 W=ℝ×[0,h(ρ)] 的 homeomorphism，HTH⁻¹=(I,u/ν)=J_K，K=(0,(ν−1)u) 定义于全 ℝ²。全域 w=(0,u) 使 (K,w) 全对 ASM 常数 ν−1、全部 warped coverage 与完整 inverse R-Lipschitz 成立；选择 I 保持输入输送同一原全部正盆地轨道，H 固定全部零点。负小初值保原一次首步后导入。物理有限长度由额外已证尾恒等回代；原误差精确 Q-ν 因子 A^(1−ν)，新坐标精确 Q-linear 因子1/ν。
+- **Assumptions / Definitions / Dependencies**：上述完整二维对象独立定义；级数有统一几何余尾，不预先假设收敛。源 T2 只在新 K,w 上调用，明确核/物理桥。[完整证明](research/canonical/gppa_reformulation_boundary.md#grb-linearization)及[阶边界](research/canonical/gppa_reformulation_boundary.md#grb-orders)。与 C141 三维对象保持不同身份。
+- **Evidence / Related Files**：显示的全部正常输入反演、tail shift、H 逆回代和 all-pairs ASM；[复算](research/code/gppa_scope/README.md)用两种 Decimal 精度和解析余尾反算，有限输出不证明一般量词。
+- **Counterevidence / Scope**：H 非 Lipschitz，不能穿过双 Lipschitz 保真合同；没有将负输入第一步共轭成单调更新。否定此见证在任意合法改图下的不可导入性，不否定 C204/C211 同原完整图障碍，不反驳存在另一个不可导入实例的可能性。
+
+<a id="c216"></a>
+## C216-v1 / GP-REG · 正则化持续误差的原残差抵消、距离管与源 T4 包含
+
+- **Status**：`derived-checked`；主代理完整重构，精确向量反代、源 PDF 公式目读与退化审查；无新增子代理审查，全球先行性未核。
+- **Exact Statement / Objects / Domain / Assumptions**：任意实 Hilbert H、完整 F、全域 L-Lipschitz 核 v（L≥0）且 (F,v) 全图 pair-monotone；λ,ε>0、δ≥0；S=zer F 与 Sε=zer(F+εv) 非空，a=inf_S||v||；F⁻¹ 的 R-continuity 具有残差半径σ及非减ρ，ρ(0)=ρ(0+)=0。每条已存在合法 xₖ₊₁=hat xₖ₊₁+eₖ₊₁、||e||≤δ、v(xₖ)−v(hat xₖ₊₁)∈λ(F(hat xₖ₊₁)+εv(hat xₖ₊₁))。任意初值存在另加正则化 warped coverage。
+- **Conclusion / Quantifiers**：正则化核零值cε唯一且||cε||≤a；q=(1+λε)⁻¹、Dₖ=||v(xₖ)−cε|| 满足Dₖ≤qᵏD₀+Lδ(1−qᵏ)/(1−q)。实际原图值fₖ₊₁有||f||≤Dₖ/λ+εa。b=Lδ(1+λε)/(λ²ε)+εa<σ 给limsup d(xₖ,S)≤δ+ρ(b+)；右连续可去+。δ=ε²给bε=Lε/λ²+Lε²/λ+εa，低于源印Bε=4Lε/λ²+3Lε²/λ+εa。L>0利用严格裕度恢复ρ(Bε)而不补正点连续；L=0直接用真实值−εc。每个小ε的合法轨道族给原源T4双极限0。
+- **Definitions / Dependencies**：原图值在hat x而不是误差后的x；RS1–13保留所有完整纤维和物理误差。零锚抵消平方是独立证明，核卷积为C213机制的正则化特例。源2608.01584v1 Lemma3、T4仅作比较，不补存在门。[完整证明](research/canonical/gppa_regularized_stability.md#grs-data)。
+- **Evidence / Related Files**：[抵消](research/canonical/gppa_regularized_stability.md#grs-proof)、[jump-gauge与T4包含](research/canonical/gppa_regularized_stability.md#grs-tube)、[Fraction枚举/反代](research/code/gppa_scope/README.md)、[本轮实际范围](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-receipt)。
+- **Counterevidence / Scope**：不要求ρ正点连续；+不能无条件删。较小残差预算不保证有平台的ρ给严格较小距离管。不保证物理点或长度，不是逐步εₖ→0算法，不自动包含源T1、其它表示或整篇外文。C213原对象和原稿范围不被改写。
+
+<a id="c217"></a>
+## C217-v1 / GP-SATURATION · 保真改写饱和后的存在性严格分离与全球先行性
+
+- **Status**：`open`；全称先行性与改写饱和类比较均未证明，不能从C215反向宣布整体等价。
+- **Exact Statement / Objects / Domain / Quantifiers**：待冻结实例空间I=(H,F,v,λ,U,政策P,目标输出O)及允许保真族ℛ；定义Importℛ(I,O)为存在R∈ℛ满足源定理并有严格O回代。目标为每个源实例由新理论处理，且存在一个新实例对所有R∈ℛ都不能导入同一O。全球先行性则逐个精确Claim检查此前同一或等价结果，不能用有限检索证明全世界不存在。
+- **Assumptions / Definitions**：必须先固定全图/盆地/尾、原零集、完整选择、双Lipschitz或任意homeomorphism、升维/变核及物理回代门；当前任意ℛ尚未确定，因此不是已良定的总体定理。
+- **Dependencies / Evidence**：C209固定核源T2包含，C204/C211同完整图障碍，C205–C207删支导入，C215全正盆地共轭，C216源T4稳定性补充；[量词合同](research/canonical/gppa_reformulation_boundary.md#grb-contract)与[有界先行检索](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations)。
+- **Counterevidence / Objections**：现有cap/SF/log收敛见证不足以证明任意改写不导入；“已有重合”不足以反驳存在其它非导入实例。一般gauge、warped kernel、标量尾和留域已有先行接口，不能单独作全球创新点。当前缺少共同类和穷尽回代规则。
+- **Scope / Related Files / Next Action**：限固定核局部算法研究，不判正式全尺度结构稿。优先冻结双Lipschitz且保完整纤维的族，再寻找不导入见证；或对一般目标函数桥作逐定理反查，正文与审查入口如上。

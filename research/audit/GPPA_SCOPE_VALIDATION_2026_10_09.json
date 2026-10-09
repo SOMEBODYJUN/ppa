@@ -1,0 +1,33 @@
+{
+  "scope": "C215/C216 mathematical self-review plus finite corroboration; C217 remains open; no new subagents",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "research/validate_assets.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Verified 240 initial-manifest hashes, 251 audited source files, 178 ZIP members, 4827 source units, 4671 atomic records in declared scopes, 564 nodes, 372 edges and 176 Markdown files."
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "result": "proof-result-hashes-match-current-files"
+    }
+  ],
+  "files": {
+    "research/canonical/gppa_reformulation_boundary.md": "16fffc1468a20d497e1deacca8628803cd7757cb57ceec1df0fa3c81c9be3027",
+    "research/canonical/gppa_regularized_stability.md": "54ab1c6d9b8da72be916dca3d6e663438659a65f2bf1237a9fa10fbc8a500d88",
+    "research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md": "1e0417568c381feafad416a8ef9b84efc2ac8e94e771c7a89b0fe907e124f62b",
+    "research/code/gppa_scope/verify.py": "5d1cebcd974a5830f40eb5b0d3841c39da35f98278849fe0b02a0c38f41b2a92",
+    "research/code/gppa_scope/results.json": "0665ac851171dba3d66f3250f369a22fc81962a921f7b658fca54b2644f13e4f"
+  }
+}

@@ -2948,6 +2948,72 @@
       "label": "严格完整图比较保留删支导入边界",
       "file": "canonical/generalized_ppa_modulus.md#gpm-assets",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-REWRITE-CONTRACT",
+      "label": "改写族/物理输出/盆地与完整图合同",
+      "file": "canonical/gppa_reformulation_boundary.md#grb-contract",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-LINEARIZE-DATA",
+      "label": "二维完整SF/正盆地/预先尾和与坐标",
+      "file": "canonical/gppa_reformulation_boundary.md#grb-linearization",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-LINEARIZE",
+      "label": "C215全部正盆地T共轭为线性单调PPA",
+      "file": "canonical/gppa_reformulation_boundary.md#grb-linearization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-ORDER-BOUNDARY",
+      "label": "C215真实Q阶不在任意homeomorphism下不变",
+      "file": "canonical/gppa_reformulation_boundary.md#grb-orders",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-REG-DATA",
+      "label": "原pair/全域L核/两零集/真实误差/原RC域",
+      "file": "canonical/gppa_regularized_stability.md#grs-data",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-REG-CANCEL",
+      "label": "C216正则化核卷积与原图残差抵消",
+      "file": "canonical/gppa_regularized_stability.md#grs-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-REG-TUBE",
+      "label": "C216合法残差域/jump-gauge距离管",
+      "file": "canonical/gppa_regularized_stability.md#grs-tube",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-REG-T4",
+      "label": "C216源T4距离双极限包含与更紧预算",
+      "file": "canonical/gppa_regularized_stability.md#grs-tube",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-PRIORITY-READ",
+      "label": "有界一级文献检索及实际阅读层",
+      "file": "audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-scope",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-PRIORITY-OPEN",
+      "label": "C217逐Claim全球先行性未认证",
+      "file": "audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations",
+      "evidence_status": "open"
+    },
+    {
+      "id": "GP-REWRITE-OPEN",
+      "label": "C217保真改写饱和类存在性分离开放",
+      "file": "canonical/gppa_reformulation_boundary.md#grb-verdict",
+      "evidence_status": "open"
     }
   ],
   "edges": [
@@ -7179,6 +7245,103 @@
       "relation": "limits",
       "scope": "C211同完整图指定广义轨道表示障碍保留；C205–207保零集删支导入经homeomorphic拉回仍能证明对应轨道收敛。不能升级整篇源绝对优越、任意改写无法证明或全球新颖性。",
       "status": "derived-checked；完整证明与本轮独立受检，有限计算仅佐证；全球先行性未核"
+    },
+    {
+      "id": "E365",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-REWRITE-CONTRACT",
+        "GP-LINEARIZE-DATA"
+      ],
+      "output": "GP-LINEARIZE",
+      "relation": "conditional",
+      "scope": "任意ν>1、0<γ<1、A>0、0<ρ<1，二维完整双支SF的全部正盆地输入/完整T，经H=(ξ+AE,h)共轭J_K=(I,u/ν)；K,w全图ASM/coverage/逆像门另核，负输入仅原有限首步后导入。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E366",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-LINEARIZE"
+      ],
+      "output": "GP-ORDER-BOUNDARY",
+      "relation": "limits",
+      "scope": "原物理Q-ν与改写坐标Q-linear可为同一盆地动态；H非Lipschitz，不把边界转授给双Lipschitz或全部负输入/图值保真合同。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E367",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-REG-DATA"
+      ],
+      "output": "GP-REG-CANCEL",
+      "relation": "conditional",
+      "scope": "固定ε,λ>0、δ≥0；每条合法正则化物理误差轨道，原完整pair-monotonicity与核L-Lipschitz给q卷积，原值在hat x，抵消给||f||≤D/λ+εa；零锚核唯一且||cε||≤a。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E368",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-REG-DATA",
+        "GP-REG-CANCEL"
+      ],
+      "output": "GP-REG-TUBE",
+      "relation": "conditional",
+      "scope": "b=Lδ(1+λε)/(λ²ε)+εa<原RC半径σ；非减ρ只保证原点右连续，故limsup原零距离≤δ+ρ(b+)。不授予物理点/长度或任意初值coverage。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E369",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-REG-DATA",
+        "GP-REG-TUBE"
+      ],
+      "output": "GP-REG-T4",
+      "relation": "conditional",
+      "scope": "δ=ε²、每个小ε有合法轨道族，bε→0。L>0有bε<Bε的严格残差裕度，恢复源印ρ(Bε)且可用中间预算；L=0真实原值−εc直接处理。原双极限0，不改为ε_k逐步变化。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
+    },
+    {
+      "id": "E370",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-STRICT",
+        "GP-EXCLUDE",
+        "GP-LINEARIZE",
+        "GP-REWRITE-CONTRACT"
+      ],
+      "output": "GP-REWRITE-OPEN",
+      "relation": "open",
+      "scope": "固定核/原完整图严格性不能下传任意改写饱和类；现有见证可导入不证明全部类相等。先冻结允许族与目标物理输出，再证包含及存在非导入实例。",
+      "status": "open；条件族或先行性未闭"
+    },
+    {
+      "id": "E371",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-CONV",
+        "GP-PRIORITY-READ"
+      ],
+      "output": "GP-PRIORITY-OPEN",
+      "relation": "open",
+      "scope": "一般gauge、warped核、标量尾和留域均有一级先行接口；有限搜索未命中不能证明全球不存在同一/等价结果。逐Claim完整前件与输出比较仍未闭。",
+      "status": "open；条件族或先行性未闭"
+    },
+    {
+      "id": "E372",
+      "topic": "GPPA改写与正则化补充",
+      "inputs": [
+        "GP-REG-T4",
+        "GP-ORDER-BOUNDARY",
+        "GP-PRIORITY-READ"
+      ],
+      "output": "GP-STRICT-SCOPE",
+      "relation": "limits",
+      "scope": "C216正面源T4包含和更紧残差预算不等于全球新颖或全篇/任意表示严格支配；C215限制现有见证的改写非导入性，C209/C211原固定对象身份保留。",
+      "status": "derived-checked；本轮主代理完整重构/反算及有限佐证；无新增团队审查，先行性未核"
     }
   ]
 }

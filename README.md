@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 553 个数学节点、364 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 564 个数学节点、372 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -9,6 +9,8 @@
 **这是正在增长的规范研究库。** [研究增长协议](RESEARCH_PROTOCOL.md) 规定新定义、Claim、证明、反例、代码和文献事实的落点；[全库协调验收门](RESEARCH_PROTOCOL.md#global-coordination-gate) 逐项核符号类型、量词、证据与独立性；[来源重构覆盖审计](research/audit/SOURCE_RECONSTRUCTION_AUDIT.md) 逐项记录仍未裁决的旧材料。[全库语义分母计划](research/audit/SEMANTIC_INVENTORY_PLAN.md) 划定来源逐段枚举与数学清洗的两个完成门；[本批清洗与空白接收记录](research/audit/BLIND_RECEIPT_2026-10-07_CLEANUP.md) 保存本批实际阅读范围、修补及完成边界；[GX/AGM 记录](research/audit/BLIND_RECEIPT_2026-10-05_GX_AGM.md) 保存先前范围，较早范围见[10/03 记录](research/audit/BLIND_RECEIPT_2026-10-03.md)。历史材料的清点不等于数学验收。来源清洗的未闭门继续保留；按当前明确研究任务，新增[一般模广义 PPA 融合](research/canonical/generalized_ppa_modulus.md)及其独立接收，不将这批新结果冒充全库清洗完成。
 
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子、有限维完整纤维分类、固定窗口锐覆盖与有限 QP 已有完整独立规范证明；实际原生认证和外部先行性分别保留门。9/25 局部值域证书的 Lefschetz 引文适用门已核，但仍有独立整窗拓扑假设和候选证明待审。
+
+当前 GPPA 比较的下一入口是[C215改写边界](research/canonical/gppa_reformulation_boundary.md)、[C216正则化稳定性](research/canonical/gppa_regularized_stability.md)及[有界先行审查](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。源T4正则化距离输出已接入并降低印刷残差预算；现有严格例子的收敛可经保零集改写导入，不能证明任意改写饱和类严格分离。全球首创和[C217总体比较](CLAIMS.md#c217)继续开放。
 
 ## Research Goal
 
@@ -158,6 +160,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
+固定核GPPA下一步先冻结[C217的允许改写族和物理输出](research/canonical/gppa_reformulation_boundary.md#grb-contract)，再寻找改写饱和后的非导入见证；定量机制的先行性按[逐Claim义务](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-obligations)查证。不要重复把已可导入的cap/SF/log收敛当作任意改图排除；源T4距离稳定性包含门已由C216闭合。
+
 现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：当前先做来源清洗、规范协调和空白接收，按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围；清洗完成后，再开展总体母空间/量尺和原生完整纤维/整窗研究。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
 
 ## File Map
@@ -185,6 +189,9 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [RESEARCH_PROTOCOL.md](RESEARCH_PROTOCOL.md)、[research/validate_assets.py](research/validate_assets.py) | 新资产的精确身份、状态、证据与生长门槛；结构检查哈希、图目标和规范链接。新 Claim 进入前后读协议并执行校验。 |
 | [research/foundations.md](research/foundations.md) | D01–D04 的关系、剪切、真残差、局部/完整区别；遇到定义混用先读。 |
 | [research/canonical/generalized_ppa_modulus.md](research/canonical/generalized_ppa_modulus.md)、[完整研究稿](research/manuscripts/gppa_modulus/gppa_modulus.pdf) | C208–C214 广义 PPA 融合入口与集中完整证明；数学源稿、独立审查与复算从入口可找。 |
+| [research/canonical/gppa_reformulation_boundary.md](research/canonical/gppa_reformulation_boundary.md) | C215完整二维SF正盆地共轭、精确物理阶与变坐标线性率、全空间resolvent身份引理；定义C217保真改写量词，避免把同图排除当所有改写排除。 |
+| [research/canonical/gppa_regularized_stability.md](research/canonical/gppa_regularized_stability.md) | C216真实精确输出的原残差抵消、跳跃gauge距离管、源T4的正则化双极限包含和更紧残差预算；补充C213，保留点/长度边界。 |
+| [research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)、[research/code/gppa_scope/README.md](research/code/gppa_scope/README.md) | 有界先行来源、实际阅读位置及未闭新颖性义务；新证明的参数、双精度尾和、Fraction反代及scope复算。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/canonical/general_modulus_dynamics.md](research/canonical/general_modulus_dynamics.md) | C09/C10/C11：同图块一般模的完整Dini/严格预算证明；对数完整双支的真残差、全对非幂模与a=1边界；开域剩余预算、全域统一尾和显式局部同伦。 |
 | [research/canonical/global_shadow.md](research/canonical/global_shadow.md)、[finite_fiber_classification.md](research/canonical/finite_fiber_classification.md)、[full_fiber_coverage.md](research/canonical/full_fiber_coverage.md) | C03/C04/C18 的独立完整证明：非可分 Hilbert 同一正反影子与统一最优因子；有限维所有目标、proper 与任意紧集双向实现；最大根、固定窗完整纤维与开球锐性。无锚、指定锚和有限维必要性分别量化。 |

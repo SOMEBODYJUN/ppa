@@ -1,0 +1,190 @@
+{
+  "repository": "https://github.com/SOMEBODYJUN/ppa",
+  "base_commit": "d651d01361603c5f76d0db929de50e115df86393",
+  "original_completed_local_commit": "dc09247cfa52608f6a304f991376b306e34e0ed8",
+  "recovered_commit": "5ce2807fb60b78c9b64c836d6b6e7a21e4aacbc7",
+  "uploaded_zip_sha256": "871fb624b867ccf6fa5d25f6a7845f57346fb80382e617a8ace79b9c46ab607e",
+  "files_verified_against_recovered_git_blobs": [
+    {
+      "path": ".gitattributes",
+      "bytes": 47,
+      "sha256": "bbe367bd566ce69eb7c500bed81f7fc86e1e9cd408b71633f4aede57b48383b2"
+    },
+    {
+      "path": "CLAIMS.md",
+      "bytes": 302492,
+      "sha256": "246ee91e7548e08924ab28c2a27899ea32a88017c3068691588738674fc81a31"
+    },
+    {
+      "path": "FAILED_ROUTES.md",
+      "bytes": 59022,
+      "sha256": "f7d7a99fc6d058fad0ca2921611ee1bdbb51e8a3f3699cdb3e742a54fc1cb02f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 72631,
+      "sha256": "d1cfe0130967cb0be74ef206689b8aea4ec90389e1f8bb7f4daa19e2679290aa"
+    },
+    {
+      "path": "RESEARCH_STATE.md",
+      "bytes": 18103,
+      "sha256": "3e7560ac56d153c9c7581e932e639a91b24e6be6bb9439c48f18a9433779c5f5"
+    },
+    {
+      "path": "research/CODE_REGISTER.md",
+      "bytes": 10237,
+      "sha256": "4b8f10e522eb41b239aadbb50e222a69a9ea19394d91dfa2e7bfd8a00daf7c28"
+    },
+    {
+      "path": "research/HYPERGRAPH.md",
+      "bytes": 213589,
+      "sha256": "7a9f9149564049d7abef968bafcbe41baa25f4c604aa0305c206f1fd4f86f221"
+    },
+    {
+      "path": "research/LITERATURE.md",
+      "bytes": 41116,
+      "sha256": "e2bc3bd455a254b6c45389027cc317f46b63ab5ab5d7cd69aa08b9ee7181f6cf"
+    },
+    {
+      "path": "research/LOGIC_CONTRACTS.md",
+      "bytes": 87651,
+      "sha256": "4982dd87ccf8eb4ae8ead78c6e53ac35572afcf6be98fa701b8947197eab680e"
+    },
+    {
+      "path": "research/NOTATION_CONTRACT.md",
+      "bytes": 22805,
+      "sha256": "4b276eb7849644beaec9b547aa465f6cb055eee158c03a1cb098c06a9a2f6abf"
+    },
+    {
+      "path": "research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md",
+      "bytes": 5655,
+      "sha256": "27211acde4541af4be67585bee02c76d1a5433112a6be17ddbacd4c918dcda2d"
+    },
+    {
+      "path": "research/audit/GPPA_MODULUS_VALIDATION_2026_10_09.json",
+      "bytes": 2171,
+      "sha256": "1d2f90d52dae3bec4952499ff9efc7398099f45b64c4afc9abb4a7a8bb1753fa"
+    },
+    {
+      "path": "research/canonical/generalized_ppa_modulus.md",
+      "bytes": 10548,
+      "sha256": "fd4cb7f4d1a75bc361393dfb4acef2e4f68e2e8a07b066643692fc3e377a4c74"
+    },
+    {
+      "path": "research/canonical/gppa_inexact_modulus.md",
+      "bytes": 5413,
+      "sha256": "c2d6490940430a85eb1e6e12bee8643a72d97468e2ef35d8054513f978277219"
+    },
+    {
+      "path": "research/code/gppa_modulus/README.md",
+      "bytes": 1155,
+      "sha256": "d6952855f95e6bf40e51c1207cb904a1d73becfedc5191765b9ca79b35ba6a22"
+    },
+    {
+      "path": "research/code/gppa_modulus/results.json",
+      "bytes": 24358,
+      "sha256": "7617474a106f5e107a2467bf339afcffd50331e9763c949fd49418419e422a00"
+    },
+    {
+      "path": "research/code/gppa_modulus/verify.py",
+      "bytes": 9847,
+      "sha256": "bb2cb02795e16b24df835ab9b4441ce67c4538cd7cb763bc132bedb5d64120d6"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/COMPARISON.md",
+      "bytes": 21437,
+      "sha256": "80d8e9a81f906503c6b98274e2f2642c233c7cda8808367c0c7490428acd27ce"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/README.md",
+      "bytes": 6680,
+      "sha256": "d23592f36755da58b9606f222a3086606853460d0abc4dc725fdc7d495cac3f0"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md",
+      "bytes": 28895,
+      "sha256": "4881d80503b0e01181f158d889e424e25b676a841ced37f40307c84dd1cdc4f1"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/gppa_physical_transfer.md",
+      "bytes": 18942,
+      "sha256": "fca6b1b9f0da7e392f1fca17f964ddbdd86e3cc8161227cf0e5ab6116d288dc8"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/gppa_strict_extension_examples.md",
+      "bytes": 30920,
+      "sha256": "e4dd9b079d36f52c399b423c1330f352b32368e5442d04b9d4218822d6930797"
+    },
+    {
+      "path": "research/comparisons/2026_08_gppa_nfb/pair_monotone_barrier.md",
+      "bytes": 7387,
+      "sha256": "9b6fe345baa3da9c7043d7bd786ae53eda891f3e58bb185ec7f2b914c0bf2b66"
+    },
+    {
+      "path": "research/graph.json",
+      "bytes": 273704,
+      "sha256": "80fa5b4112a4c7920ea46e674ce4aeb2b9e599ef9b493aa0e7980f2191abf1f6"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/README.md",
+      "bytes": 1340,
+      "sha256": "b150d1af346ed37bc9fff3e88892e12287e85192717873e0e7177f0f74274193"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/gppa_modulus.pdf",
+      "bytes": 1242883,
+      "sha256": "03c21eeabeb514b89a2f72166716bd40d9d34640b010f1bd8c072b40d447102d"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/gppa_modulus.tex",
+      "bytes": 25236,
+      "sha256": "819f68312de67e2d3d607dcf96b9e2d8e58550e69347bb77077ac98862cd78ef"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/pdf_qa.json",
+      "bytes": 1398,
+      "sha256": "f90a130d5d79cb29cf40782bec7894a6502bf46319b73bf59b134f08a41b47c2"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/render_note.py",
+      "bytes": 10793,
+      "sha256": "922114ffe1a9ed0b8d2e1ef7db862aed490d9db02c96f7fa4afb99ae9294a26f"
+    },
+    {
+      "path": "research/manuscripts/gppa_modulus/render_verification.json",
+      "bytes": 7629,
+      "sha256": "de2d346db41f1ed7e1cec365321a40be98dc41080465b87f7539c41c30b88eb4"
+    },
+    {
+      "path": "research/map.html",
+      "bytes": 304841,
+      "sha256": "227cb5d70bf1de02ce18077b844c0f9ee11046115776b27e3c90e5a2f6d873e9"
+    },
+    {
+      "path": "visualization/cosmos/data/anchors.json",
+      "bytes": 57013,
+      "sha256": "ec13dbc19b2c856178474e68e202f6704eac47e745ffbf0bf0d550a8a1a5367e"
+    },
+    {
+      "path": "visualization/cosmos/index.html",
+      "bytes": 614333,
+      "sha256": "04ba3abf350a722eb81845a1f4eeb1bef9fd7bb6ca783173280a76a34b112c45"
+    },
+    {
+      "path": "visualization/xianxia/data/world.json",
+      "bytes": 168586,
+      "sha256": "601edf38f3950843208337a8ab51c9c9d31884ca24973283869b3136a75c44e4"
+    },
+    {
+      "path": "visualization/xianxia/gallery.html",
+      "bytes": 149468,
+      "sha256": "a1a203a7fed5821b3ee945a7eb32c83d33518d7b678e0af2d5b3cd56ae8c9603"
+    },
+    {
+      "path": "visualization/xianxia/index.html",
+      "bytes": 501553,
+      "sha256": "5dd26bb2c17428467f9c28a295197b40ebed080ece0af3fae1ce66a1a39107f8"
+    }
+  ],
+  "note": "Hashes describe the recovered checkpoint, not subsequent edits."
+}

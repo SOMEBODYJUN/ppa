@@ -54,3 +54,7 @@
 [verify.py](code/gppa_modulus/verify.py)、[说明](code/gppa_modulus/README.md)、[实际结果](code/gppa_modulus/results.json)只依赖 Python 标准库。精确 Fraction 反算一步能量、全部正 ASM 小参数、幂兼容临界系数1及误差卷积；确定性 seed 20261009 与 binary64 明示容差核非线性强单调 V 的逆、有限全部点对、SF 完整更新、selected/true 残差和对数积分尾区间。螺旋物理弦长再以坐标反算核验。六项有限检查均 PASS，不证明任意核排除、无限长度门、全部图点对或全球先行性。完整参数与脚本指纹在结果文件。
 
 [PDF 源稿与作用域 renderer](manuscripts/gppa_modulus/gppa_modulus.tex)是集中证明交付；renderer 使用 ReportLab 和 Matplotlib MathText，不冒充完整 LaTeX 编译器。数学公式解析失败会报错，不静默丢失；公式数量、布局、实际 PDF 与源稿指纹和渲染目读记录相邻保存。
+
+## GP-SCOPE：C215/C216与比较量词
+
+[research/code/gppa_scope/README.md](code/gppa_scope/README.md)记录标准库复算入口；`verify.py`确定性运行，`results.json`保存80/120位Decimal、解析余尾、Fraction抵消反代、原图值、偏移/零/恒定/非单射核边界和跳跃gauge。有限集合模型仅检查比较量词不被混同，不决定算子类真值。正文先完成、计算佐证，外部先行性保持开放。

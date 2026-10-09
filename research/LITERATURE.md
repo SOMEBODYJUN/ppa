@@ -299,3 +299,10 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
 | T4 含持续物理输出误差及 F+εv 正则化 | C213 只吸收实际误差模型与向前核模，证明固定认证关系的非线性误差管；不声称整体 T4 包含 |
 
 C211/C212 给固定完整关系/核的严格新增实例和精确物理阶，C214 给融合后的复合 Dini 锐门。[本轮独立审查](audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)核明上述精确对象和比较；已有 C205–C207 删支导入仍成立，不能升级为收敛绝对不可导入。Bùi–Combettes 2020 warped proximal、Hölder metric-subregularity 等已有一般非线性文献必须列入全球先行性核对；这里只承认相关来源存在，不导入未逐定理核验的结论，也不认证统一新理论的全球新颖性。
+
+<a id="lit-gppa-priority"></a>
+## LIT-GPPA-PRIORITY：定向先行审查与新增T4桥
+
+[实际位置、阅读层与获取限制](audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-scope)逐项记录2012 Hölder-PPA、LTT一般gauge、2019 warped resolvents、2024 LMZ §4标量尾和/留域和2026 GPPA T2/T4；另有Le–Théra2024本轮只取到摘要，不能算读取其定理。没有检索命中完整相同陈述不证明全球第一。
+
+本库推导：[C216](canonical/gppa_regularized_stability.md#grs-tube)已吸收源2608.01584v1 T4正则化物理误差距离输出及双极限；新残差预算bε=Lε/λ²+Lε²/λ+εa，源印预算Bε=4Lε/λ²+3Lε²/λ+εa。更紧预算、相同前件可推导性与新颖性分开；没有承诺全部文献/全部表示整体优越。
