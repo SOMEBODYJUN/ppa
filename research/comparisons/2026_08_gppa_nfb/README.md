@@ -1,5 +1,7 @@
 # 2026 年 8 月 GPPA / NFB 与 PPA 的逐定理比较
 
+**先行性接续入口**：[四路首创性质复核](../../novelty/2026_10_09/PRIORITY_FOLLOWUP.md)另核双方准确旧版本、经典导出、C209势桥及C222精确预算；本目录的C199–C207同完整图/删支比较身份保留。
+
 此目录固定比较两篇外部原稿与本库当前数学身份。原文、版本指纹、逐篇审查和独立攻击分开保存，方便多人接续。初轮比较基线为 `3dd02110d7666ba77b561bf2ab26641013a79fd3`；本轮指定 gpt-6.1-sol / ultra 的三份独立审查从 main `007ce8cb4b86601c3bf6af45a90601fcd871ca74` 接续。
 
 **裁决：有实质重合；完整原图输入条件不同；但原轨道收敛还可通过明确子关系导入。** 先读 [COMPARISON.md](COMPARISON.md)，再进入 [6.1-sol GPPA审查](sol61_gppa_audit.md)、[6.1-sol NFB审查](sol61_nfb_audit.md)、[独立反向审查](sol61_independent_audit.md)。完整数学身份与初轮报告入口在 [BASELINE.md](BASELINE.md)。

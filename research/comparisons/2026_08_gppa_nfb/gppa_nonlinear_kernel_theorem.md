@@ -245,7 +245,7 @@ Two usable sufficient certificates for (NGK19) are:
   \]
   Consequently the kernel-length budget is
   \(\sqrt{qV(d_0)}/(1-\sqrt q)\), and its tail after index \(k\) is at most
-  \(q^{k/2}\sqrt{qV(d_0)}/(1-\sqrt q)\). The same retention induction applies with this budget. This certificate does not require a Dini modulus. It can be used instead of (NGK19); its proof does not claim that the possibly loose \(B\circ\tau^j\) series itself must converge.
+  \(q^{k/2}\sqrt{qV(d_0)}/(1-\sqrt q)\). The same retention induction applies with this budget. This certificate does not require a Dini modulus. It can be used instead of (NGK19). The later scalar argument [C221 TL10–11](../../canonical/gppa_tail_lyapunov_bridge.md#gtl-energy) proves that this same gate also makes the \(B\circ\tau^j\) series converge: \(B^2\le C_\omega\le qV\) and the inactive inverse cap give geometric decay of scalar \(V(\tau^j(d_0))\). This follows from the scalar data, not from already-known orbit length.
 
 For \(\omega(t)=Lt^\gamma\), \(0<\gamma\le1\), the Dini condition is automatic. For arbitrary nonlinear \(\omega\), summability is an explicit additional gate; positivity and vanishing at zero alone do not supply it.
 

@@ -1777,7 +1777,7 @@
 - **Exact Statement / Assumptions**：C209 同图 coverage、闭 Z、零锚、真 EB 与合法窗口；全图 kernel-pair monotone（或全部所用锚对 monotone），0<d₀≤M。rⱼ=2⁻ʲd₀；d₀=0 单独吸收。
 - **Conclusion**：Lsh=∑[rⱼ+rⱼ²/(λg(rⱼ/2))] 有限且小于初值留域距离时，核全部轨道留域、有限长并趋 Z。一壳内步平方望远镜，每个越壳步只记一次，跳过壳不收费。ψ=Ks^q 的 q>1/2 是充分门，非必要宣告。
 - **Strict witness / Evidence**：完整 F(x)=sgn(x)|x|^p、v=Id、1<p<2，全 coverage、ψ=s^{1/p}、无正 ASM/线性 EB，普通轨道 xₖ∼[(p−1)λk]⁻¹⁄⁽ᵖ⁻¹⁾。同固定核 T2 假设类严格扩大。[NGK-6/10](research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-shell)与独立审查。
-- **Counterevidence / Scope**：源 T1 仍能证明该标量收敛；改核可恢复 ASM。ω=t 的 cutoff RL 只在受检点对等价 monotonicity，不等价未经 cutoff 的全图单调性。
+- **Counterevidence / Scope**：源 T1 仍能证明该标量收敛；改核可恢复 ASM。[LM2012耗散+距离率的dyadic-time推论](research/novelty/2026_10_09/noncalm_coverage_followup.md)已给源合法范围的q>1/2有限长度，本阈值不列首创。原局部合同另用同Z递推/留域，不假定极大扩张保EB。ω=t 的 cutoff RL 只在受检点对等价 monotonicity，不等价未经 cutoff 的全图单调性。
 
 <a id="c213"></a>
 ## C213-v1 / GP-INEXACT · 完整核输出误差的卷积与非线性物理误差管
@@ -1851,5 +1851,24 @@
 - **Status**：`derived-checked`；独立重构 RI1–12、jump-gauge、标量锐管；零维预算比较边界已修并复验。桥与组合，不称首创。
 - **Exact Statement / Objects / Domain / Quantifiers**：沿用 C216 的完整 pair-monotone F,v、全域 L-Lipschitz v、S/Sε 非空、λ/ε>0、δ≥0、a=inf_S||v||、原点 R-continuity 半径σ与非减ρ；每条已存在真实物理误差轨道。追加逆 Lipschitz 门||x−y||≤||v(x)−v(y)||/m，m>0，及独立窗口εa<σ；局部版本须在所用 actual 或 hat 与所选sε的全部点对上预先认证。
 - **Conclusion**：固定真实原值−εcε∈F(sε)给 d(sε,S)≤ρ(εa)，无需ρ正点右连续。actual门给 limsup d(xk,S)≤(Lδ/m)(1+1/(λε))+ρ(εa)；hat门给更紧 δ+Lδ/(mλε)+ρ(εa)。若C216的b<σ亦合法可与δ+ρ(b+)取min；若仅εa<σ合法仍能用本分支。δ(ε)→0且δ/ε→0给合法轨道族双极限0。
-- **Definitions / Dependencies / Evidence**：[RI1–12 自足证明](research/canonical/gppa_regularized_inverse_branch.md#gri-data)、[源T3完整实读及锐子族](research/novelty/2026_10_09/stability_review.md)、[独立接收](research/novelty/2026_10_09/new_claim_review.md)、[复算说明](research/code/gppa_novelty/README.md)。Id核角恢复已读2606.01536v2 §3 T3。
+- **Definitions / Dependencies / Evidence**：[RI1–12 自足证明](research/canonical/gppa_regularized_inverse_branch.md#gri-data)、[源T3完整实读及锐子族](research/novelty/2026_10_09/stability_review.md)、[独立接收](research/novelty/2026_10_09/new_claim_review.md)、[复算说明](research/code/gppa_novelty/README.md)。Id核角恢复2606.01536v1/v2 §3 T3；[本次实际核六月v1](research/novelty/2026_10_09/gppa_source_priority_followup.md)，不是把九月版本当八月前先行。
 - **Counterevidence / Scope**：全域门迫单射，不授予满射/coverage。只有actual点对认证不授予hat管；H={0}真实距离0，两预算仍合法但不比较大小。指定仿射对象RI11–12可取等且一般更低，不把本管称逐对象最佳；不推出点收敛/长度，也不改成一条逐步εk算法。
+
+<a id="c221"></a>
+## C221-v1 / GP-TAIL-LYAPUNOV · 前验标量尾势、完整 SF 的直接 C¹/KL 分界
+
+- **Status**：`derived-checked`；TL1–24由不同审查者独立重建；先行性与数学成立分开。
+- **Exact Statement / Objects / Domain / Quantifiers**：实Hilbert H，Q⊂H，非空闭Z⊂Q，开U，R>0，全部E=Q∩U∩{d_Z<R}输入的完整允许输出覆盖；全部输出满足d(y,Z)≤τ(d(z,Z))、||y−z||≤b(d(z,Z))。b、τ在[0,R]连续非减、零消失、τ(t)<t。初值r=d(z0,Z)<R的前验标量L(r)=∑b(τʲr)有限且严格小于d(z0,H∖U)。允许多值，不假定Q完备。
+- **Conclusion**：L在[0,r]连续，Φ=L∘d_Z对每个输出有Φ(z)−Φ(y)≥||z−y||；显式不变集K={z∈Q:d_Z≤r,||z−z0||+Φ(z)≤L(r)}先保证coverage可续再保证全轨道留域、有限长并趋原Z∩U，尾≤L(τᵏr)。仅all-pairs RL的唯一连续核图另可延拓到clK满足完整域Caristi门；扩张不是Q外新GPPA覆盖。C209几何能量门R≤M、Cω≤qV、q<1也由B²≤Cω和未触发inverse cap给此标量尾≤√(qV(r))/(1−√q)。物理步势另需全部允许物理步模可和及C210目标/留域门。
+- **Exact SF sector**：λ1，完整二维双支F(ξ,y)={(-A0y^(γ/ν),±y^(1/ν)−y)}，y≥0、负y空；ν>1、0<γ<1、A0>0、T(ξ,r)=(ξ+A0|r|^γ,|r|^ν)。γ≥ν/(2ν−1)时β∈[1+γ/ν,2γ]，同原坐标f=|r|^β在全signed collar满足ABS固定H1/H2、函数注意聚点H3和显式KLφ(s)=s^(1/β)，给全部轨道有限长/点收敛；等号成立。严格低γ时，在任何ℝ×(-ρ,ρ)上不存在对全部正输入/全部ξ满足固定正H1/H2的C¹目标，梯度输出覆盖与零线常值给指数矛盾。
+- **Dependencies / Evidence**：[自足TL1–24](research/canonical/gppa_tail_lyapunov_bridge.md#gtl-data)、[独立范围](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md)、[实际先行导入](research/novelty/2026_10_09/noncalm_coverage_followup.md)。核接口保完整union真残差的合法评价窗；ABS只对显示SF sector合法，不以一般势代替KL/subgradient门。
+- **Counterevidence / Scope**：不声称Caristi原文逐字给完整GPPA定理，不从一级势自动推出KL，不把C¹ no-go扩到一般lsc、其它坐标/metric、单轨道证书或有界切向collar。C218非calm/AA障碍与本正面旧KL导入并存。变步族需共同b/τ及全部coverage，固定λ不能自动推出。
+
+<a id="c222"></a>
+## C222-v1 / SHARP-LIP-REALIZATION · 任意 Hilbert 紧零集的精确 Hölder 预算和全域单值 Lip 原算子
+
+- **Status**：`derived-checked`；SHLR1–21边界、反演、符号、D0和graph-max经不同审查者独立复核；精确发表优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意实Hilbert H、非空紧K⊂H、λ>0、0<γ<1、0<η<1，D=diamK，Q=clconvK。存在全域单值Lipschitz F:H→H，zerF=K，LipF≤(1+η)/(λ(1−η))，sup||F−(Id−P_Q)/λ||≤ηD/λ。
+- **Conclusion**：完整Cayley C的值域包含于Q、FixC=K、最小全域γ-Hölder常数恰D^(1−γ)。每个L≥D^(1−γ)、L>0的同(λ,L,γ)全尺度RL类内graF graph-maximal，包括D=L^(1/(1−γ))边界。D0用常值C与F(u)=(u−k0)/λ，逼近误差0。未声称原F强单调或极大单调。
+- **Construction / Dependencies**：平方距离混合E(y)=−αd(y,K)²(y−k0)/D²、0<α≤min((1−γ)/6,η/3)，Hilbert凸包方差余量支付精确预算；R=(Id+E)∘P_Q、G=(Id+R)/2强单调/全域Banach反演、F=(G⁻¹−Id)/λ。完整p覆盖使同参数RL增加点被零输入差迫等同；参照符号必须为+(Id−P_Q)/λ。[完整正文](research/canonical/sharp_holder_lipschitz_realization.md#shlr-object)。
+- **Evidence / Scope**：[接收记录](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md)、[正式TeX与旧构造比较](research/novelty/2026_10_09/structure_priority_followup.md)。旧Goebel2016混合未陈述平方距离精确边界；本次独立推导不倒归旧文。只给compactK充分实现，不把C04有限维必要性扩到无限维，不同时预设正向纤维。最小预算达到性不同于η→0极限保持固定集。

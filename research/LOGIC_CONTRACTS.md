@@ -491,3 +491,14 @@ C212 每个壳内平方望远镜、一个越壳步和跳壳政策有完整证明
 [C216](canonical/gppa_regularized_stability.md#grs-data)的联合输入为原完整pair-monotonicity、全域L-Lipschitz核、两套非空零集、每条实际合法正则化物理误差轨道、完整原逆像R-continuity残差半径σ。取实际精确输出hat x的原图值，抵消给||f||≤D/λ+εa；b<σ才可调用距离管。ρ正点可跳，所以极限用ρ(b+)；δ=ε²、L>0用b<B的裕度恢复源原印管，L=0直接真实f=−εc。逐ε双极限不能改为一个εₖ变化轨道。
 
 源T4的正则化距离结论由新C216包含，C213本身仍只处理原固定关系误差。C208–C214旧集中稿的未闭T4范围应从此补充入口更新理解，不能反向改写其原对象身份。任何物理点/长度、源T1全部结论、变核及一般lift另核门。
+
+
+## E380–E389：前验标量势、完整SF直接KL及精确预算实现
+
+C221的b/τ来自同一个图/窗/目标，coverage与每个输出界同域；初始scalar尾有限及严格边界预算合取才给不变K。势由前验scalar函数构造，不由已知轨道长度反推；Q不闭时用原闭Z⊂Q恢复核极限。only-all-pairs RL给连续唯一T后才延拓clK满足完整域Caristi门，延拓不改物理原图coverage。C209能量门R≤M、Cω≤qV使cap不活跃并给B-tail可和；不从actual长反推。
+
+完整SF的直接ABS正面门γ≥ν/(2ν−1)与β∈[1+γ/ν,2γ]同时量化全部ξ/signed输入；H1/H2常数、H3 boundedness和KL均独立证明。低γ只排同原坐标全正collar固定H1/H2的C¹目标，不排lsc/其它metric或单轨道证书。noncalm排AA不排ABS。
+
+C222只用任意Hilbert的非空compactK、同λ/γ/η、平方距离/方差余量和投影反演；精确Hölder预算含等号，D0单列，参照符号为+(Id−P_Q)/λ。全p覆盖给RL graph-max，不是maximal-monotone，也不认证无限维任意fiber必要性。经典可导性与旧文是否已发表精确表述分别判。
+
+LM2012的q>1/2长度推论必须保源最大单调/EB窗口，局部C212可复用原Z scalar递推但coverage/留域另核。F63的合法极大扩张能改变真残差与零集，refutes输出只指这个错误自动转移。GPPA ASM扩张则保唯一核零点并回到原selected F值，未依赖扩张后的物理EB。

@@ -2,6 +2,8 @@
 
 ## 本轮新增：GPPA 首创性核查与精确边界
 
+[四路接续复算](code/gppa_novelty/README.md)和[followup_verification.json](code/gppa_novelty/followup_verification.json)另外登记C221/C222、GPPA经典桥及NFB旧更新的四组程序；基线94cbbbd，初轮记录保持，不混写阅读或执行时间。
+
 [gppa_novelty/README.md](code/gppa_novelty/README.md)登记 C218–C220 与先行比较中的五个标准库有限复算程序，精确Fraction/Decimal与binary64范围分别声明。[verification.json](code/gppa_novelty/verification.json)给实际命令、版本、退出码和hash。脚本检查显示恒等式、指定轨道、共振余项常数和锐线性子族；不认证全球首创或任意非线性关系锐性。
 
 此登记只让代码可找、可复跑、可判断证据范围。原程序保留在 `history/sources/`，不是规范证明或自动升级的定理。新计算若有长期价值，按 [增长协议](../RESEARCH_PROTOCOL.md) 写入 `research/code/<topic>/` 并保存参数、seed、依赖、精度和输出。

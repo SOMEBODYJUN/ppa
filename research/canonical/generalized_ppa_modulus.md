@@ -3,7 +3,7 @@
 <a id="gpm-verdict"></a>
 ## 完成结论与精确比较对象
 
-**本轮首创性研究入口**：[团队精确裁决](../novelty/2026_10_09/README.md)、[C218既有接口与非calm障碍](gppa_almost_averaged_bridge.md)、[C219临界共振分类](gppa_spiral_resonance.md)、[C220逆核稳定性分支](gppa_regularized_inverse_branch.md)。单个gauge/核/长度机制已有先行；精确完整非calm组合和共振分类仍是有界查证候选，全球优先性未认证。
+**当前首创性研究入口**：[四路接续裁决](../novelty/2026_10_09/PRIORITY_FOLLOWUP.md)、[C221前验势与完整SF直接C¹/KL分界](gppa_tail_lyapunov_bridge.md)、[C222精确预算Lip实现](sharp_holder_lipschitz_realization.md)。GPPA核ASM和NFB旧更新均有准确先行桥；一般尾和、q>1/2长度及部分实际noncalm例已有旧下降导入。候选须落在完整编译、物理政策、精确配对/离散共振等量词和输出，全球优先未认证；[初次六分工快照](../novelty/2026_10_09/README.md)保持原阅读范围。
 
 **当前补充入口**：[C215改写量词与正盆地共轭](gppa_reformulation_boundary.md)、[C216正则化稳定性](gppa_regularized_stability.md)、[有界先行审查](../audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。本页C208–C214身份保持；源T4正则化距离输出由独立C216补充包含，不冒用C213旧对象。任意改写的总体分离仍开放，现有完整图见证的收敛已有合法改写导入。
 

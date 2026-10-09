@@ -162,7 +162,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-固定核GPPA下一步按[团队首创性报告的具体义务](research/novelty/2026_10_09/README.md#nov-obligations)取得关键未读全文，核非calm完整定理的nonsmooth/metric桥、C03锐配对及C04精确最小预算的旧构造，并冻结C217保真合同。C218关闭有限AA直接门，C219补完整临界共振，C220吸收较早物理分支；这些进展不提升为任意改写分离或全球首次。
+固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
 现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)，本页只作路由：当前先做来源清洗、规范协调和空白接收，按[覆盖快照](research/audit/CURRENT_COVERAGE.md)选择尚未裁决的精确范围；清洗完成后，再开展总体母空间/量尺和原生完整纤维/整窗研究。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；已枚举的来源仍按其具体deferred义务处理，不能重复记为未开始，也不能把未证结论当已完成。
 
@@ -170,7 +170,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 新增研究入口 | 用途 |
 | --- | --- |
-| [团队首创性总报告](research/novelty/2026_10_09/README.md) | 六分工一级先行、独立攻击、精确候选与未读范围；固定核算法/全尺度结构分开 |
+| [当前首创性裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)、[初次六分工快照](research/novelty/2026_10_09/README.md) | 四路逐篇版本核对、经典可导性/发表优先区分、剩余精确候选和未读门；算法/全尺度结构分开 |
+| [C221](research/canonical/gppa_tail_lyapunov_bridge.md)、[C222](research/canonical/sharp_holder_lipschitz_realization.md)、[独立接收](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md) | 前验标量势、完整SF直接C¹/KL分界、任意Hilbert紧K精确预算全域Lip充分实现；不认证全球先行 |
 | [C218](research/canonical/gppa_almost_averaged_bridge.md)、[C219](research/canonical/gppa_spiral_resonance.md)、[C220](research/canonical/gppa_regularized_inverse_branch.md) | 自足证明与域/窗口/完整纤维量词；各有独立审查 |
 | [可复算代码和结果](research/code/gppa_novelty/README.md) | 标准库精确与高精度算术、指定轨道、脚本/正文hash；不以有限计算证明无穷结论 |
 

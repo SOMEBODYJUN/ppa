@@ -6432,6 +6432,149 @@
       "y": 3186,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "GP-CARISTI-CLOSURE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-EXT-EB-ASSERT": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 4496,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-EXT-EB-WITNESS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-SF-C1-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-SF-C1-NOGO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-SF-KL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-SF-KL-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-SOURCE-CLASSIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-TAIL-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-TAIL-LYAPUNOV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "GP-TAIL-SUM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SHLR-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 948,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "SHLR-LIP-REALIZATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 948,
+      "region": "structure",
+      "realm": "structure"
     }
   },
   "edges": {
@@ -7950,6 +8093,46 @@
     "E379": {
       "x": 4155.34,
       "y": 3218.48
+    },
+    "E380": {
+      "x": 4440.76,
+      "y": 3248.69
+    },
+    "E381": {
+      "x": 4354.74,
+      "y": 3359.59
+    },
+    "E382": {
+      "x": 4262.84,
+      "y": 3351.72
+    },
+    "E383": {
+      "x": 4261.22,
+      "y": 2830.59
+    },
+    "E384": {
+      "x": 4573.09,
+      "y": 3321.92
+    },
+    "E385": {
+      "x": 3347.22,
+      "y": 956.59
+    },
+    "E386": {
+      "x": 3529.83,
+      "y": 2980.46
+    },
+    "E387": {
+      "x": 4125.94,
+      "y": 3138.37
+    },
+    "E388": {
+      "x": 4508.8,
+      "y": 2866.74
+    },
+    "E389": {
+      "x": 4354.19,
+      "y": 3181.69
     }
   },
   "bounds": {

@@ -1,5 +1,7 @@
 # 首创性质验证：精确结论、先行桥与新增研究
 
+**当前裁决先读[四路接续复核](PRIORITY_FOLLOWUP.md)。** 本页保留初次六分工阅读快照。后续已核六月v1，补齐Caristi势桥、完整SF的C¹/KL参数界、LM2012的q>1/2长度推论和C222精确预算Lip实现；原待办不再代表这些项目尚未开始。
+
 研究日期：2026-10-09 UTC。仓库基线：`5726c10083cb2dbaef52e2ec802d89c8fd9d39c1`。本轮以固定核 GPPA 的 C208–C217 为主，同时复查正式全尺度结构线 C03/C04；这两类对象和结论不互相替代。六个分工分别负责核心先行、物理长度、正则化攻击、结构先行、独立总攻击和新证明复核；最终判定依据可重建的证明与一手来源，不依据团队投票。
 
 <a id="nov-verdict"></a>
@@ -24,7 +26,7 @@
 | 一手来源与实际位置 | 具体先行或桥 | 对本库的限制 |
 | --- | --- | --- |
 | [Li–Mordukhovich 2012](https://web.maths.unsw.edu.au/~gyli/papers/lm-subreg12final.pdf)，§7 T7.2/T7.3；[Leventhal 2009](https://arxiv.org/pdf/0902.4200)，T3.1 | 单调 PPA 的 Hölder/线性次正则、残差平方能量与距离率 | 不能把弱 EB 或线性能量反演单独称首次；C212 壳层有限长度是否已被完整覆盖仍需逐定理核 |
-| [Luke–Thao–Tam v2](https://arxiv.org/html/1605.05725v2)，D2.3、P2.4、T2.18；[Luke–Tam 2025](https://doi.org/10.1287/moor.2023.0334)，P3、L1/L2、T2 | 输出真 EB 通过 `h(s)=s+ψ(s/λ)` 转为输入步 EB；线性反射模转 almost-firm/submonotone | 残差位置本身不再能作为新颖性隔离。v2 的 ε<1 门与整邻管 AA 条件必须保留 |
+| [Luke–Thao–Tam v2](https://arxiv.org/html/1605.05725v2)，D2.3、P2.4、T2.18；[Luke–Tam 2025](https://doi.org/10.1287/moor.2025.0863)，P3、L1/L2、T2 | 输出真 EB 通过 `h(s)=s+ψ(s/λ)` 转为输入步 EB；线性反射模转 almost-firm/submonotone | 残差位置本身不再能作为新颖性隔离。v2 的 ε<1 门与整邻管 AA 条件必须保留 |
 | [Lauster–Luke 2021](https://link.springer.com/article/10.1186/s13663-021-00698-0)，D13/D15、T16、L17及其证明 | 不依赖目标函数的 gauge 收敛和可和步界；该步界直接蕴含有限长度 | 不能声称旧抽象文献只有点收敛、没有长度机制 |
 | [Li–Mordukhovich–Zhu v1](https://arxiv.org/html/2406.13207v1)，BA、T4.3/T4.4；[Attouch–Bolte–Svaiter](https://bolte.perso.math.cnrs.fr/MPA.pdf)，H1–H3、L2.6、T2.9 | 一般标量可和包络、留域及有限长度已有目标函数框架 | 当前未证全部 C209 都有同一目标函数桥；LMZ 的统一 shrinking 门比逐初值可和更强，自然 log 代换不通过 |
 | [Bùi–Combettes](https://arxiv.org/pdf/1908.07077)，D1.1、P3.8–3.10、T4.2/T4.8 | warped resolvent 与一般辅助核迭代 | 核坐标身份不是独立创新；不能省去其单调性、存在和轨道输出门 |

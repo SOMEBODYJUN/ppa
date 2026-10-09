@@ -423,3 +423,19 @@
 - **尝试/断点**：Goebel先行实现K为(1+η)-Lipschitz固定集，投影后Hölder预算(1+η)^γD^(1−γ)，便令η→0自动得到C04边界的精确最小预算。极限固定点集可以增加。
 - **完整边界示例**：Q=[0,1]、Tη(x)=(1−η)x、0<η<1，各FixTη={0}，一致极限Id的固定集是整Q。这个例只击中“固定集自动保持”的推论，不证明不存在其它精确构造。
 - **保留/重启门**：Goebel直接覆盖D<R的严格余量；D=R的达到性必须用[C04固定集正文](research/canonical/finite_fiber_classification.md#ff-object)或另一条独立完整证明。本轮宽泛存在首创已被先行限制，精确预算候选仍须追溯旧构造。
+
+- **后续独立实现**：[C222](research/canonical/sharp_holder_lipschitz_realization.md#shlr-mix)已用平方距离混合与方差余量直接达到最小预算，包括边界；它不使用本失败的极限推论。数学达到性已闭，旧发表优先继续按实读文献核验。
+
+<a id="f62"></a>
+## F62 · 实际非 calm 或未给目标函数被当成所有旧下降理论的排除
+
+- **尝试/断点**：C218排除有限almost-averaged整邻管，于是宣称C209或其SF例不能由任何旧Lyapunov/KL理论处理。不同抽象框架的前件没有这条蕴含。
+- **完整反向桥**：[C221 TL1–11](research/canonical/gppa_tail_lyapunov_bridge.md#gtl-potential)由前验标量有限尾构造连续Caristi势；能量分支也进入。TL12–20保完整双支、原坐标和全部signed collar，γ≥ν/(2ν−1)的实际非calm SF合法满足ABS H1–H3+KL。
+- **保留/重启门**：γ严格低于该阈值时TL21–24只排全部正collar固定H1/H2的C¹目标；不排lsc、换metric、其它抽象定理。首创候选必须比较完整RL/全union真EB的编译、物理政策与定量输出，不能以无目标或noncalm标签隔离。
+
+<a id="f63"></a>
+## F63 · 极大单调扩张被假定保持原零目标和真残差 EB
+
+- **尝试/断点**：把C212局部pair单调图块扩成极大单调M，直接沿用原Z与原gauge调用旧Hölder次正则定理。图包含不保真实残差，也不保零点。
+- **完整反例**：原图{(0,0),(1,1)}单调，原Z={0}，输出1有d(1,Z)=r_A(1)=1。取h(x)=0.5(x−1)_+²+(x−1)_+，M=∂h为极大单调且包含原图；M(1)=[0,1]，r_M(1)=0，zerM=(-∞,1]。任何零消失gauge的同原Z-EB在1失败。
+- **保留/重启门**：[先行桥报告](research/novelty/2026_10_09/noncalm_coverage_followup.md)给2012源合法范围的dyadic有限长推论；同原目标的能量与scalar-rate推导不需上述错误转移。全局coverage/局部留域仍独立核。GPPA ASM扩张的唯一核零点与原selected物理残差桥另有精确证明，不能由本反例否定。

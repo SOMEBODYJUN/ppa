@@ -1,0 +1,57 @@
+{
+  "date_utc": "2026-10-09",
+  "base_commit": "94cbbbd9bacb61787eeee583e0282b890455849a",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "records": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/gppa_source_priority_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "f96c4e12ad1c77c1e3b01e436107a6334fb042b0b1010e3f14e1012bbf9e8a4c",
+      "stdout": "{\n  \"status\": \"finite checks passed\",\n  \"asm_value_pairs_checked\": 26244,\n  \"rate_comparison\": [\n    {\n      \"gamma_epsilon\": \"1/100\",\n      \"standard_square\": \"10000/10201\",\n      \"printed_square\": \"50/51\",\n      \"old_ratio_bound_valid\": true\n    },\n    {\n      \"gamma_epsilon\": \"1/10\",\n      \"standard_square\": \"100/121\",\n      \"printed_square\": \"5/6\",\n      \"old_ratio_bound_valid\": true\n    },\n    {\n      \"gamma_epsilon\": \"1\",\n      \"standard_square\": \"1/4\",\n      \"printed_square\": \"1/3\",\n      \"old_ratio_bound_valid\": true\n    },\n    {\n      \"gamma_epsilon\": \"4\",\n      \"standard_square\": \"1/25\",\n      \"printed_square\": \"1/9\",\n      \"old_ratio_bound_valid\": true\n    },\n    {\n      \"gamma_epsilon\": \"5\",\n      \"standard_square\": \"1/36\",\n      \"printed_square\": \"1/11\",\n      \"old_ratio_bound_valid\": false\n    }\n  ],\n  \"nonconvergent_physical_selection\": [\n    {\n      \"k\": 0,\n      \"kernel_first\": \"1\",\n      \"physical_second\": 0\n    },\n    {\n      \"k\": 1,\n      \"kernel_first\": \"1/3\",\n      \"physical_second\": -1\n    },\n    {\n      \"k\": 2,\n      \"kernel_first\": \"1/9\",\n      \"physical_second\": 2\n    },\n    {\n      \"k\": 3,\n      \"kernel_first\": \"1/27\",\n      \"physical_second\": -3\n    },\n    {\n      \"k\": 4,\n      \"kernel_first\": \"1/81\",\n      \"physical_second\": 4\n    },\n    {\n      \"k\": 5,\n      \"kernel_first\": \"1/243\",\n      \"physical_second\": -5\n    },\n    {\n      \"k\": 6,\n      \"kernel_first\": \"1/729\",\n      \"physical_second\": 6\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/novelty/2026_10_09/nfb_source_priority_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "e0df1304549e7e0d7f6d9ea8e37d535afc2709ab2a0b4e06c3606feb1f54359c",
+      "stdout": "{\n  \"coefficient_identities_checked\": 78,\n  \"strict_monotone_witness\": {\n    \"NFB_delta\": \"3/20\",\n    \"RV_v1_delta\": \"-3/16\"\n  },\n  \"recurrence_steps_checked\": 36,\n  \"parallel_sum_completions_checked\": 36,\n  \"negative_identity_Evens_rate_squared\": \"13/16\",\n  \"scope\": \"Exact finite checks support displayed algebra; general mathematical implications are proved in the report.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/noncalm_coverage_followup_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "818761b1342f927464c2baa3111da39d6ea66e74f5464bb4c0ca85a929f446c2",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"exact_energy_pairs\": 441,\n  \"sf_signed_tests\": 1280,\n  \"sf_max_H1_ratio\": 0.5917477534832559,\n  \"sf_max_H2_ratio\": 1.0000000000000102,\n  \"sf_max_KL_error\": 1.021405182655144e-14,\n  \"tail_identity_tests\": 132,\n  \"energy\": {\n    \"partial_length_180\": \"0.4748637558180065953146353245291212386835847282339279111937947460175856\",\n    \"analytic_budget\": \"2.212663278672740047510802925963201029337932176765263690463719304343297\"\n  },\n  \"q_3_5_distance_exponent\": \"3/4\",\n  \"q_3_5_dyadic_block_exponent\": \"-1/4\",\n  \"dyadic_checks\": [\n    {\n      \"N\": 1,\n      \"length\": 0.2540959637534163,\n      \"sqrt_N_d_N\": 0.5512371930348334\n    },\n    {\n      \"N\": 2,\n      \"length\": 0.3954636770580484,\n      \"sqrt_N_d_N\": 0.6918058747786762\n    },\n    {\n      \"N\": 4,\n      \"length\": 0.5321637134227648,\n      \"sqrt_N_d_N\": 0.8015585505455655\n    },\n    {\n      \"N\": 8,\n      \"length\": 0.6099079810677698,\n      \"sqrt_N_d_N\": 0.8417987565073919\n    },\n    {\n      \"N\": 16,\n      \"length\": 0.6093243469390278,\n      \"sqrt_N_d_N\": 0.8054110293348157\n    },\n    {\n      \"N\": 32,\n      \"length\": 0.5558226152618239,\n      \"sqrt_N_d_N\": 0.7209281701443014\n    },\n    {\n      \"N\": 64,\n      \"length\": 0.48305863752887235,\n      \"sqrt_N_d_N\": 0.6218270825151856\n    },\n    {\n      \"N\": 128,\n      \"length\": 0.41077132935328775,\n      \"sqrt_N_d_N\": 0.5273220290473593\n    },\n    {\n      \"N\": 256,\n      \"length\": 0.3463293729397147,\n      \"sqrt_N_d_N\": 0.4442213535078117\n    },\n    {\n      \"N\": 512,\n      \"length\": 0.291166826825598,\n      \"sqrt_N_d_N\": 0.3734102631735782\n    },\n    {\n      \"N\": 1024,\n      \"length\": 0.24462724933299432,\n      \"sqrt_N_d_N\": 0.31374382439342585\n    },\n    {\n      \"N\": 2048,\n      \"length\": 0.20553701419035686,\n      \"sqrt_N_d_N\": 0.2636348984702804\n    }\n  ],\n  \"limits\": \"Finite arithmetic only; infinite series, all trajectories, and novelty use proofs.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "research/code/gppa_novelty/structure_priority_check.py"
+      ],
+      "exit_code": 0,
+      "script_sha256": "1b78c0efa443434bd566782851bdaecf85e7aceadec776fcb6881a8299649ccd",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scalar_checks\": 102710,\n  \"minimum_numeric_slack\": 0.0,\n  \"square_checks\": 55945,\n  \"seed\": 222031004,\n  \"parameters\": {\n    \"gamma\": 0.5,\n    \"eta\": 0.1,\n    \"lambda\": 1.7,\n    \"alpha\": 0.03333333333333333\n  },\n  \"points\": 167,\n  \"max_observed_uniform_error\": 0.0025162268727155434,\n  \"proved_construction_error_bound\": 0.0277296776935901,\n  \"inverse_iteration_contraction_bound\": 0.9035079029052513\n}\n",
+      "stderr": ""
+    }
+  ],
+  "proof_sha256": {
+    "research/canonical/gppa_tail_lyapunov_bridge.md": "36f8a606ff5ba7cffd13084645b533e0edcbe5ff639afe539f6d60f04a1c341c",
+    "research/canonical/sharp_holder_lipschitz_realization.md": "043577d905b433a1e606e0e3a8df6a67a7c7bf5fc26c214ca93f8a10d5971a8a",
+    "research/novelty/2026_10_09/gppa_source_priority_followup.md": "3f9adb0b35d2b44bf6379c60e65ebfd9d92373358773766a14a464b26c21e38b",
+    "research/novelty/2026_10_09/nfb_source_priority_followup.md": "996e72d425543a8c9f0c8cd665676f063bb86899f16c465ce585e88083542b32",
+    "research/novelty/2026_10_09/noncalm_coverage_followup.md": "ce1688658bb0b66952ba89ae63511945f26dc9d19cb88153e28b601a8c198425",
+    "research/novelty/2026_10_09/structure_priority_followup.md": "db0940ae3bff032ced47ca9f12f65123915b97c583dd600fd16645e3fa10817a"
+  },
+  "scope": "Finite algebra and implementation checks only; no universal proof or global priority certificate."
+}

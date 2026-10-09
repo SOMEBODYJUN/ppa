@@ -325,3 +325,11 @@ C211/C212 给固定完整关系/核的严格新增实例和精确物理阶，C21
 [实际位置、阅读层与获取限制](audit/GPPA_PRIORITY_AUDIT_2026_10_09.md#gpa-scope)逐项记录2012 Hölder-PPA、LTT一般gauge、2019 warped resolvents、2024 LMZ §4标量尾和/留域和2026 GPPA T2/T4；另有Le–Théra2024本轮只取到摘要，不能算读取其定理。没有检索命中完整相同陈述不证明全球第一。
 
 本库推导：[C216](canonical/gppa_regularized_stability.md#grs-tube)已吸收源2608.01584v1 T4正则化物理误差距离输出及双极限；新残差预算bε=Lε/λ²+Lε²/λ+εa，源印预算Bε=4Lε/λ²+3Lε²/λ+εa。更紧预算、相同前件可推导性与新颖性分开；没有承诺全部文献/全部表示整体优越。
+
+
+<a id="lit-priority-followup"></a>
+## LIT-PRIORITY-FOLLOWUP：双方逐版本核查与经典导入
+
+[四路当前裁决](novelty/2026_10_09/PRIORITY_FOLLOWUP.md)和[独立接收](audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md)补核94cbbbd之后的实际阅读范围。GPPA：Rockafellar1976 (1.13)–(1.15)、2025 pair-v1、2606.01536六月v1/九月v2 T3逐项；完整union/强极大扩张桥是本次推导，不冒称旧文逐字发表。NFB：MBG2021v1、RV2024v1 Algorithm2.2、Evens2023/2024 PPPA/CP、2023 mismatch-v1明确更新/几何/点率先行；相同更新不否定不同前提的新收敛定理。源URL、版本hash、读页与未读门在四分报告。
+
+C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只对显示合同授予结论；LM2012 (7.7)/T7.3的dyadic推论关闭q>1/2长度机制的首创隔离。C222核Goebel2016 Claim1、Barroso-v3和正式TeX，平方距离/方差余量是本次独立推导；数学可导性与旧公开同式表述分开。Wang全文、OPT2023、RV刊本、若干老扩张/固定集正文未取得，不以访问失败认证新颖。

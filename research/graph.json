@@ -3000,7 +3000,7 @@
     {
       "id": "GP-PRIORITY-READ",
       "label": "团队实读一级先行与已闭具体桥",
-      "file": "novelty/2026_10_09/README.md#nov-prior",
+      "file": "novelty/2026_10_09/PRIORITY_FOLLOWUP.md#pf-evidence",
       "evidence_status": "canonical"
     },
     {
@@ -3061,6 +3061,84 @@
       "id": "GP-REG-INVERSE",
       "label": "C220真实hat逆核管及合法min分支",
       "file": "canonical/gppa_regularized_inverse_branch.md#gri-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-TAIL-DATA",
+      "label": "全部允许输出/共同b、τ/闭目标/局部coverage",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-data",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-TAIL-SUM",
+      "label": "前验初值标量尾有限及严格留域预算",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-data",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-TAIL-LYAPUNOV",
+      "label": "C221连续尾势/全部轨道留域和原目标尾",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-potential",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-CARISTI-CLOSURE",
+      "label": "C221 all-pairs唯一连续核的完整域闭包接口",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-caristi",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-SF-KL-DATA",
+      "label": "完整双支SF/γ≥ν/(2ν−1)/全signed collar",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-sf-kl",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-SF-KL",
+      "label": "C221同原坐标完整SF的合法ABS/KL导入",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-sf-kl",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-SF-C1-DATA",
+      "label": "完整SF低γ/全部ξ/正collar固定H1H2",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-sf-c1-obstruction",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "GP-SF-C1-NOGO",
+      "label": "C221低sector的全C¹目标严格障碍",
+      "file": "canonical/gppa_tail_lyapunov_bridge.md#gtl-sf-c1-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SHLR-DATA",
+      "label": "Hilbert紧K及同λ/γ/η/平方距离混合",
+      "file": "canonical/sharp_holder_lipschitz_realization.md#shlr-object",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SHLR-LIP-REALIZATION",
+      "label": "C222精确最小Hölder预算/全域单值Lip实现",
+      "file": "canonical/sharp_holder_lipschitz_realization.md#shlr-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-EXT-EB-WITNESS",
+      "label": "F63合法极大扩张改变原目标/真残差",
+      "file": "../FAILED_ROUTES.md#f63",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GP-EXT-EB-ASSERT",
+      "label": "错误：任意极大扩张自动保原Z真EB",
+      "file": "../FAILED_ROUTES.md#f63",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "GP-SOURCE-CLASSIC",
+      "label": "全纤维ASM核轨道精确导入经典强单调PPA",
+      "file": "novelty/2026_10_09/gppa_source_priority_followup.md#source-classic",
       "evidence_status": "derived-checked"
     }
   ],
@@ -7471,8 +7549,124 @@
       ],
       "output": "GP-PRIORITY-OPEN",
       "relation": "open",
-      "scope": "AA直接门有具体障碍、完整共振有新证明；仍须核其它目标/metric桥、结构最小预算及公开优先版本。有限已读源无同式命中不产生全球不存在先行。",
+      "scope": "AA直接门与完整共振保留；C221已补标量势/显式KL导入，C222已补精确预算Lip充分实现。仍须核完整编译/锐配对/离散共振的公开先行与未读正文；现代可导性不是旧文已发表同式结论。",
       "status": "open；精确先行/导入义务未闭"
+    },
+    {
+      "id": "E380",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-TAIL-DATA",
+        "GP-TAIL-SUM"
+      ],
+      "output": "GP-TAIL-LYAPUNOV",
+      "relation": "conditional",
+      "scope": "同一b/τ、E/Q/U/Z与初始r；初始scalar尾统一支配[0,r]给连续势，K严格预算先开coverage再保所有输出留域；原闭Z恢复核极限，不假定Q完备。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E381",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-DATA",
+        "GP-ENERGY"
+      ],
+      "output": "GP-TAIL-SUM",
+      "relation": "conditional",
+      "scope": "仅绑定同一C209 τ与b=B；R≤M、Cω≤qV、q<1使inverse cap不触发，B²≤Cω给标量尾≤√(qV(r))/(1−√q)，同严格能量预算给留域门；不从actual长度反推。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E382",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-TAIL-LYAPUNOV",
+        "GP-DATA"
+      ],
+      "output": "GP-CARISTI-CLOSURE",
+      "relation": "conditional",
+      "scope": "同原核T和不变K；只用all-pairs RL的唯一小距离连续模延拓到clK，Caristi完整域门可接。延拓不认证Q外GPPA coverage；anchor-only不能接此边。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E383",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-SF-KL-DATA"
+      ],
+      "output": "GP-SF-KL",
+      "relation": "conditional",
+      "scope": "保完整双支、原Euclidean坐标、全部ξ与signed normal collar，γ≥ν/(2ν−1)、β∈[1+γ/ν,2γ]含等号；显示f/H1/H2、独立H3有界性与KL全门合法后调用ABS。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E384",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-SF-C1-DATA"
+      ],
+      "output": "GP-SF-C1-NOGO",
+      "relation": "conditional",
+      "scope": "γ<ν/(2ν−1)；所有正输入/全部ξ使输出梯度受限，connected零线常值+正常积分与显式轨道/H1矛盾。只排C¹固定H1/H2，非lsc或其它metric/坐标/有界切向域。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E385",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "SHLR-DATA"
+      ],
+      "output": "SHLR-LIP-REALIZATION",
+      "relation": "sufficient",
+      "scope": "非空compactK⊂任意实Hilbert，同λ>0、0<γ,η<1；平方距离/方差余量精确达到D^(1−γ)含边界，G全域反演给单值LipF及+(Id−P_Q)/λ逼近，D0单列。RL graph-max非maximal-monotone，不给无限维必要性。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E386",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-SF-KL",
+        "GP-AA-OBSTRUCTION"
+      ],
+      "output": "GP-STRICT-SCOPE",
+      "relation": "limits",
+      "scope": "取相同完整SF且共同γ上sector；实际noncalm排AA与合法ABS并存。完整图表示障碍不能成为所有旧目标/下降理论非导入性的证据。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E387",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-TAIL-LYAPUNOV",
+        "SHLR-LIP-REALIZATION",
+        "GP-PRIORITY-READ"
+      ],
+      "output": "GP-PRIORITY-OPEN",
+      "relation": "open",
+      "scope": "已闭势桥与精确构造收窄候选，不证明旧文已发表同式结果；完整编译/配对预算/离散共振和公开优先仍逐版本核验，访问失败不认证全球第一。",
+      "status": "open；精确发表优先未闭"
+    },
+    {
+      "id": "E388",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-EXT-EB-WITNESS"
+      ],
+      "output": "GP-EXT-EB-ASSERT",
+      "relation": "refutes",
+      "scope": "F63原图{(0,0),(1,1)}及Z{0}的EB，被包含它的M=∂h在1新增零值破坏；只反驳自动转移，不否定保selected原F残差的GPPA经典桥。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
+    },
+    {
+      "id": "E389",
+      "topic": "首创性接续与完整条件接口",
+      "inputs": [
+        "GP-ASM-DATA"
+      ],
+      "output": "GP-SOURCE-CLASSIC",
+      "relation": "conditional",
+      "scope": "同完整union A、全图ε-ASM、非空原零集与Q coverage；A−εId作极大扩张再加εId，J_M|Q=J_A保每条核轨道，经典q=(1+λε)^−1。物理距离另回原selected F值，不假定v可逆/扩张后物理EB。",
+      "status": "derived-checked；TL1–24/SHLR1–21和全纤维归约独立重构，发表优先另核"
     }
   ]
 }

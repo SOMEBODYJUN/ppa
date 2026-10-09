@@ -21,3 +21,24 @@ python3 research/code/gppa_novelty/structure_check.py
 | [structure_check.py](structure_check.py) / [输出](structure_results.txt) | Fraction核优化指数，binary64对γ=1/4,1/2,3/4计算sharp/net/Ajiev预算；固定3×3×5组预算、三个simplex维数和一个覆盖根，容差1e−12。不证明一般固定集构造或全球优先性 |
 
 [verification.json](verification.json) 保存实际命令、环境、退出码、stdout/stderr、脚本与正文指纹；另外复跑旧 C208–C214 与 C215/C216 验证器，检验新增入口未破坏原算术接口。先行全文只用于临时阅读，不随研究资产发布。
+
+
+## 本次四路接续复算（C221/C222与双方来源桥）
+
+[followup_verification.json](followup_verification.json)是本次真实94cbbbd基线的命令/环境/退出码/stdout/指纹记录，初轮verification.json保持原范围。运行：
+
+```bash
+python3 research/code/gppa_novelty/gppa_source_priority_check.py
+python3 research/novelty/2026_10_09/nfb_source_priority_check.py
+python3 research/code/gppa_novelty/noncalm_coverage_followup_check.py
+python3 research/code/gppa_novelty/structure_priority_check.py
+```
+
+| 程序 | 有限检查、精度和边界 |
+| --- | --- |
+| [GPPA来源](gppa_source_priority_check.py) | stdlib Fraction确定性26244值对、ASM/原非单调、核轨道、q与预算、small-ε门；不把物理距离率改为点率 |
+| [NFB来源](../../novelty/2026_10_09/nfb_source_priority_check.py) | Fraction78系数、36步更新同一性、36平方和及两个准确证书；参数改善只对RV-v1 |
+| [非calm/势桥](noncalm_coverage_followup_check.py) | Fraction441能量恒等式、Decimal70位132尾恒等式，4个SFsector含等号和1280 signed样本，180能量scalar步、4096隐式递推及12 dyadic块；binary64等号误差明确给出，不证明无穷结论 |
+| [结构精确预算](structure_priority_check.py) | seed222031004；Fraction部分精确scalar及binary64反演/方差/Hölder门、102710 scalar和55945重构检查，容差在脚本明写；不以随机有限点证明全参数边界 |
+
+承重解析证明见[C221](../../canonical/gppa_tail_lyapunov_bridge.md)、[C222](../../canonical/sharp_holder_lipschitz_realization.md)和[先行复核](../../novelty/2026_10_09/PRIORITY_FOLLOWUP.md)。C¹ no-go、经典导入和全球日期判断不由有限计算代替。
