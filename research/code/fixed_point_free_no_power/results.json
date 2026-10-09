@@ -1,0 +1,43 @@
+{
+  "status": "PASS finite exact checks; not an infinite-domain proof",
+  "python": "3.12.14",
+  "arithmetic": "fractions.Fraction; exact; no random seed",
+  "base_blocks": 8,
+  "full_states": 50,
+  "ordered_state_pairs": 2500,
+  "matrix_times": 81,
+  "mixture_regimes": {
+    "large_a": 6,
+    "small_a": 75
+  },
+  "parameters": {
+    "p": "1/8",
+    "L": "5/4",
+    "epsilon": "45/64",
+    "alpha": "1/2",
+    "tau": "1"
+  },
+  "exponent_checks": [
+    {
+      "q": "1/100",
+      "n": 200,
+      "log2_power": "6161/10"
+    },
+    {
+      "q": "1/4",
+      "n": 128,
+      "log2_power": "24625/2"
+    },
+    {
+      "q": "1",
+      "n": 128,
+      "log2_power": "50432"
+    },
+    {
+      "q": "2",
+      "n": 128,
+      "log2_power": "101258"
+    }
+  ],
+  "boundary": "k=0, invariant origin/cycles, transient, distinct-bit pairs, e=0 label collision"
+}
