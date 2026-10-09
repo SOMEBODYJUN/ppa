@@ -285,3 +285,17 @@ Julien Melleray / Todor Tsankov，*Generic representations of abelian groups and
 **Exact import / all gates。** 常数平方归一化及重心量词见[LM-MN-DEFINITIONS](canonical/l1_markov_extension.md#lm-mn-definitions)。C182取p=2、Y=ℓ¹(ℝ)=c₀*；均值重心由Jensen及任意耦合给W₂常数1，C181给N₂≤12√21。Hilbert源M₂=1；其0<γ<1雪花由HE-SNOWFLAKE等距嵌入Hilbert，γ=1直接用Hilbert。任意度量源在γ≤1/2用路径三角及2γ≤1独立给M₂≤1。子集任意、目标为完整ℓ¹而非任意闭子空间、弱星紧性所需对偶身份明确，故满足Corollary1.13的全部条件。此处使用存在统一K而非估计最优K。
 
 **Boundary。** 该文Theorem1.14给某个ℓ¹闭线性子空间缺少所有metric Markov cotype，是关于子空间自身的目标性质；C181中自由平滑点可离开子空间，不与之矛盾。本接口不提供概率值域、EB、守恒边缘或同常数Cayley完成；这些须分别证明，C182仅提供明确损失常数的部分。
+
+<a id="lit-gppa-modulus-fusion"></a>
+## 固定 GPPA v1 的一般模融合：外文事实与本库推导分开
+
+一手固定来源是 Le–Mordukhovich–Théra, *Convergence and Stability Analysis of a Generalized Proximal Point Algorithm and Its Inexact Version*, arXiv:2608.01584v1（2026-08-03）；[归档原稿](comparisons/2026_08_gppa_nfb/sources/gppa_2608.01584v1.pdf)、[指纹](comparisons/2026_08_gppa_nfb/sources/manifest.json)和[2026-10-09 重新取得](comparisons/2026_08_gppa_nfb/source_refresh_2026_10_09.json)固定字节身份。
+
+| 来源精确事实 | 本库的条件推导 / 完成范围 |
+| --- | --- |
+| GPPA=(v+λF)⁻¹v；配对单调/ASM 约束 Δf 与 Δv，v 自身不必须单调或双射 | C208 完整并集 A；非单射残差只有不等式，coverage 限真实 Q |
+| T2(a) 在完整 ASM、非空零集与 Q coverage 下给核线性结论；平方范数是能量 | C209 的一般 RL+真EB能量覆盖全部 λε>0；保锚耗散另有初等 (1+λε)⁻¹ 因子，非独立先行性发现 |
+| T2(b) 另用 F⁻¹ 的局部 R-Lipschitz 得物理零集距离率 | C210 独立反演/纤维门区分物理点、长度与回缩；源非单射问题不自动有物理点极限 |
+| T4 含持续物理输出误差及 F+εv 正则化 | C213 只吸收实际误差模型与向前核模，证明固定认证关系的非线性误差管；不声称整体 T4 包含 |
+
+C211/C212 给固定完整关系/核的严格新增实例和精确物理阶，C214 给融合后的复合 Dini 锐门。[本轮独立审查](audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)核明上述精确对象和比较；已有 C205–C207 删支导入仍成立，不能升级为收敛绝对不可导入。Bùi–Combettes 2020 warped proximal、Hölder metric-subregularity 等已有一般非线性文献必须列入全球先行性核对；这里只承认相关来源存在，不导入未逐定理核验的结论，也不认证统一新理论的全球新颖性。

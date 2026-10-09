@@ -1,0 +1,531 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\ip}[2]{\langle#1,#2\rangle}
+\newcommand{\zer}{\operatorname{zer}}
+\newcommand{\ran}{\operatorname{ran}}
+\newcommand{\gph}{\operatorname{gph}}
+\newcommand{\dist}{\operatorname{dist}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{General-modulus convergence of generalized\ proximal point iterations}
+\author{PPA research project}
+\date{October 9, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We transfer reflected graph moduli and true residual error bounds to the
+generalized proximal point update
+$v(x_k)-v(x_{k+1})\in\lambda F(x_{k+1})$.
+A full-fiber kernel-coordinate relation yields direct, residual-energy,
+and anchored-dissipation scalar certificates. The energy branch contains
+every adaptive-strong-monotonicity instance of the fixed 2026 GPPA
+Theorem 2, including arbitrarily small positive parameters. General
+moduli add nonlinear and nonpower summability mechanisms. Physical point
+convergence and physical finite length require distinct lifting conditions.
+We give complete two-branch examples with nonlinear strongly monotone
+kernels and any prescribed physical order greater than one, a full-graph
+pair-monotone representation obstruction, and a sharp inverse-H\"older
+spiral boundary. Persistent output errors yield a nonlinear tube, rather
+than unconditional exact convergence. This is an internally reconstructed
+research note; global originality and unrestricted reformulation
+comparisons remain separate obligations.
+\end{abstract}
+
+\section{The complete kernel-coordinate relation}
+Let $H$ be a real Hilbert space, $F:H\rightrightarrows H$ a complete
+relation, $v:H\to H$ an everywhere-defined single-valued kernel, and
+$\lambda>0$. The kernel itself need not be monotone or injective. Define
+\begin{equation}\label{eq:union}
+ Q=\ran v,\quad S=\zer F,\quad
+ A(z)=\bigcup_{v(x)=z}F(x),\quad
+ r_A(z)=\inf_{f\in A(z)}\norm f.
+\end{equation}
+Empty fibers have residual $+\infty$. Directly,
+\begin{equation}\label{eq:zeros}
+ \zer A=v(S),\qquad r_A(v(x))\le r_F(x).
+\end{equation}
+The inequality can be strict for a noninjective kernel. For a physical
+graph block $\mathcal G\subset\gph F$, put
+$\Gamma=\{(v(x),f):(x,f)\in\mathcal G\}$.
+Then a block GPPA step is exactly
+\begin{equation}\label{eq:step}
+ z_k=z_{k+1}+\lambda f_{k+1},\quad
+ (z_{k+1},f_{k+1})\in\Gamma,\quad z_k=v(x_k).
+\end{equation}
+Every kernel output has a physical representative by the definition of
+$\Gamma$. For the full graph $\mathcal G=\gph F$, no branch or residual
+fiber is deleted. Existence only needs to be required on $Q$, not on all
+of $H$. Neither completeness nor closedness of $Q$ follows automatically.
+
+\section{A combined scalar convergence theorem}
+Fix a nonempty closed $Z\subset\zer A$, an open $U\subset H$, and $R>0$.
+Set $E=\{z\in Q\cap U:d(z,Z)<R\}$. Assume the following same-object data.
+\begin{enumerate}
+\item Every $z\in E$ has an output on $\Gamma$, and $(p,0)\in\Gamma$
+for every $p\in Z$.
+\item A continuous nondecreasing $\omega:[0,R]\to[0,\infty)$,
+$\omega(0)=0$, satisfies, on every pair in $\Gamma$ with input distance
+$\delta\le R$,
+\begin{equation}\label{eq:rl}
+ \norm{\Delta y-\lambda\Delta f}
+ \le\omega(\norm{\Delta y+\lambda\Delta f}).
+\end{equation}
+\item For all actual outputs with $r_A(y)\le\bar t$, a continuous
+strictly increasing gauge $\psi:[0,\bar t]\to[0,\infty)$, $\psi(0)=0$,
+gives $d(y,Z)\le\psi(r_A(y))$. Put
+\begin{equation}\label{eq:bc}
+ B(t)=\frac{t+\omega(t)}2,\quad
+ C(t)=\frac{t^2+\omega(t)^2}2,\qquad B(R)/\lambda\le\bar t.
+\end{equation}
+\end{enumerate}
+An optional additional condition is a continuous nondecreasing
+$a:[0,M]\to[0,\infty)$, $a(0)=0$, such that
+\begin{equation}\label{eq:anchor}
+ \ip f{y-p}\ge a(d(y,Z))\quad(p\in Z)
+\end{equation}
+at each actual output. Here $M=\psi(\bar t)$ and $g=\psi^{-1}$ on $[0,M]$.
+
+\begin{lemma}\label{lem:one}
+For $d=d(z,Z)$, $d^+=d(z^+,Z)$ and $s=\norm{z-z^+}$, each covered step
+satisfies
+\begin{align}\label{eq:one}
+ (d^+)^2+s^2&\le C(d),&s&\le B(d),\\
+ r_A(z^+)&\le s/\lambda\le\bar t,&
+ d^+&\le\psi(s/\lambda),&s&\ge\lambda g(d^+).\nonumber
+\end{align}
+Under \eqref{eq:anchor} it also satisfies
+\begin{equation}\label{eq:oneanchor}
+ (d^+)^2+s^2+2\lambda a(d^+)\le d^2.
+\end{equation}
+The kernel output and its selected graph value are unique; the physical
+output can remain multivalued.
+\end{lemma}
+\begin{proof}
+Choose $p_n\in Z$ with $\norm{z-p_n}\to d<R$. For large $n$ these
+anchors are inside the comparison cutoff. Write $b=z-z^+=\lambda f$
+and $h_n=z^+-p_n$. Then $h_n+b=z-p_n$ and
+$\norm{h_n-b}\le\omega(\norm{z-p_n})$. The parallelogram identity and
+the bounds on $2b=(h_n+b)-(h_n-b)$ give the first line of
+\eqref{eq:one} after taking the limit. The selected graph value belongs
+to the full fiber $A(z^+)$; this opens the residual window before the EB
+is used. Monotonicity of $\psi$, followed by its inverse, gives the
+second line. Polarization and \eqref{eq:anchor} give
+\eqref{eq:oneanchor}. Same-input comparison has $\delta=0$ and forces
+both $\Delta y+\lambda\Delta f$ and $\Delta y-\lambda\Delta f$ to
+vanish. At $d=0$, comparison with $(z,0)$ forces $s=0$ and $f=0$.
+No Hilbert-space nearest-point attainment was assumed.
+\end{proof}
+
+Define, on $[0,M]$,
+\begin{equation}
+ V(t)=t^2+\lambda^2g(t)^2,\qquad
+ W(t)=V(t)+2\lambda a(t).
+\end{equation}
+For either increasing function $J=V,W$, write $J^{[-1]}(u)=J^{-1}(u)$
+when $u\le J(M)$, and $J^{[-1]}(u)=M$ otherwise. The cap is justified
+by the already proved $d^+\le M$. Define
+\begin{equation}\label{eq:tau}
+ \tau(t)=\min\left\{\psi(B(t)/\lambda),\ V^{[-1]}(C(t))\right\},
+\end{equation}
+adding $W^{[-1]}(t^2)$ to the minimum when \eqref{eq:anchor} is imposed.
+Lemma~\ref{lem:one} gives $d^+\le\tau(d)$, because
+\begin{equation}\label{eq:energy}
+ V(d^+)\le C(d),\qquad W(d^+)\le d^2\quad\text{when available}.
+\end{equation}
+
+\begin{theorem}\label{thm:main}
+Assume the displayed data and $\tau(t)<t$ for $0<t\le R$. For an
+initial $z_0=v(x_0)\in E$, put $d_0=d(z_0,Z)$ and
+\begin{equation}\label{eq:budget}
+ H_\tau(r)=\sum_{j\ge0}B(\tau^j(r)).
+\end{equation}
+If $H_\tau(d_0)<\infty$ and
+$H_\tau(d_0)<d(z_0,H\setminus U)$, all block GPPA choices continue
+indefinitely. Their unique kernel trajectory stays in $E$, has finite
+length, and converges to $z_\infty\in Z\cap U$. Moreover
+\begin{equation}
+ d(z_k,Z)\le\tau^k(d_0),\qquad
+ \norm{z_k-z_\infty}\le H_\tau(\tau^k(d_0)).
+\end{equation}
+\end{theorem}
+\begin{proof}
+$\tau$ is continuous nondecreasing and vanishes at zero. Its iterates
+decrease to zero, since a positive limit would be a fixed point.
+Every valid finite prefix has step bounds $B(\tau^j(d_0))$ and remains
+within the strict initial budget of $z_0$. Its distance to $Z$ remains
+below $R$, and its next output is in $Q$ by construction. This proves
+retention and permits the next use of coverage without circularity.
+Summable steps give a Cauchy sequence in the ambient Hilbert space.
+Distance to closed $Z$ tends to zero, so the limit belongs to $Z$ and
+hence to $Q$. The strict budget retains the limit in $U$. The tail of
+\eqref{eq:budget} proves the stated estimate.
+\end{proof}
+
+Two useful independent sufficient certificates are as follows.
+If $\tau(t)\le\kappa t$, $0<\kappa<1$, and
+\begin{equation}\label{eq:dini}
+ \int_0^R\omega(t)\,\frac{dt}{t}<\infty,
+\end{equation}
+then $H_\tau(r)\le\tfrac12\sum_{j\ge0}[\kappa^jr+\omega(\kappa^jr)]$.
+Integral comparison on $[\kappa^{j+1}r,\kappa^jr]$, for $r>0$, proves
+equivalence of Dini integrability and geometric sampling of $\omega$.
+It does not assert necessity for the possibly faster $H_\tau$ series.
+Alternatively, if $R\le M$ and $C(t)\le qV(t)$, $q<1$, the energy
+branch gives $V(d_{k+1})\le qV(d_k)$ and
+$s_k\le q^{(k+1)/2}\sqrt{V(d_0)}$. Its separate total-length budget is
+\begin{equation}\label{eq:energybudget}
+ \frac{\sqrt{qV(d_0)}}{1-\sqrt q}.
+\end{equation}
+The same strict retention proof applies with this budget, without
+requiring \eqref{eq:dini} or summability of a looser $B$ envelope.
+
+\section{Inclusion of the fixed GPPA quadratic theory}
+The source \cite{LMT} requires adaptive strong monotonicity (ASM)
+\begin{equation}\label{eq:asm}
+ \ip{f-f'}{v(x)-v(x')}\ge\varepsilon\norm{v(x)-v(x')}^2
+ \quad((x,f),(x',f')\in\gph F),
+\end{equation}
+nonempty $S$, and $Q\subset\ran(v+\lambda F)$. These assumptions do
+not require $v$ itself to be monotone, injective, or surjective.
+Two zero graph points in \eqref{eq:asm} give $v(S)=\{z_*\}$. The full
+relation $A$ is monotone, so $\omega(t)=t$ is valid. Zero comparison
+and Cauchy--Schwarz give, for every full graph value,
+$\norm{z-z_*}\le\norm f/\varepsilon$. Taking the infimum yields
+the true kernel EB $\psi(t)=t/\varepsilon$.
+Consequently
+\begin{equation}\label{eq:asminclusion}
+ V(t)=(1+\lambda^2\varepsilon^2)t^2,\qquad
+ \tau_E(t)=\frac{t}{\sqrt{1+\lambda^2\varepsilon^2}}<t.
+\end{equation}
+Thus the energy alternative contains every source Theorem~2 kernel
+case for every $\lambda\varepsilon>0$. The direct test alone would
+require $\lambda\varepsilon>1$ with $\omega=t$, and is insufficient
+to establish inclusion. Even with the sharp modulus for $F=\varepsilon I$
+and $v=I$, at $\lambda\varepsilon=1/4$ the direct ratio is at least
+$16/5$, while the energy branch contracts.
+
+Keeping the source anchor dissipation $a(t)=\varepsilon t^2$ gives
+\begin{equation}\label{eq:asmrate}
+ W(t)=(1+\lambda\varepsilon)^2t^2,\qquad
+ \norm{z_k-z_*}\le(1+\lambda\varepsilon)^{-k}\norm{z_0-z_*}.
+\end{equation}
+This elementary consequence of the source hypotheses sharpens its
+printed factor $(1+2\lambda\varepsilon)^{-1/2}$; it is not claimed
+as an independently novel mechanism. Its physical R-continuity
+assumption transfers selected residuals to
+$d(x_{k+1},S)\le\rho(s_k/\lambda)$ once the selected residual enters
+its stated local radius; geometric kernel decay ensures eventual entry.
+A global inverse bound gives this at every step. A linear $\rho$ preserves a
+geometric set-distance rate. Neither this bound nor ASM controls
+unrestricted movement within a noninjective kernel fiber.
+
+There is also a weak-EB extension with no uniform geometric factor.
+For pair-monotone $A$, suppose $0<d_0\le M$ and put $r_j=2^{-j}d_0$.
+The case $d_0=0$ is absorbed at zero and needs no shell division.
+The descent $d_k^2-d_{k+1}^2\ge s_k^2$ and
+$s_k\ge\lambda g(d_{k+1})$ give the shell-length bound
+\begin{equation}\label{eq:shell}
+ \sum_{j\ge0}\left(r_j+\frac{r_j^2}{\lambda g(r_j/2)}\right).
+\end{equation}
+Indeed, interior steps of one shell have length at most their squared
+length divided by $\lambda g(r_j/2)$; the squared lengths telescope
+to at most $r_j^2$. There is at most one crossing step, of length at
+most $r_j$. Skipped shells are not charged. A finite strict budget
+in \eqref{eq:shell} gives the same continuation and limit proof.
+For $\psi(t)=Kt^q$ it suffices that $q>1/2$.
+The full scalar example $F(x)=\operatorname{sgn}(x)|x|^p$, $v=I$,
+$1<p<2$, has $q=1/p$, full coverage, and polynomial PPA convergence
+$x_k\sim[(p-1)\lambda k]^{-1/(p-1)}$ from $x_0>0$; it has no ASM
+constant for the same identity kernel. Source Theorem~1 and alternative
+kernels remain possible, so this witness concerns the fixed-kernel
+Theorem~2 assumption class.
+
+\section{Physical lifting and retractions}
+Suppose independently that the actual physical points are controlled by
+a continuous nondecreasing inverse or selected-fiber modulus $\eta$:
+\begin{equation}\label{eq:lift}
+ \norm{x-y}\le\eta(\norm{v(x)-v(y)}),\qquad\eta(0)=0.
+\end{equation}
+For all-pairs lifting, this bound forces injectivity on its stated
+physical set. Noninjective kernels can use a specified section with an
+all-endpoint bound; conclusions then belong to that section policy.
+If the bound is imposed only on consecutive allowed transitions, it gives
+physical Cauchy convergence only after summability of the transformed
+step bounds is proved. Continuity of a transition-only modulus is insufficient.
+A uniform inverse estimate is required on an output collar before local
+retention is proved, not merely on two already-retained inputs.
+
+Kernel finite length and the all-endpoint version of \eqref{eq:lift} imply physical Cauchy convergence
+by endpoint tail comparison. Zero membership needs either a continuous
+inverse on $Z=v(S)$, or a closed physical zero target and its true EB,
+or the appropriate graph-closure implication at residual zero. Physical
+finite length is stronger: for the geometric-distance case a sufficient
+transformed-envelope certificate, for $r>0$, is
+\begin{equation}\label{eq:physicaldini}
+ \sum_{j\ge0}\eta(B(\kappa^jr))<\infty
+ \quad\Longleftrightarrow\quad
+ \int_0^R\eta(B(t))\,\frac{dt}{t}<\infty.
+\end{equation}
+If $v$ is $m$-strongly monotone, Cauchy--Schwarz supplies
+$\eta(t)=t/m$; continuity, coverage, and surjectivity remain separate.
+If $\eta(t)=Mt^\alpha$ and $\omega(t)\asymp[\log(e/t)]^{-a}$,
+kernel Dini needs $a>1$, whereas \eqref{eq:physicaldini} needs
+$a\alpha>1$.
+
+If a homeomorphic kernel conjugates a continuous kernel iteration on
+an invariant open domain $\mathcal O_z$, its kernel scalar length series
+converges uniformly from a fixed radius, and the strict local budget
+retains every limit in the zero target $Z\cap\mathcal O_z$, with all
+points of that target fixed by the iteration, then
+the finite iterates converge uniformly to a continuous kernel retraction
+$\Pi_z$. Its physical counterpart is
+$\Pi_x=v^{-1}\Pi_zv$. This endpoint result only needs kernel Dini;
+physical finite length need not follow.
+
+\section{Nonlinear kernels and arbitrary physical orders}
+Let $G$ be a full relation and $V$ a homeomorphism. Set
+\begin{equation}\label{eq:conjugate}
+ F^V(x)=G(Vx),\qquad
+ J_{\lambda F^V}^V=V^{-1}J_{\lambda G}V.
+\end{equation}
+Graph values are left unchanged. All complete fibers, kernel RL moduli,
+and true residuals transfer exactly, with
+$r_{F^V}(x)=r_G(Vx)$.
+A concrete genuinely nonlinear strongly monotone kernel in $\mathbb R^2$ is
+\begin{equation}\label{eq:nonlinearkernel}
+ V(\xi,y)=(\xi+c\sin y,\ y+b\tanh y),\quad b>0,\quad0<c<1.
+\end{equation}
+It is globally invertible. Writing $\varphi=(y+b\tanh y)^{-1}$,
+its inverse is $(p,r)\mapsto(p-c\sin\varphi(r),\varphi(r))$.
+Its strong monotonicity constant is at least $1-c/2$; its inverse
+Lipschitz constant is at most $1+c$.
+
+Fix $0<\gamma<1$, $\nu>1$ and $A_0>0$. Define the full closed graph
+\begin{equation}\label{eq:doublegraph}
+ G(\xi,Y)=
+ \{(-A_0Y^{\gamma/\nu},Y^{1/\nu}-Y),
+    (-A_0Y^{\gamma/\nu},-Y^{1/\nu}-Y)\}\quad(Y\ge0),
+\end{equation}
+and $G(\xi,Y)=\varnothing$ for $Y<0$. Its full step-one resolvent is
+\begin{equation}\label{eq:doubleprox}
+ J_G(p,r)=(p+A_0|r|^\gamma,|r|^\nu),\qquad S_G=\mathbb R\times\{0\}.
+\end{equation}
+On input heights $|r|\le R_0<1$ and input comparison distances $\delta\le R$,
+the corresponding full two-branch graph block has reflected modulus
+\begin{equation}
+ \omega_R(t)=L_Rt^\gamma,\quad
+ L_R=2A_0+(1+2\nu R_0^{\nu-1})R^{1-\gamma}.
+\end{equation}
+This follows from $||r|^\gamma-|s|^\gamma|\le|r-s|^\gamma$
+and the derivative bound for $2|r|^\nu-r$ on the collar. All cross-branch
+pairs are included. Its full residual is
+\begin{equation}
+ r_G(\xi,Y)^2=A_0^2Y^{2\gamma/\nu}+(Y^{1/\nu}-Y)^2,
+ \qquad Y\le(r_G(\xi,Y)/A_0)^{\nu/\gamma}.
+\end{equation}
+The smaller positive branch determines the true infimum even at a
+negative input selecting the other branch. For sufficiently small $R$,
+the direct compatibility ratio is bounded by
+\begin{equation}
+ R^{\nu-1}\left(\frac{R^{1-\gamma}+L_R}{2A_0}\right)^{\nu/\gamma}<1.
+\end{equation}
+Full coverage on the collar, all zero anchors, Dini, and the residual
+evaluation window hold for this same graph block; the normal update
+independently proves collar invariance. Conjugation by
+\eqref{eq:nonlinearkernel} gives the corresponding complete physical
+generalized iteration.
+
+From $0<r_0<1$, the exact normal coordinate is $r_k=r_0^{\nu^k}$.
+Let $E(r)=\sum_{j\ge0}r^{\gamma\nu^j}$. Since
+$\nu^j\ge1+j(\nu-1)$,
+\begin{equation}
+ r^\gamma\le E(r)\le
+ \frac{r^\gamma}{1-r^{\gamma(\nu-1)}},\qquad E(r)\sim r^\gamma.
+\end{equation}
+The physical point error to its selected zero is
+\begin{equation}
+ e_k^2=[A_0E(r_k)+c\sin\varphi(r_k)]^2+\varphi(r_k)^2.
+\end{equation}
+Because $\varphi(r)\sim r/(1+b)$, this gives
+\begin{equation}\label{eq:qorder}
+ e_k\sim A_0r_k^\gamma,\qquad
+ \lim_k\frac{e_{k+1}}{e_k^\nu}=A_0^{1-\nu}.
+\end{equation}
+Thus every prescribed physical order $\nu>1$, including $\nu>2$, is
+realized. This is an existential family, not a universal rate guarantee.
+
+\begin{proposition}[Full-graph representation obstruction]\label{prop:obstruction}
+No pair-monotone source kernel can preserve the specified nonstationary
+conjugated trajectory of \eqref{eq:doublegraph} on that same full graph,
+even with arbitrary positive step sizes and branch choices.
+\end{proposition}
+\begin{proof}
+Any such kernel $K$ would give $Q=K\circ V^{-1}$ pair-monotone on
+$G$. On a tangential product slice and a positive connected normal
+interval $I\subset(0,1)$, write the two values as
+$(-C_0\phi(y),a_+(y))$ and $(-C_0\phi(y),a_-(y))$,
+where $\phi$ is strictly increasing locally Lipschitz and
+$a_+>0>a_-$. Same-height cross comparisons force the normal component
+of $Q$ to be independent of the tangential coordinate. At a fixed
+tangential position write its components as $q_1(y),q_2(y)$.
+Cross-branch comparisons at $y,z$ give
+\begin{equation}
+ A\Delta q_2\ge C_0\Delta\phi\,\Delta q_1,\qquad
+ -B\Delta q_2\ge C_0\Delta\phi\,\Delta q_1,
+\end{equation}
+where $A=a_+(y)-a_-(z)>0$, $B=a_+(z)-a_-(y)>0$.
+Multiplication by $B,A$ and addition show that $q_1$ is nonincreasing.
+On a compact $[\alpha,\beta]\subset I$, the coefficients have a
+positive lower bound $m$ and $\phi$ a Lipschitz constant $L$. Hence
+\begin{equation}
+ |\Delta q_2|\le\frac{C_0L}{m}|y-z|\,|\Delta q_1|.
+\end{equation}
+Apply this on an equal $N$-part partition. The absolute increments
+of $q_1$ telescope to its finite total variation, even if it jumps,
+so $|q_2(\beta)-q_2(\alpha)|\le
+(C_0L/m)(\beta-\alpha)[q_1(\alpha)-q_1(\beta)]/N\to0$.
+Thus the normal kernel component is constant. Along the proposed
+trajectory its consecutive difference is zero, whereas both allowed
+normal graph values at a positive height are nonzero. This contradicts
+any positive-step source update.
+\end{proof}
+This obstruction concerns the same complete relation and specified
+algorithm. Zero-set-preserving positive-branch restrictions can still
+import the same trajectory's convergence, as already established in
+the project. The obstruction is not a proof of convergence
+nonderivability through every legitimate reformulation.
+
+For general power data $\omega(t)=Lt^\gamma$, $\psi(s)=Cs^q$,
+$0<\gamma<1$, the direct ratio is exactly
+\begin{equation}
+ C\left(\frac{L+t^{1-\gamma}}{2\lambda}\right)^q t^{q\gamma-1}.
+\end{equation}
+It contracts on a small window when $q\gamma>1$, or at $q\gamma=1$
+when $C(L/(2\lambda))^q<1$. At critical coefficient one it exceeds
+one for every positive $t$. For $\gamma=1$, the coefficient uses
+$1+L$, not $L$. A failed sufficient test does not imply divergence.
+The source's quadratic energy expression does not mean that its
+algorithm is limited to quadratic convergence order.
+
+\section{A sharp physical-length boundary}
+For $a>0$, let $\ell_a(0)=0$ and $\ell_a(t)=[\log(e/t)]^{-a}$ near zero, extended to a continuous
+increasing concave function by its tangent at $t=e^{-a}$, and take
+the full relation in $\mathbb R^3$
+\begin{equation}
+ G_a(w_1,w_2,y)=\{(-\ell_a(4y),0,3y),(-\ell_a(4y),0,-5y)\},\quad y\ge0.
+\end{equation}
+Set $G_a(w)=\varnothing$ for $y<0$.
+Its full resolvent is $(p_1,p_2,q)\mapsto
+(p_1+\ell_a(|q|),p_2,|q|/4)$; its true residual is
+$\chi_a(y)=\sqrt{\ell_a(4y)^2+9y^2}$ at $y\ge0$ and its exact zero-distance gauge
+is $\chi_a^{-1}$ on those nonempty fibers. Negative heights have residual
+$+\infty$. The reflected modulus
+$\sqrt{[t+2\ell_a(t)]^2+9t^2/4}$ is Dini exactly when $a>1$.
+For every $\kappa>1/4$, the exact gauge satisfies direct compatibility
+on a sufficiently small fixed window. This follows by comparing
+$\ell_a(4\kappa t)-\ell_a(t)\ge
+a\log(4\kappa)[\log(e/t)]^{-a-1}$ with the $O(t)$ excess in $B(t)$.
+
+On the tangent plane, identify $\mathbb R^2$ with $\mathbb C$ and set
+$g(z)=e^{ic/|z|}z$ for $z\ne0$, $g(0)=0$, $c>0$. This is a
+homeomorphism, with inverse twist of the opposite sign. Both have a
+global modulus $C_c(t+\sqrt t)$, and their largest exponent for a two-point
+H\"older bound on any neighborhood of zero is $1/2$. Against zero alone,
+both preserve radius and satisfy a Lipschitz bound. To verify the upper bound, let
+$\delta=|z-z'|$ and $R=\max(|z|,|z'|)$. If $\delta\ge R/2$,
+the output difference is at most $4\delta$. Otherwise it is at most
+both $2R$ and $\delta+2c\delta/R$; split at $R=\sqrt\delta$.
+For sharpness take radii $r$ and $r/(1+\pi r/c)$ on one ray: their
+input difference is of order $r^2$ and their output difference of
+order $r$.
+
+Set $v(x_t,y)=(g^{-1}(x_t),y)$ and $F_a=G_a\circ v$. True physical
+and kernel zero distances are both $|y|$, and the complete residual is
+unchanged, with the finite formula restricted to $y\ge0$. For sufficiently small $y_0>0$, put
+\begin{equation}
+ y_k=4^{-k}y_0,\quad \rho_k=\sum_{j\ge k}\ell_a(y_j),\quad
+ x_k=(g(-\rho_k),y_k).
+\end{equation}
+For $a>1$, this is a full legitimate GPPA trajectory with kernel
+finite length and physical point limit zero. With $b=\log4$ and
+$A_k=\log(e/y_0)+kb$,
+\begin{equation}
+ \rho_k\sim\frac{A_k^{1-a}}{(a-1)b},\quad
+ \Delta\theta_k=c(\rho_{k+1}^{-1}-\rho_k^{-1})
+ \sim c(a-1)^2b^2 A_k^{a-2}.
+\end{equation}
+For $1<a<2$, polar chord comparison yields
+\begin{equation}
+ |g(-\rho_{k+1})-g(-\rho_k)|\sim\frac{c(a-1)}k.
+\end{equation}
+Physical length is therefore infinite. At $a=2$, choose
+$c=\pi/(\log4)^2$; the angle increment tends to $\pi$ and the length
+still diverges harmonically. For $a>2$, the bound by
+$\rho_k+\rho_{k+1}$ is summable. This calibrated family has the exact
+physical-length threshold $a>2$, matching \eqref{eq:physicaldini}
+for the half-H\"older inverse. Kernel Dini alone cannot imply
+physical finite length under an arbitrary H\"older inverse.
+
+\section{Output errors and the scope of the fusion}
+Let $Z=\zer A=v(S)$ be nonempty closed, $R>0$, and
+$Q_R=\{z\in Q:d(z,Z)\le R\}$. Suppose the complete kernel iteration
+is single-valued and covered on $Q_R$, with
+$d(Tz,Z)\le\theta d(z,Z)$, $\norm{Tz-z}\le B(d(z,Z))$, $0<\theta<1$.
+For actual output errors $z_{k+1}=Tz_k+e_k\in Q$, $\norm{e_k}\le E_k$,
+start from $z_0\in Q_R$ and set $D_0=d(z_0,Z)$. The deterministic envelope is
+\begin{equation}
+ D_k=\theta^kD_0+\sum_{j<k}\theta^{k-1-j}E_j,
+ \quad d(z_k,Z)\le D_k,\quad
+ \norm{z_{k+1}-z_k}\le B(D_k)+E_k.
+\end{equation}
+On a globally available kernel collar, $D_k\le R$ proves each
+successive use of coverage. If $E_k\le\delta$ and
+$\max(D_0,\delta/(1-\theta))\le R$, then
+\begin{equation}
+ \limsup_k d(z_k,Z)\le\delta/(1-\theta).
+\end{equation}
+For the source-style physical output model
+$\widehat x_{k+1}\in(v+\lambda F)^{-1}v(x_k)$,
+$x_{k+1}=\widehat x_{k+1}+a_k$, a forward modulus
+$\norm{v(\widehat x+a)-v(\widehat x)}\le\tau_v(\norm a)$, with
+$\tau_v$ nondecreasing, gives
+$E_k=\tau_v(\norm{a_k})$ exactly. For a bijective $v$, a global continuous inverse
+modulus $\rho$ then gives the physical tube, provided
+$\norm{a_k}\le\delta_x$ and
+$\max\{D_0,\tau_v(\delta_x)/(1-\theta)\}\le R$,
+$\limsup d(x_k,S)\le\rho(\tau_v(\delta_x)/(1-\theta))$.
+Persistent errors do not guarantee a point limit: for $Tz=z/2$ and
+$e_k=(-1)^k\delta$, the iterates converge to two different parity
+limits. The regularized relation $F+\epsilon v$ in source Theorem~4
+requires its own certification; it is not automatically covered.
+
+The precise fusion retains the source kernel update, zero-anchor
+polarization, and R-continuity bridge, while adding general reflected
+moduli, true residual profiles, nonlinear summability, physical lifting,
+and sharp failure boundaries. Strictness is established for the fixed
+Theorem~2 assumption class and for full-graph same-algorithm
+representations. Global novelty, arbitrary lifts or branch reductions,
+variable kernels, and the separate global shadow/fiber manuscript are
+not silently included in these conclusions.
+
+\begin{thebibliography}{9}
+\bibitem{LMT} B. K. Le, B. S. Mordukhovich, and M. A. Th\'era,
+\emph{Convergence and Stability Analysis of a Generalized Proximal Point
+Algorithm and Its Inexact Version}, arXiv:2608.01584v1, 2026.
+\bibitem{BC} M. N. B\`ui and P. L. Combettes,
+\emph{Warped proximal iterations for monotone inclusions},
+Journal of Mathematical Analysis and Applications 491 (2020), 124315.
+This reference supplies terminology and a prior-work boundary; no
+unchecked theorem from it is imported into the proofs above.
+\end{thebibliography}
+\end{document}

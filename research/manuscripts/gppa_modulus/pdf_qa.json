@@ -1,0 +1,51 @@
+{
+  "pages": 8,
+  "source_sha256": "819f68312de67e2d3d607dcf96b9e2d8e58550e69347bb77077ac98862cd78ef",
+  "pdf_sha256": "03c21eeabeb514b89a2f72166716bd40d9d34640b010f1bd8c072b40d447102d",
+  "renderer_sha256": "922114ffe1a9ed0b8d2e1ef7db862aed490d9db02c96f7fa4afb99ae9294a26f",
+  "page_bounds": [
+    {
+      "page": 1,
+      "block_count": 14,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 2,
+      "block_count": 15,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 3,
+      "block_count": 12,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 4,
+      "block_count": 9,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 5,
+      "block_count": 16,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 6,
+      "block_count": 12,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 7,
+      "block_count": 10,
+      "bounds": "within page margins"
+    },
+    {
+      "page": 8,
+      "block_count": 4,
+      "bounds": "within page margins"
+    }
+  ],
+  "label_reference_checks": "equation (7), composite Dini (21), lemma 2.1 and theorem 2.2 verified",
+  "visual_inspection": "All pages inspected in a contact sheet; full page formula/layout inspection on pages 2 and 7. No clipping or overlap found.",
+  "notes": "Math images are embedded; 41 display lines and 279 inline occurrences parsed successfully."
+}

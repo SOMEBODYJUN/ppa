@@ -1732,3 +1732,67 @@
 - **Conclusion / Quantifiers**：对每个原正初值r₀>0，预先I=t₀+E_a(r₀)，E_a(r)-E_a(r/4)=ℓ_a(r)给v(x_k)=x_k-(I,0)。源T1(c)给正常距趋零；E_a在0连续给同一原物理点收敛。额外正切向尾和与正常望远镜给总物理长度≤E_a(r₀)+r₀。负初值首步后导入正尾，I=t₀+E_a(|r₀|)；零初值驻定。
 - **Definitions / Dependencies / Evidence**：[完整对数导入](research/comparisons/2026_08_gppa_nfb/sol61_branch_restriction.md#br-log)；对小y，A=log(e/y),b=log4有A^(1-a)/(b(a-1))≤E_a(y)≤A^-a+A^(1-a)/(b(a-1))，证明有限性、0连续与a>1门，且ASM内积比∼b(a-1)/A→0。有限截断数值不证明无限尾，其尾由此积分严格控制。
 - **Counterevidence / Objections / Scope**：有限长来自额外尾和恒等式和坐标单调性，不是源T1单独结论；定制核已编码Dini可和门，不表示外文直接给了本库一般模定理、精确尾或锐选择模。a≤1时E_a对每个正y发散，本构造不存在。原完整双支的C204障碍不变；不能用它断言正面收敛在GPPA外。
+
+<a id="c208"></a>
+## C208-v1 / GP-FULL · 广义 PPA 的完整核关系与残差类型
+
+- **Status**：`derived-checked`；完整定义恒等式及独立接收，外部先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert H，固定完整 F:H⇉H、全域单值 v:H→H、λ>0；Q=ran v、A(z)=∪_{v(x)=z}F(x)，图块 Γ 是所声明物理图块的精确像。完整 GPPA 的核输出正好是完整 J_{λA}，没有删纤维；每个核输出有原物理代表。
+- **Conclusion**：zer A=v(zer F)、r_A(v(x))≤r_F(x)；核 coverage 只需 Q 上成立。完整核全对反射模在同输入强制核输出/所选值唯一，不强制物理纤维唯一。
+- **Definitions / Dependencies / Evidence**：[NGK-1](research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-object)逐向证明；[融合入口](research/canonical/generalized_ppa_modulus.md#gpm-objects)；[本轮独立审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。
+- **Counterevidence / Scope / Related Files**：非单射核的残差不等式可严格；Q 与 v(zer F) 不自动闭/开/完备，图块不自动等于完整图。核本身不必须单调；逐步变核不是本 Claim。
+
+<a id="c209"></a>
+## C209-v1 / GP-MODULUS · 一般模广义 PPA 的三分支能量、有限长度及源 T2 包含
+
+- **Status**：`derived-checked`；空白重建和正文独立读证，严格限本页条件；全球先行性未核。
+- **Exact Statement / Assumptions / Quantifiers**：C208 对象，非空闭 Z⊂zer A、开 U、R>0，E={z∈Q∩U:d(z,Z)<R} 的全部 coverage 与 Z 全零锚；同图输入对距≤R 的连续非减零消失反射模 ω；全部实际输出的完整 r_A 真 EB ψ，在选中残差窗口 B(R)/λ≤t̄ 内，ψ 连续严格增。B=(t+ω)/2、C=(t²+ω²)/2、M=ψ(t̄)、g=ψ⁻¹、V=t²+λ²g²。可选锚耗散 a 给 W=V+2λa。
+- **Conclusion**：一步 d₊²+s²≤C(d)、s≤B(d)、r_A≤s/λ≤t̄、V(d₊)≤C(d)，可选 W(d₊)≤d²；取 direct 与合法截断 V⁻¹/C、W⁻¹/d² 的最小上界 τ。全窗 τ<t、Hτ(r)=∑B(τʲr) 可和及严格初值留域预算，给全部图块核轨道构造、留域、有限长、闭 Z 中点极限与对应尾。τ≤κt 加 Dini 是充分门；独立能量门 R≤M、C≤qV、q<1 给另一个严格长度预算，不强制 Dini。
+- **Source inclusion**：源 ASM 全图与 Q coverage 迫 Z=v(zer F) 单点，取 ω=t、ψ=s/ε、V=(1+λ²ε²)t²；每个 λε>0 都能量收缩，包含固定 v1 T2(a) 的全部核实例。锚 a=εt² 还给 (1+λε)⁻¹ 因子；这只是同前提初等加强。源物理 R-continuity 在其局部残差半径内输送集合距离，未控制非单射纤维。
+- **Definitions / Dependencies / Evidence**：[NGK-2–7](research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-data)、[完整稿](research/manuscripts/gppa_modulus/gppa_modulus.tex)、[审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。平行四边形、真残差评价域、近极小锚和有限前缀留域独立证明；[有限复算](research/code/gppa_modulus/README.md)不是全称证明。
+- **Counterevidence / Scope**：[F55](FAILED_ROUTES.md#f55)反驳孤立 direct 分支的源包含；完整物理轨道结论另用 C210。v1 整篇、所有正则化/改图/lift 不在包含结论。
+
+<a id="c210"></a>
+## C210-v1 / GP-PHYSICAL · 真物理 EB 桥、端点反演、复合 Dini 与回缩
+
+- **Status**：`derived-checked`；GP1–27 的条件证明经独立读取，外部先行性未核。
+- **Exact Statement / Assumptions**：固定 C208 完整数据；在同一实际输出领圈有真物理 EB 与向前零集距离模，可从 selected residual 的上界认证核距离收缩。另对全部实际端点有连续非减零消失逆/截面模 η，物理输出领圈先于留域认证；或只对允许转移给步界，并另证允许 coverage。
+- **Conclusion**：全端点模把核有限长输送成物理 Cauchy 点收敛；最终属于 S 另需闭物理零目标+真 EB、闭图零极限门或 homeomorphic 完整拉回。物理有限长的充分包络门为 ∑η(B(τʲr))<∞，几何采样与 η∘B 的 Dini 等价。仅相邻允许转移模时，点收敛也需该可和步证书；连续模本身不够。强单调核提供 Lipschitz 逆，不自动 coverage/满射。共同严格物理预算+核连续性及唯一物理输出给连续极限回缩；homeomorphic 核回缩拉回只需核有限尾与目标留域。
+- **Definitions / Dependencies / Evidence**：[GP1–27](research/comparisons/2026_08_gppa_nfb/gppa_physical_transfer.md#gp-data)、[NGK-8/9](research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-physical)、[审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。
+- **Counterevidence / Scope**：C197 阻断无纤维控制的物理推断；C214/[F56](FAILED_ROUTES.md#f56)阻断核 Dini 自动物理有限长。全对 η(0)=0 迫单射；非单射只授予明示截面/转移政策。复合 Dini 不声称对任意松包络或个别轨道必要。
+
+<a id="c211"></a>
+## C211-v1 / GP-STRICT · 非线性强单调核下的完整双支严格扩展与任意精确 Q 阶
+
+- **Status**：`derived-checked`；完整共轭、双支排除和精确阶经独立复核，外部先行性未核。
+- **Exact Statement / Assumptions / Quantifiers**：固定完整 cap/C141 SF/C10 log 图 G，双射非线性 V_{σ,b,c}(ξ,η,y)=(σξ+c sin y,η,y+b tanh y)，σ=±1、b>0、0<c<1；F^V=G∘V，不改图值。σ=+1 为强单调核。完整 J^V=V⁻¹J_GV、全部跨支核 RL 与真残差精确保留；物理 EB 经 g_b⁻¹ 输送。
+- **Conclusion**：这些完整关系满足一般模 GPPA 证书。SF 的全部 ν>1、0<γ<1、A,B>0 与足够小同窗下 q=ν/γ、qγ=ν>1；指定 η₀≤0、0<r₀<1 的轨道 rₖ₊₁=rₖ^ν，真实物理点误差 eₖ∼Arₖ^γ，eₖ₊₁/eₖ^ν→A^{1−ν}。可取任意 ν>2。完整公共递增切向剖面与连续异号两支迫任意源配对单调核正常分量恒定，故不能保持这些指定非驻定轨道，即使核不连续、每步任意正步长。
+- **Definitions / Dependencies / Evidence**：[完整例子及 SE1–45](research/comparisons/2026_08_gppa_nfb/gppa_strict_extension_examples.md)、C137/C141/C10 对象、C204 的有限变差分割、[独立审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。集中稿另独立证明二维简化完整 SF。
+- **Counterevidence / Scope**：排除固定同一完整图、物理变量与算法，不排常量核存在、删支/换图/正则化/lift。C205–C207 保零集删支仍能导入原轨道收敛，homeomorphic 拉回可继续导入；不能声称所有合法证明均失败。一般 qγ 只给上界，精确 Q 阶仅在已匹配例子。源二次能量不是二次收敛阶上限。
+
+<a id="c212"></a>
+## C212-v1 / GP-SHELL · 配对单调与非线性弱 EB 的壳层长度证书
+
+- **Status**：`derived-checked`；全时间壳层分割和固定核例子经独立复核，全球先行性未核。
+- **Exact Statement / Assumptions**：C209 同图 coverage、闭 Z、零锚、真 EB 与合法窗口；全图 kernel-pair monotone（或全部所用锚对 monotone），0<d₀≤M。rⱼ=2⁻ʲd₀；d₀=0 单独吸收。
+- **Conclusion**：Lsh=∑[rⱼ+rⱼ²/(λg(rⱼ/2))] 有限且小于初值留域距离时，核全部轨道留域、有限长并趋 Z。一壳内步平方望远镜，每个越壳步只记一次，跳过壳不收费。ψ=Ks^q 的 q>1/2 是充分门，非必要宣告。
+- **Strict witness / Evidence**：完整 F(x)=sgn(x)|x|^p、v=Id、1<p<2，全 coverage、ψ=s^{1/p}、无正 ASM/线性 EB，普通轨道 xₖ∼[(p−1)λk]⁻¹⁄⁽ᵖ⁻¹⁾。同固定核 T2 假设类严格扩大。[NGK-6/10](research/comparisons/2026_08_gppa_nfb/gppa_nonlinear_kernel_theorem.md#ngk-shell)与独立审查。
+- **Counterevidence / Scope**：源 T1 仍能证明该标量收敛；改核可恢复 ASM。ω=t 的 cutoff RL 只在受检点对等价 monotonicity，不等价未经 cutoff 的全图单调性。
+
+<a id="c213"></a>
+## C213-v1 / GP-INEXACT · 完整核输出误差的卷积与非线性物理误差管
+
+- **Status**：`derived-checked`；GI1–13 与显式奇偶反例独立受检，全球先行性未核。
+- **Exact Statement / Assumptions**：C208 完整 A，Z=zer A 非空闭，Q_R={z∈Q:d(z,Z)≤R} 的完整单值 T 与全部 coverage，d(Tz,Z)≤θd、||Tz−z||≤B(d)。实际 zₖ₊₁=Tzₖ+eₖ∈Q，||eₖ||≤Eₖ；所有递推 Dₖ≤R。
+- **Conclusion**：Dₖ=θᵏD₀+∑_{j<k}θ^{k−1−j}Eⱼ 控制真距离，步界 B(Dₖ)+Eₖ。E≤δ 与 max(D₀,δ/(1−θ))≤R 给 limsup 距离≤δ/(1−θ)。E→0 给距离趋零；核点/长度另需 ∑[B(Dₖ)+Eₖ]<∞。物理输出误差 a 的实际向前模 τ 给 E=τ(||a||)；双射全域逆模 ρ 给物理管 ρ(τ(δ_x)/(1−θ))，必须同域预算。物理长度还需变换后步界可和。
+- **Definitions / Dependencies / Evidence**：[完整定理及反例](research/canonical/gppa_inexact_modulus.md#gi-data)、[本轮审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)、[精确卷积反代](research/code/gppa_modulus/README.md)。
+- **Counterevidence / Scope**：∑E 不自动使任意非线性 B 的步包络可和；持续交替误差 T=z/2 给两个极限且无限长。源 T4 的 F+εv 正则化、解偏移与极限全结论不在本 Claim 自动包含。
+
+<a id="c214"></a>
+## C214-v1 / GP-SPIRAL · 半阶逆核下的物理长度锐门及连续回缩
+
+- **Status**：`derived-checked`；完整对象、两点反演模与无限轨道经独立逐式受检，全球先行性未核。
+- **Exact Statement / Objects / Domain**：每个 a>1 的 ℝ³ 完整 G_a(w)={(-ℓ_a(4y),0,3y),(-ℓ_a(4y),0,-5y)}，y≥0；负 y 空。固定 λ=1，g(z)=exp(ic/|z|)z、g(0)=0，v=(g⁻¹ tangential,y)、F_a=G_a∘v，c>0；ℓ_a 为明示凹延拓。完整单值 warped coverage、核 RL、真残差与小窗严格兼容成立。
+- **Conclusion**：g 及 g⁻¹ 的两点最佳零邻域 Hölder 指数为1/2（对零单点保径且 Lipschitz）；完整 log 核 Dini 门 a>1。取 yₖ=4⁻ᵏy₀、ρₖ=∑_{j≥k}ℓ_a(yⱼ)、xₖ=(g(-ρₖ),yₖ)，核有限长且物理点趋0；1<a<2 的物理步∼c(a−1)/k，长度无限。a=2 明确校准 c=π/(log4)² 仍无限；a>2 半径可和故有限长。此校准完整族的物理长度门恰 a>2，匹配半阶复合 Dini。全输入有显式连续极限回缩。
+- **Definitions / Dependencies / Evidence**：[GP28–40 完整证明](research/comparisons/2026_08_gppa_nfb/gppa_physical_transfer.md#gp-spiral)、C10 凹剖面、[独立审查](research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)。有限积分剩余界和弦长反代仅作佐证。
+- **Counterevidence / Scope**：[F56](FAILED_ROUTES.md#f56)是 C210 无复合步门的障碍；a=2 任意 c 可能共振，不能省略校准。真残差公式只在非空 y≥0 纤维有限；全域零距离是 |y|。点/回缩不意味着物理有限长。

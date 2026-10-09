@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-09",
+  "scope": "C208–C214 local proof integration, finite arithmetic, graph and document integrity; not global mathematical or novelty certification",
+  "status": "PASS",
+  "checks": [
+    {
+      "command": "python3 research/build_graph.py",
+      "exit_code": 0,
+      "stdout": "validated 553 nodes and 364 conjunctive edges; generated HYPERGRAPH.md and map.html"
+    },
+    {
+      "command": "python3 visualization/cosmos/build.py",
+      "exit_code": 0,
+      "stdout": "Built 553 nodes and 364 exact hyperedges; 614333 bytes, offline D3/SVG."
+    },
+    {
+      "command": "python3 visualization/xianxia/build.py",
+      "exit_code": 0,
+      "stdout": "Built map/gallery: 553 nodes, 364 edges, 32 objects, 11 realms"
+    },
+    {
+      "command": "python3 research/validate_assets.py",
+      "exit_code": 0,
+      "stdout": "Verified 240 initial-manifest hashes, 251 audited source files, 178 ZIP members, 4827 source units, 4671 atomic records in declared scopes, 553 nodes, 364 edges and 172 Markdown files."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "command": "python3 research/manuscripts/gppa_modulus/render_note.py",
+      "exit_code": 0,
+      "display_formula_lines": 41,
+      "inline_formula_occurrences": 279,
+      "pdf_pages": 8,
+      "qa_file": "research/manuscripts/gppa_modulus/pdf_qa.json"
+    },
+    {
+      "command": "python3 research/code/gppa_modulus/verify.py",
+      "status": "PASS; actual output retained and script hash rechecked",
+      "python": "3.12.14",
+      "seed": 20261009,
+      "check_groups": 6,
+      "results_file": "research/code/gppa_modulus/results.json"
+    },
+    {
+      "command": "git diff --check d651d01361603c5f76d0db929de50e115df86393",
+      "exit_code": 0,
+      "stdout": "",
+      "scope": "Complete local payload; generated PDF marked binary through .gitattributes."
+    }
+  ],
+  "independent_reception": "research/audit/GPPA_MODULUS_RECEPTION_2026_10_09.md",
+  "publication_status": "Local completed payload; remote push blocked by automatic approval review until explicit payload/destination confirmation."
+}

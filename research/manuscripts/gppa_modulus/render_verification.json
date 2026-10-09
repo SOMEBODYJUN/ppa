@@ -1,0 +1,244 @@
+{
+  "display_formula_lines": 41,
+  "inline_formula_occurrences": 279,
+  "renderer": "ReportLab paragraphs + Matplotlib MathText display equations",
+  "scope": "Scoped source renderer; not a complete LaTeX compiler",
+  "label_reference_map": {
+    "LMT": "1",
+    "BC": "2",
+    "eq:union": "1",
+    "eq:zeros": "2",
+    "eq:step": "3",
+    "eq:rl": "4",
+    "eq:bc": "5",
+    "eq:anchor": "6",
+    "eq:one": "7",
+    "eq:oneanchor": "8",
+    "eq:tau": "10",
+    "eq:energy": "11",
+    "eq:budget": "12",
+    "eq:dini": "14",
+    "eq:energybudget": "15",
+    "eq:asm": "16",
+    "eq:asminclusion": "17",
+    "eq:asmrate": "18",
+    "eq:shell": "19",
+    "eq:lift": "20",
+    "eq:physicaldini": "21",
+    "eq:conjugate": "22",
+    "eq:nonlinearkernel": "23",
+    "eq:doublegraph": "24",
+    "eq:doubleprox": "25",
+    "eq:qorder": "31",
+    "lem:one": "2.1",
+    "thm:main": "2.2",
+    "prop:obstruction": "5.1"
+  },
+  "equations": [
+    {
+      "index": 1,
+      "math": "Q=\\operatorname{ran} v,\\quad S=\\operatorname{zer} F,\\quad A(z)=\\bigcup_{v(x)=z}F(x),\\quad r_A(z)=\\inf_{f\\in A(z)}\\left\\Vert f\\right\\Vert.\\qquad (1)",
+      "scale": 1.0
+    },
+    {
+      "index": 2,
+      "math": "\\operatorname{zer} A=v(S),\\qquad r_A(v(x))\\leq  r_F(x).\\qquad (2)",
+      "scale": 1.0
+    },
+    {
+      "index": 3,
+      "math": "z_k=z_{k+1}+\\lambda f_{k+1},\\quad (z_{k+1},f_{k+1})\\in\\Gamma,\\quad z_k=v(x_k).\\qquad (3)",
+      "scale": 1.0
+    },
+    {
+      "index": 4,
+      "math": "\\left\\Vert \\Delta y-\\lambda\\Delta f\\right\\Vert \\leq \\omega(\\left\\Vert \\Delta y+\\lambda\\Delta f\\right\\Vert).\\qquad (4)",
+      "scale": 1.0
+    },
+    {
+      "index": 5,
+      "math": "B(t)=\\frac{t+\\omega(t)}{2},\\quad C(t)=\\frac{t^2+\\omega(t)^2}{2},\\qquad B(R)/\\lambda\\leq \\bar{t}.\\qquad (5)",
+      "scale": 1.0
+    },
+    {
+      "index": 6,
+      "math": "\\langle f,y-p\\rangle\\geq  a(d(y,Z))\\quad(p\\in Z)\\qquad (6)",
+      "scale": 1.0
+    },
+    {
+      "index": 7,
+      "math": "(d^+)^2+s^2\\leq  C(d),s\\leq  B(d),",
+      "scale": 1.0
+    },
+    {
+      "index": 8,
+      "math": "r_A(z^+)\\leq  s/\\lambda\\leq \\bar{t}, d^+\\leq \\psi(s/\\lambda),s\\geq \\lambda g(d^+).\\qquad (7)",
+      "scale": 1.0
+    },
+    {
+      "index": 9,
+      "math": "(d^+)^2+s^2+2\\lambda a(d^+)\\leq  d^2.\\qquad (8)",
+      "scale": 1.0
+    },
+    {
+      "index": 10,
+      "math": "V(t)=t^2+\\lambda^2g(t)^2,\\qquad W(t)=V(t)+2\\lambda a(t).\\qquad (9)",
+      "scale": 1.0
+    },
+    {
+      "index": 11,
+      "math": "\\tau(t)=\\min\\left\\{\\psi(B(t)/\\lambda),\\ V^{[-1]}(C(t))\\right\\},\\qquad (10)",
+      "scale": 1.0
+    },
+    {
+      "index": 12,
+      "math": "V(d^+)\\leq  C(d),\\qquad W(d^+)\\leq  d^2\\quad\\mathrm{when\\ available}.\\qquad (11)",
+      "scale": 1.0
+    },
+    {
+      "index": 13,
+      "math": "H_\\tau(r)=\\sum_{j\\geq 0}B(\\tau^j(r)).\\qquad (12)",
+      "scale": 1.0
+    },
+    {
+      "index": 14,
+      "math": "d(z_k,Z)\\leq \\tau^k(d_0),\\qquad \\left\\Vert z_k-z_\\infty\\right\\Vert\\leq  H_\\tau(\\tau^k(d_0)).\\qquad (13)",
+      "scale": 1.0
+    },
+    {
+      "index": 15,
+      "math": "\\int_0^R\\omega(t)\\,\\frac{dt}{t}<\\infty,\\qquad (14)",
+      "scale": 1.0
+    },
+    {
+      "index": 16,
+      "math": "\\frac{\\sqrt{qV(d_0)}}{1-\\sqrt{q}}.\\qquad (15)",
+      "scale": 1.0
+    },
+    {
+      "index": 17,
+      "math": "\\langle f-f',v(x)-v(x')\\rangle\\geq \\varepsilon\\left\\Vert v(x)-v(x')\\right\\Vert^2 \\quad((x,f),(x',f')\\in\\operatorname{gph} F),\\qquad (16)",
+      "scale": 1.0
+    },
+    {
+      "index": 18,
+      "math": "V(t)=(1+\\lambda^2\\varepsilon^2)t^2,\\qquad \\tau_E(t)=\\frac{t}{\\sqrt{1+\\lambda^2\\varepsilon^2}}<t.\\qquad (17)",
+      "scale": 1.0
+    },
+    {
+      "index": 19,
+      "math": "W(t)=(1+\\lambda\\varepsilon)^2t^2,\\qquad \\left\\Vert z_k-z_*\\right\\Vert\\leq (1+\\lambda\\varepsilon)^{-k}\\left\\Vert z_0-z_*\\right\\Vert.\\qquad (18)",
+      "scale": 1.0
+    },
+    {
+      "index": 20,
+      "math": "\\sum_{j\\geq 0}\\left(r_j+\\frac{r_j^2}{\\lambda g(r_j/2)}\\right).\\qquad (19)",
+      "scale": 1.0
+    },
+    {
+      "index": 21,
+      "math": "\\left\\Vert x-y\\right\\Vert\\leq \\eta(\\left\\Vert v(x)-v(y)\\right\\Vert),\\qquad\\eta(0)=0.\\qquad (20)",
+      "scale": 1.0
+    },
+    {
+      "index": 22,
+      "math": "\\sum_{j\\geq 0}\\eta(B(\\kappa^jr))<\\infty \\quad\\Longleftrightarrow\\quad \\int_0^R\\eta(B(t))\\,\\frac{dt}{t}<\\infty.\\qquad (21)",
+      "scale": 1.0
+    },
+    {
+      "index": 23,
+      "math": "F^V(x)=G(Vx),\\qquad J_{\\lambda F^V}^V=V^{-1}J_{\\lambda G}V.\\qquad (22)",
+      "scale": 1.0
+    },
+    {
+      "index": 24,
+      "math": "V(\\xi,y)=(\\xi+c\\sin y,\\ y+b\\tanh y),\\quad b>0,\\quad0<c<1.\\qquad (23)",
+      "scale": 1.0
+    },
+    {
+      "index": 25,
+      "math": "G(\\xi,Y)= \\{(-A_0Y^{\\gamma/\\nu},Y^{1/\\nu}-Y), (-A_0Y^{\\gamma/\\nu},-Y^{1/\\nu}-Y)\\}\\quad(Y\\geq 0),\\qquad (24)",
+      "scale": 1.0
+    },
+    {
+      "index": 26,
+      "math": "J_G(p,r)=(p+A_0|r|^\\gamma,|r|^\\nu),\\qquad S_G=\\mathbb{R}\\times\\{0\\}.\\qquad (25)",
+      "scale": 1.0
+    },
+    {
+      "index": 27,
+      "math": "\\omega_R(t)=L_Rt^\\gamma,\\quad L_R=2A_0+(1+2\\nu R_0^{\\nu-1})R^{1-\\gamma}.\\qquad (26)",
+      "scale": 1.0
+    },
+    {
+      "index": 28,
+      "math": "r_G(\\xi,Y)^2=A_0^2Y^{2\\gamma/\\nu}+(Y^{1/\\nu}-Y)^2, \\qquad Y\\leq (r_G(\\xi,Y)/A_0)^{\\nu/\\gamma}.\\qquad (27)",
+      "scale": 1.0
+    },
+    {
+      "index": 29,
+      "math": "R^{\\nu-1}\\left(\\frac{R^{1-\\gamma}+L_R}{2A_0}\\right)^{\\nu/\\gamma}<1.\\qquad (28)",
+      "scale": 1.0
+    },
+    {
+      "index": 30,
+      "math": "r^\\gamma\\leq  E(r)\\leq  \\frac{r^\\gamma}{1-r^{\\gamma(\\nu-1)}},\\qquad E(r)\\sim r^\\gamma.\\qquad (29)",
+      "scale": 1.0
+    },
+    {
+      "index": 31,
+      "math": "e_k^2=[A_0E(r_k)+c\\sin\\varphi(r_k)]^2+\\varphi(r_k)^2.\\qquad (30)",
+      "scale": 1.0
+    },
+    {
+      "index": 32,
+      "math": "e_k\\sim A_0r_k^\\gamma,\\qquad \\lim_k\\frac{e_{k+1}}{e_k^\\nu}=A_0^{1-\\nu}.\\qquad (31)",
+      "scale": 1.0
+    },
+    {
+      "index": 33,
+      "math": "A\\Delta q_2\\geq  C_0\\Delta\\phi\\,\\Delta q_1,\\qquad -B\\Delta q_2\\geq  C_0\\Delta\\phi\\,\\Delta q_1,\\qquad (32)",
+      "scale": 1.0
+    },
+    {
+      "index": 34,
+      "math": "|\\Delta q_2|\\leq \\frac{C_0L}{m}|y-z|\\,|\\Delta q_1|.\\qquad (33)",
+      "scale": 1.0
+    },
+    {
+      "index": 35,
+      "math": "C\\left(\\frac{L+t^{1-\\gamma}}{2\\lambda}\\right)^q t^{q\\gamma-1}.\\qquad (34)",
+      "scale": 1.0
+    },
+    {
+      "index": 36,
+      "math": "G_a(w_1,w_2,y)=\\{(-\\ell_a(4y),0,3y),(-\\ell_a(4y),0,-5y)\\},\\quad y\\geq 0.\\qquad (35)",
+      "scale": 1.0
+    },
+    {
+      "index": 37,
+      "math": "y_k=4^{-k}y_0,\\quad \\rho_k=\\sum_{j\\geq  k}\\ell_a(y_j),\\quad x_k=(g(-\\rho_k),y_k).\\qquad (36)",
+      "scale": 1.0
+    },
+    {
+      "index": 38,
+      "math": "\\rho_k\\sim\\frac{A_k^{1-a}}{(a-1)b},\\quad \\Delta\\theta_k=c(\\rho_{k+1}^{-1}-\\rho_k^{-1}) \\sim c(a-1)^2b^2 A_k^{a-2}.\\qquad (37)",
+      "scale": 1.0
+    },
+    {
+      "index": 39,
+      "math": "|g(-\\rho_{k+1})-g(-\\rho_k)|\\sim\\frac{c(a-1)}{k}.\\qquad (38)",
+      "scale": 1.0
+    },
+    {
+      "index": 40,
+      "math": "D_k=\\theta^kD_0+\\sum_{j<k}\\theta^{k-1-j}E_j, \\quad d(z_k,Z)\\leq  D_k,\\quad \\left\\Vert z_{k+1}-z_k\\right\\Vert\\leq  B(D_k)+E_k.\\qquad (39)",
+      "scale": 0.9958071278825996
+    },
+    {
+      "index": 41,
+      "math": "\\limsup_k d(z_k,Z)\\leq \\delta/(1-\\theta).\\qquad (40)",
+      "scale": 1.0
+    }
+  ]
+}

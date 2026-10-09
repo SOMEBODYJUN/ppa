@@ -48,3 +48,9 @@
 | [sol61_nfb_check.py](comparisons/2026_08_gppa_nfb/sol61_nfb_check.py) | 原source步长门、负恒等精确下降788/2967、旋转1/3，完整拆分平方配方、合法锚失败点及算法等式 |
 | [sol61_independent_checks.py](comparisons/2026_08_gppa_nfb/sol61_independent_checks.py) | 独立C199/C202及改变原图的仿射同轨道校验，明确改变零集/完整纤维 |
 | [sol61_branch_checks.py](comparisons/2026_08_gppa_nfb/sol61_branch_checks.py) | C205原正轨道及负首步；C206有限尾恒等与严格K上界；C207有积分剩余界的有限尾区间。一般系列/全图结论由独立证明承担 |
+
+## C208–C214 一般模 GPPA 的独立有限复算
+
+[verify.py](code/gppa_modulus/verify.py)、[说明](code/gppa_modulus/README.md)、[实际结果](code/gppa_modulus/results.json)只依赖 Python 标准库。精确 Fraction 反算一步能量、全部正 ASM 小参数、幂兼容临界系数1及误差卷积；确定性 seed 20261009 与 binary64 明示容差核非线性强单调 V 的逆、有限全部点对、SF 完整更新、selected/true 残差和对数积分尾区间。螺旋物理弦长再以坐标反算核验。六项有限检查均 PASS，不证明任意核排除、无限长度门、全部图点对或全球先行性。完整参数与脚本指纹在结果文件。
+
+[PDF 源稿与作用域 renderer](manuscripts/gppa_modulus/gppa_modulus.tex)是集中证明交付；renderer 使用 ReportLab 和 Matplotlib MathText，不冒充完整 LaTeX 编译器。数学公式解析失败会报错，不静默丢失；公式数量、布局、实际 PDF 与源稿指纹和渲染目读记录相邻保存。

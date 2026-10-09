@@ -31,7 +31,7 @@
 1. 固定原关系、完整纤维、零集、步长与算法轨道；GPPA 的任意核、NFB 的任意合格同空间分解都须检查。
 2. 重合须给出具体变换与全部适用条件；排除须给必要条件或完整反例，不能凭术语差异。
 3. 分开外文已证明结果、本库直接推导、定位解释与尚未解决的先行性问题。有限长度若由点范数 R-linear 收敛直接推出，不能单独作创新标识。
-4. 原文相关证明、边界模型、独立复算及交叉审查现已按三份报告的实际范围完成；根Claim、状态和依赖图登记正反限定结论。一般统一RL+真EB涵盖、一般C191/C192核/子关系分类、任意其它lift、其它外文及全球先行性仍开放，不以source归档或有限PASS替代。
+4. 原文相关证明、边界模型、独立复算及交叉审查现已按三份报告的实际范围完成；根Claim、状态和依赖图登记正反限定结论。固定核统一RL+真EB条件理论已由本轮C208–C214完成；一般C191/C192核/子关系分类、任意其它lift、其它外文及全球先行性仍开放，不以source归档或有限PASS替代。
 
 <a id="reproduce"></a>
 ## 可复现计算
@@ -65,3 +65,7 @@ mkdir -p tmp/comparison
 pdftotext -layout research/comparisons/2026_08_gppa_nfb/sources/gppa_2608.01584v1.pdf tmp/comparison/gppa.txt
 pdftotext -layout research/comparisons/2026_08_gppa_nfb/sources/nfb_2608.22687v1.pdf tmp/comparison/nfb.txt
 ```
+
+## 本轮完成的一般模 GPPA 研究扩展
+
+当前明确任务已完成：[统一中文入口](../../canonical/generalized_ppa_modulus.md)、[完整核三分支定理](gppa_nonlinear_kernel_theorem.md)、[物理提升及锐螺旋](gppa_physical_transfer.md)、[非线性完整严格例](gppa_strict_extension_examples.md)、[持续误差](../../canonical/gppa_inexact_modulus.md)、[集中完整稿](../../manuscripts/gppa_modulus/gppa_modulus.pdf)、[独立受检记录](../../audit/GPPA_MODULUS_RECEPTION_2026_10_09.md)和[复算](../../code/gppa_modulus/README.md)。C208–C214 新立身份，不覆盖 C199–C207 的正反比较。前述“统一 RL+真EB涵盖尚待核”现由固定核条件定理关闭；任意改图/lift、源 T4 整体包含及全球先行性仍开放。
