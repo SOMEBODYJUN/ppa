@@ -77,3 +77,9 @@
 C225-v2补充`upper_family_verify.py`及`upper_family_results.json`：Fraction四阶复合/端点六阶、alpha0和K反算、曲径四阶系数、Decimal80上侧p=2及更大有限p，另核strict-comp饱和的global-min分解及kappa可去值；解析证明负责全部实p量词。
 
 C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boundary_verify.py精确Fraction核六阶边界系数；final_dynamics_verify.py通过formal ODE重建偶系数并解真实二维implicit方程，含t0=1e−8的tracking测试及两步长。输出分别sextic_boundary_results.txt和final_dynamics_results.json，命令、精度/诊断误差与哈希见同一代码入口。C230的normal-form/标量barrier由自足解析证明承担，经典KL明确适用而不自称首创。
+
+
+## 新前沿复算接口（2026-10-10）
+
+- [topological_completion/README.md](code/topological_completion/README.md)：C231的完整球面例TC7–TC11，精确有理接缝、独立径向逆式、全部近端包含、真EB与有限Holder界；seed、运行版本、容差及实际结果随目录保存。指数定理与任意完成不由计算证明。
+- [tangential_area/README.md](code/tangential_area/README.md)：C232候选的完整slab原图、真实近端包含与二阶面积基准；校正一阶振荡后的有限面积比值。候选接收和sharpRL仍开放。

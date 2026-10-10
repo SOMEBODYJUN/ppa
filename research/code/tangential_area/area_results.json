@@ -1,0 +1,65 @@
+{
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "seed": 20261010,
+  "precision": "IEEE binary64",
+  "iterations": 200000,
+  "t0": 8,
+  "initial_w_z": [
+    0,
+    0
+  ],
+  "max_identity_error": 1.503686326861332e-14,
+  "identity_tolerance": 1e-09,
+  "area_ratio_tolerance": 0.0001,
+  "rows": [
+    {
+      "p": 0.3333333333333333,
+      "omega_over_pi": 0.5,
+      "w_abs": 0.3482195413860321,
+      "z": 42.39132163340306,
+      "tail_area_ratio": 0.2500003403712221,
+      "first_order_removed_area_ratio": 0.24999999999747594
+    },
+    {
+      "p": 0.3333333333333333,
+      "omega_over_pi": 1.0,
+      "w_abs": 0.24663791479944958,
+      "z": 0.0,
+      "tail_area_ratio": 0.0,
+      "first_order_removed_area_ratio": null
+    },
+    {
+      "p": 0.3333333333333333,
+      "omega_over_pi": 2.0,
+      "w_abs": 5124.307822137775,
+      "z": 0.0,
+      "tail_area_ratio": 0.0,
+      "first_order_removed_area_ratio": null
+    },
+    {
+      "p": 0.75,
+      "omega_over_pi": 0.5,
+      "w_abs": 0.15485067038595998,
+      "z": 0.18094747992259072,
+      "tail_area_ratio": 0.2501035529731323,
+      "first_order_removed_area_ratio": 0.24999999999636613
+    },
+    {
+      "p": 0.75,
+      "omega_over_pi": 1.0,
+      "w_abs": 0.10995624898954826,
+      "z": 0.0,
+      "tail_area_ratio": 0.0,
+      "first_order_removed_area_ratio": null
+    },
+    {
+      "p": 0.75,
+      "omega_over_pi": 2.0,
+      "w_abs": 77.97007515336657,
+      "z": 0.0,
+      "tail_area_ratio": 0.0,
+      "first_order_removed_area_ratio": null
+    }
+  ],
+  "scope": "Finite checks only; does not prove C232."
+}

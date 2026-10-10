@@ -6784,6 +6784,116 @@
       "y": 3277,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "TA-AREA": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 4684,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TA-GAP": {
+      "role": "open-target",
+      "kind": "mountain",
+      "object": "ocean",
+      "evidence": "open",
+      "reason": "incoming-open-relation",
+      "x": 4684,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TA-OBJECT": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 4778,
+      "y": 2731,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TC-BAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TC-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TC-SPHERE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-BAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-GAP": {
+      "role": "open-target",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "open",
+      "reason": "incoming-open-relation",
+      "x": 4778,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-SPHERE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8394,6 +8504,26 @@
     "E402": {
       "x": 4396.33,
       "y": 2865.34
+    },
+    "E403": {
+      "x": 4590.0,
+      "y": 2870.0
+    },
+    "E404": {
+      "x": 4569.48,
+      "y": 2865.39
+    },
+    "E405": {
+      "x": 2423.25,
+      "y": 705.27
+    },
+    "E406": {
+      "x": 4731.22,
+      "y": 2722.41
+    },
+    "E407": {
+      "x": 4667.09,
+      "y": 2777.08
     }
   },
   "bounds": {

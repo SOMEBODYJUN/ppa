@@ -471,3 +471,18 @@
 - **错误候选**：从C225四次族和C227指定实例推所有p>3/2非零严格局部极小点都有真残差matching1/3。
 - **完整反例**：[C229](research/topics/sparse_recovery/sextic_boundary.md#sx-proof)固定p3、invertibleA，取alpha=alpha0，消去径向变量后Phi差为Rt⁶/3+O(t⁸)，g=−2t²−2t⁴+O(t⁶)。全二维matching EB1/5成立，沿g的残差为sqrt(2)R|t|⁵(1+o(1))，任何q>1/5都失败，包括1/3。
 - **范围修补**：原alpha>alpha0四次族与指定p7/4的1/3及真实PPA结论不变；C229不新增完整PPA声称。此外C230显示经典KL3/4确适用于指定四阶例，不能将完整fiber/精确轨道的额外核验包装为KL不可处理。
+
+
+<a id="f68"></a>
+## F68 · 同常数Holder完成自动保完整零集和原吸引动力
+
+- **错误路线 / 机制**：由C04任意允许紧纤维的实现与HE-EXT同常数完成，假定可同时保留一个指定紧光滑零簇的整个完整近端吸引管且不增加零点。
+- **精确断点**：[C231](research/canonical/topological_completion_balance.md#tcb-balance)给局部指数χ(M)，全域次线性总指数1。χ(M)≠1时额外零簇不可避免；吸引圆与吸引二球面是明确见证，显示实例恰加一个原点补偿。失败是完整零集/动力的兼容性，不是同常数延拓不存在或纤维实现错误。
+- **Honest salvage / 重启条件**：允许额外零点并定位指数缺额；或冻结χ=1及精确常数后研究真正的充分性。普通回缩不能代替同调等价，野紧集推广另立义务。
+
+<a id="f69"></a>
+## F69 · Lefschetz forcing存在证书自动授予coincidence Picard求解收敛
+
+- **错误路线**：在C05-v2 collar内，以Q_h(p)=T(p)+λh(T(p))迭代求解原F(x)包含h(x)，把存在证书直接当算法收敛证书。
+- **解析反例**：λ1、F(x)=Mx、M>0、T(p)=p/(M+1)。对任意足够小δ>0，令h(y)为−(M+2)y在|y|≤δ上的连续截断，全部幅度≤(M+2)δ。forcing预算任意小仍可通过；但在|p|≤(M+1)δ内Q_h(p)=−p，非零初值严格二周期，而原包含在x0有解。取M10^4可使用现有C05-v2已验证collar，只需δ小于其forcing余量。
+- **Honest salvage**：存在性保留；实际求解还需forcing正则/政策或独立认证求根器。usc/acyclic不自动提供可计算连续选择。有限网格/degree算法已有成熟先行，不能重新包装为新算法。

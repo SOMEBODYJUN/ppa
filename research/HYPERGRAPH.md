@@ -641,6 +641,16 @@
 | --- | --- | --- | --- |
 | E402 | [SPARSE-QUARTIC-DATA · 指定p7/4真实least-squares与B/U窗口](topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem) ∧ [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) | conditional → [SPARSE-QUARTIC-KL · C230锐KL3/4及经典能量/点距阶上界](topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl) | 固定C227原模型：radial analytic splitting→局部微分同胚，缩小邻域N给锐KL3/4；N常数不覆盖整个B。任意固定0<lambda≤1/128、U初值的完整globalprox已留域并收敛，最终进入N，真实下降+barrier给e=O(k^-2)、point=O(k^-1/2)。仅阶上界，不推出精确非轴常数或轴慢尾。；**C230-v1自足normal form/实际下降/标量比较独立受检，derived-checked** |
 
+## 完成的拓扑代价与切向新机制
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E403 | [TCB-DATA · 光滑整管吸引与Holder完成合同](canonical/topological_completion_balance.md#tcb-contract) | implies → [TCB-BAL · C231 全局总指数与局部Euler缺额](canonical/topological_completion_balance.md#tcb-balance) | 全部TC1–TC3；经典compact ENR指数与显式换空间；局部χ(M)，总1，管外缺额1−χ；不以普通回缩导出同调等价。；**derived-checked** |
+| E404 | [TCB-SPHERE · 完整球面吸引与原点补偿实例](canonical/topological_completion_balance.md#tcb-sphere) | sharpness → [TCB-BAL · C231 全局总指数与局部Euler缺额](canonical/topological_completion_balance.md#tcb-balance) | 仅显示球面族：完整单值全域F，球面管q3真EB，恰一孤立原点补偿；不声称Holder常数最优或任意拓扑只需一个点。；**derived-checked** |
+| E405 | [TCB-BAL · C231 全局总指数与局部Euler缺额](canonical/topological_completion_balance.md#tcb-balance) | open → [TCB-GAP · 保完整零集完成的充分性](canonical/topological_completion_balance.md#tcb-frontier) | χ1仅必要；需冻结同一完整输入管、嵌入、同常数/新常数和全部零集保真合同，证明或反驳充分性。；**open** |
+| E406 | [TA-OBJECT · 完整普通PPA的切向有向面积模型](canonical/tangential_area_seed.md#ta-object) | conditional → [TA-AREA · C232 切向面积点长度分类候选](canonical/tangential_area_seed.md#ta-area) | 固定p>0、实ω、非零正负r0与所有切向初值；显示Abel余项给拟分类，尚缺未参与构造的独立接收；旧严格兼容不在前件。；**candidate** |
+| E407 | [TA-AREA · C232 切向面积点长度分类候选](canonical/tangential_area_seed.md#ta-area) | open → [TA-GAP · 原生算子交换子与余项判据](canonical/tangential_area_seed.md#ta-frontier) | 从原生完整算子有限周期展开认证首个交换子和可控余项，需额外留域/扰动合同；编码例不授一般框架。；**open** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

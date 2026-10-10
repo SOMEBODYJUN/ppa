@@ -378,3 +378,11 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 **剩余原文门与裁决。** Wang2017全部公开Appendix再次核验，Theorem2中的B=||Ax−b||²/2是满足dot B=−2B/epsilon的约束可行性辅助，不是罚式least-squares局部结构；主文结果目录仍未取得。Huo2023机构/博士文献路径无公开主体，CAEP文献系统明确仅内网，未访问该系统。Zhao2018相关差范数主体仍缺，[PubMed原始记录](https://pubmed.ncbi.nlm.nih.gov/29306802/)准确online日期为2017-12-20。这些获取失败不证明定理缺席；当前只签发[有范围的证据裁决](audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#renewed-priority-check)，**不认证首次发表**，不将内部证明接收或Git作者时间戳当作发表优先凭证。
 
 **最终实读续核与经典工具对照。** [Bian–Chen2014完整作者PDF](https://www.polyu.edu.hk/ama/staff/xjchen/Bian_Chen2014IEEE.pdf)，Eq1 p545、A1/A2 p547、Theorems1–3 p548及Corollary1 p549是一般约束平滑神经ODE存在/可行/Clarke驻点；独立读者实读上述主体与对应Appendix段，未逐行认证全篇数值估计。本库显式约束四次例证明这些泛用前提不自动给active-PD。[Nigam–Yadav2023完整机构PDF](https://d-nb.info/1287357776/34)，Eq13 p5、Theorems6.1/6.4 pp6/10、Corollaries6.3/6.6 pp10/15是block/spectral constrained RIP recovery；独立读完整主体/6个结果及引用，未见该实读主体的目标自动3/2定理。[ABS 15Dec2010完整作者report](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf)协调读者实读H1–H3 p8、T2.9及证明p12、T4.2及证明p21；C227真实完整globalprox满足H1/H2/H3，C230自足证sharp KL3/4及标准O(k^-2)/O(k^-1/2)阶，不宣称经典KL不能处理。逐条strictcomp/activePD/阈值比较、获取边界与投稿候选定位见[最终有范围裁决](audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check)。Wang2017/Huo2023主体仍未取得，全球首次认证未签发。
+
+
+<a id="lit-bg-index"></a>
+## LIT-BG-INDEX · compact ENR 固定点指数接口
+
+- **Paper fact / actual reading**：Benjamin–Gottlieb, *Fixed Point Indices and Manifolds with Collars*, [作者PDF](https://www.math.purdue.edu/~gottlieb/Bibliography/62.pdf)，本轮实际打开全文并核PDF p.3–4 §2.1；(2.1.1) localization，(2.1.2) additivity，(2.1.4) compact ENR normalization I(f)=L(f)，(2.1.6) commutativity。正文允许compact manifolds with boundary。不要求光滑闭管已经给定有限多面体表示。
+- **Import / exact mapping**：[C231](canonical/topological_completion_balance.md#tcb-balance)的光滑闭管与大闭球为compact ENR；管包含诱导同调同构、近端映射固定零簇，球只有H0，分别计算Lefschetz数。环境空间的局部/总指数用commutativity与localization显式换空间，随后additivity给缺额。
+- **Scope / distinction**：这些是经典指数性质，不作为新颖性主张。该文原件确认Dold1965的书目；本轮没有取得并逐行审读Dold1965原论文，不写成已读原文。一般野紧集、无限维与非单射GPPA不自动取得此接口。

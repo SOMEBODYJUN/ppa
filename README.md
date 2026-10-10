@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 604 个数学节点、402 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 611 个数学节点、407 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -11,6 +11,8 @@
 > 当前判断：局部 RLEB–PPA 的收敛机制有可读证明链；总体 RLEB–LT–极大单调的自然母空间规模比较仍开放。Hölder–RL 全局影子、有限维完整纤维分类、固定窗口锐覆盖与有限 QP 已有完整独立规范证明；实际原生认证和外部先行性分别保留门。9/25 局部值域证书的 Lefschetz 引文适用门已核，但仍有独立整窗拓扑假设和候选证明待审。
 
 当前 GPPA 比较的下一入口是[C215改写边界](research/canonical/gppa_reformulation_boundary.md)、[C216正则化稳定性](research/canonical/gppa_regularized_stability.md)及[有界先行审查](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。源T4正则化距离输出已接入并降低印刷残差预算；现有严格例子的收敛可经保零集改写导入，不能证明任意改写饱和类严格分离。全球首创和[C217总体比较](CLAIMS.md#c217)继续开放。
+
+新的选题入口：[全局完成的拓扑代价](research/canonical/topological_completion_balance.md)把全尺度RL、完整近端吸引和零集拓扑接在同一合同下：局部指数χ(M)与全局总指数1的缺额必须由额外零点补偿。它不反驳任意紧纤维实现；真正开放的是保零集完成的充分性。另保留[切向有向面积候选](research/canonical/tangential_area_seed.md)，研究绝对长度之外的点收敛机制。
 
 ## Research Goal
 
@@ -171,6 +173,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 新增研究入口 | 用途 |
 | --- | --- |
+| [research/canonical/topological_completion_balance.md](research/canonical/topological_completion_balance.md)、[复算](research/code/topological_completion/verify.py) | C231：光滑吸引管/全尺度Holder完成的指数守恒、被迫新增零点与完整球面补偿例；保存整管完整近端动力时读，χ1充分性、一般ENR和精确常数完成仍开放。 |
+| [research/canonical/tangential_area_seed.md](research/canonical/tangential_area_seed.md)、[复算](research/code/tangential_area/verify_area.py) | C232候选：同一普通完整PPA的Heisenberg切向有向面积、点/长度分类及显式Abel余项；推进原生交换子判据时读，不当作旧兼容定理反例或已核sharp RL定理。 |
 | [公开必要性问题与选题](research/topics/random_markov/public_necessity_target.md)、[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md) | 2026/2024 正式公开问题、A/B/C 精确解释、C14/C143/C144 对接和未闭优先义务；GPPA 发布编排与确定性备选。不是整个作者问题已解的声明。 |
 | [当前首创性裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)、[初次六分工快照](research/novelty/2026_10_09/README.md) | 四路逐篇版本核对、经典可导性/发表优先区分、剩余精确候选和未读门；算法/全尺度结构分开 |
 | [C221](research/canonical/gppa_tail_lyapunov_bridge.md)、[C222](research/canonical/sharp_holder_lipschitz_realization.md)、[独立接收](research/audit/PRIORITY_FOLLOWUP_RECEPTION_2026_10_09.md) | 前验标量势、完整SF直接C¹/KL分界、任意Hilbert紧K精确预算全域Lip充分实现；不认证全球先行 |

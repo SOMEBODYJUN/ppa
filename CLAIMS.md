@@ -1951,3 +1951,23 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：C227同一固定原least-squares模型、原F/r_F和xbar，不改任何数据。存在小邻域N与c_*>0使r_F(x)≥c_*[Phi(x)−Phi(xbar)]^(3/4)对全部x∈N成立；任意0≤theta<3/4的同形正系数局部界均失败。任一固定0<lambda≤1/128和任一x0∈U的已认证完整PPA，能量O(k^(−2))，点距O(k^(−1/2))，包括径向轴（只给上界）。
 - **Definitions / Dependencies / Evidence**：[自足证明](research/topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl)：exact analytic splitting和局部微分同胚，能量比较v²+t⁴、真实残差比较|v|+|t|³；曲线反向见证；C227完整globalprox/收敛使全部轨道永久进入小N，prox下降给e_k−e_(k+1)≥a_lambda e_(k+1)^(3/2)，barrier B/(n+1)²且B≥max(e0,36/a_lambda²)闭合阶。经典ABS的H1–H3和KL at cluster逐项映射见[一手比较](research/audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check)；此证明无需导入其收敛定理。
 - **Counterevidence / Scope / Related Files**：KL常数只在可缩小N存在，不宣称整个显式B的新常数。经典KL确能处理此例的阶，不声称不可替代；该阶界不推出C227精确非轴常数，不排远完整输出，不将几何轴称为matching慢尾。[最终独立接收](research/audit/SPARSE_FINAL_RECEPTION_2026_10_10.md)。标准KL后果不作为独立发表创新。
+
+
+<a id="c231"></a>
+## C231-v1 / TOPOLOGICAL-COMPLETION · 吸引零簇的全局完成指数缺额
+
+- **Status**：`derived-checked`；两位Astra逐段核TC1–TC11与一手指数接口，球/管换空间接口已显式补齐；发表优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意有限维H=R^n、λ>0、非空紧C²无边界嵌入流形M、0<ρ<reach(M)、0≤θ<1；整管连续T固定M且d(Tp,M)≤θd(p,M)。C0=2T−Id在整管为L-Hölder、0<γ<1。任意全域有限同指数Holder常数Ĉ延拓C0；完整Fhat由全Minty输入参数化。
+- **Conclusion / Scope**：完整Jhat=T_hat=(Id+Ĉ)/2，graph-maximal于固定新参数；全部固定集紧，管内恰M，管外额外紧簇K有指数1−χ(M)，局部M指数χ(M)。χ(M)≠1强制新增零点；若M为全部零集则χ(M)=1必要。多个不交吸引簇覆盖完整零集时Euler之和1。显示球面族恰加一个孤立补偿零点，q3真EB只在球面输出窗。
+- **Definitions / Assumptions / Dependencies**：[TC1–TC3保真合同](research/canonical/topological_completion_balance.md#tcb-contract)与[LIT-BG-INDEX](research/LITERATURE.md#lit-bg-index)；光滑管独立形变回缩，不由C11普通回缩导出。全域次线性提供大紧球自映射，同常数延拓存在可用HE-EXT但必要性结论允许任意有限新常数。
+- **Evidence / Related Files**：[完整证明和显式实例](research/canonical/topological_completion_balance.md#tcb-balance)、[TC7–TC11](research/canonical/topological_completion_balance.md#tcb-sphere)、[可复算代码](research/code/topological_completion/verify.py)与[结果](research/code/topological_completion/results.json)；有限计算只核算术/边界，不替代指数定理。
+- **Counterevidence / Objections**：χ=1充分性未证；一般紧ENR未自动有同一不变紧管。输入管resolvent保真不保输出完整F纤维，也不自动继承真EB。局部RL、单轨道、非单射GPPA或无限维不能直接调用。原点是补偿repeller，不满足球面窗同一q3证书。不反驳C04任意紧纤维实现。
+
+<a id="c232"></a>
+## C232-v1 / TANGENTIAL-AREA · 完整PPA的二阶有向面积点收敛分类候选
+
+- **Status**：`candidate`；完整对象与Abel草案经主代理重构、构造者最终核读并给显式余项；尚缺未参与构造的独立接收，一般原生判据/发表先行均开放。
+- **Exact Statement / Objects / Domain / Quantifiers**：所有p>0、ω实数，R^4的T(w,z,r)=(w+d(r),z+0.5Im(conj(w)d(r)),r/(1+|r|))，d(r)=|r|^p exp(iω/|r|)、零值0。完整F=T^{-1}−Id定义于slab |r|<1且外部空值；λ1。对每个非零正负r0和每个切向初值，法向尾精确(t0+n)^{-1}。
+- **Conclusion / Scope**：完整J_F=T全域单值、S=R³×{0}、真EB |r|≤||F||^{1/p}，0<p<2时matching。非2π共振时w收敛且z_N−0.25cot(ω/2)Σ(t0+n)^{-2p}有有限极限；预计由显示Abel界给全部点/长度分类。非π整数相位点收敛iff p>1/2；反向共线所有p>0点收敛；同向共线iff p>1；有限长度所有相位iff p>1。r0=0固定，另列。
+- **Definitions / Dependencies / Evidence**：[TA1–TA5](research/canonical/tangential_area_seed.md#ta-object)、两次Abel和显式可和余项、[完整包含与相位复算](research/code/tangential_area/verify_area.py)及[结果](research/code/tangential_area/area_results.json)。经典Lie-bracket控制为机制祖先，未将其当新发现。
+- **Counterevidence / Objections / Related Files**：不满足旧严格兼容门，不能作为其反例。sharp全对RL指数尚缺独立正文；发散轨道离开有界切向窗。一般系统高阶交换子、留域、状态依赖余项和扰动鲁棒性未闭。该编码例的正确性不自动证明一个新原生框架的价值。

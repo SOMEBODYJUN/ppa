@@ -1,0 +1,67 @@
+{
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "seed": 20261010,
+  "arithmetic": "Fraction exact junctions; IEEE binary64 geometry",
+  "absolute_relative_tolerance": 3e-11,
+  "random_pairs": 10000,
+  "max_complete_resolvent_identity_error": 1.443373810789279e-11,
+  "max_sampled_C_slope": 2.5000000000000004,
+  "max_random_C_lipschitz_ratio": 2.5000000000000373,
+  "max_normalized_holder_ratio": 0.9995302686145441,
+  "B": 1.2721655269759087,
+  "L_gamma_half": 2.522068126534163,
+  "max_matching_EB_ratio": 2.3703703703703702,
+  "EB_bound_exact": "64/27",
+  "max_tube_distance_contraction": 0.25,
+  "indices": [
+    {
+      "ambient_n": 1,
+      "sphere_chi": 2,
+      "origin_index": -1,
+      "total": 1
+    },
+    {
+      "ambient_n": 2,
+      "sphere_chi": 0,
+      "origin_index": 1,
+      "total": 1
+    },
+    {
+      "ambient_n": 3,
+      "sphere_chi": 2,
+      "origin_index": -1,
+      "total": 1
+    },
+    {
+      "ambient_n": 4,
+      "sphere_chi": 0,
+      "origin_index": 1,
+      "total": 1
+    },
+    {
+      "ambient_n": 5,
+      "sphere_chi": 2,
+      "origin_index": -1,
+      "total": 1
+    },
+    {
+      "ambient_n": 6,
+      "sphere_chi": 0,
+      "origin_index": 1,
+      "total": 1
+    },
+    {
+      "ambient_n": 7,
+      "sphere_chi": 2,
+      "origin_index": -1,
+      "total": 1
+    },
+    {
+      "ambient_n": 8,
+      "sphere_chi": 0,
+      "origin_index": 1,
+      "total": 1
+    }
+  ],
+  "scope": "Finite arithmetic/geometry checks only; not proof of index theorem or universal claims."
+}

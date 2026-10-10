@@ -3254,6 +3254,48 @@
       "label": "C230锐KL3/4及经典能量/点距阶上界",
       "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-DATA",
+      "label": "光滑整管吸引与Holder完成合同",
+      "file": "canonical/topological_completion_balance.md#tcb-contract",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-BAL",
+      "label": "C231 全局总指数与局部Euler缺额",
+      "file": "canonical/topological_completion_balance.md#tcb-balance",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-SPHERE",
+      "label": "完整球面吸引与原点补偿实例",
+      "file": "canonical/topological_completion_balance.md#tcb-sphere",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-GAP",
+      "label": "保完整零集完成的充分性",
+      "file": "canonical/topological_completion_balance.md#tcb-frontier",
+      "evidence_status": "open"
+    },
+    {
+      "id": "TA-OBJECT",
+      "label": "完整普通PPA的切向有向面积模型",
+      "file": "canonical/tangential_area_seed.md#ta-object",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "TA-AREA",
+      "label": "C232 切向面积点长度分类候选",
+      "file": "canonical/tangential_area_seed.md#ta-area",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "TA-GAP",
+      "label": "原生算子交换子与余项判据",
+      "file": "canonical/tangential_area_seed.md#ta-frontier",
+      "evidence_status": "open"
     }
   ],
   "edges": [
@@ -7928,6 +7970,61 @@
       "relation": "conditional",
       "scope": "固定C227原模型：radial analytic splitting→局部微分同胚，缩小邻域N给锐KL3/4；N常数不覆盖整个B。任意固定0<lambda≤1/128、U初值的完整globalprox已留域并收敛，最终进入N，真实下降+barrier给e=O(k^-2)、point=O(k^-1/2)。仅阶上界，不推出精确非轴常数或轴慢尾。",
       "status": "C230-v1自足normal form/实际下降/标量比较独立受检，derived-checked"
+    },
+    {
+      "id": "E403",
+      "inputs": [
+        "TCB-DATA"
+      ],
+      "output": "TCB-BAL",
+      "relation": "implies",
+      "scope": "全部TC1–TC3；经典compact ENR指数与显式换空间；局部χ(M)，总1，管外缺额1−χ；不以普通回缩导出同调等价。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E404",
+      "inputs": [
+        "TCB-SPHERE"
+      ],
+      "output": "TCB-BAL",
+      "relation": "sharpness",
+      "scope": "仅显示球面族：完整单值全域F，球面管q3真EB，恰一孤立原点补偿；不声称Holder常数最优或任意拓扑只需一个点。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E405",
+      "inputs": [
+        "TCB-BAL"
+      ],
+      "output": "TCB-GAP",
+      "relation": "open",
+      "scope": "χ1仅必要；需冻结同一完整输入管、嵌入、同常数/新常数和全部零集保真合同，证明或反驳充分性。",
+      "status": "open",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E406",
+      "inputs": [
+        "TA-OBJECT"
+      ],
+      "output": "TA-AREA",
+      "relation": "conditional",
+      "scope": "固定p>0、实ω、非零正负r0与所有切向初值；显示Abel余项给拟分类，尚缺未参与构造的独立接收；旧严格兼容不在前件。",
+      "status": "candidate",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E407",
+      "inputs": [
+        "TA-AREA"
+      ],
+      "output": "TA-GAP",
+      "relation": "open",
+      "scope": "从原生完整算子有限周期展开认证首个交换子和可控余项，需额外留域/扰动合同；编码例不授一般框架。",
+      "status": "open",
+      "topic": "完成的拓扑代价与切向新机制"
     }
   ]
 }
