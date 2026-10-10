@@ -17,7 +17,7 @@
 \theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
 \title{A sharp automatic Hessian threshold and complete proximal dynamics\\for least-squares norm-difference regularization}
 \author{PPA research project}
-\date{October 9, 2026}
+\date{October 10, 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -26,7 +26,7 @@ that every nonzero local minimum has a positive definite active Hessian
 when $1<p\le3/2$, assuming only that the sensing matrix has no zero
 columns. A moment identity excludes null directions below the threshold;
 at its endpoint the quartic equality case is excluded by a negative
-sixth-order objective term. For every $3/2<p<2$, an invertible
+sixth-order objective term. For every finite $p>3/2$, an invertible
  two-dimensional example has a strict local minimum with singular active
 Hessian. Strict complementarity and support independence have wider
 ranges and are stated separately. An explicit common radius and positive
@@ -103,8 +103,8 @@ $|(Q\bar x-c)_j|<\eta$ for every $j\notin I$.
 \end{equation}
 is positive definite. In particular $|I|\le\operatorname{rank}A$.
 \end{enumerate}
-The exponent $3/2$ in item~3 is sharp in $(1,2)$: for each
-$3/2<p<2$, there is a two-dimensional example with invertible $A$
+The exponent $3/2$ in item~3 is sharp across all finite $p>1$: for each
+finite $p>3/2$, there is a two-dimensional example with invertible $A$
 and a nonzero strict local minimum whose active Hessian is singular.
 \end{theorem}
 \begin{proof}[Strict complementarity]
@@ -211,11 +211,32 @@ cancellation, the objective has strictly negative sixth-order coefficient
 $-\eta R d^6/192$, again impossible at a local minimum. Thus $H_I\succ0$.
 \end{proof}
 
+\begin{remark}[A second proof by radial relaxation]
+The endpoint sixth-order certificate above is retained. A different
+fourth-order argument explains its geometric mechanism. For a hypothetical
+active null direction $z$, write
+$\norm{\bar x+tz}_p=R+n_1t+n_2t^2+n_4t^4+O(t^5)$;
+the cubic vanishes by local minimality and $n_2>0$. Put
+$q_0=\norm{A\bar x}^2>0$. Homogeneity and $H_Iz=0$ give
+$\bar x^TQz=0$, so for $x=(1+s)\bar x+tz$,
+\[
+ \Phi_p(x)-\Phi_p(\bar x)=\frac{q_0s^2}{2}
+ +\eta n_2\frac{st^2}{1+s}
+ -\eta n_4\frac{t^4}{(1+s)^3}+O(t^5).
+\]
+Choosing $s=-\eta n_2t^2/q_0$ gives quartic coefficient
+$-\eta n_4-\eta^2n_2^2/(2q_0)$. Thus a singular active minimum would
+require $n_4\le-\eta n_2^2/(2q_0)<0$. The Pearson bound gives
+$n_4=RC_4\ge0$ for $1<p\le3/2$, a contradiction. The perturbation
+preserves active signs and leaves inactive coordinates zero.
+\end{remark}
+
 \begin{proposition}\label{prop:sharpfamily}
-For each $3/2<p<2$, let $R=2^{1/p}$,
+For each finite $p>3/2$, let $R=2^{1/p}$,
 $\beta=R(p-1)/2$, $c_4=-(p-1)(2p-3)(p+1)/24<0$, and choose
 \[
- \alpha>\frac{\beta^2}{-4Rc_4}.
+ \alpha>\alpha_0:=\frac{\beta^2}{-4Rc_4}
+       =\frac{3R(p-1)}{2(2p-3)(p+1)}.
 \]
 Let $Q\succ0$ have eigenvalues $\alpha$ in direction $(1,1)$ and
 $\beta$ in direction $(1,-1)$, and put
@@ -229,7 +250,8 @@ at $\bar x$ has exponent greater than $1/3$.
 Stationarity is immediate; the norm Hessian has radial eigenvalue zero
 and tangent eigenvalue $\beta$. Thus the active Hessian eigenvalues are
 $\alpha$ and zero. Write $x=(1+h+t,1+h-t)$ and let
-$V(h,t)=\Phi(x)-\Phi(\bar x)$. Analytic expansion gives
+$V(h,t)=\Phi(x)-\Phi(\bar x)$. On the positive-coordinate
+neighborhood the norm is analytic for every finite real $p>1$. Expansion gives
 \begin{equation}\label{eq:generalquartic}
  V(h,t)=\alpha h^2+\beta ht^2-Rc_4t^4+
             O(h^2t^2+|h|t^4+t^6).
@@ -239,6 +261,7 @@ curve $h=g(t)=-\beta t^2/(2\alpha)+O(t^4)$. Its reduced objective is
 \[
  V(g(t),t)=Kt^4+O(t^6),\qquad K=-Rc_4-\beta^2/(4\alpha)>0.
 \]
+For $\alpha=2\alpha_0$, $K=R(p-1)(2p-3)(p+1)/48>0$.
 Shrink the neighborhood so that $V_{hh}\ge\alpha$ and the reduced
 objective is at least $Kt^4/2$. Taylor's integral formula gives
 $V(h,t)\ge\alpha|h-g(t)|^2/2+Kt^4/2$, proving full-space strictness.
@@ -274,6 +297,20 @@ Taking $A=Q^{1/2}$ and $b=A^{-T}c$ gives stationarity and
 $H=\operatorname{diag}(0,\alpha)$, but
 $\Phi(\bar x+te_1)-\Phi(\bar x)=Rt^3/32+O(t^4)$.
 It is a stationary nonminimum.
+\end{remark}
+
+\begin{remark}[The separate strict-complementarity boundary]
+For every finite $p\ge2$, take $\eta=1$, $Q=\operatorname{diag}(1,2)$,
+$c=(1,1)$, $A=\operatorname{diag}(1,\sqrt2)$,
+$b=(1,1/\sqrt2)$, and $\bar x=(1,0)$. If $r=\norm x_2$, then
+\[
+ \Phi_2(x)-\Phi_2(\bar x)=\tfrac12(r-1)^2+\tfrac12x_2^2
+ +(|x_1|-x_1)+(|x_2|-x_2)\ge0,
+\]
+with equality only at $\bar x$. Since $\norm x_p\le\norm x_2$ for
+$p\ge2$, the same point is the unique global minimum of $\Phi_p$.
+Yet $|(Q\bar x-c)_2|=\eta$. Thus the automatic strict-complementarity
+range is $1<p<2$, separately from the active-PD threshold $3/2$.
 \end{remark}
 
 \section{An explicit certificate for the complete resolvent}
@@ -419,6 +456,7 @@ single-valuedness is assumed in advance.
 \end{remark}
 
 
+\clearpage
 \section{A quartic minimum: sharp true residual and complete PPA}
 \begin{theorem}\label{thm:slow}
 
@@ -453,13 +491,13 @@ The following assertions hold.
    \[
    \|x-\bar x\|_2\le (512/R)^{1/3}r_F(x)^{1/3}.
    \]
-   The exponent \(1/3\) is optimal: no exponent greater than \(1/3\), with any finite constant and any neighborhood of \(\bar x\), satisfies this bound. On \(\mathcal U\), \(d(x,S)=\|x-\bar x\|_2\), so the same statement also gives the ordinary error bound to the entire stationary set.
+   The exponent \(1/3\) is optimal: no exponent greater than \(1/3\), with any finite constant and any neighborhood of \(\bar x\), satisfies this bound. On \(\mathcal U\), \(d(x,S)=\|x-\bar x\|_2\).
 \item For \textbf{every} \(0<\lambda\le 1/128\) and \textbf{every} \(z\in\mathcal U\), the complete \(J_{\lambda F}(z)\) is a singleton, equals the global minimizing proximal map
    \[
    \mathop{\rm argmin}_{y\in\mathbb R^2}
    \left\{\Phi(y)+\frac{\|y-z\|_2^2}{2\lambda}\right\},
    \]
-   and belongs to \(\mathcal U\). Thus this is an invariant nonempty input ball for the same original complete graph, not just a local inverse or a selected stationary branch.
+   and belongs to \(\mathcal U\).
 \item Fix any one \(\lambda\in(0,1/128]\), and run the ordinary complete PPA from \textbf{any} \(x_0\in\mathcal U\): \(x_{k+1}\in J_{\lambda F}(x_k)\). This trajectory is unique and converges to \(\bar x\). Writing \(x_k=(1+h_k+t_k,1+h_k-t_k)\), if \(t_0\ne0\), then \(t_k\) keeps its initial sign, and
    \[
    \frac{h_k}{t_k^2}\longrightarrow-\frac3{32},\qquad
@@ -467,7 +505,7 @@ The following assertions hold.
    \boxed{\sqrt{k}\|x_k-\bar x\|_2\longrightarrow
    \frac{16}{\sqrt{13\lambda R}}.}
    \]
-   Consequently every off-axis input in this ball produces a genuine \(\Theta(k^{-1/2})\) complete-PPA tail. If \(t_0=0\), the exact separate formula is \(t_k=0\), \(h_k=(1+2\lambda R)^{-k}h_0\). The origin of the \((h,t)\) coordinates is the stationary trajectory.
+   If \(t_0=0\), the exact separate formula is \(t_k=0\), \(h_k=(1+2\lambda R)^{-k}h_0\).
 
 \end{enumerate}
 
@@ -730,24 +768,32 @@ Now suppose \(t_0\ne0\). The tangent multiplier tends to one as \(h_k,t_k\to0\),
 \frac{t_k}{t_{k+1}}\longrightarrow1. \tag{D.16}\label{eq:dyn16}
 \]
 
-Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). The first equation of \eqref{eq:dyn13} and \eqref{eq:dyn14} give
-
+Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). Introduce the analytic even function
 \[
-h_k=a h_{k+1}+b_0t_{k+1}^2+
-O(|h_{k+1}|t_{k+1}^2+t_{k+1}^4).
+\kappa(u)=\frac{1-f(u)+u f'(u)}{u^2},\qquad \kappa(0)=3/8.
 \]
-
-Divide by the nonzero \(t_{k+1}^2\) and put \(w_k=h_k/t_k^2\). The exact consequence is an affine recurrence with vanishing forcing:
-
+The value at zero is its removable analytic extension. Exact differentiation
+of \eqref{eq:dyn1} gives \(\varphi_h/R=4h+u^2\kappa(u)\).
+For the actual output with \(s_{k+1}=1+h_{k+1}\), the first equation of
+\eqref{eq:dyn13} therefore yields the exact tracking recurrence
 \[
-w_{k+1}=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k-qb_0+\epsilon_k,
-\qquad \epsilon_k\to0. \tag{D.17}\label{eq:dyn17}
+\begin{aligned}
+w_{k+1}&=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k
+-q\frac{\lambda R}{2}\frac{\kappa(t_{k+1}/s_{k+1})}{s_{k+1}^2},\\
+w_k&=h_k/t_k^2.
+\end{aligned}
+\tag{D.17}\label{eq:dyn17}
 \]
-
-Importantly, the divided remainder is \(O(|h_{k+1}|+t_{k+1}^2)\to0\); obtaining \eqref{eq:dyn17} does \textbf{not} presume boundedness of \(w_k\). By \eqref{eq:dyn16}, the coefficient in \eqref{eq:dyn17} tends to \(q<1\). Choose any \(\theta\in(q,1)\); eventually its absolute value is below \(\theta\), and the forcing is bounded. Iterating the scalar inequality proves \(w_k\) bounded. Subtract the fixed point \(-qb_0/(1-q)\): the remaining forcing tends to zero, and iteration of the same contraction proves convergence. Hence
-
+No boundedness of \(w_k\) is presumed. By \eqref{eq:dyn16} and convergence
+to the origin, the multiplier tends to \(q<1\) and the forcing tends to
+\(-qb_0\). Choose any \(\theta\in(q,1)\); eventually the multiplier has
+absolute value below \(\theta\) and the forcing is bounded. Iterating this
+scalar inequality first proves \(w_k\) bounded. Subtract the fixed point
+\(-qb_0/(1-q)\): the new forcing tends to zero, and the same contraction
+then proves convergence. Hence
 \[
-\frac{h_k}{t_k^2}\to-\frac{qb_0}{1-q}=-\frac3{32}. \tag{D.18}\label{eq:dyn18}
+\frac{h_k}{t_k^2}\to-\frac{qb_0}{1-q}=-\frac3{32}.
+\tag{D.18}\label{eq:dyn18}
 \]
 
 This is the required radial-following proof. It is valid for all off-axis initial points in the certified ball; it neither assumes nor requires invariance of the radial critical curve.

@@ -1,20 +1,20 @@
 {
-  "verification_date": "2026-10-09",
+  "verification_date": "2026-10-10",
   "files": [
     {
       "path": "sharp_sparse_regularity.tex",
-      "size_bytes": 37123,
-      "sha256": "1455f28f1e22757ee2f4e5e17e6387051a9fad96c8b83e3af2a2e3298afb95b9"
+      "size_bytes": 38541,
+      "sha256": "d04ff11aa5815aa3d98fef71928c4444f784b3d321581de16443def7b8f9f5dc"
     },
     {
       "path": "sharp_sparse_regularity.pdf",
-      "size_bytes": 313219,
-      "sha256": "f435c5ec5696f24635780aaab851f55f9061d06e8eabd5b9b4a4510ec81dff2d"
+      "size_bytes": 315603,
+      "sha256": "76d3e8aa3c6161c3a229372cda9e62bb2d23d0581f3bd47006b8250a9bfbc59e"
     }
   ],
   "pdf_pages": 12,
   "compiler": "pdfTeX 1.40.25 / actual pdflatex compilation (two completed passes)",
-  "layout_review": "All 12 final pages rendered with system Poppler at 80 dpi and visually inspected; no clipped content or equations.",
+  "layout_review": "All 12 pages visually inspected with system Poppler; initial pages at90/80dpi, final affected pages6-12 at85dpi. Explicit dynamics theorem moved intact to page7; no clipped content or orphan theorem heading.",
   "latex_checks": {
     "errors": 0,
     "undefined_references": 0,
@@ -22,6 +22,7 @@
     "overfull_boxes": 0,
     "warnings": 0
   },
-  "independent_source_review": "All 41 dynamics displays, complete resolvent definitions, constants, quantifiers, actual radial tracking and exact asymptotic independently compared with the canonical proof module. Threshold/complete certificate separately independently reconstructed.",
-  "scope": "Compilation and finite/visual review do not certify publication priority. Wang-Zhang 2017 main body and Huo et al. 2023 full body remain unavailable."
+  "independent_source_review": "Prior full theorem/source reception retained. New two-group reconstruction validates all-finite-p sharp family and curved-path obstruction; new full-prox reader reconstructed C226/C227 and exact kappa tracking. Coordinating reader checked transcription and final displays.",
+  "scope": "Compilation and finite/visual review do not certify publication priority. Wang-Zhang 2017 main body and Huo et al. 2023 full body remain unavailable.",
+  "revision_scope": "C225-v2 extends existence quantifier only; C226 p<=3/2 quantitative constants and C227 fixed p7/4 quantifiers unchanged. Endpoint sixth proof retained. Strict-comp p>=2 unique-global-min counterexample added."
 }
