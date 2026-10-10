@@ -315,21 +315,22 @@ Now suppose \(t_0\ne0\). The tangent multiplier tends to one as \(h_k,t_k\to0\),
 \frac{t_k}{t_{k+1}}\longrightarrow1. \tag{16}
 \]
 
-Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). The first equation of (13) and (14) give
+Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). Introduce the analytic even function
 
 \[
-h_k=a h_{k+1}+b_0t_{k+1}^2+
-O(|h_{k+1}|t_{k+1}^2+t_{k+1}^4).
+\kappa(u)=\frac{1-f(u)+u f'(u)}{u^2},\qquad \kappa(0)=3/8.
 \]
 
-Divide by the nonzero \(t_{k+1}^2\) and put \(w_k=h_k/t_k^2\). The exact consequence is an affine recurrence with vanishing forcing:
+The value at zero is its removable analytic extension. Exact differentiation of (1) gives
+\(\varphi_h/R=4h+u^2\kappa(u)\). Thus, for the actual output with \(s_{k+1}=1+h_{k+1}\), the first equation of (13) yields the exact tracking recurrence
 
 \[
-w_{k+1}=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k-qb_0+\epsilon_k,
-\qquad \epsilon_k\to0. \tag{17}
+w_{k+1}=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k
+-q\frac{\lambda R}{2}\frac{\kappa(t_{k+1}/s_{k+1})}{s_{k+1}^2},
+\qquad w_k=\frac{h_k}{t_k^2}. \tag{17}
 \]
 
-Importantly, the divided remainder is \(O(|h_{k+1}|+t_{k+1}^2)\to0\); obtaining (17) does **not** presume boundedness of \(w_k\). By (16), the coefficient in (17) tends to \(q<1\). Choose any \(\theta\in(q,1)\); eventually its absolute value is below \(\theta\), and the forcing is bounded. Iterating the scalar inequality proves \(w_k\) bounded. Subtract the fixed point \(-qb_0/(1-q)\): the remaining forcing tends to zero, and iteration of the same contraction proves convergence. Hence
+No boundedness of \(w_k\) is presumed. By (16) and convergence to the origin, the multiplier tends to \(q<1\), and the forcing tends to \(-qb_0\). Choose any \(\theta\in(q,1)\); eventually the multiplier has absolute value below \(\theta\) and the forcing is bounded. Iterating this scalar inequality first proves \(w_k\) bounded. Subtract the fixed point \(-qb_0/(1-q)\): the new forcing tends to zero, and the same contraction then proves convergence. Hence
 
 \[
 \frac{h_k}{t_k^2}\to-\frac{qb_0}{1-q}=-\frac3{32}. \tag{18}

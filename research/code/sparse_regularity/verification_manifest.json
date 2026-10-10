@@ -6,14 +6,16 @@
     "C225-v1",
     "C226-v1",
     "C227-v1",
-    "C228-v1"
+    "C228-v1",
+    "C225-v2"
   ],
   "commands": [
     "python3 research/code/sparse_regularity/verify.py",
     "python3 research/code/sparse_regularity/sharp_dynamics_verify.py",
-    "python3 research/code/sparse_regularity/independent_complete_review.py > research/code/sparse_regularity/independent_complete_results.json"
+    "python3 research/code/sparse_regularity/independent_complete_review.py > research/code/sparse_regularity/independent_complete_results.json",
+    "python3 research/code/sparse_regularity/upper_family_verify.py"
   ],
-  "precision": "Fraction exact; original Decimal60/100 and dynamics Decimal50/80; binary64 recurrence diagnostics",
+  "precision": "Fraction exact; original Decimal60/100 and dynamics Decimal50/80; upper-family Decimal80; binary64 recurrence diagnostics",
   "scope": "Finite checks corroborate arithmetic and actual implicit updates; analytic proofs and independent reconstruction carry all mathematical quantifiers. No publication priority certificate.",
   "files": {
     "verify.py": {
@@ -30,7 +32,7 @@
     },
     "sharp_dynamics_results.json": {
       "bytes": 9196,
-      "sha256": "92211957bfd008ce2f497e7487ce9af371e433bb7ea42722a361c6a486f3fb4a"
+      "sha256": "85c99837419b5f7af9a537eba29dd34d287aa3660b22d53482ee90dad24c36ef"
     },
     "independent_complete_review.py": {
       "bytes": 4184,
@@ -39,6 +41,15 @@
     "independent_complete_results.json": {
       "bytes": 897,
       "sha256": "b9693616b2ad0125b9195ccc6457e5a33d406dbc09192ec08bc9219efc993365"
+    },
+    "upper_family_verify.py": {
+      "bytes": 5169,
+      "sha256": "9ef269d7d86eeeab969573fd06b035ea43f90cd26cf3473a8a5af44fc6fac11a"
+    },
+    "upper_family_results.json": {
+      "bytes": 4998,
+      "sha256": "fa1f7e37bfb1ed7174817b571b71e32286935fecc6befba616e6e3d6de5c2f0f"
     }
-  }
+  },
+  "verification_date": "2026-10-10"
 }

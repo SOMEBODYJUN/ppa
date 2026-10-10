@@ -6729,6 +6729,28 @@
       "y": 3004,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "SPARSE-SHARP-ALL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPARSE-SHARP-ALL-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "canonical",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8327,6 +8349,10 @@
     "E399": {
       "x": 4542.0,
       "y": 2731.0
+    },
+    "E400": {
+      "x": 4491.69,
+      "y": 3320.19
     }
   },
   "bounds": {

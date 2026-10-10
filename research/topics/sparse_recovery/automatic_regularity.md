@@ -82,6 +82,31 @@ The quadratic is already cancelled, cubic through fifth vanish, and the objectiv
 
 Since the norm Hessian is positive semidefinite, Q_II=H_I+eta norm-Hessian is positive definite. This proves the support rank conclusion.
 
+### Independent curved-path obstruction (same C224 statement)
+
+The sixth-order endpoint proof above is retained. A second proof explains the role of radial relaxation and gives a useful necessary inequality at any singular active minimum, for every finite p>1.
+
+Suppose z!=0 is an active Hessian-null direction at a nonzero local minimum. Put N(x)=||x||_p and write on the active face
+
+N(xbar+t z)=N(xbar)+n1 t+n2 t^2+n3 t^3+n4 t^4+O(t^5).
+
+The radial exclusion above gives q0=||A xbar||^2>0 and n2>0. Since H z=0 and Hess N(xbar) xbar=0, xbar^T Q z=0. Straight-line local minimality forces n3=0. For the actual two-variable perturbation x(s,t)=(1+s)xbar+t z, positive homogeneity, stationarity, and the exact quadratic data loss yield
+
+\[
+\Phi(x(s,t))-\Phi(xbar)
+=\frac{q_0}{2}s^2+\eta n_2\frac{s t^2}{1+s}
+-\eta n_4\frac{t^4}{(1+s)^3}+O(t^5),
+\]
+
+uniformly for small s. Set s=−eta n2 t^2/q0. Then
+
+\[
+\Phi(x(s,t))-\Phi(xbar)
+=-\left(\eta n_4+\frac{\eta^2 n_2^2}{2q_0}\right)t^4+O(t^5).
+\]
+
+Consequently a singular active minimum must satisfy n4<=−eta n2^2/(2q0)<0. For 1<p<=3/2 the Pearson calculation above gives n4=R C4>=0, which contradicts this necessary inequality, including quartic equality at the endpoint. This alternative proof does not replace or modify the requested straight-line sixth-order certificate. For C225's symmetric construction, q0=2alpha, n2=beta and n4=R c4; the necessary inequality recovers the radial-relaxation threshold alpha>=beta^2/(−4R c4).
+
 ## Zero-column exception and origin
 
 The nonzero-column assumption is material. Example A=[0,1], b=0, eta=1. Every xbar=(a,0), a!=0, is a local minimizer: the active ray has identically zero objective; for small y off the ray, |y| dominates the negative O(|y|^p) norm correction and the nonnegative data quadratic. The active Hessian is zero. No automatic isolation theorem applies to this example.
@@ -140,7 +165,7 @@ L_H=(p-1)[N0^(1-p)(2-p)d^(p-3)
 Each term follows from scalar mean value bounds for the two norm powers, the diagonal powers, and ||vv^T-ww^T||<=(||v||+||w||)||v-w||. The final rho is positive and chosen to satisfy rho<=r0 as well as every applicable bound above. If h_min=lambda_min(H_I)>0, also impose rho<=h_min/(2eta L_H), yielding m=h_min/2. The one-coordinate norm Hessian is identically zero, so when s=1 the sharper choice m=||A_I||^2 has no Hessian continuity restriction. These bounds remove the basic computability gap; optimizing them, proving asymptotically sharp basin laws, and handling full-resolvent folds remain separate research obligations.
 
 <a id="sr-sharpness"></a>
-## C225: Sharpness for every 3/2<p<2
+## C225-v1: Original sharpness range 3/2<p<2
 
 Take n=m=2, eta=1, xbar=(1,1), R=2^(1/p). Use radial/tangent coordinates x=(1+h+t,1+h-t). Set Q=A^T A to have eigenvalues alpha>0 on (1,1) and beta=R(p-1)/2 on (1,-1); Q is positive definite. Choose c=Qxbar+(1-R/2)(1,1), and choose A=Q^(1/2), b=A^(-T)c, so active stationarity is exact.
 
@@ -166,6 +191,41 @@ These two inequalities prove a strict full-space local minimum with singular act
 For these examples the smooth true-residual EB cannot have exponent greater than 1/3. The radial critical curve is analytic and even, and along it partial_h Phi=0 while partial_t Phi=4Kt^3+O(t^5). All nearby stationary points must lie on this curve, and its reduced derivative has no zero except t=0 after shrinking. Thus xbar is an isolated stationary point. In a yet smaller ball, the distance to the entire stationary set S equals the distance to xbar. Along the curve this distance is asymptotic sqrt(2)|t| while r_F=O(|t|^3), excluding every exponent q>1/3. For the fixed p=7/4 instance, the matching lower EB and genuine complete-PPA tail are now proved in [C227](sharp_instance_dynamics.md#sd-theorem). No corresponding actual-trajectory theorem for every member of this family is asserted here. The radial minimization curve is not asserted to be invariant under PPA.
 
 
+
+<a id="sr-sharpness-all-p"></a>
+## C225-v2: Sharpness for every finite p>3/2
+
+**Version identity.** This widens only C225's existence quantifier from 3/2<p<2 to every finite p>3/2. C225-v1 above remains the original restricted statement. It does not widen the p<=3/2 continuity constants in C226 or the fixed-instance trajectory theorem C227.
+
+**Exact statement and construction.** For each real 3/2<p<infinity, put
+
+\[
+R=2^{1/p},\quad \beta=R(p-1)/2,\quad
+c_4=-(p-1)(2p-3)(p+1)/24,\quad
+\alpha_0=\frac{3R(p-1)}{2(2p-3)(p+1)}.
+\]
+
+Choose any alpha>alpha0; alpha=2alpha0 is one explicit choice. Let Q have radial/tangent eigenvalues alpha,beta, and set xbar=(1,1), eta=1, A=Q^(1/2), c=Q xbar+(1−R/2)(1,1), b=A^(−T)c. Then xbar is a strict full-space local minimum with singular active Hessian, is locally the sole stationary point, and every strong true-residual exponent q>1/3 fails there (also for distance to the full stationary set after shrinking the ball).
+
+**Proof.** Q is positive definite and A is invertible. Stationarity and the tangent Hessian cancellation are exact as in v1. Every coordinate near xbar is positive, so the p-norm restricted to this neighborhood is real analytic for every finite real p>1; neither offsupport smoothness nor an assumption p<2 is needed. The symmetric binomial identity gives the displayed c4, which is negative for every p>3/2. The expansion and radial IFT therefore give
+
+\[
+V(h,t)=\alpha h^2+\beta ht^2-Rc_4t^4
++O(h^2t^2+|h|t^4+t^6),\qquad
+h_*(t)=-\frac{\beta}{2\alpha}t^2+O(t^4),
+\]
+\[
+V(h_*(t),t)=K t^4+O(t^6),\qquad
+K=-Rc_4-\frac{\beta^2}{4\alpha}>0,
+\]
+
+because alpha0=beta^2/(−4R c4). For alpha=2alpha0,
+K=R(p−1)(2p−3)(p+1)/48. On a sufficiently small neighborhood V_hh>=alpha, so Taylor integration around h_*(t) yields
+V(h,t)>=alpha|h−h_*(t)|^2/2+K t^4/2. This proves strict full-space local minimality. Its nearby stationary points lie on the IFT curve; the reduced derivative 4K t^3+O(t^5) vanishes only at zero. On that curve the true gradient residual is |V_t|/sqrt(2)=O(|t|^3) and the Euclidean displacement is asymptotic to sqrt(2)|t|, proving every q>1/3 exclusion. Stationary isolation transfers it to distance to the entire stationary set in a smaller ball.
+
+The neighborhood may depend on p, particularly as p approaches 3/2 or grows. No p=infinity theorem and no uniform exponent for all upper-side models is asserted. Together with C224 this establishes the exact universal active-PD threshold across all finite p>1.
+
+**Independent evidence.** Two new readers independently checked the extension and the p=2/large-p boundaries; [reception](../../audit/SPARSE_THRESHOLD_RECEPTION_2026_10_09.md) records the proof mechanism. [Finite exact and 80-digit checks](../../code/sparse_regularity/upper_family_verify.py) include a parameter just above 3/2, p=2, and larger finite p; computation does not prove the all-real-p quantifier.
 
 <a id="sr-uniform-steps"></a>
 ## C226 uniform positive step interval and scope
@@ -210,3 +270,22 @@ z^T\nabla^2\|u\|_p z=(p-1)R\left[\sum_iw_ir_i^2-\left(\sum_iw_ir_i\right)^2\righ
 All weights are positive. Thus the norm Hessian is positive semidefinite with kernel exactly span{u}, for every finite p>1. If A_I z=0 for a nonzero z, then 0≤z^T H z=−eta z^T Hess||xbar_I||_p z≤0, forcing z=a xbar_I, a≠0. Hence A xbar=0. Dot active stationarity with xbar; because c=A^Tb it yields 0=eta(||xbar||_1−||xbar||_p). For at least two nonzero coordinates that difference is strictly positive; for one coordinate A xbar=0 contradicts its nonzero column. No such z exists, proving full column rank and |I|≤rank A.
 
 **Scope and prior art.** The no-zero-column and least-squares compatibility gates remain material, with the examples above and in [the independent review](../../audit/SPARSE_THRESHOLD_REVIEW_2026_10_09.md). Yin–Lou–He–Xin (2015), Theorem 2.4 and Corollary 2.1(a), p.A543, provide the explicit p=2 support antecedent. The wider norm-curvature mechanism is credited as an extension, not confused with the novel-threshold candidate. Exact publication priority of the all-p range is not certified.
+
+### Boundary counterexample: strict complementarity can fail for every finite p>=2
+
+This counterexample fixes the upper boundary of C228's strict-complementarity range; it does not change C228-v1's sufficient-statement identity. Take eta=1, Q=diag(1,2), c=(1,1), A=diag(1,sqrt(2)), b=(1,1/sqrt(2)), and xbar=(1,0). For p=2 and r=||x||_2, direct completion of the square gives
+
+\[
+\Phi_2(x)-\Phi_2(xbar)
+=\tfrac12(r-1)^2+\tfrac12x_2^2
++(|x_1|-x_1)+(|x_2|-x_2)\ge0.
+\]
+
+Equality holds only at xbar. For every finite p>=2, ||x||_p<=||x||_2 and ||xbar||_p=1, so
+
+\[
+\Phi_p(x)-\Phi_p(xbar)
+=\Phi_2(x)-\Phi_2(xbar)+\|x\|_2-\|x\|_p.
+\]
+
+Hence the same xbar is the unique global minimizer for all these p, yet |(Q xbar−c)_2|=eta=1. Active-Hessian positivity and inactive strict complementarity are different structural properties: their automatic thresholds are 3/2 and 2, respectively. Support independence retains its whole finite p>1 range. These boundary claims do not assert publication priority.

@@ -455,6 +455,7 @@
 
 - **尝试 / 致命门**：对非零局部极小点假定inactive阈值等号能产生稳定退化，或由1<p≤3/2局部极小点自动PD声称全部驻点非退化、任意初始化PPA到极小点。
 - **真实反驳**：[C224证明](research/topics/sparse_recovery/automatic_regularity.md#sr-object)阈值等号时激活坐标使DeltaPhi=0.5||A_j||²t²−eta[(R^p+t^p)^(1/p)−R]<0；所以等号不能出现在非零局部极小点。另一方面[同模型明确驻点反例](research/topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps)给正定Gram、p=3/2、H=diag(0,alpha)且非零三阶项的非极小驻点。
+- **范围分离的新边界**：3/2仅是自动active-PD阈值。C228给strict comp的1<p<2，且Q=diag(1,2)、c=(1,1)、xbar=(1,0)对每个有限p>=2都是唯一global min，却有inactive阈值等号；[精确分解](research/topics/sparse_recovery/automatic_regularity.md#sr-wide-ranges)排除将strict comp也冠以3/2阈值。C225-v2的退化strictmin族覆盖全部有限p>3/2，不自动扩大C226步长/窗口或C227真实轨道量词。
 - **salvage / 边界**：量词固定为非零局部极小点；算法保证固定经认证球内初值。零列给平坦极小ray的精确反例，原点需另算。没有证明非极小驻点的吸引basin，也没有证明全局或几乎处处收敛到极小点。
 
 

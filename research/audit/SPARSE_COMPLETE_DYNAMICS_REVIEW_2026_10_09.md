@@ -339,3 +339,36 @@ definition `a_*=min_{i\in I}|\bar x_i|` has a cosmetic operator-spacing issue:
 the usual command is `\min`. This does not change the stated value or any
 proof. No manuscript source edits were performed by this reviewer, and the
 previous computations were not rerun merely for this transcription review.
+
+## Additional reconstruction and exact tracking identity (2026-10-10)
+
+A fresh reader starting from revision `338367f` independently reconstructed
+the all-output displacement bound, independent global-prox existence, C226's
+inactive sign exclusion and explicit four-term L_H estimate, C227's analytic
+majorants/star bound, closed-ball invariance, exceptional axis, and asymptotic
+normalization. No fatal objection was reported in these delivered checks.
+The coordinating reader separately reconstructed the new exact identity below.
+
+Put kappa(u)=(1−f(u)+u f'(u))/u² and kappa(0)=3/8. The extension at zero is
+analytic and even. From the exact objective formula, varphi_h/R=4h+u²kappa(u).
+The actual radial proximal equation therefore gives, without a divided
+asymptotic remainder,
+
+\[
+w_{k+1}=q(t_k/t_{k+1})^2w_k
+-q\frac{\lambda R}{2}\frac{\kappa(t_{k+1}/(1+h_{k+1}))}{(1+h_{k+1})^2},
+\quad q=(1+2\lambda R)^{-1},\quad w_k=h_k/t_k^2.
+\]
+
+The coefficient tends to q<1 and the forcing to −q3lambdaR/16. Thus one
+first obtains boundedness for arbitrarily large finite initial w_0, then
+convergence to −3/32. This strengthens the proof representation without
+altering any C227-v1 object, quantifier, bound, or conclusion. The original
+critical-curve noninvariance remains in force.
+
+The same reader identified an overstatement in the computational README:
+`sharp_dynamics_verify.py` evaluates analytic derivatives directly; it has no
+series fallback. That description is corrected. Its binary64 trajectories,
+separate Decimal checks and analytic Cauchy proof have distinct evidence
+roles. Reruns of the existing verifiers passed; elapsed timing is diagnostic,
+and refreshed file fingerprints record the regenerated result file.

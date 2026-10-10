@@ -368,3 +368,5 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 
 
 **新增准确先行位置与范围分离。** [主体/部分正文审查](audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md)已取得Yin–Lou–He–Xin正式2015 PDF：Theorem2.3 pp.A542–A543是constrained support independence，Theorem2.4与Corollary2.1(a) p.A543是least-squares support independence及support cardinality；Theorem4.1是simulated annealing，不能误引为support theorem。原文p=2先行得到明确承认，当前all-p extension另用c=Aᵀb和无零列补径向退化门。实读版本与hash见[literature manifest](literature/sparse_regularity/manifest.json)。Huo2023主体与Wang2017主文仍未取得，阈值首创不宣称已证。
+
+**2026-10-10 精确增补。** [引用链续核](audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#primary-citation-chain-follow-up)分别记录Yin–Esser–Xin CAM13-21、Zhou–Yu arXiv2010.03402v1、Lou–Osher–Xin CAM15-08和Tran–Webster arXiv1710.07348v2的实际已读章节及定理条件；全局恢复、局部稀疏、DCA驻点不默换成自动active-PD。Wang–Zhang2017主体与Huo2023主体仍未取得；Zhao等2018差范数神经网络正文是附加引用链线索，不能从2020残差lp的同名近邻替代。C225-v2将数学存在量词扩为全部有限p>3/2，未扩大已核优先范围。

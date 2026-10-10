@@ -231,5 +231,5 @@
     }
   ],
   "scope": "Finite exact arithmetic and actual two-variable PPA trajectory checks. The norm-limit value is analytic: the finite raw sqrt(k) distances remain far from it because the certified step and input scale have a long transient. The post-transient reciprocal-square slopes check the asymptotic drift without claiming a finite run proves the limit. Complete-fiber uniqueness and global proximal equality are proved in research/topics/sparse_recovery/sharp_instance_dynamics.md.",
-  "elapsed_seconds": 1.8976892909995513
+  "elapsed_seconds": 3.0447509649999347
 }

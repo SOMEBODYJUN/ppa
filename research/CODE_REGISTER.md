@@ -73,3 +73,5 @@
 ## C224–C228: sparse threshold and complete dynamics
 
 [Code entry](code/sparse_regularity/README.md) and [fingerprint manifest](code/sparse_regularity/verification_manifest.json) fix the actual runnable scripts, outputs, Python version, precision and diagnostic tolerances. `verify.py` independently checks268200 finite moment cases and60/100-digit boundaries. `sharp_dynamics_verify.py` uses exact Fraction certificates, three100000-step genuine implicit trajectories and Decimal50/80-digit repetitions. `independent_complete_review.py` supplies a separate50000-step two-variable recurrence and exact rational majorant check. No randomness, no substitution of scalar radial minimization for the actual update. The displayed analytic proofs and independent mathematical reception, not computationalPASS, carry all complete-fiber and infinite-time quantifiers. The manuscript is real LaTeX, with source/PDF fingerprints and visual check scope in[its entry](manuscripts/sparse_regularity/README.md).
+
+C225-v2补充`upper_family_verify.py`及`upper_family_results.json`：Fraction四阶复合/端点六阶、alpha0和K反算、曲径四阶系数、Decimal80上侧p=2及更大有限p，另核strict-comp饱和的global-min分解及kappa可去值；解析证明负责全部实p量词。

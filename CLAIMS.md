@@ -1900,6 +1900,15 @@
 - **Conclusion / Evidence**：[完整构造与全空间严格极小证明](research/topics/sparse_recovery/automatic_regularity.md#sr-sharpness)；对S=zerF的同一真残差，所有指数q>1/3的局部强EB均失败；先证明缩窗后唯一驻点，再比较距离。与C224共同认证(1,2)范围内自动active正定的锐阈值3/2。
 - **Scope / Open**：不宣称全部p>3/2模型有统一指数1/3；固定p=7/4实例的匹配EB及实际fullPPA慢尾现由C227独立闭合；不将其扩大到此族全部p或全部上侧模型。径向极小化曲线不默认为PPA不变曲线，径向轴初值不可一并宣称慢尾。
 
+<a id="c225-v2"></a>
+## C225-v2 / SPARSE-SHARP-THRESHOLD-ALL-FINITE · 全部有限上侧指数的退化严格极小族
+
+- **Status**：`derived-checked`；两组独立重建并交叉攻击 p=2、p>2 与大有限 p；不认证发表优先。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：对每个实数3/2<p<infinity，存在二维可逆A、b、eta=1和非零严格局部极小点xbar=(1,1)，同一least-squares Phi_p的active Hessian奇异。令R=2^(1/p)，beta=R(p−1)/2，c4=−(p−1)(2p−3)(p+1)/24，alpha0=3R(p−1)/(2(2p−3)(p+1))，任取alpha>alpha0；Q径向/切向谱为alpha,beta，A=Q^(1/2)，c=Qxbar+(1−R/2)(1,1)，b=A^(−T)c。
+- **Conclusion / Definitions / Dependencies**：H谱{alpha,0}；正支撑邻域实解析径向IFT给h_*(t)=−beta t²/(2alpha)+O(t⁴)、V(h_*(t),t)=Kt⁴+O(t⁶)，K=−Rc4−beta²/(4alpha)>0。xbar局部唯一驻点，每个q>1/3的强真残差EB失败，缩球后同样排到完整zerF的该指数界。alpha=2alpha0给K=R(p−1)(2p−3)(p+1)/48。
+- **Evidence / Related Files**：[完整v2证明](research/topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p)、[独立接收与曲径机制](research/audit/SPARSE_THRESHOLD_RECEPTION_2026_10_09.md)、[精确Fraction/Decimal80复算](research/code/sparse_regularity/upper_family_verify.py)。与C224共同给全部有限p>1的锐active-PD阈值。
+- **Version / Counterevidence / Scope**：只将C225-v1的存在量词3/2<p<2扩到全部有限p>3/2；v1的原陈述与证据保留。p=infinity不在范围；不把C226显式p<=3/2常数扩到上侧，不把C227固定实例matching EB/真实PPA尾推广到此全族或所有上侧模型。邻域依赖p，不声称统一指数或统一窗口。发表优先继续受两篇主体全文缺口限制。
+
 <a id="c226"></a>
 ## C226-v1 / SPARSE-COMPLETE-PROX · 可计算窗口、完整纤维与变步局部线性率
 

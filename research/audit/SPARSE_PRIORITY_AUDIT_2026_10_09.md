@@ -10,7 +10,7 @@ initially read at repository revision `8ff3ae1`.
 
 Two broader novelty claims should be withdrawn now. The norm-difference model family predates this project. Support-column independence at all local minima was explicitly proved for the least-squares `l1-l2` model in 2015, without a RIP condition. Moreover, the present proof extends that support conclusion to all finite `p>1`; it has no sharp `3/2` boundary. Strict complementarity follows here for all `1<p<2`. Only **automatic positive definiteness of the active Hessian** has the demonstrated sharp `3/2` boundary. The full local-structure package has that boundary only because it includes this strongest component.
 
-No exact antecedent of the universal active-PD theorem or its all-`3/2<p<2` counterexample family was identified in the source passages actually inspected. This statement is deliberately limited to those passages. It must not be promoted to “first,” “previously unknown,” or a statement about unread sections.
+No exact antecedent of the universal active-PD theorem or its sharpness counterexamples was identified in the source passages actually inspected. This statement is deliberately limited to those passages. It must not be promoted to “first,” “previously unknown,” or a statement about unread sections.
 
 ## Evidence ledger
 
@@ -35,12 +35,19 @@ For `Phi_p(x)=||Ax-b||²/2+eta(||x||_1-||x||_p)`, with no zero columns and `eta>
 | Support columns are independent at every nonzero local minimum | Every finite `p>1` | Published `p=2` antecedent exists. The extension follows the same strict-convexity mechanism; do not advertise it as the sharp `3/2` discovery. |
 | Every inactive first-order inequality is strict | `1<p<2` | Elementary inactive-coordinate expansion here. Exact prior publication unclosed. It neither needs nor detects the `3/2` threshold. |
 | Every active Hessian is positive definite | `1<p<=3/2` | Candidate core result. Requires fourth-order moment inequality and a sixth-order endpoint argument, beyond support independence or a second-order necessary condition. Exact priority open. |
-| Strict local minima with singular active Hessian exist | Every `3/2<p<2` | Candidate sharpness result. The full-space radial minimization argument is essential; a restriction to a tangent line does not prove local minimality. Exact priority open. |
+| Strict local minima with singular active Hessian exist | Every finite `p>3/2`, under [C225-v2](../topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p) | Candidate sharpness result. The full-space radial minimization argument is essential; a restriction to a tangent line does not prove local minimality. Exact priority open. |
 | Isolation, linear residual EB and local linear proximal convergence | At the automatic nondegenerate minima, with stated small-step/basin conditions | Primarily standard local consequences. The complete-resolvent output exclusion is a useful explicit certification, not proof that a new general PPA principle is necessary. |
 
 The direct support proof is short. On the active orthant, a nonzero `z` with `A_I z=0` keeps the data term constant and the `l1` term affine. For all finite `p>1`, strict convexity of `||.||_p` makes the average of `Phi(x+tz)` and `Phi(x-tz)` strictly smaller unless `z` is radial. If `z` is radial, then `Ax=0`. Active stationarity dotted with `x` forces `||x||_1-||x||_p=0`, hence one-sparsity; the no-zero-column assumption excludes this last case. This is a project derivation using an established proof mechanism, not a claim that the 2015 authors stated the all-`p` version.
 
 There is a small scope issue in directly importing the 2015 unconstrained proof: it reduces to the fiber `Ax=Ax*`, whereas strict noncollinearity in the preceding constrained proof used a nonzero right-hand side. The radial exclusion just given closes that issue under the current assumptions. The project should credit the antecedent while retaining its own explicit hypothesis handling. The zero-column counterexample in C224 explains why one cannot discard that handling.
+
+**Versioned mathematical range update.** The original C225-v1 covers
+`3/2<p<2`. C225-v2 retains its symmetric two-dimensional construction and checks
+the same radial reduction for every finite `p>3/2`, including `p=2` and `p>2`.
+This broadens the mathematical sharpness range, not the certified novelty range.
+Strict complementarity still has only the stated `1<p<2` automatic range;
+support independence still holds for all finite `p>1`.
 
 ## Citation chain and acquisition boundary
 
@@ -51,6 +58,43 @@ Huo's official bibliography supplies the following exact links in the chain: [27
 Acquisition attempts included both search engines; exact DOI and title variants; author/institution searches; official PDF and full-HTML routes; and available institutional records. Huo's official PDF returned Cloudflare HTML locally; its full HTML redirected to the abstract. Wang's PDF route returned HTML subscription content, despite an HTTP success code. ResearchGate offered no full text for Huo and no complete main body for Wang. OpenAlex's public metadata reported no OA location for Huo; that is an acquisition clue, never theorem evidence. No access control was bypassed and no author was contacted. The title/abstract of a citing paper was not substituted for the requested originals.
 
 The remaining priority work is specific: obtain the complete Wang 2017 and Huo 2023 bodies and inspect every lemma/theorem/proof concerning minimizer structure, norm curvature, sparsity and local optimality; then follow any relevant cited original. Searching only for “Hessian” or “3/2” is insufficient because an equivalent theorem could be differently phrased. Full-text access through an authorized supplied copy or legitimate institutional route is needed to close those two gates.
+
+<a id="primary-citation-chain-follow-up"></a>
+### Primary citation-chain follow-up
+
+The following additional texts were inspected starting from revision `338367f`.
+Access to a complete PDF is distinguished from the sections actually read. These
+comparisons add evidence about the citation chain; they do not close the two
+unread-body gates above.
+
+| Primary source and actual read scope | Exact result and comparison |
+|---|---|
+| Yin–Esser–Xin, *Ratio and Difference of l1 and l2 Norms and Sparse Representation with Coherent Dictionaries*, [complete UCLA CAM13-21 author manuscript](https://ww3.math.ucla.edu/camreport/cam13-21.pdf), 14 pages. Read §III definitions and proofs, §IV model and algorithms. Huo cites the 2014 journal article as [53]. | §III, pp.7–8, defines the nonnegative feasible set `Ax=b`, explicitly excludes `b=0`, and defines “locally sparse” by absence of another feasible vector with contained support. Theorem III.1 states that **global solutions** of the constrained ratio/difference models have this property. Its proof uses strict convexity of the Euclidean norm. §IV, equation (4.5), pp.10–12, considers least squares on `x>=0, sum(x)>=r>0`; Algorithm 3 is a scaled-gradient scheme. This is an earlier sparsity mechanism, not a theorem about every unrestricted local minimum or a varying-exponent Hessian threshold. Manuscript pagination is used; journal theorem numbering is not inferred. |
+| Zhou–Yu, *Minimization of the q-ratio sparsity with 1<q<=infinity for signal recovery*, [complete arXiv:2010.03402v1](https://arxiv.org/pdf/2010.03402v1), 21 pages. Read model, §4 theorem statements, §5 derivations/algorithms and references. Huo cites its 2021 publication as [58]. | §4, p.7, explicitly separates its global recovery results from local-optimality results, whose extension from `l1/l2` to `l1/lq` it leaves conjectural. §5.1, equation (22), Theorem 3 and Algorithm 2, pp.12–14, uses the constrained subproblem `min lambda||z||_1-||z||_q` with `||Az-y||_2<=eta`; Theorem 3 relates its optimal value to the fractional optimum, and Algorithm 2 linearizes the negative norm by DCA. These are prior norm-difference subproblems and algorithms. The theorem read does not concern the active Hessian of the penalized least-squares model. The occurrence of `q=1.5` in its plots is not a sharp automatic-regularity theorem. |
+| Lou–Osher–Xin, *Computational Aspects of Constrained L1-L2 Minimization for Compressive Sensing*, [complete UCLA CAM15-08 author report](https://ww3.math.ucla.edu/camreport/cam15-08.pdf), 12 pages. Read §2 lemmas/proofs, §5 weighted-model discussion and §6 comparison. Wang–Zhang lists this computational work as [36]. | Equation (4), p.2, is constrained `l1-l2`. Lemma 3, pp.3–4, proves bounded DCA iterates under **no zero column**; Theorem 1, p.4, states stationarity of each nonzero limit point. §6, equation (22), p.9, directs the unconstrained least-squares convergence theory to its [19], Yin–Lou–He–Xin. Thus this branch leads back to an already identified primary source. Stationarity of algorithmic limit points and its no-zero-column hypothesis do not establish automatic active-Hessian positivity. |
+| Tran–Webster, *A class of null space conditions for sparse recovery via nonconvex, non-separable minimizations*, [complete arXiv:1710.07348v2, 14 February 2019](https://arxiv.org/pdf/1710.07348v2), 16 pages. Read §§1–2 and the full Theorem 3.1 statement; its complete proof has not been audited. | §1.1, p.3, expressly studies **global** sparse recovery and distinguishes algorithm-dependent local recovery. Theorem 3.1, pp.6–7, applies to nonnegative-valued, sign-invariant symmetric penalties concave on the positive orthant, with additional strict conditions (R1)/(R2) and NSP/iNSP hypotheses. Its conclusion is uniform constrained exact recovery, with the displayed equal-height exception in the iNSP branch. General nonseparable-penalty theory therefore cannot be cited as an unconditional local-Hessian theorem without a new logical bridge. |
+
+Two similarly named leads require different treatment. The complete
+[Zhao–He–Huang–Huang–Li 2020 author PDF](https://web.ece.ucsb.edu/~lip/publications/SmoothingNN-NeuralNetworks2020.pdf),
+*A smoothing neural network for minimization l1-lp in sparse signal reconstruction
+with measurement noises*, was inspected at its introduction, model and smoothing
+convergence passages. Journal p.41, equation (3), is `min ||x||_1` subject to
+`||Ax-b||_p^p<=epsilon`: here `p` describes the **residual**, not a negative
+regularizer norm. In contrast, the official
+[Zhao–He–Huang–Huang 2018 record](https://www.sciencedirect.com/science/article/abs/pii/S0893608017302939),
+*Smoothing inertial projection neural network for minimization Lp-q in sparse
+signal reconstruction*, describes the genuinely relevant difference family
+`0<p<=1<q<=2` and extends Wang–Zhang. Only its abstract/introduction preview was
+available; its full body is an additional acquisition lead, with no absence
+judgment assigned.
+
+The renewed official Wang PDF opening again yielded subscription HTML or a
+retrieval error despite search-index PDF metadata. Huo's official article still
+exposed only abstract, bibliography and metadata, and the inspected author
+homepages supplied no copy. This follow-up has not found an exact antecedent in
+the **passages read**; it neither upgrades novelty nor makes the priority search
+exhaustive. Temporary reading copies were kept outside the repository; the
+copyrighted texts were not added to git.
 
 ## Bounded paper-value assessment
 

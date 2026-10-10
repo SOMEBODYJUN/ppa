@@ -612,7 +612,8 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E395 | [SPARSE-SHARP-DATA · 3/2<p<2的二维Gram族及径向消元K>0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | implies → [SPARSE-SHARP · C225全p>3/2退化严格极小及q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | 每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。指定p7/4 matching1/3与真实慢尾另由C227闭合，不将其量词扩到此全族。；**C225构造和混合消元独立受检，derived-checked** |
+| E395 | [SPARSE-SHARP-DATA · 3/2<p<2的二维Gram族及径向消元K>0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | implies → [SPARSE-SHARP · C225-v1: 3/2<p<2的退化严格极小及q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness) | 每个3/2<p<2有可逆二维A、显示alpha/beta/c，径向消元K>0，全空间strictmin且singular activeH；隔离stationarity后排任何q>1/3。指定p7/4 matching1/3与真实慢尾另由C227闭合，不将其量词扩到此全族。；**C225构造和混合消元独立受检，derived-checked** |
+| E400 | [SPARSE-SHARP-ALL-DATA · C225-v2全部有限p>3/2二维正Gram族及alpha>alpha0](topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p) | implies → [SPARSE-SHARP-ALL · C225-v2全部有限p>3/2退化strictmin/孤立驻点/q>1/3排除](topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p) | 对每个实数3/2<p<infinity，正支撑解析性和同一径向IFT给strict fullspace min，activeH谱{alpha,0}；alpha0=3R(p−1)/(2(2p−3)(p+1))，alpha>alpha0。隔离stationarity后排q>1/3。只扩大C225-v1存在量词；不扩大C226常数或C227实际动力学，不含p=infinity。；**C225-v2两组独立重建、边界攻击及精确有限复算，derived-checked；发表优先未核** |
 
 ## 稀疏恢复范围分离
 
