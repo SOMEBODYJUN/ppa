@@ -3,18 +3,18 @@
   "files": [
     {
       "path": "sharp_sparse_regularity.tex",
-      "size_bytes": 38541,
-      "sha256": "d04ff11aa5815aa3d98fef71928c4444f784b3d321581de16443def7b8f9f5dc"
+      "size_bytes": 39718,
+      "sha256": "865639054c4b02352c2fff8db469c2f1136e9b87002d767df1f92a3e17d8165f"
     },
     {
       "path": "sharp_sparse_regularity.pdf",
-      "size_bytes": 315603,
-      "sha256": "76d3e8aa3c6161c3a229372cda9e62bb2d23d0581f3bd47006b8250a9bfbc59e"
+      "size_bytes": 318453,
+      "sha256": "744c2862b68897fb37c62e8a54922a2591654f575b5629b0a94b4d641055b973"
     }
   ],
   "pdf_pages": 12,
   "compiler": "pdfTeX 1.40.25 / actual pdflatex compilation (two completed passes)",
-  "layout_review": "All 12 pages visually inspected with system Poppler; initial pages at90/80dpi, final affected pages6-12 at85dpi. Explicit dynamics theorem moved intact to page7; no clipped content or orphan theorem heading.",
+  "layout_review": "All12 pages of the priority revision visually inspected at85dpi with system Poppler. Reference formatting changes only page12 by rendered SHA-256 comparison; final wording on page2 inspected at100dpi. Dynamics theorem remains intact on page7. No clipping, orphan reference page or other visible defect.",
   "latex_checks": {
     "errors": 0,
     "undefined_references": 0,
@@ -23,6 +23,7 @@
     "warnings": 0
   },
   "independent_source_review": "Prior full theorem/source reception retained. New two-group reconstruction validates all-finite-p sharp family and curved-path obstruction; new full-prox reader reconstructed C226/C227 and exact kappa tracking. Coordinating reader checked transcription and final displays.",
-  "scope": "Compilation and finite/visual review do not certify publication priority. Wang-Zhang 2017 main body and Huo et al. 2023 full body remain unavailable.",
-  "revision_scope": "C225-v2 extends existence quantifier only; C226 p<=3/2 quantitative constants and C227 fixed p7/4 quantifiers unchanged. Endpoint sixth proof retained. Strict-comp p>=2 unique-global-min counterexample added."
+  "scope": "Compilation and visual review do not certify publication priority. Wang-Zhang2017 main body, Huo et al.2023 full body and relevant Zhao2018 body remain unavailable. Complete2026 fractional manuscript reviewed separately; its first-order equivalence and conditional KL rates do not supply the automatic active-PD threshold.",
+  "revision_scope": "This priority-only revision adds two accurate citations and a constrained-stationarity/KL comparison, refines the remaining primary-body obligations, and uses10pt references to retain12pages. No mathematical statement, proof, parameter range, step or basin constant was changed.",
+  "independent_priority_review": "Wang reader accepted Appendix interpretation, locators, Zhao2018 metadata and bounded wording; Huo/fractional reader accepted PDF theorem locators, alpha=1 inclusion, affine active-face second-order bridge and conditional KL scope. Neither review certifies worldwide first publication."
 }

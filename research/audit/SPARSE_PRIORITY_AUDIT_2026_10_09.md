@@ -1,16 +1,33 @@
 # Sparse norm-difference structure: bounded priority audit
 
-Audit date: 2026-10-09. Object audited: C224–C226 in
-[`automatic_regularity.md`](../topics/sparse_recovery/automatic_regularity.md),
-initially read at repository revision `8ff3ae1`.
+Initial audit: 2026-10-09; renewed primary-source check: 2026-10-10.
+Object audited: C224–C228 in
+[`automatic_regularity.md`](../topics/sparse_recovery/automatic_regularity.md)
+and [`sharp_instance_dynamics.md`](../topics/sparse_recovery/sharp_instance_dynamics.md).
+The initial C224–C226 reading used revision `8ff3ae1`; the renewed priority-only
+check started from revision `b051868`.
 
 ## Verdict and scope
 
-**The sharp active-Hessian threshold is a candidate contribution, not a certified first theorem.** The priority gate remains open because the complete bodies of Wang–Zhang (2017) and Huo–Chen–Ge–Ng (2023) have not been obtained. This audit improves the former from abstract-only to substantive, precisely identified Appendix proofs; it does not relabel either paper as fully read. Failed retrieval and unproductive keyword searches provide no evidence that a theorem is absent.
+**The sharp active-Hessian threshold is a candidate contribution, not a certified first theorem.** The priority gate remains open because the complete bodies of Wang–Zhang (2017) and Huo–Chen–Ge–Ng (2023) have not been obtained. Zhao–He–Huang–Huang (2018) is an additional relevant unread-body lead. The renewed check adds a complete 2026 fractional-regularization theorem comparison and closes two title-based false leads; it does not relabel the missing papers as fully read. Failed retrieval and unproductive keyword searches provide no evidence that a theorem is absent.
 
 Two broader novelty claims should be withdrawn now. The norm-difference model family predates this project. Support-column independence at all local minima was explicitly proved for the least-squares `l1-l2` model in 2015, without a RIP condition. Moreover, the present proof extends that support conclusion to all finite `p>1`; it has no sharp `3/2` boundary. Strict complementarity follows here for all `1<p<2`. Only **automatic positive definiteness of the active Hessian** has the demonstrated sharp `3/2` boundary. The full local-structure package has that boundary only because it includes this strongest component.
 
 No exact antecedent of the universal active-PD theorem or its sharpness counterexamples was identified in the source passages actually inspected. This statement is deliberately limited to those passages. It must not be promoted to “first,” “previously unknown,” or a statement about unread sections.
+
+### Certification decision
+
+| Proposed claim | Decision as of 2026-10-10 |
+|---|---|
+| First norm-difference sparse-recovery model | Withdrawn: explicit older models have been read. |
+| First support-column independence principle | Withdrawn: the published 2015 `p=2` theorem is an exact predecessor. |
+| First automatic strict-complementarity theorem | Not certified; the project proves the wider range `1<p<2`, not a sharp `3/2` threshold. |
+| First universal automatic active-PD theorem with sharp `3/2` endpoint | Open. No match in the inspected corpus; two prioritized original bodies and one relevant secondary body remain unread. |
+| New mathematics established within the project | C224–C228 have independent proof reception. This is a mathematical evidence classification, not external publication priority. |
+
+The priority target is fixed to the **penalized least-squares model with coefficient one on the negative norm**, every nonzero local minimum, arbitrary no-zero-column `A`, and no RIP, genericity, assumed strict complementarity or assumed second-order sufficiency. A precursor expressed as automatic nondegeneracy, strict second-order sufficiency, local strong convexity or an equivalent active-face curvature conclusion must be checked even if it never says “Hessian” or “3/2”. Conversely, recovery of a global constrained solution, support rank, smoothed Hessian bounds, a conditional positive-Hessian theorem, and a conditional KL rate are not logically interchangeable with this target. Stronger prior hypotheses may give a genuine partial predecessor without proving the full target.
+
+Git revisions identify project versions, not independent publication dates. Author-controlled commit timestamps alone do not certify public availability, global precedence or a journal publication. This audit issues no priority certificate on that basis.
 
 ## Evidence ledger
 
@@ -95,6 +112,66 @@ homepages supplied no copy. This follow-up has not found an exact antecedent in
 the **passages read**; it neither upgrades novelty nor makes the priority search
 exhaustive. Temporary reading copies were kept outside the repository; the
 copyrighted texts were not added to git.
+
+<a id="renewed-priority-check"></a>
+## Renewed primary-source check, 2026-10-10
+
+Two independent readers pursued the Wang and Huo acquisition branches; the coordinating reader checked the new primary statements and the comparison below. They did not obtain either prioritized complete body. The following are positive reading results, rather than an inference from unsuccessful searches.
+
+### Complete 2026 fractional-regularization comparison
+
+**Paper facts.** Zhao–He–Ma–Wang, *A Unified Fractional Regularization Framework for Sparse Recovery*, [arXiv:2604.23184v2 PDF](https://arxiv.org/pdf/2604.23184v2), dated 27 May 2026 (v1: 25 April 2026), is an 18-page complete manuscript. An independent reader read the full paper, including every proof and Appendix. The coordinating reader checked the statements, model and algorithm, convergence arguments, Appendix and references on pp.1–12 and 16–18. The HTML rendering renumbers results; all locators below use the **PDF** numbering.
+
+| PDF locator | Actual hypothesis and conclusion | Comparison with the target |
+|---|---|---|
+| Theorem 3.1, pp.5–6 | Closed convex constraint set `Omega`, nonzero `x*`, `p>1`, `0<q<=1`, a `C1` increasing transform `phi` with positive derivative. First-order stationarity of `phi(||x||_1/||x||_p^q)` is equivalent to stationarity of constrained `||x||_1-alpha||x||_p`, with **point-dependent** `alpha=q||x*||_1/||x*||_p`. | Relevant norm-difference equivalence, but a first-order constrained assertion, not automatic second-order structure of the penalized least-squares model. The coefficient `alpha=1` is **not excluded**: choose `q=||x*||_p/||x*||_1`. |
+| Theorem 4.1, p.6; Lemmas 4.2–4.3, p.7; proofs pp.16–17 | RIP-based noisy global recovery and supporting norm inequalities. | Different hypothesis and conclusion from geometry at every local minimum. |
+| Algorithm 5.1, pp.8–9; Theorems 6.1–6.2, pp.10–11 | Proximal MM for a log-ratio objective, descent and stationary cluster points. | An MM surrogate update does not identify the complete resolvent of the original least-squares norm-difference objective. |
+| Lemma 6.3, pp.11–12; Theorem 6.4, p.12 | Relative error in the stated composite/Lipschitz setting; the MM theorem assumes a lower-bounded objective, the KL property and `beta>L`. Its rate is **conditional** on the KL exponent: linear for `theta in (0,1/2]`, sublinear for `theta>1/2`. | No automatic value of the KL exponent or active-Hessian positivity is derived here. A conditional rate cannot supply the threshold theorem. |
+
+The full theorem/proof comparison found no automatic active-PD result or sharp `3/2` statement in this version. Its reference [15] is Huo et al. (2023), and [26] is Xie–Su–Ge (2023), a RIP recovery paper. Neither reference's title transfers an unread-body theorem to this audit; in particular the complete 2026 paper cannot stand in for Huo's missing original.
+
+**Project derivation: why the first-order bridge is insufficient.** On a fixed nonzero active orthant let `a(x)=||x||_1`, `r(x)=||x||_p`,
+`U(x)=a(x)r(x)^(-q)`, and `V(x)=a(x)-alpha r(x)`, with `alpha=q a*/r*` held fixed. On an affine feasible tangent direction `d`, first-order stationarity gives `a'[d]=alpha r'[d]`. Direct differentiation then gives
+
+\[
+ U''[d,d]=r_*^{-q}V''[d,d]
+   +q(1-q)a_*r_*^{-q-2}(r'[d])^2.
+\]
+
+Indeed, use `a''[d,d]=0` in
+`U''=-2q r^(-q-1)a'[d]r'[d]-q a r^(-q-1)r''[d,d]+q(q+1)a r^(-q-2)(r'[d])^2`, and substitute the stationary identity. For `q<1` the additional term is generally nonzero. This is an explicit nonidentity of second-order forms, not a claim that the cited authors asserted such an identity, nor a counterexample to every possible local-minimum transfer theorem. Even when `q=1`, the comparison is for constrained norm-difference models; an additional argument would be needed for the Gram term and the universal least-squares curvature threshold. No fourth/sixth-order automatic-positivity proof is supplied by the cited first-order equivalence.
+
+### Two title-based false leads
+
+| Source, version and actual reading | Resolved distinction |
+|---|---|
+| Qu–Yang–Liu–Zhao–Wei, *L1-Lp Minimization via a Distributed Smoothing Neurodynamic Approach for Robust Multi-View Three-Dimensional Space Localization*, Applied Sciences 16(1), 403, issue 2026; published **30 December 2025**, [DOI 10.3390/app16010403](https://www.mdpi.com/2076-3417/16/1/403). Complete 21-page publisher PDF obtained. Read pp.1–11 and references pp.19–21, including both theorem proofs; numerical sections pp.12–18 were not audited. | Equation (7), p.6, is `min ||v||_1` subject to `||Av-b||_p^p<=epsilon`, with `1<=p<=2`. The exponent belongs to the residual constraint, not to a negative regularizer. Theorem 1 and its proof, pp.7–8, concern KKT/equilibrium; Theorem 2, pp.8–11, concerns the smoothed neural system. Its positive Lyapunov function is not a positive active Hessian. Reference [31], p.20, cites Wang–Zhang; [32] cites the analogous residual-norm model in 2020. This title is not an exact model match. |
+| Xiu–Kong–Li–Qi, *Iterative Reweighted Methods for l1-lp Minimization*, COAP 70, 201–219 (2018), online 5 January 2018, [DOI 10.1007/s10589-017-9977-7](https://link.springer.com/article/10.1007/s10589-017-9977-7). Official abstract and indexed model excerpt read; the author-hosted complete PDF was **not** obtained. | The official abstract fixes `0<p<1`; the indexed equation (5) uses `||Ax-b||_1+lambda||x||_p^p`. This is not subtraction of the two decision-variable norms for `p>1`. The model/parameter mismatch closes this title-based lead; no whole-paper absence claim is made from a preview. |
+
+The two obtained 2026 PDFs have pinned URLs, sizes, SHA-256 fingerprints and explicit reading scopes in [the manifest](../literature/sparse_regularity/manifest.json). Temporary reading copies remain outside git. No priority conclusion depends on the excluded numerical sections.
+
+### Refined Appendix interpretation and remaining acquisition gates
+
+All seven exposed Wang–Zhang Appendix proof blocks were checked again: Lemma 1 (24)–(26), Theorem 1 (27)–(32), Lemma 2 (33)–(39), Theorem 2, Lemma 3 (40)–(48), Theorem 3 (49)–(51), and Theorem 4 (52)–(55) and its closing argument. **Theorem 2's `B(x)=||Ax-b||^2/2` is a constraint-feasibility auxiliary:** along its neural trajectory `dot B=-2B/epsilon`. The appearance of a squared residual there is not a theorem about local minima of the penalized least-squares objective. Locators are proof headings and formula numbers, not invented journal page numbers.
+
+Having all exposed Appendix proofs still does not establish the complete main-body result inventory. Inline proofs, corollaries or differently phrased structural remarks in the missing main sections remain unexamined. Thus this check supports a seven-block comparison, not a full-article absence certificate.
+
+The following official routes were actually checked:
+
+- Wang's [official institutional profile](https://math.sgmtu.edu.cn/info/1096/1069.htm), reached through the institution's staff directory, has no manuscript attachment or personal-homepage link. Zhang's [institutional profile](https://eie.gzu.edu.cn/2022/0819/c21642a226651/page.htm) lists the 2017 article at item 15 and the later KKT-smoothing article at item 8, without manuscript downloads. The ResearchGate preview only exposed the journal's first page, p.4326, not the 28-page body.
+- Huo's [current institutional profile](https://math.haust.edu.cn/info/2197/10843.htm) confirms a 2023 doctorate at CAEP. The [official CAEP literature navigation](https://site.gscaep.ac.cn/) explicitly marks its literature system as intranet-only. That access boundary was respected; no intranet resource was accessed. No public corresponding thesis chapter was obtained. The HKBU paper record and checked author pages supplied no downloadable body.
+- Zhao–He–Huang–Huang (2018), *Smoothing inertial projection neural network for minimization Lp-q in sparse signal reconstruction*, Neural Networks 99, 31–41, [DOI 10.1016/j.neunet.2017.12.008](https://doi.org/10.1016/j.neunet.2017.12.008), is still a relevant secondary gate. Its [PubMed record](https://pubmed.ncbi.nlm.nih.gov/29306802/) confirms online publication **20 December 2017**, with issue date March 2018. The [official author profile](https://ceie.swu.edu.cn/info/1114/5898.htm) lists it without a manuscript attachment. Its preview does not support a claim about all body theorems.
+
+Acquisition metadata for Wang and Zhao supplied no additional OA location; that is only a search boundary. Equivalent phrases such as nondegeneracy, strict second-order sufficiency and local strong convexity were also searched. None of these unsuccessful routes count as evidence of theorem absence. No email was sent, no access control was bypassed, and no unread source was used as a mathematical dependency.
+
+### Manuscript-safe contribution statement and next decisive evidence
+
+The current admissible statement is: **“We prove a sharp automatic active-Hessian positivity threshold at `p=3/2` for every nonzero local minimum of the stated least-squares norm-difference model, and derive certified complete proximal dynamics. No exact predecessor was identified in the primary passages reviewed; publication priority remains unverified.”** The mathematical assertion is backed by the project proofs. Its first-publication status is not asserted.
+
+The next decisive evidence is the complete legally available Wang 2017 and Huo 2023 bodies, together with any relevant structural theorem they cite; the relevant Zhao 2018 body must also be resolved. Check exact model coefficients, all-local-minimum versus stationary/global quantifiers, matrix assumptions, exponent ranges, active-face curvature and upper-side degenerate strict minima. If only one side of the threshold is prior, credit that theorem and reassess the endpoint/sharpness contribution separately. If the complete sharp theorem is prior, retract that novelty claim; the ordinary proximal consequences cannot rescue it by changing the algorithm name. Resolving these gates would permit a stronger **bounded literature assessment**, not a proof that every publication worldwide has been searched.
+
+**Independent reception of this revision.** The Wang reader accepted the seven Appendix locators, feasibility-auxiliary interpretation, Zhao2018 metadata and preview boundary, and the bounded certification wording. The Huo/fractional reader accepted the PDF theorem locators, `alpha=1` inclusion, affine-active-face second-order calculation, conditional KL interpretation and remaining body gates. Their reception covers source comparison and wording; it does not re-certify C224–C228 or turn an acquisition failure into a priority proof.
 
 ## Bounded paper-value assessment
 

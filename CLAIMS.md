@@ -1907,7 +1907,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：对每个实数3/2<p<infinity，存在二维可逆A、b、eta=1和非零严格局部极小点xbar=(1,1)，同一least-squares Phi_p的active Hessian奇异。令R=2^(1/p)，beta=R(p−1)/2，c4=−(p−1)(2p−3)(p+1)/24，alpha0=3R(p−1)/(2(2p−3)(p+1))，任取alpha>alpha0；Q径向/切向谱为alpha,beta，A=Q^(1/2)，c=Qxbar+(1−R/2)(1,1)，b=A^(−T)c。
 - **Conclusion / Definitions / Dependencies**：H谱{alpha,0}；正支撑邻域实解析径向IFT给h_*(t)=−beta t²/(2alpha)+O(t⁴)、V(h_*(t),t)=Kt⁴+O(t⁶)，K=−Rc4−beta²/(4alpha)>0。xbar局部唯一驻点，每个q>1/3的强真残差EB失败，缩球后同样排到完整zerF的该指数界。alpha=2alpha0给K=R(p−1)(2p−3)(p+1)/48。
 - **Evidence / Related Files**：[完整v2证明](research/topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p)、[独立接收与曲径机制](research/audit/SPARSE_THRESHOLD_RECEPTION_2026_10_09.md)、[精确Fraction/Decimal80复算](research/code/sparse_regularity/upper_family_verify.py)。与C224共同给全部有限p>1的锐active-PD阈值。
-- **Version / Counterevidence / Scope**：只将C225-v1的存在量词3/2<p<2扩到全部有限p>3/2；v1的原陈述与证据保留。p=infinity不在范围；不把C226显式p<=3/2常数扩到上侧，不把C227固定实例matching EB/真实PPA尾推广到此全族或所有上侧模型。邻域依赖p，不声称统一指数或统一窗口。发表优先继续受两篇主体全文缺口限制。
+- **Version / Counterevidence / Scope**：只将C225-v1的存在量词3/2<p<2扩到全部有限p>3/2；v1的原陈述与证据保留。p=infinity不在范围；不把C226显式p<=3/2常数扩到上侧，不把C227固定实例matching EB/真实PPA尾推广到此全族或所有上侧模型。邻域依赖p，不声称统一指数或统一窗口。发表优先受重点原文及相关引用链正文缺口限制，见[有范围的优先裁决](research/audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#renewed-priority-check)；不以内部数学接收认证首创。
 
 <a id="c226"></a>
 ## C226-v1 / SPARSE-COMPLETE-PROX · 可计算窗口、完整纤维与变步局部线性率

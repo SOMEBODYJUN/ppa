@@ -1,5 +1,5 @@
 {
-  "audit_date": "2026-10-09",
+  "audit_date": "2026-10-10",
   "files": [
     {
       "file": "yin_lou_he_xin_2015_author.pdf",
@@ -46,6 +46,31 @@
   ],
   "unobtained_full_bodies": [
     "Wang-Zhang 2017 DOI10.1007/s00034-017-0532-7",
-    "Huo-Chen-Ge-Ng 2023 DOI10.1137/22M1525363"
+    "Huo-Chen-Ge-Ng 2023 DOI10.1137/22M1525363",
+    "Zhao-He-Huang-Huang 2018 DOI10.1016/j.neunet.2017.12.008; relevant secondary citation-chain lead"
+  ],
+  "external_reading_records": [
+    {
+      "source_url": "https://arxiv.org/pdf/2604.23184v2",
+      "title": "A Unified Fractional Regularization Framework for Sparse Recovery",
+      "version": "arXiv:2604.23184v2, 27 May 2026; 18-page complete PDF",
+      "bytes": 1731955,
+      "sha256": "de65b1bb0ef25cb1da464622f59d9bd6e70831eb3ca69a7f7dc1185db9191365",
+      "retrieval_date": "2026-10-10",
+      "read_scope": "Independent reader: all18pages, all proofs and Appendix. Coordinating reader: pp1-12 and16-18, including all theorem statements, algorithm, convergence and Appendix. PDF result numbering used; HTML renumbering differs.",
+      "repository_copy": false,
+      "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#renewed-priority-check"
+    },
+    {
+      "source_url": "https://www.mdpi.com/2076-3417/16/1/403/pdf",
+      "title": "L1-Lp Minimization via a Distributed Smoothing Neurodynamic Approach for Robust Multi-View Three-Dimensional Space Localization",
+      "version": "Published 30 December 2025; Applied Sciences16(1)403, issue2026; 21-page complete PDF",
+      "bytes": 1134577,
+      "sha256": "d059dcfdaf46b08d7b5e6b3367b2cc222c9c22876a1bdceee30d93e380b31964",
+      "retrieval_date": "2026-10-10",
+      "read_scope": "Coordinating reader: pp1-11 and19-21, including definitions, model Eq7 and both theorem proofs; numerical sections pp12-18 not audited.",
+      "repository_copy": false,
+      "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#renewed-priority-check"
+    }
   ]
 }
