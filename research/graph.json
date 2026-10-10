@@ -3236,6 +3236,24 @@
       "label": "C225-v2全部有限p>3/2退化strictmin/孤立驻点/q>1/3排除",
       "file": "topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-SEXTIC-DATA",
+      "label": "固定p3 equality Gram族、全域原Phi/F",
+      "file": "topics/sparse_recovery/sextic_boundary.md#sx-data",
+      "evidence_status": "canonical"
+    },
+    {
+      "id": "SPARSE-SEXTIC-EB",
+      "label": "C229六次strictmin/孤立驻点/锐strong真EB1/5",
+      "file": "topics/sparse_recovery/sextic_boundary.md#sx-proof",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPARSE-QUARTIC-KL",
+      "label": "C230锐KL3/4及经典能量/点距阶上界",
+      "file": "topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -7887,6 +7905,29 @@
       "relation": "implies",
       "scope": "对每个实数3/2<p<infinity，正支撑解析性和同一径向IFT给strict fullspace min，activeH谱{alpha,0}；alpha0=3R(p−1)/(2(2p−3)(p+1))，alpha>alpha0。隔离stationarity后排q>1/3。只扩大C225-v1存在量词；不扩大C226常数或C227实际动力学，不含p=infinity。",
       "status": "C225-v2两组独立重建、边界攻击及精确有限复算，derived-checked；发表优先未核"
+    },
+    {
+      "id": "E401",
+      "topic": "稀疏恢复上侧指数范围",
+      "inputs": [
+        "SPARSE-SEXTIC-DATA"
+      ],
+      "output": "SPARSE-SEXTIC-EB",
+      "relation": "implies",
+      "scope": "只固定p3、eta1、Q=R/8[[5,-3],[-3,5]]及真实least-squares兼容c；alpha=alpha0。radial IFT给g=-2t²-2t⁴+O(t⁶)和正Rt⁶/3；全二维真EB1/5，任意q>1/5失败，缩球后距离全zerF相等。局部存在常数，无完整PPA声明。",
+      "status": "C229-v1两组独立重构与转录接收，derived-checked"
+    },
+    {
+      "id": "E402",
+      "topic": "稀疏恢复经典KL对照",
+      "inputs": [
+        "SPARSE-QUARTIC-DATA",
+        "SPARSE-QUARTIC-PROX"
+      ],
+      "output": "SPARSE-QUARTIC-KL",
+      "relation": "conditional",
+      "scope": "固定C227原模型：radial analytic splitting→局部微分同胚，缩小邻域N给锐KL3/4；N常数不覆盖整个B。任意固定0<lambda≤1/128、U初值的完整globalprox已留域并收敛，最终进入N，真实下降+barrier给e=O(k^-2)、point=O(k^-1/2)。仅阶上界，不推出精确非轴常数或轴慢尾。",
+      "status": "C230-v1自足normal form/实际下降/标量比较独立受检，derived-checked"
     }
   ]
 }

@@ -26,7 +26,8 @@ that every nonzero local minimum has a positive definite active Hessian
 when $1<p\le3/2$, assuming only that the sensing matrix has no zero
 columns. A moment identity excludes null directions below the threshold;
 at its endpoint the quartic equality case is excluded by a negative
-sixth-order objective term. For every finite $p>3/2$, an invertible
+sixth-order objective term; an independent curved-path obstruction
+also covers the endpoint. For every finite $p>3/2$, an invertible
  two-dimensional example has a strict local minimum with singular active
 Hessian. Strict complementarity and support independence have wider
 ranges and are stated separately. An explicit common radius and positive
@@ -37,6 +38,9 @@ convergence. For a specified $p=7/4$ example we obtain the sharp true
 residual exponent $1/3$ and an exact $k^{-1/2}$ asymptotic for the actual
 complete proximal iteration, with a separate geometric law on the radial
 axis. No invariance of the radial critical curve is assumed.
+An additional sextic example has sharp residual exponent $1/5$,
+excluding a universal upper-side exponent $1/3$. The quartic example's
+sharp KL exponent $3/4$ and the classical order bounds are proved directly.
 \end{abstract}
 
 \section{Model, scope, and relation to earlier work}
@@ -84,6 +88,18 @@ equivalence includes a point-dependent norm coefficient equal to one;
 it does not itself prove automatic active curvature for the penalized
 least-squares model. A conditional KL rate likewise does not supply
 the universal curvature threshold.
+
+Nigam--Yadav\cite{NigamYadav}, Theorems~6.1 and~6.4, concern
+block/spectral norm-difference recovery under RIP in constrained models;
+their singleton-block specialization matches the regularizer but not
+the penalized all-local-minimum statement. Generic smoothing
+theory\cite{BianChen} establishes stationary cluster points for its smoothed
+neural ODE under smoothing, Slater, and bounded-feasibility assumptions
+(with level-bounded variants), without automatic positive curvature.
+For the specified quartic example we explicitly prove the KL exponent
+and verify the standard sufficient-decrease/relative-error
+conditions\cite{ABS}. Its exact proximal asymptotic is a refinement
+of the classical order estimate, not evidence that those tools fail.
 
 \paragraph{Priority boundary.}
 The original published 2015 support-independence proofs have been read.
@@ -283,6 +299,63 @@ If $q>1/3$, the quotient $\norm{x-\bar x}/r_F(x)^q$ diverges.
 Stationary isolation makes the same statement valid for distance to the
 entire stationary set in a sufficiently small ball. This proof gives no
 uniform exponent for all models with $p>3/2$.
+\end{proof}
+
+\begin{proposition}[A sextic limit on the upper-side residual claim]
+\label{prop:sextic}
+For $p=3$, $\eta=1$, $R=2^{1/3}$, let
+\[
+ Q=\frac R8\begin{pmatrix}5&-3\\-3&5\end{pmatrix},\quad
+ A=\frac{\sqrt R}{4}\begin{pmatrix}3&-1\\-1&3\end{pmatrix},\quad
+ c=(1-R/4)(1,1),\quad b=\frac{2(1-R/4)}{\sqrt R}(1,1).
+\]
+Then $A^TA=Q$, $A^Tb=c$, and $A$ is invertible.
+The point $\bar x=(1,1)$ is a stationary-isolated strict local minimum
+with active Hessian eigenvalues $R/4,0$ and sharp strong true-residual
+error-bound exponent $1/5$. Thus exponent $1/3$ is not valid at
+every upper-side local minimum.
+\end{proposition}
+\begin{proof}
+Stationarity follows from $\nabla\norm{\bar x}_3=(R/2)(1,1)$.
+Write $x=(1+h+t,1+h-t)$, $s=1+h$, and
+$V(h,t)=\Phi(x)-\Phi(\bar x)$. On a positive-coordinate neighborhood,
+\[
+ \frac VR=\frac{h^2}{4}+t^2-s\bigl[(1+3t^2/s^2)^{1/3}-1\bigr]
+ =\frac{h^2}{4}+\frac{ht^2}{1+h}+\frac{t^4}{(1+h)^3}
+ -\frac{5t^6}{3(1+h)^5}+O(t^8).
+\]
+The analytic radial equation $V_h=0$ has a unique local even analytic
+solution $g(t)$, since $V_{hh}(0,0)=R/2$.
+Writing $g(t)=a_2t^2+a_4t^4+O(t^6)$, its degree-two/four equations are
+$a_2/2+1=0$ and $a_4/2-2a_2-3=0$. Consequently
+\[
+ g(t)=-2t^2-2t^4+O(t^6),\quad
+ \psi(t)=V(g(t),t)=Rt^6/3+O(t^8),\quad
+ \psi'(t)=2Rt^5+O(t^7).
+\]
+Indeed the fourth coefficient is $a_2^2/4+a_2+1=0$ and the sixth
+is $a_2a_4/2+a_4-a_2^2-3a_2-5/3=1/3$.
+After shrinking, radial Taylor integration gives
+$V(h,t)\ge R|h-g(t)|^2/8+Rt^6/6$, proving strictness.
+The radial equation followed by $\psi'=0$ proves stationary isolation.
+Let $u=h-g(t)$ and $L=\sup|V_{ht}|<\infty$ on a smaller closed rectangle.
+Then
+\[
+ |u|\le4|V_h|/R,\qquad R|t|^5\le|\psi'(t)|
+ \le |V_t|+L|u|,\qquad
+ (V_h^2+V_t^2)^{1/2}=\sqrt2\,r_F(x).
+\]
+These inequalities, $g(t)=O(t^2)$, and a further shrinking to
+$r_F\le1$ give $\norm{x-\bar x}\le C r_F(x)^{1/5}$ for some $C>0$.
+On $g$, the distance is asymptotic to $\sqrt2|t|$ and the residual
+to $\sqrt2 R|t|^5$; every exponent $q>1/5$ therefore fails
+for every proposed constant and neighborhood.
+In a sufficiently small ball, distance to the entire stationary set
+equals distance to $\bar x$ by isolation.
+The active Hessian is $R\bigl(\begin{smallmatrix}1&1\\1&1\end{smallmatrix}\bigr)/8$.
+This is the equality parameter $\alpha=\alpha_0$ at $p=3$,
+outside the quartic family's condition $\alpha>\alpha_0$.
+No complete-proximal basin or PPA law for this sextic example is asserted.
 \end{proof}
 
 \begin{remark}[Zero columns, the origin, and other stationary points]
@@ -533,22 +606,22 @@ f(u)=\left(\frac{(1+u)^{7/4}+(1-u)^{7/4}}2\right)^{4/7},\qquad
 
 The eigenvalues of \(Q\) are \(2R\) in the radial direction \((1,1)\) and \(3R/8\) in the tangent direction \((1,-1)\). Substitution, including \(c=A^Tb\), gives the exact identity
 
-\[
-\frac{\varphi(h,t)}R=2h^2+\frac38t^2-s(f(u)-1). \tag{D.1}\label{eq:dyn1}
-\]
+\begin{equation}
+\frac{\varphi(h,t)}R=2h^2+\frac38t^2-s(f(u)-1). \label{eq:dyn1}
+\end{equation}
 
 In particular \(\nabla\Phi(\bar x)=0\). The symmetric binomial expansion gives
 
-\[
-f(u)=1+\frac38u^2-\frac{11}{256}u^4+E(u). \tag{D.2}\label{eq:dyn2}
-\]
+\begin{equation}
+f(u)=1+\frac38u^2-\frac{11}{256}u^4+E(u). \label{eq:dyn2}
+\end{equation}
 
 Here, for \textbf{all real} \(|u|\le1/16\),
 
-\[
+\begin{equation}
 |E(u)|\le5|u|^6,\quad |E'(u)|\le28|u|^5,\quad
-|E''(u)|\le140|u|^4. \tag{D.3}\label{eq:dyn3}
-\]
+|E''(u)|\le140|u|^4. \label{eq:dyn3}
+\end{equation}
 
 For completeness these bounds have an analytic certificate, rather than a sampled verification. Let \(G(u)=((1+u)^{7/4}+(1-u)^{7/4})/2\). Its even binomial coefficients from degree two onward are positive; after degree four their absolute values decrease. For complex \(|u|\le r=7/8\),
 
@@ -571,10 +644,10 @@ Therefore the analytic branch \(G^{4/7}\) with value one at zero is defined on a
 
 The inequalities at zero are interpreted by continuity. This proves \eqref{eq:dyn3} on the full interval. Direct expansion of \eqref{eq:dyn1} consequently gives
 
-\[
+\begin{equation}
 \frac{\varphi}R=2h^2+\frac38ht^2+\frac{11}{256}t^4
-+O(h^2t^2+|h|t^4+t^6). \tag{D.4}\label{eq:dyn4}
-\]
++O(h^2t^2+|h|t^4+t^6). \label{eq:dyn4}
+\end{equation}
 
 \subsection{Star inequality, strictness, and the sharp residual exponent}
 
@@ -587,21 +660,21 @@ D(h,t):=\langle x-\bar x,\nabla\Phi(x)\rangle
 
 Differentiating \eqref{eq:dyn1} and using \eqref{eq:dyn2} gives
 
-\[
+\begin{equation}
 \frac DR=4h^2+\frac98hu^2+\frac34h^2u^2
 +\left(\frac{11}{64}+\frac{11h}{256}\right)u^4-hE(u)-uE'(u).
-\tag{D.5}\label{eq:dyn5}
-\]
+\label{eq:dyn5}
+\end{equation}
 
 On \(\mathcal B\), \(|u|\le1/31<1/16\), so \eqref{eq:dyn3} applies. Complete the first square in \eqref{eq:dyn5}, discard the nonnegative term \(3h^2u^2/4\), and bound the remaining terms:
 
-\[
+\begin{equation}
 \frac DR\ge4\left(h+\frac9{64}u^2\right)^2+
 \left[\frac{95}{1024}-\frac{11}{8192}
 -\frac{28+5/32}{961}\right]u^4
 \ge4\left(h+\frac9{64}u^2\right)^2+\frac1{32}u^4.
-\tag{D.6}\label{eq:dyn6}
-\]
+\label{eq:dyn6}
+\end{equation}
 
 The last rational bracket exceeds \(1/32\). Also \((33/32)^4<2\), so
 
@@ -612,16 +685,16 @@ h^2+t^4\le2\left(h+\frac9{64}u^2\right)^2+
 
 Comparison with \eqref{eq:dyn6} yields the conservative full-box bound
 
-\[
-\boxed{D(h,t)\ge\frac R{128}(h^2+t^4).} \tag{D.7}\label{eq:dyn7}
-\]
+\begin{equation}
+\boxed{D(h,t)\ge\frac R{128}(h^2+t^4).} \label{eq:dyn7}
+\end{equation}
 
 One can sharpen \eqref{eq:dyn7} to \(R(h^2+t^4)/64\) by keeping \((33/32)^4\) rather than replacing it by two: the required rational check is
 \((2(9/64)^2+(33/32)^4)/64<1/32\). We use this certified sharper bound below:
 
-\[
-D(h,t)\ge\frac R{64}(h^2+t^4). \tag{D.8}\label{eq:dyn8}
-\]
+\begin{equation}
+D(h,t)\ge\frac R{64}(h^2+t^4). \label{eq:dyn8}
+\end{equation}
 
 Every ray segment from \(\bar x\) to a point of \(\mathcal B\) stays in \(\mathcal B\). Integrating \eqref{eq:dyn8} along that segment gives
 
@@ -661,6 +734,15 @@ Thus on this curve \(d\sim\sqrt2|t|\) whereas
 
 \subsection{Complete-fiber exclusion, global proximal equality, and invariance}
 
+For completeness, the critical curve just used is not invariant.
+For an output on it, the exact inverse-proximal input has the same $h$
+and tangent coordinate $t+\lambda\varphi_t(h_*(t),t)/2$. For fixed $\lambda>0$,
+\[
+ h_*\bigl(t+\lambda\varphi_t(h_*(t),t)/2\bigr)-h_*(t)
+ =-\frac{39\lambda R}{4096}t^4+O(t^6),
+\]
+which is nonzero for small $t\ne0$.
+
 Let \(g(x)=\|x\|_1-\|x\|_{7/4}\). It is globally Euclidean-Lipschitz with constant
 \(L_p=\sqrt2+2^{1/14}\). Every Fr\'echet subgradient has norm at most \(L_p\), by testing the subgradient inequality in unit directions against the Lipschitz upper bound; every limiting subgradient inherits this bound. The exact smooth-sum rule, valid including at zero, is
 
@@ -670,10 +752,10 @@ F(y)=Qy-c+\partial_{\rm lim}g(y).
 
 This does not assert the invalid norm-gradient formula at zero. Given \textbf{any} complete resolvent output \(y\) at \(z\), choose \(w\in\partial_{\rm lim}g(y)\) with \(z-y=\lambda(Qy-c+w)\). Then
 
-\[
+\begin{equation}
 (I+\lambda Q)(y-z)=\lambda(c-Qz-w),\qquad
-\|y-z\|_2\le\lambda(\|Qz-c\|_2+L_p), \tag{D.9}\label{eq:dyn9}
-\]
+\|y-z\|_2\le\lambda(\|Qz-c\|_2+L_p), \label{eq:dyn9}
+\end{equation}
 
 because \(Q\succ0\). The elementary bounds
 
@@ -683,18 +765,18 @@ because \(Q\succ0\). The elementary bounds
 
 give, for \(z\in\mathcal U\),
 
-\[
+\begin{equation}
 \|Qz-c\|_2+L_p
 \le\sqrt2(1-R/2)+2R/64+L_p
-<\frac37+\frac3{64}+\frac52<3. \tag{D.10}\label{eq:dyn10}
-\]
+<\frac37+\frac3{64}+\frac52<3. \label{eq:dyn10}
+\end{equation}
 
 Therefore \textbf{every} complete output satisfies
 
-\[
+\begin{equation}
 \|y-\bar x\|_2<1/64+3/128=5/128,
-\quad |h_y|,|t_y|<5/(128\sqrt2)<1/32. \tag{D.11}\label{eq:dyn11}
-\]
+\quad |h_y|,|t_y|<5/(128\sqrt2)<1/32. \label{eq:dyn11}
+\end{equation}
 
 No localization of outputs was assumed in deriving \eqref{eq:dyn9}. In particular remote nonsmooth outputs and zero are excluded before using any smooth formula.
 
@@ -715,12 +797,12 @@ For existence, \(\Phi\) is continuous and nonnegative; hence its proximal object
 
 Finally, write \(z=y+\lambda\nabla\Phi(y)\). By \eqref{eq:dyn8},
 
-\[
+\begin{equation}
 \|z-\bar x\|_2^2
 =\|y-\bar x\|_2^2+2\lambda D(h_y,t_y)
 +\lambda^2\|\nabla\Phi(y)\|_2^2
-\ge\|y-\bar x\|_2^2. \tag{D.12}\label{eq:dyn12}
-\]
+\ge\|y-\bar x\|_2^2. \label{eq:dyn12}
+\end{equation}
 
 Thus \(y\in\mathcal U\), establishing the stated invariant ball for the complete resolvent and global proximal map.
 
@@ -736,22 +818,22 @@ Therefore \(h_k,t_k\to0\), and \(x_k\to\bar x\). This argument uses the ordinary
 
 The exact coordinate form of those equations is
 
-\[
+\begin{equation}
 h_k=h_{k+1}+\frac\lambda2\varphi_h(h_{k+1},t_{k+1}),\qquad
-t_k=t_{k+1}+\frac\lambda2\varphi_t(h_{k+1},t_{k+1}). \tag{D.13}\label{eq:dyn13}
-\]
+t_k=t_{k+1}+\frac\lambda2\varphi_t(h_{k+1},t_{k+1}). \label{eq:dyn13}
+\end{equation}
 
 The factor \(1/2\) comes from the Euclidean metric
 \(\|x-x_k\|_2^2=2[(h-h_k)^2+(t-t_k)^2]\).
 From \eqref{eq:dyn1}--\eqref{eq:dyn3}, on the box,
 
-\[
+\begin{equation}
 \begin{aligned}
 \varphi_h/R&=4h+\tfrac38t^2+O(|h|t^2+t^4),\\
 \varphi_t/R&=\tfrac34ht+\tfrac{11}{64}t^3
  +O(h^2|t|+|h||t|^3+|t|^5). \end{aligned}
-\tag{D.14}\label{eq:dyn14}
-\]
+\label{eq:dyn14}
+\end{equation}
 
 All remainders here are analytic with uniform bounds on the box; these are local asymptotic estimates derived from the explicit certificate, not assumptions about the trajectory.
 
@@ -764,19 +846,19 @@ If \(t\ne0\), its exact tangent derivative is
 
 By \eqref{eq:dyn3}, \(|h|,|t|\le1/32\), and \(s\ge31/32\), the absolute value is at most
 
-\[
+\begin{equation}
 \frac3{124}+\frac{11}{64\cdot32^2}(32/31)^3
-+\frac{28}{32^4}(32/31)^5<\frac1{32}. \tag{D.15}\label{eq:dyn15}
-\]
++\frac{28}{32^4}(32/31)^5<\frac1{32}. \label{eq:dyn15}
+\end{equation}
 
 The bound extends continuously to \(t=0\). Since \(\lambda R/64<1\), the factor in the second equation of \eqref{eq:dyn13},
 \(1+(\lambda/2)(\varphi_t/t)\), is positive everywhere in the box. Consequently \(t_{k+1}=0\) if and only if \(t_k=0\), and nonzero tangent coordinates keep their sign. On the axis \(t=0\), \eqref{eq:dyn1} gives \(\varphi=2Rh^2\), so \eqref{eq:dyn13} gives exactly the geometric formula in the theorem.
 
 Now suppose \(t_0\ne0\). The tangent multiplier tends to one as \(h_k,t_k\to0\), and therefore
 
-\[
-\frac{t_k}{t_{k+1}}\longrightarrow1. \tag{D.16}\label{eq:dyn16}
-\]
+\begin{equation}
+\frac{t_k}{t_{k+1}}\longrightarrow1. \label{eq:dyn16}
+\end{equation}
 
 Set \(a=1+2\lambda R>1\), \(b_0=3\lambda R/16\), and \(q=1/a<1\). Introduce the analytic even function
 \[
@@ -786,14 +868,14 @@ The value at zero is its removable analytic extension. Exact differentiation
 of \eqref{eq:dyn1} gives \(\varphi_h/R=4h+u^2\kappa(u)\).
 For the actual output with \(s_{k+1}=1+h_{k+1}\), the first equation of
 \eqref{eq:dyn13} therefore yields the exact tracking recurrence
-\[
+\begin{equation}
 \begin{aligned}
 w_{k+1}&=q\left(\frac{t_k}{t_{k+1}}\right)^2w_k
 -q\frac{\lambda R}{2}\frac{\kappa(t_{k+1}/s_{k+1})}{s_{k+1}^2},\\
 w_k&=h_k/t_k^2.
 \end{aligned}
-\tag{D.17}\label{eq:dyn17}
-\]
+\label{eq:dyn17}
+\end{equation}
 No boundedness of \(w_k\) is presumed. By \eqref{eq:dyn16} and convergence
 to the origin, the multiplier tends to \(q<1\) and the forcing tends to
 \(-qb_0\). Choose any \(\theta\in(q,1)\); eventually the multiplier has
@@ -801,19 +883,19 @@ absolute value below \(\theta\) and the forcing is bounded. Iterating this
 scalar inequality first proves \(w_k\) bounded. Subtract the fixed point
 \(-qb_0/(1-q)\): the new forcing tends to zero, and the same contraction
 then proves convergence. Hence
-\[
+\begin{equation}
 \frac{h_k}{t_k^2}\to-\frac{qb_0}{1-q}=-\frac3{32}.
-\tag{D.18}\label{eq:dyn18}
-\]
+\label{eq:dyn18}
+\end{equation}
 
 This is the required radial-following proof. It is valid for all off-axis initial points in the certified ball; it neither assumes nor requires invariance of the radial critical curve.
 
 Substitute \eqref{eq:dyn18} into the second equation of \eqref{eq:dyn13}, using \eqref{eq:dyn14} at the actual output. The remainders become \(o(t_{k+1}^2)\) after division by \(t_{k+1}\), and
 
-\[
+\begin{equation}
 t_k=t_{k+1}\left[1+
-\frac{13\lambda R}{256}t_{k+1}^2+o(t_{k+1}^2)\right]. \tag{D.19}\label{eq:dyn19}
-\]
+\frac{13\lambda R}{256}t_{k+1}^2+o(t_{k+1}^2)\right]. \label{eq:dyn19}
+\end{equation}
 
 Writing \(\tau_k=|t_k|>0\), expansion of the reciprocal square gives
 
@@ -827,6 +909,64 @@ Telescoping and taking Ces\`aro means yields
 \(\|x_k-\bar x\|_2=\sqrt2\sqrt{h_k^2+t_k^2}\sim\sqrt2\tau_k\).
 This proves the stated exact distance limit.
 
+
+\subsection{Sharp classical KL exponent and order bounds}
+\begin{proposition}\label{prop:kl}
+For the fixed quartic instance, on a sufficiently small neighborhood
+of $\bar x$, $r_F(x)\ge c_*(\Phi(x)-\Phi(\bar x))^{3/4}$
+for some $c_*>0$. The exponent $3/4$ is sharp.
+Every fixed-step trajectory of Theorem~\ref{thm:slow}
+has energy $O(k^{-2})$ and point distance $O(k^{-1/2})$.
+The KL constants here are local existence constants, not additional
+explicit constants on the whole certified box.
+\end{proposition}
+\begin{proof}
+Let $H(t)=h_*(t)$, $K=13R/512$, and
+$V(t)=\varphi(H(t),t)=Kt^4+O(t^6)$.
+For $d=h-H(t)$, the exact Taylor splitting is
+\[
+ \varphi(H(t)+d,t)=V(t)+a(d,t)d^2,\quad
+ a(d,t)=\int_0^1(1-s)\varphi_{hh}(H(t)+sd,t)\,ds,\quad a(0,0)=2R.
+\]
+Thus $v=d\sqrt{a(d,t)}$, with $t$ unchanged, is an analytic local
+diffeomorphism. Its Jacobian and inverse are bounded after shrinking.
+The objective is exactly $v^2+V(t)$, so its energy is comparable to
+$v^2+t^4$ and the original true residual to $|v|+|t|^3$.
+For $|v|\le1$ the energy to the power $3/4$ is bounded by
+$C(|v|^{3/2}+|t|^3)\le C(|v|+|t|^3)\le C'r_F$.
+All original coordinates are positive, so the gradient is the
+limiting-subdifferential residual. On $d=0$ the energy is asymptotic
+to $Kt^4$, and the residual to $4K|t|^3/\sqrt2$, proving that any
+exponent $\theta<3/4$ fails.
+
+The already certified complete PPA converges to $\bar x$ and
+eventually enters this smaller neighborhood. Global-proximal descent
+and the exact proximal equation give, with $e_k=\Phi(x_k)-\Phi(\bar x)$,
+\[
+ e_k-e_{k+1}\ge\frac{\norm{x_k-x_{k+1}}^2}{2\lambda}
+ =\frac\lambda2 r_F(x_{k+1})^2
+ \ge a_\lambda e_{k+1}^{3/2},\qquad a_\lambda=\lambda c_*^2/2.
+\]
+Reindex at neighborhood entry and choose
+$B\ge\max\{e_0,36/a_\lambda^2\}$.
+For $s_n=B/(n+1)^2$ and the increasing map
+$T(s)=s+a_\lambda s^{3/2}$,
+$T(s_{n+1})\ge s_n$ because
+$a_\lambda\sqrt B\ge6\ge(2n+3)(n+2)/(n+1)^2$.
+Since $T(e_{n+1})\le e_n$, induction gives $e_n\le s_n$.
+The local energy comparison and $H(t)=O(t^2)$ yield
+$\norm{x-\bar x}\le C e(x)^{1/4}$, giving the asserted point order.
+\end{proof}
+
+The classical sufficient-decrease and relative-error framework
+of Attouch--Bolte--Svaiter\cite{ABS} applies to this actual sequence:
+in H1--H3 take $a=1/(2\lambda)$,
+$w_{k+1}=(x_k-x_{k+1})/\lambda\in F(x_{k+1})$ and $b=1/\lambda$;
+compactness and continuity give H3, and the KL inequality holds at
+the identified limit (author report, p.8 and Theorem~2.9, p.12).
+The preceding order proof is self-contained.
+Neither the KL order estimate nor that framework alone proves the exact
+off-axis limit or excludes remote complete outputs.
 
 \section{Interpretation and verification boundaries}
 The structural transition concerns active curvature at every local minimum.
@@ -849,9 +989,9 @@ gaps and the relevant secondary-body gap in Section 1.
 An exact antecedent, if found, must be credited.
 Renaming standard local consequences as PPA cannot replace lost novelty.
 
-\begin{thebibliography}{9}
-\small
-\setlength{\itemsep}{3pt}
+\begin{thebibliography}{99}
+\footnotesize
+\setlength{\itemsep}{1pt}
 \bibitem{WangPenalty}
 Y. Wang, \emph{New improved penalty methods for sparse reconstruction
 based on difference of two norms}, author report, March 2013; revised
@@ -889,5 +1029,22 @@ Y. Zhao, H. He, C. Ma, and H. Wang,
 \emph{A unified fractional regularization framework for sparse recovery},
 arXiv:2604.23184v2, 27 May 2026.
 \url{https://arxiv.org/abs/2604.23184v2}.
+\bibitem{BianChen}
+W. Bian and X. Chen,
+\emph{Neural network for nonsmooth, nonconvex constrained minimization
+via smooth approximation}, IEEE Trans. Neural Netw. Learn. Syst.
+\textbf{25} (2014), 545--556.
+\href{https://doi.org/10.1109/TNNLS.2013.2278427}{doi:10.1109/TNNLS.2013.2278427}.
+\bibitem{NigamYadav}
+H. K. Nigam and S. Yadav,
+\emph{Block-sparse recovery and rank minimization using a weighted
+$l_p-l_q$ model}, J. Inequal. Appl. (2023), article 29.
+\href{https://doi.org/10.1186/s13660-023-02932-2}{doi:10.1186/s13660-023-02932-2}.
+\bibitem{ABS}
+H. Attouch, J. Bolte, and B. F. Svaiter,
+\emph{Convergence of descent methods for semi-algebraic and tame problems:
+proximal algorithms, forward-backward splitting, and regularized
+Gauss--Seidel methods},
+\href{https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf}{author report, 15 December 2010}.
 \end{thebibliography}
 \end{document}

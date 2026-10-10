@@ -629,6 +629,18 @@
 | E398 | [SPARSE-QUARTIC-DATA · 指定p7/4真实least-squares与B/U窗口](topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem) ∧ [SPARSE-QUARTIC-EB · C227强真EB锐1/3与全零集局部距离](topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb) | conditional → [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) | 全部0<lambda≤1/128及闭球U输入。全域subgradient bound排全部远输出；local prox Hessian正定给唯一；globalprox独立存在补coverage与等式；star恒等式留同U。；**C227-v1全纤维与留域已核，derived-checked** |
 | E399 | [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) ∧ [SPARSE-QUARTIC-EB · C227强真EB锐1/3与全零集局部距离](topics/sparse_recovery/sharp_instance_dynamics.md#sd-star-eb) | conditional → [SPARSE-QUARTIC-TAIL · C227真实非轴k^−1/2精确常数、径向轴几何](topics/sparse_recovery/sharp_instance_dynamics.md#sd-actual-tail) | 固定0<lambda≤1/128，任意U初值；真实二维方程h/t²非循环跟随→非轴sqrt(k)\|\|xk−xbar\|\|→16/sqrt(13lambdaR)；t0=0精确几何。无曲线不变假设，不扩大到全部上侧模型/变量步。；**C227-v1实际轨道解析证明及两路审查，derived-checked** |
 
+## 稀疏恢复上侧指数范围
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E401 | [SPARSE-SEXTIC-DATA · 固定p3 equality Gram族、全域原Phi/F](topics/sparse_recovery/sextic_boundary.md#sx-data) | implies → [SPARSE-SEXTIC-EB · C229六次strictmin/孤立驻点/锐strong真EB1/5](topics/sparse_recovery/sextic_boundary.md#sx-proof) | 只固定p3、eta1、Q=R/8[[5,-3],[-3,5]]及真实least-squares兼容c；alpha=alpha0。radial IFT给g=-2t²-2t⁴+O(t⁶)和正Rt⁶/3；全二维真EB1/5，任意q>1/5失败，缩球后距离全zerF相等。局部存在常数，无完整PPA声明。；**C229-v1两组独立重构与转录接收，derived-checked** |
+
+## 稀疏恢复经典KL对照
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E402 | [SPARSE-QUARTIC-DATA · 指定p7/4真实least-squares与B/U窗口](topics/sparse_recovery/sharp_instance_dynamics.md#sd-theorem) ∧ [SPARSE-QUARTIC-PROX · C227完整J=globalprox、lambda≤1/128及闭球留域](topics/sparse_recovery/sharp_instance_dynamics.md#sd-complete-prox) | conditional → [SPARSE-QUARTIC-KL · C230锐KL3/4及经典能量/点距阶上界](topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl) | 固定C227原模型：radial analytic splitting→局部微分同胚，缩小邻域N给锐KL3/4；N常数不覆盖整个B。任意固定0<lambda≤1/128、U初值的完整globalprox已留域并收敛，最终进入N，真实下降+barrier给e=O(k^-2)、point=O(k^-1/2)。仅阶上界，不推出精确非轴常数或轴慢尾。；**C230-v1自足normal form/实际下降/标量比较独立受检，derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

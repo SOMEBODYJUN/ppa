@@ -7,15 +7,19 @@
     "C226-v1",
     "C227-v1",
     "C228-v1",
-    "C225-v2"
+    "C225-v2",
+    "C229-v1",
+    "C230-v1"
   ],
   "commands": [
     "python3 research/code/sparse_regularity/verify.py",
     "python3 research/code/sparse_regularity/sharp_dynamics_verify.py",
     "python3 research/code/sparse_regularity/independent_complete_review.py > research/code/sparse_regularity/independent_complete_results.json",
-    "python3 research/code/sparse_regularity/upper_family_verify.py"
+    "python3 research/code/sparse_regularity/upper_family_verify.py",
+    "python3 research/code/sparse_regularity/sextic_boundary_verify.py > research/code/sparse_regularity/sextic_boundary_results.txt",
+    "python3 research/code/sparse_regularity/final_dynamics_verify.py > research/code/sparse_regularity/final_dynamics_results.json"
   ],
-  "precision": "Fraction exact; original Decimal60/100 and dynamics Decimal50/80; upper-family Decimal80; binary64 recurrence diagnostics",
+  "precision": "Fraction exact; original Decimal60/100 and dynamics Decimal50/80; upper-family Decimal80; binary64 recurrence diagnostics; new independent binary64 implicit equations use stopping tolerance2e-18 and exact Fraction guards",
   "scope": "Finite checks corroborate arithmetic and actual implicit updates; analytic proofs and independent reconstruction carry all mathematical quantifiers. No publication priority certificate.",
   "files": {
     "verify.py": {
@@ -49,6 +53,22 @@
     "upper_family_results.json": {
       "bytes": 4998,
       "sha256": "fa1f7e37bfb1ed7174817b571b71e32286935fecc6befba616e6e3d6de5c2f0f"
+    },
+    "sextic_boundary_verify.py": {
+      "bytes": 4867,
+      "sha256": "5626563a695ed6e88940b7afe133d61f33bb93c980d69004ed9efa7cfa2eb4cf"
+    },
+    "sextic_boundary_results.txt": {
+      "bytes": 901,
+      "sha256": "009ff62c970382a8ebf9ae9fe4c5f95e6124298969bfcc59279917195449c43a"
+    },
+    "final_dynamics_verify.py": {
+      "bytes": 3731,
+      "sha256": "50ec69b255c66d9abe4d9cb71344321e086de44401e26a35eb31036adfbafb5d"
+    },
+    "final_dynamics_results.json": {
+      "bytes": 2617,
+      "sha256": "bd29d388a83adb0abf0860c412040c4ee4a1e2968c75abc2b94cec35a8c24fcf"
     }
   },
   "verification_date": "2026-10-10"

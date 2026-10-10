@@ -465,3 +465,9 @@
 - **尝试 / 关键机制**：在p=7/4二维退化严格极小例中，先径向消元获得h_*(t)=−3t²/32+O(t⁴)，再假定PPA每步落在此曲线，以 reduced 四次目标直接推真实轨道。
 - **精确断点**：曲线上varphi_h=0使真实prox输入/输出的h相等，但t输入=t输出+(lambda/2)varphi_t>t输出>0；h_*'(t)<0使两端不能同时在曲线上。负t对称。inverse-prox输入临界h差为−39lambda R t⁴/4096+O(t⁶)，明确非零。见[非不变证书](research/topics/sparse_recovery/sharp_instance_dynamics.md#sd-critical-not-invariant)。失败是算法对象被换成标量消元迭代，并非慢尾本身错误。
 - **Honest salvage / 已闭修补**：临界曲线仍给1/3指数的反向见证与 reduced 四次系数；C227真实二维方程先留域，再从不预设有界的w_k=h_k/t_k²得到affine渐近收缩，证明w_k→−3/32，随后才推真实k^(−1/2)尾及常数。径向轴单列，不扩张到全部上侧模型或任意初始化。
+
+## F67：把四阶上侧族的matching1/3推广到全部上侧模型
+
+- **错误候选**：从C225四次族和C227指定实例推所有p>3/2非零严格局部极小点都有真残差matching1/3。
+- **完整反例**：[C229](research/topics/sparse_recovery/sextic_boundary.md#sx-proof)固定p3、invertibleA，取alpha=alpha0，消去径向变量后Phi差为Rt⁶/3+O(t⁸)，g=−2t²−2t⁴+O(t⁶)。全二维matching EB1/5成立，沿g的残差为sqrt(2)R|t|⁵(1+o(1))，任何q>1/5都失败，包括1/3。
+- **范围修补**：原alpha>alpha0四次族与指定p7/4的1/3及真实PPA结论不变；C229不新增完整PPA声称。此外C230显示经典KL3/4确适用于指定四阶例，不能将完整fiber/精确轨道的额外核验包装为KL不可处理。

@@ -33,3 +33,16 @@ Run `python3 research/code/sparse_regularity/upper_family_verify.py` from the re
 The analytic [C225-v2 proof](../../topics/sparse_recovery/automatic_regularity.md#sr-sharpness-all-p) carries the expanded existence quantifier. The strict-complementarity counterexample is proved by a global sum-of-nonnegative-terms identity and norm ordering. C226's p<=3/2 constants and C227's specified-instance scope remain unchanged.
 
 Actual parent reruns passed. [Verification manifest](verification_manifest.json) fixes all six code/result hashes, Python version, commands, arithmetic and precision. [Analytic proof](../../topics/sparse_recovery/sharp_instance_dynamics.md) proves the full box, all complete fibers, all local inputs, true-residual bound and infinite-time asymptotic; finite checks do not prove those quantifiers, maximal windows, arbitrary models or novelty. [Independent mathematical reception](../../audit/SPARSE_COMPLETE_DYNAMICS_REVIEW_2026_10_09.md) and [cross-review](../../audit/SPARSE_THRESHOLD_REVIEW_2026_10_09.md#sr-cross-dynamics) are separate evidence from the computations.
+
+## Final independent arithmetic and sextic scope boundary
+
+Run from the repository root:
+
+    python3 research/code/sparse_regularity/sextic_boundary_verify.py > research/code/sparse_regularity/sextic_boundary_results.txt
+    python3 research/code/sparse_regularity/final_dynamics_verify.py > research/code/sparse_regularity/final_dynamics_results.json
+
+Both implementations were produced independently of the reviewed project verifiers and use only Python's standard library, with no random seed. The first uses exact Fraction polynomial identities and series through degree8: Pearson decomposition, endpoint sixth coefficient, general upper-family coefficients and the new p3 equality-parameter sextic profile/reduced coefficient. It proves finite algebraic facts, not the analytic neighborhood/isolated-zero-set assertions of C229. Those are in [its self-contained proof](../../topics/sparse_recovery/sextic_boundary.md).
+
+The second reconstructs even analytic coefficients by the formal differential equation G H'=(4/7)G'H, checks Cauchy/star/sign/localization constants exactly, and solves both original implicit coordinate equations using stable series evaluation and two-variable Newton. It uses at most8 Newton passes per step, correction stopping tolerance2e-18, binary64 computations, four declared initial points, lambdas1/128 and1/1024, and counts10000,10000,4000,15000. A small-tangent run starts at(h,t)=(0.01,1e-8), exercising the non-circular tracking claim; both tangent signs and the separate axis law are checked. Maximum recorded coordinate residual is1.735e-18; final tracking ratios differ from−3/32 by less than9e-7 and reciprocal-square slope ratios differ from1 by less than4e-5. The finite sqrt(k)*distance remains far from the proved limit and is explicitly recorded as a transient. A truncated analytic series and float Newton are diagnostics, not validated interval bounds or universal trajectory proofs.
+
+C230's sharp KL3/4 proof and scalar barrier are analytic. No trajectory plot, numerical energy fit or finite run is substituted for them. All output fingerprints and exact invocation strings are in the adjacent manifest.

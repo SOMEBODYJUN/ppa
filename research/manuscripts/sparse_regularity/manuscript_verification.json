@@ -3,18 +3,18 @@
   "files": [
     {
       "path": "sharp_sparse_regularity.tex",
-      "size_bytes": 39718,
-      "sha256": "865639054c4b02352c2fff8db469c2f1136e9b87002d767df1f92a3e17d8165f"
+      "size_bytes": 47377,
+      "sha256": "d88efdf403b9d9f32726d5e1eae13e1fba6768a531bf69ad1f7caeb5148f5936"
     },
     {
       "path": "sharp_sparse_regularity.pdf",
-      "size_bytes": 318453,
-      "sha256": "744c2862b68897fb37c62e8a54922a2591654f575b5629b0a94b4d641055b973"
+      "size_bytes": 401928,
+      "sha256": "ea91f311b0091cb45f189f218713789ee8c29d2bec5d1fd37bb6d43433f864ab"
     }
   ],
-  "pdf_pages": 12,
-  "compiler": "pdfTeX 1.40.25 / actual pdflatex compilation (two completed passes)",
-  "layout_review": "All12 pages of the priority revision visually inspected at85dpi with system Poppler. Reference formatting changes only page12 by rendered SHA-256 comparison; final wording on page2 inspected at100dpi. Dynamics theorem remains intact on page7. No clipping, orphan reference page or other visible defect.",
+  "pdf_pages": 14,
+  "compiler": "pdfTeX1.40.25 / actual pdflatex compilation, two completed final passes",
+  "layout_review": "All14 pages rendered with system Poppler at85dpi and visually inspected. No overlap, clipping, orphan reference page or other visible defect. Full dynamics theorem intact onp8, sextic proofp5, sharpKL proofp13, all10 bibliography entries onp14. Final source-wording refinement re-rendered; changed pages: page-02.png.",
   "latex_checks": {
     "errors": 0,
     "undefined_references": 0,
@@ -22,8 +22,28 @@
     "overfull_boxes": 0,
     "warnings": 0
   },
-  "independent_source_review": "Prior full theorem/source reception retained. New two-group reconstruction validates all-finite-p sharp family and curved-path obstruction; new full-prox reader reconstructed C226/C227 and exact kappa tracking. Coordinating reader checked transcription and final displays.",
-  "scope": "Compilation and visual review do not certify publication priority. Wang-Zhang2017 main body, Huo et al.2023 full body and relevant Zhao2018 body remain unavailable. Complete2026 fractional manuscript reviewed separately; its first-order equivalence and conditional KL rates do not supply the automatic active-PD threshold.",
-  "revision_scope": "This priority-only revision adds two accurate citations and a constrained-stationarity/KL comparison, refines the remaining primary-body obligations, and uses10pt references to retain12pages. No mathematical statement, proof, parameter range, step or basin constant was changed.",
-  "independent_priority_review": "Wang reader accepted Appendix interpretation, locators, Zhao2018 metadata and bounded wording; Huo/fractional reader accepted PDF theorem locators, alpha=1 inclusion, affine active-face second-order bridge and conditional KL scope. Neither review certifies worldwide first publication."
+  "dynamics_equation_labels": {
+    "1": "19",
+    "2": "20",
+    "3": "21",
+    "4": "22",
+    "5": "23",
+    "6": "24",
+    "7": "25",
+    "8": "26",
+    "9": "27",
+    "10": "28",
+    "11": "29",
+    "12": "30",
+    "13": "31",
+    "14": "32",
+    "15": "33",
+    "16": "34",
+    "17": "35",
+    "18": "36",
+    "19": "37"
+  },
+  "independent_source_review": "Two independent structure readers reconstructed C224/C225/C228 and accepted final C229 canonical+English transcription. Separate dynamics reader reconstructed C226/C227, accepted final C230 normal form/barrier and noninvariance coefficient, and verified19/19 numbered equation corrections. Priority reader accepted source comparison, conditional value wording and classic ABS mapping.",
+  "scope": "Internal mathematical/visual checking is separate from external peer review and publication priority. Wang2017 main body, Huo2023 and relevant Zhao2018 full bodies remain unavailable; candidate wording expressly retains those gaps.",
+  "revision_scope": "New complete sextic1/5 range counterexample and sharpKL3/4/classical-order proof; primary-source comparisons; standard dynamics equation numbering. Original certified radii, steps and exact actual-tail constant unchanged."
 }

@@ -1,0 +1,12 @@
+Pearson decomposition and endpoint equality coefficient: PASS
+Endpoint normalized series through degree 8: [Fraction(1, 1), Fraction(0, 1), Fraction(1, 4), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 192), Fraction(0, 1), Fraction(1, 768)]
+Upper-family c4, alpha0, positive K formula: PASS
+New alpha=alpha0 sextic reduced coefficient identity: PASS
+Finite spot p= 3/2 c4= 0 c6= 1/192 alpha0 boundary not defined here
+Finite spot p= 7/4 c4= -11/256 c6= 33/2048 boundary K6/R=-77/12288
+Finite spot p= 2 c4= -1/8 c6= 1/16 boundary K6/R=0
+Finite spot p= 3 c4= -1 c6= 5/3 boundary K6/R=1/3
+Finite spot p= 10 c4= -561/8 c6= 28281/16 boundary K6/R=418
+Concrete p=3 h_* coefficients through t^4, reduced leading R*t^6/3: PASS
+p=3/2 stationary saddle normalized norm cubic -1/32: PASS
+RUN SCOPE: exact p-polynomial identities and finite series; analytic reasoning carries all universal claims.

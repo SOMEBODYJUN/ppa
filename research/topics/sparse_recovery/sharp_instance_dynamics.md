@@ -372,6 +372,56 @@ h_*(t+13\lambda R t^3/256+O(t^5))-h_*(t)
 
 This gives an exact leading-order obstruction and explains why reduction to the critical curve would have been an invalid algorithmic proof.
 
+<a id="sd-kl"></a>
+## Sharp classical KL exponent and its order bounds (C230-v1)
+
+For the same fixed instance, there are a smaller neighborhood \(N\) of \(\bar x\) and \(c_*>0\) such that, with \(e(x)=\Phi(x)-\Phi(\bar x)\),
+
+\[
+r_F(x)\ge c_* e(x)^{3/4}\quad(x\in N).
+\tag{K1}
+\]
+
+The exponent \(3/4\) is sharp: for each \(\theta<3/4\), every positive proposed constant fails arbitrarily close to \(\bar x\). These constants are local existence constants, not new explicit bounds on the whole certified box \(\mathcal B\).
+
+Here is a self-contained proof, without importing a KL convergence theorem. Let \(H(t)=h_*(t)\), \(K=13R/512\), and \(V(t)=\varphi(H(t),t)=Kt^4+O(t^6)\). With \(d=h-H(t)\), Taylor integration gives the exact analytic splitting
+
+\[
+\varphi(H(t)+d,t)=V(t)+a(d,t)d^2,\qquad
+a(d,t)=\int_0^1(1-s)\varphi_{hh}(H(t)+sd,t)\,ds,\quad a(0,0)=2R>0.
+\tag{K2}
+\]
+
+The coordinate change \(v=d\sqrt{a(d,t)}\), with \(t\) unchanged, is an analytic local diffeomorphism. After shrinking \(N\), both its Jacobian and inverse Jacobian are bounded and \(a\) is bounded above and below by positive constants. The objective is exactly \(v^2+V(t)\). Since \(V'(t)=4Kt^3+O(t^5)\), the true residual is comparable to \(|v|+|t|^3\) and the energy to \(v^2+t^4\). For \(|v|\le1\),
+
+\[
+e(x)^{3/4}\le C(|v|^{3/2}+|t|^3)
+\le C(|v|+|t|^3)\le C' r_F(x).
+\tag{K3}
+\]
+
+All original coordinates are positive here, so this gradient calculation is for the original limiting-subdifferential residual. On \(d=0\), the energy is asymptotic to \(Kt^4\) and the residual to \(4K|t|^3/\sqrt2\). Thus \(r_F/e^\theta\to0\) if \(\theta<3/4\). The usual desingularizing function for (K1) is \((4/c_*)s^{1/4}\).
+
+For any fixed \(0<\lambda\le1/128\) and any \(x_0\in\mathcal U\), the already proved complete PPA converges to \(\bar x\), hence eventually enters \(N\). Independent global-proximal equality gives the descent estimate
+
+\[
+e_k-e_{k+1}\ge\frac{\|x_k-x_{k+1}\|^2}{2\lambda}
+=\frac{\lambda}{2}r_F(x_{k+1})^2
+\ge a_\lambda e_{k+1}^{3/2},\qquad a_\lambda=\lambda c_*^2/2>0.
+\tag{K4}
+\]
+
+This implies \(e_k=O(k^{-2})\) by an elementary comparison: reindex at entry to \(N\), choose \(B\ge\max\{e_0,36/a_\lambda^2\}\), and set \(s_n=B/(n+1)^2\). The increasing map \(T(s)=s+a_\lambda s^{3/2}\) satisfies \(T(s_{n+1})\ge s_n\), because
+
+\[
+a_\lambda\sqrt B\ge6\ge
+\frac{(2n+3)(n+2)}{(n+1)^2}.
+\]
+
+Induction using \(T(e_{n+1})\le e_n\) proves \(e_n\le s_n\). The local energy comparison and \(H(t)=O(t^2)\) also give \(\|x-\bar x\|\le C e(x)^{1/4}\); therefore \(\|x_k-\bar x\|=O(k^{-1/2})\).
+
+This explicitly confirms that classic KL tools apply. For example, the actual complete-global-proximal sequence satisfies the sufficient-decrease and relative-error conditions of Attouch–Bolte–Svaiter, author report dated 15 December 2010, p.8 (H1–H3), Theorem 2.9 p.12: take \(a=1/(2\lambda)\), \(w_{k+1}=(x_k-x_{k+1})/\lambda\in F(x_{k+1})\), \(b=1/\lambda\); compactness and continuity give H3. The KL condition holds at its already identified limit. This classical comparison is not needed for the self-contained order proof above. It supplies no exact slow-tail constant and does not exclude remote complete outputs. Those assertions remain the separate full-fiber and actual two-variable arguments. See the [primary-source comparison](../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check).
+
 <a id="sd-evidence"></a>
 ## Evidence and scope
 

@@ -1,0 +1,31 @@
+# Final sparse theorem reception and new boundary proofs
+
+**Status:** internal mathematical reception, not external peer review or publication-priority certification.
+
+## Independent reconstruction and scope
+
+Baseline: 6549dac210ae1c063c4a3ff94644c3e65b9def6c. Two structural readers independently reconstructed the canonical automatic structure and English Sections 1–2, with a third independent reader reconstructing the complete-resolvent certificate, canonical quartic dynamics and English Sections 3–4. They did not use previous acceptance labels to substitute for proof. The priority/value reader separately inspected the contribution claims and the primary passages listed in the source audit.
+
+- **Structure, two-group agreement:** active norm Hessian weighted-variance/radial-kernel formula, least-squares compatibility, automatic support independence for every finite p>1, inactive equality descent for 1<p<2, Pearson quartic decomposition, p=3/2 equality classification and negative objective sixth coefficient. Both accepted the independent curved radial obstruction, all-finite-p upper strict-minimum family, zero-column/origin boundaries and p>=2 inactive saturation example. The sixth-order endpoint certificate is retained as an independent proof, not advertised as necessary given the curved-path proof.
+- **Complete proximal certificate:** reconstructed explicit Hessian-continuity budgets, inactive gap preservation, global limiting-penalty-subgradient bound including zero, all-output localization, identification, active monotonicity uniqueness, independent global-proximal existence/equality, invariant ball and every step sequence in the common interval. No SOSC, residual EB or full-J single-valuedness is assumed.
+- **Fixed quartic dynamics:** independently recomputed the Cauchy/star gates, strong1/3 coefficient, isolation/global-zero-set bridge, remote-output exclusion, box proximal convexity, closed1/64 ball and0<lambda<=1/128. Reconstructed convergence before tracking, sign preservation, the non-circular affine recurrence for h_k/t_k² even for arbitrarily small nonzero tangent initialization, inverse-square increment13lambdaR/128 and norm constant16/sqrt(13lambdaR). Radial axis remains separately exact geometric.
+
+No load-bearing mathematical defect was found in the baseline claims. The verdict is restricted to their actual conditions and does not certify global convergence, sparse recovery, all upper-side exponents or published priority.
+
+## New proof units and final transcription reception
+
+**C229, sextic boundary.** The two structural readers separately derived and cross-checked the p=3,alpha=alpha0 data, g(t)=−2t²−2t⁴+O(t⁶), reduced Rt⁶/3+O(t⁸), full-space strictness, local stationary isolation, and matching point-distance true residual1/5. They then inspected the final [canonical S1–S7](../topics/sparse_recovery/sextic_boundary.md#sx-proof) and English proposition and accepted them with no omission. Checks specifically included S3's25/3, radial Taylor factorR/8, metric sqrt2, the S7 estimate at arbitrary(h,t), allq>1/5 failure quantifiers and the half-isolation-radius bridge to the entire zerF. This is outside the old family's strict alpha>alpha0 range and adds no PPA claim.
+
+**C230, classic KL.** The complete-dynamics reader independently provided and then checked the final [normal-form proof](../topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl) and English proposition: a(0,0)=2R, analytic square-root diffeomorphism, bounded two-way Jacobians, true gradient residual comparison, sharpness along the critical curve, actual-global-proximal descent, eventual permanent small-neighborhood entry for every certified fixed-step trajectory, and the barrier constant36/a_lambda². The barrier identity6(n+1)²−(2n+3)(n+2)=n(4n+5)>=0 was separately recomputed. KL constants are not asserted on the whole box.
+
+**Correction found and closed.** Removing retained D.* source tags initially left 19 labeled displays in unnumbered environments. The independent reader caught that editorial defect before compilation. All19 outer environments were converted to equation, and the reader rechecked19/19 with no remaining obsolete tags. This changes numbering, not mathematics. The added critical-curve noninvariance coefficient−39lambdaR/4096 is also accepted. Compilation/reference and page-layout checks are separately recorded in the manuscript manifest.
+
+## Separate reproducible arithmetic and actual recurrences
+
+The new structural Fraction verifier checks polynomial coefficient identities, the endpoint finite series and sextic substitution, without claiming that finite algebra proves neighborhood quantifiers. The independent dynamics verifier imports no reviewed project implementation. It reconstructs the even analytic coefficients through a formal differential equation and uses stable two-variable Newton updates. Four runs cover both tangent signs, lambda1/128 and1/1024 and a tangent initial value1e−8 with radial initial value0.01; the separate axis run checks its exact geometric law.
+
+The recorded post-transient tracking and reciprocal-square slopes agree with the analytic coefficients. The finite sqrt(k)*distance remains in a long transient and is not represented as an observed limiting constant. Binary64 residuals are computational diagnostics, not interval certificates. Commands, parameters, outputs and hashes are in the [code entry](../code/sparse_regularity/README.md).
+
+## Priority/value reception
+
+The separate reader obtained and compared Bian–Chen2014 and Nigam–Yadav2023 primary texts with precise theorem/model locators. Generic stationary convergence and constrained RIP recovery are not the target automatic active-PD theorem. The user-prioritized Wang2017/Huo2023 bodies remain unavailable after the recorded public routes; acquisition failure gives no absence result. The bounded [source comparison](SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check) can accompany a complete reviewable submission candidate, but first publication is not certified. If the exact threshold is later matched, withdraw its novelty; ordinary proximal rates and one quartic example cannot rescue the center by renaming the algorithm.

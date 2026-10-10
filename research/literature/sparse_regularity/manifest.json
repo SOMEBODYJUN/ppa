@@ -71,6 +71,39 @@
       "read_scope": "Coordinating reader: pp1-11 and19-21, including definitions, model Eq7 and both theorem proofs; numerical sections pp12-18 not audited.",
       "repository_copy": false,
       "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#renewed-priority-check"
+    },
+    {
+      "source_url": "https://www.polyu.edu.hk/ama/staff/xjchen/Bian_Chen2014IEEE.pdf",
+      "title": "Neural Network for Nonsmooth, Nonconvex Constrained Minimization Via Smooth Approximation",
+      "version": "Published IEEE TNNLS25(3)545-556 (2014); 12-page complete PDF",
+      "bytes": 414607,
+      "sha256": "8441af72e05c3be8e1dd0777e671b5918f59333e745dda0751c573c2eb7dc2c0",
+      "retrieval_date": "2026-10-10",
+      "read_scope": "Independent priority reader: model, assumptions, sectionsII-IV pp546-549, Theorems1-3, Proposition2, Corollary1 and corresponding Appendix passages pp552-555. Numerical sections and every Appendix estimate not independently audited.",
+      "repository_copy": false,
+      "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check"
+    },
+    {
+      "source_url": "https://d-nb.info/1287357776/34",
+      "title": "Block-sparse recovery and rank minimization using a weighted lp-lq model",
+      "version": "Published J.Inequal.Appl.2023:29; 17-page complete PDF",
+      "bytes": 1550987,
+      "sha256": "928535f89b0f8744b421c9446d30af7a08f73acf362034864277b6de0f09b161",
+      "retrieval_date": "2026-10-10",
+      "read_scope": "Independent priority reader: entire main body sections1-7 pp1-15, all six numbered results and proofs, references pp16-17. Model/quantifier comparison, not separate reception of every recovery estimate.",
+      "repository_copy": false,
+      "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check"
+    },
+    {
+      "source_url": "https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf",
+      "title": "Convergence of descent methods for semi-algebraic and tame problems: proximal algorithms, forward-backward splitting, and regularized Gauss-Seidel methods",
+      "version": "Author report dated15December2010; 35-page complete PDF",
+      "bytes": 339782,
+      "sha256": "f116b2cba2b3f3f42e3b901f8b02040b7f1bdc9398d25dad3ad11618179028b0",
+      "retrieval_date": "2026-10-10",
+      "read_scope": "Coordinating reader: H1-H3 p8, Theorem2.9 and proof p12, Theorem4.2 and proof p21; not an entire35-page reception. Exact local H1/H2/H3/KL mapping is separately proved in sd-kl.",
+      "repository_copy": false,
+      "audit": "../../audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check"
     }
   ]
 }

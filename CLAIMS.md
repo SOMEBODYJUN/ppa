@@ -1934,3 +1934,20 @@
 - **Exact Statement / Objects / Quantifiers / Assumptions**：任意有限维least-squares Phi_p=0.5||Ax−b||²+eta(||x||₁−||x||_p)、eta>0、A无零列。对每个非零局部极小点，任意有限p>1均有A_supp(xbar)满列秩；若1<p<2，则全部inactive first-order inequalities严格。两个范围各自固定，3/2不是这两项的阈值。
 - **Dependencies / Evidence / Conclusion**：[独立范围证明](research/topics/sparse_recovery/automatic_regularity.md#sr-wide-ranges)由active二阶PSD、norm Hessian精确径向核、c=Aᵀb的Euler排除，以及inactive t^p下降证明。无RIP、无SOSC、无预设EB。不同于C224的active-PD锐阈值。
 - **Counterevidence / Scope / Related Files**：零列、原点、非极小驻点与不兼容任意线性项保留原例外；[独立重建](research/audit/SPARSE_THRESHOLD_REVIEW_2026_10_09.md)。已核2015 p=2先行，不将all-p机制包装为锐3/2发现；精确优先及范围见[文献审查](research/audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md)。
+
+<a id="c229"></a>
+## C229-v1 / SPARSE-SEXTIC-BOUNDARY · 上侧六阶严格极小点的锐真残差指数1/5
+
+- **Status**：`derived-checked`；两组独立重构并接收最终规范与英文转录，有限Fraction系数复算另列，不认证发表优先。
+- **Exact Statement / Objects / Domain / Assumptions**：固定p=3、eta=1、R=2^(1/3)、Q=R/8[[5,−3],[−3,5]]、A=sqrt(R)/4[[3,−1],[−1,3]]、c=(1−R/4)(1,1)、b=2(1−R/4)/sqrt(R)(1,1)，故A可逆、AᵀA=Q、Aᵀb=c。原Phi=0.5||Ax−b||²+||x||₁−||x||₃、F=partial_lim Phi、S=zerF和r_F=dist(0,F(x))均在全部R²定义。
+- **Quantifiers / Conclusions**：xbar=(1,1)为局部孤立驻点和严格局部极小，activeH谱{R/4,0}。存在a,C>0对全部||x−xbar||<a有||x−xbar||≤C r_F(x)^(1/5)；每个q>1/5和每个K,a>0均有该球内非零点违反q界。缩球后d(x,S)=||x−xbar||，故对完整stationary set同样匹配/锐。正坐标径向消元g(t)=−2t²−2t⁴+O(t⁶)，约化Phi差=Rt⁶/3+O(t⁸)，真残差沿g为sqrt(2)R|t|⁵(1+o(1))。
+- **Definitions / Dependencies / Evidence**：[完整自足证明](research/topics/sparse_recovery/sextic_boundary.md#sx-data)的原模型、解析IFT、径向Taylor下界及S7二维匹配估计；[精确复算](research/code/sparse_regularity/sextic_boundary_verify.py)、[最终接收](research/audit/SPARSE_FINAL_RECEPTION_2026_10_10.md)。不依赖C227的残差或输出定义。
+- **Counterevidence / Scope / Related Files**：位于C225族p=3、alpha=alpha0，不变更alpha>alpha0旧结论；直接排全部上侧统一matching1/3。此例常数仅局部存在，不声称显式完整近端盆地或任何真实PPA尾。作为核心3/2阈值的范围补证，不膨胀为新的首创中心。
+
+<a id="c230"></a>
+## C230-v1 / SPARSE-QUARTIC-KL · 指定四阶例的锐KL3/4与经典阶上界
+
+- **Status**：`derived-checked`；独立重构最终规范/英文normal form、梯度转换、下降及标量barrier，无未闭数学义务。
+- **Exact Statement / Objects / Domain / Quantifiers**：C227同一固定原least-squares模型、原F/r_F和xbar，不改任何数据。存在小邻域N与c_*>0使r_F(x)≥c_*[Phi(x)−Phi(xbar)]^(3/4)对全部x∈N成立；任意0≤theta<3/4的同形正系数局部界均失败。任一固定0<lambda≤1/128和任一x0∈U的已认证完整PPA，能量O(k^(−2))，点距O(k^(−1/2))，包括径向轴（只给上界）。
+- **Definitions / Dependencies / Evidence**：[自足证明](research/topics/sparse_recovery/sharp_instance_dynamics.md#sd-kl)：exact analytic splitting和局部微分同胚，能量比较v²+t⁴、真实残差比较|v|+|t|³；曲线反向见证；C227完整globalprox/收敛使全部轨道永久进入小N，prox下降给e_k−e_(k+1)≥a_lambda e_(k+1)^(3/2)，barrier B/(n+1)²且B≥max(e0,36/a_lambda²)闭合阶。经典ABS的H1–H3和KL at cluster逐项映射见[一手比较](research/audit/SPARSE_PRIORITY_AUDIT_2026_10_09.md#final-submission-source-check)；此证明无需导入其收敛定理。
+- **Counterevidence / Scope / Related Files**：KL常数只在可缩小N存在，不宣称整个显式B的新常数。经典KL确能处理此例的阶，不声称不可替代；该阶界不推出C227精确非轴常数，不排远完整输出，不将几何轴称为matching慢尾。[最终独立接收](research/audit/SPARSE_FINAL_RECEPTION_2026_10_10.md)。标准KL后果不作为独立发表创新。

@@ -289,3 +289,9 @@ Equality holds only at xbar. For every finite p>=2, ||x||_p<=||x||_2 and ||xbar|
 \]
 
 Hence the same xbar is the unique global minimizer for all these p, yet |(Q xbar−c)_2|=eta=1. Active-Hessian positivity and inactive strict complementarity are different structural properties: their automatic thresholds are 3/2 and 2, respectively. Support independence retains its whole finite p>1 range. These boundary claims do not assert publication priority.
+
+### An explicit limit on upper-side residual exponents
+
+The fixed p=7/4 result is not a theorem for every upper-side minimum. [C229's independent sextic example](sextic_boundary.md#sx-data) takes p=3 and the equality parameter alpha=alpha0. It has an invertible sensing matrix, a full-space strict local minimum, and matching sharp true-residual exponent1/5. It therefore directly excludes a universal upper-side exponent1/3. This does not change C225-v2's strict alpha>alpha0 quartic family and asserts no new PPA dynamics.
+
+The [final independent reception](../../audit/SPARSE_FINAL_RECEPTION_2026_10_10.md) reconstructs the retained endpoint certificate and the alternative curved-path proof. The sixth-order certificate is useful independent confirmation; the curved-path argument means it is not logically necessary to cover the endpoint.
