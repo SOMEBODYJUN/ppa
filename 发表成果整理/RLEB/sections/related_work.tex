@@ -1,69 +1,156 @@
-\section{与已有理论的关系}
+\section{线性阶的识别与经典收敛判据}
 \label{sec:comparison}
 
-\subsection{线性阶的近端几何}
+非线性反射估计与输出误差界的配合是本文的收敛机制。
+在线性阶，两项条件都有熟悉的形式：反射估计对应已有的二次型单调性条件，
+输出误差界成为度量次正则性。下面先给出精确的参数识别，
+再说明保留一步能量中的步长项如何恢复经典单调 PPA 的收敛范围。
 
-当 $\gamma=1$ 时，RL 比较属于已有二次型算子条件。
-固定同一图像块和受检点对，记 $a=u-v$、$b=u^*-v^*$。
-展开平方可得
-\begin{equation}
- \mathrm{RL}(\lambda,1,L)
- \quad\Longleftrightarrow\quad
- \lambda\langle a,b\rangle
- \geq\frac{1-L^2}{2(1+L^2)}
-       (\|a\|^2+\lambda^2\|b\|^2).
+\subsection{相同点对上的参数识别}
+
+\begin{proposition}[线性 RL、次单调性与半单调性]
+\label{prop:linear-identification}
+固定 $\lambda>0$、$L\geq0$、图像块
+$\mathcal G\subset\operatorname{gph}F$ 及尺度 $R>0$。
+对同一受检点对族
+\[
+ \mathcal P_R=\{((u,u^*),(v,v^*))\in\mathcal G^2:
+ \|(u-v)+\lambda(u^*-v^*)\|\leq R\},
+\]
+记 $a=u-v$、$b=u^*-v^*$。以下两式等价：
+\begin{align}
+ \|a-\lambda b\|&\leq L\|a+\lambda b\|,
+ \label{eq:linear-reflection}\\
+ \langle a,b\rangle&\geq
+ \mu\|a\|^2+\nu\|b\|^2,\qquad
+ \mu=\frac{1-L^2}{2\lambda(1+L^2)},\quad
+ \nu=\lambda^2\mu.
  \label{eq:linear-rl-balanced}
+\end{align}
+若 $L\geq1$，再令 $\tau=(L^2-1)/4$，则上述两式还等价于
+\begin{equation}
+\label{eq:scaled-submonotonicity}
+ \lambda\langle a,b\rangle
+ \geq-\tau\|a+\lambda b\|^2.
 \end{equation}
-因此 $L=1$ 恰对应单调性；令 $L^2=1+4\tau$，$\tau\geq0$，
-则对应 Luke--Tam 对 $\lambda F$ 的次单调性不等式
-$\lambda\langle a,b\rangle\geq-\tau\|a+\lambda b\|^2$
+\end{proposition}
+
+\begin{proof}
+展开式~\eqref{eq:linear-reflection} 的平方并移项，得
+\[
+ (1-L^2)(\|a\|^2+\lambda^2\|b\|^2)
+ \leq2\lambda(1+L^2)\langle a,b\rangle,
+\]
+即式~\eqref{eq:linear-rl-balanced}。
+再由
+$\|a+\lambda b\|^2-\|a-\lambda b\|^2
+=4\lambda\langle a,b\rangle$
+以及 $L^2=1+4\tau$，得到式~\eqref{eq:scaled-submonotonicity}。
+各步均可逆，且未改变受检点对。
+\end{proof}
+
+式~\eqref{eq:scaled-submonotonicity} 正是 Luke--Tam
+对缩放算子 $\lambda F$ 的次单调性不等式
 \cite[Definition~2]{LukeTam2025GeneralizedMonotonicity}。
-式~\eqref{eq:linear-rl-balanced} 也属于半单调性
-$\langle a,b\rangle\geq\mu\|a\|^2+\nu\|b\|^2$ 的参数切片，
-其中 $\mu=(1-L^2)/(2\lambda(1+L^2))$、$\nu=\lambda^2\mu$
+式~\eqref{eq:linear-rl-balanced} 则给出半单调性参数
+$\nu=\lambda^2\mu$ 的切片
 \cite[Definition~4.1]{EvensEtAl2024SemimonotoneV2}。
-这些识别限于同一图像块及同一受检尺度。
+这些等价式都作用于 $\mathcal P_R$：
+当比较的文献条件要求全部图像点对时，须在其整个点对族上验证它们。
+若 $L=1$，两式恰为单调性；若 $L<1$，则同时给出正的
+$\mu,\nu$。
 
-零点锚条件也已有文献先例。
-Oblique weak Minty 条件只比较图像点和指定的零点锚，
-不要求全部图点之间比较
-\cite[Definition~2.1]{EvensEtAl2024SemimonotoneV2}。
-本文的锚定假设同样不比较两个近端输出，但所用锚须为
-当前输入的最近零点，并允许它随实际输出变化。
-指定零点锚不一定满足最近点要求，
-输入覆盖、输出误差界及初始预算也须另行检验。
-当 $0<\gamma<1$ 时，比较尺度改变了近端位移的阶数；
-第~\ref{sec:triangular-holder-example}~节的三角系统说明，
-这种控制可以与完整近端映射的非 Lipschitz 行为共存。
+收敛定理只需输入的最近零点锚，
+所以同一代数识别也可用于每个实际输出及其最近零点组成的点对。
+这使允许关系保持严格多值，如命题~\ref{prop:strict-selection-extension} 所示。
+全对性质和锚定性质的区别在于点对的量词，而不是二次型的名称。
 
-\subsection{输出误差界与收敛条件}
+\subsection{保留能量项的线性误差界推论}
 
-本文把原算子的真实残差误差界用于近端输出。
-若已有 $d(y,S)\leq K r_F(y)^q$，$K,q>0$，
-便可在相同输出区域取 $\psi(t)=Kt^q$。
-H\"older 和一般模量次正则性的条件与判据已有系统研究
-\cite{LiMordukhovich2012HolderSubregularityPPA,
-Kruger2016NonlinearSubregularity,MordukhovichOuyang2015HigherOrderSubregularity}。
-调用这些结果必须保持目标集不变：
-对完整零集 $F^{-1}(0)$ 的误差界，不自动给出对严格子集
-$S\subset F^{-1}(0)$ 的误差界。
-这两种阶数的相容条件见推论~\ref{cor:residual-growth}。
+PPA 推论的直接兼容条件先用步长上界评价误差界。
+在线性误差界下，可以保留式~\eqref{eq:energy-one-step} 中的
+$s^2$ 项，取得更宽的收缩条件。
+这也是核能量推论~\ref{cor:gppa-physical-energy} 的特例：
+取 $v=I$、$a(t)=t$、$\omega(t)=Lt$、$h(t,s)=s$，
+以及 $\rho(q)=q$、$g(q)=q/K$。下面写出其显式因子与长度界。
 
-Luke--Tam 从近端几何和残差正则性取得距离收缩，
-再通过步长控制证明轨道为 Cauchy 列
+\begin{corollary}[线性误差界下的能量收缩]
+\label{cor:linear-energy-convergence}
+沿用PPA 推论~\ref{thm:selection-RLEB} 的对象和符号，令 $\gamma=1$。
+只假设 (B1)--(B3)，其中 $\psi(t)=Kt$、$K>0$，
+并保留相同的输出评价窗
+$ (1+L)R/(2\lambda)\leq\bar t$。
+以如下条件代替 (B4) 及原初值预算：
+\begin{equation}
+\label{eq:linear-energy-factor}
+ \begin{aligned}
+ \rho_E&:=\left(\frac{1+L^2}{2(1+(\lambda/K)^2)}\right)^{1/2}<1,
+ \qquad \mathcal L_E(r):=\frac{(1+L)r}{2(1-\rho_E)},\\
+ \mathcal L_E(d_0)&<d(x^0,X\setminus U).
+ \end{aligned}
+\end{equation}
+则从 $x^0\in U_R$ 出发的每条允许轨道均可无限延拓，
+留在 $U_R$，具有有限长度，并收敛到 $x^\infty\in S\cap U$。
+对所有 $k\geq0$，有
+\begin{equation}
+\label{eq:linear-energy-rates}
+ d(x^k,S)\leq\rho_E^k d_0,\qquad
+ \|x^\infty-x^k\|\leq\mathcal L_E(d(x^k,S)).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+对每个合法输入和每个允许输出，一步引理在同一评价窗内给出
+\[
+ (d^+)^2+s^2\leq\frac{1+L^2}{2}d^2,\qquad
+ d^+\leq K r_F(x^+)\leq(K/\lambda)s.
+\]
+消去 $s$ 得
+$[1+(\lambda/K)^2](d^+)^2\leq(1+L^2)d^2/2$，
+所以 $d^+\leq\rho_Ed$。
+同一步引理给出 $s\leq(1+L)d/2$。
+对任意已构造的有限轨道前缀求和，便有
+\[
+ \|x^{k+1}-x^0\|
+ \leq\frac{1+L}{2}\sum_{j=0}^{k}\rho_E^j d_0
+ \leq\mathcal L_E(d_0)<d(x^0,X\setminus U).
+\]
+因此下一步仍在 $U_R$，(B1) 继续保证非空，归纳给无限延拓。
+应用距离--长度引理~\ref{lem:distance-length-interface}，
+取 $b(r)=(1+L)r/2$，得到有限长度、点收敛及上述尾项估计。
+严格初始预算还保证极限留在 $U$。
+\end{proof}
+
+若 $L^2=1+4\tau$，能量收缩条件变为
+\[
+ 2\tau(K/\lambda)^2<1.
+\]
+它由输出处的同一真残差误差界直接导出；
+覆盖和初值留域分别由 (B1) 和式~\eqref{eq:linear-energy-factor} 保证。
+Luke--Tam 的局部定理也从近端能量与次正则性获得距离收缩，
+再由线性步长估计证明轨道为 Cauchy 列
 \cite[Lemmas~1--2, Theorem~2]{LukeTam2025GeneralizedMonotonicity}。
-本文采用同一距离--长度证明结构，将线性步长控制改为
-非线性函数 $b(t)=(t+Lt^\gamma)/2$，并在实际输出处保留真残差误差界。
-局部存在与留域仍是独立要求：
-该文假设~2(d)(ii) 的截断值域覆盖可按备注~\ref{rem:LT-coverage-map}
-供应本文的输入覆盖，其他前件须在同一对象上分别验证。
+这里的推论明确保留同一目标集、实际输出和最近零点锚，
+其覆盖可以直接采用备注~\ref{rem:LT-coverage-map} 的截断值域条件。
 
-本文的直接标量相容条件是一条充分判据，
-不覆盖经典极大单调 PPA 的全部步长范围。
-同样，三角系统中指定 Lipschitz 或二次型条件的失效，
-只区分这些具体证书，不排除已有框架采用其他区域、锚点或更新方式。
-固定正定度量下的转移与退化半正定预条件方法也应区分：
-后者可能只控制值域上的影子序列，
-完整状态收敛还需额外条件
-\cite[Theorem~2.4]{EvensEtAl2024SemimonotoneV2}。
-第~\ref{sec:gppa-transfer}~节的结论要求固定正定度量中的条件成立。
+特别地，设 $F$ 极大单调且在 $\bar x\in F^{-1}(0)$ 附近满足
+$d(y,F^{-1}(0))\leq K r_F(y)$。
+极大单调性给完整近端覆盖及 $L=1$，因而对于每个 $\lambda>0$，
+\begin{equation}
+\label{eq:monotone-energy-factor}
+ \rho_E=\frac{K}{\sqrt{K^2+\lambda^2}}<1.
+\end{equation}
+取足够小的 $U=B_a(\bar x)$，误差界在其中成立；
+牢固非扩张性保证 $J_{\lambda F}(U)\subset U$。
+再缩小 $R$ 满足评价窗，并选取
+$\delta+\mathcal L_E(\delta)<a$，
+上述推论适用于所有 $x^0\in B_\delta(\bar x)$。
+式~\eqref{eq:monotone-energy-factor} 恢复 Leventhal 的经典距离收缩因子
+\cite[Theorem~3.1]{Leventhal2009MetricSubregularityPPA}，
+无需额外限制 $\lambda>K$。
+
+当 $0<\gamma<1$ 时，步长不再随距离线性变化。
+这正是第~\ref{sec:triangular-holder-example}~节三角系统所表达的情形：
+法向距离线性衰减，而平方根阶切向位移仍可求和。
+此时 PPA 推论及推论~\ref{cor:residual-growth} 把问题化为
+非线性步长尺度与真残差误差界阶数的相容性。

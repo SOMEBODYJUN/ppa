@@ -1,11 +1,189 @@
-\section{局部近端迭代的收敛}
+\section{普通近端迭代与验证条件}
 \label{sec:deterministic-rleb-spine}
 
-\input{sections/preliminaries}
+取 $v=\operatorname{Id}$ 即得到普通 PPA。
+本节给出这一特例的完整参数形式，再说明全对图条件如何验证它；
+固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
+$S\subset F^{-1}(0)$，残差仍为 $r_F(y)=d(0,F(y))$。
 
-以下固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
-$S\subset F^{-1}(0)$，并记真实残差
-$ r_F(y)=d(0,F(y))$；到空集的距离取 $+\infty$。
+\subsection{允许近端关系的一步估计与收敛}
+
+以下收敛结果只比较一个允许近端输出与输入的最近零点。
+所选零点可以随输出改变，因此同一输入可以有多个允许输出。
+误差界始终使用完整原关系 $F$ 的真残差 $r_F$。
+
+\begin{lemma}[锚定近端步的一步估计]
+\label{lem:solution-comparison}
+取 $R,\bar t>0$、$L\ge0$、$0<\gamma\le1$，
+以及 $x^+\in J_{\lambda F}(x)$，并记
+\[
+ d:=d(x,S),\qquad d^+:=d(x^+,S),\qquad s:=\|x-x^+\|.
+\]
+设 $0\leq d\leq R$，且存在 $p\in P_S(x)$ 满足
+\[
+ \langle x^+-p,x-x^+\rangle
+ \geq\frac14(d^2-L^2d^{2\gamma}).
+\]
+设 $(R+LR^\gamma)/(2\lambda)\leq\bar t$，并且当
+$r_F(x^+)\leq\bar t$ 时有
+$d(x^+,S)\leq\psi(r_F(x^+))$，其中
+$\psi:[0,\bar t]\to[0,\infty)$ 非减。
+则
+\begin{align}
+\label{eq:energy-one-step}
+ (d^+)^2+s^2&\leq\frac{d^2+L^2d^{2\gamma}}2,\\
+\label{eq:step-one-step}
+ s&\leq\frac{d+Ld^\gamma}{2},\\
+\label{eq:direct-output-bound}
+ d^+&\leq\psi(s/\lambda),\\
+\label{eq:direct-recursion-general}
+ d^+&\leq\psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
+\end{align}
+\end{lemma}
+
+\begin{proof}
+置 $a=x^+-p$、$b=x-x^+$。由 $a+b=x-p$，锚定内积条件等价于
+\[
+ \|a-b\|^2=\|a+b\|^2-4\langle a,b\rangle
+ \leq L^2d^{2\gamma}.
+\]
+平行四边形恒等式给出
+\[
+ \|x^+-p\|^2+s^2
+ =\frac{\|a+b\|^2+\|a-b\|^2}{2}
+ \leq\frac{d^2+L^2d^{2\gamma}}2.
+\]
+结合 $d^+\leq\|x^+-p\|$，得到 \eqref{eq:energy-one-step}。
+反三角不等式给出
+\begin{equation}
+\label{eq:power-step}
+ |2s-d|\leq\|2b-(a+b)\|=\|b-a\|\leq Ld^\gamma,
+ \qquad s\leq\frac{d+Ld^\gamma}{2}.
+\end{equation}
+由于 $(x-x^+)/\lambda\in F(x^+)$，有
+\[
+ r_F(x^+)\leq s/\lambda
+ \leq\frac{d+Ld^\gamma}{2\lambda}
+ \leq\frac{R+LR^\gamma}{2\lambda}\leq\bar t.
+\]
+因此真残差误差界适用于这个实际输出。利用 $\psi$ 非减即得
+\eqref{eq:direct-output-bound}--\eqref{eq:direct-recursion-general}。
+这里没有将真残差与所选图值的范数相等同。
+\end{proof}
+
+\begin{corollary}[普通 PPA 的局部有限长度与收敛]
+\label{thm:selection-RLEB}
+\label{cor:selection-extension}
+设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
+$S\subset F^{-1}(0)$ 非空闭，$U\subset X$ 开。固定
+\[
+ R>0,\quad\bar t>0,\quad L\geq0,\quad
+ 0<\gamma\leq1,\quad0<\kappa<1,
+\]
+以及有限非减函数 $\psi:[0,\bar t]\to[0,\infty)$，
+满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
+记 $U_R=\{x\in U:d(x,S)\leq R\}$。
+设同一个近端关系 $\mathcal J$ 满足：
+\begin{enumerate}
+\item[(B1)] 对每个 $x\in U_R$，
+$\varnothing\ne\mathcal J(x)\subset J_{\lambda F}(x)$。
+\item[(B2)] 对每个 $x\in U_R$ 和每个 $x^+\in\mathcal J(x)$，
+存在 $p\in P_S(x)$，使
+\begin{equation}
+\label{eq:solution-comparison-innerproduct}
+ \langle x^+-p,x-x^+\rangle
+ \geq\frac14\left(d(x,S)^2-L^2d(x,S)^{2\gamma}\right).
+\end{equation}
+\item[(B3)] 对每个 $y\in\mathcal J(U_R)$，
+若 $r_F(y)\leq\bar t$，则
+$d(y,S)\leq\psi(r_F(y))$；此外，
+\begin{equation}
+\label{eq:gauge-domain}
+ \frac{R+LR^\gamma}{2\lambda}\leq\bar t.
+\end{equation}
+\item[(B4)] 对每个 $0<r\leq R$，有
+\begin{equation}
+\label{eq:direct-compatibility}
+ \psi\!\left(\frac{r+Lr^\gamma}{2\lambda}\right)\leq\kappa r.
+\end{equation}
+\end{enumerate}
+对 $r\geq0$ 定义
+\[
+ \mathcal L(r):=\frac12\left(
+ \frac{r}{1-\kappa}+\frac{Lr^\gamma}{1-\kappa^\gamma}\right).
+\]
+取任意 $x^0\in U_R$，令 $d_0=d(x^0,S)$。若
+\begin{equation}
+\label{eq:direct-localization}
+ \mathcal L(d_0)<d(x^0,X\setminus U),
+\end{equation}
+则每条逐步选取的轨道
+\begin{equation}
+\label{eq:PPA}
+ x^{k+1}\in\mathcal J(x^k)
+\end{equation}
+均可无限延拓，全部迭代点属于 $U_R$，具有有限长度，
+并收敛到某个 $x^\infty\in S\cap U$。对所有 $k\geq0$，
+采用同一组常数的估计为
+\begin{align}
+\label{eq:direct-distance-rate}
+ d(x^k,S)&\leq\kappa^k d_0,\\
+\label{eq:direct-step-rate}
+ \|x^{k+1}-x^k\|
+ &\leq\frac12\left(\kappa^k d_0
+                 +L\kappa^{\gamma k}d_0^\gamma\right),\\
+\label{eq:direct-tail}
+ \|x^\infty-x^k\|&\leq\mathcal L(d(x^k,S))
+                    \leq\mathcal L(\kappa^k d_0).
+\end{align}
+总长度至多 $\mathcal L(d_0)$；极限点可以随选择而改变。
+\end{corollary}
+
+\begin{proof}
+在定理~\ref{thm:rleb-gppa-physical} 中取
+$v=\operatorname{Id}$、$a(t)=t$、$\omega(t)=Lt^\gamma$、$h(t,s)=s$。
+最近零锚满足 $\|v(x)-v(p)\|=d(x,S)$，前向界和物理位移界自动成立。
+由
+\[
+ \|x-p\|^2-\|2x^+-x-p\|^2
+ =4\langle x^+-p,x-x^+\rangle,
+\]
+(B2) 恰为 (G2) 的反射估计。
+(B1)、(B3)--(B4) 分别给出覆盖、真误差界与直接收缩条件。
+此时 $K(t)=H(t)=(t+Lt^\gamma)/2$，两项几何级数给出
+$\Theta(t)=\mathcal L(t)<\infty$。
+因此初值预算、允许多值范围和所有结论均由父定理原样得到。
+\end{proof}
+
+式~\eqref{eq:direct-distance-rate} 给出距离的 Q 线性因子上界
+$\kappa$。式~\eqref{eq:direct-tail} 给出点误差的 R 线性因子
+上界 $\kappa^\gamma$，不要求点误差逐步 Q 线性收缩。
+
+\begin{corollary}[初值邻域与外层工作域]
+\label{cor:selection-basin}
+在推论~\ref{thm:selection-RLEB} 的条件下，取 $\bar x\in S\cap U$，
+并取有限 $a>0$ 使 $B_a(\bar x)\subset U$。
+若 $0<\delta\leq R$ 满足
+$\delta+\mathcal L(\delta)<a$，则每个
+$x^0\in B_\delta(\bar x)$ 的全部允许轨道均可无限延拓，
+留在 $B_a(\bar x)$，并收敛到 $S\cap B_a(\bar x)$ 中某点。
+这样的 $\delta$ 总能取到。
+\end{corollary}
+
+\begin{proof}
+由 $\mathcal L(t)\to0$（$t\downarrow0$）可选取所述 $\delta$。
+对 $x^0\in B_\delta(\bar x)$，有 $d_0\leq\|x^0-\bar x\|<\delta$，
+以及
+\[
+ d(x^0,X\setminus U)\geq a-\|x^0-\bar x\|
+ >a-\delta>\mathcal L(\delta)\geq\mathcal L(d_0).
+\]
+应用PPA 推论，轨道及其极限到 $\bar x$ 的距离均小于
+$\delta+\mathcal L(\delta)<a$。
+\end{proof}
+
+这个推论分别指定初值邻域和外层工作域；
+它不要求同半径的 $B_\delta(\bar x)$ 是自映射域。
 
 \subsection{RL 条件及其 \texorpdfstring{$J$}{J} 侧形式}
 
@@ -94,204 +272,6 @@ $\psi:[0,\bar t]\to[0,\infty)$ 单调不减，
 $\psi$-广义度量次正则性。
 \end{definition}
 
-\subsection{允许近端关系的一步估计与收敛}
-
-以下收敛结果只比较一个允许近端输出与输入的最近零点。
-所选零点可以随输出改变，因此同一输入可以有多个允许输出。
-误差界始终使用完整原关系 $F$ 的真残差 $r_F$。
-
-\begin{lemma}[锚定近端步的一步估计]
-\label{lem:solution-comparison}
-取 $x^+\in J_{\lambda F}(x)$，并记
-\[
- d:=d(x,S),\qquad d^+:=d(x^+,S),\qquad s:=\|x-x^+\|.
-\]
-设 $0\leq d\leq R$，且存在 $p\in P_S(x)$ 满足
-\[
- \langle x^+-p,x-x^+\rangle
- \geq\frac14(d^2-L^2d^{2\gamma}).
-\]
-设 $(R+LR^\gamma)/(2\lambda)\leq\bar t$，并且当
-$r_F(x^+)\leq\bar t$ 时有
-$d(x^+,S)\leq\psi(r_F(x^+))$，其中
-$\psi:[0,\bar t]\to[0,\infty)$ 非减。
-则
-\begin{align}
-\label{eq:energy-one-step}
- (d^+)^2+s^2&\leq\frac{d^2+L^2d^{2\gamma}}2,\\
-\label{eq:step-one-step}
- s&\leq\frac{d+Ld^\gamma}{2},\\
-\label{eq:direct-output-bound}
- d^+&\leq\psi(s/\lambda),\\
-\label{eq:direct-recursion-general}
- d^+&\leq\psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
-\end{align}
-\end{lemma}
-
-\begin{proof}
-置 $a=x^+-p$、$b=x-x^+$。由 $a+b=x-p$，锚定内积条件等价于
-\[
- \|a-b\|^2=\|a+b\|^2-4\langle a,b\rangle
- \leq L^2d^{2\gamma}.
-\]
-平行四边形恒等式给出
-\[
- \|x^+-p\|^2+s^2
- =\frac{\|a+b\|^2+\|a-b\|^2}{2}
- \leq\frac{d^2+L^2d^{2\gamma}}2.
-\]
-结合 $d^+\leq\|x^+-p\|$，得到 \eqref{eq:energy-one-step}。
-反三角不等式给出
-\begin{equation}
-\label{eq:power-step}
- |2s-d|\leq\|2b-(a+b)\|=\|b-a\|\leq Ld^\gamma,
- \qquad s\leq\frac{d+Ld^\gamma}{2}.
-\end{equation}
-由于 $(x-x^+)/\lambda\in F(x^+)$，有
-\[
- r_F(x^+)\leq s/\lambda
- \leq\frac{d+Ld^\gamma}{2\lambda}
- \leq\frac{R+LR^\gamma}{2\lambda}\leq\bar t.
-\]
-因此真残差误差界适用于这个实际输出。利用 $\psi$ 非减即得
-\eqref{eq:direct-output-bound}--\eqref{eq:direct-recursion-general}。
-这里没有将真残差与所选图值的范数相等同。
-\end{proof}
-
-\begin{theorem}[允许近端关系的局部有限长度与收敛]
-\label{thm:selection-RLEB}
-\label{cor:selection-extension}
-设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
-$S\subset F^{-1}(0)$ 非空闭，$U\subset X$ 开。固定
-\[
- R>0,\quad\bar t>0,\quad L\geq0,\quad
- 0<\gamma\leq1,\quad0<\kappa<1,
-\]
-以及有限非减函数 $\psi:[0,\bar t]\to[0,\infty)$，
-满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
-记 $U_R=\{x\in U:d(x,S)\leq R\}$。
-设同一个近端关系 $\mathcal J$ 满足：
-\begin{enumerate}
-\item[(B1)] 对每个 $x\in U_R$，
-$\varnothing\ne\mathcal J(x)\subset J_{\lambda F}(x)$。
-\item[(B2)] 对每个 $x\in U_R$ 和每个 $x^+\in\mathcal J(x)$，
-存在 $p\in P_S(x)$，使
-\begin{equation}
-\label{eq:solution-comparison-innerproduct}
- \langle x^+-p,x-x^+\rangle
- \geq\frac14\left(d(x,S)^2-L^2d(x,S)^{2\gamma}\right).
-\end{equation}
-\item[(B3)] 对每个 $y\in\mathcal J(U_R)$，
-若 $r_F(y)\leq\bar t$，则
-$d(y,S)\leq\psi(r_F(y))$；此外，
-\begin{equation}
-\label{eq:gauge-domain}
- \frac{R+LR^\gamma}{2\lambda}\leq\bar t.
-\end{equation}
-\item[(B4)] 对每个 $0<r\leq R$，有
-\begin{equation}
-\label{eq:direct-compatibility}
- \psi\!\left(\frac{r+Lr^\gamma}{2\lambda}\right)\leq\kappa r.
-\end{equation}
-\end{enumerate}
-对 $r\geq0$ 定义
-\[
- \mathcal L(r):=\frac12\left(
- \frac{r}{1-\kappa}+\frac{Lr^\gamma}{1-\kappa^\gamma}\right).
-\]
-取任意 $x^0\in U_R$，令 $d_0=d(x^0,S)$。若
-\begin{equation}
-\label{eq:direct-localization}
- \mathcal L(d_0)<d(x^0,X\setminus U),
-\end{equation}
-则每条逐步选取的轨道
-\begin{equation}
-\label{eq:PPA}
- x^{k+1}\in\mathcal J(x^k)
-\end{equation}
-均可无限延拓，全部迭代点属于 $U_R$，具有有限长度，
-并收敛到某个 $x^\infty\in S\cap U$。对所有 $k\geq0$，
-采用同一组常数的估计为
-\begin{align}
-\label{eq:direct-distance-rate}
- d(x^k,S)&\leq\kappa^k d_0,\\
-\label{eq:direct-step-rate}
- \|x^{k+1}-x^k\|
- &\leq\frac12\left(\kappa^k d_0
-                 +L\kappa^{\gamma k}d_0^\gamma\right),\\
-\label{eq:direct-tail}
- \|x^\infty-x^k\|&\leq\mathcal L(d(x^k,S))
-                    \leq\mathcal L(\kappa^k d_0).
-\end{align}
-总长度至多 $\mathcal L(d_0)$；极限点可以随选择而改变。
-\end{theorem}
-
-\begin{proof}
-任取一个合法输入 $x^k\in U_R$。由 (B1) 可选取下一步；
-由 (B2)--(B3) 及引理~\ref{lem:solution-comparison}，
-记 $d_k=d(x^k,S)$、$s_k=\|x^{k+1}-x^k\|$，有
-\[
- s_k\leq\frac{d_k+Ld_k^\gamma}{2},\qquad
- d_{k+1}\leq\psi\!\left(\frac{d_k+Ld_k^\gamma}{2\lambda}\right).
-\]
-当 $d_k>0$ 时，(B4) 给出 $d_{k+1}\leq\kappa d_k$。
-当 $d_k=0$ 时，步长界强制 $x^{k+1}=x^k$，
-故同一距离递推仍成立。
-
-若已构造至 $x^k\in U_R$，上述估计给出
-$d_{k+1}\leq\kappa^{k+1}d_0$，且
-\[
- \|x^{k+1}-x^0\|
- \leq\sum_{j=0}^{k}s_j
- \leq\frac12\sum_{j=0}^{k}
-       \left(\kappa^j d_0+L\kappa^{\gamma j}d_0^\gamma\right)
- \leq\mathcal L(d_0)<d(x^0,X\setminus U).
-\]
-因此 $x^{k+1}\in U$，并且 $d_{k+1}\leq R$。
-从初值开始归纳，(B1) 在每个后继输入上继续适用，
-得到无限延拓和 \eqref{eq:direct-distance-rate}--
-\eqref{eq:direct-step-rate}。这一步没有预先假设整条轨道留域。
-
-无限轨道构造完成后，应用引理~\ref{lem:distance-length-interface}，
-取 $b(r)=(r+Lr^\gamma)/2$。式~\eqref{eq:prelim-length-budget}
-给出总长度和尾项上界，故轨道收敛到某个 $x^\infty\in S$，且
-\[
- \|x^\infty-x^k\|\leq\mathcal L(d_k)
- \leq\mathcal L(\kappa^k d_0).
-\]
-同一严格预算保证极限仍在 $U$ 中。
-所有估计均对每个允许输出成立，因此对全部允许选择使用相同常数。
-\end{proof}
-
-式~\eqref{eq:direct-distance-rate} 给出距离的 Q 线性因子上界
-$\kappa$。式~\eqref{eq:direct-tail} 给出点误差的 R 线性因子
-上界 $\kappa^\gamma$，不要求点误差逐步 Q 线性收缩。
-
-\begin{corollary}[初值邻域与外层工作域]
-\label{cor:selection-basin}
-在定理~\ref{thm:selection-RLEB} 的条件下，取 $\bar x\in S\cap U$，
-并取有限 $a>0$ 使 $B_a(\bar x)\subset U$。
-若 $0<\delta\leq R$ 满足
-$\delta+\mathcal L(\delta)<a$，则每个
-$x^0\in B_\delta(\bar x)$ 的全部允许轨道均可无限延拓，
-留在 $B_a(\bar x)$，并收敛到 $S\cap B_a(\bar x)$ 中某点。
-这样的 $\delta$ 总能取到。
-\end{corollary}
-
-\begin{proof}
-由 $\mathcal L(t)\to0$（$t\downarrow0$）可选取所述 $\delta$。
-对 $x^0\in B_\delta(\bar x)$，有 $d_0\leq\|x^0-\bar x\|<\delta$，
-以及
-\[
- d(x^0,X\setminus U)\geq a-\|x^0-\bar x\|
- >a-\delta>\mathcal L(\delta)\geq\mathcal L(d_0).
-\]
-应用主定理，轨道及其极限到 $\bar x$ 的距离均小于
-$\delta+\mathcal L(\delta)<a$。
-\end{proof}
-
-这个推论分别指定初值邻域和外层工作域；
-它不要求同半径的 $B_\delta(\bar x)$ 是自映射域。
 
 \subsection{全对图块的充分验证条件}
 
@@ -305,7 +285,7 @@ $\delta+\mathcal L(\delta)<a$。
 \begin{corollary}[全对 RL 图块的局部收敛]
 \label{thm:two-branch-RLEB}
 \label{cor:all-pairs-RLEB}
-沿用定理~\ref{thm:selection-RLEB} 的对象、参数及 $U_R$。
+沿用推论~\ref{thm:selection-RLEB} 的对象、参数及 $U_R$。
 取 $\mathcal G\subset\operatorname{gph}F$，令
 $\mathcal J=J_{\mathcal G}$，并对该关系假设 (B3)--(B4)。
 若还满足以下图块条件：
@@ -319,7 +299,7 @@ $\mathrm{RL}(\lambda,\gamma,L)$。
 对每个满足 \eqref{eq:direct-localization} 的 $x^0\in U_R$，
 唯一图块轨道 $x^{k+1}=J_{\mathcal G}(x^k)$
 可无限进行，留在 $U_R$，具有有限长度，并收敛到 $S\cap U$；
-距离、步长、总长度和尾项满足主定理的共同估计。
+距离、步长、总长度和尾项满足PPA 推论的共同估计。
 \end{corollary}
 
 \begin{proof}
@@ -329,7 +309,7 @@ $\mathrm{RL}(\lambda,\gamma,L)$。
 输出图点 $(x^+,(x-x^+)/\lambda)$ 和 $(p,0)$
 的 Minty 输入对距是 $d(x,S)\leq R$。
 将这对图点代入 \eqref{eq:graph-RL}，即得 (B2)。
-(B3)--(B4) 已经假设，故可直接应用主定理。
+(B3)--(B4) 已经假设，故可直接应用PPA 推论。
 \end{proof}
 
 输入覆盖与全对 RL 所给的图块内唯一性是两个不同条件。
@@ -362,7 +342,7 @@ Luke--Tam 假设~2(d)(ii) 的覆盖前提可以直接用于构造 (B1)。
 
 图块结论转为完整 $J_{\lambda F}$ 的结论，还需在所用输入域上
 证明 $J_{\mathcal G}=J_{\lambda F}$。
-若主定理直接取 $\mathcal J=J_{\lambda F}$，
+若PPA 推论直接取 $\mathcal J=J_{\lambda F}$，
 则其前件必须对全部完整输出成立。
 
 \begin{proposition}[锚定条件允许严格多值的近端关系]
@@ -373,7 +353,7 @@ Luke--Tam 假设~2(d)(ii) 的覆盖前提可以直接用于构造 (B1)。
 \]
 其完整近端关系为 $\mathcal J(x)=J_F(x)=\{x/3,x/4\}$。
 取 $R=\bar t=1$、$\gamma=1$、$L=1/2$、
-$\psi(t)=t/2$、$\kappa=3/8$，主定理的全部前件成立。
+$\psi(t)=t/2$、$\kappa=3/8$，PPA 推论的全部前件成立。
 但是包含全部这些输出的图块不满足任何全对 RL 条件。
 \end{proposition}
 
@@ -408,7 +388,7 @@ $U=\mathbb R$ 使留域预算自动成立。
 
 \begin{corollary}[残差增长条件与临界阶]
 \label{cor:residual-growth}
-沿用主定理的 $X,F,S,U,\lambda,R,\bar t,L,\gamma,\mathcal J$，
+沿用PPA 推论的 $X,F,S,U,\lambda,R,\bar t,L,\gamma,\mathcal J$，
 假设 (B1)--(B2) 成立，且 $0<\gamma<1$、$L>0$。
 若存在 $m,a>0$，使每个
 $y\in\mathcal J(U_R)$ 在 $r_F(y)\leq\bar t$ 时满足
@@ -425,7 +405,7 @@ $y\in\mathcal J(U_R)$ 在 $r_F(y)\leq\bar t$ 时满足
 \end{equation}
 在 $a>\gamma$ 时不成立。
 前两种情形下，缩小工作半径以满足评价窗与统一兼容，
-并选取满足留域预算的初值，即可应用主定理。
+并选取满足留域预算的初值，即可应用PPA 推论。
 后一种情形只表示这个标量判据失效。
 \end{corollary}
 

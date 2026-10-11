@@ -1,6 +1,9 @@
 % Candidate section. Read with the active manuscript's existing preamble.
 % Mathematical purpose: a complete, non-Lipschitz critical-exponent example.
-\section{法向收缩与沿零集的 Hölder 漂移}
+\section{两个非孤立零集的近端模型}
+\label{sec:examples}
+
+\subsection{法向收缩与沿零集的 H\"older 漂移}
 \label{sec:triangular-holder-example}
 
 下面考虑一个具有线性法向阻尼与平方根切向漂移的二维三角系统。
@@ -25,7 +28,7 @@
 \begin{proposition}
 \label{prop:triangular-critical-rleb}
 取 $U=X$、$\mathcal J=J_F$，令 $U_R=\{(a,b):|a|\leq R\}$。
-定理~\ref{thm:selection-RLEB} 的全部前件成立，可取
+推论~\ref{thm:selection-RLEB} 的全部前件成立，可取
 \[
  R=\frac1{16},\qquad \gamma=\frac12,
  \qquad L=\sqrt2,\qquad
@@ -41,7 +44,7 @@
 \[
  \|C(a,b)-p\|^2=2|a|=L^2d((a,b),S)^{2\gamma}.
 \]
-因此主定理的锚定条件成立，包括零输入距离的情形。
+因此PPA 推论的锚定条件成立，包括零输入距离的情形。
 
 由于 $F$ 单值，其真实残差满足
 \[
@@ -59,7 +62,7 @@
  \end{aligned}
 \]
 因此 (B3)--(B4) 成立。
-$U=X$ 使主定理的留域预算自动成立。
+$U=X$ 使PPA 推论的留域预算自动成立。
 
 此外，对输入对距 $\delta\leq R$，有全对估计
 \[

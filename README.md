@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB 中文修订稿](发表成果整理/RLEB/README.md) 先给距离—长度接口，以 [C242 三角系统](research/canonical/triangular_rleb.md) 替代正文复杂例，再给 [C243/C244 正定核与 Euler 接口](research/canonical/rleb_kernel_topology_interfaces.md)。C241 Hamilton 的原证明保留在补充稿。
+本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–GPPA 中文修订稿](发表成果整理/RLEB/README.md) 以 [C245/C246 物理父定理与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 为主链，普通 PPA 准确恢复 C02-v3；[C247 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C248 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C249 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C250 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
 
 导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 635 个数学节点、436 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 

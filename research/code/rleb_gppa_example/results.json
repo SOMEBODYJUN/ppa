@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "finite rational and high-precision checks; analytic proof is in the report",
+  "precision": 110,
+  "bisection_iterations": 240,
+  "seed": "none; deterministic grids",
+  "counts": {
+    "exact_graph_pairs": 3705,
+    "bregman_distance_pairs": 1521,
+    "true_residual_points": 39,
+    "inverse_modulus_pairs": 1521,
+    "implicit_steps": 1170,
+    "objective_gap_checks": 2340,
+    "cubic_rate_checks": 10,
+    "local_scalar_checks": 5,
+    "physical_certificate_checks": 25,
+    "ordinary_ppa_checks": 65,
+    "degenerate_kernel_steps": 20
+  },
+  "maximum_relative_implicit_residual": "8.4673646157968012121543647949147184370484600897254140532677901567974732857332684034667996648447819714899510903E-73",
+  "maximum_normalized_cubic_rate_defect": "9.9999999999999999999999700000000000000000000001210250228229197942272420729326859071715E-25"
+}

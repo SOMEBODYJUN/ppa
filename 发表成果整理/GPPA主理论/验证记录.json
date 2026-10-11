@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-11",
+  "scope": "current main manuscript and C245–C250; not global novelty or journal readiness",
+  "source_set_sha256": "4b7da37cdb6fafdf374de94ed94ee52026e367d80293982de5dc037d567eb33f",
+  "pdf": {
+    "path": "发表成果整理/RLEB/RLEB_中文修订稿.pdf",
+    "pages": 19,
+    "bytes": 542553,
+    "sha256": "04bb76e91c85c27b4e843b22c249992a9394a0fe9aaf3cc8903a8dd4e0d6f79b",
+    "all_pages_visually_inspected": true,
+    "final_render_different_pages": []
+  },
+  "source_zip": {
+    "path": "发表成果整理/RLEB_修订源码.zip",
+    "members": 37,
+    "bytes": 117801,
+    "sha256": "d71a6876d46ac92136fcd6c3f6f3f5a3792eca5a3ba353a0597a7109401abf05",
+    "all_members_equal_actual_sources": true
+  },
+  "finite_checks": {
+    "rleb_gppa": 4603,
+    "rleb_gppa_example": 10421,
+    "rleb_gppa_attack": 246884,
+    "rleb_packaging_enumerated": 2529
+  },
+  "supplement_compile": {
+    "pages": 24,
+    "original_supplement_tex_unchanged": true,
+    "not_full_mathematical_reaudit": true
+  },
+  "skill": {
+    "installed_count": 1,
+    "name": "academic-writing-skills",
+    "native_codex_cli_trigger_verified": false
+  },
+  "canonical_sha256": {
+    "physical_rleb_gppa.md": "0aa1c54d0e29ef20fd91a757172004630e4deeb540d89b1f6a63338e0eb1924b",
+    "rleb_kernel_topology_interfaces.md": "603425e12a1da4886aec516942a50726ff0fd148e6a941393970b022058d1dbb"
+  },
+  "cold_review_sha256": "b3c33eb6408d3e3c907f567f29a40ec185a2a7918cdd8e963bf99b0b764f5a86"
+}

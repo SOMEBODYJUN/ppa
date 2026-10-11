@@ -1,5 +1,7 @@
 # 当前研究状态
 
+**当前发表主链。** [RLEB–GPPA 主稿](发表成果整理/RLEB/README.md) 已以 [C245 物理父定理](research/canonical/physical_rleb_gppa.md#prg-object) 组织，C02-v3 是准确 Id 特例；[C246](research/canonical/physical_rleb_gppa.md#prg-energy) 另给物理能量分支。它使用闭物理 S、物理最近锚和完整 r_F，允许受控非单射核；与 C208–C210 核 chart 的 Z/r_A 对象分开。新稿不宣称整体包含源 T2 或全部旧非几何分支。C247 提供自然 Bregman 模型，C248/C249/C250使后两节有独立可用结论。下一门为目标应用对象的前件认证、一般核的物理指数桥和精确发表先行性；本轮局部数学及行文验收不关闭全库历史语义分母或外部同行审稿。
+
 本页只记录**现在**可执行的研究前沿与阻塞。精确陈述和状态见 [Claim 总账](CLAIMS.md)，公式及证明见各主题正文，合取边见 [逻辑契约](research/LOGIC_CONTRACTS.md) 和 [超边图](research/HYPERGRAPH.md)。来源谱系和语义覆盖任务在 [审计区](research/audit/SEMANTIC_INVENTORY_PLAN.md)；不要求先阅读 `history/sources/` 才能理解已重写的命题。若某条仍标 `source-report` 或 `candidate`，不得把来源目录当作缺失的规范证明自动补齐。
 
 <a id="active-frontier"></a>

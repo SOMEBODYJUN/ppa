@@ -1,0 +1,189 @@
+{
+  "status": "PASS finite checks; analytic proofs govern universal statements",
+  "algebra_exact_samples": 1815,
+  "linear_gate_samples": 25,
+  "linear_gate_rows": [
+    {
+      "L": 0.0,
+      "lambda_over_K": 0.05,
+      "rho_E": 0.7062245515464487,
+      "direct_gate": 10.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.0,
+      "lambda_over_K": 0.5,
+      "rho_E": 0.6324555320336759,
+      "direct_gate": 1.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.0,
+      "lambda_over_K": 1.0,
+      "rho_E": 0.5,
+      "direct_gate": 0.5,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.0,
+      "lambda_over_K": 2.0,
+      "rho_E": 0.31622776601683794,
+      "direct_gate": 0.25,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.0,
+      "lambda_over_K": 10.0,
+      "rho_E": 0.07035975447302918,
+      "direct_gate": 0.05,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.5,
+      "lambda_over_K": 0.05,
+      "rho_E": 0.7895830523185817,
+      "direct_gate": 15.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.5,
+      "lambda_over_K": 0.5,
+      "rho_E": 0.7071067811865476,
+      "direct_gate": 1.5,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.5,
+      "lambda_over_K": 1.0,
+      "rho_E": 0.5590169943749475,
+      "direct_gate": 0.75,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.5,
+      "lambda_over_K": 2.0,
+      "rho_E": 0.3535533905932738,
+      "direct_gate": 0.375,
+      "energy_contracts": true
+    },
+    {
+      "L": 0.5,
+      "lambda_over_K": 10.0,
+      "rho_E": 0.07866459694094408,
+      "direct_gate": 0.075,
+      "energy_contracts": true
+    },
+    {
+      "L": 1.0,
+      "lambda_over_K": 0.05,
+      "rho_E": 0.9987523388778446,
+      "direct_gate": 20.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 1.0,
+      "lambda_over_K": 0.5,
+      "rho_E": 0.8944271909999159,
+      "direct_gate": 2.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 1.0,
+      "lambda_over_K": 1.0,
+      "rho_E": 0.7071067811865476,
+      "direct_gate": 1.0,
+      "energy_contracts": true
+    },
+    {
+      "L": 1.0,
+      "lambda_over_K": 2.0,
+      "rho_E": 0.4472135954999579,
+      "direct_gate": 0.5,
+      "energy_contracts": true
+    },
+    {
+      "L": 1.0,
+      "lambda_over_K": 10.0,
+      "rho_E": 0.09950371902099892,
+      "direct_gate": 0.1,
+      "energy_contracts": true
+    },
+    {
+      "L": 2.0,
+      "lambda_over_K": 0.05,
+      "rho_E": 1.5791661046371634,
+      "direct_gate": 30.0,
+      "energy_contracts": false
+    },
+    {
+      "L": 2.0,
+      "lambda_over_K": 0.5,
+      "rho_E": 1.4142135623730951,
+      "direct_gate": 3.0,
+      "energy_contracts": false
+    },
+    {
+      "L": 2.0,
+      "lambda_over_K": 1.0,
+      "rho_E": 1.118033988749895,
+      "direct_gate": 1.5,
+      "energy_contracts": false
+    },
+    {
+      "L": 2.0,
+      "lambda_over_K": 2.0,
+      "rho_E": 0.7071067811865476,
+      "direct_gate": 0.75,
+      "energy_contracts": true
+    },
+    {
+      "L": 2.0,
+      "lambda_over_K": 10.0,
+      "rho_E": 0.15732919388188815,
+      "direct_gate": 0.15,
+      "energy_contracts": true
+    },
+    {
+      "L": 5.0,
+      "lambda_over_K": 0.05,
+      "rho_E": 3.6010527693136556,
+      "direct_gate": 60.0,
+      "energy_contracts": false
+    },
+    {
+      "L": 5.0,
+      "lambda_over_K": 0.5,
+      "rho_E": 3.22490309931942,
+      "direct_gate": 6.0,
+      "energy_contracts": false
+    },
+    {
+      "L": 5.0,
+      "lambda_over_K": 1.0,
+      "rho_E": 2.5495097567963922,
+      "direct_gate": 3.0,
+      "energy_contracts": false
+    },
+    {
+      "L": 5.0,
+      "lambda_over_K": 2.0,
+      "rho_E": 1.61245154965971,
+      "direct_gate": 1.5,
+      "energy_contracts": false
+    },
+    {
+      "L": 5.0,
+      "lambda_over_K": 10.0,
+      "rho_E": 0.358765761029573,
+      "direct_gate": 0.3,
+      "energy_contracts": true
+    }
+  ],
+  "proximal_boundary_samples": 44,
+  "strong_convexity_pairs": 176,
+  "convex_support_pairs": 441,
+  "circle_tube_samples": 28,
+  "junction": "3/4, exact C1 equality",
+  "minimum_value": "-1/8",
+  "origin_index_sign": 1
+}

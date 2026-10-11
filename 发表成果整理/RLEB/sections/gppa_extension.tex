@@ -1,4 +1,4 @@
-\section{固定正定核的近端迭代}
+\subsection{固定正定度量的特例}
 \label{sec:gppa-transfer}
 
 固定对称正定矩阵 $M$，定义
@@ -20,7 +20,7 @@
 
 \begin{corollary}[固定正定核的局部收敛]
 \label{cor:gppa-spd}
-沿用定理~\ref{thm:selection-RLEB} 的对象与参数，并令
+沿用推论~\ref{thm:selection-RLEB} 的对象与参数，并令
 $U_{M,R}=\{x\in U:d_M(x,S)\leq R\}$。
 将该定理中的近端关系换成 $J^M_{\lambda F}$，
 内积换成 $\langle\cdot,\cdot\rangle_M$，
@@ -68,7 +68,7 @@ $\mathcal L_M(\kappa^k d_0)/\sqrt m$。
  =d_M(x,\mathbb R^n\setminus U).
 \]
 最近零锚及反射估计也在 $Q$ 下逐项对应。
-故推论的假设正是定理~\ref{thm:selection-RLEB}
+故推论的假设正是推论~\ref{thm:selection-RLEB}
 对 $G,Z,W$ 及允许关系
 $\widetilde{\mathcal J}(z)=Q\mathcal J_M(Q^{-1}z)$ 的假设。
 应用该定理再用 $Q^{-1}$ 回代，得到全部 $M$ 范数结论。
@@ -98,12 +98,3 @@ $\widetilde{\mathcal J}(z)=Q\mathcal J_M(Q^{-1}z)$ 的假设。
 $0$ 和 $(-4/49,16/49)$。
 后一输出不属于零集，故上述零锚反射条件在输入 $0$ 已经失败。
 这一例子说明：成功的正对角核计算不能直接推广到所有正定核。
-
-一般核 $v$ 的迭代满足 $v(x)-v(y)\in\lambda F(y)$。
-核坐标收敛未必给出物理点收敛：在 $\mathbb R^2$ 上取
-$F(t,s)=v(t,s)=(t,0)$、$\lambda=1$，
-完整近端输出的第二坐标任意。
-于是 $x^k=(2^{-k},(-1)^k)$ 是合法轨道，
-核坐标与到零集的距离均趋零，而物理点不收敛。
-非线性或退化核需要独立的反演模或输出纤维控制，
-才能得到本节的物理点与有限长度结论。

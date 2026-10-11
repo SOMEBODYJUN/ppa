@@ -3440,6 +3440,78 @@
       "label": "C244 额外全初值吸引强迫单点",
       "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-euler",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-COMMON",
+      "label": "C245 固定核同一物理对象与全部G1–G4",
+      "file": "canonical/physical_rleb_gppa.md#prg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-DIRECT",
+      "label": "C245 ψ(K(t)/λ)≤κt的整窗直接兼容",
+      "file": "canonical/physical_rleb_gppa.md#prg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-BUDGET",
+      "label": "C245 可和物理包络与严格初值预算",
+      "file": "canonical/physical_rleb_gppa.md#prg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-CONV",
+      "label": "C245 全部选择的物理有限长度与点收敛",
+      "file": "canonical/physical_rleb_gppa.md#prg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-ENERGY",
+      "label": "C246 同锚下界、真残差下界与输出域标量能量门",
+      "file": "canonical/physical_rleb_gppa.md#prg-energy",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-BREGMAN",
+      "label": "C247 二次目标四次核完整物理对象及证书",
+      "file": "canonical/physical_rleb_gppa.md#prg-bregman",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-CUBIC",
+      "label": "C247 任意初值总长与实际三次率",
+      "file": "canonical/physical_rleb_gppa.md#prg-bregman",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-CIRCLE",
+      "label": "C248 C¹弱凸目标的完整近端圆与补偿点",
+      "file": "canonical/physical_rleb_gppa.md#prg-circle",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-LINEAR",
+      "label": "C249 普通PPA线性真EB与完整能量条件",
+      "file": "canonical/physical_rleb_gppa.md#prg-linear-energy",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-LINEAR-CONV",
+      "label": "C249 能量收缩及任意正单调步长",
+      "file": "canonical/physical_rleb_gppa.md#prg-linear-energy",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-INDEX-DATA",
+      "label": "C250 同一完整T与局部流形M的整管RLEB",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-local-index",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PRG-INDEX",
+      "label": "C250 局部χ(M)及管外1−χ(M)指数",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-local-index",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8497,6 +8569,145 @@
       "scope": "C244另加对每个全空间初值到同一S距离趋零；已有前向不变投影管和T|S=Id使有限覆盖给共同入管时刻，ΠT^m为真回缩，闭流形顶同调排除正维。",
       "status": "derived-checked",
       "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E437",
+      "inputs": [
+        "PRG-COMMON",
+        "PRG-DIRECT",
+        "PRG-BUDGET"
+      ],
+      "output": "PRG-CONV",
+      "relation": "implies",
+      "scope": "C245同一F/v/S/U和同窗κ/K/H；G1–G4全部允许输出、G5直接兼容、ΣHκ可和及严格物理预算合取，先逐输出残差窗再有限前缀留域。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E438",
+      "inputs": [
+        "PRG-COMMON",
+        "PRG-ENERGY",
+        "PRG-BUDGET"
+      ],
+      "output": "PRG-CONV",
+      "relation": "conditional",
+      "scope": "C246在相同对象上替换直接门：同一G2锚的ρ下界、完整rF的g下界，q先限于[0,ψ(bart)]，整窗能量implication⇒q≤κt；长度预算保持。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E439",
+      "inputs": [
+        "PRG-CONV"
+      ],
+      "output": "TRS-FINITE",
+      "relation": "conditional",
+      "scope": "仅令v=Id,a(t)=t,ω(t)=Lt^γ,h(t,s)=s时G1–G5与C02-v3B1–B4逐项相同，Θ两项级数；准确原预算/全部输出，没有额外假设。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E440",
+      "inputs": [
+        "PRG-BREGMAN"
+      ],
+      "output": "PRG-CUBIC",
+      "relation": "implies",
+      "scope": "C247完整方程t³=u³+λu对每个λ>0唯一，合法输出同号单调，望远镜总长|t0|与e+/e³=1/(λ+u²)给全初值结论；不由局部定理越域。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E441",
+      "inputs": [
+        "PRG-BREGMAN"
+      ],
+      "output": "PRG-COMMON",
+      "relation": "sufficient",
+      "scope": "C247物理F=(t,0),v=(t³,s),S=zero-line，全部完整输出a=r³,ωId,ψId,合法边h=q^(1/3)，R²<λ,bart≥R³/λ，U全空间。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E442",
+      "inputs": [
+        "PRG-BREGMAN"
+      ],
+      "output": "PRG-DIRECT",
+      "relation": "sufficient",
+      "scope": "同一C247认证对象和R²<λ令κ=R²/λ，ψ(K(r)/λ)=r³/λ≤κr全部0<r≤R。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E443",
+      "inputs": [
+        "PRG-BREGMAN"
+      ],
+      "output": "PRG-BUDGET",
+      "relation": "sufficient",
+      "scope": "同一C247小窗κ中H=r、Θ=r/(1−κ)，全空间物理U补集距离∞使所有认证初值满足严格预算。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E444",
+      "inputs": [
+        "PRG-LINEAR"
+      ],
+      "output": "PRG-LINEAR-CONV",
+      "relation": "implies",
+      "scope": "C249的B1–B3,γ1,ψ=Kq、window、ρE<1和严格LE预算合取；用d+²+s²≤(1+L²)d²/2,d+≤Ks/λ；L1加极大单调覆盖/局部真EB恢复全部λ>0。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E445",
+      "inputs": [
+        "PRG-COMMON",
+        "PRG-ENERGY",
+        "PRG-LINEAR"
+      ],
+      "output": "PRG-LINEAR-CONV",
+      "relation": "conditional",
+      "scope": "C249是C246物理能量的Id实例：a=t,ωLt,h=s,ρq=q,gq=q/K，输出域相同，κ=ρE；相同LE严格预算由PRG-LINEAR给定。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E446",
+      "inputs": [
+        "PRG-INDEX-DATA"
+      ],
+      "output": "PRG-INDEX",
+      "relation": "implies",
+      "scope": "C250完整T全域γ*<1反射界及同局部M的C02一步条件给整投影管收缩，T|MId⇒同调恒等，经ENR交换得χ(M)，大球总指数1经可加得管外1−χ。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E447",
+      "inputs": [
+        "PRG-INDEX",
+        "RLEB-EULER-DATA"
+      ],
+      "output": "RLEB-EULER",
+      "relation": "conditional",
+      "scope": "仅M是完整zerF且全部同一全局/局部数据时管外无零点⇒χ(M)=1，恢复C244-v1而不改变其全量词。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E448",
+      "inputs": [
+        "PRG-CIRCLE"
+      ],
+      "output": "PRG-INDEX-DATA",
+      "relation": "sufficient",
+      "scope": "C248明定弱凸目标F=∇f、λ1，完整T唯一，全尺度反射常数2、圆M小管R1/4且L0/ψId/κ1/2，全输入完整覆盖，原点位于管外。",
+      "status": "derived-checked",
+      "topic": "物理 RLEB–GPPA 父理论"
     }
   ]
 }

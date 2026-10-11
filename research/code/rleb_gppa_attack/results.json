@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "counts": {
+    "identity_full_multivalued_transitions": 245760,
+    "uncontrolled_full_fiber_transitions": 16,
+    "zeta_complete_noninjective_multivalued_edges": 50,
+    "local_inverse_remote_zero_outputs": 2,
+    "nonclosed_kernel_target_edges": 152,
+    "smooth_nonclosed_target_allpair_checks": 650,
+    "nonsummable_zeta_edges": 128,
+    "convex_bregman_unique_output_checks": 21,
+    "constant_kernel_full_output_checks": 5,
+    "integrated_energy_linear_specializations": 100
+  },
+  "total_checked_instances": 246884,
+  "nonclosed_target_start_x": 0.5849625007211562,
+  "source_small_asm_direct_ratio_exact": "100/11",
+  "source_small_asm_actual_point_factor_exact": "10/11",
+  "interpretation": "Finite exact verification of stated examples; no universal theorem certified by enumeration."
+}

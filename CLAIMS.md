@@ -2084,3 +2084,57 @@
 - **Conclusion / Scope**：χ(S)=1；额外全部x∈X有d(T^kx,S)→0时S只能单点。固定SPD版本须全域完整J^M、上述M全尺度界、完整S和局部M条件全部重新认证；Q坐标保持Euler/可缩性。这是C231/C235的准确接口，不包括Euler充分性、同预算完成、全域EB或自动全域吸引。
 - **Definitions / Dependencies / Evidence**：[逐项桥与证明](research/canonical/rleb_kernel_topology_interfaces.md#rkt-euler)，C02-v3给投影管全点严格距离收缩；C231给局部χ与总指数1；C235给有限覆盖后ΠT^m真回缩，Hatcher3.26排除正维闭流形可缩。[独立审读](发表成果整理/本轮重构/新结果独立审读.md)重新读取Benjamin–Gottlieb §2.1与Hatcher指定页。
 - **Counterevidence / Objections**：S为严格零子集、非紧、无全尺度次线性界或退化核均不能直接调用。圆—原点模型C=P_B(2x)保局部吸引圆但完整零集另含补偿原点；补偿点在吸引管之外，允许在圆盘内部。
+
+<a id="c245"></a>
+## C245-v1 · 物理空间 RLEB–GPPA 父定理
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：Euclidean Rⁿ、固定全域核v、完整F、λ>0、非空闭物理S⊂zerF与开U；对同一允许Jv全部输入及全部输出满足G1–G4、同一最近零锚前向a及反射ω、相邻物理位移h(d,核步)、同窗完整真rF误差界ψ；K=(a+ω∘a)/2、H=h(t,K(t))，全部0<t≤R有ψ(K(t)/λ)≤κt，Θ(R)=ΣH(κʲR)<∞且严格物理初值预算。
+- **Conclusion / Scope**：全部允许轨道无限延拓、留UR、物理有限长度、极限在S∩U，距离κ几何上界和Θ物理尾界；v=Id,a=t,ω=Lt^γ,h=s准确恢复C02-v3，不新增旧PPA前件。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/physical_rleb_gppa.md#prg-object)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：物理目标闭性与核目标闭性不同；不由核收敛推物理收敛，不涵盖时变核、非几何尺度、误差或松弛。完整关系下p∈S∩U与q∈S同核必为同点，但无需v全域单射。
+
+<a id="c246"></a>
+## C246-v1 · 一般核能量的物理收缩
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：保留C245的G1–G4、ΣH(κʲR)可和及严格预算；输出距离先由真EB限于[0,M0]、M0=ψ(bart)。在同一个G2最近锚下另有ρ(dy)≤||vy−vp||，全部受检输出g(dy)≤rF(y)。对所有t∈(0,R],q∈[0,M0]要求ρ(q)²+λ²g(q)²≤[a(t)²+ω(a(t))²]/2⇒q≤κt。
+- **Conclusion / Scope**：替代C245直接兼容后得到相同全部物理收敛/长度/留域结论；ρ/g不需逆或连续。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/physical_rleb_gppa.md#prg-energy)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：核平方第一项不是物理距离平方；无上述同锚下界不得机械移植物理能量。本文几何兼容门不宣称完整吸收C208–C209所有实例。
+
+<a id="c247"></a>
+## C247-v1 · 二次目标与四次 Bregman 核的准确三次率
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：Euclidean R²，f(t,s)=t²/2，h(t,s)=t⁴/4+s²/2，F=∂f，v=∇h=(t³,s)，任意λ>0、全部初值。完整唯一输出满足t³=y³+λy、s不变。
+- **Conclusion / Scope**：所有初值趋(0,s0)，总长度恰|t0|，非驻定误差e(k+1)/e(k)³→1/λ。同目标二次核PPA因子1/(1+λ)。完整物理证书a(r)=r³、ω(q)=q、ψ(q)=q、允许边h(t,q)=q^(1/3)、H=r；R²<λ给C245同窗直接兼容。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/physical_rleb_gppa.md#prg-bregman)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：核是homeomorphism而逆非Lip；这不等于近端映射非Lip。凸初等例不作为新颖性或非单调框架优越性证据。二维全端点逆模必须保留线性项。
+
+<a id="c248"></a>
+## C248-v1 · 弱凸优化中的吸引圆与补偿临界点
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：Euclidean R²，f(y)=−r²/6(r≤3/4)，f(y)=r²/2−r+3/8(r≥3/4)，F=∇f，λ=1。f为C¹、1/3弱凸，完整近端目标为2/3强凸且强制。
+- **Conclusion / Scope**：完整T=(Id+P_B(2·))/2，完整零集单位圆加原点，极小点集是圆。全尺度任意γ∈(0,1)反射常数2；小管R1/4、L0、ψId、κ1/2对圆满足全部C02前件。圆指数0，原点排斥但平面指数1，补足全局指数。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/physical_rleb_gppa.md#prg-circle)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：原点在吸引管外而可在圆盘内。并非任意核完成模型或Euler充分性；普遍性质由解析证明，有限强凸检查只为诊断。
+
+<a id="c249"></a>
+## C249-v1 · 线性真误差界下保留步长能量的收缩
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：C02-v3普通PPA同对象及B1–B3，γ=1、ψ(q)=Kq,K>0，评价窗(1+L)R/(2λ)≤bart；ρE²=(1+L²)/(2(1+(λ/K)²))<1，严格初值预算LE(d0)<d(x0,Uc)，LE=(1+L)r/(2(1−ρE))。
+- **Conclusion / Scope**：替换原B4后所有允许选择留域、无限延拓、有限长且点收敛；距离因子ρE和LE尾。是C246取vId,a=t,ωLt,h=s,ρq=q,gq=q/K的特例。L1和极大单调完整覆盖/局部真EB恢复任意λ>0经典K/√(K²+λ²)。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/physical_rleb_gppa.md#prg-linear-energy)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：与文献比较限同样实际输出真EB、同S/图/scale。恢复经典因子不是新首创；Luke正式Remark3分子未直接照抄，已读Leventhal。
+
+<a id="c250"></a>
+## C250-v1 · 局部 RLEB 零簇到全域指数平衡的桥
+
+- **Status**：`derived-checked`；自足规范证明、主稿及规范迁移的独立审查已核，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：Euclidean Rⁿ，完整T=JλF全域存在单值，C=2T−Id全尺度γ*∈(0,1)有限反射界；非空紧C²无边界流形M⊂zerF，C02-v3的B1–B4对完整T和同一目标M/包含M开U统一成立。
+- **Conclusion / Scope**：充分小投影管局部指数χ(M)，剩余完整零点指数1−χ(M)；χ(M)≠1强迫管外完整零点。M=zerF准确恢复C244-v1。
+- **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C245–C250。
+- **Counterevidence / Objections / Related Files**：只用一步严格整管距离收缩，不要求每个初值另有预算。指数归一化/交换/可加由Benjamin–Gottlieb原文接口核定；不证明Euler充分、同预算完成或任意非线性核拓扑转移。

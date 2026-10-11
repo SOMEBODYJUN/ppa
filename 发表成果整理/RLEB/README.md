@@ -1,19 +1,13 @@
-# 当前 RLEB 修订稿
+# 当前 RLEB–GPPA 修订稿
 
-本目录是唯一活跃论文源码，原始输入另存于上级“原始投稿包”，保持不变。入口 `main.tex`，输出 [RLEB_中文修订稿.pdf](RLEB_中文修订稿.pdf)；作者沿用“菠萝之神”。
+本目录是唯一活跃论文源码，原始投稿包不改。入口main.tex，输出 [RLEB_中文修订稿.pdf](RLEB_中文修订稿.pdf)，作者沿用“菠萝之神”。
 
-正文先给 Cauchy 性、距离趋零与有限长度的标准收敛接口，再给最近零点锚与实际输出真残差条件。主定理保留覆盖、统一兼容和有限前缀留域的完整证明。二维三角系统取代复杂 Hamilton 主例，保留非 Lipschitz 的锐1/2指数和锐二次误差界，并显式区分法向距离与点误差。固定正定核的推论使用 M 内积、M 距离和 M⁻¹真残差；核改变须重新核对全部条件。短拓扑节给紧光滑完整零集的欧拉限制与全域吸引边界。引言和比较节按问题组织文献，不将有限检索称为完整方向综述。
+正文从Cauchy性、距离趋零与有限长度的标准判定开始；一般核物理父定理C245及能量分支C246控制同一允许关系的全部输出。恒等核准确恢复普通PPA的C02-v3，固定正定度量另用M内积/M距离/M⁻¹真残差。C242三角例展示非Lip切向漂移，C247四次Bregman例展示同目标下三次物理率。第5节以局部吸引零簇的全域完成为问题，给C250指数平衡与C248真实弱凸优化；第6节给参数识别及C249显式能量，恢复单调情形任意正步长。
 
-原 Hamilton 应用、其附录、扩展比较、Schur 验证器和 signed-Schur 附录保存在 `supplements/`；它们不参与新主例的证明。可选补充入口 `supplement.tex` 使用主稿的理论定义并保留原技术材料。
+一般核主定理要求实际相邻转移的物理位移控制；核收敛与物理收敛分开，旧C208–C210核chart身份保持。拓扑结论当前限普通PPA与固定SPD坐标转移。数学与行文独立审查记录见 [GPPA主理论](../GPPA主理论/README.md)；先行性、目标期刊验收与全库历史审计未完成。
 
-在本目录运行：
+原Hamilton、Schur及原扩展比较仍在supplements，日常任务不依赖它们。可选supplement.tex保留旧材料的编译入口。
 
-```bash
-bash build.sh
-```
+在本目录运行 `bash build.sh`。XeLaTeX、BibTeX、Fandol；缺中文依赖时tools/tex-support/bootstrap.sh建立隔离环境，来源在dependencies.json。可用PPA_TEX_SUPPORT指定既有环境，编译关闭shell escape。
 
-脚本采用 XeLaTeX、BibTeX 和 Fandol。缺少中文包时由 `tools/tex-support/bootstrap.sh` 建立隔离依赖；来源与校验在其 dependencies.json。可用 `PPA_TEX_SUPPORT=/绝对路径` 指定已有环境。全部编译关闭 shell escape，生成目录不入版本库。补充材料可由同一引擎编译 `supplement.tex`，不要求日常论文任务加载。
-
-本轮候选搜索、提示词、Skill 再评估、GPPA 审查、独立审读及最终验收见上级 `本轮重构/`。数学新命题的规范正文为 C242 三角例、C243 正定度量接口及 C244 欧拉接口；既有 C241 Hamilton 身份不变。内部验证不代表世界范围新颖性、外部同行评审或未指定期刊的格式验收。
-
-仓库只安装 `.agents/skills/academic-writing-skills`。中文写作、英文润色、LaTeX 和证明审查按任务选模式；数学研究文章与例子选择按需读取数学行文指南，不要求多个 Skill 或固定流水线。
+仓库仍只安装 `.agents/skills/academic-writing-skills`；中文、英文、LaTeX、证明或数学行文按需切换，不要求固定流水线。

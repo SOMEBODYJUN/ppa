@@ -105,3 +105,13 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 [triangular_rleb/README.md](code/triangular_rleb/README.md)与[结果](code/triangular_rleb/results.json)固定seed20261011、脚本指纹、容差和反算范围：15个边界输入、20885个有效点对、15条各35步完整PPA轨道、45条松弛轨道，以及完整方程、真实残差、独立锚定/全对常数和精确SPD反例。一般量词及无限极限由C242解析证明承担；例子特有的松弛结果不扩大主定理。
 
 [rleb_spd/README.md](code/rleb_spd/README.md)与[结果](code/rleb_spd/results.json)记录5212项有限断言：完整Q桥、非对角零输入纤维、正对角小窗、退化丢失纤维和普通PPA成功而新核失败的边界。使用NumPy binary64及Fraction精确反算；环境、误差及seed见入口。不能以有限PASS认证所有核、一般GPPA或全域吸引。
+
+
+## C245–C250：物理 RLEB–GPPA 父理论与论文数学包装
+
+- [rleb_gppa/README.md](code/rleb_gppa/README.md)：4603项标准库有限恒等式、完整非线性/非单射GPPA、真实残差、严格预算与能量边界；不能证明一般定理。
+- [rleb_gppa_example/README.md](code/rleb_gppa_example/README.md)：四次Bregman核、完整隐式步、110位Decimal和精确Fraction；实际10421项有限核验及误差记录。
+- [rleb_packaging/README.md](code/rleb_packaging/README.md)：同点对二次参数识别、25个能量边界、弱凸径向目标的接缝/最优性/强凸/凸支撑与管邻域；一般凸性与指数由解析证明。
+- [rleb_gppa_attack/README.md](code/rleb_gppa_attack/README.md)：独立246884项有限边界；非闭v(S)核收敛而物理发散的完整反例，Id能量与真实Bregman根；不能推理所有核/所有初值。
+
+各verify.py均将结果写入自身目录，环境/精度/确定性范围由README和results.json保存；独立受检范围见发表成果整理/GPPA主理论。

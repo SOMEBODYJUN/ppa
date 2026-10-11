@@ -424,3 +424,13 @@ GPPA候选拓展实际核 Le–Mordukhovich–Théra [arXiv:2608.01584v1](https:
 - **LMZ实际读取**：[Li–Mordukhovich–Zhu arXiv:2406.13207v1](https://arxiv.org/abs/2406.13207v1)，2024-06-19，Theorems4.3–4.4持续误差与固定核接口。DOI10.1287/moor.2024.0570的2026期刊元数据可核，但本轮未读其正式全文；正文用独立2024键，未将v1编号归给期刊版。
 - **经典端点实际读取**：[Leventhal arXiv:0902.4200](https://arxiv.org/abs/0902.4200)，Theorem3.1：极大单调、次正则性、局部系数barγ²/(λ²+barγ²)。[Mordukhovich–Ouyang arXiv:1507.04825v1](https://arxiv.org/abs/1507.04825v1)，引言和Definition3.1支持q>1高阶次正则性；LM2012仅保留一般Hölder背景，本轮未独立读其全文。[Evens等arXiv:2305.03605v2](https://arxiv.org/abs/2305.03605v2)，2024-05-06，Definitions2.1/4.1支持固定V与半单调约定；与2025刊本的逐字身份未认证。
 - **边界**：上述指定来源和命题均实际阅读，证明核查报告在[最终核心审查](../发表成果整理/最终核心独立审查.md)。未做穷尽先行检索、同行审稿或目标期刊接收判断；不可用部分旧证书不适用冒充理论整体优越性。
+
+
+<a id="lit-physical-gppa"></a>
+## LIT-PHYSICAL-GPPA · 本轮父理论及后部数学包装的一手接口
+
+**Paper fact / 实读范围。** Bauschke–Borwein–Combettes2003 [作者原文](https://pcombet.math.ncsu.edu/sicon2.pdf)，Def3.7/3.16、Prop3.22：D-resolvent与Bregman最小化最优性；Bùi–Combettes2020 [作者原文](https://pcombet.math.ncsu.edu/jmaa5.pdf)，Def1.1/Examples3.1/3.4：核化关系的定义与Bregman背景。本文不直接导入其全部收敛定理，C247覆盖和速率独立证明。
+
+Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Theorem2、Cor1及§5在本轮再次读；其后部把结果转成熟悉推论与特定应用问题。C249的K/√(K²+λ²)由 [Leventhal0902.4200v1 Theorem3.1](https://arxiv.org/pdf/0902.4200) pp6–7重新核定，不照抄Luke正式Remark3式31的λ分子印式。Evens2305.03605v2 Def4.1只供应同受检点对的半单调参数约定。Benjamin–Gottlieb62.pdf §2.1.1/.2/.4/.6对应本轮C250局部化/可加/ENR归一化/交换，Hatcher3.26仅在回缩蕴含连通后用于闭流形顶同调。
+
+**本库推导。** C245/C246物理父理论的同锚/真实输出/物理位移与标量门、C247精确率、C248自然优化实现、C249显式能量、C250准确RLEB接口为当前内部研究/编排；已审证明不等于这些特殊公式首次出现。C208–C210旧核chart身份证明保持，不用新物理对象混同r_A与r_F。穷尽先行性、指定期刊和非线性核指数保存尚未认证。
