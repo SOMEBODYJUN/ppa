@@ -668,6 +668,16 @@
 | E423 | [CBG-SYM · C239 RP²符号对称与单矩阵协变模板障碍](canonical/completion_budget_gate.md#cbg-symmetry) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | RP²显式完成须避免K等变及单矩阵同时共轭协变模板；对称破缺仅必要门，不关闭原预算。；**derived-checked** |
 | E424 | [CBG-CERT · C240 给定预算保零完成的健壮有限证书等价](canonical/completion_budget_gate.md#cbg-certificate) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | 将给定预算保零存在性化为真实覆盖与健壮有限证书；L*=L0、端点达到与严格gap仍分开开放，覆盖/求值/非凸求解算法尚未实现。；**derived-checked** |
 
+## 局部 RLEB–PPA
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E425 | [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) | conditional → [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | 同一F/S/λ/允许关系；全部U_R coverage、每输出最近锚、完整真EB评价窗、全部尺度严格兼容，再加每个初值的严格长度预算；有限前缀先保留域再续步。；**derived-checked** |
+| E426 | [TRS-GAP · 完整定义域和高阶真EB仍缺近端输入覆盖](canonical/true_residual_selection_rleb.md#trs-coverage-gap) | limits → [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) | 全定义域闭图、完整全对半Hölder与三次真EB不供应TRS-DATA中的输入coverage；本反例不满足覆盖前件，故不反驳定理。；**derived-checked** |
+| E427 | [HRL-OBJECT · C241 秩亏Hamilton完整输入管对象](canonical/rank_deficient_hamilton_rleb.md#hrl-object) | implies → [HRL-CERT · C241 全域J与同管全对RL真EB及完整收敛](canonical/rank_deficient_hamilton_rleb.md#hrl-proof) | 固定λ1/阻尼99/R10^-6的完整输入图像；凸最小化供应全域唯一J，有限差分核全部点对，真残差窗与κ1/4逐点兼容，U=X严格预算自动。；**derived-checked** |
+| E428 | [HRL-OBJECT · C241 秩亏Hamilton完整输入管对象](canonical/rank_deficient_hamilton_rleb.md#hrl-object) | implies → [HRL-SHARP · C241 锐几何指数与精确自由轴轨道的区别](canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness) | 同一输入管两条显式图序列分别排除RL指数>1/2与真EB幂>2；自由轴完整轨道另给距离1/100和尾1/10，不能将两种最优指数相乘为所有轨道锐率。；**derived-checked** |
+| E429 | [HRL-CERT · C241 全域J与同管全对RL真EB及完整收敛](canonical/rank_deficient_hamilton_rleb.md#hrl-proof) | implies → [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) | C241完整J在同一U_R含所有合法输出、所有最近零锚，参数L1/2/γ1/2/ψ3t²/κ1/4/bart1满足TRS合取；实际输出与完整真残差对象相同。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

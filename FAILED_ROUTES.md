@@ -109,6 +109,7 @@
 
 - **尝试与机制**：由完整图上的全对反射模、非空闭零集和实际图输出的真实残差 EB，断言零点附近所有输入存在 proximal 步，从而启动局部 PPA。
 - **致命缺口**：[C47 / GX-074](research/topics/path_dynamics/discrete_coverage.md#dc-gap) 取紧图 \(K\times\{0\}\)，\(K=\{0\}\cup\{1/n\}\)。整个自然域 K 上每个 \(0<\gamma\le1\) 有全对 \(\mathrm{RL}(\lambda,\gamma,1)\)，在所有有限残差输出上 \(d(u,S)=r_F(u)=0\)，但任意零邻域有输入不在 K，完整 resolvent 的纤维为空。图闭性和全图量词都不能修复缺失的输入。
+- **完整定义域补强**：[TRS-COVERAGE-GAP](research/canonical/true_residual_selection_rleb.md#trs-coverage-gap) 给闭图且 domF=R 的全对 Hölder/全域三次真 EB 反例，qγ>1 仍缺零邻域覆盖；近端自然域只有两个半线与零点。
 - **可回收成果与重启门**：图上的全对模和输出 EB 各自保留；要得到每个邻近输入的轨道，另证 \(V_0\subset\operatorname{ran}(I+\lambda F)\)，还需同一分支的输出留域、兼容及总长度预算。若目标从 \(S=K\) 改为 \(\{0\}\)，旧 EB 不再成立，这属于不同命题。此路线与 F02 的“局部图不保完整纤维”是两种独立的信息门。
 
 <a id="f17"></a>

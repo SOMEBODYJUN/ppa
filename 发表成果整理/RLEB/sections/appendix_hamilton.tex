@@ -1,0 +1,195 @@
+\section{Hamilton 例的有限差分验证与指数最优性}
+\label{app:hamilton-finite-difference}
+
+本附录给出第~\ref{sec:rank-deficient-hamilton}~节中动量估计的
+完整证明。全程保留原来的非 Lipschitz 梯度，不使用平滑正则化。
+记
+\[
+ g_1(t)=\operatorname{sgn}(t)\sqrt{|t|},\qquad
+ h(p)=\begin{cases}p/\sqrt{\|p\|},&p\ne0,\\0,&p=0,\end{cases}
+ \qquad \beta=\frac{\sqrt2}{4}.
+\]
+其中 $g_1$ 连续且严格递增。近端输入 $(a,b)$ 与输出 $(x,p)$
+满足
+\begin{equation}
+\label{eq:hamilton-app-prox}
+ x=a+h(p),\qquad b=g(x)+100p,
+ \qquad g(x)=(g_1(x_1),0).
+\end{equation}
+
+\begin{lemma}[动量球上的有限差分]
+\label{lem:hamilton-secant}
+设 $p=(q,r)$、$\widetilde p=(\widetilde q,\widetilde r)$
+均满足 $\|p\|,\|\widetilde p\|\leq R$，其中 $R>0$。
+记 $\Delta q=q-\widetilde q$、$\Delta r=r-\widetilde r$。
+若 $\Delta q\geq\beta|\Delta r|$，则
+\begin{equation}
+\label{eq:hamilton-secant}
+ h_1(p)-h_1(\widetilde p)
+ \geq\frac{\Delta q-\beta|\Delta r|}{2\sqrt R}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+令 $p_\tau=\widetilde p+\tau(p-\widetilde p)$，$0\leq\tau\leq1$。
+球的凸性给出 $\|p_\tau\|\leq R$。
+在 $p_\tau\ne0$ 的点，直接对
+$h_1(q,r)=q(q^2+r^2)^{-1/4}$ 求导，得到
+\[
+ A(q,r):=\frac{\partial h_1}{\partial q}
+ =\frac{q^2+2r^2}{2(q^2+r^2)^{5/4}}
+ \geq\frac1{2\sqrt R},\qquad
+ B(q,r):=\frac{\partial h_1}{\partial r}
+ =-\frac{qr}{2(q^2+r^2)^{5/4}}.
+\]
+又因为 $q^2+2r^2\geq2\sqrt2|qr|$，有
+$|B|\leq\beta A$。故在上述可微点，
+\[
+ \frac{d}{d\tau}h_1(p_\tau)
+ =A(p_\tau)\Delta q+B(p_\tau)\Delta r
+ \geq\frac{\Delta q-\beta|\Delta r|}{2\sqrt R}.
+\]
+若线段不经过原点，普通微积分基本定理即给出
+\eqref{eq:hamilton-secant}。
+
+若 $p=\widetilde p=0$，结论显然成立。否则线段至多在一个
+参数 $\tau_0$ 处经过原点。写 $v=p-\widetilde p\ne0$，则
+$p_\tau=(\tau-\tau_0)v$，并且有精确公式
+\[
+ h_1(p_\tau)
+ =\operatorname{sgn}(\tau-\tau_0)
+   \sqrt{|\tau-\tau_0|}\,\frac{v_1}{\sqrt{\|v\|}}.
+\]
+因此它在 $\tau_0$ 连续。分别在原点两侧去掉长度为
+$\varepsilon$ 的小区间，积分已经证明的导数下界，再由此精确
+公式令 $\varepsilon\downarrow0$，便得到
+\eqref{eq:hamilton-secant}。$\tau_0=0$ 或 $1$ 时只需去掉
+相应端点的小区间。这一过程只是对原函数的差分求界，不涉及
+正则化函数或平滑极限。
+\end{proof}
+
+\begin{lemma}[近端输出动量的两点估计]
+\label{lem:hamilton-momentum-difference}
+设 $(x,p)$、$(\widetilde x,\widetilde p)$ 分别对应近端输入
+$(a,b)$、$(\widetilde a,\widetilde b)$，且
+$\|p\|,\|\widetilde p\|\leq R$。则
+\begin{align}
+\label{eq:hamilton-momentum-first-coordinate}
+ |p_1-\widetilde p_1|
+ &\leq\max\left\{
+       \frac{|b_1-\widetilde b_1|}{100},\,
+       2\sqrt R|a_1-\widetilde a_1|
+       +\frac{\beta}{100}|b_2-\widetilde b_2|
+      \right\},\\
+\label{eq:hamilton-momentum-full-difference}
+ \|p-\widetilde p\|
+ &\leq\left(4R+\frac{2+\beta^2}{10000}\right)^{1/2}
+       \|(a,b)-(\widetilde a,\widetilde b)\|.
+\end{align}
+特别地，在 $R=10^{-6}$ 时，右侧常数小于 $0.015$，也小于 $0.02$。
+\end{lemma}
+
+\begin{proof}
+由 \eqref{eq:hamilton-app-prox}，
+$p_2-\widetilde p_2=(b_2-\widetilde b_2)/100$。
+以下先设 $\Delta q:=p_1-\widetilde p_1>0$。
+若 $\Delta q$ 严格大于
+\eqref{eq:hamilton-momentum-first-coordinate} 右端的两个量，
+则引理~\ref{lem:hamilton-secant} 给出
+\[
+ h_1(p)-h_1(\widetilde p)>|a_1-\widetilde a_1|,
+ \qquad x_1-\widetilde x_1>0.
+\]
+由 $g_1$ 的严格递增性，
+$g_1(x_1)-g_1(\widetilde x_1)>0$，从而
+\[
+ b_1-\widetilde b_1
+ =100\Delta q+g_1(x_1)-g_1(\widetilde x_1)
+ >100\Delta q>|b_1-\widetilde b_1|,
+\]
+矛盾。交换两点可处理 $\Delta q<0$，$\Delta q=0$ 时结论显然。
+上述比较只用 $g_1$ 的单调性，所以同样适用于
+$x_1=0$、$\widetilde x_1=0$，以及两点跨越零点的情形。
+
+将最大值放大为非负项之和，有
+\[
+ |p_1-\widetilde p_1|
+ \leq2\sqrt R|a_1-\widetilde a_1|
+       +\frac{|b_1-\widetilde b_1|}{100}
+       +\frac{\beta|b_2-\widetilde b_2|}{100}.
+\]
+对此应用 Cauchy--Schwarz 不等式，并加上第二动量坐标的平方，
+得到 \eqref{eq:hamilton-momentum-full-difference}。
+在 $R=10^{-6}$ 时，该常数的平方为 $0.0002165<0.015^2$。
+\end{proof}
+
+\begin{lemma}[动能梯度的全局 Hölder 界]
+\label{lem:hamilton-h-holder}
+对任意 $p,\widetilde p\in\mathbb R^2$，有
+\begin{equation}
+\label{eq:hamilton-h-holder}
+ \|h(p)-h(\widetilde p)\|^2\leq2\|p-\widetilde p\|.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+令 $u=h(p)$、$v=h(\widetilde p)$，则
+$p=\|u\|u$、$\widetilde p=\|v\|v$，包括零向量在内。
+记 $\alpha=\|u\|$、$\eta=\|v\|$。直接展开可得
+\[
+ \langle p-\widetilde p,u-v\rangle
+ =\frac{\alpha+\eta}{2}
+   \bigl(\|u-v\|^2+(\alpha-\eta)^2\bigr)
+ \geq\frac12\|u-v\|^3,
+\]
+其中使用了 $\alpha+\eta\geq\|u-v\|$。
+再用 Cauchy--Schwarz 不等式并在 $u\ne v$ 时约去
+$\|u-v\|$，即得 \eqref{eq:hamilton-h-holder}；$u=v$ 时显然。
+\end{proof}
+
+\begin{proposition}[指数的最优性与上界的保守性]
+\label{prop:hamilton-sharp-exponents}
+对于第~\ref{sec:rank-deficient-hamilton}~节的完整图像块，
+反射预解式 $C=2J_F-I$ 的最大局部 Hölder 指数恰为 $1/2$。
+真残差误差界中幂次 $2$ 也不能提升为任何大于 $2$ 的幂次。
+距离收缩与尾项估计中的数值常数和几何因子仅作为上界使用。
+\end{proposition}
+
+\begin{proof}
+取 $w_t=((0,0),(0,t))$，$0<t\leq R$，以及 $w_0=0$。
+方程 \eqref{eq:hamilton-app-prox} 给出
+\[
+ J_F(w_t)=((0,\sqrt{t/100}),(0,t/100)),\qquad
+ \|C(w_t)-C(w_0)\|^2=\frac{t}{25}+\left(\frac{49t}{50}\right)^2.
+\]
+两输入均在 $U_R$，且 $\|w_t-w_0\|=t$。
+若存在指数 $\gamma>1/2$ 与有限常数 $L'$ 的局部 Hölder 界，
+则必须有
+$\frac15\sqrt t\leq L't^\gamma$，这与 $t\downarrow0$ 矛盾。
+结合正文已证明的 $1/2$ 阶估计，得最大指数为 $1/2$。
+这一计算还表明，$1/2$ 阶界的任何统一常数至少为 $1/5$，
+而正文所用的 $L=1/2$ 不主张为最佳常数。
+
+再取 $y_t=((t^2,0),0)$，$t>0$。
+其真残差为 $r_F(y_t)=t$，距离为 $d(y_t,S)=t^2$。
+对应近端输入为 $y_t+F(y_t)=((t^2,0),(t,0))$，其到 $S$
+的距离为 $\sqrt{t^4+t^2}$，故充分小的 $t$ 给出图像块中的输出点。
+于是任何 $d(y,S)\leq K r_F(y)^{2+\varepsilon}$，
+$\varepsilon>0$，都将要求 $1\leq Kt^\varepsilon$，不可能成立。
+
+最后，对上述初值 $z^0=w_t$，可直接求出整条轨道：
+\[
+ z^j=\left(
+      \left(0,\frac{\sqrt t}{9}(1-10^{-j})\right),
+      (0,100^{-j}t)\right),\qquad
+ z^\infty=((0,\sqrt t/9),0).
+\]
+因此实际距离和尾项分别为
+\[
+ d(z^j,S)=100^{-j}t,\qquad
+ \|z^j-z^\infty\|
+ =\left(\frac{t}{81}100^{-j}+t^2 10000^{-j}\right)^{1/2}.
+\]
+这条轨道满足正文的 $4^{-j}$ 距离界与 $2^{-j}$ 阶尾界，
+但其实际收敛更快，因而不能把正文上界当作轨道的精确渐近式。
+\end{proof}

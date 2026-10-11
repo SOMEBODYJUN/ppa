@@ -8,3 +8,11 @@ __pycache__/
 # Paper build intermediates
 发表成果整理/RLEB/build/
 发表成果整理/skill_tests/**/build/
+发表成果整理/RLEB/tools/tex-support/downloads/
+发表成果整理/RLEB/tools/tex-support/sources/
+发表成果整理/RLEB/tools/tex-support/formats/
+发表成果整理/RLEB/tools/tex-support/texmf/
+发表成果整理/RLEB/tools/tex-support/var/
+发表成果整理/RLEB/tools/tex-support/config/
+发表成果整理/RLEB/tools/tex-support/cache/
+发表成果整理/RLEB/tools/tex-support/build/

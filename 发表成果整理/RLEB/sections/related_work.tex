@@ -1,0 +1,310 @@
+\section{与已有理论的关系}
+\label{sec:comparison}
+
+本节先说明指数 $\gamma=1$ 时 RL 条件与若干二次型条件的关系，
+再比较输出误差界给出的距离收缩上界，最后用第~
+\ref{sec:rank-deficient-hamilton}~节的 Hamilton 实例说明
+完整邻域上若干指定证书的失效。所引算子框架均允许集值映射；
+本文的区别在于所检验不等式的阶数及其与输出误差界的配合。
+
+\subsection{指数为一时的二次型条件}
+
+\begin{proposition}[指数为一时的条件识别]
+\label{prop:linear-identifications}
+固定图像块 $\mathcal G$、尺度 $R$ 和 $\lambda>0$。
+对任意 $(u,u^*),(v,v^*)\in\mathcal G$，记
+$a=u-v$、$b=u^*-v^*$。
+以下结论均限于满足 $\|a+\lambda b\|\leq R$ 的点对。
+\begin{enumerate}
+\item $\mathrm{RL}(1,L)$ 等价于
+\begin{equation}
+ \lambda\langle a,b\rangle
+ \geq \frac{1-L^2}{2(1+L^2)}
+       \bigl(\|a\|^2+\lambda^2\|b\|^2\bigr).
+ \label{eq:linear-rl-balanced}
+\end{equation}
+因此，$\mathrm{RL}(1,1)$ 恰为这些点对上的单调性。
+采用半单调性不等式
+$\langle a,b\rangle\geq\mu\|a\|^2+\nu\|b\|^2$，
+其参数为
+\begin{equation}
+ \mu=\frac{1-L^2}{2\lambda(1+L^2)},
+ \qquad \nu=\lambda^2\mu.
+ \label{eq:balanced-slice-parameters}
+\end{equation}
+故 $\mathrm{RL}(1,L)$ 对应该不等式的平衡参数切片。
+
+\item 对任意 $\tau\geq0$，尺度化次单调性条件
+\[
+ \lambda\langle a,b\rangle
+ \geq-\tau\|a+\lambda b\|^2
+\]
+等价于 $\mathrm{RL}(1,L)$，其中
+\begin{equation}
+ L^2=1+4\tau.
+ \label{eq:luke-tam-normalization}
+\end{equation}
+
+\item 若上述点对满足 $h$-亚单调性条件
+\[
+ \langle a,b\rangle\geq-h\|a\|^2,
+ \qquad h\geq0,
+\]
+且 $\lambda h<1$，则其满足 $\mathrm{RL}(1,L_h)$，其中
+\begin{equation}
+ L_h=\frac{1+\lambda h}{1-\lambda h}.
+ \label{eq:hypo-to-rl}
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+当 $\gamma=1$ 时，RL 内积不等式为
+\[
+ 4\lambda\langle a,b\rangle
+ \geq(1-L^2)\|a+\lambda b\|^2.
+\]
+展开平方并合并内积项，即得
+\eqref{eq:linear-rl-balanced}。
+令 $L=1$ 得到单调性；两边除以 $\lambda$ 得到
+\eqref{eq:balanced-slice-parameters}。
+代入 $1-L^2=-4\tau$，即得第二项。
+
+证明第三项时，令 $c=\lambda b$、$\eta=\lambda h<1$。
+亚单调性与 Cauchy--Schwarz 不等式给出
+\[
+ (1-\eta)\|a\|^2
+ \leq\langle a,a+c\rangle
+ \leq\|a\|\,\|a+c\|,
+\]
+故 $\|a\|\leq\|a+c\|/(1-\eta)$。于是
+\[
+ \begin{split}
+ \|a\|^2+\|c\|^2
+ &=\|a+c\|^2-2\langle a,c\rangle\\
+ &\leq\left(1+\frac{2\eta}{(1-\eta)^2}\right)\|a+c\|^2
+ =\frac{1+L_h^2}{2}\|a+c\|^2.
+ \end{split}
+\]
+由引理~\ref{lem:minty-equivalence}，这就是相同点对范围内
+指数为一的 $J$ 侧不等式。
+\end{proof}
+
+式~\eqref{eq:balanced-slice-parameters} 使用
+\cite{EvensPasLatafatPatrinos2025SemimonotonePPA}
+的半单调性约定。
+式~\eqref{eq:luke-tam-normalization} 则识别了
+Luke--Tam 的尺度化次单调性条件
+\cite[Definition~2]{LukeTam2025GeneralizedMonotonicity}。
+当 $\tau<1/2$ 时，该文命题~4 将截断图像上的条件等价地写成
+相应反射预解式的 Lipschitz 估计，常数为 $\sqrt{1+4\tau}$。
+本文 (A1) 与该文假设~2(d)(ii) 均使用局部 Minty 值域覆盖
+保证近端输出存在；这不意味着两套局部假设相同。
+本文 (A2) 允许非线性 RL 阶数，(A3)--(A4) 再用输出误差界
+控制这一阶数下的距离递推。
+
+\subsection{输出误差界与距离收缩上界}
+
+本文的正则性条件作用于近端输出处的原算子：
+\[
+ d(y,S)\leq\psi\bigl(r_F(y)\bigr).
+\]
+这一条件可独立于 RL 验证。例如，若在所需输出区域上已有
+度量 $q$-次正则性估计
+\begin{equation}
+ d(y,S)\leq K r_F(y)^q,
+ \qquad K>0,\quad q>0,
+ \label{eq:power-eb-comparison}
+\end{equation}
+则可取 $\psi(t)=Kt^q$。一般幂律误差界与近端法的联系已有研究
+\cite{LiMordukhovich2012HolderSubregularityPPA}；其中 $q>1$ 的
+高阶次正则性由 Mordukhovich--Ouyang
+\cite{MordukhovichOuyang2015HigherOrderSubregularity} 单独讨论。
+当 $0<\gamma<1$、$L>0$ 时，直接递推上界的右端满足
+\[
+ K\left(\frac{d+Ld^\gamma}{2\lambda}\right)^q
+ =K\left(\frac{L}{2\lambda}\right)^q
+   d^{\gamma q}(1+o(1))\qquad(d\downarrow0).
+\]
+因此，$\gamma q>1$ 时该上界在充分小尺度上满足 (A4)；
+当 $\gamma q=1$ 时，还须
+$K(L/(2\lambda))^q<1$。
+这里的幂次和系数描述的是递推上界，不能据此认定轨道的精确速率。
+
+一般控制函数也用于 arXiv 初版
+\cite[Theorems~4.3--4.4]{LiMordukhovichZhu2024Preprint}
+的抽象收敛框架。该框架针对带目标函数的次梯度序列，
+使用目标下降、步长替代量、相对次梯度误差、连续性及聚点等条件，
+并将作用于距离的控制函数与其他模量组合成速率映射。
+本文以 RL 提供步长估计，以近端包含关系提供输出残差，
+再由初始半径预算证明局部化和极限存在；不要求预先给定
+目标下降结构或聚点。两者在适当的次梯度 PPA 特例中可以交叠，
+但现有假设本身不给出一般的相互包含关系。
+第~\ref{sec:rank-deficient-hamilton}~节的误差界
+$\psi(t)=3t^2$ 则由该实例的残差直接计算得到。
+
+在 $\gamma=1$ 且输出误差界为 $\psi(t)=\rho t$、$\rho>0$
+时，令 $d=d(x,S)$、$d^+=d(x^+,S)$、$s=\|x-x^+\|$。
+由一步能量估计及 $d^+\leq\rho s/\lambda$，有
+\[
+ \left(1+\frac{\lambda^2}{\rho^2}\right)(d^+)^2
+ \leq(d^+)^2+s^2
+ \leq\frac{1+L^2}{2}d^2.
+\]
+故得到距离的一步上界
+\begin{equation}
+ d^+\leq\kappa_E d,
+ \qquad
+ \kappa_E=\sqrt{\frac{1+L^2}{2}}\,
+          \frac{\rho}{\sqrt{\rho^2+\lambda^2}}.
+ \label{eq:linear-output-coupling}
+\end{equation}
+当 $L=1$ 时，系数退化为
+$\rho/\sqrt{\rho^2+\lambda^2}$，与最大单调情形下
+Leventhal 定理~3.1 的距离上界具有相同形式
+\cite{Leventhal2009MetricSubregularityPPA}。
+
+采用 Luke--Tam 的尺度化参数 $L^2=1+4\tau$，有
+\begin{equation}
+ \kappa_E^2=(1+2\tau)\frac{\rho^2}{\rho^2+\lambda^2},
+ \qquad
+ \kappa_E<1\quad\Longleftrightarrow\quad
+ 2\tau\rho^2<\lambda^2.
+ \label{eq:coupled-linear-factor}
+\end{equation}
+Luke--Tam 定理~2 在其假设~2 下给出的保证系数为
+\cite{LukeTam2025GeneralizedMonotonicity}
+\[
+ \kappa_{\rm LT}^2
+ =1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2,
+ \qquad
+ \tau(1+\rho/\lambda)^2<\frac12.
+\]
+对共同的尺度化次单调性与误差界参数，保留输出端误差界的耦合
+给出较小的保证系数，以及较弱的上述标量收缩限制。
+这只比较相同一步不等式下的上界；局部收敛还须检验值域覆盖、
+输出误差界适用区域和相应的初值局部化条件，
+不能据此认定两条局部定理的全部假设存在包含关系。
+
+\subsection{Hamilton 实例排除的指定条件}
+
+近乎平均映射理论
+\cite{LukeThaoTam2018Quantitative} 与广义单调性 PPA 理论
+\cite{LukeTam2025GeneralizedMonotonicity,
+EvensPasLatafatPatrinos2025SemimonotonePPA}
+均允许集值算子。以下比较限于同一完整邻域上的指定证书。
+
+\begin{proposition}[指定二次型证书在完整邻域上的失效]
+\label{prop:hamilton-quadratic-separation}
+令 $F$ 为第~\ref{sec:rank-deficient-hamilton}~节的算子，
+$J=J_F$，并固定任意零点 $\bar z=((0,\bar s),0)\in S$。
+\begin{enumerate}
+\item 在 $\bar z$ 的任意完整输入邻域上，不存在有限常数
+$C\geq0$，使该邻域内所有输入 $z,w$ 均满足
+\begin{equation}
+ \|Jz-Jw\|^2+
+ \|(z-Jz)-(w-Jw)\|^2\leq C\|z-w\|^2.
+ \label{eq:excluded-quadratic-J}
+\end{equation}
+\item 在 $\bar z$ 的任意完整输入邻域上，不存在有限常数
+$C\geq0$，使所有输入 $z$ 均满足
+$\|Jz-\bar z\|\leq C\|z-\bar z\|$。
+\item 在 $(\bar z,0)$ 的任意完整图像邻域上，
+不存在有限的亚单调性模量。
+\item 不存在固定有限矩阵 $V$，使所有充分接近
+$(\bar z,0)$ 的图像点 $(u,u^*)$ 均满足
+\begin{equation}
+ \langle u-\bar z,u^*\rangle\geq\langle u^*,Vu^*\rangle.
+ \label{eq:excluded-fixed-anchor-matrix}
+\end{equation}
+\end{enumerate}
+上述反例亦可取在命题~\ref{prop:rank-deficient-hamilton-rleb}
+使用的图像块内。
+\end{proposition}
+
+\begin{proof}
+对 $t>0$，取输入 $w_t=((0,\bar s),(0,t))$。
+由近端方程~\eqref{eq:hd-proximal-equations}，
+\[
+ Jw_t=\bigl((0,\bar s+\sqrt{t/100}),(0,t/100)\bigr),
+ \qquad J\bar z=\bar z.
+\]
+于是
+\[
+ \|w_t-\bar z\|^2=t^2,
+ \qquad
+ \|Jw_t-J\bar z\|^2+
+ \|(w_t-Jw_t)-(\bar z-J\bar z)\|^2
+ =\frac{t}{50}+\frac{4901}{5000}t^2.
+\]
+与 $t^2$ 的比值趋于 $+\infty$，证明第一项。
+同时
+\[
+ \frac{\|Jw_t-\bar z\|}{\|w_t-\bar z\|}
+ =\sqrt{\frac1{100t}+\frac1{10000}}
+ \longrightarrow+\infty,
+\]
+证明第二项。
+
+对第三项，取图像点
+\[
+ u_t=((0,\bar s+t),(0,t)),
+ \qquad
+ u_t^*=F(u_t)=((0,-\sqrt t),(0,99t)).
+\]
+将其与 $(\bar z,0)$ 比较，有
+\[
+ \frac{\langle u_t-\bar z,u_t^*\rangle}
+      {\|u_t-\bar z\|^2}
+ =-\frac1{2\sqrt t}+\frac{99}{2}
+ \longrightarrow-\infty.
+\]
+故任何有限亚单调性模量均失效。
+
+最后，改取 $u_t=((0,\bar s+t^{1/4}),(0,t))$，
+$u_t^*$ 保持不变。则
+\[
+ \frac{\langle u_t-\bar z,u_t^*\rangle}{\|u_t^*\|^2}
+ =\frac{-t^{3/4}+99t^2}{t+9801t^2}
+ \longrightarrow-\infty.
+\]
+而对任何固定有限矩阵 $V$，
+$\langle u_t^*,Vu_t^*\rangle/\|u_t^*\|^2\geq-\|V\|$，
+故第四项成立。各点均趋于 $(\bar z,0)$。
+第一、二项使用的近端输入到 $S$ 的距离为 $t$；
+第三、四项图像点对应的近端输入到 $S$ 的距离为 $100t$。
+因此，充分小的 $t$ 也使这些反例属于所指定的图像块。
+\end{proof}
+
+例如，第一项排除有限常数的全点对 $J$ 侧二次型估计，
+因而排除同一完整图像邻域上的 Luke--Tam 次单调性条件。
+该结论不比较整个半单调、弱 Minty、近乎平均或部分正则性框架；
+这些框架可以采用不同的相对区域、锚点测试或退化参数。
+本例在相同输入管状区域上仍具有 $1/2$ 阶 RL 条件与
+二次输出误差界，两者满足 RLEB 的相容性判据。
+
+对于 Hamilton 下降法，需进一步区分更新形式与已有收敛命题。
+Maddison 等的 arXiv 初版~\cite{MaddisonEtAl2018HamiltonianDescent}
+命题~3.2 针对全隐式更新，使用假设 A、B，
+其中包括唯一极小点、阻尼 $\Gamma\in(0,1)$、
+动能对中心共轭能量的支配，以及统一能量配对界
+\[
+ |\langle\nabla f(x),\nabla k(p)\rangle|
+ \leq C_{f,k}\bigl(f(x)-f(x^*)+k(p)\bigr)
+ \qquad(x,p\in\mathbb R^d).
+\]
+该命题还要求初始动量 $p^0=0$ 和步长
+$0<\varepsilon<(1-\Gamma)/(2\max\{C_{f,k},1\})$，
+所得结论为目标函数值的收敛上界。
+本例的极小点不唯一且 $\Gamma=99$。
+即使只检验能量配对界，取 $x=p=(t,0)$ 也有
+\[
+ \frac{|\langle\nabla f(x),\nabla k(p)\rangle|}{f(x)+k(p)}
+ =\frac{3}{4\sqrt t}\longrightarrow+\infty
+ \qquad(t\downarrow0),
+\]
+故该统一界在任何完整局部邻域上亦不成立。
+因此，前节对步长为一、允许非零初始动量的整条位置--动量
+轨道给出的局部收敛结论，不能直接由该命题推出。
+这一比较限于 arXiv 初版的命题~3.2，不表示已有 Hamilton
+下降方法的其他结果均不适用。

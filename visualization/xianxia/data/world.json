@@ -7004,6 +7004,72 @@
       "y": 2913,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "HRL-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "HRL-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "HRL-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TRS-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 2822,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TRS-FINITE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TRS-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8702,6 +8768,26 @@
     "E424": {
       "x": 4730.13,
       "y": 3189.53
+    },
+    "E425": {
+      "x": 4531.02,
+      "y": 2971.17
+    },
+    "E426": {
+      "x": 4733.96,
+      "y": 2841.1
+    },
+    "E427": {
+      "x": 4986.88,
+      "y": 2869.78
+    },
+    "E428": {
+      "x": 4915.22,
+      "y": 2801.12
+    },
+    "E429": {
+      "x": 4826.0,
+      "y": 2822.04
     }
   },
   "bounds": {

@@ -1,0 +1,75 @@
+\section{Verification from graph derivatives}
+\label{sec:schur-seam-verifier}
+
+The main theorem can be applied by checking its assumptions directly, as in
+the Hamilton example.  In more complicated problems, an explicit formula
+for \(J_{\lambda F}\) may be unavailable.  A pair of smooth parametrizations
+of the operator graph can then provide a useful alternative.  We describe
+this verification route here; its full statement and proof are in
+Appendix~\ref{sec:signed-schur-details}.
+
+Suppose the relevant graph consists of two parametrized branches
+\[
+ g_\sigma(a,t)=(u_\sigma(a,t),v_\sigma(a,t)),
+ \qquad \sigma\in\{+,-\},\quad t\ge0,
+\]
+which agree at \(t=0\).  Their proximal inputs are
+\[
+ X_\sigma(a,t)=u_\sigma(a,t)+\lambda v_\sigma(a,t).
+\]
+The parameter \(a\) runs along the seam, while \(t\) measures displacement
+from it on each branch.  The method first solves the tangential components
+of \(X_\sigma(a,t)=x\) for \(a\).  The remaining scalar input coordinate
+is denoted by \(n_\sigma(z,t)\), where \(z\) is the fixed tangential input.
+The key hypothesis requires the two branches to leave their common input
+seam in opposite directions:
+\[
+ \partial_t n_+(z,t)\ge p c_+t^{p-1},\qquad
+ -\partial_t n_-(z,t)\ge p c_-t^{p-1},
+ \qquad p\ge1,\quad c_+,c_->0.
+\]
+These inequalities are checked uniformly over the parameter domain.  The
+derivative remaining after tangential elimination is a Schur complement;
+the two signs distinguish the sides of the seam.
+
+Under the tangential invertibility and derivative bounds of
+Theorem~\ref{thm:signed-schur-growth}, together with its complete-fiber
+condition, this calculation gives an open input neighborhood \(U\) with
+the following properties.  Every \(x\in U\) has exactly one localized
+proximal output \(Jx\), and comparisons across the two branches satisfy
+\begin{equation}
+ \|Jx-Jx'\|^2+
+ \|(x-Jx)-(x'-Jx')\|^2
+ \le\frac12\left(\|x-x'\|^2+
+                     L_D^2\|x-x'\|^{2/p}\right)
+ \label{eq:schur-main-J-estimate}
+\end{equation}
+whenever \(x,x'\) belong to a covered input block of diameter at most
+\(D\).  Thus the produced RL exponent is \(\gamma=1/p\).
+The constant is explicit: for \(p>1\), put \(p'=p/(p-1)\); then
+\[
+ L_D=K_zD^{1-1/p}+(1+B^2)^{1/(2p)}
+ \left[(K_+c_+^{-1/p})^{p'}+
+       (K_-c_-^{-1/p})^{p'}\right]^{1/p'}.
+\]
+Here \(B,K_z,K_+,K_-\) are the uniform derivative bounds specified in
+\eqref{eq:schur-normal-tangent}--\eqref{eq:schur-output-normal}.
+Theorem~\ref{thm:signed-schur-growth} also gives the size of \(U\), and
+Proposition~\ref{prop:schur-matched-jet} supplies an alternative constant
+when the two branch derivatives match to higher order; the leading
+H\"older coefficient improves for \(p>1\) with two nonzero branch bounds.
+
+Completeness of the represented graph is part of the verification: every
+graph point with an input in \(U\) must be accounted for.  Opposite signed
+growth then rules out two distinct outputs at the same input, including
+outputs from different branches.  The theorem concerns the localized
+resolvent unless completeness is established for the unrestricted graph.
+
+This procedure supplies coverage, uniqueness, and the J-side geometry.
+The residual error bound is obtained separately.  To invoke the convergence
+theorem one must also verify the nearest-zero anchors in the same graph,
+the true-residual evaluation window, scalar compatibility, and the strict
+initial length budget.  The proof uses tangential
+inversion and one-dimensional growth; its detailed hypotheses and constants
+are retained in the appendix for applications in which branch data are
+easier to obtain than the resolvent itself.

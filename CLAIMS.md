@@ -22,10 +22,19 @@
 <a id="c02-v2"></a>
 ## C02-v2 · 同图块单值局部 RLEB–PPA 条件定理
 
-- **Status**：`derived-checked`，仅针对以下单值图块版本；C02 原稿身份连同未独立重核的多选择推广仍为 `candidate`。
+- **Status**：`derived-checked`，仅针对以下单值图块版本；C02 原稿的其他身份保持 `candidate`；本轮真残差多选择版本单独登记为 C02-v3。
 - **Exact Statement / Objects / Domain / Quantifiers**：在 \(\mathbb R^n\) 固定同一 \(F,\mathcal G,S,U,\lambda,L,0<\gamma\le1,R,\bar t,\psi,\kappa\)，其中 \(S\subset F^{-1}(0)\) 非空闭、\(U\) 开、\(\psi:[0,\bar t]\to[0,\infty)\) 非减、\(\psi(0)=0\) 且在零连续、\(0<\kappa<1\)。对每个 \(x\in U_R=\{x\in U:d(x,S)\le R\}\)，同一图块有 proximal 输出和最近零锚 \((p,0)\)；该图块的每个适用输入点对满足尺度 \(R\) 的全对 RL；每个实际输出满足完整真残差 EB；\((R+LR^\gamma)/(2\lambda)\le\bar t\)，且全部 \(0<t\le R\) 有 \(\psi((t+Lt^\gamma)/(2\lambda))\le\kappa t\)。对每个 \(x^0\in U_R\) 再要求 \(\mathcal L(d_0)<\operatorname{dist}(x^0,\mathbb R^n\setminus U)\)。则唯一图块轨道无限继续、留在 \(U_R\)、有限长并收敛到 \(S\)；\(d_k\le\kappa^kd_0\)、\(s_k\le(\kappa^kd_0+L\kappa^{\gamma k}d_0^\gamma)/2\)，到极限的尾界为 \(\mathcal L(\kappa^kd_0)\)。其中 \(\mathcal L(d)=\tfrac12[d/(1-\kappa)+Ld^\gamma/(1-\kappa^\gamma)]\)。
 - **Dependencies / Evidence**：[R01 代数与 R02 归纳证明](research/rleb_ppa.md#r02-proof) 从同图块零锚、平行四边形、真实输出 EB、严格预算和 Euclidean 完备性逐步重建；[C136](research/canonical/solution_selection_rates.md#ss-rleb-ball) 再加共同球条件才给统一尾与极限选择模。历史原稿仅是来源线索。
 - **Counterevidence / Objections / Scope**：局部单值只对 \(\mathcal G\) 有效；完整 \(J_{\lambda F}\) 可在同输入有额外分支，需在共同可达输入上另证全纤维一致。多选择 extension、能量分支 R03 及一般 Dini 版本不从本版本自动获得；本状态也不判新颖性。
+
+<a id="c02-v3"></a>
+## C02-v3 · 真残差与最近零锚下的全部允许近端选择
+
+- **Status**：`derived-checked`，仅限本版本；不整体升级 C02 历史原稿，不认证新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：Euclidean X=Rⁿ，n≥1；F:X⇉X，λ>0，非空闭 S⊂zerF，U开；R,bart>0，L≥0，0<γ≤1，0<κ<1；有限非减 ψ:[0,bart]→[0,∞)，ψ(0)=0且零点连续。同一个允许关系在每个 U_R={x∈U:d(x,S)≤R} 上非空且包含于完整 J；每个允许输出 y 各有 p∈P_S(x) 满足 ||2y−x−p||≤Ld(x,S)^γ。实际输出满足完整真残差 EB d(y,S)≤ψ(r_F(y))，评价窗 (R+LRγ)/(2λ)≤bart；全部 0<t≤R 满足 ψ((t+Ltγ)/(2λ))≤κt。每个初值还须 ℒ(d0)<dist(x0,X∖U)，ℒ(t)=½[t/(1−κ)+Ltγ/(1−κγ)]。
+- **Conclusion**：全部允许选择无限继续、留在 U_R、有限长并收敛到 S∩U；距离≤κᵏd0，步长≤½(κᵏd0+Lκγᵏd0γ)，尾≤ℒ(dk)≤ℒ(κᵏd0)。共同常数不要求共同极限。全对图块版为较强验证特例。
+- **Evidence / Dependencies**：[自足陈述与有限前缀证明](research/canonical/true_residual_selection_rleb.md#trs-theorem)、[核心独立复核](发表成果整理/最终核心独立审查.md)、[正文主定理2.5](发表成果整理/RLEB/sections/theorem_spine.tex)。真残差与 C185 所选值 EB 的边界及完整多值见证均在规范页给出。
+- **Scope / Objections**：完整 PPA 的所有输出须在全部使用输入上取允许关系=完整 J。Luke–Tam 的覆盖前提可按同域截断图复用；最近锚、真 EB、兼容、留域独立。既有允许转移收敛机制未被声称首创。闭图、唯一性、Hölder 与高阶真 EB 不自动提供输入邻域，见 [F16](FAILED_ROUTES.md#f16)。
 
 <a id="c03"></a>
 ## C03 · 全局双向 simultaneous shadow
@@ -2038,3 +2047,13 @@
 - **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：C233有限维整管合同(n≥2)，但不要求χ1或管外连通；固定γ∈(0,1)、L>0且全N数据半范数≤L，m∈M。R大于max{sup_N||p−m||,L^(1/(1−γ))}；s+Lsγ<2(1−θ)ρ，紧过渡域A={||x−m||≤R,dist(x,N)≥s}。
 - **Conclusion / Definitions / Dependencies**：同L全域保整管保零完成存在，iff存在A的真实有限h网和值vi，全部原锚/新点对兼容且min||xi−vi||>h+Lhγ；亦iff存在N的真实δ网，使有限锚约束有2Lδγ严格缓冲，并保上述点对/位移门。A空用空证书。必要方向C238严格点值与真完成值小凸混，充分方向HE-EXT及外半径/薄collar/网三块排零。
 - **Evidence / Counterevidence / Scope / Related Files**：[BG12–BG15全证明](research/canonical/completion_budget_gate.md#cbg-certificate)、[独立范围](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md#cbr-new)、[计算例边界](research/code/completion_budget_gate/README.md)。不是自动覆盖算法、RP²原预算解、γ=1/L=0/无限维有限网定理。普通样本、浮点可行和一个粗网失败不能代替证书或严格gap。L*=L0与端点达到在[BG16前沿](research/canonical/completion_budget_gate.md#cbg-next)分开。
+
+
+<a id="c241"></a>
+## C241 · 秩亏 Hamilton 的完整输入管 RLEB 与锐几何指数
+
+- **Status**：`derived-checked`；规范证明独立重构，当前论文主链另经核心审查。不认证发表优先。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=R²×R²，f(x)=2|x1|^(3/2)/3，k(p)=2||p||^(3/2)/3，g=∇f，h=∇k且h(0)=0；完整 F(x,p)=(-h(p),g(x)+99p)，S={((0,s),0):s∈R}。λ=1，U=X，R=10^−6；G_R保留 Minty 输入 d(w,S)≤R 的全部图点。完整 J 在 X 全域非空单值；G_R在 U_R 与完整 J 相同，含全部最近零锚；每个输入对距≤R的完整图点对满足 RL(1,1/2,1/2;R)；全部实际输出真 EB d(y,S)≤3r_F(y)²，bart=1且窗口有效，全部0<r≤R直接兼容κ=1/4。
+- **Conclusion**：每个初值d0≤R的完整轨道无限继续、保持同管、有限长度趋S，dk≤4^−kd0，尾≤(2/3)4^−kd0+(1/2)2^−k√d0。RL指数1/2和真EB幂2各自最优；显示尾为上界，不能由分开最优指数反推所有轨道恰为该率。自由轴轨道给距离因子1/100和点尾因子1/10的精确例子。
+- **Evidence / Dependencies**：[H1–H15自足对象与证明](research/canonical/rank_deficient_hamilton_rleb.md#hrl-object)、[全对有限差分与真残差](research/canonical/rank_deficient_hamilton_rleb.md#hrl-proof)、[锐性与精确轨道](research/canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness)、[核心独立审查](发表成果整理/最终核心独立审查.md)。允许转移定理C02-v3适用，全对验证推论也适用；规范页另直接证明收敛。
+- **Scope / Objections**：L=1/2是有效常数，未声称最优。非零初始动量和非孤立零线包括在内。只排除明确的二次近端能量、固定零锚J-Lipschitz和有限二次Minty证书；不排除所有旧方法或任意非线性核。Maddison v1及LT正式版比较按各自阻尼、步长、p0与零集前提限定，见[版本映射](research/canonical/rank_deficient_hamilton_rleb.md#hrl-comparison)。

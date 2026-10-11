@@ -1,0 +1,103 @@
+\title{Nonlinear RL Geometry and Error Bounds\\
+for Local Proximal Point Convergence}
+\author{菠萝之神}
+\date{}
+\maketitle
+
+\begin{abstract}
+本文研究非 Lipschitz 近端几何下的局部收敛。对每个允许的近端输出，
+只要求其与当前输入的某个最近零点满足非线性 RL 锚定比较，
+并在实际输出处使用原算子的真实残差误差界。
+若近端关系在工作区域处处非空，且
+$\psi((r+Lr^\gamma)/(2\lambda))\leq\kappa r$、$\kappa<1$，
+则严格初始长度预算保证全部允许轨道留在认证区域、具有有限长度，
+并收敛到可能非孤立零点集中的一点。
+在保持误差界、相容性及预算条件的前提下，若同一图像块覆盖所需输入，
+包含所用最近零点锚并满足全对 RL，则得到该主定理的可检验充分条件；
+全对比较还保证块内近端输出唯一。
+对于幂律残差增长 $r_F(y)\geq m\,d(y,S)^a$，
+直接收缩判据在 $a<\gamma$ 时成立，临界阶 $a=\gamma<1$ 的条件为
+$\lambda m>L/2$。
+秩亏幂次回归的全隐式 Hamilton 实例具有处处唯一的近端输出，
+其最大局部 RL 指数为 $1/2$，真实残差误差界的最大幂次为 $2$。
+有限差分证明验证了完整输入管上的图像条件，进而给出允许非零初始动量的
+位置--动量轨道收敛。该实例在同一完整邻域上不满足若干指定二次型证书，
+但这一比较不声称排除已有框架的所有其他适用方式。
+\end{abstract}
+
+\medskip
+\noindent\textbf{关键词：}近端点算法；非线性 RL 条件；误差界；
+集值近端关系；H\"older 连续性；Hamilton 下降法。
+
+\section{引言}
+\label{sec:introduction}
+
+设 $F:\mathbb R^n\rightrightarrows\mathbb R^n$，$\lambda>0$。
+近端点算法通过
+\begin{equation}
+ x^{k+1}\in J_{\lambda F}(x^k),\qquad
+ J_{\lambda F}=(I+\lambda F)^{-1}
+ \label{eq:ppa-intro}
+\end{equation}
+寻找 $F$ 的零点。单调性给出近端映射的牢固非扩张性和一步能量估计
+\cite{Rockafellar1976PPA}；广义单调性与残差误差界则可用于非单调情形
+\cite{LukeTam2025GeneralizedMonotonicity,
+LukeThaoTam2018Quantitative,EvensPasLatafatPatrinos2025SemimonotonePPA}。
+本文关注局部近端响应只有 H\"older 连续性的一类算子：在零点附近，
+位置扰动可以远大于输入扰动，有限的二次型常数不能控制这些位移。
+此时仍可能由较强的输出误差界得到可和的轨道长度。
+
+记 $S\subset F^{-1}(0)$ 为非空闭集，
+$r_F(y)=\inf_{v\in F(y)}\|v\|$ 为真实残差。
+对输入 $x$、允许的近端输出 $x^+$ 和某个最近零点 $p\in P_S(x)$，
+令 $d=d(x,S)$、$s=\|x-x^+\|$。
+本文使用的锚定比较为
+\begin{equation}
+ \langle x^+-p,x-x^+\rangle
+ \geq\frac14\bigl(d^2-L^2d^{2\gamma}\bigr),
+ \qquad L\geq0,\quad 0<\gamma\leq1.
+ \label{eq:rl-intro}
+\end{equation}
+它直接给出 $s\leq(d+Ld^\gamma)/2$。
+近端包含关系仅保证 $r_F(x^+)\leq s/\lambda$；
+若实际输出满足广义误差界
+\begin{equation}
+ d(y,S)\leq\psi(r_F(y)),
+ \label{eq:eb-intro}
+\end{equation}
+其中 $\psi$ 单调不减、$\psi(0)=0$ 且在零点连续，便得到
+\[
+ d(x^+,S)\leq
+ \psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
+\]
+广义及高阶次正则性为这类误差界提供已有理论来源
+\cite{Kruger2015ErrorBounds,MordukhovichOuyang2015HigherOrderSubregularity,
+LiMordukhovichZhu2024Preprint}。
+本文将非线性 RL 比较与输出误差界的组合称为 RLEB。
+
+主定理~\ref{thm:selection-RLEB} 以允许的集值近端关系为对象，
+对每个实际选择使用同一组距离和长度上界。
+覆盖条件保证下一步存在，标量相容性保证距离收缩，
+严格初值预算再保证所有有限轨道前缀均不离开认证区域。
+因此不必预先假定轨道局部化或存在聚点，
+即可证明全部允许轨道具有有限长度并收敛到 $S$。
+极限点可以随选择改变。
+图像全对 RL 条件要求同一块内任意两个图点比较，
+比这里的最近零点锚定条件更强；
+推论~\ref{thm:two-branch-RLEB} 将它作为验证主定理的一条途径，
+并明确区分图像块近端关系与完整近端关系。
+
+本文随后验证一个秩亏幂次回归的全隐式 Hamilton 实例。
+其零点集是一条直线，完整近端映射处处存在且唯一。
+有限差分估计在梯度不可微的零点同样成立，给出最大 RL 指数 $1/2$
+及最大真实残差误差界幂次 $2$；二者满足相容性判据。
+该例得到整条位置--动量轨道的局部收敛结论，
+而同一完整邻域上的指定 Lipschitz 与二次型锚定证书失效。
+这些结论比较明确的条件，不据此认定 RLEB 包含某篇文献的全部定理，
+也不把距离上界称为实际轨道的精确速率。
+
+第~\ref{sec:deterministic-rleb-spine}~节给出主定理及全对图块推论；
+第~\ref{sec:rank-deficient-hamilton}~节验证 Hamilton 实例；
+第~\ref{sec:comparison}~节比较具体条件与收缩上界。
+第~\ref{sec:schur-seam-verifier}~节保留一种图像导数验证方法，
+其条件与证明见附录~\ref{sec:signed-schur-details}。

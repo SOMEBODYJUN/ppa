@@ -410,3 +410,13 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 **Paper fact / 实读定位**：M. Golubitsky and D. Schaeffer, *Bifurcations with O(3) Symmetry Including Applications to the Bénard Problem*, Communications on Pure and Applied Mathematics 35 (1982), 81–111。[作者PDF](https://www.asc.ohio-state.edu/golubitsky.4/reprintweb-0.5/output/papers/O3_benard.pdf)，印页84 Lemma1.3（PDF页索引3）：O3共轭等变映射保持无迹对角二维平面；证明用固定对角矩阵的符号翻转，并由对称矩阵可对角化说明全映射由对角限制决定。本库只导入／重构固定子空间不变性，不导入其分岔定理。
 
 **本库推导与限制**：C239在指定RP²整管和全尺度次线性预算合同下，限制平面内的三局部指数与无穷远次数产生−2缺额。这是新的同合同推导记录，不是对经典不变机制的首创认证。Goebel2016 Claim1 pp431–432已实现任意闭固定集并全部迭代点收敛（极限映射可能不连续）；未保存指定严格局部吸引管，因此不反驳C235。不能从C235宣称任意全域点收敛映射的固定集都可缩。
+
+
+<a id="lit-current-rleb-2026-10-11"></a>
+## LIT-CURRENT-RLEB · 当前稿逐版本接口核查（2026-10-11）
+
+- **Luke–Tam正式版实际读取**：[Generalized Monotonicity and the Proximal Point Algorithm](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863)，DOI10.1287/moor.2025.0863，Articles in Advance，2025-11-21，13页。Assumption2(d)(ii)为局部截断图Minty覆盖；正文Remark2.8与[TRS-FULLGRAPH](canonical/true_residual_selection_rleb.md#trs-fullgraph) 显式映射 Fbar(u)=F(u)∩(W_LT/λ)、U_R⊂U'_LT⊂(I+λFbar)(U_LT)。正式版Theorem2的收缩系数与本稿同一步能量系数在共同假设下比较，不将其中一个前提当成完整定理的包含。此前其他DOI/预印本记录保留为历史版本，不能混用编号。
+- **Hamilton实际读取**：[Maddison等arXiv:1809.05042v1](https://arxiv.org/abs/1809.05042v1)，§3.1式33–35、Proposition3.2、AssumptionsA/B。当前Γ99、非孤立零线、非零初始动量与其阻尼/唯一最小点/p0/小步长前提逐项区分，且本例B.1能量交叉控制失败。[C241文献映射](canonical/rank_deficient_hamilton_rleb.md#hrl-comparison) 不宣称所有Hamilton理论失效。
+- **LMZ实际读取**：[Li–Mordukhovich–Zhu arXiv:2406.13207v1](https://arxiv.org/abs/2406.13207v1)，2024-06-19，Theorems4.3–4.4持续误差与固定核接口。DOI10.1287/moor.2024.0570的2026期刊元数据可核，但本轮未读其正式全文；正文用独立2024键，未将v1编号归给期刊版。
+- **经典端点实际读取**：[Leventhal arXiv:0902.4200](https://arxiv.org/abs/0902.4200)，Theorem3.1：极大单调、次正则性、局部系数barγ²/(λ²+barγ²)。[Mordukhovich–Ouyang arXiv:1507.04825v1](https://arxiv.org/abs/1507.04825v1)，引言和Definition3.1支持q>1高阶次正则性；LM2012仅保留一般Hölder背景，本轮未独立读其全文。[Evens等arXiv:2305.03605v2](https://arxiv.org/abs/2305.03605v2)，2024-05-06，Definitions2.1/4.1支持固定V与半单调约定；与2025刊本的逐字身份未认证。
+- **边界**：上述指定来源和命题均实际阅读，证明核查报告在[最终核心审查](../发表成果整理/最终核心独立审查.md)。未做穷尽先行检索、同行审稿或目标期刊接收判断；不可用部分旧证书不适用冒充理论整体优越性。
