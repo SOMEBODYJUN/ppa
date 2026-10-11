@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-11",
+  "environment_bootstrap": "passed",
+  "shell_syntax": "passed",
+  "tests": [
+    {
+      "name": "chinese",
+      "source": "tests/chinese.tex",
+      "engine": "xelatex",
+      "status": "passed",
+      "pdf": "build/chinese/chinese.pdf",
+      "pages": 1,
+      "warnings": [
+        "Package fontspec Warning: Font \"FandolSong-Regular\" does not contain requested",
+        "Package fontspec Warning: Font \"FandolHei-Regular\" does not contain requested",
+        "Package fontspec Warning: Font \"FandolFang-Regular\" does not contain requested"
+      ],
+      "visual_check": "entire one-page PDF rendered and inspected; readable text and mathematics"
+    },
+    {
+      "name": "english",
+      "source": "tests/english.tex",
+      "engine": "pdflatex",
+      "status": "passed",
+      "pdf": "build/english/english.pdf",
+      "pages": 1,
+      "warnings": [],
+      "visual_check": "entire one-page PDF rendered and inspected; readable text and mathematics"
+    },
+    {
+      "name": "original-manuscript",
+      "source": "../ppa/发表成果整理/原始投稿包/main.tex",
+      "engine": "xelatex",
+      "status": "passed",
+      "pdf": "build/original-manuscript/main.pdf",
+      "pages": 19,
+      "warnings": [
+        "Package fontspec Warning: Font \"FandolSong-Regular\" does not contain requested",
+        "LaTeX Font Warning: Font shape `TU/FandolSong-Regular.otf(0)/m/it' undefined",
+        "LaTeX Warning: Reference `sec:native-verification-seam' on page 2 undefined on ",
+        "LaTeX Warning: Reference `cor:linear-slice' on page 10 undefined on input line ",
+        "Overfull \\hbox (1.80602pt too wide) in paragraph at lines 173--179",
+        "LaTeX Warning: Reference `thm:square-root-seam' on page 11 undefined on input l",
+        "LaTeX Warning: Reference `thm:square-root-seam' on page 12 undefined on input l",
+        "LaTeX Warning: Reference `thm:square-root-seam' on page 13 undefined on input l",
+        "LaTeX Warning: Reference `prop:seam-exact-orbit' on page 13 undefined on input ",
+        "LaTeX Font Warning: Some font shapes were not available, defaults substituted.",
+        "LaTeX Warning: There were undefined references."
+      ],
+      "unresolved_labels": [
+        "cor:linear-slice",
+        "prop:seam-exact-orbit",
+        "sec:native-verification-seam",
+        "thm:square-root-seam"
+      ],
+      "bibtex_status": "passed; no warnings",
+      "visual_check": "first page rendered and inspected; readable text and mathematics"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "system_engine": "TeX Live 2023/Debian; XeTeX 0.999995; pdfTeX 1.40.25; LuaTeX 1.17.0",
+  "system_tex_trees": [
+    "/usr/share/texmf",
+    "/usr/share/texlive/texmf-dist"
+  ],
+  "dependencies": [
+    {
+      "file": "ctex-kit-ctex-v2.5.10.zip",
+      "url": "https://codeload.github.com/CTeX-org/ctex-kit/zip/refs/tags/ctex-v2.5.10",
+      "version": "ctex 2.5.10; xeCJK 3.9.0; zhnumber 3.0",
+      "commit": "13a22565bdd14d750b604c2f1ed0fa1938cb6cd4",
+      "sha256": "e951b34225356e33be827668bd9b8fe882fb2acd017e39c2321f4ef400a0df73"
+    },
+    {
+      "file": "fandol-0.3.zip",
+      "url": "https://mirrors.ctan.org/fonts/fandol.zip",
+      "version": "Fandol 0.3 (2015-07-18)",
+      "sha256": "9278f01b417ded5766d98c3937192a1a6a2c73a5e94a3493fdfc932b2a55005a"
+    }
+  ]
+}

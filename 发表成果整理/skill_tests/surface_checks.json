@@ -1,0 +1,18 @@
+{
+  "cn": {
+    "math_spans": 7,
+    "math_identical": true,
+    "commands_identical": true,
+    "compiled": true,
+    "rendered_page_checked": true,
+    "output_sha256": "cc970851831074c9de6b070d3f38989d9388674443651e973301a8afcdc1f52b"
+  },
+  "en": {
+    "math_spans": 6,
+    "math_identical": true,
+    "commands_identical": true,
+    "compiled": true,
+    "rendered_page_checked": true,
+    "output_sha256": "1867d889b441eddf61ff536f786f998df2b730f0129e0aee28a4a1f1547840f9"
+  }
+}

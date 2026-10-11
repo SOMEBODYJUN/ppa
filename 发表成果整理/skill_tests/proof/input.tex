@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+Let $F:\mathbb R\rightrightarrows\mathbb R$ have a nonempty closed graph and $F^{-1}(0)=\{0\}$.
+Suppose that $\lambda,L,c,q>0$, $0<\gamma<1$, and $q\gamma>1$; that
+$|u-v-\lambda(f-g)|\le L|u-v+\lambda(f-g)|^\gamma$
+for all $(u,f),(v,g)\in\operatorname{gph}F$; and that
+$|u|\le c\,r_F(u)^q$ for every $u\in\operatorname{dom}F$, where $r_F(u)=\inf_{f\in F(u)}|f|$.
+Then there exists $\varepsilon>0$ such that $(-\varepsilon,\varepsilon)\subset\operatorname{ran}(I+\lambda F)$.
+\end{theorem}
+\begin{proof}
+The all-pair estimate defines a continuous Cayley map on its natural input domain. Since $0$ is in that domain, continuity gives an open neighborhood of $0$ on which the map is defined. This proves the assertion.
+\end{proof}
+\end{document}
