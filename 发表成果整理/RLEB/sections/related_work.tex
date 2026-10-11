@@ -45,16 +45,6 @@ $\langle a,b\rangle\geq\mu\|a\|^2+\nu\|b\|^2$，
  \label{eq:luke-tam-normalization}
 \end{equation}
 
-\item 若上述点对满足 $h$-亚单调性条件
-\[
- \langle a,b\rangle\geq-h\|a\|^2,
- \qquad h\geq0,
-\]
-且 $\lambda h<1$，则其满足 $\mathrm{RL}(1,L_h)$，其中
-\begin{equation}
- L_h=\frac{1+\lambda h}{1-\lambda h}.
- \label{eq:hypo-to-rl}
-\end{equation}
 \end{enumerate}
 \end{proposition}
 
@@ -70,24 +60,6 @@ $\langle a,b\rangle\geq\mu\|a\|^2+\nu\|b\|^2$，
 \eqref{eq:balanced-slice-parameters}。
 代入 $1-L^2=-4\tau$，即得第二项。
 
-证明第三项时，令 $c=\lambda b$、$\eta=\lambda h<1$。
-亚单调性与 Cauchy--Schwarz 不等式给出
-\[
- (1-\eta)\|a\|^2
- \leq\langle a,a+c\rangle
- \leq\|a\|\,\|a+c\|,
-\]
-故 $\|a\|\leq\|a+c\|/(1-\eta)$。于是
-\[
- \begin{split}
- \|a\|^2+\|c\|^2
- &=\|a+c\|^2-2\langle a,c\rangle\\
- &\leq\left(1+\frac{2\eta}{(1-\eta)^2}\right)\|a+c\|^2
- =\frac{1+L_h^2}{2}\|a+c\|^2.
- \end{split}
-\]
-由引理~\ref{lem:minty-equivalence}，这就是相同点对范围内
-指数为一的 $J$ 侧不等式。
 \end{proof}
 
 式~\eqref{eq:balanced-slice-parameters} 使用
@@ -98,10 +70,72 @@ Luke--Tam 的尺度化次单调性条件
 \cite[Definition~2]{LukeTam2025GeneralizedMonotonicity}。
 当 $\tau<1/2$ 时，该文命题~4 将截断图像上的条件等价地写成
 相应反射预解式的 Lipschitz 估计，常数为 $\sqrt{1+4\tau}$。
-本文 (A1) 与该文假设~2(d)(ii) 均使用局部 Minty 值域覆盖
-保证近端输出存在；这不意味着两套局部假设相同。
-本文 (A2) 允许非线性 RL 阶数，(A3)--(A4) 再用输出误差界
-控制这一阶数下的距离递推。
+该文假设~2(d)(ii) 的局部 Minty 值域覆盖可以供应本文 (B1)，
+具体映射见备注~\ref{rem:LT-coverage-map}。
+本文 (B2) 允许非线性阶数及随输出选择的最近零锚，
+(B3)--(B4) 则把输出真残差误差界与该阶数相配合。
+
+\subsection{一般半单调性与锚定条件的接口}
+
+平衡切片以外的半单调性也能供应线性 RL。
+仍固定同一图块及受检点对，设
+\begin{equation}
+ \langle a,b\rangle\geq\mu\|a\|^2+\nu\|b\|^2,
+ \qquad \mu,\nu\in\mathbb R.
+ \label{eq:general-semimonotonicity}
+\end{equation}
+令
+\[
+ A=1+\lambda\mu+\nu/\lambda,\qquad
+ B=\lambda\mu-\nu/\lambda,\qquad
+ \Delta=1-4\mu\nu.
+\]
+当 $A>0$、$\Delta\geq0$ 时，该条件给出
+\begin{equation}
+ \mathrm{RL}(1,L_C),\qquad
+ L_C=\frac{|B|+\sqrt\Delta}{A}.
+ \label{eq:semimonotone-cayley-factor}
+\end{equation}
+这个转接只需配方。写 $d=a+\lambda b$、$c=a-\lambda b$，
+式~\eqref{eq:general-semimonotonicity} 等价于
+\[
+ A\|c\|^2+2B\langle d,c\rangle
+ \leq(1-\lambda\mu-\nu/\lambda)\|d\|^2,
+\]
+亦即 $\|Ac+Bd\|^2\leq\Delta\|d\|^2$。
+三角不等式随即给出 \eqref{eq:semimonotone-cayley-factor}。
+特别地，以下条件均在相同点对范围内供应线性 RL：
+\begin{center}
+\begin{tabular}{lcc}
+条件 & 步长门 & 反射常数 \\
+\hline
+单调性 & $\lambda>0$ & $1$ \\
+$h$-亚单调性 & $h\geq0,\ \lambda h<1$ &
+ $(1+\lambda h)/(1-\lambda h)$ \\
+$\eta$-负余单调性 & $\eta\geq0,\ \lambda>\eta$ &
+ $(\lambda+\eta)/(\lambda-\eta)$
+\end{tabular}
+\end{center}
+半单调性及其预解式参数门已有系统研究
+\cite[Definition~4.1, Proposition~4.12]{EvensEtAl2024SemimonotoneV2}；
+这里使用该 arXiv v2 的约定和编号，不将转接公式作为新颖性主张。
+全图同参数极大性在文献的可行步长域内可进一步保证满输入域；
+局部图块的配方本身仅给唯一性，不给输入覆盖。
+边界 $A=0$ 不能代入公式：例如 $F(y)=-y/\lambda$、
+$\mu=-1/(2\lambda)$、$\nu=-\lambda/2$ 满足上述不等式，
+但其 Minty 输入域只有 $\{0\}$，该输入的近端输出为整个空间。
+
+同一配方也适用于一个零锚 $(p,0)$。
+若每个允许输出都能以输入的某个最近零点为锚满足
+式~\eqref{eq:general-semimonotonicity}，它便供应 (B2)，
+而无需输出之间的全对比较。
+标量 weak Minty 条件
+$\langle y-p,v\rangle\geq-\eta\|v\|^2$
+是其中 $(\mu,\nu)=(0,-\eta)$ 的情形；
+文献中的固定矩阵、固定零锚集合和预条件更新还带其他量词与算法门
+\cite[Definition~2.1, Theorem~2.4]{EvensEtAl2024SemimonotoneV2}。
+仅有某个固定零点的锚定证书，不保证该点是输入最近零点，
+也不自动提供全对唯一性、(B1)、(B3)--(B4) 或留域预算。
 
 \subsection{输出误差界与距离收缩上界}
 
@@ -116,20 +150,26 @@ Luke--Tam 的尺度化次单调性条件
  \qquad K>0,\quad q>0,
  \label{eq:power-eb-comparison}
 \end{equation}
-则可取 $\psi(t)=Kt^q$。一般幂律误差界与近端法的联系已有研究
-\cite{LiMordukhovich2012HolderSubregularityPPA}；其中 $q>1$ 的
-高阶次正则性由 Mordukhovich--Ouyang
-\cite{MordukhovichOuyang2015HigherOrderSubregularity} 单独讨论。
+则可取 $\psi(t)=Kt^q$。调用已有误差界时须保持同一目标集和输出区域：
+若标准次正则性只给距离到 $F^{-1}(0)$，而本文选择了严格子集
+$S\subset F^{-1}(0)$，则不能自动得到关于 $S$ 的估计。
+Li--Mordukhovich 的定义允许 $q>0$，其最大单调 PPA 应用使用
+$0<q\leq1$ \cite[Definition~3.1, Section~7]{LiMordukhovich2012HolderSubregularityPPA}。
+Mordukhovich--Ouyang 进一步研究 $q>1$ 的高阶次正则性及
+Newton 类应用 \cite{MordukhovichOuyang2015HigherOrderSubregularity}；
+这些正则性结果供应的是 (B3)，不能替代当前 PPA 的其他前件。
 当 $0<\gamma<1$、$L>0$ 时，直接递推上界的右端满足
 \[
  K\left(\frac{d+Ld^\gamma}{2\lambda}\right)^q
  =K\left(\frac{L}{2\lambda}\right)^q
    d^{\gamma q}(1+o(1))\qquad(d\downarrow0).
 \]
-因此，$\gamma q>1$ 时该上界在充分小尺度上满足 (A4)；
+因此，$\gamma q>1$ 时该上界在充分小尺度上满足 (B4)；
 当 $\gamma q=1$ 时，还须
 $K(L/(2\lambda))^q<1$。
-这里的幂次和系数描述的是递推上界，不能据此认定轨道的精确速率。
+当 $\gamma q<1$ 或临界系数不小于一时，该直接上界不能给出
+统一严格收缩。这是当前证书的边界，不是算法发散的判据，
+也不能据此认定轨道的精确速率。
 
 一般控制函数也用于 arXiv 初版
 \cite[Theorems~4.3--4.4]{LiMordukhovichZhu2024Preprint}
@@ -163,6 +203,20 @@ $\psi(t)=3t^2$ 则由该实例的残差直接计算得到。
 $\rho/\sqrt{\rho^2+\lambda^2}$，与最大单调情形下
 Leventhal 定理~3.1 的距离上界具有相同形式
 \cite{Leventhal2009MetricSubregularityPPA}。
+
+这条能量上界与主定理的直接兼容门须区分。
+线性误差界下，(B4) 要求
+\[
+ \kappa_D=\frac{\rho(1+L)}{2\lambda}<1,
+\]
+它不由 $\kappa_E<1$ 自动推出。
+例如，取最大单调 $F(y)=y/2$、$\lambda=1$、$S=\{0\}$，
+则 $J_F(x)=2x/3$，最小线性 RL 常数 $L=1/3$、最小 EB 常数 $\rho=2$。
+此时 $\kappa_D=4/3>1$，任意缩小正半径都不能满足 (B4)，
+而 $\kappa_E=2/3$ 恰为实际距离因子。
+因此，本文直接分支未包含经典最大单调定理的全部步长范围。
+以下比较仅针对能量的一步系数；本文未据此另行声明一个
+省去 (B4) 的局部收敛分支。
 
 采用 Luke--Tam 的尺度化参数 $L^2=1+4\tau$，有
 \begin{equation}

@@ -312,36 +312,37 @@ $\delta+\mathcal L(\delta)<a$。
 \]
 由定义，$M_+(\mathcal G)=\operatorname{dom}J_{\mathcal G}$。
 
-\begin{assumption}[全对图块充分条件]
-\label{ass:local-rleb}
-设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
-$S\subset F^{-1}(0)$ 非空闭，$U\subset X$ 开，
-$\mathcal G\subset\operatorname{gph}F$。固定
-\[
- R>0,\quad\bar t>0,\quad L\geq0,\quad
- 0<\gamma\leq1,\quad0<\kappa<1,
-\]
-以及有限非减函数 $\psi:[0,\bar t]\to[0,\infty)$，
-满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
-记 $U_R=\{x\in U:d(x,S)\leq R\}$，并假设：
+\begin{corollary}[全对 RL 图块的局部收敛]
+\label{thm:two-branch-RLEB}
+\label{cor:all-pairs-RLEB}
+沿用定理~\ref{thm:selection-RLEB} 的对象、参数及 $U_R$。
+取 $\mathcal G\subset\operatorname{gph}F$，令
+$\mathcal J=J_{\mathcal G}$，并对该关系假设 (B3)--(B4)。
+若还满足以下图块条件：
 \begin{enumerate}
-\item[(A1)] $U_R\subset M_+(\mathcal G)$；对每个 $x\in U_R$，
+\item $U_R\subset M_+(\mathcal G)$；对每个 $x\in U_R$，
 存在 $p\in P_S(x)$ 使 $(p,0)\in\mathcal G$。
-\item[(A2)] $\mathcal G$ 在 Minty 输入对距尺度 $R$ 上满足
+\item $\mathcal G$ 在 Minty 输入对距尺度 $R$ 上满足
 $\mathrm{RL}(\lambda,\gamma,L)$。
-\item[(A3)] 对每个 $y\in J_{\mathcal G}(U_R)$，
-若 $r_F(y)\leq\bar t$，则 $d(y,S)\leq\psi(r_F(y))$；此外，
-\[
- \frac{R+LR^\gamma}{2\lambda}\leq\bar t.
-\]
-\item[(A4)] 对每个 $0<r\leq R$，
-\[
- \psi\!\left(\frac{r+Lr^\gamma}{2\lambda}\right)\leq\kappa r.
-\]
 \end{enumerate}
-\end{assumption}
+则 $J_{\mathcal G}$ 在 $U_R$ 上非空单值。
+对每个满足 \eqref{eq:direct-localization} 的 $x^0\in U_R$，
+唯一图块轨道 $x^{k+1}=J_{\mathcal G}(x^k)$
+可无限进行，留在 $U_R$，具有有限长度，并收敛到 $S\cap U$；
+距离、步长、总长度和尾项满足主定理的共同估计。
+\end{corollary}
 
-(A1) 的输入覆盖与 (A2) 的图块内唯一性是两个不同条件。
+\begin{proof}
+输入覆盖给出 (B1)；全对 RL 与
+引理~\ref{lem:minty-equivalence} 给出图块内唯一性。
+对任意 $x\in U_R$，取图块中的最近零点 $p$。
+输出图点 $(x^+,(x-x^+)/\lambda)$ 和 $(p,0)$
+的 Minty 输入对距是 $d(x,S)\leq R$。
+将这对图点代入 \eqref{eq:graph-RL}，即得 (B2)。
+(B3)--(B4) 已经假设，故可直接应用主定理。
+\end{proof}
+
+输入覆盖与全对 RL 所给的图块内唯一性是两个不同条件。
 类似的截断值域覆盖另见
 \cite[Assumption~2(d)(ii)]{LukeTam2025GeneralizedMonotonicity}；
 这里的覆盖仍须对所选原图块独立验证。
@@ -364,33 +365,10 @@ Luke--Tam 假设~2(d)(ii) 的覆盖前提可以直接用于构造 (B1)。
 \]
 则取 $\mathcal J=J_{\mathcal G_{\rm LT}}$ 即满足 (B1)。
 若 $\mathcal G_{\rm LT}\subset\mathcal G$，
-同一包含关系也供应 (A1) 中的输入覆盖部分。
+同一包含关系也供应推论~\ref{cor:all-pairs-RLEB} 的输入覆盖。
 最近零点锚、(B2)--(B4) 和初值预算仍须对相同对象另行验证；
 使用这一覆盖前提不需要导入外文收敛定理的全部结论。
 \end{remark}
-
-\begin{corollary}[全对 RL 图块的局部收敛]
-\label{thm:two-branch-RLEB}
-\label{cor:all-pairs-RLEB}
-设假设~\ref{ass:local-rleb} 成立。
-若 $x^0\in U_R$ 满足 \eqref{eq:direct-localization}，
-则唯一图块轨道 $x^{k+1}=J_{\mathcal G}(x^k)$
-可无限进行，留在 $U_R$，具有有限长度，并收敛到 $S\cap U$。
-距离、步长、总长度和尾项满足
-定理~\ref{thm:selection-RLEB} 的共同估计。
-\end{corollary}
-
-\begin{proof}
-(A1) 与引理~\ref{lem:minty-equivalence} 给出
-$U_R$ 上非空单值的 $J_{\mathcal G}$。
-对任意 $x\in U_R$，取 (A1) 的最近零点 $p$。
-输出图点 $(x^+,(x-x^+)/\lambda)$ 和 $(p,0)$
-的 Minty 输入对距是 $d(x,S)\leq R$。
-将这对图点代入 \eqref{eq:graph-RL}，即得
-\eqref{eq:solution-comparison-innerproduct}。
-取 $\mathcal J=J_{\mathcal G}$，(A1)--(A4) 因而供应主定理的
-(B1)--(B4)，结论随之成立。
-\end{proof}
 
 图块结论转为完整 $J_{\lambda F}$ 的结论，还需在所用输入域上
 证明 $J_{\mathcal G}=J_{\lambda F}$。

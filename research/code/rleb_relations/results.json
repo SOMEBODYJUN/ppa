@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "exact polynomial identities and rational edge cases; analytic proofs remain in manuscript/C89-v1",
+  "checks": {
+    "semimonotonicity_to_Minty_polynomial_identity": "PASS",
+    "complete_square_discriminant_identity": "PASS",
+    "Cayley_ball_identity": "PASS",
+    "maximal_monotone_counterexample_direct_gate_fails": "PASS",
+    "maximal_monotone_counterexample_energy_is_exact": "PASS",
+    "complete_multivalued_witness_anchor": "PASS",
+    "complete_multivalued_witness_true_EB": "PASS",
+    "complete_multivalued_witness_direct_factor": "PASS",
+    "complete_multivalued_witness_all_pair_obstruction": "PASS",
+    "semimonotone_zero_A_collision_boundary": "PASS",
+    "LT_energy_factor_difference_numerator": "PASS",
+    "balanced_slice_value_0": "PASS",
+    "balanced_slice_value_1/3": "PASS",
+    "balanced_slice_value_1": "PASS",
+    "balanced_slice_value_3": "PASS"
+  },
+  "linear_counterexample": {
+    "L": "1/3",
+    "rho": "2",
+    "kappa_D": "4/3",
+    "kappa_E_squared": "4/9",
+    "J_factor": "2/3"
+  }
+}

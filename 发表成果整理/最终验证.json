@@ -2,29 +2,70 @@
   "date_utc": "2026-10-11",
   "paper": "RLEB/main.tex",
   "pdf_pages": 22,
-  "pdf_sha256": "bfcf9f759a9bd430fe1e7c1e6e38919c953939ebc3b973281f1adf312a62aa4c",
+  "pdf_sha256": "99a50804f5ed636794c5cd8d29980df745ecab2bd6602947b68216cbd9602df4",
   "source_sha256": {
     "main.tex": "d6e04a6f64a8aea580614df9ec1c1c85dc6b4210576420b32ba82548a8c08d54",
-    "references.bib": "f4647f51c482e11191bae27c16796f969ccb30705c53a3ab8b1c6102247f2ff7",
     "sections/appendix_hamilton.tex": "1df60013d304dbe49f9d2c8ea7d1504e736e39a4701ab90914d95c489d5ba335",
     "sections/appendix_signed_schur.tex": "961e5657ac8c59f0e5327b95f4b2006ae8c7606433cabe7720f165854585010e",
     "sections/conclusion.tex": "352500a1ea1e51d5e7230f140dd038d350f945351021ffaafa53c4805f2f361f",
     "sections/frontmatter.tex": "af0eef21a0fccec112ca1725b9eb1b98ab27e80b5a610accfdf9aaba1be3326b",
     "sections/native_schur_verifier.tex": "b8688f14343c6aecc42ee8cac4b6f79b67121d61f1157f339b47a16fbccff036",
-    "sections/related_work.tex": "5f65e3e7d388003afe31867295c462ef4759b31140aec34fa099967feb148ae3",
-    "sections/theorem_spine.tex": "dbf112109e61a608d45f7f715cf548b1de87ae865ee8d4a2118192023c5ba8fb",
-    "sections/verification_example.tex": "92aca8882283979afec439f1fe8380451e5d672a4f8052bdbab1a1fae92442c2"
+    "sections/related_work.tex": "4b909eebffec8bad017ec4b2cecc8d5b3db37833c9e98c278a001157d0c42c78",
+    "sections/theorem_spine.tex": "dfedc9afaf62734b0406965a98021f985d7444a2aab4a496206a498b73483c5e",
+    "sections/verification_example.tex": "856f313c01ca832038a71044f527901c3620640d7873aac5e5ebb510a2f28ce6",
+    "references.bib": "61f41c097208a13070d00e372e96acb8f34df687cb6f530399cf7602a38960b7"
   },
   "labels": 94,
-  "refs_and_eqrefs": 85,
-  "cited_keys": 10,
+  "refs_and_eqrefs": 88,
+  "cited_keys": 11,
   "duplicate_or_missing_labels_and_cites": [],
   "fatal_or_layout_warnings": [],
-  "visual_inspection": "All 22 pages rendered from the final PDF; 6 contact sheets inspected. No clipping or overflow found.",
-  "skill_tests": "3 explicit-load fresh-agent behavior tests passed; CLI auto discovery not tested.",
+  "visual_inspection": "All 22 final pages rendered; 6 contact sheets inspected. No clipping, overflow or missing glyphs found.",
+  "skill_tests": "Prior 3 explicit-load behavior tests and 125+27 script checks retained: installed skill unchanged in this revision. CLI automatic discovery remains untested.",
   "upstream_tests": 125,
   "installed_regression_tests": 27,
   "schur_regression": "3 S2 and 2 S1 closed on final source hashes",
   "core_review": "Final core independent review passed; N1/N2/N3 wording corrected and reviewed separately.",
-  "repository_integrity": "PASS: 240 initial hashes, 251 source files, 178 ZIP members, 4827 source units, 4671 atomic records, 627 nodes, 429 edges, 226 normative Markdown files."
+  "repository_integrity": "PASS: 240 initial hashes, 251 source files, 178 ZIP members, 4827 source units, 4671 atomic records, 627 nodes, 429 edges, 226 normative Markdown files.",
+  "revision_baseline": "3c215c90cede0a3e68506acb2dc370bb4c333f48",
+  "nonfatal_font_warning": "FandolSong does not advertise Script CJK; same baseline warning, no missing-character errors and rendered Chinese verified.",
+  "numbering": {
+    "main_theorem": "2.5",
+    "all_pair_verifier": "2.7",
+    "LT_coverage_remark": "2.8"
+  },
+  "main_theorem_unchanged_from_baseline": true,
+  "exact_relation_checks": {
+    "status": "PASS",
+    "scope": "exact polynomial identities and rational edge cases; analytic proofs remain in manuscript/C89-v1",
+    "checks": {
+      "semimonotonicity_to_Minty_polynomial_identity": "PASS",
+      "complete_square_discriminant_identity": "PASS",
+      "Cayley_ball_identity": "PASS",
+      "maximal_monotone_counterexample_direct_gate_fails": "PASS",
+      "maximal_monotone_counterexample_energy_is_exact": "PASS",
+      "complete_multivalued_witness_anchor": "PASS",
+      "complete_multivalued_witness_true_EB": "PASS",
+      "complete_multivalued_witness_direct_factor": "PASS",
+      "complete_multivalued_witness_all_pair_obstruction": "PASS",
+      "semimonotone_zero_A_collision_boundary": "PASS",
+      "LT_energy_factor_difference_numerator": "PASS",
+      "balanced_slice_value_0": "PASS",
+      "balanced_slice_value_1/3": "PASS",
+      "balanced_slice_value_1": "PASS",
+      "balanced_slice_value_3": "PASS"
+    },
+    "linear_counterexample": {
+      "L": "1/3",
+      "rho": "2",
+      "kappa_D": "4/3",
+      "kappa_E_squared": "4/9",
+      "J_factor": "2/3"
+    }
+  },
+  "independent_revision_reviews": "Structure PASS and relations PASS on exact final source hashes; no confirmed open findings in each bounded review.",
+  "revision_review_sha256": {
+    "本轮结构回归审查.md": "af95ac8ab0d999335d9d0e8b1bfcbe8064c88ba8ac7cfa43461e53989c0e841c",
+    "本轮关系回归审查.md": "5dca3dcac3f8fd7fadd46a2cef59f5751b4e3dbc625f269309a6e030b0cf5060"
+  }
 }

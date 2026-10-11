@@ -100,6 +100,8 @@ d_{k+1}\le\kappa^{k+1}d_0,\qquad
 <a id="trs-fullgraph"></a>
 ## TRS-FULLGRAPH · 全对图块的验证桥与完整纤维门
 
+当前论文用紧凑 `cor:all-pairs-RLEB`（推论2.7）直接引用主定理 B3–B4，并只列图块几何前件；已删除重复的独立 Assumption2.7。此为同一验证桥的写作精简，C02-v3 的数学身份及量词不变。
+
 若同一 \(\mathcal G\subset\operatorname{gph}F\) 对每个 \(x\in U_R\) 有输出及图块内最近零锚，且在 Minty 输入对距尺度 \(R\) 上满足全对 RL，则输出图点与该零锚的比较供应 TRS1。对同输入的两个图点比较，全对 RL 强制 \(J_{\mathcal G}\) 单值。再合取本页真 EB、兼容与预算，即得到 C02-v2 的唯一图块轨道结论。
 
 \(J_{\mathcal G}\subset J_{\lambda F}\) 仅是包含关系；同一输入还可能有完整图的其他输出。调用 C02-v3 控制全部完整输出须另证等式或直接全纤维验证，不能凭图块单值性获得。

@@ -37,7 +37,7 @@
 \]
 则 $J_F$ 在整个 $X$ 上单值且处处有定义，
 $J_{\mathcal G_R}=J_F$ 在 $U_R$ 上成立。
-该图像块满足 \emph{(A1)--(A4)}，可取
+该图像块满足推论~\ref{cor:all-pairs-RLEB} 的验证前件，可取
 \[
  \lambda=1,\qquad \gamma=\frac12,\qquad L=\frac12,
  \qquad \bar t=1,\qquad \psi(t)=3t^2,
@@ -63,7 +63,7 @@ $J_{\mathcal G_R}=J_F$ 在 $U_R$ 上成立。
 故 $J_F$ 在 $X$ 上处处存在且唯一。
 对每个 $U_R$ 中的输入，唯一输出及其图像点都被 $\mathcal G_R$ 保留；
 此外，每个 $s\in S$ 满足 $(s,0)\in\mathcal G_R$。
-最近零点具体为 $((0,a_2),0)$，因此 \emph{(A1)} 成立。
+最近零点具体为 $((0,a_2),0)$，因此输入覆盖和图块最近零锚均成立。
 
 先证明：当 $(a,b)\in U_R$ 时，
 \begin{equation}
@@ -116,7 +116,7 @@ $\|h(p)-h(\widetilde p)\|^2\leq2\|p-\widetilde p\|$，
  \end{split}
 \]
 两输入相同时该界显然成立。由 RL 与反射预解式估计的等价性，
-\emph{(A2)} 对 $\mathcal G_R$ 中全部允许点对成立。
+全对 RL 对 $\mathcal G_R$ 中全部允许点对成立。
 
 再令 $(x,p)=J_F(a,b)$、$(a,b)\in U_R$，
 使用原算子 $F$ 的真残差
@@ -144,7 +144,7 @@ $\|h(p)-h(\widetilde p)\|^2\leq2\|p-\widetilde p\|$，
 实际上 $g(x)+99p=b-p$，故
 $\rho^2\leq R+4R^2<1$，整个输出块都在所取残差区间内。
 再由 $(R+L\sqrt R)/2=0.0002505<1=\bar t$，
-验证了 \emph{(A3)}。
+验证了 (B3)。
 
 最后，对任意 $0<r\leq R$，有
 \[
@@ -153,7 +153,7 @@ $\rho^2\leq R+4R^2<1$，整个输出块都在所取残差区间内。
  \leq\frac34(0.001+0.5)^2
  =0.18825075<\frac14.
 \]
-这证明 \emph{(A4)}。
+这证明 (B4)。
 \end{proof}
 
 这里 $U=X$，故 $d(z^0,X\setminus U)=+\infty$，
