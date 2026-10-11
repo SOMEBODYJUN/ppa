@@ -1,0 +1,194 @@
+\section{满足RLEB的例子}
+\label{sec:rank-deficient-hamilton}
+
+考虑秩亏设计矩阵 $(1,0)$ 对应的幂次回归损失
+\[
+ f(x)=\frac23|x_1|^{3/2},\qquad x=(x_1,x_2)\in\mathbb R^2,
+\]
+以及动能 $k(p)=\frac23\|p\|^{3/2}$。
+Maddison 等在 \emph{Hamiltonian Descent Methods} 中研究的
+全隐式 Hamilton 更新为
+\begin{equation}
+\label{eq:hd-implicit}
+ x^{j+1}-x^j=\nabla k(p^{j+1}),\qquad
+ p^{j+1}-p^j
+ =-\nabla f(x^{j+1})-\Gamma p^{j+1}.
+\end{equation}
+下述回归实例取 $\Gamma=99$。记
+\[
+ g(x)=\nabla f(x)
+   =\bigl(\operatorname{sgn}(x_1)\sqrt{|x_1|},0\bigr),
+ \qquad
+ h(p)=\nabla k(p)
+   =
+   \begin{cases}
+     p/\sqrt{\|p\|},&p\ne0,\\
+     0,&p=0.
+   \end{cases}
+\]
+在 $X=\mathbb R^2\times\mathbb R^2$ 上定义
+\[
+ F(x,p)=\bigl(-h(p),\,g(x)+99p\bigr).
+\]
+于是 \eqref{eq:hd-implicit} 等价于
+$z^{j+1}=J_F(z^j)$，其中 $z^j=(x^j,p^j)$。零点集为
+\[
+ S=F^{-1}(0)
+   =\{((0,s),0):s\in\mathbb R\}.
+\]
+
+\begin{proposition}
+\label{prop:rank-deficient-hamilton-rleb}
+令 $U=X$、$R=10^{-6}$，并将 $F$ 的图像限制在
+近端输入属于
+$U_R=\{z:d(z,S)\leq R\}$ 的部分。
+该图像块满足 (A1)--(A4)，可取
+\[
+ \lambda=1,\quad \gamma=\frac12,\quad L=\frac12,\quad
+ \bar t=1,\quad \psi(t)=3t^2,\quad \kappa=\frac14.
+\]
+\end{proposition}
+
+\begin{proof}
+将近端输入记为 $(a,b)$、输出记为 $(x,p)$。
+近端方程等价于
+\begin{equation}
+\label{eq:hd-proximal-equations}
+ a=x-h(p),\qquad b=g(x)+100p.
+\end{equation}
+由于 $k^*(u)=\|u\|^3/3$，$x$ 是
+\[
+ u\longmapsto
+ k^*(u-a)+\frac1{100}f(u)-\frac1{100}\langle b,u\rangle
+\]
+的唯一极小点，且 $p=\nabla k^*(x-a)$。
+故 $J_F$ 在 $X$ 上单值且处处有定义。
+对任意 $s\in S$，$(s,0)$ 属于所取图像块；
+这验证了 (A1)。
+
+以下两个估计用于检验其余条件。
+首先，对 $(a,b)\in U_R$，由
+$|a_1|\leq R$、$\|b\|\leq R$ 及
+\eqref{eq:hd-proximal-equations} 得
+\begin{equation}
+\label{eq:hd-momentum-small}
+ \|p\|\leq R.
+\end{equation}
+事实上，若 $p_1g_1(x)\geq0$，则
+$100\|p\|\leq\|b\|$；否则 $x_1$ 与 $p_1$ 异号，
+因而
+$|p_1|\leq R\sqrt{\|p\|}$、
+$|p_2|\leq R/100$，仍推出
+\eqref{eq:hd-momentum-small}。
+
+其次，\eqref{eq:hd-proximal-equations} 给出
+$p_2=b_2/100$，而 $p_1$ 由严格递增的方程
+\[
+ b_1=100p_1+
+ g_1\bigl(a_1+h_1(p_1,b_2/100)\bigr)
+\]
+确定。在可微点作隐式微分，并使用
+\[
+ \frac{\partial h_1}{\partial p_1}
+       \geq\frac1{2\sqrt{\|p\|}},
+ \qquad
+ \left|
+ \frac{\partial h_1/\partial p_2}
+      {\partial h_1/\partial p_1}
+ \right|\leq\frac{\sqrt2}{4},
+\]
+可得输入到输出动量的 Jacobian 范数小于 $0.02$。
+对 $g_1,h$ 作平滑正则化，上述界一致成立；
+沿凸集 $U_R$ 中的线段积分并取极限，得到
+\begin{equation}
+\label{eq:hd-momentum-lipschitz}
+ \|p(a,b)-p(\tilde a,\tilde b)\|
+ \leq0.02\|(a,b)-(\tilde a,\tilde b)\|.
+\end{equation}
+
+记 $C=2J_F-I$。利用
+$\|h(p)-h(\tilde p)\|^2\leq2\|p-\tilde p\|$
+及 \eqref{eq:hd-momentum-lipschitz}，当两个近端输入
+$(a,b),(\tilde a,\tilde b)\in U_R$ 的距离为
+$\delta\leq R$ 时，有
+\[
+ \begin{split}
+ \|C(a,b)-C(\tilde a,\tilde b)\|
+ &\leq 2\sqrt{0.04\,\delta}+1.04\,\delta\\
+ &\leq0.40104\sqrt{\delta}
+ <L\delta^{1/2}.
+ \end{split}
+\]
+因此 (A2) 对所取图像块上的任意点对成立。
+
+设 $(x,p)=J_F(a,b)$、$(a,b)\in U_R$，并记
+$\rho=r_F(x,p)=\|F(x,p)\|$。由
+\[
+ \rho^2=\|p\|+\|g(x)+99p\|^2
+\]
+和 \eqref{eq:hd-momentum-small} 得
+\[
+ \|p\|\leq\rho^2,\qquad
+ \|g(x)\|\leq(1+99\sqrt R)\rho.
+\]
+由于 $|x_1|=\|g(x)\|^2$，故
+\[
+ d((x,p),S)
+ \leq |x_1|+\|p\|
+ \leq\bigl((1+99\sqrt R)^2+1\bigr)\rho^2
+ <3\rho^2.
+\]
+又有 $(R+L\sqrt R)/2<1=\bar t$，
+从而 (A3) 成立。最后，对 $0<r\leq R$，
+\[
+ \frac1r\,
+ \psi\!\left(\frac{r+L\sqrt r}{2}\right)
+ =\frac34\left(\sqrt r+\frac12\right)^2
+ \leq\frac34(0.001+0.5)^2
+ <\frac14.
+\]
+这验证了 (A4)。
+\end{proof}
+
+由主定理，对每个满足
+$d_0:=d(z^0,S)\leq10^{-6}$ 的初值，
+隐式迭代 \eqref{eq:hd-implicit} 收敛到某个
+$z^\infty\in S$，并且
+\[
+ d(z^j,S)\leq4^{-j}d_0,\qquad
+ \|z^j-z^\infty\|
+ \leq\frac23\,4^{-j}d_0
+      +\frac12\,2^{-j}\sqrt{d_0}.
+\]
+该结论允许非零初始动量，并确定整条位置--动量
+轨道的极限点，而不只控制目标函数值。
+
+本例也给出与已有条件的具体区别。
+Maddison 等的隐式法收敛命题所用能量配对条件
+要求以统一常数控制
+$|\langle\nabla f(x),\nabla k(p)\rangle|$
+与 $f(x)+k(p)$ 的比值。但取
+$x=p=(t,0)$、$t\downarrow0$，该比值等于
+\[
+ \frac{t}{\frac43t^{3/2}}
+ =\frac{3}{4\sqrt t}\longrightarrow\infty.
+\]
+因此不能由该命题推出上述收敛结论。
+
+Luke--Tam 命题~4 对应的局部次单调性条件则要求
+反射预解式在所考虑的完整局部图像上满足
+Lipschitz 估计。令
+$w_t=((0,0),(0,t))$、$w_0=0$。由
+\eqref{eq:hd-proximal-equations}，
+\[
+ J_F(w_t)
+ =\bigl((0,\sqrt{t/100}),(0,t/100)\bigr),
+\]
+故
+\[
+ \frac{\|(2J_F-I)w_t-(2J_F-I)w_0\|}
+      {\|w_t-w_0\|}
+ \geq\frac1{5\sqrt t}\longrightarrow\infty.
+\]
+所比较的点均趋于零点并属于上述图像块，
+故该局部 Lipschitz 条件在这里不成立。

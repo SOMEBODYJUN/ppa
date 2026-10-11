@@ -4,3 +4,7 @@
 *.out
 *.synctex.gz
 __pycache__/
+
+# Paper build intermediates
+发表成果整理/RLEB/build/
+发表成果整理/skill_tests/**/build/

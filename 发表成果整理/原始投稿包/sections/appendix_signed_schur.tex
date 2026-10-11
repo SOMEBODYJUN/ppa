@@ -1,0 +1,452 @@
+\section{Signed-Schur verification on two complete graph branches}
+\label{sec:signed-schur-details}
+
+This appendix supplies the derivative conditions and proof for the
+verification procedure in Section~\ref{sec:schur-seam-verifier}.  Its input is
+a pair of graph parametrizations.  Tangential elimination reduces coverage
+and uniqueness to a scalar growth test with opposite signs on the two
+branches.  The resulting estimates provide the J-side inequality; the
+error bound is verified separately.
+
+Fix \(\lambda>0\).  For graph points \(g=(u,u^*)\), use the algebraic
+coordinates
+\[
+ \mathsf Xg=u+\lambda u^*,\qquad
+ \mathsf Yg=u-\lambda u^*.
+\]
+Choose orthogonal input coordinates
+\(\mathbb R^n=\mathbb R^{n-1}\times\mathbb R\), with projections
+\(P\) and \(N\).  Norms below are Euclidean operator norms.
+
+\begin{theorem}[Signed Schur-growth certificate]
+\label{thm:signed-schur-growth}
+Let \(n\ge2\) and \(R,T,\mu>0\).
+Fix nonnegative constants \(H,B,K_z,K_+,K_-\).
+Suppose that two \(C^1\) graph parametrizations
+\[
+ g_\sigma(a,t)=(u_\sigma(a,t),v_\sigma(a,t)),
+ \qquad (a,t)\in\overline B_R^{n-1}\times[0,T],
+ \quad \sigma\in\{+1,-1\},
+\]
+are defined on a neighborhood of their displayed parameter domains and
+take values in \(\operatorname{gph}F\).  They agree on the seam:
+\[
+ g_+(a,0)=g_-(a,0)=g_0(a).
+ \tag{S1}\label{eq:schur-seam}
+\]
+Write \(X_\sigma=\mathsf Xg_\sigma\),
+\(Y_\sigma=\mathsf Yg_\sigma\), and assume
+\(PX_\sigma(0,0)=0\).  At every displayed parameter point, form
+\[
+ A_\sigma=P D_aX_\sigma,
+ \qquad b_\sigma=P\partial_tX_\sigma.
+\]
+Assume the following bounds hold uniformly on both complete parameter
+domains:
+\begin{align}
+ \operatorname{sym} A_\sigma&\succeq\mu I,
+ &\|b_\sigma\|&\le H,
+ \tag{S2}\label{eq:schur-tangent}\\
+ \|N D_aX_\sigma A_\sigma^{-1}\|&\le B,
+ \tag{S3}\label{eq:schur-normal-tangent}\\
+ \|D_aY_\sigma A_\sigma^{-1}\|&\le K_z,
+ \tag{S4}\label{eq:schur-output-tangent}\\
+ \|\partial_tY_\sigma-
+       D_aY_\sigma A_\sigma^{-1}b_\sigma\|&\le K_\sigma.
+ \tag{S5}\label{eq:schur-output-normal}
+\end{align}
+Let \(h_+,h_-:[0,T]\to[0,\infty)\) be \(C^1\), convex, strictly
+increasing, and zero at zero.  The signed normal Schur derivatives are
+required to satisfy
+\[
+ \sigma\bigl(N\partial_tX_\sigma-
+       ND_aX_\sigma A_\sigma^{-1}b_\sigma\bigr)
+       \ge h_\sigma'(t).
+ \tag{S6}\label{eq:schur-normal-growth}
+\]
+Choose \(0<r<\mu R-HT\).  Then the following conclusions hold.
+\begin{enumerate}
+\item For every \(z\in B_r^{n-1}\) and \(t\in[0,T]\), there is exactly
+one \(a=\alpha_\sigma(z,t)\in B_R^{n-1}\) with
+\(PX_\sigma(a,t)=z\).  The seam function
+\[
+ \nu(z)=NX_\sigma(\alpha_\sigma(z,0),0)
+\]
+is independent of \(\sigma\).  The represented graph covers the open
+input neighborhood
+\[
+ U=\{(z,s):z\in B_r^{n-1},\quad
+       \nu(z)-h_-(T)<s<\nu(z)+h_+(T)\}.
+ \tag{S7}\label{eq:schur-covered-neighborhood}
+\]
+\item On the represented graph with tangential inputs in \(B_r^{n-1}\),
+\(\mathsf X\) has no collisions: equal inputs imply equal graph points.
+At the seam, the two parameter representations describe the same graph
+point, not two different solutions.
+\item Set \(C_B=\sqrt{1+B^2}\), and define
+\[
+ V(v)=\max\{K_+s+K_-t:0\le s,t\le T,
+                         \ h_+(s)+h_-(t)\le v\},\qquad v\ge0.
+ \tag{S8}\label{eq:schur-allocation}
+\]
+For every pair of represented graph points \(g=(u,v)\) and
+\(g'=(u',v')\) whose tangential inputs belong to \(B_r^{n-1}\),
+\[
+ \begin{gathered}
+ \|u-u'\|^2+\lambda^2\|v-v'\|^2
+ \le\frac12\bigl[d^2+\{K_zd+V(C_Bd)\}^2\bigr],\\
+ d=\|\mathsf Xg-\mathsf Xg'\|,
+ \end{gathered}
+ \tag{S9}\label{eq:schur-RL-gauge}
+\]
+holds.  The bound \(\omega(d)=K_zd+V(C_Bd)\) is nondecreasing and
+continuous at zero.  In the power case below it gives explicit RL
+parameters.  On the covered input neighborhood, the left-hand side is
+\(\|Jx-Jx'\|^2+\|(x-Jx)-(x'-Jx')\|^2\).
+\end{enumerate}
+If the intended graph localization \(\mathcal G\) satisfies the complete
+fiber identity
+\[
+ \mathcal G\cap\mathsf X^{-1}(U)
+ =\left(\bigcup_{\sigma=\pm1}
+    g_\sigma(\overline B_R^{n-1}\times[0,T])\right)
+      \cap\mathsf X^{-1}(U),
+ \tag{S10}\label{eq:schur-complete-fibers}
+\]
+then all conclusions apply to that localization of \(F\), including a
+single-valued localized resolvent on all of \(U\).  For an unrestricted
+resolvent conclusion, \(\mathcal G\) must be the complete graph of \(F\)
+over these inputs.
+\end{theorem}
+
+\begin{proof}
+Fix \(t\) and \(\sigma\), and put \(f(a)=PX_\sigma(a,t)\).
+Integration of \eqref{eq:schur-tangent} along a line segment gives
+\[
+ \langle f(a)-f(a'),a-a'\rangle\ge\mu\|a-a'\|^2.
+ \tag{S11}\label{eq:schur-tangent-monotone}
+\]
+Also \(\|f(0)\|\le HT\).  For \(\|a\|=R\), \(\|z\|<r\),
+\[
+ \langle f(a)-z,a\rangle
+ \ge\mu R^2-(HT+r)R>0.
+\]
+The continuous map \(f-z\) therefore has a zero in the ball.  Indeed, if
+it did not, the self-map
+\(a\mapsto-R(f(a)-z)/\|f(a)-z\|\) of the closed ball would have a
+Brouwer fixed point on the sphere, contradicting the displayed positive
+inner product.  Uniqueness follows from
+\eqref{eq:schur-tangent-monotone}.  Since \(A_\sigma\) is invertible,
+the parameterized implicit function theorem yields a \(C^1\) map
+\(\alpha_\sigma\), with
+\[
+ D_z\alpha_\sigma=A_\sigma^{-1},\qquad
+ \partial_t\alpha_\sigma=-A_\sigma^{-1}b_\sigma.
+ \tag{S12}\label{eq:schur-partial-inverse}
+\]
+All matrices on the right are evaluated at the corrected parameter
+\((\alpha_\sigma(z,t),t)\).  At the seam,
+\[
+ \alpha_+(z,0)=\alpha_-(z,0).
+\]
+
+Define, solely for this proof,
+\[
+ n_\sigma(z,t)=NX_\sigma(\alpha_\sigma(z,t),t),\qquad
+ y_\sigma(z,t)=Y_\sigma(\alpha_\sigma(z,t),t).
+\]
+The chain rule, \eqref{eq:schur-partial-inverse}, and the hypotheses give
+\[
+ \|D_zn_\sigma\|\le B,\quad
+ \sigma\partial_t n_\sigma\ge h_\sigma'(t),\quad
+ \|D_zy_\sigma\|\le K_z,\quad
+ \|\partial_ty_\sigma\|\le K_\sigma.
+ \tag{S13}\label{eq:schur-reduced-bounds}
+\]
+Both normal coordinates start at \(\nu(z)\).  Integration shows that
+\(n_+(z,\cdot)\) is strictly increasing and reaches at least
+\(\nu(z)+h_+(T)\); \(n_-(z,\cdot)\) is strictly decreasing and reaches
+at most \(\nu(z)-h_-(T)\).  The intermediate value theorem proves
+\eqref{eq:schur-covered-neighborhood}.  Their ranges meet only at the
+seam, and each is one-to-one.  Consequently equal full Minty inputs
+imply the same branch parameter, except for the duplicate seam
+representation, where \eqref{eq:schur-seam} gives the same graph point.
+
+For convex \(h\) with \(h(0)=0\),
+\[
+ h(t)-h(s)\ge h(t-s),\qquad 0\le s\le t\le T.
+ \tag{S14}\label{eq:schur-convex-increment}
+\]
+Consider two points on the same branch with reduced parameters
+\((z,t)\) and \((w,s)\).  Equations
+\eqref{eq:schur-reduced-bounds}--\eqref{eq:schur-convex-increment} give
+\[
+ h_\sigma(|t-s|)
+ \le|n_\sigma(z,t)-n_\sigma(w,s)|+B\|z-w\|
+ \le C_Bd.
+\]
+The difference of the \(Y\)-coordinates is at most
+\(K_z\|z-w\|+K_\sigma|t-s|\), which is bounded by
+\(K_zd+V(C_Bd)\), since the pair
+\((|t-s|,0)\), or \((0,|t-s|)\), is feasible in
+\eqref{eq:schur-allocation}.
+
+For points on opposite branches, use the common seam at the same
+tangential coordinate to obtain
+\[
+ h_+(t)+h_-(s)
+ \le n_+(z,t)-n_-(z,s)
+ \le|n_+(z,t)-n_-(w,s)|+B\|z-w\|
+ \le C_Bd.
+\]
+Compare their \(Y\)-coordinates through \(y_0(z)\) and \(y_0(w)\):
+\[
+ \|y_+(z,t)-y_-(w,s)\|
+ \le K_+t+K_z\|z-w\|+K_-s
+ \le K_zd+V(C_Bd).
+\]
+Thus \(\|\mathsf Yg-\mathsf Yg'\|\le K_zd+V(C_Bd)\) for every
+ordered branch pair, including seam endpoints.  The identity
+\[
+ 2\bigl(\|u-u'\|^2+\lambda^2\|v-v'\|^2\bigr)
+ =\|\mathsf Xg-\mathsf Xg'\|^2+\|\mathsf Yg-\mathsf Yg'\|^2
+\]
+gives \eqref{eq:schur-RL-gauge}.
+The maximization defining \(V\) is over a nonempty compact set, and
+strict increase of both \(h_\sigma\) forces \(V(v)\to0\) as
+\(v\downarrow0\).  The complete-fiber conclusion is then immediate.
+\end{proof}
+
+\begin{corollary}[Explicit power constants]
+\label{cor:schur-power-constants}
+In Theorem~\ref{thm:signed-schur-growth}, suppose
+\(h_\sigma(t)=c_\sigma t^p\), with \(c_\sigma>0\), \(p>1\).
+Put \(p'=p/(p-1)\) and
+\[
+ C_{p}=\left[
+  (K_+c_+^{-1/p})^{p'}+(K_-c_-^{-1/p})^{p'}
+ \right]^{1/p'}.
+\]
+On every represented input block of diameter at most \(D>0\),
+\[
+ \boxed{\quad\gamma=1/p,\qquad
+ L=K_zD^{1-1/p}+(1+B^2)^{1/(2p)}C_p.\quad}
+ \tag{S15}\label{eq:schur-explicit-L}
+\]
+For \(p=1\), replace \(C_p\) by
+\(\max\{K_+/c_+,K_-/c_-\}\) and take \(\gamma=1\).
+If the branch powers differ, \(h_\sigma(t)=c_\sigma t^{p_\sigma}\),
+one may take \(p=\max\{p_+,p_-\}\) and replace
+\(c_\sigma\) by \(c_\sigma T^{p_\sigma-p}\) in the same formula.
+\end{corollary}
+
+\begin{proof}
+H\"older's inequality in \(\mathbb R^2\) gives
+\(V(v)\le C_pv^{1/p}\), without requiring that the maximizing
+parameters remain below \(T\).  Insert this in
+\eqref{eq:schur-RL-gauge} and use
+\(d\le D^{1-1/p}d^{1/p}\).  The \(p=1\) formula is the elementary
+linear-programming bound.  Finally,
+\(t^{p_\sigma}\ge T^{p_\sigma-p}t^p\) for \(0\le t\le T\).
+\end{proof}
+
+\begin{proposition}[A matched-jet improvement across the seam]
+\label{prop:schur-matched-jet}
+Suppose the hypotheses of Theorem~\ref{thm:signed-schur-growth} hold
+with \(h_+(t)=h_-(t)=ct^p\), \(c>0\), \(p\ge1\).
+In the reduced coordinates constructed in its proof, assume the
+additional paired-branch estimate
+\[
+ \|y_+(z,t)-y_-(z,t)\|\le Et^p
+ \quad(z\in B_r^{n-1},\ 0\le t\le T).
+ \tag{S16}\label{eq:schur-matched-output-jet}
+\]
+Let \(K=\max\{K_+,K_-\}\).  In the J-side estimate
+\eqref{eq:schur-RL-gauge}, the term \(K_zd+V(C_Bd)\) can be replaced by
+\[
+ \omega(d)=\left(K_z+\frac{EC_B}{2c}\right)d
+       +K\left(\frac{C_B}{c}\right)^{1/p}d^{1/p}.
+ \tag{S17}\label{eq:schur-matched-modulus}
+\]
+In particular, on an input block of diameter \(D\), a valid constant is
+\[
+ L_D=\left(K_z+\frac{EC_B}{2c}\right)D^{1-1/p}
+           +K(C_B/c)^{1/p}.
+\]
+Condition \eqref{eq:schur-matched-output-jet} follows, for example,
+by integrating
+\(\|\partial_ty_+(z,t)-\partial_ty_-(z,t)\|\le pEt^{p-1}\).
+Both reduced derivatives are the native Schur expressions in (S5),
+evaluated at their corresponding tangentially corrected parameters.
+\end{proposition}
+\begin{proof}
+Same-branch pairs already satisfy the stated bound.  For opposite
+branches, suppose \(t\ge s\), compare first on the branch with parameter
+\(t\), and then use \eqref{eq:schur-matched-output-jet} at \(s\):
+\[
+ \|y_+(z,t)-y_-(w,s)\|
+ \le K_z\|z-w\|+K|t-s|+Es^p.
+\]
+If \(s\ge t\), interchange the branches and use the seam mismatch at
+\(t\).  The opposite-branch estimate in the theorem gives
+\(c(t^p+s^p)\le C_Bd\), whence
+\[
+ |t-s|\le(C_Bd/c)^{1/p},\qquad
+ \min\{t,s\}^p\le C_Bd/(2c).
+\]
+Substitution proves the claim.
+\end{proof}
+
+\begin{proposition}[When the produced exponent is genuine]
+\label{prop:schur-sharp-exponent}
+Under the preceding corollary, fix a tangential coordinate \(z_0\).
+Suppose that on at least one branch,
+\[
+ |n_\sigma(z_0,t)-\nu(z_0)|\le Ct^p,\qquad
+ \|y_\sigma(z_0,t)-y_\sigma(z_0,0)\|\ge ct
+\]
+for \(0<t<t_0\), with \(C,c>0\).  Then no exponent greater than
+\(1/p\) is valid on a graph neighborhood containing this arc and its
+seam point.  In particular, for \(p>1\) the localized resolvent is not
+calm there and hence is not locally Lipschitz.
+\end{proposition}
+\begin{proof}
+Along this fixed tangential-input arc, an RL estimate of exponent
+\(\theta\) would give \(ct\le LC^\theta t^{p\theta}\).
+This is impossible as \(t\downarrow0\) when \(p\theta>1\).  Moreover,
+\(2(u-u_0)=(\mathsf Xg-\mathsf Xg_0)+(\mathsf Yg-\mathsf Yg_0)\)
+implies \(2\|u-u_0\|\ge ct-Ct^p\), which excludes calmness of the
+resolvent for \(p>1\).
+\end{proof}
+
+\begin{remark}[Computable hypotheses and a finite atlas]
+The Schur quantities in (S2)--(S6) are evaluated directly on graph
+parametrizations.  No normal inverse or resolvent formula is a hypothesis.
+If a graph branch is specified by an implicit active-manifold equation
+\(G_\sigma(a,t,w)=0\), a certified invertible \(D_wG_\sigma\) produces
+its derivatives through
+\(D_{(a,t)}w=-(D_wG_\sigma)^{-1}D_{(a,t)}G_\sigma\).
+Interval bounds on these matrices can therefore certify (S2)--(S6),
+provided branch existence and the complete active-set list have been
+established independently.
+
+Several seam neighborhoods can be combined using a finite-chart chaining
+argument, but that additional step still requires compatible
+complete fibers on overlaps and a quantitative input-chain geometry.
+The present theorem supplies a nontrivial \emph{local} derivative
+certificate at a corank-one two-sided seam.  It is not a theorem for
+arbitrary higher-codimension Whitney stratifications or arbitrarily many
+branches meeting on the same side.
+\end{remark}
+
+\begin{proposition}[Native verification of the square-root operator]
+\label{prop:schur-square-root-test}
+Let \(\lambda=1\) and
+\[
+ F(\xi,y)=\{(-2\sqrt y,3y),(-2\sqrt y,-5y)\}\quad(y\ge0),
+ \qquad F(\xi,y)=\varnothing\quad(y<0).
+\]
+Use the native, smooth graph parameters
+\[
+ g_+(a,t)=((a,t^2),(-2t,3t^2)),\qquad
+ g_-(a,t)=((a,t^2),(-2t,-5t^2)),\quad t\ge0.
+\]
+On \(|a|\le R\), \(0\le t\le T\), the Schur data can be chosen as
+\[
+ \mu=1,\quad H=2,\quad B=0,\quad K_z=1,\quad
+ h_+(t)=h_-(t)=4t^2,
+\]
+\[
+ K_+=4\sqrt{1+T^2},\qquad K_-=4\sqrt{1+9T^2}.
+\]
+For every \(0<r<R-2T\), the complete graph over
+\[
+ U=(-r,r)\times(-4T^2,4T^2)
+\]
+is covered uniquely in Minty inputs.  On an input subblock of diameter
+\(D\), the basic theorem yields
+\[
+ \gamma=\tfrac12,\qquad L_D=\sqrt D+\sqrt{8+40T^2}.
+\]
+The matched-jet version improves the asymptotic leading constant:
+\[
+ \gamma=\tfrac12,\qquad
+ L_D^{\mathrm{jet}}=2\sqrt D+2\sqrt{1+9T^2}.
+ \tag{S18}\label{eq:schur-square-root-L}
+\]
+In particular, along shrinking collars \(D,T\to0\),
+\(L_D^{\mathrm{jet}}\to2\), which is the optimal asymptotic RL
+constant.  These bounds are produced from graph derivatives without
+assuming or solving a full inverse formula.
+\end{proposition}
+\begin{proof}
+Direct calculation on the native graph gives
+\[
+ X_\pm(a,t)=(a-2t,\,\pm4t^2),\qquad
+ Y_+(a,t)=(a+2t,-2t^2),\quad
+ Y_-(a,t)=(a+2t,6t^2).
+\]
+Thus \(A_\pm=1\), \(b_\pm=-2\), and the signed normal Schur
+derivatives are \(8t\).  The output Schur derivatives are
+\((4,-4t)\) and \((4,12t)\), giving the asserted constants.
+The common tangential correction is \(a=z+2t\).  Consequently the
+two corrected output jets differ by \((0,-8t^2)\), so that
+\eqref{eq:schur-matched-output-jet} holds with \(E=8\).  Formula
+\eqref{eq:schur-square-root-L} follows from
+Proposition~\ref{prop:schur-matched-jet}.
+
+For completeness of the represented fibers, any full graph point with Minty
+input in \(U\) has \(t=\sqrt y<T\) and
+\(|a|=|z+2t|<r+2T<R\), and hence belongs to one of the displayed
+graph parametrizations.  Conversely, the two monotone normal ranges
+cover \((-4T^2,4T^2)\).  Finally, along \(z=0\), on the plus branch,
+the input difference from the seam is \(4t^2\) and the output
+difference is \(\sqrt{16t^2+4t^4}\).  Their RL ratio at exponent
+\(1/2\) tends to \(2\), and every larger exponent fails.
+\end{proof}
+
+\begin{proposition}[Branchwise regularity does not replace orientation]
+\label{prop:schur-collision-counterexample}
+Even smooth, semialgebraic graph branches with a common seam, individually
+one-to-one Minty maps, and individual optimal H\"older inverses need not
+satisfy any all-pairs RL inequality after union.
+\end{proposition}
+\begin{proof}
+In one input dimension, prescribe the two Minty-coordinate branches
+\[
+ X_+(t)=X_-(t)=t^2,\qquad
+ Y_+(t)=t,\quad Y_-(t)=-t,\qquad t\ge0.
+\]
+They define operator graph branches through
+\(u_\sigma=(X_\sigma+Y_\sigma)/2\),
+\(v_\sigma=(X_\sigma-Y_\sigma)/(2\lambda)\).
+Each branch is smooth and its Minty map is one-to-one, with
+\(|Y_\sigma(t)-Y_\sigma(s)|\le|X_\sigma(t)-X_\sigma(s)|^{1/2}\).
+Both branches agree at zero.  Their union is a smooth parabola in
+\((X,Y)\)-coordinates; splitting it into its two open arcs and the
+origin is a Whitney stratification.  Nevertheless, at any \(t>0\),
+the two inputs agree, while the primal outputs differ by \(t\).
+Thus every all-pairs RL inequality fails.  The missing hypothesis is
+precisely opposite signed normal growth, not individual branch
+smoothness or stratifiability.
+\end{proof}
+
+\begin{remark}[Uniformity in the tangential parameter is essential]
+The smooth input map
+\(X(a,t)=(a,t^3-at)\) has the cubic normal law \(t\mapsto t^3\)
+at \(a=0\), but for each small \(a>0\) its normal coordinate is zero
+at both \(t=0\) and \(t=\sqrt a\).  Taking
+\(Y(a,t)=(a,t)\) again defines a legitimate operator graph with a
+Minty collision.  A Taylor expansion at a single seam point cannot
+replace the uniform Schur lower bound (S6).
+\end{remark}
+
+\paragraph{Relation to inverse-function machinery.}
+The proof combines strong-monotonicity inversion in tangential coordinates,
+a parameterized implicit-function calculation, and one-dimensional monotone
+growth.  Its RLEB-specific output is the joint quantitative certificate for a
+complete two-sided graph: a covered input collar, cross-branch collision
+exclusion, and the constants in \eqref{eq:schur-explicit-L}.  Whitney
+stratification alone is insufficient, as
+Proposition~\ref{prop:schur-collision-counterexample} shows, and the residual
+error bound must still be verified separately.

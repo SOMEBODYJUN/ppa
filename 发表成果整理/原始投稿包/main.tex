@@ -1,0 +1,53 @@
+% !TeX program = xelatex
+% Source encoding: UTF-8. Chinese text can be entered directly.
+\documentclass[11pt]{article}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+% Fandol fonts ship with standard TeX Live / Overleaf installations.
+\setCJKmainfont[
+  BoldFont = FandolSong-Bold.otf
+]{FandolSong-Regular.otf}
+\setCJKsansfont[
+  BoldFont = FandolHei-Bold.otf
+]{FandolHei-Regular.otf}
+\setCJKmonofont{FandolFang-Regular.otf}
+
+\usepackage[a4paper,margin=29mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[unicode,hidelinks]{hyperref}
+
+\newcommand{\dist}{\operatorname{dist}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\hypersetup{
+  pdftitle={Nonlinear Generalized Monotonicity and Error Bounds for Proximal Point Convergence at Multivalued Graph Junctions},
+  pdfauthor={Pineapple}
+}
+
+\begin{document}
+
+\input{sections/frontmatter}
+\input{sections/theorem_spine}
+\input{sections/verification_example}
+\input{sections/related_work}
+\input{sections/native_schur_verifier}
+\input{sections/conclusion}
+
+\appendix
+\IfFileExists{sections/appendix_signed_schur.tex}{\input{sections/appendix_signed_schur}}{}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

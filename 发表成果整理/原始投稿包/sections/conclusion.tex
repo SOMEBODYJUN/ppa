@@ -1,0 +1,42 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+The RL condition extends the inner-product inequality of monotonicity by a
+nonlinear term.  Its $J$-side form gives an energy estimate and the step bound
+$s\le(d+Ld^\gamma)/2$.  The proximal inclusion then bounds the residual at
+the next iterate by $s/\lambda$, and generalized metric subregularity gives
+the distance recursion
+$d^+\le\psi((d+Ld^\gamma)/(2\lambda))$.
+Theorem~\ref{thm:two-branch-RLEB} turns local contraction of this scalar map
+into finite length, localization, and convergence of the whole orbit to a
+single solution.  At the critical residual-growth order $a=\gamma<1$, the
+condition is $\lambda m>L/2$.  The complementary energy estimate also retains the known
+monotone-PPA rate at the linear endpoint.
+
+The two-valued operator in Theorem~\ref{thm:square-root-seam} satisfies the
+nonlinear condition at a branch seam.  Proposition~
+\ref{prop:seam-exact-orbit} gives its exact proximal orbit.  Its best RL exponent is
+$1/2$, and its quadratic residual error bound has the matching order.
+The resulting proximal orbit approaches the nonisolated zero set with exact
+factor $1/4$, while every nonstationary orbit has asymptotic pointwise factor
+$1/2$.  The explicit trajectory identifies the source of these two scales:
+normal contraction is accompanied by a larger, summable tangential motion.
+The general RLEB distance estimate approaches the exact factor $1/4$ as the
+verification neighborhood shrinks.
+
+Graph-level RL requires comparisons across every pair of relevant branches.
+The square-root example satisfies these comparisons at H\"older order but not
+at exponent one.  Corollary~\ref{cor:selection-extension} retains the same
+convergence estimates for genuinely set-valued proximal relations when the
+one-step inequalities hold uniformly over all selections.  The standard
+range condition (A1) supplies local PPA coverage, while (A3)--(A4) state the
+precise regularity strength needed to convert nonlinear graph geometry into
+convergence.
+
+The signed-Schur certificate is one additional way to verify the geometric
+hypotheses from graph parametrizations.  For complete two-sided seams with
+one degenerate normal direction, it supplies a covered input neighborhood,
+cross-branch uniqueness, and explicit RL parameters.  It can be used when
+graph data are available without a closed formula for the proximal mapping.
+It supplies a local module for constructing finite branch atlases and for
+studying higher-codimension junctions.

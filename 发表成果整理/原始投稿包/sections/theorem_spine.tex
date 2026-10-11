@@ -1,0 +1,473 @@
+\section{非线性 RL 广义单调性与 PPA 的局部收敛}
+\label{sec:deterministic-rleb-spine}
+
+设 $X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
+并取非空闭集 $S\subset F^{-1}(0)$。沿用引言中
+$J_{\lambda F}$ 的记号，以下记
+\[
+ d(x,A):=\inf_{a\in A}\|x-a\|,
+ \qquad
+ r_F(y):=d(0,F(y)),
+ \qquad
+ P_S(x):=\{p\in S:\|x-p\|=d(x,S)\},
+\]
+并约定 $d(x,\varnothing)=+\infty$。由于 $S$ 非空且闭，
+$P_S(x)$ 非空，但未必单值。
+
+\subsection{RL 条件及其 \texorpdfstring{$J$}{J} 侧形式}
+
+\begin{definition}[RL 广义单调性]
+\label{def:graph-RL}
+设 $\mathcal G\subset\operatorname{gph}F$，$R>0$，$L\geq0$，
+$0<\gamma\leq1$。称 $\mathcal G$ 在尺度 $R$ 上满足
+$\mathrm{RL}(\lambda,\gamma,L)$，如果对任意
+$(u,u^*),(v,v^*)\in\mathcal G$，记
+\[
+ a:=u-v,\qquad b:=u^*-v^*,
+\]
+只要 $\|a+\lambda b\|\leq R$，就有
+\begin{equation}
+\label{eq:graph-RL}
+ \lambda\langle a,b\rangle
+ \geq\frac14\left(
+   \|a+\lambda b\|^2-L^2\|a+\lambda b\|^{2\gamma}
+ \right).
+\end{equation}
+由恒等式
+$\|a+\lambda b\|^2-\|a-\lambda b\|^2
+ =4\lambda\langle a,b\rangle$，
+这一条件等价于
+\begin{equation}
+\label{eq:power-RL}
+ \|a-\lambda b\|\leq L\|a+\lambda b\|^\gamma
+\end{equation}
+对上述点对成立。
+\end{definition}
+
+固定 $\lambda$ 时，简记
+$\mathrm{RL}(\lambda,\gamma,L)$ 为 $\mathrm{RL}(\gamma,L)$。
+所检验的点对可以来自不同分支；当 $\gamma=L=1$ 时，
+条件成为这些点对上的单调性不等式。
+
+与图像局部化 $\mathcal G$ 对应的近端关系定义为
+\[
+ J_{\mathcal G}(x)
+ :=\{u:(u,(x-u)/\lambda)\in\mathcal G\}.
+\]
+恒有 $J_{\mathcal G}(x)\subset J_{\lambda F}(x)$。
+若某输入区域内所有近端输出对应的图像点均属于
+$\mathcal G$，则两者在该区域上一致。
+
+\begin{lemma}[RL 条件的 $J$ 侧形式]
+\label{lem:minty-equivalence}
+定义~\ref{def:graph-RL} 中的 RL 条件等价于：对任意
+$u\in J_{\mathcal G}(x)$ 和 $v\in J_{\mathcal G}(y)$，
+只要 $\|x-y\|\leq R$，就有
+\begin{equation}
+\label{eq:resolvent-energy-all-pairs}
+ \|u-v\|^2+\|(x-u)-(y-v)\|^2
+ \leq\frac12\left(
+   \|x-y\|^2+L^2\|x-y\|^{2\gamma}
+ \right).
+\end{equation}
+特别地，$J_{\mathcal G}$ 在其定义域上单值。
+\end{lemma}
+
+\begin{proof}
+对相应的图像点，记
+$a=u-v$，$\lambda b=(x-u)-(y-v)$，则
+$a+\lambda b=x-y$，且
+\[
+ \|a\|^2+\lambda^2\|b\|^2
+ =\|a+\lambda b\|^2-2\lambda\langle a,b\rangle.
+\]
+将此式代入 \eqref{eq:graph-RL}，即得
+\eqref{eq:resolvent-energy-all-pairs}；反向代入亦成立。
+令 $x=y$，上式给出 $2\|u-v\|^2\leq0$，故 $u=v$。
+\end{proof}
+
+\begin{definition}[广义度量次正则性]
+\label{def:admissible-gauge}
+设 $V\subset X$，$\bar t>0$，且
+$\psi:[0,\bar t]\to[0,\infty)$ 单调不减，
+满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
+若
+\begin{equation}
+\label{eq:gauge-EB}
+ d(y,S)\leq\psi\bigl(r_F(y)\bigr)
+ \qquad (y\in V,\ r_F(y)\leq\bar t),
+\end{equation}
+则称 $F$ 在 $V$ 上满足相对于 $S$ 的
+$\psi$-广义度量次正则性。
+\end{definition}
+
+\begin{assumption}[局部 RLEB 假设]
+\label{ass:local-rleb}
+设 $U\subset X$ 为开集，$\mathcal G\subset\operatorname{gph}F$，
+并取
+\[
+R>0,\quad \bar t>0,\quad L\geq0,\quad
+0<\gamma\leq1,\quad 0<\kappa<1,
+\]
+以及定义~\ref{def:admissible-gauge} 中的控制函数 $\psi$。
+记 $U_R:=\{x\in U:d(x,S)\leq R\}$。
+\end{assumption}
+对 $(u,u^*)\in\mathcal G$，记
+\[
+ M_+(u,u^*):=u+\lambda u^*,
+ \qquad
+ M_+(\mathcal G)
+ :=\{M_+(u,u^*):(u,u^*)\in\mathcal G\}.
+\]
+由 $J_{\mathcal G}$ 的定义可知，
+$M_+(\mathcal G)=\operatorname{dom}J_{\mathcal G}$。
+以下是局部近端迭代所需的条件。
+
+\begin{enumerate}
+\item[(A1)] 
+$U_R\subset M_+(\mathcal G)$；并且对任意
+$x\in U_R$，存在 $p\in P_S(x)$ 使得
+$(p,0)\in\mathcal G$。
+
+\item[(A2)] 
+$\mathcal G$ 在尺度 $R$ 上满足
+$\mathrm{RL}(\lambda,\gamma,L)$ 条件。
+
+\item[(A3)] 
+对任意 $y\in J_{\mathcal G}(U_R)$，
+若 $r_F(y)\leq\bar t$，则
+$d(y,S)\leq\psi\bigl(r_F(y)\bigr)$；
+此外，
+\begin{equation}
+\label{eq:gauge-domain}
+ \frac{R+LR^\gamma}{2\lambda}\leq\bar t.
+\end{equation}
+
+\item[(A4)] 
+对任意 $0<r\leq R$，有
+\begin{equation}
+\label{eq:direct-compatibility}
+ \psi\!\left(\frac{r+Lr^\gamma}{2\lambda}\right)
+ \leq\kappa r.
+\end{equation}
+\end{enumerate}
+
+条件 (A1) 中的值域覆盖要求保证
+$J_{\mathcal G}$ 在 $U_R$ 上处处有定义；
+类似的局部覆盖条件见
+\cite[Assumption~2(d)(ii)]{LukeTam2025GeneralizedMonotonicity}。
+(A1) 中关于最近零点的要求用于下文的一步比较。
+根据引理~\ref{lem:minty-equivalence}，(A2) 保证
+$J_{\mathcal G}$ 在其定义域上单值。因此，
+(A1)--(A2) 确定了 $U_R$ 上的单值局部近端映射；
+(A3)--(A4) 分别用于输出点的误差估计和距离递推的收缩。
+
+\begin{lemma}[RLEB 的一步估计]
+\label{lem:solution-comparison}
+设 \emph{(A1)--(A3)} 成立。取 $x\in U_R$，
+令 $x^+$ 为 $J_{\mathcal G}(x)$ 的唯一元素，并记
+\[
+ d:=d(x,S),\qquad
+ d^+:=d(x^+,S),\qquad
+ s:=\|x-x^+\|.
+\]
+则
+\begin{align}
+\label{eq:energy-one-step}
+ (d^+)^2+s^2
+ &\leq\frac{d^2+L^2d^{2\gamma}}2,\\
+\label{eq:step-one-step}
+ s&\leq\frac{d+Ld^\gamma}{2},\\
+\label{eq:direct-output-bound}
+ d^+&\leq\psi(s/\lambda),\\
+\label{eq:direct-recursion-general}
+ d^+&\leq
+ \psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
+\end{align}
+\end{lemma}
+
+\begin{proof}
+由 (A1) 取 $p\in P_S(x)$，使得 $(p,0)\in\mathcal G$。
+由于 $\|x-p\|=d\leq R$，将
+$(x^+,(x-x^+)/\lambda)$ 与 $(p,0)$
+代入引理~\ref{lem:minty-equivalence}，得到
+\[
+ \|x^+-p\|^2+s^2
+ \leq\frac{d^2+L^2d^{2\gamma}}2.
+\]
+结合 $d^+\leq\|x^+-p\|$，
+即得 \eqref{eq:energy-one-step}。
+
+再由 $x^+-p=(x-p)-(x-x^+)$
+及 Cauchy--Schwarz 不等式，有
+\[
+ d^2-2ds+2s^2
+ \leq\|x^+-p\|^2+s^2
+ \leq\frac{d^2+L^2d^{2\gamma}}2.
+\]
+整理得
+\begin{equation}
+\label{eq:power-step}
+ (2s-d)^2\leq L^2d^{2\gamma},
+ \qquad
+ s\leq\frac{d+Ld^\gamma}{2},
+\end{equation}
+从而证明 \eqref{eq:step-one-step}。
+
+由 $(x-x^+)/\lambda\in F(x^+)$ 可知
+$r_F(x^+)\leq s/\lambda$。同时，
+\eqref{eq:step-one-step} 和
+\eqref{eq:gauge-domain} 给出
+\[
+ \frac{s}{\lambda}
+ \leq\frac{d+Ld^\gamma}{2\lambda}
+ \leq\frac{R+LR^\gamma}{2\lambda}
+ \leq\bar t.
+\]
+因此，(A3) 中的误差界适用于 $x^+$。
+利用 $\psi$ 的单调性，得到
+\[
+ d^+\leq\psi\bigl(r_F(x^+)\bigr)
+ \leq\psi(s/\lambda)
+ \leq
+ \psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right),
+\]
+即 \eqref{eq:direct-output-bound} 和
+\eqref{eq:direct-recursion-general}。
+\end{proof}
+
+\subsection{局部收敛定理}
+
+\begin{theorem}[非线性 RL 与广义误差界下的局部收敛]
+\label{thm:two-branch-RLEB}
+设假设~\ref{ass:local-rleb} 成立。对 $r\geq0$，记
+\[
+ \mathcal L(r):=
+ \frac12\left(
+   \frac{r}{1-\kappa}
+   +\frac{Lr^\gamma}{1-\kappa^\gamma}
+ \right).
+\]
+取 $x^0\in U_R$，令 $d_0:=d(x^0,S)$。若
+\begin{equation}
+\label{eq:direct-localization}
+ \mathcal L(d_0)<d(x^0,X\setminus U),
+\end{equation}
+则局部近端迭代
+\begin{equation}
+\label{eq:PPA}
+ x^{k+1}=J_{\mathcal G}(x^k)
+\end{equation}
+可无限进行，所有迭代点均属于 $U_R$，且轨道具有有限长度，
+收敛到某个 $x^\infty\in S$。对任意 $k\geq0$，还有
+\begin{align}
+\label{eq:direct-distance-rate}
+ d(x^k,S)&\leq\kappa^k d_0,\\
+\label{eq:direct-step-rate}
+ \|x^{k+1}-x^k\|
+ &\leq\frac12\bigl(\kappa^k d_0
+                   +L(\kappa^k d_0)^\gamma\bigr),\\
+\label{eq:direct-tail}
+ \|x^\infty-x^k\|
+ &\leq\mathcal L(\kappa^k d_0).
+\end{align}
+\end{theorem}
+
+\begin{proof}
+设 $x^k\in U_R$，记
+$d_k:=d(x^k,S)$，
+$s_k:=\|x^{k+1}-x^k\|$。
+由 (A1)--(A2)，$x^{k+1}=J_{\mathcal G}(x^k)$
+存在且唯一。若 $d_k>0$，则引理~\ref{lem:solution-comparison}
+与 (A4) 给出
+\[
+ d_{k+1}
+ \leq\psi\!\left(
+   \frac{d_k+Ld_k^\gamma}{2\lambda}
+ \right)
+ \leq\kappa d_k.
+\]
+若 $d_k=0$，则由 \eqref{eq:step-one-step} 得
+$s_k=0$，故仍有 $d_{k+1}\leq\kappa d_k$。
+
+因此，对所有已定义的迭代点，
+\[
+ d_k\leq\kappa^k d_0,\qquad
+ s_k\leq\frac12\bigl(
+   \kappa^k d_0+L\kappa^{\gamma k}d_0^\gamma
+ \bigr).
+\]
+特别地，对任意 $n\geq0$，
+\[
+ \|x^{n+1}-x^0\|
+ \leq\sum_{k=0}^{n}s_k
+ \leq\mathcal L(d_0)
+ <d(x^0,X\setminus U).
+\]
+于是 $x^{n+1}\in U$；又因
+$d_{n+1}\leq\kappa d_n\leq R$，
+故 $x^{n+1}\in U_R$。归纳表明迭代可无限进行，
+并证明 \eqref{eq:direct-distance-rate}
+和 \eqref{eq:direct-step-rate}。
+
+最后，对任意 $k\geq0$，有
+\[
+ \sum_{j=k}^{\infty}s_j
+ \leq\mathcal L(\kappa^k d_0).
+\]
+因此轨道具有有限长度并收敛到某个 $x^\infty\in X$，
+且满足 \eqref{eq:direct-tail}。
+由于 $d(x^k,S)\to0$ 且 $S$ 为闭集，
+可得 $x^\infty\in S$。
+\end{proof}
+
+\begin{corollary}[集值近端关系的推广]
+\label{cor:selection-extension}
+沿用假设~\ref{ass:local-rleb} 中的集合、参数及控制函数，
+并设 $\mathcal J(x)\subset J_{\lambda F}(x)$
+为 $U_R$ 上的近端关系。以下列条件替代
+\emph{(A1)--(A3)}：
+\begin{enumerate}
+\item 对任意 $x\in U_R$，$\mathcal J(x)\ne\varnothing$；
+
+\item 对任意 $x\in U_R$ 及
+$x^+\in\mathcal J(x)$，存在 $p\in P_S(x)$
+使得
+\begin{equation}
+\label{eq:solution-comparison-innerproduct}
+ \langle x^+-p,x-x^+\rangle
+ \geq\frac14\left(
+   d(x,S)^2-L^2d(x,S)^{2\gamma}
+ \right);
+\end{equation}
+
+\item 对任意 $x\in U_R$ 及
+$x^+\in\mathcal J(x)$，若
+$r_F(x^+)\leq\bar t$，则
+$d(x^+,S)\leq\psi\bigl(r_F(x^+)\bigr)$；
+同时，\eqref{eq:gauge-domain} 成立。
+\end{enumerate}
+
+若 \emph{(A4)} 成立，且 $x^0\in U_R$ 满足
+局部化条件 \eqref{eq:direct-localization}，则任意按
+$x^{k+1}\in\mathcal J(x^k)$ 选取的轨道均可无限延拓，
+始终位于 $U_R$，具有有限长度，并收敛到 $S$ 中某一点。
+其距离、步长及尾项分别满足
+\eqref{eq:direct-distance-rate}--\eqref{eq:direct-tail}。
+这些估计对所有选取采用相同的常数；极限点可以随选取而改变。
+\end{corollary}
+
+\begin{proof}
+任取 $x\in U_R$ 和 $x^+\in\mathcal J(x)$，
+按条件取 $p\in P_S(x)$，并记
+\[
+ d:=d(x,S),\qquad
+ d^+:=d(x^+,S),\qquad
+ s:=\|x-x^+\|.
+\]
+由 $x-p=(x^+-p)+(x-x^+)$ 及
+\eqref{eq:solution-comparison-innerproduct}，有
+\[
+ \|x^+-p\|^2+s^2
+ =d^2-2\langle x^+-p,x-x^+\rangle
+ \leq\frac{d^2+L^2d^{2\gamma}}2.
+\]
+另一方面，Cauchy--Schwarz 不等式给出
+\[
+ \frac14\bigl(d^2-L^2d^{2\gamma}\bigr)
+ \leq\langle x^+-p,x-x^+\rangle
+ \leq ds-s^2.
+\]
+因此
+\[
+ (2s-d)^2\leq L^2d^{2\gamma},
+ \qquad
+ s\leq\frac{d+Ld^\gamma}{2}.
+\]
+由 $x^+\in J_{\lambda F}(x)$ 可知
+$r_F(x^+)\leq s/\lambda$。结合条件中的
+\eqref{eq:gauge-domain} 与误差界，得到
+\[
+ d^+\leq
+ \psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
+\]
+上述估计对每个允许的 $x^+$ 均成立。
+利用 (A4)、各点上 $\mathcal J$ 的非空性及
+\eqref{eq:direct-localization}，按定理~
+\ref{thm:two-branch-RLEB} 证明中的归纳与求和步骤，
+即可得到所述结论。
+\end{proof}
+
+若允许缩小工作半径 $R$ 并重新选取 $\kappa$，
+则 (A4) 在某个充分小的半径上成立，当且仅当
+\begin{equation}
+\label{eq:direct-limsup}
+ \limsup_{r\downarrow0}
+ \frac{\psi\bigl((r+Lr^\gamma)/(2\lambda)\bigr)}{r}<1.
+\end{equation}
+事实上，若上式成立，可在该极限上确界与 $1$ 之间
+选取 $\kappa$，再取充分小的 $R$，使
+\eqref{eq:direct-compatibility} 成立；反之，
+(A4) 直接给出上式。由于
+$(R+LR^\gamma)/(2\lambda)\to0$（$R\downarrow0$），
+进一步缩小 $R$ 还可保证
+\eqref{eq:gauge-domain}。
+
+\begin{corollary}[残差增长条件与临界阶]
+\label{cor:residual-growth}
+设 \emph{(A1)--(A2)} 成立，且
+$0<\gamma<1$、$L>0$。进一步假设存在
+$m>0$ 和 $a>0$，使得对所有满足
+$y\in J_{\mathcal G}(U_R)$、
+$r_F(y)\leq\bar t$ 的点 $y$，有
+\begin{equation}
+\label{eq:residual-growth}
+ r_F(y)\geq m\,d(y,S)^a.
+\end{equation}
+则在 $[0,\bar t]$ 上取
+$\psi(t)=(t/m)^{1/a}$，可得到近端输出上的误差界。
+
+对于这一控制函数，局部相容性条件
+\eqref{eq:direct-limsup} 在 $a<\gamma$ 时成立；
+在 $a=\gamma$ 时，成立当且仅当
+\begin{equation}
+\label{eq:H-critical-threshold}
+ \lambda m>\frac L2;
+\end{equation}
+在 $a>\gamma$ 时则不成立。
+
+在前两种相容情形下，适当缩小工作半径，
+使 \eqref{eq:gauge-domain} 成立，并选取满足
+\eqref{eq:direct-localization} 的初始点，
+即可应用定理~\ref{thm:two-branch-RLEB}。
+当 $a>\gamma$ 时，上述标量判据失效；
+这本身不意味着近端迭代发散。
+\end{corollary}
+
+\begin{proof}
+由 \eqref{eq:residual-growth} 可得，在所述输出区域上，
+\[
+ d(y,S)\leq
+ \left(\frac{r_F(y)}{m}\right)^{1/a}.
+\]
+由于 $m,a>0$，函数
+$\psi(t)=(t/m)^{1/a}$ 满足控制函数的要求。
+
+对 $r>0$，\eqref{eq:direct-limsup} 中的商可写为
+\[
+ \frac{\psi\bigl((r+Lr^\gamma)/(2\lambda)\bigr)}{r}
+ =
+ \left(\frac{L+r^{1-\gamma}}{2\lambda m}\right)^{1/a}
+ r^{\gamma/a-1}.
+\]
+因 $0<\gamma<1$ 且 $L>0$，右侧第一个因子
+趋于正常数。故当 $a<\gamma$ 时，该商趋于 $0$；
+当 $a>\gamma$ 时趋于 $+\infty$；当 $a=\gamma$ 时趋于
+\[
+ \left(\frac{L}{2\lambda m}\right)^{1/\gamma}.
+\]
+最后一个极限小于 $1$ 当且仅当
+$\lambda m>L/2$，即 \eqref{eq:H-critical-threshold}。
+\end{proof}
+
+

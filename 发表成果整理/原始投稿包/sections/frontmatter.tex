@@ -1,0 +1,150 @@
+\title{Nonlinear Generalized Monotonicity and Error Bounds\\
+for Proximal Point Convergence at Multivalued Graph Junctions}
+\author{菠萝之神}
+\date{}
+\maketitle
+
+\begin{abstract}
+本文研究多值算子图像上的一类非 Lipschitz 近端几何：近端映射在局部可以是单值的，但其对输入扰动的响应仅具有 Hölder 连续性。为刻画这一现象，我们提出对局部化图像上任意两点均成立的非线性 RL 条件，并将其与独立的广义度量次正则性误差界结合。在标准的局部值域覆盖条件下，RL 保证所表示的近端映射单值，并给出同时约束近端步长和到零点集距离的耦合估计。记当前距离为 \(d\)、近端步长为 \(s\)、下一步距离为 \(d^+\)，则
+
+$$
+s\leq\frac{d+Ld^\gamma}{2},
+\qquad
+d^+\leq\psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
+$$
+
+若右端的标量上界在零点附近满足 \(\psi((r+Lr^\gamma)/(2\lambda))\leq\kappa r\)，其中 \(\kappa<1\)，则可得距离收缩和显式的局部化条件，并证明整个近端轨道具有有限长度，且收敛到所考察零点集合中的一点；该点不必是孤立零点。
+
+对于幂律残差增长条件 \(\operatorname{dist}(0,F(y))\geq m\operatorname{dist}(y,S)^a\)，当 \(L>0\) 且 \(0<\gamma<1\) 时，上述直接递推在 \(a<\gamma\) 时给出局部压缩；在临界阶 \(a=\gamma\) 时，其阈值条件为 \(\lambda m>L/2\)。我们构造的二值平方根算子具有最优 RL 指数 \(1/2\) 和二次误差界，其近端轨道到零点集的距离每步恰缩小至原来的 \(1/4\)。然而，在同一个完整邻域上，有限常数的指数一 RL 条件、\(J\) 侧 Lipschitz 估计和局部弱单调性条件均不成立。这个例子表明，非线性 RL 与误差界的结合能够给出上述特定二次型证书无法覆盖的近端几何及其整轨道收敛结论。
+
+
+
+\end{abstract}
+
+\medskip
+\noindent\textbf{关键词：}
+近端点算法；广义单调性；度量次正则性；集值算子；
+H\"older 连续近端映射。
+
+\section{引言}
+\label{sec:introduction}
+
+设 $F:\mathbb R^n\rightrightarrows\mathbb R^n$ 为集值算子，且
+$\lambda>0$。近端点算法（PPA）通过迭代
+\begin{equation}
+ x^{k+1}\in J_{\lambda F}(x^k),
+ \qquad
+ J_{\lambda F}:=(I+\lambda F)^{-1}
+ \label{eq:ppa-intro}
+\end{equation}
+寻找 $F$ 的零点。对于单调算子，图像上的内积不等式可导出
+$J_{\lambda F}$ 的牢固非扩张性及相应的下降估计
+\cite{Rockafellar1976PPA}。广义单调性方法将这一分析推广到非单调算子，
+并结合残差误差界建立局部收敛结论
+\cite{LukeTam2025GeneralizedMonotonicity,
+LukeThaoTam2018Quantitative,
+EvensPasLatafatPatrinos2025SemimonotonePPA}。
+特别地，在相应的局部化与参数条件下，Luke--Tam 的次单调性可由
+反射预解算子的 Lipschitz 估计刻画
+\cite[Proposition~4]{LukeTam2025GeneralizedMonotonicity}。
+
+本文关注一类非 Lipschitz 的近端几何。即使算子图像包含多个分支，
+近端映射仍可能是单值的，但它对输入扰动的响应可能仅具有
+H\"older 连续性，而不满足局部 Lipschitz 估计。本文构造的二值平方根
+算子便呈现这一现象。为分析这种几何，需要在包含不同分支的局部化
+图像上比较所有相关点对，并将所得近端估计与独立的误差界结合。
+这里的比较针对同一局部邻域上的具体条件，并不排除其他理论处理
+集值算子的可能。
+
+对于 $F$ 的图像上的两点 $(u,u^*)$ 和 $(v,v^*)$，记
+\[
+ a=u-v,
+ \qquad
+ b=u^*-v^*.
+\]
+本文引入如下非线性 \emph{RL 条件}：
+\begin{equation}
+ \lambda\langle a,b\rangle
+ \geq
+ \frac14\left(
+   \|a+\lambda b\|^2
+   -L^2\|a+\lambda b\|^{2\gamma}
+ \right),
+ \qquad
+ L\geq0,\quad 0<\gamma\leq1.
+ \label{eq:rl-intro}
+\end{equation}
+该条件要求在指定的图像局部化范围内对任意两点均成立，包括来自
+不同分支的点对。当 $\gamma=1$ 且 $L=1$ 时，式
+\eqref{eq:rl-intro} 化为单调性条件；当 $\gamma<1$ 时，其中的
+非二次项允许在 H\"older 尺度上控制近端输出与近端残差。
+RL 条件的等价 $J$ 侧形式还可推出局部近端输出的唯一性。将其与
+标准的局部值域覆盖条件结合后，可在对应邻域内得到所表示的单值
+近端映射。
+
+本文使用的另一个条件是广义度量次正则性误差界
+\begin{equation}
+ \dist(y,S)
+ \leq
+ \psi\bigl(\dist(0,F(y))\bigr),
+ \qquad
+ \varnothing\ne S\subset F^{-1}(0),
+ \label{eq:eb-intro}
+\end{equation}
+其中 $S$ 为闭集，$\psi$ 为非减函数，且满足
+\[
+ \psi(0)=0,
+ \qquad
+ \psi(t)\to0
+ \quad (t\downarrow0).
+\]
+该误差界利用残差控制到 $S$ 的距离，并允许 $S$ 包含非孤立零点。
+它可以独立于 RL 图像条件进行验证。斜率准则、广义微分与高阶
+次正则性为此类估计提供了不同来源
+\cite{Kruger2015ErrorBounds,
+MordukhovichOuyang2015HigherOrderSubregularity,
+LiMordukhovichZhu2026GeneralizedSubregularity}。
+下文将 RL 图像几何与这一误差界的结合称为
+RL--误差界（RLEB）框架。
+
+本文的收敛分析对上述两个条件作不同用途的处理：RL 控制近端位移
+及下一步到 $S$ 的距离，误差界则将近端残差与该距离联系起来。
+在适当的存在性条件下，由此可得距离收缩和有限长度，进而证明
+整条近端轨道收敛到 $S$ 中的某一点，而无须预先指定该极限点。
+这一结论还给出显式的局部化条件。当相应的一步估计对每个允许的
+近端选择均成立时，同一论证还可一致地用于集值近端关系。
+
+本文的主要结果如下：
+\begin{enumerate}
+ \item 建立适用于图像全点对非线性 RL 条件与一般误差界控制函数的
+ 局部收敛定理。该定理给出距离收缩、有限长度、显式局部化条件，
+ 以及整条近端轨道收敛到可能非孤立的零点集合中某一点的结论；
+ 同时还给出对允许的近端选择一致成立的推广。
+
+ \item 导出保留系数 $1/2$ 的步长估计，并给出连接 RL 条件与误差界的
+ 可检验标量相容性判据。对于幂律残差增长，该判据确定相应的临界阶
+ 及临界参数条件；耦合能量估计还可给出补充的参数范围，并在单调
+ 端点处与已有的度量次正则性收缩因子相衔接。
+
+ \item 构造一个二值平方根算子。该算子的最优局部 RL 指数为 $1/2$，
+ 并满足二次误差界；其近端轨道到零点集的距离具有精确收缩因子
+ $1/4$。对同一完整邻域逐项比较还表明，有限常数的指数一 RL 条件、
+ $J$ 侧 Lipschitz 估计及局部弱单调性条件均不能为该实例提供相应
+ 证书。
+\end{enumerate}
+
+当 $J_{\lambda F}$ 缺少显式表达式时，本文还给出一条基于导数信息
+验证图像条件的路径。经典的近端正则性和余导数准则能够提供
+广义单调性信息
+\cite{PoliquinRockafellar1996ProxRegular,
+ChieuLeeMordukhovichNghia2016CoderivativeMonotonicity}。
+对于具有一个退化法向方向的完整双侧图像交汇情形，本文提出的
+带符号 Schur 判据利用切向可逆性与带符号法向增长，验证局部值域
+覆盖、跨分支唯一性及显式 RL 参数；相应误差界则由适合该算子的
+正则性理论提供。
+
+第~\ref{sec:deterministic-rleb-spine}~节给出预备估计与收敛定理；
+第~\ref{sec:native-verification-seam}~节讨论二值平方根实例；
+第~\ref{sec:comparison}~节说明其与二次型广义单调性理论的关系；
+第~\ref{sec:schur-seam-verifier}~节介绍带符号 Schur 判据，
+其完整假设与证明见附录。

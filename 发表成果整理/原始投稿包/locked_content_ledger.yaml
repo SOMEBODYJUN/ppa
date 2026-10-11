@@ -1,0 +1,43 @@
+contract_version: "1.0"
+source_file: "main.tex and sections/*.tex"
+locked_numbers:
+  - "direct critical threshold: lambda*m > L/2"
+  - "energy critical threshold: lambda*m > L/sqrt(2)"
+  - "square-root seam optimal RL exponent: 1/2"
+  - "square-root seam residual coefficient: 1/4"
+  - "square-root seam distance-to-set factor: 1/4"
+  - "square-root seam pointwise asymptotic factor: 1/2"
+locked_units: []
+locked_citations_and_dois:
+  - "all citation keys in references.bib"
+  - "Leventhal 2009 factor attribution"
+  - "Luke--Tam scalar comparison"
+  - "Li--Mordukhovich--Zhu Theorems 4.3--4.4 comparison"
+locked_entities_and_gene_names: []
+locked_models_and_datasets:
+  - "two-branch square-root multifunction"
+  - "signed-Schur seam verifier"
+locked_terms:
+  - "RL condition"
+  - "RLEB"
+  - "J-side energy inequality"
+  - "selected proximal transition"
+  - "complete fiber"
+  - "error-bound gauge"
+locked_statistical_meaning: []
+locked_causal_strength:
+  - "sufficient convergence certificates are not stated as necessary operator-wide conditions"
+  - "certificate separations are not stated as failure of every competing convergence theory"
+locked_uncertainty_and_limitations:
+  - "global priority of the signed-Schur assembly remains pending"
+  - "general gauge has no strict nonpower orbit example in the manuscript"
+  - "the main verifier is limited to complete two-sided corank-one seams"
+post_edit_discrepancies: []
+author_approved_changes:
+  - "restore the direct RL--step--error-bound proof as the main narrative"
+  - "retain the energy argument as a complementary certificate"
+  - "retain the square-root seam as the flagship example"
+  - "use inner-product and J-side formulations instead of reflected-resolvent framing"
+  - "state the convergence theorem under selected-transition geometry and graph-level RL as a sufficient corollary"
+  - "move detailed signed-Schur material after the flagship example or to an appendix"
+  - "cite coderivative, active-set, and related verification tools only where they are actually used"

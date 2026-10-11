@@ -1,0 +1,246 @@
+\section{Relation to existing theory}
+\label{sec:comparison}
+
+The comparison has two parts.  At exponent one, RL recovers familiar
+quadratic operator inequalities and their PPA distance estimates.  At an
+exponent below one, the square-root example separates the present assumptions
+from specific quadratic certificates on the same neighborhood.  All of the
+operator frameworks compared below allow set-valued operators.
+
+\subsection{The quadratic endpoint}
+
+\begin{proposition}[Identification of the exponent-one condition]
+\label{prop:linear-identifications}
+Fix a graph block and $\lambda>0$.  For each tested pair of its graph points,
+write $a=u-v$ and $b=u^*-v^*$.  The following statements hold on the same
+pair range as the RL condition.
+\begin{enumerate}
+\item The condition $\mathrm{RL}(1,L)$ is equivalent to
+\begin{equation}
+ \lambda\langle a,b\rangle
+ \ge \frac{1-L^2}{2(1+L^2)}
+       \bigl(\|a\|^2+\lambda^2\|b\|^2\bigr).
+ \label{eq:linear-rl-balanced}
+\end{equation}
+Consequently $\mathrm{RL}(1,1)$ is precisely monotonicity on the block.
+In the notation of $(\mu,\nu)$-semimonotonicity,
+\begin{equation}
+ \mu=\frac{1-L^2}{2\lambda(1+L^2)},
+ \qquad \nu=\lambda^2\mu.
+ \label{eq:balanced-slice-parameters}
+\end{equation}
+Thus $\mathrm{RL}(1,L)$ is the balanced parameter slice of that inequality.
+
+\item The scaled submonotonicity condition
+\[
+ \lambda\langle a,b\rangle
+ \ge-\tau\|a+\lambda b\|^2,\qquad \tau\ge0,
+\]
+is equivalent to $\mathrm{RL}(1,L)$ with
+\begin{equation}
+ L^2=1+4\tau.
+ \label{eq:luke-tam-normalization}
+\end{equation}
+
+\item If the block is $h$-hypomonotone, namely
+\[
+ \langle a,b\rangle\ge-h\|a\|^2,
+ \qquad h\ge0,
+\]
+and $\lambda h<1$, then it satisfies $\mathrm{RL}(1,L_h)$ with
+\begin{equation}
+ L_h=\frac{1+\lambda h}{1-\lambda h}.
+ \label{eq:hypo-to-rl}
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+At $\gamma=1$, the RL inner-product inequality is
+\[
+ 4\lambda\langle a,b\rangle
+ \ge(1-L^2)\|a+\lambda b\|^2.
+\]
+Expanding the squared norm and collecting the inner-product terms proves
+\eqref{eq:linear-rl-balanced}.  Setting $L=1$ proves the monotone endpoint;
+dividing by $\lambda$ gives \eqref{eq:balanced-slice-parameters}.  Substituting
+$1-L^2=-4\tau$ proves the second assertion.
+
+For the last assertion, set $c=\lambda b$ and $\eta=\lambda h<1$.
+Hypomonotonicity and Cauchy--Schwarz give
+\[
+ (1-\eta)\|a\|^2
+ \le\langle a,a+c\rangle
+ \le\|a\|\,\|a+c\|,
+\]
+so $\|a\|\le\|a+c\|/(1-\eta)$.  Therefore
+\[
+ \begin{split}
+ \|a\|^2+\|c\|^2
+ &=\|a+c\|^2-2\langle a,c\rangle\\
+ &\le\left(1+\frac{2\eta}{(1-\eta)^2}\right)\|a+c\|^2
+ =\frac{1+L_h^2}{2}\|a+c\|^2.
+ \end{split}
+\]
+This is the all-pairs $J$-side inequality with exponent one, under the
+identification $x=u+\lambda u^*$, $y=v+\lambda v^*$.
+\end{proof}
+
+The semimonotonicity parameters in
+\eqref{eq:balanced-slice-parameters} use the convention of
+\cite{EvensPasLatafatPatrinos2025SemimonotonePPA};
+\eqref{eq:luke-tam-normalization} gives the scaled Luke--Tam condition
+\cite{LukeTam2025GeneralizedMonotonicity}.  Our local range condition (A1)
+uses the same coverage mechanism as
+\cite[Assumption~2(d)(ii)]{LukeTam2025GeneralizedMonotonicity} as its
+well-posedness component.  The extension occurs in (A2): the exponent-one
+quadratic graph inequality is replaced by the nonlinear RL order, while
+(A3)--(A4) match that order with the output error bound.
+
+\subsection{Error bounds and the linear convergence factor}
+
+The regularity assumption concerns the original operator at the proximal
+output:
+\[
+ \dist(y,S)\le\psi\bigl(\dist(0,F(y))\bigr).
+\]
+It can be verified independently of RL.  In particular, an available
+metric $q$-subregularity estimate takes the form
+\begin{equation}
+ \dist(y,S)\le K\dist(0,F(y))^q.
+ \label{eq:power-eb-comparison}
+\end{equation}
+The orders $q>0$, including $q>1$, belong to the established subregularity
+theory \cite{LiMordukhovich2012HolderSubregularityPPA,
+MordukhovichOuyang2015HigherOrderSubregularity}.  Substituting
+$\psi(t)=Kt^q$ into the direct recursion gives the coefficient
+$K(L/(2\lambda))^q$ and the leading power $d^{\gamma q}$ for
+$0<\gamma<1$, $L>0$.  This explains exactly which independently obtained
+error bound can be used: $\gamma q>1$ gives local compatibility, while
+$\gamma q=1$ requires $K(L/(2\lambda))^q<1$.
+
+General gauges also enter the abstract framework of
+\cite[Theorems~4.3--4.4]{LiMordukhovichZhu2026GeneralizedSubregularity}.
+That framework concerns subgradient sequences with an objective descent
+condition, a surrogate for successive change, a relative subgradient-error
+bound, a continuity condition, and an accumulation point.  Its regularity is
+written as a gauge applied to distance and is combined with the surrogate and
+relative-error moduli to obtain the rate map.  Our theorem does not assume an
+underlying objective, descent, or a pre-existing accumulation point.  Instead,
+the RL inequality supplies the step estimate, the proximal inclusion supplies
+the output residual, and an initial-radius budget proves localization and the
+existence of a limit.  Thus the two frameworks overlap for suitable
+subgradient PPA specializations, but neither set of assumptions follows from
+the other at the present level of generality.  The gauge assumption used here
+is an imported regularity condition; the square-root example verifies it by
+direct residual calculation.
+
+Corollary~\ref{cor:linear-slice} gives the coupled factor
+\[
+ \kappa_E=
+ \sqrt{\frac{1+L^2}{2}}\,
+ \frac{\rho}{\sqrt{\rho^2+\lambda^2}}.
+\]
+At $L=1$, this is
+$\rho/\sqrt{\rho^2+\lambda^2}$, the distance factor in
+Leventhal's Theorem~3.1 \cite{Leventhal2009MetricSubregularityPPA}.
+Under the Luke--Tam normalization $L^2=1+4\tau$,
+\begin{equation}
+ \kappa_{\rm coupled}^2
+ =(1+2\tau)\frac{\rho^2}{\rho^2+\lambda^2},
+ \qquad
+ \kappa_{\rm coupled}<1
+ \quad\Longleftrightarrow\quad
+ 2\tau\rho^2<\lambda^2.
+ \label{eq:coupled-linear-factor}
+\end{equation}
+For the common scaled submonotonicity inequality, the estimate displayed in
+\cite{LukeTam2025GeneralizedMonotonicity} is
+\[
+ \kappa_{\rm LT}^2
+ =1+2\tau-\left(\frac{\lambda}{\lambda+\rho}\right)^2,
+ \qquad
+ \tau(1+\rho/\lambda)^2<\frac12.
+\]
+Keeping the error bound at the output gives
+\eqref{eq:coupled-linear-factor}, with a smaller factor and a weaker scalar
+restriction.  This comparison is confined to the common transition
+inequalities; coverage and localization must also hold in either local
+convergence theorem.
+
+\subsection{What the multivalued example separates}
+
+Almost-averaged mapping theory explicitly allows set-valued iteration maps
+\cite{LukeThaoTam2018Quantitative}.  Generalized-monotonicity PPA theory also
+allows set-valued operators
+\cite{LukeTam2025GeneralizedMonotonicity,
+EvensPasLatafatPatrinos2025SemimonotonePPA}.  The distinction in the following
+proposition is the order of the estimate near the branch junction.
+
+\begin{proposition}[Failure of specified quadratic certificates]
+\label{prop:seam-quadratic-separation}
+Let $F$ be the square-root operator in
+Theorem~\ref{thm:square-root-seam}, let $J=J_F$, and fix
+$\bar z=(\bar p,0)\in S$.  On every full neighborhood of $\bar z$:
+\begin{enumerate}
+\item there is no finite $C$ such that
+\begin{equation}
+ \|Jz-Jw\|^2+
+ \|(z-Jz)-(w-Jw)\|^2\le C\|z-w\|^2
+ \label{eq:excluded-quadratic-J}
+\end{equation}
+for all inputs $z,w$ in that neighborhood;
+\item there is no finite $C$ such that
+$\|Jz-\bar z\|\le C\|z-\bar z\|$ for all nearby inputs;
+\item there is no finite local hypomonotonicity modulus for the graph of $F$
+near $(\bar z,0)$;
+\item there is no fixed finite matrix $V$ such that
+\begin{equation}
+ \langle u-\bar z,u^*\rangle\ge\langle u^*,Vu^*\rangle
+ \label{eq:excluded-fixed-anchor-matrix}
+\end{equation}
+for all graph points $(u,u^*)$ sufficiently near $(\bar z,0)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The resolvent is
+$J(p,q)=(p+\sqrt{|q|},|q|/4)$.  Take
+$z_t=(\bar p,t)$ and $w_t=(\bar p,-4t)$, $t>0$.  Direct calculation gives
+\[
+ \|z_t-w_t\|^2=25t^2,
+ \qquad
+ \|Jz_t-Jw_t\|^2+
+ \|(z_t-Jz_t)-(w_t-Jw_t)\|^2
+ =2t+\frac{269}{8}t^2.
+\]
+Their ratio diverges, proving the first assertion.  For the second,
+\[
+ \frac{\|Jz_t-\bar z\|}{\|z_t-\bar z\|}
+ =\frac{\sqrt{t+t^2/16}}{t}\longrightarrow+\infty.
+\]
+To prove the third assertion, use the graph points
+$u_t=(\bar p+t,t)$ and $u_t^*=(-2\sqrt t,3t)$, together with
+$(\bar z,0)$.  They satisfy
+\[
+ \frac{\langle u_t-\bar z,u_t^*\rangle}
+      {\|u_t-\bar z\|^2}
+ =-\frac1{\sqrt t}+\frac32\longrightarrow-\infty.
+\]
+Finally, replace $u_t$ by $(\bar p+t^{1/4},t)$, keeping the same $u_t^*$.
+Then
+\[
+ \frac{\langle u_t-\bar z,u_t^*\rangle}{\|u_t^*\|^2}
+ =\frac{-2t^{3/4}+3t^2}{4t+9t^2}\longrightarrow-\infty.
+\]
+For a fixed finite matrix $V$, the quotient
+$\langle u_t^*,Vu_t^*\rangle/\|u_t^*\|^2$ is bounded below by
+$-\|V\|$.  This proves the last assertion.
+\end{proof}
+
+The four assertions exclude the displayed quadratic certificates on the same
+full neighborhood.  They do not compare the entire semimonotone, weak-Minty,
+almost-averaged, or partial-regularity frameworks, which may use different
+relative domains or degenerate tests.  In contrast, the H\"older $J$-side
+estimate and the quadratic output error bound of
+Theorem~\ref{thm:square-root-seam} satisfy the RLEB compatibility condition.
