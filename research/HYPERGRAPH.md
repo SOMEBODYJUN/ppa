@@ -697,6 +697,17 @@
 | E437 | [TCB-DATA · 光滑整管吸引与Holder完成合同](canonical/topological_completion_balance.md#tcb-contract) | conditional → [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | 固定连通管外、整管 C0/D0 Lipschitz 和边界方向；若给定单位方向 Lipschitz 延拓 Ke、正幅度 Ka/A 与几何拼接常数 GW，则分片完成保整管保零并有显式 γ-Hölder 上界；不提供 Ke/GW 的最优或可计算值。；**derived-checked** |
 | E438 | [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | 预算桥把拓扑方向延拓量化为有限上界，但不关闭 RP² 原预算 L*=L0、端点达到或严格gap；这些仍需真实方向/覆盖证书。；**derived-checked** |
 
+## 完整近端示例与核边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E439 | [FPR-OBJECT · C246 幂次动能自由粒子的完整对象](canonical/free_particle_rleb.md#fp-object) | implies → [FPR-CERT · C246 同一全对锚定常数与真残差整窗](canonical/free_particle_rleb.md#fp-certificate) | 固定λ1、R1/16、γ1/2、L1、真实psi=t²及κ1/2；完整输入/所有输出、全图Minty近对尺度、同一最近零锚、评价窗和整窗兼容逐项解析核验。；**derived-checked** |
+| E440 | [FPR-OBJECT · C246 幂次动能自由粒子的完整对象](canonical/free_particle_rleb.md#fp-object) | implies → [FPR-ORBIT · C246 全部闭式轨道、极限及锐指数](canonical/free_particle_rleb.md#fp-orbit) | 独立代入完整闭式T并几何求和给全空间初值轨道、有限长度、极限和锐1/2/EB2；全域范围来自此直接推导，不从局部定理扩张。；**derived-checked** |
+| E441 | [FPR-OBJECT · C246 幂次动能自由粒子的完整对象](canonical/free_particle_rleb.md#fp-object) | conditional → [FPR-METRIC · C247 固定SPD全部根与实际发散](canonical/free_particle_rleb.md#fp-metric) | 另固定任意SPD M及同一原F算法M(w−y)=F(y)，求全部二次根；正/零交叉项唯一收敛，负交叉项保覆盖和Fix=S但存在完整发散轨道；不含变化核。；**derived-checked** |
+| E442 | [HRL-OBJECT · C241 秩亏Hamilton完整输入管对象](canonical/rank_deficient_hamilton_rleb.md#hrl-object) ∧ [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | conditional → [HRL-ANCHOR · C241-v2 同一原Hamilton的短锚定新窗](canonical/free_particle_rleb.md#fp-hamilton-salvage) | 同一C241原完整F另取R10^−3、锚定L1/4、psi3t²、κ1/16；P≤d²+d/100独立供应所有最近锚输出与真实EB，同窗及留域合取后给尾；不是新窗全对L1/4。；**derived-checked** |
+| E443 | [OPT-WEAK-DATA · C248 临界弱凸box优化的完整对象](../发表成果整理/非Lipschitz近端例独立比较.md#engineered-optimization) | implies → [OPT-WEAK-CERT · C248 离零非Lipschitzprox的完整证书](../发表成果整理/非Lipschitz近端例独立比较.md#engineered-optimization) | 完整弱凸F=∂G−I的所有内点/端点/远输入由饱和逆式覆盖，R16、γ1/3、q4及统一常数兼容；真残差上界16而非端点15，非Lipschitz只在±16。；**derived-checked** |
+| E444 | [FPR-CERT · C246 同一全对锚定常数与真残差整窗](canonical/free_particle_rleb.md#fp-certificate) ∧ [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | conditional → [FPR-ORBIT · C246 全部闭式轨道、极限及锐指数](canonical/free_particle_rleb.md#fp-orbit) | 仅认证管内完整PPA的主定理有限长、距离和尾上界；节点全空间精确公式与锐率仍另依赖前一条直接代数证明，不由这条局部边授予。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

@@ -7181,6 +7181,94 @@
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "FPR-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "FPR-CRITICAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "FPR-METRIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "FPR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "FPR-ORBIT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "HRL-ANCHOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OPT-WEAK-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OPT-WEAK-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -8935,6 +9023,30 @@
     "E438": {
       "x": 4733.54,
       "y": 3167.9
+    },
+    "E439": {
+      "x": 863.83,
+      "y": 3959.79
+    },
+    "E440": {
+      "x": 954.0,
+      "y": 4032.0
+    },
+    "E441": {
+      "x": 485.8,
+      "y": 4118.65
+    },
+    "E442": {
+      "x": 1143.17,
+      "y": 4296.14
+    },
+    "E443": {
+      "x": 609.09,
+      "y": 4533.08
+    },
+    "E444": {
+      "x": 1036.53,
+      "y": 3998.66
     }
   },
   "bounds": {

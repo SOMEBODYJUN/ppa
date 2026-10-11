@@ -32,7 +32,9 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**完成预算主线的下一动作。** 按[BG16](research/canonical/completion_budget_gate.md#cbg-next)冻结同一RP²原数据，先找可推进L0+ε健壮证书的解析不等式与可认证覆盖；不把精确L0数值当独立终点。新增[C242](research/canonical/lipschitz_obstruction_budget.md#lob-object)给出一条条件预算桥：先构造/认证边界单位方向的 Lipschitz 延拓 \(K_e\)（优先做带边界三角剖分/分片测地插值）和几何拼接常数 \(G_W\)，再把它转为有限 Hölder 上界。下确界、端点达到、严格gap分开；没有统一不等式时转有证书的新L显式模型，单矩阵共轭模板和普通有限forced-zero已停止。
+**当前正文选例的已闭与未闭门。** [C246自由粒子](research/canonical/free_particle_rleb.md#fp-object)已解析核完全部近端、统一全对/锚常数、真实残差、整窗兼容及所有闭式轨道；它有清楚动力学来源但V=0，不承担非平凡优化应用。[C241-v2](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)另保留原非平凡Hamilton，以短锚证取R10^−3，不能声称新全对L。[C247](research/canonical/free_particle_rleb.md#fp-metric)闭合固定SPD正/零/负交叉项全部输出，负剪切存在实际发散，变核仍须独立合同。[采用清单](发表成果整理/非Lipschitz近端例独立比较.md)推荐C246而非凸幂或C248离零工程奇点；现行主稿仍为C242，实际采用后的稿件重写、编译和视觉检查尚未实施。若要求非平凡自然优化且零点非calm、闭式全部轨道，本轮未找到满足者；不以换包装声称已解决。
+
+**完成预算主线的下一动作。** 按[BG16](research/canonical/completion_budget_gate.md#cbg-next)冻结同一RP²原数据，先找可推进L0+ε健壮证书的解析不等式与可认证覆盖；不把精确L0数值当独立终点。新增[C245](research/canonical/lipschitz_obstruction_budget.md#lob-object)给出一条条件预算桥：先构造/认证边界单位方向的 Lipschitz 延拓 \(K_e\)（优先做带边界三角剖分/分片测地插值）和几何拼接常数 \(G_W\)，再把它转为有限 Hölder 上界。下确界、端点达到、严格gap分开；没有统一不等式时转有证书的新L显式模型，单矩阵共轭模板和普通有限forced-zero已停止。
 
 **外部收敛比较的当前完成门。** [8月GPPA/NFB比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table)已复核固定v1：C199/C202是真实非单调重合，物理几何尾自动有限长。C204把C200完整标量双支障碍加强到任意无正则性配对单调核；但C205–C207又构造保零集子关系，分别将cap、C141小尾和a>1对数尾的原物理轨道导入GPPA。**完整图表示不涵盖不等于收敛不能借外文证明**；cap/超线性T2物理率需显式不变量桥，log T1物理有限长需额外可和尾桥。C201任意同空间NFB拆分及C203指定标准full-graph lift的必要二次锚仍成立。C197只限制无物理桥的核率推断。本轮[C208–C214](research/canonical/generalized_ppa_modulus.md)已完成固定核完整 GPPA 的一般 RL+真EB统一定理及源 T2 核包含；仍未解决一般C191/C192全部核/子关系分类、任意其它保真lift、精确尾和选择锐模先行性、Spingarn等其它框架。附件是全尺度次线性结构稿，上述无界零片例不在其类中；Ciosmak/Levy–Rice/Ajiev等结构线逐定理先行性另核。10/06 KKT稿仍为凸复合真EB候选接口，总体规模、秩亏和来源覆盖未关闭。
 

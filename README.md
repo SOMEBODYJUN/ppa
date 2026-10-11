@@ -2,7 +2,9 @@
 
 本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB 中文修订稿](发表成果整理/RLEB/README.md) 先给距离—长度接口，以 [C242 三角系统](research/canonical/triangular_rleb.md) 替代正文复杂例，再给 [C243/C244 正定核与 Euler 接口](research/canonical/rleb_kernel_topology_interfaces.md)。C241 Hamilton 的原证明保留在补充稿。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 635 个数学节点、436 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+新的[非Lipschitz近端例独立比较](发表成果整理/非Lipschitz近端例独立比较.md)推荐 [C246 幂次动能自由粒子](research/canonical/free_particle_rleb.md#fp-object)：完整J、全部轨道闭式，同一L同时供应全对与最近锚；这是零势能动力学机制，不能替代非平凡优化应用身份。现行主稿仍为C242，尚未按推荐改写。[C247固定SPD全纤维符号分类](research/canonical/free_particle_rleb.md#fp-metric)给正剪切Lipschitz化与负剪切实际发散；[C241-v2锚定简证](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)保留原非平凡Hamilton，缩短验证并扩大认证管。凸幂与[C248工程化弱凸优化](发表成果整理/非Lipschitz近端例独立比较.md#engineered-optimization)分别作为角色不足与离零奇点的比较边界；正文采用所需摘要/比较/附录清单已列，不把推荐冒充已实施。
+
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 644 个数学节点、444 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -295,3 +297,9 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 阅读顺序：本页和超边图 → 依节点进数学模块 → CLAIMS 的精确版本和现存 objection → 必要时 SOURCES 的原稿标签/页码。要写新资产时先读增长协议和当前前沿；图中路线是搜索种子，不是方法白名单。
 
 当前稿新增规范入口：[C242完整三角例](research/canonical/triangular_rleb.md)、[C243/C244固定SPD与Euler桥](research/canonical/rleb_kernel_topology_interfaces.md)。解析结论、有限计算和外部先行性保持不同证据范围。
+
+| 新文件 | 数学资产与读取时机 |
+| --- | --- |
+| [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
+| [发表成果整理/非Lipschitz近端例独立比较.md](发表成果整理/非Lipschitz近端例独立比较.md) | 优化来源、机制、原Hamilton的四轴比较；凸幂完整合同、C248弱凸离零奇点、致命分支攻击及实际主稿采用清单。要选正文例或重写比较贡献时读取。 |
+| [research/code/free_particle_rleb/README.md](research/code/free_particle_rleb/README.md) | 上述Claim的实际参数、seed、边界与独立反算、Python版本和hash；两份运行结果用于复现有限算术，不作为普遍证明。 |

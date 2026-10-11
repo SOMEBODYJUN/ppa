@@ -2058,6 +2058,15 @@
 - **Evidence / Dependencies**：[H1–H15自足对象与证明](research/canonical/rank_deficient_hamilton_rleb.md#hrl-object)、[全对有限差分与真残差](research/canonical/rank_deficient_hamilton_rleb.md#hrl-proof)、[锐性与精确轨道](research/canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness)、[核心独立审查](发表成果整理/最终核心独立审查.md)。允许转移定理C02-v3适用，全对验证推论也适用；规范页另直接证明收敛。
 - **Scope / Objections**：L=1/2是有效常数，未声称最优。非零初始动量和非孤立零线包括在内。只排除明确的二次近端能量、固定零锚J-Lipschitz和有限二次Minty证书；不排除所有旧方法或任意非线性核。Maddison v1及LT正式版比较按各自阻尼、步长、p0与零集前提限定，见[版本映射](research/canonical/rank_deficient_hamilton_rleb.md#hrl-comparison)。
 
+<a id="c241-v2"></a>
+## C241-v2 · 同一秩亏 Hamilton 对象的新窗锚定简证
+
+- **Status**：`derived-checked`；完整存在性、符号分支、原残差和同窗预算由独立解析重构及有理反算支持，不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留C241-v1完整F、X、S、λ1，另固定U=X、R=10^−3、γ1/2、锚定L1/4、bar t1、psi(t)=3t²、κ1/16。完整J全空间唯一；每个同管输入的完整输出有P=||p||≤d²+d/100，最近零反射≤L√d；全部输出真实残差、评价窗和所有0<r≤R兼容成立。
+- **Conclusion**：C02-v3给全部同管完整轨道有限长度趋S，dk≤16^−k d0，点尾≤(8/15)16^−k d0+(1/6)4^−k√d0；尾是上界。原指数锐性可由同一小测试点继承。
+- **Definitions / Dependencies / Evidence**：[完整锚定推导](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)，C241-v1的严格凸完整覆盖和C02-v3；[反算](research/code/free_particle_rleb/README.md)。
+- **Counterevidence / Scope / Related Files**：不是同新窗的全对L1/4结果。原C241-v1全对身份保持；若主张全对，旧有限差分证明不能删。比较记录说明这是原非平凡优化应用的短证选择，不以维护原例为由否决新例。
+
 <a id="c242"></a>
 ## C242-v1 · 三角系统的完整近端证书与可和漂移
 
@@ -2091,4 +2100,31 @@
 - **Status**：`derived-checked`（条件引理）；不认证 RP² 原预算达到，也不提供方向延拓的最优或可计算常数。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 C233 的有限维共享对象，并另假定 \(D_0/C_0\) 在整管上 Lipschitz、边界方向数据 \(g\) 有限 Lipschitz 常数；取连通管外 \(W=\overline B_R\setminus\operatorname{int}N_\rho\)。边界方向 \(g=D_0/\|D_0\|\) 于内边界、\(g=p/R\) 于外边界。若给定 Lipschitz 单位方向延拓 \(e:W\to S^{n-1}\)，常数 \(K_e\)，以及正 Lipschitz 幅度 \(a\)，边界值为 \(\|D_0\|\) 和 \(R/2\)，常数 \(K_a\)、上界 \(A\)，则分片 (LB2) 给保整管、保全部零集的全域紧支撑完成，并满足 (LB1) 的带几何拼接因子 \(G_W\) 的 \(\gamma\)-Hölder 上界。
 - **Conclusion / Dependencies**：\(D=ae\) 在管外处处非零；内外接缝分别精确复现 \(D_0\) 与 \(p/2\)，所以新增固定点被逐段排除。Lipschitz 到 Hölder 只用支撑直径 \(2R\) 的反算。依赖 C233 的边界次数为零合同，但本命题把方向延拓作为显式条件，不偷换为 Hopf 自动给出的数值预算。
-- **Evidence / Counterevidence / Related Files**：[完整证明与 RP² 参数](research/canonical/lipschitz_obstruction_budget.md#lob-object)；[Fraction 复算](research/code/lipschitz_obstruction_budget/README.md)及 `results.json`。\(K_e\)、\(G_W\) 仍是必须另行构造或认证的对象；本 Claim 不能推出 \(L_*=L_0\)、端点达到或全局收敛。与 C240 的有限网证书互补：C242 先给出一个 Lipschitz 方向/幅度的预算接口，C240 负责固定预算下的真实覆盖余量。
+- **Evidence / Counterevidence / Related Files**：[完整证明与 RP² 参数](research/canonical/lipschitz_obstruction_budget.md#lob-object)；[Fraction 复算](research/code/lipschitz_obstruction_budget/README.md)及 `results.json`。\(K_e\)、\(G_W\) 仍是必须另行构造或认证的对象；本 Claim 不能推出 \(L_*=L_0\)、端点达到或全局收敛。与 C240 的有限网证书互补：C245 先给出一个 Lipschitz 方向/幅度的预算接口，C240 负责固定预算下的真实覆盖余量。
+
+<a id="c246"></a>
+## C246-v1 · 自由幂次动能的完整非Lipschitz近端与临界全对证书
+
+- **Status**：`derived-checked`；全图解析逆式、统一常数、锐指数和全部显式轨道经独立攻击与复算。不认证新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=R²、h(p)=sgn(p)√|p|、F(x,p)=(-h(p),15p)、完整S=R×{0}、λ1；完整J全域唯一T(a,b)=(a+h(b)/4,b/16)。U=X、输入R1/16、γ1/2、L1、bar t1、psi(t)=t²、κ1/2。同一L对完整图全部Minty输入对距≤R的全对RL及全部管内最近零锚成立；完整r_F²=|p|+225p²，全域EB及同窗兼容25/64<1/2成立。
+- **Conclusion**：完整管内PPA适用C02-v3；独立全初值轨道p_k=16^−k b0、x_k=a0+h(b0)(1−4^−k)/3，极限(a0+h(b0)/3,0)，长度≤|b0|+√|b0|/3。零线附近T/C/极限映射最大指数1/2、真EB最大幂2。b0≠0距离精确因子1/16、点误差相邻比极限1/4。
+- **Definitions / Dependencies / Evidence**：[完整对象与逐前件](research/canonical/free_particle_rleb.md#fp-object)、[全初值轨道](research/canonical/free_particle_rleb.md#fp-orbit)、[临界系数](research/canonical/free_particle_rleb.md#fp-critical)，C02-v3；[代码和结果](research/code/free_particle_rleb/README.md)。
+- **Counterevidence / Scope / Related Files**：H=2|p|^(3/2)/3、势能0的阻尼自由粒子，是动力学机制而非非平凡优化。指定Lipschitz/二次证书失败不排除全部旧理论。一般c,Γ>0全对直接证书存在当且仅当Γ>1，锚定证书及实际动力对每个Γ>0成立；这些不是同一个阈值。零线非紧且C全尺度线性，不适用结构稿或C244。[采用比较](发表成果整理/非Lipschitz近端例独立比较.md)。
+
+<a id="c247"></a>
+## C247-v1 · 同一自由粒子的固定SPD全纤维符号分类
+
+- **Status**：`derived-checked`；全部二次根、双残差、最近锚、新核同窗与发散反例经独立重构和有理反算。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C246的同一完整F，λ1，M=[[A,C0],[C0,B]]>0，m=B−C0²/A、n=m+15、d=C0/A。完整算法M(w−y)=F(y)的全部输出由nt|t|+dt=mb、p=t|t|、x=a+d(b−p)+t/A给出。每个SPD均有全域coverage和FixJ_F^M=S；最近零点(a+db,0)，d_M=√m|b|，真双残差²=|p|/A+(d h(p)+15p)²/m。
+- **Conclusion**：C0≥0完整映射全域唯一且全部轨道有限长趋S；C0>0时完整映射全域Lipschitz，并有新核全对/锚定共同1阶常数及同窗元组；C0=0保留非Lipschitz并可对每个正对角核构造同窗1/2锚证书。C0<0零输入有三输出且存在p_*=(−d/15)²、x_k=a0−kd/(15A)的完整发散轨道。
+- **Definitions / Dependencies / Evidence**：[FP10–FP13全部纤维与正定核证明](research/canonical/free_particle_rleb.md#fp-metric)，C243仅作为经逐项重核后的验证器；[有限根与残差反算](research/code/free_particle_rleb/README.md)。
+- **Counterevidence / Scope / Related Files**：M=[[1,-1/2],[-1/2,1]]零输入为0及±(128/3969,4/3969)。覆盖与固定点恒等并不保证零输入吸收或全部选择收敛。不认证任意变化M_k，也不把M双残差偷换为原Euclidean真残差。
+
+<a id="c248"></a>
+## C248-v1 · 工程化弱凸优化的离零点非Lipschitz完整prox
+
+- **Status**：`derived-checked`，限于精确构造、整窗证书和解析轨道；示例作用与自然应用价值明确不升级。
+- **Exact Statement / Objects / Domain / Quantifiers**：f(u)=16[(12/5)|u|^(5/4)−2|u|^(3/2)+(4/7)|u|^(7/4)]−u²/2+δ_[-1,1]；G=f+u²/2凸，完整F=∂G−I、S={0}、λ1。完整T(a)=sgn(a)[1−(1−min{|a|/16,1})^(1/3)]^4，全域唯一；真残差内点16(3t−3t²+t³)−t⁴（t=|u|^1/4）、端点15、域外∞。U=R、输入R16、γ1/3、L=2^(10/3)+2^(5/3)、bar t25、psi(s)=(s/15)^4、κ1/2，同一全对/锚定L和全部输出兼容成立。
+- **Conclusion**：prox最大窗指数1/3，零点EB最大幂4，qγ4/3>1；全初值完整轨道趋0且总长度|a0|，零附近Q阶4、系数48^−4。
+- **Evidence / Dependencies**：[完整定义、全部纤维与短证明](发表成果整理/非Lipschitz近端例独立比较.md#engineered-optimization)，C02-v3；[有限反算](research/code/free_particle_rleb/README.md)。
+- **Counterevidence / Scope / Related Files**：非Lipschitz奇点在输入±16，离唯一零点远；极限映射恒0且prox在零附近Lipschitz，不能承担C246的零线非calm作用。内点残差可以大于15，但≤16，bar t25保持合法；不将端点值误当完整输出上界。此构造不推荐为正文自然应用。
