@@ -138,6 +138,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-5",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 720,
+      "y": 4280,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -7070,6 +7082,94 @@
       "y": 3095,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "RLEB-EULER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "RLEB-EULER-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "RLEB-SINGLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SPD-CONV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "SPD-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "TRI-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "TRI-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "TRI-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -8788,10 +8888,38 @@
     "E429": {
       "x": 4826.0,
       "y": 2822.04
+    },
+    "E430": {
+      "x": 1083.2,
+      "y": 4078.26
+    },
+    "E431": {
+      "x": 4730.28,
+      "y": 2816.83
+    },
+    "E432": {
+      "x": 1083.2,
+      "y": 4167.74
+    },
+    "E433": {
+      "x": 1237.63,
+      "y": 4219.92
+    },
+    "E434": {
+      "x": 4650.14,
+      "y": 3060.98
+    },
+    "E435": {
+      "x": 4541.58,
+      "y": 3170.94
+    },
+    "E436": {
+      "x": 4448.25,
+      "y": 3016.84
     }
   },
   "bounds": {
     "w": 5310,
-    "h": 3710
+    "h": 4920
   }
 }

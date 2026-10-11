@@ -2057,3 +2057,30 @@
 - **Conclusion**：每个初值d0≤R的完整轨道无限继续、保持同管、有限长度趋S，dk≤4^−kd0，尾≤(2/3)4^−kd0+(1/2)2^−k√d0。RL指数1/2和真EB幂2各自最优；显示尾为上界，不能由分开最优指数反推所有轨道恰为该率。自由轴轨道给距离因子1/100和点尾因子1/10的精确例子。
 - **Evidence / Dependencies**：[H1–H15自足对象与证明](research/canonical/rank_deficient_hamilton_rleb.md#hrl-object)、[全对有限差分与真残差](research/canonical/rank_deficient_hamilton_rleb.md#hrl-proof)、[锐性与精确轨道](research/canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness)、[核心独立审查](发表成果整理/最终核心独立审查.md)。允许转移定理C02-v3适用，全对验证推论也适用；规范页另直接证明收敛。
 - **Scope / Objections**：L=1/2是有效常数，未声称最优。非零初始动量和非孤立零线包括在内。只排除明确的二次近端能量、固定零锚J-Lipschitz和有限二次Minty证书；不排除所有旧方法或任意非线性核。Maddison v1及LT正式版比较按各自阻尼、步长、p0与零集前提限定，见[版本映射](research/canonical/rank_deficient_hamilton_rleb.md#hrl-comparison)。
+
+<a id="c242"></a>
+## C242-v1 · 三角系统的完整近端证书与可和漂移
+
+- **Status**：`derived-checked`；自足解析证明、独立完整纤维审读及有限边界复算。不认证发表先行。
+- **Exact Statement / Objects / Domain / Quantifiers**：Euclidean R²，λ=1，完整F(u,v)=(u,−√|u|)，S={0}×R；完整J_F(a,b)=(a/2,b+√(|a|/2))全域唯一。U=R²、R=1/16、γ=1/2、锚定L=√2、bar t=1、ψ(t)=t²、κ=3/4。每个同窗输入及其完整输出满足C02-v3全部前件；r_F(u,v)²=u²+|u|为完整真残差。
+- **Conclusion / Scope**：认证条带内全部初值适用C02-v3；另由显式轨道对全空间初值证明有限长度及极限(0,b0+√|a0|/(√2−1))，总长≤|a0|+√|a0|/(√2−1)。a0≠0时法向因子恰1/2、点误差渐近因子恰1/√2，a0=0驻定。零线任一点邻域的最大Hölder指数1/2与最大真EB幂2。全对同尺度常数√2+√R与锚定L不同；不满足所用全尺度次线性界。
+- **Definitions / Dependencies / Evidence**：[完整对象](research/canonical/triangular_rleb.md#tri-object)、[逐前件证明](research/canonical/triangular_rleb.md#tri-certificate)、[锐性与轨道](research/canonical/triangular_rleb.md#tri-sharp)，C02-v3。[有限复算](research/code/triangular_rleb/README.md)与[独立接受](发表成果整理/本轮重构/新结果独立审读.md)分别定位计算和解析范围。
+- **Counterevidence / Objections / Related Files**：机制例不声称优化应用或平方根次正则性新颖；非紧零线不能调用C244。主稿替换C241的示例作用，C241数学身份及原证明保留在补充材料。
+
+<a id="c243"></a>
+## C243-v1 · 固定正定核的完整RLEB度量转移
+
+- **Status**：`derived-checked`；完整坐标桥和全部输出独立重构，审查中的内积遗漏已关闭。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=Rⁿ，M=Mᵀ>0，λ>0，完整F、非空闭S⊂zerF和开U。J^M=(M+λF)⁻¹M；d_M、M最近点、M内积/范数及真双残差inf_{f∈F(y)}||f||_(M⁻¹)。对同一允许关系逐项以这些对象替换C02-v3全部前件，含同窗实际输出真EB、覆盖、锚定反射条件、所有0<r≤R的兼容和严格M预算。
+- **Conclusion / Scope**：同样的全部合法选择无限延拓、留域、距离、有限长度和点尾结论在M范数成立；欧氏长度/尾至多M界除以√min eigM。不是原Id证书自动转移，也不含半正定、非线性、变核、松弛或误差版本。
+- **Definitions / Dependencies / Evidence**：[完整陈述和Q桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-spd)，Q=M^(1/2)，G(z)=Q⁻¹F(Q⁻¹z)，逐输入/输出与真残差严格对应后调用C02-v3。[同一三角例的核边界](research/canonical/rleb_kernel_topology_interfaces.md#rkt-tri-kernel)、[有限复算](research/code/rleb_spd/README.md)、[独立审读](发表成果整理/本轮重构/新结果独立审读.md)。
+- **Counterevidence / Objections**：同F正对角核全部轨道及小窗认证成立，非对角SPD [[1,1/2],[1/2,1]]零输入完整纤维含额外(-4/49,16/49)，锚条件失败。仅改范数而漏M内积的误写版本被M20、F=−30Id发散例反驳；本精确版本含内积，排除此例。退化核影子收敛不供应物理点结论。
+
+<a id="c244"></a>
+## C244-v1 · 局部RLEB供给吸引管的Euler后果
+
+- **Status**：`derived-checked`；C02-v3到严格整管的桥、指数和全吸引回缩经独立审读，承重一手接口已核。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=Rⁿ，λ>0，完整J_{λF}=T全域处处存在单值；C=2T−I全尺度有限L*的γ* Hölder，0<γ*<1；完整S=zerF非空紧C²无边界嵌入流形。C02-v3的B1–B4对完整T、同一S、包含S的开U统一成立。
+- **Conclusion / Scope**：χ(S)=1；额外全部x∈X有d(T^kx,S)→0时S只能单点。固定SPD版本须全域完整J^M、上述M全尺度界、完整S和局部M条件全部重新认证；Q坐标保持Euler/可缩性。这是C231/C235的准确接口，不包括Euler充分性、同预算完成、全域EB或自动全域吸引。
+- **Definitions / Dependencies / Evidence**：[逐项桥与证明](research/canonical/rleb_kernel_topology_interfaces.md#rkt-euler)，C02-v3给投影管全点严格距离收缩；C231给局部χ与总指数1；C235给有限覆盖后ΠT^m真回缩，Hatcher3.26排除正维闭流形可缩。[独立审读](发表成果整理/本轮重构/新结果独立审读.md)重新读取Benjamin–Gottlieb §2.1与Hatcher指定页。
+- **Counterevidence / Objections**：S为严格零子集、非紧、无全尺度次线性界或退化核均不能直接调用。圆—原点模型C=P_B(2x)保局部吸引圆但完整零集另含补偿原点；补偿点在吸引管之外，允许在圆盘内部。

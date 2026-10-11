@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-11",
+  "baseline_commit": "3cb70cae7cf3fdc2cab7e1a4227b495bd7c877f8",
+  "pdf": {
+    "path": "发表成果整理/RLEB/RLEB_中文修订稿.pdf",
+    "sha256": "251c533785b57930999eaf90f13f24869af2887929e8d6f7d7a763936c5d5e14",
+    "pages": 13,
+    "baseline_pages": 22,
+    "author": "菠萝之神",
+    "saved_version": 3,
+    "visual_inspection": "all 13 pages rendered at 100 dpi and individually inspected"
+  },
+  "source_zip": {
+    "path": "发表成果整理/RLEB_修订源码.zip",
+    "sha256": "b5417a13bc94b57c4e326abec3e7c9fddcb1b98f15294a714bf5a495dccc1e16",
+    "members": 27,
+    "member_bytes_checked": true,
+    "saved_version": 5
+  },
+  "math_review_inputs": 12,
+  "exposition_review_inputs": 10,
+  "review_hashes": {
+    "发表成果整理/本轮重构/新结果独立审读.md": "d8347e561e7b3c3a29696882923339e0526312e722b0751f91b3c26894569e84",
+    "发表成果整理/本轮重构/行文独立审读与Skill调用.md": "d91e4f09578f0c95845738719ccc8f7d43c6979b3f111056ba255c16a1c7a2d0"
+  },
+  "preserved_supplement_sha256": {
+    "hamilton_example.tex": "856f313c01ca832038a71044f527901c3620640d7873aac5e5ebb510a2f28ce6",
+    "appendix_hamilton.tex": "1df60013d304dbe49f9d2c8ea7d1504e736e39a4701ab90914d95c489d5ba335",
+    "native_schur_verifier.tex": "b8688f14343c6aecc42ee8cac4b6f79b67121d61f1157f339b47a16fbccff036",
+    "appendix_signed_schur.tex": "961e5657ac8c59f0e5327b95f4b2006ae8c7606433cabe7720f165854585010e",
+    "extended_comparisons.tex": "4b909eebffec8bad017ec4b2cecc8d5b3db37833c9e98c278a001157d0c42c78"
+  },
+  "graph": {
+    "nodes": 635,
+    "edges": 436
+  },
+  "code": {
+    "triangular": {
+      "status": "PASS (finite regression only; analytic proofs are in the report)",
+      "seed": 20261011,
+      "boundary_input_count": 15,
+      "tested_pair_count": 20885,
+      "max_tested_holder_ratio": 1.4160376138127886,
+      "orbit_count": 15,
+      "steps_per_orbit": 35,
+      "relaxed_orbit_count": 45,
+      "anchored_constants": {
+        "R": "1/16",
+        "L": "sqrt(2)",
+        "kappa": "3/4",
+        "compatibility_max": "33/64+sqrt(2)/8",
+        "compatibility_max_numeric": 0.692401695296637,
+        "residual_evaluation_window": "(1+4*sqrt(2))/32",
+        "residual_evaluation_window_numeric": 0.2080266952966369
+      },
+      "all_pair_constants_separate": {
+        "R": "1/16",
+        "L": "3/2",
+        "compatibility_max_if_used": "49/64",
+        "kappa_if_used": "4/5"
+      },
+      "metric_counterexample": {
+        "G": [
+          [
+            "1",
+            "1/2"
+          ],
+          [
+            "1/2",
+            "1"
+          ]
+        ],
+        "output": [
+          "-4/49",
+          "16/49"
+        ],
+        "F_plus_G_y": [
+          "0",
+          "0"
+        ]
+      },
+      "script_sha256": "4abec1bb1969a72a17c6c9541dcc81ae8cca83058dcf025565f3734c6a23bafc"
+    },
+    "spd": {
+      "seed": 20261011,
+      "scope": "finite checks, not a universal proof",
+      "off_diagonal_zero_fiber": [
+        "(0,0)",
+        "(-4/49,16/49)"
+      ],
+      "scalar_kernel_attack": [
+        {
+          "a": "1/10",
+          "q": "-1/29",
+          "strictly_stable": true
+        },
+        {
+          "a": "1",
+          "q": "-1/2",
+          "strictly_stable": true
+        },
+        {
+          "a": "3/2",
+          "q": "-1",
+          "strictly_stable": false
+        },
+        {
+          "a": "2",
+          "q": "-2",
+          "strictly_stable": false
+        },
+        {
+          "a": "3",
+          "coverage_nonzero": false
+        },
+        {
+          "a": "4",
+          "q": "4",
+          "strictly_stable": false
+        },
+        {
+          "a": "6",
+          "q": "2",
+          "strictly_stable": false
+        }
+      ],
+      "coordinate_identity_max_error": 4.539855413726312e-09,
+      "positive_diagonal_witness": [
+        {
+          "a": 1e-06,
+          "b": 3.0,
+          "q": 9.99999000001e-07,
+          "certified_R": 1.0,
+          "direct_gate": 0.0030019936668963737
+        },
+        {
+          "a": 0.25,
+          "b": 0.5,
+          "q": 0.2,
+          "certified_R": 1.0,
+          "direct_gate": 0.5208495283014151
+        },
+        {
+          "a": 1.0,
+          "b": 1.0,
+          "q": 0.5,
+          "certified_R": 0.25,
+          "direct_gate": 0.9160533905932738
+        },
+        {
+          "a": 2.0,
+          "b": 7.0,
+          "q": 0.6666666666666666,
+          "certified_R": 0.0078125,
+          "direct_gate": 0.9155834979274395
+        },
+        {
+          "a": 1000000.0,
+          "b": 2.0,
+          "q": 0.999999000001,
+          "certified_R": 4.440892098500626e-16,
+          "direct_gate": 0.9999999424331559
+        }
+      ],
+      "degenerate_boundary": "lost-fiber oscillation; b=0 nonzero normal-input coverage fails for a>0",
+      "assertions": 5212,
+      "status": "PASS",
+      "script_sha256": "38554c3d9308d5a954b7585d91f6c4b20f12913577a3cb4bd6eebf675f987245"
+    }
+  },
+  "skill": {
+    "installed_entries": 1,
+    "explicit_tasks": [
+      "Chinese local editing",
+      "English scope correction",
+      "mathematical counterexample and repair"
+    ],
+    "native_cli_implicit_trigger": "not tested; codex executable is unavailable"
+  },
+  "limits": [
+    "no exhaustive prior-art certification",
+    "no journal format certification",
+    "new main example is a mechanism model, not an optimization application",
+    "general nonlinear or degenerate GPPA requires physical lifting beyond fixed SPD"
+  ],
+  "saving": "Prepared helper failed before mutation because local Codex auth was unavailable; exact-file replacement through the provided connector succeeded for both deliverables."
+}

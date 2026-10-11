@@ -96,4 +96,12 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 
 ## C238–C240：严格插值余量、对称障碍与有限证书
 
+
 [completion_budget_gate/README.md](code/completion_budget_gate/README.md)给标准库复现命令、seed238240、3e−12浮点诊断容差及Fraction精确范围。verify.py与results.json检查280组概率方差/球半径、D2固定平面与偏置共同稳定子、以及真实覆盖的一维区间有限证书。不是RP²完成证书或全域扩张求解器；原预算下确界与达到性继续开放。
+
+
+## C242/C243：简短机制例与固定SPD核
+
+[triangular_rleb/README.md](code/triangular_rleb/README.md)与[结果](code/triangular_rleb/results.json)固定seed20261011、脚本指纹、容差和反算范围：15个边界输入、20885个有效点对、15条各35步完整PPA轨道、45条松弛轨道，以及完整方程、真实残差、独立锚定/全对常数和精确SPD反例。一般量词及无限极限由C242解析证明承担；例子特有的松弛结果不扩大主定理。
+
+[rleb_spd/README.md](code/rleb_spd/README.md)与[结果](code/rleb_spd/results.json)记录5212项有限断言：完整Q桥、非对角零输入纤维、正对角小窗、退化丢失纤维和普通PPA成功而新核失败的边界。使用NumPy binary64及Fraction精确反算；环境、误差及seed见入口。不能以有限PASS认证所有核、一般GPPA或全域吸引。

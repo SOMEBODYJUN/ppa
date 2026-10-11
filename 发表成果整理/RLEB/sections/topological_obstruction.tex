@@ -1,0 +1,93 @@
+\section{全域近端几何对零点集的限制}
+\label{sec:topological-obstruction}
+
+前面的收敛定理是局部的，目标集合也可以只是完整零集的一部分。
+若进一步要求反射近端映射在全空间具有次线性增长，并让完整零集
+在一个邻域内统一吸引近端轨道，零点集的拓扑便受到限制。
+这里用 $\chi(S)$ 表示流形 $S$ 的欧拉示性数。
+
+\begin{proposition}[完整零集的欧拉限制]
+\label{prop:rleb-euler}
+设完整 $J_{\lambda F}=T$ 在 $\mathbb R^n$ 上处处有定义且单值，
+并存在 $L_*>0$、$0<\gamma_*<1$，使
+\[
+ \|(2T-I)x-(2T-I)y\|\leq L_*\|x-y\|^{\gamma_*}
+ \qquad(x,y\in\mathbb R^n).
+\]
+设 $S=F^{-1}(0)$ 是非空紧 $C^2$ 无边界嵌入流形。
+若主定理~\ref{thm:selection-RLEB} 的 (B1)--(B4)
+对 $\mathcal J=T$、同一 $S$ 以及包含 $S$ 的开集 $U$ 成立，
+则 $\chi(S)=1$。
+\end{proposition}
+
+\begin{proof}
+由紧性，可取 $\rho>0$ 使闭管
+$N_\rho=\{x:d(x,S)\leq\rho\}$ 包含于 $U_R$，且具有唯一最近点投影。
+一步估计与 (B4) 给出
+\[
+ d(Tx,S)\leq\kappa d(x,S)\qquad(x\in N_\rho).
+\]
+同时，完整近端关系的固定点恰为 $S$，故 $T|_S=I$。
+每个更小闭管 $N_\delta$ 都在 $T$ 下映入其内部，且形变回缩到 $S$。
+由于 $T$ 在 $S$ 上为恒等映射，其在管的同调上也诱导恒等映射。
+闭管是紧欧氏邻域回缩空间（ENR），固定点指数的归一化因此给出管内指数 $\chi(S)$
+\cite{BenjaminGottliebCollars}。
+这一指数等于环境空间中的局部指数：取
+$\delta<\delta'<\rho$ 且 $\kappa\delta'<\delta$，将
+$T:\operatorname{int}N_{\delta'}\to N_\delta$ 与包含映射复合，
+应用指数的交换性和局部化即可。
+
+令 $C=2T-I$。全域估计给出
+$\|C(x)\|\leq\|C(0)\|+L_*\|x\|^{\gamma_*}$。
+因 $\gamma_*<1$，充分大的闭球在 $T=(I+C)/2$ 下严格映入内部，
+其固定点指数为 $1$。同样利用包含映射的交换性，得到环境总指数 $1$。
+完整固定点只有 $S$，局部化即给 $\chi(S)=1$。
+\end{proof}
+
+若只指定一个紧光滑局部吸引零簇 $M$，则管内指数为 $\chi(M)$，
+全局总指数仍为 $1$；管外剩余完整零点集的指数为 $1-\chi(M)$。
+例如吸引圆的欧拉示性数为零，全域完成必须增加吸引管之外的零点。
+这不是局部 RLEB 本身的限制：全尺度界与完整零集的条件在这里都不可省。
+它也不能直接用于第~\ref{sec:triangular-holder-example}~节的非紧零线。
+
+一个简单的平面模型可直接显示这个补偿点。令 $B$ 为闭单位圆盘，取
+\[
+ C(x)=P_B(2x),\qquad T(x)=\frac{x+P_B(2x)}2.
+\]
+$C$ 有界且为 $2$-Lipschitz，因而对每个 $0<\gamma<1$ 都满足
+全尺度 $\|C(x)-C(y)\|\leq2\|x-y\|^\gamma$。
+径向半径变换 $r\mapsto(r+\min\{2r,1\})/2$ 严格增加且满射，
+所以 $T$ 是全域同胚。取 $\lambda=1$、$F=T^{-1}-I$，
+其完整近端映射就是 $T$。
+其完整零集恰为单位圆与原点；圆附近的法向距离每步减半，
+原点则是位于吸引管之外的补偿零点。
+
+固定正定核也有同样的限制：设完整零集 $S=F^{-1}(0)$
+是非空紧 $C^2$ 无边界嵌入流形。若完整 $J^M_{\lambda F}$
+在全空间处处有定义且单值，
+上述全尺度反射界与局部条件在 $M$ 度量下成立，
+则用 $Q=M^{1/2}$ 变换到命题~\ref{prop:rleb-euler} 的坐标即可。
+$Q$ 保持紧光滑流形的拓扑，故 $\chi(QS)=\chi(S)=1$。
+
+\begin{proposition}[全域吸引的进一步限制]
+\label{prop:global-attraction-retract}
+在命题~\ref{prop:rleb-euler} 的条件下，若对每个
+$x\in\mathbb R^n$ 都有 $d(T^k x,S)\to0$，则 $S$ 只能是单点。
+\end{proposition}
+
+\begin{proof}
+取含 $S$ 的闭凸球 $B$。每个 $x\in B$ 的某次迭代进入
+$\operatorname{int}N_\rho$；由连续性，同次迭代也将 $x$ 的某个邻域送入该管。
+紧性给有限覆盖，管的前向不变性再给共同整数 $m$，使
+$T^m(B)\subset\operatorname{int}N_\rho$。
+于是最近点投影 $\Pi$ 与 $T^m$ 的复合 $Q=\Pi T^m:B\to S$
+在 $S$ 上为恒等映射。固定 $b\in B$，
+$Q((1-t)s+tb)$ 是 $S$ 到单点的收缩同伦。
+而正维紧无边界流形的最高维模二同调非零，不能可缩
+\cite[Theorem 3.26]{Hatcher2002}；零维紧可缩流形只能是单点。
+\end{proof}
+
+因此，即使 $\chi(S)=1$，也不能由局部收敛推出所有初值的全局吸引。
+实射影平面就是欧拉示性数为 $1$ 而不可缩的闭流形
+\cite[Example 2.42]{Hatcher2002}。
+零点集的保留与所有初值的吸引，是全域完成中不同的要求。

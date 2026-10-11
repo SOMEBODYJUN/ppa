@@ -1,18 +1,11 @@
-\section{非线性 RL 广义单调性与 PPA 的局部收敛}
+\section{局部近端迭代的收敛}
 \label{sec:deterministic-rleb-spine}
 
-设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
-并取非空闭集 $S\subset F^{-1}(0)$。沿用引言中
-$J_{\lambda F}$ 的记号，以下记
-\[
- d(x,A):=\inf_{a\in A}\|x-a\|,
- \qquad
- r_F(y):=d(0,F(y)),
- \qquad
- P_S(x):=\{p\in S:\|x-p\|=d(x,S)\},
-\]
-并约定 $d(x,\varnothing)=+\infty$。由于 $S$ 非空且闭，
-$P_S(x)$ 非空，但未必单值。
+\input{sections/preliminaries}
+
+以下固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
+$S\subset F^{-1}(0)$，并记真实残差
+$ r_F(y)=d(0,F(y))$；到空集的距离取 $+\infty$。
 
 \subsection{RL 条件及其 \texorpdfstring{$J$}{J} 侧形式}
 
@@ -259,17 +252,14 @@ $d_{k+1}\leq\kappa^{k+1}d_0$，且
 得到无限延拓和 \eqref{eq:direct-distance-rate}--
 \eqref{eq:direct-step-rate}。这一步没有预先假设整条轨道留域。
 
-步长级数可和，故轨道在 $\mathbb R^n$ 中是 Cauchy 列，
-并收敛到某个 $x^\infty$。
-$S$ 闭且 $d_k\to0$，所以 $x^\infty\in S$；
-同一严格预算使 $x^\infty\in U$。
-从第 $k$ 步开始对步长求和，得到
+无限轨道构造完成后，应用引理~\ref{lem:distance-length-interface}，
+取 $b(r)=(r+Lr^\gamma)/2$。式~\eqref{eq:prelim-length-budget}
+给出总长度和尾项上界，故轨道收敛到某个 $x^\infty\in S$，且
 \[
- \|x^\infty-x^k\|
- \leq\frac12\left(\frac{d_k}{1-\kappa}
-        +\frac{Ld_k^\gamma}{1-\kappa^\gamma}\right)
- =\mathcal L(d_k)\leq\mathcal L(\kappa^k d_0).
+ \|x^\infty-x^k\|\leq\mathcal L(d_k)
+ \leq\mathcal L(\kappa^k d_0).
 \]
+同一严格预算保证极限仍在 $U$ 中。
 所有估计均对每个允许输出成立，因此对全部允许选择使用相同常数。
 \end{proof}
 

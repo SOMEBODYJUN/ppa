@@ -1,0 +1,72 @@
+\subsection{记号与收敛判定}
+\label{sec:preliminaries}
+
+全文在 $X=\mathbb R^n$ 中讨论；除正定度量一节另作说明外，
+内积和范数采用 Euclidean 约定。
+对非空闭集 $S\subset X$，记
+\[
+ d(x,S)=\inf_{p\in S}\|x-p\|,\qquad
+ P_S(x)=\{p\in S:\|x-p\|=d(x,S)\}.
+\]
+有限维性保证 $P_S(x)$ 非空，但最近点可以不唯一。
+对集值映射 $T:X\rightrightarrows X$，其不动点集为
+$\operatorname{Fix}T=\{x:x\in T(x)\}$。
+给定 $F:X\rightrightarrows X$ 和 $\lambda>0$，近端关系
+$J_{\lambda F}=(I+\lambda F)^{-1}$ 满足
+$\operatorname{Fix}J_{\lambda F}=F^{-1}(0)$。
+其定义域、单值性和连续性在非单调情形均须另行验证。
+
+证明一条轨道收敛到非孤立零集中的一点，包含两个不同步骤：
+先证明轨道是 Cauchy 列，再证明它到零集的距离趋于零。
+事实上，若 $(x^k)$ 是 Cauchy 列且 $d(x^k,S)\to0$，
+完备性给出 $x^k\to x^\infty$，距离函数的连续性和 $S$ 的闭性给出
+$x^\infty\in S$。有限长度
+$\sum_k\|x^{k+1}-x^k\|<\infty$ 是 Cauchy 性的一种充分条件。
+下面的引理将距离估计和步长估计分别保留。
+
+\begin{lemma}[距离收缩与有限长度]
+\label{lem:distance-length-interface}
+设 $S\subset X$ 非空闭，$R>0$，$0<\kappa<1$。
+取非减函数 $b:[0,R]\to[0,\infty)$，$b(0)=0$，并假设
+\[
+ \Theta_\kappa(t):=\sum_{j=0}^{\infty}b(\kappa^j t)<\infty
+ \qquad (0\leq t\leq R).
+\]
+若一条无限序列 $(x^k)$ 满足 $d_0=d(x^0,S)\leq R$，以及
+\[
+ d(x^{k+1},S)\leq\kappa d(x^k,S),\qquad
+ \|x^{k+1}-x^k\|\leq b(d(x^k,S))\quad(k\geq0),
+\]
+则它具有有限长度，收敛到某个 $x^\infty\in S$，并有
+\[
+ \sum_{j=k}^{\infty}\|x^{j+1}-x^j\|
+ \leq\Theta_\kappa(d(x^k,S))
+ \leq\Theta_\kappa(\kappa^k d_0),\qquad
+ \|x^\infty-x^k\|\leq\Theta_\kappa(d(x^k,S)).
+\]
+\end{lemma}
+
+\begin{proof}
+记 $d_k=d(x^k,S)$。迭代距离估计得 $d_{k+j}\leq\kappa^j d_k$，
+所以非减性给出
+$\sum_{j=k}^{\infty}\|x^{j+1}-x^j\|\leq\Theta_\kappa(d_k)$。
+特别地，总长度有限，故 $(x^k)$ 为 Cauchy 列。
+又因 $d_k\leq\kappa^k d_0\to0$，极限属于 $S$。
+对每个有限尾段应用三角不等式并令终点指标趋于无穷，即得尾项估计。
+\end{proof}
+
+当 $b(t)=\delta t$ 时，上述引理给出常用的线性距离收缩判定
+\cite[Lemma~2]{LukeTam2025GeneralizedMonotonicity}。
+本文所用的步长函数为 $b(t)=(t+Lt^\gamma)/2$，其中
+$L\geq0$、$0<\gamma\leq1$；此时
+\begin{equation}
+ \Theta_\kappa(t)
+ =\frac12\left(\frac{t}{1-\kappa}
+              +\frac{Lt^\gamma}{1-\kappa^\gamma}\right).
+ \label{eq:prelim-length-budget}
+\end{equation}
+因此，距离几何收缩仍能控制仅为 H\"older 阶的步长。
+局部算法应用还须保证每一步存在，并证明实际轨道不离开工作区域；
+引理~\ref{lem:distance-length-interface} 本身不提供这两项结论。
+下面先从近端几何和输出误差界得到上述两个估计，
+再用严格初始长度预算逐个控制有限轨道前缀。

@@ -3392,6 +3392,54 @@
       "label": "C241 锐几何指数与精确自由轴轨道的区别",
       "file": "canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TRI-OBJECT",
+      "label": "C242 完整三角近端系统与真残差",
+      "file": "canonical/triangular_rleb.md#tri-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TRI-CERT",
+      "label": "C242 同窗锚定证书与完整覆盖",
+      "file": "canonical/triangular_rleb.md#tri-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TRI-SHARP",
+      "label": "C242 零线锐指数与全部显式轨道",
+      "file": "canonical/triangular_rleb.md#tri-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPD-DATA",
+      "label": "C243 固定正定核及全部M前件",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-spd",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SPD-CONV",
+      "label": "C243 完整Q桥与M有限长度及物理点结论",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-spd",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-EULER-DATA",
+      "label": "C244 全域完整T与紧光滑完整零集",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-euler",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-EULER",
+      "label": "C244 局部RLEB供给整管与Euler必要性",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-euler",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-SINGLE",
+      "label": "C244 额外全初值吸引强迫单点",
+      "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-euler",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8368,6 +8416,87 @@
       "scope": "C241完整J在同一U_R含所有合法输出、所有最近零锚，参数L1/2/γ1/2/ψ3t²/κ1/4/bart1满足TRS合取；实际输出与完整真残差对象相同。",
       "status": "derived-checked",
       "topic": "局部 RLEB–PPA"
+    },
+    {
+      "id": "E430",
+      "inputs": [
+        "TRI-OBJECT"
+      ],
+      "output": "TRI-CERT",
+      "relation": "implies",
+      "scope": "C242固定λ1完整F、U全空间、R1/16、锚定L√2、γ1/2、ψt²、κ3/4；同一完整输入/输出、真残差窗与覆盖解析核验。",
+      "status": "derived-checked",
+      "topic": "局部 RLEB–PPA"
+    },
+    {
+      "id": "E431",
+      "inputs": [
+        "TRI-CERT"
+      ],
+      "output": "TRS-DATA",
+      "relation": "implies",
+      "scope": "C242证书逐前件实例化C02-v3同一完整关系及S；全对较大常数不替代锚定L，非紧零线不供全尺度拓扑条件。",
+      "status": "derived-checked",
+      "topic": "局部 RLEB–PPA"
+    },
+    {
+      "id": "E432",
+      "inputs": [
+        "TRI-OBJECT"
+      ],
+      "output": "TRI-SHARP",
+      "relation": "implies",
+      "scope": "零线任一点邻域排除γ>1/2与EB幂>2；完整显式递推另证所有初值极限、总长上界、非驻定点尾渐近1/√2与法向1/2。",
+      "status": "derived-checked",
+      "topic": "局部 RLEB–PPA"
+    },
+    {
+      "id": "E433",
+      "inputs": [
+        "TRS-FINITE",
+        "SPD-DATA"
+      ],
+      "output": "SPD-CONV",
+      "relation": "conditional",
+      "scope": "C243在G(z)=Q⁻¹F(Q⁻¹z)的Euclidean坐标中实例化C02-v3全部前件：M内积、反射范数、真双残差、覆盖、同窗兼容和严格预算重新认证；Q映全部允许输出并回代，不由原Id证书自动推出。",
+      "status": "derived-checked",
+      "topic": "广义近端算法"
+    },
+    {
+      "id": "E434",
+      "inputs": [
+        "TRS-DATA",
+        "RLEB-EULER-DATA"
+      ],
+      "output": "TCB-DATA",
+      "relation": "conditional",
+      "scope": "C244要求同一完整T、完整紧C²无边界S、全域单值及全尺度γ*<1有限反射界；C02-v3同S局部B1–B4通过一步估计给整个小投影管严格距离收缩，实例化C231合同。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E435",
+      "inputs": [
+        "TCB-BAL",
+        "RLEB-EULER-DATA"
+      ],
+      "output": "RLEB-EULER",
+      "relation": "conditional",
+      "scope": "由前边得到严格整管；C231局部指数χ(S)和全局总指数1，且无管外完整零点，故χ(S)=1。固定SPD只有全部新核条件重核并Q转换后适用。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E436",
+      "inputs": [
+        "TCB-GLOBAL",
+        "RLEB-EULER"
+      ],
+      "output": "RLEB-SINGLE",
+      "relation": "conditional",
+      "scope": "C244另加对每个全空间初值到同一S距离趋零；已有前向不变投影管和T|S=Id使有限覆盖给共同入管时刻，ΠT^m为真回缩，闭流形顶同调排除正维。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
     }
   ]
 }

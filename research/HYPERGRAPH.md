@@ -677,6 +677,23 @@
 | E427 | [HRL-OBJECT · C241 秩亏Hamilton完整输入管对象](canonical/rank_deficient_hamilton_rleb.md#hrl-object) | implies → [HRL-CERT · C241 全域J与同管全对RL真EB及完整收敛](canonical/rank_deficient_hamilton_rleb.md#hrl-proof) | 固定λ1/阻尼99/R10^-6的完整输入图像；凸最小化供应全域唯一J，有限差分核全部点对，真残差窗与κ1/4逐点兼容，U=X严格预算自动。；**derived-checked** |
 | E428 | [HRL-OBJECT · C241 秩亏Hamilton完整输入管对象](canonical/rank_deficient_hamilton_rleb.md#hrl-object) | implies → [HRL-SHARP · C241 锐几何指数与精确自由轴轨道的区别](canonical/rank_deficient_hamilton_rleb.md#hrl-sharpness) | 同一输入管两条显式图序列分别排除RL指数>1/2与真EB幂>2；自由轴完整轨道另给距离1/100和尾1/10，不能将两种最优指数相乘为所有轨道锐率。；**derived-checked** |
 | E429 | [HRL-CERT · C241 全域J与同管全对RL真EB及完整收敛](canonical/rank_deficient_hamilton_rleb.md#hrl-proof) | implies → [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) | C241完整J在同一U_R含所有合法输出、所有最近零锚，参数L1/2/γ1/2/ψ3t²/κ1/4/bart1满足TRS合取；实际输出与完整真残差对象相同。；**derived-checked** |
+| E430 | [TRI-OBJECT · C242 完整三角近端系统与真残差](canonical/triangular_rleb.md#tri-object) | implies → [TRI-CERT · C242 同窗锚定证书与完整覆盖](canonical/triangular_rleb.md#tri-certificate) | C242固定λ1完整F、U全空间、R1/16、锚定L√2、γ1/2、ψt²、κ3/4；同一完整输入/输出、真残差窗与覆盖解析核验。；**derived-checked** |
+| E431 | [TRI-CERT · C242 同窗锚定证书与完整覆盖](canonical/triangular_rleb.md#tri-certificate) | implies → [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) | C242证书逐前件实例化C02-v3同一完整关系及S；全对较大常数不替代锚定L，非紧零线不供全尺度拓扑条件。；**derived-checked** |
+| E432 | [TRI-OBJECT · C242 完整三角近端系统与真残差](canonical/triangular_rleb.md#tri-object) | implies → [TRI-SHARP · C242 零线锐指数与全部显式轨道](canonical/triangular_rleb.md#tri-sharp) | 零线任一点邻域排除γ>1/2与EB幂>2；完整显式递推另证所有初值极限、总长上界、非驻定点尾渐近1/√2与法向1/2。；**derived-checked** |
+
+## 广义近端算法
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E433 | [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) ∧ [SPD-DATA · C243 固定正定核及全部M前件](canonical/rleb_kernel_topology_interfaces.md#rkt-spd) | conditional → [SPD-CONV · C243 完整Q桥与M有限长度及物理点结论](canonical/rleb_kernel_topology_interfaces.md#rkt-spd) | C243在G(z)=Q⁻¹F(Q⁻¹z)的Euclidean坐标中实例化C02-v3全部前件：M内积、反射范数、真双残差、覆盖、同窗兼容和严格预算重新认证；Q映全部允许输出并回代，不由原Id证书自动推出。；**derived-checked** |
+
+## 全局完成与拓扑
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E434 | [TRS-DATA · C02-v3 同一允许关系的真残差与最近零锚合取](canonical/true_residual_selection_rleb.md#trs-object) ∧ [RLEB-EULER-DATA · C244 全域完整T与紧光滑完整零集](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | conditional → [TCB-DATA · 光滑整管吸引与Holder完成合同](canonical/topological_completion_balance.md#tcb-contract) | C244要求同一完整T、完整紧C²无边界S、全域单值及全尺度γ*<1有限反射界；C02-v3同S局部B1–B4通过一步估计给整个小投影管严格距离收缩，实例化C231合同。；**derived-checked** |
+| E435 | [TCB-BAL · C231 全局总指数与局部Euler缺额](canonical/topological_completion_balance.md#tcb-balance) ∧ [RLEB-EULER-DATA · C244 全域完整T与紧光滑完整零集](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | conditional → [RLEB-EULER · C244 局部RLEB供给整管与Euler必要性](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | 由前边得到严格整管；C231局部指数χ(S)和全局总指数1，且无管外完整零点，故χ(S)=1。固定SPD只有全部新核条件重核并Q转换后适用。；**derived-checked** |
+| E436 | [TCB-GLOBAL · C235 全域距离趋近经真回缩强迫可缩](canonical/zero_preserving_completion.md#zpc-global) ∧ [RLEB-EULER · C244 局部RLEB供给整管与Euler必要性](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | conditional → [RLEB-SINGLE · C244 额外全初值吸引强迫单点](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | C244另加对每个全空间初值到同一S距离趋零；已有前向不变投影管和T\|S=Id使有限覆盖给共同入管时刻，ΠT^m为真回缩，闭流形顶同调排除正维。；**derived-checked** |
 
 ## 不蕴含关系
 

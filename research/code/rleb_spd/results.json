@@ -1,0 +1,86 @@
+{
+  "seed": 20261011,
+  "scope": "finite checks, not a universal proof",
+  "off_diagonal_zero_fiber": [
+    "(0,0)",
+    "(-4/49,16/49)"
+  ],
+  "scalar_kernel_attack": [
+    {
+      "a": "1/10",
+      "q": "-1/29",
+      "strictly_stable": true
+    },
+    {
+      "a": "1",
+      "q": "-1/2",
+      "strictly_stable": true
+    },
+    {
+      "a": "3/2",
+      "q": "-1",
+      "strictly_stable": false
+    },
+    {
+      "a": "2",
+      "q": "-2",
+      "strictly_stable": false
+    },
+    {
+      "a": "3",
+      "coverage_nonzero": false
+    },
+    {
+      "a": "4",
+      "q": "4",
+      "strictly_stable": false
+    },
+    {
+      "a": "6",
+      "q": "2",
+      "strictly_stable": false
+    }
+  ],
+  "coordinate_identity_max_error": 4.539855413726312e-09,
+  "positive_diagonal_witness": [
+    {
+      "a": 1e-06,
+      "b": 3.0,
+      "q": 9.99999000001e-07,
+      "certified_R": 1.0,
+      "direct_gate": 0.0030019936668963737
+    },
+    {
+      "a": 0.25,
+      "b": 0.5,
+      "q": 0.2,
+      "certified_R": 1.0,
+      "direct_gate": 0.5208495283014151
+    },
+    {
+      "a": 1.0,
+      "b": 1.0,
+      "q": 0.5,
+      "certified_R": 0.25,
+      "direct_gate": 0.9160533905932738
+    },
+    {
+      "a": 2.0,
+      "b": 7.0,
+      "q": 0.6666666666666666,
+      "certified_R": 0.0078125,
+      "direct_gate": 0.9155834979274395
+    },
+    {
+      "a": 1000000.0,
+      "b": 2.0,
+      "q": 0.999999000001,
+      "certified_R": 4.440892098500626e-16,
+      "direct_gate": 0.9999999424331559
+    }
+  ],
+  "degenerate_boundary": "lost-fiber oscillation; b=0 nonzero normal-input coverage fails for a>0",
+  "assertions": 5212,
+  "status": "PASS",
+  "script_sha256": "38554c3d9308d5a954b7585d91f6c4b20f12913577a3cb4bd6eebf675f987245"
+}

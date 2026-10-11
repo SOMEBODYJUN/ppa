@@ -1,0 +1,46 @@
+{
+  "status": "PASS (finite regression only; analytic proofs are in the report)",
+  "seed": 20261011,
+  "boundary_input_count": 15,
+  "tested_pair_count": 20885,
+  "max_tested_holder_ratio": 1.4160376138127886,
+  "orbit_count": 15,
+  "steps_per_orbit": 35,
+  "relaxed_orbit_count": 45,
+  "anchored_constants": {
+    "R": "1/16",
+    "L": "sqrt(2)",
+    "kappa": "3/4",
+    "compatibility_max": "33/64+sqrt(2)/8",
+    "compatibility_max_numeric": 0.692401695296637,
+    "residual_evaluation_window": "(1+4*sqrt(2))/32",
+    "residual_evaluation_window_numeric": 0.2080266952966369
+  },
+  "all_pair_constants_separate": {
+    "R": "1/16",
+    "L": "3/2",
+    "compatibility_max_if_used": "49/64",
+    "kappa_if_used": "4/5"
+  },
+  "metric_counterexample": {
+    "G": [
+      [
+        "1",
+        "1/2"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ],
+    "output": [
+      "-4/49",
+      "16/49"
+    ],
+    "F_plus_G_y": [
+      "0",
+      "0"
+    ]
+  },
+  "script_sha256": "4abec1bb1969a72a17c6c9541dcc81ae8cca83058dcf025565f3734c6a23bafc"
+}
