@@ -34,7 +34,9 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**当前正文选例的已闭与未闭门。** [C246自由粒子](research/canonical/free_particle_rleb.md#fp-object)已解析核完全部近端、统一全对/锚常数、真实残差、整窗兼容及所有闭式轨道；它有清楚动力学来源但V=0，不承担非平凡优化应用。[C241-v2](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)另保留原非平凡Hamilton，以短锚证取R10^−3，不能声称新全对L。[C247](research/canonical/free_particle_rleb.md#fp-metric)闭合固定SPD正/零/负交叉项全部输出，负剪切存在实际发散，变核仍须独立合同。[采用清单](发表成果整理/非Lipschitz近端例独立比较.md)推荐C246而非凸幂或C248离零工程奇点；现行主稿采用C242三角例与C251自然Bregman例；本比较的自由粒子替换推荐尚未实施。若要求非平凡自然优化且零点非calm、闭式全部轨道，本轮未找到满足者；不以换包装声称已解决。
+**当前应用选例的已闭与未闭门。** 按用户更强准则，[C256圆幅值Hamilton](research/canonical/amplitude_circle_hamilton.md#ach-object)已闭完整Clarke中心、全零集、全空间coverage、全部远纤维、统一曲率界/真EB/最近锚/同窗/留域及每个完整选择有限长度；任意圆零邻域有恰三输出且含非极小分支，锐锚1/2和EB2。其推进超出明确已核旧合同，另有使用新几何界的能量证明；不认证公开优先、一般多幅值观测、任意SPD或全域收敛。现推荐C256，[采用清单](发表成果整理/应用优势导向的候选筛选.md#adoption-edits)具体列摘要/比较/附录重写，现行主稿已有C249/C250物理GPPA父定理、C242三角例与C251四次Bregman例，稿件替换/编译未实施。[C255退化核](research/canonical/perspective_bregman_gppa.md#pbg-object)的完整物理桥、锐两点prox1/2和极限1/3有效，但已找到旧零锚正面长度路径，撤回优势推荐。[C246](research/canonical/free_particle_rleb.md#fp-object)只保留闭式机制；[C241-v2](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)保留原非平凡Hamilton的更短锚证；[C247](research/canonical/free_particle_rleb.md#fp-metric)保留负剪切真实发散。下一研究门是多测量或一般流形下完整驻点几何及统一证书，不用一条数值轨道或选支代替。
+
+同一候选的[C257参数族](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)已闭每个Γ>0的完全显式共同半径/真残差/最近锚/整窗/预算、锐最坏距离1/(1+Γ)及任意κ∈(1/(1+Γ),1)证书；Γ≤0必要门由精确圆零输入的额外完整输出给出，正Γ仍有中心零纤维和全局二周期。Γ↓0的充分半径O(Γ²)与中心出现上界O(Γ)间隙尚未优化，是当前参数前沿；不再把真实阻尼门列为未闭，也不把最大有限窗或全域盆域列为已闭。
 
 **完成预算主线的下一动作。** 按[BG16](research/canonical/completion_budget_gate.md#cbg-next)冻结同一RP²原数据，先找可推进L0+ε健壮证书的解析不等式与可认证覆盖；不把精确L0数值当独立终点。新增[C245](research/canonical/lipschitz_obstruction_budget.md#lob-object)给出一条条件预算桥：先构造/认证边界单位方向的 Lipschitz 延拓 \(K_e\)（优先做带边界三角剖分/分片测地插值）和几何拼接常数 \(G_W\)，再把它转为有限 Hölder 上界。下确界、端点达到、严格gap分开；没有统一不等式时转有证书的新L显式模型，单矩阵共轭模板和普通有限forced-zero已停止。
 

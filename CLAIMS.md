@@ -2182,3 +2182,30 @@
 - **Conclusion / Scope**：充分小投影管局部指数χ(M)，剩余完整零点指数1−χ(M)；χ(M)≠1强迫管外完整零点。M=zerF准确恢复C244-v1。
 - **Definitions / Dependencies / Evidence**：[独立正文](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index)，[整稿独立冷读](发表成果整理/GPPA主理论/整稿独立冷读.md)及[边界审查](发表成果整理/GPPA主理论/独立边界审查.md)。解析证明与相应标准库复算分开；运行入口见CODE_REGISTER本轮C249–C254。
 - **Counterevidence / Objections / Related Files**：只用一步严格整管距离收缩，不要求每个初值另有预算。指数归一化/交换/可加由Benjamin–Gottlieb原文接口核定；不证明Euler充分、同预算完成或任意非线性核拓扑转移。
+
+<a id="c255"></a>
+## C255-v1 · 退化 perspective Bregman 的完整优化纤维与锐物理正则性
+
+- **Status**：`derived-checked`；完整核/物理桥、所有边界和远输入、真残差、统一窗口、物理提升及锐正则性经独立重构。不认证公开优先；已撤回“旧零锚线性机制无法处理”的优势推荐。
+- **Exact Statement / Objects / Domain / Quantifiers**：H=R²、D=R×[1/2,∞)，f(x,t)=x²/2+δ_D，完整F=∂f，完整S={0}×[1/2,∞)，λ4；h=x²/(2t)+(t−1)^4/4，v为PBG2全域clamp延拓，完整算法v(X)−v(Y)∈4F(Y)。核域Q={q+p²/2≥−1/8}、完整A=∪_{v(X)=z}F(X)、完整Z={0}×[−1/8,∞)。每个核输入有唯一完整输出，临界支q≤−1/8−p²/18时t⁺1/2、x⁺p/6，余下为PBG6唯一单调根。所有匹配输入z=v(X)∈Q与全部物理输出双向对应；真r_A=|p|t=r_F，不用法向选值残差。
+- **Conclusion / Scope**：共同核窗U=R×(−1/16,1/16)、R1/128、γ1、L1、bar t1、ψ(s)=2s、κ1/2给完整C02-v3；初值2|p₀|<1/16−|q₀|严格留域。共同逆核3||Δz||^(1/3)提升全部物理长度/尾；认证窗极限(0,1+∛q₀)，非驻定真实Q因子q₀非零为(1+4t∞)^−1，q₀零为5^−2/3。物理prox在(0,1)邻域最佳两点指数1/2，极限选择最佳两点1/3，二者相对(0,1)点态指数2/3。
+- **Definitions / Dependencies / Evidence**：[完整对象](research/canonical/perspective_bregman_gppa.md#pbg-object)、[全纤维](research/canonical/perspective_bregman_gppa.md#pbg-fibers)、[同窗](research/canonical/perspective_bregman_gppa.md#pbg-certificate)、[提升与锐性](research/canonical/perspective_bregman_gppa.md#pbg-lifting)；核认证依赖C02-v3和完整核桥定义，锐性另自足证明。[直接C249物理接口](research/canonical/perspective_bregman_gppa.md#pbg-physical-parent)另给物理U=R×(.75,1.25)、R10^−9、a2r、ωId、h3q^1/3、ψId、κ1/2及|t₀−1|≤1/8的严格统一预算，完整覆盖/所有输出/同物理最近锚逐项解析认证。[代码](research/code/natural_gppa/README.md)、[独立接收](发表成果整理/本轮应用例独立接收.md)。
+- **Counterevidence / Objections**：核在(0,1)不强凸、指定v不pair monotone，物理目标H1失败；但旧firm零锚代数给d₊≤d/√5并接同一逆核长度，经典Bregman三点法也给所有合法初值点收敛。LT Assumption1(c)点态接口不等于Assumption2(d)(i)全图次单调。该原型不推荐为分析优势分离，其他零点t*≠1附近极限选择可Lip。
+
+<a id="c256"></a>
+## C256-v1 · 非凸幅值拟合的完整多分支 Hamilton 圆管收敛
+
+- **Status**：`derived-checked`；完整中心/全零集、全空间覆盖、远纤维、全分支曲率界、同组证书、恰三输出及锐指数经独立解析审查。不认证一般相位恢复、公开首创或所有旧理论排除。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=R²×R²，V(x)=2| ||x||−1 |^(3/2)/3，k(p)=2||p||^(3/2)/3，h=∇k，完整F(x,p)={(-h(p),q+99p):q∈∂_CV(x)}，中心Clarke纤维为单位盘，完整S=(S¹∪{0})×{0}，λ1。ACH3双向给全空间全部近端纤维，连续强制目标证明所有输入覆盖，保留所有非极小驻点。U={1/2<||a||<3/2}、R10^−4；允许关系取完整J_F。
+- **Conclusion / Scope**：共同γ1/2、L2/5、bar t1、ψ(t)=3t²、κ1/4，对所有U_R输入及全部输出给唯一最近输入零点锚、完整真残差EB、整窗兼容和严格长度预算ℒ(R)=61/15000<1/2−R。每条完整选择无限延拓、留U_R、有限长度趋圆，d_k≤4^−kd₀、点尾≤(2/3)4^−kd₀+(2/5)2^−k√d₀。任意圆零邻域存在ACH11恰三输出完整纤维，包括非极小驻点；锚指数1/2、完整prox相对固定圆零点的点态指数1/2、真实EB幂2均最大，不认证所有输入对的Hausdorff正则性。
+- **Definitions / Dependencies / Evidence**：[完整对象与纤维](research/canonical/amplitude_circle_hamilton.md#ach-object)、[全分支曲率界](research/canonical/amplitude_circle_hamilton.md#ach-curvature)、[统一证书](research/canonical/amplitude_circle_hamilton.md#ach-certificate)、[三输出穷尽](research/canonical/amplitude_circle_hamilton.md#ach-three)、[锐性及具体旧合同](research/canonical/amplitude_circle_hamilton.md#ach-sharp)；调用C02-v3全部前件已独立供应。[复算](research/code/natural_gppa/README.md)、[接收范围](发表成果整理/本轮应用例独立接收.md)、[应用筛选](发表成果整理/应用优势导向的候选筛选.md)。
+- **Counterevidence / Objections**：中心是真零点而在认证输入环域之外；零输入吸收只在使用圆管成立。完整全对RL、LT正式版必要式29与固定矩阵weak-Minty均在任意小圆零图窗失败。原机械能统一Euclidean二次H1失败，但新曲率界可另导全分支能量收缩，不排任意KL/Lyapunov。完整J多值及S含中心不满足C244接口；不自动转任意SPD、变核或全域收敛。一般输入无通用初等闭式J，全部分支极限可不同。
+
+<a id="c257"></a>
+## C257-v1 · 完整幅值 Hamilton 的锐正阻尼门与显式参数证书
+
+- **Status**：`derived-checked`；全实参数coverage、零吸收分类、正参数全部纤维定位、同组完全显式半径、锐系数和真实负阻尼/二周期经独立解析审查。不认证最大半径或公开优先。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C256势能、动能和完整Clarke G；对每个实Γ定义A=1+Γ、F_Γ(x,p)={(-h(p),q+Γp):q∈G(x)}，完整S=(S¹∪{0})×{0}、λ1。D1–2给所有真实残差和全空间全部纤维；每个实Γ均全域覆盖。圆零输入完整唯一吸收当且仅当Γ>0；没有Γ能使完整S所有零输入都吸收。
+- **Conclusion / Scope**：每个Γ>0，D7/D11/D20给完全显式R_Γ>0，U={1/2<||a||<3/2}、γ1/2、c=A^1/4、L2A^−3/8、ψ(t)=ct²、bar t1、κ=(1+A^−1/2)/2，共同认证每个U_R输入及全部完整输出的最近锚、真实EB、整窗与严格预算。所有完整选择有限长留管趋圆；每个圆零邻域仍有恰三输出，包括非极小驻点。缩管最坏距离商极限恰1/A，最优渐近EB系数1、半阶锚常数2/√A；任意目标κ∈(1/A,1)也有D20改参证书。
+- **Definitions / Dependencies / Evidence**：[完整参数对象](research/canonical/amplitude_circle_damping_threshold.md#damp-object)、[零输入分类](research/canonical/amplitude_circle_damping_threshold.md#damp-absorption)、[全纤维定位](research/canonical/amplitude_circle_damping_threshold.md#damp-localization)、[锐因子](research/canonical/amplitude_circle_damping_threshold.md#damp-sharp-distance)、[全显式元组](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)；依赖仅本页自足推导与C02-v3。[计算](research/code/natural_gppa/README.md)、[独立接收](发表成果整理/本轮应用例独立接收.md)。
+- **Counterevidence / Objections**：Γ≤0从精确圆零输入已有额外完整输出；Γ>0中心零输入有整圈非零输出，Γ≥−2有精确全局二周期，小负Γ有旋转不收敛族。D18真EB分母由最终半径保证，不能只用R₀；大A定位必须同时保留两种δ界。Γ↓0显式充分半径O(Γ²)与1<A≤4中心出现上界R_center∼Γ/√5有未优化间隙。结论不是全域收敛、任意固定SPD、变核或所有负Γ轨道发散。

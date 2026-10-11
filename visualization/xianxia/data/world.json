@@ -7401,6 +7401,149 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "ACH-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "ACH-COMPARISON": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "ACH-FINITE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "ACH-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "DAMP-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "DAMP-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "DAMP-FINITE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "DAMP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "DAMP-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "PBG-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "PBG-OLD-ROUTE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "PBG-PHYSICAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "PBG-PHYSICAL-PARENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -9227,6 +9370,46 @@
     "E456": {
       "x": 860.0,
       "y": 4304.96
+    },
+    "E457": {
+      "x": 1039.12,
+      "y": 4274.57
+    },
+    "E458": {
+      "x": 348.31,
+      "y": 4075.19
+    },
+    "E459": {
+      "x": 301.86,
+      "y": 4236.98
+    },
+    "E460": {
+      "x": 951.45,
+      "y": 4052.4
+    },
+    "E461": {
+      "x": 312.65,
+      "y": 4268.65
+    },
+    "E462": {
+      "x": 515.09,
+      "y": 4442.08
+    },
+    "E463": {
+      "x": 1141.83,
+      "y": 4472.73
+    },
+    "E464": {
+      "x": 484.26,
+      "y": 4408.8
+    },
+    "E465": {
+      "x": 536.31,
+      "y": 4352.81
+    },
+    "E466": {
+      "x": 675.96,
+      "y": 4103.9
     }
   },
   "bounds": {

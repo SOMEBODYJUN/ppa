@@ -122,3 +122,9 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 - [rleb_gppa_attack/README.md](code/rleb_gppa_attack/README.md)：独立246884项有限边界；非闭v(S)核收敛而物理发散的完整反例，Id能量与真实Bregman根；不能推理所有核/所有初值。
 
 各verify.py均将结果写入自身目录，环境/精度/确定性范围由README和results.json保存；独立受检范围见发表成果整理/GPPA主理论。
+
+## C255–C257：应用优势筛选与完整分支反算
+
+[natural_gppa/README.md](code/natural_gppa/README.md)固定三条标准库复现命令及实际结果。verify.py核seed20261011的10015核输入、20000物理两点、35完整边界/远输入与80位尖点/锐配对；circle_verify.py用Fraction反算C256共同元组、中心排除、曲率Young系数、真EB、临界幂兼容、严格预算与替代能量系数，并对90个有理旋转的三输出公式进行80位反代。脚本指纹和误差均在对应JSON。全空间coverage、三输出穷尽、每个完整分支与无限轨道由规范解析证明承担。C255的计算PASS不改变旧零锚正面路径及撤回优势推荐的裁决。
+
+C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从10^−12至10^6的完全显式共同元组、16个指定κ元组、远输出间隙、真EB分母、兼容与留域；四个中心出现边界、三个小负Γ精确旋转轨道逆代，Fraction核中心负A临界系数。无随机。所有实Γ和锐门的全称断言仍由规范页D1–25证明，有限PASS不授予最大半径。

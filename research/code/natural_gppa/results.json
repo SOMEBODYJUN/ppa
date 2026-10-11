@@ -1,0 +1,170 @@
+{
+  "seed": 20261011,
+  "precision_digits": 80,
+  "kernel_inputs_checked": 10015,
+  "max_equation_error": 1.1099720911145325e-16,
+  "max_normal_contraction": 0.2930317962877529,
+  "minimum_output_t": 0.6031497372196035,
+  "max_EB_violation": 0.0,
+  "max_anchor_ratio": 0.6963904008873791,
+  "singular_first_steps": [
+    {
+      "a": 0.1,
+      "t_shift_over_a_two_thirds": 0.7793200725334138,
+      "xplus_over_a": 0.1922419679382571,
+      "objective_descent_over_step_squared": 0.13870726420365373
+    },
+    {
+      "a": 0.01,
+      "t_shift_over_a_two_thirds": 0.7823125309537916,
+      "xplus_over_a": 0.1985040750573853,
+      "objective_descent_over_step_squared": 0.03473420101026859
+    },
+    {
+      "a": 0.001,
+      "t_shift_over_a_two_thirds": 0.7828360049012941,
+      "xplus_over_a": 0.1996848921760393,
+      "objective_descent_over_step_squared": 0.007752488555385783
+    },
+    {
+      "a": 0.0001,
+      "t_shift_over_a_two_thirds": 0.7829441182521719,
+      "xplus_over_a": 0.19993243674859085,
+      "objective_descent_over_step_squared": 0.001683252726410725
+    },
+    {
+      "a": 1e-05,
+      "t_shift_over_a_two_thirds": 0.7829672021091747,
+      "xplus_over_a": 0.1999854589250827,
+      "objective_descent_over_step_squared": 0.0003632561625099027
+    },
+    {
+      "a": 1e-06,
+      "t_shift_over_a_two_thirds": 0.7829721657778824,
+      "xplus_over_a": 0.19999686791515006,
+      "objective_descent_over_step_squared": 7.828955425005809e-05
+    },
+    {
+      "a": 1e-07,
+      "t_shift_over_a_two_thirds": 0.782973234723187,
+      "xplus_over_a": 0.19999932524501493,
+      "objective_descent_over_step_squared": 1.686829130087717e-05
+    },
+    {
+      "a": 1e-08,
+      "t_shift_over_a_two_thirds": 0.7829734649998382,
+      "xplus_over_a": 0.19999985462994166,
+      "objective_descent_over_step_squared": 3.634224382598777e-06
+    },
+    {
+      "a": 1e-09,
+      "t_shift_over_a_two_thirds": 0.7829735146104811,
+      "xplus_over_a": 0.1999999686810398,
+      "objective_descent_over_step_squared": 7.829727483018154e-07
+    },
+    {
+      "a": 1e-10,
+      "t_shift_over_a_two_thirds": 0.7829735252987257,
+      "xplus_over_a": 0.19999999325253778,
+      "objective_descent_over_step_squared": 1.6868649685908777e-07
+    }
+  ],
+  "critical_error_ratios": [
+    0.3273773835326557,
+    0.3371143373497846,
+    0.34034158157276634,
+    0.3414315609557881,
+    0.34180265588771297,
+    0.3419293702212758,
+    0.34197268260707514,
+    0.34198749250438043,
+    0.34199255709850596,
+    0.34199428912795615,
+    0.341994881469324,
+    0.3419950840467109
+  ],
+  "critical_ratio_theory": 0.3419951893353394,
+  "physical_pair_half_holder_max_bound_15": 0.7069416502778032,
+  "sharp_half_holder_pairs": [
+    {
+      "epsilon": 0.01,
+      "input_gap_over_epsilon_squared": 0.4125427127754289,
+      "output_gap_over_epsilon": 1.0000007648589937,
+      "half_holder_ratio": 1.55691847485803
+    },
+    {
+      "epsilon": 0.001,
+      "input_gap_over_epsilon_squared": 0.3833698378575714,
+      "output_gap_over_epsilon": 1.0000000077959197,
+      "half_holder_ratio": 1.6150688197460485
+    },
+    {
+      "epsilon": 0.0001,
+      "input_gap_over_epsilon_squared": 0.37682846369925876,
+      "output_gap_over_epsilon": 1.0000000000781084,
+      "half_holder_ratio": 1.6290265035945724
+    },
+    {
+      "epsilon": 1e-05,
+      "input_gap_over_epsilon_squared": 0.37539638537117487,
+      "output_gap_over_epsilon": 1.0000000000007812,
+      "half_holder_ratio": 1.6321307859954386
+    },
+    {
+      "epsilon": 1e-06,
+      "input_gap_over_epsilon_squared": 0.37508564258264143,
+      "output_gap_over_epsilon": 1.0000000000000078,
+      "half_holder_ratio": 1.6328067221201286
+    },
+    {
+      "epsilon": 1e-07,
+      "input_gap_over_epsilon_squared": 0.37501847549576944,
+      "output_gap_over_epsilon": 1.0,
+      "half_holder_ratio": 1.6329529361974862
+    },
+    {
+      "epsilon": 1e-08,
+      "input_gap_over_epsilon_squared": 0.37500398286023706,
+      "output_gap_over_epsilon": 1.0,
+      "half_holder_ratio": 1.6329844899464878
+    },
+    {
+      "epsilon": 1e-09,
+      "input_gap_over_epsilon_squared": 0.37500085832474395,
+      "output_gap_over_epsilon": 1.0,
+      "half_holder_ratio": 1.6329912930074102
+    },
+    {
+      "epsilon": 1e-10,
+      "input_gap_over_epsilon_squared": 0.3750001849448118,
+      "output_gap_over_epsilon": 1.0,
+      "half_holder_ratio": 1.6329927591707836
+    }
+  ],
+  "complete_boundary_cases": 35,
+  "tuple": {
+    "R": 0.0078125,
+    "lambda": 4,
+    "gamma": 1,
+    "L": 1,
+    "bar_t": 1,
+    "kappa": 0.5,
+    "psi": "2s"
+  },
+  "physical_parent_tuple": {
+    "R": "1e-9",
+    "lambda": 4,
+    "a": "2r",
+    "omega": "q",
+    "h": "3q^(1/3)",
+    "psi": "q",
+    "bar_t": 1,
+    "kappa": 0.5,
+    "Theta_R": "0.018321729455273837412858380561486294884595988771908606909916707958407447575956416",
+    "strict_rational_upper_bound": "39/2000",
+    "initial_t_distance_to_1_max": "1/8"
+  },
+  "python": "3.12.14",
+  "script_sha256": "01f2e4a2662851a976bd0aa847b89eb20db849683f2dd53a019a3a76a00dc3b0",
+  "scope": "Finite arithmetic, boundary reverse substitution, samples and asymptotics; universal conclusions use canonical proof."
+}

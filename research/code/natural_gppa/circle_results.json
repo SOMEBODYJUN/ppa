@@ -1,0 +1,147 @@
+{
+  "python": "3.12.14",
+  "precision_digits": 80,
+  "randomness": "none",
+  "tuple": {
+    "lambda": 1,
+    "R": 0.0001,
+    "gamma": 0.5,
+    "L": 0.4,
+    "bar_t": 1,
+    "psi": "3s^2",
+    "kappa": 0.25
+  },
+  "exact_fraction_checks": {
+    "scale": {
+      "rational": "2664/105625",
+      "decimal": 0.02522130177514793
+    },
+    "Pmax": {
+      "rational": "333/132031250",
+      "decimal": 2.522130177514793e-06
+    },
+    "anchor_upper": {
+      "rational": "3490953/10562500",
+      "decimal": 0.33050442603550295
+    },
+    "EB_upper": {
+      "rational": "914801/390625",
+      "decimal": 2.34189056
+    },
+    "residual_squared_upper": {
+      "rational": "2825576507521/1115664062500000000",
+      "decimal": 2.5326409646909282e-06
+    },
+    "window": {
+      "rational": "41/20000",
+      "decimal": 0.00205
+    },
+    "compatibility": {
+      "rational": "5043/40000",
+      "decimal": 0.126075
+    },
+    "length_budget": {
+      "rational": "61/15000",
+      "decimal": 0.004066666666666666
+    },
+    "alternate_energy_theta_upper": {
+      "rational": "666873/156250000",
+      "decimal": 0.0042679872
+    }
+  },
+  "three_fiber_rows": [
+    {
+      "t": 5e-05,
+      "chord": 5.0000000125e-07,
+      "input_distance": 5.00000000625e-05,
+      "outputs": 3
+    },
+    {
+      "t": 2.5e-05,
+      "chord": 2.5000000015625e-07,
+      "input_distance": 2.50000000078125e-05,
+      "outputs": 3
+    },
+    {
+      "t": 5e-06,
+      "chord": 5.000000000125e-08,
+      "input_distance": 5.0000000000625e-06,
+      "outputs": 3
+    },
+    {
+      "t": 5e-07,
+      "chord": 5.00000000000125e-09,
+      "input_distance": 5.000000000000626e-07,
+      "outputs": 3
+    },
+    {
+      "t": 5e-09,
+      "chord": 5e-11,
+      "input_distance": 5e-09,
+      "outputs": 3
+    },
+    {
+      "t": 5e-13,
+      "chord": 5e-15,
+      "input_distance": 5e-13,
+      "outputs": 3
+    }
+  ],
+  "rotated_closed_fiber_cases": 90,
+  "max_decimal_reverse_error": "2E-80",
+  "separation_witnesses": [
+    {
+      "eta": 0.001,
+      "LT_ratio": -99.9901,
+      "direct_energy_H1_ratio": 0.6595358887543189,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 0.0001,
+      "LT_ratio": -9999.9901,
+      "direct_energy_H1_ratio": 0.06659347317369424,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 1e-05,
+      "LT_ratio": -999999.9901,
+      "direct_energy_H1_ratio": 0.006659993472540398,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 1e-06,
+      "LT_ratio": -99999999.9901,
+      "direct_energy_H1_ratio": 0.0006659999934725341,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 1e-07,
+      "LT_ratio": -9999999999.9901,
+      "direct_energy_H1_ratio": 6.659999999347254e-05,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 1e-08,
+      "LT_ratio": -999999999999.9901,
+      "direct_energy_H1_ratio": 6.6599999999934725e-06,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    },
+    {
+      "eta": 1e-09,
+      "LT_ratio": -99999999999999.98,
+      "direct_energy_H1_ratio": 6.659999999999935e-07,
+      "anchor_reflection_over_sqrt_input_distance": 0.2
+    }
+  ],
+  "center_zero_input_radius": "0.09746878619218852391314938305403501990819467425162009451508577307209797552333144",
+  "exact_global_two_cycle_radius": "0.049129200321030863902838150089740505597725259189752516163997689074010299630491970",
+  "center_true_residual_squared_checks": {
+    "0": "0",
+    "1/198": "1/198",
+    "1/99": "1/99",
+    "2/99": "101/99",
+    "1": "9605"
+  },
+  "script_sha256": "6f99303e9b08bd6963fe7756640d876bbabc41adabecf0daf873018cac4e10be",
+  "scope": "Finite rational arithmetic and closed-fiber reverse checks. All-input coverage, exact-three exhaustiveness, all-output bounds and infinite trajectories are proved analytically."
+}

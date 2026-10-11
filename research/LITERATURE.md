@@ -434,3 +434,14 @@ GPPA候选拓展实际核 Le–Mordukhovich–Théra [arXiv:2608.01584v1](https:
 Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Theorem2、Cor1及§5在本轮再次读；其后部把结果转成熟悉推论与特定应用问题。C253的K/√(K²+λ²)由 [Leventhal0902.4200v1 Theorem3.1](https://arxiv.org/pdf/0902.4200) pp6–7重新核定，不照抄Luke正式Remark3式31的λ分子印式。Evens2305.03605v2 Def4.1只供应同受检点对的半单调参数约定。Benjamin–Gottlieb62.pdf §2.1.1/.2/.4/.6对应本轮C254局部化/可加/ENR归一化/交换，Hatcher3.26仅在回缩蕴含连通后用于闭流形顶同调。
 
 **本库推导。** C249/C250物理父理论的同锚/真实输出/物理位移与标量门、C251精确率、C252自然优化实现、C253显式能量、C254准确RLEB接口为当前内部研究/编排；已审证明不等于这些特殊公式首次出现。C208–C210旧核chart身份证明保持，不用新物理对象混同r_A与r_F。穷尽先行性、指定期刊和非线性核指数保存尚未认证。
+
+<a id="lit-application-circle"></a>
+## LIT-APPLICATION-CIRCLE · 完整圆幅值算法的逐合同比较
+
+**Paper fact / 实际重读范围。** Luke–Tam [正式13页PDF](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863)，MOR Articles in Advance 2025-11-21，Definition2/Proposition3印页4、Assumption2(d)(i)/Theorem2及式29印页10：完整图点对maximal submonotonicity与零锚必要不等式分开。Assumption1(c)/Proposition1的点态firm接口不应误称为Assumption2完整前件。Evens–Pas–Latafat–Patrinos [2305.03605v2完整PDF](https://arxiv.org/pdf/2305.03605v2)，2024-05-06，Definition2.1印页5（PDF零起索引4）：固定对称矩阵V的oblique weak-Minty。协调读者重开上述全文并核对应定义；不混用期刊版编号。
+
+**Paper fact / 算法区别。** Maddison–Paulin–Teh–O'Donoghue–Doucet [1809.05042v1](https://arxiv.org/pdf/1809.05042v1)，式33、Proposition3.2印页16是凸全隐式合同；§3.4 Lemma3.5印页21对应第一显式方案36，E.3同在印页21给σ–动能匹配。协调读者与独立比较者实际读取上述段。Viorel–Alecsa–Pința [作者机构全文](https://ictp.acad.ro/wp-content/uploads/2026/01/2021-Viorel-Alecsa-Pinta-Discrete-cont-dyn-systems-Asymptotic-analysis-of-a-structure-preserving.pdf)，DCDS41(7),2021,3319–3341；DOI10.3934/dcds.2020407。式14–15与Theorem4.1印页3326–3327是C²强制势能、二次动能、Strang–AVF更新，点收敛条款给孤立平衡点。协调读者重开全文，核上述公式及定理；存在非凸隐式文献不能替代同算法映射。
+
+**Paper fact / 直接长度合同。** Attouch–Bolte–Svaiter [2010作者报告](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf)，H1–H3印页8、Theorem2.9印页12，实际核原能量的正系数欧氏二次步下降要求。Bolte–Sabach–Teboulle–Vaisbourd [1706.06461](https://arxiv.org/abs/1706.06461)，2018发表版的§4.2 AssumptionD(i)/Theorem4.1强凸核前提；Mukkamala–Fadili–Ochs [JGO83(2022)原文](https://link.springer.com/article/10.1007/s10898-021-01114-y)，Assumption6/Theorem17的每个内部紧凸集正强凸核前提。协调与独立读者实际核指定段，不凭全文可获取宣称逐行读全篇。
+
+**本库推导 / 比较范围。** C256圆弦反例否定LT任意有限τ的必要式29；固定矩阵weak-Minty在每个圆零锚失败，完整中心远锚也另有反例；势能t^(3/2)与动能t³否定所列E.3；直接机械能H1商趋零。C255核退化否定指定强凸门，但经典firm零锚加同一逆核给正面长度证明，应撤回强优势推荐。C256新全分支曲率界也可组织成能量收缩；这不是已核发表定理导入，也不排除任意其他KL、Lyapunov、改坐标或保真子关系。完整公式与范围见[应用筛选](../发表成果整理/应用优势导向的候选筛选.md#old-contracts)。

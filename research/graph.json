@@ -3566,6 +3566,84 @@
       "label": "C254 局部χ(M)及管外1−χ(M)指数",
       "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-local-index",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PBG-OBJECT",
+      "label": "C255完整退化perspective优化及核桥",
+      "file": "canonical/perspective_bregman_gppa.md#pbg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PBG-PHYSICAL",
+      "label": "C255物理长度、极限及锐prox1/2",
+      "file": "canonical/perspective_bregman_gppa.md#pbg-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PBG-OLD-ROUTE",
+      "label": "C255经典零锚正面路线撤回强优势",
+      "file": "canonical/perspective_bregman_gppa.md#pbg-comparison",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACH-OBJECT",
+      "label": "C256非凸幅值完整Clarke对象及全部纤维",
+      "file": "canonical/amplitude_circle_hamilton.md#ach-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACH-CERT",
+      "label": "C256全分支曲率与同常数圆管",
+      "file": "canonical/amplitude_circle_hamilton.md#ach-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACH-FINITE",
+      "label": "C256全部选择有限长、锐指数与三输出",
+      "file": "canonical/amplitude_circle_hamilton.md#ach-three",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACH-COMPARISON",
+      "label": "C256具体旧合同断点与能量替代",
+      "file": "canonical/amplitude_circle_hamilton.md#ach-energy",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DAMP-OBJECT",
+      "label": "C257全实阻尼族的完整对象与coverage",
+      "file": "canonical/amplitude_circle_damping_threshold.md#damp-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DAMP-CERT",
+      "label": "C257每个正阻尼的显式同组证书",
+      "file": "canonical/amplitude_circle_damping_threshold.md#damp-tuple",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DAMP-FINITE",
+      "label": "C257任意正阻尼全部选择圆管有限长度",
+      "file": "canonical/amplitude_circle_damping_threshold.md#damp-tuple",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DAMP-SHARP",
+      "label": "C257锐一步因子与临界配对1/(1+Γ)",
+      "file": "canonical/amplitude_circle_damping_threshold.md#damp-sharp-distance",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DAMP-BOUNDARY",
+      "label": "C257圆零吸收锐门与完整中心周期",
+      "file": "canonical/amplitude_circle_damping_threshold.md#damp-center",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PBG-PHYSICAL-PARENT",
+      "label": "C255同物理最近锚的直接父定理接口",
+      "file": "canonical/perspective_bregman_gppa.md#pbg-physical-parent",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8852,6 +8930,121 @@
       "scope": "C252明定弱凸目标F=∇f、λ1，完整T唯一，全尺度反射常数2、圆M小管R1/4且L0/ψId/κ1/2，全输入完整覆盖，原点位于管外。",
       "status": "derived-checked",
       "topic": "物理 RLEB–GPPA 父理论"
+    },
+    {
+      "id": "E457",
+      "inputs": [
+        "PBG-OBJECT",
+        "TRS-FINITE"
+      ],
+      "output": "PBG-PHYSICAL",
+      "relation": "conditional",
+      "scope": "核U、R1/128、λ4、γ1、L1、psi2s及κ1/2前件完整核验；严格预算2|p0|<1/16−|q0|与同窗逆核Holder合取，给物理长度/尾。1/2锐两点另来自PBG14–16自足证明。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E458",
+      "inputs": [
+        "PBG-OBJECT"
+      ],
+      "output": "PBG-OLD-ROUTE",
+      "relation": "implies",
+      "scope": "同一完整核在认证窗内每个零锚firm代数给d+≤d/√5；接已证逆核，已有经典方法正面长度路径。不是LT全图Assumption2自动导入，不作强优势推荐。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E459",
+      "inputs": [
+        "ACH-OBJECT"
+      ],
+      "output": "ACH-CERT",
+      "relation": "implies",
+      "scope": "固定99阻尼、λ1、完整近端全部驻点及中心纤维；先全域coverage与远输出排除，再曲率P≤1024d²/169+8d/325，统一R10^−4、γ1/2、L2/5、真实psi3t²、κ1/4、整窗与严格预算。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E460",
+      "inputs": [
+        "ACH-CERT",
+        "TRS-FINITE"
+      ],
+      "output": "ACH-FINITE",
+      "relation": "conditional",
+      "scope": "允许关系取完整J，每个U_R初值严格预算自动满足；给全部选择有限长/留域/圆极限。恰三输出穷尽与锐γ1/2、q2另由同一对象的显式构造，局部边不授予全域收敛。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E461",
+      "inputs": [
+        "ACH-OBJECT",
+        "ACH-CERT"
+      ],
+      "output": "ACH-COMPARISON",
+      "relation": "implies",
+      "scope": "同窗圆弦直接否定LT有限次单调必要式、固定矩阵weakMinty及原能量H1；同时新全分支曲率可重组能量收缩。不排任意KL/保真改写/所有旧理论，不认证公开优先。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E462",
+      "inputs": [
+        "DAMP-OBJECT"
+      ],
+      "output": "DAMP-CERT",
+      "relation": "conditional",
+      "scope": "Γ>0、A=1+Γ；全局半阶h先统一定位所有完整输出，保留两种δ界及曲率高阶项；D7/D11/D20完全显式半径和同组常数核coverage、真实EB分母、最近锚、整窗及严格预算。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E463",
+      "inputs": [
+        "DAMP-CERT",
+        "TRS-FINITE"
+      ],
+      "output": "DAMP-FINITE",
+      "relation": "conditional",
+      "scope": "同一Euclidean λ1完整J、U_R全部初值均满足预算；所有分支无限延拓、留管、有限长趋圆。允许任意κ∈(1/A,1)改参并重算同一半径配方，不授予固定半径锐达到。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E464",
+      "inputs": [
+        "DAMP-OBJECT"
+      ],
+      "output": "DAMP-SHARP",
+      "relation": "conditional",
+      "scope": "固定每个Γ>0，D7–18全输出界给缩管最坏距离商1/A、最优EB系数1和半阶锚2/√A，圆弦同组反向见证给锐性；D24真三输出仍持续，不由全对RL或唯一选择证明。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E465",
+      "inputs": [
+        "DAMP-OBJECT"
+      ],
+      "output": "DAMP-BOUNDARY",
+      "relation": "implies",
+      "scope": "圆零输入完整吸收iffΓ>0；每个正Γ中心有整圈非零零输入输出，Γ≥−2有精确二周期，小负Γ有旋转轨道。1<A≤4中心出现Rcenter限制同一annulus全部输出留域，非最大全域盆域。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E466",
+      "inputs": [
+        "PBG-OBJECT",
+        "PRG-CONV"
+      ],
+      "output": "PBG-PHYSICAL-PARENT",
+      "relation": "conditional",
+      "scope": "物理U=R×(.75,1.25)、R10^−9、lambda4、a2r、omegaId、h3q^1/3、真实psiId、kappa1/2；完整输入及全部输出先验在逆模W，同物理最近锚保留−p0²/2第二分量。初值|t0−1|≤1/8给Theta(R)<39/2000<1/8严格留域。不恢复已撤回的优势推荐。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
     }
   ]
 }
