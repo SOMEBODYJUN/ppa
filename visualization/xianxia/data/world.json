@@ -6938,6 +6938,39 @@
       "y": 3277,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "SCC-COST": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SCC-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 3186,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "SCC-SINGLETON": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8588,6 +8621,30 @@
     "E412": {
       "x": 4747.25,
       "y": 3222.85
+    },
+    "E413": {
+      "x": 4830.85,
+      "y": 3161.29
+    },
+    "E414": {
+      "x": 4867.69,
+      "y": 3229.19
+    },
+    "E415": {
+      "x": 4826.0,
+      "y": 3277.0
+    },
+    "E416": {
+      "x": 4825.74,
+      "y": 3107.8
+    },
+    "E417": {
+      "x": 4805.95,
+      "y": 3225.02
+    },
+    "E418": {
+      "x": 4805.63,
+      "y": 3146.75
     }
   },
   "bounds": {

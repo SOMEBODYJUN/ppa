@@ -1961,7 +1961,7 @@
 - **Conclusion / Scope**：完整Jhat=T_hat=(Id+Ĉ)/2，graph-maximal于固定新参数；全部固定集紧，管内恰M，管外额外紧簇K有指数1−χ(M)，局部M指数χ(M)。χ(M)≠1强制新增零点；若M为全部零集则χ(M)=1必要。多个不交吸引簇覆盖完整零集时Euler之和1。显示球面族恰加一个孤立补偿零点，q3真EB只在球面输出窗。
 - **Definitions / Assumptions / Dependencies**：[TC1–TC3保真合同](research/canonical/topological_completion_balance.md#tcb-contract)与[LIT-BG-INDEX](research/LITERATURE.md#lit-bg-index)；光滑管独立形变回缩，不由C11普通回缩导出。全域次线性提供大紧球自映射，同常数延拓存在可用HE-EXT但必要性结论允许任意有限新常数。
 - **Evidence / Related Files**：[完整证明和显式实例](research/canonical/topological_completion_balance.md#tcb-balance)、[TC7–TC11](research/canonical/topological_completion_balance.md#tcb-sphere)、[可复算代码](research/code/topological_completion/verify.py)与[结果](research/code/topological_completion/results.json)；有限计算只核算术/边界，不替代指数定理。
-- **Counterevidence / Objections**：χ=1充分性未证；一般紧ENR未自动有同一不变紧管。输入管resolvent保真不保输出完整F纤维，也不自动继承真EB。局部RL、单轨道、非单射GPPA或无限维不能直接调用。原点是补偿repeller，不满足球面窗同一q3证书。不反驳C04任意紧纤维实现。
+- **Counterevidence / Objections**：C231自身不证明χ=1充分性；C233已另闭连通管外/有限新常数分支，C236另闭逐分量缺额和锐零点数量。一般紧ENR未自动有同一不变紧管。输入管resolvent保真不保输出完整F纤维，也不自动继承真EB。局部RL、单轨道、非单射GPPA或无限维不能直接调用。原点是补偿repeller，不满足球面窗同一q3证书。不反驳C04任意紧纤维实现。
 
 <a id="c232"></a>
 ## C232-v1 / TANGENTIAL-AREA · 完整PPA的二阶有向面积点收敛分类候选
@@ -1996,3 +1996,20 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：共享对象下任意连续T:H→H保整个T0；若全部x∈H有d(T^k x,M)→0，则M可缩；非空紧无边界光滑M只能单点。不需点收敛、有限长、Hölder或单射。
 - **Conclusion / Assumptions / Dependencies**：严格管前向不变、投影回缩、T逐点固定M为承重前提。紧凸球上的逐点有限进入由compactness给统一N，ΠT^N为真回缩，自足收缩M。正维闭流形模二顶同调非零调用Hatcher3.26。次线性有限全域Holder完成使全部轨道有界；若M非可缩且FixT=M，则存在永不入闭管的有界非收敛轨道，ω极限是无固定点的非空紧不变集，与闭管有正距离。
 - **Evidence / Counterevidence / Scope / Related Files**：[证明及组合](research/canonical/zero_preserving_completion.md#zpc-global)。这是额外全局吸引合同，不反驳C233的保零完成；不声称周期或混沌，不把经典回缩机制称全球首次。[接收范围](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)。
+
+<a id="c236"></a>
+## C236-v1 / SHARP-COMPLETION-COST · 分量缺额的锐新增零点数量
+
+- **Status**：`derived-checked`；本轮主代理显示推导与反向重构，无新增独立代理接收；外部Hopf条件实读续核，发表优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：每一组C233共享整管数据，n≥2，但不要求W连通；固定整个C0、γ与λ，允许选择某个有限新常数，不预先给定上界。足够大球扣管得有限个W_j；边界内给D0/||D0||、外给p/R，按诱导定向算δ_j，总和1−χ(M)。任意位置q_j可在各分量内部指定。
+- **Conclusion / Scope**：保整个局部完整J的全域γ-Hölder完成类中，管外新增有限零点的最小数量为#{j:δ_j≠0}，每个非零分量可恰一个点、指数δ_j。若全部新增点的T在邻域C¹且det(I−DT)≠0，最小数量为Σ|δ_j|，各分量点指数全同号。均可取Chat紧支撑并指定点位置。无新增零点iff全部δ_j=0；W连通时一般最小0/1、非退化最小|1−χ|。
+- **Definitions / Dependencies / Evidence**：[SC1–SC7完整证明](research/canonical/sharp_completion_cost.md#scc-sharp)：C231局部指数/次线性外次数，逐分量degree下界，SC6任意整数单点模型及正则原像定向计数，去球后的连通性/Hopf全边界总次数零，HE-EXT和C233精确collar提升。完整图仍用Z1，不要求F单值。[有限复算](research/code/sharp_completion_cost/README.md)只是算术/局部模型检查。
+- **Counterevidence / Objections / Related Files**：高指数一般孤立点不能当非退化点；允许新常数的计数不能当原常数结论。任意完成的外球须可增大，不能假定初始R包住全部新增点。指定位置可增大预算。没有全域EB/全域吸引或最优L声称；[F71](FAILED_ROUTES.md#f71)记录指数与数量混同。
+
+<a id="c237"></a>
+## C237-v1 / SINGLETON-EXACT-BUDGET · 单点严格球管的精确预算完成
+
+- **Status**：`derived-checked`；主代理独立核投影构造、半范数双向界、径向收缩与零预算端点；未声称新增独立代理审查或发表优先。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：任意实Hilbert H，m∈H，ρ>0，N闭球；任意连续T0固定m且||T0p−m||≤θ||p−m||，0≤θ<1；固定0<γ<1，C0=2T0−Id，精确半范数L0=[C0]_(γ,N)<∞，允许0。固定任意λ>0。
+- **Conclusion / Definitions / Scope**：Chat=C0∘P_N原样保整球，精确全域半范数L0且FixT={m}；所以保零完成的最小常数L*=L0并达到。全部x、k有||T^k x−m||≤max(θ,1/2)^k||x−m||。完整F按Z1，完整J=T。对每个预算L≥L0均为同预算完成；不要求T0 Lipschitz或半范数取到。
+- **Dependencies / Evidence / Counterevidence / Related Files**：[SC8–SC11证明](research/canonical/sharp_completion_cost.md#scc-singleton)，Hilbert闭凸投影非扩张，整球限制给预算下界；管外T=T0(Px)+(x−Px)/2给径向界，不是两点Banach收缩。有限线性旋转/零预算/大输入复算见相邻代码。非凸光滑管不自动有全域连续非扩张投影，非单点χ1原常数问题继续开放。

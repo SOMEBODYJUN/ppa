@@ -395,6 +395,8 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 - **Import / exact mapping**：C233的W为大球扣闭投影管内部，n维紧连通定向带边界流形；边界目标S^(n−1)。内次数为C231局部指数χ且定向反转，外次数1，总1−χ0。连续延拓之后的Holder提升由规范正文独立证明，不从Hopf定理自动读取。
 - **Boundary / scope**：不连通W仅总次数0不足；须逐分量核。Freire短版Hopf_degree_theorem.pdf的定理显示行未写connected，但证明配对零点依赖该条件，故正式导入使用长版明确条件。不提供任何Holder常数控制，也不授予全域吸引或发表新颖性。
 
+**C236续核（2026-10-11）**：主代理重新打开tom Dieck §2.10(2.10.1)及Freire长版Extension Theorem，逐项核每个挖球后的V_j紧/连通/定向、边界可多分量、诱导总次数δ_j−Σ局部指数=0及连续边界原值保持。经典Hopf只完成无零连续方向；任意整数的单点SC6模型、Hölder提升与锐数量是规范正文单独证明。Benjamin–Gottlieb作者PDF §2.1的localization/additivity/normalization也续核。没有追加对整本文献或发表优先的认证。
+
 <a id="lit-rp2-homology"></a>
 ## LIT-RP2-HOMOLOGY · 非可缩与闭流形的模二顶同调
 

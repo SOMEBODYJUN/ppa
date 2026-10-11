@@ -1,0 +1,51 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 20261011,
+  "arithmetic": "Fraction exact; NumPy binary64",
+  "absolute_tolerance": 3e-11,
+  "script_sha256": "af683336af8e2ea74a42359a94b1b6df22fff582e9328f645d8c7a4d6e8e80eb",
+  "scope": "Finite arithmetic and local models, not Hopf or infinite-domain proof",
+  "euler_table": {
+    "circle": {
+      "chi": 0,
+      "deficit": 1,
+      "isolated_min_connected_exterior": 1,
+      "nondegenerate_min_connected_exterior": 1
+    },
+    "RP2": {
+      "chi": 1,
+      "deficit": 0,
+      "isolated_min_connected_exterior": 0,
+      "nondegenerate_min_connected_exterior": 0
+    },
+    "sphere2": {
+      "chi": 2,
+      "deficit": -1,
+      "isolated_min_connected_exterior": 1,
+      "nondegenerate_min_connected_exterior": 1
+    },
+    "genus2_surface": {
+      "chi": -2,
+      "deficit": 3,
+      "isolated_min_connected_exterior": 1,
+      "nondegenerate_min_connected_exterior": 3
+    }
+  },
+  "allocation_cases": 399,
+  "index_model": {
+    "cases": 5904,
+    "max_norm_error": 8.881784197001252e-16,
+    "max_winding_error": 1.1102230246251565e-16
+  },
+  "fraction_radial_cases": 90,
+  "singleton_samples": {
+    "data_cases": 36,
+    "orbit_steps": 137636,
+    "max_holder_excess": 8.881784197001252e-16,
+    "max_exact_budget_error": 4.440892098500626e-16,
+    "max_graph_roundtrip_error": 1.8207657603852567e-14,
+    "includes_zero_budget": true
+  },
+  "status": "PASS"
+}

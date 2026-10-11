@@ -3275,7 +3275,7 @@
     },
     {
       "id": "TCB-GAP",
-      "label": "原常数保零完成与定量最小预算仍开放",
+      "label": "非单点原常数保零完成与定量最小预算仍开放",
       "file": "canonical/topological_completion_balance.md#tcb-frontier",
       "evidence_status": "open"
     },
@@ -3319,6 +3319,24 @@
       "id": "TCB-OUTER",
       "label": "RP²保零完成被迫留下无固定点管外紧不变动力",
       "file": "canonical/zero_preserving_completion.md#zpc-global",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SCC-DATA",
+      "label": "整管固定数据与管外逐分量次数缺额",
+      "file": "canonical/sharp_completion_cost.md#scc-data",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SCC-COST",
+      "label": "C236 一般及非退化新增零点的可达到锐数量",
+      "file": "canonical/sharp_completion_cost.md#scc-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SCC-SINGLETON",
+      "label": "C237 单点球管精确最小常数及全域径向收敛",
+      "file": "canonical/sharp_completion_cost.md#scc-singleton",
       "evidence_status": "derived-checked"
     }
   ],
@@ -8103,7 +8121,73 @@
       ],
       "output": "TCB-GAP",
       "relation": "limits",
-      "scope": "连通管外/新常数存在关闭纯拓扑充分性分支；原L同常数、最小定量预算与计算余量未闭。",
+      "scope": "C233关闭连通管外/新常数存在；C236另闭逐分量拓扑及锐新增数量，C237另闭单点原预算；非单点原L、最小定量预算与计算余量仍未闭。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E413",
+      "inputs": [
+        "TCB-DATA"
+      ],
+      "output": "SCC-DATA",
+      "relation": "conditional",
+      "scope": "增加n≥2；不要求管外连通。足够大球扣管逐分量按诱导边界定向给δ_j，总和1−χ(M)，外球增大不改缺额。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E414",
+      "inputs": [
+        "SCC-DATA"
+      ],
+      "output": "SCC-COST",
+      "relation": "implies",
+      "scope": "保同一整个C0、γ和完整J，允许有限新常数：最少一般新增点为非零δ_j分量数，非退化最少Σ|δ_j|；指定点位置可达到，Chat紧支撑。不能当原常数预算定理。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E415",
+      "inputs": [
+        "SCC-COST"
+      ],
+      "output": "TCB-SUFF",
+      "relation": "conditional",
+      "scope": "另取W连通、χ1，则δ唯一为0，无新增零点的有限新常数完成存在；这是C233充分性的更广构造，不赋全域收敛。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E416",
+      "inputs": [
+        "TCB-DATA"
+      ],
+      "output": "SCC-SINGLETON",
+      "relation": "conditional",
+      "scope": "只取M={m}及闭球N：Chat=C0∘P_N，半范数双向等式使L*=L0并达到，径向q=max(θ,1/2)全域点收敛。正文另独立推广任意实Hilbert；不将非凸管当闭凸球。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E417",
+      "inputs": [
+        "SCC-COST"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "关闭不连通管外逐分量拓扑判别和锐补偿数量；允许新常数不关闭非单点原常数/最优预算/可计算余量。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E418",
+      "inputs": [
+        "SCC-SINGLETON"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "原常数分支在单点严格球管已闭，包括零半范数；非单点χ1、RP²同一整管的最小预算与达到性继续开放。",
       "status": "derived-checked",
       "topic": "完成的拓扑代价与切向新机制"
     }

@@ -123,10 +123,12 @@ d(Tp,S)\le\left(\frac43\right)^3\|F(Tp)\|^3. \tag{TC10}
 \]
 平面吸引圆需补 \(+1\)，三维吸引二球面需补 \(-1\)。TC5 要求至少一个额外零点，此例恰好增加一个孤立点。这不证明 TC8 的 Hölder 常数最优，也不证明任意拓扑缺额都能由一个孤立点实现。
 
+后续：[C236](sharp_completion_cost.md#scc-sharp)另证连通管外任意整数缺额可由一个孤立点实现，非退化要求则需|缺额|个点；不连通管外按各分量分别结算。此新结论不改变TC7例或它的常数。
+
 <a id="tcb-frontier"></a>
 ## 真正的下一问题与攻击边界
 
-**Q-TC-v1（同常数分支仍 open；新常数连通管外分支由 C233 关闭）。** 固定同一局部完整 \(T\)、整管 \(C_0\)、\(\lambda,L,\gamma\)。何时存在保留整管数据且不增加零点的全域同常数 Hölder–RL 完成？C231 给 \(\chi(M)=1\) 的必要条件。原同常数充分性未证。[C233](zero_preserving_completion.md#zpc-sufficiency)现证明n≥2且管外连通时，允许某个有限新常数的完成已由χ1充分；[C234](zero_preserving_completion.md#zpc-rp2)给不可缩RP²的完整真EB实例。[C235](zero_preserving_completion.md#zpc-global)另外证明全域吸引强迫可缩。嵌入補空间多分量及同常数插值继续各自保留。应分别研究允许增大常数与必须保精确常数两种合同。
+**Q-TC-v1（非单点同常数分支仍 open；有限新常数分支由 C233/C236 关闭）。** 固定同一局部完整 \(T\)、整管 \(C_0\)、\(\lambda,L,\gamma\)。何时存在保留整管数据且不增加零点的全域同常数 Hölder–RL 完成？C231 给 \(\chi(M)=1\) 的必要条件。[C233](zero_preserving_completion.md#zpc-sufficiency)证明n≥2且管外连通时，允许某个有限新常数的完成已由χ1充分；[C234](zero_preserving_completion.md#zpc-rp2)给不可缩RP²的完整真EB实例。[C235](zero_preserving_completion.md#zpc-global)另外证明全域吸引强迫可缩。[C236](sharp_completion_cost.md#scc-sharp)关闭不连通管外逐分量缺额和锐补偿数量；[C237](sharp_completion_cost.md#scc-singleton)关闭单点严格球管的精确最小预算达到性。非单点原常数插值和可计算定量预算继续开放，应分别研究新常数与精确原常数。
 
 第一阶段只做三件有鉴别力的事：查指数缺额是否是可实现完成的唯一拓扑障碍；对一个 \(\chi=1\) 的非可缩紧光滑实例实际构造或反驳保零完成；再考虑一般紧 ENR/分层零集，并明确建立不变紧邻域而不是借用 C11 的回缩。
 

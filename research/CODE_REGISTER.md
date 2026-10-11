@@ -88,3 +88,7 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 ## C233–C235：保零完成与射影平面
 
 [zero_preserving_completion/README.md](code/zero_preserving_completion/README.md)给实际运行范围；verify.py核固定seed矩阵谱投影、三次法向、独立inverse及完整prox图，Fraction枚举全部指定有限边界参数并反算真EB系数，100位Decimal核极小半径，results.json保存环境及实际误差。程序没有实现全域Hopf延拓，不证明一般完成或全域收敛；承重证明和独立接收另列。
+
+## C236/C237：锐零点数量与单点精确预算
+
+[sharp_completion_cost/README.md](code/sharp_completion_cost/README.md)固定运行命令、seed及3e-11容差；verify.py和results.json核分量缺额枚举/反向计数、胞腔Euler反算、SC6绕数和全部指定正则原像、维数2/3/5范数与零点、Fraction径向界、线性旋转整球数据的精确预算/完整图回代及真实有限迭代。迭代步数按解析q界决定，避免θ接近1时固定循环长度不足；有限计算不实现Hopf延拓，不证明全域量词或发表先行。
