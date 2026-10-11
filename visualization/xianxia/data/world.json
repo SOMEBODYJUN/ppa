@@ -7170,6 +7170,17 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "LOB-BRIDGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -8916,6 +8927,14 @@
     "E436": {
       "x": 4448.25,
       "y": 3016.84
+    },
+    "E437": {
+      "x": 1228.89,
+      "y": 4367.86
+    },
+    "E438": {
+      "x": 4733.54,
+      "y": 3167.9
     }
   },
   "bounds": {

@@ -3440,6 +3440,12 @@
       "label": "C244 额外全初值吸引强迫单点",
       "file": "canonical/rleb_kernel_topology_interfaces.md#rkt-euler",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LOB-BRIDGE",
+      "label": "C245 给定方向延拓后的 Lipschitz–Hölder 预算桥",
+      "file": "canonical/lipschitz_obstruction_budget.md#lob-object",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8495,6 +8501,28 @@
       "output": "RLEB-SINGLE",
       "relation": "conditional",
       "scope": "C244另加对每个全空间初值到同一S距离趋零；已有前向不变投影管和T|S=Id使有限覆盖给共同入管时刻，ΠT^m为真回缩，闭流形顶同调排除正维。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E437",
+      "inputs": [
+        "TCB-DATA"
+      ],
+      "output": "LOB-BRIDGE",
+      "relation": "conditional",
+      "scope": "固定连通管外、整管 C0/D0 Lipschitz 和边界方向；若给定单位方向 Lipschitz 延拓 Ke、正幅度 Ka/A 与几何拼接常数 GW，则分片完成保整管保零并有显式 γ-Hölder 上界；不提供 Ke/GW 的最优或可计算值。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E438",
+      "inputs": [
+        "LOB-BRIDGE"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "预算桥把拓扑方向延拓量化为有限上界，但不关闭 RP² 原预算 L*=L0、端点达到或严格gap；这些仍需真实方向/覆盖证书。",
       "status": "derived-checked",
       "topic": "全局完成与拓扑"
     }

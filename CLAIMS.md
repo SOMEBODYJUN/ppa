@@ -2084,3 +2084,11 @@
 - **Conclusion / Scope**：χ(S)=1；额外全部x∈X有d(T^kx,S)→0时S只能单点。固定SPD版本须全域完整J^M、上述M全尺度界、完整S和局部M条件全部重新认证；Q坐标保持Euler/可缩性。这是C231/C235的准确接口，不包括Euler充分性、同预算完成、全域EB或自动全域吸引。
 - **Definitions / Dependencies / Evidence**：[逐项桥与证明](research/canonical/rleb_kernel_topology_interfaces.md#rkt-euler)，C02-v3给投影管全点严格距离收缩；C231给局部χ与总指数1；C235给有限覆盖后ΠT^m真回缩，Hatcher3.26排除正维闭流形可缩。[独立审读](发表成果整理/本轮重构/新结果独立审读.md)重新读取Benjamin–Gottlieb §2.1与Hatcher指定页。
 - **Counterevidence / Objections**：S为严格零子集、非紧、无全尺度次线性界或退化核均不能直接调用。圆—原点模型C=P_B(2x)保局部吸引圆但完整零集另含补偿原点；补偿点在吸引管之外，允许在圆盘内部。
+
+<a id="c245"></a>
+## C245-v1 / CONDITIONAL-LIPSCHITZ-BUDGET · 无零方向延拓到有限 Hölder 预算的条件桥
+
+- **Status**：`derived-checked`（条件引理）；不认证 RP² 原预算达到，也不提供方向延拓的最优或可计算常数。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 C233 的有限维共享对象，并另假定 \(D_0/C_0\) 在整管上 Lipschitz、边界方向数据 \(g\) 有限 Lipschitz 常数；取连通管外 \(W=\overline B_R\setminus\operatorname{int}N_\rho\)。边界方向 \(g=D_0/\|D_0\|\) 于内边界、\(g=p/R\) 于外边界。若给定 Lipschitz 单位方向延拓 \(e:W\to S^{n-1}\)，常数 \(K_e\)，以及正 Lipschitz 幅度 \(a\)，边界值为 \(\|D_0\|\) 和 \(R/2\)，常数 \(K_a\)、上界 \(A\)，则分片 (LB2) 给保整管、保全部零集的全域紧支撑完成，并满足 (LB1) 的带几何拼接因子 \(G_W\) 的 \(\gamma\)-Hölder 上界。
+- **Conclusion / Dependencies**：\(D=ae\) 在管外处处非零；内外接缝分别精确复现 \(D_0\) 与 \(p/2\)，所以新增固定点被逐段排除。Lipschitz 到 Hölder 只用支撑直径 \(2R\) 的反算。依赖 C233 的边界次数为零合同，但本命题把方向延拓作为显式条件，不偷换为 Hopf 自动给出的数值预算。
+- **Evidence / Counterevidence / Related Files**：[完整证明与 RP² 参数](research/canonical/lipschitz_obstruction_budget.md#lob-object)；[Fraction 复算](research/code/lipschitz_obstruction_budget/README.md)及 `results.json`。\(K_e\)、\(G_W\) 仍是必须另行构造或认证的对象；本 Claim 不能推出 \(L_*=L_0\)、端点达到或全局收敛。与 C240 的有限网证书互补：C242 先给出一个 Lipschitz 方向/幅度的预算接口，C240 负责固定预算下的真实覆盖余量。
