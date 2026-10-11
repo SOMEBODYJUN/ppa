@@ -1971,3 +1971,28 @@
 - **Conclusion / Scope**：完整J_F=T全域单值、S=R³×{0}、真EB |r|≤||F||^{1/p}，0<p<2时matching。非2π共振时w收敛且z_N−0.25cot(ω/2)Σ(t0+n)^{-2p}有有限极限；预计由显示Abel界给全部点/长度分类。非π整数相位点收敛iff p>1/2；反向共线所有p>0点收敛；同向共线iff p>1；有限长度所有相位iff p>1。r0=0固定，另列。
 - **Definitions / Dependencies / Evidence**：[TA1–TA5](research/canonical/tangential_area_seed.md#ta-object)、两次Abel和显式可和余项、[完整包含与相位复算](research/code/tangential_area/verify_area.py)及[结果](research/code/tangential_area/area_results.json)。经典Lie-bracket控制为机制祖先，未将其当新发现。
 - **Counterevidence / Objections / Related Files**：不满足旧严格兼容门，不能作为其反例。sharp全对RL指数尚缺独立正文；发散轨道离开有界切向窗。一般系统高阶交换子、留域、状态依赖余项和扰动鲁棒性未闭。该编码例的正确性不自动证明一个新原生框架的价值。
+
+
+<a id="c233"></a>
+## C233-v1 / ZERO-PRESERVING-COMPLETION · 连通管外的 Euler 必要充分性
+
+- **Status**：`derived-checked`；三路独立重构及最终正文接收；同常数与发表优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意n≥2、λ>0、非空紧C²无边界嵌入M、0<ρ<reach(M)、指定整管连续T0逐点固定M且d(T0p,M)≤θd(p,M)，0≤θ<1；C0=2T0−Id为L-Hölder、0<γ<1。存在大球含整管于内部，其管外W连通。在该同一指定数据下，χ(M)=1 iff 存在某个有限新常数Lhat的全域γ-Hölder完成保持整管完整T与全部零集M；还可取Chat紧支撑。
+- **Definitions / Dependencies / Conclusion**：[共享对象](research/canonical/zero_preserving_completion.md#zpc-data)、C231必要性、HE-EXT、Hopf degree-zero extension（紧连通定向W、全部诱导边界次数0，允许连续数据及不连通边界）。余维至少二保证W连通。没有全域单值F或全局吸引结论。
+- **Evidence / Counterevidence / Scope / Related Files**：[完整证明](research/canonical/zero_preserving_completion.md#zpc-sufficiency)把内指数χ与外次数1相减，连续无零延拓经全域HolderCb和collar精确拼接提升；非Lip数据不漏接口。有限新Lhat存在不等于Lhat=L或统一/最佳常数。不连通W不能仅核总次数。[独立接收](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)。
+
+<a id="c234"></a>
+## C234-v1 / RP2-COMPLETE-RLEB · 不可缩零流形的保真完成与锐三次真EB
+
+- **Status**：`derived-checked`；完整前向纤维、法向公式和全称残差经三路攻击；有限几何复算另列。
+- **Exact Statement / Objects / Quantifiers / Assumptions**：H=Sym_0(3)≅R5，Frobenius范数；M={qqᵀ−I/3:||q||=1}≅RP²，reach≥1/2，χ1但H1(Z)=Z/2。ρ=1/8，整个Nρ指定T0=Π+d²(Id−Π)。每个0<γ<1有C233保整管、保全部零集的有限新常数完成。固定任意λ>0和任一上述完成，完整F按Z1；任意y∈N_(ρ³)，r=d(y,M)^(1/3)，完整真残差恰(r−r³)/λ。
+- **Conclusion / Scope**：d(y,zerF)≤[λ/(1−ρ²)]³r_F(y)³，任何q>3同窗EB失败；γ>1/3可缩尺度认证局部RLEB。全部整管初值的唯一完整PPA保持Π，r_k=r0^(3^k)，极限Πp0，总长r0。允许管外前像，但它们都不能降低残差。没有全域EB/全域兼容/全域收敛或全域F单值声称。
+- **Dependencies / Evidence / Counterevidence / Related Files**：[自足矩阵模型与全部纤维证明](research/canonical/zero_preserving_completion.md#zpc-rp2)、C233、Hatcher RP² cellular chain；[代码及实际范围](research/code/zero_preserving_completion/README.md)。全域完成为存在式，不提供闭式Hopf延拓器；精确常数与发表先行仍开放。
+
+<a id="c235"></a>
+## C235-v1 / GLOBAL-ATTRACTION-RETRACTION · 严格投影管下全域距离趋零强迫可缩
+
+- **Status**：`derived-checked`；自足有限覆盖/回缩证明，三路独立接收。
+- **Exact Statement / Objects / Domain / Quantifiers**：共享对象下任意连续T:H→H保整个T0；若全部x∈H有d(T^k x,M)→0，则M可缩；非空紧无边界光滑M只能单点。不需点收敛、有限长、Hölder或单射。
+- **Conclusion / Assumptions / Dependencies**：严格管前向不变、投影回缩、T逐点固定M为承重前提。紧凸球上的逐点有限进入由compactness给统一N，ΠT^N为真回缩，自足收缩M。正维闭流形模二顶同调非零调用Hatcher3.26。次线性有限全域Holder完成使全部轨道有界；若M非可缩且FixT=M，则存在永不入闭管的有界非收敛轨道，ω极限是无固定点的非空紧不变集，与闭管有正距离。
+- **Evidence / Counterevidence / Scope / Related Files**：[证明及组合](research/canonical/zero_preserving_completion.md#zpc-global)。这是额外全局吸引合同，不反驳C233的保零完成；不声称周期或混沌，不把经典回缩机制称全球首次。[接收范围](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)。

@@ -1,0 +1,33 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 20261011,
+  "matrix_arithmetic": "IEEE binary64",
+  "scalar_arithmetic": "exact Fraction; Decimal precision 100",
+  "absolute_geometry_tolerance": 2e-12,
+  "inverse_cube_diagnostic_tolerance": 2e-07,
+  "exact_scalar_cases": 1028,
+  "matrix_cases": 500,
+  "decimal_cases": 20,
+  "convex_patch_cases": 1000,
+  "ambient_dimension": 5,
+  "manifold_dimension": 2,
+  "codimension": 3,
+  "rho_exact": "1/8",
+  "theta_exact": "1/64",
+  "output_radius_exact": "1/512",
+  "lambda1_eb_constant_exact": "262144/250047",
+  "cellular_euler_characteristic": 1,
+  "cellular_boundary2": 2,
+  "cellular_boundary1": 0,
+  "max_errors": {
+    "projection": 8.518746404519332e-16,
+    "cubic_distance": 4.0679265511656126e-16,
+    "base_preservation": 9.104505742017336e-16,
+    "inverse_input": 1.5140044710050373e-10,
+    "complete_graph_identity": 1.5140044710050373e-10,
+    "rayleigh_formula": 1.3322676295501878e-15,
+    "embedding_derivative": 5.329070518200751e-15
+  },
+  "scope": "Finite checks only. No numerical claim of Hopf extension, global no-zero completion, reach exact value, or global attraction."
+}

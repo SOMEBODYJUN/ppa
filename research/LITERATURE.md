@@ -386,3 +386,17 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 - **Paper fact / actual reading**：Benjamin–Gottlieb, *Fixed Point Indices and Manifolds with Collars*, [作者PDF](https://www.math.purdue.edu/~gottlieb/Bibliography/62.pdf)，本轮实际打开全文并核PDF p.3–4 §2.1；(2.1.1) localization，(2.1.2) additivity，(2.1.4) compact ENR normalization I(f)=L(f)，(2.1.6) commutativity。正文允许compact manifolds with boundary。不要求光滑闭管已经给定有限多面体表示。
 - **Import / exact mapping**：[C231](canonical/topological_completion_balance.md#tcb-balance)的光滑闭管与大闭球为compact ENR；管包含诱导同调同构、近端映射固定零簇，球只有H0，分别计算Lefschetz数。环境空间的局部/总指数用commutativity与localization显式换空间，随后additivity给缺额。
 - **Scope / distinction**：这些是经典指数性质，不作为新颖性主张。该文原件确认Dold1965的书目；本轮没有取得并逐行审读Dold1965原论文，不写成已读原文。一般野紧集、无限维与非单射GPPA不自动取得此接口。
+
+
+<a id="lit-hopf-completion"></a>
+## LIT-HOPF-COMPLETION · 球值边界映射的次数零延拓
+
+- **Paper fact / actual reading**：A. Freire, [Notes on Manifolds作者PDF](https://web.math.utk.edu/~afreire/teaching/m562s26/notes_on_manifolds.pdf)，印页74 Extension Theorem及75–76证明：X=∂W，W紧连通定向、X诱导边界定向，f:X→S^k smooth(or continuous)，degf0则可延拓。X不必连通。主代理读取原文，独立拓扑代理还核页面截图。Tammo tom Dieck, [Differential Manifolds作者PDF](https://www.uni-math.gwdg.de/tammo/GT03.pdf)，§2.10(2.10.1)，印页74–75：同一连通W接口，cofibration和同伦明确处理连续边界值。
+- **Import / exact mapping**：C233的W为大球扣闭投影管内部，n维紧连通定向带边界流形；边界目标S^(n−1)。内次数为C231局部指数χ且定向反转，外次数1，总1−χ0。连续延拓之后的Holder提升由规范正文独立证明，不从Hopf定理自动读取。
+- **Boundary / scope**：不连通W仅总次数0不足；须逐分量核。Freire短版Hopf_degree_theorem.pdf的定理显示行未写connected，但证明配对零点依赖该条件，故正式导入使用长版明确条件。不提供任何Holder常数控制，也不授予全域吸引或发表新颖性。
+
+<a id="lit-rp2-homology"></a>
+## LIT-RP2-HOMOLOGY · 非可缩与闭流形的模二顶同调
+
+- **Paper fact / actual reading**：Hatcher [Algebraic Topology作者PDF](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf)，Example2.42印页144、Example2.4印页106–107给RP²的cellular chain/H1=Z2；Theorem3.26印页236及前页说明everymanifold Z2-orientable，闭连通正维流形顶维模二同调非零。
+- **Import / exact mapping**：C234显式矩阵嵌入商RP²，因此χ1且不可缩；C235回缩自足强迫可缩，正维闭流形以顶同调排除，零维以连通性排除多个点。这里只核指定原文接口，不以经典事实授予本完成合同的发表优先。

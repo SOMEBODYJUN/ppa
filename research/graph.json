@@ -3275,7 +3275,7 @@
     },
     {
       "id": "TCB-GAP",
-      "label": "保完整零集完成的充分性",
+      "label": "原常数保零完成与定量最小预算仍开放",
       "file": "canonical/topological_completion_balance.md#tcb-frontier",
       "evidence_status": "open"
     },
@@ -3296,6 +3296,30 @@
       "label": "原生算子交换子与余项判据",
       "file": "canonical/tangential_area_seed.md#ta-frontier",
       "evidence_status": "open"
+    },
+    {
+      "id": "TCB-SUFF",
+      "label": "C233 连通管外有限新常数的Euler充分性",
+      "file": "canonical/zero_preserving_completion.md#zpc-sufficiency",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-RP2",
+      "label": "C234 RP²保整管/保零集与锐三次完整真EB",
+      "file": "canonical/zero_preserving_completion.md#zpc-rp2",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-GLOBAL",
+      "label": "C235 全域距离趋近经真回缩强迫可缩",
+      "file": "canonical/zero_preserving_completion.md#zpc-global",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TCB-OUTER",
+      "label": "RP²保零完成被迫留下无固定点管外紧不变动力",
+      "file": "canonical/zero_preserving_completion.md#zpc-global",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8000,7 +8024,7 @@
       ],
       "output": "TCB-GAP",
       "relation": "open",
-      "scope": "χ1仅必要；需冻结同一完整输入管、嵌入、同常数/新常数和全部零集保真合同，证明或反驳充分性。",
+      "scope": "C231本身仅给χ1必要；C233已闭连通W的有限新常数分支，原L精确保零/最小预算仍开放，不将新常数存在当同常数。",
       "status": "open",
       "topic": "完成的拓扑代价与切向新机制"
     },
@@ -8024,6 +8048,63 @@
       "relation": "open",
       "scope": "从原生完整算子有限周期展开认证首个交换子和可控余项，需额外留域/扰动合同；编码例不授一般框架。",
       "status": "open",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E408",
+      "inputs": [
+        "TCB-DATA",
+        "TCB-BAL"
+      ],
+      "output": "TCB-SUFF",
+      "relation": "conditional",
+      "scope": "同一整管、n≥2、W连通且χ1；Hopf度零延拓及Holder collar提升，存在某个有限新Lhat，Chat可紧支撑，不保原L。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E409",
+      "inputs": [
+        "TCB-SUFF"
+      ],
+      "output": "TCB-RP2",
+      "relation": "conditional",
+      "scope": "仅Sym_0(3)的Veronese RP²、ρ1/8、三次法向T；谱投影与所有域外前像下界另证，完整真EBq3匹配锐；不赋全域EB。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E410",
+      "inputs": [
+        "TCB-DATA"
+      ],
+      "output": "TCB-GLOBAL",
+      "relation": "conditional",
+      "scope": "另加全域连续T保整个T0且全部x距离趋零；紧球有限进入给ΠT^N真回缩，M可缩；不需点收敛、Lip或单射。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E411",
+      "inputs": [
+        "TCB-RP2",
+        "TCB-GLOBAL"
+      ],
+      "output": "TCB-OUTER",
+      "relation": "implies",
+      "scope": "RP²不可缩；任一保零有限次线性全域完成使全部轨道有界，却不可全部入管；ω极限紧不变且无固定点，与闭管正距离，不推周期。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E412",
+      "inputs": [
+        "TCB-SUFF"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "连通管外/新常数存在关闭纯拓扑充分性分支；原L同常数、最小定量预算与计算余量未闭。",
+      "status": "derived-checked",
       "topic": "完成的拓扑代价与切向新机制"
     }
   ]

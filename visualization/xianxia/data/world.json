@@ -6894,6 +6894,50 @@
       "y": 3186,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "TCB-GLOBAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-OUTER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 3004,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-RP2": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 3095,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "TCB-SUFF": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 3277,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8524,6 +8568,26 @@
     "E407": {
       "x": 4667.09,
       "y": 2777.08
+    },
+    "E408": {
+      "x": 4770.68,
+      "y": 3229.56
+    },
+    "E409": {
+      "x": 4778.0,
+      "y": 3143.0
+    },
+    "E410": {
+      "x": 4692.59,
+      "y": 3051.22
+    },
+    "E411": {
+      "x": 4735.86,
+      "y": 3026.98
+    },
+    "E412": {
+      "x": 4747.25,
+      "y": 3222.85
     }
   },
   "bounds": {
