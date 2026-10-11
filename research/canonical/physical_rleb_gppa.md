@@ -1,16 +1,16 @@
 # 物理空间的 RLEB–GPPA：父定理、能量分支与自然模型
 
-本页是 C245–C249-v1 的独立规范正文。有限维 Euclidean 空间、固定全域核、物理真残差和同一允许关系为共同约定。与 C208–C210 的完整核 chart 对象不同；不直接改变其身份，不宣称包含该体系全部非几何收缩实例，也不认证外部首创。
+本页是 C249–C253-v1 的独立规范正文。有限维 Euclidean 空间、固定全域核、物理真残差和同一允许关系为共同约定。与 C208–C210 的完整核 chart 对象不同；不直接改变其身份，不宣称包含该体系全部非几何收缩实例，也不认证外部首创。
 
 共同距离定义为 $d(x,S)=\inf_{p\in S}\|x-p\|$，
 $P_S(x)=\{p\in S:\|x-p\|=d(x,S)\}$。
 有限维非空闭 $S$ 保证最近点存在。固定点集为 $\operatorname{Fix}T=\{x:x\in T(x)\}$；
 完整普通近端关系 $(I+\lambda F)^{-1}$ 的固定点集恰为 $F^{-1}(0)$。
 父定理中的 $d(x)$ 是 $d(x,S)$ 的简记，完整真残差为 $r_F(y)=d(0,F(y))$，空值残差取 $+\infty$。
-本页的 C245/C246/C247/C248/C249 分别固定自己的对象，例子更换 $F$ 时重新声明目标 $S$。
+本页的 C249/C250/C251/C252/C253 分别固定自己的对象，例子更换 $F$ 时重新声明目标 $S$。
 
 <a id="prg-object"></a>
-## C245-v1 · 对象与物理父定理
+## C249-v1 · 对象与物理父定理
 
 - **Status**：`derived-checked`。完整证明及本轮两位独立审查覆盖实际源；外部先行性未核。
 
@@ -321,7 +321,7 @@ $x^k=(2^{-k},(-1)^k)$ 合法而不收敛。
 令 v=Id、a(t)=t、ω(t)=Lt^γ、h(t,s)=s。前向界与物理提升自动成立，同一最近零锚反射条件正是 C02-v3 的B2；G1/G4/G5分别为B1/B3/B4，Θ(R)<∞ 自动由两项几何级数得到，Θ(t)=½[t/(1−κ)+Lt^γ/(1−κ^γ)]。因此不是另加假设后得到的旧结果，而是逐条件原样恢复。证明用 ||x−p||²−||2y−x−p||²=4⟨y−p,x−y⟩，所有允许输出和严格预算保持。C02-v3 独立身份仍见 [真残差允许关系正文](true_residual_selection_rleb.md#trs-theorem)。
 
 <a id="prg-energy"></a>
-## C246-v1 · 一般核能量分支
+## C250-v1 · 一般核能量分支
 
 - **Status**：`derived-checked`。它保留 G1–G4、物理预算与 ΣH(κʲR) 可和性，替换直接兼容。
 
@@ -383,7 +383,7 @@ $d(y)\le\kappa d(x)$。当 $d(x)=0$ 时，
 
 
 <a id="prg-bregman"></a>
-## C247-v1 · 四次 Bregman 核的完整自然模型
+## C251-v1 · 四次 Bregman 核的完整自然模型
 
 - **Status**：`derived-checked`。完整物理最优性和全部轨道直接证明；未认证这个初等例的最早来源。
 
@@ -488,7 +488,7 @@ $A(z,w)=(\sqrt[3]{z},0)$；其单调性给反射模 $\omega(q)=q$。
 非 Lipschitz 近端及沿解集的漂移由[C242 三角例](triangular_rleb.md#tri-object)承担。
 
 <a id="prg-circle"></a>
-## C248-v1 · 弱凸优化的圆与补偿临界点
+## C252-v1 · 弱凸优化的圆与补偿临界点
 
 - **Status**：`derived-checked`。它把 C231 和 C244 的圆形机制实现为一个明定 C¹ 弱凸目标；下面完整近端计算不依赖从任意指定 T 反造 F。
 
@@ -496,7 +496,7 @@ $A(z,w)=(\sqrt[3]{z},0)$；其单调性给反射模 $\omega(q)=q$。
 ### 圆形极小点集与一个补偿临界点
 
 
-平面中的圆具有欧拉示性数零，故[C250 指数平衡](rleb_kernel_topology_interfaces.md#rkt-local-index)要求吸引管外的零点
+平面中的圆具有欧拉示性数零，故[C254 指数平衡](rleb_kernel_topology_interfaces.md#rkt-local-index)要求吸引管外的零点
 贡献总指数 $1$。这一现象已经出现在一个简单的弱凸优化问题中。
 对 $y\in\mathbb R^2$，置 $r=\|y\|$，定义
 <a id="eq-radial-weakconvex-function"></a>
@@ -576,7 +576,7 @@ $\operatorname{sign}\det(I-(3/2)I)=1$。
 
 
 <a id="prg-linear-energy"></a>
-## C249-v1 · 线性误差界的能量收缩
+## C253-v1 · 线性误差界的能量收缩
 
 - **Status**：`derived-checked`。对象与前件明确映到 [C02-v3](true_residual_selection_rleb.md#trs-object) 的 B1–B3，γ=1，ψ(q)=cq（下式局部字母 K=c）；不保留原 B4。一步能量与真残差链由平行四边形和 (x−y)/λ∈F(y) 直接得出。
 

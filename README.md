@@ -1,8 +1,10 @@
 # PPA 研究地图：数学节点与真实超边
 
-本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–GPPA 中文修订稿](发表成果整理/RLEB/README.md) 以 [C245/C246 物理父定理与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 为主链，普通 PPA 准确恢复 C02-v3；[C247 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C248 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C249 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C250 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
+本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–GPPA 中文修订稿](发表成果整理/RLEB/README.md) 以 [C249/C250 物理父定理与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 为主链，普通 PPA 准确恢复 C02-v3；[C251 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C252 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C253 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C254 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 635 个数学节点、436 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+新的[非Lipschitz近端例独立比较](发表成果整理/非Lipschitz近端例独立比较.md)推荐 [C246 幂次动能自由粒子](research/canonical/free_particle_rleb.md#fp-object)：完整J、全部轨道闭式，同一L同时供应全对与最近锚；这是零势能动力学机制，不能替代非平凡优化应用身份。现行主稿采用C242三角例与C251自然Bregman例；本比较的自由粒子替换推荐尚未实施。[C247固定SPD全纤维符号分类](research/canonical/free_particle_rleb.md#fp-metric)给正剪切Lipschitz化与负剪切实际发散；[C241-v2锚定简证](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)保留原非平凡Hamilton，缩短验证并扩大认证管。凸幂与[C248工程化弱凸优化](发表成果整理/非Lipschitz近端例独立比较.md#engineered-optimization)分别作为角色不足与离零奇点的比较边界；正文采用所需摘要/比较/附录清单已列，不把推荐冒充已实施。
+
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 656 个数学节点、456 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -14,9 +16,9 @@
 
 当前 GPPA 比较的下一入口是[C215改写边界](research/canonical/gppa_reformulation_boundary.md)、[C216正则化稳定性](research/canonical/gppa_regularized_stability.md)及[有界先行审查](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。源T4正则化距离输出已接入并降低印刷残差预算；现有严格例子的收敛可经保零集改写导入，不能证明任意改写饱和类严格分离。全球首创和[C217总体比较](CLAIMS.md#c217)继续开放。
 
-新的选题入口：[全局完成的拓扑代价](research/canonical/topological_completion_balance.md)把全尺度RL、完整近端吸引和零集拓扑接在同一合同下：局部指数χ(M)与全局总指数1的缺额必须由额外零点补偿。它不反驳任意紧纤维实现。[C233–C235保零完成与全域吸引](research/canonical/zero_preserving_completion.md)现证明：连通管外、允许有限新常数时χ1也充分；不可缩RP²可保整个局部三次RLEB动力和全部零集，但全域趋零在严格投影管下强迫可缩。[C236/C237锐代价与精确预算基准](research/canonical/sharp_completion_cost.md)进一步闭合逐分量缺额、最少一般/非退化补偿数量，以及单点严格球管的原常数完成和全域收敛。[C238–C240预算门](research/canonical/completion_budget_gate.md)进一步给严格插值余量、RP²残余对称障碍及健壮有限证书等价；非单点原常数的精确保零完成仍开放。另保留[切向有向面积候选](research/canonical/tangential_area_seed.md)，研究绝对长度之外的点收敛机制。
+新的选题入口：[全局完成的拓扑代价](research/canonical/topological_completion_balance.md)把全尺度RL、完整近端吸引和零集拓扑接在同一合同下：局部指数χ(M)与全局总指数1的缺额必须由额外零点补偿。它不反驳任意紧纤维实现。[C233–C235保零完成与全域吸引](research/canonical/zero_preserving_completion.md)现证明：连通管外、允许有限新常数时χ1也充分；不可缩RP²可保整个局部三次RLEB动力和全部零集，但全域趋零在严格投影管下强迫可缩。[C236/C237锐代价与精确预算基准](research/canonical/sharp_completion_cost.md)进一步闭合逐分量缺额、最少一般/非退化补偿数量，以及单点严格球管的原常数完成和全域收敛。[C238–C240预算门](research/canonical/completion_budget_gate.md)进一步给严格插值余量、RP²残余对称障碍及健壮有限证书等价；[C245预算桥](research/canonical/lipschitz_obstruction_budget.md#lob-object)把给定单位方向延拓和正幅度的 Lipschitz 常数转成一个可审计的有限 Hölder 上界；非单点原常数的精确保零完成仍开放。另保留[切向有向面积候选](research/canonical/tangential_area_seed.md)，研究绝对长度之外的点收敛机制。
 
-阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。[后续独立接收与团队路线裁决](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)已核C236/C237并接收C238–C240。下一关固定RP²原管，先攻L*=L0（任意增量预算的健壮证书）或严格gap，再核端点达到；显式机制作为预算可认证的结构支线。
+阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。[后续独立接收与团队路线裁决](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)已核C236/C237并接收C238–C240；本轮 C245 先把预算量化接口固定下来。下一关固定RP²原管，先攻L*=L0（任意增量预算的健壮证书）或严格gap，再核端点达到；显式机制作为预算可认证的结构支线。
 
 ## Research Goal
 
@@ -288,10 +290,16 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
 | [research/canonical/zero_preserving_completion.md](research/canonical/zero_preserving_completion.md)、[复算入口](research/code/zero_preserving_completion/README.md) | C233–C235：保整管、保零集的有限新常数Euler必要充分性；谱投影可核的RP²及锐三次完整真EB；全域趋近产生真回缩的障碍。研究定量同常数完成或全域算法时读；不能把局部EB升级全域。 |
 | [research/canonical/sharp_completion_cost.md](research/canonical/sharp_completion_cost.md)、[复算入口](research/code/sharp_completion_cost/README.md) | C236逐分量δ_j与锐新增数量：一般孤立点最少非零分量数，非退化最少Σ绝对缺额，指定位置可达到；C237用球投影达到单点原数据的精确最小Hölder常数并全域收敛。研究指数与数量、原预算与新预算之前先读；非单点同常数仍开放。 |
-| [research/canonical/completion_budget_gate.md](research/canonical/completion_budget_gate.md)、[接收记录](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)、[复算入口](research/code/completion_budget_gate/README.md) | C238严格雪花插值余量；C239 RP²单矩阵协变公式的固定平面障碍；C240给定预算保零完成的健壮有限网证书等价。下一步分开下确界、达到与严格gap；不能用普通有限点避零代替全域余量。 |
+| [research/canonical/completion_budget_gate.md](research/canonical/completion_budget_gate.md)、[research/canonical/lipschitz_obstruction_budget.md](research/canonical/lipschitz_obstruction_budget.md)、[接收记录](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)、[C245接收](research/audit/CONDITIONAL_LIPSCHITZ_BUDGET_REVIEW_2026_10_11.md)、[复算入口](research/code/completion_budget_gate/README.md)、[C245复算](research/code/lipschitz_obstruction_budget/README.md) | C238严格雪花插值余量；C239 RP²单矩阵协变公式的固定平面障碍；C240给定预算保零完成的健壮有限网证书等价；C245把给定方向延拓的 Lipschitz 数据转成 Hölder 预算上界。下一步分开下确界、达到与严格gap；不能用普通有限点避零代替全域余量。 |
 | [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 逐版本精确身份与显式状态、当前阻塞与完成门、已失败机制；每次进展后同步维护。研究状态是现行可执行前沿，旧提交记录保留在 Git 历史。 |
 | [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md)、[history/README.md](history/README.md) | 初始校验、旧批次盘点与原件使用约定；用于核原件，不再作为数学地图。原件保留在 `history/sources/`，Git 历史可追初始导入。 |
 
 阅读顺序：本页和超边图 → 依节点进数学模块 → CLAIMS 的精确版本和现存 objection → 必要时 SOURCES 的原稿标签/页码。要写新资产时先读增长协议和当前前沿；图中路线是搜索种子，不是方法白名单。
 
 当前稿新增规范入口：[C242完整三角例](research/canonical/triangular_rleb.md)、[C243/C244固定SPD与Euler桥](research/canonical/rleb_kernel_topology_interfaces.md)。解析结论、有限计算和外部先行性保持不同证据范围。
+
+| 新文件 | 数学资产与读取时机 |
+| --- | --- |
+| [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
+| [发表成果整理/非Lipschitz近端例独立比较.md](发表成果整理/非Lipschitz近端例独立比较.md) | 优化来源、机制、原Hamilton的四轴比较；凸幂完整合同、C248弱凸离零奇点、致命分支攻击及实际主稿采用清单。要选正文例或重写比较贡献时读取。 |
+| [research/code/free_particle_rleb/README.md](research/code/free_particle_rleb/README.md) | 上述Claim的实际参数、seed、边界与独立反算、Python版本和hash；两份运行结果用于复现有限算术，不作为普遍证明。 |

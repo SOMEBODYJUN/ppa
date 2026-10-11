@@ -1,6 +1,6 @@
 {
   "date": "2026-10-11",
-  "scope": "current main manuscript and C245–C250; not global novelty or journal readiness",
+  "scope": "current main manuscript and C249–C254; not global novelty or journal readiness",
   "source_set_sha256": "4b7da37cdb6fafdf374de94ed94ee52026e367d80293982de5dc037d567eb33f",
   "pdf": {
     "path": "发表成果整理/RLEB/RLEB_中文修订稿.pdf",
@@ -13,8 +13,8 @@
   "source_zip": {
     "path": "发表成果整理/RLEB_修订源码.zip",
     "members": 37,
-    "bytes": 117801,
-    "sha256": "d71a6876d46ac92136fcd6c3f6f3f5a3792eca5a3ba353a0597a7109401abf05",
+    "bytes": 118369,
+    "sha256": "715cabe542413e636393643b7f8007463da45a954ad126745ff1afa736dc8080",
     "all_members_equal_actual_sources": true
   },
   "finite_checks": {
@@ -34,8 +34,15 @@
     "native_codex_cli_trigger_verified": false
   },
   "canonical_sha256": {
-    "physical_rleb_gppa.md": "0aa1c54d0e29ef20fd91a757172004630e4deeb540d89b1f6a63338e0eb1924b",
-    "rleb_kernel_topology_interfaces.md": "603425e12a1da4886aec516942a50726ff0fd148e6a941393970b022058d1dbb"
+    "physical_rleb_gppa.md": "bd76c1a7bf40e4ff64762297b5f76493e4b3dd7f1fd4cd5ad56f19187c97f64b",
+    "rleb_kernel_topology_interfaces.md": "f0b4b848445057a693f6c3d2e081cebcd38e92837ff559e24fd1de66eefe9ba3"
   },
-  "cold_review_sha256": "b3c33eb6408d3e3c907f567f29a40ec185a2a7918cdd8e963bf99b0b764f5a86"
+  "cold_review_sha256": "74838cf5fac09218be258c5c7dcb80782fb75bb8efa82428832b629ea25472c5",
+  "remote_integration": {
+    "retained_remote_head": "876976b3aa3b61ddbc861f0476d06071a18804e9",
+    "current_stage_claims": "C249–C254",
+    "graph_nodes": 656,
+    "graph_edges": 456,
+    "remote_new_mathematics_reaudited": false
+  }
 }

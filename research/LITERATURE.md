@@ -429,8 +429,8 @@ GPPA候选拓展实际核 Le–Mordukhovich–Théra [arXiv:2608.01584v1](https:
 <a id="lit-physical-gppa"></a>
 ## LIT-PHYSICAL-GPPA · 本轮父理论及后部数学包装的一手接口
 
-**Paper fact / 实读范围。** Bauschke–Borwein–Combettes2003 [作者原文](https://pcombet.math.ncsu.edu/sicon2.pdf)，Def3.7/3.16、Prop3.22：D-resolvent与Bregman最小化最优性；Bùi–Combettes2020 [作者原文](https://pcombet.math.ncsu.edu/jmaa5.pdf)，Def1.1/Examples3.1/3.4：核化关系的定义与Bregman背景。本文不直接导入其全部收敛定理，C247覆盖和速率独立证明。
+**Paper fact / 实读范围。** Bauschke–Borwein–Combettes2003 [作者原文](https://pcombet.math.ncsu.edu/sicon2.pdf)，Def3.7/3.16、Prop3.22：D-resolvent与Bregman最小化最优性；Bùi–Combettes2020 [作者原文](https://pcombet.math.ncsu.edu/jmaa5.pdf)，Def1.1/Examples3.1/3.4：核化关系的定义与Bregman背景。本文不直接导入其全部收敛定理，C251覆盖和速率独立证明。
 
-Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Theorem2、Cor1及§5在本轮再次读；其后部把结果转成熟悉推论与特定应用问题。C249的K/√(K²+λ²)由 [Leventhal0902.4200v1 Theorem3.1](https://arxiv.org/pdf/0902.4200) pp6–7重新核定，不照抄Luke正式Remark3式31的λ分子印式。Evens2305.03605v2 Def4.1只供应同受检点对的半单调参数约定。Benjamin–Gottlieb62.pdf §2.1.1/.2/.4/.6对应本轮C250局部化/可加/ENR归一化/交换，Hatcher3.26仅在回缩蕴含连通后用于闭流形顶同调。
+Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Theorem2、Cor1及§5在本轮再次读；其后部把结果转成熟悉推论与特定应用问题。C253的K/√(K²+λ²)由 [Leventhal0902.4200v1 Theorem3.1](https://arxiv.org/pdf/0902.4200) pp6–7重新核定，不照抄Luke正式Remark3式31的λ分子印式。Evens2305.03605v2 Def4.1只供应同受检点对的半单调参数约定。Benjamin–Gottlieb62.pdf §2.1.1/.2/.4/.6对应本轮C254局部化/可加/ENR归一化/交换，Hatcher3.26仅在回缩蕴含连通后用于闭流形顶同调。
 
-**本库推导。** C245/C246物理父理论的同锚/真实输出/物理位移与标量门、C247精确率、C248自然优化实现、C249显式能量、C250准确RLEB接口为当前内部研究/编排；已审证明不等于这些特殊公式首次出现。C208–C210旧核chart身份证明保持，不用新物理对象混同r_A与r_F。穷尽先行性、指定期刊和非线性核指数保存尚未认证。
+**本库推导。** C249/C250物理父理论的同锚/真实输出/物理位移与标量门、C251精确率、C252自然优化实现、C253显式能量、C254准确RLEB接口为当前内部研究/编排；已审证明不等于这些特殊公式首次出现。C208–C210旧核chart身份证明保持，不用新物理对象混同r_A与r_F。穷尽先行性、指定期刊和非线性核指数保存尚未认证。

@@ -106,8 +106,15 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 
 [rleb_spd/README.md](code/rleb_spd/README.md)与[结果](code/rleb_spd/results.json)记录5212项有限断言：完整Q桥、非对角零输入纤维、正对角小窗、退化丢失纤维和普通PPA成功而新核失败的边界。使用NumPy binary64及Fraction精确反算；环境、误差及seed见入口。不能以有限PASS认证所有核、一般GPPA或全域吸引。
 
+## C245：给定方向延拓后的条件 Lipschitz 预算桥
 
-## C245–C250：物理 RLEB–GPPA 父理论与论文数学包装
+[lipschitz_obstruction_budget/README.md](code/lipschitz_obstruction_budget/README.md)给标准库精确复算。`verify.py` 使用 Fraction 反算 RP² 压力测试的保守全域投影界、整管位移和半 Hölder 预算系数；`results.json` 保存实际输出。程序只核代数接口，不构造方向延拓，也不把条件上界升级为原预算结论。
+
+## C246/C247/C248 与 C241-v2：完整近端示例独立比较
+
+[free_particle_rleb/README.md](code/free_particle_rleb/README.md)给标准库复现命令、seed20261011、Python版本、容差和SHA256。verify.py检查signed/零输入、认证管端点、独立全图反算、24步显式轨道、全部SPD二次根与重根、真双残差、负剪切发散轨道、C241-v2严格预算及工程化弱凸边界。optimization_verify.py另核凸优化比较的完整prox、EB、跨符号和临界窗。结果只承担有限算术；无限轨道和全称证书由C246/C247规范页及C248独立比较记录解析证明承担。
+
+## C249–C254：物理 RLEB–GPPA 父理论与论文数学包装
 
 - [rleb_gppa/README.md](code/rleb_gppa/README.md)：4603项标准库有限恒等式、完整非线性/非单射GPPA、真实残差、严格预算与能量边界；不能证明一般定理。
 - [rleb_gppa_example/README.md](code/rleb_gppa_example/README.md)：四次Bregman核、完整隐式步、110位Decimal和精确Fraction；实际10421项有限核验及误差记录。

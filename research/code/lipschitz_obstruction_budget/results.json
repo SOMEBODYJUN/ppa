@@ -1,0 +1,14 @@
+{
+  "rho": "1/8",
+  "R": "2",
+  "gamma": "1/2",
+  "spectral_gap": "3/4",
+  "K_Pi_bound": "16/3",
+  "K_D0_bound": "1235/192",
+  "K_C0_bound": "1331/96",
+  "a_in": "63/512",
+  "delta_a": "449/512",
+  "LB3_symbolic": "2*G_W*max(1331/96, 1+2*K_e+(449/256)*K_tau)",
+  "sanity_Ktau1_Ke0_without_G": "1331/48",
+  "status": "PASS"
+}
