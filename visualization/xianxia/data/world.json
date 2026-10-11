@@ -6971,6 +6971,39 @@
       "y": 3095,
       "region": "convergence",
       "realm": "convergence-annex-4"
+    },
+    "CBG-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "CBG-LENS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 3368,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
+    },
+    "CBG-SYM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 2913,
+      "region": "convergence",
+      "realm": "convergence-annex-4"
     }
   },
   "edges": {
@@ -8645,6 +8678,30 @@
     "E418": {
       "x": 4805.63,
       "y": 3146.75
+    },
+    "E419": {
+      "x": 4845.81,
+      "y": 3327.77
+    },
+    "E420": {
+      "x": 4769.41,
+      "y": 2960.22
+    },
+    "E421": {
+      "x": 4775.23,
+      "y": 3320.08
+    },
+    "E422": {
+      "x": 4735.17,
+      "y": 3207.68
+    },
+    "E423": {
+      "x": 4825.84,
+      "y": 3182.08
+    },
+    "E424": {
+      "x": 4730.13,
+      "y": 3189.53
     }
   },
   "bounds": {

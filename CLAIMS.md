@@ -2000,7 +2000,7 @@
 <a id="c236"></a>
 ## C236-v1 / SHARP-COMPLETION-COST · 分量缺额的锐新增零点数量
 
-- **Status**：`derived-checked`；本轮主代理显示推导与反向重构，无新增独立代理接收；外部Hopf条件实读续核，发表优先未认证。
+- **Status**：`derived-checked`；首次提交为主代理显示推导；后续已独立重构次数、模型、连通、拼接与完整图，见预算门接收记录；发表优先未认证。
 - **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：每一组C233共享整管数据，n≥2，但不要求W连通；固定整个C0、γ与λ，允许选择某个有限新常数，不预先给定上界。足够大球扣管得有限个W_j；边界内给D0/||D0||、外给p/R，按诱导定向算δ_j，总和1−χ(M)。任意位置q_j可在各分量内部指定。
 - **Conclusion / Scope**：保整个局部完整J的全域γ-Hölder完成类中，管外新增有限零点的最小数量为#{j:δ_j≠0}，每个非零分量可恰一个点、指数δ_j。若全部新增点的T在邻域C¹且det(I−DT)≠0，最小数量为Σ|δ_j|，各分量点指数全同号。均可取Chat紧支撑并指定点位置。无新增零点iff全部δ_j=0；W连通时一般最小0/1、非退化最小|1−χ|。
 - **Definitions / Dependencies / Evidence**：[SC1–SC7完整证明](research/canonical/sharp_completion_cost.md#scc-sharp)：C231局部指数/次线性外次数，逐分量degree下界，SC6任意整数单点模型及正则原像定向计数，去球后的连通性/Hopf全边界总次数零，HE-EXT和C233精确collar提升。完整图仍用Z1，不要求F单值。[有限复算](research/code/sharp_completion_cost/README.md)只是算术/局部模型检查。
@@ -2009,7 +2009,32 @@
 <a id="c237"></a>
 ## C237-v1 / SINGLETON-EXACT-BUDGET · 单点严格球管的精确预算完成
 
-- **Status**：`derived-checked`；主代理独立核投影构造、半范数双向界、径向收缩与零预算端点；未声称新增独立代理审查或发表优先。
+- **Status**：`derived-checked`；主代理核投影构造、半范数双向界、径向收缩与零预算端点；后续独立证明审查已接收，见预算门记录；发表优先未认证。
 - **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：任意实Hilbert H，m∈H，ρ>0，N闭球；任意连续T0固定m且||T0p−m||≤θ||p−m||，0≤θ<1；固定0<γ<1，C0=2T0−Id，精确半范数L0=[C0]_(γ,N)<∞，允许0。固定任意λ>0。
 - **Conclusion / Definitions / Scope**：Chat=C0∘P_N原样保整球，精确全域半范数L0且FixT={m}；所以保零完成的最小常数L*=L0并达到。全部x、k有||T^k x−m||≤max(θ,1/2)^k||x−m||。完整F按Z1，完整J=T。对每个预算L≥L0均为同预算完成；不要求T0 Lipschitz或半范数取到。
 - **Dependencies / Evidence / Counterevidence / Related Files**：[SC8–SC11证明](research/canonical/sharp_completion_cost.md#scc-singleton)，Hilbert闭凸投影非扩张，整球限制给预算下界；管外T=T0(Px)+(x−Px)/2给径向界，不是两点Banach收缩。有限线性旋转/零预算/大输入复算见相邻代码。非凸光滑管不自动有全域连续非扩张投影，非单点χ1原常数问题继续开放。
+
+
+<a id="c238"></a>
+## C238-v1 / STRICT-SNOWFLAKE-LENS · 紧锚管外插值纤维的统一严格余量
+
+- **Status**：`derived-checked`；主代理与预算代理独立推 Gaussian 方差下界，证明审查代理核常数与有限推论；不是发表优先认证。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：任意实 Hilbert H，非空紧 A⊂H，0<γ<1，L>0，C_A:A→H 全点对满足同L Hölder。每个 x∉A，d=dist(x,A)>0、R=max_A||x−p||；约束球交集含闭球半径 η=Lb/(R^γ+sqrt(R^(2γ)−b))，b=d^(2γ)/[4Γ(1−γ)(log4)^γ]。
+- **Conclusion / Definitions / Dependencies**：任意有限 S⊂H∖A 有同预算全域延拓在全部 S 避免 C(x)=x；有限点值可取对整个A和全部新点对严格兼容，原锚统一余量正。HE-SNOW、HE-EXT、Hilbert闭凸投影，Gaussian PSD和Laplace积分在正文重构。
+- **Evidence / Counterevidence / Scope / Related Files**：[BG1–BG7完整证明](research/canonical/completion_budget_gate.md#cbg-lens)、[独立接收](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md#cbr-new)、[有限复算](research/code/completion_budget_gate/README.md)。没有全域避零结论；固定G的雪花凸包投影复合确为同预算延拓，任意逐点中心则未必兼容。L=0、γ=1、非紧锚不在范围。[F72](FAILED_ROUTES.md#f72)限制普通有限点强迫路线。
+
+<a id="c239"></a>
+## C239-v1 / RP2-SYMMETRY-OBSTRUCTION · RP²整管完成的残余符号对称障碍
+
+- **Status**：`derived-checked`；机制代理推导，证明代理独立核平面限制次数，价值代理与主代理核bias类型边界；经典机制不认证新颖。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定C234的H=Sym₀(3)、ρ1/8、整个三次法向T0和C0；任何全域有限γ-Hölder完成若对坐标符号共轭群K等变，必有管外固定点。γ∈(0,1)，允许任何有限新预算。
+- **Conclusion / Definitions / Dependencies**：固定平面E有三个分离盘，局部指数各+1；限制位移在无穷远次数1，管外E内总次数−2。单个实对称矩阵B的同时SO3共轭协变模板仍受共轭K阻碍。若新增E内点有限，其E指数和−2；不宣称H指数−2。
+- **Evidence / Counterevidence / Scope / Related Files**：[BG8–BG11](research/canonical/completion_budget_gate.md#cbg-symmetry)，C234谱投影，C231次线性次数，GS1982Lemma1.3明确经典固定子空间工具；[接收记录](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)。双矩阵仅移除必要障碍；SO3有向向量Euler门通过未证存在，O3极向量仍受阻。没有“至少两个bias”结论；[F73](FAILED_ROUTES.md#f73)。
+
+<a id="c240"></a>
+## C240-v1 / FINITE-COMPLETION-CERTIFICATE · 给定预算保零完成的健壮有限网证书
+
+- **Status**：`derived-checked`；预算代理与证明代理独立核三块覆盖、反向严格化和2Lδ^γ误差门；主代理重写全称合同。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：C233有限维整管合同(n≥2)，但不要求χ1或管外连通；固定γ∈(0,1)、L>0且全N数据半范数≤L，m∈M。R大于max{sup_N||p−m||,L^(1/(1−γ))}；s+Lsγ<2(1−θ)ρ，紧过渡域A={||x−m||≤R,dist(x,N)≥s}。
+- **Conclusion / Definitions / Dependencies**：同L全域保整管保零完成存在，iff存在A的真实有限h网和值vi，全部原锚/新点对兼容且min||xi−vi||>h+Lhγ；亦iff存在N的真实δ网，使有限锚约束有2Lδγ严格缓冲，并保上述点对/位移门。A空用空证书。必要方向C238严格点值与真完成值小凸混，充分方向HE-EXT及外半径/薄collar/网三块排零。
+- **Evidence / Counterevidence / Scope / Related Files**：[BG12–BG15全证明](research/canonical/completion_budget_gate.md#cbg-certificate)、[独立范围](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md#cbr-new)、[计算例边界](research/code/completion_budget_gate/README.md)。不是自动覆盖算法、RP²原预算解、γ=1/L=0/无限维有限网定理。普通样本、浮点可行和一个粗网失败不能代替证书或严格gap。L*=L0与端点达到在[BG16前沿](research/canonical/completion_budget_gate.md#cbg-next)分开。

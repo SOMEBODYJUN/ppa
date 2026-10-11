@@ -92,3 +92,8 @@ C229/C230及最终独立接收补充两个从零重构的检查器：sextic_boun
 ## C236/C237：锐零点数量与单点精确预算
 
 [sharp_completion_cost/README.md](code/sharp_completion_cost/README.md)固定运行命令、seed及3e-11容差；verify.py和results.json核分量缺额枚举/反向计数、胞腔Euler反算、SC6绕数和全部指定正则原像、维数2/3/5范数与零点、Fraction径向界、线性旋转整球数据的精确预算/完整图回代及真实有限迭代。迭代步数按解析q界决定，避免θ接近1时固定循环长度不足；有限计算不实现Hopf延拓，不证明全域量词或发表先行。
+
+
+## C238–C240：严格插值余量、对称障碍与有限证书
+
+[completion_budget_gate/README.md](code/completion_budget_gate/README.md)给标准库复现命令、seed238240、3e−12浮点诊断容差及Fraction精确范围。verify.py与results.json检查280组概率方差/球半径、D2固定平面与偏置共同稳定子、以及真实覆盖的一维区间有限证书。不是RP²完成证书或全域扩张求解器；原预算下确界与达到性继续开放。

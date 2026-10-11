@@ -3338,6 +3338,24 @@
       "label": "C237 单点球管精确最小常数及全域径向收敛",
       "file": "canonical/sharp_completion_cost.md#scc-singleton",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CBG-LENS",
+      "label": "C238 严格雪花插值纤维内球与有限点严格兼容",
+      "file": "canonical/completion_budget_gate.md#cbg-lens",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CBG-SYM",
+      "label": "C239 RP²符号对称与单矩阵协变模板障碍",
+      "file": "canonical/completion_budget_gate.md#cbg-symmetry",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CBG-CERT",
+      "label": "C240 给定预算保零完成的健壮有限证书等价",
+      "file": "canonical/completion_budget_gate.md#cbg-certificate",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -8188,6 +8206,75 @@
       "output": "TCB-GAP",
       "relation": "limits",
       "scope": "原常数分支在单点严格球管已闭，包括零半范数；非单点χ1、RP²同一整管的最小预算与达到性继续开放。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E419",
+      "inputs": [
+        "HE-SNOW",
+        "HE-EXT"
+      ],
+      "output": "CBG-LENS",
+      "relation": "conditional",
+      "scope": "任意Hilbert紧锚、0<γ<1、L>0及全点对预算；雪花凸包严格间隙给插值内球，有限点可严格赋值且避零；不授全域无零。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E420",
+      "inputs": [
+        "TCB-RP2"
+      ],
+      "output": "CBG-SYM",
+      "relation": "conditional",
+      "scope": "同一RP²整个ρ1/8三次管，若完成K符号共轭等变，则二维固定平面三局部+1与总次数1迫使外部E内−2。排单实对称矩阵协变模板，不排SO3有向向量，不声称H指数−2。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E421",
+      "inputs": [
+        "TCB-DATA",
+        "HE-EXT",
+        "CBG-LENS"
+      ],
+      "output": "CBG-CERT",
+      "relation": "conditional",
+      "scope": "有限维n≥2，L>0且原整个C0半范数≤L；固定m/R/s及真实紧域覆盖，保零完成iff同L点对与h+Lhγ位移门；C238凸混严格化支持2Lδγ缓冲的有限原锚证书。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E422",
+      "inputs": [
+        "CBG-LENS"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "排除普通有限管外点集强迫零点的反例路线；新点对兼容及统一位移余量仍是全域预算门，不证明非单点同预算充分性。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E423",
+      "inputs": [
+        "CBG-SYM"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "RP²显式完成须避免K等变及单矩阵同时共轭协变模板；对称破缺仅必要门，不关闭原预算。",
+      "status": "derived-checked",
+      "topic": "完成的拓扑代价与切向新机制"
+    },
+    {
+      "id": "E424",
+      "inputs": [
+        "CBG-CERT"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "将给定预算保零存在性化为真实覆盖与健壮有限证书；L*=L0、端点达到与严格gap仍分开开放，覆盖/求值/非凸求解算法尚未实现。",
       "status": "derived-checked",
       "topic": "完成的拓扑代价与切向新机制"
     }

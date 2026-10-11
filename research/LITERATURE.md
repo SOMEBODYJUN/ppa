@@ -402,3 +402,11 @@ C221实际接入2018 primary Caristi陈述及ABS2010作者稿H1–H3/T2.9，只�
 
 - **Paper fact / actual reading**：Hatcher [Algebraic Topology作者PDF](https://pi.math.cornell.edu/~hatcher/AT/AT.pdf)，Example2.42印页144、Example2.4印页106–107给RP²的cellular chain/H1=Z2；Theorem3.26印页236及前页说明everymanifold Z2-orientable，闭连通正维流形顶维模二同调非零。
 - **Import / exact mapping**：C234显式矩阵嵌入商RP²，因此χ1且不可缩；C235回缩自足强迫可缩，正维闭流形以顶同调排除，零维以连通性排除多个点。这里只核指定原文接口，不以经典事实授予本完成合同的发表优先。
+
+
+<a id="lit-gs-1982"></a>
+## LIT-GS-1982 · 无迹对称矩阵共轭作用的固定平面
+
+**Paper fact / 实读定位**：M. Golubitsky and D. Schaeffer, *Bifurcations with O(3) Symmetry Including Applications to the Bénard Problem*, Communications on Pure and Applied Mathematics 35 (1982), 81–111。[作者PDF](https://www.asc.ohio-state.edu/golubitsky.4/reprintweb-0.5/output/papers/O3_benard.pdf)，印页84 Lemma1.3（PDF页索引3）：O3共轭等变映射保持无迹对角二维平面；证明用固定对角矩阵的符号翻转，并由对称矩阵可对角化说明全映射由对角限制决定。本库只导入／重构固定子空间不变性，不导入其分岔定理。
+
+**本库推导与限制**：C239在指定RP²整管和全尺度次线性预算合同下，限制平面内的三局部指数与无穷远次数产生−2缺额。这是新的同合同推导记录，不是对经典不变机制的首创认证。Goebel2016 Claim1 pp431–432已实现任意闭固定集并全部迭代点收敛（极限映射可能不连续）；未保存指定严格局部吸引管，因此不反驳C235。不能从C235宣称任意全域点收敛映射的固定集都可缩。

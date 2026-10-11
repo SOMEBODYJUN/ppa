@@ -12,9 +12,9 @@
 
 当前 GPPA 比较的下一入口是[C215改写边界](research/canonical/gppa_reformulation_boundary.md)、[C216正则化稳定性](research/canonical/gppa_regularized_stability.md)及[有界先行审查](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)。源T4正则化距离输出已接入并降低印刷残差预算；现有严格例子的收敛可经保零集改写导入，不能证明任意改写饱和类严格分离。全球首创和[C217总体比较](CLAIMS.md#c217)继续开放。
 
-新的选题入口：[全局完成的拓扑代价](research/canonical/topological_completion_balance.md)把全尺度RL、完整近端吸引和零集拓扑接在同一合同下：局部指数χ(M)与全局总指数1的缺额必须由额外零点补偿。它不反驳任意紧纤维实现。[C233–C235保零完成与全域吸引](research/canonical/zero_preserving_completion.md)现证明：连通管外、允许有限新常数时χ1也充分；不可缩RP²可保整个局部三次RLEB动力和全部零集，但全域趋零在严格投影管下强迫可缩。[C236/C237锐代价与精确预算基准](research/canonical/sharp_completion_cost.md)进一步闭合逐分量缺额、最少一般/非退化补偿数量，以及单点严格球管的原常数完成和全域收敛。非单点原常数的精确保零完成仍开放。另保留[切向有向面积候选](research/canonical/tangential_area_seed.md)，研究绝对长度之外的点收敛机制。
+新的选题入口：[全局完成的拓扑代价](research/canonical/topological_completion_balance.md)把全尺度RL、完整近端吸引和零集拓扑接在同一合同下：局部指数χ(M)与全局总指数1的缺额必须由额外零点补偿。它不反驳任意紧纤维实现。[C233–C235保零完成与全域吸引](research/canonical/zero_preserving_completion.md)现证明：连通管外、允许有限新常数时χ1也充分；不可缩RP²可保整个局部三次RLEB动力和全部零集，但全域趋零在严格投影管下强迫可缩。[C236/C237锐代价与精确预算基准](research/canonical/sharp_completion_cost.md)进一步闭合逐分量缺额、最少一般/非退化补偿数量，以及单点严格球管的原常数完成和全域收敛。[C238–C240预算门](research/canonical/completion_budget_gate.md)进一步给严格插值余量、RP²残余对称障碍及健壮有限证书等价；非单点原常数的精确保零完成仍开放。另保留[切向有向面积候选](research/canonical/tangential_area_seed.md)，研究绝对长度之外的点收敛机制。
 
-阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。现有[C236/C237显示证明](research/canonical/sharp_completion_cost.md)和[复算范围](research/code/sharp_completion_cost/README.md)由主代理核验，未新增独立代理接收。下一关是非单点χ1同一数据的最小完成常数与可计算无零余量。
+阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。[后续独立接收与团队路线裁决](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)已核C236/C237并接收C238–C240。下一关固定RP²原管，先攻L*=L0（任意增量预算的健壮证书）或严格gap，再核端点达到；显式机制作为预算可认证的结构支线。
 
 ## Research Goal
 
@@ -286,6 +286,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/SOURCES.md](research/SOURCES.md)、[research/HISTORICAL_EDGE_CROSSWALK.md](research/HISTORICAL_EDGE_CROSSWALK.md) | S14–S25/SS 的**完整原路径**、ZIP 成员与恢复身份；9/14 旧图 h01–h35 的逐边去向。由规范命题反查或确认旧关系是否丢失时读。 |
 | [research/canonical/zero_preserving_completion.md](research/canonical/zero_preserving_completion.md)、[复算入口](research/code/zero_preserving_completion/README.md) | C233–C235：保整管、保零集的有限新常数Euler必要充分性；谱投影可核的RP²及锐三次完整真EB；全域趋近产生真回缩的障碍。研究定量同常数完成或全域算法时读；不能把局部EB升级全域。 |
 | [research/canonical/sharp_completion_cost.md](research/canonical/sharp_completion_cost.md)、[复算入口](research/code/sharp_completion_cost/README.md) | C236逐分量δ_j与锐新增数量：一般孤立点最少非零分量数，非退化最少Σ绝对缺额，指定位置可达到；C237用球投影达到单点原数据的精确最小Hölder常数并全域收敛。研究指数与数量、原预算与新预算之前先读；非单点同常数仍开放。 |
+| [research/canonical/completion_budget_gate.md](research/canonical/completion_budget_gate.md)、[接收记录](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)、[复算入口](research/code/completion_budget_gate/README.md) | C238严格雪花插值余量；C239 RP²单矩阵协变公式的固定平面障碍；C240给定预算保零完成的健壮有限网证书等价。下一步分开下确界、达到与严格gap；不能用普通有限点避零代替全域余量。 |
 | [CLAIMS.md](CLAIMS.md)、[RESEARCH_STATE.md](RESEARCH_STATE.md)、[FAILED_ROUTES.md](FAILED_ROUTES.md) | 逐版本精确身份与显式状态、当前阻塞与完成门、已失败机制；每次进展后同步维护。研究状态是现行可执行前沿，旧提交记录保留在 Git 历史。 |
 | [INGEST_MANIFEST.tsv](INGEST_MANIFEST.tsv)、[BATCH_README.md](BATCH_README.md)、[history/README.md](history/README.md) | 初始校验、旧批次盘点与原件使用约定；用于核原件，不再作为数学地图。原件保留在 `history/sources/`，Git 历史可追初始导入。 |
 
