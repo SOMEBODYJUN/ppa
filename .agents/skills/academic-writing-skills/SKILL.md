@@ -17,7 +17,7 @@ Choose the requested mode; do not run every mode, install companion skills, or f
 | Theorem or proof review | Read mathematics.md; reconstruct the exact claim, check every assumption and attack boundary cases. Return a valid proof, a concrete gap, or a verified counterexample. |
 | Referee or advisor review | Read mathematics.md and the scoped argument/evidence guides; separate mathematical validity, exposition, significance and novelty. Review-only requests do not authorize edits. |
 
-Resolve local references relative to this skill. Read [mathematics.md](references/mathematics.md) for mathematical work and [upstream.md](references/upstream.md) only for provenance. Mixed tasks may combine relevant modes. A local edit uses the local candidate gate; do not require whole-paper audits, extra skills, or independent agents on every request. A journal not yet specified does not block a neutral revision or permit certification of submission compliance.
+Resolve local references relative to this skill. Read [mathematics.md](references/mathematics.md) for mathematical work. For a mathematical research article, substantial exposition, or example selection, also read [mathematical-exposition.md](references/mathematical-exposition.md); a formula correction does not require it. Read [upstream.md](references/upstream.md) only for provenance. Mixed tasks may combine relevant modes. A local edit uses the local candidate gate; do not require whole-paper audits, extra skills, or independent agents on every request. A journal not yet specified does not block a neutral revision or permit certification of submission compliance.
 
 ## Governing Principle
 
