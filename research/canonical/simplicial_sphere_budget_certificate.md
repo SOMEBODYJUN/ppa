@@ -42,6 +42,7 @@ H(x,t)=N\big((1-\chi(t))g(x)+\chi(t)\widehat g(x,t)\big).
 \operatorname{Lip}(E|_{\operatorname{collar}})\le C_\Psi\frac{K_g+K_{\widehat g}+\varepsilon/\delta}{\mu_c}.
 \tag{SC5}
 \]
+若 \(L_\Psi=\operatorname{Lip}(\Psi)\)（从产品坐标到物理 collar），则 \(K_{\widehat g}\le L_\Psi C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\)；因此 SC5 仍只含有限几何输入。
 若边界单纯形的**物理**直径至多 \(h_{\rm phys}\)，且 \(g\) 的 Lipschitz 常数为 \(K_g\)，则归一化重心边界图满足原始误差估计
 \[
 \|\widetilde g-g\|_\infty\le \frac{2K_g h_{\rm phys}}{1-K_g h_{\rm phys}}
@@ -81,7 +82,8 @@ SC4–SC6 的估计如下：对单位向量 \(a,b\) 有
 1. 一个多面体模型 \(|K|\)、边界保持的双 Lipschitz 参数化 \(\Phi:|K|\to W\) 及其 \(C_\Phi\)，再加实际仿射三角剖分和 \(G_\mathcal T,Q_\mathcal T\)；
 2. 内边界方向 \(g=D_0/\|D_0\|\) 与外边界方向 \(p/2\) 的共同边界近似，以及保持原边界值的 collar 同伦；
 3. 每个单纯形的单位半球见证 \(u_\sigma\) 和统一 \(\eta_\mathcal T>0\)；
-4. 将 \(C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\) 及 collar 常数代入 C245 的 (LB1)，再与 \(L_0\) 比较。
+4. collar 参数化的 \(C_\Psi,L_\Psi\)、全层误差 \(\varepsilon_{\rm col}<2\) 及宽度 \(\delta\)；
+5. 将 \(C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\) 及 collar 常数代入 C245 的 (LB1)，再与 \(L_0\) 比较。
 
 有限顶点赋值或随机采样通过，若没有真实覆盖、半球余量和 collar 误差，不构成 RP² 的 \(K_e\) 证书，也不能推出 \(L_*=L_0\)。
 

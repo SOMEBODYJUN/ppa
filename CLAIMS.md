@@ -2215,5 +2215,5 @@
 
 - **Status**：`derived-checked`（条件证书引理）；不认证 RP² 实际剖分、边界 collar 或原预算端点。
 - **Exact Statement / Objects / Domain / Quantifiers**：给定多面体模型 \(|K|\) 到目标域 \(W\subset\mathbb R^n\) 的边界保持双 Lipschitz 参数化 \(\Phi\)，以及 \(|K|\) 的有限仿射顶层三角剖分 \(\mathcal T\)。每个顶点值 \(y_v\in S^{n-1}\)，每个单纯形给定单位半球见证 \(u_\sigma\) 和余量 \(\eta_\sigma>0\)，满足所有顶点内积 \(\langle u_\sigma,y_v\rangle\ge\eta_\sigma\)。若边界数据经 \(\Phi\) 拉回后恰等于归一化重心插值的边界迹，则该插值经 \(\Phi^{-1}\) 推回为全域球值 Lipschitz 延拓，并有 \(K_e\le C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\)。
-- **Conclusion / Dependencies**：证明只用重心坐标梯度、公共半球给出的凸组合下界和归一化映射导数界；跨单纯形使用显式内在路径常数 \(G_\mathcal T\)。若边界只在顶点匹配，必须另给 collar 同伦及其常数，不能把离散迹偷换成 C245 的精确整管数据。
+- **Conclusion / Dependencies**：证明只用重心坐标梯度、公共半球给出的凸组合下界和归一化映射导数界；跨单纯形使用显式内在路径常数 \(G_\mathcal T\)。若 collar 参数化的物理 Lipschitz 常数为 \(L_\Psi\)，则内部迹常数可取 \(K_{\widehat g}\le L_\Psi C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\)。若边界只在顶点匹配，必须另给 collar 同伦及其常数，不能把离散迹偷换成 C245 的精确整管数据。
 - **Evidence / Counterevidence / Related Files**：[C258 正文](research/canonical/simplicial_sphere_budget_certificate.md#ssc-object)；[二维/五维复算](research/code/simplicial_sphere_budget_certificate/README.md)及 `results.json`。RP² 的实际多面体参数化、三角剖分、半球余量、边界 collar 和与 \(L_0\) 的比较仍开放；该上界是支持性有限接口而非原预算锐界，有限样本或随机赋值不构成该证书。
