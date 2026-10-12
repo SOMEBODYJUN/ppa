@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+当前作者写作安排见[逐节展开的论文大纲](发表成果整理/论文写作大纲_逐节展开_2026-10-12.md)：包含核层/物理层、已有结果的恢复命题、覆盖到指数的桥、各例子职责及按阶段改稿顺序。此为写作计划，主稿尚未据此重排；不改变现有 Claim 身份。
+
 本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–GPPA 中文修订稿](发表成果整理/RLEB/README.md) 以 [C249/C250 物理父定理与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 为主链，普通 PPA 准确恢复 C02-v3；[C251 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C252 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C253 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C254 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
 
 [接续筛选](发表成果整理/应用优势继续筛选.md)撤回C256/C257“经典方法无法分析”的强推荐：[C259](research/canonical/amplitude_classical_energy.md#eca-fixed99)有同窗全部驻点短经典能量证明。当前可采用设计应用为[C260-v2](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)：未知有界反Hermitian梯度混合、任意模式切换及全部隐式根，原真inf/同锚证书的共同半径提高到10⁻⁴，并另补指定固定/连续模式全域coverage。[C261-v3](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)排共同可定义/强链式locLip单状态ABS-H1/H2；C¹甚至H1自身不可能。但[C262](research/canonical/artificial_kl_energy_bridge.md#akb-theorem)人工非可定义KL能量可导入ABS，禁止全理论排除。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)给完整远纤维锐门Γ>26m−1≈9.0074及临界恰三输出。它仍是明确反馈设计原型：现成公开算法逐项映射、设备预算和公开优先未认证；不能宣称已满足主证明比原例更短的目标。主稿未替换，C241/C246/C251/C255原作用保留。
