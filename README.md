@@ -316,3 +316,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/code/free_particle_rleb/README.md](research/code/free_particle_rleb/README.md) | 上述Claim的实际参数、seed、边界与独立反算、Python版本和hash；两份运行结果用于复现有限算术，不作为普遍证明。 |
 | [research/canonical/artificial_kl_energy_bridge.md](research/canonical/artificial_kl_energy_bridge.md) | C262人工非可定义KL能量的完整ABS正面桥；禁止把C261的CR障碍扩大为整个ABS排除。 |
 | [research/canonical/orthogonal_feedback_critical_gate.md](research/canonical/orthogonal_feedback_critical_gate.md) | C263全n真实phase零吸收锐门及全部临界纤维，局部系数不能替代远门。 |
+| [research/canonical/generic_power_kl_bridge.md](research/canonical/generic_power_kl_bridge.md) | C266任意闭S、正确物理转接和qγ≥1的完整幂几何可编译共同KL–ABS；自然距离幂子区另给正面，不授全理论排除。 |
+| [research/canonical/optimization_proximal_limits.md](research/canonical/optimization_proximal_limits.md) | C267完整global-min prox解点calm阻断、Bregman零纤维及metric边界；C268自然非单射核的闭式完整纤维修正结构例。 |
+| [research/canonical/vector_fenchel_classical.md](research/canonical/vector_fenchel_classical.md) | C269原生向量FY完整驻点，全λ/allinput/allroot经典正面与物理有限长度；原f-H1失败不产生整体理论空白。 |
+| [research/canonical/gram_regression_gppa.md](research/canonical/gram_regression_gppa.md) | C270自然欠定矩阵回归、退化Gram核、共同物理证书、显式极限与锐1/3读出；经典正面并列，prox锐3/7未闭。 |
+| [最新应用筛选](发表成果整理/应用优势筛选_结构边界.md)、[规范接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md) | 本轮四轴评价、全关系攻击、经典正面淘汰、原例关键角色及具体改稿清单；强应用主例仍未找到。 |

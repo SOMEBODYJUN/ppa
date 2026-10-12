@@ -34,7 +34,11 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**当前应用选例。** [接续筛选](发表成果整理/应用优势继续筛选.md)撤回C256/C257“经典方法无法分析”的强推荐：[C259](research/canonical/amplitude_classical_energy.md#eca-fixed99)有同窗全部驻点短经典能量证明。当前可采用设计应用为[C260-v2](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)：未知有界反Hermitian梯度混合、任意模式切换及全部隐式根，原真inf/同锚证书的共同半径提高到10⁻⁴，并另补指定固定/连续模式全域coverage。[C261-v3](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)排共同可定义/强链式locLip单状态ABS-H1/H2；C¹甚至H1自身不可能。但[C262](research/canonical/artificial_kl_energy_bridge.md#akb-theorem)人工非可定义KL能量可导入ABS，禁止全理论排除。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)给完整远纤维锐门Γ>26m−1≈9.0074及临界恰三输出。它仍是明确反馈设计原型：现成公开算法逐项映射、设备预算和公开优先未认证；不能宣称已满足主证明比原例更短的目标。主稿未替换，C241/C246/C251/C255原作用保留。
+**当前应用选例。** [最新结构筛选](发表成果整理/应用优势筛选_结构边界.md)仍未找到同时满足现成任务、比原例短、完整非Lip与已认证强优势的主例。当前可采用设计应用仍为[C260-v2](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)：未知有界反Hermitian梯度混合、任意切换全部隐式根、R10⁻⁴共同真inf/同锚证书及指定模式coverage；[C261-v3](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)只排共同可定义/强链式locLip的H1/H2。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)远门不变。现成设备/参数预算/公开优先及主证明更短未认证，主稿不替换。C241解点noncalm/尾界和C246机制作用保留。
+
+本轮[C266-v1/v2](research/canonical/generic_power_kl_bridge.md#gpk-contract)把C262人工KL桥推广到任意闭S及正确物理转接的qγ≥1完整幂几何；禁止整个ABS排除，但它是新几何后的后验桥，不证明旧论文已先验处理任务。[C267](research/canonical/optimization_proximal_limits.md#opl-argmin)普遍阻断普通global-min prox的解点noncalm搜索；[C268](research/canonical/optimization_proximal_limits.md#opl-fenchel)自然非单射核逃出却一步完成，只作G3纤维修正结构例。[C269](research/canonical/vector_fenchel_classical.md#vfc-contraction)对非平凡向量候选给全λ/全root短经典正面，强推荐淘汰。[C270](research/canonical/gram_regression_gppa.md#grg-object)可作自然耦合Gram优化定量例：完整物理窗、显式未观测列极限、锐两点1/3读出；指定强凸核合同失败，但全域经典及原f-ABS正面并列，fixed-zero仍calm。一步prox最佳指数仅已证[1/3,3/7]，3/7上界开放。
+
+**下一应用门**：先固定真实任务、原算法与要新增的结论，再核旧定理的全部合同及同算法经典正面。停止普通global-min解点noncalm、非势/向量/退化镜像即优势和整个KL排除的无效诉求。可继续攻真实不确定政策下完整输出认证，或推进C270的精确一步两点指数/非zero数据原生Gram算法；后者不能提前升级为用户要求的强优势。任意变化核须重新定义coverage、Fix、完整零纤维和physicaltrueEB，不从固定核结果自动获得。
 
 同一候选的[C257参数族](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)已闭每个Γ>0的完全显式共同半径/真残差/最近锚/整窗/预算、锐最坏距离1/(1+Γ)及任意κ∈(1/(1+Γ),1)证书；Γ≤0必要门由精确圆零输入的额外完整输出给出，正Γ仍有中心零纤维和全局二周期。Γ↓0的充分半径O(Γ²)与中心出现上界O(Γ)间隙尚未优化，是当前参数前沿；不再把真实阻尼门列为未闭，也不把最大有限窗或全域盆域列为已闭。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 

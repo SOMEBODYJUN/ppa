@@ -3740,6 +3740,108 @@
       "label": "C265 RP²三次整管精确Hölder原预算及达等点对",
       "file": "canonical/rp2_explicit_completion.md#rec-exact-budget",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPK-CONTRACT",
+      "label": "C266完整幂几何、真残差物理桥与前向窗",
+      "file": "canonical/generic_power_kl_bridge.md#gpk-contract",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPK-SUBGRAD",
+      "label": "C266任意闭集射线与limiting最小范数",
+      "file": "canonical/generic_power_kl_bridge.md#gpk-subgradient",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPK-ABS",
+      "label": "C266后验共同KL–ABS桥",
+      "file": "canonical/generic_power_kl_bridge.md#gpk-abs",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPK-NATURAL",
+      "label": "C266自然距离幂的充分子区",
+      "file": "canonical/generic_power_kl_bridge.md#gpk-distance-power",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OPL-ARGMIN",
+      "label": "C267普通global-min完整prox解点calm",
+      "file": "canonical/optimization_proximal_limits.md#opl-argmin",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OPL-ZERO",
+      "label": "C267退化Bregman完整零纤维门",
+      "file": "canonical/optimization_proximal_limits.md#opl-bregman-zero",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FY-NULL-MODEL",
+      "label": "C268完整Fenchel一致性与非单射核",
+      "file": "canonical/optimization_proximal_limits.md#opl-fenchel",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FY-NULL-CERT",
+      "label": "C268同锚真EB与物理纤维修正",
+      "file": "canonical/optimization_proximal_limits.md#opl-fenchel-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "VFC-OBJECT",
+      "label": "C269向量FY全部驻点关系",
+      "file": "canonical/vector_fenchel_classical.md#vfc-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "VFC-NORMAL",
+      "label": "C269正常误差SPD之和收缩",
+      "file": "canonical/vector_fenchel_classical.md#vfc-contraction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "VFC-LENGTH",
+      "label": "C269全空间全部政策有限长度",
+      "file": "canonical/vector_fenchel_classical.md#vfc-length",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRG-OBJECT",
+      "label": "C270耦合Gram矩阵回归完整算法",
+      "file": "canonical/gram_regression_gppa.md#grg-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRG-CERT",
+      "label": "C270完整物理最近锚显式共同证书",
+      "file": "canonical/gram_regression_gppa.md#grg-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRG-LIMIT",
+      "label": "C270未观测列显式极限与锐1/3读出",
+      "file": "canonical/gram_regression_gppa.md#grg-limit",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRG-EXPONENT",
+      "label": "C270真实prox非Lip及[1/3,3/7]指数范围",
+      "file": "canonical/gram_regression_gppa.md#grg-prox-exponent",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRG-CLASSICAL",
+      "label": "C270同算法全域经典firm/逆模正面",
+      "file": "canonical/gram_regression_gppa.md#grg-classical",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FY-NULL-CONV",
+      "label": "C268全物理纤维有限长度与一步闭式极限",
+      "file": "canonical/optimization_proximal_limits.md#opl-fenchel-certificate",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9393,6 +9495,164 @@
       "scope": "原RP²半阶数据得到精确L0和完成上界94.53125，但不能决定L*=L0、严格gap或端点达到；方向8pi成本也不授Hölder gap。",
       "status": "derived-checked",
       "topic": "拓扑完成与预算"
+    },
+    {
+      "id": "E489",
+      "inputs": [
+        "GPK-CONTRACT"
+      ],
+      "output": "GPK-SUBGRAD",
+      "relation": "conditional",
+      "scope": "PK2/PK5–10固定同S/R和人工积分函数；有限维任意闭集最近射线，不要求正reach或唯一最近点。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E490",
+      "inputs": [
+        "GPK-CONTRACT",
+        "GPK-SUBGRAD"
+      ],
+      "output": "GPK-ABS",
+      "relation": "implies",
+      "scope": "同完整非空前向J、物理步界、trueEB-to-physicalstep、qγ≥1全部合取，构造共同H1/H2/KL并由几何供应H3；是后验桥，不说旧论文先验认证应用。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E491",
+      "inputs": [
+        "GPK-CONTRACT"
+      ],
+      "output": "GPK-NATURAL",
+      "relation": "conditional",
+      "scope": "另2γ≥1+1/q，d^(1+1/q)直接供应ABS；给定结构可定义须同时定义此实幂，不判门外无其他能量。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E492",
+      "inputs": [
+        "D04"
+      ],
+      "output": "OPL-ARGMIN",
+      "relation": "conditional",
+      "scope": "另固定proper-lsc f有finite全局最小和完整global argmin Euclidean prox；比较真实S_min给all-output fixed-min calm，不涵盖全部stationary根。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E493",
+      "inputs": [
+        "OPL-ZERO"
+      ],
+      "output": "PRG-COMMON",
+      "relation": "limits",
+      "scope": "完整GPPA G2/G3在p∈S∩U强制其完整S核纤维singleton；只有S⊂U才推全S injective，允许子关系另限输出。此门只是必要不是充分。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E494",
+      "inputs": [
+        "FY-NULL-MODEL"
+      ],
+      "output": "FY-NULL-CERT",
+      "relation": "implies",
+      "scope": "FY1–6 fullR²、S三次图、λ2；任意物理nearest同锚、真实EBId、a/ωId、h=3d^(1/3)，跨符号根和远完整纤维闭式穷尽。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E495",
+      "inputs": [
+        "FY-NULL-CERT",
+        "PRG-CONV"
+      ],
+      "output": "FY-NULL-CONV",
+      "relation": "conditional",
+      "scope": "C249以Uall/Rbar t1/κ.5导入完整finite长度；更强全空间一步结论由FY2直接证明，不由局部定理扩张。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E497",
+      "inputs": [
+        "VFC-OBJECT"
+      ],
+      "output": "VFC-NORMAL",
+      "relation": "implies",
+      "scope": "完整根最大原则后A≤3M²I及穿0可积D≥3/(5M²)I；N=(I+λA^-1+λD)q，q不是trueF残差。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E498",
+      "inputs": [
+        "VFC-OBJECT",
+        "VFC-NORMAL"
+      ],
+      "output": "VFC-LENGTH",
+      "relation": "implies",
+      "scope": "同算法全λ>0/全初值/全部stationary根；1/3与1/5全域逆模将正常误差几何尾提升为物理finite长度，全S完整吸收。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E500",
+      "inputs": [
+        "GRG-OBJECT"
+      ],
+      "output": "GRG-CERT",
+      "relation": "implies",
+      "scope": "纯Gram两列模型全部三次根唯一；λ10/U||b||<2/R1e-6，physicalnearest[0b] firm、a5t/ωψId/κ.5和全域inverse1/3供应C249前件；strictbudget单独限制初值。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E501",
+      "inputs": [
+        "GRG-CERT",
+        "PRG-CONV"
+      ],
+      "output": "GRG-LIMIT",
+      "relation": "conditional",
+      "scope": "同完整F/S和strictbudget，特别d0≤R,||b0||≤1；C249物理极限加守恒k得到显式读出。不声称allU_R无预算自动留域。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E502",
+      "inputs": [
+        "GRG-OBJECT"
+      ],
+      "output": "GRG-CLASSICAL",
+      "relation": "implies",
+      "scope": "全λ/全初值，核第二列恒定，首列firm给有界M/几何ρ，Graminverse全域1/3给完整physical有限长度；原f局部ABS也正面。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E503",
+      "inputs": [
+        "GRG-CLASSICAL"
+      ],
+      "output": "GRG-LIMIT",
+      "relation": "implies",
+      "scope": "全域原算法极限由核同胚和k守恒显式确定，bounded输入读出1/3锐；共同ρ依初始有界集。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E504",
+      "inputs": [
+        "GRG-OBJECT"
+      ],
+      "output": "GRG-EXPONENT",
+      "relation": "implies",
+      "scope": "真实唯一prox在bounded集有1/3上界；共线t7 balanced族排所有指数>3/7，3/7上界仍开放；fixed-zero calm与两点非Lip分开。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
     }
   ]
 }

@@ -140,3 +140,7 @@ C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从1
 ## C264/C265：RP² 实际完成与精确原管预算
 
 [rp2_explicit_completion/README.md](code/rp2_explicit_completion/README.md)记录完整公式实现、seed20261012、NumPy/Python版本、binary64容差、脚本SHA及实际results.json。35784项有限检查含内反向圈、固定轴交换子两项正交、actual raw余量1/4达等、整管三次完整输出、rho/1/4/3/2/2接缝、球外紧支撑、幅度正余量、有限全对界、不同rho/gamma原管精确达等和径向平方恒等式；Fraction反算有理预算。代码不证明全域一般量词，不求L*；解析证明与独立审查承担Claim。
+
+## Model-selection-limits · C266–C270
+
+入口 [`code/model_selection_limits/README.md`](code/model_selection_limits/README.md)，运行 `python3 research/code/model_selection_limits/verify.py`。seed266269，Fraction精确多项式/firm反例；420加权区间前缀、指数角点、49单空核反算、1440向量stationary反算、540Gram完整三次逆反算及缩放t⁷族。环境/实际脚本SHA记录于results.json。全称coverage/limiting/KL/无限政策/最佳指数由规范解析证明承担；C270锐3/7上界仍开放。代码通过不认证全球优先或强应用优势。

@@ -2312,3 +2312,51 @@
 - **Conclusion**：[C0]gamma,Nrho=(sqrt2+2rho(1−2rho²))/(sqrt2−2rho)^gamma；由两正交秩一基点的向内法向端点达到。固定rho1/8、gamma1/2的L0=(sqrt2+63/256)/sqrt(sqrt2−1/4)≈1.5351441898897367。
 - **Definitions / Dependencies / Evidence**：[EC16–22完整证明](research/canonical/rp2_explicit_completion.md#rec-exact-budget)，EC5真实法向弦、EC18径向平方恒等式及固定B后关于A单调；C234投影单值；[独立审查](research/audit/RP2_EXPLICIT_COMPLETION_REVIEW_2026_10_12.md)、[参数及达等反算](research/code/rp2_explicit_completion/README.md)。
 - **Counterevidence / Scope / Related Files**：精确原数据半范数不是全域保零完成常数；gamma1仅计算本紧管Lipschitz常数，不扩大全尺度次线性定理。C264给L0≤L*≤3025/32，但L*=L0、严格gap和端点达到仍开放。没有用随机优化结果证明全对上界或公开新颖性。
+
+<a id="c266"></a>
+## C266-v1 · 任意闭零集的完整平方几何 KL–ABS 桥
+
+- **Status**：`derived-checked`；任意闭集 inward-ray、medial-axis、多最近点、全部limiting值下界与最小值取得经独立规范全文冷读。公开优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维非空闭S，0<R<1，D⊂{d≤R}，完整J每输入非空且全部输出留D；同κ<1,C>0,D_*>0逐全部转移满足d₊≤κd、s²≤Cd、d₊≤D_*s²。同一个固定人工E=φ(dS)，稠密小区间上φ'=√t、外部1。
+- **Conclusion / Dependencies / Evidence**：E全域finite连续1-Lip、最小limiting norm恰√d（0<d≤R），统一H1/H2/KL1/2与全部政策H3，导入ABS Theorem2.9。[C266平方版](research/canonical/generic_power_kl_bridge.md#gpk-v1)、[闭集证明](research/canonical/generic_power_kl_bridge.md#gpk-subgradient)、[接收](发表成果整理/本轮模型筛选独立接收.md)及[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：桥依赖先认证完整几何和前向不变；有限长度已经由幂步长求和给出，不是旧论文先验供应应用。ordinary固定下界λ可由真EB2转接第三式，λ↓0不自动；不授一般GPPA物理转接、任意无限维或整个KL排除。
+
+<a id="c266-v2"></a>
+## C266-v2 · 一般完整幂几何的人工 KL 桥与自然距离幂子区
+
+- **Status**：`derived-checked`；加权微区间包括a<1、R端点跨窗、指数角点和全部H1/H2/H3经独立全文重建；实幂固定structure条件已修。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留有限维非空闭S及完整非空前向J；0<γ≤1,q>0,qγ≥1，b1/q、a=min(2γ,1+b)、θ=b/a≤.5；同窗d₊≤κd、s²≤Cd^(2γ)、d₊≤c r_F^q、r_F≤s/λ_*，λ_*>0。R<1另使t^b≤a t^(a−1)。
+- **Conclusion / Dependencies / Evidence**：[PK1–12](research/canonical/generic_power_kl_bridge.md#gpk-contract)构造同一finite连续proper-lsc E，最小limiting norm恰d^b，H1α=(1−ε−κ^a)/C、H2β=c^b/λ_*、统一KLθ与全部H3。2γ≥1+1/q时直接E₀=d^(1+1/q)供应合同，无需人工区间。[精确可定义性门](research/canonical/generic_power_kl_bridge.md#gpk-distance-power)、[接收](发表成果整理/本轮模型筛选独立接收.md)、[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：γ<.5的人工E一般在零边界非locLip，不能作为C261-v3范围反例。GPPA必须另供应物理r_F≤s/λ_*，不把kernelstep当physicalstep。自然距离幂在给定结构可定义要求该结构也定义此幂；q rational/S半代数可保持半代数。只给充分后验桥，不排qγ<1或门外其他能量，不认证工业自然性/公开优先。
+
+<a id="c267"></a>
+## C267-v1 · 完整global-min prox的解点calm阻断与Bregman零纤维门
+
+- **Status**：`derived-checked`；比较不等式、smooth nonfirm反例、非孤立乘积、Bregman支持等号与度量反算独立核；局部父定理必要门已修为p∈S∩U。
+- **Exact Statement / Objects / Domain / Quantifiers**：proper-lsc f有非空S_min和有限f_*；任意固定λ>0的完整Euclidean global argmin Tλ，全输入非空紧、全部输出s²+2λ(f(y)−f_*)≤d_Smin(x)²。对每个固定p∈S_min有sup_y||y−p||≤2||x−p||。
+- **Conclusion / Dependencies / Evidence**：不能提供global-min解点的点态非calm机制；不等于firm、所有输入对Lip或完整stationary关系。convex C¹ h的完整Bregman argmin在p的纤维恰S_min∩v⁻¹(vp)。完整GPPA的C249输入吸收要求p∈S∩U的核纤维无其他S点。[OP1–5](research/canonical/optimization_proximal_limits.md#opl-argmin)、[metric范围](research/canonical/optimization_proximal_limits.md#opl-metric)、[接收](发表成果整理/本轮模型筛选独立接收.md)和[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：S_min通常不等于zer∂f，Hamilton额外momentum tilt、退化Bregman和非uniform metric不在OP2阻断范围。正定族若无统一上下界不可宣称共同calm/长度；一般时变核收敛仍未认证。不是排除全部自然优化nonLip例。
+
+<a id="c268"></a>
+## C268-v1 · Fenchel–Young优化的完整非单射核与必要物理纤维修正
+
+- **Status**：`derived-checked`；完整闭式J、fullS/trueEB、全符号根界、同一最近物理锚及全部C249常数独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers**：R²，f=3|x|^(4/3)/4+s⁴/4−xs，完整F=∇f、S={(c³,c)}，v=(x,0)，λ2、输入域全空间；完整GPPA与完整Bregman argmin同为唯一(a,cuberoot a)。
+- **Conclusion / Dependencies / Evidence**：全域真实EB d≤r_F，Uall、Rbar t1、a/ω/ψId、κ.5、h(t,q)=3t^(1/3)，Θ=3t^(1/3)/(1−2^(-1/3))完整认证C249。映射原点最佳点态1/3；所有轨道一步到S并驻定，精确物理长度|b−cuberoot a|。[FY1–6](research/canonical/optimization_proximal_limits.md#opl-fenchel)、[证书](research/canonical/optimization_proximal_limits.md#opl-fenchel-certificate)、C249和[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：核位移恒0而physicalstep可非0，排η(Δv)纯inverse提升，h的d项真实必要。自然优化来源但为一次consistency结构例，直接解已闭，不作为强应用优势。充分EB1不是sharp最大幂宣告，输出全零残差不创造sharp指数。其他S点局部Lip，非全尺度统一1/3。
+
+<a id="c269"></a>
+## C269-v1 · 向量Fenchel–Young完整stationary GPPA的全空间经典正面
+
+- **Status**：`derived-checked`；两种独立证明及实际规范全文冷读覆盖allλ/allinput/allroot、穿0secant、正常误差收缩与物理可和尾。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意n≥1，f=3||x||^(4/3)/4+||s||⁴/4−⟨x,s⟩，F=∇f，h=||x||²/2+||s||⁶/6，v=(x,||s||⁴s)，S={(||c||²c,c)}；任意固定λ>0，完整GPPA全输入coverage且保留真实非极小根。
+- **Conclusion / Dependencies / Evidence**：fullroot max M不增；N=a−B(b)、q=B(r)−B(s)≠r_F，N=(I+λA⁻¹+λD)q，A≤3M²I、D≥3/(5M²)I，ρ_M=(1+14λ/(15M²))⁻¹。所有完整轨道有限长度并趋S，全S零纤维singleton，VF9给明确1/3与1/5两几何尾。[VF1–9](research/canonical/vector_fenchel_classical.md#vfc-object)、[接收](发表成果整理/本轮模型筛选独立接收.md)、[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：原目标二次H1确失败，不妨碍短经典secant/逆模正面，故淘汰强优势推荐。率依有界初值，不授非紧S上的统一全局ρ、全部轨道闭式或任意时变度量。此证明为本轮推导，不假称已发表同式定理，不认证公开优先。
+
+<a id="c270"></a>
+## C270-v1 · 耦合Gram核矩阵回归的完整物理证书与显式极限
+
+- **Status**：`derived-checked`；两种独立全域/局部证明、实际规范全文冷读核完整三次唯一根、nearest锚、原真EB、inverse模和读出指数；不认证公开优先。
+- **Exact Statement / Objects / Domain / Quantifiers**：m≥2，X=R^(m×2),Z=[a b]，f=.5||a||²、F=[a0]、完整S={[0b]}、r_F=d=||a||；h=tr((ZᵀZ)²)/4、v=ZZᵀZ。完整GPPA=唯一全局Bregman argmin，任意λ>0全输入coverage。
+- **Conclusion / Dependencies / Evidence**：λ10,U||b||<2,R10⁻⁶,bar t1,a_scale5t,ω/ψId,κ.5,hphys2q^(1/3)，ΘR<.167；同一物理最近P=[0b]全部G1–G5及strictbudget认证，特别d₀≤R,||b₀||≤1。极限[0,B3⁻¹(k₀)]，k₀=(a₀·b₀)a₀+||b₀||²b₀，读出两点1/3锐。一步prox两点至少有1/3上界，指数>3/7不可能，全3/7上界未闭。[GR1–10](research/canonical/gram_regression_gppa.md#grg-object)、C249、[接收](发表成果整理/本轮模型筛选独立接收.md)、[复算](research/code/model_selection_limits/README.md)。
+- **Counterevidence / Scope**：fixed-zero仍calm，不能替代C241根noncalm角色。指定BSTV2017强凸核前件失败，但经典firm+逆核已有全λ全初值有限长度，局部原f也满足ABS；只作免指定前件的自然定量应用，不作强独占优势。Gram文献背景含正二次项，与本纯Gram算法不同；添加σ项会改变不变量和真实读出，不自动授任意变化度量。

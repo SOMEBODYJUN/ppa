@@ -474,3 +474,20 @@ Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Th
 ## RP² 边界同伦路线核查的精确来源
 
 Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/VIGRE/VIGRE2011/REUPapers/Bosshardt.pdf), 2011-08-26，Theorem4.16，印页19/PDF第19页（零基pageno18）：compact、connected、oriented、closed n-manifold到S^n的smooth maps以degree分类smooth homotopy。本轮已读取该定理及其上下文；它只解释次数匹配的定性意义，不提供同伦常数。C264的实际RP²公式用自足旋转正交恒等式，不承重导入其定量结论；不能据此认证新公式公开首次发表。
+<a id="lit-complete-model-selection"></a>
+## 自然应用筛选的一手正面门
+
+**Paper fact（直接读取）**：Scutari–Facchinei–Pang–Palomar，*Real and Complex Monotone Communication Games*，IEEE TIT60(7),4197–4231(2014)，[正式35页作者PDF](https://palomar.home.ece.ust.hk/papers/2014/ScutariFacchineiPangPalomar_TIT14_monotoneMIMO.pdf)，Example9印页4204，Algorithm1/Theorem10印页4205，Proposition42印页4223–4224。原定理对P_Υ游戏给满足A1–A3的原最佳响应收敛；Proposition42给weightedblock收缩。协调者实际打开上述段，不导入一般非P_Υ算法。
+
+**本轮推导/精确映射**：原Example9的同步BR为(将−4x₂投影至区间0至10,x₁/8)，weightedmax权(4√2,1)的收缩1/√2，实际全Q三步到0；Υ非空principal minors1,1,.5。它是显式BR不是PPA。完整T=Ax+N_Q的真残差与所选图值、实际步长不同，不能偷换。此正面淘汰该候选，不作所有非势游戏已被覆盖的宣告。
+
+**Paper fact（直接复核）**：[ABS2010-12-15作者稿](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf) §2.3印页8 H1/H2/H3与Theorem2.9印页12：proper-lsc、selected limiting次梯度、cluster点处KL，不要求可定义或locLip。C266的dense积分和任意闭集射线为本仓库新推导；旧论文没有据此先验认证任何本轮应用。
+
+<a id="lit-gram-degenerate"></a>
+## Gram核背景与指定强凸核合同
+
+**Paper fact（直接读取）**：Dragomir–d’Aspremont–Bolte，*Quartic First-Order Methods for Low-Rank Minimization*，[2021-01-18作者稿](https://arxiv.org/pdf/1901.10791)，17页PDF，§2.3.2 Eq.(10)的Gram核含正二次项σ>0和Gram四次项，Eq.(12)给相应Hessian。只将四次项用作原生矩阵几何背景；C270的σ=0纯Gram核及欠定线性回归是另行固定的对象，不说原文已经实施本完整算法。
+
+**Paper fact（直接读取）**：Bolte–Sabach–Teboulle–Vaisbourd，*First Order Methods beyond Convexity and Lipschitz Gradient Continuity with Applications to Quadratic Inverse Problems*，[arXiv1706.06461v1](https://arxiv.org/pdf/1706.06461)，PDF头20Jun2017、正文21Jun2017；§4.2 AssumptionD(i)物理第10页要求σ-strongly convex h，Theorem4.1物理第11页和Eq.(4.7)使用它。其Eq.(3.4)为完整Bregman近端梯度步。
+
+**本轮映射/限制**：取该文f为C270的.5||a||²、g0、h纯Gram，Eq.(3.4)即C270完整算法；g0允许任意L>0，可取λL=.5。完整子问题supercoercive、所有函数适当连续、dom全空间、grad在有界集Lip、f-KL及实际轨道有界均可核。唯独正强凸核在每个S点有零Hessian方向而失败，故该指定Theorem4.1不能直接套。C270仍有独立经典全域有限长度及原f局部ABS正面；不能宣称整个Bregman/ABS排除。增加σ项改变真实不变量和readout，不能当同算法的形式重述。

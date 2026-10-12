@@ -1,0 +1,147 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": 266269,
+  "argmin_exact": {
+    "shifted_derivative_coefficients": [
+      "-1/4",
+      "-1/2",
+      "0",
+      "4"
+    ],
+    "quadratic_discriminant": "-4",
+    "firm_product": "-3/8"
+  },
+  "exponent_corners": [
+    {
+      "gamma": "1/100",
+      "q": "100",
+      "a": "1/50",
+      "b": "1/100",
+      "theta": "1/2",
+      "R": 0.009612551660300249
+    },
+    {
+      "gamma": "1/5",
+      "q": "5",
+      "a": "2/5",
+      "b": "1/5",
+      "theta": "1/2",
+      "R": 0.15905414575341015
+    },
+    {
+      "gamma": "1/2",
+      "q": "2",
+      "a": "1",
+      "b": "1/2",
+      "theta": "1/2",
+      "R": 0.5
+    },
+    {
+      "gamma": "2/3",
+      "q": "3/2",
+      "a": "4/3",
+      "b": "2/3",
+      "theta": "1/2",
+      "R": 0.5
+    },
+    {
+      "gamma": "3/4",
+      "q": "2",
+      "a": "3/2",
+      "b": "1/2",
+      "theta": "1/3",
+      "R": 0.5
+    },
+    {
+      "gamma": "1",
+      "q": "1",
+      "a": "2",
+      "b": "1",
+      "theta": "1/2",
+      "R": 0.5
+    },
+    {
+      "gamma": "1",
+      "q": "1000",
+      "a": "1001/1000",
+      "b": "1/1000",
+      "theta": "1/1001",
+      "R": 0.5
+    }
+  ],
+  "weighted_interval_prefix_checks": 420,
+  "one_step_fy_back_substitutions": 49,
+  "nearest_curve_finite_checks": 27,
+  "vector_stationary_reverse_checks": 1440,
+  "max_relative_reverse_error": 4.7441988581841245e-15,
+  "natural_quadratic_H1_counter_family": [
+    {
+      "t": 0.1,
+      "input_gap_over_step2": 0.0745035950909905,
+      "b_over_t": 1.3200360174291517
+    },
+    {
+      "t": 0.03,
+      "input_gap_over_step2": 0.006684084105064986,
+      "b_over_t": 1.3195554155159794
+    },
+    {
+      "t": 0.01,
+      "input_gap_over_step2": 0.0007424111980127275,
+      "b_over_t": 1.3195131888338303
+    },
+    {
+      "t": 0.003,
+      "input_gap_over_step2": 6.681424429443473e-05,
+      "b_over_t": 1.319508385796993
+    },
+    {
+      "t": 0.001,
+      "input_gap_over_step2": 7.4237778659892375e-06,
+      "b_over_t": 1.3195079637430418
+    }
+  ],
+  "gram_stationary_reverse_checks": 540,
+  "gram_Theta_R": 0.16577608399960372,
+  "gram_t7_reverse_family": [
+    {
+      "t": 0.2,
+      "U": 0.09999935827328635,
+      "V": 0.9966667232045479,
+      "pair_input_distance": 1.2800000000000005e-05,
+      "output_second_column": 0.007973333785636385
+    },
+    {
+      "t": 0.1,
+      "U": 0.09999998996665631,
+      "V": 0.9966666797227138,
+      "pair_input_distance": 1.0000000000000004e-07,
+      "output_second_column": 0.000996666679722714
+    },
+    {
+      "t": 0.03,
+      "U": 0.09999999999268562,
+      "V": 0.9966666790539849,
+      "pair_input_distance": 2.1869999999999995e-11,
+      "output_second_column": 2.6910000334457588e-05
+    },
+    {
+      "t": 0.01,
+      "U": 0.09999999999998997,
+      "V": 0.996666679053498,
+      "pair_input_distance": 1.0000000000000002e-14,
+      "output_second_column": 9.966666790534982e-07
+    },
+    {
+      "t": 0.003,
+      "U": 0.1,
+      "V": 0.9966666790534973,
+      "pair_input_distance": 2.1870000000000004e-18,
+      "output_second_column": 2.6910000334444425e-08
+    }
+  ],
+  "gram_work_window_boundary_checks": 15,
+  "scope": "Finite arithmetic only: no certification of all fibers, limiting subgradients, KL, infinite trajectories, optimal exponents, or priority. Universal conclusions are analytic in the canonical texts.",
+  "script_sha256": "6190687d92d531b71836309a5693b8c05bbfba28701dede118dfd9e280006a06"
+}

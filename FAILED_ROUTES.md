@@ -587,3 +587,21 @@
 - **具体断点**：[EC23](research/canonical/rp2_explicit_completion.md#rec-failure)完整分类反向集合为q垂直q0、nu=(m0−m)/sqrt2的一条RP¹；直线插值在中点精确为零。缩小collar或有限随机点未遇零不能修复。
 - **Honest salvage**：[C264](research/canonical/rp2_explicit_completion.md#rec-construction)加入同时垂直法向与锚点弦的旋转交换子，实际物理raw余量1/4，得到实际保零完成。指定宽1/8且两端迹为g/e0的方向成本至少8pi；它是该方案的下界，不是L*>L0。
 - **重启门 / 可复用信息**：按EC24联合优化幅度与方向的真实位移差商；C265已给精确原L0，后续严格gap须针对全部同预算完成，不能只排这个collar。
+
+<a id="f85"></a>
+## F85 · 从普通global-min prox寻找解点非calm主例
+
+- **普遍阻断**：[C267 OP2/3](research/canonical/optimization_proximal_limits.md#opl-argmin)对所有proper-lsc有global minimum的目标、全部argmin输出给step≤d和fixed-min点态calm常数2；非孤立S或非凸目标不逃出。
+- **准确范围与重启门**：不排所有输入对nonLip，不排退化Bregman、额外动量输入或无统一正下界metric。必须区分S_min与完整critical零集。step≤d不等于firm，OP4给smooth反例。C268自然非单射核是合法逃出，却一步求解，不能作为强困难应用。
+
+<a id="f86"></a>
+## F86 · 用普通幂RLEB几何排除整个KL–ABS理论
+
+- **一般正面反证**：[C266-v2](research/canonical/generic_power_kl_bridge.md#gpk-contract)对有限维任意非空闭S、同一完整前向关系的distance contraction、power step及正确trueEB-to-physicalstep桥构造共同人工KL能量，H1/H2/H3全闭；qγ≥1的准确充分范围公开。
+- **修正**：只能比较具体先验合同/自然强链式共同能量及任务认证成本。人工能量依赖已经取得的新几何，不是旧论文原先解决应用；GPPA不能将kernelstep等同physicalstep，qγ<1/无λ下界/无限维都不由此判无桥。自然距离幂子区另有普通KL正面。
+
+<a id="f87"></a>
+## F87 · 向量化、Gram耦合或退化镜像被误写为经典方法空白
+
+- **同算法正面**：[C269](research/canonical/vector_fenchel_classical.md#vfc-contraction)把正常误差重组为SPD之和，给所有λ/初值/驻点根全域有限长度；原f二次H1失败也不阻止该短证明。[C270](research/canonical/gram_regression_gppa.md#grg-classical)的守恒核列+firm恒等式+全域1/3逆模同样给全λ全初值完整正面，原二次目标局部ABS也通过。
+- **保留与边界**：C270的原生矩阵kernel和实际未观测列读出有定量应用价值，指定旧强凸核合同确失效；fixed-zero仍calm、prox锐3/7未闭，不能包装强优势或原Hamilton替代。现成非势game的weightednormBR正面及follower-load的modifiedenergy另见[本轮筛选](发表成果整理/应用优势筛选_结构边界.md)。自然模型和某个旧门失败不足以宣称整个旧理论不能分析。
