@@ -696,6 +696,8 @@
 | E436 | [TCB-GLOBAL · C235 全域距离趋近经真回缩强迫可缩](canonical/zero_preserving_completion.md#zpc-global) ∧ [RLEB-EULER · C244 局部RLEB供给整管与Euler必要性](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | conditional → [RLEB-SINGLE · C244 额外全初值吸引强迫单点](canonical/rleb_kernel_topology_interfaces.md#rkt-euler) | C244另加对每个全空间初值到同一S距离趋零；已有前向不变投影管和T\|S=Id使有限覆盖给共同入管时刻，ΠT^m为真回缩，闭流形顶同调排除正维。；**derived-checked** |
 | E437 | [TCB-DATA · 光滑整管吸引与Holder完成合同](canonical/topological_completion_balance.md#tcb-contract) | conditional → [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | 固定连通管外、整管 C0/D0 Lipschitz 和边界方向；若给定单位方向 Lipschitz 延拓 Ke、正幅度 Ka/A 与几何拼接常数 GW，则分片完成保整管保零并有显式 γ-Hölder 上界；不提供 Ke/GW 的最优或可计算值。；**derived-checked** |
 | E438 | [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | 预算桥把拓扑方向延拓量化为有限上界，但不关闭 RP² 原预算 L*=L0、端点达到或严格gap；这些仍需真实方向/覆盖证书。；**derived-checked** |
+| E467 | [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | conditional → [SSC-BRIDGE · C258 有限单纯形球值方向证书](canonical/simplicial_sphere_budget_certificate.md#ssc-object) | 给定边界保持双 Lipschitz 参数化、顶层仿射三角剖分、球值顶点、公共半球余量、重心梯度与内在路径常数；归一化重心插值给 Ke≤CΦ GT QT/ηT，并要求精确边界迹或显式 collar。；**derived-checked** |
+| E468 | [SSC-BRIDGE · C258 有限单纯形球值方向证书](canonical/simplicial_sphere_budget_certificate.md#ssc-object) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | C258 只把 Ke 降为有限证书接口；RP² 实际参数化、剖分、半球余量和 collar 尚未给出，故不关闭 L*=L0 或端点达到。；**derived-checked** |
 
 ## 完整近端示例与核边界
 

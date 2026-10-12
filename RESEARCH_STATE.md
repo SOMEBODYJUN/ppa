@@ -38,7 +38,7 @@
 
 同一候选的[C257参数族](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)已闭每个Γ>0的完全显式共同半径/真残差/最近锚/整窗/预算、锐最坏距离1/(1+Γ)及任意κ∈(1/(1+Γ),1)证书；Γ≤0必要门由精确圆零输入的额外完整输出给出，正Γ仍有中心零纤维和全局二周期。Γ↓0的充分半径O(Γ²)与中心出现上界O(Γ)间隙尚未优化，是当前参数前沿；不再把真实阻尼门列为未闭，也不把最大有限窗或全域盆域列为已闭。
 
-**完成预算主线的下一动作。** 按[BG16](research/canonical/completion_budget_gate.md#cbg-next)冻结同一RP²原数据，先找可推进L0+ε健壮证书的解析不等式与可认证覆盖；不把精确L0数值当独立终点。新增[C245](research/canonical/lipschitz_obstruction_budget.md#lob-object)给出一条条件预算桥：先构造/认证边界单位方向的 Lipschitz 延拓 \(K_e\)（优先做带边界三角剖分/分片测地插值）和几何拼接常数 \(G_W\)，再把它转为有限 Hölder 上界。下确界、端点达到、严格gap分开；没有统一不等式时转有证书的新L显式模型，单矩阵共轭模板和普通有限forced-zero已停止。
+**完成预算主线的下一动作。** 按[BG16](research/canonical/completion_budget_gate.md#cbg-next)冻结同一RP²原数据，先找可推进L0+ε健壮证书的解析不等式与可认证覆盖；不把精确L0数值当独立终点。C245给出条件预算桥，C258进一步要求边界保持双 Lipschitz 参数化、有限半球余量、重心梯度、路径常数和精确/胶囊边界同伦；下一步优先构造 RP² 的真实这些数据，再把得到的 \(K_e\) 代入 C245。下确界、端点达到、严格gap分开；没有统一不等式时转有证书的新L显式模型，单矩阵共轭模板和普通有限forced-zero已停止。
 
 **外部收敛比较的当前完成门。** [8月GPPA/NFB比较](research/comparisons/2026_08_gppa_nfb/COMPARISON.md#verdict-table)已复核固定v1：C199/C202是真实非单调重合，物理几何尾自动有限长。C204把C200完整标量双支障碍加强到任意无正则性配对单调核；但C205–C207又构造保零集子关系，分别将cap、C141小尾和a>1对数尾的原物理轨道导入GPPA。**完整图表示不涵盖不等于收敛不能借外文证明**；cap/超线性T2物理率需显式不变量桥，log T1物理有限长需额外可和尾桥。C201任意同空间NFB拆分及C203指定标准full-graph lift的必要二次锚仍成立。C197只限制无物理桥的核率推断。本轮[C208–C214](research/canonical/generalized_ppa_modulus.md)已完成固定核完整 GPPA 的一般 RL+真EB统一定理及源 T2 核包含；仍未解决一般C191/C192全部核/子关系分类、任意其它保真lift、精确尾和选择锐模先行性、Spingarn等其它框架。附件是全尺度次线性结构稿，上述无界零片例不在其类中；Ciosmak/Levy–Rice/Ajiev等结构线逐定理先行性另核。10/06 KKT稿仍为凸复合真EB候选接口，总体规模、秩亏和来源覆盖未关闭。
 

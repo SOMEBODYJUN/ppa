@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "two_dimensional": {
+    "Q": 3.414213562373095,
+    "eta": 0.7071067811865476,
+    "G": 1.4142135623730951,
+    "Lip_bound": 6.828427124746189
+  },
+  "five_dimensional": {
+    "Q": 7.23606797749979,
+    "eta": 0.8944271909999159,
+    "G": 1.0,
+    "Lip_bound": 8.090169943749475
+  },
+  "collar": {
+    "mu_c": 0.9921567416492215,
+    "Lip_bound": 9.575099982900422
+  },
+  "invalid_margin_test": "rejected",
+  "invalid_eta_and_witness_tests": "rejected",
+  "invalid_collar_width_tests": "rejected",
+  "limitations": "Toy certificates only; no RP2 triangulation, exact boundary collar, or L*=L0 claim."
+}

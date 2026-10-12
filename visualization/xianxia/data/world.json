@@ -7544,6 +7544,17 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "SSC-BRIDGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -9410,6 +9421,14 @@
     "E466": {
       "x": 675.96,
       "y": 4103.9
+    },
+    "E467": {
+      "x": 1045.22,
+      "y": 4416.88
+    },
+    "E468": {
+      "x": 4744.93,
+      "y": 3151.21
     }
   },
   "bounds": {

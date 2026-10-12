@@ -3644,6 +3644,12 @@
       "label": "C255同物理最近锚的直接父定理接口",
       "file": "canonical/perspective_bregman_gppa.md#pbg-physical-parent",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SSC-BRIDGE",
+      "label": "C258 有限单纯形球值方向证书",
+      "file": "canonical/simplicial_sphere_budget_certificate.md#ssc-object",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9045,6 +9051,28 @@
       "scope": "物理U=R×(.75,1.25)、R10^−9、lambda4、a2r、omegaId、h3q^1/3、真实psiId、kappa1/2；完整输入及全部输出先验在逆模W，同物理最近锚保留−p0²/2第二分量。初值|t0−1|≤1/8给Theta(R)<39/2000<1/8严格留域。不恢复已撤回的优势推荐。",
       "status": "derived-checked",
       "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E467",
+      "inputs": [
+        "LOB-BRIDGE"
+      ],
+      "output": "SSC-BRIDGE",
+      "relation": "conditional",
+      "scope": "给定边界保持双 Lipschitz 参数化、顶层仿射三角剖分、球值顶点、公共半球余量、重心梯度与内在路径常数；归一化重心插值给 Ke≤CΦ GT QT/ηT，并要求精确边界迹或显式 collar。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E468",
+      "inputs": [
+        "SSC-BRIDGE"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "C258 只把 Ke 降为有限证书接口；RP² 实际参数化、剖分、半球余量和 collar 尚未给出，故不关闭 L*=L0 或端点达到。",
+      "status": "derived-checked",
+      "topic": "全局完成与拓扑"
     }
   ]
 }
