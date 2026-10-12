@@ -59,7 +59,7 @@ SC6 只控制 \(t=0\) 的边界迹；若 \(\Psi(x,0)=x\)，并且 \(K_{\widehat 
 在 \(t=\delta\) 处取 \(\chi=1\)，故 \(E\) 与内部的 \(e_\mathcal T\circ\Phi^{-1}\) 取相同迹；在 \(t=0\) 处取 \(\chi=0\)，故原边界值 \(g\) 被精确保留。
 
 SC4–SC6 的估计如下：对单位向量 \(a,b\) 有
-\(\|(1-s)a+sb\|^2=1-2s(1-s)(1-\langle a,b\rangle)\ge1-\varepsilon^2/4\)，得到 \(\mu_c\)。对 collar 坐标中的 \(H\)，原始向量的切向导数由 \(K_g+K_{\widehat g}\) 控制，\(t\) 导数由 \(\varepsilon/\delta\) 控制；归一化导数范数不超过 \(1/\mu_c\)，再乘 \(C_\Psi\) 得 SC5。边界单纯形内，若其顶点标签确实取为原边界数据 \(y_v=g(\Phi(v))\)，并置 \(q=\sum_i\lambda_i g(\Phi(v_i))\)，则 \(\|q-g(x)\|\le K_g h_{\rm phys}\)、\(\|q\|\ge1-K_g h_{\rm phys}\)，且 \(\|q/\|q\|-g(x)\|\le2\|q-g(x)\|/\|q\|\)，得到 SC6。
+\(\|(1-s)a+sb\|^2=1-2s(1-s)(1-\langle a,b\rangle)\ge1-\varepsilon^2/4\)，得到 \(\mu_c\)。对 collar 坐标中的 \(H\)，原始向量的切向导数由 \(K_g+K_{\widehat g}\) 控制，\(t\) 导数由 \(\varepsilon/\delta\) 控制；归一化导数范数不超过 \(1/\mu_c\)，再乘 \(C_\Psi\) 得 SC5。边界单纯形内，若其顶点标签确实取为原边界数据 \(y_v=g(\Phi(v))\)，对物理点 \(x=\Phi(\hat x)\) 置 \(q(x)=\sum_i\lambda_i(\hat x) g(\Phi(v_i))\)，则 \(\|q-g(x)\|\le K_g h_{\rm phys}\)、\(\|q\|\ge1-K_g h_{\rm phys}\)，且 \(\|q/\|q\|-g(x)\|\le2\|q-g(x)\|/\|q\|\)，得到 SC6。
 
 **证明。** 对 \(x\in\sigma\) 置 \(z(x)=\sum_i\lambda_i^\sigma(x)y_{v_i}\)。由 (SC1) 和重心坐标非负且和为 1，
 \[
