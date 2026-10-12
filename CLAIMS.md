@@ -2360,3 +2360,12 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：m≥2，X=R^(m×2),Z=[a b]，f=.5||a||²、F=[a0]、完整S={[0b]}、r_F=d=||a||；h=tr((ZᵀZ)²)/4、v=ZZᵀZ。完整GPPA=唯一全局Bregman argmin，任意λ>0全输入coverage。
 - **Conclusion / Dependencies / Evidence**：λ10,U||b||<2,R10⁻⁶,bar t1,a_scale5t,ω/ψId,κ.5,hphys2q^(1/3)，ΘR<.167；同一物理最近P=[0b]全部G1–G5及strictbudget认证，特别d₀≤R,||b₀||≤1。极限[0,B3⁻¹(k₀)]，k₀=(a₀·b₀)a₀+||b₀||²b₀，读出两点1/3锐。一步prox两点至少有1/3上界，指数>3/7不可能，全3/7上界未闭。[GR1–10](research/canonical/gram_regression_gppa.md#grg-object)、C249、[接收](发表成果整理/本轮模型筛选独立接收.md)、[复算](research/code/model_selection_limits/README.md)。
 - **Counterevidence / Scope**：fixed-zero仍calm，不能替代C241根noncalm角色。指定BSTV2017强凸核前件失败，但经典firm+逆核已有全λ全初值有限长度，局部原f也满足ABS；只作免指定前件的自然定量应用，不作强独占优势。Gram文献背景含正二次项，与本纯Gram算法不同；添加σ项会改变不变量和真实读出，不自动授任意变化度量。
+
+<a id="c271"></a>
+## C271-v1 · 仿射跨轴调节的完整鲁棒近端、经典正面和度量反例
+
+- **Status**：`derived-checked`；多位ultra独立重建真实标量逆、P0伪根修补、同窗全纤维、真inf、sharp族、全域机械能及SPD全部zero根，最终实际规范全文冷读绑定于接收回执。
+- **Exact Statement / Objects / Domain / Quantifiers**：X=R²×R²，g=sgnr√|r|、h(p)=p/√||p||且h0；完整F={(−h,10p+g(e_n+δe_t)):δ∈[−1,1]}，完整S={(s e_t,0)}、λ1、全空间输入。固定signedgain全输入恰一根，由AC2真实Φδ逆给完整纤维；原union全参数连续紧纤维，非collapse时真实多值。连续状态gain另Brouwer给每input根，全部嵌入原J。
+- **Conclusion / Dependencies / Evidence**：Uall,R10⁻⁴,γ.5,L1,ψ1.6ρ²,bar t.006,κ.5；同物理nearest、原unionρ公式、全窗K(R).00505/compat.40804和严格预算，全部原J政策局部有限长度。sharp缩管√2/11、锚渐近2sqrt(√2/11)、EB最大幂2/渐近coef1、解点prox最佳.5；自由轨道闭式，初始静止固定gain终点a_t−δa_n。C¹共同平方H1不可能，locLip strong-CR共同H1/selected-H2亦不可能；C266人工KL边界保留。[AC1–12](research/canonical/affine_crosstalk_rleb.md#acr-object)、C02-v3、[本轮接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md)。
+- **Classical positive / Scope**：AC10不借新锚几何，原机械E全域Δ≥B^(3/2)/9+5P^(3/2)/6，所有有限初值、全部切换/完整政策eventual几何能量和全物理finite length。设计任务功能更清楚，但仍正交反馈Hamilton的仿射特例，不是新机制/现成设备/困难优化solver，不能作经典无法分析的强主例。全对RL、全输入对Hausdorff指数、每positiveΓ充分性和公开优先未认证。
+- **Counterevidence / Parameter / Metric**：另绑定FΓ：A1+Γ>0完整zero吸收，A0无全输入coverage，A<0 AC12两条远曲线；Γ≤0的自由轨道/normal二周期实际否定全域结论，不仅凭不吸收推不收敛。原F换固定SPD M后Fix仍S且coverage，完整zero fiber却恰0及±(88/1849,0,4/1849,0)，pt1/400每步位置增1/20是真合法漂移。任意PD/时变核不默认保留结论。

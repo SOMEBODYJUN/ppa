@@ -3842,6 +3842,66 @@
       "label": "C268全物理纤维有限长度与一步闭式极限",
       "file": "canonical/optimization_proximal_limits.md#opl-fenchel-certificate",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-OBJECT",
+      "label": "C271仿射rail完整跨轴不确定场",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-FIBER",
+      "label": "C271真实scalar逆与各模式完整coverage",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-fiber",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-TRUE",
+      "label": "C271原union真inf与平方EB",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-residual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-CERT",
+      "label": "C271最近零锚及完整共同窗",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-CONV",
+      "label": "C271全部原政策有限长度",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-SHARP",
+      "label": "C271锐系数与政策精确终点",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-CLASSIC",
+      "label": "C271更强全域自然机械能正面",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-classical",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-ENERGY-BARRIER",
+      "label": "C271共同C1/strongCR平方能量合同障碍",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-energy-contract",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-METRIC",
+      "label": "C271固定SPD完整zero3与真实漂移",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-metric",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ACR-CRITICAL",
+      "label": "C271全参数零纤维与实际负参数反例",
+      "file": "canonical/affine_crosstalk_rleb.md#acr-critical",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9651,6 +9711,107 @@
       "output": "GRG-EXPONENT",
       "relation": "implies",
       "scope": "真实唯一prox在bounded集有1/3上界；共线t7 balanced族排所有指数>3/7，3/7上界仍开放；fixed-zero calm与两点非Lip分开。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E505",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-FIBER",
+      "relation": "implies",
+      "scope": "AC2未乘分母Φ含P0；signedδ固定模式全域唯一，union参数完整多值；连续state-law另原p场Brouwer覆盖，不授不连续law。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E506",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-TRUE",
+      "relation": "implies",
+      "scope": "原F全gain区间投影给AC4真正inf；P+(g+10pn)^2≤rho²供应AC5，不把单mode残差等同union。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E507",
+      "inputs": [
+        "ACR-FIBER",
+        "ACR-TRUE"
+      ],
+      "output": "ACR-CERT",
+      "relation": "conditional",
+      "scope": "主Γ10/λ1，Uall/R1e-4/L1/γ.5/ψ1.6rho²/bar.006/κ.5，同physicalnearest和全图输入block认证。RL仅零锚对，不偷授全对。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E508",
+      "inputs": [
+        "ACR-CERT",
+        "TRS-FINITE"
+      ],
+      "output": "ACR-CONV",
+      "relation": "implies",
+      "scope": "C02-v3准确Id主条件，K(R).00505、compat.40804、Uall预算∞；全部input管与每输出/模式有限前缀留域及finite length。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E509",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-CLASSIC",
+      "relation": "implies",
+      "scope": "同完整field/原机械E，AC10不借AC6/7直接全域Δ≥B^1.5/9+5P^1.5/6，所有finite初值所有gain切换E→0→eventual.81geom→全physicalfinite length；不是强经典不可解应用。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E510",
+      "inputs": [
+        "ACR-CERT"
+      ],
+      "output": "ACR-SHARP",
+      "relation": "implies",
+      "scope": "同fullunion，pn=O(d^1.5)与signedgain sharp族给sqrt2/11/最小渐近L；EB2 coeflim1/freefullclosed族；静止初值fixedδ精确terminal，不说wholepolicy极限集合。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E511",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-ENERGY-BARRIER",
+      "relation": "conditional",
+      "scope": "O⊃U_R的共同单状态、统一physical-squareH1：C1已不可能；finite locLip另全部limiting strongCR与selectedH2亦不可能。自由切向支触发，AC10非quadratic/C266人工KL仍正面。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E512",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-METRIC",
+      "relation": "conditional",
+      "scope": "另固定原F但算法J^M，指定freeSPD块M；每mode覆盖/FixS仍有完整zero恰3与pt1/400真实漂移，不默认任意正定/时变核保持物理结论。",
+      "status": "derived-checked",
+      "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E513",
+      "inputs": [
+        "ACR-OBJECT"
+      ],
+      "output": "ACR-CRITICAL",
+      "relation": "conditional",
+      "scope": "仅该section重绑定familyΓ∈R；A>0零吸收、A0无全输入coverage、A<0完整far curves；Γ≤0 actualfree/normalcycle反证，不判每positiveΓ充分或从局部factor推iff。",
       "status": "derived-checked",
       "topic": "自然应用筛选与比较边界"
     }

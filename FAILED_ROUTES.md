@@ -605,3 +605,10 @@
 
 - **同算法正面**：[C269](research/canonical/vector_fenchel_classical.md#vfc-contraction)把正常误差重组为SPD之和，给所有λ/初值/驻点根全域有限长度；原f二次H1失败也不阻止该短证明。[C270](research/canonical/gram_regression_gppa.md#grg-classical)的守恒核列+firm恒等式+全域1/3逆模同样给全λ全初值完整正面，原二次目标局部ABS也通过。
 - **保留与边界**：C270的原生矩阵kernel和实际未观测列读出有定量应用价值，指定旧强凸核合同确失效；fixed-zero仍calm、prox锐3/7未闭，不能包装强优势或原Hamilton替代。现成非势game的weightednormBR正面及follower-load的modifiedenergy另见[本轮筛选](发表成果整理/应用优势筛选_结构边界.md)。自然模型和某个旧门失败不足以宣称整个旧理论不能分析。
+
+<a id="f88"></a>
+## F88 · 跨轴模式的零动量伪根与强应用升格
+
+- **真实断点**：[C271 AC2](research/canonical/affine_crosstalk_rleb.md#acr-fiber)的真实scalarΦ不能乘以√P后保留为全fiber身份；P0时乘后式可自动成立却遗漏a_n=g|g|，会虚构根和coverage。修为未除/未乘的h0连续方程，每fixedsignedgain全域唯一。δg与β|g|union相同，固定模式和跨符号不变量却不同。
+- **经典正面与范围**：仿射rail的所有模式/完整根已由AC10原机械能给全域有限长度，强优势推荐不成立。共同C¹平方H1及强链式locLip H1/H2确失败，但来源是自由切向惯性；该例是已有正交反馈的仿射目标特例，不能另造强创新或设备叙事。零吸收失败只否定零合同，若要判所有Γ≤0不收敛，须AC12后的真实free/normal二周期；渐近coef1也不是有限窗自动有效。
+- **度量攻击**：固定M正定、coverage和Fix=S仍可有完整zero3及真实漂移；不能只从选中零支或核固定点身份宣称物理all-output收敛。

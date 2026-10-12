@@ -150,6 +150,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-6",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 2010,
+      "y": 4280,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -7907,6 +7919,116 @@
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "ACR-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-CLASSIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-CONV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-CRITICAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-ENERGY-BARRIER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-METRIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ACR-TRUE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
     }
   },
   "edges": {
@@ -9917,6 +10039,42 @@
     "E504": {
       "x": 602.5,
       "y": 3982.85
+    },
+    "E505": {
+      "x": 1581.95,
+      "y": 4281.67
+    },
+    "E506": {
+      "x": 1774.26,
+      "y": 4226.8
+    },
+    "E507": {
+      "x": 1587.22,
+      "y": 4222.63
+    },
+    "E508": {
+      "x": 2430.03,
+      "y": 4012.87
+    },
+    "E509": {
+      "x": 2253.16,
+      "y": 4458.8
+    },
+    "E510": {
+      "x": 1590.28,
+      "y": 4194.19
+    },
+    "E511": {
+      "x": 1911.69,
+      "y": 3988.81
+    },
+    "E512": {
+      "x": 1847.77,
+      "y": 4072.5
+    },
+    "E513": {
+      "x": 2076.78,
+      "y": 4447.47
     }
   },
   "bounds": {

@@ -321,3 +321,4 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/vector_fenchel_classical.md](research/canonical/vector_fenchel_classical.md) | C269原生向量FY完整驻点，全λ/allinput/allroot经典正面与物理有限长度；原f-H1失败不产生整体理论空白。 |
 | [research/canonical/gram_regression_gppa.md](research/canonical/gram_regression_gppa.md) | C270自然欠定矩阵回归、退化Gram核、共同物理证书、显式极限与锐1/3读出；经典正面并列，prox锐3/7未闭。 |
 | [最新应用筛选](发表成果整理/应用优势筛选_结构边界.md)、[规范接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md) | 本轮四轴评价、全关系攻击、经典正面淘汰、原例关键角色及具体改稿清单；强应用主例仍未找到。 |
+| [research/canonical/affine_crosstalk_rleb.md](research/canonical/affine_crosstalk_rleb.md) | C271短直线控制设计：每模式唯一真实标量逆、原union多值、完整共同RLEB窗/trueinf/政策终点、参数远门和fixedSPD完整反例；全域原机械能更强，强推荐仍撤回。 |

@@ -144,3 +144,5 @@ C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从1
 ## Model-selection-limits · C266–C270
 
 入口 [`code/model_selection_limits/README.md`](code/model_selection_limits/README.md)，运行 `python3 research/code/model_selection_limits/verify.py`。seed266269，Fraction精确多项式/firm反例；420加权区间前缀、指数角点、49单空核反算、1440向量stationary反算、540Gram完整三次逆反算及缩放t⁷族。环境/实际脚本SHA记录于results.json。全称coverage/limiting/KL/无限政策/最佳指数由规范解析证明承担；C270锐3/7上界仍开放。代码通过不认证全球优先或强应用优势。
+
+C271另用同目录rail_verify.py，seed271、Fraction与Decimal80；1035真实固定gain标量逆、265同窗、38临界远根/二周期、五个sharp族、exactSPD完整zero3与真实漂移复算通过。零动量处主动拒绝乘过分母的伪根。脚本hash和环境在rail_results.json；不证全称，经典全域正面与共同能量合同不可能均由规范正文承担。
