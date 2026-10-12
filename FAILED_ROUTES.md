@@ -579,3 +579,11 @@
 
 - **实际断点**：union coverage只靠e0，原本不能背书每个指定非零K的根；e⊥g不蕴含e⊥h(p)，近圆正功率反例排被动力等同；局部距离系数√26/A<1却不能排零输入的远输出。
 - **解析修补及范围**：[C260-v2 OF25–26](research/canonical/orthogonal_feedback_rleb.md#ofr-prescribed-modes)另给固定/连续有界模式Brouwer coverage，模式真残差≥原union真inf；不授任意不连续state-law。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)的完整远门A>26m真实必要，临界±5恰两额外根。设计型反Hermitian gradient mixer可采纳，现成被动/机械/光学算法等同不采纳，任意变化GPPA核需重证。
+
+<a id="f84"></a>
+## F84 · 次数匹配后直接归一化边界直线插值，并将方向成本当作 Hölder gap
+
+- **尝试 / 关键机制**：在RP²内边界将法向g与锚点平移e0做归一化凸插值，期望以短collar接通次数相等的球值数据。
+- **具体断点**：[EC23](research/canonical/rp2_explicit_completion.md#rec-failure)完整分类反向集合为q垂直q0、nu=(m0−m)/sqrt2的一条RP¹；直线插值在中点精确为零。缩小collar或有限随机点未遇零不能修复。
+- **Honest salvage**：[C264](research/canonical/rp2_explicit_completion.md#rec-construction)加入同时垂直法向与锚点弦的旋转交换子，实际物理raw余量1/4，得到实际保零完成。指定宽1/8且两端迹为g/e0的方向成本至少8pi；它是该方案的下界，不是L*>L0。
+- **重启门 / 可复用信息**：按EC24联合优化幅度与方向的真实位移差商；C265已给精确原L0，后续严格gap须针对全部同预算完成，不能只排这个collar。

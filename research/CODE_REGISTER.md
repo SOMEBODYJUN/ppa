@@ -136,3 +136,7 @@ C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从1
 ## C259–C263：经典正面、完整反馈、能量边界与锐远纤维门
 
 [natural_advantage/README.md](code/natural_advantage/README.md)给标准库命令、SHA与结果。Fraction核全域/normal/真EB/兼容/严格预算和C259短能量常数；80位Decimal七个逆定义sharp族及精确管外增能一步；seed20261012的720球投影/skew表示、100强度polarization复算通过。C261另核六个Γ/R辅助前驱边界。C260-v2新增R10⁻⁴三轮有理吸收、trueinf余量、全窗/严格预算；C262核dense预算与H1α.9；C263核十一个η±/0的闭式临界根反算。所有完整输出、无限轨道、指数锐性、能量不可能性、limiting/KL与临界全纤维仍由规范解析证明负责。
+
+## C264/C265：RP² 实际完成与精确原管预算
+
+[rp2_explicit_completion/README.md](code/rp2_explicit_completion/README.md)记录完整公式实现、seed20261012、NumPy/Python版本、binary64容差、脚本SHA及实际results.json。35784项有限检查含内反向圈、固定轴交换子两项正交、actual raw余量1/4达等、整管三次完整输出、rho/1/4/3/2/2接缝、球外紧支撑、幅度正余量、有限全对界、不同rho/gamma原管精确达等和径向平方恒等式；Fraction反算有理预算。代码不证明全域一般量词，不求L*；解析证明与独立审查承担Claim。

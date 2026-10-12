@@ -3722,6 +3722,24 @@
       "label": "C263完整远纤维锐零吸收门及临界三根",
       "file": "canonical/orthogonal_feedback_critical_gate.md#ofc-threshold",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "REC-GLUE",
+      "label": "有限闭覆盖全对欧氏Lipschitz精确粘接",
+      "file": "canonical/rp2_explicit_completion.md#rec-gluing",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "REC-EXPLICIT",
+      "label": "C264 RP²旋转交换子显式保零完成与有限预算",
+      "file": "canonical/rp2_explicit_completion.md#rec-construction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "REC-EXACT-BUDGET",
+      "label": "C265 RP²三次整管精确Hölder原预算及达等点对",
+      "file": "canonical/rp2_explicit_completion.md#rec-exact-budget",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9329,6 +9347,52 @@
       "scope": "同rankone g/h，family全部realA、tau≥0、lambda1；orth与全域cubic给exactphase零吸收A>m(1+tau²)，critical取等穷尽±tau根。A>0 coverage另证；不推出所有参数有限长度或metric变核保持。",
       "status": "derived-checked",
       "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E485",
+      "inputs": [
+        "TCB-RP2",
+        "REC-GLUE"
+      ],
+      "output": "REC-EXPLICIT",
+      "relation": "implies",
+      "scope": "固定rho1/8整个RP²三次管；EC3/7–10有向轴旋转纠正、正幅度及全部接缝，保完整J/zerF；半阶上界3025/32，不授原预算或全域吸引。",
+      "status": "derived-checked",
+      "topic": "拓扑完成与预算"
+    },
+    {
+      "id": "E486",
+      "inputs": [
+        "TCB-RP2"
+      ],
+      "output": "REC-EXACT-BUDGET",
+      "relation": "conditional",
+      "scope": "同M三次管族0<rho≤1/8、0<gamma≤1；法向弦/径向平方及固定B单调证明精确半范数，正交基点向内端点真实达到。",
+      "status": "derived-checked",
+      "topic": "拓扑完成与预算"
+    },
+    {
+      "id": "E487",
+      "inputs": [
+        "REC-GLUE"
+      ],
+      "output": "LOB-BRIDGE",
+      "relation": "conditional",
+      "scope": "C245已有各块欧氏全对Lipschitz而非仅内在路径界，有限闭覆盖一致迹可取G_W=1；不删除C258的G_T。",
+      "status": "derived-checked",
+      "topic": "拓扑完成与预算"
+    },
+    {
+      "id": "E488",
+      "inputs": [
+        "REC-EXPLICIT",
+        "REC-EXACT-BUDGET"
+      ],
+      "output": "TCB-GAP",
+      "relation": "limits",
+      "scope": "原RP²半阶数据得到精确L0和完成上界94.53125，但不能决定L*=L0、严格gap或端点达到；方向8pi成本也不授Hölder gap。",
+      "status": "derived-checked",
+      "topic": "拓扑完成与预算"
     }
   ]
 }

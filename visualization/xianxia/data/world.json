@@ -7687,6 +7687,39 @@
       "y": 4305,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "REC-EXACT-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "REC-EXPLICIT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "REC-GLUE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -9625,6 +9658,22 @@
     "E484": {
       "x": 766.26,
       "y": 4590.8
+    },
+    "E485": {
+      "x": 851.09,
+      "y": 4001.54
+    },
+    "E486": {
+      "x": 848.68,
+      "y": 3974.18
+    },
+    "E487": {
+      "x": 1154.85,
+      "y": 4363.32
+    },
+    "E488": {
+      "x": 4819.83,
+      "y": 3209.54
     }
   },
   "bounds": {

@@ -469,3 +469,8 @@ Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Th
 
 
 **后续比较边界。** [C262](canonical/artificial_kl_energy_bridge.md#akb-theorem)非可定义人工KL能量给同一完整反馈H1/H2/H3及ABS导入；这是本轮正面构造，依赖C260新距离/真EB，并非ABS原文已分析该模型。它将C261的排除范围严格限定到CR/可定义类，不能写成整个ABS或全部locLip KL。
+
+<a id="lit-rp2-boundary-homotopy"></a>
+## RP² 边界同伦路线核查的精确来源
+
+Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/VIGRE/VIGRE2011/REUPapers/Bosshardt.pdf), 2011-08-26，Theorem4.16，印页19/PDF第19页（零基pageno18）：compact、connected、oriented、closed n-manifold到S^n的smooth maps以degree分类smooth homotopy。本轮已读取该定理及其上下文；它只解释次数匹配的定性意义，不提供同伦常数。C264的实际RP²公式用自足旋转正交恒等式，不承重导入其定量结论；不能据此认证新公式公开首次发表。

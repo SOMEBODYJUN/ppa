@@ -758,6 +758,15 @@
 | E483 | [OFR-LARGE-WINDOW · C260-v2正交work完整R1e-4及指定模式覆盖](canonical/orthogonal_feedback_rleb.md#ofr-large-window) ∧ [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | conditional → [OFR-CONV · C260每个完整政策有限长度与留域](canonical/orthogonal_feedback_rleb.md#ofr-certificate) | C260-v2同S/完整原F真实残差和全部输出，以C02-v3或C249 Id恢复；整窗.6270275<.75，Theta<.0602<.4999，所有模式/所有根有限长度留U_R趋phase。；**derived-checked** |
 | E484 | [OFR-OBJECT · C260完整正交反馈原图及真实测量目标](canonical/orthogonal_feedback_rleb.md#ofr-object) | conditional → [OFR-CRITICAL-ZERO · C263完整远纤维锐零吸收门及临界三根](canonical/orthogonal_feedback_critical_gate.md#ofc-threshold) | 同rankone g/h，family全部realA、tau≥0、lambda1；orth与全域cubic给exactphase零吸收A>m(1+tau²)，critical取等穷尽±tau根。A>0 coverage另证；不推出所有参数有限长度或metric变核保持。；**derived-checked** |
 
+## 拓扑完成与预算
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E485 | [TCB-RP2 · C234 RP²保整管/保零集与锐三次完整真EB](canonical/zero_preserving_completion.md#zpc-rp2) ∧ [REC-GLUE · 有限闭覆盖全对欧氏Lipschitz精确粘接](canonical/rp2_explicit_completion.md#rec-gluing) | implies → [REC-EXPLICIT · C264 RP²旋转交换子显式保零完成与有限预算](canonical/rp2_explicit_completion.md#rec-construction) | 固定rho1/8整个RP²三次管；EC3/7–10有向轴旋转纠正、正幅度及全部接缝，保完整J/zerF；半阶上界3025/32，不授原预算或全域吸引。；**derived-checked** |
+| E486 | [TCB-RP2 · C234 RP²保整管/保零集与锐三次完整真EB](canonical/zero_preserving_completion.md#zpc-rp2) | conditional → [REC-EXACT-BUDGET · C265 RP²三次整管精确Hölder原预算及达等点对](canonical/rp2_explicit_completion.md#rec-exact-budget) | 同M三次管族0<rho≤1/8、0<gamma≤1；法向弦/径向平方及固定B单调证明精确半范数，正交基点向内端点真实达到。；**derived-checked** |
+| E487 | [REC-GLUE · 有限闭覆盖全对欧氏Lipschitz精确粘接](canonical/rp2_explicit_completion.md#rec-gluing) | conditional → [LOB-BRIDGE · C245 给定方向延拓后的 Lipschitz–Hölder 预算桥](canonical/lipschitz_obstruction_budget.md#lob-object) | C245已有各块欧氏全对Lipschitz而非仅内在路径界，有限闭覆盖一致迹可取G_W=1；不删除C258的G_T。；**derived-checked** |
+| E488 | [REC-EXPLICIT · C264 RP²旋转交换子显式保零完成与有限预算](canonical/rp2_explicit_completion.md#rec-construction) ∧ [REC-EXACT-BUDGET · C265 RP²三次整管精确Hölder原预算及达等点对](canonical/rp2_explicit_completion.md#rec-exact-budget) | limits → [TCB-GAP · 非单点原常数保零完成与定量最小预算仍开放](canonical/topological_completion_balance.md#tcb-frontier) | 原RP²半阶数据得到精确L0和完成上界94.53125，但不能决定L*=L0、严格gap或端点达到；方向8pi成本也不授Hölder gap。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

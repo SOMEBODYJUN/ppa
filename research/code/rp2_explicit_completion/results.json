@@ -1,0 +1,42 @@
+{
+  "scope": "finite binary64 diagnostics, not a proof or an optimal completion budget",
+  "seed": 20261012,
+  "tolerance": 2e-10,
+  "checks": 35784,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "script_sha256": "25daa8d231ad7b2a6a0f1ab51be0a99de62d59c05c79caeb4b965999678531e2",
+  "constants": {
+    "inner_raw_lipschitz": 47,
+    "inner_raw_margin": 0.25,
+    "direction_lipschitz": 188,
+    "cayley_lipschitz": 47.265625,
+    "half_holder_upper": 94.53125,
+    "original_half_holder_exact": 1.5351441898897367,
+    "collar_direction_lower": 25.132741228718345
+  },
+  "max_errors": {
+    "budget_reverse": 0.0,
+    "sharp_raw_margin": 3.3306690738754696e-16,
+    "projection": 1.410354723664631e-15,
+    "whole_tube_trace": 2.7235843614255604e-15,
+    "cubic_step": 1.366239840621005e-15,
+    "antipodal": 2.5286532809710436e-16,
+    "straight_homotopy_zero": 1.2643266404855218e-16,
+    "inner_boundary_direction": 3.739593896693142e-15,
+    "outer_tube_direction": 2.433010126791216e-15,
+    "rotation_normal_orthogonality": 9.124645483638005e-16,
+    "rotation_chord_orthogonality": 1.249000902703301e-16,
+    "rotation_chord_equal_norms": 4.440892098500626e-16,
+    "compact_support": 9.702548927042217e-16,
+    "tube_seam": 5.416946074575957e-09,
+    "radial_seam": 3.145643128977008e-09,
+    "radial_square_identity": 1.3877787807814457e-17,
+    "exact_seminorm_extremiser": 2.220446049250313e-16
+  },
+  "observed_inner_raw_min": 0.25,
+  "observed_global_lipschitz_max": 2.220628819607338,
+  "observed_original_half_holder_random_max": 1.4306608042037643
+}

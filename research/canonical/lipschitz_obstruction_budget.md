@@ -77,3 +77,7 @@ a=(1-\tau)a_{\rm in}+\tau,
 
 **状态边界。** C245 是条件的 `derived-checked` 引理：它不证明原预算 \(L_*=L_0\)，不提供 \(K_e\) 的最优值，也不把连续 Hopf 延拓自动称为可计算算法。它的价值是为 C240 的健壮证书提供一个明确的上界输入，并排除“拓扑存在但预算完全不可量化”这一含混表述。
 
+
+## 欧氏拼接因子的后续证据改进
+
+[C264支持粘接引理](rp2_explicit_completion.md#rec-gluing)已证明：本页各块若按前提均为欧氏全对 Lipschitz，并有一致迹，其有限闭覆盖拼接可直接取G_W=1。此取值符合LB1原有合同；无需依赖光滑collar几何。C258的G_T用于从单纯形内部导数转到欧氏界，不能因此删除。另[C265](rp2_explicit_completion.md#rec-exact-budget)给原RP²管C0的精确Lipschitz及半阶常数；原保守LB3仍有效。实际方向场已由[C264](rp2_explicit_completion.md#rec-construction)构造，最优预算继续开放。

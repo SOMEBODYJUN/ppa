@@ -2293,3 +2293,22 @@
 - **Conclusion / Scope**：临界A=m(1+τ²)完整纤维恰固定锚与CG4两支η±τ（τ0合并）；全部非phase方向解析排除。τ5真门Γ>26m−1≈9.00740466595，正Γ或A>√26不足。
 - **Definitions / Dependencies / Evidence**：[CG1–4及全临界纤维](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)，只既证全域cubic锚、orth/球条件和闭式反算；[第三轮独审](发表成果整理/反馈应用第三轮独立接收.md)、[Python](research/code/natural_advantage/README.md)。
 - **Counterevidence / Scope**：这是phase零吸收门，不是全空间coverage全参数门或全部轨道收敛门；中心仍非吸收，局部sharp距离门另立。任意变化GPPA度量与全域收敛没有由此授予，公开首创未认证。
+
+
+<a id="c264"></a>
+## C264-v1 / RP2-EXPLICIT-COMPLETION · RP² 固定整管的显式保零完成与有限预算
+
+- **Status**：`derived-checked`；实际公式、物理余量、全对常数、完整纤维与接缝经构造/几何独立攻击及主代理重构。公开先行性未认证。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：H=Sym0(3)的Frobenius范数，M=qqT−I/3，固定整个N1/8及C234的T0=Pi+d²(Id−Pi)，任意固定lambda>0。按EC3、EC7–10选择一个有向旋转轴、内外collar和正幅度，得到全域C。
+- **Conclusion / Scope**：C紧支撑于B2，完整J=(Id+C)/2原样保整个T0，完整zerF恰M；Ke≤188、LipC≤3025/64，对每个0<gamma<1有[C]gamma≤4^(1−gamma)3025/64，半阶预算≤3025/32。内raw向量实际最小余量恰1/4，管外B2内位移至少63/512；保原输出全纤维真残差由C234 Z11另核。
+- **Definitions / Dependencies / Evidence**：[共同对象与实际构造](research/canonical/rp2_explicit_completion.md#rec-construction)、EC4/5法向弦与交换子、[有限闭覆盖粘接](research/canonical/rp2_explicit_completion.md#rec-gluing)、C234完整图身份；[独立接收](research/audit/RP2_EXPLICIT_COMPLETION_REVIEW_2026_10_12.md)、[复算](research/code/rp2_explicit_completion/README.md)。
+- **Counterevidence / Objections / Related Files**：不要求C239被排除的符号等变模板；固定轴生成元提供有向结构。此预算是保守上界，不证明L*=L0或严格gap，不授全域吸引、F单值或最优Ke；方向幅度须共同核查。C258一般有限证书用途保留。
+
+<a id="c265"></a>
+## C265-v1 / RP2-EXACT-LOCAL-BUDGET · RP² 三次整管反射数据的精确 Hölder 半范数
+
+- **Status**：`derived-checked`；预算代理推导、几何代理独立攻击全部退化与族参数、主代理重构固定B单调证明。数字只作反算支持。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：H/M同C234，每个0<rho≤1/8，在整个Nrho定义T0=Pi+d²(Id−Pi)、C0=2T0−Id；每个0<gamma≤1，取所有不同输入的全对差商。
+- **Conclusion**：[C0]gamma,Nrho=(sqrt2+2rho(1−2rho²))/(sqrt2−2rho)^gamma；由两正交秩一基点的向内法向端点达到。固定rho1/8、gamma1/2的L0=(sqrt2+63/256)/sqrt(sqrt2−1/4)≈1.5351441898897367。
+- **Definitions / Dependencies / Evidence**：[EC16–22完整证明](research/canonical/rp2_explicit_completion.md#rec-exact-budget)，EC5真实法向弦、EC18径向平方恒等式及固定B后关于A单调；C234投影单值；[独立审查](research/audit/RP2_EXPLICIT_COMPLETION_REVIEW_2026_10_12.md)、[参数及达等反算](research/code/rp2_explicit_completion/README.md)。
+- **Counterevidence / Scope / Related Files**：精确原数据半范数不是全域保零完成常数；gamma1仅计算本紧管Lipschitz常数，不扩大全尺度次线性定理。C264给L0≤L*≤3025/32，但L*=L0、严格gap和端点达到仍开放。没有用随机优化结果证明全对上界或公开新颖性。
