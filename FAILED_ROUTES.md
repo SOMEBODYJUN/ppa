@@ -535,7 +535,7 @@
 ## F76 · 只凭模型自然和指定旧门失败推荐应用优势
 
 - **具体断点**：凸集合距离Hamilton及相对速度误差版有独立经典能量有限长度证明；匹配幂动能镜像Hamilton有变换后能量路径；自由粒子V=0只承担机制。原梯度非Lip、某个经典定理不满足或算法率变化均不足以说明其收敛超出旧分析能力。
-- **保留**：[应用筛选](发表成果整理/应用优势导向的候选筛选.md#candidate-axes)分开自然程度、有效性、示例作用和创新性。C246的完整闭式机制保留；C256的推荐依赖真实非凸幅值目标和完整多分支合同、具体旧条件反例，不依赖漂亮公式。
+- **保留**：[应用筛选](发表成果整理/应用优势导向的候选筛选.md#candidate-axes)分开自然程度、有效性、示例作用和创新性。C246的完整闭式机制保留；C256强推荐已由C259短经典正面撤回；当前C260/C261的指定理论比较与非独占边界必须同时列出。
 
 <a id="f77"></a>
 ## F77 · 退化Bregman核门失败被误写成旧线性机制不能分析
@@ -554,3 +554,28 @@
 
 - **完整反例**：[C257](research/canonical/amplitude_circle_damping_threshold.md#damp-center)每个正Γ的中心零输入有整圈非零输出；Γ≥−2有精确全局二周期，Γ99也如此。Γ≤0连圆零输入都不吸收，因此没有任何Γ使完整S每个零输入都吸收。全域coverage与Fix身份不供应完整零纤维唯一性。
 - **锐修补及未闭**：正Γ恰有统一小圆管全部输出证书，缩管距离因子锐1/(1+Γ)，此门已闭。充分显式R_Γ=O(Γ²)与Γ↓0中心出现上界Γ/√5+O(Γ²)间存在半径间隙；最大有限管不能从锐渐近系数直接取得。任意SPD/变核仍须另核。
+
+<a id="f80"></a>
+## F80 · 已推荐圆例被更短经典机械能正面接管
+
+- **明确反审**：[C259](research/canonical/amplitude_classical_energy.md#eca-fixed99)不用ACH5，标量凸性与范数Bregman差给原C256同R10⁻⁴、全部驻点E₊≤.01E和有限长度；每个正Γ也有完整局部经典能量路径。保守tomography/矩阵缺陷的凸外函数差、flat-shell GPPA的标准ABS、四次game的同算法Bregman坐标桥另见[正面反审](发表成果整理/候选正面反审明细.md)。
+- **修正**：撤回“经典方法不能分析”的强推荐，保留原数学、真实多支/锐参数与C261具体C¹二次下降障碍。不能把一个既有定理门失败当成所有经典证明不存在。
+
+<a id="f81"></a>
+## F81 · 非保守反馈或无SPD势场被误写成没有共同能量
+
+- **真实边界**：[C260](research/canonical/orthogonal_feedback_rleb.md#ofr-comparison)固定η5无任意固定SPD位置势場，原机械能连续可局部增、全局隐式也有精确增能一步；该一步在认证管外。OF6–12新的全反馈几何仍可给共同E₊<.324E，任意切换全部根都有正面长度。
+- **允许比较**：[C261-v2](research/canonical/smooth_kl_full_relation_obstruction.md#sko-h1-only)才排任意共同C¹单状态二次下降H1。它不排非光滑/记忆/非二次能量。自然cone是设计假设，真实公开系统逐项映射仍未完成。
+
+
+<a id="f82"></a>
+## F82 · 把可定义共同能量障碍扩大为整个非光滑KL理论排除
+
+- **严格反审**：[C261-v3](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)仅排具有强链式法则的locLip共同H1/H2，明确包括可定义类。[C262](research/canonical/artificial_kl_energy_bridge.md#akb-theorem)却有真实non-tame KL能量：dense微区间导数√d，limiting最小范数√d、H1α.9/H2β√1.1/H3全闭，同一完整算法可导入ABS。
+- **修正**：禁止整个ABS、全部locLip KL或所有旧理论不可分析的叙事；人工能量依赖本轮完整距离/真EB，不能假称旧文现成处理模型。非光滑E=dS还表明H1-only的C¹障碍不能直接扩类。
+
+<a id="f83"></a>
+## F83 · union存在、局部系数或梯度正交被偷换成指定政策存在/完整吸收/被动性
+
+- **实际断点**：union coverage只靠e0，原本不能背书每个指定非零K的根；e⊥g不蕴含e⊥h(p)，近圆正功率反例排被动力等同；局部距离系数√26/A<1却不能排零输入的远输出。
+- **解析修补及范围**：[C260-v2 OF25–26](research/canonical/orthogonal_feedback_rleb.md#ofr-prescribed-modes)另给固定/连续有界模式Brouwer coverage，模式真残差≥原union真inf；不授任意不连续state-law。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)的完整远门A>26m真实必要，临界±5恰两额外根。设计型反Hermitian gradient mixer可采纳，现成被动/机械/光学算法等同不采纳，任意变化GPPA核需重证。

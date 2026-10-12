@@ -2199,7 +2199,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：X=R²×R²，V(x)=2| ||x||−1 |^(3/2)/3，k(p)=2||p||^(3/2)/3，h=∇k，完整F(x,p)={(-h(p),q+99p):q∈∂_CV(x)}，中心Clarke纤维为单位盘，完整S=(S¹∪{0})×{0}，λ1。ACH3双向给全空间全部近端纤维，连续强制目标证明所有输入覆盖，保留所有非极小驻点。U={1/2<||a||<3/2}、R10^−4；允许关系取完整J_F。
 - **Conclusion / Scope**：共同γ1/2、L2/5、bar t1、ψ(t)=3t²、κ1/4，对所有U_R输入及全部输出给唯一最近输入零点锚、完整真残差EB、整窗兼容和严格长度预算ℒ(R)=61/15000<1/2−R。每条完整选择无限延拓、留U_R、有限长度趋圆，d_k≤4^−kd₀、点尾≤(2/3)4^−kd₀+(2/5)2^−k√d₀。任意圆零邻域存在ACH11恰三输出完整纤维，包括非极小驻点；锚指数1/2、完整prox相对固定圆零点的点态指数1/2、真实EB幂2均最大，不认证所有输入对的Hausdorff正则性。
 - **Definitions / Dependencies / Evidence**：[完整对象与纤维](research/canonical/amplitude_circle_hamilton.md#ach-object)、[全分支曲率界](research/canonical/amplitude_circle_hamilton.md#ach-curvature)、[统一证书](research/canonical/amplitude_circle_hamilton.md#ach-certificate)、[三输出穷尽](research/canonical/amplitude_circle_hamilton.md#ach-three)、[锐性及具体旧合同](research/canonical/amplitude_circle_hamilton.md#ach-sharp)；调用C02-v3全部前件已独立供应。[复算](research/code/natural_gppa/README.md)、[接收范围](发表成果整理/本轮应用例独立接收.md)、[应用筛选](发表成果整理/应用优势导向的候选筛选.md)。
-- **Counterevidence / Objections**：中心是真零点而在认证输入环域之外；零输入吸收只在使用圆管成立。完整全对RL、LT正式版必要式29与固定矩阵weak-Minty均在任意小圆零图窗失败。原机械能统一Euclidean二次H1失败，但新曲率界可另导全分支能量收缩，不排任意KL/Lyapunov。完整J多值及S含中心不满足C244接口；不自动转任意SPD、变核或全域收敛。一般输入无通用初等闭式J，全部分支极限可不同。
+- **Counterevidence / Objections**：中心是真零点而在认证输入环域之外；零输入吸收只在使用圆管成立。完整全对RL、LT正式版必要式29与固定矩阵weak-Minty均在任意小圆零图窗失败。原机械能统一Euclidean二次H1失败；C259另给不借新曲率的更短完整机械能证明，撤回经典方法无法分析的强推荐。C261排任意共同C¹二次下降H1，但不排非二次能量。完整J多值及S含中心不满足C244接口；不自动转任意SPD、变核或全域收敛。一般输入无通用初等闭式J，全部分支极限可不同。
 
 <a id="c257"></a>
 ## C257-v1 · 完整幅值 Hamilton 的锐正阻尼门与显式参数证书
@@ -2217,3 +2217,79 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：给定多面体模型 \(|K|\) 到目标域 \(W\subset\mathbb R^n\) 的边界保持双 Lipschitz 参数化 \(\Phi\)，以及 \(|K|\) 的有限仿射顶层三角剖分 \(\mathcal T\)。每个顶点值 \(y_v\in S^{n-1}\)，每个单纯形给定单位半球见证 \(u_\sigma\) 和余量 \(\eta_\sigma>0\)，满足所有顶点内积 \(\langle u_\sigma,y_v\rangle\ge\eta_\sigma\)。若边界数据经 \(\Phi\) 拉回后恰等于归一化重心插值的边界迹，则该插值经 \(\Phi^{-1}\) 推回为全域球值 Lipschitz 延拓，并有 \(K_e\le C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\)。
 - **Conclusion / Dependencies**：证明只用重心坐标梯度、公共半球给出的凸组合下界和归一化映射导数界；跨单纯形使用显式内在路径常数 \(G_\mathcal T\)。若 collar 参数化的物理 Lipschitz 常数为 \(L_\Psi\)，则内部迹常数可取 \(K_{\widehat g}\le L_\Psi C_\Phi G_\mathcal TQ_\mathcal T/\eta_\mathcal T\)。若边界只在顶点匹配，必须另给 collar 同伦及其常数，不能把离散迹偷换成 C245 的精确整管数据。
 - **Evidence / Counterevidence / Related Files**：[C258 正文](research/canonical/simplicial_sphere_budget_certificate.md#ssc-object)；[二维/五维复算](research/code/simplicial_sphere_budget_certificate/README.md)及 `results.json`。RP² 的实际多面体参数化、三角剖分、半球余量、边界 collar 和与 \(L_0\) 的比较仍开放；该上界是支持性有限接口而非原预算锐界，有限样本或随机赋值不构成该证书。
+
+<a id="c259"></a>
+## C259-v1 · 完整幅值Hamilton的经典机械能正面证明
+
+- **Status**：`derived-checked`；两位独立读者重建完整远纤维、标量负导数Bregman差与全政策能量归纳。不认证公开优先。
+- **Exact Statement / Objects / Domain / Quantifiers**：C256/C257同一完整F_Γ、S、λ1、h(p)=p/√||p||，E=V+k，不删任何驻点输出。Γ99时同原U_R,R10⁻⁴；原输入中心及所有远支先解析排除，不用ACH5。
+- **Conclusion / Scope**：Γ99所有完整输出E₊≤E/100、d₊<.06d，全部政策留原管、有限长度趋圆。每个Γ>0也有共同小能量窗和几何能量收缩、全政策有限长度；未优化其半径/率。
+- **Definitions / Dependencies / Evidence**：[完整经典证明](research/canonical/amplitude_classical_energy.md#eca-fixed99)、[全正Γ证明](research/canonical/amplitude_classical_energy.md#eca-positive-damping)，仅原对象、标量凸性、凸动能、Young/闭图紧性；[计算](research/code/natural_advantage/README.md)、[独立接收](发表成果整理/应用优势继续筛选.md)。
+- **Counterevidence / Scope**：撤回C256/C257作为经典方法无法分析的强推荐；原锐多支、EB/锚与显式参数证书仍有效。原能量二次H1失败与此非二次正面证明相容；没有证明某篇旧发表定理直接包含算法。
+
+<a id="c260"></a>
+## C260-v1 · 全维正交反馈不确定性的完整RLEB收敛
+
+- **Status**：`derived-checked`；全域/allK定位、完整残差inf、共同常数、连续多值及sharp族经两位独立冷读。不认证硬件映射、性能或公开首创。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意n≥2，Cⁿ实化，||u||1，V=2||zz*−uu*||_F^{3/2}/3、k=2||p||^{3/2}/3。完整𝓕={(−h(p),g(z)+10p+e):e⊥_R g,||e||≤5||g||}，S=(phaseorbit∪0)×0，λ1；每步任意选择全部反馈和全部隐式根。OF4真残差球投影，OF5全空间全部纤维、e0强制子问题coverage。
+- **Conclusion / Scope**：U={dist(a,M)<.5},R10⁻¹²,γ.5,L1.5,ψ1.1t²,bar t1,κ.75，同一最近零锚/完整真EB/整窗/严格预算控制所有U_R初值和全部轨道有限长度趋phase。全纤维最坏缩管距离因子√26/11，sharp半阶锚2√(√26/11)、EB2最优渐近系数1；点态prox/锚最佳指数1/2，EB最大幂2。某任意小管内完整纤维连续多值并含非极小e0支。
+- **Definitions / Dependencies / Evidence**：[OF1–19自足证明](research/canonical/orthogonal_feedback_rleb.md#ofr-object)，C02-v3或C249的准确Id特例；[复算](research/code/natural_advantage/README.md)、[接续独立接收](发表成果整理/应用优势继续筛选.md)。
+- **Counterevidence / Scope**：完整中心零输入非吸收，R不称最大半径。固定SPD位置势场、fixed-Minty/LT二次合同失败；C261给更广C¹二次下降障碍。共同机械能仍可借同批新几何收缩。模型是明确反馈设计原型，校准完整数据可谱分解，不是计算更快或现成光学算法；任意变化GPPA核未认证。
+
+<a id="c261"></a>
+## C261-v1 · 完整圆弦动力学排除任意共同C¹单状态ABS-H1/H2
+
+- **Status**：`derived-checked`；两位读者独立核一般Γ、全部辅助前驱、积分余项与共同窗量词。
+- **Exact Statement / Objects / Domain / Quantifiers**：Cⁿ×Cⁿ,n≥1,||u||1,M=phasecircle，S=(M∪0)×0，F(c,p)={(−h(p),Γp)}对c∈M，Γ≥0,A1+Γ。U={dist(a,M)<.5},0<R≤min(.01,1/A)，完整J=(I+F)⁻¹；O开包含U_R∪J(U_R)。不存在E∈C¹(O)、α>0、有限β≥0，逐每个w∈U_R及每个y∈J(w)同时满足E(w)−E(y)≥α||w−y||²与||∇E(y)||≤β||w−y||。
+- **Conclusion / Scope**：任意共同C¹单状态ABS二次下降/相对误差合同不可能；固定SPD或统一正上下界变化能量度量亦不能修复。完整算法不改变。
+- **Definitions / Dependencies / Evidence**：[SKO1–4与完整域认证](research/canonical/smooth_kl_full_relation_obstruction.md#sko-theorem)、[度量推论](research/canonical/smooth_kl_full_relation_obstruction.md#sko-metric)，仅实际phase前驱、C¹动量积分与双端零值。ABS原合同事实见[LITERATURE](research/LITERATURE.md#lit-smooth-kl-obstruction)。
+- **Counterevidence / Scope**：不排非光滑、单条轨道、记忆或非二次能量，也不排C259/C260正面机械能收缩。不是否定整个ABS nonsmooth theorem或全球首创认证。
+
+<a id="c261-v2"></a>
+## C261-v2 · 共同C¹单状态二次下降H1本身已不可能
+
+- **Status**：`derived-checked`；另立强化版本；两位独立读者核双向圆弦和纯动量FTOC余项，不回写v1量词。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留C261-v1全部对象、Γ/R/O、原算法与完整全输出量词；不要求H2。不存在E∈C¹(O)、α>0对每个合法转移有E(w)−E(y)≥α||w−y||²。
+- **Conclusion / Scope**：H1自身迫使E|M常数，而双向真实圆弦的能量差/P趋±Γ⟨∇_pE(c0),ic⟩，不能两侧都为正。固定或统一非退化能量范数同样不可能。
+- **Definitions / Dependencies / Evidence**：[SKO5–6强化证明](research/canonical/smooth_kl_full_relation_obstruction.md#sko-h1-only)。第一阶段θ阶推出圆上常数，第二阶段只沿动量积分给o(P)，未把全state o(θ)误作o(θ²)。[独立接收](发表成果整理/应用优势继续筛选.md)。
+- **Counterevidence / Scope**：仍不排nonsmooth E、记忆、删支后算法、单政策能量或非二次下降。C260完整RLEB证书与共享新几何的能量正面并存；公开优先未查定。
+
+
+<a id="c261-v3"></a>
+## C261-v3 · 强链式非光滑共同单状态ABS-H1/H2障碍
+
+- **Status**：`derived-checked`；两位ultra独立核selected limiting值、共同零测集、真实前驱与O到全空间截断桥。
+- **Exact Statement / Objects / Domain / Quantifiers**：C261-v1同一F/S/Γ/R/U/O和完整全部输入/输出。E:O→R有限局部Lipschitz，沿每条AC曲线对全部limiting次梯度在一个共同零测集外满足SKO7。不可能共同α>0、有限β≥0逐输出同时成立二次下降H1和存在受步长线性控制的limiting次梯度H2。
+- **Conclusion / Scope**：涵盖有限局部Lipschitz可定义及局部Whitney C¹分层单状态能量；固定或统一正上下界SPD能量范数亦无效，原J保持。C261-v2的H1-only结论仍只称C¹。
+- **Definitions / Dependencies / Evidence**：[SKO7–9、完整窗与文献桥](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)，导入仅既有强链式法则及limiting⊂Clarke；圆弦反证为本库推导。[一手接口](research/LITERATURE.md#lit-stratified-chain-rule)、[独立接收与范围反例](发表成果整理/非光滑能量合同独立接收.md)。
+- **Counterevidence / Scope**：真实E=dS满足C260完整H1但不能H2；较弱非tame稠密平台能量无KL，C262更强构造甚至有KL并满足完整ABS，说明CR前件不可删。不排任意非locLip/lsc、记忆、非二次下降或单政策能量，不作全ABS排除或公开首创认证。
+
+
+<a id="c262"></a>
+## C262-v1 · 完整反馈的非可定义人工KL–ABS正面桥
+
+- **Status**：`derived-checked`；两位ultra独立核Fréchet双向符号、limiting最小范数、真EB-H2、KL及H3。
+- **Exact Statement / Objects / Domain / Quantifiers**：C260-v2完整F/S/J、λ1、U、R10⁻⁴及全部输入/输出。枚举(0,R)有理数r_j，Ω为半径2^(-j-6)r_j的稠密区间并，φ(t)=∫0^t[√s 1Ω+1Ωc]ds，E=φ(dS)全域有限非负locLip。
+- **Conclusion / Scope**：phase正距离处dist(0,∂L E)=√d；完整H1 α.9、selected H2 β√1.1、零簇处KL指数1/2及H3均成立，ABS Theorem2.9可以导入同一完整算法。
+- **Definitions / Dependencies / Evidence**：[AK1–6完整证明](research/canonical/artificial_kl_energy_bridge.md#akb-theorem)，依赖C260新全输出距离/真EB几何与原ABS条件定理；[双审](发表成果整理/非光滑能量合同独立接收.md)。稠密积分构造及次微分证明为本库推导，公开优先未认证。
+- **Counterevidence / Scope**：E不满足强链式、不可定义，不反C261-v3；禁止宣称排除整个ABS或所有locLip KL能量。构造是比较边界，不是自然应用候选，也不是旧论文无需新几何即可分析本模型的证据。
+
+
+<a id="c260-v2"></a>
+## C260-v2 · 正交工作恒等式扩大完整共同窗及指定模式覆盖
+
+- **Status**：`derived-checked`；独立重建正交work/全维投影、三轮同输出bootstrap、原真inf、全部zero及指定模式Brouwer覆盖。
+- **Exact Statement / Objects / Domain / Quantifiers**：C260-v1同一完整F/S/J、λ1、U，R改为10⁻⁴；γ1/2、L3/2、ψ1.1t²、bar t1、κ3/4保持。对全部输入和全部根先全域定位，再OF20–22正交work逐层180d→36d→d→.5d。每步预定有界固定skew矩阵或连续状态律另有全域coverage，所有输出嵌入同一完整J。
+- **Conclusion / Scope**：共同最近锚、trueinfEB、全窗兼容及严格预算均成立，全部政策有限长度留域趋phase；d₊≤.501d。v1身份保留，锐渐近√26/11与指数保留。
+- **Definitions / Dependencies / Evidence**：[OF20–26与完整模式算法](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)、[第三轮双审](发表成果整理/反馈应用第三轮独立接收.md)、[复算](research/code/natural_advantage/README.md)。
+- **Counterevidence / Scope**：不称最大盆域、任意不连续状态律覆盖、被动gyroscopic力或现成硬件映射。原union真残差与模式残差只满足ρ_F≤ρ_K，不能相等替换。共同能量正面仍成立；C262禁止全ABS排除。
+
+
+<a id="c263"></a>
+## C263-v1 · 全正交反馈完整phase零纤维的锐参数门
+
+- **Status**：`derived-checked`；独立全n解析核必要门、所有实A反算及临界纤维穷尽。
+- **Exact Statement / Objects / Domain / Quantifiers**：n≥1、τ≥0、A∈R，CG1完整F、S、λ1；每个phase零c，完整J(c,0)为单点恰当且仅当A>m(1+τ²)，m2/(3√3)。CG2为完整零纤维的双向代数身份；A>0另有全输入coverage。
+- **Conclusion / Scope**：临界A=m(1+τ²)完整纤维恰固定锚与CG4两支η±τ（τ0合并）；全部非phase方向解析排除。τ5真门Γ>26m−1≈9.00740466595，正Γ或A>√26不足。
+- **Definitions / Dependencies / Evidence**：[CG1–4及全临界纤维](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)，只既证全域cubic锚、orth/球条件和闭式反算；[第三轮独审](发表成果整理/反馈应用第三轮独立接收.md)、[Python](research/code/natural_advantage/README.md)。
+- **Counterevidence / Scope**：这是phase零吸收门，不是全空间coverage全参数门或全部轨道收敛门；中心仍非吸收，局部sharp距离门另立。任意变化GPPA度量与全域收敛没有由此授予，公开首创未认证。

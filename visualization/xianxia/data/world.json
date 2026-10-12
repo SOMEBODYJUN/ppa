@@ -7555,6 +7555,138 @@
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-5"
+    },
+    "ECA-ENERGY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-ALL-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-CERT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-CONV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-CRITICAL-ZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-LARGE-WINDOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "OFR-WILD-KL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "SKO-H1H2": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "SKO-H1ONLY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
+    },
+    "SKO-TAME-H1H2": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-5"
     }
   },
   "edges": {
@@ -9429,6 +9561,70 @@
     "E468": {
       "x": 4744.93,
       "y": 3151.21
+    },
+    "E469": {
+      "x": 299.96,
+      "y": 4376.9
+    },
+    "E470": {
+      "x": 391.81,
+      "y": 4391.69
+    },
+    "E471": {
+      "x": 957.09,
+      "y": 4503.95
+    },
+    "E472": {
+      "x": 1002.0,
+      "y": 4530.0
+    },
+    "E473": {
+      "x": 942.54,
+      "y": 4362.67
+    },
+    "E474": {
+      "x": 853.91,
+      "y": 4513.67
+    },
+    "E475": {
+      "x": 764.91,
+      "y": 4503.95
+    },
+    "E476": {
+      "x": 759.91,
+      "y": 4422.67
+    },
+    "E477": {
+      "x": 711.41,
+      "y": 4439.78
+    },
+    "E478": {
+      "x": 327.47,
+      "y": 4350.06
+    },
+    "E479": {
+      "x": 738.1,
+      "y": 4349.45
+    },
+    "E480": {
+      "x": 849.64,
+      "y": 4428.15
+    },
+    "E481": {
+      "x": 764.04,
+      "y": 4324.1
+    },
+    "E482": {
+      "x": 912.31,
+      "y": 4530.19
+    },
+    "E483": {
+      "x": 953.48,
+      "y": 4380.66
+    },
+    "E484": {
+      "x": 766.26,
+      "y": 4590.8
     }
   },
   "bounds": {

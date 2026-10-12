@@ -393,3 +393,6 @@ R_{\rm center}^2=(s-1)^2+(As^2-1)^2
 
 
 依赖仅为本页定义、显示的全纤维推导及 [C02-v3](true_residual_selection_rleb.md#trs-theorem)。[独立接收](../../发表成果整理/本轮应用例独立接收.md)区分定位与系数审计；[有限算术](../code/natural_gppa/README.md)核显式半径和正/零/负边界。
+
+
+接续反审：[C259](amplitude_classical_energy.md#eca-positive-damping)给每个Γ>0不借新曲率的完整局部机械能证明。正阻尼真实门仍成立，本页显式共同半径、锐常数与反例仍有定量作用；它们不能据此被写成经典方法无法分析的独占应用。

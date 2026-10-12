@@ -3650,6 +3650,78 @@
       "label": "C258 有限单纯形球值方向证书",
       "file": "canonical/simplicial_sphere_budget_certificate.md#ssc-object",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ECA-ENERGY",
+      "label": "C259完整经典机械能正面与推荐降格",
+      "file": "canonical/amplitude_classical_energy.md#eca-fixed99",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-OBJECT",
+      "label": "C260完整正交反馈原图及真实测量目标",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-ALL-FIBER",
+      "label": "C260全域coverage、完整纤维与真inf",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-fibers",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-CERT",
+      "label": "C260全部反馈的同组显式圆管证书",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-CONV",
+      "label": "C260每个完整政策有限长度与留域",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-SHARP",
+      "label": "C260锐距离与临界配对sqrt26/11",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SKO-H1H2",
+      "label": "C261-v1任意共同C1单状态H1/H2障碍",
+      "file": "canonical/smooth_kl_full_relation_obstruction.md#sko-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SKO-H1ONLY",
+      "label": "C261-v2任意共同C1二次下降H1障碍",
+      "file": "canonical/smooth_kl_full_relation_obstruction.md#sko-h1-only",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "SKO-TAME-H1H2",
+      "label": "C261-v3强链式/可定义非光滑H1/H2障碍",
+      "file": "canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-WILD-KL",
+      "label": "C262人工非可定义KL能量正面ABS桥",
+      "file": "canonical/artificial_kl_energy_bridge.md#akb-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-LARGE-WINDOW",
+      "label": "C260-v2正交work完整R1e-4及指定模式覆盖",
+      "file": "canonical/orthogonal_feedback_rleb.md#ofr-large-window",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "OFR-CRITICAL-ZERO",
+      "label": "C263完整远纤维锐零吸收门及临界三根",
+      "file": "canonical/orthogonal_feedback_critical_gate.md#ofc-threshold",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9073,6 +9145,190 @@
       "scope": "C258 只把 Ke 降为有限证书接口；RP² 实际参数化、剖分、半球余量和 collar 尚未给出，故不关闭 L*=L0 或端点达到。",
       "status": "derived-checked",
       "topic": "全局完成与拓扑"
+    },
+    {
+      "id": "E469",
+      "inputs": [
+        "ACH-OBJECT"
+      ],
+      "output": "ECA-ENERGY",
+      "relation": "implies",
+      "scope": "C259同完整F/S/lambda1、Gamma99与原R1e-4；先原范数排全部远根，再scalarconvex/Bregman差得Eplus≤.01E与每个驻点选择有限长度，不借ACH5。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E470",
+      "inputs": [
+        "DAMP-OBJECT"
+      ],
+      "output": "ECA-ENERGY",
+      "relation": "conditional",
+      "scope": "C259仅每个Gamma>0：完整圆零吸收、全输出有界/closed graph与紧圆给统一定位，正cGamma动能差吸收在共同小energy窗给所有选择有限长度；不优化半径/率。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E471",
+      "inputs": [
+        "OFR-OBJECT"
+      ],
+      "output": "OFR-ALL-FIBER",
+      "relation": "implies",
+      "scope": "C260 OF4完整正交球真残差投影、OF5全空间双向纤维；允许e0强制子问题只供应coverage，全部其他根/反馈保留。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E472",
+      "inputs": [
+        "OFR-ALL-FIBER"
+      ],
+      "output": "OFR-CERT",
+      "relation": "implies",
+      "scope": "同一归一u,n≥2,反馈norm5,阻尼10,lambd1；全域rankone cubic bound与allK inverse/tangent-normal定位先认证全部输出，再同R1e-12,L1.5,psi1.1t²,kappa.75核同最近锚、真inf、整窗/strictbudget。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E473",
+      "inputs": [
+        "OFR-CERT",
+        "TRS-FINITE"
+      ],
+      "output": "OFR-CONV",
+      "relation": "conditional",
+      "scope": "C260完整允许J，全U_R初值strictbudget自动成立；C02-v3/物理C249准确Id特例供应全部任意切换反馈/全部根无限续、留域、有限长趋phase。不供应全S吸收或全域收敛。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E474",
+      "inputs": [
+        "OFR-OBJECT",
+        "OFR-CERT"
+      ],
+      "output": "OFR-SHARP",
+      "relation": "implies",
+      "scope": "OF18逆定义合法族与OF10-12全输出上界匹配sqrt26/11；锐锚2sqrt(sqrt26/11)、trueEB2渐近系数1及点态prox/锚指数1/2。未认证Hausdorff两点指数/最大全域盆。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E475",
+      "inputs": [
+        "OFR-OBJECT",
+        "OFR-CERT"
+      ],
+      "output": "SKO-H1H2",
+      "relation": "sufficient",
+      "scope": "C261-v1仅用phase上F(c,p)=(-h(p),10p)、共同R1e-12窗，auxpre/circlechord认证后任意共同C1 H1/H2不可能。不是nonsmooth/记忆或单轨道能量排除。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E476",
+      "inputs": [
+        "OFR-OBJECT",
+        "OFR-CERT"
+      ],
+      "output": "SKO-H1ONLY",
+      "relation": "sufficient",
+      "scope": "C261-v2双向完整phasechord先迫E|M常数，再纯momentum积分给两个相反Gamma投影极限；任何共同C1平方下降H1本身不可能。保持原Euclidean算法，不改kernel。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E477",
+      "inputs": [
+        "SKO-H1ONLY"
+      ],
+      "output": "SKO-H1H2",
+      "relation": "implies",
+      "scope": "同对象、Gamma/R/O及全部输出量词下，v2排H1本身必排H1/H2合取；明确强化版本，不回写v1证据范围。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E478",
+      "inputs": [
+        "ACH-OBJECT",
+        "ECA-ENERGY"
+      ],
+      "output": "ACH-COMPARISON",
+      "relation": "limits",
+      "scope": "C259已给独立更短经典正面，撤回C256全经典不可解强推荐；LT/weakMinty具体断点和C261共同C1H1严格障碍保留，Truth身份不变。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E479",
+      "inputs": [
+        "OFR-OBJECT",
+        "OFR-LARGE-WINDOW"
+      ],
+      "output": "SKO-TAME-H1H2",
+      "relation": "sufficient",
+      "scope": "C261-v3保留完整phase前驱与同C260-v2 R1e-4窗；有限locLip E强limiting链式法则使selected H2控动量导数，零步使phase能量常数，完整chord排H1/H2。可定义/Whitney类由既有Clarke chain rule及显式O-cutoff导入。非光滑H1-alone、任意lsc/记忆/非二次能量不被排。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E480",
+      "inputs": [
+        "OFR-LARGE-WINDOW"
+      ],
+      "output": "OFR-WILD-KL",
+      "relation": "implies",
+      "scope": "同完整F/S和C260-v2 R1e-4；new distance contraction/step平方及真EB构造dense sqrt-level E=phi(dS)，selectedlimiting norm sqrt d、H1 alpha.9/H2、KL1/2和连续H3闭合，原ABS可导入。只正面比较边界，不称自然能量或paper现成模型。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E481",
+      "inputs": [
+        "OFR-WILD-KL"
+      ],
+      "output": "SKO-TAME-H1H2",
+      "relation": "limits",
+      "scope": "C262 non-tame KL E确满足共同ABS，但强链式失败所以不反C261-v3；严格禁止将CR/definable障碍扩大为整个ABS或全部locLip KL能量不可能。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E482",
+      "inputs": [
+        "OFR-OBJECT",
+        "OFR-ALL-FIBER"
+      ],
+      "output": "OFR-LARGE-WINDOW",
+      "relation": "implies",
+      "scope": "OF20-26先全域排远根，再orthwork与allK phase投影三bootstrap给P≤.5d；同L1.5/psi1.1/kappa.75的完整共同R提高1e-4。固定或连续指定mode另Brouwer覆盖，不授任意不连续state-law。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E483",
+      "inputs": [
+        "OFR-LARGE-WINDOW",
+        "TRS-FINITE"
+      ],
+      "output": "OFR-CONV",
+      "relation": "conditional",
+      "scope": "C260-v2同S/完整原F真实残差和全部输出，以C02-v3或C249 Id恢复；整窗.6270275<.75，Theta<.0602<.4999，所有模式/所有根有限长度留U_R趋phase。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
+    },
+    {
+      "id": "E484",
+      "inputs": [
+        "OFR-OBJECT"
+      ],
+      "output": "OFR-CRITICAL-ZERO",
+      "relation": "conditional",
+      "scope": "同rankone g/h，family全部realA、tau≥0、lambda1；orth与全域cubic给exactphase零吸收A>m(1+tau²)，critical取等穷尽±tau根。A>0 coverage另证；不推出所有参数有限长度或metric变核保持。",
+      "status": "derived-checked",
+      "topic": "应用优势与完整多分支"
     }
   ]
 }

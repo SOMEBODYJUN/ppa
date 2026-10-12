@@ -445,3 +445,27 @@ Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Th
 **Paper fact / 直接长度合同。** Attouch–Bolte–Svaiter [2010作者报告](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf)，H1–H3印页8、Theorem2.9印页12，实际核原能量的正系数欧氏二次步下降要求。Bolte–Sabach–Teboulle–Vaisbourd [1706.06461](https://arxiv.org/abs/1706.06461)，2018发表版的§4.2 AssumptionD(i)/Theorem4.1强凸核前提；Mukkamala–Fadili–Ochs [JGO83(2022)原文](https://link.springer.com/article/10.1007/s10898-021-01114-y)，Assumption6/Theorem17的每个内部紧凸集正强凸核前提。协调与独立读者实际核指定段，不凭全文可获取宣称逐行读全篇。
 
 **本库推导 / 比较范围。** C256圆弦反例否定LT任意有限τ的必要式29；固定矩阵weak-Minty在每个圆零锚失败，完整中心远锚也另有反例；势能t^(3/2)与动能t³否定所列E.3；直接机械能H1商趋零。C255核退化否定指定强凸门，但经典firm零锚加同一逆核给正面长度证明，应撤回强优势推荐。C256新全分支曲率界也可组织成能量收缩；这不是已核发表定理导入，也不排除任意其他KL、Lyapunov、改坐标或保真子关系。完整公式与范围见[应用筛选](../发表成果整理/应用优势导向的候选筛选.md#old-contracts)。
+
+<a id="lit-orthogonal-feedback"></a>
+## 强度测量与反馈原型：背景不等于同一算法
+
+- **Primary / paper fact**：R. Z. Wang等，*Phase retrieval via gain-based photonic XY-Hamiltonian optimization*，Communications Physics9,85，2026-02-03，[官方全文](https://www.nature.com/articles/s42005-026-02525-7)，DOI10.1038/s42005-026-02525-7。协调者读取Methods的CDP→XY映射及式(12)–(13)：复振子的一阶gain-feedback演化和幅值调节；这支持相位恢复与反馈系统的实际研究背景。
+- **Interpretation / limit**：该文没有提供本库C260的Frobenius3/2幂loss、3/2动能、正交反馈cone或完整隐式全部根算法。C260是本次明确的稳健反馈设计原型，不能称对该公开光学系统的逐项分析，也不能借其数值性能作本例数据证据。
+
+<a id="lit-smooth-kl-obstruction"></a>
+## C¹共同二次下降合同的确切旧接口
+
+- **Primary / paper fact**：Attouch–Bolte–Svaiter，2010-12-15作者报告，[一手PDF](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf)，§2.3，PDF页索引7/印页8列H1–H3；Theorem2.9在索引11/印页12给KL下收敛和有限长度。H1固定正系数平方步长下降，H2输出处存在由步长线性控制的limiting subgradient；原文允许proper lsc非光滑函数。协调者本轮重新读取这些原式与结论。
+- **本库推导 / scope**：[C261-v1](canonical/smooth_kl_full_relation_obstruction.md#sko-theorem)排任意共同C¹单状态H1/H2，[v2](canonical/smooth_kl_full_relation_obstruction.md#sko-h1-only)进一步排H1自身。C¹时subgradient唯一为梯度；这是本轮实际完整圆弦的反证，非原论文已报告本模型。它不排整个nonsmooth ABS版本、记忆/扩展状态或非二次下降。
+
+
+<a id="lit-stratified-chain-rule"></a>
+## 强次梯度链式法则：非光滑共同合同的导入边界
+
+- **Primary / paper fact**：Davis–Drusvyatskiy–Kakade–Lee，*Stochastic subgradient method converges on tame functions*，[作者32页PDF](https://sites.math.washington.edu/~ddrusv/stoc_subgrad_semi.pdf)。协调者与两位独立读者实际核Definition5.1（PDF物理第14页）、Theorem5.8及完整证明（第17–18页），并核前文∂符号为Clarke。定理对局部Lipschitz Whitney C¹图分层函数沿任意AC曲线给同一零测集外对全部Clarke次梯度的导数公式；Lemma5.4另给subdifferentially regular类。该链式结果是既有事实，作者亦明确§5材料非新。不认证此作者PDF与某一arXiv版本逐字相同。
+- **Primary / containment fact**：Bolte–Daniilidis–Lewis–Shiota，*Clarke Subgradients of Stratifiable Functions*，SIAM J. Optim.18(2),556–572(2007)，DOI10.1137/060670080，[作者正式PDF](https://people.orie.cornell.edu/aslewis/publications/07-clarke.pdf)。独立读者实核印页559式(7)的limiting⊂Clarke、印页561 Proposition4式(9)/(10)切向投影及印页564 Lemma8可定义分层；协调者核DDKL引入的同一投影接口。
+- **本库推导 / exact map**：[C261-v3](canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)使用包含关系与全部值链式法则来控制H2提供的一个limiting值；未断言整个Clarke集合范数小，不需可测选择。作者全空间定理与局部O间的显式compact cutoff见正文；aux前驱无需处于cutoff恒1区。新的不可能结论是完整圆弦/动量积分反证，不是上述论文已研究本F。
+- **Limits / counterevidence**：有限局部Lipschitz可定义及Whitney分层能量覆盖；任意lsc、非locLip或仅名为tame无结构者不自动覆盖。真实距离能量满足H1但不H2；wild dense-plateau locLip可H1/H2却非KL，说明链式性质不可删。记忆、非二次下降、共享新几何的机械能正面仍保留。
+
+
+**后续比较边界。** [C262](canonical/artificial_kl_energy_bridge.md#akb-theorem)非可定义人工KL能量给同一完整反馈H1/H2/H3及ABS导入；这是本轮正面构造，依赖C260新距离/真EB，并非ABS原文已分析该模型。它将C261的排除范围严格限定到CR/可定义类，不能写成整个ABS或全部locLip KL。

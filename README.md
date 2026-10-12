@@ -2,11 +2,11 @@
 
 本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–GPPA 中文修订稿](发表成果整理/RLEB/README.md) 以 [C249/C250 物理父定理与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 为主链，普通 PPA 准确恢复 C02-v3；[C251 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C252 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C253 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C254 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
 
-按“展示理论应用优势”的更强准则，[新筛选](发表成果整理/应用优势导向的候选筛选.md)推荐 [C256非凸幅值Hamilton](research/canonical/amplitude_circle_hamilton.md#ach-object)：自然相位不可识别的圆解集，完整近端在任意小零邻域恰有三输出且含非极小驻点，统一最近锚/真EB圆管控制全部选择；LT必要二次式、固定矩阵weak-Minty及已核Hamilton合同有明确反例，另保留基于新曲率界的正面能量证明。此前推荐的[C246自由粒子](research/canonical/free_particle_rleb.md#fp-object)现只承担闭式机制角色；[C255退化Bregman](research/canonical/perspective_bregman_gppa.md#pbg-object)虽有锐物理prox1/2与极限两点1/3，已找到旧零锚正面路径，撤回优势推荐。[C247固定SPD分类](research/canonical/free_particle_rleb.md#fp-metric)与[C241-v2短锚证](research/canonical/free_particle_rleb.md#fp-hamilton-salvage)仍保留各自完整范围。现行主稿已有C249/C250物理GPPA父定理、C242三角例与C251四次Bregman例，[采用重写清单](发表成果整理/应用优势导向的候选筛选.md#adoption-edits)尚未实施，不认证公开首创或全部旧理论排除。
+[接续筛选](发表成果整理/应用优势继续筛选.md)撤回C256/C257“经典方法无法分析”的强推荐：[C259](research/canonical/amplitude_classical_energy.md#eca-fixed99)有同窗全部驻点短经典能量证明。当前可采用设计应用为[C260-v2](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)：未知有界反Hermitian梯度混合、任意模式切换及全部隐式根，原真inf/同锚证书的共同半径提高到10⁻⁴，并另补指定固定/连续模式全域coverage。[C261-v3](research/canonical/smooth_kl_full_relation_obstruction.md#sko-nonsmooth)排共同可定义/强链式locLip单状态ABS-H1/H2；C¹甚至H1自身不可能。但[C262](research/canonical/artificial_kl_energy_bridge.md#akb-theorem)人工非可定义KL能量可导入ABS，禁止全理论排除。[C263](research/canonical/orthogonal_feedback_critical_gate.md#ofc-threshold)给完整远纤维锐门Γ>26m−1≈9.0074及临界恰三输出。它仍是明确反馈设计原型：现成公开算法逐项映射、设备预算和公开优先未认证；不能宣称已满足主证明比原例更短的目标。主稿未替换，C241/C246/C251/C255原作用保留。
 
-继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。
+继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 669 个数学节点、466 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 682 个数学节点、484 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -303,9 +303,15 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 新文件 | 数学资产与读取时机 |
 | --- | --- |
 | [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
-| [research/canonical/amplitude_circle_hamilton.md](research/canonical/amplitude_circle_hamilton.md) | C256完整Clarke零集与全部纤维、全空间coverage、全分支曲率界、统一圆管、恰三输出、锐锚1/2与EB2、准确旧合同和正面能量替代。当前应用优势推荐。 |
+| [research/canonical/amplitude_circle_hamilton.md](research/canonical/amplitude_circle_hamilton.md) | C256完整Clarke零集与全部纤维、全空间coverage、全分支曲率界、统一圆管、恰三输出、锐锚1/2与EB2、准确旧合同和正面能量替代。完整多值校准；C259经典正面已闭，强推荐撤回。 |
 | [research/canonical/amplitude_circle_damping_threshold.md](research/canonical/amplitude_circle_damping_threshold.md) | C257全实参数coverage、Γ>0锐圆零吸收/收敛门、每个正阻尼完全显式共同元组、锐距离1/(1+Γ)、真三输出持续、中心完整零纤维、全局二周期/负阻尼旋转；最大半径留门。 |
+| [research/canonical/amplitude_classical_energy.md](research/canonical/amplitude_classical_energy.md) | C259不借新曲率的同窗完整经典能量正面；C256/C257强推荐撤回。 |
+| [research/canonical/orthogonal_feedback_rleb.md](research/canonical/orthogonal_feedback_rleb.md) | C260-v1/v2全维反馈球、真inf、全部根、R10⁻⁴共同窗、指定模式coverage及sharp sqrt26/11；设计原型身份与能量替代明确。 |
+| [research/canonical/smooth_kl_full_relation_obstruction.md](research/canonical/smooth_kl_full_relation_obstruction.md) | C261-v1/v2光滑H1与v3强链式/可定义非光滑H1/H2严格障碍；C262人工非可定义KL桥限定全部ABS排除。 |
+| [继续筛选](发表成果整理/应用优势继续筛选.md)、[完整正面反审](发表成果整理/候选正面反审明细.md)、[复算](research/code/natural_advantage/README.md) | 新候选循环、经典正面淘汰、独立coldread及改稿清单，现成系统映射未认证。 |
 | [research/canonical/perspective_bregman_gppa.md](research/canonical/perspective_bregman_gppa.md) | C255完整退化核优化、边界/远输入与物理桥、锐prox两点1/2及极限两点1/3；经典零锚长度路径已核，不作为优势分离。 |
 | [应用筛选](发表成果整理/应用优势导向的候选筛选.md)、[接收范围](发表成果整理/本轮应用例独立接收.md)、[复算入口](research/code/natural_gppa/README.md) | 多轮失败机制、四维评价、精确文献合同、全部选择量词、临界/远中心攻击和采用后的摘要/比较/附录重写清单；未冒称稿件已替换。 |
 | [发表成果整理/非Lipschitz近端例独立比较.md](发表成果整理/非Lipschitz近端例独立比较.md) | 优化来源、机制、原Hamilton的四轴比较；凸幂完整合同、C248弱凸离零奇点、致命分支攻击及实际主稿采用清单。要选正文例或重写比较贡献时读取。 |
 | [research/code/free_particle_rleb/README.md](research/code/free_particle_rleb/README.md) | 上述Claim的实际参数、seed、边界与独立反算、Python版本和hash；两份运行结果用于复现有限算术，不作为普遍证明。 |
+| [research/canonical/artificial_kl_energy_bridge.md](research/canonical/artificial_kl_energy_bridge.md) | C262人工非可定义KL能量的完整ABS正面桥；禁止把C261的CR障碍扩大为整个ABS排除。 |
+| [research/canonical/orthogonal_feedback_critical_gate.md](research/canonical/orthogonal_feedback_critical_gate.md) | C263全n真实phase零吸收锐门及全部临界纤维，局部系数不能替代远门。 |

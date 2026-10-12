@@ -132,3 +132,7 @@ C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从1
 ## C258：有限单纯形球值方向证书
 
 [simplicial_sphere_budget_certificate/README.md](code/simplicial_sphere_budget_certificate/README.md)给二维和五维 toy 三角剖分的公共半球、重心梯度、路径因子和标量边界 collar 余量复算；`verify.py` 同时拒绝无正半球余量、无效 eta、零见证和反向（\(\varepsilon=2\)）collar。它不认证 RP² 的双 Lipschitz 参数化、真实边界迹或原预算端点。
+
+## C259–C263：经典正面、完整反馈、能量边界与锐远纤维门
+
+[natural_advantage/README.md](code/natural_advantage/README.md)给标准库命令、SHA与结果。Fraction核全域/normal/真EB/兼容/严格预算和C259短能量常数；80位Decimal七个逆定义sharp族及精确管外增能一步；seed20261012的720球投影/skew表示、100强度polarization复算通过。C261另核六个Γ/R辅助前驱边界。C260-v2新增R10⁻⁴三轮有理吸收、trueinf余量、全窗/严格预算；C262核dense预算与H1α.9；C263核十一个η±/0的闭式临界根反算。所有完整输出、无限轨道、指数锐性、能量不可能性、limiting/KL与临界全纤维仍由规范解析证明负责。
