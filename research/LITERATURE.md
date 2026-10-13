@@ -452,6 +452,18 @@ Luke–Tam正式版2025 DOI10.1287/moor.2025.0863 Def2、Assumption2(d)(ii)、Th
 - **Primary / paper fact**：R. Z. Wang等，*Phase retrieval via gain-based photonic XY-Hamiltonian optimization*，Communications Physics9,85，2026-02-03，[官方全文](https://www.nature.com/articles/s42005-026-02525-7)，DOI10.1038/s42005-026-02525-7。协调者读取Methods的CDP→XY映射及式(12)–(13)：复振子的一阶gain-feedback演化和幅值调节；这支持相位恢复与反馈系统的实际研究背景。
 - **Interpretation / limit**：该文没有提供本库C260的Frobenius3/2幂loss、3/2动能、正交反馈cone或完整隐式全部根算法。C260是本次明确的稳健反馈设计原型，不能称对该公开光学系统的逐项分析，也不能借其数值性能作本例数据证据。
 
+<a id="lit-zero-geometry-retraction-prior"></a>
+## LIT-ZERO-GEOMETRY-RETRACTION-PRIOR · 零点几何的新颖性续核
+
+2026-10-13 主代理与 Astra 独立重开下列期刊原文；只记录实际读取的陈述和证明机制，不由有限检索认证全球首创。原论文和规范 Claim 的身份、状态均未改变。
+
+- **Paper fact**：Víctor Pérez García–Helga Fetter Nathansky, *Fixed points of periodic mappings in Hilbert spaces*, Ann. Univ. Mariae Curie-Skłodowska Sect. A **64**(2) (2010), 37–48，DOI `10.2478/v10062-010-0013-y`，[期刊原文 PDF](https://journals.umcs.pl/a/article/download/3985/2887)。Lemma 2.1，印页 38–40：完备度量空间上连续 T，辅助 u 满足固定点缺陷的几何收缩和位移受缺陷控制；u 另连续时，辅助迭代的极限为到 Fix T 的回缩。证明在缺陷有界的开集上核一致收敛。迭代的是 u，不能将其与文中周期映射 T 或本库 PPA 的 T 默认为同一对象。
+- **Paper fact**：Andrzej Wiśnicki, *Hölder continuous retractions and amenable semigroups of uniformly Lipschitzian mappings in Hilbert spaces*, Topol. Methods Nonlinear Anal. **43**(1) (2014), 89–96，[期刊原文 PDF](https://www.tmna.ncu.pl/static/published/2014/v43n1-06.pdf)。Lemma 2.1，印页 91：完备有界度量空间、k-Lipschitz 自映射，以及对全部初值共同的几何增量界，推出 Hölder 连续极限；其后用于构造共同固定集回缩。作者明确称该引理为已有结果的变体。所读 PDF 未列 DOI，本轮不补猜。
+- **Paper fact / 重读**：Goebel 2016 [期刊原文](https://www.cs.ubbcluj.ro/journal/studia-mathematica/journal/article/view/159/pdf)，Claim 1，印页 431–432，已给任意非空闭指定固定集和全部轨道收敛的近非扩张映射。原公式使轨道沿一条线段单调前进，因此每条轨道也有有限总长；原文另明确指出极限可不连续。逐轨道有限长度不等于一致消失的物理长度尾界。
+- **Paper fact / 重读**：Luke–Tam 2025 [正式正文](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863)，Theorem 1 已研究 maximal submonotone 关系的正向及逆向局部纤维：弱凸函数的下水平集表示及相对闭性。Theorem 2 是指定局部门下的近端局部线性收敛。不能把既有 PPA 文献概括为只有收敛、从不讨论零纤维结构。
+
+**Interpretation / 本库定位**：一致连续迭代极限给回缩、ENR 的局部可缩性和经典指数补偿均不是新拓扑原理。C11/C02 的意义在于从同一完整物理算法的原始证书推出开吸引域和共同长度尾，而不是把这些结论直接假定。C04/C222 的可保留差别是精确最小预算 `D^(1−γ)` 的达到性、闭边界及完整原算子；Goebel 构造加投影的直接通用界只有 `(1+ε)^γ D^(1−γ)`，这不证明其任一特殊实例必然无法达到端点。C236 的可保留问题是保整管动力的锐完成代价，允许新有限常数；Euler/Hopf 本身是经典工具。任意 T0 的保管完成不自动保持完整真残差 EB，法向平均模型的远端纤维桥另核。详见[几何报告 §12](../发表成果整理/本轮重构/RLEB零集几何分类研究.md)。
+
 <a id="lit-smooth-kl-obstruction"></a>
 ## C¹共同二次下降合同的确切旧接口
 
