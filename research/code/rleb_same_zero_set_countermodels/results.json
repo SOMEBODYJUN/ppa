@@ -1,0 +1,146 @@
+{
+  "status": "all finite checks passed; universal statements have analytic proofs in report",
+  "environment": {
+    "python": "3.12.14",
+    "precision": "IEEE754 binary64",
+    "seed": 20261013
+  },
+  "exact_polynomial_checks": {
+    "t_squared_plus_c_squared_equals_2q_squared_plus_2s_squared": true,
+    "t_squared_minus_c_squared_equals_4qs": true,
+    "good_energy_gate_kappa_half": true,
+    "good_tail_coefficient_one": true
+  },
+  "finite_global_checks": {
+    "number_outputs": 601,
+    "number_pairs": 5000,
+    "max_inverse_relative_error": 4.3000042234249653e-16,
+    "max_abs_C_sampled": 0.638172455830357,
+    "max_positive_Lip1_excess": 0.0,
+    "max_positive_Holder_half_sqrt2_excess": 0.0
+  },
+  "contraction_ratio_samples": [
+    {
+      "output_y": 1.0,
+      "input_x_binary64": 1.3678794411714423,
+      "residual": 0.36787944117144233,
+      "exp_minus_inverse_square": 0.36787944117144233,
+      "output_input_ratio_binary64": 0.7310585786300049,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 0.2689414213699951,
+      "rounds_ratio_to_one": false
+    },
+    {
+      "output_y": 0.5,
+      "input_x_binary64": 0.5091578194443671,
+      "residual": 0.00915781944436709,
+      "exp_minus_inverse_square": 0.01831563888873418,
+      "output_input_ratio_binary64": 0.9820137900379085,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 0.017986209962091555,
+      "rounds_ratio_to_one": false
+    },
+    {
+      "output_y": 0.35,
+      "input_x_binary64": 0.35009972567110675,
+      "residual": 9.972567110679893e-05,
+      "exp_minus_inverse_square": 0.0002849304888765684,
+      "output_input_ratio_binary64": 0.9997151506733813,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 0.00028484932661867877,
+      "rounds_ratio_to_one": false
+    },
+    {
+      "output_y": 0.25,
+      "input_x_binary64": 0.2500000281337937,
+      "residual": 2.813379367981478e-08,
+      "exp_minus_inverse_square": 1.1253517471925912e-07,
+      "output_input_ratio_binary64": 0.9999998874648379,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 1.12535162055095e-07,
+      "rounds_ratio_to_one": false
+    },
+    {
+      "output_y": 0.2,
+      "input_x_binary64": 0.2000000000027776,
+      "residual": 2.777588772992814e-12,
+      "exp_minus_inverse_square": 1.388794386496407e-11,
+      "output_input_ratio_binary64": 0.999999999986112,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 1.3887943864771194e-11,
+      "rounds_ratio_to_one": false
+    },
+    {
+      "output_y": 0.15,
+      "input_x_binary64": 0.15,
+      "residual": 7.483664089192527e-21,
+      "exp_minus_inverse_square": 4.9891093927950183e-20,
+      "output_input_ratio_binary64": 1.0,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 4.9891093927950183e-20,
+      "rounds_ratio_to_one": true
+    },
+    {
+      "output_y": 0.125,
+      "input_x_binary64": 0.125,
+      "residual": 2.0047636131857974e-29,
+      "exp_minus_inverse_square": 1.603810890548638e-28,
+      "output_input_ratio_binary64": 1.0,
+      "ratio_gap_exact_formula_e_over_1_plus_e_binary64": 1.603810890548638e-28,
+      "rounds_ratio_to_one": true
+    }
+  ],
+  "orbit_prefix_checks": [
+    {
+      "initial": -10.0,
+      "iterations": 3000,
+      "last": -0.3017375618708087,
+      "prefix_length": 9.698262438129216,
+      "telescoping_length": 9.698262438129191,
+      "max_equation_error_binary64": 1.7763568394002505e-15
+    },
+    {
+      "initial": -1.0,
+      "iterations": 3000,
+      "last": -0.30171502828412267,
+      "prefix_length": 0.6982849717158773,
+      "telescoping_length": 0.6982849717158773,
+      "max_equation_error_binary64": 2.220446049250313e-16
+    },
+    {
+      "initial": -0.35,
+      "iterations": 3000,
+      "last": -0.3004681398767979,
+      "prefix_length": 0.0495318601232021,
+      "telescoping_length": 0.0495318601232021,
+      "max_equation_error_binary64": 1.1102230246251565e-16
+    },
+    {
+      "initial": 0.0,
+      "iterations": 3000,
+      "last": 0.0,
+      "prefix_length": 0.0,
+      "telescoping_length": 0.0,
+      "max_equation_error_binary64": 0.0
+    },
+    {
+      "initial": 0.35,
+      "iterations": 3000,
+      "last": 0.3004681398767979,
+      "prefix_length": 0.0495318601232021,
+      "telescoping_length": 0.0495318601232021,
+      "max_equation_error_binary64": 1.1102230246251565e-16
+    },
+    {
+      "initial": 1.0,
+      "iterations": 3000,
+      "last": 0.30171502828412267,
+      "prefix_length": 0.6982849717158773,
+      "telescoping_length": 0.6982849717158773,
+      "max_equation_error_binary64": 2.220446049250313e-16
+    },
+    {
+      "initial": 10.0,
+      "iterations": 3000,
+      "last": 0.3017375618708087,
+      "prefix_length": 9.698262438129216,
+      "telescoping_length": 9.698262438129191,
+      "max_equation_error_binary64": 1.7763568394002505e-15
+    }
+  ],
+  "numeric_caveat": "At tiny outputs the positive decrement lies below binary64 resolution. A displayed ratio of 1 is rounding, not an extra fixed point. No asymptotic convergence is inferred from finite prefixes."
+}

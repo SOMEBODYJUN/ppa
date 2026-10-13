@@ -1,0 +1,179 @@
+{
+  "status": "all finite checks passed; universal conclusions have analytic proofs",
+  "environment": {
+    "python": "3.12.14",
+    "precision": "exact Fraction/integer arithmetic",
+    "seed": null
+  },
+  "component_checks": [
+    {
+      "name": "circle_R2",
+      "ambient_dimension": 2,
+      "target_chi": 0,
+      "bounded_region_chi": [
+        1
+      ],
+      "exterior_region_chi": 0,
+      "deficits": [
+        1,
+        0
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 1
+    },
+    {
+      "name": "circle_R3",
+      "ambient_dimension": 3,
+      "target_chi": 0,
+      "bounded_region_chi": [],
+      "exterior_region_chi": 1,
+      "deficits": [
+        1
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 1
+    },
+    {
+      "name": "sphere_R3",
+      "ambient_dimension": 3,
+      "target_chi": 2,
+      "bounded_region_chi": [
+        1
+      ],
+      "exterior_region_chi": 2,
+      "deficits": [
+        -1,
+        0
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 1
+    },
+    {
+      "name": "sphere_R4",
+      "ambient_dimension": 4,
+      "target_chi": 2,
+      "bounded_region_chi": [],
+      "exterior_region_chi": -1,
+      "deficits": [
+        -1
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 1
+    },
+    {
+      "name": "two_nonnested_circles",
+      "ambient_dimension": 2,
+      "target_chi": 0,
+      "bounded_region_chi": [
+        1,
+        1
+      ],
+      "exterior_region_chi": -1,
+      "deficits": [
+        1,
+        1,
+        -1
+      ],
+      "general_minimum": 3,
+      "nondegenerate_minimum": 3
+    },
+    {
+      "name": "two_nested_circles",
+      "ambient_dimension": 2,
+      "target_chi": 0,
+      "bounded_region_chi": [
+        1,
+        0
+      ],
+      "exterior_region_chi": 0,
+      "deficits": [
+        1,
+        0,
+        0
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 1
+    },
+    {
+      "name": "genus2_R3",
+      "ambient_dimension": 3,
+      "target_chi": -2,
+      "bounded_region_chi": [
+        -1
+      ],
+      "exterior_region_chi": 0,
+      "deficits": [
+        1,
+        2
+      ],
+      "general_minimum": 2,
+      "nondegenerate_minimum": 3
+    },
+    {
+      "name": "genus2_R4",
+      "ambient_dimension": 4,
+      "target_chi": -2,
+      "bounded_region_chi": [],
+      "exterior_region_chi": 3,
+      "deficits": [
+        3
+      ],
+      "general_minimum": 1,
+      "nondegenerate_minimum": 3
+    },
+    {
+      "name": "RP2_R5",
+      "ambient_dimension": 5,
+      "target_chi": 1,
+      "bounded_region_chi": [],
+      "exterior_region_chi": 2,
+      "deficits": [
+        0
+      ],
+      "general_minimum": 0,
+      "nondegenerate_minimum": 0
+    }
+  ],
+  "arbitrary_closed_set_projection_mechanism": {
+    "finite_test_set": [
+      -1,
+      1
+    ],
+    "full_output_checks": 10,
+    "zero_tie_has_two_outputs": true,
+    "true_output_residual": 0,
+    "compatibility_coefficient": "1/4",
+    "tail_budget_coefficient": "2"
+  },
+  "square": {
+    "complete_inverse_and_anchor_inputs": 81,
+    "corners_and_boundary_included": true,
+    "largest_input_coordinate": 100,
+    "iterations_per_input": 12,
+    "reflected_pair_checks": 3240
+  },
+  "normal_tube_tail_coefficient": "1",
+  "quartic_target_counterchecks": [
+    {
+      "output": "1/3",
+      "input": "1/27",
+      "distance_ratio_to_full_S": "9"
+    },
+    {
+      "output": "1/10",
+      "input": "1/1000",
+      "distance_ratio_to_full_S": "100"
+    },
+    {
+      "output": "1/100",
+      "input": "1/1000000",
+      "distance_ratio_to_full_S": "10000"
+    },
+    {
+      "output": "1/10000",
+      "input": "1/1000000000000",
+      "distance_ratio_to_full_S": "100000000"
+    }
+  ],
+  "scope": "No Hopf completion solver, general index proof, or ENR recognition algorithm is implemented."
+}

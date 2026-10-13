@@ -1,0 +1,74 @@
+{
+  "status": "all exact rational assertions passed",
+  "model": "actual infinite Cantor set; lambda=1; v=Id; complete F and T",
+  "counts": {
+    "point": 835,
+    "gap": 63,
+    "pair": 35778,
+    "repelling": 252,
+    "orbit": 6300,
+    "prox_comparison": 12060,
+    "quartic": 10
+  },
+  "cantor_gap_depths": [
+    1,
+    6
+  ],
+  "rational_membership": "exact normalized ternary-state cycle detection",
+  "periodic_cantor_examples": {
+    "1/4": {
+      "kind": "cantor",
+      "steps": 2,
+      "reason": "periodic"
+    },
+    "3/4": {
+      "kind": "cantor",
+      "steps": 2,
+      "reason": "periodic"
+    },
+    "1/13": {
+      "kind": "cantor",
+      "steps": 3,
+      "reason": "periodic"
+    },
+    "12/13": {
+      "kind": "cantor",
+      "steps": 3,
+      "reason": "periodic"
+    },
+    "1/10": {
+      "kind": "cantor",
+      "steps": 4,
+      "reason": "periodic"
+    },
+    "9/10": {
+      "kind": "cantor",
+      "steps": 4,
+      "reason": "periodic"
+    }
+  },
+  "infinite_gap_integral": {
+    "partial_levels": 20,
+    "partial": "1736809351293697175/97261323672455430408",
+    "exact_tail": "131072/85103658213398501607",
+    "sum": "1/56"
+  },
+  "global_constants": {
+    "F_Lipschitz": "1",
+    "weak_convexity": "1/2",
+    "H_strong_monotonicity": "1/2",
+    "H_Lipschitz": "2",
+    "reflection_Lipschitz": "3",
+    "reflection_oscillation": "1",
+    "true_EB_coefficient": "2"
+  },
+  "repelling_identity": "d(T(b-epsilon),C)=2epsilon; length=(b-a)-epsilon",
+  "quartic_optional": {
+    "local_L": "1/2",
+    "local_EB_coefficient": "100/171",
+    "local_kappa": "1/2",
+    "local_R": "1/4",
+    "direct_compatibility_coefficient": "25/57"
+  },
+  "scope": "Finite exact checks support formulas; universal proofs are in the markdown."
+}
