@@ -1,0 +1,70 @@
+{
+  "scope": "finite checks only; universal conclusions are analytic",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "seed": "none; deterministic grids",
+  "decimal_precision": 100,
+  "binary_float": "IEEE binary64",
+  "tolerance": 2e-12,
+  "C275_common_window": {
+    "rho": "0.01",
+    "R": "0.001",
+    "u_cap": "0.05",
+    "theta": "0.8",
+    "kappa0": "0.3025",
+    "kappa": ".5",
+    "B_R": "0.03262277660168379331998893544432718533719555139325216826857504852792594438639238221344248108379300295",
+    "Q_cap": "0.002277442494833886543030217199197866047255305002016745773105550267506722877277266199141563836129374234",
+    "trust_sum": "0.002821953995867109234424173759358292837804244001613396618484440214005378301821812959313251068903499387"
+  },
+  "C275_joint_rule_full_interval_checks": {
+    "accepted_witnesses": 1645,
+    "max_normal_ratio": 0.44936896105263274,
+    "max_lower_bound_excess": 0.0,
+    "cap_parameter_from_inverse_W": 0.0024964942280701822
+  },
+  "set_valued_graph_checks": {
+    "operator": "normal cone to R x {0}",
+    "accepted_witnesses": 492,
+    "true_residual_at_all_outputs": 0,
+    "selected_norm_can_be_positive": true
+  },
+  "inverse_jump": {
+    "u": 0.4,
+    "Q_u": 0.2,
+    "B_Q_u": 0.2,
+    "infimum_attained": false
+  },
+  "exact_frontier_arithmetic": {
+    "T": "1/100",
+    "eta_conv": "1200/1609",
+    "eta_abs": "1600/1609",
+    "asymptotic_power_coefficient": "3/4",
+    "normalized_EB_coefficient": "3"
+  },
+  "far_zero_input": {
+    "input": [
+      0,
+      0
+    ],
+    "output": [
+      4.0,
+      4.0
+    ],
+    "defect_norm": 16.0,
+    "selected_squared_norm": 160.0
+  },
+  "exact_orbit_conjugacy": "passed for zero and both signs, k=0..12",
+  "cyclic_game_arithmetic": {
+    "diagonal_cases": 125,
+    "lower_bound_mu": 0.30277563773199456,
+    "observed_min_sigma": 0.3110190241933502,
+    "lambda": 5.0,
+    "sharp_global_q": 0.475130176559702,
+    "sufficient_sigma": 0.25,
+    "all_output_kappa": 0.6739684021805543
+  },
+  "independent_frontier_verifier_stdout": "Exact C02 complete-graph gates: L=2.1, compatibility=0.3025, B(R)=0.11\nFinite cap frontier: eta_conv=0.745804847732, eta_abs=0.994406463642, selected cap=0.100280855601\nExact finite-cap endpoint: drift and zero-escape boundary steps verified.\nCritical coefficient: both-sign constant-distance drift verified.\nSubcritical powers: tiny zero escape and drift steps verified.\nHigher power q=3: coefficient 100 admitted on tiny cap; delta=0.0100000000844 < 0.75.\nNo cap: exact zero-input escape followed by far divergent drift verified.\nAbove absorption threshold: opposite-sign accepted output verified.\nHypomonotonicity ratios: [-98.50000000000001, -9998.5, -999998.4999999999]\nCohypomonotonicity ratios: [-4.998800269939263, -49.99999886750003, -499.9999999988743]\nAll finite instance checks passed; analytic proofs are in the note.\n",
+  "script_sha256": "a015b01d8943a59d3cc2487bb9a1cb66e833faa096955ef0fec6e8c2fcd09ccb",
+  "frontier_helper_sha256": "5853f193165ad773edf088b5529f2d6e8a5992303248116a65314cadf81cf462"
+}

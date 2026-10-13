@@ -8271,6 +8271,138 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-6"
+    },
+    "IGS-CERTIFICATE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "IGS-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "IGS-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "IGS-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "IGS-STOP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-CLASSICAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-FIBERS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-FRONTIER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "ISP-REMOTE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "LIT-INEXACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 584,
+      "region": "structure",
+      "realm": "structure"
     }
   },
   "edges": {
@@ -10397,6 +10529,34 @@
     "E534": {
       "x": 2191.7,
       "y": 4348.42
+    },
+    "E535": {
+      "x": 2015.59,
+      "y": 4530.33
+    },
+    "E536": {
+      "x": 2058.42,
+      "y": 4562.94
+    },
+    "E537": {
+      "x": 2158.09,
+      "y": 4058.67
+    },
+    "E538": {
+      "x": 2166.65,
+      "y": 4086.65
+    },
+    "E539": {
+      "x": 2135.64,
+      "y": 4068.09
+    },
+    "E540": {
+      "x": 2190.75,
+      "y": 3988.45
+    },
+    "E541": {
+      "x": 2112.59,
+      "y": 4166.78
     }
   },
   "bounds": {

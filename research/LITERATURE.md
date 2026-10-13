@@ -540,3 +540,20 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 **Paper fact（直接读取）**：Bolte–Sabach–Teboulle–Vaisbourd，*First Order Methods beyond Convexity and Lipschitz Gradient Continuity with Applications to Quadratic Inverse Problems*，[arXiv1706.06461v1](https://arxiv.org/pdf/1706.06461)，PDF头20Jun2017、正文21Jun2017；§4.2 AssumptionD(i)物理第10页要求σ-strongly convex h，Theorem4.1物理第11页和Eq.(4.7)使用它。其Eq.(3.4)为完整Bregman近端梯度步。
 
 **本轮映射/限制**：取该文f为C270的.5||a||²、g0、h纯Gram，Eq.(3.4)即C270完整算法；g0允许任意L>0，可取λL=.5。完整子问题supercoercive、所有函数适当连续、dom全空间、grad在有界集Lip、f-KL及实际轨道有界均可核。唯独正强凸核在每个S点有零Hessian方向而失败，故该指定Theorem4.1不能直接套。C270仍有独立经典全域有限长度及原f局部ABS正面；不能宣称整个Bregman/ABS排除。增加σ项改变真实不变量和readout，不能当同算法的形式重述。
+
+
+<a id="lit-inexact-precision"></a>
+## 非精确 PPA：真实图精度设计与旧理论正面恢复
+
+服务 C275/C276；数学证明和公开优先分别判定。具体读取和访问边界见[一手审查](novelty/2026_10_13_inexact/primary_review.md)、[旧误差合同](novelty/2026_10_13_inexact/rockafellar_hpe_review.md)和[独立价值审查](novelty/2026_10_13_inexact/final_value_review.md)。
+
+| 指定一手版本与定位 | 已读适用条件与准确映射 |
+| --- | --- |
+| Rockafellar 1976，DOI [10.1137/0314056](https://doi.org/10.1137/0314056)，[作者扫描](https://sites.math.washington.edu/~rtr/papers/rtr066-MonoOpProxPoint.pdf)，Prop3 p882、Thm2 pp885–886、Remark2 p887 | 最大单调完整 resolvent 非扩张，原图方程缺陷可上界精确输出误差；输出绝对/相对误差及逆纤维 Lipschitz 假设分开。C275 单调子类有同轨道正面，不把到非唯一 S 的 EB 等同其全逆纤维界。 |
+| Combettes–Pennanen 2004，DOI [10.1137/S0363012903427336](https://doi.org/10.1137/S0363012903427336)，[作者版 sicon3.pdf](https://pcombet.math.ncsu.edu/sicon3.pdf)，12页，Alg1.1/Def2.2/Lem2.4/Thm3.1及证明 | 局部最大逆亚单调、指定球内输出、gamma−rho 正余量、放松比在[epsilon,2−epsilon]、初值近和足够小可和内外误差给存在及弱收敛；明确 resolvent 变换正面恢复同一未经校正的图缺陷算法。源定理不等于任意模的 C275；C276 不满足其有限常数，自然循环博弈却通过经典入口。 |
+| Iusem–Pennanen–Svaiter 刊本2003，DOI [10.1137/S1052623401399587](https://doi.org/10.1137/S1052623401399587)；实读[作者稿](https://w3.impa.br/~benar/docs/iusem/sv-ius-penn.pdf)日期2006-12-24、23页，Algorithms1/2及相应收敛节 | 非单调、逆亚单调与常数相对误差已有先行；变换/校正算法与未经校正算法分开。作者稿中特定 Algorithm2 的超线性陈述反算只针对该读取版本，不自行归给2003未读刊本。本页不导入其有异议速率。 |
+| Solodov–Svaiter 1999，DOI [10.1023/A:1008777829180](https://doi.org/10.1023/A:1008777829180)，[作者稿](https://pages.cs.wisc.edu/~solodov/solsva99Teps.pdf)，Def2.1/Alg3.1 pp329/331–332 | 最大单调 epsilon 扩大图、相对残差平方预算与校正步共同组成 HPE；不能把 C275 的真实图值/无校正外观等同此完整合同，也不能只因外观不同排除可表示的轨道。 |
+| Buscaglia–Lotito–Parente–Solodov，DOI [10.1137/24M1713132](https://doi.org/10.1137/24M1713132)，[作者稿](https://pages.cs.wisc.edu/~solodov/blps24VMprox.pdf)，实际日期2025-08-08，25页，Alg4.1/Thm4.3–4.4、Thm5.1/(5.1)–(5.4) | 最大单调与一致受控度量；Thm5.1 将满足可和相对输出误差的每条充分晚近端轨道精确表示为非对称度量算法。已核 C275 单调子类在相应几何残差/比值可和时的正面；任意 PD 或非单射核提升仍未认证，不由变度量标题泛化。编号属于作者稿。 |
+| Wang–Li–Ng 2023，SIOPT33(3):1996–2020，DOI [10.1137/22M152147X](https://doi.org/10.1137/22M152147X)，[官方摘要](https://epubs.siam.org/doi/abs/10.1137/22M152147X) | 只取得正式摘要：Hilbert 最大单调、Hölder 次正则下 Rockafellar-type 非精确 PPA 的局部/全局强收敛和率。全文访问返回摘要，未核定理编号、误差准则、全部速率或长度；不凭摘要判包含关系。Hölder EB 不蕴含加强单调性，两前件独立。 |
+
+本库解析结果：[C275 真实图停止余量](topics/inexact_ppa/real_graph_stopping.md#igs-theorem)、[C276 完整锐精度边界](topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier)。前者证明为短小增益/事后证书，后者明确有限帽、幂次、临界和全部政策。C276 精确算法的 Hölder 共轭及自然循环博弈的经典正面必须保留；旧特定前件失败不证明所有经典方法失败。残差幂 forcing 已有 Newton 类先行；上述精确公式未匹配只是负检索证据，国际首创仍开放。

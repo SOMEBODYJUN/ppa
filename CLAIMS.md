@@ -2399,3 +2399,24 @@
 - **Evidence**：[完整规范](research/canonical/mixed_power_kernel_structural.md#mixed-power-object)、[自动证书](research/canonical/mixed_power_kernel_structural.md#mixed-power-certificate)、[全域不变量](research/canonical/mixed_power_kernel_structural.md#mixed-power-global)、[锐分层](research/canonical/mixed_power_kernel_structural.md#mixed-power-rate)、[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)与[复算](research/code/structural_verification/README.md)。
 - **Counterevidence / Scope**：p2且切向0时确为普通PPA线性，不授整个S的统一q−1阶；nonsmooth可有限识别，sharp只限smooth非终止子类。属于经典凸Bregman，BBC前件通过，不称经典不能分析或fixedzero noncalm；不是C273原生非零数据对象。
 - **Novelty development evidence**：[(29)–(34)完整约化](research/canonical/mixed_power_kernel_structural.md#mixed-power-reduction)保全部输出的切向部分对偶，整个SPD二次子类精确欧氏PPA及旧增长定理恢复q−1上阶，中心层另限域；显式极限是仿射Bregman投影，BBC全类pointconvergence通过。[Astra发展审查](research/novelty/2026_10_13/c274_development_review.md)与[反算](research/code/novelty_development/README.md)。长度/谱常数属定量扩展，其精确公开优先未决；不改v1/数学状态或非光滑g范围。
+
+
+<a id="c275"></a>
+## C275-v1 · 非精确 PPA 的真实图停止余量与完整输出有限长度
+
+- **Status**：`derived-checked`；Astra 独立推导及实际正文冷读、另一位数学反审、主代理重构和有限反算。公开优先与自然应用优势未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 X，固定 F 与 lambda>0，完整 S=zer F 非空闭。明定 G⊂gph F 且包含 S×{0}；全图版本 G=gph F。有限非减零连续模 omega/psi，B=(Id+omega)/2，Q(u)=inf{t≤rho:u≤B(t)}。U 开、U_R={x∈U:d(x,S)≤R}；所有 U_R 输入有精确 G 种子。对全部 G 图点/全部 S 锚，在 Minty 输入距锚≤rho 时有 IG4；真实 EB 检查所有 G 输出上 r_F≤bart 的点，不能限于尚未证明的留域。
+- **Assumptions / Algorithm**：0<theta<1，0<kappa0<kappa<1；ubar≤min(lambda bart,B(rho))、B(R)≤ubar、R+theta Q(ubar)≤rho、psi(u/lambda)≤kappa0 Q(u)。全部接受输出是 G 上 e=x−y−lambda w、u=lambda||w||≤ubar、||e||≤min(theta Q(u),Q(u)−psi(u/lambda)/kappa) 的所有 y；不取最小图值或精确分支。
+- **Conclusion**：精确种子通过规则，完整接受关系处处非空；每个输出给 0≤Q(u)−||e||≤d(x,S) 和 d(y,S)≤psi(r_F(y))≤psi(||w||)≤kappa[Q(u)−||e||]；零输入仅输出自身。H/Theta 取 IG6，Theta(R)<∞ 且严格初值预算 IG7 时，所有政策留在 U_R、有有限物理长度并趋 S∩U，尾界 IG8。
+- **Definitions / Dependencies / Evidence**：[IG1–14 独立正文](research/topics/inexact_ppa/real_graph_stopping.md#igs-object)、[全部输出证明](research/topics/inexact_ppa/real_graph_stopping.md#igs-theorem)、[实际接收](research/audit/INEXACT_PPA_REVIEW_2026_10_13.md)、[复算](research/code/inexact_ppa/README.md)。C249 是动机，不把仅精确输出的 G2 自动当本页更广图点前件；跳跃模逆不假定下确界达到。
+- **Scope / Counterevidence**：算法不用未知 d 或精确解误差，但需真实图见证、先认证的模及局部管。有限内层接受另条件为真实图对趋于严格帽内的非零输入精确种子；没有内层算法复杂度、近似图 oracle 或浮点零检测定理。幂次推论 IG14 明定 0<gamma≤1；仅是充分条件。GPPA 推导草案不升级，非单射核物理提升仍须另证。[先行性/正面经典恢复](research/LITERATURE.md#lit-inexact-precision)和[独立价值判定](research/novelty/2026_10_13_inexact/final_value_review.md)否定仅凭非单调/非精确包装计新收敛原理。
+
+<a id="c276"></a>
+## C276-v1 · 临界 Hölder 非精确完整关系的锐精度边界
+
+- **Status**：`derived-checked`；锐反例作者与 Astra 独立评判实际冷读、主代理重构及 Fraction/Decimal100/binary64 反算；国际精确优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：lambda,a>0，0<gamma<1，0<b<1，p=1/gamma；固定完整单值 F(v,z)=lambda^−1(−a|z/b|^gamma,(1−b)z/b)，完整 S=R×{0}，全空间唯一 J(s,t)=(s+a|t|^gamma,bt)。完整真实 EB psi(r)=b(lambda/a)^p r^p、全对 RL 模 omega(r)=r+2ar^gamma，两幂均最佳。全部接受真实图输出保留 IF26 的区间并；误差 E≤eta u^q、残差帽 u≤W(T)，eta≥0、q>0、T>0，W(t)^2=a²|t|^(2gamma)+(1−b)²t²。
+- **Conclusion / Critical frontier**：对 q≥p，所有 d(x0,S)≤T 初值与所有完整接受政策有限长并收敛至 S，当且仅当 eta H_q(T)<1−b；H_q(T)=T^(gamma q−1)[a²+(1−b)²T^(2−2gamma)]^(q/2)。等号已有合法恒距切向发散轨道。零吸收当且仅当 eta H_q(T)<1，不能替代收敛门。
+- **Power / Remote**：q<p 时任意 eta>0/任意小帽都有任意近零点的合法逃逸和发散政策。q=p 的小帽临界 eta*=(1−b)/a^p，等号失败；用 E≤hateta psi(||w||) 时 hateta*=(1−b)/b。q>p 时每个有限 eta 可缩小帽认证。没有帽的纯幂准则，对每个 q>0、eta>0 都有从 S 开始的合法发散政策；这说明本局部证书需远端排除，非断言此特定帽对每个算法必要。
+- **Definitions / Dependencies / Evidence**：[完整 F/J/S 和 IF27 精确轨道](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-object)、[IF26 完整接受纤维与锐帽门](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier)、[幂次分界](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-power)、[零吸收/跨符号/远端](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-remote)、[接收](research/audit/INEXACT_PPA_REVIEW_2026_10_13.md)、[双复算](research/code/inexact_ppa/README.md)。
+- **Scope / Classical positive**：这是诊断机制例，不是自然困难应用。有限局部亚单调/逆亚单调/零锚 weak-Minty 常数均被解析否定，仅排除这些前件。精确算法有 IF27 的 Hölder 共轭至普通线性单调 PPA，不能据此排除经典方法；原坐标完整内层误差政策不会自动被该变换保留。一般 gamma p>1 的充分讨论不是注册的普遍锐必要结论；不能将 q≥p 推广为通用必要精度。

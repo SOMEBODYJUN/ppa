@@ -633,3 +633,17 @@
 - **同算法正面恢复**：[C272 NG13–16](research/canonical/normal_growth_flat_kernel.md#ngf-classical-full)全C1全部驻点有共同平方距离KL能量，整个SPD子类精确普通PPA；[C273 NG29–33](research/canonical/native_gram_structural.md#native-gram-dual-ppa)全输入算法是普通对偶PPA，极限是Bregman投影；[C274 (29)–(34)](research/canonical/mixed_power_kernel_structural.md#mixed-power-reduction)耦合可部分对偶消元，整个SPD非零层旧增长理论给q−1上阶。非极小子问题根不自动破坏原目标或替代能量的ABS合同。
 - **必须区分**：增长阶配对已有，不同算法阶相同却未必等价；已有PPA精确恢复不等于旧论文已经写出全部原坐标常数。经典通用1/3逆和Puiseux分数幂不自动给C273的同模型锐composite2/3，但未查到精确式也不证明重大首创。
 - **保留与重启**：原始全根认证、锐复合几何和具体物理预算可以保留；需一般可迁移结构定理或自然任务的实际认证优势，不能用新术语/退化核/向量化代替。[发展审查](research/novelty/2026_10_13/README.md)下调贡献权重，不反驳C272–C274-v1数学身份。
+
+
+## F92 · 非 Lipschitz 几何中照搬固定相对误差，或只用零吸收代替收敛
+
+- **准确失败对象**：[C276 完整模型](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier) 的全部真实图政策，而非任选近端分支。反射指数 gamma<1，最佳真 EB 幂 p=1/gamma；任意固定正系数的欧氏相对缺陷/步长容差都会接受任意近 S 的恒距切向漂移。单条合法发散政策已否定“所有通过准则的输出均收敛”。
+- **三条边界分开**：q<p 任意小帽失败；q=p 有严格系数；q>p 可縮帽。q≥p 时有限帽的精确收敛门 eta H_q(T)<1−b，零吸收仅需 eta H_q(T)<1；中间区域零点不逃逸仍有发散轨道。无帽则任意正幂/系数允许远端逃逸。
+- **可行替代与限制**：[C275 停止余量](research/topics/inexact_ppa/real_graph_stopping.md#igs-theorem) 使用可计算的 Q(u)−E 与真实 EB 上界；共同图作用域、精确种子覆盖、帽与留域均须先核。幂次仅在明定模型有锐必要性，不能把 q≥p 推为一般 gamma p>1 的最小精度；其几何尺度为 q≥1/gamma。
+- **经典正面**：模型精确轨道有 [Hölder 共轭](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-object) 及直接短证明。旧指定常数失败不排除所有经典方法，也不能包装成自然难题被首次解决。
+
+## F93 · 把 Hölder 次正则性当加强单调性，或把非单调非精确本身当新颖性
+
+- **两个独立前件**：F=−Id 有精确线性真 EB 却反单调；F(x)=x³ 单调但无局部线性 EB。Hölder EB 描述距离与真实残差，不给图点内积条件；[Wang–Li–Ng 2023](research/LITERATURE.md#lit-inexact-precision) 的最大单调性是另一个明定前件，不由 Hölder 次正则推出。
+- **已读先行正面**：Combettes–Pennanen 2004 与 Iusem–Pennanen–Svaiter 作者稿已有非单调非精确/相对误差；BLPS 2025 作者稿还给部分相同最终轨道的非对称度量表示。循环博弈的 [完整自然验证](research/candidates/inexact_cyclic_game_benchmark.md) 可被逆亚单调/直接收缩恢复，撤回独占优势。
+- **保留贡献与读取边界**：真实图可计算停止证书及完整锐精度边界可保留为技术结果；国际精确优先、自然认证成本优势、真实内层复杂度仍开放。WLN 官方摘要只核目标/基本前件，未取得全文不得断言其误差规则、定理覆盖或遗漏。

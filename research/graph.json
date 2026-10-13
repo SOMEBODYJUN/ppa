@@ -4034,6 +4034,78 @@
       "label": "2312.12205v3 Thm3.6已核完整增长合同",
       "file": "LITERATURE.md#lit-power-ppa-growth",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IGS-OBJECT",
+      "label": "C275原算子/完整真残差/明定接受图块",
+      "file": "topics/inexact_ppa/real_graph_stopping.md#igs-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IGS-GEOMETRY",
+      "label": "C275共同图几何/精确种子/真EB/逆尺度窗口",
+      "file": "topics/inexact_ppa/real_graph_stopping.md#igs-assumptions",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IGS-STOP",
+      "label": "C275真实图缺陷的联合可计算停止预算",
+      "file": "topics/inexact_ppa/real_graph_stopping.md#igs-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IGS-CERTIFICATE",
+      "label": "C275全部接受输出的距离上下证书与零吸收",
+      "file": "topics/inexact_ppa/real_graph_stopping.md#igs-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IGS-LENGTH",
+      "label": "C275可和步长/严格预算下全部政策留域与物理极限",
+      "file": "topics/inexact_ppa/real_graph_stopping.md#igs-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-OBJECT",
+      "label": "C276临界Hölder完整算子/唯一J/全S/最佳真EB",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-FIBERS",
+      "label": "C276残差帽与纯幂缺陷下全部区间接受纤维",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-FRONTIER",
+      "label": "C276有限帽所有政策收敛的锐系数门",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-POWER",
+      "label": "C276内层误差幂次的严格三分界",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-power",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-REMOTE",
+      "label": "C276零吸收较弱/跨符号输出/无帽发散政策",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-remote",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "ISP-CLASSICAL",
+      "label": "C276有限旧常数失败与精确Hölder共轭正面",
+      "file": "topics/inexact_ppa/sharp_precision_frontier.md#isp-classical-boundary",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "LIT-INEXACT",
+      "label": "非精确PPA已读一手合同/同轨道恢复/WLN全文门",
+      "file": "LITERATURE.md#lit-inexact-precision",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10175,6 +10247,90 @@
       "scope": "另g=<Au,u>/2常SPD；eta=A^-1/2 gradphi精确欧氏PPA。ell非零growthnuq*和來源prox p1 givesq−1上阶，物理双边幂桥/切向O(r^q)全核；ell0另p>2上阶/p2linear/p<2该超线性门失败。",
       "status": "derived-checked",
       "topic": "理论发展与同算法经典恢复"
+    },
+    {
+      "id": "E535",
+      "inputs": [
+        "IGS-OBJECT",
+        "IGS-GEOMETRY",
+        "IGS-STOP"
+      ],
+      "output": "IGS-CERTIFICATE",
+      "relation": "sufficient",
+      "scope": "同C275固定F/lambda/完整S/G；全部IG4图对/锚、种子coverage、全部候选输出真EB及IG5同窗合取。每个接受图值给IG9、kappa收缩、zero仅自身；不选最小残差或单支。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E536",
+      "inputs": [
+        "IGS-CERTIFICATE",
+        "IGS-GEOMETRY",
+        "IGS-STOP"
+      ],
+      "output": "IGS-LENGTH",
+      "relation": "conditional",
+      "scope": "另IG6的Theta(R)有限、初值在U_R且Theta(d0)<dist(x0,X∖U)。IG6的H按theta共同窗定义，有限前缀先证留域才再用coverage；所有政策物理finite length、尾界及S∩U极限。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E537",
+      "inputs": [
+        "ISP-OBJECT"
+      ],
+      "output": "ISP-FIBERS",
+      "relation": "conditional",
+      "scope": "同C276临界p=1/gamma模型，eta≥0/q>0/T>0；只接受全部真实图E≤eta u^q、u≤W(T)。IF26双向参数化整个区间并，包括零/两符号/边界；输入条带|r|≤T有精确种子。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E538",
+      "inputs": [
+        "ISP-OBJECT",
+        "ISP-FIBERS"
+      ],
+      "output": "ISP-FRONTIER",
+      "relation": "conditional",
+      "scope": "另q≥p。所有d0≤T/每完整接受政策finite length且趋S，当且仅当eta H_q(T)<1−b；等号和越界由t=T/e2=−(1−b)T恒距切向发散否定。必要性不是仅zero吸收失败。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E539",
+      "inputs": [
+        "ISP-OBJECT",
+        "ISP-FIBERS"
+      ],
+      "output": "ISP-POWER",
+      "relation": "conditional",
+      "scope": "同模型：q<p任意正eta/小帽近zero逃逸；q=p临界eta*=(1−b)/a^p严格、等号失败；q>p每有限eta可缩帽。不是一般gamma p>1里q≥p的普遍必要性。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E540",
+      "inputs": [
+        "ISP-OBJECT",
+        "ISP-FIBERS"
+      ],
+      "output": "ISP-REMOTE",
+      "relation": "conditional",
+      "scope": "q≥p时zero吸收iff eta H_q(T)<1，严格弱于收敛门；eta H>1显式跨符号输出。另去帽的完整纯幂关系，对每q>0/eta>0均有从S开始的合法发散轨道；不推广为所有算法的帽必要性。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E541",
+      "inputs": [
+        "ISP-OBJECT"
+      ],
+      "output": "ISP-CLASSICAL",
+      "relation": "implies",
+      "scope": "明定F所有有限local hypo/cohypo/zeroanchored weakMinty常数失败；同时IF27精确轨道由Hölder homeomorphism共轭普通线性单调PPA。仅排特定前件，不排任意lift，也不默认H保原物理内层误差政策。",
+      "status": "derived-checked",
+      "topic": "非精确PPA完整精度设计"
     }
   ]
 }

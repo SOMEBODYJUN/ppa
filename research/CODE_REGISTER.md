@@ -154,3 +154,10 @@ C257另有damping_verify.py / damping_results.json：80位Decimal核八个Γ从1
 入口 [`code/model_selection_limits/README.md`](code/model_selection_limits/README.md)，运行 `python3 research/code/model_selection_limits/verify.py`。seed266269，Fraction精确多项式/firm反例；420加权区间前缀、指数角点、49单空核反算、1440向量stationary反算、540Gram完整三次逆反算及缩放t⁷族。环境/实际脚本SHA记录于results.json。全称coverage/limiting/KL/无限政策/最佳指数由规范解析证明承担；C270锐3/7上界仍开放。代码通过不认证全球优先或强应用优势。
 
 C271另用同目录rail_verify.py，seed271、Fraction与Decimal80；1035真实固定gain标量逆、265同窗、38临界远根/二周期、五个sharp族、exactSPD完整zero3与真实漂移复算通过。零动量处主动拒绝乘过分母的伪根。脚本hash和环境在rail_results.json；不证全称，经典全域正面与共同能量合同不可能均由规范正文承担。
+
+
+## C275–C276：非精确真实图停止与完整精度边界
+
+运行 python3 research/code/inexact_ppa/verify.py；[代码说明](code/inexact_ppa/README.md)与[输出](code/inexact_ppa/output.json)记录版本、精度、容差、参数和脚本 SHA256。实际通过 1645 个联合停止规则的完整水平纤维端点/中点见证、492 个多值法锥图见证、125 组循环矩阵系数；另核跳跃逆的非达到下确界、零输入、跨符号、闭式轨道/共轭、临界及远端发散政策。独立标准库脚本 [check_frontier.py](code/inexact_forcing_attack/check_frontier.py) 的实跑输出保存于主 output。
+
+全称覆盖、完整纤维、所有政策、锐指数和临界必要性由 [C275](topics/inexact_ppa/real_graph_stopping.md)／[C276](topics/inexact_ppa/sharp_precision_frontier.md) 解析证明承担。数值只反算有限参数，不认证公开优先、整个连续纤维或自然应用优势；真实残差与选中图值在多值见证中明确不同。
