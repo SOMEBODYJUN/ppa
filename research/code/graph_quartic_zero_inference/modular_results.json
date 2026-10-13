@@ -1,0 +1,74 @@
+{
+  "target": {
+    "n": 13,
+    "J": "1/4",
+    "b_denominator": 1000,
+    "det_A_exact": "-1/16777216",
+    "det_A_mod3": 2,
+    "distinct_complex_zero_count": 1594323,
+    "production_quotient_matrix_constructed": false
+  },
+  "degenerate_cycle": {
+    "n": 12,
+    "J": "1",
+    "b": 0,
+    "det_DF_at_zero": "0",
+    "kernel_vector": [
+      "2",
+      "1",
+      "-1",
+      "-2",
+      "-1",
+      "1",
+      "2",
+      "1",
+      "-1",
+      "-2",
+      "-1",
+      "1"
+    ]
+  },
+  "nonintegral_J_cycle": {
+    "n": 6,
+    "J": "1/3",
+    "b": 0,
+    "mod3_reduction_rejected": true,
+    "det_DF_at_zero": "0"
+  },
+  "nonintegral_b_counterexample": {
+    "A": [
+      [
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "3"
+      ]
+    ],
+    "b": [
+      "1/27",
+      "1/3"
+    ],
+    "root": [
+      "1/3",
+      "0"
+    ],
+    "det_A_mod3": 2,
+    "det_DF_at_root": "0"
+  },
+  "tiny_quotient": {
+    "variables": 2,
+    "quotient_rank": 9,
+    "alternative_monomial_reductions_compared": 81,
+    "det_A_mod3": 1,
+    "det_multiplication_delta_mod3": 1
+  },
+  "toy_root_count": {
+    "distinct_complex_and_real_roots": 9,
+    "known_strict_minima": 4,
+    "extra_real_roots": 5,
+    "sum_indices": 1
+  },
+  "scope": "Exact instance checks; general algebraic and degree proofs are in the candidate modular certificate."
+}

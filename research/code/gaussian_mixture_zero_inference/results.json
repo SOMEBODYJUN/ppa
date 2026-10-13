@@ -1,0 +1,433 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "seed": 20261013,
+    "precision": "float64"
+  },
+  "scope": "Exact Fraction scalar assertions; finite float64 attacks, not full zero enumeration.",
+  "parameters": {
+    "centers": [
+      [
+        -4.0,
+        0.0
+      ],
+      [
+        4.0,
+        0.0
+      ],
+      [
+        0.0,
+        5.0
+      ]
+    ],
+    "weights": [
+      0.16666666666666666,
+      0.3333333333333333,
+      0.5
+    ],
+    "lambda": 0.0625,
+    "m": 0.9,
+    "R": 1e-05,
+    "bar_t": 0.00016,
+    "M0": 0.00017777777777777779,
+    "kappa": 0.9984217131127817,
+    "Theta_R": 0.006335983705487735,
+    "local_strong_monotone_PPA_factor": 0.9467455621301776
+  },
+  "exact_bounds": {
+    "Taylor_exp18_lower_numerator": "549689343118061",
+    "Taylor_exp18_lower_denominator": "14889875",
+    "Taylor_exp18_lower_float": 36916988.43127031,
+    "off_ratio_bound": "3/10000000",
+    "off_mass_bound": "3/5000000",
+    "covariance_bound": "3/78125",
+    "center_residual_bound": "3/625000",
+    "boundary_outward_lower": "67587/6400000",
+    "budget_lower": "2499/50000"
+  },
+  "certified_center_roots_numerical_representatives": [
+    [
+      -3.9999999849979604,
+      1.8752295809004443e-08
+    ],
+    [
+      3.999999992499031,
+      9.376147201199493e-09
+    ],
+    [
+      1.6668705718693814e-09,
+      4.999999993749236
+    ]
+  ],
+  "complete_PPA_center_start_orbits": [
+    {
+      "start": [
+        -4.0,
+        0.0
+      ],
+      "steps": 167,
+      "terminal_point": [
+        -3.9999999849985617,
+        1.8751543974359074e-08
+      ],
+      "terminal_true_residual": 9.627112702896703e-13,
+      "total_length": 2.4013820041536796e-08,
+      "max_distance_to_numerical_root": 2.4014782751167668e-08
+    },
+    {
+      "start": [
+        4.0,
+        0.0
+      ],
+      "steps": 155,
+      "terminal_point": [
+        3.9999999924996525,
+        9.375369098427179e-09
+      ],
+      "terminal_true_residual": 9.95984776371626e-13,
+      "total_length": 1.2006363216991522e-08,
+      "max_distance_to_numerical_root": 1.2007359200284682e-08
+    },
+    {
+      "start": [
+        0.0,
+        5.0
+      ],
+      "steps": 145,
+      "terminal_point": [
+        1.6666169396232674e-09,
+        4.999999993750187
+      ],
+      "terminal_true_residual": 9.844719961759964e-13,
+      "total_length": 6.4682127331481906e-09,
+      "max_distance_to_numerical_root": 6.4691972044218295e-09
+    }
+  ],
+  "discovery_attempts": 625,
+  "discovered_roots": [
+    {
+      "point": [
+        -3.9999999849979604,
+        1.8752295809004443e-08
+      ],
+      "type": "minimum",
+      "true_residual": 3.3087224502121107e-23,
+      "hessian_eigenvalues": [
+        0.9999998462305424,
+        0.9999999999990116
+      ],
+      "PPA_derivative_eigenvalues": [
+        0.9411764791014232,
+        0.94117647058829
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        0.9411764792146594,
+        0.9411764705200507
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        1.0624999905821106,
+        1.0624999997116622
+      ],
+      "observed_index": 1
+    },
+    {
+      "point": [
+        -2.1187838085692907,
+        2.351519778344823
+      ],
+      "type": "saddle",
+      "true_residual": 0.0,
+      "hessian_eigenvalues": [
+        -9.213843706814371,
+        0.9999982011959592
+      ],
+      "PPA_derivative_eigenvalues": [
+        2.357741158432576,
+        0.9411765701760129
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        2.3577427495061873,
+        0.9411765699998679
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        0.42413464685198765,
+        1.0624998874604077
+      ],
+      "observed_index": -1
+    },
+    {
+      "point": [
+        -0.09295936174950135,
+        0.39959696989647464
+      ],
+      "type": "maximum",
+      "true_residual": 1.8939494505982008e-15,
+      "hessian_eigenvalues": [
+        -13.712755430496683,
+        -0.8381999340296542
+      ],
+      "PPA_derivative_eigenvalues": [
+        6.99531664140073,
+        1.0552836688508338
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        6.995289186386445,
+        1.0552833853746797
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        0.14295286583214045,
+        0.947612745389757
+      ],
+      "observed_index": 1
+    },
+    {
+      "point": [
+        -0.09253547254427442,
+        0.09125574861959879
+      ],
+      "type": "saddle",
+      "true_residual": 1.5711960421015447e-15,
+      "hessian_eigenvalues": [
+        -14.699423466207351,
+        0.5520535440271878
+      ],
+      "PPA_derivative_eigenvalues": [
+        12.302236419214745,
+        0.9666474288184986
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        12.30206896313395,
+        0.966647367917216
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        0.08128612313825664,
+        1.0345034139320413
+      ],
+      "observed_index": -1
+    },
+    {
+      "point": [
+        1.6668705444418962e-09,
+        4.999999993749236
+      ],
+      "type": "minimum",
+      "true_residual": 2.7427473598479143e-17,
+      "hessian_eigenvalues": [
+        0.9999999643165282,
+        0.9999999844272026
+      ],
+      "PPA_derivative_eigenvalues": [
+        0.9411764725637908,
+        0.9411764714503972
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        0.9411764725232393,
+        0.9411764713454078
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        1.0624999978487097,
+        1.0624999990746502
+      ],
+      "observed_index": 1
+    },
+    {
+      "point": [
+        2.0438347285637137,
+        2.4452063868319
+      ],
+      "type": "saddle",
+      "true_residual": 1.831026719408895e-15,
+      "hessian_eigenvalues": [
+        -9.24507603430952,
+        0.9999992098987254
+      ],
+      "PPA_derivative_eigenvalues": [
+        2.3686425015687798,
+        0.9411765143308685
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        2.36864309869398,
+        0.9411765140996702
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        0.4221827029144326,
+        1.0624999504348211
+      ],
+      "observed_index": -1
+    },
+    {
+      "point": [
+        3.999999992499031,
+        9.376147201199471e-09
+      ],
+      "type": "minimum",
+      "true_residual": 3.8050308177439273e-23,
+      "hessian_eigenvalues": [
+        0.999999923115435,
+        0.9999999999997529
+      ],
+      "PPA_derivative_eigenvalues": [
+        0.9411764748448201,
+        0.941176470588249
+      ],
+      "forward_eigen_direction_finite_ratio": [
+        0.9411764751283473,
+        0.9411764703370255
+      ],
+      "reverse_H_eigen_direction_finite_ratio": [
+        1.0624999955103596,
+        1.062499999922293
+      ],
+      "observed_index": 1
+    }
+  ],
+  "observed_counts": {
+    "minimum": 3,
+    "saddle": 3,
+    "maximum": 1
+  },
+  "observed_total_index": 1,
+  "local_tests": {
+    "samples": 384,
+    "max_PPA_distance_ratio": 0.9411764791279986,
+    "max_reflected_anchor_ratio": 0.8823529582559972,
+    "min_true_residual_over_distance": 0.9999998461408549
+  },
+  "global_boundary_tests": {
+    "samples": 720,
+    "max_prox_norm": 5.941176470584911,
+    "min_true_residual": 1.0000000000421174,
+    "proven_prox_upper": 5.9411764705882355,
+    "proven_residual_lower": 1
+  },
+  "far_input_tests": [
+    {
+      "input": [
+        1000.0,
+        0.0
+      ],
+      "output": [
+        941.4117647058823,
+        0.0
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8828235294117647
+    },
+    {
+      "input": [
+        0.0,
+        1000.0
+      ],
+      "output": [
+        0.0,
+        941.4705882352941
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8829411764705883
+    },
+    {
+      "input": [
+        0.0,
+        -1000.0
+      ],
+      "output": [
+        0.18835072344633663,
+        -941.1764705882352
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8823530215887222
+    },
+    {
+      "input": [
+        707.1067811865474,
+        707.1067811865474
+      ],
+      "output": [
+        665.5122646461623,
+        665.8063822932211
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8827689843348903
+    },
+    {
+      "input": [
+        -707.1067811865474,
+        707.1067811865474
+      ],
+      "output": [
+        -665.5122646461623,
+        665.8063822932211
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8827689843348903
+    },
+    {
+      "input": [
+        1000000.0,
+        0.0
+      ],
+      "output": [
+        941176.7058823529,
+        0.0
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8823534117647058
+    },
+    {
+      "input": [
+        0.0,
+        1000000.0
+      ],
+      "output": [
+        0.0,
+        941176.7647058824
+      ],
+      "prox_equation_residual": 0.0,
+      "C_norm_over_input_norm": 0.8823535294117648
+    },
+    {
+      "input": [
+        0.0,
+        -1000000.0
+      ],
+      "output": [
+        0.18835072344709378,
+        -941176.4705882353
+      ],
+      "prox_equation_residual": 5.324907181858407e-13,
+      "C_norm_over_input_norm": 0.8823529411765509
+    },
+    {
+      "input": [
+        707106.7811865475,
+        707106.7811865475
+      ],
+      "output": [
+        665512.2646461623,
+        665512.5587638094
+      ],
+      "prox_equation_residual": 1.1641532182693481e-10,
+      "C_norm_over_input_norm": 0.8823533571217338
+    },
+    {
+      "input": [
+        -707106.7811865475,
+        707106.7811865475
+      ],
+      "output": [
+        -665512.2646461623,
+        665512.5587638094
+      ],
+      "prox_equation_residual": 1.1641532182693481e-10,
+      "C_norm_over_input_norm": 0.8823533571217338
+    }
+  ],
+  "reliable_unknown_cluster_conclusion": {
+    "total_index": -2,
+    "nonempty": true,
+    "number_lower_bound": 1,
+    "exclusion": "No assertion of exactly two saddles or at least two unknown roots."
+  }
+}

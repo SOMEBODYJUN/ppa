@@ -1,0 +1,174 @@
+{
+  "scope": "analytic six-root/common-window gates plus finite diagnostics; no complete real-root classification",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "model": {
+    "N": 8,
+    "gamma": "3/10",
+    "lambda": "16/19",
+    "patterns": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ]
+    ],
+    "bias_numerators": [
+      -7,
+      4,
+      2,
+      -3,
+      6,
+      -5,
+      1,
+      8
+    ],
+    "bias_denominator": 1000
+  },
+  "uniform_certificate": {
+    "m": 2,
+    "rho": "1/20",
+    "target_U_radius": "3/100",
+    "R": "1/100",
+    "L": "1/2",
+    "psi": "t/2",
+    "bar_t": 1,
+    "kappa": "1/2",
+    "Theta": "3t/2",
+    "budget_left": "3/200",
+    "budget_right": "1/50"
+  },
+  "predicted": {
+    "known_minima": 6,
+    "total_index": 1,
+    "unseen_index": -5,
+    "unseen_real_root_lower_bound": 5,
+    "unseen_count_parity": "odd",
+    "complex_root_count": 6561,
+    "complex_count_is_not_real_count": true
+  },
+  "known_root_numeric_reverse": [
+    {
+      "point": [
+        -1.0924382605916103,
+        -1.088332750267893,
+        -1.0889642411968168,
+        -1.0908326062159714,
+        -1.087415363012956,
+        -1.0915300405169022,
+        -1.0891728299387666,
+        -1.0865440276499319
+      ],
+      "true_residual": 1.8372430291087815e-14,
+      "min_hessian_eigenvalue_numeric": 2.3656344696720573
+    },
+    {
+      "point": [
+        1.0869920022703667,
+        1.0911109214567294,
+        1.0904831827103063,
+        1.0886132176256524,
+        1.0920194727399688,
+        1.0879097395003539,
+        1.090274662858574,
+        1.0928796786212474
+      ],
+      "true_residual": 1.7585616245438878e-14,
+      "min_hessian_eigenvalue_numeric": 2.3713892482111723
+    },
+    {
+      "point": [
+        -1.0924381930733613,
+        -1.0883326820693884,
+        -1.0889643093000358,
+        -1.0908326740089724,
+        1.0920197620071985,
+        1.0879100316869061,
+        1.0902743725019184,
+        1.0928793901023284
+      ],
+      "true_residual": 1.4686965493170685e-14,
+      "min_hessian_eigenvalue_numeric": 2.375998311295205
+    },
+    {
+      "point": [
+        1.0869919337328047,
+        1.0911108536064267,
+        1.0904832506540314,
+        1.0886132858807196,
+        -1.0874156555121544,
+        -1.0915303300879726,
+        -1.0891725385504547,
+        -1.0865437343779067
+      ],
+      "true_residual": 1.463856855957299e-14,
+      "min_hessian_eigenvalue_numeric": 2.364819054198303
+    },
+    {
+      "point": [
+        -1.0924379336045307,
+        -1.0883324199863544,
+        1.0904832123250157,
+        1.0886132473760668,
+        -1.08741569413096,
+        -1.0915303683201691,
+        1.0902746332472542,
+        1.092879649197345
+      ],
+      "true_residual": 1.622103580162004e-14,
+      "min_hessian_eigenvalue_numeric": 2.3732138372906655
+    },
+    {
+      "point": [
+        1.0869916707784975,
+        1.0911105932888754,
+        -1.088964270932177,
+        -1.0908326358158835,
+        1.0920198000892127,
+        1.0879100701532414,
+        -1.0891728001997667,
+        -1.0865439977186815
+      ],
+      "true_residual": 1.6744100495929503e-14,
+      "min_hessian_eigenvalue_numeric": 2.365074789683727
+    }
+  ],
+  "diagnostics": {
+    "full_prox_inputs": 105,
+    "local_inputs": 384,
+    "max_normalized_reverse_error": 1.1841054050767678e-13,
+    "max_local_distance_ratio": 0.3314876289068237,
+    "observed_multistart_roots": 294,
+    "observed_negative_index_roots": 156,
+    "observation_is_not_exhaustive": true,
+    "supercritical_complete_fiber_witnesses": 7
+  }
+}
