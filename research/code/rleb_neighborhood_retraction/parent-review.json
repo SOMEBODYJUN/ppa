@@ -1,0 +1,90 @@
+{
+  "source_sha256": "3559919ecd2d3f17a25d4d14673add683467bf7871738c17341a19fd8db08d7f",
+  "review_scope": "exact delivered standalone figure and caption; not manuscript insertion or journal acceptance",
+  "independent_rational_math_checks": 48,
+  "complete_center_fiber": "(1/2) S^1; analytic characterization, sampled directions are diagnostics",
+  "cli_missing_font_errors": "both expected return code 2",
+  "outputs": {
+    "en": {
+      "pdf_dimensions_mm": [
+        179.99999491373697,
+        110.00000406901042
+      ],
+      "pdf_font_records": [
+        {
+          "font": "EVICAO+DejaVuSans-Bold",
+          "type": "Type0",
+          "encoding": "Identity-H"
+        },
+        {
+          "font": "GCWXDV+DejaVuSans-Oblique",
+          "type": "Type0",
+          "encoding": "Identity-H"
+        },
+        {
+          "font": "BMQQDV+DejaVuSans",
+          "type": "Type0",
+          "encoding": "Identity-H"
+        }
+      ],
+      "pdffonts_stderr": "",
+      "raster_objects": 0,
+      "png": {
+        "pixels": [
+          2834,
+          1732
+        ],
+        "dpi": [
+          399.9992,
+          399.9992
+        ],
+        "mode": "RGBA"
+      },
+      "hash_manifest_matches": true,
+      "text_count": 26,
+      "minimum_font_pt": 7.2
+    },
+    "-cn": {
+      "pdf_dimensions_mm": [
+        179.99999491373697,
+        110.00000406901042
+      ],
+      "pdf_font_records": [
+        {
+          "font": "GCWXDV+DejaVuSans-Oblique",
+          "type": "Type3",
+          "encoding": ""
+        },
+        {
+          "font": "BMQQDV+DejaVuSans",
+          "type": "Type3",
+          "encoding": ""
+        },
+        {
+          "font": "CVKVVF+NotoSansCJKsc-Regular",
+          "type": "Type3",
+          "encoding": ""
+        }
+      ],
+      "pdffonts_stderr": "",
+      "raster_objects": 0,
+      "png": {
+        "pixels": [
+          2834,
+          1732
+        ],
+        "dpi": [
+          399.9992,
+          399.9992
+        ],
+        "mode": "RGBA"
+      },
+      "hash_manifest_matches": true,
+      "text_count": 26,
+      "minimum_font_pt": 7.2
+    }
+  },
+  "visual_review": "Parent viewed exact English and Chinese PDF renders plus final grayscale preview: no missing glyphs, text/shape overlap, clipping, misleading arrow endpoints or lost panel semantics. Final standalone size reviewed; manuscript placement and journal compliance remain outside scope.",
+  "png_alpha": "RGBA storage with alpha=255 at every pixel; opaque white background.",
+  "caption_contract_review": "Checked certified M vs whole zerF, open U vs wider W, anchored L=0 vs all-pair RL, complete center fiber, true residual, finite-schematic interpretation and no unsupported deformation-retraction/Euler equivalence."
+}

@@ -1,0 +1,93 @@
+{
+  "math": {
+    "status": "passed",
+    "sampled_inputs": 896,
+    "max_iterate_formula_error": 4.440892098500626e-16,
+    "open_domain_exclusions": [
+      [
+        0,
+        0
+      ],
+      [
+        0.65,
+        0
+      ],
+      [
+        1.35,
+        0
+      ],
+      [
+        0.649999,
+        0
+      ],
+      [
+        1.350001,
+        0
+      ]
+    ],
+    "closed_certificate_window": [
+      0.65,
+      1.35
+    ],
+    "working_domain_W": [
+      0.2,
+      1.8
+    ],
+    "tail_bound": "0.35 * 2**(-k)",
+    "scope": "finite diagnostics; universal formulas proved in caption"
+  },
+  "size_mm": [
+    180.0,
+    110.0
+  ],
+  "script_sha256": "3559919ecd2d3f17a25d4d14673add683467bf7871738c17341a19fd8db08d7f",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "matplotlib": "3.10.8"
+  },
+  "layout": {
+    "text_count": 26,
+    "text_outside_page": [],
+    "font_sizes_pt": [
+      7.2,
+      7.4,
+      7.5,
+      7.6,
+      7.7,
+      8.0,
+      8.1,
+      8.2,
+      8.7,
+      9.0,
+      10.0
+    ]
+  },
+  "vector": {
+    "pdf_page_mm": [
+      179.99999999998556,
+      109.99999999998333
+    ],
+    "svg_page_mm": [
+      179.99999983333333,
+      110.00000013333332
+    ],
+    "pdf_image_objects": 0,
+    "svg_image_elements": 0,
+    "svg_fonts": "portable glyph paths",
+    "pdf_fonttype": 3
+  },
+  "contrast_on_white": {
+    "ink": 12.750751862610052,
+    "teal": 4.888217689534153,
+    "orange": 4.596264273644501,
+    "muted": 6.400579932523359,
+    "fill": 1.1574086132149894,
+    "rule": 1.6935515734270674
+  },
+  "sha256": {
+    "pdf": "b63fa99fd34daa0be882e1c8d0ec9607abfe799fe0a075d13b16577c34533827",
+    "svg": "f438d7be290382f413342ecedbd47e9e2dbb40bc3db2512081d22d0611c5b34c",
+    "png": "a51da0e0e0b52249b2c2520c3f0aef43be7b4ea81c4817e1cea372d29e1896b1"
+  }
+}
