@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## 理论发展与同算法经典恢复
+
+[新增经典桥复算](code/novelty_development/README.md)运行 `python3 research/code/novelty_development/verify.py`，保存[结果](code/novelty_development/output.json)：16个C272 SPD、10个C273完整Gram、10个C274部分对偶PPA和13个C1合法输出能量合同。Decimal100/binary64的参数、版本、容差及哈希均登记。零/跨符号/远输入/中心临界门已实跑；原点Bregman与中心距离幂算法同速率但不同输出亦反算。不枚举全部数值纤维，不认证公开优先；全称数学由[规范补充证明](novelty/2026_10_13/README.md)承担。
+
 ## 原始模型到完整 GPPA 证书
 
 [结构复算](code/structural_verification/README.md)登记 C272–C274：Fraction 共同半径系数、100 位 Decimal 的 C1 多驻点/非极小根反算、零/跨符号/远输入、局部远根与反射失败、非零数据 Gram 的 15 个缩放方程见证、混合幂核中心/非zero切向层及反馈共同证书临界门。运行 `python3 research/code/structural_verification/verify.py` 写 [output.json](code/structural_verification/output.json)，包括代码哈希、精度、原式/缩放残差和舍入界。不枚举完整数值纤维、不证明所有输入/输出或最优指数；这些量词在对应规范正文中解析证明。

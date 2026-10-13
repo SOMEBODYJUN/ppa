@@ -626,3 +626,10 @@
 - **真实区别**：[C273](research/canonical/native_gram_structural.md#native-gram-exponent)保留未平移native核与非zero原始数据，解点pointwise指数恰2/3；零数据C270的normal/tangent估计不能原样套，C273也不关闭C270的3/7上界。
 - **量词反证**：C273在[c,0]的原f全邻域统一欧氏平方H1失败；每单轨道却[有eventual H1/H2](research/canonical/native_gram_structural.md#native-gram-eventual)，sliceclassic另给所有lambda/初值finite length。因此不能将uniformneighborhood失败写成整个ABS/经典PPA不能分析。
 - **分层反证**：[C274](research/canonical/mixed_power_kernel_structural.md#mixed-power-rate)非zero切向sharp q−1与p2中心ordinarylinear属于同核不同层，不能把q−1泛化整个S。
+
+<a id="f91"></a>
+## F91 · 将完整驻点、核耦合或同数字速率直接计为新收敛原理
+
+- **同算法正面恢复**：[C272 NG13–16](research/canonical/normal_growth_flat_kernel.md#ngf-classical-full)全C1全部驻点有共同平方距离KL能量，整个SPD子类精确普通PPA；[C273 NG29–33](research/canonical/native_gram_structural.md#native-gram-dual-ppa)全输入算法是普通对偶PPA，极限是Bregman投影；[C274 (29)–(34)](research/canonical/mixed_power_kernel_structural.md#mixed-power-reduction)耦合可部分对偶消元，整个SPD非零层旧增长理论给q−1上阶。非极小子问题根不自动破坏原目标或替代能量的ABS合同。
+- **必须区分**：增长阶配对已有，不同算法阶相同却未必等价；已有PPA精确恢复不等于旧论文已经写出全部原坐标常数。经典通用1/3逆和Puiseux分数幂不自动给C273的同模型锐composite2/3，但未查到精确式也不证明重大首创。
+- **保留与重启**：原始全根认证、锐复合几何和具体物理预算可以保留；需一般可迁移结构定理或自然任务的实际认证优势，不能用新术语/退化核/向量化代替。[发展审查](research/novelty/2026_10_13/README.md)下调贡献权重，不反驳C272–C274-v1数学身份。

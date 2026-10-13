@@ -34,7 +34,7 @@
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**结构性验证入口已闭合。** [C272](research/canonical/normal_growth_flat_kernel.md#ngf-object)从全域法向增长/切向二次界给完整驻点覆盖、compactfibers、同锚trueEB、明确共同半径与物理预算；任意近S有nonminimum驻点输出仍认证，C2给full-point sharp m阶。[C273](research/canonical/native_gram_structural.md#native-gram-object)关闭非零数据原生Gram入口：核不平移、完整唯一J、解点点态sharp2/3与统一邻域H1失败；全λ全初值短经典以及每轨道eventual原f ABS均保留。[C274](research/canonical/mixed_power_kernel_structural.md#mixed-power-object)补nonsmooth强凸normal/非分离blockpower核自动证书、explicitlimit及非zero切向sharp q−1；p2中心实际linear，不授全S统一阶。下一步应核精确结构定理及锐阶的公开先行性，决定以C272入口+C273应用进入主稿的范围；不能仅凭本轮升级期刊或strongexclusiveadvantage。[报告](发表成果整理/本轮重构/结构性验证结果_2026-10-13.md)与[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)已保存。主稿、摘要及既有编号未改。
+**结构性验证有效，新颖性权重已复核下调。** [C272](research/canonical/normal_growth_flat_kernel.md#ngf-object)全域原始条件到完整驻点共同证书仍成立，但[全C1共同KL能量/整个SPD普通PPA桥](research/canonical/normal_growth_flat_kernel.md#ngf-classical-full)已核，有限长度与该子类m上阶不能另算新机制。[C273](research/canonical/native_gram_structural.md#native-gram-object)非零原生Gram的完整证书/锐点态2/3仍成立；[完整普通对偶PPA和投影](research/canonical/native_gram_structural.md#native-gram-dual-ppa)恢复全λ全初值物理长度，最明确的待认证贡献仅是同模型锐复合几何及uniform证书边界。[C274](research/canonical/mixed_power_kernel_structural.md#mixed-power-reduction)全类BBC点收敛、部分对偶消元/投影及整个SPD子类旧增长q−1上阶已核；长度/谱系数为定量扩展。三项v1数学状态保持，精确公开优先仍未穷尽。[发展报告](发表成果整理/本轮重构/理论发展与真实新颖性核查_2026-10-13.md)、[一手接口](research/LITERATURE.md#lit-novelty-development)、[接收](research/audit/NOVELTY_DEVELOPMENT_REVIEW_2026_10_13.md)与[反算](research/code/novelty_development/README.md)保存证据。下一门是一般观测秩/混合核首项到锐物理指数的可迁移定理，或自然非凸模型的原始局部完整排远入口；两者尚未证明。不能凭三项补强升级期刊或强独占优势；主稿/摘要/编号未改。
 
 **最新简化候选。** [C271](research/canonical/affine_crosstalk_rleb.md#acr-object)将任务简化为直线调节/未知跨轴gain，完整纤维、原真inf、同窗R10⁻⁴、模式/连续律coverage和sharp常数成立，保留解点noncalm与政策依赖终点。但原机械能独立给所有初值/全部policy全域finite length，仍不能强推荐；它只是正交反馈仿射特例，可用作短设计基准。固定SPD的完整zero3和真实漂移再度说明换度量不可默认。负参数free/normal二周期将Γ≤0真实全域失败和zero吸收失败分开，不判每positiveΓ充分。继续按任务新增结论筛选，勿把该简化模型包装成第二种新机制。
 
@@ -42,7 +42,7 @@
 
 本轮[C266-v1/v2](research/canonical/generic_power_kl_bridge.md#gpk-contract)把C262人工KL桥推广到任意闭S及正确物理转接的qγ≥1完整幂几何；禁止整个ABS排除，但它是新几何后的后验桥，不证明旧论文已先验处理任务。[C267](research/canonical/optimization_proximal_limits.md#opl-argmin)普遍阻断普通global-min prox的解点noncalm搜索；[C268](research/canonical/optimization_proximal_limits.md#opl-fenchel)自然非单射核逃出却一步完成，只作G3纤维修正结构例。[C269](research/canonical/vector_fenchel_classical.md#vfc-contraction)对非平凡向量候选给全λ/全root短经典正面，强推荐淘汰。[C270](research/canonical/gram_regression_gppa.md#grg-object)可作自然耦合Gram优化定量例：完整物理窗、显式未观测列极限、锐两点1/3读出；指定强凸核合同失败，但全域经典及原f-ABS正面并列，fixed-zero仍calm。一步prox最佳指数仅已证[1/3,3/7]，3/7上界开放。
 
-**下一应用门**：先固定真实任务、原算法与要新增的结论，再核旧定理的全部合同及同算法经典正面。停止普通global-min解点noncalm、非势/向量/退化镜像即优势和整个KL排除的无效诉求。非zero数据原生Gram的完整证书/解点指数已由C273关闭；C270本身的精确一步两点3/7上界仍开放。可继续攻局部原始条件的完整排远门、真实不确定政策的认证成本与上述结构结果先行性，不提前升级强独占优势。任意变化核须重新定义coverage、Fix、完整零纤维和physicaltrueEB，不从固定核结果自动获得。
+**下一应用门**：先固定真实任务、原算法与要新增的结论，再核旧定理的全部合同及同算法经典正面。停止普通global-min解点noncalm、非势/向量/退化镜像即优势和整个KL排除的无效诉求。非zero数据原生Gram的完整证书/解点指数已由C273关闭；C270本身的精确一步两点3/7上界仍开放。可继续攻局部原始条件的完整排远门、真实不确定政策的认证成本与上述精确锐几何先行性，不提前升级强独占优势。任意变化核须重新定义coverage、Fix、完整零纤维和physicaltrueEB，不从固定核结果自动获得。
 
 同一候选的[C257参数族](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)已闭每个Γ>0的完全显式共同半径/真残差/最近锚/整窗/预算、锐最坏距离1/(1+Γ)及任意κ∈(1/(1+Γ),1)证书；Γ≤0必要门由精确圆零输入的额外完整输出给出，正Γ仍有中心零纤维和全局二周期。Γ↓0的充分半径O(Γ²)与中心出现上界O(Γ)间隙尚未优化，是当前参数前沿；不再把真实阻尼门列为未闭，也不把最大有限窗或全域盆域列为已闭。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 

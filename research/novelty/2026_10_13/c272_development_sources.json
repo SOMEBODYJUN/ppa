@@ -1,0 +1,126 @@
+{
+  "review_date": "2026-10-13",
+  "scope": "C272-v1 only",
+  "canonical_input": "research/canonical/normal_growth_flat_kernel.md",
+  "canonical_input_sha256": "9527bf0f8de04359ed7f9456ef6d6b699236f1ab7f9215424c0c0053fc622db6",
+  "full_pdf_storage_or_upload": false,
+  "sources": [
+    {
+      "id": "power_ppa_v3",
+      "authors": "Oikonomidis, Bodard, Laude, Patrinos",
+      "title": "Global Convergence Analysis of the Power Proximal Point and Augmented Lagrangian Method",
+      "version": "arXiv:2312.12205v3, submitted 2025-10-01; PDF header 2025-10-02",
+      "url": "https://arxiv.org/html/2312.12205v3",
+      "read": ["Section 2.2", "Section 3 standing convex minimization setting", "Algorithm 1", "Theorem 3.5", "Theorem 3.6 and proof"],
+      "retrieval_refs": ["turn593view0", "turn596view2", "turn596view4"],
+      "conditions": ["proper lsc convex finite-dimensional objective", "p >= 1; Euclidean or designated lp+1 norm power prox", "fixed lambda > 0", "theta_k = 1 and epsilon_k = 0", "nonempty compact minimizer set", "uniform gap growth c*d^nu on a neighborhood of entire minimizer set, nu > 1", "p > nu-1", "bounded initial sublevel in surrounding analysis; coercive mapped objective supplies this"],
+      "mapping": "Fully applicable to constant-SPD C272 normal quotient via eta=A^-1/2 B_m(u), Psi=m/(m+1)||A^1/2 eta||^((m+1)/m), p=1 and nu=1+1/m. Physical order follows explicit power norm comparisons.",
+      "limits": "Not a direct theorem import for the general state-dependent nonconvex C1 full stationary relation; ALM-specific strong duality is not needed for Section 3."
+    },
+    {
+      "id": "abs_revised_2011",
+      "authors": "Attouch, Bolte, Svaiter",
+      "title": "Convergence of descent methods for semi-algebraic and tame problems: proximal algorithms, forward-backward splitting, and regularized Gauss-Seidel methods",
+      "version": "Author report dated 2010-12-15; revised 2011-07-21; 36-page PDF",
+      "url": "https://bolte.perso.math.cnrs.fr/MPA.pdf",
+      "read": ["Header and version", "H1-H3, printed page 8", "Theorem 2.9 and proof, printed page 12", "Theorem 2.10 and H4", "Theorem 2.12, printed page 14"],
+      "retrieval_refs": ["turn523view0", "turn523view1", "turn476view1"],
+      "conditions": ["proper lower semicontinuous energy", "uniform positive quadratic sufficient decrease H1", "output subgradient relative error H2", "value-continuous cluster point H3 for Theorem 2.9", "KL at that cluster point", "Theorem 2.12 instead uses local initialization at global minimizer and H1-H2"],
+      "mapping": "Every C272 C1 full stationary trajectory in small invariant strip satisfies all conditions for E(u,z)=||u||^2. Constants and noncircular H3 proof supplied in report. NG12 also admits original-f H1/H2/KL.",
+      "limits": "The energy construction uses known flat zero coordinates and previously derived full-output bounds. It does not imply arbitrary C249 models admit such a smooth energy."
+    },
+    {
+      "id": "anisotropic_ppa_v4",
+      "authors": "Laude, Patrinos",
+      "title": "Anisotropic Proximal Point Algorithm",
+      "version": "arXiv:2312.09834v4, submitted 2025-12-29; read current PDF header 2025-12-30",
+      "url": "https://arxiv.org/pdf/2312.09834",
+      "version_identity_url": "https://arxiv.org/abs/2312.09834v4",
+      "read": ["Section 2 Bregman right-preconditioning", "Section 4.2.2 Eq.4.13-Eq.4.18", "Proposition 4.8", "Proposition 4.9", "Corollary 4.10", "Proposition 4.24 and proof"],
+      "retrieval_refs": ["turn601view0", "turn605view0", "turn605view1", "turn605view2", "turn605view3"],
+      "conditions": ["inherited maximal monotone operator and nonempty zeros", "smooth strictly convex supercoercive full-domain prox with gradient zero at zero", "isotropic prox ||.||^p/p, p>1 for Prop4.8", "Section 4 relaxation one", "Eq4.16 with summable errors and selected error exponent", "all near-limit graph pairs with point and value truncations satisfy d<=rho||value||^nu", "higher order p>1+1/nu", "Cor4.10 adds error exponent >=2"],
+      "mapping": "Fully applicable to constant-SPD transformed convex normal operator lambda*grad(Psi), quadratic prox p=2, higher-order EB nu=m, zero errors. General C272 transformed T has ordinary m-subregularity but can be nonmonotone.",
+      "limits": "Exact frozen PDF endpoint failed; read PDF header and arXiv version bar freeze identity. Statement that Prop4.8 specializes Luque1986 is a fact about this paper, not verification of Luque original."
+    },
+    {
+      "id": "hager_zhang_2007",
+      "authors": "Hager, Zhang",
+      "title": "Asymptotic Convergence Analysis of a New Class of Proximal Point Methods",
+      "version": "SIAM Journal on Control and Optimization 46 (2007), 1683-1704; DOI 10.1137/060666627; read 22-page published PDF",
+      "url": "https://www.math.lsu.edu/~hozhang/papers/prox2.pdf",
+      "read": ["Eq1.2 and acceptance C0/C1/C2", "Lemma2.1 and proof", "Theorem4.4, printed page 1697", "Eq4.30 and proof"],
+      "retrieval_refs": ["turn562view0", "turn585view0", "turn577view2", "turn577view3"],
+      "conditions": ["local quadratic growth at a minimizer", "local solution set convex", "C2 objective with Lipschitz Hessian locally", "adaptive scalar mu_k=beta||f'(x_k)||^eta, 0<eta<2", "C1/C2 acceptance includes F_k(x_next)<=f(x_k) and specified residual bound", "sufficiently close initialization"],
+      "mapping": "Positive historical comparator for nonisolated-minimum point convergence and superlinear distance order; no same-algorithm direct import asserted.",
+      "limits": "C272 mixed flat-normal/identity-tangent kernel is not the paper's scalar quadratic regularization. General C1 C272 does not inherit Lipschitz-Hessian assumptions."
+    },
+    {
+      "id": "higher_order_subregularity_v1",
+      "authors": "Mordukhovich, Ouyang",
+      "title": "Higher-Order Metric Subregularity and Its Applications",
+      "version": "arXiv:1507.04825v1, 2015-07-17; read 18-page PDF header",
+      "url": "https://arxiv.org/pdf/1507.04825",
+      "read": ["Introduction scope", "Definition3.1", "Example3.2"],
+      "retrieval_refs": ["turn610view0"],
+      "conditions": ["ordinary q-subregularity uses distance to full zero fiber", "strong q-subregularity uses distance to specified point", "q any positive real"],
+      "mapping": "General C272 kernel-space relation has ordinary global q=m subregularity; nonisolated zeros prevent automatic strong-subregularity import.",
+      "limits": "This report does not claim its Newton theorem is a full-stationary PPA theorem."
+    },
+    {
+      "id": "morse_bott_v2",
+      "authors": "Rebjock, Boumal",
+      "title": "Fast convergence to non-isolated minima: four equivalent conditions for C2 functions",
+      "version": "arXiv:2303.00096v2",
+      "url": "https://arxiv.org/html/2303.00096v2",
+      "read": ["Proposition2.8", "Corollary2.11", "Theorem2.16", "Corollary2.17 and proofs"],
+      "retrieval_refs": ["turn610view2", "turn475view1", "turn475view2"],
+      "conditions": ["C2 objective near local minimum", "normal-positive Hessian and local critical manifold for MB direction", "explicit neighborhood/constant loss for EB/QG/PL implications"],
+      "mapping": "C2 C272 subclass is Morse-Bott with positive normal Hessian; this geometry is prior. Entire C1 E-energy bridge does not need this source.",
+      "limits": "No assertion of a C1 MB equivalence."
+    },
+    {
+      "id": "hippa_v2",
+      "authors": "Ahookhosh, Iusem, Kabgani, Lara",
+      "title": "Asymptotic convergence analysis of high-order proximal-point methods beyond sublinear rates",
+      "version": "arXiv:2505.20484v2, 2026-07-29; 30-page PDF; HTML theorem34 corresponds to PDF theorem4.9",
+      "url": "https://arxiv.org/html/2505.20484v2",
+      "pdf_url": "https://arxiv.org/pdf/2505.20484v2",
+      "read": ["Algorithm1", "Theorem23", "Theorem31", "Theorem32", "Lemma33", "Theorem34(d) and proof"],
+      "retrieval_refs": ["turn559view2", "turn562view1", "turn562view2", "turn562view4", "turn585view2", "turn581view1"],
+      "conditions": ["proper lsc coercive objective", "uniform quasiconvexity on closed convex feasible set inside effective domain", "argmin distance-power proximal updates", "gamma_k bounded between fixed positive thresholds", "global modulus lower bound rho_q*t^q, q>=2", "p>q", "unique minimizing point follows uniform quasiconvexity"],
+      "mapping": "Strong neighboring growth-order formula (p-1)/(q-1); no same-algorithm identity for general C272 asserted.",
+      "limits": "Do not identify translated distance-power regularization with fixed Bregman increment regularization, or erase C272 tangential coupling by quotienting it away."
+    },
+    {
+      "id": "bregman_monotone_2003",
+      "authors": "Bauschke, Borwein, Combettes",
+      "title": "Bregman Monotone Optimization Algorithms",
+      "version": "2003 author preprint, sicon2.pdf, 41 pages",
+      "url": "https://pcombet.math.ncsu.edu/sicon2.pdf",
+      "read": ["Corollary3.25", "Example4.6", "Theorem4.14 and adjacent conditions"],
+      "retrieval_refs": ["turn593view2", "turn468view1", "turn470view4"],
+      "conditions": ["bounded-below proper lsc convex objective", "Legendre kernel on reflexive space", "intersecting domains for proximal viability", "bounded Bregman-monotone orbit and specified cluster-point/consistency conditions for convergence"],
+      "mapping": "Positive old convergence entrance for convex flat-kernel examples; no universal Lipschitz inverse requirement in inspected statements.",
+      "limits": "General nonconvex full stationary C272 relation is not identified with convex BPPA."
+    }
+  ],
+  "unread_primary_leads": [
+    {
+      "title": "The nonlinear proximal point algorithm",
+      "author": "Javier Luque",
+      "version": "MIT LIDS-P-1598, 1986",
+      "primary_record": "https://dspace.mit.edu/entities/publication/d6267906-5f05-41c8-a2aa-6383624bed02",
+      "status": "Record identified; original PDF failed HTTP405; do not import original theorem conditions."
+    },
+    {"authors": "Iusem, Teboulle", "year": 1995, "status": "Primary endpoint abstract/paywall only; not excluded by full theorem audit."},
+    {"author": "Pennanen", "year": 2002, "status": "Primary endpoint abstract/paywall only; not excluded by full theorem audit."},
+    {"author": "Eckstein", "year": 1993, "status": "Important historical lead; this report uses inspected BBC2003 statements instead of claiming a full direct 1993 condition audit."}
+  ],
+  "judgment": {
+    "constant_spd_core": "Immediate prior-theorem corollary after explicit exact transformation",
+    "general_c1_full_relation": "Short standard anchored-growth and summable-drift extension; literal same prior theorem not verified",
+    "generic_finite_length": "Classically recoverable for all C1 members via common smooth KL energy",
+    "sharp_asymptotic_coefficient": "Standard local expansion giving additional quantitative precision",
+    "worldwide_priority": "Unresolved; bounded search is not certification"
+  }
+}

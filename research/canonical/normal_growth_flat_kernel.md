@@ -170,7 +170,59 @@ $t(1+t^3)^2-3u(t)^2/4$ 在零处为负、无穷远为正，因此至少有一个
 
 1. **全域条件承重。** 仅在零管内有 NG1 不够。$f(u,z)=u^2/2-u^4/2$、$m=3,\lambda=1$ 在 $|u|\le1/2$ 有法向系数 $\mu=1/2$、切向导数零；完整零输入却有 $(0,b),(1,b),(-1,b)$ 三根，因为 $u^3+f_u=u-u^3=0$。未排除的远根破坏零纤维吸收，不能按本定理接收。
 2. **反射非扩张不可默认。** 对 $f(u,z)=(2+\sin z)u^2/2$，选实际输出 $(r,0)$ 和反算输入 $a^m=r^m+2\lambda r$、$b=\lambda r^2/2$。同一最近锚下 $\langle v(y)-v(p),F(y)\rangle=2r^{m+1}-\lambda r^4/4$。$m>3$（或 $m=3,\lambda>8$）时它在任意小窗为负，故不能换用 $\omega=Id$；NG6 的三角界仍成立。
-3. **经典比较。** $C^2$ 子类的法向正曲率、EB、Morse–Bott/PL/KL 关系已有经典结果；不归为本轮创新。若另外有适用的 KL 性质，NG5 的输出定位与局部二次目标上界可供应 ABS 的 H1，局部 Lipschitz 核与 NG3 供应 H2，收敛和连续性供应 H3；ABS 也可证明有限长度。NG4–5 本身另有更短的直接收敛证明。新增的可靠内容是原始条件到完整驻点证书的明确转接、远端与非极小根控制及物理 $m$ 阶，而非“经典方法无法收敛”。指定需要局部强凸核或正定核 Hessian 的定理不能直接套，但不等于排除整个 Bregman/KL 理论。
+3. **经典比较。** $C^2$ 子类的法向正曲率、EB、Morse–Bott/PL/KL 关系已有经典结果。下节 NG13 更强地对全部 $C^1$ 完整驻点根给同一个 $E=\|u\|^2$ 的 ABS 合同，无需原目标 KL；NG14–16 对整个 SPD 二次子类精确改写为普通 PPA，已有增长理论恢复物理 $m$ 阶。NG4–5 本身也有更短的直接收敛证明。保留的结构内容是原始条件到完整驻点证书的转接、全根控制与精确定量化；它们的字面优先权仍需审查，不能整体称新收敛原理。指定需要局部强凸核或正定核 Hessian 的定理不能直接套，不等于排除整个 Bregman/KL 理论。
 4. **创新性限域。** 内部数学闭合，公开先行性仍待逐定理核查。局部原始条件加全纤维排远门、更一般平移/弯曲零流形、时变核和误差版本尚未证明。本定理不推出隐藏的额外零点；NG1 已确定完整零集。
 
-一手比较的版本、条件及定位见 [文献接口](../LITERATURE.md#lit-structural-verification)。[复算](../code/structural_verification/README.md)只核有限参数、根反算和边界算术；全称结论由本页证明承担。[本轮独立接收](../audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)记录实际复核范围。
+<a id="ngf-classical-full"></a>
+## 新颖性复核的完整经典桥：不改变 C272 身份
+
+这是同一对象的补充证明和比较证据，不增加一个新收敛原理。
+
+**所有 $C^1$ 目标和全部驻点根的自然 KL 桥。** 取 NG8 小管及同一个 $\kappa$，令 $E(u,z)=\|u\|^2$。对任何完整转移，$s=\|u_+\|\le\kappa t$、$\|z_+-z\|\le\lambda B\kappa^2t^2$，所以
+
+\[
+\|y-x\|\le L_Et,\quad L_E=1+\kappa+\lambda B\kappa^2R,
+\qquad E(x)-E(y)\ge\frac{1-\kappa^2}{L_E^2}\|y-x\|^2,
+\]
+\[
+\|\nabla E(y)\|=2s\le\frac{2\kappa}{1-\kappa}\|y-x\|.
+\tag{NG13}
+\]
+
+第二式用物理法向步 $\|a-u\|\ge t-s$，不是选中 $F$ 图值。$E$ 是全域光滑 proper 函数，$\|\nabla E\|=2\sqrt E$ 给 KL 指数 $1/2$。法向几何界及切向二次步界先给全部前缀有界，有限维紧性供应聚点；$E$ 连续供应 H3，未先假设整条轨道收敛。因此 ABS 的 H1/H2/H3 和 Theorem 2.9 适用于同一完整轨道的尾部，不需要原目标 $f$ 具有 KL 性质。这比仅在 $C^2$ 子类调用原目标 KL 的比较更强。该桥依赖已经证明的 NG4–5 输出界，不能反过来声称 ABS 的原文自动供应本模型的全部根定位。
+
+NG12 甚至保留原目标能量的合同：$1<A(z)\le2$ 给 $t^2/2\le f(x)\le t^2$，而所有根满足 $s\le t^3$，故 $f(y)\le t^6$。取 $R^4<1/2$ 时，$f(x)-f(y)\ge(1/2-R^4)t^2\ge a_f\|y-x\|^2$，其中 $a_f=(1/2-R^4)/L_E^2>0$。核 $(u^3,z)$ 在该法向条带上 Lipschitz，完整方程给输出梯度的 H2。真实梯度范数 $\|\nabla f\|\ge|u|\ge\sqrt f$ 使 $2\sqrt r$ 成为 KL 去奇异化函数；同样的有界性和连续性给 H3。这保留全部非极小根，不把驻点关系换成 argmin。
+
+**常系数 SPD 子类的精确普通 PPA 改写。** 设 $f(u,z)=\langle Au,u\rangle/2$，$A\succ0$ 常矩阵。切向不动。令
+
+\[
+w=\mathcal B_m(u),\quad\eta=A^{-1/2}w,\quad
+\beta=1+1/m,\quad
+P(\eta)=\frac{m}{m+1}\|A^{1/2}\eta\|^{\beta}.
+\tag{NG14}
+\]
+
+$P$ 全域有限、$C^1$、严格凸、coercive，唯一极小点为零，且
+$\nabla P=A^{1/2}\mathcal B_{1/m}(A^{1/2}\eta)$。原完整法向方程在所有输入、所有 $\lambda>0$ 下与
+
+\[
+\eta_{k+1}+\lambda\nabla P(\eta_{k+1})=\eta_k
+\tag{NG15}
+\]
+
+双向等价；不是另挑收敛分支。$P\ge\chi\|\eta\|^{\beta}$，
+$\chi=\frac{m}{m+1}\lambda_{\min}(A)^{\beta/2}>0$。因此普通 PPA 的高阶增长理论可直接导入：Oikonomidis–Bodard–Laude–Patrinos 的固定 [2312.12205v3](https://arxiv.org/html/2312.12205v3) Theorem 3.6，取其正则化参数 $p=1$（普通平方 prox）、增长幂 $\nu=\beta$、exact/无加速、紧零集 $\{0\}$，给对偶变量 $m$ 阶上界。其完整凸目标、覆盖、coercivity、局部增长和 $p>\nu-1$ 全通过。
+
+物理桥须另外写出：
+
+\[
+\lambda_{\max}(A)^{-1/2}\|u\|^m
+\le\|\eta\|\le\lambda_{\min}(A)^{-1/2}\|u\|^m.
+\tag{NG16}
+\]
+
+若 $\|\eta_+\|\le K_0\|\eta\|^m$，NG16 给
+$\|u_+\|\le\lambda_{\max}(A)^{1/(2m)}K_0^{1/m}\lambda_{\min}(A)^{-1/2}\|u\|^m$。
+所以这个完整 SPD 子类的物理 $m$ 阶不是首次由平坦核创造的收敛机制。源定理的上界不自行给 NG11 的精确系数；一般状态依赖非凸 $C^1$ 目标也没有由 NG14–15 获得凸 PPA 改写。全驻点原始验证与这些更细定量项的公开优先仍需单独判别。
+
+一手比较的版本、条件及定位见 [文献接口](../LITERATURE.md#lit-structural-verification)及[发展复核](../novelty/2026_10_13/c272_development_review.md)。[复算](../code/structural_verification/README.md)和[新增经典桥检查](../code/novelty_development/README.md)只核有限参数与反算；全称结论由正文证明承担。[接收记录](../audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)记录前轮实际复核范围，本轮新增桥的接收见发展报告。

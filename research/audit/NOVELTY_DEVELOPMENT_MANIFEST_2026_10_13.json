@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-13",
+  "baseline": "8c9ad2b46f2713dd8fb9d987fd86262d8b58fa2f",
+  "claims": [
+    "C272-v1",
+    "C273-v1",
+    "C274-v1"
+  ],
+  "change_kind": "Supplementary same-object proofs and exact classical recovery; no new mathematical claim version",
+  "mathematical_status": "derived-checked retained",
+  "novelty": "Conceptual weight reduced; exact public priority unresolved; not a whole-manuscript priority certificate",
+  "unmodified_manuscript": "发表成果整理/RLEB",
+  "previous_receipt": {
+    "file": "research/audit/STRUCTURAL_VERIFICATION_MANIFEST_2026_10_13.json",
+    "sha256": "86108c421d0e6bd1fe947a575fda5e0274644e8250b80f301fc6290a1d2749a0",
+    "meaning": "Historical pre-supplement snapshot; kept unchanged"
+  },
+  "files": [
+    {
+      "file": "发表成果整理/本轮重构/理论发展与真实新颖性核查_2026-10-13.md",
+      "sha256": "8849a5b21294b95e9b6f51e1f6fc272ee7ac64a2ec7416d8b38bc62a9fdb0b36"
+    },
+    {
+      "file": "research/canonical/normal_growth_flat_kernel.md",
+      "sha256": "05e0fef9af261fb8333e34b520071e487b7da8fe71a83177820e68c4145302df"
+    },
+    {
+      "file": "research/canonical/native_gram_structural.md",
+      "sha256": "69fc37be97a2128a78a8f7c24ea8e713224a25508bc52157dd8369c24d9e2e9e"
+    },
+    {
+      "file": "research/canonical/mixed_power_kernel_structural.md",
+      "sha256": "9ec49892929f3cf39363c10bbe4a895e923f2892df276e91ddc8d12b866bea83"
+    },
+    {
+      "file": "research/novelty/2026_10_13/README.md",
+      "sha256": "ca84ab0e4617c89ef0796f9ee6ada1cec3a75af7dd1a4d64f644ec220b11612d"
+    },
+    {
+      "file": "research/novelty/2026_10_13/c272_development_review.md",
+      "sha256": "5ca31c52e7606607b8f7420a44ebefc37f9c25caacc64bf36c3112b3f0bf60d9"
+    },
+    {
+      "file": "research/novelty/2026_10_13/c272_development_sources.json",
+      "sha256": "7154a5a1c880c04336ba426aab3960783c2b26d0ede0f5aa75a0348c0f5e5c00"
+    },
+    {
+      "file": "research/novelty/2026_10_13/c273_development_review.md",
+      "sha256": "2c79fa360caf03df9c325ec3c6656a64a58a4ee11d57512ee65585934c88a054"
+    },
+    {
+      "file": "research/novelty/2026_10_13/c274_development_review.md",
+      "sha256": "c39654f27ddc458a9846ed366588e2afab89d8a53e8175327ee5fb89f0762aff"
+    },
+    {
+      "file": "research/code/novelty_development/README.md",
+      "sha256": "a73b5ff8a34f04cb602e7b4a8080b1ad65902da990f705a943a1310f06f4c437"
+    },
+    {
+      "file": "research/code/novelty_development/verify.py",
+      "sha256": "619b0e2a19e9d2ad57fcc48397c84252f9e870c438d02d7b30a6d496becfd935"
+    },
+    {
+      "file": "research/code/novelty_development/output.json",
+      "sha256": "00f1ad6c70b55c52e2c9b210a212e6f1ffddd9d1968b1c0c55a2c4b29f9f734c"
+    },
+    {
+      "file": "research/audit/NOVELTY_DEVELOPMENT_REVIEW_2026_10_13.md",
+      "sha256": "bbb306eb435bf7928f2c649eb3f50d8642a071ceca32a7d4df722467f0fa38fa"
+    },
+    {
+      "file": "research/graph.json",
+      "sha256": "28fede86fd35afe2c79750087f9a831b7e5b5ae0becdafa1171d2f4a5bb2243e"
+    }
+  ]
+}

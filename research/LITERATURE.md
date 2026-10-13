@@ -1,5 +1,26 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-novelty-development"></a>
+## 理论发展复核：同算法正面恢复
+
+2026-10-13 实读版本及逐项映射见 [C272–C274 审查](novelty/2026_10_13/README.md)。本接口补强下一接口：全 C1 的共同能量桥已关闭，不能再只写 C2/另有原目标 KL 时可用。未取得的早期原文仍只作追索线索。
+
+<a id="lit-power-ppa-growth"></a>
+
+| 固定一手版本 / 定位 | 实读事实 | 同对象映射；本库推导与限制 |
+| --- | --- | --- |
+| Oikonomidis–Bodard–Laude–Patrinos，[2312.12205v3](https://arxiv.org/html/2312.12205v3)，2025-10-01，DOI [10.48550/arXiv.2312.12205](https://doi.org/10.48550/arXiv.2312.12205)，§3.3 Thm3.6及证明 | proper-lsc 凸目标；精确 Algorithm1，平均参数1/误差0；非空紧极小集；全近邻域增长 `ψ−ψ*≥μd^ν`，`ν>1`；来源 prox 幂参数 `p>ν−1` 给上阶 `p/(ν−1)`。§3 独立于 ALM 强对偶 | [C272 NG14–16](canonical/normal_growth_flat_kernel.md#ngf-classical-full)整个 SPD 二次子类，精确普通 PPA，来源 `p=1,ν=1+1/m` 给物理 m 阶；[C274 (29)–(34)](canonical/mixed_power_kernel_structural.md#mixed-power-reduction)非零对偶层整个 SPD 子类，`p=1,ν=q*` 给 q−1 上阶。凸性/coercivity/完整输出/物理保阶分别核；不自行给精确系数，不导入一般非凸 C272 |
+| Attouch–Bolte–Svaiter，[作者稿 MPA.pdf](https://bolte.perso.math.cnrs.fr/MPA.pdf)，2010-12-15/2011-07-21修订，36页；H1–H3、Thm2.9/2.12 | proper-lsc 能量；H1 二次充分下降、H2 输出限制次梯度步界、H3 聚点及值连续；聚点 KL 给有限长度及点收敛。不是只处理能量 argmin 子问题 | [C272 NG13](canonical/normal_growth_flat_kernel.md#ngf-classical-full)全 C1/全部驻点根用 `E=||u||²`，明确 a/b、KL1/2与非循环 H3；NG12 原目标合同也通过。C273 的 uniform H1 障碍与每轨道 eventual 合同分开。2010旧作者稿为另一个版本，不混用页码 |
+| BBC 2003，[作者全文](https://pcombet.math.ncsu.edu/sicon2.pdf)，DOI [10.1137/S0363012902407120](https://doi.org/10.1137/S0363012902407120)，Cor3.25、Example4.6、Prop4.13、Thm4.14/Conditions4.3–4.4 | Legendre 核的凸 Bregman 完整近端、B-class 三点下降及有界聚点一致性收敛，无统一二次强凸核要求 | C273/C274 各自全输入点收敛逐项通过。原生 Gram 用固定解 Bregman coercivity/quartic一致性；混合幂核用 `D_h(0,x)=(p−1)h(x)`/紧集严格凸一致性。不是把核距离可和直接当物理长度；后者另由规范短预算证明 |
+| Laude–Patrinos，[2312.09834v4](https://arxiv.org/abs/2312.09834v4)，2025-12-29，DOI [10.48550/arXiv.2312.09834](https://doi.org/10.48550/arXiv.2312.09834)，§2、Remark4.7、Prop4.8/Cor4.10 | 核坐标和各向异性 PPA；极大单调假设下算子增长幂与 prox 幂配对速率；Prop4.8明确归属 Luque1986 Thm3.1 特例 | 常数 SPD C272 有普通单调对偶算子、高阶集合距离 EB，亦可导入。一般非凸状态依赖变换算子未核单调，不外推。Luque原文尚未读取，不把这项归属写作原文已验收 |
+| Hager–Zhang，[2007作者刊本](https://www.math.lsu.edu/~hozhang/papers/prox2.pdf)，DOI [10.1137/060666627](https://doi.org/10.1137/060666627)，Thm4.4/Eq4.30及C1/C2验收 | 局部 QG、局部凸解集、C2且 Hessian Lipschitz、自适应标量二次系数及能量/驻点误差双验收，给非孤立解集的快收敛 | 用作发展基线；算法不同，不伪称该文覆盖固定退化核/一般 C1 C272 |
+| Ahookhosh–Iusem–Kabgani–Lara，[2505.20484v2](https://arxiv.org/html/2505.20484v2)，2026-07-29，DOI [10.48550/arXiv.2505.20484](https://doi.org/10.48550/arXiv.2505.20484)，HTML Thm34(d)=PDF Thm4.9(d) | uniform quasiconvex/coercive、中心距离幂 argmin 更新的增长配对速率 | 成熟机制参照；不是原点 Bregman 算法，有限输出不同已用代码反算；不能以阶相同偷换完整迭代 |
+| Carlen–Lieb，[hep-th/9209053v1](https://arxiv.org/pdf/hep-th/9209053)，1992-09-15/刊本1993，Appendix Thm6/(A.5)；Ricard，[1407.8334v3](https://arxiv.org/html/1407.8334v3)，2014-11-05，主定理，DOI10.1007/s00013-014-0710-9 | Schatten 梯度/非交换 Mazur map 的幂模，包括秩亏处的通用1/3逆 | C273 通用立方逆不是新颖项；未自动给部分观测复合映射在固定解点的最优2/3。Ricard出版社端未取到，数学读取版本是 v3 |
+| Gunasekar–Lee–Soudry–Srebro，[ICML2018一手正文](https://proceedings.mlr.press/v80/gunasekar18a/gunasekar18a.pdf)，Thm1 | 可实现线性观测、强凸势、显式镜像算法条件于收敛的 Bregman 投影选择 | 不直接套退化隐式算法；当前 C273/C274 的投影由对偶守恒与 KKT 自足重构。已知选择概念不应另算新机制 |
+| Avrachenkov–Ejov–Filar，[2006正式全文](https://www.impan.pl/shop/en/publication/transaction/download/product/86491)，DOI [10.4064/bc71-0-2](https://doi.org/10.4064/bc71-0-2)，§2 Eq4–6 | 其他四次程序的驻点 Puiseux 展开有1/3和2/3；Newton平衡为已知方法 | 不同模型不能否定 C273 精确结论的优先；但不能把 `D³∼t²` 当新分数幂机制 |
+
+以上源定理是 paper fact；对偶/能量桥是本库推导；“贡献权重较低”等为[综合审稿判断](../发表成果整理/本轮重构/理论发展与真实新颖性核查_2026-10-13.md)。三者不能互相偷换。没有穷尽优先权认证。
+
 <a id="lit-structural-verification"></a>
 ## LIT-STRUCTURAL-VERIFICATION · 原始模型验证与精确经典重叠
 

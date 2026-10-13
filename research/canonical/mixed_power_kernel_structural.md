@@ -327,6 +327,62 @@ u_{k+1}=(I+\lambda A)^{-1}u_k,
 
 which has a nonzero linear rate for any nonzero input. In contrast, every nonzero tangent stratum has order `q−1>1`. Consequently no uniform bound `d(x_+,S)≤C d(x,S)^{q-1}` can hold on a neighborhood of the origin in the full physical space.
 
+<a id="mixed-power-reduction"></a>
+## Supplementary exact classical reductions
+
+This is comparison evidence for the same C274-v1. It does not introduce a new convergence principle. Fix the conserved tangential dual vector $\ell=P_Tv(x_0)$, and define the reduced kernel
+
+\[
+\phi_\ell(u)=\inf_z\{h(u,z)-\langle\ell,z\rangle\},\qquad
+\phi_\ell^*(\xi)=h^*(\xi,\ell)
+=\frac1{p^*}(\|\xi\|^{q^*}+\|\ell\|^{q^*})^{p^*/q^*},
+\tag{29}
+\]
+
+where $p^*=p/(p-1)$ and $q^*=q/(q-1)$. The conjugate identity follows directly by exchanging the joint supremum over $u,z$ in the definition of the conjugate; block-norm duality gives the last formula. For each $u$, the tangential minimizer is unique by strict convexity and coercivity. Its first-order equation is $v_T(u,z)=\ell$, so the original complete normal update is exactly
+
+\[
+u_{j+1}\in(\nabla\phi_\ell+\lambda\partial g)^{-1}\nabla\phi_\ell(u_j).
+\tag{30}
+\]
+
+Write the unique tangential minimizer as $z_\ell(u)$. Then $\nabla\phi_\ell(u)=v_N(u,z_\ell(u))$, and every reduced output reconstructs uniquely as $z_{j+1}=z_\ell(u_{j+1})$; conversely each full output has this form. The input also satisfies $z_0=z_\ell(u_0)$, even if $u_0\notin\operatorname{dom}g$. No physical output was removed. Strict convexity follows by interpolating the two distinct joint minimizers. Supercoercivity of $h$ gives, for each $M>0$, $h(u,z)\ge M\|u\|+(\|\ell\|+1)\|z\|-C_M$, hence $\phi_\ell(u)\ge M\|u\|-C_M$. Unique tangential minimizers are locally bounded and continuous, so envelope differentiation gives the displayed gradient. Thus $\phi_\ell$ is finite, differentiable, strictly convex and supercoercive. At a nonzero fixed dual vector, $t_\infty=\|\ell\|^{1/(p-1)}>0$ and (8)–(9) give
+
+\[
+\phi_\ell(u)=\phi_\ell(0)+\frac{t_\infty^{p-q}}q\|u\|^q+o(\|u\|^q),
+\quad\nabla\phi_\ell(u)=t_\infty^{p-q}\|u\|^{q-2}u+o(\|u\|^{q-1}).
+\tag{31}
+\]
+
+At $\ell=0$, the minimizing tangent is zero and $\phi_0(u)=\|u\|^p/p$. This directly explains why the center and the nonzero tangential stratum have different orders.
+
+For the entire constant-SPD quadratic subclass $g(u)=\langle Au,u\rangle/2$, let $w=\nabla\phi_\ell(u)$ and $\eta=A^{-1/2}w$. Then (30) is equivalent to ordinary Euclidean PPA with the convex $C^1$ coercive potential
+
+\[
+P_\ell(\eta)=\phi_\ell^*(A^{1/2}\eta),\qquad
+\eta_{j+1}+\lambda\nabla P_\ell(\eta_{j+1})=\eta_j.
+\tag{32}
+\]
+
+For $\ell\ne0$, this potential has a unique minimizer at $\eta=0$ and local growth
+
+\[
+P_\ell(\eta)-P_\ell(0)
+\sim\frac{\|\ell\|^{p^*-q^*}}{q^*}\|A^{1/2}\eta\|^{q^*}.
+\tag{33}
+\]
+
+Oikonomidis–Bodard–Laude–Patrinos [2312.12205v3](https://arxiv.org/html/2312.12205v3) Theorem 3.6 now applies literally: its prox-power parameter is $1$, growth exponent $\nu=q^*\in(1,2)$, and the normal zero set $\{0\}$ is compact. It gives $q-1$ upper order in $\eta$. On this stratum there are $c_0,C_0>0$ with $c_0\|u\|^{q-1}\le\|\eta\|\le C_0\|u\|^{q-1}$. Substituting these bounds into $\|\eta_+\|\le M_0\|\eta\|^{q-1}$ and taking the $(q-1)$-st root gives the same upper order in $u$. Since $\|z-z_\infty\|=O(\|u\|^q)$, it is also the full physical point-error upper order. All preceding existence and output equivalences retain the complete algorithm. At $\ell=0$, $p>2$ gives the same prior with growth $\nu=p^*$ and order $p-1$; $p=2$ is exactly linear ordinary PPA. For $p<2$, its displayed superlinear hypothesis fails, so that source is not used to assert a fast center rate. Source upper orders do not themselves give (27)'s sharp coefficient or the precise physical tail constant.
+
+Finally, the limit in (12) is exactly the Bregman projection
+
+\[
+x_\infty=\operatorname{argmin}_{s\in S}D_h(s,x_0).
+\tag{34}
+\]
+
+Restriction to $s=(0,z)$ leaves $\|z\|^p/p-\langle\ell,z\rangle$ plus a constant; its unique minimizer is the tangent vector in (12). The limit's independence from $\lambda$ and the normal objective is therefore an affine Bregman-projection mechanism, not a new selection principle. Full source mappings, the general-class point-convergence comparison, and the limits of the novelty judgment are in [the development review](../novelty/2026_10_13/c274_development_review.md).
+
 <a id="mixed-power-classical"></a>
 ## 6. Classical overlap and honest value assessment
 

@@ -487,6 +487,52 @@ f_c(Z)-f_c(T(Z))\ge\frac{1-r^2}{2K^2}\|T(Z)-Z\|_F^2,
 
 The second inequality uses $\|T(Z)-Z\|_F\ge\|a-\alpha\|\ge(1-r)\|a-c\|$. Zero steps satisfy both trivially. The global convergence proved in (NG28) puts every fixed trajectory eventually in its applicable neighborhood or invariant-subspace neighborhood. The original quadratic objective also has the usual exact KL exponent $1/2$. Thus the obstruction is a uniform *full-neighborhood* contract at the flat solution; eventual constants can depend on the individual limiting slice.
 
+<a id="native-gram-dual-ppa"></a>
+## Exact recovery by ordinary PPA on a dual slice
+
+This strengthens the classical comparison for the same C273 object; it does not change the algorithm or the claim's mathematical identity. Singular-value conjugacy gives
+
+\[
+h^*(W)=\tfrac34\operatorname{tr}((W^TW)^{2/3}),\qquad
+\nabla h^*=v^{-1}.
+\tag{NG29}
+\]
+
+The inverse exists for every rectangular matrix $W$: an SVD $W=U\Sigma V^T$ gives $v^{-1}(W)=U\Sigma^{1/3}V^T$, including zero singular values. Strict convexity of $h$ gives uniqueness of this complete inverse.
+
+Fix the conserved second kernel column $k_0$ and define
+
+\[
+P_{k_0}(u)=h^*([u\ k_0])-\langle c,u\rangle.
+\tag{NG30}
+\]
+
+This is finite, $C^1$, strictly convex and coercive. Its gradient is the first column of $v^{-1}([u\ k_0])$ minus $c$. Consequently the complete original GPPA is equivalent in both directions, for every input on this slice and every $\lambda>0$, to the ordinary Euclidean PPA
+
+\[
+u_{k+1}+\lambda\nabla P_{k_0}(u_{k+1})=u_k.
+\tag{NG31}
+\]
+
+The physical points are recovered by $Z_k=v^{-1}([u_k\ k_0])$. The unique zero of $\nabla P_{k_0}$ is $u_*$ from NG26. The entire dual ball $\|u-u_*\|\le D_0$ maps into the primal ball of radius $M_*$ in the preceding proof, not just the actual orbit. For any two such points, the same PSD bounded secant matrix yields
+
+\[
+\langle\nabla P_{k_0}(u)-\nabla P_{k_0}(u'),u-u'\rangle
+\ge L_*^{-1}\|u-u'\|^2.
+\tag{NG32}
+\]
+
+Ordinary PPA strong monotonicity therefore gives exactly the dual factor $\rho=L_* /(L_*+\lambda)$ of NG27. The full physical inverse bound lifts this rate to NG28 and its summable physical steps. Thus the whole-model global convergence and quantitative length have an exact classical PPA entry; merely failing a displayed strong-primal-kernel hypothesis is insufficient evidence of new convergence theory.
+
+The selected limit is also exactly
+
+\[
+Z_*=\operatorname{argmin}_{Z\in S_c}D_h(Z,Z_0).
+\tag{NG33}
+\]
+
+Indeed, the only free variable of this strictly convex restriction is $b$, and its first-order condition is $cc^Tb+\|b\|^2b=k_0$. This projection interpretation does not replace the physical nearest anchor $[c\ b]$ for each input $[a\ b]$ in G2. It explains the readout as established Bregman geometry rather than a new selection principle. The improved fixed-solution exponent $2/3$ of the composed physical map remains a separate quantitative question: generic inverse $1/3$ theory does not itself prove it. Exact development and prior interfaces are recorded in [the review](../novelty/2026_10_13/c273_development_review.md).
+
 <a id="native-gram-scope"></a>
 ## Identity, novelty, and evidence limits
 

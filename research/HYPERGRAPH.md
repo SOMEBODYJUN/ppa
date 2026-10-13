@@ -813,6 +813,18 @@
 | E526 | [MPK-OBJECT · C274混合幂核/集合值强凸normal对象](canonical/mixed_power_kernel_structural.md#mixed-power-object) | implies → [MPK-GLOBAL · C274全input finite length与explicitlimit](canonical/mixed_power_kernel_structural.md#mixed-power-global) | 同完整convex GPPA allinput/alllambda；tangentk invariant、n monotone、normalwork及finiteprefix telescoping给explicitlimit和globalphysicallength。；**derived-checked** |
 | E527 | [MPK-GLOBAL · C274全input finite length与explicitlimit](canonical/mixed_power_kernel_structural.md#mixed-power-global) | conditional → [MPK-RATE · C274非zero切向sharp q−1/centerlinear分层](canonical/mixed_power_kernel_structural.md#mixed-power-rate) | 额外g C2近0/u0≠0/initialtangent非0给fullpoint/tail sharpq−1；SPDquadraticactive最低eigenvalue givesexactcoefficient；p2/tangent0实际linear限制全S统一阶。；**derived-checked** |
 
+## 理论发展与同算法经典恢复
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E528 | [NGF-OBJECT · C272全域法向增长/平坦核完整对象](canonical/normal_growth_flat_kernel.md#ngf-object) ∧ [NGF-FIBERS · C272全部驻点覆盖/compact定位/zero吸收](canonical/normal_growth_flat_kernel.md#ngf-coverage) | sufficient → [NGF-ABS · C272全C1/全部驻点根共同平方距离KL合同](canonical/normal_growth_flat_kernel.md#ngf-classical-full) | 同C272全C1/全部驻点根，NG8小管；E=\|\|u\|\|²明确H1/H2/KL，法向几何及切向二次界先给boundedcluster/H3，不预设完整点收敛。；**derived-checked** |
+| E529 | [NGF-FIBERS · C272全部驻点覆盖/compact定位/zero吸收](canonical/normal_growth_flat_kernel.md#ngf-coverage) ∧ [NGF-ABS · C272全C1/全部驻点根共同平方距离KL合同](canonical/normal_growth_flat_kernel.md#ngf-classical-full) | conditional → [NGF-GLOBAL · C272全初值全分支物理finite length](canonical/normal_growth_flat_kernel.md#ngf-rate) | 同全域原始C272；NG4标量phi另给任意初值有限前缀入管，ABS合同仅用于尾部；完整根及切向界均保留。；**derived-checked** |
+| E530 | [NGF-OBJECT · C272全域法向增长/平坦核完整对象](canonical/normal_growth_flat_kernel.md#ngf-object) ∧ [LIT-POWER-GROWTH · 2312.12205v3 Thm3.6已核完整增长合同](LITERATURE.md#lit-power-ppa-growth) | conditional → [NGF-PPA · C272整个SPD子类普通PPA/旧增长物理m上阶](canonical/normal_growth_flat_kernel.md#ngf-classical-full) | 另固定f=<Au,u>/2、A常SPD；eta=A^-1/2 B_m(u)精确完整双向普通PPA，目标凸/coercive/紧zero/增长nu1+1/m、来源prox p1全核；物理逆保m上阶，不自动给锐首项。；**derived-checked** |
+| E531 | [FNGR-OBJECT · C273非零原始数据/nativeGram完整对象](canonical/native_gram_structural.md#native-gram-object) | implies → [FNGR-DUAL · C273全输入普通对偶PPA/完整Bregman投影](canonical/native_gram_structural.md#native-gram-dual-ppa) | 同C273所有输入/每固定lambda>0；h*完整SVD逆、每守恒k切片普通欧氏PPA双向等价，不选子fiber；极限投影KKT恰NG26。；**derived-checked** |
+| E532 | [FNGR-DUAL · C273全输入普通对偶PPA/完整Bregman投影](canonical/native_gram_structural.md#native-gram-dual-ppa) ∧ [FNGR-OBJECT · C273非零原始数据/nativeGram完整对象](canonical/native_gram_structural.md#native-gram-object) | sufficient → [FNGR-GLOBAL · C273全lambda/初值经典slice有限长度](canonical/native_gram_structural.md#native-gram-classical) | 整个dualball物理逆有界，PSD Hessian secant给1/L强单调；ordinaryPPA rho与全域1/3逆提升给物理finite length，全lambda/allinput。；**derived-checked** |
+| E533 | [MPK-OBJECT · C274混合幂核/集合值强凸normal对象](canonical/mixed_power_kernel_structural.md#mixed-power-object) | implies → [MPK-REDUCED · C274完整部分对偶BregmanPPA/投影](canonical/mixed_power_kernel_structural.md#mixed-power-reduction) | 同C274一般proper-lsc强凸g；固定dual ell消元与唯一z_ell重构保全输入/全部输出，初值可不在dom g；极限是S上完整Bregman投影。；**derived-checked** |
+| E534 | [MPK-REDUCED · C274完整部分对偶BregmanPPA/投影](canonical/mixed_power_kernel_structural.md#mixed-power-reduction) ∧ [LIT-POWER-GROWTH · 2312.12205v3 Thm3.6已核完整增长合同](LITERATURE.md#lit-power-ppa-growth) | conditional → [MPK-PPA · C274整个SPD子类普通PPA/非零层旧增长上阶](canonical/mixed_power_kernel_structural.md#mixed-power-reduction) | 另g=<Au,u>/2常SPD；eta=A^-1/2 gradphi精确欧氏PPA。ell非零growthnuq*和來源prox p1 givesq−1上阶，物理双边幂桥/切向O(r^q)全核；ell0另p>2上阶/p2linear/p<2该超线性门失败。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

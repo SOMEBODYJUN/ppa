@@ -8205,6 +8205,72 @@
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-6"
+    },
+    "FNGR-DUAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "LIT-POWER-GROWTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "MPK-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "MPK-REDUCED": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "NGF-ABS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "NGF-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
     }
   },
   "edges": {
@@ -10303,6 +10369,34 @@
     "E527": {
       "x": 1613.12,
       "y": 4079.78
+    },
+    "E528": {
+      "x": 1751.5,
+      "y": 4164.85
+    },
+    "E529": {
+      "x": 1658.33,
+      "y": 4263.62
+    },
+    "E530": {
+      "x": 1663.14,
+      "y": 4448.86
+    },
+    "E531": {
+      "x": 1899.47,
+      "y": 4532.94
+    },
+    "E532": {
+      "x": 1867.58,
+      "y": 4562.94
+    },
+    "E533": {
+      "x": 2068.36,
+      "y": 4272.85
+    },
+    "E534": {
+      "x": 2191.7,
+      "y": 4348.42
     }
   },
   "bounds": {

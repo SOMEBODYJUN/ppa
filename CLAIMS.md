@@ -2378,6 +2378,7 @@
 - **Conclusion / Dependencies**：coercive存在+全root r_+^m+lambda mu r_+≤r^m、tangentstep≤lambda B r_+²给非空紧完整纤维、zero吸收与全域finite length。NG6–9同物理nearest/trueEB/共同显式半径/物理h逐项认证C249。C2近实际极限时法向及full-point双边m阶，scalar系数1/(lambda A_infty)。
 - **Evidence**：[独立规范证明](research/canonical/normal_growth_flat_kernel.md#ngf-object)、[同组证书](research/canonical/normal_growth_flat_kernel.md#ngf-certificate)、[实际全文接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)、[复算](research/code/structural_verification/README.md)。weightedresidual A(z)原始充分入口及任意近S多驻点/nonminimum输出例均自足。
 - **Counterevidence / Scope**：[局部条件的zero远根反例及omegaId失败](research/canonical/normal_growth_flat_kernel.md#ngf-boundaries)。一般C1只给m阶上界，不给每个成员匹配下界或vector单个scalarlimit。直接收缩证明更短，C2 EB/Morse–Bott/KL几何已有；不称全经典排除、时变核保留或额外未知zero推断。
+- **Novelty development evidence**：[NG13–16完整经典桥](research/canonical/normal_growth_flat_kernel.md#ngf-classical-full)对全C1/全部驻点根给共同E=||u||²的ABS合同，整个SPD二次子类同算法普通PPA+已核增长Thm3.6给物理m上阶；NG12原f合同亦通过。[发展审查](research/novelty/2026_10_13/c272_development_review.md)、[新增反算](research/code/novelty_development/README.md)和[接收](research/audit/NOVELTY_DEVELOPMENT_REVIEW_2026_10_13.md)只增证明/比较证据。一般非凸全类字面优先未决；机制贡献权重下调，不改v1身份或数学状态。
 
 <a id="c273"></a>
 ## C273-v1 · 非零原始数据Gram GPPA的完整证书与锐解点2/3
@@ -2387,6 +2388,7 @@
 - **Conclusion / Dependencies**：完整Bregman comparator全root→same物理nearest、trueEB等号、h=C_Hsqrt(d)、严格Theta budget认证C249。对每个p=[c,0]、每lambda>0全邻域点态指数恰2/3、解点noncalm；原f统一全邻域欧氏平方H1失败。
 - **Evidence**：[对象/完整纤维](research/canonical/native_gram_structural.md#native-gram-object)、[可算共同证书](research/canonical/native_gram_structural.md#native-gram-certificate)、[锐上/下界](research/canonical/native_gram_structural.md#native-gram-exponent)、[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)、[代码](research/code/structural_verification/README.md)。unitc/B1/R1e−8/lambda1e4/kappa.25使q<.148,ThetaR<.000627。
 - **Counterevidence / Scope**：[同算法全lambda/全初值经典finite-length及slice零读出](research/canonical/native_gram_structural.md#native-gram-classical)更强；[每单轨道eventual原f ABS正面](research/canonical/native_gram_structural.md#native-gram-eventual)保留。统一邻域H1失败不等于轨道eventual失败；2/3点态不是twoinput最优或精确轨道阶。对象不同于C270，不关闭其3/7上界问题，也不认证noninjective核或Euler未知zero。
+- **Novelty development evidence**：[NG29–33](research/canonical/native_gram_structural.md#native-gram-dual-ppa)将完整全输入算法精确化为普通对偶PPA，整dualball强单调与1/3逆提升恢复global物理长度，极限恰Bregman投影；BBC全类pointconvergence亦逐项核。通用Schatten逆与Puiseux幂机制已有；同模型锐composite2/3在已读来源尚未匹配，仍仅是模型级优先候选。[发展报告](research/novelty/2026_10_13/c273_development_review.md)及[复算](research/code/novelty_development/README.md)。不改v1/不作新矩阵恢复或全经典排除主张。
 
 <a id="c274"></a>
 ## C274-v1 · 混合幂核自动验证、显式极限与分层锐物理阶
@@ -2396,3 +2398,4 @@
 - **Conclusion / Dependencies**：任意原始g给真infEB、same physicalnearest omegaId及条带||z||>b的C249明确h/半径/strictbudget；更强全域allinput长度与闭式切向极限。gC2近0且初始切向非零，fullpoint与tail锐q−1阶；quadratic SPD时active最低特征值给精确系数。
 - **Evidence**：[完整规范](research/canonical/mixed_power_kernel_structural.md#mixed-power-object)、[自动证书](research/canonical/mixed_power_kernel_structural.md#mixed-power-certificate)、[全域不变量](research/canonical/mixed_power_kernel_structural.md#mixed-power-global)、[锐分层](research/canonical/mixed_power_kernel_structural.md#mixed-power-rate)、[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)与[复算](research/code/structural_verification/README.md)。
 - **Counterevidence / Scope**：p2且切向0时确为普通PPA线性，不授整个S的统一q−1阶；nonsmooth可有限识别，sharp只限smooth非终止子类。属于经典凸Bregman，BBC前件通过，不称经典不能分析或fixedzero noncalm；不是C273原生非零数据对象。
+- **Novelty development evidence**：[(29)–(34)完整约化](research/canonical/mixed_power_kernel_structural.md#mixed-power-reduction)保全部输出的切向部分对偶，整个SPD二次子类精确欧氏PPA及旧增长定理恢复q−1上阶，中心层另限域；显式极限是仿射Bregman投影，BBC全类pointconvergence通过。[Astra发展审查](research/novelty/2026_10_13/c274_development_review.md)与[反算](research/code/novelty_development/README.md)。长度/谱常数属定量扩展，其精确公开优先未决；不改v1/数学状态或非光滑g范围。
