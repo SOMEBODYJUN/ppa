@@ -1,5 +1,21 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-structural-verification"></a>
+## LIT-STRUCTURAL-VERIFICATION · 原始模型验证与精确经典重叠
+
+本接口服务 C272–C274；只登记实际读取的指定原文段和逐对象判断，不判公开首创。
+
+| 固定一手版本 / DOI / 实读定位 | Paper fact | 本轮对象映射与限域 |
+| --- | --- | --- |
+| Bauschke–Borwein–Combettes 2003，DOI [10.1137/S0363012902407120](https://doi.org/10.1137/S0363012902407120)，[作者版](https://pcombet.math.ncsu.edu/sicon2.pdf)，Prop3.22、Cor3.25，PDF索引12–14；Thm4.14索引22 | bounded-below lsc convex目标、reflexive空间、Legendre核及域相交给Bregmanprox的singlevalued/B-class；收敛仍核有界性和指定cluster条件 | C274及C273均属convexBregman，不能因无Lipschitzinverse或无强凸核称框架失效。C272一般非凸完整驻点关系不与其convexprox对象等同；仍需承认直接/ABS正面 |
+| Rebjock–Boumal [2303.00096v2](https://arxiv.org/html/2303.00096v2)，DOI [10.48550/arXiv.2303.00096](https://doi.org/10.48550/arXiv.2303.00096)，Prop2.8、Cor2.11/2.17 | C2下局部Morse–Bott、EB、QG、PL的准确等价与常数损失；MB给PL | C272的C2子类完整S为affine且normalHessian≥mu，EB/KL几何不是本轮创新；这些定理不自行供应平坦核全驻点root定位与物理m阶 |
+| Attouch–Bolte–Svaiter [2010作者报告](https://optimization-online.org/wp-content/uploads/2010/12/2864.pdf)，印页8 H1–H3、印页12 Thm2.9；与本页既有[接口](#lit-smooth-kl-obstruction)同版 | proper-lsc、H1/H2/H3和cluster处KL给收敛有限长度 | C272另有适用KL时，原始root定位加局部二次目标上界可供应H1，locLip核/驻点方程给H2。C273统一邻域H1失败，却每条轨道eventual常数成立；不能把两种量词混成整个ABS失效 |
+| Azizian–Iutzeler–Malick–Mertikopoulos [2211.08043v3](https://arxiv.org/pdf/2211.08043v3)，DOI [10.48550/arXiv.2211.08043](https://doi.org/10.48550/arXiv.2211.08043)，§2.2 PDF索引3、Thm1索引8 | Bregmanregularizer在compactsets有positive局部强凸模；Thm1还核Assumptions1–3及步长门 | C272的flatnormal核不满足该正模，且零集非孤立；仅这个指定定理不能直接用。不声称整篇BPM研究或其它理论不处理kernelrate |
+| Ahookhosh–Themelis–Patrinos [1905.11904作者版](https://arxiv.org/pdf/1905.11904)，DOI [10.48550/arXiv.1905.11904](https://doi.org/10.48550/arXiv.1905.11904)，实读Thm5.12 PDF索引22 | Bella超线性结果另需AssumptionsI/II、hC2且HessianPD等；算法含方向/line-search | C272/C274退化核失败指定PD前件，算法也不同；不能写全框架排除。此URL版本未冻结v号，不导入其整条定理，只记录显示的前件 |
+| Kakutani 1941，DOI [10.1215/S0012-7094-41-00838-4](https://doi.org/10.1215/S0012-7094-41-00838-4)，[原文副本](https://www.math.ucdavis.edu/~deloera/TEACHING/READINGSEMINAR/PAPERS/kakutanioriginal.pdf)，Thm1与p458 Corollary | compactconvex Euclidean域上usc非空闭凸值对应有fixedpoint | 反馈候选在correctionvariables/productdomain调用，逐项核值凸性；不把非线性resolvent作用后的stateonly值自动当凸。该候选不注册为本轮主Claim |
+
+前三条对象的收敛和新定量结论均由规范正文独立证明，不依赖这张比较表补承重步骤。较大范围的优先检索和原生应用文献映射仍未完成。
+
 <a id="lit-novelty-2026"></a>
 ## 团队首创性查证的补充先行接口
 

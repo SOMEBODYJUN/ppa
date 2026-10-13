@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## 原始模型到完整 GPPA 证书
+
+[结构复算](code/structural_verification/README.md)登记 C272–C274：Fraction 共同半径系数、100 位 Decimal 的 C1 多驻点/非极小根反算、零/跨符号/远输入、局部远根与反射失败、非零数据 Gram 的 15 个缩放方程见证、混合幂核中心/非zero切向层及反馈共同证书临界门。运行 `python3 research/code/structural_verification/verify.py` 写 [output.json](code/structural_verification/output.json)，包括代码哈希、精度、原式/缩放残差和舍入界。不枚举完整数值纤维、不证明所有输入/输出或最优指数；这些量词在对应规范正文中解析证明。
+
 ## 本轮新增：GPPA 首创性核查与精确边界
 
 [四路接续复算](code/gppa_novelty/README.md)和[followup_verification.json](code/gppa_novelty/followup_verification.json)另外登记C221/C222、GPPA经典桥及NFB旧更新的四组程序；基线94cbbbd，初轮记录保持，不混写阅读或执行时间。

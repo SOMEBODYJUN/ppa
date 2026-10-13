@@ -2369,3 +2369,30 @@
 - **Conclusion / Dependencies / Evidence**：Uall,R10⁻⁴,γ.5,L1,ψ1.6ρ²,bar t.006,κ.5；同物理nearest、原unionρ公式、全窗K(R).00505/compat.40804和严格预算，全部原J政策局部有限长度。sharp缩管√2/11、锚渐近2sqrt(√2/11)、EB最大幂2/渐近coef1、解点prox最佳.5；自由轨道闭式，初始静止固定gain终点a_t−δa_n。C¹共同平方H1不可能，locLip strong-CR共同H1/selected-H2亦不可能；C266人工KL边界保留。[AC1–12](research/canonical/affine_crosstalk_rleb.md#acr-object)、C02-v3、[本轮接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md)。
 - **Classical positive / Scope**：AC10不借新锚几何，原机械E全域Δ≥B^(3/2)/9+5P^(3/2)/6，所有有限初值、全部切换/完整政策eventual几何能量和全物理finite length。设计任务功能更清楚，但仍正交反馈Hamilton的仿射特例，不是新机制/现成设备/困难优化solver，不能作经典无法分析的强主例。全对RL、全输入对Hausdorff指数、每positiveΓ充分性和公开优先未认证。
 - **Counterevidence / Parameter / Metric**：另绑定FΓ：A1+Γ>0完整zero吸收，A0无全输入coverage，A<0 AC12两条远曲线；Γ≤0的自由轨道/normal二周期实际否定全域结论，不仅凭不吸收推不收敛。原F换固定SPD M后Fix仍S且coverage，完整zero fiber却恰0及±(88/1849,0,4/1849,0)，pt1/400每步位置增1/20是真合法漂移。任意PD/时变核不默认保留结论。
+
+<a id="c272"></a>
+## C272-v1 · 法向增长类的完整驻点平坦核验证与物理阶
+
+- **Status**：`derived-checked`；两位独立重构、实际规范全文冷读、主代理复核与反算；外部首创性未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维N×T，m>1，lambda/mu>0，B≥0，f全域C1且f(0,z)=0、u·grad_u f≥mu||u||²、||grad_z f||≤B||u||²。F=grad f，完整S={0}×T，v=(||u||^(m−1)u,z)，完整J=(v+lambdaF)^−1v，全空间所有输入/全部驻点根。
+- **Conclusion / Dependencies**：coercive存在+全root r_+^m+lambda mu r_+≤r^m、tangentstep≤lambda B r_+²给非空紧完整纤维、zero吸收与全域finite length。NG6–9同物理nearest/trueEB/共同显式半径/物理h逐项认证C249。C2近实际极限时法向及full-point双边m阶，scalar系数1/(lambda A_infty)。
+- **Evidence**：[独立规范证明](research/canonical/normal_growth_flat_kernel.md#ngf-object)、[同组证书](research/canonical/normal_growth_flat_kernel.md#ngf-certificate)、[实际全文接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)、[复算](research/code/structural_verification/README.md)。weightedresidual A(z)原始充分入口及任意近S多驻点/nonminimum输出例均自足。
+- **Counterevidence / Scope**：[局部条件的zero远根反例及omegaId失败](research/canonical/normal_growth_flat_kernel.md#ngf-boundaries)。一般C1只给m阶上界，不给每个成员匹配下界或vector单个scalarlimit。直接收缩证明更短，C2 EB/Morse–Bott/KL几何已有；不称全经典排除、时变核保留或额外未知zero推断。
+
+<a id="c273"></a>
+## C273-v1 · 非零原始数据Gram GPPA的完整证书与锐解点2/3
+
+- **Status**：`derived-checked`；两位代理实际完整证明复核、主代理重构和缩放方程反算；公开先行性未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：R^(m×2),m≥2,c≠0，f_c=.5||a−c||²，F_c=[a−c,0]，S_c={[c,b]}，v=ZZ^TZ原中心不平移；每lambda>0全输入完整J唯一。物理窗U||b||<B,R<||c||，L=3[(||c||+R)²+B²],eta=(||c||−R)²及q_lambda=L/lambda+(L/eta)sqrt(L/lambda)≤kappa<1。
+- **Conclusion / Dependencies**：完整Bregman comparator全root→same物理nearest、trueEB等号、h=C_Hsqrt(d)、严格Theta budget认证C249。对每个p=[c,0]、每lambda>0全邻域点态指数恰2/3、解点noncalm；原f统一全邻域欧氏平方H1失败。
+- **Evidence**：[对象/完整纤维](research/canonical/native_gram_structural.md#native-gram-object)、[可算共同证书](research/canonical/native_gram_structural.md#native-gram-certificate)、[锐上/下界](research/canonical/native_gram_structural.md#native-gram-exponent)、[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)、[代码](research/code/structural_verification/README.md)。unitc/B1/R1e−8/lambda1e4/kappa.25使q<.148,ThetaR<.000627。
+- **Counterevidence / Scope**：[同算法全lambda/全初值经典finite-length及slice零读出](research/canonical/native_gram_structural.md#native-gram-classical)更强；[每单轨道eventual原f ABS正面](research/canonical/native_gram_structural.md#native-gram-eventual)保留。统一邻域H1失败不等于轨道eventual失败；2/3点态不是twoinput最优或精确轨道阶。对象不同于C270，不关闭其3/7上界问题，也不认证noninjective核或Euler未知zero。
+
+<a id="c274"></a>
+## C274-v1 · 混合幂核自动验证、显式极限与分层锐物理阶
+
+- **Status**：`derived-checked`；Astra独立推导、另一代理实际全文冷读、主代理重构与有限反算；公开优先未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维N×T，1<p<q,q>2，lambda/mu>0；g proper-lsc mu强凸且0∈∂g(0)，F=∂g×0，完整S={0}×T，h=(||u||^q+||z||^q)^(p/q)/p，v=grad h；全域完整GPPA与完整convexBregmanargmin同一单点。
+- **Conclusion / Dependencies**：任意原始g给真infEB、same physicalnearest omegaId及条带||z||>b的C249明确h/半径/strictbudget；更强全域allinput长度与闭式切向极限。gC2近0且初始切向非零，fullpoint与tail锐q−1阶；quadratic SPD时active最低特征值给精确系数。
+- **Evidence**：[完整规范](research/canonical/mixed_power_kernel_structural.md#mixed-power-object)、[自动证书](research/canonical/mixed_power_kernel_structural.md#mixed-power-certificate)、[全域不变量](research/canonical/mixed_power_kernel_structural.md#mixed-power-global)、[锐分层](research/canonical/mixed_power_kernel_structural.md#mixed-power-rate)、[接收](research/audit/STRUCTURAL_VERIFICATION_REVIEW_2026_10_13.md)与[复算](research/code/structural_verification/README.md)。
+- **Counterevidence / Scope**：p2且切向0时确为普通PPA线性，不授整个S的统一q−1阶；nonsmooth可有限识别，sharp只限smooth非终止子类。属于经典凸Bregman，BBC前件通过，不称经典不能分析或fixedzero noncalm；不是C273原生非零数据对象。

@@ -3902,6 +3902,102 @@
       "label": "C271全参数零纤维与实际负参数反例",
       "file": "canonical/affine_crosstalk_rleb.md#acr-critical",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-OBJECT",
+      "label": "C272全域法向增长/平坦核完整对象",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-FIBERS",
+      "label": "C272全部驻点覆盖/compact定位/zero吸收",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-coverage",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-CERT",
+      "label": "C272原始参数到完整物理共同证书",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-GLOBAL",
+      "label": "C272全初值全分支物理finite length",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-rate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-RATE",
+      "label": "C272近limit C2的锐双边物理m阶",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-rate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NGF-BOUNDARY",
+      "label": "C272局部远根和omegaId的明确反例",
+      "file": "canonical/normal_growth_flat_kernel.md#ngf-boundaries",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-OBJECT",
+      "label": "C273非零原始数据/nativeGram完整对象",
+      "file": "canonical/native_gram_structural.md#native-gram-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-CERT",
+      "label": "C273同physicalnearest/trueEB/strictbudget证书",
+      "file": "canonical/native_gram_structural.md#native-gram-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-EXPONENT",
+      "label": "C273解点全input锐2/3与noncalm",
+      "file": "canonical/native_gram_structural.md#native-gram-exponent",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-H1",
+      "label": "C273统一解点邻域原f H1障碍",
+      "file": "canonical/native_gram_structural.md#native-gram-h1",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-GLOBAL",
+      "label": "C273全lambda/初值经典slice有限长度",
+      "file": "canonical/native_gram_structural.md#native-gram-classical",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FNGR-EVENTUAL",
+      "label": "C273每orbit eventual原f ABS正面",
+      "file": "canonical/native_gram_structural.md#native-gram-eventual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MPK-OBJECT",
+      "label": "C274混合幂核/集合值强凸normal对象",
+      "file": "canonical/mixed_power_kernel_structural.md#mixed-power-object",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MPK-CERT",
+      "label": "C274同锚/真inf/物理strip预算自动证书",
+      "file": "canonical/mixed_power_kernel_structural.md#mixed-power-certificate",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MPK-GLOBAL",
+      "label": "C274全input finite length与explicitlimit",
+      "file": "canonical/mixed_power_kernel_structural.md#mixed-power-global",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MPK-RATE",
+      "label": "C274非zero切向sharp q−1/centerlinear分层",
+      "file": "canonical/mixed_power_kernel_structural.md#mixed-power-rate",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -9814,6 +9910,153 @@
       "scope": "仅该section重绑定familyΓ∈R；A>0零吸收、A0无全输入coverage、A<0完整far curves；Γ≤0 actualfree/normalcycle反证，不判每positiveΓ充分或从局部factor推iff。",
       "status": "derived-checked",
       "topic": "自然应用筛选与比较边界"
+    },
+    {
+      "id": "E514",
+      "inputs": [
+        "NGF-OBJECT"
+      ],
+      "output": "NGF-FIBERS",
+      "relation": "implies",
+      "scope": "C272全球NG1；coercive仅供应一root，全部root另由NG4解析定位/compact/zero，不替换为min分支。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E515",
+      "inputs": [
+        "NGF-OBJECT",
+        "NGF-FIBERS"
+      ],
+      "output": "NGF-CERT",
+      "relation": "sufficient",
+      "scope": "同C272完整对象，任意κ<1、NG8正R和bar≥K(R)/lambda；同physicalnearest、truegradEB、h由allroot界、Uall共同G1–G5。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E516",
+      "inputs": [
+        "NGF-OBJECT",
+        "NGF-FIBERS",
+        "NGF-CERT",
+        "PRG-CONV"
+      ],
+      "output": "NGF-GLOBAL",
+      "relation": "conditional",
+      "scope": "C249仅直接给NG8小管结论；C272完整全域root标量phi另给全部初值有限前缀进入，同对象coverage/finiteprefix/可和tail共同推出global。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E517",
+      "inputs": [
+        "NGF-GLOBAL"
+      ],
+      "output": "NGF-RATE",
+      "relation": "conditional",
+      "scope": "额外f C2近实际zero limit且u0≠0；Ainfty≥mu，NG10物理tail和NG11实际outputTaylor给two-sidedm阶，scalaronlyexactconstant。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E518",
+      "inputs": [
+        "NGF-BOUNDARY"
+      ],
+      "output": "NGF-CERT",
+      "relation": "limits",
+      "scope": "另局部NG1版本zeroinput有±1farroot，不能由local条件获得此全球completecertificate；同globalclass也不能无条件换omegaId。不反驳已保全域前件/三角模的C272。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E519",
+      "inputs": [
+        "FNGR-OBJECT"
+      ],
+      "output": "FNGR-CERT",
+      "relation": "sufficient",
+      "scope": "同C273 completeunique，U||b||<B,R<||c||，NG7 qlambda≤κ与NG15 strictbudget；samephysicalnearest上下delta、trueEB等号、prelocalizationcomparator。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E520",
+      "inputs": [
+        "FNGR-OBJECT"
+      ],
+      "output": "FNGR-EXPONENT",
+      "relation": "implies",
+      "scope": "每c≠0/每lambda>0/每p[c0]；allinputpointwise2/3上界加orthogonal t族matching，不授twoinputsharp或轨道阶。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E521",
+      "inputs": [
+        "FNGR-EXPONENT"
+      ],
+      "output": "FNGR-H1",
+      "relation": "conditional",
+      "scope": "同nativeGram NG20族：objective decrease~t²，physicalstep²~t^(4/3)，故uniformfullneighborhood原f平方H1无正系数。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E522",
+      "inputs": [
+        "FNGR-OBJECT"
+      ],
+      "output": "FNGR-GLOBAL",
+      "relation": "implies",
+      "scope": "同算法全部固定lambda>0/allinput；守恒k定义unique slicezero、globalbound/secantcocoercivity/1/3inverse给finitephysicaltail。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E523",
+      "inputs": [
+        "FNGR-GLOBAL"
+      ],
+      "output": "FNGR-EVENTUAL",
+      "relation": "implies",
+      "scope": "每条轨道最终进入其limit邻域；b*≠0用HbbPD/IFT，b*0必k0/b0零且invariantnormalspace；各自原f H1/H2/KL成立，常数不uniform覆盖[c0]fullneighborhood。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E525",
+      "inputs": [
+        "MPK-OBJECT"
+      ],
+      "output": "MPK-CERT",
+      "relation": "sufficient",
+      "scope": "同C274 1<p<q,q>2/gstrongconvex；条带||z||>b，R与κ按17、bar按18、strictbudget23，完整sameanchor/trueinf及pre-retentionlifting。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E526",
+      "inputs": [
+        "MPK-OBJECT"
+      ],
+      "output": "MPK-GLOBAL",
+      "relation": "implies",
+      "scope": "同完整convex GPPA allinput/alllambda；tangentk invariant、n monotone、normalwork及finiteprefix telescoping给explicitlimit和globalphysicallength。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
+    },
+    {
+      "id": "E527",
+      "inputs": [
+        "MPK-GLOBAL"
+      ],
+      "output": "MPK-RATE",
+      "relation": "conditional",
+      "scope": "额外g C2近0/u0≠0/initialtangent非0给fullpoint/tail sharpq−1；SPDquadraticactive最低eigenvalue givesexactcoefficient；p2/tangent0实际linear限制全S统一阶。",
+      "status": "derived-checked",
+      "topic": "原始模型到完整物理GPPA结构证书"
     }
   ]
 }

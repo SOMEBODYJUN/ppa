@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-13",
+  "claims": [
+    "C272-v1",
+    "C273-v1",
+    "C274-v1"
+  ],
+  "status": "derived-checked",
+  "review_scope": "Exact full-fiber proofs, raw parameter certificates, sharp stated rates/exponent; external priority not certified",
+  "unmodified_manuscript": "发表成果整理/RLEB",
+  "files": [
+    {
+      "file": "research/canonical/normal_growth_flat_kernel.md",
+      "sha256": "9527bf0f8de04359ed7f9456ef6d6b699236f1ab7f9215424c0c0053fc622db6"
+    },
+    {
+      "file": "research/canonical/native_gram_structural.md",
+      "sha256": "9bd2f1bc4cf7d939bb17f6ed9b4fe9c3e3cc771e1757ff2f0db8fc5bdea41e7e"
+    },
+    {
+      "file": "research/canonical/mixed_power_kernel_structural.md",
+      "sha256": "50e11bd64eb7e794a162e9998c88835e7f26548c0d8bfd3b1a2bc89ac4b0f7a8"
+    },
+    {
+      "file": "research/candidates/coupled_holder_structural.md",
+      "sha256": "07d39543e30d56a6cbb85e0ac24a5a25573f9f8f80cc490d6389fe2e42dfcadc"
+    },
+    {
+      "file": "research/code/structural_verification/verify.py",
+      "sha256": "66b38afc2be1b439be03b6e4015726815b2794d9b5d1b6f83e7b81e199fabad6"
+    },
+    {
+      "file": "research/code/structural_verification/output.json",
+      "sha256": "e3c1f84e3c2decde44b7c887fbea851cbbc6265bf40b4467aedf8e9b0677f990"
+    },
+    {
+      "file": "research/code/structural_verification/README.md",
+      "sha256": "1ad4e5232e3450186aaf8e6e16be4242fa560ce3697a9c70421c10328e1bbc42"
+    },
+    {
+      "file": "发表成果整理/本轮重构/结构性验证结果_2026-10-13.md",
+      "sha256": "ca309fbe51f0966f1e2432cec98dbfb8558c1dcd518eff347045babc6780ecc4"
+    }
+  ]
+}

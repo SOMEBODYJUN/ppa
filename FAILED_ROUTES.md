@@ -612,3 +612,17 @@
 - **真实断点**：[C271 AC2](research/canonical/affine_crosstalk_rleb.md#acr-fiber)的真实scalarΦ不能乘以√P后保留为全fiber身份；P0时乘后式可自动成立却遗漏a_n=g|g|，会虚构根和coverage。修为未除/未乘的h0连续方程，每fixedsignedgain全域唯一。δg与β|g|union相同，固定模式和跨符号不变量却不同。
 - **经典正面与范围**：仿射rail的所有模式/完整根已由AC10原机械能给全域有限长度，强优势推荐不成立。共同C¹平方H1及强链式locLip H1/H2确失败，但来源是自由切向惯性；该例是已有正交反馈的仿射目标特例，不能另造强创新或设备叙事。零吸收失败只否定零合同，若要判所有Γ≤0不收敛，须AC12后的真实free/normal二周期；渐近coef1也不是有限窗自动有效。
 - **度量攻击**：固定M正定、coverage和Fix=S仍可有完整zero3及真实漂移；不能只从选中零支或核固定点身份宣称物理all-output收敛。
+
+<a id="f89"></a>
+## F89 · 局部法向增长偷换为完整驻点排远，或法向正曲率偷换为核非扩张
+
+- **完整零输入反例**：[C272](research/canonical/normal_growth_flat_kernel.md#ngf-boundaries)的f=u²/2−u⁴/2在|u|≤1/2满足local法向mu.5与零切向，却完整flatkernel m3/lambda1 zeroinput有0/±1三输出；localselected证书不能代替fullfiber。
+- **同锚反射反例**：f=(2+sinz)u²/2全域normalpositive仍有合法反算输出给inner=2r^(m+1)−lambda r⁴/4<0（m>3或m3/lambda>8）；omegaId不成立。C272保留三角反射模及全域原始条件，自动证书不依赖该错误门。
+- **重启条件**：局部模型另给全root无远根条件；anisotropic核另核与normaloperator的配对几何，不从两个SPD因子推出乘积positive。
+
+<a id="f90"></a>
+## F90 · 解点统一H1障碍被偷换为每轨道ABS障碍，或不同零数据对象被混用
+
+- **真实区别**：[C273](research/canonical/native_gram_structural.md#native-gram-exponent)保留未平移native核与非zero原始数据，解点pointwise指数恰2/3；零数据C270的normal/tangent估计不能原样套，C273也不关闭C270的3/7上界。
+- **量词反证**：C273在[c,0]的原f全邻域统一欧氏平方H1失败；每单轨道却[有eventual H1/H2](research/canonical/native_gram_structural.md#native-gram-eventual)，sliceclassic另给所有lambda/初值finite length。因此不能将uniformneighborhood失败写成整个ABS/经典PPA不能分析。
+- **分层反证**：[C274](research/canonical/mixed_power_kernel_structural.md#mixed-power-rate)非zero切向sharp q−1与p2中心ordinarylinear属于同核不同层，不能把q−1泛化整个S。
