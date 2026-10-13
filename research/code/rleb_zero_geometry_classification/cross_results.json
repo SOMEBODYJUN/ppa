@@ -1,0 +1,37 @@
+{
+  "status": "all exact finite checks passed; universal proofs are in candidate card",
+  "python": "3.12.14",
+  "precision": "Fraction/integer exact arithmetic",
+  "inputs": 137,
+  "pair_checks": 9316,
+  "exact_trajectory_stops": 125,
+  "outside_radial_majorant_samples": 12,
+  "cross_euler": {
+    "vertices": 5,
+    "edges": 4,
+    "chi": 1
+  },
+  "local_tuple": {
+    "lambda": "1",
+    "R": "1/10",
+    "bar_t": "1/4",
+    "L": "4",
+    "gamma": "1",
+    "psi": "t/10",
+    "kappa": "1/2",
+    "tail": "5t"
+  },
+  "same_global_local_tuple": {
+    "lambda": "1",
+    "R": "1/100",
+    "bar_t": "1/2",
+    "L": "6",
+    "gamma": "1/2",
+    "psi": "s^3/1000",
+    "kappa": "1/2",
+    "window": "61/200",
+    "compatibility_ratio_upper": "226981/80000000",
+    "tail": "t+(6+3sqrt(2))*sqrt(t)"
+  },
+  "scope": "Global complete coverage and low-residual barrier are analytic; no arbitrary full inverse-fiber solver is implemented."
+}
