@@ -1,0 +1,60 @@
+{
+  "scope": "Finite high-precision checks and exact rational arithmetic; universal claims and indices require the analytic candidate card.",
+  "python": "3.12.14",
+  "decimal_precision": 80,
+  "parameters": {
+    "cubic_coefficients": [
+      1,
+      -6,
+      11,
+      -6
+    ],
+    "lambda": 1,
+    "domain": "[0,infinity)",
+    "normal_cone_fiber_at_zero": "(-infinity,-6]",
+    "R": "1/16",
+    "L": "1/2",
+    "gamma_local": 1,
+    "psi_slope": "4/5",
+    "kappa": "3/5",
+    "length_slope": "15/8"
+  },
+  "complete_equation_max_error": "1.0E-77",
+  "large_ball": {
+    "radius": 4,
+    "left_output": "0.1828794071678603411087882436727394975717895368587803285186657020686902605406981",
+    "right_output": "3.2599210498948731647672106072782283505702514647015079800819751121552996765139595",
+    "strict_inside": true
+  },
+  "local_sample_worst_ratios": {
+    "distance_ratio": "0.3405294353245456183002557583533143002732711426103083293762473579241280936735536",
+    "reflection_ratio": "0.3467591846612154354737470941916562783417873403724883583252847895787781742131456",
+    "eb_ratio": "0.51636790717434152653130394134031661180785168743481821620300950230270054835752953",
+    "step_ratio": "0.6733795923306077177368735470958281391708936701862441791626423947893890871065728"
+  },
+  "critical_input": 2,
+  "critical_output": 2,
+  "critical_local_holder_power": "1/3",
+  "above_critical_lambda_2_outputs_at_input_2": [
+    "1.2928932188134524755991556378951509607151640623115259634116601310046337607689465",
+    "2",
+    "2.7071067811865475244008443621048490392848359376884740365883398689953662392310535"
+  ],
+  "full_zero_set": [
+    1,
+    2,
+    3
+  ],
+  "target_M": [
+    1,
+    3
+  ],
+  "fixed_indices": {
+    "one": 1,
+    "three": 1,
+    "two_by_boundary_sign": -1,
+    "total": 1
+  },
+  "global_sublinear_reflection_holder": false,
+  "checks_passed": true
+}

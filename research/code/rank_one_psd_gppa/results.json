@@ -1,0 +1,142 @@
+{
+  "scope": "Finite numerical replication; universal proofs and degree are not inferred from sampling.",
+  "seed": 20261013,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "counts": {
+    "arbitrary_SVD_right_hand_sides": 1000,
+    "physical_tube_samples": 4000
+  },
+  "constants": {
+    "R": 0.0625,
+    "bart": 1.0,
+    "omega_slope": 0.5,
+    "psi_slope": 0.6666666666666666,
+    "kappa": 0.5,
+    "K_slope": 0.75,
+    "H_slope": 1.25,
+    "Theta_slope": 2.5
+  },
+  "maximum_identity_errors": {
+    "svd_cube_inverse_relative": 2.2802174862013494e-15,
+    "complete_update_equation": 1.0407993718061102e-15,
+    "explicit_versus_svd_update": 4.440892098500626e-15,
+    "energy_identity": 4.7704895589362195e-17,
+    "residual_identity": 3.400058012914542e-16
+  },
+  "maximum_positive_certificate_excess": {
+    "latent_reflection": 0.0,
+    "output_true_EB": 0.0,
+    "physical_transfer": 0.0,
+    "distance_contraction": 0.0,
+    "strict_budget": 0.0,
+    "global_growth": 0.0,
+    "natural_energy_H1": 0.0,
+    "natural_energy_H2": 0.0
+  },
+  "maximum_sampled_ratios": {
+    "latent_reflection": 0.34665000774739674,
+    "output_EB": 0.5161533792843913,
+    "distance_contraction": 0.3404311194900842
+  },
+  "invisible_kernel_direction": {
+    "kernel_step": 0.0,
+    "physical_step": 0.03125,
+    "input_true_residual": 3.0517578125e-05,
+    "distance": 0.03125,
+    "original_f_decrease_over_step_squared": 0.000244140625
+  },
+  "lambda_parameter_fibers": [
+    {
+      "lambda": 0.5,
+      "unit_circle_input_signed_roots": [
+        1.0000000000000002
+      ],
+      "origin_extra_circle_radius": null
+    },
+    {
+      "lambda": 1.0,
+      "unit_circle_input_signed_roots": [
+        0.9999999999999998
+      ],
+      "origin_extra_circle_radius": null
+    },
+    {
+      "lambda": 2.0,
+      "unit_circle_input_signed_roots": [
+        0.9999999999999998
+      ],
+      "origin_extra_circle_radius": 0.7071067811865476
+    },
+    {
+      "lambda": 3.9,
+      "unit_circle_input_signed_roots": [
+        1.0
+      ],
+      "origin_extra_circle_radius": 0.8623164985025763
+    },
+    {
+      "lambda": 4.0,
+      "unit_circle_input_signed_roots": [
+        -0.5000000077916984,
+        1.0000000000000007
+      ],
+      "origin_extra_circle_radius": 0.8660254037844386
+    },
+    {
+      "lambda": 5.0,
+      "unit_circle_input_signed_roots": [
+        -0.723606797749979,
+        -0.2763932022500211,
+        1.0000000000000002
+      ],
+      "origin_extra_circle_radius": 0.8944271909999159
+    }
+  ],
+  "origin_non_Lipschitz_witnesses": [
+    {
+      "t": 0.001,
+      "output_norm": 0.10000000000000002,
+      "calm_ratio": 99.99999999999997
+    },
+    {
+      "t": 1e-06,
+      "output_norm": 0.010000000000000002,
+      "calm_ratio": 9999.999999999995
+    },
+    {
+      "t": 1e-09,
+      "output_norm": 0.0010000000000000005,
+      "calm_ratio": 999999.9999999992
+    }
+  ],
+  "same_objective_ordinary_prox_witnesses": [
+    {
+      "epsilon": 0.1,
+      "output_z": 0.09902885240545732,
+      "distance_ratio": 0.9902885240545731,
+      "ordinary_complete_equation_error": 0.0
+    },
+    {
+      "epsilon": 0.01,
+      "output_z": 0.009999000299880056,
+      "distance_ratio": 0.9999000299880055,
+      "ordinary_complete_equation_error": 0.0
+    },
+    {
+      "epsilon": 0.001,
+      "output_z": 0.000999999000003,
+      "distance_ratio": 0.9999990000030001,
+      "ordinary_complete_equation_error": 0.0
+    }
+  ],
+  "analytic_index_arithmetic_only": {
+    "circle_Euler": 0,
+    "large_ball": 1,
+    "predicted_outside": 1,
+    "origin_homotopy_det": 1
+  },
+  "finite_replication_passed": true
+}

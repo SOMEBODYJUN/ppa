@@ -1,0 +1,55 @@
+{
+  "scope": "finite checks only; analytic full-fiber/degree proofs are in screening report",
+  "seed": 20261013,
+  "numpy": "2.3.5",
+  "rank_two_tube_samples": 500,
+  "rank_two_max_equation_error": 2.9521548374604473e-15,
+  "rank_two_max_positive_certificate_excess": 0.0,
+  "all_partial_isometry_rank_examples": [
+    {
+      "rank": 0,
+      "fixed_error": 0.0
+    },
+    {
+      "rank": 1,
+      "fixed_error": 0.0
+    },
+    {
+      "rank": 2,
+      "fixed_error": 0.0
+    }
+  ],
+  "procrustes_target_input_branches": [
+    {
+      "signs": [
+        -1,
+        -1
+      ],
+      "normal_symmetry_error": 0.0
+    },
+    {
+      "signs": [
+        -1,
+        1
+      ],
+      "normal_symmetry_error": 0.0
+    },
+    {
+      "signs": [
+        1,
+        -1
+      ],
+      "normal_symmetry_error": 0.0
+    },
+    {
+      "signs": [
+        1,
+        1
+      ],
+      "normal_symmetry_error": 0.0
+    }
+  ],
+  "procrustes_singular_input_fiber_examples": 4,
+  "classical_results": "classical.json",
+  "tilted_results": "scalar_tilt_results.json"
+}

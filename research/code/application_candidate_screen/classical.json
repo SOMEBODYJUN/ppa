@@ -1,0 +1,18 @@
+{
+  "seed": 20261013,
+  "samples": 1000,
+  "stiefel_full_equation_max_error": 2.9551031279334397e-15,
+  "stiefel_tube_reflection_ratio_max": 0.35892852097220507,
+  "stiefel_tube_true_EB_ratio_max": 0.5343009591902984,
+  "stiefel_tube_distance_factor_max": 0.34823739978377216,
+  "low_rank_H1_alpha1_max_violation": 0.0,
+  "low_rank_H2_ratio_max": 1.0308272137451986,
+  "sparse_positive_stationary_points": [
+    0.01574876771302732,
+    3.741508272193093
+  ],
+  "sparse_argmin_threshold_input": -2.1101184251576903,
+  "sparse_argmin_threshold_nonzero_output": 0.6299605249474366,
+  "sparse_argmin_threshold_objective_difference": 1.1102230246251565e-16,
+  "limits": "Finite checks only. Universal certificates and fatal objections are proved in the application screening report."
+}
