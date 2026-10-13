@@ -1,0 +1,274 @@
+{
+  "date": "2026-10-13",
+  "baseline_commit": "80eda5221175ed70adb93ba93fd2fef2ec48d0e6",
+  "scope": "independent author-side venue assessment; no manuscript, canonical claim or theorem-number edits",
+  "active_source": {
+    "main_sha256": "a5e624b302f1aadbf24409305f2fa3799613690857d658a24b826530602351d9",
+    "source_files": [
+      {
+        "path": "发表成果整理/RLEB/main.tex",
+        "sha256": "a5e624b302f1aadbf24409305f2fa3799613690857d658a24b826530602351d9"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/frontmatter.tex",
+        "sha256": "83fee6c79f847fc91df5d627ea93d5eb457bc90099568787dc5c60e36d181f77"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/gppa_theory.tex",
+        "sha256": "d896959d4f2ea66f7a73819a5f5db0ad6cd79127b64d1316d26c678250bdf302"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/preliminaries.tex",
+        "sha256": "0f43e1354e7849be1bdf24a3099750547d25a08a9c67168860a09dd109866864"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/theorem_spine.tex",
+        "sha256": "c281f7d3c40ae2e9645972c97f449d788a8bb377f237290791b2f7af986fa672"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/gppa_extension.tex",
+        "sha256": "bf65798a9ff8ead82aa5bc4a17823d61585f3879a0d775e07cf75af91c0d3751"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/verification_example.tex",
+        "sha256": "38a4f73e416d2a830e003bbbe4cc51046286b66154165ce537ea1b1143f71dca"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/bregman_example.tex",
+        "sha256": "320e7da5386b533da4190f089b5554cd34e9ae2147e61f021fd2c912b28043f9"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/topological_obstruction.tex",
+        "sha256": "e07aa8ddfdd114e1f13a05c9f5cc1e6a40e670949cad2e008149ec213e80f6cd"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/related_work.tex",
+        "sha256": "ccf2a80acba9c45f8aa9fc2ff35b7686e9d1a7f14ba859ad72cc4ea471e2ef14"
+      },
+      {
+        "path": "发表成果整理/RLEB/sections/conclusion.tex",
+        "sha256": "e201ed7a5b21319c05bab3ecc0a14dd00c7227e7f845cc16c43d871b73b7c0e9"
+      }
+    ],
+    "recursive_labels": 78,
+    "unresolved_local_refs": []
+  },
+  "mathematical_diagnostics": {
+    "precision_decimal_digits": 70,
+    "triangular_compatibility_at_R": "0.6924016952966368811002110905262122598212089844221185091470849672488412",
+    "triangular_residual_window": "0.2080266952966368811002110905262122598212089844221185091470849672488415",
+    "quartic_bregman_exact_identity_pairs": 1089,
+    "off_diagonal_spd_zero_output": [
+      "-4/49",
+      "16/49"
+    ],
+    "shadow_scalar_checks": [
+      {
+        "gamma": "0.25",
+        "minimum_radius_squared_at_u_gamma": "0.4999999999999999999999999999999999999999999999999999999999999999999999"
+      },
+      {
+        "gamma": "0.5",
+        "minimum_radius_squared_at_u_gamma": "0.5"
+      },
+      {
+        "gamma": "0.75",
+        "minimum_radius_squared_at_u_gamma": "0.50000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    ],
+    "smooth_F_superlinear_EB_ratios": [
+      {
+        "d": "1/10",
+        "q": 2,
+        "cCq_d_qminus1": "1/10"
+      },
+      {
+        "d": "1/100",
+        "q": 2,
+        "cCq_d_qminus1": "1/100"
+      },
+      {
+        "d": "1/10000",
+        "q": 2,
+        "cCq_d_qminus1": "1/10000"
+      },
+      {
+        "d": "1/10",
+        "q": 3,
+        "cCq_d_qminus1": "1/100"
+      },
+      {
+        "d": "1/100",
+        "q": 3,
+        "cCq_d_qminus1": "1/10000"
+      },
+      {
+        "d": "1/10000",
+        "q": 3,
+        "cCq_d_qminus1": "1/100000000"
+      }
+    ],
+    "dimension_free_sharpness_lower_radii_squared": [
+      {
+        "n": 1,
+        "value": "1/4"
+      },
+      {
+        "n": 2,
+        "value": "1/3"
+      },
+      {
+        "n": 10,
+        "value": "5/11"
+      },
+      {
+        "n": 100,
+        "value": "50/101"
+      }
+    ]
+  },
+  "three_point_identity_exact_pairs": 289,
+  "visual_read_pages": {
+    "active_pdf": [
+      1,
+      3,
+      12
+    ],
+    "formal_pdf": [
+      1,
+      5,
+      9
+    ]
+  },
+  "verification_limit": "Mathematical diagnostics and selected rendered pages are not a full peer review or worldwide novelty search.",
+  "uploaded_sources": [
+    {
+      "path": "/workspace/scratch/cabc4e00b63a/project_sources/01-Holder_RL_Formal_Manuscript.tex",
+      "sha256": "1c7c870d1468a565792aa44b98c95b60031fd7e586c46d1f175f824dd2e92deb"
+    },
+    {
+      "path": "/workspace/scratch/cabc4e00b63a/project_sources/02-2026_09_25_siopt_combined_candidate.pdf",
+      "sha256": "f515dad127cfeef38a85b7fa39aae31fe7cb644b73fead0b00878cfb26908453",
+      "pages": 24
+    },
+    {
+      "path": "/workspace/scratch/cabc4e00b63a/project_sources/03-Holder_RL_Pedagogical_Companion_CN.pdf",
+      "sha256": "eee6d7ac4f9a0bac0493b90cdd776283d8ec7cefe72a3a1b59061817d01388d6",
+      "pages": 51
+    },
+    {
+      "path": "/workspace/scratch/cabc4e00b63a/project_sources/04-Holder_RL_Formal_Manuscript.pdf",
+      "sha256": "abecd2595a9731ed17c963ed7d1b7c442cbcc027a6237d4d9bb7c347f5927c8b",
+      "pages": 21
+    }
+  ],
+  "venues": [
+    {
+      "journal": "SIAM Journal on Optimization",
+      "official_source": "https://epubs.siam.org/journal/siopt/editorial-policy",
+      "scope_read": true,
+      "policy_read": true
+    },
+    {
+      "journal": "Mathematical Programming",
+      "official_source": "https://link.springer.com/journal/10107",
+      "scope_read": true,
+      "full_submission_policy_read": false
+    },
+    {
+      "journal": "Mathematics of Operations Research",
+      "official_source": "https://pubsonline.informs.org/page/moor/submission-guidelines",
+      "scope_read": true,
+      "policy_read": true
+    },
+    {
+      "journal": "Set-Valued and Variational Analysis",
+      "official_source": "https://link.springer.com/journal/11228/aims-and-scope",
+      "scope_read": true,
+      "selected_submission_guidelines_read": true
+    },
+    {
+      "journal": "Journal of Optimization Theory and Applications",
+      "official_source": "https://link.springer.com/journal/10957/aims-and-scope",
+      "scope_read": true,
+      "selected_submission_guidelines_read": true
+    },
+    {
+      "journal": "Optimization",
+      "official_source": "https://www.tandfonline.com/journals/gopt20/about-this-journal",
+      "scope_search_result_only": true,
+      "full_page_unavailable": "403",
+      "submission_policy_read": false
+    },
+    {
+      "journal": "Journal of Mathematical Analysis and Applications",
+      "official_source": "https://shop.elsevier.com/journals/journal-of-mathematical-analysis-and-applications/0022-247X",
+      "scope_read": true,
+      "full_submission_policy_read": false
+    }
+  ],
+  "active_pdf": {
+    "path": "发表成果整理/RLEB/RLEB_中文修订稿.pdf",
+    "sha256": "04bb76e91c85c27b4e843b22c249992a9394a0fe9aaf3cc8903a8dd4e0d6f79b",
+    "pages": 19
+  },
+  "skill": {
+    "entry": ".agents/skills/academic-writing-skills/SKILL.md",
+    "mode": "author-side mathematical referee review",
+    "domain_reference": "https://github.com/JiahaoLi-creator/mathematical-academic-writing/blob/main/SKILL.md",
+    "calibration": "official venue policies; no acceptance-probability model"
+  },
+  "report_sha256": "a2f88d9da5bbddbae14d22c67c28dab96646eed87bb50bfd89b3679491473a00",
+  "candidate_language_diagnostics": [
+    {
+      "code": "PROSE007",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "syntactic dash punctuation",
+      "count": 2,
+      "message": "review em/en dash punctuation in context; retain when functional, not by default"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "JiahaoLi-creator, JiahaoLi-creator, mathematical-academic-writing, JiahaoLi-creator, mathematical-academic-writing, academic-writing-skills, academic-writing-skills, reviewer-red-team-and-release, overlay-contract",
+      "count": 9,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "rleb-gppa-physical, gppa-physical-energy, distance-length-interface, y-x",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "index-balance, rleb-euler, global-attraction-retract, z-Tz",
+      "count": 4,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE010",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "Set-Valued, aims-and-scope, submission-guidelines, about-this-journal, aims-and-scope, submission-guidelines, journal-of-mathematical-analysis-and-applications, editorial-policy, submission-guidelines",
+      "count": 9,
+      "message": "dense lexical hyphenation in one sentence; inspect clarity and field convention"
+    },
+    {
+      "code": "PROSE005",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "journal",
+      "count": 14,
+      "message": "candidate nontechnical word overuse; preserve it if conceptually required"
+    },
+    {
+      "code": "PROSE005",
+      "artifact": "/workspace/scratch/cabc4e00b63a/ppa/发表成果整理/本轮重构/真实投稿期刊独立评估_2026-10-13.md",
+      "match": "https",
+      "count": 14,
+      "message": "candidate nontechnical word overuse; preserve it if conceptually required"
+    }
+  ],
+  "diagnostic_interpretation": "Mathematical LaTeX commands, formula hyphens and report-specific code/path vocabulary were inspected in context; deterministic language lint is not a mathematical merit judgment."
+}
