@@ -647,3 +647,18 @@
 - **两个独立前件**：F=−Id 有精确线性真 EB 却反单调；F(x)=x³ 单调但无局部线性 EB。Hölder EB 描述距离与真实残差，不给图点内积条件；[Wang–Li–Ng 2023](research/LITERATURE.md#lit-inexact-precision) 的最大单调性是另一个明定前件，不由 Hölder 次正则推出。
 - **已读先行正面**：Combettes–Pennanen 2004 与 Iusem–Pennanen–Svaiter 作者稿已有非单调非精确/相对误差；BLPS 2025 作者稿还给部分相同最终轨道的非对称度量表示。循环博弈的 [完整自然验证](research/candidates/inexact_cyclic_game_benchmark.md) 可被逆亚单调/直接收缩恢复，撤回独占优势。
 - **保留贡献与读取边界**：真实图可计算停止证书及完整锐精度边界可保留为技术结果；国际精确优先、自然认证成本优势、真实内层复杂度仍开放。WLN 官方摘要只核目标/基本前件，未取得全文不得断言其误差规则、定理覆盖或遗漏。
+
+
+## F94 · 把 LT 当独立于旧半单调的全新二次类，或按概念名字排优劣
+
+- **精确旧类**：[Otero–Iusem2010作者稿](research/LITERATURE.md#lit-submonotonicity-routes)的−eta/2双平方缺陷与LT对同scaled图的−tau||a+b||²经eta=2tau/(1+2tau)一一换参；tau0另monotone。同点对类不否定局部极大性/coverage/算法定理的独立贡献，也不能跨图窗直接合并。
+- **其他“submonotone”**：DG的一阶epsilon||dx||缺陷、Spingarn各版本strict hypo及全类极大性、cyclic的势积分与矩阵semimonotonicity控制不同信息。一般原变量模已有Rolewicz1999先行；“更广”不自动给完整PPA、零吸收或有限长度。
+- **临界假排除**：任何图都可满足足够负的半单调参数，不能说非Lip例“不满足任何(mu,rho)”。可用排除必须含固定步长的非退化门、相同锚和源定理全部前件。
+- **重启门**：围绕原模型可认证结构、同算法真实参数/精度收益和完整物理政策建立主张；不以线性换一般模的名称独占创新。
+
+## F95 · 将反射与真实EB分别取最坏标量包络，误当无损或普遍最省
+
+- **同算法反算**：F=diag(−1,1/100)、lambda3、完整S0；J=diag(−1/2,100/103)，最优L2、K100，直接门50、标量能量平方25000/10009均失败；cohypo锐rho1的同原PPA通过lambda>2rho及逆步耗散。模型为驻点resolvent，不能称globalargminprox。
+- **任意一般模仍可失真**：[GU3](research/novelty/2026_10_14_submonotonicity/gauge_unification_review.md)的完整两支图全政策有限长；漂移支迫omega(t)≥2t^gamma，直支迫rho(q),g(q)≤q，q=t^gamma否定固定v=Id/同S的C250任意合法scalar组合。该候选只是已有SC14–SC15方向机制的短诊断，不升级新主贡献。
+- **双范数也不自动修复**：D(||a||,||b||)+独立同锚/残差界仍可能把真实漂移三元组配上不可能的输出距离；必须保留法向/分支相关性。零距离收缩还可能伴完整零纤维漂移，物理零步与可和性门不可删。
+- **准确salvage**：C249/C250为有效模块化充分条件；方向/矩阵、逆耗散、原函数条件可作其他认证入口。上述只比较明定原图/核/目标/步长，不排任意表示或整个RLEB理论。

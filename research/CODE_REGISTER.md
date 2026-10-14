@@ -161,3 +161,10 @@ C271另用同目录rail_verify.py，seed271、Fraction与Decimal80；1035真实�
 运行 python3 research/code/inexact_ppa/verify.py；[代码说明](code/inexact_ppa/README.md)与[输出](code/inexact_ppa/output.json)记录版本、精度、容差、参数和脚本 SHA256。实际通过 1645 个联合停止规则的完整水平纤维端点/中点见证、492 个多值法锥图见证、125 组循环矩阵系数；另核跳跃逆的非达到下确界、零输入、跨符号、闭式轨道/共轭、临界及远端发散政策。独立标准库脚本 [check_frontier.py](code/inexact_forcing_attack/check_frontier.py) 的实跑输出保存于主 output。
 
 全称覆盖、完整纤维、所有政策、锐指数和临界必要性由 [C275](topics/inexact_ppa/real_graph_stopping.md)／[C276](topics/inexact_ppa/sharp_precision_frontier.md) 解析证明承担。数值只反算有限参数，不认证公开优先、整个连续纤维或自然应用优势；真实残差与选中图值在多值见证中明确不同。
+
+
+## 不同次单调与一般模路线：比较反算
+
+[统一复算入口](code/submonotonicity_routes/README.md)运行 python3 research/code/submonotonicity_routes/run_all.py。六个独占脚本的完整 stdout/stderr、返回码、Python版本和脚本hash保存于 [all_verifiers_output.json](code/submonotonicity_routes/all_verifiers_output.json)；Fraction恒等式、零/临界/两符号/远输入、完整分支前缀、单零锚/完整零集和无限长度渐近分别标明。
+
+本轮只增加比较证据：旧tied类精确换参、同算法direction-loss、一般预算边界与点收敛/finite-length区分。GU1/GU3保留报告级candidate，不新注册总账Claim，不改旧身份；全称由[各分报告](novelty/2026_10_14_submonotonicity/README.md)解析证明，数值不认证全部纤维、公开首创或实际成本。

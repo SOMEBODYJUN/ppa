@@ -1,0 +1,129 @@
+{
+  "rational_quasimonotone": {
+    "zero_input_roots": [
+      0.0,
+      -2.618033988749895,
+      -0.3819660112501051
+    ],
+    "max_zero_equation_defect": 0.0,
+    "negative_branch_samples_k_0_10_100_1000": [
+      -2.618033988749895,
+      -32.41160926815924,
+      -302.3854301250981,
+      -3002.3824723402176
+    ],
+    "max_iterated_equation_defect": 4.547473508864641e-13
+  },
+  "pseudomonotone_multi_fiber": {
+    "input": 9.42477796076938,
+    "two_distinct_complete_outputs": [
+      3.141592653589793,
+      4.71238898038469
+    ],
+    "equation_defects": [
+      0.0,
+      0.0
+    ],
+    "zero_set": [
+      0
+    ],
+    "all_branch_absolute_contraction_bound": 0.5
+  },
+  "pseudomonotone_infinite_length": {
+    "nonmonotonicity_witness": {
+      "x": [
+        1,
+        0
+      ],
+      "y": [
+        0,
+        -2
+      ],
+      "F_x": [
+        0,
+        1
+      ],
+      "F_y": [
+        8,
+        0
+      ],
+      "exact_monotonicity_pairing": -6
+    },
+    "lambda": 1.0,
+    "initial_radius": 0.5,
+    "samples": [
+      {
+        "k": 100,
+        "radius": 0.26201046228307223,
+        "radius_asymptotic_ratio": 0.9853173548827172,
+        "partial_length": 3.685123843938078
+      },
+      {
+        "k": 1000,
+        "radius": 0.14937039857965123,
+        "radius_asymptotic_ratio": 0.9989000590060567,
+        "partial_length": 9.448682592290085
+      },
+      {
+        "k": 10000,
+        "radius": 0.08408399095650648,
+        "radius_asymptotic_ratio": 0.9999328030330196,
+        "partial_length": 19.84625814551303
+      },
+      {
+        "k": 100000,
+        "radius": 0.047286966771146924,
+        "radius_asymptotic_ratio": 0.9999975959815919,
+        "partial_length": 38.3557140983204
+      },
+      {
+        "k": 200000,
+        "radius": 0.039763514481072876,
+        "radius_asymptotic_ratio": 0.9999994478036507,
+        "partial_length": 46.358148276679714
+      }
+    ],
+    "last_inverse_fourth_power_increment": 1.9999925002339296,
+    "analytic_limit_of_increment": 2.0,
+    "max_radius_equation_defect": 8.326672684688674e-17
+  },
+  "single_minty_anchor_zero_absorption_gap": {
+    "lambda": 5.333333333333333,
+    "complete_zero_set": [
+      0,
+      1
+    ],
+    "input_1_three_complete_outputs": [
+      1.0,
+      0.25,
+      0.75
+    ],
+    "equation_defects": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "weak_minty_ratio_at_zero_1": [
+      -11.111111111111112,
+      -101.01010101010091,
+      -1001.0010010010001,
+      -10001.000100011102
+    ]
+  },
+  "cyclic_submonotone_concave": {
+    "cyclic_sum": 0.041999999999999996,
+    "half_sum_of_squared_edges": 0.042,
+    "lambda": 0.5,
+    "complete_proximal_factor": 2,
+    "unit_initial_value_after_10_steps": 1024
+  },
+  "weak_minty_linear_true_EB": {
+    "rho": -0.2,
+    "lambda": 1.0,
+    "linear_true_EB_C": 2.0,
+    "positive_energy_coefficient": 0.6,
+    "distance_factor": 0.9325048082403138,
+    "step_over_distance_bound": 1.2909944487358056,
+    "length_over_initial_distance_bound": 19.127206176883487
+  }
+}

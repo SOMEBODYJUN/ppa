@@ -45,7 +45,7 @@
 | 一级来源与实读定位 | 可使用事实及必要门 |
 | --- | --- |
 | [Lauster–Luke 2021](https://link.springer.com/article/10.1186/s13663-021-00698-0)，D13/D15、T16、L17及证明 | 非目标函数的gauge固定点收敛已有；证明中的可和步界直接蕴含有限长度，不能因未另立length theorem忽略 |
-| [Luke–Tam 2025](https://doi.org/10.1287/moor.2023.0334)，P3、L1/L2、T2；[LTT v2](https://arxiv.org/html/1605.05725v2)，D2.3/P2.4/T2.18 | 线性反射到almost-firm/submonotone及完整原图真残差到步EB的接口已存在。v2 ε<1与整邻管AA门独立；[C218](canonical/gppa_almost_averaged_bridge.md)给精确代换和非calm障碍 |
+| [Luke–Tam 2025正式版](https://doi.org/10.1287/moor.2025.0863)，P3、L1/L2、T2；[LTT v2](https://arxiv.org/html/1605.05725v2)，D2.3/P2.4/T2.18 | 线性反射到almost-firm/submonotone及完整原图真残差到步EB的接口已存在。v2 ε<1与整邻管AA门独立；[C218](canonical/gppa_almost_averaged_bridge.md)给精确代换和非calm障碍 |
 | [Le–Mordukhovich–Théra 2606.01536v2](https://arxiv.org/html/2606.01536v2)，2026-09-08，§3 T3完整陈述/证明 | 普通极大单调、Id核、原点R-continuity下持续Tikhonov误差管δ(1+1/(λε))+ρ(εa)。本次未取得v1定理，不倒推同式至June；[C220](canonical/gppa_regularized_inverse_branch.md)是明确逆核组合 |
 | [Le 2311.13096v1](https://arxiv.org/pdf/2311.13096)，T1、Eq12–17 | 普通极大单调Tikhonov零点范数及真实固定原值上的ρ(εa)偏移；不自动覆盖任意非单射warped核 |
 | [Fraser 1905.07563v1](https://arxiv.org/pdf/1905.07563)，T2.3/§3 | 射线r exp(i/r)锐半阶已有；其curve→interval inverse与平面反向twist不同，不自动给完整GPPA编码/离散共振 |
@@ -557,3 +557,23 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 | Wang–Li–Ng 2023，SIOPT33(3):1996–2020，DOI [10.1137/22M152147X](https://doi.org/10.1137/22M152147X)，[官方摘要](https://epubs.siam.org/doi/abs/10.1137/22M152147X) | 只取得正式摘要：Hilbert 最大单调、Hölder 次正则下 Rockafellar-type 非精确 PPA 的局部/全局强收敛和率。全文访问返回摘要，未核定理编号、误差准则、全部速率或长度；不凭摘要判包含关系。Hölder EB 不蕴含加强单调性，两前件独立。 |
 
 本库解析结果：[C275 真实图停止余量](topics/inexact_ppa/real_graph_stopping.md#igs-theorem)、[C276 完整锐精度边界](topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier)。前者证明为短小增益/事后证书，后者明确有限帽、幂次、临界和全部政策。C276 精确算法的 Hölder 共轭及自然循环博弈的经典正面必须保留；旧特定前件失败不证明所有经典方法失败。残差幂 forcing 已有 Newton 类先行；上述精确公式未匹配只是负检索证据，国际首创仍开放。
+
+
+<a id="lit-submonotonicity-routes"></a>
+## 同名次单调与一般模：精确旧类、方向信息和算法合同
+
+[综合比较](../发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[逐路读取表](novelty/2026_10_14_submonotonicity/README.md)固定同原F、lambda、物理目标、真实残差和完整输出，区分点收敛/有限长度/率。
+
+| 一手版本及实读定位 | 可用事实与不可省前件 |
+| --- | --- |
+| Gárciga Otero–Iusem，[2010-05-17作者稿](https://webdoc.sub.gwdg.de/ebook/serien/e/IMPA_A/672.pdf)，10页，Def2 p2/Prop5 p5/Thm2与Cor2/Thm3；2011刊本 DOI10.1590/S1807-03022011000100002仅书目定位 | 全图系数−eta/2乘原变量及图值平方和，eta∈(0,1)，maximal另定义。与LT对同scaled图的tau经eta=2tau/(1+2tau)一一换参；tau0补monotone。同点对类不等于同局部极大性/完整算法定理。根与独立Astra均重开Def2/Prop5。 |
+| Luke–Tam，[2025正式13页PDF](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863)，DOI10.1287/moor.2025.0863，Def2/Prop3–4、Assumption2/Thm2 | tau≥0的二次input缺陷，与同图反射Lipschitz代数等价；P4另tau<1/2，T2另coverage、自映射/真linearEB与tau(1+K/lambda)^2<1/2。Assumption2(d)(ii)同句含coverage和兼容，不能当作两个互不相关对象。 |
+| Evens–Pas–Latafat–Patrinos，[2305.03605v2](https://arxiv.org/pdf/2305.03605v2)，2024-05-06，Def2.1/AssumptionI、Thm2.4/2.13、Def4.1/Prop4.12及§4.1；刊本 DOI10.1007/s10107-024-02182-0仅元数据 | 全对/指定锚(mu,rho)-semimonotonicity与oblique weakMinty分开；osc、full preconditioned range、谱门和松弛参数共同给PPPA结论。Thm2.4满秩时可给真正多值原序列收敛；Thm2.13另连续单值resolvent，不向多值例偷授其linear-rate。 |
+| Evens–Latafat–Patrinos，[2312.06540v1](https://arxiv.org/pdf/2312.06540v1)，2023-12-11，Def1.2/Prop4.3/§4–5；JOTA刊本 DOI10.1007/s10957-025-02680-x仅元数据 | 对称、可不定的矩阵半单调与演算已有。非交换配方需保留DQ^-1D交叉项；矩阵奇异核可使物理方向不可见。上述额外原文由半单调分工实读，非根代理逐篇全文重审。 |
+| Daniilidis–Georgiev，[DG_ac作者全文](https://www.arisdaniilidis.at/DG_ac.pdf)，DOI10.1016/j.jmaa.2003.11.004，式1/Thm2/Cor3/Defs7,10,11/Thm12–13 | 原变量一阶epsilon||dx||缺陷；局部Lipschitz函数近似凸↔Clarke次微分submonotone，有限维lower-C1；循环版为势函数结构。不能把一次缺陷写成平方、把有势函数当完整PPA稳定。根/独立反审重开关键式与Thm2，详细循环由order实读。 |
+| Rolewicz1999，DOI10.4064/sm-133-1-29-37，[出版社扫描](https://www.impan.pl/shop/en/publication/transaction/download/product/111120)，pp29–31式1–7/Prop1；Daniilidis–Malick2005 DOI10.68381/jca12022，[刊本](https://journalofconvexanalysis.com/articles/jca12022/jca12022.pdf?v=2)，Defs2.1/2.2/2.4、Thm3.1–3.2 | 一般alpha(·)原变量模与lower-C1,alpha已明确出现。由primal分工下载并目读；公共reader失败不被写成全文缺失。仅借一般模定义和结构接口，不认定所有general-D理论已有或本库首创。 |
+| Combettes–Pennanen，[sicon3作者稿](https://pcombet.math.ncsu.edu/sicon3.pdf)，DOI10.1137/S0363012903427336，Def2.2/Lem2.4/Thm3.1/4.3；BMW，[1902.09827v1](https://arxiv.org/pdf/1902.09827v1)，Def2.3/Lem2.7/Thm2.16/Prop3.13(v)；刊本 DOI10.1007/s10107-020-01500-6元数据 | 逆图shift、单值/coverage/averaged参数和自然NLP入口已有；CP球内选择不等于完整远端fiber排除；BMW原文v1的个别文字不调用。完整精度及版本限制见inverse报告。 |
+
+旧[Spingarn作者定义](canonical/spingarn_author_definitions.md#sp-first-order)仍按1980稿/1981报告身份调用；1982正式mapping全文未取得。Banach2007 DOI10.1016/j.jmaa.2006.07.076、Ngai–Penot2007与Langenberg2010未读全文时不导入其定理。
+
+**本轮推导与价值边界。** 2010同类换参降低“LT新类再由我们一般化”的叙事权重，不否定LT收敛定理。diag同算法和GU3完整多值例证明标量反射/EB包络可严格损失方向关联；逆高阶余量例只点收敛且长度∞，不能全面替代物理长度合同。一般D若仅保两范数与独立残差界仍可虚构输出组合。GU候选、来源事实和外部首创保持分开；没有新Claim或主稿升级。

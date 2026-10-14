@@ -1,0 +1,38 @@
+{
+  "date_utc": "2026-10-14",
+  "baseline_commit": "0347b57c681bf71b34a9df332952eb52f1e8dbf2",
+  "scope": "comparative research; no new canonical Claim, main manuscript or international-priority certification",
+  "files": {
+    "FAILED_ROUTES.md": "10bb6cd46558069050e1e8c9574460ff8cac5465981b86382cda99e2fcd1c8f0",
+    "README.md": "0403c5f5d16da3c5f9352acc3ab6f5faa345bd7483e87694cff699f4568ca6db",
+    "RESEARCH_STATE.md": "00cce984a94da9e8f65dadf0b6f63e08ea8779c5bbe6de66afadf27201d294ac",
+    "research/CODE_REGISTER.md": "f4a8274719460c148199f37c2a6fc963eca306a5b6ef8496f154949178ae824b",
+    "research/LITERATURE.md": "bbc1421b6f50aa8a722f6e8953fe5e1592731efbbb8f517f37d5c8fc6ac5ca58",
+    "research/audit/SUBMONOTONICITY_ROUTES_REVIEW_2026_10_14.md": "a16f46720f687abf9b8c080363cae0332aaf2be71da225dab21b88929c6a7b99",
+    "research/code/submonotonicity_routes/README.md": "7f1be49157d6e95b620670c4b751b81063eb1d5c5502d2703e33a843169a6a83",
+    "research/code/submonotonicity_routes/all_verifiers_output.json": "30b82aa5c4c9958043397ca2a919f829ef9f5fa4119bcdcfcad9b0c529c83fd3",
+    "research/code/submonotonicity_routes/gauge_verify.py": "0254896fc4029b6be3bec21749c8cf12c6903d7efd7a822e1d149c54de501d53",
+    "research/code/submonotonicity_routes/inverse_verify.py": "99fe0b4f626d51c1dbbfc8283af90eca72f5c94491b798040fd8d7acc23c9efe",
+    "research/code/submonotonicity_routes/order_verify.py": "1802f05ef374f765e161b49d873fd4e1b5c148df878fb8471f8329f42395c78b",
+    "research/code/submonotonicity_routes/order_verify_results.json": "bec2688fa30869194ad3039137a141bd19b63788bb2f786809bc369727cc7228",
+    "research/code/submonotonicity_routes/primal_verify.py": "a1ac20b7f57b3c023d3b824339d6e2672a6bad5463d041bf0c31770d787d56ff",
+    "research/code/submonotonicity_routes/route_bridge_output.json": "0be519a217ccb9b3264416b3cb7862ebaf64150551946763724944e1c980663d",
+    "research/code/submonotonicity_routes/route_bridge_verify.py": "2e03b9e06de35ad26dc5510de6986e6eddd40e5a298232584f335cdbd3c88128",
+    "research/code/submonotonicity_routes/run_all.py": "0dec31c3c82f130d78464cf17a1cc612d81f1ba5196609c6459646f90ca640ae",
+    "research/code/submonotonicity_routes/semimonotone_verify.py": "427823467511efc7e1638faeaa0e42af5d016512c31374b15c0ce3b0d6bc959f",
+    "research/novelty/2026_10_14_submonotonicity/README.md": "27b576a4b4b4db32788ddcfad6fc2708af8116579313e9b89fbde0143925fbc8",
+    "research/novelty/2026_10_14_submonotonicity/gauge_unification_review.md": "9c44ed10dbf0b02afa21ef8dd194dd7169bd19a056410d000b394db012532265",
+    "research/novelty/2026_10_14_submonotonicity/independent_verdict.md": "0abb1234a2f7d9030af70581bb5291d1df138869539001063983d83c7e23342b",
+    "research/novelty/2026_10_14_submonotonicity/inverse_geometry_review.md": "af23fdabfd231d5e8245e61522e7fd5afbc291bcbcb1122b206654dd4073eee8",
+    "research/novelty/2026_10_14_submonotonicity/primal_structural_review.md": "cb0765a7ea850fb8ffe22850262ddfe27b520fb9dc007bbef2223bdd01402dc2",
+    "research/novelty/2026_10_14_submonotonicity/semimonotone_review.md": "b171d133752154451548f101491194b845a9487a5c43b477efcceab837e976a3",
+    "research/novelty/2026_10_14_submonotonicity/variational_order_review.md": "5b28d0a386e3225b3e8edaf285ba9234848881923c54838d848f0939fc056e41",
+    "发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md": "b4ca9169abfad5d83f6595131e5e4fedfaad1df42a026e1e979f9960f13adccc"
+  },
+  "verification_commands": [
+    "python3 research/code/submonotonicity_routes/run_all.py",
+    "python3 research/validate_assets.py",
+    "git diff --check"
+  ],
+  "protected": "main manuscript, abstract, prior Claim identities, graph/views and previous manifests unchanged"
+}
