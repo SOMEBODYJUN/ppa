@@ -21,15 +21,26 @@
 \usepackage[unicode,hidelinks]{hyperref}
 
 \newcommand{\dist}{\operatorname{dist}}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\zer}{\operatorname{zer}}
+\newcommand{\gph}{\operatorname{gph}}
+\newcommand{\Fix}{\operatorname{Fix}}
+\newcommand{\Id}{I}
+\newcommand{\R}{\mathbb R}
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}{命题}
+\newtheorem{lemma}{引理}
+\newtheorem{corollary}{推论}
+\newtheorem*{classicalproposition}{经典命题}
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{assumption}{Assumption}[section]
+\newtheorem{definition}{定义}
+\newtheorem{assumption}{假设}
+\newtheorem{example}{例}
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark}{注}
+\renewcommand{\proofname}{证明}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\abstractname}{摘要}
+\numberwithin{equation}{section}
 
 \hypersetup{
   pdftitle={Nonlinear Resolvent Geometry and Error Bounds for Proximal Point Convergence},
@@ -39,17 +50,27 @@
 \begin{document}
 
 \input{sections/frontmatter}
+\input{sections/preliminaries}
 \input{sections/theorem_spine}
 \input{sections/gppa_theory}
-\input{sections/gppa_extension}
-\input{sections/verification_example}
-\input{sections/bregman_example}
-\input{sections/topological_obstruction}
 \input{sections/related_work}
+\input{sections/topological_obstruction}
 \input{sections/conclusion}
 
+\ifdefined\RLEBTechnicalAppendix
+\appendix
+\input{supplements/linear_attainment}
+\input{supplements/general_modulus}
+\input{supplements/hamilton_example}
+\input{supplements/appendix_hamilton}
+\input{sections/bregman_example}
+\input{sections/gppa_extension}
+\fi
 
 \bibliographystyle{plain}
+\begingroup
+\small
 \bibliography{references}
+\endgroup
 
 \end{document}

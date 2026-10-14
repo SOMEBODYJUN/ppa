@@ -1,24 +1,21 @@
-% Fixed-kernel example following the ordinary PPA main theorem.
-% Reader route: a familiar convex problem -> nonlinear Bregman step -> exact rate
-% -> the forward-anchor and physical-lifting estimates used by the corollary.
 \subsection{Bregman 近端中的核平坦性与物理速率}
 \label{subsec:gppa-bregman-quartic}
 
 Bregman 近端法为非线性核提供了一个直接的优化解释。
-对可微凸函数 $h$，记
+对全空间上的可微凸函数 $\phi$，记
 \[
- D_h(y,x)=h(y)-h(x)-\langle\nabla h(x),y-x\rangle.
+ D_\phi(y,x)=\phi(y)-\phi(x)-\langle\nabla\phi(x),y-x\rangle.
 \]
-对于适当下半连续凸函数 $f$，最小化 $\lambda f(y)+D_h(y,x)$ 的最优性条件为
-$\nabla h(x)\in\nabla h(y)+\lambda\partial f(y)$
+对于适当下半连续凸函数 $f$，最小化 $\lambda f(y)+D_\phi(y,x)$ 的最优性条件为
+$\nabla\phi(x)\in\nabla\phi(y)+\lambda\partial f(y)$
 \cite{BauschkeBorweinCombettes2003}。
 下面的二次目标已足以说明，核在解附近的平坦性能够改变物理迭代的速率。
 
 在 $\mathbb R^2$ 上取
 \[
  f(t,s)=\frac12t^2,\qquad
- h(t,s)=\frac14t^4+\frac12s^2,
- \qquad v(t,s)=\nabla h(t,s)=(t^3,s).
+ \phi(t,s)=\frac14t^4+\frac12s^2,
+ \qquad v(t,s)=\nabla\phi(t,s)=(t^3,s).
 \]
 目标的解集是直线 $S=\{0\}\times\mathbb R$。
 核 $v$ 是全空间上的非线性同胚，但其逆在 $S$ 附近不局部 Lipschitz。
@@ -42,9 +39,10 @@ $\nabla h(x)\in\nabla h(y)+\lambda\partial f(y)$
 \]
 \end{proposition}
 \begin{proof}
-方程 \eqref{eq:gppa-bregman-cubic-step} 使 $t_{k+1}$ 与非零的 $t_k$ 同号，
-并给出 $|t_{k+1}|<|t_k|$。
-将其代入极限方程可知 $t_k\to0$，而 $s_k=s_0$。
+若 $t_0=0$，轨道驻定。若 $t_0\ne0$，
+方程~\eqref{eq:gppa-bregman-cubic-step} 使 $t_{k+1}$ 与 $t_k$ 同号，
+且 $|t_{k+1}|<|t_k|$，故 $(t_k)$ 有极限。
+在方程中取极限可知 $t_k\to0$，而 $s_k=s_0$。
 于是总长度由 $\sum_k|t_k-t_{k+1}|=|t_0|$ 给出。
 同一方程还给
 \[
@@ -53,29 +51,43 @@ $\nabla h(x)\in\nabla h(y)+\lambda\partial f(y)$
 \]
 \end{proof}
 
-本例对固定核推论~\ref{thm:rleb-gppa-physical} 的条件可直接在物理空间中验证。
-$F=\partial f$ 的真实残差为 $r_F(t,s)=|t|=d((t,s),S)$，
-而对最近零点 $p=(0,s)$，有
+本例对固定核定理~\ref{thm:rleb-gppa-physical} 的条件可直接验证。
+取完整允许关系 $\mathcal J_v=J^v_{\lambda F}$，其中 $F=\partial f$。
+前述全域唯一性给出 (G1)，而原关系的真实残差为
+$r_F(t,s)=|t|=d((t,s),S)$，故 (G4) 的误差界可取 $\psi(q)=q$。
+对任意输入 $x=(t,s)$、完整输出 $y=(u,s)$ 及最近零点 $p=(0,s)$，有
 \[
- \|v(t,s)-v(p)\|=|t|^3.
+ \delta=\|v(x)-v(p)\|=|t|^3,
+ \qquad
+ \langle v(y)-v(p),v(x)-v(y)\rangle
+ =u^3(t^3-u^3)=\lambda u^4\ge0.
 \]
-因此前向锚模为 $a(r)=r^3$，真实物理误差界为 $\psi(q)=q$。
-核坐标中的完整关系是
-$A(z,w)=(\sqrt[3]{z},0)$；其单调性给反射模 $\omega(q)=q$。
-相应的一步直接界为 $d(x_{k+1},S)\le d(x_k,S)^3/\lambda$。
-取 $R^2<\lambda$、$\kappa=R^2/\lambda$ 及 $\bar t\ge R^3/\lambda$，
-它在 $0\le d(x_k,S)\le R$ 上给出严格收缩。
-对全部合法转移，第二坐标不变且第一坐标同号，故
+因此 (G2) 可取 $a(r)=r^3$、$\omega_v(q)=q$，使用的正是同一个最近零点 $p$。
+对全部完整转移，第二坐标不变，第一坐标同号且 $|u|\le|t|$，故
 \[
- \|x_{k+1}-x_k\|
- \le\|v(x_{k+1})-v(x_k)\|^{1/3}.
+ \|y-x\|^3=|u-t|^3
+ \le|u^3-t^3|=\|v(y)-v(x)\|.
 \]
-故可取 $h(t,q)=q^{1/3}$，有 $H(t)=t$、$\Theta(t)=t/(1-\kappa)$。
-在 $U=\mathbb R^2$ 上，输入覆盖、评价窗与初值预算全部满足，
-即使核逆在解附近不满足 Lipschitz 界，该推论仍给出物理有限长度。
+于是 (G3) 可取 $h(t,q)=q^{1/3}$，相应的核增量与物理位移模为
+\[
+ K_v(r)=r^3,\qquad H_v(r)=r,\qquad
+ \Theta_v(r)=\frac{r}{1-\kappa}.
+\]
+取 $0<R<\sqrt\lambda$、$\kappa=R^2/\lambda$ 及 $\bar t\ge R^3/\lambda$。
+对 $0\le r\le R$，有
+\[
+ \frac{K_v(R)}\lambda\le\bar t,\qquad
+ \psi\!\left(\frac{K_v(r)}\lambda\right)
+ =\frac{r^3}\lambda\le\kappa r,
+ \qquad \Theta_v(R)<\infty.
+\]
+这验证了输出评价窗与 (G5)，并给出一步界 $d(y,S)\le d(x,S)^3/\lambda$。
+取 $U=\mathbb R^2$，则 $U_R=\{(t,s):|t|\le R\}$，
+其中每个初值均满足严格预算~\eqref{eq:gppa-physical-budget}。
+因此，即使核逆在解附近不满足 Lipschitz 界，该定理仍给出物理有限长度。
 
-若改用二次核 $h_0(t,s)=(t^2+s^2)/2$，
+若改用二次核 $\phi_0(t,s)=(t^2+s^2)/2$，
 同一个目标的普通 PPA 则给 $t_{k+1}=t_k/(1+\lambda)$。
 因此这里的立方速率来自近端正则项的改变。
-本例说明的是非线性核与物理速率的关系；
-非 Lipschitz 近端及沿解集的漂移由前述三角例承担。
+本例说明非线性核可以改变物理收敛率；
+前述三角例则展示了非 Lipschitz 近端映射及沿解集的可和漂移。

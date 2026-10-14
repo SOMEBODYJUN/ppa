@@ -4,97 +4,128 @@
 固定对称正定矩阵 $M$，定义
 \[
  \begin{aligned}
- \langle h,k\rangle_M:=\langle Mh,k\rangle,\qquad
- &\|h\|_M:=\sqrt{\langle Mh,h\rangle},\\
- d_M(x,S):=\inf_{p\in S}\|x-p\|_M,\qquad
- &r_{F,M^{-1}}(y):=\inf_{f\in F(y)}\|f\|_{M^{-1}}.
+ \langle h,k\rangle_M&=\langle Mh,k\rangle,
+ &\|h\|_M&=\sqrt{\langle Mh,h\rangle},\\
+ d_M(x,S)&=\inf_{p\in S}\|x-p\|_M,
+ &r_{F,M^{-1}}(y)&=\inf_{f\in F(y)}\|f\|_{M^{-1}}.
  \end{aligned}
 \]
-考虑预条件近端关系
+预条件近端关系为
 \[
- J^M_{\lambda F}(x):=(M+\lambda F)^{-1}(Mx).
+ J^M_{\lambda F}(x)=(M+\lambda F)^{-1}(Mx)
+ =\{y:M(x-y)\in\lambda F(y)\}.
 \]
-其每个输出 $y$ 满足 $M(x-y)\in\lambda F(y)$。
-正定性使 $\|\cdot\|_M$ 成为与欧氏范数等价的范数。
-以下推论因此保留前述收敛证明，但所有条件均须在这个范数下检验。
+通过线性坐标变换，这个完整关系可以化为普通近端关系。
+所需误差界仍使用原关系 $F$ 的全部图值，只将图值范数换为对偶度量。
 
 \begin{corollary}[固定正定核的局部收敛]
 \label{cor:gppa-spd}
-沿用推论~\ref{thm:selection-RLEB} 的对象与参数，并令
-$U_{M,R}=\{x\in U:d_M(x,S)\leq R\}$。
-将该推论中的近端关系换成 $J^M_{\lambda F}$，
-内积换成 $\langle\cdot,\cdot\rangle_M$，
-范数、距离和最近零点分别换成 $M$ 范数、$d_M$ 和 $M$ 最近零点，
-真实残差换成 $r_{F,M^{-1}}$，误差界函数记为 $\psi_M$。
-特别地，(B2) 等价于
-$\|2y-x-p\|_M\leq Ld_M(x,S)^\gamma$，其中 $p$ 是输入的 $M$ 最近零点。
-若允许关系 $\mathcal J_M$ 在这些替换下满足 (B1)--(B4) 及严格初始长度预算，
-则该推论的全部结论在 $M$ 范数下成立。
-特别地，取
+沿用假设~\ref{ass:rleb-ppa} 中
+$X,F,\lambda,S,U,R,\bar t,\kappa$ 的约定。
+取满足该假设正则性要求的模函数 $\omega_M,\psi_M$，并记
 \[
- \mathcal L_M(r)=\frac12\left(
- \frac{r}{1-\kappa}+\frac{Lr^\gamma}{1-\kappa^\gamma}\right),
- \qquad d_0=d_M(x^0,S),
+ U_{M,R}=\{x\in U:d_M(x,S)\le R\},\qquad
+ B_M(t)=\frac{t+\omega_M(t)}2,\qquad
+ \Theta_M(t)=\sum_{j\ge0}B_M(\kappa^jt).
 \]
-则所有允许轨道具有有限长度并收敛到 $S\cap U$ 中的一点，且
+假设同一允许关系 $\mathcal J_M$ 满足以下条件。
+\begin{enumerate}
+\item 对每个 $x\in U_{M,R}$，有
+$\varnothing\ne\mathcal J_M(x)\subset J^M_{\lambda F}(x)$。
+\item 对每个 $x\in U_{M,R}$ 和每个 $y\in\mathcal J_M(x)$，
+存在 $M$ 度量下的输入最近零点 $p\in S$，使
 \[
- d_M(x^k,S)\leq\kappa^k d_0,\qquad
- \|x^\infty-x^k\|_M\leq\mathcal L_M(d_M(x^k,S)).
+ \langle y-p,x-y\rangle_M
+ \ge\frac{d_M(x,S)^2-\omega_M(d_M(x,S))^2}{4}.
 \]
-若 $m=\lambda_{\min}(M)$，欧氏总长度至多
-$\mathcal L_M(d_0)/\sqrt m$，欧氏点尾至多
-$\mathcal L_M(\kappa^k d_0)/\sqrt m$。
-当 $\mathcal J_M=J^M_{\lambda F}$ 时，结论控制全部完整近端选择。
+\item 全部实际输出在 $r_{F,M^{-1}}(y)\le\bar t$ 时满足
+\[
+ d_M(y,S)\le\psi_M(r_{F,M^{-1}}(y)).
+\]
+另要求 $B_M(R)/\lambda\le\bar t$。
+\item 对全部 $0<t\le R$，有
+$\psi_M(B_M(t)/\lambda)\le\kappa t$，且 $\Theta_M(R)<\infty$。
+\end{enumerate}
+若 $x^0\in U_{M,R}$，$d_0=d_M(x^0,S)$，且
+\[
+ \Theta_M(d_0)<d_M(x^0,X\setminus U),
+\]
+则每条允许轨道均可无限延拓，留在 $U_{M,R}$，
+具有有限长度并收敛到某个 $x^\infty\in S\cap U$。此外，
+\[
+ d_M(x^k,S)\le\kappa^kd_0,\qquad
+ \|x^\infty-x^k\|_M\le\Theta_M(d_M(x^k,S)).
+\]
+若 $m_M=\lambda_{\min}(M)$，欧氏总长度至多
+$\Theta_M(d_0)/\sqrt{m_M}$，欧氏点误差至多
+$\Theta_M(\kappa^kd_0)/\sqrt{m_M}$。
+取 $\mathcal J_M=J^M_{\lambda F}$ 时，结论控制完整近端关系的全部选择。
 \end{corollary}
 
 \begin{proof}
-置 $Q=M^{1/2}$，$z=Qx$，$Z=QS$，$W=QU$，并定义完整关系
+置 $Q=M^{1/2}$、$z=Qx$、$Z=QS$、$W=QU$，并定义完整关系
 \[
- G(z):=Q^{-1}F(Q^{-1}z).
+ G(z)=Q^{-1}F(Q^{-1}z).
 \]
-由于 $Q$ 是线性同胚，$Z$ 非空闭、$W$ 开。
-对任意输入 $x$ 和任意输出 $y$，
+$Q$ 是线性同胚，故 $Z$ 非空闭、$W$ 开。
+对每个输入 $x$ 及每个输出 $y$，有
 \[
  M(x-y)\in\lambda F(y)
  \quad\Longleftrightarrow\quad
  Qx-Qy\in\lambda G(Qy).
 \]
-因此两个完整近端关系逐输入、逐输出对应。
-同时，由定义直接有
+因而两个完整近端关系逐输入、逐输出对应。
+允许子关系相应变为
+$\widetilde{\mathcal J}(z)=Q\mathcal J_M(Q^{-1}z)$。
+同一变换还给出
 \[
+ \begin{gathered}
  d(Qx,Z)=d_M(x,S),\qquad
- r_G(Qy)=r_{F,M^{-1}}(y),\qquad
- d(Qx,\mathbb R^n\setminus W)
- =d_M(x,\mathbb R^n\setminus U).
+ r_G(Qy)=r_{F,M^{-1}}(y),\\
+ d(Qx,X\setminus W)=d_M(x,X\setminus U),\qquad
+ \langle Q(y-p),Q(x-y)\rangle=\langle y-p,x-y\rangle_M.
+ \end{gathered}
 \]
-最近零锚及反射估计也在 $Q$ 下逐项对应。
-故推论的假设正是推论~\ref{thm:selection-RLEB}
-对 $G,Z,W$ 及允许关系
-$\widetilde{\mathcal J}(z)=Q\mathcal J_M(Q^{-1}z)$ 的假设。
-应用该推论再用 $Q^{-1}$ 回代，得到全部 $M$ 范数结论。
-最后，$\|h\|\leq\|h\|_M/\sqrt m$ 给出欧氏长度与点尾估计。
+$M$ 最近零点在 $Q$ 下恰好对应 $Z$ 的欧氏最近零点。
+故所列四个条件分别是
+假设~\ref{ass:rleb-ppa} 的 (P1)--(P4) 对
+$G,Z,W,\widetilde{\mathcal J}$ 的表述，严格初值预算也完全对应。
+应用定理~\ref{thm:rleb-ppa-general} 并以 $Q^{-1}$ 回代，
+得到全部 $M$ 度量结论。
+最后由 $\|h\|\le\|h\|_M/\sqrt{m_M}$ 得到欧氏长度和点尾估计。
 \end{proof}
 
-更换核时，覆盖、反射估计及兼容条件必须重新检验。
-这一点在关系 $F(s,t)=(s,-\sqrt{|s|})$ 上已经可见。
-取 $\lambda=1$ 和 $M=\operatorname{diag}(a,b)$，$a,b>0$，
-记 $q=a/(a+1)$。完整近端关系逐输入单值，且
+\begin{remark}[幂次模与核的重新验证]
+取 $\omega_M(t)=Lt^\gamma$、$0<\gamma\le1$，则
+\[
+ \Theta_M(t)=\frac12\left(
+ \frac{t}{1-\kappa}+\frac{Lt^\gamma}{1-\kappa^\gamma}\right).
+\]
+这恢复幂次 RL 的固定正定度量形式。
+更换核会改变完整近端方程，因此覆盖、内积锚条件和误差界兼容仍须针对新核验证。
+\end{remark}
+
+这种依赖可以在关系 $F(s,t)=(s,-\sqrt{|s|})$ 上直接看出。
+取 $\lambda=1$ 和 $M=\operatorname{diag}(a,b)$，其中 $a,b>0$，
+记 $q=a/(a+1)$。完整近端关系对每个输入单值，且
 \[
  J^M_F(s,t)=\left(qs,t+\frac{\sqrt{q|s|}}b\right).
 \]
-因此每条轨道的法向距离按 $q$ 收缩，切向增量可和；
-其极限是
+因此每条轨道的法向距离按 $q$ 收缩，切向增量可和，极限为
 \[
- \left(0,t^0+\frac{\sqrt{q|s^0|}}{b(1-\sqrt q)}\right),
+ \left(0,t^0+\frac{\sqrt{q|s^0|}}{b(1-\sqrt q)}\right).
 \]
 欧氏总长度至多 $|s^0|+\sqrt{q|s^0|}/[b(1-\sqrt q)]$。
-这些结论由显式公式直接得到，不要求先调用一般推论。
+这些结论直接来自完整更新公式。
 
-正定性本身却不足以保证同样的结论。仍取这个 $F$，令
+正定性本身不足以保证同样的结论。仍取上述 $F$，但令
 \[
  M=\begin{pmatrix}1&1/2\\1/2&1\end{pmatrix}.
 \]
-该矩阵正定，而输入 $0$ 的完整近端关系同时包含
-$0$ 和 $(-4/49,16/49)$。
-后一输出不属于零集，故上述零锚反射条件在输入 $0$ 已经失败。
-这一例子说明：成功的正对角核计算不能直接推广到所有正定核。
+该矩阵正定，而 $M y+F(y)=0$ 同时有
+$y=0$ 和 $y=(-4/49,16/49)$ 两个解。
+故输入 $0$ 的完整近端关系包含这两个输出。
+对后一输出，输入最近零点为 $p=0$，
+而 $\langle y-p,0-y\rangle_M=-\|y\|_M^2<0$，
+违反零输入处右端为零的内积锚条件。
+成功的正对角核计算因而不能直接推广到任意正定核。

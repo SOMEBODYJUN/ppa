@@ -2,7 +2,7 @@
 
 [联合次单调 PPA 研究入口](research/topics/unified_ppa/README.md)新增 C277–C284：原图联合与有限状态证书、两级标量化边界、同预算完整覆盖子类、原始曲管结构及可实施非精确物理接口。它保留 RL 一般模和逆/矩阵方向的不同优势，未宣称完备大一统或新收敛原理；主稿、摘要和正文编号未改。[结果报告](发表成果整理/本轮重构/次单调PPA统一框架_证明与边界_2026-10-14.md)与[6pro精确交接](发表成果整理/本轮重构/6pro_统一次单调PPA_研究交接.md)分别记录已证范围与真正开放目标。
 
-当前作者写作安排见[逐节展开的论文大纲](发表成果整理/论文写作大纲_逐节展开_2026-10-12.md)。2026-10-14 已按作者决定落实普通 PPA 主定理、固定核 GPPA 推论及摘要/引言/Euler 衔接；大纲其余拟扩充章节仍是写作计划，不改变现有 Claim 身份。第一章保留广义度量次正则与模函数、广义预解式及普通 PPA；固定核推广由独立假设3和定理3陈述。
+当前作者写作安排见[逐节展开的论文大纲](发表成果整理/论文写作大纲_逐节展开_2026-10-12.md)。现已按该大纲完成[中文 LaTeX 正文及技术附录](发表成果整理/RLEB/README.md)：普通 PPA 为定理2，固定核 GPPA 为独立假设3与定理3，广义单调性比较和零集几何各成一章；现有 Claim 身份不变。第一章保留广义度量次正则与模函数、广义预解式及普通 PPA；固定核推广由独立假设3和定理3陈述。
 
 本轮论文成果见 [发表成果整理](发表成果整理/README.md)：仅保留一个综合写作 Skill；[RLEB–PPA 中文修订稿](发表成果整理/RLEB/README.md) 以一般模普通 PPA 为主定理，幂次推论保留 C02-v3；[C249/C250 固定核物理理论与能量分支](research/canonical/physical_rleb_gppa.md#prg-object) 在主文中作为附带物理提升的推广推论。[C251 自然 Bregman 例](research/canonical/physical_rleb_gppa.md#prg-bregman)、[C252 弱凸圆](research/canonical/physical_rleb_gppa.md#prg-circle)、[C253 线性能量](research/canonical/physical_rleb_gppa.md#prg-linear-energy) 与 [C254 局部指数桥](research/canonical/rleb_kernel_topology_interfaces.md#rkt-local-index) 解释条件。C242 三角例保留，C241 Hamilton 原证明仍在补充稿。
 

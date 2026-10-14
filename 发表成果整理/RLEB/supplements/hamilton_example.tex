@@ -1,5 +1,7 @@
-\section{满足 RLEB 的秩亏 Hamilton 例}
+\section{Hamilton 模型与固定核例}
 \label{sec:rank-deficient-hamilton}
+
+\subsection{秩亏 Hamilton 系统的完整近端收敛}
 
 考虑秩亏设计矩阵 $(1,0)$ 对应的幂次回归损失
 \[
@@ -31,19 +33,21 @@
 \begin{proposition}
 \label{prop:rank-deficient-hamilton-rleb}
 令 $U=X$、$R=10^{-6}$、$U_R=\{z:d(z,S)\leq R\}$，并定义
-完整近端输入图像块
+完整近端输入图块
 \[
  \mathcal G_R=\{(y,F(y)):y+F(y)\in U_R\}.
 \]
 则 $J_F$ 在整个 $X$ 上单值且处处有定义，
-$J_{\mathcal G_R}=J_F$ 在 $U_R$ 上成立。
-该图像块满足推论~\ref{cor:all-pairs-RLEB} 的验证前件，可取
+$T_{\mathcal G_R}=J_F$ 在 $U_R$ 上成立。
+该图块满足引理~\ref{lem:RL-J} 的全对近端能量条件，
+并通过最近零点锚验证假设~\ref{ass:rleb-ppa}，可取
 \[
  \lambda=1,\qquad \gamma=\frac12,\qquad L=\frac12,
  \qquad \bar t=1,\qquad \psi(t)=3t^2,
  \qquad \kappa=\frac14.
 \]
-这里的 RL 条件对图像块中的全部允许点对成立。
+这里的 RL 条件对图块中输入差不超过 $R$ 的全部点对成立，
+相应的允许关系取完整近端 $\mathcal J=J_F$。
 \end{proposition}
 
 \begin{proof}
@@ -104,19 +108,34 @@ $p_1$ 与 $x_1=a_1+p_1/\sqrt P$ 异号，故
 的严格递增性；在 $p=0$、$x_1=0$ 及跨越这些点时仍成立，
 无需平滑正则化。
 
-记 $C=2J_F-I$，两输入距离为 $\delta\leq R$。
-由引理~\ref{lem:hamilton-h-holder} 的全局估计
-$\|h(p)-h(\widetilde p)\|^2\leq2\|p-\widetilde p\|$，
-以及 $C(a,b)=(a+2h(p),2p-b)$，有
+现取两输入之差的范数 $\delta\le R$，并记
 \[
- \begin{split}
- \|C(a,b)-C(\widetilde a,\widetilde b)\|
- &\leq2\sqrt{0.04\,\delta}+1.04\,\delta\\
- &\leq0.40104\sqrt\delta\leq L\delta^{1/2}.
- \end{split}
+ A_0=a-\widetilde a,\quad B_0=b-\widetilde b,\quad
+ P_0=p-\widetilde p,\quad H_0=h(p)-h(\widetilde p).
 \]
-两输入相同时该界显然成立。由 RL 与反射预解式估计的等价性，
-全对 RL 对 $\mathcal G_R$ 中全部允许点对成立。
+由引理~\ref{lem:hamilton-h-holder} 及式~\eqref{eq:hd-momentum-lipschitz}，
+\[
+ \|P_0\|\le0.02\delta,\qquad
+ \|H_0\|^2\le2\|P_0\|\le0.04\delta.
+\]
+令 $y=(x,p)$、$\widetilde y=(\widetilde x,\widetilde p)$。
+由原近端方程，输出差与原图值差分别为
+$(A_0+H_0,P_0)$ 和 $(-H_0,B_0-P_0)$。
+因此直接展开得到平方能量
+\[
+ \begin{aligned}
+ E&:=\|y-\widetilde y\|^2+\|F(y)-F(\widetilde y)\|^2\\
+ &=\delta^2+2\|H_0\|^2+2\|P_0\|^2
+       +2\langle A_0,H_0\rangle-2\langle B_0,P_0\rangle\\
+ &\le0.08\delta+0.4\delta^{3/2}+1.0408\delta^2\\
+ &\le0.0804010408\delta
+ \le\frac12(\delta^2+L^2\delta).
+ \end{aligned}
+\]
+最后一步使用了 $R=10^{-6}$ 和 $L=1/2$；$\delta=0$ 时两图点相同。
+引理~\ref{lem:RL-J} 遂给出 $\mathcal G_R$ 上同一尺度的全对 RL 条件。
+每个实际输出都可与输入最近零点组成图块内点对，
+其输入差正是输入到 $S$ 的距离，故条件 (P2) 成立。
 
 再令 $(x,p)=J_F(a,b)$、$(a,b)\in U_R$，
 使用原算子 $F$ 的真残差
@@ -144,7 +163,7 @@ $\|h(p)-h(\widetilde p)\|^2\leq2\|p-\widetilde p\|$，
 实际上 $g(x)+99p=b-p$，故
 $\rho^2\leq R+4R^2<1$，整个输出块都在所取残差区间内。
 再由 $(R+L\sqrt R)/2=0.0002505<1=\bar t$，
-验证了 (B3)。
+验证了 (P3)。
 
 最后，对任意 $0<r\leq R$，有
 \[
@@ -153,11 +172,13 @@ $\rho^2\leq R+4R^2<1$，整个输出块都在所取残差区间内。
  \leq\frac34(0.001+0.5)^2
  =0.18825075<\frac14.
 \]
-这证明 (B4)。
+这证明 (P4) 的收缩条件。
+此外，$B(r)=(r+L\sqrt r)/2$ 在几何距离尺度上的和有限，
+故 (P4) 的可和性也成立。
 \end{proof}
 
 这里 $U=X$，故 $d(z^0,X\setminus U)=+\infty$，
-主定理的留域条件对每个 $z^0\in U_R$ 自动成立。
+定理~\ref{thm:rleb-ppa-general} 的留域条件对每个 $z^0\in U_R$ 自动成立。
 因此，对每个满足 $d_0:=d(z^0,S)\leq10^{-6}$ 的初值，
 迭代 \eqref{eq:hd-implicit} 在 $U_R$ 内无限延拓，并收敛到
 某个 $z^\infty\in S$；其距离与尾项具有上界
@@ -169,18 +190,19 @@ $\rho^2\leq R+4R^2<1$，整个输出块都在所取残差区间内。
 这些是定理给出的统一上界，不主张是每条轨道的精确渐近速度。
 结论允许非零初始动量，并控制整条位置--动量轨道的极限点。
 
-本例的指数 $\gamma=1/2$ 是完整局部图像上的最大 Hölder 指数。
-事实上，令 $w_t=((0,0),(0,t))$、$w_0=0$，则
+本例在完整局部图块上的最大 RL 指数为 $\gamma=1/2$。
+秩亏方向给出一族显式输入：令
+$w_t=((0,0),(0,t))$、$w_0=0$，其中 $0<t\le R$，则
 \[
  J_F(w_t)=\bigl((0,\sqrt{t/100}),(0,t/100)\bigr),\qquad
- \|C(w_t)-C(w_0)\|\geq\frac15\sqrt t.
+ \|J_F(w_t)-J_F(w_0)\|\ge\frac1{10}\sqrt t.
 \]
-对任意 $\gamma>1/2$，比值
-$\|C(w_t)-C(w_0)\|/\|w_t-w_0\|^\gamma$ 趋于无穷。
-特别地，反射预解式在这一完整局部图像上不满足局部 Lipschitz 界。
-所比较的点均趋于零点，并且在 $t\leq R$ 时都属于上述图像块。
-关于误差界幂次的最优性及一条可显式求解的更快轨道，见
-附录命题~\ref{prop:hamilton-sharp-exponents}。
+因此完整预解式在零点附近不局部 Lipschitz。
+由于两输入的距离为 $t$，同一点对的平方能量也排除任何
+$\gamma>1/2$ 的 RL 条件；其详细计算见
+命题~\ref{prop:hamilton-sharp-exponents}。
+其中还证明了真残差误差界的最大幂次为 $2$，
+并给出一条可显式求解、快于统一上界的轨道。
 
 另一个可直接检验的区别是能量配对条件。
 若要求以统一常数控制

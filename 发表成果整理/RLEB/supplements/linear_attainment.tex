@@ -1,0 +1,61 @@
+\section{线性能量因子的完整达到族}
+\label{app:linear-attainment}
+
+第二章的平面例可以扩展为一个具有显式可行域的完整算子族。
+令
+\[
+ Q=\begin{pmatrix}0&-1\\1&0\end{pmatrix},\qquad
+ F(y)=\frac{\alpha I+\beta Q}{\lambda}y,
+ \qquad \lambda>0,
+\]
+其中 $\alpha,\beta\in\mathbb R$，$\alpha^2+\beta^2>0$，且
+$D=(1+\alpha)^2+\beta^2>0$。
+由于 $Q^\top=-Q$、$Q^\top Q=I$，完整近端关系在全平面上单值，且
+\begin{equation}
+\label{eq:rotation-complete-inverse}
+ J_{\lambda F}=\frac{(1+\alpha)I-\beta Q}{D},\qquad
+ S=\{0\},\qquad
+ r_F(y)=\frac{\sqrt{\alpha^2+\beta^2}}\lambda\|y\|.
+\end{equation}
+因此真实线性误差界的最小常数为
+$K=\lambda/\sqrt{\alpha^2+\beta^2}$。
+对任意图点差，原图 RL 内积条件取等的常数满足
+\[
+ L^2=\frac{(1-\alpha)^2+\beta^2}{D}.
+\]
+这里没有输入、符号或输出分支的限制。
+
+令 $t=\lambda/K>0$。若预先指定 $K>0$ 和 $L\ge0$，
+上述族同时达到这两个常数，当且仅当
+\begin{equation}
+\label{eq:rotation-parameter-feasibility}
+ \alpha=\frac{(1-L^2)(1+t^2)}{2(1+L^2)},\qquad
+ \beta^2=t^2-\alpha^2\ge0.
+\end{equation}
+确实，前述两个等式要求 $\alpha^2+\beta^2=t^2$，
+且 $L^2(1+2\alpha+t^2)=1-2\alpha+t^2$。
+解出 $\alpha$ 即得式~\eqref{eq:rotation-parameter-feasibility}。
+反过来，按此式选取任一实数 $\beta$，则
+\[
+ D=\frac{2(1+t^2)}{1+L^2}>0,
+\]
+所以式~\eqref{eq:rotation-complete-inverse}给出全域完整近端映射。
+所有点对的原图内积不等式、真实误差界以及一步平方能量均取等。
+实际距离因子满足
+\[
+ \frac{\|J_{\lambda F}x\|^2}{\|x\|^2}
+ =\frac1D
+ =\frac{1+L^2}{2(1+t^2)}=\rho_E^2\qquad(x\ne0).
+\]
+若 $\rho_E<1$，任意半径 $R>0$ 上均可取足够大的残差窗口，
+应用线性能量推论；实际轨道的距离因子恰为 $\rho_E$。
+
+在形式边界 $L^2=1+2t^2$ 上，
+有 $\alpha=-t^2/2$、$\beta^2=t^2(1-t^2/4)$。
+所以这一旋转族恰在 $0<t\le2$ 时实现该边界。
+此时 $D=1$，近端映射为非恒等的正交映射。
+对任何非零初值，轨道范数保持不变，
+相邻点距离也为同一个正常数，因而轨道不收敛。
+当 $t>2$ 时，这个达到构造没有实数 $\beta$；
+不能由不存在的旋转参数宣称能量充分条件在该区间必要。
+这也说明，充分参数条件的锐性应连同其取等构造的可行域一并陈述。

@@ -1,0 +1,229 @@
+\section{一般模的对数例与 Dini 边界}
+\label{app:general-modulus}
+
+本附录给出一个完整近端处处有定义的对数模型。
+它的集合距离始终按因子 $1/4$ 衰减，而点收敛与有限长度恰由一个 Dini 条件决定。
+
+\subsection{完整关系与近端反演}
+
+固定参数 $a>0$，令 $r_a=e^{-a}$，并定义
+\begin{equation}
+\label{eq:log-global-profile}
+ \ell_a(t)=
+ \begin{cases}
+ 0,&t=0,\\
+ [\log(e/t)]^{-a},&0<t\le r_a,\\
+ \displaystyle\frac{1+ae^at}{(a+1)^{a+1}},&t\ge r_a.
+ \end{cases}
+\end{equation}
+第三段是第二段在 $r_a$ 处的切线延伸。在 $0<t\le r_a$ 上，
+\[
+ \ell_a'(t)=\frac{a}{t[\log(e/t)]^{a+1}}>0,\qquad
+ \ell_a''(t)=\frac{a\{a+1-\log(e/t)\}}
+ {t^2[\log(e/t)]^{a+2}}\le0.
+\]
+接点两侧函数值和一阶导数相同，故 $\ell_a$ 在 $[0,\infty)$
+连续、严格递增、凹且无界。
+由凹性及 $\ell_a(0)=0$，对 $u,v\ge0$ 有
+\begin{equation}
+\label{eq:log-subadditivity}
+ \ell_a(u+v)\le\ell_a(u)+\ell_a(v),\qquad
+ |\ell_a(u)-\ell_a(v)|\le\ell_a(|u-v|).
+\end{equation}
+事实上，当 $u+v>0$ 时，凹性分别给出
+$\ell_a(u)\ge u\ell_a(u+v)/(u+v)$ 和
+$\ell_a(v)\ge v\ell_a(u+v)/(u+v)$；相加即得第一式，
+再将较大自变量写成较小自变量与差的和，便得第二式。
+
+在 $X=\R^2$ 上取步长 $\lambda=1$，定义完整关系
+\begin{equation}
+\label{eq:log-full-operator}
+ F_a(\xi,y)=
+ \begin{cases}
+ \{(-\ell_a(4y),3y),\ (-\ell_a(4y),-5y)\},&y\ge0,\\
+ \varnothing,&y<0.
+ \end{cases}
+\end{equation}
+它是两张闭图的并，且 $\zer F_a=S_a:=\R\times\{0\}$。
+给定任意输入 $(p,q)$，两支近端方程分别为
+\[
+ (p,q)=(\xi-\ell_a(4y),4y),\qquad
+ (p,q)=(\xi-\ell_a(4y),-4y),\qquad y\ge0.
+\]
+当 $q>0$ 时只有第一支可用，当 $q<0$ 时只有第二支可用；
+$q=0$ 时两支给出同一个输出 $(p,0)$。
+因此全部近端输出已被穷尽，完整近端在全空间单值，且
+\begin{equation}
+\label{eq:log-complete-prox}
+ J_a(p,q):=J_{F_a}(p,q)
+ =\left(p+\ell_a(|q|),\frac{|q|}{4}\right).
+\end{equation}
+这个反演没有限制输入大小，也没有舍去任何远端输出。
+
+\subsection{全对一般模与完整真实残差}
+
+定义连续非减模
+\begin{equation}
+\label{eq:log-RL-modulus}
+ \Omega_a(t)=\sqrt{(t+2\ell_a(t))^2+\frac94t^2},\qquad t\ge0.
+\end{equation}
+下面直接验证完整近端的平方能量条件。
+对任意两个输入 $z=(p,q)$ 和 $z'=(p',q')$，记
+\[
+ P=p-p',\quad Q=q-q',\quad
+ e_0=\ell_a(|q|)-\ell_a(|q'|),\quad
+ f_0=\frac{|q|-|q'|}{4},\quad \delta=\|z-z'\|.
+\]
+式~\eqref{eq:log-subadditivity} 给
+$|e_0|\le\ell_a(\delta)$、$|f_0|\le|Q|/4$。
+由式~\eqref{eq:log-complete-prox} 展开可得
+\begin{align*}
+ &\|J_az-J_az'\|^2+
+ \|(z-J_az)-(z'-J_az')\|^2\\
+ &\quad=(P+e_0)^2+e_0^2+f_0^2+(Q-f_0)^2\\
+ &\quad\le P^2+2\delta\ell_a(\delta)+2\ell_a(\delta)^2
+               +\frac{13}{8}Q^2\\
+ &\quad\le\frac{13}{8}\delta^2+2\delta\ell_a(\delta)+2\ell_a(\delta)^2
+ \le\frac{\delta^2+\Omega_a(\delta)^2}{2}.
+\end{align*}
+引理~\ref{lem:minty-equivalence} 因而给出完整原图上的一般模 RL。
+上述计算没有限定 $q,q'$ 的符号，故也包含两支之间的全部比较。
+对于输入 $(p,q)$，其最近零点为 $(p,0)$，
+且 $((p,0),(0,0))\in\gph F_a$，
+故全对条件给出假设~\ref{ass:rleb-ppa} 的 (P2)。
+
+由于 $t/\ell_a(t)\to0$，有 $\Omega_a(t)\sim2\ell_a(t)$（$t\downarrow0$）。
+对任意 $\gamma>0$，$\ell_a(t)/t^\gamma\to\infty$。
+这不只是所选上界过大：比较输入 $(0,t)$ 和 $(0,0)$，近端平方能量恰为
+\[
+ 2\ell_a(t)^2+\frac58t^2.
+\]
+故任何满足同一完整图 RL 的模 $\omega$ 都必须满足
+$\omega(t)^2\ge4\ell_a(t)^2+t^2/4$。
+因此该图不可能在零附近满足任何有限常数的正幂模 RL。
+
+完整残差由两支图值范数的较小者给出：
+\begin{equation}
+\label{eq:log-true-residual}
+ r_{F_a}(\xi,y)=
+ \begin{cases}
+ \chi_a(y):=\sqrt{\ell_a(4y)^2+9y^2},&y\ge0,\\
+ +\infty,&y<0.
+ \end{cases}
+\end{equation}
+$\chi_a$ 连续、严格递增，$\chi_a(0)=0$，且 $\chi_a(y)\ge3y$。
+因而其逆函数 $\psi_a=\chi_a^{-1}:[0,\infty)\to[0,\infty)$ 存在且连续递增。
+对所有有限残差点，有精确真误差界
+\begin{equation}
+\label{eq:log-exact-EB}
+ \dist((\xi,y),S_a)=y=\psi_a(r_{F_a}(\xi,y)).
+\end{equation}
+当输入 $q<0$ 时，本步选中的图值来自第二支，
+但完整最小残差仍由第一支取得。式~\eqref{eq:log-exact-EB}
+始终评价完整关系的最小残差。
+
+\subsection{直接兼容与 Dini 条件}
+
+对任意固定 $\kappa\in(1/4,1)$，存在 $R_*>0$，使
+\begin{equation}
+\label{eq:log-direct-compatibility}
+ \psi_a\left(\frac{t+\Omega_a(t)}2\right)\le\kappa t,
+ \qquad 0<t\le R_*.
+\end{equation}
+为证此式，置 $c=4\kappa>1$ 和 $L_t=\log(e/t)$，先限制 $ct\le r_a$。
+由对数剖面直接积分，
+\[
+ \ell_a(ct)-\ell_a(t)
+ =a\int_{L_t-\log c}^{L_t}u^{-a-1}\,du
+ \ge a\log(c)L_t^{-a-1}.
+\]
+另一方面，由 $\sqrt{A^2+B}\le A+B/(2A)$（$A>0$、$B\ge0$），
+\[
+ \frac{t+\Omega_a(t)}2
+ \le\ell_a(t)+t+\frac{9t^2}{32\ell_a(t)}.
+\]
+因为 $tL_t^{a+1}\to0$、$t^2L_t^{2a+1}\to0$，
+可以选同一个 $R_*>0$，使后两项之和对全部 $0<t\le R_*$
+不超过 $a\log(c)L_t^{-a-1}$。于是
+\[
+ \frac{t+\Omega_a(t)}2\le\ell_a(ct)
+ \le\chi_a(\kappa t).
+\]
+应用递增逆函数 $\psi_a$ 即得式~\eqref{eq:log-direct-compatibility}。
+
+任取 $\bar t>0$，再缩小 $0<R\le R_*$，使
+$\{R+\Omega_a(R)\}/2\le\bar t$，并将 $\psi_a$ 限制在 $[0,\bar t]$。
+取 $U=X$ 和完整允许关系 $\mathcal J=J_a$，
+输入覆盖、最近零锚、真实残差评价窗与直接兼容便在同一对象上全部成立。
+长度可和性则有精确边界。变量代换 $u=\log(e/t)$ 给
+\begin{equation}
+\label{eq:log-Dini-threshold}
+ \int_0^{r_a}\frac{\ell_a(t)}t\,dt
+ =\int_{a+1}^{\infty}u^{-a}\,du,
+ \qquad
+ \int_0^{r_a}\frac{\Omega_a(t)}t\,dt<\infty
+ \quad\Longleftrightarrow\quad a>1.
+\end{equation}
+其中最后的等价使用 $\Omega_a(t)\sim2\ell_a(t)$。
+按第一章的 Dini 与几何采样判别，假设~\ref{ass:rleb-ppa} 的长度条件
+恰在 $a>1$ 时成立。此时 $U=X$ 使严格留域预算自动满足，
+定理~\ref{thm:selection-RLEB} 给出相应小窗内完整轨道的有限长度和点收敛。
+
+\subsection{完整轨道与临界参数}
+
+显式近端还可以确定任意初值的行为。
+给定 $z^0=(p_0,q_0)$，令 $r_0=|q_0|$。
+若 $r_0=0$，则轨道恒定；若 $r_0>0$，则
+\begin{equation}
+\label{eq:log-exact-orbit}
+ |q_k|=r_k:=4^{-k}r_0,\qquad
+ p_k=p_0+\sum_{j=0}^{k-1}\ell_a(r_j),
+ \qquad q_k\ge0\quad(k\ge1).
+\end{equation}
+因此到完整零集的距离在每一步恰乘 $1/4$，包括负纵坐标初值的第一步。
+每步长度满足
+\[
+ \ell_a(r_k)\le\|z^{k+1}-z^k\|
+ \le\ell_a(r_k)+|q_{k+1}-q_k|.
+\]
+当 $q_0\ge0$ 时，纵坐标总变差为 $r_0$；当 $q_0<0$ 时，
+首步变差为 $5r_0/4$，后续变差总和为 $r_0/4$。
+故对任意 $r_0>0$，
+\begin{equation}
+\label{eq:log-length-equivalence}
+ \sum_{k=0}^{\infty}\|z^{k+1}-z^k\|<\infty
+ \quad\Longleftrightarrow\quad
+ \sum_{k=0}^{\infty}\ell_a(4^{-k}r_0)<\infty.
+\end{equation}
+
+选整数 $k_0$ 使 $4^{-k_0}r_0\le r_a$。
+从 $k\ge k_0$ 起，有
+\[
+ \ell_a(4^{-k}r_0)=[\log(e/r_0)+k\log4]^{-a}.
+\]
+有限个切线延伸段上的项不影响可和性，故上述级数恰在 $a>1$ 时收敛。
+此时完整轨道有限长并收敛到
+\[
+ z^\infty=\left(p_0+\sum_{j=0}^{\infty}\ell_a(4^{-j}r_0),0\right)\in S_a.
+\]
+若 $0<a\le1$，则 $p_k\to+\infty$，轨道不收敛，
+尽管它到 $S_a$ 的距离几何趋零。
+特别地，$a=1$ 时由调和级数的积分比较有
+$p_k=(\log k)/\log4+O(1)$，所以临界参数属于发散一侧。
+
+当 $a>1$ 时，令 $A_k=\log(e/r_0)+k\log4$。
+对充分大的 $k$，递减函数的积分夹逼给出
+\[
+ \sum_{j=k}^{\infty}A_j^{-a}
+ \sim\int_k^{\infty}[\log(e/r_0)+t\log4]^{-a}\,dt
+ =\frac{A_k^{1-a}}{(a-1)\log4}.
+\]
+夹逼误差至多首项 $A_k^{-a}$，与该积分之比趋零。
+纵向误差 $r_k$ 指数衰减，故完整点误差的精确渐近式为
+\begin{equation}
+\label{eq:log-exact-tail}
+ \|z^\infty-z^k\|
+ \sim\frac{[\log(e/r_0)+k\log4]^{1-a}}{(a-1)\log4}.
+\end{equation}
+因此在这一完整关系族中，Dini 条件既给出有限长度的充分条件，
+也恰好描述其实际收敛边界。

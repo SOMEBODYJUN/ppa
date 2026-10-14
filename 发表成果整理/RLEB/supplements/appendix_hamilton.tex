@@ -1,8 +1,7 @@
-\section{Hamilton 例的有限差分验证与指数最优性}
+\subsection{动量有限差分与指数最优性}
 \label{app:hamilton-finite-difference}
 
-本附录给出第~\ref{sec:rank-deficient-hamilton}~节中动量估计的
-完整证明。全程保留原来的非 Lipschitz 梯度，不使用平滑正则化。
+下面证明前一小节使用的动量差分估计。全程保留原来的非 Lipschitz 梯度，不使用平滑正则化。
 记
 \[
  g_1(t)=\operatorname{sgn}(t)\sqrt{|t|},\qquad
@@ -52,7 +51,7 @@ $|B|\leq\beta A$。故在上述可微点，
 若线段不经过原点，普通微积分基本定理即给出
 \eqref{eq:hamilton-secant}。
 
-若 $p=\widetilde p=0$，结论显然成立。否则线段至多在一个
+若 $p=\widetilde p=0$，两端均为零。否则线段至多在一个
 参数 $\tau_0$ 处经过原点。写 $v=p-\widetilde p\ne0$，则
 $p_\tau=(\tau-\tau_0)v$，并且有精确公式
 \[
@@ -107,7 +106,7 @@ $g_1(x_1)-g_1(\widetilde x_1)>0$，从而
  =100\Delta q+g_1(x_1)-g_1(\widetilde x_1)
  >100\Delta q>|b_1-\widetilde b_1|,
 \]
-矛盾。交换两点可处理 $\Delta q<0$，$\Delta q=0$ 时结论显然。
+矛盾。交换两点可处理 $\Delta q<0$，$\Delta q=0$ 时左端为零。
 上述比较只用 $g_1$ 的单调性，所以同样适用于
 $x_1=0$、$\widetilde x_1=0$，以及两点跨越零点的情形。
 
@@ -144,36 +143,47 @@ $p=\|u\|u$、$\widetilde p=\|v\|v$，包括零向量在内。
 \]
 其中使用了 $\alpha+\eta\geq\|u-v\|$。
 再用 Cauchy--Schwarz 不等式并在 $u\ne v$ 时约去
-$\|u-v\|$，即得 \eqref{eq:hamilton-h-holder}；$u=v$ 时显然。
+$\|u-v\|$，即得 \eqref{eq:hamilton-h-holder}；$u=v$ 时两端均非负且左端为零。
 \end{proof}
 
 \begin{proposition}[指数的最优性与上界的保守性]
 \label{prop:hamilton-sharp-exponents}
-对于第~\ref{sec:rank-deficient-hamilton}~节的完整图像块，
-反射预解式 $C=2J_F-I$ 的最大局部 Hölder 指数恰为 $1/2$。
+对于命题~\ref{prop:rank-deficient-hamilton-rleb} 的完整图块，
+幂次 RL 的最大指数以及完整预解式 $J_F$ 的最大局部 H\"older 指数均为 $1/2$。
 真残差误差界中幂次 $2$ 也不能提升为任何大于 $2$ 的幂次。
 距离收缩与尾项估计中的数值常数和几何因子仅作为上界使用。
 \end{proposition}
 
 \begin{proof}
-取 $w_t=((0,0),(0,t))$，$0<t\leq R$，以及 $w_0=0$。
-方程 \eqref{eq:hamilton-app-prox} 给出
+取 $w_t=((0,0),(0,t))$，$0<t\le R$，以及 $w_0=0$。
+方程~\eqref{eq:hamilton-app-prox} 给出
 \[
- J_F(w_t)=((0,\sqrt{t/100}),(0,t/100)),\qquad
- \|C(w_t)-C(w_0)\|^2=\frac{t}{25}+\left(\frac{49t}{50}\right)^2.
+ y_t:=J_F(w_t)=((0,\sqrt{t/100}),(0,t/100)),\qquad J_F(w_0)=0.
 \]
 两输入均在 $U_R$，且 $\|w_t-w_0\|=t$。
-若存在指数 $\gamma>1/2$ 与有限常数 $L'$ 的局部 Hölder 界，
-则必须有
-$\frac15\sqrt t\leq L't^\gamma$，这与 $t\downarrow0$ 矛盾。
-结合正文已证明的 $1/2$ 阶估计，得最大指数为 $1/2$。
-这一计算还表明，$1/2$ 阶界的任何统一常数至少为 $1/5$，
-而正文所用的 $L=1/2$ 不主张为最佳常数。
+对这一图点与零点，直接计算得
+\[
+ E_t:=\|y_t\|^2+\|F(y_t)\|^2
+ =\frac{t}{50}+\frac{4901t^2}{5000},\qquad
+ 2E_t-t^2=\frac{t}{25}+\left(\frac{49t}{50}\right)^2.
+\]
+若该图块满足指数 $\gamma>1/2$、有限常数 $L'$ 的幂次 RL 条件，
+引理~\ref{lem:RL-J} 要求
+\[
+ (L')^2t^{2\gamma}\ge2E_t-t^2\ge\frac{t}{25},
+\]
+这与 $t\downarrow0$ 矛盾。
+结合已证明的 $1/2$ 阶估计，RL 最大指数恰为 $1/2$。
+同一计算给出该阶任何统一 RL 常数至少为 $1/5$，
+而上文所取 $L=1/2$ 并不声称最优。
+另一方面，$\|J_F(w_t)-J_F(w_0)\|\ge\sqrt t/10$
+排除完整预解式的任何高于 $1/2$ 的局部 H\"older 指数；
+平方能量上界则给出其 $1/2$ 阶界。
 
 再取 $y_t=((t^2,0),0)$，$t>0$。
 其真残差为 $r_F(y_t)=t$，距离为 $d(y_t,S)=t^2$。
 对应近端输入为 $y_t+F(y_t)=((t^2,0),(t,0))$，其到 $S$
-的距离为 $\sqrt{t^4+t^2}$，故充分小的 $t$ 给出图像块中的输出点。
+的距离为 $\sqrt{t^4+t^2}$，故充分小的 $t$ 给出图块中的输出点。
 于是任何 $d(y,S)\leq K r_F(y)^{2+\varepsilon}$，
 $\varepsilon>0$，都将要求 $1\leq Kt^\varepsilon$，不可能成立。
 

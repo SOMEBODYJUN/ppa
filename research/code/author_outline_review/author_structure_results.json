@@ -99,6 +99,38 @@
   "precision": "exact SymPy",
   "randomness": "none",
   "limit": "finite algebra and structure checks supplement the analytic proofs in the current outline",
+  "manuscript_sources": {
+    "发表成果整理/RLEB/main.tex": "d0b7627e6c2686e8661bc047b571b232d9e58d483e5599c919cdd74f7db96f64",
+    "发表成果整理/RLEB/supplement.tex": "fb0360aeddbf9cd8b3dbc43b3d0a60d30fed347ebdd1691b7ffbf2d8c8528543",
+    "发表成果整理/RLEB/sections/frontmatter.tex": "b32b2e96fcd04ccad461c41989385f02cc1714bdeebac1480fcade055c07fbfd",
+    "发表成果整理/RLEB/sections/preliminaries.tex": "a0c06034d745a1c2386a4ea8280d90fb13ad4ea86b47aa7171d753eca3ae80f5",
+    "发表成果整理/RLEB/sections/theorem_spine.tex": "11c3e93870c6f1845f85a0fbefff2e8e15e666f878c2f223db04eba9ccc4f485",
+    "发表成果整理/RLEB/sections/gppa_theory.tex": "8e88312e0d2170f8fbce4b908aa9ad16eec207deb8eaeddaae5f6fc6df34fec6",
+    "发表成果整理/RLEB/sections/related_work.tex": "c901ab003488f0e7d3220cafe8b1da1408eb42d5886363ac9479897fdf109ab3",
+    "发表成果整理/RLEB/sections/topological_obstruction.tex": "5887a119fb9fe6b8cf2458de0e7dc9e13e26c638923c4fe62b912d42eb3c82f3",
+    "发表成果整理/RLEB/sections/conclusion.tex": "a0149e1d36437b5206ed9aef749794f990a4152391fc135d8ab1b68cb8781abe",
+    "发表成果整理/RLEB/supplements/linear_attainment.tex": "0c2ab6e58ad237c3c8a8e6875faad9b80da96fa905d1e491d7ce8fb239230fec",
+    "发表成果整理/RLEB/supplements/general_modulus.tex": "2ab23efd4ab64151f0151e92c789db9cb2a6f5c93133ed3ad1962d34c5d0ad47",
+    "发表成果整理/RLEB/supplements/hamilton_example.tex": "86160aeaaba179a022a06a5b439f247ea098ecb4a8d75b8ee54e09a46238b5f3",
+    "发表成果整理/RLEB/supplements/appendix_hamilton.tex": "c44d44517d236567d5f78f6ec3df77325d5e6fd86a01a5e96dc5f762e466ed3f",
+    "发表成果整理/RLEB/sections/bregman_example.tex": "bf9313fa6b8f6478ac9c35c52697da4b5de6ebca33fbde7e83923b87721b1ecb",
+    "发表成果整理/RLEB/sections/gppa_extension.tex": "e36e8d45fbe1303222e6c6eb4e27b1bf99854788125a8ac0620bbe6cb8a0d66d"
+  },
+  "manuscript_structure": "PASS",
+  "manuscript_citations": [
+    "AragonDontchevGeoffroy2007",
+    "BauschkeBorweinCombettes2003",
+    "BenjaminGottliebCollars",
+    "BuiCombettes2020Warped",
+    "CombettesPennanen2004Cohypomonotone",
+    "EvensEtAl2024SemimonotoneV2",
+    "Leventhal2009MetricSubregularityPPA",
+    "LukeTam2025GeneralizedMonotonicity",
+    "Martinet1970",
+    "Minty1962",
+    "OteroIusemSemimonotonicity",
+    "Rockafellar1976PPA"
+  ],
   "python": "3.12.14",
   "sympy": "1.14.0",
   "outline_math": {
@@ -436,5 +468,5 @@
       "certificate_endpoint_ratio": "0.69240169529663688110021109052621225982120898442211850914708496724884155980776335"
     }
   },
-  "script_sha256": "a4c90bf7effa4eea50b20fb8b58b4683283a4f231bdf55b1aa14f53b03abac02"
+  "script_sha256": "67e6ed7295b95d3206ecf4afeddd14b92bf4822cd8dbbe329604697af9c76e04"
 }

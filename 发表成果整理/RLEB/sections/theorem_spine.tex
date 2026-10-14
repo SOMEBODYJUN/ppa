@@ -1,525 +1,474 @@
-\section{非线性反射几何与 PPA 收敛}
-\label{sec:deterministic-rleb-spine}
+\section{RL 次单调性与近端点收敛}
+\label{sec:rleb-ppa}
 
-\input{sections/preliminaries}
-
-\subsection{一般模 RLEB 主定理}
-
-本节直接研究普通近端迭代，再说明全对图条件如何验证其前件。
-固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
-$S\subset F^{-1}(0)$，记 $d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$，
-到空集的距离取 $+\infty$。
-反射几何与真实残差误差界分别控制移动尺度和目标距离；
-下面的主定理要求它们在同一输入域及全部允许输出上兼容。
-
-\begin{assumption}[PPA 的 RLEB 条件]
-\label{ass:rleb-ppa}
-设 $U\subset X$ 开，$R,\bar t>0$，$0<\kappa<1$，
-$U_R=\{x\in U:d(x)\le R\}$。
-取有限非减函数
-$\omega:[0,R]\to[0,\infty)$ 和
-$\psi:[0,\bar t]\to[0,\infty)$，均在零处连续且取值为零。
-定义
+沿用第一章的有限维空间 $X=\R^n$、原关系 $F:X\rightrightarrows X$
+和步长 $\lambda>0$。固定非空闭目标 $S\subset\zer F$，记
 \[
+ d(x)=\dist(x,S),\qquad
+ P_S(x)=\{p\in S:\|x-p\|=d(x)\},\qquad
+ r_F(y)=\dist(0,F(y)).
+\]
+本章把近端一步的内积估计与真实残差误差界结合起来，
+先证明普通 PPA 的局部有限长度，再讨论幂次模、线性能量及固定核推广。
+
+\subsection{普通 PPA 的同窗条件}
+
+\begin{assumption}[普通 PPA 的 RLEB 条件]
+\label{ass:rleb-ppa}
+取开集 $U\subset X$、$R,\bar t>0$ 和 $0<\kappa<1$，令
+\[
+ U_R=\{x\in U:d(x)\le R\}.
+\]
+取有限非减函数 $\omega:[0,R]\to[0,\infty)$ 和
+$\psi:[0,\bar t]\to[0,\infty)$，二者在零处连续且
+$\omega(0)=\psi(0)=0$。定义
+\begin{equation}
+\label{eq:ppa-length-modulus}
  B(t)=\frac{t+\omega(t)}2,\qquad
  \Theta(t)=\sum_{j=0}^{\infty}B(\kappa^jt),\quad 0\le t\le R.
-\]
-假设同一个允许近端关系 $\mathcal J$ 满足：
+\end{equation}
+同一个允许近端关系 $\mathcal J$ 满足以下条件。
 \begin{enumerate}
-\item[(P1)] 对每个 $x\in U_R$，
+\item[(P1)] 对每个 $x\in U_R$，有
 $\varnothing\ne\mathcal J(x)\subset J_{\lambda F}(x)$。
 \item[(P2)] 对每个 $x\in U_R$ 和每个 $y\in\mathcal J(x)$，
 存在 $p\in P_S(x)$，使
 \begin{equation}
-\label{eq:ppa-general-anchor}
- \|2y-x-p\|\le\omega(d(x)).
+\label{eq:ppa-zero-anchor}
+ \langle y-p,x-y\rangle
+ \ge\frac{d(x)^2-\omega(d(x))^2}{4}.
 \end{equation}
-\item[(P3)] 对每个 $y\in\mathcal J(U_R)$，若
-$r_F(y)\le\bar t$，则 $d(y)\le\psi(r_F(y))$；并且
-$B(R)/\lambda\le\bar t$。
-\item[(P4)] 对每个 $0<t\le R$，
-$\psi(B(t)/\lambda)\le\kappa t$，且 $\Theta(R)<\infty$。
+\item[(P3)] 对每个 $y\in\mathcal J(U_R)$，若 $r_F(y)\le\bar t$，则
+\begin{equation}
+\label{eq:ppa-true-output-EB}
+ d(y)\le\psi(r_F(y)).
+\end{equation}
+此外，输出评价窗满足
+\begin{equation}
+\label{eq:ppa-output-window}
+ \frac{B(R)}\lambda\le\bar t.
+\end{equation}
+\item[(P4)] 对全部 $0<t\le R$，有
+\begin{equation}
+\label{eq:direct-compatibility}
+ \psi(B(t)/\lambda)\le\kappa t,
+ \qquad \Theta(R)<\infty.
+\end{equation}
 \end{enumerate}
 \end{assumption}
 
-\begin{theorem}[一般模 RLEB--PPA 的局部有限长度]
+(P1) 是输入覆盖条件；它既不由原关系处处有定义推出，也不由图块近端的单值性推出。
+(P2) 中的最近零点可以依赖于实际输出，条件须逐一覆盖 $\mathcal J(x)$ 的全部元素。
+若同一图块满足全对 RL，且每个输入有属于该图块的最近零锚，
+将输出图点与该零锚配对即可得到 (P2)。这一验证只涉及该图块的输出；
+要控制完整 PPA，应取 $\mathcal J=J_{\lambda F}$ 并核对全部完整输出。
+
+(P3) 是定义~\ref{def:true-EB} 在实际输出集上的误差界，评价的是完整 $F$ 的真残差。
+它与窗条件~\eqref{eq:ppa-output-window} 分别陈述，以便先验证评价域，再使用误差界。
+(P4) 的两项条件分别负责距离收缩和位移可和。
+以下将这些零点锚几何、真实残差误差界及兼容可和条件合称为 RLEB 条件。
+
+\subsection{普通 PPA 的局部有限长度}
+
+\begin{theorem}[全部允许选择的局部收敛]
+\label{thm:selection-RLEB}
 \label{thm:rleb-ppa-general}
-在假设~\ref{ass:rleb-ppa} 下，取 $x^0\in U_R$，记 $d_0=d(x^0)$。若
+在假设~\ref{ass:rleb-ppa} 下，取 $x^0\in U_R$，记 $d_0=d(x^0)$。
+若
 \begin{equation}
-\label{eq:ppa-general-budget}
- \Theta(d_0)<d(x^0,X\setminus U),
+\label{eq:direct-localization}
+ \Theta(d_0)<\dist(x^0,X\setminus U),
 \end{equation}
-则每条轨道 $x^{k+1}\in\mathcal J(x^k)$ 均可无限延拓，
-全部点属于 $U_R$，具有有限长度，并收敛到某个 $x^\infty\in S\cap U$。
-对所有 $k\ge0$，同一组常数给出
+则按 $x^{k+1}\in\mathcal J(x^k)$ 逐步选取的每条轨道均可无限延拓；
+其全部点属于 $U_R$，轨道具有有限长度，并收敛到某个 $x^\infty\in S\cap U$。
+对所有 $k\ge0$，有
 \begin{align}
- d(x^k)&\le\kappa^kd_0,\label{eq:ppa-general-distance}\\
- \|x^{k+1}-x^k\|&\le B(d(x^k))\le B(\kappa^kd_0),\\
- \sum_{k\ge0}\|x^{k+1}-x^k\|&\le\Theta(d_0),\\
+ d(x^k)&\le\kappa^kd_0,\label{eq:ppa-distance-rate}\\
+ \|x^{k+1}-x^k\|&\le B(d(x^k))\le B(\kappa^kd_0),\label{eq:ppa-step-rate}\\
+ \sum_{k=0}^{\infty}\|x^{k+1}-x^k\|&\le\Theta(d_0),\label{eq:ppa-total-length}\\
  \|x^\infty-x^k\|&\le\Theta(d(x^k))\le\Theta(\kappa^kd_0).
- \label{eq:ppa-general-tail}
+ \label{eq:ppa-tail-bound}
 \end{align}
-取 $\mathcal J=J_{\lambda F}$ 时，前件和结论覆盖完整纤维；极限点可随选择改变。
+这些估计统一于全部允许选择，极限点可以随选择改变。
+特别地，当 $\mathcal J=J_{\lambda F}$ 时，结论覆盖完整近端关系的全部输出。
 \end{theorem}
 
 \begin{proof}
-对合法输入 $x$ 及任意允许输出 $y$，取 (P2) 的最近零点 $p$，
-令 $a=y-p$、$b=x-y$、$d=d(x)$。
-由 $a+b=x-p$、$\|a-b\|\le\omega(d)$ 得
+任取 $x\in U_R$ 及 $y\in\mathcal J(x)$，取 (P2) 中的最近零点 $p$，
+记 $d=d(x)$、$s=\|x-y\|$。引理~\ref{lem:one-step} 给出
 \begin{equation}
-\label{eq:ppa-general-energy}
- \|b\|\le B(d),\qquad
- d(y)^2+\|b\|^2\le\frac{d^2+\omega(d)^2}{2}.
+\label{eq:ppa-one-step}
+ d(y)^2+s^2\le\frac{d^2+\omega(d)^2}{2},\qquad s\le B(d).
 \end{equation}
-近端包含只提供真残差的上界：
+由真实近端包含，$(x-y)/\lambda\in F(y)$，从而
 \[
- r_F(y)\le\|b\|/\lambda
- \le B(d)/\lambda\le B(R)/\lambda\le\bar t.
+ r_F(y)\le\frac{s}\lambda\le\frac{B(d)}\lambda
+ \le\frac{B(R)}\lambda\le\bar t.
 \]
-因此 (P3)--(P4) 在同一评价窗内给出 $d(y)\le\kappa d$。
-当 $d=0$ 时，$p=x$，(P2) 直接强制 $y=x$，上述估计仍成立。
+因此 (P3) 可以用于这个输出。当 $d>0$ 时，(P4) 及 $\psi$ 非减给出
+\[
+ d(y)\le\psi(r_F(y))\le\psi(B(d)/\lambda)\le\kappa d.
+\]
+当 $d=0$ 时，式~\eqref{eq:ppa-one-step} 强制 $s=0$，故 $y=x$，
+同一距离递推仍然成立。
 
-从 $x^0$ 出发，(P1) 产生任意一步输出。
-对已构造的有限前缀逐步使用上述估计，得到
+(P1) 保证初值处存在允许输出。假设已构造到 $x^k\in U_R$，
+并已对该有限前缀建立距离递推。任取下一允许输出 $x^{k+1}$，上述一步估计给
 \[
  d(x^{k+1})\le\kappa^{k+1}d_0,\qquad
- \|x^{k+1}-x^0\|\le\sum_{j=0}^{k}B(\kappa^jd_0)
- \le\Theta(d_0)<d(x^0,X\setminus U).
+ \|x^{k+1}-x^0\|
+ \le\sum_{j=0}^{k}B(\kappa^jd_0)
+ \le\Theta(d_0)<\dist(x^0,X\setminus U).
 \]
-故 $x^{k+1}\in U_R$，覆盖可再次使用。
-这先证明每个有限前缀合法，再给出无限延拓。
-对所得无限轨道应用引理~\ref{lem:distance-length-interface}，取 $b=B$，
-即得有限长度、闭零集中的极限及尾界。
-极限到 $x^0$ 的距离仍至多 $\Theta(d_0)$，所以严格预算保证极限属于 $U$。
+故 $x^{k+1}\in U$，且 $d(x^{k+1})\le R$。于是 (P1) 可以继续使用。
+归纳证明了每个有限前缀均留在 $U_R$，并且任一选择都可无限延拓。
+
+现在距离和位移满足定理~\ref{thm:distance-length} 的条件，
+取其中的位移包络为 $B$，便得有限长度、点收敛及尾界。
+也可直接由步长可和得到 Cauchy 性；$S$ 闭且 $d(x^k)\to0$，
+故极限属于 $S$。最后，
+\[
+ \|x^\infty-x^0\|\le\Theta(d_0)<\dist(x^0,X\setminus U)
+\]
+使极限仍属于 $U$。所有估计均对每个允许输出成立，因而常数与选择无关。
 \end{proof}
 
-这里没有预先要求后继输出位于 $U$，也没有将所选图值范数当成真残差。
-条件 (P2) 是零锚反射条件；全对 RL 是其充分验证方式，
-不是主定理对不同输出之间另加的比较条件。
-一般模长度条件等价于 $\int_0^R B(t)\,dt/t<\infty$：
-在每个区间 $[\kappa^{j+1}R,\kappa^jR]$ 上，该积分介于
-$\log(1/\kappa)B(\kappa^{j+1}R)$ 与
-$\log(1/\kappa)B(\kappa^jR)$ 之间，求和即得等价性。
-
-\subsection{幂次反射模的显式估计}
-
-以下收敛结果只比较一个允许近端输出与输入的最近零点。
-所选零点可以随输出改变，因此同一输入可以有多个允许输出。
-误差界始终使用完整原关系 $F$ 的真残差 $r_F$。
-
-\begin{lemma}[锚定近端步的一步估计]
-\label{lem:solution-comparison}
-取 $R,\bar t>0$、$L\ge0$、$0<\gamma\le1$，
-以及 $x^+\in J_{\lambda F}(x)$，并记
-\[
- d:=d(x,S),\qquad d^+:=d(x^+,S),\qquad s:=\|x-x^+\|.
-\]
-设 $0\leq d\leq R$，且存在 $p\in P_S(x)$ 满足
-\[
- \langle x^+-p,x-x^+\rangle
- \geq\frac14(d^2-L^2d^{2\gamma}).
-\]
-设 $(R+LR^\gamma)/(2\lambda)\leq\bar t$，并且当
-$r_F(x^+)\leq\bar t$ 时有
-$d(x^+,S)\leq\psi(r_F(x^+))$，其中
-$\psi:[0,\bar t]\to[0,\infty)$ 非减。
-则
-\begin{align}
-\label{eq:energy-one-step}
- (d^+)^2+s^2&\leq\frac{d^2+L^2d^{2\gamma}}2,\\
-\label{eq:step-one-step}
- s&\leq\frac{d+Ld^\gamma}{2},\\
-\label{eq:direct-output-bound}
- d^+&\leq\psi(s/\lambda),\\
-\label{eq:direct-recursion-general}
- d^+&\leq\psi\!\left(\frac{d+Ld^\gamma}{2\lambda}\right).
-\end{align}
-\end{lemma}
-
-\begin{proof}
-置 $a=x^+-p$、$b=x-x^+$。由 $a+b=x-p$，锚定内积条件等价于
-\[
- \|a-b\|^2=\|a+b\|^2-4\langle a,b\rangle
- \leq L^2d^{2\gamma}.
-\]
-平行四边形恒等式给出
-\[
- \|x^+-p\|^2+s^2
- =\frac{\|a+b\|^2+\|a-b\|^2}{2}
- \leq\frac{d^2+L^2d^{2\gamma}}2.
-\]
-结合 $d^+\leq\|x^+-p\|$，得到 \eqref{eq:energy-one-step}。
-反三角不等式给出
-\begin{equation}
-\label{eq:power-step}
- |2s-d|\leq\|2b-(a+b)\|=\|b-a\|\leq Ld^\gamma,
- \qquad s\leq\frac{d+Ld^\gamma}{2}.
-\end{equation}
-由于 $(x-x^+)/\lambda\in F(x^+)$，有
-\[
- r_F(x^+)\leq s/\lambda
- \leq\frac{d+Ld^\gamma}{2\lambda}
- \leq\frac{R+LR^\gamma}{2\lambda}\leq\bar t.
-\]
-因此真残差误差界适用于这个实际输出。利用 $\psi$ 非减即得
-\eqref{eq:direct-output-bound}--\eqref{eq:direct-recursion-general}。
-这里没有将真残差与所选图值的范数相等同。
-\end{proof}
-
-\begin{corollary}[幂次 RLEB--PPA 的显式长度与速率]
-\label{thm:selection-RLEB}
-\label{cor:selection-extension}
-设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
-$S\subset F^{-1}(0)$ 非空闭，$U\subset X$ 开。固定
-\[
- R>0,\quad\bar t>0,\quad L\geq0,\quad
- 0<\gamma\leq1,\quad0<\kappa<1,
-\]
-以及有限非减函数 $\psi:[0,\bar t]\to[0,\infty)$，
-满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
-记 $U_R=\{x\in U:d(x,S)\leq R\}$。
-设同一个近端关系 $\mathcal J$ 满足：
-\begin{enumerate}
-\item[(B1)] 对每个 $x\in U_R$，
-$\varnothing\ne\mathcal J(x)\subset J_{\lambda F}(x)$。
-\item[(B2)] 对每个 $x\in U_R$ 和每个 $x^+\in\mathcal J(x)$，
-存在 $p\in P_S(x)$，使
-\begin{equation}
-\label{eq:solution-comparison-innerproduct}
- \langle x^+-p,x-x^+\rangle
- \geq\frac14\left(d(x,S)^2-L^2d(x,S)^{2\gamma}\right).
-\end{equation}
-\item[(B3)] 对每个 $y\in\mathcal J(U_R)$，
-若 $r_F(y)\leq\bar t$，则
-$d(y,S)\leq\psi(r_F(y))$；此外，
-\begin{equation}
-\label{eq:gauge-domain}
- \frac{R+LR^\gamma}{2\lambda}\leq\bar t.
-\end{equation}
-\item[(B4)] 对每个 $0<r\leq R$，有
-\begin{equation}
-\label{eq:direct-compatibility}
- \psi\!\left(\frac{r+Lr^\gamma}{2\lambda}\right)\leq\kappa r.
-\end{equation}
-\end{enumerate}
-对 $r\geq0$ 定义
-\[
- \mathcal L(r):=\frac12\left(
- \frac{r}{1-\kappa}+\frac{Lr^\gamma}{1-\kappa^\gamma}\right).
-\]
-取任意 $x^0\in U_R$，令 $d_0=d(x^0,S)$。若
-\begin{equation}
-\label{eq:direct-localization}
- \mathcal L(d_0)<d(x^0,X\setminus U),
-\end{equation}
-则每条逐步选取的轨道
-\begin{equation}
-\label{eq:PPA}
- x^{k+1}\in\mathcal J(x^k)
-\end{equation}
-均可无限延拓，全部迭代点属于 $U_R$，具有有限长度，
-并收敛到某个 $x^\infty\in S\cap U$。对所有 $k\geq0$，
-采用同一组常数的估计为
-\begin{align}
-\label{eq:direct-distance-rate}
- d(x^k,S)&\leq\kappa^k d_0,\\
-\label{eq:direct-step-rate}
- \|x^{k+1}-x^k\|
- &\leq\frac12\left(\kappa^k d_0
-                 +L\kappa^{\gamma k}d_0^\gamma\right),\\
-\label{eq:direct-tail}
- \|x^\infty-x^k\|&\leq\mathcal L(d(x^k,S))
-                    \leq\mathcal L(\kappa^k d_0).
-\end{align}
-总长度至多 $\mathcal L(d_0)$；极限点可以随选择而改变。
-\end{corollary}
-
-\begin{proof}
-在主定理~\ref{thm:rleb-ppa-general} 中取 $\omega(t)=Lt^\gamma$。
-由
-\[
- \|x-p\|^2-\|2x^+-x-p\|^2
- =4\langle x^+-p,x-x^+\rangle,
-\]
-(B2) 恰为 (P2) 的反射估计。
-(B1)、(B3)--(B4) 分别给出覆盖、真误差界与直接收缩条件。
-此时 $B(t)=(t+Lt^\gamma)/2$，两项几何级数给出
-$\Theta(t)=\mathcal L(t)<\infty$。
-因此初值预算、允许多值范围和所有结论均由 PPA 主定理得到。
-\end{proof}
-
-式~\eqref{eq:direct-distance-rate} 给出距离的 Q 线性因子上界
-$\kappa$。式~\eqref{eq:direct-tail} 给出点误差的 R 线性因子
-上界 $\kappa^\gamma$，不要求点误差逐步 Q 线性收缩。
-
-\begin{corollary}[初值邻域与外层工作域]
-\label{cor:selection-basin}
-在推论~\ref{thm:selection-RLEB} 的条件下，取 $\bar x\in S\cap U$，
-并取有限 $a>0$ 使 $B_a(\bar x)\subset U$。
-若 $0<\delta\leq R$ 满足
-$\delta+\mathcal L(\delta)<a$，则每个
-$x^0\in B_\delta(\bar x)$ 的全部允许轨道均可无限延拓，
-留在 $B_a(\bar x)$，并收敛到 $S\cap B_a(\bar x)$ 中某点。
-这样的 $\delta$ 总能取到。
-\end{corollary}
-
-\begin{proof}
-由 $\mathcal L(t)\to0$（$t\downarrow0$）可选取所述 $\delta$。
-对 $x^0\in B_\delta(\bar x)$，有 $d_0\leq\|x^0-\bar x\|<\delta$，
-以及
-\[
- d(x^0,X\setminus U)\geq a-\|x^0-\bar x\|
- >a-\delta>\mathcal L(\delta)\geq\mathcal L(d_0).
-\]
-应用PPA 推论，轨道及其极限到 $\bar x$ 的距离均小于
-$\delta+\mathcal L(\delta)<a$。
-\end{proof}
-
-这个推论分别指定初值邻域和外层工作域；
-它不要求同半径的 $B_\delta(\bar x)$ 是自映射域。
-
-\subsection{RL 条件及其 \texorpdfstring{$J$}{J} 侧形式}
-
-\begin{definition}[RL 广义单调性]
-\label{def:graph-RL}
-设 $\mathcal G\subset\operatorname{gph}F$，$R>0$，$L\geq0$，
-$0<\gamma\leq1$。称 $\mathcal G$ 在尺度 $R$ 上满足
-$\mathrm{RL}(\lambda,\gamma,L)$，如果对任意
-$(u,u^*),(v,v^*)\in\mathcal G$，记
-\[
- a:=u-v,\qquad b:=u^*-v^*,
-\]
-只要 $\|a+\lambda b\|\leq R$，就有
-\begin{equation}
-\label{eq:graph-RL}
- \lambda\langle a,b\rangle
- \geq\frac14\left(
-   \|a+\lambda b\|^2-L^2\|a+\lambda b\|^{2\gamma}
- \right).
-\end{equation}
-由恒等式
-$\|a+\lambda b\|^2-\|a-\lambda b\|^2
- =4\lambda\langle a,b\rangle$，
-这一条件等价于
-\begin{equation}
-\label{eq:power-RL}
- \|a-\lambda b\|\leq L\|a+\lambda b\|^\gamma
-\end{equation}
-对上述点对成立。
-\end{definition}
-
-一般模版本将 \eqref{eq:power-RL} 的右端替换为
-$\omega(\|a+\lambda b\|)$，等价的内积条件为
-$\lambda\langle a,b\rangle\ge
-[\|a+\lambda b\|^2-\omega(\|a+\lambda b\|)^2]/4$。
-若同一图块覆盖 $U_R$ 且含所需最近零点图点 $(p,0)$，
-将输出图点与 $(p,0)$ 配对便给出主定理的 (P2)。
-误差界、标量兼容、长度和留域条件仍须在同一对象上另证。
-
-固定 $\lambda$ 时，简记
-$\mathrm{RL}(\lambda,\gamma,L)$ 为 $\mathrm{RL}(\gamma,L)$。
-所检验的点对可以来自不同分支；当 $\gamma=L=1$ 时，
-条件成为这些点对上的单调性不等式。
-
-与图像局部化 $\mathcal G$ 对应的近端关系定义为
-\[
- J_{\mathcal G}(x)
- :=\{u:(u,(x-u)/\lambda)\in\mathcal G\}.
-\]
-恒有 $J_{\mathcal G}(x)\subset J_{\lambda F}(x)$。
-若某输入区域内所有近端输出对应的图像点均属于
-$\mathcal G$，则两者在该区域上一致。
-
-\begin{lemma}[RL 条件的 $J$ 侧形式]
-\label{lem:minty-equivalence}
-定义~\ref{def:graph-RL} 中的 RL 条件等价于：对任意
-$u\in J_{\mathcal G}(x)$ 和 $v\in J_{\mathcal G}(y)$，
-只要 $\|x-y\|\leq R$，就有
-\begin{equation}
-\label{eq:resolvent-energy-all-pairs}
- \|u-v\|^2+\|(x-u)-(y-v)\|^2
- \leq\frac12\left(
-   \|x-y\|^2+L^2\|x-y\|^{2\gamma}
- \right).
-\end{equation}
-特别地，$J_{\mathcal G}$ 在其定义域上单值。
-\end{lemma}
-
-\begin{proof}
-对相应的图像点，记
-$a=u-v$，$\lambda b=(x-u)-(y-v)$，则
-$a+\lambda b=x-y$，且
-\[
- \|a\|^2+\lambda^2\|b\|^2
- =\|a+\lambda b\|^2-2\lambda\langle a,b\rangle.
-\]
-将此式代入 \eqref{eq:graph-RL}，即得
-\eqref{eq:resolvent-energy-all-pairs}；反向代入亦成立。
-令 $x=y$，上式给出 $2\|u-v\|^2\leq0$，故 $u=v$。
-\end{proof}
-
-\begin{definition}[广义度量次正则性]
-\label{def:admissible-gauge}
-设 $V\subset X$，$\bar t>0$，且
-$\psi:[0,\bar t]\to[0,\infty)$ 单调不减，
-满足 $\psi(0)=0$ 及 $\psi(t)\to0$（$t\downarrow0$）。
-若
-\begin{equation}
-\label{eq:gauge-EB}
- d(y,S)\leq\psi\bigl(r_F(y)\bigr)
- \qquad (y\in V,\ r_F(y)\leq\bar t),
-\end{equation}
-则称 $F$ 在 $V$ 上满足相对于 $S$ 的
-$\psi$-广义度量次正则性。
-\end{definition}
-
-
-\subsection{全对图块的充分验证条件}
-
-对 $(u,u^*)\in\mathcal G$，记
-\[
- M_+(u,u^*):=u+\lambda u^*,\qquad
- M_+(\mathcal G):=\{u+\lambda u^*:(u,u^*)\in\mathcal G\}.
-\]
-由定义，$M_+(\mathcal G)=\operatorname{dom}J_{\mathcal G}$。
-
-\begin{corollary}[全对 RL 图块的局部收敛]
-\label{thm:two-branch-RLEB}
-\label{cor:all-pairs-RLEB}
-沿用推论~\ref{thm:selection-RLEB} 的对象、参数及 $U_R$。
-取 $\mathcal G\subset\operatorname{gph}F$，令
-$\mathcal J=J_{\mathcal G}$，并对该关系假设 (B3)--(B4)。
-若还满足以下图块条件：
-\begin{enumerate}
-\item $U_R\subset M_+(\mathcal G)$；对每个 $x\in U_R$，
-存在 $p\in P_S(x)$ 使 $(p,0)\in\mathcal G$。
-\item $\mathcal G$ 在 Minty 输入对距尺度 $R$ 上满足
-$\mathrm{RL}(\lambda,\gamma,L)$。
-\end{enumerate}
-则 $J_{\mathcal G}$ 在 $U_R$ 上非空单值。
-对每个满足 \eqref{eq:direct-localization} 的 $x^0\in U_R$，
-唯一图块轨道 $x^{k+1}=J_{\mathcal G}(x^k)$
-可无限进行，留在 $U_R$，具有有限长度，并收敛到 $S\cap U$；
-距离、步长、总长度和尾项满足PPA 推论的共同估计。
-\end{corollary}
-
-\begin{proof}
-输入覆盖给出 (B1)；全对 RL 与
-引理~\ref{lem:minty-equivalence} 给出图块内唯一性。
-对任意 $x\in U_R$，取图块中的最近零点 $p$。
-输出图点 $(x^+,(x-x^+)/\lambda)$ 和 $(p,0)$
-的 Minty 输入对距是 $d(x,S)\leq R$。
-将这对图点代入 \eqref{eq:graph-RL}，即得 (B2)。
-(B3)--(B4) 已经假设，故可直接应用PPA 推论。
-\end{proof}
-
-输入覆盖与全对 RL 所给的图块内唯一性是两个不同条件。
-类似的截断值域覆盖另见
-\cite[Assumption~2(d)(ii)]{LukeTam2025GeneralizedMonotonicity}；
-这里的覆盖仍须对所选原图块独立验证。
-
-\begin{remark}[截断覆盖前提的映射]
-\label{rem:LT-coverage-map}
-Luke--Tam 假设~2(d)(ii) 的覆盖前提可以直接用于构造 (B1)。
-具体地，取输出状态域 $U_{\rm LT}$、图值域 $W_{\rm LT}$，
-以及输入域 $U'_{\rm LT}$，置
-\[
- \bar F(u)=F(u)\cap(W_{\rm LT}/\lambda),\qquad
- \mathcal G_{\rm LT}
- =\{(u,v)\in\operatorname{gph}F:
-             u\in U_{\rm LT},\ \lambda v\in W_{\rm LT}\}.
-\]
-若已验证
-\[
- U_R\subset U'_{\rm LT}
- \subset (I+\lambda\bar F)(U_{\rm LT}),
-\]
-则取 $\mathcal J=J_{\mathcal G_{\rm LT}}$ 即满足 (B1)。
-若 $\mathcal G_{\rm LT}\subset\mathcal G$，
-同一包含关系也供应推论~\ref{cor:all-pairs-RLEB} 的输入覆盖。
-最近零点锚、(B2)--(B4) 和初值预算仍须对相同对象另行验证；
-使用这一覆盖前提不需要导入外文收敛定理的全部结论。
+\begin{remark}[相对状态集]
+\label{rem:relative-state}
+上述定理也适用于不变状态集 $D\subset X$：
+将假设~\ref{ass:rleb-ppa} 的输入域换成 $D\cap U_R$，
+要求全部允许输出仍属于 $D$，初值取自 $D\cap U_R$，
+并取非空闭目标 $S=\zer F\cap D$。
+有限前缀证明不变，故得到上述全部结论，且 $x^k,x^\infty\in D$。
+这里不要求 $D$ 本身闭；极限属于 $D$ 是因为它属于闭目标 $S\subset D$。
 \end{remark}
 
-图块结论转为完整 $J_{\lambda F}$ 的结论，还需在所用输入域上
-证明 $J_{\mathcal G}=J_{\lambda F}$。
-若PPA 推论直接取 $\mathcal J=J_{\lambda F}$，
-则其前件必须对全部完整输出成立。
+\subsection{幂次模的显式条件与尾界}
 
-\begin{proposition}[锚定条件允许严格多值的近端关系]
-\label{prop:strict-selection-extension}
-在 $\mathbb R$ 上取
-\[
- F(y)=\{2y,3y\},\quad \lambda=1,\quad S=\{0\},\quad U=\mathbb R.
-\]
-其完整近端关系为 $\mathcal J(x)=J_F(x)=\{x/3,x/4\}$。
-取 $R=\bar t=1$、$\gamma=1$、$L=1/2$、
-$\psi(t)=t/2$、$\kappa=3/8$，PPA 推论的全部前件成立。
-但是包含全部这些输出的图块不满足任何全对 RL 条件。
-\end{proposition}
-
-\begin{proof}
-覆盖全域成立。最近零点是 $p=0$；
-两种输出分别满足 $|2x^+-x|=|x|/3$ 或 $|x|/2$，
-故锚定条件成立。对 $|x|\leq1$，每个允许输出的真残差为
-$r_F(y)=2|y|\leq2/3<\bar t$，且 $d(y,S)=\psi(r_F(y))$。
-评价窗满足 $(R+LR)/(2\lambda)=3/4\leq\bar t$，
-直接组合为 $\psi((r+Lr)/(2\lambda))=3r/8$。
-$U=\mathbb R$ 使留域预算自动成立。
-对非零输入 $x$，两个输出 $x/3$ 与 $x/4$ 不同；
-它们对应图点的 Minty 输入相同。
-全对 RL 在输入对距零时必须使这两个输出相等，
-故不能成立。
-\end{proof}
-
-本例放宽的是输出之间的全对比较，误差界仍评价完整 $F$ 的真残差。
-
-\subsection{残差增长与直接标量兼容}
-
-若允许缩小工作半径 $R$ 并重新选取 $\kappa$，
-则 \eqref{eq:direct-compatibility} 在某个正半径上成立，当且仅当
+\begin{corollary}[幂次 RLEB 条件]
+\label{cor:power-RLEB}
+在假设~\ref{ass:rleb-ppa} 中取
+$\omega(t)=Lt^\gamma$、$\psi(s)=cs^q$，其中
+$L\ge0$、$0<\gamma\le1$、$c,q>0$。
+若 (P1)--(P3) 成立，且对全部 $0<t\le R$ 有
 \begin{equation}
-\label{eq:direct-limsup}
- \limsup_{r\downarrow0}
- \frac{\psi((r+Lr^\gamma)/(2\lambda))}{r}<1.
+\label{eq:power-compatibility}
+ \frac{c}{(2\lambda)^q}(t+Lt^\gamma)^q\le\kappa t,
 \end{equation}
-若该极限上确界小于 $1$，在它与 $1$ 之间选取 $\kappa$，
-再缩小 $R$ 即得兼容；反向由统一的 $\kappa<1$ 直接推出。
-进一步缩小 $R$ 还可使 \eqref{eq:gauge-domain} 成立。
-
-\begin{corollary}[残差增长条件与临界阶]
-\label{cor:residual-growth}
-沿用PPA 推论的 $X,F,S,U,\lambda,R,\bar t,L,\gamma,\mathcal J$，
-假设 (B1)--(B2) 成立，且 $0<\gamma<1$、$L>0$。
-若存在 $m,a>0$，使每个
-$y\in\mathcal J(U_R)$ 在 $r_F(y)\leq\bar t$ 时满足
+则满足严格初值预算~\eqref{eq:direct-localization} 的全部允许轨道
+具有定理~\ref{thm:selection-RLEB} 的结论，其中
 \begin{equation}
-\label{eq:residual-growth}
- r_F(y)\geq m\,d(y,S)^a,
+\label{eq:power-tail}
+ B(t)=\frac{t+Lt^\gamma}{2},\qquad
+ \Theta(t)=\frac12\left(
+ \frac{t}{1-\kappa}+\frac{Lt^\gamma}{1-\kappa^\gamma}\right).
 \end{equation}
-则 $\psi(t)=(t/m)^{1/a}$ 给出真输出误差界。
-直接兼容判据 \eqref{eq:direct-limsup} 在 $a<\gamma$ 时成立；
-在 $a=\gamma$ 时成立当且仅当
-\begin{equation}
-\label{eq:H-critical-threshold}
- \lambda m>L/2;
-\end{equation}
-在 $a>\gamma$ 时不成立。
-前两种情形下，缩小工作半径以满足评价窗与统一兼容，
-并选取满足留域预算的初值，即可应用PPA 推论。
-后一种情形只表示这个标量判据失效。
+集合距离的 Q 线性因子至多为 $\kappa$，点误差的 R 线性因子至多为 $\kappa^\gamma$。
 \end{corollary}
 
 \begin{proof}
-增长条件直接给出 $d(y,S)\leq(r_F(y)/m)^{1/a}$。
-对 $r>0$，兼容比值是
-\[
- \frac{\psi((r+Lr^\gamma)/(2\lambda))}{r}
- =\left(\frac{L+r^{1-\gamma}}{2\lambda m}\right)^{1/a}
-   r^{\gamma/a-1}.
-\]
-第一因子趋于正常数。当 $a<\gamma$ 时该商趋于 $0$；
-当 $a>\gamma$ 时趋于 $+\infty$；当 $a=\gamma$ 时趋于
-$(L/(2\lambda m))^{1/\gamma}$，
-小于 $1$ 恰好等价于 \eqref{eq:H-critical-threshold}。
+对 $B(\kappa^jt)$ 的两项分别求几何级数，即得
+式~\eqref{eq:power-tail}，特别地 $\Theta(R)<\infty$。
+式~\eqref{eq:power-compatibility} 正是直接兼容条件，故主定理适用。
+距离递推给 Q 线性界；尾界中的 $\kappa^k$ 和 $\kappa^{k\gamma}$
+两项给点误差的 R 线性界。
 \end{proof}
+
+当 $0<\gamma<1$ 且 $L>0$ 时，直接兼容商为
+\begin{equation}
+\label{eq:power-critical-ratio}
+ \frac{\psi(B(t)/\lambda)}t
+ =\frac{c}{(2\lambda)^q}
+ t^{\gamma q-1}(t^{1-\gamma}+L)^q.
+\end{equation}
+因此，$\gamma q>1$ 时该商趋于零，可以缩小半径得到统一收缩；
+$\gamma q=1$ 时，小窗收缩成立当且仅当
+$cL^q/(2\lambda)^q<1$；$\gamma q<1$ 时该商趋于无穷，
+这一直接测试不能成立。最后一种情形本身不否定实际轨道收敛。
+$\gamma=1$ 或 $L=0$ 时按式~\eqref{eq:power-compatibility} 直接检验。
+由于 $B(R)\to0$，缩小半径还可同时保证输出评价窗。
+
+\subsection{线性误差界的能量收缩}
+
+在线性阶，把步长先估计再代入误差界会舍去平方能量的一部分信息。
+保留式~\eqref{eq:ppa-one-step} 的两项可以得到另一充分收缩条件。
+
+\begin{corollary}[线性能量收缩]
+\label{cor:linear-energy-convergence}
+沿用假设~\ref{ass:rleb-ppa} 的基本对象，仅要求 (P1)--(P3)，
+其中 $\omega(t)=Lt$、$\psi(s)=Ks$，$L\ge0$、$K>0$。
+定义
+\begin{equation}
+\label{eq:linear-energy-factor}
+ \rho_E=\left(\frac{1+L^2}{2\{1+(\lambda/K)^2\}}\right)^{1/2},
+ \qquad \Theta_E(t)=\frac{(1+L)t}{2(1-\rho_E)}.
+\end{equation}
+若 $\rho_E<1$，且 $x^0\in U_R$ 满足
+\begin{equation}
+\label{eq:linear-energy-budget}
+ \Theta_E(d_0)<\dist(x^0,X\setminus U),
+\end{equation}
+则主定理的全部结论成立，其中距离因子和尾预算分别换成
+$\rho_E$ 和 $\Theta_E$。特别地，
+\[
+ d(x^k)\le\rho_E^kd_0,\qquad
+ \|x^\infty-x^k\|\le\Theta_E(d(x^k))\le\Theta_E(\rho_E^kd_0).
+\]
+此结论也适用于注~\ref{rem:relative-state} 的相对状态集。
+\end{corollary}
+
+\begin{proof}
+任取合法转移 $x\mapsto y$，记 $d=d(x)$、$d^+=d(y)$、$s=\|x-y\|$。
+引理~\ref{lem:one-step} 和 (P3) 的输出窗先给
+\[
+ s\le\frac{1+L}{2}d,\qquad
+ r_F(y)\le\frac{s}\lambda\le\bar t.
+\]
+故真实残差误差界可以使用，并与一步能量合为
+\[
+ (d^+)^2+s^2\le\frac{1+L^2}{2}d^2,
+ \qquad d^+\le K r_F(y)\le\frac K\lambda s.
+\]
+消去 $s^2$ 得
+\[
+ \{1+(\lambda/K)^2\}(d^+)^2\le\frac{1+L^2}{2}d^2,
+\]
+即 $d^+\le\rho_Ed$，包括 $d=0$ 的情形。
+对已构造的有限前缀，有
+\[
+ \|x^{k+1}-x^0\|
+ \le\frac{1+L}{2}\sum_{j=0}^{k}\rho_E^jd_0
+ \le\Theta_E(d_0)<\dist(x^0,X\setminus U).
+\]
+所以每一步仍在 $U_R$，覆盖条件可再次使用。
+无限延拓后求和及从任意指标重启求和，分别给有限长度和所列尾界；
+距离趋零、$S$ 闭及严格预算保证极限属于 $S\cap U$。
+\end{proof}
+
+为与 Luke--Tam 正式版所列的估计比较，固定同一图块、步长和输出残差窗口，
+并要求全部允许输出及相应最近零点锚均属于该图块。
+当该图上的 $\lambda F$ 满足 Luke--Tam 的 submonotonicity 条件时，
+线性 RL 参数满足 $L^2=1+4\tau$、$\tau\ge0$
+\cite[Definition~2]{LukeTam2025GeneralizedMonotonicity}。
+于是本推论的能量收缩条件为
+\begin{equation}
+\label{eq:energy-LT-budget}
+ 2\tau(K/\lambda)^2<1.
+\end{equation}
+另一方面，同一真误差界和三角不等式给
+\[
+ d\le s+d^+\le(1+K/\lambda)s.
+\]
+在一步能量中代入这个步长下界，即得
+\begin{equation}
+\label{eq:LT-displayed-factor}
+ (d^+)^2\le\kappa_{\rm LT}(K)^2d^2,
+ \qquad
+ \kappa_{\rm LT}(K)^2
+ =1+2\tau-\left(\frac{\lambda}{\lambda+K}\right)^2.
+\end{equation}
+相应的显示充分条件为
+\begin{equation}
+\label{eq:LT-displayed-budget}
+ \tau(1+K/\lambda)^2<\frac12.
+\end{equation}
+这给出了正式版所列的充分参数条件与距离因子
+\cite[Assumption~2, Theorem~2]{LukeTam2025GeneralizedMonotonicity}。
+原证明使用任意略大于 $K$ 的误差界常数 $\rho$；
+这里假定 $K$ 已是同一窗口内有效的误差界常数，
+因此 $\kappa_{\rm LT}(K)$ 是原文因子在 $\rho\downarrow K$ 时的下确界。
+
+置 $a=K/\lambda>0$，直接计算得
+\begin{equation}
+\label{eq:LT-energy-factor-gap}
+ \kappa_{\rm LT}(K)^2-\rho_E^2
+ =\frac{2\{a+\tau(1+a)^2\}}{(1+a^2)(1+a)^2}>0.
+\end{equation}
+式~\eqref{eq:LT-displayed-budget} 中的 Luke--Tam 充分条件
+蕴含式~\eqref{eq:energy-LT-budget}，而反向不成立。
+在两者都给出收缩时，能量因子严格更小；同一步长包络下，
+$\Theta_E$ 也相应缩小。这些比较使用相同目标、输入覆盖、
+允许输出及真实残差评价窗，改善的是上述显示充分条件和因子，
+并不由此断言一个完整局部定理包含另一个。
+当 $\tau=0$ 时，
+\[
+ \rho_E=\frac{K}{\sqrt{K^2+\lambda^2}},
+\]
+恢复 Leventhal 的单调端点因子
+\cite[Theorem~3.1]{Leventhal2009MetricSubregularityPPA}。
+当 $L<1$ 时，RL 给出更强的正耗散估计；此时不把负数
+$(L^2-1)/4$ 赋给 Luke--Tam 定义中的非负缺陷参数。
+
+\subsection{能量因子与长度估计的锐性见证}
+
+先给出同时达到能量因子、步长和总长度估计的标量族。
+给定 $0<\kappa<1$ 和 $\lambda>0$，令
+\begin{equation}
+\label{eq:scalar-sharp-family}
+ F(y)=-\frac{1+\kappa}{\lambda\kappa}y,\qquad
+ J_{\lambda F}(x)=-\kappa x,\qquad S=\{0\}.
+\end{equation}
+取 $U=\R$、任意 $R>0$，并置
+\[
+ L=1+2\kappa,\qquad K=\frac{\lambda\kappa}{1+\kappa},
+ \qquad \bar t\ge\frac{(1+\kappa)R}\lambda.
+\]
+直接求解近端方程可知，对每个输入，唯一输出均为 $y=-\kappa x$，
+因此覆盖全域成立。
+对于 $y=-\kappa x$，有
+\[
+ \langle y,x-y\rangle=-\kappa(1+\kappa)|x|^2
+ =\frac{1-L^2}{4}|x|^2,
+ \qquad r_F(y)=\frac{|y|}{K}.
+\]
+所以零锚几何和真误差界均取等，且
+\[
+ |y|^2+|x-y|^2
+ =\{\kappa^2+(1+\kappa)^2\}|x|^2
+ =\frac{1+L^2}{2}|x|^2.
+\]
+于是 $\rho_E=\kappa$，步长恰为 $B(|x|)=(1+\kappa)|x|$。
+轨道为 $x^k=(-\kappa)^kx^0$，其总长满足
+\begin{equation}
+\label{eq:scalar-sharp-length}
+ \sum_{k=0}^{\infty}|x^{k+1}-x^k|
+ =\frac{1+\kappa}{1-\kappa}|x^0|=\Theta_E(|x^0|).
+\end{equation}
+这说明显示估计在这一参数族上不能一致减小。
+这里使用的是算子近端关系；相应凹二次函数并不给出同一个 argmin 近端最小化问题。
+
+平面旋转族则表明能量因子可由非标量完整关系达到。
+令 $Q=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$，取
+$\alpha,\beta\in\R$，使
+$m^2=\alpha^2+\beta^2>0$、$D=1+2\alpha+m^2>0$，并定义
+\begin{equation}
+\label{eq:rotation-sharp-family}
+ F=\frac{\alpha\Id+\beta Q}{\lambda},\qquad
+ T=J_{\lambda F}=\frac{(1+\alpha)\Id-\beta Q}{D}.
+\end{equation}
+有 $r_F(y)=m\|y\|/\lambda$，故真误差界的锐常数为 $K=\lambda/m$。
+对任意输入差 $z$，直接计算得到
+\[
+ \|Tz\|^2=\frac{\|z\|^2}{D},\qquad
+ \|z-Tz\|^2=\frac{m^2}{D}\|z\|^2,
+ \qquad
+ \langle Tz,z-Tz\rangle=\frac{\alpha}{D}\|z\|^2.
+\]
+因此，当参数取为下式中的 $L$ 时，全对线性 RL 不等式取等，且能量因子为
+\begin{equation}
+\label{eq:rotation-sharp-parameters}
+ L^2=\frac{1-2\alpha+m^2}{1+2\alpha+m^2},
+ \qquad \rho_E^2=\frac1D.
+\end{equation}
+当 $D>1$ 时，这一族的完整近端迭代从任意初值出发均收敛到零点，
+并达到上述能量距离因子。
+若预先指定 $m=\lambda/K>0$ 与 $L\ge0$，则它的可行范围恰为
+\begin{equation}
+\label{eq:rotation-feasible-range}
+ \left|\frac{(1-L^2)(1+m^2)}{2(1+L^2)}\right|\le m;
+\end{equation}
+此时取括号内的数为 $\alpha$，再取
+$\beta^2=m^2-\alpha^2$ 即可。这个范围只陈述旋转族的达到性。
+
+例如取 $\lambda=K=1$、$\alpha=-2/7$、$\beta=-3\sqrt5/7$，则
+\[
+ F=-\frac27\Id-\frac{3\sqrt5}{7}Q,\qquad
+ J_F=\frac12\Id+\frac{3\sqrt5}{10}Q,
+ \qquad L^2=\frac95,\quad \tau=\frac15,\quad\rho_E^2=\frac7{10}.
+\]
+令 $U=\R^2$、$R=1$、$\bar t=2$，全部输出的真残差误差界与评价窗均成立。
+此时，Luke--Tam 充分条件~\eqref{eq:LT-displayed-budget}
+的左端为 $4/5>1/2$，故该条件不成立；
+能量收缩条件~\eqref{eq:energy-LT-budget}
+的左端为 $2/5<1$，故该条件成立。
+这给出同一完整关系上的严格参数差异。
+能量收缩条件在所有参数范围内并非必要条件；相同前提还给出直接因子
+$K(1+L)/(2\lambda)$，而旋转达到性也受式~\eqref{eq:rotation-feasible-range} 限制。
+
+\subsection{完整多值选择与非 Lipschitz 漂移}
+
+\paragraph{完整多值近端关系.}
+\label{ex:complete-multivalued}
+在 $\R$ 上令
+\[
+ F(y)=\{2y,3y\},\qquad \lambda=1,\qquad S=\{0\}.
+\]
+两条近端方程穷尽完整输出，给出
+\[
+ J_F(x)=\{x/3,x/4\}.
+\]
+取 $U=\R$、$R=\bar t=1$、$\omega(t)=t/2$、
+$\psi(s)=s/2$ 和 $\kappa=3/8$。
+最近零点为 $p=0$；若 $y=x/3$，则 $y(x-y)=2x^2/9$，
+若 $y=x/4$，则 $y(x-y)=3x^2/16$。
+两者均不小于 $\{x^2-(|x|/2)^2\}/4=3x^2/16$，故 (P2) 对全部输出成立。
+完整真残差为 $r_F(y)=2|y|$，所以真误差界取等。
+此外，
+\[
+ B(R)=\frac34\le\bar t,\qquad
+ \psi(B(t))=\frac38t,
+\]
+可和性由推论~\ref{cor:power-RLEB} 给出，留域预算自动成立。
+因此任意切换均由定理~\ref{thm:selection-RLEB} 控制。
+同一非零输入的两个输出不同，而完整全对 RL 在零输入差时必须使输出相同；
+故这个完整关系不满足任何零处消失模的全对 RL。
+例子说明逐输出零锚条件确实允许严格多值更新。
+
+\paragraph{法向收缩与切向平方根漂移.}
+\label{ex:sqrt-tangential-drift}
+在 $\R^2$ 上取完整单值原关系
+\begin{equation}
+\label{eq:sqrt-triangular-operator}
+ F(u,v)=(u,-\sqrt{|u|}),\qquad
+ S=\{0\}\times\R,\qquad \lambda=1.
+\end{equation}
+近端方程的第一坐标给 $u=a/2$，第二坐标再唯一确定 $v$，因而
+\begin{equation}
+\label{eq:sqrt-triangular-resolvent}
+ J_F(a,b)=(a/2,b+\sqrt{|a|/2}).
+\end{equation}
+完整真残差满足
+\[
+ r_F(u,v)^2=u^2+|u|,\qquad
+ d((u,v),S)=|u|\le r_F(u,v)^2.
+\]
+取 $U=\R^2$、$R=1/16$、$\bar t=1$、
+$\omega(t)=\sqrt{2t}$、$\psi(t)=t^2$、$\kappa=3/4$。
+输入 $(a,b)$ 的最近零点唯一，为 $p=(0,b)$。
+对式~\eqref{eq:sqrt-triangular-resolvent} 的实际输出 $y$，有
+\[
+ \langle y-p,(a,b)-y\rangle
+ =\frac{a^2}{4}-\frac{|a|}{2}
+ =\frac{d((a,b),S)^2-\omega(d((a,b),S))^2}{4}.
+\]
+故锚内积恰好达到下界。评价窗和直接兼容分别为
+\[
+ B(R)=\frac{1+4\sqrt2}{32}<1,\qquad
+ \sup_{0<t\le R}\frac{\psi(B(t))}{t}
+ =\frac{33+8\sqrt2}{64}<\frac34.
+\]
+由推论~\ref{cor:power-RLEB}，这些条件控制完整轨道。
+实际迭代可以进一步求和为
+\begin{equation}
+\label{eq:sqrt-triangular-orbit}
+ a_k=2^{-k}a_0,\qquad
+ b_k=b_0+\frac{\sqrt{|a_0|}}{\sqrt2-1}(1-2^{-k/2}),
+\end{equation}
+所以
+\[
+ x^\infty=\left(0,b_0+\frac{\sqrt{|a_0|}}{\sqrt2-1}\right).
+\]
+平方根差估计
+$|\sqrt{|a|}-\sqrt{|a'|}|\le\sqrt{|a-a'|}$
+说明近端映射局部为 $1/2$ 阶 H\"older 连续。
+比较输入 $(a,b)$ 与 $(0,b)$ 可知，任何高于 $1/2$ 的局部指数均不成立。
+同样，$r_F(u,v)^2\sim|u|$（$u\to0$）说明
+$d\le c r_F^q$ 的最大可用幂次为 $q=2$。
+当 $a_0\ne0$ 时，集合距离的实际因子为 $1/2$，而
+\[
+ \|x^k-x^\infty\|^2
+ =4^{-k}a_0^2+
+ \frac{|a_0|}{(\sqrt2-1)^2}\,2^{-k},
+\]
+故点误差的渐近比值为 $1/\sqrt2$。
+法向距离与切向位移处于不同的幂次尺度，因而距离收缩率与点收敛率可以不同。

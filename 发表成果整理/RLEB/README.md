@@ -1,17 +1,19 @@
-# 当前 RLEB–PPA 修订稿
+# 中文 RLEB–PPA 论文
 
-本目录是唯一活跃论文源码，原始投稿包不改。入口main.tex，输出 [RLEB_中文修订稿.pdf](RLEB_中文修订稿.pdf)，作者沿用“菠萝之神”。
+本目录是唯一活跃论文源码，作者为“菠萝之神”。标题为 *Nonlinear Resolvent Geometry and Error Bounds for Proximal Point Convergence*。
 
-按作者 2026-10-14 的决定，正文从标准距离—长度判定进入一般模 RLEB–PPA 主定理，直接证明普通近端的全部允许输出留域、有限长度和点收敛。该陈述取 C249 的恒等核一般模分支，幂次显式推论保留 C02-v3 的完整参数。固定核 GPPA 作为后续推广推论，保留 C249/C250 的核锚、完整真残差、物理提升及能量分支；数学身份不因主文的编排改变。
+`main.tex` 按当前大纲编排：不编号引言，第一章前置知识，第二章普通 PPA 主定理及固定核 GPPA 推广，第三章广义单调性比较，第四章零集几何，第五章讨论与结论。定义1/2、引理1/2、假设1/2/3和定理1/2/3分别编号；GPPA不重复普通PPA的整组前件，而给出替换条件与物理提升。
 
-固定正定度量另用 M 内积/M 距离/M⁻¹真残差及完整共轭。C242 三角例展示非 Lip 切向漂移，C251 四次 Bregman 例展示同目标下三次物理率。第5节直接承接普通 PPA 的吸引管，给 C254 指数平衡与 C252 弱凸优化；第6节给参数识别及 C253 显式能量，恢复单调情形任意正步长。
+正文输出为 [RLEB_中文修订稿.pdf](RLEB_中文修订稿.pdf)。`supplement.tex` 引用同一份主文并接入附录A旋转达到族、附录B完整对数模与Dini边界、附录C Hamilton及固定核例，输出 [RLEB_中文完整稿.pdf](RLEB_中文完整稿.pdf)。两份PDF共享源码，不维护历史副本。
 
-固定核推论要求实际相邻转移的物理位移控制，允许受控非单射核；核收敛与物理收敛分开，C208–C210 核 chart 身份保持。拓扑结论当前限普通 PPA 与已核固定 SPD 坐标转移。当前章节安排见 [论文大纲](../论文写作大纲_逐节展开_2026-10-12.md)；较早独立审查见 [GPPA主理论](../GPPA主理论/README.md)，仅绑定其各自版本。先行性、目标期刊验收与全库历史审计未完成。
+在本目录运行：
 
-按作者随后纠正，大纲直接从标题/摘要/引言安排开始；正文采用集中 PPA 假设、引用该假设的主定理、核的补充假设及后续 GPPA 推论，不重抄共同前件。第一章先保留一般次正则与模函数、广义预解式及普通 PPA；固定核推广独立列定义3、假设3和定理3。
+```bash
+bash build.sh
+```
 
-原Hamilton、Schur及原扩展比较仍在supplements，日常任务不依赖它们。可选supplement.tex保留旧材料的编译入口。
+使用 XeLaTeX、BibTeX 与 Fandol 字体，关闭 shell escape。缺中文依赖时使用已有 `tools/tex-support` 隔离环境；也可用 `PPA_TEX_SUPPORT` 指定该环境。源码可在安装相应依赖的 TeX Live 中编译。
 
-在本目录运行 `bash build.sh`。XeLaTeX、BibTeX、Fandol；缺中文依赖时tools/tex-support/bootstrap.sh建立隔离环境，来源在dependencies.json。可用PPA_TEX_SUPPORT指定既有环境，编译关闭shell escape。
+数学范围保持完整近端/允许子关系、全部允许输出、完整真实残差、同一残差窗口及物理位移的区分。邻域回缩和Euler指数调用经典理论；参数改善仅对文中所列充分条件作同对象比较，不宣称包含全部既有理论。数学身份以规范层为准，整库优先权和特定期刊要求不属于本次成文验收。
 
-仓库仍只安装 `.agents/skills/academic-writing-skills`；中文、英文、LaTeX、证明或数学行文按需切换，不要求固定流水线。
+数学行文使用 `.agents/skills/academic-writing-skills`，自然行文复核使用 `.agents/skills/humanizer`；本轮不以文本风格判断作者身份或检测率。复算入口见 [当前大纲与论文复算](../../research/code/author_outline_review/README.md)。原始上传材料保持不改。

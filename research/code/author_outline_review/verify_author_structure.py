@@ -272,6 +272,47 @@ for x in [(0,0),(1,1),(2,0),(-3,4),(1000,-1000)]:
     y=tuple((u+v)/2 for u,v in zip(x,p))
     assert project_square(y)==p
     assert all(yv+(yv-pv)==xv for xv,yv,pv in zip(x,y,p))
+
+# Bind the reproducible checks to the exact current LaTeX manuscript.
+paper = root/'发表成果整理/RLEB'
+core = ['frontmatter','preliminaries','theorem_spine','gppa_theory',
+        'related_work','topological_obstruction','conclusion']
+appendices = ['supplements/linear_attainment','supplements/general_modulus',
+              'supplements/hamilton_example','supplements/appendix_hamilton',
+              'sections/bregman_example','sections/gppa_extension']
+main = (paper/'main.tex').read_text()
+inputs = re.findall(r'\\input\{([^}]+)\}', main)
+assert inputs == ['sections/'+name for name in core]+appendices
+assert r'\newtheorem{theorem}{定理}' in main
+assert r'\newtheorem{assumption}{假设}' in main
+assert r'\RLEBTechnicalAppendix' in (paper/'supplement.tex').read_text()
+source_paths = [paper/'main.tex',paper/'supplement.tex'] + [paper/(name+'.tex') for name in inputs]
+manuscript_sources = {str(path.relative_to(root)):hashlib.sha256(path.read_bytes()).hexdigest()
+                      for path in source_paths}
+source_texts = [path.read_text() for path in source_paths[2:]]
+core_texts = source_texts[:len(core)]
+for sources in [core_texts, source_texts]:
+    joined = '\n'.join(sources)
+    labels = re.findall(r'\\label\{([^}]+)\}', joined)
+    assert len(labels) == len(set(labels)), 'duplicate manuscript labels'
+    references = re.findall(r'\\(?:ref|eqref|nameref)\{([^}]+)\}', joined)
+    assert set(references) <= set(labels), sorted(set(references)-set(labels))
+    assert not [ord(c) for c in joined if ord(c)<32 and c not in '\n\r\t']
+bib = (paper/'references.bib').read_text()
+bibkeys = re.findall(r'@\w+\{([^,]+),',bib)
+assert len(bibkeys)==len(set(bibkeys))
+cited = set()
+for source in source_texts:
+    for group in re.findall(r'\\cite(?:\[[^]]*\])?\{([^}]+)\}',source):
+        cited.update(key.strip() for key in group.split(','))
+assert cited<=set(bibkeys), sorted(cited-set(bibkeys))
+for k in range(10):
+    normal = Q(1,2**k)
+    output_normal = normal/2
+    assert normal-output_normal == output_normal
+    assert output_normal**2 == normal**2/4
+    assert 2 > Q(3,2)*normal  # Actual tangent jump violates the proposed physical lift.
+
 result={'outline_sha256':hashlib.sha256(outline.read_bytes()).hexdigest(),
         'visible_structure':'PASS','first_sections':first,'third_sections':third,'fourth_sections':fourth,
         'semimonotone_exact_samples':samples,'critical_collision':'verified complete fiber at input0',
@@ -279,7 +320,8 @@ result={'outline_sha256':hashlib.sha256(outline.read_bytes()).hexdigest(),
         'convex_corner_prox':'zero, corner, boundary, cross-sign and distant inputs checked',
         'precision':'exact SymPy','randomness':'none',
         'limit':'finite algebra and structure checks supplement the analytic proofs in the current outline'}
-result.update({'python': platform.python_version(), 'sympy': sp.__version__,
+result.update({'manuscript_sources': manuscript_sources, 'manuscript_structure': 'PASS',
+               'manuscript_citations': sorted(cited), 'python': platform.python_version(), 'sympy': sp.__version__,
                'outline_math': outline_math,
                'sharp_diagnostics': {'scalar_family': scalar_family(),
                                      'energy_family': energy_family(),

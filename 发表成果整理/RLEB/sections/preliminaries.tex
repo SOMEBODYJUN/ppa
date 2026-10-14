@@ -1,72 +1,467 @@
-\subsection{记号与收敛判定}
+\section{前置知识}
 \label{sec:preliminaries}
 
-全文在 $X=\mathbb R^n$ 中讨论；除正定度量一节另作说明外，
-内积和范数采用 Euclidean 约定。
-对非空闭集 $S\subset X$，记
-\[
- d(x,S)=\inf_{p\in S}\|x-p\|,\qquad
- P_S(x)=\{p\in S:\|x-p\|=d(x,S)\}.
-\]
-有限维性保证 $P_S(x)$ 非空，但最近点可以不唯一。
-对集值映射 $T:X\rightrightarrows X$，其不动点集为
-$\operatorname{Fix}T=\{x:x\in T(x)\}$。
-给定 $F:X\rightrightarrows X$ 和 $\lambda>0$，近端关系
-$J_{\lambda F}=(I+\lambda F)^{-1}$ 满足
-$\operatorname{Fix}J_{\lambda F}=F^{-1}(0)$。
-其定义域、单值性和连续性在非单调情形均须另行验证。
+\subsection{原算子上的 RL 条件及其等价刻画}
+\label{subsec:RL-definition}
 
-证明一条轨道收敛到非孤立零集中的一点，包含两个不同步骤：
-先证明轨道是 Cauchy 列，再证明它到零集的距离趋于零。
-事实上，若 $(x^k)$ 是 Cauchy 列且 $d(x^k,S)\to0$，
-完备性给出 $x^k\to x^\infty$，距离函数的连续性和 $S$ 的闭性给出
-$x^\infty\in S$。有限长度
-$\sum_k\|x^{k+1}-x^k\|<\infty$ 是 Cauchy 性的一种充分条件。
-下面的引理将距离估计和步长估计分别保留。
+全文在 Euclidean 空间 $X=\mathbb R^n$（$n\ge1$）中讨论，
+内积和范数分别记为 $\langle\cdot,\cdot\rangle$ 与 $\|\cdot\|$。
+对集值映射 $F:X\rightrightarrows X$，记
+\[
+ \gph F=\{(u,u^*):u^*\in F(u)\},\qquad
+ \zer F=\{u:0\in F(u)\}.
+\]
+固定步长 $\lambda>0$、尺度 $R>0$ 及图块
+$\mathcal G\subset\gph F$。
+几何模 $\omega:[0,R]\to[0,\infty)$ 取为有限非减函数，
+满足 $\omega(0)=0$ 且在零处右连续。
+下述条件以原图中两个点的内积衡量它们所生成的近端步的几何关系。
 
-\begin{lemma}[距离收缩与有限长度]
-\label{lem:distance-length-interface}
-设 $S\subset X$ 非空闭，$R>0$，$0<\kappa<1$。
-取非减函数 $b:[0,R]\to[0,\infty)$，$b(0)=0$，并假设
+\begin{definition}[一般模 RL 次单调性]
+\label{def:RL}
+\label{def:graph-RL}
+称 $\mathcal G$ 在尺度 $R$ 上满足一般模 RL 条件，如果对任意
+$(u,u^*),(v,v^*)\in\mathcal G$，只要
 \[
- \Theta_\kappa(t):=\sum_{j=0}^{\infty}b(\kappa^j t)<\infty
- \qquad (0\leq t\leq R).
+ \delta:=\|u-v+\lambda(u^*-v^*)\|\le R,
 \]
-若一条无限序列 $(x^k)$ 满足 $d_0=d(x^0,S)\leq R$，以及
+就有
+\begin{equation}
+ \lambda\langle u-v,u^*-v^*\rangle
+ \ge\frac14\bigl\{\delta^2-\omega(\delta)^2\bigr\}.
+ \label{eq:graph-RL}
+\end{equation}
+若 $\omega(t)=Lt^\gamma$，其中 $L\ge0$、$0<\gamma\le1$，
+则称为幂次 RL 条件，并记为 $\mathrm{RL}(\lambda,\gamma,L;R)$。
+\end{definition}
+
+当 $\mathcal G=\gph F$ 时，定义~\ref{def:RL} 作用于完整原图；
+对于局部图块，条件同样覆盖该图块中所有满足尺度限制的点对，
+包括跨分支点对及 $\delta=0$ 的情形。
+尺度 $R$ 限制的是两个近端输入之差，
+因而不能将一个输入球的半径直接用作球内全部点对的测试尺度。
+取 $\omega(t)=t$ 时，式~\eqref{eq:graph-RL}
+成为受检点对上的单调性不等式。
+
+图块 $\mathcal G$ 生成的近端关系及其自然输入域为
 \[
- d(x^{k+1},S)\leq\kappa d(x^k,S),\qquad
- \|x^{k+1}-x^k\|\leq b(d(x^k,S))\quad(k\geq0),
+ T_{\mathcal G}(x)
+ :=\{u:(u,(x-u)/\lambda)\in\mathcal G\},\qquad
+ D_{\mathcal G}:=\{u+\lambda u^*:(u,u^*)\in\mathcal G\}.
 \]
-则它具有有限长度，收敛到某个 $x^\infty\in S$，并有
+完整图对应普通预解式
 \[
- \sum_{j=k}^{\infty}\|x^{j+1}-x^j\|
- \leq\Theta_\kappa(d(x^k,S))
- \leq\Theta_\kappa(\kappa^k d_0),\qquad
- \|x^\infty-x^k\|\leq\Theta_\kappa(d(x^k,S)).
+ J_{\lambda F}(x)=\{u:(x-u)/\lambda\in F(u)\}.
 \]
+因此 $T_{\mathcal G}(x)\subset J_{\lambda F}(x)$，
+而 $D_{\mathcal G}$ 恰为 $T_{\mathcal G}$ 的定义域。
+
+\begin{lemma}[RL 的等价近端条件]
+\label{lem:RL-J}
+\label{lem:minty-equivalence}
+定义~\ref{def:RL} 的条件等价于：对所有 $x,z\in D_{\mathcal G}$，
+只要 $\delta=\|x-z\|\le R$，则每个
+$u\in T_{\mathcal G}(x)$、$v\in T_{\mathcal G}(z)$ 均满足
+\begin{equation}
+ \|u-v\|^2+\|(x-u)-(z-v)\|^2
+ \le\frac12\bigl\{\delta^2+\omega(\delta)^2\bigr\}.
+ \label{eq:RL-resolvent-energy}
+\end{equation}
+当 $\omega(t)=Lt^\gamma$ 时，这一条件写为
+\begin{equation}
+ \|u-v\|^2+\|(x-u)-(z-v)\|^2
+ \le\frac12\bigl\{\|x-z\|^2+L^2\|x-z\|^{2\gamma}\bigr\}.
+ \label{eq:resolvent-energy-all-pairs}
+\end{equation}
+我们称式~\eqref{eq:resolvent-energy-all-pairs} 所规定的性质为
+$\gamma$-loosely nonexpansive，其常数为 $L$、测试尺度为 $R$，
+量词与式~\eqref{eq:RL-resolvent-energy} 相同。
 \end{lemma}
 
 \begin{proof}
-记 $d_k=d(x^k,S)$。迭代距离估计得 $d_{k+j}\leq\kappa^j d_k$，
-所以非减性给出
-$\sum_{j=k}^{\infty}\|x^{j+1}-x^j\|\leq\Theta_\kappa(d_k)$。
-特别地，总长度有限，故 $(x^k)$ 为 Cauchy 列。
-又因 $d_k\leq\kappa^k d_0\to0$，极限属于 $S$。
-对每个有限尾段应用三角不等式并令终点指标趋于无穷，即得尾项估计。
+对相应的图点写 $x=u+\lambda u^*$、$z=v+\lambda v^*$，则
+\[
+ \|u-v\|^2+\lambda^2\|u^*-v^*\|^2
+ =\|x-z\|^2-2\lambda\langle u-v,u^*-v^*\rangle.
+\]
+将式~\eqref{eq:graph-RL} 代入右端，
+即得式~\eqref{eq:RL-resolvent-energy}。
+反过来，每对图点都生成这样一对输入，移项便恢复原图条件。
 \end{proof}
 
-当 $b(t)=\delta t$ 时，上述引理给出常用的线性距离收缩判定
+令 $x=z$，式~\eqref{eq:RL-resolvent-energy} 给出
+$2\|u-v\|^2\le0$，所以 $T_{\mathcal G}$ 在其自然域上单值。
+这一结论只涉及已由图块表示的输入和输出：
+它既不保证指定工作域包含于 $D_{\mathcal G}$，
+也不排除完整图在该图块之外产生其他近端输出。
+后文使用的零点锚条件则只比较实际输出与输入的一个最近零点，
+无需比较两个不同输出，因而可以容许多值近端更新。
+
+\subsection{广义度量次正则与模函数}
+\label{subsec:true-error-bound}
+
+对集合 $E$，记 $d(x,E)=\inf_{e\in E}\|x-e\|$，
+并约定 $d(x,\varnothing)=+\infty$。
+设 $\Phi:X\rightrightarrows Z$，其中 $X,Z$ 为 Euclidean 空间，
+$(\bar x,\bar w)\in\gph\Phi$ 且 $\bar x\in\Lambda\subset X$。
+取 $\bar x$ 的邻域 $U$、窗口 $\bar t>0$，以及有限非减函数
+$\psi:[0,\bar t]\to[0,\infty)$，满足 $\psi(0)=0$ 且在零处右连续。
+本文使用相对于 $\Lambda$ 的广义度量次正则条件
+\begin{equation}
+ \left.
+ \begin{gathered}
+ x\in U\cap\Lambda,\\
+ d(\bar w,\Phi(x))\le\bar t
+ \end{gathered}
+ \right\}
+ \quad\Longrightarrow\quad
+ d\bigl(x,\Phi^{-1}(\bar w)\cap\Lambda\bigr)
+ \le\psi\bigl(d(\bar w,\Phi(x))\bigr).
+ \label{eq:relative-subregularity}
+\end{equation}
+这里固定右端值 $\bar w$，由残差控制输入到相应解集的距离。
+取 $\psi(t)=Kt$、$K>0$，得到线性次正则距离界。
+经典度量次正则性要求该线性界在解点邻域的全部相关输入上成立
+\cite[Definition~1]{LukeTam2025GeneralizedMonotonicity}；
+式~\eqref{eq:relative-subregularity} 还明确列出残差窗口，
+所以应用时须证明被评价的残差不超过 $\bar t$。
+强度量次正则性将左端改为 $\|x-\bar x\|$，
+从而还要求所考察状态集中的局部解唯一；
+度量正则性则允许右端值 $w$ 在 $\bar w$ 的邻域内变化。
+本文不要求这两种加强。
+
+幂次模 $\psi(t)=ct^q$（$c,q>0$）给出 H\"older 型误差界，
+一般模则容许非幂次的残差响应。
+在近端迭代中，$\omega$ 描述一步的几何约束，
+$\psi$ 将输出残差转换为到目标集的距离。
+这两个模承担不同的作用；下列复合不等式将给出统一的距离收缩：
+\[
+ \psi\!\left(\frac{t+\omega(t)}{2\lambda}\right)\le\kappa t,
+ \qquad 0<t\le R,\quad 0<\kappa<1,
+\]
+其中每个自变量都须处于 $\psi$ 的定义域内。
+点收敛还需要相应位移上界可和。
+
+对原关系 $F$，固定非空闭目标集 $S\subset\zer F$，并记
+\[
+ d(x):=d(x,S),\qquad
+ P_S(x):=\{p\in S:\|x-p\|=d(x)\}.
+\]
+有限维性与闭性保证 $P_S(x)$ 非空，但最近点可以不唯一。
+完整原关系的真实残差定义为
+\[
+ r_F(y):=d(0,F(y))=\inf_{w\in F(y)}\|w\|.
+\]
+空纤维的残差为 $+\infty$；对于任一所选图值 $w\in F(y)$，
+总有 $r_F(y)\le\|w\|$，而无须假设下确界被取到。
+
+\begin{definition}[一般模真实残差误差界]
+\label{def:true-EB}
+\label{def:admissible-gauge}
+给定输出集 $Y\subset X$、窗口 $\bar t>0$，以及有限非减、
+在零处右连续的 $\psi:[0,\bar t]\to[0,\infty)$，$\psi(0)=0$。
+若
+\begin{equation}
+ y\in Y,\quad r_F(y)\le\bar t
+ \quad\Longrightarrow\quad
+ d(y,S)\le\psi(r_F(y)),
+ \label{eq:gauge-EB}
+\end{equation}
+则称 $F$ 在 $Y$ 上满足相对于 $S$ 的一般模真实残差误差界。
+线性与幂次情形分别对应 $\psi(t)=Kt$ 和 $\psi(t)=ct^q$。
+\end{definition}
+
+当 $\Phi=F$、$\bar w=0$，并且目标是完整零集
+（或相对于 $\Lambda$ 的完整零集）时，
+定义~\ref{def:true-EB} 就给出式~\eqref{eq:relative-subregularity}
+中的距离界。
+对于指定零簇 $S\subsetneq\zer F$，它还要求输出定位于该零簇附近：
+若 $y\in Y\cap\zer F$，式~\eqref{eq:gauge-EB} 强制 $y\in S$。
+因此，到完整零集的误差界不能直接替代到 $S$ 的误差界。
+无论目标如何选择，$r_F$ 均取自完整纤维 $F(y)$。
+
+\subsection{广义预解式及普通 PPA}
+\label{subsec:resolvents}
+
+固定处处有定义的核 $v:X\to X$。
+广义预解式作为完整关系定义为
+\begin{equation}
+ \begin{split}
+ J^v_{\lambda F}&:=(v+\lambda F)^{-1}\circ v,\\
+ J^v_{\lambda F}(x)
+ &=\{y\in X:v(x)-v(y)\in\lambda F(y)\}.
+ \end{split}
+ \label{eq:generalized-resolvent}
+\end{equation}
+这是固定核 warped resolvent 的关系形式
+\cite[Definition~1.1]{BuiCombettes2020Warped}。
+取 $v=\Id$，便得到普通预解式及其包含关系
+\[
+ J_{\lambda F}=(\Id+\lambda F)^{-1},\qquad
+ y\in J_{\lambda F}(x)\quad\Longleftrightarrow\quad
+ x-y\in\lambda F(y).
+\]
+普通近端点算法（PPA）的完整更新为
+\begin{equation}
+ x^{k+1}\in J_{\lambda F}(x^k),\qquad
+ \frac{x^k-x^{k+1}}{\lambda}\in F(x^{k+1}).
+ \label{eq:complete-PPA}
+\end{equation}
+固定核广义近端点算法（GPPA）则采用
+$x^{k+1}\in J^v_{\lambda F}(x^k)$。
+当 $v(x)=Qx$、$Q\succ0$ 时，得到固定正定度量更新；
+当 $v=\nabla\varphi$ 时，其原始方程为
+\[
+ \nabla\varphi(x^k)-\nabla\varphi(x^{k+1})
+ \in\lambda F(x^{k+1}).
+\]
+核的引入改变了隐式方程，因此也改变了一步残差与物理位移之间的关系。
+
+在非单调情形，预解式的输入覆盖、单值性与连续性均须分别建立。
+对声明的输入域 $D$，完整覆盖是指
+$J^v_{\lambda F}(x)\ne\varnothing$ 对每个 $x\in D$ 成立。
+若算法采用允许子关系 $\mathcal J_v(x)\subset J^v_{\lambda F}(x)$，
+则须固定这一关系，证明其在 $D$ 上非空，并对其全部输出检验迭代条件。
+记 $\Fix T:=\{x:x\in T(x)\}$，则完整关系总有
+\[
+ \Fix J^v_{\lambda F}=\zer F,\qquad
+ \Fix J_{\lambda F}=\zer F,
+\]
+因为 $x\in J^v_{\lambda F}(x)$ 当且仅当 $0\in F(x)$。
+子关系只能自动满足 $\Fix\mathcal J_v\subset\zer F$；
+若要取得反向包含，还须保留零点上的对角输出。
+
+\subsection{一步近端估计}
+\label{subsec:one-step}
+
+最近零点锚条件将定义~\ref{def:RL} 中的一个图点固定为零点。
+对于收敛分析，这种比较已经足以同时控制输出距离与实际步长。
+
+\begin{lemma}[最近零点锚的一步估计]
+\label{lem:one-step}
+\label{lem:solution-comparison}
+设 $y\in J_{\lambda F}(x)$，$d=d(x)\le R$，
+且存在 $p\in P_S(x)$ 满足
+\begin{equation}
+ \langle y-p,x-y\rangle
+ \ge\frac{d^2-\omega(d)^2}{4}.
+ \label{eq:one-step-anchor}
+\end{equation}
+置 $s=\|x-y\|$、$d^+=d(y)$ 和 $B(t)=(t+\omega(t))/2$，则
+\begin{align}
+ (d^+)^2+s^2&\le\frac{d^2+\omega(d)^2}{2},
+ \label{eq:energy-one-step}\\
+ s&\le B(d),\qquad r_F(y)\le s/\lambda.
+ \label{eq:step-one-step}
+\end{align}
+若 $F$ 在 $Y$ 上满足定义~\ref{def:true-EB} 的误差界，
+且 $y\in Y$、$B(R)/\lambda\le\bar t$，则
+\begin{equation}
+ d^+\le\psi(r_F(y))\le\psi(s/\lambda)
+ \le\psi(B(d)/\lambda).
+ \label{eq:direct-recursion-general}
+\end{equation}
+当 $d=0$ 时，每个满足上述锚条件的输出均为 $y=x$。
+\end{lemma}
+
+\begin{proof}
+由 $x-p=(y-p)+(x-y)$ 及锚条件，
+\[
+ \|y-p\|^2+s^2
+ =d^2-2\langle y-p,x-y\rangle
+ \le\frac{d^2+\omega(d)^2}{2}.
+\]
+结合 $d^+\le\|y-p\|$，得到式~\eqref{eq:energy-one-step}。
+另一方面，柯西不等式给出
+\[
+ s^2+\frac{d^2-\omega(d)^2}{4}
+ \le\langle x-p,x-y\rangle\le ds,
+\]
+因此
+\begin{equation}
+ (2s-d)^2\le\omega(d)^2,
+ \qquad s\le\frac{d+\omega(d)}2=B(d).
+ \label{eq:power-step}
+\end{equation}
+近端包含 $(x-y)/\lambda\in F(y)$ 随即给出
+\[
+ r_F(y)\le s/\lambda\le B(d)/\lambda
+ \le B(R)/\lambda\le\bar t.
+\]
+故误差界适用于该输出，且 $\psi$ 的每次评价都在定义域内。
+由 $\psi$ 非减，得到式~\eqref{eq:direct-recursion-general}。
+若 $d=0$，闭性给 $x\in S$，最近点只能是 $p=x$；
+锚条件于是成为 $-s^2\ge0$，从而 $y=x$。
+\end{proof}
+
+式~\eqref{eq:energy-one-step} 保留了步长平方项，
+可在线性误差界下导出另一距离收缩因子；
+式~\eqref{eq:step-one-step} 则直接给出一般模情形的位移上界。
+与误差界结合时，近端步提供的是完整真实残差的上界，
+而非该残差与所选图值范数的等式。
+
+\subsection{标准距离--长度收敛定理}
+\label{subsec:distance-length}
+
+对于非空闭集 $S$，集合距离趋于零与点序列收敛是两个不同的结论。
+若轨道同时为 Cauchy 列，则完备性给出极限，
+而距离函数的连续性和 $S$ 的闭性使极限属于 $S$。
+有限长度是保证 Cauchy 性的一种直接方式。
+
+\begin{assumption}[距离收缩与可和位移]
+\label{ass:distance-length}
+取 $R>0$、$0<\kappa<1$，以及有限非减函数
+$H:[0,R]\to[0,\infty)$，满足 $H(0)=0$ 和
+\[
+ \Theta_\kappa(R)<\infty,\qquad
+ \Theta_\kappa(t):=\sum_{j=0}^{\infty}H(\kappa^jt).
+\]
+设已经存在的无限序列 $(x^k)_{k\ge0}\subset X$ 满足
+$d_0:=d(x^0,S)\le R$，且对每个 $k\ge0$ 有
+\begin{equation}
+ d(x^{k+1},S)\le\kappa d(x^k,S),\qquad
+ \|x^{k+1}-x^k\|\le H(d(x^k,S)).
+ \label{eq:distance-length-premises}
+\end{equation}
+\end{assumption}
+
+\begin{theorem}[标准有限长度收敛]
+\label{thm:distance-length}
+\label{lem:distance-length-interface}
+在假设~\ref{ass:distance-length} 下，序列 $(x^k)$ 具有有限长度，
+并收敛到某个 $x^\infty\in S$。记 $d_k=d(x^k,S)$，则
+\begin{align}
+ d_k&\le\kappa^kd_0,\notag\\
+ \sum_{j=k}^{\infty}\|x^{j+1}-x^j\|
+ &\le\Theta_\kappa(d_k)
+ \le\Theta_\kappa(\kappa^kd_0),
+ \label{eq:distance-length-tail}\\
+ \|x^\infty-x^k\|
+ &\le\Theta_\kappa(d_k)
+ \le\Theta_\kappa(\kappa^kd_0).
+ \label{eq:distance-length-point}
+\end{align}
+\end{theorem}
+
+\begin{proof}
+迭代距离不等式得 $d_{k+j}\le\kappa^jd_k$。
+由 $H$ 非减，
+\[
+ \sum_{j=0}^{\infty}\|x^{k+j+1}-x^{k+j}\|
+ \le\sum_{j=0}^{\infty}H(\kappa^jd_k)
+ =\Theta_\kappa(d_k)
+ \le\Theta_\kappa(\kappa^kd_0).
+\]
+特别地，总长度有限，故 $(x^k)$ 为 Cauchy 列并有极限 $x^\infty$。
+又因 $d_k\le\kappa^kd_0\to0$，$S$ 的闭性给出 $x^\infty\in S$。
+对有限尾段应用三角不等式，再令末端指标趋于无穷，
+即得式~\eqref{eq:distance-length-point}。
+当 $d_0=0$ 时，$H(0)=0$ 直接使轨道驻定。
+\end{proof}
+
+线性位移 $H(t)=\delta t$ 对应常用的距离收缩判定
 \cite[Lemma~2]{LukeTam2025GeneralizedMonotonicity}。
-普通 PPA 的幂次反射模给出步长函数 $b(t)=(t+Lt^\gamma)/2$，其中
-$L\geq0$、$0<\gamma\leq1$；此时
+对于引理~\ref{lem:one-step} 给出的一般模位移
+$H(t)=B(t)=(t+\omega(t))/2$，长度上界为
 \begin{equation}
  \Theta_\kappa(t)
- =\frac12\left(\frac{t}{1-\kappa}
-              +\frac{Lt^\gamma}{1-\kappa^\gamma}\right).
+ =\frac{t}{2(1-\kappa)}
+  +\frac12\sum_{j=0}^{\infty}\omega(\kappa^jt).
  \label{eq:prelim-length-budget}
 \end{equation}
-因此，距离几何收缩仍能控制仅为 H\"older 阶的步长。
-局部算法应用还须保证每一步存在，并证明实际轨道不离开工作区域；
-引理~\ref{lem:distance-length-interface} 本身不提供这两项结论。
-下面先从近端几何和输出误差界得到上述两个估计，
-再用严格初始长度预算逐个控制有限轨道前缀。
+其可和性等价于 Dini 条件
+\[
+ \int_0^R\frac{\omega(t)}t\,dt<\infty.
+\]
+事实上，非减性给出
+\[
+ \log(1/\kappa)\,\omega(\kappa^{j+1}R)
+ \le\int_{\kappa^{j+1}R}^{\kappa^jR}\frac{\omega(t)}t\,dt
+ \le\log(1/\kappa)\,\omega(\kappa^jR),
+\]
+求和即可得到等价性；被省去的首项 $\omega(R)$ 有限。
+在这一条件下，零处连续性与可和控制
+$B(\kappa^jt)\le B(\kappa^jR)$ 还给出
+$\Theta_\kappa(t)\to0$（$t\downarrow0$）。
+
+定理~\ref{thm:distance-length} 处理的是已经存在的无限轨道。
+对于局部近端迭代，还须由输入覆盖和有限轨道前缀的长度估计证明
+每一步能够继续且始终留在工作域，然后才能使用这一结论。
+
+\subsection{回缩与固定点指数的经典工具}
+\label{subsec:classical-topology}
+
+设 $M\subset\mathbb R^n$ 为闭集。
+若存在包含 $M$ 的开集 $O$ 及连续映射 $P:O\to M$，
+满足 $P|_M=\Id$，则称 $P$ 为邻域回缩，
+$M$ 为 Euclidean neighborhood retract，简称 ENR。
+当有理同调群有限维且仅有有限多个非零项时，Euler 示性数定义为
+\[
+ \chi(M):=\sum_{j\ge0}(-1)^j\dim H_j(M;\mathbb Q).
+\]
+本文使用的紧光滑流形和紧 ENR 均可采用这一公式。
+
+若 $V\subset\mathbb R^n$ 为有界开集，
+$T$ 在 $\overline V$ 的邻域上连续，且
+$x\ne T(x)$ 对每个 $x\in\partial V$ 成立，则其固定点指数为
+\[
+ \operatorname{ind}(T,V):=\deg(\Id-T,V,0).
+\]
+我们使用指数的存在性、局部化、可加性、同伦不变性、交换性，
+以及紧 ENR 上的 Lefschetz 归一化
+\cite[\S2.1]{BenjaminGottliebCollars}。
+后者将紧 ENR $K$ 上自映射 $f$ 的总固定点指数写成
+\[
+ L(f)=\sum_{j\ge0}(-1)^j
+ \operatorname{tr}\bigl(f_*:H_j(K;\mathbb Q)\to H_j(K;\mathbb Q)\bigr).
+\]
+下面的管邻域结论给出本文所需的具体用法。
+
+\begin{classicalproposition}[严格吸引管的指数]
+\label{classical:tube-index}
+设 $M\subset\mathbb R^n$ 为非空紧 $C^2$ 无边界嵌入流形，
+管半径 $\rho>0$ 足够小，使闭管
+\[
+ N_\rho:=\{x:d(x,M)\le\rho\}
+\]
+具有唯一最近点投影和法向管坐标。
+设 $T$ 在 $N_\rho$ 的某个开邻域上连续，$T|_M=\Id$，
+且存在 $0<\kappa<1$，使
+\[
+ d(Tx,M)\le\kappa d(x,M)\qquad(x\in N_\rho).
+\]
+则
+\begin{equation}
+ \operatorname{ind}(T,\operatorname{int}N_\rho)=\chi(M).
+ \label{eq:classical-tube-index}
+\end{equation}
+\end{classicalproposition}
+
+\begin{proof}
+距离不等式给出 $T(N_\rho)\subset\operatorname{int}N_\rho$，
+并使管内的固定点恰为 $M$。
+取 $\eta$ 满足 $\kappa\rho<\eta<\rho$。
+法向缩放将 $N_\eta$ 形变回缩到 $M$，
+所以包含映射 $i:M\hookrightarrow N_\eta$ 诱导同调同构。
+记 $f=T|_{N_\eta}$，由 $f\circ i=i$ 得
+$f_*\circ i_*=i_*$，从而 $f_*=\Id$。
+因此 $L(f)=\chi(N_\eta)=\chi(M)$，
+紧 ENR 的归一化给出 $f$ 在 $N_\eta$ 中的总指数为 $\chi(M)$。
+
+为将这个指数转到环境空间，考虑
+\[
+ a=T|_{\operatorname{int}N_\rho}:
+ \operatorname{int}N_\rho\longrightarrow N_\eta,
+ \qquad
+ b:N_\eta\hookrightarrow\operatorname{int}N_\rho.
+\]
+因为 $d(Tx,M)\le\kappa d(x,M)<\eta$，映射 $a$ 有定义。
+复合 $b\circ a$ 为环境空间中的 $T$，$a\circ b=f$；
+两者的固定点均为紧集 $M$。
+指数的交换性与局部化于是给出
+式~\eqref{eq:classical-tube-index}。
+\end{proof}
+
+这一命题的拓扑部分来自管邻域的同调性质和经典指数理论。
+在后文的零簇问题中，近端的一步距离收缩提供严格吸引管，
+而统一消失的长度尾界用于构造连续的极限回缩。

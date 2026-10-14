@@ -1,265 +1,180 @@
-% Reader route: PPA main theorem -> fixed-kernel corollary -> physical lift.
-\section{固定核 GPPA 推论与物理提升}
+\subsection{固定核 GPPA}
 \label{sec:rleb-gppa-main}
 
-\subsection{近端关系与物理位移}
-
-设 $X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
-并固定一个处处有定义的核 $v:X\to X$。广义近端关系为
+\begin{definition}[固定核广义近端点算法]
+\label{def:fixed-kernel-GPPA}
+固定处处有定义的核 $v:X\to X$。给定允许子关系
+$\mathcal J_v\subset J^v_{\lambda F}$，其中
 \[
- J^v_{\lambda F}(x):=(v+\lambda F)^{-1}(v(x))
- =\{y:v(x)-v(y)\in\lambda F(y)\}.
+ J^v_{\lambda F}(x)
+ =(v+\lambda F)^{-1}(v(x))
+ =\{y:v(x)-v(y)\in\lambda F(y)\},
 \]
-我们研究物理空间中的迭代 $x^{k+1}\in\mathcal J_v(x^k)$，
-其中 $\mathcal J_v$ 是这一关系的允许子关系。
-固定非空闭集 $S\subset F^{-1}(0)$，记
-$d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$。
-其中到空集的距离取 $+\infty$。残差评价完整 $F$；
-由算法选出的图值范数只提供其上界。
+固定核 GPPA 定义为
+\begin{equation}
+\label{eq:fixed-kernel-GPPA}
+ x^{k+1}\in\mathcal J_v(x^k),\qquad
+ v(x^k)-v(x^{k+1})\in\lambda F(x^{k+1}).
+\end{equation}
+取 $\mathcal J_v=J^v_{\lambda F}$ 时，称为完整固定核 GPPA。
+\end{definition}
 
-核的作用有两个方面：核增量控制算法所选图值，
-而从核增量到物理位移还需要一个独立估计。
-后者可以来自逆映射，也可以直接来自算法对核纤维内运动的控制。
-下面沿用 PPA 假设的基本对象及条件结构，
-只列固定核所需的替换和补充，再给出主定理的 GPPA 推广。
+核增量控制本步所选的原图值，但一般不等于物理位移 $x^{k+1}-x^k$。
+因而推广普通 PPA 时，需要分别控制核空间中的一步几何和物理空间中的移动。
+以下仍以完整真残差 $r_F$ 和物理闭零集 $S$ 为对象，
+将普通 PPA 的相应条件替换为固定核条件，并加入物理位移估计。
 
-\subsection{固定核的有限长度推论}
+\subsection{固定核的替换与补充条件}
 
-\begin{assumption}[固定核 GPPA 的补充条件]
+\begin{assumption}[固定核 GPPA 的 RLEB 条件]
 \label{ass:rleb-gppa-supplement}
-沿用假设~\ref{ass:rleb-ppa} 的基本对象、$U_R$、$\psi$ 及真残差定义。
-另取有限非减 $a:[0,R]\to[0,\infty)$，在零处连续且 $a(0)=0$。
-核反射模仍记为 $\omega$，保留原模条件，定义域改为 $[0,a(R)]$。
-取有限函数 $h:[0,\infty)^2\to[0,\infty)$，
-它对各变量均非减，在 $(0,0)$ 连续且 $h(0,0)=0$。
-定义
+沿用假设~\ref{ass:rleb-ppa} 的基本对象
+$X,F,\lambda,S,U,R,\bar t,\kappa$，以及 $d$、$P_S$、$r_F$ 和 $U_R$ 的约定。
+取有限非减函数
 \[
- K(t)=\frac{a(t)+\omega(a(t))}{2},\qquad
- H(t)=h(t,K(t)),\qquad
- \Theta(t)=\sum_{j=0}^{\infty}H(\kappa^jt),\quad 0\le t\le R.
+ a:[0,R]\to[0,\infty),\qquad
+ \omega_v:[0,a(R)]\to[0,\infty),\qquad
+ \psi:[0,\bar t]\to[0,\infty),
 \]
-对同一个允许关系 $\mathcal J_v$，作以下替换与补充：
-其中 (P2) 改为下述 (G2)，并增加 (G3) 的物理提升。
+三者均在零处连续且取值为零。
+取有限函数 $h:[0,\infty)^2\to[0,\infty)$，
+它对各变量非减，在 $(0,0)$ 连续且 $h(0,0)=0$。定义
+\begin{equation}
+\label{eq:gppa-physical-moduli}
+ \begin{aligned}
+ K_v(t)&=\frac{a(t)+\omega_v(a(t))}{2},\\
+ H_v(t)&=h(t,K_v(t)),\qquad
+ \Theta_v(t)=\sum_{j=0}^{\infty}H_v(\kappa^jt),\quad 0\le t\le R.
+ \end{aligned}
+\end{equation}
+同一个允许关系 $\mathcal J_v$ 满足以下条件。
 \begin{enumerate}
-\item[(G1)] (P1) 中的 $\mathcal J$ 与 $J_{\lambda F}$ 分别换成
-$\mathcal J_v$ 与 $J^v_{\lambda F}$，输入域仍为 $U_R$。
+\item[(G1)] 对每个 $x\in U_R$，有
+$\varnothing\ne\mathcal J_v(x)\subset J^v_{\lambda F}(x)$。
 \item[(G2)] 对每个 $x\in U_R$ 和每个 $y\in\mathcal J_v(x)$，
-存在同一个 $p\in P_S(x)$，使
+存在 $p\in P_S(x)$，使以下两式同时成立：
 \begin{equation}
 \label{eq:gppa-same-anchor}
- \delta:=\|v(x)-v(p)\|\le a(d(x)),\qquad
- \|2v(y)-v(x)-v(p)\|\le\omega(\delta).
+ \begin{aligned}
+ \delta&:=\|v(x)-v(p)\|\le a(d(x)),\\
+ \langle v(y)-v(p),v(x)-v(y)\rangle
+ &\ge\frac{\delta^2-\omega_v(\delta)^2}{4}.
+ \end{aligned}
 \end{equation}
 \item[(G3)] 对上述全部允许转移，有物理位移估计
 \begin{equation}
 \label{eq:gppa-physical-transfer}
  \|y-x\|\le h\bigl(d(x),\|v(y)-v(x)\|\bigr).
 \end{equation}
-\item[(G4)] (P3) 的输出域换成 $\mathcal J_v(U_R)$，
-评价窗中的 $B(R)$ 换成 $K(R)$；真实残差仍为完整 $r_F$。
-\item[(G5)] (P4) 的残差上界 $B(t)$ 换成 $K(t)$，
-长度包络 $B(t)$ 换成 $H(t)$，即
-$\psi(K(t)/\lambda)\le\kappa t$（$0<t\le R$），且 $\Theta(R)<\infty$。
+\item[(G4)] 对每个 $y\in\mathcal J_v(U_R)$，若 $r_F(y)\le\bar t$，则
+\begin{equation}
+\label{eq:gppa-true-output-EB}
+ d(y)\le\psi(r_F(y)).
+\end{equation}
+此外，输出评价窗满足 $K_v(R)/\lambda\le\bar t$。
+\item[(G5)] 对全部 $0<t\le R$，有
+\begin{equation}
+\label{eq:gppa-compatibility}
+ \psi(K_v(t)/\lambda)\le\kappa t,
+ \qquad \Theta_v(R)<\infty.
+\end{equation}
 \end{enumerate}
 \end{assumption}
 
-\begin{corollary}[固定核 RLEB--GPPA 推广]
+这里 (G1)、(G2)、(G4)、(G5) 分别替换普通 PPA 的
+(P1)、(P2)、(P3)、(P4)，而 (G3) 是物理提升的补充条件。
+假设~\ref{ass:rleb-gppa-supplement} 独立使用这些替换后的条款，
+不要求原关系同时满足替换前的普通 PPA 前件。
+特别地，(G3) 必须在全部实际允许转移上成立。
+若以核的逆模验证它，估计必须覆盖当前输入与其全部允许输出；
+只在 $U\times U$ 上验证逆模，会预先使用尚未证明的输出留域。
+
+\subsection{固定核 GPPA 的局部有限长度}
+
+\begin{theorem}[物理空间中的局部收敛]
 \label{thm:rleb-gppa-physical}
-在假设~\ref{ass:rleb-gppa-supplement} 下，PPA 主定理~\ref{thm:rleb-ppa-general}
-的物理距离与有限长度结论适用于 $x^{k+1}\in\mathcal J_v(x^k)$，
-其中步长包络及尾预算分别采用本节的 $H$ 与 $\Theta$。
-具体地，取 $x^0\in U_R$，记 $d_0=d(x^0)$。若
+在假设~\ref{ass:rleb-gppa-supplement} 下，取 $x^0\in U_R$，记 $d_0=d(x^0)$。
+若
 \begin{equation}
 \label{eq:gppa-physical-budget}
- \Theta(d_0)<d(x^0,X\setminus U),
+ \Theta_v(d_0)<\dist(x^0,X\setminus U),
 \end{equation}
-则每条允许轨道均可无限延拓，全部点属于 $U_R$，具有有限长度，
-并收敛到某个 $x^\infty\in S\cap U$。对所有 $k\ge0$，有
+则每条轨道 $x^{k+1}\in\mathcal J_v(x^k)$ 均可无限延拓，
+全部点属于 $U_R$，具有物理有限长度，并收敛到某个 $x^\infty\in S\cap U$。
+对所有 $k\ge0$，有
 \begin{align}
- d(x^k)&\le\kappa^k d_0,\label{eq:gppa-physical-distance}\\
- \|v(x^{k+1})-v(x^k)\|&\le K(d(x^k))\le K(\kappa^k d_0),\\
- \|x^{k+1}-x^k\|&\le H(d(x^k))\le H(\kappa^k d_0),\\
- \sum_{k\ge0}\|x^{k+1}-x^k\|&\le\Theta(d_0),\\
- \|x^\infty-x^k\|&\le\Theta(d(x^k))\le\Theta(\kappa^k d_0).
+ d(x^k)&\le\kappa^kd_0,\label{eq:gppa-physical-distance}\\
+ \|v(x^{k+1})-v(x^k)\|&\le K_v(d(x^k))\le K_v(\kappa^kd_0),\\
+ \|x^{k+1}-x^k\|&\le H_v(d(x^k))\le H_v(\kappa^kd_0),\\
+ \sum_{k=0}^{\infty}\|x^{k+1}-x^k\|&\le\Theta_v(d_0),\\
+ \|x^\infty-x^k\|&\le\Theta_v(d(x^k))\le\Theta_v(\kappa^kd_0).
  \label{eq:gppa-physical-tail}
 \end{align}
-常数统一于全部允许选择，极限点可以随选择改变。
-若 $\mathcal J_v=J^v_{\lambda F}$，结论控制完整广义近端关系的全部选择。
-\end{corollary}
+这些估计统一于全部允许选择，极限点可以随选择改变。
+当 $\mathcal J_v=J^v_{\lambda F}$ 时，结论控制完整 GPPA 的全部输出。
+\end{theorem}
 
 \begin{proof}
-任取合法输入 $x\in U_R$ 及任意允许输出 $y$，
-并取 (G2) 中同时满足两项估计的最近零点 $p$。
-置
+任取 $x\in U_R$ 及 $y\in\mathcal J_v(x)$，并取 (G2) 中的同一个最近零点 $p$。
+记 $d=d(x)$ 和 $s_v=\|v(x)-v(y)\|$。
+由 (G2) 及柯西不等式，
 \[
- A=v(y)-v(p),\qquad B=v(x)-v(y),\qquad d=d(x).
+ s_v^2+\frac{\delta^2-\omega_v(\delta)^2}{4}
+ \le\langle v(x)-v(p),v(x)-v(y)\rangle
+ \le\delta s_v.
 \]
-则 $A+B=v(x)-v(p)$，而
-$\|A-B\|\le\omega(\|A+B\|)$。
-因此
+移项得到标量不等式 $(2s_v-\delta)^2\le\omega_v(\delta)^2$，从而
 \begin{equation}
 \label{eq:gppa-kernel-one-step}
- \|B\|\le\frac{\|A+B\|+\|A-B\|}{2}\le K(d).
+ s_v\le\frac{\delta+\omega_v(\delta)}2\le K_v(d).
 \end{equation}
-平行四边形恒等式还给出
-\begin{equation}
-\label{eq:gppa-kernel-energy}
- \|v(y)-v(p)\|^2+\|B\|^2
- \le\frac{a(d)^2+\omega(a(d))^2}{2}.
-\end{equation}
-这里左侧第一项是到所选核零锚的距离，不是物理距离 $d(y)$。
-
-由 (G1)，$B/\lambda\in F(y)$。于是
+(G1) 给出 $(v(x)-v(y))/\lambda\in F(y)$，故
 \[
- r_F(y)\le\|B\|/\lambda
- \le K(d)/\lambda\le K(R)/\lambda\le\bar t.
+ r_F(y)\le\frac{s_v}\lambda
+ \le\frac{K_v(d)}\lambda\le\frac{K_v(R)}\lambda\le\bar t.
 \]
-这条链先验证真残差误差界的评价域，再由 (G4)--(G5) 得到
-$d(y)\le\psi(K(d)/\lambda)\le\kappa d$（$d>0$）。
-(G3) 与 \eqref{eq:gppa-kernel-one-step} 给出 $\|y-x\|\le H(d)$。
-当 $d=0$ 时，闭性给出 $x\in S$，最近锚只能是 $p=x$。
-(G2) 强制 $B=0$，(G3) 再强制 $y=x$；
-所以零距离输入的全部允许输出驻定，距离递推仍成立。
+在已验证的输出窗内，(G4)--(G5) 因而给出 $d(y)\le\kappa d$（$d>0$），
+而 (G3) 给出 $\|y-x\|\le H_v(d)$。
+当 $d=0$ 时，$p=x$，(G2) 强制 $s_v=0$，
+(G3) 再强制 $y=x$；距离递推和物理位移界仍然成立。
 
-由 (G1) 可以构造第一步。若已构造到 $x^k\in U_R$，
-上述一步估计及有限前缀归纳给出
+由 (G1) 可以构造第一步。对任意已构造到 $x^k\in U_R$ 的有限前缀，
+每个下一允许输出均满足
 \[
  d(x^{k+1})\le\kappa^{k+1}d_0,\qquad
- \|x^{k+1}-x^0\|\le\sum_{j=0}^kH(\kappa^jd_0)
- \le\Theta(d_0)<d(x^0,X\setminus U).
+ \|x^{k+1}-x^0\|
+ \le\sum_{j=0}^{k}H_v(\kappa^jd_0)
+ \le\Theta_v(d_0)<\dist(x^0,X\setminus U).
 \]
-因而 $x^{k+1}\in U_R$，(G1) 可以再次使用。
-这是主定理~\ref{thm:rleb-ppa-general} 的有限前缀论证，步长包络改为 $H$。
-因而全部前缀合法且轨道可无限延拓。
-再在引理~\ref{lem:distance-length-interface} 中取 $b=H$，
-得到有限长度、点收敛及 \eqref{eq:gppa-physical-tail}；
-严格预算保证极限属于 $U$。
-全部估计均逐输入、逐允许输出成立，故不依赖所选分支。
+于是 $x^{k+1}\in U_R$，覆盖条件可以再次使用，归纳给出无限延拓。
+在定理~\ref{thm:distance-length} 中取位移包络 $H_v$，
+即得轨道在物理空间中的有限长度、点收敛及尾界；同一严格预算保证极限仍在 $U$。
 \end{proof}
 
-\begin{corollary}[解附近的统一初值邻域]
-\label{cor:gppa-physical-basin}
-在推论~\ref{thm:rleb-gppa-physical} 的条件下，取 $\bar x\in S\cap U$
-及有限 $b>0$，使 $B_b(\bar x)\subset U$。
-存在 $0<\delta\le R$ 满足 $\delta+\Theta(\delta)<b$。
-每个 $x^0\in B_\delta(\bar x)$ 的全部允许轨道均可无限延拓，
-留在 $B_b(\bar x)$，并收敛到 $S\cap B_b(\bar x)$ 中一点。
-\end{corollary}
-\begin{proof}
-当 $t\downarrow0$ 时，每项 $H(\kappa^jt)\to0$，
-且在 $0\le t\le R$ 上由可和列 $H(\kappa^jR)$ 控制。
-级数的控制收敛给出 $\Theta(t)\to0$，故可选上述 $\delta$。
-对 $x^0\in B_\delta(\bar x)$，有 $d_0\le\|x^0-\bar x\|<\delta$，且
-$d(x^0,X\setminus U)\ge b-\|x^0-\bar x\|>b-\delta>\Theta(d_0)$。
-应用固定核推论，全部轨道及极限到 $\bar x$ 的距离均小于
-$\delta+\Theta(\delta)<b$。
-\end{proof}
+取 $v=\Id$、$a(t)=t$、$\omega_v=\omega$ 和 $h(t,s)=s$，
+便有 $K_v=H_v=B$、$\Theta_v=\Theta$，
+假设~\ref{ass:rleb-gppa-supplement} 与定理~\ref{thm:rleb-gppa-physical}
+分别恢复普通 PPA 的假设与定理。
+一般核的核增量控制真残差，物理提升 (G3) 则把这种控制传递给相邻物理位移。
+例如，若在全部允许转移上有
+$\|x-y\|\le\eta(\|v(x)-v(y)\|)$，可取 $h(t,s)=\eta(s)$；
+非单射核也可通过 $h(t,s)=\eta(s)+\zeta(t)$
+控制核所不能区分的方向，只须这些函数满足假设中的条件。
 
-\begin{remark}[提升条件的两种来源]
-若在实际输入及其全部输出之间有逆模
-$\|x-y\|\le\eta(\|v(x)-v(y)\|)$，则可取 $h(t,s)=\eta(s)$。
-必须在证明输出留域之前认证这些点对；
-只在 $U\times U$ 上有逆估计并不足以证明新输出留在 $U$。
-对于非单射核，可以取 $h(t,s)=\eta(s)+\zeta(t)$，
-其中 $\zeta$ 控制核不可见方向的运动，$\zeta(0)=0$。
-该推论只需要相邻允许转移上的位移界，不要求全域逆映射存在。
-\end{remark}
 
-\begin{corollary}[核能量供应的物理收缩]
-\label{cor:gppa-physical-energy}
-沿用推论~\ref{thm:rleb-gppa-physical} 的对象和 (G1)--(G4)，
-记 $M_0=\psi(\bar t)$，并取有限非负函数
-$\rho,g:[0,M_0]\to[0,\infty)$，$\rho(0)=g(0)=0$。
-对每个允许转移 $x\mapsto y$，要求 (G2) 中可以选择同一个最近零锚
-$p$，既满足该项的两条估计，又满足
+\begin{remark}[非单射核的纤维方向]
+物理位移条件不能由核增量的衰减代替。
+例如在 $\R^2$ 上取 $F(t,s)=(t,0)$、$v(t,s)=(t,0)$、$\lambda=1$，则
 \[
- \rho(d(y))\le\|v(y)-v(p)\|.
+ S=\{0\}\times\R,\qquad
+ J^v_F(t,s)=\{(t/2,u):u\in\R\},\qquad r_F(t,s)=|t|.
 \]
-对每个 $y\in\mathcal J_v(U_R)$，当 $r_F(y)\le\bar t$ 时，另要求
-$g(d(y))\le r_F(y)$。
-将 (G5) 的直接兼容条件替换为下列标量条件：
-对每个 $0<t\le R$ 和每个 $0\le q\le M_0$，
-\begin{equation}
-\label{eq:gppa-energy-scalar-gate}
- \rho(q)^2+\lambda^2g(q)^2
- \le\frac{a(t)^2+\omega(a(t))^2}{2}
- \quad\Longrightarrow\quad q\le\kappa t.
-\end{equation}
-仍保留 $\Theta(R)<\infty$。
-则满足严格物理初值预算的全部允许轨道具有固定核推论的全部结论。
-\end{corollary}
-
-\begin{proof}
-核一步估计仍先给
-$r_F(y)\le\|v(x)-v(y)\|/\lambda\le K(R)/\lambda\le\bar t$。
-所以 (G4) 给出 $0\le d(y)\le M_0$，而残差下界给出
-$\lambda g(d(y))\le\|v(x)-v(y)\|$。
-与同一最近零锚的下界及核平行四边形估计合并，得到
-\[
- \rho(d(y))^2+\lambda^2g(d(y))^2
- \le\|v(y)-v(p)\|^2+\|v(x)-v(y)\|^2
- \le\frac{a(d(x))^2+\omega(a(d(x)))^2}{2}.
-\]
-当 $d(x)>0$ 时，\eqref{eq:gppa-energy-scalar-gate} 给出
-$d(y)\le\kappa d(x)$。当 $d(x)=0$ 时，
-(G2)--(G3) 已强制 $y=x$。
-物理步长仍至多 $H(d(x))$，故固定核推论的有限前缀留域、无限延拓与尾和证明
-逐项适用。这里不需要 $\rho$ 或 $g$ 可逆，也没有越过其输出评价域。
-\end{proof}
-
-
-\begin{corollary}[可检验的长度条件]
-\label{cor:gppa-dini-length}
-在推论~\ref{thm:rleb-gppa-physical} 的其他条件下，$\Theta(R)<\infty$ 等价于
-\[
- \int_0^R H(t)\,\frac{dt}{t}<\infty.
-\]
-若 $a(t)\le At^\beta$、$\omega(s)\le Ls^\gamma$，并且
-$h(t,s)\le Ms^\theta+Nt^\delta$，其中
-$A>0$，$L,M,N\ge0$，$\beta,\delta>0$，$0<\gamma,\theta\le1$，
-则长度条件成立，且
-\[
- \Theta(t)\le\frac{M}{2^\theta}
- \left(\frac{A^\theta t^{\beta\theta}}{1-\kappa^{\beta\theta}}
- +\frac{L^\theta A^{\gamma\theta}t^{\beta\gamma\theta}}
-              {1-\kappa^{\beta\gamma\theta}}\right)
- +\frac{Nt^\delta}{1-\kappa^\delta}.
-\]
-\end{corollary}
-
-\begin{proof}
-由 $H$ 非减，对每个 $j\ge0$ 有
-\[
- \log(1/\kappa)H(\kappa^{j+1}R)
- \le\int_{\kappa^{j+1}R}^{\kappa^jR}\frac{H(t)}t\,dt
- \le\log(1/\kappa)H(\kappa^jR).
-\]
-求和得到等价性。幂模情形利用
-$(r+s)^\theta\le r^\theta+s^\theta$，再分别求几何级数。
-\end{proof}
-
-\begin{remark}[非单射核与物理位移]
-\label{ex:gppa-null-fiber}
-在 $\mathbb R^2$ 上取 $v(t,s)=(t,0)$、$\lambda=1$。
-若 $F(t,s)=(t,s)$，则完整输出唯一，
-$J_F^v(t,s)=(t/2,0)$，零集为 $S=\{0\}$。
-取 $a(t)=t$、$\omega=0$、$h(t,s)=t+s$、$\psi(t)=t$，
-有 $K(t)=t/2$、$H(t)=3t/2$、$\kappa=1/2$、$\Theta(t)=3t$。
-这些条件对完整关系成立；例如 $R=1$、$\bar t=1$、$U=\mathbb R^2$。
-位移界来自
-$\|(t,s)-(t/2,0)\|\le|t|/2+|s|\le K(d)+d$。
-核不可见的第二坐标在第一步被消除。
-这给出核全域非单射而完整物理迭代仍收敛的例子。
-
-若改取 $F=v$，目标零集相应改为 $S=\{0\}\times\mathbb R$，
-完整输出变为 $\{(t/2,q):q\in\mathbb R\}$。
-此时 $d((t/2,q),S)=r_F(t/2,q)=|t|/2$，
-物理真残差误差界和核反射估计仍成立，
-但不存在上述有限位移控制。轨道
-$x^k=(2^{-k},(-1)^k)$ 合法而不收敛。
-因此核不可见方向的控制不能由真误差界代替。
-此外，完整关系下若 $p\in S\cap U$、$q\in S$ 且 $v(p)=v(q)$，
-则 $q\in J^v_{\lambda F}(p)$；(G2)--(G3) 在零距离输入处强制 $q=p$。
-故当 $S\subset U$ 时，完整关系的条件要求 $v|_S$ 单射，
-但并不要求 $v$ 在全空间单射。
+完整输入覆盖成立，核锚内积等于 $d(x,S)^2/4$。
+取 $U=\R^2$、$a(r)=r$、$\omega_v=0$、$\psi(q)=q$、
+$R=\bar t=1$、$\kappa=1/2$，
+以及 $h(r,q)=r+q$，则 (G1)、(G2)、(G4)、(G5) 均成立。
+但 (G3) 不成立：完整关系允许轨道
+$x^k=(2^{-k},(-1)^k)$，其核坐标和到 $S$ 的距离均趋于零，
+物理点却不收敛。特别地，零输入的完整纤维包含整条 $S$，
+而 (G3) 与 $h(0,0)=0$ 会强制零输入的全部允许输出驻定。
 \end{remark}
