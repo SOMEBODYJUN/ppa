@@ -1,0 +1,94 @@
+{
+  "outline_sha256": "a0e0ff957d5139fc17ca58c540a099839ccb8c5395b667535eb726692aa9f4c6",
+  "visible_structure": "PASS",
+  "third_sections": [
+    "3.1",
+    "3.2",
+    "3.3"
+  ],
+  "fourth_sections": [
+    "4.1",
+    "4.2",
+    "4.3"
+  ],
+  "semimonotone_exact_samples": [
+    {
+      "m": "0",
+      "s": "0",
+      "A": "1",
+      "Delta": "1",
+      "L_J": "1",
+      "L_RL": "1",
+      "energy_peak": "1"
+    },
+    {
+      "m": "-1/4",
+      "s": "0",
+      "A": "3/4",
+      "Delta": "1",
+      "L_J": "4/3",
+      "L_RL": "5/3",
+      "energy_peak": "17/9"
+    },
+    {
+      "m": "0",
+      "s": "-1/4",
+      "A": "3/4",
+      "Delta": "1",
+      "L_J": "1",
+      "L_RL": "5/3",
+      "energy_peak": "17/9"
+    },
+    {
+      "m": "1",
+      "s": "0",
+      "A": "2",
+      "Delta": "1",
+      "L_J": "1/2",
+      "L_RL": "1",
+      "energy_peak": "1"
+    },
+    {
+      "m": "0",
+      "s": "1",
+      "A": "2",
+      "Delta": "1",
+      "L_J": "1",
+      "L_RL": "1",
+      "energy_peak": "1"
+    },
+    {
+      "m": "1/2",
+      "s": "1/2",
+      "A": "2",
+      "Delta": "0",
+      "L_J": "1/2",
+      "L_RL": "0",
+      "energy_peak": "1/2"
+    },
+    {
+      "m": "-1/6",
+      "s": "-1/6",
+      "A": "2/3",
+      "Delta": "8/9",
+      "L_J": "1/2 + sqrt(2)/2",
+      "L_RL": "sqrt(2)",
+      "energy_peak": "3/2"
+    },
+    {
+      "m": "1/3",
+      "s": "-1/5",
+      "A": "17/15",
+      "Delta": "19/15",
+      "L_J": "9/34 + sqrt(285)/34",
+      "L_RL": "8/17 + sqrt(285)/17",
+      "energy_peak": "8*sqrt(285)/289 + 319/289"
+    }
+  ],
+  "critical_collision": "verified complete fiber at input0",
+  "inverse_energy_endpoint": "q_squared=1 at lambda=2rho; monotone endpoint matches",
+  "convex_corner_prox": "zero, corner, boundary, cross-sign and distant inputs checked",
+  "precision": "exact SymPy",
+  "randomness": "none",
+  "limit": "algebra and visible structure only; see final reading reports"
+}
