@@ -67,9 +67,9 @@ assert M*(-y) == F_y
 assert y[0] != 0
 results['spd_zero_input_countercheck'] = 'exact nonzero complete output retained'
 
-def previous(relative):
+def previous(relative, commit=BASELINE):
     return subprocess.check_output(
-        ['git','show',f'{BASELINE}:{relative}'], cwd=ROOT, text=True)
+        ['git','show',f'{commit}:{relative}'], cwd=ROOT, text=True)
 
 def hypothesis_block(source, key):
     pattern = rf'\\begin\{{enumerate\}}\s*\\item\[\({key}1\)\].*?\\end\{{enumerate\}}'
@@ -77,11 +77,50 @@ def hypothesis_block(source, key):
     assert match, key
     return match.group()
 
-for stem, key in [('theorem_spine','B'),('gppa_theory','G')]:
-    relative = f'发表成果整理/RLEB/sections/{stem}.tex'
-    old, new = previous(relative), (ROOT/relative).read_text()
-    assert hypothesis_block(old,key) == hypothesis_block(new,key)
-results['locked_hypothesis_bytes'] = 'B1-B4 and G1-G5 identical to baseline'
+relative = '发表成果整理/RLEB/sections/theorem_spine.tex'
+ppa = (ROOT/relative).read_text()
+assert hypothesis_block(previous(relative),'B') == hypothesis_block(ppa,'B')
+assert hypothesis_block(previous(relative,'10b475b'),'P') == hypothesis_block(ppa,'P')
+
+def clause(source, key, number):
+    match = re.search(
+        rf'\\item\[\({key}{number}\)\](.*?)(?=\\item\[|\\end\{{enumerate\}})',
+        source,re.S)
+    assert match, (key,number)
+    return match.group(1)
+
+def normalized(value):
+    return re.sub(r'\s+','',value)
+
+relative = '发表成果整理/RLEB/sections/gppa_theory.tex'
+old, new = previous(relative), (ROOT/relative).read_text()
+for number in (2,3):
+    assert clause(old,'G',number) == clause(new,'G',number)
+
+# Expand the explicitly referenced ordinary clauses, rather than claiming that
+# the ordinary PPA hypotheses hold unchanged for the original F and kernel.
+expanded = {
+    1: clause(ppa,'P',1).replace(r'\mathcal J',r'\mathcal J_v')
+                       .replace(r'J_{\lambda F}',r'J^v_{\lambda F}'),
+    4: clause(ppa,'P',3).replace(r'\mathcal J(U_R)',r'\mathcal J_v(U_R)')
+                       .replace('B(R)','K(R)'),
+    5: clause(ppa,'P',4).replace('B(t)','K(t)'),
+}
+for number, value in expanded.items():
+    assert normalized(value) == normalized(clause(old,'G',number))
+assert '(P1)' in clause(new,'G',1) and 'J^v_{\\lambda F}' in clause(new,'G',1)
+assert '(P3)' in clause(new,'G',4) and 'K(R)' in clause(new,'G',4)
+assert '(P4)' in clause(new,'G',5) and 'H(t)' in clause(new,'G',5)
+assert '(P2) 改为下述 (G2)' in new
+assert r'\omega:[0' not in new  # inherited modulus conditions, explicit new domain
+assert '$[0,a(R)]$' in new and '$a(0)=0$' in new
+results['locked_hypotheses'] = {
+    'B1-B4':'identical to original baseline',
+    'P1-P4':'identical to 10b475b; moved into a separate assumption',
+    'G2-G3':'identical to original baseline',
+    'G1-G4-G5':'referenced P clauses expand to original G clauses exactly',
+    'kernel_length':'H rather than K remains the physical summation envelope',
+}
 
 relative = '发表成果整理/RLEB/sections/topological_obstruction.tex'
 old, new = previous(relative), (ROOT/relative).read_text()
@@ -105,7 +144,24 @@ assert full.index(r'\label{thm:rleb-ppa-general}') < full.index(r'\label{thm:rle
 ppa_proof = re.search(
     r'\\label\{thm:rleb-ppa-general\}.*?\\begin\{proof\}(.*?)\\end\{proof\}', full,re.S).group(1)
 assert 'gppa' not in ppa_proof
-assert r'\begin{corollary}[附带物理提升的固定核 RLEB--GPPA]' in full
+assert r'\begin{corollary}[固定核 RLEB--GPPA 推广]' in full
+assert full.index(r'\label{ass:rleb-ppa}') < full.index(r'\label{thm:rleb-ppa-general}')
+assert full.index(r'\label{ass:rleb-gppa-supplement}') < full.index(r'\label{thm:rleb-gppa-physical}')
+outline_relative = '发表成果整理/论文写作大纲_逐节展开_2026-10-12.md'
+outline = (ROOT/outline_relative).read_text()
+old_outline = previous(outline_relative,'10b475b')
+assert '贯穿全文的两个问题' not in outline
+assert outline.split('## ',1)[1].startswith('一、标题、摘要、引言怎么安排')
+def section_body(source,title):
+    return re.search(r'^## [^\n]*'+re.escape(title)+r'\n(.*?)(?=^## |\Z)',
+                     source,re.M|re.S).group(1)
+for title in ('标题、摘要、引言怎么安排',
+              '第一章：前置知识与收敛接口',
+              '第三章：与已有单调性和收敛理论的关系',
+              '第四章：近端吸引过程与零点集合的几何',
+              '第五章：讨论与后续问题'):
+    assert section_body(old_outline,title) == section_body(outline,title),title
+results['author_outline_preservation'] = 'title/abstract/introduction and chapters 1/3/4/5 unchanged; unwanted opening removed'
 results['presentation_and_reference_scope'] = {
     'labels':len(labels), 'references':len(references),
     'duplicates':0, 'undefined':0, 'ppa_proof_depends_on_gppa':False,

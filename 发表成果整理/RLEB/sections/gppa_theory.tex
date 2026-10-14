@@ -20,24 +20,16 @@ $d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$。
 核的作用有两个方面：核增量控制算法所选图值，
 而从核增量到物理位移还需要一个独立估计。
 后者可以来自逆映射，也可以直接来自算法对核纤维内运动的控制。
-下面的推论复用 PPA 主定理的距离--长度及有限前缀留域论证，
-把核几何与相邻物理位移分别列为可验证条件。
-它不是在普通 PPA 条件中直接替换核所得的无条件结论；
-对于非单射核，核不可见方向的运动也必须受到控制。
+下面沿用 PPA 假设的基本对象及条件结构，
+只列固定核所需的替换和补充，再给出主定理的 GPPA 推广。
 
 \subsection{固定核的有限长度推论}
 
-\begin{corollary}[附带物理提升的固定核 RLEB--GPPA]
-\label{thm:rleb-gppa-physical}
-设 $U\subset X$ 开，$R,\bar t>0$，$0<\kappa<1$，并置
-$U_R=\{x\in U:d(x)\le R\}$。
-取有限非减函数
-\[
- a:[0,R]\to[0,\infty),\qquad
- \omega:[0,a(R)]\to[0,\infty),\qquad
- \psi:[0,\bar t]\to[0,\infty),
-\]
-三者在零处连续且取值为零。
+\begin{assumption}[固定核 GPPA 的补充条件]
+\label{ass:rleb-gppa-supplement}
+沿用假设~\ref{ass:rleb-ppa} 的基本对象、$U_R$、$\psi$ 及真残差定义。
+另取有限非减 $a:[0,R]\to[0,\infty)$，在零处连续且 $a(0)=0$。
+核反射模仍记为 $\omega$，保留原模条件，定义域改为 $[0,a(R)]$。
 取有限函数 $h:[0,\infty)^2\to[0,\infty)$，
 它对各变量均非减，在 $(0,0)$ 连续且 $h(0,0)=0$。
 定义
@@ -46,10 +38,11 @@ $U_R=\{x\in U:d(x)\le R\}$。
  H(t)=h(t,K(t)),\qquad
  \Theta(t)=\sum_{j=0}^{\infty}H(\kappa^jt),\quad 0\le t\le R.
 \]
-假设同一个允许关系 $\mathcal J_v$ 满足：
+对同一个允许关系 $\mathcal J_v$，作以下替换与补充：
+其中 (P2) 改为下述 (G2)，并增加 (G3) 的物理提升。
 \begin{enumerate}
-\item[(G1)] 对每个 $x\in U_R$，
-$\varnothing\ne\mathcal J_v(x)\subset J^v_{\lambda F}(x)$。
+\item[(G1)] (P1) 中的 $\mathcal J$ 与 $J_{\lambda F}$ 分别换成
+$\mathcal J_v$ 与 $J^v_{\lambda F}$，输入域仍为 $U_R$。
 \item[(G2)] 对每个 $x\in U_R$ 和每个 $y\in\mathcal J_v(x)$，
 存在同一个 $p\in P_S(x)$，使
 \begin{equation}
@@ -62,13 +55,20 @@ $\varnothing\ne\mathcal J_v(x)\subset J^v_{\lambda F}(x)$。
 \label{eq:gppa-physical-transfer}
  \|y-x\|\le h\bigl(d(x),\|v(y)-v(x)\|\bigr).
 \end{equation}
-\item[(G4)] 对每个 $y\in\mathcal J_v(U_R)$，若
-$r_F(y)\le\bar t$，则 $d(y)\le\psi(r_F(y))$；并且
-$K(R)/\lambda\le\bar t$。
-\item[(G5)] 对每个 $0<t\le R$，
-$\psi(K(t)/\lambda)\le\kappa t$，且 $\Theta(R)<\infty$。
+\item[(G4)] (P3) 的输出域换成 $\mathcal J_v(U_R)$，
+评价窗中的 $B(R)$ 换成 $K(R)$；真实残差仍为完整 $r_F$。
+\item[(G5)] (P4) 的残差上界 $B(t)$ 换成 $K(t)$，
+长度包络 $B(t)$ 换成 $H(t)$，即
+$\psi(K(t)/\lambda)\le\kappa t$（$0<t\le R$），且 $\Theta(R)<\infty$。
 \end{enumerate}
-取 $x^0\in U_R$，记 $d_0=d(x^0)$，约定 $d(x,\varnothing)=+\infty$。若
+\end{assumption}
+
+\begin{corollary}[固定核 RLEB--GPPA 推广]
+\label{thm:rleb-gppa-physical}
+在假设~\ref{ass:rleb-gppa-supplement} 下，PPA 主定理~\ref{thm:rleb-ppa-general}
+的物理距离与有限长度结论适用于 $x^{k+1}\in\mathcal J_v(x^k)$，
+其中步长包络及尾预算分别采用本节的 $H$ 与 $\Theta$。
+具体地，取 $x^0\in U_R$，记 $d_0=d(x^0)$。若
 \begin{equation}
 \label{eq:gppa-physical-budget}
  \Theta(d_0)<d(x^0,X\setminus U),

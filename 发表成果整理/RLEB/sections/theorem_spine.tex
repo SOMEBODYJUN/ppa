@@ -12,8 +12,8 @@ $S\subset F^{-1}(0)$，记 $d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$，
 反射几何与真实残差误差界分别控制移动尺度和目标距离；
 下面的主定理要求它们在同一输入域及全部允许输出上兼容。
 
-\begin{theorem}[一般模 RLEB--PPA 的局部有限长度]
-\label{thm:rleb-ppa-general}
+\begin{assumption}[PPA 的 RLEB 条件]
+\label{ass:rleb-ppa}
 设 $U\subset X$ 开，$R,\bar t>0$，$0<\kappa<1$，
 $U_R=\{x\in U:d(x)\le R\}$。
 取有限非减函数
@@ -40,7 +40,11 @@ $B(R)/\lambda\le\bar t$。
 \item[(P4)] 对每个 $0<t\le R$，
 $\psi(B(t)/\lambda)\le\kappa t$，且 $\Theta(R)<\infty$。
 \end{enumerate}
-若 $x^0\in U_R$、$d_0=d(x^0)$ 满足
+\end{assumption}
+
+\begin{theorem}[一般模 RLEB--PPA 的局部有限长度]
+\label{thm:rleb-ppa-general}
+在假设~\ref{ass:rleb-ppa} 下，取 $x^0\in U_R$，记 $d_0=d(x^0)$。若
 \begin{equation}
 \label{eq:ppa-general-budget}
  \Theta(d_0)<d(x^0,X\setminus U),

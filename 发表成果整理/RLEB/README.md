@@ -8,6 +8,8 @@
 
 固定核推论要求实际相邻转移的物理位移控制，允许受控非单射核；核收敛与物理收敛分开，C208–C210 核 chart 身份保持。拓扑结论当前限普通 PPA 与已核固定 SPD 坐标转移。本轮调整与检查见 [PPA 主定理调整记录](../本轮重构/PPA主定理调整_2026-10-14.md)；较早独立审查见 [GPPA主理论](../GPPA主理论/README.md)，仅绑定其各自版本。先行性、目标期刊验收与全库历史审计未完成。
 
+按作者随后纠正，大纲直接从标题/摘要/引言安排开始；正文采用集中 PPA 假设、引用该假设的主定理、核的补充假设及后续 GPPA 推论，不重抄共同前件。具体范围见 [作者安排纠正](../本轮重构/PPA主定理调整_作者安排纠正_2026-10-14.md)。
+
 原Hamilton、Schur及原扩展比较仍在supplements，日常任务不依赖它们。可选supplement.tex保留旧材料的编译入口。
 
 在本目录运行 `bash build.sh`。XeLaTeX、BibTeX、Fandol；缺中文依赖时tools/tex-support/bootstrap.sh建立隔离环境，来源在dependencies.json。可用PPA_TEX_SUPPORT指定既有环境，编译关闭shell escape。
