@@ -1,0 +1,120 @@
+{
+  "python": "3.12.14",
+  "precision": 80,
+  "seed": null,
+  "scope": "finite algebraic diagnostics; universal statements have analytic proofs in the report",
+  "scalar_family": [
+    {
+      "kappa": "1/100",
+      "L": "51/50",
+      "true_EB": "3/202",
+      "bar_t": "101/1050",
+      "length_ratio": "101/99"
+    },
+    {
+      "kappa": "1/4",
+      "L": "3/2",
+      "true_EB": "3/10",
+      "bar_t": "5/42",
+      "length_ratio": "5/3"
+    },
+    {
+      "kappa": "1/2",
+      "L": "2",
+      "true_EB": "1/2",
+      "bar_t": "1/7",
+      "length_ratio": "3"
+    },
+    {
+      "kappa": "3/4",
+      "L": "5/2",
+      "true_EB": "9/14",
+      "bar_t": "1/6",
+      "length_ratio": "7"
+    },
+    {
+      "kappa": "99/100",
+      "L": "149/50",
+      "true_EB": "297/398",
+      "bar_t": "199/1050",
+      "length_ratio": "199"
+    }
+  ],
+  "energy_family": {
+    "attained_point": {
+      "lambda": "1",
+      "K": "1",
+      "L_squared": "9/5",
+      "rho_E_squared": "7/10"
+    },
+    "energy_boundary": [
+      {
+        "t": "1/4",
+        "rotation_feasible": true,
+        "formal_energy_factor_squared": "1",
+        "direct_factor": "4.1213203435596425732025330863145471178545078130654221097650196069860987176931606"
+      },
+      {
+        "t": "1/2",
+        "rotation_feasible": true,
+        "formal_energy_factor_squared": "1",
+        "direct_factor": "2.2247448713915890490986420373529456959829737403283350642163462836254801887286575"
+      },
+      {
+        "t": "1",
+        "rotation_feasible": true,
+        "formal_energy_factor_squared": "1",
+        "direct_factor": "1.3660254037844386467637231707529361834714026269051903140279034897259665084544000"
+      },
+      {
+        "t": "2",
+        "rotation_feasible": true,
+        "formal_energy_factor_squared": "1",
+        "direct_factor": "1"
+      },
+      {
+        "t": "3",
+        "rotation_feasible": false,
+        "formal_energy_factor_squared": "1",
+        "direct_factor": "0.89314982392344559203949699730993594318950065420540748948172402302659288803385968"
+      }
+    ]
+  },
+  "critical_holder": {
+    "gamma": "1/2",
+    "L": "2",
+    "q": "2",
+    "critical_coefficient": "1",
+    "R": "1/16",
+    "bar_t": "9/32",
+    "rows": [
+      {
+        "r": "1/16",
+        "h_squared": "55/1024",
+        "true_residual_squared": "71/1024",
+        "critical_compatibility_ratio": "1.265625"
+      },
+      {
+        "r": "1/100",
+        "h_squared": "391/40000",
+        "true_residual_squared": "407/40000",
+        "critical_compatibility_ratio": "1.1025"
+      },
+      {
+        "r": "1/100000000",
+        "h_squared": "399999991/40000000000000000",
+        "true_residual_squared": "400000007/40000000000000000",
+        "critical_compatibility_ratio": "1.0001000025"
+      }
+    ]
+  },
+  "triangular": {
+    "R": "1/16",
+    "certificate_kappa": "3/4",
+    "exact_distance_factor": "1/2",
+    "actual_point_factor": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+    "certificate_endpoint_ratio": "0.69240169529663688110021109052621225982120898442211850914708496724884155980776335"
+  },
+  "script_sha256": "785e2a42c69d24c2faf7d7160c3d16733761c0f84ee442405bfcd91181899b4c",
+  "status": "PASS"
+}
