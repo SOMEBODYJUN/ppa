@@ -1,6 +1,14 @@
 {
-  "outline_sha256": "a0e0ff957d5139fc17ca58c540a099839ccb8c5395b667535eb726692aa9f4c6",
+  "outline_sha256": "29e0a6c9cc8b9798773d474e3e1ff96911d1b00dbc8696c5562da9db59ece73b",
   "visible_structure": "PASS",
+  "first_sections": [
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5",
+    "1.6"
+  ],
   "third_sections": [
     "3.1",
     "3.2",
@@ -90,5 +98,343 @@
   "convex_corner_prox": "zero, corner, boundary, cross-sign and distant inputs checked",
   "precision": "exact SymPy",
   "randomness": "none",
-  "limit": "algebra and visible structure only; see final reading reports"
+  "limit": "finite algebra and structure checks supplement the analytic proofs in the current outline",
+  "python": "3.12.14",
+  "sympy": "1.14.0",
+  "outline_math": {
+    "python": "3.12.14",
+    "sympy": "1.14.0",
+    "precision": "exact rational and symbolic; Decimal display at 80 digits",
+    "randomness": "none",
+    "analytic_scope": "analytic proofs are in the current outline",
+    "factor_gap_identity": "zero",
+    "matrix_prox_inverse": "exact identity",
+    "J_side_RL_slack_identity": "J energy slack = 2 * original graph RL slack",
+    "J_side_linear_violation": "(L²-1)/2",
+    "weak_Holder_is_not_equivalent": [
+      {
+        "input_distance": "0",
+        "weak_Holder": true,
+        "J_energy": true
+      },
+      {
+        "input_distance": "1/100",
+        "weak_Holder": true,
+        "J_energy": true
+      },
+      {
+        "input_distance": "1/3",
+        "weak_Holder": true,
+        "J_energy": true
+      },
+      {
+        "input_distance": "1/2",
+        "weak_Holder": true,
+        "J_energy": false
+      },
+      {
+        "input_distance": "1",
+        "weak_Holder": true,
+        "J_energy": false
+      }
+    ],
+    "matrix_true_EB_K": "1",
+    "matrix_L_squared": "9/5",
+    "matrix_tau": "1/5",
+    "matrix_actual_factor_squared": "7/10",
+    "LT_budget": "4/5 > 1/2",
+    "energy_budget": "2/5 < 1",
+    "same_input_full_pair_RL": "-1/144 < 0; strictly multivalued example fails",
+    "multivalued_complete_steps": [
+      {
+        "input": "0",
+        "output": "0",
+        "true_residual": "0",
+        "branch": "2"
+      },
+      {
+        "input": "0",
+        "output": "0",
+        "true_residual": "0",
+        "branch": "3"
+      },
+      {
+        "input": "-1",
+        "output": "-1/3",
+        "true_residual": "2/3",
+        "branch": "2"
+      },
+      {
+        "input": "-1",
+        "output": "-1/4",
+        "true_residual": "1/2",
+        "branch": "3"
+      },
+      {
+        "input": "1",
+        "output": "1/3",
+        "true_residual": "2/3",
+        "branch": "2"
+      },
+      {
+        "input": "1",
+        "output": "1/4",
+        "true_residual": "1/2",
+        "branch": "3"
+      },
+      {
+        "input": "1/10000000000",
+        "output": "1/30000000000",
+        "true_residual": "1/15000000000",
+        "branch": "2"
+      },
+      {
+        "input": "1/10000000000",
+        "output": "1/40000000000",
+        "true_residual": "1/20000000000",
+        "branch": "3"
+      },
+      {
+        "input": "-10000",
+        "output": "-10000/3",
+        "true_residual": "20000/3",
+        "branch": "2"
+      },
+      {
+        "input": "-10000",
+        "output": "-2500",
+        "true_residual": "5000",
+        "branch": "3"
+      },
+      {
+        "input": "10000",
+        "output": "10000/3",
+        "true_residual": "20000/3",
+        "branch": "2"
+      },
+      {
+        "input": "10000",
+        "output": "2500",
+        "true_residual": "5000",
+        "branch": "3"
+      }
+    ],
+    "radial_complete_steps": [
+      {
+        "input_radius": "0",
+        "output_radius": "0",
+        "true_residual": "0"
+      },
+      {
+        "input_radius": "1/10000000000",
+        "output_radius": "3/20000000000",
+        "true_residual": "1/20000000000"
+      },
+      {
+        "input_radius": "1/2",
+        "output_radius": "3/4",
+        "true_residual": "1/4"
+      },
+      {
+        "input_radius": "3/4",
+        "output_radius": "7/8",
+        "true_residual": "1/8"
+      },
+      {
+        "input_radius": "1",
+        "output_radius": "1",
+        "true_residual": "0"
+      },
+      {
+        "input_radius": "5/4",
+        "output_radius": "9/8",
+        "true_residual": "1/8"
+      },
+      {
+        "input_radius": "10000",
+        "output_radius": "10001/2",
+        "true_residual": "9999/2"
+      }
+    ],
+    "noninjective_kernel_counterexample": [
+      {
+        "k": 0,
+        "x": [
+          "1",
+          "1"
+        ],
+        "y": [
+          "1/2",
+          "-1"
+        ]
+      },
+      {
+        "k": 1,
+        "x": [
+          "1/2",
+          "-1"
+        ],
+        "y": [
+          "1/4",
+          "1"
+        ]
+      },
+      {
+        "k": 2,
+        "x": [
+          "1/4",
+          "1"
+        ],
+        "y": [
+          "1/8",
+          "-1"
+        ]
+      },
+      {
+        "k": 3,
+        "x": [
+          "1/8",
+          "-1"
+        ],
+        "y": [
+          "1/16",
+          "1"
+        ]
+      },
+      {
+        "k": 4,
+        "x": [
+          "1/16",
+          "1"
+        ],
+        "y": [
+          "1/32",
+          "-1"
+        ]
+      },
+      {
+        "k": 5,
+        "x": [
+          "1/32",
+          "-1"
+        ],
+        "y": [
+          "1/64",
+          "1"
+        ]
+      },
+      {
+        "k": 6,
+        "x": [
+          "1/64",
+          "1"
+        ],
+        "y": [
+          "1/128",
+          "-1"
+        ]
+      },
+      {
+        "k": 7,
+        "x": [
+          "1/128",
+          "-1"
+        ],
+        "y": [
+          "1/256",
+          "1"
+        ]
+      }
+    ],
+    "triangular_compatibility_upper": "0.69240169529663688110021109052621225982120898442211850914708496724884155980776335",
+    "energy_boundary_direct_factor": "0.84307033081725358248132643352736616477753305724784904596248468382073759018217558",
+    "seam_value_and_derivative": "exactly matched"
+  },
+  "sharp_diagnostics": {
+    "scalar_family": [
+      {
+        "kappa": "1/100",
+        "L": "51/50",
+        "true_EB": "3/202",
+        "bar_t": "101/1050",
+        "length_ratio": "101/99"
+      },
+      {
+        "kappa": "1/4",
+        "L": "3/2",
+        "true_EB": "3/10",
+        "bar_t": "5/42",
+        "length_ratio": "5/3"
+      },
+      {
+        "kappa": "1/2",
+        "L": "2",
+        "true_EB": "1/2",
+        "bar_t": "1/7",
+        "length_ratio": "3"
+      },
+      {
+        "kappa": "3/4",
+        "L": "5/2",
+        "true_EB": "9/14",
+        "bar_t": "1/6",
+        "length_ratio": "7"
+      },
+      {
+        "kappa": "99/100",
+        "L": "149/50",
+        "true_EB": "297/398",
+        "bar_t": "199/1050",
+        "length_ratio": "199"
+      }
+    ],
+    "energy_family": {
+      "attained_point": {
+        "lambda": "1",
+        "K": "1",
+        "L_squared": "9/5",
+        "rho_E_squared": "7/10"
+      },
+      "energy_boundary": [
+        {
+          "t": "1/4",
+          "rotation_feasible": true,
+          "formal_energy_factor_squared": "1",
+          "direct_factor": "4.1213203435596425732025330863145471178545078130654221097650196069860987176931606"
+        },
+        {
+          "t": "1/2",
+          "rotation_feasible": true,
+          "formal_energy_factor_squared": "1",
+          "direct_factor": "2.2247448713915890490986420373529456959829737403283350642163462836254801887286575"
+        },
+        {
+          "t": "1",
+          "rotation_feasible": true,
+          "formal_energy_factor_squared": "1",
+          "direct_factor": "1.3660254037844386467637231707529361834714026269051903140279034897259665084544000"
+        },
+        {
+          "t": "2",
+          "rotation_feasible": true,
+          "formal_energy_factor_squared": "1",
+          "direct_factor": "1"
+        },
+        {
+          "t": "3",
+          "rotation_feasible": false,
+          "formal_energy_factor_squared": "1",
+          "direct_factor": "0.89314982392344559203949699730993594318950065420540748948172402302659288803385968"
+        }
+      ]
+    },
+    "triangular": {
+      "R": "1/16",
+      "certificate_kappa": "3/4",
+      "exact_distance_factor": "1/2",
+      "actual_point_factor": "0.70710678118654752440084436210484903928483593768847403658833986899536623923105354",
+      "certificate_endpoint_ratio": "0.69240169529663688110021109052621225982120898442211850914708496724884155980776335"
+    }
+  },
+  "script_sha256": "a4c90bf7effa4eea50b20fb8b58b4683283a4f231bdf55b1aa14f53b03abac02"
 }
