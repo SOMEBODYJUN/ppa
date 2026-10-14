@@ -1,6 +1,6 @@
-% Proposed example for the RLEB--GPPA paper; does not edit the active manuscript.
+% Fixed-kernel example following the ordinary PPA main theorem.
 % Reader route: a familiar convex problem -> nonlinear Bregman step -> exact rate
-% -> the forward-anchor and physical-lifting estimates used by the theorem.
+% -> the forward-anchor and physical-lifting estimates used by the corollary.
 \subsection{Bregman 近端中的核平坦性与物理速率}
 \label{subsec:gppa-bregman-quartic}
 
@@ -53,7 +53,7 @@ $\nabla h(x)\in\nabla h(y)+\lambda\partial f(y)$
 \]
 \end{proof}
 
-本例对主定理的条件可直接在物理空间中验证。
+本例对固定核推论~\ref{thm:rleb-gppa-physical} 的条件可直接在物理空间中验证。
 $F=\partial f$ 的真实残差为 $r_F(t,s)=|t|=d((t,s),S)$，
 而对最近零点 $p=(0,s)$，有
 \[
@@ -72,7 +72,7 @@ $A(z,w)=(\sqrt[3]{z},0)$；其单调性给反射模 $\omega(q)=q$。
 \]
 故可取 $h(t,q)=q^{1/3}$，有 $H(t)=t$、$\Theta(t)=t/(1-\kappa)$。
 在 $U=\mathbb R^2$ 上，输入覆盖、评价窗与初值预算全部满足，
-即使核逆在解附近不满足 Lipschitz 界，主定理仍给出物理有限长度。
+即使核逆在解附近不满足 Lipschitz 界，该推论仍给出物理有限长度。
 
 若改用二次核 $h_0(t,s)=(t^2+s^2)/2$，
 同一个目标的普通 PPA 则给 $t_{k+1}=t_k/(1+\lambda)$。

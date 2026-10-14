@@ -1,0 +1,24 @@
+{
+  "reflection_and_parallelogram": "exact symbolic identities",
+  "power_budget_recurrence": "Theta(t)=B(t)+Theta(kappa*t), exact",
+  "nonpower_scalar_budget": {
+    "omega": "t*(1-log(t)), 0<t<=1; omega(0)=0",
+    "R": "1/16",
+    "lambda": 1,
+    "psi": "s^2",
+    "kappa": "1/2",
+    "compatibility_ratio_at_R_80_digits": "0.35590004861953668352108366194621038495151327148870021024688603577926475105738230",
+    "scope": "scalar formulas only; no F or general coverage inferred"
+  },
+  "complete_two_output_boundaries": "both fibers, signs, zero, |x|=R=1",
+  "spd_zero_input_countercheck": "exact nonzero complete output retained",
+  "locked_hypothesis_bytes": "B1-B4 and G1-G5 identical to baseline",
+  "euler_mathematical_body": "unchanged; only opening bridge rewritten",
+  "presentation_and_reference_scope": {
+    "labels": 84,
+    "references": 64,
+    "duplicates": 0,
+    "undefined": 0,
+    "ppa_proof_depends_on_gppa": false
+  }
+}

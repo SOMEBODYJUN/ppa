@@ -1,12 +1,103 @@
-\section{普通近端迭代与验证条件}
+\section{非线性反射几何与 PPA 收敛}
 \label{sec:deterministic-rleb-spine}
 
-取 $v=\operatorname{Id}$ 即得到普通 PPA。
-本节给出这一特例的完整参数形式，再说明全对图条件如何验证它；
-固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
-$S\subset F^{-1}(0)$，残差仍为 $r_F(y)=d(0,F(y))$。
+\input{sections/preliminaries}
 
-\subsection{允许近端关系的一步估计与收敛}
+\subsection{一般模 RLEB 主定理}
+
+本节直接研究普通近端迭代，再说明全对图条件如何验证其前件。
+固定 $F:X\rightrightarrows X$、$\lambda>0$ 及非空闭集
+$S\subset F^{-1}(0)$，记 $d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$，
+到空集的距离取 $+\infty$。
+反射几何与真实残差误差界分别控制移动尺度和目标距离；
+下面的主定理要求它们在同一输入域及全部允许输出上兼容。
+
+\begin{theorem}[一般模 RLEB--PPA 的局部有限长度]
+\label{thm:rleb-ppa-general}
+设 $U\subset X$ 开，$R,\bar t>0$，$0<\kappa<1$，
+$U_R=\{x\in U:d(x)\le R\}$。
+取有限非减函数
+$\omega:[0,R]\to[0,\infty)$ 和
+$\psi:[0,\bar t]\to[0,\infty)$，均在零处连续且取值为零。
+定义
+\[
+ B(t)=\frac{t+\omega(t)}2,\qquad
+ \Theta(t)=\sum_{j=0}^{\infty}B(\kappa^jt),\quad 0\le t\le R.
+\]
+假设同一个允许近端关系 $\mathcal J$ 满足：
+\begin{enumerate}
+\item[(P1)] 对每个 $x\in U_R$，
+$\varnothing\ne\mathcal J(x)\subset J_{\lambda F}(x)$。
+\item[(P2)] 对每个 $x\in U_R$ 和每个 $y\in\mathcal J(x)$，
+存在 $p\in P_S(x)$，使
+\begin{equation}
+\label{eq:ppa-general-anchor}
+ \|2y-x-p\|\le\omega(d(x)).
+\end{equation}
+\item[(P3)] 对每个 $y\in\mathcal J(U_R)$，若
+$r_F(y)\le\bar t$，则 $d(y)\le\psi(r_F(y))$；并且
+$B(R)/\lambda\le\bar t$。
+\item[(P4)] 对每个 $0<t\le R$，
+$\psi(B(t)/\lambda)\le\kappa t$，且 $\Theta(R)<\infty$。
+\end{enumerate}
+若 $x^0\in U_R$、$d_0=d(x^0)$ 满足
+\begin{equation}
+\label{eq:ppa-general-budget}
+ \Theta(d_0)<d(x^0,X\setminus U),
+\end{equation}
+则每条轨道 $x^{k+1}\in\mathcal J(x^k)$ 均可无限延拓，
+全部点属于 $U_R$，具有有限长度，并收敛到某个 $x^\infty\in S\cap U$。
+对所有 $k\ge0$，同一组常数给出
+\begin{align}
+ d(x^k)&\le\kappa^kd_0,\label{eq:ppa-general-distance}\\
+ \|x^{k+1}-x^k\|&\le B(d(x^k))\le B(\kappa^kd_0),\\
+ \sum_{k\ge0}\|x^{k+1}-x^k\|&\le\Theta(d_0),\\
+ \|x^\infty-x^k\|&\le\Theta(d(x^k))\le\Theta(\kappa^kd_0).
+ \label{eq:ppa-general-tail}
+\end{align}
+取 $\mathcal J=J_{\lambda F}$ 时，前件和结论覆盖完整纤维；极限点可随选择改变。
+\end{theorem}
+
+\begin{proof}
+对合法输入 $x$ 及任意允许输出 $y$，取 (P2) 的最近零点 $p$，
+令 $a=y-p$、$b=x-y$、$d=d(x)$。
+由 $a+b=x-p$、$\|a-b\|\le\omega(d)$ 得
+\begin{equation}
+\label{eq:ppa-general-energy}
+ \|b\|\le B(d),\qquad
+ d(y)^2+\|b\|^2\le\frac{d^2+\omega(d)^2}{2}.
+\end{equation}
+近端包含只提供真残差的上界：
+\[
+ r_F(y)\le\|b\|/\lambda
+ \le B(d)/\lambda\le B(R)/\lambda\le\bar t.
+\]
+因此 (P3)--(P4) 在同一评价窗内给出 $d(y)\le\kappa d$。
+当 $d=0$ 时，$p=x$，(P2) 直接强制 $y=x$，上述估计仍成立。
+
+从 $x^0$ 出发，(P1) 产生任意一步输出。
+对已构造的有限前缀逐步使用上述估计，得到
+\[
+ d(x^{k+1})\le\kappa^{k+1}d_0,\qquad
+ \|x^{k+1}-x^0\|\le\sum_{j=0}^{k}B(\kappa^jd_0)
+ \le\Theta(d_0)<d(x^0,X\setminus U).
+\]
+故 $x^{k+1}\in U_R$，覆盖可再次使用。
+这先证明每个有限前缀合法，再给出无限延拓。
+对所得无限轨道应用引理~\ref{lem:distance-length-interface}，取 $b=B$，
+即得有限长度、闭零集中的极限及尾界。
+极限到 $x^0$ 的距离仍至多 $\Theta(d_0)$，所以严格预算保证极限属于 $U$。
+\end{proof}
+
+这里没有预先要求后继输出位于 $U$，也没有将所选图值范数当成真残差。
+条件 (P2) 是零锚反射条件；全对 RL 是其充分验证方式，
+不是主定理对不同输出之间另加的比较条件。
+一般模长度条件等价于 $\int_0^R B(t)\,dt/t<\infty$：
+在每个区间 $[\kappa^{j+1}R,\kappa^jR]$ 上，该积分介于
+$\log(1/\kappa)B(\kappa^{j+1}R)$ 与
+$\log(1/\kappa)B(\kappa^jR)$ 之间，求和即得等价性。
+
+\subsection{幂次反射模的显式估计}
 
 以下收敛结果只比较一个允许近端输出与输入的最近零点。
 所选零点可以随输出改变，因此同一输入可以有多个允许输出。
@@ -71,7 +162,7 @@ $\psi:[0,\bar t]\to[0,\infty)$ 非减。
 这里没有将真残差与所选图值的范数相等同。
 \end{proof}
 
-\begin{corollary}[普通 PPA 的局部有限长度与收敛]
+\begin{corollary}[幂次 RLEB--PPA 的显式长度与速率]
 \label{thm:selection-RLEB}
 \label{cor:selection-extension}
 设 $n\geq1$ 为整数，$X=\mathbb R^n$，$F:X\rightrightarrows X$，$\lambda>0$，
@@ -140,19 +231,17 @@ $d(y,S)\leq\psi(r_F(y))$；此外，
 \end{corollary}
 
 \begin{proof}
-在定理~\ref{thm:rleb-gppa-physical} 中取
-$v=\operatorname{Id}$、$a(t)=t$、$\omega(t)=Lt^\gamma$、$h(t,s)=s$。
-最近零锚满足 $\|v(x)-v(p)\|=d(x,S)$，前向界和物理位移界自动成立。
+在主定理~\ref{thm:rleb-ppa-general} 中取 $\omega(t)=Lt^\gamma$。
 由
 \[
  \|x-p\|^2-\|2x^+-x-p\|^2
  =4\langle x^+-p,x-x^+\rangle,
 \]
-(B2) 恰为 (G2) 的反射估计。
+(B2) 恰为 (P2) 的反射估计。
 (B1)、(B3)--(B4) 分别给出覆盖、真误差界与直接收缩条件。
-此时 $K(t)=H(t)=(t+Lt^\gamma)/2$，两项几何级数给出
+此时 $B(t)=(t+Lt^\gamma)/2$，两项几何级数给出
 $\Theta(t)=\mathcal L(t)<\infty$。
-因此初值预算、允许多值范围和所有结论均由父定理原样得到。
+因此初值预算、允许多值范围和所有结论均由 PPA 主定理得到。
 \end{proof}
 
 式~\eqref{eq:direct-distance-rate} 给出距离的 Q 线性因子上界
@@ -214,6 +303,14 @@ $\|a+\lambda b\|^2-\|a-\lambda b\|^2
 \end{equation}
 对上述点对成立。
 \end{definition}
+
+一般模版本将 \eqref{eq:power-RL} 的右端替换为
+$\omega(\|a+\lambda b\|)$，等价的内积条件为
+$\lambda\langle a,b\rangle\ge
+[\|a+\lambda b\|^2-\omega(\|a+\lambda b\|)^2]/4$。
+若同一图块覆盖 $U_R$ 且含所需最近零点图点 $(p,0)$，
+将输出图点与 $(p,0)$ 配对便给出主定理的 (P2)。
+误差界、标量兼容、长度和留域条件仍须在同一对象上另证。
 
 固定 $\lambda$ 时，简记
 $\mathrm{RL}(\lambda,\gamma,L)$ 为 $\mathrm{RL}(\gamma,L)$。

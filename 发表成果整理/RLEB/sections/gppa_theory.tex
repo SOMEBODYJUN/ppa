@@ -1,9 +1,6 @@
-% Reader route: physical GPPA -> anchored kernel estimate -> true residual
-% -> controlled physical motion -> finite-prefix localization -> PPA specialization.
-\section{广义近端迭代的局部收敛}
+% Reader route: PPA main theorem -> fixed-kernel corollary -> physical lift.
+\section{固定核 GPPA 推论与物理提升}
 \label{sec:rleb-gppa-main}
-
-\input{sections/preliminaries}
 
 \subsection{近端关系与物理位移}
 
@@ -23,12 +20,14 @@ $d(x)=d(x,S)$、$r_F(y)=d(0,F(y))$。
 核的作用有两个方面：核增量控制算法所选图值，
 而从核增量到物理位移还需要一个独立估计。
 后者可以来自逆映射，也可以直接来自算法对核纤维内运动的控制。
-下面的定理直接对物理闭零集作出结论，
-同时把核几何与相邻物理位移分别列为可验证条件。
+下面的推论复用 PPA 主定理的距离--长度及有限前缀留域论证，
+把核几何与相邻物理位移分别列为可验证条件。
+它不是在普通 PPA 条件中直接替换核所得的无条件结论；
+对于非单射核，核不可见方向的运动也必须受到控制。
 
-\subsection{有限长度定理}
+\subsection{固定核的有限长度推论}
 
-\begin{theorem}[RLEB--GPPA 的局部有限长度]
+\begin{corollary}[附带物理提升的固定核 RLEB--GPPA]
 \label{thm:rleb-gppa-physical}
 设 $U\subset X$ 开，$R,\bar t>0$，$0<\kappa<1$，并置
 $U_R=\{x\in U:d(x)\le R\}$。
@@ -86,7 +85,7 @@ $\psi(K(t)/\lambda)\le\kappa t$，且 $\Theta(R)<\infty$。
 \end{align}
 常数统一于全部允许选择，极限点可以随选择改变。
 若 $\mathcal J_v=J^v_{\lambda F}$，结论控制完整广义近端关系的全部选择。
-\end{theorem}
+\end{corollary}
 
 \begin{proof}
 任取合法输入 $x\in U_R$ 及任意允许输出 $y$，
@@ -130,19 +129,17 @@ $d(y)\le\psi(K(d)/\lambda)\le\kappa d$（$d>0$）。
  \le\Theta(d_0)<d(x^0,X\setminus U).
 \]
 因而 $x^{k+1}\in U_R$，(G1) 可以再次使用。
-这证明全部有限前缀合法以及无限延拓，
-而没有预先假设后继输出位于 $U$。
-
-长度可和给出 Cauchy 性；$X$ 完备，故轨道有极限。
-$d(x^k)\to0$ 和 $S$ 闭给出 $x^\infty\in S$，
-同一严格预算给出 $x^\infty\in U$。
-从任意 $k$ 开始重新求和即得 \eqref{eq:gppa-physical-tail}。
+这是主定理~\ref{thm:rleb-ppa-general} 的有限前缀论证，步长包络改为 $H$。
+因而全部前缀合法且轨道可无限延拓。
+再在引理~\ref{lem:distance-length-interface} 中取 $b=H$，
+得到有限长度、点收敛及 \eqref{eq:gppa-physical-tail}；
+严格预算保证极限属于 $U$。
 全部估计均逐输入、逐允许输出成立，故不依赖所选分支。
 \end{proof}
 
 \begin{corollary}[解附近的统一初值邻域]
 \label{cor:gppa-physical-basin}
-在定理~\ref{thm:rleb-gppa-physical} 的条件下，取 $\bar x\in S\cap U$
+在推论~\ref{thm:rleb-gppa-physical} 的条件下，取 $\bar x\in S\cap U$
 及有限 $b>0$，使 $B_b(\bar x)\subset U$。
 存在 $0<\delta\le R$ 满足 $\delta+\Theta(\delta)<b$。
 每个 $x^0\in B_\delta(\bar x)$ 的全部允许轨道均可无限延拓，
@@ -154,7 +151,7 @@ $d(x^k)\to0$ 和 $S$ 闭给出 $x^\infty\in S$，
 级数的控制收敛给出 $\Theta(t)\to0$，故可选上述 $\delta$。
 对 $x^0\in B_\delta(\bar x)$，有 $d_0\le\|x^0-\bar x\|<\delta$，且
 $d(x^0,X\setminus U)\ge b-\|x^0-\bar x\|>b-\delta>\Theta(d_0)$。
-应用主定理，全部轨道及极限到 $\bar x$ 的距离均小于
+应用固定核推论，全部轨道及极限到 $\bar x$ 的距离均小于
 $\delta+\Theta(\delta)<b$。
 \end{proof}
 
@@ -165,12 +162,12 @@ $\|x-y\|\le\eta(\|v(x)-v(y)\|)$，则可取 $h(t,s)=\eta(s)$。
 只在 $U\times U$ 上有逆估计并不足以证明新输出留在 $U$。
 对于非单射核，可以取 $h(t,s)=\eta(s)+\zeta(t)$，
 其中 $\zeta$ 控制核不可见方向的运动，$\zeta(0)=0$。
-定理只需要相邻允许转移上的位移界，不要求全域逆映射存在。
+该推论只需要相邻允许转移上的位移界，不要求全域逆映射存在。
 \end{remark}
 
 \begin{corollary}[核能量供应的物理收缩]
 \label{cor:gppa-physical-energy}
-沿用定理~\ref{thm:rleb-gppa-physical} 的对象和 (G1)--(G4)，
+沿用推论~\ref{thm:rleb-gppa-physical} 的对象和 (G1)--(G4)，
 记 $M_0=\psi(\bar t)$，并取有限非负函数
 $\rho,g:[0,M_0]\to[0,\infty)$，$\rho(0)=g(0)=0$。
 对每个允许转移 $x\mapsto y$，要求 (G2) 中可以选择同一个最近零锚
@@ -189,7 +186,7 @@ $g(d(y))\le r_F(y)$。
  \quad\Longrightarrow\quad q\le\kappa t.
 \end{equation}
 仍保留 $\Theta(R)<\infty$。
-则满足严格物理初值预算的全部允许轨道具有主定理的全部结论。
+则满足严格物理初值预算的全部允许轨道具有固定核推论的全部结论。
 \end{corollary}
 
 \begin{proof}
@@ -206,14 +203,14 @@ $\lambda g(d(y))\le\|v(x)-v(y)\|$。
 当 $d(x)>0$ 时，\eqref{eq:gppa-energy-scalar-gate} 给出
 $d(y)\le\kappa d(x)$。当 $d(x)=0$ 时，
 (G2)--(G3) 已强制 $y=x$。
-物理步长仍至多 $H(d(x))$，故主定理的有限前缀留域、无限延拓与尾和证明
+物理步长仍至多 $H(d(x))$，故固定核推论的有限前缀留域、无限延拓与尾和证明
 逐项适用。这里不需要 $\rho$ 或 $g$ 可逆，也没有越过其输出评价域。
 \end{proof}
 
 
 \begin{corollary}[可检验的长度条件]
 \label{cor:gppa-dini-length}
-在主定理其他条件下，$\Theta(R)<\infty$ 等价于
+在推论~\ref{thm:rleb-gppa-physical} 的其他条件下，$\Theta(R)<\infty$ 等价于
 \[
  \int_0^R H(t)\,\frac{dt}{t}<\infty.
 \]
