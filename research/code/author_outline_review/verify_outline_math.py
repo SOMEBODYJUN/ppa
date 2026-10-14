@@ -20,6 +20,23 @@ old = 1 + 2*tau - 1/(1+z)**2
 energy = (1 + 2*tau)/(1+1/z**2)
 gap = 2*(z + tau*(1+z)**2)/((1+z**2)*(1+z)**2)
 assert sp.factor(old-energy-gap) == 0
+# Original-graph RL and the all-output J-side energy have proportional slacks.
+output2, step2, inner, omega2 = sp.symbols('output2 step2 inner omega2', real=True)
+input2 = output2 + step2 + 2*inner
+rl_slack = inner - (input2-omega2)/4
+j_slack = (input2+omega2)/2 - output2 - step2
+assert sp.expand(j_slack-2*rl_slack) == 0
+ell = sp.symbols('ell', nonnegative=True)
+assert sp.expand((1+ell**2)/2-1-(ell**2-1)/2) == 0
+weak_holder = []
+for delta in [Q(0), Q(1, 100), Q(1, 3), Q(1, 2), Q(1)]:
+    # T=-Id on [-1/2,1/2], gamma=1/2,L=1: weak Holder passes.
+    assert delta*delta <= delta
+    energy_ok = 2*delta*delta <= (delta*delta+delta)/2
+    if delta == 1:
+        assert not energy_ok
+    weak_holder.append({'input_distance': str(delta), 'weak_Holder': True,
+                        'J_energy': energy_ok})
 I = sp.eye(2)
 rot = sp.Matrix([[0, -1], [1, 0]])
 F = -sp.Rational(2, 7)*I - 3*sp.sqrt(5)*rot/7
@@ -86,6 +103,9 @@ result = {
     'precision': 'exact rational and symbolic; Decimal display at 80 digits',
     'randomness': 'none', 'analytic_scope': 'proofs are in outline and team reports',
     'factor_gap_identity': 'zero', 'matrix_prox_inverse': 'exact identity',
+    'J_side_RL_slack_identity': 'J energy slack = 2 * original graph RL slack',
+    'J_side_linear_violation': '(L²-1)/2',
+    'weak_Holder_is_not_equivalent': weak_holder,
     'matrix_true_EB_K': '1', 'matrix_L_squared': '9/5',
     'matrix_tau': '1/5', 'matrix_actual_factor_squared': '7/10',
     'LT_budget': '4/5 > 1/2', 'energy_budget': '2/5 < 1',
