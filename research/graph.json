@@ -4106,6 +4106,151 @@
       "label": "非精确PPA已读一手合同/同轨道恢复/WLN全文门",
       "file": "LITERATURE.md#lit-inexact-precision",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "UJC-RAW",
+      "label": "完整原图与同锚有限联合证书",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-object"
+    },
+    {
+      "id": "UJC-COV",
+      "label": "完整输入coverage独立门",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-object"
+    },
+    {
+      "id": "UJC-STATE",
+      "label": "有限原生状态、共同tau与状态长度势",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-state-theorem"
+    },
+    {
+      "id": "UJC-RET",
+      "label": "严格物理初值留域预算",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-theorem"
+    },
+    {
+      "id": "UJC-LENGTH",
+      "label": "C277全部政策留域及物理有限长度",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-state-theorem"
+    },
+    {
+      "id": "UJC-LOSS1",
+      "label": "C278所有独立一步尾包络发散",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-one-step-loss"
+    },
+    {
+      "id": "UJC-LOSS2",
+      "label": "C278两步到零却无径向联合长度势",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-distance-state"
+    },
+    {
+      "id": "UJC-RADIAL-GOAL",
+      "label": "已否定：距离状态证书的普遍完备性",
+      "file": "canonical/unified_ppa_joint_certificates.md#ujc-distance-state"
+    },
+    {
+      "id": "URC-RAW",
+      "label": "C279仿射同锚raw LMI与signed余项",
+      "file": "canonical/unified_ppa_raw_calculus.md#urc-lmi"
+    },
+    {
+      "id": "URC-BOUNDS",
+      "label": "全部完整根的距离与物理步界",
+      "file": "canonical/unified_ppa_raw_calculus.md#urc-lmi"
+    },
+    {
+      "id": "URC-ROBUST",
+      "label": "全域usc紧凸相对非线性扰动",
+      "file": "canonical/unified_ppa_raw_calculus.md#urc-uncertainty"
+    },
+    {
+      "id": "URC-ROBUST-OUT",
+      "label": "C279独立coverage及全根有限长度",
+      "file": "canonical/unified_ppa_raw_calculus.md#urc-uncertainty"
+    },
+    {
+      "id": "UCOV-MATRIX",
+      "label": "非交换矩阵Q正定H半正定预算",
+      "file": "canonical/unified_ppa_raw_calculus.md#urc-matrix"
+    },
+    {
+      "id": "UCOV-PROFILE",
+      "label": "仿射中心与正测度Hilbert混合核预算",
+      "file": "canonical/unified_ppa_coverage.md#uc-hilbert-profile"
+    },
+    {
+      "id": "UCOV-MAXIMAL",
+      "label": "原固定profile类全图极大性",
+      "file": "canonical/unified_ppa_coverage.md#uc-hilbert-profile"
+    },
+    {
+      "id": "UCOV-FULL",
+      "label": "C280同预算扩张与满Minty域",
+      "file": "canonical/unified_ppa_coverage.md#uc-hilbert-profile"
+    },
+    {
+      "id": "UCOV-FIBERS",
+      "label": "C280次线性与I±A门下完整正逆纤维/degree",
+      "file": "canonical/unified_ppa_coverage.md#uc-full-fibers"
+    },
+    {
+      "id": "UCOV-HOLE",
+      "label": "C281近线性联合预算极大整数层图",
+      "file": "canonical/unified_ppa_coverage.md#uc-maximal-hole"
+    },
+    {
+      "id": "UCOV-GENERAL-GOAL",
+      "label": "已否定：任意良好一般预算极大则满输入",
+      "file": "canonical/unified_ppa_coverage.md#uc-maximal-hole"
+    },
+    {
+      "id": "UCURVE-DATA",
+      "label": "reach曲管原始法切方向与连续模式",
+      "file": "canonical/unified_ppa_curved_geometry.md#ucg-tube"
+    },
+    {
+      "id": "UCURVE-OUT",
+      "label": "C282完整曲管覆盖、全部根与有限长度",
+      "file": "canonical/unified_ppa_curved_geometry.md#ucg-tube"
+    },
+    {
+      "id": "UCURVE-CRITICAL",
+      "label": "半阶系数与低阶内侧coverage攻击",
+      "file": "canonical/unified_ppa_curved_geometry.md#ucg-critical"
+    },
+    {
+      "id": "UCOH-DATA",
+      "label": "真图cohypo/真实EB/帽与精确种子",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-cohypo"
+    },
+    {
+      "id": "UCOH-STOP",
+      "label": "C283全接受输出可计算停止与类级锐门",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-cohypo"
+    },
+    {
+      "id": "UPROJ-DATA",
+      "label": "F=Id完整奇异投影核相对误差关系",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-projections"
+    },
+    {
+      "id": "UPROJ-FIX",
+      "label": "C284固定投影sigma<1物理有限长度",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-projections"
+    },
+    {
+      "id": "UPROJ-MOVE",
+      "label": "C284任意移动投影锐物理门",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-moving"
+    },
+    {
+      "id": "UPROJ-SPD-FAIL",
+      "label": "C284强单调精确步+统一SPD仍发散",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd"
+    },
+    {
+      "id": "UPROJ-GENERAL-GOAL",
+      "label": "已否定：任意移动一致SPD的普遍安全性",
+      "file": "canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd"
     }
   ],
   "edges": [
@@ -10331,6 +10476,187 @@
       "scope": "明定F所有有限local hypo/cohypo/zeroanchored weakMinty常数失败；同时IF27精确轨道由Hölder homeomorphism共轭普通线性单调PPA。仅排特定前件，不排任意lift，也不默认H保原物理内层误差政策。",
       "status": "derived-checked",
       "topic": "非精确PPA完整精度设计"
+    },
+    {
+      "id": "E542",
+      "inputs": [
+        "UJC-RAW",
+        "UJC-COV",
+        "UJC-STATE",
+        "UJC-RET"
+      ],
+      "output": "UJC-LENGTH",
+      "relation": "conditional",
+      "scope": "C277-v1有限维/fullzero/普通完整J；所有实际转移同锚代入、先闭真残差窗、保状态转移。共同连续非减tau<t，Wi有限非负且Wi0=0，全Eij长度不等式及strictbudget合取；不自动供raw认证/coverage/GPPA lifting。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E543",
+      "inputs": [
+        "UJC-LOSS1"
+      ],
+      "output": "UJC-STATE",
+      "relation": "limits",
+      "scope": "C278第一完整对象F={y,y³}：排所有独立距离/步长最坏尾和门，联合W=t通过；不是反驳C277的充分性或旧壳层机制。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E544",
+      "inputs": [
+        "UJC-LOSS2"
+      ],
+      "output": "UJC-RADIAL-GOAL",
+      "relation": "refutes",
+      "scope": "C278第二完整closed semialgebraic对象，fullinput T²0且统一长度≤3||x||；精确径向一步关系仍无任何有限W。否定distance-only完备，非否定有限原生状态版。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E545",
+      "inputs": [
+        "URC-RAW"
+      ],
+      "output": "URC-BOUNDS",
+      "relation": "conditional",
+      "scope": "C279原始z∈L、Qi+signedRi条件和Ri≤eta_i同块全root成立；非负乘子及限制L上的PSD给全部输出上界。充分S-procedure，不能据不可行断原图不收敛。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E546",
+      "inputs": [
+        "URC-ROBUST"
+      ],
+      "output": "URC-ROBUST-OUT",
+      "relation": "conditional",
+      "scope": "C279全域Ecal usc/nonempty compact convex且||e||≤epsilon||y||；sigma_min(I+lambdaD)>lambda epsilon独立Kakutani coverage；另epsilon<sigma_minD、分母>1给fullS0/trueEB/allpolicyfinite length。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E547",
+      "inputs": [
+        "UCOV-MATRIX"
+      ],
+      "output": "UCOV-PROFILE",
+      "relation": "implies",
+      "scope": "C280精确完成平方：Q0=Q^.5,A=−Q^-1D,P=H^.5,phi(s)=s；Q>0,H>=0，允许singularH，不交换M/R。不改变原lambda或物理PPA。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E548",
+      "inputs": [
+        "UCOV-PROFILE"
+      ],
+      "output": "UCOV-FULL",
+      "relation": "conditional",
+      "scope": "C280每个非空fullpair profile图经正测度差核Hilbert嵌入及Kirszbraun有同A/Q0/Pj/phi/lambda满输入扩张；不保附加指定zero/EB/restoring条件。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E549",
+      "inputs": [
+        "UCOV-PROFILE",
+        "UCOV-MAXIMAL"
+      ],
+      "output": "UCOV-FULL",
+      "relation": "implies",
+      "scope": "C280固定该完整预算类图极大iff全Minty输入；同输入budget0保证Jsingle。graph-maximal不能换成更小带附加条件类的极大性。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E550",
+      "inputs": [
+        "UCOV-PROFILE",
+        "UCOV-MAXIMAL"
+      ],
+      "output": "UCOV-FIBERS",
+      "relation": "conditional",
+      "scope": "C280另有限维、每phi_j(s)=o(s)、I±Ainvertible；完整C连续、仿射部加sublinear remainder proper/degree，全部原正逆纤维非空紧。无全空间吸引结论。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E551",
+      "inputs": [
+        "UCOV-HOLE"
+      ],
+      "output": "UCOV-GENERAL-GOAL",
+      "relation": "refutes",
+      "scope": "C281固定D连续非负collision-safe、finite nearlinear envelope<=sqrt2t、闭凸fullS与trueEB，图已sameD-maximal但Minty域Z×R^(n−1)；不反驳C280或concave/subadditive等额外类。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E552",
+      "inputs": [
+        "UCURVE-DATA"
+      ],
+      "output": "UCURVE-OUT",
+      "relation": "conditional",
+      "scope": "C282完整闭R管F、管外空；gamma>=.5、UC5全同窗参数、reachnormalcontract、每图值法切界及一continuous mode。空球下界和wholehomotopy boundary避零给coverage/allroots/zeroabsorb/finite length，非未经排远全域原F。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E553",
+      "inputs": [
+        "UCURVE-CRITICAL"
+      ],
+      "output": "UCURVE-DATA",
+      "relation": "limits",
+      "scope": "C282 circle临界gamma=.5需m>lambdaC²/(2rho)，等号实际扩张；未补偿gamma<.5小管innercoverage失败。固定lambda精确补偿是另图，不否定一切低阶曲模型。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E554",
+      "inputs": [
+        "UCOH-DATA"
+      ],
+      "output": "UCOH-STOP",
+      "relation": "conditional",
+      "scope": "C283lambda>2rho,c>0、全候选真EB、R<=sqrtcWbar、sigma严格门及完整种子coverage；accepted E<=sigmaW/Wcap全部保。strictphysicalbudget给finite length，innerfinite另nonzerowitness/strictcap。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E555",
+      "inputs": [
+        "UPROJ-DATA"
+      ],
+      "output": "UPROJ-FIX",
+      "relation": "conditional",
+      "scope": "C284固定orthogonalP/FId：全部0<=sigma<1物理finite length，全域种子、fullS/trueEB。非零ker在sigma1允许zero逃逸；不是任意v。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E556",
+      "inputs": [
+        "UPROJ-DATA"
+      ],
+      "output": "UPROJ-MOVE",
+      "relation": "conditional",
+      "scope": "C284任意history-dependentPk，sharp一stepLsigma；sigma<sqrt[2lambda/(1+2lambda)]给allpolicyfinite length，n>=2含rank1全类等号恒范数旋转。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E557",
+      "inputs": [
+        "UPROJ-SPD-FAIL"
+      ],
+      "output": "UPROJ-GENERAL-GOAL",
+      "relation": "refutes",
+      "scope": "C284same physical R² F=I+3K90/lambda.1，metric Mk=.1I+.9Pspan{xk}谱固定{1,.1}、e0/fullinputunique/zeroabsorbing；实际gain²1300/961>1，eachfixedmetric谱半径²10/31<1。新正面需跨步结构。",
+      "status": "derived-checked",
+      "topic": "联合次单调PPA"
     }
   ]
 }

@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C277–C284：联合原图、完整覆盖与变化核
+
+[本批复算](code/unified_ppa/README.md)运行 python3 research/code/unified_ppa/run_all.py，五个脚本全部返回0（四个只用标准库，raw另用NumPy 2.3.5）；[完整输出](code/unified_ppa/all_verifiers_output.json)绑定命令、版本、精度说明、脚本hash与stdout/stderr。Fraction核提升/非交换矩阵/有理LMI/预算反算/两步终止/统一SPD精确发散，binary64核明确的分支、曲率、壳层势与projector极值。所有全称coverage、全fibers、allpolicy长度、sharp门及最大化反例由[规范证明](topics/unified_ppa/README.md)解析承担。程序不认证有限状态完备性、自然应用、内层复杂度或公开首创；闭合结果与open交接分开。
+
 ## 理论发展与同算法经典恢复
 
 [新增经典桥复算](code/novelty_development/README.md)运行 `python3 research/code/novelty_development/verify.py`，保存[结果](code/novelty_development/output.json)：16个C272 SPD、10个C273完整Gram、10个C274部分对偶PPA和13个C1合法输出能量合同。Decimal100/binary64的参数、版本、容差及哈希均登记。零/跨符号/远输入/中心临界门已实跑；原点Bregman与中心距离幂算法同速率但不同输出亦反算。不枚举全部数值纤维，不认证公开优先；全称数学由[规范补充证明](novelty/2026_10_13/README.md)承担。

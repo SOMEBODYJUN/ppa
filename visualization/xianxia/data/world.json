@@ -8403,6 +8403,325 @@
       "y": 584,
       "region": "structure",
       "realm": "structure"
+    },
+    "UCOH-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOH-STOP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-FIBERS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-FULL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-GENERAL-GOAL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "thorn",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 1822,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-HOLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-MATRIX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-MAXIMAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCOV-PROFILE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCURVE-CRITICAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCURVE-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UCURVE-OUT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-COV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-LOSS1": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-LOSS2": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-RADIAL-GOAL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2198,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-RAW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-RET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UJC-STATE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UPROJ-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2104,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UPROJ-FIX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UPROJ-GENERAL-GOAL": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
+      "evidence": "unspecified",
+      "reason": "incoming-refutes-relation",
+      "x": 2386,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UPROJ-MOVE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "UPROJ-SPD-FAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "URC-BOUNDS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2480,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "URC-RAW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "URC-ROBUST": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "URC-ROBUST-OUT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
     }
   },
   "edges": {
@@ -10557,6 +10876,70 @@
     "E541": {
       "x": 2112.59,
       "y": 4166.78
+    },
+    "E542": {
+      "x": 1955.91,
+      "y": 4149.67
+    },
+    "E543": {
+      "x": 2055.58,
+      "y": 4320.06
+    },
+    "E544": {
+      "x": 2152.42,
+      "y": 4320.06
+    },
+    "E545": {
+      "x": 2442.65,
+      "y": 4426.15
+    },
+    "E546": {
+      "x": 1549.85,
+      "y": 4349.02
+    },
+    "E547": {
+      "x": 2430.04,
+      "y": 4233.1
+    },
+    "E548": {
+      "x": 2316.33,
+      "y": 4263.62
+    },
+    "E549": {
+      "x": 2293.28,
+      "y": 4257.02
+    },
+    "E550": {
+      "x": 2330.38,
+      "y": 4151.82
+    },
+    "E551": {
+      "x": 1838.53,
+      "y": 3986.06
+    },
+    "E552": {
+      "x": 2308.53,
+      "y": 4350.94
+    },
+    "E553": {
+      "x": 2386.0,
+      "y": 4353.0
+    },
+    "E554": {
+      "x": 1963.74,
+      "y": 4383.2
+    },
+    "E555": {
+      "x": 2057.81,
+      "y": 3945.31
+    },
+    "E556": {
+      "x": 2247.09,
+      "y": 4015.05
+    },
+    "E557": {
+      "x": 2356.19,
+      "y": 4160.62
     }
   },
   "bounds": {

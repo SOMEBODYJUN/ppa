@@ -577,3 +577,18 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 旧[Spingarn作者定义](canonical/spingarn_author_definitions.md#sp-first-order)仍按1980稿/1981报告身份调用；1982正式mapping全文未取得。Banach2007 DOI10.1016/j.jmaa.2006.07.076、Ngai–Penot2007与Langenberg2010未读全文时不导入其定理。
 
 **本轮推导与价值边界。** 2010同类换参降低“LT新类再由我们一般化”的叙事权重，不否定LT收敛定理。diag同算法和GU3完整多值例证明标量反射/EB包络可严格损失方向关联；逆高阶余量例只点收敛且长度∞，不能全面替代物理长度合同。一般D若仅保两范数与独立残差界仍可虚构输出组合。GU候选、来源事实和外部首创保持分开；没有新Claim或主稿升级。
+
+
+<a id="lit-unified-ppa"></a>
+## 联合次单调 PPA：经典输入与本批推导的边界
+
+本批 [C277–C284](topics/unified_ppa/README.md) 的有限前缀、望远镜、Fejér、负型核、Kirszbraun、degree、Kakutani 与 LMI/S-procedure 分开标注；不以统一语言宣称发明这些机制。公开优先性仍未穷尽，模型级常数或独立证明也不自动产生首创权。
+
+| 一手固定版本 / 定位 | 实际使用的事实和条件 | 本批映射与限制 |
+| --- | --- | --- |
+| Azagra–Le Gruyer–Mudarra，Kirszbraun's theorem via an explicit formula，[1810.10288v3](https://arxiv.org/pdf/1810.10288v3)，2020-04-21，Thm2 PDF p.3；DOI [10.48550/arXiv.1810.10288](https://doi.org/10.48550/arXiv.1810.10288) | 任意两个实Hilbert空间、任意源子集的Lipschitz映射可保持原常数扩张；不保任意额外像/zero/势约束 | coverage分工实读固定PDF及证明，root核官方版本元数据；本库 [HE](canonical/holder_extension.md#he-extension) 已有同条件导入。C280先自证正测度差核并建立Hilbert商嵌入，矩阵版允许H奇异；不是把该经典扩张认作新机制。root本次在线PDF读取得到工具错误，不倒写为root全文取证 |
+| Evens–Latafat–Patrinos，[2312.06540v1](https://arxiv.org/pdf/2312.06540v1)，2023-12-11，Def1.2、Prop4.2/4.3、Cor4.6、Def4.7、Prop4.8及§4 | 已有对称可不定矩阵(M,R)半单调，线性算子的LMI、逆/乘积/和及拉回规则；需要各自矩阵range门 | raw分工逐项实读，root重开v1及新版确认编号不同。C279保存signed非线性余项及同锚分解；C280的Q>0/H>=0同参数完成为本批独立推导，不据未搜到等式宣布公开first |
+| Evens–Pas–Latafat–Patrinos，[2305.03605v2](https://arxiv.org/pdf/2305.03605v2)，2024-05-06，Def2.1、AssumptionI、Thm2.4/Cor2.5、Thm2.13 | 固定PSD预条件、oblique weak Minty、完整resolvent coverage及参数门；物理点输出另有单值连续桥，subregularity分支已有 | C277的普通有限维零锚能量及参数字典保持源优势，不冒称包含全部PPPA、shadow或weak convergence范围。C284任意旋转一致SPD反例不反驳来源固定预条件结论；变量核新目标须跨步约束 |
+| Luke–Tam 正式稿，[DOI原文](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863)，Def2/Prop4/Assumption2/Thm2；Otero–Iusem2010作者稿接口见[上一轮固定比较](#lit-submonotonicity-routes) | tied二次损失与反射Lip的精确关系已有；包含coverage、指定同窗及兼容门 | C277保原始二次条件作为入口；非线性RL只是另一入口，不能仅凭名称把矩阵/逆图优势抹成一个L常数。OI同类早期源与LT思想使用分开评价 |
+
+本批曲管 reach 的空球估计、两步终止的跨步信息障碍、极大整数层预算反例、变化SPD的明确发散和各模型sharp误差门均给自足解析证明；没有用搜索摘要代替包含关系。正测度门不可删：函数非负不推出条件负定。自然应用、全域曲零远根屏障、有限状态合成与一般奇异核oracle仍是开放目标。

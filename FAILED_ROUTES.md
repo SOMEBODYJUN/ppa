@@ -1,5 +1,14 @@
 # Failed Routes / Obstructions
 
+## 统一次单调 PPA 的已定位边界
+
+- 同一步先分别取最坏距离和最坏步长，会错误重配不同分支；C278的完整 F={y,y³} 排所有独立尾和门，联合势精确给总长。进一步，完整两步终止半代数图排所有仅距离长度势；须保跨步原生状态，不能再把 distance-only 完备性列为开放。[自足反例](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-state)。
+- 良好一般 RL 包络、碰撞安全、闭凸 zero 与真 EB，再加固定原预算图极大性，仍不供完整输入。C281 的近线性预算极大图只覆盖整数层。不能把最大化某个更小预算类偷换成较宽 Lipschitz 类的极大性。[完整缺口](research/canonical/unified_ppa_coverage.md#uc-maximal-hole)。
+- 矩阵完成的 Q 正定而 H 有负方向，仍可能同类极大但只覆盖直线；H半正定是承重门。非线性差核积分必须为正测度；非负函数本身不保证负型。[精确子类](research/canonical/unified_ppa_raw_calculus.md#urc-matrix)。
+- 曲管 normal/tangent 估计在 gamma<1/2 不可仅用 R端点控制负幂；未补偿圆还实际丢掉内侧 coverage。缩输入管不排全空间原图远根。第一定理已修为 gamma≥1/2，固定步长精确补偿是另一个图。[临界攻击](research/canonical/unified_ppa_curved_geometry.md#ucg-critical)。
+- 强单调、全覆盖、零吸收、一致 SPD 谱界甚至零内层误差，都不保任意变化度量 PPA。C284的完整线性图每固定度量稳定，随当前方向转动却 gain²=1300/961 指数发散；新目标必须有跨步结构。[反例](research/canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd)。
+- 非单射核的非解物理输入可以只有零见证种子，强制零吸收的相对规则不保证任意逼近内层有限终止。精确种子存在与可实施 oracle 分开。上述失败不排带明确原图 lifting、非零见证或零证书分支的修正版。
+
 这些卡片保存**失败的精确目标和机制**。9/21 v0.9 的历史 SOURCE-MISSING 不能原封不动当作当前状态：I-001 历史包 100/101 项已展开、I-002/I-003–005/I-059 已恢复，I-075 专题包以展开内容恢复；I-097–099 与 I-102 仍未在盘点文件名中发现。I-005 是审计任务书，不是审计报告。未重构原证明的 N05/N10 仍标“来源包报告”；详情见 [来源谱系](research/SOURCES.md) 与 [no-go ledger](history/sources/提纯总账_2026-09-21_v0.9/03_NO_GO_LEDGER.md)。一种量尺在一个空间失败，不是整个比较问题不可能。
 
 ## F01 · 以单个 cusp / 仿射漂移层代替总体覆盖

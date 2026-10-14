@@ -2420,3 +2420,79 @@
 - **Power / Remote**：q<p 时任意 eta>0/任意小帽都有任意近零点的合法逃逸和发散政策。q=p 的小帽临界 eta*=(1−b)/a^p，等号失败；用 E≤hateta psi(||w||) 时 hateta*=(1−b)/b。q>p 时每个有限 eta 可缩小帽认证。没有帽的纯幂准则，对每个 q>0、eta>0 都有从 S 开始的合法发散政策；这说明本局部证书需远端排除，非断言此特定帽对每个算法必要。
 - **Definitions / Dependencies / Evidence**：[完整 F/J/S 和 IF27 精确轨道](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-object)、[IF26 完整接受纤维与锐帽门](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-frontier)、[幂次分界](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-power)、[零吸收/跨符号/远端](research/topics/inexact_ppa/sharp_precision_frontier.md#isp-remote)、[接收](research/audit/INEXACT_PPA_REVIEW_2026_10_13.md)、[双复算](research/code/inexact_ppa/README.md)。
 - **Scope / Classical positive**：这是诊断机制例，不是自然困难应用。有限局部亚单调/逆亚单调/零锚 weak-Minty 常数均被解析否定，仅排除这些前件。精确算法有 IF27 的 Hölder 共轭至普通线性单调 PPA，不能据此排除经典方法；原坐标完整内层误差政策不会自动被该变换保留。一般 gamma p>1 的充分讨论不是注册的普遍锐必要结论；不能将 q≥p 推广为通用必要精度。
+
+
+<a id="c277"></a>
+## C277-v1 · 完整普通 PPA 的有限原生状态联合证书
+
+- **Status**：`derived-checked`；Astra 实际全文冷读 JP1–JP9、逐式重构及根代理复核；公开先行性未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 X、固定完整 F、lambda>0、完整闭非空 S=zerF，U开、R>0。每个 U_R 输入有完整 J 输出，且每个实际输出能在同一个输入最近零锚上代入明定的有限原图证书；局部真 EB 的评价窗在加入 EB 之前独立关闭。状态 chi:X→{1,…,L} 固定，E_ij(t) 包含全部实际状态转移的(q=d(y,S),s=||x−y||)，没有删支。
+- **Assumptions / Conclusion**：共同连续非减 tau:[0,R]→[0,R]、tau0=0、tau(t)<t；全部 E_ij 满足 q≤tau(t)。有限非负 Wi、Wi0=0，全部 E_ij 满足 s+Wj(q)≤Wi(t)。初值 Wi0(d0)<dist(x0,Uc)。每条完整政策无限延拓、零输入驻定、留 U_R、距离≤tau^k(d0)、物理总長≤Wi0(d0)并趋 S∩U。尾界由当前状态势给出，显示趋零模另须势的零连续/单调资格。
+- **Definitions / Dependencies / Evidence**：[有限证书语法](research/canonical/unified_ppa_joint_certificates.md#ujc-object)、[有限前缀后端](research/canonical/unified_ppa_joint_certificates.md#ujc-theorem)、[状态父版本 JP47–50](research/canonical/unified_ppa_joint_certificates.md#ujc-state-theorem)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)、[代码](research/code/unified_ppa/README.md)。PSD 是安全外松弛；半代数保秩/QE不承诺实用复杂度。
+- **Scope / Counterevidence**：充分编译而非所有次单调类的完备定理；不自动供coverage、原图数据、物理GPPA提升或runtime停止。只回收 C208/C249 对应有限维/fullzero/物理桥子类，旧壳层机制保留。C278否定只用距离状态的完备版本；有限原生状态自动生成仍open。望远镜/Caristi/Fejér机制经典，不认证新收敛原理。
+
+<a id="c278"></a>
+## C278-v1 · 独立一步包络与径向联合状态的两级信息障碍
+
+- **Status**：`derived-checked`；原作者及独立 Astra 逐行冷核，根代理反算完整关系；公开优先未认证。
+- **Exact Statement / First object**：完整 R关系 F(y)={y,y³}、lambda1、S0、rF=min(|y|,|y|³)，全输入完整 J={x/2,g(x)}，g+g³=id。全部政策有限长且总長恰|x0|；在每个0<R≤1，任意合法独立一步上界 tauhat/bhat 的可定义迭代都令 Σ bhat(tauhat^k(t0))=∞ 对每t0>0。联合长度W(t)=t成立。
+- **Exact Statement / Second object**：完整 R²图 F((0,u))={(u+u³,xi):xi∈R}、其余空，lambda1、S0、dom上真r=|u+u³|。图闭半代数、全input J=T=(0,g(x1))，T²0，每闭球不变，所有轨道长度≤3||x0||。其精确一步距离—步长外关系含(g(t),sqrt(t²+g(t)²))，因虚假反复拼接成本不可和，不存在任何有限的仅距离长度势W认证全部该关系。两原生状态以W0=3t,W1=t修复同算法。
+- **Definitions / Dependencies / Evidence**：[JP32–40](research/canonical/unified_ppa_joint_certificates.md#ujc-one-step-loss)、[JP41–46](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-state)、[独立完整证明](research/novelty/2026_10_14_unified/independent_review.md#ir-distance-state-refutation)、[复算](research/code/unified_ppa/README.md)。
+- **Scope / Counterevidence**：严格排的是两种信息压缩和其尾和/势门，不排经典一维顺序、其他Lyapunov、改进原图再认证或整体C208。第二对象原F不是全定义域，但完整PPA全输入，这是明确允许对象。仅距离完备性宽版已refuted；有限原生状态完备性另open。
+
+<a id="c279"></a>
+## C279-v1 · 仿射物理目标的 raw LMI 与全域非线性扰动认证
+
+- **Status**：`derived-checked`；独立实际全文冷读 RC1–32、根代理重构；公开新颖性未认证。
+- **Exact Statement / Raw object**：有限维、普通完整PPA、固定lambda>0，S=s0+kerN⊂zerF，N正交法投影；同输入最近锚。每个完整输出给提升z∈L、a=Az,w=Bz,e=(A+lambdaB)z，原图 zᵀQi z+Ri(z)≥0，signed Ri≤eta_i(||e||) 在同一块认证。alpha_i≥0及 kappa0²EᵀE−AᵀNA−Σalpha_iQi⪰_L0 推 d(y,S)²≤kappa0²d(x,S)²+Σalpha_i eta_i(d(x,S))；物理step LMI同理。
+- **Exact Statement / Robust subclass**：全域F(y)=Dy+Ecal(y)，Ecal usc非空compact convex，每e∈Ecal(y)满足||e||≤epsilon||y||。sigma_min(I+lambdaD)>lambda epsilon 给完整J全input非空；所有根||y||≤||x||/[sigma_min(I+lambdaD)−lambda epsilon]。另epsilon<sigma_min(D)给完整S0及trueEB K=1/[sigma_min(D)−epsilon]；分母>1给全政策global finite length/zero吸收。
+- **Evidence / Dependencies**：[RC-A/LMI](research/canonical/unified_ppa_raw_calculus.md#urc-lmi)、[RC-P完整coverage](research/canonical/unified_ppa_raw_calculus.md#urc-uncertainty)、RC25–26有理LMI、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)、[代码](research/code/unified_ppa/README.md)。Kakutani的compactconvex/usc/selfmap均映射；所有远根由原方程下界控制。
+- **Scope / Counterevidence**：LMI是充分S-procedure，不授无损；一般仿射子目标用于C277时另核fullS。和/逆/拉回保分解及锚，残差须重新取inf。diag(-1,.01),lambda3恢复锐100/103及全epsilon<.01扰动。非凸uncertainty不能默认Kakutani；不是argminprox、不默认其它SPD/变化核。逆图临界高阶正耗散+局部true linearEB仍可无限長，故长度门不可删。
+
+<a id="c280"></a>
+## C280-v1 · 方向与混合 Hilbert 核预算的同参数完整覆盖
+
+- **Status**：`derived-checked`；独立实际全文冷读与根代理核正测度、商空间及完整纤维条件；公开优先未认证。
+- **Exact Statement / General profile**：实Hilbert、lambda>0、非空全对图；Minty差z、反射差c。固定有界线性A、可逆有界Q0、有限个有界线性Pj:H→Hj（Hj为Hilbert空间），以及phi_j(s)=a_js+∫(1−exp(−ts))mu_j(dt)，a_j≥0、mu_j非负Borel、∫min(1,t)mu_j<∞。全对预算||Q0(c−Az)||²≤Σphi_j(||Pjz||²)有保持全部原参数的fullMinty扩张；该固定类graph-maximal iff full input，完整J单值。
+- **Matrix corollary**：有限维全对(M0,R0)矩阵半单调，M=lambdaM0,R=R0/lambda,Q=I+M+R≻0,D=M−R,H=I−M−R+DQ^-1D⪰0。精确完成平方与商ranH^.5给同(M0,R0)完成，允许H奇异、无交换假设。H有负方向时同类极大只覆盖直线的RC19反例，故门不可删。
+- **Full fiber conclusion**：有限维generalprofile另phi_j(s)=o(s)、I±A可逆，fullMinty同类极大图的原F(x)及F^-1(w)全部纤维非空compact、完整zerF非空compact；两物理坐标映射总degree分别sgn det(I±A)。全inputPPA不自动吸引这些zeros。
+- **Dependencies / Evidence**：[UC14–24](research/canonical/unified_ppa_coverage.md#uc-hilbert-profile)、[正逆fibers/degree](research/canonical/unified_ppa_coverage.md#uc-full-fibers)、[矩阵RC15–19](research/canonical/unified_ppa_raw_calculus.md#urc-matrix)、[HE已核外部接口](research/canonical/holder_extension.md#he-extension)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)、[代码](research/code/unified_ppa/README.md)。
+- **Scope / Counterevidence**：负型核/Hilbert/Kirszbraun机制经典；不是任意gauge，C281精确否定宽版。完成不保预指定zero集、trueEB、势函数或位置依赖restoring；critical direction barrier只在fullC及独立原始前件下另成立，不由extension自动保持。无限维正逆纤维紧/非空不在本结论。
+
+<a id="c281"></a>
+## C281-v1 · 良好近线性联合预算的极大完整图仍可缺 Minty 输入
+
+- **Status**：`derived-checked`；独立全文冷读UC4–13及根代理精确反算；公开优先未认证。
+- **Exact Statement / Objects**：每n≥1、lambda>0，定义f(W)=sqrt(1+2W)−1 (W≤3/2)，否则2W/3，D(r,s)=[r²+s²−f(r²+s²)]/2。D连续对称非负、D≤(r²+s²)/6、D(q,q)<q²；原图预算<Delta y,lambda Delta w>≥−D精确等价反射模omega(t)=t sqrt[1+min(t²,1)]，有限非减原点连续且≤sqrt2 t。
+- **Conclusion / Complete model**：固定Minty域Z×R^(n−1)、C(k,u)=(sqrt2 k,u)。Cayley反构的完整闭F在该固定D全图类已经graph-maximal；完整S={0}×R^(n−1)，非空纤维true r=|beta x1|、beta=−(3−2sqrt2)/lambda，extended-real全域EB K=lambda(3+2sqrt2)。零输入驻定；J在每个非整数第一输入坐标为空。相邻锚两个反射球不交排所有可添加输入。
+- **Evidence / Dependencies**：[完整自足UC4–13](research/canonical/unified_ppa_coverage.md#uc-maximal-hole)、[复算](research/code/unified_ppa/README.md)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)。平方差核非负型的精确三点值3/8。
+- **Scope / Counterevidence**：反驳一般原点消失gauge或GU1良好包络+同预算极大性⇒fullMinty的宽版；不反驳C280/Hölder特定预算或假设domF全域的额外类。omega不凹/非次可加、∞不sublinear；不能扩大反驳范围。放宽到sqrt2t可完成，但改变原预算身份。
+
+<a id="c282"></a>
+## C282-v1 · 原始法切场的完整曲管认证与半阶临界
+
+- **Status**：`derived-checked`；Astra实际完整冷审、root重构空球/degree、初版指数范围错误已修；公开优先未认证。
+- **Exact Statement / Objects**：紧非空C²无边界M、正常管/reach下界rho；完整F定义在闭R管、管外空。每图w分为输出最近点处normal a、tangent b，<a,n>≥m||n||²，||a||≤L||n||，||b||≤C||n||gamma；0<m≤L，C≥0，gamma∈[.5,1]，至少一连续图模式。完整S=M，true rF≥m d。
+- **Same parameters / Conclusion**：(1+lambdaL)R<rho，E_R=lambda²C²/[2(rho−(1+lambdaL)R)]，E_R R^(2gamma−1)<lambda m。alpha=1+lambda m−E_R R^(2gamma−1)>1。所有d(x,M)<R输入有完整输出；全部根d(y,M)≤d(x,M)/alpha，step≤lambdaL d/alpha+lambdaC(d/alpha)^gamma，zero全部驻定、同管留域、所有政策finite length/趋M。coverage用wholehomotopy边界下界，不预设输出小chart。
+- **Critical / Mechanism**：gamma>.5可缩窗；gamma=.5的类级严格门m>lambdaC²/(2rho)，圆临界等号失败；未补偿gamma<.5双侧小管内侧输入coverage失败。另固定设计lambda圆弦精确补偿给每个0<gamma<1完整多值正面；这是不同原图，非任意步长/自然应用普遍结论。
+- **Evidence / Dependencies**：[UC1–10](research/canonical/unified_ppa_curved_geometry.md#ucg-tube)、[圆临界攻击](research/canonical/unified_ppa_curved_geometry.md#ucg-critical)、[精确补偿](research/canonical/unified_ppa_curved_geometry.md#ucg-compensation)、UC28–29原物理C249/C250标量压缩排除、[代码](research/code/unified_ppa/README.md)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)。
+- **Scope / Counterevidence**：完整的是本页闭管图或明确允许子关系，不授更大全域原图远根排除。多值图不自动有连续单值J/Euler接口。普通reach、degree机制经典；原生全域曲目标屏障/自然应用优势仍open。C=0曲率项消失才可单独去gamma门。
+
+<a id="c283"></a>
+## C283-v1 · co-hypo 真图停止的完整输出预算及类级锐端点
+
+- **Status**：`derived-checked`；独立全文冷读UI13/UI14a–c/UI34–38与根代理核量词；公开优先未认证。
+- **Exact Statement / Objects**：有限维F、完整闭非空S=zerF、U开、K/R/Wbar>0、lambda>2rho≥0，G⊂gphF含S×0；全图版本G=gphF。全部G图点/全部S锚<y−p,w>≥−rho||w||²。trueEB d(y,S)≤K rF(y)认证全部候选输出在rF≤Wbar；U_R每输入有精确G种子，R≤sqrt(c)Wbar，c=lambda(lambda−2rho)>0。
+- **Algorithm / Conclusion**：全部接受输出w∈G_y，W=||w||≤Wbar，E=||x−y−lambda w||≤sigma W，0≤sigma<sqrt(K²+c)−K。全种子通过，所有输出d(y,S)≤kappa d(x,S)、step≤C d(x,S)，kappa=K/[sqrt(K²+c)−sigma]<1，C=(lambda+sigma)/(sqrt c−sigma)；严格C d0/(1−kappa)<dist(x0,Uc)给留域/零吸收/全部policyfinite length。
+- **Sharp / Oracle / Evidence**：K≥rho且K>0时旋转完整F=(−rhoI+sqrt(K²−rho²)K90)^−1给严格阈值等号的真实恒范数不收敛政策，可缩放任意帽；不是diagonal本身锐阈值宣告。[UI8–14c](research/canonical/unified_ppa_inexact_interfaces.md#uic-cohypo)、[同点有证书membership UI34–37及邻近图点UI38的另一允许关系](research/canonical/unified_ppa_inexact_interfaces.md#uic-membership)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)、[代码](research/code/unified_ppa/README.md)。
+- **Scope / Counterevidence**：运行不调用未知d/J但需真实图或明确membership证书；帽及候选域不能从旧精确输出自动借。innerfinite另sigma>0、严格帽、逼近非零图见证；精确种子存在不是oracle复杂度。relativeerror/energy机制经典，generalRL恢复C275不重新计新原理。一般GPPA物理提升另核。
+
+<a id="c284"></a>
+## C284-v1 · 固定与移动投影核的物理误差锐门及一致 SPD 反例
+
+- **Status**：`derived-checked`；独立实际全文冷审UI23–33e，root提供并重构SPD反例，Fraction反算通过；公开优先未认证。
+- **Exact Statement / Algorithm**：F=Id on R^n、完整S0、rF(y)=||y||，lambda>0、P正交投影(含0)。完整接受关系所有y满足||Px−Py−lambda y||≤sigma lambda||y||，sigma∈[0,1)。每input精确种子Px/(1+lambda)供应coverage；allerror方向保留。
+- **Fixed / Moving conclusion**：固定P所有sigma<1皆物理finite length/趋0；有kerP时sigma1允许零输入逃逸。任意moving Pk的锐一步physical因子1/Lsigma，Lsigma=1+lambda−sigma lambda 当sigma≤lambda/(1+lambda)，否则sqrt[(1+2lambda)(1−sigma²)]。sigma<sqrt[2lambda/(1+2lambda)]给统一allpolicyfinite length；n≥2含rank1全类在等号有合法恒范数旋转，不授n1/满秩子类同一sharp必要性。
+- **Independent exact SPD refutation**：R²、F=I+3K90 strongmono、lambda.1、完整S0,true r=sqrt10||y||。令Mk=.1I+.9 P_span{xk}，全exact metric更新Mk(x−y)=lambda F(y)唯一y=(20I−30K90)x/31，gain²1300/961>1；Mk谱始终{1,.1}，每fixedMk算法谱半径²10/31<1。故任意moving uniformSPD+strongmono+e0仍不能推出收敛。
+- **Evidence / Dependencies**：[UI23–33](research/canonical/unified_ppa_inexact_interfaces.md#uic-projections)、[movingsharp](research/canonical/unified_ppa_inexact_interfaces.md#uic-moving)、[UI33a–e](research/canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd)、[独立反算](research/novelty/2026_10_14_unified/independent_review.md#ir-moving-spd-refutation)、[代码](research/code/unified_ppa/README.md)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)。
+- **Scope / Counterevidence**：物理lifting由本模型完整图方程推导，不是任意singularkernel的自动推广。Px0而x非zero时只接受精确zero，任意非zero逼近不能finiteinner；模型用可检查zero分支修复，一般oracle仍open。变化核的宽安全版已refuted；带明确跨步控制的原图非线性停止仍open。

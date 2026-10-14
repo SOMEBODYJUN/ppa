@@ -1,0 +1,92 @@
+{
+  "scope": "finite-instance algebra and attack checks; general proofs in candidate note",
+  "linear_diag": {
+    "lambda": 3,
+    "raw_V": "[[Fraction(-2, 1) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(103, 100)]]",
+    "sharp_physical_kappa": "100/103",
+    "raw_contraction_LMI": "[[Fraction(29391, 10609) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(0, 1)]]",
+    "inverse_energy_remainder_matrix": "[[Fraction(0, 1) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(303, 5000)]]",
+    "C249_min_direct_factor": 50,
+    "C250_min_energy_factor_squared": "25000/10009"
+  },
+  "nonlinear_uncertainty_LMI": {
+    "uncertainty_epsilon": "1/200",
+    "certified_kappa": "99/100",
+    "nonnegative_multiplier": 600,
+    "exact_blocks": [
+      "[[Fraction(5999651, 10000) Fraction(6029403, 10000)]\n [Fraction(6029403, 10000) Fraction(6088209, 10000)]]",
+      "[[Fraction(251, 10000) Fraction(-30597, 10000)]\n [Fraction(-30597, 10000) Fraction(6088209, 10000)]]"
+    ],
+    "exact_block_determinants": [
+      "3468573573/2000000",
+      "11839281/2000000"
+    ],
+    "elementary_raw_bound": "200/203",
+    "true_residual_EB": 200
+  },
+  "noncommuting_matrix_identity": {
+    "noncommuting": true,
+    "Q_eigenvalues": [
+      0.9488608504619145,
+      1.3011391495380855
+    ],
+    "H_eigenvalues": [
+      0.7122826765946791,
+      1.0808973007259104
+    ],
+    "identity_exact": true
+  },
+  "signed_matrix_sum": {
+    "R1": "[[Fraction(-1, 1) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(2, 1)]]",
+    "R2": "[[Fraction(2, 1) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(3, 1)]]",
+    "R_parallel": "[[Fraction(-2, 1) Fraction(0, 1)]\n [Fraction(0, 1) Fraction(6, 5)]]",
+    "exact_completed_square": true
+  },
+  "GU3": {
+    "gamma": 0.5,
+    "all_two_fibers_checked": true,
+    "normal_contraction": 0.5,
+    "max_step_bound_excess": -4.99999874970563e-13,
+    "C250_false_scalar_q_over_t_at_t_1e_minus12": 1000000.0,
+    "length_bound_formula": "t+t^gamma/(1-2^(-gamma))"
+  },
+  "critical_inverse": {
+    "exact_energy": "x^2-y^2=2w^4",
+    "true_local_EB_K": "1/2",
+    "EB_state_window": "|y|<=1/8",
+    "minimum_sampled_EB_margin": 0.0,
+    "simulation": {
+      "1000": {
+        "abs_x": 0.004879499798233603,
+        "k_times_x_squared": 0.023809518280961773,
+        "length": 13.117377532214206,
+        "length_over_sqrt_k": 0.41480789930115614
+      },
+      "10000": {
+        "abs_x": 0.0017407765268195093,
+        "k_times_x_squared": 0.030303029163257937,
+        "length": 59.30703177954609,
+        "length_over_sqrt_k": 0.5930703177954608
+      },
+      "100000": {
+        "abs_x": 0.0005581455710766041,
+        "k_times_x_squared": 0.031152647851242853,
+        "length": 211.45590861853435,
+        "length_over_sqrt_k": 0.6686822959349974
+      }
+    },
+    "proved_asymptotic_constant": "1/32"
+  },
+  "preservation_attacks": {
+    "changed_kernel_2I_negative_direction_factor": -2.0,
+    "changed_kernel_3I_coverage_matrix_is_singular": true,
+    "branch_specific_SPD_norms": [
+      0.6099019513592785,
+      0.6099019513592785
+    ],
+    "alternating_product_spectral_radius": 4.48606797749979,
+    "original_full_F_true_EB_K": 8.123105625617667,
+    "zero_fiber_drift_example": "F(u,v)={(u,0),(u,-1)}; J(0,b) contains (0,b+1)",
+    "remote_full_fiber_example": "gphF=gphId union {(10,p-10):|p|<=1}; J(0) contains 10"
+  }
+}
