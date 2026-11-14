@@ -875,6 +875,8 @@
 | E563 | [GPI-LOSS · C286 正物理指数却无原值域球的退化核](canonical/gppa_physical_local_index.md#gpi-obstruction) | limits → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 同完整 T 和单调退化核的正物理指数不能单独保证值域球。；**derived-checked** |
 | E564 | [RDG-NONDINI · C287 给定非 Dini 凹模的完整闭环反例](canonical/rleb_dini_geometry.md#rdg-winding) | limits → [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | 几何距离收缩及紧不变域无法代替 Dini；完整连续单值模型有整圆聚点集。；**derived-checked** |
 | E565 | [RDG-TAME-DATA · C287 多项式有界可定义原图与统一零步包络](canonical/rleb_dini_geometry.md#rdg-tame) | conditional → [RDG-TAME-LENGTH · C287 自动幂步界、全政策有限长度和点收敛](canonical/rleb_dini_geometry.md#rdg-tame) | 仍须严格距离收缩和全窗覆盖；非不变域用初始严格几何和预算。；**derived-checked** |
+| E566 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) ∧ [RNG-GEOMETRY · C288 仿射或紧 C² 目标的切法几何](canonical/rleb_nearest_anchor_geometry.md#rng-affine) | conditional → [RNG-AFFINE · C288 仿射目标精确因子与临界剪切](canonical/rleb_nearest_anchor_geometry.md#rng-affine) | 仿射精确分解加同窗真 EB；临界高段的完整线性剪切。；**derived-checked** |
+| E567 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) ∧ [RNG-GEOMETRY · C288 仿射或紧 C² 目标的切法几何](canonical/rleb_nearest_anchor_geometry.md#rng-affine) | conditional → [RNG-COMPACT · C288 紧流形统一严格小窗门与临界例](canonical/rleb_nearest_anchor_geometry.md#rng-manifold) | 紧 C² 无边界同一二阶图包络，严格门缩窗；类级紧目标临界见证另构造。；**derived-checked** |
 
 ## 不蕴含关系
 

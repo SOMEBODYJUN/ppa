@@ -4323,6 +4323,24 @@
       "label": "C287 自动幂步界、全政策有限长度和点收敛",
       "file": "canonical/rleb_dini_geometry.md#rdg-tame",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RNG-GEOMETRY",
+      "label": "C288 仿射或紧 C² 目标的切法几何",
+      "file": "canonical/rleb_nearest_anchor_geometry.md#rng-affine",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RNG-AFFINE",
+      "label": "C288 仿射目标精确因子与临界剪切",
+      "file": "canonical/rleb_nearest_anchor_geometry.md#rng-affine",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RNG-COMPACT",
+      "label": "C288 紧流形统一严格小窗门与临界例",
+      "file": "canonical/rleb_nearest_anchor_geometry.md#rng-manifold",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10817,6 +10835,30 @@
       "output": "RDG-TAME-LENGTH",
       "relation": "conditional",
       "scope": "仍须严格距离收缩和全窗覆盖；非不变域用初始严格几何和预算。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E566",
+      "inputs": [
+        "RSL-DATA",
+        "RNG-GEOMETRY"
+      ],
+      "output": "RNG-AFFINE",
+      "relation": "conditional",
+      "scope": "仿射精确分解加同窗真 EB；临界高段的完整线性剪切。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E567",
+      "inputs": [
+        "RSL-DATA",
+        "RNG-GEOMETRY"
+      ],
+      "output": "RNG-COMPACT",
+      "relation": "conditional",
+      "scope": "紧 C² 无边界同一二阶图包络，严格门缩窗；类级紧目标临界见证另构造。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
     }

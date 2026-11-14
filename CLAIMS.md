@@ -2523,3 +2523,11 @@
 - **Conclusion / Quantifiers**：构造全域连续单值 \(F\) 和同胚完整 \(J_{\lambda F}\)，在单位圆小闭不变管上满足指定最近零锚 \(\omega\)、同窗真残差误差界及直接兼容，并有精确距离比 \(q\)。全部非零距离管内轨道无限长且聚点集为整圆。正面：可定义实际位移上包络有幂上界，给全部选择局部有限长度、点收敛和几何点尾。
 - **Dependencies / Evidence**：[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)。子代理独立构造，主代理核单步窗、反演、发散累角和控制实际包络。可定义增长导入 van den Dries–Miller 1994 §1.3。
 - **Counterevidence / Scope**：仅证给定凹非 Dini 模的最坏类；未要求全对 RL 或单轨模必要性。正面同时保留统一趋零步界及严格几何收缩。C10 对数直漂与 C214/C219 核输运保持原身份。公开先行性待核。
+
+<a id="c288"></a>
+## C288-v1 · 仿射与紧光滑目标的最近零锚锐收敛阈值
+
+- **Status**：`derived-checked`。独立构造后主代理重算切法分解、二阶图余项、完整关系和边界例。公开先行性待核。
+- **Exact Statement / Dependencies**：保留 [C285](#c285) 的最近零锚、覆盖、闭目标及同窗真线性误差界，令 \(t=d(x,S)\)、\(\eta=\lambda/K\)。另取 (i) 仿射 \(S\) 或 (ii) 紧 \(C^2\) 无边界嵌入子流形 \(S\)。
+- **Conclusion / Evidence**：仿射最坏一步因子为 C285 的三项与 \([1+\sqrt{1+\eta^2(L^2+3)}]/(2\eta^2)\) 的最小值，在非空参数域上可达。两类的统一严格门均为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<\sqrt{4\eta^2-7}\) 当 \(\eta>2\)。流形的严格门需缩小工作半径。高参数仿射临界例是连续单值线性切法剪切二周期，紧流形临界由含平片的光滑曲线及完整多值关系达到。见 [仿射分解与达到](research/canonical/rleb_nearest_anchor_geometry.md#rng-affine) 与 [二阶近似和紧目标构造](research/canonical/rleb_nearest_anchor_geometry.md#rng-manifold)。
+- **Scope**：必要性对有限维类；固定目标、强制连续单值紧模型及固定余维各需另核。未给一般非仿射有限窗最优一步常数。

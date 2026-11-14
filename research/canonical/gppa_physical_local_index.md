@@ -84,3 +84,5 @@ F(y_1,y_2)=(y_1^2,y_2^2+\varphi(y_1)).
 - 最直接的先行是 Hernández-Corbato–Ruiz del Portal–Sánchez-Gabites, *Infinite series in cohomology: attractors and Conley index*, Corollary 5，印页 5，2020 刊本 DOI 10.1007/s00209-019-02318-5。对流形上连续映射的渐近稳定吸引子，若它是 Čech 上同调有限生成的孤立不变连续统，原文已经给出局部指数等于限制映射的 Čech Lefschetz 数。取限制映射为恒等即为 Euler 示性数。在本命题的严格收缩设定中，稳定像另外证明有理同调有限维并允许不连通紧集。单值物理指数应定位为对已有动力系统原理的 GPPA 应用。进一步的价值要看原值域桥、纤维反例和完整多值版本。[作者原文](https://arxiv.org/pdf/1802.02521)
 - 命题 2 是 GPPA 原方程上的次数接口。已有 C05-v2 则在普通 PPA 中使用经过单独核定的有限样本配领、Vietoris 跨度和 Lefschetz 数来证明扰动值域，两者的近端算法及前件不同。仓库文件为「research/canonical/local_range_without_supercriticality.md」第 12–67 行。
 - 以上证明调用经典固定点指数、Čech 连续性和 Brouwer 次数。内部新增点是对同一完整物理 GPPA 的严格吸引、核差同伦和不可推广边界的拼接。公开文献中的精确先行性仍需查核。可将命题 1 的 G1–G5 直接证明、命题 2 和匹配反例合并进现行稿第 4 节，Čech 加强可独立呈现。
+
+- Hernández-Corbato–Ruiz del Portal–Sánchez-Gabites [2018 预印本](https://arxiv.org/pdf/1802.02521) Corollary 5 对有限生成 Čech 上同调的孤立不变 continuum 给 Lefschetz 型指标关系，吸引情形恢复限制映射的 Lefschetz 数。本文在完整 GPPA 假设下直接建立有限秩，另外连接核差及原值域。

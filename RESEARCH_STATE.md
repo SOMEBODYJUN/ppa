@@ -7,6 +7,8 @@
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
+[C288](research/canonical/rleb_nearest_anchor_geometry.md)已闭仿射及紧光滑目标的类级锐门。剩余强问题是连续单值完整近端在紧光滑目标能否达到边界，以及给定曲率符号对固定窗因子的影响。
+
 [紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)（C287-v1）已完成证明与边界。下一步核同一指定模的全对 RL 是否也可保持，以及在自然驻点近端模型中的可实现性。
 
 [固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)（C286-v1）已完成证明与边界。下一步核完整 usc acyclic 多值 GPPA 的相应指数，以及可独立验证核差边界门的非平凡原生模型。

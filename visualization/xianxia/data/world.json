@@ -8866,6 +8866,39 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "RNG-AFFINE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RNG-COMPACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RNG-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11116,6 +11149,14 @@
     "E565": {
       "x": 3569.2,
       "y": 4533.26
+    },
+    "E566": {
+      "x": 2791.54,
+      "y": 4333.71
+    },
+    "E567": {
+      "x": 2814.76,
+      "y": 4259.52
     }
   },
   "bounds": {
