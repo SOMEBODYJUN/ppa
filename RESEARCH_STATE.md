@@ -9,7 +9,7 @@
 
 [C288](research/canonical/rleb_nearest_anchor_geometry.md)已闭仿射及紧光滑目标的类级锐门。高参数临界已由完整连续单值近端和紧正维光滑目标实现。剩余问题为原 F 单值、严格曲率以及固定窗最优因子。
 
-[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)（C287-v1）已完成证明与边界。下一步核同一指定模的全对 RL 是否也可保持，以及在自然驻点近端模型中的可实现性。
+[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)（C287-v1）已完成证明与边界；本轮 C287-v2 又闭合了同一给定非 Dini \(\omega\) 的局部同尺度全对 RL 上界，并明确用较小内部模 \(\widehat\omega\) 承担 RLEB 兼容，避免把两种模偷换。下一步不再重复同模差分：应核更自然的单调/次微分或原生驻点近端模型、全局尺度延拓，以及是否能让同一模同时承担半和兼容。
 
 [固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)（C286-v1）已完成证明与边界。下一步核完整 usc acyclic 多值 GPPA 的相应指数，以及可独立验证核差边界门的非平凡原生模型。
 

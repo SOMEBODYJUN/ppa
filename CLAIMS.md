@@ -2524,6 +2524,23 @@
 - **Dependencies / Evidence**：[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)。子代理独立构造，主代理核单步窗、反演、发散累角和控制实际包络。可定义增长导入 van den Dries–Miller 1994 §1.3。
 - **Counterevidence / Scope**：仅证给定凹非 Dini 模的最坏类；未要求全对 RL 或单轨模必要性。正面同时保留统一趋零步界及严格几何收缩。C10 对数直漂与 C214/C219 核输运保持原身份。公开先行性待核。
 
+<a id="c287-v2"></a>
+## C287-v2 · 同一给定非 Dini 模的局部全对 RL 紧圆绕行
+
+- **Status**：`derived-checked`；主代理独立重构旋转差分、常数预算、同窗量词及内部兼容模；未参与构造的 reviewer 重新核对了割线斜率、\(\theta\) 的两点估计、\(R<1/2\) 最近零簇和局部 pair gate。公开先行性仍待核。
+- **Exact Statement / Objects / Domain**：给定连续、非减、凹 \(\omega\)（\(\omega(0)=0\)、\(\int_0^{r_0}\omega(t)\,dt/t=\infty\)）、\(\lambda>0\)、\(q\in(0,1)\)。存在同一全局连续单值 \(F=(J^{-1}-I)/\lambda\) 与全局同胚完整预解式 \(J\)，零集为 \(\{0\}\cup S^1\)。取 \(R<1/2\) 足够小，\(U_R=\{x:d(x,S^1)\le R\}\)（其中 \(S^1\) 是该管的最近零簇），并定义局部全对门 \(\mathrm{RL}_\omega(R)\)：对所有 \(x,x'\in U_R\) 且 \(\|x-x'\|\le R\)，令图点为 \((Jx,(x-Jx)/\lambda)\) 与 \((Jx',(x'-Jx')/\lambda)\)，要求反射差满足
+  \[
+  \|[2J-I]x-[2J-I]x'\|\le\omega(\|x-x'\|).
+  \]
+- **Conclusion / Quantifiers**：同一构造还满足 \(d(Jx,S^1)=q\,d(x,S^1)\)，并保留 C287-v1 的真实残差 EB、最近零锚 RL、coverage、严格初值预算、每条非零轨道无限长及整圆聚点集。具体地，取 \(K=20\)、\(\Omega=\omega-Kt\)、\(b=\Omega/4\)、\(m=2b/\sqrt{1+b^2}\)，则 \(2m+(9+8q)t\le\omega(t)\)，从而得到 \(\mathrm{RL}_\omega(R)\)。同时定义内部模
+  \[
+  \widehat\omega(t)=2m(t)+(13+4q)t\le\omega(t),
+  \qquad \widehat B(t)=\frac{t+\widehat\omega(t)}2=m(t)+(7+2q)t,
+  \]
+  缩小窗口使 \(H(t)=m(t)-(1+q)t\) 严增且 \(H(ct)\ge\widehat B(t)\)（任意固定 \(1<c<1/q\)），则 \(\psi(s)=qH^{-1}(\lambda s)\) 给出同窗真残差和直接兼容。故这里严格区分：给定 \(\omega\) 是全对 RL 的同模上界，\(\widehat\omega\) 是 RLEB 动力学的较小内部模；不声称同一个 \(\omega\) 自动满足半和兼容。
+- **Dependencies / Evidence**：[C287-v2 规范证明](research/canonical/rleb_dini_geometry.md#rdg-winding) 的 §1A；\(\|p-p'\|\le4\delta\)、\(\|R_t-R_{t'}\|\le m(\delta)\)、\(t'\|R_t-R_{t'}\|\le\delta\) 给 \(\|[2J-I]x-[2J-I]x'\|\le2m(\delta)+(9+8q)\delta\)。凹非 Dini 割线斜率给 \(\Omega,m,H\) 的局部单调性及 \(H(ct)\ge\widehat B(t)\)；Dini 发散减去线性项后仍发散，故整圆绕行和无限长度保留。独立审查记录见 `research/audit/C287_V2_REVIEW_2026-11-14.md`。
+- **Counterevidence / Scope**：\(\mathrm{RL}_\omega(R)\) 是局部同尺度图块断言，不是对整个全局图、任意输入尺度或环带外的全对模。\(F\) 通过同胚反演构造，未要求单调、次微分或自然凸优化来源。全对 RL 与 RLEB 兼容使用的模被明确分开；不得把 \(\widehat\omega\le\omega\) 偷换成同一模兼容。外部优先性和更自然的单调/梯度模型仍开放。
+
 <a id="c288"></a>
 ## C288-v1 · 仿射与紧光滑目标的最近零锚锐收敛阈值
 

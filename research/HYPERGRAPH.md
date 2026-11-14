@@ -880,6 +880,7 @@
 | E568 | [RNG-CONTINUOUS · C288 紧正维临界的连续单值完整近端](canonical/rleb_nearest_anchor_geometry.md#rng-continuous) | limits → [RNG-COMPACT · C288 紧流形统一严格小窗门与临界例](canonical/rleb_nearest_anchor_geometry.md#rng-manifold) | 临界紧 C∞ 目标正维，完整 J 连续单值，原 F 为闭图关系；按完整前像验证原残差。；**derived-checked** |
 | E569 | [GPI-ANALYTIC · C289 解析非单射单调核的环境次数为零](canonical/gppa_physical_local_index.md#gpi-kernel-rank) | limits → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 全域解析单调核非单射使核差像位于超平面，不能用非零环境次数认证。；**derived-checked** |
 | E570 | [GPI-SMOOTH · C289 光滑非单射凸核与双阱的次数二](canonical/gppa_physical_local_index.md#gpi-kernel-rank) | limits → [GPI-ANALYTIC · C289 解析非单射单调核的环境次数为零](canonical/gppa_physical_local_index.md#gpi-kernel-rank) | 光滑非解析松弛允许局部非单射且核差环境次数为二。；**derived-checked** |
+| E571 | [RDG-FULLPAIR · C287-v2 同模局部全对 RL 紧圆反例](canonical/rleb_dini_geometry.md#rdg-fullpair-v2) | limits → [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | 同一给定非 Dini 模给出局部同尺度全对 RL 上界，但 RLEB 半和兼容使用较小内部模；紧圆轨道仍无限长且聚点集为整圆。；**derived-checked** |
 
 ## 不蕴含关系
 

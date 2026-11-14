@@ -4313,6 +4313,12 @@
       "evidence_status": "derived-checked"
     },
     {
+      "id": "RDG-FULLPAIR",
+      "label": "C287-v2 同模局部全对 RL 紧圆反例",
+      "file": "canonical/rleb_dini_geometry.md#rdg-fullpair-v2",
+      "evidence_status": "derived-checked"
+    },
+    {
       "id": "RDG-TAME-DATA",
       "label": "C287 多项式有界可定义原图与统一零步包络",
       "file": "canonical/rleb_dini_geometry.md#rdg-tame",
@@ -10910,6 +10916,17 @@
       "output": "GPI-ANALYTIC",
       "relation": "limits",
       "scope": "光滑非解析松弛允许局部非单射且核差环境次数为二。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E571",
+      "inputs": [
+        "RDG-FULLPAIR"
+      ],
+      "output": "TRS-FINITE",
+      "relation": "limits",
+      "scope": "同一给定非 Dini 模给出局部同尺度全对 RL 上界，但 RLEB 半和兼容使用较小内部模；紧圆轨道仍无限长且聚点集为整圆。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
     }

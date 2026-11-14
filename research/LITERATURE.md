@@ -592,3 +592,12 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 | Luke–Tam 正式稿，[DOI原文](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863)，Def2/Prop4/Assumption2/Thm2；Otero–Iusem2010作者稿接口见[上一轮固定比较](#lit-submonotonicity-routes) | tied二次损失与反射Lip的精确关系已有；包含coverage、指定同窗及兼容门 | C277保原始二次条件作为入口；非线性RL只是另一入口，不能仅凭名称把矩阵/逆图优势抹成一个L常数。OI同类早期源与LT思想使用分开评价 |
 
 本批曲管 reach 的空球估计、两步终止的跨步信息障碍、极大整数层预算反例、变化SPD的明确发散和各模型sharp误差门均给自足解析证明；没有用搜索摘要代替包含关系。正测度门不可删：函数非负不推出条件负定。自然应用、全域曲零远根屏障、有限状态合成与一般奇异核oracle仍是开放目标。
+
+<a id="lit-c287-v2"></a>
+## C287-v2：紧非 Dini 绕行的相邻一手文献与范围
+
+**Paper fact（直接读取）**：Absil–Mahony–Andrews, *Convergence of the Iterates of Descent Methods for Analytic Cost Functions*, SIAM Journal on Optimization 16(2), 531–547 (2005), DOI [10.1137/040605266](https://doi.org/10.1137/040605266)。官方摘要说明其对象是解析代价函数下满足自然下降条件的数值下降算法，并以 Łojasiewicz 机制推出单一极限点；关键词明确包含 Mexican hat。它不是固定完整 PPA，也不提供本库的反射 RL、真实残差或精确法向距离收缩。
+
+**Paper fact（直接读取）**：Daniilidis–Drusvyatskiy, *Sweeping by a tame process*, [arXiv:1412.8581](https://arxiv.org/abs/1412.8581)，后发表于 Annales de l'Institut Fourier 67 (2017)。摘要结论是半代数或更一般可定义 sweeping 过程的有界轨道具有有限长度；对象是连续时间 sweeping，不是本库通过同胚反演得到的离散完整 PPA。
+
+**Interpretation / comparison**：上述文献分别提供解析下降的单点收敛背景与可定义连续时间有限长度背景；它们不覆盖 C287-v2 的离散完整 PPA、局部同尺度全对 RL、紧圆聚点集和非 Dini 角预算的合取。有限检索未找到同时具备这些对象的直接先行，但该结果不等于全球优先认证。C287-v2 的自然单调/次微分实现仍是开放义务。

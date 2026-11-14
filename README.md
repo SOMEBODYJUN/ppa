@@ -2,7 +2,7 @@
 
 [零集切法几何与线性锐门](research/canonical/rleb_nearest_anchor_geometry.md)补上 C288：仿射目标的精确因子、紧 C² 目标的严格小窗门与临界原近端，解释 C285 高参数最坏类和规则几何子类的阈值差。
 
-[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)给出 C287 的证明、明确适用域及失败边界。下一步核同一指定模的全对 RL 是否也可保持，以及在自然驻点近端模型中的可实现性。
+[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)给出 C287-v1/v2 的证明、明确适用域及失败边界：C287-v2 证明同一给定非 Dini \(\omega\) 可作为局部同尺度全对 RL 上界，同时以显式较小内部模 \(\widehat\omega\) 闭合真残差兼容和无限绕行。下一步核更自然的单调/次微分模型、全局尺度延拓，以及是否能让同一模承担半和兼容；不得把局部 pair gate 或内部模偷换成全局单模结论。
 
 [固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)给出 C286 的证明、明确适用域及失败边界。下一步核完整 usc acyclic 多值 GPPA 的相应指数，以及可独立验证核差边界门的非平凡原生模型。
 
@@ -236,6 +236,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)、[research/code/gppa_scope/README.md](research/code/gppa_scope/README.md) | 有界先行来源、实际阅读位置及未闭新颖性义务；新证明的参数、双精度尾和、Fraction反代及scope复算。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/canonical/general_modulus_dynamics.md](research/canonical/general_modulus_dynamics.md) | C09/C10/C11：同图块一般模的完整Dini/严格预算证明；对数完整双支的真残差、全对非幂模与a=1边界；开域剩余预算、全域统一尾和显式局部同伦。 |
+| [research/canonical/rleb_dini_geometry.md](research/canonical/rleb_dini_geometry.md)、[C287-v2 接收](research/audit/C287_V2_REVIEW_2026-11-14.md) | C287-v1 的紧圆非 Dini 绕行与可定义幂步界；C287-v2 进一步给同一指定 \(\omega\) 的局部同尺度全对 RL，上界与 RLEB 兼容内部模 \(\widehat\omega\) 分开。读 Dini 必要性、紧目标聚点和 pair-gate 量词时使用；自然单调模型与同模半和兼容仍开放。 |
 | [research/canonical/global_shadow.md](research/canonical/global_shadow.md)、[finite_fiber_classification.md](research/canonical/finite_fiber_classification.md)、[full_fiber_coverage.md](research/canonical/full_fiber_coverage.md) | C03/C04/C18 的独立完整证明：非可分 Hilbert 同一正反影子与统一最优因子；有限维所有目标、proper 与任意紧集双向实现；最大根、固定窗完整纤维与开球锐性。无锚、指定锚和有限维必要性分别量化。 |
 | [research/holder_structure.md](research/holder_structure.md) | H01–H07：影子、纤维分类、Dini、回缩、随机完备性反例、9/25 值域候选；审结构或局部拓扑时读。 |
 | [research/LITERATURE.md](research/LITERATURE.md)、[research/canonical/holder_extension.md](research/canonical/holder_extension.md) | LIT-GRN-2002核C05拓扑门；LIT-ALM-2021及HE核Hilbert同常数扩张。LIT-OAI-CATALOG-2026的332实数主链现由C181重构，LIT-MN-EXTENSION的全部导入门支撑C182；其余五稿、复数/Lean/全球先行性仍未验收。 |

@@ -37,6 +37,80 @@
 
 实际步长仍满足 \(s\ge H(t)=m(t)-(1+q)t\)。\(m\) 的割线斜率仍在零附近任意大，因为它是 \(b\) 和一个在零导数为 2 的光滑增函数的复合。固定 \(1<c<1/q\)，缩小剖面窗 \(\varepsilon\) 使 \(H\) 严增且 \(H(ct)\ge \widetilde B(t)=m(t)+(7+2q)t\) 对 \(0\le t\le \varepsilon/c\) 成立。再取覆盖输入区 \(U=\{x:d(x,S)<\varepsilon\}\) 和同一完整图在 \(U\) 输入的图块、工作尺度 \(R\le \varepsilon/c\)。按前式设 \(\psi(s)=qH^{-1}(\lambda s)\)、\(\bar t=H(\varepsilon)/\lambda\)，则同时满足 \(\widetilde B(R)/\lambda\le\bar t\)、\(\psi(\widetilde B(t)/\lambda)\le qc t\) 和真残差误差界。任意图块输入对若其对距 \(\le R\) 都可用 \(\widetilde\omega\)。由于 \(m(t)\sim\omega(t)\)，同一绕行和 Dini 发散证明成立。若 \(\omega\) 可定义，矩阵依旧仅用实代数函数，故这个全对实例亦可定义。
 
+
+<a id="rdg-fullpair-v2"></a>
+### 1A. 同一给定模的全对升级（C287-v2）
+
+上一段的全对估计得到的是与给定模同阶的 \(\widetilde\omega\)，而不是同一个 \(\omega\)。下面把线性余量从旋转剖面中预先扣除，从而闭合同模版本。固定一个安全常数
+\[
+K=20.
+\]
+由凹性、\(\omega(0)=0\) 及非 Dini 条件，\(\omega(t)/t\to\infty\)；缩小 \(\varepsilon\) 后可令 \(\omega\) 在 \([0,\varepsilon]\) 的所有非退化割线斜率都大于 \(K\)，并且
+\[
+\Omega(t):=\omega(t)-Kt\ge0,
+\qquad \Omega(t)/t\to\infty .
+\]
+\(\Omega\) 仍连续、非减、凹，且从 \(\omega\) 只减去一个可积的线性项，所以 \(\int_0^\varepsilon\Omega(t)\,dt/t=\infty\)。令
+\[
+b(t)=\frac{\Omega(t)}4,\qquad
+\theta(t)=2\arctan b(t),\qquad
+m(t)=\frac{2b(t)}{\sqrt{1+b(t)^2}}.
+\]
+再缩小 \(\varepsilon\) 使 \(m\le1\) 且 \(\theta\le1\)。函数 \(b,\theta,m\) 都连续、非减、凹；这里 \(b\mapsto2\arctan b\) 与 \(b\mapsto2b/\sqrt{1+b^2}\) 在所用区间上递增且凹。取 \(R_m(t)\) 为角度 \(\theta(t)\) 的平面旋转，则
+\[
+\|R_m(t)-I\|_{\mathrm{op}}=m(t),
+\qquad
+2m(t)=\frac{\Omega(t)}{\sqrt{1+b(t)^2}}\le\Omega(t).
+\]
+
+保留本节前段的径向函数 \(h\) 和完整映射
+\[
+J(rp)=h(r)R_m(|r-1|)p,
+\qquad F=(J^{-1}-I)/\lambda .
+\]
+它们的全局同胚、零集、精确距离比、真残差和绕行证明不变。只需重做同窗的全对差分。若 \(x=rp,x'=r'p'\) 位于 \(1/2<r,r'<3/2\)，令 \(\delta=\|x-x'\|\le R\)，交换两点使 \(r\ge r'\)，并记 \(t=|r-1|,t'=|r'-1|\)。则
+\[
+|r-r'|\le\delta,\quad |t-t'|\le\delta,\quad
+\|p-p'\|\le4\delta,\quad |h(r)-h(r')|\le q\delta,
+\quad h(r')\le1+qt'.
+\]
+凹性给出
+\[
+\|R_m(t)-R_m(t')\|_{\rm op}\le m(\delta).
+\]
+若 \(t'<\delta\)，则 \(t'\|R_m(t)-R_m(t')\|_{\rm op}\le\delta\)（因 \(m\le1\)）；若 \(t'\ge\delta\)，由凹函数 \(\theta\) 的割线斜率和 \(\theta\le1\) 得同一不等式。因此
+\[
+\begin{aligned}
+\|Jx-Jx'\|
+&\le |h(r)-h(r')|+h(r')\|p-p'\|
+       +h(r')\|R_m(t)-R_m(t')\|_{\rm op}\\
+&\le m(\delta)+(4+4q)\delta .
+\end{aligned}
+\]
+因此反射映射 \(C=2J-I\) 满足
+\[
+\|Cx-Cx'\|
+\le2m(\delta)+(9+8q)\delta
+\le2m(\delta)+K\delta
+\le\Omega(\delta)+K\delta
+=\omega(\delta).
+\]
+此外，最近零锚估计仍为 \(\|2Jx-x-p\|\le 2m(t)+(1+2q)t\le\Omega(t)+(1+2q)t\le\omega(t)\)。因此，**同一个给定的 \(\omega\)** 在该环带完整图的同窗输入对上给出全对 RL 模；这只是对输入距离不超过 \(R\) 的局部图块结论，不是环带外的全局断言。
+
+兼容性与绕行估计沿用一个明确区分的内部模。定义
+\[
+\widehat\omega(t)=2m(t)+(13+4q)t,
+\qquad
+\widehat B(t)=\frac{t+\widehat\omega(t)}2=m(t)+(7+2q)t .
+\]
+由于 \(K=20\ge13+4q\)，上面的全对估计给出 \(\widehat\omega\le\omega\)；因此同一个给定 \(\omega\) 仍是全对 RL 和最近零锚 RL 的合法上界，但**直接兼容和真残差证明使用的是较小的 \(\widehat\omega\)**。由凹性和 \(m(t)/t\to\infty\)，左导数 \(m'_{-}(t)\to\infty\)；固定 \(1<c<1/q\)，再缩小 \(\varepsilon\) 使 \([0,c\varepsilon]\) 上每条割线斜率都大于
+\[
+\frac{(1+q)c+7+2q}{c-1}.
+\]
+于是 \(H(t)=m(t)-(1+q)t\) 严格增加，并有 \(H(ct)\ge\widehat B(t)\) 对 \(0\le t\le\varepsilon/c\)。在 \([0,H(\varepsilon)/\lambda]\) 上置 \(\psi(s)=qH^{-1}(\lambda s)\)，取 \(R\le\varepsilon/c\) 并沿用上文 coverage 与严格预算，即得 \(\psi(\widehat B(t)/\lambda)\le qc\,t<t\)，以及真实残差兼容。又因 \(m(t)\sim\Omega(t)/2\sim\omega(t)/2\)，有 \(\sum_km(q^kt_0)=\infty\)；每条非零轨道仍无限长且聚点集为整圆。
+
+新增结论的精确范围是：每个连续、非减、凹且非 Dini 的 \(\omega\) 都有一个共同小窗，使该紧圆构造满足精确集合距离收缩，并在同一给定 \(\omega\) 下满足局部全对 RL；同时存在显式的 \(\widehat\omega\le\omega\) 使最近零锚、真残差和直接兼容形成完整 RLEB 反例。这里不把 \(\widehat\omega\) 偷换成 \(\omega\) 的兼容模，不声称每个非 Dini 模都强迫发散，也不声称该关系单调、来自次微分或代表自然凸优化模型。
+
 <a id="rdg-tame"></a>
 
 ## 2. 多项式有界结构中的自动幂次步界
