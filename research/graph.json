@@ -4275,6 +4275,36 @@
       "label": "C285 临界完整关系的非收敛见证",
       "file": "canonical/rleb_sharp_linear_frontier.md#rsl-threshold",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-DATA",
+      "label": "C286 完整连续物理 GPPA 与紧簇距离收缩",
+      "file": "canonical/gppa_physical_local_index.md#gpi-index",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-INDEX",
+      "label": "C286 紧簇物理指数为 Čech Euler 数",
+      "file": "canonical/gppa_physical_local_index.md#gpi-index",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-BOUNDARY",
+      "label": "C286 同一实际边界的核差同伦条件",
+      "file": "canonical/gppa_physical_local_index.md#gpi-forcing",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-FORCING",
+      "label": "C286 原值域球与连续扰动余量",
+      "file": "canonical/gppa_physical_local_index.md#gpi-forcing",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-LOSS",
+      "label": "C286 正物理指数却无原值域球的退化核",
+      "file": "canonical/gppa_physical_local_index.md#gpi-obstruction",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10715,6 +10745,40 @@
       "scope": "低参数旋转、高参数完整闭图非孤立二周期排除等号。无连续单值、全对或固定一维一般必要性。",
       "status": "derived-checked",
       "topic": "局部RLEB-PPA"
+    },
+    {
+      "id": "E561",
+      "inputs": [
+        "GPI-DATA"
+      ],
+      "output": "GPI-INDEX",
+      "relation": "implies",
+      "scope": "严格距离收缩、全管完整连续单值给不变紧多面体及 Čech 稳定像。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E562",
+      "inputs": [
+        "GPI-INDEX",
+        "GPI-BOUNDARY"
+      ],
+      "output": "GPI-FORCING",
+      "relation": "conditional",
+      "scope": "非零指标且核差连续、边界非零且方向同伦。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E563",
+      "inputs": [
+        "GPI-LOSS"
+      ],
+      "output": "GPI-FORCING",
+      "relation": "limits",
+      "scope": "同完整 T 和单调退化核的正物理指数不能单独保证值域球。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
     }
   ]
 }

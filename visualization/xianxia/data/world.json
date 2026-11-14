@@ -8778,6 +8778,61 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "GPI-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "GPI-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "GPI-FORCING": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "GPI-INDEX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "GPI-LOSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11008,6 +11063,18 @@
     "E560": {
       "x": 2971.04,
       "y": 4496.54
+    },
+    "E561": {
+      "x": 3512.33,
+      "y": 4263.62
+    },
+    "E562": {
+      "x": 3388.86,
+      "y": 4530.28
+    },
+    "E563": {
+      "x": 3346.19,
+      "y": 4573.69
     }
   },
   "bounds": {

@@ -2505,3 +2505,12 @@
 - **Conclusion / Quantifiers**：每个允许输出有 \(d(y,S)\le mt\)，其中 \(m=\min\{b,b/\eta,\sqrt{(1+L^2)/(2(1+\eta^2))}\}\)。正距离输入存在须 \(b\ge\eta/(1+\eta)\)。在可行域上，允许关系类（甚至完整闭图近端）在维数至多二达到此因子。保证类内全部允许选择局部收敛的严格门为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<2\eta-1\) 当 \(\eta>2\)。两支等号均有任意小不收敛输入。若零点局部孤立且 \(\eta>2\)，缩邻域后任意有限 \(L\) 都有因子至多 \(1/(\eta-1)\)。
 - **Definitions / Dependencies / Evidence**：[一步联合包络及严格实例](research/canonical/rleb_sharp_linear_frontier.md#rsl-envelope)、[三支达到](research/canonical/rleb_sharp_linear_frontier.md#rsl-factor)、[完整反例与留域](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold)。用 C02-v3 的有限前缀证明控制留域，保留 C253 能量项并补几何可行与锚距半和界。后两项的最小值是候选 A 的线性上界。一般模包络在同一合同中给充分性。
 - **Counterevidence / Scope**：C253 作为充分条件仍有效。高 \(\eta\) 的必要性用允许多值、非孤立零集。二维旋转不能宣告固定一维锐性，最近锚反例也不能宣告全对或连续单值子类的同一最优门。
+
+<a id="c286"></a>
+## C286-v1 · 固定核 GPPA 的物理局部指数与原值域条件桥
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain**：有限维欧氏空间、固定核 \(v\)、步长 \(\lambda>0\)、非空紧 \(M\subset F^{-1}(0)\)。完整 \(J^v_{\lambda F}\) 在共同近邻内连续单值，记为 \(T\)，且逐输入 \(d(Tx,M)\le\kappa d(x,M)\)，\(0<\kappa<1\)。
+- **Conclusion / Quantifiers**：局部物理指数等于 \(M\) 的有理 Čech Euler 数。各阶秩有限且仅有限阶非零。C249 条件供统一尾和 ENR；全局连续完整扩展和边界无固定点另给管外指数差额。若 \(D_v=v-v\circ T\) 连续、在边界上非零且与物理差内积非负，两次数相等。非零次数时，边界最小核差除以 \(\lambda\) 给原值域开球与连续扰动余量。
+- **Dependencies / Evidence**：[固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)。子代理独立构造，主代理复算陷获多面体、Čech 稳定像、环境指数及完整反例。Benjamin–Gottlieb §2.1 指数性质，Wendl Theorem 43.25 紧对连续性。
+- **Counterevidence / Scope**：局部指数无需有限物理长度。相同核和完整 \(T\) 可有不同原值域，即使核线性单调、物理指数为正。多值情形需另核上半连续性、无环性及指数接口。公开先行性待核。

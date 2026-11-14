@@ -866,6 +866,14 @@
 | E559 | [RSL-FACTOR · C285 非空参数与精确统一一步因子](canonical/rleb_sharp_linear_frontier.md#rsl-factor) ∧ [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) | conditional → [RSL-THRESHOLD · C285 类级分段锐局部收敛门](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | 严格因子小于1，另用覆盖和严格长度预算推出全部允许选择留域与点收敛。；**derived-checked** |
 | E560 | [RSL-PERIOD · C285 临界完整关系的非收敛见证](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | limits → [RSL-THRESHOLD · C285 类级分段锐局部收敛门](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | 低参数旋转、高参数完整闭图非孤立二周期排除等号。无连续单值、全对或固定一维一般必要性。；**derived-checked** |
 
+## 局部RLEB与零集拓扑
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E561 | [GPI-DATA · C286 完整连续物理 GPPA 与紧簇距离收缩](canonical/gppa_physical_local_index.md#gpi-index) | implies → [GPI-INDEX · C286 紧簇物理指数为 Čech Euler 数](canonical/gppa_physical_local_index.md#gpi-index) | 严格距离收缩、全管完整连续单值给不变紧多面体及 Čech 稳定像。；**derived-checked** |
+| E562 | [GPI-INDEX · C286 紧簇物理指数为 Čech Euler 数](canonical/gppa_physical_local_index.md#gpi-index) ∧ [GPI-BOUNDARY · C286 同一实际边界的核差同伦条件](canonical/gppa_physical_local_index.md#gpi-forcing) | conditional → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 非零指标且核差连续、边界非零且方向同伦。；**derived-checked** |
+| E563 | [GPI-LOSS · C286 正物理指数却无原值域球的退化核](canonical/gppa_physical_local_index.md#gpi-obstruction) | limits → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 同完整 T 和单调退化核的正物理指数不能单独保证值域球。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
