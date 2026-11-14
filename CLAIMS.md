@@ -2529,5 +2529,13 @@
 
 - **Status**：`derived-checked`。独立构造后主代理重算切法分解、二阶图余项、完整关系和边界例。公开先行性待核。
 - **Exact Statement / Dependencies**：保留 [C285](#c285) 的最近零锚、覆盖、闭目标及同窗真线性误差界，令 \(t=d(x,S)\)、\(\eta=\lambda/K\)。另取 (i) 仿射 \(S\) 或 (ii) 紧 \(C^2\) 无边界嵌入子流形 \(S\)。
-- **Conclusion / Evidence**：仿射最坏一步因子为 C285 的三项与 \([1+\sqrt{1+\eta^2(L^2+3)}]/(2\eta^2)\) 的最小值，在非空参数域上可达。两类的统一严格门均为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<\sqrt{4\eta^2-7}\) 当 \(\eta>2\)。流形的严格门需缩小工作半径。高参数仿射临界例是连续单值线性切法剪切二周期，紧流形临界由含平片的光滑曲线及完整多值关系达到。见 [仿射分解与达到](research/canonical/rleb_nearest_anchor_geometry.md#rng-affine) 与 [二阶近似和紧目标构造](research/canonical/rleb_nearest_anchor_geometry.md#rng-manifold)。
-- **Scope**：必要性对有限维类；固定目标、强制连续单值紧模型及固定余维各需另核。未给一般非仿射有限窗最优一步常数。
+- **Conclusion / Evidence**：仿射最坏一步因子为 C285 的三项与 \([1+\sqrt{1+\eta^2(L^2+3)}]/(2\eta^2)\) 的最小值，在非空参数域上可达。两类的统一严格门均为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<\sqrt{4\eta^2-7}\) 当 \(\eta>2\)。流形的严格门需缩小工作半径。高参数仿射临界例是连续单值线性切法剪切二周期，紧流形临界由含平片的光滑曲线达到，高参数可取全域连续单值完整预解式。见 [仿射分解与达到](research/canonical/rleb_nearest_anchor_geometry.md#rng-affine) 与 [二阶近似和紧目标构造](research/canonical/rleb_nearest_anchor_geometry.md#rng-manifold)。
+- **Scope**：必要性对有限维类；固定目标、原 F 强制单值及固定余维各需另核。未给一般非仿射有限窗最优一步常数。
+
+<a id="c289"></a>
+## C289-v1 · 解析非单射单调核的环境次数障碍及光滑反面
+
+- **Status**：`derived-checked`。独立推导并核径向双阱的全部方程和真实残差。公开优先性待核。
+- **Exact Statement / Objects**：\(v:\mathbb R^n\to\mathbb R^n\) 全域实解析、单调、非单射。存在非零方向 \(d\)，使 \(v(\mathbb R^n)\) 位于仿射超平面 \(v(a)+d^\perp\)。因此对任意完整连续单值物理 GPPA 的 \(D_v=v-v\circ T\)，环境 Brouwer 次数只要有定义就为零。
+- **Countermodel / Evidence**：[同窗原方程证明](research/canonical/gppa_physical_local_index.md#gpi-kernel-rank)给 \(\mathbb R^3\) 中双阱梯度 \(F(y)=(\|y\|^2-1)y\)、\(\lambda=1\) 和光滑凸径向核，在球面任意近邻都有非单射纤维，完整 GPPA 全域连续单值。共同小管有 C249 全前件，满足 C286 核差边界门且次数为 2。
+- **Scope**：反例的核有意设计。解析结论需要全域和单调，环境次数为零不否定其他取值证明或商空间次数。光滑模型的原值域亦可径向直接分析，不能据此提出独占应用优势。

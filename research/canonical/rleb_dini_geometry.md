@@ -59,4 +59,6 @@
 
 ## 3. 附带的严格区分
 
-若 \(M\) 是紧致光滑无边界嵌入子流形，\(O_r\) 为具有最近点投影 \(P\) 的欧氏管，\(T\) 在闭管上连续、固定 \(M\) 中每一点，并将闭管映入开管，则 \(\mathrm{ind}(T,O_r)=\chi(M)\)，无须轨道有限长度或点收敛。令 \(D_s(x)=(1-s)x+sP(x)\) 为管的法向收缩。先由 \(D_s\circ T\) 把 \(T\) 同伦到 \(P\circ T\)，再由 \(P\circ T\circ D_s\) 把它同伦到 \(P\)。两段同伦在边界均没有固定点。按固定点指标交换性与紧 ENR 归一化，\(\operatorname{ind}(P,O_r)=\operatorname{ind}(\mathrm{id}_M,M)=\chi(M)\)。参见 [Benjamin–Gottlieb, *Fixed Point Indices and Manifolds with Collars*, §2.1](https://www.math.purdue.edu/~gottlieb/Bibliography/62.pdf) 的 (2.1.4)、(2.1.6)。这条标准推论可将稿中的 Euler 障碍与迭代极限回缩分开，§1 给出后者不存在而前者仍有意义的完整 PPA 实例。若还调用全域指数与分解，则全域连续性与全域边界无不动点仍须另给。
+若 \(M\) 是紧致光滑无边界嵌入子流形，\(O_r\) 为具有最近点投影 \(P\) 的欧氏管，\(T\) 在闭管上连续、固定 \(M\) 中每一点，并将闭管映入开管，则 \(\mathrm{ind}(T,O_r)=\chi(M)\)，无须轨道有限长度或点收敛。令 \(D_s(x)=(1-s)x+sP(x)\) 为管的法向收缩。先由 \(D_s\circ T\) 把 \(T\) 同伦到 \(P\circ T\)，再由 \(P\circ T\circ D_s\) 把它同伦到 \(P\)。两段同伦在边界均没有固定点。按固定点指标交换性与紧 ENR 归一化，\(\operatorname{ind}(P,O_r)=\operatorname{ind}(\mathrm{id}_M,M)=\chi(M)\)。参见 [Benjamin–Gottlieb, *Fixed Point Indices and Manifolds with Collars*, §2.1](https://www.math.purdue.edu/~gottlieb/Bibliography/62.pdf) 的 (2.1.4)、(2.1.6)。这里的光滑管指标机制在 C231/C244/C254 已有使用。它可将稿中的 Euler 障碍与迭代极限回缩分开，§1 给出后者不存在而前者仍有意义的完整 PPA 实例。若还调用全域指数与分解，则全域连续性与全域边界无不动点仍须另给。
+
+- 动力学近邻：[Kitchens–Misiurewicz](https://www.aimsciences.org/article/doi/10.3934/dcds.2010.27.787)研究旋转同胚的聚点集；[Absil–Mahony–Andrews](https://sites.uclouvain.be/absil/Publi/Convergence_SIOPT/13-60526.pdf) §2 有光滑连续梯度流不收敛实例。这里需比较的是同一完整 PPA 的指定模、几何距离率与实际输出真残差兼容。先行检索范围未穷尽。

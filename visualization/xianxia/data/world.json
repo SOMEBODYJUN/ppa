@@ -8899,6 +8899,39 @@
       "y": 4305,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "GPI-ANALYTIC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "GPI-SMOOTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RNG-CONTINUOUS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11157,6 +11190,18 @@
     "E567": {
       "x": 2814.76,
       "y": 4259.52
+    },
+    "E568": {
+      "x": 2877.81,
+      "y": 4218.31
+    },
+    "E569": {
+      "x": 3441.81,
+      "y": 4573.69
+    },
+    "E570": {
+      "x": 3488.0,
+      "y": 4530.0
     }
   },
   "bounds": {

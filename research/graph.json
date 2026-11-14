@@ -4341,6 +4341,24 @@
       "label": "C288 紧流形统一严格小窗门与临界例",
       "file": "canonical/rleb_nearest_anchor_geometry.md#rng-manifold",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RNG-CONTINUOUS",
+      "label": "C288 紧正维临界的连续单值完整近端",
+      "file": "canonical/rleb_nearest_anchor_geometry.md#rng-continuous",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-ANALYTIC",
+      "label": "C289 解析非单射单调核的环境次数为零",
+      "file": "canonical/gppa_physical_local_index.md#gpi-kernel-rank",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GPI-SMOOTH",
+      "label": "C289 光滑非单射凸核与双阱的次数二",
+      "file": "canonical/gppa_physical_local_index.md#gpi-kernel-rank",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10859,6 +10877,39 @@
       "output": "RNG-COMPACT",
       "relation": "conditional",
       "scope": "紧 C² 无边界同一二阶图包络，严格门缩窗；类级紧目标临界见证另构造。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E568",
+      "inputs": [
+        "RNG-CONTINUOUS"
+      ],
+      "output": "RNG-COMPACT",
+      "relation": "limits",
+      "scope": "临界紧 C∞ 目标正维，完整 J 连续单值，原 F 为闭图关系；按完整前像验证原残差。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E569",
+      "inputs": [
+        "GPI-ANALYTIC"
+      ],
+      "output": "GPI-FORCING",
+      "relation": "limits",
+      "scope": "全域解析单调核非单射使核差像位于超平面，不能用非零环境次数认证。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E570",
+      "inputs": [
+        "GPI-SMOOTH"
+      ],
+      "output": "GPI-ANALYTIC",
+      "relation": "limits",
+      "scope": "光滑非解析松弛允许局部非单射且核差环境次数为二。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
     }
