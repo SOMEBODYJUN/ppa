@@ -4305,6 +4305,24 @@
       "label": "C286 正物理指数却无原值域球的退化核",
       "file": "canonical/gppa_physical_local_index.md#gpi-obstruction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RDG-NONDINI",
+      "label": "C287 给定非 Dini 凹模的完整闭环反例",
+      "file": "canonical/rleb_dini_geometry.md#rdg-winding",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RDG-TAME-DATA",
+      "label": "C287 多项式有界可定义原图与统一零步包络",
+      "file": "canonical/rleb_dini_geometry.md#rdg-tame",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RDG-TAME-LENGTH",
+      "label": "C287 自动幂步界、全政策有限长度和点收敛",
+      "file": "canonical/rleb_dini_geometry.md#rdg-tame",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10777,6 +10795,28 @@
       "output": "GPI-FORCING",
       "relation": "limits",
       "scope": "同完整 T 和单调退化核的正物理指数不能单独保证值域球。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E564",
+      "inputs": [
+        "RDG-NONDINI"
+      ],
+      "output": "TRS-FINITE",
+      "relation": "limits",
+      "scope": "几何距离收缩及紧不变域无法代替 Dini；完整连续单值模型有整圆聚点集。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E565",
+      "inputs": [
+        "RDG-TAME-DATA"
+      ],
+      "output": "RDG-TAME-LENGTH",
+      "relation": "conditional",
+      "scope": "仍须严格距离收缩和全窗覆盖；非不变域用初始严格几何和预算。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
     }

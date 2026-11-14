@@ -2514,3 +2514,12 @@
 - **Conclusion / Quantifiers**：局部物理指数等于 \(M\) 的有理 Čech Euler 数。各阶秩有限且仅有限阶非零。C249 条件供统一尾和 ENR；全局连续完整扩展和边界无固定点另给管外指数差额。若 \(D_v=v-v\circ T\) 连续、在边界上非零且与物理差内积非负，两次数相等。非零次数时，边界最小核差除以 \(\lambda\) 给原值域开球与连续扰动余量。
 - **Dependencies / Evidence**：[固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)。子代理独立构造，主代理复算陷获多面体、Čech 稳定像、环境指数及完整反例。Benjamin–Gottlieb §2.1 指数性质，Wendl Theorem 43.25 紧对连续性。
 - **Counterevidence / Scope**：局部指数无需有限物理长度。相同核和完整 \(T\) 可有不同原值域，即使核线性单调、物理指数为正。多值情形需另核上半连续性、无环性及指数接口。公开先行性待核。
+
+<a id="c287"></a>
+## C287-v1 · 紧零簇的非 Dini 绕行与多项式有界可定义有限长度
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Objects / Domain**：任意连续、非减、凹、零处取零且 Dini 积分发散的 \(\omega\)，任意 \(\lambda>0,\ 0<q<1\)。另给独立正面：在同一多项式有界 o-minimal 实域结构中可定义的闭目标、输入域及实际允许图，有覆盖、\(\kappa<1\) 距离收缩和统一趋零步界。
+- **Conclusion / Quantifiers**：构造全域连续单值 \(F\) 和同胚完整 \(J_{\lambda F}\)，在单位圆小闭不变管上满足指定最近零锚 \(\omega\)、同窗真残差误差界及直接兼容，并有精确距离比 \(q\)。全部非零距离管内轨道无限长且聚点集为整圆。正面：可定义实际位移上包络有幂上界，给全部选择局部有限长度、点收敛和几何点尾。
+- **Dependencies / Evidence**：[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)。子代理独立构造，主代理核单步窗、反演、发散累角和控制实际包络。可定义增长导入 van den Dries–Miller 1994 §1.3。
+- **Counterevidence / Scope**：仅证给定凹非 Dini 模的最坏类；未要求全对 RL 或单轨模必要性。正面同时保留统一趋零步界及严格几何收缩。C10 对数直漂与 C214/C219 核输运保持原身份。公开先行性待核。

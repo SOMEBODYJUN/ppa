@@ -8833,6 +8833,39 @@
       "y": 4578,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "RDG-NONDINI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RDG-TAME-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RDG-TAME-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11075,6 +11108,14 @@
     "E563": {
       "x": 3346.19,
       "y": 4573.69
+    },
+    "E564": {
+      "x": 4469.56,
+      "y": 3044.06
+    },
+    "E565": {
+      "x": 3569.2,
+      "y": 4533.26
     }
   },
   "bounds": {

@@ -873,6 +873,8 @@
 | E561 | [GPI-DATA · C286 完整连续物理 GPPA 与紧簇距离收缩](canonical/gppa_physical_local_index.md#gpi-index) | implies → [GPI-INDEX · C286 紧簇物理指数为 Čech Euler 数](canonical/gppa_physical_local_index.md#gpi-index) | 严格距离收缩、全管完整连续单值给不变紧多面体及 Čech 稳定像。；**derived-checked** |
 | E562 | [GPI-INDEX · C286 紧簇物理指数为 Čech Euler 数](canonical/gppa_physical_local_index.md#gpi-index) ∧ [GPI-BOUNDARY · C286 同一实际边界的核差同伦条件](canonical/gppa_physical_local_index.md#gpi-forcing) | conditional → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 非零指标且核差连续、边界非零且方向同伦。；**derived-checked** |
 | E563 | [GPI-LOSS · C286 正物理指数却无原值域球的退化核](canonical/gppa_physical_local_index.md#gpi-obstruction) | limits → [GPI-FORCING · C286 原值域球与连续扰动余量](canonical/gppa_physical_local_index.md#gpi-forcing) | 同完整 T 和单调退化核的正物理指数不能单独保证值域球。；**derived-checked** |
+| E564 | [RDG-NONDINI · C287 给定非 Dini 凹模的完整闭环反例](canonical/rleb_dini_geometry.md#rdg-winding) | limits → [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | 几何距离收缩及紧不变域无法代替 Dini；完整连续单值模型有整圆聚点集。；**derived-checked** |
+| E565 | [RDG-TAME-DATA · C287 多项式有界可定义原图与统一零步包络](canonical/rleb_dini_geometry.md#rdg-tame) | conditional → [RDG-TAME-LENGTH · C287 自动幂步界、全政策有限长度和点收敛](canonical/rleb_dini_geometry.md#rdg-tame) | 仍须严格距离收缩和全窗覆盖；非不变域用初始严格几何和预算。；**derived-checked** |
 
 ## 不蕴含关系
 

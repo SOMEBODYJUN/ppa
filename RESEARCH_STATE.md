@@ -7,6 +7,8 @@
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
+[紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)（C287-v1）已完成证明与边界。下一步核同一指定模的全对 RL 是否也可保持，以及在自然驻点近端模型中的可实现性。
+
 [固定核 GPPA 的物理局部指数与原值域条件桥](research/canonical/gppa_physical_local_index.md)（C286-v1）已完成证明与边界。下一步核完整 usc acyclic 多值 GPPA 的相应指数，以及可独立验证核差边界门的非平凡原生模型。
 
 **最近零锚线性 PPA。** [C285-v1](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold)已闭同一真残差窗下的精确一步因子及全部允许选择局部收敛的分段锐门。高参数 \(\lambda/K>2\) 的闭图二周期依赖非孤立零集，旋转支仅在低参数门达等。[F96](FAILED_ROUTES.md#f96)记录英文稿的外推失效。下一步核同对象的先行性及高参数连续单值／结构化子类的临界构造。
