@@ -4251,6 +4251,30 @@
       "id": "UPROJ-GENERAL-GOAL",
       "label": "已否定：任意移动一致SPD的普遍安全性",
       "file": "canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd"
+    },
+    {
+      "id": "RSL-DATA",
+      "label": "C285 最近零锚与同窗真线性误差界",
+      "file": "canonical/rleb_sharp_linear_frontier.md#rsl-envelope",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RSL-FACTOR",
+      "label": "C285 非空参数与精确统一一步因子",
+      "file": "canonical/rleb_sharp_linear_frontier.md#rsl-factor",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RSL-THRESHOLD",
+      "label": "C285 类级分段锐局部收敛门",
+      "file": "canonical/rleb_sharp_linear_frontier.md#rsl-threshold",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RSL-PERIOD",
+      "label": "C285 临界完整关系的非收敛见证",
+      "file": "canonical/rleb_sharp_linear_frontier.md#rsl-threshold",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10657,6 +10681,40 @@
       "scope": "C284same physical R² F=I+3K90/lambda.1，metric Mk=.1I+.9Pspan{xk}谱固定{1,.1}、e0/fullinputunique/zeroabsorbing；实际gain²1300/961>1，eachfixedmetric谱半径²10/31<1。新正面需跨步结构。",
       "status": "derived-checked",
       "topic": "联合次单调PPA"
+    },
+    {
+      "id": "E558",
+      "inputs": [
+        "RSL-DATA"
+      ],
+      "output": "RSL-FACTOR",
+      "relation": "implies",
+      "scope": "C285 同一实际步、真残差窗与最近锚。三支达到使用一维或二维完整闭图。",
+      "status": "derived-checked",
+      "topic": "局部RLEB-PPA"
+    },
+    {
+      "id": "E559",
+      "inputs": [
+        "RSL-FACTOR",
+        "RSL-DATA"
+      ],
+      "output": "RSL-THRESHOLD",
+      "relation": "conditional",
+      "scope": "严格因子小于1，另用覆盖和严格长度预算推出全部允许选择留域与点收敛。",
+      "status": "derived-checked",
+      "topic": "局部RLEB-PPA"
+    },
+    {
+      "id": "E560",
+      "inputs": [
+        "RSL-PERIOD"
+      ],
+      "output": "RSL-THRESHOLD",
+      "relation": "limits",
+      "scope": "低参数旋转、高参数完整闭图非孤立二周期排除等号。无连续单值、全对或固定一维一般必要性。",
+      "status": "derived-checked",
+      "topic": "局部RLEB-PPA"
     }
   ]
 }

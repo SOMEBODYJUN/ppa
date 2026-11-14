@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+[最近零锚 PPA 的精确线性边界](research/canonical/rleb_sharp_linear_frontier.md)用同一步反射、几何可行域及真残差给出 C285 的三支最坏一步因子。低参数旋转与高参数完整闭图二周期分别支撑锐收敛门的两段；C253 继续提供能量充分条件。相关[失败与限度](FAILED_ROUTES.md#f96)及[下一门](RESEARCH_STATE.md#active-frontier)保留连续单值等严格子类。
+
 [投稿口头汇报备讲](发表成果整理/PPA_两日备讲与逐步推导.md)按作者指定顺序组织两日复习、板书推导与追问。它针对本轮英文投稿 zip，逐项区分 Luke–Tam 正式参数、直接/能量分支、旋转锐性的可行域和回缩/指数的附加条件；为教学材料，不改变既有 Claim 状态。
 
 [联合次单调 PPA 研究入口](research/topics/unified_ppa/README.md)新增 C277–C284：原图联合与有限状态证书、两级标量化边界、同预算完整覆盖子类、原始曲管结构及可实施非精确物理接口。它保留 RL 一般模和逆/矩阵方向的不同优势，未宣称完备大一统或新收敛原理；主稿、摘要和正文编号未改。[结果报告](发表成果整理/本轮重构/次单调PPA统一框架_证明与边界_2026-10-14.md)与[6pro精确交接](发表成果整理/本轮重构/6pro_统一次单调PPA_研究交接.md)分别记录已证范围与真正开放目标。
@@ -12,7 +14,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 775 个数学节点、554 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 779 个数学节点、557 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 

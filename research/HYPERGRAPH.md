@@ -858,6 +858,14 @@
 | E556 | [UPROJ-DATA · F=Id完整奇异投影核相对误差关系](canonical/unified_ppa_inexact_interfaces.md#uic-projections) | conditional → [UPROJ-MOVE · C284任意移动投影锐物理门](canonical/unified_ppa_inexact_interfaces.md#uic-moving) | C284任意history-dependentPk，sharp一stepLsigma；sigma<sqrt[2lambda/(1+2lambda)]给allpolicyfinite length，n>=2含rank1全类等号恒范数旋转。；**derived-checked** |
 | E557 | [UPROJ-SPD-FAIL · C284强单调精确步+统一SPD仍发散](canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd) | refutes → [UPROJ-GENERAL-GOAL · 已否定：任意移动一致SPD的普遍安全性](canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd) | C284same physical R² F=I+3K90/lambda.1，metric Mk=.1I+.9Pspan{xk}谱固定{1,.1}、e0/fullinputunique/zeroabsorbing；实际gain²1300/961>1，eachfixedmetric谱半径²10/31<1。新正面需跨步结构。；**derived-checked** |
 
+## 局部RLEB-PPA
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E558 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) | implies → [RSL-FACTOR · C285 非空参数与精确统一一步因子](canonical/rleb_sharp_linear_frontier.md#rsl-factor) | C285 同一实际步、真残差窗与最近锚。三支达到使用一维或二维完整闭图。；**derived-checked** |
+| E559 | [RSL-FACTOR · C285 非空参数与精确统一一步因子](canonical/rleb_sharp_linear_frontier.md#rsl-factor) ∧ [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) | conditional → [RSL-THRESHOLD · C285 类级分段锐局部收敛门](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | 严格因子小于1，另用覆盖和严格长度预算推出全部允许选择留域与点收敛。；**derived-checked** |
+| E560 | [RSL-PERIOD · C285 临界完整关系的非收敛见证](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | limits → [RSL-THRESHOLD · C285 类级分段锐局部收敛门](canonical/rleb_sharp_linear_frontier.md#rsl-threshold) | 低参数旋转、高参数完整闭图非孤立二周期排除等号。无连续单值、全对或固定一维一般必要性。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

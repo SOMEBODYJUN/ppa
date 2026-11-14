@@ -2496,3 +2496,12 @@
 - **Independent exact SPD refutation**：R²、F=I+3K90 strongmono、lambda.1、完整S0,true r=sqrt10||y||。令Mk=.1I+.9 P_span{xk}，全exact metric更新Mk(x−y)=lambda F(y)唯一y=(20I−30K90)x/31，gain²1300/961>1；Mk谱始终{1,.1}，每fixedMk算法谱半径²10/31<1。故任意moving uniformSPD+strongmono+e0仍不能推出收敛。
 - **Evidence / Dependencies**：[UI23–33](research/canonical/unified_ppa_inexact_interfaces.md#uic-projections)、[movingsharp](research/canonical/unified_ppa_inexact_interfaces.md#uic-moving)、[UI33a–e](research/canonical/unified_ppa_inexact_interfaces.md#uic-moving-spd)、[独立反算](research/novelty/2026_10_14_unified/independent_review.md#ir-moving-spd-refutation)、[代码](research/code/unified_ppa/README.md)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)。
 - **Scope / Counterevidence**：物理lifting由本模型完整图方程推导，不是任意singularkernel的自动推广。Px0而x非zero时只接受精确zero，任意非zero逼近不能finiteinner；模型用可检查zero分支修复，一般oracle仍open。变化核的宽安全版已refuted；带明确跨步控制的原图非线性停止仍open。
+
+<a id="c285"></a>
+## C285-v1 · 最近零锚线性 PPA 的精确一步因子及局部收敛门
+
+- **Status**：`derived-checked`。两个子代理分别重构极值与临界反例，主代理逐个核了完整关系、真残差、截断和趋零尺度。公开优先性待核。
+- **Exact Statement / Objects / Domain**：有限维欧氏最近零锚、固定 \(\lambda>0\)、非空闭 \(S\subset\operatorname{zer}F\)、同一允许关系及覆盖。每步反射界 \(Lt\)，真实输出误差界 \(d(y,S)\le Kr_F(y)\)，其中 \(L\ge0,K>0,t=d(x,S)\)。保留 \(B(R)/\lambda\le\bar t\) 及初值严格预算约定。令 \(b=(1+L)/2,\eta=\lambda/K\)。
+- **Conclusion / Quantifiers**：每个允许输出有 \(d(y,S)\le mt\)，其中 \(m=\min\{b,b/\eta,\sqrt{(1+L^2)/(2(1+\eta^2))}\}\)。正距离输入存在须 \(b\ge\eta/(1+\eta)\)。在可行域上，允许关系类（甚至完整闭图近端）在维数至多二达到此因子。保证类内全部允许选择局部收敛的严格门为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<2\eta-1\) 当 \(\eta>2\)。两支等号均有任意小不收敛输入。若零点局部孤立且 \(\eta>2\)，缩邻域后任意有限 \(L\) 都有因子至多 \(1/(\eta-1)\)。
+- **Definitions / Dependencies / Evidence**：[一步联合包络及严格实例](research/canonical/rleb_sharp_linear_frontier.md#rsl-envelope)、[三支达到](research/canonical/rleb_sharp_linear_frontier.md#rsl-factor)、[完整反例与留域](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold)。用 C02-v3 的有限前缀证明控制留域，保留 C253 能量项并补几何可行与锚距半和界。后两项的最小值是候选 A 的线性上界。一般模包络在同一合同中给充分性。
+- **Counterevidence / Scope**：C253 作为充分条件仍有效。高 \(\eta\) 的必要性用允许多值、非孤立零集。二维旋转不能宣告固定一维锐性，最近锚反例也不能宣告全对或连续单值子类的同一最优门。

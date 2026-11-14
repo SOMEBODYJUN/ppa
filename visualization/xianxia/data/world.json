@@ -162,6 +162,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-7",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 3300,
+      "y": 4280,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -8722,6 +8734,50 @@
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-6"
+    },
+    "RSL-DATA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-6"
+    },
+    "RSL-FACTOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2830,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RSL-PERIOD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RSL-THRESHOLD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -10940,6 +10996,18 @@
     "E557": {
       "x": 2356.19,
       "y": 4160.62
+    },
+    "E558": {
+      "x": 2790.28,
+      "y": 4422.95
+    },
+    "E559": {
+      "x": 2876.19,
+      "y": 4482.69
+    },
+    "E560": {
+      "x": 2971.04,
+      "y": 4496.54
     }
   },
   "bounds": {
