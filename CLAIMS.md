@@ -2644,6 +2644,9 @@
 - **Key Objection / Next Evidence**：三席交叉审查已重构连续首次离开 bootstrap，未发现新的动力学符号或量词致命缺口；显式局部常数已整理为 [HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md)，最终复核见 [HJ final review](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md)。变量步惯性 PPA 桥已有完整图 coverage 候选；[全局导数/coverage 引理](research/c303_global_bounds.md)已单独闭合小步长全域 resolvent 门，[normal-error 递推引理](research/c303_normal_error_recursion.md)闭合 D4--D5 及 \(\tau\)-路径的统一 \(O(h_k)\) 误差，v3 的连续 \(\tau\)-路径修补整数步跨壁量词，v4 以指数超解闭合 \(\alpha>2/3\) 的角度 schedule 门，但 outer-strip 尾部分离目前只在显式 cutoff-free 选择下有条件门（见 research/c303_outer_strip_gate.md），首接触的几何常数仍需核对；有限前缀共同开集已有条件性构造（见 research/c303_finite_prefix_margin.md），不能用普通 PPA 的一阶 \(\nabla f\) 桥替代 \(\nabla\chi_a\) 惯性对象。仍须按 HJ 原页逐字核 cutoff 的确切约定、F 与边界参数身份，并完成上述离散义务。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证。
 - **Independent audit update**：`research/audit/C303_TRANSIENT_QUANTIFIER_REVIEW_2026-11-15.md` 记录双侧角度、首个 drop 阈值与 \(T_{\rm tr}\) 修补后的独立裁决；共同停止域、HJ cutoff/outer-strip 源构造和外部优先性仍未闭合。
 - **Cutoff source gate**：`research/c303_hj_cutoff_construction.md` 给出满足 HJ 明示 support 条件的 source-conditional 紧连通外环 cutoff；原文是否还有未摘录的 cutoff 约束仍须逐字核验。
+- **Common stopping-domain merge**：`research/c303_common_stopping_domain.md` 将核心管、outer strip、瞬态角度尾和 \\(\\tau\\)-path 首接触合并为 conditional minimal-index proof；共同停止域和投影 lift 条件仍未升级为无条件定理。
+- **Common-domain independent audit**：`research/audit/C303_COMMON_STOPPING_DOMAIN_REVIEW_2026-11-15.md` 及其修订记录逐项复核 CS4 停时量词、\(K/j\) 索引和统一 \(h_j e^{\theta_j}\) 界；裁决为 continue validation，CS1 HJ source/lift gates 仍未闭合。
+- **Near-critical schedule candidate**：`research/c303_sharp_schedule_bootstrap.md` 在补上双侧 lower-angle 义务后，给出 \(W_k=\exp(z_k^2)\) 的条件性比较，并把首接触的充分步长门候选推进到任意固定 \(1/2<\alpha<1\)；这是 schedule improvement candidate，不是已闭 C303 定理或四大级贡献。
 
 <a id="c304"></a>
 ## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
