@@ -1,6 +1,6 @@
 # C303：cutoff-free normalized outer-strip gate
 
-状态：`derived-checked`（在 HJ 的显式 \\(\\gamma_i,F\\) 构造和可自由选择的 cutoff \\(\\Pi\\) 约定下）。本页只证明首接触前可使用同一 cutoff-free 公式的外条带；不单独证明惯性 PPA 轨道不出界。
+状态：`derived-checked`（在 HJ 的显式 \\(\\gamma_i,F\\) 构造和可自由选择的 cutoff \\(\\Pi_{\\rm cut}\\) 约定下）。本页只证明首接触前可使用同一 cutoff-free 公式的外条带；不单独证明惯性 PPA 轨道不出界。为避免记号冲突，\\(\\mathcal P(r,\\vartheta)=r(\\cos\\vartheta,\\sin\\vartheta)\\) 表示物理投影，\\(\\Pi_{\\rm cut}\\) 表示 HJ cutoff。
 
 ## 1. 选择整个尾管分离的 cutoff
 
@@ -8,7 +8,7 @@
 \[
 0<\\eta_0<\\frac12\\min\\{\\gamma_1(0)-1,\\gamma_2(0)-1\\}.
 \]
-在环带 \\(\\{r>1+\\eta_0\\}\\) 内选一个连通、紧支撑的 \\(C^\\infty\\) bump \\(\\Pi\\)，使初始两条曲线点 \\(\\gamma_1(0),\\gamma_2(0)\\) 落在其支撑的内部。由于 \\(\\gamma_2(\\vartheta)=1+\\mu e^{-\\vartheta}\\to1\\)，取 \\(\\vartheta_0\\) 使
+在环带 \\(\\{r>1+\\eta_0\\}\\) 内选一个连通、紧支撑的 \\(C^\\infty\\) bump \\(\\Pi_{\\rm cut}\\)，使初始两条曲线点 \\(\\gamma_1(0),\\gamma_2(0)\\) 落在其支撑的内部。由于 \\(\\gamma_2(\\vartheta)=1+\\mu e^{-\\vartheta}\\to1\\)，取 \\(\\vartheta_0\\) 使
 \[
 \\gamma_2(\\vartheta)<1+\\eta_0/2
 \\qquad(\\vartheta\\ge\\vartheta_0).
@@ -25,11 +25,11 @@ r\\le m(\\vartheta)+\\frac{\\beta+\\eta}{2}\\Delta(\\vartheta)\\le1+C_{\\mu,\\be
 \]
 再增大 \\(\\vartheta_0\\) 后，整个闭外条带满足 \\(r<1+\\eta_0/2\\)。故
 \[
-\\operatorname{supp}\\Pi\\cap\\overline{\\widetilde D_\\eta}=\\varnothing,
+\\operatorname{supp}\\Pi_{\\rm cut}\\cap\\mathcal P(\\overline{\\widetilde D_\\eta})=\\varnothing,
 \\qquad
-\\Pi\\equiv0,
+\\Pi_{\\rm cut}\\equiv0,
 \\qquad
-1-\\Pi\\equiv1
+1-\\Pi_{\\rm cut}\\equiv1
 \\quad\\text{on }\\overline{\\widetilde D_\\eta}.
 \tag{OS2}
 \]
