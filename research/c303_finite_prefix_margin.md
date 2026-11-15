@@ -124,10 +124,10 @@ Global resolvent coverage and the bounded pre-prefix velocity give
 
     ||y_tau-x_k|| <= C_tau h_k <= C_tau h_0.                    (FP4)
 
-The position component of the reference curve has bounded velocity on
-[0,T_*], so
+The position component \(\bar x^{(x_0,v_0)}\) of the same-initial-state
+reference curve has bounded velocity on [0,T_*], so
 
-    ||x_bar(t_k+tau h_k)-x_bar(t_k)|| <= C_T h_k.               (FP4a)
+    ||x_bar^(x_0,v_0)(t_k+tau h_k)-x_bar^(x_0,v_0)(t_k)|| <= C_T h_k. (FP4a)
 
 The defining functions s_i are Lipschitz on a fixed physical neighborhood of
 the compact reference curve. If the finite prefix crosses more than one
