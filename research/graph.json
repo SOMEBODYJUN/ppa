@@ -4437,6 +4437,18 @@
       "label": "C299 标准梯度下降聚点集刻画",
       "file": "canonical/exact_proximal_limit_sets.md#epl-gradient-descent",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "HMD-CZERO",
+      "label": "C300 标准 c0 凹模位移的精确值",
+      "file": "canonical/holder_minimal_displacement.md#hmd-c0",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "HMD-FIXED",
+      "label": "C301 固定 Hilbert 凸集与 Banach 单位球",
+      "file": "canonical/holder_minimal_displacement.md#hmd-fixed",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11093,6 +11105,17 @@
       "scope": "全局 Lipschitz 的 Moreau 梯度还原同一轨道，标准步长的必要性另证。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E580",
+      "inputs": [
+        "HMD-SELF"
+      ],
+      "output": "HMD-FIXED",
+      "relation": "conditional",
+      "scope": "上界用空间包络；固定集下界另需 Lin–Sternfeld 与凸投影或径向截断。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
     }
   ]
 }

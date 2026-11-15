@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C300–C301 位移标量反算
+
+[代码](code/c0_displacement/verify.py)精确枚举有限标量夹逼并检验固定单位球缩放，见[结果](code/c0_displacement/results.json)。无穷维上下界由[正文证明](canonical/holder_minimal_displacement.md)承担。
+
 ## C297–C299 精确反向弦
 
 [verify.py](code/exact_proximal_limit/verify.py)以 125 位 mpmath 解固定解析绕行曲线的有限弦条件，反算梯度、管势法向导数和原近端方程。[真实运行](code/exact_proximal_limit/results.json)含环境和输入。任意紧集、无限轨道和全局拼接由[规范证明](canonical/exact_proximal_limit_sets.md)承担。

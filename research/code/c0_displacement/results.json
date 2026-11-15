@@ -1,0 +1,11 @@
+{
+  "claim_versions": [
+    "C300-v1",
+    "C301-v1"
+  ],
+  "python": "3.12.14",
+  "script_sha256": "b4676e031c6e2145b9c5f04e1e197b467f21d7eeb67151c0cb759d3fd344151f",
+  "rational_scalar_envelopes": 2401,
+  "binary64_unit_ball_scalar_inequalities": 3744,
+  "arithmetic": "Fraction exact and binary64 with 1e-14 slack, deterministic"
+}

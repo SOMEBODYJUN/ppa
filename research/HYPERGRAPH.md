@@ -894,6 +894,7 @@
 | E574 | [D03 · Cayley 表示](foundations.md#d03) ∧ [HMD-SELF · C293 Banach Hölder 位移的线性阶](canonical/holder_minimal_displacement.md#hmd-characteristic) | conditional → [HMD-RANGE · C294 满 Minty 输入原关系的最坏缺口](canonical/holder_minimal_displacement.md#hmd-range) | 实 Hilbert 凸投影，完整全域 Cayley 数据及自然尺度 R；位移是原值域和原定义域距离。；**derived-checked** |
 | E575 | [D03 · Cayley 表示](foundations.md#d03) ∧ [GHB-TOPOLOGY · C295 三维 proper 临界集与梯度 RL](canonical/gradient_holder_budget.md#ghb-topology) | conditional → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 三维光滑 proper 临界集、固定步长与指数，保整个嵌入的凸邻域与投影极限。；**derived-checked** |
 | E576 | [GHB-ENDPOINT · C296 光滑梯度端点的正反见证](canonical/gradient_holder_budget.md#ghb-endpoint) | limits → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 闭合预算可能达到或不达到；不反驳统一下确界。；**derived-checked** |
+| E580 | [HMD-SELF · C293 Banach Hölder 位移的线性阶](canonical/holder_minimal_displacement.md#hmd-characteristic) | conditional → [HMD-FIXED · C301 固定 Hilbert 凸集与 Banach 单位球](canonical/holder_minimal_displacement.md#hmd-fixed) | 上界用空间包络；固定集下界另需 Lin–Sternfeld 与凸投影或径向截断。；**derived-checked** |
 
 ## 不蕴含关系
 

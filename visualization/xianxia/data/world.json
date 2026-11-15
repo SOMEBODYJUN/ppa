@@ -9075,6 +9075,28 @@
       "y": 4305,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "HMD-CZERO": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 766,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "HMD-FIXED": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 948,
+      "region": "structure",
+      "realm": "structure"
     }
   },
   "edges": {
@@ -11381,6 +11403,10 @@
     "E579": {
       "x": 3120.59,
       "y": 4352.22
+    },
+    "E580": {
+      "x": 3573.41,
+      "y": 900.78
     }
   },
   "bounds": {

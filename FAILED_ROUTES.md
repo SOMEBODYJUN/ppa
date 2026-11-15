@@ -702,3 +702,8 @@
 ## F100 · 同一环境维数中任意无内点紧连通集均为近端聚点集
 
 连通和无内点不足。平面上圆加直径的补分量各缺至少一个边界部分。任何连续目标的有界全局精确 PPA，若非定常，则每条轨道线段的目标值严格高于其极限值，故轨道只在同一个补分量内且聚点集恰为该分量的完整边界。[C297](research/canonical/exact_proximal_limit_sets.md#epl-characterization) 证明这一门也充分。任意紧连通集仍可经一维提升实现。连续梯度流拓扑需归于 Fokin；当前增量是精确离散全局子问题及严格 RL 预算。
+
+<a id="f101"></a>
+## F101 · 直接导入 Bessaga 的同一 Lipschitz 膜完成固定 Banach 凸集
+
+把 Bessaga 1994 Proposition 2.2 (i)–(iii) 逐字合用会遇到内在不一致：原文定义的任意两坐标膜在非零单坐标处没有局部紧性，证明写出的相邻三角膜除公共顶点外有局部紧性，二者不可能是同一个双 Lipschitz 类型。另有在有界膜上宣称任意正位移下界的文字异常。已核扫描原页。[C301](research/canonical/holder_minimal_displacement.md#hmd-fixed) 用凸投影或球径向截断完成可独立证明的两类。任意固定 Banach 凸集若取得小像的正最小位移 Lipschitz 自映射，可用同一标量平均步骤继续。

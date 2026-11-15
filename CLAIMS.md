@@ -2616,3 +2616,15 @@
 - **Status**：`derived-checked`。Moreau 包络转移与整条线段的下降分别推导。
 - **Exact Statement**：在全部光滑强制 \(u:\mathbb R^d\to\mathbb R\) 和标准恒定步长 \(0<\eta\le1/L\) 的梯度下降中，\(L>0\) 为全局 Lipschitz 梯度上界，有界轨道可能的聚点集恰为 C297 所述紧连通补分量边界，每个可取为完整全局最小集。
 - **Dependencies / Evidence / Scope**：[梯度下降转移](research/canonical/exact_proximal_limit_sets.md#epl-gradient-descent)。充分性用 C297 的同轨道 Moreau 包络，必要性用保留整段的斜率估计，既有离散文献的系统优先性仍开放。
+
+## C300-v1 · 标准 c0 一般凹模位移特征的确切值
+
+- **Status**：`derived-checked`。独立审查未读提案即重新构造逐坐标 Lipschitz 修正及下界移位。
+- **Exact Statement**：标准 \(c_0\) 单位球的 \(\omega\)-连续自映射中，\(\omega\) 连续非减凹、\(\omega(0)=0,\omega(1)=1\)，最坏最小位移等于 \(\max_{[0,1]}(\omega(s)-s)\)。\(\omega(s)=s^\gamma\)、\(0<\gamma<1\) 时，全域映射的同类上确界也恰为 \((1-\gamma)\gamma^{\gamma/(1-\gamma)}\)。
+- **Dependencies / Evidence / Scope**：[逐坐标夹逼和移位屏障](research/canonical/holder_minimal_displacement.md#hmd-c0)，[有限复算](research/code/c0_displacement/results.json)。不等同于跨所有有界闭凸集的 \(\Lambda_\gamma(c_0)\)。已读最近文献不含等同公式，精确优先仍未穷尽。
+
+## C301-v1 · 固定非紧 Hilbert 凸集及任意 Banach 单位球的 Hölder 位移阶
+
+- **Status**：`derived-checked`。两种小像与恒等平均机制独立推导核验。
+- **Exact Statement**：固定非空有界闭凸 \(K\) 紧时，归一化 \(\gamma\)-Hölder 自映射的最坏最小位移为零。若 \(K\) 是非紧 Hilbert 有界闭凸集，或是直径小于 1 的非紧 Banach 有界闭凸集、任意无限维 Banach 的闭单位球，则固定 \(K\) 的最坏位移为 \(\Theta_K(1-\gamma)\)。
+- **Dependencies / Evidence / Scope**：[固定集合结论](research/canonical/holder_minimal_displacement.md#hmd-fixed)依赖 C293、Lin–Sternfeld 与凸投影或径向截断。任意固定非 Hilbert 凸集的推广尚缺与原对象相容的小像 Lipschitz 自映射；Bessaga 的印刷膜接口不能直接用来关门。
