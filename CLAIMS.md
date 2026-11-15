@@ -2647,6 +2647,7 @@
 - **Common stopping-domain merge**：`research/c303_common_stopping_domain.md` 将核心管、outer strip、瞬态角度尾和 \\(\\tau\\)-path 首接触合并为 conditional minimal-index proof；共同停止域和投影 lift 条件仍未升级为无条件定理。
 - **Common-domain independent audit**：`research/audit/C303_COMMON_STOPPING_DOMAIN_REVIEW_2026-11-15.md` 及其修订记录逐项复核 CS4 停时量词、\(K/j\) 索引和统一 \(h_j e^{\theta_j}\) 界；裁决为 continue validation，CS1 HJ source/lift gates 仍未闭合。
 - **Near-critical schedule candidate**：`research/c303_sharp_schedule_bootstrap.md` 在补上双侧 lower-angle 义务后，给出 \(W_k=\exp(z_k^2)\) 的条件性比较，并把首接触的充分步长门候选推进到任意固定 \(1/2<\alpha<1\)；这是 schedule improvement candidate，不是已闭 C303 定理或四大级贡献。
+- **Critical endpoint obstruction**：同一页进一步证明，去掉常数角度位移也不能仅凭 \(W_k=O((1+t_k)\log(e+t_k))\) 关闭 \(\alpha=1/2\)：此时 \(h_k/\phi(\theta_k)\asymp\sqrt{\log k}\)，需要更小的接触余项或额外抵消；因此当前候选只保留 \(1/2<\alpha<1\)。
 
 <a id="c304"></a>
 ## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
