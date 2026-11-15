@@ -1,0 +1,13 @@
+{
+  "claim_versions": [
+    "C290-v1",
+    "C291-v1",
+    "C292-v1"
+  ],
+  "arithmetic": "integer and Fraction exact, no randomness",
+  "python": "3.12.14",
+  "script_sha256": "d738208fbf0af39662cced98b58437c0993cf0004577d12afa7f16518715b11e",
+  "all_labeled_graphs_sizes_2_to_5": 1098,
+  "mixed_weight_splits": 7716,
+  "empirical_support_sizes_checked": 5
+}

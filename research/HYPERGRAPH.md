@@ -882,6 +882,13 @@
 | E570 | [GPI-SMOOTH · C289 光滑非单射凸核与双阱的次数二](canonical/gppa_physical_local_index.md#gpi-kernel-rank) | limits → [GPI-ANALYTIC · C289 解析非单射单调核的环境次数为零](canonical/gppa_physical_local_index.md#gpi-kernel-rank) | 光滑非解析松弛允许局部非单射且核差环境次数为二。；**derived-checked** |
 | E571 | [RDG-FULLPAIR · C287-v2 同模局部全对 RL 紧圆反例](canonical/rleb_dini_geometry.md#rdg-fullpair-v2) | limits → [TRS-FINITE · C02-v3 全部允许选择有限长度与局部收敛](canonical/true_residual_selection_rleb.md#trs-theorem) | 同一给定非 Dini 模给出局部同尺度全对 RL 上界，但 RLEB 半和兼容使用较小内部模；紧圆轨道仍无限长且聚点集为整圆。；**derived-checked** |
 
+## 全局 Hölder–RL 结构
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E572 | [D03 · Cayley 表示](foundations.md#d03) ∧ [QCA-VARIANCE · C290 异质跨点容差的方差充要条件](canonical/quadratic_cross_approximation.md#qca-criterion) | conditional → [QCA-SHADOW · C291 有限维正反影子的最优 Jung 因子](canonical/quadratic_cross_approximation.md#qca-shadow) | 固定有限维、全对全尺度同参数 RL，C03 的同一收缩反演和正则单纯形达到。；**derived-checked** |
+| E573 | [QCA-VARIANCE · C290 异质跨点容差的方差充要条件](canonical/quadratic_cross_approximation.md#qca-criterion) | conditional → [QCA-BUDGET · C292 有限全查询预算的精确复杂性](canonical/quadratic_cross_approximation.md#qca-complexity) | 有限有理数据、维数可变，Motzkin–Straus 与有理图嵌入；同站点预算另议。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

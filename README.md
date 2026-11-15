@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+[跨点平方误差的精确方差判据](research/canonical/quadratic_cross_approximation.md)登记 C290–C292：异质容差的充要条件、有限维正反近似的准确 Jung 因子，以及固定 Hölder 参数下有限跨点预算的精确判定复杂性和近似界。[独立审查与接续](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)保留。下一目标是无限维最小位移的锐阶与梯度结构的固定预算。
+
 [零集切法几何与线性锐门](research/canonical/rleb_nearest_anchor_geometry.md)补上 C288：仿射目标的精确因子、紧 C² 目标的严格小窗门与临界原近端，解释 C285 高参数最坏类和规则几何子类的阈值差。
 
 [紧零簇的非 Dini 绕行与多项式有界可定义有限长度](research/canonical/rleb_dini_geometry.md)给出 C287-v1/v2 的证明、明确适用域及失败边界：C287-v2 证明同一给定非 Dini \(\omega\) 可作为局部同尺度全对 RL 上界，同时以显式较小内部模 \(\widehat\omega\) 闭合真残差兼容和无限绕行。下一步核更自然的单调/次微分模型、全局尺度延拓，以及是否能让同一模承担半和兼容；不得把局部 pair gate 或内部模偷换成全局单模结论。

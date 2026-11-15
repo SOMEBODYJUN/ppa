@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C290–C292 跨点预算
+
+运行 Python 3 执行 [verify.py](code/quadratic_cross/verify.py)，结果及指纹见 [results.json](code/quadratic_cross/results.json)。用整数和 Fraction 确切核有理坐标图构造、二次超额、混合权重及有限经验估算。一般证明在 [C290–C292](canonical/quadratic_cross_approximation.md)。
+
 ## C277–C284：联合原图、完整覆盖与变化核
 
 [本批复算](code/unified_ppa/README.md)运行 python3 research/code/unified_ppa/run_all.py，五个脚本全部返回0（四个只用标准库，raw另用NumPy 2.3.5）；[完整输出](code/unified_ppa/all_verifiers_output.json)绑定命令、版本、精度说明、脚本hash与stdout/stderr。Fraction核提升/非交换矩阵/有理LMI/预算反算/两步终止/统一SPD精确发散，binary64核明确的分支、曲率、壳层势与projector极值。所有全称coverage、全fibers、allpolicy长度、sharp门及最大化反例由[规范证明](topics/unified_ppa/README.md)解析承担。程序不认证有限状态完备性、自然应用、内层复杂度或公开首创；闭合结果与open交接分开。

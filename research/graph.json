@@ -4365,6 +4365,24 @@
       "label": "C289 光滑非单射凸核与双阱的次数二",
       "file": "canonical/gppa_physical_local_index.md#gpi-kernel-rank",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QCA-VARIANCE",
+      "label": "C290 异质跨点容差的方差充要条件",
+      "file": "canonical/quadratic_cross_approximation.md#qca-criterion",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QCA-SHADOW",
+      "label": "C291 有限维正反影子的最优 Jung 因子",
+      "file": "canonical/quadratic_cross_approximation.md#qca-shadow",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QCA-BUDGET",
+      "label": "C292 有限全查询预算的精确复杂性",
+      "file": "canonical/quadratic_cross_approximation.md#qca-complexity",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10929,6 +10947,29 @@
       "scope": "同一给定非 Dini 模给出局部同尺度全对 RL 上界，但 RLEB 半和兼容使用较小内部模；紧圆轨道仍无限长且聚点集为整圆。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E572",
+      "inputs": [
+        "D03",
+        "QCA-VARIANCE"
+      ],
+      "output": "QCA-SHADOW",
+      "relation": "conditional",
+      "scope": "固定有限维、全对全尺度同参数 RL，C03 的同一收缩反演和正则单纯形达到。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E573",
+      "inputs": [
+        "QCA-VARIANCE"
+      ],
+      "output": "QCA-BUDGET",
+      "relation": "conditional",
+      "scope": "有限有理数据、维数可变，Motzkin–Straus 与有理图嵌入；同站点预算另议。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
     }
   ]
 }

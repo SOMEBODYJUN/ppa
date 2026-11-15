@@ -2556,3 +2556,21 @@
 - **Exact Statement / Objects**：\(v:\mathbb R^n\to\mathbb R^n\) 全域实解析、单调、非单射。存在非零方向 \(d\)，使 \(v(\mathbb R^n)\) 位于仿射超平面 \(v(a)+d^\perp\)。因此对任意完整连续单值物理 GPPA 的 \(D_v=v-v\circ T\)，环境 Brouwer 次数只要有定义就为零。
 - **Countermodel / Evidence**：[同窗原方程证明](research/canonical/gppa_physical_local_index.md#gpi-kernel-rank)给 \(\mathbb R^3\) 中双阱梯度 \(F(y)=(\|y\|^2-1)y\)、\(\lambda=1\) 和光滑凸径向核，在球面任意近邻都有非单射纤维，完整 GPPA 全域连续单值。共同小管有 C249 全前件，满足 C286 核差边界门且次数为 2。
 - **Scope**：反例的核有意设计。解析结论需要全域和单调，环境次数为零不否定其他取值证明或商空间次数。光滑模型的原值域亦可径向直接分析，不能据此提出独占应用优势。
+
+## C290-v1 · 固定 Lipschitz 常数的异质跨点平方容差判据
+
+- **Status**：`derived-checked`。独立审查未读主证明即复构必要性、混合球抵消和有限维支撑截断。
+- **Exact Statement**：实 Hilbert \(X,Y\)，非空任意 \(A\subset X\)，\(C:A\to Y\)，\(\sigma\ge0\)，各 \(e_a\ge0\) 有限。存在全域 \(\sigma\)-Lipschitz \(N\) 且全部 \(a\in A,q\in X\) 满足 \(\|C(a)-N(q)\|^2\le\sigma^2\|a-q\|^2+e_a\)，当且仅当全部有限支撑概率权重满足 \(\operatorname{Var}_w C-\sigma^2\operatorname{Var}_w I\le\sum w_a e_a\)。有限维目标 \(Y\) 仅需支撑至多 \(\dim Y+1\)。公共最优容差为方差差的上确界，有限时有映射达到。
+- **Dependencies / Evidence / Scope**：[方差判据证明](research/canonical/quadratic_cross_approximation.md#qca-criterion)用平方恒等式、闭球相交及弱紧性，无数据闭性或可分性限制。最优权重在无限数据上未必存在。与 Ciosmak 保距延拓的量词差和共同证明背景见[文献对照](research/canonical/quadratic_cross_approximation.md#qca-prior)。
+
+## C291-v1 · 每个固定维数的正反影子锐因子
+
+- **Status**：`derived-checked`。探索与独立审查分别重构上界。
+- **Exact Statement**：在 \(H=\mathbb R^n\)、\(n\ge1\) 上保留 C03 的全对全尺度、非空完整图和参数。强单调双 Lipschitz 同胚 \(A\) 的两个同底点统一误差 \(\lambda\|v-A(x)\|\) 与 \(\|x-A^{-1}(v)\|\) 的最优普遍界同为 \(R\sqrt{n/[2(n+1)]}\)，\(R=L^{1/(1-\gamma)}\)。
+- **Dependencies / Evidence / Scope**：[上界与下界](research/canonical/quadratic_cross_approximation.md#qca-shadow)从 C290、全尺度 Hölder 二次超额和 C03 反演，以及同一可达边长的正则单纯形得到。保留指定锚的误差结论另属 C03，不从此推出。外部先行性待核。
+
+## C292-v1 · 有限 Hölder–RL 跨点预算的精确判定与近似界
+
+- **Status**：`derived-checked`。独立复核另一有理构造、coNP 证书和有符号超额的抽样恒等式。
+- **Exact Statement**：有理有限 Cayley 数据，维数随输入增长。固定 \((\lambda,L,\gamma)=(1,1,1/2)\) 和斜率 \(\sigma=1/2\)，判定 C290 公共有理平方容差是否可行是 coNP-完全，精确预算为 NP-hard。对通常有限数据公共预算，经验权重分母 \(s\) 的最大值 \(B_s\) 介于 \((1-1/s)B\) 与 \(B\)，给相对误差 PTAS。若 \(\mathrm P\ne\mathrm{NP}\)，固定参数类也无完全多项式时间相对近似方案。
+- **Dependencies / Evidence / Scope**：[构造、证书和近似](research/canonical/quadratic_cross_approximation.md#qca-complexity)，依赖 C290、Motzkin–Straus 定理 1 与 CLIQUE 复杂性，另有[精确复算](research/code/quadratic_cross/results.json)。它检验全查询约束，不决定 C19 同站点 QP、实际正反误差的最优化或真实纤维非空。

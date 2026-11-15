@@ -8943,6 +8943,39 @@
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "QCA-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "QCA-SHADOW": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "QCA-VARIANCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11217,6 +11250,14 @@
     "E571": {
       "x": 4457.64,
       "y": 2975.14
+    },
+    "E572": {
+      "x": 3444.4,
+      "y": 4102.93
+    },
+    "E573": {
+      "x": 3253.81,
+      "y": 4027.69
     }
   },
   "bounds": {
