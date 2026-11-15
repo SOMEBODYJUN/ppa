@@ -26,7 +26,10 @@ Assume:
    Assume the reference finite prefix has τ-path face margin at least σ
    uniformly for every (x₀,v₀) with x₀∈Π(\overline{D₀°}) and
    ‖v₀+∇f(x₀)‖≤ε₀. The finite-prefix update maps are continuous, so this is
-   one common margin condition, not a state-dependent selection.
+   one common margin condition, not a state-dependent selection. The
+   construction of this finite-prefix margin from the w0=0 continuous HJ
+   reference and implicit-Euler error is recorded in
+   research/c303_finite_prefix_margin.md.
 
 Then there is a nonempty open set
     U={ (x₀,v₀): x₀∈Π(D₀°),
