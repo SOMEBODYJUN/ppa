@@ -40,7 +40,7 @@ z_k=\theta_k-C_e(E_\star-E_k),
 \[
 \Delta z_k\le A h_k\phi(\theta_k)\le A h_k\phi(z_k).
 \]
-对 (U_k=\exp((z_k+E)^2/2)) 使用均值定理，正增量满足 (Delta U_k\le C_Uh_k)，负增量使 (U_k) 下降；且 (	heta_k\le z_k+E)，故
+对 (U_k=\exp((z_k+E)^2/2)) 使用均值定理，正增量满足 (Delta U_k\le C_Uh_k)，负增量使 (U_k) 下降；且 (\theta_k\le z_k+E)，故
 \[
  e^{\theta_k^2/2}\le U_k\le U_{K_\star}+C_U(t_k-t_{K_\star}),
 \qquad
@@ -65,7 +65,7 @@ z_k=\theta_k-C_e(E_\star-E_k),
 
 ### 1. (z_k\ge1) 不能只由上角度界推出
 
-当前瞬态页从上界直接写出“(	heta_{K_\star}\ge3/2) 且 (C_eE_\star\le1/2)，故 (z_k\ge1)”。这一步缺少 (	heta_k) 的下界。必须在同一停止域补上例如
+当前瞬态页从上界直接写出“(\theta_{K_\star}\ge3/2) 且 (C_eE_\star\le1/2)，故 (z_k\ge1)”。这一步缺少 (\theta_k) 的下界。必须在同一停止域补上例如
 \[
 \Delta\theta_k\ge c h_k\phi(\theta_k)-C_e e_k
 \]
