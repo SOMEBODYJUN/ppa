@@ -3,16 +3,20 @@
 ## Exact conditional claim
 
 Assume that, after the finite prefix and before the first exit, the lifted angle
-satisfies
+satisfies the two-sided one-step estimate
 
     theta_{k+1}-theta_k
        <= A h_k phi(theta_k) + R_k,
     phi(s)=s exp(-s^2),                              (SS1)
 
+    theta_{k+1}-theta_k
+       >= c h_k phi(theta_k) - R_k^- ,                (SS1^-)
+
 where the nonnegative error tail is summable and is absorbed by
 
     E_k=sum_{j>=k} e_j,    sup_k E_k <= E_*<infinity,
-    R_k <= C(e_k),     e_k=E_k-E_{k+1}.              (SS2)
+    R_k <= C(e_k),\qquad R_k^-\le C(e_k),
+    e_k=E_k-E_{k+1}.                                  (SS2)
 
 For h_k=h_0(k+1)^(-alpha), the v4 estimate used
 exp(z_k^2/2) and obtained the sufficient gate alpha>2/3. The sharper
@@ -28,14 +32,22 @@ Set
 
     z_k=theta_k-C(E_0-E_k),    E_0=sum_{j>=0}e_j,
 
-with C chosen to dominate the coefficient in (SS1). Then
+with C chosen to dominate the coefficients in (SS1) and (SS1^-). The lower
+estimate gives
+
+    theta_k >= theta_{K_*}-C(E_0-E_k).
+
+Thus, after choosing the tail entrance margin and C E_0<=1/8,
+z_k>=theta_{K_*}-2 C E_0>=5/4 until the first exit. This lower-side
+obligation is essential: (SS1) alone cannot prove that the argument of
+phi remains in its decreasing region. Then
 
     z_{k+1}-z_k <= A h_k phi(theta_k)
                  <= A h_k phi(z_k),                     (SS3)
 
 whenever z_k>=1, because phi is decreasing on [1,infinity). Choose the finite
-prefix and h_0 so that C E_0<=1/2 and theta_{K_*}>=3/2 at the start of the
-tail; then z_k>=1 until the first exit.
+prefix and h_0 so that theta_{K_*}>=3/2 at the start of the tail; the lower
+estimate above then preserves z_k>=1 until the first exit.
 
 Let
 
@@ -83,9 +95,20 @@ epsilon>0,
     exp(theta_k^2)
        <= C_epsilon (1+t_k)^(1+epsilon).                  (SS7)
 
-Indeed, the factor exp(2 d_k z_k+d_k^2) is bounded by
-C_epsilon exp(epsilon log(1+t_k)) after using
-z_k^2<=log W_k and (SS6). Therefore
+To make the epsilon loss explicit, fix the target epsilon>0 and put
+eta=epsilon/4. Young's inequality gives
+
+    2 d_k z_k <= eta z_k^2 + d_k^2/eta,
+
+so (SS6) implies
+
+    exp(theta_k^2)
+      <= exp(d_k^2/eta) W_k^(1+eta)
+      <= C_eta (1+t_k)^(1+eta) log(e+t_k)^(1+eta).
+
+Since log(e+t)^(1+eta) <= C_eta (1+t)^eta, the right side is at most
+C_epsilon (1+t_k)^(1+2 eta) <= C_epsilon(1+t_k)^(1+epsilon).
+Therefore
 
     m(theta_k)=m_0 exp(-theta_k^2+theta_k)
        >= c_epsilon (1+t_k)^(-(1+epsilon)),
@@ -110,7 +133,8 @@ from the constant-shift estimate (SS7).
 
 ## Sharpness and what remains open
 
-The threshold alpha>1/2 is a sufficient near-critical gate under (SS1)--(SS2).
+The threshold alpha>1/2 is a sufficient near-critical gate under
+(SS1), (SS1^-) and (SS2).
 It is not claimed sharp for the actual HJ construction. If the accumulated
 angle-error shift can be removed or shown to vanish at infinity, the
 unperturbed estimate W_k=O((1+t_k)log(e+t_k)) suggests that alpha=1/2 may
@@ -119,7 +143,7 @@ enters (SS1), this argument fails.
 
 The minimum proof obligations are:
 
-1. Derive (SS1) with the explicit B h_k q_k term and absorb the transient
+1. Derive both (SS1) and (SS1^-) with the explicit B h_k q_k term and absorb the transient
    normal tail into e_k, rather than assuming a pure O(h_k^2) remainder.
 2. Verify the finite-step scalar comparison (SS5) for the actual h_0 and
    initial W_{K_*}.
