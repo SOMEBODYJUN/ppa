@@ -707,3 +707,15 @@
 ## F101 · 直接导入 Bessaga 的同一 Lipschitz 膜完成固定 Banach 凸集
 
 把 Bessaga 1994 Proposition 2.2 (i)–(iii) 逐字合用会遇到内在不一致：原文定义的任意两坐标膜在非零单坐标处没有局部紧性，证明写出的相邻三角膜除公共顶点外有局部紧性，二者不可能是同一个双 Lipschitz 类型。另有在有界膜上宣称任意正位移下界的文字异常。已核扫描原页。[C301](research/canonical/holder_minimal_displacement.md#hmd-fixed) 用凸投影或球径向截断完成可独立证明的两类。任意固定 Banach 凸集若取得小像的正最小位移 Lipschitz 自映射，可用同一标量平均步骤继续。
+
+<a id="f102"></a>
+## F102 · Firm 非扩张 + 法向距离收缩的曲固定流形候选
+
+- **尝试了什么**：在紧 (C^2) 无边界流形 (S) 的管状邻域中，假设单值 (J) firmly nonexpansive、(Jp=p)（(p\in S)）且 (d(Jx,S)\le qd(x,S)), (q<1)，希望从曲率／切向投影估计推出轨道有限长和曲面上的新收敛机制。
+- **具体断点**：FNE 与固定点立即给 Hilbert 空间恒等式
+  [
+  \|Jx-p\|^2+\|x-Jx\|^2\le d(x,S)^2.
+  ]
+  因而 (t_{k+1}\le qt_k) 时每步不超过 (t_k)，总长至多 (t_0/(1-q))；全部 (C^2) 管几何都不承重。更强的局部短弦攻击表明，管内 FNE 加固定集与法向收缩会把每条足够短的 (S) 弦固定下来，迫使第二基本形式为零；正维紧无边界曲固定流形因此在对象层面不可能。
+- **独立审查与先行**：三席分别重构了 Fejér 恒等式、短弦/曲率障碍和凸集 salvage。Bërdëllima–Lauster–Luke (JFPA 24 (2022), Prop. 4(ii), Thm. 27/30) 已覆盖相同的 pointwise FNE 固定点 Fejér/收敛机制；显式 (q)-收缩只给初等几何级数推论。见 [FNE 反证审查](research/fne_falsification.md) 与 [独立短弦审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md)。
+- **淘汰范围与可回收结果**：淘汰“曲固定流形 + FNE + 已假设线性法向收缩”作为主要贡献。保留两个可复用 scope lemma：任意闭固定集上的 FNE+几何距离收缩给有限长；闭凸固定集上投影漂移满足 (|P_S(Jx)-P_Sx|\le(\sqrt q+q)d(x,S))。只有在从自然 PPA/GPPA 条件**推导**收缩、改用 almost-firm/曲率误差，或离开 Hilbert FNE 机制时才值得重启。

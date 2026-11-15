@@ -2641,7 +2641,7 @@
 - **Status**：candidate。HJ 螺旋管的显式渐近估计和 w=v+∇f 指数衰减可闭合首次离开 bootstrap；尚未完成独立规范接收和外部优先性审计。
 - **Exact Statement**：存在 C∞ 势 f:R²→R、阻尼 a>0、势 χ_a=af−||∇f||²/2 及相空间非空开集 U，使每个解 x''+ax'+∇χ_a(x)=0 从 U 出发全局存在、有界且 ω(x)=S¹，因而不收敛。
 - **Objects / Dependencies**：HJ 2020 的 C∞ 圆形开盆构造；大角度管内 Y=−∇f 的 Y_θ ~ θ exp(−θ²)、边界内向余量 m(θ) ~ exp(−θ²+θ)；a>sup λmax(∇²f) 时 w'=(∇²f−aI)w。证明稿见 research/topics/path_dynamics/second_order_open_basin_proof_v1.md，交叉审查见 research/audit/SECOND_ORDER_OPEN_BASIN_REVIEW_2026-11-14.md。
-- **Key Objection / Next Evidence**：必须逐项从 HJ 原式核 q_θ=O(1)、法向符号、cutoff 与闭管正距离，并由独立审查者重构 u=θ−C∫|w| 的首次接触不变性。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证，也不自动建立 PPA/GPPA 离散桥。
+- **Key Objection / Next Evidence**：三席交叉审查已重构首次离开 bootstrap，未发现新的动力学符号或量词致命缺口；显式局部常数已整理为 [HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md)，最终复核见 [HJ final review](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md)。仍须按 HJ 原页逐字核 cutoff 的确切约定、F 与边界参数身份，并建立与 PPA/GPPA 的实质离散桥。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证。
 
 <a id="c304"></a>
 ## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
@@ -2656,3 +2656,16 @@
 - **Status**：candidate。这是 C287 非 Dini 绕行机制在固定 radial-twist 子类上的结构障碍，不是一般单调 PPA 定理。
 - **Exact Statement**：若 J((1+t)p)=(1+qt)R_{θ(t)}p 的所有图点属于同一单调关系，则 cos θ(t)≥(1+qt)/(1+t)，故 |θ(t)|=O(√t)；在 t_k=q^k t_0 上角和有限，轨道收敛。
 - **Scope / Objection**：同半径图点的单调性计算完整，但不控制一般多值图、曲零流形或任意 PPA 的切向位移。见 research/candidates/monotone_antiwinding_gate.md。
+
+
+<a id="c306"></a>
+## C306-v1 · FNE 管状固定流形与法向收缩候选
+
+- **Status**：`refuted` 作为主要贡献候选；保留为 scope lemma 与失败路线 F102。三席独立审查一致指出核心收敛结论是标准 Fejér 恒等式的直接推论，曲率版本还在对象层面排除正维紧无边界固定流形。
+- **Exact Statement under review**：令 (Ssubsetmathbb R^n) 为紧 (C^2) 无边界子流形，(J:U_\rho	o U_\rho) 在管域内 firmly nonexpansive，(Jp=p)（(p\in S)），且 (d(Jx,S)\le qd(x,S)), (0<q<1)。候选希望证明全部轨道有限长并收敛到 (S)，并以管几何产生新的切向位移控制。
+- **Decisive evidence**：FNE 对固定点直接给
+  [
+  \|Jx-p\|^2+\|x-Jx\|^2\le d(x,S)^2,
+  ]
+  所以每步 (le t_k)、(t_{k+1}\le qt_k)，总长 (le t_0/(1-q))，不需要 (C^2) 或 reach。独立短弦论证进一步给出曲固定流形的第二基本形式必须为零，故正维紧无边界对象不可存在。
+- **Scope / salvage**：对任意闭固定集，FNE+几何距离收缩仍是可调用的有限长 scope lemma；对闭凸 (S)，还可用投影变分得到 (|P_S(Jx)-P_Sx|\le(\sqrt q+q)d(x,S))。见 [FNE 反证审查](research/fne_falsification.md)、[短弦交叉审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md) 与 [F102](FAILED_ROUTES.md#f102)。重启须从自然算子条件推导 (q)，或改到 almost-firm/非 Hilbert 曲率误差环境。
