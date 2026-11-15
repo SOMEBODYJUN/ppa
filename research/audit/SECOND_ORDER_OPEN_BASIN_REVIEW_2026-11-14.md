@@ -171,19 +171,25 @@ M_p=\sup_{t\ge0}e^{-\delta t}(1+t)^p<\infty,
 
 ### 2.2 一个容易误判的横向弧
 
-取基点 (a=t^A e_1,b=t^B e_2)（(B>A)），再把第一列加一条横向分量 
-\(\Delta a=\varepsilon t^{A+E}e_2\)。此时
+取基点 \(a=t^A e_1,b=t^B e_2\)（\(B>A\)），再把第一列加横向分量
+\(\Delta a=\varepsilon t^{A+E}e_2\)。直接从
+\(k=(a\mathbin{\cdot}b)a+\|b\|^2b\) 得
 \[
-\Delta k_e^{(1)}\asymp t^{A+B+E},
-\qquad \|\Delta Z\|\asymp t^{A+E}.
+\Delta k_{e_1}\asymp t^{2A+B+E},\qquad
+\Delta k_{e_2}=O(t^{2A+B+2E}),\qquad
+\|\Delta Z\|\asymp t^{A+E}.
 \]
-在输出第二列尚由第一项的线性正则化控制时，\(|\Delta\beta|\asymp t^{A+B+E-2B}=t^{A-B+E})，而该线性区的自洽条件为 (E>2(B-A))。在端点 (E=2(B-A))，输出/输入指数为 (B/(2B-A)\ge1/2)；在线性区内部比值更大。
-
-在相反的立方根区，\(|\Delta\beta|\asymp t^{(A+B+E)/3})，指数
-\[
-\frac{A+B+E}{3(A+E)}
-\]
-不小于 (1/3)，且在可疑的临界区 (E\approx2(B-A)) 不低于 (1/2)。因此这条横向弧没有给出小于 (3/7) 的反例；它也说明“横向项不坏”需要实际按区间分解证明，不能从 GR4 的非负项一句话跳过。
+若基点输出第二列处于 \(B<3A\) 的线性区，则
+\(\beta_0\asymp t^B\)、线性系数 \(\asymp t^{2B}\)，从而
+\(|\Delta\beta|\asymp t^{\,2A-B+E}\)。自洽条件
+\(E\ge2(B-A)\) 的端点给输出/输入指数
+\(B/(2B-A)\ge3/5\)。
+若 \(B>3A\)，基点 \(\beta_0\asymp t^{3B-6A}\)、线性系数为
+\(\asymp t^{6A}\)，于是 \(|\Delta\beta|\asymp t^{B+E-4A}\)；
+在自洽端点 \(E\ge7A-B\)（\(B<7A\)）指数至少
+\(3A/(8A-B)\ge3/5\)，而 \(B\ge7A\) 更安全。故该横向弧没有给出低于
+\(3/7\) 的反例；但它也说明“横向项不坏”必须按区间分解证明，不能从 GR4
+的非负项一句话跳过。
 
 ### 2.3 真正尚未排除的横向问题
 

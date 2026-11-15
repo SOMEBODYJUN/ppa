@@ -11,12 +11,15 @@ D=\{(r,\vartheta):\vartheta>\vartheta_*,\ b_1(\vartheta)<r<b_2(\vartheta)\},
 其中
 \[
 \gamma _1(\vartheta)=1+e^{-\vartheta},\qquad
-\gamma _2(\vartheta)=1+\mu e^{-\vartheta},\quad \mu>1,
+\gamma _2(\vartheta)=1+\mu e^{-\vartheta},\quad 1<\mu<e^{2\pi},
 \]
 \(\Delta=\gamma _2-\gamma _1=(\mu-1)e^{-\vartheta}\)，并且 HJ 的两条内管边界满足
 \[
 b_i(\vartheta)=1+c_i e^{-\vartheta},\qquad 0<c_1<c_2.
 \]
+The restriction \(\mu<e^{2\pi}\) is the HJ non-overlap condition
+\(\gamma_2(\vartheta+2\pi)<\gamma_1(\vartheta)\); it makes the unwrapped
+spiral tube an embedded physical branch.
 HJ 的 \(\Pi\) 是构造中的自由 cutoff。取它为紧支撑、支撑位于某个有限初始环带，
 并增大 \(\vartheta_*\) 使
 \(\operatorname{supp}\Pi\) 与闭管
@@ -121,18 +124,18 @@ w'=(\nabla^2 f(x)-aI)w.
 \]
 这是四维相空间中的非空开集。
 
+取 \(\Theta_0>4\)，并把 \(\varepsilon\) 取得足够小，使
+\(C_1\varepsilon/\delta<\Theta_0/4\)。为吸收极坐标投影中 \(r^{-1}\) 的有界因子，
+以下把扰动项统一记成 \(C_1|w|\)。令
+\[
+W(t)=C_1\int_0^t|w(s)|ds,\qquad u(t)=\vartheta(t)-W(t).
+\]
 设 \(\tau\) 是首次离开 \(D\) 的时刻。在 \(t<\tau\) 上 (3.2) 给出
 \[
 \vartheta(t)\ge\vartheta(0)-W(t)
 \ge\Theta_0-C_1\varepsilon/\delta
 >\Theta_0/2.
 \tag{4.1}
-\]
-取 \(\Theta_0>4\)，并把 \(\varepsilon\) 取得足够小，使
-\(C_1\varepsilon/\delta<\Theta_0/4\)。为吸收极坐标投影中 \(r^{-1}\) 的有界因子，
-以下把扰动项统一记成 \(C_1|w|\)。令
-\[
-W(t)=C_1\int_0^t|w(s)|ds,\qquad u(t)=\vartheta(t)-W(t).
 \]
 则 \(W(t)\le C_1\varepsilon/\delta\)，且
 \(u(t)=\vartheta(t)-W(t)>\Theta_0/2-C_1\varepsilon/\delta>1\)。
