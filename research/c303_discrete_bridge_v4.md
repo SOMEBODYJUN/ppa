@@ -194,8 +194,9 @@ handled by Y_theta(theta_0)>0 with the same tau_* factor.
 This appendix closes only the angular schedule comparison. A complete C303
 bridge still needs:
 
-1. a source-checked cutoff with globally bounded g, H, and D^3f and with
-   the exact HJ formula on the entire closed tail tube;
+1. invoke the separately recorded global-bound/coverage lemma
+   (`research/c303_global_bounds.md`) and verify its HJ cutoff assumptions,
+   while retaining the exact HJ formula on the entire closed tail tube;
 2. the uniform implicit-resolvent expansion yielding |w_k|=O(h_k) before
    first contact and sup_tau |w_tau|=O(h_k);
 3. an explicit finite-prefix reference orbit and one common open phase-space
