@@ -133,7 +133,8 @@ k>=K_*, not merely asymptotically. The transient contribution satisfies
 Equivalently, with t_k asymp k^(1-alpha), the asymptotic form is
 
     h_k/m(theta_k), h_k/phi(theta_k)
-       = O(k^(2-3 alpha)) -> 0       iff alpha>2/3.       (TE9c)
+       = O(k^(2-3 alpha)) -> 0       when alpha>2/3.       (TE9c)
+The estimate does not by itself decide the critical or subcritical cases.
 
 The transient does not change the p=2 exponent or the alpha threshold; it
 only changes the finite constant E_* in z_k.

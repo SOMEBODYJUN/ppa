@@ -14,7 +14,7 @@ Assume:
    y(τ)+τλₖF(y(τ)) = xₖ+τβₖvₖ, 0≤τ≤1,
    is a unique C¹ path.
 2. The lifted HJ tail D̃ = {(r,θ): θ>θ*, b₁(θ)<r<b₂(θ)} has r∈[1/2,3/2], physical projection Π(r,θ)=r(cos θ,sin θ) is injective on its closure, and on both radial faces
-   ∇sᵢ·Y ≥ m₀ exp(−θ²+θ), while Yθ/r ≥ c₀ θ exp(−θ²) for θ≥θ* > 1.
+   ∇sᵢ·Y ≥ m₀ exp(−θ²+θ), while Yθ/r ≥ c₀ θ exp(−θ²) for θ≥θ* ≥ 3/2.
 3. ∇f is Lipschitz on a fixed physical outer strip containing every pre-contact τ-path, and F,Y are bounded there. The normal recurrence holds while the path is in the strip:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
    where wₖ = vₖ+∇f(xₖ), γ>0.
