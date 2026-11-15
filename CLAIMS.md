@@ -2645,7 +2645,7 @@
 - **Independent audit update**：`research/audit/C303_TRANSIENT_QUANTIFIER_REVIEW_2026-11-15.md` 记录双侧角度、首个 drop 阈值与 \(T_{\rm tr}\) 修补后的独立裁决；共同停止域、HJ cutoff/outer-strip 源构造和外部优先性仍未闭合。
 - **Cutoff source gate**：`research/c303_hj_cutoff_construction.md` 给出满足 HJ 明示 support 条件的 source-conditional 紧连通外环 cutoff；原文是否还有未摘录的 cutoff 约束仍须逐字核验。
 - **Common stopping-domain merge**：`research/c303_common_stopping_domain.md` 将核心管、outer strip、瞬态角度尾和 \\(\\tau\\)-path 首接触合并为 conditional minimal-index proof；共同停止域和投影 lift 条件仍未升级为无条件定理。
-- **Exact endpoint replacement**：`research/c303_exact_endpoint_barrier.md` 的 EP1–EP4 与 EP7–EP8 从终点 resolvent 方程直接推出法向首接触和双侧极角增量，可替代导数定义的 CS5/TE2；平面 face (EP6) 证明 \(q_k\) 项是结构性必要的，裁决仍为 partial replacement / continue validation。
+- **Exact endpoint replacement**：`research/c303_exact_endpoint_barrier.md` 的 EP1–EP4 与 EP7–EP8 从终点 resolvent 方程直接推出法向首接触和双侧极角增量，可替代导数定义的 CS5/TE2；平面 face (EP6) 证明 \(q_k\) 项是结构性必要的，裁决仍为 partial replacement / continue validation。 独立复核见 `research/audit/C303_EXACT_ENDPOINT_BARRIER_REVIEW_2026-11-15.md`；该复核要求缩放同伦上的统一可逆性与 radial margin 记号。
 - **Common-domain independent audit**：`research/audit/C303_COMMON_STOPPING_DOMAIN_REVIEW_2026-11-15.md` 及其修订记录逐项复核 CS4 停时量词、\(K/j\) 索引和统一 \(h_j e^{\theta_j}\) 界；裁决为 continue validation，CS1 HJ source/lift gates 仍未闭合。
 - **HJ source audit**：`research/audit/C303_HJ_SOURCE_AUDIT_2026-11-15.md` 核对了 \(\theta_{\rm supp}\in(0,2\pi)\) 的窄 dumbbell 修补，并记录原文 (X:=\nabla f) 与显式 (Y=-\nabla f) 的身份冲突；source gate 仍为 conditional。
 - **Near-critical schedule candidate**：`research/c303_sharp_schedule_bootstrap.md` 在补上双侧 lower-angle 义务后，给出 \(W_k=\exp(z_k^2)\) 的条件性比较，并把首接触的充分步长门候选推进到任意固定 \(1/2<\alpha<1\)；这是 schedule improvement candidate，不是已闭 C303 定理或四大级贡献。

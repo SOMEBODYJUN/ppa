@@ -18,7 +18,7 @@ Let `g=∇f`, `H=∇²f`, `F=ag-Hg`, and `Y=-g` on a set where `f∈C³`,
 
 `||H||≤L_H`, `D H` is bounded by `L_3`, and
 
-`I-βH(y)` is uniformly invertible. For `h>0` put
+`I-βH(y)` is uniformly invertible on the endpoint, and the same bound is required uniformly on every scaled homotopy point `(h_τ,y_τ)` used below. For `h>0` put
 
     β=h/(1+ah),       λ=hβ.
 
@@ -81,7 +81,7 @@ Let a `C²` face `s` define the admissible side by `s>0`. Assume that at every
 
 contact point in a compact tail patch
 
-    ∇s(y)·Y(y) ≥ μ(y)>0,
+    ∇s(y)·Y(y) ≥ μ_s(y)>0,
 
 and that the face has a uniform Hessian bound. If `q=||w||`, (EP1)--(EP3) and
 
@@ -89,9 +89,9 @@ a Taylor expansion at a boundary endpoint `s(y)=0` give
 
     s(x)
       = -h ∇s(y)·Y(y) + O(h²+h q)
-      ≤ -h[ μ(y)-C(q+h) ].                              (EP4)
+      ≤ -h[ μ_s(y)-C(q+h) ].                              (EP4)
 
-Consequently, whenever `q+h ≤ μ(y)/(2C)`, no endpoint on that face can have a
+Consequently, whenever `q+h ≤ μ_s(y)/(2C)`, no endpoint on that face can have a
 preimage `x` with `s(x)>0`. Applying the same identity to the scaled homotopy
 
     h_τ=τh,  β_τ=h_τ/(1+a h_τ),
@@ -151,7 +151,7 @@ separate secant-velocity assumption. The `q` term remains exactly the one in
 
 ## The obstruction to removing the normal defect
 
-The `q_k` term in (EP4) is not a proof artifact. Consider the flat local face
+The `q_k` term in (EP4) is not a proof artifact. Here the symbol `μ` in the flat example is a fixed local face drift, not the HJ tail margin `μ_s`. Consider the flat local face
 
     s(z)=z_2,
 
@@ -171,9 +171,9 @@ If `q>μ(1+ah)` and `δ=(βq-hμ)/2>0`, then `x` is strictly inside while
 
     y_2=-(βq-hμ)/2<0.
 
-Hence an `O(h)` defect whose outward component is comparable with the face
-margin can force a one-step exit even though the endpoint identity is exact and
-`H=0`. In the C303 tail the angular margin is `μ=cφ(θ)→0`; a generic
+Hence a defect whose outward component is comparable with the face margin can force a one-step exit even though the endpoint identity is exact and
+`H=0`. In the C303 tail the face margin itself can be of order `h`; the
+example then specializes to an `O(h)` defect by choosing `μ=O(h)`. In the C303 tail the angular margin is `μ=cφ(θ)→0`; a generic
 `q_k=O(h_k)` can therefore not be discarded. At the critical schedule
 `α=1/2`, the unperturbed angle scale gives `h_k/φ(θ_k)≈√log k`, so (EP6)
 explains why the endpoint identity alone cannot close that case.
