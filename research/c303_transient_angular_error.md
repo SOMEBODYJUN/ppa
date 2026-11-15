@@ -8,7 +8,8 @@ The normal recursion after a finite prefix can give
     Q_0 = C_q h_0^2,                                  (TE1)
 
 where t_k=sum_{j<k} h_j and the estimate is used for k>=K_* with
-t_{K_*}>=T_*. The second term is a transient inherited from the finite
+K_* chosen as the first drop threshold (or an explicitly bounded enlargement)
+and t_{K_*}>=T_*. The second term is a transient inherited from the finite
 prefix. It cannot simply be relabeled O(h_k), because h_k decays only
 polynomially while the transient decays in physical time.
 
@@ -99,8 +100,22 @@ Thus
 
 With t_k asymp k^(1-alpha),
 
+For a uniform first-contact comparison starting already at K_*, use the
+explicit bound t_k<=C h_0(1+s^(1-alpha)), s=k+1. Splitting according to
+u=h_0s^(1-alpha)<=1 or u>=1 gives
+
+    sup_{k>=K_*} h_k(1+t_k)^2 <= C h_0,                    (TE9a)
+
+because the large-u exponent is 2-3alpha<0. Hence, after reducing h_0,
+the ratios h_k/m(theta_k) and h_k/phi(theta_k) are small for every
+k>=K_*, not merely asymptotically. The transient contribution satisfies
+
+    sup_{k>=K_*} h_0^2 exp(-gamma(t_k-T_*))(1+t_k)^2 <= C h_0^2. (TE9b)
+
+Equivalently, with t_k asymp k^(1-alpha), the asymptotic form is
+
     h_k/m(theta_k), h_k/phi(theta_k)
-       = O(k^(2-3 alpha)) -> 0       iff alpha>2/3.       (TE9)
+       = O(k^(2-3 alpha)) -> 0       iff alpha>2/3.       (TE9c)
 
 The transient does not change the p=2 exponent or the alpha threshold; it
 only changes the finite constant E_* in z_k.
