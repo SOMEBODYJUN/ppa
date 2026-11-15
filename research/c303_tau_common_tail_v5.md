@@ -18,9 +18,23 @@ Assume:
 3. ∇f is Lipschitz on a fixed physical outer strip containing every pre-contact τ-path, and F,Y are bounded there. The normal recurrence holds while the path is in the strip:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
    where wₖ = vₖ+∇f(xₖ), γ>0.
-4. There is a fixed integer K₀, chosen from the normal-error recursion, such that the finite prefix k<K₀ has a compact initial subband D₀⊂D̃ and h₀ small enough that the τ-path barrier has positive margins on this compact band.
+4. Fix a finite prefix index K₀ after which
+   hₖ−hₖ₊₁ <= (γ/4) hₖ². Choose η,ρ,σ>0 and a compact subband
+       D₀={θ∈[θ*+η,θ*+2η],
+            b₁(θ)+ρ<=r<=b₂(θ)−ρ}
+   together with a reference finite prefix whose τ-paths have face margin
+   at least σ. The finite prefix update maps are continuous, so this is a
+   common margin condition, not a state-dependent selection.
 
-Then there is a nonempty open set U of initial (x₀,v₀), with x₀ in Π(D₀) and ‖v₀+∇f(x₀)‖<ε, such that all resolvent steps stay in Π(D̃), the unwrapped lift has θₖ→∞, rₖ→1, and the physical ω-limit is S¹.
+Then there is a nonempty open set U of initial (x₀,v₀), with x₀ in the
+interior physical projection of D₀ and
+
+    ‖v₀+∇f(x₀)‖ < ε₀,       0<ε₀ <= c₀ h₀²,
+
+such that all resolvent steps stay in Π(D̃), the unwrapped lift has
+θₖ→∞, rₖ→1, and the physical ω-limit is S¹. The h₀² radius handles the
+first rapidly decreasing ratio h₁/h₀≈2^(−α); any smaller positive radius is
+still an open phase-space condition.
 
 The theorem is conditional because items 1–3 are genuine coverage, cutoff, and recurrence obligations.
 
@@ -45,11 +59,26 @@ At the angular lower face, dθ/dτ ≥ βₖ[c₀θ*exp(−θ*²)−C hₖ]. Thu
 
 ## 2. The normal recursion gives one common open set
 
-For α<1, hₖ₊₁/hₖ = 1−α/(k+1)+O(k⁻²), while γhₖ ≫ 1/(k+1). Therefore, after a finite K, choose M_w so that M_w hₖ is a supersolution of
+For α<1, choose K₀ so that
+hₖ−hₖ₊₁ <= (γ/4)hₖ² for every k>=K₀. Let
+qₖ₊₁=(1−γhₖ)qₖ+C hₖ² be the scalar majorant from the normal recursion.
+Choose ε₀<=c₀h₀² and define the finite-prefix numbers
 
-qₖ₊₁ = (1−γhₖ)qₖ + C hₖ².
+    B₀=ε₀,
+    Bₖ₊₁=(1−γhₖ)Bₖ+C hₖ²,
+    M₀=max_{0<=k<=K₀}(Bₖ/hₖ).
 
-For all initial errors in a sufficiently small ball, the finite prefix remains bounded and qₖ=‖wₖ‖≤M_w hₖ for k≥K. The same ε-ball is used at every later step; no k-dependent shrinking of U is needed. The finite-prefix claim uses the compact slack on \(\overline{D₀°}\) and continuity of the finitely many resolvent/\(\tau\)-path maps. This is where openness is obtained; a pointwise orbit estimate alone would not supply it.
+The finite maximum M₀ is common to every initial state in the ε₀-ball.
+Choose M_w>=max{M₀,4C/γ}. For k>=K₀, the drop hₖ−hₖ₊₁ is absorbed by
+the γhₖ² contraction term, so qₖ<=M_w hₖ follows inductively. The h₀²
+radius is exactly what prevents the first rapidly decreasing ratio h₁/h₀
+from being hidden inside a false all-k invariant argument.
+
+The finite-prefix maps are continuous by complete resolvent coverage. The
+strict D₀ margins in the theorem therefore leave one common open
+neighborhood U; no k-dependent shrinking of U or state-dependent M_w is
+used. This is where openness is obtained; a pointwise orbit estimate alone
+would not supply it.
 
 ## 3. No-wrap and the physical lift
 
