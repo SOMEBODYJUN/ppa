@@ -2574,3 +2574,15 @@
 - **Status**：`derived-checked`。独立复核另一有理构造、coNP 证书和有符号超额的抽样恒等式。
 - **Exact Statement**：有理有限 Cayley 数据，维数随输入增长。固定 \((\lambda,L,\gamma)=(1,1,1/2)\) 和斜率 \(\sigma=1/2\)，判定 C290 公共有理平方容差是否可行是 coNP-完全，精确预算为 NP-hard。对通常有限数据公共预算，经验权重分母 \(s\) 的最大值 \(B_s\) 介于 \((1-1/s)B\) 与 \(B\)，给相对误差 PTAS。若 \(\mathrm P\ne\mathrm{NP}\)，固定参数类也无完全多项式时间相对近似方案。
 - **Dependencies / Evidence / Scope**：[构造、证书和近似](research/canonical/quadratic_cross_approximation.md#qca-complexity)，依赖 C290、Motzkin–Straus 定理 1 与 CLIQUE 复杂性，另有[精确复算](research/code/quadratic_cross/results.json)。它检验全查询约束，不决定 C19 同站点 QP、实际正反误差的最优化或真实纤维非空。
+
+## C293-v1 · 任意 Banach 空间上 Hölder 最小位移的线性上界
+
+- **Status**：`derived-checked`。独立重构了非反身空间的嵌套凸包和上确界缩放论证。
+- **Exact Statement**：实 Banach 空间 \(X\)，\(0<\gamma<1\)。\(\Lambda_\gamma(X)\) 是全部非空有界闭凸 \(K\) 及归一化 \(\gamma\)-Hölder 自映射的最小位移上确界。则 \(\Lambda_\gamma(X)\le(1-\gamma)J_{\mathrm{rel}}(X)\)。有限维恒为零，无限维为 \(\Theta_X(1-\gamma)\)。
+- **Dependencies / Evidence / Scope**：[缩放与下界](research/canonical/holder_minimal_displacement.md#hmd-characteristic)。上界无需反身性、最小不变集或圆心达到。下界调用 Lin–Sternfeld 正位移，再平均并缩放。最优系数与外部先行性开放。
+
+## C294-v1 · 完整全局 Hölder–RL 的最坏真值域缺口
+
+- **Status**：`derived-checked`。独立核验完整凸投影归约和归一化阶。
+- **Exact Statement**：实 Hilbert \(H\)，\(D_\gamma(H)=\sup_C\inf_p\|p-C(p)\|\)，其中 \(C:H\to H\) 为全尺度系数至多 1 的 \(\gamma\)-Hölder 映射。则 \(D_\gamma=\Lambda_\gamma\le(1-\gamma)/\sqrt2\)。同参数完整满 Minty 输入关系，在全部目标和图的最坏值域及定义域距离分别恰为 \(R D_\gamma/(2\lambda)\) 和 \(R D_\gamma/2\)，\(R=L^{1/(1-\gamma)}\)。无限维值域的归一化最坏阶为 \(\Theta(1-\gamma)\)，下界阶可与同一关系唯一零点共存。
+- **Dependencies / Evidence / Scope**：[Hilbert 与原关系](research/canonical/holder_minimal_displacement.md#hmd-range)用 C183 完整 Cayley 表示、C293、投影和 Jung 界。首项系数与原文优先性待核。值域以距离计，正距离排除近似可解；小距离本身不授予纤维非空。

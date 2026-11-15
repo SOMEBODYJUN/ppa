@@ -7,7 +7,7 @@
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**全局 RL 的外部联系。** [C290–C292](research/canonical/quadratic_cross_approximation.md)已闭跨点平方误差的充要方差判据、每个固定维数的同底点最优双向因子和全查询有限预算的复杂性。下一步攻无限维最小位移与固定梯度预算。[实际交接与独立裁决](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)给目前外部先行与研究标准。固定维数同时误差因子已完成，conditioning 锐性仍开放。
+**全局 RL 的外部联系。** [C290–C292](research/canonical/quadratic_cross_approximation.md)已闭跨点平方误差的充要方差判据、每个固定维数的同底点最优双向因子和全查询有限预算的复杂性。[C293–C294](research/canonical/holder_minimal_displacement.md)另闭无限维最小位移的线性阶，剩余门为首项系数和 Kirk 1998 全文；固定梯度预算继续独立核。[实际交接与独立裁决](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)给目前外部先行与研究标准。固定维数同时误差因子已完成，conditioning 锐性仍开放。
 
 [C288](research/canonical/rleb_nearest_anchor_geometry.md)已闭仿射及紧光滑目标的类级锐门。高参数临界已由完整连续单值近端和紧正维光滑目标实现。剩余问题为原 F 单值、严格曲率以及固定窗最优因子。
 

@@ -4383,6 +4383,18 @@
       "label": "C292 有限全查询预算的精确复杂性",
       "file": "canonical/quadratic_cross_approximation.md#qca-complexity",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "HMD-SELF",
+      "label": "C293 Banach Hölder 位移的线性阶",
+      "file": "canonical/holder_minimal_displacement.md#hmd-characteristic",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "HMD-RANGE",
+      "label": "C294 满 Minty 输入原关系的最坏缺口",
+      "file": "canonical/holder_minimal_displacement.md#hmd-range",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10968,6 +10980,18 @@
       "output": "QCA-BUDGET",
       "relation": "conditional",
       "scope": "有限有理数据、维数可变，Motzkin–Straus 与有理图嵌入；同站点预算另议。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E574",
+      "inputs": [
+        "D03",
+        "HMD-SELF"
+      ],
+      "output": "HMD-RANGE",
+      "relation": "conditional",
+      "scope": "实 Hilbert 凸投影，完整全域 Cayley 数据及自然尺度 R；位移是原值域和原定义域距离。",
       "status": "derived-checked",
       "topic": "全局 Hölder–RL 结构"
     }

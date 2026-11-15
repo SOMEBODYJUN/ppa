@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-[跨点平方误差的精确方差判据](research/canonical/quadratic_cross_approximation.md)登记 C290–C292：异质容差的充要条件、有限维正反近似的准确 Jung 因子，以及固定 Hölder 参数下有限跨点预算的精确判定复杂性和近似界。[独立审查与接续](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)保留。下一目标是无限维最小位移的锐阶与梯度结构的固定预算。
+[跨点平方误差的精确方差判据](research/canonical/quadratic_cross_approximation.md)登记 C290–C292：异质容差的充要条件、有限维正反近似的准确 Jung 因子，以及固定 Hölder 参数下有限跨点预算的精确判定复杂性和近似界。[独立审查与接续](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)保留。另见[Hölder 最小位移与真值域](research/canonical/holder_minimal_displacement.md)的 C293–C294，归一化最坏缺口的线性阶已闭，首项系数仍开放。
 
 [零集切法几何与线性锐门](research/canonical/rleb_nearest_anchor_geometry.md)补上 C288：仿射目标的精确因子、紧 C² 目标的严格小窗门与临界原近端，解释 C285 高参数最坏类和规则几何子类的阈值差。
 

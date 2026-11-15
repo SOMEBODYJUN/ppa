@@ -8976,6 +8976,28 @@
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "HMD-RANGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "HMD-SELF": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 857,
+      "region": "structure",
+      "realm": "structure"
     }
   },
   "edges": {
@@ -11258,6 +11280,10 @@
     "E573": {
       "x": 3253.81,
       "y": 4027.69
+    },
+    "E574": {
+      "x": 3628.19,
+      "y": 861.31
     }
   },
   "bounds": {

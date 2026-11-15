@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C293–C294 位移和缩放
+
+[复算代码](code/holder_displacement/verify.py)用 Fraction 核离散极限代数，80 位 Decimal 反算无限维下界证明的缩放参数。实际环境与结果见 [results.json](code/holder_displacement/results.json)。真缺口的全称结论见[正文](canonical/holder_minimal_displacement.md)。
+
 ## C290–C292 跨点预算
 
 运行 Python 3 执行 [verify.py](code/quadratic_cross/verify.py)，结果及指纹见 [results.json](code/quadratic_cross/results.json)。用整数和 Fraction 确切核有理坐标图构造、二次超额、混合权重及有限经验估算。一般证明在 [C290–C292](canonical/quadratic_cross_approximation.md)。
