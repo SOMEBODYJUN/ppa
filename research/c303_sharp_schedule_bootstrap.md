@@ -136,11 +136,18 @@ from the constant-shift estimate (SS7).
 
 The threshold 1/2<alpha<1 is a sufficient near-critical gate under
 (SS1), (SS1^-) and (SS2).
-It is not claimed sharp for the actual HJ construction. If the accumulated
-angle-error shift can be removed or shown to vanish at infinity, the
-unperturbed estimate W_k=O((1+t_k)log(e+t_k)) suggests that alpha=1/2 may
-also be admissible. Conversely, if a non-summable or larger-than-h_k error
-enters (SS1), this argument fails.
+It is not claimed sharp for the actual HJ construction. Removing the
+constant angle-error shift would remove the arbitrary epsilon in (SS7), but it
+would not by itself close the endpoint alpha=1/2: the unperturbed estimate
+W_k=O((1+t_k)log(e+t_k)) gives
+
+    phi(theta_k) asymp 1/((1+t_k) sqrt(log(e+t_k))),
+
+so h_k/phi(theta_k) grows like sqrt(log k) when alpha=1/2. Thus the current
+O(h_k) angular first-contact error remains too large at the endpoint. Reaching
+alpha=1/2 would require a sharper contact remainder, for example
+    o(h_k/sqrt(log k)), or a cancellation unavailable in (SS1). Conversely, if a
+non-summable or larger-than-h_k error enters (SS1), this argument fails.
 
 The minimum proof obligations are:
 
