@@ -18,8 +18,8 @@ Assume:
 3. ∇f is Lipschitz on a fixed physical outer strip containing every pre-contact τ-path, and F,Y are bounded there. The normal recurrence holds while the path is in the strip:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
    where wₖ = vₖ+∇f(xₖ), γ>0.
-4. Fix a finite prefix index K₀ after which
-   hₖ−hₖ₊₁ <= (γ/4) hₖ². Choose η,ρ,σ>0 and the open subband
+4. Take K₀ to be the first index after which
+   hₖ−hₖ₊₁ <= (γ/4) hₖ² for every k≥K₀. Choose η,ρ,σ>0 and the open subband
        D₀°={θ∈(θ*+η,θ*+2η),
              b₁(θ)+ρ<r<b₂(θ)−ρ}.
    Its closure \overline{D₀°} is compact and lies strictly inside the tail.
