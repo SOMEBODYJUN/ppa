@@ -18,9 +18,10 @@ where the nonnegative error tail is summable and is absorbed by
     R_k <= C(e_k),\qquad R_k^-\le C(e_k),
     e_k=E_k-E_{k+1}.                                  (SS2)
 
-For h_k=h_0(k+1)^(-alpha), the v4 estimate used
+For h_k=h_0(k+1)^(-alpha) with 1/2<alpha<1 (the infinite-time
+schedule regime), the v4 estimate used
 exp(z_k^2/2) and obtained the sufficient gate alpha>2/3. The sharper
-super-solution below gives, for every fixed alpha>1/2, an upper angle bound
+super-solution below gives, for every fixed 1/2<alpha<1, an upper angle bound
 strong enough for the first-contact comparison, provided the same normal,
 outer-strip, and finite-prefix hypotheses hold.
 
@@ -123,17 +124,17 @@ With t_k asymp k^(1-alpha),
     h_k/m(theta_k), h_k/phi(theta_k)
        = O(k^((1+epsilon)(1-alpha)-alpha)).                (SS9)
 
-For any fixed alpha>1/2, choose epsilon>0 so small that
+For any fixed 1/2<alpha<1, choose epsilon>0 so small that
 
     alpha > (1+epsilon)/(2+epsilon).                       (SS10)
 
 Then both ratios tend to zero. Thus the radial and angular first-contact
-errors are dominated for every alpha>1/2, whereas alpha=1/2 is not obtained
+errors are dominated for every 1/2<alpha<1, whereas alpha=1/2 is not obtained
 from the constant-shift estimate (SS7).
 
 ## Sharpness and what remains open
 
-The threshold alpha>1/2 is a sufficient near-critical gate under
+The threshold 1/2<alpha<1 is a sufficient near-critical gate under
 (SS1), (SS1^-) and (SS2).
 It is not claimed sharp for the actual HJ construction. If the accumulated
 angle-error shift can be removed or shown to vanish at infinity, the
