@@ -20,7 +20,8 @@
 \]
 
 其中 \(E=C_1E_*\) 来自双侧角度余项和 transient normal tail，并且这些估计对
-共同初始开集中的所有 pre-exit 轨道统一成立。还假设
+共同初始开集中的所有 pre-exit 轨道统一成立；同时要求 \(K\)、\(E_*\) 以及后续的
+\(C_\varepsilon\) 在该有限前缀带上对同一开集和足够小的 \(h_0\) 统一有界。还假设
 
 \[
  q_k:=\|w_k\|\le M h_k+Q_0e^{-\gamma(t_k-T_{\rm tr})},
@@ -28,7 +29,8 @@
  \tag{WS2}
 \]
 
-以及每条 pre-exit \(\tau\)-path 的物理位移、局部 lift 和半径界
+以及同一首个 drop threshold 给出的有限前缀时间界
+\(T_{\rm tr}=t_{K_*}\le T_*<\infty\)，其中对固定 \(\alpha\) 的 \(T_*\) 与 \(h_0\) 及初始 lifted angle 无关；还假设每条 pre-exit \(\tau\)-path 的物理位移、局部 lift 和半径界
 \(\|y_\tau-x_j\|\le C h_j\)、\(r_\tau\in[1/2,3/2]\)。这些是接口的输入，不能由
 本页的标量比较反向推出。
 
@@ -42,7 +44,7 @@
  \tag{WS3}
 \]
 
-这里的常数可吸收 \(\log(e+t_k)^{1+\eta}\) 和有界的
+这里固定任意 \(0<\eta<\varepsilon/2\)，常数可吸收 \(\log(e+t_k)^{1+\eta}\) 和有界的
 \(e^{d_k^2(1+1/\eta)}\)。因此在 \(\theta_k\ge\theta_*>0\) 时，C303 的实际
 径向面余量和角漂移满足
 
@@ -202,7 +204,8 @@ obstruction, not a notation issue.
 
 ## Remaining obligations and verdict
 
-The W schedule can replace the \(p=2\), \(\alpha>2/3\) exponents in CS3--CS7 only
+The companion independent ratio audit is recorded in
+`C303_SHARP_SCHEDULE_COMMON_DOMAIN_REVIEW_2026-11-15.md`. The W schedule can replace the \(p=2\), \(\alpha>2/3\) exponents in CS3--CS7 only
 conditionally. To turn the calculation into a theorem one still must prove, uniformly
 on the same common initial open set and up to the same minimal first-exit index:
 
@@ -212,7 +215,8 @@ on the same common initial open set and up to the same minimal first-exit index:
 3. the pre-exit displacement/lift bounds used in (WS8), including a radial buffer for
    \(r\in[1/2,3/2]\);
 4. the finite-prefix \(K_*\) margin, with no later threshold silently substituted;
-5. HJ cutoff/source and physical-lift injectivity conditions.
+5. HJ cutoff/source and physical-lift injectivity conditions;
+6. the uniform finite-prefix time bound \(T_{\rm tr}=t_{K_*}\le T_*\), so the transient term is small on one common initial open set.
 
 Consequently this page is a **conditional integration lemma / continue validation**.
 It gives the exact admissible schedule range and the critical obstruction, but does not

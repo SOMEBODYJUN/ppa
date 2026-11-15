@@ -1,8 +1,9 @@
 # C303 sharp schedule to common-domain audit
 
-Status: **continue validation**. This is an independent check of the proposed
+Status: **continue validation**. This is an independent companion check of the proposed
 (W_k=e^{z_k^2}) schedule envelope against the radial and angular first-contact
-conditions. It does not upgrade the C303 bridge.
+conditions. Detailed interface derivation is in
+`C303_W_SCHEDULE_COMMON_DOMAIN_REVIEW_2026-11-15.md`. It does not upgrade the C303 bridge.
 
 ## Exact obligation
 
@@ -75,7 +76,7 @@ so its contribution is at most (C h_0^2). Therefore the ratios are uniformly
 (p=2) route, take (\varepsilon=1) in this calculation and the condition
 reduces to (\alpha>2/3), reproducing TE9a--TE9b.
 
-There is no transient counterexample under the explicit finite-prefix time
+No transient obstruction appears in (A5) under the explicit finite-prefix time
 bound. A counterexample would require allowing (T_tr) to grow with (h_0^{-1})
 or with the unbounded initial lift, so that (Q_0(1+T_tr)^{1+\varepsilon}) is not
 small; the present finite-prefix lemma excludes that by fixing (T_*) first.
