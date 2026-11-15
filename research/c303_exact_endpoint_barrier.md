@@ -178,6 +178,27 @@ margin can force a one-step exit even though the endpoint identity is exact and
 `α=1/2`, the unperturbed angle scale gives `h_k/φ(θ_k)≈√log k`, so (EP6)
 explains why the endpoint identity alone cannot close that case.
 
+## Why a convex variational shortcut is unavailable
+
+The hypothesis `a>sup lambda_max(H)` does not imply convexity of
+`chi_a=af-(1/2)||∇f||²`, because
+
+    chi_a'' = a f'' - (f'')² - f' f'''
+
+in one dimension. For
+
+    f(x)=A x + epsilon sin(x),    A>epsilon>0,
+
+we have `sup f''=epsilon`; choose any `a>epsilon`. At `x=pi`,
+`f'=A-epsilon`, `f''=0`, and `f'''=epsilon`, hence
+
+    chi_a''(pi)=-(A-epsilon)epsilon<0.
+
+Therefore the C303 resolvent equation is not generally the optimality
+condition of a convex proximal subproblem, and firm-nonexpansive or variational
+inequalities cannot replace the endpoint/normal estimates without an additional
+hypothesis controlling `f' f'''` (or directly assuming convexity of `chi_a`).
+
 ## Verdict and reusable content
 
 **Continue validation.** (EP1)--(EP4) are a reusable algebraic lemma that can
