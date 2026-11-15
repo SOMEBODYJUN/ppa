@@ -90,6 +90,10 @@ z_k=\theta_k-C_e(E_\star-E_k),
 
 ## 最小改变裁决的证据
 
+### 当前修订状态
+
+审查后，工作树中的 transient 页已补入两项局部修订：它现在同时显示带 (h_kq_k) 瞬态项的下角度估计，并把瞬态基准改为 (T_{\rm tr}=t_{K_\star})，其中 (K_\star) 与 finite-prefix 的首个 drop threshold 相同。这些修改已按同一 `gamma` 常数提交，因此上面第 1、2 项中的代数缺口得到条件性修补；这不改变 outer-strip/cutoff source gate，也不替代把上下估计写在同一个停止域上的合并证明。
+
 要把裁决从 continue validation 改变为已闭主要贡献，至少需要一份可复核合并证明，明确给出：
 
 1. 同一共同开集和首出界停止域上的上下角度估计，特别是带瞬态项的 lower estimate 与 (z_k\ge1)；
@@ -98,3 +102,12 @@ z_k=\theta_k-C_e(E_\star-E_k),
 4. outer-strip 首接触的共同停止域、离散留域和后续角度发散量词。
 
 在这些证据出现前，TE、FP、OS 各自的条件性正确性不能被合取为 C303 的完整惯性 PPA 定理。
+
+## Post-review repair ledger
+
+随后提交 `63967c5`、`8070bf0`、`7420c41` 和 `0cc3860` 已分别补入双侧角度估计、
+统一的首个 drop 阈值与瞬态基准时间、全局 normal recursion 推导的两项界、
+以及 \(\theta_*\ge3/2\) 和临界步长措辞。因而上面第 1、2 项的形式性异议在
+当前工作树中已有条件性修补；它们仍依赖共同停止域内的极角展开和 finite-prefix
+覆盖。第 3 项（HJ cutoff 的实际源构造与 outer-strip 的合取留域）仍未闭合，
+所以独立裁决保持 **continue validation**，C303 仍不是无条件定理或主要贡献。

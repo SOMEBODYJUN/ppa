@@ -13,7 +13,8 @@ prefix. It cannot simply be relabeled O(h_k), because h_k decays only
 polynomially while the transient decays in physical time.
 Throughout this comparison take h_0<=1/(2 gamma), so the factors
 1-gamma h_k are nonnegative and their products admit the stated exponential
-bound.
+bound. Here the same fixed gamma is chosen with 0<gamma<=c_delta, where
+c_delta is the contraction constant in `c303_normal_error_recursion.md`.
 
 The displayed two-term estimate follows directly from the global normal
 recursion. Let q_k=||w_k|| and choose M>=4C/gamma. At K_* the finite-prefix

@@ -17,7 +17,8 @@ Assume:
    ∇sᵢ·Y ≥ m₀ exp(−θ²+θ), while Yθ/r ≥ c₀ θ exp(−θ²) for θ≥θ* ≥ 3/2.
 3. ∇f is Lipschitz on a fixed physical outer strip containing every pre-contact τ-path, and F,Y are bounded there. The normal recurrence holds while the path is in the strip:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
-   where wₖ = vₖ+∇f(xₖ), γ>0.
+   where wₖ = vₖ+∇f(xₖ), and γ is fixed with 0<γ≤c_δ, where c_δ is
+   the contraction constant in the global normal-error lemma.
 4. Take K₀ to be the first index after which
    hₖ−hₖ₊₁ <= (γ/4) hₖ² for every k≥K₀. Choose η,ρ,σ>0 and the open subband
        D₀°={θ∈(θ*+η,θ*+2η),

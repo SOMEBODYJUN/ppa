@@ -85,7 +85,9 @@ A_{h_\\tau}w_\\tau
 
 ## 4. 幂步长下的共同界
 
-令 \\(h_k=h_0(k+1)^{-\\alpha}\\), (0<\\alpha<1)。取 (M>2C_\\delta/c_\\delta)。由于
+令 \\(h_k=h_0(k+1)^{-\\alpha}\\), (0<\\alpha<1)。后续比较统一取一个固定
+\\(0<\\gamma\\le c_\\delta\\)，并以此 \\(\\gamma\\) 定义 drop 阈值；取
+(M>2C_\\delta/c_\\delta)。由于
 \[
 \\frac{h_k-h_{k+1}}{h_k^2}\\longrightarrow0,
 \]
