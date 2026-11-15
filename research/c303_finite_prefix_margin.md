@@ -33,7 +33,7 @@ for every 0<h_0<h_* and every initial state satisfying
     0<epsilon_0 <= min{epsilon_*, c_init h_0^2},
 
 the first K_0 steps and every intermediate tau-resolvent path have a common
-positive margin from the entrance and radial faces. Here K_0 is any index
+positive margin from the entrance and radial faces. Here K_0 is chosen as the first index
 satisfying
 
     h_k - h_{k+1} <= (gamma/4) h_k^2       for k>=K_0,
