@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+[准解析性与精确近端的正则性分界](research/canonical/quasianalytic_proximal_dichotomy.md)给 C302：强对数凸总权重下的一侧有限长度，另一侧用同类 Beurling 势实现所有允许聚点集和严格 Hölder 预算。解析逼近、全阶衰减及文献归属均保留。
+
 [标准 c0 的一般凹模精确位移及固定凸集](research/canonical/holder_minimal_displacement.md#hmd-c0)补 C300–C301。c0 单位球和全域幂模的精确包络由逐坐标非扩张修正和移位屏障闭合；固定 Hilbert 凸集及 Banach 单位球的线性阶另立。
 
 [精确近端与梯度下降的聚点集](research/canonical/exact_proximal_limit_sets.md)给出 C297–C299：同维补分量边界刻画、任意紧连通集的一维提升、严格直径预算下的精确全局近端、标准梯度下降的同轨道对应。Fokin 的连续时间结论及 Noll 近端圆例的范围分别核明。

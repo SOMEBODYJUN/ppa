@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C302 全阶估计的有限权重恒等式
+
+[代码](code/quasianalytic_dichotomy/verify.py)以整数与 Fraction 枚举有限权重分解、缓增长函数和 Moreau 谱变换，[结果](code/quasianalytic_dichotomy/results.json)含指纹。无穷序列与全部解析证明见[正文](canonical/quasianalytic_proximal_dichotomy.md)。
+
 ## C300–C301 位移标量反算
 
 [代码](code/c0_displacement/verify.py)精确枚举有限标量夹逼并检验固定单位球缩放，见[结果](code/c0_displacement/results.json)。无穷维上下界由[正文证明](canonical/holder_minimal_displacement.md)承担。

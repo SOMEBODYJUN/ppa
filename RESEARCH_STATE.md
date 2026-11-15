@@ -7,6 +7,8 @@
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
+**准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
+
 **最小位移的精确和固定集合结果。** [C300–C301](research/canonical/holder_minimal_displacement.md#hmd-c0)给标准 c0 精确位移并闭固定 Hilbert 凸集与任意 Banach 单位球的线性阶。下一门是 Hilbert 归一化首项系数与一般固定 Banach 凸集的独立小像构造。[F101](FAILED_ROUTES.md#f101)记 Bessaga 印刷膜障碍。
 
 **精确非收敛动力学。** [C297–C299](research/canonical/exact_proximal_limit_sets.md)关闭欧氏精确 PPA 与标准梯度下降的同维聚点集刻画及严格 Hölder 预算。当前主问题是将精确反向弦、保最小集和尾拼接提升到近解析非准解析类，及预设额外误差界时还有哪些拓扑约束。Fokin 既有连续时间刻画不算本轮新增。

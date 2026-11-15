@@ -884,6 +884,8 @@
 | E577 | [EPL-CHORD · C297 保持最小集的反向弦插值](canonical/exact_proximal_limit_sets.md#epl-chord) | conditional → [EPL-CLASS · C297 精确近端聚点集同维刻画](canonical/exact_proximal_limit_sets.md#epl-characterization) | Fokin 的同维曲线输入及真实强凸近端子问题；必要性由整段避聚点另证。；**derived-checked** |
 | E578 | [EPL-CHORD · C297 保持最小集的反向弦插值](canonical/exact_proximal_limit_sets.md#epl-chord) ∧ [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | conditional → [EPL-BUDGET · C298 固定全局 Hölder 预算的近端轨道归约](canonical/exact_proximal_limit_sets.md#epl-budget) | 保精确弦的凸包围与距离外尾，严格大于直径预算。；**derived-checked** |
 | E579 | [EPL-CLASS · C297 精确近端聚点集同维刻画](canonical/exact_proximal_limit_sets.md#epl-characterization) | conditional → [EPL-GD · C299 标准梯度下降聚点集刻画](canonical/exact_proximal_limit_sets.md#epl-gradient-descent) | 全局 Lipschitz 的 Moreau 梯度还原同一轨道，标准步长的必要性另证。；**derived-checked** |
+| E581 | [QPD-WEIGHT · C302 非准解析的导数封闭内部权重](canonical/quasianalytic_proximal_dichotomy.md#qpd-weight) ∧ [EPL-CHORD · C297 保持最小集的反向弦插值](canonical/exact_proximal_limit_sets.md#epl-chord) | conditional → [QPD-REALIZE · C302 同一权重类的精确轨道实现](canonical/quasianalytic_proximal_dichotomy.md#qpd-realization) | 非准解析强对数凸总权重，解析精细逼近、局部全阶幅度与 Beurling 零延拓。；**derived-checked** |
+| E582 | [QPD-REALIZE · C302 同一权重类的精确轨道实现](canonical/quasianalytic_proximal_dichotomy.md#qpd-realization) ∧ [EPL-CLASS · C297 精确近端聚点集同维刻画](canonical/exact_proximal_limit_sets.md#epl-characterization) | conditional → [QPD-DIVISION · C302 精确近端的准解析动力学分界](canonical/quasianalytic_proximal_dichotomy.md#qpd-dichotomy) | 准解析侧另用 RSW 与 KL；非平凡聚点集要求维数至少二。；**derived-checked** |
 
 ## 全局 Hölder–RL 结构
 

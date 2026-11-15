@@ -4449,6 +4449,24 @@
       "label": "C301 固定 Hilbert 凸集与 Banach 单位球",
       "file": "canonical/holder_minimal_displacement.md#hmd-fixed",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QPD-WEIGHT",
+      "label": "C302 非准解析的导数封闭内部权重",
+      "file": "canonical/quasianalytic_proximal_dichotomy.md#qpd-weight",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QPD-REALIZE",
+      "label": "C302 同一权重类的精确轨道实现",
+      "file": "canonical/quasianalytic_proximal_dichotomy.md#qpd-realization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "QPD-DIVISION",
+      "label": "C302 精确近端的准解析动力学分界",
+      "file": "canonical/quasianalytic_proximal_dichotomy.md#qpd-dichotomy",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11116,6 +11134,30 @@
       "scope": "上界用空间包络；固定集下界另需 Lin–Sternfeld 与凸投影或径向截断。",
       "status": "derived-checked",
       "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E581",
+      "inputs": [
+        "QPD-WEIGHT",
+        "EPL-CHORD"
+      ],
+      "output": "QPD-REALIZE",
+      "relation": "conditional",
+      "scope": "非准解析强对数凸总权重，解析精细逼近、局部全阶幅度与 Beurling 零延拓。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E582",
+      "inputs": [
+        "QPD-REALIZE",
+        "EPL-CLASS"
+      ],
+      "output": "QPD-DIVISION",
+      "relation": "conditional",
+      "scope": "准解析侧另用 RSW 与 KL；非平凡聚点集要求维数至少二。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
     }
   ]
 }

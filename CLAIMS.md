@@ -2628,3 +2628,9 @@
 - **Status**：`derived-checked`。两种小像与恒等平均机制独立推导核验。
 - **Exact Statement**：固定非空有界闭凸 \(K\) 紧时，归一化 \(\gamma\)-Hölder 自映射的最坏最小位移为零。若 \(K\) 是非紧 Hilbert 有界闭凸集，或是直径小于 1 的非紧 Banach 有界闭凸集、任意无限维 Banach 的闭单位球，则固定 \(K\) 的最坏位移为 \(\Theta_K(1-\gamma)\)。
 - **Dependencies / Evidence / Scope**：[固定集合结论](research/canonical/holder_minimal_displacement.md#hmd-fixed)依赖 C293、Lin–Sternfeld 与凸投影或径向截断。任意固定非 Hilbert 凸集的推广尚缺与原对象相容的小像 Lipschitz 自映射；Bessaga 的印刷膜接口不能直接用来关门。
+
+## C302-v1 · 强对数凸 Denjoy–Carleman 总权重的近端动力学分界
+
+- **Status**：`derived-checked`。先有独立重构，再以现有规范正文复审内部权重、统一全阶界、Beurling 零延拓、源定理约定和完整近端。外部发表优先仍开放。
+- **Exact Statement**：固定有限维与 \(\lambda>0\)，总权重 \(M_0=1,M_j>0\)、\(M_j/j!\) 对数凸。若 \(\sum M_{j-1}/M_j=\infty\)，每个 \(E^{\{M\}}\) 目标的有界全局精确 PPA 轨道有限长度并收敛，标准梯度下降亦然。若和有限，则 C297 的所有同维允许聚点集可由同类 Beurling \(E^{(M)}\) 势实现，仍可要求完整全局最小集等于聚点集、强制、统一弱凸、精确二次尾或 C298 任意严格预算。C299 的标准梯度下降实现保持所述类。
+- **Dependencies / Evidence / Scope**：[双向分界与全阶证明](research/canonical/quasianalytic_proximal_dichotomy.md)以 RSW 定理及 KL 导入收敛侧，非准解析构造经解析射线、内部权重与反向弦。维数至少二时才有非平凡失败。任意有限 \(\alpha>1\) 的对数权重实现同一个函数在所有 Gevrey \(s>1\)，不是随 \(s\) 换函数。未推及不具强对数凸条件的通用权重矩阵。

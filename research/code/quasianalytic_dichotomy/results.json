@@ -1,0 +1,9 @@
+{
+  "claim_version": "C302-v1",
+  "python": "3.12.14",
+  "script_sha256": "abae6df60738bbcd896b607e04a1b5d9349fe19efa2bbb0f0777634ff25edced",
+  "arithmetic": "Fraction exact, no random inputs",
+  "nonlinear_weight_product_checks": 8191,
+  "finite_slow_d_checks": 1000,
+  "moreau_eigenvalue_checks": 123
+}
