@@ -129,8 +129,11 @@ The position component of the reference curve has bounded velocity on
 
     ||x_bar(t_k+tau h_k)-x_bar(t_k)|| <= C_T h_k.               (FP4a)
 
-The defining functions s_i and the lifted angle are Lipschitz on a fixed
-physical neighborhood of the compact reference curve. Decrease h_* so that
+The defining functions s_i are Lipschitz on a fixed physical neighborhood of
+the compact reference curve. If the finite prefix crosses more than one
+turn, use finitely many local polar lift charts along the compact embedded
+spiral segment; Π-injectivity on the closed tail makes their overlaps
+consistent. Decrease h_* so that
 (C_tau+C_T) h_* <= sigma_0/8. Combining (FP3), (FP4), and (FP4a), every
 y_tau in the first K_0 steps has
 
