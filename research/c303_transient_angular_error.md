@@ -15,6 +15,22 @@ Throughout this comparison take h_0<=1/(2 gamma), so the factors
 1-gamma h_k are nonnegative and their products admit the stated exponential
 bound.
 
+The displayed two-term estimate follows directly from the global normal
+recursion. Let q_k=||w_k|| and choose M>=4C/gamma. At K_* the finite-prefix
+lemma and the coarse recursion give q_{K_*}<=Q_0=C_qh_0^2. For k>=K_*,
+the drop condition implies
+
+    (1-gamma h_k) M h_k + C h_k^2 <= M h_{k+1}.
+
+Therefore r_k=(q_k-Mh_k)_+ satisfies
+
+    r_{k+1} <= (1-gamma h_k) r_k,
+    r_k <= Q_0 exp(-gamma(t_k-t_{K_*})),
+
+which is (TE1) with T_tr=t_{K_*}. This derivation is uniform over the
+common initial open set; it does not assume that a first exit has already
+been ruled out.
+
 This note gives the correct angle super-solution. The status remains
 continue validation: (TE1) and the angular one-step estimate must hold
 uniformly before first exit.
@@ -149,15 +165,13 @@ coefficient is h_k and its physical-time exponential is integrable.
 
 The minimum additional obligations are:
 
-1. Prove (TE1) uniformly for every pre-exit orbit in the common open set,
-   with Q_0=O(h_0^2) after the finite-prefix construction.
-2. Derive (TE2) with its B h_k q_k term explicitly; do not suppress q_k
+1. Derive (TE2) with its B h_k q_k term explicitly; do not suppress q_k
    before inserting (TE1).
-3. Start the bootstrap at the same first-drop index K_* used by the
+2. Start the bootstrap at the same first-drop index K_* used by the
    finite-prefix lemma, with T_tr=t_{K_*} and a strict angular margin. The
    finite prefix remains covered by that separate lemma; no later geometric
    threshold is silently added to K_*.
-4. Keep the transient tail in the first-contact comparison if the normal
+3. Keep the transient tail in the first-contact comparison if the normal
    error enters the radial or angular face derivative; the same e_k tail is
    summable and does not alter alpha>2/3.
 
