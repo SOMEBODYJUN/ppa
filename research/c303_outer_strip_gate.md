@@ -1,6 +1,6 @@
 # C303：cutoff-free normalized outer-strip gate
 
-状态：`derived-checked`（在 HJ 的显式 \\(\\gamma_i,F\\) 构造和可自由选择的 cutoff \\(\\Pi_{\\rm cut}\\) 约定下）。本页只证明首接触前可使用同一 cutoff-free 公式的外条带；不单独证明惯性 PPA 轨道不出界。为避免记号冲突，\\(\\mathcal P(r,\\vartheta)=r(\\cos\\vartheta,\\sin\\vartheta)\\) 表示物理投影，\\(\\Pi_{\\rm cut}\\) 表示 HJ cutoff。
+状态：`source-conditional / derived-checked under explicit cutoff choice`（在 HJ 的显式 \\(\\gamma_i,F\\) 构造和可自由选择的 cutoff \\(\\Pi_{\\rm cut}\\) 约定下）。本页只证明首接触前可使用同一 cutoff-free 公式的外条带；不单独证明惯性 PPA 轨道不出界。为避免记号冲突，\\(\\mathcal P(r,\\vartheta)=r(\\cos\\vartheta,\\sin\\vartheta)\\) 表示物理投影，\\(\\Pi_{\\rm cut}\\) 表示 HJ cutoff。
 
 ## 1. 选择整个尾管分离的 cutoff
 
