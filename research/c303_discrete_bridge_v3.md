@@ -127,10 +127,11 @@ Taylor expansion of s_i at y_*, using the inward estimate (V10), yields
 
     s_i(x_k)
       = -tau_* h grad(s_i)(y_*) dot Y(y_*)
-        -tau_* h grad(s_i)(y_*) dot w_{tau_*} + O(h^2)
-      <= -tau_* h m(theta_*) + C tau_* h ||w_{tau_*}|| + C h^2.   (D6.5)
+        -tau_* h grad(s_i)(y_*) dot w_{tau_*} + O((tau_* h)^2)
+      <= -tau_* h m(theta_*) + C tau_* h ||w_{tau_*}||
+         + C (tau_* h)^2.                                      (D6.5)
 
-The path displacement gives |theta_* - theta_k|=O(h_k). Since the logarithmic derivative of m(theta) is O(1+theta) and h_k(1+theta_k)->0 under (V15), m(theta_*) is comparable to m(theta_k). Thus h_k=o(m(theta_k)), together with (D6.4), makes the right side strictly negative, contradicting x_k in D. This contradiction is quantified for every k and either i=1,2, so no first radial contact is possible. If first contact occurs at the entrance boundary theta=theta_0, then Y_theta>0 on the tail and the same Taylor calculation in the angular coordinate gives theta(x_k)<theta_0, again contradicting x_k in D. Thus the implicit branch preserves D without assuming that an integer endpoint lies on the boundary.
+The path displacement gives |theta_* - theta_k|=O(h_k). Since the logarithmic derivative of m(theta) is O(1+theta) and h_k(1+theta_k)->0 under (V15), m(theta_*) is comparable to m(theta_k). Thus h_k=o(m(theta_k)), together with (D6.4), makes the right side strictly negative, contradicting x_k in D. This contradiction is quantified for every k and either i=1,2, so no first radial contact is possible. If first contact occurs at the entrance boundary theta=theta_0, the angular Taylor remainder is likewise O((tau_* h)^2), while the leading term is -tau_* h Y_theta/r; the same smallness comparison gives theta(x_k)<theta_0, again contradicting x_k in D. Thus the implicit branch preserves D without assuming that an integer endpoint lies on the boundary.
 
 A finite initial prefix is handled by shrinking the initial compact tube and choosing h_0 below the finitely many local constants. The remaining obligations are the global bounded-derivative cutoff and the uniform constants in (D6.3); neither can be replaced by the continuous-time first-contact sentence.
 
