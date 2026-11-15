@@ -49,7 +49,7 @@ For α<1, hₖ₊₁/hₖ = 1−α/(k+1)+O(k⁻²), while γhₖ ≫ 1/(k+1). Th
 
 qₖ₊₁ = (1−γhₖ)qₖ + C hₖ².
 
-For all initial errors in a sufficiently small ball, the finite prefix remains bounded and qₖ=‖wₖ‖≤M_w hₖ for k≥K. The same ε-ball is used at every later step; no k-dependent shrinking of U is needed. The finite-prefix claim follows from continuity of the finitely many resolvent maps and the positive compact-band face margins. This is where openness is obtained; a pointwise orbit estimate alone would not supply it.
+For all initial errors in a sufficiently small ball, the finite prefix remains bounded and qₖ=‖wₖ‖≤M_w hₖ for k≥K. The same ε-ball is used at every later step; no k-dependent shrinking of U is needed. The finite-prefix claim uses the compact slack on \(\overline{D₀°}\) and continuity of the finitely many resolvent/\(\tau\)-path maps. This is where openness is obtained; a pointwise orbit estimate alone would not supply it.
 
 ## 3. No-wrap and the physical lift
 
