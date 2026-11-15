@@ -19,17 +19,19 @@ Assume:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
    where wₖ = vₖ+∇f(xₖ), γ>0.
 4. Fix a finite prefix index K₀ after which
-   hₖ−hₖ₊₁ <= (γ/4) hₖ². Choose η,ρ,σ>0 and a compact subband
-       D₀={θ∈[θ*+η,θ*+2η],
-            b₁(θ)+ρ<=r<=b₂(θ)−ρ}
-   together with a reference finite prefix whose τ-paths have face margin
-   at least σ. The finite prefix update maps are continuous, so this is a
-   common margin condition, not a state-dependent selection.
+   hₖ−hₖ₊₁ <= (γ/4) hₖ². Choose η,ρ,σ>0 and the open subband
+       D₀°={θ∈(θ*+η,θ*+2η),
+             b₁(θ)+ρ<r<b₂(θ)−ρ}.
+   Its closure \overline{D₀°} is compact and lies strictly inside the tail.
+   Assume the reference finite prefix has τ-path face margin at least σ
+   uniformly for every (x₀,v₀) with x₀∈Π(\overline{D₀°}) and
+   ‖v₀+∇f(x₀)‖≤ε₀. The finite-prefix update maps are continuous, so this is
+   one common margin condition, not a state-dependent selection.
 
-Then there is a nonempty open set U of initial (x₀,v₀), with x₀ in the
-interior physical projection of D₀ and
-
-    ‖v₀+∇f(x₀)‖ < ε₀,       0<ε₀ <= c₀ h₀²,
+Then there is a nonempty open set
+    U={ (x₀,v₀): x₀∈Π(D₀°),
+                    ‖v₀+∇f(x₀)‖<ε₀ },
+where 0<ε₀ <= c₀ h₀²,
 
 such that all resolvent steps stay in Π(D̃), the unwrapped lift has
 θₖ→∞, rₖ→1, and the physical ω-limit is S¹. The h₀² radius handles the
@@ -55,7 +57,15 @@ Suppose y₁ were outside D̃. Since ‖yτ−xₖ‖≤Chₖ and r≥1/2, the p
 (d/dτ)sᵢ(yτ)|τ* = βₖ[∇sᵢ·Y(yτ*) + ∇sᵢ·w̃τ*]
                  ≥ βₖ[m(θ(τ*)) − L_s(C hₖ+‖wₖ‖)].
 
-At the angular lower face, dθ/dτ ≥ βₖ[c₀θ*exp(−θ*²)−C hₖ]. Thus a first contact is impossible once the displayed error is smaller than the corresponding face margin. This is a genuine integer-step argument: the inward field is evaluated at the actual first boundary point, never at an unknown endpoint outside D.
+The displacement bound also gives |θ(τ*)−θₖ|≤C hₖ. Since
+hₖ(1+θₖ)→0 and m(s)=exp(−s²+s), the tail estimate gives
+m(θ(τ*))/m(θₖ)→1 uniformly along first-contact sequences. Hence
+hₖ=o(m(θ(τ*))) and the displayed error is eventually smaller than half
+the actual face margin. At the angular lower face,
+dθ/dτ ≥ βₖ[c₀θ(τ*)exp(−θ(τ*)²)−C hₖ], and the same comparison uses
+hₖ=o(θₖexp(−θₖ²)). Thus a first contact is impossible. This is a genuine
+integer-step argument: the inward field is evaluated at the actual first
+boundary point, never at an unknown endpoint outside D.
 
 ## 2. The normal recursion gives one common open set
 
@@ -75,14 +85,21 @@ radius is exactly what prevents the first rapidly decreasing ratio h₁/h₀
 from being hidden inside a false all-k invariant argument.
 
 The finite-prefix maps are continuous by complete resolvent coverage. The
-strict D₀ margins in the theorem therefore leave one common open
-neighborhood U; no k-dependent shrinking of U or state-dependent M_w is
-used. This is where openness is obtained; a pointwise orbit estimate alone
-would not supply it.
+uniform margin hypothesis on \overline{D₀°}×{‖w₀‖≤ε₀}, together with the
+strict inequalities defining D₀°, makes U above a genuine common open
+neighborhood; no k-dependent shrinking of U or state-dependent M_w is used.
+This is where openness is obtained; a pointwise orbit estimate alone would
+not supply it.
 
 ## 3. No-wrap and the physical lift
 
 The HJ non-overlap condition gives Π-injectivity on the entire tail closure. Independently, ‖yτ−xₖ‖≤Chₖ and r≥1/2 imply |θ(τ)−θₖ|≤C hₖ. Choose h₀ so this is <π/4 for the finite prefix and use hₖ≤h₀ afterwards. Thus the local polar lift cannot jump by a 2π branch during one homotopy. Since every preceding step stays in D̃, the lifted path concatenates into one continuous unwrapped trajectory. The global Π-injectivity then excludes a later physical self-overlap with a different turn.
+
+At τ=1 the same bound gives
+    vₖ₊₁=(y₁−xₖ)/hₖ=(1+a hₖ)⁻¹(Y(y₁)+\widetilde w₁).
+The global resolvent/outer-strip bounds therefore control the last-step
+velocity and provide the local lifted-angle chart for the next homotopy; this
+continuation is not inferred from a pre-exit estimate at an unknown endpoint.
 
 ## 4. Non-circular angular upper bound
 
