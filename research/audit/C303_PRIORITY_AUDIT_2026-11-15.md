@@ -21,7 +21,7 @@ Horsin–Jendoubi, *Asymptotics for some discretizations of dynamical systems, a
 \frac{v_{n+1}-v_n}{\Delta t}
  =-\|v_{n+1}\|^\alpha v_{n+1}-\nabla F(u_{n+1}),
 \]
-并以能量/Łojasiewicz 机制证明收敛。
+并以能量/Łojasiewicz 机制证明收敛。相邻的 Cheikh, *Convergence to equilibrium for solutions of some forced discretized second-order gradient-like systems*, MCRF 14 (2024), DOI [10.3934/mcrf.2023025](https://doi.org/10.3934/mcrf.2023025)，同样研究隐式离散和离散 Lyapunov/Łojasiewicz 收敛；其结论仍是平衡点收敛，不覆盖 C303 的 HJ 圆形非收敛开盆。
 
 这与 C303 的精确对象不同：
 
