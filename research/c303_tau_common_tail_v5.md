@@ -31,7 +31,7 @@ Assume:
 Then there is a nonempty open set
     U={ (x₀,v₀): x₀∈Π(D₀°),
                     ‖v₀+∇f(x₀)‖<ε₀ },
-where 0<ε₀ <= c₀ h₀²,
+where 0<ε₀ <= c_init h₀² for a fixed c_init>0,
 
 such that all resolvent steps stay in Π(D̃), the unwrapped lift has
 θₖ→∞, rₖ→1, and the physical ω-limit is S¹. The h₀² radius handles the
@@ -62,17 +62,20 @@ hₖ(1+θₖ)→0 and m(s)=exp(−s²+s), the tail estimate gives
 m(θ(τ*))/m(θₖ)→1 uniformly along first-contact sequences. Hence
 hₖ=o(m(θ(τ*))) and the displayed error is eventually smaller than half
 the actual face margin. At the angular lower face,
-dθ/dτ ≥ βₖ[c₀θ(τ*)exp(−θ(τ*)²)−C hₖ], and the same comparison uses
-hₖ=o(θₖexp(−θₖ²)). Thus a first contact is impossible. This is a genuine
-integer-step argument: the inward field is evaluated at the actual first
-boundary point, never at an unknown endpoint outside D.
+dθ/dτ ≥ βₖ[c₀θ(τ*)exp(−θ(τ*)²)−C hₖ]. The logarithmic derivative of
+φ(s)=s exp(−s²) is O(1+s) on the tail, so the same displacement estimate
+gives φ(θ(τ*))/φ(θₖ)→1. Hence hₖ=o(θₖexp(−θₖ²)) makes the angular error
+smaller than half the actual entrance-face drift. Thus a first contact is
+impossible. This is a genuine integer-step argument: the inward field is
+evaluated at the actual first boundary point, never at an unknown endpoint
+outside D.
 
 ## 2. The normal recursion gives one common open set
 
 For α<1, choose K₀ so that
 hₖ−hₖ₊₁ <= (γ/4)hₖ² for every k>=K₀. Let
 qₖ₊₁=(1−γhₖ)qₖ+C hₖ² be the scalar majorant from the normal recursion.
-Choose ε₀<=c₀h₀² and define the finite-prefix numbers
+Choose ε₀<=c_init h₀² and define the finite-prefix numbers
 
     B₀=ε₀,
     Bₖ₊₁=(1−γhₖ)Bₖ+C hₖ²,
@@ -95,11 +98,13 @@ not supply it.
 
 The HJ non-overlap condition gives Π-injectivity on the entire tail closure. Independently, ‖yτ−xₖ‖≤Chₖ and r≥1/2 imply |θ(τ)−θₖ|≤C hₖ. Choose h₀ so this is <π/4 for the finite prefix and use hₖ≤h₀ afterwards. Thus the local polar lift cannot jump by a 2π branch during one homotopy. Since every preceding step stays in D̃, the lifted path concatenates into one continuous unwrapped trajectory. The global Π-injectivity then excludes a later physical self-overlap with a different turn.
 
-At τ=1 the same bound gives
-    vₖ₊₁=(y₁−xₖ)/hₖ=(1+a hₖ)⁻¹(Y(y₁)+\widetilde w₁).
-The global resolvent/outer-strip bounds therefore control the last-step
-velocity and provide the local lifted-angle chart for the next homotopy; this
-continuation is not inferred from a pre-exit estimate at an unknown endpoint.
+At τ=1 the endpoint equation itself gives
+    vₖ₊₁=(y₁−xₖ)/hₖ=(1+a hₖ)⁻¹(vₖ−hₖF(y₁)).
+The global F bound and the pre-step velocity bound therefore control the
+last-step velocity and provide the local lifted-angle chart for the next
+homotopy. If y₁ is known to lie in D̃, this can equivalently be written
+vₖ₊₁=Y(y₁)+wₖ₊₁; it cannot be replaced by the derivative-defined
+\widetilde w₁ before the first-contact contradiction has been established.
 
 ## 4. Non-circular angular upper bound
 
