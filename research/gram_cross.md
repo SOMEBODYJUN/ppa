@@ -26,6 +26,15 @@ The second column has an exact sign identity
 \]
 Thus (k(Z)=0) forces (b=0).  In particular, no choice of a transverse angle can cancel the cubic (b)-signal in all directions.  This is the main reason the rank-two search does not immediately produce a worse exponent.
 
+There is a stronger angle bookkeeping identity.  If (S=\|a\|), (R=\|b\|), and (c=\langle a,b\rangle/(SR)), then
+\[
+\|u(Z)\|^2=S^6+S^2R^2(2S^2+R^2)c^2,
+\qquad
+\|k(Z)\|^2=R^6+S^2R^2(S^2+2R^2)c^2.
+\tag{C2'}
+\]
+Both are sums of nonnegative terms.  Thus varying the angle cannot create a hidden cancellation smaller than the orthogonal scale (S^3) for (u) and (R^3) for (k); the parallel orientation is the only one that can increase the cross-coordinate to the (S^2R) scale needed for the (3/7) balance.
+
 For the output equation, taking the scalar product with (eta) gives
 \[
  \langle k(Y),\beta\rangle
