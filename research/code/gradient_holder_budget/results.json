@@ -1,0 +1,9 @@
+{
+  "claim_version": "C296-v1",
+  "python": "3.12.14",
+  "script_sha256": "7bf069d09e5560469b3b0234e7ab09990432cd6642d8e8faeda9292879fb7ede",
+  "inputs": "five exponents, center and separated real coordinate pairs, no randomness",
+  "arithmetic": "binary64 with 1e-12 decision slack; analytic text supplies exact bounds",
+  "pairs": 36300,
+  "largest_ratio_to_diameter_budget": 1.0
+}

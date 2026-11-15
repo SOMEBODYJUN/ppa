@@ -4395,6 +4395,24 @@
       "label": "C294 满 Minty 输入原关系的最坏缺口",
       "file": "canonical/holder_minimal_displacement.md#hmd-range",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GHB-TOPOLOGY",
+      "label": "C295 三维 proper 临界集与梯度 RL",
+      "file": "canonical/gradient_holder_budget.md#ghb-topology",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GHB-INFIMUM",
+      "label": "C296 固定嵌入的直径预算下确界",
+      "file": "canonical/gradient_holder_budget.md#ghb-infimum",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GHB-ENDPOINT",
+      "label": "C296 光滑梯度端点的正反见证",
+      "file": "canonical/gradient_holder_budget.md#ghb-endpoint",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -10992,6 +11010,29 @@
       "output": "HMD-RANGE",
       "relation": "conditional",
       "scope": "实 Hilbert 凸投影，完整全域 Cayley 数据及自然尺度 R；位移是原值域和原定义域距离。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E575",
+      "inputs": [
+        "D03",
+        "GHB-TOPOLOGY"
+      ],
+      "output": "GHB-INFIMUM",
+      "relation": "conditional",
+      "scope": "三维光滑 proper 临界集、固定步长与指数，保整个嵌入的凸邻域与投影极限。",
+      "status": "derived-checked",
+      "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E576",
+      "inputs": [
+        "GHB-ENDPOINT"
+      ],
+      "output": "GHB-INFIMUM",
+      "relation": "limits",
+      "scope": "闭合预算可能达到或不达到；不反驳统一下确界。",
       "status": "derived-checked",
       "topic": "全局 Hölder–RL 结构"
     }

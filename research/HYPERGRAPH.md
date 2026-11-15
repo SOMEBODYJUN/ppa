@@ -889,6 +889,8 @@
 | E572 | [D03 · Cayley 表示](foundations.md#d03) ∧ [QCA-VARIANCE · C290 异质跨点容差的方差充要条件](canonical/quadratic_cross_approximation.md#qca-criterion) | conditional → [QCA-SHADOW · C291 有限维正反影子的最优 Jung 因子](canonical/quadratic_cross_approximation.md#qca-shadow) | 固定有限维、全对全尺度同参数 RL，C03 的同一收缩反演和正则单纯形达到。；**derived-checked** |
 | E573 | [QCA-VARIANCE · C290 异质跨点容差的方差充要条件](canonical/quadratic_cross_approximation.md#qca-criterion) | conditional → [QCA-BUDGET · C292 有限全查询预算的精确复杂性](canonical/quadratic_cross_approximation.md#qca-complexity) | 有限有理数据、维数可变，Motzkin–Straus 与有理图嵌入；同站点预算另议。；**derived-checked** |
 | E574 | [D03 · Cayley 表示](foundations.md#d03) ∧ [HMD-SELF · C293 Banach Hölder 位移的线性阶](canonical/holder_minimal_displacement.md#hmd-characteristic) | conditional → [HMD-RANGE · C294 满 Minty 输入原关系的最坏缺口](canonical/holder_minimal_displacement.md#hmd-range) | 实 Hilbert 凸投影，完整全域 Cayley 数据及自然尺度 R；位移是原值域和原定义域距离。；**derived-checked** |
+| E575 | [D03 · Cayley 表示](foundations.md#d03) ∧ [GHB-TOPOLOGY · C295 三维 proper 临界集与梯度 RL](canonical/gradient_holder_budget.md#ghb-topology) | conditional → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 三维光滑 proper 临界集、固定步长与指数，保整个嵌入的凸邻域与投影极限。；**derived-checked** |
+| E576 | [GHB-ENDPOINT · C296 光滑梯度端点的正反见证](canonical/gradient_holder_budget.md#ghb-endpoint) | limits → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 闭合预算可能达到或不达到；不反驳统一下确界。；**derived-checked** |
 
 ## 不蕴含关系
 

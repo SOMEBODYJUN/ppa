@@ -2586,3 +2586,15 @@
 - **Status**：`derived-checked`。独立核验完整凸投影归约和归一化阶。
 - **Exact Statement**：实 Hilbert \(H\)，\(D_\gamma(H)=\sup_C\inf_p\|p-C(p)\|\)，其中 \(C:H\to H\) 为全尺度系数至多 1 的 \(\gamma\)-Hölder 映射。则 \(D_\gamma=\Lambda_\gamma\le(1-\gamma)/\sqrt2\)。同参数完整满 Minty 输入关系，在全部目标和图的最坏值域及定义域距离分别恰为 \(R D_\gamma/(2\lambda)\) 和 \(R D_\gamma/2\)，\(R=L^{1/(1-\gamma)}\)。无限维值域的归一化最坏阶为 \(\Theta(1-\gamma)\)，下界阶可与同一关系唯一零点共存。
 - **Dependencies / Evidence / Scope**：[Hilbert 与原关系](research/canonical/holder_minimal_displacement.md#hmd-range)用 C183 完整 Cayley 表示、C293、投影和 Jung 界。首项系数与原文优先性待核。值域以距离计，正距离排除近似可解；小距离本身不授予纤维非空。
+
+## C295-v1 · 光滑三维梯度 Hölder–RL 零集的 proper 临界集分类
+
+- **Status**：`derived-checked`。经独立重构，三维光滑环域与 collar 是显式外部输入。
+- **Exact Statement**：固定 \(\lambda>0\)、\(0<\gamma<1\)，非空紧 \(K\subset\mathbb R^3\) 可由某个光滑全局梯度 Hölder–RL 算子作为完整零集实现，当且仅当 \(K\) 是某个光滑 proper 实函数的完整临界集。正面可取光滑完整近端微分同胚。任意已有光滑全局梯度 Hölder–RL 的近端为唯一全局近端极小解。
+- **Dependencies / Evidence / Scope**：[完整论证](research/canonical/gradient_holder_budget.md#ghb-topology)。Grayson–Pugh Theorem 2.9、4.13、2.15 的拓扑分类是已知结果；本命题给专门的梯度 RL 对应。量化至任意严格阈值另见 C296。
+
+## C296-v1 · 给定三维嵌入的梯度 Hölder–RL 最优预算及端点见证
+
+- **Status**：`derived-checked`。独立审查重新构造凸包围、小幅势及保零领口。
+- **Exact Statement**：在 C295 的 properly critical \(K\)、同一嵌入及固定 \(\lambda,\gamma\) 下，全部光滑梯度实现的全尺度 Hölder 常数下确界为 \(\operatorname{diam}(K)^{1-\gamma}\)。每个严格较大 \(L\) 可实现，且完整 resolvent 为光滑微分同胚。非退化线段和正则四面体顶点不达到端点，三个特定共线点达到。
+- **Dependencies / Evidence / Scope**：[下确界及可达性](research/canonical/gradient_holder_budget.md#ghb-infimum)及[端点例](research/canonical/gradient_holder_budget.md#ghb-endpoint)，另有[有限复算](research/code/gradient_holder_budget/results.json)。结论无附加速度或定量误差界前提。一般端点空间、外部优先与四大期刊判断仍开放。

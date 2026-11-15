@@ -692,3 +692,8 @@
 ## F98 · Lipschitz 影子迂回的位移界损失一个对数
 
 对归一化 Hölder 映射先取斜率 \(k>1\) 的 Lipschitz 影子，再对影子用 Goebel 极小位移界，会同时支付 \(O(\sqrt{1-\gamma}\, k^{-\gamma/(1-\gamma)})\) 的逼近误差和 \(O(k-1)\) 的位移。该两项估计优化所得为 \(O((1-\gamma)\log(1/(1-\gamma)))\)。它是正确的中间上界。改用同一 Hölder 位移包络的精确同次缩放后，[C293–C294](research/canonical/holder_minimal_displacement.md)达到线性阶。因此用这条迂回路线寻找临界对数必要性的任务已关闭。影子估计仍可用于固定斜率逼近，并非近端结果的失败。
+
+<a id="f99"></a>
+## F99 · 无定量附加条件的梯度拓扑严格预算差
+
+固定三维嵌入 \(K\)，猜测链接或旋度约束迫使最佳 Hölder–RL 常数严格超过 \(\operatorname{diam}(K)^{1-\gamma}\)。对 properly critical \(K\)，[C296](research/canonical/gradient_holder_budget.md#ghb-infimum) 通过保留 \(K\) 的平滑弱势和凸投影极限实现任意严格增量，从而否定此猜测。阈值未达到与下确界严格偏大是两个不同命题。后续若要求固定真实误差界、固定 Hessian 模或指定势垒高度，应建立新合同。

@@ -8998,6 +8998,39 @@
       "y": 857,
       "region": "structure",
       "realm": "structure"
+    },
+    "GHB-ENDPOINT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 493,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "GHB-INFIMUM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
+    },
+    "GHB-TOPOLOGY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 402,
+      "region": "structure",
+      "realm": "structure"
     }
   },
   "edges": {
@@ -11284,6 +11317,14 @@
     "E574": {
       "x": 3628.19,
       "y": 861.31
+    },
+    "E575": {
+      "x": 2880.03,
+      "y": 421.24
+    },
+    "E576": {
+      "x": 2944.88,
+      "y": 445.22
     }
   },
   "bounds": {

@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C296 梯度预算端点
+
+[代码](code/gradient_holder_budget/verify.py)核双曲正切端点梯度的多指数、固定点及点对差商，[输出](code/gradient_holder_budget/results.json)记录算法精度及实际运行。最优常数及全局同胚由[解析证明](canonical/gradient_holder_budget.md#ghb-endpoint)承担。
+
 ## C293–C294 位移和缩放
 
 [复算代码](code/holder_displacement/verify.py)用 Fraction 核离散极限代数，80 位 Decimal 反算无限维下界证明的缩放参数。实际环境与结果见 [results.json](code/holder_displacement/results.json)。真缺口的全称结论见[正文](canonical/holder_minimal_displacement.md)。
