@@ -91,7 +91,7 @@ Let φ(s)=s exp(−s²), decreasing for s≥1. The τ estimate gives, while the 
 Δθₖ ≤ C hₖ φ(θₖ) + C hₖ²,
 Δθₖ ≥ c hₖ φ(θₖ) − C hₖ².
 
-The O(hₖ²) term absorbs the O(hₖ) angular variation along yτ because φ′ and sφ(s) are bounded on [1,∞). Put Eₖ = Σⱼ≥ₖ hⱼ², choose h₀ so 2 C E₀ < θ₀−1, and set zₖ = θₖ − C(E₀−Eₖ), E=C E₀. Using the lower estimate in (T12), zₖ≥θ₀−2 C E₀>1, θₖ≤zₖ+E, and Δzₖ≤C hₖφ(zₖ).
+The O(hₖ²) term absorbs the O(hₖ) angular variation along yτ because φ′ and sφ(s) are bounded on [1,∞). Put Eₖ = Σⱼ≥ₖ hⱼ², choose h₀ so 2 C E₀ < θ₀−1, and set zₖ = θₖ − C(E₀−Eₖ), E=C E₀. Using the lower side of the angular estimate above, zₖ≥θ₀−2 C E₀>1, θₖ≤zₖ+E, and Δzₖ≤C hₖφ(zₖ).
 
 For Uₖ = exp((zₖ+E)²/2), negative Δz decreases U. For positive Δz, the mean-value theorem yields
 
