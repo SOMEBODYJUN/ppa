@@ -19,12 +19,18 @@ uniformly before first exit.
 
 ## Modified one-step estimate
 
-On the closed stopping tube, the polar formula and bounded geometry give
+On the closed stopping tube, the polar formula and bounded geometry give the
+two-sided estimate
 
     theta_{k+1}-theta_k
        <= A h_k phi(theta_k)
           + B h_k q_k
-          + C_0 h_k^2,                              (TE2)
+          + C_0 h_k^2,
+
+    theta_{k+1}-theta_k
+       >= c h_k phi(theta_k)
+          - B_- h_k q_k
+          - C_- h_k^2.                              (TE2)
 
 where phi(s)=s exp(-s^2). Substituting (TE1),
 
@@ -45,8 +51,20 @@ Define
     E_* = E_{K_*},
     z_k = theta_k - C_1(E_* - E_k),                     (TE4)
 
-where C_1 is increased once so that it dominates both coefficients in (TE3).
-Then E_k-E_{k+1}=e_k and
+where the same positive constant C_1 is increased once so that it dominates
+the coefficients in both the upper and lower error bounds. Thus, with
+
+    e_k=h_k^2+h_k h_0^2 exp(-gamma(t_k-T_*)),
+
+the two-sided remainder is bounded by C_1 e_k.
+Then E_k-E_{k+1}=e_k and, using the lower side of (TE2),
+
+    theta_k >= theta_{K_*}-C_1(E_*-E_k)
+              >= theta_{K_*}-C_1E_*.
+
+Consequently, if theta_{K_*}>=3/2 and C_1E_*<1/4, then theta_k>1. More
+precisely, the z-variable below satisfies z_k>=theta_{K_*}-2C_1E_*>1.
+The upper side gives
 
     z_{k+1}-z_k
        <= A h_k phi(theta_k)
@@ -70,7 +88,7 @@ sum with the integral of exp(-gamma u) in physical time. Consequently,
     E_* <= C h_0^2,                                     (TE7)
 
 with C independent of the unbounded lifted angle and of k. Choose h_0 so
-C_1 E_* <= 1/2 and start the tail with theta_{K_*}>=3/2; then z_k>=1.
+C_1 E_* < 1/4 and start the tail with theta_{K_*}>=3/2; then z_k>1.
 
 ## Exponential super-solution and exact schedule gate
 
