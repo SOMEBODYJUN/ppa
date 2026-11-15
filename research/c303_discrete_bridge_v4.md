@@ -177,15 +177,16 @@ The bootstrap is performed only until the first contact, so it does not
 presume the tube invariance that it is later used to prove. Once (A7)--(A10)
 are available, the tau-path first-contact estimate (D6.5) has
 
-    s_i(x_k)
-       <= -tau_* h_k m(theta_*)
-          + C tau_* h_k |w_{tau_*}|
-          + C (tau_* h_k)^2.
+    0 = s_i(y_{tau_*})
+      >= s_i(x_k) + tau_* h_k m(theta_*)
+         - C tau_* h_k |w_{tau_*}|
+         - C (tau_* h_k)^2
+      > 0,
 
 The path displacement gives theta_*=theta_k+O(tau_* h_k). Since
 the logarithmic derivative of m is O(1+theta), (A7) implies
 m(theta_*) asymp m(theta_k) after increasing the finite-prefix threshold.
-The uniform tau-path bound |w_tau|=O(h_k) then makes the right side negative
+The uniform tau-path bound |w_tau|=O(h_k) then makes the right side positive
 for every tau_*>0, because h_k=o(m(theta_k)). The entrance-angle contact is
 handled by Y_theta(theta_0)>0 with the same tau_* factor.
 
