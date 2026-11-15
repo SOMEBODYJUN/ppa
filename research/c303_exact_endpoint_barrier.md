@@ -120,6 +120,35 @@ remain necessary. No new source or outer-strip assumption is hidden in (EP4):
 all constants are taken on the same compact pre-contact patch as the resolvent
 coverage.
 
+## Deriving the angular increment from the endpoint
+
+The same calculation derives the two-sided angular recurrence instead of taking
+`TE2` as an independent path estimate. Let `Theta` be the local lifted polar
+angle on a patch with `r>=1/2`, and assume the HJ field bound
+
+    c phi(theta) <= ∇Theta(y)·Y(y) <= C phi(theta),
+    phi(s)=s exp(-s²),
+
+on that patch. Taylor expansion of `Theta` at `y`, using (EP1), gives
+
+    Theta(y)-Theta(x)
+      = h ∇Theta(y)·Y(y)
+        + β ∇Theta(y)·A_y[w+R(x,y)] + O(h²)
+      = h ∇Theta(y)·Y(y) + O(h q+h²).                    (EP7)
+
+The endpoint displacement bound gives `|Theta(y)-Theta(x)|<=C h`; since
+`phi'` is bounded on `[1,infinity)`, replacing `phi(Theta(y))` by
+`phi(Theta(x))` costs `O(h)` inside the leading `h` factor. Thus
+
+    c h phi(Theta(x)) - C h q - C h²
+      <= Theta(y)-Theta(x)
+      <= C h phi(Theta(x)) + C h q + C h².                (EP8)
+
+This is the required `TE2` form, derived from the endpoint equation and the
+local HJ field bounds. It does not use `dot y_tau`, `w_tilde_tau`, or a
+separate secant-velocity assumption. The `q` term remains exactly the one in
+(EP4), so the normal recursion and schedule gate are not bypassed.
+
 ## The obstruction to removing the normal defect
 
 The `q_k` term in (EP4) is not a proof artifact. Consider the flat local face
