@@ -2640,15 +2640,15 @@
 
 - **Status**：candidate。HJ 螺旋管的显式渐近估计和 w=v+∇f 指数衰减可闭合首次离开 bootstrap；尚未完成独立规范接收和外部优先性审计。
 - **Exact Statement**：存在 C∞ 势 f:R²→R、阻尼 a>0、势 χ_a=af−||∇f||²/2 及相空间非空开集 U，使每个解 x''+ax'+∇χ_a(x)=0 从 U 出发全局存在、有界且 ω(x)=S¹，因而不收敛。
-- **Objects / Dependencies**：HJ 2020 的 C∞ 圆形开盆构造；大角度管内 Y=−∇f 的 Y_θ ~ θ exp(−θ²)、边界内向余量 m(θ) ~ exp(−θ²+θ)；a>sup λmax(∇²f) 时 w'=(∇²f−aI)w。证明稿见 research/topics/path_dynamics/second_order_open_basin_proof_v1.md，交叉审查见 research/audit/SECOND_ORDER_OPEN_BASIN_REVIEW_2026-11-14.md。
-- **Key Objection / Next Evidence**：三席交叉审查已重构首次离开 bootstrap，未发现新的动力学符号或量词致命缺口；显式局部常数已整理为 [HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md)，最终复核见 [HJ final review](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md)。仍须按 HJ 原页逐字核 cutoff 的确切约定、F 与边界参数身份，并建立与 PPA/GPPA 的实质离散桥。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证。
+- **Objects / Dependencies**：HJ 2020 的 C∞ 圆形开盆构造；大角度管内 Y=−∇f 的 Y_θ ~ θ exp(−θ²)、边界内向余量 m(θ) ~ exp(−θ²+θ)；a>sup λmax(∇²f) 时 w'=(∇²f−aI)w。连续证明稿见 research/topics/path_dynamics/second_order_open_basin_proof_v1.md，显式管估计见 research/topics/path_dynamics/hj_tube_estimates_v1.md；变量步惯性 PPA 桥见 research/c303_discrete_bridge.md 及其 v2/v3 攻击稿，第二轮独立审查见 research/audit/C303_BRIDGE_REVIEW_ROUND2_2026-11-15.md。
+- **Key Objection / Next Evidence**：三席交叉审查已重构连续首次离开 bootstrap，未发现新的动力学符号或量词致命缺口；显式局部常数已整理为 [HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md)，最终复核见 [HJ final review](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md)。变量步惯性 PPA 桥已有完整图 coverage 候选，但整数步跨越管壁的 phase-space barrier、统一余项和离散角度发散仍未闭；不能用普通 PPA 的一阶 \(\nabla f\) 桥替代 \(\nabla\chi_a\) 惯性对象。仍须按 HJ 原页逐字核 cutoff 的确切约定、F 与边界参数身份，并完成上述离散义务。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证。
 
 <a id="c304"></a>
 ## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
 
 - **Status**：candidate。共线 t^7 见证排除全部指数 q>3/7；全局 3/7 上界尚未证明。
 - **Exact Statement**：C270 的完整纯 Gram 近端 Tλ=(v+λP)⁻¹v 在每个有界集上满足 ||Tλ(Z)−Tλ(Z')||^(7/3) ≤ C||Z−Z'||，且 3/7 为最佳共同指数。
-- **Evidence / Objection**：research/discovery_a_gram_37.md 和 research/gram_cross.md 给出共线 sharpness、横向尺度攻击和精确 Gram 范数恒等式；尚缺统一 rank-stratum / angle decomposition，不能以半代数权重代替上界证明。外部 Gram Bregman 文献的精确正则性仍待逐段核对。
+- **Evidence / Objection**：research/discovery_a_gram_37.md、research/gram_cross.md 与 [第二轮独立攻击](research/candidates/gram_37_round2.md) 给出共线 sharpness、横向尺度攻击和精确 Gram 范数恒等式；尚缺统一 rank-stratum / angle decomposition，不能以半代数权重代替上界证明。外部 Gram Bregman 文献的精确正则性仍待逐段核对。
 
 <a id="c305"></a>
 ## C305-v1 · 单调 radial-twist 的反绕行门

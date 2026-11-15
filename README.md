@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-[当前候选前沿](CLAIMS.md#c303)记录本轮三条相互独立的研究入口：二阶阻尼梯度系统的相空间开盆域圆形非收敛、纯 Gram GPPA 近端的候选精确 \(3/7\) 两点指数，以及固定 radial-twist 单调反绕行门。它们均保持 candidate 状态；二阶候选的证明稿和独立审查分别见 [proof v1](research/topics/path_dynamics/second_order_open_basin_proof_v1.md) 与 [review](research/audit/SECOND_ORDER_OPEN_BASIN_REVIEW_2026-11-14.md)。新增的 FNE 管状固定流形方向已由三席独立审查判为淘汰，详见 [C306](CLAIMS.md#c306) 与 [F102](FAILED_ROUTES.md#f102)。读者不得把这些候选当作已闭定理。
+[当前候选前沿](CLAIMS.md#c303)记录本轮三条相互独立的研究入口：二阶阻尼梯度系统的相空间开盆域圆形非收敛（及其变量步惯性 PPA 桥）、纯 Gram GPPA 近端的候选精确 \(3/7\) 两点指数，以及固定 radial-twist 单调反绕行门。它们均保持 candidate 状态；二阶连续证明稿、管估计和离散桥审查分别见 [proof v1](research/topics/path_dynamics/second_order_open_basin_proof_v1.md)、[HJ lemma](research/topics/path_dynamics/hj_tube_estimates_v1.md) 与 [bridge review](research/audit/C303_BRIDGE_REVIEW_ROUND2_2026-11-15.md)。新增的 FNE 管状固定流形方向已由三席独立审查判为淘汰，详见 [C306](CLAIMS.md#c306) 与 [F102](FAILED_ROUTES.md#f102)。读者不得把这些候选当作已闭定理。
 
 [准解析性与精确近端的正则性分界](research/canonical/quasianalytic_proximal_dichotomy.md)给 C302：强对数凸总权重下的一侧有限长度，另一侧用同类 Beurling 势实现所有允许聚点集和严格 Hölder 预算。解析逼近、全阶衰减及文献归属均保留。
 
@@ -234,6 +234,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/finite_sample_collar.md](research/canonical/finite_sample_collar.md) | C70：9/25 §8 的实际样本距离上下包络和需要**全部整窗输出**条件的留域余量；证明不调用拓扑定理。读 C05 前先区分样本认证、分析余量、原稿 C05-v1 的候选状态及 C05-v2 已重算的条件拓扑链；原生模型整窗认证仍开放。 |
 | [research/topics/path_dynamics/discrete_coverage.md](research/topics/path_dynamics/discrete_coverage.md) | C47/GX-074：紧完整图的全对 RL、真 EB 与自然 Minty 域缺口；从图模推输入存在性时读。 |
 | [research/topics/path_dynamics/second_order_open_basin_proof_v1.md](research/topics/path_dynamics/second_order_open_basin_proof_v1.md)、[HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md) | C303：HJ 二阶阻尼系统的开盆域圆形非收敛候选及其首次离开 bootstrap；估计引理核 (q_\vartheta,q_r)、边界内漂移、Hessian 和 cutoff 尾部分离。保持 `candidate`，仍缺原式逐字接收、外部优先性和 PPA/GPPA 离散桥。 |
+| [research/c303_discrete_bridge.md](research/c303_discrete_bridge.md)、[v2](research/c303_discrete_bridge_v2.md)、[v3](research/c303_discrete_bridge_v3.md) | C303 离散桥候选：变量步隐式惯性 PPA、全局 resolvent coverage、\(w_k=O(h_k)\) 递推和连续步长参数的跨壁 barrier；v3 将步长门改为先证多项式指数再选 \(\alpha\)。仍未闭统一余项、cutoff 全局导数和完整离散角度发散。 |
 | [research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md) | 三席最终复核：动力学符号/首次接触无新致命异议，Truth/Value 高但 Ambition 尚为 ODE；决定下一步必须攻离散桥。 |
 | [research/fne_falsification.md](research/fne_falsification.md)、[FNE 短弦审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md) | C306/F102：FNE 固定点 Fejér 恒等式、(q)-距离收缩的有限长度 scope lemma，以及曲固定流形短弦/零第二基本形式障碍；主要贡献候选已淘汰。 |
 | [research/HYPERGRAPH.md](research/HYPERGRAPH.md)、[research/graph.json](research/graph.json) | 精确文字关系与机读节点边。数学 Claim 或条件边变化时按规范正文改图并运行 [research/build_graph.py](research/build_graph.py)；表现层只消费图，不能从景观倒推数学状态。 |
