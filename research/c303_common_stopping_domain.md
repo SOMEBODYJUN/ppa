@@ -107,5 +107,11 @@ outer-strip 出界；若 outer strip 先假设出界，则从 \(|q|<\beta\) 出�
 2. TE2 的上下两侧极角估计、CS5 的线性同伦导数估计和 global normal recursion 在同一共同停止域上均匀成立；
 3. finite-prefix 安全带覆盖与 \(K_*\)、\(T_{\rm tr}\) 使用同一首个 drop threshold；
 4. \(\mathcal P\) 在闭 outer strip 上的 lift/injectivity 与有限局部角坐标已核验。
+5. 本页 (CS3)--(CS4) 仍沿用 \(\theta^2\le C+2\log(1+t)\) 的 \(p=2\)、
+   \(\alpha>2/3\) 分支；若要使用 `c303_sharp_schedule_bootstrap.md` 的
+   \(W=e^{z^2}\) 候选并声称 \(1/2<\alpha<1\)，必须把共同停止域中的
+   \(e^{\theta}\)、\(m^{-1}\)、\(\phi^{-1}\) 统一改用其
+   \(C_\varepsilon(1+t)^{(1+\varepsilon)/2}\) 界，重新证明 CS4、首接触和
+   \(q_k/\phi(\theta_k)\) 的一致性；两条 schedule 不能在同一行程中混用。
 
 因此本页把 outer-strip first-contact 的合取量词明确化，但仍是 conditional merge；它不能单独把 C303 升级为无条件惯性 PPA 定理或主要贡献。
