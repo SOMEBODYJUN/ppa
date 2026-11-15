@@ -42,9 +42,11 @@ K\Subset\{(x,y): |(x,y)|>R\}.
 由标准 bump 构造，存在
 \[
 \Pi_{\rm cut}\in C_c^\infty(\mathbb R^2,[0,1]),
-\qquad \operatorname{supp}\Pi_{\rm cut}=K'
+\qquad \operatorname{supp}\Pi_{\rm cut}=K',
+\qquad \Pi_{\rm cut}\equiv1\text{ on neighborhoods of }\gamma_1(0),\gamma_2(0).
 \]
-其中 \(K'\) 是包含该路径的紧连通闭集，且两个初始点是 support 的内点。
+其中 \(K'\) 是包含该路径的紧连通闭集，且两个初始点是 support 的内点。这个平台条件
+同时处理正实轴 branch cut 的两侧 jets；它是对原文 support 文字的安全强化，不应反向当作已核的 Paper Fact。
 对 \(\theta\in(\theta_{\rm supp},2\pi)\)，(HC0) 给出
 \(\gamma_i(\theta)<R\)；对 \(\theta\ge2\pi\)，
 \(\gamma_2(\theta)\le\gamma_2(2\pi)<R\)。因此全部满足

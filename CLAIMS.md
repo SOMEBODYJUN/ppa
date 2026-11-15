@@ -2648,6 +2648,7 @@
 - **Exact endpoint replacement**：`research/c303_exact_endpoint_barrier.md` 的 EP1–EP4 与 EP7–EP8 从终点 resolvent 方程直接推出法向首接触和双侧极角增量，可替代导数定义的 CS5/TE2；平面 face (EP6) 证明 \(q_k\) 项是结构性必要的，裁决仍为 partial replacement / continue validation。 独立复核见 `research/audit/C303_EXACT_ENDPOINT_BARRIER_REVIEW_2026-11-15.md`；该复核要求缩放同伦上的统一可逆性与 radial margin 记号。
 - **Common-domain independent audit**：`research/audit/C303_COMMON_STOPPING_DOMAIN_REVIEW_2026-11-15.md` 及其修订记录逐项复核 CS4 停时量词、\(K/j\) 索引和统一 \(h_j e^{\theta_j}\) 界；裁决为 continue validation，CS1 HJ source/lift gates 仍未闭合。
 - **HJ source audit**：`research/audit/C303_HJ_SOURCE_AUDIT_2026-11-15.md` 核对了 \(\theta_{\rm supp}\in(0,2\pi)\) 的窄 dumbbell 修补，并记录原文 (X:=\nabla f) 与显式 (Y=-\nabla f) 的身份冲突；source gate 仍为 conditional。
+- **Priority audit**：`research/audit/C303_PRIORITY_AUDIT_2026-11-15.md` 排除了把 generic inertial PPA 或隐式二阶格式作为新颖性中心；EP/W 只保留 provisional priority，主要增量必须是同一 HJ \(F=\nabla\chi_a\) 的完整变量步开盆非收敛定理。
 - **Near-critical schedule candidate**：`research/c303_sharp_schedule_bootstrap.md` 在补上双侧 lower-angle 义务后，给出 \(W_k=\exp(z_k^2)\) 的条件性比较，并把首接触的充分步长门候选推进到任意固定 \(1/2<\alpha<1\)；这是 schedule improvement candidate，不是已闭 C303 定理或四大级贡献。
 - **Critical endpoint obstruction**：同一页进一步证明，去掉常数角度位移也不能仅凭 \(W_k=O((1+t_k)\log(e+t_k))\) 关闭 \(\alpha=1/2\)：此时 \(h_k/\phi(\theta_k)\asymp\sqrt{\log k}\)，需要更小的接触余项或额外抵消；因此当前候选只保留 \(1/2<\alpha<1\)。
 

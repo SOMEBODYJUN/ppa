@@ -74,7 +74,7 @@ X\cdot n_1<0,\qquad X\cdot n_2>0
 - 取 \(\theta_{\rm supp}=2\pi-\delta\)；
 - 利用 \(\mu<e^{2\pi}\) 选
   \(\sup_{[2\pi-\delta,2\pi]}\gamma_2<R<2\)；
-- 在 \(r>R\) 的窄正实轴角锥内取连接两初始点的紧连通 \(C^\infty\) dumbbell；
+- 在 \(r>R\) 的窄正实轴角锥内取连接两初始点的紧连通 \(C^\infty\) dumbbell，并取 \(\Pi_{\rm cut}\in C_c^\infty(\mathbb R^2,[0,1])\) 在两初始点邻域恒为 1；
 - 对 \(\theta_{\rm supp}<\theta<2\pi\)，曲线半径小于 \(R\)；对 \(\theta\ge2\pi\)，
   \(\gamma_2(\theta)\le\gamma_2(2\pi)<R\)；
 - 再取 \(\theta_{\rm tail}\) 足够大，使整个闭 normalized outer strip 落在
@@ -84,7 +84,7 @@ X\cdot n_1<0,\qquad X\cdot n_2>0
 
 ## 4. 尚未闭合的 source obligations
 
-1. 逐字确认原文对 \(\Pi\) 是否还隐含 \(C^\infty\)、值域或“在初始区域取 1”等条件；本页显式构造满足这些常见要求，但不能用“未搜索到”替代原文核对。
+1. 逐字确认原文对 \(\Pi\) 是否还隐含 \(C^\infty\)、值域或“在初始区域取 1”等条件；本页显式构造已安全满足这些常见要求并处理 branch-cut jets，但不能用“未搜索到”替代原文核对。
 2. 在 C303 的定义中固定记号：\(F=\nabla\chi_a\)，而 HJ 的尾速度场应取显式公式对应的 \(Y=-\nabla f\)。所有 normal recursion、boundary sign 和 resolvent identity 必须使用同一身份。
 3. 逐项重算 cutoff-free 尾管的 \(F=\nabla\chi_a\) 与 \(Y=-\nabla f\) 常数；不能因为 source 的“\(X:=\nabla f\)”文字 typo 就直接把符号导入惯性 PPA 桥。
 4. 证明物理投影在闭 lifted tail 上的 lift/injectivity，并将
