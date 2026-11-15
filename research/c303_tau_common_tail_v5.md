@@ -18,7 +18,7 @@ Assume:
 3. ∇f is Lipschitz on a fixed physical outer strip containing every pre-contact τ-path, and F,Y are bounded there. The normal recurrence holds while the path is in the strip:
    ‖wₖ₊₁‖ ≤ (1−γhₖ)‖wₖ‖ + C hₖ²,
    where wₖ = vₖ+∇f(xₖ), γ>0.
-4. A finite prefix k<K has a compact initial subband D₀⊂D̃ and h₀ small enough that the τ-path barrier has positive margins on this compact band.
+4. There is a fixed integer K₀, chosen from the normal-error recursion, such that the finite prefix k<K₀ has a compact initial subband D₀⊂D̃ and h₀ small enough that the τ-path barrier has positive margins on this compact band.
 
 Then there is a nonempty open set U of initial (x₀,v₀), with x₀ in Π(D₀) and ‖v₀+∇f(x₀)‖<ε, such that all resolvent steps stay in Π(D̃), the unwrapped lift has θₖ→∞, rₖ→1, and the physical ω-limit is S¹.
 
@@ -62,7 +62,7 @@ Let φ(s)=s exp(−s²), decreasing for s≥1. The τ estimate gives, while the 
 Δθₖ ≤ C hₖ φ(θₖ) + C hₖ²,
 Δθₖ ≥ c hₖ φ(θₖ) − C hₖ².
 
-The O(hₖ²) term absorbs the O(hₖ) angular variation along yτ because φ′ and sφ(s) are bounded on [1,∞). Put Eₖ = Σⱼ≥ₖ hⱼ², choose h₀ so C E₀ < θ₀−1, and set zₖ = θₖ − C(E₀−Eₖ), E=C E₀. Then zₖ≥1, θₖ≤zₖ+E, and Δzₖ≤C hₖφ(zₖ).
+The O(hₖ²) term absorbs the O(hₖ) angular variation along yτ because φ′ and sφ(s) are bounded on [1,∞). Put Eₖ = Σⱼ≥ₖ hⱼ², choose h₀ so 2 C E₀ < θ₀−1, and set zₖ = θₖ − C(E₀−Eₖ), E=C E₀. Using the lower estimate in (T12), zₖ≥θ₀−2 C E₀>1, θₖ≤zₖ+E, and Δzₖ≤C hₖφ(zₖ).
 
 For Uₖ = exp((zₖ+E)²/2), negative Δz decreases U. For positive Δz, the mean-value theorem yields
 
@@ -85,7 +85,7 @@ The lower increment is eventually positive. If θₖ had a finite upper limit, �
 
 ## Remaining fatal obligations / verdict
 
-The τ-path, common-U, no-wrap, and α>2/3 angle bootstrap are internally compatible. I found no counterexample once the stated gates hold. The candidate remains **continue validation**, because the following are still independent proof obligations:
+The τ-path, common-U, no-wrap, and α>2/3 angle bootstrap are internally compatible. I found no counterexample once the stated gates hold. The candidate remains **continue validation**, because the following are still independent proof obligations; the normal-error algebra is separately recorded in `research/c303_normal_error_recursion.md`:
 
 * complete global Lipschitz/coverage for F=∇χₐ, including the actual HJ cutoff extension;
 * a uniform outer strip (or global ∇f bound) through which every pre-contact τ-path can be controlled;
