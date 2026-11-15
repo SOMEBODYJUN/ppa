@@ -4,14 +4,16 @@
 
 The normal recursion after a finite prefix can give
 
-    q_k = ||w_k|| <= M h_k + Q_0 exp(-gamma(t_k-T_*)),
+    q_k = ||w_k|| <= M h_k + Q_0 exp(-gamma(t_k-T_tr)),
     Q_0 = C_q h_0^2,                                  (TE1)
 
-where t_k=sum_{j<k} h_j and the estimate is used for k>=K_* with
-K_* chosen as the first drop threshold (or an explicitly bounded enlargement)
-and t_{K_*}>=T_*. The second term is a transient inherited from the finite
+where t_k=sum_{j<k} h_j, K_* is the first drop threshold used by the
+finite-prefix lemma, and T_tr:=t_{K_*}. The second term is a transient inherited from the finite
 prefix. It cannot simply be relabeled O(h_k), because h_k decays only
 polynomially while the transient decays in physical time.
+Throughout this comparison take h_0<=1/(2 gamma), so the factors
+1-gamma h_k are nonnegative and their products admit the stated exponential
+bound.
 
 This note gives the correct angle super-solution. The status remains
 continue validation: (TE1) and the angular one-step estimate must hold
@@ -37,7 +39,7 @@ where phi(s)=s exp(-s^2). Substituting (TE1),
     theta_{k+1}-theta_k
        <= A h_k phi(theta_k)
           + C_1 h_k^2
-          + C_2 h_k h_0^2 exp(-gamma(t_k-T_*)).       (TE3)
+          + C_2 h_k h_0^2 exp(-gamma(t_k-T_tr)).       (TE3)
 
 for k>=K_*. The last term is summable in k because the physical-time
 increments are h_k.
@@ -46,7 +48,7 @@ increments are h_k.
 
 Define
 
-    e_k = h_k^2 + h_k h_0^2 exp(-gamma(t_k-T_*)),
+    e_k = h_k^2 + h_k h_0^2 exp(-gamma(t_k-T_tr)),
     E_k = sum_{j>=k} e_j,
     E_* = E_{K_*},
     z_k = theta_k - C_1(E_* - E_k),                     (TE4)
@@ -54,7 +56,7 @@ Define
 where the same positive constant C_1 is increased once so that it dominates
 the coefficients in both the upper and lower error bounds. Thus, with
 
-    e_k=h_k^2+h_k h_0^2 exp(-gamma(t_k-T_*)),
+    e_k=h_k^2+h_k h_0^2 exp(-gamma(t_k-T_tr)),
 
 the two-sided remainder is bounded by C_1 e_k.
 Then E_k-E_{k+1}=e_k and, using the lower side of (TE2),
@@ -79,8 +81,8 @@ The ordinary part satisfies
 
 For the transient part, since t_{j+1}-t_j=h_j and h_j is decreasing,
 
-    sum_{j>=k} h_j exp(-gamma(t_j-T_*))
-       <= C_gamma exp(-gamma(t_k-T_*)),                 (TE6)
+    sum_{j>=k} h_j exp(-gamma(t_j-T_tr))
+       <= C_gamma exp(-gamma(t_k-T_tr)),                 (TE6)
 
 for k>=K_*. One proof splits off the first term and compares the remaining
 sum with the integral of exp(-gamma u) in physical time. Consequently,
@@ -128,7 +130,7 @@ because the large-u exponent is 2-3alpha<0. Hence, after reducing h_0,
 the ratios h_k/m(theta_k) and h_k/phi(theta_k) are small for every
 k>=K_*, not merely asymptotically. The transient contribution satisfies
 
-    sup_{k>=K_*} h_0^2 exp(-gamma(t_k-T_*))(1+t_k)^2 <= C h_0^2. (TE9b)
+    sup_{k>=K_*} h_0^2 exp(-gamma(t_k-T_tr))(1+t_k)^2 <= C h_0^2. (TE9b)
 
 Equivalently, with t_k asymp k^(1-alpha), the asymptotic form is
 
@@ -151,8 +153,10 @@ The minimum additional obligations are:
    with Q_0=O(h_0^2) after the finite-prefix construction.
 2. Derive (TE2) with its B h_k q_k term explicitly; do not suppress q_k
    before inserting (TE1).
-3. Start the bootstrap at K_* with t_{K_*}>=T_* and a strict angular margin.
-   The finite prefix remains covered by the separate margin lemma.
+3. Start the bootstrap at the same first-drop index K_* used by the
+   finite-prefix lemma, with T_tr=t_{K_*} and a strict angular margin. The
+   finite prefix remains covered by that separate lemma; no later geometric
+   threshold is silently added to K_*.
 4. Keep the transient tail in the first-contact comparison if the normal
    error enters the radial or angular face derivative; the same e_k tail is
    summable and does not alter alpha>2/3.
