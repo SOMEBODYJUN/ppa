@@ -12,7 +12,8 @@ circularity.
 
 ## Statement
 
-Fix alpha in (2/3,1) and h_k=h_0(k+1)^(-alpha). Let
+Fix alpha in (0,1) and h_k=h_0(k+1)^(-alpha). The W schedule uses the subrange
+alpha in (1/2,1), but the finite-prefix calculation itself needs only alpha<1. Let
 
     G(x,v) = (v, -a v - F(x)),
     F = grad chi_a.
@@ -68,8 +69,10 @@ alpha and gamma:
 
     t_{K_0} <= 8 alpha/(gamma(1-alpha)) + 1 =: T_*,
 
-after increasing T_* and taking h_0 small. Hence T_* can be fixed before
-choosing h_0.
+after increasing T_* and taking h_0 small. Hence, for every fixed alpha<1,
+T_* can be fixed before choosing h_0; it is independent of h_0 and of the
+initial lifted angle inside the selected compact subband. No uniform bound as
+alpha approaches 1 or over an unbounded family of initial lifts is claimed.
 
 The compact curve {x_bar(t):0<=t<=T_*} lies strictly inside D. Let
 
@@ -163,5 +166,11 @@ It does not prove the global HJ source identity or external priority. If the
 continuous HJ tail invariance has not yet been accepted from the source, that
 is the exact remaining condition; no discrete finite-prefix circularity
 remains.
+
+For the W-to-common-domain interface, identify the shared threshold
+K_* with this K_0 and set T_tr=t_{K_*}. The preceding estimate supplies the
+needed uniform finite-prefix time gate T_tr<=T_* for each fixed alpha in
+(1/2,1), while the admissible initial velocity radius may still depend on
+h_0 through epsilon_0<=c_init h_0^2.
 
 The verdict is **continue validation**.

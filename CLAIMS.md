@@ -2651,6 +2651,7 @@
 - **Priority audit**：`research/audit/C303_PRIORITY_AUDIT_2026-11-15.md` 排除了把 generic inertial PPA 或隐式二阶格式作为新颖性中心；EP/W 只保留 provisional priority，主要增量必须是同一 HJ \(F=\nabla\chi_a\) 的完整变量步开盆非收敛定理。
 - **Near-critical schedule candidate**：`research/c303_sharp_schedule_bootstrap.md` 在补上双侧 lower-angle 义务后，给出 \(W_k=\exp(z_k^2)\) 的条件性比较，并把首接触的充分步长门候选推进到任意固定 \(1/2<\alpha<1\)；这是 schedule improvement candidate，不是已闭 C303 定理或四大级贡献。
 - **W→common-domain interface audit**：`research/audit/C303_W_SCHEDULE_COMMON_DOMAIN_REVIEW_2026-11-15.md` 将 WS1–WS15 接到 CS3–CS7，固定 \(\alpha>1/2\) 后选择 \(\varepsilon\)，并显式保留 \(T_{\rm tr}=t_{K_*}\le T_*\) 的统一有限前缀时间义务；独立比率复核见 `research/audit/C303_SHARP_SCHEDULE_COMMON_DOMAIN_REVIEW_2026-11-15.md`。两者均为 conditional integration / continue validation，\(\alpha=1/2\) 仍受对数障碍阻断。
+- **Finite-prefix W extension audit**：`research/audit/C303_FINITE_PREFIX_W_EXTENSION_REVIEW_2026-11-15.md` 独立核查现有有限前缀构造只需 \(\alpha<1\) 即可给出固定 \(\alpha\) 的 \(T_{\rm tr}\le T_*\)；共同空间邻域保留 \(\varepsilon_0\le c h_0^2\) 的步长依赖，不能升级为统一正速度半径。状态为 source-conditional / continue validation。
 - **Critical endpoint obstruction**：同一页进一步证明，去掉常数角度位移也不能仅凭 \(W_k=O((1+t_k)\log(e+t_k))\) 关闭 \(\alpha=1/2\)：此时 \(h_k/\phi(\theta_k)\asymp\sqrt{\log k}\)，需要更小的接触余项或额外抵消；因此当前候选只保留 \(1/2<\alpha<1\)。
 
 <a id="c304"></a>
