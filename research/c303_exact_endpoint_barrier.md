@@ -198,6 +198,9 @@ Therefore the C303 resolvent equation is not generally the optimality
 condition of a convex proximal subproblem, and firm-nonexpansive or variational
 inequalities cannot replace the endpoint/normal estimates without an additional
 hypothesis controlling `f' f'''` (or directly assuming convexity of `chi_a`).
+A smooth cutoff can localize this example: keep the displayed jet near
+`x=pi`, enlarge `a` beyond the cutoff's global Hessian bound, and the negative
+value of `chi_a''(pi)` is unchanged.
 
 ## Verdict and reusable content
 
