@@ -23,13 +23,18 @@ pre-contact interval and that the normal-error estimate already holds there:
 
 The latter follows from the implicit resolvent expansion on the closed tube,
 independently of the boundary-margin comparison. Assume also the one-step
-angular upper estimate
+angular estimates on every full step whose two endpoints are in the closed
+tube,
 
-    Delta theta_k
+    -C_- h_k^2 <= Delta theta_k
        := theta_{k+1}-theta_k
-       <= C_1 h_k phi(theta_k) + C_2 h_k^2,                    (A1)
+       <= C_1 h_k phi(theta_k) + C_2 h_k^2.                    (A1)
 
-where
+The lower estimate records that the only possible negative angular motion in
+the tail is the O(h_k^2) normal-error term. The upper estimate is the one used
+below, and both estimates are asserted only before a first exit.
+
+with
 
     phi(s)=s exp(-s^2).
 
@@ -145,11 +150,32 @@ and in the h_k^2 angle error is automatic. Thus the v3 barrier can use the
 original schedule interval alpha in (2/3,1), provided the conditional
 pre-contact estimates have been established.
 
+## First-exit quantifiers
+
+Let
+
+    K = inf { k >= 1 : x_k is not in D },
+
+with K=infinity if the set is empty. The estimates (A1)--(A10) are applied
+only for k<K-1, when both x_k and x_{k+1} are in D. If K is finite, the
+input x_{K-1} is in D and the tau-path from v3 is used for the last step.
+Continuity of the complete resolvent path gives a first contact at some
+tau_* in (0,1] with either a radial boundary or theta=theta_0. The radial
+inequality (D6.5) is quantified for each i in {1,2}; the angular inequality
+uses the positive entrance drift. In either case it contradicts x_{K-1}
+being in D. Hence K cannot be finite.
+
+If K=1, no angular recursion is needed: choose the initial tail band and
+h_0 so that the same first-contact estimate has strict slack. If K>1, the
+angle bound at x_{K-1} follows from (A7) applied through k=K-2. This
+separates the bootstrap from the final barrier and avoids using an estimate
+at an endpoint that has already left the tube.
+
 ## Interaction with the tau-path barrier
 
 The bootstrap is performed only until the first contact, so it does not
 presume the tube invariance that it is later used to prove. Once (A7)--(A10)
-are available, the tau-path first-contact estimate has
+are available, the tau-path first-contact estimate (D6.5) has
 
     s_i(x_k)
        <= -tau_* h_k m(theta_*)
