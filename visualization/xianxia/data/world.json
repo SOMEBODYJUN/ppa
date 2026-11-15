@@ -9031,6 +9031,50 @@
       "y": 402,
       "region": "structure",
       "realm": "structure"
+    },
+    "EPL-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "EPL-CHORD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "EPL-CLASS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "EPL-GD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11325,6 +11369,18 @@
     "E576": {
       "x": 2944.88,
       "y": 445.22
+    },
+    "E577": {
+      "x": 3099.2,
+      "y": 4442.26
+    },
+    "E578": {
+      "x": 3114.21,
+      "y": 4530.05
+    },
+    "E579": {
+      "x": 3120.59,
+      "y": 4352.22
     }
   },
   "bounds": {

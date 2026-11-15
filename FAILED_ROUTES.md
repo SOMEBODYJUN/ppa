@@ -697,3 +697,8 @@
 ## F99 · 无定量附加条件的梯度拓扑严格预算差
 
 固定三维嵌入 \(K\)，猜测链接或旋度约束迫使最佳 Hölder–RL 常数严格超过 \(\operatorname{diam}(K)^{1-\gamma}\)。对 properly critical \(K\)，[C296](research/canonical/gradient_holder_budget.md#ghb-infimum) 通过保留 \(K\) 的平滑弱势和凸投影极限实现任意严格增量，从而否定此猜测。阈值未达到与下确界严格偏大是两个不同命题。后续若要求固定真实误差界、固定 Hessian 模或指定势垒高度，应建立新合同。
+
+<a id="f100"></a>
+## F100 · 同一环境维数中任意无内点紧连通集均为近端聚点集
+
+连通和无内点不足。平面上圆加直径的补分量各缺至少一个边界部分。任何连续目标的有界全局精确 PPA，若非定常，则每条轨道线段的目标值严格高于其极限值，故轨道只在同一个补分量内且聚点集恰为该分量的完整边界。[C297](research/canonical/exact_proximal_limit_sets.md#epl-characterization) 证明这一门也充分。任意紧连通集仍可经一维提升实现。连续梯度流拓扑需归于 Fokin；当前增量是精确离散全局子问题及严格 RL 预算。

@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## C297–C299 精确反向弦
+
+[verify.py](code/exact_proximal_limit/verify.py)以 125 位 mpmath 解固定解析绕行曲线的有限弦条件，反算梯度、管势法向导数和原近端方程。[真实运行](code/exact_proximal_limit/results.json)含环境和输入。任意紧集、无限轨道和全局拼接由[规范证明](canonical/exact_proximal_limit_sets.md)承担。
+
 ## C296 梯度预算端点
 
 [代码](code/gradient_holder_budget/verify.py)核双曲正切端点梯度的多指数、固定点及点对差商，[输出](code/gradient_holder_budget/results.json)记录算法精度及实际运行。最优常数及全局同胚由[解析证明](canonical/gradient_holder_budget.md#ghb-endpoint)承担。

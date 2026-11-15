@@ -7,6 +7,8 @@
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
+**精确非收敛动力学。** [C297–C299](research/canonical/exact_proximal_limit_sets.md)关闭欧氏精确 PPA 与标准梯度下降的同维聚点集刻画及严格 Hölder 预算。当前主问题是将精确反向弦、保最小集和尾拼接提升到近解析非准解析类，及预设额外误差界时还有哪些拓扑约束。Fokin 既有连续时间刻画不算本轮新增。
+
 **全局 RL 的外部联系。** [C290–C292](research/canonical/quadratic_cross_approximation.md)已闭跨点平方误差的充要方差判据、每个固定维数的同底点最优双向因子和全查询有限预算的复杂性。[C293–C294](research/canonical/holder_minimal_displacement.md)另闭无限维最小位移的线性阶，剩余门为首项系数和 Kirk 1998 全文；[C295–C296](research/canonical/gradient_holder_budget.md)闭三维光滑梯度的严格直径预算，拓扑本身不迫使下确界增量。后续核端点分类与固定动力学条件的预算。[实际交接与独立裁决](research/audit/ORIGINAL_DISCOVERY_CHECKPOINT.md)给目前外部先行与研究标准。固定维数同时误差因子已完成，conditioning 锐性仍开放。
 
 [C288](research/canonical/rleb_nearest_anchor_geometry.md)已闭仿射及紧光滑目标的类级锐门。高参数临界已由完整连续单值近端和紧正维光滑目标实现。剩余问题为原 F 单值、严格曲率以及固定窗最优因子。

@@ -4413,6 +4413,30 @@
       "label": "C296 光滑梯度端点的正反见证",
       "file": "canonical/gradient_holder_budget.md#ghb-endpoint",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EPL-CLASS",
+      "label": "C297 精确近端聚点集同维刻画",
+      "file": "canonical/exact_proximal_limit_sets.md#epl-characterization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EPL-CHORD",
+      "label": "C297 保持最小集的反向弦插值",
+      "file": "canonical/exact_proximal_limit_sets.md#epl-chord",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EPL-BUDGET",
+      "label": "C298 固定全局 Hölder 预算的近端轨道归约",
+      "file": "canonical/exact_proximal_limit_sets.md#epl-budget",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EPL-GD",
+      "label": "C299 标准梯度下降聚点集刻画",
+      "file": "canonical/exact_proximal_limit_sets.md#epl-gradient-descent",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11035,6 +11059,40 @@
       "scope": "闭合预算可能达到或不达到；不反驳统一下确界。",
       "status": "derived-checked",
       "topic": "全局 Hölder–RL 结构"
+    },
+    {
+      "id": "E577",
+      "inputs": [
+        "EPL-CHORD"
+      ],
+      "output": "EPL-CLASS",
+      "relation": "conditional",
+      "scope": "Fokin 的同维曲线输入及真实强凸近端子问题；必要性由整段避聚点另证。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E578",
+      "inputs": [
+        "EPL-CHORD",
+        "GHB-INFIMUM"
+      ],
+      "output": "EPL-BUDGET",
+      "relation": "conditional",
+      "scope": "保精确弦的凸包围与距离外尾，严格大于直径预算。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E579",
+      "inputs": [
+        "EPL-CLASS"
+      ],
+      "output": "EPL-GD",
+      "relation": "conditional",
+      "scope": "全局 Lipschitz 的 Moreau 梯度还原同一轨道，标准步长的必要性另证。",
+      "status": "derived-checked",
+      "topic": "局部RLEB与零集拓扑"
     }
   ]
 }

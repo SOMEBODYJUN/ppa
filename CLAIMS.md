@@ -2598,3 +2598,21 @@
 - **Status**：`derived-checked`。独立审查重新构造凸包围、小幅势及保零领口。
 - **Exact Statement**：在 C295 的 properly critical \(K\)、同一嵌入及固定 \(\lambda,\gamma\) 下，全部光滑梯度实现的全尺度 Hölder 常数下确界为 \(\operatorname{diam}(K)^{1-\gamma}\)。每个严格较大 \(L\) 可实现，且完整 resolvent 为光滑微分同胚。非退化线段和正则四面体顶点不达到端点，三个特定共线点达到。
 - **Dependencies / Evidence / Scope**：[下确界及可达性](research/canonical/gradient_holder_budget.md#ghb-infimum)及[端点例](research/canonical/gradient_holder_budget.md#ghb-endpoint)，另有[有限复算](research/code/gradient_holder_budget/results.json)。结论无附加速度或定量误差界前提。一般端点空间、外部优先与四大期刊判断仍开放。
+
+## C297-v1 · 有界精确 PPA 聚点集的同维刻画
+
+- **Status**：`derived-checked`。探索与审查独立重构精确反向弦并核取样、非负保零和外尾。Fokin 的同维连续几何明确导入。
+- **Exact Statement**：固定 \(d\ge1\)、\(\lambda>0\)。非空紧 \(K\subset\mathbb R^d\) 可成为一条有界精确 PPA 轨道的聚点集，当且仅当其连通且等于补集某连通分量的整个边界。充分性可取其恰为全局最小集，\(f\) 光滑强制，\(\nabla^2 f\ge-I/(2\lambda)\)，且外部为精确 \(\|x\|^2/(2\lambda)+b\)；真实子问题唯一，完整图具有各指数全尺度 Hölder–RL。任意欧氏紧连通集经一维自然提升可实现。
+- **Dependencies / Evidence / Scope**：[必要性、构造及先行边界](research/canonical/exact_proximal_limit_sets.md)；只由 Fokin Theorems 2、4 导入正则末端曲线。必要性已适用于连续目标的有界真实全局精确轨道，未要求完整临界集等于 \(K\)。[精确弦复算](research/code/exact_proximal_limit/results.json)为高精度有限证据。
+
+## C298-v1 · 固定 Hölder 预算下的精确近端聚点集实现
+
+- **Status**：`derived-checked`。审查员独立核了投影界、保留轨道与外部法向积分。
+- **Exact Statement**：保留 C297 充分方向的 \(K,\lambda\)，固定 \(0<\gamma<1\)。每个 \(L>\operatorname{diam}K^{1-\gamma}\) 都可要求同一个完整梯度图的全对全尺度 RL 常数至多 \(L\)，仍保持 Hessian 下界、精确 PPA 的 \(\omega=K=\arg\min f\) 及强制性。该类的 \(L\) 下确界是 \(\operatorname{diam}K^{1-\gamma}\)。
+- **Dependencies / Evidence / Scope**：[精确轨道和严格预算](research/canonical/exact_proximal_limit_sets.md#epl-budget)，依赖 C297 精确弦和 C296 的凸距离外尾。此版本不用原点中心的精确各向同性尾；临界常数是否达到另是开放问题。
+
+## C299-v1 · 标准梯度下降的完整聚点集同维刻画
+
+- **Status**：`derived-checked`。Moreau 包络转移与整条线段的下降分别推导。
+- **Exact Statement**：在全部光滑强制 \(u:\mathbb R^d\to\mathbb R\) 和标准恒定步长 \(0<\eta\le1/L\) 的梯度下降中，\(L>0\) 为全局 Lipschitz 梯度上界，有界轨道可能的聚点集恰为 C297 所述紧连通补分量边界，每个可取为完整全局最小集。
+- **Dependencies / Evidence / Scope**：[梯度下降转移](research/canonical/exact_proximal_limit_sets.md#epl-gradient-descent)。充分性用 C297 的同轨道 Moreau 包络，必要性用保留整段的斜率估计，既有离散文献的系统优先性仍开放。
