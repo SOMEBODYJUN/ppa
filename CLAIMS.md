@@ -2634,3 +2634,25 @@
 - **Status**：`derived-checked`。先有独立重构，再以现有规范正文复审内部权重、统一全阶界、Beurling 零延拓、源定理约定和完整近端。外部发表优先仍开放。
 - **Exact Statement**：固定有限维与 \(\lambda>0\)，总权重 \(M_0=1,M_j>0\)、\(M_j/j!\) 对数凸。若 \(\sum M_{j-1}/M_j=\infty\)，每个 \(E^{\{M\}}\) 目标的有界全局精确 PPA 轨道有限长度并收敛，标准梯度下降亦然。若和有限，则 C297 的所有同维允许聚点集可由同类 Beurling \(E^{(M)}\) 势实现，仍可要求完整全局最小集等于聚点集、强制、统一弱凸、精确二次尾或 C298 任意严格预算。C299 的标准梯度下降实现保持所述类。
 - **Dependencies / Evidence / Scope**：[双向分界与全阶证明](research/canonical/quasianalytic_proximal_dichotomy.md)以 RSW 定理及 KL 导入收敛侧，非准解析构造经解析射线、内部权重与反向弦。维数至少二时才有非平凡失败。任意有限 \(\alpha>1\) 的对数权重实现同一个函数在所有 Gevrey \(s>1\)，不是随 \(s\) 换函数。未推及不具强对数凸条件的通用权重矩阵。
+
+<a id="c303"></a>
+## C303-v1 · 二阶阻尼梯度系统的开盆域圆形非收敛
+
+- **Status**：candidate。HJ 螺旋管的显式渐近估计和 w=v+∇f 指数衰减可闭合首次离开 bootstrap；尚未完成独立规范接收和外部优先性审计。
+- **Exact Statement**：存在 C∞ 势 f:R²→R、阻尼 a>0、势 χ_a=af−||∇f||²/2 及相空间非空开集 U，使每个解 x''+ax'+∇χ_a(x)=0 从 U 出发全局存在、有界且 ω(x)=S¹，因而不收敛。
+- **Objects / Dependencies**：HJ 2020 的 C∞ 圆形开盆构造；大角度管内 Y=−∇f 的 Y_θ ~ θ exp(−θ²)、边界内向余量 m(θ) ~ exp(−θ²+θ)；a>sup λmax(∇²f) 时 w'=(∇²f−aI)w。证明稿见 research/topics/path_dynamics/second_order_open_basin_proof_v1.md，交叉审查见 research/audit/SECOND_ORDER_OPEN_BASIN_REVIEW_2026-11-14.md。
+- **Key Objection / Next Evidence**：必须逐项从 HJ 原式核 q_θ=O(1)、法向符号、cutoff 与闭管正距离，并由独立审查者重构 u=θ−C∫|w| 的首次接触不变性。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证，也不自动建立 PPA/GPPA 离散桥。
+
+<a id="c304"></a>
+## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
+
+- **Status**：candidate。共线 t^7 见证排除全部指数 q>3/7；全局 3/7 上界尚未证明。
+- **Exact Statement**：C270 的完整纯 Gram 近端 Tλ=(v+λP)⁻¹v 在每个有界集上满足 ||Tλ(Z)−Tλ(Z')||^(7/3) ≤ C||Z−Z'||，且 3/7 为最佳共同指数。
+- **Evidence / Objection**：research/discovery_a_gram_37.md 和 research/gram_cross.md 给出共线 sharpness、横向尺度攻击和精确 Gram 范数恒等式；尚缺统一 rank-stratum / angle decomposition，不能以半代数权重代替上界证明。外部 Gram Bregman 文献的精确正则性仍待逐段核对。
+
+<a id="c305"></a>
+## C305-v1 · 单调 radial-twist 的反绕行门
+
+- **Status**：candidate。这是 C287 非 Dini 绕行机制在固定 radial-twist 子类上的结构障碍，不是一般单调 PPA 定理。
+- **Exact Statement**：若 J((1+t)p)=(1+qt)R_{θ(t)}p 的所有图点属于同一单调关系，则 cos θ(t)≥(1+qt)/(1+t)，故 |θ(t)|=O(√t)；在 t_k=q^k t_0 上角和有限，轨道收敛。
+- **Scope / Objection**：同半径图点的单调性计算完整，但不控制一般多值图、曲零流形或任意 PPA 的切向位移。见 research/candidates/monotone_antiwinding_gate.md。
