@@ -601,3 +601,11 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 **Paper fact（直接读取）**：Daniilidis–Drusvyatskiy, *Sweeping by a tame process*, [arXiv:1412.8581](https://arxiv.org/abs/1412.8581)，后发表于 Annales de l'Institut Fourier 67 (2017)。摘要结论是半代数或更一般可定义 sweeping 过程的有界轨道具有有限长度；对象是连续时间 sweeping，不是本库通过同胚反演得到的离散完整 PPA。
 
 **Interpretation / comparison**：上述文献分别提供解析下降的单点收敛背景与可定义连续时间有限长度背景；它们不覆盖 C287-v2 的离散完整 PPA、局部同尺度全对 RL、紧圆聚点集和非 Dini 角预算的合取。有限检索未找到同时具备这些对象的直接先行，但该结果不等于全球优先认证。C287-v2 的自然单调/次微分实现仍是开放义务。
+
+<a id="lit-hj-fne-2026-11-15"></a>
+## LIT-HJ-FNE-2026-11-15 · C303/C306 直接先行接口
+
+| 一手来源与定位 | Paper fact | 本库映射与限域 |
+| --- | --- | --- |
+| Horsin–Jendoubi, *Non-genericity of initial data with punctual \\(\\omega\\)-limit set*, Archiv der Mathematik 114 (2020), DOI [10.1007/s00013-019-01377-8](https://doi.org/10.1007/s00013-019-01377-8)，Remark 3；构造式 (5)–(8)；边界符号见 §2.2 | Remark 3 明确：一阶圆形例可沿二阶系统得到二维初始子流形，但开相空间非收敛盆域仍被作者称为 open；构造使用 \\(\\gamma_1,\\gamma_2\\)、\\(f=e^{-\\vartheta^2}\\phi(1-\\Pi)\\) 及足够大角度的边界内向符号。 | C303 只把这一精确 open problem 转为候选并重构 bootstrap；[HJ 管估计引理](topics/path_dynamics/hj_tube_estimates_v1.md)补出导数/边界/Hessian 门。原文事实不等于 C303 已证明，也不提供 PPA/GPPA 离散桥；\(\\Pi\\) 的整个闭管尾部分离须独立核对。 |
+| Bërdëllima–Lauster–Luke, *\\(\\alpha\\)-Firmly nonexpansive operators on metric spaces*, JFPA 24:14 (2022), DOI [10.1007/s11784-021-00919-4](https://doi.org/10.1007/s11784-021-00919-4)，Prop. 4(ii), Thm. 27, Thm. 30 | 在 \(p\\)-uniformly convex 空间中，点态 firmly nonexpansive 的固定点不等式给出步长耗散；Thm. 27 给无率收敛，Thm. 30 在 gauge metric subregularity 下给定量收敛。 | C306/F102 的候选把额外 \(d(Jx,S)\\le qd(x,S)\) 直接与 Hilbert Fejér 恒等式组合，得到几何级数有限长；因此曲管几何不是新的收敛机制。短弦障碍还在对象层面排除正维紧无边界固定流形；不能把该文的定理无条件外推到多值或离域分支。 |
