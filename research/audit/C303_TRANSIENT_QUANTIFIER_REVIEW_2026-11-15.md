@@ -92,7 +92,7 @@ z_k=\theta_k-C_e(E_\star-E_k),
 
 ### 当前修订状态
 
-审查后，工作树中的 transient 页已补入两项局部修订：它现在同时显示带 (h_kq_k) 瞬态项的下角度估计，并把瞬态基准改为 (T_{\rm tr}=t_{K_\star})，其中 (K_\star) 与 finite-prefix 的首个 drop threshold 相同。这些修改已按同一 `gamma` 常数提交，因此上面第 1、2 项中的代数缺口得到条件性修补；这不改变 outer-strip/cutoff source gate，也不替代把上下估计写在同一个停止域上的合并证明。
+审查后，工作树中的 transient 页已补入两项局部修订：它现在同时显示带 \(h_kq_k\) 瞬态项的下角度估计，并把瞬态基准改为 \(T_{\rm tr}=t_{K_\star}\)，其中 \(K_\star\) 与 finite-prefix 的首个 drop threshold 相同。这些修改已按同一 `gamma` 常数提交，因此上面第 1、2 项中的代数缺口得到条件性修补；这不改变 outer-strip/cutoff source gate，也不替代把上下估计写在同一个停止域上的合并证明。
 
 要把裁决从 continue validation 改变为已闭主要贡献，至少需要一份可复核合并证明，明确给出：
 
