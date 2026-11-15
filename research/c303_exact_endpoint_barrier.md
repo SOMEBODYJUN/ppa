@@ -108,12 +108,13 @@ For `h_0` small, continuity from `u_0=0` and a first-exit argument imply
 `u_τ≤D h_τ` uniformly; then `R_τ=O(h_τ²)` follows from (EP3). Thus no
  derivative estimate for `y_τ` or `w_tilde_τ` is used.
 
-For C303, (EP4) applies to a radial face with `μ_s=m(θ)` and to the entrance
-angle face with `μ_s=c φ(θ)`, `φ(θ)=θe^{-θ²}`. It replaces the derivative-based
+For C303, set `m_face(θ)=m₀ exp(−θ²+θ)`. Then (EP4) applies to a radial
+face with `μ_s=m_face(θ)` and to the entrance angle face with `μ_s=c φ(θ)`,
+`φ(θ)=θe^{-θ²}`. It replaces the derivative-based
 `CS5`/`TE2` calculation by a direct endpoint first-contact argument, but still
 requires
 
-    q_k+h_k=o(m(θ_k)),       and       q_k+h_k=o(φ(θ_k)). (EP5)
+    q_k+h_k=o(m_face(θ_k)),       and       q_k+h_k=o(φ(θ_k)). (EP5)
 
 The normal recursion `q_k=O(h_k)` and the sharp schedule bootstrap therefore
 remain necessary. No new source or outer-strip assumption is hidden in (EP4):

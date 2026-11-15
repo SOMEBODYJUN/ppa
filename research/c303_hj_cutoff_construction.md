@@ -35,17 +35,18 @@ f(x,y)=e^{-(\theta+2p\pi)^2}\,\phi(x,y)\,(1-\Pi_{\rm cut}(x,y)).
 两初始点位于正实轴、半径分别为 \(\gamma_1(0)=2\) 与
 \(\gamma_2(0)=1+\mu\)，因而都落在 \(r>R\) 中。取一条完全落在
 \(\{r>R\}\) 内、连接两个初始点的紧连通光滑路径，并将其限制在一条
-足够窄的正实轴角锥内；取其足够小的闭管邻域 \(K\) 使
+足够窄的正实轴角锥内。再取一个连通的光滑有界开管 \(O'\)，使
 \[
-K\Subset\{(x,y): |(x,y)|>R\}.
+\overline{O'}\Subset\{(x,y): |(x,y)|>R\},
 \]
-由标准 bump 构造，存在
+且该路径包含于 \(O'\)；取开管 \(U_{\rm path}\) 使
+\(\overline{U_{\rm path}}\Subset O'\)，并让它包含整个初始径向壳层。由标准 bump 构造，存在
 \[
 \Pi_{\rm cut}\in C_c^\infty(\mathbb R^2,[0,1]),
-\qquad \operatorname{supp}\Pi_{\rm cut}=K',
-\qquad \Pi_{\rm cut}\equiv1\text{ on neighborhoods of }\gamma_1(0),\gamma_2(0).
+\qquad \Pi_{\rm cut}\equiv1\text{ on }U_{\rm path},
+\qquad \operatorname{supp}\Pi_{\rm cut}=K'\Subset O',
 \]
-其中 \(K'\) 是包含该路径的紧连通闭集，且两个初始点是 support 的内点。这个平台条件
+其中可取 \(K'\) 为包含 \(\overline{U_{\rm path}}\) 的紧连通闭管，且两个初始点是 \(K'\) 的内点。这个平台条件
 同时处理正实轴 branch cut 的两侧 jets；它是对原文 support 文字的安全强化，不应反向当作已核的 Paper Fact。
 对 \(\theta\in(\theta_{\rm supp},2\pi)\)，(HC0) 给出
 \(\gamma_i(\theta)<R\)；对 \(\theta\ge2\pi\)，

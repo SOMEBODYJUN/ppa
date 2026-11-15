@@ -4,7 +4,7 @@
 
 ## 1. 共同停止域
 
-取 HJ cutoff 尾部分离所需的 \(\theta_0\)，再取入口阈值
+取 HJ cutoff 尾部分离所需的 \(\theta_0\ge\theta_{\rm tail}\)，再取入口阈值
 \(\theta_*\ge\max\{\theta_0,3/2\}\)、\(0<\eta_{\rm strip}<1-\beta\)，并令
 \[
 D=\{(r,\theta):\theta>\theta_*,\ b_1(\theta)<r<b_2(\theta)\}
@@ -14,6 +14,8 @@ D=\{(r,\theta):\theta>\theta_*,\ b_1(\theta)<r<b_2(\theta)\}
 S_{\eta_{\rm strip}}=\{(r,\theta):\theta\ge\theta_*,\ |q(r,\theta)|\le\beta+\eta_{\rm strip},
                          \tfrac12\le r\le\tfrac32\}.
 \]
+定义径向面内向余量 \(m_{\rm face}(\theta):=m_0e^{-\theta^2+\theta}\)，它与管中点半径
+\(m(\theta)=(\gamma_1+\gamma_2)/2\) 不同。
 假设 HJ cutoff construction 给出
 \[
 \Pi_{\rm cut}=0\quad\text{on }\mathcal P(\overline{S_{\eta_{\rm strip}}})
@@ -40,7 +42,7 @@ q_k=\|w_k\|\le M h_k+Q_0e^{-\gamma(t_k-T_{\rm tr})}
 \[
 \theta_\ell^2\le C+2\log(1+t_\ell),
 \qquad
-m(\theta_\ell),\ \phi(\theta_\ell)\ge c(1+t_\ell)^{-2}.
+m_{\rm face}(\theta_\ell),\ \phi(\theta_\ell)\ge c(1+t_\ell)^{-2}.
 \tag{CS3}
 \]
 由 (CS2)、全局 \(g,F\) 界和 \(|y_\tau-x_j|\le C h_j\)，先控制极坐标位移。
@@ -84,12 +86,12 @@ outer-strip 出界；若 outer strip 先假设出界，则从 \(|q|<\beta\) 出�
 若路径第一次接触径向面 \(s_i=0\)，则
 \[
 \frac d{d\tau}s_i(y_\tau)\bigg|_{\tau_*}
-\ge\beta_j\left[m(\theta(\tau_*))
+\ge\beta_j\left[m_{\rm face}(\theta(\tau_*))
      -C\bigl(h_j+q_j\bigr)\right].
 \tag{CS6}
 \]
 由 \(|\theta(\tau_*)-\theta_j|=O(h_j)\)、\(h_j(1+\theta_j)\to0\)，有
-\(m(\theta(\tau_*))\asymp m(\theta_j)\)。TE9a--TE9b 和 (CS2) 使右侧严格为正。
+\(m_{\rm face}(\theta(\tau_*))\asymp m_{\rm face}(\theta_j)\)。TE9a--TE9b 和 (CS2) 使右侧严格为正。
 
 若第一次接触是入口角面，则同理
 \[

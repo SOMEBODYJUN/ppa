@@ -74,7 +74,7 @@ X\cdot n_1<0,\qquad X\cdot n_2>0
 - 取 \(\theta_{\rm supp}=2\pi-\delta\)；
 - 利用 \(\mu<e^{2\pi}\) 选
   \(\sup_{[2\pi-\delta,2\pi]}\gamma_2<R<2\)；
-- 在 \(r>R\) 的窄正实轴角锥内取连接两初始点的紧连通 \(C^\infty\) dumbbell，并取 \(\Pi_{\rm cut}\in C_c^\infty(\mathbb R^2,[0,1])\) 在两初始点邻域恒为 1；
+- 在 \(r>R\) 的窄正实轴角锥内取连接两初始点的紧连通 \(C^\infty\) dumbbell，并取 \(\Pi_{\rm cut}\in C_c^\infty(\mathbb R^2,[0,1])\) 在连接路径的开管邻域（包含整个初始径向壳层）恒为 1；
 - 对 \(\theta_{\rm supp}<\theta<2\pi\)，曲线半径小于 \(R\)；对 \(\theta\ge2\pi\)，
   \(\gamma_2(\theta)\le\gamma_2(2\pi)<R\)；
 - 再取 \(\theta_{\rm tail}\) 足够大，使整个闭 normalized outer strip 落在

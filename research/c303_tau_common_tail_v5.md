@@ -59,12 +59,12 @@ The estimate uses only the bounded input and the global/outer-strip bounds; it i
 Suppose y₁ were outside D̃. Since ‖yτ−xₖ‖≤Chₖ and r≥1/2, the path has a continuous local polar lift. Injectivity of Π on the closed tail fixes the unwrapped branch. Let τ* be its first contact with a boundary face. At a radial face, θ* in the following display means the contact angle θ(τ*), not the fixed lower cutoff θ_*:
 
 (d/dτ)sᵢ(yτ)|τ* = βₖ[∇sᵢ·Y(yτ*) + ∇sᵢ·w̃τ*]
-                 ≥ βₖ[m(θ(τ*)) − L_s(C hₖ+‖wₖ‖)].
+                 ≥ βₖ[m_face(θ(τ*)) − L_s(C hₖ+‖wₖ‖)].
 
 The displacement bound also gives |θ(τ*)−θₖ|≤C hₖ. Since
-hₖ(1+θₖ)→0 and m(s)=exp(−s²+s), the tail estimate gives
-m(θ(τ*))/m(θₖ)→1 uniformly along first-contact sequences. Hence
-hₖ=o(m(θ(τ*))) and the displayed error is eventually smaller than half
+hₖ(1+θₖ)→0 and m_face(s)=m₀ exp(−s²+s), the tail estimate gives
+m_face(θ(τ*))/m_face(θₖ)→1 uniformly along first-contact sequences. Hence
+hₖ=o(m_face(θ(τ*))) and the displayed error is eventually smaller than half
 the actual face margin. At the angular lower face,
 dθ/dτ ≥ βₖ[c₀θ(τ*)exp(−θ(τ*)²)−C hₖ]. The logarithmic derivative of
 φ(s)=s exp(−s²) is O(1+s) on the tail, so the same displacement estimate
@@ -125,12 +125,12 @@ For Uₖ = exp((zₖ+E)²/2), negative Δz decreases U. For positive Δz, the me
 
 Hence exp(θₖ²/2) ≤ Uₖ ≤ U₀+C′tₖ and θₖ² ≤ C+2 log(1+tₖ). Consequently
 
-m(θₖ) = exp(−θₖ²+θₖ) ≥ c(1+tₖ)⁻²,
+m_face(θₖ) = m₀ exp(−θₖ²+θₖ) ≥ c(1+tₖ)⁻²,
 φ(θₖ) ≥ c(1+tₖ)⁻²,
 
 and, since tₖ ≍ k^(1−α),
 
-hₖ/m(θₖ),  hₖ/φ(θₖ) = O(k^(2−3α)) → 0.
+hₖ/m_face(θₖ),  hₖ/φ(θₖ) = O(k^(2−3α)) → 0.
 
 This is the exact reason for α>2/3. The bound also makes hₖ exp(θₖ)→0, so the normalized q-coordinate changes by o(1) in one step and the outer-strip gate is preserved.
 

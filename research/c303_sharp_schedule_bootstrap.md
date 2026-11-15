@@ -86,7 +86,7 @@ whenever W_k<=S(t_k). Induction from W_{K_*}<=S(t_{K_*}) yields
     W_k <= K(1+t_k) log(e+t_k).                           (SS6)
 
 The exact finite-step verification of (SS5) is a scalar inequality; it does
-not use a boundary margin or h_k=o(m(theta_k)).
+not use a boundary margin or h_k=o(m_face(theta_k)).
 
 ## Consequence for the shrinking HJ scales
 
@@ -109,9 +109,9 @@ so (SS6) implies
 
 Since log(e+t)^(1+eta) <= C_eta (1+t)^eta, the right side is at most
 C_epsilon (1+t_k)^(1+2 eta) <= C_epsilon(1+t_k)^(1+epsilon).
-Therefore
+Therefore, with m_face(theta)=m_0 exp(-theta^2+theta),
 
-    m(theta_k)=m_0 exp(-theta_k^2+theta_k)
+    m_face(theta_k)=m_0 exp(-theta_k^2+theta_k)
        >= c_epsilon (1+t_k)^(-(1+epsilon)),
 
     phi(theta_k)=theta_k exp(-theta_k^2)
@@ -121,7 +121,7 @@ since theta_k is bounded below by the tail cutoff.
 
 With t_k asymp k^(1-alpha),
 
-    h_k/m(theta_k), h_k/phi(theta_k)
+    h_k/m_face(theta_k), h_k/phi(theta_k)
        = O(k^((1+epsilon)(1-alpha)-alpha)).                (SS9)
 
 For any fixed 1/2<alpha<1, choose epsilon>0 so small that
@@ -156,7 +156,7 @@ The minimum proof obligations are:
 2. Verify the finite-step scalar comparison (SS5) for the actual h_0 and
    initial W_{K_*}.
 3. Propagate (SS8) into the tau-path boundary comparison, including
-   m(theta(tau_*))/m(theta_k) and phi(theta(tau_*))/phi(theta_k).
+   m_face(theta(tau_*))/m_face(theta_k) and phi(theta(tau_*))/phi(theta_k).
 4. Check whether any existing source already contains the sharper W
    comparison; no priority claim is made here.
 

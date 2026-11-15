@@ -130,9 +130,9 @@ Therefore
     exp(theta_k^2/2) <= U_k <= U_{K_*}+C_U(t_k-t_{K_*}),
     theta_k^2 <= C + 2 log(1+t_k).                        (TE8)
 
-Thus
+Thus, with m_face(theta)=m_0 exp(-theta^2+theta),
 
-    m(theta_k) >= c(1+t_k)^(-2),
+    m_face(theta_k) >= c(1+t_k)^(-2),
     phi(theta_k) >= c(1+t_k)^(-2).
 
 With t_k asymp k^(1-alpha),
@@ -144,14 +144,14 @@ u=h_0s^(1-alpha)<=1 or u>=1 gives
     sup_{k>=K_*} h_k(1+t_k)^2 <= C h_0,                    (TE9a)
 
 because the large-u exponent is 2-3alpha<0. Hence, after reducing h_0,
-the ratios h_k/m(theta_k) and h_k/phi(theta_k) are small for every
+the ratios h_k/m_face(theta_k) and h_k/phi(theta_k) are small for every
 k>=K_*, not merely asymptotically. The transient contribution satisfies
 
     sup_{k>=K_*} h_0^2 exp(-gamma(t_k-T_tr))(1+t_k)^2 <= C h_0^2. (TE9b)
 
 Equivalently, with t_k asymp k^(1-alpha), the asymptotic form is
 
-    h_k/m(theta_k), h_k/phi(theta_k)
+    h_k/m_face(theta_k), h_k/phi(theta_k)
        = O(k^(2-3 alpha)) -> 0       when alpha>2/3.       (TE9c)
 The estimate does not by itself decide the critical or subcritical cases.
 
