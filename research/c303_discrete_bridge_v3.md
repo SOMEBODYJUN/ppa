@@ -1,8 +1,8 @@
-# C303 discrete bridge v2: derivation, coverage, and the schedule gate
+# C303 discrete bridge v3: implicit-path barrier, coverage, and the schedule gate
 
 ## Status
 
-This is an independent proof attack on `c303_discrete_bridge.md`. The bridge remains a candidate. The main correction is that the schedule exponent cannot be fixed at `alpha>2/3` before the first-exit bootstrap produces a quantitative polynomial exponent. The safe statement chooses `alpha` after that exponent is known.
+This is a revision of the v2 report; the integer-step first-exit argument is replaced by an implicit resolvent path.
 
 ## 1. Complete proximal update
 
@@ -130,7 +130,7 @@ Taylor expansion of s_i at y_*, using the inward estimate (V10), yields
         -tau_* h grad(s_i)(y_*) dot w_{tau_*} + O(h^2)
       <= -tau_* h m(theta_*) + C tau_* h ||w_{tau_*}|| + C h^2.   (D6.5)
 
-The tail condition h_k=o(m(theta_k)), together with (D6.4), makes the right side strictly negative, contradicting x_k in D. This contradiction is quantified for every k and either i=1,2, so no first radial contact is possible. If first contact occurs at the entrance boundary theta=theta_0, then Y_theta>0 on the tail and the same Taylor calculation in the angular coordinate gives theta(x_k)<theta_0, again contradicting x_k in D. Thus the implicit branch preserves D without assuming that an integer endpoint lies on the boundary.
+The path displacement gives |theta_* - theta_k|=O(h_k). Since the logarithmic derivative of m(theta) is O(1+theta) and h_k(1+theta_k)->0 under (V15), m(theta_*) is comparable to m(theta_k). Thus h_k=o(m(theta_k)), together with (D6.4), makes the right side strictly negative, contradicting x_k in D. This contradiction is quantified for every k and either i=1,2, so no first radial contact is possible. If first contact occurs at the entrance boundary theta=theta_0, then Y_theta>0 on the tail and the same Taylor calculation in the angular coordinate gives theta(x_k)<theta_0, again contradicting x_k in D. Thus the implicit branch preserves D without assuming that an integer endpoint lies on the boundary.
 
 A finite initial prefix is handled by shrinking the initial compact tube and choosing h_0 below the finitely many local constants. The remaining obligations are the global bounded-derivative cutoff and the uniform constants in (D6.3); neither can be replaced by the continuous-time first-contact sentence.
 
@@ -159,7 +159,7 @@ The exact value of (p) depends on the constants in the HJ tube estimate; it shou
 \]
 Since (t_k\asymp k^{1-\alpha}), (V13) follows whenever
 \[
-\alpha>p(1-\alpha),qquad	ext{i.e.}qquad
+\alpha>p(1-\alpha),qquad\text{i.e.}qquad
 \alpha>\frac{p}{p+1}.
 \tag{V17}
 \]
@@ -175,4 +175,4 @@ If (\vartheta_k\) had a finite limit, the positive lower bound in (V14) together
 
 ## 5. Independent verdict
 
-**Continue validation.** No fatal obstruction was found after the correction (V17), but the bridge is not yet a theorem. The decisive obligations are: verify the HJ cutoff really gives globally bounded (D^3f) (hence complete PPA coverage), derive the uniform remainder in (V7) from the exact implicit step, and write the strip version (V11) into the first-exit proof. If any of these fail, the salvage is only a local selected-root inertial discretization, which does not meet the complete-graph requirement.
+**Continue validation.** No fatal obstruction was found after the correction (V17), but the bridge is not yet a theorem. The decisive obligations are: verify the HJ cutoff really gives globally bounded (D^3f) (hence complete PPA coverage), derive the uniform remainder in (V7)/(D6.3) on the full tau-path, and obtain one common open initial phase-space set for the finite-prefix bootstrap. If any of these fail, the salvage is only a local selected-root inertial discretization, which does not meet the complete-graph requirement.
