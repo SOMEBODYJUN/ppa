@@ -55,3 +55,7 @@ CS1 假设 (Pi_{\rm cut}=0) 在整个 (mathcal P(\overline{S_\eta})) 上，并�
 2. 继续使用 outer-strip 路线，但显式定义 (	au_S)，在 ([0,\tau_S)) 上建立 (q)-坐标微分不等式，并在 (	au_S) 处排除 normalized-strip、物理半径和入口角三类首接触。
 
 同时必须给出 CS1 的可复核 HJ cutoff 构造、闭 outer strip 的 lift/injectivity 证明和共同初始开集量词。仅把 CS4--CS7 并列写在同一页，或继续声明这些条件为 assumptions，不能把 C303 升级为主要贡献。
+
+## 对当前未提交修订的更新
+
+当前工作树版本新增了 tau_D 重构，并把 q 坐标估计限制到 core 首接触之前；这实质上消除了上一节所指出的最直接 outer-strip 循环。修订后的文字仍需两项精确整理：首出界步 j=K-1 的角度 bootstrap 应只引用完整步 ell<j，并且 CS4 的结论应限定为首接触前路径及其接触点位于 S_eta 闭包，不能从接触前估计推出接触后的整条 tau-path。另需补出首个 drop threshold 给出的 K* 下界，或把 sup h_ell exp(theta_ell) 直接改用足够的 O(h0) 估计；这些是可修的量词/常数门，不改变当前 continue validation 裁决。CS1 的 HJ cutoff source identity、闭 strip lift/injectivity 和统一常数仍是独立 source gates。
