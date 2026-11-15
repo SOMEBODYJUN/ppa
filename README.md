@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+本轮 idea 队列与去重裁决见 [2026-11-15 候选前沿索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。当前最值得继续验证的是 C307 的准解析 Denjoy–Carleman 有界变步 sharp 分界；C308 的周期 SPD 变度量 Floquet 中心流形判据作为第二主线。两者均为 candidate，尚未闭合，不得当作现成定理。
+
 [当前候选前沿](CLAIMS.md#c303)记录本轮三条相互独立的研究入口：二阶阻尼梯度系统的相空间开盆域圆形非收敛（及其变量步惯性 PPA 桥）、纯 Gram GPPA 近端的候选精确 \(3/7\) 两点指数，以及固定 radial-twist 单调反绕行门。它们均保持 candidate 状态；二阶连续证明稿、管估计和离散桥审查分别见 [proof v1](research/topics/path_dynamics/second_order_open_basin_proof_v1.md)、[HJ lemma](research/topics/path_dynamics/hj_tube_estimates_v1.md) 与 [bridge review](research/audit/C303_BRIDGE_REVIEW_ROUND2_2026-11-15.md)。新增的 FNE 管状固定流形方向已由三席独立审查判为淘汰，详见 [C306](CLAIMS.md#c306) 与 [F102](FAILED_ROUTES.md#f102)。读者不得把这些候选当作已闭定理。
 
 [准解析性与精确近端的正则性分界](research/canonical/quasianalytic_proximal_dichotomy.md)给 C302：强对数凸总权重下的一侧有限长度，另一侧用同类 Beurling 势实现所有允许聚点集和严格 Hölder 预算。解析逼近、全阶衰减及文献归属均保留。

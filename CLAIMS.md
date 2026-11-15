@@ -2682,3 +2682,15 @@
   ]
   所以每步 (le t_k)、(t_{k+1}\le qt_k)，总长 (le t_0/(1-q))，不需要 (C^2) 或 reach。独立短弦论证进一步给出曲固定流形的第二基本形式必须为零，故正维紧无边界对象不可存在。
 - **Scope / salvage**：对任意闭固定集，FNE+几何距离收缩仍是可调用的有限长 scope lemma；对闭凸 (S)，还可用投影变分得到 (|P_S(Jx)-P_Sx|\le(\sqrt q+q)d(x,S))。见 [FNE 反证审查](research/fne_falsification.md)、[短弦交叉审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md) 与 [F102](FAILED_ROUTES.md#f102)。重启须从自然算子条件推导 (q)，或改到 almost-firm/非 Hilbert 曲率误差环境。
+
+## C307-v1 · 准解析 Denjoy–Carleman 权重下有界变步精确 PPA 的 sharp 分界
+
+- **Status**：candidate / major-potential conditional。这是本轮最值得继续验证的主线，不是已闭定理。
+- **Exact Statement**：固定强对数凸总权重 \(M\) 与 \(0<\lambda_-\le\lambda_k\le\lambda_+<\infty\)。若 \(\sum M_{j-1}/M_j=\infty\)，每个 \(E^{\{M\}}\) 目标的有界全局精确变步 PPA 轨道有限长并收敛；若该和有限，则对每个预给 schedule（先要求两步周期，再攻任意 bounded-away 序列）及任意同维可实现紧连通 \(K\)，构造一个依赖 schedule 的 \(f_{(\lambda_k)}\in E^{(M)}\)，使完整 global-min resolvents 对所有 \(\lambda_k\) 全域覆盖，并有 \(\omega=K\)。反向构造保留 \(\nabla^2f\succeq-\mu I\)（\(\mu<1/\lambda_+\)）、强制性及 C297/C298 的预算。
+- **Evidence / Objection**：正向下降与相对误差常数分别为 \(1/(2\lambda_+)\) 与 \(1/\lambda_-\)，可直接接 C302 的准解析 KL/ABS 链；反向只需把 C297 的梯度数据替换为 \(v_k=(x_k-x_{k+1})/\lambda_k\)，但 schedule-specific Whitney/Beurling 全阶兼容与统一 Hessian margin 尚未证明。不能声称一个 \(f\) 同时实现所有 schedules，也不能放开 \(\lambda_-=0\)。详见 [候选正文](research/candidates/quasianalytic_variable_step_schedule.md) 与 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
+
+## C308-v1 · 周期 SPD 变度量 PPA 的 Floquet 临界中心流形判据
+
+- **Status**：candidate / major-potential conditional；作为 C307 的第二主线。
+- **Exact Statement**：对 \(F\in C^r\) 强单调、周期 SPD 度量 \(M_k\) 的精确变度量 PPA，令 \(P=D\Phi(0)\) 为 \(p\)-步 monodromy。若 \(P\) 有简单 multiplier \(1\)、其余谱严格在单位圆内，则离散中心流形约化的首个非零高阶 jet 系数 \(c_\ell\) 决定临界两侧收敛、排斥或单侧逃逸；若 \(\Phi\) 在中心方向恒等，才得到精确周期/准周期不收敛。
+- **Evidence / Objection**：已有精确 \(p=6\) 根式族 \(A=I+3J,\lambda=1/10,\delta=\pi/3,D=\operatorname{diag}(1,(3\sqrt3-2)/23)\)，线性谱为 \(\{1,q^6\}\)，\(q=(50-20\sqrt3)/39\)。对紧支平滑扰动 \(F_\varepsilon=Ax+\varepsilon\chi(\|x\|)\|x\|^2x\)，中心三阶系数为 \(156(-4643+243\sqrt3)/288923\ne0\)，符号翻转给出相反临界命运。C284/UI33 已有线性旋转发散，因此新颖性只能来自 PPA-specific 高阶分类、鲁棒性和全周期推广；通用中心流形黑箱本身不够。不要写“所有中心系数为零则周期”。详见 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
