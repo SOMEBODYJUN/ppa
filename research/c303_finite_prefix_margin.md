@@ -124,10 +124,15 @@ Global resolvent coverage and the bounded pre-prefix velocity give
 
     ||y_tau-x_k|| <= C_tau h_k <= C_tau h_0.                    (FP4)
 
+The position component of the reference curve has bounded velocity on
+[0,T_*], so
+
+    ||x_bar(t_k+tau h_k)-x_bar(t_k)|| <= C_T h_k.               (FP4a)
+
 The defining functions s_i and the lifted angle are Lipschitz on a fixed
 physical neighborhood of the compact reference curve. Decrease h_* so that
-C_tau h_* <= sigma_0/8. Combining (FP3) and (FP4), every y_tau in the first
-K_0 steps has
+(C_tau+C_T) h_* <= sigma_0/8. Combining (FP3), (FP4), and (FP4a), every
+y_tau in the first K_0 steps has
 
     theta(y_tau)-theta_* >= sigma_0/2,
     s_i(y_tau) >= sigma_0/2,       i=1,2.                       (FP5)
