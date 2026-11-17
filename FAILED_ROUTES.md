@@ -719,3 +719,12 @@
   因而 (t_{k+1}\le qt_k) 时每步不超过 (t_k)，总长至多 (t_0/(1-q))；全部 (C^2) 管几何都不承重。更强的局部短弦攻击表明，管内 FNE 加固定集与法向收缩会把每条足够短的 (S) 弦固定下来，迫使第二基本形式为零；正维紧无边界曲固定流形因此在对象层面不可能。
 - **独立审查与先行**：三席分别重构了 Fejér 恒等式、短弦/曲率障碍和凸集 salvage。Bërdëllima–Lauster–Luke (JFPA 24 (2022), Prop. 4(ii), Thm. 27/30) 已覆盖相同的 pointwise FNE 固定点 Fejér/收敛机制；显式 (q)-收缩只给初等几何级数推论。见 [FNE 反证审查](research/fne_falsification.md) 与 [独立短弦审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md)。
 - **淘汰范围与可回收结果**：淘汰“曲固定流形 + FNE + 已假设线性法向收缩”作为主要贡献。保留两个可复用 scope lemma：任意闭固定集上的 FNE+几何距离收缩给有限长；闭凸固定集上投影漂移满足 (|P_S(Jx)-P_Sx|\le(\sqrt q+q)d(x,S))。只有在从自然 PPA/GPPA 条件**推导**收缩、改用 almost-firm/曲率误差，或离开 Hilbert FNE 机制时才值得重启。
+# F103 · Full-graph strict weakening target for (A)+(B) is logically blocked
+
+- **尝试**：寻找一个不等同于 `(A)+(B)` 的结构性质 \(\mathcal P\)，满足传统次单调性与 metric subregularity \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)，并且在完整算子图上严格更弱。
+- **致命断点**：若 `(A)` 对完整图的每个 \((y,w)\) 成立，令 \(x=y+\lambda w\)，则
+  \(d(x,S)\le d(y,S)+\lambda\|w\|\)，故
+  \(d(y,S)\le\kappa[d(y,S)+\lambda\|w\|]\)，进而
+  \(d(y,S)\le\kappa\lambda(1-\kappa)^{-1}r_F(y)\)。所以 `(A)` 已经蕴含传统线性 metric subregularity；任何推出 `(A)` 的 full-graph \(\mathcal P\) 不可能严格弱于该条件。
+- **排除范围**：这不是命题本身错误，而是完整图量词与“严格弱于 metric subregularity”的要求冲突。若改为严格允许子关系，额外未选图支可以破坏完整 residual error bound；但此时结论只对选择策略成立，不能称完整算子性质。
+- **可回收成果**：保留目标三报告中的闭图 `(A)+(B)` 但失败 pairwise 次单调反例，以及 PTD 望远镜下降候选。PTD 直接给有限长度但不蕴含 `(B)`，不能冒充原任务要求的 \(\mathcal P\)。未来若要重启，应改变目标为“比 `(A)+(B)` 更弱但仍给有限长度”的性质，或明确限定选择关系和输出残差。

@@ -2694,3 +2694,21 @@
 - **Status**：candidate / major-potential conditional；作为 C307 的第二主线。
 - **Exact Statement**：对 \(F\in C^r\) 强单调、周期 SPD 度量 \(M_k\) 的精确变度量 PPA，令 \(P=D\Phi(0)\) 为 \(p\)-步 monodromy。若 \(P\) 有简单 multiplier \(1\)、其余谱严格在单位圆内，则离散中心流形约化的首个非零高阶 jet 系数 \(c_\ell\) 决定临界两侧收敛、排斥或单侧逃逸；若 \(\Phi\) 在中心方向恒等，才得到精确周期/准周期不收敛。
 - **Evidence / Objection**：已有精确 \(p=6\) 根式族 \(A=I+3J,\lambda=1/10,\delta=\pi/3,D=\operatorname{diag}(1,(3\sqrt3-2)/23)\)，线性谱为 \(\{1,q^6\}\)，\(q=(50-20\sqrt3)/39\)。对紧支平滑扰动 \(F_\varepsilon=Ax+\varepsilon\chi(\|x\|)\|x\|^2x\)，中心三阶系数为 \(156(-4643+243\sqrt3)/288923\ne0\)，符号翻转给出相反临界命运。C284/UI33 已有线性旋转发散，因此新颖性只能来自 PPA-specific 高阶分类、鲁棒性和全周期推广；通用中心流形黑箱本身不够。不要写“所有中心系数为零则周期”。详见 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
+
+## C309-v1 · 一般函数复合收缩的 PPA 长度接口
+
+- **Status**：`candidate`；函数迭代—长度推导已逐行重构，二维漂移图的完整 coverage 和全局 scope 仍待独立接收。
+- **Exact Statement**：令 \(X\) 为完备度量空间，\(S\subset X\) 非空闭，\(U\subset X\) 开，\(d(z)=d_X(z,S)\)，并令 \(T(x)\ne\varnothing\) 为允许后继关系。对所有 \(x\in U\) 及所有 \(y\in T(x)\)，若 \(d(y)\le\varphi(d(x))\)、\(\|y-x\|\le B(d(x))\)，其中 \(B,\varphi:[0,R]\to[0,\infty)\) 连续非减、\(B(0)=\varphi(0)=0\)、\(\varphi([0,R])\subset[0,R]\)，则 \(d_k\le\varphi^{\circ k}(d_0)\)。若 \(\varphi^{\circ k}(r)\to0\)，则 \(d_k\to0\)；若 \(\sum_{j\ge0}B(\varphi^{\circ j}(r))<\infty\)，则轨道有限长并满足对应尾界。严格局部预算为该级数小于到 \(X\setminus U\) 的距离，并另需后继 coverage。若 \(\Delta=t-\varphi(t)>0\) 且 \(B/\Delta\) 在先行进入的零邻域非增，\(\int_0^r B(t)/\Delta(t)\,dt<\infty\) 是该级数有限的充分门。
+- **Evidence / Objection**：证明见 [目标一报告](research/topics/next_stage_2026/target1_nonlinear_contraction.md) 和 [独立状态笔记](research/notes/target1_state.md)。\(\varphi(t)=t-t^p\)、\(B(t)=t\) 给出 \(p=2\) 的谐和临界。真实单调 PPA \(F(y)=y|y|\) 有完整带符号近端映射的非线性收缩，固定 \(\kappa<1\) 失败、metric subregularity 失败但总长度精确望远镜可和。该 Claim 不把抽象步长上界误写成实际步长等式。
+
+## C310-v1 · MOR-KL 条件版有限长度迁移
+
+- **Status**：`derived-checked`（仅限函数型精确 PPA 的条件迁移）；一般非单调 PPA 版本为 `open`。
+- **Exact Statement**：若精确近端轨道满足 MOR 的 H11 下降、H2 相对误差、H3 连续性、有界次水平集，并在聚点满足 KL，且 \(\phi^{-1}(\beta(s)t)/(\mu_1s+\mu_2t)\) 的极限上界不超过 1（\(\mu_1<1\)），则有限长度和点列收敛。普通精确 PPA 取 \(e_k=\|x^{k+1}-x^k\|\)、\(\phi(t)=t^2\)、\(\beta(t)=t\)、\(a=1/(2\lambda)\)、\(b=1/\lambda\)，(K1) 由 AM–GM 成立。
+- **Dependencies / Objections**：报告 [目标二](research/topics/next_stage_2026/target2_kl_finite_length.md) 和 [独立 KL 审查](research/notes/target2_kl.md) 逐项重构 Theorem 5.1 的证明。KL alone 不足：无 H11 的交替驻点序列满足 KL/H0/H2/H3 但不收敛。正式版 PDF 当前不可逐页访问，正式版与 arXiv v1 的全部差异仍 open。含 \(2\sigma s_k\) 的旧能量递推必须先吸收为 H11 或进入扩充 Lyapunov，不能直接删项。
+
+## C311-v1 · 完整图耦合条件的 metric-subregularity 障碍
+
+- **Status**：`derived-checked`（障碍引理）；任务书要求的严格弱化性质因此 `refuted` 作为 full-graph 目标，保留 strict-subrelation salvage。
+- **Exact Statement**：若对完整 \(\operatorname{gph}F\) 的每个 \((y,w)\) 令 \(x=y+\lambda w\) 并满足 \(d(y,S)\le\kappa d(x,S)\)、\(0\le\kappa<1\)，则 \(d(y,S)\le\frac{\kappa\lambda}{1-\kappa}r_F(y)\)。所以任何 full-graph 性质蕴含 (A) 已经蕴含传统线性 metric subregularity；不可能同时严格弱于后者并推出 (A)+(B)。
+- **Evidence / Scope**：证明和反例见 [目标三](research/topics/next_stage_2026/target3_coupled_structure.md) 和 [独立耦合审查](research/notes/target3_coupling.md)。完整闭图可满足 (A)+(B) 但失败 pairwise 次单调；若只对严格允许子关系取选中边，可有 (A)+(B) 而完整 \(F\) 不 metric-subregular，但不能把子关系结论升级为完整算子结论。PTD 望远镜下降候选能直接给有限长度，却不蕴含 (B)，故仍为 candidate。

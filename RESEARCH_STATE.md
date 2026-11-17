@@ -89,6 +89,12 @@
 
 现行规范保留 C157/C158 的选择文献边界，并新增 [C159 同 gauge 阶梯完整图](research/canonical/gauge_dilation_boundary.md#gd-theorem)、[C160 非负起步共同尾与同域 Lipschitz 选择](research/canonical/selection_quasi_arithmetic_boundary.md#qa-selection)。[SS1 全部763 LF](research/audit/SS1_FULL_COVERAGE.md#ss1-full)与[最终 foundations 全部2096 LF](research/audit/FOUNDATIONS_FINAL_COVERAGE.md#ff-scope)现均逐独立断言枚举；LP22/LMZ/P16更完整的原条件与倒数参数映射在[规范接口](research/canonical/selection_primary_interfaces.md)。C11/M1的直接边界与16张指定文献接口也已进入[规范层](research/canonical/c11_m1_literature_interfaces.md)，未读全文仍保留不可调用门。审计记录不承担缺失定义。受检链接续与全库语义完工分开；集成接收见[本批记录](research/audit/BLIND_RECEIPT_2026-10-05_FOUNDATIONS.md)。
 
+## 2026-11-17 三目标研究接入
+
+本轮三个独立报告已放在 [research/topics/next_stage_2026](research/topics/next_stage_2026/README.md)。目标一得到一般函数复合收缩—长度接口：\(d_{k+1}\le\varphi(d_k)\) 只给距离趋零，有限长度还需 \(\sum B(\varphi^{\circ k}(d_0))<\infty\)；\(F(y)=y|y|\) 的完整单调 PPA 是固定 \(\kappa\) 和线性 metric subregularity 都失败而长度仍望远镜可和的真实例。目标二逐式迁移 MOR Theorem 5.1 到函数型精确 PPA，保留 H11/H2/H3/KL；一般非单调 PPA 的 Lyapunov 桥仍 open。目标三证明 full-graph (A) 已蕴含线性 metric subregularity，故任务书要求的严格弱化性质在该量词下不可能；保留子关系边界、pairwise 次单调反例和 PTD 望远镜下降候选。
+
+下一步优先级：独立接收 C309 的函数级数证明和二维漂移图的 scope；为 C310 构造 PPA 可验证的 Lyapunov/relative-error 合同；将 C311 的 full-graph obstruction 与允许子关系的量词写入统一逻辑契约。任何一个方向都不得把 candidate 或 salvage 升格为已证明的统一定理。
+
 ## 完成判据
 
 “一个新研究者可沿**受检链**安全接续”与“全部历史材料已语义验收”是两个不同判断。整个研究地基完工需：规范正文不依赖历史目录补定义或证明；各 Claim 的空间、域、量词、状态及引用版本一致；承重合取边可从正文独立重建；来源单元分母完成并逐项去向明确；若原件缺失或数学仍开放，必须有精确 `source-report`/`open` 边界，不能假称关闭。本批隔离接收的实际范围和未完工边界见 [当前接收记录](research/audit/BLIND_RECEIPT_2026-10-07_CLEANUP.md)；C37证明修补见 [此前10/06记录](research/audit/BLIND_RECEIPT_2026-10-06.md#receipt-result)；先前全库受检范围见 [10/05 全库协调与 GX/AGM 接收记录](research/audit/BLIND_RECEIPT_2026-10-05_GX_AGM.md)；先前受检范围另见 [10/03 记录](research/audit/BLIND_RECEIPT_2026-10-03.md)。

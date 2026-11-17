@@ -9130,6 +9130,83 @@
       "y": 4578,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "T1-DINI-GATE": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "constellation",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3488,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T1-FUNCTION-CONTRACTION": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "ocean",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3488,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T2-KL-ONLY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "refuted",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T2-LMZ-KL-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T3-FULLGRAPH-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T3-PTD": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "ocean",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3300,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "T3-STRICT-WEAKENING": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "rift",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 3582,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11448,6 +11525,18 @@
     "E582": {
       "x": 3060.14,
       "y": 4418.98
+    },
+    "E-T1-DINI": {
+      "x": 3479.41,
+      "y": 3988.22
+    },
+    "E-T2-KL-ONLY": {
+      "x": 2915.41,
+      "y": 4079.22
+    },
+    "E-T3-STRICT": {
+      "x": 3561.12,
+      "y": 4348.22
     }
   },
   "bounds": {

@@ -355,8 +355,12 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 当前稿新增规范入口：[C242完整三角例](research/canonical/triangular_rleb.md)、[C243/C244固定SPD与Euler桥](research/canonical/rleb_kernel_topology_interfaces.md)。解析结论、有限计算和外部先行性保持不同证据范围。
 
+**2026-11-17 三目标研究入口：** [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 汇总非线性函数复合收缩、MOR-KL 有限长度迁移和 (A)+(B) 耦合结构的独立报告。C309 给出 \(\sum B(\varphi^{\circ k}(r))\) 长度门及 (F(y)=y|y|) 的非线性 PPA 例；C310 记录 MOR Theorem 5.1 到函数型精确 PPA 的 H11/H2/H3 映射及一般非单调迁移的开放桥；C311 证明完整图上的 (A) 已推出线性 metric subregularity，故严格弱化目标存在量词障碍。读取这三份报告时必须保留 full graph 与允许子关系的区别。
+
 | 新文件 | 数学资产与读取时机 |
 | --- | --- |
+| [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 及三份目标报告 | 2026-11-17 三个独立研究方向的规范入口：T1.1 函数复合收缩—长度接口、C310 的 MOR-KL 条件迁移、C311 的 full-graph 障碍与 PTD salvage。每次继续研究前先核对各自的量词、状态和开放义务。 |
+| [research/notes/target1_state.md](research/notes/target1_state.md)、[research/notes/target2_kl.md](research/notes/target2_kl.md)、[research/notes/target3_coupling.md](research/notes/target3_coupling.md) | 本轮独立审查笔记：分别保存非线性率的积分门与 PPA 边界、MOR v1 逐式 KL 审计及版本限制、(A)+(B) 的闭图反例和严格子关系边界。笔记是报告的证据补充，不替代规范报告中的精确结论。 |
 | [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
 | [research/canonical/amplitude_circle_hamilton.md](research/canonical/amplitude_circle_hamilton.md) | C256完整Clarke零集与全部纤维、全空间coverage、全分支曲率界、统一圆管、恰三输出、锐锚1/2与EB2、准确旧合同和正面能量替代。完整多值校准；C259经典正面已闭，强推荐撤回。 |
 | [research/canonical/amplitude_circle_damping_threshold.md](research/canonical/amplitude_circle_damping_threshold.md) | C257全实参数coverage、Γ>0锐圆零吸收/收敛门、每个正阻尼完全显式共同元组、锐距离1/(1+Γ)、真三输出持续、中心完整零纤维、全局二周期/负阻尼旋转；最大半径留门。 |

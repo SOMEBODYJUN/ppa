@@ -898,6 +898,14 @@
 | E576 | [GHB-ENDPOINT · C296 光滑梯度端点的正反见证](canonical/gradient_holder_budget.md#ghb-endpoint) | limits → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 闭合预算可能达到或不达到；不反驳统一下确界。；**derived-checked** |
 | E580 | [HMD-SELF · C293 Banach Hölder 位移的线性阶](canonical/holder_minimal_displacement.md#hmd-characteristic) | conditional → [HMD-FIXED · C301 固定 Hilbert 凸集与 Banach 单位球](canonical/holder_minimal_displacement.md#hmd-fixed) | 上界用空间包络；固定集下界另需 Lin–Sternfeld 与凸投影或径向截断。；**derived-checked** |
 
+## 2026 三目标研究
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E-T1-DINI | [T1-FUNCTION-CONTRACTION · T1.1 函数复合收缩—长度接口](topics/next_stage_2026/target1_nonlinear_contraction.md#t1-interface) | conditional → [T1-DINI-GATE · T1.6 收缩缺口 Dini 长度门](topics/next_stage_2026/target1_nonlinear_contraction.md#t1-dini) | 先行进入零邻域，Delta=t-phi>0 且 B/Delta 非增；只给长度级数充分门。；**candidate** |
+| E-T2-KL-ONLY | [T2-LMZ-KL-PPA · C310 MOR-KL 到精确 PPA 的条件迁移](topics/next_stage_2026/target2_kl_finite_length.md#t2-kl-ppa) | limits → [T2-KL-ONLY · 仅 KL 不给有限长度](topics/next_stage_2026/target2_kl_finite_length.md) | KL 迁移仍需 H11/H2/H3、有界次水平集及 (5.1)；不推出一般非单调 PPA。；**derived-checked** |
+| E-T3-STRICT | [T3-FULLGRAPH-OBSTRUCTION · C311 完整图 (A) 的 metric-subregularity 障碍](topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction) | refutes → [T3-STRICT-WEAKENING · 完整图上严格弱化且推出 (A)+(B) 的目标](topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction) | 完整图量词、A 对所有图点且 0<=kappa<1；若改为允许子关系则另有 scope。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
