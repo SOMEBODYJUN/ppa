@@ -4467,6 +4467,30 @@
       "label": "C302 精确近端的准解析动力学分界",
       "file": "canonical/quasianalytic_proximal_dichotomy.md#qpd-dichotomy",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-PPA",
+      "label": "C309 一般函数迭代 PPA 有限长度",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NG-KL",
+      "label": "C311 KL 次梯度 PPA 有限长度",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TC-NOGO",
+      "label": "C310 传统次单调性/MSR 不推出输出相对步长界",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "TC-CAND",
+      "label": "锚定扇区—相对平静性候选",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc",
+      "evidence_status": "candidate"
     }
   ],
   "edges": [
@@ -11158,6 +11182,39 @@
       "scope": "准解析侧另用 RSW 与 KL；非平凡聚点集要求维数至少二。",
       "status": "derived-checked",
       "topic": "局部RLEB与零集拓扑"
+    },
+    {
+      "id": "E583",
+      "inputs": [
+        "R01"
+      ],
+      "output": "NG-PPA",
+      "relation": "conditional",
+      "scope": "若允许转移已独立验证 NG6 的距离模 Phi 与 B-加权尾 NG7–NG8，则 C309 给有限长度；R01 只提供现有一步证书，不能单独生产任意 Phi。",
+      "status": "derived-checked",
+      "topic": "PPA 非线性收缩"
+    },
+    {
+      "id": "E585",
+      "inputs": [
+        "R01"
+      ],
+      "output": "TC-NOGO",
+      "relation": "refutes",
+      "scope": "最大单调 F(y)=sgn(y)|y|^alpha、0<alpha<1 的完整精确 PPA；传统 MSR 仍不推出 (B)。",
+      "status": "derived-checked",
+      "topic": "PPA 耦合条件障碍"
+    },
+    {
+      "id": "E586",
+      "inputs": [
+        "TC-CAND"
+      ],
+      "output": "NG-PPA",
+      "relation": "conditional",
+      "scope": "若 TC1–TC3 的 (A)+(B) 在同一允许关系上成立，并将输出相对步长改写为输入模，则可调用 C309；自然算子类验证仍 open。",
+      "status": "candidate",
+      "topic": "PPA 耦合条件障碍"
     }
   ]
 }

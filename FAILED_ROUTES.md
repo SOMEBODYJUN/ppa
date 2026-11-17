@@ -719,3 +719,11 @@
   因而 (t_{k+1}\le qt_k) 时每步不超过 (t_k)，总长至多 (t_0/(1-q))；全部 (C^2) 管几何都不承重。更强的局部短弦攻击表明，管内 FNE 加固定集与法向收缩会把每条足够短的 (S) 弦固定下来，迫使第二基本形式为零；正维紧无边界曲固定流形因此在对象层面不可能。
 - **独立审查与先行**：三席分别重构了 Fejér 恒等式、短弦/曲率障碍和凸集 salvage。Bërdëllima–Lauster–Luke (JFPA 24 (2022), Prop. 4(ii), Thm. 27/30) 已覆盖相同的 pointwise FNE 固定点 Fejér/收敛机制；显式 (q)-收缩只给初等几何级数推论。见 [FNE 反证审查](research/fne_falsification.md) 与 [独立短弦审查](research/audit/FNE_TUBULAR_INDEPENDENT_REVIEW_2026-11-15.md)。
 - **淘汰范围与可回收结果**：淘汰“曲固定流形 + FNE + 已假设线性法向收缩”作为主要贡献。保留两个可复用 scope lemma：任意闭固定集上的 FNE+几何距离收缩给有限长；闭凸固定集上投影漂移满足 (|P_S(Jx)-P_Sx|\le(\sqrt q+q)d(x,S))。只有在从自然 PPA/GPPA 条件**推导**收缩、改用 almost-firm/曲率误差，或离开 Hilbert FNE 机制时才值得重启。
+
+<a id="f103"></a>
+## F103 · 传统次单调性与度量次正则性被误用来推出输出相对步长界
+
+- **Attempt and break**：目标三尝试从传统次单调性与 metric subregularity 得到 \(d(y,S)\le\kappa d(x,S)\) 和 \(\|x-y\|\le B\,d(y,S)\)，再把两者解释成一个更弱的结构性质。前一条可以由某些 RLEB/EB 兼容门给出，后一条需要选中图值相对输出距离的上界；MSR 的方向是 \(d(y,S)\le K r_F(y)\)，并不提供 \(r_F(y)\le C d(y,S)\)。
+- **Fatal counterexample**：\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(0<\alpha<1\)，是最大单调梯度且满足 \(d(y,\{0\})\le r_F(y)\)。精确 PPA \(x=y+\lambda F(y)\) 在小尺度有 \(d(y,S)/d(x,S)\to0\)，但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)。因此原始 \(\text{传统条件}\Rightarrow\mathcal P\Rightarrow(A)+(B)\) 逻辑链被否定。
+- **Salvage**：保留 C310 的反例作为必要性障碍。可研究的修正版 \(\mathcal P_{\rm TC}\) 另加共同最近锚、正扇区和 selected-fiber calmness；其直接代数确实推出 (A)+(B)，但旧前件不自动蕴含它。证明与独立反例见 [C310/C310-v1](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) 与 [修正版](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc)。
+- **Restart gate**：任何声称“弱于传统假设”的新性质必须明确是否含 selected residual 上界或 anchor persistence，并给出不满足传统 MSR/单调性但满足候选性质的原生算子；不能把 (A)+(B) 重新命名为 \(\mathcal P\)。

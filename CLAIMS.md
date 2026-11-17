@@ -2694,3 +2694,31 @@
 - **Status**：candidate / major-potential conditional；作为 C307 的第二主线。
 - **Exact Statement**：对 \(F\in C^r\) 强单调、周期 SPD 度量 \(M_k\) 的精确变度量 PPA，令 \(P=D\Phi(0)\) 为 \(p\)-步 monodromy。若 \(P\) 有简单 multiplier \(1\)、其余谱严格在单位圆内，则离散中心流形约化的首个非零高阶 jet 系数 \(c_\ell\) 决定临界两侧收敛、排斥或单侧逃逸；若 \(\Phi\) 在中心方向恒等，才得到精确周期/准周期不收敛。
 - **Evidence / Objection**：已有精确 \(p=6\) 根式族 \(A=I+3J,\lambda=1/10,\delta=\pi/3,D=\operatorname{diag}(1,(3\sqrt3-2)/23)\)，线性谱为 \(\{1,q^6\}\)，\(q=(50-20\sqrt3)/39\)。对紧支平滑扰动 \(F_\varepsilon=Ax+\varepsilon\chi(\|x\|)\|x\|^2x\)，中心三阶系数为 \(156(-4643+243\sqrt3)/288923\ne0\)，符号翻转给出相反临界命运。C284/UI33 已有线性旋转发散，因此新颖性只能来自 PPA-specific 高阶分类、鲁棒性和全周期推广；通用中心流形黑箱本身不够。不要写“所有中心系数为零则周期”。详见 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
+
+<a id="c309"></a>
+## C309-v1 · 一般函数迭代的 PPA 有限长度与精确步长预算
+
+- **Status**：`derived-checked`；证明范围是明确给定的允许转移关系，不自动扩大到完整 \(J_{\lambda F}\)。
+- **Exact Statement / Objects / Domain**：\(X=\mathbb R^n\)，\(S\subset X\) 非空闭，\(U\subset X\) 开，\(U_R=\{x\in U:d(x,S)\le R\}\)。允许关系 \(\mathcal J(x)\ne\varnothing\)。存在非减 \(B,\Phi:[0,R]\to[0,R]\)，\(B(0)=\Phi(0)=0\)，\(B\) 在零连续；每个 \(x^+\in\mathcal J(x)\) 满足 \(d(x^+,S)\le\Phi(d(x,S))\) 与 \(\|x^+-x\|\le B(d(x,S))\)；每个 \(t\le R\) 的函数迭代趋零且 \(\Theta_\Phi(t)=\sum_{j\ge0}B(\Phi^{\circ j}(t))<\infty\)，并且 \(\Theta_\Phi(t)\to0\)。
+- **Conclusion**：若 \(\Theta_\Phi(d_0)<\operatorname{dist}(x^0,X\setminus U)\)，则每条允许轨道无限存在、留在 \(U_R\)、满足 \(d_k\le\Phi^{\circ k}(d_0)\)，并有 \(\sum_k\|x^{k+1}-x^k\|\le\Theta_\Phi(d_0)<\infty\)，从而收敛到 \(S\cap U\)。尾界为 \(\Theta_\Phi(\Phi^{\circ k}(d_0))\)。
+- **Sharp scalar boundary**：若 \(\Phi(t)\le t-ct^{1+q}\)、\(B(t)\le Ct^\alpha\)，则 \(\alpha>q\) 足以保证可和；等式递推 \(\Phi(t)=t-ct^{1+q}\) 在 \(\alpha\le q\) 时给出发散的标量步长预算。故 \(\Phi^{\circ k}(t)\to0\) 单独不够。
+- **Dependencies / Evidence**：[完整陈述与证明](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem)、[锐边界](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-sharpness)、C02-v3/C09 的一步 RLEB 估计及 C10 对数发散族。
+- **Counterevidence / Scope**：C309 需要 B-加权迭代级数；不把 LMZ 的 asymptotically shrinking 或 C09 的固定 \(\kappa\) 当作必要条件。尚未给出满足临界 \(\Phi(t)=t-ct^{1+q}\) 的自然完整 PPA 算子族，原生模型仍 open。
+
+<a id="c310"></a>
+## C310-v1 · 传统次单调性与度量次正则性不推出目标三的 (B)
+
+- **Status**：`refuted`，精确否定目标三所要求的前件蕴含；修正版结构另见本页 C310 的后继候选部分。
+- **Exact Statement / Objects / Domain**：\(X=\mathbb R\)、\(0<\alpha<1\)、\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(S=\{0\}\)、固定 \(\lambda>0\)、完整精确 PPA \(x=y+\lambda F(y)\)。该 \(F\) 是凸函数 \(|y|^{1+\alpha}/(1+\alpha)\) 的梯度，故最大单调；在 \(|y|\le1\) 上 \(d(y,S)=|y|\le r_F(y)=|y|^\alpha\)，所以线性 MSR 成立。
+- **Conclusion / Counterexample**：对 \(y>0\)，\(d(x,S)=y+\lambda y^\alpha\)、\(\|x-y\|=\lambda y^\alpha\)。因此 \(d(y,S)/d(x,S)\to0\)，(A) 在足够小窗口内对任意 \(\kappa\in(0,1)\) 成立；但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)，不存在有限 \(B\) 使 (B) 成立。
+- **Meaning**：这不是非单调、多值或不完整 resolvent 的病理；它证明“传统次单调性 + 线性 metric subregularity \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”在当前对象层面是错误的。C310 同时保留 (A) alone 与 (B) alone 的幂次对照例，以及圆周旋转对“距离收缩 \(\Rightarrow\) 点收敛”的反例。
+- **Dependencies / Evidence**：[反例逐项验证与修正版桥](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo)。
+
+<a id="c311"></a>
+## C311-v1 · KL 下降机制在次梯度 PPA 中替代传统 MSR 的有限长度证明
+
+- **Status**：`derived-checked`；只针对 exact subgradient PPA 和明确列出的 KL/下降/相对误差条件。
+- **Exact Statement / Objects / Domain**：\(f:\mathbb R^n\to(-\infty,+\infty]\) proper、下半连续、有下界；每步 \(x^{k+1}\in\arg\min_y\{f(y)+(2\lambda)^{-1}\|y-x^k\|^2\}\) 存在；相关子水平集有界；聚点 \(\bar x\) 满足序列上半连续条件；\(f\) 在 \(\bar x\) 满足 LMZ Definition 2.2 的 KL 性质；并且 \(w^{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1})\)。
+- **Conclusion**：近端下降给 \(f_{k+1}+(2\lambda)^{-1}e_k^2\le f_k\)，KL 与相对误差给 \(\Lambda_{k,k+1}\ge e_k^2/(2e_{k-1})\)，从而 \(e_k\le(e_{k-1}+\Lambda_{k,k+1})/\sqrt2\)。因此 \(\sum e_k<\infty\)，\(x^k\to\bar x\)，整个证明不使用传统 metric subregularity。
+- **Dependencies / Evidence**：[逐步重构](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl)、LMZ v1 Theorem 5.1 pp.12–13、H0–H3/H11、KL 定义。
+- **Counterevidence / Scope**：KL 是新的正则结构；结论不自动给距离到预指定 \(S\) 的速率，不自动覆盖一般多值 \(F\) 或 GPPA。正式刊本公式级差异尚未取得全文核对。
