@@ -63,7 +63,7 @@ d(y,S)\le \varphi(d(x,S)),\qquad \|y-x\|\le B(d(x,S)).
 \tag{T1.3}
 \]
 
-若 \(\mathcal L_\varphi(R)<\infty\)，则 \(r\le R\) 的所有初值有统一长度预算。若只在 \(U\) 内有这些条件，要求
+若 \(\mathcal L_\varphi(R)<\infty\)，则 \(r\le R\) 的所有初值有统一长度预算。若只在 \(U\) 内有这些条件，距离趋零的陈述必须限定为“对已经存在的无限合法轨道”；若要由前件构造无限轨道，则要么另加 \(T(x)\subset U_R\) 的前向 coverage，要么要求
 
 \[
 \mathcal L_\varphi(d_0)<\operatorname{dist}(x^0,X\setminus U)
@@ -103,12 +103,16 @@ d(y,S)\le \varphi(d(x,S)),\qquad \|y-x\|\le B(d(x,S)).
 \tag{T1.6}
 \]
 
-令 \(t_0=r\)、\(t_{j+1}=\varphi(t_j)\)。进入 \(r_0\) 后，等号标量轨道满足
+令 \(t_0=r\)、\(t_{j+1}=\varphi(t_j)\)。若存在有限 \(N\) 使 \(0<t_j\le r_0\) 对所有 \(j\ge N\)，并且 \(\Delta>0\)、\(B/\Delta\) 在 \((0,r_0]\) 非增，则等号标量轨道满足
 \[
 \int_{t_{j+1}}^{t_j}\frac{B(u)}{\Delta(u)}\,du\ge
 \frac{B(t_j)}{\Delta(t_j)}(t_j-t_{j+1})=B(t_j).
 \]
-求和得到 \(\sum_{j\ge N}B(t_j)\le\int_0^{t_N}B/\Delta\)，前缀有限；实际不等式轨道由 \(d_j\le t_j\) 和 \(B\) 非减性比较到等号轨道。对 (T1.5) 和 \(B(t)=t\)，(T1.6) 正好给出 \(p<2\)。
+求和得到
+\[
+\sum_{j\ge N}B(t_j)\le\int_0^{t_N}\frac{B(u)}{\Delta(u)}\,du,
+\]
+其中积分是 improper integral，前缀 \(\sum_{j<N}B(t_j)\) 另行加入；实际不等式轨道由 \(d_j\le t_j\) 和 \(B\) 非减性比较到等号轨道。若同一条件在 \((0,r]\) 上成立，才可把 \(N\) 取为 0。对 (T1.5) 和 \(B(t)=t\)，(T1.6) 正好给出 \(p<2\)。
 
 LMZ 的 asymptotically shrinking 条件比“每个固定初值的 \(\sum_j\varphi^{\circ j}(r)\) 有限”更强：它要求归一化尾和在 \(r\downarrow0\) 时统一有界。这个区别是局部统一收敛率与单条轨道有限长度之间的边界。
 
@@ -144,6 +148,12 @@ s_k=d_k-d_{k+1}=d_{k+1}^2,
 
 因此轨道有限长并收敛。这是一个完整的、单调的标量例子，证明“固定线性收缩”和“有限长度”不是同一层条件；它也证明非线性函数收缩可以覆盖传统 metric subregularity 不能覆盖的模型。另有 \(d_k\sim k^{-1}\) 和 \(\sum_k d_k=\infty\)，所以距离级数与物理步长级数再次分离。
 
+这里的有限长度使用实际 PPA 步长
+\[
+g(t):=\frac{\sqrt{1+4t}-1}{2},qquad B_*(t):=g(t)^2=t-g(t),
+\]
+因而 \(\sum_jB_*(g^{\circ j}(r))=r\)。它不等同于一般 RLEB 反射估计中的粗上界 \(B_\omega(t)=(t+\omega(t))/2\)；用 \(B(t)=t\) 只会得到发散的抽象预算，不能据此宣称实际轨道发散。
+
 ## 5. 距离收敛而点列不收敛的精确机制
 
 在 \(X=\mathbb R^2\)、\(S=\{0\}\times\mathbb R\) 上，局部允许转移可取
@@ -162,10 +172,10 @@ T(r,z)=(r-r^2,z+r),\qquad0<r\le R<1/2,
 
 ## 6. 与既有 C09/C10 的关系
 
-既有 C09 使用 \(\varphi(t)=\kappa t\) 和 \(B(t)=(t+\omega(t))/2\)，并以 \(\int_0^R\omega(t)\,dt/t<\infty\) 保证几何采样级数；C10 的对数接缝给出精确族
+既有 C09 使用 \(\varphi(t)=\kappa t\) 和 \(B(t)=(t+\omega(t))/2\)，并以 \(\int_0^R\omega(t)\,dt/t<\infty\) 保证几何采样级数；C10 的对数接缝给出精确族（取非零初值 \(d_0>0\)，并在进入对数分支后的 \(k\ge K\) 处）
 \[
 d_{k+1}=d_k/4,\qquad s_k\asymp[\log(e/d_0)+k\log4]^{-a},
 \]
-其中距离对所有 \(a>0\) 都趋零，但有限长度和点列收敛当且仅当 \(a>1\)。这说明 C09 的 \(\omega\)-Dini 步长门与 \(\Delta(t)\) 的 \(p=2\) 收缩缺口门是不同的条件，不能互换。
+其中距离对所有 \(a>0\) 都趋零，但有限长度和点列收敛当且仅当 \(a>1\)；\(a\le1\) 时切向坐标发散。\(d_0=0\) 是恒定轨道，不能代入对数式；大初值的有限前缀也不能用同一尾式覆盖。这说明 C09 的 \(\omega\)-Dini 步长门与 \(\Delta(t)\) 的 \(p=2\) 收缩缺口门是不同的条件，不能互换。
 
 **状态：** T1.1、T1.6 及标量 \(F(y)=y|y|\) 例可作为 `derived-checked` 候选进入接收；二维漂移例的图关系闭性、完整 resolvent coverage 和是否使用局部图块仍需独立接收，暂不升级为全局定理。

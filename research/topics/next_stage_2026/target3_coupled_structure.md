@@ -102,6 +102,30 @@ r_F(y)\le y^2,
 
 完整图 metric subregularity 失败；但额外分支不属于允许选择，故选中边的 (A)+(B) 仍成立。这准确显示了“完整图”与“允许子关系”不能混写。若任务要求 full graph，这个例子不满足量词，不能用来宣称弱化完成。
 
+### 3.5 传统次单调性与线性 MSR 甚至不能推出 (B)
+
+取 \(0<\alpha<1\)、\(X=\mathbb R\)、\(S=\{0\}\)，令
+\[
+F(y)=\operatorname{sgn}(y)|y|^\alpha.
+\]
+它是凸函数 \(|y|^{1+\alpha}/(1+\alpha)\) 的梯度，因而最大单调；在 \(|y|\le1\) 上
+\[
+d(y,S)=|y|\le |y|^\alpha=r_F(y),
+\]
+所以线性 metric subregularity 成立。精确 PPA 方程为
+\[
+x=y+\lambda\operatorname{sgn}(y)|y|^\alpha.
+\]
+对 \(y>0\)，有 \(d(x,S)=y+\lambda y^\alpha\)，
+
+\[
+\frac{d(y,S)}{d(x,S)}=\frac{1}{1+\lambda y^{\alpha-1}}\to0,
+\qquad
+\frac{\|x-y\|}{d(y,S)}=\lambda y^{\alpha-1}\to+\infty.
+\]
+
+因此 (A) 在足够小的窗口内对任意预先给定的 \(\kappa\in(0,1)\) 成立，而 (B) 对任何有限 \(B\) 都失败。这是完整、单调、满足线性 MSR 的反例，直接否定任务书要求的“传统次单调性+MSR \(\Rightarrow\mathcal P\Rightarrow\)(A)+(B)”前件箭头；不是非单调或不完整 resolvent 的病理。
+
 <a id="t3-ptd"></a>
 ## 4. 可回收的新结构：望远镜下降性质
 
@@ -137,6 +161,24 @@ d(x,S)-d(y,S)\ge(1-\kappa)d(x,S)\ge\frac{1-\kappa}{\kappa}d(y,S),
 
 所以任何固定 (B) 的 (B) 失败。这是为什么 PTD 应记录为 salvage candidate，而不能伪装成任务书所需的 \(\mathcal P\)。
 
+## 5. 一个有独立几何意义但尚未闭合前件箭头的候选
+
+为保留“不是把 (A)+(B) 改名”的正面路线，可定义允许转移上的锚定扇区—相对平静性：存在同一锚
+\(p\in P_S(x)\cap P_S(y)\)、常数 \(0<\mu<1/2\)、\(0\le\nu<1/2\)、\(c<\infty\)，使
+\[
+\langle y-p,x-y\rangle\ge \mu d(x,S)^2-\nu\|x-y\|^2,
+\qquad
+\left\|\frac{x-y}{\lambda}\right\|\le c\,d(y,S).
+\tag{TC}
+\]
+由于 \(p\in P_S(y)\)，距离恒等式给出
+\[
+(1-2\mu)d(x,S)^2\ge d(y,S)^2+(1-2\nu)\|x-y\|^2,
+\]
+从而 (A) 取 \(\kappa=\sqrt{1-2\mu}\)，(B) 取 \(B=\lambda c\)。该性质分别包含共同投影锚、正扇区和选中图值 calmness 三个可检查机制，故独立于把 (A)+(B) 并列写成定义。
+
+但第 3.5 节的最大单调反例表明传统次单调性+MSR 不推出 (TC) 的第二个分量；(TC) 目前只能作为 candidate。具体算子类中验证共同锚、扇区和选中纤维 calmness，是目标三下一步最有信息量的正面义务。
+
 ## 5. 当前结论与下一步
 
 目标三的真实结论是一个逻辑分界：
@@ -146,5 +188,5 @@ d(x,S)-d(y,S)\ge(1-\kappa)d(x,S)\ge\frac{1-\kappa}{\kappa}d(y,S),
 3. (A)+(B) 确实比 pairwise 次单调性宽，闭图离散反例给出严格证明。
 4. PTD 是一个独立、可验证、直接给有限长度的结构，但其结论严格弱于 (B)；它是下一阶段可继续研究的真实候选。
 
-**状态：** T3.1 为 `derived-checked`；离散闭图 pairwise 反例和严格子关系反例需独立接收后可升级；PTD 为 `candidate`，尚未发现同时满足任务书全部逻辑箭头的非包装性质。
+**状态：** T3.1 为 `derived-checked`；第 3.5 节反例和离散闭图反例均为逐项可核的 obstruction；PTD 与 (TC) 都是 `candidate`。任务书要求的“传统前件推出严格弱化 (mathcal P)”在当前对象层面已被第 3.5 节否定，不能把两个候选升格为该逻辑链的完成。
 

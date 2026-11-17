@@ -362,7 +362,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 新文件 | 数学资产与读取时机 |
 | --- | --- |
 | [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 及三份目标报告 | 2026-11-17 三个独立研究方向的补充报告：T1.1 函数复合收缩—长度接口、C311 的 MOR-KL 条件迁移、C310 的 full-graph/输出步长障碍与 PTD salvage。每次继续研究前先核对各自的量词、状态和开放义务。 |
-| [research/notes/target1_state.md](research/notes/target1_state.md)、[research/notes/target2_kl.md](research/notes/target2_kl.md)、[research/notes/target3_coupling.md](research/notes/target3_coupling.md) | 本轮独立审查笔记：分别保存非线性率的积分门与 PPA 边界、MOR v1 逐式 KL 审计及版本限制、(A)+(B) 的闭图反例和严格子关系边界。笔记是报告的证据补充，不替代规范报告中的精确结论。 |
+| [research/notes/target1_state.md](research/notes/target1_state.md)、[research/notes/target1_adversarial_review.md](research/notes/target1_adversarial_review.md)、[research/notes/target2_kl.md](research/notes/target2_kl.md)、[research/notes/target3_coupling.md](research/notes/target3_coupling.md) | 本轮独立审查笔记：保存非线性率的积分门与 PPA 边界、目标一的量词/Dini/粗步长攻击、MOR v1 逐式 KL 审计及版本限制、(A)+(B) 的闭图反例和严格子关系边界。笔记是报告的证据补充，不替代规范报告中的精确结论。 |
 | [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
 | [research/canonical/amplitude_circle_hamilton.md](research/canonical/amplitude_circle_hamilton.md) | C256完整Clarke零集与全部纤维、全空间coverage、全分支曲率界、统一圆管、恰三输出、锐锚1/2与EB2、准确旧合同和正面能量替代。完整多值校准；C259经典正面已闭，强推荐撤回。 |
 | [research/canonical/amplitude_circle_damping_threshold.md](research/canonical/amplitude_circle_damping_threshold.md) | C257全实参数coverage、Γ>0锐圆零吸收/收敛门、每个正阻尼完全显式共同元组、锐距离1/(1+Γ)、真三输出持续、中心完整零纤维、全局二周期/负阻尼旋转；最大半径留门。 |
