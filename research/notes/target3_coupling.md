@@ -18,7 +18,7 @@
 若需要原算子，取 `w=(x−y)/λ∈F(y)`。必须区分 `𝒜` 是允许子关系还是完整关系
 
 \[
- \mathcal G=\{(y,w): (y+\lambda w,y)inmathcal A\}
+ \mathcal G=\{(y,w): (y+\lambda w,y)\in\mathcal A\}
  \quad\text{与}\quad \operatorname{gph}F.
 \]
 
@@ -48,7 +48,7 @@
  \qquad r_F(y)=\inf_{vin F(y)}\|v\|.
 \]
 
-若文献采用另一种次单调缺陷（例如以 (|w-w'|^2) 为分母），必须重新核算；本文的“失败次单调”专指上面的 (SM)，即 Minty 输入差的版本。
+若文献采用另一种次单调缺陷（例如以 `‖w−w′‖²` 为分母），必须重新核算；本文的“失败次单调”专指上面的 (SM)，即 Minty 输入差的版本。
 
 ## 2. 一个不能绕过的完整图障碍
 
@@ -58,7 +58,7 @@
 `x=y+λw` 是该点对应的输入。则
 
 \[
- d(y,S)\le \\frac{\\kappa\\lambda}{1-\\kappa}\\,r_F(y).
+ d(y,S)\le \frac{\kappa\lambda}{1-\kappa}\,r_F(y).
 \tag{2.1}
 \]
 
@@ -223,7 +223,7 @@
  = (S\times\{0\})\cup\{(y_n,w_n):n\in\mathbb N\cup\{\infty\}\}.
 \]
 
-相应输入—输出转移是 (x_n\mapsto y_n)，以及 `s↦s`（`s∈S`）。图的极限点已经加入，因此这是闭图；零集恰为 `S`。对每个 `n`，
+相应输入—输出转移是 `x_n↦y_n`，以及 `s↦s`（`s∈S`）。图的极限点已经加入，因此这是闭图；零集恰为 `S`。对每个 `n`，
 
 \[
  d(x_n,S)=3,\quad d(y_n,S)=1,\quad
