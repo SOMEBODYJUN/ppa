@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+**2026-11-17 PPA 下一阶段入口**：[启动报告](research/audit/PPA_NEXT_STAGE_2026-11-17.md)恢复了普通 PPA/GPPA 的 G1–G4、C02-v3/C09 和上传投稿源，并把导师的三个方向固定为三个不同的数学对象。[C309](CLAIMS.md#c309) 用一般函数迭代 \(\Phi^{\circ k}\) 替换固定 \(\kappa^k\)，同时保留精确步长预算 \(\sum B(\Phi^{\circ j}(t))\)；[C311](CLAIMS.md#c311) 从 LMZ v1 Theorem 5.1 重构 exact subgradient PPA 的 KL 有限长度接口；[C310](CLAIMS.md#c310) 以最大单调 \(F(y)=\operatorname{sgn}(y)|y|^\alpha\) 反驳“传统次单调性+MSR 自动推出输出相对步长界 (B)”。三条路线不强行合并；C309 的原生临界模型、C311 的一般多值/GPPA Lyapunov 桥和修正版 \(\mathcal P_{\rm TC}\) 仍是活跃义务。
+
 本轮 idea 队列与去重裁决见 [2026-11-15 候选前沿索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。当前最值得继续验证的是 C307 的准解析 Denjoy–Carleman 有界变步 sharp 分界；C308 的周期 SPD 变度量 Floquet 中心流形判据作为第二主线。两者均为 candidate，尚未闭合，不得当作现成定理。
 
 [当前候选前沿](CLAIMS.md#c303)记录本轮三条相互独立的研究入口：二阶阻尼梯度系统的相空间开盆域圆形非收敛（及其变量步惯性 PPA 桥）、纯 Gram GPPA 近端的候选精确 \(3/7\) 两点指数，以及固定 radial-twist 单调反绕行门。它们均保持 candidate 状态；二阶连续证明稿、管估计和离散桥审查分别见 [proof v1](research/topics/path_dynamics/second_order_open_basin_proof_v1.md)、[HJ lemma](research/topics/path_dynamics/hj_tube_estimates_v1.md) 与 [bridge review](research/audit/C303_BRIDGE_REVIEW_ROUND2_2026-11-15.md)。新增的 FNE 管状固定流形方向已由三席独立审查判为淘汰，详见 [C306](CLAIMS.md#c306) 与 [F102](FAILED_ROUTES.md#f102)。读者不得把这些候选当作已闭定理。
@@ -355,11 +357,11 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 当前稿新增规范入口：[C242完整三角例](research/canonical/triangular_rleb.md)、[C243/C244固定SPD与Euler桥](research/canonical/rleb_kernel_topology_interfaces.md)。解析结论、有限计算和外部先行性保持不同证据范围。
 
-**2026-11-17 三目标研究入口：** [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 汇总非线性函数复合收缩、MOR-KL 有限长度迁移和 (A)+(B) 耦合结构的独立报告。C309 给出 \(\sum B(\varphi^{\circ k}(r))\) 长度门及 (F(y)=y|y|) 的非线性 PPA 例；C310 记录 MOR Theorem 5.1 到函数型精确 PPA 的 H11/H2/H3 映射及一般非单调迁移的开放桥；C311 证明完整图上的 (A) 已推出线性 metric subregularity，故严格弱化目标存在量词障碍。读取这三份报告时必须保留 full graph 与允许子关系的区别。
+**2026-11-17 三目标研究入口：** [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 汇总非线性函数复合收缩、MOR-KL 有限长度迁移和 (A)+(B) 耦合结构的独立报告。C309 给出 \(\sum B(\varphi^{\circ k}(r))\) 长度门及 (F(y)=y|y|) 的非线性 PPA 例；C311 记录 MOR Theorem 5.1 到函数型精确 PPA 的 H11/H2/H3 映射及一般非单调迁移的开放桥；C310 记录传统次单调性/MSR 不推出目标三的输出相对步长界，并保留完整图 (A) 的 MSR 障碍。读取这三份报告时必须保留 full graph 与允许子关系的区别。
 
 | 新文件 | 数学资产与读取时机 |
 | --- | --- |
-| [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 及三份目标报告 | 2026-11-17 三个独立研究方向的规范入口：T1.1 函数复合收缩—长度接口、C310 的 MOR-KL 条件迁移、C311 的 full-graph 障碍与 PTD salvage。每次继续研究前先核对各自的量词、状态和开放义务。 |
+| [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 及三份目标报告 | 2026-11-17 三个独立研究方向的补充报告：T1.1 函数复合收缩—长度接口、C311 的 MOR-KL 条件迁移、C310 的 full-graph/输出步长障碍与 PTD salvage。每次继续研究前先核对各自的量词、状态和开放义务。 |
 | [research/notes/target1_state.md](research/notes/target1_state.md)、[research/notes/target2_kl.md](research/notes/target2_kl.md)、[research/notes/target3_coupling.md](research/notes/target3_coupling.md) | 本轮独立审查笔记：分别保存非线性率的积分门与 PPA 边界、MOR v1 逐式 KL 审计及版本限制、(A)+(B) 的闭图反例和严格子关系边界。笔记是报告的证据补充，不替代规范报告中的精确结论。 |
 | [research/canonical/free_particle_rleb.md](research/canonical/free_particle_rleb.md) | C246完整全图逆式、同一常数的全对/锚定/真EB证书、锐指数及所有闭式轨道；C247全部SPD二次根和实际发散；C241-v2原对象更短锚证。比较非Lipschitz示例或换度量时读取。 |
 | [research/canonical/amplitude_circle_hamilton.md](research/canonical/amplitude_circle_hamilton.md) | C256完整Clarke零集与全部纤维、全空间coverage、全分支曲率界、统一圆管、恰三输出、锐锚1/2与EB2、准确旧合同和正面能量替代。完整多值校准；C259经典正面已闭，强推荐撤回。 |
@@ -380,3 +382,6 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/gram_regression_gppa.md](research/canonical/gram_regression_gppa.md) | C270自然欠定矩阵回归、退化Gram核、共同物理证书、显式极限与锐1/3读出；经典正面并列，prox锐3/7未闭。 |
 | [最新应用筛选](发表成果整理/应用优势筛选_结构边界.md)、[规范接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md) | 本轮四轴评价、全关系攻击、经典正面淘汰、原例关键角色及具体改稿清单；强应用主例仍未找到。 |
 | [research/canonical/affine_crosstalk_rleb.md](research/canonical/affine_crosstalk_rleb.md) | C271短直线控制设计：每模式唯一真实标量逆、原union多值、完整共同RLEB窗/trueinf/政策终点、参数远门和fixedSPD完整反例；全域原机械能更强，强推荐仍撤回。 |
+
+| [research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md) | C309/C310/C311 的规范正文：一般函数迭代的 PPA 长度预算、LMZ KL 到 exact subgradient PPA 的有限长度重构、目标三的最大单调 MSR 反例及锚定扇区—相对平静性修正版候选。研究非线性收缩、KL 迁移或 (A)+(B) 时先读。 |
+| [research/audit/PPA_NEXT_STAGE_2026-11-17.md](research/audit/PPA_NEXT_STAGE_2026-11-17.md) | 本轮五项交付的研究状态报告：现有定理/G1–G4、LMZ 正式版元数据与 arXiv v1 页码、三个目标问题表、联合路线和 proof obligations。正式刊本全文未取得的边界在此记录。 |

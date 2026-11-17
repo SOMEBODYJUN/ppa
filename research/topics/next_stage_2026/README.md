@@ -10,6 +10,8 @@
 
 共同约定：\(S\subseteq\operatorname{zer}F\) 非空闭，\(\lambda>0\)，\(x^+=y\in J_{\lambda F}(x)\)，\(d(x)=d(x,S)\)，\(s=\|x-y\|\)。完整图和允许的局部图块必须分开标记；计算和有限搜索只作为证据，不作为证明。
 
+本轮更完整的规范正文位于 [ppa_nonlinear_gauge_and_coupled_obstruction.md](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md)，启动审计与精确问题表位于 [PPA_NEXT_STAGE_2026-11-17.md](../../audit/PPA_NEXT_STAGE_2026-11-17.md)。本目录的三份报告保留更细的逐目标推导、边界例和独立审查；全局 Claim 身份以 C309（目标一）、C311（目标二）和 C310（目标三）为准。
+
 ## 论文事实的来源边界
 
 Li、Mordukhovich、Zhu 的正式出版记录确认论文于 2026-04-07 online，出版社给出的题名、作者和摘要见 DOI 页面；arXiv 记录为 2406.13207v1（2024-06-19），全文证明在本轮以 arXiv PDF 抽取文本核读。出版社 PDF 在当前环境重定向到摘要页，因此正式版逐页差异没有被猜测性补写；报告中标为“formal-version unknown”的内容保持开放。

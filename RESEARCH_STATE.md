@@ -1,5 +1,11 @@
 # 当前研究状态
 
+## 2026-11-17 PPA 三方向启动结果
+
+本轮恢复并核对了普通 PPA/GPPA 主链、G1–G4、C02-v3/C09 的真残差与 Dini 条件，以及 2026-11-12 投稿源。新增 [C309](CLAIMS.md#c309)：在允许转移上把固定 \(\kappa\) 替换为一般非减 \(\Phi\)，其正确有限长度门是 \(\sum_j B(\Phi^{\circ j}(t))<\infty\)，而不是单独的 \(\Phi^{\circ j}(t)\to0\)。新增 [C311](CLAIMS.md#c311)：按 Li–Mordukhovich–Zhu arXiv v1 Theorem 5.1 逐步重构 exact subgradient PPA 的 KL 有限长度证明；它去掉传统 metric subregularity 的一个证明接口，但保留 KL、下降、相对误差和 Lyapunov 结构。新增 [C310](CLAIMS.md#c310)：最大单调且满足线性 MSR 的 \(F(y)=\operatorname{sgn}(y)|y|^\alpha\)（\(0<\alpha<1\)）仍不满足目标三的输出相对步长界 (B)，所以“传统次单调性+MSR \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”原链已 refuted。修正版 \(\mathcal P_{\rm TC}\) 只作为 candidate，需独立验证锚持久性、正扇区和选中图值 calmness。
+
+本轮报告见 [PPA 下一阶段启动报告](research/audit/PPA_NEXT_STAGE_2026-11-17.md)，证明与反例见 [非线性 gauge/KL/耦合障碍正文](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md)。LMZ 正式版的 DOI、作者和 2026-04-07 在线元数据已核；正式 PDF 当前只能取得摘要/访问 HTML，公式级刊本差异未定，不能将 v1 定理编号自动归给刊本。
+
 ## 2026-11-15 新增候选队列
 
 本轮独立探索与去重详见 [idea frontier index](research/audit/IDEA_FRONTIER_2026-11-15.md)。当前主队列是 [C307 准解析—有界变步 PPA sharp 分界](research/candidates/quasianalytic_variable_step_schedule.md)：正向变步下降/相对误差已由独立复核确认，非准解析侧的 schedule-specific 两步周期 Whitney/Beurling 构造与统一 Hessian margin仍未闭。第二主线是 C308 周期 SPD 变度量 PPA 的 Floquet 临界中心流形；已有精确六周期根式例和非零三阶系数，但一般周期 cocycle 定理、finite-order/flat remainder 条件及与 C284 的增量边界仍需验证。多值 GPPA 指数—值域桥、Gibbs JSR 等价、网络 Perron 三分界、Bernstein completion 和 \(L^p\) Jung 影子已在该索引中记录为淘汰或重复，不应再次无意识重开。
@@ -93,7 +99,7 @@
 
 本轮三个独立报告已放在 [research/topics/next_stage_2026](research/topics/next_stage_2026/README.md)。目标一得到一般函数复合收缩—长度接口：\(d_{k+1}\le\varphi(d_k)\) 只给距离趋零，有限长度还需 \(\sum B(\varphi^{\circ k}(d_0))<\infty\)；\(F(y)=y|y|\) 的完整单调 PPA 是固定 \(\kappa\) 和线性 metric subregularity 都失败而长度仍望远镜可和的真实例。目标二逐式迁移 MOR Theorem 5.1 到函数型精确 PPA，保留 H11/H2/H3/KL；一般非单调 PPA 的 Lyapunov 桥仍 open。目标三证明 full-graph (A) 已蕴含线性 metric subregularity，故任务书要求的严格弱化性质在该量词下不可能；保留子关系边界、pairwise 次单调反例和 PTD 望远镜下降候选。
 
-下一步优先级：独立接收 C309 的函数级数证明和二维漂移图的 scope；为 C310 构造 PPA 可验证的 Lyapunov/relative-error 合同；将 C311 的 full-graph obstruction 与允许子关系的量词写入统一逻辑契约。任何一个方向都不得把 candidate 或 salvage 升格为已证明的统一定理。
+下一步优先级：独立接收 C309 的函数级数证明和二维漂移图的 scope；为 C311 构造一般非单调 PPA 可验证的 Lyapunov/relative-error 合同；将 C310 的 full-graph obstruction、输出相对步长反例与允许子关系的量词写入统一逻辑契约。任何一个方向都不得把 candidate 或 salvage 升格为已证明的统一定理。
 
 ## 完成判据
 

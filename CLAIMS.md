@@ -2695,20 +2695,30 @@
 - **Exact Statement**：对 \(F\in C^r\) 强单调、周期 SPD 度量 \(M_k\) 的精确变度量 PPA，令 \(P=D\Phi(0)\) 为 \(p\)-步 monodromy。若 \(P\) 有简单 multiplier \(1\)、其余谱严格在单位圆内，则离散中心流形约化的首个非零高阶 jet 系数 \(c_\ell\) 决定临界两侧收敛、排斥或单侧逃逸；若 \(\Phi\) 在中心方向恒等，才得到精确周期/准周期不收敛。
 - **Evidence / Objection**：已有精确 \(p=6\) 根式族 \(A=I+3J,\lambda=1/10,\delta=\pi/3,D=\operatorname{diag}(1,(3\sqrt3-2)/23)\)，线性谱为 \(\{1,q^6\}\)，\(q=(50-20\sqrt3)/39\)。对紧支平滑扰动 \(F_\varepsilon=Ax+\varepsilon\chi(\|x\|)\|x\|^2x\)，中心三阶系数为 \(156(-4643+243\sqrt3)/288923\ne0\)，符号翻转给出相反临界命运。C284/UI33 已有线性旋转发散，因此新颖性只能来自 PPA-specific 高阶分类、鲁棒性和全周期推广；通用中心流形黑箱本身不够。不要写“所有中心系数为零则周期”。详见 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
 
-## C309-v1 · 一般函数复合收缩的 PPA 长度接口
+<a id="c309"></a>
+## C309-v1 · 一般函数迭代的 PPA 有限长度与精确步长预算
 
-- **Status**：`candidate`；函数迭代—长度推导已逐行重构，二维漂移图的完整 coverage 和全局 scope 仍待独立接收。
-- **Exact Statement**：令 \(X\) 为完备度量空间，\(S\subset X\) 非空闭，\(U\subset X\) 开，\(d(z)=d_X(z,S)\)，并令 \(T(x)\ne\varnothing\) 为允许后继关系。对所有 \(x\in U\) 及所有 \(y\in T(x)\)，若 \(d(y)\le\varphi(d(x))\)、\(\|y-x\|\le B(d(x))\)，其中 \(B,\varphi:[0,R]\to[0,\infty)\) 连续非减、\(B(0)=\varphi(0)=0\)、\(\varphi([0,R])\subset[0,R]\)，则 \(d_k\le\varphi^{\circ k}(d_0)\)。若 \(\varphi^{\circ k}(r)\to0\)，则 \(d_k\to0\)；若 \(\sum_{j\ge0}B(\varphi^{\circ j}(r))<\infty\)，则轨道有限长并满足对应尾界。严格局部预算为该级数小于到 \(X\setminus U\) 的距离，并另需后继 coverage。若 \(\Delta=t-\varphi(t)>0\) 且 \(B/\Delta\) 在先行进入的零邻域非增，\(\int_0^r B(t)/\Delta(t)\,dt<\infty\) 是该级数有限的充分门。
-- **Evidence / Objection**：证明见 [目标一报告](research/topics/next_stage_2026/target1_nonlinear_contraction.md) 和 [独立状态笔记](research/notes/target1_state.md)。\(\varphi(t)=t-t^p\)、\(B(t)=t\) 给出 \(p=2\) 的谐和临界。真实单调 PPA \(F(y)=y|y|\) 有完整带符号近端映射的非线性收缩，固定 \(\kappa<1\) 失败、metric subregularity 失败但总长度精确望远镜可和。该 Claim 不把抽象步长上界误写成实际步长等式。
+- **Status**：`derived-checked`；证明范围是明确给定的允许转移关系，不自动扩大到完整 \(J_{\lambda F}\)。
+- **Exact Statement / Objects / Domain**：\(X=\mathbb R^n\)，\(S\subset X\) 非空闭，\(U\subset X\) 开，\(U_R=\{x\in U:d(x,S)\le R\}\)。允许关系 \(\mathcal J(x)\ne\varnothing\)。存在非减 \(B,\Phi:[0,R]\to[0,R]\)，\(B(0)=\Phi(0)=0\)，\(B\) 在零连续；每个 \(x^+\in\mathcal J(x)\) 满足 \(d(x^+,S)\le\Phi(d(x,S))\) 与 \(\|x^+-x\|\le B(d(x,S))\)；每个 \(t\le R\) 的函数迭代趋零且 \(\Theta_\Phi(t)=\sum_{j\ge0}B(\Phi^{\circ j}(t))<\infty\)，并且 \(\Theta_\Phi(t)\to0\)。
+- **Conclusion**：若 \(\Theta_\Phi(d_0)<\operatorname{dist}(x^0,X\setminus U)\)，则每条允许轨道无限存在、留在 \(U_R\)、满足 \(d_k\le\Phi^{\circ k}(d_0)\)，并有 \(\sum_k\|x^{k+1}-x^k\|\le\Theta_\Phi(d_0)<\infty\)，从而收敛到 \(S\cap U\)。尾界为 \(\Theta_\Phi(\Phi^{\circ k}(d_0))\)。
+- **Sharp scalar boundary**：若 \(\Phi(t)\le t-ct^{1+q}\)、\(B(t)\le Ct^\alpha\)，则 \(\alpha>q\) 足以保证可和；等式递推 \(\Phi(t)=t-ct^{1+q}\) 在 \(\alpha\le q\) 时给出发散的标量步长预算。故 \(\Phi^{\circ k}(t)\to0\) 单独不够。
+- **Dependencies / Evidence**：[完整陈述与证明](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem)、[锐边界](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-sharpness)、C02-v3/C09 的一步 RLEB 估计及 C10 对数发散族。
+- **Counterevidence / Scope**：C309 需要 B-加权迭代级数；不把 LMZ 的 asymptotically shrinking 或 C09 的固定 \(\kappa\) 当作必要条件。尚未给出满足临界 \(\Phi(t)=t-ct^{1+q}\) 的自然完整 PPA 算子族，原生模型仍 open。
 
-## C310-v1 · MOR-KL 条件版有限长度迁移
+<a id="c310"></a>
+## C310-v1 · 传统次单调性与度量次正则性不推出目标三的 (B)
 
-- **Status**：`derived-checked`（仅限函数型精确 PPA 的条件迁移）；一般非单调 PPA 版本为 `open`。
-- **Exact Statement**：若精确近端轨道满足 MOR 的 H11 下降、H2 相对误差、H3 连续性、有界次水平集，并在聚点满足 KL，且 \(\phi^{-1}(\beta(s)t)/(\mu_1s+\mu_2t)\) 的极限上界不超过 1（\(\mu_1<1\)），则有限长度和点列收敛。普通精确 PPA 取 \(e_k=\|x^{k+1}-x^k\|\)、\(\phi(t)=t^2\)、\(\beta(t)=t\)、\(a=1/(2\lambda)\)、\(b=1/\lambda\)，(K1) 由 AM–GM 成立。
-- **Dependencies / Objections**：报告 [目标二](research/topics/next_stage_2026/target2_kl_finite_length.md) 和 [独立 KL 审查](research/notes/target2_kl.md) 逐项重构 Theorem 5.1 的证明。KL alone 不足：无 H11 的交替驻点序列满足 KL/H0/H2/H3 但不收敛。正式版 PDF 当前不可逐页访问，正式版与 arXiv v1 的全部差异仍 open。含 \(2\sigma s_k\) 的旧能量递推必须先吸收为 H11 或进入扩充 Lyapunov，不能直接删项。
+- **Status**：`refuted`，精确否定目标三所要求的前件蕴含；修正版结构另见本页 C310 的后继候选部分。
+- **Exact Statement / Objects / Domain**：\(X=\mathbb R\)、\(0<\alpha<1\)、\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(S=\{0\}\)、固定 \(\lambda>0\)、完整精确 PPA \(x=y+\lambda F(y)\)。该 \(F\) 是凸函数 \(|y|^{1+\alpha}/(1+\alpha)\) 的梯度，故最大单调；在 \(|y|\le1\) 上 \(d(y,S)=|y|\le r_F(y)=|y|^\alpha\)，所以线性 MSR 成立。
+- **Conclusion / Counterexample**：对 \(y>0\)，\(d(x,S)=y+\lambda y^\alpha\)、\(\|x-y\|=\lambda y^\alpha\)。因此 \(d(y,S)/d(x,S)\to0\)，(A) 在足够小窗口内对任意 \(\kappa\in(0,1)\) 成立；但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)，不存在有限 \(B\) 使 (B) 成立。
+- **Meaning**：这不是非单调、多值或不完整 resolvent 的病理；它证明“传统次单调性 + 线性 metric subregularity \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”在当前对象层面是错误的。C310 同时保留 (A) alone 与 (B) alone 的幂次对照例，以及圆周旋转对“距离收缩 \(\Rightarrow\) 点收敛”的反例。
+- **Dependencies / Evidence**：[反例逐项验证与修正版桥](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo)。
 
-## C311-v1 · 完整图耦合条件的 metric-subregularity 障碍
+<a id="c311"></a>
+## C311-v1 · KL 下降机制在次梯度 PPA 中替代传统 MSR 的有限长度证明
 
-- **Status**：`derived-checked`（障碍引理）；任务书要求的严格弱化性质因此 `refuted` 作为 full-graph 目标，保留 strict-subrelation salvage。
-- **Exact Statement**：若对完整 \(\operatorname{gph}F\) 的每个 \((y,w)\) 令 \(x=y+\lambda w\) 并满足 \(d(y,S)\le\kappa d(x,S)\)、\(0\le\kappa<1\)，则 \(d(y,S)\le\frac{\kappa\lambda}{1-\kappa}r_F(y)\)。所以任何 full-graph 性质蕴含 (A) 已经蕴含传统线性 metric subregularity；不可能同时严格弱于后者并推出 (A)+(B)。
-- **Evidence / Scope**：证明和反例见 [目标三](research/topics/next_stage_2026/target3_coupled_structure.md) 和 [独立耦合审查](research/notes/target3_coupling.md)。完整闭图可满足 (A)+(B) 但失败 pairwise 次单调；若只对严格允许子关系取选中边，可有 (A)+(B) 而完整 \(F\) 不 metric-subregular，但不能把子关系结论升级为完整算子结论。PTD 望远镜下降候选能直接给有限长度，却不蕴含 (B)，故仍为 candidate。
+- **Status**：`derived-checked`；只针对 exact subgradient PPA 和明确列出的 KL/下降/相对误差条件。
+- **Exact Statement / Objects / Domain**：\(f:\mathbb R^n\to(-\infty,+\infty]\) proper、下半连续、有下界；每步 \(x^{k+1}\in\arg\min_y\{f(y)+(2\lambda)^{-1}\|y-x^k\|^2\}\) 存在；相关子水平集有界；聚点 \(\bar x\) 满足序列上半连续条件；\(f\) 在 \(\bar x\) 满足 LMZ Definition 2.2 的 KL 性质；并且 \(w^{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1})\)。
+- **Conclusion**：近端下降给 \(f_{k+1}+(2\lambda)^{-1}e_k^2\le f_k\)，KL 与相对误差给 \(\Lambda_{k,k+1}\ge e_k^2/(2e_{k-1})\)，从而 \(e_k\le(e_{k-1}+\Lambda_{k,k+1})/\sqrt2\)。因此 \(\sum e_k<\infty\)，\(x^k\to\bar x\)，整个证明不使用传统 metric subregularity。
+- **Dependencies / Evidence**：[逐步重构](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl)、LMZ v1 Theorem 5.1 pp.12–13、H0–H3/H11、KL 定义。
+- **Counterevidence / Scope**：KL 是新的正则结构；结论不自动给距离到预指定 \(S\) 的速率，不自动覆盖一般多值 \(F\) 或 GPPA。正式刊本公式级差异尚未取得全文核对。

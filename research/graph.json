@@ -4469,45 +4469,27 @@
       "evidence_status": "derived-checked"
     },
     {
-      "id": "T1-FUNCTION-CONTRACTION",
-      "label": "T1.1 函数复合收缩—长度接口",
-      "file": "topics/next_stage_2026/target1_nonlinear_contraction.md#t1-interface",
-      "evidence_status": "candidate"
-    },
-    {
-      "id": "T1-DINI-GATE",
-      "label": "T1.6 收缩缺口 Dini 长度门",
-      "file": "topics/next_stage_2026/target1_nonlinear_contraction.md#t1-dini",
-      "evidence_status": "candidate"
-    },
-    {
-      "id": "T2-LMZ-KL-PPA",
-      "label": "C310 MOR-KL 到精确 PPA 的条件迁移",
-      "file": "topics/next_stage_2026/target2_kl_finite_length.md#t2-kl-ppa",
+      "id": "NG-PPA",
+      "label": "C309 一般函数迭代 PPA 有限长度",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem",
       "evidence_status": "derived-checked"
     },
     {
-      "id": "T2-KL-ONLY",
-      "label": "仅 KL 不给有限长度",
-      "file": "topics/next_stage_2026/target2_kl_finite_length.md",
-      "evidence_status": "refuted"
-    },
-    {
-      "id": "T3-FULLGRAPH-OBSTRUCTION",
-      "label": "C311 完整图 (A) 的 metric-subregularity 障碍",
-      "file": "topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction",
+      "id": "NG-KL",
+      "label": "C311 KL 次梯度 PPA 有限长度",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl",
       "evidence_status": "derived-checked"
     },
     {
-      "id": "T3-STRICT-WEAKENING",
-      "label": "完整图上严格弱化且推出 (A)+(B) 的目标",
-      "file": "topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction",
+      "id": "TC-NOGO",
+      "label": "C310 传统次单调性/MSR 不推出输出相对步长界",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo",
       "evidence_status": "refuted"
     },
     {
-      "id": "T3-PTD",
-      "label": "PTD 幂次望远镜下降候选",
-      "file": "topics/next_stage_2026/target3_coupled_structure.md#t3-ptd",
+      "id": "TC-CAND",
+      "label": "锚定扇区—相对平静性候选",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc",
       "evidence_status": "candidate"
     }
   ],
@@ -11202,37 +11184,37 @@
       "topic": "局部RLEB与零集拓扑"
     },
     {
-      "id": "E-T1-DINI",
+      "id": "E583",
       "inputs": [
-        "T1-FUNCTION-CONTRACTION"
+        "R01"
       ],
-      "output": "T1-DINI-GATE",
+      "output": "NG-PPA",
       "relation": "conditional",
-      "scope": "先行进入零邻域，Delta=t-phi>0 且 B/Delta 非增；只给长度级数充分门。",
-      "status": "candidate",
-      "topic": "2026 三目标研究"
-    },
-    {
-      "id": "E-T2-KL-ONLY",
-      "inputs": [
-        "T2-LMZ-KL-PPA"
-      ],
-      "output": "T2-KL-ONLY",
-      "relation": "limits",
-      "scope": "KL 迁移仍需 H11/H2/H3、有界次水平集及 (5.1)；不推出一般非单调 PPA。",
+      "scope": "若允许转移已独立验证 NG6 的距离模 Phi 与 B-加权尾 NG7–NG8，则 C309 给有限长度；R01 只提供现有一步证书，不能单独生产任意 Phi。",
       "status": "derived-checked",
-      "topic": "2026 三目标研究"
+      "topic": "PPA 非线性收缩"
     },
     {
-      "id": "E-T3-STRICT",
+      "id": "E585",
       "inputs": [
-        "T3-FULLGRAPH-OBSTRUCTION"
+        "R01"
       ],
-      "output": "T3-STRICT-WEAKENING",
+      "output": "TC-NOGO",
       "relation": "refutes",
-      "scope": "完整图量词、A 对所有图点且 0<=kappa<1；若改为允许子关系则另有 scope。",
+      "scope": "最大单调 F(y)=sgn(y)|y|^alpha、0<alpha<1 的完整精确 PPA；传统 MSR 仍不推出 (B)。",
       "status": "derived-checked",
-      "topic": "2026 三目标研究"
+      "topic": "PPA 耦合条件障碍"
+    },
+    {
+      "id": "E586",
+      "inputs": [
+        "TC-CAND"
+      ],
+      "output": "NG-PPA",
+      "relation": "conditional",
+      "scope": "若 TC1–TC3 的 (A)+(B) 在同一允许关系上成立，并将输出相对步长改写为输入模，则可调用 C309；自然算子类验证仍 open。",
+      "status": "candidate",
+      "topic": "PPA 耦合条件障碍"
     }
   ]
 }

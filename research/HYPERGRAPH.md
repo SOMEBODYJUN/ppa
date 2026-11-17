@@ -898,13 +898,18 @@
 | E576 | [GHB-ENDPOINT · C296 光滑梯度端点的正反见证](canonical/gradient_holder_budget.md#ghb-endpoint) | limits → [GHB-INFIMUM · C296 固定嵌入的直径预算下确界](canonical/gradient_holder_budget.md#ghb-infimum) | 闭合预算可能达到或不达到；不反驳统一下确界。；**derived-checked** |
 | E580 | [HMD-SELF · C293 Banach Hölder 位移的线性阶](canonical/holder_minimal_displacement.md#hmd-characteristic) | conditional → [HMD-FIXED · C301 固定 Hilbert 凸集与 Banach 单位球](canonical/holder_minimal_displacement.md#hmd-fixed) | 上界用空间包络；固定集下界另需 Lin–Sternfeld 与凸投影或径向截断。；**derived-checked** |
 
-## 2026 三目标研究
+## PPA 非线性收缩
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E-T1-DINI | [T1-FUNCTION-CONTRACTION · T1.1 函数复合收缩—长度接口](topics/next_stage_2026/target1_nonlinear_contraction.md#t1-interface) | conditional → [T1-DINI-GATE · T1.6 收缩缺口 Dini 长度门](topics/next_stage_2026/target1_nonlinear_contraction.md#t1-dini) | 先行进入零邻域，Delta=t-phi>0 且 B/Delta 非增；只给长度级数充分门。；**candidate** |
-| E-T2-KL-ONLY | [T2-LMZ-KL-PPA · C310 MOR-KL 到精确 PPA 的条件迁移](topics/next_stage_2026/target2_kl_finite_length.md#t2-kl-ppa) | limits → [T2-KL-ONLY · 仅 KL 不给有限长度](topics/next_stage_2026/target2_kl_finite_length.md) | KL 迁移仍需 H11/H2/H3、有界次水平集及 (5.1)；不推出一般非单调 PPA。；**derived-checked** |
-| E-T3-STRICT | [T3-FULLGRAPH-OBSTRUCTION · C311 完整图 (A) 的 metric-subregularity 障碍](topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction) | refutes → [T3-STRICT-WEAKENING · 完整图上严格弱化且推出 (A)+(B) 的目标](topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction) | 完整图量词、A 对所有图点且 0<=kappa<1；若改为允许子关系则另有 scope。；**derived-checked** |
+| E583 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 若允许转移已独立验证 NG6 的距离模 Phi 与 B-加权尾 NG7–NG8，则 C309 给有限长度；R01 只提供现有一步证书，不能单独生产任意 Phi。；**derived-checked** |
+
+## PPA 耦合条件障碍
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E585 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | refutes → [TC-NOGO · C310 传统次单调性/MSR 不推出输出相对步长界](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) | 最大单调 F(y)=sgn(y)\|y\|^alpha、0<alpha<1 的完整精确 PPA；传统 MSR 仍不推出 (B)。；**derived-checked** |
+| E586 | [TC-CAND · 锚定扇区—相对平静性候选](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 若 TC1–TC3 的 (A)+(B) 在同一允许关系上成立，并将输出相对步长改写为输入模，则可调用 C309；自然算子类验证仍 open。；**candidate** |
 
 ## 不蕴含关系
 

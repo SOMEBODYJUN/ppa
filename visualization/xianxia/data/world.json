@@ -9131,80 +9131,47 @@
       "region": "convergence",
       "realm": "convergence-annex-7"
     },
-    "T1-DINI-GATE": {
-      "role": "candidate",
-      "kind": "mountain",
-      "object": "constellation",
-      "evidence": "candidate",
-      "reason": "explicit-node-status",
-      "x": 3488,
+    "NG-KL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NG-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
       "y": 3941,
       "region": "convergence",
       "realm": "convergence-annex-7"
     },
-    "T1-FUNCTION-CONTRACTION": {
+    "TC-CAND": {
       "role": "candidate",
       "kind": "mountain",
       "object": "ocean",
       "evidence": "candidate",
       "reason": "explicit-node-status",
-      "x": 3488,
+      "x": 3112,
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-7"
     },
-    "T2-KL-ONLY": {
-      "role": "object",
-      "kind": "mine",
-      "object": "crystal",
-      "evidence": "refuted",
-      "reason": "neutral-default",
-      "x": 2924,
-      "y": 4032,
-      "region": "convergence",
-      "realm": "convergence-annex-7"
-    },
-    "T2-LMZ-KL-PPA": {
-      "role": "object",
-      "kind": "mine",
-      "object": "lotus",
-      "evidence": "derived-checked",
-      "reason": "neutral-default",
-      "x": 2924,
-      "y": 4123,
-      "region": "convergence",
-      "realm": "convergence-annex-7"
-    },
-    "T3-FULLGRAPH-OBSTRUCTION": {
-      "role": "object",
-      "kind": "mine",
-      "object": "stele",
-      "evidence": "derived-checked",
-      "reason": "neutral-default",
-      "x": 3582,
-      "y": 4396,
-      "region": "convergence",
-      "realm": "convergence-annex-7"
-    },
-    "T3-PTD": {
-      "role": "candidate",
-      "kind": "mountain",
-      "object": "ocean",
-      "evidence": "candidate",
-      "reason": "explicit-node-status",
-      "x": 3300,
-      "y": 4396,
-      "region": "convergence",
-      "realm": "convergence-annex-7"
-    },
-    "T3-STRICT-WEAKENING": {
+    "TC-NOGO": {
       "role": "refuted-target",
       "kind": "barrier",
-      "object": "rift",
+      "object": "seal",
       "evidence": "refuted",
       "reason": "incoming-refutes-relation",
-      "x": 3582,
-      "y": 4305,
+      "x": 3206,
+      "y": 3941,
       "region": "convergence",
       "realm": "convergence-annex-7"
     }
@@ -11526,17 +11493,21 @@
       "x": 3060.14,
       "y": 4418.98
     },
-    "E-T1-DINI": {
-      "x": 3479.41,
-      "y": 3988.22
+    "E583": {
+      "x": 3093.91,
+      "y": 3896.54
     },
-    "E-T2-KL-ONLY": {
-      "x": 2915.41,
-      "y": 4079.22
+    "E584": {
+      "x": 3017.17,
+      "y": 4257.01
     },
-    "E-T3-STRICT": {
-      "x": 3561.12,
-      "y": 4348.22
+    "E585": {
+      "x": 3175.64,
+      "y": 3903.82
+    },
+    "E586": {
+      "x": 3091.12,
+      "y": 3984.22
     }
   },
   "bounds": {
