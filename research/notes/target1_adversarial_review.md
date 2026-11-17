@@ -2,7 +2,7 @@
 
 日期：2026-11-17  
 身份：独立 adversarial review；本文件不升级 `CLAIMS.md` 中 C309 的状态。  
-审查对象：[目标一报告](../topics/next_stage_2026/target1_nonlinear_contraction.md)、[阶段笔记](../../notes/target1_state.md)、[C309-v1](../../CLAIMS.md#c309-v1)。
+审查对象：[目标一报告](../topics/next_stage_2026/target1_nonlinear_contraction.md)、[阶段笔记](../../notes/target1_state.md)、[C309-v1](../../CLAIMS.md#c309)。
 
 ## 0. 审查结论
 
