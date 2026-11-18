@@ -246,9 +246,9 @@ e_k\le\sqrt{2e_{k-1}\Lambda_{k,k+1}}
 **Scope。** KL 证明给出有限长度和点收敛，但不自动给 \(d(x^k,S)\) 的先验线性或非线性速率；也不自动覆盖非次梯度、非 Lyapunov 的原始多值 \(F\)。因此它可以去掉的是“为了有限长度而使用传统 metric subregularity”的一个证明接口，不能写成“去掉一切正则性”。KL 本身是新的正则结构。
 
 <a id="c310-nogo"></a>
-## 5. C310：目标三原始逻辑链的致命障碍
+## 5. C310：旧条件不自动生产输出相对步长界
 
-目标三要求
+曾经尝试证明的辅助蕴含是
 \[
 \text{传统次单调性+度量次正则性}
 \Longrightarrow\mathcal P
@@ -260,7 +260,7 @@ e_k\le\sqrt{2e_{k-1}\Lambda_{k,k+1}}
 (A)\ d(y,S)\le\kappa d(x,S),\qquad
 (B)\ \|x-y\|\le B d(y,S).
 \]
-这个前件蕴含在当前对象层面是错误的。
+这个辅助蕴含在当前对象层面是错误的。它只否定“从旧条件自动推出 (B)”这条路线，不否定目标三真正需要的严格扩张构造。
 
 ### 5.1 最大单调且有线性 MSR，但 (B) 失败
 
@@ -295,7 +295,7 @@ d(x,S)=y+\lambda y^\alpha,
 \]
 故不存在有限 \(B\) 使 (B) 成立。
 
-这不是非单调或多值病理，而是最大单调、完整 resolvent 和线性 MSR 都成立的例子。它证明 (T0) 不能在现有前件下成立。
+这不是非单调或多值病理，而是最大单调、完整 resolvent 和线性 MSR 都成立的例子。它证明旧条件不能自动生成输出相对步长界，但不回答“存在满足 (A)+(B) 且脱离旧结构的对象”这一严格扩张问题。
 
 ### 5.2 (A) 与 (B) 各自不足
 
@@ -327,10 +327,52 @@ r_F(y)=\min\{y,y^2\}=y^2\quad(0<y<1),
 \]
 它说明 (A)+(B) 确实可能来自一个允许分支的独立几何机制，而不是传统假设的同义改写。
 
-<a id="ptc"></a>
-## 6. 修正后的候选结构：锚定扇区—相对平静性
+<a id="c312-fullgraph"></a>
+## 6. C312：完整单值 PPA 中满足 (A)+(B) 但不满足传统次单调性的例子
 
-原始 (T0) 已被 C310 反例否定。一个有独立几何意义的修正版是对**允许转移**加入以下性质 \(\mathcal P_{\rm TC}\)：存在同一锚
+取 \(X=\mathbb R\)、\(\lambda=1\)，定义
+\[
+G(y)=\frac32(y+\sin y),\qquad
+F(y)=G(y)-y=\frac12y+\frac32\sin y.
+\tag{SG1}
+\]
+有 \(G'(y)=\frac32(1+\cos y)\ge0\)。虽然导数在奇数倍 \(\pi\) 处为零，但 \(G\) 在每个非退化区间上严格递增，且 \(G(y)\to\pm\infty\)，所以 \(G\) 是全局同胚，完整 resolvent 是 \(J_F=G^{-1}\)。
+
+零集为 \(S=\{0\}\)：当 \(|y|\le\pi\) 时 \(\sin y\) 与 \(y\) 同号；当 \(|y|>\pi\) 时 \(\frac12|y|>\frac32\ge\frac32|\sin y|\)，故 \(F(y)=0\) 只发生在 \(0\)。
+
+对任意图点 \(x=G(y)\)，有
+\[
+\frac{G(y)}y=\frac32\left(1+\frac{\sin y}{y}\right)
+\ge m:=\frac32\left(1-\frac1\pi\right)>1.
+\]
+因此完整 resolvent 的每一步满足
+\[
+d(J_Fx,S)=|y|\le m^{-1}|x|,
+\]
+即 (A) 对所有输入和唯一完整输出成立。另一方面
+\[
+\|x-y\|=|F(y)|\le\frac12|y|+\frac32|\sin y|\le2|y|,
+\]
+所以 (B) 对所有完整输出成立，可取 \(B=2\)。
+
+但 \(F\) 不满足传统次单调性，甚至不存在有限的 Luke–Tam 型 violation 常数 \(\tau\)。令 \(y_n=(2n+1)\pi\)，\(u_n=y_n-\varepsilon\)、\(v_n=y_n+\varepsilon\)。则
+\[
+\Delta y=2\varepsilon,\qquad
+\Delta F=\varepsilon-3\sin\varepsilon,\qquad
+\Delta G=3(\varepsilon-\sin\varepsilon).
+\]
+当 \(\varepsilon\downarrow0\) 时，\(\Delta y\,\Delta F\sim-4\varepsilon^2\)，而 \((\Delta G)^2\sim\varepsilon^6/4\)。任何不等式
+\[
+\Delta y\,\Delta F\ge-\tau(\Delta y+\Delta F)^2
+\]
+都要求 \(\tau\gtrsim16\varepsilon^{-4}\)，矛盾。
+
+因此 C312 给出 full-graph/full-resolvent 的严格扩张：完整 PPA 同时满足 (A)+(B)，但脱离传统次单调性。它仍满足线性 MSR；若要求同时否定完整 MSR，则由 full-graph 的 (A) 自动推出线性 MSR，这是量词边界。
+
+<a id="ptc"></a>
+## 7. 修正后的候选结构：锚定扇区—相对平静性
+
+一个有独立几何意义的候选是对**允许转移**加入以下性质 \(\mathcal P_{\rm TC}\)：存在同一锚
 \[
 p\in P_S(x)\cap P_S(y),
 \tag{TC1}
@@ -367,12 +409,12 @@ d(y,S)\le\sqrt{1-2\mu}\,d(x,S),
 \]
 即 \(\mathcal P_{\rm TC}\Rightarrow(A)+(B)\)，其中 \(\kappa=\sqrt{1-2\mu}<1\)、\(B=\lambda c\)。
 
-**严格范围。** C310 只否定“传统次单调性+MSR 自动推出 \(\mathcal P_{\rm TC}\)”这一前件；它不否定 \(\mathcal P_{\rm TC}\) 本身。例 (NG19) 的允许线性分支取 \(p=0\)、\(\lambda=1\)、\(c=1\)、\(\nu=0\)，并可取任意足够小的 \(\mu>0\)，所以该候选确实可以覆盖一个不满足完整图单调性和线性 MSR 的允许分支。要把它升级为新的 PPA 结构定理，还需要从具体算子类（例如受控单值分支、图的局部扇区或固定零纤维）验证 (TC1)–(TC3)，而不是把它当作旧假设的逻辑后果。
+**严格范围。** C310 只否定“传统次单调性+MSR 自动推出 \(\mathcal P_{\rm TC}\)”这一辅助路线；C312 已给出 full-graph 非单调的严格扩张例。PTD/TC 仍需研究自然算子类和允许关系量词，不能把选择子关系的例子自动升级为完整 resolvent 结论。
 
 <a id="next-obligations"></a>
 ## 7. Proof obligations 与下一步
 
 1. 对 C309，寻找原生 PPA/GPPA 模型使 \(\Phi(t)=t-ct^{1+q}+o(t^{1+q})\) 且 \(B(t)\asymp t^\alpha\)，验证 \(\alpha>q\) 与 \(\alpha\le q\) 两侧都能在同一图块和真残差约定下实现。
 2. 对 C311，先在 \(F=\partial f\) 且 exact prox 的范围内完成；再判断一个 Lyapunov 结构 \(E\) 能否对固定核 GPPA 提供 (KL4)–(KL6) 的同一替代。没有 \(E\) 时不能把 KL 结论迁移到任意 \(F\)。
-3. 对 \(\mathcal P_{\rm TC}\)，优先研究单值局部图和凸/光滑零集的锚持久性；同时攻击去掉 (TC1)、(TC2)、(TC3) 的最小反例，避免把三个条件合并成隐藏的 (A)+(B)。
+3. 对 C312，进一步核对更高维、非孤立零集和 full-graph violation 的严格常数；对 \(\mathcal P_{\rm TC}\)，研究单值局部图和凸/光滑零集的锚持久性。
 4. 先行性只登记已逐条读取的 LMZ v1 和正式版元数据。正式版全文当前只能取得 INFORMS 摘要页，不能负责任地声称其与 v1 在定理编号或假设上完全相同。

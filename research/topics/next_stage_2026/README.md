@@ -6,11 +6,11 @@
 | --- | --- | --- |
 | 目标一：非线性距离收缩 | [target1_nonlinear_contraction.md](target1_nonlinear_contraction.md) | 可得到一般的函数迭代收缩—长度框架；固定线性收缩可被严格扩大。 |
 | 目标二：KL 有限长度 | [target2_kl_finite_length.md](target2_kl_finite_length.md) | MOR 的 KL 定理可迁移到函数型精确 PPA；一般非单调 PPA 仍需显式 Lyapunov/相对误差桥。 |
-| 目标三：耦合结构 | [target3_coupled_structure.md](target3_coupled_structure.md) | 完整图字面下存在不可绕过的逻辑障碍；保留严格子关系和望远镜下降性质作为可研究的 salvage。 |
+| 目标三：耦合结构 | [target3_coupled_structure.md](target3_coupled_structure.md) | 已补出 C312：完整 full-graph/full-resolvent 满足 (A)+(B) 但脱离传统次单调性；完整 MSR 同时脱离受量词障碍限制，PTD/TC 和子关系推广继续研究。 |
 
 共同约定：\(S\subseteq\operatorname{zer}F\) 非空闭，\(\lambda>0\)，\(x^+=y\in J_{\lambda F}(x)\)，\(d(x)=d(x,S)\)，\(s=\|x-y\|\)。完整图和允许的局部图块必须分开标记；计算和有限搜索只作为证据，不作为证明。
 
-本轮更完整的规范正文位于 [ppa_nonlinear_gauge_and_coupled_obstruction.md](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md)，启动审计与精确问题表位于 [PPA_NEXT_STAGE_2026-11-17.md](../../audit/PPA_NEXT_STAGE_2026-11-17.md)。本目录的三份报告保留更细的逐目标推导、边界例和独立审查；全局 Claim 身份以 C309（目标一）、C311（目标二）和 C310（目标三）为准。
+本轮更完整的规范正文位于 [ppa_nonlinear_gauge_and_coupled_obstruction.md](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md)，启动审计与精确问题表位于 [PPA_NEXT_STAGE_2026-11-17.md](../../audit/PPA_NEXT_STAGE_2026-11-17.md)。本目录的三份报告保留更细的逐目标推导、边界例和独立审查；全局 Claim 身份以 C309（目标一）、C311（目标二）、C310（旧条件辅助障碍）和 C312（目标三严格扩张例）为准。
 
 ## 论文事实的来源边界
 

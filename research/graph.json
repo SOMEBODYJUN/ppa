@@ -4491,6 +4491,12 @@
       "label": "锚定扇区—相对平静性候选",
       "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc",
       "evidence_status": "candidate"
+    },
+    {
+      "id": "C312-SG",
+      "label": "C312 full-graph A+B 非传统次单调严格扩张",
+      "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11200,8 +11206,8 @@
         "R01"
       ],
       "output": "TC-NOGO",
-      "relation": "refutes",
-      "scope": "最大单调 F(y)=sgn(y)|y|^alpha、0<alpha<1 的完整精确 PPA；传统 MSR 仍不推出 (B)。",
+      "relation": "limits",
+      "scope": "最大单调 F(y)=sgn(y)|y|^alpha 的旧条件不自动推出 (B)；这是辅助障碍，不是对 C312 严格扩张目标的否定。",
       "status": "derived-checked",
       "topic": "PPA 耦合条件障碍"
     },
@@ -11215,6 +11221,17 @@
       "scope": "若 TC1–TC3 的 (A)+(B) 在同一允许关系上成立，并将输出相对步长改写为输入模，则可调用 C309；自然算子类验证仍 open。",
       "status": "candidate",
       "topic": "PPA 耦合条件障碍"
+    },
+    {
+      "id": "E587",
+      "inputs": [
+        "C312-SG"
+      ],
+      "output": "NG-PPA",
+      "relation": "conditional",
+      "scope": "完整单值 resolvent 的 A+B 直接给几何长度；full-graph 量词下仍保留线性 MSR，严格扩张是脱离传统次单调性。",
+      "status": "derived-checked",
+      "topic": "PPA 耦合条件严格扩张"
     }
   ]
 }

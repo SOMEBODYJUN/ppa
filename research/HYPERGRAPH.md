@@ -908,8 +908,14 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E585 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | refutes → [TC-NOGO · C310 传统次单调性/MSR 不推出输出相对步长界](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) | 最大单调 F(y)=sgn(y)\|y\|^alpha、0<alpha<1 的完整精确 PPA；传统 MSR 仍不推出 (B)。；**derived-checked** |
+| E585 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | limits → [TC-NOGO · C310 传统次单调性/MSR 不推出输出相对步长界](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) | 最大单调 F(y)=sgn(y)\|y\|^alpha 的旧条件不自动推出 (B)；这是辅助障碍，不是对 C312 严格扩张目标的否定。；**derived-checked** |
 | E586 | [TC-CAND · 锚定扇区—相对平静性候选](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 若 TC1–TC3 的 (A)+(B) 在同一允许关系上成立，并将输出相对步长改写为输入模，则可调用 C309；自然算子类验证仍 open。；**candidate** |
+
+## PPA 耦合条件严格扩张
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E587 | [C312-SG · C312 full-graph A+B 非传统次单调严格扩张](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 完整单值 resolvent 的 A+B 直接给几何长度；full-graph 量词下仍保留线性 MSR，严格扩张是脱离传统次单调性。；**derived-checked** |
 
 ## 不蕴含关系
 

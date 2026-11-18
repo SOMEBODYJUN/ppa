@@ -357,7 +357,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 当前稿新增规范入口：[C242完整三角例](research/canonical/triangular_rleb.md)、[C243/C244固定SPD与Euler桥](research/canonical/rleb_kernel_topology_interfaces.md)。解析结论、有限计算和外部先行性保持不同证据范围。
 
-**2026-11-17 三目标研究入口：** [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 汇总非线性函数复合收缩、MOR-KL 有限长度迁移和 (A)+(B) 耦合结构的独立报告。C309 给出 \(\sum B(\varphi^{\circ k}(r))\) 长度门及 (F(y)=y|y|) 的非线性 PPA 例；C311 记录 MOR Theorem 5.1 到函数型精确 PPA 的 H11/H2/H3 映射及一般非单调迁移的开放桥；C310 记录传统次单调性/MSR 不推出目标三的输出相对步长界，并保留完整图 (A) 的 MSR 障碍。读取这三份报告时必须保留 full graph 与允许子关系的区别。
+**2026-11-17 三目标研究入口：** [research/topics/next_stage_2026/README.md](research/topics/next_stage_2026/README.md) 汇总非线性函数复合收缩、MOR-KL 有限长度迁移和 (A)+(B) 耦合结构的独立报告。C309 给出 \(\sum B(\varphi^{\circ k}(r))\) 长度门及 (F(y)=y|y|) 的非线性 PPA 例；C311 记录 MOR Theorem 5.1 到函数型精确 PPA 的 H11/H2/H3 映射及一般非单调迁移的开放桥；C312 记录完整 full-graph PPA 满足 (A)+(B) 但脱离传统次单调性的严格扩张例；C310 只保留旧条件不自动推出 (B) 的辅助障碍，并保留完整图 (A) 的 MSR 量词边界。读取这三份报告时必须保留 full graph 与允许子关系的区别。
 
 | 新文件 | 数学资产与读取时机 |
 | --- | --- |

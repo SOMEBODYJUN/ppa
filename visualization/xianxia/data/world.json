@@ -9165,13 +9165,24 @@
       "realm": "convergence-annex-7"
     },
     "TC-NOGO": {
-      "role": "refuted-target",
-      "kind": "barrier",
-      "object": "seal",
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
       "evidence": "refuted",
-      "reason": "incoming-refutes-relation",
+      "reason": "neutral-default",
       "x": 3206,
       "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "C312-SG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-7"
     }
@@ -11508,6 +11519,10 @@
     "E586": {
       "x": 3091.12,
       "y": 3984.22
+    },
+    "E587": {
+      "x": 3072.31,
+      "y": 3968.0
     }
   },
   "bounds": {

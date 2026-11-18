@@ -48,7 +48,7 @@ d(y,S)\le \frac{\kappa\lambda}{1-\kappa}r_F(y).
 
 因此，在完整图解释下，任何蕴含 (A) 的性质已经蕴含传统线性 metric subregularity；不可能再构造一个严格弱于 metric subregularity、同时推出 (A)+(B) 的完整图性质。若 (A) 只对一个严格允许子关系 \(\mathcal J(x)\subsetneq J_{\lambda F}(x)\) 成立，T3.1 只能对该子关系的选中图值成立，不能下传到 (r_F)。
 
-这是本目标最重要的负面结果：任务书给出的逻辑链在 full-graph 量词下不相容，不能通过给 (A)+(B) 另起名字修复。
+这是一个量词边界：若把 (A) 要求施加到完整图并且还要求同时严格弱于完整 MSR，则不可能；但这不否定寻找满足 (A)+(B) 但脱离传统次单调性的 full-graph 例子，也不否定允许子关系上的严格扩张。
 
 ## 3. 反例和边界
 
@@ -101,6 +101,40 @@ r_F(y)\le y^2,
 \]
 
 完整图 metric subregularity 失败；但额外分支不属于允许选择，故选中边的 (A)+(B) 仍成立。这准确显示了“完整图”与“允许子关系”不能混写。若任务要求 full graph，这个例子不满足量词，不能用来宣称弱化完成。
+
+
+### 3.6 真正的 full-graph 严格扩张例：满足 (A)+(B) 但无传统次单调性
+
+取 \(X=\mathbb R\)、\(\lambda=1\)，
+\[
+G(y)=\frac32(y+\sin y),\qquad
+F(y)=G(y)-y=\frac12y+\frac32\sin y.
+\]
+\(G'(y)=\frac32(1+\cos y)\ge0\)，且 \(G\) 是全局同胚；因此完整 resolvent 是 \(J_F=G^{-1}\)。零集为 \(S=\{0\}\)。对任意图点 \(x=G(y)\)，
+\[
+\frac{|G(y)|}{|y|}
+\ge \frac32\left(1-\frac1\pi\right)>1,
+\]
+所以
+\[
+d(J_Fx,S)\le\kappa d(x,S),\qquad
+\kappa=\left[\frac32\left(1-\frac1\pi\right)\right]^{-1}<1.
+\]
+同时
+\[
+\|x-J_Fx\|=|F(y)|\le2|y|=2d(J_Fx,S),
+\]
+即 (B) 取 \(B=2\)。
+
+它不满足传统次单调性，甚至不存在有限 Luke–Tam violation 常数。令 \(y_n=(2n+1)\pi\)，取 \(u_n=y_n-\varepsilon\)、\(v_n=y_n+\varepsilon\)，则
+\[
+\Delta y=2\varepsilon,\quad
+\Delta F=\varepsilon-3\sin\varepsilon,\quad
+\Delta G=3(\varepsilon-\sin\varepsilon),
+\]
+从而 \(\Delta y\Delta F\sim-4\varepsilon^2\)，而 \((\Delta G)^2\sim\varepsilon^6/4\)。任何固定 violation 常数都被迫趋于无穷。
+
+这是真正满足完整图/完整 resolvent 量词的严格扩张证据：它破坏传统次单调性，同时保留 (A)+(B)。它仍满足线性 MSR；若要求连完整 MSR 也破坏，则 full-graph (A) 的 Lipschitz 推导已排除这种可能。
 
 ### 3.5 传统次单调性与线性 MSR 甚至不能推出 (B)
 
@@ -188,5 +222,5 @@ d(x,S)-d(y,S)\ge(1-\kappa)d(x,S)\ge\frac{1-\kappa}{\kappa}d(y,S),
 3. (A)+(B) 确实比 pairwise 次单调性宽，闭图离散反例给出严格证明。
 4. PTD 是一个独立、可验证、直接给有限长度的结构，但其结论严格弱于 (B)；它是下一阶段可继续研究的真实候选。
 
-**状态：** T3.1 为 `derived-checked`；第 3.5 节反例和离散闭图反例均为逐项可核的 obstruction；PTD 与 (TC) 都是 `candidate`。任务书要求的“传统前件推出严格弱化 (mathcal P)”在当前对象层面已被第 3.5 节否定，不能把两个候选升格为该逻辑链的完成。
+**状态：** T3.1 为 derived-checked；第 3.5 节只记录旧条件不自动推出 (B) 的 obstruction；第 3.6 节给出满足 (A)+(B) 但不满足传统次单调性的 full-graph 严格扩张例；PTD 与 (TC) 仍为 candidate。若研究目标是严格脱离传统次单调性或 MSR，目标三已有严格正面构造；若还要求同时脱离完整 MSR，则由 T3.1 的量词障碍不可行。
 

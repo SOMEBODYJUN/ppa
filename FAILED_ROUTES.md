@@ -723,7 +723,7 @@
 <a id="f103"></a>
 ## F103 · 传统次单调性与度量次正则性被误用来推出输出相对步长界
 
-- **Attempt and break**：目标三尝试从传统次单调性与 metric subregularity 得到 \(d(y,S)\le\kappa d(x,S)\) 和 \(\|x-y\|\le B\,d(y,S)\)，再把两者解释成一个更弱的结构性质。前一条可以由某些 RLEB/EB 兼容门给出，后一条需要选中图值相对输出距离的上界；MSR 的方向是 \(d(y,S)\le K r_F(y)\)，并不提供 \(r_F(y)\le C d(y,S)\)。
+- **Attempt and break**：一条辅助路线尝试从传统次单调性与 metric subregularity 自动得到 \(d(y,S)\le\kappa d(x,S)\) 和 \(\|x-y\|\le B\,d(y,S)\)，再把两者解释成一个更弱的结构性质。前一条可以由某些 RLEB/EB 兼容门给出，后一条需要选中图值相对输出距离的上界；MSR 的方向是 \(d(y,S)\le K r_F(y)\)，并不提供 \(r_F(y)\le C d(y,S)\)。
 - **Fatal counterexample**：\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(0<\alpha<1\)，是最大单调梯度且满足 \(d(y,\{0\})\le r_F(y)\)。精确 PPA \(x=y+\lambda F(y)\) 在小尺度有 \(d(y,S)/d(x,S)\to0\)，但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)。因此原始 \(\text{传统条件}\Rightarrow\mathcal P\Rightarrow(A)+(B)\) 逻辑链被否定。
-- **Salvage**：保留 C310 的反例作为必要性障碍。可研究的修正版 \(\mathcal P_{\rm TC}\) 另加共同最近锚、正扇区和 selected-fiber calmness；其直接代数确实推出 (A)+(B)，但旧前件不自动蕴含它。证明与独立反例见 [C310/C310-v1](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) 与 [修正版](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc)。
+- **Salvage**：保留 C310 的反例作为辅助障碍；C312 已给出完整 full-graph/full-resolvent 满足 (A)+(B) 但脱离传统次单调性的严格扩张例。可研究的修正版 \(\mathcal P_{\rm TC}\) 另加共同最近锚、正扇区和 selected-fiber calmness；其直接代数确实推出 (A)+(B)，但旧前件不自动蕴含它。完整 MSR 同时脱离受 full-graph A⇒MSR 的量词障碍限制。证明与独立反例见 [C310/C310-v1](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) 与 [修正版](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc)。
 - **Restart gate**：任何声称“弱于传统假设”的新性质必须明确是否含 selected residual 上界或 anchor persistence，并给出不满足传统 MSR/单调性但满足候选性质的原生算子；不能把 (A)+(B) 重新命名为 \(\mathcal P\)。

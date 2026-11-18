@@ -2708,17 +2708,28 @@
 <a id="c310"></a>
 ## C310-v1 · 传统次单调性与度量次正则性不推出目标三的 (B)
 
-- **Status**：`refuted`，精确否定目标三所要求的前件蕴含；修正版结构另见本页 C310 的后继候选部分。
+- **Status**：`derived-checked`；它只记录旧条件不自动推出 (B) 的辅助障碍，不是对寻找满足 (A)+(B) 且脱离旧结构的严格扩张例的否定。
 - **Exact Statement / Objects / Domain**：\(X=\mathbb R\)、\(0<\alpha<1\)、\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(S=\{0\}\)、固定 \(\lambda>0\)、完整精确 PPA \(x=y+\lambda F(y)\)。该 \(F\) 是凸函数 \(|y|^{1+\alpha}/(1+\alpha)\) 的梯度，故最大单调；在 \(|y|\le1\) 上 \(d(y,S)=|y|\le r_F(y)=|y|^\alpha\)，所以线性 MSR 成立。
 - **Conclusion / Counterexample**：对 \(y>0\)，\(d(x,S)=y+\lambda y^\alpha\)、\(\|x-y\|=\lambda y^\alpha\)。因此 \(d(y,S)/d(x,S)\to0\)，(A) 在足够小窗口内对任意 \(\kappa\in(0,1)\) 成立；但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)，不存在有限 \(B\) 使 (B) 成立。
-- **Meaning**：这不是非单调、多值或不完整 resolvent 的病理；它证明“传统次单调性 + 线性 metric subregularity \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”在当前对象层面是错误的。C310 同时保留 (A) alone 与 (B) alone 的幂次对照例，以及圆周旋转对“距离收缩 \(\Rightarrow\) 点收敛”的反例。
+- **Meaning**：这不是对严格扩张目标的反例；它只说明传统次单调性和线性 MSR 不自动生产输出相对步长界 (B)。真正的严格扩张正面构造登记为 C312。
 - **Dependencies / Evidence**：[反例逐项验证与修正版桥](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo)。
 
 <a id="c311"></a>
 ## C311-v1 · KL 下降机制在次梯度 PPA 中替代传统 MSR 的有限长度证明
 
-- **Status**：`derived-checked`；只针对 exact subgradient PPA 和明确列出的 KL/下降/相对误差条件。
+- **Status**：`derived-checked`；它只记录旧条件不自动推出 (B) 的辅助障碍，不是对寻找满足 (A)+(B) 且脱离旧结构的严格扩张例的否定。
 - **Exact Statement / Objects / Domain**：\(f:\mathbb R^n\to(-\infty,+\infty]\) proper、下半连续、有下界；每步 \(x^{k+1}\in\arg\min_y\{f(y)+(2\lambda)^{-1}\|y-x^k\|^2\}\) 存在；相关子水平集有界；聚点 \(\bar x\) 满足序列上半连续条件；\(f\) 在 \(\bar x\) 满足 LMZ Definition 2.2 的 KL 性质；并且 \(w^{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1})\)。
 - **Conclusion**：近端下降给 \(f_{k+1}+(2\lambda)^{-1}e_k^2\le f_k\)，KL 与相对误差给 \(\Lambda_{k,k+1}\ge e_k^2/(2e_{k-1})\)，从而 \(e_k\le(e_{k-1}+\Lambda_{k,k+1})/\sqrt2\)。因此 \(\sum e_k<\infty\)，\(x^k\to\bar x\)，整个证明不使用传统 metric subregularity。
 - **Dependencies / Evidence**：[逐步重构](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl)、LMZ v1 Theorem 5.1 pp.12–13、H0–H3/H11、KL 定义。
 - **Counterevidence / Scope**：KL 是新的正则结构；结论不自动给距离到预指定 \(S\) 的速率，不自动覆盖一般多值 \(F\) 或 GPPA。正式刊本公式级差异尚未取得全文核对。
+
+
+<a id="c312"></a>
+## C312-v1 · 完整单值 PPA 中满足 (A)+(B) 但脱离传统次单调性的严格扩张
+
+- **Status**：`derived-checked`；这是 full-graph/full-resolvent 的严格扩张例，尚未声称脱离完整 metric subregularity。
+- **Exact Statement / Objects / Domain**：\(X=\mathbb R\)、\(\lambda=1\)，\(G(y)=\frac32(y+\sin y)\)，\(F(y)=G(y)-y=\frac12y+\frac32\sin y\)，\(S=\{0\}\)。\(G'(y)=\frac32(1+\cos y)\ge0\)，且 \(G\) 是全局同胚，所以 \(J_F=G^{-1}\) 为完整全局单值 resolvent。零集只有 \(0\)。
+- **(A)+(B)**：对 \(x=G(y)\)，\(|G(y)|/|y|\ge \frac32(1-\pi^{-1})=:m>1\)，故 \(d(J_Fx,S)\le m^{-1}d(x,S)\)。同时 \(\|x-J_Fx\|=|F(y)|\le2|y|=2d(J_Fx,S)\)。
+- **Failure of traditional submonotonicity**：取 \(y_n=(2n+1)\pi\)、\(u_n=y_n-\varepsilon\)、\(v_n=y_n+\varepsilon\)，则 \(\Delta y=2\varepsilon\)、\(\Delta F=\varepsilon-3\sin\varepsilon\)、\(\Delta G=3(\varepsilon-\sin\varepsilon)\)。因此 \(\Delta y\Delta F\sim-4\varepsilon^2\)，而 \((\Delta G)^2\sim\varepsilon^6/4\)，任何固定 Luke–Tam violation 常数都必须趋于无穷。
+- **Meaning / Scope**：C312 直接证明 (A)+(B) 可以脱离传统次单调性，并且量词是完整图/完整 resolvent。它仍满足线性 MSR；full-graph 的 (A) 本身推出线性 MSR，因此同时否定完整 MSR 不可能。允许子关系上另有 \(F(y)=\{y,y^2\}\) 的严格扩张例，但不能混写成完整 resolvent 结论。
+- **Evidence**：[完整构造与渐近计算](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph)、[目标三报告](research/topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction)。

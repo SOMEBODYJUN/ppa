@@ -140,7 +140,7 @@ e_k\le\frac{e_{k-1}+\Lambda_{k,k+1}}{\sqrt2}.
 | --- | --- | --- | --- | --- |
 | 目标一 | 在 \(d_{k+1}\le\Phi(d_k)\) 下，以何种条件同时保证 \(\Phi^{\circ k}(t)\to0\)、\(\sum d_k\) 或 \(\sum B(d_k)\)、物理有限长度和点收敛？ | C09 的固定 \(\kappa\)+Dini；C10 的对数边界；C309 的一般 \(\Phi\) 定理 | 函数迭代趋零不等于步长可和；\(B\) 必须进入预算 | C309 derived-checked；原生 PPA/GPPA 实例仍 open |
 | 目标二 | 能否在没有传统 MSR 时，用 KL/能量证明有限长度？ | LMZ v1 Theorems 4.3–5.1；C311 的 exact subgradient PPA 重构 | 一般 \(F\) 未必有目标函数、下降或相对误差；KL 不给自动距离率 | 次梯度 PPA 正面已闭；一般多值/GPPA 仍 open |
-| 目标三 | 是否存在独立结构 \(\mathcal P\)，使旧假设推出 \(\mathcal P\Rightarrow(A)+(B)\)，并严格扩大适用类？ | (A)+(B) 本身足以给 \(\sum\|x^{k+1}-x^k\|\)；C310 反例；\(\mathcal P_{\rm TC}\) 的条件蕴含 | 旧“次单调性+MSR”不推出 (B)，故原逻辑链 fatal | 原始目标 refuted；修正版 \(\mathcal P_{\rm TC}\) 为 candidate |
+| 目标三 | 是否存在满足 (A)+(B) 但脱离传统次单调性或 MSR 的严格扩张例，并能由独立结构验证？ | C312 的完整单值 full-graph 例；选择子关系上的 \(F(y)=\{y,y^2\}\) 例；PTD/TC 候选 | full-graph 的 (A) 自动推出线性 MSR；若还要求同时脱离完整 MSR，量词上不可能 | 严格脱离传统次单调性的正面例已完成；PTD/TC 和自然算子类推广仍 open |
 
 ## 4. 目标三的反例审查
 
