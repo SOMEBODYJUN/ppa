@@ -72,15 +72,21 @@ Set `a_k=u_k^2`. The strict descent gives
 
 On the block `2^{-(j+1)} < a_k <= 2^{-j}`, each step satisfies
 `s_k >= 2^{-(j+1)}/D` and hence
-`Delta_k >= c 2^{-2j-2}/D^2`. The monotonicity of `a_k` means that a block can
-have at most one entering step from the preceding dyadic band. Absorbing that
-step by enlarging the block budget by a factor two, the total drop is at most
-`2^{1-j}`, and its cardinality is at most
-`N_j <= 8D^2 c^{-1} 2^j`.
-Also `sum_block s_k^2 <= c^{-1}2^{-j}`. Therefore Cauchy--Schwarz gives
-`sum_block s_k <= c_4`, and so by (2)
+`Delta_k >= c 2^{-2j-2}/D^2`.  The sequence `a_k` is nonincreasing,
+but one entering step can jump across arbitrarily many dyadic bands.  We
+therefore split the block into interior steps, whose predecessor is in the
+same band, and at most one entering step.  The interior steps consume a total
+drop at most `2^{-j}`, so their number is bounded by
+`N_j <= 4D^2 c^{-1}2^j` and
+`sum_interior s_k^2 <= c^{-1}2^{-j}`.  Cauchy--Schwarz then gives
+`sum_interior s_k <= c_4`, with `c_4` independent of `j`.
 
-`sum_block ||h_k|| <= c_5 2^{-j/4}`.
+For the entering step, use the value cap `s_k <= lambda v_bar` and
+`sqrt(u_k)=a_k^{1/4} <= 2^{-j/4}`.  The projection estimate (2) gives
+`||h_k|| <= c_3 lambda v_bar 2^{-j/4}`.  For the interior steps, (2) and
+`sqrt(u_k) <= 2^{-j/4}` give the same dyadic factor.  Consequently
+
+`sum_{k in block} ||h_k|| <= c_5 2^{-j/4}`.
 
 The dyadic series converges. Thus `(p_k)` is Cauchy. Since `||x_k-p_k||=t_k ->0`, the full PPA orbit converges to one point of `S`.
 
