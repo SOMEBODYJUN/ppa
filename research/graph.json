@@ -11298,6 +11298,20 @@
       "scope": "若允许任意误差界模且没有兼容要求，裸 GMSR 不推出 LMSR；反向不可能构造带 LMSR 而无任意模 EB 的例子。",
       "status": "derived-checked",
       "topic": "普通 PPA 整窗正则性弱化"
+    },
+    {
+      "id": "E592",
+      "inputs": [
+        "RFA-K",
+        "GM-RL",
+        "DIN",
+        "GM-LOC"
+      ],
+      "output": "UJC-LENGTH",
+      "relation": "conditional",
+      "scope": "完整普通 PPA 的 C315 证明是 C277 的双标签证书特例：残差标尺或最近零锚耗散，且共用 Dini 势。C315 的完整严格例也可由 C277 仿射目标法向证书直接认证。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 整窗正则性弱化"
     }
   ]
 }
