@@ -2923,3 +2923,24 @@
   \]
   每条完整轨道点收敛到 \(S\) 中一点，步长平方可和；\(q=2\) 真残差误差界只作距离/残差接口。
 - **Relation to C329/C330**：这是 value-weighted 曲率 \(C=0\) 的边界。\(C>0\) 时需要 C329 的弱单调锚输运，或 C330 的 reach 切向估计；一般闭非孤立零集的临界点收敛仍开放。
+
+<a id="c333"></a>
+## C333-v1 · 固定输出位移惩罚无法给一般 RL 的同弦二次强制性
+
+- **Status**：`derived-checked`。独立反例推导和同窗原关系核对，外部先行性未审。
+- **Exact Statement / Scope**：固定 C242 原算子 \(F(a,b)=(a,-\sqrt{|a|})\)、\(\lambda=1\)、其零点原点及包含该点附近图点的 \(\Gamma\)。对任意仅依赖位移的 \(P:X\to\mathbb R\cup\{+\infty\}\)，若 \(M_P(z,u)=\sup_\Gamma\{\langle z-y,v-u\rangle-P(z-y)\}\) 满足 \(M_P(0,0)=0\)，则实际小 PPA 弦上不存在统一 \(c>0\) 使 \(\|v\|^2-P(v)\ge c\|v\|^2\)。若 \(P\) 径向，整个小非零尺度的同弦见证为负。
+- **Evidence / Counterevidence**：[固定惩罚障碍及原 RL 核对](research/topics/common_structure/nonlinear_rl_bridge.md#rl-shift-obstruction)。C242 同时满足原全对一般模与最近锚 RLEB。只排除该见证，不排除间隙的其他竞争点、其他定向惩罚或其他母对象。
+
+<a id="c334"></a>
+## C334-v1 · 原非线性反射模的图宽度与真残差转接
+
+- **Status**：`derived-checked`。全对同模合同，最近锚版本只核精确专化；外部先行性未审。
+- **Exact Statement / Scope**：有限维同一原图块 \(\Gamma\)，固定 \(\lambda>0\)、非减零连续的原模 \(\omega\)。对同一个探测点 \((z,\eta)\) 同时放宽所有比较的输入差和反射差，以 (1) 的 \(I_\omega\) 记录可行宽度。图上零宽度可行当且仅当全对原 RL。真残差的图块近极小覆盖给 \(\inf I_\omega((z,\eta);\Gamma)\le\lambda r_\eta(z)\)。每个 \(z=y+\lambda(v-\eta)\)、\((y,v)\in\Gamma\) 和每个可行 \(h\) 给 \(\|z-y\|\le H(h)\)，其中 \(H=(\mathrm{id}+\omega)/2\)。合用完整误差界与一根覆盖，得到到同一逆像的增长，反向由图宽度增长转真误差界；量词、评价窗和端点见正文。
+- **Evidence / Counterevidence**：[原非线性图宽度](research/topics/common_structure/nonlinear_rl_bridge.md#rl-tube)。最近零锚只给单锚可行，完整多值例排除向全对版的自动升级。该桥通常改变正则模，见 C335。
+
+<a id="c335"></a>
+## C335-v1 · 固定原 Hölder–RLEB 窗中标量图宽度的锐幂损失
+
+- **Status**：`derived-checked`。完整单值原算子与唯一全域原根，未核公开先行性。
+- **Exact Statement / Scope**：每个 \(0<\gamma<1\) 皆可取同一完整三角原 \(F(a,b,c)=(\operatorname{sgn}(a)|a|^\gamma,mb,-|b|^\gamma)\)、\(\lambda=1\)、\(\omega(t)=6(1+m)^{-\gamma}t^\gamma\)、局部覆盖与真残差模 \(\psi(s)=s^{1/\gamma}\) 使原 RLEB 的适用条件成立。真残差的最佳正则幂为 \(1/\gamma\)，C334 标量图宽度的最佳局部正则幂只有 \(\gamma\)。
+- **Evidence / Counterevidence**：[同图同模的尖锐证明](research/topics/common_structure/nonlinear_rl_bridge.md#rl-tube-sharp)。不排除保留同一个向量扰动等更强的定向结构，排除本标量宽度在原类上保留同一真残差模。
