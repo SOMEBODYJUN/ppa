@@ -2743,3 +2743,14 @@
 - **KL bridge**：取 \(E(x)=\frac12\|x\|^2\)、\(e_k=\|x^{k+1}-x^k\|\)。对 \(y=x^{k+1}\)，有 \(E(x^k)-E(y)=\lambda\langle y,Sy\rangle+\frac12e_k^2\ge\frac12e_k^2\)，并且 \(y\in\partial E(y)\)、\(\|y\|\le\|A^{-1}\|e_k/\lambda\)。因此 H11、H2、H3、有界次水平集与 KL 在 0 成立，LMZ 给出有限长度和 \(x^k\to0\)。
 - **Meaning / Scope**：若 \(K\ne0\)，\(F\) 不是标量函数的次梯度图；例如二维纯旋转 \(A=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)\) 是最大单调但非强单调。可是 \(A\) 可逆已给出全局线性 MSR，因此该例只证明 RL–KL 桥可在自然非次梯度类中闭合，不能声称已弱于旧 MSR 理论。
 - **Evidence**：[三席独立审查与收口](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)、[目标二修订报告](research/topics/next_stage_2026/target2_kl_finite_length.md)。
+
+
+<a id="c314"></a>
+## C314-v1 · RL 不自动产生 Lyapunov 下降桥，且 A+B 已直接给有限长度
+
+- **Status**：`derived-checked`；精确否证的是 `full-graph RL alone => 正耗散 Lyapunov/H11`，不是对所有可能附加结构的否定。
+- **Exact Statement / Objects / Domain**：在 \(H=\mathbb R^2\)、\(\lambda=1\) 取 90 度旋转 \(Q\)，\(F(u)=Q^\top u-u\)。则 \(J_F=Q\) 全域单值，完整图满足全局 \(\mathrm{RL}(1,1,\sqrt5)\)，但非零轨道 \(x^{k+1}=Qx^k\) 是四周期。
+- **Lyapunov obstruction**：任意满足 \(E(Jx)+a\phi(\|Jx-x\|)\le E(x)\)、\(a>0\)、\(\phi(t)>0\)（\(t>0\)）的单值状态函数都会在四周期上产生矛盾。因此 RL alone 不推出 H11/Lyapunov 桥。
+- **A+B boundary**：若同一轨道另满足 \(d_{k+1}\le\kappa d_k\)、\(0\le\kappa<1\) 与 \(\|x^{k+1}-x^k\|\le B d_{k+1}\)，则直接有 \(\sum_k\|x^{k+1}-x^k\|\le B\kappa d_0/(1-\kappa)\)。因此 KL 在 A+B 已成立时不是必要机制；\(B\) 单独不能求和。
+- **Meaning / Scope**：本轮没有削弱一般 RL 的 MSR/GMSR，也没有改进 B。已完成的是 exact subgradient KL 充分条件和 RL-alone 桥的精确阻塞；弱于旧 RL+GMSR 且强于纯 RL 的新性质仍 open。
+- **Evidence**：[RL–Lyapunov 阻塞审查](research/audit/RL_LYAPUNOV_OBSTRUCTION_2026-11-18.md)、[三席 RL–KL 审查](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)。

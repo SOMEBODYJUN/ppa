@@ -99,6 +99,8 @@ w_{k+1}=\frac{x^k-x^{k+1}}\lambda\in\partial f(x^{k+1}),
 
 一般 RLEB–PPA 的 \(F\) 可能不是 \(\partial f\)，也可能没有一个随迭代下降的 Lyapunov 函数。KL 性质只对某个函数 \(E\) 的能量差和次梯度距离作关系；没有 H11，不能把能量差转成步长；没有 H2，不能把次梯度距离转成步长或残差。因此不能把“有 KL 函数”直接替换成“有限长度”。
 
+RL 本身也不能补上这条缺口：在 \(\mathbb R^2\) 取 90 度旋转 \(Q\)，令 \(F(u)=Q^\top u-u\)、\(\lambda=1\)。完整 resolvent 为 \(J_F=Q\)，完整图满足全局 \(\mathrm{RL}(1,1,\sqrt5)\)，但非零轨道是四周期；任何具有正步长耗散的状态 Lyapunov 函数都会在周期上产生矛盾。详见 [RL–Lyapunov 阻塞审查](../../audit/RL_LYAPUNOV_OBSTRUCTION_2026-11-18.md)。
+
 一个满足 H0--H3 且 \(e_k\to0\) 的严格抽象反例是
 
 \[
@@ -172,5 +174,5 @@ MOR KL 机制不能把最后一项凭空删掉。可用的闭合形式是：存�
 
 正式出版社记录确认 online 日期为 2026-04-07、作者和摘要与 arXiv 主题一致；当前环境的 PDF 下载被重定向到摘要页，无法逐页对照正式排版。因此预印本中的定理编号和公式已经逐式核对，但“正式版与 v1 的全部差异”保持 `open`。预印本 Remark 5.3 的一个指数表达式在 \(\alpha=1\) 时呈现可疑的退化，报告不将其作为迁移定理；PPA 迁移只使用 Theorem 5.1 的直接证明。
 
-**状态：** exact subgradient PPA 条件版可记为 `derived-checked`；抽象的 RL--KL transfer corollary 仅在额外给出同一 Lyapunov、H11、真实相对误差和物理步兼容时成立。对一般非单调 RLEB--PPA 的无 metric-subregularity 有限长度定理仍为 `candidate/open`，所缺是从 RL/图几何实际验证这条桥。
+**状态：** exact subgradient PPA 条件版可记为 `derived-checked`；抽象的 RL--KL transfer corollary 仅在额外给出同一 Lyapunov、H11、真实相对误差和物理步兼容时成立。`RL alone => Lyapunov/H11` 已被 full-graph 四周期反例 `refuted`；弱于旧 RL+GMSR 且能替代 B 的自然充分条件仍为 `open`。
 

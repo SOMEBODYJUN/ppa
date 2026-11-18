@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | exact subgradient PPA | `derived-checked` | 在 LMZ v1 的 H3、有限次水平、聚点 KL 和 H11/H2 条件下，不需传统 metric subregularity 即得有限长度和整列收敛。 |
 | 抽象 RL–KL transfer corollary | `derived-checked`（条件式） | 若同一状态空间已有 Lyapunov \(E\)、H11、真实相对误差、H3、KL、level boundedness 和物理步兼容，则可直接调用 LMZ。 |
-| 一般非单调 RLEB/GPPA 自动桥 | `candidate/open` | RL 只控制 Cayley 图差分；尚未推出 \(E\)、H11 或真实相对误差，不能声称一般理论已完成。 |
+| 一般非单调 RLEB/GPPA 自动桥 | `refuted`（RL alone） | 90 度旋转 full-graph 例子满足 RL 但有四周期，排除正耗散 Lyapunov；弱于旧 RL+GMSR 的替代条件仍 open。 |
 
 ## 已核对的关键公式
 
@@ -38,24 +38,35 @@
 
 若使用 LMZ 的混合门，\(\sqrt{st}\le(s+t)/2\) 在代入 \(t=2\Lambda\) 后给的是 \(e_k\le e_{k-1}/2+\Lambda\)；两条递推不能混写。
 
-## 纠正与反例
+## RL–Lyapunov 阻塞
 
-原报告中的交替点反例不满足 LMZ H1 的 \(e_k\to0\)，已替换为
+在 \(H=\mathbb R^2\) 取 90 度旋转 \(Q\)，令 \(F(u)=Q^\top u-u\)、\(\lambda=1\)。则 \(J_F=Q\) 全域单值，完整图满足全局 \(\mathrm{RL}(1,1,\sqrt5)\)，而非零轨道 \(x^{k+1}=Qx^k\) 是四周期。任何满足
 
 \[
-f(u,v)=(u^2+v^2-1)^2,\quad
-\theta_k=\sum_{j=1}^k\frac1j,\quad
-x^k=(\cos\theta_k,\sin\theta_k).
+E(Jx)+a\phi(\|Jx-x\|)\le E(x),
+\qquad a>0,\quad \phi(t)>0\ (t>0),
 \]
 
-它满足 H0/H1/H2/H3、紧次水平集和 KL，但 \(e_k\sim1/k\)、\(\sum e_k=\infty\)。它是抽象 KL-only 反例，不是 exact PPA 轨道；失败点是 H11 的正步长耗散。
+的状态 Lyapunov 函数都会在四周期求和时矛盾。因此 RL alone 不推出 Lyapunov/H11/H2。
 
-旧估计中的 \(2\sigma\|\Delta x_k\|\) 不能删除。必须证明它被正下降余量吸收、被增广能量修正吸收，或变成可望远镜的能量差。
+## A+B 边界
 
-## 已闭合的非次梯度基准类
+若同一轨道满足
 
-若 \(F(x)=Ax\)、\(A=S+K\)、\(S=S^\top\succeq0\)、\(K^\top=-K\)、且 \(A\) 可逆，则完整图满足全局 \(\mathrm{RL}(\lambda,1,1)\)。取 \(E(x)=\frac12\|x\|^2\) 可验证 H11、H2、H3 和 KL，故 LMZ transfer 给出有限长度。\(K\ne0\) 时这不是标量次梯度图；但 \(A\) 可逆已经带来全局线性 metric subregularity，所以这是迁移基准，不是弱于 MSR 的新定理。
+\[
+d_{k+1}\le\kappa d_k,\quad 0\le\kappa<1,qquad \|x^{k+1}-x^k\|\le B d_{k+1},
+\]
 
-## 下一步
+则
 
-只允许一个主义务：选定一个自然的非次梯度 RL 类，直接证明 RL \(\Rightarrow\) 同一 \(E\) 上的 H11、真实 H2、H3 和物理步兼容。未闭合前，保留 `candidate/open`，不把 exact PPA 结果升级为一般 RLEB–PPA 定理。
+\[
+\sum_{k=0}^\infty\|x^{k+1}-x^k\|\le\frac{B\kappa}{1-\kappa}d_0<\infty.
+\]
+
+所以 A+B 已经完成旧的绝对步长求和证明，KL 在此不是必要机制；B 单独不能求和。
+
+## 纠正与范围
+
+原报告中的交替点反例不满足 LMZ H1 的 \(e_k\to0\)，已替换为单位圆轨道 \(e_k\sim1/k\)、\(\sum e_k=\infty\) 的 KL-only 反例。它不是 exact PPA 轨道；失败点是 H11 正步长耗散。
+
+本轮没有削弱一般 RL 的 MSR/GMSR，也没有改进 B。实际完成的是 exact subgradient PPA 的 KL 充分条件、条件式 transfer corollary，以及 RL-alone 桥的精确阻塞。下一步必须寻找严格介于旧 RL+GMSR 与纯 RL 之间的自然性质，推出 A+B 或真正的能量望远镜替代条件。

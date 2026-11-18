@@ -727,3 +727,11 @@
 - **Fatal counterexample**：\(F(y)=\operatorname{sgn}(y)|y|^\alpha\)、\(0<\alpha<1\)，是最大单调梯度且满足 \(d(y,\{0\})\le r_F(y)\)。精确 PPA \(x=y+\lambda F(y)\) 在小尺度有 \(d(y,S)/d(x,S)\to0\)，但 \(\|x-y\|/d(y,S)=\lambda y^{\alpha-1}\to\infty\)。因此原始 \(\text{传统条件}\Rightarrow\mathcal P\Rightarrow(A)+(B)\) 逻辑链被否定。
 - **Salvage**：保留 C310 的反例作为辅助障碍；C312 已给出完整 full-graph/full-resolvent 满足 (A)+(B) 但脱离传统次单调性的严格扩张例。可研究的修正版 \(\mathcal P_{\rm TC}\) 另加共同最近锚、正扇区和 selected-fiber calmness；其直接代数确实推出 (A)+(B)，但旧前件不自动蕴含它。完整 MSR 同时脱离受 full-graph A⇒MSR 的量词障碍限制。证明与独立反例见 [C310/C310-v1](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c310-nogo) 与 [修正版](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#ptc)。
 - **Restart gate**：任何声称“弱于传统假设”的新性质必须明确是否含 selected residual 上界或 anchor persistence，并给出不满足传统 MSR/单调性但满足候选性质的原生算子；不能把 (A)+(B) 重新命名为 \(\mathcal P\)。
+
+<a id="f104"></a>
+## F104 · 从 full-graph RL 自动推出 KL/Lyapunov 下降桥
+
+- **尝试与断点**：希望仅由完整图 RL 或 Cayley 反射模构造能量 \(E\)，得到 H11 正步长耗散和真实相对误差，从而绕过 MSR/B。
+- **致命反例**：在 \(\mathbb R^2\) 取 90 度旋转 \(Q\)，\(F(u)=Q^\top u-u\)、\(\lambda=1\)。完整 resolvent 为 \(J_F=Q\)，完整图满足全局 \(\mathrm{RL}(1,1,\sqrt5)\)，但非零轨道是四周期。任何 \(E(Jx)+a\phi(\|Jx-x\|)\le E(x)\)（\(a>0,\phi(t)>0\)）在四周期求和都会矛盾。
+- **可回收结论**：RL alone 不供应 Lyapunov/H11/H2；若同时已有 (A) 距离收缩和 (B) 输出相对步长界，则几何级数已经直接给有限长度，KL 不是必要机制。B 单独不足，A+B 才闭合旧证明。
+- **重启条件**：必须寻找严格介于旧 RL+GMSR 与纯 RL 之间的自然性质，推出 A+B 或独立的能量望远镜条件；不能把条件式 transfer corollary 写成一般 RL 定理。
