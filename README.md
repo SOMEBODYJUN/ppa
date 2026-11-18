@@ -46,7 +46,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 862 个数学节点、631 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 866 个数学节点、636 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -66,7 +66,7 @@
 
 [研究导读与 GPT Pro 任务书](research/topics/common_structure/README.md)给出共同母结构的精确开放问题、三条一手研究路径及独立复核。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。本轮新增 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
-[原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C329 只作为常数二次弱单调专门结果。
+[原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C336 精确恢复同模延拓的真残差，C337–C339 将困难定位到最近锚的小图值、多尺度数据及多值长支。C329 只作为常数二次弱单调专门结果。
 
 ## Research Goal
 

@@ -2944,3 +2944,31 @@
 - **Status**：`derived-checked`。完整单值原算子与唯一全域原根，未核公开先行性。
 - **Exact Statement / Scope**：每个 \(0<\gamma<1\) 皆可取同一完整三角原 \(F(a,b,c)=(\operatorname{sgn}(a)|a|^\gamma,mb,-|b|^\gamma)\)、\(\lambda=1\)、\(\omega(t)=6(1+m)^{-\gamma}t^\gamma\)、局部覆盖与真残差模 \(\psi(s)=s^{1/\gamma}\) 使原 RLEB 的适用条件成立。真残差的最佳正则幂为 \(1/\gamma\)，C334 标量图宽度的最佳局部正则幂只有 \(\gamma\)。
 - **Evidence / Counterevidence**：[同图同模的尖锐证明](research/topics/common_structure/nonlinear_rl_bridge.md#rl-tube-sharp)。不排除保留同一个向量扰动等更强的定向结构，排除本标量宽度在原类上保留同一真残差模。
+
+<a id="c336"></a>
+## C336-v1 · 原 Hölder 模的共同向量检验与真残差精确延拓
+
+- **Status**：`derived-checked`。采用已核 C03，同模原图延拓，未核外部先行性。
+- **Exact Statement / Scope**：给定所有图对满足全尺度原 Hölder–RL 的图数据 \(\Gamma_0\)，固定同一 \(\lambda,L,\gamma\)（\(0<\gamma\le1,\ L>0\)）。允许加入单点当且仅当它仍与全部数据保持同模。所有含 \(\Gamma_0\) 的全域输入覆盖同模延拓之原图的并集，精确等于这些可加入点的集合。固定输出 \(z\) 和右端 \(\eta\)，其可行图值到 \(\eta\) 的最小距离，恰为所有完整延拓的真残差下确界。给定目标零锚或逆纤维子集，可用该距离充要检验所有完整延拓的统一目标误差界。
+- **Evidence / Boundaries**：[精确转接及三点锐例](research/topics/common_structure/nonlinear_rl_bridge.md#rl-directional-completions)。一般模须另有同模完整延拓才能给完整版本。全对附加结构不能从最近零锚推出。
+
+<a id="c337"></a>
+## C337-v1 · 最近零锚原 RL 的小图值可加入性
+
+- **Status**：`derived-checked`。有限维闭图完整原根。
+- **Exact Statement / Scope**：固定任意非空闭 \(S\)、连续非减 \(\omega\) 和 \(\lambda>0\)。对每个 \(y\notin S\) 若 \(\omega(d(y,S))>d(y,S)\)，则每个充分小的非零 \(v\) 均可实现为某闭图完整算子在 \(y\) 的图值，同时精确保留完整零集 \(S\)、全部输出的原最近零锚 RL 和任意给定有限兼容观测。对这些闭图的真残差在该 \(y\) 处的共同下确界为零。
+- **Evidence / Boundaries**：[构造与单值对照](research/topics/common_structure/nonlinear_rl_bridge.md#rl-anchor-independence)。排除由锚定模、零集、覆盖和有限数据单独推出预指定真误差界。没有假设原 RLEB 的另外独立前件。
+
+<a id="c338"></a>
+## C338-v1 · 任意有限同模 Hölder 数据的完整扩张障碍
+
+- **Status**：`derived-checked`。有限维、\(0<\gamma<1\)，使用 C03。
+- **Exact Statement / Scope**：任意有限全对同模数据及零锚 \((0,0)\)，都兼容一张全域唯一完整原近端图，在某小球上反射等于 \(\tau\|x\|^\gamma w\)，\(\tau\in(0,L)\)，\(w\) 为单位向量。零集近原点只含原点。其原 PPA 在每个缩窗违反统一 A，且在输出任意缩窗内无 \(q>1\) 的真误差界 \(d(y,S)\lesssim r_F(y)^q\)。
+- **Evidence / Boundaries**：[严格条件负定、完整扩张与反向尺度门](research/topics/common_structure/nonlinear_rl_bridge.md#rl-finite-obstruction)。依靠完整发布一张延拓同时穿透任意小尺度；正面相对数据条件须另证。
+
+<a id="c339"></a>
+## C339-v1 · 多值 Hausdorff 反射的真残差桥与长支障碍
+
+- **Status**：`derived-checked`。同模完整多值反射纤维非空紧。
+- **Exact Statement / Scope**：使用反射点到完整反射纤维的距离定义共同宽度。图上零宽度可行等价于同模 Hausdorff 反射连续，真残差给宽度上界，原近端见证只能提供最短一支。保留同一向量扰动且所有完整输入覆盖时，最小向量范数是真残差。给具体闭图在同一非线性 \(\omega\)、线性真残差界下使长支步长比宽度所给原步量级任意大。
+- **Evidence / Boundaries**：[完整多值公式与长支反例](research/topics/common_structure/nonlinear_rl_bridge.md#rl-multivalued-observation)。该例不满足旧 Hölder 兼容。仍须独立控制所有长支。

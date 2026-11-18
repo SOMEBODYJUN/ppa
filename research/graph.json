@@ -4773,6 +4773,30 @@
       "label": "C334 图宽度增长到真误差界",
       "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-tube",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-VEC",
+      "label": "C336 同原 Hölder 模的向量真残差判据",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-directional-completions",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-ANCHOR",
+      "label": "C337 最近零锚多值图的小余量加入障碍",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-anchor-independence",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-FINITE",
+      "label": "C338 有限数据不能强制 Hölder 近端收缩",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-finite-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-SET",
+      "label": "C339 多值 Hausdorff 反射的长支障碍",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-multivalued-observation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12057,6 +12081,63 @@
       "output": "MOTHER-OPEN",
       "relation": "open",
       "scope": "保留共同图值扰动的方向，以及不强化到全对单值的最近零锚原 RLEB 转接，仍无一般完成。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E636",
+      "inputs": [
+        "MOTHER-RL-TUBE"
+      ],
+      "output": "MOTHER-RL-VEC",
+      "relation": "conditional",
+      "scope": "改为同一个向量在两个坐标作相反扰动；用全尺度同一 Hölder 扩张精确实现每个可加入图点。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E637",
+      "inputs": [
+        "MOTHER-RL-ANCHOR"
+      ],
+      "output": "MOTHER-RL-VEC",
+      "relation": "limits",
+      "scope": "最近零锚不含跨输入比较，ω(t)>t 处可加入任意小的非零图值，不存在全类正的真残差下界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E638",
+      "inputs": [
+        "MOTHER-RL-FINITE"
+      ],
+      "output": "MOTHER-RL-VEC",
+      "relation": "limits",
+      "scope": "任意固定有限原 Hölder 数据存在保持同模的完全延拓，任意小输入尺度破坏 A，并排除 q>1 的真残差幂。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E639",
+      "inputs": [
+        "MOTHER-RL-SET"
+      ],
+      "output": "MOTHER-RL-EB",
+      "relation": "conditional",
+      "scope": "同一 ω 的 Hausdorff 反射版用完整紧纤维转接真残差。逆向只使用最短支、全部输出结论须单独审查。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E640",
+      "inputs": [
+        "MOTHER-RL-VEC",
+        "MOTHER-RL-ANCHOR",
+        "MOTHER-RL-SET"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "保持真正一般非线性模和最近锚完整多值量词，须同时排除未许可小值和漏检长支。",
       "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
