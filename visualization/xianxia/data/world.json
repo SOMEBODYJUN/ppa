@@ -9659,6 +9659,50 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "MOTHER-RL-LOSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MOTHER-RL-SHIFT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MOTHER-RL-TUBE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MOTHER-RL-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4214,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12173,6 +12217,22 @@
     "E631": {
       "x": 4072.95,
       "y": 4223.49
+    },
+    "E632": {
+      "x": 3249.22,
+      "y": 4557.12
+    },
+    "E633": {
+      "x": 3160.0,
+      "y": 4214.0
+    },
+    "E634": {
+      "x": 4214.0,
+      "y": 4262.0
+    },
+    "E635": {
+      "x": 3224.56,
+      "y": 4349.27
     }
   },
   "bounds": {

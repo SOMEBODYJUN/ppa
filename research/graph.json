@@ -4749,6 +4749,30 @@
       "label": "C332 beta=0 单调边界的任意闭零集点收敛",
       "file": "topics/common_structure/mother_fitzpatrick_bridge.md#mother",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-SHIFT",
+      "label": "C333 固定输出位移惩罚的同弦障碍",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-shift-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-TUBE",
+      "label": "C334 原非线性反射模的真残差转接",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-tube",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-LOSS",
+      "label": "C335 原 RLEB 中图宽度的锐幂损失",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-tube-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-RL-EB",
+      "label": "C334 图宽度增长到真误差界",
+      "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-tube",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11989,6 +12013,51 @@
       "relation": "conditional",
       "scope": "value-weighted 曲率为零时，完整单调 PPA 的 firm Fejer 恒等式给任意闭零集的点收敛和平方步和；q=2 EB 只作残差接口。",
       "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E632",
+      "inputs": [
+        "MOTHER-RL-SHIFT"
+      ],
+      "output": "MOTHER-FITZ",
+      "relation": "limits",
+      "scope": "原平方根 RLEB 例。固定输出位移惩罚在原零点平坦即排除由同一近端弦提供统一正二次下界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E633",
+      "inputs": [
+        "MOTHER-RL-TUBE"
+      ],
+      "output": "MOTHER-RL-EB",
+      "relation": "conditional",
+      "scope": "同一全对一般模、真纤维近极小图值覆盖及根见证。反向用原 EB 和 H 复合。变化右端时所有估计在同一窗口统一量化。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E634",
+      "inputs": [
+        "MOTHER-RL-LOSS"
+      ],
+      "output": "MOTHER-RL-TUBE",
+      "relation": "limits",
+      "scope": "同一完整 Hölder–RLEB 算子旧兼容成立，标量宽度的最优幂由真残差的 1/γ 变为 γ。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E635",
+      "inputs": [
+        "MOTHER-RL-TUBE",
+        "MOTHER-RL-LOSS"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "保留共同图值扰动的方向，以及不强化到全对单值的最近零锚原 RLEB 转接，仍无一般完成。",
+      "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]

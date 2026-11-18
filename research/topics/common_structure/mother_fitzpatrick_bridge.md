@@ -4,6 +4,8 @@
 
 ## 0. 结论和范围
 
+本页处理常数二次弱单调子类。原 RLEB 的一般非线性反射模与最近零锚合同见 [同模定量桥和固定惩罚障碍](nonlinear_rl_bridge.md)。
+
 固定 \(X=\mathbb R^n\)、\(D\subset X\)、\(\Gamma_D=\{(y,v):y\in D,\ v\in F(y)\}\)。母对象是原图的全二次移位 Fitzpatrick 间隙面
 \[
 \mathfrak M_F^\tau(z,u)
