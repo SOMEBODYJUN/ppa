@@ -1,5 +1,9 @@
 # 当前研究状态
 
+## 2026-11-18 RLEB 中间条件候选
+
+监督复核已把目标固定为寻找一个整体严格弱于旧 RLEB、同时强于 A 与物理位移接口的条件。当前唯一候选是 [望远镜位移势](research/candidates/rleb_telescoping_strict_candidate.md)：保留非线性 RL、真残差与距离收缩兼容，要求每个完整步满足 \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。旧 RLEB 的 Dini 预算取 \(W=\Theta_\omega\) 即可推出它。窄 bump 完整 resolvent 候选具有非 Dini 的最小 RL 模，却有超线性法向收缩和有限望远镜势。当前状态是 `candidate`，严格例的全局延拓、最小模和旧兼容排除仍需独立逐式核验。
+
 ## 普通 PPA 整窗假设的比较与 C277 去重
 
 [C315](CLAIMS.md#c315) 在最近零锚 RL 与同一 Dini 基线下闭合了整个新正则性包。线性次正则性加条件性角度估计推出统一距离收缩及留域、有限长度。旧的真残差 EB 与整窗兼容同时推出这两个新前件，且保留原收缩因子和初始预算。完整 Hölder 反例以两个法向分支分别控制 RL 模与最坏残差，证明反向失败。有限长度来自 C09 的原 Dini 机制；C10 排除直接去掉这一机制。下一义务是为固定核 GPPA 确定同一物理零锚下可验证的角度条件，或独立建立真正的 KL 耗散来取代 Dini。任意模的裸 GMSR 比较见 [F105](FAILED_ROUTES.md#f105)。 [与 C277 和 Luke–Tam 的比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 说明，C315 区分了旧论文的整窗假设，但证明及严格例均可由已有联合证书处理，因此只作为具体证书保留。

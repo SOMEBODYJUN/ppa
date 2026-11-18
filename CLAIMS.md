@@ -2763,3 +2763,14 @@
 - **Conclusion / Dependencies**：以 \(\eta=\max\{q,(1+\delta m^2)^{-1/2}\}<1\) 得 (A)；共同 Dini 预算给一步长度支付、留域与有限长度。C09 的 (GM3)–(GM4) 推出整个新条件且保留原因子和初始预算；C277 提供未筛分的弱 Minty 耗散恒等式。[距离 KL 势](research/canonical/rleb_residual_filtered_angle.md#rfa-kl) 同样能逐步支付长度，仍依赖 Dini。
 - **Evidence**：[证明与完整量词](research/canonical/rleb_residual_filtered_angle.md#rfa-theorem)、[完整非线性严格例及固定模比较](research/canonical/rleb_residual_filtered_angle.md#rfa-strict)、[删除条件的反例](research/canonical/rleb_residual_filtered_angle.md#rfa-boundary)。严格例 \(F(a,b)=(\sqrt{b_+},3b)\) 对任何有效旧 RL 模及任何缩窗均无法通过旧兼容，且违反输出相对 (B)。
 - **Counterevidence / Boundaries**：任意模的裸 GMSR 与整窗兼容必须区分。C310 排除一般 (B) 从旧条件推出，C10 排除直接删除 Dini。[与既有理论的逐式比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 表明，Luke–Tam 的定量条件在同一窗口内蕴含该耗散，严格例则违反任意有限的 Luke–Tam 次单调性常数。分支证明和严格例都已落在 C277 的联合证书内。C315 保留为该框架内的充分条件及旧整窗假设的比较，不据此升级主稿。
+
+<a id="c317"></a>
+## C317-v1 · 望远镜位移势替代 Dini 预算的严格弱化候选
+
+- **Status**：`candidate`。
+- **Exact Statement**：在共同 full-graph coverage、非线性 RL 最近零锚和真残差误差界下，增加非减残差包络 \(\bar r\) 与非减势 \(W\)，要求每个完整步满足
+  \(r_F(y)\le\bar r(d(x,S))\)、\(\psi(\bar r(t))\le\kappa t\)，以及
+  \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。这给出 A、物理位移界和有限长度。旧 RLEB 的 Dini 预算取 \(\bar r=B_\omega/\lambda\)、\(W=\Theta_\omega\) 即可推出该包。
+- **Strict-example candidate**：取窄 bump 位移 \(h(t)=\sum A_n\beta((t-t_n)/\delta_n)\)，其中 \(A_n=t_n^\alpha\)、\(\delta_n=t_n^{p+1}e^{-1/A_n}\)、\(0<\alpha<1<p\alpha\)，并令 \(J(u,t)=(u+h(t),\phi(t))\)，\(\phi(t)=\operatorname{sgn}(t)|t|^p/(1+|t|^{p-1})\)。完整图满足 coverage，输出距离超线性收缩，实际步长由 \(W(t)=C_Wt^\alpha+t\) 望远镜支付，而 bump 宽度迫使任何 RL 模的 Dini 积分发散。
+- **Proof obligations**：完成 \(h\) 的全局连续延拓、RL 最小模的非 Dini 下界、完整 \(F=J^{-1}-\operatorname{Id}\) 的零集与真残差核对，以及旧 P4 在 bump 尺度的统一排除。当前不宣称 `derived-checked` 或外部新颖性。
+- **Evidence**：[候选正文](research/candidates/rleb_telescoping_strict_candidate.md)。
