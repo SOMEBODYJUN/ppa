@@ -2717,11 +2717,11 @@
 <a id="c311"></a>
 ## C311-v1 · KL 下降机制在次梯度 PPA 中替代传统 MSR 的有限长度证明
 
-- **Status**：`derived-checked`；它只记录旧条件不自动推出 (B) 的辅助障碍，不是对寻找满足 (A)+(B) 且脱离旧结构的严格扩张例的否定。
-- **Exact Statement / Objects / Domain**：\(f:\mathbb R^n\to(-\infty,+\infty]\) proper、下半连续、有下界；每步 \(x^{k+1}\in\arg\min_y\{f(y)+(2\lambda)^{-1}\|y-x^k\|^2\}\) 存在；相关子水平集有界；聚点 \(\bar x\) 满足序列上半连续条件；\(f\) 在 \(\bar x\) 满足 LMZ Definition 2.2 的 KL 性质；并且 \(w^{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1})\)。
-- **Conclusion**：近端下降给 \(f_{k+1}+(2\lambda)^{-1}e_k^2\le f_k\)，KL 与相对误差给 \(\Lambda_{k,k+1}\ge e_k^2/(2e_{k-1})\)，从而 \(e_k\le(e_{k-1}+\Lambda_{k,k+1})/\sqrt2\)。因此 \(\sum e_k<\infty\)，\(x^k\to\bar x\)，整个证明不使用传统 metric subregularity。
+- **Status**：`derived-checked`，范围限于 LMZ v1 的 exact subgradient PPA 条件版；不把该结果升级为一般 RL/GPPA 定理。
+- **Exact Statement / Objects / Domain**：按 LMZ v1 的有限值函数约定，或在轨道有限值且 limiting-subgradient/Fermat 桥已另证的 proper-l.s.c. 扩展，\(f:\mathbb R^n\to(-\infty,+\infty]\) 有下界；每步 \(x^{k+1}\in\arg\min_y\{f(y)+(2\lambda)^{-1}\|y-x^k\|^2\}\) 存在；相关子水平集有界；聚点 \(\bar x\) 满足序列上半连续条件；\(f\) 在 \(\bar x\) 满足 LMZ Definition 2.2 的 KL 性质；并且 \(w^{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1})\)。
+- **Conclusion**：近端下降给 \(f_{k+1}+(2\lambda)^{-1}e_k^2\le f_k\)，KL 与相对误差给 \(\Lambda_{k,k+1}\ge e_k^2/(2e_{k-1})\)，直接 AM--GM 得 \(e_k\le(e_{k-1}+\Lambda_{k,k+1})/\sqrt2\)。按 LMZ 混合门取 \(\mu_1=\mu_2=1/2\) 时，代入 \(t=2\Lambda\) 得另一递推 \(e_k\le e_{k-1}/2+\Lambda\)；两者不混写。因此 \(\sum e_k<\infty\)，\(x^k\to\bar x\)，整个证明不使用传统 metric subregularity。
 - **Dependencies / Evidence**：[逐步重构](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c311-kl)、LMZ v1 Theorem 5.1 pp.12–13、H0–H3/H11、KL 定义。
-- **Counterevidence / Scope**：KL 是新的正则结构；结论不自动给距离到预指定 \(S\) 的速率，不自动覆盖一般多值 \(F\) 或 GPPA。正式刊本公式级差异尚未取得全文核对。
+- **Counterevidence / Scope**：KL 是新的正则结构；KL-only 不能推出有限长度（单位圆 \(e_k\sim1/k\) 反例见 [目标二修订报告](research/topics/next_stage_2026/target2_kl_finite_length.md)）。结论不自动给距离到预指定 \(S\) 的速率，不自动覆盖一般多值 \(F\) 或 GPPA。正式刊本公式级差异尚未取得全文核对。
 
 
 <a id="c312"></a>
@@ -2733,3 +2733,13 @@
 - **Failure of traditional submonotonicity**：取 \(y_n=(2n+1)\pi\)、\(u_n=y_n-\varepsilon\)、\(v_n=y_n+\varepsilon\)，则 \(\Delta y=2\varepsilon\)、\(\Delta F=\varepsilon-3\sin\varepsilon\)、\(\Delta G=3(\varepsilon-\sin\varepsilon)\)。因此 \(\Delta y\Delta F\sim-4\varepsilon^2\)，而 \((\Delta G)^2\sim\varepsilon^6/4\)，任何固定 Luke–Tam violation 常数都必须趋于无穷。
 - **Meaning / Scope**：C312 直接证明 (A)+(B) 可以脱离传统次单调性，并且量词是完整图/完整 resolvent。它仍满足线性 MSR；full-graph 的 (A) 本身推出线性 MSR，因此同时否定完整 MSR 不可能。允许子关系上另有 \(F(y)=\{y,y^2\}\) 的严格扩张例，但不能混写成完整 resolvent 结论。
 - **Evidence**：[完整构造与渐近计算](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph)、[目标三报告](research/topics/next_stage_2026/target3_coupled_structure.md#t3-obstruction)。
+
+
+<a id="c313"></a>
+## C313-v1 · 非次梯度线性 RL–KL 转接基准类
+
+- **Status**：`derived-checked`，但不弱于 metric subregularity；这是一个已闭合的迁移基准，不是目标二的最终弱化定理。
+- **Exact Statement / Objects / Domain**：在 \(H=\mathbb R^n\) 取 \(A=S+K\)，其中 \(S=S^\top\succeq0\)、\(K^\top=-K\)、且 \(A\) 可逆，\(F(x)=Ax\)。任意 \(\lambda>0\) 下完整图满足全局 \(\mathrm{RL}(\lambda,1,1)\)，且 \(J_{\lambda F}=(I+\lambda A)^{-1}\) 全域单值。
+- **KL bridge**：取 \(E(x)=\frac12\|x\|^2\)、\(e_k=\|x^{k+1}-x^k\|\)。对 \(y=x^{k+1}\)，有 \(E(x^k)-E(y)=\lambda\langle y,Sy\rangle+\frac12e_k^2\ge\frac12e_k^2\)，并且 \(y\in\partial E(y)\)、\(\|y\|\le\|A^{-1}\|e_k/\lambda\)。因此 H11、H2、H3、有界次水平集与 KL 在 0 成立，LMZ 给出有限长度和 \(x^k\to0\)。
+- **Meaning / Scope**：若 \(K\ne0\)，\(F\) 不是标量函数的次梯度图；例如二维纯旋转 \(A=\left(\begin{smallmatrix}0&-1\\1&0\end{smallmatrix}\right)\) 是最大单调但非强单调。可是 \(A\) 可逆已给出全局线性 MSR，因此该例只证明 RL–KL 桥可在自然非次梯度类中闭合，不能声称已弱于旧 MSR 理论。
+- **Evidence**：[三席独立审查与收口](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)、[目标二修订报告](research/topics/next_stage_2026/target2_kl_finite_length.md)。

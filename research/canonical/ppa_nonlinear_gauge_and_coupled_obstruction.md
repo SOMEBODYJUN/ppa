@@ -177,7 +177,7 @@ d_k=4^{-k}d_0\to0
 <a id="c311-kl"></a>
 ## 4. C311：KL 机制可在次梯度 PPA 中替代传统度量次正则
 
-**Exact Statement。** 令 \(f:\mathbb R^n\to(-\infty,+\infty]\) proper、下半连续并有下界。设每一步精确近端点存在：
+**Exact Statement。** 按 LMZ v1 的有限值函数约定，或在轨道有限值且 limiting-subgradient/Fermat 桥已另证的 proper-l.s.c. 扩展，令 \(f:\mathbb R^n\to(-\infty,+\infty]\) 有下界。设每一步精确近端点存在：
 \[
 x^{k+1}\in\operatorname*{argmin}_y
 \left\{f(y)+\frac1{2\lambda}\|y-x^k\|^2\right\},
@@ -241,7 +241,7 @@ e_k\le\sqrt{2e_{k-1}\Lambda_{k,k+1}}
 \[
 \frac{\phi^{-1}(\beta(s)t)}{\mu_1s+\mu_2t}
 \]
-控制一个下降差和前一步 surrogate 的混合项，标准 PPA 中由 AM--GM 直接取 \(\mu_1=\mu_2=1/2\)。
+控制一个下降差和前一步 surrogate 的混合项。标准 PPA 的 (KL6) 直接由 AM--GM 得到；若按 LMZ 的 K1 代入 \(t=(b/a)\Lambda=2\Lambda\)，取 \(\mu_1=\mu_2=1/2\) 得另一递推 \(e_k\le e_{k-1}/2+\Lambda\)，两者不混写。
 
 **Scope。** KL 证明给出有限长度和点收敛，但不自动给 \(d(x^k,S)\) 的先验线性或非线性速率；也不自动覆盖非次梯度、非 Lyapunov 的原始多值 \(F\)。因此它可以去掉的是“为了有限长度而使用传统 metric subregularity”的一个证明接口，不能写成“去掉一切正则性”。KL 本身是新的正则结构。
 
