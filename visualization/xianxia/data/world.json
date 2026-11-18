@@ -9372,6 +9372,39 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "TD-GAUGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-PROJECTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-SUPPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11778,6 +11811,18 @@
     "E604": {
       "x": 3347.22,
       "y": 4404.59
+    },
+    "E605": {
+      "x": 3559.97,
+      "y": 4353.35
+    },
+    "E606": {
+      "x": 3471.09,
+      "y": 4076.92
+    },
+    "E607": {
+      "x": 3525.11,
+      "y": 4244.45
     }
   },
   "bounds": {

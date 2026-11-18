@@ -10,6 +10,10 @@
 
 [C317-v2](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract) 给出同一旧单步结构下的三类轨道。实际法向超线性压缩可给有限长度，交替切向位移可只给点收敛，同向漂移可发散。后两例的步长、真残差和锚定反射范数一样。原窄 bump 的失效范围与可回收结论见 [F107](FAILED_ROUTES.md#f107)。下一步是从非三角的原算子结构导出两步位移的相消量，或找到同时接收 Luke–Tam 基线的方向误差界。该阶段未建立外部先行性。
 
+## C320 定理稿与先行边界
+
+[可读定理与文献定位](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md) 在同一窗口明确比较保留方向的条件、旧标量条件和 A+B。最近的公开先例是 Kruger 的图值侧一般残差和 Valkonen 的部分次正则。C321 既把本条件写成非径向误差界，又给出严格超出全纤维固定线性观察的证明。下一义务是从一个非反演构造的原问题验证支持方向，并与 Valkonen 等人的更广条件逐项比较。
+
 ## 普通 PPA 整窗假设的比较与 C277 去重
 
 [C315](CLAIMS.md#c315) 在最近零锚 RL 与同一 Dini 基线下闭合了整个新正则性包。线性次正则性加条件性角度估计推出统一距离收缩及留域、有限长度。旧的真残差 EB 与整窗兼容同时推出这两个新前件，且保留原收缩因子和初始预算。完整 Hölder 反例以两个法向分支分别控制 RL 模与最坏残差，证明反向失败。有限长度来自 C09 的原 Dini 机制；C10 排除直接去掉这一机制。下一义务是为固定核 GPPA 确定同一物理零锚下可验证的角度条件，或独立建立真正的 KL 耗散来取代 Dini。任意模的裸 GMSR 比较见 [F105](FAILED_ROUTES.md#f105)。 [与 C277 和 Luke–Tam 的比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 说明，C315 区分了旧论文的整窗假设，但证明及严格例均可由已有联合证书处理，因此只作为具体证书保留。

@@ -2799,7 +2799,16 @@
 <a id="c320"></a>
 ## C320-v1 · 方向保真的图值包络与严格中间条件
 
-- **Status**：`derived-checked`。严格比较对象是正式 RLEB 标量整窗兼容，外部先行性未核。
+- **Status**：`derived-checked`。严格比较对象是正式 RLEB 标量整窗兼容。已作定向公开先行审查，Kruger 与 Valkonen 为直接相邻先例；优先性未裁定。
 - **Exact Statement / Objects / Domain**：在同一 C318 欧氏对象及 P1、最近零锚 P2、真残差 P3 下，令 \(Y=\mathcal J(U_R)\)，\(V_t\) 为输入距离至多 \(t\) 的全部选中图值。要求有嵌套闭中心对称凸集 \(V_t\subseteq K_t\subseteq\bar B(0,H(t)/\lambda)\)，且 \(Y\cap F^{-1}(K_t)\subseteq\{d\le\kappa t\}\)，逆像对原纤维取。最小检查集合为 \(V_t\cup(-V_t)\cup\{0\}\) 的闭凸包。
 - **Conclusion / Evidence**：旧结构包推出此条件，此条件推出原 A+B；两侧严格性可在固定同一 Dini 模、覆盖、步长、因子和窗内实现。与 C319 合取后得到弱于旧完整 RLEB、强于 A+B 且保证点收敛的条件，覆盖某些无 Dini 模的完整图。[证明、双侧分离与线性观察锐边](research/canonical/ppa_two_step_and_directional_residual.md#td-directional)
 - **Scope / Objections**：紧的图值方向保留可成功，改用任意等价范数未必成功。逆向包络跨不同输入，不是逐图点重述 A。已用 C277 可认证若干具体子类，与 Luke–Tam 原整套前提不可比，双向见证见正文。
+
+
+<a id="c321"></a>
+## C321-v1 · C320 的支撑函数判据及其与固定线性观察的严格分离
+
+- **Status**：`derived-checked`。普通有限维 PPA 的同窗完整图比较；外部优先性未裁定。
+- **Exact Statement / Objects / Domain**：固定 C320 的全部共同对象及 P2。记 \(C_t\) 为实际尺度 \(t\) 的最小对称闭凸包，\(\sigma_t(u)=\sup_{w\in C_t}\langle u,w\rangle\)。C320 的逆向排除等价于对每个 \(t\)、每个 \(d(y)>\kappa t\) 的 \(y\in Y\) 与每个 \(v\in F(y)\)，存在单位 \(u\) 使 \(|\langle u,v\rangle|>\sigma_t(u)\)。它也等价于 \(d(y)\le\kappa\inf_{v\in F(y)}\inf\{t:v\in C_t\}\)。
+- **Strict extension**：固定线性 \(L\) 的完整观察残差误差界及可达图值外包若满足同尺度标量兼容，则 C320 可用交球的同一投影柱体验证。存在完整局部近端满足 C320，却排除任何这样的固定 \(L\)，即使观察包络仅要求上界真观察残差。反例在原图添有一条窗外输入支，逐项验证局部完整性与真实残差均保留。
+- **Evidence / Scope**：[支撑与广义残差证明](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-support) · [全纤维固定观察分离](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection) · [先行研究](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-prior-art)。不排除改变投影残差的纤维截断或任意非线性残差尺度。Kruger 的一般图值尺度与 Valkonen 的部分次正则不能据此宣称被整体分离。

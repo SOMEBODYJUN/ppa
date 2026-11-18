@@ -4599,6 +4599,24 @@
       "label": "C317-v2 非 Dini 下的真实一步有限长度",
       "file": "canonical/ppa_two_step_and_directional_residual.md#td-common-contract",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-SUPPORT",
+      "label": "C321 可达图值凸包的支持方向判据",
+      "file": "audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-support",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-GAUGE",
+      "label": "C321 最小图值集合的非径向残差等价",
+      "file": "audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-gauge",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-PROJECTION",
+      "label": "C321 完整图值包络超出固定线性观察",
+      "file": "audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11534,6 +11552,39 @@
       "scope": "快速实际法向收缩使一步势支付全部位移；对严格增的任意非 Dini 高度可另构造可和采样。",
       "status": "derived-checked",
       "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E605",
+      "inputs": [
+        "TD-DIRECTION"
+      ],
+      "output": "TD-SUPPORT",
+      "relation": "equivalence",
+      "scope": "在同一 P2 下以最小对称闭凸包检验，对每个坏输出的每个完整图值均要求存在严格支持分离方向。",
+      "status": "derived-checked",
+      "topic": "原图值凸包与先行误差界比较"
+    },
+    {
+      "id": "E606",
+      "inputs": [
+        "TD-DIRECTION"
+      ],
+      "output": "TD-GAUGE",
+      "relation": "equivalence",
+      "scope": "对每个输出的完整纤维取进入尺度下确界，不要求达到；不自动满足已知 g-次正则判据的附加假设。",
+      "status": "derived-checked",
+      "topic": "原图值凸包与先行误差界比较"
+    },
+    {
+      "id": "E607",
+      "inputs": [
+        "TD-PROJECTION"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "limits",
+      "scope": "原普通 PPA 的完整局部预解式保持，窗外支令每个固定线性观察的全纤维误差界或兼容失败而可达图值集合条件成立。",
+      "status": "derived-checked",
+      "topic": "原图值凸包与先行误差界比较"
     }
   ]
 }

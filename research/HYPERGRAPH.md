@@ -949,6 +949,14 @@
 | E603 | [TD-COMMON · 同一个单步结构下的三类轨道](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | limits → [TD-PAIR · C319 两步净位移势](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | 相同 A+B、锚定 RL、真残差和兼容的交替图与同向图给不同结论；单步标量无法推出两步势。；**derived-checked** |
 | E604 | [TD-COMMON · 同一个单步结构下的三类轨道](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | conditional → [TD-FAST · C317-v2 非 Dini 下的真实一步有限长度](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | 快速实际法向收缩使一步势支付全部位移；对严格增的任意非 Dini 高度可另构造可和采样。；**derived-checked** |
 
+## 原图值凸包与先行误差界比较
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E605 | [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | equivalence → [TD-SUPPORT · C321 可达图值凸包的支持方向判据](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-support) | 在同一 P2 下以最小对称闭凸包检验，对每个坏输出的每个完整图值均要求存在严格支持分离方向。；**derived-checked** |
+| E606 | [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | equivalence → [TD-GAUGE · C321 最小图值集合的非径向残差等价](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-gauge) | 对每个输出的完整纤维取进入尺度下确界，不要求达到；不自动满足已知 g-次正则判据的附加假设。；**derived-checked** |
+| E607 | [TD-PROJECTION · C321 完整图值包络超出固定线性观察](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection) | limits → [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | 原普通 PPA 的完整局部预解式保持，窗外支令每个固定线性观察的全纤维误差界或兼容失败而可达图值集合条件成立。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

@@ -627,3 +627,9 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 - **Paper fact**：[Rockafellar 1976 原稿](https://www.ceremade.dauphine.fr/~carlier/Rockafellar1976.pdf)，准则 (A)、Theorem 1。绝对可和量是非精确近端输出的求解误差容差，并非原算法步长。对照 [Solodov–Svaiter 1999](https://pages.cs.wisc.edu/~solodov/solsva99Teps.pdf) Algorithm 3.1、Lemma 4.1、Corollary 4.2 与 Theorem 3.1：固定相对误差及校正更新给所有零点的平方距离下降和辅助步平方可和，再得弱收敛。
 - **Paper fact**：[Combettes 2001](https://pcombet.math.ncsu.edu/ipa.pdf)，Theorem 3.11、Remark 7.5。准 Fejér 性与聚点判别推出点收敛；投影次梯度实例可用平方可和但不可和的步幅序列。 [LMZ v1](https://arxiv.org/html/2406.13207v1#S5) Theorem 5.1 的 (5.3) 改用解奇异化函数差，结论是有限长度。
 - **本库推导**：[C319/C320](canonical/ppa_two_step_and_directional_residual.md#td-literature) 区分三类不同量。原普通 PPA 无 Solodov–Svaiter 的校正和全零点单调图，直接转接失败。对平方步长和发散的 C319 子类，标准正平方耗散不可能，因而以跨步符号相消和两步净位移势代替。该机制未作全球先行裁决。
+
+<a id="lit-c320-prior"></a>
+## C320/C321 与现有方向误差界的比较
+
+- **最接近的原文**：Kruger, *Nonlinear Metric Subregularity*, §4.1 (22)–(23) 及 §4.4 Theorem 4.1，[全文](https://arxiv.org/pdf/1502.06159)；Valkonen, *Preconditioned Proximal Point Methods and Notions of Partial Subregularity*, Definition 4.2、Lemma 4.4、Example 4.6，[作者稿](https://tuomov.iki.fi/mathematics/subreg.pdf)。前者为原图值指定非径向函数并用斜率/余导数给判据。后者用加权平方距离定义部分次正则并证明 PPA 类算法的收敛。
+- **边界**：[全文审查与定理稿](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-prior-art) 另核方向次正则、相对误差界、各向异性/退化预条件和多步 Lyapunov。C321 同时给出原图生成的非径向尺度与支持方向检验，并严格分离完整固定线性观察，不能以此声称排除上述所有一般化理论或裁定首创。
