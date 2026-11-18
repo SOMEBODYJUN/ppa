@@ -1,218 +1,139 @@
-# 下一轮 GPT Pro 主研究任务：先闭合 RL–KL，再寻找中间结构性质
+# GPT Pro 主研究任务：RL 基础下严格弱化 GMSR，并连接到收敛接口
 
-## 任务背景
+## 先固定正确的问题
 
-当前 PPA 项目有三个方向。前一轮已经确认：
+本任务始终在已有 RL 条件下进行。RL 是算法/图几何基线，不是要寻找的正则性，也不是 KL 的替代品。不要研究“RL alone 能否推出 Lyapunov”；这个问题已经有周期轨道反例，不能作为本轮主结果。
 
-- 仅有函数复合距离收缩不能自动给有限长度，必须同时控制步长尾；
-- LMZ/Zhu 的 KL 框架在 exact subgradient PPA 中可以替代传统 metric subregularity 的一个有限长度接口；
-- 目标三的重点不是证明旧假设推出 (A)+(B)，而是寻找满足 (A)+(B) 或其 KL 改进版、同时脱离传统次单调性或传统 MSR 的严格扩张结构。
-
-必须区分：完整图/full resolvent、允许子关系/固定选择策略、局部工作域、真实完整残差和所选图值。
-
-## 总优先级
-
-优先完成目标二。目标一只作为技术基础，目标三在目标二形成新的有限长度接口后再推进。
-
----
-
-## 目标二：构造 RL–KL 有限长度转接引理
-
-### 精确问题
-
-从 Li–Mordukhovich–Zhu arXiv v1 的 Theorems 4.3–5.1 出发，研究是否能把传统的绝对步长求和
+旧理论中的 GMSR 是正则性条件。现在要研究的是：能否找到一个有独立数学意义、可由自然算子或图几何验证的正则性 \(\mathcal R\)，满足
 
 \[
-\sum_k \|x^{k+1}-x^k\|<\infty
+\mathrm{GMSR}\Longrightarrow \mathcal R,
 \]
 
-替换为 KL 能量差的望远镜控制，从而在不依赖传统 metric subregularity、也不依赖固定几何步长包络的情况下证明有限长度。
-
-### 必须逐项重构的 LMZ 接口
-
-固定 exact PPA 或允许 PPA 轨道，逐项核对：
-
-- H0：下降；
-- H1/H1'：步长 surrogate 与充分下降；
-- H2：相对误差；
-- H3：聚点子序列的函数值上半连续；
-- bounded level set；
-- 聚点存在；
-- KL 不等式；
-- \(\varphi^{-1}(\beta(s)t)\) 的混合条件。
-
-标准 exact subgradient PPA 的基准映射为
+并且存在同一对象类别、同一量词口径下的严格例子
 
 \[
-e_k=\|x^{k+1}-x^k\|,
-\quad a=\frac1{2\lambda},
-\quad \varphi(t)=t^2,
-\quad \beta(t)=t,
-\quad b=\frac1\lambda.
+\mathcal R\quad\text{成立，但}\quad \mathrm{GMSR}\quad\text{失败}.
 \]
 
-必须重构
+然后再寻找一个独立的兼容条件 \(\mathcal C\)，使得在 RL 下
 
 \[
-\Lambda_{k,k+1}
-\ge \frac{e_k^2}{2e_{k-1}},
-\qquad
- e_k\le \frac{e_{k-1}+\Lambda_{k,k+1}}{\sqrt2},
+\mathrm{RL}+\mathcal R+\mathcal C
+\Longrightarrow (A)+(B),
 \]
 
-并证明望远镜求和给出有限长度。
+或者在目标二的 KL 机制闭合后，推出能够替代点态 \(B\) 的能量望远镜接口。
 
-### RL 到 KL 的关键桥
+这里必须分开比较：
 
-不能直接把任意 \(F\) 当成 \(\partial f\)。必须研究一个明确的 Lyapunov/能量函数 \(E\)，并验证：
+- **严格弱于 GMSR 的是正则性组件 \(\mathcal R\)**；
+- **整体充分条件 \(\mathcal R+\mathcal C\)** 可能因为加入 \(\mathcal C\) 而比 GMSR 更强，不能把整体条件说成弱于 GMSR；
+- \(A+B\) 是收敛接口，不要把它当成一个自动弱于 GMSR 的正则性。
 
-\[
-E(x^{k+1})+a\,\varphi(e_k)\le E(x^k),
-\]
+特别地，对 full graph，如果 \(A\) 对所有图点和所有输出全局成立，在输入 coverage、步长和图点关系适用时，\(A\) 本身可能推出线性 metric subregularity。因此必须明确：严格弱化应发生在 \(\mathcal R\) 与 GMSR 的比较上；若使用局部、轨道限制或 selected relation，必须把范围写清楚，不能升级成 full-graph 结论。
 
-以及某个真实的相对误差对象
+## 我们之前的理解偏差，必须在报告开头说明
 
-\[
-\xi_{k+1}\in\mathcal R_E(x^{k+1}),
-\qquad
-\|\xi_{k+1}\|\le b\,\beta(e_k).
-\]
+之前出现过以下误读，不能重犯：
 
-同时验证 H3、level-set、聚点、KL 和目标集合身份。
-
-原证明中出现的
-
-\[
-2\sigma\|x^{k+1}-x^k\|
-\]
-
-不能直接删掉。必须证明它：
-
-1. 被扩充 Lyapunov 函数吸收；或
-2. 被下降余量吸收；或
-3. 被改写成可望远镜的能量差。
-
-### 目标二的输出
-
-必须给出一个明确的 RL–KL theorem candidate，分成：
-
-- exact subgradient PPA 的已闭条件版；
-- 一般非单调 PPA 的所需额外桥；
-- GPPA 的核空间/物理空间对象分离；
-- 所有未闭 proof obligations；
-- 至少一个说明 KL alone 不够的反例。
-
-如果无法从 RL 结构推出 Lyapunov/relative-error 桥，必须明确停止，不得把 exact subgradient 结果冒充一般 PPA 结果。
-
----
-
-## 目标一：为目标二提供非线性距离接口
-
-保留并继续完善一般函数复合递推
-
-\[
-d_{k+1}\le \varphi(d_k),
-\qquad
-s_k\le B(d_k).
-\]
-
-必须区分：
-
-- \(\varphi^{\circ k}(t)\to0\)；
-- \(\sum_k B(\varphi^{\circ k}(t))<\infty\)；
-- 物理有限长度；
-- 点列收敛。
-
-继续保留 \(F(y)=y|y|\) 的完整 PPA 例作为固定 \(\kappa\) 和线性 MSR 都失败、但实际步长望远镜可和的正面模型。不要把粗 RLEB 步长上界和实际步长混为一谈。
-
----
-
-## 目标三：寻找严格介于旧理论和新有限长度接口之间的结构性质
-
-### 正确研究目标
-
-不是证明
-
-\[
-\text{旧 RL 次单调性+MSR}\Rightarrow(A)+(B).
-\]
-
-真正目标是寻找一个独立可验证的结构性质 \(\mathcal P\)，使它在明确量词下：
-
-- 能产生 (A)+(B)，或产生它们的 KL/望远镜改进版；
-- 不需要完整传统次单调性，或者不需要传统 MSR；
-- 不是把 (A)+(B) 原样重新命名；
-- 可以由自然算子/图几何/Lyapunov 结构验证；
-- 严格覆盖旧理论无法覆盖的例子。
-
-### 已有严格扩张基准
-
-完整 full-graph/full-resolvent 的基准例为
-
-\[
-G(y)=\frac32(y+\sin y),
-\qquad
-F(y)=G(y)-y,
-\qquad
-J_F=G^{-1},
-\qquad
-S=\{0\}.
-\]
-
-它满足全局 (A)+(B)，但不存在有限 Luke–Tam 型传统次单调性 violation 常数。这个例子证明：
-
-\[
-(A)+(B)\quad\text{可以脱离传统次单调性}.
-\]
-
-它仍满足线性 MSR；完整图的 (A) 自动推出线性 MSR，因此不应声称它同时脱离完整 MSR。
-
-允许子关系的基准例 \(F(y)=\{y,y^2\}\) 只选 \(w=y\) 的分支，可以得到 (A)+(B) 但完整真残差不满足 MSR；必须明确这是选择策略/允许子关系性质，不能升级成完整 resolvent 结论。
-
-### 优先研究的候选
-
-1. **KL–telescoping transport**：
+1. 把任务误读成证明“RL + 旧 GMSR \(\Rightarrow A+B\)”；真正目标是寻找新的 \(\mathcal R\) 和独立 \(\mathcal C\)，并证明它们在 RL 下连接到 \(A+B\) 或 KL 接口。
+2. 把 RL alone 当成与 KL 同类的正则性；RL 只是基线，\(\mathcal R\) 才是待弱化的正则性。
+3. 把 exact subgradient PPA 的 KL 定理扩大成一般非单调 RL/GPPA 定理。
+4. 把“换一种有限长度证明机制”说成“已经削弱了 MSR”。只有证明 \(\mathrm{GMSR}\Rightarrow\mathcal R\)、并给出 \(\mathcal R\wedge\neg\mathrm{GMSR}\) 的严格例，才能声称正则性组件被严格弱化。
+5. 把“旧条件不能推出 \(B\)”的反例当成“满足新接口但脱离 GMSR”的严格扩张例。两者回答的是不同问题。
+6. 混淆 full graph 与 selected subrelation、完整真残差与选择残差、局部结论与全局结论。
+7. 把“拆掉绝对值”理解成删除有限长度结论。有限长度结论仍是
    \[
-   \|x-y\|
-   \le C\bigl(\Theta(E(x))-Theta(E(y))\bigr)
+   \sum_k\|x^{k+1}-x^k\|<\infty.
    \]
-   或
+   KL 路线真正可能改进的是：不再直接假设点态的 \(B\)，而用能量差支付步长。
+
+已有的 RL-alone 四周期反例只说明 RL 不能自动产生耗散 Lyapunov；它不是本任务的正面结果。已有的
+
+\[
+G(y)=\tfrac32(y+\sin y),\qquad F(y)=G(y)-y
+\]
+
+例子说明 full-graph 的 \(A+B\) 可以脱离传统次单调性，但它仍有线性 MSR，因此也不能冒充 \(\mathcal R<\mathrm{GMSR}\) 的严格弱化例。
+
+## 精确研究对象
+
+先读取当前仓库的 README.md、RESEARCH_STATE.md、CLAIMS.md、FAILED_ROUTES.md，以及 RL、GMSR、目标二 KL 相关规范文件。只使用规范文件中的定义，不从历史聊天补定义。
+
+在开始证明前，逐字固定以下对象：
+
+- 空间、算子/图、零集 \(S\)、步长和迭代格式；
+- 图块还是完整图；full resolvent 还是 selected relation；
+- 全局还是局部工作域；
+- 所有量词、常数和输入 coverage；
+- 残差是完整真残差还是选择残差；
+- 距离收缩的输出量词，以及步长控制的输出量词。
+
+对同一份固定对象，分别定义：
+
+\[
+\tag{A} d(y,S)\le \kappa d(x,S),\qquad 0\le\kappa<1,
+\]
+
+\[
+\tag{B} \|x-y\|\le B_0 d(y,S).
+\]
+
+若研究 selected relation，必须把选择映射、允许的输出和选择残差单独写出；不能用选择关系的结论替代完整图结论。
+
+## 目标二提供的改进接口
+
+目标二的 exact subgradient PPA KL 结果可以作为已核对的基准，但不能自动推广到一般 RL/GPPA。对一般对象，只有在明确构造并验证 Lyapunov 函数 \(E\)、下降条件、真实相对误差、H3、聚点和 KL 条件后，才可使用 KL 望远镜。
+
+研究一个真正替代点态 \(B\) 的接口，例如证明某个明确版本的
+
+\[
+s_k\le \rho s_{k-1}+C\,\Delta\Theta_k,
+\qquad 0\le\rho<1,
+\]
+
+其中 \(s_k=\|x^{k+1}-x^k\|\)，\(\Delta\Theta_k\ge0\) 是可望远镜的能量差。然后由
+
+\[
+\sum_k\Delta\Theta_k<\infty
+\]
+
+推出 \(\sum_k s_k<\infty\)。如果仍然证明原始点态 \(B\)，也必须说明 KL 机制没有因此自动变成更弱假设。
+
+原证明中出现的 \(2\sigma\|x^{k+1}-x^k\|\) 不能凭空删除。必须证明它被扩充能量吸收、被下降余量吸收，或被改写为可望远镜的能量差；否则报告为未闭 proof obligation。
+
+## 对每个候选正则性 \(\mathcal R\) 的强制验收
+
+对每个候选，只保留以下完整链条：
+
+1. **正式定义**：对象、定义域、局部/全局范围、全部量词和常数。
+2. **弱化证明**：在同一口径下证明 \(\mathrm{GMSR}\Rightarrow\mathcal R\)。
+3. **严格例**：构造同一对象类别中 \(\mathcal R\wedge\neg\mathrm{GMSR}\) 的例子，并逐项验证；不能只证明脱离次单调性。
+4. **独立兼容条件**：定义 \(\mathcal C\)，解释其算子、图几何或能量意义；禁止把 \(\mathcal C\) 偷换成 GMSR、\(A+B\) 或 KL 结论的同义改写。
+5. **连接证明**：逐步证明
    \[
-   \|x-y\|
-   \le C\bigl(d(x,S)^\alpha-d(y,S)^\alpha\bigr).
+   \mathrm{RL}+\mathcal R+\mathcal C\Rightarrow A+B,
    \]
-   它直接给有限长度，并可能比 (B) 更适合 KL 望远镜。
+   或证明它推出严格定义的 KL 望远镜接口。若只能得到轨道级、局部级或 selected-relation 版本，必须按原范围报告。
+6. **必要性攻击**：分别去掉 RL、\(\mathcal R\) 或 \(\mathcal C\)，构造反例或说明尚未能构造；检查退化、非孤立解集、非凸、非单值和周期情况。
+7. **边界审查**：核对 full graph/selected relation、完整/选择残差、局部/全局、距离收敛/点列收敛、绝对可和/能量望远镜的区别。
+8. **MSR 边界**：检查全图版的 \(A\) 是否自动推出线性 MSR；若是，不能把该版本说成严格弱于 full-graph MSR，应改报局部/轨道/选择版本或记录 obstruction。
 
-2. **锚定扇区—相对平静性**：共同最近锚、正扇区和选中图值 calmness。必须证明它来自自然算子类，而不是人为包装。
+候选 \(\mathcal R\) 不得直接定义成 \(A+B\)、KL 望远镜接口或它们的符号改写。必须说明它为何是可独立验证的正则性，而不是把目标结论包装成假设。
 
-3. **统一中间性质**：在目标二闭合 RL–KL 桥后，寻找一个弱于完整旧 RL+MSR、强于纯距离接口的结构条件，并明确旧条件如何导入它、它如何导出新的有限长度接口。
+## 最终交付格式
 
-### 必须严格区分的量词
+只提交一个最有希望的候选主路线；不要并列堆积许多未经验证的猜想。报告必须包含：
 
-- full graph vs selected subrelation；
-- all resolvent outputs vs one policy；
-- local coverage vs global coverage；
-- true residual inf over full fiber vs selected residual；
-- distance convergence vs point convergence；
-- absolute summability vs telescoping summability。
+- Exact Statement：Objects、Domain、Quantifiers、Assumptions、Definitions、Conclusion；
+- \(\mathrm{GMSR}\)、\(\mathcal R\)、\(\mathcal C\)、RL、(A)、(B) 和 KL 接口的依赖图；
+- \(\mathrm{GMSR}\Rightarrow\mathcal R\) 的证明；
+- \(\mathcal R\wedge\neg\mathrm{GMSR}\) 的严格例及逐项验证；
+- \(\mathrm{RL}+\mathcal R+\mathcal C\Rightarrow A+B\) 或 KL 望远镜接口的完整证明；
+- 每个额外假设的必要性反例或明确未闭义务；
+- full graph / selected relation 的量词表；
+- 与旧 RL+GMSR 理论的准确比较：比较的是 \(\mathcal R\)，不是未经证明的整体 \(\mathcal R+\mathcal C\)；
+- Truth、Value、Novelty、Mechanism、Ambition、Status 分开判断。
 
----
-
-## 最终交付标准
-
-本轮只接受以下状态标签：
-
-- derived-checked：证明和量词已闭；
-- candidate：结构固定但自然验证/桥仍未闭；
-- refuted：某个精确版本有反例；
-- open：尚缺关键 proof obligation。
-
-不得把：
-
-- exact subgradient KL 结果写成一般非单调 PPA 定理；
-- selected-subrelation 严格扩张写成 full-graph 结果；
-- PTD 写成 (A)+(B)；
-- KL-only 写成有限长度；
-- 一条反例误读为整个目标三失败。
-
-优先交付目标二的 RL–KL transfer theorem candidate；目标三只在该桥明确后再提出统一中间性质。
+状态只能使用：derived-checked、candidate、refuted、open。如果严格弱于 GMSR 的 \(\mathcal R\) 尚未找到，必须明确写“本轮未完成”，并给出最关键的 obstruction 和最强可成立的修正版；不得把 exact subgradient KL 结果或一个非次梯度 MSR 例子包装成目标完成。

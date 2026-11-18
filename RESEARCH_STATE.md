@@ -2,7 +2,7 @@
 
 ## 2026-11-17 PPA 三方向启动结果
 
-本轮恢复并核对了普通 PPA/GPPA 主链、G1–G4、C02-v3/C09 的真残差与 Dini 条件，以及 2026-11-12 投稿源。新增 [C309](CLAIMS.md#c309)：在允许转移上把固定 \(\kappa\) 替换为一般非减 \(\Phi\)，其正确有限长度门是 \(\sum_j B(\Phi^{\circ j}(t))<\infty\)，而不是单独的 \(\Phi^{\circ j}(t)\to0\)。新增 [C311](CLAIMS.md#c311)：按 Li–Mordukhovich–Zhu arXiv v1 Theorem 5.1 逐步重构 exact subgradient PPA 的 KL 有限长度证明；它去掉传统 metric subregularity 的一个证明接口，但保留 KL、下降、相对误差和 Lyapunov 结构。三席独立复核见 [RL–KL 目标二审查](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)：exact subgradient PPA 与条件式 transfer corollary 已闭；[C314](CLAIMS.md#c314) 的 full-graph 四周期例子已否证 `RL alone => Lyapunov/H11`，弱于旧 RL+GMSR 且能替代 B 的条件仍 open；新增 [C313](CLAIMS.md#c313) 作为已闭合但仍依赖线性 MSR 的非次梯度基准类。新增 [C310](CLAIMS.md#c310)：最大单调且满足线性 MSR 的 \(F(y)=\operatorname{sgn}(y)|y|^\alpha\)（\(0<\alpha<1\)）仍不满足目标三的输出相对步长界 (B)，所以“传统次单调性+MSR \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”原链已 refuted。PTD/TC 仍是候选的可推广结构，需独立验证锚持久性、正扇区和选中图值 calmness。
+本轮恢复并核对了普通 PPA/GPPA 主链、G1–G4、C02-v3/C09 的真残差与 Dini 条件，以及 2026-11-12 投稿源。新增 [C309](CLAIMS.md#c309)：在允许转移上把固定 \(\kappa\) 替换为一般非减 \(\Phi\)，其正确有限长度门是 \(\sum_j B(\Phi^{\circ j}(t))<\infty\)，而不是单独的 \(\Phi^{\circ j}(t)\to0\)。新增 [C311](CLAIMS.md#c311)：按 Li–Mordukhovich–Zhu arXiv v1 Theorem 5.1 逐步重构 exact subgradient PPA 的 KL 有限长度证明；它去掉传统 metric subregularity 的一个证明接口，但保留 KL、下降、相对误差和 Lyapunov 结构。三席独立复核见 [RL–KL 目标二审查](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)：exact subgradient PPA 与条件式 transfer corollary 已闭；[C314](CLAIMS.md#c314) 的 full-graph 四周期例子已否证 `RL alone => Lyapunov/H11`，弱于旧 RL+GMSR 且能替代 B 的条件仍 open；新增 [C313](CLAIMS.md#c313) 作为已闭合但仍依赖线性 MSR 的非次梯度基准类。新增 [C310](CLAIMS.md#c310)：最大单调且满足线性 MSR 的 \(F(y)=\operatorname{sgn}(y)|y|^\alpha\)（\(0<\alpha<1\)）仍不满足目标三的输出相对步长界 (B)，所以“传统次单调性+MSR \(\Rightarrow\mathcal P\Rightarrow(A)+(B)\)”原链已 refuted；这只否定该旧推导，不否定当前严格弱化目标。当前主任务已改写为 [GPT Pro 任务书](research/audit/RESEARCH_TASK_PROMPT_2026-11-18.md)：在 RL 基础下寻找严格弱于 GMSR 的正则性 \(\mathcal R\)，再加独立兼容条件 \(\mathcal C\) 连接到 \(A+B\) 或 KL 望远镜接口。PTD/TC 仍是候选的可推广结构，需独立验证锚持久性、正扇区和选中图值 calmness。
 
 本轮报告见 [PPA 下一阶段启动报告](research/audit/PPA_NEXT_STAGE_2026-11-17.md)，证明与反例见 [非线性 gauge/KL/耦合障碍正文](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md)。LMZ 正式版的 DOI、作者和 2026-04-07 在线元数据已核；正式 PDF 当前只能取得摘要/访问 HTML，公式级刊本差异未定，不能将 v1 定理编号自动归给刊本。
 
@@ -97,7 +97,7 @@
 
 ## 2026-11-17 三目标研究接入
 
-本轮三个独立报告已放在 [research/topics/next_stage_2026](research/topics/next_stage_2026/README.md)。目标一得到一般函数复合收缩—长度接口：\(d_{k+1}\le\varphi(d_k)\) 只给距离趋零，有限长度还需 \(\sum B(\varphi^{\circ k}(d_0))<\infty\)；\(F(y)=y|y|\) 的完整单调 PPA 是固定 \(\kappa\) 和线性 metric subregularity 都失败而长度仍望远镜可和的真实例。目标二逐式迁移 MOR Theorem 5.1 到函数型精确 PPA，保留 H11/H2/H3/KL；一般非单调 PPA 的 Lyapunov 桥仍 open。目标三已补出 C312：full-graph/full-resolvent 满足 (A)+(B) 但不满足传统次单调性；full-graph (A) 仍自动蕴含线性 MSR，因此同时脱离完整 MSR 在量词上不可能。子关系边界和 PTD/TC 候选继续保留。
+本轮三个独立报告已放在 [research/topics/next_stage_2026](research/topics/next_stage_2026/README.md)。目标一得到一般函数复合收缩—长度接口：\(d_{k+1}\le\varphi(d_k)\) 只给距离趋零，有限长度还需 \(\sum B(\varphi^{\circ k}(d_0))<\infty\)；\(F(y)=y|y|\) 的完整单调 PPA 是固定 \(\kappa\) 和线性 metric subregularity 都失败而长度仍望远镜可和的真实例。目标二逐式迁移 MOR Theorem 5.1 到函数型精确 PPA，保留 H11/H2/H3/KL；一般非单调 PPA 的 Lyapunov 桥仍 open。目标三已有 C312：full-graph/full-resolvent 满足 (A)+(B) 但不满足传统次单调性；full-graph (A) 仍自动蕴含线性 MSR，因此同时脱离完整 MSR 在量词上不可能。当前真正待攻的是：在 RL 条件下证明某个独立正则性 \(\mathcal R\) 严格弱于 GMSR，并用兼容条件 \(\mathcal C\) 推出 (A)+(B) 或其 KL 望远镜替代；子关系边界和 PTD/TC 候选继续保留。
 
 下一步优先级：独立接收 C309 的函数级数证明和二维漂移图的 scope；为 C311 构造一般非单调 PPA 可验证的 Lyapunov/relative-error 合同；将 C312 的 full-graph 严格扩张例、C310 的输出相对步长障碍与允许子关系量词写入统一逻辑契约。任何一个方向都不得把 candidate 或 salvage 升格为已证明的统一定理。
 
