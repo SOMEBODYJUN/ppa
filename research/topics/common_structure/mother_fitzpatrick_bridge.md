@@ -162,13 +162,25 @@ d(x_k,S)\le\kappa^k d(x_0,S),\qquad
 \[
  \|y-p\|\le L\,d(y,S),\qquad L\ge1. \tag{AT}
 \]
-不再要求 \(\lambda\beta<1/2\)。同一平方展开给出
+不再要求 \(\lambda\beta<1/2\)。令
+\[
+c:=1-2\lambda\beta,
+\qquad
+\underline c_L:=
+\begin{cases}
+c,&c\ge0,\\
+cL^2,&c<0.
+\end{cases}
+\]
+由 \(d(y,S)\le\|y-p\|\le Ld(y,S)\)，当 \(c\ge0\) 时只能使用
+\(c\|y-p\|^2\ge c\,d(y,S)^2\)，而当 \(c<0\) 时使用
+\(c\|y-p\|^2\ge cL^2d(y,S)^2\)。因此同一平方展开给出
 \[
 \begin{aligned}
 d(x,S)^2
 &=\|y-p+\lambda v\|^2\\
 &\ge (1-2\lambda\beta)\|y-p\|^2+\lambda^2\|v\|^2\\
-&\ge \left(1-2\lambda\beta L^2+\frac{\lambda^2}{K^2}\right)d(y,S)^2, \tag{5A}\\
+&\ge \left(\underline c_L+\frac{\lambda^2}{K^2}\right)d(y,S)^2, \tag{5A}\\
 d(x,S)^2
 &\ge\left(\lambda^2-2\lambda\beta L^2K^2\right)\|v\|^2. \tag{5B}
 \end{aligned}
@@ -182,7 +194,7 @@ d(x,S)^2
 \[
 d(y,S)\le\kappa_{\!L}d(x,S),\quad
 \kappa_{\!L}:=
-\left(1+\frac{\lambda^2}{K^2}-2\lambda\beta L^2\right)^{-1/2}<1,
+\left(\underline c_L+\frac{\lambda^2}{K^2}\right)^{-1/2}<1,
 \tag{6A}
 \]
 以及输入距离步界
@@ -222,7 +234,8 @@ h_{\!L}:=\sqrt{\frac{\lambda}{\lambda-2\beta L^2K^2}}. \tag{6B}
 d(x,S)=0.0016,\qquad y=0.0996,\qquad d(y,S)=0.0996,\qquad
 \|x-y\|=0.8988.
 \]
-因此即使 \(\lambda>2\beta K^2\)，\(A\) 和任何线性输入步长界都失败。
+因此即使 \(\lambda>2\beta K^2\)，\(A\) 和系数小于 \(449.4\) 的线性输入步长界都失败。
+确切地，在此 \(U\) 上 \(\|x-y\|/d(x,S)\ge0.8988/0.002=449.4\)。
 输入锚 \(p=1\) 满足 \(\|y-p\|=0.9004>9d(y,S)\)，正好显示
 \(L>9\) 的锚输运代价。该例保留了全图点对、真残差和局部完整覆盖的量词，
 说明缺口来自锚移动，而非选支遗漏。

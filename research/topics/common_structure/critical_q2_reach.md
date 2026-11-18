@@ -88,7 +88,7 @@ For the entering step, use the value cap `s_k <= lambda v_bar` and
 
 `sum_{k in block} ||h_k|| <= c_5 2^{-j/4}`.
 
-The dyadic series converges. If some `a_k=u_k^2` is zero, then the next input lies in `S`; strict square descent at that input forces the following step to have `s_{k+1}=0` and `a_{k+1}=0`, and the same argument gives a stationary tail. Otherwise the positive dyadic blocks cover all sufficiently large indices. Thus `(p_k)` is Cauchy. Since `||x_k-p_k||=t_k ->0`, the full PPA orbit converges to one point of `S`.
+The dyadic series converges. If some `a_k=u_k^2` is zero, then the next input lies in `S`; strict square descent at that input forces the following step to have `s_{k+1}=0` and `a_{k+1}=0`, and the same argument gives a stationary tail. Otherwise `t_k^2` is nonincreasing. If its limit were `ell^2>0`, then `a_k=t_{k+1}^2 >= ell^2`, the EB would give `s_k >= ell^2/D`, and strict descent would impose the fixed positive drop `Delta_k >= c ell^4/D^2` at every step, which is impossible for a bounded nonincreasing sequence. Hence `t_k ->0`, and the positive dyadic blocks cover all sufficiently large indices. Thus `(p_k)` is Cauchy. Since `||x_k-p_k||=t_k ->0`, the full PPA orbit converges to one point of `S`.
 
 The result proves point convergence but does not supply finite length of the physical orbit. It only controls projection displacement. An additional estimate converting `||x_k-x_{k+1}||` to a summable quantity is required for finite length.
 
