@@ -333,6 +333,7 @@ d_T(Cy,Z_0)\le c_+K_Fb_+^q r_T(Cy)^q. \tag{11}
 | \(g_a\le r_F^2/[2(a-2\beta)]\) | \(a>2\beta\) | 间隙上界 | 不给根存在 |
 | \(g_a\ge\gamma d^2\) | 二次增长 | 真残差 EB | 不需覆盖 |
 | EB \(\Rightarrow g_a\ge c_ad^2/(\lambda+K)^2\) | EB + Cov，\(a<2/\lambda\) | 正则性变增长 | FullCov 才能覆盖所有输出 |
+| \(\widetilde g_a=\sqrt{g_a}\) | \(2\beta<a<2/\lambda\)，增长 \(\widetilde g_a\ge\gamma d^2\) | 精确给 \(d^2\lesssim r_F\)；反向需 FullCov 与图值帽 | 对应 C331，临界曲率仍需方向门 |
 | 两截面 + 近端弦（定理 2） | FullCov、\(\lambda\beta<1/2\)、\(\lambda>2\beta K^2\) | \(A+B\)、点收敛、有限长度 | 窄窗用正系数直接比较 |
 | 两截面 + 近端弦（定理 2A） | FullCov、(AT) \(\|y-p\|\le Ld(y,S)\)、\(\lambda>2\beta L^2K^2\) | \(A+B\)，\(\kappa_L,h_L\) 显式 | 非凸非孤立目标要逐根核锚输运 |
 | 观察复合 | (7)、(12) 或 (17) | 零集/残差传递和 \(CB(y)\) 正功 | 上下界本身不传递单调性 |
