@@ -1,5 +1,9 @@
 # 当前研究状态
 
+## 单调性与正则性的共同结构
+
+[主题入口](research/topics/common_structure/README.md)固定导师的开放问题：在同一数学结构下恢复单调性与正则性，得到至少一条非重述的跨支推导。新结果是 [C325 的支撑曲率阈值](CLAIMS.md#c325)、[C327 的曲复合严格例](CLAIMS.md#c327)、[C324 的原图间隙切片桥与相同切片障碍](CLAIMS.md#c324)，以及 [C326 的移动零锚检验](CLAIMS.md#c326)。C320 继续是已证方向误差界。一般非势、允许多值的母结构尚开放；下一步由 [GPT Pro 任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)进入，先独立接收 [C328 临界旋转平台](CLAIMS.md#c328)，再分辨 \(q=2,\alpha=1\) 且严格平方下降时的原 PPA 点收敛。无小常数门的临界构造不能决定这个剩余问题。
+
 ## 原算子应用与统一条件的范围
 
 [C322](research/canonical/ppa_native_alignment_and_transverse_test.md#native-alignment) 在标准 Cucker–Smale 原场证明固定步长全隐式 PPA 的全根有限长度，给出全初值保证的精确通信核积分边界。三粒子临界核严格排除旧标量兼容、同条件下的最紧实际残差球及 Luke–Tam 的参数门；相同初值的选根分歧也可在短程核上精确实现。机制是原位置输运与速度耗散的同一预算。[C323](research/canonical/ppa_native_alignment_and_transverse_test.md#native-transverse) 在光滑局部全部根上将 A/C320 化为横向 Minty 线性化的最小奇异值大于 1，并给出三层锐因子。它同时表明光滑层的 C320 没有独立于横向稳定性的更强动力学内容。

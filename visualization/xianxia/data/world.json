@@ -9319,11 +9319,11 @@
       "realm": "convergence-annex-7"
     },
     "TD-DIRECTION": {
-      "role": "object",
-      "kind": "mine",
-      "object": "lotus",
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
       "evidence": "derived-checked",
-      "reason": "neutral-default",
+      "reason": "incoming-refutes-relation",
       "x": 3488,
       "y": 4214,
       "region": "convergence",
@@ -9458,6 +9458,149 @@
       "reason": "neutral-default",
       "x": 3676,
       "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-ANGLE": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "portal",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3770,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-CURVED": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-GAPFAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-GAPREG": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-GAPSIGN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-MOVING": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-OPEN": {
+      "role": "open-target",
+      "kind": "mountain",
+      "object": "island",
+      "evidence": "open",
+      "reason": "incoming-open-relation",
+      "x": 3206,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-SUPEB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 3018,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-SUPKL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3112,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-SUPMON": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-SUPPORT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-CRITICAL": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "cave",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 3300,
+      "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-7"
     }
@@ -11898,6 +12041,54 @@
     "E612": {
       "x": 3671.69,
       "y": 4352.81
+    },
+    "E613": {
+      "x": 3197.41,
+      "y": 4443.22
+    },
+    "E614": {
+      "x": 3144.78,
+      "y": 4249.06
+    },
+    "E615": {
+      "x": 3095.47,
+      "y": 4168.94
+    },
+    "E616": {
+      "x": 3161.96,
+      "y": 4142.1
+    },
+    "E617": {
+      "x": 3079.6,
+      "y": 4158.42
+    },
+    "E618": {
+      "x": 2990.68,
+      "y": 4253.47
+    },
+    "E619": {
+      "x": 3734.89,
+      "y": 4337.73
+    },
+    "E620": {
+      "x": 3440.78,
+      "y": 4222.59
+    },
+    "E621": {
+      "x": 3774.31,
+      "y": 4348.19
+    },
+    "E622": {
+      "x": 3460.68,
+      "y": 4253.47
+    },
+    "E623": {
+      "x": 3247.71,
+      "y": 4281.24
+    },
+    "E624": {
+      "x": 3253.81,
+      "y": 4309.31
     }
   },
   "bounds": {

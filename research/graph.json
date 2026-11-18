@@ -4647,6 +4647,84 @@
       "label": "C323 三层锐因子与两次标量化损失",
       "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-hierarchy",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-GAP",
+      "label": "移位的原图 Fitzpatrick 间隙",
+      "file": "canonical/graph_gap_monotonicity_regularity.md#gap-two-slices",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "MOTHER-GAPSIGN",
+      "label": "C324 图上零值等价于弱单调",
+      "file": "canonical/graph_gap_monotonicity_regularity.md#gap-two-slices",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-GAPREG",
+      "label": "C324 同一间隙的度量正则增长",
+      "file": "canonical/graph_gap_monotonicity_regularity.md#gap-varying-target",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-GAPFAIL",
+      "label": "F110 相同零残差切片的相反近端动力学",
+      "file": "canonical/graph_gap_monotonicity_regularity.md#gap-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-SUPPORT",
+      "label": "小图值控制函数支撑的曲率亏损",
+      "file": "topics/common_structure/energy.md#support-kl-gmsr",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "MOTHER-SUPMON",
+      "label": "C325 小图值次单调与共同最低水平",
+      "file": "topics/common_structure/energy.md#support-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-SUPEB",
+      "label": "真残差对距离的指定幂误差界",
+      "file": "topics/common_structure/energy.md#support-sharp",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "MOTHER-SUPKL",
+      "label": "C325 理想 KL 指数及精确阈值",
+      "file": "topics/common_structure/energy.md#support-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-MOVING",
+      "label": "C326 活动零锚图弦判别局部线性次正则",
+      "file": "topics/common_structure/geometry.md#bridge-moving",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-CURVED",
+      "label": "C327 曲复合完整 PPA 与方向残差严格分离",
+      "file": "topics/common_structure/energy.md#support-curved-c320",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-ANGLE",
+      "label": "上半平面零锚法向角度凸包",
+      "file": "topics/common_structure/angle.md#bridge-angle",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "MOTHER-OPEN",
+      "label": "一般原图的单调性与正则性共同母结构",
+      "file": "topics/common_structure/README.md#mother-question",
+      "evidence_status": "open"
+    },
+    {
+      "id": "MOTHER-CRITICAL",
+      "label": "C328 候选：非势全对曲率的近端临界分界",
+      "file": "topics/common_structure/critical_graph.md#critical-graph",
+      "evidence_status": "candidate"
     }
   ],
   "edges": [
@@ -11670,6 +11748,145 @@
       "scope": "在同一局部全部根范围中，三种方法的充分收缩因子有明确的锐下确界。",
       "status": "derived-checked",
       "topic": "原对齐算子及光滑横向检验"
+    },
+    {
+      "id": "E613",
+      "inputs": [
+        "MOTHER-GAP"
+      ],
+      "output": "MOTHER-GAPSIGN",
+      "relation": "equivalence",
+      "scope": "同一有限维完整图块。对每个 a≥0，图上间隙恒零当且仅当全对弱单调系数 a/2；a=0 为单调。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E614",
+      "inputs": [
+        "MOTHER-GAP",
+        "MOTHER-GAPSIGN"
+      ],
+      "output": "MOTHER-GAPREG",
+      "relation": "conditional",
+      "scope": "以较小系数 β 认证图上符号且 2β<a<2/λ。统一切片增长推出同窗度量正则不等式；反向需同域误差界、非空目标纤维及位于 D 的扰动近端见证。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E615",
+      "inputs": [
+        "MOTHER-GAPFAIL"
+      ],
+      "output": "MOTHER-GAPREG",
+      "relation": "limits",
+      "scope": "相同的零截面增长及共同二次弱单调不足以判定非势原 PPA 的吸引；不否定增长与正则的同窗转换。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E616",
+      "inputs": [
+        "MOTHER-SUPPORT"
+      ],
+      "output": "MOTHER-SUPMON",
+      "relation": "implies",
+      "scope": "适用于完整 limiting 次微分的小值图，每对交换给两点亏损；α>0 时零值支持给共同局部最低水平。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E617",
+      "inputs": [
+        "MOTHER-SUPPORT",
+        "MOTHER-SUPEB"
+      ],
+      "output": "MOTHER-SUPKL",
+      "relation": "conditional",
+      "scope": "亏损 γ||v||^α，真误差界 d^q≤Kr。α≥max(0,1−1/q) 得理想 q/(q+1)；低于阈值的最佳幂与反例见 C325。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E618",
+      "inputs": [
+        "MOTHER-SUPPORT",
+        "MOTHER-SUPKL"
+      ],
+      "output": "MOTHER-SUPEB",
+      "relation": "conditional",
+      "scope": "精确使用理想 q/(q+1) 的 KL；在同一结构下任意 α>0，先移到子水平距离，再缩窗到完整真残差。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E619",
+      "inputs": [
+        "MOTHER-MOVING"
+      ],
+      "output": "AB-MS",
+      "relation": "conditional",
+      "scope": "有限维同一完整闭图，原点各尺度的活动锚归一化弦无水平单位方向，当且仅当真残差线性次正则。非光滑图芽不含远端根信息。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E620",
+      "inputs": [
+        "MOTHER-CURVED"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "refutes",
+      "scope": "同一弯曲且非光滑原算子、步长 1/2、任意小窗。原 PPA 有限长，C320 对所有 κ<1 的对称图值排除失败；只反驳该应用的认证。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E621",
+      "inputs": [
+        "MOTHER-ANGLE"
+      ],
+      "output": "AB-A",
+      "relation": "conditional",
+      "scope": "平仿射零集在所有原根上有统一法向角分离，并独立处理零输出和覆盖。曲目标另用共同管的定量曲率误差。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E622",
+      "inputs": [
+        "MOTHER-ANGLE"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "limits",
+      "scope": "角度证书和 C320 互不蕴含。具体双旋转例的逆像在 6t/5，对任何 κ<1 失败，反向例使用满足旧 RLEB 的实双支。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E623",
+      "inputs": [
+        "MOTHER-SUPMON",
+        "MOTHER-GAPREG",
+        "MOTHER-MOVING",
+        "MOTHER-GAPFAIL"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "在同一非势、一般允许多值的原图中证明有独立信息的跨支关系，并保真 PPA 方向及所有原根；这些已证子类没有合取出一般 M。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E624",
+      "inputs": [
+        "MOTHER-SUPMON",
+        "MOTHER-CRITICAL"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "用图值曲率连接原图与原近端；旋转平台候选排除无小常数的临界类。剩余 q=2、α=1 且严格平方下降的点收敛，以及一般母结构。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]
 }

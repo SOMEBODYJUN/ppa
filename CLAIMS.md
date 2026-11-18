@@ -2828,3 +2828,40 @@
 - **Exact Statement / Objects / Domain**：在零点 \(s_0\) 记非零法空间为 \(N\)，\(D=DF(s_0)\)、\(A=D|_N\)、\(B=P_NA\)、\(G=I+\lambda B\)。统一局部 A 等价于 \(m=\sigma_{\min}(G)>1\)，此时缩窗后自动获得局部覆盖、线性物理位移界、真残差界、锚定模及 C320。对未截断的完整预解式需另核远根。
 - **Sharpness**：记 \(a=\sigma_{\min}(A)\)、\(b=\|AG^{-1}\|\)、\(c=\|(2(I+\lambda D)^{-1}-I)|_N\|\)，则缩窗允许的 A/C320、最紧实际欧氏残差球及旧 RLEB 三种证书的比例上界锐下确界分别为 \(1/m,b/a,(1+c)/(2\lambda a)\)。后两者等于 1 也不能有严格收缩因子。
 - **Evidence / Scope**：[原算子导数证明与端点](research/canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)。光滑层的结果刻画标准横向收缩及两次标量化损失；没有给一般非线性 RLEB 与 A+B 之间的单一结构性质。
+
+<a id="c324"></a>
+## C324-v1 · 移位原图间隙的单调切片与度量正则切片
+
+- **Status**：`derived-checked`。有限维，图空间局部化，外部先行性未认证。
+- **Exact Statement / Objects / Domain / Quantifiers**：给 \(F:\mathbb R^n\rightrightarrows\mathbb R^n\)、非空完整图块 \(\Gamma_D\)，定义 \(\mathcal G_a(z,u)=\sup_{(y,v)\in\Gamma_D}\{\langle z-y,v-u\rangle-a\|z-y\|^2/2\}\)。对任意 \(a\ge0\)，该函数在整块原图上为零当且仅当同块所有图对满足 \(a/2\)-弱单调。给定实际弱单调系数 \(\beta\) 及 \(2\beta<a<2/\lambda\)，对每个 \((z,u)\in D\times V\)，上界为 \(d(u,F(z))^2/[2(a-2\beta)]\)。若逆像 \(S_u=F^{-1}(u)\) 非空，统一二次增长推出同域一致误差界。反向若在 \(D\times V\) 有该误差界，且对每个输入 \(z\) 与 \(u\) 有一个 \(y\in D,v\in F(y)\) 满足 \(z=y+\lambda(v-u)\)，则得到二次增长。
+- **Dependencies / Evidence / Scope**：[确切常数、零值和变右端](research/canonical/graph_gap_monotonicity_regularity.md#gap-two-slices)。间隙是移位图的 Fitzpatrick 差。对 \(u=0\) 是次正则，变化邻域版本是度量正则不等式。[相同切片的吸引/扩张反例](research/canonical/graph_gap_monotonicity_regularity.md#gap-obstruction) 排除从切片数据推出原 PPA 收敛。
+
+<a id="c325"></a>
+## C325-v1 · 支撑曲率与 KL–真残差幂指数的锐转换
+
+- **Status**：`derived-checked`。两份独立推导复核阈值与反例。外部先行性待核。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 proper lsc \(f\)，完整 limiting 次微分 \(F=\partial f\)，参考点 \(\bar x\in S=F^{-1}(0)\)。同一局部球内对所有 \(y,z\) 和 \(\|v\|\le\epsilon,\ v\in F(y)\) 要求 \(f(z)\ge f(y)+\langle v,z-y\rangle-\gamma\|v\|^\alpha\|z-y\|^2\)，\(\gamma\ge0,\alpha>0,\epsilon>0\)。它给所有小值图对的次单调亏损，并识别局部零集为共同最低水平。给定 \(q>0\)，KL 指数 \(q/(q+1)\) 推出缩窗完整真残差 \(d(y,S)^q\le K r_F(y)\)。反向的最优类级 KL 幂为 \(\max\{q/(q+1),1/(\alpha+2/q)\}\)，当此数小于 1 时达到。否则没有全类凹 KL 保证。保住理想指数的阈值为 \(\alpha\ge\max(0,1-1/q)\)。
+- **Dependencies / Evidence**：[正反证明、同水平识别、对数周期锐例](research/topics/common_structure/energy.md#support-sharp)。全窗能量过滤由支撑自身导出。 \(\alpha=0\) 的常数亏损版本另需共同最小水平和驻点识别。
+- **Counterevidence / Scope**：光滑势下，该支撑强迫所有被检验的 \(v\) 等于梯度。一般非势图与完整原步覆盖均需另外处理。既有凸或弱凸 KL \(1/2\) 与误差界关系是文献基准。
+
+<a id="c326"></a>
+## C326-v1 · 移动零锚的单位图弦给局部线性次正则判据
+
+- **Status**：`derived-checked`。有限维闭原图与完整非空零集，未核外部先行性。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(s_0\in S=F^{-1}(0)\)、\(\lambda>0\)，从所有趋近 \((s_0,0)\) 的缩放图点 \((y,w)\)（\(w\in\lambda F(y)\)）及 \(p\in P_S(y)\)，取非零 \((y-p,w)\) 的所有单位极限方向。局部真残差线性次正则当且仅当该集合没有水平单位方向。最优渐近误差界常数是 \(\lambda\sup\|u\|/\|v\|\)，空方向集取零，水平单位方向取无穷。
+- **Dependencies / Evidence / Scope**：[定义、紧性证明及反例](research/topics/common_structure/geometry.md#bridge-moving)。固定点切锥核等于 \(T_S\) 仍可能漏检。仿射情形的正动能条件只在同一个原图芽等价于线性 A 与线性输入 B。完整近端远支须独立排除。
+
+<a id="c327"></a>
+## C327-v1 · 曲零集凸复合的支撑证书与 RLEB/C320 的严格分离
+
+- **Status**：`derived-checked`。同一完整原算子、固定步长、任意足够小的共同窗口，外部先行性待核。
+- **Exact Statement / Objects / Domain / Quantifiers**：以 \(g(a,b,c)=(b-a^2/2,c)\)、\(\phi(u,v)=h(u)+|v|\) 定义 \(F=\partial(\phi\circ g)\)，其中 \(h\) 在 \([-1,0]\)、\([0,1]\) 分别为 \(u^2/8,u^2/2\)，外部作切线延拓。步长 \(1/2\)，目标是完整抛物线零集。每个输入有唯一完整代数近端根。全部足够近的轨道有限长收敛，且有线性反射模与局部真残差误差界。
+- **Conclusion / Counterevidence**：每个局部缩窗及每个 \(\kappa<1\)，C320 中尺度 \(t=3b/2\) 的包络含正近端图值的相反数，碰到距离 \(4b\) 的另一个实际输出的全纤维。因此 C320 与正式旧标量兼容均失败。正向由近端目标比较以及带残差亏损的共同支撑证明。
+- **Dependencies / Evidence**：[原算子、完整根及距离证明](research/topics/common_structure/energy.md#support-composite) · [不对称实例](research/topics/common_structure/energy.md#support-curved-c320)。严格例不建立新类对整个 C320 的反向包含。
+
+<a id="c328"></a>
+## C328-v1 · 非势全对残差曲率与原 PPA 的临界分界
+
+- **Status**：`candidate`。显式证明和反例已有，待第二份逐式审查及外部先行性对比。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维闭目标 \(S=\operatorname{zer}F\)，同一小空间和小图值窗内的所有图对满足 \(\langle v-w,y-z\rangle\ge-C(\|v\|^\alpha+\|w\|^\alpha)\|y-z\|^2\)，真残差满足 \(d^q\le K_{\rm EB}r_F\)，每个近输入完整有根且所有根预先局部化。若 \(\alpha+2/q>2\)，候选结论为每条近端轨道留域并点收敛，\(q<2\) 时有限长度。临界 \(\alpha+2/q=2\)、\(q>1\) 有显式非势全域 Lipschitz 图、全域唯一原近端和任意小恒距轨道。当 \(q\ge2\)，关联的单调原图有点收敛而总长发散的轨道。
+- **Scope / Objections / Related Files**：[超临界估计、旋转平台及穿越长度](research/topics/common_structure/critical_graph.md#critical-graph)。临界反例的亏损常数可抵消下降；严格小常数的点收敛问题仍开放。超临界证明只使用对每个近零锚的估计，反例满足全对条件。

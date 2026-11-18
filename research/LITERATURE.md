@@ -653,3 +653,7 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 | Evens–Pas–Latafat–Patrinos, *Convergence of the Preconditioned Proximal Point Method and Douglas–Rachford Splitting in the Absence of Monotonicity*, Definitions 2.1 与 4.1，Theorem 2.4。[作者全文](https://arxiv.org/pdf/2305.03605) | 同一配对下界可带原变量和图值两个平方项。Definition 4.1 已有固定图点相对和全对版本，二次扇区式先去重。Theorem 2.4 还需斜弱 Minty 的参数与预解式条件。 |
 | Mordukhovich–Phat, *Variational Convexity of Functions and Variational Sufficiency in Optimization*, Theorems 4.3–4.5。[作者全文](https://arxiv.org/pdf/2208.14399) | 变分凸性联系局部次微分单调性及 Moreau 包络的凸性；强版本须保留相应模及函数值过滤的图局部化。对一般 \(F\) 宜用作潜势图基准。 |
 | Li–Meng–Yang, *Kurdyka–Łojasiewicz inequality and error bounds of D-Gap functions for nonsmooth and nonmonotone variational inequality problems*, §4 Theorem 4.1 与 §5。[正式全文](https://d-nb.info/1387710478/34) | 局部 Lipschitz 单值变分不等式的 D-gap 在给定方向性条件下给 KL 及误差界。算法用 D-gap 下降和 Armijo 线搜索。证明针对该间隙及其迭代。 |
+
+**进一步的去重门。** [*Error bounds, PL condition, and quadratic growth for weakly convex functions*, Theorem 3.1](https://arxiv.org/pdf/2312.16775#page=8) 在 proper closed 弱凸函数和全局极小值集的合同下已给 EB 与 PL 的等价，以及增长系数超过弱凸系数时的受限割线等价。凸或弱凸的 \(q=1\) 常识结论不作为本轮新增。 [Pan–Liu](https://arxiv.org/abs/1812.00558) 以明确的临界值及近端正则条件比较 KL \(1/2\) 与次正则。支持亏损的幂阈值是另一项需要比较的定量主张。
+
+**角度先行性。** [Quan–Evens–Sepulchre–Patrinos，正式全文](https://ftp.esat.kuleuven.be/pub/sista/ida/reports/24-153.pdf) 用 SRG 互证半单调和角度有界的算子类，且给出多值原器件例。[Quan–Bodard–Oikonomidis–Patrinos](https://arxiv.org/abs/2511.20209) 将 SRG 扩展到算子对的相对增量和非线性预解式。它们都属必须比较的近邻。此处上半平面的零锚法向凸包及与 C320 的对比属于本库试证，未作发表原创判断。
