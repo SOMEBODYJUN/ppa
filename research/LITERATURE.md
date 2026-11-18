@@ -639,3 +639,17 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 
 - **原模型及机制**：[Cucker–Smale，Emergent Behavior in Flocks](https://people.mpi-inf.mpg.de/~mehlhorn/SeminarEvolvability/CuckerSmale.pdf)，式 (4) 的原离散模型及式 (5) 的连续系统须分别比较。[Ha–Liu](https://sites.math.duke.edu/~jliu/pdf/Ha_Liu_CMS_2009.pdf) §3 以速度与通信权重原函数构造连续时间 Lyapunov。C322 的本库推导用右端点移位处理全隐式、证全根覆盖与衰减，并验证同图的标量球分离和选根分歧。[规范证明](canonical/ppa_native_alignment_and_transverse_test.md#native-alignment)
 - **相关路线**：[Zeng](https://arxiv.org/pdf/2101.09180) 的非孤立 Newton 说明横向导数在根求解中的作用，更新为秩截断 Newton。[Goebel](https://webpages.math.luc.edu/~rgoebel1/publications/journals/Goebel13submission.pdf) 分开逐点吸引和一般集合吸引。[Evens 等](https://arxiv.org/pdf/2305.03605) Definition 2.1 使用固定锚斜弱 Minty；[C322](canonical/ppa_native_alignment_and_transverse_test.md#native-strict) 的本库测试排除此固定锚原图合同。公开优先性未核。
+
+<a id="lit-monotonicity-regularity-bridge"></a>
+## 单调性与正则性共同结构的一手入口
+
+**LMZ 的直接转接。** [arXiv:2406.13207v1](https://arxiv.org/html/2406.13207v1) 的 Propositions 6.2–6.3 与 Corollary 6.5 首先用 KL 得到到 \([f\le f(\bar x)]\) 的距离界，借 weak separation 与所给局部极小/strict-saddle 条件识别近窗目标，再代入梯度残差。若 KL 指数采用 \(r\ge c(f-f(\bar x))^\theta\)，其证明推出 \(d(x,\Theta)\le C r(x)^{(1-\theta)/\theta}\)。**v1 的 Corollary 6.5 陈述印为倒数 \(\theta/(1-\theta)\)，Example 6.6 也沿用该方向。** 取 \(f(t)=t^4\) 即可区分：\(\theta=3/4\)、\(r=4|t|^3\)、\(d=|t|\)；\(1/3\) 可取，\(3\) 不成立。[v1 PDF，第 17–18 页](https://arxiv.org/pdf/2406.13207v1#page=17)。这项审核只归于预印本，正式版本的公式尚未核实。[MOR 出版页](https://doi.org/10.1287/moor.2024.0570)。Lemma 3.6 与 Theorem 3.7 另给凸外层、光滑满秩内层下的增长与次正则转接。Theorems 4.3–4.4 和 5.1 是各有前提的收敛分支。特别是 5.1 的结论仍为原空间有限长度。
+
+| 一手材料与定位 | 可调用的内容及比对范围 |
+| --- | --- |
+| Bolte–Daniilidis–Ley–Mazet, *Characterizations of Łojasiewicz Inequalities*, Corollary 4 与 Remark 5。[AMS 正文](https://www.ams.org/journals/tran/2010-362-06/S0002-9947-09-05048-X/S0002-9947-09-05048-X.pdf) | 在完整度量空间及给定正水平带，解奇异化后的上图值映射的度量正则、子水平映射的 Lipschitz 性及斜率正下界等价。此映射的输出是能量水平，原始 \(\partial f\) 的输出是向量。 |
+| Kruger–Luke–Thao, *About Subtransversality of Collections of Sets*, Propositions 1 与 3。[作者全文](https://arxiv.org/pdf/1611.04787) | 图与定值平面 \(\operatorname{gph}F,\ X\times\{\bar v\}\) 的相交次横截性刻画度量次正则，真度量正则对应横截性。原文 Proposition 3 使用最大积范数和局部点态量词。 |
+| Ryu–Hannah–Yin, *Scaled Relative Graphs*, §3 式 (1) 与 §4。[作者全文](https://arxiv.org/pdf/1902.09788) | 同一复数图弦的实部读出符号、模长读出比率，平移和反演对应算子变换。这是全对、共轭对称的表示。以最近零点和法向投影限制图弦、或再做上半平面凸化，要另证目标和充分条件。 |
+| Evens–Pas–Latafat–Patrinos, *Convergence of the Preconditioned Proximal Point Method and Douglas–Rachford Splitting in the Absence of Monotonicity*, Definitions 2.1 与 4.1，Theorem 2.4。[作者全文](https://arxiv.org/pdf/2305.03605) | 同一配对下界可带原变量和图值两个平方项。Definition 4.1 已有固定图点相对和全对版本，二次扇区式先去重。Theorem 2.4 还需斜弱 Minty 的参数与预解式条件。 |
+| Mordukhovich–Phat, *Variational Convexity of Functions and Variational Sufficiency in Optimization*, Theorems 4.3–4.5。[作者全文](https://arxiv.org/pdf/2208.14399) | 变分凸邀请局部次微分单调性及 Moreau 包络的凸性；强版本须保留相应模及函数值过滤的图局部化。对一般 \(F\) 宜用作潜势图基准。 |
+| Li–Meng–Yang, *Kurdyka–Łojasiewicz inequality and error bounds of D-Gap functions for nonsmooth and nonmonotone variational inequality problems*, §4 Theorem 4.1 与 §5。[正式全文](https://d-nb.info/1387710478/34) | 局部 Lipschitz 单值变分不等式的 D-gap 在给定方向性条件下给 KL 及误差界。算法用 D-gap 下降和 Armijo 线搜索。证明针对该间隙及其迭代。 |
