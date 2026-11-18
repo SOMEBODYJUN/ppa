@@ -2280,7 +2280,7 @@
 
 - **Status**：`derived-checked`；独立重建正交work/全维投影、三轮同输出bootstrap、原真inf、全部zero及指定模式Brouwer覆盖。
 - **Exact Statement / Objects / Domain / Quantifiers**：C260-v1同一完整F/S/J、λ1、U，R改为10⁻⁴；γ1/2、L3/2、ψ1.1t²、bar t1、κ3/4保持。对全部输入和全部根先全域定位，再OF20–22正交work逐层180d→36d→d→.5d。每步预定有界固定skew矩阵或连续状态律另有全域coverage，所有输出嵌入同一完整J。
-- **Conclusion / Scope**：共同最近锚、trueinfEB、全窗兼容及严格预算均成立，全部政策有限长度留域趋phase；d₊≤.501d。v1身份保留，锐渐近√26/11与指数保留。
+- **Conclusion / Scope**：最近输入锚留域、trueinfEB、全窗兼容及严格预算均成立，全部政策有限长度留域趋phase；d₊≤.501d。v1身份保留，锐渐近√26/11与指数保留。
 - **Definitions / Dependencies / Evidence**：[OF20–26与完整模式算法](research/canonical/orthogonal_feedback_rleb.md#ofr-large-window)、[第三轮双审](发表成果整理/反馈应用第三轮独立接收.md)、[复算](research/code/natural_advantage/README.md)。
 - **Counterevidence / Scope**：不称最大盆域、任意不连续状态律覆盖、被动gyroscopic力或现成硬件映射。原union真残差与模式残差只满足ρ_F≤ρ_K，不能相等替换。共同能量正面仍成立；C262禁止全ABS排除。
 
@@ -2865,3 +2865,58 @@
 - **Status**：`candidate`。显式证明和反例已有，待第二份逐式审查及外部先行性对比。
 - **Exact Statement / Objects / Domain / Quantifiers**：有限维闭目标 \(S=\operatorname{zer}F\)，同一小空间和小图值窗内的所有图对满足 \(\langle v-w,y-z\rangle\ge-C(\|v\|^\alpha+\|w\|^\alpha)\|y-z\|^2\)，真残差满足 \(d^q\le K_{\rm EB}r_F\)，每个近输入完整有根且所有根预先局部化。若 \(\alpha+2/q>2\)，候选结论为每条近端轨道留域并点收敛，\(q<2\) 时有限长度。临界 \(\alpha+2/q=2\)、\(q>1\) 有显式非势全域 Lipschitz 图、全域唯一原近端和任意小恒距轨道。当 \(q\ge2\)，关联的单调原图有点收敛而总长发散的轨道。
 - **Scope / Objections / Related Files**：[超临界估计、旋转平台及穿越长度](research/topics/common_structure/critical_graph.md#critical-graph)。临界反例的亏损常数可抵消下降；严格小常数的点收敛问题仍开放。超临界证明只使用对每个近零锚的估计，反例满足全对条件。
+
+<a id="c329"></a>
+## C329-v1 · 全图二次移位 Fitzpatrick 母面与 PPA 的定量跨支桥
+
+- **Status**：`derived-checked`。本轮独立重构；一般观察核的外部先行性与最一般方向传递仍待核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(F:\mathbb R^n\rightrightarrows\mathbb R^n\)、工作窗 \(D\)、完整图块 \(\Gamma_D\)，定义
+  \[
+  \mathfrak M_F^\tau(z,u)=\sup_{(y,v)\in\Gamma_D}
+  \{\langle z-y,v-u\rangle-\tfrac{\tau}{2}\|z-y\|^2\}.
+  \]
+  图截面 \(\mathfrak M_F^{2\beta}|_{\Gamma_D}=0\) 当且仅当完整图块 \(\beta\)-弱单调。对 \(2\beta<a<2/\lambda\)，若完整真残差在输出窗满足 \(d(y,S)\le K r_F(y)\)，且每个输入 \(z\) 有根 \(z=y+\lambda v\) 落在同一图窗，则零锚截面满足
+  \[
+  \mathfrak M_F^a(z,0)\ge \frac{\lambda(1-a\lambda/2)}{(\lambda+K)^2}d(z,S)^2.
+  \]
+  反向二次增长给 \(d(z,S)\le[2\gamma(a-2\beta)]^{-1/2}r_F(z)\)。在 FullCov 和锚输运 \(\|y-p\|\le Ld(y,S)\) 下，若 \(\lambda>2\beta L^2K^2\)，每个完整根同时满足
+  \[
+  d(y,S)\le(1+\lambda^2/K^2-2\lambda\beta L^2)^{-1/2}d(x,S),\qquad
+  \|x-y\|\le\sqrt{\lambda/(\lambda-2\beta L^2K^2)}d(x,S).
+  \] 无额外锚输运时保留窄窗 \(\lambda\beta<1/2\)。
+- **New Information**：这是从同一双变量变分面经同一近端弦推导出的输入版 \(A+B\)，因而给距离趋零、点列收敛和有限长度的分层结论；它还给出观察复合 \(F(y)=B(y)T(Cy)\) 的完整零集/残差传递常数及 \(CB(y)\) 近端弦定向功。秩亏观察、活跃纤维退化和无正功分别是可检测的新障碍。
+- **Dependencies / Evidence / Counterevidence / Scope**：[母面完整推导与比较表](research/topics/common_structure/mother_fitzpatrick_bridge.md) · [q=2 振幅截面](research/topics/common_structure/q2_gap_amplitude.md)；已有 C324 的两个切片、C310 的输出相对步界障碍、C322 的位置输运反例作边界对照。一般 \(B(y)\) 的上下界不蕴含原空间单调性或有限长度，必须另加对齐/正功/全向位移门。非凸非孤立目标的最近输入锚留域是显式前提，不能从闭性自动推出。
+
+<a id="c330"></a>
+## C330-v1 · 临界 \(q=2,\alpha=1\) 在正 reach 零流形上的点收敛子类
+
+- **Status**：`derived-checked`。内部推导已复核；一般闭非孤立零集和物理有限长度仍开放。
+- **Exact Statement / Objects / Domain / Quantifiers**：\(S\) 在共同管内是 \(C^{1,1}\) 嵌入子流形且 reach \(\rho>0\)。完整 PPA 轨道 \(x_k=y_k+\lambda v_k\)、\(v_k\in F(y_k)\) 全部留在足够小的共同管内，并有统一图值帽 \(\|v_k\|\le\bar r\)。所有局部图对满足
+  \[
+  \langle v-w,y-z\rangle\ge-C(\|v\|+\|w\|)\|y-z\|^2,
+  \]
+  完整真残差满足 \(d(y,S)^2\le K_{\rm EB}r_F(y)\)，并且严格平方下降 \(d(x_k,S)^2-d(y_k,S)^2\ge c(\lambda\|v_k\|)^2\) 作为独立假设；若另有 \(\|y-P_S(x)\|\le Ld(y,S)\)，则同一曲率估计在 \(\lambda>2CL^2K_{\rm EB}\) 的门下推出它。则每条完整轨道点收敛到 \(S\) 中一点。
+- **Proof Asset**：正 reach 给切向图值界 \(\|b_k\|\le c\|v_k\|\sqrt{d(y_k,S)}\)，投影位移满足 \(\|P_S(x_k)-P_S(x_{k+1})\|\le c'(\lambda\|v_k\|)\sqrt{d(y_k,S)}\)。以 \(d(y_k,S)^2\) 分 dyadic 块，平方下降控制每块步数，Cauchy–Schwarz 使投影位移可和；\(d(x_k,S)\to0\) 后 \(x_k\) 与投影同极限。
+- **Scope / Objection**：证明使用切空间、正 reach 和投影二阶误差；对任意闭非孤立 \(S\) 尚缺统一切向估计。它只证明点收敛，不证明物理步长总和有限。现有 C328 旋转平台在无小常数时可恒距，但不满足严格平方门，不能反驳本子类。
+
+<a id="c331"></a>
+## C331-v1 · 同一 Fitzpatrick 面的 \(q=2\) 振幅截面
+
+- **Status**：`derived-checked`。内部常数已逐式核对；外部先行性未裁定。
+- **Exact Statement / Domain**：在 C329 的完整图块、\(2\beta<a<2/\lambda\) 和小图值帽下，令 \(\widetilde g_a=\sqrt{\mathfrak M_F^a(\cdot,0)}\)。若 \(\widetilde g_a\ge\gamma d^2\)，则 \(d^2\le[\gamma\sqrt{2(a-2\beta)}]^{-1}r_F\)。反向若 \(d(y,S)^2\le K_{\rm EB}r_F(y)\) 且每个输入有完整根，则
+  \[
+  \widetilde g_a(z)\ge
+  \frac{\sqrt{\lambda(1-a\lambda/2)}}{2(K_{\rm EB}+\lambda^2\bar r)}\,d(z,S)^2.
+  \]
+- **Scope / Objection**：这是同一母面的 \(q=2\) 正则性截面；它本身不提供 value-weighted 临界曲率的收缩，仍需锚输运、reach 或 \(CB(y)\) 方向门。
+
+<a id="c332"></a>
+## C332-v1 · \(\beta=0\) 单调边界的任意闭零集点收敛
+
+- **Status**：`derived-checked`。有限维完整闭图；这是标准 firm Fejér 子类，不宣称新颖。
+- **Exact Statement / Scope**：若 \(F\) 单调、\(S=\operatorname{zer}F\) 非空闭，且每一步完整 PPA 根存在，则对任意 \(p\in S\)
+  \[
+  \|x_{k+1}-p\|^2+\|x_k-x_{k+1}\|^2\le\|x_k-p\|^2.
+  \]
+  每条完整轨道点收敛到 \(S\) 中一点，步长平方可和；\(q=2\) 真残差误差界只作距离/残差接口。
+- **Relation to C329/C330**：这是 value-weighted 曲率 \(C=0\) 的边界。\(C>0\) 时需要 C329 的弱单调锚输运，或 C330 的 reach 切向估计；一般闭非孤立零集的临界点收敛仍开放。

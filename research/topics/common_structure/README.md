@@ -32,6 +32,10 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [非势原图的临界曲率](critical_graph.md) | 全对图亏损的候选收敛分界、完整单值原 PPA 的恒距圆轨道及有限长度反例。精确的小常数临界问题仍开放。 |
 | [两个独立审查与研究优先级](ASSESSMENT.md) | 核对哪些桥已证、哪些是既有语言、哪些反例决定了下一步。 |
 | [给 GPT Pro 的完整任务书](GPT_PRO_PROMPT.md) | 可直接交接。里面固定了定义、量词、去重索引、试证方向和验收条件。 |
+| [二次移位 Fitzpatrick 母面桥](mother_fitzpatrick_bridge.md) | 本轮最窄已证母结构：全图间隙的图截面等价弱单调，零锚截面在完整近端覆盖下等价真残差线性次正则；同一近端弦在 \(\lambda\beta<1/2,\lambda>2\beta K^2\) 下给输入版 \(A+B\)、点收敛和有限长度，并给出 \(F=B(y)T(Cy)\) 的完整纤维传递与 \(CB(y)\) 定向功。 |
+| [临界 \(q=2,\alpha=1\) 的 reach 子类](critical_q2_reach.md) | 在 \(C^{1,1}\) 零流形、统一 reach、严格平方下降和完整根共同留域下，切向图值估计与二进制尺度求和给每条轨道点收敛；它不覆盖一般闭非孤立零集，也不自动给物理有限长度。 |
+| [\(q=2\) 间隙振幅截面](q2_gap_amplitude.md) | 对同一 \(M\) 取 \(\sqrt{g_a}\)，把二次间隙增长与 \(d^2\lesssim r_F\) 精确接上；反向常数需要完整近端覆盖和图值帽。 |
+| [单调边界与 firm Fejér](mother_fitzpatrick_bridge.md#mother) | \(\beta=0\) 时任意非空闭零集的完整 PPA 轨道点收敛、平方步长可和；这标出 value-weighted 临界问题真正从 \(C>0\) 开始。 |
 
 <a id="bridge-guards"></a>
 ## 两项最短验收反例

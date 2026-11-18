@@ -4725,6 +4725,30 @@
       "label": "C328 候选：非势全对曲率的近端临界分界",
       "file": "topics/common_structure/critical_graph.md#critical-graph",
       "evidence_status": "candidate"
+    },
+    {
+      "id": "MOTHER-FITZ",
+      "label": "C329 全图二次移位 Fitzpatrick 母面桥",
+      "file": "topics/common_structure/mother_fitzpatrick_bridge.md#mother",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-REACH",
+      "label": "C330 临界 q=2 alpha=1 的 reach 子类点收敛",
+      "file": "topics/common_structure/critical_q2_reach.md#critical-q2-reach",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-Q2AMP",
+      "label": "q=2 间隙振幅截面",
+      "file": "topics/common_structure/q2_gap_amplitude.md#q2-gap-amplitude",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MOTHER-MONOTONE",
+      "label": "C332 beta=0 单调边界的任意闭零集点收敛",
+      "file": "topics/common_structure/mother_fitzpatrick_bridge.md#mother",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11886,6 +11910,85 @@
       "relation": "open",
       "scope": "用图值曲率连接原图与原近端；旋转平台候选排除无小常数的临界类。剩余 q=2、α=1 且严格平方下降的点收敛，以及一般母结构。",
       "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E625",
+      "inputs": [
+        "MOTHER-FITZ"
+      ],
+      "output": "AB-A",
+      "relation": "conditional",
+      "scope": "完整图块弱单调、真残差线性次正则、FullCov、锚留域、lambda beta<1/2、lambda>2 beta K^2 时，同一近端弦给 A。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E626",
+      "inputs": [
+        "MOTHER-FITZ"
+      ],
+      "output": "AB-B",
+      "relation": "conditional",
+      "scope": "同一参数窗的平方恒等式给输入距离步界，并与几何收缩合成有限长度和点收敛；输出相对步界不随之得到。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E627",
+      "inputs": [
+        "MOTHER-FITZ"
+      ],
+      "output": "MOTHER-GAPREG",
+      "relation": "conditional",
+      "scope": "母面零锚截面在根覆盖下给 C324 正则增长桥的同一常数版本，并向 F=B(y)T(Cy) 传递完整零集、残差和 CB(y) 定向功。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E628",
+      "inputs": [
+        "MOTHER-FITZ",
+        "MOTHER-GAPFAIL"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "全双变量母面桥闭合一个窄的非势子类，但相同零截面仍不足以得到一般原图动力学；一般观察核、临界 q=2 alpha=1 和外部先行性仍开放。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E629",
+      "inputs": [
+        "MOTHER-CRITICAL",
+        "MOTHER-REACH"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "正 reach 子类在严格平方下降下点收敛，但一般闭非孤立零集仍缺切向投影估计；该子类不证明物理有限长度。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E630",
+      "inputs": [
+        "MOTHER-FITZ"
+      ],
+      "output": "MOTHER-Q2AMP",
+      "relation": "conditional",
+      "scope": "同一零锚间隙取平方根后，二次增长与 d²≤K_EB r_F 在图值帽和完整 PPA 覆盖下双向传递；临界 value-weighted 曲率仍需额外方向/锚门。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E631",
+      "inputs": [
+        "MOTHER-FITZ"
+      ],
+      "output": "MOTHER-MONOTONE",
+      "relation": "conditional",
+      "scope": "value-weighted 曲率为零时，完整单调 PPA 的 firm Fejer 恒等式给任意闭零集的点收敛和平方步和；q=2 EB 只作残差接口。",
+      "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]

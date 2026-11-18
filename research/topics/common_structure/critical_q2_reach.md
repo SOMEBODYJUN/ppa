@@ -26,7 +26,7 @@ curvature inequality and the residual bound under an additional common-anchor
 or anchor-transport estimate, which controls `||y-P_S(x)||` by a multiple of
 `d(y,S)`. Without that estimate, the curvature loss is evaluated at
 `||y-P_S(x)||^2`, while the residual bound controls only `d(y,S)^2`.
-Assume all roots and anchors remain in the common tube.
+Assume all roots and anchors remain in a sufficiently small common tube, with a uniform graph-value cap `||v_k|| <= v_bar`; the cap is chosen so the reach-error absorption factors stay positive.
 
 ## Tangential graph-value estimate
 

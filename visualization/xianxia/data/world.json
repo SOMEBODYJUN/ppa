@@ -174,6 +174,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-8",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 4590,
+      "y": 4280,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -9603,6 +9615,50 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "MOTHER-FITZ": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3206,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "MOTHER-Q2AMP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4120,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MOTHER-REACH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4120,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MOTHER-MONOTONE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4120,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12089,6 +12145,34 @@
     "E624": {
       "x": 3253.81,
       "y": 4309.31
+    },
+    "E625": {
+      "x": 3727.7,
+      "y": 4418.68
+    },
+    "E626": {
+      "x": 2959.25,
+      "y": 4155.58
+    },
+    "E627": {
+      "x": 3119.78,
+      "y": 4261.37
+    },
+    "E628": {
+      "x": 3159.75,
+      "y": 4317.84
+    },
+    "E629": {
+      "x": 3245.05,
+      "y": 4332.91
+    },
+    "E630": {
+      "x": 4073.96,
+      "y": 4409.57
+    },
+    "E631": {
+      "x": 4072.95,
+      "y": 4223.49
     }
   },
   "bounds": {
