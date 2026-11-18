@@ -2894,7 +2894,7 @@
 ## C330-v1 · 临界 \(q=2,\alpha=1\) 在正 reach 零流形上的点收敛子类
 
 - **Status**：`derived-checked`。内部推导已复核；一般闭非孤立零集和物理有限长度仍开放。
-- **Exact Statement / Objects / Domain / Quantifiers**：工作管内的目标集 \(S\subset F^{-1}(0)\) 是 C^{1,1} 嵌入子流形且 reach \(\rho>0\)，所以每个用于锚定的 \(p\in S\) 都给出图对 \((p,0)\)。完整 PPA 轨道 \(x_k=y_k+\lambda v_k\)、\(v_k\in F(y_k)\) 全部留在足够小的共同管内，并有统一图值帽 \(\|v_k\|\le\bar r\)。所有局部图对满足
+- **Exact Statement / Objects / Domain / Quantifiers**：工作管内的目标集 \(S\subset F^{-1}(0)\) 是闭的 C^{1,1} 嵌入子流形且 reach \(\rho>0\)，所以每个用于锚定的 \(p\in S\) 都给出图对 \((p,0)\)。完整 PPA 轨道 \(x_k=y_k+\lambda v_k\)、\(v_k\in F(y_k)\) 全部留在足够小的共同管内，并有统一图值帽 \(\|v_k\|\le\bar r\)。所有局部图对满足
   \[
   \langle v-w,y-z\rangle\ge-C(\|v\|+\|w\|)\|y-z\|^2,
   \]

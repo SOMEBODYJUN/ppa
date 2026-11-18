@@ -4,7 +4,7 @@
 
 This note isolates a proved subcase of the remaining C328 gate. It does not settle arbitrary closed zero sets.
 
-Let `S` be a `C^{1,1}` embedded submanifold in a tubular neighborhood with reach at least `rho`, and assume every point of `S` in this working tube is a zero of `F` (so `(p,0)` is an available graph pair for every `p in S`). Let `x_k -> y_k=x_{k+1}` be a complete PPA orbit, with
+Let `S` be a closed `C^{1,1}` embedded submanifold in a tubular neighborhood with reach at least `rho`, and assume every point of `S` in this working tube is a zero of `F` (so `(p,0)` is an available graph pair for every `p in S`). Let `x_k -> y_k=x_{k+1}` be a complete PPA orbit, with
 
 `x_k = y_k + lambda v_k`, `v_k in F(y_k)`, `s_k=lambda ||v_k||`,
 ` t_k=d(x_k,S)`, `u_k=d(y_k,S)`.
