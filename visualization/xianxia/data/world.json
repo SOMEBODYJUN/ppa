@@ -3907,11 +3907,11 @@
       "realm": "random"
     },
     "GM-CMP": {
-      "role": "object",
-      "kind": "mine",
-      "object": "spring",
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "rift",
       "evidence": "derived-checked",
-      "reason": "neutral-default",
+      "reason": "incoming-refutes-relation",
       "x": 1822,
       "y": 311,
       "region": "convergence",
@@ -9185,6 +9185,39 @@
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "RFA-BARE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RFA-K": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2924,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "RFA-STRICT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11523,6 +11556,22 @@
     "E587": {
       "x": 3072.31,
       "y": 3968.0
+    },
+    "E588": {
+      "x": 2890.11,
+      "y": 3998.0
+    },
+    "E589": {
+      "x": 3112.82,
+      "y": 3893.01
+    },
+    "E590": {
+      "x": 1820.02,
+      "y": 358.96
+    },
+    "E591": {
+      "x": 2971.64,
+      "y": 4037.87
     }
   },
   "bounds": {

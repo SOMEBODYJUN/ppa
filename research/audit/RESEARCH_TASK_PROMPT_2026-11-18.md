@@ -1,5 +1,7 @@
 # GPT Pro 主研究任务：在 RL 下用 LMSR 加新条件严格弱化 GMSR
 
+普通 PPA 的同窗比较现已闭合，见 [C315 证明和严格例](../canonical/rleb_residual_filtered_angle.md)。旧条件指投稿主定理中的真实残差误差界与整窗兼容的合取。其原长度接口见 C09。下列任务书保留原研究问题，后续限定为一般固定核 GPPA 或真正替代 Dini 的 KL 耗散。
+
 ## 这次必须研究的唯一问题
 
 当前旧路线是

@@ -2754,3 +2754,12 @@
 - **A+B boundary**：若同一轨道另满足 \(d_{k+1}\le\kappa d_k\)、\(0\le\kappa<1\) 与 \(\|x^{k+1}-x^k\|\le B d_{k+1}\)，则直接有 \(\sum_k\|x^{k+1}-x^k\|\le B\kappa d_0/(1-\kappa)\)。因此 KL 在 A+B 已成立时不是必要机制；\(B\) 单独不能求和。
 - **Meaning / Scope**：本轮没有削弱一般 RL 的 MSR/GMSR，也没有改进 B。已完成的是 exact subgradient KL 充分条件和 RL-alone 桥的精确阻塞；弱于旧 RL+GMSR 且强于纯 RL 的新性质仍 open。
 - **Evidence**：[RL–Lyapunov 阻塞审查](research/audit/RL_LYAPUNOV_OBSTRUCTION_2026-11-18.md)、[三席 RL–KL 审查](research/audit/RL_KL_THREE_AGENT_REVIEW_2026-11-18.md)。
+
+<a id="c315"></a>
+## C315-v1 · 线性次正则加条件性角度估计严格弱化 RLEB 整窗兼容
+
+- **Status**：`derived-checked`，普通固定步长 PPA。
+- **Exact Statement / Scope**：在同一 \(F:\mathbb R^n\rightrightarrows\mathbb R^n\)、闭 \(S\subset\operatorname{zer}F\)、\(\lambda,U_R,\mathcal J\)、最近零锚 RL 与 Dini 下，令 \(H=(\operatorname{Id}+\omega)/2\)、\(a(y)=\inf\{t\in[0,R]:H(t)\ge \lambda r_F(y)\}\)。全体允许输出满足 \(\lambda r_F(y)\ge m d(y,S)\)，且对每个 \(d(y,S)>q a(y)\) 的允许图点，有某最近输入零锚 \(p\) 使 \(2\langle y-p,x-y\rangle\ge-(1-\delta)\|x-y\|^2\)。其中 \(m,\delta>0,\ 0<q<1\)，\(r_F\) 对原图全纤维取下确界。
+- **Conclusion / Dependencies**：以 \(\eta=\max\{q,(1+\delta m^2)^{-1/2}\}<1\) 得 (A)；共同 Dini 预算给一步长度支付、留域与有限长度。C09 的 (GM3)–(GM4) 推出整个新条件且保留原因子和初始预算；C277 提供未筛分的弱 Minty 耗散恒等式。[距离 KL 势](research/canonical/rleb_residual_filtered_angle.md#rfa-kl) 同样能逐步支付长度，仍依赖 Dini。
+- **Evidence**：[证明与完整量词](research/canonical/rleb_residual_filtered_angle.md#rfa-theorem)、[完整非线性严格例及固定模比较](research/canonical/rleb_residual_filtered_angle.md#rfa-strict)、[删除条件的反例](research/canonical/rleb_residual_filtered_angle.md#rfa-boundary)。严格例 \(F(a,b)=(\sqrt{b_+},3b)\) 对任何有效旧 RL 模及任何缩窗均无法通过旧兼容，且违反输出相对 (B)。
+- **Counterevidence / Boundaries**：任意模的裸 GMSR 与整窗兼容必须区分。C310 排除一般 (B) 从旧条件推出，C10 排除直接删除 Dini。一般核 GPPA、LMZ 式 KL 代替 Dini 以及外部新颖性另审。

@@ -4497,6 +4497,24 @@
       "label": "C312 full-graph A+B 非传统次单调严格扩张",
       "file": "canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RFA-K",
+      "label": "C315 真线性次正则与条件性角度",
+      "file": "canonical/rleb_residual_filtered_angle.md#rfa-theorem",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RFA-STRICT",
+      "label": "C315 完整图严格扩张",
+      "file": "canonical/rleb_residual_filtered_angle.md#rfa-strict",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RFA-BARE",
+      "label": "F105 裸 GMSR 与整窗兼容的区别",
+      "file": "canonical/rleb_residual_filtered_angle.md#rfa-boundary",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11232,6 +11250,54 @@
       "scope": "完整单值 resolvent 的 A+B 直接给几何长度；full-graph 量词下仍保留线性 MSR，严格扩张是脱离传统次单调性。",
       "status": "derived-checked",
       "topic": "PPA 耦合条件严格扩张"
+    },
+    {
+      "id": "E588",
+      "inputs": [
+        "GM-RL",
+        "GM-CMP"
+      ],
+      "output": "RFA-K",
+      "relation": "conditional",
+      "scope": "在同一覆盖与最近零锚的普通 PPA 中，旧真残差 EB 和整窗兼容推出整个新包且保留收缩因子。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 整窗正则性弱化"
+    },
+    {
+      "id": "E589",
+      "inputs": [
+        "RFA-K",
+        "GM-RL",
+        "DIN",
+        "GM-LOC"
+      ],
+      "output": "NG-PPA",
+      "relation": "conditional",
+      "scope": "同一近端关系覆盖全部允许输入，含最近零锚。新包给固定因子 η，既有 Dini 预算与严格留域给物理有限长度。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 整窗正则性弱化"
+    },
+    {
+      "id": "E590",
+      "inputs": [
+        "RFA-STRICT"
+      ],
+      "output": "GM-CMP",
+      "relation": "refutes",
+      "scope": "完整 Hölder 例满足整个新包，但任何有效共同 RL 模和任何原点缩窗都不能恢复旧整窗兼容。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 整窗正则性弱化"
+    },
+    {
+      "id": "E591",
+      "inputs": [
+        "RFA-BARE"
+      ],
+      "output": "RFA-K",
+      "relation": "limits",
+      "scope": "若允许任意误差界模且没有兼容要求，裸 GMSR 不推出 LMSR；反向不可能构造带 LMSR 而无任意模 EB 的例子。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 整窗正则性弱化"
     }
   ]
 }

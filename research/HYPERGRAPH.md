@@ -917,6 +917,15 @@
 | --- | --- | --- | --- |
 | E587 | [C312-SG · C312 full-graph A+B 非传统次单调严格扩张](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c312-fullgraph) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 完整单值 resolvent 的 A+B 直接给几何长度；full-graph 量词下仍保留线性 MSR，严格扩张是脱离传统次单调性。；**derived-checked** |
 
+## 普通 PPA 整窗正则性弱化
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E588 | [GM-RL · 同图块一般模的全对条件](canonical/general_modulus_dynamics.md#gm-data) ∧ [GM-CMP · 一般模同尺度兼容与真残差域](canonical/general_modulus_dynamics.md#gm-one-step) | conditional → [RFA-K · C315 真线性次正则与条件性角度](canonical/rleb_residual_filtered_angle.md#rfa-theorem) | 在同一覆盖与最近零锚的普通 PPA 中，旧真残差 EB 和整窗兼容推出整个新包且保留收缩因子。；**derived-checked** |
+| E589 | [RFA-K · C315 真线性次正则与条件性角度](canonical/rleb_residual_filtered_angle.md#rfa-theorem) ∧ [GM-RL · 同图块一般模的全对条件](canonical/general_modulus_dynamics.md#gm-data) ∧ [DIN · Dini 与全部几何采样等价](canonical/general_modulus_dynamics.md#gm-dini-length) ∧ [GM-LOC · Dini 连续长度预算与严格留域](canonical/general_modulus_dynamics.md#gm-dini-length) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 同一近端关系覆盖全部允许输入，含最近零锚。新包给固定因子 η，既有 Dini 预算与严格留域给物理有限长度。；**derived-checked** |
+| E590 | [RFA-STRICT · C315 完整图严格扩张](canonical/rleb_residual_filtered_angle.md#rfa-strict) | refutes → [GM-CMP · 一般模同尺度兼容与真残差域](canonical/general_modulus_dynamics.md#gm-one-step) | 完整 Hölder 例满足整个新包，但任何有效共同 RL 模和任何原点缩窗都不能恢复旧整窗兼容。；**derived-checked** |
+| E591 | [RFA-BARE · F105 裸 GMSR 与整窗兼容的区别](canonical/rleb_residual_filtered_angle.md#rfa-boundary) | limits → [RFA-K · C315 真线性次正则与条件性角度](canonical/rleb_residual_filtered_angle.md#rfa-theorem) | 若允许任意误差界模且没有兼容要求，裸 GMSR 不推出 LMSR；反向不可能构造带 LMSR 而无任意模 EB 的例子。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
