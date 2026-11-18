@@ -1,9 +1,5 @@
 # 当前研究状态
 
-## 2026-11-18 RLEB--A+B 比较的量词阻塞
-
-[C316](CLAIMS.md#c316) 已由一次独立 Astra Ultra 复核闭合：按正式主稿的 P1--P4，RLEB 给出的是输入步长包络 \(\|x-y\|\le(d(x,S)+\omega(d(x,S)))/2\)，不蕴含输出相对接口 \(\|x-y\|\le B_0d(y,S)\)。一维完整图 \(F(y)=\operatorname{sgn}(y)\sqrt{|y|}\) 在明确窗口内逐项满足 P1--P4，而步长/输出距离比发散。因此按当前定义，不存在任何 \(M\) 使正式 RLEB \(\Rightarrow M\Rightarrow(A)+(B)\)。这不是候选尚未找到，而是比较链不相容。若坚持输出相对 B，旧基线必须显式加入 B（或选中值上界）；否则应把接口改为正式定理的输入步长包络。详见 [阻塞审查](research/audit/RLEB_AB_COMPARISON_OBSTRUCTION_2026-11-18.md) 与 [F106](FAILED_ROUTES.md#f106)。
-
 ## 普通 PPA 整窗假设的比较与 C277 去重
 
 [C315](CLAIMS.md#c315) 在最近零锚 RL 与同一 Dini 基线下闭合了整个新正则性包。线性次正则性加条件性角度估计推出统一距离收缩及留域、有限长度。旧的真残差 EB 与整窗兼容同时推出这两个新前件，且保留原收缩因子和初始预算。完整 Hölder 反例以两个法向分支分别控制 RL 模与最坏残差，证明反向失败。有限长度来自 C09 的原 Dini 机制；C10 排除直接去掉这一机制。下一义务是为固定核 GPPA 确定同一物理零锚下可验证的角度条件，或独立建立真正的 KL 耗散来取代 Dini。任意模的裸 GMSR 比较见 [F105](FAILED_ROUTES.md#f105)。 [与 C277 和 Luke–Tam 的比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 说明，C315 区分了旧论文的整窗假设，但证明及严格例均可由已有联合证书处理，因此只作为具体证书保留。
