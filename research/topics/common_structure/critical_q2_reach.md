@@ -4,7 +4,7 @@
 
 This note isolates a proved subcase of the remaining C328 gate. It does not settle arbitrary closed zero sets.
 
-Let `S` be a `C^{1,1}` embedded submanifold in a tubular neighborhood with reach at least `rho`. Let `x_k -> y_k=x_{k+1}` be a complete PPA orbit, with
+Let `S` be a `C^{1,1}` embedded submanifold in a tubular neighborhood with reach at least `rho`, and assume every point of `S` in this working tube is a zero of `F` (so `(p,0)` is an available graph pair for every `p in S`). Let `x_k -> y_k=x_{k+1}` be a complete PPA orbit, with
 
 `x_k = y_k + lambda v_k`, `v_k in F(y_k)`, `s_k=lambda ||v_k||`,
 ` t_k=d(x_k,S)`, `u_k=d(y_k,S)`.
@@ -88,7 +88,7 @@ For the entering step, use the value cap `s_k <= lambda v_bar` and
 
 `sum_{k in block} ||h_k|| <= c_5 2^{-j/4}`.
 
-The dyadic series converges. Thus `(p_k)` is Cauchy. Since `||x_k-p_k||=t_k ->0`, the full PPA orbit converges to one point of `S`.
+The dyadic series converges. If some `a_k=u_k^2` is zero, then the next input lies in `S`; strict square descent at that input forces the following step to have `s_{k+1}=0` and `a_{k+1}=0`, and the same argument gives a stationary tail. Otherwise the positive dyadic blocks cover all sufficiently large indices. Thus `(p_k)` is Cauchy. Since `||x_k-p_k||=t_k ->0`, the full PPA orbit converges to one point of `S`.
 
 The result proves point convergence but does not supply finite length of the physical orbit. It only controls projection displacement. An additional estimate converting `||x_k-x_{k+1}||` to a summable quantity is required for finite length.
 
