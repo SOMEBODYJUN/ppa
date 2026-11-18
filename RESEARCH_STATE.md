@@ -1,5 +1,9 @@
 # 当前研究状态
 
+## 普通 PPA 的 A/B 必要性
+
+[C318](research/canonical/ppa_ab_necessary_bounds.md) 固定 (A) 统一距离收缩、(B) 输入距离步界。A 强制选中图值的线性误差界，完整输入窗内可提升为真残差界，整管的最优保证半径为 \(\kappa R\)。B 控制零点吸收和近零步长。合用两者时，完整三角近端使给定一般模的 \(\Theta_H\) 对每一条尾逐项饱和，Dini 成为该类统一有限长度的充要条件。个别轨道、单点零集及带单调性的子类有不同边界。输出相对步长界的锐判据与紧零集不收敛见同页。
+
 ## 2026-11-18 RLEB 中间条件候选
 
 监督复核已把目标固定为寻找一个整体严格弱于旧 RLEB、同时强于 A 与物理位移接口的条件。当前唯一候选是 [望远镜位移势](research/candidates/rleb_telescoping_strict_candidate.md)：保留非线性 RL、真残差与距离收缩兼容，要求每个完整步满足 \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。旧 RLEB 的 Dini 预算取 \(W=\Theta_\omega\) 即可推出它。窄 bump 完整 resolvent 候选具有非 Dini 的最小 RL 模，却有超线性法向收缩和有限望远镜势。当前状态是 `candidate`，严格例的全局延拓、最小模和旧兼容排除仍需独立逐式核验。

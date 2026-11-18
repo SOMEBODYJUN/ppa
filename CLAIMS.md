@@ -2774,3 +2774,12 @@
 - **Strict-example candidate**：取窄 bump 位移 \(h(t)=\sum A_n\beta((t-t_n)/\delta_n)\)，其中 \(A_n=t_n^\alpha\)、\(\delta_n=t_n^{p+1}e^{-1/A_n}\)、\(0<\alpha<1<p\alpha\)，并令 \(J(u,t)=(u+h(t),\phi(t))\)，\(\phi(t)=\operatorname{sgn}(t)|t|^p/(1+|t|^{p-1})\)。完整图满足 coverage，输出距离超线性收缩，实际步长由 \(W(t)=C_Wt^\alpha+t\) 望远镜支付，而 bump 宽度迫使任何 RL 模的 Dini 积分发散。
 - **Proof obligations**：完成 \(h\) 的全局连续延拓、RL 最小模的非 Dini 下界、完整 \(F=J^{-1}-\operatorname{Id}\) 的零集与真残差核对，以及旧 P4 在 bump 尺度的统一排除。当前不宣称 `derived-checked` 或外部新颖性。
 - **Evidence**：[候选正文](research/candidates/rleb_telescoping_strict_candidate.md)。
+
+<a id="c318"></a>
+## C318-v1 · 普通 PPA 的 A/B 必要性与锐预算
+
+- **Status**：`derived-checked`，有限维普通 PPA，未核公开先行性。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定非空闭 \(S\subseteq\operatorname{zer}F\)，\(\lambda>0\)，输入工作窗 \(U_R\)，有限非减、零处连续且取零的一般模 \(\omega\)，\(0<\kappa<1\)。对同一允许近端图的每个输入 \(x\) 与每个输出 \(y\)，分别检验 \(d(y,S)\le\kappa d(x,S)\) 和 \(\|x-y\|\le H(d(x,S))\)，其中 \(H=(\mathrm{id}+\omega)/2\)。
+- **Conclusion**：A 给出一步位移下界和锐选中图值线性误差界。对整输入管 \(d(x,S)\le R\) 的完整近端，A 给出 \(d(y,S)\le\lambda\kappa r_F(y)/(1-\kappa)\) 于 \(d(y,S)\le\kappa R\)，常数及其保证半径皆锐。B 给出双侧输出距离带和零吸收。合用 A+B 时，精确标量可行域为 \(0\le u\le\kappa t,\ t-u\le s\le H(t)\)。全半径覆盖要求 \(H(t)\ge(1-\kappa)t\)。在此条件下，\(\Theta_H(t)=\sum_{j\ge0}H(\kappa^jt)\) 是全部关系上的精确长度上界，Dini 恰是其有限的条件。输出相对位移的统一界等价于 \(\sup H(t)/t<1\)，锐常数见正文。
+- **Definitions / Dependencies / Evidence**：[正式 RLEB P1–P4](发表成果整理/RLEB/sections/theorem_spine.tex)、[C318 量词与证明](research/canonical/ppa_ab_necessary_bounds.md#ab-scope)。两条独立推导并经同窗复核。正向几何采样联系 [C09](research/canonical/general_modulus_dynamics.md#gm-dini-length)，反例联系 [C10](research/canonical/general_modulus_dynamics.md#gm-log-object) 和 [C287](research/canonical/rleb_dini_geometry.md#rdg-winding)。
+- **Counterevidence / Objections / Scope**：未纳入短图值的选择子关系不能反推完整真残差；原模的最近零锚 RL 不从 A+B 自动恢复；非 Dini 有完整近端的无界漂移及紧圆有界不收敛例，也容许收敛的个别关系。Dini 的必要性针对固定模下的统一保证。局部延拓另用覆盖和严格留域。

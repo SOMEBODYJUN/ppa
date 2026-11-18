@@ -927,6 +927,16 @@
 | E591 | [RFA-BARE · F105 裸 GMSR 与整窗兼容的区别](canonical/rleb_residual_filtered_angle.md#rfa-boundary) | limits → [RFA-K · C315 真线性次正则与条件性角度](canonical/rleb_residual_filtered_angle.md#rfa-theorem) | 若允许任意误差界模且没有兼容要求，裸 GMSR 不推出 LMSR；反向不可能构造带 LMSR 而无任意模 EB 的例子。；**derived-checked** |
 | E592 | [RFA-K · C315 真线性次正则与条件性角度](canonical/rleb_residual_filtered_angle.md#rfa-theorem) ∧ [GM-RL · 同图块一般模的全对条件](canonical/general_modulus_dynamics.md#gm-data) ∧ [DIN · Dini 与全部几何采样等价](canonical/general_modulus_dynamics.md#gm-dini-length) ∧ [GM-LOC · Dini 连续长度预算与严格留域](canonical/general_modulus_dynamics.md#gm-dini-length) | conditional → [UJC-LENGTH · C277全部政策留域及物理有限长度](canonical/unified_ppa_joint_certificates.md#ujc-state-theorem) | 完整普通 PPA 的 C315 证明是 C277 的双标签证书特例：残差标尺或最近零锚耗散，且共用 Dini 势。C315 的完整严格例也可由 C277 仿射目标法向证书直接认证。；**derived-checked** |
 
+## 普通 PPA 的 A/B 必要性
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E593 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [AB-B · C318 一般模输入距步长界 B](canonical/ppa_ab_necessary_bounds.md#ab-scope) | implies → [AB-GEO · C318 A+B 的锐标量一步域与覆盖边界](canonical/ppa_ab_necessary_bounds.md#ab-geometry) | 同一允许步的精确标量域。只有覆盖的输入尺度才强制 H(t)≥(1−κ)t。整体整管可行的反向由完整关系实现。；**derived-checked** |
+| E594 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) | conditional → [AB-MS · C318 选中图值与完整真残差的锐界](canonical/ppa_ab_necessary_bounds.md#ab-residual) | 逐受检步强制对所选值的线性界；整输入管上完整反向纤维的短图值被覆盖时，对 d(y)≤κR 得到同常数真残差界。；**derived-checked** |
+| E595 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [AB-B · C318 一般模输入距步长界 B](canonical/ppa_ab_necessary_bounds.md#ab-scope) | conditional → [AB-SHARP · C318 完整三角近端达到一般模尾长预算](canonical/ppa_ab_necessary_bounds.md#ab-length) | 固定 κ 和一般非减模，若所有正尺度可行，存在同一完整单值双射近端饱和每步及每尾；Dini 恰是全类统一有限长度门。；**derived-checked** |
+| E596 | [AB-SHARP · C318 完整三角近端达到一般模尾长预算](canonical/ppa_ab_necessary_bounds.md#ab-length) | conditional → [AB-CLUSTER · C318 非 Dini 时紧零集的距离收缩与有界不收敛](canonical/ppa_ab_necessary_bounds.md#ab-clusters) | 沿用同一个切向步幅，非 Dini 时在紧单位圆的局部整环上实现全圆聚点集。原算子由完整预解图反推。；**derived-checked** |
+| E597 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [AB-B · C318 一般模输入距步长界 B](canonical/ppa_ab_necessary_bounds.md#ab-scope) | conditional → [AB-OUT · C318 恢复统一输出相对步长界的精确判据](canonical/ppa_ab_necessary_bounds.md#ab-output) | 固定可行距离窗，统一输出相对步长界当且仅当 sup H(t)/t<1；径向完整图提供失败或锐常数。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

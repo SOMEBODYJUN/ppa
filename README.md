@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+[C318 · A 与输入距离步界 B 的必要性](research/canonical/ppa_ab_necessary_bounds.md) 固定普通 PPA 的允许图量词，给出精确一步可行域、A 强制的真线性次正则及锐残差窗，以及固定一般模在全部允许关系上的锐长度预算与 Dini 充要性。完整单值近端同时达到每一步与每条尾的上界。
+
 **当前 RLEB 中间条件候选**：[望远镜位移势候选](research/candidates/rleb_telescoping_strict_candidate.md)保留原非线性 RL、真残差和距离收缩接口，用逐步势差支付物理位移。旧 RLEB 的 Dini 预算可推出该势差条件。窄 bump 完整 resolvent 给出候选严格分离例，RL 最小模非 Dini，但实际法向收缩和位移势仍可和。该文件目前是 `candidate`，尚待逐项 global extension 与最小模审计。
 
 [C315 · 普通 PPA 的整窗正则性严格弱化](research/canonical/rleb_residual_filtered_angle.md) 在相同 RL 与 Dini 基线下，用线性度量次正则性和一个条件性角度估计替代旧的真实残差误差界与整窗兼容。它证明旧条件蕴含整个新条件，给出完整 Hölder–RL 严格例，并从距离收缩与原 Dini 预算得到有限长度。该页同时定位裸 GMSR、输出相对步长界和 KL 的不同作用。 [与 C277 和 Luke–Tam 的比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 说明，C315 区分了旧论文的整窗假设，但证明及严格例均可由已有联合证书处理，因此只作为具体证书保留。
@@ -276,6 +278,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md](research/audit/GPPA_PRIORITY_AUDIT_2026_10_09.md)、[research/code/gppa_scope/README.md](research/code/gppa_scope/README.md) | 有界先行来源、实际阅读位置及未闭新颖性义务；新证明的参数、双精度尾和、Fraction反代及scope复算。 |
 | [research/rleb_ppa.md](research/rleb_ppa.md) | R01–R04：一步估计、两种证书、局部收敛、signed-Schur 验证和接缝；研究 PPA 假设时读。 |
 | [research/canonical/rleb_residual_filtered_angle.md](research/canonical/rleb_residual_filtered_angle.md) | C315：普通 PPA 中用真实残差标尺决定在哪些图点检验最近零锚弱 Minty 角度。含旧包到新包、全图严格例、相同残差场的失败伴例和 Dini 长度接口。核对 GMSR 弱化或将其转入固定核 GPPA 时先读。 |
+| [research/canonical/ppa_ab_necessary_bounds.md](research/canonical/ppa_ab_necessary_bounds.md) | C318：输入距离步界与距离收缩的锐一步域、全图残差量词、固定模长度极值及紧零集反例。研究 A/B 的逆向含义时与 C09、C10、C287 同读。 |
 | [research/canonical/general_modulus_dynamics.md](research/canonical/general_modulus_dynamics.md) | C09/C10/C11：同图块一般模的完整Dini/严格预算证明；对数完整双支的真残差、全对非幂模与a=1边界；开域剩余预算、全域统一尾和显式局部同伦。 |
 | [research/canonical/rleb_dini_geometry.md](research/canonical/rleb_dini_geometry.md)、[C287-v2 接收](research/audit/C287_V2_REVIEW_2026-11-14.md) | C287-v1 的紧圆非 Dini 绕行与可定义幂步界；C287-v2 进一步给同一指定 \(\omega\) 的局部同尺度全对 RL，上界与 RLEB 兼容内部模 \(\widehat\omega\) 分开。读 Dini 必要性、紧目标聚点和 pair-gate 量词时使用；自然单调模型与同模半和兼容仍开放。 |
 | [research/canonical/global_shadow.md](research/canonical/global_shadow.md)、[finite_fiber_classification.md](research/canonical/finite_fiber_classification.md)、[full_fiber_coverage.md](research/canonical/full_fiber_coverage.md) | C03/C04/C18 的独立完整证明：非可分 Hilbert 同一正反影子与统一最优因子；有限维所有目标、proper 与任意紧集双向实现；最大根、固定窗完整纤维与开球锐性。无锚、指定锚和有限维必要性分别量化。 |

@@ -4515,6 +4515,48 @@
       "label": "F105 裸 GMSR 与整窗兼容的区别",
       "file": "canonical/rleb_residual_filtered_angle.md#rfa-boundary",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-A",
+      "label": "C318 输入窗上的距离收缩 A",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-scope",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-B",
+      "label": "C318 一般模输入距步长界 B",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-scope",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-GEO",
+      "label": "C318 A+B 的锐标量一步域与覆盖边界",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-geometry",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-MS",
+      "label": "C318 选中图值与完整真残差的锐界",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-residual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-SHARP",
+      "label": "C318 完整三角近端达到一般模尾长预算",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-length",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-CLUSTER",
+      "label": "C318 非 Dini 时紧零集的距离收缩与有界不收敛",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-clusters",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "AB-OUT",
+      "label": "C318 恢复统一输出相对步长界的精确判据",
+      "file": "canonical/ppa_ab_necessary_bounds.md#ab-output",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11312,6 +11354,64 @@
       "scope": "完整普通 PPA 的 C315 证明是 C277 的双标签证书特例：残差标尺或最近零锚耗散，且共用 Dini 势。C315 的完整严格例也可由 C277 仿射目标法向证书直接认证。",
       "status": "derived-checked",
       "topic": "普通 PPA 整窗正则性弱化"
+    },
+    {
+      "id": "E593",
+      "inputs": [
+        "AB-A",
+        "AB-B"
+      ],
+      "output": "AB-GEO",
+      "relation": "implies",
+      "scope": "同一允许步的精确标量域。只有覆盖的输入尺度才强制 H(t)≥(1−κ)t。整体整管可行的反向由完整关系实现。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的 A/B 必要性"
+    },
+    {
+      "id": "E594",
+      "inputs": [
+        "AB-A"
+      ],
+      "output": "AB-MS",
+      "relation": "conditional",
+      "scope": "逐受检步强制对所选值的线性界；整输入管上完整反向纤维的短图值被覆盖时，对 d(y)≤κR 得到同常数真残差界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的 A/B 必要性"
+    },
+    {
+      "id": "E595",
+      "inputs": [
+        "AB-A",
+        "AB-B"
+      ],
+      "output": "AB-SHARP",
+      "relation": "conditional",
+      "scope": "固定 κ 和一般非减模，若所有正尺度可行，存在同一完整单值双射近端饱和每步及每尾；Dini 恰是全类统一有限长度门。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的 A/B 必要性"
+    },
+    {
+      "id": "E596",
+      "inputs": [
+        "AB-SHARP"
+      ],
+      "output": "AB-CLUSTER",
+      "relation": "conditional",
+      "scope": "沿用同一个切向步幅，非 Dini 时在紧单位圆的局部整环上实现全圆聚点集。原算子由完整预解图反推。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的 A/B 必要性"
+    },
+    {
+      "id": "E597",
+      "inputs": [
+        "AB-A",
+        "AB-B"
+      ],
+      "output": "AB-OUT",
+      "relation": "conditional",
+      "scope": "固定可行距离窗，统一输出相对步长界当且仅当 sup H(t)/t<1；径向完整图提供失败或锐常数。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的 A/B 必要性"
     }
   ]
 }
