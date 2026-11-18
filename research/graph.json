@@ -4617,6 +4617,36 @@
       "label": "C321 完整图值包络超出固定线性观察",
       "file": "audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NAT-ALIGN",
+      "label": "C322 全隐式原对齐场的全根存在与耗散",
+      "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-alignment",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NAT-KERNEL",
+      "label": "C322 全初值收敛的锐通信核边界",
+      "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NAT-BALL",
+      "label": "C322 原对齐场击破最紧残差球",
+      "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-strict",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NAT-TRANSVERSE",
+      "label": "C323 光滑零流形的横向最小奇异值门",
+      "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-transverse",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "NAT-SCALE",
+      "label": "C323 三层锐因子与两次标量化损失",
+      "file": "canonical/ppa_native_alignment_and_transverse_test.md#native-hierarchy",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11585,6 +11615,61 @@
       "scope": "原普通 PPA 的完整局部预解式保持，窗外支令每个固定线性观察的全纤维误差界或兼容失败而可达图值集合条件成立。",
       "status": "derived-checked",
       "topic": "原图值凸包与先行误差界比较"
+    },
+    {
+      "id": "E608",
+      "inputs": [
+        "NAT-ALIGN"
+      ],
+      "output": "NAT-KERNEL",
+      "relation": "conditional",
+      "scope": "固定步长和任意允许根：正的非增通信核在无穷远不可积，当且仅当所有初值的完整轨道有限长收敛。",
+      "status": "derived-checked",
+      "topic": "原对齐算子及光滑横向检验"
+    },
+    {
+      "id": "E609",
+      "inputs": [
+        "NAT-ALIGN"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "conditional",
+      "scope": "任一有界输入位置直径及速度窗。对原完整图，位置图值分量正好读出输出速度。",
+      "status": "derived-checked",
+      "topic": "原对齐算子及光滑横向检验"
+    },
+    {
+      "id": "E610",
+      "inputs": [
+        "NAT-BALL"
+      ],
+      "output": "TD-OLD",
+      "relation": "refutes",
+      "scope": "同一个原 Cucker–Smale 场、固定步长和局部完整窗。即使原欧氏球缩到恰覆盖实际图值，标量逆像认证也失败。",
+      "status": "derived-checked",
+      "topic": "原对齐算子及光滑横向检验"
+    },
+    {
+      "id": "E611",
+      "inputs": [
+        "NAT-TRANSVERSE"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "conditional",
+      "scope": "光滑原算子与零流形上的局部全部根，横向最小奇异值严格大于 1。未截断完整纤维须另核远根。",
+      "status": "derived-checked",
+      "topic": "原对齐算子及光滑横向检验"
+    },
+    {
+      "id": "E612",
+      "inputs": [
+        "NAT-TRANSVERSE"
+      ],
+      "output": "NAT-SCALE",
+      "relation": "sharpness",
+      "scope": "在同一局部全部根范围中，三种方法的充分收缩因子有明确的锐下确界。",
+      "status": "derived-checked",
+      "topic": "原对齐算子及光滑横向检验"
     }
   ]
 }

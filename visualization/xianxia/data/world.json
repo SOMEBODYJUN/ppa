@@ -9352,11 +9352,11 @@
       "realm": "convergence-annex-7"
     },
     "TD-OLD": {
-      "role": "object",
-      "kind": "mine",
-      "object": "furnace",
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "broken_bridge",
       "evidence": "derived-checked",
-      "reason": "neutral-default",
+      "reason": "incoming-refutes-relation",
       "x": 3582,
       "y": 4123,
       "region": "convergence",
@@ -9402,6 +9402,61 @@
       "evidence": "derived-checked",
       "reason": "neutral-default",
       "x": 3582,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NAT-ALIGN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NAT-BALL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NAT-KERNEL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NAT-SCALE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "NAT-TRANSVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3676,
       "y": 4396,
       "region": "convergence",
       "realm": "convergence-annex-7"
@@ -11823,6 +11878,26 @@
     "E607": {
       "x": 3525.11,
       "y": 4244.45
+    },
+    "E608": {
+      "x": 3337.35,
+      "y": 4092.85
+    },
+    "E609": {
+      "x": 3455.4,
+      "y": 4178.77
+    },
+    "E610": {
+      "x": 3552.69,
+      "y": 4084.98
+    },
+    "E611": {
+      "x": 3484.85,
+      "y": 4261.9
+    },
+    "E612": {
+      "x": 3671.69,
+      "y": 4352.81
     }
   },
   "bounds": {

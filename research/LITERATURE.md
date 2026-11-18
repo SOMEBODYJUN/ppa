@@ -633,3 +633,9 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 
 - **最接近的原文**：Kruger, *Nonlinear Metric Subregularity*, §4.1 (22)–(23) 及 §4.4 Theorem 4.1，[全文](https://arxiv.org/pdf/1502.06159)；Valkonen, *Preconditioned Proximal Point Methods and Notions of Partial Subregularity*, Definition 4.2、Lemma 4.4、Example 4.6，[作者稿](https://tuomov.iki.fi/mathematics/subreg.pdf)。前者为原图值指定非径向函数并用斜率/余导数给判据。后者用加权平方距离定义部分次正则并证明 PPA 类算法的收敛。
 - **边界**：[全文审查与定理稿](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-prior-art) 另核方向次正则、相对误差界、各向异性/退化预条件和多步 Lyapunov。C321 同时给出原图生成的非径向尺度与支持方向检验，并严格分离完整固定线性观察，不能以此声称排除上述所有一般化理论或裁定首创。
+
+<a id="lit-c322-native"></a>
+## C322/C323 原算子路线
+
+- **原模型及机制**：[Cucker–Smale，Emergent Behavior in Flocks](https://people.mpi-inf.mpg.de/~mehlhorn/SeminarEvolvability/CuckerSmale.pdf)，式 (4) 的原离散模型及式 (5) 的连续系统须分别比较。[Ha–Liu](https://sites.math.duke.edu/~jliu/pdf/Ha_Liu_CMS_2009.pdf) §3 以速度与通信权重原函数构造连续时间 Lyapunov。C322 的本库推导用右端点移位处理全隐式、证全根覆盖与衰减，并验证同图的标量球分离和选根分歧。[规范证明](canonical/ppa_native_alignment_and_transverse_test.md#native-alignment)
+- **相关路线**：[Zeng](https://arxiv.org/pdf/2101.09180) 的非孤立 Newton 说明横向导数在根求解中的作用，更新为秩截断 Newton。[Goebel](https://webpages.math.luc.edu/~rgoebel1/publications/journals/Goebel13submission.pdf) 分开逐点吸引和一般集合吸引。[Evens 等](https://arxiv.org/pdf/2305.03605) Definition 2.1 使用固定锚斜弱 Minty；[C322](canonical/ppa_native_alignment_and_transverse_test.md#native-strict) 的本库测试排除此固定锚原图合同。公开优先性未核。

@@ -957,6 +957,16 @@
 | E606 | [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | equivalence → [TD-GAUGE · C321 最小图值集合的非径向残差等价](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-gauge) | 对每个输出的完整纤维取进入尺度下确界，不要求达到；不自动满足已知 g-次正则判据的附加假设。；**derived-checked** |
 | E607 | [TD-PROJECTION · C321 完整图值包络超出固定线性观察](audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection) | limits → [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | 原普通 PPA 的完整局部预解式保持，窗外支令每个固定线性观察的全纤维误差界或兼容失败而可达图值集合条件成立。；**derived-checked** |
 
+## 原对齐算子及光滑横向检验
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E608 | [NAT-ALIGN · C322 全隐式原对齐场的全根存在与耗散](canonical/ppa_native_alignment_and_transverse_test.md#native-alignment) | conditional → [NAT-KERNEL · C322 全初值收敛的锐通信核边界](canonical/ppa_native_alignment_and_transverse_test.md#native-sharp) | 固定步长和任意允许根：正的非增通信核在无穷远不可积，当且仅当所有初值的完整轨道有限长收敛。；**derived-checked** |
+| E609 | [NAT-ALIGN · C322 全隐式原对齐场的全根存在与耗散](canonical/ppa_native_alignment_and_transverse_test.md#native-alignment) | conditional → [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | 任一有界输入位置直径及速度窗。对原完整图，位置图值分量正好读出输出速度。；**derived-checked** |
+| E610 | [NAT-BALL · C322 原对齐场击破最紧残差球](canonical/ppa_native_alignment_and_transverse_test.md#native-strict) | refutes → [TD-OLD · 旧普通 RLEB 的同窗结构与 Dini 基线](canonical/ppa_two_step_and_directional_residual.md#td-combined) | 同一个原 Cucker–Smale 场、固定步长和局部完整窗。即使原欧氏球缩到恰覆盖实际图值，标量逆像认证也失败。；**derived-checked** |
+| E611 | [NAT-TRANSVERSE · C323 光滑零流形的横向最小奇异值门](canonical/ppa_native_alignment_and_transverse_test.md#native-transverse) | conditional → [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | 光滑原算子与零流形上的局部全部根，横向最小奇异值严格大于 1。未截断完整纤维须另核远根。；**derived-checked** |
+| E612 | [NAT-TRANSVERSE · C323 光滑零流形的横向最小奇异值门](canonical/ppa_native_alignment_and_transverse_test.md#native-transverse) | sharpness → [NAT-SCALE · C323 三层锐因子与两次标量化损失](canonical/ppa_native_alignment_and_transverse_test.md#native-hierarchy) | 在同一局部全部根范围中，三种方法的充分收缩因子有明确的锐下确界。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

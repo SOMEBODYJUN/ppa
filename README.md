@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+[从原算子出发的 C322/C323](research/canonical/ppa_native_alignment_and_transverse_test.md) 用标准 Cucker–Smale 完整全隐式场检验 C320：统一耗散预算给所有根收敛，旧 RLEB 即使用实际图值的最紧欧氏球也会失败。对光滑零流形，C323 把 A/C320 精确化为横向奇异值一项检验，量化两次标量化损失，并清楚区分这一结构与抽象统一目标。
+
 [C318 · A 与输入距离步界 B 的必要性](research/canonical/ppa_ab_necessary_bounds.md) 固定普通 PPA 的允许图量词，给出精确一步可行域、A 强制的真线性次正则及锐残差窗，以及固定一般模在全部允许关系上的锐长度预算与 Dini 充要性。完整单值近端同时达到每一步与每条尾的上界。
 
 [普通 PPA 的两步净位移与方向残差](research/canonical/ppa_two_step_and_directional_residual.md) 给出两个已证接口。C319 以两步净位移势推出全部允许轨道的点收敛，容许一步平方和发散。C320 以保留方向的原图值集合替代旧标量整窗兼容，在同一 Dini 基线上严格介于旧结构与 A+B。两者可合取；[C317-v2](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract) 另恢复非 Dini 下的有限长度子类，并纠正原窄 bump 只攻击全对 RL 的量词。

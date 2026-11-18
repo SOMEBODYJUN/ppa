@@ -2812,3 +2812,19 @@
 - **Exact Statement / Objects / Domain**：固定 C320 的全部共同对象及 P2。记 \(C_t\) 为实际尺度 \(t\) 的最小对称闭凸包，\(\sigma_t(u)=\sup_{w\in C_t}\langle u,w\rangle\)。C320 的逆向排除等价于对每个 \(t\)、每个 \(d(y)>\kappa t\) 的 \(y\in Y\) 与每个 \(v\in F(y)\)，存在单位 \(u\) 使 \(|\langle u,v\rangle|>\sigma_t(u)\)。它也等价于 \(d(y)\le\kappa\inf_{v\in F(y)}\inf\{t:v\in C_t\}\)。
 - **Strict extension**：固定线性 \(L\) 的完整观察残差误差界及可达图值外包若满足同尺度标量兼容，则 C320 可用交球的同一投影柱体验证。存在完整局部近端满足 C320，却排除任何这样的固定 \(L\)，即使观察包络仅要求上界真观察残差。反例在原图添有一条窗外输入支，逐项验证局部完整性与真实残差均保留。
 - **Evidence / Scope**：[支撑与广义残差证明](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-support) · [全纤维固定观察分离](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-beyond-projection) · [先行研究](research/audit/C320_MANUSCRIPT_AND_PRIOR_ART_2026-11-18.md#m-prior-art)。不排除改变投影残差的纤维截断或任意非线性残差尺度。Kruger 的一般图值尺度与 Valkonen 的部分次正则不能据此宣称被整体分离。
+
+<a id="c322"></a>
+## C322-v1 · Cucker–Smale 原场的全隐式 PPA 与严格方向分离
+
+- **Status**：`derived-checked`。解析判据及原图证据；外部优先性未核。
+- **Exact Statement / Objects / Domain**：任取有限粒子数 \(N\ge2\)、空间维数 \(d\ge1\)、固定 \(\lambda>0\)，正连续非增通信核 \(\phi\)，标准原场 \(F(q,p)=(-p,L(q)p)\) 作用于平均速度为零的状态。完整 \(J_{\lambda F}\) 全域有根。所有初值的每条完整轨道均有限长收敛当且仅当 \(\int_0^\infty\phi=\infty\)。另有定量的条件初值预算。
+- **Strict separation / Scope**：同一三粒子临界核与固定步长，在任意缩小的指定零点邻域，C320 成立，任何覆盖实际图值的原欧氏球及旧 RLEB 标量兼容均失败，Luke–Tam 对应参数门与固定锚斜弱 Minty 也失败。另给多根和短程核同初值择根导致相反结局的完整图验证。
+- **Dependencies / Evidence**：[覆盖、耗散与核的充要性](research/canonical/ppa_native_alignment_and_transverse_test.md#native-alignment) · [同图严格分离](research/canonical/ppa_native_alignment_and_transverse_test.md#native-strict)。连续对齐与经典耗散思想已有先例；这里核定后退 Euler 与所有根量词。
+
+<a id="c323"></a>
+## C323-v1 · 光滑零流形的横向收缩检验与三层锐比较
+
+- **Status**：`derived-checked`。有限维 \(C^1\) 单值算子和 \(C^1\) 零流形的局部全部根。
+- **Exact Statement / Objects / Domain**：在零点 \(s_0\) 记非零法空间为 \(N\)，\(D=DF(s_0)\)、\(A=D|_N\)、\(B=P_NA\)、\(G=I+\lambda B\)。统一局部 A 等价于 \(m=\sigma_{\min}(G)>1\)，此时缩窗后自动获得局部覆盖、线性物理位移界、真残差界、锚定模及 C320。对未截断的完整预解式需另核远根。
+- **Sharpness**：记 \(a=\sigma_{\min}(A)\)、\(b=\|AG^{-1}\|\)、\(c=\|(2(I+\lambda D)^{-1}-I)|_N\|\)，则缩窗允许的 A/C320、最紧实际欧氏残差球及旧 RLEB 三种证书的比例上界锐下确界分别为 \(1/m,b/a,(1+c)/(2\lambda a)\)。后两者等于 1 也不能有严格收缩因子。
+- **Evidence / Scope**：[原算子导数证明与端点](research/canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)。光滑层的结果刻画标准横向收缩及两次标量化损失；没有给一般非线性 RLEB 与 A+B 之间的单一结构性质。
