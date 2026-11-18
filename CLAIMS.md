@@ -2881,8 +2881,11 @@
   \]
   反向二次增长给 \(d(z,S)\le[2\gamma(a-2\beta)]^{-1/2}r_F(z)\)。在 FullCov 和锚输运 \(\|y-p\|\le Ld(y,S)\) 下，若 \(\lambda>2\beta L^2K^2\)，每个完整根同时满足
   \[
-  d(y,S)\le(1+\lambda^2/K^2-2\lambda\beta L^2)^{-1/2}d(x,S),\qquad
-  \|x-y\|\le\sqrt{\lambda/(\lambda-2\beta L^2K^2)}d(x,S).
+  d(y,S)\le(\underline c_L+\lambda^2/K^2)^{-1/2}d(x,S),\qquad
+  \|x-y\|\le\sqrt{\lambda/(\lambda-2\beta L^2K^2)}d(x,S),
+  \quad
+  \underline c_L:=\begin{cases}1-2\lambda\beta,&\lambda\beta\le1/2,\\
+  (1-2\lambda\beta)L^2,&\lambda\beta>1/2.\end{cases}
   \] 无额外锚输运时保留窄窗 \(\lambda\beta<1/2\)。
 - **New Information**：这是从同一双变量变分面经同一近端弦推导出的输入版 \(A+B\)，因而给距离趋零、点列收敛和有限长度的分层结论；它还给出观察复合 \(F(y)=B(y)T(Cy)\) 的完整零集/残差传递常数及 \(CB(y)\) 近端弦定向功。秩亏观察、活跃纤维退化和无正功分别是可检测的新障碍。
 - **Dependencies / Evidence / Counterevidence / Scope**：[母面完整推导与比较表](research/topics/common_structure/mother_fitzpatrick_bridge.md) · [q=2 振幅截面](research/topics/common_structure/q2_gap_amplitude.md)；已有 C324 的两个切片、C310 的输出相对步界障碍、C322 的位置输运反例作边界对照。一般 \(B(y)\) 的上下界不蕴含原空间单调性或有限长度，必须另加对齐/正功/全向位移门。非凸非孤立目标的最近输入锚留域是显式前提，不能从闭性自动推出。
