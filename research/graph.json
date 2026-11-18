@@ -4557,6 +4557,48 @@
       "label": "C318 恢复统一输出相对步长界的精确判据",
       "file": "canonical/ppa_ab_necessary_bounds.md#ab-output",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-OLD",
+      "label": "旧普通 RLEB 的同窗结构与 Dini 基线",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-combined",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-PAIR",
+      "label": "C319 两步净位移势",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-cancellation",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-CONV",
+      "label": "C319 两步尾与普通 PPA 点收敛",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-cancellation",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-DIRECTION",
+      "label": "C320 方向保真的图值包络",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-directional",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-M",
+      "label": "C319/C320 合取中间条件",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-combined",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-COMMON",
+      "label": "同一个单步结构下的三类轨道",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-common-contract",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "TD-FAST",
+      "label": "C317-v2 非 Dini 下的真实一步有限长度",
+      "file": "canonical/ppa_two_step_and_directional_residual.md#td-common-contract",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -11412,6 +11454,86 @@
       "scope": "固定可行距离窗，统一输出相对步长界当且仅当 sup H(t)/t<1；径向完整图提供失败或锐常数。",
       "status": "derived-checked",
       "topic": "普通 PPA 的 A/B 必要性"
+    },
+    {
+      "id": "E598",
+      "inputs": [
+        "TD-OLD"
+      ],
+      "output": "TD-PAIR",
+      "relation": "implies",
+      "scope": "保留同一锚定模与全部允许步。旧 Θ_H 给两步势，初值预算相同。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E599",
+      "inputs": [
+        "AB-A",
+        "AB-B",
+        "TD-PAIR"
+      ],
+      "output": "TD-CONV",
+      "relation": "conditional",
+      "scope": "覆盖和严格留域预算给全部轨道的奇偶弦长预算、共同极限和原点误差。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E600",
+      "inputs": [
+        "TD-OLD"
+      ],
+      "output": "TD-DIRECTION",
+      "relation": "implies",
+      "scope": "同一旧径向球供方向包络；此蕴含即使只保留结构部分也成立。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E601",
+      "inputs": [
+        "TD-DIRECTION"
+      ],
+      "output": "AB-GEO",
+      "relation": "implies",
+      "scope": "保留同窗 P1、P2、P3，经原图值包络得 A+B 和一步域。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E602",
+      "inputs": [
+        "TD-DIRECTION",
+        "TD-PAIR"
+      ],
+      "output": "TD-M",
+      "relation": "implies",
+      "scope": "两个条件同时满足。对同一 Dini 基线两个结构蕴含严格，亦容许非 Dini 时的点收敛。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E603",
+      "inputs": [
+        "TD-COMMON"
+      ],
+      "output": "TD-PAIR",
+      "relation": "limits",
+      "scope": "相同 A+B、锚定 RL、真残差和兼容的交替图与同向图给不同结论；单步标量无法推出两步势。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
+    },
+    {
+      "id": "E604",
+      "inputs": [
+        "TD-COMMON"
+      ],
+      "output": "TD-FAST",
+      "relation": "conditional",
+      "scope": "快速实际法向收缩使一步势支付全部位移；对严格增的任意非 Dini 高度可另构造可和采样。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的两步净位移与方向残差"
     }
   ]
 }

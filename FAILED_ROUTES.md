@@ -747,3 +747,13 @@
 选中的近端图值满足线性下界时，只能对纳入检验的图值取下确界。对 \(F(y)=\{y,y^3\}\) 只允许 \(y=x/2\)，A+B 成立，但遗漏的较小图值使线性真残差界失败。恢复该界可证明完整输入窗或短图值覆盖，精确余量见 [C318](research/canonical/ppa_ab_necessary_bounds.md#ab-residual)。
 
 即使完整近端、距离严格几何衰减且每一步趋零，A+B 仍允许无限长度。固定可行的非 Dini 模可在全域单值完整近端上逐步饱和步长包络，因而删除 Dini 后的全类有限长度结论失败。单条轨道可用更紧的实际步长控制，或利用目标几何等结构。[锐预算与反例](research/canonical/ppa_ab_necessary_bounds.md#ab-length)
+
+<a id="f107"></a>
+## F107 · 窄 bump 的全对模障碍不能当作最近零锚模障碍
+
+旧 C317 的严格例用两个相邻非零输入跨越窄 bump。这只强制完整图上的全对 RL 模非 Dini。原正式 P2 只量化实际步和其最近输入零锚。对窄 bump 本身，锚定反射至多 \(2|h(t)|+|2\phi(t)-t|=O(t^\alpha)\)，存在 Dini 锚定模，且功率真残差与之兼容。故旧严格例失败。可回收的全对障碍保留在 [原页](research/candidates/rleb_telescoping_strict_candidate.md)，修复采用切向高度本身非 Dini、法向实际收缩足够快的完整图，见 [C317-v2](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract)。
+
+<a id="f108"></a>
+## F108 · 单步标量信息不足以识别跨步相消
+
+从最近零锚 RL、真残差 GMSR 与旧参数兼容移除 Dini 后，即使保留所有单步距离、步长、真残差与锚定反射范数，也无法统一判断点收敛。完整交替图和完整同向图这些标量完全相同，前者点收敛但平方步长和发散，后者点发散。任何控制正倍数一步平方耗散的有下界能量都无法覆盖前者；可用的附加信息是可拼接图值的方向和。[共同条件与证明](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract)

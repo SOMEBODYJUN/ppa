@@ -9295,6 +9295,83 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-7"
+    },
+    "TD-COMMON": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-CONV": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-DIRECTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3488,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-FAST": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3300,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-M": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-OLD": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3582,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
+    },
+    "TD-PAIR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 3394,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-7"
     }
   },
   "edges": {
@@ -11673,6 +11750,34 @@
     "E597": {
       "x": 3337.35,
       "y": 4244.15
+    },
+    "E598": {
+      "x": 3442.0,
+      "y": 4123.0
+    },
+    "E599": {
+      "x": 3346.44,
+      "y": 4292.85
+    },
+    "E600": {
+      "x": 3525.35,
+      "y": 4183.85
+    },
+    "E601": {
+      "x": 3428.49,
+      "y": 4271.61
+    },
+    "E602": {
+      "x": 3534.46,
+      "y": 4220.6
+    },
+    "E603": {
+      "x": 3398.31,
+      "y": 4170.81
+    },
+    "E604": {
+      "x": 3347.22,
+      "y": 4404.59
     }
   },
   "bounds": {

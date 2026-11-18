@@ -4,9 +4,11 @@
 
 [C318](research/canonical/ppa_ab_necessary_bounds.md) 固定 (A) 统一距离收缩、(B) 输入距离步界。A 强制选中图值的线性误差界，完整输入窗内可提升为真残差界，整管的最优保证半径为 \(\kappa R\)。B 控制零点吸收和近零步长。合用两者时，完整三角近端使给定一般模的 \(\Theta_H\) 对每一条尾逐项饱和，Dini 成为该类统一有限长度的充要条件。个别轨道、单点零集及带单调性的子类有不同边界。输出相对步长界的锐判据与紧零集不收敛见同页。
 
-## 2026-11-18 RLEB 中间条件候选
+## 证明实验：方向误差界与跨步相消
 
-监督复核已把目标固定为寻找一个整体严格弱于旧 RLEB、同时强于 A 与物理位移接口的条件。当前唯一候选是 [望远镜位移势](research/candidates/rleb_telescoping_strict_candidate.md)：保留非线性 RL、真残差与距离收缩兼容，要求每个完整步满足 \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。旧 RLEB 的 Dini 预算取 \(W=\Theta_\omega\) 即可推出它。窄 bump 完整 resolvent 候选具有非 Dini 的最小 RL 模，却有超线性法向收缩和有限望远镜势。当前状态是 `candidate`，严格例的全局延拓、最小模和旧兼容排除仍需独立逐式核验。
+[C319](research/canonical/ppa_two_step_and_directional_residual.md#td-cancellation) 保留原近端更新，用统一的两步净位移势替代一阶位移范数求和，给出留域、点收敛及点误差尾。完整图可满足这一条件却有平方步长和发散。若 Dini 已固定，A+B 本身推出此两步势，因而严格结构比较须另用 C320。[C320](research/canonical/ppa_two_step_and_directional_residual.md#td-directional) 用中心对称凸的图值集合保留方向，保留最近零锚与真残差。它严格介于旧整窗兼容和 A+B，即使固定 Dini。两者的合取在新简单非 Dini 子类上依然能证点收敛。本方向条件与 Luke–Tam 前提不可比；寻找同时弱化两套定理的共同条件仍开放。
+
+[C317-v2](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract) 给出同一旧单步结构下的三类轨道。实际法向超线性压缩可给有限长度，交替切向位移可只给点收敛，同向漂移可发散。后两例的步长、真残差和锚定反射范数一样。原窄 bump 的失效范围与可回收结论见 [F107](FAILED_ROUTES.md#f107)。下一步是从非三角的原算子结构导出两步位移的相消量，或找到同时接收 Luke–Tam 基线的方向误差界。该阶段未建立外部先行性。
 
 ## 普通 PPA 整窗假设的比较与 C277 去重
 

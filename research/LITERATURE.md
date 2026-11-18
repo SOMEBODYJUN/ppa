@@ -620,3 +620,10 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 **Paper fact（正式 metadata/abstract 已核；定理级以 arXiv:2406.13207v1 为准，正式版未知）：** Guoyin Li, Boris Mordukhovich, Jiangxing Zhu, *Generalized Metric Subregularity with Applications to High-Order Regularized Newton Methods*, Mathematics of Operations Research, DOI [10.1287/moor.2024.0570](https://doi.org/10.1287/moor.2024.0570)。出版社记录显示 online 2026-04-07；arXiv 为 [2406.13207v1](https://arxiv.org/abs/2406.13207v1)，提交日期 2024-06-19。预印本 v1 全文逐式核读了 Definition 3.1、Theorem 4.3–4.4、Theorem 5.1–5.2；出版社 PDF 在本环境只能取得摘要页，因此正式版与 v1 的逐页差异保持未核。
 
 **规范抽取（以下定理编号均归属于 arXiv v1）：** Definition 3.1 用 admissible 函数 \(\psi\) 取代线性误差界；Theorem 4.3 用 asymptotically shrinking 的 \(\tau\) 和能量差递推给抽象有限长度；Theorem 5.1 在 (H1') 充分下降、H2 相对误差、H3、bounded level set、accumulation point、KL 以及 \(\phi,\beta\) increasing 和 \(\phi^{-1}(\beta(s)t)/(\mu_1s+\mu_2t)\) 的混合条件下导出有限长度；Theorem 5.2 还需要其 \(\xi\) 的 increasing/\(\xi(t)/t\to0\) 条件及 eventual surrogate-to-step 桥才能给出相应速率。该段被迁移到 [三目标报告](topics/next_stage_2026/target2_kl_finite_length.md)，不把摘要升级为证明，也不把一般非单调 PPA 自动写成次微分算法。
+
+<a id="lit-two-step-ppa"></a>
+## C319/C320 的可和性替代证明实验
+
+- **Paper fact**：[Rockafellar 1976 原稿](https://www.ceremade.dauphine.fr/~carlier/Rockafellar1976.pdf)，准则 (A)、Theorem 1。绝对可和量是非精确近端输出的求解误差容差，并非原算法步长。对照 [Solodov–Svaiter 1999](https://pages.cs.wisc.edu/~solodov/solsva99Teps.pdf) Algorithm 3.1、Lemma 4.1、Corollary 4.2 与 Theorem 3.1：固定相对误差及校正更新给所有零点的平方距离下降和辅助步平方可和，再得弱收敛。
+- **Paper fact**：[Combettes 2001](https://pcombet.math.ncsu.edu/ipa.pdf)，Theorem 3.11、Remark 7.5。准 Fejér 性与聚点判别推出点收敛；投影次梯度实例可用平方可和但不可和的步幅序列。 [LMZ v1](https://arxiv.org/html/2406.13207v1#S5) Theorem 5.1 的 (5.3) 改用解奇异化函数差，结论是有限长度。
+- **本库推导**：[C319/C320](canonical/ppa_two_step_and_directional_residual.md#td-literature) 区分三类不同量。原普通 PPA 无 Solodov–Svaiter 的校正和全零点单调图，直接转接失败。对平方步长和发散的 C319 子类，标准正平方耗散不可能，因而以跨步符号相消和两步净位移势代替。该机制未作全球先行裁决。

@@ -2765,15 +2765,19 @@
 - **Counterevidence / Boundaries**：任意模的裸 GMSR 与整窗兼容必须区分。C310 排除一般 (B) 从旧条件推出，C10 排除直接删除 Dini。[与既有理论的逐式比较](research/canonical/rleb_residual_filtered_angle.md#rfa-comparison) 表明，Luke–Tam 的定量条件在同一窗口内蕴含该耗散，严格例则违反任意有限的 Luke–Tam 次单调性常数。分支证明和严格例都已落在 C277 的联合证书内。C315 保留为该框架内的充分条件及旧整窗假设的比较，不据此升级主稿。
 
 <a id="c317"></a>
-## C317-v1 · 望远镜位移势替代 Dini 预算的严格弱化候选
+## C317-v1 · 望远镜位移势与原窄 bump 候选
 
-- **Status**：`candidate`。
-- **Exact Statement**：在共同 full-graph coverage、非线性 RL 最近零锚和真残差误差界下，增加非减残差包络 \(\bar r\) 与非减势 \(W\)，要求每个完整步满足
-  \(r_F(y)\le\bar r(d(x,S))\)、\(\psi(\bar r(t))\le\kappa t\)，以及
-  \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。这给出 A、物理位移界和有限长度。旧 RLEB 的 Dini 预算取 \(\bar r=B_\omega/\lambda\)、\(W=\Theta_\omega\) 即可推出该包。
-- **Strict-example candidate**：取窄 bump 位移 \(h(t)=\sum A_n\beta((t-t_n)/\delta_n)\)，其中 \(A_n=t_n^\alpha\)、\(\delta_n=t_n^{p+1}e^{-1/A_n}\)、\(0<\alpha<1<p\alpha\)，并令 \(J(u,t)=(u+h(t),\phi(t))\)，\(\phi(t)=\operatorname{sgn}(t)|t|^p/(1+|t|^{p-1})\)。完整图满足 coverage，输出距离超线性收缩，实际步长由 \(W(t)=C_Wt^\alpha+t\) 望远镜支付，而 bump 宽度迫使任何 RL 模的 Dini 积分发散。
-- **Proof obligations**：完成 \(h\) 的全局连续延拓、RL 最小模的非 Dini 下界、完整 \(F=J^{-1}-\operatorname{Id}\) 的零集与真残差核对，以及旧 P4 在 bump 尺度的统一排除。当前不宣称 `derived-checked` 或外部新颖性。
-- **Evidence**：[候选正文](research/candidates/rleb_telescoping_strict_candidate.md)。
+- **Status**：`candidate`。一步势的正向蕴含成立，原严格例对正式最近零锚版本失败，严格性由 C317-v2 恢复。
+- **Exact Statement**：在完整普通 PPA 同窗，保留最近零锚、真残差和可相容的残差包络，并要求每步 \(\|x-y\|\le W(d(x,S))-W(d(y,S))\)。旧 RLEB 以 \(W=\Theta_\omega\) 推出它。对轨道求和得到有限长。
+- **Counterevidence**：原窄 bump 只迫使全对模非 Dini。它的最近零锚模为 \(O(t^\alpha)\)，与原真残差模 \(Cs^p\)、\(\alpha p>1\) 兼容。
+- **Evidence**：[候选与量词更正](research/candidates/rleb_telescoping_strict_candidate.md) · [F107](FAILED_ROUTES.md#f107)。
+
+<a id="c317-v2"></a>
+## C317-v2 · 最近零锚非 Dini 下的实际有限长度
+
+- **Status**：`derived-checked`。系 C309/C277 的实际收缩与一步支付机制的完整实现。
+- **Exact Statement / Objects / Domain**：对任意连续严格递增、零处取零的高度模 \(h\)，及固定 \(c,\eta\in(0,1)\)，存在平面全域完整双射近端以横轴为零集。在指定管内满足旧 P1、P2、P3、P4 的标量兼容，满足一步势 \(W_1=t+h(t)/(1-\eta)\)，全部窗内轨道有限长。若 \(h\) 非 Dini，则所有合法最近零锚 RL 模均非 Dini。
+- **Evidence / Boundary**：[完整构造](research/canonical/ppa_two_step_and_directional_residual.md#td-common-contract)。三图共同契约另给只点收敛与点发散的严格对照。传递依赖实际距离采样，不能从原结构免费获得。
 
 <a id="c318"></a>
 ## C318-v1 · 普通 PPA 的 A/B 必要性与锐预算
@@ -2783,3 +2787,19 @@
 - **Conclusion**：A 给出一步位移下界和锐选中图值线性误差界。对整输入管 \(d(x,S)\le R\) 的完整近端，A 给出 \(d(y,S)\le\lambda\kappa r_F(y)/(1-\kappa)\) 于 \(d(y,S)\le\kappa R\)，常数及其保证半径皆锐。B 给出双侧输出距离带和零吸收。合用 A+B 时，精确标量可行域为 \(0\le u\le\kappa t,\ t-u\le s\le H(t)\)。全半径覆盖要求 \(H(t)\ge(1-\kappa)t\)。在此条件下，\(\Theta_H(t)=\sum_{j\ge0}H(\kappa^jt)\) 是全部关系上的精确长度上界，Dini 恰是其有限的条件。输出相对位移的统一界等价于 \(\sup H(t)/t<1\)，锐常数见正文。
 - **Definitions / Dependencies / Evidence**：[正式 RLEB P1–P4](发表成果整理/RLEB/sections/theorem_spine.tex)、[C318 量词与证明](research/canonical/ppa_ab_necessary_bounds.md#ab-scope)。两条独立推导并经同窗复核。正向几何采样联系 [C09](research/canonical/general_modulus_dynamics.md#gm-dini-length)，反例联系 [C10](research/canonical/general_modulus_dynamics.md#gm-log-object) 和 [C287](research/canonical/rleb_dini_geometry.md#rdg-winding)。
 - **Counterevidence / Objections / Scope**：未纳入短图值的选择子关系不能反推完整真残差；原模的最近零锚 RL 不从 A+B 自动恢复；非 Dini 有完整近端的无界漂移及紧圆有界不收敛例，也容许收敛的个别关系。Dini 的必要性针对固定模下的统一保证。局部延拓另用覆盖和严格留域。
+
+<a id="c319"></a>
+## C319-v1 · 普通 PPA 的两步净位移势
+
+- **Status**：`derived-checked`。比较范围是同一普通 PPA 图和允许输出，外部先行性未核。
+- **Exact Statement / Objects / Domain**：在 C318 的 A+B、覆盖和闭目标下，存在零处连续、非负非减且取零的有限势 \(W\)，对所有可拼接允许步 \(x\to y\to z\)（两个输入在窗内）有 \(\|z-x\|\le W(d(x))-W(d(z))\)。若 \(\max\{W(d_0),H(d_0)+W(\kappa d_0)\}<d(x^0,X\setminus U)\)，则每条允许轨道无限延拓、留域并收敛到 \(S\cap U\)。各奇偶子序列有限长，原点误差 \(\|x^k-x^\infty\|\le W(d(x^k))\)。
+- **Evidence / Dependencies**：[望远镜证明、原算子实现](research/canonical/ppa_two_step_and_directional_residual.md#td-cancellation)。旧 RLEB 以 \(W=\Theta_H\) 给出同一初值预算；变差有限的反向切向增量直接给 W。
+- **Counterevidence / Scope**：完整交替图的平方步长和发散；完整同向图在同一 A+B 甚至同一最近零锚、真残差与旧标量兼容下发散。固定 Dini 后，两步势不严格强于 A+B。两步复合使用经典 Cauchy 机制，原图上的配对控制才是额外信息。
+
+<a id="c320"></a>
+## C320-v1 · 方向保真的图值包络与严格中间条件
+
+- **Status**：`derived-checked`。严格比较对象是正式 RLEB 标量整窗兼容，外部先行性未核。
+- **Exact Statement / Objects / Domain**：在同一 C318 欧氏对象及 P1、最近零锚 P2、真残差 P3 下，令 \(Y=\mathcal J(U_R)\)，\(V_t\) 为输入距离至多 \(t\) 的全部选中图值。要求有嵌套闭中心对称凸集 \(V_t\subseteq K_t\subseteq\bar B(0,H(t)/\lambda)\)，且 \(Y\cap F^{-1}(K_t)\subseteq\{d\le\kappa t\}\)，逆像对原纤维取。最小检查集合为 \(V_t\cup(-V_t)\cup\{0\}\) 的闭凸包。
+- **Conclusion / Evidence**：旧结构包推出此条件，此条件推出原 A+B；两侧严格性可在固定同一 Dini 模、覆盖、步长、因子和窗内实现。与 C319 合取后得到弱于旧完整 RLEB、强于 A+B 且保证点收敛的条件，覆盖某些无 Dini 模的完整图。[证明、双侧分离与线性观察锐边](research/canonical/ppa_two_step_and_directional_residual.md#td-directional)
+- **Scope / Objections**：紧的图值方向保留可成功，改用任意等价范数未必成功。逆向包络跨不同输入，不是逐图点重述 A。已用 C277 可认证若干具体子类，与 Luke–Tam 原整套前提不可比，双向见证见正文。

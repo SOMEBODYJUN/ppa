@@ -2,7 +2,7 @@
 
 ## Status
 
-candidate. This is the result of the supervised Astra Ultra round. The construction gives a full-graph strict-separation example after the definitions below are fixed. External novelty and a publication-level comparison remain open.
+The implications of the proposed conditions remain valid. The original narrow-bump witness fails for the nearest-zero version of RLEB. The corrected anchored separation and the retained finite-length conclusion are proved in [C317-v2](../canonical/ppa_two_step_and_directional_residual.md#td-common-contract). The original bump argument concerns an all-pairs RL requirement.
 
 ## The comparison target
 
@@ -154,7 +154,7 @@ W(d(x,S))-W(d(y,S))\ge C_s d(x,S)^\alpha\ge\|x-y\|.
 \]
 Therefore M2 holds and the physical length is finite.
 
-## Why the old RLEB package fails
+## Failure of the stronger all-pairs Dini requirement
 
 The reflected resolvent is
 \[
@@ -174,8 +174,12 @@ the disjoint intervals \([\delta_n,\delta_{n-1}]\) give
 \int_0^R\frac{\widetilde\omega(t)}t\,dt
 \ge c\sum_n A_n\log\frac{\delta_{n-1}}{\delta_n}=+\infty.
 \]
-Thus no alternative full-graph RL modulus can satisfy the old Dini requirement. The strict separation is caused by narrow cross-input oscillations, while the actual PPA steps are controlled by the height envelope \(C_st^\alpha\) and the superlinear normal contraction \(t\mapsto t^p\).
+Thus no alternative all-pairs RL modulus for the complete graph is Dini. This is a separation from an all-pairs requirement. The actual PPA steps are controlled by the height envelope \(C_st^\alpha\) and the superlinear normal contraction \(t\mapsto t^p\).
 
 ## Current status
 
-The implication \(H_{\mathrm{RLEB}}\Rightarrow M_{\mathrm{tel}}\Rightarrow(A)+B_{\mathrm{phys}}\) is algebraically closed under the stated common quantifiers. The bump construction is a candidate strict example. The remaining audit obligations are the exact global extension of \(h\), the least-modulus estimate with the chosen bump profile, and a line-by-line check that the old residual window and complete-fiber conventions use the same object. No claim of publication novelty is made.
+The forward implication from RLEB and the finite-length proof above remain valid. The bounds on the narrow bumps also give
+\[
+\|2J(u,t)-(u,t)-(u,0)\|\le 2|h(t)|+|2\phi(t)-t|=O(|t|^\alpha).
+\]
+Thus the original bump example admits a Dini nearest-zero anchored modulus. With the displayed power error bound, \(\alpha p>1\) gives old scalar compatibility on a smaller window. It cannot separate the formal nearest-zero RLEB conditions. The corrected witnesses and a general full-resolvent construction are in [C317-v2](../canonical/ppa_two_step_and_directional_residual.md#td-common-contract).

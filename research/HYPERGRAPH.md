@@ -937,6 +937,18 @@
 | E596 | [AB-SHARP · C318 完整三角近端达到一般模尾长预算](canonical/ppa_ab_necessary_bounds.md#ab-length) | conditional → [AB-CLUSTER · C318 非 Dini 时紧零集的距离收缩与有界不收敛](canonical/ppa_ab_necessary_bounds.md#ab-clusters) | 沿用同一个切向步幅，非 Dini 时在紧单位圆的局部整环上实现全圆聚点集。原算子由完整预解图反推。；**derived-checked** |
 | E597 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [AB-B · C318 一般模输入距步长界 B](canonical/ppa_ab_necessary_bounds.md#ab-scope) | conditional → [AB-OUT · C318 恢复统一输出相对步长界的精确判据](canonical/ppa_ab_necessary_bounds.md#ab-output) | 固定可行距离窗，统一输出相对步长界当且仅当 sup H(t)/t<1；径向完整图提供失败或锐常数。；**derived-checked** |
 
+## 普通 PPA 的两步净位移与方向残差
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E598 | [TD-OLD · 旧普通 RLEB 的同窗结构与 Dini 基线](canonical/ppa_two_step_and_directional_residual.md#td-combined) | implies → [TD-PAIR · C319 两步净位移势](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | 保留同一锚定模与全部允许步。旧 Θ_H 给两步势，初值预算相同。；**derived-checked** |
+| E599 | [AB-A · C318 输入窗上的距离收缩 A](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [AB-B · C318 一般模输入距步长界 B](canonical/ppa_ab_necessary_bounds.md#ab-scope) ∧ [TD-PAIR · C319 两步净位移势](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | conditional → [TD-CONV · C319 两步尾与普通 PPA 点收敛](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | 覆盖和严格留域预算给全部轨道的奇偶弦长预算、共同极限和原点误差。；**derived-checked** |
+| E600 | [TD-OLD · 旧普通 RLEB 的同窗结构与 Dini 基线](canonical/ppa_two_step_and_directional_residual.md#td-combined) | implies → [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | 同一旧径向球供方向包络；此蕴含即使只保留结构部分也成立。；**derived-checked** |
+| E601 | [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) | implies → [AB-GEO · C318 A+B 的锐标量一步域与覆盖边界](canonical/ppa_ab_necessary_bounds.md#ab-geometry) | 保留同窗 P1、P2、P3，经原图值包络得 A+B 和一步域。；**derived-checked** |
+| E602 | [TD-DIRECTION · C320 方向保真的图值包络](canonical/ppa_two_step_and_directional_residual.md#td-directional) ∧ [TD-PAIR · C319 两步净位移势](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | implies → [TD-M · C319/C320 合取中间条件](canonical/ppa_two_step_and_directional_residual.md#td-combined) | 两个条件同时满足。对同一 Dini 基线两个结构蕴含严格，亦容许非 Dini 时的点收敛。；**derived-checked** |
+| E603 | [TD-COMMON · 同一个单步结构下的三类轨道](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | limits → [TD-PAIR · C319 两步净位移势](canonical/ppa_two_step_and_directional_residual.md#td-cancellation) | 相同 A+B、锚定 RL、真残差和兼容的交替图与同向图给不同结论；单步标量无法推出两步势。；**derived-checked** |
+| E604 | [TD-COMMON · 同一个单步结构下的三类轨道](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | conditional → [TD-FAST · C317-v2 非 Dini 下的真实一步有限长度](canonical/ppa_two_step_and_directional_residual.md#td-common-contract) | 快速实际法向收缩使一步势支付全部位移；对严格增的任意非 Dini 高度可另构造可和采样。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
