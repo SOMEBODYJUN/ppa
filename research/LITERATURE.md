@@ -693,3 +693,43 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 - **Paper fact**：[Luke–Thao–Tam 2018 正式 PDF](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2017.0898)，Theorems 2.1–2.2、Definition 2.5：almost averaged 方向违反量和 \(T-\mathrm{Id}\) 的 gauge metric regularity 已共同决定收缩。该通用思想不是本轮新意。[Luke–Tam 2025 正式全文](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863)，Definition 2、Proposition 3、Assumption 2：原关系的二次次单调与线性真残差正则另有明确参数条件。C351 不引用其同球续接句，保留 C340 的对象边界。
 - **此前本库推导**：[C315](canonical/rleb_residual_filtered_angle.md#rfa-strict) 已有给定 \(\omega\) 时的 \(q\le\kappa\inf\{t:(t+\omega(t))/2\ge\lambda r_F(y)\}\)。C351 的标尺取 \(\omega=W\) 后与它完全重合，不将这个下逆或下降再次称新。
 - **本次精确增量 / 公开优先未定**：[C351 结构命题](topics/common_structure/two_point_scale_compatibility.md#two-point-characterization) 消去两套任意原模，反向重建同时极小的 \(W,Q\)，得到全部原边与完整纤维的跨位置必要充分相容；同一非线性参考尺度的两个恢复不能退化为只检验实际自身边。最小包络和下确界运算是证明工具，不单独主张新的序理论。以上限定支持结构原创的可能性，不构成穷尽公开文献的首创认证。
+
+
+<a id="lit-discovery-distortion"></a>
+## 方向发现的新素材：增量畸变、点态余导数与非关联图
+
+这些材料用于提取本库尚未掌握的正向推导；不以其现成算法定理替代本项目原理论，不宣称已经形成 M 或严格扩张。
+
+### 增量角度与非线性逆模
+
+**Paper fact。** Kovalev–Maldonado–Wu, *Doubling measures, monotonicity, and quasiconformality*, Math. Z. 257 (2007), 525–545，DOI 10.1007/s00209-007-0132-5，[作者全文](https://www.math.ksu.edu/~dmaldona/papers/mathz.pdf)，Definition 1.2、Theorem 1.3。对 n≥2、凸域上的非恒定 δ-monotone 映射，条件
+\[
+\langle f(x)-f(y),x-y\rangle\ge\delta\|f(x)-f(y)\|\|x-y\|,\qquad 0<\delta\le1,
+\]
+推出在满足 2B 包含于该域的闭球 B 上的 η-quasisymmetry，η 仅依赖 δ。原文把该定理归于 Kovalev 的前作 Theorem 6；本次实际核读的是上述 2007 正文的完整陈述，不把该文冒充首创来源。
+
+Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math. 195(3) (2009), 257–274，DOI 10.4064/sm195-3-5，[正式全文](https://www.impan.pl/shop/publication/transaction/download/product/89492)，Definition 1.3、Definition 2.3。正文列径向幂伸缩为 δ-monotone 的标准例；拟对称用三点相对距离的模定义。正向启发是通过增量几何控制逆畸变，而非先独立输入一个距离—残差界。
+
+**范围及研究判断。** δ>0 比通常单调性强；全域非平凡拟对称映射为单值且单射，其零点至多一个。绝对残差模还需整体尺度校准，不能由无量纲角度决定幅度。本次没有取得一般多值、非孤立零集或原 RLEB 的转接，亦未把现成结论命名为新共同结构。优先试证与 C371 显式增益族的跨位置桥，见[发现安排](topics/common_structure/ASSESSMENT.md#discovery-reset)。
+
+### 点态余导数正定与方向／逆稳定的共同关系
+
+**Paper fact。** T. T. A. Nghia, D. T. Pham, T. T. T. Tran, *On the Positive Definiteness of Limiting Coderivative for Set-Valued Mappings*, Set-Valued Var. Anal. 29 (2021), 283–300，DOI 10.1007/s11228-020-00547-z，[NSF 全文](https://par.nsf.gov/servlets/purl/10311240)。已实际核读 Theorem 3.6、Corollary 3.9、Example 3.5。对参考图点附近闭图且局部 hypomonotone 的 T，固定 κ>0，点态条件
+\[
+\langle z,w\rangle\ge\kappa\|w\|^2\quad
+(z\in D^*T(\bar x\mid\bar v)(w))
+\]
+等价于：对每个 ε>0，可缩小图邻域，使其中全部图点对满足
+\[
+\langle v_1-v_2,u_1-u_2\rangle
+\ge\kappa\|u_1-u_2\|^2-\varepsilon\|v_1-v_2\|^2,
+\]
+并有相应右端邻域覆盖。Corollary 3.9 给强度量正则，局部逆的最优 Lipschitz 模至多 1/κ。Example 3.5 表明这不必恢复局部单调性；其参考右端为 (0,1)，不是零点，不能不平移就套用零点 PPA。
+
+**范围。** 该文的局部 hypomonotonicity 不可省略。κ>0 的全对关系使局部零点唯一，不能直接涵盖一般非孤立目标。这里记录的是同一局部对象给方向及逆稳定的已知正向桥，不宣称它优于本库现有 RLEB。新的非二次、退化或可多值延拓目前仅为研究问题。
+
+### Bipotential 作为原模型入口
+
+**Paper fact。** Buliga–de Saxcé–Vallée, *Non Maximal Cyclically Monotone Graphs and Construction of a Bipotential for the Coulomb's Dry Friction Law*, J. Convex Anal. 17(1) (2010), 81–94，[正式全文](https://journalofconvexanalysis.com/articles/jca17007/jca17007.pdf)，§5 给 Coulomb 摩擦的显式非分离 bipotential。de Saxcé, *Modelling contact with isotropic and anisotropic friction by the bipotential approach*, DCDS-S 9(2) (2016), 409–425，[出版社页](https://www.aimsciences.org/article/doi/10.3934/dcdss.2016004)，说明该方法面向非关联多值本构图，并由双势等号集表示原图。
+
+**范围。** 共同双势表示不等于单调、真残差正则或原 PPA 收敛。若继续，必须在明确的有限维物理平衡算子上量化非分离交叉项，不能只交存在表示或换成另一个预测校正算法。目前只列为备用原模型来源。

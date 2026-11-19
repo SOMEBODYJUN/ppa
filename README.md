@@ -67,6 +67,8 @@
 <a id="common-structure-frontier"></a>
 ## 当前专题：单调性和正则性是否有共同结构
 
+**当前发现任务**见[正向桥的筛选与首攻安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)。本库作为已知起点，旧 Luke–Tam 比较不再承担新方向发现。新读的增量角度／拟对称畸变与点态余导数正定理论提供不同的正向桥素材，精确前提及局限见[文献记录](research/LITERATURE.md#lit-discovery-distortion)。先争取新的关系引理，再检验完整 M；原多值图、一般非线性 RLEB、两个恢复与原 PPA 目标均未撤销。
+
 
 [C369–C371 反馈的恢复范围](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery) 分别证明两个限定恢复。未知平坦势在线性类精确刻画某个等价内积下单调，正规矩阵类恢复原欧氏单调；完整图有有界可逆增益表示时，同势增长与一般模真误差界等价。缩速不变性和跨位置自由说明一般恢复仍缺何种信息。二次与非线性并不构成这条边界。
 
