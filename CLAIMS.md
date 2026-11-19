@@ -3228,3 +3228,4 @@
 - **Status**：`derived-checked`。Astra Max 给出小降、大降分拆和饱和反例，两线均独立重构。公开先行性未核定。
 - **Exact Statement**：固定 C363 的任意凹反馈模和 \(0<\sigma=\lambda Lc\le1\)。令 \(a_\sigma(t)=\Phi^*(\sigma\omega(t))/(\sigma\omega(t))\) 对 \(t>0\)。其余合同在整个可续接原图类上保证全部认证轨道有限长并点收敛的充要条件是 \(\int_0^\epsilon\omega(t)/a_\sigma(t)\,dt<\infty\)，其中 \(\epsilon>0\) 可选。积分发散时有同一模的全域连续单值原图，完整残差精确、原根唯一、非解工作窗留域且通过闭链，但所有非解认证初值的原轨道无界。
 - **Evidence / Scope**：[两分支证明及固定模反例](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-integral)。反例用小法向工作窗；若反馈模有全域正线性下界，可把饱和反馈接触扩至全域。充要指覆盖整个合同类，不是给单个问题的必要条件。
+- **Consequence**：C364 的慢位移图若通过混合闭链及匹配真残差，任何反馈模都必须在零附近与 \(\log(e^2/t)^{-2}\) 双边可比。正文以倍增区间上的共轭平均界证明它的 (7) 发散，故调整到较低参数也不能用本统一判据导入该图。
