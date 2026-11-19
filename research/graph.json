@@ -4797,6 +4797,12 @@
       "label": "C339 多值 Hausdorff 反射的长支障碍",
       "file": "topics/common_structure/nonlinear_rl_bridge.md#rl-multivalued-observation",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "W-PPA-EXISTS",
+      "label": "开放目标：三项条件共同推出一条原 PPA 收敛轨道",
+      "file": "topics/common_structure/OBJECTIVE_AND_PITFALLS.md#w-objective",
+      "evidence_status": "open"
     }
   ],
   "edges": [
@@ -12138,6 +12144,19 @@
       "output": "MOTHER-OPEN",
       "relation": "open",
       "scope": "保持真正一般非线性模和最近锚完整多值量词，须同时排除未许可小值和漏检长支。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E641",
+      "inputs": [
+        "NAT-ALIGN",
+        "TD-CONV",
+        "MOTHER-RL-TUBE"
+      ],
+      "output": "W-PPA-EXISTS",
+      "relation": "open",
+      "scope": "同一原算法。指定的单调结构、正则性和各自的参数窗须分别导入一个可复用证书。最低量词是对认证初值存在可无限拼接的收敛原轨道；这些见证只作研究入口。",
       "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

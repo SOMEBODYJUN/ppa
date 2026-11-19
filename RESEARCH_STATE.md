@@ -2,7 +2,9 @@
 
 ## 单调性与正则性的共同结构
 
-主任务以原 RLEB 的**同一一般反射模 RL**为基线，区分全对图块与只要求最近输入零锚的全部允许输出。C329 并未恢复这一基线，[C333](CLAIMS.md#c333) 排除以固定输出位移惩罚延续同一近端弦的二次证明。[C334](CLAIMS.md#c334) 直接以输入差和反射差构造同模转接，[C335](CLAIMS.md#c335) 给出在原 Hölder–RLEB 全部成立时的锐幂损失。[C336](CLAIMS.md#c336) 以同一向量扰动精确刻画原 Hölder 图的最坏真残差；[C337](CLAIMS.md#c337) 给最近锚完整多值下的小图值可加入障碍；[C338](CLAIMS.md#c338) 证明即使全对兼容，任意固定有限数据也不足以保证统一收缩；[C339](CLAIMS.md#c339) 允许真正多值并保真残差，剩余缺口是长支。下一义务是在原最近零锚类中同时获得跨输入图值排除和长支方向信息。一般母结构仍开放。
+主任务按作者澄清改为找共同充分条件 \(W\)，承接**单调或次单调、正则性、参数兼容**三项，并对每个认证初值证明**至少存在一条收敛的原 PPA 轨道**。不同组合各有可行参数窗。原 RLEB 一行保留同一一般反射模 RL，全根收敛及固定线性 \(A\)、有限长度均为可选加强。[目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md) · [更新任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)
+
+[C333–C336](research/topics/common_structure/nonlinear_rl_bridge.md) 分别留下固定惩罚障碍、原模定量转接、标量宽度锐损失和同模真残差精确延拓。[C337–C339](research/topics/common_structure/nonlinear_rl_bridge.md#rl-anchor-independence) 定位了小图值、固定有限数据和多值长支的限制。C339 的坏支只限制全选，C337 仍约束完整真残差的身份。新首攻是给原 RLEB 与一条不同参数逻辑的路线找到共同可检查证书，并用 [C322 同一初值的分根例](research/canonical/ppa_native_alignment_and_transverse_test.md#native-sharp) 检验能否在原图中构造可续走的一条好支。一般 \(W\) 仍开放。
 
 在常数二次弱单调子类，[C329 二次移位 Fitzpatrick 面](CLAIMS.md#c329)：图截面
 \(\mathfrak M_F^{2\beta}|_{\Gamma_D}=0\) 精确等价于完整图块的 \(\beta\)-弱单调，
