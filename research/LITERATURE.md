@@ -630,6 +630,13 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 - **Paper fact**：[Combettes 2001](https://pcombet.math.ncsu.edu/ipa.pdf)，Theorem 3.11、Remark 7.5。准 Fejér 性与聚点判别推出点收敛；投影次梯度实例可用平方可和但不可和的步幅序列。 [LMZ v1](https://arxiv.org/html/2406.13207v1#S5) Theorem 5.1 的 (5.3) 改用解奇异化函数差，结论是有限长度。
 - **本库推导**：[C319/C320](canonical/ppa_two_step_and_directional_residual.md#td-literature) 区分三类不同量。原普通 PPA 无 Solodov–Svaiter 的校正和全零点单调图，直接转接失败。对平方步长和发散的 C319 子类，标准正平方耗散不可能，因而以跨步符号相消和两步净位移势代替。该机制未作全球先行裁决。
 
+<a id="lit-compensated-anchor"></a>
+### C341/C342 的承重导入与先行边界
+
+- **Paper fact**：[Rockafellar 1976 作者稿](https://sites.math.washington.edu/~rtr/papers/rtr066-MonoOpProxPoint.pdf)，印页 878 的 (1.5) 及紧邻说明：极大单调关系的正步长预解式全域且单值。[备用原文扫描](https://www.ceremade.dauphine.fr/~carlier/Rockafellar1976.pdf)。C341 只导入这条 Minty 覆盖事实，在有限维、非空完整零集、固定 \(\lambda>0\) 下自行证明真残差识别和点收敛；没有要求原 \(F\) 处处有值。
+- **Paper fact / scope**：Combettes 2001，Theorem 3.11（作者稿 pp.12–13）给准 Fejér 序列的聚点与强收敛判别。这是共同证明后端的既有来源。C341 没有先证其一般补偿 \(h\) 产生 Definition 1.1 所需可和非负误差序列，因此不把该定理当作可直接代入的黑箱；本页链接的规范正文给独立的能量单调与聚点证明。
+- **本库数学 / 先行性未判**：[补偿锚距条件](topics/common_structure/compensated_anchor_convergence.md) 的两条原预算导入、仿射切向预算和旋转族双门由原图直接推导。它们与 C277 的长度及全锚 Fejér 两条合同、C329 的宽 Gate-AT 均逐式比较，但这不等于对所有准 Fejér、Lyapunov 或其他公开理论的排除，也不是公开优先权认证。LT 导入必须另保留 [C340](topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample) 的同球局部化反例。
+
 <a id="lit-c320-prior"></a>
 ## C320/C321 与现有方向误差界的比较
 

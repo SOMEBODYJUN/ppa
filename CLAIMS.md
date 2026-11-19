@@ -2980,3 +2980,42 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定完整 \(F(a,b)=(-b/2,b)\)、\(X=D=\mathbb R^2\)、\(\lambda=1\)、\(S=\mathbb R\times\{0\}\)。其完整原近端为 \(J_F(x_1,x_2)=(x_1+x_2/4,x_2/2)\)，全图 maximal LT violation \(\tau=1/16\)，真残差线性次正则常数 \(K=2/\sqrt5\)，满足原参数门 \(\tau(1+K)^2<1/2\) 及全部 Assumption 2 前提。然而对每个 \(\delta>0\)，存在 \(x\in B_\delta(0)\) 的唯一完整根位于 \(\overline B_\delta(0)\) 外。
 - **Evidence / Dependencies**：[自足验证、原文定位及有理数见证](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)。同输入比较独立证明极大性，不依赖待核的覆盖推论。
 - **Scope / Counterevidence / Objections**：反驳正式版 Theorem 2 的同球根覆盖和同球极限子结论；该算子仍从所有初值全局收敛到 \((a_0+b_0/2,0)\)。不否定 LT 原图结构或不同初值域/工作域的修正版局部收敛。
+
+<a id="c341"></a>
+## C341-v1 · 补偿锚距条件 M003-v2 的共同原 PPA 定理
+
+- **Status**：`derived-checked`；第 004 轮经过独立重构、反例攻击与主代理复核。[验收记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。第 003 轮 M003-v1 的退化初值域量词错误不保留为已证声明。
+- **Objects / Domain / Definitions**：有限维欧氏 \(X\)，原关系 \(F:X\rightrightarrows X\)，固定 \(\lambda,\ell>0\)，指定非空闭 \(S\subseteq\operatorname{zer}F\)，完整真残差 \(r_F(y)=\inf_{v\in F(y)}\|v\|\)。对原弦定义 \(L_\ell(x,y;S)=\sup_{p\in S}[\|y-p\|-\|x-p\|+\|x-y\|^2/(\ell+\|x-p\|+\|y-p\|)]\)，它在无界 \(S\) 上仍有限。
+- **Assumptions / Quantifiers**：对给定 \(z\)，预先给出 \(D\ni z\)、有限非负径向函数 \(h\)，满足 \(h(0)=0,\lim_{t\downarrow0}h(t)=0\)，以及 \(K(x)\subset D\cap J_{\lambda F}(x)\)。每个 \(x\in D\) 的 \(K(x)\) 非空，所有 \(y\in K(x)\) 满足 \(L_\ell(x,y;S)\le h(d(x))-h(d(y))\)。在 \(Y=K(D)\) 上，每个有界序列均满足 \(r_F(y_j)\to0\Rightarrow d(y_j,S)\to0\)。\(D\) 可不闭、可无界；不要求 \(h\) 在正点连续。
+- **Exact Statement / Conclusion**：从每个认证 \(z\) 出发，每条坚持选 \(K\) 的原轨道都可以无限续接，并在原空间点收敛于 \(S\)。对任意 \(p\in S\)，写 \(C_p=\|z-p\|+h(d(z))\)，有 \(\sum_k\|x^{k+1}-x^k\|^2\le C_p(\ell+2C_p)\)。若 \(S=p_0+V\) 为正维仿射空间，还满足 \(L_\ell(x,y;S)\ge\|P_V(y-x)\|\) 及切向总长度 \(\sum_k\|P_V(x^{k+1}-x^k)\|\le h(d(z))\)。对含非解点的 \(U_0\) 逐点认证，得到任务要求的非平凡存在性；不宣称完整 \(J\) 的未选根收敛。
+- **Two imports / Scope**：投稿 P1–P4 的全部原最近输入锚、一般非线性 \(\omega\)、完整真残差、允许子图和原严格初值预算均保留。静态域用原 \(\Theta\) 留域，\(h=2\Theta\) 只支付不等式，未扩大初值预算。另对每个有限维极大单调 \(F\)、完整非空零集 \(S=\operatorname{zer}F\)、每个固定 \(\lambda>0\) 和全部初值，取 \(h=0,D=X,K=J\) 完整导入；\(F\equiv0\) 只提供退化驻点，不作为非平凡实例。C242 与 \(F(a,n)=(0,n^3)\) 分别给非平凡见证。
+- **Dependencies / Evidence**：[独立定义、共有引理及仿射预算](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) · [原 RLEB 同模导入](research/topics/common_structure/compensated_anchor_convergence.md#ca-rleb) · [极大单调导入](research/topics/common_structure/compensated_anchor_convergence.md#ca-monotone)。外部承重定理仅为经典 Minty 满射，适用对象和出处列在使用处；聚点证明自足。
+- **Counterevidence / Objections / Novelty**：C342 区分实际收敛与此证书可认证；[静态正则性攻击](research/topics/common_structure/compensated_anchor_convergence.md#ca-attacks) 说明点态非零残差不够。标准 Fejér/聚点方法不是本轮首创。LT 同球原句由 C340 限定，其他正则组合、无限维、变步长、非精确更新及公开先行性未纳入。
+
+<a id="c342"></a>
+## C342-v1 · 同一旋转—漂移原算子族的收敛门与证书门
+
+- **Status**：`derived-checked`；完整根、两个充要门、端点、固定分组及 C277/C329 全部受比合同经过独立重构和反例核对；见 [接收记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。
+- **Objects / Domain / Fixed parameters**：\(X=\mathbb R\times\mathbb R^2\)，\(\lambda=1\)，\(S=\mathbb R\times\{0\}\)，固定 \(c,\alpha,\beta>0\)，\(Q\) 为角度 \(\theta=\pi/\sqrt2\) 的旋转。完整单值原图为 \(F(b,w)=(-c\|w\|^\beta,[(1+\|w\|^\alpha)Q^{-1}-I]w)\)。\(S\) 恰为完整零集；全部输入有且仅有一个完整原根。
+- **Exact Statement / Quantifiers**：对每个非解初值 \(x^0\notin S\)，唯一原轨道点收敛于 \(S\) 当且仅当 \(\beta>\alpha\)。同一初值存在 C341 的 M003-v2 静态证书当且仅当 \(\beta>\alpha\) 且 \(\alpha<2\)。正向证书在任意预定条带 \(D=\{d\le R\}\)、\(R>0\) 上同时覆盖全部初值，任意固定 \(\ell>0\) 均可，显式补偿为正文 (13)。反向排除任意允许的 \(D,h,K,\ell\)，不只排除这一幂函数试探。
+- **Mechanism / Evidence**：原半径满足 \(r_k=r_{k+1}(1+r_{k+1}^\alpha)\)，故 \(r_k\sim(\alpha k)^{-1/\alpha}\)；切向累计为 \(c\sum_j r_j^\beta\)。真实残差满足 \(r_F^2=c^2r^{2\beta}+r^2[(1+r^\alpha)^2+1-2(1+r^\alpha)\cos\theta]\ge(2-2\cos\theta)r^2\)。切向预算要求 \(\beta>\alpha\)，平方耗散排除 \(\alpha\ge2\)；临界等号均有发散证明。[完整证明](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp)
+- **Strict comparisons / Scope**：在 \(1\le\alpha<2,\beta>\alpha\) 中，每个固定正整数 \(m\) 的全部及非重叠 \(m\)-步位移总长都发散，距离比趋一；C277 的有限长度和全锚 Fejér 两个后端、C319 固定分组、原 RLEB/C320 固定收缩及 C329 的窄窗与宽 Gate-AT 都有单独反证。[同图同窗比较](research/topics/common_structure/compensated_anchor_convergence.md#ca-separation)
+- **Dependencies / Counterevidence / Novelty**：C341 给任意证书必须平方步长可和，独立直接取锚也给必要支出；不依赖数值实验。\(\alpha\ge2,\beta>\alpha\) 时原轨道实际收敛，不能把证书遗漏区称为发散。结论只限本族、固定 \(\lambda=1,c>0,\theta,S\)；不宣称所有经典理论均不能处理，也不裁定公开首创。
+
+<a id="c343"></a>
+## C343-v1 · 增维真残差锚距的备选证书
+
+- **Status**：`candidate`。M001-v1 有完整试证，但自身的独立 G1–G7 接收尚未完成；不作为 C341 的承重前件。
+- **Objects / Domain / Quantifiers**：有限维原 \(F:X\rightrightarrows X\)、固定 \(\lambda>0\)、非空闭 \(S\subseteq\operatorname{zer}F\)、完整真残差。对每个给定 \(z\)，要求存在静态域 \(K\ni z\)、有限非负 \(h:K\to[0,\infty)\) 和有限非减 \(\alpha\)，\(\alpha(0)=0,\alpha(t)>0\) 对 \(t>0\)。不要求 \(h\) 连续或径向。每个 \(x\in K\) 有原根 \(y\in K\) 同时满足 \(\alpha(d(y))\le r_F(y)\) 和 \(D(x,y)\le h(x)-h(y)\)，其中 \(D(x,y)=\sup_{p\in S}[\sqrt{\|y-p\|^2+\lambda^2r_F(y)^2}-\|x-p\|]\)。
+- **Exact Statement submitted / Conclusion**：该静态证书使每条遵守筛选的原轨道可无限续接并点收敛于 \(S\)，且 \(\lambda^2\sum r_F(x^{k+1})^2\le2(\|z-p\|+h(z))^2\) 对每个 \(p\in S\) 成立。多值时不将残差平方和换成所选位移平方和。
+- **Additional submitted assets**：正维仿射目标上 \(D=\sqrt{\|P_Sy-P_Sx\|^2+(\sqrt{d(y)^2+\lambda^2r_F(y)^2}-d(x))_+^2}\)。对 \(F_g(a,w)=(-g(\|w\|),\|w\|^2Qw)\)、\(Q\) 为四分之一转、有限非减且零连续的 \(g\ge0,g(0)=0\)，任意固定 \(\lambda,R>0\) 的非解轨道点收敛 iff \(\int_0^R g(s)s^{-5}\,ds<\infty\)，物理总长度仍无穷。另有同一分段原图在 \(\lambda>1\) 范围的 \(\lambda>4/3\) 门。
+- **Evidence / Dependencies / Objections**：[完整身份、推导、两条导入、反测试与待核门](research/topics/common_structure/lifted_residual_distance.md)。核心聚点步骤用两锚距离差消去同一个 \(h\)。需独立复算仿射上确界、积分的反向必要性、分段图全根量词及各比较；作者对 C341 的审查不等于 C343 自身已被接收。公开先行性未判定。
+
+<a id="c344"></a>
+## C344-v1 · 有限零锚分点与原图功的备选证书
+
+- **Status**：`candidate`。M002-v1 的独立 G1–G7 尚未完成，不作为本次最低共同覆盖已完成的依据。
+- **Objects / Domain / Definitions**：有限维原 \(F\)、固定 \(\lambda>0\)、非空闭 \(S\subseteq\operatorname{zer}F\)。对给定 \(z\)，预定有界但可不闭的 \(D\ni z\)、真实图块 \(\Gamma\subset\{(y,v):v\in F(y),\ y,y+\lambda v\in D\}\) 及非空有限零锚 \(P\subset S\)。平方测距向量 \((\|s-p\|^2)_{p\in P}\) 必须在 \(S\cap\overline D\) 上单射。
+- **Assumptions / Quantifiers**：输出集 \(Y=\operatorname{pr}_1\Gamma\) 上的完整真残差满足 \(r_F(y_j)\to0\Rightarrow d(y_j)\to0\)。给有限非负径向 \(h\)，仅要求零处连续且为零，以及 \(c>0\)。每个 \(x\in D\) 有 \((y,v)\in\Gamma\)、\(x=y+\lambda v\) 满足 \(2\lambda(\max_{p\in P}\langle p,v\rangle-\langle y,v\rangle)\le(1-c)\lambda^2\|v\|^2+h(d(x))-h(d(y))\)。
+- **Exact Statement submitted / Conclusion**：每条满足上述原图功条件的选择可无限续接并点收敛于 \(S\cap\overline D\)，物理平方步长可和。对每个非空正距离壳层，输出访问次数不超过 \(\min_{p\in P}(\|z-p\|^2+h(d(z)))/(c\lambda^2m_Y(\varepsilon)^2)\)，其中 \(m_Y(\varepsilon)=\inf\{r_F(y):y\in Y,d(y)\ge\varepsilon\}\)。这是访问次数，不是最后访问时间。
+- **Evidence / Scope / Objections**：[完整试证、原 RLEB 预算导入、极大单调行及严格比较](research/topics/common_structure/finite_anchor_convergence.md)。同一闭半柱上的 \(F(a,w)=(a\|w\|^2,\|w\|Qw)\) 为少锚见证；其对整个指定窗口的静态弦检验不等于一条可组合轨道。换工作域后原全锚反证不自动延续。待独立核验有限分点条件、所有真实根、真正则及固定窗上的补偿不可能性；公开先行性未裁定。

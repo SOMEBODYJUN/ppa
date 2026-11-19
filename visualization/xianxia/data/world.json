@@ -9752,7 +9752,7 @@
       "role": "open-target",
       "kind": "mountain",
       "object": "cave",
-      "evidence": "open",
+      "evidence": "derived-checked",
       "reason": "incoming-open-relation",
       "x": 4308,
       "y": 4123,
@@ -9778,6 +9778,105 @@
       "reason": "incoming-refutes-relation",
       "x": 4872,
       "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-AFFINE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-DYNAMICS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4308,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-FINITE-CANDIDATE": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "lake",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 4308,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-LIFT-CANDIDATE": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "cave",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 4308,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-MONOTONE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-RESIDUAL-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-RLEB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CA-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
     }
@@ -12338,6 +12437,42 @@
     "E642": {
       "x": 4851.12,
       "y": 4530.22
+    },
+    "E643": {
+      "x": 4448.26,
+      "y": 4019.2
+    },
+    "E644": {
+      "x": 4381.12,
+      "y": 4075.22
+    },
+    "E645": {
+      "x": 4351.22,
+      "y": 4052.88
+    },
+    "E646": {
+      "x": 4637.18,
+      "y": 3951.58
+    },
+    "E647": {
+      "x": 4439.35,
+      "y": 4062.15
+    },
+    "E648": {
+      "x": 4355.32,
+      "y": 4131.06
+    },
+    "E649": {
+      "x": 3183.87,
+      "y": 4347.59
+    },
+    "E650": {
+      "x": 4414.8,
+      "y": 3985.74
+    },
+    "E651": {
+      "x": 3160.07,
+      "y": 4291.05
     }
   },
   "bounds": {

@@ -3,11 +3,20 @@
 <a id="mother-question"></a>
 ## 首要问题
 
-当前主任务是找一个共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
+本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
-从同一图几何或变分对象解释两侧关系，依然是寻找 \(W\) 的途径。常数二次弱单调子类、全对原非线性模的定量转换及最近输入零锚的完整多值合同分别保留其适用范围。一般 \(W\) 尚开放。
+从同一图几何或变分对象解释两侧关系，依然是寻找 \(W\) 的途径。常数二次弱单调子类、全对原非线性模的定量转换及最近输入零锚的完整多值合同分别保留其适用范围。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已完成本任务的最低共同覆盖：投稿原 RLEB 与有限维极大单调 PPA 均导入同一个 M。其余组合的扩展和公开先行性保持开放。
 
-此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用，本轮研究的母结构另开问题。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
+此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
+
+<a id="mother-result"></a>
+## 已接收的共同条件及其边界
+
+[C341–C342 正文](compensated_anchor_convergence.md) 固定原弦 \(x-y\in\lambda F(y)\)，用全部目标锚的距离增量加归一化平方步长，要求它由静态径向补偿 \(h(d(x))-h(d(y))\) 支付。真正则识别和可续接的原根子关系是独立、明确的前提。共有引理不要求固定距离收缩或物理有限长度。原 RLEB 以 \(h=2\Theta\) 导入而保留原 \(\Theta\) 留域预算；极大单调行以 \(h=0\) 导入。
+
+旋转—漂移族将实际收敛的 \(\beta>\alpha\) 与证书附加的 \(\alpha<2\) 分开，在 \(1\le\alpha<2\) 给全部固定分组长度发散的严格见证。全锚 Fejér 和 C329 的宽参数门分别排除。三条独立重构及 v1→v2 的量词修订见 [第 004 轮验收](../../audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。这关闭最低任务，不关闭所有尚未导入的单调–正则组合。
+
+下一步可用 [C343 增维残差候选](lifted_residual_distance.md) 和 [C344 有限锚候选](finite_anchor_convergence.md) 检查不同的补偿与目标识别；二者自身仍为 candidate，勿与已接收的 M003-v2 混为等价公式。实际收敛且平方步长可和的交错切向例仍不能被 M003-v2 认证，见正文的量词攻击节。
 
 <a id="bridge-literature"></a>
 ## 从朱江醒的论文读出什么
@@ -35,6 +44,10 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [两个独立审查与研究优先级](ASSESSMENT.md) | 核对哪些桥已证、哪些是既有语言、哪些反例决定了下一步。 |
 | [研究目标与已有教训](OBJECTIVE_AND_PITFALLS.md) | 三项前提怎样合用，存在轨道和全选的区别，参数的精确例子、本线主要误判及下一步。 |
 | [GPT Pro 持续研究任务书](GPT_PRO_PROMPT.md) | 候选必须逐项证明原 RLEB 导入、独立基准导入、真实参数窗、原轨道存在及新数学信息。未通过就试证、反证或换机制。 |
+| [补偿锚距条件与双锐边界](compensated_anchor_convergence.md) | C341 的共同定义、无限续接与点收敛、原 RLEB 同模同预算导入、全部固定正步长的极大单调导入；C342 的旋转族双门和 C277/C329 的完整去重。继续这一线先读。 |
+| [第 004 轮接收记录](../../audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md) | 四轮候选的实际裁决、v1 的退化量词反例、修订版本的 G1–G7 承重证据，以及内部正确性和公开新颖性的分界。 |
+| [增维真残差锚距](lifted_residual_distance.md) | C343 候选：无连续性静态补偿、仿射精确公式、漂移函数的锐积分门；保留完整推导，独立验收尚未结束。 |
+| [有限零锚的测距与图功](finite_anchor_convergence.md) | C344 候选：有限测距点分开局部目标、壳层访问界和全锚比较；读其固定窗口量词后再尝试推广。 |
 | [LT 同球留域反例](lt_ball_localization_obstruction.md#lt-ball-counterexample) | C340 逐项满足正式 Assumption 2，却否定其 Theorem 2 的同半径欧氏球根覆盖。实际完整轨道仍收敛；用于 G3 导入时区分正确结构条件与错误局部化。 |
 | [原非线性 RL 与真残差的图桥](nonlinear_rl_bridge.md) | C333 排除固定输出惩罚的同弦证明。C334 用同一非线性反射模转接真残差与原弦。C335 显示标量图宽度改变最佳幂。C336 给固定原模的精确向量检验，C337–C339 分别定位最近锚、多尺度数据和多值长支的障碍。 |
 | [二次移位 Fitzpatrick 母面桥](mother_fitzpatrick_bridge.md) | 常数二次弱单调子类：全图间隙的图截面等价弱单调，零锚截面在完整近端覆盖下等价真残差线性次正则；同一近端弦在 \(\lambda\beta<1/2,\lambda>2\beta K^2\) 下给输入版 \(A+B\)、点收敛和有限长度，并给出 \(F=B(y)T(Cy)\) 的完整纤维传递与 \(CB(y)\) 定向功。 |

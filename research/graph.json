@@ -4800,9 +4800,10 @@
     },
     {
       "id": "W-PPA-EXISTS",
-      "label": "开放目标：三项条件共同推出一条原 PPA 收敛轨道",
-      "file": "topics/common_structure/OBJECTIVE_AND_PITFALLS.md#w-objective",
-      "evidence_status": "open"
+      "label": "C341–C342：共同 M 的原 RLEB 与极大单调最低覆盖",
+      "file": "audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-acceptance",
+      "evidence_status": "derived-checked",
+      "scope_note": "按原 GPT_PRO_PROMPT 的 G1–G7 最低两行接收；更广结构组合仍在 MOTHER-OPEN，不宣称全类统一。"
     },
     {
       "id": "LT-BALL-PRINTED",
@@ -4815,6 +4816,60 @@
       "label": "C340 全部 LT 前提下的唯一根离球反例",
       "file": "topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-OBJECT",
+      "label": "C341 静态补偿锚距条件 M003-v2",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-definition",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-DYNAMICS",
+      "label": "C341 可无限续接与原点列收敛、平方步长可和",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-definition",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-RLEB",
+      "label": "C341 投稿一般非线性 RLEB 原预算完整导入",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-rleb",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-MONOTONE",
+      "label": "C341 有限维极大单调的全部正固定步长导入",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-monotone",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-AFFINE",
+      "label": "C341 仿射零集的切向绝对输运预算",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-affine",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-SHARP",
+      "label": "C342 旋转漂移族的实际收敛与证书双门",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-RESIDUAL-OBSTRUCTION",
+      "label": "F113 点态非零残差不能替代有界窗识别",
+      "file": "topics/common_structure/compensated_anchor_convergence.md#ca-attacks",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CA-LIFT-CANDIDATE",
+      "label": "C343 候选：增维真残差锚距及仿射积分门",
+      "file": "topics/common_structure/lifted_residual_distance.md#lrd-definition",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "CA-FINITE-CANDIDATE",
+      "label": "C344 候选：有限零锚分点与原图功预算",
+      "file": "topics/common_structure/finite_anchor_convergence.md#finite-anchor-candidate",
+      "evidence_status": "candidate"
     }
   ],
   "edges": [
@@ -12181,6 +12236,109 @@
       "relation": "refutes",
       "scope": "固定完整 F(a,b)=(-b/2,b)、lambda=1、S=实轴；全部 Assumption 2 和原严格参数门成立，但任意同半径欧氏球均有唯一根离球。只反驳该局部化量词；实际轨道全局收敛，不反驳 LT 图结构或改域后的收敛。",
       "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E643",
+      "inputs": [
+        "CA-RLEB"
+      ],
+      "output": "CA-OBJECT",
+      "relation": "sufficient",
+      "scope": "同一投稿 P1–P4、完整真残差、原 ω/λ/F/S 与原严格 Θ 初值预算；静态域以 Θ 留域，h=2Θ 只支付锚距，全部原允许根保留。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E644",
+      "inputs": [
+        "CA-MONOTONE"
+      ],
+      "output": "CA-OBJECT",
+      "relation": "sufficient",
+      "scope": "有限维极大单调 F、S 为完整非空零集、每个固定 λ>0；Minty 给完整根，闭图给有界窗真正则，D=X,h=0。退化全零图只提供驻点，不充当非平凡见证。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E645",
+      "inputs": [
+        "CA-OBJECT"
+      ],
+      "output": "CA-DYNAMICS",
+      "relation": "implies",
+      "scope": "保留静态覆盖、不变原根子关系、h(0+)=h(0)=0 及完整残差的有界输出识别；每条所选轨道无限续接并点收敛，未选完整根不在结论内。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E646",
+      "inputs": [
+        "CA-OBJECT"
+      ],
+      "output": "CA-AFFINE",
+      "relation": "conditional",
+      "scope": "另外限定 S=p0+V 为正维仿射空间；无穷零锚提取 L≥||P_V(y−x)||，从而切向绝对总长≤h(d(z))。不对一般闭 S 自动调用。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E647",
+      "inputs": [
+        "CA-SHARP"
+      ],
+      "output": "CA-OBJECT",
+      "relation": "sharpness",
+      "scope": "固定原旋转漂移图、λ=1、c>0、θ=π/√2、完整零轴；非解初值可认证 iff β>α 且 α<2，实际点收敛仅需 β>α。遗漏区不等于发散。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E648",
+      "inputs": [
+        "CA-RLEB",
+        "CA-MONOTONE",
+        "CA-DYNAMICS",
+        "CA-SHARP"
+      ],
+      "output": "W-PPA-EXISTS",
+      "relation": "implies",
+      "scope": "按原 G1–G7 最低两行验收：同模原 RLEB 与不同参数机制的极大单调基准、共同原轨道证明、同图严格增量均齐备；不扩称尚未导入的组合或公开先行性。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E649",
+      "inputs": [
+        "CA-OBJECT"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "最低两行已完成；仿射切向相消、一般 KL/变化右端、LT 修正局部化、无限维与非精确版本仍须逐行构造原根和证书。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E650",
+      "inputs": [
+        "CA-RESIDUAL-OBSTRUCTION"
+      ],
+      "output": "CA-OBJECT",
+      "relation": "limits",
+      "scope": "原根不变覆盖和零补偿支付加每点正残差仍不能保证目标收敛；D=(1,2] 上唯一根 (x+1)/2 趋1而目标为0。必须保留有界序列真正则识别或独立替代。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E651",
+      "inputs": [
+        "CA-LIFT-CANDIDATE",
+        "CA-FINITE-CANDIDATE"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "两份不同静态候选有完整试证，但各自独立 G1–G7 未闭；不可因它们的作者审过 C341 就提升自身，也不可默认为与 M003-v2 等价。",
+      "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]

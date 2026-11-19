@@ -2,11 +2,15 @@
 
 ## 单调性与正则性的共同结构
 
-主任务按作者澄清改为找共同充分条件 \(W\)，承接**单调或次单调、正则性、参数兼容**三项，并对每个认证初值证明**至少存在一条收敛的原 PPA 轨道**。不同组合各有可行参数窗。原 RLEB 一行保留同一一般反射模 RL，全根收敛及固定线性 \(A\)、有限长度均为可选加强。[目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md) · [持续研究任务书与硬性验收](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
+**最低共同覆盖已完成。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性反射模、完整真残差、全部允许输出和原初值预算不变；有限维极大单调 PPA 则对完整非空零集和每个固定正步长以零补偿导入。同一个静态原根子关系可无限续接，共同引理给原空间点收敛与平方步长可和。C242 与平坦立方图分别见证两行均有非解初值。
 
-**G3 导入的已证边界。** [C340](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)以完整二维线性图反驳 Luke–Tam Theorem 2 印刷的同球原根覆盖，全部原结构及严格参数门都成立。该图的实际轨道仍全局收敛。后续导入须保留这一局部化区分，独立证明初值域和工作域的预算，或采用经典最大单调 PPA 作为第二基准。它本身不完成 \(M\)；三个补偿距离候选仍在逐项验收。
+[C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-[C333–C336](research/topics/common_structure/nonlinear_rl_bridge.md) 分别留下固定惩罚障碍、原模定量转接、标量宽度锐损失和同模真残差精确延拓。[C337–C339](research/topics/common_structure/nonlinear_rl_bridge.md#rl-anchor-independence) 定位了小图值、固定有限数据和多值长支的限制。C339 的坏支只限制全选，C337 仍约束完整真残差的身份。新首攻是给原 RLEB 与一条不同参数逻辑的路线找到共同可检查证书，并用 [C322 同一初值的分根例](research/canonical/ppa_native_alignment_and_transverse_test.md#native-sharp) 检验能否在原图中构造可续走的一条好支。一般 \(W\) 仍开放。
+**留下的前沿。** 不再重复寻找满足原任务最低两行的 M。继续扩大已证明的组合时，优先处理仿射切向相消而绝对总变差无穷的原图，以及一般 KL/变化右端正则性怎样产生可核的静态证书。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的完整候选推导；自身独立 G7 尚未完成，不能因为作者参与 C341 审查就提升其状态。公开先行性另待与准 Fejér/势函数理论精确比较。
+
+**G3 的 LT 边界保持。** [C340](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample) 的完整二维线性图满足全部 LT 结构前提及严格参数门，却否定正式 Theorem 2 的同球根覆盖；实际轨道仍全局收敛。完整 LT 的修订导入须独立区分较小初值域与较大工作域并证明续接，不得直接沿用印刷同球句。本次以经典极大单调行完成 G3，没有宣布所有 LT 或其他组合已导入。
+
+[C333–C339](research/topics/common_structure/nonlinear_rl_bridge.md) 的固定惩罚、原模延拓、小图值和长支边界仍保持原身份。C341 不从锚模单独推出真残差正则性；其 [C322 选根检验](research/topics/common_structure/compensated_anchor_convergence.md#ca-attacks) 在原两粒子物理范数下给小根及不变锥，保留存在性和全选量词的区别。
 
 在常数二次弱单调子类，[C329 二次移位 Fitzpatrick 面](CLAIMS.md#c329)：图截面
 \(\mathfrak M_F^{2\beta}|_{\Gamma_D}=0\) 精确等价于完整图块的 \(\beta\)-弱单调，
@@ -29,7 +33,7 @@
 
 [C322](research/canonical/ppa_native_alignment_and_transverse_test.md#native-alignment) 在标准 Cucker–Smale 原场证明固定步长全隐式 PPA 的全根有限长度，给出全初值保证的精确通信核积分边界。三粒子临界核严格排除旧标量兼容、同条件下的最紧实际残差球及 Luke–Tam 的参数门；相同初值的选根分歧也可在短程核上精确实现。机制是原位置输运与速度耗散的同一预算。[C323](research/canonical/ppa_native_alignment_and_transverse_test.md#native-transverse) 在光滑局部全部根上将 A/C320 化为横向 Minty 线性化的最小奇异值大于 1，并给出三层锐因子。它同时表明光滑层的 C320 没有独立于横向稳定性的更强动力学内容。
 
-当前仍未得到同时严格涵盖全部旧非线性 RLEB、又有独立原算子含义的统一中间性质。后续若推进，应验证跨步相消、内生耗散或非光滑横向结构的真正增量，避免再用附加误差界重写旧链。实际应用是已发表的动力学模型及其全隐式离散分析，未认证实测工况或外部先行性。
+C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共同充分条件；C342 用同一原图的两个锐门和严格分离说明其增量。后续扩展仍须验证跨步相消、内生耗散或非光滑横向结构的实际转接，不能把当前已证两行外推成所有组合。实际应用是已发表的动力学模型及其全隐式离散分析，未认证实测工况或外部先行性。
 
 ## 普通 PPA 的 A/B 必要性
 
@@ -69,6 +73,8 @@
 
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
+
+**共同结构最低两行已闭。** C341–C342 的 G1–G7 接收及真实遗漏区见本页首节与 [完整验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。当前这条线的活跃义务是更多组合、切向相消、C343/C344 的独立复核以及公开先行性；不再把原 RLEB 与极大单调共同导入交接为未完成。
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 
@@ -114,6 +120,8 @@
 
 <a id="next-actions"></a>
 ## 下一轮具体行动
+
+**共同条件接续。** 先读 [C341–C342](research/topics/common_structure/compensated_anchor_convergence.md) 及 [四轮验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。若扩展最低任务，优先独立核 C343 的无连续补偿与积分门，或 C344 的有限锚分点和固定窗口比较；若攻 C341 的边界，使用其交错切向反例固定缺口。完整 LT 导入必须先修正 C340 所否定的同球量词。以下其他研究线的义务不因本次共同结构接收而改变。
 
 **次单调路线已完成比较，主线叙事须收窄。** [六路研究与独立反审](research/novelty/2026_10_14_submonotonicity/README.md)核实：LT二次点对类与Otero–Iusem2010作者稿精确换参，不等于其局部/收敛定理重复；非tied、矩阵、逆耗散与原函数结构有独立价值。同F/同lambda的diag例与GU3诊断证明，任意合法标量反射/EB压缩仍可丢方向关联，仅升为双范数D也未必修复。C249/C250本已零锚允许多值，不是全对LT的简单非线性别名。既有数学身份保持，新GU1/GU3只留报告级candidate；下一门为原始方向/组成到完整物理政策的可认证结构，而非再扩模名字。[综合报告](发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[复算](research/code/submonotonicity_routes/README.md)可接续。主稿/摘要/编号未改。
 

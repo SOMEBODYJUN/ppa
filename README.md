@@ -46,7 +46,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 869 个数学节点、638 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 878 个数学节点、647 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -64,15 +64,21 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
+**最低共同目标已完成。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性模、完整真残差、全部允许输出和初值预算原样导入；有限维极大单调 PPA 对完整非空零集和每个固定正步长由另一条参数机制导入。共同引理先保证原根无限续接，再证明原点列收敛，不要求统一几何率或物理有限长度。
+
+[C342 的同图双门](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 说明为什么这不只是旧 A+B 的改名：一个显式旋转—漂移原场实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2\) 的严格见证中，任意固定分组的绝对长度都发散；C277 的全锚 Fejér 端与 C329 的宽参数门也单独排除。其他单调–正则组合及公开先行性仍开放。两份有独立内容但未完成自身独立验收的备选证明保留为 [C343](research/topics/common_structure/lifted_residual_distance.md) 与 [C344](research/topics/common_structure/finite_anchor_convergence.md)，状态均为 candidate。
+
 [C340 的同球留域反例](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)精确限制 Luke–Tam 正式定理的导入：全部原前提及严格参数门成立，也不保证某个固定零点的同半径欧氏球自覆盖。切向输运是失败原因，实际轨道仍可全局收敛。它决定共同条件第二基准的安全引用范围。
 
 [当前目标与已有教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)冻结共同充分条件 \(W\) 的身份。它要从指定的单调/次单调结构、正则性及该组合的参数兼容推出原 PPA 至少一条收敛轨道。原 RLEB 测试行保留一般非线性 \(\omega\)。全选结果保留其既有范围，独立于当前最低目标。
 
-[研究导读](research/topics/common_structure/README.md)给出共同母结构的开放问题、证明路线及独立复核。[GPT Pro 持续研究任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)列出候选的硬性验收和未通过时的试证循环。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。本轮新增 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
+[研究导读](research/topics/common_structure/README.md)给出已完成的最低共同覆盖、尚未导入的组合、证明路线及独立复核。[GPT Pro 持续研究任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)列出候选的硬性验收和未通过时的试证循环。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
 [原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C336 精确恢复同模延拓的真残差，C337–C339 将困难定位到最近锚的小图值、多尺度数据及多值长支。C329 只作为常数二次弱单调专门结果。
 
 ## Research Goal
+
+当前共同结构线已完成 C341 的最低两行验收；下一目标是逐行扩大覆盖，并精确识别其静态补偿与切向相消的边界，见 [专题状态](RESEARCH_STATE.md)。下列长期问题仍各保留自己的对象和证据范围。
 
 1. **收敛机制**：固定核完整 GPPA 已接入一般模、残差平方能量与物理提升，见 [C208–C214](research/canonical/generalized_ppa_modulus.md)；在同一图块、真实全纤维残差、coverage 与留域预算下，确定非线性全对 RL 和误差界如何控制 PPA，区分距离收缩与点收敛。
 2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。
@@ -109,6 +115,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 条件 Markov 残差 | 同步 OT 残差 \(\Psi\) | 同一耦合、目标和回耦损失界 |
 
 ## Claim Map 与 Dependency Graph
+
+共同结构的新已证链为：**投稿 P1–P4 与原预算 → C341 的同一个 M；极大单调与完整零集、\(\lambda>0\) → 同一个 M；M 与其静态覆盖及真残差识别 → 原根无限续接、平方步长可和与点收敛。** C342 另提供双门、严格见证和遗漏区；不是这条正向证明的前件。C343/C344 仍为候选，不能以图谱位置代替独立验收。
 
 **首创性查证已形成可审阅结论**：[团队总报告](research/novelty/2026_10_09/README.md)逐项区分先行机制、固定核严格扩张与精确候选；[C218–C220](CLAIMS.md#c218)给既有接口/非calm保真障碍、完整临界共振分类与逆核稳定性分支。全球优先性未认证，具体源位置、已关闭反例和下一缺口均在报告。
 
@@ -209,12 +217,15 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Research Frontier
 
-**首要开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
+共同结构线的当前前沿已从“寻找最低两行的 M”转为“扩大 C341 的已证行并突破其仿射切向绝对预算”。[C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 和同页交错原图把证书保守区与实际不收敛分开；C343/C344 自身独立审查、修正后的 LT 局部化以及精确公开先行性仍待完成。
+
+**规模比较的开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
 
 结构主线已有完整可调用证明：[GSH 的同一正反影子及统一锐性](research/canonical/global_shadow.md#gsh-object)、[FF 的完整纤维与任意紧集实现](research/canonical/finite_fiber_classification.md#ff-object)、[FC 的固定窗口全纤维覆盖](research/canonical/full_fiber_coverage.md#fc-object)、[FD 的有限 QP/覆盖/反演](research/canonical/finite_data_proxy.md#fd-object)。有限维满目标由明示 Brouwer 闭球接口证明；来源投影 degree 数值没有纳入本轮。固定维数最优因子、应用对象的实际网与严格数值求值、外部先行性继续分别研究；有限总查询障碍保持确定性、无界域量词。9/25 的 rational morphism Lefschetz 定理现有[逐条件一手核验](research/LITERATURE.md#lit-grn-2002)；有限样本仍只认证包络，不认证整窗 \(T\) 的拓扑性质。9/19 随机推论用到**给定度量完备**，若“Polish”仅按拓扑意义，已有显式反例；见 [holder_structure.md](research/holder_structure.md) H06。
 
 ## Known Results、Refuted / Failed、Open Problems
 
+- 本次共同结构接收：[C341–C342](research/topics/common_structure/compensated_anchor_convergence.md) 证明最低两行的同一 M、原点收敛及双锐边界；[C340](research/topics/common_structure/lt_ball_localization_obstruction.md) 只反驳 LT 的同球局部化；[F113](FAILED_ROUTES.md#f113) 反驳将真正则识别弱化成点态非零。C343/C344 保持候选。
 - 可直接复核的代数：Cayley 双向坐标、固定步长全域完整 resolvent 的原图反演、同图块内同输入唯一。
 - 有证明文本和限定内部审计的研究结果：局部 RLEB、固定紧源 \(\Phi\)、解选择修订版、锥与 Markov 条件命题。候选稿与外部审稿、文献新颖性是独立层。
 - 已证伪的扩大陈述：局部 \(J_{\mathcal G}\) 自动等于完整 \(J_{\lambda F}\)；Polish 拓扑性质自动给指定度量完备；proper 即保纲。精确反例和可回收部分见 [FAILED_ROUTES.md](FAILED_ROUTES.md)。
@@ -226,6 +237,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
+本次共同结构任务已在第 004 轮完成最低 G1–G7，不再重复同一最低目标。下一步先按 [当前专题状态](RESEARCH_STATE.md) 核 C343/C344 的独立数学义务，或处理 C341 明确遗漏的切向相消；LT 的重新导入须从不同内外窗的真实覆盖开始。公开先行性另行核对，不把标准聚点方法当作本轮首创。
+
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
 现行任务和优先次序统一维护在[研究状态的下一轮具体行动](RESEARCH_STATE.md#next-actions)。已核规范链可以承接新研究；历史清洗按实际依赖补齐，不要求全历史验收后才研究。当前新增[公开问题选题与资产接口](research/topics/random_markov/public_necessity_target.md)：随机律收敛与原同步 OT 误差界必要性的精确版本须区分不变目标、残差零集和兼容 gauge；[C223 完整新反例](research/topics/random_markov/fixed_point_free_no_power.md#fpf-theorem) 已关闭无共同固定点且 exact-zero 的正幂必要性版本；[启动提示词](research/topics/random_markov/PUBLIC_NECESSITY_PROMPT.md)可直接接续。新正向模型进展见[C224–C226锐自动正则性](research/topics/sparse_recovery/automatic_regularity.md)；指定上侧真实轨道已由C227闭合；下一门是两篇主体全文的精确先行，而非重复已闭数学义务。总体母空间/量尺和原生认证仍保留各自开放门。新增结果、障碍与版本修订按[增长协议](RESEARCH_PROTOCOL.md)进入对应主题；来源任务继续按[覆盖快照](research/audit/CURRENT_COVERAGE.md)处理，不能重复记已枚举组为未开始，也不能把未证结论当已完成。
@@ -234,6 +247,10 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
+| `research/topics/common_structure/compensated_anchor_convergence.md` | C341–C342 的精确定义和完整证明：原弦锚距上确界、可续根、真正则识别、两条原预算导入、仿射切向预算、旋转族双门及 C277/C329 全部受比合同的反证。要继续扩大共同条件覆盖时首先读取；不能将证书遗漏区写成实际发散。 |
+| `research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md` | 记录四轮实际候选与 G1–G7 裁决，保留 v1 退化量词反例和 v2 修复、独立重构的承重步骤、有限维/固定步长/完整零集的作用域。审查或提升后续版本时核对。 |
+| `research/topics/common_structure/lifted_residual_distance.md` | C343 候选的完整推导：真残差增维、无需连续的静态补偿、仿射精确公式与漂移积分门。未通过自身独立 G7；研究不同残差支付机制或与 C341 的关系时读取。 |
+| `research/topics/common_structure/finite_anchor_convergence.md` | C344 候选的有限零锚分点条件、图功预算、壳层访问次数界及同一窗口的全锚反证。需要减少锚检验或分析局部目标识别时读取；更换窗口不能直接继承严格比较。 |
 | `research/topics/common_structure/lt_ball_localization_obstruction.md` | C340 的完整线性原图、LT 极大性/真残差/参数门核对、任意球的有理数离球见证及仍成立的显式轨道。导入 LT 局部定理或比较初值域、工作域时先读；修订不得把同球反例升级成实际发散。 |
 
 | 新增研究入口 | 用途 |
