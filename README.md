@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+**当前研究入口**是[单调性与正则性的共同结构](#common-structure-frontier)。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
+
 [从原算子出发的 C322/C323](research/canonical/ppa_native_alignment_and_transverse_test.md) 用标准 Cucker–Smale 完整全隐式场检验 C320：统一耗散预算给所有根收敛，旧 RLEB 即使用实际图值的最紧欧氏球也会失败。对光滑零流形，C323 把 A/C320 精确化为横向奇异值一项检验，量化两次标量化损失，并清楚区分这一结构与抽象统一目标。
 
 [C318 · A 与输入距离步界 B 的必要性](research/canonical/ppa_ab_necessary_bounds.md) 固定普通 PPA 的允许图量词，给出精确一步可行域、A 强制的真线性次正则及锐残差窗，以及固定一般模在全部允许关系上的锐长度预算与 Dini 充要性。完整单值近端同时达到每一步与每条尾的上界。
@@ -62,6 +64,7 @@
 
 阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。[后续独立接收与团队路线裁决](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)已核C236/C237并接收C238–C240；C245 先把预算量化接口固定下来，本轮 C258 将方向延拓改写成有限证书。[C264/C265独立接收](research/audit/RP2_EXPLICIT_COMPLETION_REVIEW_2026_10_12.md)已核实际物理collar、全对常数与原管达等极值。下一关保持整个原管，按幅度加权优化完整位移差商，攻L*=L0（任意增量预算的健壮证书）或严格gap，最后核端点达到；现有大上界不证明gap。
 
+<a id="common-structure-frontier"></a>
 ## 当前专题：单调性和正则性是否有共同结构
 
 **主问题。** 从原算子图出发，解释单调性与正则性各自约束的几何变化，并找出它们为什么在原近端步中发生联系。候选提出后，再逐条检验哪些既有 PPA 定理能在原假设、允许步长和初值范围下推出同一个 \(M\)。下列旧路线和反例用于检验覆盖及定位失败。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
@@ -84,7 +87,7 @@
 
 [C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条路线的承重缺口。
 
-[C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。该路线自身未完成共同结构目标，现行结果见 C351。
+[C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。
 
 [C346 回返缺口与完整残差](research/topics/common_structure/return_gap_and_loop_reduction.md) 在全锚平方耗散类给出与路径长度无关的正则转接，并证明任意周期的共同零锚误差界来自连续补偿耗散。原最近锚一般反射行的导入仍后置于旧下降；这一区分阻止把循环条件误报为新的共同机制，见 [F115](FAILED_ROUTES.md#f115)。
 
@@ -98,7 +101,7 @@
 
 [C342 的同图双门](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 说明为什么这不只是旧 A+B 的改名：一个显式旋转—漂移原场实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2\) 的严格见证中，任意固定分组的绝对长度都发散；C277 的全锚 Fejér 端与 C329 的宽参数门也单独排除。其他单调–正则组合及公开先行性仍开放。两份有独立内容但未完成自身独立验收的备选证明保留为 [C343](research/topics/common_structure/lifted_residual_distance.md) 与 [C344](research/topics/common_structure/finite_anchor_convergence.md)，状态均为 candidate。
 
-[C340 的同球留域反例](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)精确限制 Luke–Tam 正式定理的导入：全部原前提及严格参数门成立，也不保证某个固定零点的同半径欧氏球自覆盖。切向输运是失败原因，实际轨道仍可全局收敛。它决定共同条件第二基准的安全引用范围。
+[C340 的同球留域反例](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)精确限制 Luke–Tam 正式定理的导入：全部原前提及严格参数门成立，也不保证某个固定零点的同半径欧氏球自覆盖。切向输运是失败原因，实际轨道仍可全局收敛。此例用于核对候选成形后的根覆盖与留域量词。
 
 [早期共用收敛证书的目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)记录共同充分条件 \(W\) 的数学身份及测试范围。现行任务还要求用同一个几何结构分别恢复两种性质，并由该几何关系解释原步。
 

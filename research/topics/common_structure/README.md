@@ -87,7 +87,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [新写的 GPT Pro 研究任务](GPT_PRO_M_NEW_2026-11-19.md) | 从两类性质的独立含义寻找共同 M，明确两个恢复、原 PPA 推论和已排除的 RL 修补路线。先读此任务，再按需要调用旧资产。 |
 
 本稿于 2026-11-19 独立起草。写法参考 [prompt-master 1.8.2 的 SKILL 和 OpenAI Task Brief](https://github.com/nidhinjs/prompt-master/tree/49b3a72469b1e7287d66387004ccfcca90e5968a)，数学任务表述参考 [MathResearchPrompts](https://github.com/optsuite/MathResearchPrompts/tree/0f7890f202ec26645b2b90d322d91bee711c7d75)。本次拉取的两库主分支最近提交分别为 2026-10-22 和 2026-08-25。前者有 GPT-6.1 及 OpenAI 推理模型说明，后者有实际数学研究提示词。本轮未核实到专为 GPT-6.2 Pro 数学研究设置的开源库，模型写法同时核读 [OpenAI 当前 GPT-6.2 指南](https://developers.openai.com/api/docs/guides/latest-model)和[推理模型提示指南](https://developers.openai.com/api/docs/guides/reasoning-best-practices)。这些参考提供起草方法，本稿尚未经 Pro 研究运行检验。
-| [补偿锚距条件与双锐边界](compensated_anchor_convergence.md) | C341 的共同定义、无限续接与点收敛、原 RLEB 同模同预算导入、全部固定正步长的极大单调导入；C342 的旋转族双门和 C277/C329 的完整去重。继续这一线先读。 |
+| [补偿锚距条件与双锐边界](compensated_anchor_convergence.md) | C341 的共用收敛证书、原 RLEB 同模同预算导入、全部固定正步长的极大单调导入；C342 的旋转族双门和 C277/C329 的完整去重。用于比较候选的收敛覆盖。 |
 | [第 004 轮接收记录](../../audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md) | 四轮候选的实际裁决、v1 的退化量词反例、修订版本的 G1–G7 承重证据，以及内部正确性和公开新颖性的分界。 |
 | [增维真残差锚距](lifted_residual_distance.md) | C343 候选：无连续性静态补偿、仿射精确公式、漂移函数的锐积分门；保留完整推导，独立验收尚未结束。 |
 | [有限零锚的测距与图功](finite_anchor_convergence.md) | C344 候选：有限测距点分开局部目标、壳层访问界和全锚比较；读其固定窗口量词后再尝试推广。 |
