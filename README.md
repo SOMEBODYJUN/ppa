@@ -64,6 +64,8 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
+[C358 原近端输入误差的切向搬运](research/topics/common_structure/proximal_input_noise_transport.md#input-noise-transport) 对剪切型完整原图计算零点间的精确小误差搬运代价，并对任意原一般模 RLEB 给出可和输入误差条件。真正非线性的幂阈值可锐化，欧氏输入误差可和本身可与有界轨道不点收敛并存。
+
 [C357 的保距离近端共轭反例](research/topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) 把 C353 的单调盲区加强到切于恒等的解析原动力共轭，并在另一组共享非线性原 RLEB 数据的原图上分离完整真残差的最佳幂。共同结构的恢复须辨认跨点欧氏方向和原弦长度，见 [F124](FAILED_ROUTES.md#f124)。
 
 **统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120](FAILED_ROUTES.md#f120)
@@ -270,6 +272,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
 | `research/topics/common_structure/fiber_reflection_rigidity.md` | C345 的加权反射恒等、完整残差下界和同纤维两值锚差估计，含零尺度、零反射和跳跃误差模的处理。用于检查正则尺度如何限制方向，以及区分真实结构推导与旧半和界的再包装；跨值关系承担PPA下降仍开放。 |
+| `research/topics/common_structure/proximal_input_noise_transport.md` | C358：原输入误差在剪切型零线上的精确小幅搬运代价、临界幂和任意原一般模 RLEB 的可和扰动预算。研究扰动稳定性和切向漂移时读取。 |
 | `research/topics/common_structure/return_gap_and_loop_reduction.md` | C346：原允许图的有限回返缺口、全锚平方耗散到完整真残差的双侧转接，以及连续补偿推出周期无关的同锚误差模。包含原一般 RLEB 的原窗连续上包络、完整近极小值覆盖和正共次单调系数；用于防止把既有下降后果当成共同结构。 |
 | `research/topics/common_structure/residual_preserving_fiber_completion.md` | C347：保持全部当前原 RLEB 数据、完整零集和真残差的逐点最大纤维补全；给低范数最小功及全部倾斜残差的同时精确下包络。用于审查候选是否从允许图偷升到完整纤维方向，完整截断/闭图等附加结构须另证。 |
 | `research/topics/common_structure/tilted_fiber_equivalences.md` | C348：同一完整纤维在零右端与倾斜右端的距离比较、两个精确恢复、原 PPA 充分性及保持原κ的非线性导入。独立审查证明该导入仍被旧下逆的更强余项估计支配；用于区分正确等价与真正承重的共同结构。 |

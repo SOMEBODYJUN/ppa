@@ -5044,6 +5044,12 @@
       "label": "C357 保目标距离的原近端共轭不能恢复两类欧氏性质",
       "file": "topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-INPUT-NOISE-TRANSPORT",
+      "label": "C358 原近端输入误差沿零集的精确搬运代价",
+      "file": "topics/common_structure/proximal_input_noise_transport.md#input-noise-transport",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12837,6 +12843,17 @@
       "scope": "切于恒等的保范数解析共轭不保持两点单调。保目标距离共轭及共同原非线性 RLEB 合同不保持指定幂的完整真残差误差界。候选和附加条件须辨认相应丢失的欧氏方向或度量。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E681",
+      "inputs": [
+        "PPA-INPUT-NOISE-TRANSPORT"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "尖锐非线性原 RLEB 与两个零点之间零欧氏输入扰动搬运代价并存。可和误差收敛所需尺度可依赖非线性模，限制把正欧氏扰动代价作为普遍前提。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]
 }

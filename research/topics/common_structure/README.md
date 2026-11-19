@@ -3,6 +3,8 @@
 <a id="mother-question"></a>
 ## 首要问题
 
+[C358 的原近端切向搬运代价](proximal_input_noise_transport.md#input-noise-transport) 精确计算剪切图在一般小输入误差下的搬运成本，并给任意原一般模 RLEB 的可和扰动预算。单调与正则的共同恢复仍开放。
+
 [C357 的保目标距离近端共轭障碍](ppa_conjugacy_obstruction.md#ppa-conjugacy) 说明原动力、精确目标距离及共同 RLEB 数据仍不能无条件决定欧氏单调和真残差幂。
 
 **共同结构 \(M\) 尚未找到。C351 按本任务判失败。** 从原锚点 RL 与误差界出发的相容重写、消元和精确幅度匹配已被作者排除。[现行提示词](GPT_PRO_M_NEW_2026-11-19.md) · [F120](../../../FAILED_ROUTES.md#f120)

@@ -2,6 +2,8 @@
 
 ## 单调性与正则性的共同结构
 
+[C358](CLAIMS.md#c358) 给出原近端输入扰动的切向搬运阈值。一般原 RLEB 在相应非线性尾预算下给出扰动收敛。即使真正非线性的最优模和唯一完整原根都成立，欧氏可和输入扰动仍能在两个零点间反复搬运。该障碍限定需要正的欧氏切向扰动代价的候选。[F125](FAILED_ROUTES.md#f125)
+
 [C357](CLAIMS.md#c357) 证明固定步长原 PPA 的整个共轭类，即便记录精确目标距离和共同 RLEB 参数，仍不能决定普通单调性或指定幂真次正则性。单调反例甚至保留解析共轭、零点恒等微分、全部剪切长度及完整残差。[F124](FAILED_ROUTES.md#f124) 定位被遗漏的欧氏信息。
 
 [C355](CLAIMS.md#c355) 进一步固定完整真残差和每条弦的全部剪切长度，仍可任意选择两步的归一化法向关系。当前首个开放环节是找到同一几何关系的两个独立恢复，使其保留所需跨点信息，同时允许原 RLEB 的这类方向自由度。[证明](research/topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions) · [F122](FAILED_ROUTES.md#f122)

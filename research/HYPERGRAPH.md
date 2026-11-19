@@ -1038,6 +1038,7 @@
 | E677 | [RLEB-DEGREE-OBSTRUCTION · C354 原 RLEB 可有任意局部度且无连续原根选择](topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 要求从原一般非线性 RLEB 导入的共同结构，不得以非零近端输入局部度、一个固定局部度或局部连续选根为必要前提。；**derived-checked** |
 | E678 | [RLEB-TWO-STEP-DIRECTION · C355 同一完整残差与全剪切长度下的任意两步法向关系](topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 同一完整真残差、全剪切长度及原非线性相容参数允许任意闭球面两步关系，限制从这些标量数据推出跨步法向约束。；**derived-checked** |
 | E679 | [RLEB-ISOLATED-COVERAGE-STEP · C356 原 RLEB 步长可在完整近端覆盖谱中孤立](topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 同一连续单值原图可在孤立步长满足完整原 RLEB，一般导入不能要求附近步长都有局部近端根覆盖。；**derived-checked** |
+| E681 | [PPA-INPUT-NOISE-TRANSPORT · C358 原近端输入误差沿零集的精确搬运代价](topics/common_structure/proximal_input_noise_transport.md#input-noise-transport) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 尖锐非线性原 RLEB 与两个零点之间零欧氏输入扰动搬运代价并存。可和误差收敛所需尺度可依赖非线性模，限制把正欧氏扰动代价作为普遍前提。；**derived-checked** |
 
 ## 普通 PPA 的单调性与正则性的共同结构
 

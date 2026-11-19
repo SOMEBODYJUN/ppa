@@ -3139,3 +3139,13 @@
 - **Objects / Quantifiers**：每个固定 \(\lambda>0\) 有两对完整连续单值原算子。每对共享指定闭零集、全域唯一原根、同一组原 P1–P4 数据，且有逐点固定零集和保目标距离的原近端共轭。
 - **Exact Statement / Scope**：四维单调对沿用 C353，新的共轭为全域实解析微分同胚，零点微分是恒等。两图仍同享所有剪切长度和完整真残差，但一图单调，另一图每个零邻域不单调。二维正则对的每个近端输出距零线为 \(\alpha t^\sigma\)，完整残差分别与 \(t^{\gamma_i}\) 同阶，故最强残差端 EB 幂分别为 \(\sigma/\gamma_i\)。两图共享真正非线性反射模与真误差模；对 \(0<\gamma_1<\gamma_2<1,\sigma>\gamma_2/\gamma_1\) 和 \(p\in(\sigma/\gamma_2,\sigma/\gamma_1]\)，条件 \(d(y,S)\le C r_F(y)^p\) 只在第一图成立。
 - **Dependencies / Evidence / Objections**：[证明](research/topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy)。第一对由 [C353](#c353) 和解析矩阵积，第二对由精确原弦和可和标量上同调方程。限制的是候选及恢复附加条件都忽略相应共轭可改变的欧氏信息。一般拓扑共轭与双 Lipschitz 共轭须区分，后者保留 Hölder 真误差界是否存在。公开优先性未判定。
+
+
+<a id="c358"></a>
+## C358-v1 · 原近端小输入扰动沿零集的精确搬运代价
+
+- **Status**：`derived-checked`。小扰动代价由逐次卷积下界和有限复位路径独立重构；一般原模的扰动充分性另作有限前缀核验。
+- **Objects / Definitions / Domain**：固定 \(\lambda>0\) 的原包含 \(x_k+e_k-x_{k+1}\in\lambda F(x_{k+1})\)。完整剪切图 \(J(t,z)=(\alpha t,z+b\operatorname{sgn}(t)w(|t|))\)，\(0<\alpha<1,b>0\)，零线 \(S=\{0\}\times\mathbb R\)，连续非减次可加 \(w\) 的几何尾 \(W(h)=\sum_jw(\alpha^jh)\) 有限。\(D_\delta(L)\) 取从 \((0,0)\) 到 \((0,L)\)、每次 \(\|e_k\|\le\delta\) 的有限路径成本 \(\sum_k\rho(\|e_k\|)\) 的下确界，\(\rho\) 连续非减且在零为零。
+- **Exact Statement**：任意 \(L\ne0\)，\(\lim_{\delta\downarrow0}D_\delta(L)=|L|\liminf_{h\downarrow0}\rho(h)/\max_{0\le u\le h}(bW(u)+\sqrt{h^2-u^2})\)。若 \(w(h)=h^\gamma,0<\gamma<1,\rho(h)=h^p\)，则 \(p>\gamma\) 为零，\(p=\gamma\) 为 \((1-\alpha^\gamma)|L|/b\)，\(p<\gamma\) 为无穷。幂图有全域唯一原根、尖锐非线性原反射和完整真残差幂，并在非空零管满足原 P1–P4。
+- **General RLEB Conclusion**：任意原 P1–P4 在受扰输入继续使用原允许关系。取 \(\kappa<a<1,q=\kappa/a,C=1/(1-a)\)，\(v_0=d(x_0,S)+\|e_0\|\)、\(v_i=\|e_i\|\) 对 \(i\ge1\)，\(\Theta_q(t)=\sum_j B(q^jt)\)。若 \(Cv_i\le R\)，\(\sum_i\Theta_q(Cv_i)<\infty\)，且 \(\sum_i[\|e_i\|+\Theta_q(Cv_i)]<d(x_0,X\setminus U)\)，则每条允许扰动轨道可续、有限长、点收敛到 \(S\cap U\)。\(B(t)\asymp t^\gamma\) 时保证的可和指数在上述幂图类锐。
+- **Dependencies / Evidence / Counterevidence / Scope**：[原图、路径构造、有限前缀和文献定位](research/topics/common_structure/proximal_input_noise_transport.md#input-noise-transport)。欧氏输入误差可和仍可在完整原 RLEB 上产生有界振荡。此处约束扰动稳定性候选，对精确原步收敛不构成反例。两种恢复未闭，[F125](FAILED_ROUTES.md#f125)；公开优先性未穷尽。
