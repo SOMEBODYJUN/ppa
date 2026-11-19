@@ -1039,6 +1039,12 @@
 | E678 | [RLEB-TWO-STEP-DIRECTION · C355 同一完整残差与全剪切长度下的任意两步法向关系](topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 同一完整真残差、全剪切长度及原非线性相容参数允许任意闭球面两步关系，限制从这些标量数据推出跨步法向约束。；**derived-checked** |
 | E679 | [RLEB-ISOLATED-COVERAGE-STEP · C356 原 RLEB 步长可在完整近端覆盖谱中孤立](topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 同一连续单值原图可在孤立步长满足完整原 RLEB，一般导入不能要求附近步长都有局部近端根覆盖。；**derived-checked** |
 
+## 普通 PPA 的单调性与正则性的共同结构
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E680 | [PPA-DISTANCE-CONJUGACY · C357 保目标距离的原近端共轭不能恢复两类欧氏性质](topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 切于恒等的保范数解析共轭不保持两点单调。保目标距离共轭及共同原非线性 RLEB 合同不保持指定幂的完整真残差误差界。候选和附加条件须辨认相应丢失的欧氏方向或度量。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

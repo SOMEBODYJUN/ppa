@@ -46,7 +46,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 892 个数学节点、662 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 907 个数学节点、676 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -63,6 +63,8 @@
 阶段进展与下一入口：[接收记录](research/audit/ZERO_PRESERVING_COMPLETION_REVIEW_2026_10_11.md)逐项核Hopf条件、非Lipschitz整管拼接、完整前向纤维真残差和全局吸引的独立量词。[后续独立接收与团队路线裁决](research/audit/COMPLETION_BUDGET_REVIEW_2026_10_11.md)已核C236/C237并接收C238–C240；C245 先把预算量化接口固定下来，本轮 C258 将方向延拓改写成有限证书。[C264/C265独立接收](research/audit/RP2_EXPLICIT_COMPLETION_REVIEW_2026_10_12.md)已核实际物理collar、全对常数与原管达等极值。下一关保持整个原管，按幅度加权优化完整位移差商，攻L*=L0（任意增量预算的健壮证书）或严格gap，最后核端点达到；现有大上界不证明gap。
 
 ## 当前专题：单调性和正则性是否有共同结构
+
+[C357 的保距离近端共轭反例](research/topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) 把 C353 的单调盲区加强到切于恒等的解析原动力共轭，并在另一组共享非线性原 RLEB 数据的原图上分离完整真残差的最佳幂。共同结构的恢复须辨认跨点欧氏方向和原弦长度，见 [F124](FAILED_ROUTES.md#f124)。
 
 **统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120](FAILED_ROUTES.md#f120)
 

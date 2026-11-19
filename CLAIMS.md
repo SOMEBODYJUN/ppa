@@ -3131,3 +3131,11 @@
 - **Exact Statement / Domain / Quantifiers**：任意 \(\lambda>0,a>1,b>0,0<\gamma<1\)，存在全域连续单值原算子 \(F\) 于实欧氏 \(\mathbb C^2\times\mathbb R\)，完整零集是 \(\{0\}\times\mathbb R\)。正步长 \(\eta\) 的全局完整根覆盖谱及任意零点处的局部覆盖谱均恰为 \((0,\lambda/(1+a))\cup\{\lambda\}\)。局部覆盖要求每个输出邻域的像都是输入点的邻域；谱外连全域覆盖也失败。
 - **Assumptions / Conclusion**：在 \(\lambda\) 取全部原根，满足同一步原 P1–P4，具有最佳幂 \(\gamma\) 的反射模与最佳幂 \(1/\gamma\) 的完整真残差误差模。正半径认证管内的所有原轨道均点收敛。
 - **Evidence / Dependencies / Scope**：[证明](research/topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step)以 Brouwer 给小步覆盖，两块相反的角映射分别证明 \(\lambda\) 左右漏射。限制从连续步长区间覆盖导入一般原 RLEB 的候选，不推出小步谱内的收敛。公开优先性未核定。
+
+<a id="c357"></a>
+## C357-v1 · 保目标距离的固定步长原近端共轭不能恢复两类性质
+
+- **Status**：`derived-checked`。
+- **Objects / Quantifiers**：每个固定 \(\lambda>0\) 有两对完整连续单值原算子。每对共享指定闭零集、全域唯一原根、同一组原 P1–P4 数据，且有逐点固定零集和保目标距离的原近端共轭。
+- **Exact Statement / Scope**：四维单调对沿用 C353，新的共轭为全域实解析微分同胚，零点微分是恒等。两图仍同享所有剪切长度和完整真残差，但一图单调，另一图每个零邻域不单调。二维正则对的每个近端输出距零线为 \(\alpha t^\sigma\)，完整残差分别与 \(t^{\gamma_i}\) 同阶，故最强残差端 EB 幂分别为 \(\sigma/\gamma_i\)。两图共享真正非线性反射模与真误差模；对 \(0<\gamma_1<\gamma_2<1,\sigma>\gamma_2/\gamma_1\) 和 \(p\in(\sigma/\gamma_2,\sigma/\gamma_1]\)，条件 \(d(y,S)\le C r_F(y)^p\) 只在第一图成立。
+- **Dependencies / Evidence / Objections**：[证明](research/topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy)。第一对由 [C353](#c353) 和解析矩阵积，第二对由精确原弦和可和标量上同调方程。限制的是候选及恢复附加条件都忽略相应共轭可改变的欧氏信息。一般拓扑共轭与双 Lipschitz 共轭须区分，后者保留 Hölder 真误差界是否存在。公开优先性未判定。

@@ -10187,6 +10187,17 @@
       "y": 4305,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "PPA-DISTANCE-CONJUGACY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12893,6 +12904,10 @@
     "E679": {
       "x": 3269.4,
       "y": 4350.43
+    },
+    "E680": {
+      "x": 3266.51,
+      "y": 4287.46
     }
   },
   "bounds": {
