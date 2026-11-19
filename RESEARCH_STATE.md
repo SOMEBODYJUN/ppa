@@ -2,13 +2,13 @@
 
 ## 单调性与正则性的共同结构
 
-**本轮共同结构任务已完成，接收 C351-v1 的精确范围。** [跨位置反射—残差相容](research/topics/common_structure/two_point_scale_compatibility.md) 给一般原 RLEB 模存在性的充要判据、同一非线性参考模下的两个反向恢复，以及保留原全部认证初值的原 PPA 证明。[三门独立验收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)无遗留致命数学异议。新意限定在原位置间的严格开壳相容与逆向结构；给定模下逆、几何收缩和 Dini 后端均是已有内容，公开首创未定。
+**C351 已给出带强附加条件的两个恢复和原 RLEB 刻画。** [条件和证明的重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md)直接展开了同一 \(M\)。恢复 RL 的 A 固定真残差与距离的精确等式，恢复误差界的 B 固定反射幅度的精确等式；两者都用全尺度和连续参考模。原 [C351 正文](research/topics/common_structure/two_point_scale_compatibility.md)与[接收记录](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留这些定理及其证明。公开首创未定。
 
 **此前的共用收敛证书。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**已闭与仍开。** C351 完成本轮同一个 M 的方向/正则恢复与原一般模导入。仍开放的是公开先行优先权、未列入组合，以及变步长、非精确和无限维等另外问题；不将接收扩成所有实际收敛图的必要条件。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [此前C341机制复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
+**已证范围与研究期望。** C351 满足已列出的两个附加条件下的恢复、原一般模导入和原 PPA 收敛。它自带线性真残差界，并与存在相容原 RLEB 模等价。更一般的单调与正则是否来自同一结构，当前两种精确等式下的恢复尚未证明。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [此前 C341 机制复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
 
 [C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。这条早期路线自身没有闭合目标；当前接收由 C351 给出。
 

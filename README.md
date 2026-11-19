@@ -64,7 +64,7 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
-**已找到本轮所求的共同结构：[C351 跨位置相容](research/topics/common_structure/two_point_scale_compatibility.md)。** 同一原图的反射方向与完整真残差受严格开壳配对律约束；它恰好刻画一组相容原模是否存在，并在同一非线性尺度下分别恢复锚定RL和真正则。原一般模、真帽和全部认证初值保留。[三项验收与精确边界](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)已记录；公开首创未定。
+**[C351](research/topics/common_structure/two_point_scale_compatibility.md) 给出了同一条件的两个限定恢复。** [条件和证明的重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md)用输入、输出和真残差直接展开：A 固定残差与距离的精确等式，B 固定反射幅度的精确等式。全尺度、连续参考模下分别恢复锚定 RL 与真误差界；有限工作窗内刻画原 RLEB 模存在性并给原 PPA 收敛。[接收记录及边界](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留，公开首创未定。
 
 [C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条早期路线的承重缺口；当前任务由 C351 在所列范围闭合。
 
@@ -92,7 +92,7 @@
 
 ## Research Goal
 
-共同结构线的本轮目标由 C351 的跨位置相容律在所声明范围完成：同一结构恢复方向和真正则，并生成原 PPA 的可续有限长度证明。公开先行、未覆盖组合和其他长期问题仍分别保留对象与证据范围，见 [专题状态](RESEARCH_STATE.md)。C341 保留为此前不同范围的共同收敛证书。
+共同结构线已在精确幅度条件下获得 C351 的两个恢复及原 PPA 收敛。更一般的单调与正则是否来自同一结构，仍须超出这两种强条件考察，见 [专题状态](RESEARCH_STATE.md)。C341 保留为此前不同范围的共同收敛证书。
 
 1. **收敛机制**：固定核完整 GPPA 已接入一般模、残差平方能量与物理提升，见 [C208–C214](research/canonical/generalized_ppa_modulus.md)；在同一图块、真实全纤维残差、coverage 与留域预算下，确定非线性全对 RL 和误差界如何控制 PPA，区分距离收缩与点收敛。
 2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。
@@ -267,7 +267,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `research/topics/common_structure/tilted_fiber_equivalences.md` | C348：同一完整纤维在零右端与倾斜右端的距离比较、两个精确恢复、原 PPA 充分性及保持原κ的非线性导入。独立审查证明该导入仍被旧下逆的更强余项估计支配；用于区分正确等价与真正承重的共同结构。 |
 | `research/topics/common_structure/matching_certificate_reduction.md` | C349：两项尺度排序、完整残差可取阈值、一般法切纤维的精确上下端、同参数单调/正则两恢复及原 PPA 充分性。独立冷审证明新增越界分支可从三条要求链删去，两个恢复均为既有扩张水平，不能据此宣告新共同机制。 |
 | `research/topics/common_structure/incoming_residual_reflection.md` | C350：当前完整残差约束下一原弦反射，优化剪切点偏差与所用值的非最小性成为相邻完整残差的非负损失；两种同参标定、原全部初值及正点跳跃模证明齐全。读此文件以使用跨边定量关系，勿把可删方向费用升级为共同结构已完成。 |
-| `research/topics/common_structure/two_point_scale_compatibility.md` | C351：以全部原允许边和全部完整输出残差的跨位置不等式，精确消去任意反射模/误差模的存在量词；含边柱距离、同一非线性尺度的两个恢复、原 PPA 全部初值证明及不可删非对角项的原图证明。研究当前共同结构应先读此文，再对照 C315 已有的给定模下逆。 |
+| `发表成果整理/本轮重构/C351_结构与条件_重写.md` | C351 的可读正文：用输入、输出、距离和真残差直接写条件 M，展开 A、B 的精确等式及两种恢复，给出不经过广义逆的原模存在性与 PPA 证明。包含强附加条件、锚定与全对单调的区别，以及对原研究期望的范围判断。读 C351 先读此文。 |
+| `research/topics/common_structure/two_point_scale_compatibility.md` | C351 的完整技术正文：跨位置不等式消去两套原模的存在量词，含边柱距离、两个恢复、原 PPA 全部初值证明及不可删非对角项的原图证明。与 C315 已有的给定模下逆比较，具体恢复前提见重写稿。 |
 | `research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md` | 当前共同结构的三门接收：逐项记录严格开壳关系、双向原模重建、同一非线性两恢复、非解入口和原轨道；区分 C315 既有内容、结构增量与公开优先未定。 |
 | `research/topics/common_structure/reflection_residual_transfer_candidate.md` | C352：原反射余量对完整残差阈值的有符号平移、跳跃上集、原PPA与偏移球面恢复；包括允许值严格大于完整不达到残差的版本。数学可复用，本路线独立结构终审尚未完成。 |
 | `research/topics/common_structure/radial_shear_obstruction.md` | C353：所有实剪切与全部轨道的一步标量长度相同，通常两点单调仍可不同；用以阻止从零锚或一点范数信息无条件升级全对单调。 |

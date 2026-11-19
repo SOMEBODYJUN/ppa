@@ -3,7 +3,7 @@
 <a id="mother-question"></a>
 ## 首要问题
 
-**本轮目标已由 [C351 原图跨位置相容](two_point_scale_compatibility.md) 完成。** 同一个原始图对条件给双向模重建、同一非线性尺度的方向/真正则恢复及原PPA。[三项验收](../../audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)固定具体范围与先行边界；公开首创未定。
+**[C351](two_point_scale_compatibility.md) 已给出同一条件的两个限定恢复与原 PPA 收敛。** [重写稿](../../../发表成果整理/本轮重构/C351_结构与条件_重写.md)直接写出两组强附加条件：A 固定真残差与距离的等式，B 固定反射幅度的等式，两者均用全尺度和连续参考模。[原接收记录](../../audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留精确结论。公开首创未定。
 
 本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
