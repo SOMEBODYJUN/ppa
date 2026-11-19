@@ -100,7 +100,7 @@
 
 [C340 的同球留域反例](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)精确限制 Luke–Tam 正式定理的导入：全部原前提及严格参数门成立，也不保证某个固定零点的同半径欧氏球自覆盖。切向输运是失败原因，实际轨道仍可全局收敛。它决定共同条件第二基准的安全引用范围。
 
-[当前目标与已有教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)冻结共同充分条件 \(W\) 的身份。它要从指定的单调/次单调结构、正则性及该组合的参数兼容推出原 PPA 至少一条收敛轨道。原 RLEB 测试行保留一般非线性 \(\omega\)。全选结果保留其既有范围，独立于当前最低目标。
+[早期共用收敛证书的目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)记录共同充分条件 \(W\) 的数学身份及测试范围。现行任务还要求用同一个几何结构分别恢复两种性质，并由该几何关系解释原步。
 
 [研究导读](research/topics/common_structure/README.md)给出已证数学、失败路线和开放问题。[2026-11-19 新写的 GPT Pro 研究任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)直接说明要找的 M、两个恢复与原 PPA 推论，并带入已经排除的 RL 修补类型。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在锚输运和参数条件下给输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
@@ -289,7 +289,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `发表成果整理/本轮重构/C351_结构与条件_重写.md` | C351 的可读正文：用输入、输出、距离和真残差直接写条件 M，展开 A、B 的精确等式及两种恢复，给出不经过广义逆的原模存在性与 PPA 证明。包含强附加条件、锚定与全对单调的区别，以及对原研究期望的范围判断。读 C351 先读此文。 |
 | `research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md` | 2026-11-19 从头写的新研究提示词。说明老师要找的共同 M、两个恢复、原 PPA 收敛、失败类型及交付方式。当前交给 Pro 应使用此文件，起草来源及范围见专题 README。 |
 | `research/topics/common_structure/two_point_scale_compatibility.md` | C351 的完整技术正文：跨位置不等式消去两套原模的存在量词，含边柱距离、两个恢复、原 PPA 全部初值证明及不可删非对角项的原图证明。与 C315 已有的给定模下逆比较，具体恢复前提见重写稿。 |
-| `research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md` | 当前共同结构的三门接收：逐项记录严格开壳关系、双向原模重建、同一非线性两恢复、非解入口和原轨道；区分 C315 既有内容、结构增量与公开优先未定。 |
+| `research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md` | C351 原验收及撤回记录。保留开壳条件、原模重建、限定恢复和轨道证明的审计，并记录为什么这些推导未解释共同来源。 |
 | `research/topics/common_structure/reflection_residual_transfer_candidate.md` | C352：原反射余量对完整残差阈值的有符号平移、跳跃上集、原PPA与偏移球面恢复；包括允许值严格大于完整不达到残差的版本。数学可复用，本路线独立结构终审尚未完成。 |
 | `research/topics/common_structure/radial_shear_obstruction.md` | C353：所有实剪切与全部轨道的一步标量长度相同，通常两点单调仍可不同；用以阻止从零锚或一点范数信息无条件升级全对单调。 |
 | `research/topics/common_structure/compensated_anchor_convergence.md` | C341–C342 的精确定义和完整证明：原弦锚距上确界、可续根、真正则识别、两条原预算导入、仿射切向预算、旋转族双门及 C277/C329 全部受比合同的反证。要继续扩大共同条件覆盖时首先读取；不能将证书遗漏区写成实际发散。 |
