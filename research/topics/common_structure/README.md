@@ -13,6 +13,8 @@
 
 [C347 保残差最大补全](residual_preserving_fiber_completion.md) 在固定原允许关系和整套 RLEB 参数时填满完整纤维方向，精确限制倾斜残差或完整低范数功剖面的无条件导入。
 
+[C348 倾斜纤维两等价](tilted_fiber_equivalences.md) 已核数学推导，但其原一般 RLEB 下降仍被旧下逆更强估计覆盖；固定原κ的改进没有关闭机制门。
+
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 
 <a id="mother-result"></a>
@@ -45,6 +47,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [同一完整残差下的图值与零锚差](fiber_reflection_rigidity.md) | C345：原一般反射模的最优加权恒等及两个同纤维真实图值的共同约束。证明成立；跨值方向关系的动力学承重和结构新意仍未完成。 |
 | [回返缺口与循环误差的准确来源](return_gap_and_loop_reduction.md) | C346：全锚平方耗散下的回返—真残差双侧估计；连续补偿已推出任意周期误差界，原最近零锚一般模的反向方向恢复未闭。 |
 | [保残差补全与完整纤维方向自由度](residual_preserving_fiber_completion.md) | C347：固定原允许 RLEB、完整真残差和误差界时的最大补全；检验允许方向与完整残差是否被错误扩充为完整纤维方向条件。 |
+| [倾斜纤维的两等价与承重边界](tilted_fiber_equivalences.md) | C348：真实双右端距离的结构恢复成立；原一般模导入的下降可由旧下逆更强地推出，仍不能宣布共同结构完成。 |
 | [原图间隙的两个切片](../../canonical/graph_gap_monotonicity_regularity.md) | 图上零值刻画单调或弱单调，零残差截面的二次增长在明确覆盖下等价于真残差线性次正则。反向线性图给直接收敛蕴含的反例。 |
 | [能量、支撑与满秩复合](energy.md) | 精读 LMZ，给出支撑亏损的锐路线：当 \(d^q\lesssim r\)，保住 KL 指数 \(q/(1+q)\) 的全类阈值是 \(\alpha\ge\max(0,1-1/q)\)。另给用原增长支撑直接证明完整近端收敛、且对任意收缩因子排除 C320 的曲复合实例。 |
 | [图投影、横截性与活动零点](geometry.md) | 检查同一图的两类观察能解释什么，以及固定一点的一阶等式会漏掉什么。 |

@@ -3047,3 +3047,13 @@
 - **Exact Statement / Quantifiers**：在每个 \(y\in Y\) 任添 \(E_y\subseteq\{v:\|v\|\ge r_0(y)\}\)，在其他输出不改图，所得 \(F_E\) 保持全空间的完整残差与完整零集，原 \(\mathcal J_0\)、所有参数、原 (P1)–(P4) 和原严格初值预算均不变。逐点最大补全是 \(\widehat F(y)=\{v:\|v\|\ge r_0(y)\}\) 对 \(y\in Y\)。对全部 \(a,w\) 与有限 \(L\ge r_0(y)\)，同时有 \(\inf_{v\in\widehat F(y),\|v\|\le L}\langle a,v\rangle=-L\|a\|\) 及 \(\operatorname{dist}(w,\widehat F(y))=(r_0(y)-\|w\|)_+\)；\(L<r_0(y)\) 时前一集合为空。
 - **Dependencies / Evidence**：[自足补全证明](research/topics/common_structure/residual_preserving_fiber_completion.md#residual-preserving-completion)。新增零值只可能发生在原 \(r_0(y)=0\) 的实际输出，原 (P3) 在零处强制该点属于 \(S\)，所以完整零集没有扩大。原允许图保持，评价完整纤维的误差界仍逐点相同。
 - **Scope / Counterevidence / Objections**：保持的是明确允许子关系，不能要求补全后的全部新根自动满足原反射界；额外闭图、单值、最大性或完整截断图条件也不在结论内。C337 通过添加小值降低残差；本条固定已经成立的误差界和残差却仍能填满方向。它排除从当前原数据无条件恢复完整纤维额外方向，不否定允许图方向与完整原点残差之间的共同结构。见 [F116](FAILED_ROUTES.md#f116)。
+
+
+<a id="c348"></a>
+## C348-v1 · 倾斜纤维的两种恢复及其非线性 RLEB 归约边界
+
+- **Status**：`derived-checked`。独立冷审与主代理逐式核定两等价、原允许/完整图的区别、固定原因子、跳跃模、Dini 采样和有限前缀。当前共同结构的承重门未通过；此状态不代表找到目标 M 或确认原创。
+- **Objects / Domain / Definitions**：有限维欧氏原 \(F\)、固定 \(\lambda>0\)、非空闭 \(S\subseteq\operatorname{zer}F\)、非空受检纤维 \(\Gamma_y\subseteq F(y)\)、完整 \(r_y=\inf_{F(y)}\|v\|\)。固定 \(0<\theta<1,m>0\)，非减 \(\chi\) 在受检步上有限，\(\chi(0)=0\)。对原弦写 \(t=d(y+\lambda v),q=d(y),h=\chi(\lambda\|v\|),b=\chi(\lambda r_y)\)。条件为全部允许值满足 \(t^2\ge q^2+(1-\theta)h^2+\theta b^2+(mq-b)_+^2\)。
+- **Exact structural statement / Scope**：若 \(S=p_0+L\) 仿射、\(F(y)\subseteq L^\perp\)、\(\Gamma_y=F(y)\)、\(\chi=\mathrm{id}\)，令 \(n=y-P_Sy\)，则同一条件当且仅当 \(\theta\lambda^2[r_{-n/(\theta\lambda)}(y)^2-r_0(y)^2-\|n\|^2/(\theta\lambda)^2]\ge(mq-\lambda r_0(y))_+^2\)，两个 \(r_\eta\) 均对原完整纤维取下确界。附加真实 LMSR \(\lambda r_y\ge mq\) 和同纤维沿 \(n\) 的投影单值，条件恰等价零锚单调；线性单值整图时进一步等价通常全对单调。改为全部功非负且有范数趋最小、功趋零的原值序列，条件恰等价该 LMSR。各附加条件不预设自己要恢复的性质。
+- **Original PPA implication / Dependencies**：一般闭目标、同一允许图上的条件给 \(t^2\ge(1+m^2/2)q^2+(1-\theta)(h^2-b^2)\)。另有原输入覆盖、由 \(\chi\) 定义的逆步界在 \(\rho_m=(1+m^2/2)^{-1/2}\) 的几何采样可和及严格初值预算，则每条允许原轨道可续、有限长并点收敛。非解认证域非空须按正文独立保证。原一般 RLEB 取 \(a=L(\lambda r_y),u=L(\lambda\|v\|)\)、\(L=H\) 的广义下逆、\(m=\sqrt{2(1-\kappa^2)}/\kappa,\chi=\sqrt{(1-\kappa^2)/2}\,L\) 可导入且保持给定 \(\kappa\)；负共单调加真 LMSR 另有线性 \(\chi\) 导入。
+- **Evidence / Counterevidence / Objections**：[完整定义、证明与独立归约](research/topics/common_structure/tilted_fiber_equivalences.md)。原 RLEB 已有 \(q/\kappa\le a\le u\le t\)，直接给 \(t^2\ge\kappa^{-2}q^2+u^2-a^2\)，强于候选所需下降；两个倾斜右端的恢复关系没有被该推导使用。C347 限制从允许图到完整倾斜纤维的升级；C277 可编码同弦预算，C315 已有下逆。故保留真实结构等价，拒绝以此宣告共同机制完成；见 [F117](FAILED_ROUTES.md#f117)。

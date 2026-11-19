@@ -9956,6 +9956,50 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "TF-CONVERGENCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "TF-EQUIVALENCES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "TF-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "TF-REDUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12582,6 +12626,22 @@
     "E659": {
       "x": 3169.05,
       "y": 4335.64
+    },
+    "E660": {
+      "x": 4731.81,
+      "y": 4491.31
+    },
+    "E661": {
+      "x": 4794.91,
+      "y": 4440.92
+    },
+    "E662": {
+      "x": 4449.81,
+      "y": 4482.69
+    },
+    "E663": {
+      "x": 3235.67,
+      "y": 4267.27
     }
   },
   "bounds": {
