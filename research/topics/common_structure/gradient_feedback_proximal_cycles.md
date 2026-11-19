@@ -136,6 +136,30 @@ b(t)=\sqrt{\omega(t)^2-(q^{-1}-1)^2t^2}
 \]
 在零附近取上式的 \(b\)，\(b(0)=0\)，向外作连续非负有界延拓使 \(b\le1\)。模非 Dini 保证 \(\omega(t)/t\to\infty\)，因而小窗内根号良定。位置半径在原步下保持不变，角度可由已知半径和法向输入唯一求回，故这是连续全域双射，原根唯一。取工作集为全部 \(S=\{0\}\times\mathbb R^2\) 加上小法向条带内的环带 \(1\le\|z\|\le2\)。在环带上 \(\|x-y\|=\omega(d(y))=r_F(y)\)，故可取 \(c=1\)。势 \(h=q(1-q)^{-1}\Phi(|u|)\) 支付共轭代价，因 \(\Phi(t/q)\ge q^{-1}\Phi(t)\) 且 \(\Phi^*(\omega(t))\le\Phi(t)\)。然而任何环带内非驻定轨道的角度每步向同一方向转动，增量趋零，总转角发散。这里用 \(d_k=q^k d_0\)、\(b(t)\sim\omega(t)\) 及非 Dini 等价于 \(\sum_k\omega(q^k d_0)=\infty\)，后者由单调性在等比分割区间上积分得到。累计角度越过每个 \(2\pi n\) 与 \(2\pi n+\pi\) 的首次误差均趋零，产生两个不同聚点。故轨道有界，但不点收敛。对允许任意凹模的判据，\(\lambda Lc>1\) 的严格性因此不可删。
 
+<a id="feedback-critical-dini"></a>
+**即使 Dini 和全域凸接触都在，临界仍失败。** 固定 \(1<p\le2\)，令 \(\omega(t)=\log(e^2/t)^{-p}\) 于足够小的正尺度，并用正斜率切线作凹的全域延拓。该模满足 Dini。定义
+\[
+a(t)=\Phi^*(\omega(t))/\omega(t)=t-\Phi(t)/\omega(t)\quad(t>0),\qquad a(0)=0.
+\]
+于是 \(0<a(t)\le t\) 且 \(a\) 非减，因为 \(a'(t)=\Phi(t)\omega'(t)/\omega(t)^2\)。模的正尾斜率保证 \(\inf_{t>0}\omega(t)/t>0\)。取 \(M>0\) 足够大使 \(a(t)/M\le\omega(t)/2\) 全域成立。对 \(y=(u,z)\) 与 \(t=|u|\) 取连续完整图
+\[
+F(u,z)=\left(\operatorname{sgn}(u)\,\frac{a(t)}M,\
+      \sqrt{\omega(t)^2-a(t)^2/M^2}\right).
+\]
+取 \(\lambda=L=c=1\)、\(S=\{0\}\times\mathbb R\)、\(h(u,z)=M\Phi(|u|)\)。这里 \(r_F(y)=\omega(d(y))\) 精确成立，且 \(\langle\nabla h(y),F(y)\rangle=\Phi^*(\|F(y)\|)\)。因此全域凸接触和全部分数弦均成立。原根唯一，因为法向半径由 \(t_{\rm in}=t_{\rm out}+a(t_{\rm out})/M\) 唯一倒推，切向随后确定。
+
+对非解初值，法向半径 \(t_k\downarrow0\)。令 \(A_k=\log(e^2/t_k)\)。分部积分或求导比较给
+\[
+\Phi^*(\omega(t))=p\int_0^t \log(e^2/s)^{-p-1}\,ds
+           \sim pt\log(e^2/t)^{-p-1}.
+\]
+故 \(a(t)/t\sim p/\log(e^2/t)\)，而
+\[
+A_{k+1}-A_k=\log\!\left(1+\frac{a(t_{k+1})}{M t_{k+1}}\right)
+              \sim\frac{p}{M A_{k+1}}.
+\]
+由此 \(A_{k+1}^2-A_k^2\to 2p/M\)，即 \(A_k\sim\sqrt{2pk/M}\)。每步切向位移方向相同且大小 \(\asymp k^{-p/2}\)，总和发散。这证明严格参数在产生原根的强版本中仍不可删。此例的法向一步因子趋于一，未满足原 RLEB 的固定距离收缩。
+
 **完整的原 Dini RLEB 也不能全部导入。** 在 [C242](../../canonical/triangular_rleb.md#tri-object) 中把平方根换成 \(\ell(t)=\log(e^2/t)^{-2}\) 于足够小的正尺度，令 \(\ell(0)=0\)，再作凹的正斜率切线延拓。保持 \(F(u,z)=(u,-\ell(|u|))\) 及 \(\lambda=1\)。原根仍全域唯一，法向每步减半，完整残差至少为 \(\ell(d)\)，精确原反射模为 \(2\ell(t/2)\)。因此取真误差模 \(\psi=\ell^{-1}\) 和 \(\kappa=3/4\)。由于
 \[
 \ell(3t/4)-\ell(t/2)\asymp \log(e^2/t)^{-3}\gg t/2 ,

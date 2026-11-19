@@ -10297,6 +10297,17 @@
       "y": 4214,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "FEEDBACK-CRITICAL-DINI": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -13043,6 +13054,10 @@
     "E689": {
       "x": 4842.19,
       "y": 4251.62
+    },
+    "E690": {
+      "x": 4826.67,
+      "y": 4229.8
     }
   },
   "bounds": {

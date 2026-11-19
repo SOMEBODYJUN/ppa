@@ -3214,3 +3214,10 @@
 - **Status**：`derived-checked`。Astra Max 提供凸接触原根构造及一般分数弦变体，已重构投影边界排除、完整 \(r_F\) 门及无凸覆盖反例。依赖 Kakutani 原文一般紧凸集推论。
 - **Exact Statement**：沿用 C363 的空间、原图、闭零集、凹反馈模及参数。全空间逐点给非空紧凸子纤维 \(V(y)\subseteq F(y)\)，其图闭且局部有界。加入所有 \(y+t\lambda v\to y\) 边，\(v\in V(y),\,0<t\le1\)，边权 \(-\Phi^*(Lt\lambda\|v\|)\)，与 C362 (D) 及零回锚边一同验无负闭链。对任意 \(x\) 存在 \(y\in X\)、\(v\in V(y)\) 满足 \(x=y+\lambda v\)。若完整残差 \(r_F(y)\ge c\omega(d(y,S))\) 且 \(\lambda Lc>1\)，则每条如此选择的原 PPA 有限长点收敛。根存在阶段无需真残差门。
 - **Evidence / Scope**：[根存在、C242 直接验证及凸性限制](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-root-existence)。凸反馈可用逐点 \(\lambda\langle g(y),v\rangle\ge\Phi^*(L\lambda\|v\|)\) 验证，且全域正则条件下强制 \(S\) 凸。一般分数弦不要求凸势，但排除其分数输入碰到 \(S\) 的非零根，故未覆盖 C365 或一般原 RLEB。只保留任意非空紧子纤维时，闭链和正则都成立仍可没有原根。公开优先性未核定。
+
+<a id="c367"></a>
+## C367-v1 · Dini 和全域凸接触下的临界不收敛
+
+- **Status**：`derived-checked`。Astra Max 给出原图；全域参数、原根唯一、渐近与发散均另行重构。
+- **Exact Statement**：任取 \(1<p\le2\)，取零附近为 \(\log(e^2/t)^{-p}\) 的凹 Dini 反馈模。存在 \(\mathbb R^2\) 上全域连续单值原图、闭仿射零集、完整残差等于 \(\omega(d)\) 以及全域凸平坦势，满足 C366 除严格性外的全部条件。取 \(\lambda=L=c=1\)。每个原根唯一，所有非解轨道法向趋零，但切向每步同号且步长为 \(k^{-p/2}\) 级，故点列无界。
+- **Evidence / Scope**：[完整证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-dini)。临界障碍保 C366 的所有原根生成前件和 Dini。法向一步因子趋于一，故不主张满足完整原 RLEB。公开先行性未核定。

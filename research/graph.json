@@ -5098,6 +5098,12 @@
       "label": "C366 分数弦闭链产生原近端根",
       "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-root-existence",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-CRITICAL-DINI",
+      "label": "C367 全域凸闭链与 Dini 下的临界发散",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-dini",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12989,6 +12995,17 @@
       "output": "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT",
       "relation": "conditional",
       "scope": "原图逐点有非空紧凸局部有界闭图子纤维，全部分数弦加入闭链且无负圈。借投影不动点排除球面根并得到原覆盖，随后在完整真残差和严格参数下点收敛。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E690",
+      "inputs": [
+        "FEEDBACK-CRITICAL-DINI"
+      ],
+      "output": "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT",
+      "relation": "limits",
+      "scope": "Dini、全域凸接触和完整残差匹配全部保留，临界等号 λLc=1 时原根仍唯一存在，但所有非解轨道切向无界。限制收敛部分，根存在不受影响。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
