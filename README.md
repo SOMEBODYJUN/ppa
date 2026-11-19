@@ -67,8 +67,7 @@
 <a id="common-structure-frontier"></a>
 ## 当前专题：单调性和正则性是否有共同结构
 
-**当前发现任务**见[正向桥的筛选与首攻安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)。本库作为已知起点，旧 Luke–Tam 比较不再承担新方向发现。新读的增量角度／拟对称畸变与点态余导数正定理论提供不同的正向桥素材，精确前提及局限见[文献记录](research/LITERATURE.md#lit-discovery-distortion)。先争取新的关系引理，再检验完整 M；原多值图、一般非线性 RLEB、两个恢复与原 PPA 目标均未撤销。
-
+**当前唯一研究提示词**是[GPT_PRO_M_RESEARCH_PROMPT.md](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)：先从本库已掌握的成果推进，外部搜索补具体缺口，最终完成同一 M 的两个恢复与原 PPA 定理。数学方法保持自主；增量角度／拟对称不再被指定为唯一首攻。[发现与筛选安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)区分阶段成果与完整目标，[文献记录](research/LITERATURE.md#lit-discovery-distortion)保存已核事实，不据此提前判定某路线有效。
 
 [C369–C371 反馈的恢复范围](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery) 分别证明两个限定恢复。未知平坦势在线性类精确刻画某个等价内积下单调，正规矩阵类恢复原欧氏单调；完整图有有界可逆增益表示时，同势增长与一般模真误差界等价。缩速不变性和跨位置自由说明一般恢复仍缺何种信息。二次与非线性并不构成这条边界。
 
@@ -78,7 +77,7 @@
 
 [C361 反馈插值](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)给出两点弱单调刻画和固定目标置零代价。[复核](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-review)证明当前全点平坦梯度抵消强制 \(r_F\le Ld\)，其一般 RLEB 导入受到限制；两个反馈测试尚未成为同一 \(M_L\) 的恢复。原 PPA 距离估计对一般闭零集的声明已撤回，保留单点目标及限定参数下的版本。反馈可实现关系中的共同联系仍值得研究，当前状态为候选。
 
-**主问题。** 从原算子图出发，解释单调性与正则性各自约束的几何变化，并找出它们为什么在原近端步中发生联系。候选提出后，再逐条检验哪些既有 PPA 定理能在原假设、允许步长和初值范围下推出同一个 \(M\)。下列旧路线和反例用于检验覆盖及定位失败。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
+**主问题。** 从原算子图出发，解释单调性与正则性各自约束的几何变化，并找出它们为什么在原近端步中发生联系。候选提出后，再逐条检验哪些既有 PPA 定理能在原假设、允许步长和初值范围下推出同一个 \(M\)。下列旧路线和反例用于检验覆盖及定位失败。[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)
 
 [C360 原离散阻尼与原连续流分离](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 以同一精确非线性近端轮廓给原连续周期与零平面漂移，并在完整认证下实现指定紧流因子。原 PPA 仍点收敛。用于排除普遍的原流趋稳和正定梯度导入。[F127](FAILED_ROUTES.md#f127)
 
@@ -88,7 +87,7 @@
 
 [C357 的保距离近端共轭反例](research/topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) 把 C353 的单调盲区加强到切于恒等的解析原动力共轭，并在另一组共享非线性原 RLEB 数据的原图上分离完整真残差的最佳幂。共同结构的恢复须辨认跨点欧氏方向和原弦长度，见 [F124](FAILED_ROUTES.md#f124)。
 
-**统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120](FAILED_ROUTES.md#f120)
+**统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md) · [F120](FAILED_ROUTES.md#f120)
 
 [C354 的任意局部度障碍](research/topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree) 保持全部原根覆盖和幂最优的非线性反射模与完整真残差模，同时让近端输入映射的局部度独立取任意整数。一般 RLEB 的导入不能依赖非零度或连续选根，见 [F121](FAILED_ROUTES.md#f121)。
 
@@ -116,7 +115,7 @@
 
 [早期共用收敛证书的目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)记录共同充分条件 \(W\) 的数学身份及测试范围。现行任务还要求用同一个几何结构分别恢复两种性质，并由该几何关系解释原步。
 
-[研究导读](research/topics/common_structure/README.md)给出已证数学、失败路线和开放问题。[2026-11-19 新写的 GPT Pro 研究任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)直接说明要找的 M、两个恢复与原 PPA 推论，并带入已经排除的 RL 修补类型。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在锚输运和参数条件下给输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
+[研究导读](research/topics/common_structure/README.md)给出已证数学、失败路线和开放问题。[当前 GPT Pro 研究任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)直接说明要找的 M、两个恢复与原 PPA 推论，并带入已经排除的 RL 修补类型。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在锚输运和参数条件下给输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
 [原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C336 精确恢复同模延拓的真残差，C337–C339 将困难定位到最近锚的小图值、多尺度数据及多值长支。C329 只作为常数二次弱单调专门结果。
 
@@ -281,7 +280,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
+第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。旧文献仅在具体证明需要核对时回查，已掌握的背景不作为默认发现入口。
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
@@ -301,7 +300,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `research/topics/common_structure/matching_certificate_reduction.md` | C349：两项尺度排序、完整残差可取阈值、一般法切纤维的精确上下端、同参数单调/正则两恢复及原 PPA 充分性。独立冷审证明新增越界分支可从三条要求链删去，两个恢复均为既有扩张水平，不能据此宣告新共同机制。 |
 | `research/topics/common_structure/incoming_residual_reflection.md` | C350：当前完整残差约束下一原弦反射，优化剪切点偏差与所用值的非最小性成为相邻完整残差的非负损失；两种同参标定、原全部初值及正点跳跃模证明齐全。读此文件以使用跨边定量关系，勿把可删方向费用升级为共同结构已完成。 |
 | `发表成果整理/本轮重构/C351_结构与条件_重写.md` | C351 的可读正文：用输入、输出、距离和真残差直接写条件 M，展开 A、B 的精确等式及两种恢复，给出不经过广义逆的原模存在性与 PPA 证明。包含强附加条件、锚定与全对单调的区别，以及对原研究期望的范围判断。读 C351 先读此文。 |
-| `research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md` | 2026-11-19 从头写的新研究提示词。说明老师要找的共同 M、两个恢复、原 PPA 收敛、失败类型及交付方式。当前交给 Pro 应使用此文件，起草来源及范围见专题 README。 |
+| `research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md` | 当前唯一启动提示词。固定共同 M、两个等价恢复、一般非线性 RL 与原 PPA 目标；说明如何继承仓库、按缺口外搜、避免重复旧理论，并要求少代换、完整量词和清楚说明。方法不预定，阶段成果不冒充任务完成。 |
 | `research/topics/common_structure/two_point_scale_compatibility.md` | C351 的完整技术正文：跨位置不等式消去两套原模的存在量词，含边柱距离、两个恢复、原 PPA 全部初值证明及不可删非对角项的原图证明。与 C315 已有的给定模下逆比较，具体恢复前提见重写稿。 |
 | `research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md` | C351 原验收及撤回记录。保留开壳条件、原模重建、限定恢复和轨道证明的审计，并记录为什么这些推导未解释共同来源。 |
 | `research/topics/common_structure/reflection_residual_transfer_candidate.md` | C352：原反射余量对完整残差阈值的有符号平移、跳跃上集、原PPA与偏移球面恢复；包括允许值严格大于完整不达到残差的版本。数学可复用，本路线独立结构终审尚未完成。 |

@@ -710,7 +710,7 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 
 Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math. 195(3) (2009), 257–274，DOI 10.4064/sm195-3-5，[正式全文](https://www.impan.pl/shop/publication/transaction/download/product/89492)，Definition 1.3、Definition 2.3。正文列径向幂伸缩为 δ-monotone 的标准例；拟对称用三点相对距离的模定义。正向启发是通过增量几何控制逆畸变，而非先独立输入一个距离—残差界。
 
-**范围及研究判断。** δ>0 比通常单调性强；全域非平凡拟对称映射为单值且单射，其零点至多一个。绝对残差模还需整体尺度校准，不能由无量纲角度决定幅度。本次没有取得一般多值、非孤立零集或原 RLEB 的转接，亦未把现成结论命名为新共同结构。优先试证与 C371 显式增益族的跨位置桥，见[发现安排](topics/common_structure/ASSESSMENT.md#discovery-reset)。
+**范围及研究判断。** δ>0 比通常单调性强；全域非平凡拟对称映射为单值且单射，其零点至多一个。绝对残差模还需整体尺度校准，不能由无量纲角度决定幅度。本次没有取得一般多值、非孤立零集或原 RLEB 的转接，亦未把现成结论命名为新共同结构。与 C371 显式增益族的跨位置桥仅是可选问题，不指定为首攻，见[发现安排](topics/common_structure/ASSESSMENT.md#discovery-reset)。
 
 ### 点态余导数正定与方向／逆稳定的共同关系
 

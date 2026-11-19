@@ -2,11 +2,11 @@
 
 ## 单调性与正则性的共同结构
 
-**发现阶段的当前安排。** 以本库已证范围为起点，不再把重读 Luke–Tam 或重复核对旧二次收敛链作为发现任务。外部资料须提供尚未掌握的数学操作。[本轮筛选与首攻任务](research/topics/common_structure/ASSESSMENT.md#discovery-reset)选择“增量角度 → 非线性畸变 → 逆映射模”为先行试证路线；局部余导数的 nearly strong monotonicity 转接为备用材料，bipotential 仅保留模型侧入口。它们都是研究素材，不是已经找到的新 M，也没有证明强于本库原理论。
+**当前唯一启动指令**是[给 GPT Pro 的研究提示词](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)。它从本库已掌握的成果继续研究，不以通用 PPA 外搜或重读 Luke–Tam 作为默认发现入口。外搜用于具体工具缺口、跨领域联系或候选先行性；再次找到旧背景不算新进展。数学目标、资料使用和交付写法分开说明。旧提示词只作历史记录。
 
-下一次发现交付先要求一条本库尚无的、由同一增量关系实际推出两侧联系的正向引理，再攻完整恢复、原 PPA 续接和一般 RLEB 导入。完整最终目标不变。发现席先读目标、相关正向资产及少量精确障碍；独立筛选席在候选成形后检查全库去重及反例量词。不能把“本版本失败”扩大成整个方法禁用，也不能把两个旧证明共用结尾当作共同来源。
+**方法不预定。** 上一轮把增量角度／拟对称指定为“唯一首攻”的选择撤回；相关文献事实不撤回，也没有证据判定该路线已优于其他候选。势、闭链、图间隙、增量角度及余导数均为可选工具。可以先取得受限类里的新关系，但原多值图、一般非线性 RL、完整真残差、同一 M 的两个等价恢复及原 PPA 存在性收敛始终是最终要求。详见[发现与筛选安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)。
 
-首要研究义务是从两类性质各自的定义提取原图的几何含义，再找出在原近端步中连接这两类变化的关系。已有 PPA 收敛定理在候选形成后承担覆盖检验。对每个纳入的定理，逐项证明原假设与相应参数如何推出同一关系，并写清原根、留域和初值范围。以下记录保留其数学适用范围，供审查候选的断点。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
+首要研究义务是从两类性质各自的定义提取原图的几何含义，再找出在原近端步中连接这两类变化的关系。已有 PPA 收敛定理在候选形成后承担覆盖检验。对每个纳入的定理，逐项证明原假设与相应参数如何推出同一关系，并写清原根、留域和初值范围。以下记录保留其数学适用范围，供审查候选的断点。[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)
 
 验收时分别定位同一几何关系在两个恢复证明及原 PPA 证明中用到的步骤。若去掉这条关系，仍能把两个旧条件各自产生的估计原样接成同一主证明，则该论证只支持共用收敛证书。更宽的参数或覆盖范围也只按各自证明登记。Luke–Tam 型结果与原 RLEB 用于后续检验适用范围。
 
@@ -35,7 +35,7 @@
 
 [C354](CLAIMS.md#c354) 关闭一个拓扑导入路线：全部原根覆盖、尖锐非线性反射/完整真残差模及原轨道点收敛，可与零局部度及无局部连续选根并存。当前首要义务仍是找跨点的独立共同关系，证明两个恢复和原步驱动；若使用拓扑，需说明如何绕开 [F121](FAILED_ROUTES.md#f121) 的导入断点。
 
-**统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120 失败原因](FAILED_ROUTES.md#f120)
+**统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md) · [F120 失败原因](FAILED_ROUTES.md#f120)
 
 **此前的共用收敛证书。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
@@ -117,7 +117,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**共同结构的首要义务。** 找同一个 \(M\)，在有独立含义的两种条件下分别恢复单调性和正则性，并用这条联系推出原 PPA 收敛。原锚点 RL 加误差界的重新组织及精确幅度匹配已按 F120 排除。[现行完成标准](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
+**共同结构的首要义务。** 找同一个 \(M\)，在有独立含义的两种条件下分别恢复单调性和正则性，并用这条联系推出原 PPA 收敛。原锚点 RL 加误差界的重新组织及精确幅度匹配已按 F120 排除。[现行完成标准](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 
@@ -164,7 +164,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)和 [F120](FAILED_ROUTES.md#f120)。先找几何关系，再做既有收敛定理的逐条导入。导入原 RLEB 时保留一般非线性反射模、完整纤维真残差和原步。
+**共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)和 [F120](FAILED_ROUTES.md#f120)。先找几何关系，再做既有收敛定理的逐条导入。导入原 RLEB 时保留一般非线性反射模、完整纤维真残差和原步。
 
 **既有次单调路线的比较。** [六路研究与独立反审](research/novelty/2026_10_14_submonotonicity/README.md)核实：LT二次点对类与Otero–Iusem2010作者稿精确换参，不等于其局部/收敛定理重复；非tied、矩阵、逆耗散与原函数结构有独立价值。同F/同lambda的diag例与GU3诊断证明，任意合法标量反射/EB压缩仍可丢方向关联，仅升为双范数D也未必修复。C249/C250本已零锚允许多值，不是全对LT的简单非线性别名。新GU1/GU3为报告级candidate。[综合报告](发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[复算](research/code/submonotonicity_routes/README.md)记录这个比较专题的具体结果。
 

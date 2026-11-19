@@ -3,7 +3,7 @@
 <a id="mother-question"></a>
 ## 首要问题
 
-从原算子图出发，找出单调性与正则性各自约束的变化及其在原步中的共同机制。已有收敛定理用于候选成形后的覆盖检验，下面的旧路线和反例用于核对候选的适用范围。[现行研究任务](GPT_PRO_M_NEW_2026-11-19.md)
+从原算子图出发，找出单调性与正则性各自约束的变化及其在原步中的共同机制。已有收敛定理用于候选成形后的覆盖检验，下面的旧路线和反例用于核对候选的适用范围。[现行研究任务](GPT_PRO_M_RESEARCH_PROMPT.md)
 
 
 [反馈的两个限定恢复](gradient_feedback_recovery.md#feedback-recovery) 给出未知共同势在线性类的精确内积单调恢复，以及完整增益图下的同势增长与一般模正则等价。原图可任意缩速与跨位置旋转的证明，解释一般恢复为何仍失败；不依赖法向或切向分解。
@@ -25,7 +25,7 @@
 
 [C357 的保目标距离近端共轭障碍](ppa_conjugacy_obstruction.md#ppa-conjugacy) 说明原动力、精确目标距离及共同 RLEB 数据仍不能无条件决定欧氏单调和真残差幂。
 
-**共同结构 \(M\) 尚未找到。C351 按本任务判失败。** 从原锚点 RL 与误差界出发的相容重写、消元和精确幅度匹配已被作者排除。[现行提示词](GPT_PRO_M_NEW_2026-11-19.md) · [F120](../../../FAILED_ROUTES.md#f120)
+**共同结构 \(M\) 尚未找到。C351 按本任务判失败。** 从原锚点 RL 与误差界出发的相容重写、消元和精确幅度匹配已被作者排除。[现行提示词](GPT_PRO_M_RESEARCH_PROMPT.md) · [F120](../../../FAILED_ROUTES.md#f120)
 
 现行目标要求在两组各有独立含义的附加条件下，用同一个几何结构 \(M\) 分别恢复单调或次单调与正则性，再由该结构证明原 PPA 从每个认证初值至少有一条点收敛轨道。旧目标 \(W\) 只要求共用充分证书，详见[早期任务与前期误判](OBJECTIVE_AND_PITFALLS.md)。
 
@@ -96,7 +96,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [非势原图的临界曲率](critical_graph.md) | 全对图亏损的候选收敛分界、完整单值原 PPA 的恒距圆轨道及有限长度反例。精确的小常数临界问题仍开放。 |
 | [两个独立审查与研究优先级](ASSESSMENT.md) | 核对哪些桥已证、哪些是既有语言、哪些反例决定了下一步。 |
 | [研究目标与已有教训](OBJECTIVE_AND_PITFALLS.md) | 三项前提怎样合用，存在轨道和全选的区别，参数的精确例子、本线主要误判及下一步。 |
-| [新写的 GPT Pro 研究任务](GPT_PRO_M_NEW_2026-11-19.md) | 从两类性质的独立含义寻找共同 M，明确两个恢复、原 PPA 推论和已排除的 RL 修补路线。先读此任务，再按需要调用旧资产。 |
+| [新写的 GPT Pro 研究任务](GPT_PRO_M_RESEARCH_PROMPT.md) | 从两类性质的独立含义寻找共同 M，明确两个恢复、原 PPA 推论和已排除的 RL 修补路线。先读此任务，再按需要调用旧资产。 |
 
 本稿于 2026-11-19 独立起草。写法参考 [prompt-master 1.8.2 的 SKILL 和 OpenAI Task Brief](https://github.com/nidhinjs/prompt-master/tree/49b3a72469b1e7287d66387004ccfcca90e5968a)，数学任务表述参考 [MathResearchPrompts](https://github.com/optsuite/MathResearchPrompts/tree/0f7890f202ec26645b2b90d322d91bee711c7d75)。本次拉取的两库主分支最近提交分别为 2026-10-22 和 2026-08-25。前者有 GPT-6.1 及 OpenAI 推理模型说明，后者有实际数学研究提示词。本轮未核实到专为 GPT-6.2 Pro 数学研究设置的开源库，模型写法同时核读 [OpenAI 当前 GPT-6.2 指南](https://developers.openai.com/api/docs/guides/latest-model)和[推理模型提示指南](https://developers.openai.com/api/docs/guides/reasoning-best-practices)。这些参考提供起草方法，本稿尚未经 Pro 研究运行检验。
 | [补偿锚距条件与双锐边界](compensated_anchor_convergence.md) | C341 的共用收敛证书、原 RLEB 同模同预算导入、全部固定正步长的极大单调导入；C342 的旋转族双门和 C277/C329 的完整去重。用于比较候选的收敛覆盖。 |

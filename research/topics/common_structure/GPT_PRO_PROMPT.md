@@ -1,3 +1,5 @@
+> 旧版研究任务记录，不作为当前启动指令。当前唯一提示词是 [GPT_PRO_M_RESEARCH_PROMPT.md](GPT_PRO_M_RESEARCH_PROMPT.md)。以下保留旧锚点和当时的任务文本，供历史定位。
+
 # GPT Pro 任务｜寻找单调性与正则性的统一结构 \(M\)
 
 <a id="pro-exact-goal"></a>
