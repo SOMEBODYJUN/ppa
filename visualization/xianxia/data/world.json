@@ -10363,6 +10363,39 @@
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "PPA-CARLIER-STEP-GAP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "PPA-DISTORTION-RESIDUAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "PPA-TRUNCATED-COMPENSATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -13133,6 +13166,18 @@
     "E695": {
       "x": 4827.93,
       "y": 4012.97
+    },
+    "E696": {
+      "x": 4919.19,
+      "y": 4112.37
+    },
+    "E697": {
+      "x": 4946.37,
+      "y": 4261.2
+    },
+    "E698": {
+      "x": 4831.07,
+      "y": 4370.92
     }
   },
   "bounds": {

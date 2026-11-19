@@ -733,3 +733,18 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 **Paper fact。** Buliga–de Saxcé–Vallée, *Non Maximal Cyclically Monotone Graphs and Construction of a Bipotential for the Coulomb's Dry Friction Law*, J. Convex Anal. 17(1) (2010), 81–94，[正式全文](https://journalofconvexanalysis.com/articles/jca17007/jca17007.pdf)，§5 给 Coulomb 摩擦的显式非分离 bipotential。de Saxcé, *Modelling contact with isotropic and anisotropic friction by the bipotential approach*, DCDS-S 9(2) (2016), 409–425，[出版社页](https://www.aimsciences.org/article/doi/10.3934/dcdss.2016004)，说明该方法面向非关联多值本构图，并由双势等号集表示原图。
 
 **范围。** 共同双势表示不等于单调、真残差正则或原 PPA 收敛。若继续，必须在明确的有限维物理平衡算子上量化非分离交叉项，不能只交存在表示或换成另一个预测校正算法。目前只列为备用原模型来源。
+
+<a id="lit-compensation-trials"></a>
+## 强弱补偿的技术迁移：联合几何、原弦余项与供给尺度
+
+完整的 25 项入口、核读深度和 10 项实际代入见[技术试验页](topics/common_structure/compensation_trials.md)。下面只登记承载本轮核心联系的原文位置，不把工具的已知性当作否决理由。
+
+- **联合增益与相位，Paper fact。** Liang–Zhao–Qiu, *Feedback Stability Under Mixed Gain and Phase Uncertainty*, [arXiv:2404.05609v1](https://arxiv.org/html/2404.05609v1)，§II-A、§III-A 使用 Davis–Wielandt shell 保留同一向量上的方向和幅度信息。其 LTI 鲁棒稳定性定理未导入原多值 PPA；本页试验一直接重构实联合集合和原步净收益，说明独立取最坏可能丢失关联。
+- **Carlier 余项，Paper fact。** Bauschke–Singh–Wang, *On Carlier's inequality*, [arXiv:2206.14872v1](https://arxiv.org/pdf/2206.14872)，式 (6)、§2、Theorem 4.5、Corollary 7.4。该文给 Fenchel–Young gap 的近端残差平方下界、原/逆参数交换及循环单调强化。本库 C376 给带指定原/逆 Bregman 差的精确代数分解。Corollary 7.4 的递推固定 x、更新对偶锚，不是本项目原 PPA；可和性不能直接照搬。一般非单调全图 gap 对负线性图可无穷，有限尺度亏损仍待构造。
+- **畸变到残差的直接转接。** 上一节已有的 δ 单调来源此次按 [Kovalev–Maldonado–Wu arXiv v2](https://arxiv.org/pdf/math/0611110) Definition 1.2 / Theorem 1.3 再核：凸域、n≥2、非恒定、0<δ≤1、2B⊂Ω；η 只依赖 δ。C375 在认证闭球内以一个实际非零参考值校准出 m/η(R/t)，另给产品型非孤立零集提升。一般多值或任意零集尚未导入。arXiv v2 引前作 Theorem 4，刊本引用编号不同，不混淆版本。
+- **交叉能量，Paper fact 与迁移分开。** Dolbeault–Mouhot–Schmeiser, [arXiv:1005.1495v1](https://arxiv.org/pdf/1005.1495)，§1.3、H1–H4、Theorem 2 用修正能量联系微观耗散与宏观控制。本次原 PPA 的 2×2 矩阵恒等式另行证明，不将连续动力学原文直接用作离散定理。
+- **供给重标度，Paper fact。** Sontag–Teel, *Changing Supply Functions in Input/State Stable Systems*, [作者版本](https://sontaglab.org/FTPDIR/tn950112.pdf)，1995，Theorems 1–2 / §II，以 W=ρ∘V 改变连续系统供给对，自由度有零附近与无穷远阶限制。本库另证离散凸重标度的有限接口。Nešić–Teel 2001 的离散版本本轮仅定位元数据/摘要，未导入正文定理。
+- **一般模加权合成，Paper fact。** Dashkovskiy–Rüffer–Wirth, [arXiv:0901.1842v2](https://arxiv.org/html/0901.1842v2)，§5 Definition 8 / Theorems 9–10 由指定小增益假设构造 Ω-path 及最大加权储能。试验九另证两观测的一般模离散接口，并核对原 RLEB 已有的小增益组合；后者不作为本轮新发现。
+- **测试方向与正则，Paper fact 与初试。** Ciarlet–Jamelot, [arXiv:2410.14444v1](https://arxiv.org/pdf/2410.14444)，§2 Definition 1 / Theorem 1 回顾 T-coercivity 与线性变分适定性的关系。本次全纤维测试到真残差的 Cauchy–Schwarz 推导自足；T 与原 PPA 的兼容仍缺。未取到的更早论文不能被称为已精读。
+
+**解释及状态。** 这些已知技术提供不同的可迁移动作，不是完整 M 已存在的文献证明。本次新增的是在本项目原对象上的明确初试、所得公式和断点；不认证全球新颖性。来源访问失败不否定数学方法。

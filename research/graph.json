@@ -5133,6 +5133,21 @@
       "id": "PPA-ENDPOINT-STEIN",
       "label": "C373 原步端点的 Stein 储能迁移",
       "file": "topics/common_structure/compensation_trials.md#endpoint-storage"
+    },
+    {
+      "id": "PPA-TRUNCATED-COMPENSATION",
+      "label": "C374 一般模完整残差下截断支付",
+      "file": "topics/common_structure/compensation_trials.md#truncated-compensation"
+    },
+    {
+      "id": "PPA-DISTORTION-RESIDUAL",
+      "label": "C375 拟对称校准与产品零集",
+      "file": "topics/common_structure/compensation_trials.md#distortion-residual"
+    },
+    {
+      "id": "PPA-CARLIER-STEP-GAP",
+      "label": "C376 原逆差与实际近端弦",
+      "file": "topics/common_structure/compensation_trials.md#carlier-original-step"
     }
   ],
   "edges": [
@@ -13090,6 +13105,41 @@
       "output": "PPA-ENDPOINT-STEIN",
       "relation": "conditional",
       "scope": "完整单值实方阵原图、S={0}、固定正步长且I+lambda A可逆。全初值原PPA趋零、平移谱模长大于一及正定端点储能等价。不是一般非线性RL导入。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E696",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-TRUNCATED-COMPENSATION",
+      "relation": "conditional",
+      "scope": "每条指定允许原边存在输入最近锚给方向亏损-a(t)||v||，且同输出完整r_F>=chi(t)>0时，原距离平方支付Delta=[lambda chi-a]_+^2-a^2。非孤立点收敛和一般RL导入尚缺。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E697",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-DISTORTION-RESIDUAL",
+      "relation": "conditional",
+      "scope": "单值图在含零闭球为eta拟对称单射，实际参考幅度m给rho(t)=m/eta(R/t)。delta单调外部导入另限凸域、n>=2、非恒定、2B在域内；全域连续版本有原PPA收敛和产品零集提升。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E698",
+      "inputs": [
+        "D01"
+      ],
+      "output": "PPA-CARLIER-STEP-GAP",
+      "relation": "conditional",
+      "scope": "有限维proper下半连续凸f，f(x)和f*(u)有限，y=prox_lambda f(x+lambda u)，v=u+(x-y)/lambda时，Fenchel gap精确分成两个指定次梯度Bregman差及原步平方/lambda。只在此凸子类。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

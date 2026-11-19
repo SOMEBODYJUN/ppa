@@ -69,7 +69,7 @@
 
 **来源不决定资格。** 已知数学结构若能在本问题中描述并完成所需联系，就可以作为 M；不因工具已知而否决。当前按单调／次单调与正则的强弱补偿机制广筛技术并即时初试，来源、新颖性与适用范围分别记录。
 
-[强弱补偿的技术初试](research/topics/common_structure/compensation_trials.md)保存沿原步实际展开的技术迁移。[C373 的端点储能](research/topics/common_structure/compensation_trials.md#endpoint-storage)把经典 Stein 判据接到原线性 PPA，保留大步长负方向的稳定；另试 T-coercivity、供给重标度和一般模小增益，逐项写清能推出什么及首个缺口。它是继续发现 M 的技术工作页，未完成一般多值共同结构。
+[强弱补偿的技术初试](research/topics/common_structure/compensation_trials.md)已筛 25 个有亲缘关系的技术入口，展开 10 项证明试验。[C374 的一般模支付门](research/topics/common_structure/compensation_trials.md#truncated-compensation)计算方向亏损与完整残差的尺度交换；[C375 的拟对称转接](research/topics/common_structure/compensation_trials.md#distortion-residual)由跨点方向产生一般残差模，并保留产品型非孤立目标；[C376 的 Carlier 余项](research/topics/common_structure/compensation_trials.md#carlier-original-step)将原、逆 Bregman 差与实际原步写入同一恒等式。[C373 的端点储能](research/topics/common_structure/compensation_trials.md#endpoint-storage)保留大步长负方向的稳定。联合几何、交叉储能、动态乘子等其余初试及断点同页可读，尚未完成一般多值共同结构。
 
 **当前唯一研究提示词**是[GPT_PRO_M_RESEARCH_PROMPT.md](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)：先从本库已掌握的成果推进，外部搜索补具体缺口，最终完成同一 M 的两个恢复与原 PPA 定理。数学方法保持自主；增量角度／拟对称不再被指定为唯一首攻。[发现与筛选安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)区分阶段成果与完整目标，[文献记录](research/LITERATURE.md#lit-discovery-distortion)保存已核事实，不据此提前判定某路线有效。
 
@@ -294,6 +294,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
+| `research/topics/common_structure/compensation_trials.md` | 强弱补偿的 25 项技术入口与 10 项实际初试；保存联合方向—幅度集合、C374 一般模截断支付、C375 拟对称校准及产品零集、C376 Carlier 原弦余项、C373 端点 Stein，以及测试变换、供给重标度和动态乘子的具体断点。寻找下一项可迁移技术、比较补偿预算或重试某一步时读此页；来源与证据深度同页可查，不是完整 M 的完成声明。 |
 | `research/topics/common_structure/fiber_reflection_rigidity.md` | C345 的加权反射恒等、完整残差下界和同纤维两值锚差估计，含零尺度、零反射和跳跃误差模的处理。用于检查正则尺度如何限制方向，以及区分真实结构推导与旧半和界的再包装；跨值关系承担PPA下降仍开放。 |
 | `research/topics/common_structure/convexified_proximal_paths_obstruction.md` | C359：闭图多值算子的同凸纤维、同全部有限和无限凸化原路径、异真误差界幂。给共同原一般模、全部根、非解初值，用于排查凸化丢失的正则信息。 |
 | `research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md` | C360：同一精确反射与完整真残差下的原连续周期、零平面漂移及任意紧流因子。给完整原根、离散阻尼、局部功形式及梯度表示的严格边界。 |

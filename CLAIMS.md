@@ -3266,3 +3266,27 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意 n≥1、实 n×n 矩阵 A 和 λ>0，假设 I+λA 可逆，取完整单值 F(y)={Ay}、S={0}。下列等价：每个初值的唯一原 PPA 轨道趋零；每个复特征值 a 满足 |1+λa|>1；存在实对称 P≻0 使 (I+λA)ᵀP(I+λA)−P≻0。
 - **Definitions / Dependencies / Evidence**：完整原步与真残差沿 D01；[正文与完整证明](research/topics/common_structure/compensation_trials.md#endpoint-storage)。经典 Stein/Lyapunov 结构为已知技术；本页用收敛矩阵级数重构，不依赖未核外部定理。
 - **Counterevidence / Scope / Related Files**：严格全空间条件排除非零核且强制几何速度，尚不能导入一般多值、非孤立或慢收敛原 RL。C370 的全分数弦是另一合同，本结论只检验实际端点；负线性图给 λa>2。两个一般恢复仍开放。
+
+<a id="c374"></a>
+## C374-v1 · 完整残差下截断后的非线性方向支付
+
+- **Status**：`derived-checked`。原平方展开、完整纤维不等式方向及受限一维最小化均已重构；不认证新颖性或算子类锐性。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维原多值 F、非空闭 S⊆zer F、λ>0，固定输入域 D 及非空允许原根子关系。对其中每条非解输出边 x=y+λv，令 t=d(y,S)>0；假设存在输入最近锚 p∈P_S(x) 使 ⟨y−p,v⟩≥−a(t)‖v‖，a(t)≥0，并假设该输出的完整 r_F(y)≥χ(t)>0。则 d(x,S)²≥t²+Δ(t)，其中 Δ(t)=[λχ(t)−a(t)]₊²−a(t)²。a(t)>0 时，Δ(t)>0 当且仅当 λχ(t)>2a(t)；a(t)=0 时总有 Δ(t)>0。
+- **Definitions / Dependencies / Evidence**：D01/D04 的原图、完整残差、最近点及[自足推导](research/topics/common_structure/compensation_trials.md#truncated-compensation)。a=A tᵖ、χ=c tᑫ、A,c>0 时，q<p 在足够小域通过，q=p 的严格门为 λc>2A；特别 p>q>1 容许弱于线性的残差下界。
+- **Counterevidence / Scope / Related Files**：这是所给两个输入的精确标量放松，不是已实现整类算子的必要条件；q>p 只否定此证书。非孤立目标的点收敛、原根续接、留域和一般 RL 直接产生输出尺度 a 的桥仍未证明。非二次亏损的同类优化同页列出，完整 M 未完成。
+
+<a id="c375"></a>
+## C375-v1 · 拟对称校准到一般真残差模及产品零集提升
+
+- **Status**：`derived-checked`。三点比较、参考尺度及产品原步已独立重构；方向到拟对称的外部条件按 arXiv v2 Theorem 1.3 核读。
+- **Exact Statement / Objects / Domain / Quantifiers**：R>0，单值 G 定义在包含 B̄(0,R) 的开域，G(0)=0 且在该闭球上是 η-拟对称单射。任取 ‖z‖=R，m=‖G(z)‖>0，则对每个 0<t=‖y‖≤R，有 r_G(y)=‖G(y)‖≥m/η(R/t)，右边在 t=0 补零。若 n≥2、Ω 凸且包含 B̄(0,2R)、G 非恒定并满足 0<δ≤1 的全对 δ 单调，则所引定理供应只依赖 δ 的 η；原步还满足 ‖x‖²≥t²+2λδtρ(t)+λ²ρ(t)²，其中 ρ(t)=m/η(R/t)。
+- **Definitions / Dependencies / Evidence**：[完整定义、局部域及全域 PPA/产品证明](research/topics/common_structure/compensation_trials.md#distortion-residual)；Kovalev–Maldonado–Wu arXiv:math/0611110v2 Definition 1.2 / Theorem 1.3。全域连续 δ 单调版本的原根对所有输入唯一存在并收敛到零；F(z,y)=(0,G(y)) 保留原步和完整残差，给 S=ℝᵐ×{0} 的非孤立子类。
+- **Counterevidence / Scope / Related Files**：绝对幅度必须由实际 m 校准，角度不决定 m；局部拟对称不自动给完整原根留域。一般多值纤维、弯曲零集、切向搬运和原一般 RL 导入仍开放。没有宣称该既有理论或本次直接推论首创。
+
+<a id="c376"></a>
+## C376-v1 · 原近端弦中的 Fenchel–Young 三项分解
+
+- **Status**：`derived-checked`。由 Fenchel 接触等式直接重构；Carlier 文献只作为已知余项机制的来源，不将其递推替换成本项目轨道。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意有限维 proper 下半连续凸 f、λ>0 和 f(x)、f*(u) 有限的 x,u，令 y=prox_{λf}(x+λu)、v=u+(x−y)/λ∈∂f(y)。则 f(x)+f*(u)−⟨x,u⟩=D_f(x,y;v)+D_f*(u,v;y)+‖x−y‖²/λ，两个差按[正文](research/topics/common_structure/compensation_trials.md#carlier-original-step)定义且非负。u=0 时是原次梯度 PPA。
+- **Definitions / Dependencies / Evidence**：共轭、原近端最优性和 Fenchel 等式，正文自足代数；Bauschke–Singh–Wang arXiv:2206.14872v1 式 (6)、§2、§4、Theorem 4.5 与 Corollary 7.4。
+- **Counterevidence / Scope / Related Files**：一般有符号全图 gap 虽在任意原根处下界实际步长平方，但对 F=−bI 可为无穷，不能直接导入非单调原 RL。凸代表的全图接触已强迫单调；有限尺度接触亏损尚待构造。Corollary 7.4 固定 x、更新对偶锚，并非原 PPA。两个一般恢复仍开放。
