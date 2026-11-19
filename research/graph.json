@@ -4870,6 +4870,18 @@
       "label": "C344 候选：有限零锚分点与原图功预算",
       "file": "topics/common_structure/finite_anchor_convergence.md#finite-anchor-candidate",
       "evidence_status": "candidate"
+    },
+    {
+      "id": "FR-DATA",
+      "label": "C345 同一完整残差与逐图值最近输入零锚",
+      "file": "topics/common_structure/fiber_reflection_rigidity.md#fiber-rigidity",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "FR-RIGIDITY",
+      "label": "C345 反射模与真残差共同限制纤维方向及零锚差",
+      "file": "topics/common_structure/fiber_reflection_rigidity.md#fiber-two-values",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12338,6 +12350,28 @@
       "output": "MOTHER-OPEN",
       "relation": "open",
       "scope": "两份不同静态候选有完整试证，但各自独立 G1–G7 未闭；不可因它们的作者审过 C341 就提升自身，也不可默认为与 M003-v2 等价。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E652",
+      "inputs": [
+        "FR-DATA"
+      ],
+      "output": "FR-RIGIDITY",
+      "relation": "implies",
+      "scope": "同一输出y的每条受检真实图值各有其最近输入零锚；完整r_F(y)的共同下界控制最优加权反射球的余量及两锚差，不凸化原纤维。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E653",
+      "inputs": [
+        "FR-RIGIDITY"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "跨图值方向约束尚未承担原PPA参数相容或下降；只丢去位置项即回到旧半和界，不是本次M完成。",
       "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

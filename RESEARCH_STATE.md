@@ -8,6 +8,8 @@
 
 **共同结构仍开放。** 要找同一个 \(M\)，证明它在条件 \(A\) 下等价于单调或次单调，在条件 \(B\) 下等价于正则性。再证明这两类性质加各自的参数条件推出 \(M\)，从而保证原 PPA 至少一条可续的点收敛轨道。原 RLEB 的一般非线性反射模和真残差误差界要纳入。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md) · [C341 的机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
 
+[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。本轮共同结构任务保持**未完成**。正在检验完整倾斜残差的方向转接及任意周期长度的单接缝误差关系；未写出且独立核实的推导不得调用为结论。
+
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 
 **G3 的 LT 边界保持。** [C340](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample) 的完整二维线性图满足全部 LT 结构前提及严格参数门，却否定正式 Theorem 2 的同球根覆盖；实际轨道仍全局收敛。完整 LT 的修订导入须独立区分较小初值域与较大工作域并证明续接，不得直接沿用印刷同球句。本次以经典极大单调行完成 G3，没有宣布所有 LT 或其他组合已导入。

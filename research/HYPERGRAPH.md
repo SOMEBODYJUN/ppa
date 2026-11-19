@@ -1010,6 +1010,8 @@
 | E649 | [CA-OBJECT · C341 静态补偿锚距条件 M003-v2](topics/common_structure/compensated_anchor_convergence.md#ca-definition) | open → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 最低两行已完成；仿射切向相消、一般 KL/变化右端、LT 修正局部化、无限维与非精确版本仍须逐行构造原根和证书。；**open** |
 | E650 | [CA-RESIDUAL-OBSTRUCTION · F113 点态非零残差不能替代有界窗识别](topics/common_structure/compensated_anchor_convergence.md#ca-attacks) | limits → [CA-OBJECT · C341 静态补偿锚距条件 M003-v2](topics/common_structure/compensated_anchor_convergence.md#ca-definition) | 原根不变覆盖和零补偿支付加每点正残差仍不能保证目标收敛；D=(1,2] 上唯一根 (x+1)/2 趋1而目标为0。必须保留有界序列真正则识别或独立替代。；**derived-checked** |
 | E651 | [CA-LIFT-CANDIDATE · C343 候选：增维真残差锚距及仿射积分门](topics/common_structure/lifted_residual_distance.md#lrd-definition) ∧ [CA-FINITE-CANDIDATE · C344 候选：有限零锚分点与原图功预算](topics/common_structure/finite_anchor_convergence.md#finite-anchor-candidate) | open → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 两份不同静态候选有完整试证，但各自独立 G1–G7 未闭；不可因它们的作者审过 C341 就提升自身，也不可默认为与 M003-v2 等价。；**open** |
+| E652 | [FR-DATA · C345 同一完整残差与逐图值最近输入零锚](topics/common_structure/fiber_reflection_rigidity.md#fiber-rigidity) | implies → [FR-RIGIDITY · C345 反射模与真残差共同限制纤维方向及零锚差](topics/common_structure/fiber_reflection_rigidity.md#fiber-two-values) | 同一输出y的每条受检真实图值各有其最近输入零锚；完整r_F(y)的共同下界控制最优加权反射球的余量及两锚差，不凸化原纤维。；**derived-checked** |
+| E653 | [FR-RIGIDITY · C345 反射模与真残差共同限制纤维方向及零锚差](topics/common_structure/fiber_reflection_rigidity.md#fiber-two-values) | open → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 跨图值方向约束尚未承担原PPA参数相容或下降；只丢去位置项即回到旧半和界，不是本次M完成。；**open** |
 
 ## 不蕴含关系
 

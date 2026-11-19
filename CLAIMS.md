@@ -3019,3 +3019,12 @@
 - **Assumptions / Quantifiers**：输出集 \(Y=\operatorname{pr}_1\Gamma\) 上的完整真残差满足 \(r_F(y_j)\to0\Rightarrow d(y_j)\to0\)。给有限非负径向 \(h\)，仅要求零处连续且为零，以及 \(c>0\)。每个 \(x\in D\) 有 \((y,v)\in\Gamma\)、\(x=y+\lambda v\) 满足 \(2\lambda(\max_{p\in P}\langle p,v\rangle-\langle y,v\rangle)\le(1-c)\lambda^2\|v\|^2+h(d(x))-h(d(y))\)。
 - **Exact Statement submitted / Conclusion**：每条满足上述原图功条件的选择可无限续接并点收敛于 \(S\cap\overline D\)，物理平方步长可和。对每个非空正距离壳层，输出访问次数不超过 \(\min_{p\in P}(\|z-p\|^2+h(d(z)))/(c\lambda^2m_Y(\varepsilon)^2)\)，其中 \(m_Y(\varepsilon)=\inf\{r_F(y):y\in Y,d(y)\ge\varepsilon\}\)。这是访问次数，不是最后访问时间。
 - **Evidence / Scope / Objections**：[完整试证、原 RLEB 预算导入、极大单调行及严格比较](research/topics/common_structure/finite_anchor_convergence.md)。同一闭半柱上的 \(F(a,w)=(a\|w\|^2,\|w\|Qw)\) 为少锚见证；其对整个指定窗口的静态弦检验不等于一条可组合轨道。换工作域后原全锚反证不自动延续。待独立核验有限分点条件、所有真实根、真正则及固定窗上的补偿不可能性；公开先行性未裁定。
+
+<a id="c345"></a>
+## C345-v1 · 完整真残差对同纤维图值与最近输入零锚差的约束
+
+- **Status**：`derived-checked`。主代理独立重构全部恒等、最优权重、两值三角式、\(t=0\) 与 \(\omega(t)=0\) 边界；此状态不包括共同结构完成或公开新颖性。
+- **Objects / Domain / Definitions**：有限维欧氏原 \(F\)、固定 \(\lambda>0\)、非空闭 \(S\subseteq F^{-1}(0)\)。每条受检真实图值 \(v\in F(y)\) 对输入 \(x=y+\lambda v\) 有见证 \(p\in P_S(x)\)，使 \(\|y-\lambda v-p\|\le\omega(t)\)，\(t=d(x,S)\in[0,R]\)。原模非减、零连续且零值为零；不同图值的锚可以不同。\(r_F(y)\) 始终对完整 \(F(y)\) 取下确界。
+- **Exact Statement / Quantifiers**：任取 \(0\le b\le r_F(y)\)。置 \(w=\omega(t),H=(t+w)/2\)，\(t>0\) 时令 \(s=\lambda(w-t)/(w+t)\)、\(E(t,b)=\sqrt{tw[1-(\lambda b/H)^2]}\)。则 \(\lambda b\le H\) 且 \(\|y+sv-p\|\le E(t,b)\)。\(w=0\) 时此式取 \(s=-\lambda,E=0\)；\(t=0\) 时原步为零并约定 \(s=E=0\)。同一 \(y\) 的任意两个受检图值及各自任意见证满足 \(\|s_1v_1-s_2v_2-(p_1-p_2)\|\le E(t_1,b)+E(t_2,b)\)。若已在真实残差帽内有 \(d(y,S)\le\psi(r_F(y))\)，可取 \(b=\inf\{u:d(y,S)\le\psi(u)\}\)，不要求残差达到或 \(\psi\) 正点连续。
+- **Dependencies / Evidence**：[自足命题与证明](research/topics/common_structure/fiber_reflection_rigidity.md#fiber-rigidity)。加权平方恒等对每个 \(a\in[0,1]\) 给 \(\|y+\lambda(2a-1)v-p\|^2+4a(1-a)\lambda^2\|v\|^2\le at^2+(1-a)w^2\)；最小步长上界在 \(a=w/(t+w)\) 取得，再对完整残差使用单向不等式 \(r_F(y)\le\|v\|\)。
+- **Scope / Counterevidence / Objections / Novelty**：剪切点只用于几何比较，不声称它是原PPA根；不对 \(F\) 取凸包。该关系独立于轨道，但当前收敛推导仍只使用丢掉位置项后的旧半和界。跨值关系未承担相容或下降，故不满足本轮共同结构验收第二、三项；见 [F114](FAILED_ROUTES.md#f114)。C277/C285 已有相关单步几何，本文不把加权平方称为新原理。
