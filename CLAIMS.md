@@ -3229,3 +3229,24 @@
 - **Exact Statement**：固定 C363 的任意凹反馈模和 \(0<\sigma=\lambda Lc\le1\)。令 \(a_\sigma(t)=\Phi^*(\sigma\omega(t))/(\sigma\omega(t))\) 对 \(t>0\)。其余合同在整个可续接原图类上保证全部认证轨道有限长并点收敛的充要条件是 \(\int_0^\epsilon\omega(t)/a_\sigma(t)\,dt<\infty\)，其中 \(\epsilon>0\) 可选。积分发散时有同一模的全域连续单值原图，完整残差精确、原根唯一、非解工作窗留域且通过闭链，但所有非解认证初值的原轨道无界。
 - **Evidence / Scope**：[两分支证明及固定模反例](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-integral)。反例用小法向工作窗；若反馈模有全域正线性下界，可把饱和反馈接触扩至全域。充要指覆盖整个合同类，不是给单个问题的必要条件。
 - **Consequence**：C364 的慢位移图若通过混合闭链及匹配真残差，任何反馈模都必须在零附近与 \(\log(e^2/t)^{-2}\) 双边可比。正文以倍增区间上的共轭平均界证明它的 (7) 发散，故调整到较低参数也不能用本统一判据导入该图。
+
+<a id="c369"></a>
+## C369-v1 · 一般模反馈恢复的两个不变性缺口
+
+- **Status**：`derived-checked`。两线重构缩速代换、二次恒等及完整旋转族跨点估计，明确几何部分和完整合同的区别。
+- **Exact Statement**：C366 几何分数弦条件在逐点把受检值 \(v\) 换成 \(\epsilon(y)v\)、\(0<\epsilon(y)\le1\) 时保持同一个势、模及预算。因而不能单独推出完整真残差下界。二次势、线性反馈模及 \(L=1,S=\{0\}\) 时，几何条件精确等价于 \(\langle y,v\rangle\ge0\)，不含两个独立原位置的比较。取 \(F_b(y)=ay+b(y)Jy\)，所有连续有界 \(b\) 都以相同二次势、相同 \(c=a\) 和任意 \(\lambda a>1\) 满足完整 C366；其中有图在零点的每个邻域都不满足任何有限弱单调常数。
+- **Evidence / Scope**：[恢复尝试与证明](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery)。逐点缩速对代数几何条件无条件保持；若同时需要闭图，另令缩速连续且使乘积在零集连续。全图锚平移的二次检验精确恢复单调及弱单调，但需要一整族原图锚，不等于已有固定目标的共同势。
+
+<a id="c370"></a>
+## C370-v1 · 未知平坦势在线性类中精确恢复等价内积单调
+
+- **Status**：`derived-checked`。Astra Max 给出必要充分谱推导，已独立重构距离上下界、负实部与 Jordan 攻击、Lyapunov 内积构造及全分数弦展开。
+- **Exact Statement**：任意实方阵 \(A\)，原图 \(F(y)=Ay,S=\ker A\)，任意固定 \(\lambda>0\)。取反馈模 \(\omega(t)=t\)。存在非负平坦全域 \(C^{1,1}\) 势及正 \(L\)，支付所有 \(0<s\le\lambda\) 的 \((L^2s^2/2)\|Ay\|^2\) 分数弦代价，当且仅当存在 \(P=P^\top\succ0\) 使 \(A^\top P+PA\succeq0\)，也当且仅当谱在闭右半平面且虚轴特征值全半单。完整 C366 严格版在该线性类内亦等价。若额外 \(AA^\top=A^\top A\)，上述条件进一步等价原欧氏单调性。
+- **Evidence / Scope**：[证明及大步长原弱单调边界](research/topics/common_structure/gradient_feedback_recovery.md#feedback-linear-recovery)。未知势允许非二次、非凸。等价内积的矩阵表示属已知 Lyapunov 理论，本库定位其与分数弦的精确关系。全分数弦条件对 \(F=-aI\) 任意正步长都失败，尽管 \(\lambda a>2\) 的完整原 PPA 收敛。原步尺度扩大后收敛不能反推全分数弦。
+
+<a id="c371"></a>
+## C371-v1 · 有界可逆增益图下同一个势的增长与一般模正则等价
+
+- **Status**：`derived-checked`。Astra Max 给出凸惩罚极小证明，另行重构全部常数、真纤维上下界和极小点存在。
+- **Exact Statement**：全域非负可微凸势 \(h\)，非空 \(S=\arg\min h\)，最小值归零，完整图 \(F(y)=\{T\nabla h(y):T\in\mathcal T(y)\}\)。每个增益集非空且所有增益奇异值统一落在 \([m,M]\subset(0,\infty)\)。对任意一般凹模 \(\omega\)，存在正 \(b\) 使 \(h\ge b\Phi(d_S)\) 当且仅当存在正 \(c\) 使完整 \(r_F\ge c\omega(d_S)\)。两方向常数可分别取 \(mb/2\) 及 \(c/(4M)\)。
+- **Evidence / Scope**：[直接证明](research/topics/common_structure/gradient_feedback_recovery.md#feedback-growth-recovery)。增益结构不预设任何距离误差界，但需要完整纤维和同一个势有这种联系。结论全域，不擅自延伸至局部惩罚极小点。它未证明一般原 RLEB 的增益表示或分数弦可支付性，两个完整恢复的普遍导入仍开放。

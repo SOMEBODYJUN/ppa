@@ -10319,6 +10319,39 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "FEEDBACK-GROWTH-RECOVERY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "FEEDBACK-LINEAR-RECOVERY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "FEEDBACK-RECOVERY-QUANTIFIERS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4778,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -13073,6 +13106,18 @@
     "E691": {
       "x": 4826.42,
       "y": 4138.06
+    },
+    "E692": {
+      "x": 3268.91,
+      "y": 4373.49
+    },
+    "E693": {
+      "x": 4918.78,
+      "y": 4205.41
+    },
+    "E694": {
+      "x": 3140.23,
+      "y": 4370.75
     }
   },
   "bounds": {

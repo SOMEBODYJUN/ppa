@@ -5110,6 +5110,24 @@
       "label": "C368 固定反馈模的精确积分阈值",
       "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-integral",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-RECOVERY-QUANTIFIERS",
+      "label": "C369 反馈恢复的缩速及跨点缺口",
+      "file": "topics/common_structure/gradient_feedback_recovery.md#feedback-recovery",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-LINEAR-RECOVERY",
+      "label": "C370 未知平坦势精确恢复内积单调",
+      "file": "topics/common_structure/gradient_feedback_recovery.md#feedback-linear-recovery",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-GROWTH-RECOVERY",
+      "label": "C371 有界可逆增益下的同势正则恢复",
+      "file": "topics/common_structure/gradient_feedback_recovery.md#feedback-growth-recovery",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13024,6 +13042,39 @@
       "relation": "conditional",
       "scope": "保持混合闭链和完整真残差，固定模及参数乘积不超过一。文中积分有限确保原轨道有限长，发散时同模有完整连续唯一根的认证反例。",
       "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E692",
+      "inputs": [
+        "FEEDBACK-RECOVERY-QUANTIFIERS"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "几何分数弦在逐点缩速下保持原势和预算；完整二次候选仍可任一零邻域失去全部有限弱单调常数。幅度与跨位置比较分别缺失。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E693",
+      "inputs": [
+        "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT"
+      ],
+      "output": "FEEDBACK-LINEAR-RECOVERY",
+      "relation": "conditional",
+      "scope": "原图限为任意实方阵、反馈模线性时，未知势存在恰刻画某个等价内积下单调；再加正规性，精确恢复原欧氏单调。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E694",
+      "inputs": [
+        "FEEDBACK-GROWTH-RECOVERY"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "完整原图与同一凸势梯度之间有统一可逆增益时，一般模势增长与完整误差界等价。尚未获得一般原 RLEB 的这种表示或同一个 M 的完整两个恢复。",
+      "status": "open",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]

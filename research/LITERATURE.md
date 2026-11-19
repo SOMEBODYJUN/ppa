@@ -8,6 +8,11 @@
 - Dontchev–Gfrerer–Kruger–Outrata，[arXiv:1807.02198v2](https://arxiv.org/pdf/1807.02198v2)，§2、Theorem 3.2。扰动半径衡量加向量扰动后丧失度量次正则性，使用扰动后的逆纤维。C361 的对象是固定 \(S\) 外的新零点聚集，扰动必须为在 \(S\) 平坦的势的梯度。两个半径定义的失败事件不同。确切公开优先性未穷尽。
 - Azagra–Mudarra，[一般凹模的一阶 Whitney 扩张](https://blogs.mat.ucm.es/dazagrar/wp-content/uploads/sites/85/2024/06/C1omega200526.pdf)，Definition 1.4、Theorem 1.5。对 Hilbert 空间任意非空子集，给定完整函数值与梯度，在 \((mg^{1,\omega})\) 条件下得梯度模预算的 \(6\) 倍上界。Azagra–Le Gruyer–Mudarra，[凸版本](https://carlosmu.folk.ntnu.no/FormulaeForC11Extension.pdf)，Definition 4.7、Proposition 4.10、Theorem 4.11，给出凸势的对偶代价与 \(8\) 倍上界。C362 另对函数值未知、梯度可从原图纤维选取的问题用闭链消元，再用原近端输出的尺度分离构造整条路径所需的势。这些推导的公开先行性待核定。
 
+<a id="lit-feedback-linear-recovery"></a>
+## 共同势在线性类中的内积恢复
+
+Gillis–Sharma，[*On computing the distance to stability for matrices using linear dissipative Hamiltonian systems*](https://arxiv.org/abs/1611.00595)，作者公开的 Automatica 85 (2017) 稿 §2、Lemmas 2–3。谱在闭左半平面且虚轴半单的矩阵，恰有 \((J-R)Q\) 表示，其中 \(J\) 反对称、\(R\succeq0,Q\succ0\)。对本项目取 \(-A\)，对应某个等价内积下 \(A\) 单调。C370 的新核对对象是未知平坦势的全部分数原弦支付是否恰好刻画这一层，正文已给独立推导。经典矩阵表示不作原创主张。
+
 <a id="lit-rleb-discrete-damping"></a>
 ## 旋转的隐式阻尼及欧氏功的可积性
 

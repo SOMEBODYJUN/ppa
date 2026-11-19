@@ -873,9 +873,15 @@ C361 的 \(M_L\) 要求同一个有限 Lipschitz 梯度在 \(S\) 上为零，并
 <a id="f129"></a>
 ## F129 · 用同一严格共轭代价导入全部原 RLEB
 
-C363 将真实原弦的 \(-\Phi^*(L\|x-y\|)\) 与一般模插值边放进同一闭链。当完整真残差与预算满足 \(\lambda Lc>1\)，证明会强制原步长有几何上界。完整 Dini 原 RLEB 允许唯一原轨道的真实位移为 \(k^{-2}\) 级，[C364](CLAIMS.md#c364) 在同图上同时核对精确反射与完整真误差界。这个障碍与另选反馈模无关，也不能换根逃开。直接去掉严格参数也失败，临界原轨道甚至可在有界环带无限绕行。[C367](CLAIMS.md#c367) 进一步保留 Dini 和全域凸接触及唯一原根，临界仍发散。[C368](CLAIMS.md#c368) 给出固定模在临界及更低参数时的精确积分门。可回收 C363 的非 Dini 子类及真原步证明。修订时需要能区分目标法向与切向累计位移的代价。 [详细证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)
+C363 将真实原弦的 \(-\Phi^*(L\|x-y\|)\) 与一般模插值边放进同一闭链。当完整真残差与预算满足 \(\lambda Lc>1\)，证明会强制原步长有几何上界。完整 Dini 原 RLEB 允许唯一原轨道的真实位移为 \(k^{-2}\) 级，[C364](CLAIMS.md#c364) 在同图上同时核对精确反射与完整真误差界。这个障碍与另选反馈模无关，也不能换根逃开。直接去掉严格参数也失败，临界原轨道甚至可在有界环带无限绕行。[C367](CLAIMS.md#c367) 进一步保留 Dini 和全域凸接触及唯一原根，临界仍发散。[C368](CLAIMS.md#c368) 给出固定模在临界及更低参数时的精确积分门。可回收 C363 的非 Dini 子类及真原步证明。后续代价需要容许原 RLEB 中可和而非几何的真实位移。 [详细证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)
 
 <a id="f130"></a>
 ## F130 · 把凸梯度闭链直接作为原 PPA 的全局极小化选根
 
 若以同一凸势在相邻原输出处加载相应原输入，凸闭链要求相邻原弦内积非负。即便任意标量能量加固定欧氏二次项作全局极小化，交换两个竞争点也给同一限制。[C365](CLAIMS.md#c365) 的完整唯一根图每个非解初值前两弦内积严格为负，同时满足尖锐幂次的原 Dini RLEB，不能换根或放宽梯度模修补。只要求平坦势沿原弦下降也不能保留二次成本，因为原 C242 的步长平方已经超出任何平坦 \(C^1\) 势的尺度。可回收非二次共轭代价用于认证原步，见 C363。 [详细证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-variational-obstruction)
+
+
+<a id="f131"></a>
+## F131 · 把共同下降势的存在直接当成两个原性质的恢复
+
+C366 的几何部分在逐点任意缩小原值后保持不变，真实残差可随之任意变小，因而完整误差界仍须另给。即使二次模和完整线性正则均成立，变量旋转族也可在零点任意邻域失去全部有限弱单调常数。[C369](CLAIMS.md#c369) 说明这两个缺口分别来自图值尺度自由与跨位置比较不足。C370 给出线性类的精确恢复，所得是某个等价内积下单调；正规性才使它与原欧氏单调一致。C371 在完整图增益归一化下恢复同势增长与误差界。二者是限定恢复，尚无一般原 RLEB 导入。另，要求全部分数弦时会排除大步长可稳定的 \(-aI\)，单靠改模不能修复。[正文](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery)

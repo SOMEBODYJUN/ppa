@@ -7,7 +7,9 @@
 验收时分别定位同一几何关系在两个恢复证明及原 PPA 证明中用到的步骤。若去掉这条关系，仍能把两个旧条件各自产生的估计原样接成同一主证明，则该论证只支持共用收敛证书。更宽的参数或覆盖范围也只按各自证明登记。Luke–Tam 型结果与原 RLEB 用于后续检验适用范围。
 
 
-[C363–C365](CLAIMS.md#c363) 已把 [C362 的闭链插值](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-steps) 接到原 PPA。一次验证整个可续接原弧集，在完整残差与共轭代价匹配且参数严格时，得真实位移按固定块长几何衰减，无需 Dini。该强速率排除完整原 Dini RLEB 的慢位移图。即使将参数降低并更换反馈模，[精确积分门](CLAIMS.md#c368) 也不能导入这张图。[边界](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)。[C366](CLAIMS.md#c366) 用分数弦闭链进一步从原图子纤维推出原根存在。再推进须保留方向或累计位移，允许可和而非几何的切向漂移，同时补两个独立恢复。
+[C369–C371](CLAIMS.md#c369) 把恢复缺口定位到图值尺度及跨位置比较。线性类的未知势存在精确等价于某个内积下单调，正规矩阵时等价原欧氏单调；增益归一化给同势增长与一般模完整误差界的双向恢复。[证明](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery)。还未取得一般原图上连接这两个恢复的同一条件。全部分数弦又排除了原大步长稳定的负线性图，普遍导入需保留实际步长。
+
+[C363–C365](CLAIMS.md#c363) 已把 [C362 的闭链插值](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-steps) 接到原 PPA。一次验证整个可续接原弧集，在完整残差与共轭代价匹配且参数严格时，得真实位移按固定块长几何衰减，无需 Dini。该强速率排除完整原 Dini RLEB 的慢位移图。即使将参数降低并更换反馈模，[精确积分门](CLAIMS.md#c368) 也不能导入这张图。[边界](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)。[C366](CLAIMS.md#c366) 用分数弦闭链进一步从原图子纤维推出原根存在。后续共同条件须同时保留跨图点比较、完整纤维的幅度和实际原步长，并允许可和而非几何的位移。
 
 [C362](CLAIMS.md#c362) 将 Lipschitz 反馈扩到凹模。两类扩张都可先用闭合链检验并消去自由函数值。已得到给定整条扰动近端路径的最小模预算估计及固定目标局部扰动半径，原 C242 单轨道可精确半阶插值。下一项义务是从原图生成可延拓原根，并在证明中调用凸碰撞与目标置零实际共用的几何信息。给定路径实现不提供这一步。
 

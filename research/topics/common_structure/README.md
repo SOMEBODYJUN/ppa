@@ -6,6 +6,8 @@
 从原算子图出发，找出单调性与正则性各自约束的变化及其在原步中的共同机制。已有收敛定理用于候选成形后的覆盖检验，下面的旧路线和反例用于核对候选的适用范围。[现行研究任务](GPT_PRO_M_NEW_2026-11-19.md)
 
 
+[反馈的两个限定恢复](gradient_feedback_recovery.md#feedback-recovery) 给出未知共同势在线性类的精确内积单调恢复，以及完整增益图下的同势增长与一般模正则等价。原图可任意缩速与跨位置旋转的证明，解释一般恢复为何仍失败；不依赖法向或切向分解。
+
 [C363–C365 原近端混合闭链](gradient_feedback_proximal_cycles.md#feedback-original-steps) 把完整原弦与 C362 的插值条件放进同一闭链。严格参数时从闭链建立原 PPA 点收敛；临界绕行、慢位移完整 RLEB 以及两步极小化障碍标出覆盖边界。[C366 从闭链得到原根](gradient_feedback_proximal_cycles.md#feedback-original-root-existence) 给出预先没有原根覆盖的版本。
 
 [C362 一般模反馈](gradient_feedback_general_modulus.md#feedback-modulus-cycles) 用原图选出的梯度和闭合链判断能否来自同一平坦势。凸版本给两点碰撞的非二次代价。路径定理量化实现整条已给定近端路径的扰动大小，也能恢复完整真残差的固定目标扰动半径。用于比较线性与非线性反馈及识别原根生成缺口。
