@@ -64,6 +64,8 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
+**主问题。** 从原算子图出发，解释单调性与正则性各自约束的几何变化，并找出它们为什么在原近端步中发生联系。候选提出后，再逐条检验哪些既有 PPA 定理能在原假设、允许步长和初值范围下推出同一个 \(M\)。下列旧路线和反例用于检验覆盖及定位失败。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
+
 [C360 原离散阻尼与原连续流分离](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 以同一精确非线性近端轮廓给原连续周期与零平面漂移，并在完整认证下实现指定紧流因子。原 PPA 仍点收敛。用于排除普遍的原流趋稳和正定梯度导入。[F127](FAILED_ROUTES.md#f127)
 
 [C359 凸化原近端路径的正则性盲区](research/topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths) 给出两个非线性原 RLEB 算子。完整纤维及每个初值的全部原路径在凸化后相同，完整真残差的最佳误差界幂仍不同。用于检验仅依赖线性支持或凸化路径的恢复定理。[F126](FAILED_ROUTES.md#f126)
