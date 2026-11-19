@@ -10209,6 +10209,17 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "PPA-CONVEX-PATH-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2010,
+      "y": 1885,
+      "region": "paths",
+      "realm": "paths"
     }
   },
   "edges": {
@@ -12923,6 +12934,10 @@
     "E681": {
       "x": 3168.65,
       "y": 4373.48
+    },
+    "E682": {
+      "x": 3167.28,
+      "y": 4354.7
     }
   },
   "bounds": {

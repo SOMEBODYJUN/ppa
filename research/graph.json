@@ -5050,6 +5050,12 @@
       "label": "C358 原近端输入误差沿零集的精确搬运代价",
       "file": "topics/common_structure/proximal_input_noise_transport.md#input-noise-transport",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-CONVEX-PATH-OBSTRUCTION",
+      "label": "C359 凸化原近端路径的真误差界盲区",
+      "file": "topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12854,6 +12860,17 @@
       "scope": "尖锐非线性原 RLEB 与两个零点之间零欧氏输入扰动搬运代价并存。可和误差收敛所需尺度可依赖非线性模，限制把正欧氏扰动代价作为普遍前提。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E682",
+      "inputs": [
+        "PPA-CONVEX-PATH-OBSTRUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "完整凸化纤维以及逐原初值的全部有限和无限原路径的闭凸包相同，也可有不同完整真残差最优误差界幂；两原图共享真正非线性 RLEB 和完整覆盖。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]
 }

@@ -1045,6 +1045,7 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E680 | [PPA-DISTANCE-CONJUGACY · C357 保目标距离的原近端共轭不能恢复两类欧氏性质](topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 切于恒等的保范数解析共轭不保持两点单调。保目标距离共轭及共同原非线性 RLEB 合同不保持指定幂的完整真残差误差界。候选和附加条件须辨认相应丢失的欧氏方向或度量。；**derived-checked** |
+| E682 | [PPA-CONVEX-PATH-OBSTRUCTION · C359 凸化原近端路径的真误差界盲区](topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 完整凸化纤维以及逐原初值的全部有限和无限原路径的闭凸包相同，也可有不同完整真残差最优误差界幂；两原图共享真正非线性 RLEB 和完整覆盖。；**derived-checked** |
 
 ## 不蕴含关系
 

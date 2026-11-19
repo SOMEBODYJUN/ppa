@@ -3,6 +3,8 @@
 <a id="mother-question"></a>
 ## 首要问题
 
+[C359 凸化原近端路径的正则盲区](convexified_proximal_paths_obstruction.md#convexified-proximal-paths) 保持完整纤维与全部有限、无限原路径的凸化信息，并分离完整真误差界幂。两图共享真正非线性的原 RLEB。
+
 [C358 的原近端切向搬运代价](proximal_input_noise_transport.md#input-noise-transport) 精确计算剪切图在一般小输入误差下的搬运成本，并给任意原一般模 RLEB 的可和扰动预算。单调与正则的共同恢复仍开放。
 
 [C357 的保目标距离近端共轭障碍](ppa_conjugacy_obstruction.md#ppa-conjugacy) 说明原动力、精确目标距离及共同 RLEB 数据仍不能无条件决定欧氏单调和真残差幂。

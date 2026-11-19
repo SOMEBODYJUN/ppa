@@ -3149,3 +3149,12 @@
 - **Exact Statement**：任意 \(L\ne0\)，\(\lim_{\delta\downarrow0}D_\delta(L)=|L|\liminf_{h\downarrow0}\rho(h)/\max_{0\le u\le h}(bW(u)+\sqrt{h^2-u^2})\)。若 \(w(h)=h^\gamma,0<\gamma<1,\rho(h)=h^p\)，则 \(p>\gamma\) 为零，\(p=\gamma\) 为 \((1-\alpha^\gamma)|L|/b\)，\(p<\gamma\) 为无穷。幂图有全域唯一原根、尖锐非线性原反射和完整真残差幂，并在非空零管满足原 P1–P4。
 - **General RLEB Conclusion**：任意原 P1–P4 在受扰输入继续使用原允许关系。取 \(\kappa<a<1,q=\kappa/a,C=1/(1-a)\)，\(v_0=d(x_0,S)+\|e_0\|\)、\(v_i=\|e_i\|\) 对 \(i\ge1\)，\(\Theta_q(t)=\sum_j B(q^jt)\)。若 \(Cv_i\le R\)，\(\sum_i\Theta_q(Cv_i)<\infty\)，且 \(\sum_i[\|e_i\|+\Theta_q(Cv_i)]<d(x_0,X\setminus U)\)，则每条允许扰动轨道可续、有限长、点收敛到 \(S\cap U\)。\(B(t)\asymp t^\gamma\) 时保证的可和指数在上述幂图类锐。
 - **Dependencies / Evidence / Counterevidence / Scope**：[原图、路径构造、有限前缀和文献定位](research/topics/common_structure/proximal_input_noise_transport.md#input-noise-transport)。欧氏输入误差可和仍可在完整原 RLEB 上产生有界振荡。此处约束扰动稳定性候选，对精确原步收敛不构成反例。两种恢复未闭，[F125](FAILED_ROUTES.md#f125)；公开优先性未穷尽。
+
+
+<a id="c359"></a>
+## C359-v1 · 凸化全部原近端路径仍不能恢复真误差界幂
+
+- **Status**：`derived-checked`。路径凸包、完整真残差及共同原工作窗已独立重构。
+- **Objects / Exact Statement / Quantifiers**：取 \(X=\mathbb R^2\)、\(S=\mathbb R\times\{0\}\)、\(\lambda=1\)、\(0<g<h\le\nu<1\)、\(g>\nu h\)。两个完整闭图在 \((a,b)\) 同享法向值 \(\operatorname{sgn}(b)|b|^\nu\)。\(F_0\) 的切向值为 \(\pm |b|^g\)，\(F_1\) 另加 \(\min(|b|^h,|b|^g)\)。两者在每个基点的完整纤维闭凸包相等。对每个固定原初值和每个有限步数，完整原路径向量的凸包相同。无限原路径在 \(\ell^\infty\) 中的闭凸包相同，原极限点集的凸包也是同一闭线段。
+- **Regularity and RLEB Scope**：最佳残差端局部幂分别为 \(1/g\)、\(1/h\)。每个固定 \(\kappa\in(0,1)\) 都有共同正 \(R\) 验证原 P1–P4，使用全部原根、完整真残差、同一真正非线性反射模 \(\omega(q)=\sqrt{4q^{2g/\nu}+q^2}\) 和误差模 \(\psi(s)=s^{1/h}\)。反射幂 \(g/\nu\) 为两图的最优幂。
+- **Dependencies / Evidence / Objections**：[完整证明](research/topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths)用法向唯一递推、端点增量乘积混合和统一尾和。依赖相同完整凸化数据的候选与附加条件不能恢复指定 \(p\in(1/h,1/g]\) 的真误差界。凸值恢复类或保留非凸信息的探针不受此例直接否定。[F126](FAILED_ROUTES.md#f126)；公开优先性未核定。
