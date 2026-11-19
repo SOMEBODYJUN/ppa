@@ -5,7 +5,7 @@
 
 本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
-从同一图几何或变分对象解释两侧关系，依然是寻找 \(W\) 的途径。常数二次弱单调子类、全对原非线性模的定量转换及最近输入零锚的完整多值合同分别保留其适用范围。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已完成本任务的最低共同覆盖：投稿原 RLEB 与有限维极大单调 PPA 均导入同一个 M。其余组合的扩展和公开先行性保持开放。
+首要义务是用 \(W\) 证明一条联系单调或次单调与正则性的结构定理，并让这条联系承担原 PPA 中的推导。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
 
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 
@@ -14,7 +14,7 @@
 
 [C341–C342 正文](compensated_anchor_convergence.md) 固定原弦 \(x-y\in\lambda F(y)\)，用全部目标锚的距离增量加归一化平方步长，要求它由静态径向补偿 \(h(d(x))-h(d(y))\) 支付。真正则识别和可续接的原根子关系是独立、明确的前提。共有引理不要求固定距离收缩或物理有限长度。原 RLEB 以 \(h=2\Theta\) 导入而保留原 \(\Theta\) 留域预算；极大单调行以 \(h=0\) 导入。
 
-旋转—漂移族将实际收敛的 \(\beta>\alpha\) 与证书附加的 \(\alpha<2\) 分开，在 \(1\le\alpha<2\) 给全部固定分组长度发散的严格见证。全锚 Fejér 和 C329 的宽参数门分别排除。三条独立重构及 v1→v2 的量词修订见 [第 004 轮验收](../../audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。这关闭最低任务，不关闭所有尚未导入的单调–正则组合。
+旋转—漂移族将实际收敛的 \(\beta>\alpha\) 与证书附加的 \(\alpha<2\) 分开，在 \(1\le\alpha<2\) 给全部固定分组长度发散的严格见证。全锚 Fejér 和 C329 的宽参数门分别排除。三条独立重构及 v1→v2 的量词修订见 [第 004 轮历史验收](../../audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。
 
 下一步可用 [C343 增维残差候选](lifted_residual_distance.md) 和 [C344 有限锚候选](finite_anchor_convergence.md) 检查不同的补偿与目标识别；二者自身仍为 candidate，勿与已接收的 M003-v2 混为等价公式。实际收敛且平方步长可和的交错切向例仍不能被 M003-v2 认证，见正文的量词攻击节。
 

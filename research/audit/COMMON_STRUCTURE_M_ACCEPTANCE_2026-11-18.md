@@ -3,7 +3,9 @@
 <a id="m-acceptance"></a>
 ## 接收对象与结论
 
-**C341–C342 为 `derived-checked`。** 接收对象是 [M003-v2 的精确定义](../topics/common_structure/compensated_anchor_convergence.md#ca-definition)，不是第 003 轮的原始 v1 表述。按 [GPT Pro 任务书 G1–G7](../topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)，最低共同覆盖已完成：投稿原最近输入零锚的一般非线性 RLEB，与有限维经典极大单调精确 PPA，被分别导入同一个静态证书；由同一引理得到可无限续接的原轨道和原空间点收敛。
+**C341–C342 为 `derived-checked`。** 接收对象是 [M003-v2 的精确定义](../topics/common_structure/compensated_anchor_convergence.md#ca-definition)，不是第 003 轮的原始 v1 表述。按[第 004 轮使用的 G1–G7](https://github.com/SOMEBODYJUN/ppa/blob/1cf968a/research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)，当时设定的两条导入已完成：投稿原最近输入零锚的一般非线性 RLEB，与有限维经典极大单调精确 PPA，被分别导入同一个静态证书；由同一引理得到可无限续接的原轨道和原空间点收敛。
+
+这是两条导入与收敛证书的历史接收记录。[现行完成标准](../topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)要求一条揭示两侧关系的结构定理。下文旧验收的通过只对应当时的任务门槛。
 
 原问题要求非平凡初值域，本次没有降低这一目标。证书先逐个初值定义，再以 C242 和平坦立方图分别证明两条导入的认证域都可以包含非解点。只有解初值的退化实例仍按原许可范围得到驻点结论，但不充当非平凡覆盖见证。
 

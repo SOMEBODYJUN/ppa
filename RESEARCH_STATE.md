@@ -2,11 +2,11 @@
 
 ## 单调性与正则性的共同结构
 
-**最低共同覆盖已完成。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性反射模、完整真残差、全部允许输出和原初值预算不变；有限维极大单调 PPA 则对完整非空零集和每个固定正步长以零补偿导入。同一个静态原根子关系可无限续接，共同引理给原空间点收敛与平方步长可和。C242 与平坦立方图分别见证两行均有非解初值。
+**共用收敛证书已有。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**机制目标仍开放。** [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 显示 RLEB 在进入 C341 前已用旧兼容得到收缩和长度预算；正则尺度在 C341 中识别目标并估计已有耗散，尚未用于导出方向下降或新的参数门。下一步从原图方向、完整正则模和步长直接构造可续原根的耗散或输运估计，在同一个判据上检验原一般非线性 RL 和另一种参数逻辑。C342 固定算子改变步长的临界余项、C322 同一初值的分根是两项可执行检验。
+**共同结构仍开放。** [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 显示 RLEB 在进入 C341 前已用旧兼容得到收缩和长度预算。下一项义务是证明单调或次单调的方向信息与正则信息借同一 \(M\) 有怎样的关系，并用这条关系在相应的参数条件下推出原 PPA 一条可续的收敛轨道。原一般非线性 RL 须参与推导，新意须落在结构或关系上。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md)
 
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 
@@ -76,7 +76,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**共同结构最低两行已闭。** C341–C342 的 G1–G7 接收及真实遗漏区见本页首节与 [完整验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。当前这条线的活跃义务是更多组合、切向相消、C343/C344 的独立复核以及公开先行性；不再把原 RLEB 与极大单调共同导入交接为未完成。
+**共同结构的首要义务是定理层转接。** 证明同一 \(M\) 怎样联系方向性和正则性、如何参与原 PPA 的收敛推导，并具体定位结构新意。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 

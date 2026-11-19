@@ -237,7 +237,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-第 004 轮的共同收敛证明可以直接调用。下一步按 [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 检验同一原图判据能否保持一般非线性 RL 并产生新参数或可续分支结论。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
+第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
