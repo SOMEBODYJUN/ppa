@@ -2,15 +2,15 @@
 
 ## 单调性与正则性的共同结构
 
-**C351 已给出带强附加条件的两个恢复和原 RLEB 刻画。** [条件和证明的重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md)直接展开了同一 \(M\)。恢复 RL 的 A 固定真残差与距离的精确等式，恢复误差界的 B 固定反射幅度的精确等式；两者都用全尺度和连续参考模。原 [C351 正文](research/topics/common_structure/two_point_scale_compatibility.md)与[接收记录](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留这些定理及其证明。公开首创未定。
+**统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [F120 失败原因](FAILED_ROUTES.md#f120)
 
 **此前的共用收敛证书。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**已证范围与研究期望。** C351 满足已列出的两个附加条件下的恢复、原一般模导入和原 PPA 收敛。它自带线性真残差界，并与存在相容原 RLEB 模等价。更一般的单调与正则是否来自同一结构，当前两种精确等式下的恢复尚未证明。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [此前 C341 机制复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
+**已证数学与任务裁决。** C351 的模存在性刻画和限定恢复按原证明保存。作者判定其主要贡献仍是原 RLEB 的内部整理，不能交付为共同结构，也不能通过增加例子、锐界或更多等价命题把本路线重新判为成功。[数学重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md)
 
-[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。这条早期路线自身没有闭合目标；当前接收由 C351 给出。
+[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。这条路线没有完成统一结构任务。
 
 [C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。这条路线的反向恢复承重缺口保持；形式上的两条切片仍不能连带获得 C351 的接收。
 
@@ -84,7 +84,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**共同结构的首要义务是证明两个等价。** 同一个 \(M\) 在两种条件下分别变回单调性和正则性，并且能证明原 PPA 收敛。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
+**共同结构的首要义务。** 找同一个 \(M\)，在有独立含义的两种条件下分别恢复单调性和正则性，并用这条联系推出原 PPA 收敛。原锚点 RL 加误差界的重新组织及精确幅度匹配已按 F120 排除。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 
@@ -131,7 +131,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**共同结构的下一次接续。** 先读 [C351规范证明](research/topics/common_structure/two_point_scale_compatibility.md) 与 [三门接收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)，不从“尚未找到M”重新开始。下一次有明确新任务时，可核公开先行或研究未覆盖组合；C352单独终审仍可续接，但不影响C351本轮完成。C341–C350和失败记录保留各自真实范围，不随新结构接收升级。完整LT的额外导入仍须保留C340的工作域/初值域区别。
+**共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md)和 [F120](FAILED_ROUTES.md#f120)，确认统一结构尚未找到。按单调、次单调和正则性的独立含义寻找共同内容；原 RLEB 最终作为要容纳的一种理论处理。C341–C353 的已证关系按各自范围保存。
 
 **次单调路线已完成比较，主线叙事须收窄。** [六路研究与独立反审](research/novelty/2026_10_14_submonotonicity/README.md)核实：LT二次点对类与Otero–Iusem2010作者稿精确换参，不等于其局部/收敛定理重复；非tied、矩阵、逆耗散与原函数结构有独立价值。同F/同lambda的diag例与GU3诊断证明，任意合法标量反射/EB压缩仍可丢方向关联，仅升为双范数D也未必修复。C249/C250本已零锚允许多值，不是全对LT的简单非线性别名。既有数学身份保持，新GU1/GU3只留报告级candidate；下一门为原始方向/组成到完整物理政策的可认证结构，而非再扩模名字。[综合报告](发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[复算](research/code/submonotonicity_routes/README.md)可接续。主稿/摘要/编号未改。
 

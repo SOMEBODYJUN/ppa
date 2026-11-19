@@ -9554,7 +9554,7 @@
       "role": "open-target",
       "kind": "mountain",
       "object": "island",
-      "evidence": "derived-checked",
+      "evidence": "open",
       "reason": "incoming-open-relation",
       "x": 3206,
       "y": 4305,

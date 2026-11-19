@@ -64,9 +64,9 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
-**[C351](research/topics/common_structure/two_point_scale_compatibility.md) 给出了同一条件的两个限定恢复。** [条件和证明的重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md)用输入、输出和真残差直接展开：A 固定残差与距离的精确等式，B 固定反射幅度的精确等式。全尺度、连续参考模下分别恢复锚定 RL 与真误差界；有限工作窗内刻画原 RLEB 模存在性并给原 PPA 收敛。[接收记录及边界](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留，公开首创未定。
+**统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [F120](FAILED_ROUTES.md#f120)
 
-[C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条早期路线的承重缺口；当前任务由 C351 在所列范围闭合。
+[C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条路线的承重缺口。
 
 [C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。该路线自身未完成共同结构目标，现行结果见 C351。
 
@@ -92,7 +92,7 @@
 
 ## Research Goal
 
-共同结构线已在精确幅度条件下获得 C351 的两个恢复及原 PPA 收敛。更一般的单调与正则是否来自同一结构，仍须超出这两种强条件考察，见 [专题状态](RESEARCH_STATE.md)。C341 保留为此前不同范围的共同收敛证书。
+共同结构线仍要找同一个 \(M\)，证明两类性质在不同条件下是它的两种表现，并据此解释原 PPA 收敛。锚点 RL 与误差界内部的重写及精确匹配已按任务排除，见 [专题状态](RESEARCH_STATE.md)。C341 与 C351 的已证数学内容各自保存。
 
 1. **收敛机制**：固定核完整 GPPA 已接入一般模、残差平方能量与物理提升，见 [C208–C214](research/canonical/generalized_ppa_modulus.md)；在同一图块、真实全纤维残差、coverage 与留域预算下，确定非线性全对 RL 和误差界如何控制 PPA，区分距离收缩与点收敛。
 2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。

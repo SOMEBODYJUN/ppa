@@ -4716,9 +4716,9 @@
     },
     {
       "id": "MOTHER-OPEN",
-      "label": "一般原图共同结构问题：C351 在明示范围回答",
+      "label": "单调性与正则性的统一结构仍开放，C351任务验收撤回",
       "file": "topics/common_structure/README.md#mother-question",
-      "evidence_status": "derived-checked"
+      "evidence_status": "open"
     },
     {
       "id": "MOTHER-CRITICAL",
@@ -12464,7 +12464,7 @@
       ],
       "output": "MOTHER-OPEN",
       "relation": "open",
-      "scope": "最低两行已完成；仿射切向相消、一般 KL/变化右端、LT 修正局部化、无限维与非精确版本仍须逐行构造原根和证书。",
+      "scope": "C341 的两条导入共用收敛证书；一般共同结构仍开放，共同收敛后端不足以完成任务。后续按现行提示词寻找两类性质的独立共同内容。",
       "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     },
@@ -12765,8 +12765,8 @@
         "CS-PPA"
       ],
       "output": "MOTHER-OPEN",
-      "relation": "conditional",
-      "scope": "本轮三项任务在 C351 明示范围接收：原一般非线性模存在性的跨位置充要相容、同尺度两个恢复及非解认证域的原轨道收敛。一般全对单调、未列入组合与公开优先权不随之认定；此前各候选通往本问题的未闭义务仍分别保留。详见 audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md。",
+      "relation": "limits",
+      "scope": "C351 的模存在性刻画和两个精确幅度匹配恢复保留数学身份；作者按 F120 撤回统一结构任务完成裁决。原锚点 RL 加误差界的重写、消元及局部修补不得作为后续任务成功。一般共同结构仍开放。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

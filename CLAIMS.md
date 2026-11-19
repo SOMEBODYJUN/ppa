@@ -3082,7 +3082,7 @@
 <a id="c351"></a>
 ## C351-v1 · 原允许图的跨位置反射—残差相容结构
 
-- **Task acceptance**：两个恢复及原 RLEB 导入在本条精确范围内成立。A 固定真残差与距离的精确等式，B 固定反射幅度的精确等式，两恢复另有全尺度和连续参考模条件。一般单调与正则的共同本质仍超出已证范围。[条件和证明的重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md) · [原接收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)
+- **Task acceptance**：**失败，撤回共同结构任务完成的裁决。** 主要结果是原锚点 RL 与误差界的模存在性重写；A、B 分别固定一侧的精确幅度来恢复另一侧。作者明确排除此类结果作为所求统一结构。[F120 失败原因](FAILED_ROUTES.md#f120) · [数学内容重写稿](发表成果整理/本轮重构/C351_结构与条件_重写.md) · [历史接收及撤回](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)
 
 - **Status**：`derived-checked`。两位独立读者分别重构数学链，结构新意以正文所列增量为限；公开首创未裁定。
 - **Objects / Domain / Definitions**：有限维原 \(F\)、非空闭 \(S\subseteq F^{-1}(0)\)、\(\lambda>0\)，开窗 \(U\)、\(R>0\)，同一非空允许原根 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\) 覆盖每个 \(x\in U_R\)。真实边集 \(\mathcal E\)、输出集 \(Y\)，\(t_e=d(x_e)\)、\(a_e=\min_{p\in P_S(x_e)}\|2z_e-x_e-p\|\)，\(q_y=d(y)\)、\(\rho_y=\lambda\inf_{F(y)}\|v\|\)。标量基点 \(0_*=(0,0)\) 只代表非负模的底限，不添加原轨道边。

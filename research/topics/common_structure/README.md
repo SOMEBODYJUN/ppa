@@ -3,11 +3,11 @@
 <a id="mother-question"></a>
 ## 首要问题
 
-**[C351](two_point_scale_compatibility.md) 已给出同一条件的两个限定恢复与原 PPA 收敛。** [重写稿](../../../发表成果整理/本轮重构/C351_结构与条件_重写.md)直接写出两组强附加条件：A 固定真残差与距离的等式，B 固定反射幅度的等式，两者均用全尺度和连续参考模。[原接收记录](../../audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)保留精确结论。公开首创未定。
+**共同结构 \(M\) 尚未找到。C351 按本任务判失败。** 从原锚点 RL 与误差界出发的相容重写、消元和精确幅度匹配已被作者排除。[现行提示词](GPT_PRO_PROMPT.md) · [F120](../../../FAILED_ROUTES.md#f120)
 
 本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
-C351 已给同一个结构在两种独立附加条件下分别恢复锚定RL与真正则，并给出原 PPA 收敛。一般全对单调的恢复、全尺度/有限窗和覆盖的不同量词须按其正文保留。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
+C351 的两个限定恢复和原 PPA 推论作为数学关系保存，其任务验收已撤回。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition)保存两条旧路线共用的收敛证书。后续研究要从各类性质的独立定义寻找共同结构，再用它容纳原 RLEB。
 
 新增的 [C345 同纤维反射刚性](fiber_reflection_rigidity.md) 给出可单独使用的图值—锚差估计，但其相对方向项尚未用于原PPA下降，未完成它自身的结构承重义务。[F114](../../../FAILED_ROUTES.md#f114) 明确了从加权平方退回旧半和兼容的断点。
 
