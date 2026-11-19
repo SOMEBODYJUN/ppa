@@ -1016,6 +1016,8 @@
 | E655 | [CA-OBJECT · C341 静态补偿锚距条件 M003-v2](topics/common_structure/compensated_anchor_convergence.md#ca-definition) | conditional → [RG-LOOP-REDUCTION · C346 连续补偿耗散推出周期无关同锚误差界](topics/common_structure/return_gap_and_loop_reduction.md#loop-reduction) | 补偿h在全部受检距离闭窗连续，末输出完整残差有统一零识别；对任意周期、所有实际允许边和留在工作窗的单接缝扰动，得到同一零锚的统一误差模。平方耗散可取任意固定正系数。；**derived-checked** |
 | E656 | [RG-LOOP-REDUCTION · C346 连续补偿耗散推出周期无关同锚误差界](topics/common_structure/return_gap_and_loop_reduction.md#loop-reduction) | limits → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 该循环条件在原一般RLEB行可由既有下降之后的连续补偿推出；此导入不能充当新的共同参数相容及方向恢复证明。；**derived-checked** |
 | E657 | [RG-RESIDUAL · C346 全锚平方耗散下回返缺口与完整残差转接](topics/common_structure/return_gap_and_loop_reduction.md#return-residual) | open → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 全锚平方耗散下正则转接已闭；原最近输入锚的一般非线性反射前件与回返条件的方向反向等价仍未证明。；**open** |
+| E658 | [FC-COMPLETION · C347 固定全部原RLEB数据的保残差最大补全](topics/common_structure/residual_preserving_fiber_completion.md#residual-preserving-completion) | implies → [FC-DIRECTION · C347 完整低范数功与倾斜残差的同时下包络](topics/common_structure/residual_preserving_fiber_completion.md#completion-direction) | 在每个实际输出处把完整纤维补为范数至少原真残差的所有向量，同时实现低范数功−L\|\|a\|\|及倾斜距离(r0−\|\|w\|\|)+；原允许弦、完整零集及全部P1–P4仍保持。；**derived-checked** |
+| E659 | [FC-DIRECTION · C347 完整低范数功与倾斜残差的同时下包络](topics/common_structure/residual_preserving_fiber_completion.md#completion-direction) | limits → [MOTHER-OPEN · 一般原图的单调性与正则性共同母结构](topics/common_structure/README.md#mother-question) | 不能从当前原允许RLEB无条件导入更强的完整纤维方向下界；只测允许图方向并用完整原点残差的结构不被此反驳，另加完整根或短值覆盖须显式验证。；**derived-checked** |
 
 ## 不蕴含关系
 

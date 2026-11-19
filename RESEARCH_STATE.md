@@ -10,7 +10,9 @@
 
 [C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。本轮共同结构任务保持**未完成**。
 
-[C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。当前首要义务是找到同一对象在独立条件下的两个反向恢复，并让原一般反射模与正则尺度在该对象中共同决定下降；完整倾斜残差和其他新表示仍在试证，未写出且独立核实的推导不得调用为结论。
+[C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。当前首要义务是让同一对象的反向恢复关系在原一般反射模与正则尺度的共同下降中承重；形式上的两条切片等价不足以通过机制和新意门。
+
+[C347 的保残差最大补全](research/topics/common_structure/residual_preserving_fiber_completion.md) 固定所有原允许根、完整残差、误差模和兼容参数后，仍允许把实际输出纤维填满原残差开球以外的全部方向。因此一般原 RLEB 不能无条件推出完整纤维额外方向或非平凡倾斜距离下界；[F116](FAILED_ROUTES.md#f116) 指出这一量词障碍。只测允许方向同时使用完整残差的候选不受此直接反驳，但必须证明两种信息的非冗余转接。当前残差功差与多尺度匹配候选仍在试证，未独立验收的恢复和下降不得调用为结论。
 
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 

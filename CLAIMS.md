@@ -3037,3 +3037,13 @@
 - **Exact Statement / Assumptions / Quantifiers**：若每条允许边对每个 \(p\in S\) 满足 \(\|a-p\|^2-\|b-p\|^2\ge\beta\|a-b\|^2\)、\(\beta>0\)，则每个具有允许输入的输出满足 \(\sqrt{d(y)^2+\beta\lambda^2r_F(y)^2}-d(y)\le c_K(y)\)。若该输出完整纤维的近最小范数图值均可沿一列允许原边逼近，则另有 \(c_K(y)\le\lambda r_F(y)\)。因此在线性层，\(d\le K_0r_F\) 推出 \([\sqrt{1+\beta\lambda^2/K_0^2}-1]d\le c_K\)，反向 \(d\le C_0c_K\) 推出 \(d\le C_0\lambda r_F\)。不要求残差或回返距离达到。
 - **Second statement / Dependencies**：若允许边满足正文 (1) 的全锚连续补偿耗散（平方项系数为任意固定 \(\tau>0\)），距离落在固定 \([0,R]\)，受检末输出集上的完整残差有统一零识别，则所有仅一处输入扰动 \(e\) 的有限原循环满足 \(\inf_{p\in S}\max_i\|z_i-p\|\le\Xi(\|e\|)\)，其中 \(\Xi(0)=\Xi(0+)=0\)，与周期无关。原 RLEB 的一般模可在原窗内构造连续 Dini 上包络而导入；全锚共次单调取 \(\tau=1-2\rho/\lambda>0,h=0\)。原 C341 的单位系数不能无条件替换此 \(\tau\)。
 - **Evidence / Scope / Objections**：[完整证明和评价窗](research/topics/common_structure/return_gap_and_loop_reduction.md)。固定输出转接独立于正则性和收敛；循环导入仍依赖旧 RLEB 兼容与下降。最近输入零锚一般反射界尚不能推出这里的全锚平方前件，回返性质也未恢复一般方向条件。故不满足本次两个等价及共同机制门；见 [F115](FAILED_ROUTES.md#f115)。
+
+
+<a id="c347"></a>
+## C347-v1 · 固定全部允许 RLEB 数据时的完整纤维最大补全
+
+- **Status**：`derived-checked`。独立研究席提出，主代理重构保持残差、保持完整零集、全部原允许弦和方向/倾斜公式；不包含额外闭图或完整根条件。
+- **Objects / Domain / Definitions**：有限维欧氏空间维数至少一，原 \(F_0\)、指定非空闭 \(S\subseteq\operatorname{zer}F_0\)、步长、工作窗、允许关系 \(\mathcal J_0\) 和全部模满足当前投稿 (P1)–(P4)。固定 \(Y=\mathcal J_0(U_R)\) 与完整 \(r_0(y)=\inf_{v\in F_0(y)}\|v\|\)。
+- **Exact Statement / Quantifiers**：在每个 \(y\in Y\) 任添 \(E_y\subseteq\{v:\|v\|\ge r_0(y)\}\)，在其他输出不改图，所得 \(F_E\) 保持全空间的完整残差与完整零集，原 \(\mathcal J_0\)、所有参数、原 (P1)–(P4) 和原严格初值预算均不变。逐点最大补全是 \(\widehat F(y)=\{v:\|v\|\ge r_0(y)\}\) 对 \(y\in Y\)。对全部 \(a,w\) 与有限 \(L\ge r_0(y)\)，同时有 \(\inf_{v\in\widehat F(y),\|v\|\le L}\langle a,v\rangle=-L\|a\|\) 及 \(\operatorname{dist}(w,\widehat F(y))=(r_0(y)-\|w\|)_+\)；\(L<r_0(y)\) 时前一集合为空。
+- **Dependencies / Evidence**：[自足补全证明](research/topics/common_structure/residual_preserving_fiber_completion.md#residual-preserving-completion)。新增零值只可能发生在原 \(r_0(y)=0\) 的实际输出，原 (P3) 在零处强制该点属于 \(S\)，所以完整零集没有扩大。原允许图保持，评价完整纤维的误差界仍逐点相同。
+- **Scope / Counterevidence / Objections**：保持的是明确允许子关系，不能要求补全后的全部新根自动满足原反射界；额外闭图、单值、最大性或完整截断图条件也不在结论内。C337 通过添加小值降低残差；本条固定已经成立的误差界和残差却仍能填满方向。它排除从当前原数据无条件恢复完整纤维额外方向，不否定允许图方向与完整原点残差之间的共同结构。见 [F116](FAILED_ROUTES.md#f116)。
