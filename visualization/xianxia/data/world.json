@@ -10000,6 +10000,39 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "MT-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MT-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 4966,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "MT-REDUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4402,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12642,6 +12675,18 @@
     "E663": {
       "x": 3235.67,
       "y": 4267.27
+    },
+    "E664": {
+      "x": 4974.59,
+      "y": 4439.78
+    },
+    "E665": {
+      "x": 4444.3,
+      "y": 4555.32
+    },
+    "E666": {
+      "x": 3265.91,
+      "y": 4324.48
     }
   },
   "bounds": {

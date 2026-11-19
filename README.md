@@ -46,7 +46,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 889 个数学节点、659 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 892 个数学节点、662 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -71,6 +71,8 @@
 [C347 保残差最大补全](research/topics/common_structure/residual_preserving_fiber_completion.md) 给当前最直接的对象门：全部原允许 RLEB 数据、完整残差和完整零集保持不变，完整输出纤维仍可填满残差开球以外的所有方向。候选必须区分允许弦的方向与完整纤维的大小；不能默默要求未选图值也有良好方向。
 
 [C348 倾斜纤维的两种恢复](research/topics/common_structure/tilted_fiber_equivalences.md) 证明同一条件在独立范围内分别等价于零锚单调和完整真线性误差界；一般非线性 RLEB 的导入却仍被已有下逆的更强下降支配。两等价是真实阶段成果，固定参数没有关闭共同机制门，见 [F117](FAILED_ROUTES.md#f117)。
+
+[C349 两项尺度匹配](research/topics/common_structure/matching_certificate_reduction.md) 的两条同参数恢复成立，并给一般多值纤维上下端的精确条件；冷审将两恢复归为同一原近端扩张水平。新反射越界机制可从三个必需测试中删掉，故尚不连接到主目标，见 [F118](FAILED_ROUTES.md#f118)。
 
 **两条基准已共享收敛证书，共同生成机制仍开放。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性模、完整真残差、全部允许输出和初值预算原样导入；有限维极大单调 PPA 对完整非空零集和每个固定正步长也可导入。共同引理保证原根无限续接和原点列收敛。[机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 定位了原 RLEB 先建立旧收缩预算、正则尺度后置的问题，并给出同一旋转原图改变步长的区分检验。
 
@@ -259,6 +261,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `research/topics/common_structure/return_gap_and_loop_reduction.md` | C346：原允许图的有限回返缺口、全锚平方耗散到完整真残差的双侧转接，以及连续补偿推出周期无关的同锚误差模。包含原一般 RLEB 的原窗连续上包络、完整近极小值覆盖和正共次单调系数；用于防止把既有下降后果当成共同结构。 |
 | `research/topics/common_structure/residual_preserving_fiber_completion.md` | C347：保持全部当前原 RLEB 数据、完整零集和真残差的逐点最大纤维补全；给低范数最小功及全部倾斜残差的同时精确下包络。用于审查候选是否从允许图偷升到完整纤维方向，完整截断/闭图等附加结构须另证。 |
 | `research/topics/common_structure/tilted_fiber_equivalences.md` | C348：同一完整纤维在零右端与倾斜右端的距离比较、两个精确恢复、原 PPA 充分性及保持原κ的非线性导入。独立审查证明该导入仍被旧下逆的更强余项估计支配；用于区分正确等价与真正承重的共同结构。 |
+| `research/topics/common_structure/matching_certificate_reduction.md` | C349：两项尺度排序、完整残差可取阈值、一般法切纤维的精确上下端、同参数单调/正则两恢复及原 PPA 充分性。独立冷审证明新增越界分支可从三条要求链删去，两个恢复均为既有扩张水平，不能据此宣告新共同机制。 |
 | `research/topics/common_structure/compensated_anchor_convergence.md` | C341–C342 的精确定义和完整证明：原弦锚距上确界、可续根、真正则识别、两条原预算导入、仿射切向预算、旋转族双门及 C277/C329 全部受比合同的反证。要继续扩大共同条件覆盖时首先读取；不能将证书遗漏区写成实际发散。 |
 | `research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md` | 记录四轮实际候选与 G1–G7 裁决，保留 v1 退化量词反例和 v2 修复、独立重构的承重步骤、有限维/固定步长/完整零集的作用域。审查或提升后续版本时核对。 |
 | `research/topics/common_structure/lifted_residual_distance.md` | C343 候选的完整推导：真残差增维、无需连续的静态补偿、仿射精确公式与漂移积分门。未通过自身独立 G7；研究不同残差支付机制或与 C341 的关系时读取。 |

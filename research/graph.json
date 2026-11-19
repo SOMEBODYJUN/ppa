@@ -4936,6 +4936,24 @@
       "label": "F117 固定原κ的倾斜导入仍被旧下逆支配",
       "file": "topics/common_structure/tilted_fiber_equivalences.md#tilted-fiber-reduction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MT-OBJECT",
+      "label": "C349 原弦的两项尺度匹配条件",
+      "file": "topics/common_structure/matching_certificate_reduction.md#matching-definition",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "MT-FIBER",
+      "label": "C349 完整纤维阈值、切向上界与两个恢复",
+      "file": "topics/common_structure/matching_certificate_reduction.md#matching-tangent",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "MT-REDUCTION",
+      "label": "F118 匹配恢复归于旧扩张水平且越界机制可删",
+      "file": "topics/common_structure/matching_certificate_reduction.md#matching-reduction",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12536,6 +12554,39 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "数学两等价与原PPA充分性已核，但固定原强度也未关闭共同生成机制；不得据此把目标M标为完成。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E664",
+      "inputs": [
+        "MT-OBJECT"
+      ],
+      "output": "MT-FIBER",
+      "relation": "conditional",
+      "scope": "在正文原允许图与完整残差量词下排序给纤维阈值；仿射法切分解给上端精确式，同一固定参数的线性相似图A/B分别恢复全图单调与真EB。纯模预算、原根覆盖和严格初值预算另给有限长度。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E665",
+      "inputs": [
+        "MT-OBJECT"
+      ],
+      "output": "MT-REDUCTION",
+      "relation": "conditional",
+      "scope": "原RLEB全类及两恢复类A/B的整图均有h≤b，删去所有反射越界图值不改其真假；两线性恢复都消元为原I+λF最小增益至少4。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E666",
+      "inputs": [
+        "MT-REDUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "多值越界关系在扩展区可支付位移，但不参与三个要求链；不能仅由两个精确切片与共享长度势判共同机制完成。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

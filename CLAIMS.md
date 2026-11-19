@@ -3057,3 +3057,13 @@
 - **Exact structural statement / Scope**：若 \(S=p_0+L\) 仿射、\(F(y)\subseteq L^\perp\)、\(\Gamma_y=F(y)\)、\(\chi=\mathrm{id}\)，令 \(n=y-P_Sy\)，则同一条件当且仅当 \(\theta\lambda^2[r_{-n/(\theta\lambda)}(y)^2-r_0(y)^2-\|n\|^2/(\theta\lambda)^2]\ge(mq-\lambda r_0(y))_+^2\)，两个 \(r_\eta\) 均对原完整纤维取下确界。附加真实 LMSR \(\lambda r_y\ge mq\) 和同纤维沿 \(n\) 的投影单值，条件恰等价零锚单调；线性单值整图时进一步等价通常全对单调。改为全部功非负且有范数趋最小、功趋零的原值序列，条件恰等价该 LMSR。各附加条件不预设自己要恢复的性质。
 - **Original PPA implication / Dependencies**：一般闭目标、同一允许图上的条件给 \(t^2\ge(1+m^2/2)q^2+(1-\theta)(h^2-b^2)\)。另有原输入覆盖、由 \(\chi\) 定义的逆步界在 \(\rho_m=(1+m^2/2)^{-1/2}\) 的几何采样可和及严格初值预算，则每条允许原轨道可续、有限长并点收敛。非解认证域非空须按正文独立保证。原一般 RLEB 取 \(a=L(\lambda r_y),u=L(\lambda\|v\|)\)、\(L=H\) 的广义下逆、\(m=\sqrt{2(1-\kappa^2)}/\kappa,\chi=\sqrt{(1-\kappa^2)/2}\,L\) 可导入且保持给定 \(\kappa\)；负共单调加真 LMSR 另有线性 \(\chi\) 导入。
 - **Evidence / Counterevidence / Objections**：[完整定义、证明与独立归约](research/topics/common_structure/tilted_fiber_equivalences.md)。原 RLEB 已有 \(q/\kappa\le a\le u\le t\)，直接给 \(t^2\ge\kappa^{-2}q^2+u^2-a^2\)，强于候选所需下降；两个倾斜右端的恢复关系没有被该推导使用。C347 限制从允许图到完整倾斜纤维的升级；C277 可编码同弦预算，C315 已有下逆。故保留真实结构等价，拒绝以此宣告共同机制完成；见 [F117](FAILED_ROUTES.md#f117)。
+
+
+<a id="c349"></a>
+## C349-v1 · 两项匹配的纤维阈值、两个恢复及可删除机制
+
+- **Status**：`derived-checked`。独立冷审与主代理核排序、完整残差帽及非达到、两同参数切片、一般多值切向上界与有限前缀。共同结构的机制/新意门未通过。
+- **Objects / Domain / Definitions**：原允许弦 \(x=y+\lambda v\)，指定非空闭 \(S\subseteq\operatorname{zer}F\)。记 \(t=d(x),q=d(y),s=\|x-y\|,a=\min_{p\in P_S(x)}\|2y-x-p\|,h=(t+a)/2,\rho=\lambda r_F(y)\)。给原非线性模 \(\omega,\psi\)、严格递增有限 \(\Phi\)，令 \(b=(t+\omega(t))/2,C(u)=\Phi(\psi(u/\lambda)),T=\Phi(q),H=C(\rho\wedge b)\)。条件为无序对 \(\{h,T\}\) 排序后逐项不大于 \(\{b,H\}\)，真残差始终取完整纤维。
+- **Exact Statements / Quantifiers**：给定允许图，正文 (1)–(2) 的向上尺度集精确判定完整 \(\rho(y)\) 可取范围，端点不以其下确界替代。仿射目标及正交法切分解下，正文 (8)–(9) 精确给完整纤维模长下端与每个受检切向子纤维上端的关系。若全部允许弦满足匹配、原覆盖及纯模预算 \(b(t)+C(b(t))\le\Phi(t)\)，则从严格 \(\Phi\) 初值预算内的每点，每条允许原轨道可续、有限长并点收敛。原 RLEB 取 \(\Phi=\Theta\)，保全部原参数和初值预算。
+- **Two exact recoveries / Scope**：同一偶数维、\(S=\{0\},\lambda>0\)、\(\omega(t)=3t,\psi(r)=\lambda r/4,\Phi(t)=8t\)。在 \(F=(m/\lambda)Q\)、\(Q\) 正交的完整原图类，A 固定 \(m=\sqrt{15}\) 放开方向，匹配 iff 全图单调，指定 EB 恒失败于非零点；B 固定 \((Q+Q^*)/2=-I/8\) 放开 \(m>0\)，匹配 iff 指定完整真 EB，即 \(m\ge4\)，通常单调恒失败。两类完整根均全域唯一，非解认证域非空。
+- **Evidence / Counterevidence / Dependencies**：[完整证明与冷审归约](research/topics/common_structure/matching_certificate_reduction.md)。两个恢复都恰为 \(t\ge4q\)，即原 \(I+\lambda F\) 的最小增益至少 4，是既有 SRG 平移几何的两个截面。原 RLEB、A、B 的整类均已满足 \(h\le b\)，故可删全部反射越界区域而保三类结论。独特的多值越界交换不参与原一般行和两恢复，因此本条不是共同机制完成；见 [F118](FAILED_ROUTES.md#f118)。
