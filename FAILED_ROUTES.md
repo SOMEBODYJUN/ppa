@@ -873,7 +873,7 @@ C361 的 \(M_L\) 要求同一个有限 Lipschitz 梯度在 \(S\) 上为零，并
 <a id="f129"></a>
 ## F129 · 用同一严格共轭代价导入全部原 RLEB
 
-C363 将真实原弦的 \(-\Phi^*(L\|x-y\|)\) 与一般模插值边放进同一闭链。当完整真残差与预算满足 \(\lambda Lc>1\)，证明会强制原步长有几何上界。完整 Dini 原 RLEB 允许唯一原轨道的真实位移为 \(k^{-2}\) 级，[C364](CLAIMS.md#c364) 在同图上同时核对精确反射与完整真误差界。这个障碍与另选反馈模无关，也不能换根逃开。直接去掉严格参数也失败，临界原轨道甚至可在有界环带无限绕行。[C367](CLAIMS.md#c367) 进一步保留 Dini 和全域凸接触及唯一原根，临界仍发散。可回收 C363 的非 Dini 子类及真原步证明。修订时需要能区分目标法向与切向累计位移的代价。 [详细证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)
+C363 将真实原弦的 \(-\Phi^*(L\|x-y\|)\) 与一般模插值边放进同一闭链。当完整真残差与预算满足 \(\lambda Lc>1\)，证明会强制原步长有几何上界。完整 Dini 原 RLEB 允许唯一原轨道的真实位移为 \(k^{-2}\) 级，[C364](CLAIMS.md#c364) 在同图上同时核对精确反射与完整真误差界。这个障碍与另选反馈模无关，也不能换根逃开。直接去掉严格参数也失败，临界原轨道甚至可在有界环带无限绕行。[C367](CLAIMS.md#c367) 进一步保留 Dini 和全域凸接触及唯一原根，临界仍发散。[C368](CLAIMS.md#c368) 给出固定模在临界及更低参数时的精确积分门。可回收 C363 的非 Dini 子类及真原步证明。修订时需要能区分目标法向与切向累计位移的代价。 [详细证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)
 
 <a id="f130"></a>
 ## F130 · 把凸梯度闭链直接作为原 PPA 的全局极小化选根

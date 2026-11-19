@@ -5104,6 +5104,12 @@
       "label": "C367 全域凸闭链与 Dini 下的临界发散",
       "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-dini",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-CRITICAL-INTEGRAL",
+      "label": "C368 固定反馈模的精确积分阈值",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-integral",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13006,6 +13012,17 @@
       "output": "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT",
       "relation": "limits",
       "scope": "Dini、全域凸接触和完整残差匹配全部保留，临界等号 λLc=1 时原根仍唯一存在，但所有非解轨道切向无界。限制收敛部分，根存在不受影响。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E691",
+      "inputs": [
+        "FEEDBACK-PROXIMAL-CLOSED-CHAINS"
+      ],
+      "output": "FEEDBACK-CRITICAL-INTEGRAL",
+      "relation": "conditional",
+      "scope": "保持混合闭链和完整真残差，固定模及参数乘积不超过一。文中积分有限确保原轨道有限长，发散时同模有完整连续唯一根的认证反例。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

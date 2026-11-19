@@ -3221,3 +3221,10 @@
 - **Status**：`derived-checked`。Astra Max 给出原图；全域参数、原根唯一、渐近与发散均另行重构。
 - **Exact Statement**：任取 \(1<p\le2\)，取零附近为 \(\log(e^2/t)^{-p}\) 的凹 Dini 反馈模。存在 \(\mathbb R^2\) 上全域连续单值原图、闭仿射零集、完整残差等于 \(\omega(d)\) 以及全域凸平坦势，满足 C366 除严格性外的全部条件。取 \(\lambda=L=c=1\)。每个原根唯一，所有非解轨道法向趋零，但切向每步同号且步长为 \(k^{-p/2}\) 级，故点列无界。
 - **Evidence / Scope**：[完整证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-dini)。临界障碍保 C366 的所有原根生成前件和 Dini。法向一步因子趋于一，故不主张满足完整原 RLEB。公开先行性未核定。
+
+<a id="c368"></a>
+## C368-v1 · 固定反馈模的精确积分收敛阈值
+
+- **Status**：`derived-checked`。Astra Max 给出小降、大降分拆和饱和反例，两线均独立重构。公开先行性未核定。
+- **Exact Statement**：固定 C363 的任意凹反馈模和 \(0<\sigma=\lambda Lc\le1\)。令 \(a_\sigma(t)=\Phi^*(\sigma\omega(t))/(\sigma\omega(t))\) 对 \(t>0\)。其余合同在整个可续接原图类上保证全部认证轨道有限长并点收敛的充要条件是 \(\int_0^\epsilon\omega(t)/a_\sigma(t)\,dt<\infty\)，其中 \(\epsilon>0\) 可选。积分发散时有同一模的全域连续单值原图，完整残差精确、原根唯一、非解工作窗留域且通过闭链，但所有非解认证初值的原轨道无界。
+- **Evidence / Scope**：[两分支证明及固定模反例](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-critical-integral)。反例用小法向工作窗；若反馈模有全域正线性下界，可把饱和反馈接触扩至全域。充要指覆盖整个合同类，不是给单个问题的必要条件。

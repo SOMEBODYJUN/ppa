@@ -160,6 +160,42 @@ A_{k+1}-A_k=\log\!\left(1+\frac{a(t_{k+1})}{M t_{k+1}}\right)
 \]
 由此 \(A_{k+1}^2-A_k^2\to 2p/M\)，即 \(A_k\sim\sqrt{2pk/M}\)。每步切向位移方向相同且大小 \(\asymp k^{-p/2}\)，总和发散。这证明严格参数在产生原根的强版本中仍不可删。此例的法向一步因子趋于一，未满足原 RLEB 的固定距离收缩。
 
+<a id="feedback-critical-integral"></a>
+**固定反馈模时的充要阈值。** 固定任意上述凹模与 \(0<\sigma\le1\)，将 C363 的参数乘积取为 \(\sigma=\lambda Lc\)。定义
+\[
+a_\sigma(t)=\frac{\Phi^*(\sigma\omega(t))}{\sigma\omega(t)}
+\quad(t>0),\qquad a_\sigma(0)=0.
+\]
+由凸性和 \(\omega\) 的单调性，\(a_\sigma\) 非减且在 \(t>0\) 为正。由于共轭的最优测试点是 \(\omega^{-1}(\sigma\omega(t))\le t\)，有 \(a_\sigma(t)\le t\)。对这一固定模与参数，C363 的其余合同统一保证所有允许轨道有限长的充要条件是
+\[
+\int_0^\epsilon \frac{\omega(t)}{a_\sigma(t)}\,dt<\infty .
+\tag{7}
+\]
+这里只要求某个 \(\epsilon>0\)。发散时，下述反例连点收敛也失败。结论是对此合同下整个原图类的保证，针对单个图不构成必要条件。
+
+**充分性。** 写 \(H_k=h(x^k)\)、\(s_k=\|x^k-x^{k+1}\|\)。若 \(H_k=0\)，下降强制下一步驻定，再用真残差得到已到 \(S\)。以下只看正 \(H_k\)。下降、原步及 \(\Phi^*(s)/s\) 非减给
+\[
+H_k-H_{k+1}\ge Ls_k\,a_\sigma(d_{k+1}).
+\]
+令 \(f(u)=1/a_\sigma(\Phi^{-1}(u/B))\)。在 \(H_{k+1}\ge H_k/2\) 的步上，用 \(H_{k+1}\le B\Phi(d_{k+1})\) 得
+\[
+Ls_k\le (H_k-H_{k+1})\,f(H_k/2)
+       \le 2\int_{H_{k+1}/2}^{H_k/2}f(u)\,du.
+\]
+这些积分区间内部互不重叠。用 \(u=B\Phi(t)\) 换元，汇总由 (7) 控制。其余步均有 \(H_{k+1}<H_k/2\)，其输入势值按出现次数至多几何衰减。以 \(t=\Phi^{-1}(H_k/B)\) 作共轭测试，得 \(Ls_k\le(B+1)\omega(t)\)。又 \(\Phi^{-1}(2^{-j}u)\le 2^{-j/2}\Phi^{-1}(u)\)。由于 \(a_\sigma(t)\le t\)，(7) 蕴含普通 Dini，故这部分步长亦可和。最后 \(s_k\to0\) 和真残差界推出 \(d_{k+1}\to0\)，有限长度便给出点收敛。
+
+**必要性。** 对发散的固定模，在 \(\mathbb R^2\) 取 \(S=\{0\}\times\mathbb R\)、\(\lambda=c=1,L=\sigma\)。取 \(M\) 使 \(b(t)=(\sigma/M)a_\sigma(\min(t,\epsilon))\le\omega(t)/2\) 全域成立。这可由 \(a_\sigma(t)\le t\)、\(\omega(t)/t\ge\omega(\epsilon)/\epsilon\) 在小尺度上成立以及外部 \(b\) 常值推出。设
+\[
+F(u,z)=\left(\operatorname{sgn}(u)b(|u|),\ \sqrt{\omega(|u|)^2-b(|u|)^2}\right).
+\]
+完整残差等于 \(\omega(d)\)，全域原根唯一。因为 \(t\mapsto t+b(t)\) 严格递增连续且满射，原轨道法向半径严格下降到零。小条带 \(d\le\epsilon\) 保持不变，\(h=M\Phi(|u|)\) 在其中饱和凸接触条件，所以条带内通过混合闭链检验。对每个从这条带的非解初值出发的轨道，
+\[
+t_{k-1}-t_k=(\sigma/M)a_\sigma(t_k),\qquad
+\int_{t_k}^{t_{k-1}}\frac{\omega(t)}{a_\sigma(t)}\,dt
+\le \frac{\sigma}{M}(1+\sigma/M)\omega(t_k).
+\]
+后一式来自 \(a_\sigma\) 非减、\(t_{k-1}\le(1+\sigma/M)t_k\) 和凹模的缩放界。故 \(\sum_k\omega(t_k)=\infty\)，而切向步长同号且绝对值至少为 \((\sqrt3/2)\omega(t_k)\)。原轨道无界。这里的工作窗是原模下的小条带，完整算子及原覆盖仍全域给定。幂模 \(\omega(t)=t^\alpha\) 的 \(a_\sigma(t)\) 为 \(t\) 的正倍数，(7) 总成立。对上述对数模，\(\sigma=1\) 时 (7) 恰在 \(p>2\) 成立。若 \(\inf_{t>0}\omega(t)/t>0\)，还可以直接用 \(b(t)=(\sigma/M)a_\sigma(t)\) 在全域饱和 C366 的凸接触条件。
+
 **完整的原 Dini RLEB 也不能全部导入。** 在 [C242](../../canonical/triangular_rleb.md#tri-object) 中把平方根换成 \(\ell(t)=\log(e^2/t)^{-2}\) 于足够小的正尺度，令 \(\ell(0)=0\)，再作凹的正斜率切线延拓。保持 \(F(u,z)=(u,-\ell(|u|))\) 及 \(\lambda=1\)。原根仍全域唯一，法向每步减半，完整残差至少为 \(\ell(d)\)，精确原反射模为 \(2\ell(t/2)\)。因此取真误差模 \(\psi=\ell^{-1}\) 和 \(\kappa=3/4\)。由于
 \[
 \ell(3t/4)-\ell(t/2)\asymp \log(e^2/t)^{-3}\gg t/2 ,

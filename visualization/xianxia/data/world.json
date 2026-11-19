@@ -10308,6 +10308,17 @@
       "y": 4305,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "FEEDBACK-CRITICAL-INTEGRAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 4123,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -13058,6 +13069,10 @@
     "E690": {
       "x": 4826.67,
       "y": 4229.8
+    },
+    "E691": {
+      "x": 4826.42,
+      "y": 4138.06
     }
   },
   "bounds": {
