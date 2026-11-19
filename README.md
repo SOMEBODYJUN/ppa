@@ -64,7 +64,7 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
-**统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [F120](FAILED_ROUTES.md#f120)
+**统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120](FAILED_ROUTES.md#f120)
 
 [C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条路线的承重缺口。
 
@@ -86,7 +86,7 @@
 
 [当前目标与已有教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)冻结共同充分条件 \(W\) 的身份。它要从指定的单调/次单调结构、正则性及该组合的参数兼容推出原 PPA 至少一条收敛轨道。原 RLEB 测试行保留一般非线性 \(\omega\)。全选结果保留其既有范围，独立于当前最低目标。
 
-[研究导读](research/topics/common_structure/README.md)给出已完成的最低共同覆盖、尚未导入的组合、证明路线及独立复核。[GPT Pro 持续研究任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)列出候选的硬性验收和未通过时的试证循环。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
+[研究导读](research/topics/common_structure/README.md)给出已证数学、失败路线和开放问题。[2026-11-19 新写的 GPT Pro 研究任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)直接说明要找的 M、两个恢复与原 PPA 推论，并带入已经排除的 RL 修补类型。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。此前的 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在锚输运和参数条件下给输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
 [原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C336 精确恢复同模延拓的真残差，C337–C339 将困难定位到最近锚的小图值、多尺度数据及多值长支。C329 只作为常数二次弱单调专门结果。
 
@@ -251,7 +251,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
+第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
@@ -268,6 +268,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `research/topics/common_structure/matching_certificate_reduction.md` | C349：两项尺度排序、完整残差可取阈值、一般法切纤维的精确上下端、同参数单调/正则两恢复及原 PPA 充分性。独立冷审证明新增越界分支可从三条要求链删去，两个恢复均为既有扩张水平，不能据此宣告新共同机制。 |
 | `research/topics/common_structure/incoming_residual_reflection.md` | C350：当前完整残差约束下一原弦反射，优化剪切点偏差与所用值的非最小性成为相邻完整残差的非负损失；两种同参标定、原全部初值及正点跳跃模证明齐全。读此文件以使用跨边定量关系，勿把可删方向费用升级为共同结构已完成。 |
 | `发表成果整理/本轮重构/C351_结构与条件_重写.md` | C351 的可读正文：用输入、输出、距离和真残差直接写条件 M，展开 A、B 的精确等式及两种恢复，给出不经过广义逆的原模存在性与 PPA 证明。包含强附加条件、锚定与全对单调的区别，以及对原研究期望的范围判断。读 C351 先读此文。 |
+| `research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md` | 2026-11-19 从头写的新研究提示词。说明老师要找的共同 M、两个恢复、原 PPA 收敛、失败类型及交付方式。当前交给 Pro 应使用此文件，起草来源及范围见专题 README。 |
 | `research/topics/common_structure/two_point_scale_compatibility.md` | C351 的完整技术正文：跨位置不等式消去两套原模的存在量词，含边柱距离、两个恢复、原 PPA 全部初值证明及不可删非对角项的原图证明。与 C315 已有的给定模下逆比较，具体恢复前提见重写稿。 |
 | `research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md` | 当前共同结构的三门接收：逐项记录严格开壳关系、双向原模重建、同一非线性两恢复、非解入口和原轨道；区分 C315 既有内容、结构增量与公开优先未定。 |
 | `research/topics/common_structure/reflection_residual_transfer_candidate.md` | C352：原反射余量对完整残差阈值的有符号平移、跳跃上集、原PPA与偏移球面恢复；包括允许值严格大于完整不达到残差的版本。数学可复用，本路线独立结构终审尚未完成。 |

@@ -2,7 +2,7 @@
 
 ## 单调性与正则性的共同结构
 
-**统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [F120 失败原因](FAILED_ROUTES.md#f120)
+**统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120 失败原因](FAILED_ROUTES.md#f120)
 
 **此前的共用收敛证书。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
@@ -84,7 +84,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**共同结构的首要义务。** 找同一个 \(M\)，在有独立含义的两种条件下分别恢复单调性和正则性，并用这条联系推出原 PPA 收敛。原锚点 RL 加误差界的重新组织及精确幅度匹配已按 F120 排除。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
+**共同结构的首要义务。** 找同一个 \(M\)，在有独立含义的两种条件下分别恢复单调性和正则性，并用这条联系推出原 PPA 收敛。原锚点 RL 加误差界的重新组织及精确幅度匹配已按 F120 排除。[现行完成标准](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 
@@ -131,7 +131,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md)和 [F120](FAILED_ROUTES.md#f120)，确认统一结构尚未找到。按单调、次单调和正则性的独立含义寻找共同内容；原 RLEB 最终作为要容纳的一种理论处理。C341–C353 的已证关系按各自范围保存。
+**共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)和 [F120](FAILED_ROUTES.md#f120)，确认统一结构尚未找到。按单调、次单调和正则性的独立含义寻找共同内容；原 RLEB 最终作为要容纳的一种理论处理。C341–C353 的已证关系按各自范围保存。
 
 **次单调路线已完成比较，主线叙事须收窄。** [六路研究与独立反审](research/novelty/2026_10_14_submonotonicity/README.md)核实：LT二次点对类与Otero–Iusem2010作者稿精确换参，不等于其局部/收敛定理重复；非tied、矩阵、逆耗散与原函数结构有独立价值。同F/同lambda的diag例与GU3诊断证明，任意合法标量反射/EB压缩仍可丢方向关联，仅升为双范数D也未必修复。C249/C250本已零锚允许多值，不是全对LT的简单非线性别名。既有数学身份保持，新GU1/GU3只留报告级candidate；下一门为原始方向/组成到完整物理政策的可认证结构，而非再扩模名字。[综合报告](发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[复算](research/code/submonotonicity_routes/README.md)可接续。主稿/摘要/编号未改。
 
