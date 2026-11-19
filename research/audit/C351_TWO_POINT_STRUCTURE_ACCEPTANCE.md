@@ -13,7 +13,7 @@
 
 | 标准 | 具体成立的命题与推导 |
 | --- | --- |
-| 说清两性质的结构联系 | [定义与严格开壳式](../topics/common_structure/two_point_scale_compatibility.md#two-point-definition)：每个 \(q_y>0\) 都须有 \(2\rho_y\ge q_y/\kappa+\sup_{t_e<q_y/\kappa}a_e\)，含零基线。它同时是反射量对较远输出完整小残差的下限、输出残差对较近输入反射的上限。[结构命题](../topics/common_structure/two_point_scale_compatibility.md#two-point-characterization)证明它加原帽/Dini恰当且仅当存在一组原 RLEB 模，逆向由同时极小的 \(W,Q\) 重建。[同参数恢复](../topics/common_structure/two_point_scale_compatibility.md#two-point-recoveries)在独立幅度条件A和反射条件B下分别恢复指定锚定RL及完整真EB。删去收敛段，这些命题仍有独立内容。 |
+| 说清两性质的结构联系 | [定义与严格开壳式](../topics/common_structure/two_point_scale_compatibility.md#two-point-definition)：每个 \(q_y>0\) 都须有 \(2\rho_y\ge q_y/\kappa+\sup_{t_e<q_y/\kappa}a_e\)，含零基线。它同时是源半径小于 \(q_y/\kappa\) 的反射量对该输出完整小残差的下限、输出残差对这些输入反射的上限。[结构命题](../topics/common_structure/two_point_scale_compatibility.md#two-point-characterization)证明它加原帽/Dini恰当且仅当存在一组原 RLEB 模，逆向由同时极小的 \(W,Q\) 重建。[同参数恢复](../topics/common_structure/two_point_scale_compatibility.md#two-point-recoveries)在独立幅度条件A和反射条件B下分别恢复指定锚定RL及完整真EB。删去收敛段，这些命题仍有独立内容。 |
 | 共同关系承担原PPA推导 | 原两侧数据在任意尺度先给 \(Q(H(t))\le\kappa t\)，从而直接得到跨位置结构，没有先调用旧轨道收敛。对实际当前边，原锚半差恒等给 \(2\rho_z-a_e\le t_e\)，同一个结构随即给 \(d(z)\le\kappa d(x)\)。\(s\le H(t)\) 和Dini保持原全部初值预算，有限前缀留域再调用原覆盖，得到无限原轨道、有限长和点收敛。一般非线性 \(\omega,\psi\)、最近输入锚、完整不达到的真inf全程保留。 |
 | 新意落在结构 | C315 的给定模下逆明确承认为旧量。新增是任意两套原模存在性的**双向**消去、原始跨位置配对的充要限制和同一真正非线性尺度的两个恢复。[不可删性证明](../topics/common_structure/two_point_scale_compatibility.md#two-point-necessity)给原完整图，使全部自身边和标量零点都通过而两种恢复分别失败；必须保留另一条真实原边。这不是只在三个要求链外附加一个新分支。公开优先权仍未裁定。 |
 
