@@ -10233,11 +10233,11 @@
       "realm": "convergence-annex-8"
     },
     "GRADIENT-FEEDBACK-INTERPOLATION": {
-      "role": "object",
-      "kind": "mine",
-      "object": "lotus",
-      "evidence": "derived-checked",
-      "reason": "neutral-default",
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
       "x": 4684,
       "y": 4032,
       "region": "convergence",

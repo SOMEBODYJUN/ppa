@@ -68,7 +68,7 @@
 ## 当前专题：单调性和正则性是否有共同结构
 
 
-[C361 梯度反馈插值](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)把二次次单调精确写成强凸反馈不能制造同右端碰撞，把相对固定 \(S\) 的真误差界写成平坦梯度反馈的置零代价。仿射零集上的最小梯度 Lipschitz 常数对切向图值的平方赋双倍权重。两个恢复以及单个扰动的精确半径已给证明，尚未证明普遍原 PPA 的承重关系。
+[C361 梯度反馈插值](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)把二次次单调候选写成强凸反馈不能制造同右端碰撞，把相对固定 \(S\) 的真误差界写成平坦梯度反馈的置零代价。仿射零集上的最小梯度 Lipschitz 常数对切向图值的平方赋双倍权重。两点恢复与仿射公式已逐式核对，但一般闭集的全局插值与单个扰动构造仍是候选，尚未证明普遍原 PPA 的承重关系。
 
 **主问题。** 从原算子图出发，解释单调性与正则性各自约束的几何变化，并找出它们为什么在原近端步中发生联系。候选提出后，再逐条检验哪些既有 PPA 定理能在原假设、允许步长和初值范围下推出同一个 \(M\)。下列旧路线和反例用于检验覆盖及定位失败。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md)
 

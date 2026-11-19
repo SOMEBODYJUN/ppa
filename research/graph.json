@@ -5067,7 +5067,7 @@
       "id": "GRADIENT-FEEDBACK-INTERPOLATION",
       "label": "C361 保目标集的梯度反馈插值与置零代价",
       "file": "topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation",
-      "evidence_status": "derived-checked"
+      "evidence_status": "candidate"
     }
   ],
   "edges": [
@@ -12902,8 +12902,8 @@
       ],
       "output": "MOTHER-OPEN",
       "relation": "open",
-      "scope": "两个恢复和精确置零代价已证。待证同一插值关系何时驱动原近端点收敛及如何导入原一般非线性 RL。",
-      "status": "open",
+      "scope": "两点恢复与仿射置零代价已逐式核对。一般闭集插值、无限序列构造和原近端驱动仍待独立审查。",
+      "status": "candidate",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]
