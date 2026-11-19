@@ -3250,3 +3250,11 @@
 - **Status**：`derived-checked`。Astra Max 给出凸惩罚极小证明，另行重构全部常数、真纤维上下界和极小点存在。
 - **Exact Statement**：全域非负可微凸势 \(h\)，非空 \(S=\arg\min h\)，最小值归零，完整图 \(F(y)=\{T\nabla h(y):T\in\mathcal T(y)\}\)。每个增益集非空且所有增益奇异值统一落在 \([m,M]\subset(0,\infty)\)。对任意一般凹模 \(\omega\)，存在正 \(b\) 使 \(h\ge b\Phi(d_S)\) 当且仅当存在正 \(c\) 使完整 \(r_F\ge c\omega(d_S)\)。两方向常数可分别取 \(mb/2\) 及 \(c/(4M)\)。
 - **Evidence / Scope**：[直接证明](research/topics/common_structure/gradient_feedback_recovery.md#feedback-growth-recovery)。增益结构不预设任何距离误差界，但需要完整纤维和同一个势有这种联系。结论全域，不擅自延伸至局部惩罚极小点。它未证明一般原 RLEB 的增益表示或分数弦可支付性，两个完整恢复的普遍导入仍开放。
+
+<a id="c372"></a>
+## C372-v1 · 当前反馈 M 的恢复边界与可验证性门
+
+- **Status**：`derived-checked`。缩速不变性、跨位置剪切和线性等价内积反例逐式核对；一般模的正向范围沿 C362/C371 的已证子类引用。
+- **Exact Statement**: 固定零集上的单点反馈增量条件在逐点缩速 v -> epsilon(y)v 下保持同一势、同一模和同一预算，因此不能推出完整真残差下界。二次势与线性反馈模也只给相对固定目标的径向正性；存在连续单值图共享这些数据而任意局部弱单调常数均失败。在线性图 F(y)=Ay 中，全分数弦条件精确恢复某个等价内积下的单调性；只有加入度量兼容（例如正规类）才恢复欧氏单调性。
+- **Operational Scope**: 一般凹模只改变共轭代价尺度，不消除上述单点/两点信息缺口。若把闭链的跨位置比较、完整纤维量词、实际步长尺度和显式 h 一并作为输入，才可能形成可审计证书；当前存在式 M 仍明显难于原 RLEB 的直接模函数检查，且法向/切向置零代价只是诊断量。
+- **Evidence / Boundary**: [完整审查](research/topics/common_structure/operational_m_assessment.md)；正向的线性内积恢复和有界可逆增益下的一般模正则恢复见 [C370](#c370)、[C371](#c371)。这条记录不宣称已经找到任务所要求的完整共同结构。

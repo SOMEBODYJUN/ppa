@@ -8,6 +8,9 @@
 
 [反馈的两个限定恢复](gradient_feedback_recovery.md#feedback-recovery) 给出未知共同势在线性类的精确内积单调恢复，以及完整增益图下的同势增长与一般模正则等价。原图可任意缩速与跨位置旋转的证明，解释一般恢复为何仍失败；不依赖法向或切向分解。
 
+[C372 当前反馈 M 的恢复边界与验证成本](operational_m_assessment.md) 固定本轮裁决：障碍来自单点/两点量词和完整纤维信息的丢失，而非二次与一般模的阶数；线性类只在等价内积或度量兼容子类中恢复欧氏单调。法向/切向公式保留为诊断，不作为完整 M 的验收条件。
+
+
 [C363–C365 原近端混合闭链](gradient_feedback_proximal_cycles.md#feedback-original-steps) 把完整原弦与 C362 的插值条件放进同一闭链。严格参数时从闭链建立原 PPA 点收敛；临界绕行、慢位移完整 RLEB 以及两步极小化障碍标出覆盖边界。[C366 从闭链得到原根](gradient_feedback_proximal_cycles.md#feedback-original-root-existence) 给出预先没有原根覆盖的版本。
 
 [C362 一般模反馈](gradient_feedback_general_modulus.md#feedback-modulus-cycles) 用原图选出的梯度和闭合链判断能否来自同一平坦势。凸版本给两点碰撞的非二次代价。路径定理量化实现整条已给定近端路径的扰动大小，也能恢复完整真残差的固定目标扰动半径。用于比较线性与非线性反馈及识别原根生成缺口。
