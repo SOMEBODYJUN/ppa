@@ -6,6 +6,7 @@
 
 - Azagra–Mudarra，[arXiv:1603.00241v3](https://arxiv.org/pdf/1603.00241v3#page=3)，Theorem 1.3、Proposition 2.1。任意 Hilbert 子集上的函数值与梯度数据满足凸光滑两点不等式时，可作凸 \(C^{1,1}\) 扩张。[Le Gruyer](https://doi.org/10.1007/s00039-009-0027-1) 给出一般最优一阶扩张。C361 消去目标集外一点的自由函数值，计算保 \(S\) 的归零代价。
 - Dontchev–Gfrerer–Kruger–Outrata，[arXiv:1807.02198v2](https://arxiv.org/pdf/1807.02198v2)，§2、Theorem 3.2。扰动半径衡量加向量扰动后丧失度量次正则性，使用扰动后的逆纤维。C361 的对象是固定 \(S\) 外的新零点聚集，扰动必须为在 \(S\) 平坦的势的梯度。两个半径定义的失败事件不同。确切公开优先性未穷尽。
+- Azagra–Mudarra，[一般凹模的一阶 Whitney 扩张](https://blogs.mat.ucm.es/dazagrar/wp-content/uploads/sites/85/2024/06/C1omega200526.pdf)，Definition 1.4、Theorem 1.5。对 Hilbert 空间任意非空子集，给定完整函数值与梯度，在 \((mg^{1,\omega})\) 条件下得梯度模预算的 \(6\) 倍上界。Azagra–Le Gruyer–Mudarra，[凸版本](https://carlosmu.folk.ntnu.no/FormulaeForC11Extension.pdf)，Definition 4.7、Proposition 4.10、Theorem 4.11，给出凸势的对偶代价与 \(8\) 倍上界。C362 另对函数值未知、梯度可从原图纤维选取的问题用闭链消元，再用原近端输出的尺度分离构造整条路径所需的势。这些推导的公开先行性待核定。
 
 <a id="lit-rleb-discrete-damping"></a>
 ## 旋转的隐式阻尼及欧氏功的可积性

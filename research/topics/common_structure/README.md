@@ -6,6 +6,8 @@
 从原算子图出发，找出单调性与正则性各自约束的变化及其在原步中的共同机制。已有收敛定理用于候选成形后的覆盖检验，下面的旧路线和反例用于核对候选的适用范围。[现行研究任务](GPT_PRO_M_NEW_2026-11-19.md)
 
 
+[C362 一般模反馈](gradient_feedback_general_modulus.md#feedback-modulus-cycles) 用原图选出的梯度和闭合链判断能否来自同一平坦势。凸版本给两点碰撞的非二次代价。路径定理量化实现整条已给定近端路径的扰动大小，也能恢复完整真残差的固定目标扰动半径。用于比较线性与非线性反馈及识别原根生成缺口。
+
 [C361 反馈插值](gradient_feedback_interpolation.md#feedback-interpolation)保留两点弱单调与固定目标置零的刻画。[当前定义与 PPA 公式复核](gradient_feedback_interpolation.md#feedback-review)给出全点抵消必需的 \(r_F\le Ld\) 和梯度限制，说明其原一般 RLEB 导入失败。原距离估计在一般闭零集上不成立，单点目标及限定参数版本另有证明。后续可研究同一反馈关系中的两类稳定余量，但不能据现有两个测试宣布已恢复同一 \(M_L\)。
 
 [C360 原离散阻尼与连续场障碍](rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 在同一尖锐非线性原认证及全域唯一收敛原近端下实现原连续周期、漂移和任意给定的紧流因子。连续势或原连续趋稳不是普遍导入。

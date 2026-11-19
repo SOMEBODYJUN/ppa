@@ -1048,6 +1048,7 @@
 | E682 | [PPA-CONVEX-PATH-OBSTRUCTION · C359 凸化原近端路径的真误差界盲区](topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 完整凸化纤维以及逐原初值的全部有限和无限原路径的闭凸包相同，也可有不同完整真残差最优误差界幂；两原图共享真正非线性 RLEB 和完整覆盖。；**derived-checked** |
 | E683 | [RLEB-DISCRETE-FLOW-OBSTRUCTION · C360 同一尖锐原 RLEB 下的原连续流分离](topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 真正非线性的原 RLEB 与全域唯一收敛的原近端允许原连续周期、切向无界漂移或给定紧流因子；不得将原连续趋稳或正定度量梯度表示作为普遍导入。；**derived-checked** |
 | E684 | [GRADIENT-FEEDBACK-INTERPOLATION · C361 保目标集的梯度反馈插值与置零代价](topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation) | open → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 两点弱单调刻画和固定目标置零代价保留范围。全点平坦梯度抵消强制 r_F<=Ld，不能纳入 C242 的非驻定趋零轨道；原 PPA (9) 的一般闭零集版本已反证，修正版限单点目标或额外参数条件。两个反馈测试与同一 M_L 的统一恢复及原近端驱动仍开放，见正文 feedback-review 和 F128。；**candidate** |
+| E685 | [GRADIENT-FEEDBACK-GENERAL-MODULUS · C362 一般模梯度反馈的闭链判据](topics/common_structure/gradient_feedback_general_modulus.md#feedback-modulus-cycles) | open → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 平坦与凸反馈消去未知函数值共用闭链原理。给定几何尺度衰减的路径时可实现受扰动的精确 PPA，并估计完整真残差的固定目标扰动半径；由原图生成可收敛原近端轨道及两类性质的统一恢复仍开放。；**candidate** |
 
 ## 不蕴含关系
 

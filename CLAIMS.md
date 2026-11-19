@@ -3177,3 +3177,12 @@
 - **Fixed-Target Scope**：要求 \(h=\nabla h=0\) 于整个 \(S\)。指定 \(y\notin S,v\in F(y)\) 时，抵消 \(v\) 的最小梯度 Lipschitz 常数由正文 (4) 的两零锚上确界给出。仿射 \(S\) 的准确常数为 \(\sqrt{\|v_N\|^2+2\|v_T\|^2}/d(y,S)\)。对完整纤维取下确界所得局部正下界等价于真线性误差界。点态代价的下极限等于一个平坦 \(C^{1,1}\) 势造成 \(S\) 外零点聚集所需的最小全局梯度 Lipschitz 常数的下确界。
 - **Nonlinear Scope**：改用平坦 \(C^1\) 势的梯度幅度后，指定点置零代价的下确界恰为完整 \(r_F(y)\)，可恢复给定一般误差模及帽。给定任意在零连续归零、正尺度连续为正的 \(\rho\)，\(\liminf r_F(y)/\rho(d(y,S))\) 是单个平坦 \(C^1\) 势造成 \(S\) 外零点向指定零点聚集的精确预算下确界，预算按 \(\sup_{z\notin S}\|\nabla h(z)\|/\rho(d(z,S))\) 测量。
 - **Evidence / Dependencies / Scope Boundary**：[完整推导](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)。最优 Whitney 插值是已知定理。[第 7 节复核](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-review)证明当前全点抵消强制 \(r_F(y)\le Ld(y,S)\)，不能纳入 C242 的非驻定趋零轨道；在单值开集上还强制原场是梯度。纯旋转检验的 \(h=0\) 只满足反馈修正条件，未满足 \(M_L\) 的抵消条件。原 PPA (9) 对一般闭 \(S\) 的声明撤回，修正版限于单点 \(S\) 或 \(1-2\lambda(\beta+L)\ge0\)。现有估计只用 \(F\) 的 \((\beta+L)\)-弱单调后果与线性真误差界，尚未使用全点插值的特殊兼容关系。反馈可实现关系仍可研究，尚无所求统一结构；公开优先未定。
+
+<a id="c362"></a>
+## C362-v1 · 一般模梯度反馈的闭链判据
+
+- **Status**：`candidate`。正文有定量证明和一手定理定位，尚待独立复核及公开先行性核查。共同结构的两个恢复与原 PPA 收敛仍开放。
+- **Objects / Domain**：有限维欧氏 \(X\)，非空闭 \(S\)，连续非减凹无界模 \(\omega\)，且 \(\omega(0)=0\)，正尺度为正。一个标量势的预算为 \(\sup_{a\ne b}\|\nabla h(a)-\nabla h(b)\|/\omega(\|a-b\|)\)。平坦要求 \(h=\nabla h=0\) 于 \(S\)。
+- **Exact Statement / Extension**：对任意 \(E\supseteq S\) 及 \(g|_S=0\)，存在给定预算 \(B>0\) 的平坦梯度扩张必使正文 (D) 的边权沿每条有限闭合链之和非负。反向得到预算至多 \(6B\) 的扩张。两点梯度界和梯形功闭链界给出预算至多 \(24B\) 的可读判据。对每点闭值的允许梯度，同一预算下的有限子集可行性可拼成统一选择。凸势使用同一闭链消元原理及正文 (C) 的增量下界，给出预算 \(B\) 的必要条件和 \(8B\) 的充分条件。两点碰撞退化为一条带方向和图值差范数的标量不等式。
+- **Exact Statement / PPA and Regularity**：任取 \(S\subseteq F^{-1}(0)\)、步长 \(\lambda>0\) 和正文 (3) 的给定路径，输出处完整纤维非空。步差在完整原纤维的最大 \(\omega(d)\) 归一化缺口为 \(A\)，则一个保 \(S\) 的平坦势实现整个 \(F+\nabla h\) 精确路径的预算下确界在 \([A,24A/(1-q)]\)。对 \(p\in S\)，使相对于 \(S\) 的新零点向 \(p\) 聚集的最小预算下确界在 \([\rho_p,24\rho_p]\)，其中 \(\rho_p=\liminf_{y\to p,\,y\notin S}r_F(y)/\omega(d(y,S))\) 取完整真残差。
+- **Dependencies / Scope Boundary**：[正文和证明](research/topics/common_structure/gradient_feedback_general_modulus.md#feedback-modulus-cycles)。依赖闭链差分约束、一般凹模下的两类已知 Whitney 扩张，以及尺度分离。原 C242 中每条非驻定原轨道上的完全抵消可由一个平坦半阶 Hölder 势完成，任何更高指数失败。结论不蕴含整片开集的梯度抵消、原根覆盖或原算子的收敛，亦未用同一个 \(M\) 恢复单调性与正则性。

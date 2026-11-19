@@ -10242,6 +10242,17 @@
       "y": 4032,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "GRADIENT-FEEDBACK-GENERAL-MODULUS": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "mountain",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 4778,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12968,6 +12979,10 @@
     "E684": {
       "x": 3272.79,
       "y": 4264.72
+    },
+    "E685": {
+      "x": 3254.04,
+      "y": 4264.24
     }
   },
   "bounds": {
