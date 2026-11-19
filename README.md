@@ -66,7 +66,7 @@
 
 [当前目标与已有教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md)冻结共同充分条件 \(W\) 的身份。它要从指定的单调/次单调结构、正则性及该组合的参数兼容推出原 PPA 至少一条收敛轨道。原 RLEB 测试行保留一般非线性 \(\omega\)。全选结果保留其既有范围，独立于当前最低目标。
 
-[研究导读与 GPT Pro 任务书](research/topics/common_structure/README.md)给出共同母结构的精确开放问题、三条一手研究路径及独立复核。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。本轮新增 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
+[研究导读](research/topics/common_structure/README.md)给出共同母结构的开放问题、证明路线及独立复核。[GPT Pro 持续研究任务书](research/topics/common_structure/GPT_PRO_PROMPT.md)列出候选的硬性验收和未通过时的试证循环。C324 的原图间隙有单调和正则两个切片，但同一零切片仍可对应相反动力学；C325 的残差支撑在次梯度分支给 KL 与真残差的锐幂转换；C326 用活动零锚识别固定切锥漏掉的退化；C327 的原曲复合完整 PPA 可由直接耗散证明，且任意缩窗仍越过 C320 的边界。本轮新增 [二次移位 Fitzpatrick 母面桥](research/topics/common_structure/mother_fitzpatrick_bridge.md)：同一全图间隙的图截面精确给弱单调，零锚截面在完整近端覆盖下精确给真残差正则；共同近端弦在显式参数窗内推出输入版 A+B、点收敛与有限长度，并给出 \(F=B(y)T(Cy)\) 的零集/残差传递和 \(CB(y)\) 定向功。一般观察核仍需对齐或正功条件，不能由标量切片自动补出。
 
 [原非线性 RL 的转接](research/topics/common_structure/nonlinear_rl_bridge.md)保留原反射模。C333 排除固定输出位移惩罚的统一同弦下界；C334 给图宽度、真残差和原近端弦的定量联系；C335 说明标量宽度的正则幂会变差。C336 精确恢复同模延拓的真残差，C337–C339 将困难定位到最近锚的小图值、多尺度数据及多值长支。C329 只作为常数二次弱单调专门结果。
 
