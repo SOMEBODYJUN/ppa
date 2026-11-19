@@ -10066,6 +10066,61 @@
       "y": 4487,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "CS-CROSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CS-MOD-EXISTENCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 3941,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CS-NONLOCAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CS-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "CS-RECOVERIES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12732,6 +12787,22 @@
     "E669": {
       "x": 3241.43,
       "y": 4357.1
+    },
+    "E670": {
+      "x": 4542.78,
+      "y": 3949.59
+    },
+    "E671": {
+      "x": 4574.37,
+      "y": 4168.62
+    },
+    "E672": {
+      "x": 4499.49,
+      "y": 4530.13
+    },
+    "E673": {
+      "x": 4555.51,
+      "y": 3998.61
     }
   },
   "bounds": {

@@ -3077,3 +3077,14 @@
 - **Definitions / Recoveries**：同一 \(h=H\circ g\)、\(H=(\mathrm{id}+\omega)/2\)。在独立标定 \(d=g(r)\) 下等价于原最近输入零锚反射界；在 \(\sup_{z\in K(y)}\operatorname{dist}(2z-y,P_S(y))=\omega(d(y))\) 下等价于完整真误差界 \(d\le g(r)\)。此处一般恢复零锚方向；升级通常两点单调另需线性完整图等明确条件。
 - **Conclusion / Scope / Assumptions**：若 \(\phi=h/\lambda\) 保残差窗且 \(W(u)=\sum_jh(\phi^{\circ j}(u))<\infty\)，独立根覆盖和正文严格入口预算给每条允许原轨道有限长度、点收敛到 \(S\)。同一步还有 \(s+D/(a+s)+W(r(z))\le W(r(y))\)。原 RLEB 取 \(h=H\circ\psi\) 从当前输出的完整 EB 和下一原弦的反射直接导入，保留全部原 \(\Theta\) 认证初值、原帽与正点可跳跃模。
 - **Dependencies / Evidence / Counterevidence / Related Files**：[完整证明](research/topics/common_structure/incoming_residual_reflection.md)。C345 提供加权平方，C277 为邻近联合原图框架。原严格小增益下，舍掉方向费用而只留 \(s\le h(r),d\le2h(r)\) 仍可给纯点收敛；故费用可和与等号切片并未关闭结构承重和新意门，见 [F119](FAILED_ROUTES.md#f119)。
+
+
+<a id="c351"></a>
+## C351-v1 · 原允许图的跨位置反射—残差相容结构
+
+- **Status**：`derived-checked`。两位独立读者分别重构数学链，结构新意以正文所列增量为限；公开首创未裁定。
+- **Objects / Domain / Definitions**：有限维原 \(F\)、非空闭 \(S\subseteq F^{-1}(0)\)、\(\lambda>0\)，开窗 \(U\)、\(R>0\)，同一非空允许原根 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\) 覆盖每个 \(x\in U_R\)。真实边集 \(\mathcal E\)、输出集 \(Y\)，\(t_e=d(x_e)\)、\(a_e=\min_{p\in P_S(x_e)}\|2z_e-x_e-p\|\)，\(q_y=d(y)\)、\(\rho_y=\lambda\inf_{F(y)}\|v\|\)。标量基点 \(0_*=(0,0)\) 只代表非负模的底限，不添加原轨道边。
+- **Exact Statement / Quantifiers**：对固定 \(0<\kappa<1\)，同一结构为 \(\mathsf M_\kappa:\ q_y\le\kappa\max\{t_e,2\rho_y-a_e\}\) 对全部互相独立的 \(y\in Y,e\in\mathcal E\cup\{0_*\}\) 成立。令 \(W(t)=\sup_{t_e\le t}a_e\)、\(H(t)=(t+W(t))/2\)、\(Q(u)=\sup(\{q_y:\rho_y\le u\}\cup\{0\})\)。同一 \(U,R,\lambda,S,\mathcal J,\kappa,\bar t\) 下，存在原投稿所允许的 \(\omega,\psi\) 满足 (P2)–(P4)，当且仅当 \(\mathsf M_\kappa\)、\(H(R)\le\lambda\bar t\) 及 \(\sum_jH(\kappa^jR)<\infty\) 成立。反向规范模为 \(\omega_*=W,\psi_*(r)=Q(\lambda r)\)。正点跳跃和所有下确界不达到均保留；这不声称任意事先指定的模都有效。
+- **Structural Proof / Recoveries**：边柱集 \(C=\bigcup_e\{t_e\}\times(-\infty,a_e]\) 给 \(L(u)=d_\infty((0,2u),C)=\inf_e\max(t_e,2u-a_e)=\inf\{t:H(t)\ge u\}\)。因此 \(\mathsf M_\kappa\iff q_y\le\kappa L(\rho_y)\iff Q(H(t))\le\kappa t\)。在同一全尺度、同一适当仿射 \(S\) 与连续参考 \(\omega_0\) 下，设 \(g=(\mathrm{id}+\omega_0)/2\)：A 的完整残差幅度 \(\rho_y=g(q_y/\kappa)\) 及全输出半径遍历使同一 M 恰等价于指定最近输入锚 RL；B 的实际反射半径 \(a_e=\omega_0(t_e)\) 及全源半径遍历使同一 M 恰等价于真 EB \(d(y)\le\kappa g^{-1}(\lambda r_F(y))\)。A 不预设方向，B 不预设残差下界。通常全对单调的恢复另限定 \(\omega_0=\mathrm{id},S=\{0\}\) 和完整单值线性图。
+- **PPA Conclusion / Scope**：每条实际边的 \(2\rho_z-a_e\le t_e\) 将同一跨位置结构落到当前边，直接得 \(d(z)\le\kappa d(x)\)，同锚几何给 \(\|x-z\|\le H(d(x))\)。严格初值预算 \(\Theta_H(d(x^0))<d(x^0,U^c)\) 使所有允许原轨道可无限延拓、有限长、点收敛到 \(S\cap U\)。非解认证域须非空；正文给近零非解积聚的充分条件。每组给定原 RLEB 参数满足 \(W\le\omega\)，因此全部原认证初值保留，不放大原帽或原步长。
+- **Dependencies / Evidence / Counterevidence / Related Files**：[定义、结构命题、完整证明及先行比较](research/topics/common_structure/two_point_scale_compatibility.md)。C315 已有给定模的下逆正向，本条不重报该数值尺度、距离收缩或 Dini 后端。新增范围是任意原模存在性的双向消去、实际原边与完整纤维的跨位置禁配，以及同一非线性尺度的两个恢复。正文给原完整图的删除检验证明：全部自身边与零基点可通过而两种待恢复性质分别失败。全尺度反向恢复不能自动截成任一有限工作窗；正点非右连续参考模不适用所述精确 A 恢复；全对单调不从一般零锚条件无条件推出。

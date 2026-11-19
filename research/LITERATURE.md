@@ -666,3 +666,11 @@ Joshua Bosshardt, [The Hopf Degree Theorem](https://www.math.uchicago.edu/~may/V
 **进一步的去重门。** [*Error bounds, PL condition, and quadratic growth for weakly convex functions*, Theorem 3.1](https://arxiv.org/pdf/2312.16775#page=8) 在 proper closed 弱凸函数和全局极小值集的合同下已给 EB 与 PL 的等价，以及增长系数超过弱凸系数时的受限割线等价。凸或弱凸的 \(q=1\) 常识结论不作为本轮新增。 [Pan–Liu](https://arxiv.org/abs/1812.00558) 以明确的临界值及近端正则条件比较 KL \(1/2\) 与次正则。支持亏损的幂阈值是另一项需要比较的定量主张。
 
 **角度先行性。** [Quan–Evens–Sepulchre–Patrinos，正式全文](https://ftp.esat.kuleuven.be/pub/sista/ida/reports/24-153.pdf) 用 SRG 互证半单调和角度有界的算子类，且给出多值原器件例。[Quan–Bodard–Oikonomidis–Patrinos](https://arxiv.org/abs/2511.20209) 将 SRG 扩展到算子对的相对增量和非线性预解式。它们都属必须比较的近邻。此处上半平面的零锚法向凸包及与 C320 的对比属于本库试证，未作发表原创判断。
+
+
+<a id="lit-c351-two-point"></a>
+## C351 跨位置相容的最近先行与增量
+
+- **Paper fact**：[Luke–Thao–Tam 2018 正式 PDF](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2017.0898)，Theorems 2.1–2.2、Definition 2.5：almost averaged 方向违反量和 \(T-\mathrm{Id}\) 的 gauge metric regularity 已共同决定收缩。该通用思想不是本轮新意。[Luke–Tam 2025 正式全文](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863)，Definition 2、Proposition 3、Assumption 2：原关系的二次次单调与线性真残差正则另有明确参数条件。C351 不引用其同球续接句，保留 C340 的对象边界。
+- **此前本库推导**：[C315](canonical/rleb_residual_filtered_angle.md#rfa-strict) 已有给定 \(\omega\) 时的 \(q\le\kappa\inf\{t:(t+\omega(t))/2\ge\lambda r_F(y)\}\)。C351 的标尺取 \(\omega=W\) 后与它完全重合，不将这个下逆或下降再次称新。
+- **本次精确增量 / 公开优先未定**：[C351 结构命题](topics/common_structure/two_point_scale_compatibility.md#two-point-characterization) 消去两套任意原模，反向重建同时极小的 \(W,Q\)，得到全部原边与完整纤维的跨位置必要充分相容；同一非线性参考尺度的两个恢复不能退化为只检验实际自身边。最小包络和下确界运算是证明工具，不单独主张新的序理论。以上限定支持结构原创的可能性，不构成穷尽公开文献的首创认证。

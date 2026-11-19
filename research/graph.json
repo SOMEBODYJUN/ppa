@@ -4972,6 +4972,36 @@
       "label": "F119 原严格相容的点收敛可舍去方向费用",
       "file": "topics/common_structure/incoming_residual_reflection.md#incoming-boundary",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CS-CROSS",
+      "label": "C351 原允许边与完整输出纤维的跨位置相容",
+      "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-definition",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "CS-MOD-EXISTENCE",
+      "label": "C351 两个任意原模存在性的规范充要判据",
+      "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-characterization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CS-RECOVERIES",
+      "label": "C351 同一非线性尺度下恢复方向与真正则",
+      "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-recoveries",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CS-NONLOCAL",
+      "label": "C351 跨位置项不能由自身边与零基点替代",
+      "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-necessity",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "CS-PPA",
+      "label": "C351 原一般模及完整残差共同生成可续有限长轨道",
+      "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-characterization",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12639,6 +12669,50 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "继续检验方向与真正则的非形式转接；不能把跨边记账或两个恢复切片单独升级为共同结构新意。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E670",
+      "inputs": [
+        "CS-CROSS"
+      ],
+      "output": "CS-MOD-EXISTENCE",
+      "relation": "equivalence",
+      "scope": "固定覆盖、同一原图、S、λ、U、R、κ和真帽；加最小H的帽及Dini可和后，等价存在原(P2)–(P4)的一组非减零连续模。反向构造W和Q，不要求正点连续或inf达到。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E671",
+      "inputs": [
+        "CS-CROSS"
+      ],
+      "output": "CS-RECOVERIES",
+      "relation": "conditional",
+      "scope": "正文全尺度、适当仿射S和同一连续非线性参考ω0；完整残差幅度标定A恢复最近输入锚RL，反射球面几何B恢复完整真EB。通常两点单调另需完整线性单点子类。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E672",
+      "inputs": [
+        "CS-RECOVERIES"
+      ],
+      "output": "CS-NONLOCAL",
+      "relation": "necessary",
+      "scope": "同一ω0=t+t^γ的两个完整原图使全部自身边及零基点通过，却分别违反所恢复方向和真EB；删除独立真实位置破坏两项恢复。两条轨道实际收敛，不登记为发散。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E673",
+      "inputs": [
+        "CS-CROSS"
+      ],
+      "output": "CS-PPA",
+      "relation": "conditional",
+      "scope": "同一原锚三角式给2ρ_z−a_e≤t_e；M在当前边给距离收缩，最小H给步长。输入覆盖、Dini及严格预算使每个非空认证域内初值的全部允许轨道可续、有限长、点收敛；原全部预算保留。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

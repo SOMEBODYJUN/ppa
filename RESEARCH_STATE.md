@@ -2,6 +2,8 @@
 
 ## 单调性与正则性的共同结构
 
+**C351 数学链已核，最终验收归档中。** [跨位置反射—残差相容](research/topics/common_structure/two_point_scale_compatibility.md) 在同一原允许图上给一般 RLEB 模存在性的充要判据，同一非线性参考模下的两个反向恢复，以及保留原全部初值的原 PPA 证明。当前新增量是原位置间的相容关系；给定模下逆、几何收缩和 Dini 后端均保留为已有内容。
+
 **共用收敛证书已有。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
