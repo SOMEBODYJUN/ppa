@@ -3167,3 +3167,13 @@
 - **Exact Statement / Scope**：两图取 \(d=2\)。二者同享全域唯一完整原根、法向输入半径 \(t=\sqrt{r^2+\lambda^2r^{2\nu}}\)、完整真残差 \(\sqrt{r^{2g}+r^{2\nu}}\) 和精确原反射 \(\sqrt{t^2+4\lambda^2r^{2g}}\)，最佳幂分别为 \(1/g\)（残差端误差模）与 \(g/\nu\)（反射端）。对每个 \(0<\kappa<1\) 有共同非空原工作窗满足 (P1)–(P4)，包含非解初值。两图的唯一原 PPA 从全空间点收敛。一个图的 \(-F\) 全部非解连续轨道为周期，且整周期出现在任一零点的任一邻域；另一图的全部非解连续轨道沿零平面无界。周期图无任何零点邻域的正定度量梯度表示，且在每个非解点排除局部欧氏功的无零光滑标量积分因子。
 - **Additional Scope**：对任意给定紧无边界光滑嵌入流形及其光滑切向场，允许提高 \(d\)，有另一原图共享上述认证、唯一性和点收敛。其原连续流在趋向同一个零点的紧不变集上，以固定正时间比例投影到该给定流。[构造](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-continuous-flow-factor)。
 - **Dependencies / Evidence / Objections**：平面正交恒等、Banach 压缩、紧嵌入子流形管状邻域及周期上的严格下降反证。隐式 Euler 的旋转阻尼有经典先例，见[文献定位](research/LITERATURE.md#lit-rleb-discrete-damping)。该命题限制普遍连续流或势函数导入，不反驳离散 Lyapunov 路线，也未给两个恢复。[F127](FAILED_ROUTES.md#f127)；公开优先未定。
+
+
+<a id="c361"></a>
+## C361-v1 · 保目标集的梯度反馈插值与精确置零代价
+
+- **Status**：`derived-checked`。逐向核对原图值量词、任意闭集的区间交、仿射公式及无限插值的严格余量。统一结构任务仍开放。
+- **Objects / Exact Statement**：有限维欧氏 \(X\)，任意原多值 \(F\)，非空闭 \(S\subseteq F^{-1}(0)\)。同一反馈插值要求 \(c\in F(y)+\nabla h(y)\) 同时对给定位置成立。全对禁止强凸参数严格大于 \(\beta\) 的同右端碰撞，等价于 \(F+\beta I\) 单调，且只测二次势即充分。
+- **Fixed-Target Scope**：要求 \(h=\nabla h=0\) 于整个 \(S\)。指定 \(y\notin S,v\in F(y)\) 时，抵消 \(v\) 的最小梯度 Lipschitz 常数由正文 (4) 的两零锚上确界给出。仿射 \(S\) 的准确常数为 \(\sqrt{\|v_N\|^2+2\|v_T\|^2}/d(y,S)\)。对完整纤维取下确界所得局部正下界等价于真线性误差界。点态代价的下极限等于一个平坦 \(C^{1,1}\) 势造成 \(S\) 外零点聚集所需的最小全局梯度 Lipschitz 常数的下确界。
+- **Nonlinear Scope**：改用平坦 \(C^1\) 势的梯度幅度后，指定点置零代价的下确界恰为完整 \(r_F(y)\)，可恢复给定一般误差模及帽。给定任意在零连续归零、正尺度连续为正的 \(\rho\)，\(\liminf r_F(y)/\rho(d(y,S))\) 是单个平坦 \(C^1\) 势造成 \(S\) 外零点向指定零点聚集的精确预算下确界，预算按 \(\sup_{z\notin S}\|\nabla h(z)\|/\rho(d(z,S))\) 测量。
+- **Evidence / Dependencies / Scope Boundary**：[完整推导](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)。最优 Whitney 插值是已知定理。这里固定完整目标集并取原图值下确界。禁止碰撞和固定目标置零的两个恢复尚不足以说明一般原 PPA 的同一收敛机制，公开优先未核定。

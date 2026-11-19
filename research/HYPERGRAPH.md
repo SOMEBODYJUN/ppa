@@ -1047,6 +1047,7 @@
 | E680 | [PPA-DISTANCE-CONJUGACY · C357 保目标距离的原近端共轭不能恢复两类欧氏性质](topics/common_structure/ppa_conjugacy_obstruction.md#ppa-conjugacy) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 切于恒等的保范数解析共轭不保持两点单调。保目标距离共轭及共同原非线性 RLEB 合同不保持指定幂的完整真残差误差界。候选和附加条件须辨认相应丢失的欧氏方向或度量。；**derived-checked** |
 | E682 | [PPA-CONVEX-PATH-OBSTRUCTION · C359 凸化原近端路径的真误差界盲区](topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 完整凸化纤维以及逐原初值的全部有限和无限原路径的闭凸包相同，也可有不同完整真残差最优误差界幂；两原图共享真正非线性 RLEB 和完整覆盖。；**derived-checked** |
 | E683 | [RLEB-DISCRETE-FLOW-OBSTRUCTION · C360 同一尖锐原 RLEB 下的原连续流分离](topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 真正非线性的原 RLEB 与全域唯一收敛的原近端允许原连续周期、切向无界漂移或给定紧流因子；不得将原连续趋稳或正定度量梯度表示作为普遍导入。；**derived-checked** |
+| E684 | [GRADIENT-FEEDBACK-INTERPOLATION · C361 保目标集的梯度反馈插值与置零代价](topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation) | open → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 两个恢复和精确置零代价已证。待证同一插值关系何时驱动原近端点收敛及如何导入原一般非线性 RL。；**open** |
 
 ## 不蕴含关系
 

@@ -5062,6 +5062,12 @@
       "label": "C360 同一尖锐原 RLEB 下的原连续流分离",
       "file": "topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "GRADIENT-FEEDBACK-INTERPOLATION",
+      "label": "C361 保目标集的梯度反馈插值与置零代价",
+      "file": "topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12887,6 +12893,17 @@
       "relation": "limits",
       "scope": "真正非线性的原 RLEB 与全域唯一收敛的原近端允许原连续周期、切向无界漂移或给定紧流因子；不得将原连续趋稳或正定度量梯度表示作为普遍导入。",
       "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E684",
+      "inputs": [
+        "GRADIENT-FEEDBACK-INTERPOLATION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "两个恢复和精确置零代价已证。待证同一插值关系何时驱动原近端点收敛及如何导入原一般非线性 RL。",
+      "status": "open",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]

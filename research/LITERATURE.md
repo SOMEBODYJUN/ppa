@@ -1,5 +1,12 @@
 # 一手文献事实与本项目的定理导入
 
+
+<a id="lit-gradient-feedback"></a>
+## 梯度反馈插值与置零稳定性
+
+- Azagra–Mudarra，[arXiv:1603.00241v3](https://arxiv.org/pdf/1603.00241v3#page=3)，Theorem 1.3、Proposition 2.1。任意 Hilbert 子集上的函数值与梯度数据满足凸光滑两点不等式时，可作凸 \(C^{1,1}\) 扩张。[Le Gruyer](https://doi.org/10.1007/s00039-009-0027-1) 给出一般最优一阶扩张。C361 消去目标集外一点的自由函数值，计算保 \(S\) 的归零代价。
+- Dontchev–Gfrerer–Kruger–Outrata，[arXiv:1807.02198v2](https://arxiv.org/pdf/1807.02198v2)，§2、Theorem 3.2。扰动半径衡量加向量扰动后丧失度量次正则性，使用扰动后的逆纤维。C361 的对象是固定 \(S\) 外的新零点聚集，扰动必须为在 \(S\) 平坦的势的梯度。两个半径定义的失败事件不同。确切公开优先性未穷尽。
+
 <a id="lit-rleb-discrete-damping"></a>
 ## 旋转的隐式阻尼及欧氏功的可积性
 

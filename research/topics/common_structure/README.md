@@ -5,6 +5,9 @@
 
 从原算子图出发，找出单调性与正则性各自约束的变化及其在原步中的共同机制。已有收敛定理用于候选成形后的覆盖检验，下面的旧路线和反例用于核对候选的适用范围。[现行研究任务](GPT_PRO_M_NEW_2026-11-19.md)
 
+
+[C361 梯度反馈插值](gradient_feedback_interpolation.md#feedback-interpolation)把二次次单调精确写成强凸反馈不能制造同右端碰撞，把相对固定 \(S\) 的真误差界写成平坦梯度反馈的置零代价。仿射零集上的最小梯度 Lipschitz 常数对切向图值的平方赋双倍权重。两个恢复以及单个扰动的精确半径已给证明，尚未证明普遍原 PPA 的承重关系。
+
 [C360 原离散阻尼与连续场障碍](rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 在同一尖锐非线性原认证及全域唯一收敛原近端下实现原连续周期、漂移和任意给定的紧流因子。连续势或原连续趋稳不是普遍导入。
 
 [C359 凸化原近端路径的正则盲区](convexified_proximal_paths_obstruction.md#convexified-proximal-paths) 保持完整纤维与全部有限、无限原路径的凸化信息，并分离完整真误差界幂。两图共享真正非线性的原 RLEB。
