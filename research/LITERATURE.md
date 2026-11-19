@@ -210,6 +210,8 @@ Lemma2 pp.9–10、Assumption2 p.10、Theorem2 pp.10–11。
 [SL-LT](canonical/selection_literature_boundaries.md#sl-lt)；其中收敛定理的导入仍有具体待证门，
 不因正文可读就授予完整算法认证。
 
+**独立反证（C340，2026-11-18）。** 正式 p.10 的 Theorem 2 使用同一个欧氏球同时作全部初值域与可选根域。[完整线性图反例](topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)逐项满足 Assumption 2、\(\tau=1/16\)、\(K=2/\sqrt5\)、\(\lambda=1\) 及严格参数门，却使每个球内都有唯一根离球的初值。这是项目内对原印刷局部化子结论的反证；原图结构事实不变，实际轨道仍收敛，公开勘误状态未核。
+
 <a id="lit-hoffman-1952"></a>
 ## LIT-HOFFMAN-1952 · 固定线性系统的一致右端误差界
 

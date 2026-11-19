@@ -33,7 +33,7 @@ All tend to zero as (\vartheta\to\infty), and HJ's global (C^\infty) extension m
 
 ## Bootstrap check
 
-For (chi_a=af-rac12|\nabla f|^2), (w=v+\nabla f(x)) gives
+For (chi_a=af-\frac12|\nabla f|^2), (w=v+\nabla f(x)) gives
 [
 x'=Y+w,\qquad w'=(\nabla^2f-aI)w,
 ]
@@ -43,7 +43,7 @@ Take (D_0) in a finite angular band and (|w_0|<\varepsilon). With (W=C\int_0^t|w
 [
 e^{-\vartheta^2+\vartheta}\ge c(1+t)^{-p}.
 ]
-Choosing (arepsilon) after this estimate so that (Ce^{-\delta t}\varepsilon) is at most half the boundary margin gives (s_i'(\tau)>0) at any putative first boundary contact, a contradiction. The same polynomial comparison makes the angular error smaller than half (c_0\vartheta e^{-\vartheta^2}), so (\vartheta'>0); bounded (\vartheta) would then contradict a positive lower drift, hence (\vartheta\to\infty). The tube bounds imply (r\to1), and the unwrapped angle crosses every phase infinitely often, so (\omega(x)=S^1). Bounded (x,v) and global smoothness give continuation.
+Choosing (\varepsilon) after this estimate so that (Ce^{-\delta t}\varepsilon) is at most half the boundary margin gives (s_i'(\tau)>0) at any putative first boundary contact, a contradiction. The same polynomial comparison makes the angular error smaller than half (c_0\vartheta e^{-\vartheta^2}), so (\vartheta'>0); bounded (\vartheta) would then contradict a positive lower drift, hence (\vartheta\to\infty). The tube bounds imply (r\to1), and the unwrapped angle crosses every phase infinitely often, so (\omega(x)=S^1). Bounded (x,v) and global smoothness give continuation.
 
 ## Truth / value / novelty / ambition
 

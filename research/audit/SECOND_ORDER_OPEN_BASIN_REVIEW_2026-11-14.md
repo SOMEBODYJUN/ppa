@@ -64,7 +64,7 @@ D_0=\{\Theta_0<\theta<\Theta_1,
  b_1(\theta)+\rho_0<r<b_2(\theta)-\rho_0\}
 \Subset D,
 \]
-其中 (ho_0>0) 足够小。令 (w=v+\nabla f(x))，并取
+其中 (\rho_0>0) 足够小。令 (w=v+\nabla f(x))，并取
 \[
 \mathcal U=\{(x,v):x\in D_0, |w|<\varepsilon\}.
 \tag{HJ-5}
@@ -131,7 +131,7 @@ M_p=\sup_{t\ge0}e^{-\delta t}(1+t)^p<\infty,
 \]
 并同时满足 (\varepsilon/\delta<\Theta_0/4) 及初始带的余量条件。于是边界接触时 (s_i'\ge c_*(1+t)^{-p}/2>0)，与从 (s_i>0) 的首次接触必须满足 (s_i'\le0) 矛盾。故不存在有限首次离开，轨道永远在 (D) 内。
 
-注意 (HJ-10) 的选择顺序：先在假设首次离开的区间推 (HJ-7)，再用它估计 (m)，最后选 (arepsilon)；没有循环依赖。
+注意 (HJ-10) 的选择顺序：先在假设首次离开的区间推 (HJ-7)，再用它估计 (m)，最后选 (\varepsilon)；没有循环依赖。
 
 ### 1.5 证明角度真正趋于无穷
 

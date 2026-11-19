@@ -2638,7 +2638,7 @@
 <a id="c303"></a>
 ## C303-v1 · 二阶阻尼梯度系统的开盆域圆形非收敛
 
-- **Status**：candidate。HJ 螺旋管的显式渐近估计和 w=v+∇f 指数衰减可闭合首次离开 bootstrap；尚未完成独立规范接收和外部优先性审计。
+- **Status**：`candidate`。HJ 螺旋管的显式渐近估计和 w=v+∇f 指数衰减可闭合首次离开 bootstrap；尚未完成独立规范接收和外部优先性审计。
 - **Exact Statement**：存在 C∞ 势 f:R²→R、阻尼 a>0、势 χ_a=af−||∇f||²/2 及相空间非空开集 U，使每个解 x''+ax'+∇χ_a(x)=0 从 U 出发全局存在、有界且 ω(x)=S¹，因而不收敛。
 - **Objects / Dependencies**：HJ 2020 的 C∞ 圆形开盆构造；大角度管内 Y=−∇f 的 Y_θ ~ θ exp(−θ²)、径向面内向余量 m_face(θ) ~ exp(−θ²+θ)（与管中点 m(θ) 分离）；a>sup λmax(∇²f) 时 w'=(∇²f−aI)w。连续证明稿见 research/topics/path_dynamics/second_order_open_basin_proof_v1.md，显式管估计见 research/topics/path_dynamics/hj_tube_estimates_v1.md；变量步惯性 PPA 桥见 research/c303_discrete_bridge.md 及其 v2/v3/v4 攻击稿，source-conditional 的全局 coverage 见 research/c303_global_bounds.md，normal-error 递推见 research/c303_normal_error_recursion.md，公共尾管与首接触审计见 research/c303_tau_common_tail_v5.md，cutoff-free outer-strip 门见 research/c303_outer_strip_gate.md，有限前缀共同余量见 research/c303_finite_prefix_margin.md，transient 角度误差尾见 research/c303_transient_angular_error.md，第二轮独立审查见 research/audit/C303_BRIDGE_REVIEW_ROUND2_2026-11-15.md。
 - **Key Objection / Next Evidence**：三席交叉审查已重构连续首次离开 bootstrap，未发现新的动力学符号或量词致命缺口；显式局部常数已整理为 [HJ 管估计引理](research/topics/path_dynamics/hj_tube_estimates_v1.md)，最终复核见 [HJ final review](research/audit/HJ_SECOND_ORDER_FINAL_REVIEW_2026-11-15.md)。变量步惯性 PPA 桥已有完整图 coverage 候选；[全局导数/coverage 引理](research/c303_global_bounds.md)在 source-conditional 全局 C∞ cutoff 延拓下已单独闭合小步长全域 resolvent 门，[normal-error 递推引理](research/c303_normal_error_recursion.md)闭合 D4--D5 及 \(\tau\)-路径的统一 \(O(h_k)\) 误差，v3 的连续 \(\tau\)-路径修补整数步跨壁量词，v4 以指数超解闭合 \(\alpha>2/3\) 的角度 schedule 门，但 outer-strip 尾部分离目前只在显式 cutoff-free 选择下有条件门（见 research/c303_outer_strip_gate.md），首接触的几何常数仍需核对；有限前缀共同开集已有条件性构造（见 research/c303_finite_prefix_margin.md），不能用普通 PPA 的一阶 \(\nabla f\) 桥替代 \(\nabla\chi_a\) 惯性对象。仍须按 HJ 原页逐字核 cutoff 的确切约定、F 与边界参数身份，并完成上述离散义务。Remark 3 的 open-problem 事实已核，但不等于外部优先性认证。
@@ -2659,14 +2659,14 @@
 <a id="c304"></a>
 ## C304-v1 · 纯 Gram GPPA 近端的候选精确 3/7-Hölder 两点指数
 
-- **Status**：candidate。共线 t^7 见证排除全部指数 q>3/7；全局 3/7 上界尚未证明。
+- **Status**：`candidate`。共线 t^7 见证排除全部指数 q>3/7；全局 3/7 上界尚未证明。
 - **Exact Statement**：C270 的完整纯 Gram 近端 Tλ=(v+λP)⁻¹v 在每个有界集上满足 ||Tλ(Z)−Tλ(Z')||^(7/3) ≤ C||Z−Z'||，且 3/7 为最佳共同指数。
 - **Evidence / Objection**：research/discovery_a_gram_37.md、research/gram_cross.md 与 [第二轮独立攻击](research/candidates/gram_37_round2.md) 给出共线 sharpness、横向尺度攻击和精确 Gram 范数恒等式；尚缺统一 rank-stratum / angle decomposition，不能以半代数权重代替上界证明。外部 Gram Bregman 文献的精确正则性仍待逐段核对。
 
 <a id="c305"></a>
 ## C305-v1 · 单调 radial-twist 的反绕行门
 
-- **Status**：candidate。这是 C287 非 Dini 绕行机制在固定 radial-twist 子类上的结构障碍，不是一般单调 PPA 定理。
+- **Status**：`candidate`。这是 C287 非 Dini 绕行机制在固定 radial-twist 子类上的结构障碍，不是一般单调 PPA 定理。
 - **Exact Statement**：若 J((1+t)p)=(1+qt)R_{θ(t)}p 的所有图点属于同一单调关系，则 cos θ(t)≥(1+qt)/(1+t)，故 |θ(t)|=O(√t)；在 t_k=q^k t_0 上角和有限，轨道收敛。
 - **Scope / Objection**：同半径图点的单调性计算完整，但不控制一般多值图、曲零流形或任意 PPA 的切向位移。见 research/candidates/monotone_antiwinding_gate.md。
 
@@ -2685,13 +2685,13 @@
 
 ## C307-v1 · 准解析 Denjoy–Carleman 权重下有界变步精确 PPA 的 sharp 分界
 
-- **Status**：candidate / major-potential conditional。这是本轮最值得继续验证的主线，不是已闭定理。
+- **Status**：`candidate` / major-potential conditional。这是本轮最值得继续验证的主线，不是已闭定理。
 - **Exact Statement**：固定强对数凸总权重 \(M\) 与 \(0<\lambda_-\le\lambda_k\le\lambda_+<\infty\)。若 \(\sum M_{j-1}/M_j=\infty\)，每个 \(E^{\{M\}}\) 目标的有界全局精确变步 PPA 轨道有限长并收敛；若该和有限，则对每个预给 schedule（先要求两步周期，再攻任意 bounded-away 序列）及任意同维可实现紧连通 \(K\)，构造一个依赖 schedule 的 \(f_{(\lambda_k)}\in E^{(M)}\)，使完整 global-min resolvents 对所有 \(\lambda_k\) 全域覆盖，并有 \(\omega=K\)。反向构造保留 \(\nabla^2f\succeq-\mu I\)（\(\mu<1/\lambda_+\)）、强制性及 C297/C298 的预算。
 - **Evidence / Objection**：正向下降与相对误差常数分别为 \(1/(2\lambda_+)\) 与 \(1/\lambda_-\)，可直接接 C302 的准解析 KL/ABS 链；反向只需把 C297 的梯度数据替换为 \(v_k=(x_k-x_{k+1})/\lambda_k\)，但 schedule-specific Whitney/Beurling 全阶兼容与统一 Hessian margin 尚未证明。不能声称一个 \(f\) 同时实现所有 schedules，也不能放开 \(\lambda_-=0\)。详见 [候选正文](research/candidates/quasianalytic_variable_step_schedule.md) 与 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
 
 ## C308-v1 · 周期 SPD 变度量 PPA 的 Floquet 临界中心流形判据
 
-- **Status**：candidate / major-potential conditional；作为 C307 的第二主线。
+- **Status**：`candidate` / major-potential conditional；作为 C307 的第二主线。
 - **Exact Statement**：对 \(F\in C^r\) 强单调、周期 SPD 度量 \(M_k\) 的精确变度量 PPA，令 \(P=D\Phi(0)\) 为 \(p\)-步 monodromy。若 \(P\) 有简单 multiplier \(1\)、其余谱严格在单位圆内，则离散中心流形约化的首个非零高阶 jet 系数 \(c_\ell\) 决定临界两侧收敛、排斥或单侧逃逸；若 \(\Phi\) 在中心方向恒等，才得到精确周期/准周期不收敛。
 - **Evidence / Objection**：已有精确 \(p=6\) 根式族 \(A=I+3J,\lambda=1/10,\delta=\pi/3,D=\operatorname{diag}(1,(3\sqrt3-2)/23)\)，线性谱为 \(\{1,q^6\}\)，\(q=(50-20\sqrt3)/39\)。对紧支平滑扰动 \(F_\varepsilon=Ax+\varepsilon\chi(\|x\|)\|x\|^2x\)，中心三阶系数为 \(156(-4643+243\sqrt3)/288923\ne0\)，符号翻转给出相反临界命运。C284/UI33 已有线性旋转发散，因此新颖性只能来自 PPA-specific 高阶分类、鲁棒性和全周期推广；通用中心流形黑箱本身不够。不要写“所有中心系数为零则周期”。详见 [本轮候选索引](research/audit/IDEA_FRONTIER_2026-11-15.md)。
 
@@ -2972,3 +2972,11 @@
 - **Status**：`derived-checked`。同模完整多值反射纤维非空紧。
 - **Exact Statement / Scope**：使用反射点到完整反射纤维的距离定义共同宽度。图上零宽度可行等价于同模 Hausdorff 反射连续，真残差给宽度上界，原近端见证只能提供最短一支。保留同一向量扰动且所有完整输入覆盖时，最小向量范数是真残差。给具体闭图在同一非线性 \(\omega\)、线性真残差界下使长支步长比宽度所给原步量级任意大。
 - **Evidence / Boundaries**：[完整多值公式与长支反例](research/topics/common_structure/nonlinear_rl_bridge.md#rl-multivalued-observation)。该例不满足旧 Hölder 兼容。仍须独立控制所有长支。
+
+<a id="c340"></a>
+## C340-v1 · Luke–Tam 印刷定理的同球留域反例
+
+- **Status**：`derived-checked`；主代理和独立 Astra 研究席逐项核对原刊定义、Assumption 2 及精确线性计算；公开勘误状态和先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定完整 \(F(a,b)=(-b/2,b)\)、\(X=D=\mathbb R^2\)、\(\lambda=1\)、\(S=\mathbb R\times\{0\}\)。其完整原近端为 \(J_F(x_1,x_2)=(x_1+x_2/4,x_2/2)\)，全图 maximal LT violation \(\tau=1/16\)，真残差线性次正则常数 \(K=2/\sqrt5\)，满足原参数门 \(\tau(1+K)^2<1/2\) 及全部 Assumption 2 前提。然而对每个 \(\delta>0\)，存在 \(x\in B_\delta(0)\) 的唯一完整根位于 \(\overline B_\delta(0)\) 外。
+- **Evidence / Dependencies**：[自足验证、原文定位及有理数见证](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)。同输入比较独立证明极大性，不依赖待核的覆盖推论。
+- **Scope / Counterevidence / Objections**：反驳正式版 Theorem 2 的同球根覆盖和同球极限子结论；该算子仍从所有初值全局收敛到 \((a_0+b_0/2,0)\)。不否定 LT 原图结构或不同初值域/工作域的修正版局部收敛。

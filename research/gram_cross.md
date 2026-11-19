@@ -35,7 +35,7 @@ There is a stronger angle bookkeeping identity.  If (S=\|a\|), (R=\|b\|), and (c
 \]
 Both are sums of nonnegative terms.  Thus varying the angle cannot create a hidden cancellation smaller than the orthogonal scale (S^3) for (u) and (R^3) for (k); the parallel orientation is the only one that can increase the cross-coordinate to the (S^2R) scale needed for the (3/7) balance.
 
-For the output equation, taking the scalar product with (eta) gives
+For the output equation, taking the scalar product with (\beta) gives
 \[
  \langle k(Y),\beta\rangle
    =\langle\alpha,\beta\rangle^2+\|\beta\|^4,

@@ -4,6 +4,8 @@
 
 主任务按作者澄清改为找共同充分条件 \(W\)，承接**单调或次单调、正则性、参数兼容**三项，并对每个认证初值证明**至少存在一条收敛的原 PPA 轨道**。不同组合各有可行参数窗。原 RLEB 一行保留同一一般反射模 RL，全根收敛及固定线性 \(A\)、有限长度均为可选加强。[目标与教训](research/topics/common_structure/OBJECTIVE_AND_PITFALLS.md) · [持续研究任务书与硬性验收](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
 
+**G3 导入的已证边界。** [C340](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)以完整二维线性图反驳 Luke–Tam Theorem 2 印刷的同球原根覆盖，全部原结构及严格参数门都成立。该图的实际轨道仍全局收敛。后续导入须保留这一局部化区分，独立证明初值域和工作域的预算，或采用经典最大单调 PPA 作为第二基准。它本身不完成 \(M\)；三个补偿距离候选仍在逐项验收。
+
 [C333–C336](research/topics/common_structure/nonlinear_rl_bridge.md) 分别留下固定惩罚障碍、原模定量转接、标量宽度锐损失和同模真残差精确延拓。[C337–C339](research/topics/common_structure/nonlinear_rl_bridge.md#rl-anchor-independence) 定位了小图值、固定有限数据和多值长支的限制。C339 的坏支只限制全选，C337 仍约束完整真残差的身份。新首攻是给原 RLEB 与一条不同参数逻辑的路线找到共同可检查证书，并用 [C322 同一初值的分根例](research/canonical/ppa_native_alignment_and_transverse_test.md#native-sharp) 检验能否在原图中构造可续走的一条好支。一般 \(W\) 仍开放。
 
 在常数二次弱单调子类，[C329 二次移位 Fitzpatrick 面](CLAIMS.md#c329)：图截面

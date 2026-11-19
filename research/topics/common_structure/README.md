@@ -35,6 +35,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [两个独立审查与研究优先级](ASSESSMENT.md) | 核对哪些桥已证、哪些是既有语言、哪些反例决定了下一步。 |
 | [研究目标与已有教训](OBJECTIVE_AND_PITFALLS.md) | 三项前提怎样合用，存在轨道和全选的区别，参数的精确例子、本线主要误判及下一步。 |
 | [GPT Pro 持续研究任务书](GPT_PRO_PROMPT.md) | 候选必须逐项证明原 RLEB 导入、独立基准导入、真实参数窗、原轨道存在及新数学信息。未通过就试证、反证或换机制。 |
+| [LT 同球留域反例](lt_ball_localization_obstruction.md#lt-ball-counterexample) | C340 逐项满足正式 Assumption 2，却否定其 Theorem 2 的同半径欧氏球根覆盖。实际完整轨道仍收敛；用于 G3 导入时区分正确结构条件与错误局部化。 |
 | [原非线性 RL 与真残差的图桥](nonlinear_rl_bridge.md) | C333 排除固定输出惩罚的同弦证明。C334 用同一非线性反射模转接真残差与原弦。C335 显示标量图宽度改变最佳幂。C336 给固定原模的精确向量检验，C337–C339 分别定位最近锚、多尺度数据和多值长支的障碍。 |
 | [二次移位 Fitzpatrick 母面桥](mother_fitzpatrick_bridge.md) | 常数二次弱单调子类：全图间隙的图截面等价弱单调，零锚截面在完整近端覆盖下等价真残差线性次正则；同一近端弦在 \(\lambda\beta<1/2,\lambda>2\beta K^2\) 下给输入版 \(A+B\)、点收敛和有限长度，并给出 \(F=B(y)T(Cy)\) 的完整纤维传递与 \(CB(y)\) 定向功。 |
 | [临界 \(q=2,\alpha=1\) 的 reach 子类](critical_q2_reach.md) | 在 \(C^{1,1}\) 零流形、统一 reach、严格平方下降和完整根共同留域下，切向图值估计与二进制尺度求和给每条轨道点收敛；它不覆盖一般闭非孤立零集，也不自动给物理有限长度。 |

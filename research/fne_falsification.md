@@ -2,7 +2,7 @@
 
 ## Candidate under review
 
-Let (Ssubsetmathbb R^n) be a compact (C^2) embedded boundaryless submanifold, let (U_ho={x:d(x,S)<ho}) be a tubular neighborhood, and let (J:U_ho	o U_ho) be single-valued and firmly nonexpansive. Assume
+Let (Ssubsetmathbb R^n) be a compact (C^2) embedded boundaryless submanifold, let (U_\rho={x:d(x,S)<\rho}) be a tubular neighborhood, and let (J:U_\rho	o U_\rho) be single-valued and firmly nonexpansive. Assume
 
 \[
 Jp=pquad(pin S),

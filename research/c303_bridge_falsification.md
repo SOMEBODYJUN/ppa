@@ -60,7 +60,7 @@ For (	heta\ge\max\{\theta_0,2\}), this is (L_b(\theta)=O(He^{2\theta})). This do
 
 ## 3. The variable bound repairs the local crossing estimate
 
-At a first discrete exit through (s_i=0), write (ar x_k) for a same-(	heta) boundary point. The endpoint displacement estimate (|x_{k+1}-x_k|\le Ch_k) implies (|x_k-\bar x_k|\le Ch_k). Taylor expansion of (s_i), with (B_i=\nabla s_i\cdot Y), gives
+At a first discrete exit through (s_i=0), write (\bar x_k) for a same-(	heta) boundary point. The endpoint displacement estimate (|x_{k+1}-x_k|\le Ch_k) implies (|x_k-\bar x_k|\le Ch_k). Taylor expansion of (s_i), with (B_i=\nabla s_i\cdot Y), gives
 
 \[
  s_i(x_{k+1})-s_i(x_k)

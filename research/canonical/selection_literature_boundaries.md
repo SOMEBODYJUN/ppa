@@ -76,7 +76,7 @@ x^{n+1}\in J_{hF}(x^n)\cap B_\delta(\bar x)
 \]
 
 在 \(\epsilon>0\) 的等号处给收缩因子 1；严格收缩调用必须用严格上端。
-这些是具体接口义务，不是 Theorem 2 的反例或整篇论文裁决。
+上述审查最初仅登记具体接口义务。[C340 的完整线性反例](../topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample)现进一步证明：全部 Assumption 2 和原参数门成立时，Theorem 2 印刷的同半径欧氏球根覆盖仍可失败。反例的实际原轨道全局收敛，故不把这个局部化错误扩大成整篇论文或所有局部收敛机制的否定。其余显示常数与适用门仍按上文分别核验。
 
 <a id="sl-ltt"></a>
 ## LTTQ / LTTP：固定点锚与全部输入对

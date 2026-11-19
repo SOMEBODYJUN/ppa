@@ -4803,6 +4803,18 @@
       "label": "开放目标：三项条件共同推出一条原 PPA 收敛轨道",
       "file": "topics/common_structure/OBJECTIVE_AND_PITFALLS.md#w-objective",
       "evidence_status": "open"
+    },
+    {
+      "id": "LT-BALL-PRINTED",
+      "label": "LT Theorem 2 印刷的同球根覆盖（已反驳）",
+      "file": "topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample",
+      "evidence_status": "refuted"
+    },
+    {
+      "id": "LT-BALL-OBSTRUCTION",
+      "label": "C340 全部 LT 前提下的唯一根离球反例",
+      "file": "topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12158,6 +12170,17 @@
       "relation": "open",
       "scope": "同一原算法。指定的单调结构、正则性和各自的参数窗须分别导入一个可复用证书。最低量词是对认证初值存在可无限拼接的收敛原轨道；这些见证只作研究入口。",
       "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E642",
+      "inputs": [
+        "LT-BALL-OBSTRUCTION"
+      ],
+      "output": "LT-BALL-PRINTED",
+      "relation": "refutes",
+      "scope": "固定完整 F(a,b)=(-b/2,b)、lambda=1、S=实轴；全部 Assumption 2 和原严格参数门成立，但任意同半径欧氏球均有唯一根离球。只反驳该局部化量词；实际轨道全局收敛，不反驳 LT 图结构或改域后的收敛。",
+      "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
   ]

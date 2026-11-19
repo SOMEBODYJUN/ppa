@@ -9758,6 +9758,28 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "LT-BALL-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "LT-BALL-PRINTED": {
+      "role": "refuted-target",
+      "kind": "barrier",
+      "object": "locked_gate",
+      "evidence": "refuted",
+      "reason": "incoming-refutes-relation",
+      "x": 4872,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12312,6 +12334,10 @@
     "E641": {
       "x": 4260.19,
       "y": 4127.32
+    },
+    "E642": {
+      "x": 4851.12,
+      "y": 4530.22
     }
   },
   "bounds": {

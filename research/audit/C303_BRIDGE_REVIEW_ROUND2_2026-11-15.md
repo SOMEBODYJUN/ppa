@@ -64,7 +64,7 @@ u'\le C_0u e^{-u^2},
 \qquad
 \theta^2\le C+p\log(1+t).
 ]
-故边界 inward margin 至少是 (c(1+t)^{-p})，可选 (arepsilon) 使指数扰动始终小于其一半。任何首次边界接触都会满足 (s_i'>0)，矛盾。再由
+故边界 inward margin 至少是 (c(1+t)^{-p})，可选 (\varepsilon) 使指数扰动始终小于其一半。任何首次边界接触都会满足 (s_i'>0)，矛盾。再由
 [
 \theta'\ge c_0\theta e^{-\theta^2}/2
 ]
