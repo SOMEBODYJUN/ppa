@@ -64,6 +64,8 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
+[C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这个承重缺口，任务仍未完成。
+
 [C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。共同结构任务仍未完成。
 
 [C346 回返缺口与完整残差](research/topics/common_structure/return_gap_and_loop_reduction.md) 在全锚平方耗散类给出与路径长度无关的正则转接，并证明任意周期的共同零锚误差界来自连续补偿耗散。原最近锚一般反射行的导入仍后置于旧下降；这一区分阻止把循环条件误报为新的共同机制，见 [F115](FAILED_ROUTES.md#f115)。
@@ -262,6 +264,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | `research/topics/common_structure/residual_preserving_fiber_completion.md` | C347：保持全部当前原 RLEB 数据、完整零集和真残差的逐点最大纤维补全；给低范数最小功及全部倾斜残差的同时精确下包络。用于审查候选是否从允许图偷升到完整纤维方向，完整截断/闭图等附加结构须另证。 |
 | `research/topics/common_structure/tilted_fiber_equivalences.md` | C348：同一完整纤维在零右端与倾斜右端的距离比较、两个精确恢复、原 PPA 充分性及保持原κ的非线性导入。独立审查证明该导入仍被旧下逆的更强余项估计支配；用于区分正确等价与真正承重的共同结构。 |
 | `research/topics/common_structure/matching_certificate_reduction.md` | C349：两项尺度排序、完整残差可取阈值、一般法切纤维的精确上下端、同参数单调/正则两恢复及原 PPA 充分性。独立冷审证明新增越界分支可从三条要求链删去，两个恢复均为既有扩张水平，不能据此宣告新共同机制。 |
+| `research/topics/common_structure/incoming_residual_reflection.md` | C350：当前完整残差约束下一原弦反射，优化剪切点偏差与所用值的非最小性成为相邻完整残差的非负损失；两种同参标定、原全部初值及正点跳跃模证明齐全。读此文件以使用跨边定量关系，勿把可删方向费用升级为共同结构已完成。 |
 | `research/topics/common_structure/compensated_anchor_convergence.md` | C341–C342 的精确定义和完整证明：原弦锚距上确界、可续根、真正则识别、两条原预算导入、仿射切向预算、旋转族双门及 C277/C329 全部受比合同的反证。要继续扩大共同条件覆盖时首先读取；不能将证书遗漏区写成实际发散。 |
 | `research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md` | 记录四轮实际候选与 G1–G7 裁决，保留 v1 退化量词反例和 v2 修复、独立重构的承重步骤、有限维/固定步长/完整零集的作用域。审查或提升后续版本时核对。 |
 | `research/topics/common_structure/lifted_residual_distance.md` | C343 候选的完整推导：真残差增维、无需连续的静态补偿、仿射精确公式与漂移积分门。未通过自身独立 G7；研究不同残差支付机制或与 C341 的关系时读取。 |

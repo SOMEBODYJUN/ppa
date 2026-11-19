@@ -3067,3 +3067,13 @@
 - **Exact Statements / Quantifiers**：给定允许图，正文 (1)–(2) 的向上尺度集精确判定完整 \(\rho(y)\) 可取范围，端点不以其下确界替代。仿射目标及正交法切分解下，正文 (8)–(9) 精确给完整纤维模长下端与每个受检切向子纤维上端的关系。若全部允许弦满足匹配、原覆盖及纯模预算 \(b(t)+C(b(t))\le\Phi(t)\)，则从严格 \(\Phi\) 初值预算内的每点，每条允许原轨道可续、有限长并点收敛。原 RLEB 取 \(\Phi=\Theta\)，保全部原参数和初值预算。
 - **Two exact recoveries / Scope**：同一偶数维、\(S=\{0\},\lambda>0\)、\(\omega(t)=3t,\psi(r)=\lambda r/4,\Phi(t)=8t\)。在 \(F=(m/\lambda)Q\)、\(Q\) 正交的完整原图类，A 固定 \(m=\sqrt{15}\) 放开方向，匹配 iff 全图单调，指定 EB 恒失败于非零点；B 固定 \((Q+Q^*)/2=-I/8\) 放开 \(m>0\)，匹配 iff 指定完整真 EB，即 \(m\ge4\)，通常单调恒失败。两类完整根均全域唯一，非解认证域非空。
 - **Evidence / Counterevidence / Dependencies**：[完整证明与冷审归约](research/topics/common_structure/matching_certificate_reduction.md)。两个恢复都恰为 \(t\ge4q\)，即原 \(I+\lambda F\) 的最小增益至少 4，是既有 SRG 平移几何的两个截面。原 RLEB、A、B 的整类均已满足 \(h\le b\)，故可删全部反射越界区域而保三类结论。独特的多值越界交换不参与原一般行和两恢复，因此本条不是共同机制完成；见 [F118](FAILED_ROUTES.md#f118)。
+
+
+<a id="c350"></a>
+## C350-v1 · 当前完整残差到下一原弦反射的精确损失分解
+
+- **Status**：`derived-checked`。主代理重构证明；这是阶段性关系，不是共同结构任务完成。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维原关系 \(F\)、非空闭 \(S\subseteq F^{-1}(0)\)、\(\lambda>0\)，每个受检当前状态 \(y\) 有有限完整 \(r(y)=\inf_{F(y)}\|v\|\) 和非空原出根集 \(K(y)\subseteq J_{\lambda F}(y)\)。定义 \(E_K(y)=[d(y)+\sup_{z\in K(y)}\operatorname{dist}(2z-y,P_S(y))]/2\)。给定有限非减 \(h\)、\(h(0)=0\)，对所有当前状态要求 \(E_K(y)\le h(r(y))\)。令每条出弦的 \(t=d(y),a=h(r(y)),s=\|y-z\|\)。在 \(0<t<2a\) 置 \(\xi=y+(t/a)(z-y)\)、\(D=a^2\operatorname{dist}(\xi,P_S(y))^2/[t(2a-t)]\)，端点按正文处理；该条件逐弦恰等价于 \(s^2+D\le a^2\)。因此 \(\lambda^2r(z)^2+[s^2-\lambda^2r(z)^2]+D\le h(r(y))^2\)。若 \(h(r)\le\lambda r\)，前后完整残差的下降支付模缺口、所用值超过下一完整残差的平方差及上述锚偏差三项非负损失。
+- **Definitions / Recoveries**：同一 \(h=H\circ g\)、\(H=(\mathrm{id}+\omega)/2\)。在独立标定 \(d=g(r)\) 下等价于原最近输入零锚反射界；在 \(\sup_{z\in K(y)}\operatorname{dist}(2z-y,P_S(y))=\omega(d(y))\) 下等价于完整真误差界 \(d\le g(r)\)。此处一般恢复零锚方向；升级通常两点单调另需线性完整图等明确条件。
+- **Conclusion / Scope / Assumptions**：若 \(\phi=h/\lambda\) 保残差窗且 \(W(u)=\sum_jh(\phi^{\circ j}(u))<\infty\)，独立根覆盖和正文严格入口预算给每条允许原轨道有限长度、点收敛到 \(S\)。同一步还有 \(s+D/(a+s)+W(r(z))\le W(r(y))\)。原 RLEB 取 \(h=H\circ\psi\) 从当前输出的完整 EB 和下一原弦的反射直接导入，保留全部原 \(\Theta\) 认证初值、原帽与正点可跳跃模。
+- **Dependencies / Evidence / Counterevidence / Related Files**：[完整证明](research/topics/common_structure/incoming_residual_reflection.md)。C345 提供加权平方，C277 为邻近联合原图框架。原严格小增益下，舍掉方向费用而只留 \(s\le h(r),d\le2h(r)\) 仍可给纯点收敛；故费用可和与等号切片并未关闭结构承重和新意门，见 [F119](FAILED_ROUTES.md#f119)。

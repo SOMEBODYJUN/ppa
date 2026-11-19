@@ -10033,6 +10033,39 @@
       "y": 4578,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "IR-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "IR-LOSS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "IR-OBJECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "definition",
+      "reason": "neutral-default",
+      "x": 4496,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12687,6 +12720,18 @@
     "E666": {
       "x": 3265.91,
       "y": 4324.48
+    },
+    "E667": {
+      "x": 4475.48,
+      "y": 4439.4
+    },
+    "E668": {
+      "x": 4516.88,
+      "y": 4348.22
+    },
+    "E669": {
+      "x": 3241.43,
+      "y": 4357.1
     }
   },
   "bounds": {

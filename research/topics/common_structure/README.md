@@ -17,6 +17,8 @@
 
 [C349 两项匹配及归约](matching_certificate_reduction.md) 的两恢复与多值上下端为真，但新越界分支不参与原 RLEB 及两恢复，仍未通过共同机制验收。
 
+[C350 跨边完整残差损失](incoming_residual_reflection.md) 已把优化反射偏差接到相邻完整残差与归一化长度预算；纯点收敛仍可删掉该费用，故为已证中间关系。
+
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 
 <a id="mother-result"></a>
@@ -51,6 +53,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | [保残差补全与完整纤维方向自由度](residual_preserving_fiber_completion.md) | C347：固定原允许 RLEB、完整真残差和误差界时的最大补全；检验允许方向与完整残差是否被错误扩充为完整纤维方向条件。 |
 | [倾斜纤维的两等价与承重边界](tilted_fiber_equivalences.md) | C348：真实双右端距离的结构恢复成立；原一般模导入的下降可由旧下逆更强地推出，仍不能宣布共同结构完成。 |
 | [两项匹配、纤维阈值与主链归约](matching_certificate_reduction.md) | C349：同参数两个恢复、一般多值切向上界及原 PPA；三个要求链均可删去新越界机制，恢复可归约到同一近端最小增益水平。 |
+| [跨边完整残差与反射损失](incoming_residual_reflection.md) | C350：最近输入零锚偏差、使用值非最小性、前后完整残差的精确分解；同参恢复和原一般 RLEB 全部初值已核，方向费用尚未承担纯点收敛的必要推导。 |
 | [原图间隙的两个切片](../../canonical/graph_gap_monotonicity_regularity.md) | 图上零值刻画单调或弱单调，零残差截面的二次增长在明确覆盖下等价于真残差线性次正则。反向线性图给直接收敛蕴含的反例。 |
 | [能量、支撑与满秩复合](energy.md) | 精读 LMZ，给出支撑亏损的锐路线：当 \(d^q\lesssim r\)，保住 KL 指数 \(q/(1+q)\) 的全类阈值是 \(\alpha\ge\max(0,1-1/q)\)。另给用原增长支撑直接证明完整近端收敛、且对任意收缩因子排除 C320 的曲复合实例。 |
 | [图投影、横截性与活动零点](geometry.md) | 检查同一图的两类观察能解释什么，以及固定一点的一阶等式会漏掉什么。 |

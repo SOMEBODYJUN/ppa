@@ -4954,6 +4954,24 @@
       "label": "F118 匹配恢复归于旧扩张水平且越界机制可删",
       "file": "topics/common_structure/matching_certificate_reduction.md#matching-reduction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IR-OBJECT",
+      "label": "C350 当前完整残差约束下一原弦的反射",
+      "file": "topics/common_structure/incoming_residual_reflection.md#incoming-definition",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "IR-LOSS",
+      "label": "C350 前后完整残差支付原弦非最小性与锚偏差",
+      "file": "topics/common_structure/incoming_residual_reflection.md#incoming-loss",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "IR-BOUNDARY",
+      "label": "F119 原严格相容的点收敛可舍去方向费用",
+      "file": "topics/common_structure/incoming_residual_reflection.md#incoming-boundary",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12587,6 +12605,40 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "多值越界关系在扩展区可支付位移，但不参与三个要求链；不能仅由两个精确切片与共享长度势判共同机制完成。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E667",
+      "inputs": [
+        "IR-OBJECT",
+        "FR-RIGIDITY"
+      ],
+      "output": "IR-LOSS",
+      "relation": "conditional",
+      "scope": "正文实际原弦和完整前后纤维下，加权平方给精确损失分解；h≤λr时三项非负。标量迭代可和、输入覆盖与严格留域预算另给原轨道有限长度，原RLEB保全部原初值。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E668",
+      "inputs": [
+        "IR-LOSS"
+      ],
+      "output": "IR-BOUNDARY",
+      "relation": "limits",
+      "scope": "原严格小增益下径向后果已足以给点收敛；新增角度费用和等号标定本身未证明目标结构完成，不否定精确跨边定量内容。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E669",
+      "inputs": [
+        "IR-BOUNDARY"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "继续检验方向与真正则的非形式转接；不能把跨边记账或两个恢复切片单独升级为共同结构新意。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
