@@ -8,7 +8,9 @@
 
 **共同结构仍开放。** 要找同一个 \(M\)，证明它在条件 \(A\) 下等价于单调或次单调，在条件 \(B\) 下等价于正则性。再证明这两类性质加各自的参数条件推出 \(M\)，从而保证原 PPA 至少一条可续的点收敛轨道。原 RLEB 的一般非线性反射模和真残差误差界要纳入。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md) · [C341 的机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
 
-[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。本轮共同结构任务保持**未完成**。正在检验完整倾斜残差的方向转接及任意周期长度的单接缝误差关系；未写出且独立核实的推导不得调用为结论。
+[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。本轮共同结构任务保持**未完成**。
+
+[C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。当前首要义务是找到同一对象在独立条件下的两个反向恢复，并让原一般反射模与正则尺度在该对象中共同决定下降；完整倾斜残差和其他新表示仍在试证，未写出且独立核实的推导不得调用为结论。
 
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 

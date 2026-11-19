@@ -4882,6 +4882,24 @@
       "label": "C345 反射模与真残差共同限制纤维方向及零锚差",
       "file": "topics/common_structure/fiber_reflection_rigidity.md#fiber-two-values",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RG-OBJECT",
+      "label": "C346 原允许图的固定输出回返缺口",
+      "file": "topics/common_structure/return_gap_and_loop_reduction.md#return-residual",
+      "evidence_status": "definition"
+    },
+    {
+      "id": "RG-RESIDUAL",
+      "label": "C346 全锚平方耗散下回返缺口与完整残差转接",
+      "file": "topics/common_structure/return_gap_and_loop_reduction.md#return-residual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RG-LOOP-REDUCTION",
+      "label": "C346 连续补偿耗散推出周期无关同锚误差界",
+      "file": "topics/common_structure/return_gap_and_loop_reduction.md#loop-reduction",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12372,6 +12390,50 @@
       "output": "MOTHER-OPEN",
       "relation": "open",
       "scope": "跨图值方向约束尚未承担原PPA参数相容或下降；只丢去位置项即回到旧半和界，不是本次M完成。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E654",
+      "inputs": [
+        "RG-OBJECT"
+      ],
+      "output": "RG-RESIDUAL",
+      "relation": "conditional",
+      "scope": "每条允许原边对所有零锚有固定正系数平方耗散，得到完整残差的回返下界；反向上界另需完整纤维近极小值可作允许原边。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E655",
+      "inputs": [
+        "CA-OBJECT"
+      ],
+      "output": "RG-LOOP-REDUCTION",
+      "relation": "conditional",
+      "scope": "补偿h在全部受检距离闭窗连续，末输出完整残差有统一零识别；对任意周期、所有实际允许边和留在工作窗的单接缝扰动，得到同一零锚的统一误差模。平方耗散可取任意固定正系数。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E656",
+      "inputs": [
+        "RG-LOOP-REDUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "该循环条件在原一般RLEB行可由既有下降之后的连续补偿推出；此导入不能充当新的共同参数相容及方向恢复证明。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E657",
+      "inputs": [
+        "RG-RESIDUAL"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "open",
+      "scope": "全锚平方耗散下正则转接已闭；原最近输入锚的一般非线性反射前件与回返条件的方向反向等价仍未证明。",
       "status": "open",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

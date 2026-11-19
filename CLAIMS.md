@@ -3028,3 +3028,12 @@
 - **Exact Statement / Quantifiers**：任取 \(0\le b\le r_F(y)\)。置 \(w=\omega(t),H=(t+w)/2\)，\(t>0\) 时令 \(s=\lambda(w-t)/(w+t)\)、\(E(t,b)=\sqrt{tw[1-(\lambda b/H)^2]}\)。则 \(\lambda b\le H\) 且 \(\|y+sv-p\|\le E(t,b)\)。\(w=0\) 时此式取 \(s=-\lambda,E=0\)；\(t=0\) 时原步为零并约定 \(s=E=0\)。同一 \(y\) 的任意两个受检图值及各自任意见证满足 \(\|s_1v_1-s_2v_2-(p_1-p_2)\|\le E(t_1,b)+E(t_2,b)\)。若已在真实残差帽内有 \(d(y,S)\le\psi(r_F(y))\)，可取 \(b=\inf\{u:d(y,S)\le\psi(u)\}\)，不要求残差达到或 \(\psi\) 正点连续。
 - **Dependencies / Evidence**：[自足命题与证明](research/topics/common_structure/fiber_reflection_rigidity.md#fiber-rigidity)。加权平方恒等对每个 \(a\in[0,1]\) 给 \(\|y+\lambda(2a-1)v-p\|^2+4a(1-a)\lambda^2\|v\|^2\le at^2+(1-a)w^2\)；最小步长上界在 \(a=w/(t+w)\) 取得，再对完整残差使用单向不等式 \(r_F(y)\le\|v\|\)。
 - **Scope / Counterevidence / Objections / Novelty**：剪切点只用于几何比较，不声称它是原PPA根；不对 \(F\) 取凸包。该关系独立于轨道，但当前收敛推导仍只使用丢掉位置项后的旧半和界。跨值关系未承担相容或下降，故不满足本轮共同结构验收第二、三项；见 [F114](FAILED_ROUTES.md#f114)。C277/C285 已有相关单步几何，本文不把加权平方称为新原理。
+
+<a id="c346"></a>
+## C346-v1 · 原图回返缺口与完整残差的转接及循环条件归约
+
+- **Status**：`derived-checked`。两研究席分别重构循环与固定输出估计，主代理核对全锚量词、非达到下确界、正共次单调系数及连续模的原窗构造。共同结构和公开新颖性均未完成。
+- **Objects / Domain / Definitions**：有限维欧氏原 \(F\)、固定 \(\lambda>0\)、非空闭 \(S\subseteq F^{-1}(0)\)，允许原边 \(K\subseteq\{(a,b):a-b\in\lambda F(b)\}\)。令 \(I_K(y)\) 为可一步到达 \(y\) 的输入集，\(Q_K(y)\) 为从 \(y\) 出发经有限条允许边可达的点集，含零步 \(y\)。定义 \(c_K(y)=\operatorname{dist}(I_K(y),Q_K(y))\)，\(r_F\) 始终对完整纤维取下确界。
+- **Exact Statement / Assumptions / Quantifiers**：若每条允许边对每个 \(p\in S\) 满足 \(\|a-p\|^2-\|b-p\|^2\ge\beta\|a-b\|^2\)、\(\beta>0\)，则每个具有允许输入的输出满足 \(\sqrt{d(y)^2+\beta\lambda^2r_F(y)^2}-d(y)\le c_K(y)\)。若该输出完整纤维的近最小范数图值均可沿一列允许原边逼近，则另有 \(c_K(y)\le\lambda r_F(y)\)。因此在线性层，\(d\le K_0r_F\) 推出 \([\sqrt{1+\beta\lambda^2/K_0^2}-1]d\le c_K\)，反向 \(d\le C_0c_K\) 推出 \(d\le C_0\lambda r_F\)。不要求残差或回返距离达到。
+- **Second statement / Dependencies**：若允许边满足正文 (1) 的全锚连续补偿耗散（平方项系数为任意固定 \(\tau>0\)），距离落在固定 \([0,R]\)，受检末输出集上的完整残差有统一零识别，则所有仅一处输入扰动 \(e\) 的有限原循环满足 \(\inf_{p\in S}\max_i\|z_i-p\|\le\Xi(\|e\|)\)，其中 \(\Xi(0)=\Xi(0+)=0\)，与周期无关。原 RLEB 的一般模可在原窗内构造连续 Dini 上包络而导入；全锚共次单调取 \(\tau=1-2\rho/\lambda>0,h=0\)。原 C341 的单位系数不能无条件替换此 \(\tau\)。
+- **Evidence / Scope / Objections**：[完整证明和评价窗](research/topics/common_structure/return_gap_and_loop_reduction.md)。固定输出转接独立于正则性和收敛；循环导入仍依赖旧 RLEB 兼容与下降。最近输入零锚一般反射界尚不能推出这里的全锚平方前件，回返性质也未恢复一般方向条件。故不满足本次两个等价及共同机制门；见 [F115](FAILED_ROUTES.md#f115)。

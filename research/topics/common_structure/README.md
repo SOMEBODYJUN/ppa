@@ -9,6 +9,8 @@
 
 新增的 [C345 同纤维反射刚性](fiber_reflection_rigidity.md) 给出可单独使用的图值—锚差估计，但其相对方向项尚未用于原PPA下降，不能代替该首要义务。[F114](../../../FAILED_ROUTES.md#f114) 明确了从加权平方退回旧半和兼容的断点。
 
+[C346 回返缺口与循环归约](return_gap_and_loop_reduction.md) 保留全锚平方耗散下的完整真残差转接，但一般原 RLEB 的循环导入仍由旧下降与连续补偿给出；[F115](../../../FAILED_ROUTES.md#f115) 记录两个反向恢复尚缺的具体位置。
+
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 
 <a id="mother-result"></a>
@@ -39,6 +41,7 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | 材料 | 能复用的结论或用途 |
 | --- | --- |
 | [同一完整残差下的图值与零锚差](fiber_reflection_rigidity.md) | C345：原一般反射模的最优加权恒等及两个同纤维真实图值的共同约束。证明成立；跨值方向关系的动力学承重和结构新意仍未完成。 |
+| [回返缺口与循环误差的准确来源](return_gap_and_loop_reduction.md) | C346：全锚平方耗散下的回返—真残差双侧估计；连续补偿已推出任意周期误差界，原最近零锚一般模的反向方向恢复未闭。 |
 | [原图间隙的两个切片](../../canonical/graph_gap_monotonicity_regularity.md) | 图上零值刻画单调或弱单调，零残差截面的二次增长在明确覆盖下等价于真残差线性次正则。反向线性图给直接收敛蕴含的反例。 |
 | [能量、支撑与满秩复合](energy.md) | 精读 LMZ，给出支撑亏损的锐路线：当 \(d^q\lesssim r\)，保住 KL 指数 \(q/(1+q)\) 的全类阈值是 \(\alpha\ge\max(0,1-1/q)\)。另给用原增长支撑直接证明完整近端收敛、且对任意收缩因子排除 C320 的曲复合实例。 |
 | [图投影、横截性与活动零点](geometry.md) | 检查同一图的两类观察能解释什么，以及固定一点的一阶等式会漏掉什么。 |
