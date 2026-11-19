@@ -3,6 +3,8 @@
 <a id="mother-question"></a>
 ## 首要问题
 
+[C360 原离散阻尼与连续场障碍](rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 在同一尖锐非线性原认证及全域唯一收敛原近端下实现原连续周期、漂移和任意给定的紧流因子。连续势或原连续趋稳不是普遍导入。
+
 [C359 凸化原近端路径的正则盲区](convexified_proximal_paths_obstruction.md#convexified-proximal-paths) 保持完整纤维与全部有限、无限原路径的凸化信息，并分离完整真误差界幂。两图共享真正非线性的原 RLEB。
 
 [C358 的原近端切向搬运代价](proximal_input_noise_transport.md#input-noise-transport) 精确计算剪切图在一般小输入误差下的搬运成本，并给任意原一般模 RLEB 的可和扰动预算。单调与正则的共同恢复仍开放。

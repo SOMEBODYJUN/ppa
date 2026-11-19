@@ -1,5 +1,11 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-rleb-discrete-damping"></a>
+## 旋转的隐式阻尼及欧氏功的可积性
+
+- Ernst Hairer 与 Martin Hairer，[作者稿 *Numerical Methods for Ordinary Differential Equations*](https://www.hairer.org/papers/gni.pdf)，§3.2，图 3.1–3.2。原文展示隐式 Euler 对 Hamilton 系统、特别是谐振子的向内螺旋。这是 [C360](../CLAIMS.md#c360) 的离散旋转阻尼的经典先例。该出处未给 C360 中同时保留原非线性反射与完整真残差时的连续场自由度。
+- Hansjörg Geiges，[作者稿 *Contact Geometry*](https://www.mi.uni-koeln.de/~geiges/contact05.pdf)，§2 开头及 Definition 2.1。原文写出一形式的 Frobenius 条件及接触形式定义。C360 的阻碍直接由 \(\alpha\wedge d\alpha\ne0\) 和精确形式闭合证明，因此不借用一般 Frobenius 充分性。
+
 <a id="lit-novelty-development"></a>
 ## 理论发展复核：同算法正面恢复
 

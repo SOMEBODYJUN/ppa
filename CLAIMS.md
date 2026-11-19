@@ -3158,3 +3158,12 @@
 - **Objects / Exact Statement / Quantifiers**：取 \(X=\mathbb R^2\)、\(S=\mathbb R\times\{0\}\)、\(\lambda=1\)、\(0<g<h\le\nu<1\)、\(g>\nu h\)。两个完整闭图在 \((a,b)\) 同享法向值 \(\operatorname{sgn}(b)|b|^\nu\)。\(F_0\) 的切向值为 \(\pm |b|^g\)，\(F_1\) 另加 \(\min(|b|^h,|b|^g)\)。两者在每个基点的完整纤维闭凸包相等。对每个固定原初值和每个有限步数，完整原路径向量的凸包相同。无限原路径在 \(\ell^\infty\) 中的闭凸包相同，原极限点集的凸包也是同一闭线段。
 - **Regularity and RLEB Scope**：最佳残差端局部幂分别为 \(1/g\)、\(1/h\)。每个固定 \(\kappa\in(0,1)\) 都有共同正 \(R\) 验证原 P1–P4，使用全部原根、完整真残差、同一真正非线性反射模 \(\omega(q)=\sqrt{4q^{2g/\nu}+q^2}\) 和误差模 \(\psi(s)=s^{1/h}\)。反射幂 \(g/\nu\) 为两图的最优幂。
 - **Dependencies / Evidence / Objections**：[完整证明](research/topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths)用法向唯一递推、端点增量乘积混合和统一尾和。依赖相同完整凸化数据的候选与附加条件不能恢复指定 \(p\in(1/h,1/g]\) 的真误差界。凸值恢复类或保留非凸信息的探针不受此例直接否定。[F126](FAILED_ROUTES.md#f126)；公开优先性未核定。
+
+<a id="c360"></a>
+## C360-v1 · 尖锐原 RLEB 与原连续场动力学的分离
+
+- **Status**：`derived-checked`。精确反射和完整残差、原参数窗、圆柱周期和局部功形式已重构。紧流因子的嵌入、原根的压缩反解和时间比例逐项核对。
+- **Objects / Parameters**：\(0<g<\nu<1\)，任意固定 \(\lambda>0\)，完整连续单值原图于 \(\mathbb R^d\times\mathbb R^2\)，完整零集 \(S=\mathbb R^d\times\{0\}\)，原法向值 \(r^{\nu-1}Jz\)，切向范数 \(r^g\)，其中 \(r=\|z\|\)。[精确定义和证明](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping)。
+- **Exact Statement / Scope**：两图取 \(d=2\)。二者同享全域唯一完整原根、法向输入半径 \(t=\sqrt{r^2+\lambda^2r^{2\nu}}\)、完整真残差 \(\sqrt{r^{2g}+r^{2\nu}}\) 和精确原反射 \(\sqrt{t^2+4\lambda^2r^{2g}}\)，最佳幂分别为 \(1/g\)（残差端误差模）与 \(g/\nu\)（反射端）。对每个 \(0<\kappa<1\) 有共同非空原工作窗满足 (P1)–(P4)，包含非解初值。两图的唯一原 PPA 从全空间点收敛。一个图的 \(-F\) 全部非解连续轨道为周期，且整周期出现在任一零点的任一邻域；另一图的全部非解连续轨道沿零平面无界。周期图无任何零点邻域的正定度量梯度表示，且在每个非解点排除局部欧氏功的无零光滑标量积分因子。
+- **Additional Scope**：对任意给定紧无边界光滑嵌入流形及其光滑切向场，允许提高 \(d\)，有另一原图共享上述认证、唯一性和点收敛。其原连续流在趋向同一个零点的紧不变集上，以固定正时间比例投影到该给定流。[构造](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-continuous-flow-factor)。
+- **Dependencies / Evidence / Objections**：平面正交恒等、Banach 压缩、紧嵌入子流形管状邻域及周期上的严格下降反证。隐式 Euler 的旋转阻尼有经典先例，见[文献定位](research/LITERATURE.md#lit-rleb-discrete-damping)。该命题限制普遍连续流或势函数导入，不反驳离散 Lyapunov 路线，也未给两个恢复。[F127](FAILED_ROUTES.md#f127)；公开优先未定。

@@ -10220,6 +10220,17 @@
       "y": 1885,
       "region": "paths",
       "realm": "paths"
+    },
+    "RLEB-DISCRETE-FLOW-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4684,
+      "y": 4578,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12938,6 +12949,10 @@
     "E682": {
       "x": 3167.28,
       "y": 4354.7
+    },
+    "E683": {
+      "x": 3138.03,
+      "y": 4343.26
     }
   },
   "bounds": {

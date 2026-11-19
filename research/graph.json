@@ -5056,6 +5056,12 @@
       "label": "C359 凸化原近端路径的真误差界盲区",
       "file": "topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-DISCRETE-FLOW-OBSTRUCTION",
+      "label": "C360 同一尖锐原 RLEB 下的原连续流分离",
+      "file": "topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12869,6 +12875,17 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "完整凸化纤维以及逐原初值的全部有限和无限原路径的闭凸包相同，也可有不同完整真残差最优误差界幂；两原图共享真正非线性 RLEB 和完整覆盖。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E683",
+      "inputs": [
+        "RLEB-DISCRETE-FLOW-OBSTRUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "真正非线性的原 RLEB 与全域唯一收敛的原近端允许原连续周期、切向无界漂移或给定紧流因子；不得将原连续趋稳或正定度量梯度表示作为普遍导入。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

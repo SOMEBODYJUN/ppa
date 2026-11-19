@@ -64,6 +64,8 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
+[C360 原离散阻尼与原连续流分离](research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md#rleb-discrete-damping) 以同一精确非线性近端轮廓给原连续周期与零平面漂移，并在完整认证下实现指定紧流因子。原 PPA 仍点收敛。用于排除普遍的原流趋稳和正定梯度导入。[F127](FAILED_ROUTES.md#f127)
+
 [C359 凸化原近端路径的正则性盲区](research/topics/common_structure/convexified_proximal_paths_obstruction.md#convexified-proximal-paths) 给出两个非线性原 RLEB 算子。完整纤维及每个初值的全部原路径在凸化后相同，完整真残差的最佳误差界幂仍不同。用于检验仅依赖线性支持或凸化路径的恢复定理。[F126](FAILED_ROUTES.md#f126)
 
 [C358 原近端输入误差的切向搬运](research/topics/common_structure/proximal_input_noise_transport.md#input-noise-transport) 对剪切型完整原图计算零点间的精确小误差搬运代价，并对任意原一般模 RLEB 给出可和输入误差条件。真正非线性的幂阈值可锐化，欧氏输入误差可和本身可与有界轨道不点收敛并存。
@@ -275,6 +277,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | --- | --- |
 | `research/topics/common_structure/fiber_reflection_rigidity.md` | C345 的加权反射恒等、完整残差下界和同纤维两值锚差估计，含零尺度、零反射和跳跃误差模的处理。用于检查正则尺度如何限制方向，以及区分真实结构推导与旧半和界的再包装；跨值关系承担PPA下降仍开放。 |
 | `research/topics/common_structure/convexified_proximal_paths_obstruction.md` | C359：闭图多值算子的同凸纤维、同全部有限和无限凸化原路径、异真误差界幂。给共同原一般模、全部根、非解初值，用于排查凸化丢失的正则信息。 |
+| `research/topics/common_structure/rleb_discrete_damping_and_flow_obstruction.md` | C360：同一精确反射与完整真残差下的原连续周期、零平面漂移及任意紧流因子。给完整原根、离散阻尼、局部功形式及梯度表示的严格边界。 |
 | `research/topics/common_structure/proximal_input_noise_transport.md` | C358：原输入误差在剪切型零线上的精确小幅搬运代价、临界幂和任意原一般模 RLEB 的可和扰动预算。研究扰动稳定性和切向漂移时读取。 |
 | `research/topics/common_structure/return_gap_and_loop_reduction.md` | C346：原允许图的有限回返缺口、全锚平方耗散到完整真残差的双侧转接，以及连续补偿推出周期无关的同锚误差模。包含原一般 RLEB 的原窗连续上包络、完整近极小值覆盖和正共次单调系数；用于防止把既有下降后果当成共同结构。 |
 | `research/topics/common_structure/residual_preserving_fiber_completion.md` | C347：保持全部当前原 RLEB 数据、完整零集和真残差的逐点最大纤维补全；给低范数最小功及全部倾斜残差的同时精确下包络。用于审查候选是否从允许图偷升到完整纤维方向，完整截断/闭图等附加结构须另证。 |
