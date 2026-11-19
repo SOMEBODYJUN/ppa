@@ -3082,9 +3082,28 @@
 <a id="c351"></a>
 ## C351-v1 · 原允许图的跨位置反射—残差相容结构
 
+- **Task acceptance**：本轮三项结构标准在本条精确范围内完成；[独立审查与接收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)。数学内部接收与公开首创保持不同状态。
+
 - **Status**：`derived-checked`。两位独立读者分别重构数学链，结构新意以正文所列增量为限；公开首创未裁定。
 - **Objects / Domain / Definitions**：有限维原 \(F\)、非空闭 \(S\subseteq F^{-1}(0)\)、\(\lambda>0\)，开窗 \(U\)、\(R>0\)，同一非空允许原根 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\) 覆盖每个 \(x\in U_R\)。真实边集 \(\mathcal E\)、输出集 \(Y\)，\(t_e=d(x_e)\)、\(a_e=\min_{p\in P_S(x_e)}\|2z_e-x_e-p\|\)，\(q_y=d(y)\)、\(\rho_y=\lambda\inf_{F(y)}\|v\|\)。标量基点 \(0_*=(0,0)\) 只代表非负模的底限，不添加原轨道边。
 - **Exact Statement / Quantifiers**：对固定 \(0<\kappa<1\)，同一结构为 \(\mathsf M_\kappa:\ q_y\le\kappa\max\{t_e,2\rho_y-a_e\}\) 对全部互相独立的 \(y\in Y,e\in\mathcal E\cup\{0_*\}\) 成立。令 \(W(t)=\sup_{t_e\le t}a_e\)、\(H(t)=(t+W(t))/2\)、\(Q(u)=\sup(\{q_y:\rho_y\le u\}\cup\{0\})\)。同一 \(U,R,\lambda,S,\mathcal J,\kappa,\bar t\) 下，存在原投稿所允许的 \(\omega,\psi\) 满足 (P2)–(P4)，当且仅当 \(\mathsf M_\kappa\)、\(H(R)\le\lambda\bar t\) 及 \(\sum_jH(\kappa^jR)<\infty\) 成立。反向规范模为 \(\omega_*=W,\psi_*(r)=Q(\lambda r)\)。正点跳跃和所有下确界不达到均保留；这不声称任意事先指定的模都有效。
 - **Structural Proof / Recoveries**：边柱集 \(C=\bigcup_e\{t_e\}\times(-\infty,a_e]\) 给 \(L(u)=d_\infty((0,2u),C)=\inf_e\max(t_e,2u-a_e)=\inf\{t:H(t)\ge u\}\)。因此 \(\mathsf M_\kappa\iff q_y\le\kappa L(\rho_y)\iff Q(H(t))\le\kappa t\)。在同一全尺度、同一适当仿射 \(S\) 与连续参考 \(\omega_0\) 下，设 \(g=(\mathrm{id}+\omega_0)/2\)：A 的完整残差幅度 \(\rho_y=g(q_y/\kappa)\) 及全输出半径遍历使同一 M 恰等价于指定最近输入锚 RL；B 的实际反射半径 \(a_e=\omega_0(t_e)\) 及全源半径遍历使同一 M 恰等价于真 EB \(d(y)\le\kappa g^{-1}(\lambda r_F(y))\)。A 不预设方向，B 不预设残差下界。通常全对单调的恢复另限定 \(\omega_0=\mathrm{id},S=\{0\}\) 和完整单值线性图。
 - **PPA Conclusion / Scope**：每条实际边的 \(2\rho_z-a_e\le t_e\) 将同一跨位置结构落到当前边，直接得 \(d(z)\le\kappa d(x)\)，同锚几何给 \(\|x-z\|\le H(d(x))\)。严格初值预算 \(\Theta_H(d(x^0))<d(x^0,U^c)\) 使所有允许原轨道可无限延拓、有限长、点收敛到 \(S\cap U\)。非解认证域须非空；正文给近零非解积聚的充分条件。每组给定原 RLEB 参数满足 \(W\le\omega\)，因此全部原认证初值保留，不放大原帽或原步长。
 - **Dependencies / Evidence / Counterevidence / Related Files**：[定义、结构命题、完整证明及先行比较](research/topics/common_structure/two_point_scale_compatibility.md)。C315 已有给定模的下逆正向，本条不重报该数值尺度、距离收缩或 Dini 后端。新增范围是任意原模存在性的双向消去、实际原边与完整纤维的跨位置禁配，以及同一非线性尺度的两个恢复。正文给原完整图的删除检验证明：全部自身边与零基点可通过而两种待恢复性质分别失败。全尺度反向恢复不能自动截成任一有限工作窗；正点非右连续参考模不适用所述精确 A 恢复；全对单调不从一般零锚条件无条件推出。
+
+
+<a id="c352"></a>
+## C352-v1 · 原锚反射余量对完整残差门槛的有符号平移
+
+- **Status**：`derived-checked` 数学关系；该路线自身的最终共同结构验收尚未完成，不随 C351 提升。
+- **Objects / Exact Statement / Quantifiers**：同一原允许边 \(e=(x,y)\)，有限维闭目标 \(S\subseteq F^{-1}(0)\)，\(t=d(x),q=d(y),s=\|x-y\|,b_e=\min_{P_S(x)}\|2y-x-p\|,\rho_y=\lambda\inf_{F(y)}\|v\|\)。给定原非减零连续模 \(\omega,\psi\)，\(H=(\mathrm{id}+\omega)/2\)，\(\delta_e=(\omega(t)-b_e)/2\)，定义 \(Z_e=\min(\rho_y,H(t))+\delta_e\)。恒等 \(H(t)-Z_e=(t+b_e)/2-s+(s-\rho_y)+(\rho_y-H(t))_+\ge0\)。条件为每条边 \(Z_e\ge0,q\le\psi(Z_e/\lambda)\)。对任意跳跃模，以实际上集 \(I_q=\{u\ge0:q\le\Psi(u/\lambda)\}\) 检验时，同一输出的完整残差可行域精确为 \(\rho_y\in\bigcap_{e\to y}(I_q-\delta_e)\)，同时各 \(H(t_e)+\delta_e\in I_q\)。连续可逆情形等价于正文 (6) 的线性阈值平移和纯几何上限。
+- **Scope / Conclusion / Dependencies**：原(P2)/(P3)逐边直接给该条件；原兼容与Dini下它给每条允许原轨道续接、有限长和点收敛。单独条件用 \(2\Theta\) 初值预算；原(P2)保留 \(s\le H\) 时恢复原 \(\Theta\)，不能偷换。正文的偏移球面A/B及近切分支给两种恢复；固定 \(\eta<1\) 的纤维比例版本可使所有允许值严格大于不达到的完整残差，通常全对单调仅在另述单值线性子类恢复。
+- **Evidence / Counterevidence / Related Files**：[完整推导](research/topics/common_structure/reflection_residual_transfer_candidate.md)。未截断平移的几何极值不能谎称最终带帽公式唯一最优；原(P2)/(P3)内旧真EB逐边更强。小偏移A与大偏移B都落回同一旧扩张水平，但这项归约不覆盖近切B；不得用已被后续修改绕开的旧攻击否定当前全部版本。一般结构原创范围及最简最终表述仍待本路线独立终审。
+
+<a id="c353"></a>
+## C353-v1 · 全部一步剪切长度仍不能决定通常两点单调
+
+- **Status**：`derived-checked`。
+- **Objects / Domain**：\(X=\mathbb R^4\)，反对易正交复结构 \(I,J\)，\(K_\theta=\cos\theta I+\sin\theta J\)，\(F_\theta(y)=cy+dK_{\theta(\|y\|)}y\)，\(c\ge0,d>0\)，规定原场在受检球上为 \(C^1\)，目标 \(S=\{0\}\)。
+- **Exact Statement / Quantifiers**：所有 \(y\) 及所有实剪切 \(\mu\) 有 \(\|y+\mu F_\theta(y)\|^2=[(1+c\mu)^2+d^2\mu^2]\|y\|^2\)，完整残差为 \(\sqrt{c^2+d^2}\|y\|\)，每个剪切全域双射。这些量及原轨道全部一步标量记录均不依赖 \(\theta\)。但在原点中心开球上的通常两点单调恰要求每个正半径 \(d r|\theta'(r)|\le2c\)。
+- **Evidence / Scope / Related Files**：[对称 Jacobian 与原 RLEB 的完整证明](research/topics/common_structure/radial_shear_obstruction.md)。\(c=0,\lambda d>1\) 的常角和变角光滑图同享原 \(\omega=t,\psi=r/d\) 及全部剪切长度，却分别单调与每个原点邻域不单调。只排无跨点信息的一点剖面无条件恢复全对单调；不否定锚定 RL，不否定有独立附加条件的 C351 恢复。

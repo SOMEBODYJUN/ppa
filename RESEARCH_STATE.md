@@ -2,19 +2,19 @@
 
 ## 单调性与正则性的共同结构
 
-**C351 数学链已核，最终验收归档中。** [跨位置反射—残差相容](research/topics/common_structure/two_point_scale_compatibility.md) 在同一原允许图上给一般 RLEB 模存在性的充要判据，同一非线性参考模下的两个反向恢复，以及保留原全部初值的原 PPA 证明。当前新增量是原位置间的相容关系；给定模下逆、几何收缩和 Dini 后端均保留为已有内容。
+**本轮共同结构任务已完成，接收 C351-v1 的精确范围。** [跨位置反射—残差相容](research/topics/common_structure/two_point_scale_compatibility.md) 给一般原 RLEB 模存在性的充要判据、同一非线性参考模下的两个反向恢复，以及保留原全部认证初值的原 PPA 证明。[三门独立验收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)无遗留致命数学异议。新意限定在原位置间的严格开壳相容与逆向结构；给定模下逆、几何收缩和 Dini 后端均是已有内容，公开首创未定。
 
-**共用收敛证书已有。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
+**此前的共用收敛证书。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 把投稿原最近输入零锚 RLEB 与有限维极大单调 PPA 导入同一静态证书。共同引理给原轨道无限续接、原空间点收敛与平方步长可和。[第 004 轮记录](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)保存两条导入的精确范围。
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**共同结构仍开放。** 要找同一个 \(M\)，证明它在条件 \(A\) 下等价于单调或次单调，在条件 \(B\) 下等价于正则性。再证明这两类性质加各自的参数条件推出 \(M\)，从而保证原 PPA 至少一条可续的点收敛轨道。原 RLEB 的一般非线性反射模和真残差误差界要纳入。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md) · [C341 的机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
+**已闭与仍开。** C351 完成本轮同一个 M 的方向/正则恢复与原一般模导入。仍开放的是公开先行优先权、未列入组合，以及变步长、非精确和无限维等另外问题；不将接收扩成所有实际收敛图的必要条件。[现行任务](research/topics/common_structure/GPT_PRO_PROMPT.md) · [此前C341机制复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
 
-[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。本轮共同结构任务保持**未完成**。
+[C345 的同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 已核对：同一个完整真残差下界同时限制不同真实图值的剪切位置和最近输入零锚差，保留原一般模及非达到的下确界。该关系尚未承担相容或下降；丢去位置项只恢复旧半和界，[F114](FAILED_ROUTES.md#f114) 记录这一断点。这条早期路线自身没有闭合目标；当前接收由 C351 给出。
 
-[C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。当前首要义务是让同一对象的反向恢复关系在原一般反射模与正则尺度的共同下降中承重；形式上的两条切片等价不足以通过机制和新意门。
+[C346 的回返—残差转接](research/topics/common_structure/return_gap_and_loop_reduction.md#return-residual) 已核对：全锚平方耗散使任意有限回返缺口控制完整真残差；覆盖完整纤维近极小值时，二者可双向转移线性误差界。任意周期的共同零锚误差界则由连续补偿耗散推出，原一般 RLEB 仍先用旧兼容建立下降，[F115](FAILED_ROUTES.md#f115) 固定此去重断点。这条路线的反向恢复承重缺口保持；形式上的两条切片仍不能连带获得 C351 的接收。
 
-[C347 的保残差最大补全](research/topics/common_structure/residual_preserving_fiber_completion.md) 固定所有原允许根、完整残差、误差模和兼容参数后，仍允许把实际输出纤维填满原残差开球以外的全部方向。因此一般原 RLEB 不能无条件推出完整纤维额外方向或非平凡倾斜距离下界；[F116](FAILED_ROUTES.md#f116) 指出这一量词障碍。只测允许方向同时使用完整残差的候选不受此直接反驳，但必须证明两种信息的非冗余转接。[C348 倾斜纤维两等价](research/topics/common_structure/tilted_fiber_equivalences.md) 的数学链已核，但原 RLEB 的已有下逆关系直接给出更强下降，固定原收缩强度仍未使倾斜距离承重；[F117](FAILED_ROUTES.md#f117) 保存精确归约。[C349 两项尺度匹配](research/topics/common_structure/matching_certificate_reduction.md) 的同参数两等价与多值纤维阈值已核；但三个必需测试都可删除其反射越界机制，两恢复均为同一旧原近端扩张水平的截面，[F118](FAILED_ROUTES.md#f118) 固定这个主链分离。[C350 跨边完整残差损失](research/topics/common_structure/incoming_residual_reflection.md) 已核优化反射偏差与前后完整残差的精确分解，原全部初值也被保留；但严格相容下新增方向费用可被点收敛证明舍去，[F119](FAILED_ROUTES.md#f119) 保留这一限制。当前同一步反射裕量与真正则门槛的补偿关系正在独立冷审，未验收的结构新意不得调用为结论。
+[C347 的保残差最大补全](research/topics/common_structure/residual_preserving_fiber_completion.md) 固定所有原允许根、完整残差、误差模和兼容参数后，仍允许把实际输出纤维填满原残差开球以外的全部方向。因此一般原 RLEB 不能无条件推出完整纤维额外方向或非平凡倾斜距离下界；[F116](FAILED_ROUTES.md#f116) 指出这一量词障碍。只测允许方向同时使用完整残差的候选不受此直接反驳，但必须证明两种信息的非冗余转接。[C348 倾斜纤维两等价](research/topics/common_structure/tilted_fiber_equivalences.md) 的数学链已核，但原 RLEB 的已有下逆关系直接给出更强下降，固定原收缩强度仍未使倾斜距离承重；[F117](FAILED_ROUTES.md#f117) 保存精确归约。[C349 两项尺度匹配](research/topics/common_structure/matching_certificate_reduction.md) 的同参数两等价与多值纤维阈值已核；但三个必需测试都可删除其反射越界机制，两恢复均为同一旧原近端扩张水平的截面，[F118](FAILED_ROUTES.md#f118) 固定这个主链分离。[C350 跨边完整残差损失](research/topics/common_structure/incoming_residual_reflection.md) 已核优化反射偏差与前后完整残差的精确分解，原全部初值也被保留；但严格相容下新增方向费用可被点收敛证明舍去，[F119](FAILED_ROUTES.md#f119) 保留这一限制。[C352 的同一步有符号平移](research/topics/common_structure/reflection_residual_transfer_candidate.md) 保留完整纤维门槛和若干恢复的真实推导，其自身结构终审尚未完成。[C353](research/topics/common_structure/radial_shear_obstruction.md) 固定一点剪切不能无条件恢复两点单调的独立障碍。
 
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 
@@ -131,7 +131,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="next-actions"></a>
 ## 下一轮具体行动
 
-**共同条件接续。** 先读 [C341–C342](research/topics/common_structure/compensated_anchor_convergence.md) 及 [四轮验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。若扩展最低任务，优先独立核 C343 的无连续补偿与积分门，或 C344 的有限锚分点和固定窗口比较；若攻 C341 的边界，使用其交错切向反例固定缺口。完整 LT 导入必须先修正 C340 所否定的同球量词。以下其他研究线的义务不因本次共同结构接收而改变。
+**共同结构的下一次接续。** 先读 [C351规范证明](research/topics/common_structure/two_point_scale_compatibility.md) 与 [三门接收](research/audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)，不从“尚未找到M”重新开始。下一次有明确新任务时，可核公开先行或研究未覆盖组合；C352单独终审仍可续接，但不影响C351本轮完成。C341–C350和失败记录保留各自真实范围，不随新结构接收升级。完整LT的额外导入仍须保留C340的工作域/初值域区别。
 
 **次单调路线已完成比较，主线叙事须收窄。** [六路研究与独立反审](research/novelty/2026_10_14_submonotonicity/README.md)核实：LT二次点对类与Otero–Iusem2010作者稿精确换参，不等于其局部/收敛定理重复；非tied、矩阵、逆耗散与原函数结构有独立价值。同F/同lambda的diag例与GU3诊断证明，任意合法标量反射/EB压缩仍可丢方向关联，仅升为双范数D也未必修复。C249/C250本已零锚允许多值，不是全对LT的简单非线性别名。既有数学身份保持，新GU1/GU3只留报告级candidate；下一门为原始方向/组成到完整物理政策的可认证结构，而非再扩模名字。[综合报告](发表成果整理/本轮重构/不同次单调与一般模路线_比较研究_2026-10-14.md)与[复算](research/code/submonotonicity_routes/README.md)可接续。主稿/摘要/编号未改。
 

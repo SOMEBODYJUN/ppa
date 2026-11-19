@@ -9554,7 +9554,7 @@
       "role": "open-target",
       "kind": "mountain",
       "object": "island",
-      "evidence": "open",
+      "evidence": "derived-checked",
       "reason": "incoming-open-relation",
       "x": 3206,
       "y": 4305,
@@ -10119,6 +10119,39 @@
       "reason": "neutral-default",
       "x": 4590,
       "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "RR-REVIEW-OPEN": {
+      "role": "open-target",
+      "kind": "mountain",
+      "object": "lake",
+      "evidence": "open",
+      "reason": "incoming-open-relation",
+      "x": 4590,
+      "y": 4487,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "RR-TRANSFER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "SS-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
     }
@@ -12803,6 +12836,18 @@
     "E673": {
       "x": 4555.51,
       "y": 3998.61
+    },
+    "E674": {
+      "x": 4602.8,
+      "y": 4440.74
+    },
+    "E675": {
+      "x": 4598.59,
+      "y": 4166.78
+    },
+    "E676": {
+      "x": 3228.58,
+      "y": 4246.19
     }
   },
   "bounds": {

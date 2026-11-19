@@ -4716,9 +4716,9 @@
     },
     {
       "id": "MOTHER-OPEN",
-      "label": "一般原图的单调性与正则性共同母结构",
+      "label": "一般原图共同结构问题：C351 在明示范围回答",
       "file": "topics/common_structure/README.md#mother-question",
-      "evidence_status": "open"
+      "evidence_status": "derived-checked"
     },
     {
       "id": "MOTHER-CRITICAL",
@@ -5001,6 +5001,24 @@
       "id": "CS-PPA",
       "label": "C351 原一般模及完整残差共同生成可续有限长轨道",
       "file": "topics/common_structure/two_point_scale_compatibility.md#two-point-characterization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RR-TRANSFER",
+      "label": "C352 有符号反射余量与完整残差阈值",
+      "file": "topics/common_structure/reflection_residual_transfer_candidate.md#transfer-fiber",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RR-REVIEW-OPEN",
+      "label": "C352 单独路线的结构新意最终验收待完成",
+      "file": "topics/common_structure/reflection_residual_transfer_candidate.md#transfer-boundary",
+      "evidence_status": "open"
+    },
+    {
+      "id": "SS-OBSTRUCTION",
+      "label": "C353 一点全剪切长度不能无条件恢复全对单调",
+      "file": "topics/common_structure/radial_shear_obstruction.md#shear-obstruction",
       "evidence_status": "derived-checked"
     }
   ],
@@ -12713,6 +12731,42 @@
       "output": "CS-PPA",
       "relation": "conditional",
       "scope": "同一原锚三角式给2ρ_z−a_e≤t_e；M在当前边给距离收缩，最小H给步长。输入覆盖、Dini及严格预算使每个非空认证域内初值的全部允许轨道可续、有限长、点收敛；原全部预算保留。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E674",
+      "inputs": [
+        "RR-TRANSFER"
+      ],
+      "output": "RR-REVIEW-OPEN",
+      "relation": "open",
+      "scope": "逐式关系与续接证明保存；旧增益归约只适用于主球面子类，不覆盖近切版本。不得因另一个C351已接收而连带提升此路线。",
+      "status": "open",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E675",
+      "inputs": [
+        "SS-OBSTRUCTION"
+      ],
+      "output": "CS-RECOVERIES",
+      "relation": "limits",
+      "scope": "全对单调的恢复须保留C351给出的独立线性等条件，不能从一般一点反射/残差长度和全步长剪切数据无条件推全对单调。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E676",
+      "inputs": [
+        "CS-MOD-EXISTENCE",
+        "CS-RECOVERIES",
+        "CS-NONLOCAL",
+        "CS-PPA"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "conditional",
+      "scope": "本轮三项任务在 C351 明示范围接收：原一般非线性模存在性的跨位置充要相容、同尺度两个恢复及非解认证域的原轨道收敛。一般全对单调、未列入组合与公开优先权不随之认定；此前各候选通往本问题的未闭义务仍分别保留。详见 audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

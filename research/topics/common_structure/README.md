@@ -3,13 +3,13 @@
 <a id="mother-question"></a>
 ## 首要问题
 
-[C351 原图跨位置相容](two_point_scale_compatibility.md) 已核定义、双向模重建、同一非线性尺度的两种恢复及原 PPA；最终验收正在归档。其数学与候选的具体限制均在正文中自足陈述。
+**本轮目标已由 [C351 原图跨位置相容](two_point_scale_compatibility.md) 完成。** 同一个原始图对条件给双向模重建、同一非线性尺度的方向/真正则恢复及原PPA。[三项验收](../../audit/C351_TWO_POINT_STRUCTURE_ACCEPTANCE.md)固定具体范围与先行边界；公开首创未定。
 
 本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
-首要义务是找同一个 \(W\)，证明它在两种附加条件下分别等价于单调或次单调、正则性，并能推出原 PPA 收敛。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
+C351 已给同一个结构在两种独立附加条件下分别恢复锚定RL与真正则，并给出原 PPA 收敛。一般全对单调的恢复、全尺度/有限窗和覆盖的不同量词须按其正文保留。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
 
-新增的 [C345 同纤维反射刚性](fiber_reflection_rigidity.md) 给出可单独使用的图值—锚差估计，但其相对方向项尚未用于原PPA下降，不能代替该首要义务。[F114](../../../FAILED_ROUTES.md#f114) 明确了从加权平方退回旧半和兼容的断点。
+新增的 [C345 同纤维反射刚性](fiber_reflection_rigidity.md) 给出可单独使用的图值—锚差估计，但其相对方向项尚未用于原PPA下降，未完成它自身的结构承重义务。[F114](../../../FAILED_ROUTES.md#f114) 明确了从加权平方退回旧半和兼容的断点。
 
 [C346 回返缺口与循环归约](return_gap_and_loop_reduction.md) 保留全锚平方耗散下的完整真残差转接，但一般原 RLEB 的循环导入仍由旧下降与连续补偿给出；[F115](../../../FAILED_ROUTES.md#f115) 记录两个反向恢复尚缺的具体位置。
 
@@ -24,7 +24,9 @@
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 
 <a id="mother-result"></a>
-## 已接收的共同条件及其边界
+## 已接收结构与此前共同证书的不同范围
+
+C351 的核心是所有独立原位置的严格开壳相容；连同最小包络的帽/Dini，它对存在相容原模给必要充分刻画。两个恢复共用同一非线性参考尺度，删除非对角项会同时破坏恢复。它保留每组原RLEB的原初值，但不扩张该存在性原图类。以下 C341–C342 是不同范围的早期收敛证书，历史验收不能替代这项结构论证。
 
 [C341–C342 正文](compensated_anchor_convergence.md) 固定原弦 \(x-y\in\lambda F(y)\)，用全部目标锚的距离增量加归一化平方步长，要求它由静态径向补偿 \(h(d(x))-h(d(y))\) 支付。真正则识别和可续接的原根子关系是独立、明确的前提。共有引理不要求固定距离收缩或物理有限长度。原 RLEB 以 \(h=2\Theta\) 导入而保留原 \(\Theta\) 留域预算；极大单调行以 \(h=0\) 导入。
 
@@ -51,6 +53,8 @@ d(x,\Theta)\lesssim\|\nabla f(x)\|^{(1-\theta)/\theta}.
 | 材料 | 能复用的结论或用途 |
 | --- | --- |
 | [原图跨位置反射—残差相容](two_point_scale_compatibility.md) | C351：任意原模存在性的充要关系、同一非线性尺度下的方向/真误差恢复及原轨道证明；跨位置项不可由同一条边的数据代替。 |
+| [反射余量与完整残差阈值](reflection_residual_transfer_candidate.md) | C352：有符号平移、完整纤维可实现区间及恢复；单独路线尚未完成最终结构验收。 |
+| [全部剪切长度的单调性盲区](radial_shear_obstruction.md) | C353：一点所有剪切范数也不能无条件决定通常两点单调；保留锚定和全对量词的区分。 |
 | [同一完整残差下的图值与零锚差](fiber_reflection_rigidity.md) | C345：原一般反射模的最优加权恒等及两个同纤维真实图值的共同约束。证明成立；跨值方向关系的动力学承重和结构新意仍未完成。 |
 | [回返缺口与循环误差的准确来源](return_gap_and_loop_reduction.md) | C346：全锚平方耗散下的回返—真残差双侧估计；连续补偿已推出任意周期误差界，原最近零锚一般模的反向方向恢复未闭。 |
 | [保残差补全与完整纤维方向自由度](residual_preserving_fiber_completion.md) | C347：固定原允许 RLEB、完整真残差和误差界时的最大补全；检验允许方向与完整残差是否被错误扩充为完整纤维方向条件。 |
