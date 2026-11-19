@@ -10352,6 +10352,17 @@
       "y": 3941,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "PPA-ENDPOINT-STEIN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 4872,
+      "y": 4032,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -13118,6 +13129,10 @@
     "E694": {
       "x": 3140.23,
       "y": 4370.75
+    },
+    "E695": {
+      "x": 4827.93,
+      "y": 4012.97
     }
   },
   "bounds": {

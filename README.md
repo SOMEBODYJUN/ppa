@@ -69,6 +69,8 @@
 
 **来源不决定资格。** 已知数学结构若能在本问题中描述并完成所需联系，就可以作为 M；不因工具已知而否决。当前按单调／次单调与正则的强弱补偿机制广筛技术并即时初试，来源、新颖性与适用范围分别记录。
 
+[强弱补偿的技术初试](research/topics/common_structure/compensation_trials.md)保存沿原步实际展开的技术迁移。[C373 的端点储能](research/topics/common_structure/compensation_trials.md#endpoint-storage)把经典 Stein 判据接到原线性 PPA，保留大步长负方向的稳定；另试 T-coercivity、供给重标度和一般模小增益，逐项写清能推出什么及首个缺口。它是继续发现 M 的技术工作页，未完成一般多值共同结构。
+
 **当前唯一研究提示词**是[GPT_PRO_M_RESEARCH_PROMPT.md](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)：先从本库已掌握的成果推进，外部搜索补具体缺口，最终完成同一 M 的两个恢复与原 PPA 定理。数学方法保持自主；增量角度／拟对称不再被指定为唯一首攻。[发现与筛选安排](research/topics/common_structure/ASSESSMENT.md#discovery-reset)区分阶段成果与完整目标，[文献记录](research/LITERATURE.md#lit-discovery-distortion)保存已核事实，不据此提前判定某路线有效。
 
 [C369–C371 反馈的恢复范围](research/topics/common_structure/gradient_feedback_recovery.md#feedback-recovery) 分别证明两个限定恢复。未知平坦势在线性类精确刻画某个等价内积下单调，正规矩阵类恢复原欧氏单调；完整图有有界可逆增益表示时，同势增长与一般模真误差界等价。缩速不变性和跨位置自由说明一般恢复仍缺何种信息。二次与非线性并不构成这条边界。

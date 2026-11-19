@@ -3258,3 +3258,11 @@
 - **Exact Statement**: 固定零集上的单点反馈增量条件在逐点缩速 v -> epsilon(y)v 下保持同一势、同一模和同一预算，因此不能推出完整真残差下界。二次势与线性反馈模也只给相对固定目标的径向正性；存在连续单值图共享这些数据而任意局部弱单调常数均失败。在线性图 F(y)=Ay 中，全分数弦条件精确恢复某个等价内积下的单调性；只有加入度量兼容（例如正规类）才恢复欧氏单调性。
 - **Operational Scope**: 一般凹模只改变共轭代价尺度，不消除上述单点/两点信息缺口。若把闭链的跨位置比较、完整纤维量词、实际步长尺度和显式 h 一并作为输入，才可能形成可审计证书；当前存在式 M 仍明显难于原 RLEB 的直接模函数检查，且法向/切向置零代价只是诊断量。
 - **Evidence / Boundary**: [完整审查](research/topics/common_structure/operational_m_assessment.md)；正向的线性内积恢复和有界可逆增益下的一般模正则恢复见 [C370](#c370)、[C371](#c371)。这条记录不宣称已经找到任务所要求的完整共同结构。
+
+<a id="c373"></a>
+## C373-v1 · 经典 Stein 技术在实际原步端点的精确线性迁移
+
+- **Status**：`derived-checked`。自足矩阵幂/级数/合同变换证明及独立重构已完成；不主张新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意 n≥1、实 n×n 矩阵 A 和 λ>0，假设 I+λA 可逆，取完整单值 F(y)={Ay}、S={0}。下列等价：每个初值的唯一原 PPA 轨道趋零；每个复特征值 a 满足 |1+λa|>1；存在实对称 P≻0 使 (I+λA)ᵀP(I+λA)−P≻0。
+- **Definitions / Dependencies / Evidence**：完整原步与真残差沿 D01；[正文与完整证明](research/topics/common_structure/compensation_trials.md#endpoint-storage)。经典 Stein/Lyapunov 结构为已知技术；本页用收敛矩阵级数重构，不依赖未核外部定理。
+- **Counterevidence / Scope / Related Files**：严格全空间条件排除非零核且强制几何速度，尚不能导入一般多值、非孤立或慢收敛原 RL。C370 的全分数弦是另一合同，本结论只检验实际端点；负线性图给 λa>2。两个一般恢复仍开放。

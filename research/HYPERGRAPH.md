@@ -1058,6 +1058,7 @@
 | E692 | [FEEDBACK-RECOVERY-QUANTIFIERS · C369 反馈恢复的缩速及跨点缺口](topics/common_structure/gradient_feedback_recovery.md#feedback-recovery) | limits → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 几何分数弦在逐点缩速下保持原势和预算；完整二次候选仍可任一零邻域失去全部有限弱单调常数。幅度与跨位置比较分别缺失。；**derived-checked** |
 | E693 | [FEEDBACK-FRACTIONAL-PROXIMAL-ROOT · C366 分数弦闭链产生原近端根](topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-root-existence) | conditional → [FEEDBACK-LINEAR-RECOVERY · C370 未知平坦势精确恢复内积单调](topics/common_structure/gradient_feedback_recovery.md#feedback-linear-recovery) | 原图限为任意实方阵、反馈模线性时，未知势存在恰刻画某个等价内积下单调；再加正规性，精确恢复原欧氏单调。；**derived-checked** |
 | E694 | [FEEDBACK-GROWTH-RECOVERY · C371 有界可逆增益下的同势正则恢复](topics/common_structure/gradient_feedback_recovery.md#feedback-growth-recovery) | open → [MOTHER-OPEN · 单调性与正则性的统一结构仍开放，C351任务验收撤回](topics/common_structure/README.md#mother-question) | 完整原图与同一凸势梯度之间有统一可逆增益时，一般模势增长与完整误差界等价。尚未获得一般原 RLEB 的这种表示或同一个 M 的完整两个恢复。；**open** |
+| E695 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [PPA-ENDPOINT-STEIN · C373 原步端点的 Stein 储能迁移](topics/common_structure/compensation_trials.md#endpoint-storage) | 完整单值实方阵原图、S={0}、固定正步长且I+lambda A可逆。全初值原PPA趋零、平移谱模长大于一及正定端点储能等价。不是一般非线性RL导入。；**derived-checked** |
 
 ## 不蕴含关系
 

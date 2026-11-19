@@ -5128,6 +5128,11 @@
       "label": "C371 有界可逆增益下的同势正则恢复",
       "file": "topics/common_structure/gradient_feedback_recovery.md#feedback-growth-recovery",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-ENDPOINT-STEIN",
+      "label": "C373 原步端点的 Stein 储能迁移",
+      "file": "topics/common_structure/compensation_trials.md#endpoint-storage"
     }
   ],
   "edges": [
@@ -13075,6 +13080,17 @@
       "relation": "open",
       "scope": "完整原图与同一凸势梯度之间有统一可逆增益时，一般模势增长与完整误差界等价。尚未获得一般原 RLEB 的这种表示或同一个 M 的完整两个恢复。",
       "status": "open",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E695",
+      "inputs": [
+        "D01"
+      ],
+      "output": "PPA-ENDPOINT-STEIN",
+      "relation": "conditional",
+      "scope": "完整单值实方阵原图、S={0}、固定正步长且I+lambda A可逆。全初值原PPA趋零、平移谱模长大于一及正定端点储能等价。不是一般非线性RL导入。",
+      "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]
