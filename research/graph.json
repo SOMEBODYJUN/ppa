@@ -5074,6 +5074,30 @@
       "label": "C362 一般模梯度反馈的闭链判据",
       "file": "topics/common_structure/gradient_feedback_general_modulus.md#feedback-modulus-cycles",
       "evidence_status": "candidate"
+    },
+    {
+      "id": "FEEDBACK-PROXIMAL-CLOSED-CHAINS",
+      "label": "C363 原近端混合闭链收敛",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-steps",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-PROXIMAL-LIMITS",
+      "label": "C364 共轭闭链参数端点与慢位移障碍",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-VARIATIONAL-OBSTRUCTION",
+      "label": "C365 原 RLEB 排除相邻原步的共同势极小化",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-variational-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT",
+      "label": "C366 分数弦闭链产生原近端根",
+      "file": "topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-root-existence",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12921,6 +12945,51 @@
       "relation": "open",
       "scope": "平坦与凸反馈消去未知函数值共用闭链原理。给定几何尺度衰减的路径时可实现受扰动的精确 PPA，并估计完整真残差的固定目标扰动半径；由原图生成可收敛原近端轨道及两类性质的统一恢复仍开放。",
       "status": "candidate",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E686",
+      "inputs": [
+        "GRADIENT-FEEDBACK-GENERAL-MODULUS"
+      ],
+      "output": "FEEDBACK-PROXIMAL-CLOSED-CHAINS",
+      "relation": "conditional",
+      "scope": "合用一般模插值边和原近端弦的共轭成本边。须有可续接的标出原弧、完整真残差下界、无负混合闭链及严格参数。推出原轨道有限长度，不要求预设距离收缩或 Dini。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E687",
+      "inputs": [
+        "FEEDBACK-PROXIMAL-LIMITS"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "临界允许有界绕行；严格参数强制原步长几何上界，故排除完整 Dini RLEB 中的 k^-2 位移。限制整类导入，与另选反馈模无关。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E688",
+      "inputs": [
+        "FEEDBACK-VARIATIONAL-OBSTRUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "原 RLEB 幂次可锐且每个原根唯一，但任两相邻原弦严格负内积。排除同一凸加载和精确普通全局极小化选根。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E689",
+      "inputs": [
+        "GRADIENT-FEEDBACK-GENERAL-MODULUS",
+        "FEEDBACK-PROXIMAL-CLOSED-CHAINS"
+      ],
+      "output": "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT",
+      "relation": "conditional",
+      "scope": "原图逐点有非空紧凸局部有界闭图子纤维，全部分数弦加入闭链且无负圈。借投影不动点排除球面根并得到原覆盖，随后在完整真残差和严格参数下点收敛。",
+      "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
   ]

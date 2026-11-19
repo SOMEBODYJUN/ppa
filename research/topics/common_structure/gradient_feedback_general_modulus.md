@@ -158,6 +158,8 @@ r_{F+\nabla h}(y)\ge \big(c-[\nabla h]_\omega\big)\omega(d(y,S)).
 
 这些命题给出一般模反馈的扩张判据，也把它用到整条近端路径的实现。式 (3) 是给定路径的假设，证明没有从插值本身推出这个收缩。若要以反馈作为所求共同 \(M\)，仍需证明什么原图条件能产生可续的原根及所需下降，并由同一反馈关系处理两点单调与固定目标的正则性。
 
+[原近端混合闭链](gradient_feedback_proximal_cycles.md#feedback-original-steps)补上了一个受限的原步定理。它将原弦的共轭代价与本篇的插值边合用，从整个可续接原图推导点收敛。严格参数不能覆盖全部原 RLEB，亦未解决两个统一恢复。
+
 ## 引用
 
 Azagra–Mudarra, *\(C^{1,\omega}\) extension formulas for \(1\)-jets on Hilbert spaces*，所用为[作者稿 Definition 1.4、Theorem 1.5](https://blogs.mat.ucm.es/dazagrar/wp-content/uploads/sites/85/2024/06/C1omega200526.pdf)。定理对任意非空插值集合、连续非减凹无界模下的给定函数值和梯度，提供 \((mg^{1,\omega})\) 判据及绝对常数 \(6\)。本文另处理函数值未指定及完整原图值可选的要求。

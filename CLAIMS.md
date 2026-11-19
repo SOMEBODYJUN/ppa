@@ -3186,3 +3186,31 @@
 - **Exact Statement / Extension**：对任意 \(E\supseteq S\) 及 \(g|_S=0\)，存在给定预算 \(B>0\) 的平坦梯度扩张必使正文 (D) 的边权沿每条有限闭合链之和非负。反向得到预算至多 \(6B\) 的扩张。两点梯度界和梯形功闭链界给出预算至多 \(24B\) 的可读判据。对每点闭值的允许梯度，同一预算下的有限子集可行性可拼成统一选择。凸势使用同一闭链消元原理及正文 (C) 的增量下界，给出预算 \(B\) 的必要条件和 \(8B\) 的充分条件。两点碰撞退化为一条带方向和图值差范数的标量不等式。
 - **Exact Statement / PPA and Regularity**：任取 \(S\subseteq F^{-1}(0)\)、步长 \(\lambda>0\) 和正文 (3) 的给定路径，输出处完整纤维非空。步差在完整原纤维的最大 \(\omega(d)\) 归一化缺口为 \(A\)，则一个保 \(S\) 的平坦势实现整个 \(F+\nabla h\) 精确路径的预算下确界在 \([A,24A/(1-q)]\)。对 \(p\in S\)，使相对于 \(S\) 的新零点向 \(p\) 聚集的最小预算下确界在 \([\rho_p,24\rho_p]\)，其中 \(\rho_p=\liminf_{y\to p,\,y\notin S}r_F(y)/\omega(d(y,S))\) 取完整真残差。
 - **Dependencies / Scope Boundary**：[正文和证明](research/topics/common_structure/gradient_feedback_general_modulus.md#feedback-modulus-cycles)。依赖闭链差分约束、一般凹模下的两类已知 Whitney 扩张，以及尺度分离。原 C242 中每条非驻定原轨道上的完全抵消可由一个平坦半阶 Hölder 势完成，任何更高指数失败。结论不蕴含整片开集的梯度抵消、原根覆盖或原算子的收敛，亦未用同一个 \(M\) 恢复单调性与正则性。
+
+<a id="c363"></a>
+## C363-v1 · 一般模混合闭链的原 PPA 收敛
+
+- **Status**：`derived-checked`。GPT‑6.2 Astra Max 独立复核无 Dini 分块证明及非 Dini 可行模型。正文公开先行性未核定。
+- **Objects / Exact Statement**：有限维欧氏空间、完整原多值图、非空闭 \(S\subseteq F^{-1}(0)\) 及一般连续非减凹无界模 \(\omega\)，正尺度为正。给定每个输入可续接的原弧子关系，零点驻定。令 \(\Phi=\int_0^\cdot\omega\)。对原输出用完整残差 \(r_F(y)\ge c\omega(d(y,S))\)。在同一闭链中合用 C362 的 (D)、每条原弧上的 \(-\Phi^*(L\|x-y\|)\) 和回锚零权边。若所有有限混合闭链权和非负且 \(\lambda Lc>1\)，则从每个认证初值出发，所有标出的原轨道续接、点收敛于 \(S\)，真实位移有一致块长的几何上界，因而有限长。无需 Dini、预设距离收缩或先给轨道。
+- **Evidence / Scope**：[闭链势与分块证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-steps)。证明以同一势的平坦上界约束原弦成本，再用真实残差的下界。保任意闭 \(S\) 的原 RLEB 可在 \(H\gtrsim\omega\) 及 \(\Phi^*(LH)\lesssim\Phi\) 的匹配子类导入，含 \(H\asymp t^\alpha\) 及原初值、原允许弧。另有非 Dini 原反射的完整单值覆盖。[导入与非 Dini 模型](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-coverage)。原根非空依然是工作图前提。现有单调性和正则性的统一恢复尚未得到。
+
+<a id="c364"></a>
+## C364-v1 · 共轭代价的参数端点及一般原 RLEB 的覆盖限制
+
+- **Status**：`derived-checked`。两个边界用显式完整原图及封闭公式重构。后者由两线独立得到。公开先行性未核定。
+- **Exact Statement**：取 \(\lambda=L=c=1\)，任意 C363 的非 Dini 模。存在连续全域单值原图，完整近端全域唯一，其某个含非解初值的封闭工作窗满足 C363 其余全部条件，但指定初值轨道有界且不点收敛。另一方面，取 \(F(u,z)=(u,-\ell(|u|))\)、\(\lambda=1\)，其中 \(\ell(t)=\log(e^2/t)^{-2}\) 于零附近且作连续凹延拓。它满足完整 Dini 原 RLEB，非解轨道点收敛而真步长 \(\asymp(k+1)^{-2}\)。因此对该图任意另选反馈模和任何非驻定认证初值，C363 的严格参数版均无法成立。
+- **Evidence / Scope**：[临界环带与 Dini 慢位移证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-limits)；依赖 C363 的块几何结论。这排除固定共轭代价加严格参数的整类导入。它不排除使用其他方向或尺度代价的闭链条件。
+
+<a id="c365"></a>
+## C365-v1 · 完整非线性原 RLEB 对凸加载及二次下降的两项限制
+
+- **Status**：`derived-checked`。Astra Max 给出两步严格反例，另行核对完整真残差、反射及相容参数。单步二次下降限制由原 C242 与锚积分直接得到。
+- **Exact Statement**：任意 \(0<q,\gamma<1\)、\(b,\lambda>0\)，取完整原图 \(F=(J^{-1}-I)/\lambda\)，其中 \(J(u,z)=(-qu,z+b\operatorname{sgn}(u)|u|^\gamma)\)。完整近端 \(J\) 全域唯一，小窗满足原 Dini RLEB，反射和误差界最优幂分别为 \(\gamma,1/\gamma\)。每个非解初值前两步内积严格为负。不存在以同一个势作凸加载 \(g(x^{k+1})=x^k/\lambda\) 的闭链插值，也不存在使这两步均为同一个标量能量加原欧氏二次项的全局极小点（两处能量有限）。另在原 C242 的任何非驻定轨道上，平坦 \(C^1\) 势无法支付固定正倍数的二次步长代价。
+- **Evidence / Scope**：[相邻两步与二次下降证明](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-variational-obstruction)。凸加载的两点条件和任意能量的两个竞争不等式分别要求同一个非负内积。该结论不排除非二次共轭代价作原步证书。
+
+<a id="c366"></a>
+## C366-v1 · 从一般模分数弦闭链同时推出原根存在与收敛
+
+- **Status**：`derived-checked`。Astra Max 提供凸接触原根构造及一般分数弦变体，已重构投影边界排除、完整 \(r_F\) 门及无凸覆盖反例。依赖 Kakutani 原文一般紧凸集推论。
+- **Exact Statement**：沿用 C363 的空间、原图、闭零集、凹反馈模及参数。全空间逐点给非空紧凸子纤维 \(V(y)\subseteq F(y)\)，其图闭且局部有界。加入所有 \(y+t\lambda v\to y\) 边，\(v\in V(y),\,0<t\le1\)，边权 \(-\Phi^*(Lt\lambda\|v\|)\)，与 C362 (D) 及零回锚边一同验无负闭链。对任意 \(x\) 存在 \(y\in X\)、\(v\in V(y)\) 满足 \(x=y+\lambda v\)。若完整残差 \(r_F(y)\ge c\omega(d(y,S))\) 且 \(\lambda Lc>1\)，则每条如此选择的原 PPA 有限长点收敛。根存在阶段无需真残差门。
+- **Evidence / Scope**：[根存在、C242 直接验证及凸性限制](research/topics/common_structure/gradient_feedback_proximal_cycles.md#feedback-original-root-existence)。凸反馈可用逐点 \(\lambda\langle g(y),v\rangle\ge\Phi^*(L\lambda\|v\|)\) 验证，且全域正则条件下强制 \(S\) 凸。一般分数弦不要求凸势，但排除其分数输入碰到 \(S\) 的非零根，故未覆盖 C365 或一般原 RLEB。只保留任意非空紧子纤维时，闭链和正则都成立仍可没有原根。公开优先性未核定。

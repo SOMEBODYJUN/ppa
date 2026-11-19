@@ -4558,5 +4558,25 @@
     "x": 103.51540234075053,
     "y": 1360.7969705941434,
     "system": "path"
+  },
+  "FEEDBACK-PROXIMAL-CLOSED-CHAINS": {
+    "x": -98.66580496230927,
+    "y": 1374.715113235478,
+    "system": "path"
+  },
+  "FEEDBACK-PROXIMAL-LIMITS": {
+    "x": -339.3037348290155,
+    "y": 1953.6657532677095,
+    "system": "path"
+  },
+  "FEEDBACK-VARIATIONAL-OBSTRUCTION": {
+    "x": 403.12761130396063,
+    "y": 1771.8011216534849,
+    "system": "path"
+  },
+  "FEEDBACK-FRACTIONAL-PROXIMAL-ROOT": {
+    "x": -135.28434585074012,
+    "y": 1507.5478716628395,
+    "system": "path"
   }
 }
