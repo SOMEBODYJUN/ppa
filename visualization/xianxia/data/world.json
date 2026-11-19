@@ -10154,6 +10154,17 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "RLEB-DEGREE-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 4590,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
     }
   },
   "edges": {
@@ -12848,6 +12859,10 @@
     "E676": {
       "x": 3228.58,
       "y": 4246.19
+    },
+    "E677": {
+      "x": 3151.7,
+      "y": 4273.05
     }
   },
   "bounds": {

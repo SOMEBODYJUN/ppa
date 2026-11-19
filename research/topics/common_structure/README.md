@@ -9,6 +9,8 @@
 
 C351 的两个限定恢复和原 PPA 推论作为数学关系保存，其任务验收已撤回。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition)保存两条旧路线共用的收敛证书。后续研究要从各类性质的独立定义寻找共同结构，再用它容纳原 RLEB。
 
+[C354 的近端度与选根障碍](rleb_degree_and_selection_obstruction.md#rleb-degree) 给出同参任意局部度，通过计算全部原根、最优幂反射模和完整残差模来检验拓扑候选的导入范围。
+
 新增的 [C345 同纤维反射刚性](fiber_reflection_rigidity.md) 给出可单独使用的图值—锚差估计，但其相对方向项尚未用于原PPA下降，未完成它自身的结构承重义务。[F114](../../../FAILED_ROUTES.md#f114) 明确了从加权平方退回旧半和兼容的断点。
 
 [C346 回返缺口与循环归约](return_gap_and_loop_reduction.md) 保留全锚平方耗散下的完整真残差转接，但一般原 RLEB 的循环导入仍由旧下降与连续补偿给出；[F115](../../../FAILED_ROUTES.md#f115) 记录两个反向恢复尚缺的具体位置。

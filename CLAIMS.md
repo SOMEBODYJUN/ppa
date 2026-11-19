@@ -3107,3 +3107,11 @@
 - **Objects / Domain**：\(X=\mathbb R^4\)，反对易正交复结构 \(I,J\)，\(K_\theta=\cos\theta I+\sin\theta J\)，\(F_\theta(y)=cy+dK_{\theta(\|y\|)}y\)，\(c\ge0,d>0\)，规定原场在受检球上为 \(C^1\)，目标 \(S=\{0\}\)。
 - **Exact Statement / Quantifiers**：所有 \(y\) 及所有实剪切 \(\mu\) 有 \(\|y+\mu F_\theta(y)\|^2=[(1+c\mu)^2+d^2\mu^2]\|y\|^2\)，完整残差为 \(\sqrt{c^2+d^2}\|y\|\)，每个剪切全域双射。这些量及原轨道全部一步标量记录均不依赖 \(\theta\)。但在原点中心开球上的通常两点单调恰要求每个正半径 \(d r|\theta'(r)|\le2c\)。
 - **Evidence / Scope / Related Files**：[对称 Jacobian 与原 RLEB 的完整证明](research/topics/common_structure/radial_shear_obstruction.md)。\(c=0,\lambda d>1\) 的常角和变角光滑图同享原 \(\omega=t,\psi=r/d\) 及全部剪切长度，却分别单调与每个原点邻域不单调。只排无跨点信息的一点剖面无条件恢复全对单调；不否定锚定 RL，不否定有独立附加条件的 C351 恢复。
+
+<a id="c354"></a>
+## C354-v1 · 真正非线性 RLEB 下近端输入映射的任意局部度
+
+- **Status**：`derived-checked`。原纤维、两个最优幂、兼容参数和局部度分别重构。该结果是统一结构的导入障碍。
+- **Exact Statement / Objects / Assumptions**：给定 \(\lambda>0,a>1,b>0,0<\gamma<1\) 和 \((1+1/a)R^{1-\gamma}<b(a^\gamma-1)\)，在 \(\mathbb R^2\times\mathbb R\) 令 \(g(ru)=ar h(u)\)，\(h:\mathbb S^1\to\mathbb S^1\) 任意连续满射。取完整连续原算子 \(F(y,z)=\lambda^{-1}(g(y)-y,-b(a\|y\|)^\gamma)\)，完整零集 \(S=\{0\}\times\mathbb R\)。全局原输入覆盖成立。全部原根在 \(d(x,S)\le R\) 同享正文的一般模 \(\omega(t)=(1+2/a)t+2bt^\gamma\)、\(\psi(s)=(\lambda s/(ba^\gamma))^{1/\gamma}\)、帽和严格收缩兼容。锚反射与完整残差 EB 的最优幂分别是 \(\gamma\) 与 \(1/\gamma\)。
+- **Conclusion / Quantifiers**：对每个 \(p\in S\)，近端输入映射 \(I+\lambda F\) 在 \(p\) 的目标 \(p\) 的局部度等于 \(\deg h\)，在上述固定参数下可取任意整数。若 \(|\deg h|\ne1\)，则 \(p\) 的任何输入邻域都没有连续原根选择。每个 \(0<d(x^0,S)\le R\) 的初值仍允许无限点收敛的原轨道。
+- **Dependencies / Evidence / Scope / Related Files**：[完整证明](research/topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree)用直接解根、完整真残差、消去切向剪切的球面同伦及悬挂同调。限制的是把非零度、规定的度或连续选择当作原 RLEB 必然前提的候选。无定向图关系和非连续选根不受此限。公开新颖性未判定。

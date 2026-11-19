@@ -5020,6 +5020,12 @@
       "label": "C353 一点全剪切长度不能无条件恢复全对单调",
       "file": "topics/common_structure/radial_shear_obstruction.md#shear-obstruction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-DEGREE-OBSTRUCTION",
+      "label": "C354 原 RLEB 可有任意局部度且无连续原根选择",
+      "file": "topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12767,6 +12773,17 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "C351 的模存在性刻画和两个精确幅度匹配恢复保留数学身份；作者按 F120 撤回统一结构任务完成裁决。原锚点 RL 加误差界的重写、消元及局部修补不得作为后续任务成功。一般共同结构仍开放。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E677",
+      "inputs": [
+        "RLEB-DEGREE-OBSTRUCTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "要求从原一般非线性 RLEB 导入的共同结构，不得以非零近端输入局部度、一个固定局部度或局部连续选根为必要前提。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

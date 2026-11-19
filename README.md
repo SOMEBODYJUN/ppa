@@ -66,6 +66,8 @@
 
 **统一结构 \(M\) 尚未找到，C351 的任务验收撤回。** 作者明确排除从原锚点 RL 加误差界出发的相容重写、模消元、局部推广和精确幅度匹配。C351 的数学关系保存，其统一结构探索按失败记录。后续 Pro 要从单调、次单调和正则性的独立含义寻找共同结构，再用它容纳原 RLEB。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120](FAILED_ROUTES.md#f120)
 
+[C354 的任意局部度障碍](research/topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree) 保持全部原根覆盖和幂最优的非线性反射模与完整真残差模，同时让近端输入映射的局部度独立取任意整数。一般 RLEB 的导入不能依赖非零度或连续选根，见 [F121](FAILED_ROUTES.md#f121)。
+
 [C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条路线的承重缺口。
 
 [C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。该路线自身未完成共同结构目标，现行结果见 C351。
