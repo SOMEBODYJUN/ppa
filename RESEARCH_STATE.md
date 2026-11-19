@@ -6,7 +6,9 @@
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**留下的前沿。** 不再重复寻找满足原任务最低两行的 M。继续扩大已证明的组合时，优先处理仿射切向相消而绝对总变差无穷的原图，以及一般 KL/变化右端正则性怎样产生可核的静态证书。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的完整候选推导；自身独立 G7 尚未完成，不能因为作者参与 C341 审查就提升其状态。公开先行性另待与准 Fejér/势函数理论精确比较。
+**机制目标仍开放。** [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 显示 RLEB 在进入 C341 前已用旧兼容得到收缩和长度预算；正则尺度在 C341 中识别目标并估计已有耗散，尚未用于导出方向下降或新的参数门。下一步从原图方向、完整正则模和步长直接构造可续原根的耗散或输运估计，在同一个判据上检验原一般非线性 RL 和另一种参数逻辑。C342 固定算子改变步长的临界余项、C322 同一初值的分根是两项可执行检验。
+
+仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 
 **G3 的 LT 边界保持。** [C340](research/topics/common_structure/lt_ball_localization_obstruction.md#lt-ball-counterexample) 的完整二维线性图满足全部 LT 结构前提及严格参数门，却否定正式 Theorem 2 的同球根覆盖；实际轨道仍全局收敛。完整 LT 的修订导入须独立区分较小初值域与较大工作域并证明续接，不得直接沿用印刷同球句。本次以经典极大单调行完成 G3，没有宣布所有 LT 或其他组合已导入。
 

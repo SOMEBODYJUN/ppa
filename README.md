@@ -64,7 +64,7 @@
 
 ## 当前专题：单调性和正则性是否有共同结构
 
-**最低共同目标已完成。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性模、完整真残差、全部允许输出和初值预算原样导入；有限维极大单调 PPA 对完整非空零集和每个固定正步长由另一条参数机制导入。共同引理先保证原根无限续接，再证明原点列收敛，不要求统一几何率或物理有限长度。
+**两条基准已共享收敛证书，共同生成机制仍开放。** [C341 的补偿锚距条件 M003-v2](research/topics/common_structure/compensated_anchor_convergence.md#ca-definition) 在第 004 轮通过 [G1–G7 独立验收](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md)。投稿原最近输入零锚 RLEB 的一般非线性模、完整真残差、全部允许输出和初值预算原样导入；有限维极大单调 PPA 对完整非空零集和每个固定正步长也可导入。共同引理保证原根无限续接和原点列收敛。[机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 定位了原 RLEB 先建立旧收缩预算、正则尺度后置的问题，并给出同一旋转原图改变步长的区分检验。
 
 [C342 的同图双门](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 说明为什么这不只是旧 A+B 的改名：一个显式旋转—漂移原场实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2\) 的严格见证中，任意固定分组的绝对长度都发散；C277 的全锚 Fejér 端与 C329 的宽参数门也单独排除。其他单调–正则组合及公开先行性仍开放。两份有独立内容但未完成自身独立验收的备选证明保留为 [C343](research/topics/common_structure/lifted_residual_distance.md) 与 [C344](research/topics/common_structure/finite_anchor_convergence.md)，状态均为 candidate。
 
@@ -78,7 +78,7 @@
 
 ## Research Goal
 
-当前共同结构线已完成 C341 的最低两行验收；下一目标是逐行扩大覆盖，并精确识别其静态补偿与切向相消的边界，见 [专题状态](RESEARCH_STATE.md)。下列长期问题仍各保留自己的对象和证据范围。
+共同结构线要从单调或次单调方向、完整正则尺度和步长直接生成原 PPA 的收敛机制。C341 完成两条基准的共同收敛证明，尚未完成这一步推导，见 [专题状态](RESEARCH_STATE.md)。下列长期问题仍各保留自己的对象和证据范围。
 
 1. **收敛机制**：固定核完整 GPPA 已接入一般模、残差平方能量与物理提升，见 [C208–C214](research/canonical/generalized_ppa_modulus.md)；在同一图块、真实全纤维残差、coverage 与留域预算下，确定非线性全对 RL 和误差界如何控制 PPA，区分距离收缩与点收敛。
 2. **规模比较**：找不以认证参数定义的自然完整原算子空间及有鉴别力的大小量尺，比较 RLEB、Luke–Tam 公共 all-pairs 类与极大单调类。严格多一个例子或特殊层余稠不回答总体规模。
@@ -217,7 +217,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Research Frontier
 
-共同结构线的当前前沿已从“寻找最低两行的 M”转为“扩大 C341 的已证行并突破其仿射切向绝对预算”。[C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 和同页交错原图把证书保守区与实际不收敛分开；C343/C344 自身独立审查、修正后的 LT 局部化以及精确公开先行性仍待完成。
+共同结构线的前沿是在原图上直接建立方向亏损、完整正则尺度和步长之间的定量联系，并用它推导可核参数窗或可续原根。[C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 的临界步长与切向相消、C322 的同初值分根均可区分候选机制；C343/C344 自身独立审查、修正后的 LT 局部化以及精确公开先行性仍待完成。
 
 **规模比较的开放点**是完整、参数中立、非退化的算子母空间与规模量尺。9/20 的 \(\Phi=(\text{实际尾},\text{实际反射模})\) 在固定紧 T-only 图卡 proper，但 proper/quotient 不推出 category-preserving，局部观测丢失完整 \(F\) 的域外信息。9/21 总账报告普通 Baire、轨道理想与旧动力度量孔隙性同时把目标类判小；原证明恢复情况须逐项核对。详见 [operator_space.md](research/operator_space.md)。
 
@@ -237,7 +237,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-本次共同结构任务已在第 004 轮完成最低 G1–G7，不再重复同一最低目标。下一步先按 [当前专题状态](RESEARCH_STATE.md) 核 C343/C344 的独立数学义务，或处理 C341 明确遗漏的切向相消；LT 的重新导入须从不同内外窗的真实覆盖开始。公开先行性另行核对，不把标准聚点方法当作本轮首创。
+第 004 轮的共同收敛证明可以直接调用。下一步按 [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 检验同一原图判据能否保持一般非线性 RL 并产生新参数或可续分支结论。修订 LT 的局部导入须从不同内外窗的真实覆盖开始。
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
 
