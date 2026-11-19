@@ -5032,6 +5032,12 @@
       "label": "C355 同一完整残差与全剪切长度下的任意两步法向关系",
       "file": "topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-ISOLATED-COVERAGE-STEP",
+      "label": "C356 原 RLEB 步长可在完整近端覆盖谱中孤立",
+      "file": "topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12801,6 +12807,17 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "同一完整真残差、全剪切长度及原非线性相容参数允许任意闭球面两步关系，限制从这些标量数据推出跨步法向约束。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E679",
+      "inputs": [
+        "RLEB-ISOLATED-COVERAGE-STEP"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "同一连续单值原图可在孤立步长满足完整原 RLEB，一般导入不能要求附近步长都有局部近端根覆盖。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }

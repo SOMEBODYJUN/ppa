@@ -70,6 +70,8 @@
 
 [C355 的两步方向实现](research/topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions) 固定完整真残差和每条原弦的全部实剪切长度，在同一非线性原 RLEB 窗口实现任意闭球面两步关系。该证明用来检验候选的跨步方向假设是否真的由原数据决定。见 [F122](FAILED_ROUTES.md#f122)。
 
+[C356 的孤立覆盖步长](research/topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step) 给同一个连续单值原算子的精确满射和零邻域覆盖谱，指定的真正非线性 RLEB 步长在谱中孤立。用于检查参数变形能否承担原近端根的存在。见 [F123](FAILED_ROUTES.md#f123)。
+
 [C350 跨边完整残差与反射损失](research/topics/common_structure/incoming_residual_reflection.md) 将当前完整残差、下一原弦的最近输入零锚偏差及下一完整残差接成精确损失分解，并保持原一般 RLEB 的全部初值。纯点收敛仍可舍去新增方向费用；[F119](FAILED_ROUTES.md#f119) 固定这条路线的承重缺口。
 
 [C345 同纤维反射刚性](research/topics/common_structure/fiber_reflection_rigidity.md) 固定一条阶段性关系：完整真残差下界压缩各真实图值的最优加权反射余量，从而限制同一输出纤维中缩放值差与输入最近零锚差。其证明保留一般非线性模，不改原图、不凸化纤维；当前还不能由跨值关系推出相容或下降，见 [F114](FAILED_ROUTES.md#f114)。该路线自身未完成共同结构目标，现行结果见 C351。

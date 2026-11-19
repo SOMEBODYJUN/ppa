@@ -4,6 +4,8 @@
 
 [C355](CLAIMS.md#c355) 进一步固定完整真残差和每条弦的全部剪切长度，仍可任意选择两步的归一化法向关系。当前首个开放环节是找到同一几何关系的两个独立恢复，使其保留所需跨点信息，同时允许原 RLEB 的这类方向自由度。[证明](research/topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions) · [F122](FAILED_ROUTES.md#f122)
 
+[C356](CLAIMS.md#c356) 给出同一原图的覆盖谱 \((0,\lambda/(1+a))\cup\{\lambda\}\)。原一般 RLEB 可在孤立步长上成立。参数剪切仍可作观测工具，普遍导入不能假定 \(\lambda\) 附近可延拓原根覆盖。[F123](FAILED_ROUTES.md#f123)
+
 [C354](CLAIMS.md#c354) 关闭一个拓扑导入路线：全部原根覆盖、尖锐非线性反射/完整真残差模及原轨道点收敛，可与零局部度及无局部连续选根并存。当前首要义务仍是找跨点的独立共同关系，证明两个恢复和原步驱动；若使用拓扑，需说明如何绕开 [F121](FAILED_ROUTES.md#f121) 的导入断点。
 
 **统一结构 \(M\) 尚未找到。C351 的任务验收撤回，判失败。** 作者明确排除从原锚点 RL 加误差界出发，重写相容、消去模、调整量词或固定一侧精确幅度来恢复另一侧的研究。后续 Pro 必须寻找能够独立解释单调性与正则性的共同结构，原 RLEB 只在最终适用范围中纳入。[现行任务](research/topics/common_structure/GPT_PRO_M_NEW_2026-11-19.md) · [F120 失败原因](FAILED_ROUTES.md#f120)

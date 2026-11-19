@@ -3123,3 +3123,11 @@
 - **Objects / Quantifiers**：任意 \(m\ge2,\lambda>0,0<\alpha<1,c>0,0<\gamma<1\)，固定 \(X=(\mathbb R^m\oplus\mathbb R^m)\times\mathbb R\) 及 \(S=\{0\}\times\mathbb R\)。每个非空值闭图球面关系 \(H:\mathbb S^{m-1}\rightrightarrows\mathbb S^{m-1}\) 有全域闭图原实现 \(F_H\)，完整零集为 \(S\) 且完整原近端处处有值。
 - **Exact Statement / Conclusion**：从任意 \(x=(tu,0,z)\)、\(t>0,\|u\|=1\) 出发，完整两步端点恰为 \((\alpha^2th,0,z+c(1+\alpha^\gamma)t^\gamma)\)、\(h\in H(u)\)。所有 \(H\) 在全空间共享同一个完整真残差，并在每条原弦上共享到最近输入零锚的全部实剪切长度，公式见正文 (3)–(4)。任意 \(\kappa\in(\alpha,1)\) 下，同一正窗口及同一组原 P1–P4 参数认证全部完整根，两个模的最佳幂分别为 \(\gamma\) 和 \(1/\gamma\)。
 - **Evidence / Dependencies / Scope**：[闭图构造和证明](research/topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions)。用两个正交法向块实现 \(H\)，中间带的全部正交方向保证完整输出覆盖，无需 \(H\) 满射。比较 [C353](#c353)、[C354](#c354) 的信息范围。本条限制从标量数据推断跨步法向规律的候选，未判定使用完整方向的结构或公开优先性。
+
+<a id="c356"></a>
+## C356-v1 · 原 RLEB 步长可在完整近端覆盖谱中孤立
+
+- **Status**：`derived-checked`。
+- **Exact Statement / Domain / Quantifiers**：任意 \(\lambda>0,a>1,b>0,0<\gamma<1\)，存在全域连续单值原算子 \(F\) 于实欧氏 \(\mathbb C^2\times\mathbb R\)，完整零集是 \(\{0\}\times\mathbb R\)。正步长 \(\eta\) 的全局完整根覆盖谱及任意零点处的局部覆盖谱均恰为 \((0,\lambda/(1+a))\cup\{\lambda\}\)。局部覆盖要求每个输出邻域的像都是输入点的邻域；谱外连全域覆盖也失败。
+- **Assumptions / Conclusion**：在 \(\lambda\) 取全部原根，满足同一步原 P1–P4，具有最佳幂 \(\gamma\) 的反射模与最佳幂 \(1/\gamma\) 的完整真残差误差模。正半径认证管内的所有原轨道均点收敛。
+- **Evidence / Dependencies / Scope**：[证明](research/topics/common_structure/isolated_proximal_coverage_step.md#isolated-coverage-step)以 Brouwer 给小步覆盖，两块相反的角映射分别证明 \(\lambda\) 左右漏射。限制从连续步长区间覆盖导入一般原 RLEB 的候选，不推出小步谱内的收敛。公开优先性未核定。
