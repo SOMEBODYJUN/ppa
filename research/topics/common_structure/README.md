@@ -5,7 +5,7 @@
 
 本线的目标是构造可逐行扩展的共同充分条件 \(W\)，把指定的单调或次单调、指定的正则性及该组合的可行参数窗接成原 PPA 的收敛证明。最低结论为从每个认证初值存在一条收敛的原轨道。全根收敛及更强速率属于附加结论。原 RLEB 测试行须保留原一般反射模及根量词。[目标、三项条件与前期误判](OBJECTIVE_AND_PITFALLS.md)
 
-首要义务是用 \(W\) 证明一条联系单调或次单调与正则性的结构定理，并让这条联系承担原 PPA 中的推导。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
+首要义务是找同一个 \(W\)，证明它在两种附加条件下分别等价于单调或次单调、正则性，并能推出原 PPA 收敛。[C341 的补偿锚距条件](compensated_anchor_convergence.md#ca-definition) 已把投稿原 RLEB 与有限维极大单调 PPA 导入同一收敛证书。当前任务和完成条件见 [GPT Pro 任务书](GPT_PRO_PROMPT.md#pro-hard-gates)。
 
 此前 C320 用原图值的对称闭凸包改进标量兼容，但仍保留最近零锚 RL 和真残差假设。C323 还表明，在光滑局部全部根的合同上，C320 与横向距离收缩等价。因此，C320 作为已证的方向误差界继续使用；C341 通过补偿锚距处理固定距离收缩之外的原图，其他组合仍需单独导入。[C320](../../canonical/ppa_two_step_and_directional_residual.md#td-directional) · [C323](../../canonical/ppa_native_alignment_and_transverse_test.md#native-transverse)
 

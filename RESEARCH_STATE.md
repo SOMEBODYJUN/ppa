@@ -6,7 +6,7 @@
 
 [C342](research/topics/common_structure/compensated_anchor_convergence.md#ca-sharp) 给同一旋转—漂移原场的两条锐边界：实际点收敛 iff \(\beta>\alpha\)，本证书可认证 iff \(\beta>\alpha,\alpha<2\)。在 \(1\le\alpha<2,\beta>\alpha\) 中，物理绝对长度和任意固定分组长度均发散，近零没有统一距离收缩；C277 的全锚 Fejér 后端与 C329 的宽 Gate-AT 也分别被排除。对正维仿射零集，M 的同一弦量直接控制切向绝对总长度，这既解释漂移门，也限制其能力。实际收敛但不可认证的区域不能登记为发散。
 
-**共同结构仍开放。** [机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review) 显示 RLEB 在进入 C341 前已用旧兼容得到收缩和长度预算。下一项义务是证明单调或次单调的方向信息与正则信息借同一 \(M\) 有怎样的关系，并用这条关系在相应的参数条件下推出原 PPA 一条可续的收敛轨道。原一般非线性 RL 须参与推导，新意须落在结构或关系上。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md)
+**共同结构仍开放。** 要找同一个 \(M\)，证明它在条件 \(A\) 下等价于单调或次单调，在条件 \(B\) 下等价于正则性。再证明这两类性质加各自的参数条件推出 \(M\)，从而保证原 PPA 至少一条可续的点收敛轨道。原 RLEB 的一般非线性反射模和真残差误差界要纳入。[现行 GPT Pro 任务与验收](research/topics/common_structure/GPT_PRO_PROMPT.md) · [C341 的机制层复核](research/audit/COMMON_STRUCTURE_M_ACCEPTANCE_2026-11-18.md#m-mechanism-review)
 
 仿射切向相消、一般 KL 和变化右端正则性可作为扩展检验。[C343 增维真残差锚距](research/topics/common_structure/lifted_residual_distance.md) 与 [C344 有限零锚](research/topics/common_structure/finite_anchor_convergence.md) 保存两个不同方向的候选推导，自身独立 G7 尚未完成。公开先行性另待与准 Fejér/势函数理论精确比较。
 
@@ -76,7 +76,7 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 <a id="active-frontier"></a>
 ## 活跃前沿与完成门
 
-**共同结构的首要义务是定理层转接。** 证明同一 \(M\) 怎样联系方向性和正则性、如何参与原 PPA 的收敛推导，并具体定位结构新意。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
+**共同结构的首要义务是证明两个等价。** 同一个 \(M\) 在两种条件下分别变回单调性和正则性，并且能证明原 PPA 收敛。[现行完成标准](research/topics/common_structure/GPT_PRO_PROMPT.md#pro-hard-gates)
 
 **准解析分界已闭。** [C302](research/canonical/quasianalytic_proximal_dichotomy.md)把 C297–C299 精确实现提升到所有强对数凸非准解析总权重的 Beurling 类。余下动力学门是共同开初值域、任意有界步长与耗散惯性系统。权重类边界和外部优先也独立保留。
 
