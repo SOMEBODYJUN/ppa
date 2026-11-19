@@ -3115,3 +3115,11 @@
 - **Exact Statement / Objects / Assumptions**：给定 \(\lambda>0,a>1,b>0,0<\gamma<1\) 和 \((1+1/a)R^{1-\gamma}<b(a^\gamma-1)\)，在 \(\mathbb R^2\times\mathbb R\) 令 \(g(ru)=ar h(u)\)，\(h:\mathbb S^1\to\mathbb S^1\) 任意连续满射。取完整连续原算子 \(F(y,z)=\lambda^{-1}(g(y)-y,-b(a\|y\|)^\gamma)\)，完整零集 \(S=\{0\}\times\mathbb R\)。全局原输入覆盖成立。全部原根在 \(d(x,S)\le R\) 同享正文的一般模 \(\omega(t)=(1+2/a)t+2bt^\gamma\)、\(\psi(s)=(\lambda s/(ba^\gamma))^{1/\gamma}\)、帽和严格收缩兼容。锚反射与完整残差 EB 的最优幂分别是 \(\gamma\) 与 \(1/\gamma\)。
 - **Conclusion / Quantifiers**：对每个 \(p\in S\)，近端输入映射 \(I+\lambda F\) 在 \(p\) 的目标 \(p\) 的局部度等于 \(\deg h\)，在上述固定参数下可取任意整数。若 \(|\deg h|\ne1\)，则 \(p\) 的任何输入邻域都没有连续原根选择。每个 \(0<d(x^0,S)\le R\) 的初值仍允许无限点收敛的原轨道。
 - **Dependencies / Evidence / Scope / Related Files**：[完整证明](research/topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree)用直接解根、完整真残差、消去切向剪切的球面同伦及悬挂同调。限制的是把非零度、规定的度或连续选择当作原 RLEB 必然前提的候选。无定向图关系和非连续选根不受此限。公开新颖性未判定。
+
+<a id="c355"></a>
+## C355-v1 · 同一完整残差与全剪切长度下的任意两步法向关系
+
+- **Status**：`derived-checked`。
+- **Objects / Quantifiers**：任意 \(m\ge2,\lambda>0,0<\alpha<1,c>0,0<\gamma<1\)，固定 \(X=(\mathbb R^m\oplus\mathbb R^m)\times\mathbb R\) 及 \(S=\{0\}\times\mathbb R\)。每个非空值闭图球面关系 \(H:\mathbb S^{m-1}\rightrightarrows\mathbb S^{m-1}\) 有全域闭图原实现 \(F_H\)，完整零集为 \(S\) 且完整原近端处处有值。
+- **Exact Statement / Conclusion**：从任意 \(x=(tu,0,z)\)、\(t>0,\|u\|=1\) 出发，完整两步端点恰为 \((\alpha^2th,0,z+c(1+\alpha^\gamma)t^\gamma)\)、\(h\in H(u)\)。所有 \(H\) 在全空间共享同一个完整真残差，并在每条原弦上共享到最近输入零锚的全部实剪切长度，公式见正文 (3)–(4)。任意 \(\kappa\in(\alpha,1)\) 下，同一正窗口及同一组原 P1–P4 参数认证全部完整根，两个模的最佳幂分别为 \(\gamma\) 和 \(1/\gamma\)。
+- **Evidence / Dependencies / Scope**：[闭图构造和证明](research/topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions)。用两个正交法向块实现 \(H\)，中间带的全部正交方向保证完整输出覆盖，无需 \(H\) 满射。比较 [C353](#c353)、[C354](#c354) 的信息范围。本条限制从标量数据推断跨步法向规律的候选，未判定使用完整方向的结构或公开优先性。

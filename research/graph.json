@@ -5026,6 +5026,12 @@
       "label": "C354 原 RLEB 可有任意局部度且无连续原根选择",
       "file": "topics/common_structure/rleb_degree_and_selection_obstruction.md#rleb-degree",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "RLEB-TWO-STEP-DIRECTION",
+      "label": "C355 同一完整残差与全剪切长度下的任意两步法向关系",
+      "file": "topics/common_structure/rleb_arbitrary_two_step_directions.md#arbitrary-two-step-directions",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -12784,6 +12790,17 @@
       "output": "MOTHER-OPEN",
       "relation": "limits",
       "scope": "要求从原一般非线性 RLEB 导入的共同结构，不得以非零近端输入局部度、一个固定局部度或局部连续选根为必要前提。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性共同结构"
+    },
+    {
+      "id": "E678",
+      "inputs": [
+        "RLEB-TWO-STEP-DIRECTION"
+      ],
+      "output": "MOTHER-OPEN",
+      "relation": "limits",
+      "scope": "同一完整真残差、全剪切长度及原非线性相容参数允许任意闭球面两步关系，限制从这些标量数据推出跨步法向约束。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性共同结构"
     }
