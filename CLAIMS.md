@@ -3172,8 +3172,8 @@
 <a id="c361"></a>
 ## C361-v1 · 保目标集的梯度反馈插值与精确置零代价
 
-- **Status**：`candidate`。两点反馈等价和仿射公式已逐式核对。一般闭集的全局插值、无限序列构造和与 PPA 的承重关系仍需独立审查。
+- **Status**：`candidate`。两点弱单调刻画和仿射置零公式保留各自范围。原 PPA 估计 (9) 的一般闭零集版本已被反证；单点目标或条件 (13) 下的修正版另记。固定强凸常数的碰撞判据已补上等号条件。全点 \(M_L\) 的统一恢复与原一般 RLEB 导入未成立。
 - **Objects / Exact Statement**：有限维欧氏 \(X\)，任意原多值 \(F\)，非空闭 \(S\subseteq F^{-1}(0)\)。同一反馈插值要求 \(c\in F(y)+\nabla h(y)\) 同时对给定位置成立。全对禁止强凸参数严格大于 \(\beta\) 的同右端碰撞，等价于 \(F+\beta I\) 单调，且只测二次势即充分。
 - **Fixed-Target Scope**：要求 \(h=\nabla h=0\) 于整个 \(S\)。指定 \(y\notin S,v\in F(y)\) 时，抵消 \(v\) 的最小梯度 Lipschitz 常数由正文 (4) 的两零锚上确界给出。仿射 \(S\) 的准确常数为 \(\sqrt{\|v_N\|^2+2\|v_T\|^2}/d(y,S)\)。对完整纤维取下确界所得局部正下界等价于真线性误差界。点态代价的下极限等于一个平坦 \(C^{1,1}\) 势造成 \(S\) 外零点聚集所需的最小全局梯度 Lipschitz 常数的下确界。
 - **Nonlinear Scope**：改用平坦 \(C^1\) 势的梯度幅度后，指定点置零代价的下确界恰为完整 \(r_F(y)\)，可恢复给定一般误差模及帽。给定任意在零连续归零、正尺度连续为正的 \(\rho\)，\(\liminf r_F(y)/\rho(d(y,S))\) 是单个平坦 \(C^1\) 势造成 \(S\) 外零点向指定零点聚集的精确预算下确界，预算按 \(\sup_{z\notin S}\|\nabla h(z)\|/\rho(d(z,S))\) 测量。
-- **Evidence / Dependencies / Scope Boundary**：[完整推导](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)。最优 Whitney 插值是已知定理。这里固定完整目标集并取原图值下确界。附加一个全局平坦反馈 \(h\) 使 \(F+\nabla h\) 弱单调时，式 (9) 给出原 PPA 的受限下降桥，步长门为 \(\lambda>2K^2(\beta+L)\)，并可接原 RLEB 的留域尾和。线性反向标量图 \(F=-aI\) 给出精确门 \(\lambda a>2\)，纯旋转 \(F=J\) 给出所有 \(\lambda>0\)。当前最有希望的 \(M\) 是全点一阶反馈可实现性 \(M_L(D,S;F)\)，即一个平坦 \(C^{1,1}\) 势同时实现所有选中图值。点态反馈半径不能替代全点 Whitney 兼容，跨点障碍见正文第 6 节。尚未证明该全点 \(M\) 对一般原 RLEB 产生所需反馈或可由自然单调/正则类自动满足，公开优先未核定。
+- **Evidence / Dependencies / Scope Boundary**：[完整推导](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-interpolation)。最优 Whitney 插值是已知定理。[第 7 节复核](research/topics/common_structure/gradient_feedback_interpolation.md#feedback-review)证明当前全点抵消强制 \(r_F(y)\le Ld(y,S)\)，不能纳入 C242 的非驻定趋零轨道；在单值开集上还强制原场是梯度。纯旋转检验的 \(h=0\) 只满足反馈修正条件，未满足 \(M_L\) 的抵消条件。原 PPA (9) 对一般闭 \(S\) 的声明撤回，修正版限于单点 \(S\) 或 \(1-2\lambda(\beta+L)\ge0\)。现有估计只用 \(F\) 的 \((\beta+L)\)-弱单调后果与线性真误差界，尚未使用全点插值的特殊兼容关系。反馈可实现关系仍可研究，尚无所求统一结构；公开优先未定。
