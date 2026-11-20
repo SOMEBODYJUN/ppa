@@ -3435,3 +3435,10 @@
 - **Status**：`derived-checked`。核对了两组相似、圆周点顺序、两高严格收缩与反向共点。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定直径 \(AB\) 的圆、圆心 \(O\) 及 \(C\in(O,B)\)，\(q=CB/AC\)。对上半圆 \(A\) 至最高点的任意 \(X\ne A\)，把 \(XC\) 与圆的另一交点的对径点记为 \(Y\)，垂足 \(P_1,P_2\) 分别来自 \(X,Y\)。则 \(AY/BY=q\,AX/BX\)，\(XY^2/(XP_1\cdot YP_2)=(1-q)^2/q\)，\(YP_2/XP_1\le 2q/(1+q^2)<1\)。\(AC=2CB\) 时不变量为 \(1/2\)。重复作图从每个允许初值趋于 \(A\)。反之，对上半圆上按 \(A,Y,X,B\) 排列的一族点对，若这一四边形比值恒定，则所有连接 \(X\) 与 \(Y\) 的对径点的直线共点于直径。
 - **Dependencies / Evidence / Scope**：圆周角、相似三角形、面积公式和托勒密定理。[纯几何题面与完整证明](research/topics/common_structure/diameter_chord_quadrilateral.md#diameter-chord-quadrilateral)。两高的比值实际随 \(X\) 变化。收敛与两高收缩的声明使用指定的半弧。
+
+<a id="c395"></a>
+## C395-v1 · 直线垂足四边形的双边界定长比与折返极限
+
+- **Status**：`derived-checked`。两阶段六席交叉复核，同一题设下独立检查了恒定性、续接、严格锚步递减和普通长度发散。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定直线 \(S\)、一侧开半平面、\(L>0\)。\(P_1,P_2\) 是同侧 \(X,Y\) 在 \(S\) 上的垂足。记 \(a=XP_1,t=YP_2,b=YP_1,s=XY,D=P_1P_2\)。取 \(\angle XYP_1=90^\circ\)、\(t^2=Ls\)，则 \(t^3/(bD)=L\) 且 \(a^2-t^2=s^2+D^2\)。任意正初高可唯一确定后高，第一步选侧自由，随后选 \(P_{n+2}\in[P_n,P_{n+1}]\)；该链无限续接并点收敛于 \(S\)。\(\sum_n(s_n^2+D_n^2)=a_0^2\)，同时两种普通长度和均发散。沿每条链可从当前构形和 \(L\) 恢复同一个固定极限锚 \(Q\)，公式见正文。
+- **Dependencies / Evidence / Scope**：勾股、斜边射影、嵌套线段与交错级数。[题面、边界检验和证明](research/topics/common_structure/folded_projection_quadrilateral.md#folded-projection-invariant)。保持半径等号、放宽方向至钝角使定长比大于 \(L\)；保持直角、放宽半径至严格不等式使其小于 \(L\)。较宽的不等式支持已续接折返链的点收敛，定长比恒定的声明针对两边界子族。全程同向的等号链锚漂移至无穷。

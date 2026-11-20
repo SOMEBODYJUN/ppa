@@ -4713,5 +4713,10 @@
     "x": 164.96608459669076,
     "y": 1915.8687250756786,
     "system": "path"
+  },
+  "EUCLIDEAN-FOLDED-PROJECTION-QUADRILATERAL": {
+    "x": -205.56832892985307,
+    "y": 1475.4414244453415,
+    "system": "path"
   }
 }

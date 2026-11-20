@@ -5256,6 +5256,12 @@
       "label": "C394 固定直径圆的四边形不变量",
       "file": "topics/common_structure/diameter_chord_quadrilateral.md#diameter-chord-quadrilateral",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-FOLDED-PROJECTION-QUADRILATERAL",
+      "label": "C395 直线垂足四边形的不变量与折返极限",
+      "file": "topics/common_structure/folded_projection_quadrilateral.md#folded-projection-invariant",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [

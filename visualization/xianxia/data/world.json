@@ -10606,6 +10606,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-FOLDED-PROJECTION-QUADRILATERAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {

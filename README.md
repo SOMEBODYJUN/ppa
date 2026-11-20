@@ -48,7 +48,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 943 个数学节点、710 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 944 个数学节点、710 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -68,6 +68,8 @@
 ## 当前专题：单调性和正则性是否有共同结构
 
 **来源不决定资格。** 已知数学结构若能在本问题中描述并完成所需联系，就可以作为 M；不因工具已知而否决。当前按单调／次单调与正则的强弱补偿机制广筛技术并即时初试，来源、新颖性与适用范围分别记录。
+
+[C395 · 直线投影四边形的局部不变量](research/topics/common_structure/folded_projection_quadrilateral.md)保留方向许可、圆半径与步边、换锚和前后高度四种数据。直角与平方根半径边界共同给 \(YP_2^3/(YP_1\cdot P_1P_2)=L\)。平方预算由方向三角形推出，折返嵌套保证点极限，普通步长和仍发散。单独放宽两条边界会把该量推向常数的两侧。
 
 [C394 · 固定圆上的四边形不变量](research/topics/common_structure/diameter_chord_quadrilateral.md)给出独立的竞赛几何题。直径上取固定三等分点，作一次弦和半转，变动四边形满足 \(XY^2/(XP_1\cdot YP_2)=1/2\)。相似三角形与托勒密给证明，反复作图趋于直径端点。定比的反向结论刻画相应的共点弦。
 
@@ -312,6 +314,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
+| research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
 | research/topics/common_structure/diameter_chord_quadrilateral.md | C394 的纯平面题面、弦平方与两条高的定比、两高收缩和四边形的迭代极限。反向证明确定共点弦。 |
 | research/topics/common_structure/angle_residual_exponent_balance.md | C392 的归一化圆幂恒等式、幂指数及常数锐门和原旋转反例。C393 的二维平方和点收敛条件、无限长度收敛原例及近锚方向亏损为零的漂移见证。分别检验指数交换与点收敛时读此页。 |
 | research/topics/common_structure/two_circle_power_invariant.md | C390 的竞赛题、圆幂不变量与沿原轨道的精确求和式。C391 给根轴与一般完整误差模的有限长度条件及幂型临界漂移构造。用于从实际四点构形检验方向和正则半径的共同恒等式。 |
