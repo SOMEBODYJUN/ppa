@@ -10518,6 +10518,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "PPA-PLANAR-TWO-ANCHOR-FEASIBILITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13340,6 +13351,10 @@
     "E708": {
       "x": 515.83,
       "y": 5287.19
+    },
+    "E709": {
+      "x": 983.28,
+      "y": 5379.8
     }
   },
   "bounds": {

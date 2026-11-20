@@ -5208,6 +5208,12 @@
       "label": "C386 余维一仿射目标的角度与误差界锐门",
       "file": "topics/common_structure/euclidean_two_anchor_geometry.md#hyperplane-angle",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-PLANAR-TWO-ANCHOR-FEASIBILITY",
+      "label": "C387 两锚图的平面输出距离充要定理",
+      "file": "topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13315,6 +13321,18 @@
       "output": "PPA-AFFINE-HYPERPLANE-ANGLE",
       "relation": "conditional",
       "scope": "锚角和同输出完整线性误差界作用在余维一仿射目标时，lambda/K>alpha/sqrt(1-alpha^2) 给统一长度支付。平面线性剪切达到边界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E709",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-PLANAR-TWO-ANCHOR-FEASIBILITY",
+      "relation": "conditional",
+      "scope": "固定平面原步长与输入距离，同时给同一锚的方向、一般反射、输出误差圆及锚距上限。取遍闭目标时，输出距离的整个区间与两个同时达到的最小值由线段构造认证。固定原图仅得必要限制。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

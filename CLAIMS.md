@@ -3375,3 +3375,11 @@
 - **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
 - **Exact Statement / Objects / Scope**：有限维原 PPA，目标 \(S\) 为余维一非空仿射超平面。C381 同一锚角合同下，\(0\le\alpha<1\)，完整残差线性常数 \(K>0\)。\(\lambda/K>\alpha/\sqrt{1-\alpha^2}\) 时存在统一 \(\varepsilon>0\) 使 \(d(x,S)-d(y,S)\ge\varepsilon\|x-y\|\)。覆盖和留域同 C381。二维剪切在任意 \(0<\alpha<1\) 的等号处不收敛。\(\alpha=1\) 时不存在统一有限门。锐例需要非零切向维数，余维二及以上不能按单一有符号高度推导。
 - **Evidence / Dependencies**：[余维一仿射目标的角度与误差界锐门](research/topics/common_structure/euclidean_two_anchor_geometry.md#hyperplane-angle)。所引经典几何来源与具体代入同页。公开先行性未核。
+
+<a id="c387"></a>
+## C387-v1 · 两个最近锚的平面输出距离充要定理
+
+- **Status**：`derived-checked`。完整平面必要性、线段充分构造及零步长、重合锚、等号均已重构。公开先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定平面两点 \(x,y\)，\(s=|xy|>0\)，给定 \(a,R,W,\ell\ge0\)、\(\alpha\in[0,1]\)。取遍非空闭集 \(S\) 及 \(p_1\in P_S(x),p_2\in P_S(y)\)，同一 \(p_1\) 满足 \(|xp_1|=a,\ |(2y-x)p_1|\le W,\ \langle x-y,p_1-y\rangle\le\alpha s|yp_1|\)，且 \(|yp_2|\le R,\ |p_1p_2|\le\ell\)。令 \(\Delta=a^2-(1-\alpha^2)s^2,\ E=(a^2+W^2)/2-s^2,\ L=\max\{0,a-s,\alpha s-\sqrt\Delta\},\ U=\min\{\alpha s+\sqrt\Delta,\sqrt E\}\)。若两根号有定义且 \(L\le U\)，可取的 \(t=|yp_2|\) 恰为 \([\max\{0,a-s,L-\ell\},\min\{R,U\}]\)，否则无构形。每个可行 \(t\) 由线段实现，并同时最小化锚距和反射距离，公式见正文 (2)。
+- **Definitions / Dependencies / Evidence**：余弦定理、中线恒等式、最近点、D01、D04。[完整证明和同锚限制的严格相容例](research/topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility)。取 \(\alpha=1\) 省略夹角假设。原一般非线性反射与完整误差界分别对应 \(W=\omega(a)\)、\(R=\psi(s/\lambda)\)。C285 处理无附加夹角及锚距限制的反射可行域，C383 则固定三角形或最小化输入距离。
+- **Counterevidence / Scope**：几何充要性取遍闭集；固定 \(S\) 或固定原图只得必要限制。逐步严格长度余量与原根覆盖联合时有点收敛结论。逆分支、图级两侧恢复和跨步锐性不能由逐步构造导入。

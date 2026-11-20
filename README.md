@@ -48,7 +48,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 935 个数学节点、704 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 936 个数学节点、705 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -68,6 +68,8 @@
 ## 当前专题：单调性和正则性是否有共同结构
 
 **来源不决定资格。** 已知数学结构若能在本问题中描述并完成所需联系，就可以作为 M；不因工具已知而否决。当前按单调／次单调与正则的强弱补偿机制广筛技术并即时初试，来源、新颖性与适用范围分别记录。
+
+[C387 · 两锚图的平面充要定理](research/topics/common_structure/planar_two_anchor_feasibility.md)固定原步长与输入距离，把同一锚上的方向、一般反射模、完整误差界给出的圆半径及锚边上限消元成输出距离的精确可行区间。每个可行值都能以线段零集达到，且最短锚边与最短反射线段同时达到。按此区间检验距离下降及有限长度预算。
 
 [平面圆与两锚几何](research/topics/common_structure/euclidean_two_anchor_geometry.md)把原近端三角形、误差界圆与输入最近距离圆画在同一张图。C383 给精确锚距区间和直接标锚边的下降式，C384 用反向空球加强原一般反射模，C385 给双空球的锚移锐界，C386 给余维一仿射目标的原 PPA 锐门。经典几何移植与维数限制见正文。
 
@@ -300,7 +302,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
-| research/topics/common_structure/euclidean_two_anchor_geometry.md | C383–C386 的精确两圆弧、短锚边、反向空球原 RL、双正向空球及余维一锐门。包含标注图和经典来源的实际移植清单。检验平面证明能否提升到一般内积空间时读此页。 |
+| research/topics/common_structure/planar_two_anchor_feasibility.md | C387 的平面充要条件、输出距离的可行区间与线段取等构造。需联合检验原一般反射模、完整误差界、夹角与锚边限制，或从逐步距离差建立长度预算时读此页。 |
+| research/topics/common_structure/euclidean_two_anchor_geometry.md | C383–C386 的精确两圆弧、短锚边、反向空球原 RL、双正向空球及余维一锐门。包含标注图和经典来源的实际移植清单。检验附加零集几何时读此页。 |
 | `research/topics/common_structure/compensation_methods_2.md` | 第二批28张技术卡、12项原对象初试和六组Pro深试义务。保存K完整残差包络及全对RL/值平移比较、强逆端点、图修正覆盖、弱凸增长支付、定向Schur补、识别、窗口根策略、有符号锥和自收缩未来点几何；来源核读深度与原图验证成本分别记录。继续技术收集或逐项深试时先读，不是完整M的完成声明。 |
 | `research/topics/common_structure/compensation_trials.md` | 强弱补偿的 25 项技术入口与 10 项实际初试；保存联合方向—幅度集合、C374 一般模截断支付、C375 拟对称校准及产品零集、C376 Carlier 原弦余项、C373 端点 Stein，以及测试变换、供给重标度和动态乘子的具体断点。寻找下一项可迁移技术、比较补偿预算或重试某一步时读此页；来源与证据深度同页可查，不是完整 M 的完成声明。 |
 | `research/topics/common_structure/fiber_reflection_rigidity.md` | C345 的加权反射恒等、完整残差下界和同纤维两值锚差估计，含零尺度、零反射和跳跃误差模的处理。用于检查正则尺度如何限制方向，以及区分真实结构推导与旧半和界的再包装；跨值关系承担PPA下降仍开放。 |
