@@ -10551,6 +10551,28 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-TWO-CIRCLE-POWER-INVARIANT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-RADICAL-AXIS-FINITE-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13385,6 +13407,10 @@
     "E711": {
       "x": 700.02,
       "y": 5289.35
+    },
+    "E712": {
+      "x": 834.88,
+      "y": 5107.78
     }
   },
   "bounds": {

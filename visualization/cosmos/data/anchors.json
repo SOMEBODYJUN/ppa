@@ -4688,5 +4688,15 @@
     "x": 62.435019755370575,
     "y": 1349.1128674916524,
     "system": "path"
+  },
+  "EUCLIDEAN-TWO-CIRCLE-POWER-INVARIANT": {
+    "x": -339.5683724931341,
+    "y": 1508.6139685357266,
+    "system": "path"
+  },
+  "PPA-RADICAL-AXIS-FINITE-LENGTH": {
+    "x": -45.180522267392604,
+    "y": 1327.5764459014324,
+    "system": "path"
   }
 }

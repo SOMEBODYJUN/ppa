@@ -3399,3 +3399,18 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：原 \(F:\mathbb R^2\rightrightarrows\mathbb R^2\) 有闭图和非空 \(S=F^{-1}(0)\)，固定 \(\lambda>0\)。\(H\) 在非负半轴连续、严格递增、有限、无界且 \(H(0)=0\)。对输入位于开域 \(U\) 的每条原边 \(x-y\in\lambda F(y)\)，可取最近锚 \(p_1,p_2\)，由射线 \(yp_1\) 上半径区间 \([t,t+D]\) 作线段 \(I\)，其中 \(t=d(y,S),D=|p_1p_2|\)，使 \(H(d(x,I))\ge H(t)+|xy|\)。\(p_1=y\) 时取 \(I=\{y\}\)。若每个域内输入有原根，且 \(H(d(x^0,S))<d(x^0,\mathbb R^2\setminus U)\)，则全部原轨道可续接、留域、点收敛到 \(S\)，总长不超过 \(H(d(x^0,S))\)。全域版本适用每个初值。静态选根子关系版本只保证坚持该选择的轨道。
 - **Definitions / Dependencies / Evidence**：D01、最近点、三角不等式、垂足和勾股定理。[定义、参数导入和完整证明](research/topics/common_structure/planar_segment_separation.md#planar-segment-m)。\(p_1\in I\) 是唯一承重包含，继而有单一标量势的长度预算。C383 的常参数门认证线性 \(H\)，C242 的平方根剪切在同一原图上有 \(H(t)=4\sqrt t\) 的局部认证。完整残差与选中图值逐式区分。
 - **Counterevidence / Scope / Related Files**：几何线段会增添额外径向点，[F134](FAILED_ROUTES.md#f134) 的完整闭图 RLEB 例有合法边违反任意 \(M_H\)，故全部允许边的普遍导入已被否定。反例有投影子关系，未否定选根导入。单调性和正则性的两个独立等价恢复、全部极大单调覆盖和公开先行性均未证明。
+
+<a id="c390"></a>
+## C390-v1 · 两圆外侧点对的有向投影与切线不变量
+
+- **Status**：`derived-checked`。逐式复核了有向距离、相切与两圆无交点的根轴。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定不同圆心 \(X,Y\) 的两正半径圆，半径 \(a,t\)，\(s=XY\)，轴朝 \(Y\to X\)。任取各在另一圆内部之外的两个圆周点 \(P,Q\)，分别在轴上垂足 \(H_P,H_Q\)，交叉切线长 \(PT_P,QT_Q\)。则 \(2s\overline{YH_P}-PT_P^2=2s\overline{YH_Q}+QT_Q^2=s^2+t^2-a^2\)。共同值是根轴轴交点 \(R\) 的有向位置乘以 \(2s\)。若 \(O\) 是两圆心中点，则 \(2s\overline{RO}=a^2-t^2\)。
+- **Dependencies / Evidence / Scope**：勾股定理及圆幂。对真实原步取最近零锚，\(a,t\) 为两端真实距离，零半径按圆幂平方差延拓。沿任意合法有限原轨道得到正文 (6) 的精确望远镜式。[题面、证明和两条镜像抛物线](research/topics/common_structure/two_circle_power_invariant.md#two-circle-power-invariant)。C381 已有代数恒等式，这一条增加双锚独立移动下的圆幂构形。
+
+<a id="c391"></a>
+## C391-v1 · 根轴余量与完整残差积分的平面有限长度定理
+
+- **Status**：`derived-checked`。有限长度递推与全部 \(p\ge2\) 的原图漂移反例均有自足证明，公开先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：原 \(F:\mathbb R^2\rightrightarrows\mathbb R^2\)，\(\lambda>0\)，\(S=F^{-1}(0)\) 非空闭。给定全输入覆盖的原根子关系，假设每条正步长原边的根轴余量 \(\overline{RO}\ge\delta|xy|/2\)，固定 \(\delta>0\)。对所有选根输出 \(y\notin S\) 假设完整 \(r_F(y)\ge\chi(d(y,S))\)，\(\chi\) 在正半轴有限、为正且非减，\(\int_0^{r_0}u/\chi(u)\,du<\infty\) 对某个 \(r_0>0\) 成立。则从任意初值可续接，每条坚持子关系的原轨道有限长并点收敛于 \(S\)。若 \(\chi(t)=ct^p\)，积分条件恰为 \(p<2\)。每个 \(p\ge2\) 有二维连续原算子、全域唯一原根、\(\delta=1\) 且残差同阶于 \(d^p\)，但存在初始距离任意小的无界原轨道。
+- **Definitions / Dependencies / Evidence**：C390、D01、D04、一个积分望远镜及平方不等式。[定理与闭式反例](research/topics/common_structure/two_circle_power_invariant.md#radical-axis-ppa)。
+- **Counterevidence / Scope**：反例排除在统一根轴余量下仅用任意幂型误差界推一般点收敛。它不排除其他方向信息推出收敛。一般非幂临界性、从全部原 RLEB 导出余量、两侧独立等价恢复均未证明。
