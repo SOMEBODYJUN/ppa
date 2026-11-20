@@ -1,93 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940" role="img" aria-labelledby="title desc">
-  <!-- Plan: a clean academic flat-vector diagram in a warm paper frame; afternoon-like luminous palette; layers are background, arbitrary closed set S, four points, distance segments, and two constraint cards. No line, perpendicular, or collinearity is assumed for S, P1, P2. -->
-  <title id="title">DD1 arbitrary closed set geometry</title>
-  <desc id="desc">A geometric diagram with X, Y, P1, P2 and an arbitrary curved closed set S. The segments XP1, YP1, YP2, XY, and P1P2 are shown without assuming that S is a line.</desc>
-  <defs>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#123047" flood-opacity="0.12"/>
-    </filter>
-    <marker id="arrowOrange" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L11,5 L0,10 z" fill="#e97427"/>
-    </marker>
-    <marker id="arrowNavy" markerWidth="14" markerHeight="14" refX="11" refY="5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L11,5 L0,10 z" fill="#173c67"/>
-    </marker>
-    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fffdf8"/>
-      <stop offset="1" stop-color="#f6f0e6"/>
-    </linearGradient>
-    <linearGradient id="setFill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#8bc7bb" stop-opacity="0.32"/>
-      <stop offset="1" stop-color="#4d9e93" stop-opacity="0.12"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <!-- Plan: a restrained olympiad-style black-on-white geometry figure; no decorative color, cards, shadows, or implied perpendicularity. The curved locus S is arbitrary, while the five distance segments remain visible. -->
+  <title id="title">DD1 geometry configuration</title>
+  <desc id="desc">A black and white geometry diagram showing X, Y, P1, P2, an arbitrary curved set S, and the segments XP1, YP1, YP2, XY, and P1P2.</desc>
+  <rect width="1400" height="820" fill="#ffffff"/>
 
-  <rect width="1600" height="940" rx="34" fill="url(#paper)"/>
-  <rect x="36" y="36" width="1528" height="868" rx="28" fill="none" stroke="#d6c6ae" stroke-width="2"/>
+  <!-- Arbitrary closed-set trace S -->
+  <path d="M120 645 C190 585 270 575 360 615 C450 690 520 680 600 620 C680 560 710 610 780 643 C900 700 1045 628 1165 570" fill="none" stroke="#111111" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="1175" y="565" font-family="Times New Roman, STIX Two Text, serif" font-size="32" font-style="italic" fill="#111111">S</text>
 
-  <text x="88" y="98" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="28" letter-spacing="2" fill="#173c67">DD1 · 四点几何中的补偿结构</text>
-  <text x="88" y="138" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="20" fill="#586675">S 是任意闭集合；P₁、P₂ 只是两个最近点，不假设目标集为直线</text>
-  <line x1="88" y1="164" x2="1512" y2="164" stroke="#d6c6ae" stroke-width="2"/>
-
-  <!-- Plot panel -->
-  <rect x="78" y="198" width="920" height="620" rx="26" fill="#fffefb" stroke="#e1d6c7" stroke-width="2" filter="url(#shadow)"/>
-  <text x="112" y="242" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="20" fill="#2d5f63">允许的平面构形</text>
-
-  <!-- Arbitrary closed set S: a curved, non-linear locus with a soft interior wash -->
-  <path d="M132 716 C190 660 252 650 304 682 C355 714 397 758 462 733 C530 708 558 641 628 642 C692 643 714 704 779 713 C847 723 888 674 951 642 L951 778 L132 778 Z" fill="url(#setFill)"/>
-  <path d="M132 716 C190 660 252 650 304 682 C355 714 397 758 462 733 C530 708 558 641 628 642 C692 643 714 704 779 713 C847 723 888 674 951 642" fill="none" stroke="#277e78" stroke-width="6" stroke-linecap="round"/>
-  <path d="M152 744 C230 700 285 704 342 735 M678 681 C745 747 813 744 914 692" fill="none" stroke="#277e78" stroke-opacity="0.34" stroke-width="2" stroke-dasharray="5 12"/>
-  <text x="885" y="626" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="25" fill="#277e78">S</text>
-  <text x="150" y="804" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="17" fill="#658783">任意非空闭集合的局部轮廓</text>
-
-  <!-- Distance segments: no perpendicular markers -->
-  <path d="M270 312 L324 683" fill="none" stroke="#173c67" stroke-width="7" stroke-linecap="round"/>
-  <path d="M842 334 L748 703" fill="none" stroke="#1b9a9c" stroke-width="7" stroke-linecap="round"/>
-  <path d="M842 334 L324 683" fill="none" stroke="#7b3aa2" stroke-width="5" stroke-dasharray="16 13" stroke-linecap="round"/>
-  <path d="M270 312 L842 334" fill="none" stroke="#e97427" stroke-width="9" stroke-linecap="round" marker-end="url(#arrowOrange)"/>
-  <path d="M324 683 Q541 781 748 703" fill="none" stroke="#c44b55" stroke-width="4" stroke-dasharray="10 12" stroke-linecap="round"/>
-
-  <!-- Step arrow above XY -->
-  <path d="M382 285 C500 218 642 220 760 285" fill="none" stroke="#e97427" stroke-width="4" stroke-linecap="round" marker-end="url(#arrowOrange)"/>
-  <text x="535" y="224" font-family="Cambria Math, STIX Two Text, serif" font-size="30" fill="#b9571b">X → Y</text>
+  <!-- Main distance segments -->
+  <line x1="245" y1="190" x2="360" y2="615" stroke="#111111" stroke-width="3.5"/>
+  <line x1="945" y1="225" x2="780" y2="643" stroke="#111111" stroke-width="3.5"/>
+  <line x1="245" y1="190" x2="945" y2="225" stroke="#111111" stroke-width="3.5"/>
+  <line x1="945" y1="225" x2="360" y2="615" stroke="#111111" stroke-width="3" stroke-dasharray="12 10"/>
+  <path d="M360 615 Q570 745 780 643" fill="none" stroke="#111111" stroke-width="3" stroke-dasharray="12 10"/>
 
   <!-- Points -->
-  <g filter="url(#shadow)">
-    <circle cx="270" cy="312" r="15" fill="#f4b24a" stroke="#173c67" stroke-width="4"/>
-    <circle cx="842" cy="334" r="15" fill="#f4b24a" stroke="#173c67" stroke-width="4"/>
-    <circle cx="324" cy="683" r="16" fill="#e44f55" stroke="#fffefb" stroke-width="4"/>
-    <circle cx="748" cy="703" r="16" fill="#e44f55" stroke="#fffefb" stroke-width="4"/>
-  </g>
+  <circle cx="245" cy="190" r="7" fill="#111111"/>
+  <circle cx="945" cy="225" r="7" fill="#111111"/>
+  <circle cx="360" cy="615" r="7" fill="#111111"/>
+  <circle cx="780" cy="643" r="7" fill="#111111"/>
 
   <!-- Labels -->
-  <g font-family="Cambria Math, STIX Two Text, Noto Sans CJK SC, sans-serif" fill="#173c67">
-    <text x="238" y="287" font-size="33">X</text>
-    <text x="854" y="314" font-size="33">Y</text>
-    <text x="285" y="739" font-size="30">P₁</text>
-    <text x="758" y="759" font-size="30">P₂</text>
-    <text x="500" y="295" font-size="27" fill="#b9571b">XY</text>
-    <text x="206" y="498" font-size="26" fill="#173c67" transform="rotate(82 206 498)">XP₁</text>
-    <text x="798" y="515" font-size="26" fill="#1b7d80" transform="rotate(-76 798 515)">YP₂</text>
-    <text x="554" y="508" font-size="26" fill="#7b3aa2" transform="rotate(-34 554 508)">YP₁</text>
-    <text x="507" y="766" font-size="25" fill="#a33d49">P₁P₂</text>
+  <g font-family="Times New Roman, STIX Two Text, serif" font-style="italic" fill="#111111">
+    <text x="215" y="158" font-size="34">X</text>
+    <text x="960" y="205" font-size="34">Y</text>
+    <text x="330" y="672" font-size="31">P₁</text>
+    <text x="790" y="700" font-size="31">P₂</text>
+
+    <text x="560" y="203" font-size="29">XY</text>
+    <text x="190" y="425" font-size="27" transform="rotate(75 190 425)">XP₁</text>
+    <text x="860" y="450" font-size="27" transform="rotate(-70 860 450)">YP₂</text>
+    <text x="600" y="400" font-size="27" transform="rotate(-34 600 400)">YP₁</text>
+    <text x="545" y="734" font-size="27">P₁P₂</text>
   </g>
 
-  <!-- Right constraint cards -->
-  <rect x="1050" y="236" width="442" height="198" rx="22" fill="#fff8ec" stroke="#e2a348" stroke-width="3"/>
-  <text x="1080" y="278" font-family="Noto Sans CJK SC, sans-serif" font-size="19" fill="#a15b1c">G1 · 次单调性几何上界</text>
-  <text x="1080" y="344" font-family="Cambria Math, STIX Two Text, serif" font-size="30" fill="#173c67">(XY)² + (YP₁)²</text>
-  <text x="1080" y="386" font-family="Cambria Math, STIX Two Text, serif" font-size="30" fill="#173c67">≤ (1 + 2σ)(XP₁)²</text>
-  <text x="1080" y="414" font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#6e6a61">控制 X、Y、P₁ 之间的方向亏损</text>
-
-  <rect x="1050" y="466" width="442" height="198" rx="22" fill="#edf7f6" stroke="#55a5a0" stroke-width="3"/>
-  <text x="1080" y="508" font-family="Noto Sans CJK SC, sans-serif" font-size="19" fill="#277e78">G2 · 度量次正则性边</text>
-  <text x="1080" y="574" font-family="Cambria Math, STIX Two Text, serif" font-size="32" fill="#173c67">YP₂ ≤ ρ · XY</text>
-  <text x="1080" y="620" font-family="Noto Sans CJK SC, sans-serif" font-size="16" fill="#5c7774">用输出距离与步长的比例约束 P₂</text>
-
-  <rect x="1050" y="696" width="442" height="76" rx="18" fill="#f4eef9" stroke="#9c74b9" stroke-width="2"/>
-  <text x="1080" y="728" font-family="Noto Sans CJK SC, sans-serif" font-size="17" fill="#6d3f8d">P₁P₂ 只是换锚距离；它不定义 S 的方向</text>
-  <text x="1080" y="754" font-family="Cambria Math, STIX Two Text, serif" font-size="18" fill="#6d3f8d">S 可弯曲、可非凸，图中不添加垂直或共线假设</text>
-
-  <line x1="88" y1="850" x2="1512" y2="850" stroke="#d6c6ae" stroke-width="2"/>
-  <text x="88" y="880" font-family="Noto Sans CJK SC, Microsoft YaHei, sans-serif" font-size="17" fill="#66737e">DD1 讨论稿 · 图示只表达距离段和约束，不替题设增加几何结构</text>
 </svg>
