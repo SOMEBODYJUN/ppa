@@ -10529,6 +10529,17 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-TWO-CIRCLES-COMMON-MINIMUM": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13355,6 +13366,10 @@
     "E709": {
       "x": 983.28,
       "y": 5379.8
+    },
+    "E710": {
+      "x": 1002.0,
+      "y": 5472.0
     }
   },
   "bounds": {

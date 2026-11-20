@@ -5214,6 +5214,12 @@
       "label": "C387 两锚图的平面输出距离充要定理",
       "file": "topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-TWO-CIRCLES-COMMON-MINIMUM",
+      "label": "C388 两圆外侧点对的同时最短定理",
+      "file": "topics/common_structure/two_circles_common_minimum.md#two-circles-common-minimum",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13333,6 +13339,17 @@
       "output": "PPA-PLANAR-TWO-ANCHOR-FEASIBILITY",
       "relation": "conditional",
       "scope": "固定平面原步长与输入距离，同时给同一锚的方向、一般反射、输出误差圆及锚距上限。取遍闭目标时，输出距离的整个区间与两个同时达到的最小值由线段构造认证。固定原图仅得必要限制。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E710",
+      "inputs": [
+        "EUCLIDEAN-TWO-CIRCLES-COMMON-MINIMUM"
+      ],
+      "output": "PPA-PLANAR-TWO-ANCHOR-FEASIBILITY",
+      "relation": "conditional",
+      "scope": "对于两个正半径和固定输出距离，把角度下界取为 arccos(alpha)，把射线上观察点取为 2y-x。两圆的同一个最优点对给 C387 中固定输出距离下两种最小值的纯几何实现。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

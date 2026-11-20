@@ -3383,3 +3383,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定平面两点 \(x,y\)，\(s=|xy|>0\)，给定 \(a,R,W,\ell\ge0\)、\(\alpha\in[0,1]\)。取遍非空闭集 \(S\) 及 \(p_1\in P_S(x),p_2\in P_S(y)\)，同一 \(p_1\) 满足 \(|xp_1|=a,\ |(2y-x)p_1|\le W,\ \langle x-y,p_1-y\rangle\le\alpha s|yp_1|\)，且 \(|yp_2|\le R,\ |p_1p_2|\le\ell\)。令 \(\Delta=a^2-(1-\alpha^2)s^2,\ E=(a^2+W^2)/2-s^2,\ L=\max\{0,a-s,\alpha s-\sqrt\Delta\},\ U=\min\{\alpha s+\sqrt\Delta,\sqrt E\}\)。若两根号有定义且 \(L\le U\)，可取的 \(t=|yp_2|\) 恰为 \([\max\{0,a-s,L-\ell\},\min\{R,U\}]\)，否则无构形。每个可行 \(t\) 由线段实现，并同时最小化锚距和反射距离，公式见正文 (2)。
 - **Definitions / Dependencies / Evidence**：余弦定理、中线恒等式、最近点、D01、D04。[完整证明和同锚限制的严格相容例](research/topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility)。取 \(\alpha=1\) 省略夹角假设。原一般非线性反射与完整误差界分别对应 \(W=\omega(a)\)、\(R=\psi(s/\lambda)\)。C285 处理无附加夹角及锚距限制的反射可行域，C383 则固定三角形或最小化输入距离。
 - **Counterevidence / Scope**：几何充要性取遍闭集；固定 \(S\) 或固定原图只得必要限制。逐步严格长度余量与原根覆盖联合时有点收敛结论。逆分支、图级两侧恢复和跨步锐性不能由逐步构造导入。
+
+<a id="c388"></a>
+## C388-v1 · 两圆外侧点对的同时最短定理
+
+- **Status**：`derived-checked`。核过相切、共锚、两圆包含关系、两端角度以及分锚的全部等号构形。公开先行性未查。
+- **Exact Statement / Objects / Domain / Quantifiers**：欧氏平面上固定不同圆心 \(X,Y\) 的两正半径圆 \(\Gamma,\Omega\)，以及从 \(Y\) 发出的射线 \(r\)，无向角 \(\theta=\angle(YX,r)\in[0,\pi]\)。合格点对满足 \(P\in\Gamma,\ Q\in\Omega\)，两点各自在对方圆盘的内部之外，且 \(\angle XYP\ge\theta\)。若存在合格点对，则存在同一个合格 \(P_*,Q_*\)，使对每个合格 \(P,Q\) 有 \(P_*Q_*\le PQ\)，且对射线 \(XY\) 上每个 \(Z\) 有 \(ZP_*\le ZP\)。在线段 \([P_*,Q_*]\) 上，最靠近 \(X,Y\) 的点分别为 \(P_*,Q_*\)。
+- **Definitions / Dependencies / Evidence**：三角不等式、两边及夹角的对边比较、圆的基本性质。[题面、尺规构造和证明](research/topics/common_structure/two_circles_common_minimum.md#two-circles-common-minimum)。若有合格公共点，则取两点重合。否则存在性等价于 \(Y\) 在 \(\Gamma\) 外且射线 \(r\) 严格先遇 \(\Omega\) 再遇 \(\Gamma\)，这两个首交点达到最小值。
+- **Counterevidence / Scope**：全射线结论的观察点在从 \(X\) 经过 \(Y\) 的射线上。锚距取等的构形至多相差关于直线 \(XY\) 的反射。允许相切及两锚重合。C387 固定额外距离上限并计算另一组参数下的可行区间，C388 固定两圆半径并给纯几何构造。
