@@ -71,6 +71,8 @@
 
 [C396 · 同一目标直线上的四点投影不变量](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)给出本轮修正。若两锚在同一仿射目标直线上，X、Y 为同侧正交投影，则两条接缝平方分解消去 P1P2，得到 XP1²+YP1²−XY²=2XP1·YP2，所以只用四个指定边长的无量纲不变量等于 1。等价地，单调性三角余量 a²−XY²−YP1² 与 PPA 补偿余量 2(XP1·YP2−YP1²) 精确相等。单调性角约束和正则性半径关系只筛选允许构形。若只保留一般不等式而不加这条正交投影结构，则不存在非平凡四量恒等式。
 
+[C398 · 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门](research/topics/common_structure/affine_projection_gram_compensation.md)修正了 C396 的维数范围。仿射子空间上的正确恒等式是 a²+b²−s²=2at cosθ，并有四边长度的 Gram 缺陷；常数 1 只在共同法向或余维一同侧成立。图中 Aτ+BL 的分段 T(L) 则由最近性和三角不等式推出，在任意有限维欧氏空间都有效。完整图量词下 BL 已经是线性 GMSR 的近端重写，不能把这项结果表述成脱离正则性的来源定理。
+
 [C395 · 直线投影四边形的局部不变量](research/topics/common_structure/folded_projection_quadrilateral.md)保留方向许可、圆半径与步边、换锚和前后高度四种数据。直角与平方根半径边界共同给 \(YP_2^3/(YP_1\cdot P_1P_2)=L\)。平方预算由方向三角形推出，折返嵌套保证点极限，普通步长和仍发散。单独放宽两条边界会把该量推向常数的两侧。
 
 [C394 · 固定圆上的四边形不变量](research/topics/common_structure/diameter_chord_quadrilateral.md)给出独立的竞赛几何题。直径上取固定三等分点，作一次弦和半转，变动四边形满足 \(XY^2/(XP_1\cdot YP_2)=1/2\)。相似三角形与托勒密给证明，反复作图趋于直径端点。定比的反向结论刻画相应的共点弦。

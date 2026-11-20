@@ -10617,6 +10617,28 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-ORTHOGONAL-PROJECTION-FOUR-POINT": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "lake",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 1002,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-AFFINE-PROJECTION-GRAM-COMPENSATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13463,6 +13485,10 @@
     "E714": {
       "x": 890.21,
       "y": 5379.42
+    },
+    "E715": {
+      "x": 1006.31,
+      "y": 5289.81
     }
   },
   "bounds": {

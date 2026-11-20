@@ -4718,5 +4718,15 @@
     "x": -205.56832892985307,
     "y": 1475.4414244453415,
     "system": "path"
+  },
+  "EUCLIDEAN-ORTHOGONAL-PROJECTION-FOUR-POINT": {
+    "x": -410.88229348251673,
+    "y": 1646.1427686759453,
+    "system": "path"
+  },
+  "PPA-AFFINE-PROJECTION-GRAM-COMPENSATION": {
+    "x": 463.8919886951255,
+    "y": 1448.3981464806413,
+    "system": "path"
   }
 }

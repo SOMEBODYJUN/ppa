@@ -5262,6 +5262,18 @@
       "label": "C395 直线垂足四边形的不变量与折返极限",
       "file": "topics/common_structure/folded_projection_quadrilateral.md#folded-projection-invariant",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-ORTHOGONAL-PROJECTION-FOUR-POINT",
+      "label": "C396 同一目标直线上的四点投影不变量",
+      "file": "topics/common_structure/orthogonal_projection_four_point_invariant.md#orthogonal-projection-invariant",
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "PPA-AFFINE-PROJECTION-GRAM-COMPENSATION",
+      "label": "C398 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门",
+      "file": "topics/common_structure/affine_projection_gram_compensation.md#affine-projection-gram-compensation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13441,6 +13453,17 @@
       "output": "PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE",
       "relation": "conditional",
       "scope": "严格指数侧及原根子关系覆盖、输出在评估窗给平方步长可和和到零集距离趋零。有限零集或两个固定零点的平方方向条件给二维点收敛。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E715",
+      "inputs": [
+        "EUCLIDEAN-ORTHOGONAL-PROJECTION-FOUR-POINT"
+      ],
+      "output": "PPA-AFFINE-PROJECTION-GRAM-COMPENSATION",
+      "relation": "conditional",
+      "scope": "将 C396 的共同法向恒等式推广为仿射目标上的角度加权 Gram 平衡，并把同一 Aτ+B_L 后端收缩门写成任意有限维欧氏空间的维数无关结论；完整图量词、coverage、留域和闭目标条件保留。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

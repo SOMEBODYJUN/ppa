@@ -3458,8 +3458,18 @@
 <a id="c397"></a>
 ## C397-v1 · 非线性 RL--GMSR 补偿与固定 A 的线性边界
 
-- **Status**：derived-checked。函数级递推、点态余量、完整残差下界反演及量词反例逐式重构；不认证外部新颖性。
+- **Status**：`derived-checked`。函数级递推、点态余量、完整残差下界反演及量词反例逐式重构；不认证外部新颖性。
 - **Exact Statement / Objects / Domain / Quantifiers**：有限维普通 PPA，\(S\subseteq\operatorname{zer}F\) 非空闭，允许关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\) 有输入 coverage。最近输入零锚满足非减模 \(\omega\)，完整残差 \(r_F(y)=\inf_{v\in F(y)}\|v\|\) 满足非减 GMSR gauge \(d(y,S)\le\psi(r_F(y))\)。
 - **Function-level compensation**：令 \(B(t)=(t+\omega(t))/2\)、\(\Phi(t)=\psi(B(t)/\lambda)\)。若 \(\Phi\) 非减、\(\Phi^{\circ k}(t)\to0\)，且 \(\Theta(t)=\sum_{j\ge0}B(\Phi^{\circ j}(t))<\infty\) 并在零点趋零，则严格预算 \(\Theta(d(x^0,S))<\operatorname{dist}(x^0,X\setminus U)\) 给全部允许选择的无限续接、距离递推、有限长度及 \(S\cap U\) 中的极限。点态 \(\tau_{\mathrm{eff}}(t)=1-\Phi(t)/t\) 允许趋零。具体地，\(\tau_{\mathrm{eff}}(t)\ge c t^q\)、\(B(t)\le Ct^\alpha\)、\(\alpha>q\) 给 \(\Phi^{\circ j}(t)\le(t^{-q}+cqj)^{-1/q}\) 及有限尾势。标量等式递推在 \(\alpha\le q\) 时长度和发散。
 - **A-boundary**：若固定 A 被改写为 \(d(y,S)\le\Phi(d(x,S))\)，令 \(u_\Phi(t)=\inf\{u\ge t:\Phi(u)\ge t\}\)。在完整图值可反推为近端输入的窗口内，必有 \(r_F(y)\ge[u_\Phi(d(y,S))-d(y,S)]/\lambda\)。固定 \(\Phi(t)=\kappa t\) 因而强制 \(d(y,S)\le\kappa\lambda r_F(y)/(1-\kappa)\)，即线性真残差次正则。非线性 \(\Phi(t)=t-ct^{1+q}\) 只给 \(r_F\gtrsim d^{1+q}\)，对应 Hölder gauge \(d\lesssim r_F^{1/(1+q)}\)。
 - **Distinctions / Scope**：完整 GMSR、两变量 metric regularity、选定图值误差界和完整残差下界分别记录，不能互换。\(F(y)=\{y,y^3\}\) 只选 \(v=y\) 的分支可满足 selected-value A/B，但 \(r_F(y)=|y|^3\)，完整线性 GMSR 失败。固定 A 的线性强制须有完整图量词或短图值留域余量，不能从 B 单独推出，也不能升级为 metric regularity。完整正文见 [非线性模补偿](research/topics/common_structure/nonlinear_modulus_compensation.md)。
+
+<a id="c398"></a>
+## C398-v1 · 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门
+
+- **Status**：`derived-checked`。有限维欧氏空间中的仿射 Gram 恒等式、四边长度 Gram 缺陷、A+B 收缩估计和高维反例均已独立重构。公开先行性及其作为一般共同结构 M 的资格尚未审查。
+- **Exact Statement / Objects / Domain**：若 M⊂Rⁿ 为非空仿射子空间，p₁=P_Mx、p₂=P_My，u=x−p₁、v=y−p₂，a=‖u‖、t=‖v‖、b=‖y−p₁‖、s=‖x−y‖，则 a²+b²−s²=2⟨u,v⟩。当 a,t>0 时，(a²+b²−s²)/(2at)=cosθ。只用四条长度可恢复的高维缺陷为 4a²t²−(a²+b²−s²)²=4‖u∧v‖²≥0。余维一同侧或共同法向射线时 cosθ=1，恢复 C396 的常数恒等式。余维至少二时该因子可变。
+- **Dimension-free A+B theorem**：对任意非空闭 S、最近点 p₁∈P_S(x)，若同一窗口和量词下 s²+b²≤(1+2τ)a²、t=d(y,S)≤Ls，其中 a=d(x,S)、τ≥0、L≥0，则令 e=√(1+2τ)、β=(1+√(1+4τ))/2，有 t≤κ(τ,L)a，其中 κ(τ,L)=min{β,Lβ, Le/√(1+L²)}，L=0 时 t=0。A 同时给出 s≤βa。若 κ<1 且有 coverage、留域和闭目标条件，所有满足 A+B 的选择策略都有有限总步长并收敛。该推导只用三角不等式和 Hilbert 范数，故不依赖平面投影恒等式。
+- **Parameter gate and regularity boundary**：κ<1 的后端门为 τ<T(L)，其中 T(L)=(1−L)/L²（0<L≤1/2），T(L)=1/(2L²)（L≥1/2）。若 B_L 对完整图值 v∈F(y) 成立且 s=λ‖v‖ 的输入覆盖完整，则它给出 d(y,S)≤λL r_F(y)，所以 GMSR 无需作为独立输入，但线性 B_L 也没有真正弱化线性正则性。只对选定轨道或选定图值时不能取下确界，F(y)={y,y³} 是反例。用 t≤ψ(s) 时必须改用非线性包络及其迭代/尾势门。
+- **Counterevidence / Scope**：R³ 中的仿射目标可取 a=2、t=b=1、s=√3，满足 τ=0、L=1 的 A+B，但四边长度比为 1/2，故 C396 的常数 1 不能直接推广。对一般曲面还会出现弦—法向缺陷项，需 reach 或曲率误差预算。C398 认证的是仿射投影的真实角度平衡和维数无关的 A+B 后端门，尚未认证一般多值原算子的统一 M。
+- **Evidence / Related Files**：[仿射投影与 A+B 证明](research/topics/common_structure/affine_projection_gram_compensation.md)、[C396 高维反例审查](research/audit/C396_COUNTEREXAMPLE_REVIEW_2026-11-20.md)、[C396 平面恒等式](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)、[C397 非线性模补偿](research/topics/common_structure/nonlinear_modulus_compensation.md)。

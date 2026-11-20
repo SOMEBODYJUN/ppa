@@ -6,6 +6,8 @@
 
 [C397](CLAIMS.md#c397) 完成非线性 \(\omega\)--\(\psi\) 的函数级补偿接口。令 \(B=(t+\omega(t))/2\)、\(\Phi=\psi(B/\lambda)\)，只需 \(\Phi\) 的迭代趋零和 \(\Theta(t)=\sum_jB(\Phi^{\circ j}(t))\) 尾势可和，即可替换固定 \(\kappa\) 完成全部允许轨道的留域、有限长度和点收敛。点态余量 \(\tau_{\rm eff}=1-\Phi/t\) 允许趋零，幂型门 \(\tau_{\rm eff}\gtrsim t^q\)、\(B\lesssim t^\alpha\)、\(\alpha>q\) 给可验证充分条件。若保留固定 \(A:d(y,S)\le\kappa d(x,S)\) 并让完整图值反推为近端输入，则 \(r_F(y)\ge(1-\kappa)d(y,S)/(\kappa\lambda)\)，所以 A 的完整图量词强制线性真残差次正则。选定图值界、GMSR、metric regularity 与完整残差下界的区别见[正文](research/topics/common_structure/nonlinear_modulus_compensation.md)。
 
+[C398](CLAIMS.md#c398) 完成当前图示的高维修正。仿射目标上的四点长度恒等式一般变为 a²+b²−s²=2at cosθ，只有余维一同侧或共同法向时才是常数 1；只用四条长度可保留 Gram 缺陷。另一方面，Aτ+BL 的 τ–L 收缩门只用三角不等式和范数，在任意有限维仍成立。BL 对完整图值时已内含线性 GMSR，故当前真正开放的是非线性 Bψ 的函数级 profile 能否与一般多值原图的共同结构恢复相接。
+
 **当前作者纠正。** 已有数学结构可以作为本领域的 M；工具、恒等式或技术已知不是否决理由。依实际描述、两侧恢复与原 PPA 作用判断，公开来源和新颖性另外记录。本轮按强弱补偿机制开展广泛技术筛选并即时初试，保留有信息的成功、失败和明确断点。
 
 [C395](research/topics/common_structure/folded_projection_quadrilateral.md)完成图示四层来源的一套纯平面构造。方向和半径两条边界给单幅定长比，固定直线的同侧投影保证锚一致，折返使平方可和但普通长度发散的链趋于同一点。它的局部恒量适用于等号子族，较宽的不等式子类保留收敛论证。
