@@ -3349,7 +3349,7 @@
 ## C383-v1 · 两圆弧的精确锚距及标边补偿
 
 - **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
-- **Exact Statement / Objects / Scope**：任意有限维欧氏空间 n≥2、非空闭 S 及两个最近锚。对所定三角形 \(xyp_1\) 和 \(|yp_2|\)，锚距的精确区间为正文 (1)，各值均可平面实现。同时指定锚移 \(D\le L_{\rm a}\)、方向余弦 \(\le\alpha\) 时最小输入距离由 (2a) 给出。若 \(D\le\mu s\)、\(t\le\gamma s\) 则有 (2b)，严格正系数及覆盖、留域给长度与点收敛。完整反射解释取等同一平面；若固定六边或固定仿射目标，需另查维数。Thales 原图为二维、紧凸零集、全域覆盖，达到 C381 第二段等号。
+- **Exact Statement / Objects / Scope**：任意有限维欧氏空间 n≥2、非空闭 S 及两个最近锚。对所定三角形 \(xyp_1\) 和 \(|yp_2|\)，锚距的精确区间为正文 (1)，各值均可平面实现。同时指定锚移 \(D\le L_{\rm a}\)、方向余弦 \(\le\alpha\) 时最小输入距离由 (2a) 给出。若 \(D\le\mu s\)、\(t\le\gamma s\) 则有 (2b)，严格正系数及覆盖、留域给长度与点收敛；\(0<\alpha<1\) 时等号由全输入覆盖的平面原二周期实现。取等在同一平面；若固定六边或固定仿射目标，需另查维数。Thales 原图为二维、紧凸零集、全域覆盖，达到 C381 第二段等号。
 - **Evidence / Dependencies**：[两圆弧的精确锚距及标边补偿](research/topics/common_structure/euclidean_two_anchor_geometry.md#admissible-anchor-arc)。所引经典几何来源与具体代入同页。公开先行性未核。
 
 
