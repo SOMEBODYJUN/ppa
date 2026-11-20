@@ -322,6 +322,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | --- | --- |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
 | research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md | 给老师的 Obsidian 可渲染讨论稿；保留 DD1 的四点几何、分段补偿、充分性证明和开放问题，并嵌入任意闭集合 S 的新示意图。仅作 discussion-draft/source-report，不替代 CLAIMS.md 的规范身份。 |
+| research/manuscripts/dd1_2026_11_20/DD1_平面几何竞赛题_题面与标准解.md | 按竞赛标准答案体例重排的题面与解答：题面只给四点条件，证明中依次调用阿波罗尼斯中线定理、泰勒斯定理、阿波罗尼斯圆和沃罗诺伊最近区域，最后给出分段锐补偿函数。 |
 | research/audit/DD1_OBSIDIAN_DELIVERY_2026-11-20.md | 记录本轮 Obsidian 语法转换、任意闭集合图示修正、渲染检查和数学边界；用于恢复交付范围，不作为 DD1 的新证明。 |
 | research/topics/common_structure/orthogonal_projection_four_point_invariant.md | C396 的修订题设、两次正交分解、只含 XY、YP1、XP1、YP2 的恒等式，以及一般不等式不足以产生不变量的自由度诊断。 |
 | research/topics/common_structure/diameter_chord_quadrilateral.md | C394 的纯平面题面、弦平方与两条高的定比、两高收缩和四边形的迭代极限。反向证明确定共点弦。 |
