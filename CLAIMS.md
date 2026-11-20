@@ -3451,6 +3451,6 @@
   XP1²+YP1²−XY²=2XP1·YP2,
   and (XP1²+YP1²−XY²)/(2XP1·YP2)=1.
   最终表达式只含 XY, YP1, XP1, YP2，不含锚距 P1P2 或外部参照长度。
-- **Dependencies / Evidence / Scope**：正交投影的两次勾股分解。单调性角约束可写为 D²≤t(a−t)，并给出 a²−t²≥s²+D² 的平方预算；正则性只限制 t 与 s 的允许关系。若只保留这些不等式而不固定同一目标直线和共同法向，四边长含相对开集，不能存在非平凡连续恒量。
+- **Dependencies / Evidence / Scope**：正交投影的两次勾股分解。令 ΔM=a²−s²−b²、ΔC=2(at−b²)，则精确有 ΔM=2[t(a−t)−D²]=ΔC。因此单调性三角余量与 PPA 的高度下降减锚移补偿余量相等，归一化比值为 1。单调性角约束可写为 D²≤t(a−t)，并给出 a²−t²≥s²+D² 的平方预算；正则性只限制 t 与 s 的允许关系。若只保留这些不等式而不固定同一目标直线和共同法向，四边长含相对开集，不能存在非平凡连续恒量。
 - **Counterevidence / Scope**：目标集为一般曲线、两法向不平行、或 X、Y 异侧时，式中常数分别改变或失效。C395 的 t³/(YP1·P1P2)=L 含外加长度且含禁用锚距，只作为旧边界构造保存，不作为本轮答案。
 - **Related Files**：[修订题面与证明](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)。
