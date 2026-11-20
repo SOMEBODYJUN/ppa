@@ -1074,6 +1074,7 @@
 | E708 | [PPA-TWO-ANCHOR-ANGLE · C381 双最近零锚的角度与误差界锐门](topics/common_structure/two_anchor_angle_inverse.md#two-anchor-angle) | conditional → [PPA-AFFINE-HYPERPLANE-ANGLE · C386 余维一仿射目标的角度与误差界锐门](topics/common_structure/euclidean_two_anchor_geometry.md#hyperplane-angle) | 锚角和同输出完整线性误差界作用在余维一仿射目标时，lambda/K>alpha/sqrt(1-alpha^2) 给统一长度支付。平面线性剪切达到边界。；**derived-checked** |
 | E709 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [PPA-PLANAR-TWO-ANCHOR-FEASIBILITY · C387 两锚图的平面输出距离充要定理](topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility) | 固定平面原步长与输入距离，同时给同一锚的方向、一般反射、输出误差圆及锚距上限。取遍闭目标时，输出距离的整个区间与两个同时达到的最小值由线段构造认证。固定原图仅得必要限制。；**derived-checked** |
 | E710 | [EUCLIDEAN-TWO-CIRCLES-COMMON-MINIMUM · C388 两圆外侧点对的同时最短定理](topics/common_structure/two_circles_common_minimum.md#two-circles-common-minimum) | conditional → [PPA-PLANAR-TWO-ANCHOR-FEASIBILITY · C387 两锚图的平面输出距离充要定理](topics/common_structure/planar_two_anchor_feasibility.md#planar-two-anchor-feasibility) | 对于两个正半径和固定输出距离，把角度下界取为 arccos(alpha)，把射线上观察点取为 2y-x。两圆的同一个最优点对给 C387 中固定输出距离下两种最小值的纯几何实现。；**derived-checked** |
+| E711 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [PLANAR-SEGMENT-SEPARATION-PPA · C389 二维线段分离候选与原 PPA 有限长度](topics/common_structure/planar_segment_separation.md#planar-segment-m) | 二维原闭图 F、非空完整零集、开域逐输入原根覆盖；若同一径向线段满足 M_H，则严格初值长度预算下原轨道可续接、留域且有限长度收敛。静态子关系版本只保证该选择。一般原 RLEB 的全部允许边导入由 F134 排除。；**derived-checked** |
 
 ## 不蕴含关系
 

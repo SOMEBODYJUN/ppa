@@ -10540,6 +10540,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "PLANAR-SEGMENT-SEPARATION-PPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13370,6 +13381,10 @@
     "E710": {
       "x": 1002.0,
       "y": 5472.0
+    },
+    "E711": {
+      "x": 700.02,
+      "y": 5289.35
     }
   },
   "bounds": {

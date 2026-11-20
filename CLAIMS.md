@@ -3391,3 +3391,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：欧氏平面上固定不同圆心 \(X,Y\) 的两正半径圆 \(\Gamma,\Omega\)，以及从 \(Y\) 发出的射线 \(r\)，无向角 \(\theta=\angle(YX,r)\in[0,\pi]\)。合格点对满足 \(P\in\Gamma,\ Q\in\Omega\)，两点各自在对方圆盘的内部之外，且 \(\angle XYP\ge\theta\)。若存在合格点对，则存在同一个合格 \(P_*,Q_*\)，使对每个合格 \(P,Q\) 有 \(P_*Q_*\le PQ\)，且对射线 \(XY\) 上每个 \(Z\) 有 \(ZP_*\le ZP\)。在线段 \([P_*,Q_*]\) 上，最靠近 \(X,Y\) 的点分别为 \(P_*,Q_*\)。
 - **Definitions / Dependencies / Evidence**：三角不等式、两边及夹角的对边比较、圆的基本性质。[题面、尺规构造和证明](research/topics/common_structure/two_circles_common_minimum.md#two-circles-common-minimum)。若有合格公共点，则取两点重合。否则存在性等价于 \(Y\) 在 \(\Gamma\) 外且射线 \(r\) 严格先遇 \(\Omega\) 再遇 \(\Gamma\)，这两个首交点达到最小值。
 - **Counterevidence / Scope**：全射线结论的观察点在从 \(X\) 经过 \(Y\) 的射线上。锚距取等的构形至多相差关于直线 \(XY\) 的反射。允许相切及两锚重合。C387 固定额外距离上限并计算另一组参数下的可行区间，C388 固定两圆半径并给纯几何构造。
+
+<a id="c389"></a>
+## C389-v1 · 二维径向线段分离条件与有限长度原 PPA
+
+- **Status**：`derived-checked`。已核几何包含、垂足公式、有限前缀留域、闭图极限和两项原例。候选 \(M_H\) 的完整共同结构资格未成立。
+- **Exact Statement / Objects / Domain / Quantifiers**：原 \(F:\mathbb R^2\rightrightarrows\mathbb R^2\) 有闭图和非空 \(S=F^{-1}(0)\)，固定 \(\lambda>0\)。\(H\) 在非负半轴连续、严格递增、有限、无界且 \(H(0)=0\)。对输入位于开域 \(U\) 的每条原边 \(x-y\in\lambda F(y)\)，可取最近锚 \(p_1,p_2\)，由射线 \(yp_1\) 上半径区间 \([t,t+D]\) 作线段 \(I\)，其中 \(t=d(y,S),D=|p_1p_2|\)，使 \(H(d(x,I))\ge H(t)+|xy|\)。\(p_1=y\) 时取 \(I=\{y\}\)。若每个域内输入有原根，且 \(H(d(x^0,S))<d(x^0,\mathbb R^2\setminus U)\)，则全部原轨道可续接、留域、点收敛到 \(S\)，总长不超过 \(H(d(x^0,S))\)。全域版本适用每个初值。静态选根子关系版本只保证坚持该选择的轨道。
+- **Definitions / Dependencies / Evidence**：D01、最近点、三角不等式、垂足和勾股定理。[定义、参数导入和完整证明](research/topics/common_structure/planar_segment_separation.md#planar-segment-m)。\(p_1\in I\) 是唯一承重包含，继而有单一标量势的长度预算。C383 的常参数门认证线性 \(H\)，C242 的平方根剪切在同一原图上有 \(H(t)=4\sqrt t\) 的局部认证。完整残差与选中图值逐式区分。
+- **Counterevidence / Scope / Related Files**：几何线段会增添额外径向点，[F134](FAILED_ROUTES.md#f134) 的完整闭图 RLEB 例有合法边违反任意 \(M_H\)，故全部允许边的普遍导入已被否定。反例有投影子关系，未否定选根导入。单调性和正则性的两个独立等价恢复、全部极大单调覆盖和公开先行性均未证明。
