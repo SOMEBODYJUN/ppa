@@ -769,3 +769,11 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 ## 平面几何与两锚
 
 [来源与转接表](topics/common_structure/euclidean_two_anchor_geometry.md)核对 Euclid I.24、II.12–13、III.31、III.35–36 及中点、反演和支撑圆路线。C383–C386 的原 PPA 命题有自足证明。Federer §4.8 是正向投影延伸与 reach 的背景，不用于从唯一投影推出反向空球。
+
+## DD1 的原文先例与量词比较
+
+详细变量对应、原文位置及检索边界见 [DD1 公开先例核查](novelty/DD1_PRIOR_ART_2026-11-20.md)。
+
+- **Paper fact。** Otero–Iusem [2010 预印本](https://webdoc.sub.gwdg.de/ebook/serien/e/IMPA_A/672.pdf)，Definition 2、Theorem 3、Corollary 3、Remark 3（pp.8–9）给全点对半单调下的 resolvent 根式 Lipschitz 常数。取 \(r=2\sigma/(1+2\sigma)\) 恢复 DD1 第一步长根式是本库换参，不是原文陈述 DD1。
+- **Paper fact。** Luke–Thao–Tam [MOR 2018](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2017.0898) Theorem 2.1、Lauster–Luke [2021](https://link.springer.com/article/10.1186/s13663-021-00698-0) Corollary 19 后讨论，已有非扩张性缺陷由误差界补偿的机制。Luke–Tam [2025](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863) 式(30) 是相同平方下降前提，Assumption 2(d)(ii)/Theorem 2 用较保守参数门；不据因子比较宣称完整局部定理互相涵盖。
+- **Paper fact。** Alcantara, [arXiv:2611.20523v1](https://arxiv.org/html/2611.20523v1)，官方记录 2026-11-16 提交；Proposition 3.4 证明式(11) 后及脚注 1 给 \(m_\varepsilon(\beta)\)，Remark 3.5（p.11）明写普通 PPA 平方因子 \((1+2\nu)h^2/(1+h^2)\) 及 \(2\nu h^2<1\)。换 \(h=\rho,\nu=\sigma\) 即 DD1 第二分支；第一分支可由其单步估计重建是本库推论。完整分段锐门与最近零锚类的边界实现未在本次实读来源定位，首创性未决。

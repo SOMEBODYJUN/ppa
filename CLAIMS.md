@@ -2505,6 +2505,7 @@
 - **Conclusion / Quantifiers**：每个允许输出有 \(d(y,S)\le mt\)，其中 \(m=\min\{b,b/\eta,\sqrt{(1+L^2)/(2(1+\eta^2))}\}\)。正距离输入存在须 \(b\ge\eta/(1+\eta)\)。在可行域上，允许关系类（甚至完整闭图近端）在维数至多二达到此因子。保证类内全部允许选择局部收敛的严格门为 \(L<\sqrt{1+2\eta^2}\) 当 \(0<\eta\le2\)，为 \(L<2\eta-1\) 当 \(\eta>2\)。两支等号均有任意小不收敛输入。若零点局部孤立且 \(\eta>2\)，缩邻域后任意有限 \(L\) 都有因子至多 \(1/(\eta-1)\)。
 - **Definitions / Dependencies / Evidence**：[一步联合包络及严格实例](research/canonical/rleb_sharp_linear_frontier.md#rsl-envelope)、[三支达到](research/canonical/rleb_sharp_linear_frontier.md#rsl-factor)、[完整反例与留域](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold)。用 C02-v3 的有限前缀证明控制留域，保留 C253 能量项并补几何可行与锚距半和界。后两项的最小值是候选 A 的线性上界。一般模包络在同一合同中给充分性。
 - **Counterevidence / Scope**：C253 作为充分条件仍有效。高 \(\eta\) 的必要性用允许多值、非孤立零集。二维旋转不能宣告固定一维锐性，最近锚反例也不能宣告全对或连续单值子类的同一最优门。
+- **External evidence / Novelty（2026-11-20）**：[DD1 六路先例核查](research/novelty/DD1_PRIOR_ART_2026-11-20.md) 用 \(L=\sqrt{1+4\sigma},\eta=1/\rho\) 给出 DD1 固定二次包络与本版本的对应。Alcantara arXiv:2611.20523v1 Remark 3.5 已明写根式能量分支；同文步长界及更早半单调 resolvent 常数可重建另一充分分支。完整分段锐门与本类临界反例未在本次所读外部来源定位，公开优先继续未决；内部数学状态和本版本量词不变。
 
 <a id="c286"></a>
 ## C286-v1 · 固定核 GPPA 的物理局部指数与原值域条件桥

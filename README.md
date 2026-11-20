@@ -73,6 +73,8 @@
 
 [2026-11-20 教师讨论稿 DD1（Obsidian 版）](research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md) 是对上传讨论稿的可渲染整理，保留 DD1 作为“几何充分条件草稿”的身份。配图把目标集 S 改画为任意闭集合的曲线轮廓；P1、P2 只是两个最近点，连接段不再暗示 S 为直线或存在垂直/平行关系。该稿不新增 Claims 条目，不把充分性、几何尖锐性或开放的必要性升级为规范定理。
 
+[DD1 公开先例核查](research/novelty/DD1_PRIOR_ART_2026-11-20.md) 已确认 Alcantara arXiv:2611.20523v1 明写第二收缩因子，同文步长估计可重建第一因子；半单调根式与缺陷—正则性补偿机制也有更早文献。完整分段锐门及临界构形尚未检出直接外部先例，公开新颖性仍未决。DD1 的固定二次包络与既有 C285 经 \(L=\sqrt{1+4\sigma},\eta=1/\rho\) 对应；竞赛稿严格下降还须补 \(XP_1>0\)，两项上界不能泛称全参数精确因子。核查报告区分原文事实、代数推论及未核范围。
+
 [C398 · 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门](research/topics/common_structure/affine_projection_gram_compensation.md)修正了 C396 的维数范围。仿射子空间上的正确恒等式是 a²+b²−s²=2at cosθ，并有四边长度的 Gram 缺陷；常数 1 只在共同法向或余维一同侧成立。图中 Aτ+BL 的分段 T(L) 则由最近性和三角不等式推出，在任意有限维欧氏空间都有效。完整图量词下 BL 已经是线性 GMSR 的近端重写，不能把这项结果表述成脱离正则性的来源定理。
 
 [C395 · 直线投影四边形的局部不变量](research/topics/common_structure/folded_projection_quadrilateral.md)保留方向许可、圆半径与步边、换锚和前后高度四种数据。直角与平方根半径边界共同给 \(YP_2^3/(YP_1\cdot P_1P_2)=L\)。平方预算由方向三角形推出，折返嵌套保证点极限，普通步长和仍发散。单独放宽两条边界会把该量推向常数的两侧。
@@ -320,6 +322,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
+| research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
 | research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md | 给老师的 Obsidian 可渲染讨论稿；保留 DD1 的四点几何、分段补偿、充分性证明和开放问题，并嵌入任意闭集合 S 的新示意图。仅作 discussion-draft/source-report，不替代 CLAIMS.md 的规范身份。 |
 | research/manuscripts/dd1_2026_11_20/DD1_平面几何竞赛题_题面与标准解.md | 按竞赛标准答案体例重排的题面与解答：题面只给四点条件，证明中依次调用阿波罗尼斯中线定理、泰勒斯定理、阿波罗尼斯圆和沃罗诺伊最近区域，最后给出分段锐补偿函数。 |
