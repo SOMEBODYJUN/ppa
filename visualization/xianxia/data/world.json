@@ -10573,6 +10573,28 @@
       "y": 5151,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13411,6 +13433,14 @@
     "E712": {
       "x": 834.88,
       "y": 5107.78
+    },
+    "E713": {
+      "x": 885.36,
+      "y": 5290.67
+    },
+    "E714": {
+      "x": 890.21,
+      "y": 5379.42
     }
   },
   "bounds": {

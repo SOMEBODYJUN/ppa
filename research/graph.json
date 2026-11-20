@@ -5238,6 +5238,18 @@
       "label": "C391 根轴余量、完整残差积分与有限长度",
       "file": "topics/common_structure/two_circle_power_invariant.md#radical-axis-ppa",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE",
+      "label": "C392 最近锚角度与完整残差的锐指数制衡",
+      "file": "topics/common_structure/angle_residual_exponent_balance.md#angle-residual-exponent-balance",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE",
+      "label": "C393 平方和与两固定零点的二维点收敛",
+      "file": "topics/common_structure/angle_residual_exponent_balance.md#planar-two-fixed-zero-convergence",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13393,6 +13405,30 @@
       "output": "PPA-RADICAL-AXIS-FINITE-LENGTH",
       "relation": "conditional",
       "scope": "二维原根子关系全输入覆盖、完整零集闭，根轴到中点的有向余量至少为统一正倍数的步长且完整真残差下界满足正文积分条件。原轨道有限长且点收敛。幂指数 2 在该类上为临界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E713",
+      "inputs": [
+        "EUCLIDEAN-TWO-CIRCLE-POWER-INVARIANT",
+        "D04"
+      ],
+      "output": "PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE",
+      "relation": "conditional",
+      "scope": "距离侧完整残差幂 p>1 与最近锚方向亏损幂 beta 给归一化圆幂的锐门。临界 beta=p-1，严格常数侧 2A<lambda*c；统一小窗得到平方下降。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E714",
+      "inputs": [
+        "PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE",
+        "D01"
+      ],
+      "output": "PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE",
+      "relation": "conditional",
+      "scope": "严格指数侧及原根子关系覆盖、输出在评估窗给平方步长可和和到零集距离趋零。有限零集或两个固定零点的平方方向条件给二维点收敛。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

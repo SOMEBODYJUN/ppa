@@ -4698,5 +4698,15 @@
     "x": -45.180522267392604,
     "y": 1327.5764459014324,
     "system": "path"
+  },
+  "PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE": {
+    "x": 583.7249618230967,
+    "y": 1897.4796300530343,
+    "system": "path"
+  },
+  "PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE": {
+    "x": 641.449860481999,
+    "y": 1781.9581677453573,
+    "system": "path"
   }
 }

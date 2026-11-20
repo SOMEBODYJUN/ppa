@@ -3414,3 +3414,17 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：原 \(F:\mathbb R^2\rightrightarrows\mathbb R^2\)，\(\lambda>0\)，\(S=F^{-1}(0)\) 非空闭。给定全输入覆盖的原根子关系，假设每条正步长原边的根轴余量 \(\overline{RO}\ge\delta|xy|/2\)，固定 \(\delta>0\)。对所有选根输出 \(y\notin S\) 假设完整 \(r_F(y)\ge\chi(d(y,S))\)，\(\chi\) 在正半轴有限、为正且非减，\(\int_0^{r_0}u/\chi(u)\,du<\infty\) 对某个 \(r_0>0\) 成立。则从任意初值可续接，每条坚持子关系的原轨道有限长并点收敛于 \(S\)。若 \(\chi(t)=ct^p\)，积分条件恰为 \(p<2\)。每个 \(p\ge2\) 有二维连续原算子、全域唯一原根、\(\delta=1\) 且残差同阶于 \(d^p\)，但存在初始距离任意小的无界原轨道。
 - **Definitions / Dependencies / Evidence**：C390、D01、D04、一个积分望远镜及平方不等式。[定理与闭式反例](research/topics/common_structure/two_circle_power_invariant.md#radical-axis-ppa)。
 - **Counterevidence / Scope**：反例排除在统一根轴余量下仅用任意幂型误差界推一般点收敛。它不排除其他方向信息推出收敛。一般非幂临界性、从全部原 RLEB 导出余量、两侧独立等价恢复均未证明。
+
+<a id="c392"></a>
+## C392-v1 · 最近锚角度与完整残差的锐指数边界
+
+- **Status**：`derived-checked`。配方及两个显式复平面原算子的覆盖、真残差和轨道均经核对，公开先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：原关系在 \(\mathbb R^2\)，非空闭完整零集 \(S\)，固定 \(\lambda>0\)。原边 \(x=y+\lambda v\) 的 \(a,t,s,b\) 分别为输入距离、输出距离、步长、输出到最近输入零锚的距离。有符号方向 \(m=\langle p_1-y,v\rangle/(b\|v\|)\)（零分母的正步长边取零）。对正步长令 \(u=b/s,\rho=t/s\)，则归一化距离下降为 \(1-2m\rho+(u-\rho)(u+\rho-2m)\)，其中正残差时 \(\rho=[t/(\lambda r_F(y))][r_F(y)/\|v\|]\)。若 \(r_F(y)\ge c t^p,\ m_+\le A t^\beta\)，\(p>1,c,A>0,\beta\ge0\)，则 \(\beta>p-1\) 或 \(\beta=p-1,\ 2A<\lambda c\) 时，在统一小输出窗内有 \(a^2-t^2\ge\delta s^2\) 且 \(\delta>0\)；输出在 \(S\) 时给 \(m_+=0\)。
+- **Evidence / Dependencies / Scope**：C390、最近性和配方。[精确公式与锐性构造](research/topics/common_structure/angle_residual_exponent_balance.md#angle-residual-exponent-balance)。临界等号及低指数侧在同一单点零集的连续原图类中有全域唯一原根的不收敛旋转。严格侧 \(p\ge2\) 另有反向径向分量的旋转原图，其原点收敛、步长绝对和发散。这里检验的是与零锚的方向，原单调性的等价恢复仍开放。
+
+<a id="c393"></a>
+## C393-v1 · 二维平方和及两个固定零点的点收敛
+
+- **Status**：`derived-checked`。有限聚点证明、零输入、全窗根覆盖及非孤立漂移核对完成。
+- **Exact Statement / Objects / Domain / Quantifiers**：取 C392 严格侧的统一小距离窗 \(D=\{x:d(x,S)\le r\}\) 和每个输入都非空、输出仍在窗内的受检原根子关系。所有坚持该选择的轨道满足 \(\sum s_k^2\le d(x^0,S)^2/\delta\) 且 \(d(x^k,S)\to0\)。若 \(S\) 有限，或有两个固定不同零点 \(z_i\in S\) 满足所有受检边 \(2\lambda\langle y-z_i,v\rangle\ge-C_i s^2\)（统一 \(C_i\ge0\)），则每条所选原轨道收敛到 \(S\) 中一点。
+- **Evidence / Dependencies / Scope**：C392、平方展开、两个圆的交集至多两点及渐近正则性。[二维点收敛证明](research/topics/common_structure/angle_residual_exponent_balance.md#planar-two-fixed-zero-convergence)。对于 \(p\ge2\)，最近锚方向亏损恰为零、完整残差幂和平方下降仍可与非孤立零线旁的无界漂移共存，见 F136。无限长度仍与正面点收敛兼容。
