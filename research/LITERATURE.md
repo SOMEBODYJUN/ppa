@@ -748,3 +748,16 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 - **测试方向与正则，Paper fact 与初试。** Ciarlet–Jamelot, [arXiv:2410.14444v1](https://arxiv.org/pdf/2410.14444)，§2 Definition 1 / Theorem 1 回顾 T-coercivity 与线性变分适定性的关系。本次全纤维测试到真残差的 Cauchy–Schwarz 推导自足；T 与原 PPA 的兼容仍缺。未取到的更早论文不能被称为已精读。
 
 **解释及状态。** 这些已知技术提供不同的可迁移动作，不是完整 M 已存在的文献证明。本次新增的是在本项目原对象上的明确初试、所得公式和断点；不认证全球新颖性。来源访问失败不否定数学方法。
+
+
+## 强弱补偿的第二批技术接口
+
+[28张技术卡及核读深度](topics/common_structure/compensation_methods_2.md)同时保存具体原步代入和12项初试。以下为主要文献事实，不把作者原算法换成本项目原PPA。
+
+- **非线性函数插值，Paper fact。** Chill–Sharma–Srivastava, arXiv:2206.13400v1，[原文](https://arxiv.org/pdf/2206.13400)，Example3.3、§3.1、Theorem4.1(a)及证明。K的一端是原多值纤维的最小范数，另一端是空间距离；m-accretive/type-ω范围内与resolvent位移双侧比较。C377的Hilbert常数、一般全对RL和EB下剖面另行证明。
+- **强逆正则与扰动余量，Paper fact。** Dontchev–Rockafellar, *Regularity and Conditioning in the Variational Analysis of Solution Mappings*，2003-08-29修订，[作者稿](https://sites.math.washington.edu/~rtr/papers/rtr191-RegularityConditioning.pdf)，§4 Definition4.1、Theorems4.2–4.3。强正则对应局部单值Lipschitz逆，小扰动使其模按倒数余量变化。C378只用该逆结构，原步Banach构造另证；次正则不自动具有相同稳定半径。
+- **局部凸化保持相关图块，Paper fact。** Drusvyatskiy–Lewis 2013，[作者稿](https://people.orie.cornell.edu/aslewis/publications/13-tilt.pdf)，Theorem3.3及Examples3.4–3.5。局部极小、次微分连续和相应prox-regular条件承重；不能将任意原图凸化后假称完整纤维不变。Rockafellar 2019 [variational convexity](https://sites.math.washington.edu/~rtr/papers/rtr251-LocalMono.pdf) Definition2/Theorem1及Khanh等 arXiv:2208.14399v2的Moreau包络刻画为同一家族补充。
+- **激发单调性，Paper fact。** Rockafellar 2019，[作者稿](https://sites.math.washington.edu/~rtr/papers/rtr252-Decoupling.pdf)，Definition1、(1.10)–(1.11)、Theorem2。原算法经过partial inverse、localization和rescaling；本项目仅迁移定向支付思想，并用Schur补重构有限维阈值。
+- **Sharpness支付负曲率，Paper fact。** Davis–Drusvyatskiy–MacPhee–Paquette arXiv:1803.02461v1，[原文](https://arxiv.org/pdf/1803.02461)，Assumption A/Lemma2.1。原文为弱凸sharp函数的subgradient方法；C380的完整原近端捕获另证，不借用原文算法结论。
+- **自收缩曲线，Paper fact及受限导入。** Daniilidis–David–Durand-Cartagena–Lemenant，[作者存档](https://arxiv.org/pdf/1211.3227)，Theorem3.3、Proposition4.16。有界自收缩曲线在有限维有限长；本页先以非空argmin证明凸原PPA折线有界，再导入曲线定理。不导入旧PDF Theorem4.17的宽泛陈述，不推广至任意极大单调原图。
+- **其余接口的证据门。** 弱/超Poincaré、一般插值、弱观测、非线性Nash、非线性图稠密性、有限步Lyapunov、集值储能等的具体一手位置见报告表。Robinson一致定向、Matrosov和Plastock积分逆本轮只到摘要层，不作定理导入；Laila–Nešić离散IOSS稿的部分公式编码不清，也未逐式引用。

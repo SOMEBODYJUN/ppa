@@ -5148,6 +5148,30 @@
       "id": "PPA-CARLIER-STEP-GAP",
       "label": "C376 原逆差与实际近端弦",
       "file": "topics/common_structure/compensation_trials.md#carlier-original-step"
+    },
+    {
+      "id": "PPA-RESIDUAL-K-ENVELOPE",
+      "label": "C377 完整残差 K 包络与方向比较",
+      "file": "topics/common_structure/compensation_methods_2.md#k-functional",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-INVERSE-REGULAR-ENDPOINT",
+      "label": "C378 局部强逆正则的原 PPA 端点",
+      "file": "topics/common_structure/compensation_methods_2.md#inverse-endpoint",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-CONE-VARIATION",
+      "label": "C379 有符号变差支付完整轨道长度",
+      "file": "topics/common_structure/compensation_methods_2.md#cone-variation",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-SHARP-WEAK-CONVEX-CAPTURE",
+      "label": "C380 弱凸增长给完整残差与原步捕获",
+      "file": "topics/common_structure/compensation_methods_2.md#sharp-capture",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13140,6 +13164,52 @@
       "output": "PPA-CARLIER-STEP-GAP",
       "relation": "conditional",
       "scope": "有限维proper下半连续凸f，f(x)和f*(u)有限，y=prox_lambda f(x+lambda u)，v=u+(x-y)/lambda时，Fenchel gap精确分成两个指定次梯度Bregman差及原步平方/lambda。只在此凸子类。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E699",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-RESIDUAL-K-ENVELOPE",
+      "relation": "conditional",
+      "scope": "非空原图的完整残差K包络；全对一般RL加固定步完整覆盖给非线性位移比较，全域EB给一般模下剖面；全尺度和全值平移的比较仅在完整覆盖对象类恢复极大单调，不是零锚RL的一般导入。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E700",
+      "inputs": [
+        "D01"
+      ],
+      "output": "PPA-INVERSE-REGULAR-ENDPOINT",
+      "relation": "conditional",
+      "scope": "局部原逆关系单值Lipschitz常数kappa且lambda>2kappa时，小闭球中每个初值有可续接原轨道，收缩因子kappa/(lambda-kappa)。只含孤立局部零点和局部原根。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E701",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-CONE-VARIATION",
+      "relation": "conditional",
+      "scope": "完整乘积图F(a,b)={(h,g(b))}，g连续同号且所有h被L|g|控制时，任意正步长、所有合法原根轨道有限长；允许非孤立目标和无Hölder误差界，但未涵盖一般弯曲零集。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E702",
+      "inputs": [
+        "D01"
+      ],
+      "output": "PPA-SHARP-WEAK-CONVEX-CAPTURE",
+      "relation": "conditional",
+      "scope": "全局proper lsc弱凸势、有限最小值、lambda*rho<1时，全纤维支撑给一般增长残差下界；线性sharpness在显式局部半径内使原近端一步到最小点集。仅势算子子类。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

@@ -4623,5 +4623,25 @@
     "x": 127.18439212824721,
     "y": 1500.9010559179271,
     "system": "path"
+  },
+  "PPA-RESIDUAL-K-ENVELOPE": {
+    "x": 214.88224134022704,
+    "y": 1390.650223080047,
+    "system": "path"
+  },
+  "PPA-INVERSE-REGULAR-ENDPOINT": {
+    "x": 51.07777114294149,
+    "y": 1478.6019453012696,
+    "system": "path"
+  },
+  "PPA-CONE-VARIATION": {
+    "x": 369.8618638749165,
+    "y": 1368.265959278784,
+    "system": "path"
+  },
+  "PPA-SHARP-WEAK-CONVEX-CAPTURE": {
+    "x": -160.36865599922362,
+    "y": 2035.9877559251229,
+    "system": "path"
   }
 }

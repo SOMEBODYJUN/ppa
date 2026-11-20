@@ -3290,3 +3290,39 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任意有限维 proper 下半连续凸 f、λ>0 和 f(x)、f*(u) 有限的 x,u，令 y=prox_{λf}(x+λu)、v=u+(x−y)/λ∈∂f(y)。则 f(x)+f*(u)−⟨x,u⟩=D_f(x,y;v)+D_f*(u,v;y)+‖x−y‖²/λ，两个差按[正文](research/topics/common_structure/compensation_trials.md#carlier-original-step)定义且非负。u=0 时是原次梯度 PPA。
 - **Definitions / Dependencies / Evidence**：共轭、原近端最优性和 Fenchel 等式，正文自足代数；Bauschke–Singh–Wang arXiv:2206.14872v1 式 (6)、§2、§4、Theorem 4.5 与 Corollary 7.4。
 - **Counterevidence / Scope / Related Files**：一般有符号全图 gap 虽在任意原根处下界实际步长平方，但对 F=−bI 可为无穷，不能直接导入非单调原 RL。凸代表的全图接触已强迫单调；有限尺度接触亏损尚待构造。Corollary 7.4 固定 x、更新对偶锚，并非原 PPA。两个一般恢复仍开放。
+
+
+<a id="c377"></a>
+## C377-v1 · 完整残差 K 包络的方向比较与一般模下剖面
+
+- **Status**：`derived-checked`。四线技术搜集中提出，主研究者独立重构下包络、firm 比较、全对 RL 代入、一般模下剖面及固定尺度反测。仅按以下范围成立，不认证新颖性或完整 M。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 H=ℝⁿ，非空图关系 F:H⇉H，λ>0，空纤维残差记∞。定义 K_F(x,λ)=inf_z(‖x−z‖+λr_F(z))，r_F 取完整原纤维。K 是 λr_F 的最大实值1-Lipschitz下包络；F 闭图时 K_F(x,λ)=0 iff 0∈F(x)。若固定λ完整近端全域非空且全对原RL由连续非减 ω、ω(0)=0 控制，则完整近端自动单值，Dλ(x)=‖x−JλFx‖ 满足 K/2≤Dλ≤(3K+ω(K))/2。极大单调 Hilbert 端可改进为 Dλ≤K≤2Dλ。
+- **Regularity Statement**：非空闭 S⊆zerF，χ 全域连续非减、χ(0)=0。若对所有 z∈domF 有 r_F(z)≥χ(d(z,S))，则 cλ(d(x,S))≤K_F(x,λ)≤d(x,S)，其中 cλ(t)=inf_{0≤b≤t}(t−b+λχ(b))。反向 K_F(x,λ)≥h(d(x,S)) 对 x∈domF 成立时，λr_F(x)≥h(d(x,S))。局部版不能不加试验域限制地照用。
+- **Direction Statement**：在每个λ>0完整原近端全域存在且单值的对象类内，F极大单调 iff 对每个值平移 F−a、每个λ>0和每个输入 x，均有 Dλ^{F−a}(x)≤K_{F−a}(x,λ)。固定一个λ不能恢复单调性；A=−I/4+Q、Q为平面90度旋转、λ=1满足全部值平移比较且原近端收缩，F却非单调。
+- **Definitions / Dependencies / Evidence**：D01、完整真残差和全对原RL；[正文及全部证明](research/topics/common_structure/compensation_methods_2.md#k-functional)。Chill–Sharma–Srivastava arXiv:2206.13400v1 Example3.3 / Theorem4.1(a)提供插值—resolvent机制；本页精确常数及转译另证，未导入其半群结论。
+- **Counterevidence / Scope / Related Files**：只有最近零锚RL时不能比较任意试验图点；K是全图inf，廉价验证和局部化尚缺。全λ覆盖会排除原非单调理论中的一些图；两个端点表达未完成一般非线性RL的共同M与原步收敛。
+
+<a id="c378"></a>
+## C378-v1 · 强逆正则端点的局部原 PPA 构造
+
+- **Status**：`derived-checked`。逆侧Banach构造、闭球留域、完整残差大小分支及负线性锐门均独立重构；为已知逆映射技术的受限迁移，不主张首创。
+- **Exact Statement / Objects / Domain / Quantifiers**：F:ℝⁿ⇉ℝⁿ、0∈F(s)。存在开邻域 U∋s、V∋0，使 M(w)=F⁻¹(w)∩U 对每个w∈V恰为一点、M(0)=s，且 Lip M≤κ∈(0,∞)。对每个固定λ>2κ，存在R>0使每个x⁰∈B̄(s,R)有一条留球、无限续接的原PPA轨道，且 ‖xᵏ⁺¹−s‖≤κ/(λ−κ)‖xᵏ−s‖，故趋s。
+- **Definitions / Dependencies / Evidence**：原步D01、局部单值Lipschitz逆、Banach定理；[完整证明与全纤维校验](research/topics/common_structure/compensation_methods_2.md#inverse-endpoint)。R可选到 B̄(s,R)⊂U、B̄(0,2R/λ)⊂V；进一步缩球有 ‖y−s‖≤κr_F(y)，非仅选值残差界。
+- **Counterevidence / Scope / Related Files**：结论只对局部原根策略，域外其他根不受控；逆单值使局部零点孤立。F=−aI给κ=1/a且λa>2正是收敛门。非孤立类仅有标量次正则即使常数任意小仍可剪切漂移，参见F128；因此不能称本命题为一般“最强次正则端点”。
+
+<a id="c379"></a>
+## C379-v1 · 乘积锥子类中有符号变差支付完整原轨道长度
+
+- **Status**：`derived-checked`。原根满射、任意根符号、完整残差、长度望远镜和锚式RL逐项重构。与既有切向支付机制有关，不认证公开新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：m≥1，连续g:ℝ→ℝ满足g(0)=0、bg(b)>0（b≠0）。L≥0，H(b)⊂ℝᵐ逐点非空，且所有h∈H(b)均有‖h‖≤L|g(b)|。令完整 F(a,b)={(h,g(b)):h∈H(b)}，S=ℝᵐ×{0}=zerF。则对每个λ>0、每个初值，原PPA可无限续接；每条合法轨道有限长并收敛到S，且总长度≤√(1+L²)|b₀|。
+- **Definitions / Dependencies / Evidence**：D01、距离和完整残差；[自足证明](research/topics/common_structure/compensation_methods_2.md#cone-variation)。法向方程 b_k=b_{k+1}+λg(b_{k+1}) 的任意根同号，λΣ|g(b_{k+1})|=|b₀|，锥约束支付全部位移。完整 r_F(a,b)=√(g(b)²+inf_{h∈H(b)}‖h‖²)。原全部近端边有最近输入锚RL上界 ω(t)=√(1+4L²)t。
+- **Counterevidence / Scope / Related Files**：g不要求单调；多值纤维不要求范数下确界达到。取g=sgn(b)exp(−1/b²)、H={c g(b)}可使所有正指数Hölder EB失败，仍有上述长度；这不否定一般逆对数误差模。结论限乘积一维有符号锥子类；弯曲S、多维法向和一般原非线性RL的导入、两个恢复仍开放。
+
+<a id="c380"></a>
+## C380-v1 · 弱凸支撑与增长共同给完整残差及原近端捕获
+
+- **Status**：`derived-checked`。全纤维弱凸支撑、强凸近端存在唯一、输入/输出最近点的不同用途和局部半径均独立重构；仅为势算子子类。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维proper lsc的ρ-弱凸f，ρ≥0，有限全局最小值f_*及非空闭S=argmin f。F=∂f取limiting次微分。设R>0，非负g使所有0<d(z,S)<R处有f(z)−f_*≥g(d(z,S))。固定λ>0、λρ<1，则完整原近端对每个输入存在且唯一。对输出y、t=d(y,S)∈(0,R)，完整r_F(y)≥[g(t)/t−ρt/2]_+；对每个原步、D=d(x,S)、s=‖x−y‖，有 f(y)−f_*+s²/(2λ)≤D²/(2λ)。
+- **Capture Statement**：若g(t)=μt、μ>0，则每个D<min{R/2,λμ/(1+λρ)}的输入，其唯一原输出已属于S，之后固定。该充分半径未宣称全算子类锐性。
+- **Definitions / Dependencies / Evidence**：弱凸函数的全域二次支撑、强凸问题一阶最优性及[自足证明](research/topics/common_structure/compensation_methods_2.md#sharp-capture)。Davis–Drusvyatskiy–MacPhee–Paquette arXiv:1803.02461v1 Lemma2.1为sharpness支付负曲率的来源；其主算法为subgradient method，本库原PPA命题另证。
+- **Counterevidence / Scope / Related Files**：允许完整多值纤维、非孤立S及一般增长g，但明确要求全局弱凸势和λρ<1。未证明一般非势RL导入；二次亏损换一般模后须另证支撑和原根，不能形式替换。

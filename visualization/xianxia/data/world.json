@@ -186,6 +186,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-9",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 720,
+      "y": 5490,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -10396,6 +10408,50 @@
       "y": 4123,
       "region": "convergence",
       "realm": "convergence-annex-8"
+    },
+    "PPA-CONE-VARIATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 4214,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "PPA-INVERSE-REGULAR-ENDPOINT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 4305,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "PPA-RESIDUAL-K-ENVELOPE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 5060,
+      "y": 4396,
+      "region": "convergence",
+      "realm": "convergence-annex-8"
+    },
+    "PPA-SHARP-WEAK-CONVEX-CAPTURE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13178,10 +13234,26 @@
     "E698": {
       "x": 4831.07,
       "y": 4370.92
+    },
+    "E699": {
+      "x": 5014.77,
+      "y": 4379.94
+    },
+    "E700": {
+      "x": 5036.32,
+      "y": 4263.25
+    },
+    "E701": {
+      "x": 5035.52,
+      "y": 4172.71
+    },
+    "E702": {
+      "x": 814.0,
+      "y": 5285.0
     }
   },
   "bounds": {
     "w": 5310,
-    "h": 4920
+    "h": 6130
   }
 }
