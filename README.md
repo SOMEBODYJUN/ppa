@@ -48,7 +48,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 929 个数学节点、698 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 931 个数学节点、700 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -68,6 +68,8 @@
 ## 当前专题：单调性和正则性是否有共同结构
 
 **来源不决定资格。** 已知数学结构若能在本问题中描述并完成所需联系，就可以作为 M；不因工具已知而否决。当前按单调／次单调与正则的强弱补偿机制广筛技术并即时初试，来源、新颖性与适用范围分别记录。
+
+[两锚角度与逆分支](research/topics/common_structure/two_anchor_angle_inverse.md)按作者几何图区分原步三角形与误差界圆。C381 保留输出换锚的平方余量，得到完整真误差界与最近锚方向余弦的两段锐门和长度预算。C382 以同一逆支角度式构造原根并证点收敛，允许非孤立、多值及一般逆模。原一般 RL 的导入仍开放。
 
 [第二批强弱补偿技术储备](research/topics/common_structure/compensation_methods_2.md)将插值、逆映射、变分模型和跨步动力学整理成28张有亲缘关系的技术卡及12项初试。[C377](CLAIMS.md#c377)把完整真残差的K包络同时接到方向比较与一般模距离下剖面；[C378](CLAIMS.md#c378)给局部强逆正则的原PPA端点；[C379](CLAIMS.md#c379)以有符号变差支付非孤立乘积锥中的完整轨道长度；[C380](CLAIMS.md#c380)在弱凸势子类由同一支撑产生残差与一步捕获。每项均明写范围，极大单调端点允许没有定量误差界；一般非孤立类尚不能只用一个标量次正则模定义相反端点。后续深试任务、验证成本和摘要层待核来源同页列出，完整M仍开放。
 

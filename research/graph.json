@@ -5172,6 +5172,18 @@
       "label": "C380 弱凸增长给完整残差与原步捕获",
       "file": "topics/common_structure/compensation_methods_2.md#sharp-capture",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-TWO-ANCHOR-ANGLE",
+      "label": "C381 双最近零锚的角度与误差界锐门",
+      "file": "topics/common_structure/two_anchor_angle_inverse.md#two-anchor-angle",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-INVERSE-ANGLE-BRANCH",
+      "label": "C382 原逆分支角度条件给覆盖和收敛",
+      "file": "topics/common_structure/two_anchor_angle_inverse.md#inverse-angle-branch",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13210,6 +13222,29 @@
       "output": "PPA-SHARP-WEAK-CONVEX-CAPTURE",
       "relation": "conditional",
       "scope": "全局proper lsc弱凸势、有限最小值、lambda*rho<1时，全纤维支撑给一般增长残差下界；线性sharpness在显式局部半径内使原近端一步到最小点集。仅势算子子类。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E703",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-TWO-ANCHOR-ANGLE",
+      "relation": "conditional",
+      "scope": "每条允许原边有输入最近锚余弦下界及同输出完整线性真误差界时，保留换锚差给两段严格门和长度预算。等号有完整单值原图见证。局部根覆盖需另给。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E704",
+      "inputs": [
+        "D01"
+      ],
+      "output": "PPA-INVERSE-ANGLE-BRANCH",
+      "relation": "conditional",
+      "scope": "闭残差球上连续原逆分支或闭图有界紧凸值逆子图，固定零锚且原端点严格径向扩张时，同一条件用于原根覆盖和局部点收敛。可有非孤立零集，不反推完整残差下界。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }

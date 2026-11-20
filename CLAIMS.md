@@ -3326,3 +3326,20 @@
 - **Capture Statement**：若g(t)=μt、μ>0，则每个D<min{R/2,λμ/(1+λρ)}的输入，其唯一原输出已属于S，之后固定。该充分半径未宣称全算子类锐性。
 - **Definitions / Dependencies / Evidence**：弱凸函数的全域二次支撑、强凸问题一阶最优性及[自足证明](research/topics/common_structure/compensation_methods_2.md#sharp-capture)。Davis–Drusvyatskiy–MacPhee–Paquette arXiv:1803.02461v1 Lemma2.1为sharpness支付负曲率的来源；其主算法为subgradient method，本库原PPA命题另证。
 - **Counterevidence / Scope / Related Files**：允许完整多值纤维、非孤立S及一般增长g，但明确要求全局弱凸势和λρ<1。未证明一般非势RL导入；二次亏损换一般模后须另证支撑和原根，不能形式替换。
+
+
+<a id="c381"></a>
+## C381-v1 · 双最近零锚的余弦与真误差界锐门
+
+- **Status**：`derived-checked`。两条投影差恒等式、一维最小化、有限前缀留域和两段完整原图边界已逐式核对。公开先行性未核。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维原 \(F\)、非空闭 \(S\subseteq F^{-1}(0)\)、固定 \(\lambda>0\)。每条受检原边 \(x=y+\lambda v\) 有一个 \(p_1\in P_S(x)\) 满足 \(\langle y-p_1,x-y\rangle\ge-\alpha\|y-p_1\|\|x-y\|\)，\(0\le\alpha\le1\)，且 \(d(y,S)\le K r_F(y)\) 量化完整输出纤维。记 \(\gamma=K/\lambda>0\)，则 \(d(x,S)-d(y,S)\ge[\sqrt{1-\alpha^2+(\gamma-\alpha)_+^2}-\gamma]\|x-y\|\)。正系数给受检原轨道有限长和点收敛，覆盖及局部初值预算见正文。
+- **Evidence / Dependencies**：D01、D04、[原步两锚恒等式及证明](research/topics/common_structure/two_anchor_angle_inverse.md#two-anchor-angle)。统一严格门在 \(\alpha\le1/\sqrt2\) 为 \(\lambda/K>2\alpha\)，在 \(1/\sqrt2<\alpha<1\) 为 \(\lambda/K>(1-\alpha^2)^{-1/2}\)。单点目标只需前一公式。第二段锐例的两个最近锚不同。
+- **Counterevidence / Scope**：等号的完整旋转和旋转剪切图保持正的目标距离，\(\alpha=1\) 的原剪切使任意小真误差界常数仍不能单独认证收敛。角度假设与原反射模不同。一般误差模的逐边式保留，统一正余量、原 RL 导入及完整共同 M 待证。
+
+<a id="c382"></a>
+## C382-v1 · 连续逆分支的同一角度条件给原根和收敛
+
+- **Status**：`derived-checked`。闭值球的 Brouwer 构造、紧凸逆图的 Kakutani 扩展与实际原步下降均已重构。
+- **Exact Statement / Objects / Domain / Quantifiers**：对有限维原 \(F\)、\(0\in F(p)\)、\(\lambda,R>0\)，若连续 \(Y:\overline B(0,R)\to\mathbb R^n\) 满足 \(Y(0)=p\)、\(v\in F(Y(v))\)，且所有 \(0<\|v\|\le R\) 有 \(2\langle Y(v)-p,v\rangle+\lambda\|v\|^2>0\)，则对每个 \(\|x^0-p\|\le\lambda R/2\)，存在始终留在该球、可无限续接并趋于 \(p\) 的原 PPA 轨道。
+- **Evidence / Dependencies**：D01、Brouwer、Kakutani、[正文](research/topics/common_structure/two_anchor_angle_inverse.md#inverse-angle-branch)。连续逆分支的位移模 \(\psi\) 和方向余弦下界 \(-\alpha\) 在 \(\lambda r>2\alpha\psi(r)\) 处交换。若 \(\psi(r)=\kappa r\)，门为 \(\lambda>2\alpha\kappa\)，线性见证使等号失败。非孤立、多值非线性见证的完整残差为 \(|b|^q,\ q>1\)。
+- **Counterevidence / Scope**：也允许闭图、一致有界的非空紧凸逆子纤维，要求零值纤维为 \(\{p\}\) 且角度条件覆盖所选逆子纤维。完整纤维下界不能由逆分支推出，不能据 C382 断言原一般 RLEB 导入、全部根收敛或完整 M。

@@ -761,3 +761,6 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 - **Sharpness支付负曲率，Paper fact。** Davis–Drusvyatskiy–MacPhee–Paquette arXiv:1803.02461v1，[原文](https://arxiv.org/pdf/1803.02461)，Assumption A/Lemma2.1。原文为弱凸sharp函数的subgradient方法；C380的完整原近端捕获另证，不借用原文算法结论。
 - **自收缩曲线，Paper fact及受限导入。** Daniilidis–David–Durand-Cartagena–Lemenant，[作者存档](https://arxiv.org/pdf/1211.3227)，Theorem3.3、Proposition4.16。有界自收缩曲线在有限维有限长；本页先以非空argmin证明凸原PPA折线有界，再导入曲线定理。不导入旧PDF Theorem4.17的宽泛陈述，不推广至任意极大单调原图。
 - **其余接口的证据门。** 弱/超Poincaré、一般插值、弱观测、非线性Nash、非线性图稠密性、有限步Lyapunov、集值储能等的具体一手位置见报告表。Robinson一致定向、Matrosov和Plastock积分逆本轮只到摘要层，不作定理导入；Laila–Nešić离散IOSS稿的部分公式编码不清，也未逐式引用。
+
+
+- **逆关系三种稳定性。** [Dontchev–Rockafellar](https://sites.math.washington.edu/~rtr/papers/rtr191-RegularityConditioning.pdf) Theorems 2.2、3.2、4.2 分别给度量正则与逆 Aubin、次正则与逆 calmness、强度量正则与局部单值 Lipschitz 逆的刻画。[Aragón Artacho–Mordukhovich](https://rua.ua.es/dspace/bitstream/10045/29037/1/2011_Aragon_Mordukhovich_JGlobalOptim.pdf) §4、(4.1)–(4.2) 区分强正则与强次正则，并研究逆图局部化。C382 的角度门及原近端证明为本库推导。

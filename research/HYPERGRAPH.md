@@ -1066,6 +1066,8 @@
 | E700 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [PPA-INVERSE-REGULAR-ENDPOINT · C378 局部强逆正则的原 PPA 端点](topics/common_structure/compensation_methods_2.md#inverse-endpoint) | 局部原逆关系单值Lipschitz常数kappa且lambda>2kappa时，小闭球中每个初值有可续接原轨道，收缩因子kappa/(lambda-kappa)。只含孤立局部零点和局部原根。；**derived-checked** |
 | E701 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [PPA-CONE-VARIATION · C379 有符号变差支付完整轨道长度](topics/common_structure/compensation_methods_2.md#cone-variation) | 完整乘积图F(a,b)={(h,g(b))}，g连续同号且所有h被L\|g\|控制时，任意正步长、所有合法原根轨道有限长；允许非孤立目标和无Hölder误差界，但未涵盖一般弯曲零集。；**derived-checked** |
 | E702 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [PPA-SHARP-WEAK-CONVEX-CAPTURE · C380 弱凸增长给完整残差与原步捕获](topics/common_structure/compensation_methods_2.md#sharp-capture) | 全局proper lsc弱凸势、有限最小值、lambda*rho<1时，全纤维支撑给一般增长残差下界；线性sharpness在显式局部半径内使原近端一步到最小点集。仅势算子子类。；**derived-checked** |
+| E703 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [PPA-TWO-ANCHOR-ANGLE · C381 双最近零锚的角度与误差界锐门](topics/common_structure/two_anchor_angle_inverse.md#two-anchor-angle) | 每条允许原边有输入最近锚余弦下界及同输出完整线性真误差界时，保留换锚差给两段严格门和长度预算。等号有完整单值原图见证。局部根覆盖需另给。；**derived-checked** |
+| E704 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [PPA-INVERSE-ANGLE-BRANCH · C382 原逆分支角度条件给覆盖和收敛](topics/common_structure/two_anchor_angle_inverse.md#inverse-angle-branch) | 闭残差球上连续原逆分支或闭图有界紧凸值逆子图，固定零锚且原端点严格径向扩张时，同一条件用于原根覆盖和局部点收敛。可有非孤立零集，不反推完整残差下界。；**derived-checked** |
 
 ## 不蕴含关系
 

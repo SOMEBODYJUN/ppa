@@ -10452,6 +10452,28 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "PPA-INVERSE-ANGLE-BRANCH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-TWO-ANCHOR-ANGLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13250,6 +13272,14 @@
     "E702": {
       "x": 814.0,
       "y": 5285.0
+    },
+    "E703": {
+      "x": 534.99,
+      "y": 5285.09
+    },
+    "E704": {
+      "x": 238.61,
+      "y": 5377.37
     }
   },
   "bounds": {
