@@ -7,6 +7,8 @@
 
 [C395 · 直线投影四边形的不变量](folded_projection_quadrilateral.md)从原图方向边界与半径边界导出定长比。在平方预算下，折返锚区间嵌套给点极限，且普通长度发散。
 
+[C397 · 非线性 RL--GMSR 补偿](nonlinear_modulus_compensation.md)把 \(\omega\) 与完整残差 gauge \(\psi\) 合成为 \(\Phi(t)=\psi(B(t)/\lambda)\)，以点态余量 \(\tau_{\rm eff}(t)=1-\Phi(t)/t\) 和 \(\sum_jB(\Phi^{\circ j}(t))\) 取代固定线性因子。它同时证明完整图量词下固定 \(A:d(y,S)\le\kappa d(x,S)\) 强制线性真残差下界，并区分 GMSR、metric regularity、选定图值和残差下确界。
+
 [C394 · 固定圆上的四边形不变量](diameter_chord_quadrilateral.md)给纯平面题面，三等分构造中弦平方是两高乘积的一半，重复作图时四个点趋于同一端点，反向定比刻画共点弦。
 
 [C392–C393 · 角度与完整残差的指数制衡](angle_residual_exponent_balance.md)识别精确乘积与换锚修正，证明锐临界幂 \(\beta=p-1\) 及临界常数。严格侧有平方步长可和，有限零集或两固定零点条件给平面点收敛，原例允许无限长度。

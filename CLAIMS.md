@@ -3454,3 +3454,12 @@
 - **Dependencies / Evidence / Scope**：正交投影的两次勾股分解。令 ΔM=a²−s²−b²、ΔC=2(at−b²)，则精确有 ΔM=2[t(a−t)−D²]=ΔC。因此单调性三角余量与 PPA 的高度下降减锚移补偿余量相等，归一化比值为 1。单调性角约束可写为 D²≤t(a−t)，并给出 a²−t²≥s²+D² 的平方预算；正则性只限制 t 与 s 的允许关系。若只保留这些不等式而不固定同一目标直线和共同法向，四边长含相对开集，不能存在非平凡连续恒量。
 - **Counterevidence / Scope**：目标集为一般曲线、两法向不平行、或 X、Y 异侧时，式中常数分别改变或失效。C395 的 t³/(YP1·P1P2)=L 含外加长度且含禁用锚距，只作为旧边界构造保存，不作为本轮答案。
 - **Related Files**：[修订题面与证明](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)。
+
+<a id="c397"></a>
+## C397-v1 · 非线性 RL--GMSR 补偿与固定 A 的线性边界
+
+- **Status**：derived-checked。函数级递推、点态余量、完整残差下界反演及量词反例逐式重构；不认证外部新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维普通 PPA，\(S\subseteq\operatorname{zer}F\) 非空闭，允许关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\) 有输入 coverage。最近输入零锚满足非减模 \(\omega\)，完整残差 \(r_F(y)=\inf_{v\in F(y)}\|v\|\) 满足非减 GMSR gauge \(d(y,S)\le\psi(r_F(y))\)。
+- **Function-level compensation**：令 \(B(t)=(t+\omega(t))/2\)、\(\Phi(t)=\psi(B(t)/\lambda)\)。若 \(\Phi\) 非减、\(\Phi^{\circ k}(t)\to0\)，且 \(\Theta(t)=\sum_{j\ge0}B(\Phi^{\circ j}(t))<\infty\) 并在零点趋零，则严格预算 \(\Theta(d(x^0,S))<\operatorname{dist}(x^0,X\setminus U)\) 给全部允许选择的无限续接、距离递推、有限长度及 \(S\cap U\) 中的极限。点态 \(\tau_{\mathrm{eff}}(t)=1-\Phi(t)/t\) 允许趋零。具体地，\(\tau_{\mathrm{eff}}(t)\ge c t^q\)、\(B(t)\le Ct^\alpha\)、\(\alpha>q\) 给 \(\Phi^{\circ j}(t)\le(t^{-q}+cqj)^{-1/q}\) 及有限尾势。标量等式递推在 \(\alpha\le q\) 时长度和发散。
+- **A-boundary**：若固定 A 被改写为 \(d(y,S)\le\Phi(d(x,S))\)，令 \(u_\Phi(t)=\inf\{u\ge t:\Phi(u)\ge t\}\)。在完整图值可反推为近端输入的窗口内，必有 \(r_F(y)\ge[u_\Phi(d(y,S))-d(y,S)]/\lambda\)。固定 \(\Phi(t)=\kappa t\) 因而强制 \(d(y,S)\le\kappa\lambda r_F(y)/(1-\kappa)\)，即线性真残差次正则。非线性 \(\Phi(t)=t-ct^{1+q}\) 只给 \(r_F\gtrsim d^{1+q}\)，对应 Hölder gauge \(d\lesssim r_F^{1/(1+q)}\)。
+- **Distinctions / Scope**：完整 GMSR、两变量 metric regularity、选定图值误差界和完整残差下界分别记录，不能互换。\(F(y)=\{y,y^3\}\) 只选 \(v=y\) 的分支可满足 selected-value A/B，但 \(r_F(y)=|y|^3\)，完整线性 GMSR 失败。固定 A 的线性强制须有完整图量词或短图值留域余量，不能从 B 单独推出，也不能升级为 metric regularity。完整正文见 [非线性模补偿](research/topics/common_structure/nonlinear_modulus_compensation.md)。
