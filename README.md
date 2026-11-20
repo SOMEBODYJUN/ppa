@@ -71,6 +71,8 @@
 
 [C396 · 同一目标直线上的四点投影不变量](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)给出本轮修正。若两锚在同一仿射目标直线上，X、Y 为同侧正交投影，则两条接缝平方分解消去 P1P2，得到 XP1²+YP1²−XY²=2XP1·YP2，所以只用四个指定边长的无量纲不变量等于 1。等价地，单调性三角余量 a²−XY²−YP1² 与 PPA 补偿余量 2(XP1·YP2−YP1²) 精确相等。单调性角约束和正则性半径关系只筛选允许构形。若只保留一般不等式而不加这条正交投影结构，则不存在非平凡四量恒等式。
 
+[2026-11-20 教师讨论稿 DD1（Obsidian 版）](research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md) 是对上传讨论稿的可渲染整理，保留 DD1 作为“几何充分条件草稿”的身份。配图把目标集 S 改画为任意闭集合的曲线轮廓；P1、P2 只是两个最近点，连接段不再暗示 S 为直线或存在垂直/平行关系。该稿不新增 Claims 条目，不把充分性、几何尖锐性或开放的必要性升级为规范定理。
+
 [C398 · 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门](research/topics/common_structure/affine_projection_gram_compensation.md)修正了 C396 的维数范围。仿射子空间上的正确恒等式是 a²+b²−s²=2at cosθ，并有四边长度的 Gram 缺陷；常数 1 只在共同法向或余维一同侧成立。图中 Aτ+BL 的分段 T(L) 则由最近性和三角不等式推出，在任意有限维欧氏空间都有效。完整图量词下 BL 已经是线性 GMSR 的近端重写，不能把这项结果表述成脱离正则性的来源定理。
 
 [C395 · 直线投影四边形的局部不变量](research/topics/common_structure/folded_projection_quadrilateral.md)保留方向许可、圆半径与步边、换锚和前后高度四种数据。直角与平方根半径边界共同给 \(YP_2^3/(YP_1\cdot P_1P_2)=L\)。平方预算由方向三角形推出，折返嵌套保证点极限，普通步长和仍发散。单独放宽两条边界会把该量推向常数的两侧。
@@ -319,6 +321,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
+| research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md | 给老师的 Obsidian 可渲染讨论稿；保留 DD1 的四点几何、分段补偿、充分性证明和开放问题，并嵌入任意闭集合 S 的新示意图。仅作 discussion-draft/source-report，不替代 CLAIMS.md 的规范身份。 |
+| research/audit/DD1_OBSIDIAN_DELIVERY_2026-11-20.md | 记录本轮 Obsidian 语法转换、任意闭集合图示修正、渲染检查和数学边界；用于恢复交付范围，不作为 DD1 的新证明。 |
 | research/topics/common_structure/orthogonal_projection_four_point_invariant.md | C396 的修订题设、两次正交分解、只含 XY、YP1、XP1、YP2 的恒等式，以及一般不等式不足以产生不变量的自由度诊断。 |
 | research/topics/common_structure/diameter_chord_quadrilateral.md | C394 的纯平面题面、弦平方与两条高的定比、两高收缩和四边形的迭代极限。反向证明确定共点弦。 |
 | research/topics/common_structure/angle_residual_exponent_balance.md | C392 的归一化圆幂恒等式、幂指数及常数锐门和原旋转反例。C393 的二维平方和点收敛条件、无限长度收敛原例及近锚方向亏损为零的漂移见证。分别检验指数交换与点收敛时读此页。 |
