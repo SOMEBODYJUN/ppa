@@ -3439,6 +3439,18 @@
 <a id="c395"></a>
 ## C395-v1 · 直线垂足四边形的双边界定长比与折返极限
 
-- **Status**：`derived-checked`。两阶段六席交叉复核，同一题设下独立检查了恒定性、续接、严格锚步递减和普通长度发散。
+- **Status**：`derived-checked`，但这是旧的边界构造，不是本轮要求的四边长不变量。它引入外部参照长度 L 并把 P1P2 放进恒量，故由 C396 取代为本轮几何候选。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定直线 \(S\)、一侧开半平面、\(L>0\)。\(P_1,P_2\) 是同侧 \(X,Y\) 在 \(S\) 上的垂足。记 \(a=XP_1,t=YP_2,b=YP_1,s=XY,D=P_1P_2\)。取 \(\angle XYP_1=90^\circ\)、\(t^2=Ls\)，则 \(t^3/(bD)=L\) 且 \(a^2-t^2=s^2+D^2\)。任意正初高可唯一确定后高，第一步选侧自由，随后选 \(P_{n+2}\in[P_n,P_{n+1}]\)；该链无限续接并点收敛于 \(S\)。\(\sum_n(s_n^2+D_n^2)=a_0^2\)，同时两种普通长度和均发散。沿每条链可从当前构形和 \(L\) 恢复同一个固定极限锚 \(Q\)，公式见正文。
 - **Dependencies / Evidence / Scope**：勾股、斜边射影、嵌套线段与交错级数。[题面、边界检验和证明](research/topics/common_structure/folded_projection_quadrilateral.md#folded-projection-invariant)。保持半径等号、放宽方向至钝角使定长比大于 \(L\)；保持直角、放宽半径至严格不等式使其小于 \(L\)。较宽的不等式支持已续接折返链的点收敛，定长比恒定的声明针对两边界子族。全程同向的等号链锚漂移至无穷。
+
+<a id="c396"></a>
+## C396-v1 · 同一目标直线上的四点投影不变量
+
+- **Status**：`candidate`。两次正交分解和不等式自由度诊断已独立复核；未宣称完成共同结构 M。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定仿射直线 ell。取 P1,P2 在 ell 上，并取同侧 X,Y 使 XP1 垂直 ell、YP2 垂直 ell，且 a=XP1>0,t=YP2>0。令 s=XY,b=YP1,D=P1P2。则 s²=D²+(a−t)²、b²=D²+t²，从而
+  XP1²+YP1²−XY²=2XP1·YP2,
+  and (XP1²+YP1²−XY²)/(2XP1·YP2)=1.
+  最终表达式只含 XY, YP1, XP1, YP2，不含锚距 P1P2 或外部参照长度。
+- **Dependencies / Evidence / Scope**：正交投影的两次勾股分解。单调性角约束可写为 D²≤t(a−t)，并给出 a²−t²≥s²+D² 的平方预算；正则性只限制 t 与 s 的允许关系。若只保留这些不等式而不固定同一目标直线和共同法向，四边长含相对开集，不能存在非平凡连续恒量。
+- **Counterevidence / Scope**：目标集为一般曲线、两法向不平行、或 X、Y 异侧时，式中常数分别改变或失效。C395 的 t³/(YP1·P1P2)=L 含外加长度且含禁用锚距，只作为旧边界构造保存，不作为本轮答案。
+- **Related Files**：[修订题面与证明](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)。
