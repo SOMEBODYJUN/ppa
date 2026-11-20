@@ -4653,5 +4653,25 @@
     "x": 486.3001130381717,
     "y": 1861.1063428479447,
     "system": "path"
+  },
+  "EUCLIDEAN-ANCHOR-ARC": {
+    "x": 336.26975653166267,
+    "y": 1419.843625533376,
+    "system": "path"
+  },
+  "PPA-REVERSE-SUPPORT-CIRCLE": {
+    "x": 306.2032632097733,
+    "y": 1879.7061056903246,
+    "system": "path"
+  },
+  "EUCLIDEAN-FORWARD-ANCHOR-BALLS": {
+    "x": -148.60890779328258,
+    "y": 1366.297852886265,
+    "system": "path"
+  },
+  "PPA-AFFINE-HYPERPLANE-ANGLE": {
+    "x": -340.6675725523126,
+    "y": 1654.1686252005206,
+    "system": "path"
   }
 }

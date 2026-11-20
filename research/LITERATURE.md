@@ -764,3 +764,8 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 
 
 - **逆关系三种稳定性。** [Dontchev–Rockafellar](https://sites.math.washington.edu/~rtr/papers/rtr191-RegularityConditioning.pdf) Theorems 2.2、3.2、4.2 分别给度量正则与逆 Aubin、次正则与逆 calmness、强度量正则与局部单值 Lipschitz 逆的刻画。[Aragón Artacho–Mordukhovich](https://rua.ua.es/dspace/bitstream/10045/29037/1/2011_Aragon_Mordukhovich_JGlobalOptim.pdf) §4、(4.1)–(4.2) 区分强正则与强次正则，并研究逆图局部化。C382 的角度门及原近端证明为本库推导。
+
+
+## 平面几何与两锚
+
+[来源与转接表](topics/common_structure/euclidean_two_anchor_geometry.md)核对 Euclid I.24、II.12–13、III.31、III.35–36 及中点、反演和支撑圆路线。C383–C386 的原 PPA 命题有自足证明。Federer §4.8 是正向投影延伸与 reach 的背景，不用于从唯一投影推出反向空球。

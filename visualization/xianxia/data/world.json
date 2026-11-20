@@ -10474,6 +10474,50 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-ANCHOR-ARC": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-FORWARD-ANCHOR-BALLS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-AFFINE-HYPERPLANE-ANGLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "PPA-REVERSE-SUPPORT-CIRCLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13280,6 +13324,22 @@
     "E704": {
       "x": 238.61,
       "y": 5377.37
+    },
+    "E705": {
+      "x": 424.87,
+      "y": 5286.83
+    },
+    "E706": {
+      "x": 1114.35,
+      "y": 5652.65
+    },
+    "E707": {
+      "x": 437.79,
+      "y": 5194.0
+    },
+    "E708": {
+      "x": 515.83,
+      "y": 5287.19
     }
   },
   "bounds": {

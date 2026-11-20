@@ -3343,3 +3343,35 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对有限维原 \(F\)、\(0\in F(p)\)、\(\lambda,R>0\)，若连续 \(Y:\overline B(0,R)\to\mathbb R^n\) 满足 \(Y(0)=p\)、\(v\in F(Y(v))\)，且所有 \(0<\|v\|\le R\) 有 \(2\langle Y(v)-p,v\rangle+\lambda\|v\|^2>0\)，则对每个 \(\|x^0-p\|\le\lambda R/2\)，存在始终留在该球、可无限续接并趋于 \(p\) 的原 PPA 轨道。
 - **Evidence / Dependencies**：D01、Brouwer、Kakutani、[正文](research/topics/common_structure/two_anchor_angle_inverse.md#inverse-angle-branch)。连续逆分支的位移模 \(\psi\) 和方向余弦下界 \(-\alpha\) 在 \(\lambda r>2\alpha\psi(r)\) 处交换。若 \(\psi(r)=\kappa r\)，门为 \(\lambda>2\alpha\kappa\)，线性见证使等号失败。非孤立、多值非线性见证的完整残差为 \(|b|^q,\ q>1\)。
 - **Counterevidence / Scope**：也允许闭图、一致有界的非空紧凸逆子纤维，要求零值纤维为 \(\{p\}\) 且角度条件覆盖所选逆子纤维。完整纤维下界不能由逆分支推出，不能据 C382 断言原一般 RLEB 导入、全部根收敛或完整 M。
+
+
+<a id="c383"></a>
+## C383-v1 · 两圆弧的精确锚距及标边补偿
+
+- **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
+- **Exact Statement / Objects / Scope**：任意有限维欧氏空间 n≥2、非空闭 S 及两个最近锚。对所定三角形 \(xyp_1\) 和 \(|yp_2|\)，锚距的精确区间为正文 (1)，各值均可平面实现。同时指定锚移 \(D\le L_{\rm a}\)、方向余弦 \(\le\alpha\) 时最小输入距离由 (2a) 给出。若 \(D\le\mu s\)、\(t\le\gamma s\) 则有 (2b)，严格正系数及覆盖、留域给长度与点收敛。完整反射解释取等同一平面；若固定六边或固定仿射目标，需另查维数。Thales 原图为二维、紧凸零集、全域覆盖，达到 C381 第二段等号。
+- **Evidence / Dependencies**：[两圆弧的精确锚距及标边补偿](research/topics/common_structure/euclidean_two_anchor_geometry.md#admissible-anchor-arc)。所引经典几何来源与具体代入同页。公开先行性未核。
+
+
+<a id="c384"></a>
+## C384-v1 · 反向空球与原 RL 的有限尺度锐界
+
+- **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
+- **Exact Statement / Objects / Scope**：任意有限维原关系与非空闭 S、\(a=d(x,S)>0\)。若同一个输入最近点 \(p_1\) 反向距离 \(\rho>0\) 的点仍以 \(p_1\) 为最近点，则给定 \(a,t,s\) 的换锚余量 \(B\) 满足 (4a)，维数≥2 的可变目标类逐边可达。一般反射模取代反射平方，完整线性误差界情形的最小非下降阈值为 (5a)。文中统一严格条件、工作域覆盖及有限前缀预算给原轨道点收敛。正 reach 本身不保证反向空球，单边锐性也不保证临界轨道存在。
+- **Evidence / Dependencies**：[反向空球与原 RL 的有限尺度锐界](research/topics/common_structure/euclidean_two_anchor_geometry.md#reverse-support-ball)。所引经典几何来源与具体代入同页。公开先行性未核。
+
+
+<a id="c385"></a>
+## C385-v1 · 双正向空球的锚移锐界
+
+- **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
+- **Exact Statement / Objects / Scope**：任意有限维欧氏投影配置，\(0<a,t<\rho\)。要求从 \(p_1,p_2\) 沿各自最近向量正向延伸到半径 \(\rho\) 时，两开球不交目标 \(S\)。固定锚距 \(D\) 的原步长精确下界由 (6) 给出，平面短弦圆周、长弦两点各自实现。反解得 (7)，只控制逐步锚移，累计收敛仍需额外证明。
+- **Evidence / Dependencies**：[双正向空球的锚移锐界](research/topics/common_structure/euclidean_two_anchor_geometry.md#forward-balls-anchor)。所引经典几何来源与具体代入同页。公开先行性未核。
+
+
+<a id="c386"></a>
+## C386-v1 · 余维一仿射目标的角度与误差界锐门
+
+- **Status**：`derived-checked`。平面证明、内积提升、取等构形与相应原图量词均已核对。
+- **Exact Statement / Objects / Scope**：有限维原 PPA，目标 \(S\) 为余维一非空仿射超平面。C381 同一锚角合同下，\(0\le\alpha<1\)，完整残差线性常数 \(K>0\)。\(\lambda/K>\alpha/\sqrt{1-\alpha^2}\) 时存在统一 \(\varepsilon>0\) 使 \(d(x,S)-d(y,S)\ge\varepsilon\|x-y\|\)。覆盖和留域同 C381。二维剪切在任意 \(0<\alpha<1\) 的等号处不收敛。\(\alpha=1\) 时不存在统一有限门。锐例需要非零切向维数，余维二及以上不能按单一有符号高度推导。
+- **Evidence / Dependencies**：[余维一仿射目标的角度与误差界锐门](research/topics/common_structure/euclidean_two_anchor_geometry.md#hyperplane-angle)。所引经典几何来源与具体代入同页。公开先行性未核。

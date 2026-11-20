@@ -5184,6 +5184,30 @@
       "label": "C382 原逆分支角度条件给覆盖和收敛",
       "file": "topics/common_structure/two_anchor_angle_inverse.md#inverse-angle-branch",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-ANCHOR-ARC",
+      "label": "C383 两圆弧的精确锚距及标边补偿",
+      "file": "topics/common_structure/euclidean_two_anchor_geometry.md#admissible-anchor-arc",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-REVERSE-SUPPORT-CIRCLE",
+      "label": "C384 反向空球与原 RL 的有限尺度锐界",
+      "file": "topics/common_structure/euclidean_two_anchor_geometry.md#reverse-support-ball",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-FORWARD-ANCHOR-BALLS",
+      "label": "C385 双正向空球的锚移锐界",
+      "file": "topics/common_structure/euclidean_two_anchor_geometry.md#forward-balls-anchor",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-AFFINE-HYPERPLANE-ANGLE",
+      "label": "C386 余维一仿射目标的角度与误差界锐门",
+      "file": "topics/common_structure/euclidean_two_anchor_geometry.md#hyperplane-angle",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13245,6 +13269,52 @@
       "output": "PPA-INVERSE-ANGLE-BRANCH",
       "relation": "conditional",
       "scope": "闭残差球上连续原逆分支或闭图有界紧凸值逆子图，固定零锚且原端点严格径向扩张时，同一条件用于原根覆盖和局部点收敛。可有非孤立零集，不反推完整残差下界。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E705",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "EUCLIDEAN-ANCHOR-ARC",
+      "relation": "conditional",
+      "scope": "对于任意至少二维的内积空间和两个最近锚，固定原步三角形与输出距离时，锚距的完整几何区间由两圆弧端点给出，平面取到。加锚距上界给锐一步距离下降式。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E706",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "PPA-REVERSE-SUPPORT-CIRCLE",
+      "relation": "conditional",
+      "scope": "同一输入最近锚满足反向空球条件时，给定输入距离、输出距离及原步长的换锚余量最小值精确求出。代入原一般反射模和完整误差界给一步门，均匀严格线性门加覆盖和留域给点收敛。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E707",
+      "inputs": [
+        "D04"
+      ],
+      "output": "EUCLIDEAN-FORWARD-ANCHOR-BALLS",
+      "relation": "conditional",
+      "scope": "两个最近锚分别允许固定半径正向空球，两个距离均小于球半径时，原步长随锚距的两段锐下界在平面可达。",
+      "status": "derived-checked",
+      "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E708",
+      "inputs": [
+        "PPA-TWO-ANCHOR-ANGLE"
+      ],
+      "output": "PPA-AFFINE-HYPERPLANE-ANGLE",
+      "relation": "conditional",
+      "scope": "锚角和同输出完整线性误差界作用在余维一仿射目标时，lambda/K>alpha/sqrt(1-alpha^2) 给统一长度支付。平面线性剪切达到边界。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
     }
