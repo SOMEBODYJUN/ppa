@@ -10595,6 +10595,17 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "EUCLIDEAN-DIAMETER-CHORD-QUADRILATERAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {

@@ -5250,6 +5250,12 @@
       "label": "C393 平方和与两固定零点的二维点收敛",
       "file": "topics/common_structure/angle_residual_exponent_balance.md#planar-two-fixed-zero-convergence",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "EUCLIDEAN-DIAMETER-CHORD-QUADRILATERAL",
+      "label": "C394 固定直径圆的四边形不变量",
+      "file": "topics/common_structure/diameter_chord_quadrilateral.md#diameter-chord-quadrilateral",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [

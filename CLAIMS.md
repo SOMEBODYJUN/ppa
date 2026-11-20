@@ -3428,3 +3428,10 @@
 - **Status**：`derived-checked`。有限聚点证明、零输入、全窗根覆盖及非孤立漂移核对完成。
 - **Exact Statement / Objects / Domain / Quantifiers**：取 C392 严格侧的统一小距离窗 \(D=\{x:d(x,S)\le r\}\) 和每个输入都非空、输出仍在窗内的受检原根子关系。所有坚持该选择的轨道满足 \(\sum s_k^2\le d(x^0,S)^2/\delta\) 且 \(d(x^k,S)\to0\)。若 \(S\) 有限，或有两个固定不同零点 \(z_i\in S\) 满足所有受检边 \(2\lambda\langle y-z_i,v\rangle\ge-C_i s^2\)（统一 \(C_i\ge0\)），则每条所选原轨道收敛到 \(S\) 中一点。
 - **Evidence / Dependencies / Scope**：C392、平方展开、两个圆的交集至多两点及渐近正则性。[二维点收敛证明](research/topics/common_structure/angle_residual_exponent_balance.md#planar-two-fixed-zero-convergence)。对于 \(p\ge2\)，最近锚方向亏损恰为零、完整残差幂和平方下降仍可与非孤立零线旁的无界漂移共存，见 F136。无限长度仍与正面点收敛兼容。
+
+<a id="c394"></a>
+## C394-v1 · 固定直径圆、共点弦与四边形的高乘积
+
+- **Status**：`derived-checked`。核对了两组相似、圆周点顺序、两高严格收缩与反向共点。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定直径 \(AB\) 的圆、圆心 \(O\) 及 \(C\in(O,B)\)，\(q=CB/AC\)。对上半圆 \(A\) 至最高点的任意 \(X\ne A\)，把 \(XC\) 与圆的另一交点的对径点记为 \(Y\)，垂足 \(P_1,P_2\) 分别来自 \(X,Y\)。则 \(AY/BY=q\,AX/BX\)，\(XY^2/(XP_1\cdot YP_2)=(1-q)^2/q\)，\(YP_2/XP_1\le 2q/(1+q^2)<1\)。\(AC=2CB\) 时不变量为 \(1/2\)。重复作图从每个允许初值趋于 \(A\)。反之，对上半圆上按 \(A,Y,X,B\) 排列的一族点对，若这一四边形比值恒定，则所有连接 \(X\) 与 \(Y\) 的对径点的直线共点于直径。
+- **Dependencies / Evidence / Scope**：圆周角、相似三角形、面积公式和托勒密定理。[纯几何题面与完整证明](research/topics/common_structure/diameter_chord_quadrilateral.md#diameter-chord-quadrilateral)。两高的比值实际随 \(X\) 变化。收敛与两高收缩的声明使用指定的半弧。
