@@ -3651,7 +3651,7 @@
 - **Status**：`derived-checked`。一步严格下降门在自由闭目标类中锐，临界失败由一个完整闭图的任意小初值见证。
 - **Exact Statement / Objects / Domain / Quantifiers**：沿用 C399 的普通 PPA 局部非空允许图、每边一个最近输入锚和输出真残差界，取 \(q>1\)，\(c=\lambda K^{-1/q}\)，\(u=c t^{1/q}>2t\)。在自由闭目标类上，所有满足该尺度缺陷预算 \(D\ge0\) 的边有 \(d(y,S)<t\) 当且仅当 \(D<u(u-t)\)。对 \(D(t)=Mt^p\)，该门在共同小窗成立当且仅当 \(M=0\)、\(p>2/q\) 或 \(p=2/q\) 且 \(M<c^2\)。严格侧一致收缩，并在正文的初值长度预算下保证所有选择续接、留域、有限长和点收敛。
 - **Evidence / Dependencies**：最近锚和 Cauchy–Schwarz 给 \(s^2-ts\le D\)，实际输出给 \(a\le K(s/\lambda)^q\)。两锚共线二周期同时达到最小不下降缺陷和真残差，缩放平移后并入全域投影图，覆盖任意小尺度且保持闭图。[完整理论及取等](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。
-- **Boundary / Related Files**：仅保留平方能量会给较弱的临界条件 \(2M<c^2\)。本构造允许多值预解式及非凸闭目标；连续单值和指定闭凸目标的锐性另验。见 [F145](FAILED_ROUTES.md#f145)、[§6 审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)。
+- **Boundary / Related Files**：仅保留平方能量会给较弱的临界条件 \(2M<c^2\)。本构造允许多值预解式及非凸闭目标；连续单值和指定闭凸目标的锐性另验；固定闭仿射零线在q>1的临界及次临界坏侧另有[C466](#c466)，不改变本卡的自由闭目标身份。见 [F145](FAILED_ROUTES.md#f145)、[§6 审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)。
 
 - **S06.01 机制补证（实际终稿三席复核通过；原定理身份不变）**：[PM1–PM8](research/canonical/dd2_power_defect_finite_length.md#dd2-power-regime-mechanisms)把坏输出的必要步尺度 \(u=\lambda K^{-1/q}t^{1/q}\) 与默认和函数逆下界分开，统一两支 \(D_{\rm crit}=\max\{u^2/2,u(u-t)\}\)；准确性仍属自由闭目标且规定Φ=−D≤0的类。非临界好支的 \(\beta=\min\{1,p/2\}\)（M=0另取1）给距离充分幂阶 \(q\beta>1\)，结合输出真残差和实际步尾可独立推出点误差的同一充分Q阶，不宣称最优。
 - **好临界非超线性见证 PM4-v1（实际终稿三席复核通过）**：任意 \(q>1,K,\lambda>0,0<M<c^2,p=2/q\)，取 \(r=hM^{q/2}\in(0,1)\) 和预设 \(\kappa\in(r,1)\)；在已由同一幂数据认证 \(\varphi=\kappa t\) 的小窗内，[PM9–PM12](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-critical-linear-chain)给实线紧目标 \(S=\{x_k+t_k\}\cup\{x_\infty\}\)、完整闭图 \(J=P_S+\{x_k\to x_{k+1}\}\)、\(F=(J^{-1}-I)/\lambda\)，其中 \(t_k=r^kt_0,s_k=\sqrt M\,t_k^{1/q}\)。全部近端覆盖、零集精确、每条图边保原真误差界和缺陷，全部轨道有限长。所有非终止轨道均为该链的某个后缀，具有距离比 r、点误差比 \(r^{1/q}\) 及准确尾 \(\sqrt M\,t_k^{1/q}/(1-r^{1/q})\)。源中核全部最近锚、完整纤维和闭性；反驳“q>1好侧一律超线性”，不把其图级 \(a=rt\) 冒称原预算的统一目标，也不声明固定凸目标或连续单值预解式的必要性。
@@ -3752,6 +3752,8 @@
 - **Boundary / Objections**：同一 \(\psi\) 与 \(D(t)\sim t^{2m}/2\) 能分别给有限长或无限长。必要性在统一类成立，保留余量可比、等号半径递增和二维反演范围。先行性未审尽。
 
 - **S05.04 补证**：[原余量正文](research/canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)把充分常数明写为 \(2^{m+2}\sqrt2K(1+mR^{2m-2})\)，并给取等壳的两侧估计。原同 K 可比、半径严格增、小窗及完整图量词全部保留；\(A_*\) 与预设 \(\varphi\) 的比较单列，不扩大到任意余量函数。
+
+- **S06.06 目标先行的余量接口（三席实际终稿复核通过）**：[WR3–WR10](research/canonical/dd2_power_defect_finite_length.md#dd2-power-condition-weakening)在本卡原m/λ/误差模和同壳可比合同内，先指定连续严格增φ，再取w=H−H∘φ、D=(H∘φ−t²)/2。共同缩窗使原Σ能量支和完整旋转三角均成立；WR6保支付常数和首出边预算，必要见证适用于原目标或逐点不小于匹配φ的目标，更紧目标须另验。幂余量及log(e/t)余量分别给m+γ<2与β>1，虽D/t^(2m)→1/2而可有限长；其原函数不受任何M'<1/2的临界帽或p>2m的上帽。不是任意signedD的分类，不改本卡身份或预签其他q/最优率。
 
 <a id="c425"></a>
 ## C425-v1 · 固定 DR 约化下原变量角变差与长度的精确刻画
@@ -4165,3 +4167,14 @@
 - **Conclusion — 全部实际轨道与精确指数**：任意 \(x^0=(u_0,v_0)\)、\(0<|v_0|\le R\) 的唯一完整轨道有界而不点收敛，其强聚点集恰为 \(\{(u_0-df(v_0/d)+d r_\circ(\cos\alpha,\sin\alpha),0):0\le\alpha<2\pi\}\)。任意正负初高度有 \(t_k\sim d(\nu k)^{-1/\nu}\)、\(s_k\sim d r_\circ(\nu k)^{-m/\nu}\)、\(\rho_k=r_F(x^{k+1})=s_k/\lambda\to0\)，\(\sum s_k^2\le t_0^2\)，\(\mathcal L_{0,N}\sim d r_\circ(\nu N)^{(m-2)/\nu}/(m-2)\to\infty\)。每个零点附近 \(r_F(y)\sim (r_\circ d^{1-m}/\lambda)d(y,S)^m\)，所以最高局部真误差界幂准确为 q，任何 q′>q 的有限常数版本都失败。K只保证全域有效，不称最佳或逐点取等。
 - **Dependencies / Evidence**：D01/E0 的原近端与 D04 的完整真残差；[BC1–BC15](research/topics/dd2/relaxation.md#dd2-subhalf-bounded-circle)自足证明差分连续、完整逆、两侧相位夹逼、全域幂模缩放、首次相位越界、实际前缀和。C447-A 提供差分结构的内部先例，不能直接由半阶证书推出本卡精确低幂。 [SF1–SF9](research/canonical/dd2_power_defect_finite_length.md#dd2-subhalf-strong-failures)另给完整无界剪切及半阶零缺陷全类 O(logN) 前缀上界，明确正幂增长的比较范围。
 - **Counterevidence / Objections / Scope / Related Files**：半阶 C447-A 已能有圆聚点，本卡不称点失败首次出现。S 为闭仿射凸仍不足点收敛；距离、实际步及完整真残差均趋零，平方步可和及轨道有界仍不足。原图实际违反全锚，故不反驳全锚 Fejér 的点收敛或有限维真凸近端的有限长度。r°<1 时另有正的 \(o(t^2)\) 锚下界，实际锚也为 o(t²)，不违反固定正二次锚的收缩。U=H 与距窗不变不等于任意小位置窗不变；负预算须另核原目标。 [S06.04](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-subhalf-strong-failures-acceptance)、[F148](FAILED_ROUTES.md#f148)登记失败机制；不认定公开新颖性。
+
+<a id="c466"></a>
+## C466-v1 · 闭仿射零线与处处非空原图的完整有界周期族
+
+- **Status**：`derived-checked`；三席独立重构并复核实际终稿、身份和E778，无未关闭实质异议；不改C415格点链、C416双锚周期或C465零缺陷圆族。
+- **Exact Statement / Objects / Domain / Assumptions**：任意q,K,λ>0，H=R²、S={0}×R、m=1/q、c=λK^(−1/q)、u(r)=c|r|^m。完整定义 \(\mathcal J(r,v)=\{(r,v+u(r)):v\le0\}\cup\{(r,v-u(r)):v\ge0\}\)，不满足条件的项为空。原 \(\psi(\rho)=K\rho^q,D_\psi=[0,\infty),\Phi_*(t)=-c^2t^{2/q}\)。完整原图 \(F(r,w)=\{(0,-u(r)/\lambda):w\le u(r)\}\cup\{(0,u(r)/\lambda):w\ge-u(r)\}\)。
+- **Quantifiers / Definitions / Conclusion — 全图**：两个条件片给所有且仅有的前像，故\(\mathcal J=J_{\lambda F}\)完整全域非空；F也处处非空、每纤维至多两值，两图均闭。精确zerF=S，零距输入唯一驻定。全部原边有a=t=|r|、s=u(r)、完整真ρ=u(r)/λ、Kρ^q=a，唯一最近输入锚(0,v)的内积恰−u²；Φ*和ψ全空间逐点取等。K是此幂的最小常数，任何q′>q的有限局部真模均失败，输出及前像可同趋任意零点。
+- **Conclusion — 原纯幂预算与窗口**：任意M>0,0<p<2/q，取0<R≤(M/c²)^(1/(2/q−p))，全部t≤R边也通过指定Φ=−Mt^p；不称较松p/M最佳。p=2/q,M≥c²亦通过，q>1时包含其准确临界坏侧，q≤1的更低锐常数不由此图判定。任意0<T≤R,V>u(T)，U={|r|<T,|v|<V}对全部完整输出不变，再交任意距离窗仍覆盖且不变。取V=2u(T)、T↓0得到同图任意小位置窗；其中全部F值和实际使用值的范数亦趋零。
+- **Conclusion — 全部真实轨道**：每条轨道r_k=r₀且|v_k|≤max(|v₀|,u(r₀))。任意正初距的每条选择都有恒正t、s=u(r₀)、ρ=s/λ，所以有界、不收敛、非渐近正则且总长无限；每个小盒内的(r₀,±u(r₀)/2)是实际二周期。只断言这些特定周期存在，v=0处允许后续换支，不宣称所有路径最终固定周期。零初距另驻定。
+- **Dependencies / Evidence**：D01/E0原近端、D04完整真残差；[AF1–AF7](research/canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)直接反解全部纤维、两闭片、全输出锚积和max不变界。 [WR1–WR10及S06.06](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-condition-weakening-acceptance)区分纯幂类、函数余量类与固定图。证据为完整解析证明，不以数值轨道替代。
+- **Counterevidence / Objections / Scope**：本图每个正距a=t，违反任何φ<t；它证明较弱原数据不能认证指定A，不违反已满足Σ的完整DD2定理。原图多值且近端不处处唯一连续，AF4对零锚负积排除单调/凸次梯度。反向不是固定F必须失败的判据，也不授任意指定凸目标或更强signedΦ。 [F145](FAILED_ROUTES.md#f145)记录边界；没有公开新颖性认定。

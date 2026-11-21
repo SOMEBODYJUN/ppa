@@ -11311,6 +11311,17 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-AFFINE-BOUNDED-CYCLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14409,6 +14420,10 @@
     "E777": {
       "x": 2299.71,
       "y": 5740.62
+    },
+    "E778": {
+      "x": 2184.92,
+      "y": 5650.82
     }
   },
   "bounds": {

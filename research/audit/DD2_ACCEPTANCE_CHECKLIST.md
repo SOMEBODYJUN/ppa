@@ -414,7 +414,12 @@
   - **证据** [精确常数与量词验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-critical-power-constants-acceptance)、[CK1–CK10三支及指定曲线证明](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)、[DD1每个坏系数的完整实际图](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)、[C416同图全部坏尺度](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)、[原分段补偿](../topics/dd2/core.md#dd2-main-theorem)。
   - **复核** 三席先完成四项实际自检，分别冷启动重建次线性/线性/强幂瓶颈，再逐源核CK1–10、原D1K/C416/PL/SF、三条身份支持、失败路线及全部八处实际终稿和四栏。复算同锚双门、K/λ换参、L=1/2合锚、q→1极限例外、原signed步根和零输入；完整坏图每个参数、输出纤维/残差、局部EB与全域同胚、首出边预算及45/64位置窗均核。CK7负导数、CK8实际半径与同边取等、CK9次项、CK10两步终止独立核准；明确公式CK3的降距门与指定目标门不互换，跨参数各选一图、低半阶长度/点失败另有原证据。无未关闭实质异议；只签S06.05，不预签后续分区或最优率。
 
-- [ ] `S06.06` `pq>2` 是否能够进一步削弱？
+- [x] `S06.06` `pq>2` 是否能够进一步削弱？
+  - **裁决** Proved
+  - **结论** 能。原纯幂预算的自由闭目标完整类可将pq>2放宽到pq=2且M低于c²/2、T(K/λ)、c²三支常数；M=0时任何p。M>0的pq<2不能普遍加入，新C466在固定闭仿射零线、F处处非空、完整真界取等及全选择任意小位置盒不变下，使所有正初距轨道有界而恒距、恒正步、不收敛且无限长。q>1/2的好门结合相应覆盖/位置预算给有限长与点；q≤1/2即M=0或pq>2也没有这两种统一保证。若保原缺陷函数形状，还可用C424的明确子类：λ=K=1、1<m=1/q<2、先给严格增φ，w=H−H∘φ满足正性/上帽/同壳可比，D=(t^(2m)−w)/2；准确长度积分∫u^(m+1)/w。D/t^(2m)可趋1/2而有限长：幂余量门m+γ<2，临界对数门β>1。此为另一个有附加前件的函数分支，不把纯幂门变成非严格，不宣称任意signedD分类。预设φ仍先经原Σ认证；固定图的好坏不由所选幂标签反判。
+  - **证据** [完整验收与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-condition-weakening-acceptance)、[WR1–WR10参数与原目标接口](../canonical/dd2_power_defect_finite_length.md#dd2-power-condition-weakening)、[C466的AF1–AF7完整纤维与真实周期](../canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)、[C424原余量充要与实际图](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)、[D1S11准确单项常数仍非固定图必要](../topics/dd2/dd1_recovery.md#dd1-pointwise-strict-boundaries)。
+  - **复核** 三席先独立重构，再复读九处实际正文/登记、E778与四栏；核准三支严格系数、M=0和q≤半阶边界，WR3连续严格增目标/同壳可比/全空间完整覆盖、WR6首出边支付与幂/对数反向。AF1–AF7的全部前像、处处非空原纤维、精确q/K、0<p<2/q、全选择小盒不变和确有二周期逐式核准；全选择不收敛未改称全部周期。D1S11最小单项常数与有界残差换幂均另核，必要性不转授更强固定Φ、紧目标或受限图类。无未关闭实质异议；只签S06.06及C466，不预签下一项。
+
 - [ ] `S06.07` 是否存在使当前指数条件成为必要条件的明确算子子类？
 - [ ] `S06.08` 在 `p,q` 固定时，能否刻画最优收敛速率？
 - [ ] `S06.09` 是否能够构造达到速率上界的算子？

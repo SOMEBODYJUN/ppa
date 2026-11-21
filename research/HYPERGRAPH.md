@@ -1342,6 +1342,12 @@
 | --- | --- | --- | --- |
 | E777 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-SUBHALF-BOUNDED-CIRCLE · C465 精确低幂全域完整近端的有界圆聚点及幂次前缀](topics/dd2/relaxation.md#dd2-subhalf-bounded-circle) | C465-v1：任意0<q<1/2,K,λ,R>0及0<r°≤1，m=1/q,ν=2m−2,K*=2r°^(−1/m),d=(K/(K*λ^q))^(1/(1−q))。H=R²×R,S=R²×0,U=Vψ=H,Φ0,ψ=Kρ^q全域；g(v)=v+sgn(v)\|v\|^(2m−1),θ(a)=a^(2−m)/(m−2),f(v)=r°(cosθ(\|v\|),sinθ(\|v\|))于v≠0,b=f∘g−f非零处,b0=0,F(y)=dF*(y/d)/λ,F*(u,v)=(b(v),g(v)−v)。差分积分夹逼给连续完整原图、全域同胚J、exactzeroS、完整ρ=s/λ及原全域真界，最高局部幂准确q，K不称最优。c=λK^(−1/q),φ=T_c⁻¹预先数据认证，实际后继更小；任意R全距离窗不变，所有正初距/正负高度轨道有界、准确聚点为平面整圆，t~d(νk)^−1/ν,s~dr°(νk)^−m/ν,平方和≤t0²,前缀~dr°(νN)^((m−2)/ν)/(m−2)。零面驻定；全锚实际失败，非单调且不属凸全局近端子类。r°<1正锚仍o(t²)，不是固定正二次。C447仅提供差分结构先例，新相位和精确q自足核；半阶已可能整圆，不称定性首次。SF8半阶Φ0全类O(logN)比较独立，不移到负预算或预签全部最优率；U=H不授任意小位置窗，无新颖性认定。；**derived-checked** |
 
+## DD2 纯幂削弱的闭仿射反向
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E778 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-AFFINE-BOUNDED-CYCLE · C466 闭仿射零线与处处非空原图的完整有界周期族](canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle) | C466-v1：q,K,λ>0，H=R²,S={0}×R,c=λK^(−1/q),u(r)=c\|r\|^(1/q)。完整J(r,v)向v≤0加u、向v≥0减u，v=0保双支；全部原F(r,w)为(0,−u/λ)当w≤u、(0,+u/λ)当w≥−u，条件片并覆盖全部输出。两图闭且处处非空，F每纤维≤2值，exactzeroS，r=0驻定。每边a=t=\|r\|,s=u,完整rho=u/λ,Kρ^q=a，唯一输入锚(0,v)内积−u²；全域Phi*=−c²t^(2/q)和psi精确，K最小且q最高局部幂。任意M>0,0<p<2/q取c²R^(2/q−p)≤M，全部受检边通过原Phi=−Mt^p；p=2/q,M≥c²也通过，q>1覆盖其临界坏侧而不替代q≤1较小锐常数。盒\|r\|<T,\|v\|<V且V>u(T)全输出不变，T≤R，V=2u(T)给任意小同图位置窗；每正距所有轨道有界、恒正距/步/残差、不收敛且无限长，±u/2实际2周期，零输入另驻定，不声称所有路径最终同周期。违反每个严格phi，故只反驳弱数据认证A，不反驳满足Sigma的DD2。多值非单调，不授唯一连续近端或凸全局最小化；C415/C416旧身份不变，无新颖性判断。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
