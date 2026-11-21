@@ -3602,10 +3602,18 @@
 - **Dependencies / Related Files**: [精确定理与证明](research/canonical/dd2_general_phi_exact.md)、[§1-§3 逐题审计](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[C400 负缺陷版本](research/topics/dd2/core.md#dd2-reverse)。固定凸或仿射目标、固定连续单值图、无限维最近点和轨道级反向必要性另需条件。
 
 <a id="c415"></a>
-## C415-v1 - q 大于 1 次临界幂次的固定闭图失败链
+## C415-v1 - q 不小于 1 的次临界幂次固定闭图失败链
 
-- **Status**：`derived-checked`；当 M>0 且 p<2/q、q>=1 时为 `Refuted`（无条件有限长度或距离收敛命题）。临界 p=2/q 的最优常数仍 `Open`。
+- **Status**：`derived-checked`；当 M>0 且 p<2/q、q>=1 时为 `Refuted`（无条件有限长度或距离收敛命题）。临界常数由 C285（q=1）及 C416（q>1）裁决。
 - **Exact Statement / Objects / Domain / Quantifiers**：取有限维 R²、lambda>0、h=K/lambda^q、c>=h^(-1/q)，足够小 t>0，L=c t^(1/q)，t<L/2。令 S={k L e1:k 属于 Z}，x_k=k L e1+t e2。令 J(u) 包含 P_S(u)，并在每个 x_k 额外包含 x_(k+1)；定义 F=(J^(-1)-I)/lambda。则 S 闭、J 全域非空、图闭且 zer F=S。
 - **Proof / Conclusion**：投影边输出在 S，缺陷为零；特殊边 x_k 到 x_(k+1) 的输入最近锚 p_k 满足内积=-L²，输出距离为 t。由于 x_(k+1) 不在 S，投影边不会以它为输出，额外边的唯一前驱是 x_k；故由 F(v)=(J^(-1)(v)-v)/lambda 得完整真残差为 L/lambda。因为 p<2/q，缩小 t 后 L²=c² t^(2/q) <= M t^p；因为 c>=lambda K^(-1/q)，有 t <= K(L/lambda)^q。故同一完整闭图满足 DD2 的所有边量词，却存在 d(x_(k+1),S)=t 的不下降轨道。
-- **Boundary / Scope**：构造只裁决 M>0 的 p<2/q 失败侧；M=0 或 p=2/q 的临界常数需要另行构造。它修正了把 q>1 失败仅写成几何 obstruction 的过弱表述。
+- **Boundary / Scope**：本构造只裁决 M>0 的 p<2/q 失败侧。q=1 时应选 c>2 以满足 t<L/2。M=0 和临界幂次的结论见 C416 及 C285。
 - **Evidence / Related Files**：[§4–§8 幂次审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)、[失败路线 F145](FAILED_ROUTES.md#f145)、[C400 一步几何](research/topics/dd2/core.md#dd2-reverse)。
+
+<a id="c416"></a>
+## C416-v1 · q 大于 1 的幂次缺陷锐常数与完整闭图临界二周期
+
+- **Status**：`derived-checked`。一步严格下降门在自由闭目标类中锐，临界失败由一个完整闭图的任意小初值见证。
+- **Exact Statement / Objects / Domain / Quantifiers**：沿用 C399 的普通 PPA 局部非空允许图、每边一个最近输入锚和输出真残差界，取 \(q>1\)，\(c=\lambda K^{-1/q}\)，\(u=c t^{1/q}>2t\)。在自由闭目标类上，所有满足该尺度缺陷预算 \(D\ge0\) 的边有 \(d(y,S)<t\) 当且仅当 \(D<u(u-t)\)。对 \(D(t)=Mt^p\)，该门在共同小窗成立当且仅当 \(M=0\)、\(p>2/q\) 或 \(p=2/q\) 且 \(M<c^2\)。严格侧一致收缩，并在正文的初值长度预算下保证所有选择续接、留域、有限长和点收敛。
+- **Evidence / Dependencies**：最近锚和 Cauchy–Schwarz 给 \(s^2-ts\le D\)，实际输出给 \(a\le K(s/\lambda)^q\)。两锚共线二周期同时达到最小不下降缺陷和真残差，缩放平移后并入全域投影图，覆盖任意小尺度且保持闭图。[完整理论及取等](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。
+- **Boundary / Related Files**：仅保留平方能量会给较弱的临界条件 \(2M<c^2\)。本构造允许多值预解式及非凸闭目标；连续单值和指定闭凸目标的锐性另验。见 [F145](FAILED_ROUTES.md#f145)、[§6 审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)。

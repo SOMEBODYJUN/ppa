@@ -2,7 +2,9 @@
 
 **当前主任务进行中。** 逐题完成[作者原版最终验收协议](../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)的 §1–§17，交齐第九部分要求的资产，并用证据回答第八部分的 28 问和最终六问。原协议逐字节保留，是验收要求的唯一准绳。
 
-在远端基线 `12ded0c` 上，[上一轮矩阵](DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md)逐项审计的是[原交接稿](../manuscripts/dd2/DD2_outline_and_pro_handoff.md)的 P0–P3，共七条任务。其证据可用于新版协议的对应问题。矩阵没有 §1–§17 的逐问裁决，也没有交付第九部分的完整证据链。Git 和静态检验的成功只确认各自检查的范围。以下为逐节初诊，供接续者定位证据和缺口。当前尚无整节签收。
+阶段提交 `cd028d5` 的[主索引](FINAL_PROTOCOL_MASTER_2026-11-21.md)建立了题号覆盖。复核关闭了作者原 F1–F3 的充分性、DD1 一般完整闭图锐性的状态冲突及 \(q>1\) 的临界算子常数，见[复核增量](FINAL_PROTOCOL_FINAL_REVIEW_2026-11-21.md#dd2-cd-review)。完整证明、算子类包含图和文献比较矩阵仍有明确的未交付内容。
+
+远端基线 `12ded0c` 的[旧矩阵](DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md)审计的是[原交接稿](../manuscripts/dd2/DD2_outline_and_pro_handoff.md)的 P0–P3，共七条。以下保存这一基线后的逐节初诊。最新证据见上方主索引和复核记录。
 
 ## 逐节初诊
 

@@ -1,12 +1,12 @@
-# 2026-11-21 原协议验收 checkpoint
+# 原协议验收进度
 
-本轮已建立 [最终协议主索引](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md)，逐项覆盖 §1–§17、28 个深层问题、10 项强制交付物和最终六问。三份分节审计保存每个题号的状态、量词和证据：
+阶段提交 `cd028d5` 建立了 [协议主索引](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md) 和三份分节审计。后续复核发现原 F1–F3 被替换、DD1 完整图锐性被额外连续单值要求掩盖、\(q>1\) 临界常数可以补证。仍未达到原协议最终交付门。当前证据按以下范围使用。
 
 - §1–§3：一般符号 Phi 的精确根区间、正部公式反例、DD1 两段门及算子层 sharpness 边界；C414 的正式证明在 `research/canonical/dd2_general_phi_exact.md`。
-- §4–§8：严格下降、距离/点/长度分离、F1–F3、完整幂次分区、实际算子类和八个猜想攻击。q=1 和 q>1 已按一般闭集的不同最近锚量词修正，不能使用同锚三角不等式。
+- §4–§8：原 [F1–F3](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3) 由 C401 恢复；[C416](CLAIMS.md#c416) 给出 \(q>1\) 的锐常数与一个完整图的任意小二周期；[C399 的剪切见证](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates) 核实 \(0<q<1\) 的距离率及 \(q>1/2\) 的尾长、点误差指数。
 - §9–§17：PPPA reduction、shadow recovery、双残差、算法、分裂、文献、原创性和独立审查。
 
-当前真实状态不是“所有普遍命题 Proved”。已闭合的是写明对象类下的几何、势、幂次端点、固定步分裂和条件性 recovery；仍开放的是任意振荡 gauge 的必要性、一般弯曲闭凸低 L 的完整固定图、弱 kernel full coverage、非唯一 fiber 的所有选择强恢复、统一异步/变图/非分离分裂，以及全球优先性。
+接续优先处理一般振荡 gauge 的必要性及最优尾势、在同对象量词下完成文献与严格包含/不可比较证据，以及尚未闭合的 fiber 与算法问题。指定闭凸目标或连续单值近端的 \(q>1\) 临界锐性单列。已审模块可以成文，全协议仍开放。
 
 最新验证：`python3 research/validate_assets.py`、`python3 research/code/dd2/verify_outline.py` 和 `python3 research/build_graph.py` 均通过。
 

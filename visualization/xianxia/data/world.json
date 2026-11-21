@@ -10738,6 +10738,17 @@
       "y": 5151,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-SUPERLINEAR-POWER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13624,6 +13635,10 @@
     "E724": {
       "x": 670.92,
       "y": 5134.09
+    },
+    "E725": {
+      "x": 607.88,
+      "y": 5197.55
     }
   },
   "bounds": {

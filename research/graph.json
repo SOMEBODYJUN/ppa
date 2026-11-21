@@ -5328,6 +5328,12 @@
       "label": "C413 有限维闭凸目标的严格步长支收敛锚障碍",
       "file": "topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-SUPERLINEAR-POWER",
+      "label": "C416 超线性输出幂的锐缺陷门与完整图二周期",
+      "file": "canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13630,6 +13636,18 @@
       "output": "DD2-LOW-L-CONVEX-ANCHOR",
       "relation": "conditional",
       "scope": "有限维闭凸目标上连续逐步达到严格低 L 步长支，等号几何与相对法锥的统一支撑方向排除收敛锚链和可和轨道。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E725",
+      "topic": "DD2 反向补偿与轨道",
+      "inputs": [
+        "DD2-REVERSE-A",
+        "D04"
+      ],
+      "output": "DD2-SUPERLINEAR-POWER",
+      "relation": "conditional",
+      "scope": "q 大于 1 的输出真残差幂模配合同一最近锚的最大步长约束；一般闭目标完整图的临界缺陷和任意小初值二周期。",
       "status": "derived-checked"
     }
   ]

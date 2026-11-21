@@ -64,7 +64,7 @@ q\in F(z)\Longleftrightarrow q\in G(z-q)
 
 **状态：Conditional。**
 
-原始影子 \(\mathscr H(z)=(P+A)^{-1}Cz\) 的单值性给 G/F 的相应单值性。集合值 A 或非唯一 kernel lift 产生多值约化图。局部定义只需 \(\mathscr H(z)\) 在工作窗非空。全域定理需要全域非空或有限前缀留域。
+由 \(J_G=C^*\mathscr H\) 及 \(F=I-J_G\)，在非空输入纤维上，\(F\) 单值恰当且仅当该物理纤维的所有点有同一个 \(C^*\) 像。物理影子单值是充分条件。多物理影子可能共享一个约化值，见 [C404 的交替核分量例](../topics/dd2/pppa_recovery.md#dd2-pppa-recovery)。\(G\) 的单值性需另证。例如 \(P=C=I,\ A=N_{\{0\}}\) 时，\(\mathscr H\equiv0,\ F=I\) 单值，但 \(G=A\) 在零点取整个空间。局部定义只需 \(\mathscr H\) 在工作窗非空，轨道续接还需留域。
 
 ## §9.5 零集关系
 
@@ -76,7 +76,7 @@ q\in F(z)\Longleftrightarrow q\in G(z-q)
 
 **状态：Conditional / Partial。**
 
-有限维加闭零集和有界 recovery 时，C* 投影目标闭。一般无限维线性像不自动闭。pppa_recovery.md 的闭双曲线投影例说明原零集闭并不保证 C*Z 闭。
+有限维时，若 \(Z\) 闭，且每条收敛的 \(z_j\in C^*Z\) 都能选有界的零点原像 \(x_j\in Z,\ C^*x_j=z_j\)，则取 \(x_j\) 的收敛子列即得 \(C^*Z\) 闭。仅控制迭代产生的物理 lift 并未给出这一零集原像量词。闭双曲线反例表明，有限维闭集的线性像也可能不闭，见 [C404](../topics/dd2/pppa_recovery.md)。
 
 ## §9.7 最近点
 
@@ -336,11 +336,12 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 
 ---
 
+<a id="dd2-protocol-deliverables"></a>
 # 第九部分交付物
 
 1. **状态：Conditional / Partial。** Canonical Theorem Statements：C400–C406、C408、C410–C412 和对应正文。证据：`CLAIMS.md` 对应记录及 `research/topics/dd2/`，通用未闭版本保持 Open。
 2. **状态：Partial。** 完整证明：core、relaxation、dual_eb、pppa_recovery、inexact、splitting。通用未闭版本保留 Partial/Open。证据：各正文 proof 段和本文件 §17，尚无单一无条件 master proof。
-3. **状态：Proved / Reproducible。** Dependency Graph：research/graph.json、research/HYPERGRAPH.md 和 README Claim Map。证据：`research/build_graph.py` 输出 955 nodes、720 edges。
+3. **状态：已生成依赖图。** Dependency Graph：research/graph.json、research/HYPERGRAPH.md 和 README Claim Map。构建程序确认已录入的节点、边和锚点结构，承重数学依赖仍按命题逐项审查。
 4. **状态：Proved as indexed asset。** Counterexample Atlas：FAILED_ROUTES、C399/C400、pppa_recovery、inexact、splitting。证据：相关文件中的编号反例及 `FAILED_ROUTES.md`。
 5. **状态：Partial。** Literature Matrix：research/LITERATURE.md 和 P0 逐式审计。证据：`research/LITERATURE.md` 与 `DD2_P0_PRIOR_ART_2026-11-21.md`，全球优先性仍 Open。
 6. **状态：Partial。** Operator-Class Map：CLAIMS、README、C312/C315/C400/C404/C405。证据：对应 Claim 的对象和量词，严格全包含关系尚未全部判定。

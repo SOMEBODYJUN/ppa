@@ -11,7 +11,7 @@
 - `Partial` / `Open`：有可靠中间结果，但主命题或必要性尚未闭合。
 - `Refuted` / `Invalid`：原无条件命题有满足量词的反例，或候选公式在声明域上不是精确对象。
 
-本轮已经逐题处理并保存证据，但不能宣布“无条件统一 DD2 总定理”。最主要的已裁决失败是：正 Phi 时 D=[-Phi]_+ 不是精确包络；严格距离下降不推出有限长度；q=1/2 的完整图可距离收敛而长度发散；约化收敛不推出非唯一 fiber 的完整 shadow 收敛；统一异步、变图和一般 gauge 反向必要性仍 Open。
+阶段提交 `cd028d5` 已建立题号与证据入口。后续[证据复核](FINAL_PROTOCOL_FINAL_REVIEW_2026-11-21.md#dd2-cd-review) 发现部分数学裁决需改正，且完整证明、算子类图和文献矩阵尚有未交齐项目。全协议仍在进行。统一异步、变图和一般 gauge 反向必要性仍 Open。
 
 ## 2. Canonical theorem versions
 
@@ -22,7 +22,7 @@
     0 <= s <= B(t),
     (t-s)_+ <= a <= min(t+s, sqrt(t^2+2D(t)-s^2))
 
-在二维自由两锚闭目标几何中逐尺度尖锐。线性 eta(s)=L s 给出 DD1 两段门 T(L)；算子层的单一连续单值全窗 sharpness 另有条件，不能从二维构形自动推出。
+在二维自由两锚闭目标几何中逐尺度尖锐。线性 eta(s)=L s 给出 DD1 两段门 T(L)。C285 的正交近端与离散零集二周期证明一般完整闭图类的锐性，连续单值及指定目标子类另验。
 
 证据：`research/topics/dd2/core.md#dd2-reverse`，C400，C285，`FINAL_PROTOCOL_S1_S3` 的 §3。
 
@@ -36,9 +36,9 @@
 
 完整陈述和证明：`research/canonical/dd2_general_phi_exact.md`；Claim：`CLAIMS.md#c414`；逐题入口：`research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md#§2-一般-phi-psi-的完整刻画`。
 
-### T2：一般势和幂次有限长度 / C401、C399
+### T2：一般势和幂次有限长度 / C401、C399、C416
 
-chi 由 t=s+eta(s) 的逆或下广义逆给出。严格同一步耗散和 Theta(t)=integral u/chi(u) du 的可积性给有限前缀留域、尾长和极限识别。幂次的 pq 分区只在 0<q<1 的 C399 类中直接成立；q=1 必须保留一般闭集的 DD1 两段缺陷门 T(h)=(1-h)/h²（h<=1/2）或 1/(2h²)（h>=1/2），并要求 p>2 或 p=2 且 M<T(h)；q>1 的正面几何证明至少需要 p>2/q 或 p=2/q 的小常数门。p q<2 且 M>0 已有固定闭集完整图链反例，临界 q>1 算子锐性仍 Partial/Open。q=1/2 的完整图旋转是无限长度 sharp 端点。
+同一步耗散加 C401 的积分可积性给有限前缀留域和尾长，并恢复[作者原 F1–F3](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3)。当 \(p=2/q\) 时，令 \(c=\lambda K^{-1/q}\)；统一严格下降的锐常数依次为 \(M<c^2/2\)（\(0<q<1\)）、\(M<T(K/\lambda)\)（\(q=1\)）、\(M<c^2\)（\(q>1\)）。\(pq>2\) 或 \(M=0\) 在小窗给下降。\(q\le1/2\) 的距离收敛允许长度发散甚至点逃逸，\(1/2<q<1\) 的距离、点误差和实际尾长指数有剪切见证。\(q>1\) 的临界失败在一个完整闭图上有任意小初值的二周期。
 
 证据：`research/topics/dd2/core.md#dd2-general-gauge`、`research/canonical/dd2_power_defect_finite_length.md`、`FINAL_PROTOCOL_S4_S8` §5–§6。
 
@@ -66,10 +66,10 @@ CP/DR、FBF、外梯度、FRB 及固定网络前向—后向只在文件列出�
 | --- | --- | --- |
 | §1.1–§1.10 DD2 身份 | `FINAL_PROTOCOL_S1_S3_2026-11-21.md` §1 | 普通对象和量词 Proved/Conditional；Hilbert、全锚和全窗算子 sharpness Conditional |
 | §2.1–§2.10 一般 Phi, psi | 同文件 §2；C414 | Phi<=0 自由几何 Proved/Sharp；任意符号旧 D+ sharp 主张 Invalid；不连续/振荡全局必要性 Partial/Open |
-| §3.1–§3.10 DD1 | 同文件 §3；C400/C285 | 两段 T(L) 自由几何 Sharp，完整局部 PPA 全窗版本 Partial |
+| §3.1–§3.10 DD1 | 同文件 §3；C400/C285 | 两段 T(L) 在自由几何和一般完整闭图类均 Sharp；受限子类另验 |
 | §4.1–§4.10 收敛区分 | `FINAL_PROTOCOL_S4_S8_2026-11-21.md` §4 | 距离、点、平方和、长度、残差分层；无条件严格下降到长度 Refuted |
 | §5.1–§5.10 F1–F3 与势 | 同文件 §5 | C401/F1–F3 是充分路线；一般必要性和所有 gauge Open/Partial |
-| §6.1–§6.10 幂次 | 同文件 §6 | 0<q<1 的 pq 门 Sharp；q=1、q>1 另分支；q>1 的 pq<2 且 M>0 已有链反例；把 pq 作为全部 q 的统一律 Invalid |
+| §6.1–§6.10 幂次 | 同文件 §6；C285/C399/C416 | 一般闭目标完整图类的三种临界常数和长度端点 Sharp；受限图类的最优率仍 Partial |
 | §7.1–§7.10 实际算子类 | 同文件 §7 | 有 Holder、非单调、非凸、非孤立和多值例；全类严格包含关系 Partial |
 | §8.1–§8.8 猜想攻击 | 同文件 §8 | 八个无条件猜想均有 Refuted 或 Conditional 边界 |
 | §9.1–§9.12 约化前向 | `FINAL_PROTOCOL_S9_S17_2026-11-21.md` §9 | 闭值域和完整 lift 下 Conditional/Proved；非闭投影和 kernel 逆向 Refuted |
@@ -105,7 +105,7 @@ flowchart TD
 - 正 Phi 的 D+ 非尖锐：C414 反例。
 - 严格下降但无限长度：`core.md#dd2-trajectory` 的 L=1 调和旋转。
 - q=1/2、q<1/2 完整图无限长度：`FINAL_PROTOCOL_S4_S8` §6.3。
-- q>1 或 q=1 在 pq<2 且 M>0 的固定闭集链反例：`FINAL_PROTOCOL_S4_S8` §6.5。
+- \(q>1\) 的临界及次临界完整闭图二周期：[C416](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。\(q\ge1\) 的横向固定闭图链见 C415。
 - 低 L 固定闭图与闭凸锚障碍：C411、C413、`lowL_dynamic_sharpness.md`。
 - 远 kernel、非唯一 fiber、非闭投影目标：`pppa_recovery.md` 逆向障碍。
 - 选定图值冒充完整真残差：C408 的 G(y)={y,y³}。
@@ -118,7 +118,9 @@ P0 审计逐式核对 Lauster–Luke 2021、Alcantara v1、Li–Mordukhovich 201
 
 算子类图应按共同对象和量词比较：普通 PPA ⊂（在附加覆盖条件下）退化 PPPA 的约化子类；几何 DD2 包络覆盖更多自由闭目标构形，但固定凸/单值全图的严格包含仍未证明；CP/DR、FBF、EG、FRB 是各自能量证书的交叉子类，不组成无条件统一包含链。
 
-## 7. 强制交付物定位
+## 7. 强制交付物定位及状态
+
+以下定位包含正式资产和已有片段。第 2、5、6、7 项仍有未交齐内容，逐项状态见 [§9–§17 的第九部分](FINAL_PROTOCOL_S9_S17_2026-11-21.md#dd2-protocol-deliverables)。其中旧文献和算子类要求的是同一对象和对应量词下逐项证明，文件导航本身不提供这种裁决。
 
 1. Canonical theorem statements：本文件 T1–T5、`core.md`、`relaxation.md`、`pppa_recovery.md`、C414。
 2. 完整证明：上述规范正文及 `FINAL_PROTOCOL_S1_S3`、`FINAL_PROTOCOL_S4_S8`、`FINAL_PROTOCOL_S9_S17`；未闭版本明确标 Partial/Open。
@@ -145,7 +147,7 @@ P0 审计逐式核对 Lauster–Luke 2021、Alcantara v1、Li–Mordukhovich 201
 
 ## 9. 可复现检查和 checkpoint
 
-本轮运行过：
+阶段提交 `cd028d5` 报告的结构检查：
 
 - `python3 research/validate_assets.py`：通过，240 manifest hashes、251 audited source files、178 ZIP members、4827 source units、4671 atomic records、955 nodes、720 edges、497 Markdown files。
 - `python3 research/code/dd2/verify_outline.py`：通过，6 ordered sections、7 claim records、15 local links、7 exact algebra checks。

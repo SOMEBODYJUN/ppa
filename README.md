@@ -5,11 +5,11 @@
 
 ## 2026-11-21 最终协议验收入口
 
-本轮已按原协议逐题审计 §1–§17，并把第八部分 28 问、第九部分 10 项交付物和最终六问接入同一证据链。总索引在 [FINAL_PROTOCOL_MASTER_2026-11-21.md](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md)；三个分节审计分别是 [§1–§3](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[§4–§8](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md)、[§9–§17](research/audit/FINAL_PROTOCOL_S9_S17_2026-11-21.md)。
+阶段提交 `cd028d5` 为 §1–§17、第八部分 28 问、第九部分 10 项交付物和最终六问建立了题号入口。原协议数学验收仍在进行。[总索引](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md) 连接 [§1–§3](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[§4–§8](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md) 和 [§9–§17](research/audit/FINAL_PROTOCOL_S9_S17_2026-11-21.md) 的当前证据。
 
-本轮新增的有符号缺陷版本见 [C414](CLAIMS.md#c414) 和 [精确一步定理](research/canonical/dd2_general_phi_exact.md)：当 Phi 可以为正时，D=[-Phi]_+ 只给安全上界，精确步长根区间必须保留 Phi。幂次审计已纠正一般闭集的锚量词：q=1 使用 DD1 两段缺陷门，q>1 的正面结论需要 p>2/q 或临界小常数；失败侧固定轨道仍是 Partial/Open。
+有符号缺陷版本 [C414](CLAIMS.md#c414) 保留正 \(\Phi\) 的根区间与能量预算。复核恢复了作者原 F1–F3，并核回 [C285](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold) 对一般完整闭图的 DD1 临界锐性。[C416](CLAIMS.md#c416) 证明 \(q>1,p=2/q\) 的锐门是 \(M<\lambda^2K^{-2/q}\)，用一个完整闭图的任意小二周期达到临界失败。[C399 的剪切见证](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates) 实现 \(0<q<1\) 的距离指数及 \(q>1/2\) 时的最坏点误差与实际尾长指数。
 
-这三份审计的状态是逐题裁决，不是无条件总定理宣告。已证明部分、尖锐子类、条件性恢复和 Open/Partial 义务均在主索引中分开列出。
+主索引记录已关闭的证明义务和仍待研究的具体问题。第九部分的文献矩阵、算子类图与完整证明均仍有未交齐的部分。
 
 [单调性与正则性的共同结构](#common-structure-frontier)是另一研究线。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
 
