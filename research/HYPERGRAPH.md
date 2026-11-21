@@ -1336,6 +1336,12 @@
 | --- | --- | --- | --- |
 | E776 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-EXACT-PROX-KL · C464 精确全局近端自动H3与KL真实有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge) | C464-v1：R^n,proper lsc全局下有界f,λ固定,x0∈domf，所有全局prox极小解选择；每轨有一个标准limiting KL聚点z，则长度有限且点趋z∈Tλ(z),0∈Fréchet∂f(z)。全局最小化给H1、实际方向Fréchet/H2；平方和+前驱比较z给自动H3，任意强聚点的自身prox固定无需KL。凹KL递推含首出球步并锁域后望远镜，尾≤s前一步+2ϑ能级。无先验全轨有界/域连续/误差界要求，仍以该轨存在KL聚点为适用前件。多值全局prox不等于全部驻点J；四次多项式坏边破H1，±1/√2驻点二周期有非临界KL聚点而长度∞，0固定可为严格局部最大，指定闭S另识别。不改C311，不宣称新颖。；**derived-checked** |
 
+## DD2 低于半阶的完整点失败
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E777 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-SUBHALF-BOUNDED-CIRCLE · C465 精确低幂全域完整近端的有界圆聚点及幂次前缀](topics/dd2/relaxation.md#dd2-subhalf-bounded-circle) | C465-v1：任意0<q<1/2,K,λ,R>0及0<r°≤1，m=1/q,ν=2m−2,K*=2r°^(−1/m),d=(K/(K*λ^q))^(1/(1−q))。H=R²×R,S=R²×0,U=Vψ=H,Φ0,ψ=Kρ^q全域；g(v)=v+sgn(v)\|v\|^(2m−1),θ(a)=a^(2−m)/(m−2),f(v)=r°(cosθ(\|v\|),sinθ(\|v\|))于v≠0,b=f∘g−f非零处,b0=0,F(y)=dF*(y/d)/λ,F*(u,v)=(b(v),g(v)−v)。差分积分夹逼给连续完整原图、全域同胚J、exactzeroS、完整ρ=s/λ及原全域真界，最高局部幂准确q，K不称最优。c=λK^(−1/q),φ=T_c⁻¹预先数据认证，实际后继更小；任意R全距离窗不变，所有正初距/正负高度轨道有界、准确聚点为平面整圆，t~d(νk)^−1/ν,s~dr°(νk)^−m/ν,平方和≤t0²,前缀~dr°(νN)^((m−2)/ν)/(m−2)。零面驻定；全锚实际失败，非单调且不属凸全局近端子类。r°<1正锚仍o(t²)，不是固定正二次。C447仅提供差分结构先例，新相位和精确q自足核；半阶已可能整圆，不称定性首次。SF8半阶Φ0全类O(logN)比较独立，不移到负预算或预签全部最优率；U=H不授任意小位置窗，无新颖性认定。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

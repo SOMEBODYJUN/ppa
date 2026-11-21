@@ -402,7 +402,12 @@
   - **证据** [逐量词验收表](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-half-order-complete-acceptance)、[HE1–HE9原图反解及有限步证据](../canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)、[C456原同模配对](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)、[原F1–F3及支付合同](../topics/dd2/original_f_conditions.md#dd2-original-telescope)、[主定理A+B与可和前件](../topics/dd2/core.md#dd2-main-trajectory)。
   - **复核** 三席均先完成四项实际数学自检，独立反解原图、重建实际轨道并攻击预设目标/完整纤维/局部量词，再逐源冷读HE1–HE9、逐量词表、C399支持、F148及全部八处实际正文/地图/四栏。复算非负半径唯一、逆矩阵范数与代回、全部残差域、Sigma=0、每个方向/零输入/任意R、有限k倒数夹界、实际平方和及增量渐近；原F1–F3、C401积分和所有合法比较函数的不可和性分别核准。修复集合值近端与单值逆记号、输出残差索引、旋转/比较函数重名和邻节定义，明确旧低幂记录不属本次签收。无未关闭实质异议；仅签S06.03，不预签S06.04及后续。
 
-- [ ] `S06.04` `q<1/2` 是否存在更强的失败机制？
+- [x] `S06.04` `q<1/2` 是否存在更强的失败机制？
+  - **裁决** Proved
+  - **结论** 有。对任意0<q<1/2及K,λ,R>0，原Φ=0、全域ψ=Kρ^q及先认证的φ₀=T_c⁻¹合同下，完整连续剪切使任意正初距轨道沿仿射零线无界漂移；C465的另一连续完整图使所有正初距轨道有界却以零面内整圆为强聚点集。两个图全域唯一近端、完整真残差、全部输入/输出、零驻定和距离窗均已核，最高局部幂恰为q。实际步/残差/距离趋零且平方步可和，累计长度~常数乘N^((1−2q)/(2(1−q)))。半阶本已有这两种定性点失败，严格的新比较是半阶Φ0全类任意N步前缀至多O(logN)；剪切另有SF5精确有限前缀有界误差。闭凸S与有界性不够；全锚、一维非负锚、有限目标、有限维真凸全局prox的正面范围分别保留。原F3不成立，故未反驳完整DD1或DD2的可和轨道结论。
+  - **证据** [四层范围与逐项证据](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-subhalf-strong-failures-acceptance)、[SF1–SF9完整剪切及半阶全类比较](../canonical/dd2_power_defect_finite_length.md#dd2-subhalf-strong-failures)、[C465的BC1–BC15全域圆族](../topics/dd2/relaxation.md#dd2-subhalf-bounded-circle)、[原半阶圆族C447-A](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[一维非负锚PL15](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)。
+  - **复核** 三席均先读原合同并完成四项实际自检，分别独立重构无界剪切、有界相位圈及半阶全类比较，再逐源冷读十处实际正文、身份、图边、地图和四栏。SF5有限前缀误差、SF8截尾二进块、完整逆与零面、正负初高、给定K/λ缩放、最高幂及首次相位越界逐式复算；修正早期弦长正弦绝对值、负高度表述、锚内积与锚位置混称、依初值圆心及直接破Fejér的阈值。E777仅以D01/D04定义为承重输入，C447保为构造先例而非合取前件；K有效不冒称最优。原F3/χ/比较尾与位置窗边界已分别核清，无未关闭实质异议；仅签S06.04，不预签后续。
+
 - [ ] `S06.05` `pq=2` 时的尖锐常数是什么？
 - [ ] `S06.06` `pq>2` 是否能够进一步削弱？
 - [ ] `S06.07` 是否存在使当前指数条件成为必要条件的明确算子子类？

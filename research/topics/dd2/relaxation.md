@@ -293,3 +293,193 @@ Alcantara 的 Proposition 3.1（v1，pp. 7–8，式 (7)–(9)）假设相对于
 Proposition 3.4（v1，pp. 8–11，式 (10)–(16)）的全零集相对半单调与 \(U\succeq-\varepsilon I\) 蕴含局部最近锚上的 (1)，或经近似最近锚得到 (2)–(3)。其两种 metric subregularity 分别给 §4 的输入和影子线性误差界。上述两个平方因子来自同一展开。非线性输出误差界、按同一步耗散的长度势、可趋近方向上限的条件与相应锐例由本文推导。尚未比较所有相关公开先例，也未验证具体 Chambolle–Pock 或 Douglas–Rachford 模型具备这些函数条件。[Alcantara，arXiv:2611.20523v1，§3.2](https://arxiv.org/html/2611.20523v1#S3.SS2)
 
 退化 PPPA 中，上文的 \(z\) 与 \(\widehat z\) 是 Proposition 4.2 的约化迭代和约化影子。闭零集或极限处覆盖负责约化识别。若对原图零点有局部锚定 Lipschitz recovery，则 \(\|\bar x^k-x^\infty\|\) 受 (8) 或 (17) 的约化点误差控制。要把路径长度传到完整影子，还需可用于相邻步的恢复估计，或独立的可和点误差上界。研究附件中的原空间传递与具体分裂模型需逐项核对允许图、零集投影和恢复条件。[Alcantara，arXiv:2611.20523v1，§§4.1、4.3–4.5、5.1](https://arxiv.org/html/2611.20523v1#S4)
+
+<a id="dd2-subhalf-bounded-circle"></a>
+## 7. C465-v1 · 精确低于半阶的完整有界圆聚点族
+
+**状态：derived-checked；三席独立重构并复读实际终稿、身份、图边与验收登记，无未关闭实质异议。**
+本节继承 C447-A 的差分结构，但改变了原函数、最高误差界指数和实际速率，
+故另立身份，不修改 C447-v1 的半阶与线性两分支。
+固定任意 \(0<q<1/2\)、\(K,\lambda,R>0\)，以及 \(0<r_\circ\le1\)，令
+\[
+m=1/q>2,\quad \nu=2m-2,\quad K_*=2r_\circ^{-1/m},\quad
+d=\left(\frac{K}{K_*\lambda^q}\right)^{1/(1-q)},\quad
+c=\lambda K^{-1/q}.
+\tag{BC1}
+\]
+工作空间和原数据预先取
+\[
+H=\mathbb R^2\times\mathbb R,\quad S=\mathbb R^2\times\{0\},\quad
+U=V_\psi=H,\quad D_\psi=[0,\infty),\quad
+\Phi=0,\quad\psi(\rho)=K\rho^q,
+\]
+并指定 \(\varphi=T_c^{-1}|_{[0,R]}\)，其中
+\[
+T_c(a)=\sqrt{a^2+c^2a^{2m}} .
+\tag{BC2}
+\]
+原 E0 的任何一边有 \(s\ge ca^m\) 和 \(a^2+s^2\le t^2\)，
+所以先由数据认证 \(a\le\varphi(t)<t\)（t>0），零尺度另驻定。
+这与原分段 \(\Sigma=0\) 的能量支相同，并不由下述特定轨道倒推目标。
+
+### BC1 · 原算子、全域残差和完整逆
+
+定义实线同胚、相位及差分
+\[
+g(v)=v+\operatorname{sgn}(v)|v|^{2m-1},\qquad
+\theta(a)=\frac{a^{2-m}}{m-2}\quad(a>0),
+\]
+\[
+f(v)=r_\circ(\cos\theta(|v|),\sin\theta(|v|))\quad(v\ne0),\qquad
+b(v)=f(g(v))-f(v)\quad(v\ne0),\quad b(0)=0.
+\tag{BC3}
+\]
+f 无需在零点取值；进入原算子的只有 b。
+先置 \(F_*(u,v)=(b(v),g(v)-v)\)，再定义原完整单值算子
+\[
+F(y)=\frac d\lambda F_*(y/d).
+\tag{BC4}
+\]
+令 \(a=|v|>0\)、\(h(a)=a+a^{2m-1}\)，相位差为
+\[
+\Delta(a)=\theta(a)-\theta(h(a))
+=\int_a^{a+a^{2m-1}}z^{1-m}\,dz,\qquad
+a^m(1+a^{2m-2})^{1-m}\le\Delta(a)\le a^m,\qquad
+\|b(v)\|=2r_\circ|\sin(\Delta(a)/2)|\le r_\circ a^m.
+\tag{BC5}
+\]
+所以 b 连续延至0，F 全域连续、闭图，精确零集为 S。
+g 严格递增、奇且满射。
+对基图 \(I+F_*\) 先反解竖坐标，再反解水平平移，得到
+\[
+j_*(U,V)=
+\bigl(U-b(g^{-1}(V)),\,g^{-1}(V)\bigr),\qquad
+\mathcal J(x)=J_{\lambda F}(x)=\{\,d\,j_*(x/d)\,\}.
+\tag{BC6}
+\]
+这是完整全域近端，而非选支：\(I+\lambda F=d(I+F_*)(\cdot/d)\)
+是全域同胚，每个输出 y 的唯一输入为 \(y+\lambda F(y)\)。
+全部输出的真残差都是 \(\rho=\|F(y)\|=s/\lambda\)；
+零面输入唯一驻定，任何正负高度的符号在迭代中保持。
+
+在基图的一条边
+\(y_*=(u,v),x_*=(u+b(v),g(v))\) 上，
+唯一最近输入锚为 \(p_*=(u+b(v),0)\)，故
+\[
+\langle x_*-y_*,y_*-p_*\rangle
+=|v|^{2m}-\|b(v)\|^2
+\ge(1-r_\circ^2)|v|^{2m}\ge0 .
+\tag{BC7}
+\]
+原缩放后锚积乘 d²，最近锚也按同一比例缩放，故保原 \(\Phi=0\)。
+
+全域真误差界可以给显式常数。
+当 \(0<a\le1\)，有 \(a+a^{2m-1}\le2a\)，所以
+\[
+2^{1-m}a^m\le\Delta(a)\le1,\qquad
+\|b(v)\|\ge (r_\circ/2)\Delta(a)\ge r_\circ2^{-m}a^m .
+\tag{BC8}
+\]
+正弦下界只用 \(0\le\Delta/2\le1/2\)。
+当 \(a\ge1\)，基图残差 \(\rho_*=\|F_*(u,v)\|\ge a^{2m-1}\ge a^m\)。
+合并两侧及零点，得到 \(a\le K_*\rho_*^q\)。
+原变量的距离为 \(d a\)，残差为 \(d\rho_*/\lambda\)；
+BC1 恰使 \(K_*\lambda^q d^{1-q}=K\)，所以全部原输出满足
+\[
+d(y,S)\le K r_F(y)^q .
+\tag{BC9}
+\]
+原 \(\psi\) 全域有效，未借窄残差区间偷偷扩大 K。
+
+同一图实际法向后继为
+\(A_d(t)=d\,h^{-1}(t/d)\)，不是统一目标 \(\varphi\) 的定义。
+对基图正输出尺度 a，
+\[
+t_*^2-a^2-s_*^2=2a^{2m}-\|b(v)\|^2>0.
+\]
+配 BC9 给原正步 \(T_c(a_{\rm out})<t\)，
+所以实际 \(A_d(t)<\varphi(t)\)，目标不取等。
+全部距离 R 窗仍不变，且 \(U=H\) 已明定，不声称任意有界位置窗不变。
+
+### BC2 · 每个正初距的完整圆聚点与精确幂指数
+
+先看基图。对任意 \(v_0\ne0,u_0\in\mathbb R^2\)，令
+\(z_k=|v_k|>0\)，则
+\[
+z_k=z_{k+1}+z_{k+1}^{2m-1},\qquad
+u_k-f(v_k)=u_0-f(v_0),\qquad z_k\downarrow0 .
+\tag{BC10}
+\]
+正负号都由 g 的奇单调逆保留；零高度另为驻定。
+相位 \(\theta(z_k)\) 严格趋于无穷，
+相邻差为 \(\Delta(z_{k+1})\le z_{k+1}^m\to0\)。
+给定任意相位 \(\alpha\)，逐个取第一次越过
+\(\alpha+2\pi n\) 的时刻；越过误差至多该相邻差，趋于0。
+反向所有聚点已被 BC10 限在同一圆。因此原缩放图中，
+从任何 \(x^0=(u_0,v_0)\) 且 \(v_0\ne0\) 出发的强聚点集准确为
+\[
+\left\{\left(
+u_0-d f(v_0/d)+d r_\circ(\cos\alpha,\sin\alpha),\,0
+\right):0\le\alpha<2\pi\right\}\subset S .
+\tag{BC11}
+\]
+每条正初距轨道有界而不收敛；圆半径 \(d r_\circ>0\)。
+所有非零初距都合格，包含任意小初距，且只有一个完整选择。
+
+BC5 的上下界给零端 \(\Delta(a)/a^m\to1\)，所以基图
+\(\rho_*\sim r_\circ a^m\)。
+原图在任意零点附近也有
+\[
+r_F(y)\sim\frac{r_\circ d^{1-m}}{\lambda}\,d(y,S)^m .
+\tag{BC12}
+\]
+任意 \(q'>q\) 使 \(d(y,S)/r_F(y)^{q'}\to\infty\)。
+小输出有真实趋向相同零点的输入前像，故无更高幂的局部真误差界，
+尤其没有半阶界。这里“精确”只指最高幂指数，
+不声称 K 为最佳常数，也不声称所用纯幂模逐点取等。
+
+### BC3 · 实际步、平方和与累计长度
+
+基图的倒数幂增量为
+\[
+z_{k+1}^{-\nu}-z_k^{-\nu}
+=z_{k+1}^{-\nu}
+ \left[1-(1+z_{k+1}^{\nu})^{-\nu}\right]\to\nu .
+\]
+故原轨道的距离、实际步和输出真残差满足
+\[
+t_k\sim d(\nu k)^{-1/\nu},\qquad
+s_k\sim d r_\circ(\nu k)^{-m/\nu},\qquad
+\rho_k=r_F(x^{k+1})=s_k/\lambda\to0 .
+\tag{BC13}
+\]
+由于 \(m/\nu=1/[2(1-q)]\in(1/2,1)\)，实际总长发散；
+原非负锚的能量同时给 \(\sum_k s_k^2\le t_0^2\)。
+更准确地，令 \(\mathcal L_{0,N}=\sum_{k=0}^{N-1}s_k\)，则
+\[
+\mathcal L_{0,N}\sim
+\frac{d r_\circ}{m-2}\left(\frac{t_N}{d}\right)^{2-m}
+\sim \frac{d r_\circ}{m-2}(\nu N)^{(m-2)/\nu}.
+\tag{BC14}
+\]
+证明不把有限搜索当极限：
+相位步差 \(\Delta_k=\theta(z_{k+1})-\theta(z_k)\sim z_{k+1}^m\)，
+切向弦长为 \(2d r_\circ|\sin(\Delta_k/2)|\)，
+法向步为 \(d z_{k+1}^{2m-1}=o(d\Delta_k)\)，所以
+\(s_k/\Delta_k\to d r_\circ\)。
+相位和望远镜且发散；固定前缀不影响两者和的渐近比，得到 BC14。
+
+当 \(0<r_\circ<1\)，同图还满足明确正的 signed 下界
+\[
+\Phi_+(t)=d^2(1-r_\circ^2)\,[h^{-1}(t/d)]^{2m}>0\quad(t>0),
+\qquad \Phi_+(0)=0 .
+\tag{BC15}
+\]
+它为 \(o(t^2)\)，且 BC7 的实际唯一锚积也不超过 \(d^2[h^{-1}(t/d)]^{2m}=o(t^2)\)，故本图不满足任何固定 \(\gamma t^2\)、\(\gamma>0\) 的正锚下界；
+因而不与 PL5 的共同根帽结论冲突。
+本族否定的是只凭最近锚、距离趋零、步平方可和、有界性及所有聚点入 S
+就推出点收敛。它不否定全锚 Fejér 或有限维真实凸近端的已有结论。
+与旧半阶 C447-A 相比，新增的数学身份是任意指定
+\(q<1/2,K,\lambda\) 的全域证书、最高局部幂和实际幂次累计长度；
+半阶本已能有圆聚点，不能把“点不收敛”本身说成越过半阶后才首次出现。
+没有公开新颖性判断。

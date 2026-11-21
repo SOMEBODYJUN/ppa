@@ -11300,6 +11300,17 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-SUBHALF-BOUNDED-CIRCLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14394,6 +14405,10 @@
     "E776": {
       "x": 1833.07,
       "y": 5286.29
+    },
+    "E777": {
+      "x": 2299.71,
+      "y": 5740.62
     }
   },
   "bounds": {
