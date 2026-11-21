@@ -146,7 +146,11 @@
   - **结论** 是，对同一组前件实际认证的全部边成立。WD5 的真残差前缀 sup 总是安全；字面原 max 在其评价域完整且确有最大值时与之同值，故也安全。任意非单调原 \(\psi\) 不影响该正向结论，因为在实际 \(u=\lambda r_F(y)\le s\) 处取样，未将原残差替换为物理步长。保留符号与输出帽的 (UB3) 给更小或相同的统一界；把它命名为精确 \(M_R\) 时仍保 C421 的正尺度、含零域及非空自由类合同。输入覆盖、残差达到、图闭和输出留域均不用于一步证明，Hilbert 中只需实际最近输入锚存在。若要由本证明保证完整近端的全部选择，前件也须对这些完整输出逐边核准；只认证允许子关系时结论只覆盖该关系，完整真残差定义不变。
   - **证据** [UB1–UB3 的全部受检边证明](../canonical/dd2_function_hypotheses.md#fh-uniform-upper-bound)、[UB4 非单调残差与错误物理筛选](../canonical/dd2_function_hypotheses.md#fh-uniform-upper-bound)、[UB5 允许图与完整输出范围](../canonical/dd2_function_hypotheses.md#fh-uniform-upper-bound)、[原公式的良定前件](../canonical/dd2_function_hypotheses.md#fh-formula-well-defined)、[原残差与数值放宽的既有分层](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality)。
   - **复核** 三席分别重构并逐段复读实际稿。同锚展开、\(a\le\|y-p\|\)、反三角给 \(s^2+a^2\le E\)、物理根；距离 1-Lipschitz 再给输出根 \(a^2-ta+\Phi\le0\)，故 \(a,u\le B\) 与 \(a^2+u^2\le E\)。比较 \(B\le B_+,E\le E_+\) 后直接在真实 \(\rho\) 取样，未使用单调性或最值达到。UB4 的完整纤维为 \(\{e_1/2,e_2/100\}\)，全部边合格且正确界 \(1/2\)，错误 G 才只剩零输出；UB5 的额外输出 2 真残差为 1、输出误差界成立但锚积 \(-2\) 失效，证明只认证好选择不能凭此推全输出。另核零尺度三分支、局部域、允许图不改变完整残差，以及不含零残差域的正向安全与 C421 精确身份的区别。没有将不锐或未达当成不安全。
-- [ ] `S02.F04` 它是否为相应几何模型的精确最优值；
+- [x] `S02.F04` 它是否为相应几何模型的精确最优值；
+  - **裁决** Refuted
+  - **结论** 原正部两项式的一般精确性被否证；它只对 OP1 删除若干几何约束后的标量域精确。修订后的 G 与 R 在各自自由单边类中给最小共同上界，非正整窗另有完整闭覆盖实现。保留 C421 含零残差域及准确非空条件时，\(\Phi\le0\) 给 \(M_R=\min\{B_+,W_+\}\)，故原式精确恰需 \(W_+\le B_+\)。一般符号的 OP3 用所有严格低于 \(W_+\) 的水平命中原残差三帽精确判定等值，允许上确界未达。零尺度分开处理。正下界既有严格损失也有等值例；固定对象、仿射、一维及正下界完整窗必须保留自己的域，二维自由最优值不能自动转授。
+  - **证据** [OP1–OP3 的模型与精确比较](../canonical/dd2_function_hypotheses.md#fh-formula-exact-optimum)、[G 同平面两锚实现](../canonical/dd2_general_phi_exact.md#dd2-four-point-geometry)、[R 完整真残差实现](../canonical/dd2_function_hypotheses.md#fh-raw-residual)、[C435 的精确投影及候选严格差距](../topics/dd2/joint_relation.md#dd2-joint-candidate-comparison)、[完整窗额外约束](../topics/dd2/joint_relation.md#dd2-complete-fiber-strict-gain)、[固定对象和目标范围](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality)。
+  - **复核** 三席先独立推导再逐式复读实际稿。逐行上界与反向取值证明 OP1 恰为放宽域；G 的输入最近性、输出最近性及退化同时实现，R 从投影底图加主边，在必要时补最短前像，零输出及额外零点另行核准。非正整窗全部边认证没有由闭图或覆盖替代。OP3 用严格超水平存在性处理未达值及 \(c<\alpha\)，没有误检最优端点。完整 \(F=I\) 给 \(2t/\sqrt5>t/2\)，完整 \(F=-I/2\) 给 \(4\sqrt{5/17}\,t>2t\)；正重根配截顶模在单位尺度两式同为 \(1/2\)，三例的全部纤维与窗内前件均核准。另核 \(t=0\) 的原域、零输出过滤及 \(\Phi(0)\le0\) 时的同一截帽式；Hilbert 自由锐性用二维嵌入，固定闭目标仍需实际输入锚。没有把最大值未达、不安全与不精确相互混同。
 - [ ] `S02.F05` 何时有 `\varphi(t)<t`；
 - [ ] `S02.F06` 何时有 `\varphi^{\circ n}(t)\to0`；
 - [ ] `S02.F07` 何时可以构造非减的下降模函数；
