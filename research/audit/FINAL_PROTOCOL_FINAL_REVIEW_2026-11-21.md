@@ -34,3 +34,7 @@ C414 的精确可行区间由 s² - t s + Phi(t) <= 0 给出，能量是 E=t²-2
 在上述三点修订后，三份分节审计和主索引能够作为原协议的完整验收入口。当前数学结果应宣布为“全部小问已逐项裁决并持久化”，而不是“所有普遍命题均已证明”。剩余 Open/Partial 义务包括一般振荡 gauge 的必要性、一般弯曲闭凸低 L 的固定图轨道、弱 kernel 的完整 fiber coverage、非唯一 fiber 的全选择强 recovery、统一异步或变图分裂，以及全球先行性。
 
 独立检查命令在复核时通过：`python3 research/validate_assets.py`、`python3 research/code/dd2/verify_outline.py`、`python3 research/build_graph.py`。这些命令验证资产和结构，不能替代数学证明。
+
+## 主线复核后的增量修订
+
+该复核文件先于 C415 的完整闭图链反例及其真残差 preimage 澄清。当前主线已将 §6.5、C415、F145 和主索引同步为：q>=1、M>0、p<2/q 的固定闭图不下降链已证；q>1 临界 p=2/q 的最优算子常数、M=0 边界和一般 gauge 必要性仍 Open。§16.A 也已改为 Partial / Conditional globally，以区别旧二次式的 Recovered 范围与 C414 的未穷尽全球先行性。

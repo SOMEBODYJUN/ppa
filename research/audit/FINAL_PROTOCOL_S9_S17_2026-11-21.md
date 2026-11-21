@@ -250,7 +250,7 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 
 # §16 新颖性八维评价
 
-A. 新公式：Equivalent / Recovered。许多公式是已知二次式或共同 s 几何的重参数化。
+A. 新公式：Partial / Conditional globally。旧负缺陷二次式和共同 s 几何在已读范围内是 Recovered；C414 的有符号 Phi 精确根区间和正 Phi 边界是本轮修订，全球先行性未穷尽，不能标作无条件原创或已知等价。
 
 B. 新定理：Partial / Conditional。C400–C406、C408、C412 在精确范围内有独立推导，但全球先行性和全理论统一尚未闭合。
 
