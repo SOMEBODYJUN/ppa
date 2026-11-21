@@ -456,7 +456,12 @@
   - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-critical-acceptance)、[CT1–CT5临界逐区合同](../canonical/dd2_power_defect_finite_length.md#dd2-power-critical-classification)、[CK1–CK10端点与原目标](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)、[D1K6–D1K8线性全M完整失败](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)、[C416强幂完整周期](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)、[C467连续完整对合](../canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution)、[C470/C471准确率与点Q](../topics/dd2/power_rates.md#power-sharp-rates)。
   - **复核** 新三席先完成真实四自检和独立重构，再逐读六处实际CT/审计/四栏/C416/地图/状态，并回核CK、D1K、C416/CI、BR/RT/QB、GT及AB9/PL7/C444。Δ两支、强幂名义等号的显式完整扩张、各M的最小实际缺陷或有效预算、全部原根/真ρ/零/同图不变窗逐式核准。γ*与W首项、线性两支准确κ/W、τ的距离R与点尾R、点Q锐门和跨图无界系数、M0切支均复算；原φ的两负下阶/线性闭端、signed正向、含二维反向、允许𝒥/全J、首出前缀及固定M/全M量词相互一致。最新范围/符号/扩张补丁三席复读通过，无未关闭实质异议，只签S06.CRITICAL。
 
-- [ ] `S06.BELOW` 在 \(pq<2\) 区域逐分支验收正面结果、失败范围和实际近端反例。
+- [x] `S06.BELOW` 在 \(pq<2\) 区域逐分支验收正面结果、失败范围和实际近端反例。
+  - **裁决** Sharp
+  - **结论** 固定pq<2，正M下三种q都有D/Δ→∞；自由完整类准确三帽µ̂>t，故无统一a≤t，更无仅靠该数据的距归零、点或有限长保证。持续失败由C466一个全q闭完整图给出：固定仿射S、原F处处非空、真幂模取等、a=t、s=c t^(1/q)，c²R^(2/q−p)≤M时所有原边合法；同图原点任意小不变盒内全部正轨有界而不收敛、长度∞，存在精确二周期但不称所有路径最终同一周期。SN-C另保固定R⁴仿射/连续单值/完整同胚反向。仍有B/能量根/原模三项单步界，t→0时s、ρ、a统一趋0；外帽B不能删。M0则p退出：已合法无限或全空间覆盖的轨道距离全部q趋0，只有q>1/2有统一点/长度；正面准确W及局部严格预算沿旧合同。更强原Φ≥0、同精确模径向好图、固定单点q>1或q1且L<1/2另有明确正面。新C473在本项正M下给固定单点准确µsp及Psp=t+2Σµsp^j，一个完整连续单值图在原R₀保持数据、全小初距全k取等；最小点界为t。目标强幂系数C_A>h严格，线性κ≥L/(1−L)含等号。必要性按Φ=−D及注明类，不能判每个更强signedΦ/固定图；原φ不替换，反例违反严格φ并非否定完整DD2。
+  - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-subcritical-acceptance)、[BL1–BL5全部分类与外帽精确例](../canonical/dd2_power_defect_finite_length.md#dd2-power-subcritical-classification)、[AF1–AF7完整原F/J及全部实际轨道](../canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)、[SN-C连续结构反向及SN-D正面](../canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)、[GF2原三帽](../topics/dd2/functional_power_recovery.md#functional-power-target)、[完整自由单边实现](../topics/dd2/core.md#dd2-geometry)、[M0准确率与尾](../topics/dd2/power_rates.md#power-sharp-rates)、[C473单点准确下降/尾与完整同图](../topics/dd2/singleton_subcritical.md#singleton-subcritical-exact)、[C473身份](../../CLAIMS.md#c473)。
+  - **复核** 三席先实做四自检并独立重构，再逐读八处实际BL/SP正文、原图、C466支持/C473身份、E785、地图与四栏。三帽及外帽准确例、AF/SN完整根/真ρ/全部轨道/小窗量词、M0合法轨和局部门均核准；C473小根隔离、慢桥保原R₀全部输入、同图全小初距全k、最小实际尾与点界t、原φ两端点和实际尾Q逐式通过。正尺度、零边、开U及U_R覆盖的最后限定也逐处实读。无未关闭实质异议；只签S06.BELOW及C473，不预签TAIL。
+
 - [ ] `S06.TAIL` 独立复核 \(\alpha=2-1/q\) 的实际总长度估计，明确 \(q\) 的范围、常数选择、局部不变性及边界。
 
 ## §7 DD2 是否真正扩大了可处理的算子类？

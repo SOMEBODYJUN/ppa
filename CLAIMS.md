@@ -4181,6 +4181,8 @@
 - **Dependencies / Evidence**：D01/E0原近端、D04完整真残差；[AF1–AF7](research/canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)直接反解全部纤维、两闭片、全输出锚积和max不变界。 [WR1–WR10及S06.06](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-condition-weakening-acceptance)区分纯幂类、函数余量类与固定图。证据为完整解析证明，不以数值轨道替代。
 - **Counterevidence / Objections / Scope**：本图每个正距a=t，违反任何φ<t；它证明较弱原数据不能认证指定A，不违反已满足Σ的完整DD2定理。原图多值且近端不处处唯一连续，AF4对零锚负积排除单调/凸次梯度。反向不是固定F必须失败的判据，也不授任意指定凸目标或更强signedΦ。 [F145](FAILED_ROUTES.md#f145)记录边界；没有公开新颖性认定。
 
+- **S06.BELOW 支持（实际合版三席终核通过）**：[BL1–BL5](research/canonical/dd2_power_defect_finite_length.md#dd2-power-subcritical-classification)在pq<2、每个正M下按AF5认证同一C466原图，保全部真纤维、闭性/非空、原点任意小全输出不变盒及全部正轨有界失败；存在二周期不改写为每轨最终二周期。p/M可松、K/q准确、原φ和M0/结构正面分开；C468/SN的连续反向另有身份，不改变本卡。
+
 <a id="c467"></a>
 ## C467-v1 · 连续单值仿射零集的完整近端对合与任意小二周期
 
@@ -4250,3 +4252,16 @@
 - **Dependencies / Evidence**：D01/D04及[GF1–GT8自足证明](research/topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)。H*=min{B²−t²+µ²,2D}非减，配对两条µ递推给W(r)−W(a)≥(r²−a²)/(2ℓ(r))，同时保能量/步帽即得同一步支付；无需固定活动支、ψ凹性或ΣD有限。GT7以每步候选锚平方距离的有序交点构造完整投影加链，全纤维反代接口FX1–2不依幂式。GT8给单调振荡D、原线性ψ和预设φ=t/2，同一真实轨道无限换支且W有限。
 - **Power recovery / Identity boundaries**：[PC1–CB2](research/topics/dd2/functional_power_recovery.md#functional-power-classification)把D=Mt^p、ψ=Kρ^q代入同一一般严格门和W，恢复三种临界常数、q>1/2有限长门及已声明准确距离/点/尾包络；仅导入BR标量渐近，不循环调用C470尾定理。固定目标仍逐式核GF3；点Q的方向抵消另属C471。原C401/C419默认吸收、C420零缺陷含平台、C458/C460/C461及原F1–F3各保自己的身份，不把此严格可逆版冒作一般原域的替代。
 - **Counterevidence / Objections / Related Files**：三席实际终核无未关闭实质异议。更强固定signedΦ≥−D只继承正向，取等图须重核；必要性不转授固定F、指定S、连续单值子类、另加更紧φ或任意非单调D/ψ。[S06.10验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-functional-power-recovery-acceptance)、[F145](FAILED_ROUTES.md#f145)与[F148](FAILED_ROUTES.md#f148)保存原证书失效范围及混支证明的修复。公开新颖性未核。
+
+<a id="c473"></a>
+## C473-v1 · 固定单点次临界类的准确下降与最小真实尾
+
+- **Status**：`derived-checked`；三席先独立重构，再逐读SP1–SP11、本卡、E785及八处实际合版，最后的正尺度与覆盖限定也逐处复读；无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定有限维欧氏H、dim H≥1、S={z*}⊆zerF、λ,K,M,p,q>0、p<2/q，原Φ(t)=−Mt^p含零尺度、原ψ(ρ)=Kρ^q于[0,∞)，ρ=d(0,F(y))为完整真残差。给定原认证窗R₀>0，每允许边y∈𝒥(x)⊆JλF在t≤R₀受唯一输入锚z*和原真模约束。分支为q>1，或q=1且L=K/λ<1/2。存在只依原参数及R₀的共同R∈(0,R₀]，对全部该类F和边有效；不先按F/轨道选窗。
+- **Definitions / Exact one-step conclusion**：c=λK^(−1/q)、m=1/q、h=K/λ^q；q>1时µsp(t)是f(a)=ca^m−a在零附近严格增段的小逆，q1时µsp=L t/(1−L)。Psp(t)=t+2Σ_(j≥1)µsp^j(t)，µsp/Psp连续严格增且零处0，正尺度0<µsp(t)<t。全部小窗实际边有a≤µsp(t)、s≤t+a及s+Psp(a)≤Psp(t)，零输入驻定。B_D(t)→0先排除f的远端分支，再合法取小逆。
+- **Original target / Sharpness**：预先给φ0=0、正尺度0≤φ(t)<t，固定单点完整类在整个小窗统一认证a≤φ当且仅当µsp≤φ。φ仍是目标，µsp是计算包络；若另将更紧φ作为筛图的额外前件，反向须重核。Psp是最小共同真实总尾及非负距离支付；单点点误差恰e_k=t_k，最小共同点界为t而非Psp。
+- **Local trajectories / Scope**：开U、允许𝒥在U_R逐点非空，全部原数据包括可能首出输出。Psp(t₀)<d(x⁰,Uᶜ)时先支付有限前缀含首出边，再用覆盖续接；全部允许轨道留U_R、有限长、点趋z*∈U，t_k≤µsp^k(t₀)、实际尾≤Psp(t_k)。只有允许关系等于完整J才量化全部近端选择。
+- **Complete attaining operator / Strong quantifiers**：反向U=Vψ=H、精确zerF=S。存在一个全域连续单值F，其完整J为全域同胚，在给定原R₀全部输入均满足原负预算及真EB；对每个0<t₀≤R和任意初始方向，同一F的全部k达到t_k=µsp^k(t₀)、s_k=t_k+t_(k+1)、实际尾=Psp(t_k)。SP8先用小逆，再以足够小斜率的半径桥到原R₀，最后比例延拓；T(x)=−A(||x||)x/||x||、F=(T⁻¹−I)/λ穷尽全部纤维/根。原真幂EB保持全域，负预算只声明至原R₀。不是每个初距更换F或只在缩窗认证的较弱类。
+- **Exact rates / Endpoints**：q>1时µsp~h t^q且µsp>h t^q，Psp=t+2h t^q+o(t^q)，故原目标C_A t^q小窗可认证恰需C_A>h；距离、点、实际尾的最佳共同渐近Q阶q、系数h，同图达到。q1时µsp=κ_s t、κ_s=L/(1−L)，Psp=t/(1−2L)，原目标κt认证iffκ≥κ_s且κ<1；距离、点、实际尾均逐步Q因子≤κ_s且可同图取等。
+- **Dependencies / Evidence**：D01原近端及D04完整真残差；[SP1–SP11自足证明](research/topics/dd2/singleton_subcritical.md#singleton-subcritical-exact)以单点三角、小根隔离、移项支付和全域反号同胚直接推导。[C468/SN9–SN10](research/canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)是较宽正向先例，C427的线性单点校准是内部先例，均非本卡证明的隐藏前提。[BL5](research/canonical/dd2_power_defect_finite_length.md#dd2-power-subcritical-classification)负责与自由次临界失败对照。
+- **Counterevidence / Objections / Boundaries**：M0排除，反号取等图负锚积不满足Φ=0；更强原signedΦ≥−D只继承正向，必要性重验。任意其他固定S不能使用s≤t+a；不授q<1或q1且L≥1/2。p/M可为松预算，不标作最佳实际缺陷指数。全部构造和恒等式是解析证据，不以计算替代证明。不认定公开新颖性；实际合版已独立终核，无未关闭实质异议。

@@ -11388,6 +11388,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-SINGLETON-SUBCRITICAL-EXACT-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14514,6 +14525,10 @@
     "E784": {
       "x": 2262.81,
       "y": 5658.9
+    },
+    "E785": {
+      "x": 1605.74,
+      "y": 5294.2
     }
   },
   "bounds": {
