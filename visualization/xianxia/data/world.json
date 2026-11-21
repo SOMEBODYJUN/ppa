@@ -11134,6 +11134,17 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-LOG-HALF-ORDER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14172,6 +14183,10 @@
     "E762": {
       "x": 822.59,
       "y": 5740.78
+    },
+    "E763": {
+      "x": 918.39,
+      "y": 5559.14
     }
   },
   "bounds": {

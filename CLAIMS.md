@@ -3510,6 +3510,8 @@
 
 - **S04.08 实际慢轨道与固定图范围**：[NR1–NR2](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)对匹配反向预算的 \(A=t/(1+t)\) 旋转给实际距离等式、根率 1 和调和实步；同一完整 DD 数据也容纳 \(F=I\) 的几何轨道。因此无统一目标比例不能转授为每个固定图无 R 线性率。本项不改变 C400 的统一类锐性，也不关闭另列的非绝对可和点收敛主问题。
 
+- **S04.10 非幂次目标补证**：[NP1–NP3](research/topics/dd2/nonpower_rates.md#dd2-stretched-exponential-target)预设 \(A(t)=\exp[-\sqrt{\log^2(1/t)+1}]\)、\(R=e^{-2}\)，以原 \(L=1\) 预算取等，完整同胚近端给实际 \(t_k=\exp[-\sqrt{\log^2(1/t_0)+k}]\) 和有限非幂次尾长。实际根率为 1，却快于所有幂次；这是 C400 的具体已可实现曲线，不修改一般命题或宣称类尾常数最优。
+
 <a id="c401"></a>
 ## C401-v1 · 一般函数误差界的积分长度势
 
@@ -3977,3 +3979,15 @@
 - **Exact Statement / Conclusion — C 是另一完整母图**：改用 \(J_\flat(x)=\{0\}\cup\{b_{k+1}:x=b_k,\ k\ge0\}\cup\{1:x=3\}\)，\(F_\flat=J_\flat^{-1}-I\)，\(U=H\)、允许全部完整 \(J_\flat\)，其余函数和窗口不变。每个纤维闭，且 \(F_\flat(1)=\{2\}\) 非空，精确 \(\operatorname{zer}F_\flat=S\)。输入 3 在窗外，所以窗内 E0、覆盖、所有选择留域及有限长分类完全保留；同一链强趋 \(1\notin\operatorname{zer}F_\flat\)。完整图缺少 \((1,0)\) 的零值闭性，不继承 A/B 的闭图身份。
 - **Dependencies / Evidence**：D01 的完整近端反演和真残差，core E0 的一般原模及允许图量词。[ID1–ID7](research/topics/dd2/target_identification.md#dd2-target-identification-boundaries)逐项给图闭/非闭、全部纤维、唯一遗漏极限对、锚积、工作窗和全轨道长度望远镜。A/B 缺的完整恒等对有 \(a=1>\psi(0)\)，C 的 \((b_{k+1},2^{-k-1})\to(1,0)\notin\operatorname{gph}F_\flat\) 是显式跨点断口。
 - **Counterevidence / Objections / Scope / Related Files**：坏链距离趋 1，不反驳闭 \(S\) 加距离趋零的目标识别。指定 \(A\) 来自固定图且失败于 C418 的右侧门，不冒充自由预算或连续比较曲线。原模零端跳跃，不调用 D04 的原点连续 gauge，不符合 C401 的连续零端或 C419 的正位移下界/长度合同。未认定公开新颖性。C446、C448-B 的旧坏轨道分别无整条点极限或无界，身份不变。[S04.07](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)、[F161](FAILED_ROUTES.md#f161)保存正面识别路线与删项机制。
+
+<a id="c451"></a>
+## C451-v1 · 对数强化半阶真残差的非幂点率与长度边界
+
+- **Status**：`derived-checked`。三席独立重构并复读完整旋转/剪切、原真残差、目标认证、渐近常数与临界长度、身份及图边；全类/固定图及两种指定零集已分开，无未解决的致命异议。
+- **Exact Statement / Objects / Domain / Definitions**：对每个 \(\beta>0,B>\max\{\beta,1\}\)，取 \(R=e^{-B}\)、\(\lambda=1\)、\(H=\mathbb R^2\)、\(U=V_\psi=H\)、\(D_\psi=[0,\infty)\)。令 \(g(0)=0\)，\(g(a)=a[\log(1/a)]^\beta\) 于 \(0<a\le R\)，窗外冻结 \(RB^\beta\)；\(w(a)=ag(a)\)、\(\psi_\beta=w^{-1}\)、\(\Phi=0\)、预设 \(\varphi_\beta=(a\mapsto\sqrt{a^2+w(a)^2})^{-1}\) 于 \([0,R]\)。所有逆全域存在，实际步和残差用完整原图。
+- **Quantifiers / Assumptions / Conclusion — 共同证书**：每个满足上述 \(\Phi,\psi_\beta\) 的 E0 边有 \(w(a)\le\rho\le s\)，从而 \(a^2+w(a)^2\le t^2\)，认证预设 \(a\le\varphi_\beta(t)\)。原模连续严格增且零点为零。两个下述完整图均连续单值、近端全域唯一同胚、零输入驻定，原 \(R\) 距离窗全部选择不变。
+- **Exact models / Complete fibers**：旋转 \(F_{\rm rot}(y)=g(\|y\|)R_{\pi/2}y\) 的精确零集 \(S_{\rm rot}=\{0\}\)，实际 \(\rho=s=w(a)\)、最近锚积零，原真误差界及目标同时取等。剪切 \(F_{\rm sh}(u,v)=(-w(a),\operatorname{sgn}(v)w(a)^2/a)\)，\(a=|v|>0\)，零线置零，精确 \(S_{\rm sh}=\mathbb R\times\{0\}\)；最近输入锚为 \((u-w(a),0)\)，锚积零，完整 \(\rho=s=w(a)\sqrt{1+g(a)^2}\)。剪切的实际后继为 \((a\mapsto a+w(a)^2/a)^{-1}\)，严格小于预设 \(\varphi_\beta\)，未声称原误差界取等。
+- **Conclusion — 每个正初始距离实际轨道**：从旋转的 \(0<t_0\le R\)，或剪切的任意横坐标和 \(0<|v_0|=t_0\le R\) 出发，均有 \(t_k\downarrow0\)。设 \(\sigma=1\) 为旋转、\(\sigma=2\) 为剪切，则 \(t_k\sim(2^\beta/\sqrt{\sigma})k^{-1/2}(\log k)^{-\beta}\)、\(s_k\sim(2^\beta/\sigma)[k(\log k)^\beta]^{-1}\)。两图实际总长有限当且仅当 \(\beta>1\)；此时 \(\mathcal L_k\sim2^\beta[\sigma(\beta-1)]^{-1}(\log k)^{1-\beta}\)。旋转总点误差为 \(t_k\)，所有 \(\beta>0\) 都趋零；剪切在 \(\beta>1\) 时点误差等价于其尾长，慢于任何 \(k^{-p},p>0\)，而 \(\beta\le1\) 时沿零线逃逸。
+- **原模与统一类范围**：\(\psi_\beta(\rho)\sim2^{\beta/2}\sqrt{\rho}[\log(1/\rho)]^{-\beta/2}\)，两图均无任何 \(q>1/2\) 的局部 Hölder 真误差界。令 \(\chi_\beta=(\operatorname{id}+\psi_\beta)^{-1}\)，则 \(\chi_\beta(t)\sim t^2[\log(1/t)]^\beta\)。C401 势在 \(\beta>1\) 时等价于 \([\log(1/t)]^{1-\beta}/(\beta-1)\)，否则发散；模型尾长分别等价于该势的 2 倍和 1 倍。固定这个原模、\(\lambda=1,\Phi=0,U=H\)，在 C420 的含二维自由闭目标、完整真误差界及全距离窗允许覆盖统一类中，全部算子全部轨道有限长当且仅当 \(\beta>1\)。非减目标的复合给统一 \(O(k^{-1/2}(\log k)^{-\beta})\) 距离率；\(\beta>1\) 时势给 \(O((\log k)^{1-\beta})\) 尾长及点误差界，剪切排除全类的正幂点率。一般开 \(U\) 的充分版另保 C401 严格位置预算。
+- **Dependencies / Evidence**：D01、core E0、[LG1–LG6 的完整反解与逐式渐近证明](research/topics/dd2/nonpower_rates.md#dd2-log-half-order)、C401 的原积分充分性及 C420 的精确统一类合同。原 \(\psi_\beta\) 在本例严格递增，所用残差代换已核；图值唯一故真实 \(\rho=s\)。求和渐近由正项积分与尾部夹逼，不用数值结果替代证明。
+- **Counterevidence / Objections / Scope / Related Files**：旋转与剪切的 \(S\) 不同，仅共享所列标量证书；各分支的点极限及常数不互授。统一类必要性不成为任意固定图、正下界或指定更强目标的必要条件。通用旋转机制来自 C420，纯幂剪切机制与 C399 相接；此身份新增具体对数模与真实率，不改变它们原命题，不认定公开新颖性。这里有限长的非幂剪切不关闭另列的非绝对可和点收敛主问题。[S04.10](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-rate-acceptance)分开曲线、原模和上包络范围。
