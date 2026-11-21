@@ -1159,6 +1159,8 @@ F(y)=\lambda^{-1}\{x-y:J(x)=y\}.
 
 **S05.07 的独立补充。** [C453](../topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2)保持作者原 F1 不变，以原积分加逆模值的混合支付势删除 F2；非增上包络与直接积分的零端可积性本身仍等价。[C454](../topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length)使用准确原域 bψ 和闭完整壳图，将零缺陷统一必要性扩展到一般非单调原模，固定严格吸收的非正下界也有同一充要性。原模平方积分公式仍只在已证的连续非减分支使用，稀疏点值例明确排除无条件外推。两新身份不修改 C419–C420 的原定义和范围。
 
+**S05.08 的精确模与距离投影补充。** [C456](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)在全域连续单值、真实凸最小化近端中给 \(\psi_m(\rho)=\rho^{1/m}\)、\(m\ge2\) 的逐点精确模与尾长 \(t_k\)；实际步等于 \(\chi_\Sigma\)，故所有正可测有效步下界的 \(\int t/b\) 都发散。共享原数据的旋转仍给真实无限长。[C457](../topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction)进一步使原锚、原模、最大输出目标均按尺度精确，真实角度预算却给全部轨道有限长度，而没有任何共同下有界距离支付势。它排除的不是全部有限实值函数：趋负无穷的支付函数确实存在。上述固定图边界与 C420/C454 的统一类必要性兼容，C278、C452、C453 的旧身份不变。
+
 <a id="fh-summary"></a>
 ## 8. 验收结论与版本范围
 

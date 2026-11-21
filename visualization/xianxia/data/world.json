@@ -11189,6 +11189,28 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ANGULAR-LENGTH-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-SHARP-GAUGE-FINITE-PAIR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14247,6 +14269,14 @@
     "E767": {
       "x": 837.25,
       "y": 5473.0
+    },
+    "E768": {
+      "x": 716.58,
+      "y": 5740.12
+    },
+    "E769": {
+      "x": 703.97,
+      "y": 5651.76
     }
   },
   "bounds": {

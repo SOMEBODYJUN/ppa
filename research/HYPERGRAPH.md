@@ -1282,6 +1282,18 @@
 | --- | --- | --- | --- |
 | E767 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) ∧ [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) | conditional → [DD1-ROBUST-MARGIN · C455 DD1可观察停止余量、一步锐值与十步内层校准](topics/dd2/inexact.md#dd1-observable-margin) | C455-v1：有限维、同一F/lambda/闭S、全输入受检允许关系覆盖，所有边完整真界a<=ell rF及某最近输入锚积>=-sigma t²（含零）；L=ell/lambda,c=1+2sigma,b=(1+sqrt(1+4sigma))/2,h=max(1/b,sqrt((1+L²)/c)),m=L/h<kappa<1。真图输入误差E<=delta s,delta=h-L/kappa给全部接受输出a<=kappa d(x)、步<=b(1+delta)/(1-bdelta)d(x)，全部轨道绝对可和/点收敛；局部另有独立绝对帽与严格有限前缀。二维自由闭目标完整图类一步系数准确，非轨道必要性。具体非单调线性模型Richardson内层十次更新/十一次F评价；变lambda公式与一般零缺陷至多25%预算比较有明确前件。通用消元已见UI4-6，线性零缺陷与模型由C283覆盖；不认证新颖、自然应用或总成本优势。；**derived-checked** |
 
+## DD2 固定图候选积分的非必要性
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E768 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-SHARP-GAUGE-FINITE-PAIR · C456 精确原幂模有限与无限长度连续双图](topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair) | C456-v1 每实m≥2,R>0,H=R²,S0,λ1,U=VψH,Dψ全非负,ψ(rho)=rho^(1/m),Phi0,预设φ=(a↦sqrt(a²+a^(2m)))逆。Q=R_{π/2}，完整连续单值F_rad=\|y\|^(m−1)y和F_rot=\|y\|^(m−1)Qy均全域唯一同胚近端、exactzero0、零驻定与所有距离窗不变，完整rho=s=a^m，所有rho实现且原ψ逐点最小。共同E0独立认证目标，旋转取等径向严格更小；最紧实际锚分别a^(m+1)和0，不混称。两图全部初点点趋0；径向总长t0、尾tk且W=t支付，是凸f=\|y\|^(m+1)/(m+1)的唯一全局最小化近端；旋转每正初点同一真实轨道无限长。χΣ=bψ~t^m，其积分及原F3发散但F1/F2、δ1成立。径向实际s(t)=χΣ，所以任何正可测有效实际步下界的∫t/b亦无限；不排除所有距离势。不反驳C420/C454统一类必要性，不称首次精确模有限长或公开新颖。；**derived-checked** |
+
+## DD2 真实角状态与距离投影不可续接
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E769 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-SHARP-GAUGE-FINITE-PAIR · C456 精确原幂模有限与无限长度连续双图](topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair) | conditional → [DD2-ANGULAR-LENGTH-OBSTRUCTION · C457 连续角度图有限长度与下有界距离势障碍](topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction) | C457-v1 每实m≥2,R>0,H=C=R²,S0,λ1,U=VψH,Dψ全非负,ψrho=rho^(1/m),Phi0,预设φ=(a↦sqrt(a²+a^(2m)))逆。βθ=π(1−cosθ)/4，正输入te^(iθ)以唯一a解t²=a²+2a^(m+1)cosβ+a^(2m)，α=arg(1+a^(m−1)e^(iβ))，Jx=ae^(i(θ−α)),J0=0；角导数界证明全域同胚，完整F=J逆−I连续单值、exactzero0、完整rho=s=a^m、原ψ逐点最小、零驻定及距离窗不变。每正t最小锚0和最大输出φ同边且仅输入角π实现，最小s=χΣ在角0实现；目标另由E0认证。真实主角[0,2π)非增不跨接缝，V=t(1+θ),V0=0支付每边，所有真实尾≤(1+θk)tk≤(1+2π)tk→0，点趋零。任何正可测有效步下界积分发散；精确距离投影含φ旋转无限成本伪链，故无有限非负或正窗有共同有限下界的有限实值距离支付势。伪链不能实际续接：最大目标强制角π而输出角已下降。无下界实值W_R(t)=2∫R^t u/χΣ(u),W_R0=0确实支付但零端−∞，不把C278更强全实值否定移用。不否定同数据统一类必要性，不称最小化、最优常数或公开新颖。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
