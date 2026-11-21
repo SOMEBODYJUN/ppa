@@ -10991,6 +10991,17 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-STRICT-DECREASE-PREFIX": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13977,6 +13988,10 @@
     "E749": {
       "x": 401.22,
       "y": 5454.84
+    },
+    "E750": {
+      "x": 484.2,
+      "y": 5519.35
     }
   },
   "bounds": {

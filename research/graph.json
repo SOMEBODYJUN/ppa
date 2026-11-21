@@ -5466,6 +5466,12 @@
       "label": "C437 原超水平最大值判据与固定闭图紧性边界",
       "file": "canonical/dd2_function_hypotheses.md#fh-attainment-exact",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-STRICT-DECREASE-PREFIX",
+      "label": "C438 临界残差右前缀与严格下降共同余量",
+      "file": "canonical/dd2_function_hypotheses.md#fh-strict-decrease",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14056,6 +14062,19 @@
       "output": "DD2-MAXIMUM-ATTAINMENT",
       "relation": "conditional",
       "scope": "自由单边按非严格原超水平层命中几何前缀判最大值；精确零集闭纤维另滤零残差。固定有限维图的紧输入层加相对闭边集给独立达到保证，非紧目标及Hilbert有实际反例。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E750",
+      "topic": "DD2 严格下降与共同余量",
+      "inputs": [
+        "DD2-RAW-ENVELOPE-COMPUTATION",
+        "DD2-ENVELOPE-SCOPE-EQUIVALENCE",
+        "DD2-EXACT-JOINT-RELATION"
+      ],
+      "output": "DD2-STRICT-DECREASE-PREFIX",
+      "relation": "conditional",
+      "scope": "正尺度、含零原残差域及有限原模：临界右前缀共同余量等价原两项上确界严格小于 t；准确非空自由 R 在非正下界同判，正下界由输出根自动严格。逐边严格、固定图和跨尺度统一比例保留各自量词，完整窗必要性限已证非正范围。",
       "status": "derived-checked"
     }
   ]

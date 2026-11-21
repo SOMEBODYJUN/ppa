@@ -1174,6 +1174,12 @@
 | --- | --- | --- | --- |
 | E749 | [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-MAXIMUM-ATTAINMENT · C437 原超水平最大值判据与固定闭图紧性边界](canonical/dd2_function_hypotheses.md#fh-attainment-exact) | 自由单边按非严格原超水平层命中几何前缀判最大值；精确零集闭纤维另滤零残差。固定有限维图的紧输入层加相对闭边集给独立达到保证，非紧目标及Hilbert有实际反例。；**derived-checked** |
 
+## DD2 严格下降与共同余量
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E750 | [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) ∧ [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) ∧ [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) | conditional → [DD2-STRICT-DECREASE-PREFIX · C438 临界残差右前缀与严格下降共同余量](canonical/dd2_function_hypotheses.md#fh-strict-decrease) | 正尺度、含零原残差域及有限原模：临界右前缀共同余量等价原两项上确界严格小于 t；准确非空自由 R 在非正下界同判，正下界由输出根自动严格。逐边严格、固定图和跨尺度统一比例保留各自量词，完整窗必要性限已证非正范围。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

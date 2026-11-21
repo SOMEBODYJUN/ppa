@@ -151,7 +151,11 @@
   - **结论** 原正部两项式的一般精确性被否证；它只对 OP1 删除若干几何约束后的标量域精确。修订后的 G 与 R 在各自自由单边类中给最小共同上界，非正整窗另有完整闭覆盖实现。保留 C421 含零残差域及准确非空条件时，\(\Phi\le0\) 给 \(M_R=\min\{B_+,W_+\}\)，故原式精确恰需 \(W_+\le B_+\)。一般符号的 OP3 用所有严格低于 \(W_+\) 的水平命中原残差三帽精确判定等值，允许上确界未达。零尺度分开处理。正下界既有严格损失也有等值例；固定对象、仿射、一维及正下界完整窗必须保留自己的域，二维自由最优值不能自动转授。
   - **证据** [OP1–OP3 的模型与精确比较](../canonical/dd2_function_hypotheses.md#fh-formula-exact-optimum)、[G 同平面两锚实现](../canonical/dd2_general_phi_exact.md#dd2-four-point-geometry)、[R 完整真残差实现](../canonical/dd2_function_hypotheses.md#fh-raw-residual)、[C435 的精确投影及候选严格差距](../topics/dd2/joint_relation.md#dd2-joint-candidate-comparison)、[完整窗额外约束](../topics/dd2/joint_relation.md#dd2-complete-fiber-strict-gain)、[固定对象和目标范围](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality)。
   - **复核** 三席先独立推导再逐式复读实际稿。逐行上界与反向取值证明 OP1 恰为放宽域；G 的输入最近性、输出最近性及退化同时实现，R 从投影底图加主边，在必要时补最短前像，零输出及额外零点另行核准。非正整窗全部边认证没有由闭图或覆盖替代。OP3 用严格超水平存在性处理未达值及 \(c<\alpha\)，没有误检最优端点。完整 \(F=I\) 给 \(2t/\sqrt5>t/2\)，完整 \(F=-I/2\) 给 \(4\sqrt{5/17}\,t>2t\)；正重根配截顶模在单位尺度两式同为 \(1/2\)，三例的全部纤维与窗内前件均核准。另核 \(t=0\) 的原域、零输出过滤及 \(\Phi(0)\le0\) 时的同一截帽式；Hilbert 自由锐性用二维嵌入，固定闭目标仍需实际输入锚。没有把最大值未达、不安全与不精确相互混同。
-- [ ] `S02.F05` 何时有 `\varphi(t)<t`；
+- [x] `S02.F05` 何时有 `\varphi(t)<t`；
+  - **裁决** Proved
+  - **结论** C438 在含零原残差域给准确严格门：原两项上确界 \(W_+(t)<t\) 恰需原模在 \(\lambda\rho\le\min\{B_+,\sqrt{2D_+}+\varepsilon\}\) 的前缀上确界随 \(\varepsilon\downarrow0\) 的极限严格小于 \(t\)。无需原模单调、连续或最大值达到。准确非空 R 在 \(\Phi>0\) 时由 \(B<t\) 自动严格，\(\Phi\le0\) 时与原式同判。每条边严格下降的较弱弱层判据另列，允许未达 \(M_R=t\)。指定 \(A=\varphi\) 仍须验 \(M_R\le A<t\)，不能用诱导曲线替换预先目标；跨尺度统一 \(\kappa\) 另需 \(\sup M_R(t)/t<1\)。线性原模严格恢复 \(D_+/t^2<T(L)\) 两段门，临界等号有真实输出 \(a=t\)。G 保自己的物理筛选，零尺度及空域独立处理。
+  - **证据** [C438 的 SC1–SC4 充要证明与正则性化简](../canonical/dd2_function_hypotheses.md#fh-strict-decrease)、[SC5–SC7 逐边严格、同一连续图及右侧跳跃](../canonical/dd2_function_hypotheses.md#fh-strict-edge-versus-margin)、[指定目标、G 筛选、跨尺度余量与线性校准](../canonical/dd2_function_hypotheses.md#fh-strict-target-calibration)、[C438 精确身份](../../CLAIMS.md#c438)、[F155 失败机制](../../FAILED_ROUTES.md#f155)。
+  - **复核** 三席独立重构后复读实际稿。核膨胀前缀含零、非闭原域、无穷原上确界、根截断与开能量端；反向只在 \(q+\varepsilon<B_+\) 时用能量根，未偷补评价点。SC5 同残差降至 \(a=t\) 由 C435 实现，默认子零集与精确零集闭纤维过滤未混同。SC6 的完整 \(F(u,z)=(0,z/(1+u^2))\) 全窗每边严格，但沿无界目标有固定图上确界 \(t\)；SC7 的真残差 \(r\downarrow1/2\) 逼出未达 1，临界闭前缀却恒零。正下界完整 \(F=I\) 证明正部可漏共同余量；连续原模 \(\sqrt r\) 又证明 \(\mathcal H_t/t=0\) 不给统一比例。线性 \(L=1/2\)、退化 \(\ell=0\)、准确非空门、零尺度三支均核准，未把本项提前升级为距离趋零或长度结论。
 - [ ] `S02.F06` 何时有 `\varphi^{\circ n}(t)\to0`；
 - [ ] `S02.F07` 何时可以构造非减的下降模函数；
 - [ ] `S02.F08` 反向刻画是否成立；
