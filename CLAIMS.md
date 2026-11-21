@@ -3543,3 +3543,12 @@
 - **Anchor and cluster scope**：最近锚只给标量距离、留域和在累积松弛及远离零正余量条件下的 \(t_k\to0\)。全锚条件对每个 \(w\in S\) 给 Fejér／准 Fejér 和 Opial 型零点识别，但误差尾、弱闭性或 demiclosedness 仍须单列。有限维有界最近锚轨道的聚点落入闭 \(S\)，最近锚自身不能给唯一聚点或点收敛。最近锚的连续单值漂移例 \(G(u,v)=(-v^2,v^3)\) 使 \(t_k\to0\) 而切向坐标发散。
 - **Counterevidence / Boundaries**：\(\alpha_k<2\beta_k\) 与 \(\sum\alpha_k=\infty\) 单独不足。\(F=I\)、\(\alpha_k=2-2^{-k-2}\) 的轨道保持正距离。等号 \(\alpha=2\beta\) 可取 \(z^+=-z\)。这些例子排除把逐步严格门或松弛累积直接升级为零聚点识别。
 - **Evidence / Related Files**：[完整审计和证明](research/topics/dd2/adaptive_parameter_audit.md)、[C402 方向松弛正文](research/topics/dd2/relaxation.md#dd2-adaptive-length)。
+
+<a id="c408"></a>
+## C408-v1 · 完整图覆盖与原始—对偶矩阵门
+
+- **Status**：`derived-checked`。近极小完整图值的 lift 证明、只选单支的反例、块完成平方及 Schur 补可计算门已逐式核对。结论只适用于写明的覆盖、工作窗和完整真残差量词，不宣称对任意近似扩大算子自动成立。
+- **Exact Statement / Objects / Domain / Quantifiers**：在有限维 Hilbert 空间、闭目标 (S)、允许边集 (mathscr E) 和连续非减输出模 (psi) 下，若每个近极小 (q\in G(y)) 的输入 (x=y+q) 落在工作窗并属于 (mathscr E)，且该边满足 (d(y,S)\le\psi(\|q\|))，则完整真残差 (r_G(y)=\inf_{q\in G(y)}\|q\|) 满足 (d(y,S)\le\psi(r_G(y)))。若只选一支，(G(y)=\{y,y^3\}) 给出线性选定支而 (r_G(y)=|y|^3)，所以完整界失败。
+- **Matrix gate**：若原始—对偶块满足 (langle d,y\rangle\ge\langle d,Md\rangle+\langle y-\mathcal Kd,N(y-\mathcal Kd)\rangle)，则任意 (W\succ0) 给出 (V=N-W)、(U=M+\mathcal K^*(N-NW^{-1}N)\mathcal K) 及精确平方余量。对退化预条件 (P=CC^*)，(U+\sigma P\succeq0) 与 (C^*VC\succeq\eta I)、(eta>-1/2)，接上实际锚缺陷即可得到 DD2 正耗散。选择 (W,sigma,eta) 的有限维门等价于 Schur 补 LMI，因此可逐实例认证。
+- **Scope / Objections**：近极小 lift 是存在量词，不能给允许任意坏图值的算法提供全轨道结论。只知道 (U\succeq-\sigma P) 时负位置项可能是二阶距离量，仍须额外吸收。最优 LMI 值和一般非线性、非分离分裂的统一性留作开放扩展。
+- **Evidence / Related Files**：[P2 覆盖与矩阵审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)、[矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-matrix)、[DD2 双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)、[CP/DR 分量证书](research/topics/dd2/splitting.md#dd2-splitting-component)。

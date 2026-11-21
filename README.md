@@ -6,6 +6,8 @@
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。
 
+[P2 覆盖与矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)给出近极小完整图值 lift 的必要量词、选定分支的反例以及原始—对偶块的 Schur 补可计算证书，并由 [C408](CLAIMS.md#c408) 登记其作用域。
+
 [DD2 论文结构与 GPT Pro 任务书](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md)列出可写定理、严格例、文献差距与各项未闭门。[CP／DR](research/topics/dd2/splitting.md#dd2-splitting-component)给分量充分条件、显式非零位置模及慢收敛的完整算法例。[Inexact DD2](research/topics/dd2/inexact.md#dd2-inexact-absolute)给真图扰动、尾和与临界精度。
 
 [DD1/DD2 与 Alcantara 的同参数比较](research/LITERATURE.md#lit-alcantara-dd) 定位普通 PPA 的共同二次式、分段锐门及退化 PPPA 的恢复条件。[C399](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect) 从输入距离次单调性缺陷和输出 Hölder 真残差误差界直接推出同一步长度势，给临界常数、半阶无限长度见证及超出线性收敛的非单调原算子。
