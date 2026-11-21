@@ -1,6 +1,6 @@
 # 原协议验收进度
 
-**最新作者问题与选稿边界。** [连续回缩查新](research/LITERATURE.md#lit-dd-retraction-priority)已核直接旧例与定量引理；不能再把“几何尾给连续极限回缩”作为未有人研究的机制。未认证原非单调完整 PPA 紧零簇定理全部被覆盖。[C462](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)已给二维连续单值 F、完整 DD1 和所有非驻定局部轨道真实 Q-二次，却无任何正阶两点 Hölder 极限选择的自足证明；当前仅本轮直接重构和边界审查，没有独立代理复核，不认证公开新颖性。优先选稿问题为极限选择稳定性、C426–C427 目标几何、C444/C457 的一步锐性与实际续接；具体新颖性、最优篇幅及全稿重排仍未裁决。原验收清单不因选稿工作而改勾。
+**最新作者问题与选稿边界。** [连续回缩查新](research/LITERATURE.md#lit-dd-retraction-priority)已核直接旧例与定量引理；不能再把“几何尾给连续极限回缩”作为未有人研究的机制。未认证原非单调完整 PPA 紧零簇定理全部被覆盖。[C462](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)已给二维连续单值 F、完整 DD1 和所有非驻定局部轨道真实 Q-二次，却无任何正阶两点 Hölder 极限选择的自足证明；当前仅本轮直接重构和边界审查，没有独立代理复核，不认证公开新颖性。优先选稿问题为极限选择稳定性、C426–C427 目标几何、C444/C457 的实际续接及 C458–C461 的准确总尾；具体新颖性、最优篇幅及全稿重排仍未裁决。原验收清单不因选稿工作而改勾。
 
 **当前任务与已验证判断。** 作者要求先验证 DD 对鲁棒停止/参数工作的实质贡献。[C455](research/topics/dd2/inexact.md#dd1-observable-margin)已证明完整 DD1 的联合几何可给 \(E\le\delta_\kappa s\) 的可观察规则；全接受输出保 A+B、绝对可和和点收敛，自由闭目标完整图类一步系数准确，固定非单调模型有十次内层更新/十一次图评价及 \(11N\) 总上界。两位独立重构和完整正文复核已完成；有限复算使用 Decimal80 与精确 Fraction，不替代普遍证明。
 

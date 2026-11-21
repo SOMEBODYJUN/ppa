@@ -25,7 +25,7 @@
 | --- | --- | --- |
 | DD 保证很快收敛以后，最终选中的零点是否同样稳定？ | C116、C138–C141 的共同尾与匹配坏选择；[C462](topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability) 新增二维连续单值原 F、完整 DD1、真实 Q-二次点率及无任何正阶 Hölder 的直接模型 | 优先的独立结构节：从定性回缩推进到定量解选择。旧 Lipschitz 引理不覆盖半阶单步，但更广文献先行性仍开放。 |
 | 解集形状怎样改变单调性–正则性补偿？ | [C426–C427](topics/dd2/target_geometry.md)：自由凸性不改善准确一步域，仿射正交性增加准确代价，有同参数完整线性锐例 | 优先的几何节，直接承接 DD；固定目标、逐边最优和共同轨道分别保量词。 |
-| 一步锐界为什么不等于一条最坏轨道？ | [C444](topics/dd2/dd1_recovery.md#dd1-critical-finite-termination) 同边最优常数临界、每尺度取等而全部轨道两步终止；[C457](topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction) 连续完整图有限长，却无下有界距离支付势 | 可作紧凑的动力学结构节：空间输出要能续接，逐尺度最坏值不能自由重置方向。两者不反驳完整 DD1，不将投影伪链当真实轨道；一般原则在动力系统中并非新概念，具体 PPA 锐模型仍需查新。 |
+| 一步最坏补偿怎样决定真正的最坏总路程？ | [C444](topics/dd2/dd1_recovery.md#dd1-critical-finite-termination) 临界最优常数、每尺度取等而两步终止；[C457](topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction) 的距离投影障碍；新同步的 [C458–C461](topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail) 给零缺陷原模统一类的准确总尾，连续非减模由同一完整旋转达到，一般原模有完整图有限前缀逼近 | 可作有正反两面的动力学结构节：先核最坏边能否实际续接，再在明示原数据类求准确全尾。线性零缺陷校准为 (sqrt(1+L²)+L)t，是真实总路程的最优值；不是点误差，也不扩为任意 signed 数据。一般原则和该简单特例不自动有新颖性，具体原模最优定理仍须查新。 |
 | 局部吸引零簇可否原样延拓为全局算子而不增加零点？ | [C233–C235](canonical/zero_preserving_completion.md)：连通管外、允许新 Hölder 常数时 Euler 完成门；RP² 及全局吸引的不同障碍 | 是比“存在回缩”更深入的拓扑候选，但依赖经典 Hopf / 度数机制，不能未比较即作新主贡献。C234 的完整局部模型也给 DD1：Z10–Z12 中线性真界常数可取 \(\ell=\lambda\rho^2/(1-\rho^2)\)，最近锚内积非负。保原常数完成另有独立义务。 |
 
 误差容忍 C455 仍是可保留的计算后果，不因本表而撤销其正文资格；正文篇幅优先由以上新问题和具体答案决定。连续回缩本身降为经典工具/有条件结构推论，原稿及既有任务书在本轮未被擅自重排。
