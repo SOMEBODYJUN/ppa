@@ -313,6 +313,7 @@ T(h)=1/(2h^2), h>=1/2.
 
 <a id="6.5-q1-的超线性输出支"></a>
 
+<a id="q-greater-one-subcritical"></a>
 ### 6.5 q>1 的超线性输出支
 
 **状态：Conditional（p q>2 或临界小常数），Refuted（p q<2 且 M>0），Open（q>1 临界常数的算子级最优性）。**
