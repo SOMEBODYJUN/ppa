@@ -257,7 +257,11 @@
   - **结论** 对已知合法路径，可和实际步尾给强 Cauchy，另由距离趋零与闭 \(S\) 识别极限。C401/C419 的同一步耗散及有限积分，或 C400 的已认证非减比较尾和，给可核的长度证书。另一充分机制是对每个固定零锚的共同可和平方误差加 \(\liminf t_k=0\)：点列直接强 Cauchy，尾误差不超过 \(t_k+\sqrt{t_k^2+E_k}\)，无需有限长度。单点目标加距离趋零、强聚点唯一加范数预紧也可定位。最近锚存在量词不自动给全锚；仅距离趋零，即使加有界、渐近正则、连续完整算子及全部聚点入目标，仍不足以点收敛。自动续接另保全窗覆盖、末边证书及严格位置预算。
   - **证据** [S04.03 充分证明、尾界和合同](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)、[C401 同一步积分](../topics/dd2/core.md#dd2-general-gauge)、[C419 原模位移下界](../canonical/dd2_function_hypotheses.md#fh-general-length)、[全锚估计](../topics/dd2/relaxation.md#dd2-all-anchor)、[C447-A 的半阶圆聚点 PC1–PC6](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[C447-B 的线性区间聚点 CV1–CV3](../topics/dd2/core.md#dd2-bounded-linear-trajectory)、[C400 点收敛而无限长及切向逃逸](../topics/dd2/core.md#dd2-trajectory)。
   - **复核** 三路先独立重建充分条件、完整反例及删项攻击，后复读实际证明。已核普通逆的全域或合法延拓、原非单调残差域、共同误差与逐锚误差、liminf 门和有限前缀首退出边。两个新分支的零集、连续性、完整纤维、全选择不变、实际递推及强聚点集合均逐式复核；A 的半阶模、正锚及平方步和不转授 B，B 的线性真界不转授 A。固定图目标与自由包络分开，未假定不等价的图闭、有限长或全锚条件。三席已复读最终身份卡、图边、地图、失败机制及本记录；窗口、正下界端点、定位和比较步长合同的表述已按实际证明校准。
-- [ ] `S04.04` 何时能够保证有限长度？
+- [x] `S04.04` 何时能够保证有限长度？
+  - **裁决** Proved
+  - **结论** 下列证书直接控制实际步长。一般证书 \(s\le C[V(t)-V(a)]\) 配有限初值及沿轨道有限下界即可望远镜；不必预先要求势连续、凹或可微。C401/C419 从合法正非减位移下界、统一严格缺陷吸收及有限积分得到 \(\mathcal L_k\le2P(t_k)/\delta\)；C400 在原反向预算下用 \(s\le b_Lt\) 和可和非减比较迭代得到 \(b_LH_Q(t_k)\)。固定连续非减误差模、零缺陷、\(U=H\)、距离窗覆盖且含二维的统一自由类中，C420 的积分才是充要条件；不授予固定图、正下界或另给更强目标。距离/点收敛与平方步可和不保证长度；积分或指定严格耗散门也不各自成为一般固定图的必要条件。局部全选择结论按所用版本另核末边、零尺度、距离不出窗、覆盖与严格初始位置预算；这是一组充分合同。
+  - **证据** [S04.04 的势、积分、比较、充要范围及边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)、[C419 原模位移下界与望远镜](../canonical/dd2_function_hypotheses.md#fh-general-length)、[C420 零缺陷统一类全纤维证明](../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)、[F148 的完整反例](../canonical/dd2_function_hypotheses.md#fh-length-boundaries)、[C400 匹配目标预算与实际轨道](../topics/dd2/core.md#dd2-trajectory)、[C444 临界等距边与全选择终止](../topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)、[C447-A 平方步可和而无限长](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)。
+  - **复核** 三路已独立重建同一步势与有限前缀、统一类必要性、完整反例及删项攻击。特别核原非单调 \(\psi\) 的评价域和 \(b_\psi\)，零尺度驻定，C400 非减比较及匹配预算的限制；C420 平台水平集的最小完整前像与实际步并不总相等，原算子空纤维不被误称为近端无覆盖。F148 的松模、正下界、\(7t^2/50\) 与零余量例均逐式核完整图，C444 的等距正步不能满足单一距离势。三席已复读实际终稿、清单、总账补证、失败机制及地图；共同下界和末边范围、数值表达与可计算性的区别、固定图和统一类的量词均已校准。
 - [ ] `S04.05` 何时只有渐近正则性？
 - [ ] `S04.06` 何时能够保证残差趋于零？
 - [ ] `S04.07` 何时能确认极限属于指定的 `S`，而不只是 `\operatorname{zer}F`？

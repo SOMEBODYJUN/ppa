@@ -1010,7 +1010,8 @@ C366 的几何部分在逐点任意缩小原值后保持不变，真实残差可
 ## F148 · 把长度积分视为固定图必要条件或删去耗散的严格余量
 
 - **两个失败方向**：\(F=I\) 配较松 \(\psi(r)=\sqrt r\) 的积分发散但实际长度有限；\(\eta=s,D=7t^2/50\) 连统一 \(\delta\) 门也失败，却有同数据统一几何下降。反过来，\(\eta=s^{2/3},2D=\chi^2\) 的完整连续单值算子使积分有限、真实步逐尺度严格下降，而总长度无限。
-- **可回收成果**：[C419](CLAIMS.md#c419) 保留正非减位移下界、严格耗散和可积性作为充分机制；[C420](CLAIMS.md#c420) 在固定连续非减误差界、零缺陷的统一算子类中证明同一积分充要。固定算子、正锚下界或额外下降目标的必要性不得从该类移植。[边界证明](research/canonical/dd2_function_hypotheses.md#fh-length-boundaries)。
+- **距离势也非固定图必要形式**：[C444](research/topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)的全选择轨道至多两步终止，但真实特殊边 \(a=t,s>0\) 使任何单一距离势差 \(C[V(t)-V(a)]\) 都为零。有限总长不能反推出这种只看距离的逐边证书；可考虑图状态或多步信息，但不能把未证明的候选写成已有结果。
+- **可回收成果**：[C419](CLAIMS.md#c419) 保留正非减位移下界、严格耗散和可积性作为充分机制；[C420](CLAIMS.md#c420) 在固定连续非减误差界、零缺陷的统一算子类中证明同一积分充要。固定算子、正锚下界或额外下降目标的必要性不得从该类移植。[边界证明](research/canonical/dd2_function_hypotheses.md#fh-length-boundaries)。 [S04.04](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)汇总各充分路线、完整反例和统一类量词；C400 的尾和必要侧明确使用恰好匹配的预算，不转授更小给定预算。
 
 
 <a id="f149"></a>

@@ -3663,6 +3663,8 @@
 - **Definitions / Dependencies / Evidence**：C401 的能量恒等式与有限前缀证明；三角约束及完整真残差。[完整推导](research/canonical/dd2_function_hypotheses.md#fh-general-length)。
 - **Counterevidence / Objections / Related Files**：[边界及非必要性](research/canonical/dd2_function_hypotheses.md#fh-length-boundaries) 给 \(\eta(s)=s^{2/3}\)、\(2D=\chi^2\)、可积 \(u/\chi(u)\) 而实际无限长的连续单值算子，排除无严格余量的替换。\(\eta=s,D=7t^2/50\) 的统一有限长度类说明原耗散门非必要。\(b_\psi\) 仅对三角与残差放宽子系统最强，不称全部几何或全部图的最强下界。
 
+- **S04.04 证据与范围复核**：[有限长度验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)将实际同一步势、原模下界、严格耗散、有限积分和首退出预算分别重构；一般势只要求可评价、有限初值和沿路径有限下界，给全部选择的共同界另需统一常数。此为既有充分机制的证据补全，不改原函数域或增加固定图必要性。C444 的真实等距正步还表明：全选择有限终止的固定图可能根本不容许覆盖全部边的单一距离势。
+
 <a id="c420"></a>
 ## C420-v1 · 零缺陷统一算子类的固定模积分充要性
 
@@ -3672,6 +3674,8 @@
 - **Definitions / Dependencies / Evidence**：C401 的 \(D=0,\delta=1\) 充分性、完整图反演。[定理、构造及全部证明](research/canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)。\(\chi(u)\le b(u)\le\chi(\sqrt2u)\) 给两积分同敛散。
 - **Counterevidence / Objections / Related Files**：这是固定误差界模、零缺陷、统一算子类的充要性；不是固定算子的必要性。\(F=I\) 使用较松 \(\psi(r)=\sqrt r\) 有有限长但积分发散；正下界 \(\Phi=t^2/4\) 也能在该模下给统一有限长。\(\eta\) 有界时原 \(F\) 可在非实际输出处为空，完整预解式仍全域单值；不把它称作全域单值 \(F\)。
 
+
+- **S04.04 必要性复核**：[实际验收证明](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)独立核全部前像水平集、平台最小残差、零输出、闭图和全域唯一近端，以及每个距离壳的积分上下界。必要性仍只针对本卡的固定连续非减模、零缺陷统一自由类；未向原一般有符号下界、额外下降目标或任意固定图转移。
 
 <a id="c421"></a>
 ## C421-v1 · 原真残差一维显式包络与有限精度计算合同

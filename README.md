@@ -49,6 +49,8 @@
 
 [S04.03 的点收敛合同](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)分开可和实际步尾、全锚可和误差与目标定位。距离趋零、有界和渐近正则不够：[C447-A](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)以零缺陷、全域半阶真误差界及平方步可和得到整圆聚点；[C447-B](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)以线性真误差界取等得到零线上的闭区间聚点。两者都是连续完整单值普通 PPA，但不是同一数据或算子。它们说明必须控制沿零集的位置，有限长度只是可用的充分机制之一。
 
+[S04.04 的长度合同](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)区分同一步势、原残差导出的严格耗散积分和已认证曲线的比较尾和。C420 的积分充要性只属固定连续非减模、零缺陷的统一自由类；C444 的全选择两步终止图含等距正步，连单一距离势也不是每个固定图有限长的必要形式。完整原算子的步长、真残差、距离差与平方步始终分别使用。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
