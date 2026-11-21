@@ -1294,6 +1294,30 @@
 | --- | --- | --- | --- |
 | E769 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-SHARP-GAUGE-FINITE-PAIR · C456 精确原幂模有限与无限长度连续双图](topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair) | conditional → [DD2-ANGULAR-LENGTH-OBSTRUCTION · C457 连续角度图有限长度与下有界距离势障碍](topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction) | C457-v1 每实m≥2,R>0,H=C=R²,S0,λ1,U=VψH,Dψ全非负,ψrho=rho^(1/m),Phi0,预设φ=(a↦sqrt(a²+a^(2m)))逆。βθ=π(1−cosθ)/4，正输入te^(iθ)以唯一a解t²=a²+2a^(m+1)cosβ+a^(2m)，α=arg(1+a^(m−1)e^(iβ))，Jx=ae^(i(θ−α)),J0=0；角导数界证明全域同胚，完整F=J逆−I连续单值、exactzero0、完整rho=s=a^m、原ψ逐点最小、零驻定及距离窗不变。每正t最小锚0和最大输出φ同边且仅输入角π实现，最小s=χΣ在角0实现；目标另由E0认证。真实主角[0,2π)非增不跨接缝，V=t(1+θ),V0=0支付每边，所有真实尾≤(1+θk)tk≤(1+2π)tk→0，点趋零。任何正可测有效步下界积分发散；精确距离投影含φ旋转无限成本伪链，故无有限非负或正窗有共同有限下界的有限实值距离支付势。伪链不能实际续接：最大目标强制角π而输出角已下降。无下界实值W_R(t)=2∫R^t u/χΣ(u),W_R0=0确实支付但零端−∞，不把C278更强全实值否定移用。不否定同数据统一类必要性，不称最小化、最优常数或公开新颖。；**derived-checked** |
 
+## DD2 最佳尾与同图达到
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E770 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-ZERO-DEFECT-INTEGRAL · C420 零缺陷统一算子类的固定模积分充要性](canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp) | conditional → [DD2-ZERO-DEFECT-OPTIMAL-TAIL · C458 零缺陷连续原模的准确旋转尾与最佳首项](topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail) | C458-v1 λ,R>0,全域原ψ有限连续非减ψ0=0,η(s)=ψ(s/λ),b0=(sqrt(s²+η²))逆,A0=η∘b0,χ=(id+η)逆；预设φ:[0,R]→[0,R]先核A0≤φ。Phi0,U=VψH的全部有限维E0对象、闭非空子零集、原完整rho、全R窗允许覆盖，类含二维闭完整精确S0全J。L*(t)=Σb0(A0^k(t))准确等于真实全类最坏尾和自由尺度池最小非负支付，同一个C420完整旋转每尺度/方向达到，平台用最小完整前像rho。贪心平方降幅G非增，任意路径Δ同总额且前缀和≥G，正部和+根号积分证明全尾最优；不称N步前缀最优。Iχ/2≤L*≤2Iχ，可积窗证书至多4倍不称4最优，尾截断误差≤2Iχ(A0^N t)。线性ψ=ell rho给(√(1+L²)+L)t准确值。严格增满射w=λψ逆,w=o(t),Iw有限则L*~2Iw~2Iχ，Stieltjes无需AC/正则变化/点态χ~w。一般U保覆盖和严格L*位置预算。非零Phi、更强目标或不含见证的子类不授准确性，不认定新颖。；**derived-checked** |
+
+## DD2 尾预算量词反例
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E771 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-TAIL-QUANTIFIER-OBSTRUCTIONS · C459 全轨终止与三层统一尾预算分离](topics/dd2/tail_quantifier_obstructions.md#dd2-tail-quantifier-obstructions) | C459-v1 三个分别定义的H=R²=复平面,λ1,S0,R1,U=VψH,ψ√rho,Dψ全域,Phi0,预设φ=(sqrt(a²+a⁴))逆模型。辅助旋转Tz=(a/\|z\|)exp(-i arctan a)z有s=a²、锚积0且无限长，每链截最小N使成本≥n；有限正终半径a_n决定互不交链窗。完整J=P0加根边/有限链，F=J逆−I闭、全域近端覆盖、exactzero0、零驻定，真纤维每正输出仅唯一前像。A共根e1,r1=1/4,rnext=a_n/4：每真实路径有限终止但V(e1)=∞。B互异单位根exp(i/n)、同半径递归：每状态V有限但B_F(1)=∞。C根Rne1,R1=1,rn=Rn/4,Rnext=a_n/4：每精确尺度B_F(t)有限却B_F(Rn)≥n且Rn→0。各图三结论不混为一图；根锚非负、真EB及原目标由E0核，极限边均在P0。原Iχ发散故不否定积分充分性；F可空多值，不授连续单值或凸结构。J局部有界不称F局部有界。；**derived-checked** |
+
+## DD2 线性模匹配目标尾常数
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E772 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | conditional → [DD2-MATCHED-TARGET-TAIL · C460 匹配反向预算的加法近最佳尾与慢收缩首项](topics/dd2/tail_envelopes.md#dd2-matched-target-optimal-tail) | C460-v1 λ,ell,R>0,L=ell/λ≥1/2,r0=L/√(1+L²)，预设A连续非减归零且r0t≤A(t)<t。原ψ=ell rho全域,Phi=−D，D=[(1+L^-2)A²−t²]/2恰匹配，D0=0。U=VψH的完整E0自由类含C400二维匹配旋转，全R允许覆盖。HA=ΣA^j,ZA=L^-1Σj≥1 A^j，真实全类最佳尾ZA≤Bmatch≤ZA+Lt，扩展实值；上界来自s≤A/L+L(t−a)，下界同图完整旋转真实步a/L。HA(R)有限时ZA+Lt支付每边且零消失，局部另用严格位置预算和覆盖。若HA(R)<∞且A/t→1则ZA/t→∞，Bmatch~ZA；NP伸缩指数L1首项2tlog(1/t)，调和目标∞。平台A仍核全部完整前像残差，F可多值J连续单值。更小D仅继承上界，不保原见证/首项；L<1/2分支、非单调A和任意signed数据不外推，不称Lt最优或新颖。；**derived-checked** |
+
+## DD2 非单调原模的最佳尾
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E773 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-ZERO-DEFECT-OPTIMAL-TAIL · C458 零缺陷连续原模的准确旋转尾与最佳首项](topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail) ∧ [DD2-IRREGULAR-ZERO-DEFECT · C454 任意原误差模零缺陷完整类长度充要门](topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length) | conditional → [DD2-RAW-GAUGE-OPTIMAL-TAIL · C461 一般原残差域的准确最佳尾上确界与闭图逼近](topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail) | C461-v1 λ,R>0,0∈Dψ,任意有限非负原ψ且含零前缀sup→0，无需可测/连续/非减。m(q)=sup原rho min(ψrho²,(q−λ²rho²)+),p(t)=√m(t²)，预设φ先核p≤φ。Phi0,U=VψH的全部有限维E0类、原真rho、闭非空子零集、全R允许覆盖，包含二维闭完整exactS0全J。m和q−m非减,m连续1Lip,m(q)<q正q；q0=t²,qnext=m(q)，Tψ(t)=Σ√(qk−qnext)精确等于真实全类长度sup、原真残差尺度池值及闭尺度池值，池同值不等于端点可行。正部和给上界；θm有限链选同一原rho>0，P0+二维锚0主链+每正输出径向辅助前像保真rho；输入可撞但输出半径全异，辅助窗内同样认证φ，有限闭完整图全覆盖exactzero0。先θ↑1固定N逼近，再N→∞，不声称有限最优值同图达到。bψ正，Tψ非减，C454给Tψ(R)有限iff∫t/bψ有限，可积时≤2I；认证p≤φ保其坏见证。一般U用严格前缀预算；原前缀不消失、signedPhi、更强目标、连续单值子类必要性和黑箱算法不在范围。 承接C458的是ZT4–ZT5只用平方降幅序的比较，不导入连续非减原ψ假设。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

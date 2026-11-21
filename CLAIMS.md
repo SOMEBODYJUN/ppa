@@ -4074,3 +4074,43 @@
 - **Conclusion — 距离判据失败的准确量词**：\(\int_0^\epsilon t/\chi_\Sigma(t)\,dt=\infty\)，任何正可测有效实际步下界的同类积分也发散。不存在有限实值 \(\Theta:[0,R]\to\mathbb R\)、有限正常数 C，满足 \(\inf_{0<t\le R}\Theta(t)>-\infty\) 且对该固定图全部边 \(s\le C[\Theta(t)-\Theta(a)]\)。特别没有有限非负距离支付势；在零端有有限极限的有限距离势亦被排除。没有排除所有有限实值势：\(W_R(t)=2\int_R^t u/\chi_\Sigma(u)\,du\) 于正 t，\(W_R(0)=0\)，确实支付全图，但趋 \(-\infty\) 而不能给长度预算。
 - **Proof obligations / Dependencies / Evidence**：D01/E0、C456 的逐壳积分；[AG1–AG20](research/topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction)核 \(0\le\partial_b\alpha<1\)、固定输出半径的角映射导数至少 \(1-\pi/4\)，由此给圆接缝及全域连续反演、完整纤维和精确锚/模/目标。弦长被实际角差控制，得到 V 的同一步支付。精确距离投影含 \(u_{k+1}=\varphi_m(u_k),\sigma_k=u_{k+1}^m\) 的无限成本尺度链，每条来自同一图，故下有界距离势望远镜矛盾；该链不能提升为真实轨道，因为正尺度最大输出强制输入角 \(\pi\)，而后继角已严格小于 \(\pi\)。
 - **Counterevidence / Objections / Scope / Related Files**：不把投影伪链称为真实坏轨道；真实角度是续接必须继承的状态。C278 排除任何有限实值距离势的更强结论属于另一对象；本例的结构更连续，但否定量词较窄。C420/C454 的同数据完整统一类仍含真正无限长旋转，固定好图不反驳其必要性。无最小化、单调、无分支连续 V、常数最优或公开新颖性认证。[S05.08](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-candidate-failures)、[F148](FAILED_ROUTES.md#f148)和 C456 共同记录范围。
+
+<a id="c458"></a>
+## C458-v1 · 零缺陷原模类的准确旋转尾、四倍证书与最佳首项
+
+- **Status**：`derived-checked`。三席已独立重构并逐源冷读实际数学正文、身份、图边、审计和地图；原域、完整纤维、全尾及各上确界量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Assumptions**：固定 \(\lambda,R>0\)，原 \(\psi:[0,\infty)\to[0,\infty)\) 有限连续非减、\(\psi(0)=0\)。令 \(\eta(s)=\psi(s/\lambda),Q_0(s)=\sqrt{s^2+\eta(s)^2},b_0=Q_0^{-1},A_0=\eta\circ b_0,\chi=(\operatorname{id}+\eta)^{-1}\)。先指定 \(\varphi:[0,R]\to[0,R]\) 且核 \(A_0\le\varphi\)。量化 \(\Phi=0,U=V_\psi=H\) 的全部有限维 E0 对象，S 非空闭子零集，同一允许关系全 R 距离窗非空覆盖，完整真残差保原域；该类含所有合格二维闭完整图、精确 S=0 和全部近端。
+- **Quantifiers / Conclusion — 准确值**：对每个 \(0\le t\le R\)，\(\mathcal L_*(t)=\sum_{k\ge0}b_0(A_0^{\circ k}(t))\) 同时等于原类全部对象、精确初距 t 的全部真实轨道总长度上确界，以及自由尺度行 \(0\le a\le A_0(t)\)、成本 \(\sqrt{t^2-a^2}\) 的最小非负支付值。C420 的同一个完整旋转从每个半径及方向实际达到，容许值无穷。其平台纤维用原 \(\eta^{-1}(a)\) 的最小前像求真残差，不把每个步长都当真残差。ψ 严格递增满射时见证原 F 全域连续单值，因此包含该见证的更窄子类仍有同一值。
+- **Conclusion — 近最佳、局部与校准**：\(I_\chi=\int u/\chi(u)\) 满足 \(I_\chi(t)/2\le\mathcal L_*(t)\le2I_\chi(t)\)，故在可积窗内原证书至多4倍；不称4最优。全窗有限性恰等价 \(I_\chi(R)<\infty\)，此时 \(\mathcal L_*\) 非减、零消失，并支付全部原边。一般开 U 另保覆盖与严格预算 \(\mathcal L_*(t_0)<d(x^0,U^c)\)，给全选择留域、有限长和 S 中点极限。N 项部分和的剩余误差至多 \(2I_\chi(A_0^{\circ N}(t))\)。原线性模 \(\psi(\rho)=\ell\rho\) 的准确尾为 \((\sqrt{1+L^2}+L)t,L=\ell/\lambda\)。
+- **Strict inverse corollary**：若原 \(\psi(\rho)=w^{-1}(\lambda\rho)\)，w 全域连续严格增满射、归零、\(w(t)=o(t)\)，且 \(I_w(R)=\int_0^R u/w(u)\,du<\infty\)，则 \(\mathcal L_*(t)\sim2I_w(t)\sim2I_\chi(t)\) 对全部 \(t\downarrow0\)。无需 w 可微、绝对连续或正则变差，也未断言点态 \(\chi\sim w\)。幂 \(w=ct^m,1<m<2\) 首项为 \(2t^{2-m}/[c(2-m)]\)，C451 的原对数模 \(\beta>1\) 首项为 \(2[\log(1/t)]^{1-\beta}/(\beta-1)\)。
+- **Dependencies / Evidence**：D01/E0、C420 的完整旋转及逐壳积分；[TV1–ZT6](research/topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail)直接证贪心平方降幅 G 非增，任何真实路径平方降幅 Δ 有同一有限总额及更大前缀和，正部和与根号积分给全尾上界。连续 Stieltjes 换元及非负换序给 \(I_w\le I_\chi\le(1+\epsilon)^2I_w\)，旋转逐壳给反向 \(2I_w\)，避免点态逆的隐含正则性。
+- **Counterevidence / Scope / Related Files**：准确的是全部尾长，不是每个固定 N 步前缀的最优值；直接投影可有更大首步成本。一般 signed 数据、额外更强预设目标及不含见证的结构类不继承准确性；固定好图可严格更短，尾长与点误差不等同。一般原 ψ 的只逼近版本另为 C461。[S05.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)记录可计算性及首出域边；不认定公开新颖性。
+
+<a id="c459"></a>
+## C459-v1 · 全轨终止与逐状态、逐尺度、零端尾预算的三层分离
+
+- **Status**：`derived-checked`。三席已独立重构并逐源冷读实际数学正文、身份、图边、审计和地图；原域、完整纤维、全尾及各上确界量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Definitions**：三个分别构造的模型共同取 \(H=\mathbb R^2\cong\mathbb C,\lambda=1,S=\{0\},R=1,U=V_\psi=H,D_\psi=[0,\infty),\Phi=0,\psi(\rho)=\sqrt\rho\)，预设 \(\varphi=h^{-1},h(a)=\sqrt{a^2+a^4}\)。辅助旋转 \(Tz=(a/|z|)e^{-i\arctan a}z,a=h^{-1}(|z|)\) 有实际 \(s=a^2\)、锚0、距离趋0且总长无限。每次从半径 r 截取最小有限 N，使成本至少指定整数 n，保留有限链并记终半径 a。
+- **Exact models / Quantifiers / Conclusions**：每个模型令完整 J 为全域投影到0的底图，加列明的根边和有限链边，\(F(y)=\{x-y:y\in J(x)\}\)。A：共根 \(e_1\)，第 n 链首 \(r_ne_1,r_1=1/4,r_{n+1}=a_n/4\)；每条真实轨道有限步到0，但 \(V(e_1)=\infty\)。B：另取互异单位根 \(e^{i/n}\)，首点 \(r_ne^{i/n}\)、其余同递归；每个状态 V(x) 有限，但精确初距上界 \(B_F(1)=\infty\)。C：另取 \(R_1=1,x_n=R_ne_1,r_n=R_n/4,R_{n+1}=a_n/4\)；每个状态及每个精确尺度的最坏尾均有限，却 \(B_F(R_n)\ge n\)、\(R_n\downarrow0\)。V 和 B 使用同一图全部真实有限前缀，完整覆盖使其等于全部真实轨道尾上确界。
+- **Complete fibers / Scope**：三个图都闭、精确零集0、完整近端全域非空、零驻定，全部原允许选择有限步终止。互不交的径向环带使正输出只有唯一前像；内部真残差 \(a^2\)，根边真残差为根首点之差。根锚非负、原 EB 成立；\(a^4\le\rho^2\le s^2\)、零缺陷能量独立认证原严格 \(\varphi\) 及窗不变。内部边只积于 \((0,0)\)，A/B 根边另积于 \((e_1,0)\)，全在投影底图；C 根亦趋0。F 可空值、多值；J 的局部有界性不冒称 F 局部有界。
+- **Dependencies / Evidence**：D01/E0；[QF1–QF5](research/topics/dd2/tail_quantifier_obstructions.md#dd2-tail-quantifier-obstructions)自足证明辅助旋转 \(2\log(t/a)=\log(1+a^2)\le a^2\)，保证每个有限截断 N 存在；直接核全部纤维、闭性、输入覆盖、零点、路径不能跨链和各量词。无数值搜索作证明。
+- **Counterevidence / Objections / Related Files**：这是三个不同完整图，不是一个图同时具三种不相容值。原 \(\int t/\chi\) 发散，所以不违反 C419/C420 的可积充分性。C457 的有限零消失真实预算而距离投影无限是另一个障碍。不给连续单值、凸最小化结构或公开新颖性结论；[S05.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)与 [F148](FAILED_ROUTES.md#f148)保存失效的量词交换。
+
+<a id="c460"></a>
+## C460-v1 · C400 匹配缺陷预算的加法近最佳尾与慢收缩首项
+
+- **Status**：`derived-checked`。三席已独立重构并逐源冷读实际数学正文、身份、图边、审计和地图；原域、完整纤维、全尾及各上确界量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Assumptions**：固定 \(\lambda,\ell,R>0,L=\ell/\lambda\ge1/2,r_0=L/\sqrt{1+L^2}\)，原预设 \(A=\varphi:[0,R]\to[0,R]\) 连续非减、A0=0、\(r_0t\le A(t)<t\) 于正尺度。原 \(\psi(\rho)=\ell\rho\)，Dψ 全域；原 \(D(t)=t^2\Sigma_L(A(t)/t)=[(1+L^{-2})A(t)^2-t^2]/2,D0=0,\Phi=-D\) 恰好匹配。量化 U=Vψ=H 的全部有限维 E0 图，闭非空子零集、同一允许关系全 R 窗覆盖，含 C400 的二维完整匹配旋转。
+- **Quantifiers / Conclusion**：令 \(H_A(t)=\sum_{j\ge0}A^{\circ j}(t)\)、\(Z_A(t)=L^{-1}\sum_{j\ge1}A^{\circ j}(t)\)。原数据类从精确初距 t 的最佳真实尾满足 \(Z_A(t)\le B_{\rm match}(t)\le Z_A(t)+Lt\)，扩展实数有效。完整匹配旋转在同一图每个尺度实际总长恰 Z_A；若 H_A(R) 有限，\(Z_A+L\operatorname{id}\) 是非负零消失共同距离支付势。一般开 U 另保覆盖和严格初始位置预算，按有限前缀留域。若 \(A(t)/t\to1\) 且 H_A(R) 有限，则 \(Z_A(t)/t\to\infty\)、\(B_{\rm match}(t)\sim Z_A(t)\)。
+- **Dependencies / Evidence**：D01/E0、C400 原反向公式与完整全尺度见证；[MT1–MT5](research/topics/dd2/tail_envelopes.md#dd2-matched-target-optimal-tail)由恰匹配能量给 \(s\le A(t)/L+L[A(t)-a]\le A(t)/L+L(t-a)\)，非减比较及同一步差推出上界。平台 A 的全部前像位移仍为 a/L，保完整真残差；零输入驻定、精确零集和全窗见证均保。NP1–NP3 的伸缩指数目标取 L1 时给最佳首项 \(2t\log(1/t)\)，调和目标的级数发散。
+- **Counterevidence / Objections / Scope / Related Files**：L<1/2 的另一几何支、非单调 A、任意别的 signed 数据和更小给定 D 不在反向达到结论内；更小 D 只继承这个上界，不能继承同见证或首项。原 C400 的身份与较粗预算仍保留，本项另登记定量推论。没有声称加性 Lt 最优、最佳值处处等于左端或公开新颖性。[S05.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)。
+
+<a id="c461"></a>
+## C461-v1 · 非单调原域零缺陷类的最佳尾上确界与完整逼近
+
+- **Status**：`derived-checked`。三席已独立重构并逐源冷读实际数学正文、身份、图边、审计和地图；原域、完整纤维、全尾及各上确界量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Assumptions**：固定 \(\lambda,R>0,0\in D_\psi\subseteq[0,\infty)\)，任意有限非负原 ψ，且 \(\lim_{\epsilon\downarrow0}\sup_{\rho\in D_\psi\cap[0,\epsilon]}\psi(\rho)=0\)，含 ψ0=0；无需原模可测、连续或非减。令 \(m(q)=\sup_{\rho\in D_\psi}\min\{\psi(\rho)^2,(q-\lambda^2\rho^2)_+\}\)、\(p(t)=\sqrt{m(t^2)}\)，先指定 \(\varphi:[0,R]\to[0,R]\) 并核 \(p\le\varphi\)。量化 \(\Phi=0,U=V_\psi=H\) 的全部有限维 E0 对象，非空闭子零集、原域完整真残差、同一允许关系全 R 窗覆盖，含全部合格二维闭完整图、精确 S0 和全部近端。
+- **Quantifiers / Conclusion**：m 非减1-Lipschitz，\(q-m(q)\) 非减，\(m(q)<q\) 于 q>0。置 \(q_0=t^2,q_{k+1}=m(q_k)\)、\(\mathcal T_\psi(t)=\sum_{k\ge0}\sqrt{q_k-q_{k+1}}\)。对每个 t，该扩展实值恰等于原数据类全部真实轨道总长度上确界、原真残差尺度行池最小非负支付值、以及闭池 \(0\le a\le p(t)\)、成本 \(\sqrt{t^2-a^2}\) 的最小非负支付值。三个池/类同值不表示原未达端点可行；有限最优值的实际达到不由本证明保证。
+- **Complete approximation / Evidence**：[RT1–RT11](research/topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail)先由原 ρ 证明实际 \(a\le p(t)\)，不评价 \(\psi(s/\lambda)\)。平方降幅正部和比较给全尾上界。每个有限 N、θ<1 用 \(q_{k+1}^\theta=\theta m(q_k^\theta)\) 在原域选正 ρ，二维主链锚0、最大物理步，P0 底图加每个正输出的径向辅助前像，保完整真残差恰为所选ρ。所有正输出半径互异；输入碰撞只增加合法后继。辅助输入窗内亦由原数据认证预设目标，窗外仍保留于完整纤维；有限添边使 F 闭、完整覆盖、exactzero0、零驻定与窗不变。θ↑1 先逼近每个有限前缀，再 N→∞；不是逐行实现后默认可续接。
+- **Finite-length interface / Dependencies**：D01/E0、C458 的平方降幅论证、C454 原域长度充要门。原 \(b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}>0\)，\(\mathcal T_\psi(R)<\infty\) 恰等价 \(\int_0^R t/b_\psi(t)\,dt<\infty\)，可积时 \(\mathcal T_\psi(t)\le2\int_0^t u/b_\psi(u)\,du\)。\(\mathcal T_\psi\) 非减，C454 的任意小真实坏初点因此也迫该 R 值无限。已认证 p≤φ 自动保其全部原边，不能误要求旧安全包络也低于 φ。有限势用于一般开 U 仍需全窗覆盖和严格位置预算。
+- **Counterevidence / Objections / Scope / Related Files**：\(\mathcal T_\psi\) 是共同原数据类的值，不是任意固定图的实际尾；C456/C457/C459 保留区别。RT1 失效的模、正或负锚下界、更强目标筛选、连续单值子类的必要性和有限查询算法未在本身份处理。发散时单一真实坏图由 C454 另供，不是 RT4 的有限逼近自动生成。无公开新颖性认证；[S05.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)汇总范围。

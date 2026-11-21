@@ -198,6 +198,18 @@
       "color": "#91b19a",
       "dark": "#648e7b",
       "parent": "convergence"
+    },
+    {
+      "id": "convergence-annex-10",
+      "name": "问道山径 · 外山",
+      "subtitle": "覆盖 · 兼容 · 留域",
+      "x": 2010,
+      "y": 5490,
+      "rx": 590,
+      "ry": 505,
+      "color": "#91b19a",
+      "dark": "#648e7b",
+      "parent": "convergence"
     }
   ],
   "nodes": {
@@ -11211,6 +11223,50 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-MATCHED-TARGET-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-RAW-GAUGE-OPTIMAL-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-TAIL-QUANTIFIER-OBSTRUCTIONS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD2-ZERO-DEFECT-OPTIMAL-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14277,6 +14333,22 @@
     "E769": {
       "x": 703.97,
       "y": 5651.76
+    },
+    "E770": {
+      "x": 1538.33,
+      "y": 5558.03
+    },
+    "E771": {
+      "x": 1918.21,
+      "y": 5558.05
+    },
+    "E772": {
+      "x": 699.89,
+      "y": 5562.41
+    },
+    "E773": {
+      "x": 650.88,
+      "y": 5655.95
     }
   },
   "bounds": {

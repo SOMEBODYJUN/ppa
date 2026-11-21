@@ -209,6 +209,8 @@ J(x)=\frac{A(\|x\|)}{\|x\|}R_{\theta(\|x\|)}x .
 
 [非幂次目标的定量特化](nonpower_rates.md#dd2-stretched-exponential-target)预设 \(A(t)=\exp[-\sqrt{\log^2(1/t)+1}]\)，用同一匹配机制得到实际 \(t_k=\exp[-\sqrt{\log^2(1/t_0)+k}]\) 和有限尾长。这是本 C400 的已覆盖曲线，目标与原数据的关系保持。
 
+[C460 的最佳尾校准](tail_envelopes.md#dd2-matched-target-optimal-tail)另保 \(L\ge1/2\)、A 连续非减及恰匹配的原预算，证明完整数据类的最佳尾夹在 \(Z_A=L^{-1}\sum_{j\ge1}A^{\circ j}\) 与 \(Z_A+Lt\) 之间。匹配旋转达到下界；当级数有限且 \(A(t)/t\to1\)，两界首项相同。较小给定 D 只继承上界，不能由此移用同一个反向见证。本补证不改写 C400 的原身份或一般较粗定位预算。
+
 **即使目标是闭仿射集，距离下降也可伴随迭代点逃逸。** 取 \(H=\mathbb R^2\times\mathbb R,\ S=\{0\}\times\mathbb R,\lambda=L=1\)。设 \(t=\|u\|\) 且在小窗 \(0<t\le R\) 内令
 \[
 a(t)=\frac{t}{\sqrt{1+t^2}},\qquad h(t)=a(t)^2,\qquad

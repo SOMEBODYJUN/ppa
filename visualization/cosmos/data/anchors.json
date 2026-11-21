@@ -4988,5 +4988,25 @@
     "x": 409.5446066197144,
     "y": 1611.9286920374304,
     "system": "path"
+  },
+  "DD2-ZERO-DEFECT-OPTIMAL-TAIL": {
+    "x": 417.4639400140753,
+    "y": 1467.9550749539158,
+    "system": "path"
+  },
+  "DD2-TAIL-QUANTIFIER-OBSTRUCTIONS": {
+    "x": 368.53655224439365,
+    "y": 2106.3252818811234,
+    "system": "path"
+  },
+  "DD2-MATCHED-TARGET-TAIL": {
+    "x": 498.71243163174665,
+    "y": 1899.9633443745042,
+    "system": "path"
+  },
+  "DD2-RAW-GAUGE-OPTIMAL-TAIL": {
+    "x": 126.65429430674942,
+    "y": 2015.0631988149864,
+    "system": "path"
   }
 }

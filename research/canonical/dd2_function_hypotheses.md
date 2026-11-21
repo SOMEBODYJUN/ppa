@@ -1115,6 +1115,8 @@ F(y)=\lambda^{-1}\{x-y:J(x)=y\}.
 \]
 前一个下界可由换元得到更强的 \(I_b(t)\ge I_\chi(\sqrt2t)/2\)。正尺度远离零的积分均有限，因此两势在零处同敛散。若 \(I_\chi(R)=\infty\)，该完整算子从每个正半径出发的真实轨道都无限长。这证明统一类必要性；它不赋予同一积分对固定算子、正 \(\Phi\) 类或另给更强下降目标的必要性。
 
+**S05.09 的最优尾补证。** [C458](../topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail)另证本节同一个完整旋转的实际尾，恰为同原数据完整类的最坏真实全尾和自由尺度池的最小支付值。证明比较平方距离降幅的全部前缀，不从逐步取等直接推跨步最优；平台真纤维不变。故原 \(2I_\chi\) 在可积窗内至多四倍，严格逆 \(w=o(t)\) 的可积支还给最佳首项 \(2I_w\)。[C461](../topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail)对原零前缀消失的一般 ψ 保原域给最佳尾上确界，采用完整有限图逼近；它不把本节单一旋转达到性外推。固定图及统一预算量词另有 [C459](../topics/dd2/tail_quantifier_obstructions.md#dd2-tail-quantifier-obstructions)。
+
 <a id="fh-zero-defect-target-integral"></a>
 ### 7.1 原预设目标及原残差积分的接口
 
