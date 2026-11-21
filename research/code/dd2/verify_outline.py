@@ -17,14 +17,17 @@ chapters = [
 chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", body, re.MULTILINE)
 assert chapter_titles == [(str(i), title) for i, title in enumerate(chapters, 1)]
 chapter_tasks = {
-    3: "dd2-length-main-task",
-    4: "dd2-optimization-main-task",
-    5: "dd2-cp-main-task",
+    3: ("dd2-nonabsolute-main-task", "dd2-length-main-task"),
+    4: ("dd2-optimization-main-task",),
+    5: ("dd2-cp-main-task",),
 }
-for chapter, anchor in chapter_tasks.items():
+for chapter, anchors in chapter_tasks.items():
     chapter_row = next(line for line in body.splitlines() if line.startswith(f"| {chapter} "))
-    assert f"](#{anchor})" in chapter_row
-    assert body.count(f'id="{anchor}"') == 1
+    for anchor in anchors:
+        assert f"](#{anchor})" in chapter_row
+        assert body.count(f'id="{anchor}"') == 1
+assert body.count('id="dd2-paper-required-inventory"') == 1
+assert [int(x) for x in re.findall(r"^\| P(\d\d) \|", body, re.MULTILINE)] == list(range(1, 23))
 
 checklist = repo / "research/audit/DD2_ACCEPTANCE_CHECKLIST.md"
 checklist_body = checklist.read_text(encoding="utf-8")
@@ -89,5 +92,5 @@ for q in (Fraction(3, 5), Fraction(2, 3), Fraction(3, 4)):
     assert p0 * (2 - 1 / q) == p0 - Fraction(1, 2)
 
 assert Fraction(26, 101) < Fraction(12, 37)
-print(f"DD2 verified: 5 chapters, 3 proof tasks, 280 individually ranked answers, 6 indexed source sections, "
+print(f"DD2 verified: 5 chapters, 4 proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
       f"{len(claim_ids)} claim records, {len(links)} local links, 7 exact algebra checks.")

@@ -22,7 +22,7 @@
 
 周会选稿中独立核出 [C423](CLAIMS.md#c423)：非减模的共同位移几何按两条精确单侧包络取小，完整纤维配连续非单调输入模可严格联合改善指定尺度。待查连续单值和优化来源子类，以及统一局部或真实轨道的收益。
 
-正文按每项获得强答案后的数学增量排定。[第 5 章优先认领](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-cp-main-task)把 Q20–Q22 合成真实非分离临界 CP 的分量补偿、同模型轨道与 \(U=0\) 严格比较任务，以 C405 为起点，[C433](CLAIMS.md#c433) 作临界 DR 恢复对照。第 3 章在 [C424](CLAIMS.md#c424) 的临界余量截面上求更一般的长度及尾量判据，第 4 章使用 [C432](CLAIMS.md#c432) 的 Moreau 能量与完整前像基线，求真实优化的一步替代锐界。双残差现有结果用于附录，在自然完整类证明严格联合增益或实质冗余仍可进入结构比较。[逐项裁决](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-editorial-280)保留全部题号及理由。
+正文按每项获得强答案后的数学增量排定。[五章已备与待证 22 项交付表](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-paper-required-inventory)专供文章认领，不代替正式 280 项验收。[第 5 章优先认领](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-cp-main-task)把 Q20–Q22 合成真实非分离临界 CP 的分量补偿、同模型轨道与 \(U=0\) 严格比较任务，以 C405 为起点，[C433](CLAIMS.md#c433) 作临界 DR 恢复对照。第 3 章加回作者原问：[DD 自身认证下降而不靠步长绝对可和仍证明点收敛](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-nonabsolute-main-task)；现有 C319 两步相消例的 A 是额外由法向结构得出，DD 标量包络不足以认证，故新桥未闭。第 3 章另在 [C424](CLAIMS.md#c424) 的临界余量截面上求更一般的长度及尾量判据；第 4 章使用 [C432](CLAIMS.md#c432) 的 Moreau 能量与完整前像基线，求真实优化的一步替代锐界。引言同模型 DD 与旧 RLEB 认证门的严格分离亦未完成；A+B 若指实际 A、B 结果合取，不得声称 DD 成立而它不成立。双残差现有结果用于附录，在自然完整类证明严格联合增益或实质冗余仍可进入结构比较。[逐项裁决](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-editorial-280)保留全部题号及理由。
 
 尚未闭合的研究包括任意非规则 gauge 在完整整窗的最优相容与动态尾势（C417 已精确处理单边，C420 已关闭连续非减模的零缺陷统一类）、同对象量词下的文献与严格包含/不可比较证据，以及 fiber 与算法问题。指定闭凸目标或连续单值近端的 \(q>1\) 临界锐性单列。按清单顺序使用或补齐证据。
 
