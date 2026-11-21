@@ -10947,6 +10947,17 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-SHARPNESS-QUANTIFIER-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13913,6 +13924,14 @@
     "E744": {
       "x": 1003.28,
       "y": 5558.02
+    },
+    "E745": {
+      "x": 487.09,
+      "y": 5622.95
+    },
+    "E746": {
+      "x": 784.83,
+      "y": 5658.88
     }
   },
   "bounds": {

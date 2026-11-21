@@ -3774,3 +3774,12 @@
 - **Conclusion / Scope**：实际原始–对偶路径有限长当且仅当 \(\int_0^{|z_0|}\omega(r)\,dr/r<\infty\)。完整原图真误差模为 \(r+\omega(r)\)，以乘法常数和自变量缩放为等价。可取两个分解同有精确弱凸模 \(1\) 与强凸模 \(1\)，一条路径有限长，一条无限长且原图任何正 Hölder 指数误差界都失效。两条路径均收敛到真唯一解。
 - **Dependencies / Evidence / Related Files**：C405 临界 CP／DR 坐标及 C425 同约化比较问题。两分量反射复合固定，完整影子为 \((P_f(z),P_f(z)-R(z))\)。真实目标由完整近端的逆函数积分，原图误差模的上界对全部附近原图点成立，下界尺度由全部小输入的实际影子给出。[构造与验算](research/topics/dd2/splitting.md#dd2-dr-objective-shadow)。
 - **Counterevidence / Objections**：临界慢例违反一点 Lipschitz 恢复。若首分量近端在访问输入上存在统一 Lipschitz 界，则约化有限长传到两个实际 DR 近端变量。故此例不反驳严格步长或带 Lipschitz 恢复的旧定理。未覆盖一般非分离 CP，也未作公开优先性结论。
+
+<a id="c434"></a>
+## C434-v1 · 逐尺度尖锐、同一图全尺度尖锐及轨道取等的严格分层
+
+- **Status**：`derived-checked`。近优边紧性、闭图极限边仍受检、射线全部输出纤维及轨道续接经三席独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions — A**：固定有限维 \(H=\mathbb R^n,n\ge2,S=\{0\},\lambda=1,U=H,R>0,D_\psi=[0,\infty),\psi(r)=r\)，\(\Phi(0)=0\)，正有理尺度取 \(\Phi=t^2/8\)、正无理尺度取 \(-t^2/8\)。C428 的完整闭图覆盖类在每个 \(t\in(0,R]\) 各有一个算子达到 \(M_\Phi(t)=\sqrt{3/8}\,t\)（有理）或 \(\sqrt{5/8}\,t\)（无理）；见证零集可精确为 \(S\)。但不存在一个固定闭图 \(F\)，在全部 \(\|x\|\le R\) 上完整近端覆盖、其全部完整边满足同一前件，且自身每个正尺度的输出上确界都等于 \(M_\Phi(t)\)。
+- **Exact Statement — B**：固定 \(H=\mathbb R^2,S=\mathbb R_+e_1,\lambda=1,U=H,D_\psi=[0,\infty),\Phi=-2t^2,\psi(r)=r/4\)。令 \(u=(\sqrt3/2)e_1+e_2/2\)，\(J=P_S\cup\{(-tu,tu):t\ge0\},F=J^{-1}-I\)。则完整 \(J,F\) 闭、近端全域非空且 \(\operatorname{zer}F=S\)。同一个 \(F\) 在每个正尺度达到 C426 的自由锐值 \(a=t/2\)，特殊边有 \(s=\rho=2t\) 和锚积 \(-2t^2\)。但这个图的全部实际轨道至多两条非驻定边。更一般，对固定该射线且相关边满足同组前件的任意算子，都不存在连续两条正距离取等边：锐边强制输入投影在端点、输出投影在相对内部。
+- **Definitions / Dependencies / Evidence**：A 用 C428 同数据逐尺度实现；若同图全尺度锐，取无理 \(t_j\to\) 正有理 \(t_*\) 的近优边，两端因单点目标有界，有限维子列和闭图给违反有理小上界的极限边。B 用 C426 射线锐值；正特殊输出不在目标内、唯一完整前像为负向输入，后继只能投影到 \(S\)，再驻定。[两向完整证明 RC25–RC28](research/topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation)。
+- **Conclusion / Scope / Objections**：明确区分 \(\forall t\,\exists F_t\)、\(\exists F\,\forall t\,\exists\text{取等边}\) 和一条实际轨道每步取等。A 的不可存在性依赖有限维、固定单点和完整受检闭图，不能移植到任意非紧零集、无限维或不闭允许子图；B 给同图全尺度取等实例，并证明固定该射线时任意图都不能连续取等，不否定 C400/C411 已核子构造的正面轨道。总体必要性与取等表见 [S02.09](research/topics/dd2/reverse_compensation.md#dd2-compensation-sharpness)，失败机制见 [F153](FAILED_ROUTES.md#f153)。不认定公开新颖性。

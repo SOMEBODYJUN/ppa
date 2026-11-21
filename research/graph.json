@@ -5442,6 +5442,12 @@
       "label": "C433 同一真实 DR 约化下的完整原图正则性与弧长",
       "file": "topics/dd2/splitting.md#dd2-dr-objective-shadow",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-SHARPNESS-QUANTIFIER-SEPARATION",
+      "label": "C434 单尺度、同图全尺度与轨道取等的严格分层",
+      "file": "topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13973,6 +13979,29 @@
       "output": "DD2-REAL-DR-SHADOW-LENGTH",
       "relation": "conditional",
       "scope": "L=I 标量临界步长。用单调反射的真实目标反演保持同一完整约化，按原图模的积分定出原始–对偶路径长度。独立于 C425 的旋转见证。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E745",
+      "topic": "DD2 尖锐性与完整图量词",
+      "inputs": [
+        "DD2-SIGNED-LINEAR-CALIBRATION",
+        "DD2-CONVEX-SCALAR-REALIZATION"
+      ],
+      "output": "DD2-SHARPNESS-QUANTIFIER-SEPARATION",
+      "relation": "conditional",
+      "scope": "密集下界的固定有限维单点闭图不能全尺度饱和；固定射线在lambda=1、Phi=-2t²、psi=r/4下有完整闭图全尺度取等且所有轨道至多两条非驻定边，任意该射线的同数据锐边均不能连续。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E746",
+      "topic": "DD2 尖锐性与完整图量词",
+      "inputs": [
+        "DD2-SHARPNESS-QUANTIFIER-SEPARATION"
+      ],
+      "output": "DD2-REVERSE-RAW-COMPENSATION",
+      "relation": "limits",
+      "scope": "逐尺度反演的最优性不自动给共同闭图全尺度锐化或实际轨道逐步饱和；不反驳 C400 连续高参数旋转、C411 已核非凸链等独立动态正面。",
       "status": "derived-checked"
     }
   ]
