@@ -7,6 +7,25 @@ repo = Path(__file__).resolve().parents[3]
 outline = repo / "research/manuscripts/dd2/DD2_outline_and_pro_handoff.md"
 body = outline.read_text(encoding="utf-8")
 
+chapters = [
+    "引言",
+    "DD1 与 DD2",
+    "从一步下降到实际轨道",
+    "约化、完整纤维与原变量恢复",
+    "应用",
+]
+chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", body, re.MULTILINE)
+assert chapter_titles == [(str(i), title) for i, title in enumerate(chapters, 1)]
+
+checklist = repo / "research/audit/DD2_ACCEPTANCE_CHECKLIST.md"
+checklist_body = checklist.read_text(encoding="utf-8")
+checklist_ids = re.findall(r"^- \[[ x]\] `([A-Z0-9.]+)` ", checklist_body, re.MULTILINE)
+editorial_table = body.split('id="dd2-editorial-280"', 1)[1].split("## 既有数学素材", 1)[0]
+editorial_rows = re.findall(r"^\| ([A-Z0-9.]+) \| ([^|]+?) \| ([^|]+?) \|$", editorial_table, re.MULTILINE)
+assert len(checklist_ids) == len(set(checklist_ids)) == 280
+assert [item for item, _, _ in editorial_rows] == checklist_ids
+assert len({reason.rstrip("。") for _, _, reason in editorial_rows}) == 280
+
 headings = [
     "一般下降目标与线性误差界特例",
     "一般 A 的距离、点收敛和有限长度",
@@ -17,7 +36,7 @@ headings = [
 ]
 positions = []
 for heading in headings:
-    matches = re.findall(rf"^## 第.节　{re.escape(heading)}$", body, re.MULTILINE)
+    matches = re.findall(rf"^### 第.节　{re.escape(heading)}$", body, re.MULTILINE)
     assert len(matches) == 1, heading
     positions.append(body.index(matches[0]))
 assert positions == sorted(positions)
@@ -46,4 +65,5 @@ for q in (Fraction(3, 5), Fraction(2, 3), Fraction(3, 4)):
     assert p0 * (2 - 1 / q) == p0 - Fraction(1, 2)
 
 assert Fraction(26, 101) < Fraction(12, 37)
-print(f"DD2 verified: 6 ordered sections, 7 claim records, {len(links)} local links, 7 exact algebra checks.")
+print(f"DD2 verified: 5 chapters, 280 editorial rows, 6 indexed source sections, "
+      f"7 claim records, {len(links)} local links, 7 exact algebra checks.")
