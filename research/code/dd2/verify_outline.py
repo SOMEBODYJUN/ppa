@@ -11,7 +11,7 @@ chapters = [
     "引言",
     "DD1 与 DD2",
     "从一步下降到实际轨道",
-    "约化、完整纤维与原变量恢复",
+    "优化结构与补偿边界",
     "应用",
 ]
 chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", body, re.MULTILINE)
