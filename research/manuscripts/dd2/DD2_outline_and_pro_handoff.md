@@ -1,14 +1,14 @@
 # DD2 论文结构与 GPT Pro 研究任务书
 
-**接续入口。** 本稿保留成文结构和旧 P0–P3 专项任务。当前 DD1–DD2 主任务从[作者原版 17 节协议](../../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)及[逐节验收](../../audit/DD2_FINAL_ACCEPTANCE.md)接续。
+**接续入口。** 本稿保留成文结构和旧 P0–P3 专项任务。新会话先读 [DD2 核心说明和自检](../../audit/DD2_PRO_START_HERE.md)，再按[作者原版协议](../../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)接续[全量验收清单](../../audit/DD2_ACCEPTANCE_CHECKLIST.md)。
 
 ## 写作对象与当前优先级
 
 拟题：**近端点算法的非线性下降与尖锐反向补偿**。
 
-目标是从指定的下降曲线 \(A\) 求允许的最近零锚缺陷，并解释何时距离下降转化为实际路径的有限长度。以普通 PPA 为核心，随后建立松弛、输入与输出误差界、退化约化及 CP/DR 应用。固定 \(\lambda\) 为近端步长，\(\alpha_k\) 为松弛，\(A(t)\) 为下降函数。原算子用 \(\mathcal A\) 或各模块自定符号。\(t\) 是输入距离，\(a\) 是未松弛输出距离，\(s\) 是近端残差位移，取完整真残差时明确 inf 的图值范围。原文研究资料的数学导入见[核心正文 §5](../../topics/dd2/core.md)。
+DD1 与 DD2 都允许一般有符号锚函数 \(\Phi\)。DD2 先指定下降曲线 \(\varphi\)，反求允许的锚定缺陷或所需的输出真误差界 \(\psi\)，然后判断距离下降何时带来实际路径的有限长度。本稿把目标 \(\varphi(t)\) 记为 \(A(t)\)，以普通 PPA 为核心，随后建立松弛、输入与输出误差界、退化约化及 CP/DR 应用。第一节先解线性误差界特例，第三节给一般 \(\psi\) 的结果，这是成文顺序。固定 \(\lambda\) 为近端步长，\(\alpha_k\) 为松弛，\(t\) 为输入距离，\(a\) 为未松弛输出距离，\(s\) 为实际近端位移。原算子用 \(\mathcal A\) 或各模块自定符号，完整真残差按完整图值取下确界。原文研究资料的数学导入见[核心正文 §5](../../topics/dd2/core.md)。
 
-## 第一节　先推广 A，并保留线性误差界
+## 第一节　一般下降目标与线性误差界特例
 
 - **定义 1（比较曲线）。** \(A:[0,R]\to[0,R]\) 连续，\(A(0)=0\)，正尺度 \(0\le A(t)<t\)。需要对任意允许轨道比较逐步迭代时，使用非减 \(A\) 或其连续非减上包络。
 - **假设 1（图、锚与真误差界）。** \(y\in\mathcal J(x)\subset J_{\lambda F}(x)\)，\(S\subseteq\operatorname{zer}F\) 非空闭。对每条允许边存在一个最近输入零锚 \(p\)，满足 \(\langle x-y,y-p\rangle\ge-D(t)\)；在实际输出上 \(a\le\ell r_F(y)\)。令 \(L=\ell/\lambda\)。覆盖条件在使用时单列。
@@ -27,11 +27,11 @@
 
 见[距离与长度证明](../../topics/dd2/core.md#dd2-trajectory)。不要在摘要把 A 的逐尺度严格性写成点收敛或有限长度。
 
-## 第三节　最后替换线性误差界
+## 第三节　一般输出误差界下的几何与长度
 
 - **定理 3（一般输出函数的几何）。** 对连续非减 \(\eta(s)=\psi(s/\lambda)\)，取 \(\min\{B,\max_{0\le s\le B}\min(\eta(s),\sqrt{t^2+2D-s^2})\}\) 为精确几何包络。对严格增 \(\eta\) 与目标 \(a_0=A(t)<t\)，置 \(u=\eta^{-1}(a_0)\)，精确门为 \(B\le u\) 或 \(t^2+2D\le u^2+a_0^2\)。
 - **定理 4（同一步有限长度）。** 令 \(\chi=(I+\eta)^{-1}\)、\(\Theta(t)=\int_0^t u/\chi(u)\,du\)。假设 \(2D\le(1-\delta)\chi^2\) 且积分可积，则 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。有限前缀预算给留域、尾长和极限识别。
-- **推论 2（幂模及临界常数）。** \(q>1/2,\ p>2/q\) 的幂模从上式导出，临界 \(p=2/q\) 的门是 \(2M<\lambda^2K^{-2/q}\)。半阶端点和临界保半径例定性区分长度与收敛。
+- **推论 2（幂模及临界常数）。** \(1/2<q<1,\ p>2/q\) 的有限长度从上式导出，在该 \(q\) 区间内临界 \(p=2/q\) 的门是 \(2M<\lambda^2K^{-2/q}\)。半阶端点和临界保半径例区分长度与收敛。\(q=1\) 使用 DD1 两段门；\(q>1\) 的锐门另见 [C416](../../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。
 
 见 [C401](../../topics/dd2/core.md#dd2-general-gauge) 和 [C399](../../canonical/dd2_power_defect_finite_length.md#dd2-power-defect)。
 
@@ -91,7 +91,6 @@
 
 ```text
 python3 research/code/dd2/verify_outline.py
-DD2 verified: 6 ordered sections, 7 claim records, 13 local links, 7 exact algebra checks.
 ```
 
 脚本核成文次序、链接和选定换参等式。完整数学论证由各节引用的正文承担。

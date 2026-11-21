@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)。从第一项未勾任务恢复，逐项用证明、反例或可核交付裁决，单项提交并推送后继续下一项。清单本身就是交回作者的完整答卷。[历史审计入口](research/audit/DD2_FINAL_ACCEPTANCE.md)提供既有证据。
+**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)。新会话先读 [GPT Pro 开工提示词](research/audit/DD2_PRO_START_HERE.md)，核清一般 \(\Phi\)、一般 \(\psi\) 和指定下降目标 \(\varphi\) 的角色，再从第一项未勾任务恢复。逐项证明、复核、提交并推送后继续下一项。清单本身就是交回作者的完整答卷。[历史审计入口](research/audit/DD2_FINAL_ACCEPTANCE.md)提供既有证据。
 
 
 ## 2026-11-21 最终协议验收入口
@@ -13,7 +13,7 @@
 
 [单调性与正则性的共同结构](#common-structure-frontier)是另一研究线。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
 
-[DD2 主线](research/topics/dd2/core.md)按指定目标 \(A\)、线性输出误差界的反向缺陷、轨道距离与长度、一般误差界的次序展开。[C400](CLAIMS.md#c400) 记录尺度锐性及线性正则下的无限长与逃逸反例。[C401](CLAIMS.md#c401) 以一般函数的积分势从同一步能量推出长度和留域。
+[DD2 主线](research/topics/dd2/core.md)从指定下降目标 \(\varphi\) 反推锚定下界 \(\Phi\) 与输出真误差界 \(\psi\) 的补偿。DD1 与 DD2 都允许一般有符号的 \(\Phi\)，一般 \(\psi\) 属于 DD2 的研究范围。[C400](CLAIMS.md#c400) 给线性误差界特例的精确反演及实际轨道反例，[C401](CLAIMS.md#c401) 在一般 \(\psi\) 下以同一步积分势推出长度和留域。
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。
 
@@ -351,6 +351,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | --- | --- |
 | [research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md) | 作者原版 DD1–DD2 验收协议，逐字节保存。启动、续接和结束当前主任务前读取，包含 17 节逐问要求、强制交付物和最后六问。 |
 | [research/audit/DD2_ACCEPTANCE_CHECKLIST.md](research/audit/DD2_ACCEPTANCE_CHECKLIST.md) | 唯一的逐项工作清单和最终答卷。280 个任务覆盖原协议主项及附加义务，每项保存裁决、结论、证据及复核。 |
+| [research/audit/DD2_PRO_START_HERE.md](research/audit/DD2_PRO_START_HERE.md) | 新会话的可复制提示词。用一步近端解释反向补偿，区分指定目标与实际界，并在接续清单前做短自检。 |
 | [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |

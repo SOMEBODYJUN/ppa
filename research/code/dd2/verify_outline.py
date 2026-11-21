@@ -8,9 +8,9 @@ outline = repo / "research/manuscripts/dd2/DD2_outline_and_pro_handoff.md"
 body = outline.read_text(encoding="utf-8")
 
 headings = [
-    "先推广 A，并保留线性误差界",
+    "一般下降目标与线性误差界特例",
     "一般 A 的距离、点收敛和有限长度",
-    "最后替换线性误差界",
+    "一般输出误差界下的几何与长度",
     "松弛与输入／输出误差界",
     "退化 PPPA 与恢复",
     "CP/DR 应用与后续扩展",
