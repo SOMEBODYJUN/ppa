@@ -139,7 +139,7 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 3. **Bounded recovery，Conditional。** 在 \(q^k\to0\)、\(z^k\to z_\infty\) 且所选影子有界时，局部有界 \(\mathscr H\) 加零值 demiclosedness 给物理零点聚点。有限维时可用零值外半连续和紧性替代。
 4. **Weak shadow convergence，Conditional。** 在上述 \(q^k\to0\) 和影子有界量词下，所有弱聚点在 \(Z\cap(C^*)^{-1}(z_\infty)\)。fiber 单点时弱收敛。
 5. **Strong shadow convergence，Conditional。** 唯一 fiber 加有界性只给弱收敛和正确 fiber 识别。强收敛还需要有限维性、弱到强的额外紧性，或固定零点的局部强 recovery。
-6. **Lipschitz recovery，Proved conditionally。** \(\|y-x_\infty\|\le K\|z-z_\infty\|\) 传递约化尾长。
+6. **Lipschitz recovery，Proved conditionally。** \(\|y-x_\infty\|\le K\|z-z_\infty\|\) 传递点误差和可和的约化尾上界。它本身不把物理相邻差分的总长变成有限，后者仍需二点 recovery 或可和尾势。
 7. **Hölder recovery，Conditional。** 一点评估只给点识别。二点 Hölder 还需 \(\sum\omega(\|\Delta z_k\|)<\infty\) 才给物理长度。
 8. **Shadow finite length，Conditional。** 需要二点 recovery 或沿轨可和差分。
 9. **Tail transfer，Conditional。** 一点 Lipschitz 给 \(K L_k\)，一般 gauge 保留势尾。
