@@ -57,7 +57,7 @@
 
 [P0 先行性审计](research/audit/DD2_P0_PRIOR_ART_2026-11-21.md)逐式核对 Lauster–Luke 2021、Alcantara v1 和 Li–Mordukhovich 2012，明确 DD2 与既有比较曲线、全锚半单调 PPA 及 Hölder PPA 的重合和量词差异；它把公开优先性保留为未决，不把代数重合写成首创。[P2/P3 扩张审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-verification)补充一般势扰动、物理二点恢复和有通信假设的分布式固定步证书，由 [C410](CLAIMS.md#c410)、[C412](CLAIMS.md#c412) 登记。[C411](CLAIMS.md#c411) 给出低 \(L\) 固定图逐步达到，[C413](CLAIMS.md#c413) 排除有限维闭凸目标上的严格步长支收敛锚与可和链。
 
-[DD2 论文选材裁决](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md)比较各开放问题取得实质答案后的数学价值，给五章排法、应用首选及逐项选材。[CP／DR](research/topics/dd2/splitting.md#dd2-splitting-component)给分量充分条件、显式非零位置模及慢收敛的完整算法例；[其他分裂固定步审计](research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md)逐式核对 FBF、外梯度和 FRB 的实际步能量及反例。[Inexact DD2](research/topics/dd2/inexact.md#dd2-inexact-absolute)给真图扰动、尾和与临界精度。
+[DD2 论文选材裁决](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md)给五章安排、逐项选材和有外部依据的正文待证题。[第 5 章优先认领](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-cp-main-task)是在真实非分离临界 CP 中，量出保留 \(U\) 对缺陷补偿或实际原始–对偶轨道的收益或精确限制。[C405](research/topics/dd2/splitting.md#dd2-splitting-nonzero-u) 给分量充分式，[C433](research/topics/dd2/splitting.md#dd2-dr-objective-shadow) 是恢复对照。[其他分裂固定步审计](research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md)逐式核对 FBF、外梯度和 FRB 的实际步能量及反例。[Inexact DD2](research/topics/dd2/inexact.md#dd2-inexact-absolute)给真图扰动、尾和与临界精度。
 
 [DD1/DD2 与 Alcantara 的同参数比较](research/LITERATURE.md#lit-alcantara-dd) 定位普通 PPA 的共同二次式、分段锐门及退化 PPPA 的恢复条件。[C399](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect) 从输入距离次单调性缺陷和输出 Hölder 真残差误差界直接推出同一步长度势，给临界常数、半阶无限长度见证及超出线性收敛的非单调原算子。
 

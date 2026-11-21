@@ -16,6 +16,10 @@ chapters = [
 ]
 chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", body, re.MULTILINE)
 assert chapter_titles == [(str(i), title) for i, title in enumerate(chapters, 1)]
+application_row = next(line for line in body.splitlines() if line.startswith("| 5 应用 |"))
+cp_task_anchor = "dd2-cp-main-task"
+assert f"](#{cp_task_anchor})" in application_row
+assert f'id="{cp_task_anchor}"' in body and "主结果，优先认领，待证" in application_row
 
 checklist = repo / "research/audit/DD2_ACCEPTANCE_CHECKLIST.md"
 checklist_body = checklist.read_text(encoding="utf-8")
@@ -25,6 +29,9 @@ editorial_rows = re.findall(r"^\| ([A-Z0-9.]+) \| ([^|]+?) \| ([^|]+?) \|$", edi
 assert len(checklist_ids) == len(set(checklist_ids)) == 280
 assert [item for item, _, _ in editorial_rows] == checklist_ids
 assert len({reason.rstrip("。") for _, _, reason in editorial_rows}) == 280
+editorial_destinations = {item: destination for item, destination, _ in editorial_rows}
+assert editorial_destinations["S14.CP"] == "第5章主任务／待证"
+assert editorial_destinations["S14.DR"] == "第5章对照"
 
 headings = [
     "一般下降目标与线性误差界特例",
