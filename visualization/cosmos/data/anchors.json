@@ -5043,5 +5043,20 @@
     "x": 451.7190629354636,
     "y": 1915.7005140672,
     "system": "path"
+  },
+  "DD2-POWER-GREEDY-REALIZATION": {
+    "x": 494.5236186486828,
+    "y": 1600.7656241603795,
+    "system": "path"
+  },
+  "DD2-POWER-EXACT-TAIL-RATES": {
+    "x": 185.1395467549927,
+    "y": 2055.948456796365,
+    "system": "path"
+  },
+  "DD2-POWER-POINT-Q-BOUNDARY": {
+    "x": -240.60622683661808,
+    "y": 1810.3280935796597,
+    "system": "path"
   }
 }

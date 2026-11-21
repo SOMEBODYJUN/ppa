@@ -4201,3 +4201,34 @@
 - **Fixed-budget / Fixed-graph boundary**：固定M仍保WR1的临界严格常数及M=0，不能删除主命题的∀M。CK8的实际p=2/q、精确M和最高q可同时成立而全轨有限长；SN2任意q均长=t₀，D1S11的边际最小常数亦不形成固定图反判。q=1反向只要求一个坏M，不声称该仿射类固定M的最优常数。
 - **Singleton lemma / Assumptions / Conclusion**：另在任意有限维H取S={z*}⊆zerF、开U和R>0、允许J⊆JλF，在U_R全部输入非空覆盖且每边满足原纯幂锚/真EB。任意q>1,p>0,M≥0均可缩窗：令b=K/λ^q，先使bB_D(r)^(q−1)≤1/2，再使2^qb r^(q−1)≤κ<1，则s≤2t、a≤2^qb t^q≤κt，实际尾≤2t/(1−κ)。局部初值须此预算严格小于d(x₀,U^c)，先保首出边再续接；全空间无位置限制。q=1且L=K/λ<1/2的单点尾另≤t/(1−2L)，保相应局部预算。未要求此旁支F/J连续或唯一。
 - **Counterevidence / Scope / Related Files**：必要性不授每个固定图、其他给定严格φ、一般更强signedΦ、一维非负锚或同射线结构；单点s≤t+a不能给任意闭S。C467与C466身份分开；不声称完整幂分区、最优率或公开新颖性。[S06.07答卷](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)、[F145](FAILED_ROUTES.md#f145)保量词断点。
+
+
+<a id="c469"></a>
+## C469-v1 · 原纯幂数据的一步最坏包络与同图逐步取等
+
+- **Status**：`derived-checked`。三席先独立重构后逐式复读九处实际正文、身份、图边和四栏；原域、完整纤维、全时刻与局部量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Assumptions**：固定p,q,K,λ>0、M≥0，原Φ(t)=−Mt^p、ψ(ρ)=Kρ^q、Dψ=[0,∞)，m=1/q,c=λK^(−1/q),h=K/λ^q。E0有限维欧氏空间、闭非空S⊆zerF、每边存在同一最近输入锚、完整真ρ；好门为M=0或p>2/q，或p=2/q且M分别小于c²/2（q<1）、T(K/λ)（q=1）、c²（q>1）。取相应小R。正向允许J⊆JλF，反向类含H=R²、自由闭精确零集、闭F及完整全域非空J；U=Vψ=H。
+- **Definitions / Exact Conclusion**：B=(t+sqrt(t²+4Mt^p))/2，G_m(a)=a²+c²a^(2m)，计算包络 \(\mathcal M_D(t)=\min\{G_m^{-1}(t^2+2Mt^p),hB(t)^q\}\)，不把它改名为预设φ。全部受检边有a≤M_D(t)，小窗包络连续严格增、0处0、正尺度小于t。∀t₀∈(0,R]∃一个上述完整图和一条无限真实轨道，使所有k同时有t_k=M_D^k(t₀)、s_k=c t_(k+1)^m、真ρ=s_k/λ及锚积恰−Mt_k^p。不是∃一个F对所有连续t₀取等。
+- **Complete realization / Quantifiers**：GR2–GR8在轴上同向链放输入锚；能量支P=s−D/s、Y=sqrt(t²−P²)，步帽支P=t,Y0。相邻锚的平方距差为严格下降仿射函数，其交点在本步区间，故当前锚对全部早晚锚和可能极限锚都最近。S是这些锚加有限链极限（若有）；J=P_S加全链，F=(J⁻¹−I)/λ。完整F/J闭、exactzeroS、全部近端覆盖、零输入驻定、正输出唯一个链前像；投影边全部合格，所有距离窗不变。总步长可和时点误差=实际余长；总步长无限时点沿轴逃逸但距离趋0。其余轨道投影后驻定或沿链。
+- **Dependencies / Evidence / Related Files**：D01/E0、D04完整残差，[OR1–GR8](research/topics/dd2/power_rates.md#power-greedy-realization)直接证明两种原标量门、根合法、全部候选锚比较与完整图合同；原好门依据WR1/CK。原数据对整个自由类认证的预设φ必支配M_D，所以匹配图保同一原目标；更紧φ若作为额外图约束须另判。
+- **Counterevidence / Scope**：允许F在非输出点为空，不授处处非空连续单值、指定凸S或单点目标子类。低半阶的无界链不声称局部位置不变，有限侧的首出预算另由C470证明。M=0时p无效，坏门不纳入正向；不认定公开新颖性。[S06.08](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)。
+
+<a id="c470"></a>
+## C470-v1 · 原纯幂完整类的准确全尾包络与最优三种速率
+
+- **Status**：`derived-checked`。三席先独立重构后逐式复读九处实际正文、身份、图边和四栏；原域、完整纤维、全时刻与局部量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定C469的全部原数据、好门及足够小的固定活动分支窗[0,R]，M_D按C469，m=1/q。令 \(W(t)=\sum_{j\ge0}c[\mathcal M_D^{j+1}(t)]^m\)，W0=0。对每个正t，W有限当且仅当q>1/2；有限时W连续非减零消失。所有受检有限前缀的实际长度≤W(t₀)。局部开U保U_R全输入覆盖、全部允许边（含拟出界输出）的原真模和锚条件，x₀∈U_R及W(t₀)<d(x₀,Uᶜ)，则先排首出边再续接，全部轨道有限长且点趋S∩U。
+- **Optimal envelope / Scope**：全空间自由完整类固定任意t₀，全部k有t_k≤M_D^k(t₀)，有限侧e_k≤L_k≤W(t_k)≤W(M_D^k(t₀))；C469为该t₀给的同一图同一轨道在所有k同时取等。故W是最小共同真实全尾界和有限侧最小共同点误差界，且有限W侧s+W(a)≤W(t)。低半阶W∞由同一实际链达到，不把e_k当已存在。固定图可能更快；原目标须由该数据认证。
+- **Exact rates / Definitions**：q<1令ν=2/q−2、M*=M于p=2/q其余好侧0、γ*=c²/2−M*>0，最坏t_k~(νγ*k)^(-1/ν)。q>1/2且q<1令α=2−1/q，W(t)~c t^α/(αγ*)，点与尾的最坏时间常数为\(\frac{c}{\alpha\gamma_*}(\nu\gamma_*)^{-\alpha/\nu}\)。q=1令L=K/λ,bσ=(1+sqrt(1+4σ))/2,κσ=min{Lbσ,Lsqrt((1+2σ)/(1+L²))}，σ*=M于p2否则0；W~κ*t/[L(1−κ*)]，M0或p2为准确等式。三量的最佳R底数均κ*，距离/实际尾limsup Q比≤κ*，点Q不由此自动成立。
+- **Strong-power rates**：q>1非临界好侧，(β,b*)=(1,1)于M0或p>2，(1,b_M)于M>0,p2，(p/2,sqrtM)于M>0,2/q<p<2。ω=qβ>1，W~b*t^β，距离最佳Q阶ω及系数h b*^q，点/尾最佳Q阶ω及系数b*h^β。q>1正缺陷好临界p2/q、0<M<c²，τ=sqrtM/c：W~sqrtM t^(1/q)/(1−τ)，距离最佳R底数τ^q且limsup Q比≤τ^q，点/尾最佳R底数τ且尾limsup Q比≤τ。全部最佳常数由C469实际同图取等；点逐步比另C471。
+- **Dependencies / Evidence**：C469取等与D01/D04原标量约束；[BR1–WT6](research/topics/dd2/power_rates.md#power-exact-tail)用单调D、固定活动支和平方降幅正部和重构全尾上界，人工补零只作数列比较，不假装合法边。[RT1–RT8](research/topics/dd2/power_rates.md#power-sharp-rates)由递推、可和相对修正、望远镜和及真实步尾证明所有率。C458是已明示的比较机制先例，但此处自足重证，不修改C458原零缺陷身份。
+- **Counterevidence / Scope / Related Files**：坏参数有实际保距图，不能给共同趋零率。结论不授任意signed/非单调缺陷、固定凸目标、连续单值子类或另加更紧φ。仅q>1/2写点率；q≤1/2可有实际点失败。R底数不替换Q比，不声称S12残差/遍历复杂度已验收。公开新颖性未核；[S06.08](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)、[F145](FAILED_ROUTES.md#f145)。
+
+<a id="c471"></a>
+## C471-v1 · 强幂好临界的点Q锐门与线性模的R/Q分离
+
+- **Status**：`derived-checked`。三席先独立重构后逐式复读九处实际正文、身份、图边和四栏；原域、完整纤维、全时刻与局部量词核准，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Assumptions**：分支A固定q>1,p=2/q,K,λ>0,0<M<c²,c=λK^(−1/q)、τ=sqrtM/c，沿用C470自由闭目标完整类和已由原数据认证的φ。对任意非终止合法轨道，τ<1/2时 \(\limsup e_{k+1}/e_k\le\tau/(1-2\tau)\)，此为最佳共同系数；τ≥1/2时没有有限共同limsup系数。全类保证点Q线性的充要门为τ<1/3，所有τ∈(0,1)仍有准确R底数τ。
+- **Complete sharpness / Quantifiers**：任取0<g<1/2、g≤τ，t_j=g^(qj)t₀,s_j=gc t_j^(1/q)，ε_j=±1，x_(j+1)=x_j+ε_js_j，p_j=x_j+ε_jt_j，S={p_j}∪{x∞}。δ=(1−2g)/(1−g)，缩窗δs₀>3t₀后，所有链顶点互离且p_j为唯一最近锚。完整J=P_S加链、F=(J⁻¹−I)/λ闭图、精确零集、全域覆盖、零驻定、全距离窗不变，正输出唯一前像给真EB取等，锚积−s(s−t)≥−Mt^(2/q)。仅在n_ℓ=ℓ²+ℓ取ε=−1，其余+1，实际limsup点比为g/(1−2g)。τ<1/2取gτ精确达到；τ≥1/2用不同图g↑1/2排除共同有限系数，不声称一个图有无穷limsup；τ≥1/3取g1/3给limsup1。
+- **Branch B / Exact counterexample**：λ1,K4,q1,M0,p任意正，H=R²,S=R×0,r4/5。δ在t=r^k依k模3取2/5,−2/5,−2/5，相邻正结点线性插值、t>1恒2/5。T(u,v)=(u+δ(|v|)|v|,rv)，F=T⁻¹−I全域连续单值、完整J=T同胚、exactzeroS；全部边a=rt,s=t sqrt(1/25+δ²),rho=s,a≤4rho、锚积(4/25−δ²)t²≥0。预设φ=.99t先由κ₀=4/sqrt17认证，零输入驻定、全部距离窗不变、所有轨道有限长。初高1在每个k模3=0有(e_(k+1)²−e_k²)/t_k²=27/305>0，故点R线性仍非点Q线性。同图后缀给任意小初距。
+- **Dependencies / Evidence / Scope**：分支A用C470准确尾上界、实际三角及[QB1–QB5](research/topics/dd2/power_rates.md#power-point-q-boundaries)的完整链；分支B在QB6–QB8直接反解并核完整ρ与几何级数，原目标认证也可由C469/BR3核。此例只排除q1的一概R→Q提升，不声称q1每一L/M都无点Q保证。反向不授固定连续单值/凸目标类（分支A）；不认定公开新颖性。

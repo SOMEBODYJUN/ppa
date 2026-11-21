@@ -1360,6 +1360,24 @@
 | --- | --- | --- | --- |
 | E780 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [PPA-HOLDER-DEFECT-FINITE-LENGTH · C399 输入距离幂次缺陷与 Hölder 真误差界的有限长度门](canonical/dd2_power_defect_finite_length.md#dd2-power-defect) ∧ [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) ∧ [DD2-CONTINUOUS-AFFINE-INVOLUTION · C467 连续单值仿射零集的完整近端对合与任意小二周期](canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution) | conditional → [DD2-POWER-STRUCTURED-NECESSITY · C468 固定连续仿射类的全系数必要指数与单点边界](canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses) | C468-v1：固定p,q,K,λ>0、H=R²×R²和S=R²×0，类C为全域连续单值F、exactzeroS及I+λF同胚；完整J，U=H，原ρ域[0,∞)。每M>0,R>0要求全t≤R边锚≥−Mt^p且a≤Kρ^q；SN2保子类非空。先∃φ*（在M之前选择且与M无关），它在[0,R*]连续非减、φ*(0)=0且正尺度严格下降；再∀M>0∀R>0∃0<r≤min{R,R*}(依参数不依F)∀认证F给全部小窗A，当且仅当pq>2。同∀M∀R∃r∀F量词下全轨finiteL、距0和点S，当且仅当pq>2且q>1/2。反向只需一个认证R0和同图任意小失败；低q法向旋转/q1定旋或线性shift-flip/强q C467(d2)均同C，半阶PL7保精确真模且pq>2时仍保原认证φ*。C401仅承担充分积分；半阶反向由本规范PL7–PL11完整旋转与实际级数独立证明，不由积分发散直接反判。固定M仍WR1临界好侧/M0，M0长度门q>1/2而p退出；不声称当前仿射类q1最优系数。另有限维单点S子类允许多值J：q>1任p>0,M≥0，根帽→0与s≤t+a给s≤2t,a≤2^q(K/λ^q)t^q，指定κ后尾≤2t/(1−κ)，局部严预算保首出边；q1,L<1/2单点尾≤t/(1−2L)。必要性不授固定图/紧φ/更强signed/一维或径向结构，无最优率或新颖性判断。；**derived-checked** |
 
+## DD2 纯幂精确动态达到
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E781 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-POWER-GREEDY-REALIZATION · C469 原纯幂最坏距离包络的完整同图逐步取等](topics/dd2/power_rates.md#power-greedy-realization) | C469-v1：固定p,q,K,λ>0,M≥0，Φ=−Mt^p,ψ=Kρ^q全域，c=λK^(−1/q),m=1/q,h=K/λ^q；OR2好门M0或p>2/q或临界M<c²/2(q<1)、T(K/λ)(q1)、c²(q>1)。E0同一存在最近输入锚和完整ρ；小窗MD=min{G_m⁻¹(t²+2D),hB_D^q}连续严格增且0<MD<t。所有受检边a≤MD。∀t0∈(0,R]∃H2自由闭S的完整闭F、全域非空J及同一轨道，所有k同时t_k=MD^k(t0),s=c t_next^m,真EB和原缺陷取等。能量锚P=s−D/s,Y=sqrt(t²−P²)，根锚P=t,Y0；相邻锚平方距交点在步区间给全部最近性。J=P_S加同向全链，F=(J⁻¹−I)/λ，exactzeroS、零驻定、全距窗不变，正输出唯一前像。总步长可和时e=L，总步长发散时点无界但距0；不交换成∃F∀连续t0。原类认证φ必支配MD；不授更紧额外φ/固定S/连续单值类，F允许非输出空值。OR/BR自足核好门与活动支，未用文献新颖性判断。；**derived-checked** |
+
+## DD2 纯幂最优尾与实际速率
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E782 | [DD2-POWER-GREEDY-REALIZATION · C469 原纯幂最坏距离包络的完整同图逐步取等](topics/dd2/power_rates.md#power-greedy-realization) | conditional → [DD2-POWER-EXACT-TAIL-RATES · C470 原纯幂完整类的准确全尾与最佳三种速率](topics/dd2/power_rates.md#power-exact-tail) | C470-v1：同C469固定原数据好门，足够小固定活动支窗。W(t)=Σc[MD^(j+1)(t)]^m，正t有限iffq>1/2；有限时连续非减零消失。能量支的有限前缀虚拟补零、D非减、等总平方和及正部和积分给L_prefix≤W，虚拟跳零不是原边；根支用s≤B直接比较。开U保全输入覆盖及拟出界边原真模，x0∈U_R,W(t0)<d(x0,Uc)先排首出再续接得点S∩U。全空间每t0所有k准确共同距MD^k、有限侧点/尾W(MD^k)，C469同图全时取等；低半阶保距离率，匹配尾W∞真实实现，无共同点收敛保证。q<1距指数1/(2m−2)、有限侧点/尾(2−m)/(2m−2)，RT1–2给准确常数；q1准确R底数κ*且距/尾Q比κ*，W~κ*t/[L(1−κ*)]；q>1非临界β,b*按BR4、Q阶ω=qβ，距系数h b*^q、点/尾b*h^β，W~b*t^β；强幂正好临界τ=sqrtM/c，距R底数τ^q、点/尾τ、W~sqrtM t^m/(1−τ)，尾Qτ。真实步尾等价与可和乘积支撑Q和端点R；不把R替换点Q。C458仅是零缺陷比较先例，此页重证负纯幂版本，不改其身份；不授任意signed/更紧φ/指定结构类或S12复杂度，无新颖性声明。；**derived-checked** |
+
+## DD2 点误差Q与R的锐边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E783 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [DD2-POWER-EXACT-TAIL-RATES · C470 原纯幂完整类的准确全尾与最佳三种速率](topics/dd2/power_rates.md#power-exact-tail) | conditional → [DD2-POWER-POINT-Q-BOUNDARY · C471 强幂好临界的点Q锐门与线性模R/Q分离](topics/dd2/power_rates.md#power-point-q-boundaries) | C471-v1：A固定q>1,p2/q,0<M<c²,Kλ>0,τ=sqrtM/c、C470原自由完整类及认证φ。τ<1/2时最佳共同limsup e_next/e=τ/(1−2τ)，τ≥1/2无有限共同系数；全类点Q线性iffτ<1/3，全部τ仍保R底数τ。完整变号链任0<g<1/2且g≤τ，t_j=g^(qj)t0,s_j=gc t_j^m,p_j=x_j+ε_jt_j，δs0>3t0保全部最近性；J=P_S加链闭完整，真ρ=s/λ，EB等号和锚≥−Mt^(2m)，零驻定/全距窗。稀疏n_l=l²+l负号其余+给limsup g/(1−2g)；τ≥1/2以不同g图逼近，不称单图无穷比。B固定λ1,K4,q1,M0,p任意，S=R×0,T(u,v)=(u+δ(\|v\|)\|v\|,.8v)，δ(.8^k)按模3为.4,−.4,−.4并线性插值；完整T同胚、F=T⁻¹−I连续单值，真EB与非负锚全边，原φ=.99t由4/sqrt17认证。全轨finiteL/R点率，在相位0真实点平方误差增加(27/305)t²，故非Q线性；只反驳线性参数一概升级，不是q1全部参数分类。A不转授连续单值或固定凸目标，公开新颖性未核。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

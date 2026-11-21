@@ -426,7 +426,12 @@
   - **证据** [完整范围验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-necessary-subclasses-acceptance)、[C468/SN1–SN10的双向与单点证明](../canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)、[C467/CI1–CI8完整连续图](../canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution)、[PL7–PL14真模匹配有限/无限长度](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)、[CK8精确临界好图](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)。
   - **复核** 三席先独立重构后逐读九处实际正文/登记、图边与四栏；CI1–8的正部延拓、完整唯一原根、真ρ、K最小/最高q、全部零输入及同图不变位置窗均核准。SN3先∃预设φ*再∀M∀R∃r∀F、一个R₀反证和三支先目标后预算、半阶实际级数逐式通过；固定M用WR1共同保证，CK8另作固定图证据，未混用。单点旁支的B_D→0、真正s≤t+a、含首出边支付及线性尾常数独立复算；E780补C430承重，C401只正侧，PL反向保全纤维而非凭积分发散。无未关闭实质异议；只签S06.07/C467/C468，未预签下一项。
 
-- [ ] `S06.08` 在 `p,q` 固定时，能否刻画最优收敛速率？
+- [x] `S06.08` 在 `p,q` 固定时，能否刻画最优收敛速率？
+  - **裁决** Sharp
+  - **结论** 能，须固定M、K、λ、原Φ=−Mt^p、ψ=Kρ^q及自由闭目标完整类。C469给最坏一步M_D，C470给准确尾W=Σc[M_D^(j+1)]^(1/q)；对每个初距，一个完整图的同一轨道在全部k同时达到距离M_D^k和有限侧点/尾W(M_D^k)，并保原认证φ。好门内q<1距离最佳指数q/[2(1−q)]，1/2<q<1点/尾指数(2q−1)/[2(1−q)]及RT精确常数；q≤1/2无共同点或长度保证。q1三量的准确R底数κ*，距离/尾Q比κ*；q>1非临界Q阶ω=qβ，距离系数h b*^q、点/尾系数b*h^β；正缺陷好临界τ=sqrtM/c，距离R底数τ^q，点/尾R底数τ。C471另核临界点Q锐门τ<1/3、τ<1/2时最佳limsup比τ/(1−2τ)，并给q1连续完整图反驳一概R→Q。坏门没有共同趋零率；必要性不转授固定图、指定目标几何、连续单值子类或更紧额外φ。
+  - **证据** [完整速率合同与裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)、[C469的GR1–GR8完整逐步实现](../topics/dd2/power_rates.md#power-greedy-realization)、[C470的WT1–WT6精确尾及首出预算](../topics/dd2/power_rates.md#power-exact-tail)、[RT1–RT8全部准确率](../topics/dd2/power_rates.md#power-sharp-rates)、[C471的QB1–QB8点Q边界](../topics/dd2/power_rates.md#power-point-q-boundaries)。
+  - **复核** 三席先完成实际四项自检并独立重构，再逐读OR1–QB8、三卡、E781–E783和全部九处实际终稿/四栏。核准两支全部候选锚最近性、完整F/J闭性/纤维/零/全距窗、每初距一个图同时全部k取等；WT2人工补零正部和与含首出边支付、BR分支及可和相对修正、RT全部准确常数逐式通过。QB3稀疏变号全锚距离、跨图无界系数、q1全域逆/原φ=.99与27/305复算通过。提交前补自足两严格门、统一首项支配及有限W/低半阶范围，三席再次核准；无未关闭实质异议，只签S06.08/C469–C471，未预签后续。
+
 - [ ] `S06.09` 是否能够构造达到速率上界的算子？
 - [ ] `S06.10` 是否能够从一般函数判据直接恢复幂次分类，而不是分别重复证明？
 - [ ] `S06.ABOVE` 针对原协议的幂次误差界，在 \(pq>2\) 区域按 \(q\) 分区验收距离、点与有限长度结论。

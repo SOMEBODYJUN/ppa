@@ -11344,6 +11344,39 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-POWER-EXACT-TAIL-RATES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD2-POWER-GREEDY-REALIZATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD2-POWER-POINT-Q-BOUNDARY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14454,6 +14487,18 @@
     "E780": {
       "x": 1519.49,
       "y": 5380.6
+    },
+    "E781": {
+      "x": 1922.01,
+      "y": 5376.38
+    },
+    "E782": {
+      "x": 1899.46,
+      "y": 5378.06
+    },
+    "E783": {
+      "x": 1912.82,
+      "y": 5194.11
     }
   },
   "bounds": {
