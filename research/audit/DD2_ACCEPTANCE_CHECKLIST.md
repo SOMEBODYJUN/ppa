@@ -234,7 +234,11 @@
   - **结论** 固定原非负二次校准，C285 的反射参数 \(c_\sigma=\sqrt{1+4\sigma}\)、\(\eta=1/L\) 恰恢复 \(T(L)=(1-L)/L^2\)（\(L\le1/2\)）或 \(1/(2L^2)\)（\(L\ge1/2\)）。\(\sigma<T(L)\) 给原两项的最小值 \(\kappa_\sigma<1\)、\(s\le b_\sigma t\) 及已知合法轨道的有限长和尾长；自动全选择续接另核覆盖及 \(b_\sigma t_0/(1-\kappa_\sigma)<d(x^0,U^c)\)。每个 \(\sigma\ge T(L)\) 都有实际最小缺陷系数恰为 \(\sigma\) 的完整闭图坏轨道：\(\sigma\le2\) 为定角旋转，\(\sigma\ge2\) 为同图任意小二周期。原自由类的严格门不能放宽；固定图成功、一般 \(\Phi\) 零合同及一维 \(T_1\) 各保独立身份。
   - **证据** [D1K1–D1K5 换参、原因子与合法路径](../topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)、[D1K6–D1K8 精确临界及越界失败](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)、[C285 原参数门](../canonical/rleb_sharp_linear_frontier.md#rsl-threshold)、[原教师稿第七节](../manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md)、[全部参数最大值](../topics/dd2/dd1_recovery.md#dd1-four-point-reverse-sharp)、[C400 的指定目标反推](../topics/dd2/core.md#dd2-reverse)。
   - **复核** 三路独立重建代数、实际路径和量词，再对照实际源。核正数平方的分区、非空门、\(L=1/2\)、\(\sigma=0\)、二次零驻定、源中距离和反射符号；C285 旧候选包络不误当全参数准确 \(M\)。严格侧先估有限前缀再用覆盖，不用结论预设留域。坏侧核全部前像、真残差、\(\sigma=2\) 合锚、全选择不变窗及每条周期边的精确缺陷；帽为 \(\mu R/\lambda\) 或 \(\sqrt{2\sigma}R/\lambda\)，未把残差与步长混同。坏例只证明类保证的必要性，未声称所有坏侧图或全部选择必失败。
-- [ ] `S03.SCOPES` 分别验收自由四点几何与完整局部 PPA 算子类的尖锐性，核对构造满足各自全部假设。
+- [x] `S03.SCOPES` 分别验收自由四点几何与完整局部 PPA 算子类的尖锐性，核对构造满足各自全部假设。
+  - **裁决** Sharp
+  - **结论** 已交付两份精确合同及逐项义务表。固定原 \(\sigma\ge0,\lambda,\ell>0,n\ge2\)，自由四点几何的准确 \((s/t,a/t)\) 域为 D1Q1；取遍完整闭图、精确零集、全域非空近端且所有输出合格的自由算子类，实际边投影恰为同一域。两层因此有同一三项最大值、指定下降比例 \(r<1\) 的闭预算、严格坏侧与临界门，归一化步长最大值 \(b\)（物理步长 \(bt\)）也真实达到。C443 同图每尺度取等、D1O 同图趋零尺度与完整不变窗、D1K 持续失败轨道另逐行签明量词；几何取等不直接替代完整真残差或轨道证明。原一般函数、任意指定目标、额外固定帽和一维版本保各自范围。
+  - **证据** [D1Q1–D1Q3 两层合同与逐项对照](../topics/dd2/dd1_recovery.md#dd1-sharpness-two-scope-contract)、[全部四点的直接坐标](../topics/dd2/dd1_recovery.md#dd1-four-point-whole-class)、[完整投影加边和全纤维](../topics/dd2/dd1_recovery.md#dd1-complete-local-sharpness)、[同图全部输出不变窗](../topics/dd2/dd1_recovery.md#dd1-local-sharp-gluing)、[真实临界与越界轨道](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)。
+  - **复核** 三路独立核几何、完整实现和量词，再复读实际合同。核两处最近性及六距相容、\(s=0\) 不可行与 \(a=0\) 可行；正输出唯一前像给 \(\rho=s/\lambda\)，零距离输出给 \(\rho=0\)。完整 \(J\) 的全部底边、精确零集与覆盖独立验证。局部拼接保递减尺度、跨块间隔、闭图及所有选择留域，位置与数值帽不截纤维；同图每尺度不蕴含共同取等轨道；D1K 的一列缩小不变窗中，每窗各有一条坏轨道。固定窗边界不得要求超窗最大边；二维凸一步实现不升级为低参数凸目标的持续失败，一维 C445 也未混入原域。
 
 ## §4 不要求统一 `\kappa<1`，究竟能够证明多强的收敛结论？
 

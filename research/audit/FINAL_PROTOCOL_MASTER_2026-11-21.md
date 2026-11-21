@@ -24,7 +24,7 @@
     0 <= s <= B(t),
     (t-s)_+ <= a <= min(t+s, sqrt(t^2+2D(t)-s^2))
 
-在二维自由两锚闭目标几何中逐尺度尖锐。线性 eta(s)=L s 给出 DD1 两段门 T(L)。C285 的正交近端与在原点聚集的闭零集二周期证明一般完整闭图类的锐性，连续单值及指定目标子类另验。[S03.GATE 的 D1K1–D1K8](../topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)逐个换参并对每个临界及越界系数给实际精确缺陷的完整坏轨道，同时保严格侧原估计与局部预算。固定一维自由闭目标另由 C445 给不同的三段门。
+在二维自由两锚闭目标几何中逐尺度尖锐。线性 eta(s)=L s 给出 DD1 两段门 T(L)。C285 的正交近端与在原点聚集的闭零集二周期证明一般完整闭图类的锐性，连续单值及指定目标子类另验。[S03.GATE 的 D1K1–D1K8](../topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)逐个换参并对每个临界及越界系数给实际精确缺陷的完整坏轨道，同时保严格侧原估计与局部预算。固定一维自由闭目标另由 C445 给不同的三段门。[两份锐性合同及全部义务表](../topics/dd2/dd1_recovery.md#dd1-sharpness-two-scope-contract)把自由几何、完整图、同图尺度序列、全部输出不变窗和真实轨道分别绑定到正文证据。
 
 证据：`research/topics/dd2/core.md#dd2-reverse`，C400，C285，`FINAL_PROTOCOL_S1_S3` 的 §3。
 
