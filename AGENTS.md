@@ -1,6 +1,6 @@
 # Repository research and writing
 
-The active DD1–DD2 research task is the author's [final acceptance protocol](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md). Resume at the [question-by-question audit](research/audit/DD2_FINAL_ACCEPTANCE.md). Check the original protocol at startup, at each checkpoint, and before reporting completion. The earlier P0–P3 matrix supplies scoped evidence for this task.
+The active DD1–DD2 task is to finish every item in the [acceptance checklist](research/audit/DD2_ACCEPTANCE_CHECKLIST.md) under the author's [original protocol](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md). Work on the first unchecked item. Record its answer, evidence and independent verification in the checklist, then check, commit and push that item before taking the next one. Open and partial work remains unchecked. Use the [audit entry](research/audit/DD2_FINAL_ACCEPTANCE.md) for prior evidence. Deliver the completed checklist from origin/main only after the final checker passes.
 
 Read RESEARCH_PROTOCOL.md and relevant canonical definitions before mathematical changes. Keep exact claim versions, true residuals, graph-block versus complete-fiber scope, coverage and localization explicit. History is provenance, not a proof. Update canonical records when a substantive new checked claim is registered.
 

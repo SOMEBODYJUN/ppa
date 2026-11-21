@@ -1,18 +1,20 @@
 # 原协议验收进度
 
+**当前主任务。** 把 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md) 逐项做完，回交同一份完整答卷。从第一项未勾任务恢复，仅在证据与独立复核就绪时勾选。这轮建立了 280 项，尚未签收任何一项。进度以清单中实际勾选为准。
+
 阶段提交 `cd028d5` 建立了 [协议主索引](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md) 和三份分节审计。后续复核发现原 F1–F3 被替换、DD1 完整图锐性被额外连续单值要求掩盖、\(q>1\) 临界常数可以补证。仍未达到原协议最终交付门。当前证据按以下范围使用。
 
 - §1–§3：一般符号 Phi 的精确根区间、正部公式反例、DD1 两段门及算子层 sharpness 边界；C414 的正式证明在 `research/canonical/dd2_general_phi_exact.md`。
 - §4–§8：原 [F1–F3](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3) 由 C401 恢复；[C416](CLAIMS.md#c416) 给出 \(q>1\) 的锐常数与一个完整图的任意小二周期；[C399 的剪切见证](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates) 核实 \(0<q<1\) 的距离率及 \(q>1/2\) 的尾长、点误差指数。
 - §9–§17：PPPA reduction、shadow recovery、双残差、算法、分裂、文献、原创性和独立审查。
 
-接续优先处理一般振荡 gauge 的必要性及最优尾势、在同对象量词下完成文献与严格包含/不可比较证据，以及尚未闭合的 fiber 与算法问题。指定闭凸目标或连续单值近端的 \(q>1\) 临界锐性单列。已审模块可以成文，全协议仍开放。
+尚未闭合的研究包括一般振荡 gauge 的必要性及最优尾势、同对象量词下的文献与严格包含/不可比较证据，以及 fiber 与算法问题。指定闭凸目标或连续单值近端的 \(q>1\) 临界锐性单列。按清单顺序使用或补齐证据。
 
 最新验证：`python3 research/validate_assets.py`、`python3 research/code/dd2/verify_outline.py` 和 `python3 research/build_graph.py` 均通过。
 
 # 当前研究状态
 
-**当前主任务未完成。** 依照[作者原版 DD1–DD2 最终数学验收协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)，完成 §1–§17 的逐问数学验收、第八部分的 28 问、第九部分的交付物及最终六问。[逐节验收入口](research/audit/DD2_FINAL_ACCEPTANCE.md)给出证据定位、缺口与结束条件。最先推进 §1–§6，尤其是保留符号的一步补偿、不连续模、原 F1–F3 与完整幂次分区。前次 P0–P3 结果按实际证明范围复用。
+依照[作者原版 DD1–DD2 最终数学验收协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)，完成 §1–§17、第八部分 28 问、第九部分交付物及最终六问。[逐节历史审计](research/audit/DD2_FINAL_ACCEPTANCE.md)给出既有证据和缺口。前次结果逐项复核后可按实际证明范围复用。
 
 **DD2 主定理。** [C400–C401](research/topics/dd2/core.md) 已完成目标下降曲线的反向缺陷预算、平面可实现性、距离与长度分界和一般误差界的积分势。全域完整线性误差界例可达到指定曲线却无限长，闭仿射目标例还可沿切向逃逸。[C411](CLAIMS.md#c411) 已闭合低 \(L<1/2\) 步长支在同一闭零集和固定完整图上的逐步实现，给出局部孤立的无限长度例。[C413](CLAIMS.md#c413) 用相对法锥的统一正向排除有限维一般闭凸集上的收敛锚链与可和链。闭凸集上锚不收敛的链仍开放。
 
@@ -225,6 +227,8 @@ C341 现已完成投稿全部原非线性 RLEB 与独立极大单调基准的共
 
 <a id="next-actions"></a>
 ## 下一轮具体行动
+
+先完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)的第一项未勾任务，按单项提交和推送规则顺次推进。下列专题在清单最终签收后接续。
 
 **共同结构的下一次接续。** 先读[现行任务](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md)和 [F120](FAILED_ROUTES.md#f120)。先找几何关系，再做既有收敛定理的逐条导入。导入原 RLEB 时保留一般非线性反射模、完整纤维真残差和原步。
 

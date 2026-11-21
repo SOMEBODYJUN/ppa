@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 DD1–DD2 的 17 节数学验收及全部最终交付。从[逐节验收入口](research/audit/DD2_FINAL_ACCEPTANCE.md)恢复，先处理 §1–§6 的精确定理、一般补偿、DD1 回收、收敛、有限长度及幂次分区。P0–P3 的前次矩阵是对应小问的证据。
+**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)。从第一项未勾任务恢复，逐项用证明、反例或可核交付裁决，单项提交并推送后继续下一项。清单本身就是交回作者的完整答卷。[历史审计入口](research/audit/DD2_FINAL_ACCEPTANCE.md)提供既有证据。
 
 
 ## 2026-11-21 最终协议验收入口
@@ -335,7 +335,9 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
-按 [DD1–DD2 最终数学验收](research/audit/DD2_FINAL_ACCEPTANCE.md)逐问审查和补证。每个 checkpoint 回看[原协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)；就有符号补偿、不连续模、一般长度势及幂次分类先完成直接数学推导和反例攻击。
+从 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)认领第一项未勾任务。该项签收并确认远端提交后，再认领下一项。清单全部签收后进入下面的研究专题。
+
+### 其他研究专题入口
 
 第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。旧文献仅在具体证明需要核对时回查，已掌握的背景不作为默认发现入口。
 
@@ -348,6 +350,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
 | [research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md) | 作者原版 DD1–DD2 验收协议，逐字节保存。启动、续接和结束当前主任务前读取，包含 17 节逐问要求、强制交付物和最后六问。 |
+| [research/audit/DD2_ACCEPTANCE_CHECKLIST.md](research/audit/DD2_ACCEPTANCE_CHECKLIST.md) | 唯一的逐项工作清单和最终答卷。280 个任务覆盖原协议主项及附加义务，每项保存裁决、结论、证据及复核。 |
+| [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
