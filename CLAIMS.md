@@ -3489,6 +3489,8 @@
 
 - **S04.08 线性率边界补证**：[NR1、NR3–NR4](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)固定 Q/R 线性定义，以实际正距离比趋 1 推出根率 1；剪切及原 \(q=3/4,p=3\) 非单调例各有完整纤维、小窗覆盖与原 DD 数据认证的预设目标。有限长度与非 R 线性共存。固定图精确法向后继不冒充统一 DD 目标，多项式上界不被用作慢速下界。这是既有 C399 的证明和范围补证，不修改其量词或指数。
 
+- **S04.09 显式速率补证**：[PR1–PR3](research/canonical/dd2_power_defect_finite_length.md#dd2-power-explicit-rates)固定预设 \(\varphi_\gamma\) 的原数据兼容门，保留有限前缀、零输入和严格位置预算，给全部允许选择的显式距离／点误差／尾长界。[PR4–PR7](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)核完整剪切的实际渐近常数与指数达到性；仅统一类的指数不能提高，固定图可更快。一般比较曲线及积分计步的附加条件见 [S04.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-variable-ratio-rate-acceptance)。既有 C399 的量词和端点范围未变。
+
 <a id="c400"></a>
 ## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
 

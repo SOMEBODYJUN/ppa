@@ -57,6 +57,8 @@
 
 [S04.08 的实际非线性率](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)用真实正误差比和根率区分证书与轨道。C400 的匹配调和旋转点收敛而无限长，同数据的 \(F=I\) 却几何收敛；C399 的完整剪切与负缺陷非单调例具有有限长度且无 R 线性率。每个目标仍由对应的原 DD 数据认证，固定图法向后继不替代该证书。
 
+[S04.09 的显式速率](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-variable-ratio-rate-acceptance)从 C399 的原目标认证和同一步势给计步距离、点误差及尾长界；[完整剪切](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)达到相应指数，并给出实际渐近常数。相同比例证书可容许更快固定图。一般 \(Q\) 的复合及积分计步仍核保序、逆域、实际留域与长度的独立条件。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
