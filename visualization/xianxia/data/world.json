@@ -11068,6 +11068,17 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ONE-DIMENSIONAL-SHARP": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14082,6 +14093,10 @@
     "E756": {
       "x": 335.41,
       "y": 5289.22
+    },
+    "E757": {
+      "x": 995.85,
+      "y": 5649.4
     }
   },
   "bounds": {

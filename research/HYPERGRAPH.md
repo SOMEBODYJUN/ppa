@@ -1216,6 +1216,12 @@
 | --- | --- | --- | --- |
 | E756 | [DD2-HOMOGENEOUS-SAME-GRAPH · C443 固定二次数据的同一射线完整图全尺度达到](topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment) | conditional → [DD2-CRITICAL-FINITE-TERMINATION · C444 同边临界最优常数与全轨道两步终止并存](topics/dd2/dd1_recovery.md#dd1-critical-finite-termination) | 固定 n≥2、λ,ℓ>0，在 C443 的显式射线图取 σ=T(ℓ/λ)、a*=1、s*=λ/ℓ。所有完整边满足精确二次/线性证书，每个正尺度的同一边使两项最小常数同时取等，但特殊正输出不可能续接为特殊正输入，所以从任意初值的所有完整选择轨道至多两条非驻定边进入 S*，准确总长上界为 (1+λ/ℓ)d(x0,S*)。显式距离窗保全部选择局部不变；不推出所有临界图终止，也不声称与坏例相同的零集或逐输入数据。；**derived-checked** |
 
+## DD2 维数限制与完整临界轨道
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E757 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-ONE-DIMENSIONAL-SHARP · C445 一维自由闭目标的准确一步值与三段临界门](topics/dd2/dd1_recovery.md#dd1-one-dimensional-exact) | 另固定 H=R、λ,ℓ>0、σ≥0、L=ℓ/λ、逐边某最近输入锚的二次下界 −σt²及完整真残差线性界。由一维最近锚重新分类输出位置，令 b=(1+√(1+4σ))/2，得到 m1=max{L/(1+L),min(Lb,b−1),min(L(b−1),b)}，不借二维取等。投影加边给每尺度完整闭图达到；m1<1 的准确 T1 在 L≤1/2、1/2≤L≤1、L≥1 为三段。临界双向块的固定图拼接保任意小全选择不变窗及真实二周期。自由闭目标不默认凸；固定图必要性、所有选择失败及额外受限类不在结论内。 原一步类无预设位置/数值帽，受检零处也用同一二次下界；局部反例给一列缩向零的显式全选择不变窗，不宣称任意指定窗均不变。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
