@@ -11145,6 +11145,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-POTENTIAL-REGULARITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14187,6 +14198,10 @@
     "E763": {
       "x": 918.39,
       "y": 5559.14
+    },
+    "E764": {
+      "x": 725.28,
+      "y": 5376.29
     }
   },
   "bounds": {

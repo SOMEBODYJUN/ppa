@@ -1258,6 +1258,12 @@
 | --- | --- | --- | --- |
 | E763 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-ZERO-DEFECT-INTEGRAL · C420 零缺陷统一算子类的固定模积分充要性](canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp) | conditional → [DD2-LOG-HALF-ORDER · C451 对数强化半阶真残差的非幂点率与长度边界](topics/dd2/nonpower_rates.md#dd2-log-half-order) | 每个β>0、B>max{β,1}取R=e^(-B)、λ=1、U=Vψ=H=ℝ²、Dψ=[0,∞)。g(a)=a(log(1/a))^β于0<a≤R、g(0)=0、外侧冻RB^β；w=ag连续严格增满射，ψ=w逆，Phi=0，预设φ=(a→sqrt(a²+w(a)²))逆。原E0能量与完整真残差认证a≤φ(t)。旋转F=g(\|\|y\|\|)Rπ/2 y的精确S={0}、rho=s=w(a)，目标取等；剪切F(u,v)=(-w(a),sgn(v)w(a)²/a)、a=\|v\|>0且零线置0，精确S=ℝ×{0}、rho=s=w(a)sqrt(1+g(a)²)，目标在每个正尺度严格。两图连续单值、完整近端全域唯一同胚、零驻定、窗内全部选择不变，最近输入锚积0；旋转与剪切的S不相同。任意正初始距离≤R（剪切任意横坐标）有t_k~2^β/sqrt(σ) k^(-1/2)(log k)^(-β)、s_k~2^β/σ [k(log k)^β]逆，σ分别1、2。两图正初始距离轨道有限长iffβ>1，尾~(2^β/(σ(β−1)))·(log k)^(1−β)；旋转点误差=t始终趋0，剪切β>1点误差等价尾量且无任何正幂点率，β≤1切向逃逸。每个q>1/2有ψ(ρ)/ρ^q→∞，且两构造图都无该指数的局部Hölder真误差界；χ~t²(log(1/t))^β、势有限iffβ>1。固定该ψ的C420零缺陷、U=H、全距离窗覆盖、含二维自由闭目标统一类中全部轨道有限长iffβ>1；非减目标复合给共同距离上界，β>1势给对数级点误差/尾长上界。不作固定图或更强正Phi必要性，不认定新颖性或非绝对可和点收敛主问题已闭。；**derived-checked** |
 
+## DD2 距离势的正则性边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E764 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-POTENTIAL-REGULARITY · C452 有最小有限距离势却无非减或内点连续替代](topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction) | C452-v1 固定H=R²,λ=1,R=5/4,U=H,闭离散S={(0,10n)}；epsilon_n=2^(-n-3),t_n=1+epsilon_n,a_n=1+3epsilon_n/4，完整J=P_S加指定x_n→y_n，F=J逆-I。原ψ=id,Φ特殊尺度=t_n²/2-a_n²其余0，预设φ特殊尺度=a_n其余t/sqrt2，由原E0认证正尺度全部同数据边严格下降。完整F闭、近端全域非空、zerF=S、特殊正输出唯一前像rho=s=a_n，零驻定及窗不变。固定图全部轨道至多两非静步、长≤2t0；最小C=1非负支付Θ*在t_n取2a_n其余t，t≤Θ*≤2t。对任何有限正C，无处处有限非减或在1有有限右极限的支付势，因交错区间成本和发散/两端趋1成本趋1；故排内点连续、可微、有限凹及[1,t1]BV替代。只属该固定完整图精确边池，不授整个原数据类共同势，不授凸目标或连续单值近端；R缩至≤1障碍消失，不认定新颖。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

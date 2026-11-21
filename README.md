@@ -73,6 +73,8 @@
 
 [S05.04 的积分范围](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integral-necessity-acceptance)分别核一般有符号数据的充分证书、C420 零缺陷固定模统一类和 C424 可比余量类的充要判据。C420 的平台完整纤维、同图真实坏轨道及原预设目标比较均有证明；用松原模或较弱下界得到的候选积分可发散，固定图或更强原前件仍有有限长度。一维固定单点与二维固定单点的范围也已区分。
 
+[S05.05 的势正则性](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)分开望远镜的下界要求、积分势的自动性质及规则替代的存在。C419 合同内可明确改选凹且正尺度 C¹ 的势；[C452](research/topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)则构造有最小有限距离势、全选择两步终止，却没有有限非减或内点连续替代的同一完整图，完整对象和规则化障碍已独立核验。
+
 
 
 
@@ -429,6 +431,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/dd2/nonpower_rates.md](research/topics/dd2/nonpower_rates.md) | C400 的平方对数计步目标、完整匹配旋转及实际有限尾长；C451 的对数强化半阶原模、旋转和剪切的全部纤维、距离/点/尾量渐近常数，以及 \(\beta=1\) 的失败侧。研究非幂次过程、半阶临界修正或区分纯幂上界与真实速率时读取；统一类长度门和固定图必要性不能互换。 |
 | [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | C442 的原稿映射及零输入修订；D1R–D1F 保存因子、符号根、尾长、两支机制、全部最近性、连续性及全几何最大值。D1S 的真实临界轨道与 D1O1–D1O12 的完整纤维、C443 固定射线同图全尺度、显式间隔拼接及全部输出不变窗分开证明。整窗共同因子排除额外帽，任意小局部坏尺度可适配正帽。核 DD1 恢复、完整局部锐性和取等量词时读取。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
+| [research/topics/dd2/potential_regularity.md](research/topics/dd2/potential_regularity.md) | PR1–PR3 给势差真正需要的下界、实际势值尾限、非减势的补边判据、积分的精确正则性及可选凹 C¹ 构造；PR4–PR6 保存 C452 的完整投影加边、原目标认证、交错尺度、逐点最小势和非减/内点连续/BV 的不可能性。核“有效势是否必须规则”与“能否总规则化”的区别、零端与内点范围或替代势预算时读取。 |
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437–C438 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§1.6 对全部已认证边证明原真残差取样的统一安全性，核允许图与完整输出范围；§3 给精确达到判据、闭纤维端点和固定图紧性正反例；§3.4 明确原两项式的放宽域、准确 G/R 的实现及原式等值的必要充分条件，含正负完整图比较和零尺度；§3.5 给临界右前缀的严格下降充要门、逐边与共同余量的完整图分离及线性校准。§5.1 的 IC1–IC6 另给积分的等价级数、认证误差、普通逆恒等式和有限查询零端反证。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |
 | [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434、C441 的原真残差双向预算、兼容及尖锐性边界。危险前缀求 ψ，非空上端和三门求有符号 Φ；保整窗交集、线性标尺、首端及正下界必要性失败。§6 核整窗兼容，§7 分预算尖锐、输出取等和单尺度／同图／轨道量词。§8 给原两项式的两道逆预算及非正下降目标的准确恢复。§9 复用 C435/C437 给同残差、同锚及全部步长取等证书，并给原 max 已达且与准确上确界同值、正下界完整类仍无等号的图族。设计目标、反推强度或提升实现范围前读取。 |

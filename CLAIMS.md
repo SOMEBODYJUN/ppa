@@ -3685,6 +3685,8 @@
 
 - **S05.03 积分计算补证（原充分命题身份不变）**：[IC1–IC6](research/canonical/dd2_function_hypotheses.md#fh-integral-computation)对任意正有限非减下界给等价二进级数和全部截断尾的双边常数；认证节点、紧段划分及有效零端尾界给数值误差。C401 普通逆合同另给非负积分交换恒等式，直接由原模平方积分核候选可积性。共享连续模的两份连续严格增原函数仍可在任何有限查询上同答而候选积分敛散不同；这限制无尾信息的计算承诺，不把积分发散升级为固定图失败，也不改 C419 的正性、严格吸收或轨道前件。
 
+- **S05.05 正则性补证**：[PR2 的积分及凹替代](research/topics/dd2/potential_regularity.md#dd2-potential-regularity)区分本构造的绝对连续性、准确原下界的正窗 C¹、原积分可严格凸或零端无有限导数。对同一正非减分母可取 \(h(u)=2\int_{u/2}^Rdv/b(v)\)，其积分给非减凹且正内点 C¹ 的替代势，保逐边常数，全窗总量至多四倍；局部预算按替代势另核。这是本积分合同内的构造，不从任意有限势存在推出规则化；C452 明确排除后者。
+
 <a id="c420"></a>
 ## C420-v1 · 零缺陷统一算子类的固定模积分充要性
 
@@ -4005,3 +4007,13 @@
 - **原模与统一类范围**：\(\psi_\beta(\rho)\sim2^{\beta/2}\sqrt{\rho}[\log(1/\rho)]^{-\beta/2}\)，两图均无任何 \(q>1/2\) 的局部 Hölder 真误差界。令 \(\chi_\beta=(\operatorname{id}+\psi_\beta)^{-1}\)，则 \(\chi_\beta(t)\sim t^2[\log(1/t)]^\beta\)。C401 势在 \(\beta>1\) 时等价于 \([\log(1/t)]^{1-\beta}/(\beta-1)\)，否则发散；模型尾长分别等价于该势的 2 倍和 1 倍。固定这个原模、\(\lambda=1,\Phi=0,U=H\)，在 C420 的含二维自由闭目标、完整真误差界及全距离窗允许覆盖统一类中，全部算子全部轨道有限长当且仅当 \(\beta>1\)。非减目标的复合给统一 \(O(k^{-1/2}(\log k)^{-\beta})\) 距离率；\(\beta>1\) 时势给 \(O((\log k)^{1-\beta})\) 尾长及点误差界，剪切排除全类的正幂点率。一般开 \(U\) 的充分版另保 C401 严格位置预算。
 - **Dependencies / Evidence**：D01、core E0、[LG1–LG6 的完整反解与逐式渐近证明](research/topics/dd2/nonpower_rates.md#dd2-log-half-order)、C401 的原积分充分性及 C420 的精确统一类合同。原 \(\psi_\beta\) 在本例严格递增，所用残差代换已核；图值唯一故真实 \(\rho=s\)。求和渐近由正项积分与尾部夹逼，不用数值结果替代证明。
 - **Counterevidence / Objections / Scope / Related Files**：旋转与剪切的 \(S\) 不同，仅共享所列标量证书；各分支的点极限及常数不互授。统一类必要性不成为任意固定图、正下界或指定更强目标的必要条件。通用旋转机制来自 C420，纯幂剪切机制与 C399 相接；此身份新增具体对数模与真实率，不改变它们原命题，不认定公开新颖性。这里有限长的非幂剪切不关闭另列的非绝对可和点收敛主问题。[S04.10](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-rate-acceptance)分开曲线、原模和上包络范围。
+
+<a id="c452"></a>
+## C452-v1 · 有最小有限距离势却不能非减或内点连续规则化的完整 DD2 图
+
+- **Status**：`derived-checked`。三席独立重构全部纤维、原目标、最小归一势及不可规则化障碍，并逐式复读实际终稿、身份和图边；无未关闭致命异议。
+- **Exact Statement / Objects / Domain / Definitions**：固定 \(H=\mathbb R^2,\lambda=1,R=5/4,U=V_\psi=H,D_\psi=[0,\infty)\)，\(S=\{p_n=(0,10n):n\ge1\}\)。令 \(\epsilon_n=2^{-n-3},t_n=1+\epsilon_n,a_n=1+3\epsilon_n/4\)，\(x_n=p_n+(t_n,0)\)，\(y_n=p_n+(t_n/2,\sqrt{a_n^2-t_n^2/4})\)。完整 \(J=P_S\cup\{(x_n,y_n)\}\)，\(F(y)=\{x-y:(x,y)\in J\}\)。原 \(\psi(r)=r\)；\(\Phi(t_n)=t_n^2/2-a_n^2,\varphi(t_n)=a_n\)，其余工作尺度取 \(\Phi(t)=0,\varphi(t)=t/\sqrt2\)。
+- **Quantifiers / Assumptions / Conclusion — 原图与轨道**：F 闭图、完整预解式为全域非空 J、精确 \(\operatorname{zer}F=S\)。所有受检边满足每边同一最近输入锚的原有符号下界及完整真误差界；原数据认证全部同数据边 \(a\le\varphi(t)<t\)（正尺度）。特殊输出唯一前像给 \(\rho=s=a_n\)，零输出真残差0。原 R 距离窗全选择不变，零驻定；该固定图每条实际轨道至多两条非驻定边、总长不超过 \(2t_0\)。
+- **Conclusion — 势及不可规则化**：该固定图全部受检边的最小归一 \(C=1\) 非负支付函数为 \(\Theta_*(t_n)=2a_n\)、其余 \(\Theta_*(t)=t\)，含 \(\Theta_*(0)=0\)，并有 \(t\le\Theta_*(t)\le2t\)。对任意固定 \(0<C<\infty\)，不存在处处有限实值的非减 Θ 支付全部边，也不存在在内点1有有限右极限的这种 Θ。因此内点连续、可微、有限凹或在 \([1,t_1]\) 有限变差的替代均被排除；这些否定不要求 Θ 非负。最小性若写成任意 C，比较的是支付函数 CΘ。
+- **Dependencies / Evidence**：D01、E0、有限路径势差与投影完整反演；[PR4–PR6 的全部构造与证明](research/topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)。\(a_n\notin\{t_j\}\) 使实际特殊边无法续接；\(t_{n+1}<a_n<t_n\) 让非减性产生人工零成本桥，N 条步的支付被强制压到同一有限势差下。内点连续性与每条成本趋1直接冲突。无数值实验或外部未核定理作证明。
+- **Counterevidence / Objections / Scope / Related Files**：目标 S 闭离散且非凸，原 J 多值，原 Φ/φ 不要求正尺度连续；Φ 全窗有界且 \(D(t)<t^2/2\)，但缺陷比趋临界，任何实际步下界都不能满足 C419 的统一严格吸收。坏尺度在1，缩至 \(R'\le1\) 可用规则势 t；任意 \(R'>1\) 仍含无限坏尾。Θ* 的存在及最小性属于此固定完整图的精确边池，不授整个原数据类共同势。C278 无任何距离势的旧身份不变。本结果不认定公开新颖性，不转授闭凸目标、连续单值近端或优化类。[S05.05](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)、[F148](FAILED_ROUTES.md#f148)记录范围。

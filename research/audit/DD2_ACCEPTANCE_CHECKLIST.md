@@ -330,7 +330,12 @@
   - **证据** [NI1–NI5 的分类、完整构造与反例](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integral-necessity-acceptance)、[C420 原反向证明](../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)、[ZI1–ZI2 原目标和原模积分接口](../canonical/dd2_function_hypotheses.md#fh-zero-defect-target-integral)、[C419 两侧边界](../canonical/dd2_function_hypotheses.md#fh-length-boundaries)、[C424 余量判据与显式常数](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)、[F148](../../FAILED_ROUTES.md#f148)。
   - **复核** 三席先各完成四项数学自检，再独立重建充分、完整反向及量词攻击，最终逐式复读实际 NI1–NI5、ZI1–ZI3、C424 常数补证、C420/C424、F148、地图与清单。核准平台最小完整前像、零输出与可空原纤维、全部正起点的壳积分、预设目标阈值、原模换元系数及三类势/长度等价的限定范围；五类必要性边界均保非空。严格余量的两侧模型已核真实残差、窗外延拓、常数及对数望远镜；C424 以同 K 壳估计给显式常数和局部预算。已修源码转义并扫描控制字符，当前实际公式与身份一致，无未关闭致命异议。
 
-- [ ] `S05.05` `\Theta` 是否需要单调、连续、凹或可微？
+- [x] `S05.05` `\Theta` 是否需要单调、连续、凹或可微？
+  - **裁决** Proved
+  - **结论** 望远镜只用同一步有限势差、统一常数及所用末值的有限下界，四项全域正则性均非代数必要条件；沿受检边势值仍必须非增，零端显式尾界另核。C419 积分自动绝对连续和严格增，准确 bψ 或 C401 普通逆给正内点 C¹，原积分却可严格凸或零端无有限导数；一般跳下界给内点折角。积分合同内可以另构凹、正内点 C¹ 的支付势，逐段支配且全窗总量至多四倍。一般势存在则不能如此保证：C452 同一完整 DD2 图有最小非负势、两步终止和 2t₀ 预算，却无任何有限非减、内点连续、凹或可微替代。有效的不规则势与无法规则化的存在障碍分别证明。
+  - **证据** [RG1–RG3 的验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)、[PR1–PR3 的代数、积分和显式例](../topics/dd2/potential_regularity.md#dd2-potential-regularity)、[C452 完整构造和精确最小势](../topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)、[PE1–PE4](../canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)、[C419](../../CLAIMS.md#c419)、[C452 身份](../../CLAIMS.md#c452)。
+  - **复核** 三席先各做四项实际数学自检，独立重建代数与尾极限、积分正则性/凹化、完整结构反例，再逐式复读 PR1–PR6、RG1–RG3、C452 身份和 E764、F148、地图与清单。核准零成本补边门、局部预算、后复合的充分范围、F3 原逆与普通逆区别；凹 C¹ 替代的四倍界仅属全窗。三个积分例和稠密不规则势均核完整图、原目标及零端；C452 的唯一完整真残差、交错尺度、两步终止、归一最小性、右极限/非减/BV 排除及无法补统一 δ 均逐式成立。固定图势未授全数据类，正尺度严格与零驻定分开，正初值尾极限和缩窗边界已明确。无未关闭致命异议，C452 升为 derived-checked。
+
 - [ ] `S05.06` 是否允许非幂次、对数修正、振荡模函数？
 - [ ] `S05.07` 是否可以弱化当前的可积性假设？
 - [ ] `S05.08` 是否存在具有有限长度、却不满足当前候选势函数判据的例子？
