@@ -31,6 +31,8 @@
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
 
+[C432 的真实优化约束](research/canonical/optimization_proximal_limits.md#opl-gauge-length)用全局极小近端的 Moreau 能量替代锚定缺陷预算，在同一真误差模下排除 C424 的 \(q>1/2\) 发散构形，并给逐壳驻留步数和跨步弦长限制。[C433 的同约化真实 DR](research/topics/dd2/splitting.md#dd2-dr-objective-shadow)在临界步长固定完整约化映射和曲率，给完整原图误差模及实际长度的充要判据。前者是普通 PPA 的极小化结构，后者是分裂算法的退化恢复，使用不同的能量和图。[正文选材的一手依据](research/LITERATURE.md#lit-dd2-selection-evidence)列明已知有限长、约化正则性及公开提出的非零 \(U\) 问题。
+
 [P2 覆盖与矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)给出近极小完整图值 lift 的必要量词、选定分支的反例以及原始—对偶块的 Schur 补可计算证书，并由 [C408](CLAIMS.md#c408) 登记其作用域。
 
 [P0 先行性审计](research/audit/DD2_P0_PRIOR_ART_2026-11-21.md)逐式核对 Lauster–Luke 2021、Alcantara v1 和 Li–Mordukhovich 2012，明确 DD2 与既有比较曲线、全锚半单调 PPA 及 Hölder PPA 的重合和量词差异；它把公开优先性保留为未决，不把代数重合写成首创。[P2/P3 扩张审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-verification)补充一般势扰动、物理二点恢复和有通信假设的分布式固定步证书，由 [C410](CLAIMS.md#c410)、[C412](CLAIMS.md#c412) 登记。[C411](CLAIMS.md#c411) 给出低 \(L\) 固定图逐步达到，[C413](CLAIMS.md#c413) 排除有限维闭凸目标上的严格步长支收敛锚与可和链。
@@ -583,7 +585,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/artificial_kl_energy_bridge.md](research/canonical/artificial_kl_energy_bridge.md) | C262人工非可定义KL能量的完整ABS正面桥；禁止把C261的CR障碍扩大为整个ABS排除。 |
 | [research/canonical/orthogonal_feedback_critical_gate.md](research/canonical/orthogonal_feedback_critical_gate.md) | C263全n真实phase零吸收锐门及全部临界纤维，局部系数不能替代远门。 |
 | [research/canonical/generic_power_kl_bridge.md](research/canonical/generic_power_kl_bridge.md) | C266任意闭S、正确物理转接和qγ≥1的完整幂几何可编译共同KL–ABS；自然距离幂子区另给正面，不授全理论排除。 |
-| [research/canonical/optimization_proximal_limits.md](research/canonical/optimization_proximal_limits.md) | C267完整global-min prox解点calm阻断、Bregman零纤维及metric边界；C268自然非单射核的闭式完整纤维修正结构例。 |
+| [research/canonical/optimization_proximal_limits.md](research/canonical/optimization_proximal_limits.md) | C267 全局极小近端解点界和 Bregman 零纤维，C268 非单射核见证。比较通常 PPA 的抽象与优化轨道时读 C431 的真误差模、长度势及跨步限制。 |
 | [research/canonical/vector_fenchel_classical.md](research/canonical/vector_fenchel_classical.md) | C269原生向量FY完整驻点，全λ/allinput/allroot经典正面与物理有限长度；原f-H1失败不产生整体理论空白。 |
 | [research/canonical/gram_regression_gppa.md](research/canonical/gram_regression_gppa.md) | C270自然欠定矩阵回归、退化Gram核、共同物理证书、显式极限与锐1/3读出；经典正面并列，prox锐3/7未闭。 |
 | [最新应用筛选](发表成果整理/应用优势筛选_结构边界.md)、[规范接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md) | 本轮四轴评价、全关系攻击、经典正面淘汰、原例关键角色及具体改稿清单；强应用主例仍未找到。 |

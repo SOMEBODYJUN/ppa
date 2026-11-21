@@ -42,7 +42,8 @@ for heading in headings:
 assert positions == sorted(positions)
 
 claims = (repo / "CLAIMS.md").read_text(encoding="utf-8")
-for claim in range(400, 407):
+claim_ids = [*range(400, 407), 424, 430, 432, 433]
+for claim in claim_ids:
     assert f'id="c{claim}"' in claims
     assert f"C{claim}" in body
 
@@ -66,4 +67,4 @@ for q in (Fraction(3, 5), Fraction(2, 3), Fraction(3, 4)):
 
 assert Fraction(26, 101) < Fraction(12, 37)
 print(f"DD2 verified: 5 chapters, 280 editorial rows, 6 indexed source sections, "
-      f"7 claim records, {len(links)} local links, 7 exact algebra checks.")
+      f"{len(claim_ids)} claim records, {len(links)} local links, 7 exact algebra checks.")

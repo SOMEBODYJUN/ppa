@@ -3756,3 +3756,21 @@
 - **Conclusion / Scope**：不存在任何关系 \(F\)，使 \(S\subseteq\operatorname{zer}F\)、\(J_F(x)\ne\varnothing\) 对每个 \(\|x\|\le1\)，且其每条该窗完整边均满足上述锚界及原真残差误差界。这一否定不要求 \(F\) 图闭、原残差下确界达到或精确零集。相反，存在一个固定闭图 \(F\)，其完整近端全域非空、精确零集为 \(S\)，并有一个全域非空允许子关系在该窗的每条边均满足同一组前件及目标。
 - **Definitions / Dependencies / Evidence**：C414 重根、C417 真残差及完整前像量词。高段每条边强制 \(a=s=t/2\)，低段正输出强制 \(\rho=1/8,s\ge1/8\)，给 \(a^2\le t^2-1/64\le3t^2/4\)。若完整窗存在，单位输入输出的 \(a=s=1/2,\rho=1/8\) 产生 \(\|v\|<1/6\) 的真实图值，前像 \(w=y+v\) 落在 \(1/3<\|w\|<2/3\) 的重根窗，却被迫 \(\|v\|=\|w\|/2>1/6\)。允许图正面用环域 \(Q=\{1/8\le\|y\|\le1/2\}\) 的两组前像 \(2y\) 与 \((1+1/(8\|y\|))y\) 加投影底图，再选高段 \(x/2\)、其余零。[完整证明及全部前像](research/topics/dd2/reverse_compensation.md#dd2-compensation-compatibility-obstruction)。
 - **Counterevidence / Objections / Related Files**：不否定 C430 的单边补偿、完整窗的充分方向或 C426 的非正完整实现。否定的是从逐尺度非空到同一完整图可满足前件的推断。正面允许子关系不被声称闭图；闭的是完整 \(J,F\)。RC13 另给完整类非空而自由必要性失效，二者作用不同。量词分类及严格上确界未达例见 [S02.08](research/topics/dd2/reverse_compensation.md#dd2-compensation-necessity)，失败机制见 [F152](FAILED_ROUTES.md#f152)。未作公开新颖性认定。
+
+<a id="c432"></a>
+## C432-v1 · 真实全局极小近端的误差模长度势与驻留界
+
+- **Status**：`derived-checked`。任取全局极小输出、留域、零能量和跨步比较经独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 \(f\) proper lsc，有非空全局极小集 \(S\)，固定 \(\lambda>0\)，每步任取全局极小近端。若输出真界 \(d(y,S)\le\psi(d(0,\partial f(y)))\) 在某个 \(p\in S\) 邻域内的次微分定义域上成立，\(\psi\) 连续非减且 \(\psi(0)=0\)，令 \(\chi=(I+\psi(\cdot/\lambda))^{-1}\)。当 \(I_\chi(t)=\int_0^t u/\chi(u)\,du\) 在零处可积，充分接近 \(p\) 的每个初值、每条轨道均留域、有限长，且收敛于 \(S\)。真误差界有效的每段尾长至多 \(2I_\chi(d(x_k,S))\)。
+- **Conclusion / Scope**：不要求可积时，起于距离 \(t>0\)、前 \(N\) 个输入留在距离至少 \(t/2\) 且对应输出均满足真误差界，仍有 \(N\chi(t/2)^2\le t^2\)。无误差界时，全局极小近端仍满足 \(\|x_j-x_k\|^2\ge\sum_{i=k}^{j-1}\|x_{i+1}-x_i\|^2\)。
+- **Dependencies / Evidence / Related Files**：C267 的全局极小点比较、C419 的步长下界。以 \(E=2\lambda(e_\lambda f-f_*)\) 有 \(s^2\le E(x)\le t^2\)、\(E(x)-E(y)\ge s^2\)，故 \(2I_\chi(\sqrt E)\) 支付实际步长。[证明、留域和跨尺度对照](research/canonical/optimization_proximal_limits.md#opl-gauge-length)。
+- **Counterevidence / Objections**：条件不转授给任意次微分包含选根、局部极小点目标或变步包络。C424 在 \(q\in(1/2,1)\) 的发散和长驻留旋转轨道不能由该真实优化类实现。这里只给可积的充分性。\(q\le1/2\) 的真实优化边界和公开先行性另查。
+
+<a id="c433"></a>
+## C433-v1 · 同一临界 DR 完整约化隐藏原图正则与弧长
+
+- **Status**：`derived-checked`。实际全局近端、完整约化真残差、原始–对偶变量和长度必要性独立复核。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定标量临界 \(L=\gamma=\tau=\alpha=1\) 和 \(0<|z_0|<1\)。对任意连续非减 \(\omega:[0,\infty)\to[0,1]\)、\(\omega(0)=0\)，存在均有下界的 \(C^{1,1}\) 实函数 \(f,g\)，和严格凸强制且唯一最小点为零，分量完整全局极小近端均单值。所有这些分解有同一个完整 DR 映射 \(R(z)=\tfrac12 z-\operatorname{clip}(z,-1,1)\)，全域收缩因子 \(1/2\)，且 \(z_k=(-1/2)^kz_0\)。两个约化真残差和全部约化轨道因此固定。
+- **Conclusion / Scope**：实际原始–对偶路径有限长当且仅当 \(\int_0^{|z_0|}\omega(r)\,dr/r<\infty\)。完整原图真误差模为 \(r+\omega(r)\)，以乘法常数和自变量缩放为等价。可取两个分解同有精确弱凸模 \(1\) 与强凸模 \(1\)，一条路径有限长，一条无限长且原图任何正 Hölder 指数误差界都失效。两条路径均收敛到真唯一解。
+- **Dependencies / Evidence / Related Files**：C405 临界 CP／DR 坐标及 C425 同约化比较问题。两分量反射复合固定，完整影子为 \((P_f(z),P_f(z)-R(z))\)。真实目标由完整近端的逆函数积分，原图误差模的上界对全部附近原图点成立，下界尺度由全部小输入的实际影子给出。[构造与验算](research/topics/dd2/splitting.md#dd2-dr-objective-shadow)。
+- **Counterevidence / Objections**：临界慢例违反一点 Lipschitz 恢复。若首分量近端在访问输入上存在统一 Lipschitz 界，则约化有限长传到两个实际 DR 近端变量。故此例不反驳严格步长或带 Lipschitz 恢复的旧定理。未覆盖一般非分离 CP，也未作公开优先性结论。

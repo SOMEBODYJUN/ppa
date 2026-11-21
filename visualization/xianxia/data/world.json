@@ -10925,6 +10925,28 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-REAL-DR-SHADOW-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-REAL-PROX-GAUGE-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13879,6 +13901,18 @@
     "E741": {
       "x": 769.08,
       "y": 5680.09
+    },
+    "E742": {
+      "x": 645.21,
+      "y": 5289.01
+    },
+    "E743": {
+      "x": 860.36,
+      "y": 5509.1
+    },
+    "E744": {
+      "x": 1003.28,
+      "y": 5558.02
     }
   },
   "bounds": {

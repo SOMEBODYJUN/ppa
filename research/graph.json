@@ -5430,6 +5430,18 @@
       "label": "C431 逐尺度达标与完整整窗兼容的严格分离",
       "file": "topics/dd2/reverse_compensation.md#dd2-compensation-compatibility-obstruction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-REAL-PROX-GAUGE-LENGTH",
+      "label": "C432 全局极小近端的真误差模长度势",
+      "file": "canonical/optimization_proximal_limits.md#opl-gauge-length",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-REAL-DR-SHADOW-LENGTH",
+      "label": "C433 同一真实 DR 约化下的完整原图正则性与弧长",
+      "file": "topics/dd2/splitting.md#dd2-dr-objective-shadow",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13927,6 +13939,40 @@
       "output": "DD2-REVERSE-RAW-COMPENSATION",
       "relation": "limits",
       "scope": "不反驳自由单边充要式或完整图充分方向；逐尺度非空与目标帽同时成立仍不能保证存在一个满足同数据前件的完整整窗算子。非正全窗完成及允许子关系分别保留。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E742",
+      "topic": "DD2 补偿的动态与原变量边界",
+      "inputs": [
+        "OPL-ARGMIN",
+        "DD2-RAW-GAUGE-LENGTH"
+      ],
+      "output": "DD2-REAL-PROX-GAUGE-LENGTH",
+      "relation": "conditional",
+      "scope": "有限维、固定步、以全局极小集为目标的真实 argmin 近端。连续非减真输出模的同一积分可积给所有选择的留域和长度，Moreau 能量另给驻留与跨步必要限制。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E743",
+      "topic": "DD2 补偿的动态与原变量边界",
+      "inputs": [
+        "DD2-REAL-PROX-GAUGE-LENGTH"
+      ],
+      "output": "DD2-VANISHING-BUDGET",
+      "relation": "limits",
+      "scope": "C424 的 q>1/2 发散轨道不能在相同输出真误差界下由以全局极小集为目标的真实 argmin 近端实现。抽象算子原量词保持。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E744",
+      "topic": "DD2 补偿的动态与原变量边界",
+      "inputs": [
+        "DD2-CP-DR"
+      ],
+      "output": "DD2-REAL-DR-SHADOW-LENGTH",
+      "relation": "conditional",
+      "scope": "L=I 标量临界步长。用单调反射的真实目标反演保持同一完整约化，按原图模的积分定出原始–对偶路径长度。独立于 C425 的旋转见证。",
       "status": "derived-checked"
     }
   ]

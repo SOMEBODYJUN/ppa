@@ -1131,6 +1131,9 @@
 | --- | --- | --- | --- |
 | E733 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-VANISHING-BUDGET · C424 次阶缺陷余量的长度充要门](canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget) | 固定 Hölder 真正则模、可比正余量与递增等号半径下的精确积分门，完整旋转实现发散侧。；**derived-checked** |
 | E734 | [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | conditional → [DD2-SAME-REDUCTION-PHASE · C425 同一 DR 约化下角变差与实际长度](topics/dd2/splitting.md#dd2-same-reduction-phase) | 固定完整约化映射和真残差，按反射角的不同分配精确控制原变量的实际长度。；**derived-checked** |
+| E742 | [OPL-ARGMIN · C267普通global-min完整prox解点calm](canonical/optimization_proximal_limits.md#opl-argmin) ∧ [DD2-RAW-GAUGE-LENGTH · C419 任意原真残差模的积分长度充分门](canonical/dd2_function_hypotheses.md#fh-general-length) | conditional → [DD2-REAL-PROX-GAUGE-LENGTH · C432 全局极小近端的真误差模长度势](canonical/optimization_proximal_limits.md#opl-gauge-length) | 有限维、固定步、以全局极小集为目标的真实 argmin 近端。连续非减真输出模的同一积分可积给所有选择的留域和长度，Moreau 能量另给驻留与跨步必要限制。；**derived-checked** |
+| E743 | [DD2-REAL-PROX-GAUGE-LENGTH · C432 全局极小近端的真误差模长度势](canonical/optimization_proximal_limits.md#opl-gauge-length) | limits → [DD2-VANISHING-BUDGET · C424 次阶缺陷余量的长度充要门](canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget) | C424 的 q>1/2 发散轨道不能在相同输出真误差界下由以全局极小集为目标的真实 argmin 近端实现。抽象算子原量词保持。；**derived-checked** |
+| E744 | [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | conditional → [DD2-REAL-DR-SHADOW-LENGTH · C433 同一真实 DR 约化下的完整原图正则性与弧长](topics/dd2/splitting.md#dd2-dr-objective-shadow) | L=I 标量临界步长。用单调反射的真实目标反演保持同一完整约化，按原图模的积分定出原始–对偶路径长度。独立于 C425 的旋转见证。；**derived-checked** |
 
 ## DD2 目标几何与量词
 

@@ -815,3 +815,18 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 | 同文 Theorem 5.1、§6，及 [Evens–Latafat–Patrinos](https://arxiv.org/abs/2312.06540) | 临界 CP／DR 的全图一点恢复。Evens 等通过分量构造斜弱 Minty 模，Alcantara §6 提出保留非零 \(U\) 的分量计算。 | C405 的完成平方公式、实际 DD2 分量条件及两个慢收敛例各有核对范围。最优位置／图值模及变步长非分离模型仍待查。 |
 | [Li–Mordukhovich 2012](https://web.maths.unsw.edu.au/~gyli/papers/lm-subreg12final.pdf)，Theorem 7.3(i)；[Wang–Li–Ng 2023](https://doi.org/10.1137/22M152147X) 摘要 | 固定步极大单调 Hölder PPA 的距离率，以及极大单调非精确 Hölder PPA 的定量结果。 | C401、C406 的比较重点为负缺陷的实际吸收、同一图上的真实路径长度与误差边界。2023 年稿的精确误差类与长度需读全文。 |
 | [P0 逐式先行性审查](audit/DD2_P0_PRIOR_ART_2026-11-21.md)（固定基线 `d6ecad7`） | 实读 Lauster–Luke 2021 式 (18)–(19)、Theorem 16(b)、Lemma 17、Corollary 19，Alcantara Proposition 3.4/Remark 3.5，及 Li–Mordukhovich 2012 Theorems 7.2–7.3。 | 逐项记录输入/输出残差、全锚/最近锚、固定/函数缺陷和有限长度量词。报告只给“本次实读版本未定位等价定理”的边界，不作全球首创认证。 |
+
+<a id="lit-dd2-selection-evidence"></a>
+## DD2 正文选材的一手依据与已知边界
+
+下表只登记原文提出或已证的事项，以及本仓库作出的具体对照。任何未核穷的优先性均保留。
+
+| 一手来源 | 论文事实与当前 DD 对照 |
+| --- | --- |
+| [Luke–Tam，刊本 §1、定理 2、式 (28)–(30)、§5](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863) | 主定理结合局部次单调性与度量次正则性，给足够条件。DD 的比较对象是最近锚和输出真残差的精确反向补偿，见 C285、C430 和分支先行性审计。§5 明确提出以 \(-\|x\|_{3/2}\) 替换稀疏最小二乘中的 \(-\|x\|_2\)。C224–C227 的相关优化结果已有独立稿件，DD 本篇仍需交出独立的同模型轨道结论。 |
+| [Alcantara v1，命题 3.4、注 3.5、例 4.7、引理 4.8 与 4.14](https://arxiv.org/html/2611.20523v1) | 输入和剪切输出次正则性是独立可用的备选前件。输出界局部推出输入界，直接使用输出界的收缩因子可以更小。例 4.7 与引理 4.8 研究投影解识别及核逃逸。引理 4.14 给原算子与 Lipschitz 恢复向约化正则性传递的充分条件。C423 的非单调输入模严格联合增益尚限指定尺度，作为附录对照。 |
+| [Evens–Latafat–Patrinos，刊本例 5.4、§6，页 29–30](https://ftp.esat.kuleuven.be/pub/stadius/ida/reports/25-126.pdf#page=29) | 例 5.4 中直接分析所得图值模为 \((I/2)\oplus(I/2)\)，仅组合分量半单调证书得到 \((I/4)\oplus(I/4)\)。作者明确指出丢失线性、对称和分量的特殊代数恒等式。§6 问次微分结构能否给出更强的 CP 结果，另列不定预条件问题。[Banert–Upadhyaya–Giselsson 主定理](https://link.springer.com/article/10.1007/s11590-025-02250-0) 已给凸 CP 在 \(\theta=1\) 时 \(\tau\sigma\|L\|^2<4/3\) 的锐步长门。 |
+| [Alcantara v1，定理 5.1、§6](https://arxiv.org/html/2611.20523v1#S6) | §6 明确提出保留并使用位置模 \(U\)。定理 5.1 在全图半单调和谱余量下证明一点 Lipschitz 恢复。C405 (S10) 给保留的充分方向。实际非分离 CP 的最优模和匹配收益仍待查。C433 是不同的定量问题，显示没有 Lipschitz 恢复时，同一完整约化图丢失何种原图误差模以及弧长。 |
+| [Attouch–Bolte，定理 1 及后续讨论](https://bolte.perso.math.cnrs.fr/prox-loja.pdf)；[Daniilidis–David–Durand-Cartagena–Lemenant，命题 4.16 与定理 4.17](https://www.arisdaniilidis.at/SCC.pdf) | 前者在 Łojasiewicz 前件下给非凸近端有限长，明确把有限长视作对已有结果的强化。后者用自收缩性覆盖有界有限维凸近端轨道。C424 在一般非单调允许图上固定真误差模与缺陷主阶，研究剩余预算的长度充要性，不能将发散侧转授给凸优化。 |
+| [Wang–Li–Hu–Li–Li，定理 4.1 证明 (4.1)–(4.5)](https://arxiv.org/pdf/2308.08735)；[Khanh–Mordukhovich–Phat–Tran，v2 定理 3.12](https://arxiv.org/pdf/2307.15596v2) | 前者有幂次次微分误差界向 Moreau 包络误差界的传递，同一 \(t\le s+\psi(s/\lambda)\) 在其幂次设定下已出现。后者以包络 KL 为假定研究弱凸 inexact PPA。C432 对任意全局极小近端选择直接由真误差模计算弧长势及留域界，再与 C424 的抽象发散端和驻留时间对照。[Liao–Ding–Zheng，定理 3.1、4.2、4.3](https://arxiv.org/html/2312.16775v3) 已研究弱凸正则条件关系及凸／弱凸 PPA 的线性结论。 |
+| [Li–Pong，定理 1 的 (14)、定理 2 与注 2(i)](https://arxiv.org/pdf/1409.8444v5)；[Themelis–Patrinos，v4 定理 4.1–4.4](https://arxiv.org/html/1709.05747v4#S4) | Li–Pong 在所述小步长与 KL／半代数条件下给三个 DR 实际序列的有限长。Themelis–Patrinos 在单位松弛及第一项的负曲率模、梯度 Lipschitz 模均为 1 时的充分下降门要求 \(\gamma<1/2\)。C433 的两组见证都在 \(\gamma=1\) 的临界非 Lipschitz 近端区间，两个分量全局极小解仍唯一。此为本轮实读的对照范围。 |

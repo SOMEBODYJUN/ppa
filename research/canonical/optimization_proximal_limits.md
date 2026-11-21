@@ -147,3 +147,47 @@ $K(t)=t$、$\psi(K(t)/\lambda)=t/2=\kappa t$，$K(R)/\lambda=1/2\le\bar t$；全
 然而算法本身是一步 consistency solver，直接证明已经极短。它是**自然优化来源的结构例**，展示非单射核范围与真实物理桥，不能作为困难应用、性能优势或全部旧理论无法分析的主例。普通 argmin 阻断 OP2 与它不矛盾：此处是退化 Bregman 核，缺少物理 quadratic 控制。
 
 跨符号、零输入、非孤立 $S$、完整远纤维和参数 $\lambda$ 均已解析穷尽。$\lambda=2$ 是同窗证书的一组参数，不是算法收敛的临界门。有限 [Python 反算](../code/model_selection_limits/README.md)只检查算术；全称结论来自 FY1–6。
+
+<a id="opl-gauge-length"></a>
+## C432-v1 · 全局极小近端的误差模长度势
+
+设 \(f:\mathbb R^n\to(-\infty,+\infty]) proper lsc，有全局最小值 \(f_*\) 及非空全局极小集 \(S\)。固定 \(\lambda>0\)，允许每一步任取
+\[
+y\in\operatorname*{argmin}_z\bigl[f(z)+\|z-x\|^2/(2\lambda)\bigr].
+\]
+这一定义给出全域非空近端，因为 \(f\ge f_*\)，近端目标下半连续且强制。令 \(t=d(x,S),a=d(y,S),s=\|x-y\|\)，真残差为 \(r_f(y)=d(0,\partial f(y))\)，其中 \(\partial\) 是 limiting 次微分。设 \(\psi:[0,\infty)\to[0,\infty)\) 连续非减且 \(\psi(0)=0\)。对满足输出界 \(a\le\psi(r_f(y))\) 的边，定义
+\[
+\chi=(I+\psi(\cdot/\lambda))^{-1},\qquad I_\chi(t)=\int_0^t\frac{u}{\chi(u)}\,du .
+\]
+这里 \(I\) 是标量恒等映射。逆为全域连续严格增函数。若 \(I_\chi) 在零处可积，则在任意完整轨道的真输出界有效区间，起于 \(x_k\) 的有限前缀长度至多 \(2I_\chi(d(x_k,S))\)。如果真误差界在某 \(p\in S\) 的一个邻域内对 \(\operatorname{dom}\partial f\) 成立，则充分靠近 \(p\) 的**每个**初值和**每条**全局极小近端轨道均留域、有限长且收敛到 \(S\) 中一点。这里对 \(f\) 无凸性、对近端无单值或连续性要求。
+
+**证明。** 令
+\[
+E(x)=2\lambda\bigl(\min_z[f(z)+\|z-x\|^2/(2\lambda)]-f_*\bigr).
+\]
+在 \(x\) 的子问题比较 \(y\) 与最近极小点，在 \(y\) 的子问题用 \(y\) 自身作候选，得到
+\[
+0\le s^2\le E(x)\le t^2,\qquad E(y)\le2\lambda(f(y)-f_*),\qquad E(x)-E(y)\ge s^2.
+\tag{OPL1}
+\]
+极小值不等式还给 \(f(z)-f(y)\ge\langle (x-y)/\lambda,z-y\rangle-\|z-y\|^2/(2\lambda)\)，故该实际步方向属于 Fréchet 次微分，也属于 \(\partial f(y)\)。由三角不等式和真输出界，\(t\le s+a\le s+\psi(s/\lambda)\)，从而 \(s\ge\chi(t)\)。令 \(\Theta(v)=2I_\chi(\sqrt v)=\int_0^v [\chi(\sqrt u)]^{-1}\,du\)。若 \(E(x)>0\)，则
+\[
+\Theta(E(x))-\Theta(E(y))
+\ge \frac{E(x)-E(y)}{\chi(\sqrt{E(x)})}
+\ge \frac{s^2}{\chi(t)}\ge s.
+\]
+若 \(E(x)=0\)，(OPL1) 给 \(s=0\)，故 \(y=x\) 且 \(f(x)=f_*\)，于是 \(t=0\)。求和即得前缀及实际尾长。若真误差界在 \(B_R(p)\) 内成立，取初值满足 \(\|x_0-p\|+2I_\chi(d(x_0,S))<R/2\)。处于 \(B_{R/2}(p)\) 的输入全部近端输出都因 \(s\le t\) 落入 \(B_R(p)\)，可先使用误差界，再用累计长度把下一输入带回 \(B_{R/2}(p)\)。归纳后，有限总长度给极限，\(s_k\to0\) 及 \(t_k\le s_k+\psi(s_k/\lambda)\) 给 \(t_k\to0\)。由 \(S\) 闭，极限属于 \(S\)。证毕。
+
+**与 DD2 临界缺陷的对照。** 若 \(\psi(r)=Kr^q\)、\(K>0\)、\(1/2<q\le1\)，则 \(\chi(t)\asymp t^{1/q}\)，尾长为 \(O(t_k^{2-1/q})\)。[C424](dd2_power_defect_finite_length.md#dd2-vanishing-budget) 在 \(q=1/m\in(1/2,1)\) 有同一输出误差界、缺陷主项相同但由正余量 \(w\) 区分的无限长见证。以上证明排除这些发散轨道由一个真实目标函数的全局极小近端、以其全局极小集为目标的实现。
+
+还有一个无需积分的逐壳限制。若从距离 \(t>0\) 出发，前 \(N\) 个输入距离都至少为 \(t/2\)，并且对应的输出真误差界均有效，则由 (OPL1) 有 \(N\chi(t/2)^2\le t^2\)。C424 的等号旋转满足 \(H(t_k)-H(t_{k+1})=w(t_k)\)，\(H(u)=u^2+u^{2m}\)。在首次降到 \(t/2\) 以前，余量可比性使 \(t_k-t_{k+1}\le 2Cw(t)/t\)，含离壳的一步。因此其留在壳内的步数至少为 \(t^2/(4Cw(t))\)。当 \(w(t)=o(t^{2m})\) 时，小尺度上的这条最坏链也超出同正则性下的真实优化预算，即使固定旋转轨道本身有限长。
+
+真实优化还约束同一轨道上所有相隔的点。用任意未来的 \(x_j\) 比较第 \(k\) 步的近端全局极小值，再把 \(f(x_i)-f(x_{i+1})\ge s_i^2/(2\lambda)\) 从 \(i=k+1\) 加到 \(j-1\)，得到
+\[
+\|x_j-x_k\|^2\ge s_k^2+2\lambda(f(x_{k+1})-f(x_j))
+\ge \sum_{i=k}^{j-1}s_i^2\qquad(j>k).
+\tag{OPL2}
+\]
+该跨步必要条件适用于首输入不在 \(\operatorname{dom} f\) 的情况，也无须输出误差界。
+
+**范围。** 这是实际弧长和同尺度驻留时间的界。它未给 \(q\le1/2\) 的逆向判据，也未改变任意图的 DD 锐值。比较点必须是全局极小点，子问题必须达到全局最小值，步长固定以共用同一个 \(E\)。[凸自收缩与 KL 基线](../LITERATURE.md#lit-dd2-selection-evidence) 给出相邻的公开结果。
