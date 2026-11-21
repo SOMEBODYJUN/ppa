@@ -1276,6 +1276,12 @@
 | --- | --- | --- | --- |
 | E766 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-RAW-GAUGE-LENGTH · C419 任意原真残差模的积分长度充分门](canonical/dd2_function_hypotheses.md#fh-general-length) ∧ [DD2-RAW-GENERALIZED-INVERSE · C429 原残差位移下界的前缀广义逆与正则性](canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse) | conditional → [DD2-IRREGULAR-ZERO-DEFECT · C454 任意原误差模零缺陷完整类长度充要门](topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length) | C454-v1 固定λ,R>0、含零原域Dψ、任意有限非负原ψ（无需可测/单调/连续），准确bψ=inf原rho max(λrho,t−ψrho)>0于(0,R]，Ib=∫₀ᴿt/bψ。Phi=0,U=Vψ=H的全部E0对象、同一目标和允许关系、完整真残差及全距离窗覆盖，空间含R²且不另删二维完整闭图精确S0全J对象；Ib有限iff每对象任意t0≤R全部允许轨道有限长。充分侧2Ib；必要侧同一二维闭完整图用dyadic好壳原域近极小rho、有限垂直旋转步、径向桥和首点辅助前像保完整纤维，加P0覆盖，特殊边只积于(0,0)、exactzero0、零驻定。真实壳链点→0而长度≥Σ好壳7u²/[64b(2u)]发散；同图任意小壳首点坏选择，投影支仍可终止，不授每初值或每选择失败。A_b=√(t²−b²)为连续非减安全界非声称最优，预设φ≥A_b保坏见证；强筛选另核。固定Phi≤0、Phi0=0且2[-Phi]+≤(1−δ)b²的同一严格吸收类亦充要。原ψ仅在4^-j取√rho其余0的稀疏例，原平方积分为0却Ib∞，不能外推连续分支公式。F可空值J多选；不授正Phi、固定好图、一维单点、连续唯一近端、最小化结构或b退化零情形，不认定新颖。；**derived-checked** |
 
+## 完整 DD1 的非精确计算
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E767 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) ∧ [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) | conditional → [DD1-ROBUST-MARGIN · C455 DD1可观察停止余量、一步锐值与十步内层校准](topics/dd2/inexact.md#dd1-observable-margin) | C455-v1：有限维、同一F/lambda/闭S、全输入受检允许关系覆盖，所有边完整真界a<=ell rF及某最近输入锚积>=-sigma t²（含零）；L=ell/lambda,c=1+2sigma,b=(1+sqrt(1+4sigma))/2,h=max(1/b,sqrt((1+L²)/c)),m=L/h<kappa<1。真图输入误差E<=delta s,delta=h-L/kappa给全部接受输出a<=kappa d(x)、步<=b(1+delta)/(1-bdelta)d(x)，全部轨道绝对可和/点收敛；局部另有独立绝对帽与严格有限前缀。二维自由闭目标完整图类一步系数准确，非轨道必要性。具体非单调线性模型Richardson内层十次更新/十一次F评价；变lambda公式与一般零缺陷至多25%预算比较有明确前件。通用消元已见UI4-6，线性零缺陷与模型由C283覆盖；不认证新颖、自然应用或总成本优势。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

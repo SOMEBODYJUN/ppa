@@ -1,0 +1,155 @@
+{
+  "claim": "C455-v1",
+  "python": "3.12.14",
+  "decimal_precision": 80,
+  "tolerance": "1E-65",
+  "seed": null,
+  "randomness": "none",
+  "script_sha256": "af7ee5d021872b2c9d47bce0e826082197455cd159392ba57b6a0b31b9d9005f",
+  "scalar_grid_checks": 10605,
+  "low_branch_witnesses": 8,
+  "energy_branch_witnesses": 27,
+  "exact_q10": "90224199/1073741824",
+  "inner_results": [
+    {
+      "amplitude": "1E-80",
+      "direction": [
+        "1",
+        "0"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1E-80",
+      "direction": [
+        "0",
+        "1"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1E-80",
+      "direction": [
+        "1",
+        "-2"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346614"
+    },
+    {
+      "amplitude": "1",
+      "direction": [
+        "1",
+        "0"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1",
+      "direction": [
+        "0",
+        "1"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1",
+      "direction": [
+        "1",
+        "-2"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346614"
+    },
+    {
+      "amplitude": "1E+80",
+      "direction": [
+        "1",
+        "0"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1E+80",
+      "direction": [
+        "0",
+        "1"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346613"
+    },
+    {
+      "amplitude": "1E+80",
+      "direction": [
+        "1",
+        "-2"
+      ],
+      "updates": 10,
+      "evaluations": 11,
+      "outer_ratio": "0.81907142431334835456179008324822783743655422984049141829851396924052647653346614"
+    }
+  ],
+  "outer_example": {
+    "initial": [
+      "1",
+      "0"
+    ],
+    "target_norm": "1e-8",
+    "steps": 93,
+    "field_evaluations": 1023,
+    "terminal_norm": "8.6881044849770795910601074827782979892562872217937303023218067324340037279209869E-9",
+    "finite_prefix_length": "4.0935009522757914677689916210095539375007074621142949002184311212263434406509292"
+  },
+  "lambda_checks": [
+    {
+      "lambda": "0.25",
+      "exact_factor": "1.0242950394631677893940619981323411689925646080850574819904581980578079460900626",
+      "strict_contraction": false
+    },
+    {
+      "lambda": "0.4375",
+      "exact_factor": "1",
+      "strict_contraction": false
+    },
+    {
+      "lambda": "0.5",
+      "exact_factor": "0.98473192783466186187392528100194428466717625293640155486685764782217173367765728",
+      "strict_contraction": true
+    },
+    {
+      "lambda": "1",
+      "exact_factor": "0.8",
+      "strict_contraction": true
+    },
+    {
+      "lambda": "2",
+      "exact_factor": "0.49236596391733093093696264050097214233358812646820077743342882391108586683882864",
+      "strict_contraction": true
+    },
+    {
+      "lambda": "4",
+      "exact_factor": "0.25607375986579194734851549953308529224814115202126437049761454951445198652251564",
+      "strict_contraction": true
+    },
+    {
+      "lambda": "8",
+      "exact_factor": "0.12751534261266765800150127215661521877960089541406137998504705272439502026619197",
+      "strict_contraction": true
+    }
+  ],
+  "zero_defect_budget_maximum_on_grid": "1.25",
+  "scope": "Finite arithmetic only; not a proof, complexity comparison, or novelty test."
+}

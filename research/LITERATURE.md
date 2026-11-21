@@ -845,3 +845,17 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 | [Li–Pong，定理 1 的 (14)、定理 2 与注 2(i)](https://arxiv.org/pdf/1409.8444v5)；[Themelis–Patrinos，v4 定理 4.1–4.4](https://arxiv.org/html/1709.05747v4#S4) | Li–Pong 在所述小步长与 KL／半代数条件下给三个 DR 实际序列的有限长。Themelis–Patrinos 在单位松弛及第一项的负曲率模、梯度 Lipschitz 模均为 1 时的充分下降门要求 \(\gamma<1/2\)。C433 的两组见证都在 \(\gamma=1\) 的临界非 Lipschitz 近端区间，两个分量全局极小解仍唯一。此为本轮实读的对照范围。 |
 | [Gribonval–Nikolova，非凸罚函数的近端刻画](https://doi.org/10.1007/s10851-020-00951-y)；[Taylor–Hendrickx–Glineur，定理 3.3、3.10、4.1](https://www.di.ens.fr/~ataylor/share/16m108104x.pdf) | 前者把非凸罚函数的一值近端选择刻画为某凸势的次梯度选择。后者给凸及光滑非凸函数的有限数据插值条件，并给凸 PPA 在指定步长和初始半径下的精确最坏函数值差。第 4 章要比较相同 DD 数据下真实完整窗的最坏距离下降。实现有限个取等边之后，完整真误差界、全部合法输出与零集身份仍有独立义务。 |
 | [Alcantara–Dao–Takeda，v1 §1.1.2、§3–4](https://arxiv.org/html/2608.16609v1)；[Gorbunov–Taylor–Horváth–Gidel，ICML 2023](https://proceedings.mlr.press/v202/gorbunov23a.html) | 前者给半单调仿射约束复合包含的通用求解框架，含多算子线性耦合的建模范围。后者在负共单调及若干锚定前件中给 PPA、外梯度和乐观梯度的复杂度与取紧见证。已有广类算法及锐率应作为 Q20–Q22 和其他分裂候选的基线。DD 的应用任务须定量解释实际同一步的曲率、真正则性与耦合，而普通收敛转写只作支撑。 |
+
+
+<a id="lit-dd1-robust-value"></a>
+## DD1 停止精度的本轮价值复核
+
+以下是 2026-11-21 实读原文后的范围记录，不是系统综述或优先权认证；本库 C455 的推导与文献事实分开。
+
+| 原始版本与准确位置 | Paper Fact | 对本轮结论的限制 |
+| --- | --- | --- |
+| Solodov–Svaiter 1999，[作者 PDF](https://pages.cs.wisc.edu/~solodov/solsva99Teps.pdf)，Algorithm 3.1，印刷 pp.331–332；其后旋转例 pp.332–334 | 最大单调扩大图、相对平方残差预算及校正更新 \(x^+=x-cv\) 共同组成算法；同一容差若换为纯更新 \(x^+=y\)，可在四分之一转算子上发散。 | 真实图残差停止已有先例；纯更新与该算法的合同有差别，但差别不能当作新颖性证明。 |
+| Buscaglia–Lotito–Parente–Solodov，[2025-08-08 作者稿](https://pages.cs.wisc.edu/~solodov/blps24VMprox.pdf)，§5，式 (5.1)–(5.4)、Theorem 5.1，PDF pp.17–18 | 对极大单调固定算子、受控 SPD 度量及可和相对输出误差 (5.2)，充分晚的每个此类序列可由其非对称 Algorithm 4.1 表示。 | 不能仅凭“无校正”排除所有混合/变度量表示；该定理也不直接给任意非单调最近锚或常系数纯更新结论。 |
+| Pethick–Mavrothalassitis–Cevher，ICLR 2025，[正式会议 PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/7f44f98e5e70dea605d0c5baca231c58-Paper-Conference.pdf)，§6.2 Theorem 6.1 及 Appendix D.1；§7 Assumption 7.1/Theorem 7.3 | 作者在弱 Minty、Lipschitz 与分裂条件下给自动内层精度、内层次数分析及误差界下的线性收敛；更新包含误差校正。 | 精度自动选择、有限内层和误差界本身均不是本轮新贡献。尚未证明 C455 与此完整算法类的严格包含或成本优势。 |
+
+**本库推导与 Interpretation。** C455 的 DD1 联合余量有独立证明，但 UI4–UI6 已提供其消元形式；C283 直接恢复其零缺陷线性公式和具体非单调模型的全部精度/参数区。对 C275 的较粗分离预算及 C406/I13 的部分严格系数改进不等于世界范围理论优势；真残差、最近/全锚、真实图/扩大图及实际更新都需保留。Wang–Li–Ng 2023 的全文逐条件比较未在本轮补齐，不能作排除判断。

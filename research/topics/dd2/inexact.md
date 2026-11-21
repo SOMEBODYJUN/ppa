@@ -1,5 +1,210 @@
 # DD2 的真实图输入扰动、扰动精度和 shadow
 
+本页新增的 [DD1 停止余量](#dd1-observable-margin)把完整 DD1 的两条几何约束同时用于误差预算，给全接受输出的有限长度、自由类一步锐值及一个具体内层算法。它严格改善只用反射步帽的 C275 和 (I13) 的某些充分系数；通用消元机制已见 UI4–UI6，线性零缺陷及下述线性模型已被 C283 覆盖。因此这不是新增的普遍收敛原理，也没有证明公开新颖性或实际应用优势。
+
+<a id="dd1-observable-margin"></a>
+## C455 · 完整 DD1 的可观察误差余量
+
+### 合同与结论
+
+固定有限维实 Hilbert 空间、原算子 \(F\)、\(\lambda,\ell>0\) 及非空闭 \(S\subseteq\operatorname{zer}F\)。令 \(d=d(\cdot,S)\)，固定受检允许关系 \(\mathcal J\subseteq J_{\lambda F}\)，先在全部输入上认证，并要求每个输入有允许精确根。对每条允许边 \(y\in\mathcal J(u)\)，记
+\[
+ t=d(u),\quad a=d(y),\quad s=\|u-y\|,\quad
+ r_F(y)=\inf_{v\in F(y)}\|v\|.
+\]
+假设其完整真误差界和某最近输入锚满足
+\[
+ a\le\ell r_F(y),\qquad
+ \exists p\in P_S(u):\quad
+ \langle u-y,y-p\rangle\ge-\sigma t^2,
+ \qquad \sigma\ge0.
+\tag{RM1}
+\]
+一般 DD1 的有符号 \(\Phi\) 只要满足 \(\Phi(t)\ge-\sigma t^2\)，即可使用这份副证书；没有把原函数改定义为二次函数。这里含零尺度，故受检零输入驻定。定义
+\[
+ L=\ell/\lambda,\quad c=1+2\sigma,\quad
+ b=\frac{1+\sqrt{1+4\sigma}}2,\quad
+ h=\max\left\{\frac1b,\sqrt{\frac{1+L^2}{c}}\right\},\quad m=L/h.
+\tag{RM2}
+\]
+要求完整 DD1 的严格门 \(m<1\)，等价于 \(\sigma<T(L)\)。在此下降区，DD1 原两项收缩因子的较小值正是 \(m\)；原第三个输出帽 \(b\ge1\) 不活动。选定希望非精确步保留的距离因子 \(m<\kappa<1\)，令
+\[
+ \boxed{\delta_\kappa=h-\frac L\kappa>0.}
+\tag{RM3}
+\]
+内层返回真实图对 \(w\in F(y)\)，计算
+\[
+ u=y+\lambda w,\quad e=u-x,\quad E=\|e\|,\quad s=\lambda\|w\|,
+ \qquad y\in\mathcal J(u).
+\]
+接受全部满足
+\[
+ \boxed{E\le\delta_\kappa s}
+\tag{RM4}
+\]
+的候选，并令实际更新为 \(x^+=y\)。运行时不查询 \(d(x)\)、\(d(y)\)、最近锚或精确近端解。图成员和允许关系仍须由内层报告认证，不能把任意近似向量当作真实图值。
+
+**定理。** 所有接受输出同时满足
+\[
+ d(y)\le\kappa d(x),\qquad
+ \|y-x\|\le C_\kappa d(x),\qquad
+ C_\kappa=\frac{b(1+\delta_\kappa)}{1-b\delta_\kappa}<\infty.
+\tag{RM5}
+\]
+全部精确允许种子均被接受；零输入仅接受自身。因此每条接受轨道均有
+\[
+ d(x^k)\le\kappa^k d(x^0),\qquad
+ \sum_{j\ge k}\|x^{j+1}-x^j\|
+ \le\frac{C_\kappa}{1-\kappa}d(x^k),
+\tag{RM6}
+\]
+并收敛到某个 \(S\) 中的点。这里完整 DD1 的 A+B、绝对可和和点收敛全部保留。
+
+### 证明与一步最优性的范围
+
+同锚平方展开及三角不等式给
+\[
+ a^2+s^2\le ct^2,\qquad s\le bt,\qquad a\le Ls.
+\tag{RM7}
+\]
+若 \(s>0\)，置 \(z=a/s\in[0,L]\)。于是
+\[
+ \frac ts\ge H(z):=\max\left\{\frac1b,\sqrt{\frac{1+z^2}{c}}\right\}.
+\]
+\(H\) 为非减且 \(1\)-Lipschitz。故 \(H(z)-z/\kappa\) 严格递减，并有
+\[
+ t-a/\kappa\ge s[H(z)-z/\kappa]
+ \ge s[h-L/\kappa]=\delta_\kappa s.
+\tag{RM8}
+\]
+由 \(d(x)\ge t-E\) 和 (RM4) 得第一条 (RM5)。又 \(b^2\le c\)，故 \(H(0)=1/b\)。上面的严格递减性及 \(L>0\) 给 \(\delta_\kappa<1/b\)。使用 \(s\le bt\le b[d(x)+E]\) 得
+\[
+ s\le\frac b{1-b\delta_\kappa}d(x),\qquad
+ \|y-x\|\le s+E\le(1+\delta_\kappa)s,
+\]
+即第二条 (RM5)。当 \(s=0\)，\(w=0,y\in\operatorname{zer}F\)，完整真界给 \(a=0\)；规则给 \(E=0,x=y\)，故同样成立。精确种子 \(E=0\) 通过规则。若 \(d(x)=0\)，步界强制 \(y=x\)。几何级数给 (RM6)，闭 \(S\) 和完备性识别极限。□
+
+**准确的一步范围。** 在维数至少二、允许自由闭目标的完整图类中，\(\delta_\kappa\) 是仅依据 \((L,\sigma,\kappa,s)\) 给统一规则 \(E\le\delta s\)、保证所有接受边 \(a\le\kappa d(x)\) 的最大系数。它不声称给定图的最优系数，也不声称所有额外向量信息均已利用，更不将一步锐性升级为全部轨道收敛阈值的必要性。
+
+证明可令 \(\lambda=s=1,\ell=L\)，并在二维取 \(u=0,y=e_1\)。若 \(h=1/b\)，活动条件给 \(L\le1-h\)，取
+\[
+ p=he_1,\quad q=(1+L)e_1,\quad S=\{p,q\}.
+\]
+则 \(d(u)=h,d(y)=L\)，且锚积为 \(-1+h=-\sigma h^2\)。若能量支活动，取
+\[
+ A=(h^2+1-L^2)/2,\quad
+ p=(A,\sqrt{h^2-A^2}),\quad S=\{p\}.
+\]
+由 \(h>L\)、\(h\ge1/b\)、\(h\le\sqrt{1+L^2}<1+L\) 得 \(|1-L|\le h\le1+L\)，所以根为实数，\(d(u)=h,d(y)=L\)，锚积恰为 \(-\sigma h^2\)。低支的条件来自 \(b^2-b=\sigma\)；高支的下三角界在 \(L\ge1\) 自动成立，在 \(L<1\) 则由高支条件等价的 \(L\ge1-1/b\) 给出。
+
+两种构形都令
+\[
+ J=P_S\cup\{(u,y)\},\qquad F=J^{-1}-I.
+\]
+它是完整闭图、全域近端非空、精确零集等于 \(S\) 的普通 PPA；所有投影边有锚积零，特殊边满足 (RM1)，正输出 \(y\) 的完整纤维仅有 \(w=-e_1\)，故真误差界取等。其余输出都在 \(S\)。对任何 \(0\le\eta<h\)，取实际 \(x=(\eta/h)p\)，则 \(E=\eta\) 且 \(d(x)=h-\eta\)：沿最近点线段，原最近点仍为最近点。\(\eta=\delta_\kappa=h-L/\kappa\) 时目标取等；任何更大系数都可选 \(\delta_\kappa<\eta<\min\{h,\delta\}\) 产生违反目标的真实接受边。一般 \(\lambda\) 将图值除以 \(\lambda\) 即可。此例的精确 \(J\) 轨道至多两步到达 \(S\) 并驻定，尤其不能把坏单步冒称坏无限轨道。
+
+### 与既有结果的同合同比较
+
+1. **C275 的反射步帽。** 同一锚上的恒等式
+   \(\|2y-u-p\|^2=t^2-4\langle u-y,y-p\rangle\)
+   说明二次副证书对应反射系数 \(\sqrt{1+4\sigma}\)。只保留步帽的逆尺度是 \(Q(s)=s/b\)，其目标预算是 \(s(1/b-L/\kappa)\)。RM3 同时保留能量，因而不小于该值，能量支严格活动时严格较大。C275 原文还有全锚、窗与兼容前件；这里比较的是其使用的标量预算，不将最近锚合同偷偷换成全锚。
+2. **C406 的 (I13)。** 从同一 DD1 数据能推出的最大全类平方耗散系数为
+   \[
+   \beta_*:=h^2-L^2>0.
+   \tag{RM9}
+   \]
+   因为 \((t^2-a^2)/s^2\ge\max\{1/b^2-z^2,(1-2\sigma z^2)/c\}\)，右侧各支都非增，\(z=L\) 时恰为 (RM9)，上述同一见证达到。即便把 (I13) 中的 \(\beta\) 取到该最优值，其系数仍须小于 \(\beta_* /(1+2L)\)。RM3 在 \(\kappa\uparrow1\) 时趋于
+   \[
+   \delta_1=h-L=\frac{\beta_*}{h+L}
+      >\frac{\beta_*}{1+2L},
+   \tag{RM10}
+   \]
+   因 \(h<1+L\)。这证明存在明确 \(\kappa<1\) 及误差系数，被 RM4 接受而被所有 \(\theta<1\) 的 (I13) 拒绝。它比较的是充分停止预算，不自动证明总计算成本减少。
+3. **旧通用接口与 C283。** [UI4–UI6](../../canonical/unified_ppa_inexact_interfaces.md)已给 \(M_\kappa=\inf_q[L_\xi(q)-q/\kappa]\) 的共同消元。RM3 是把 DD1 两条原几何约束代入此接口后的准确显式系数，不重新计为新原理。\(\sigma=0\) 的线性公式正是 C283 的 \(\rho=0\) 特例；下节的非单调线性模型也全部由 C283 覆盖。
+
+### 一个内层算法、十步上界与 \(\lambda\) 校准
+
+令 \(K_{90}(v_1,v_2)=(-v_2,v_1)\)，固定完整连续单值算子
+\[
+ F=-\frac7{32}I-\frac{5\sqrt{39}}{32}K_{90},\quad
+ \lambda=\ell=1,\quad S=\{0\}.
+\tag{RM11}
+\]
+其对称部分为负，故非单调。直接计算
+\[
+ F^*F=I,\quad (I+F)^*(I+F)=\frac{25}{16}I,
+ \quad J=(I+F)^{-1}=\frac45 R_\theta,\quad \cos\theta=5/8.
+\]
+所以完整真残差为 \(\|y\|\)，全域唯一精确根，\(a=s=4t/5\)，锚积为 \(-7t^2/50\)。取 \(\sigma=7/50\)，则 \(h=5/4,m=4/5\)。若要求 \(\kappa=9/10\)，RM4 为
+\[
+ \|y+F(y)-x\|\le\frac5{36}\|F(y)\|.
+\tag{RM12}
+\]
+对非零输入，从 \(y_0=x\) 开始运行确定的真实图内层
+\[
+ w_j=F(y_j),\quad e_j=y_j+w_j-x,\qquad
+ y_{j+1}=y_j-\tfrac12 e_j,
+\tag{RM13}
+\]
+每轮先检查 (RM12)。若 \(x=0\)，直接返回 \(y=w=0\)。令 \(y_*=Jx\)、\(q=\sqrt{39}/8<1\)，则内层误差矩阵
+\(M=I-(I+F)/2=(39/64)I+(5\sqrt{39}/64)K_{90}\)
+满足 \(M^*M=q^2I\)，并与 \(I+F\) 交换。因此
+\[
+ \|e_j\|=q^j\|x\|,\qquad
+ \|w_j\|=\|y_j\|\ge\tfrac45(1-q^j)\|x\|.
+\]
+只需 \(q^j\le1/10\) 即通过 (RM12)，而 \(q^{10}=(39/64)^5<1/10\)。故每个非解外步至多十次内层更新、十一次 \(F\) 评价，并保留 RM6 的有限长度与点收敛。若 \(\varepsilon>0,x^0\ne0\)，达到 \(d(x^N)\le\varepsilon\) 的充分外步数是
+\[
+ N=\max\left\{0,\left\lceil
+ \frac{\log(\|x^0\|/\varepsilon)}{\log(10/9)}
+ \right\rceil\right\},
+\]
+内层 \(F\) 评价总数至多 \(11N\)。此例 \(d(x)=\|x\|\) 本身可计算；一般目标的算法停止另需可观察精度证书，不将这里的外停机泛化。
+
+同一原 \(F\) 换 \(\lambda>0\) 时，令
+\[
+ D_\lambda^2=1-\frac{7\lambda}{16}+\lambda^2.
+\]
+完整 \(J_{\lambda F}\) 全域唯一，精确距离因子是 \(1/D_\lambda\)，严格收缩恰需 \(\lambda>7/16\)。对应
+\(L_\lambda=1/\lambda\)、\(\sigma_\lambda=7\lambda/(32D_\lambda^2)\)、\(h_\lambda=D_\lambda/\lambda\)。在 \(\lambda>7/16\) 且预设 \(1/D_\lambda<\kappa<1\) 时，上述规则成为
+\[
+ \|y+\lambda F(y)-x\|
+ \le(D_\lambda-1/\kappa)\|F(y)\|.
+\tag{RM14}
+\]
+这展示 \(\lambda\)、原图缺陷、收缩目标与内层精度的真实共同变化。它全部由同一模型的 C283（\(K=1,\rho=7/32\)）恢复，故不作为新参数区域或应用分离。十步内层成本只在 \(\lambda=1\) 证明，没有把加大 \(\lambda\) 自动解释为更低总成本。
+
+另取 \(\kappa=19/20\)，RM3 允许系数 \(15/76\)，而同数据 (I13) 的全部 \(\theta<1\) 只允许系数小于 \(3/16\)。这是实际候选的严格分离：任取 \(\|y\|=1\)，令 \(u=y+F(y),x=27u/32\)，则 \(s=1,E=25/128\)，实际距离比 \(a/d(x)=128/135<19/20\)。该候选被前者接受而被后者拒绝；相对于目标 \(\kappa\) 的证书与单纯有限长度的证书仍是不同成功指标。
+
+### 一般零缺陷模能改善多少
+
+若 \(\Phi=0\)，\(\psi\) 非减、\(\psi(0)=0\) 且所有需要的评价都在其认证域，记 \(f(s)=\psi(s/\lambda)\)。同一步几何直接给
+\[
+ t-a\ge g(s):=\sqrt{s^2+f(s)^2}-f(s)
+       =\frac{s^2}{\sqrt{s^2+f(s)^2}+f(s)}.
+\tag{RM15}
+\]
+因此 \(E\le\theta g(s)\)、\(0<\theta<1\) 蕴含原 (I9)，在其全部长度势与留域前件下得到原 (I10)–(I12)。这里仅改进可观察停止预算，不凭单步下降另造长度结论。
+
+在 \(s=0\) 时定义 \(g(0)=0\)。相较 \(\beta=1\) 的 (I13)，对 \(s>0\) 的预算放宽比为
+\[
+ \frac{g(s)}{s^2/(s+2f(s))}
+ =\frac{1+2z}{\sqrt{1+z^2}+z}\in[1,5/4],\quad z=f(s)/s\ge0.
+\tag{RM16}
+\]
+上界等价于 \((4z-3)^2\ge0\)，在 \(z=3/4\) 达到。对 \(\psi(r)=Kr^q,0<q<1\)，\(z\to\infty\) 时此比趋于一，故既不改变 C406 的锐幂 \(2-q\)，也不改变其首项临界系数。它是有限尺度的系数改进，不足以关闭 E02 的消失余量新边界。
+
+### 局部化、审查和未完成范围
+
+RM1 的全域版本负责使 RM4 的实际受扰输入可用。局部版本必须先认证每个候选 \(u=y+\lambda w\) 位于同一原工作窗，再调用 RM7；仅凭相对门循环推断 \(u\) 留域不成立。可设独立绝对帽 \(E\le\mu\)、\(d(x^0)+\mu\le R\)，并要求
+\[
+ \frac{C_\kappa}{1-\kappa}d(x^0)+\mu
+   <\operatorname{dist}(x^0,H\setminus U).
+\]
+有限前缀预算先保实际输入及将用的受扰输入在 \(U_R\)，才应用同一证明；仍须报告原允许关系及输出误差界的评价域，不能从精确种子自动认证其他候选。
+
+两位独立重构者与主代理分别核过归一化消元、零输入、\(b\delta_\kappa<1\)、两支完整闭图见证、旧 UI5/C283 的覆盖及 RM11–RM13 的十步证明。有限复算见 [程序与参数](../../code/dd1_robust_margin/README.md)，它不替代上述证明。对外价值裁决是：完整 DD1 确实能编译为可执行精度规则，但通用接口与重要子类已有；一般有符号函数、消失净余量下的新锐容错、具有优势分离的实际模型及同模型总成本改进仍未证明。E01–E03 只获得明确子类进展，均不整体勾选。
+
 ## 设定
 
 设 \(H\) 是 Hilbert 空间，\(S\subseteq\operatorname{zer}F\) 非空闭，\(d=d(\cdot,S)\)，并固定 \(\lambda>0\)、开工作域 \(U\) 与半径 \(R>0\)。允许关系 \(\mathcal J(u)\subseteq J_{\lambda F}(u)\) 在 \(U_R=\{u\in U:d(u)\le R\}\) 非空。DD2 的图条件对同一个 \(\mathcal J\) 逐步成立。对 \(y\in\mathcal J(u)\) 记

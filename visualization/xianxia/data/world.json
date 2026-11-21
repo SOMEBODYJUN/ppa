@@ -11178,6 +11178,17 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD1-ROBUST-MARGIN": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14232,6 +14243,10 @@
     "E766": {
       "x": 1023.62,
       "y": 5745.14
+    },
+    "E767": {
+      "x": 837.25,
+      "y": 5473.0
     }
   },
   "bounds": {
