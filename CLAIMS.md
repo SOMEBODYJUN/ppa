@@ -3597,7 +3597,7 @@
 
 - **Status**：`derived-checked`（自由二维两锚闭目标几何）；任务书把 D=[-Phi]_+ 对任意符号 Phi 称为精确最优的版本为 `invalid`。
 - **Exact Statement / Objects / Domain / Quantifiers**: 有限维欧氏空间维数至少 2，S 非空闭且输入最近点 p 属于 P_S(x) 存在；t=d(x,S)>0、s=norm(x-y)、a=d(y,S)。每条允许边满足 inner(x-y,y-p) >= Phi(t) 且 a <= eta(s)。令 E=t^2-2 Phi(t)。若 Phi(t)<=t^2/4，则可行步长区间为 I=[max(0,(t-sqrt(t^2-4 Phi(t)))/2),(t+sqrt(t^2-4 Phi(t)))/2]；否则 I 为空。限制 s 满足 (t-s)_+ <= min(eta(s), t+s, sqrt(E-s^2))。若 eta 连续，合法输出距离的精确自由几何上确界是这个紧可行集上的最大值。
-- **Proof / Conclusion**: 平方展开给 b^2 <= E-s^2，三角给 b >= abs(t-s)，从而 s^2-t s+Phi <= 0；输出三角和 gauge 给可行集。取 b=max(a,abs(t-s)) 的二维三角形，并在输出点背离输入的射线上放第二个锚，得到 p 仍为输入最近锚且输出距离恰为 a，故自由两锚类取等。
+- **Proof / Conclusion**: 平方展开给 b^2 <= E-s^2，三角给 b >= abs(t-s)，从而 s^2-t s+Phi <= 0；输出三角和 gauge 给可行集。取 b=max(a,abs(t-s)) 的二维三角形，并在输出点背离输入的射线上放第二个锚，得到 p 仍为输入最近锚且输出距离恰为 a，故自由两锚类取等。 [四点合同和 G1–G6 坐标复核](research/canonical/dd2_general_phi_exact.md#dd2-four-point-geometry) 显式对应两处最近性、全部四个三角和同锚能量，核零位移、零输出、共线和锚重合；本次补全同一命题的证明，不改变 C414-v1 的对象或结论。
 - **Boundary / Counterevidence**: Phi<=0 时 I=[0,(t+sqrt(t^2+4D))/2]，恢复旧 DD2 包络。若 Phi>0，正部 D=[-Phi]_+ 丢掉下根和能量余量；t=1、Phi=1/8、eta(s)=s 时精确值 sqrt(3/8)，正部式给 1/sqrt(2)，故不能称 sharp。
 - **Dependencies / Related Files**: [精确定理与证明](research/canonical/dd2_general_phi_exact.md)、[§1-§3 逐题审计](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[C400 负缺陷版本](research/topics/dd2/core.md#dd2-reverse)。固定凸或仿射目标、固定连续单值图、无限维最近点和轨道级反向必要性另需条件。
 

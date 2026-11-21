@@ -159,6 +159,8 @@ B_\Phi(t),
 
 **S02.02 的最优性裁决。** [范围表和 C422](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality) 分别证明自由 G、原真残差 R 及非正下界完整覆盖类的最优上确界，给出正下界完整窗、固定图、固定目标和一维的严格差距。原域非空时，前缀几何与原残差有相同最优上确界，但取等或完整窗前件可能改变。原两项候选的良定上确界即使在非单调原模下仍可通过残差坐标认证安全；不能将它的优化变量与物理位移的逐边代换混为一谈。
 
+**S02.03 的四点核验。** [C414 的 G1–G6](../canonical/dd2_general_phi_exact.md#dd2-four-point-geometry) 显列输入最近性、输出最近性、四个三角与同一锚能量；反向坐标同时完成全部欧氏距离，证明自由类的标量投影无遗漏。零位移、零输出、共线、锚重合及一维边界另列。平方能量、根区间、三角上端和下端不能在一般函数类中任删，四组精确伪数据分别指出各自的作用。
+
 ### 2.4–2.5 额外几何与非规则 \(\Phi\)
 
 **裁决：Proved for arbitrary closed-target geometry, Conditional for restricted classes。**
@@ -386,7 +388,7 @@ F=(J^{-1}-I)/\lambda,
 |---|---|---|
 | §2.1 | Proved | S02.01 / C421 给任意原真残差的一维上确界；有效连续模或非减点值合同给有限精度。紧最大值存在不等于无条件可计算，见 [计算正文](../canonical/dd2_function_hypotheses.md#fh-envelope-computation)。 |
 | §2.2 | Proved | S02.02 / C422 区分自由 G/R、非正全窗、正下界整窗及固定对象。前缀在原域非空时保持单边最优值，但可能改变取等和完整前件；见 [范围表](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality)。 |
-| §2.3 | Proved | (S13-6) 显式使用步长二次根、输入三角下界、输出三角上界、角度能量和输出模。 |
+| §2.3 | Proved | S02.03 已核 [四点 G1–G6](../canonical/dd2_general_phi_exact.md#dd2-four-point-geometry)：全部最近性和同锚能量给必要域，平面坐标补足所有边，含退化、维数及各约束作用的精确检查。 |
 | §2.4 | Conditional | 任意闭目标类没有遗漏的四点欧氏约束。固定凸性、曲率、法锥和连通性会增加约束，当前包络不声称这些子类最优。 |
 | §2.5 | Partial | 变号 \(\Phi\) 可用 \(E_\Phi\) 和下根区间。正部 \(D\) 对正 \(\Phi\) 不尖锐。不连续或振荡模可能破坏统一比较函数。 |
 | §2.6 | Conditional | 非严格逆可替换为 \(\chi_-(t)=\inf\{s:s+\eta(s)\ge t\}\)。可积势还需 \(\chi_-\) 正、可测、非降并满足积分条件。 |

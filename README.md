@@ -358,6 +358,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接。 |
+| [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 在同一闭零集和固定完整图上逐步实现低 \(L<1/2\) 的严格步长支，包含局部孤立零点与无限长度例、闭仿射单步障碍。C413 以相对法锥的统一正向排除一般有限维闭凸目标上的收敛锚链及可和链。研究动态尖锐性、最近锚切换或写主文范围时读取。 |
