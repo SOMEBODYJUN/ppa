@@ -170,9 +170,9 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 
 1. **状态：Conditional。** Fejér/quasi-Fejér 只有在全锚统一条件下成立，最近锚只给距离递推。证据：`../topics/dd2/relaxation.md` 全锚与最近锚分节。
 2. **状态：Conditional。** 实际有限长度由 C401 势或同一步严格耗散给出。证据：C401 与 `../topics/dd2/core.md#dd2-general-gauge`，需要严格余量和可积势。
-3. **状态：Proved conditionally。** 严格平方耗散给残差平方可和。证据：`../topics/dd2/relaxation.md` 的望远镜不等式，量词是整条留域轨道。
+3. **状态：Proved conditionally。** 带统一正耗散系数的严格平方耗散给残差平方可和。若系数只逐步为正，结论仍是带权平方和，不能自动改成无权平方和。证据：`../topics/dd2/relaxation.md` 的望远镜不等式，量词是整条留域轨道。
 4. **状态：Conditional。** 一般非线性残差可和需要积分势和误差债务。证据：C401、C406，未覆盖任意振荡 gauge。
-5. **状态：Proved conditionally。** best-iterate 由平方和给 \(O(N^{-1/2})\) 范数级率。证据：`../topics/dd2/relaxation.md` 的残差平方望远镜，需非空真残差和统一初始预算。
+5. **状态：Proved conditionally。** 在统一正耗散系数下，best-iterate 由平方和给 \(O(N^{-1/2})\) 范数级率。系数退化时只能给加权 best-iterate 结论。证据：`../topics/dd2/relaxation.md` 的残差平方望远镜，需非空真残差和统一初始预算。
 6. **状态：Conditional。** ergodic 率需要望远镜权重，通常为 \(O(1/N)\)。证据：`../topics/dd2/relaxation.md` 的加权向量平均，权重和及目标量词需另列。
 7. **状态：Conditional。** pointwise 率需幂次递推或一般比较函数。证据：C399、C401，单纯平方和不推出 pointwise 率。
 8. **状态：Conditional。** 复杂度界需要显式工作域、势和残差评价成本。证据：C401 的前缀预算，算法成本尚未统一定义。
