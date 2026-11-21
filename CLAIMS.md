@@ -4278,3 +4278,15 @@
 - **Exact rates / Endpoints**：q>1时µsp~h t^q且µsp>h t^q，Psp=t+2h t^q+o(t^q)，故原目标C_A t^q小窗可认证恰需C_A>h；距离、点、实际尾的最佳共同渐近Q阶q、系数h，同图达到。q1时µsp=κ_s t、κ_s=L/(1−L)，Psp=t/(1−2L)，原目标κt认证iffκ≥κ_s且κ<1；距离、点、实际尾均逐步Q因子≤κ_s且可同图取等。
 - **Dependencies / Evidence**：D01原近端及D04完整真残差；[SP1–SP11自足证明](research/topics/dd2/singleton_subcritical.md#singleton-subcritical-exact)以单点三角、小根隔离、移项支付和全域反号同胚直接推导。[C468/SN9–SN10](research/canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)是较宽正向先例，C427的线性单点校准是内部先例，均非本卡证明的隐藏前提。[BL5](research/canonical/dd2_power_defect_finite_length.md#dd2-power-subcritical-classification)负责与自由次临界失败对照。
 - **Counterevidence / Objections / Boundaries**：M0排除，反号取等图负锚积不满足Φ=0；更强原signedΦ≥−D只继承正向，必要性重验。任意其他固定S不能使用s≤t+a；不授q<1或q1且L≥1/2。p/M可为松预算，不标作最佳实际缺陷指数。全部构造和恒等式是解析证据，不以计算替代证明。不认定公开新颖性；实际合版已独立终核，无未关闭实质异议。
+
+<a id="c474"></a>
+## C474-v1 · DD2有限长度与DD1统一收缩的完整算子严格分离
+
+- **Status**：`derived-checked`；三新席已做四自检、独立重构并逐读八处实际合版及最后精度补行，无未关闭实质异议。不认定新构造或公开新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers — 主族**：任意q∈(1/2,1)、K>0，m=1/q，H=R²、S={0}、Q直角旋转，固定全域F(0)=0、F(y)=K^(−1/q)||y||^(m−1)Qy。对每个有限固定λ>0，c=λK^(−1/q)、ν=2m−2、α=2−m，取c²R^ν≤1的正窗，U=Vψ=H、完整允许JλF；原Φ=0、ψ(ρ)=Kρ^q全域，先指定φλ(t)=t/(1+c²t^ν/4)。λ改变时重新认证φλ及R，不称原目标在所有λ保持。
+- **Complete graph / Definitions**：每个输入唯一a=µλ(t)满足a²+c²a^(2m)=t²，完整J由DS4矩阵穷尽；I+λF与J全域同胚，图闭、exactzeroS、零驻定，全部距离窗及中心位置球不变。原F单值使完整ρ=K^(−1/q)a^m=s/λ、Kρ^q=a，唯一锚内积0；µ是计算半径，不替换原φ。
+- **DD2 conclusion / Actual trajectories**：原数据对全部正尺度受检边认证µ<φ（零处两者0），原r,z在能量支Σ>0=−Φ/t²，BΦ=t；原F1–F3也在同窗全部通过。实际模型对任意初值、任意R'≥t₀有尾L_k≤C_(R')t_k^α，C_(R')=2(1+c²R'^ν)^(m/2)/(αc)，全部轨道点趋0、有限长、ρ→0。任意开零邻域可置不变闭中心球给局部全选择；不由此宣称任意其他目标的位置域自动不变。正初距不终止，t_k~[(νc²/2)k]^(−1/ν)，s_k~c[(νc²/2)k]^(−m/ν)，m/ν>1。
+- **DD1 failure / Strong quantifiers**：对同一个F、每个有限固定λ>0、每个κ∈(0,1)、任意包含0的输入/输出开邻域、正距离窗及正残差帽，存在真实完整边同时位于这些限制且a>κt。因a/t=(1+c²a^ν)^(−1/2)→1，a/ρ=K^(1/q)a^(1−m)→∞，任何有限线性真EB亦失败；重新选Φ或覆盖的允许选择不能救A。每个非零初值轨道也ratio→1、t_k^(1/k)→1，故既非Q也非R线性距/点误差。结论不涉及无界变步长或改算子。
+- **Negative-anchor calibration**：另保旧F₋(y)=−||y||y+||y||^(1/3)Qy（F₋0=0）、λ=K1、q3/4、R₋=2^(−14)。H₋(a)=a√[(1−a)²+a^(2/3)]全域严增满射，DS11穷尽完整唯一根；原Φ₋=−t³、ψ₋=ρ^(3/4)、预设φ₋=(a²+a^(8/3))⁻¹(t²+2t³)在原Σ能量支取等。实际真ρ=a^(4/3)√(1+a^(4/3))，ψ₋(ρ)>a于正输出，K1只为最小共同系数；锚−a³≥−t³。C399-v2的b=δ1/2、C12给全小轨有限长和尾≤12t_k^(2/3)，原F1–F3同过；实际a/t→1及a/ρ→∞给同λ1分离。负锚小窗预算不外推全域。
+- **Dependencies / Evidence**：D01/D04、C430原Σ、C400线性反演及C442零合同的[DD1原样映射](research/topics/dd2/dd1_recovery.md#dd1-dd2-assumption-map)、C399-v2用于负锚的显式尾；[DS1–DS6](research/topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation)自足核全部根、原Σ、实际支付、增量极限及排除量词。PL7是主图型的内部先例；C456-v1仍仅m≥2，未将其身份扩大为本有限长族。
+- **Counterevidence / Scope / Related Files**：所证严格扩张以同一原图/目标/步长/真残差/允许边和零/覆盖/位置合同匹配。DD1的σ_R<T(L)只保证可选共同κ而非任意外给φ；原signedΦ在正尺度及E0/R/G保留，若原Φ(0)<0而零边另驻定，进入主式另列Φ_main(0)=0证书。不是由一次线性证书失败猜DD1失败，不把有限长度当Q线性；不授所有旧RLEB或其他方法的类包含与优势，后续任务另验。原目标与计算µ、q指数与局部幂系数、完整和允许关系均分开；[S07.01答卷](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)已由三席实际终核签收。

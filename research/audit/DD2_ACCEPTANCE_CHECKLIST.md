@@ -470,7 +470,11 @@
 
 ## §7 DD2 是否真正扩大了可处理的算子类？
 
-- [ ] `S07.01` 是否存在 DD2 成立、DD1 不成立的算子？
+- [x] `S07.01` 是否存在 DD2 成立、DD1 不成立的算子？
+  - **裁决** Strict Extension
+  - **结论** 存在，而且DD2包括有限实际长度与点收敛。固定任意q∈(1/2,1)、K>0、H=R²、S0，取完整连续单值F(y)=K^(−1/q)||y||^(1/q−1)Qy、F0=0。对每个固定λ>0，先指定φλ=t/(1+c²t^(2/q−2)/4)、c=λK^(−1/q)，在c²R^(2/q−2)≤1用原Φ0、完整ψ=Kρ^q核原Σ；计算µ另解a²+c²a^(2/q)=t²且正尺度µ<φ（零处均0）。完整根唯一全覆盖，零/中心球不变；原F1–F3及实际同一步凹幂支付给全部轨道finiteL和点0。DD1不成立由任意小同窗实际a/t→1排所有κ<1，不仅是某充分门失败；a/ρ→∞另排全部有限线性真EB。换任意有限固定λ仍如此，每正轨亦非Q/R线性距/点率。旧负锚λ1,q3/4例补全域排根与R2^-14的预设目标/Σ/尾12t^(2/3)，正输出Hölder界严格、K1只为最小共同系数，旧取等误述已纠正。C456-v1的m≥2不变；不预断旧RLEB等其他类。
+  - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-dd1-operator-separation-acceptance)、[DS1–DS5预设目标/全部根/真轨及DD1排除](../topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation)、[DS6负锚校准](../topics/dd2/operator_separation.md#dd2-negative-anchor-calibration)、[同对象DD1到DD2映射](../topics/dd2/dd1_recovery.md#dd1-dd2-assumption-map)、[C474身份](../../CLAIMS.md#c474)、[原F1–F3长度合同](../topics/dd2/original_f_conditions.md#dd2-original-telescope)。
+  - **复核** 新三席先实做四自检并独立重构，随后逐读八处实际DS正文、canonical负锚桥、C474/E787、审计、README/FileMap、STATE与四栏。完整原纤维/全域根、预设φ与计算µ、原Σ及F1–F3、全实际轨道尾与非Q/R率、任意小共同窗及每个有限固定λ的DD1排除逐式核准；C442零副证书、存在共同κ的量词、正尺度/集合类型、负锚严格真模与最小共同系数的最后补行也复读通过。无未关闭实质异议，只签S07.01。
 - [ ] `S07.02` 是否存在 DD2 成立、旧完整 RLEB 不成立的算子？
 - [ ] `S07.03` 是否存在非单调算子，满足 DD2 但不满足经典单调性路线？
 - [ ] `S07.04` 是否存在只有 Hölder 误差界、没有线性度量次正则性的算子？

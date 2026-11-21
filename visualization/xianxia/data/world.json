@@ -11410,6 +11410,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-DD1-STRICT-OPERATOR-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14544,6 +14555,10 @@
     "E786": {
       "x": 2290.61,
       "y": 5558.02
+    },
+    "E787": {
+      "x": 1516.94,
+      "y": 5472.9
     }
   },
   "bounds": {

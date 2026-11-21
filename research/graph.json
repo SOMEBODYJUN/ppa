@@ -5688,6 +5688,12 @@
       "label": "C399-v2 显式凹幂真实尾与位置预算等号",
       "file": "canonical/dd2_power_defect_finite_length.md#dd2-power-tail-acceptance",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-DD1-STRICT-OPERATOR-SEPARATION",
+      "label": "C474 完整算子的DD2有限长与DD1统一收缩分离",
+      "file": "topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14719,6 +14725,22 @@
       "output": "DD2-POWER-TAIL-EQUALITY-BUDGET",
       "relation": "conditional",
       "scope": "C399-v2：有限维H、闭非空S⊆zerF、开U、λ,K>0、M≥0,p>0,1/2<q<1，R₀>0，U_(R₀)全输入允许𝒥覆盖、每边含首出输出的完整真ρ与某同一最近输入锚，原Φ≥−Mt^p含0、原幂ψ=Kρ^q全域。M0或p>2/q或p=2/q且2M<c²，c=λK^(−1/q)。m=1/q,α=2−m,ν=2m−2，选b∈(0,c),δ∈(0,1],0<R≤R₀独立于F/轨道，使(b/c)^q+bR^(m−1)≤1、2Mt^(p−2m)≤(1−δ)b²。C=2/(αδb),P=Ct^α,γ₀=δb²/2,η=δb³t^(3m−2)/4。正尺度实际边s≥bt^m、δs²≤t²−a²、a≤t−γ₀t^(1+ν)、s+P(a)+η(t)≤P(t)，零驻定。预先给φγ的0<γ<c²/2−M*（M*=M于正M临界，其余好支0）后选γ≤γ₀及小窗认证；其他原目标不改名。x⁰∈U_R且P(t0)≤dist(x0,Uc)给全部允许轨道留U_R、极限在S∩U，实际尾≤P(tk)、点≤尾、距离多项式率；含首边有限前缀先留域再覆盖，正初距共同余量η(t0)>0，不先假定无限合法轨。零初值/触零另处理；完整全选择仅当𝒥=J。TL1–TL3自足，不改C399-v1严格预算；FT12为内部机制先例。该≤不授任意势或其他同形C，J≡0在P=t或R^(1−α)t^α时等号首出界。C为明确充分常数，最佳首项/指数另C470，q范围外及坏缺陷另完整反例，不认定公开新颖性。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E787",
+      "topic": "DD2 相对DD1的完整实际模型严格扩张",
+      "inputs": [
+        "D01",
+        "D04",
+        "DD2-REVERSE-A",
+        "DD2-REVERSE-RAW-COMPENSATION",
+        "DD1-ZERO-SCALE-RECOVERY",
+        "DD2-POWER-TAIL-EQUALITY-BUDGET"
+      ],
+      "output": "DD2-DD1-STRICT-OPERATOR-SEPARATION",
+      "relation": "conditional",
+      "scope": "C474-v1：任意q∈(1/2,1),K>0，m=1/q,H=R²,S0，固定F=K^(−1/q)|y|^(m−1)Qy且F0=0。每个有限固定λ>0，c=λK^(−1/q),ν=2m−2,α=2−m，取正R且c²R^ν≤1，U=VψH，原Φ0/ψ=Kρ^q全域、先给φλ=t/(1+c²t^ν/4)。DS4穷尽全域完整唯一近端，F/J连续闭、exactzero0、真ρ=s/λ和EB等号、同锚0、全部距窗/中心球不变。计算µ解a²+c²a^(2m)=t²，正尺度µ<原φ（零均0）、能量支Σ>0；F1–F3同窗过。全部实际初值尾≤2(1+c²R'^ν)^(m/2)t_k^α/(αc)对每R'≥t0，故finiteL/点0；认证φ窗R不外推成任意R'。每固定λ每κ<1及任意小零输入/输出邻域、距窗/正残差帽均有真实a>κt，且任何有限线性真模失败；完整单值使覆盖选择不能绕开。每正轨t_k~[(νc²/2)k]^−1/ν、ratio与根率1，故距/点非Q/R线性。DD1映射同合同保真ρ/零/覆盖/位置及正尺度signedΦ；σ_R<T(L)保证可选共同κ而非任意外给φ，原Φ(0)<0的驻定情形进入主式另列Φ_main(0)=0证书，E0/R/G保原零值；得到严格逆失败，不授其他旧理论包含。校准旧λK1 q3/4 F₋=−a y+a^(1/3)Qy：H₋全域严增排所有根，R₋2^-14、Φ₋−t³、ψ₋ρ^.75、预设G⁻¹(t²+2t³)Σ取等；实际EB正边严格、K1最小共同而非逐点取等，C399-v2 bδ.5 C12给小窗尾，a/t→1排DD1。主族同F所有λ成立，但换λ需重选φ/窗；负锚只λ1且预算小窗。DS自足，PL7图型为先例，C456 m≥2身份不改；不声称公开新颖性或预验后项。",
       "status": "derived-checked"
     }
   ]
