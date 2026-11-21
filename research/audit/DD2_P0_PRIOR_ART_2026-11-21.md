@@ -76,7 +76,7 @@ C_{\rm en}(L,\nu)=L\sqrt{\frac{1+2\nu}{1+L^2}}.
 
 其中 \(\tau=(1-\bar\alpha)/\bar\alpha\)。
 
-定理 16(b) 的量词是：\((G,d)\) 完备 \(p\)-一致凸，\(D\subseteq G\)，\(T:D\to D\)，\(T(D)\) 在有界集上相对紧，\(S=\operatorname{Fix}T\cap D\ne\varnothing\)，并且 (T) 在每个 (y\in S) 上以同一个 \(\bar\alpha\) 和违背量 \(\varepsilon\) 点态 almost \(\alpha\)-firmly nonexpansive。若
+定理 16(b) 的量词是：\((G,d)\) 完备的 \(p\)-一致凸空间，\(D\subseteq G\)，\(T:D\to D\)，\(T(D)\) 在有界集上相对紧，\(S=\operatorname{Fix}T\cap D\ne\varnothing\)，并且 \(T\) 在每个 \(y\in S\) 上以同一个 \(\bar\alpha\) 和违背量 \(\varepsilon\) 点态 almost \(\alpha\)-firmly nonexpansive。若
 
 \[
 d(x,S)\le \mu(d(x,Tx))\qquad(\forall x\in D),
@@ -95,7 +95,7 @@ d(Tx,S)\le \theta(d(x,S))qquad(\forall x\in D).
 
 ### 2.2 Paper fact：有限长度和线性特例
 
-Lemma 17 在同一 (p)-一致凸、boundedly compact、自映射框架下，从 (LL25) 和点态 almost firm 不等式推出
+Lemma 17 在同一 \(p\)-一致凸、boundedly compact、自映射框架下，从 (LL25) 和点态 almost firm 不等式推出
 
 \[
 \|x^{k+1}-x^k\|
@@ -106,7 +106,7 @@ Lemma 17 在同一 (p)-一致凸、boundedly compact、自映射框架下，从 
 \tag{LL-step}
 \]
 
-由于 (LL18) 的迭代和可和，三角不等式给 Cauchy 性和有限总长度。这里 (S) 是整个固定点集，步残差是 (|x-Tx|)。
+由于 (LL18) 的迭代和可和，三角不等式给 Cauchy 性和有限总长度。这里 (S) 是整个固定点集，步残差是 \(\lvert x-Tx\rvert\)。
 
 Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要求
 
@@ -126,7 +126,7 @@ Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要
 
 ### 2.3 与 DD2 的严格边界
 
-**Project derivation 1.** 在 Hilbert 情形 (p=2)（保留文中的一致凸模常数 (c)），令 (y=Tx)、(p\in S)，则 LL 的点态 almost-firm 估计等价于
+**Project derivation 1.** 在 Hilbert 情形 \(p=2\)（保留文中的一致凸模常数 \(c\)），令 \(y=Tx\)、\(p\in S\)，则 LL 的点态 almost-firm 估计等价于
 
 \[
 \|y-p\|^2\le(1+\varepsilon)\|x-p\|^2-\tau\|x-y\|^2,
@@ -149,11 +149,11 @@ Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要
 \tag{LL-to-angle}
 \]
 
-因此只有在 \(\tau=1\)（特别是标准 firm 情形 \(\bar\alpha=1/2\)）时，LL 直接给 DD2 形式的固定函数缺陷 (D(t)=\varepsilon t^2/2)。当 \(\tau<1) 时，还需一个步长上界把 \((1-\tau)s^2/2\) 吸收进 (D(t))。当 \(\tau>1) 时可丢弃非负项得到同一上界。DD2 的最近锚量词和一般函数 (D(t)) 没有在 LL 中出现。
+因此只有在 \(\tau=1\)（特别是标准 firm 情形 \(\bar\alpha=1/2\)）时，LL 直接给 DD2 形式的固定函数缺陷 \(D(t)=\varepsilon t^2/2\)。当 \(\tau<1\) 时，还需一个步长上界把 \((1-\tau)s^2/2\) 吸收进 \(D(t)\)。当 \(\tau>1\) 时可丢弃非负项得到同一上界。DD2 的最近锚量词和一般函数 \(D(t)\) 没有在 LL 中出现。
 
-**Project derivation 2.** 反向方向也不成立。DD2 只对每条允许边提供一个最近输入锚，并只对实际输出使用真残差下界。它不提供 LL 所需的全部 (x\in D)、全部固定点锚 (y\in S)、单值自映射 (T:D\to D) 或相对紧性。DD2 的 (A(t)<t) 也没有 (LL18) 的迭代可和性。故 DD2 允许距离趋零而长度发散的例子，LL 的 Lemma 17 不适用。
+**Project derivation 2.** 反向方向也不成立。DD2 只对每条允许边提供一个最近输入锚，并只对实际输出使用真残差下界。它不提供 LL 所需的全部 \(x\in D\)、全部固定点锚 \(y\in S\)、单值自映射 \(T:D\to D\) 或相对紧性。DD2 的 \(A(t)<t\) 也没有 (LL18) 的迭代可和性。故 DD2 允许距离趋零而长度发散的例子，LL 的 Lemma 17 不适用。
 
-**Project derivation 3.** 若额外假设一个完整单值 (T=J_{\lambda F})、(S=\operatorname{Fix}T)、所有固定点的 (LL-energy)、全域 (LL24)、自映射留域和 (LL18)，则 LL25 是 DD2 的一个特殊距离递推。此时它只提供一个由 (mu) 反解的 (A=\theta)，不会给 C400 的反向缺陷充要条件，也不会给两支 (C_{\rm step})、(C_{\rm en}) 的几何达到性。
+**Project derivation 3.** 若额外假设一个完整单值 \(T=J_{\lambda F}\)、\(S=\operatorname{Fix}T\)、所有固定点的 (LL-energy)、全域 (LL24)、自映射留域和 (LL18)，则 LL25 是 DD2 的一个特殊距离递推。此时它只提供一个由 \(\mu\) 反解的 \(A=\theta\)，不会给 C400 的反向缺陷充要条件，也不会给两支 \(C_{\rm step}\)、\(C_{\rm en}\) 的几何达到性。
 
 ## 3. Alcantara 2026 Proposition 3.4 与 Remark 3.5
 
@@ -161,7 +161,7 @@ Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要
 
 ### 3.1 Paper fact：全锚半单调和两个误差界
 
-Proposition 3.4 取集合值 \(F:K\rightrightarrows K\)，解集 \(\operatorname{zer}F\ne\varnothing\)，相对 \((U,V))-半单调条件
+Proposition 3.4 取集合值 \(F:K\rightrightarrows K\)，解集 \(\operatorname{zer}F\ne\varnothing\)，相对 \((U,V)\)-半单调条件
 
 \[
 \langle q,z-w\rangle
@@ -169,14 +169,13 @@ Proposition 3.4 取集合值 \(F:K\rightrightarrows K\)，解集 \(\operatorname
 \tag{A-sem}
 \]
 
-对每个 \(w\in\operatorname{zer}F\) 和每个 \(q\in F(z)\) 成立，(U\succeq-\varepsilon I)、(V\succeq\eta I)。迭代是
+对每个 \(w\in\operatorname{zer}F\) 和每个 \(q\in F(z)\) 成立，\(U\succeq-\varepsilon I\)、\(V\succeq\eta I\)。迭代是
 
 \[
 z^{k+1}=z^k-\lambda_k q^k,qquad q^k\in F(z^k),
 \]
 
-并取方向系数 \(\beta_k\) 满足
-\(\langle q^k,Vq^k\rangle\ge\beta_k\|q^k\|^2)、(0<\lambda_k\le2\beta_k)。
+并取方向系数 \(\beta_k\) 满足 \(\langle q^k,Vq^k\rangle\ge\beta_k\|q^k\|^2\)、\(0<\lambda_k\le2\beta_k\)。
 
 其式 (10) 的余量为
 
@@ -188,7 +187,7 @@ z^{k+1}=z^k-\lambda_k q^k,qquad q^k\in F(z^k),
 \end{cases}
 \]
 
-并要求存在统一 \(\kappa>0) 使 \(\Delta_k\ge\kappa)。前件是全锚、全图值的量词。(G) 版本使用 (q\in G(z-q))，因此其误差界作用在输出 (z-q) 上。
+并要求存在统一 \(\kappa>0\) 使 \(\Delta_k\ge\kappa\)。前件是全锚、全图值的量词。(G) 版本使用 \(q\in G(z-q)\)，因此其误差界作用在输出 \(z-q\) 上。
 
 式 (11) 给出
 
@@ -216,13 +215,13 @@ d_{k+1}^2\le(1+2\lambda_k\varepsilon)d_k^2
 \tag{A14}
 \]
 
-Remark 3.5 对普通 PPA 令 (y=J_{t\mathcal A}z)、(q=z-y)、(F_0=I-J_{t\mathcal A})、(G=t\mathcal A)、迭代松弛参数 \(\lambda_k=\beta_k=1)。若 \(\mathcal A\) 的局部 submonotonicity 缺陷为 \(\nu\)，则 (F_0) 满足 (A11) 的 \(\varepsilon=\nu)。令
+Remark 3.5 对普通 PPA 令 \(y=J_{t\mathcal A}z\)、\(q=z-y\)、\(F_0=I-J_{t\mathcal A}\)、\(G=t\mathcal A\)，并取迭代松弛参数 \(\lambda_k=\beta_k=1\)。若 \(\mathcal A\) 的局部 submonotonicity 缺陷为 \(\nu\)，则 \(F_0\) 满足 (A11) 的 \(\varepsilon=\nu\)。令
 
 \[
 a=\chi_{\mathcal A}/t
 \]
 
-为 (G=t\mathcal A) 的输出误差界常数。Remark 3.5 明确给出
+为 \(G=t\mathcal A\) 的输出误差界常数。Remark 3.5 明确给出
 
 \[
 \rho_{\mathrm A}^2
@@ -291,7 +290,7 @@ d(y,S)\le(\ell/t)\|q\|=L\|q\|.
 1-2\nu L^2\ge\kappa>0,
 \]
 
-即 \(2\nu L^2<1\)，这是能量支的门。DD1 的低 (L) 步长支可以在能量门失效后仍给严格下降，属于额外几何优化，而非 Alcantara Proposition 3.4 的已陈述结论。
+即 \(2\nu L^2<1\)，这是能量支的门。DD1 的低 \(L\) 步长支可以在能量门失效后仍给严格下降，属于额外几何优化，而非 Alcantara Proposition 3.4 的已陈述结论。
 
 ### 3.3 量词差异
 
@@ -368,7 +367,7 @@ LM2012 的前件是极大单调完整图、全图真残差的局部 Hölder 次�
 
 ## 5. P0 结论及论文措辞
 
-1. **可直接承认的等价部分。** Lauster--Luke 的 (LL18)--(LL19)、Theorem 16(b)、Lemma 17 和 Corollary 19 已给出“固定点输入步残差误差界 + almost-firm 能量 + 可和比较曲线 → gauge 收敛和有限长度”的完整框架。Alcantara Proposition 3.4/Remark 3.5 已给出 DD1 两个平方估计所需的全锚半单调代数，并在普通 PPA 变量下逐式恢复 (C_{\rm step}) 和 (C_{\rm en}) 的两个因子。Li--Mordukhovich 2012 已给极大单调 Hölder PPA 的距离率，且 (q>1/2) 的有限长度可由其递推作 dyadic 推论。
+1. **可直接承认的等价部分。** Lauster--Luke 的 (LL18)--(LL19)、Theorem 16(b)、Lemma 17 和 Corollary 19 已给出“固定点输入步残差误差界 + almost-firm 能量 + 可和比较曲线 → gauge 收敛和有限长度”的完整框架。Alcantara Proposition 3.4/Remark 3.5 已给出 DD1 两个平方估计所需的全锚半单调代数，并在普通 PPA 变量下逐式恢复 \(C_{\rm step}\) 和 \(C_{\rm en}\) 的两个因子。Li--Mordukhovich 2012 已给极大单调 Hölder PPA 的距离率，且 (q>1/2) 的有限长度可由其递推作 dyadic 推论。
 
 2. **仍然保留的 DD2 差距。** 在本次实际读取的版本中，没有找到把 (F) 的最小值写成最近输入零锚量词下的反向缺陷充要条件，或给出低 (L) 步长支在同一完整闭图上的达到性。也没有找到把一般连续 (A(t)<t)（不要求 (LL18) 可和）与函数缺陷 (D(t)) 联立的全图定理。这个结论是“已核版本中未定位”，不是全球优先性认证。
 
