@@ -2506,6 +2506,7 @@
 - **Definitions / Dependencies / Evidence**：[一步联合包络及严格实例](research/canonical/rleb_sharp_linear_frontier.md#rsl-envelope)、[三支达到](research/canonical/rleb_sharp_linear_frontier.md#rsl-factor)、[完整反例与留域](research/canonical/rleb_sharp_linear_frontier.md#rsl-threshold)。用 C02-v3 的有限前缀证明控制留域，保留 C253 能量项并补几何可行与锚距半和界。后两项的最小值是候选 A 的线性上界。一般模包络在同一合同中给充分性。
 - **Counterevidence / Scope**：C253 作为充分条件仍有效。高 \(\eta\) 的必要性用允许多值、非孤立零集。二维旋转不能宣告固定一维锐性，最近锚反例也不能宣告全对或连续单值子类的同一最优门。
 - **External evidence / Novelty（2026-11-20）**：[DD1 六路先例核查](research/novelty/DD1_PRIOR_ART_2026-11-20.md) 用 \(L=\sqrt{1+4\sigma},\eta=1/\rho\) 给出 DD1 固定二次包络与本版本的对应。Alcantara arXiv:2611.20523v1 Remark 3.5 已明写根式能量分支；同文步长界及更早半单调 resolvent 常数可重建另一充分分支。完整分段锐门与本类临界反例未在本次所读外部来源定位，公开优先继续未决；内部数学状态和本版本量词不变。
+- **DD1 当前符号下的复核**：[D1S2–D1S8](research/topics/dd2/dd1_recovery.md#dd1-critical-full-operators)用反射系数 \(c_\sigma=\sqrt{1+4\sigma}\)、\(\eta=1/L_{\rm DD}\) 重构两个临界完整图，直接核锚积、全纤维、精确零集、全部覆盖与任意小不变窗。原反射参数 \(L\) 与当前 \(L_{\rm DD}=\ell/\lambda\) 不混用；这是 S03.06 的实际等号失败证据，维数和受限目标范围不变。
 
 <a id="c286"></a>
 ## C286-v1 · 固定核 GPPA 的物理局部指数与原值域条件桥
@@ -3494,6 +3495,7 @@
 - **S03.03 补证 / 两支机制**：[D1G1–D1G7](research/topics/dd2/dd1_recovery.md#dd1-two-branch-mechanisms)保留同一输入锚距 \(h\)，在 \(r_0\le r\le1,a=rt\) 的范围从单调的最小平方代价推出目标分界 \(a/L=t+a\)。取等时能量支 \(h=a\)，严格步长支 \(h=s-t>a\)；C426 的凸线段表明换锚不要求非凸。分别核目标比例、固定 \(L\) 改 \(\sigma\)、临界 \(r=1\) 的三种分界及端点，纠正“不支配”等同“不可用”的旧解释。取等几何在至少二维的自由目标类，固定原图的最优性和完整局部锐性不由解释文字新增。三席已复读实际 D1G1–D1G7；仅增加机制证据，不另立重复命题。
 - **S03.04 补证 / 全部最近点约束**：[D1N1–D1N6](research/topics/dd2/dd1_recovery.md#dd1-nearest-point-audit)在 \(t>0,L>0,r_0\le r\le1\) 的相应支内，逐式核教师稿临界原坐标和一般高度的六对距离、四组三角、交叉最近性及同锚能量。原外侧两点集不能直接凸化；内侧目标和二维固定射线另有对整个集合的投影证明。并列锚、直角和共线端点、正高度与零端、有限/线段的一维及射线的二维范围分别保留。目标扩大只由 D1N6 保距离，精确零集身份另核；这项三席复核不增加完整算子或动态的量词。
 - **S03.05 补证 / 半点连续与结构**：[D1C1–D1C5](research/topics/dd2/dd1_recovery.md#dd1-critical-half-continuity)给 \(T(1/2)=2\)、左右导数 \(-12,-8\)，并在 \(t>0,a=t\) 的临界构形中核两组消失余量。固定严格预算、固定严格目标及临界 \(r=1\) 分开；目标有效域包含 \(r=1/\sqrt5\) 的单侧端点。二维自由目标有内侧紧凸段/单点的连续代表及精确 Hausdorff 距离，原外侧标签不被强迫合并。三席复读了实际推导，这仅补说明分段函数及见证几何，不新增固定原图或动态连续性结论。
+- **S03.06 补证 / 严格门**：[D1S1–D1S11](research/topics/dd2/dd1_recovery.md#dd1-strict-critical-gate)核非严格临界只保证距离不增及双侧比例步长，固定严格目标的闭预算仍有效；每个 \(L\) 的完整旋转/闭图二周期排除放宽原类门。逐尺度严格、缩窗、距离/点/长度和固定图必要性分开；\(\operatorname{diag}(1,-3)\) 还显示各自准确的单项常数可在不同方向达到。此为既有 C400/C285 的边界与范围补证，不扩张所有受限类或新颖性结论。
 
 <a id="c401"></a>
 ## C401-v1 · 一般函数误差界的积分长度势
