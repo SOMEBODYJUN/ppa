@@ -61,8 +61,8 @@ A(t)=\begin{cases}0,&0\le t\le1,\\(1+t)/2,&1<t\le2.
 
 所有允许轨道都可穷尽为：非链初值一步投影后驻定；链初值有限次沿链再投影，或永远沿链。对任意合法初值 \(x^0\)，总长均不超过 \(|x^0|\)，所选图值和完整真残差均趋零，点列收敛到 0 或 1。沿 \(x^k=b_k\) 的指定选择特别有
 \[
-x^k\longrightarrow1\in\operatorname{zer}F\setminus S,quad
-t_k\longrightarrow1,quad s_k=\rho_k=2^{-k-1},quad
+x^k\longrightarrow1\in\operatorname{zer}F\setminus S,\quad
+t_k\longrightarrow1,\quad s_k=\rho_k=2^{-k-1},\quad
 \sum_{k\ge0}s_k=1.
 \tag{ID6}
 \]

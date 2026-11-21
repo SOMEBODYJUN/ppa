@@ -297,7 +297,12 @@
   - **证据** [S04.10 的 NF1–NF4：实际过程、原模和范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-rate-acceptance)、[C400 平方对数计步 NP1–NP3](../topics/dd2/nonpower_rates.md#dd2-stretched-exponential-target)、[C451 完整旋转/剪切及精确渐近 LG1–LG6](../topics/dd2/nonpower_rates.md#dd2-log-half-order)、[C420 零缺陷统一类合同](../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)、[C451 身份](../../CLAIMS.md#c451)、[F148 对数修正的可回收信息](../../FAILED_ROUTES.md#f148)。
   - **复核** 三席先完成四项数学自检，独立重建预设时标、对数原模/完整图与范围，再复读 NP1–NP3、LG1–LG6、NF1–NF4、身份卡、E763、清单和地图。核主 arccos 分支、完整逆和唯一纤维、尾和起点与积分夹界；两对数图的零输入、负高度、外侧冻结、最近锚及 \(\sigma=1,2\) 的距离/实步/点尾常数逐式相符。核原模反解、\(\chi\) 与势的零端、\(\beta=1\) 临界及非减复合的全初值界。两种 \(S\) 和统一类/固定图量词、无 Hölder 原图性质与函数比例分开；旧无条件包络句及汇总矩阵已修正。三席均无未解决的致命异议；C451 仅按新精确身份提升，旧 C400/C420 身份及文章开放问题保持。
 
-- [ ] `S04.IMPLICATIONS` 给出严格距离下降、距离趋零、点收敛和有限长度之间的精确蕴含关系，逐条给出所需附加条件或反例。
+- [x] `S04.IMPLICATIONS` 给出严格距离下降、距离趋零、点收敛和有限长度之间的精确蕴含关系，逐条给出所需附加条件或反例。
+  - **裁决** Proved
+  - **结论** 对固定参数的合法实际轨道，以范数点收敛到任意点为 \(\mathsf P\)，四性质间十二条非对角箭头仅有限长度 \(\mathsf L\Rightarrow\mathsf P\) 无条件成立；闭目标下 \(\mathsf P_S\iff\mathsf P\wedge\mathsf T\)。C444、C450、C447-A、C400 四个完整图否其余箭头，并保原图全选择量词；正文另逐项列出正向性质的合取边界。零吸收与驻定、每步与最终严格分别定义。C418 右侧门、实际受检极限边、全锚可和误差、原模零端、目标识别、实际步帽和同一步势分别给明确充分桥；几何距离没有步帽不保有限长，R 线性点率也不是有限长必要条件。全部选择的续接、位置留域与指定目标识别不由形式箭头代替。
+  - **证据** [IM1–IM7 的定义、十二箭头、证明及附加合同](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-dynamics-implications-acceptance)、[C444 等距正步后有限终止](../topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)、[C450 有限长的目标外极限](../topics/dd2/target_identification.md#dd2-target-identification-boundaries)、[C447-A 有界圆聚点](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[C400 调和旋转](../topics/dd2/core.md#dd2-trajectory)、[C448-A 几何距离与长步](../topics/dd2/asymptotic_regularity.md#dd2-distance-zero-without-regularity)、[C451 非幂点率有限长](../topics/dd2/nonpower_rates.md#dd2-log-half-order)。
+  - **复核** 三席先完成四项数学自检，分别独立重建逻辑、完整反例和强化证书，再复读实际最终 IM1–IM7、十二箭头、四行真值、原模型、清单及地图。逐核各图全选择前件、C450 三种删项、零尺度、范数完备性和闭目标；原模前缀、全锚共同误差、严格极限边、比较域和有限实值势均校准。比例步帽和全窗覆盖已明确为各自充分合同，首出界边和严格位置预算未省略；ID6 的遗漏反斜杠仅作排版修复。三席无未解决的致命异议；本项整合既有数学身份，未将充分桥升级为固定图必要性，也未关闭另列文章主问题。
+
 
 ## §5 有限长度是否有真正的一般函数型判据？
 

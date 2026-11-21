@@ -63,6 +63,9 @@
 
 [S04.10 的非幂次实际轨道](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-rate-acceptance)保预设目标和原真残差：C400 的平方对数计步给快于所有幂次、却非 R 线性的点率；[C451](research/topics/dd2/nonpower_rates.md#dd2-log-half-order)用对数强化的半阶模给 \(\beta>1\) 的零缺陷统一长度门，剪切的有限长点误差却慢于每个正幂。两种零集、实际尾常数和原模上包络的范围分别核验。
 
+[S04.IMPLICATIONS 的逻辑矩阵](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-dynamics-implications-acceptance)逐条分开每步正距离严格、距离趋零、范数点收敛和实际有限长度。仅有限长度无条件推出某点收敛；指定目标识别另核。C444、C450、C447-A、C400 四个完整图见证覆盖其余箭头，原模零端、全锚误差、实际步帽及同一步势各保自己的强化范围。
+
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。

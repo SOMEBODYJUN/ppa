@@ -1034,6 +1034,110 @@ w(a)=ag(a),\quad
 
 本项完成非幂次真实过程的存在性、所列原数据的认证和具体对数族的边界，不以此宣称所有非规则函数或所有算子子类的最优性。当前[非绝对可和点收敛主问题](../manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-nonabsolute-main-task)仍开放：本项有限长剪切和单点旋转各有明确机制，不代替所需的非平凡方向／跨步定理及匹配失效侧。
 
+<a id="dd2-dynamics-implications-acceptance"></a>
+### 4.11 S04.IMPLICATIONS：四种动力学性质的准确箭头
+
+**裁决：Proved；下列不成立的无条件推断均有完整实际图反例。** 本项在 E0 的允许关系和原数据上逐条比较动力学性质，不先把其中某项当作前件。固定一条始终合法的普通 PPA 无限轨道、固定 \(\lambda>0\) 和非空闭目标 \(S\subseteq\operatorname{zer}F\)，写
+\(t_k=d(x^k,S)\)、\(s_k=\|x^{k+1}-x^k\|\)。原空间为有限维欧氏空间；下面仅靠 Cauchy 的正向证明在范数完备空间同样成立。各反例保留自己的 \(F,S,U,R,\Phi,\psi\) 和允许关系，不冒充同一组原数据的比较。若另已认证指定 \(a\le\varphi(t)<t\)，严格下降当然已经是前件；不能再用不满足该目标的模型否定它。
+
+**IM1：先固定四个谓词和零尺度。**
+
+| 记号 | 对同一实际轨道的精确定义 |
+|---|---|
+| \(\mathsf D_+\) | 对每个 \(k\)，\(t_k>0\Rightarrow t_{k+1}<t_k\)。这是每条正距离步严格，不是最终严格，也不是统一 \(\kappa<1\)。 |
+| \(\mathsf T\) | \(t_k\to0\)。 |
+| \(\mathsf P\) | 存在 \(x^\infty\in H\)，使 \(x^k\to x^\infty\) **依范数**；此定义尚未指定极限属于 \(S\)。 |
+| \(\mathsf L\) | 实际总长度 \(\sum_{k=0}^{\infty}s_k<\infty\)。 |
+
+另记 \(\mathsf P_S\) 为范数收敛到 \(S\) 中一点。\(\mathsf D_+\) 对 \(t_k=0\) 没有要求；零距离吸收 \(t_k=0\Rightarrow t_{k+1}=0\) 以及零输入驻定 \(t_k=0\Rightarrow s_k=0\) 是不同的附加合同。已逐边认证 \(a\le A(t)\)、\(A(0)=0\) 只给前者。原 E0 在零输入的最近锚必为 \(p=x\)，故
+\(-s^2=\langle x-y,y-p\rangle\ge\Phi(0)\)；若 \(\Phi(0)\ge0\)，任何实际零输入边都驻定，若还存在该边则必有 \(\Phi(0)=0\)。这不允许将原有符号 \(\Phi(0)\) 擅改为零。只有另有零吸收，\(\mathsf D_+\) 才使整列 \(t_k\) 非增。有限终止例以下均凭实际合法驻定边补成无限轨道，不用形式上的补零代替原关系。
+
+**IM2：全部十二条非对角箭头。** 表内箭头按“行性质推出列性质”读；反例的具体轨道和全部选择范围在 IM3。
+
+| 已知 \(\downarrow\) / 所求 \(\rightarrow\) | \(\mathsf D_+\) | \(\mathsf T\) | \(\mathsf P\) | \(\mathsf L\) |
+|---|---|---|---|---|
+| \(\mathsf D_+\) | 恒真 | 不成立：C450 | 不成立：C447-A | 不成立：C400 |
+| \(\mathsf T\) | 不成立：C444 | 恒真 | 不成立：C447-A | 不成立：C400 |
+| \(\mathsf P\) | 不成立：C444 | 不成立：C450 | 恒真 | 不成立：C400 |
+| \(\mathsf L\) | 不成立：C444 | 不成立：C450 | **成立：实际步尾给 Cauchy** | 恒真 |
+
+唯一无条件非对角箭头的证明为：对 \(m>k\)，
+\[
+\|x^m-x^k\|\le\sum_{j=k}^{m-1}s_j
+\le\sum_{j=k}^{\infty}s_j\longrightarrow0.
+\tag{IM.e1}
+\]
+完备性给 \(\mathsf P\)，无需误差界或图闭。另一方面，距离函数是 1-Lipschitz；在 \(\mathsf P\) 已知时有
+\[
+\lim_k t_k=d(x^\infty,S),\qquad
+\mathsf P_S\ \Longleftrightarrow\ \mathsf P\wedge\mathsf T,
+\qquad
+\mathsf L\wedge\mathsf T\ \Longrightarrow\ \mathsf P_S.
+\tag{IM.e2}
+\]
+闭 \(S\) 用于距离零推出实际成员资格。若把“点收敛”定义为 \(\mathsf P_S\)，则它本身推出 \(\mathsf T\)；而 \(\mathsf L\) 单独依然不能推出 \(\mathsf P_S\)。这两种定义不能混用。
+
+**IM3：四个完整图见证覆盖全部错误箭头。** 1 表示成立、0 表示失败，均针对表内指定的真实无限轨道。
+
+| 已验收的见证与实际轨道 | \(\mathsf D_+\) | \(\mathsf T\) | \(\mathsf P\) | \(\mathsf L\) | 核心证据 |
+|---|---|---|---|---|---|
+| [C444 临界射线图](../topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)，选一条正尺度特殊边，再投影驻定 | 0 | 1 | 1 | 1 | 首边 \(a=t>0,s=t/L>0\)；正特殊输出不能再是特殊输入。全选择至多两条非驻定边，总长至多 \((1+1/L)t_0\)。 |
+| [C450-B 的完整闭母图](../topics/dd2/target_identification.md#dd2-target-identification-boundaries)，\(x^k=1+2^{-k}\) | 1 | 0 | 1 | 1 | \(t_k\downarrow1\)、\(s_k=\rho_k=2^{-k-1}\)、总长 1。\(S=\{0\}\)、\(\operatorname{zer}F=\{0,1\}\)，限点 1 不在认证位置窗 \(U=\mathbb R\setminus\{1\}\)。 |
+| [C447-A 圆聚点图](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)，\(0<c\le1\) 的任一非零高度轨道 | 1 | 1 | 0 | 0 | 法向后继满足 \(t_k=t_{k+1}+t_{k+1}^3\)，切向具有圆形聚点集；\(s_k\sim c/(2k)\)。完整图连续、零缺陷、精确零集、全窗不变；还有有界、渐近正则和平方步可和。 |
+| [C400 匹配调和旋转](../topics/dd2/core.md#dd2-trajectory)，\(L=1,A(t)=t/(1+t)\)、\(0<t_0\le R<\sqrt2-1\) | 1 | 1 | 1 | 0 | \(S=\{0\}\)、\(t_k=(t_0^{-1}+k)^{-1}\)、\(s_k=t_{k+1}\)；单点距离给点收敛，实际调和长度发散。原缺陷预算匹配，完整残差取等。 |
+
+这些不是任意抽出的标量数列。各链接均核完整纤维、输入最近锚、全距离窗覆盖及留域。C444 的 \(\mathsf T,\mathsf P_S,\mathsf L\)，C450 的 \(\mathsf D_+,\mathsf P,\mathsf L\)，C447-A 的 \(\mathsf D_+,\mathsf T\)，C400 的 \(\mathsf D_+,\mathsf T,\mathsf P_S\) 对各自窗内全部允许轨道成立，指定路径再否定所求性质。因此表内反箭头也适用于将各性质全称量化为“全部初值和全部允许选择”的解释，不能借改变选择量词撤去反例。
+
+这四行还排除了仅把其他正向性质合取就得到新结论的尝试：\(\mathsf T\wedge\mathsf P\wedge\mathsf L\) 不推 \(\mathsf D_+\)，\(\mathsf D_+\wedge\mathsf P\wedge\mathsf L\) 不推 \(\mathsf T\)，\(\mathsf D_+\wedge\mathsf T\wedge\mathsf P_S\) 不推 \(\mathsf L\)，\(\mathsf D_+\wedge\mathsf T\) 不推 \(\mathsf P\)。最后一条即使加有界、渐近正则和平方步可和仍失败；若加 \(\mathsf L\)，则已由 (IM.e1) 成立。这里没有声称列举所有含否定谓词的逻辑公式。
+
+C450 的三个版本不能混合：A 保 \(U=H\) 而删允许极限边，B 的允许关系等于全局闭的完整图，但限点出认证窗；C 换母图、恢复完整允许与 \(S=\operatorname{zer}F\)，但跨点零值图不闭。三个版本都给同一数值坏链，分别暴露不同识别缺口。更强的“自由原 DD 包络已经逐尺度严格仍不趋零”由 [C418 的正极限完整图](../canonical/dd2_function_hypotheses.md#fh-positive-limit)单独证明，不能把 C450 的固定图目标当作这个自由预算结论。
+
+**IM4：使严格下降推出距离趋零的附加门。** 已认证原目标 \(a\le A(t)\) 后，下列条件恰保证**全部标量**递推 \(t_{k+1}\le A(t_k)\) 趋零：
+\[
+\begin{split}
+&A:[0,R]\to[0,R],\qquad A(0)=0,\qquad A(t)<t\quad(t>0),\\
+&\forall\ell\in(0,R)\ \exists\epsilon>0\ \forall u\in(\ell,\ell+\epsilon)\cap[0,R]:\ A(u)\le\ell .
+\end{split}
+\tag{IM.e3}
+\]
+这是 [C418](../canonical/dd2_function_hypotheses.md#fh-distance) 的准确右侧条件；必要性属于全部标量路径，不是每个成功固定图。证明的关键是：若严格递减正轨道趋 \(\ell>0\)，最终进入该右邻域，却被迫下一步 \(\le\ell\)，矛盾。连续的严格目标给这一门；仅逐点 \(A(t)<t\)、仅右上极限 \(\le\ell\)、或非单调 \(A\) 的纯复合趋零均不足。也可以用已认证的非减比较 \(Q\ge A\) 及独立核准的 \(Q^{\circ k}(t_0)\to0\)，目标身份仍是原 \(A\)。
+
+固定图的另一充分路线是：零距离吸收，每条**受检**正距离边严格，并有相继对的范数收敛子列，其极限仍是一条受检允许边。若 \(t_k\to\ell>0\)，极限边两端距离同为 \(\ell\)，违反其严格下降。有限维中，轨道位于认证窗内紧集且允许图在该紧集的乘积中相对闭即可。只在所选轨道上逐步严格，不能给尚未核验的极限边严格；母图闭也不能代替允许图闭或限点仍受检。[S04.02](#dd2-distance-zero-acceptance) 和 C446 分别证明该路线及删项边界。
+
+**IM5：距离与点收敛之间的准确补充。** 以下各行是独立的充分机制，不宣称穷尽所有可能的附加条件。
+
+| 要补的箭头 | 经过核验的附加条件及其作用 |
+|---|---|
+| \(\mathsf T\Rightarrow\mathsf P_S\) | 若 \(S=\{p\}\)，直接 \(\|x^k-p\|=t_k\to0\)。或轨道范数预紧且仅有一个聚点；距离与闭目标使所有聚点入 \(S\)，唯一性才给整列收敛。 |
+| \(\liminf t_k=0\Rightarrow\mathsf T\wedge\mathsf P_S\) | 对每个固定 \(p\in S\) 都有 \(\|x^{k+1}-p\|^2\le\|x^k-p\|^2+\varepsilon_k\)，其中同一个非负 \(\varepsilon_k\) 对全部 \(p\) 有效且可和。令 \(E_k=\sum_{j\ge k}\varepsilon_j\)，则 \(t_k^2+E_k\) 非增，并对每个 \(m\ge k\) 有 \(\|x^m-x^k\|\le t_k+\sqrt{t_k^2+E_k}\)。这是 [S04.03 的全锚证明](#dd2-point-convergence-acceptance)；E0 每边存在一个最近输入锚不能替代全锚量词。 |
+| \(\mathsf P\Rightarrow\mathsf T\wedge\mathsf P_S\) | 固定 \(\lambda\) 时 \(v_k=(x^k-x^{k+1})/\lambda\in F(x^{k+1})\)，且 \(v_k\to0\)。若 \(F\) 在零值处强图闭，先得 \(x^\infty\in\operatorname{zer}F\)；再需 \(S=\operatorname{zer}F\)，或在实际极限范围证明这些零点属于 \(S\)。 |
+| 同一箭头的原误差界路线 | 令 \(\omega(h)=\sup(\{0\}\cup\{\psi(r):r\in D_\psi\cap[0,h]\})\)。若 \(\omega(h)\to0\)，则完整 \(\rho_k\le s_k/\lambda\to0\) 给 \(t_{k+1}\le\psi(\rho_k)\le\omega(s_k/\lambda)\to0\)；不用图闭。仅 \(\psi(0)=0\) 不够，C450 的正零端跳跃正好失败。 |
+| 同一箭头的恒等极限边路线 | 若 \((x^\infty,x^\infty)\) 仍是一条**受检允许边**，原包含给零值，原误差界及 \(\psi(0)=0\) 再给 \(d(x^\infty,S)=0\)。须保限点位置、尺度和允许关系，不额外要求穿孔零端连续。 |
+
+后三行也可用于 \(\mathsf L\)，因为它先给 \(\mathsf P\)。原模路线保实际原域，未将非单调 \(\psi\) 直接换成 \(\psi(s_k/\lambda)\)；\(\omega\) 是已定义的前缀控制。强与弱收敛没有互换，弱拓扑另按 [S04.07](#dd2-target-identification-acceptance) 检查弱序列闭性及相应零值图闭。
+
+**IM6：距离率、点率与有限长度之间还差什么。** 任何已知合法轨道，只要有实际步上界 \(s_k\le B_k\) 且 \(\sum B_k<\infty\)，就有 \(\mathsf L\)。特别，认证 \(t_{k+1}\le\kappa t_k\)、\(0\le\kappa<1\)，若再有覆盖零尺度的实际步帽 \(s_k\le bt_k\)，则可推出
+\[
+\sum_{j\ge k}s_j\le\frac{b}{1-\kappa}t_k.
+\tag{IM.e4}
+\]
+DD1 的已核合同同时提供相应距离和步帽；[C448-A](../topics/dd2/asymptotic_regularity.md#dd2-distance-zero-without-regularity) 的 \(x^k=(k,2^{-k})\) 则有几何距离乃至 \(\sum t_k<\infty\)，却 \(s_k\to1\)。其原缺陷不满足 DD1 的共同收缩预算，因此只反驳裸距离率到长度的推断，不反驳 DD1 定理。
+
+一般 DD2 在已逐边认证 \(a\le A(t)\) 后，可以用非减比较 \(Q:[0,R]\to[0,R]\)、\(Q\ge A\)，与已核实际步帽 \(s\le B(t)\)，其中 \(B:[0,R]\to[0,\infty)\) 有限。若 \(B\) 也非减且 \(\sum_j B(Q^{\circ j}(t_0))<\infty\)，则逐项比较给长度；\(Q\) 本身的趋零若需要仍应另核，不能由允许 \(B=0\) 的可和性推出。C400 的 \(B(t)=b_Lt\) 和可和比较尾是已证明的特例。另一充分入口是在实际输入和输出尺度有限实值的同一步势
+\[
+s_k\le C[V(t_k)-V(t_{k+1})],\quad C>0,\quad
+V(t_0)<\infty,\quad \inf_k V(t_k)>-\infty,
+\tag{IM.e5}
+\]
+望远镜给 \(\mathsf L\)，但不单独给 \(\mathsf T\)。C401/C419 还用正位移下界和严格净耗散独立证明距离趋零，再用可积势估尾量。[S04.04](#dd2-finite-length-acceptance)已核这些合同。C444 的等距正步使任何仅用 \(V(t)-V(a)\) 的证书在该边为零，故同一步距离势不是每个有限长固定图的必要形式。
+
+反过来，若 \(\mathsf P\) 已知，令 \(e_k=\|x^k-x^\infty\|\)。\(\sum e_k<\infty\) 由 \(s_k\le e_k+e_{k+1}\) 给 \(\mathsf L\)，R 线性点率是这个充分条件的特例。它们不是必要条件：[C451 的 \(\beta>1\) 剪切](../topics/dd2/nonpower_rates.md#dd2-log-half-order)有 \(\mathsf L\)，但 \(e_k\sim 2^{\beta-1}(\beta-1)^{-1}(\log k)^{1-\beta}\)，点误差不可和且没有任何正幂点率。点误差、目标距离和实际步三者不能共用一个速率名字。
+
+**IM7：将路径结论升级为所有选择时保留定位合同。** 上述代数箭头先作用于已存在的合法无限路径。自动续接可另核以下统一充分合同：每个工作窗输入有允许输出，并对所有允许输出认证所需距离自映射和零尺度合同；对给定初值，也可以只在其全部可达合法前缀的末输入核覆盖。一般开位置窗 \(U\) 的充分位置证书可以是全选择不变性，或一个适用于每条有限前缀（含第一条拟出界边）的共同总步预算
+\(B_0<d(x^0,U^c)\)。先估前缀总长、证明末输出仍在 \(U\)，再调用下次覆盖，不能预设无限合法路径。采用后一严格预算且另已获得范数极限时，同一个严格内含闭球还保证限点在 \(U\)；再有距离趋零便识别到 \(S\cap U\)。仅有全选择留在开 \(U\) 时，限点仍在 \(U\) 需要另证。一般势的共同下界须包含尚待留域的末输出；C401/C419 和 C400 比较尾各用自己已核的预算。只有 \(\mathcal J=J_{\lambda F}\) 时，“全部允许选择”才是全部原近端选择。
+
+本项给出四性质的无条件蕴含、完整反例以及各条常用强化桥，未把这些充分桥改写成每个固定算子的必要条件，也未关闭另列的[非绝对可和点收敛主问题](../manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-nonabsolute-main-task)。本项整合既有 Claim 的逻辑关系；原模型、量词和数学身份不变。
+
 ---
 
 ## 5. 一般函数型势和 F1–F3 审查
@@ -1417,6 +1521,7 @@ pppa_recovery.md 的逆向障碍 1–4 显示局部物理误差界不能自动�
 | §4.8 无线性率 | Proved | C400 和 q=3/4 实例 |
 | §4.9 非固定因子率 | Proved | C399 多项式递推 |
 | §4.10 非幂次率 | Proved；统一类与固定图分开 | [NF1–NF4](#dd2-nonpower-rate-acceptance)：C400 的完整平方对数计步；C451 的对数半阶模、非幂点率及长度边界；上包络条件另核 |
+| §4 蕴含关系 | Proved；错误箭头均 Refuted | [IM1–IM7](#dd2-dynamics-implications-acceptance)：十二条箭头、四完整见证、指定目标识别和强化合同 |
 | §5.1 F1–F3 | Proved（充分性） | 回到历史原式，通过 C401 恢复原一步势 |
 | §5.2–5.3 势存在及构造 | Proved | chi 逆和 C401 望远镜 |
 | §5.4 积分必要性 | Conditional/Refuted | 几何统一充分，固定算子反例 |
