@@ -96,6 +96,8 @@
 
 [S05.F3 的主函数核验](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f3-majorant-acceptance)固定原被积函数t/[λψ⁻¹(t/2)]和同一非增可积主函数的全窗量词。[FC1–FC5、FI1–FI3a](research/topics/dd2/original_f_conditions.md#dd2-original-f3-role)证明它与直接可积及合法和函数逆的零端可积等价，不需F2；最小非增主函数整窗积分至多两倍且该因子准确。振荡、固定大窗尾及删分母保序的连续尖峰分别限定条件，未把函数层锐性说成轨道最优。三席已逐源复核实际正文与全部登记；原组合的完整望远镜另有专项。
 
+[S05.TELESCOPE 的原组合重构](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-telescope-acceptance)直接用P=∫t/q和原G=∫bar g证同一步差支付，先降距再评价输出势，有限前缀包含首条拟出界边，覆盖在留域之后使用。[FT1–FT15](research/topics/dd2/original_f_conditions.md#dd2-original-telescope)分开距离归零、强点收敛与限点位置，并逐项列可删条件：原严格支付可放宽初值预算等号；全窗覆盖与最近锚可替代工作域内的目标闭性；共同q≤Kt需新系数，无此帽的C453需新势预算。实际零点往返、临界旋转、首出位置和非闭目标各给准确边界。三席已逐源复核七处实际正文与登记，原组合与明确替代合同均已签收。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
@@ -450,7 +452,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | C442 的原稿映射及零输入修订；D1R–D1F 保存因子、符号根、尾长、两支机制、全部最近性、连续性及全几何最大值。D1S 的真实临界轨道与 D1O1–D1O12 的完整纤维、C443 固定射线同图全尺度、显式间隔拼接及全部输出不变窗分开证明。整窗共同因子排除额外帽，任意小局部坏尺度可适配正帽。核 DD1 恢复、完整局部锐性和取等量词时读取。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
 | [research/topics/dd2/potential_regularity.md](research/topics/dd2/potential_regularity.md) | PR1–PR3 给势差真正需要的下界、实际势值尾限、非减势的补边判据、积分的精确正则性及可选凹 C¹ 构造；PR4–PR6 保存 C452 的完整投影加边、原目标认证、交错尺度、逐点最小势和非减/内点连续/BV 的不可能性。核“有效势是否必须规则”与“能否总规则化”的区别、零端与内点范围或替代势预算时读取。 |
-| [research/topics/dd2/original_f_conditions.md](research/topics/dd2/original_f_conditions.md) | FA1–FA9核原F1存录版、原残差局部阈值、缩窗吸收和完整剪切的无统一平方余量；FB1–FB8核原F2的双向零端等价、准确窗口、两个逆的区别、点态等价反例和完整模型边界；FC1–FC5与FI1–FI3a核原F3精确式、主函数量词、最小非增上界的准确两倍整窗比较、连续凹化与纯函数边界，并证明直接积分及普通和函数逆的零端等价，FI3–FI5 给 C453 的原 F1 不变、F2 删除、三分支混合支付和完整连续剪切。核原假设是否真被弱化、局部逆域、额外 q 项及严格位置预算时读取；不能把等价积分称为严格扩展。 |
+| [research/topics/dd2/original_f_conditions.md](research/topics/dd2/original_f_conditions.md) | FA1–FA9核原F1存录版、原残差局部阈值、缩窗吸收和完整剪切的无统一平方余量；FB1–FB8核原F2的双向零端等价、准确窗口、两个逆的区别、点态等价反例和完整模型边界；FC1–FC5与FI1–FI3a核原F3精确式、主函数量词、最小非增上界的准确两倍整窗比较、连续凹化与纯函数边界，并证明直接积分及普通和函数逆的零端等价，FI3–FI5 给 C453 的原 F1 不变、F2 删除、三分支混合支付和完整连续剪切。FT1–FT15独立恢复原P/G差支付、首出步、尾和、点识别及逐项删改，另证原公式预算等号和整窗覆盖的相对闭性，并配完整定位及删项边界。核原假设是否真被弱化、局部逆域、额外 q 项及位置预算时读取；不能把等价积分称为严格扩展。 |
 | [research/topics/dd2/irregular_zero_defect_length.md](research/topics/dd2/irregular_zero_defect_length.md) | IZ1–IZ6 保存 C454：任意原 ψ 的零缺陷完整统一类充要积分、二进制筛壳、同图旋转链/桥/辅助前像、完整纤维与闭性。研究非单调原模必要性、同图坏轨道、指定目标是否保见证或原函数稀疏点值时读取；正下界、更强目标和连续唯一近端不自动继承必要性。 |
 | [research/topics/dd2/finite_length_countermodels.md](research/topics/dd2/finite_length_countermodels.md) | FG1–FG19 给 C456：全域连续单值、精确幂残差模的径向／旋转双图，完整反解、凸最小化正侧、精确有限尾和真实旋转发散。检查“积分失败是否只是模选松”、固定图与统一类、所有正可测有效步下界积分的限度时读取。 |
 | [research/topics/dd2/angular_length_obstruction.md](research/topics/dd2/angular_length_obstruction.md) | AG1–AG20 给 C457：圆角映射与连续反演、精确原锚/模/目标、真实角度尾预算、距离投影伪链及下有界距离势障碍。研究静态距离信息为何不能继承真实续接状态时读取；明确保留无下界实值支付函数，不移用 C278 的更强否定。 |
