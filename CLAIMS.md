@@ -3600,3 +3600,12 @@
 - **Proof / Conclusion**: 平方展开给 b^2 <= E-s^2，三角给 b >= abs(t-s)，从而 s^2-t s+Phi <= 0；输出三角和 gauge 给可行集。取 b=max(a,abs(t-s)) 的二维三角形，并在输出点背离输入的射线上放第二个锚，得到 p 仍为输入最近锚且输出距离恰为 a，故自由两锚类取等。
 - **Boundary / Counterevidence**: Phi<=0 时 I=[0,(t+sqrt(t^2+4D))/2]，恢复旧 DD2 包络。若 Phi>0，正部 D=[-Phi]_+ 丢掉下根和能量余量；t=1、Phi=1/8、eta(s)=s 时精确值 sqrt(3/8)，正部式给 1/sqrt(2)，故不能称 sharp。
 - **Dependencies / Related Files**: [精确定理与证明](research/canonical/dd2_general_phi_exact.md)、[§1-§3 逐题审计](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[C400 负缺陷版本](research/topics/dd2/core.md#dd2-reverse)。固定凸或仿射目标、固定连续单值图、无限维最近点和轨道级反向必要性另需条件。
+
+<a id="c415"></a>
+## C415-v1 - q 大于 1 次临界幂次的固定闭图失败链
+
+- **Status**：`derived-checked`；当 M>0 且 p<2/q、q>=1 时为 `Refuted`（无条件有限长度或距离收敛命题）。临界 p=2/q 的最优常数仍 `Open`。
+- **Exact Statement / Objects / Domain / Quantifiers**：取有限维 R²、lambda>0、h=K/lambda^q、c>=h^(-1/q)，足够小 t>0，L=c t^(1/q)，t<L/2。令 S={k L e1:k 属于 Z}，x_k=k L e1+t e2。令 J(u) 包含 P_S(u)，并在每个 x_k 额外包含 x_(k+1)；定义 F=(J^(-1)-I)/lambda。则 S 闭、J 全域非空、图闭且 zer F=S。
+- **Proof / Conclusion**：投影边输出在 S，缺陷为零；特殊边 x_k 到 x_(k+1) 的输入最近锚 p_k 满足内积=-L²，输出距离为 t，完整真残差为 L/lambda。因为 p<2/q，缩小 t 后 L²=c² t^(2/q) <= M t^p；因为 c>=lambda K^(-1/q)，有 t <= K(L/lambda)^q。故同一完整闭图满足 DD2 的所有边量词，却存在 d(x_(k+1),S)=t 的不下降轨道。
+- **Boundary / Scope**：构造只裁决 M>0 的 p<2/q 失败侧；M=0 或 p=2/q 的临界常数需要另行构造。它修正了把 q>1 失败仅写成几何 obstruction 的过弱表述。
+- **Evidence / Related Files**：[§4–§8 幂次审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#6.5-q1-的超线性输出支)、[失败路线 F145](FAILED_ROUTES.md#f145)、[C400 一步几何](research/topics/dd2/core.md#dd2-reverse)。
