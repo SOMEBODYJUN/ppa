@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前作者问题：连续回缩是否已有先例，DD 之后还有哪些结构性正文结果。** [定向查新与选稿表](research/LITERATURE.md#lit-dd-retraction-priority)核读 Goebel–Koter 1981 的几何步差–极限回缩、Wiśnicki 2014 Lemma 2.1 和 Górnicki 2010 的固定集回缩；基础机制已知，非单调完整 PPA 的全部同前件拓扑增量仍须逐项比较。[C462](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)把已有坏选择方向直接落实到二维连续单值原算子与完整 DD1：所有局部非驻定轨道真实 Q-二次收敛，极限回缩却无任何正阶两点 Hölder 模。它与 C426–C427 的目标几何、C444/C457 的实际续接与 C458–C461 的准确总尾组成三个优先结构问题；数学证明与选稿价值、公开新颖性各自独立。
+**当前选稿原则：从 DD 引出的新问题重新比较，不以旧 RLEB 的题材作模板。** 作者以 RLEB 第四章说明附加结果的质量与叙事要求，没有指定 DD 论文优先采用几何、拓扑或回缩。此前提出的“选择稳定性、目标几何、实际续接与准确总尾”仅是助手候选，优先排序撤回；其证明与查新记录保留。恢复选题时，同时考察原算子与优化子类的不同补偿机制、组合/分解、可实施设计与认证、真实模型及其他有证据的新问题。候选须分别交代读者原问题、DD 增加的准确数学信息、已有答案/未闭义务与一手比较，不能仅因已有证明或类似旧文章章节而选入正文。 [前次候选与查新](research/LITERATURE.md#lit-dd-structural-selection)保留为比较材料，不是作者选定的大纲。
 
 **上一阶段已核：DD 的非精确计算后果。** [C455 的完整证明](research/topics/dd2/inexact.md#dd1-observable-margin)将完整 DD1 的 A+B 编译成可观察停止规则：\(E\le\delta_\kappa s\)，\(\delta_\kappa=\max\{1/b,\sqrt{(1+L^2)/(1+2\sigma)}\}-L/\kappa\)。它保留所有接受轨道的距离收缩、步长绝对可和和点收敛；自由闭目标完整图类的一步系数准确，具体非单调模型有至多十次内层更新的证明和[可复算程序](research/code/dd1_robust_margin/README.md)。[Claim 身份](CLAIMS.md#c455)与[过度贡献判断的失败机制](FAILED_ROUTES.md#f162)分别保存。
 
