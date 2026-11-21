@@ -3650,6 +3650,9 @@
 - **Evidence / Dependencies**：最近锚和 Cauchy–Schwarz 给 \(s^2-ts\le D\)，实际输出给 \(a\le K(s/\lambda)^q\)。两锚共线二周期同时达到最小不下降缺陷和真残差，缩放平移后并入全域投影图，覆盖任意小尺度且保持闭图。[完整理论及取等](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。
 - **Boundary / Related Files**：仅保留平方能量会给较弱的临界条件 \(2M<c^2\)。本构造允许多值预解式及非凸闭目标；连续单值和指定闭凸目标的锐性另验。见 [F145](FAILED_ROUTES.md#f145)、[§6 审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)。
 
+- **S06.01 机制补证（实际终稿三席复核通过；原定理身份不变）**：[PM1–PM8](research/canonical/dd2_power_defect_finite_length.md#dd2-power-regime-mechanisms)把坏输出的必要步尺度 \(u=\lambda K^{-1/q}t^{1/q}\) 与默认和函数逆下界分开，统一两支 \(D_{\rm crit}=\max\{u^2/2,u(u-t)\}\)；准确性仍属自由闭目标且规定Φ=−D≤0的类。非临界好支的 \(\beta=\min\{1,p/2\}\)（M=0另取1）给距离充分幂阶 \(q\beta>1\)，结合输出真残差和实际步尾可独立推出点误差的同一充分Q阶，不宣称最优。
+- **好临界非超线性见证 PM4-v1（实际终稿三席复核通过）**：任意 \(q>1,K,\lambda>0,0<M<c^2,p=2/q\)，取 \(r=hM^{q/2}\in(0,1)\) 和预设 \(\kappa\in(r,1)\)；在已由同一幂数据认证 \(\varphi=\kappa t\) 的小窗内，[PM9–PM12](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-critical-linear-chain)给实线紧目标 \(S=\{x_k+t_k\}\cup\{x_\infty\}\)、完整闭图 \(J=P_S+\{x_k\to x_{k+1}\}\)、\(F=(J^{-1}-I)/\lambda\)，其中 \(t_k=r^kt_0,s_k=\sqrt M\,t_k^{1/q}\)。全部近端覆盖、零集精确、每条图边保原真误差界和缺陷，全部轨道有限长。所有非终止轨道均为该链的某个后缀，具有距离比 r、点误差比 \(r^{1/q}\) 及准确尾 \(\sqrt M\,t_k^{1/q}/(1-r^{1/q})\)。源中核全部最近锚、完整纤维和闭性；反驳“q>1好侧一律超线性”，不把其图级 \(a=rt\) 冒称原预算的统一目标，也不声明固定凸目标或连续单值预解式的必要性。
+
 <a id="c417"></a>
 ## C417-v1 · 非单调真残差模的单边可行域与完整前像障碍
 
