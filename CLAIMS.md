@@ -4124,3 +4124,21 @@
 - **Conclusion / Scope**：全部带内轨道有限长且点趋 S；共同尾≤sqrt(17)t_k/3≤sqrt(17)R^(2^k)/3，因此极限 P 连续回缩。每个非零法向初值的真实点误差 Q-二次：初始 p≤0 比值趋1，p>0 趋4/sqrt17；法向初值0另驻定。固定 x0=(0,1/8),xε=(ε,1/8)，小 ε 的极限差在 B exp[−C sqrt(log1/ε)] 与 (5/6)exp[−c sqrt(log1/ε)] 之间，c,C>0，故 P 在该非零初值处无任何正阶两点 Hölder 模。r0 可任取固定 (0,R]，常数随之改变。不是零点处 calmness 的反例。
 - **Dependencies / Evidence / Related Files**：[LS1–LS9 完整证明](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)、DD1 C285/C455 的两条几何消元；[Decimal120/Fraction 复算](research/code/dd1_limit_selection/README.md)核56个固定点及六个固定微扰。有限数值不证明普遍量词。C116/C141 是相关但不同的三维原图，未改其身份。
 - **Counterevidence / Objections / Novelty**：不否定完整 DD1 的 A+B、绝对可和或点收敛；不声称图具有单调性、全对 Lipschitz、光滑性、最优二次缺陷函数或最优根对数常数。[Wiśnicki 2014 Lemma 2.1](research/LITERATURE.md#lit-dd-retraction-priority)的单步 Lipschitz 前件在 p=0 被 sqrt 切向差破坏，故它不强迫本 P 有 Hölder 模。一般极限回缩机制已有旧例，非 Hölder 解选择的公开先行性仍需查核。
+
+<a id="c463"></a>
+## C463-v1 · 凸原近端的有限维几何尾界与 Hilbert 维数障碍
+
+- **Status**：`derived-checked`；三席独立重构并逐源冷读实际证明、反例、身份、图边和验收地图，无未关闭实质异议。已知自收缩定理的精确转接与自足反例，不认定公开新颖性。
+- **Exact Statement / Objects / Domain / Quantifiers**：对每个有限 n≥1、proper lsc 凸 \(f:\mathbb R^n\to(-\infty,+\infty]\)、非空完整 \(S=\operatorname{argmin}f\)、固定 λ>0 和任意初点，完整 \(F=\partial f\) 的全域唯一近端轨道存在，且每个 k 有 \(L_k=\sum_{i\ge k}\|x^{i+1}-x^i\|\le C_n W(K_k)\le2C_n d(x^k,S)\)，其中 \(K_k=\overline{\operatorname{conv}}\{x^i:i\ge k\}\)、W为归一化平均宽度、C_n只依赖n；轨道强收敛到 S 中一点。无需真误差模、KL 或距离积分假设。
+- **Definitions / Dependencies / Evidence**：D01 的实际步/完整图约定；[SC1–SC3](research/topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary)由凸全局最小化证明完整覆盖、对子水平未来点的内积和全锚 Fejér。有界阶梯曲线的总变差恰为真实尾，依已核 Daniilidis–David–Durand-Cartagena–Lemenant arXiv:1211.3227v1 的(2.2)、Definitions2.1/2.5、Theorem3.3得到长度界。固定λ、子梯度不等式和lsc识别完整极小集；不导入旧稿较宽 Theorem4.17。
+- **Counterexample / Exact boundary**：[SC4–SC5](research/topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary)在 \(\ell^2\) 取 \(f(x)=\frac12\sum_{j\ge1}2^{-j}x_j^2\)、λ1、\(x_j^0=1/j\)。完整 \(F=\{\operatorname{diag}(2^{-j})x\}\)，零集精确0，全域唯一全局近端 \(x_j^k=(1+2^{-j})^{-k}/j\)。轨道强趋0；互不相交块 \(2^j\le k<2^{j+1}\) 长度至少 \(1/(2ej)\)，真实总长无限。精确二次目标差验证完整全局最小化，而非形式坐标构造。
+- **Scope / Objections / Related Files**：正侧不推广到任意单调原图、非凸驻点分支或一般 Hilbert；指定真子目标需另识别。Hilbert 反例没有零端消失的整窗真模，故不反驳 C401/C419 的相应充分版。C456 凸径向与旋转的有限维配对说明默认步积分不是凸子类的必要条件；C457 的距离势不存在是另一对象。几何文献本身用未来凸包宽度支付，不能称完全不用任何势。[S05.10](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-alternative-mechanisms-acceptance)、[一手位置](research/LITERATURE.md#lit-dd2-alternative-length)、[F148](FAILED_ROUTES.md#f148)保存边界。
+
+<a id="c464"></a>
+## C464-v1 · 精确全局近端的自动聚点值桥与 KL 有限长度
+
+- **Status**：`derived-checked`；三席独立重构并逐源冷读实际证明、反例、身份、图边和验收地图，无未关闭实质异议。是经典 KL 机制的精确转接；不改写 C311 的原身份，不认定公开新颖性。
+- **Exact Statement / Objects / Domain / Assumptions**：\(f:\mathbb R^n\to(-\infty,+\infty]\) proper、lsc、全局下有界，λ>0固定，\(x^0\in\operatorname{dom}f\)。允许关系为全部 \(T_\lambda(x)=\operatorname{argmin}_y\{f(y)+\|y-x\|^2/(2\lambda)\}\)，各纤维非空紧，非凸时可多值。对每条任意选择的轨道，若有一个聚点 z 且 f 在 z 满足标准 limiting 子梯度 KL（连续凹解奇函数、正尺度C¹），则真实总长有限、\(x^k\to z\)、\(z\in T_\lambda(z)\) 且 \(0\in\widehat\partial f(z)\subseteq\partial f(z)\)。
+- **Quantifiers / Definitions / Conclusion**：聚点前件逐轨量化；有限维有界轨道保证存在聚点，凹型KL仍须在一个聚点另核。无需 f 在域上连续、极小集非空、传统误差界或 DD2 距离积分。任意强聚点均满足函数值 \(f(x^k)\to f(z)\) 和自身近端固定点结论，这两项不依赖 KL；KL 用于锁定全尾及有限长度。对已锁定的足够大 N，\(L_N\le s_{N-1}+2\vartheta(f(x^N)-f(z))\)。
+- **Dependencies / Evidence**：[EK1–EK10](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge)由全局最小化给 H1 常数 \(1/(2\lambda)\)、Fréchet实际方向及 H2 常数 \(1/\lambda\)。平方步可和、前驱趋同一聚点及全局比较给H3；凹KL给 \(s_k\le s_{k-1}/2+\Delta\vartheta_k\)，用含首出球边的有限前缀支付先归纳留域再求无限和。与 ABS 作者稿2011-07-21修订的 Definition2.4、H1–H3、Theorem2.9逐项核对；证明自足重构，不借 LMZ 有限值版本暗换对象。
+- **Counterevidence / Objections / Scope**：同一光滑多项式 \(f(u)=(u^2-1)^2\)，λ1 的真实完整驻点边 \(1\mapsto-1/2\) 使近端目标 \(27/16>f(1)=0\)，故全驻点 resolvent 不继承H1。同一f和λ1还在 ±1/√2 形成完整驻点二周期，每步√2；两聚点的非零梯度直接给线性KL，故有KL聚点也可真实无限长。λ1/4时0是自身全局近端唯一输出却是f严格局部极大点，故近端固定点不等于全局极小。多值选择偶遇零步不自动永久驻定；已到该轨极限能级才可用H1断言。指定闭子零集 S 的识别仍须 z∈S 或 \(d(x^k,S)\to0\)；不假定一般 proper lsc 的临界集闭。函数值势不是单纯距离势，也不由原 \(\Phi,\psi,\varphi\) 自动生成。[S05.10](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-alternative-mechanisms-acceptance)、[一手依据](research/LITERATURE.md#lit-dd2-alternative-length)、[F148](FAILED_ROUTES.md#f148)。

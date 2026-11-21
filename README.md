@@ -88,6 +88,8 @@
 
 [S05.09 的最佳尾包络](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)先区分真实状态、精确尺度和可虚接的边池。[C458](research/topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail)以平方降幅的正部和比较证明：零缺陷、原连续非减模的准确最坏全尾由同一个完整旋转达到，原积分在可积窗内给至多四倍证书，严格逆 \(w=o(t)\) 且 \(I_w(R)<\infty\) 时给最佳首项 \(2I_w(t)\)。[C461](research/topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail)保非单调原残差域，在零前缀趋零时给准确平方递推尾上确界，以带辅助前像的完整有限图逼近；不声称未达端点达到。[C460](research/topics/dd2/tail_envelopes.md#dd2-matched-target-optimal-tail)另核线性模、恰匹配负缺陷预算的加法 Lt 夹界。[C459](research/topics/dd2/tail_quantifier_obstructions.md#dd2-tail-quantifier-obstructions)用三种闭完整有限链图反驳逐轨、逐状态、逐尺度及零端统一预算之间的错误升级。四个新身份经三席实际终稿复核，已登记为 derived-checked。
 
+[S05.10 的替代机制](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-alternative-mechanisms-acceptance)把指定积分、全部下有界距离势和全部状态势分开：同数据平方降幅可改充分常数，已证最优尾不能再降；角度与位置可支付距离投影不能支付的真实轨道。[C463](research/topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary)转接有限维凸原近端的未来点几何，给无误差界尾界2C_n t_k，并用完整Hilbert凸二次例阻止删维数。[C464](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge)在有限维、固定λ和域内初点的精确全局近端上自动证明聚点值条件，对具有一个凹型KL聚点的轨道再锁域求有限尾；非凸全驻点关系和指定子目标不继承结论。两项均区分已知文献机制与本库转接，已由三席实际终稿复核，登记为 derived-checked。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
@@ -470,7 +472,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | research/topics/common_structure/two_circles_common_minimum.md | C388 的独立平面题面、尺规作图、两个圆的充要构形分类和等号条件。用于理解同一个构形为何同时优化锚边和整条射线上的距离。 |
 | research/topics/common_structure/planar_two_anchor_feasibility.md | C387 的平面充要条件、输出距离的可行区间与线段取等构造。需联合检验原一般反射模、完整误差界、夹角与锚边限制，或从逐步距离差建立长度预算时读此页。 |
 | research/topics/common_structure/euclidean_two_anchor_geometry.md | C383–C386 的精确两圆弧、短锚边、反向空球原 RL、双正向空球及余维一锐门。包含标注图和经典来源的实际移植清单。检验附加零集几何时读此页。 |
-| `research/topics/common_structure/compensation_methods_2.md` | 第二批28张技术卡、12项原对象初试和六组Pro深试义务。保存K完整残差包络及全对RL/值平移比较、强逆端点、图修正覆盖、弱凸增长支付、定向Schur补、识别、窗口根策略、有符号锥和自收缩未来点几何；来源核读深度与原图验证成本分别记录。继续技术收集或逐项深试时先读，不是完整M的完成声明。 |
+| `research/topics/common_structure/compensation_methods_2.md` | 第二批28张技术卡、12项原对象初试和六组Pro深试义务。保存K完整残差包络及全对RL/值平移比较、强逆端点、图修正覆盖、弱凸增长支付、定向Schur补、识别、窗口根策略、有符号锥和自收缩未来点几何；C463/SC1–SC5新增有限维凸完整近端的尾宽度界、阶梯总变差导入与Hilbert强趋零无限长的维数反例。核不借距离积分的长度机制或维数边界时读取。来源核读深度与原图验证成本分别记录。继续技术收集或逐项深试时先读，不是完整M的完成声明。 |
 | `research/topics/common_structure/compensation_trials.md` | 强弱补偿的 25 项技术入口与 10 项实际初试；保存联合方向—幅度集合、C374 一般模截断支付、C375 拟对称校准及产品零集、C376 Carlier 原弦余项、C373 端点 Stein，以及测试变换、供给重标度和动态乘子的具体断点。寻找下一项可迁移技术、比较补偿预算或重试某一步时读此页；来源与证据深度同页可查，不是完整 M 的完成声明。 |
 | `research/topics/common_structure/fiber_reflection_rigidity.md` | C345 的加权反射恒等、完整残差下界和同纤维两值锚差估计，含零尺度、零反射和跳跃误差模的处理。用于检查正则尺度如何限制方向，以及区分真实结构推导与旧半和界的再包装；跨值关系承担PPA下降仍开放。 |
 | `research/topics/common_structure/convexified_proximal_paths_obstruction.md` | C359：闭图多值算子的同凸纤维、同全部有限和无限凸化原路径、异真误差界幂。给共同原一般模、全部根、非解初值，用于排查凸化丢失的正则信息。 |
@@ -670,5 +672,5 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [最新应用筛选](发表成果整理/应用优势筛选_结构边界.md)、[规范接收](发表成果整理/本轮模型筛选独立接收.md)、[有限复算](research/code/model_selection_limits/README.md) | 本轮四轴评价、全关系攻击、经典正面淘汰、原例关键角色及具体改稿清单；强应用主例仍未找到。 |
 | [research/canonical/affine_crosstalk_rleb.md](research/canonical/affine_crosstalk_rleb.md) | C271短直线控制设计：每模式唯一真实标量逆、原union多值、完整共同RLEB窗/trueinf/政策终点、参数远门和fixedSPD完整反例；全域原机械能更强，强推荐仍撤回。 |
 
-| [research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md) | C309/C310/C311 的规范正文：一般函数迭代的 PPA 长度预算、LMZ KL 到 exact subgradient PPA 的有限长度重构、目标三的最大单调 MSR 反例及锚定扇区—相对平静性修正版候选。研究非线性收缩、KL 迁移或 (A)+(B) 时先读。 |
+| [research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md](research/canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md) | C309/C310/C311 的规范正文：一般函数迭代的 PPA 长度预算、LMZ KL 到 exact subgradient PPA 的有限长度重构、目标三的最大单调 MSR 反例及锚定扇区—相对平静性修正版候选。C464/EK1–EK10另保proper-lsc全局极小解关系，证明自动H3、含首出球步的KL留域与长度、近端固定点和驻点坏边；不是C311暗改假设。研究非线性收缩、KL迁移、函数值信息或(A)+(B)时先读。 |
 | [research/audit/PPA_NEXT_STAGE_2026-11-17.md](research/audit/PPA_NEXT_STAGE_2026-11-17.md) | 本轮五项交付的研究状态报告：现有定理/G1–G4、LMZ 正式版元数据与 arXiv v1 页码、三个目标问题表、联合路线和 proof obligations。正式刊本全文未取得的边界在此记录。 |

@@ -245,6 +245,145 @@ e_k\le\sqrt{2e_{k-1}\Lambda_{k,k+1}}
 
 **Scope。** KL 证明给出有限长度和点收敛，但不自动给 \(d(x^k,S)\) 的先验线性或非线性速率；也不自动覆盖非次梯度、非 Lyapunov 的原始多值 \(F\)。因此它可以去掉的是“为了有限长度而使用传统 metric subregularity”的一个证明接口，不能写成“去掉一切正则性”。KL 本身是新的正则结构。
 
+<a id="exact-prox-kl-value-bridge"></a>
+### C464：精确全局近端的 KL 转接，不另假设聚点值连续性
+
+本段是独立的充分版本，不更改 C311 原卡的前件。
+已经三席实际终稿复核，状态 derived-checked；这是经典 KL 机制的明确转接，不作新颖性声明。
+[Attouch–Bolte–Svaiter 作者稿](https://bolte.perso.math.cnrs.fr/MPA.pdf)
+（2010-12-15，2011-07-21 修订）§2.2 Definition 2.4（PDF第7页）、
+§2.3 H1–H3（PDF第8页）、Theorem 2.9（PDF第12页，均从1计）是比较依据。
+该定理使用充分下降、输出 limiting 子梯度的相对误差及一个函数值相容聚点，
+并在该点假设 KL；它不要求先有全序列有界性。
+以下先证明这些桥，再直接重构邻域锁定和长度求和。
+
+**EK1 · Exact statement。** 令 \(f:\mathbb R^n\to(-\infty,+\infty]\)
+proper、lsc、全局下有界，\(\lambda>0\) 固定，\(x^0\in\operatorname{dom}f\)。
+每一步允许全部全局近端极小解
+\[
+x^{k+1}\in T_\lambda(x^k):=
+\operatorname*{argmin}_y\{f(y)+\|y-x^k\|^2/(2\lambda)\}.
+\tag{EK1}
+\]
+对每条这样生成的轨道，若它有一个聚点 z 且 f 在 z 具有上述 ABS Definition2.4 的凹型 limiting
+子梯度 KL 性质，则
+\[
+\sum_{k\ge0}\|x^{k+1}-x^k\|<\infty,\qquad
+x^k\to z,\qquad z\in T_\lambda(z),\quad0\in\widehat\partial f(z)\subseteq\partial f(z).
+\tag{EK2}
+\]
+有界轨道是得到聚点的充分条件，不是额外必需的前件。
+全局极小集非空、f 在域上连续、传统误差界及 DD2 的距离积分都未假定；
+KL 和全局极小化结构则确实增加了信息。
+
+**EK2 · 完整极小解、H1 与 H2。** 每个近端目标 proper、lsc、强制，
+所以 \(T_\lambda(x)\) 非空紧；它在非凸时不必单值。
+任意选择都留在 \(\operatorname{dom}f\)。记 \(s_k=\|x^{k+1}-x^k\|\)，
+与 \(x^k\) 比较得
+\[
+f(x^{k+1})+\frac{s_k^2}{2\lambda}\le f(x^k).
+\tag{EK3}
+\]
+故 \(f(x^k)\downarrow f_\infty\in\mathbb R\)、\(\sum s_k^2<\infty\)、\(s_k\to0\)。
+对任意 w 的全局比较还给
+\[
+f(w)\ge f(x^{k+1})+
+ \left\langle\frac{x^k-x^{k+1}}{\lambda},w-x^{k+1}\right\rangle
+ -\frac{\|w-x^{k+1}\|^2}{2\lambda}.
+\tag{EK4}
+\]
+因此选中方向 \(v_{k+1}=(x^k-x^{k+1})/\lambda\)
+属于 Fréchet 子梯度，因而属于 limiting 子梯度。
+这精确给 H1 的 \(1/(2\lambda)\) 和 H2 的 \(1/\lambda\)，
+并对完整输出纤维保 \(r_{\partial f}(x^{k+1})\le s_k/\lambda\)。
+没有将完整真残差反过来认作选中方向的范数。
+
+**EK3 · H3 自动桥。** 设 \(x^{k_j}\to z\)，取下标正且趋无穷。
+lsc 给 \(f(z)\le f_\infty<\infty\)。
+因为 \(s_{k_j-1}\to0\)，前驱 \(x^{k_j-1}\to z\)。
+在该前驱的全局子问题中比较 z，
+\[
+f(x^{k_j})+\frac{s_{k_j-1}^2}{2\lambda}
+ \le f(z)+\frac{\|z-x^{k_j-1}\|^2}{2\lambda},
+\]
+于是 \(f_\infty\le f(z)\)。故 \(f(x^k)\to f(z)\)，
+尤其这个聚点满足 H3；没有偷加 f 的连续性。
+该桥使用全局比较，不能只由一般驻点 inclusion 推出。
+
+**EK4 · KL 邻域和有限尾。** 记 \(r_k=f(x^k)-f(z)\ge0\)。
+取 KL 邻域中的球 \(B(z,\delta)\)、能级窗 \(0<r<\eta\)，以及连续凹
+\(\vartheta:[0,\eta)\to[0,\infty)\)，
+\(\vartheta(0)=0\)、正尺度 C¹、\(\vartheta'>0\)，满足
+\(\vartheta'(f(x)-f(z))\,d(0,\partial f(x))\ge1\)。
+若某个 \(r_k=0\)，下降式 EK3 及下界 \(f(z)=f_\infty\) 迫所有之后的步为零；
+否则在邻域内的 \(x^k\)，\(k\ge1\)，KL 及 EK4 给
+\(\vartheta'(r_k)\ge\lambda/s_{k-1}\)，其中 \(s_{k-1}>0\)。
+用凹性和 EK3，
+\[
+\Delta_k:=\vartheta(r_k)-\vartheta(r_{k+1})
+ \ge\frac{s_k^2}{2s_{k-1}},\qquad
+s_k\le\tfrac12s_{k-1}+\Delta_k.
+\tag{EK5}
+\]
+沿上述聚点子列选 N 足够大，使 \(0<r_N<\eta\) 且
+\[
+\|x^N-z\|+s_{N-1}+2\vartheta(r_N)<\delta .
+\tag{EK6}
+\]
+若从 N 到 M 的点已在球内，对 EK5 求和便有
+\[
+\sum_{k=N}^{M}s_k
+ \le s_{N-1}+2\vartheta(r_N)-s_M-2\vartheta(r_{M+1})
+ \le s_{N-1}+2\vartheta(r_N).
+\tag{EK7}
+\]
+这又使 \(x^{M+1}\) 留在同一个球内；函数值下降保能级窗。
+从 N 开始归纳，即无循环地锁定全部尾部，并得到可和长度。
+有限头部不影响结论，且已有聚点 z 迫唯一点极限就是 z。
+之后同一求和还给
+\(\sum_{k\ge N}s_k\le s_{N-1}+2\vartheta(r_N)\)。
+这是函数值势和前一步信息，不是只看 \(t_k=d(x^k,S)\) 的势。
+
+在原全局近端比较中固定任意 w，再令 k 趋无穷，由函数值与点收敛得
+\[
+f(z)\le f(w)+\|w-z\|^2/(2\lambda).
+\tag{EK8}
+\]
+所以 \(z\in T_\lambda(z)\)，并由这个二次支持得
+\(0\in\widehat\partial f(z)\)。事实上只用 EK3 的聚点子列，
+此近端固定点结论就已成立，不依赖 KL。
+它不宣称 z 为 f 的全局极小点：例如 \(f(u)=(u^2-1)^2\)、\(\lambda=1/4\)
+在 z=0 的近端目标为 \(u^4+1\)，故0是唯一近端固定输出，
+却是 f 的严格局部极大点。若 DD2 另指定某个闭
+\(S\subseteq\operatorname{zer}\partial f\)，
+仍须另证 \(d(x^k,S)\to0\) 或 z 属于 S，不能只凭临界性识别指定目标。
+
+**EK5 · 不是全部驻点 resolvent 的定理。** 即使 \(f(u)=(u^2-1)^2\)
+光滑多项式、\(\lambda=1\)，输入 x=1 与输出 y=-1/2 也满足
+\(x-y=f'(y)=3/2\)，故是完整 \(J_{\partial f}\) 的真实一条边；
+但
+\[
+f(y)+\tfrac12|x-y|^2=\tfrac{27}{16}>f(x)=0 .
+\tag{EK9}
+\]
+它违反 H1，且不是全局近端极小解，所以不能据此边套用上述证明。
+要严格否定全部驻点选择的有限长度，还可在同一个 f、λ1 上取
+\[
+r=1/\sqrt2,\qquad
+r\longmapsto-r\longmapsto r,\qquad
+f'(\pm r)=\mp2r .
+\tag{EK10}
+\]
+两条边都满足原完整 inclusion，形成实际二周期；每步长度 \(2r>0\)。
+两个聚点的导数均非零，在各自小邻域有 \(|f'|\ge c>0\)，
+取线性解奇函数 \(\vartheta(u)=u/c\) 即直接验证那里的 KL 性质。
+所以即使轨道有 KL 聚点，完整驻点选择仍可无限长且不收敛，
+失败前件正是全局极小化及其下降桥，而非文献定理本身。
+对一般 F 需要另有同一函数的下降、相对误差和聚点值桥；
+不能把 EK1 的允许关系偷换成完整驻点 resolvent。
+多值极小解也不因偶遇一个零步就强制永久驻定；
+上面的驻定论证明确使用已到达该轨道的极限能级。
+
 <a id="c310-nogo"></a>
 ## 5. C310：旧条件不自动生产输出相对步长界
 

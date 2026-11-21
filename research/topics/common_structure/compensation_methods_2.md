@@ -670,6 +670,117 @@ r_F(a,b)=\sqrt{|g(b)|^2+\inf_{h\in H(b)}\|h\|^2},
 
 
 
+<a id="self-contracted-tail-boundary"></a>
+### C463：凸原近端的几何尾界与维数障碍
+
+**身份与来源。** 这是上述试验的定量转接和边界补证，已经三席实际终稿复核，登记为 derived-checked；不认定公开新颖性。
+文献事实只取 Daniilidis–David–Durand-Cartagena–Lemenant
+[arXiv:1211.3227v1](https://arxiv.org/pdf/1211.3227) 的
+§2 式(2.2)、Definition 2.1（印页5）、Definition 2.5（印页6）及
+Theorem 3.3、式(3.5)（印页9）：曲线可不连续，其长度按总变差计；
+有界自收缩曲线满足 \(\ell(\gamma)\le C_n W(K)\)，
+\(K=\overline{\operatorname{conv}}\gamma(I)\)，\(W\) 为归一化平均宽度。
+该定理的证明用未来凸包宽度差；本路线不用 DD2 的距离积分模板，
+但不能称为排除一切势或望远镜机制。下面两部分为本库逐步重构。
+
+**SC1 · 有限维合同。** 对每个 \(n\ge1\)、proper lsc 凸函数
+\(f:\mathbb R^n\to(-\infty,+\infty]\)，固定
+\(S=\operatorname{argmin}f\ne\varnothing\)、\(\lambda>0\)。
+取完整 \(F=\partial f\) 和任意 \(x^0\in\mathbb R^n\) 的全部精确近端迭代。
+每个子问题因 \(f\ge\min f\) 而强制，且强凸，故全域存在唯一
+\[
+x^{k+1}=\operatorname*{argmin}_z
+ \{f(z)+\|z-x^k\|^2/(2\lambda)\},\qquad
+v_{k+1}=(x^k-x^{k+1})/\lambda\in\partial f(x^{k+1}).
+\tag{SC1}
+\]
+因此这里确为完整 resolvent，不是从驻点中挑一个好分支。
+记 \(t_k=d(x^k,S)\)、\(s_k=\|x^{k+1}-x^k\|\)，
+\(K_k=\overline{\operatorname{conv}}\{x^i:i\ge k\}\)。结论为
+\[
+\sum_{i\ge k}s_i\le C_n W(K_k)
+ \le C_n\operatorname{diam}\{x^i:i\ge k\}\le2C_n t_k,\qquad
+x^k\longrightarrow x_*\in S .
+\tag{SC2}
+\]
+常数只依赖维数；没有假设 \(\psi\)、KL 或某个距离积分可积。
+目标在此是完整极小点集，不能自动替换为它的真子集。
+
+**SC2 · 到所有未来点的比较。** 对 \(j\ge i+1\)，
+子梯度不等式及函数值下降给
+\[
+\langle x^i-x^{i+1},x^{i+1}-x^j\rangle
+ \ge\lambda[f(x^{i+1})-f(x^j)]\ge0,
+\quad
+\|x^i-x^j\|^2\ge\|x^{i+1}-x^j\|^2+s_i^2.
+\tag{SC3}
+\]
+从 i 累加到任意中间下标即得三点自收缩。
+初点不在 \(\operatorname{dom}f\) 也不妨碍此式：比较的函数值均从 \(x^1\) 起有限。
+同样对任意 \(p\in S\) 有
+\(\|x^{i+1}-p\|^2+s_i^2\le\|x^i-p\|^2\)。
+在尾起点取 \(p\in P_S(x^k)\)，全尾落在半径 \(t_k\) 的同一个球内。
+
+现在直接取阶梯曲线 \(\gamma_k(u)=x^{k+\lfloor u\rfloor}\)，\(u\in[0,\infty)\)。
+它满足原文的区间参数定义和三点不等式。任意有限剖分的跳跃由原步的
+三角不等式控制，而整数剖分取回全部有限前缀，故其总变差恰为
+\(\sum_{i\ge k}s_i\)。定理3.3遂给 SC2 的长度界：
+每个方向的投影宽度不超过直径，闭凸包不增加直径。
+这里无需从离散自收缩擅自推断任意插值自收缩。
+有限长给点极限；固定 \(\lambda\) 给 \(v_{k+1}\to0\)，而对固定 \(p\in S\)
+\[
+0\le f(x^{k+1})-f(p)
+ \le\langle v_{k+1},x^{k+1}-p\rangle\longrightarrow0 .
+\]
+由 lsc 得 \(x_*\in S\)。完整真残差还满足
+\(\sum_{i\ge k}r_F(x^{i+1})\le\lambda^{-1}\sum_{i\ge k}s_i\)。
+不导入旧稿 Theorem 4.17 的更宽表述；有界性已由本合同的非空极小集独立证明。
+
+**SC3 · 比距离积分多用了什么。** SC3 比每边存在一个最近输入锚强：
+它控制全部未来轨道点，来自同一个凸函数的次水平集结构。
+[C456](../dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)
+的 \(f(x)=\|x\|^{m+1}/(m+1)\)、\(m\ge2\) 已给精确真模
+\(\psi(\rho)=\rho^{1/m}\)：所有正可测有效实际步下界的默认积分发散，
+真实尾仍恰为 \(t_k\)。故绕过积分模板具有实际收益；
+该径向例本身仍有距离势 t，不能用它否定全部距离势。
+任意单调原图、任意驻点分支或一般 Hilbert 空间不属于 SC1 的长度结论。
+
+**SC4 · Hilbert 空间的完整凸反例。** 令 \(H=\ell^2\)，
+\(A=\operatorname{diag}(2^{-j})_{j\ge1}\)，
+\[
+f(x)=\tfrac12\langle Ax,x\rangle
+ =\tfrac12\sum_{j\ge1}2^{-j}x_j^2,\quad
+F(x)=\partial f(x)=\{Ax\},\quad S=\{0\},\quad\lambda=1 .
+\tag{SC4}
+\]
+A 有界、正、自伴且核为零；f 全域连续可微凸，零点和极小点都精确为0。
+对每个 \(x\in\ell^2\)，令 \(q_j=(1+2^{-j})^{-1}\)、\(y_j=q_jx_j\)。
+则 \(y\in\ell^2\)、\((I+A)y=x\)，且对每个 z，近端目标差恰为
+\(\tfrac12\langle(I+A)(z-y),z-y\rangle\ge\tfrac12\|z-y\|^2\)。
+所以完整近端在全域存在且唯一；不是形式坐标迭代。
+
+取 \(x_j^0=1/j\)，则 \(x_j^k=q_j^k/j\)。逐坐标趋零及
+\(|x_j^k|^2\le j^{-2}\) 的支配收敛给 \(x^k\to0\)。
+但置 \(m_j=2^j\)，互不相交的时间块 \(m_j\le k<2m_j\) 满足
+\[
+\sum_{k=m_j}^{2m_j-1}\|x^{k+1}-x^k\|
+ \ge \frac{q_j^{m_j}-q_j^{2m_j}}j
+ =\frac{q_j^{m_j}(1-q_j^{m_j})}j
+ \ge\frac1{2ej}.
+\tag{SC5}
+\]
+末式来自 \(2\le(1+1/m_j)^{m_j}\le e\)；下界用二项式，
+上界用 \(\log(1+u)\le u\)。对这些时间块求和，真实总长无限。
+因此即使全域光滑凸二次、固定正步长、完整唯一近端、强点收敛和自收缩
+都成立，仍不能删掉 SC1 的有限维前件。
+
+此例不反驳带有零端消失原误差模的 DD2：固定 \(a>0\)，输出 \(ae_j\)
+的真残差为 \(a2^{-j}\to0\)，而距离始终为 a；
+其输入为 \((1+2^{-j})ae_j\)，取 \(a\le2R/3\) 即在整个 R 窗内。
+故该完整 Hilbert 图没有这样的统一零端误差模。
+要反驳“全锚 Fejér 加原零模就够有限长”，应使用 C456 的二维旋转，
+而不能把本维数反例偷换到不同数据类。
+
 <a id="majorant-original-step"></a>
 ## 试验 12：用线性端点余量支付非线性变化
 

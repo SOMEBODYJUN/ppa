@@ -851,6 +851,12 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 
 下表只登记原文提出或已证的事项，以及本仓库作出的具体对照。任何未核穷的优先性均保留。
 
+<a id="lit-dd2-alternative-length"></a>
+### 不依赖 DD2 指定距离势的两条已知机制
+
+- **Paper Fact：有限维自收缩。** Daniilidis–David–Durand-Cartagena–Lemenant，[arXiv:1211.3227v1](https://arxiv.org/pdf/1211.3227)，2012-11-14唯一存档版；式(2.2)、Definition2.1（印页5）按总变差定义长度和归一化平均宽度，Definition2.5（印页6）允许不连续的区间参数曲线；Theorem3.3、式(3.5)（印页9）给长度至多维数常数乘轨迹闭凸包的平均宽度。其证明式(3.6)使用未来凸包宽度差。**本库转接**：[C463](topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary)独立证凸原近端的阶梯曲线自收缩、全锚有界及尾界 \(2C_nt_k\)。原文 Proposition4.16（印页22）为折线对照，不作必需前提；不导入旧 Theorem4.17 的更宽收敛措辞。本库 \(\ell^2\) 完整凸二次反例独立证明不能删有限维，不认定其优先权。
+- **Paper Fact：KL 的完整前件。** Attouch–Bolte–Svaiter，[作者稿](https://bolte.perso.math.cnrs.fr/MPA.pdf)，2010-12-15、2011-07-21修订；Definition2.4（PDF第7页）、§2.3 H1–H3（PDF第8页）、Theorem2.9（PDF第12页，均从1计）给二次充分下降、输出 limiting 子梯度相对误差及函数值相容聚点，加该点 KL 后的有限长和临界点收敛。不要求 f 在其域连续，也不要求在该定理前先有整个轨道有界。**本库转接**：[C464](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge)用固定步全局极小化直接证明H1/H2，前驱比较聚点证明H3，再自足锁住KL邻域求和；不将非凸驻点 resolvent 代替全局极小解关系，不将自身近端固定点等同全局极小点。
+
 <a id="lit-dd2-design-baselines"></a>
 ### 方向、参数和精度设计的新增比较入口（2026-11-21）
 

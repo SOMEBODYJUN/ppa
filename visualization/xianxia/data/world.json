@@ -11278,6 +11278,28 @@
       "y": 5151,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-CONVEX-GEOMETRIC-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD2-EXACT-PROX-KL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14364,6 +14386,14 @@
     "E774": {
       "x": 2201.48,
       "y": 5103.13
+    },
+    "E775": {
+      "x": 1613.07,
+      "y": 5198.8
+    },
+    "E776": {
+      "x": 1833.07,
+      "y": 5286.29
     }
   },
   "bounds": {

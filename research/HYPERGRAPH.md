@@ -1324,6 +1324,18 @@
 | --- | --- | --- | --- |
 | E774 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) | conditional → [DD1-LIMIT-SELECTION-STABILITY · C462 完整DD1二次点率与非Hölder极限选择](topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability) | C462-v1：H=R²,λ1,S=R×0,B=R=1/4,T(p,r)=(p+B min(sqrt(p+),\|r\|),r\|r\|/(1+\|r\|)),完整F=T逆−I全域连续单值非单调且exactzeroS。全部\|r\|≤R输入有唯一完整输出、rho=s、a≤rho/4、最近锚积≥−t²/16、零驻定与整带不变；L1/4,sigma1/16,DD1因子3/sqrt136<1。共同尾≤sqrt17 tk/3≤sqrt17 R^(2^k)/3，P连续回缩；每个非零法向轨道真实点误差Q2，p初值≤0比值1，p>0比值4/sqrt17。固定同r0=1/8、切向微扰epsilon的极限差在常数乘exp(−C sqrt(log1/epsilon))与exp(−c sqrt(log1/epsilon))之间，故非零初值处任意正阶两点Holder失败。r0可任意近零但固定后比较；不否定零点calmness或DD1收敛。原线性EB常数和统一sigma最小均核；未称最优根对数常数、独立代理复核或公开新颖性。；**derived-checked** |
 
+## DD2 距离势之外的凸几何
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E775 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-CONVEX-GEOMETRIC-TAIL · C463 凸原近端无误差界几何尾与Hilbert维数障碍](topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary) | C463-v1：有限n、proper lsc凸f、S=完整非空argmin、λ固定、全域完整F=∂f及全部近端。未来点内积给阶梯自收缩，全锚给有界；已核arXiv1211.3227v1 Thm3.3与(2.2)/Defs2.1,2.5给Lk≤CnW(Kk)≤2Cntk，点趋S，未假定ψ/KL/距离积分。ℓ²正对角二次、λ1、初坐标1/j的完整唯一prox强趋0，但不交时间块每块长度≥1/(2ej)，故不能去有限维；该反例无零端整窗EB。不扩到一般单调图/非凸驻点/指定子目标。凸包宽度仍是几何支付，无新颖性认定。；**derived-checked** |
+
+## DD2 距离势之外的全局极小化KL
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E776 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-EXACT-PROX-KL · C464 精确全局近端自动H3与KL真实有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge) | C464-v1：R^n,proper lsc全局下有界f,λ固定,x0∈domf，所有全局prox极小解选择；每轨有一个标准limiting KL聚点z，则长度有限且点趋z∈Tλ(z),0∈Fréchet∂f(z)。全局最小化给H1、实际方向Fréchet/H2；平方和+前驱比较z给自动H3，任意强聚点的自身prox固定无需KL。凹KL递推含首出球步并锁域后望远镜，尾≤s前一步+2ϑ能级。无先验全轨有界/域连续/误差界要求，仍以该轨存在KL聚点为适用前件。多值全局prox不等于全部驻点J；四次多项式坏边破H1，±1/√2驻点二周期有非临界KL聚点而长度∞，0固定可为严格局部最大，指定闭S另识别。不改C311，不宣称新颖。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
