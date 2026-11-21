@@ -3550,7 +3550,7 @@
 - **Status**：`derived-checked`。近极小完整图值的 lift 证明、只选单支的反例、块完成平方及 Schur 补可计算门已逐式核对。结论只适用于写明的覆盖、工作窗和完整真残差量词，不宣称对任意近似扩大算子自动成立。
 - **Exact Statement / Objects / Domain / Quantifiers**：在有限维 Hilbert 空间、闭目标 (S)、允许边集 \(\mathscr E\) 和连续非减输出模 \(\psi\) 下，若每个近极小 (q\in G(y)) 的输入 (x=y+q) 落在工作窗并属于 \(\mathscr E\)，且该边满足 (d(y,S)\le\psi(\|q\|))，则完整真残差 (r_G(y)=\inf_{q\in G(y)}\|q\|) 满足 (d(y,S)\le\psi(r_G(y)))。若只选一支，\(G(y)=\{y,y^3\}\) 给出线性选定支而 \(r_G(y)=|y|^3\)，所以完整界失败。
 - **Matrix gate**：若原始—对偶块满足 \(\langle d,y\rangle\ge\langle d,Md\rangle+\langle y-\mathcal Kd,N(y-\mathcal Kd)\rangle\)，则任意 \(W\succ0\) 给出 \(V=N-W\)、\(U=M+\mathcal K^*(N-NW^{-1}N)\mathcal K\) 及精确平方余量。对退化预条件 \(P=CC^*\)，\(U+\sigma P\succeq0\) 与 \(C^*VC\succeq\eta I\)、\(\eta>-1/2\)，接上实际锚缺陷即可得到 DD2 正耗散。选择 \(W,\sigma,\eta\) 的有限维门等价于 Schur 补 LMI，因此可逐实例认证。
-- **Scope / Objections**：近极小 lift 是存在量词，不能给允许任意坏图值的算法提供全轨道结论。只知道 \(U\succeq-\sigma P\) 时负位置项可能是二阶距离量，仍须额外吸收。最优 LMI 值和一般非线性、非分离分裂的统一性留作开放扩展。
+- **Scope / Objections**：近极小 lift 是存在量词，不能给允许任意坏图值的算法提供全轨道结论；P2-A-3 的闭图反例表明，即使坏的近极小值落在输入窗内，若允许关系排除它，完整真残差界仍会失败。只知道 \(U\succeq-\sigma P\) 时负位置项可能是二阶距离量，仍须额外吸收。最优 LMI 值和一般非线性、非分离分裂的统一性留作开放扩展。
 - **Evidence / Related Files**：[P2 覆盖与矩阵审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)、[矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-matrix)、[DD2 双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)、[CP/DR 分量证书](research/topics/dd2/splitting.md#dd2-splitting-component)。
 
 
