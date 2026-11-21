@@ -11123,6 +11123,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-TARGET-LIMIT-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14157,6 +14168,10 @@
     "E761": {
       "x": 911.4,
       "y": 5649.12
+    },
+    "E762": {
+      "x": 822.59,
+      "y": 5740.78
     }
   },
   "bounds": {

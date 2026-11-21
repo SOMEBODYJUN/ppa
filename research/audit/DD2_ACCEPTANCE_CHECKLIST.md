@@ -273,7 +273,12 @@
   - **证据** [S04.06 正向传递、原模门和参数/评价点 RZ1–RZ5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)、[C449 完整纤维与实际链 RT1–RT5](../topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)、[C448-A 距离趋零而真残差不趋零](../topics/dd2/asymptotic_regularity.md#dd2-distance-zero-without-regularity)、[C448-B 原模的零端跳跃](../topics/dd2/asymptotic_regularity.md#dd2-regularity-without-distance-zero)、[C78/C79 完整绝对值次梯度](../topics/examples/absolute_value_subgradient.md#av-prox)、[C408 近极小完整图 lift](DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)、[PPPA 原空间实际值与全部纤维](../topics/dd2/pppa_recovery.md#dd2-pppa-gauges)。
   - **复核** 三席完成四项数学自检后，分别独立重构充分条件、完整反例和参数/残差类型。已有真残差例与逐尺度添边机制已查重；固定 \(\lambda\)、变 \(\lambda\) 及松弛评价点分开。三席已复读真实最终 RZ1–RZ5、RT1–RT5、身份卡、图边与本记录；原域空前缀/孤立零、真残差零项、最佳前缀小 o、参数比值的充分性及三个评价点均校准。C449 完整纤维、闭图、精确零集、全选择覆盖与实际坏链逐式核准；C448 节点的已签状态字段同步纠正，不改其数学身份。
 
-- [ ] `S04.07` 何时能确认极限属于指定的 `S`，而不只是 `\operatorname{zer}F`？
+- [x] `S04.07` 何时能确认极限属于指定的 `S`，而不只是 `\operatorname{zer}F`？
+  - **裁决** Proved
+  - **结论** E0 的闭目标下，强聚子列到同一 \(S\) 的距离趋零直接使该聚点在 \(S\)，无需图闭；整列已有范数极限时，限点入 \(S\) 恰等价距离趋零。完整真残差趋零时，相应强/弱零值图闭可识别 \(\operatorname{zer}F\)，这组等价条件只对全部相应点列量化，不作成功固定轨道的必要条件；同目标误差证书或相关范围零点包含可再识别 \(S\)。另有受检恒等极限边加 \(\psi(0)=0\) 的入口，不需穿孔连续。C450 以全部轨道有限长的完整模型分别攻击允许边闭性、限点仍受检及跨点零值闭性，坏链距离趋 1。Hilbert 扩展分别核弱序列闭或 demiclosedness；物理 \(S^*\) 与投影 \(C^*S^*\) 的识别不互换，也不以聚点识别代替点收敛。
+  - **证据** [S04.07 强/弱识别、自环门及范围 TI1–TI7](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)、[C450 完整纤维及全轨道分类 ID1–ID7](../topics/dd2/target_identification.md#dd2-target-identification-boundaries)、[原模的零端门](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)、[AT5 的额外零点与受检恒等边](../canonical/dd2_function_hypotheses.md#fh-attainment-closed-fiber)、[开位置窗不保限点](../topics/dd2/dd1_recovery.md#dd1-localization-scope)、[C404 非闭投影和双影子](../topics/dd2/pppa_recovery.md#dd2-pppa-recovery)、[C447 的非唯一强聚点](../topics/dd2/core.md#dd2-bounded-linear-trajectory)。
+  - **复核** 三席先完成四项数学自检，再独立重建强极限、弱拓扑与完整图边界；ID1–ID7 的原纤维、闭/非闭图、全窗 E0、全部选择及有限长分类已核。三席已复读最终 TI1–TI7、ID1–ID7、身份卡、图边、失败记录及本项四字段；强/弱闭性、全点列等价与固定轨道充分性、含零与穿孔原模、输出残差索引均校准。A/B 与 C 的零集和图闭身份不互授；物理识别显保同子列的可见极限和所选图值，并按目标拓扑区分闭性。
+
 - [ ] `S04.08` 是否能够允许没有传统线性收敛率的迭代？
 - [ ] `S04.09` 是否能够覆盖有收敛率但没有固定收缩系数的情况？
 - [ ] `S04.10` 是否能够得到更一般的、无法由简单幂次描述的收敛过程？

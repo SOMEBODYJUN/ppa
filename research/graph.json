@@ -5538,6 +5538,12 @@
       "label": "C449 完整真残差几何趋零而所选步不趋零",
       "file": "topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-TARGET-LIMIT-SEPARATION",
+      "label": "C450 有限长极限的指定目标与零值闭性缺口",
+      "file": "topics/dd2/target_identification.md#dd2-target-identification-boundaries",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14270,6 +14276,17 @@
       "output": "DD2-TRUE-RESIDUAL-SEPARATION",
       "relation": "conditional",
       "scope": "固定 H=ℝ²、λ=1、U=H、R=1、S=ℝ×{0}，z_k=(k,2^(−k))，完整 J(u,v)={(u,0),(u,v/2)} 加 z_k→z_{k+1}，F=J逆−I且允许全部完整边。J/F闭且处处非空，精确零集、零驻定；全域真rho(u,v)=|v|，链正输出纤维含短(0,v)及长(−1,v)。原psi(r)=r、Phi(0)=0及正尺度Phi=−1使整个U_R的E0成立，全部完整边a≤t/2，且对半边每尺度达到；全部窗内初值和全部轨道距离及真残差几何趋零，但沿同一链实际所选值的范数与实际步均趋1。保C448-A全部边而不改其身份；目标由固定图认证，不是自由反向预算。只给存在无界坏链，不声称单值或单调/优化子类反例。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E762",
+      "topic": "DD2 指定目标的极限识别",
+      "inputs": [
+        "D01"
+      ],
+      "output": "DD2-TARGET-LIMIT-SEPARATION",
+      "relation": "conditional",
+      "scope": "H=ℝ、λ=1、S={0}、R=2、b_k=1+2^(−k)，原Phi=0、psi(0)=0及psi(r>0)=2，原域[0,∞)、Vpsi=H，不附D04原点连续。A/B共同完整J=P_{0}+链b_k→b_{k+1}+极限自环(1,1)，F=J逆−I闭，完整近端全域覆盖，Z={0,1}。A取U=H只删允许自环、不改F；B取完整允许J及U=ℝ\\{1}。各自全部窗内边满足E0、正距离严格下降、零驻定、全选择覆盖/留域；所有轨道有限长度≤|x0|且强收敛0或1，实际步/真残差趋0，但指定整链趋1∈Z\\S且总长1。C另改母J为P0+同链+窗外3→1、U=H且允许完整J；所有纤维闭、F(1)={2}、Z=S，窗口边及全选择长度均不变，但整链极限1非零点，母图不具零值闭性。三者分别攻击极限边允许性、限点受检性和跨点零值闭性；不声称距离趋零或共同连续目标，也不否定闭S+距离趋零的识别。",
       "status": "derived-checked"
     }
   ]

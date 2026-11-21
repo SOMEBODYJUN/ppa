@@ -3536,6 +3536,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间，非零有闭值域的 \(P=CC^*\)、\(G=(C^*A^{-1}C)^{-1}\)、全范围受限图 \(A_{\mathcal R}\)。原 \(P\)-最近锚内积与约化同一锚精确恒等。\(r_G(w)=\inf_{C^*y=w,a\in A_{\mathcal R}(y)}\|C^{-1}a\|\)。原范数下的局部一般真误差界，经足够近的完整残差 lift 传为 \(\|C\|\psi(\|C\|\cdot)\)；\(P\)-距离入口省前置因子；输入模再加恒等。
 - **Conclusion / Boundaries**：对已收敛的约化轨道，闭目标可直接负责投影识别。有界物理影子与零值 demiclosedness 给同一零纤维上的聚点，唯一纤维给弱收敛，有限维同条件给强收敛。局部锚定恢复传点率，沿边的二点恢复传物理长度。有限维近输入低残差的全 lift 也可由局部有界、零值外半连续和唯一纤维取得。非闭投影目标、非唯一纤维、弱而非强、强而无限长及原误差界逆向均有完整反例。
 - **Evidence / Related Files**：[全纤维传递、恢复证明和反例](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)。集合值约化式及原二次恢复条件定位 Alcantara v1 第 4 节。与 C402 的方向版本合用仍须逐模型核其约化输入条件。
+- **S04.07 目标层复核**：[指定目标验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)明确非闭投影例不属 core E0 的闭目标版本；双影子例取 \(S^*=\{(0,1)\}\) 并始终选负核分支，投影仍归 \(C^*S^*=C^*Z\)，物理极限却不在指定 \(S^*\)。这只特化原完整图的选择，不改变本卡恢复定理的原假设。
 
 <a id="c405"></a>
 ## C405-v1 · 分量误差界、非零位置模与 CP／DR 物理长度
@@ -3958,3 +3959,15 @@
 - **Quantifiers / Conclusion — 实际轨道**：对任意 \(x^0\in U_R\) 及每条完整选择轨道，均可无限续接，\(t_k\le2^{-k}t_0\)、\(\rho_k=r_F(x^{k+1})=t_{k+1}\le2^{-k-1}t_0\)，距离窗不变。但从 \(x^0=z_0\) 永远选择链有 \(x^k=z_k\)、所选 \(v_k=(-1,2^{-k-1})\)、实际 \(s_k=\|v_k\|\to1\)，所以完整真残差趋零不保证所选值或实际步趋零。全部轨道的好残差与存在坏长步轨道是不同量词。
 - **Dependencies / Evidence**：D01 的原图反演与完整真残差，E0 的原允许边合同；[RT1–RT5](research/topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)独立计算全部前像、闭图、零集、锚积和实际链。垂向对半底图与投影底图均闭，特殊链横向逃逸；原 C448-A 的全部边保留，所选链向量不变，而该链正输出的完整残差由原 \(s_k\) 降为 \(2^{-k-1}\)。
 - **Counterevidence / Objections / Scope / Related Files**：这是新完整图，不修改 C448 身份；扩图增加可选边及非空纤维，不仅改变一个标量。固定图有效目标不冒充原数据的自由反向预算；本例缺陷不满足 DD1 比例兼容。坏链无界，原关系多值，不反驳额外单值、全对单调、优化来源或选择近极小条件。未认定公开新颖性。[S04.06](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)给固定参数正向传递、原模零端的标量充要门及不同参数/评价点边界；[F160](FAILED_ROUTES.md#f160)保存不可逆机制。
+
+<a id="c450"></a>
+## C450-v1 · 有限长极限的允许恒等边、认证窗与零值闭性分离
+
+- **Status**：`derived-checked`。三路独立重构并复读实际 ID1–ID7、强/弱识别正文、全部纤维、允许/窗口量词、身份卡及图边；相关范围包含和误差路线已分清，无未决承重异议。
+- **Exact Statement / Objects / Domain / Definitions**：固定 \(H=\mathbb R,\lambda=1,S=\{0\},R=2,b_k=1+2^{-k}\)。A/B 共同完整母图 \(J(x)=\{0\}\cup\{b_{k+1}:x=b_k,\ k\ge0\}\cup\{1:x=1\}\)，完整 \(F(y)=\{x-y:y\in J(x)\}\)。原域 \(D_\psi=[0,\infty)\)，\(\Phi=0\) 于 \([0,2]\)，\(\psi(0)=0,\psi(r)=2\) 于 \(r>0\)，输出位置窗 \(V_\psi=H\)。所有距离都针对指定 \(S\)，不改为整个零集。
+- **Conclusion — A/B 的共同完整图**：\(J_F=J\) 全域非空，\(J,F\) 都闭；\(F(0)=\mathbb R,F(1)=\{0\},F(b_{k+1})=\{2^{-k-1}\}\)，其余纤维为空。因此 \(Z=\operatorname{zer}F=\{0,1\}\supsetneq S\)。完整原 \(F\) 不被声称处处有值。
+- **Quantifiers / Assumptions — A/B**：A 取 \(U=H\)，仅从允许关系删去完整母边 \((1,1)\)，不改完整 \(F\)；B 取 \(U=H\setminus\{1\}\)，允许关系等于完整 \(J\)。两者各自整个 \(U_R\) 的所有允许边都满足 E0，零输入驻定，覆盖非空且所有输出留在各自 \(U_R\)。全部正距离边严格下降，有效共同目标 \(A(t)=0\) 于 \([0,1]\)、\(A(t)=(1+t)/2\) 于 \((1,2]\)。A 的允许图不闭；B 的完整母图闭但极限输入 1 在认证窗外。
+- **Quantifiers / Conclusion — A/B 的轨道**：对任意窗内初值及每条允许选择，轨道可无限续接、总长不超过 \(|x^0|\)、实际步与完整真残差趋零、点收敛到 0 或 1。但从 \(x^0=b_0=2\) 永远选择链时，\(x^k=b_k\to1\in Z\setminus S,t_k\to1,s_k=\rho_k=2^{-k-1},\sum s_k=1\)。投影选择可成功，不称全部选择都识别失败。
+- **Exact Statement / Conclusion — C 是另一完整母图**：改用 \(J_\flat(x)=\{0\}\cup\{b_{k+1}:x=b_k,\ k\ge0\}\cup\{1:x=3\}\)，\(F_\flat=J_\flat^{-1}-I\)，\(U=H\)、允许全部完整 \(J_\flat\)，其余函数和窗口不变。每个纤维闭，且 \(F_\flat(1)=\{2\}\) 非空，精确 \(\operatorname{zer}F_\flat=S\)。输入 3 在窗外，所以窗内 E0、覆盖、所有选择留域及有限长分类完全保留；同一链强趋 \(1\notin\operatorname{zer}F_\flat\)。完整图缺少 \((1,0)\) 的零值闭性，不继承 A/B 的闭图身份。
+- **Dependencies / Evidence**：D01 的完整近端反演和真残差，core E0 的一般原模及允许图量词。[ID1–ID7](research/topics/dd2/target_identification.md#dd2-target-identification-boundaries)逐项给图闭/非闭、全部纤维、唯一遗漏极限对、锚积、工作窗和全轨道长度望远镜。A/B 缺的完整恒等对有 \(a=1>\psi(0)\)，C 的 \((b_{k+1},2^{-k-1})\to(1,0)\notin\operatorname{gph}F_\flat\) 是显式跨点断口。
+- **Counterevidence / Objections / Scope / Related Files**：坏链距离趋 1，不反驳闭 \(S\) 加距离趋零的目标识别。指定 \(A\) 来自固定图且失败于 C418 的右侧门，不冒充自由预算或连续比较曲线。原模零端跳跃，不调用 D04 的原点连续 gauge，不符合 C401 的连续零端或 C419 的正位移下界/长度合同。未认定公开新颖性。C446、C448-B 的旧坏轨道分别无整条点极限或无界，身份不变。[S04.07](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)、[F161](FAILED_ROUTES.md#f161)保存正面识别路线与删项机制。

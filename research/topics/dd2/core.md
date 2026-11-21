@@ -29,7 +29,7 @@ r_F(y)=\inf_{v\in F(y)}\|v\|.
 \]
 其中 \(t=d(x,S),s=\|x-y\|\)。同一个 \(p\) 用于该边全部几何推导，可以依赖 \(x,y\)；不要求所有最近锚或所有零点均满足条件。若误差界另有位置窗 \(V_\psi\)，还要求每个受检输出 \(y\in V_\psi\)。这里不预设 \(y\in U_R\)。完整图值只给 \(0\le\rho\le s/\lambda\)；残差不必取到。 [C449 的完整轨道](asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)表明，即使真残差对全部选择几何趋零，也不能逆推实际所选值或步长趋零；[固定参数与其他评价点的传递](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)另核缩放。
 
-一步版不要求 \(\mathcal J(x)\ne\varnothing\)。要保证轨道续接，另加对所有 \(x\in U_R\) 的非空覆盖，并由下列预算证明下一输入留域。只有 \(\mathcal J=J_{\lambda F}\) 在整个受检窗逐点相等时，结论才量化全部原近端选择。没有公共的单值、连续、闭图、单调性或全域满射假设。
+一步版不要求 \(\mathcal J(x)\ne\varnothing\)。要保证轨道续接，另加对所有 \(x\in U_R\) 的非空覆盖，并由下列预算证明下一输入留域。只有 \(\mathcal J=J_{\lambda F}\) 在整个受检窗逐点相等时，结论才量化全部原近端选择。没有公共的单值、连续、闭图、单调性或全域满射假设。 [指定目标识别](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)另区分闭 \(S\) 加距离趋零、零值图闭及极限恒等边受检；[C450](target_identification.md#dd2-target-identification-boundaries)表明有限长度、真残差趋零和全程留域不能替代这些不同合同。
 
 零尺度独立处理：\(t=0\) 时 \(p=x\)、\(-s^2\ge\Phi(0)\)。下列长度版本以 \(\Phi(0)\ge0\) 或 \(D(0)=0,\Phi\ge-D\) 保证驻定；实际有零输入覆盖时 \(\Phi(0)>0\) 不可行。仅指定 \(A(0)=0\) 不提供实际边估计；即使已有 \(a\le A(0)=0\)，也只保证距离仍为零。[C442 的完整闭图反例与修订](dd1_recovery.md#dd1-zero-obstruction)说明：DD1 原稿的正尺度兼容门不自动控制零输入，恢复含零比例步长界须核受检零边驻定。 [C448 的两个零端分离](asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)另说明：零驻定不代替正尺度负缺陷的小性，\(\psi(0)=0\) 也不代替原残差域上的零端极限；闭图和完整覆盖仍可同时保留。
 
