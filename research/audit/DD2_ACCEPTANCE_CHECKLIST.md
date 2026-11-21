@@ -171,7 +171,11 @@
   - **结论** 原两项式自身有 C441 的精确数值反演：指定 \(c=A(t)\)，原模须在闭根前缀且满足 \((\lambda\rho)^2+c^2<E_+\) 的原残差点不超过 \(c\)。固定原模后，以严格危险层首端 \(q\) 及其归属 \(e\) 得能量／根两道预算；分界 \(q=t+c\) 保安全等号，根支端点由 \(e\) 决定。准确有符号自由 R 仍用 C430 的三门及非空上端；直接 G 保物理筛选。非正 \(\Phi\) 且 \(c<t\) 时，虽然原式未必是准确值，\(M_R=\min(B_+,W_+)\) 仍使两种目标反演等价；在已声明的非正完整闭覆盖统一类也有实际坏尺度见证。一般正下界、任意固定图或未过滤的精确零集类不具有原式必要性，均有完整反例。预设目标不被诱导界替换，零尺度、严格目标及完整窗存在另核。
   - **证据** [C441 的 RV1–RV6 数值逆、预算分段与目标恢复](../topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse)、[准确原模帽](../topics/dd2/reverse_compensation.md#dd2-compensation-psi-cap)、[有符号三门及非空上端](../topics/dd2/reverse_compensation.md#dd2-compensation-phi-budget)、[完整统一类及正下界分离](../topics/dd2/reverse_compensation.md#dd2-compensation-scope)、[逐尺度非空与完整窗不相容](../topics/dd2/reverse_compensation.md#dd2-compensation-compatibility-obstruction)、[C441 精确身份](../../CLAIMS.md#c441)。
   - **复核** 三席独立推导后逐式复读实际 RV1–RV6，核原域含零、严格坏层为空、\(q=0,q=t,q=t+c\)、负能量预算及零尺度；根换元保 \(q\ge t\)，不凭广义逆值猜首端归属。能量等号用 \(a=3/5,s=\rho=4/5\) 的完整投影添边验证，根端用两个开闭阶跃原模验证。正重根 \(F=I\) 分离正部式与准确目标，零下界同图另分离固定图与统一类；\(\psi(0)=1\)、其余零的闭纤维精确零集例核过滤必要。RC13 非空完整类与 C431 不存在性未混同。严格目标使用该类自身 \(M_{\mathcal C}\) 加排除等号，未达上确界不伪造等号边；非正坏尺度经过实际全纤维实现，不把数值逆直接称为算子最优，也未推出共同轨道或长度。
-- [ ] `S02.F09` 相关临界界是否存在可实现的取等构型。
+- [x] `S02.F09` 相关临界界是否存在可实现的取等构型。
+  - **裁决** Proved
+  - **结论** 可实现性有准确条件，不能全称肯定。C435/C437 给任意正目标高度 \(c\) 的同一原残差证书：\(\alpha\le c\le B\)，且 \(\{\psi\ge c\}\) 命中 \([0,\min(B,\sqrt{E-c^2})/\lambda]\)；全部真实步长为 EQ2，两个最近锚和完整纤维可同时实现。先证 \(M_R\le c\) 再命中才是安全且取等。原字面 max 达到只判其放宽域；甚至 \(W_+=M_R\) 且原 max 已达，准确真实上确界仍可能未达，EQ3 给同数据正下界完整闭覆盖类的实际证明。C441 的被包含有限预算端点化成弱层命中 \([0,q/\lambda]\)，相同严格危险层和预算可分别有、没有目标等号。线性能量／步长两支有完整取等图；非空上端、零尺度、精确零集过滤、完整整窗和共同轨道各保原量词。
+  - **证据** [EQ1–EQ4 同原残差取等、全部步长及完整反例](../topics/dd2/reverse_compensation.md#dd2-attainment-certificate)、[C437 的原达到条件](../canonical/dd2_function_hypotheses.md#fh-attainment-exact)、[C435 的同锚代价及步长区间](../topics/dd2/joint_relation.md#dd2-joint-projection)、[C400 两支同构形](../topics/dd2/core.md#dd2-geometry)、[预算尖锐但输出不取等](../topics/dd2/reverse_compensation.md#dd2-sharp-budget-without-equality)、[C434 两次量词分离](../topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation)、[C437 补证记录](../../CLAIMS.md#c437)、[F154 失败机制](../../FAILED_ROUTES.md#f154)。
+  - **复核** 三席独立重构并逐式复读实际稿。核同一四点的两处最近性、残差点与实际步长的区别、闭弱层与反演严格层、根端和零端。EQ3 的 \(I/4\) 底图、闭球短支及两附边逐一核全部纤维，包含窗外前像；每个固定 \(F_r\) 的单位层最大值为 \(r<1/2\)，只有类上确界逼近 \(1/2\)，不虚构固定图未达。另核唯一最优残差 \(1/10\) 不能作物理步长、同 \(q=2,e=0,d_*=2\) 的改模取等构型、两个完整线性／射线见证。C426 非正整窗的附加前件显写，C434 保固定单点和固定射线范围；正下界完整兼容、任意模共同轨道仍未被升级为已解。复用既有 Claim 并补证据，无额外重复命题。
 
 ## §3 DD2 是否严格恢复 DD1 的全部分段机制？
 

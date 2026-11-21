@@ -3812,6 +3812,8 @@
 - **Definitions / Dependencies / Evidence**：C414 的步长根、C417 真残差实现及其原超水平首端补证、C435 的逐行投影。正高度命中后选原残差，再实现物理步长；紧性证明先补回不闭的零输出删行，按最大值正或零分别处理。[精确达到合同及区间性](research/canonical/dd2_function_hypotheses.md#fh-attainment-exact)、[紧性充分条件](research/canonical/dd2_function_hypotheses.md#fh-attainment-compactness)、[固定图证明](research/canonical/dd2_function_hypotheses.md#fh-attainment-fixed-graph)。
 - **Counterevidence / Objections / Related Files**：AT5 固定 \(\lambda=t=1,\Phi(\tau)=-2\tau^2,\psi(r)=(2-r)_+\)，默认子零集闭图达到 \(m=2\)，精确零集非闭纤维仍以未达真残差零达到，精确零集闭纤维类则只能由完整闭图逼近 2。AT6 的同一个全域连续单值图以无界零集上的切向逃逸使自身输出上确界 \(t/2\) 未达；AT7 的 \(\ell^2\) 范数闭覆盖图甚至在紧单点输入集也只逼近 \(1/\sqrt2\)。[全部纤维与端点](research/canonical/dd2_function_hypotheses.md#fh-attainment-closed-fiber)。紧标量域、闭算子图、真残差下确界达到、输出最大值达到、同图全尺度饱和和轨道取等各有不同量词；不认定公开新颖性。
 
+- **补充证据（S02.F09，不改命题身份）**：[实际取等证书 EQ1–EQ4](research/topics/dd2/reverse_compensation.md#dd2-attainment-certificate)将同一原残差、全部物理步长与输入／输出锚同时还原。EQ3 在正下界 \(t=\lambda=1,\phi=3/16\) 下使原 \(W_+\) 的 max 达到且与准确 \(M_R=1/2\) 同值，真实等号却不存在；同数据正下界完整闭覆盖类也只有这个未达上确界，实际图族逐一核真纤维。原数值最大行 \((a,\rho)=(1/2,3/4)\) 不是准确可行行，单独残差 \(3/4\) 仍可配合法高度 \(1/4\)。另有完整非正窗例在 \(t=1\) 唯一最优残差为 \(1/10\)，取等物理步长却至少 \(1/2\)。C441 的被包含有限预算端点化为原弱层命中 \([0,q/\lambda]\)；相同严格危险层、首端及预算，可以因弱层不同而分别有或没有输出目标等号。均使用本命题与 C435 的原范围，不新增同图或动态量词。
+
 <a id="c438"></a>
 ## C438-v1 · 严格下降的临界残差右前缀判据
 
