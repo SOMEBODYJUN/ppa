@@ -4778,5 +4778,30 @@
     "x": 445.3008153252577,
     "y": 1374.6276434679594,
     "system": "path"
+  },
+  "DD2-RAW-GAUGE-FEASIBILITY": {
+    "x": 659.4486068095283,
+    "y": 1627.4820891572015,
+    "system": "path"
+  },
+  "DD2-SCALAR-RIGHT-BARRIER": {
+    "x": -381.9055766528602,
+    "y": 1568.181049713864,
+    "system": "path"
+  },
+  "DD2-RAW-GAUGE-LENGTH": {
+    "x": 24.863555183240294,
+    "y": 2048.243496579852,
+    "system": "path"
+  },
+  "DD2-ZERO-DEFECT-INTEGRAL": {
+    "x": 271.1158459271595,
+    "y": 2048.3123086151663,
+    "system": "path"
+  },
+  "DD2-SIGNED-ENVELOPE": {
+    "x": 213.4505327821334,
+    "y": 1872.9133097593012,
+    "system": "path"
   }
 }

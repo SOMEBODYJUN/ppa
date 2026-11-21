@@ -5334,6 +5334,36 @@
       "label": "C416 超线性输出幂的锐缺陷门与完整图二周期",
       "file": "canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-RAW-GAUGE-FEASIBILITY",
+      "label": "C417 非单调真残差可行域与完整前像障碍",
+      "file": "canonical/dd2_function_hypotheses.md#fh-raw-residual",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-SCALAR-RIGHT-BARRIER",
+      "label": "C418 全部标量下降递推趋零的精确右侧条件",
+      "file": "canonical/dd2_function_hypotheses.md#fh-distance",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-RAW-GAUGE-LENGTH",
+      "label": "C419 任意原真残差模的积分长度充分门",
+      "file": "canonical/dd2_function_hypotheses.md#fh-general-length",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-ZERO-DEFECT-INTEGRAL",
+      "label": "C420 零缺陷统一算子类的固定模积分充要性",
+      "file": "canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-SIGNED-ENVELOPE",
+      "label": "C414 一般有符号锚下界的精确两锚包络",
+      "file": "canonical/dd2_general_phi_exact.md",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13648,6 +13678,50 @@
       "output": "DD2-SUPERLINEAR-POWER",
       "relation": "conditional",
       "scope": "q 大于 1 的输出真残差幂模配合同一最近锚的最大步长约束；一般闭目标完整图的临界缺陷和任意小初值二周期。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E726",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-SIGNED-ENVELOPE"
+      ],
+      "output": "DD2-RAW-GAUGE-FEASIBILITY",
+      "relation": "conditional",
+      "scope": "保留原真残差变量和零输出约束，非正下界由辅助前像实现完整覆盖；正下界只授予单边精确性。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E727",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-REVERSE-A"
+      ],
+      "output": "DD2-SCALAR-RIGHT-BARRIER",
+      "relation": "conditional",
+      "scope": "在所有标量转移上以正距离右侧条件准确判趋零；固定实际图可有额外跨步限制，不能逆向转移必要性。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E728",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-GAUGE-LENGTH"
+      ],
+      "output": "DD2-RAW-GAUGE-LENGTH",
+      "relation": "conditional",
+      "scope": "把连续非减模的普通逆改成原真残差的正非减位移下界，保留严格耗散、可积势及有限前缀留域。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E729",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-GAUGE-LENGTH"
+      ],
+      "output": "DD2-ZERO-DEFECT-INTEGRAL",
+      "relation": "conditional",
+      "scope": "固定连续非减误差界且零缺陷：同一步积分给充分性，完整二维旋转及全部水平集前像给统一类必要性。",
       "status": "derived-checked"
     }
   ]

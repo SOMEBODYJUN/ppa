@@ -10749,6 +10749,61 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-RAW-GAUGE-FEASIBILITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-RAW-GAUGE-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-SCALAR-RIGHT-BARRIER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-SIGNED-ENVELOPE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-ZERO-DEFECT-INTEGRAL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13639,6 +13694,22 @@
     "E725": {
       "x": 607.88,
       "y": 5197.55
+    },
+    "E726": {
+      "x": 348.31,
+      "y": 5649.19
+    },
+    "E727": {
+      "x": 578.26,
+      "y": 5163.8
+    },
+    "E728": {
+      "x": 1100.31,
+      "y": 5467.19
+    },
+    "E729": {
+      "x": 1174.37,
+      "y": 5469.62
     }
   },
   "bounds": {

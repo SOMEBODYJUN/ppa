@@ -1105,6 +1105,15 @@
 | E722 | [DD2-PPPA · C404 退化 PPPA 真残差传递与恢复](topics/dd2/pppa_recovery.md#dd2-pppa-gauges) ∧ [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | 固定松弛的分量残差检验、近端覆盖和二点恢复给实际分裂轨道长度。仅全锚一点恢复时另有锐幂门。；**derived-checked** |
 | E723 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-INEXACT · C406 有真图见证的 DD2 扰动稳定性](topics/dd2/inexact.md#dd2-inexact-absolute) | 用同一允许真图上的受扰输入识别残差，绝对势预算或严格相对耗散给真实步长望远镜。；**derived-checked** |
 
+## DD2 函数条件与量词边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E726 | [DD2-SIGNED-ENVELOPE · C414 一般有符号锚下界的精确两锚包络](canonical/dd2_general_phi_exact.md) | conditional → [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | 保留原真残差变量和零输出约束，非正下界由辅助前像实现完整覆盖；正下界只授予单边精确性。；**derived-checked** |
+| E727 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | conditional → [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) | 在所有标量转移上以正距离右侧条件准确判趋零；固定实际图可有额外跨步限制，不能逆向转移必要性。；**derived-checked** |
+| E728 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-RAW-GAUGE-LENGTH · C419 任意原真残差模的积分长度充分门](canonical/dd2_function_hypotheses.md#fh-general-length) | 把连续非减模的普通逆改成原真残差的正非减位移下界，保留严格耗散、可积势及有限前缀留域。；**derived-checked** |
+| E729 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-ZERO-DEFECT-INTEGRAL · C420 零缺陷统一算子类的固定模积分充要性](canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp) | 固定连续非减误差界且零缺陷：同一步积分给充分性，完整二维旋转及全部水平集前像给统一类必要性。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

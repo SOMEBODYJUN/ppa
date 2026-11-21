@@ -3617,3 +3617,39 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：沿用 C399 的普通 PPA 局部非空允许图、每边一个最近输入锚和输出真残差界，取 \(q>1\)，\(c=\lambda K^{-1/q}\)，\(u=c t^{1/q}>2t\)。在自由闭目标类上，所有满足该尺度缺陷预算 \(D\ge0\) 的边有 \(d(y,S)<t\) 当且仅当 \(D<u(u-t)\)。对 \(D(t)=Mt^p\)，该门在共同小窗成立当且仅当 \(M=0\)、\(p>2/q\) 或 \(p=2/q\) 且 \(M<c^2\)。严格侧一致收缩，并在正文的初值长度预算下保证所有选择续接、留域、有限长和点收敛。
 - **Evidence / Dependencies**：最近锚和 Cauchy–Schwarz 给 \(s^2-ts\le D\)，实际输出给 \(a\le K(s/\lambda)^q\)。两锚共线二周期同时达到最小不下降缺陷和真残差，缩放平移后并入全域投影图，覆盖任意小尺度且保持闭图。[完整理论及取等](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)。
 - **Boundary / Related Files**：仅保留平方能量会给较弱的临界条件 \(2M<c^2\)。本构造允许多值预解式及非凸闭目标；连续单值和指定闭凸目标的锐性另验。见 [F145](FAILED_ROUTES.md#f145)、[§6 审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)。
+
+<a id="c417"></a>
+## C417-v1 · 非单调真残差模的单边可行域与完整前像障碍
+
+- **Status**：`derived-checked`。单边充要性、非正下界的完整图实现与正下界的严格分离均已独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：有限维自由闭目标类维数至少二，固定 \(t>0,\lambda>0\)、有限有符号 \(\Phi(t)\)、\(\psi:D_\psi\to[0,\infty)\)、\(0\in D_\psi\subseteq[0,\infty)\)。令 \(E=t^2-2\Phi(t)\)、\(I=\{s\ge0:s^2+(t-s)^2\le E\}\)、\(L_t=(t-s)_+\)、\(U_t=\min\{t+s,\sqrt{E-s^2}\}\)。单条受检近端边、\(S\subseteq\operatorname{zer}F\) 的准确条件为 \(s\in I,\rho\in D_\psi\cap[0,s/\lambda],L_t\le a\le U_t,a\le\psi(\rho),a=0\Rightarrow\rho=0\)。
+- **Conclusion / Scope**：不需 \(\Phi\) 或 \(\psi\) 连续、非减或可逆；原可行域的上确界精确，超水平集及其端点位给反向判定。\(\Phi\le0\) 的整个窗可用两锚正交辅助前像与投影底图实现完整覆盖；精确零集及零残差的闭图限制分别保留。正 \(\Phi\) 时不能将单边最优提升为完整全窗最优。
+- **Definitions / Dependencies / Evidence**：C414 的两锚三角形、完整图反演及真残差定义。[正文可行域与全部证明](research/canonical/dd2_function_hypotheses.md#fh-raw-residual)、[超水平端点](research/canonical/dd2_function_hypotheses.md#fh-sup-inverse)。
+- **Counterevidence / Objections / Related Files**：\(\Phi(t)=3t^2/16\)，\(\psi(r)=r/3\) 但 \(\psi(1/100)=1/2\)，在 \(\lambda=R=1\) 时在 \(t=1\) 测试尺度单边允许 \(a=1/2\)，完整全窗类的该尺度边却必须 \(a\le1/4\)，由 \(F=3I\) 取等。[严格分离证明](research/canonical/dd2_function_hypotheses.md#fh-positive-fibers)。不将上包络闭合的可行点、辅助未受检边或不达到的残差误作完整算子取等。
+
+<a id="c418"></a>
+## C418-v1 · 全部标量下降递推趋零的精确右侧条件
+
+- **Status**：`derived-checked`。正反证明、非减主曲线条件及两个完整闭图反例已独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定 \(R>0,A:[0,R]\to[0,R]\)。对每个初值及每个满足 \(0\le t_{k+1}\le A(t_k)\) 的序列，\(t_k\to0\)，当且仅当 \(A(0)=0\)、\(A(t)<t\) 对 \(t>0\)，且每个 \(0<l<R\) 有 \(\epsilon_l>0\) 使 \(A(u)\le l\) 于 \(l<u<l+\epsilon_l,u\le R\)。
+- **Conclusion / Scope**：连续性和右上半连续性均只是方便充分条件。另存在非减 \(Q\ge A\) 且每个 \(Q\) 迭代趋零，当且仅当以上条件及 \(\sup_{u\le t}A(u)<t\) 对所有正 \(t\) 成立。这是全部标量转移的结论，不是固定算子所有真实轨道的必要性。
+- **Definitions / Dependencies / Evidence**：标量递推、距离函数连续性、C400 的完整近端反演。[判据与证明](research/canonical/dd2_function_hypotheses.md#fh-distance)。
+- **Counterevidence / Objections / Related Files**：[闭图实例](research/canonical/dd2_function_hypotheses.md#fh-positive-limit) 一方面满足 C400 逐尺度锐预算却有 \(t_k\downarrow1\)；另一方面，一个完整闭图的精确逐尺度包络不满足右侧条件，但所有实际轨道至多使用一次特殊边而有限长。零尺度实际吸收与 \(A(0)\) 的标量必要性分开。
+
+<a id="c419"></a>
+## C419-v1 · 任意原真残差模的位移下界与积分长度充分门
+
+- **Status**：`derived-checked`。正非减下界、同一步势、有限前缀留域及严格余量反例已独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：实 Hilbert 普通 PPA，沿用每边一个已存在的最近输入锚、\(U_R\) 非空允许覆盖、闭 \(S\subseteq\operatorname{zer}F\)。取任意可评价 \(\psi:D_\psi\to[0,\infty)\)，其中 \(D_\psi\subseteq[0,\infty)\)，定义 \(b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}\)。每条边满足 \(s\ge b_\psi(t)\)。更一般地，取已核 \(s\ge b(t)>0\) 的非减下界，\(\Phi\ge-D,D\ge0,D(0)=0\)，\(2D(t)\le(1-\delta)b(t)^2\)、\(0<\delta\le1\)，以及 \(P(R)=\int_0^R u/b(u)\,du<\infty\)。
+- **Conclusion / Scope**：每步 \(t^2-a^2\ge\delta s^2\) 且 \(s\le(2/\delta)[P(t)-P(a)]\)。对 \(x^0\in U_R,t_0=d(x^0,S)\)，若 \((2/\delta)P(t_0)<d(x^0,U^c)\)，全部允许轨道续接、留域、有限长并强收敛到 \(S\cap U\)，尾长不超过 \((2/\delta)P(t_k)\)。这是不同于 C401-v1 的函数假设版本；不要求原模在正残差处连续、单调或可逆；若使用上述原模下界并包含零残差，整段正性恰需原模的近零前缀上确界趋零，所用下界正性与积分仍须核验。
+- **Definitions / Dependencies / Evidence**：C401 的能量恒等式与有限前缀证明；三角约束及完整真残差。[完整推导](research/canonical/dd2_function_hypotheses.md#fh-general-length)。
+- **Counterevidence / Objections / Related Files**：[边界及非必要性](research/canonical/dd2_function_hypotheses.md#fh-length-boundaries) 给 \(\eta(s)=s^{2/3}\)、\(2D=\chi^2\)、可积 \(u/\chi(u)\) 而实际无限长的连续单值算子，排除无严格余量的替换。\(\eta=s,D=7t^2/50\) 的统一有限长度类说明原耗散门非必要。\(b_\psi\) 仅对三角与残差放宽子系统最强，不称全部几何或全部图的最强下界。
+
+<a id="c420"></a>
+## C420-v1 · 零缺陷统一算子类的固定模积分充要性
+
+- **Status**：`derived-checked`。平台、零平台、有界模、完整真残差及完整闭图轨道均已独立攻击并重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定 \(\lambda,R>0\)，连续非减 \(\eta:[0,\infty)\to[0,\infty)\)、\(\eta(0)=0\)，\(\psi(r)=\eta(\lambda r)\)、\(\chi=(I+\eta)^{-1}\)。在包含二维欧氏空间的普通 PPA 统一类中，所有每边存在某个最近输入锚使内积非负、完整输出真误差界成立、全域距离窗非空覆盖的允许关系，其全部 \(t_0\le R\) 轨道有限长度，当且仅当 \(\int_0^R u/\chi(u)\,du<\infty\)。
+- **Conclusion / Scope**：充分侧保留 C401 的尾预算及附条件的局部留域。必要侧由同一个完整闭图、全域单值近端、\(S=\{0\}\) 实现：\(Q(s)=\sqrt{s^2+\eta(s)^2},b=Q^{-1},A=\eta\circ b\)，用 \(\cos\theta=A/t,\sin\theta=b/t\) 的旋转映射令 \(a=A(t),s=b(t)\)。真残差在 \(\eta^{-1}(a)\) 最小端取到；实际总长介于 \(\int_0^{t_0}u/b(u)\,du\) 与其两倍之间。
+- **Definitions / Dependencies / Evidence**：C401 的 \(D=0,\delta=1\) 充分性、完整图反演。[定理、构造及全部证明](research/canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)。\(\chi(u)\le b(u)\le\chi(\sqrt2u)\) 给两积分同敛散。
+- **Counterevidence / Objections / Related Files**：这是固定误差界模、零缺陷、统一算子类的充要性；不是固定算子的必要性。\(F=I\) 使用较松 \(\psi(r)=\sqrt r\) 有有限长但积分发散；正下界 \(\Phi=t^2/4\) 也能在该模下给统一有限长。\(\eta\) 有界时原 \(F\) 可在非实际输出处为空，完整预解式仍全域单值；不把它称作全域单值 \(F\)。

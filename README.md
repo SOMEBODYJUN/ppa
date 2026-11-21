@@ -15,6 +15,8 @@
 
 [DD2 主线](research/topics/dd2/core.md)从指定下降目标 \(\varphi\) 反推锚定下界 \(\Phi\) 与输出真误差界 \(\psi\) 的补偿。DD1 与 DD2 都允许一般有符号的 \(\Phi\)，一般 \(\psi\) 属于 DD2 的研究范围。[C400](CLAIMS.md#c400) 给线性误差界特例的精确反演及实际轨道反例，[C401](CLAIMS.md#c401) 在一般 \(\psi\) 下以同一步积分势推出长度和留域。
 
+[函数条件的逐层裁决](research/canonical/dd2_function_hypotheses.md)给出 C417–C420：原始非单调真残差的联合可行域、正锚下界的完整前像障碍、全部标量递推趋零的精确右侧条件、任意原模的位移下界，以及零缺陷统一算子类的固定模积分充要性。它们把单边、完整整窗、固定图和统一轨道的必要性分开；旧 C400/C401/C414 的身份保持。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。
 
 [P2 覆盖与矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)给出近极小完整图值 lift 的必要量词、选定分支的反例以及原始—对偶块的 Schur 补可计算证书，并由 [C408](CLAIMS.md#c408) 登记其作用域。
@@ -71,7 +73,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 954 个数学节点、719 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 961 个数学节点、725 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -355,6 +357,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
+| [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C420 的完整函数条件证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。核函数假设、广义逆端点、距离/长度必要性或 S01.10 时读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 在同一闭零集和固定完整图上逐步实现低 \(L<1/2\) 的严格步长支，包含局部孤立零点与无限长度例、闭仿射单步障碍。C413 以相对法锥的统一正向排除一般有限维闭凸目标上的收敛锚链及可和链。研究动态尖锐性、最近锚切换或写主文范围时读取。 |
 | [research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md](research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md) | 旧交接稿的七项 P0–P3 专项审计，绑定 C407/C408/C410/C411/C412、证明和未闭义务。用作最终协议相应小问的证据。 |

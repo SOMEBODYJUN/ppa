@@ -80,4 +80,4 @@
 
 ## 状态
 
-本定理在有限维 n>=2 的自由两锚闭目标几何中 Proved and Sharp。Phi<=0、eta 连续非减的旧简式 Proved and Sharp。正部公式对任意符号 Phi 的 sharp 主张被显式反例 Refuted。比较迭代、固定算子全窗 sharpness、无限维和轨道级反向必要性为 Conditional 或 Open。
+本定理在有限维 n>=2 的自由两锚闭目标几何中 Proved and Sharp。Phi<=0、eta 连续非减的旧简式 Proved and Sharp。正部公式对任意符号 Phi 的 sharp 主张被显式反例 Refuted。本页只登记一步几何。原真残差非单调版本、最值与广义逆端点、标量比较及长度的函数条件分别见 [C417–C420](dd2_function_hypotheses.md)；一般正下界的完整整窗最优、指定固定算子及受限目标类的动态反向必要性须分别核验，不能由本页几何直接提升。
