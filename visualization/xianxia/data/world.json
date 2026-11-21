@@ -10903,6 +10903,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-REVERSE-RAW-COMPENSATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 814,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13845,6 +13856,10 @@
     "E738": {
       "x": 1162.05,
       "y": 5566.98
+    },
+    "E739": {
+      "x": 830.91,
+      "y": 5652.08
     }
   },
   "bounds": {

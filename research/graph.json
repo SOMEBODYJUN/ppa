@@ -5418,6 +5418,12 @@
       "label": "C429 原残差位移下界的前缀广义逆与正则性",
       "file": "canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-REVERSE-RAW-COMPENSATION",
+      "label": "C430 原真残差与有符号锚界的双向精确补偿",
+      "file": "topics/dd2/reverse_compensation.md#dd2-compensation-contract",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13880,6 +13886,18 @@
       "output": "DD2-RAW-GENERALIZED-INVERSE",
       "relation": "conditional",
       "scope": "固定非负原模及含零残差域：两条标量约束的最小位移下确界等于精确前缀广义逆，且非减、1-Lipschitz。端点可行性、额外步窗、完整几何和长度必要性不随等值转移。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E739",
+      "topic": "DD2 反向补偿与轨道",
+      "inputs": [
+        "DD2-RAW-ENVELOPE-COMPUTATION",
+        "DD2-RAW-GENERALIZED-INVERSE"
+      ],
+      "output": "DD2-REVERSE-RAW-COMPENSATION",
+      "relation": "conditional",
+      "scope": "给定目标、任意非负原psi及有符号Phi，在自由单边非空域以危险前缀帽或三门并集精确反演；非正全窗、U=H且无附加输出位置限制的自由子零集完整闭图类在正尺度保持统一必要性，零尺度、正下界完整窗及同图动态另核。",
       "status": "derived-checked"
     }
   ]

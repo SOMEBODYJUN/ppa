@@ -1089,6 +1089,7 @@
 | E718 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | conditional → [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | 连续非减输出误差界，缺陷可由位移下界平方严格吸收，积分长度势给有限前缀及尾长。；**derived-checked** |
 | E724 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | conditional → [DD2-LOW-L-CONVEX-ANCHOR · C413 有限维闭凸目标的严格步长支收敛锚障碍](topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex) | 有限维闭凸目标上连续逐步达到严格低 L 步长支，等号几何与相对法锥的统一支撑方向排除收敛锚链和可和轨道。；**derived-checked** |
 | E725 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-SUPERLINEAR-POWER · C416 超线性输出幂的锐缺陷门与完整图二周期](canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power) | q 大于 1 的输出真残差幂模配合同一最近锚的最大步长约束；一般闭目标完整图的临界缺陷和任意小初值二周期。；**derived-checked** |
+| E739 | [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) ∧ [DD2-RAW-GENERALIZED-INVERSE · C429 原残差位移下界的前缀广义逆与正则性](canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse) | conditional → [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) | 给定目标、任意非负原psi及有符号Phi，在自由单边非空域以危险前缀帽或三门并集精确反演；非正全窗、U=H且无附加输出位置限制的自由子零集完整闭图类在正尺度保持统一必要性，零尺度、正下界完整窗及同图动态另核。；**derived-checked** |
 
 ## DD2 松弛与退化约化
 
