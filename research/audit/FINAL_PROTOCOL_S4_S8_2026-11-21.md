@@ -1208,6 +1208,59 @@ C453完整剪切取 \(\psi(\rho)=\rho^2,D=t/8\)，F1取等而
 预先指定的 \(\varphi\)、实际覆盖和物理留域保各自合同。
 本项不改变 C401/C453 的原命题，不另造同义Claim。
 
+<a id="dd2-f2-inverse-role-acceptance"></a>
+### S05.F2 · 原逆模条件的身份、作用和边界
+
+**裁决：Proved（三席已逐源复核实际数学稿及全部登记；范围限可追溯存录版及其独立推导）。**
+来源沿用上一项已核的 Git 对象及原附件未取得界限：
+d32b3f2e691c93f38a55fcee8ecda6ac46802546 的 §5.1
+存录原 \(\chi(u)=\lambda\psi^{-1}(u)\)、F2 \(\chi(u)=o(u)\)；
+本轮仍重标为 \(b_{\rm inv}\)，没有换成和函数逆。
+
+[FB1–FB8](../topics/dd2/original_f_conditions.md#dd2-original-f2-role)
+在 \([0,r_*]\) 的原连续严格增分支、\(\psi(0)=0\)、固定 \(\lambda>0\) 下，
+从 \(u=\psi(r)\) 的双向零端换元严格证明
+\[
+b_{\rm inv}(u)=o(u)
+\ \Longleftrightarrow\ \frac{\psi(r)}r\to+\infty
+\ \Longleftrightarrow\ q(t)=o(t),\qquad q(t)=b_{\rm inv}(t/2).
+\tag{F2A}
+\]
+所以可缩窗取得 \(q(t)\le t/2\)。这一窗口的准确条件仅为
+\[
+\psi(r)\ge\lambda r\qquad
+0<r\le\psi^{-1}(R/2),\quad R/2\le\psi(r_*),
+\tag{F2B}
+\]
+比 F2 弱；例如 \(\psi(r)=\lambda r\) 通过 F2B 而不通过 F2。
+在原组合里，F2 的作用是提供这个窗，继而先由原真残差证 \(s\ge q\)，
+最后才由 F1 吸收缺陷。阈值、同锚能量、零条件、原目标和覆盖留域
+不因写出一个小 o 就自动补足。
+
+由同一原 \(\psi\) 构造的和函数在 \([0,\lambda r_*]\) 的像为
+\([0,\lambda r_*+\psi(r_*)]\)，与普通逆的值域须分别核。
+在两式合法的窗内，
+\(q\le\chi_\Sigma\) 恰等价 F2B；独立零端上
+F2 也等价 \(\chi_\Sigma(t)=o(t)\)。
+这只比较性质，不证明 \(\chi_\Sigma=b_{\rm inv}\) 或
+\(\chi_\Sigma\sim b_{\rm inv}\)。
+FB6–FB7 的连续严格增插值 w 满足 \(w=o(\operatorname{id})\)，
+令 \(\psi=w^{-1}\) 后却有任意小尺度上
+\(\chi_\Sigma(t_n)/b_{\rm inv}(t_n)=1/2\)。
+这是纯函数层的严格反例，未用来声称原轨道失败。
+
+作用边界由完整模型分开：\(F=I,\psi=\operatorname{id}\) 有原 F1/F3、
+全窗半平方吸收及尾长 t，但 F2失败；C453 剪切连 F2B 小窗也失败，
+仍由更换后的混合势给全部轨道有限长。
+该版本仍核局部新预算，不声称所有旧势预算的初点直接适用。
+C456 的 \(m=2\) 原完整旋转满足 F1/F2，却实际无限长，
+所以 F2不是长度的充分条件，也不保证统一 \(\kappa<1\)。
+幂模 \(K\rho^\nu\) 恰在 \(0<\nu<1\) 通过 F2；
+线性端点的窗口还要比较 K 与 λ，不能仅按指数判断。
+原 \(\psi\) 越小误差界越强，F2却要求所选上界比线性更大；
+不把这种技术性缩窗条件说成算子正则性更强，或说成原图没有其他更强误差界。
+原 F3 和原望远镜的专门条目仍保留独立验收。
+
 <a id="dd2-potential-existence-acceptance"></a>
 ### 5.2 S05.01：什么条件保证同一步距离势存在
 

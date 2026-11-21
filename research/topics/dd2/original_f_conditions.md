@@ -1,4 +1,4 @@
-# 原 F1 的吸收、F3 的等价可积性与删除 F2
+# 原 F1–F3 的精确作用、等价可积性与条件删减
 
 本页沿用 [E0](core.md#dd2-exact-contract)，原 \(\Phi\) 为同一最近输入锚的有符号下界，原 \(\psi\) 在完整真残差 \(\rho=r_F(y)\) 处评价，\(\rho\le s/\lambda\)。预设目标 \(\varphi\) 不由长度势替换。作者原 F1–F3 的现存转录和来源身份见[审计 §5.1](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3)；以下是独立推导，不声称本次重新取得了历史 509 行原附件。
 
@@ -149,6 +149,166 @@ q(t)\le\chi_\Sigma(t).
 原 F1 于是给 C401 同形的尺度吸收 \(2D\le\chi_\Sigma^2/2\)，
 但这不把两个逆函数视为同一个函数，也不把这个更宽的吸收条件称为原 F1。
 上述阈值、原系数和完整剪切只补核既有身份，不另登记同义 Claim。
+
+<a id="dd2-original-f2-role"></a>
+## FB1 · 原 F2 的精确对象与等价零端条件
+
+沿用 [S05.F1 的来源界限](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f1-source-and-absorption)：
+历史提交 d32b3f2e691c93f38a55fcee8ecda6ac46802546 的审计 §5.1
+把原名 \(\chi\) 重标为 b，并存录 F2 为 \(b(u)=o(u)\)。
+这里仍记 \(b_{\rm inv}(u)=\lambda\psi^{-1}(u)\)，
+不将来源指纹记录当成本轮取得了原509行附件。
+
+明确原分支：\(r_*>0\)，\([0,r_*]\subseteq D_\psi\)，
+\(\psi:[0,r_*]\to[0,v_*]\) 连续严格增，\(\psi(0)=0\)，
+\(v_*=\psi(r_*)>0\)，\(\lambda>0\) 固定。
+普通逆定义在 \([0,v_*]\)。原 F2 及其等价写法是
+\[
+\boxed{b_{\rm inv}(u)=o(u)\quad(u\downarrow0)}
+\quad\Longleftrightarrow\quad
+\frac{\psi(r)}r\longrightarrow+\infty\quad(r\downarrow0)
+\quad\Longleftrightarrow\quad q(t)=o(t).
+\tag{FB1}
+\]
+第一项的 u 是误差界的值域尺度，r 是原残差尺度，不互换自变量。
+证明只需
+\[
+\frac{b_{\rm inv}(\psi(r))}{\psi(r)}
+ =\frac{\lambda r}{\psi(r)},\qquad
+\frac{q(t)}t=\frac12\,\frac{b_{\rm inv}(t/2)}{t/2}.
+\tag{FB2}
+\]
+连续严格增及零值保证 \(r\downarrow0\) 与 \(u=\psi(r)\downarrow0\)
+双向对应。固定正 λ 不改变真假，但所得工作窗会依赖 λ；
+不能据此自动处理没有共同上界的变参数。
+F2 是所选原模的性质，不替代实际误差界 \(a\le\psi(\rho)\)，
+也不要求原模在这个分支之外单调。
+
+## FB2 · 小 o 提供窗口，但窗口不要求小 o
+
+F2 保证对每个 \(\epsilon>0\)，存在兼容原逆域的 \(R_\epsilon>0\)，
+使全部 \(0<t\le R_\epsilon\) 有 \(q(t)\le\epsilon t\)。
+原证明取 \(\epsilon=1/2\)。对任一固定 \(R\le2v_*\)，准确等价为
+\[
+q(t)\le t/2\quad(0<t\le R)
+\quad\Longleftrightarrow\quad
+\psi(r)\ge\lambda r\quad
+ (0<r\le\psi^{-1}(R/2)).
+\tag{FB3}
+\]
+这是直接令 \(t/2=\psi(r)\) 换元得到的全窗非严格比较。
+由 FB1 可先选 \(r_0\le r_*\)，使这项比较对 \(0<r\le r_0\) 成立，
+再取 \(R'\le\min\{R_{\rm work},2\psi(r_0)\}\)，并把闭端点留在已知有效区间内。
+它仅给存在足够小的窗，不替未给出有效模的任意函数提供数值认证半径。
+
+在 FB3 的窗内，[FA3–FA5](#dd2-original-f1-absorption)从原真残差
+证明 \(s\ge q(t)\)，然后原 F1 才给
+\(t^2-a^2\ge s^2/2\)。原阈值
+\(a\ge v\Rightarrow s\ge b_{\rm inv}(v)\)（\(0<v\le R/2\)）、同锚平方能量、
+零输入驻定的单独前件都不使用 F2。
+有限长度与可继续留在物理工作域仍需要其余前件，
+也不能从 \(q=o(t)\) 推出某个统一 \(\kappa<1\)。
+
+反向不成立：\(\psi(r)=\lambda r\) 时，
+\(b_{\rm inv}(u)=u\)、\(q(t)=t/2\) 满足整个 FB3 窗，F2却失败。
+因此不能把原证明使用的非严格窗条件改写成小 o 的必要性。
+
+## FB3 · 两个逆的小 o 等价，不是两个逆的数值相等
+
+定义
+\[
+H_\Sigma(s)=s+\psi(s/\lambda)\quad(0\le s\le\lambda r_*),\qquad
+\chi_\Sigma=H_\Sigma^{-1}
+ \quad\text{于 }[0,\lambda r_*+v_*].
+\tag{FB4}
+\]
+设 t 同时满足 \(t/2\le v_*\) 和 \(t\le\lambda r_*+v_*\)。
+由于 \(H_\Sigma(q(t))=q(t)+t/2\)，严格保序给
+\[
+q(t)\le\chi_\Sigma(t)
+\quad\Longleftrightarrow\quad q(t)\le t/2.
+\tag{FB5}
+\]
+原逆域条件 \(R/2\le v_*\) 本身不保证 t 在和函数的像内。
+若另外 \(t\le v_*\)，则 \(H_\Sigma(b_{\rm inv}(t))=b_{\rm inv}(t)+t\)，
+故 \(\chi_\Sigma(t)\le b_{\rm inv}(t)\)。
+这些是不等式，不是把普通逆改名为和函数逆。
+
+在各自零端的共同小窗，令 \(t=\lambda r+\psi(r)\)，直接有
+\[
+\frac{\chi_\Sigma(t)}t
+ =\frac{\lambda}{\lambda+\psi(r)/r}.
+\]
+因此 F2 也等价于 \(\chi_\Sigma(t)=o(t)\)。
+但不能进一步无条件声称 \(\chi_\Sigma(t)\sim b_{\rm inv}(t)\)。
+下面给一个精确纯函数反例，不将它冒充实际轨道反例。
+
+取 \(\lambda=1,c_n=2^{-n},h_n=c_n^2\)，\(n\ge2\)。
+令 w(0)=0，在按自变量排列的全部节点
+\[
+(c_n,h_n),\qquad(c_n+h_n,2h_n)
+\tag{FB6}
+\]
+之间线性插值，并在最右节点之后以正斜率线性延拓至无穷。
+因 \(c_{n+1}+h_{n+1}<c_n\)、
+\(2h_{n+1}=h_n/2<h_n\)，w 全域连续严格增且满射。
+对 \(c_{n+1}\le u\le c_n\)，
+\(0<w(u)/u\le h_n/c_{n+1}=2c_n\)，
+所以 \(w(u)=o(u)\)。取原 \(\psi=w^{-1}\)，则 \(b_{\rm inv}=w\) 满足 F2。
+然而在 \(t_n=c_n+h_n\) 上，
+\[
+\chi_\Sigma(t_n)=h_n,\qquad b_{\rm inv}(t_n)=2h_n,\qquad
+\frac{\chi_\Sigma(t_n)}{b_{\rm inv}(t_n)}=\frac12.
+\tag{FB7}
+\]
+因为 \(h_n+\psi(h_n)=h_n+c_n\)，这些等式是准确的。
+靠近相同自变量不允许在任意单调逆内丢掉差值。
+C458 的积分首项有自己的可积窗和积分比较证明，并未依赖这条错误点态等价。
+
+## FB4 · 原 F2 不等于正则性强弱或有限长度门
+
+对原幂模 \(\psi(\rho)=K\rho^\nu\)，\(K,\nu>0\)，
+\[
+\frac{b_{\rm inv}(u)}u
+ =\lambda K^{-1/\nu}u^{1/\nu-1}.
+\tag{FB8}
+\]
+当 \(0<\nu<1\) 时 F2 成立；\(\nu=1\) 时该比值为正的常数，
+F2失败而 FB3 恰等价 \(K\ge\lambda\)，含等号；
+\(\nu>1\) 时比值趋无穷，F2及任意充分小窗的FB3均失败。
+同一残差上的 \(\psi\) 越小，输出误差界越强；
+F2 的 \(\psi(r)/r\to\infty\) 正是所选上界在零端比每个固定线性上界更大。
+它不证明原算子没有另一条更强线性界，
+也不是一个“正则性越强越满足”的内在收敛条件。
+
+以下完整模型分别划清必要性和充分性，均具有完整真残差、明确的指定目标和覆盖范围。
+
+- \(H=\mathbb R^2,\lambda=1,F=I,S=\{0\},U=V_\psi=H\)，取
+  \(\psi(\rho)=\rho,\Phi=D=0\)，预先 \(\varphi(t)=3t/4\)。
+  完整近端 \(y=x/2\)，\(a=s=\rho=t/2\)，全域唯一且实际总尾为 t。
+  原数据本身由 \(2a^2\le t^2\) 认证该目标。
+  原 F1 和 F3（\(t/q(t)=2\)，常数主函数）成立，F2失败；
+  原缩窗吸收仍成立。这已经排除 F2 对有限长度的必要性。
+- [C453/FI5 的完整剪切](#dd2-f1-mixed-potential-example)进一步给
+  \(\psi(\rho)=\rho^2\)、\(q(t)=\sqrt{t/2}\)，
+  F2 和任意充分小窗的 FB3 都失败，但全部真实轨道有限长。
+  其实际步为 \(\sqrt t\) 阶，原 P 差仅 \(t^{3/2}\) 阶。
+  C453 保原 F1，并用与原 F3 等价的 \(P(R)<\infty\)，
+  改用 \(W=\alpha P+\beta q\) 的三分支证明，
+  是不同的充分版本；局部初值须重新核 \(W(t_0)<d(x^0,U^c)\)，
+  不宣称全部旧 P 预算的初点自动适用新预算。
+- [C456 的二维完整旋转](finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)
+  取 \(m=2,\lambda=1,F(y)=\|y\|Qy,S=\{0\},\psi(\rho)=\sqrt\rho,\Phi=D=0\)，
+  保其预设 \(\varphi=(a\mapsto\sqrt{a^2+a^4})^{-1}\)。
+  全域完整唯一近端有 \(s=a^2\)、\(t^2=a^2+a^4\)，
+  F1、F2均成立，但每个正初距轨道点趋0而总长无限。
+  原被积函数为 \(t/q(t)=4/t\)，所以 F3 失败；
+  不能由 F2 单独、甚至 F1+F2，推出有限长度或统一距离比例。
+
+普通逆的存在来自原分支的连续严格增合同；F2是在这个对象已定义后加的尺度条件。
+一般 DD2 的非单调原 \(\psi\) 不必有这个普通逆，
+可用 C419/C429 的原域残差下界；不能为了套 F2 默默更换原模和预设目标。
+本节只签逆模条件的身份、作用和上述边界，不提前签 F3 或原望远镜专门条目。
 
 <a id="dd2-original-integrability-equivalence"></a>
 ## FI1 · 非增上包络与原积分的可积性等价
