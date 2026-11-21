@@ -38,7 +38,7 @@
 
 ### T2：一般势和幂次有限长度 / C401、C399
 
-chi 由 t=s+eta(s) 的逆或下广义逆给出。严格同一步耗散和 Theta(t)=integral u/chi(u) du 的可积性给有限前缀留域、尾长和极限识别。幂次只在 0<q<1 时由 pq 分区控制；q=1 有 h=K/lambda 的线性分支，q>1 由超线性输出和三角不等式给局部几何级收缩。q=1/2 的完整图旋转是无限长度 sharp 端点。
+chi 由 t=s+eta(s) 的逆或下广义逆给出。严格同一步耗散和 Theta(t)=integral u/chi(u) du 的可积性给有限前缀留域、尾长和极限识别。幂次的 pq 分区只在 0<q<1 的 C399 类中直接成立；q=1 必须保留一般闭集的 DD1 两段缺陷门 T(h)，q>1 的正面几何证明至少需要 p>2/q 或 p=2/q 的小常数门，失败侧固定闭集轨道仍 Partial/Open。q=1/2 的完整图旋转是无限长度 sharp 端点。
 
 证据：`research/topics/dd2/core.md#dd2-general-gauge`、`research/canonical/dd2_power_defect_finite_length.md`、`FINAL_PROTOCOL_S4_S8` §5–§6。
 
