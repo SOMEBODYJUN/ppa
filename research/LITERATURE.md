@@ -799,3 +799,14 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 - **Paper fact。** Otero–Iusem [2010 预印本](https://webdoc.sub.gwdg.de/ebook/serien/e/IMPA_A/672.pdf)，Definition 2、Theorem 3、Corollary 3、Remark 3（pp.8–9）给全点对半单调下的 resolvent 根式 Lipschitz 常数。取 \(r=2\sigma/(1+2\sigma)\) 恢复 DD1 第一步长根式是本库换参，不是原文陈述 DD1。
 - **Paper fact。** Luke–Thao–Tam [MOR 2018](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2017.0898) Theorem 2.1、Lauster–Luke [2021](https://link.springer.com/article/10.1186/s13663-021-00698-0) Corollary 19 后讨论，已有非扩张性缺陷由误差界补偿的机制。Luke–Tam [2025](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863) 式(30) 是相同平方下降前提，Assumption 2(d)(ii)/Theorem 2 用较保守参数门；不据因子比较宣称完整局部定理互相涵盖。
 - **Paper fact。** Alcantara, [arXiv:2611.20523v1](https://arxiv.org/html/2611.20523v1)，官方记录 2026-11-16 提交；Proposition 3.4 证明式(11) 后及脚注 1 给 \(m_\varepsilon(\beta)\)，Remark 3.5（p.11）明写普通 PPA 平方因子 \((1+2\nu)h^2/(1+h^2)\) 及 \(2\nu h^2<1\)。换 \(h=\rho,\nu=\sigma\) 即 DD1 第二分支；第一分支可由其单步估计重建是本库推论。完整分段锐门与最近零锚类的边界实现未在本次实读来源定位，首创性未决。
+
+<a id="lit-dd2-extension"></a>
+## DD2 函数反演、松弛和分裂的逐项来源
+
+| 原文及位置 | 可直接导入的对象 | DD2 的独立数学义务 |
+| --- | --- | --- |
+| [Lauster–Luke 2021](https://doi.org/10.1186/s13663-021-00698-0)，式 (18)–(19)、Theorem 16(b)、Lemma 17、Corollary 19 | 指定比较迭代并反求输入位移误差界。可和比较迭代用于点收敛和步长预算，作者也明确讨论补偿。 | C400 是输出真误差界固定后反求最近锚缺陷的两个精确分支。C401 使用同一实际步平方耗散和可积势。不能单列「一般比较函数、可和迭代或补偿思想」作为首创。 |
+| [Alcantara v1](https://arxiv.org/html/2611.20523v1)，Propositions 3.1、3.4 | 全锚方向松弛、Fejér、平方和、加权向量平均与最佳残差。线性输入和剪切输出误差界给不同比率。 | C402 直接给净余量逼近零的函数长度门及尖锐极限。C403 保留两端误差界和最近锚几何，包括过松弛额外输出锚约束。加权平均向量和平均点的真残差是不同结论。 |
+| 同文 Propositions 4.1–4.2、4.5、Lemma 4.8、Theorems 4.10–4.12、Lemma 4.14、Corollary 4.15 | 约化恒等式、零值识别、有界影子与一点恢复。Lemma 4.14 给在恢复与范围受限图假设下的线性误差界传递。 | C404 从全投影纤维取真残差，通过近极小图值的 lift 局部化传一般模，并给原空间路径长度的尖锐反例。投影目标闭性与原空间唯一纤维分别核验。 |
+| 同文 Theorem 5.1、§6，及 [Evens–Latafat–Patrinos](https://arxiv.org/abs/2312.06540) | 临界 CP／DR 的全图一点恢复。Evens 等通过分量构造斜弱 Minty 模，Alcantara §6 提出保留非零 \(U\) 的分量计算。 | C405 的完成平方公式、实际 DD2 分量条件及两个慢收敛例各有核对范围。最优位置／图值模及变步长非分离模型仍待查。 |
+| [Li–Mordukhovich 2012](https://web.maths.unsw.edu.au/~gyli/papers/lm-subreg12final.pdf)，Theorem 7.3(i)；[Wang–Li–Ng 2023](https://doi.org/10.1137/22M152147X) 摘要 | 固定步极大单调 Hölder PPA 的距离率，以及极大单调非精确 Hölder PPA 的定量结果。 | C401、C406 的比较重点为负缺陷的实际吸收、同一图上的真实路径长度与误差边界。2023 年稿的精确误差类与长度需读全文。 |

@@ -1096,6 +1096,13 @@
 | E720 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-DUAL-EB · C403 前向与图剪切输出的联合锐包络](topics/dd2/dual_eb.md#dd2-dual-envelope) | 固定同一图边的输入与剪切输出误差界，保留第三距离与输出锚以优化松弛的更新。；**derived-checked** |
 | E721 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [DD2-DUAL-EB · C403 前向与图剪切输出的联合锐包络](topics/dd2/dual_eb.md#dd2-dual-envelope) | conditional → [DD2-PPPA · C404 退化 PPPA 真残差传递与恢复](topics/dd2/pppa_recovery.md#dd2-pppa-gauges) | 闭值域的退化约化，原 P-最近锚、近解 lift 和闭目标，物理点率与长度各需对应恢复条件。；**derived-checked** |
 
+## DD2 实际算法与扰动
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E722 | [DD2-PPPA · C404 退化 PPPA 真残差传递与恢复](topics/dd2/pppa_recovery.md#dd2-pppa-gauges) ∧ [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | 固定松弛的分量残差检验、近端覆盖和二点恢复给实际分裂轨道长度。仅全锚一点恢复时另有锐幂门。；**derived-checked** |
+| E723 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-INEXACT · C406 有真图见证的 DD2 扰动稳定性](topics/dd2/inexact.md#dd2-inexact-absolute) | 用同一允许真图上的受扰输入识别残差，绝对势预算或严格相对耗散给真实步长望远镜。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

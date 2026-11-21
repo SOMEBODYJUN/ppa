@@ -1,5 +1,9 @@
 # 历史代码到规范命题的登记
 
+## DD2 稿件结构与公式核对
+
+[verify_outline.py](code/dd2/verify_outline.py) 核 [DD2 任务书](manuscripts/dd2/DD2_outline_and_pro_handoff.md) 的六节次序、C400–C406 的可追踪性及七个精确有理式检查。运行命令和实际输出见任务书。
+
 ## C302 全阶估计的有限权重恒等式
 
 [代码](code/quasianalytic_dichotomy/verify.py)以整数与 Fraction 枚举有限权重分解、缓增长函数和 Moreau 谱变换，[结果](code/quasianalytic_dichotomy/results.json)含指纹。无穷序列与全部解析证明见[正文](canonical/quasianalytic_proximal_dichotomy.md)。

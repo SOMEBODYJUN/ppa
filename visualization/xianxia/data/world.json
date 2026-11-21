@@ -10705,6 +10705,28 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-CP-DR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-INEXACT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13579,6 +13601,14 @@
     "E721": {
       "x": 955.22,
       "y": 5233.41
+    },
+    "E722": {
+      "x": 1066.69,
+      "y": 5385.98
+    },
+    "E723": {
+      "x": 1206.6,
+      "y": 5378.96
     }
   },
   "bounds": {

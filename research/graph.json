@@ -5310,6 +5310,18 @@
       "label": "C404 退化 PPPA 真残差传递与恢复",
       "file": "topics/dd2/pppa_recovery.md#dd2-pppa-gauges",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-CP-DR",
+      "label": "C405 CP／DR 分量传递与物理长度边界",
+      "file": "topics/dd2/splitting.md#dd2-splitting-component",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-INEXACT",
+      "label": "C406 有真图见证的 DD2 扰动稳定性",
+      "file": "topics/dd2/inexact.md#dd2-inexact-absolute",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13577,6 +13589,30 @@
       "output": "DD2-PPPA",
       "relation": "conditional",
       "scope": "闭值域的退化约化，原 P-最近锚、近解 lift 和闭目标，物理点率与长度各需对应恢复条件。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E722",
+      "topic": "DD2 实际算法与扰动",
+      "inputs": [
+        "DD2-PPPA",
+        "DD2-GAUGE-LENGTH"
+      ],
+      "output": "DD2-CP-DR",
+      "relation": "conditional",
+      "scope": "固定松弛的分量残差检验、近端覆盖和二点恢复给实际分裂轨道长度。仅全锚一点恢复时另有锐幂门。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E723",
+      "topic": "DD2 实际算法与扰动",
+      "inputs": [
+        "DD2-GAUGE-LENGTH",
+        "D01"
+      ],
+      "output": "DD2-INEXACT",
+      "relation": "conditional",
+      "scope": "用同一允许真图上的受扰输入识别残差，绝对势预算或严格相对耗散给真实步长望远镜。",
       "status": "derived-checked"
     }
   ]

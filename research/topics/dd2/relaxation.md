@@ -89,6 +89,8 @@ s\le M t,\qquad M=\frac{1+\sqrt{1+4\eta\|V\|}}{2\eta}.
 
 **直接后果。** 一步净耗散还给 \(\sum_{k:t_k>0}\alpha_k\mu(t_k)s_k^2\le t_0^2\)，并允许用所累积的 \(\alpha\) 衡量距离率。令 \(L(t)=\mu(t)\chi(t)^2/(2t)\)，则 \(t_{k+1}\le t_k-\alpha_k L(t_k)\)。若 \(L\) 有正的非减下包络 \(\underline L\)，令 \(H(t)=\int_t^R dv/\underline L(v)\)。在到达零前有 \(H(t_k)\ge H(t_0)+\sum_{j<k}\alpha_j\)。若 \(\inf_k\alpha_k>0\)，(8) 还给 \(\sum_k s_k<\infty\)。这时约化影子的总长亦有限，因为相邻影子步可由相邻迭代步与 \(s_k+s_{k+1}\) 相加控制。
 
+**直接积分的另一条件。** 若 \(\mu(t)\chi(t)\) 有正的非减下界 \(m(t)\)，且 \(2t/m(t)\) 可积，则可取 \(\Theta(t)=\int_0^t2v/m(v)\,dv\)。从 (7) 的平方耗散得 \(\alpha s\le(t^2-u^2)/[\mu(t)\chi(t)]\le\Theta(t)-\Theta(u)\)。固定比例吸收和下文的 \(\gamma\ge\chi^\kappa\) 分别可用 \(m=\theta g_0\chi\) 和 \(m=\theta\chi^{1+\kappa}\)。
+
 **保留正锚项。** 若 \(\gamma\ge g(t)\ge0\)，在可行的正距离上定义
 
 \[
@@ -207,6 +209,8 @@ q(z)=\frac{\beta s(r)^2}{r}e_r+s(r)\sqrt{1-\left(\frac{\beta s(r)}r\right)^2}\,e
 取 \(c,\epsilon>0\) 使 \(\beta c\epsilon^{1/\vartheta-1}<1\) 且 \((2\beta-1)c^2\epsilon^{2/\vartheta-2}<\vartheta\)。于是 \(\|q(z)\|=s(r)\)，\(\langle q(z),z\rangle=\beta s(r)^2\)，\(T=I-q\) 的输出半径为 \(\sqrt{r^2-(2\beta-1)s(r)^2}\)。它在 \((0,\epsilon)\) 严增，在 \([\epsilon,\infty)\) 与输入半径成正比。每个圆上 \(T\) 是一次旋转和缩放，故 \(T\) 为全域同胚，原算子 \(G=T^{-1}-I\) 连续单值且完整 resolvent 为 \(T\)。唯一零点为 \(0\)，小窗影子真误差界为 \(a\le r=c^{-\vartheta}s^\vartheta\)。
 
 令小窗内 \(\alpha=2\beta-s^\kappa\)。非驻定轨道满足 \(r_+^2=r^2-\alpha c^{2+\kappa}r^{(2+\kappa)/\vartheta}\)。从足够小的非零初值出发，\(r_k\downarrow0\)。记 \(\nu=(2+\kappa)/\vartheta-2\)，则 \(r_{k+1}^{-\nu}-r_k^{-\nu}\to\nu\beta c^{2+\kappa}\)。因此 \(r_k\asymp k^{-1/\nu}\)，实际步长 \(\alpha_k s_k\asymp k^{-1/(2+\kappa-2\vartheta)}\)。长度有限当且仅当 \(\kappa<2\vartheta-1\)。在阈值及其上，即使缺陷为零且具有优于半阶的误差界，轨道仍可能收敛而无限长。取 \(\beta=2\) 并加第三坐标 \(q_3(z)=z_3/2\)，可用 \(V=\operatorname{diag}(2,2,1)\)。完整 \(I-q\) 仍为同胚，且在小窗的影子误差界仍为 Hölder 阶 \(\vartheta\)。在平面不变子空间上，松弛趋于 \(4>2\eta\)，其中 \(\eta=1\)。
+
+**近上限松弛的缺陷常数取等。** 在上一个平面构造中，把位移的径向系数换为 \(b(r)=\beta-s(r)^\kappa/2\)（外延区固定为 \(b(\epsilon)\)），保持矩阵 \(V=\beta I\)。缩小窗口使 \(b>1/2\)，影子半径平方变为 \(r^2-(2\beta-1)s^2+s^{2+\kappa}\)。其内窗导数为 \(2r+o(r)>0\)，外窗仍是正比例的径向映射，因此对应同一个完整单值连续原算子。选 \(\alpha=2\beta-s^\kappa\) 后有 \(\langle q,z\rangle=b(r)s^2=\alpha s^2/2\)，更新精确保半径。该例取 \(2D=s^{2+\kappa}=K^{-(2+\kappa)/\vartheta}t^{(2+\kappa)/\vartheta}\)，并保留输出 Hölder 界。因此 (10) 之前的严格临界缺陷常数不能统一放宽到等号。
 
 **最后残差没有普适幂率。** 选严格正的可和数列 \(a_k\)，并让 \(a_{2^{j^2}}\ge j^{-2}\)。设 \(t_k=\sum_{i\ge k}a_i\)，在正半轴分段线性连接 \(\mathcal F(t_k)=a_k\)、\(\mathcal F(0)=0\)。在负半轴令 \(\mathcal F(z)=z/2\)，在 \(z\ge t_0\) 令 \(\mathcal F(z)=a_0+(z-t_0)/2\)。于是 \(\mathcal F\) 连续，\(z\mathcal F(z)\ge\mathcal F(z)^2\)，且 \(I-\mathcal F\) 连续严格递增并满射。取 \(S=\{0\},V=I,\Phi=0,\alpha=1\)，从 \(t_0\) 开始的完整轨道恰为 \(t_k\)。其长度有限，但最后残差 \(s_k=a_k\) 和点误差 \(t_k\ge a_k\) 都不存在普适的正幂上界。
 

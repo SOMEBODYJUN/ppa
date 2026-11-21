@@ -3519,3 +3519,17 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间，非零有闭值域的 \(P=CC^*\)、\(G=(C^*A^{-1}C)^{-1}\)、全范围受限图 \(A_{\mathcal R}\)。原 \(P\)-最近锚内积与约化同一锚精确恒等。\(r_G(w)=\inf_{C^*y=w,a\in A_{\mathcal R}(y)}\|C^{-1}a\|\)。原范数下的局部一般真误差界，经足够近的完整残差 lift 传为 \(\|C\|\psi(\|C\|\cdot)\)；\(P\)-距离入口省前置因子；输入模再加恒等。
 - **Conclusion / Boundaries**：对已收敛的约化轨道，闭目标可直接负责投影识别。有界物理影子与零值 demiclosedness 给同一零纤维上的聚点，唯一纤维给弱收敛，有限维同条件给强收敛。局部锚定恢复传点率，沿边的二点恢复传物理长度。有限维近输入低残差的全 lift 也可由局部有界、零值外半连续和唯一纤维取得。非闭投影目标、非唯一纤维、弱而非强、强而无限长及原误差界逆向均有完整反例。
 - **Evidence / Related Files**：[全纤维传递、恢复证明和反例](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)。集合值约化式及原二次恢复条件定位 Alcantara v1 第 4 节。与 C402 的方向版本合用仍须逐模型核其约化输入条件。
+
+<a id="c405"></a>
+## C405-v1 · 分量误差界、非零位置模与 CP／DR 物理长度
+
+- **Status**：`derived-checked`。固定松弛的分量定理、具体完整图和长度端点已核。其他分裂仅指正文给定的固定步辅助模型。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维 CP 的 \(T(u,v)=(Au+L^*v,B^{-1}v-Lu)\) 与 \(\gamma\tau\|L\|^2\le1\) 的完整近端更新，\(\alpha=1\)，允许退化。若两个分量完整预解式全域单值 Lipschitz，\(B\) 全域 Lipschitz，原始复合 \(A+L^*B(L\cdot)\) 有同目标的局部真 Hölder 界，分量零锚缺陷按正文 (S4) 控制，则其 \(p,\theta\) 及临界常数门给约化、物理影子与物理迭代有限长。块半单调模给保留非零 \(U\) 的充分完成平方公式 (S10)。
+- **Evidence / Boundaries**：完整非单调 CP 与实际 DR 子类有非零 \(U\)、\(t_k\sim4/k^2\) 及线性真误差界失效。仅有全零锚统一恢复时，\(\theta>2/3\) 的点锚长度传递门在正文假设类内尖锐，临界 DR 反例满足原文 Theorem 5.1 全图假设及值域真 Hölder 界却有无限物理长度。更一般算子、非固定松弛的物理长度及分布式条件仍分开证明。[应用、模公式与反例](research/topics/dd2/splitting.md#dd2-splitting-component)。
+
+<a id="c406"></a>
+## C406-v1 · 有真图见证的非精确 DD2
+
+- **Status**：`derived-checked`。受扰图输入、长度势、留域、误差时序和反例可独立复核。
+- **Exact Statement / Objects / Domain / Quantifiers**：接受实际步 \(x^+=y\) 且 \(x+e=y+\lambda w,\ w\in F(y)\)，必须属于同一受检允许图。精确凹势下 \(\sum\Theta(\|e_k\|)<\infty\) 和有限前缀严格预算足以给真实有限长与闭目标极限。C401 积分势有可积凹上包络。若真实平方耗散为 \(\tau^2-a^2\ge\beta s^2\)，可用可检验准则 \(\|e\|\le\theta\beta s^2/[s+2\psi(s/\lambda)]\)，\(0\le\theta<1\)。在 C399 幂次类，绝对误差幂指数 \(2-1/q\)、线性相对系数的可和指数 \(1/(1-q)\) 与相对残差的严格常数门均有完整原图反例。
+- **Conclusion / Scope**：欧氏绝对误差可和一般不能保证真实长度或点收敛，且单轨道 \(\|e_k\|/s_k\to0\) 也可失败。附加累计欧氏误差尾条件时保留精确幂次点率。退化 PPPA 的相邻 shadow 控制仍是独立假设。不能将同点真图证书泛化为任意扩大算子或任意近似图。见[证明及误差边界](research/topics/dd2/inexact.md#dd2-inexact-absolute)。
