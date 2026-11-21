@@ -3497,3 +3497,25 @@
 - **Status**：`derived-checked`。根据同一步能量与单调逆函数的积分比较推导。
 - **Exact Statement / Objects / Domain / Quantifiers**：保留 C400 最近输入锚与覆盖于 \(U_R\) 的允许关系，输出真误差界由连续非减 \(\psi\)、\(\psi(0)=0\) 给定。令 \(\eta(s)=\psi(s/\lambda),\ \chi=(I+\eta)^{-1}\)。若 \(2D(t)\le(1-\delta)\chi(t)^2\) 于 \(0<t\le R\)，\(0<\delta\le1\)，且 \(\Theta(R)=\int_0^R u/\chi(u)\,du<\infty\)，则每一步 \(t^2-a^2\ge\delta s^2\) 且 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。
 - **Conclusion / Scope**：初值严格预算 \((2/\delta)\Theta(t_0)<d(x^0,U^c)\) 保全部允许轨道有限长度、留域及收敛至 \(S\cap U\)，尾长 \(\le(2/\delta)\Theta(t_k)\)。幂次恢复 C399 的严格临界常数。耗散条件为充分条件。线性误差界临界区另有 C400 的曲线尾和门。见[证明与实例](research/topics/dd2/core.md#dd2-general-gauge)。
+
+<a id="c402"></a>
+## C402-v1 · 方向相关的变松弛与一般长度势
+
+- **Status**：`derived-checked`。能量、局部续接、速率与边界轨道均有自足推导。
+- **Exact Statement / Objects / Domain / Quantifiers**：Hilbert 空间的允许边 \(q\in\mathcal F(z)\) 以最近或近似最近零锚控制 \(\langle q,z-p\rangle\ge\langle q,Vq\rangle-D(t)\)，\(V\succeq\eta I>0\)。置 \(s=\|q\|\)、\(\beta\le\langle q,Vq\rangle/s^2\)、\(a=d(z-q,S)\le\psi(s)\)、\(\chi=(I+\psi)^{-1}\)。允许 \(\alpha>0,\ 2\beta-\alpha\ge g(t)>0\) 且 \(\mu(t)=g(t)-2D(t)/\chi(t)^2>0\)。若 \(2t/(\mu(t)\chi(t))\) 有非增可积上包络，则其积分势之差控制实际 \(\alpha s\)，覆盖与初值严格预算给统一续接和尾长。再加累积松弛发散及 \(\mu\) 远离零的窗有正下界，识别极限入闭目标。
+- **Mechanism / Boundaries**：\(\alpha=2\beta-\|q\|^\kappa\) 的小窗 Hölder 子类有锐长度阈值 \(\kappa<2\vartheta-1\)。最近锚只控制距离；对每个固定锚再有统一可和误差时得到 quasi-Fejér、平方和及条件性的弱收敛和强收敛。最佳平方残差及加权残差向量平均的 \(O(1/N)\) 所用条件和结论不同。取原文 \(U\succeq0\) 与零误差回收 Proposition 3.1 的公式。证明、完整反例及外部先行范围见[正文](research/topics/dd2/relaxation.md#dd2-adaptive-length)。
+
+<a id="c403"></a>
+## C403-v1 · 输入与输出真误差界的精确联合几何
+
+- **Status**：`derived-checked`。等价剪切、平面上下端和全图线性例已核。公开优先性未判定。
+- **Exact Statement / Objects / Domain / Quantifiers**：同一闭零集的 \(\mathcal F,G=(\mathcal F^{-1}-I)^{-1}\)，最近输入锚下 \(\langle q,z-p\rangle\ge\beta\|q\|^2-D(t)\)，\(\beta>0\)。可独立启用输入真误差界 \(h\) 和输出真误差界 \(\psi\)。局部完整图误差界双向传递为原模加恒等项。给定 \(t,\|q\|,a=d(z-q,S)\) 时，正文 (3)–(7) 精确刻画更新距离 \(r=d(z-\alpha q,S)\) 的平面可行域，(8) 对同一步残差联合优化。过松弛中有额外输出锚根式，严格门可优于简单三角估计。
+- **Evidence / Scope**：\(\alpha=\beta=1\) 的线性联合因子 (10) 在全部可行参数由完整闭图实现。一般非线性和任意松弛的完整算子实现目前有额外覆盖条件，几何最优性不依赖这些条件。净耗散可结合任一侧的位移下界积分得到尾势。与 Proposition 3.4 的比较、右连续与残差帽见[正文](research/topics/dd2/dual_eb.md#dd2-dual-envelope)。
+
+<a id="c404"></a>
+## C404-v1 · 退化 PPPA 的全纤维真误差界与物理恢复
+
+- **Status**：`derived-checked`。约化条件、核方向和物理恢复均注明作用域。
+- **Exact Statement / Objects / Domain / Quantifiers**：实 Hilbert 空间，非零有闭值域的 \(P=CC^*\)、\(G=(C^*A^{-1}C)^{-1}\)、全范围受限图 \(A_{\mathcal R}\)。原 \(P\)-最近锚内积与约化同一锚精确恒等。\(r_G(w)=\inf_{C^*y=w,a\in A_{\mathcal R}(y)}\|C^{-1}a\|\)。原范数下的局部一般真误差界，经足够近的完整残差 lift 传为 \(\|C\|\psi(\|C\|\cdot)\)；\(P\)-距离入口省前置因子；输入模再加恒等。
+- **Conclusion / Boundaries**：对已收敛的约化轨道，闭目标可直接负责投影识别。有界物理影子与零值 demiclosedness 给同一零纤维上的聚点，唯一纤维给弱收敛，有限维同条件给强收敛。局部锚定恢复传点率，沿边的二点恢复传物理长度。有限维近输入低残差的全 lift 也可由局部有界、零值外半连续和唯一纤维取得。非闭投影目标、非唯一纤维、弱而非强、强而无限长及原误差界逆向均有完整反例。
+- **Evidence / Related Files**：[全纤维传递、恢复证明和反例](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)。集合值约化式及原二次恢复条件定位 Alcantara v1 第 4 节。与 C402 的方向版本合用仍须逐模型核其约化输入条件。

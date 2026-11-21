@@ -10672,6 +10672,39 @@
       "y": 5151,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ADAPTIVE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-DUAL-EB": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-PPPA": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13534,6 +13567,18 @@
     "E718": {
       "x": 1085.08,
       "y": 5195.26
+    },
+    "E719": {
+      "x": 1076.35,
+      "y": 5289.2
+    },
+    "E720": {
+      "x": 700.03,
+      "y": 5198.35
+    },
+    "E721": {
+      "x": 955.22,
+      "y": 5233.41
     }
   },
   "bounds": {

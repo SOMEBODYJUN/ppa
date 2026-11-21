@@ -1088,6 +1088,14 @@
 | E717 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | conditional → [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | 同一最近输入零锚、非负缺陷及输出线性误差界，利用精确几何可行域反演目标比率的缺陷预算。；**derived-checked** |
 | E718 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | conditional → [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | 连续非减输出误差界，缺陷可由位移下界平方严格吸收，积分长度势给有限前缀及尾长。；**derived-checked** |
 
+## DD2 松弛与退化约化
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E719 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-ADAPTIVE · C402 方向自适应松弛的耗散与长度](topics/dd2/relaxation.md#dd2-adaptive-length) | 把同一步耗散换成方向相关的松弛净余量。可积上包络与累积松弛负责长度和目标识别。；**derived-checked** |
+| E720 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-DUAL-EB · C403 前向与图剪切输出的联合锐包络](topics/dd2/dual_eb.md#dd2-dual-envelope) | 固定同一图边的输入与剪切输出误差界，保留第三距离与输出锚以优化松弛的更新。；**derived-checked** |
+| E721 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) ∧ [DD2-DUAL-EB · C403 前向与图剪切输出的联合锐包络](topics/dd2/dual_eb.md#dd2-dual-envelope) | conditional → [DD2-PPPA · C404 退化 PPPA 真残差传递与恢复](topics/dd2/pppa_recovery.md#dd2-pppa-gauges) | 闭值域的退化约化，原 P-最近锚、近解 lift 和闭目标，物理点率与长度各需对应恢复条件。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

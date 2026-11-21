@@ -5292,6 +5292,24 @@
       "label": "C401 一般函数误差界的积分长度势",
       "file": "topics/dd2/core.md#dd2-general-gauge",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-ADAPTIVE",
+      "label": "C402 方向自适应松弛的耗散与长度",
+      "file": "topics/dd2/relaxation.md#dd2-adaptive-length",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-DUAL-EB",
+      "label": "C403 前向与图剪切输出的联合锐包络",
+      "file": "topics/dd2/dual_eb.md#dd2-dual-envelope",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-PPPA",
+      "label": "C404 退化 PPPA 真残差传递与恢复",
+      "file": "topics/dd2/pppa_recovery.md#dd2-pppa-gauges",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13522,6 +13540,43 @@
       "output": "DD2-GAUGE-LENGTH",
       "relation": "conditional",
       "scope": "连续非减输出误差界，缺陷可由位移下界平方严格吸收，积分长度势给有限前缀及尾长。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E719",
+      "topic": "DD2 松弛与退化约化",
+      "inputs": [
+        "DD2-GAUGE-LENGTH",
+        "D04"
+      ],
+      "output": "DD2-ADAPTIVE",
+      "relation": "conditional",
+      "scope": "把同一步耗散换成方向相关的松弛净余量。可积上包络与累积松弛负责长度和目标识别。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E720",
+      "topic": "DD2 松弛与退化约化",
+      "inputs": [
+        "DD2-REVERSE-A",
+        "D01",
+        "D04"
+      ],
+      "output": "DD2-DUAL-EB",
+      "relation": "conditional",
+      "scope": "固定同一图边的输入与剪切输出误差界，保留第三距离与输出锚以优化松弛的更新。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E721",
+      "topic": "DD2 松弛与退化约化",
+      "inputs": [
+        "DD2-GAUGE-LENGTH",
+        "DD2-DUAL-EB"
+      ],
+      "output": "DD2-PPPA",
+      "relation": "conditional",
+      "scope": "闭值域的退化约化，原 P-最近锚、近解 lift 和闭目标，物理点率与长度各需对应恢复条件。",
       "status": "derived-checked"
     }
   ]
