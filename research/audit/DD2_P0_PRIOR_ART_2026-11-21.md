@@ -12,7 +12,7 @@
 t=d(x,S),\qquad a=d(y,S),\qquad s=\|x-y\|,
 \]
 
-其中 (S\subseteq\operatorname{zer}F) 是闭目标，允许关系可以是
+其中 \(S\subseteq\operatorname{zer}F\) 是闭目标，允许关系可以是
 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\)。DD2 的一步前件只要求存在一个最近输入锚
 \(p\in P_S(x)\)，使
 
@@ -23,7 +23,7 @@ t=d(x,S),\qquad a=d(y,S),\qquad s=\|x-y\|,
 \tag{DD2}
 \]
 
-写 (L=\ell/\lambda)。在固定线性缺陷 (D(t)=\nu t^2) 时，平面引理给出
+写 \(L=\ell/\lambda\)。在固定线性缺陷 \(D(t)=\nu t^2\) 时，平面引理给出
 
 \[
 (t-s)_+\le a\le \min\{t+s,\sqrt{t^2+2\nu t^2-s^2}\},
@@ -126,10 +126,10 @@ Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要
 
 ### 2.3 与 DD2 的严格边界
 
-**Project derivation 1.** 在 Hilbert 情形 (p=c=2)，令 (y=Tx)、(p\in S)，则 LL 的点态 almost-firm 估计等价于
+**Project derivation 1.** 在 Hilbert 情形 (p=2)（保留文中的一致凸模常数 (c)），令 (y=Tx)、(p\in S)，则 LL 的点态 almost-firm 估计等价于
 
 \[
-\|y-p\|^2\le(1+\varepsilon)\|x-p\|^2-	au\|x-y\|^2,
+\|y-p\|^2\le(1+\varepsilon)\|x-p\|^2-\tau\|x-y\|^2,
 \qquad \tau=\frac{1-\bar\alpha}{\bar\alpha}.
 \tag{LL-energy}
 \]
@@ -161,7 +161,7 @@ Corollary 19(b) 将 (LL24) 取为线性误差界 (d(x,S)\le\mu d(x,Tx))，并要
 
 ### 3.1 Paper fact：全锚半单调和两个误差界
 
-Proposition 3.4 取集合值 (F:K\rightrightarrows K)，解集 \(\operatorname{zer}F\ne\varnothing\)，相对 \((U,V))-半单调条件
+Proposition 3.4 取集合值 \(F:K\rightrightarrows K\)，解集 \(\operatorname{zer}F\ne\varnothing\)，相对 \((U,V))-半单调条件
 
 \[
 \langle q,z-w\rangle
@@ -169,13 +169,13 @@ Proposition 3.4 取集合值 (F:K\rightrightarrows K)，解集 \(\operatorname{z
 \tag{A-sem}
 \]
 
-对每个 (w\in\operatorname{zer}F) 和每个 (q\in F(z)) 成立，(U\succeq-\varepsilon I)、(V\succeq\eta I)。迭代是
+对每个 \(w\in\operatorname{zer}F\) 和每个 \(q\in F(z)\) 成立，(U\succeq-\varepsilon I)、(V\succeq\eta I)。迭代是
 
 \[
 z^{k+1}=z^k-\lambda_k q^k,qquad q^k\in F(z^k),
 \]
 
-并取方向系数 (eta_k) 满足
+并取方向系数 \(\beta_k\) 满足
 \(\langle q^k,Vq^k\rangle\ge\beta_k\|q^k\|^2)、(0<\lambda_k\le2\beta_k)。
 
 其式 (10) 的余量为
@@ -243,7 +243,7 @@ x=z,\quad y=J_{t\mathcal A}z,\quad q=x-y,
 \quad D(t_0)=\nu t_0^2.
 \]
 
-由于 (q\in t\mathcal A(y))，输出真误差界
+由于 \(q\in t\mathcal A(y)\)，输出真误差界
 \(d(y,S)\le\ell r_{\mathcal A}(y)) 给出
 
 \[
@@ -291,7 +291,7 @@ d(y,S)\le(\ell/t)\|q\|=L\|q\|.
 1-2\nu L^2\ge\kappa>0,
 \]
 
-即 \(2\nu L^2<1)，这是能量支的门。DD1 的低 (L) 步长支可以在能量门失效后仍给严格下降，属于额外几何优化，而非 Alcantara Proposition 3.4 的已陈述结论。
+即 \(2\nu L^2<1\)，这是能量支的门。DD1 的低 (L) 步长支可以在能量门失效后仍给严格下降，属于额外几何优化，而非 Alcantara Proposition 3.4 的已陈述结论。
 
 ### 3.3 量词差异
 
