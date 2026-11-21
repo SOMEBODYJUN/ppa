@@ -396,7 +396,12 @@
   - **证据** [PL.A1及范围验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-length-threshold-acceptance)、[PL1–PL14精确积分、完整双图与预设目标](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)、[PL15一维任意闭目标](../canonical/dd2_power_defect_finite_length.md#dd2-one-dimensional-nonnegative-length)、[C420原充要范围与目标接口](../canonical/dd2_function_hypotheses.md#fh-zero-defect-target-integral)、[C456原精确模配对](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)、[C451非幂边界](../topics/dd2/nonpower_rates.md#dd2-log-half-order)。
   - **复核** 三席均先完成四项实际数学自检，独立重构正面积分/留域、完整反向/纤维与量词边界，再逐源冷读PL1–PL15、PL.A1、C420两支持卡、F148及全部八处实际正文/地图/四栏。复算Tonelli准确系数、首出步预算、q=1及q>1独立好门、旋转全部前像与每残差取等、νc²/2实际渐近、径向全局凸近端、φ_D认证及原φ₀的Sigma=0反向障碍；一维任意闭S等式、正锚非空例、零输入、无覆盖和无误差界各范围逐项核准。已修严格号的零尺度、全域反解与目标窗、渐近与等号及固定图/统一类误读；无未关闭实质异议。仅签S06.02，S06.03及后续不预签。
 
-- [ ] `S06.03` `q=1/2` 的反例是否满足全部算子与近端量词？
+- [x] `S06.03` `q=1/2` 的反例是否满足全部算子与近端量词？
+  - **裁决** Proved
+  - **结论** 是：固定原F(y)=‖y‖Qy、H=U=Vψ=R²、λ=K=1、S={0}、Φ=D=0、ψ=√ρ，直接解a²+a⁴=t²并代回唯一完整近端；无选支、额外纤维或远根。全部输出ρ=s=a²，原模每个可达残差取等，唯一最近锚为0；先指定φ=T₂⁻¹再由原数据统一认证，本图逐步达到，任意距离R窗覆盖且不变。每个非零初值都有HE8调和下界，点趋0、s_k=ρ_k~1/k且平方步和=t₀²；零初值唯一驻定。原F1/F2通过而F3的4/t不积，比较尾亦发散，无统一κ；缺DD1的统一比例及DD2的可和前件，故没有反驳完整长度定理。更低幂仅局部松界，非负锚不等于全对单调。
+  - **证据** [逐量词验收表](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-half-order-complete-acceptance)、[HE1–HE9原图反解及有限步证据](../canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)、[C456原同模配对](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)、[原F1–F3及支付合同](../topics/dd2/original_f_conditions.md#dd2-original-telescope)、[主定理A+B与可和前件](../topics/dd2/core.md#dd2-main-trajectory)。
+  - **复核** 三席均先完成四项实际数学自检，独立反解原图、重建实际轨道并攻击预设目标/完整纤维/局部量词，再逐源冷读HE1–HE9、逐量词表、C399支持、F148及全部八处实际正文/地图/四栏。复算非负半径唯一、逆矩阵范数与代回、全部残差域、Sigma=0、每个方向/零输入/任意R、有限k倒数夹界、实际平方和及增量渐近；原F1–F3、C401积分和所有合法比较函数的不可和性分别核准。修复集合值近端与单值逆记号、输出残差索引、旋转/比较函数重名和邻节定义，明确旧低幂记录不属本次签收。无未关闭实质异议；仅签S06.03，不预签S06.04及后续。
+
 - [ ] `S06.04` `q<1/2` 是否存在更强的失败机制？
 - [ ] `S06.05` `pq=2` 时的尖锐常数是什么？
 - [ ] `S06.06` `pq>2` 是否能够进一步削弱？

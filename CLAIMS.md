@@ -3495,6 +3495,8 @@
 
 - **S04.09 显式速率补证**：[PR1–PR3](research/canonical/dd2_power_defect_finite_length.md#dd2-power-explicit-rates)固定预设 \(\varphi_\gamma\) 的原数据兼容门，保留有限前缀、零输入和严格位置预算，给全部允许选择的显式距离／点误差／尾长界。[PR4–PR7](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)核完整剪切的实际渐近常数与指数达到性；仅统一类的指数不能提高，固定图可更快。一般比较曲线及积分计步的附加条件见 [S04.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-variable-ratio-rate-acceptance)。既有 C399 的量词和端点范围未变。
 
+- **S06.03 原半阶完整合同补证（实际终稿三席复核通过）**：[HE1–HE9](research/canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)固定本卡原反例 \(H=\mathbb R^2,\lambda=K=1,q=1/2,S=\{0\},\Phi=0,\psi=\sqrt\rho,U=V_\psi=H\)。从 \(a^2+a^4=t^2\) 排除全部额外半径，再直接代回 \(\mathcal J(x)=J_F(x)=\{(I-aQ)x/(1+a^2)\}\) 的唯一完整根，核 F/J 闭图、精确零集、每个完整输出残差 \(\rho=s=a^2\)、零驻定及任意距离 R 窗全输出覆盖不变。预设 \(\varphi=(a\mapsto\sqrt{a^2+a^4})^{-1}\) 先由原数据统一认证，本图同边达到。每个非零初值的 \(s_k\) 有 HE8 调和下界，且 \(t_k\sim k^{-1/2},s_k=\rho_k\sim k^{-1}\)、平方步和 \(t_0^2\)，故点趋0而实际长度无限；零初值例外明确。在R≤1核原组合时，F1/F2通过但F3的 \(4/t\) 发散，没有反驳原完整长度定理。此为原反例的精确范围与证明补充，不改 C399 正定理的指数域，也不把非负锚误作全对单调；C456 的同模好图身份保留。
+
 <a id="c400"></a>
 ## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
 
