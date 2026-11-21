@@ -3592,3 +3592,11 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：任取有限维实欧氏空间 \(H\)、非空闭凸 \(S\subset H\)、序列 \((x_k)\)，记 \(p_k=P_Sx_k\)。若从某步起每步有正数 \(t_k,a_k,b_k\) 与单位向量 \(e_k,e'_k\) 满足 \(x_k=p_k+t_ke_k\)、\(x_{k+1}=p_k-b_ke_k=p_{k+1}+a_ke'_k\)、\(b_k>a_k\)，则 \(p_k\) 不收敛，且 \(\sum_k\|x_{k+1}-x_k\|=\infty\)。覆盖严格低 \(L\) 步长支逐步取等，不对给定算子另加假设。
 - **Dependencies / Evidence**：C400 的步长支与 C411 的等号几何给出假设中的反射构形。相对外法锥是闭图尖锥。在候选极限点法锥的单位截面凸包取最小范数点，得到同时位于法锥且对其单位方向一致为正的支撑方向。紧性将严格符号传到邻近锚，迫使有符号支撑差严格递减而不能趋零。[完整证明及边界检查](research/topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex)。
 - **Counterevidence / Scope**：若 \(b_k=a_k\)，单点闭凸目标在两支交界即可给出可和链。对无限维空间或锚不收敛的闭凸轨道，本命题没有分类。旧法锥取向反驳见 [F143](FAILED_ROUTES.md#f143)。
+<a id="c414"></a>
+## C414-v1 - 一般符号缺陷的精确一步包络与正部公式边界
+
+- **Status**: `derived-checked`（自由二维两锚闭目标几何）；任务书把 D=[-Phi]_+ 对任意符号 Phi 称为精确最优的版本为 `invalid`。
+- **Exact Statement / Objects / Domain / Quantifiers**: 有限维欧氏空间维数至少 2，S 非空闭且输入最近点 p 属于 P_S(x) 存在；t=d(x,S)>0、s=norm(x-y)、a=d(y,S)。每条允许边满足 inner(x-y,y-p) >= Phi(t) 且 a <= eta(s)。令 E=t^2-2 Phi(t)。若 Phi(t)<=t^2/4，则可行步长区间为 I=[max(0,(t-sqrt(t^2-4 Phi(t)))/2),(t+sqrt(t^2-4 Phi(t)))/2]；否则 I 为空。限制 s 满足 (t-s)_+ <= min(eta(s), t+s, sqrt(E-s^2))。若 eta 连续，合法输出距离的精确自由几何上确界是这个紧可行集上的最大值。
+- **Proof / Conclusion**: 平方展开给 b^2 <= E-s^2，三角给 b >= abs(t-s)，从而 s^2-t s+Phi <= 0；输出三角和 gauge 给可行集。取 b=max(a,abs(t-s)) 的二维三角形，并在输出点背离输入的射线上放第二个锚，得到 p 仍为输入最近锚且输出距离恰为 a，故自由两锚类取等。
+- **Boundary / Counterevidence**: Phi<=0 时 I=[0,(t+sqrt(t^2+4D))/2]，恢复旧 DD2 包络。若 Phi>0，正部 D=[-Phi]_+ 丢掉下根和能量余量；t=1、Phi=1/8、eta(s)=s 时精确值 sqrt(3/8)，正部式给 1/sqrt(2)，故不能称 sharp。
+- **Dependencies / Related Files**: [精确定理与证明](research/canonical/dd2_general_phi_exact.md)、[§1-§3 逐题审计](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[C400 负缺陷版本](research/topics/dd2/core.md#dd2-reverse)。固定凸或仿射目标、固定连续单值图、无限维最近点和轨道级反向必要性另需条件。

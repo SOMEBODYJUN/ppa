@@ -149,70 +149,71 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 
 # §11 双重残差和正则性传递
 
-1. 原残差在 \(A_{\mathcal R}(y)\)，约化输出残差在 G(w)，约化输入残差在 F(z)，位置不同。
-2. 图对应由 \(q\in F(z)\Longleftrightarrow q\in G(z-q)\Longleftrightarrow\exists y\) 给出。
-3. 原 P-距离误差界到 G 的传递在完整 fiber lift 下成立。
-4. 反向普通范数传递没有无条件结论，远 kernel lift 是反例。
-5. 线性 gauge 付出 \(m_C,M_C\)，Hölder 可局部吸收线性项，一般 gauge 需要 \(\chi=(I+\psi)^{-1}\)。
-6. C403 的共同 s 联合几何可以严格强于分开的三角估计，但两个弱界并列本身不产生新机制。
-7. 约化强而原空间弱的实例和 \(G(y)=\{y,y^3\}\) 已给出。
-8. 联合补偿判据需要同一边、同一 s、锚缺陷、输出 gauge 和完整允许边 coverage。
-9. 线性 \(\psi\) 与二次缺陷恢复 DD1，\((U,V)\) 特例恢复 Alcantara Proposition 3.4。
-10. 图恒等式是代数层，闭图、fiber 有界、目标闭性和 demiclosedness 负责极限层。
+1. **状态：Proved。** 原残差在 \(A_{\mathcal R}(y)\)，约化输出残差在 G(w)，约化输入残差在 F(z)，位置不同。证据：`../topics/dd2/dual_eb.md` 的残差位置表。
+2. **状态：Proved。** 图对应由 \(q\in F(z)\Longleftrightarrow q\in G(z-q)\Longleftrightarrow\exists y\) 给出。证据：`../topics/dd2/pppa_recovery.md` 式 (1)。
+3. **状态：Conditional。** 原 P-距离误差界到 G 的传递在完整 fiber lift 下成立。证据：`../topics/dd2/pppa_recovery.md` 式 (3) 及 gauges 表，量词是每个允许 q 都有 lift。
+4. **状态：Refuted（无条件版本）。** 反向普通范数传递没有无条件结论，远 kernel lift 是反例。证据：`../topics/dd2/pppa_recovery.md` 逆向障碍 1–4。
+5. **状态：Conditional。** 线性 gauge 付出 \(m_C,M_C\)，Hölder 可局部吸收线性项，一般 gauge 需要 \(\chi=(I+\psi)^{-1}\)。证据：`../topics/dd2/pppa_recovery.md` gauges 表及 C401。
+6. **状态：Conditional / Sharp for stated geometry。** C403 的共同 s 联合几何可以严格强于分开的三角估计，但两个弱界并列本身不产生新机制。证据：`../topics/dd2/dual_eb.md` 的共同 s 极值与取等构形。
+7. **状态：Proved（实例存在）。** 约化强而原空间弱的实例和 \(G(y)=\{y,y^3\}\) 已给出。证据：`../topics/dd2/pppa_recovery.md` 逆向障碍 3–4。
+8. **状态：Conditional。** 联合补偿判据需要同一边、同一 s、锚缺陷、输出 gauge 和完整允许边 coverage。证据：`../topics/dd2/dual_eb.md` 的 full-coverage 条件。
+9. **状态：Recovered / Conditional。** 线性 \(\psi\) 与二次缺陷恢复 DD1，\((U,V)\) 特例恢复 Alcantara Proposition 3.4。证据：C403、C404，量词限于匹配的 full-graph 或 selected-relation 版本。
+10. **状态：Proved（逻辑分层）。** 图恒等式是代数层，闭图、fiber 有界、目标闭性和 demiclosedness 负责极限层。证据：`../topics/dd2/pppa_recovery.md` 式 (1)、(6)。
 
 ---
 
 # §12 完整算法分析
 
-1. Fejér/quasi-Fejér 只有在全锚统一条件下成立，最近锚只给距离递推。
-2. 实际有限长度由 C401 势或同一步严格耗散给出。
-3. 严格平方耗散给残差平方可和。
-4. 一般非线性残差可和需要积分势和误差债务。
-5. best-iterate 由平方和给 \(O(N^{-1/2})\) 范数级率。
-6. ergodic 率需要望远镜权重，通常为 \(O(1/N)\)。
-7. pointwise 率需幂次递推或一般比较函数。
-8. 复杂度界需要显式工作域、势和残差评价成本。
-9. C399/C400 给 stated subclasses 的 sharp rates。
-10. 有界性来自留域预算，极限识别还需要闭性或 demiclosedness。
-11. Q-linear 来自固定 A，R 型非线性率来自比较函数，超线性需要额外 \(A(t)/t\to0\) 结构。
-12. 无统一 A 时仍可使用同一步势和局部留域。
+1. **状态：Conditional。** Fejér/quasi-Fejér 只有在全锚统一条件下成立，最近锚只给距离递推。证据：`../topics/dd2/relaxation.md` 全锚与最近锚分节。
+2. **状态：Conditional。** 实际有限长度由 C401 势或同一步严格耗散给出。证据：C401 与 `../topics/dd2/core.md#dd2-general-gauge`，需要严格余量和可积势。
+3. **状态：Proved conditionally。** 严格平方耗散给残差平方可和。证据：`../topics/dd2/relaxation.md` 的望远镜不等式，量词是整条留域轨道。
+4. **状态：Conditional。** 一般非线性残差可和需要积分势和误差债务。证据：C401、C406，未覆盖任意振荡 gauge。
+5. **状态：Proved conditionally。** best-iterate 由平方和给 \(O(N^{-1/2})\) 范数级率。证据：`../topics/dd2/relaxation.md` 的残差平方望远镜，需非空真残差和统一初始预算。
+6. **状态：Conditional。** ergodic 率需要望远镜权重，通常为 \(O(1/N)\)。证据：`../topics/dd2/relaxation.md` 的加权向量平均，权重和及目标量词需另列。
+7. **状态：Conditional。** pointwise 率需幂次递推或一般比较函数。证据：C399、C401，单纯平方和不推出 pointwise 率。
+8. **状态：Conditional。** 复杂度界需要显式工作域、势和残差评价成本。证据：C401 的前缀预算，算法成本尚未统一定义。
+9. **状态：Sharp for stated subclasses。** C399/C400 给 stated subclasses 的 sharp rates。证据：C399 幂次取等与 C400 反向预算，不能升级到全算子类。
+10. **状态：Conditional。** 有界性来自留域预算，极限识别还需要闭性或 demiclosedness。证据：`../topics/dd2/core.md` 的留域引理、`../topics/dd2/pppa_recovery.md` 式 (6)。
+11. **状态：Conditional。** Q-linear 来自固定 A，R 型非线性率来自比较函数，超线性需要额外 \(A(t)/t\to0\) 结构。证据：C399/C400，超线性只对距离递推且需实际取值满足相应上界。
+12. **状态：Conditional。** 无统一 A 时仍可使用同一步势和局部留域。证据：C401 的逐边势条件和 `../topics/dd2/core.md#dd2-trajectory`。
 
 ---
 
 # §13 自适应松弛和非精确
 
-1. 真实区域为
+1. **状态：Conditional。** 真实区域为
    \[
    \alpha_k<2(\underline\beta_k-\omega_D(t_k)).
    \]
-2. 一般 \(\Phi\) 通过平方展开和 \(D(t)\) 进入能量。
-3. 逐边规则由方向下界、缺陷和 \(\chi(t)\) 计算。
-4. \(\alpha_k\to0\) 或接近边界会使净耗散消失。
-5. 统一正下界只在点收敛和全锚结论中额外需要。
-6. 超松弛需要方向余量和输出锚根式门。
-7. 松弛后必须重建比较函数，不能复用精确步 A。
-8. 有正余量和势债务时有限长度保留。
-9. 绝对误差需 \(\Delta_\Theta+\eta\) 可和，相对误差可由 \(\eta\le\theta(\tau-a)\) 认证。
-10. 速率与 shadow recovery 需要误差尾和二点恢复。
-11. C406 给出欧氏可和但点不收敛、相对误差趋零但长度发散和临界旋转反例。
-12. C407 的逐边区域比固定松弛细，但最宽性仍 Open。
+   证据：C407 与 `../topics/dd2/adaptive_parameter_audit.md`，量词是每一允许边且需可观测方向余量。
+2. **状态：Proved conditionally。** 一般 \(\Phi\) 通过平方展开和 \(D(t)\) 进入能量。证据：`../topics/dd2/relaxation.md` 的方向松弛能量展开。
+3. **状态：Conditional。** 逐边规则由方向下界、缺陷和 \(\chi(t)\) 计算。证据：C407，方向下界和缺陷必须在当前边上可认证。
+4. **状态：Conditional。** \(\alpha_k\to0\) 或接近边界会使净耗散消失。证据：`../topics/dd2/relaxation.md` 余量项及 C406 临界旋转反例，不能断言每条序列必然失败。
+5. **状态：Conditional。** 统一正下界只在点收敛和全锚结论中额外需要。证据：C402/C407 的松弛尾界，具体算法还需识别假设。
+6. **状态：Conditional。** 超松弛需要方向余量和输出锚根式门。证据：`../topics/dd2/relaxation.md` 的 \(\gamma=2\beta-\alpha\) 能量及 C402。
+7. **状态：Proved conditionally。** 松弛后必须重建比较函数，不能复用精确步 A。证据：C402 的同一步势，松弛参数改变实际位移。
+8. **状态：Conditional。** 有正余量和势债务时有限长度保留。证据：C401/C406，需误差债务可和并保持留域。
+9. **状态：Conditional。** 绝对误差需 \(\Delta_\Theta+\eta\) 可和，相对误差可由 \(\eta\le\theta(\tau-a)\) 认证。证据：C406 与 `../topics/dd2/inexact.md`，两种误差量词分开。
+10. **状态：Conditional。** 速率与 shadow recovery 需要误差尾和二点恢复。证据：C406 与 `../topics/dd2/pppa_recovery.md` 物理长度段。
+11. **状态：Refuted（自动升级版本）。** C406 给出欧氏可和但点不收敛、相对误差趋零但长度发散和临界旋转反例。证据：`../topics/dd2/inexact.md` 反例小节。
+12. **状态：Partial / Open。** C407 的逐边区域比固定松弛细，但最宽性仍 Open。证据：C407，尚无所有可见量词下的最宽性证明。
 
 ---
 
 # §14 CP、DR 和其他分裂
 
-1. 原始问题由 \(A,B,L\) 及原始–对偶块定义。
-2. DD2 可施加在约化状态、组合图或 \(C^*\) 投影关系。
-3. 非线性次单调性由分量图和块完成平方验证。
-4. 非线性正则性必须针对组合真残差，不可拼接选择残差。
-5. 补偿函数由谱门、组件 gauge 和共同 s 计算。
-6. 子问题良定需要 resolvent 非空或有限前缀 continuation。
-7. 约化长度由 C401/C402 条件传递。
-8. 原始/对偶收敛需要 recovery 和 fiber 条件。
-9. 完整 shadow recovery 需要二点 recovery 或 Theorem 4.11–4.12 条件。
-10. 固定 CP/DR 子类有残差和慢速例，泛化算法没有统一率。
-11. 与已有算法定理的严格弱假设关系尚未对全部类别证明。
-12. FBF 系数为 \((1-\ell)/(1+\ell)\)，外梯度系数为 \((1-\ell)/2\)，FRB 需交叉项 Lyapunov 且普通欧氏下降可失败。统一松弛、异步、时变图和非分离多算子 Open。
+1. **状态：Conditional。** 原始问题由 \(A,B,L\) 及原始–对偶块定义。证据：`../topics/dd2/splitting.md` 的 S1，空间量词为有限维实 Hilbert (X,Y)。
+2. **状态：Conditional。** DD2 可施加在约化状态、组合图或 \(C^*\) 投影关系。证据：`../topics/dd2/splitting.md` S1–S2 及 `pppa_recovery.md` 式 (1)，需选择具体 graph coverage。
+3. **状态：Conditional。** 非线性次单调性由分量图和块完成平方验证。证据：`../topics/dd2/splitting.md` S4–S10，量词是相应完整图点。
+4. **状态：Proved as audit requirement。** 非线性正则性必须针对组合真残差，不可拼接选择残差。证据：`../topics/dd2/splitting.md` S6–S7 取完整图值 infimum。
+5. **状态：Conditional。** 补偿函数由谱门、组件 gauge 和共同 s 计算。证据：`../topics/dd2/splitting.md` S8 及 C403，跨组件 coupling 仍需独立验证。
+6. **状态：Conditional。** 子问题良定需要 resolvent 非空或有限前缀 continuation。证据：`../topics/dd2/splitting.md` S1 和适用边界。
+7. **状态：Conditional。** 约化长度由 C401/C402 条件传递。证据：`../topics/dd2/splitting.md` S8，需固定步或重建松弛势。
+8. **状态：Conditional。** 原始/对偶收敛需要 recovery 和 fiber 条件。证据：`../topics/dd2/pppa_recovery.md` 投影识别和物理收敛段。
+9. **状态：Conditional。** 完整 shadow recovery 需要二点 recovery 或 Theorem 4.11–4.12 条件。证据：`../topics/dd2/pppa_recovery.md` 物理长度段与 `splitting.md` S2–S3。
+10. **状态：Sharp / Conditional。** 固定 CP/DR 子类有残差和慢速例，泛化算法没有统一率。证据：`../topics/dd2/splitting.md` CP/DR 临界例与慢轨道。
+11. **状态：Partial / Open。** 与已有算法定理的严格弱假设关系尚未对全部类别证明。证据：`../topics/dd2/splitting.md` 适用边界与 `DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md`。
+12. **状态：Proved for fixed-step subclasses / Open for extensions。** FBF 系数为 \((1-\ell)/(1+\ell)\)，外梯度系数为 \((1-\ell)/2\)，FRB 需交叉项 Lyapunov 且普通欧氏下降可失败。统一松弛、异步、时变图和非分离多算子 Open。证据：`../topics/dd2/splitting.md` 其他分裂实际步证书及 `DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md`。
 
 ---
 
@@ -252,21 +253,21 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 
 # §17 独立反例和数学审查
 
-1. 对象良定：在写明闭值域、目标和图非空的定理中 Passed。
-2. 量词：已区分 full graph、allowed edge、selected relation、nearest anchor 和 all anchors。
-3. 隐含假设：闭值域、目标闭性、lift、fiber、demiclosedness 和留域均已列出。
-4. 边界：\(L=1/2\)、临界缺陷、非孤立目标、非唯一 fiber、\(\alpha_k\to0\) 已攻击。一般振荡 gauge 仍 Open。
-5. 空图：空值真残差取 \(+\infty\)，算法非空必须独立假设。
-6. 导入条件：Alcantara、Lauster–Luke 和 Hölder PPA 的已用版本在 P0/C404 中定位。
-7. 局部沿轨：需要有限前缀留域，不能把局部条件自动全局化。
-8. 循环证明：约化恒等式、下降、恢复和零值识别已分层。
-9. 低维反例：平面旋转、FRB、两锚、远 kernel 和 G(y)=\{y,y^3\} 已记录。
-10. 非单调、多值、非孤立目标：已有多类实例，完全 fiber 分类仍 Partial。
-11. 必要/充分：C400/C401/C403 明确分开比较层必要性、几何充要和算子级充分。
-12. 最优性：固定几何和幂次子类有 sharpness，全类 Open。
-13. 计算：verify_outline、validate_assets、build_graph 和两套可视化可复现，不能代替证明。
-14. 独立路线：几何、能量、矩阵、fiber 和反例路线分别存在，完整总定理尚未双路线闭合。
-15. fatal objection：一般弯曲闭凸低 L、弱 kernel coverage、统一异步算法和全球新颖性仍阻止无条件 canonical master theorem。
+1. **状态：Proved conditionally。** 对象良定：在写明闭值域、目标和图非空的定理中 Passed。证据：`../topics/dd2/pppa_recovery.md` 开头设定与各 splitting 的非空 resolvent 假设。
+2. **状态：Proved as audit。** 量词：已区分 full graph、allowed edge、selected relation、nearest anchor 和 all anchors。证据：本文件 §9.3、§9.8、§11.8 及 `RESEARCH_PROTOCOL.md`。
+3. **状态：Proved as audit。** 隐含假设：闭值域、目标闭性、lift、fiber、demiclosedness 和留域均已列出。证据：本文件 §9–§10 和 `pppa_recovery.md` 证据边界。
+4. **状态：Partial / Open。** 边界：\(L=1/2\)、临界缺陷、非孤立目标、非唯一 fiber、\(\alpha_k\to0\) 已攻击。一般振荡 gauge 仍 Open。证据：C400/C401/C406 与 `pppa_recovery.md` 反例。
+5. **状态：Proved as convention。** 空图：空值真残差取 \(+\infty\)，算法非空必须独立假设。证据：`pppa_recovery.md` 真残差定义和 `splitting.md` S1。
+6. **状态：Recovered conditionally。** 导入条件：Alcantara、Lauster–Luke 和 Hölder PPA 的已用版本在 P0/C404 中定位。证据：`DD2_P0_PRIOR_ART_2026-11-21.md`、C404，仍需按版本量词。
+7. **状态：Proved as requirement。** 局部沿轨：需要有限前缀留域，不能把局部条件自动全局化。证据：C401 留域预算及 `pppa_recovery.md` 接入 DD2 段。
+8. **状态：Proved as audit。** 循环证明：约化恒等式、下降、恢复和零值识别已分层。证据：`pppa_recovery.md` 式 (1)、(6) 和物理收敛段。
+9. **状态：Proved as atlas entries。** 低维反例：平面旋转、FRB、两锚、远 kernel 和 G(y)=\{y,y^3\} 已记录。证据：`pppa_recovery.md` 逆向障碍、`splitting.md` FRB 段和 `inexact.md`。
+10. **状态：Partial。** 非单调、多值、非孤立目标：已有多类实例，完全 fiber 分类仍 Partial。证据：C404–C405 与 `pppa_recovery.md` 反例集合。
+11. **状态：Proved as separation。** 必要/充分：C400/C401/C403 明确分开比较层必要性、几何充要和算子级充分。证据：C400、C401、C403 的状态字段和反向障碍。
+12. **状态：Sharp for stated subclasses / Open globally。** 最优性：固定几何和幂次子类有 sharpness，全类 Open。证据：C399/C400 与本文件 §16C。
+13. **状态：Proved as reproducibility check。** 计算：verify_outline、validate_assets、build_graph 和两套可视化可复现，不能代替证明。证据：本轮命令输出及 `research/validate_assets.py`、`research/build_graph.py`。
+14. **状态：Partial。** 独立路线：几何、能量、矩阵、fiber 和反例路线分别存在，完整总定理尚未双路线闭合。证据：core、dual_eb、pppa_recovery、splitting 的相互独立证明路径。
+15. **状态：Open（fatal objections remain）。** fatal objection：一般弯曲闭凸低 L、弱 kernel coverage、统一异步算法和全球新颖性仍阻止无条件 canonical master theorem。证据：C411、C404、C412 与本文件 §16B/D/F。
 
 ---
 
@@ -309,23 +310,23 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 24. 一般 gauge、弯曲闭凸、异步网络临界边界 Open。
 25. 自动 finite length、自动 shadow 收敛、Hölder 自动 finite length 已 Refuted。
 26. 一些缺口可能是技术问题，也可能暴露命题错误，尚不能判定。Open。
-27. 局部锥、共同 s、二点 recovery 是已确认的改善约束。
-28. 核心障碍是图残差、目标锚、kernel fiber 和物理步长不由单一距离控制。
+27. **状态：Proved for stated modules。** 局部锥、共同 s、二点 recovery 是已确认的改善约束。证据：C400/C403、`pppa_recovery.md` 物理长度段。
+28. **状态：Proved as obstruction diagnosis。** 核心障碍是图残差、目标锚、kernel fiber 和物理步长不由单一距离控制。证据：`pppa_recovery.md` 逆向障碍、shadow finite-length 反例与 C406。
 
 ---
 
 # 第九部分交付物
 
-1. Canonical Theorem Statements：C400–C406、C408、C410–C412 和对应正文。
-2. 完整证明：core、relaxation、dual_eb、pppa_recovery、inexact、splitting。通用未闭版本保留 Partial/Open。
-3. Dependency Graph：research/graph.json、research/HYPERGRAPH.md 和 README Claim Map。
-4. Counterexample Atlas：FAILED_ROUTES、C399/C400、pppa_recovery、inexact、splitting。
-5. Literature Matrix：research/LITERATURE.md 和 P0 逐式审计。
-6. Operator-Class Map：CLAIMS、README、C312/C315/C400/C404/C405。
-7. Functional Compensation Map：core、dual_eb、relaxation、adaptive_parameter_audit。
-8. Algorithm Transfer Dossier：pppa_recovery、splitting、DD2_OTHER_SPLITTING_AUDIT、C404/C405/C412。
-9. Reproducible Experiments：research/code/dd2/verify_outline.py、validate_assets.py、build_graph.py 和离线构建脚本。
-10. Research Frontier Report：RESEARCH_STATE、FAILED_ROUTES、DD2_TASK_ACCEPTANCE_MATRIX 和本审计的 Open/Partial 列表。
+1. **状态：Conditional / Partial。** Canonical Theorem Statements：C400–C406、C408、C410–C412 和对应正文。证据：`CLAIMS.md` 对应记录及 `research/topics/dd2/`，通用未闭版本保持 Open。
+2. **状态：Partial。** 完整证明：core、relaxation、dual_eb、pppa_recovery、inexact、splitting。通用未闭版本保留 Partial/Open。证据：各正文 proof 段和本文件 §17，尚无单一无条件 master proof。
+3. **状态：Proved / Reproducible。** Dependency Graph：research/graph.json、research/HYPERGRAPH.md 和 README Claim Map。证据：`research/build_graph.py` 输出 955 nodes、720 edges。
+4. **状态：Proved as indexed asset。** Counterexample Atlas：FAILED_ROUTES、C399/C400、pppa_recovery、inexact、splitting。证据：相关文件中的编号反例及 `FAILED_ROUTES.md`。
+5. **状态：Partial。** Literature Matrix：research/LITERATURE.md 和 P0 逐式审计。证据：`research/LITERATURE.md` 与 `DD2_P0_PRIOR_ART_2026-11-21.md`，全球优先性仍 Open。
+6. **状态：Partial。** Operator-Class Map：CLAIMS、README、C312/C315/C400/C404/C405。证据：对应 Claim 的对象和量词，严格全包含关系尚未全部判定。
+7. **状态：Conditional / Partial。** Functional Compensation Map：core、dual_eb、relaxation、adaptive_parameter_audit。证据：C401/C402/C403 和相关正文，任意 gauge 的逆向必要性 Open。
+8. **状态：Conditional。** Algorithm Transfer Dossier：pppa_recovery、splitting、DD2_OTHER_SPLITTING_AUDIT、C404/C405/C412。证据：固定步 CP/DR、FBF、外梯度和 FRB 子类，变图/异步仍 Open。
+9. **状态：Proved as reproducibility scripts。** Reproducible Experiments：research/code/dd2/verify_outline.py、validate_assets.py、build_graph.py 和离线构建脚本。证据：本轮已运行并记录输出，脚本只作证据不替代数学证明。
+10. **状态：Proved as indexed frontier。** Research Frontier Report：RESEARCH_STATE、FAILED_ROUTES、DD2_TASK_ACCEPTANCE_MATRIX 和本审计的 Open/Partial 列表。证据：对应文件及本文件“最终状态”段。
 
 ---
 
@@ -333,11 +334,15 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 
 ## 第一问：现在到底证明了什么
 
+**状态：Conditional / Partial。**
+
 已证明或条件性证明的核心内容包括：闭值域 \(P=CC^*\) 下的约化图恒等式，P-内积缺陷的等距传递，完整 fiber 真残差的 \(m_C,M_C\) 关系，目标闭性与 demiclosedness 下的 projection identification，唯一 fiber 或局部 recovery 下的 shadow 收敛，C401 一般势的有限长度，C402 方向自适应松弛，C403 联合双残差几何，C405 固定 CP/DR 子类，C406 非精确图误差债务，以及 FBF、外梯度和 FRB 的固定步局部证书。
 
 这些结果的状态是 Proved、Recovered、Sharp 或 Conditional，不能合并成一个无条件 master theorem。
 
 ## 第二问：究竟理解了什么
+
+**状态：Proved for the separated mechanisms。**
 
 次单调缺陷控制的是输入锚与输出方向之间的内积，正则性控制的是输出距离与真实图残差，下降模控制的是距离序列，有限长度势控制的是实际位移，recovery 控制的是约化 shadow 到原空间的 lift。它们位于不同空间和不同量词，不能由单一线性常数替代。
 
@@ -345,17 +350,25 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 
 ## 第三问：究竟推广了什么
 
+**状态：Partial / Conditional。**
+
 相对于旧 RLEB、Luke–Tam、Alcantara 和 Hölder PPA，仓库已经严格恢复线性、全锚、固定步和 Hölder 特例，并在明确的最近锚、函数缺陷、共同 s 联合几何、低 L 固定图和物理 recovery 范围内给出扩展。哪些关系严格包含、哪些不可比较，取决于共同对象和 full-graph 量词。全球严格新颖性没有被有限审计宣称。
 
 ## 第四问：能处理什么算法
+
+**状态：Conditional。**
 
 普通 PPA、闭值域预条件 PPA、特定 CP/DR、固定步 FBF、外梯度、FRB 和带明确拓扑与 cocoercivity 的网络前向—后向子类已有条件性定理。变图、异步、统一松弛、非分离多算子、一般近似 resolvent 和没有 fiber recovery 的原始 shadow 仍属于 Open 或 Partial。
 
 ## 第五问：边界在哪里
 
+**状态：Proved for stated boundaries / Open globally。**
+
 已经尖锐的边界包括 DD1 两段门、平面共同 s 包络、幂次临界常数、\(q=1/2\) 端点、低 L 锚切换、平方可和与实际长度的分离、FRB 欧氏势失败和非唯一 fiber 反例。尚无完整算子构造的边界包括一般弯曲闭凸低 L 链、任意 gauge 的反向必要性和所有分布式变图模型。
 
 ## 第六问：下一阶段最有价值的问题
+
+**状态：Open research frontier, with prioritized obligations。**
 
 优先级最高的是构造或否定一般弯曲闭凸零集上的低 L 固定图链，其次是弱 kernel 控制下的完整 fiber coverage 判据，再其次是给出一个同时满足非零 \(U\)、非单调、非线性慢速和完整 shadow recovery 的 CP/DR 实例。每个问题都可以直接攻击当前阻塞的 theorem version，而不是继续增加形式相似的充分条件。
 
