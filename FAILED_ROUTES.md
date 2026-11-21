@@ -1018,6 +1018,9 @@ C366 的几何部分在逐点任意缩小原值后保持不变，真实残差可
 
 - **丢弃对数修正也会丢失证书**：[C451](research/topics/dd2/nonpower_rates.md#dd2-log-half-order)在 \(\beta>1\) 时有真实有限长度，其中剪切的点误差只有对数级，但任何 \(q>1/2\) 的局部 Hölder 真误差界均失败。该共同原模（旋转取等）的积分有限；仅保留较松的常数倍半阶幂界会使新积分发散。失败是丢掉了原模零端的可积修正，不是该实际轨道不收敛，也不代表任何连续非减包络必然损失；应保原模或核所选包络的实际零端尺度。
 
+- **严格降距与实际统一预算仍不强迫距离势**：[C278 的 JP41–46/JP46a](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-state)是闭完整、全覆盖、精确单点零集且每条实际路径两步终止的 E0 图；实际总长至多 $3t$，精确距离—步长投影却可虚假重复水平输入角色，成本发散。失败不只是 C444 的等距步，而是丢掉了决定续接的原生位置状态。重新尝试可保状态，或另证每条尺度路径可在同一物理图逐边提升，不能用实际路径总长直接代替标量路径总长。
+- **只有实值势差，没有下界，不是长度证书**：[S05.01 的 PT.e8](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-existence-acceptance)在 C400 的原调和旋转上取 $\Theta(t)=\log t$（正尺度）、$\Theta(0)=0$，原受检窗内每条实际边有 $s\le\Theta(t)-\Theta(a)$，总长却无限；势沿路径趋 $-\infty$。断点是望远镜末值没有统一下界。保有限非负势或该起点的全部可达标量尺度上的共同有限下界后，[JP18 的有限路径判据](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)才准确刻画这种证书的存在。
+
 <a id="f149"></a>
 ## F149 · 把紧集上确界公式误作任意函数的有限计算证书
 

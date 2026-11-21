@@ -65,6 +65,9 @@
 
 [S04.IMPLICATIONS 的逻辑矩阵](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-dynamics-implications-acceptance)逐条分开每步正距离严格、距离趋零、范数点收敛和实际有限长度。仅有限长度无条件推出某点收敛；指定目标识别另核。C444、C450、C447-A、C400 四个完整图见证覆盖其余箭头，原模零端、全锚误差、实际步帽及同一步势各保自己的强化范围。
 
+[S05.01 的一般距离势存在条件](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-existence-acceptance)把原 JP18 的有限路径判据与 C401/C419 的可验证充分证书接起来：有限非负势存在，恰需同尺度边集每个起点的全部有限路径成本有共同预算。原 F1–F3 的局部真残差证明保逆域；C278 的严格降距两步终止图说明真实总长不能代替投影后的路径预算，C400 的无下界的对数势说明下界不可省。
+
+
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
@@ -414,6 +417,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/dd2/relaxation.md](research/topics/dd2/relaxation.md) | C402 的方向松弛、实际耗散和长度势，全锚与最近锚的量词分离；C447-A 的原算子 PC1–PC6 给全域半阶真误差界、连续完整近端及有界整圆聚点。核变松弛、全锚点收敛或误把有界渐近正则当成点收敛时读取。 |
 | [research/topics/dd2/asymptotic_regularity.md](research/topics/dd2/asymptotic_regularity.md) | C448 的两条完整普通 PPA 链：AR1–AR3 给闭图、精确零集、全部纤维和真实残差，AR4–AR6 分离距离趋零与实际步，AR7–AR10 分离正则与距离识别。C449 的 RT1–RT5 另给全域短前像扩图、处处非空完整纤维及真残差与所选值的实际轨道分离。核函数零值、穿孔零端、固定图目标与自由反推预算、全部选择与存在坏轨道、完整下确界与实际选值时读取。 |
 | [research/topics/dd2/target_identification.md](research/topics/dd2/target_identification.md) | C450 的 ID1–ID7 固定有限长收敛链，A/B 用同一完整闭母图分别删允许极限边或限点位置；C 改图保所有纤维闭而删除跨点零值闭性。保存全部真实纤维、零集、E0、全选择留域和长度分类。核强极限为何只在全零集、何时能应用极限恒等边、闭纤维为何不足时读取。 |
+| [research/canonical/unified_ppa_joint_certificates.md](research/canonical/unified_ppa_joint_certificates.md) | C277–C278 的完整原图联合证书、有限状态后端及两级信息损失。JP18/PE1–PE4 给同一步距离势的精确有限路径判据；JP41–46/JP46a 保原完整两步终止图并接入 DD2 的有符号锚合同。研究势是否存在、独立最坏包络是否丢信息、或距离投影能否真实续接时读取；原覆盖、定位和模型范围不能由纯标量引理代替。 |
 | [research/topics/dd2/nonpower_rates.md](research/topics/dd2/nonpower_rates.md) | C400 的平方对数计步目标、完整匹配旋转及实际有限尾长；C451 的对数强化半阶原模、旋转和剪切的全部纤维、距离/点/尾量渐近常数，以及 \(\beta=1\) 的失败侧。研究非幂次过程、半阶临界修正或区分纯幂上界与真实速率时读取；统一类长度门和固定图必要性不能互换。 |
 | [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | C442 的原稿映射及零输入修订；D1R–D1F 保存因子、符号根、尾长、两支机制、全部最近性、连续性及全几何最大值。D1S 的真实临界轨道与 D1O1–D1O12 的完整纤维、C443 固定射线同图全尺度、显式间隔拼接及全部输出不变窗分开证明。整窗共同因子排除额外帽，任意小局部坏尺度可适配正帽。核 DD1 恢复、完整局部锐性和取等量词时读取。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |

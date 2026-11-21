@@ -2432,6 +2432,8 @@
 - **Definitions / Dependencies / Evidence**：[有限证书语法](research/canonical/unified_ppa_joint_certificates.md#ujc-object)、[有限前缀后端](research/canonical/unified_ppa_joint_certificates.md#ujc-theorem)、[状态父版本 JP47–50](research/canonical/unified_ppa_joint_certificates.md#ujc-state-theorem)、[接收](research/audit/UNIFIED_PPA_REVIEW_2026_10_14.md)、[代码](research/code/unified_ppa/README.md)。PSD 是安全外松弛；半代数保秩/QE不承诺实用复杂度。
 - **Scope / Counterevidence**：充分编译而非所有次单调类的完备定理；不自动供coverage、原图数据、物理GPPA提升或runtime停止。只回收 C208/C249 对应有限维/fullzero/物理桥子类，旧壳层机制保留。C278否定只用距离状态的完备版本；有限原生状态自动生成仍open。望远镜/Caristi/Fejér机制经典，不认证新收敛原理。
 
+- **S05.01 的存在性补证**：[JP18/PE1–PE4](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)把已有最小非负上解写成自足的有限路径等价：在同一个域内尺度边集上，每个起点的全部有限路径成本有共同有限上界，当且仅当存在支付全部边的有限非负距离势。零点归一、外包络与精确投影、统一势与逐算子势的量词分开。这里只抽取 JP18 的标量证明，不削弱本卡完整图、共同曲线、覆盖及定位结论的前件，不另登记同义 Claim。
+
 <a id="c278"></a>
 ## C278-v1 · 独立一步包络与径向联合状态的两级信息障碍
 
@@ -2440,6 +2442,8 @@
 - **Exact Statement / Second object**：完整 R²图 F((0,u))={(u+u³,xi):xi∈R}、其余空，lambda1、S0、dom上真r=|u+u³|。图闭半代数、全input J=T=(0,g(x1))，T²0，每闭球不变，所有轨道长度≤3||x0||。其精确一步距离—步长外关系含(g(t),sqrt(t²+g(t)²))，因虚假反复拼接成本不可和，不存在任何有限的仅距离长度势W认证全部该关系。两原生状态以W0=3t,W1=t修复同算法。
 - **Definitions / Dependencies / Evidence**：[JP32–40](research/canonical/unified_ppa_joint_certificates.md#ujc-one-step-loss)、[JP41–46](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-state)、[独立完整证明](research/novelty/2026_10_14_unified/independent_review.md#ir-distance-state-refutation)、[复算](research/code/unified_ppa/README.md)。
 - **Scope / Counterevidence**：严格排的是两种信息压缩和其尾和/势门，不排经典一维顺序、其他Lyapunov、改进原图再认证或整体C208。第二对象原F不是全定义域，但完整PPA全输入，这是明确允许对象。仅距离完备性宽版已refuted；有限原生状态完备性另open。
+
+- **S05.01 的 DD2 对接**：[JP46a](research/canonical/unified_ppa_joint_certificates.md#ujc-distance-state)对本卡第二个同一完整图给 $\lambda=1,U=H,\psi(r)=r,\Phi(t)=-2t^2$ 的全窗 E0，指定 $\varphi(t)=g(t)$ 由固定图直接认证。两步终止的实际统一预算仍不能支付精确投影关系的虚假无限拼接；这不是把原松下界的自由预算认证为该目标。原模型、零集、纤维和 C278 结论未更换。
 
 <a id="c279"></a>
 ## C279-v1 · 仿射物理目标的 raw LMI 与全域非线性扰动认证
