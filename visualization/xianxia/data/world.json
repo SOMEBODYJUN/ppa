@@ -11432,6 +11432,17 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-LOCAL-SPD-EXPANSION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14574,6 +14585,10 @@
     "E788": {
       "x": 2360.14,
       "y": 5201.56
+    },
+    "E789": {
+      "x": 1621.09,
+      "y": 5468.77
     }
   },
   "bounds": {

@@ -1052,6 +1052,8 @@ H(r)=r\sqrt{(1-r)^2+r^{2/3}}.
 
 [DS6的完整校准](../topics/dd2/operator_separation.md#dd2-negative-anchor-calibration)另证明H在全域严格增，给全部近端根及原φ₋的准确Σ认证；R=2^(-14)时原F1–F3通过，C399-v2可取实际尾12t^(2/3)。正输出的Hölder界严格，K=1是零附近最小共同系数，不是逐点取等。
 
+[NM1–NM6](../topics/dd2/operator_separation.md#dd2-nonmonotone-complete-operators)另以两条实际边证明该负锚图及零锚旋转族在每个固定SPD范数、任意小共同零窗均有原J两点扩张，因而不能在同输入邻域保为固定预条件单调/凸prox表示。C476-v1已独立复核为derived-checked；原欧氏DD2证书与局部weak-Minty边界分别保留。
+
 \(H(r)\ge r^{4/3}\) 排除小输入的远根。\(H'(r)\to1\) 给小半径严格增性与覆盖，其方位关系为旋转，故充分小输入的完整近端唯一。小正 \(r\) 有 \(H(r)>r\) 和 \(H(r)/r\to1\)，所以 \(p=3,\ M=1\) 成立，且每个充分小非零轨道的距离比趋于 1。取对数后用 Cesàro 平均得 \(d_k^{1/k}\to1\)，故 R 线性距离率也失效。输入侧残差 \(r_{\mathrm{Id}-J_F}(x)\) 与输出侧残差 \(r_F(y)\) 相同地为 \(o(d(x,S))\)。该例分离的是线性速率假设及结论。它的 \(\langle F(y),y\rangle/\|F(y)\|^2\to0\)，故局部允许任意小的负弱 Minty 常数。
 
 ## 与相关定理的范围
