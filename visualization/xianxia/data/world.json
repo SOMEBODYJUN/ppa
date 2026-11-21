@@ -11035,6 +11035,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD1-ZERO-SCALE-RECOVERY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14037,6 +14048,10 @@
     "E753": {
       "x": 621.69,
       "y": 5653.81
+    },
+    "E754": {
+      "x": 580.42,
+      "y": 5499.94
     }
   },
   "bounds": {

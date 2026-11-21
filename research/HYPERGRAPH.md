@@ -1198,6 +1198,12 @@
 | --- | --- | --- | --- |
 | E753 | [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) ∧ [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) | conditional → [DD2-ORIGINAL-ENVELOPE-INVERSE · C441 原两项式的数值逆与非正下降目标恢复](topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse) | 含零原残差域、有限非负原模：两项式目标反演由危险层首端及归属给两道预算。非正下界且c<B+时与准确自由R目标逆等价，包含c<t；非正全域完整统一类有坏尺度见证。正下界、固定图及精确零集闭纤维另保限制，不反推一般整窗存在或动态。；**derived-checked** |
 
+## DD1 在 DD2 中的恢复范围
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E754 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD1-ZERO-SCALE-RECOVERY · C442 DD1 原前件嵌入、零输入缺口及精确修订](topics/dd2/dd1_recovery.md#dd1-zero-obstruction) | 同一允许边、某最近输入锚和完整线性真残差：DD1 一般有符号原前件进入 E0，正尺度兼容另保；将比例步长界延至受检零边恰需该边驻定。原正尺度上确界不能推出此门，任意小二周期有完整闭图、精确零集与全域覆盖。二次校准自带零条件，F 耗散及 L-tail 自动位置预算另核，不否定正尺度或原有效 C400/C285。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
