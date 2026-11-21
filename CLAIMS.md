@@ -3606,6 +3606,6 @@
 
 - **Status**：`derived-checked`；当 M>0 且 p<2/q、q>=1 时为 `Refuted`（无条件有限长度或距离收敛命题）。临界 p=2/q 的最优常数仍 `Open`。
 - **Exact Statement / Objects / Domain / Quantifiers**：取有限维 R²、lambda>0、h=K/lambda^q、c>=h^(-1/q)，足够小 t>0，L=c t^(1/q)，t<L/2。令 S={k L e1:k 属于 Z}，x_k=k L e1+t e2。令 J(u) 包含 P_S(u)，并在每个 x_k 额外包含 x_(k+1)；定义 F=(J^(-1)-I)/lambda。则 S 闭、J 全域非空、图闭且 zer F=S。
-- **Proof / Conclusion**：投影边输出在 S，缺陷为零；特殊边 x_k 到 x_(k+1) 的输入最近锚 p_k 满足内积=-L²，输出距离为 t，完整真残差为 L/lambda。因为 p<2/q，缩小 t 后 L²=c² t^(2/q) <= M t^p；因为 c>=lambda K^(-1/q)，有 t <= K(L/lambda)^q。故同一完整闭图满足 DD2 的所有边量词，却存在 d(x_(k+1),S)=t 的不下降轨道。
+- **Proof / Conclusion**：投影边输出在 S，缺陷为零；特殊边 x_k 到 x_(k+1) 的输入最近锚 p_k 满足内积=-L²，输出距离为 t。由于 x_(k+1) 不在 S，投影边不会以它为输出，额外边的唯一前驱是 x_k；故由 F(v)=(J^(-1)(v)-v)/lambda 得完整真残差为 L/lambda。因为 p<2/q，缩小 t 后 L²=c² t^(2/q) <= M t^p；因为 c>=lambda K^(-1/q)，有 t <= K(L/lambda)^q。故同一完整闭图满足 DD2 的所有边量词，却存在 d(x_(k+1),S)=t 的不下降轨道。
 - **Boundary / Scope**：构造只裁决 M>0 的 p<2/q 失败侧；M=0 或 p=2/q 的临界常数需要另行构造。它修正了把 q>1 失败仅写成几何 obstruction 的过弱表述。
 - **Evidence / Related Files**：[§4–§8 幂次审计](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#q-greater-one-subcritical)、[失败路线 F145](FAILED_ROUTES.md#f145)、[C400 一步几何](research/topics/dd2/core.md#dd2-reverse)。
