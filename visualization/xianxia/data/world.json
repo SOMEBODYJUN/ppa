@@ -11399,6 +11399,17 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-POWER-TAIL-EQUALITY-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14529,6 +14540,10 @@
     "E785": {
       "x": 1605.74,
       "y": 5294.2
+    },
+    "E786": {
+      "x": 2290.61,
+      "y": 5558.02
     }
   },
   "bounds": {

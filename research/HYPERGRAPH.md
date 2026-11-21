@@ -1390,6 +1390,12 @@
 | --- | --- | --- | --- |
 | E785 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-SINGLETON-SUBCRITICAL-EXACT-TAIL · C473 固定单点次临界的准确下降与最小真实尾](topics/dd2/singleton_subcritical.md#singleton-subcritical-exact) | C473-v1：有限维H维数≥1、固定S={z*}⊆zerF，λ,K,M,p,q>0、p<2/q，原Φ=−Mt^p含0及全域原ψ=Kρ^q、完整真ρ。q>1或q1且L=K/λ<1/2。任给原认证R₀>0存在统一R≤R₀独立于F/轨道：c=λK^(−1/q),m=1/q,h=K/λ^q，µsp为ca^m−a=t的小逆(q>1)或L t/(1−L)(q1)，Psp=t+2Σµsp^j。所有边a≤µsp、s≤t+a、s+Psp(a)≤Psp(t)，正尺度µsp<t，零驻定；B_D→0先排远逆。原预设φ0=0、正尺度0≤φ<t在此类统一认证iffµsp≤φ，不把φ另作未声明筛图假设。开U，U_R逐点非空覆盖、全部允许边原输出含首出边，严格Psp(t0)<dist(x0,Uc)给全选择留域、finiteL、点趋z*，点误差恰t，Psp最小共同实际尾/非负支付而非最佳点界。反向U=Vψ=H：一个全域连续单值F和完整同胚J，exactzeroS，原R₀全部输入数据保持，所有t0≤R/方向/全部k同时达µsp及Psp。三段反号径向T以小逆、慢桥、比例段延拓，F=(T⁻¹−I)/λ完整；全域真EB、负预算到原R₀。q>1 µsp~ht^q且严格大于ht^q，Psp=t+2ht^q+o(t^q)，目标C_A t^q iff C_A>h，距/点/实际尾最佳Q阶q系数h；q1 Psp=t/(1−2L)、准确共同逐步Q因子L/(1−L)，目标κt允许该等号。自足SP1–SP11只用定义，C468/C427为先例不作隐含输入。M0不含；更强signedΦ只继承正向，其他S/q及额外输出/更紧φ筛图不转授反向，pM可松，公开新颖性未核。；**derived-checked** |
 
+## DD2 凹幂长度常数及局部位置端点
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E786 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-POWER-TAIL-EQUALITY-BUDGET · C399-v2 显式凹幂真实尾与位置预算等号](canonical/dd2_power_defect_finite_length.md#dd2-power-tail-acceptance) | C399-v2：有限维H、闭非空S⊆zerF、开U、λ,K>0、M≥0,p>0,1/2<q<1，R₀>0，U_(R₀)全输入允许𝒥覆盖、每边含首出输出的完整真ρ与某同一最近输入锚，原Φ≥−Mt^p含0、原幂ψ=Kρ^q全域。M0或p>2/q或p=2/q且2M<c²，c=λK^(−1/q)。m=1/q,α=2−m,ν=2m−2，选b∈(0,c),δ∈(0,1],0<R≤R₀独立于F/轨道，使(b/c)^q+bR^(m−1)≤1、2Mt^(p−2m)≤(1−δ)b²。C=2/(αδb),P=Ct^α,γ₀=δb²/2,η=δb³t^(3m−2)/4。正尺度实际边s≥bt^m、δs²≤t²−a²、a≤t−γ₀t^(1+ν)、s+P(a)+η(t)≤P(t)，零驻定。预先给φγ的0<γ<c²/2−M*（M*=M于正M临界，其余好支0）后选γ≤γ₀及小窗认证；其他原目标不改名。x⁰∈U_R且P(t0)≤dist(x0,Uc)给全部允许轨道留U_R、极限在S∩U，实际尾≤P(tk)、点≤尾、距离多项式率；含首边有限前缀先留域再覆盖，正初距共同余量η(t0)>0，不先假定无限合法轨。零初值/触零另处理；完整全选择仅当𝒥=J。TL1–TL3自足，不改C399-v1严格预算；FT12为内部机制先例。该≤不授任意势或其他同形C，J≡0在P=t或R^(1−α)t^α时等号首出界。C为明确充分常数，最佳首项/指数另C470，q范围外及坏缺陷另完整反例，不认定公开新颖性。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

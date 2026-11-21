@@ -462,7 +462,11 @@
   - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-subcritical-acceptance)、[BL1–BL5全部分类与外帽精确例](../canonical/dd2_power_defect_finite_length.md#dd2-power-subcritical-classification)、[AF1–AF7完整原F/J及全部实际轨道](../canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)、[SN-C连续结构反向及SN-D正面](../canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)、[GF2原三帽](../topics/dd2/functional_power_recovery.md#functional-power-target)、[完整自由单边实现](../topics/dd2/core.md#dd2-geometry)、[M0准确率与尾](../topics/dd2/power_rates.md#power-sharp-rates)、[C473单点准确下降/尾与完整同图](../topics/dd2/singleton_subcritical.md#singleton-subcritical-exact)、[C473身份](../../CLAIMS.md#c473)。
   - **复核** 三席先实做四自检并独立重构，再逐读八处实际BL/SP正文、原图、C466支持/C473身份、E785、地图与四栏。三帽及外帽准确例、AF/SN完整根/真ρ/全部轨道/小窗量词、M0合法轨和局部门均核准；C473小根隔离、慢桥保原R₀全部输入、同图全小初距全k、最小实际尾与点界t、原φ两端点和实际尾Q逐式通过。正尺度、零边、开U及U_R覆盖的最后限定也逐处实读。无未关闭实质异议；只签S06.BELOW及C473，不预签TAIL。
 
-- [ ] `S06.TAIL` 独立复核 \(\alpha=2-1/q\) 的实际总长度估计，明确 \(q\) 的范围、常数选择、局部不变性及边界。
+- [x] `S06.TAIL` 独立复核 \(\alpha=2-1/q\) 的实际总长度估计，明确 \(q\) 的范围、常数选择、局部不变性及边界。
+  - **裁决** Sharp
+  - **结论** 记c=λK^(−1/q)。原α=2−1/q凹幂尾在1/2<q<1、M0或pq>2或pq=2且M<c²/2的完整合同内成立。明确选0<b<c、δ∈(0,1]及共同R，使(b/c)^q+bR^(1/q−1)≤1、2Mt^(p−2/q)≤(1−δ)b²；实际s≥bt^(1/q)、δs²≤t²−a²给C=2/(αδb)和同一步支付。原φγ先给再核γ≤δb²/2。C399-v1保严格预算；另立C399-v2，用正边余量η=δb³t^(3/q−2)/4给初值x⁰∈U_R且Ct₀^α≤dist也能有限前缀先留域后覆盖，全部允许轨道留U_R、极限在S∩U、实际尾≤Ct_k^α、点≤尾，零/终止另处理。不得转授任意势或任意同形C，完整投影有等号首出反例。准确零端C*=c/(αγ*)、α指数由C470及同图锚链达到；M0实际旋转的尾严格>C*t^α，首项不能当全窗常数。q≤半阶有点0而无限长完整旋转；q1另线性，q>1因真实总尾≥t且径向恰t，Ct^(2−1/q)统一式失败。原F1–F3与一般积分各保原系数/域/吸收，不改旧版本。
+  - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-tail-acceptance)、[TL1–TL6显式常数/首出/完整边界](../canonical/dd2_power_defect_finite_length.md#dd2-power-tail-acceptance)、[原C399及有限前缀](../canonical/dd2_power_defect_finite_length.md#dd2-power-defect)、[C399-v2身份](../../CLAIMS.md#c399-v2)、[C470准确首项与指数](../topics/dd2/power_rates.md#power-sharp-rates)、[完整PL7旋转及实际级数](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)、[原FT1–FT4合同](../topics/dd2/original_f_conditions.md#dd2-original-telescope)。
+  - **复核** 三席先实做四自检、独立重构，再逐读七处实际TL正文、C399-v1支持/v2身份、E786、审计、地图与四栏。b/δ/R、原目标γ、完整真ρ和同锚、η共同余量、首出边先支付再覆盖、零/终止、全允许轨道及极限S∩U逐式核准；任意同形势首出与准确W限点边界、C/C*/W分层、全部q和缺陷端点、原F1–F3系数和积分域均有完整证据。初值域、正γ、小窗、径向零定义及积分指数范围的最后补行也逐处复读。无未关闭实质异议；只签S06.TAIL与C399-v2，不预签§7。
 
 ## §7 DD2 是否真正扩大了可处理的算子类？
 

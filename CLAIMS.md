@@ -3498,6 +3498,19 @@
 - **S06.03 原半阶完整合同补证（实际终稿三席复核通过）**：[HE1–HE9](research/canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)固定本卡原反例 \(H=\mathbb R^2,\lambda=K=1,q=1/2,S=\{0\},\Phi=0,\psi=\sqrt\rho,U=V_\psi=H\)。从 \(a^2+a^4=t^2\) 排除全部额外半径，再直接代回 \(\mathcal J(x)=J_F(x)=\{(I-aQ)x/(1+a^2)\}\) 的唯一完整根，核 F/J 闭图、精确零集、每个完整输出残差 \(\rho=s=a^2\)、零驻定及任意距离 R 窗全输出覆盖不变。预设 \(\varphi=(a\mapsto\sqrt{a^2+a^4})^{-1}\) 先由原数据统一认证，本图同边达到。每个非零初值的 \(s_k\) 有 HE8 调和下界，且 \(t_k\sim k^{-1/2},s_k=\rho_k\sim k^{-1}\)、平方步和 \(t_0^2\)，故点趋0而实际长度无限；零初值例外明确。在R≤1核原组合时，F1/F2通过但F3的 \(4/t\) 发散，没有反驳原完整长度定理。此为原反例的精确范围与证明补充，不改 C399 正定理的指数域，也不把非负锚误作全对单调；C456 的同模好图身份保留。
 
 - **S06.05 临界系数与实际坏侧支持（实际终稿三席复核通过）**：[CK1–CK8](research/canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)核任意K、λ、0<q<1下的准确降距门 \(M<c^2/2\)，c=λK^(-1/q)。CK6对每个坏侧M用√(2M)给实际锚积恰为预算的连续完整保距旋转，给定K在严格坏侧不冒称最小；EB局部、完整F/J全域的区别明确。q≤1/2仍不能由好M保证全类有限长；本卡正定理的q>1/2不变。具体预设φγ的更细线由C430支持另记。
+- **S06.TAIL 复核支持（七处实际合版三席终核通过）**：[TL1–TL6](research/canonical/dd2_power_defect_finite_length.md#dd2-power-tail-acceptance)重推原α、可核b/δ/R/C、完整真残差、实际同一步支付、原目标及零/覆盖/首出条件，区分充分常数和准确零端首项、各q端点。初始预算等号的严格支付加强另立C399-v2，不改本卡v1前件。
+
+<a id="c399-v2"></a>
+## C399-v2 · 显式凹幂尾常数与初始位置预算等号
+
+- **Status**：`derived-checked`；三席先独立重构，再逐读七处实际TL正文、身份、图边、地图与四栏；初值域、径向零点和积分指数域等最后补行均已实读核准，无未关闭实质异议。C399-v1的严格预算版本保持不变。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维欧氏H，λ,K>0、M≥0、p>0、1/2<q<1，闭非空S⊆zerF、开U、R₀>0。允许𝒥⊆JλF在U_(R₀)逐点非空；每条边含可能首出输出的完整真ρ及原signed下界受检：a≤Kρ^q、某同一最近输入锚内积≥Φ(t)≥−Mt^p，含零尺度，原幂模域[0,∞)。好门为M0，或p>2/q，或p=2/q且2M<c²，c=λK^(−1/q)。共同常数及小R独立于F、初值及选择。
+- **Definitions / Explicit constants**：m=1/q、α=2−m∈(0,1)、ν=2m−2>0。取0<b<c、0<δ≤1，0<R≤R₀满足(b/c)^q+bR^(m−1)≤1及2Mt^(p−2m)≤(1−δ)b²于0<t≤R。M0可δ1，正M超临界按R缩，正M临界先b²>2M再δ≤1−2M/b²。P(t)=Ct^α，C=2/(αδb)，γ₀=δb²/2，η(t)=δb³t^(3m−2)/4。零处P=η=0。
+- **Exact one-step conclusion**：全部正尺度边s≥bt^m、t²−a²≥δs²、a≤t−γ₀t^(1+ν)，且s+P(a)+η(t)≤P(t)。零输入驻定。先指定φγ=t−γt^(1+ν)时可取任意0<γ<γ*=c²/2−M*，M*=M于正临界、其余好支0；选择γ≤γ₀并缩γ(1+ν)R^ν≤1认证此原目标。其他原φ须另验，不以计算包络替换。
+- **Local conclusion / Changed boundary**：对x⁰∈U_R且P(t₀)≤d(x⁰,Uᶜ)，全部允许轨道无限续接、留U_R、有限长且强趋S∩U。正初距每个含首边有限前缀长≤P(t₀)−P(t_N)−η(t₀)，共同严格余量先排首出边再调用覆盖，并保证极限在开U内；k≥1的后续位置预算至少P(t_k)+η(t₀)。实际尾L_k≤P(t_k)，点误差≤L_k，正t₀的距离≤(t₀^(−ν)+νγk)^(−1/ν)，终止及零初距另驻定处理。全部近端选择须𝒥=完整J，否则仅量化允许选择。
+- **Dependencies / Evidence**：D01原近端、D04完整真残差；[TL1–TL3自足证明](research/canonical/dd2_power_defect_finite_length.md#dd2-power-tail-acceptance)以输入尺度下步、真实平方耗散、严格凹幂支付和有限前缀续接直接重推。原[FT12](research/topics/dd2/original_f_conditions.md#dd2-original-telescope)是严格支付处理预算等号的内部先例，不代替本证明。TL4的最佳零端首项和指数另由C470/C469/C472承担，不把本C称最优。
+- **Counterevidence / Objections / Scope**：此版的非严格初始预算只授给明示TL常数/严格余量，不授任意非严格距离势或任意能支付的同形Ct^α；完整J≡0、U=(0,∞)、P=t或P_R=R^(1−α)t^α在等号时首步出界；准确W取等链截开半空间则有限点都留域而极限在边界。q端点和坏缺陷另有TL5完整反例；q>1的Ct^α被同图尾=t径向算子否定，不能误读为有限长失败。M0及强signed前件、原目标/完整图量词分别保持。解析证明，不以数值证据代替；未认定公开新颖性。
+
 <a id="c400"></a>
 ## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
 
