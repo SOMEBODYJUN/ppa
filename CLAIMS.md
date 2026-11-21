@@ -3663,3 +3663,13 @@
 - **Conclusion / Scope**：没有原模正则性要求。可行域已核非空时，去掉目标值优化中的超水平限制不改变上确界。在完整残差前缀上，若常数有有效表示、原模可认证求值且有有效连续模 \(\omega\)，覆盖半径 \(\delta\) 的网格及误差 \(\epsilon\) 给最优值宽度不超过 \(2\epsilon+\max\{\omega(\delta),\sqrt{2B\lambda\delta}\}\) 的区间。若原模非减且可认证评价全部指定右端网格点，无需连续性，可用宽度 \(2\epsilon+\sqrt{2B\lambda\delta}\)。没有输入表示条件的任意函数有限点值计算承诺被反例否定。
 - **Definitions / Dependencies / Evidence**：C417-v1 原联合域与完整前像构造、C414 两锚几何；[等价消元证明](research/canonical/dd2_function_hypotheses.md#fh-envelope-explicit)、[有限计算及信息边界](research/canonical/dd2_function_hypotheses.md#fh-envelope-computation)。
 - **Counterevidence / Objections / Related Files**：空可行域不能赋可实现零值；\(a=0\Rightarrow\rho=0\) 的例外明确处理；正 \(\Phi\) 的完整整窗最优另有 C417 障碍。\(t=\lambda=1,\Phi=0\) 时，在有限查询未见的残差处添连续窄峰，可将自由及完整覆盖类的最优值从零提高到至少 \(\sqrt3/2\)。这否定无证书精度，不否定上确界公式；近似值不自动裁决精确等号。原 C414、C417 的身份不改。
+
+
+<a id="c422"></a>
+## C422-v1 · 单边最优上确界的等值表示与完整窗放宽边界
+
+- **Status**：`derived-checked`（等值证明、全部前像、完整窗及固定对象严格差距经独立重构和实际正文检查）。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：沿用 C421-v1 的自由闭目标单边类，维数至少二，\(S\subseteq\operatorname{zer}F\)，固定 \(t,\lambda>0\)、有限 \(\Phi(t)\)、\(0\in D_\psi\)、有限非负原 \(\psi\)，并已核准确联合域 \(\mathcal K_t\ne\varnothing\)。对该尺度的 \(B,E\)，定义 \(\widehat\eta_t(s)=\min\{B,\sup_{\rho\in D_\psi,\lambda\rho\le s}\psi(\rho)\}\)，则原真残差自由上确界 \(M_R(t)\) 等于直接位移前缀模的自由几何上确界 \(M_G(t;\widehat\eta_t)\)，亦等于 \(\min\{B,\sup_{0\le u\le B,u/\lambda\in D_\psi}\min(\psi(u/\lambda),\sqrt{E-u^2})\}\)。这里 \(u=\lambda\rho\) 是残差坐标。
+- **Conclusion / Scope**：不要求原模连续、非减或可逆；等值仅指最小共同上界，不能转授原域非空性、取等点、逐边物理位移代换或完整窗最优性。\(\Phi\le0\) 的全窗、维数至少二、无额外输出位置限制的自由子零集类可保完整覆盖闭图尖锐性。正下界下，把原误差界改为前缀真残差界可能严格放宽完整算子类的最优值。
+- **Definitions / Dependencies / Evidence**：C414 自由两锚几何、C417 原真残差联合域和正下界完整前像障碍、C421 非空时的无筛选目标值式。[等值证明、范围表及全部例子](research/canonical/dd2_function_hypotheses.md#fh-envelope-optimality)。
+- **Counterevidence / Objections / Related Files**：\(t=\lambda=1,\Phi=3/16\)，\(\psi=3r\) 对 \(r<1/4\)、其余为 \(1/4\)，原非空域的上确界 \(3/4\) 不达到，前缀 G 却达到。C417 的正下界尖峰例原完整窗值为 \(1/4\)，前缀误差界的完整窗值为 \(1/2\)，两侧都有闭图、覆盖、精确零集见证。另有直接把原非单调模放进物理位移 G 筛选会返回零、实际却有 \(a=1/2\) 的完整图。固定算子、固定目标及一维的严格差距均列明；不把未经筛选的残差坐标优化误称为逐边代换。

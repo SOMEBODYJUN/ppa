@@ -10815,6 +10815,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ENVELOPE-SCOPE-EQUIVALENCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13725,6 +13736,10 @@
     "E730": {
       "x": 390.19,
       "y": 5692.69
+    },
+    "E731": {
+      "x": 419.9,
+      "y": 5650.45
     }
   },
   "bounds": {

@@ -5370,6 +5370,12 @@
       "label": "C421 原真残差一维包络与有限精度合同",
       "file": "canonical/dd2_function_hypotheses.md#fh-envelope-explicit",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-ENVELOPE-SCOPE-EQUIVALENCE",
+      "label": "C422 非空单边包络等值与完整窗严格差距",
+      "file": "canonical/dd2_function_hypotheses.md#fh-envelope-optimality",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13739,6 +13745,18 @@
       "output": "DD2-RAW-ENVELOPE-COMPUTATION",
       "relation": "conditional",
       "scope": "自由单边原残差联合域的等价一维消元；已核非空、有效常数与原模认证求值下，用有效连续模或非减右端比较获得有限精度。无表示信息与精确等号另有查询障碍。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E731",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-RAW-ENVELOPE-COMPUTATION",
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-ENVELOPE-SCOPE-EQUIVALENCE",
+      "relation": "conditional",
+      "scope": "准确原域非空时，前缀几何与残差坐标的上确界等于自由单边最优值；取等及完整窗前件不等价。正下界下前缀误差界可将完整窗最优值从四分之一提高到二分之一。",
       "status": "derived-checked"
     }
   ]
