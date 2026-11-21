@@ -11377,6 +11377,17 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-GENERAL-MONOTONE-EXACT-TAIL": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14499,6 +14510,10 @@
     "E783": {
       "x": 1912.82,
       "y": 5194.11
+    },
+    "E784": {
+      "x": 2262.81,
+      "y": 5658.9
     }
   },
   "bounds": {

@@ -108,6 +108,8 @@ x^k\longrightarrow x^\infty\in S\cap U.
 \]
 约定 \(d(x,\varnothing)=+\infty\)。这是一种直接累计 A+B 的充分长度条件；原 [F1–F3](original_f_conditions.md)、[积分长度条件](#dd2-general-gauge)及[原域长度版本](#dd2-exact-dynamics)仍各自保留，并不以比较级数替换它们。
 
+对连续非减D≥0、原Φ=−D和全域连续严格可逆原ψ，[C472的一般函数准确尾](functional_power_recovery.md#general-monotone-defect-exact-tail)在认证预设φ后用W=Σg(µ^(j+1))同时保留能量和步帽，允许反复换支，并给完整自由类的准确尾和必要性；它的正则性与反向量词见该处，不替代本节一般signedΦ/非单调原模的主合同。
+
 **证明。** 对正尺度展开 (DD2.1)，得
 \(s^2+\|y-p\|^2\le t^2-2\Phi(t)\)，且
 \(\|y-p\|\ge|t-s|\)。于是 \(s^2-ts+\Phi(t)\le0\)，从而 \(s\le B_\Phi(t)\)。C430 的准确反演化为 (DD2.3)–(DD2.4)，即得 \(a\le\varphi(t)\)；三个分支及全部等号端点的代数推导见[同式证明](reverse_compensation.md#dd2-compensation-piecewise)。

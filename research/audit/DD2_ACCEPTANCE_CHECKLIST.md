@@ -438,7 +438,12 @@
   - **证据** [逐区构造验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-rate-attainment-acceptance)、[GR2–GR8同图全轨](../topics/dd2/power_rates.md#power-greedy-realization)、[FX1–FX2全部原纤维与近端根](../topics/dd2/power_rates.md#power-complete-fibers)、[RT1–RT8实际速率常数](../topics/dd2/power_rates.md#power-sharp-rates)、[QB2–QB5点Q取等](../topics/dd2/power_rates.md#power-point-q-boundaries)、[旧PR完整剪切](../canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)。
   - **复核** 新三席先做实际四项自检，独立重构锚链/图/真实率，再逐读十处实际终稿、身份支持、E781和四栏。FX完整半空间纤维反代、S外唯一链值/空值、闭图线性同胚、全部原根与选择逐式通过；GR5不依D/s单调的相邻距离比较、有限积点/逃逸、预设φ、严格首出及零输入分别核准。RT全部常数与Q/R、同初距同图∀k、QB另一变号图/跨图系数边界及旧PR仅指数均独立复算；低L锚距能量等号和真实a余量同时写清，L1–6/C413身份不变。无未关闭实质异议；只签S06.09，不预签后续。
 
-- [ ] `S06.10` 是否能够从一般函数判据直接恢复幂次分类，而不是分别重复证明？
+- [x] `S06.10` 是否能够从一般函数判据直接恢复幂次分类，而不是分别重复证明？
+  - **裁决** Equivalent / Recovered
+  - **结论** 能，须保原预设φ。GF3从一般Σ直接给原目标的两预算，GF6的D<max{g(t)²/2,g(t)[g(t)−t]}代纯幂即恢复M0、pq>2及三种好临界系数。新增C472固定连续非减D和全域连续严格可逆原ψ，以H*=min{B²−t²+µ²,2D}的单调性给任意混支的准确W=Σg(µ^(j+1))及同一步s+W(a)≤W(t)；同一完整图实现全部k取等/无限长反向。再代BR标量渐近，统一恢复q>1/2有限长门与全部已声明准确距离/点/尾包络，无需分别重证各幂区长度。点Q抵消另C471；原目标各端点另GF3，强结构类反向另C468。C401/C419默认吸收、C420含平台零缺陷、原F1–F3与粗B复合和各保原范围，不以一个较窄积分证书冒称完整DD2。
+  - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-functional-power-recovery-acceptance)、[GF1–GF6原目标反演](../topics/dd2/functional_power_recovery.md#functional-power-target)、[GT1–GT8一般混支全尾及完整原图](../topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)、[PC1–PC4直接幂次恢复](../topics/dd2/functional_power_recovery.md#functional-power-classification)、[CB1–CB2原证书范围](../topics/dd2/functional_power_recovery.md#functional-power-certificate-boundaries)、[C472身份](../../CLAIMS.md#c472)。
+  - **复核** 三席先做实际四项自检并独立重构，随后逐读十一处实际GF–CB正文、C472、E784、地图、旧文桥与四栏。GF3预算/原逆端点、H*单调配对支付、W同敛散及零/∞端、含首出边严格预算、全部原纤维/近端根和每初距同图全k取等逐式通过；GT8同轨无限换支复算。PC原目标下阶、固定M与逐M缩窗、BR标量非循环、点Q/R、C419默认交点/C420平台及原F1–F3和粗B范围均核准。无未关闭实质异议；只签S06.10/C472，不预签S06.ABOVE及后续。
+
 - [ ] `S06.ABOVE` 针对原协议的幂次误差界，在 \(pq>2\) 区域按 \(q\) 分区验收距离、点与有限长度结论。
 - [ ] `S06.CRITICAL` 在 \(pq=2\) 区域逐分支证明临界常数、严格侧和等号侧的结论与构造。
 - [ ] `S06.BELOW` 在 \(pq<2\) 区域逐分支验收正面结果、失败范围和实际近端反例。

@@ -4234,3 +4234,15 @@
 - **Complete sharpness / Quantifiers**：任取0<g<1/2、g≤τ，t_j=g^(qj)t₀,s_j=gc t_j^(1/q)，ε_j=±1，x_(j+1)=x_j+ε_js_j，p_j=x_j+ε_jt_j，S={p_j}∪{x∞}。δ=(1−2g)/(1−g)，缩窗δs₀>3t₀后，所有链顶点互离且p_j为唯一最近锚。完整J=P_S加链、F=(J⁻¹−I)/λ闭图、精确零集、全域覆盖、零驻定、全距离窗不变，正输出唯一前像给真EB取等，锚积−s(s−t)≥−Mt^(2/q)。仅在n_ℓ=ℓ²+ℓ取ε=−1，其余+1，实际limsup点比为g/(1−2g)。τ<1/2取gτ精确达到；τ≥1/2用不同图g↑1/2排除共同有限系数，不声称一个图有无穷limsup；τ≥1/3取g1/3给limsup1。
 - **Branch B / Exact counterexample**：λ1,K4,q1,M0,p任意正，H=R²,S=R×0,r4/5。δ在t=r^k依k模3取2/5,−2/5,−2/5，相邻正结点线性插值、t>1恒2/5。T(u,v)=(u+δ(|v|)|v|,rv)，F=T⁻¹−I全域连续单值、完整J=T同胚、exactzeroS；全部边a=rt,s=t sqrt(1/25+δ²),rho=s,a≤4rho、锚积(4/25−δ²)t²≥0。预设φ=.99t先由κ₀=4/sqrt17认证，零输入驻定、全部距离窗不变、所有轨道有限长。初高1在每个k模3=0有(e_(k+1)²−e_k²)/t_k²=27/305>0，故点R线性仍非点Q线性。同图后缀给任意小初距。
 - **Dependencies / Evidence / Scope**：分支A用C470准确尾上界、实际三角及[QB1–QB5](research/topics/dd2/power_rates.md#power-point-q-boundaries)的完整链；分支B在QB6–QB8直接反解并核完整ρ与几何级数，原目标认证也可由C469/BR3核。此例只排除q1的一概R→Q提升，不声称q1每一L/M都无点Q保证。反向不授固定连续单值/凸目标类（分支A）；不认定公开新颖性。
+
+<a id="c472"></a>
+## C472-v1 · 单调非负缺陷与可逆原真模的准确混支全尾
+
+- **Status**：`derived-checked`。三席先独立重构后逐读十一处实际正文、身份、图边、地图和四栏，逐式核准；无未关闭实质异议，只签本项。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定λ,R>0、有限维欧氏H、闭非空S⊆zerF和E0允许关系；每条受检边只需存在一个同一最近输入锚，输出用完整真ρ=d(0,F(y))。原Φ=−D，D:[0,R]→[0,∞)连续非减且D0=0；原ψ:[0,∞)→[0,∞)连续严格增、无界且ψ0=0。预先给φ:[0,R]→[0,R]、φ0=0、正尺度φ<t，并认证下面µ≤φ；φ本身不必非减。对全部满足这些原数据的边和全部允许选择成立，不从一次选择反判所有边。
+- **Definitions / Conclusion**：g=λψ⁻¹，G(a)=a²+g(a)²，E=t²+2D，B=(t+sqrt(t²+4D))/2，µ=min{G⁻¹(E),ψ(B/λ)}，ℓ=g∘µ，W(t)=Σ_(j≥0)ℓ(µ^j(t))，W0=0。µ≤φ<t的好窗使外帽B不再活动；坏窗的原一步最大值仍须min{B,µ}。µ、ℓ连续严格增，µ^j↓0；W在全部正尺度或者皆有限或者皆∞。有限时W连续非减、零端为零，每条实际边s+W(a)≤W(t)，含零输出；零输入驻定。连续非减D与可逆ψ是明示前件，允许任意次数混支。
+- **Local trajectory scope**：U开、允许关系在U_R={x∈U:d(x,S)≤R}逐点非空；原数据覆盖全部这些输入边及其输出真模评价，包括可能首出边。初值W(t₀)<d(x⁰,Uᶜ)时全部选择可无限续接、留U_R、有限长、强趋S∩U，距离≤µ^k(t₀)，点误差≤实际尾≤W(t_k)≤W(µ^k(t₀))。先支付含首出边的有限前缀再用覆盖，不循环假定留域。∞侧不作∞−∞。
+- **Sharpness / Reverse quantifiers**：取U=Vψ=H、含二维、自由闭精确零集、完整闭F和全域非空完整J。每个t₀∈(0,R]存在一个F和同一条真实无限轨道，全部k同时达到t_k=µ^k(t₀)、s_k=ℓ(t_k)、锚积−D及真EB等号。有限W时同图点误差=实际余长=W(t_k)；W∞时同图点沿轴无界而距离趋0。因此W(R)<∞等价于同原数据自由完整类全部初值全部轨道有限长；W是最小共同实际尾、有限侧点误差界及非负距离支付。支付P用扩展实值P(t)≥s+P(a)定义。图可依初距但不随k换图，F可在非输出点为空；不称存在一个图同时达到所有连续初距。
+- **Dependencies / Evidence**：D01/D04及[GF1–GT8自足证明](research/topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)。H*=min{B²−t²+µ²,2D}非减，配对两条µ递推给W(r)−W(a)≥(r²−a²)/(2ℓ(r))，同时保能量/步帽即得同一步支付；无需固定活动支、ψ凹性或ΣD有限。GT7以每步候选锚平方距离的有序交点构造完整投影加链，全纤维反代接口FX1–2不依幂式。GT8给单调振荡D、原线性ψ和预设φ=t/2，同一真实轨道无限换支且W有限。
+- **Power recovery / Identity boundaries**：[PC1–CB2](research/topics/dd2/functional_power_recovery.md#functional-power-classification)把D=Mt^p、ψ=Kρ^q代入同一一般严格门和W，恢复三种临界常数、q>1/2有限长门及已声明准确距离/点/尾包络；仅导入BR标量渐近，不循环调用C470尾定理。固定目标仍逐式核GF3；点Q的方向抵消另属C471。原C401/C419默认吸收、C420零缺陷含平台、C458/C460/C461及原F1–F3各保自己的身份，不把此严格可逆版冒作一般原域的替代。
+- **Counterevidence / Objections / Related Files**：三席实际终核无未关闭实质异议。更强固定signedΦ≥−D只继承正向，取等图须重核；必要性不转授固定F、指定S、连续单值子类、另加更紧φ或任意非单调D/ψ。[S06.10验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-functional-power-recovery-acceptance)、[F145](FAILED_ROUTES.md#f145)与[F148](FAILED_ROUTES.md#f148)保存原证书失效范围及混支证明的修复。公开新颖性未核。
