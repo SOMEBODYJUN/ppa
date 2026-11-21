@@ -37,6 +37,8 @@
 
 [C439 的曲线复合与实际轨道](research/topics/dd2/scalar_iteration.md)用有限退出刻画一般下降函数的精确复合，保留 C418 对全部不等式递推的一步右侧门。两个完整闭图可拥有相同的单输入距离数据、处处达到的准确包络和一致趋零的纯复合，真实轨道却有趋零与趋于正距离的严格差别；这个完整反例定位了非单调复合比较的缺口。
 
+[C440 的非减主曲线](research/topics/dd2/scalar_iteration.md#dd2-monotone-majorant)给前缀最小上界、严格下降与迭代趋零的分层充要条件，并将其存在与全窗标量路径一致趋零相联系。连续主曲线有更强的右连续上界条件及显式构造；左右端点障碍都有完整闭图及真残差实现。非减化不改变最坏一步比例，也不自动保持另给的目标 \(A\)，两者各有独立检验。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
@@ -387,7 +389,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |
 | [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434 的原真残差双向预算、兼容及尖锐性边界。以危险前缀求允许的 ψ，以非空上端和三门求有符号 Φ；保留整窗交集、线性标尺、首端见证及正下界完整窗必要性失败。§6 核逐尺度存在与完整窗兼容，§7 核预算尖锐而输出无取等、单尺度／同图／轨道三个量词，并给留域预算非必要例。设计目标、反推强度或提升实现范围前读取。 |
 | [research/topics/dd2/joint_relation.md](research/topics/dd2/joint_relation.md) | C435 的输出–真残差精确三项代价、锚上限、全部可实现物理步长及仿射附加代价；C436 的完整前像右闭包必要门、非空完整类的严格增益与未达残差端点反例。需要简化共同关系、读取给定输出的预算或利用全部完整前像改进上界时读取；不替代一般完整兼容和动态证明。 |
-| [research/topics/dd2/scalar_iteration.md](research/topics/dd2/scalar_iteration.md) | C439 的纯复合有限步越过、逆像层与整数秩充要证明；非减时与 C418 全部受控递推的等价；两个同函数、同单输入距离数据、同准确最大值却有不同真实轨道的完整闭图。包含全部旋转坐标、反射影子、真纤维、预算与续接核验，以及原包络跨尺度危险行和物理留域边界。核曲线复合、动态比较或从单步最优推轨道时读取。 |
+| [research/topics/dd2/scalar_iteration.md](research/topics/dd2/scalar_iteration.md) | C439 的纯复合有限退出、逆像层与整数秩；非减时与 C418 受控递推的等价；两个同单输入距离数据、同准确最大值却有不同真实轨道的完整闭图，含旋转坐标、反射影子、真纤维、预算与续接。C440 另给最小非减上界、严格与趋零条件、全窗一致性等价、连续构造，以及左前缀和右连续障碍的完整图实现。核曲线复合、非减比较、预设目标是否保留或从单步最优推轨道时读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 在同一闭零集和固定完整图上逐步实现低 \(L<1/2\) 的严格步长支，包含局部孤立零点与无限长度例、闭仿射单步障碍。C413 以相对法锥的统一正向排除一般有限维闭凸目标上的收敛锚链及可和链。研究动态尖锐性、最近锚切换或写主文范围时读取。 |
 | [research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md](research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md) | 旧交接稿的七项 P0–P3 专项审计，绑定 C407/C408/C410/C411/C412、证明和未闭义务。用作最终协议相应小问的证据。 |

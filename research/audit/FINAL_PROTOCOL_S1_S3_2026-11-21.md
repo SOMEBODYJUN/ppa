@@ -279,6 +279,14 @@ b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}
 
 [C439-B 的完整双图](../topics/dd2/scalar_iteration.md#dd2-same-envelope-different-trajectories)甚至使两个算子每个固定输入处的 \((a,s,\rho)\) 集相同，逐尺度同有达到的 \(A\)，原公式及自由精确界也等于 \(A\)。纯复合一致几何趋零，好图全部真实轨道趋零，坏图却有距零集趋 1 的无限链。全部前像等范、反射同锚几何、预算、零集、闭性与覆盖都在正文逐式验证。因而必须核非减比较、C418 的全部递推门，或实际图的独立路径结构，不能靠正确的一步最优值补出动态结论。物理留域另核，见 [应用合同](../topics/dd2/scalar_iteration.md#dd2-composition-applications)。
 
+### 2.F07 非减下降模与连续主曲线
+
+**裁决：Proved；非减化、严格下降、迭代趋零和连续化分别有准确条件。**
+
+[C440 的 MM1–MM4](../topics/dd2/scalar_iteration.md#dd2-monotone-majorant)先固定需要支配的曲线 \(b\)，证明前缀上确界是最小非减上界。全窗严格要求前缀缺口，全部复合趋零再加 C418 右侧门；两者合起来恰是全部标量受控路径对初值及选择一致趋零的条件。原曲线的纯复合趋零、每条路径单独趋零以及固定图真实路径趋零均不得替换这组条件。
+
+[MM5–MM7](../topics/dd2/scalar_iteration.md#dd2-continuous-majorant)给连续主曲线的必要充分条件及紧区间上的显式构造。[MM8–MM10](../topics/dd2/scalar_iteration.md#dd2-majorant-obstructions)把前缀失去严格性、右侧迭代失效和连续化失败分开，并把新增左右障碍实现为完整闭图、真残差、全域覆盖、处处取等的原始 DD2 数据。预设目标 \(A\) 继续保留；额外非减曲线夹在 \(b\) 与 \(A\) 之间恰需 \(Q_b\le A\)。三席独立推导及实际稿复核覆盖端点、完整纤维、图闭和目标范围，见 [C440](../../CLAIMS.md#c440) 与 [F157](../../FAILED_ROUTES.md#f157)。
+
 ## §3 DD1 两段分段机制
 
 ### 3.1 DD2 假设恢复 DD1

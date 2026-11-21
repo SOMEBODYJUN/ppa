@@ -1186,6 +1186,12 @@
 | --- | --- | --- | --- |
 | E751 | [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) ∧ [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) | conditional → [DD2-COMPOSITION-TRAJECTORY-SEPARATION · C439 精确复合、受控递推与同单步数据的真实轨道分离](topics/dd2/scalar_iteration.md#dd2-composition-exit) | 在下降自映射合同内，依点有限退出精确判纯复合；非减时可直接归纳全部受控路径，一般非单调时不保证该比较。三维非紧仿射目标的两个完整闭覆盖图同单输入距离数据和同已达准确包络，纯复合一致趋零而实际轨道结论不同；不外推连续单值子类。；**derived-checked** |
 
+## DD2 非减主曲线与目标保持
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E752 | [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) ∧ [DD2-COMPOSITION-TRAJECTORY-SEPARATION · C439 精确复合、受控递推与同单步数据的真实轨道分离](topics/dd2/scalar_iteration.md#dd2-composition-exit) | conditional → [DD2-MONOTONE-MAJORANT · C440 非减下降主曲线、全窗一致性及连续构造](topics/dd2/scalar_iteration.md#dd2-monotone-majorant) | 有限闭窗自映射：前缀上确界严格与一步右侧门等价存在非减趋零主曲线，也等价全部标量受控路径全窗一致趋零。连续或严格递增趋零主曲线另由右连续上界严格判定。预设目标需另核前缀不超过目标；固定图实际路径必要性不外推。左右障碍有三维仿射目标完整闭图实现。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
