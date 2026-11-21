@@ -58,6 +58,15 @@ d^+\le\psi(s/\lambda)\le\psi((d+Ld^\gamma)/(2\lambda)).
 
 同一稿件有另一个能量证书：保留R01全部前件，并取 \(x^0\in U_R\)（特别 \(d_0\le R\)）；当 \(\psi\) 连续严格递增且 \(R\le\psi(\bar t)\)，置 \(V(r)=r^2+\lambda^2[\psi^{-1}(r)]^2\)，\(A(r)=(r^2+L^2r^{2\gamma})/2\)。若 \(q_E(R)=\sup_{0<r\le R}A(r)/V(r)\le q<1\) 且 \(\sqrt{qV(d_0)}/(1-\sqrt q)<\operatorname{dist}(x^0,X\setminus U)\)，则 \(V(d_k)\le q^kV(d_0)\) 并有有限长和尾界。\(a=\gamma\) 的小尺度能量阈值 \(\lambda m>L/\sqrt2\) 比直接阈值更强；两者是**证明证书的阈值**，不宣称个别轨道收敛的必要条件。S19 `prop:energy-certificate`, `rem:sharpness-boundary`。
 
+
+**固定完整模型的比较（C475-v1已核）。**
+[RS1–RS7](topics/dd2/operator_separation.md#dd2-old-rleb-separation)逐一固定本页直接/一般可逆能量合同，
+给同一完整旋转图对每个固定正步长、任意小零窗的全部旧模排除；
+该图本身有全对Lipschitz反射、真Hölder界、Dini和coverage。
+直接门发散与统一能量门上确界≥1分别有证明，未由没有线性EB擅自排整个一般模版本。
+后来的C209非统一尾及C212锚定壳层各保自己的正向范围；
+特别C212能证明该主族finiteL，不能将本页指定旧合同的失败扩大为所有历史方法失败。
+
 <a id="r04"></a>
 <a id="schur"></a>
 <a id="collide"></a>

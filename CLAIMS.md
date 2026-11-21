@@ -4290,3 +4290,15 @@
 - **Negative-anchor calibration**：另保旧F₋(y)=−||y||y+||y||^(1/3)Qy（F₋0=0）、λ=K1、q3/4、R₋=2^(−14)。H₋(a)=a√[(1−a)²+a^(2/3)]全域严增满射，DS11穷尽完整唯一根；原Φ₋=−t³、ψ₋=ρ^(3/4)、预设φ₋=(a²+a^(8/3))⁻¹(t²+2t³)在原Σ能量支取等。实际真ρ=a^(4/3)√(1+a^(4/3))，ψ₋(ρ)>a于正输出，K1只为最小共同系数；锚−a³≥−t³。C399-v2的b=δ1/2、C12给全小轨有限长和尾≤12t_k^(2/3)，原F1–F3同过；实际a/t→1及a/ρ→∞给同λ1分离。负锚小窗预算不外推全域。
 - **Dependencies / Evidence**：D01/D04、C430原Σ、C400线性反演及C442零合同的[DD1原样映射](research/topics/dd2/dd1_recovery.md#dd1-dd2-assumption-map)、C399-v2用于负锚的显式尾；[DS1–DS6](research/topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation)自足核全部根、原Σ、实际支付、增量极限及排除量词。PL7是主图型的内部先例；C456-v1仍仅m≥2，未将其身份扩大为本有限长族。
 - **Counterevidence / Scope / Related Files**：所证严格扩张以同一原图/目标/步长/真残差/允许边和零/覆盖/位置合同匹配。DD1的σ_R<T(L)只保证可选共同κ而非任意外给φ；原signedΦ在正尺度及E0/R/G保留，若原Φ(0)<0而零边另驻定，进入主式另列Φ_main(0)=0证书。不是由一次线性证书失败猜DD1失败，不把有限长度当Q线性；不授所有旧RLEB或其他方法的类包含与优势，后续任务另验。原目标与计算µ、q指数与局部幂系数、完整和允许关系均分开；[S07.01答卷](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)已由三席实际终核签收。
+
+<a id="c475"></a>
+## C475-v1 · 旧普通RLEB统一兼容的完整算子分离及已存长度路线
+
+- **Status**：`derived-checked`；三新席已实做四自检、独立重构并逐读八处实际合版及最后来源/原域补行，无未关闭实质异议。分离对象为以下具名旧合同，不指全部历史方法。
+- **Exact Statement / Objects / Domain / Quantifiers**：保C474主族，任意q∈(1/2,1)、K>0、m=1/q、β=K^(−1/q)、H=R²、S={0}，固定F(y)=β||y||^(m−1)Qy、F0=0。每个有限固定λ>0，c=λβ、ν=2m−2、α=2−m。任意含0的开输入/输出邻域、正距离/真残差/图值帽，任何保持输入逐点覆盖的图块或允许关系必须采用完整唯一J。所有足够小输出球均出现，任意有效旧Ψ在整个小残差段强制Ψ(u)≥Ku^q。
+- **Old contract identities**：当前普通原P1–P4的一般有限非减零连续Ω/Ψ、整窗κ直接兼容与可和预算；C02-v2全对图块及C02-v3幂锚版本；C09一般全对反射Dini版本；S19 prop:energy-certificate的可逆Ψ、R≤Ψ(barρ)、sup A/V≤η<1；当前cor:linear-energy-convergence。原完整J、完整真ρ及覆盖/位置不能改成抽样轨道。C209非统一τ和C212壳层另列，不在前述排除集合里。
+- **Global RL / Complete evidence**：Cλ=M_-∘M_+⁻¹，M_±=I±λF，全域C¹；其导数D O D⁻¹，D=diag(1,sqrt(m))，故完整全对线性RL的最小全域系数恰sqrt(m)，在c||y||^(m−1)=1/sqrt(m)的导数取到。局部最小模不由此固定。原真EB Kρ^q全域取等、全域coverage、零驻定、可选全对Ω=sqrt(m)t的Dini与合法残差窗均成立；唯一最近锚反射恰t，迫每个旧有效Ω(t)≥t在小窗。
+- **Exact exclusion / Proof**：BΩ=(t+Ω)/2≥t，任意旧直接商Ψ(BΩ(t)/λ)/t≥Kλ^(−q)t^(q−1)→∞，所以所有旧直接模和共同κ均失败。仅P3/P4还内生推出足够小输出a≤2κλρ，这不把原Ψ假设改成线性。可逆旧Ψ有Ψ⁻¹(t)≤βt^m，故V≤t²+c²t^(2m)、AΩ≥t²、AΩ/V≥(1+c²t^ν)⁻¹→1，sup≥1，排S19全部uniform energy及同形一般Ω门；线性真EB亦不可能。能量Q针对V而非距离，真实多项式距离与旧R线性结论给独立交叉检验。
+- **DD2 / Concrete witness**：同一F每λ保C474先指定φλ=t/(1+c²t^ν/4)、原Φ0/ψ=Kρ^q、c²R_DD^ν≤1的原Σ与F1–F3；完整实际轨道finiteL/点0。具体q2/3,Kλ1,R_DD1时F(y)=sqrt(||y||)Qy，完整半径a²+a³=t²，s=ρ=a^(3/2)，原φ=t/(1+t/4)；对0<t₀≤1，尾≤4·2^(3/4)sqrt(t_k)，t_k~2/k、s_k~(2/k)^(3/2)；零初值另驻定。与旧合同比较的是同一原图和原步长。
+- **Later certificates / Counterevidence**：C209普通Id的同B比较尾在q∈(1/2,2/3]对任意有效τ≥µ都发散（即使改用min{B,t}=t）；q>2/3时Ω=sqrt(m)t、精确Ψ、a_diss0、合法逆帽给τ=µ且比较尾可和，C209确能处理。C212已登记的全部所用锚对单调版本则处理整个主族：原同锚0及真g给Lsh(t₀)=2t₀+2^m t₀^α/[c(1−2^(−α))]，U=H和足够大评价帽合法。该正面使用同一Id核、完整F和物理轨道，未将F声称通常全对单调；故本例finiteL不具有“全部旧方法未能处理”的证据。
+- **Dependencies / Evidence / Scope**：D01/D02/D04、[C474/DS1–DS6](research/topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation)；[RS1–RS7自足推导与原合同定位](research/topics/dd2/operator_separation.md#dd2-old-rleb-separation)包括普通逆域、全小输出覆盖、全对Jacobian、任意模排除与真实尾比较。RS7精确复用C209-v1/NGK13–20与C212-v1的锚定版，不把旧定理当成被反驳结论。C351零基点只作一致性对照。非零不变限制仍含原慢轨道；仅零初值、空支、环带、换F/核/度量/无界变步长不在本比较。未证明所有历史类集合包含或公开新颖性；C474身份不改。

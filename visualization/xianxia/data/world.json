@@ -11421,6 +11421,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-OLD-RLEB-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14559,6 +14570,10 @@
     "E787": {
       "x": 1516.94,
       "y": 5472.9
+    },
+    "E788": {
+      "x": 2360.14,
+      "y": 5201.56
     }
   },
   "bounds": {
