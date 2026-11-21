@@ -5412,6 +5412,12 @@
       "label": "C428 不规则有符号下界的线性真残差精确标尺",
       "file": "canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-RAW-GENERALIZED-INVERSE",
+      "label": "C429 原残差位移下界的前缀广义逆与正则性",
+      "file": "canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13863,6 +13869,17 @@
       "output": "DD2-SIGNED-LINEAR-CALIBRATION",
       "relation": "conditional",
       "scope": "λ=1、psi(r)=r、Phi(0)=0 且 Phi(t)≤t²/4；完整闭图和全域覆盖在固定单点目标逐尺度实现 sqrt(t²/2-Phi(t))。允许原下界变号和不规则，不移除一般原模的完整前像障碍或动态条件。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E738",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-RAW-GAUGE-LENGTH"
+      ],
+      "output": "DD2-RAW-GENERALIZED-INVERSE",
+      "relation": "conditional",
+      "scope": "固定非负原模及含零残差域：两条标量约束的最小位移下确界等于精确前缀广义逆，且非减、1-Lipschitz。端点可行性、额外步窗、完整几何和长度必要性不随等值转移。",
       "status": "derived-checked"
     }
   ]

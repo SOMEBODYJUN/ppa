@@ -10892,6 +10892,17 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-RAW-GENERALIZED-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1190,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13830,6 +13841,10 @@
     "E737": {
       "x": 410.78,
       "y": 5748.47
+    },
+    "E738": {
+      "x": 1162.05,
+      "y": 5566.98
     }
   },
   "bounds": {
