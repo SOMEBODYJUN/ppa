@@ -79,7 +79,7 @@ CP/DR、FBF、外梯度、FRB 及固定网络前向—后向只在文件列出�
 | §13.1–§13.12 自适应/非精确 | 同文件 §13 | 逐边参数和误差债务 Conditional；统一最宽区域 Open |
 | §14.1–§14.12 CP/DR/分裂 | 同文件 §14 | 固定步可验证子类 Conditional；泛化算法 Open |
 | §15.1–§15.10 文献 | 同文件 §15 | 已读版本 Recovered/Conditional；全球优先性 Open |
-| §16.A–§16.H 新颖性 | 同文件 §16 | A 多为 Recovered，C/H 在声明子类 Sharp，其余 Partial/Conditional |
+| §16.A–§16.H 新颖性 | 同文件 §16 | A 的旧公式在已读范围 Recovered，但 C414 的全球先行性为 Partial/Open；C/H 在声明子类 Sharp，其余 Partial/Conditional |
 | §17.1–§17.15 独立审查 | 同文件 §17 | 逐项完成检查；一般振荡 gauge、弯曲低 L、弱 kernel 和全局新颖性仍有 fatal objection |
 
 `FINAL_PROTOCOL_S9_S17_2026-11-21.md` 还逐项回答第八部分 28 个深层问题、第九部分 10 项交付物和最终六问；这些不是另一个摘要，而是与 §9–§17 同一证据链的索引。
