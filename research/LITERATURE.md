@@ -807,6 +807,10 @@ Kovalev–Onninen, *Variation of quasiconformal mappings on lines*, Studia Math.
 | --- | --- | --- |
 | [Lauster–Luke 2021](https://doi.org/10.1186/s13663-021-00698-0)，式 (18)–(19)、Theorem 16(b)、Lemma 17、Corollary 19 | 指定比较迭代并反求输入位移误差界。可和比较迭代用于点收敛和步长预算，作者也明确讨论补偿。 | C400 是输出真误差界固定后反求最近锚缺陷的两个精确分支。C401 使用同一实际步平方耗散和可积势。不能单列「一般比较函数、可和迭代或补偿思想」作为首创。 |
 | [Alcantara v1](https://arxiv.org/html/2611.20523v1)，Propositions 3.1、3.4 | 全锚方向松弛、Fejér、平方和、加权向量平均与最佳残差。线性输入和剪切输出误差界给不同比率。 | C402 直接给净余量逼近零的函数长度门及尖锐极限。C403 保留两端误差界和最近锚几何，包括过松弛额外输出锚约束。加权平均向量和平均点的真残差是不同结论。 |
+| [Drusvyatskiy–Lewis 2018](https://doi.org/10.1287/moor.2017.0889)，[作者原文 Theorem 3.4，(3.8)–(3.9)](https://people.orie.cornell.edu/aslewis/publications/18-error.pdf) | 有限维闭凸目标的同一子水平集内，原次微分真残差界与近端位移误差界等价。位移除以步长 \(t\) 后，正向常数从 \(L\) 到 \(L+t\)，反向可保留 \(\widehat L\)。论文结合二次增长和近端梯度给出可验证的线性收敛条件。 | 两端误差界之间的联系与算法用途已有实质研究。 |
+| [Luke–Tam，§4 Lemma 1](https://doi.org/10.1287/moor.2025.0863) | 在文中解集、工作域及预解式输出位置前件下，原算子度量次正则推近端位移映射的度量次正则，常数为 \(1+
+ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属于已有结果。 |
+| [Alcantara v1，Proposition 3.4、Remark 3.5 和 Lemma 4.14](https://arxiv.org/html/2611.20523v1) | 输入与剪切输出的线性误差界分别作局部线性收敛前件。证明结尾给输出到输入的传递，并指出直接用输出界能给更紧的收缩因子。Lemma 4.14 还研究值域受限原算子向输入和剪切输出的两条传递。 | 对两个位置、常数和速率的比较已有详细基线。C423 的独立发现限于非减逐边模型的精确最小值恒等式和连续非单调输入模的指定尺度完整图增益。 |
 | 同文 Propositions 4.1–4.2、4.5、Lemma 4.8、Theorems 4.10–4.12、Lemma 4.14、Corollary 4.15 | 约化恒等式、零值识别、有界影子与一点恢复。Lemma 4.14 给在恢复与范围受限图假设下的线性误差界传递。 | C404 从全投影纤维取真残差，通过近极小图值的 lift 局部化传一般模，并给原空间路径长度的尖锐反例。投影目标闭性与原空间唯一纤维分别核验。 |
 | 同文 Theorem 5.1、§6，及 [Evens–Latafat–Patrinos](https://arxiv.org/abs/2312.06540) | 临界 CP／DR 的全图一点恢复。Evens 等通过分量构造斜弱 Minty 模，Alcantara §6 提出保留非零 \(U\) 的分量计算。 | C405 的完成平方公式、实际 DD2 分量条件及两个慢收敛例各有核对范围。最优位置／图值模及变步长非分离模型仍待查。 |
 | [Li–Mordukhovich 2012](https://web.maths.unsw.edu.au/~gyli/papers/lm-subreg12final.pdf)，Theorem 7.3(i)；[Wang–Li–Ng 2023](https://doi.org/10.1137/22M152147X) 摘要 | 固定步极大单调 Hölder PPA 的距离率，以及极大单调非精确 Hölder PPA 的定量结果。 | C401、C406 的比较重点为负缺陷的实际吸收、同一图上的真实路径长度与误差边界。2023 年稿的精确误差类与长度需读全文。 |
