@@ -240,6 +240,28 @@ s_k\sim w(t_k)
 \chi_\beta(t)\sim t^2[\log(1/t)]^\beta .
 \tag{LG.e15}
 \]
+这里还能给不依赖渐近记号的原候选尾证书。令
+\(G=g(R)=RB^\beta\)。对 \(0<t\le R\)，上述
+\(b=(\operatorname{id}+w)^{-1}(t)\) 满足
+\(t/(1+G)\le b<t\)，且 \(\log(1/b)\ge\log(1/t)\)。于是
+\[
+(1+G)^{-2}t^2[\log(1/t)]^\beta
+\le\chi_\beta(t)=w(b)<t^2[\log(1/t)]^\beta .
+\tag{LG.e15a}
+\]
+左界用 \(g(b)\le G\) 及 \(w(b)=b^2[\log(1/b)]^\beta\)，右界用
+\(b<t\) 和 \(w\) 严格增。特别地，当 \(\beta>1\) 时，
+\[
+\frac{[\log(1/t)]^{1-\beta}}{\beta-1}
+\le \Theta_\beta(t)
+\le (1+G)^2\frac{[\log(1/t)]^{1-\beta}}{\beta-1}
+\quad(0<t\le R).
+\tag{LG.e15b}
+\]
+若 \(0<\beta\le1\)，由 \(\chi_\beta(u)\le w(u)\) 得
+\(\Theta_\beta(t)\ge\int_0^tdu/[u(\log(1/u))^\beta]=+\infty\)。这里精确候选是
+\(\chi_\beta=w\circ(\operatorname{id}+w)^{-1}\)，不是
+\(w(t)=t^2[\log(1/t)]^\beta\)；后者是得到认证上下界的比较函数。
 当 \(\beta>1\) 时，原 [C401](core.md#dd2-general-gauge) 势有限，且
 \[
 \Theta_\beta(t)=\int_0^t\frac{u}{\chi_\beta(u)}\,du

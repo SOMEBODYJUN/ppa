@@ -336,7 +336,12 @@
   - **证据** [RG1–RG3 的验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)、[PR1–PR3 的代数、积分和显式例](../topics/dd2/potential_regularity.md#dd2-potential-regularity)、[C452 完整构造和精确最小势](../topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)、[PE1–PE4](../canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)、[C419](../../CLAIMS.md#c419)、[C452 身份](../../CLAIMS.md#c452)。
   - **复核** 三席先各做四项实际数学自检，独立重建代数与尾极限、积分正则性/凹化、完整结构反例，再逐式复读 PR1–PR6、RG1–RG3、C452 身份和 E764、F148、地图与清单。核准零成本补边门、局部预算、后复合的充分范围、F3 原逆与普通逆区别；凹 C¹ 替代的四倍界仅属全窗。三个积分例和稠密不规则势均核完整图、原目标及零端；C452 的唯一完整真残差、交错尺度、两步终止、归一最小性、右极限/非减/BV 排除及无法补统一 δ 均逐式成立。固定图势未授全数据类，正尺度严格与零驻定分开，正初值尾极限和缩窗边界已明确。无未关闭致命异议，C452 升为 derived-checked。
 
-- [ ] `S05.06` 是否允许非幂次、对数修正、振荡模函数？
+- [x] `S05.06` 是否允许非幂次、对数修正、振荡模函数？
+  - **裁决** Proved
+  - **结论** 允许，且无须先把原模变成幂函数或连续非减函数。原 Φ、原真残差 ψ、预设 φ 和派生 Θ 各按自己的合同使用。C451 原对数模给准确逆的全窗夹界与 β>1 的真实及指定统一类长度门；C424 的对数缺陷余量另属其可比类。原稠密非单调 ψ 直接得 b=t/3、有限势与认证目标，C428 signed 振荡由统一比例和步帽给有限长度。原数据许可不替代正性、严格吸收、原目标、覆盖留域和计算条件；包络可能丢积分/目标证书，最小前缀保上确界的范围及势凹化另核。
+  - **证据** [NG1–NG5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-gauge-acceptance)、[C451 与 LG.e15a–b](../topics/dd2/nonpower_rates.md#dd2-log-half-order)、[IP1–IP2](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)、[C428](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)、[C424](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)、[IC1–IC6](../canonical/dd2_function_hypotheses.md#fh-integral-computation)。
+  - **复核** 三席先各完成四项实际自检，分别独立重建对数完整模型、原非单调残差域及包络范围，再逐式复读 NG1–NG5、LG.e15a–b、C451 身份、F148、地图和本答卷。准确 χ 与比较 w、β=1 等号、两图全部纤维及各自零集、C424 小窗/三角/目标均核准。原下确界取到、含零域及零前缀、实际目标、严格 δ 与全窗积分推出支付已明确；零驻定、覆盖和位置预算独立。C428 全部前像及逐尺度锐性不授同图，负支吸收等界与几何长度分开；NG5 全域主函数、严格逆和 C420 完整见证核原目标损失，前缀数值/端点/整窗及势凹化区别成立。发现的字面转义和推导前提表述已修正复读，无未关闭实质异议。
+
 - [ ] `S05.07` 是否可以弱化当前的可积性假设？
 - [ ] `S05.08` 是否存在具有有限长度、却不满足当前候选势函数判据的例子？
 - [ ] `S05.09` 是否可以建立最佳或近最佳的尾部长度包络？

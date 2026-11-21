@@ -1493,11 +1493,122 @@ Q₀ 连续严格增至无穷；J 连续全域，完整反演 F 闭图、完整�
 **RG3：两种否定的区别。** 在 \(\Phi=t^2/4,\psi(r)=r,\lambda=1\) 的原类，所有边 \(a=s=t/2\)；PR6 的
 \(\Theta(t)=1+t(1+\mathbf1_{\mathbb Q}(\log_2t))\)（t>0，零值另置0）虽然处处不连续、非单调、不凹且不可微，仍支付全部边。同数据还有规则势 t，所以这例只否定“每个有效势必须规则”。[C452 的完整结构反例](../topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)则进一步排除“总能规则化”：交错尺度 \(t_n>a_n>t_{n+1}>1\) 的每条真实特殊边成本 \(s_n=a_n\to1\)，而不同特殊边不能真实续接。投影使全部路径两步内终止；最小归一支付函数在 \(t_n\) 取 \(2a_n\)，其余取 t，有限且至多 2t。非减性却会用人工零成本桥把这些边串起，产生无穷成本；两端都趋于 1 又排除有限右极限。因此无有限非减、内点连续、凹、可微或该内窗有限变差的替代势。原 Φ 有界、ψ 线性、预设 φ 由原数据认证；范围保同一闭离散目标和完整闭图，不授更强结构类。
 
+<a id="dd2-nonpower-gauge-acceptance"></a>
 ### 5.6 非幂次、对数和振荡模
 
-**状态：Proved（单调包络范围内）。**
+**状态：Proved。** 允许；DD2 不要求原函数属于幂族，也不要求先作连续非减化。允许某种函数与该函数足以认证原预设目标、距离趋零或有限长度是不同判断。以下保原 E0 的完整真残差、同一最近输入锚和全部允许边；不把某个派生候选换名为原目标。
 
-chi(t)=t^r(log(1/t))^sigma 的局部修正可直接代入积分。振荡模先取连续非减上包络，再以其广义逆构造保守 Theta。包络可能损失逐点尖锐性，除非另外证明取等构形。
+| 对象 | 非幂次或振荡的实际作用 | 必须另核的内容 |
+|---|---|---|
+| 原有符号 \(\Phi(t)\) | 给该边锚积下界；可以变号、跳跃和稠密振荡 | 每个实际尺度的原值、同窗兼容、正锚信息和所用缺陷吸收 |
+| 原 \(\psi(\rho)\) | 在原域 \(D_\psi\) 评价完整纤维真残差；可以非单调、不连续 | 评价域、真实超水平端点或原域下确界；不擅自评价 \(\psi(s/\lambda)\) |
+| 预设 \(\varphi(t)\) | 先给目标，再核数据上界 \(M\le\varphi\) | 非单调曲线不能直接复合比较；严格性也不单独给距离趋零 |
+| 派生 \(\Theta(t)\) | 支付同一步实际步长，不是另一份误差模 | 同一步势差、末值下界、零端尾界和位置预算；正则替代另证 |
+
+**NG1：原域的直接充分路线。** 在固定原域且 \(0\in D_\psi\) 时，保留原函数定义
+\[
+b_\psi(t)=\inf_{\rho\in D_\psi}
+ \max\{\lambda\rho,\ t-\psi(\rho)\}.
+\tag{NG.e1}
+\]
+每条边的 \(s\ge\lambda\rho\) 和 \(t\le a+s\le\psi(\rho)+s\) 给 \(s\ge b_\psi(t)\)。
+[C429](../canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse)及 [IP1–IP2](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)核明：原 \(\psi\) 无须可测或非减，所得 \(b_\psi\) 仍非减且 1-Lipschitz；下确界可不达到。其在全部正尺度为正，准确要求原零前缀
+\(\lim_{h\downarrow0}\sup_{\rho\in D_\psi\cap[0,h]}\psi(\rho)=0\)。
+若同时有 \(2[-\Phi(t)]_+\le(1-\delta)b_\psi(t)^2\)、统一 \(0<\delta\le1\)，以及
+\(P(R)<\infty\)，其中 P 定义如下，则 C419 给同一步支付及长度证书：
+\[
+P(t)=\int_0^t\frac{u}{b_\psi(u)}\,du<\infty,
+\qquad
+s\le\frac2\delta[P(t)-P(a)],
+\tag{NG.e2}
+\]
+零输入另须实际驻定（例如由 \(\Phi(0)=0\) 的同锚能量强制），预设目标另须已认证。
+从 \(x^0\in U,\ t_0\le R\) 续接全部选择，保留非空覆盖及严格预算
+\((2/\delta)P(t_0)<d(x^0,U^c)\)；在 \(U=H\) 无位置边界。
+这个充分入口不是所有可行数据的必要形式；例如下述 NG4 在其默认吸收门失效时仍有几何长度界。原函数虽可极不规则，实际认证计算仍要 [IC1–IC6](../canonical/dd2_function_hypotheses.md#fh-integral-computation) 的输入、紧段误差和零端尾合同，形式上写出积分不等于已经能有效计算它。
+
+**NG2：对数修正能改变真实长度边界。** 固定 \(\beta>0\)、\(B>\max\{\beta,1\}\)、\(R=e^{-B}\)、\(\lambda=1\)。[C451 的完整定义](../topics/dd2/nonpower_rates.md#dd2-log-half-order)在小窗置
+\(g(a)=a[\log(1/a)]^\beta\)，在外侧冻结 g，并令 \(w(a)=ag(a)\)。原数据是
+\[
+\psi_\beta=w^{-1},\quad \Phi=0,\quad
+\varphi_\beta=(a\mapsto\sqrt{a^2+w(a)^2})^{-1}.
+\tag{NG.e3}
+\]
+预设目标由原 \(w(a)\le\rho\le s\) 和能量直接认证。完整连续旋转
+\(F_{\rm rot}(y)=g(\|y\|)R_{\pi/2}y\) 的精确零集为单点，全部输入唯一可解，并有 \(\rho=s=w(a)\)、原目标取等。完整剪切
+\(F_{\rm sh}(u,v)=(-w(|v|),\operatorname{sgn}(v)w(|v|)^2/|v|)\)，零线处置零，精确零集为该直线；其完整 \(\rho=s=w(a)\sqrt{1+g(a)^2}\)，同锚积仍为零，实际后继严格小于上述目标。两图都零驻定、全域覆盖及距离窗不变。
+
+准确候选是
+\(\chi_\beta=(\operatorname{id}+\psi_\beta)^{-1}
+=w\circ(\operatorname{id}+w)^{-1}\)，不是 \(w\) 本身。
+LG.e15a–LG.e15b 新补 \(0<t\le R\) 的全窗认证界
+\[
+(1+g(R))^{-2}w(t)\le\chi_\beta(t)<w(t),\qquad
+\frac{[\log(1/t)]^{1-\beta}}{\beta-1}
+\le P(t)\le
+(1+g(R))^2\frac{[\log(1/t)]^{1-\beta}}{\beta-1}
+\quad(\beta>1).
+\tag{NG.e4}
+\]
+当 \(0<\beta\le1\) 时该原积分发散。LG4–LG5 独立核每个正初值的真实
+\(s_k\sim 2^\beta/\{\sigma k(\log k)^\beta\}\)，其中旋转 \(\sigma=1\)、剪切 \(\sigma=2\)，故两个模型都恰在 \(\beta>1\) 有有限长度。其余分支中旋转仍收敛到零，剪切却沿零线逃逸。原模
+\(\psi_\beta(\rho)\sim2^{\beta/2}\sqrt{\rho}[\log(1/\rho)]^{-\beta/2}\)
+没有任何 \(q>1/2\) 的局部 Hölder 上界，故这里的有限长度不能省去修正后归入某个较好幂指数。统一必要性只属 C420 的固定原模、零缺陷、含二维的完整自由类；不转授每个固定图、正锚强化或更强预设目标。
+
+对数也可以出现在缺陷余量而非误差模上。[C424](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)固定 \(\lambda=1\)、\(1<m<2\)、\(\psi(r)=r^{1/m}\)、\(\Phi=-D\)，取
+\(W(t)=2c\,t^{m+2}[\log(1/t)]^\gamma\)、\(2D=t^{2m}-W\)，\(c>0,\gamma\in\mathbb R\)。
+足够小窗内 \(W\le t^{2m}\)、半壳可比，且 \(W'=o(t)\) 保原后继严格增。
+令 \(H(t)=t^2+t^{2m}\)、\(A_*(t)=H^{-1}(H(t)-W(t))\)，则
+\(A_*(t)/t\to1\)，均值定理给
+\(t-A_*(t)\sim c\,t^{m+1}[\log(1/t)]^\gamma=o(t^m)\)；
+故 \(s=A_*^m\) 满足两道三角界。该限定余量类的准确积分为
+\((2c)^{-1}\int_0^Rdu/[u(\log(1/u))^\gamma]\)，恰在 \(\gamma>1\) 有限。
+这与 C451 的原模修正是不同合同；原预设目标仍需容许 C424 的后继 \(A_*\)，否则另行认证，不能借此换目标。
+
+**NG3：直接处理原振荡误差模。** 取 \(\lambda=1,D_\psi=[0,\infty)\)、
+\(\psi(r)=r(1+\mathbf1_{\mathbb Q}(r))\)、\(\Phi=0\)。
+该模在每个正点不连续且不单调，但在零连续。原式
+\(\max\{r,t-\psi(r)\}\ge\max\{r,t-2r\}\ge t/3\)，取有理数趋近 \(t/3\) 给
+\[
+b_\psi(t)=t/3,\qquad P(t)=3t,\qquad
+s\le2[P(t)-P(a)].
+\tag{NG.e5}
+\]
+正尺度下确界恰在 \(t/3\) 为有理数时取到，未达到不影响此证书。
+预设 \(\varphi(t)=9t/10\) 独立由
+\(a\le\psi(\rho)\le2\rho\le2s\) 和 \(a^2+s^2\le t^2\) 得
+\(a\le2t/\sqrt5<9t/10\)（\(t>0\)，零输入驻定）；此处在真实 \(\rho\) 使用点态上界合法，没有作非单调残差替换。
+完整 \(F=I,J=I/2,S=\{0\},U=V_\psi=H\) 提供非空图，真实
+\(\rho=a=s=t/2\)、锚积 \(t^2/4\)，零与覆盖均满足。
+反之，\(\psi(0)=0,\psi(r)=1\ (r>0)\) 使 \(b_\psi(t)=0\) 于 \(0<t\le1\)，虽每个函数值有限仍无此正下界；同一固定 \(F=I\) 在小窗仍几何有限长。候选失败不能反判全部固定图。
+
+**NG4：稠密有符号振荡保留原值。** [C428](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)固定 \(\lambda=1,\psi(r)=r\)，正有理 t 上 \(\Phi(t)=t^2/8\)、正无理 t 上 \(\Phi(t)=-t^2/8\)，零值为零。准确自由完整类上界为
+\[
+M_\Phi(t)=
+\begin{cases}\sqrt{3/8}\,t,&t\in\mathbb Q,\\
+\sqrt{5/8}\,t,&t\notin\mathbb Q,\end{cases}
+\qquad
+\kappa=\sqrt{5/8},\quad
+s\le c_*t,\quad c_*=\frac{1+\sqrt{3/2}}2.
+\tag{NG.e6}
+\]
+先指定 \(\varphi(t)=\kappa t\) 就获认证，原 M 也完整保留振荡信息。
+全部合法轨道有 \(\sum s_k\le c_*t_0/(1-\kappa)\)，局部使用另核此预算小于
+\(d(x^0,U^c)\)。这是统一比例和步帽给的长度；负支恰有
+\(2D=(t/2)^2\)，不可谎称默认 \(b_\psi=t/2\) 已有统一正 \(\delta\)。
+
+锐性量词为每个指定正尺度存在完整闭图：用底图 \(J(z)=z/2\)，再加
+\(x=te_1\)、\(y=(t/2)e_1+\sqrt{M_\Phi(t)^2-t^2/4}\,e_2\) 这一边。
+底图保证全部输入覆盖、精确零集，全部前像核给完整 \(\rho=\|y\|=s\)；底图锚积足以满足原正负支。不能把它写成一个固定闭图全尺度同时达到。无理尺度的这条真实边也说明，闭图本身不许可把 \(\Phi\) 改成邻尺度 \(\limsup\Phi\)；改变原下界会删掉合法图。
+
+**NG5：包络可选，信息损失逐项判断。** 原函数仅逐点有限不保证紧段有界，而有限连续主函数须在内紧段有界，有限非减主函数须压住每个前缀；其存在不能自动加入原合同。若自选 \(\bar\psi\ge\psi\)，只获得另一份较松数据；须重验其原域、目标认证、吸收和积分。对 C451 任取 \(C>0\)，全域合法连续主函数
+\(\bar\psi=\max\{\psi_\beta,C\sqrt{\rho}\}\) 在足够小残差恰为 \(C\sqrt{\rho}\)。
+于是 \(\bar\chi(t)\sim t^2/C^2\)，新势发散；即使原 \(\beta>1\) 证书有限，也会被这次放宽丢失。
+在小正 a 上 \(w(a)>a^2/C^2=\bar\psi^{-1}(a)\)，故
+\(\sqrt{a^2+w(a)^2}>\sqrt{a^2+a^4/C^4}\)；取严格递增逆后，相应零缺陷准确后继
+\(\bar A_0\) 严格大于原 \(\varphi_\beta\)。由 C420 的完整旋转实现，原目标的全类认证也不能自动继承。原固定图及其已证实际结论没有改变；新坏见证属于更大的数据类。
+
+另一种操作是保留原域的最小前缀上确界。[C422](../canonical/dd2_function_hypotheses.md#fh-envelope-optimality)在相应原联合可行域非空和同尺度几何帽下可保持自由单边上确界，不能笼统说所有包络都损失数值锐性；但端点达到性、普通逆条件及完整整窗算子类不因此保持。未截帽的前缀还可跳跃或取 \(+\infty\)，广义逆共享下确界不授端点等价。对派生势的 [PR4a–PR4b 安全凹化](../topics/dd2/potential_regularity.md#dd2-potential-regularity)则是第三种操作：它以逐段势差支配保支付，并重算位置预算，不替换原 \(\psi,\Phi,\varphi\)。本项由此撤回旧“振荡模先取连续非减上包络”的必需步骤，同时保留在已核条件下自选包络的充分用途。
 
 ### 5.7 能否弱化当前可积性
 

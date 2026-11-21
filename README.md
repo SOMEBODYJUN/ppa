@@ -76,7 +76,7 @@
 [S05.05 的势正则性](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)分开望远镜的下界要求、积分势的自动性质及规则替代的存在。C419 合同内可明确改选凹且正尺度 C¹ 的势；[C452](research/topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)则构造有最小有限距离势、全选择两步终止，却没有有限非减或内点连续替代的同一完整图，完整对象和规则化障碍已独立核验。
 
 
-
+[S05.06 的一般模验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-gauge-acceptance)保原有符号缺陷、完整真残差模及预设下降曲线，直接处理非幂次、对数和稠密振荡。C451 补有全窗逆模与尾势认证界，C424 保其缺陷余量类；IP1 的非单调原模无需先连续非减化，C428 的振荡下界仍给统一几何长度。原模包络、原残差前缀和派生势凹化各有不同的保持范围，不能混用。
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
