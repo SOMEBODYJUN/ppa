@@ -1,12 +1,12 @@
 # 原协议验收进度
 
-**当前主任务。** 把 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)逐项完成，从第一项未勾恢复。已签收 S01.01–S01.10、S01.THEOREM、S02.01–S02.10 及 S02.F01–S02.F07；下一项为 S02.F08。每项证据和独立复核就绪后单独提交、推送并确认远端。进度以清单实际勾选为准。
+**当前主任务。** 把 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)逐项完成，从第一项未勾恢复。已签收 S01.01–S01.10、S01.THEOREM、S02.01–S02.10 及 S02.F01–S02.F08；下一项为 S02.F09。每项证据和独立复核就绪后单独提交、推送并确认远端。进度以清单实际勾选为准。
 
 **已核证据地图。** [一般有符号几何](research/canonical/dd2_general_phi_exact.md)保存 C414 的同一四点实现；[函数条件正文](research/canonical/dd2_function_hypotheses.md)保存 C417–C422、C428–C429、C437–C438，分别处理原真残差、准确包络、计算合同、函数与广义逆条件、最大值及严格共同余量。[目标几何](research/topics/dd2/target_geometry.md)保存 C426–C427 的凸目标、固定射线与仿射代价；[反向补偿](research/topics/dd2/reverse_compensation.md)保存 C430–C431、C434 的原模预算、非空端点、完整窗兼容障碍和取等量词；[联合关系](research/topics/dd2/joint_relation.md)保存 C435 的精确单边代价及 C436 的完整前像必要门。各 Claim 的原有定义、条件与范围以正文及 CLAIMS 为准。
 
 **当前动力学边界。** C438 已分开每边严格、逐尺度共同余量和统一比例。[C439](research/topics/dd2/scalar_iteration.md)给纯复合趋零的有限退出判据，并用两个完整闭图证明：相同单步数据和处处达到的准确包络，连同其一致趋零的复合，仍不决定全部实际轨道是否趋零。[C440](research/topics/dd2/scalar_iteration.md#dd2-monotone-majorant)已给非减主曲线、全窗标量一致性及连续构造的准确条件。必要性不能转授任意固定图，预设目标 \(A\) 也不能被放宽后的主曲线替换。C419–C420 的长度证书及其必要性继续保留各自范围。
 
-**仍未自动升级的范围。** 正下界完整整窗的兼容不能由逐尺度非空推出；C436 的前像过滤目前只是必要门。自由单边、固定图、同图全尺度和共同轨道各有不同量词，原两项正部式也不是一般精确值。清单后续的完整协议验收仍未完成，不能以现有局部结果宣称全部算法、动态最优或公开新颖性已经解决。
+**反向与仍未升级的范围。** [C441](research/topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse)已核原两项式的精确数值逆，以及非正下界、真正下降目标中与准确自由逆的等价。正下界完整窗兼容不能由逐尺度非空推出，C436 的前像过滤仍只是必要门；固定图和精确零集还需各自范围。自由单边、同图全尺度和共同轨道的量词不互换。后续完整协议验收仍未完成，不能以现有局部结果宣称全部算法、动态最优或公开新颖性已经解决。
 
 作者已澄清 DD1 和 DD2 都采用一般有符号锚函数 \(\Phi\)。DD2 先把 A 改为指定的下降曲线 \(\varphi\)，再反推 \(\Phi\) 和一般输出真残差误差界 \(\psi\) 的补偿。固定线性误差界是 C400 的证明特例。新会话先读 [GPT Pro 开工提示词](research/audit/DD2_PRO_START_HERE.md) 并做四个自检，再继续清单。
 

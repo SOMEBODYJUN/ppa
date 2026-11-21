@@ -11024,6 +11024,17 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ORIGINAL-ENVELOPE-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14022,6 +14033,10 @@
     "E752": {
       "x": 614.45,
       "y": 5377.41
+    },
+    "E753": {
+      "x": 621.69,
+      "y": 5653.81
     }
   },
   "bounds": {

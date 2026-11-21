@@ -1192,6 +1192,12 @@
 | --- | --- | --- | --- |
 | E752 | [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) ∧ [DD2-COMPOSITION-TRAJECTORY-SEPARATION · C439 精确复合、受控递推与同单步数据的真实轨道分离](topics/dd2/scalar_iteration.md#dd2-composition-exit) | conditional → [DD2-MONOTONE-MAJORANT · C440 非减下降主曲线、全窗一致性及连续构造](topics/dd2/scalar_iteration.md#dd2-monotone-majorant) | 有限闭窗自映射：前缀上确界严格与一步右侧门等价存在非减趋零主曲线，也等价全部标量受控路径全窗一致趋零。连续或严格递增趋零主曲线另由右连续上界严格判定。预设目标需另核前缀不超过目标；固定图实际路径必要性不外推。左右障碍有三维仿射目标完整闭图实现。；**derived-checked** |
 
+## DD2 原式反演与准确目标
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E753 | [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) ∧ [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) | conditional → [DD2-ORIGINAL-ENVELOPE-INVERSE · C441 原两项式的数值逆与非正下降目标恢复](topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse) | 含零原残差域、有限非负原模：两项式目标反演由危险层首端及归属给两道预算。非正下界且c<B+时与准确自由R目标逆等价，包含c<t；非正全域完整统一类有坏尺度见证。正下界、固定图及精确零集闭纤维另保限制，不反推一般整窗存在或动态。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

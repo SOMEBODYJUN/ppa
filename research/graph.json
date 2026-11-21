@@ -5484,6 +5484,12 @@
       "label": "C440 非减下降主曲线、全窗一致性及连续构造",
       "file": "topics/dd2/scalar_iteration.md#dd2-monotone-majorant",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-ORIGINAL-ENVELOPE-INVERSE",
+      "label": "C441 原两项式的数值逆与非正下降目标恢复",
+      "file": "topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14111,6 +14117,18 @@
       "output": "DD2-MONOTONE-MAJORANT",
       "relation": "conditional",
       "scope": "有限闭窗自映射：前缀上确界严格与一步右侧门等价存在非减趋零主曲线，也等价全部标量受控路径全窗一致趋零。连续或严格递增趋零主曲线另由右连续上界严格判定。预设目标需另核前缀不超过目标；固定图实际路径必要性不外推。左右障碍有三维仿射目标完整闭图实现。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E753",
+      "topic": "DD2 原式反演与准确目标",
+      "inputs": [
+        "DD2-ENVELOPE-SCOPE-EQUIVALENCE",
+        "DD2-REVERSE-RAW-COMPENSATION"
+      ],
+      "output": "DD2-ORIGINAL-ENVELOPE-INVERSE",
+      "relation": "conditional",
+      "scope": "含零原残差域、有限非负原模：两项式目标反演由危险层首端及归属给两道预算。非正下界且c<B+时与准确自由R目标逆等价，包含c<t；非正全域完整统一类有坏尺度见证。正下界、固定图及精确零集闭纤维另保限制，不反推一般整窗存在或动态。",
       "status": "derived-checked"
     }
   ]

@@ -25,6 +25,8 @@
 
 [C430 的双向补偿](research/topics/dd2/reverse_compensation.md)在自由单边类固定指定目标 \(A\)：给定一般有符号 \(\Phi\)，求原 \(\psi\) 在危险残差前缀上必须满足的点态帽；给定任意原 \(\psi\)，用三个下界条件的并集和准确非空上端，求允许的 \(\Phi(t)\) 区间。非减、连续或严格可逆都不必预设，开闭端点不可丢失。非正整窗、\(U=H\) 且无额外输出位置限制时，有完整闭图统一类的反向实现；正下界另有连续目标的完整前像分离例。
 
+[C441 的原式数值逆](research/topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse)以严格危险残差层的首端和归属给两道预算，保能量端与根端的不同开闭。非正下界且预设 \(A(t)<t\) 时，该数值逆恰与准确自由目标逆等价；正下界、固定图和精确零集闭纤维各有独立限制与完整反例。
+
 [充分与必要的量词表](research/topics/dd2/reverse_compensation.md#dd2-compensation-necessity)把指定非严格目标、每条边严格下降、共同收缩余量、固定图和轨道证书分开。精确上确界等于目标却不达到时，每条边仍可严格低于目标。[C431](CLAIMS.md#c431) 还给出每个尺度都非空且统一达标、完整整窗却不可存在的实际反例；同一数据有一个固定闭图的允许选择实现，障碍来自全部完整前像必须同时受检。
 
 [尖锐性分层及 C434](research/topics/dd2/reverse_compensation.md#dd2-compensation-sharpness)明确原残差最优值、线性预算、完整图、目标结构和有限长度各自的边界。跳跃原模能使预算边界精确但无输出目标取等；密集下界下各尺度可取等却无共同闭图全尺度饱和。另一固定射线图在所有尺度都有取等输入，全部轨道却最多两条非驻定边，不能将同图尖锐自动升级为动态尖锐。
@@ -387,7 +389,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437–C438 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§1.6 对全部已认证边证明原真残差取样的统一安全性，核允许图与完整输出范围；§3 给精确达到判据、闭纤维端点和固定图紧性正反例；§3.4 明确原两项式的放宽域、准确 G/R 的实现及原式等值的必要充分条件，含正负完整图比较和零尺度；§3.5 给临界右前缀的严格下降充要门、逐边与共同余量的完整图分离及线性校准。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |
-| [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434 的原真残差双向预算、兼容及尖锐性边界。以危险前缀求允许的 ψ，以非空上端和三门求有符号 Φ；保留整窗交集、线性标尺、首端见证及正下界完整窗必要性失败。§6 核逐尺度存在与完整窗兼容，§7 核预算尖锐而输出无取等、单尺度／同图／轨道三个量词，并给留域预算非必要例。设计目标、反推强度或提升实现范围前读取。 |
+| [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434、C441 的原真残差双向预算、兼容及尖锐性边界。危险前缀求 ψ，非空上端和三门求有符号 Φ；保整窗交集、线性标尺、首端见证及正下界完整窗必要性失败。§6 核逐尺度存在与完整窗兼容，§7 核预算尖锐但输出无取等、单尺度／同图／轨道三个量词。§8 反演原正部两项式的两道预算，证明非正真下降目标与准确 R 的等价，分离正下界、固定图和零残差过滤。设计目标、反推强度或提升实现范围前读取。 |
 | [research/topics/dd2/joint_relation.md](research/topics/dd2/joint_relation.md) | C435 的输出–真残差精确三项代价、锚上限、全部可实现物理步长及仿射附加代价；C436 的完整前像右闭包必要门、非空完整类的严格增益与未达残差端点反例。需要简化共同关系、读取给定输出的预算或利用全部完整前像改进上界时读取；不替代一般完整兼容和动态证明。 |
 | [research/topics/dd2/scalar_iteration.md](research/topics/dd2/scalar_iteration.md) | C439 的纯复合有限退出、逆像层与整数秩；非减时与 C418 受控递推的等价；两个同单输入距离数据、同准确最大值却有不同真实轨道的完整闭图，含旋转坐标、反射影子、真纤维、预算与续接。C440 另给最小非减上界、严格与趋零条件、全窗一致性等价、连续构造，以及左前缀和右连续障碍的完整图实现。核曲线复合、非减比较、预设目标是否保留或从单步最优推轨道时读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
