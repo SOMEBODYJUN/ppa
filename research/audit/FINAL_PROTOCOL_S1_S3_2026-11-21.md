@@ -15,7 +15,7 @@ a\le\psi(r_F(y)),\qquad
 r_F(y)=\inf_{v\in F(y)}\|v\|.
 \tag{S13-2}
 \]
-令 \(\eta(s)=\psi(s/\lambda)\) 时，输出条件成为 \(a\le\eta(s)\).
+当 \(\psi\) 在所需残差段上非减且可评价时，\(r_F(y)\le s/\lambda\) 使输出条件推出 \(a\le\eta(s)=\psi(s/\lambda)\)。这一逐边推论与全纤维真残差条件应分别陈述。
 
 这里的验收状态只表示下列范围内的数学结论。对固定对象、固定量词或固定工作窗之外的推广，另列为 Partial 或 Open。
 
@@ -42,9 +42,9 @@ d(y,S)\le A(d(x,S)).
 
 **裁决：Proved（普通 PPA 版本）。**
 
-规范普通 PPA 版本的对象是有限维欧氏空间中的集合值 \(F\)、闭目标 \(S\subseteq\operatorname{zer}F\)、步长 \(\lambda>0\)、允许关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\)。在工作窗内需要每个受检输入至少有一个允许输出。主定理的允许边量词是
+规范普通 PPA 版本的对象是有限维欧氏空间中的集合值 \(F\)、非空闭目标 \(S\subseteq\operatorname{zer}F\)、步长 \(\lambda>0\)、允许关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\)。轨道定理在 \(U_R=\{x\in U:d(x,S)\le R\}\) 的每个输入要求至少有一个允许输出，其中 \(U\) 开、\(R>0\)。一步几何定理直接量化已有受检边。锚与输出条件的量词是
 \[
-\forall x\ \forall y\in\mathcal J(x)\quad
+\forall x\in U_R\ \forall y\in\mathcal J(x)\quad
 \exists p\in P_S(x)
 \]
 使角度条件成立。它不是“存在一个好输出”的轨道量词，也不是对每个 \(p\in P_S(x)\) 自动成立的全锚结论。

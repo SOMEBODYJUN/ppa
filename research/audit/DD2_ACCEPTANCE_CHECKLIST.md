@@ -38,7 +38,11 @@
   - **结论** DD2 保有输入型逐步上包络 \(s\le B_D(t)=(t+\sqrt{t^2+4D(t)})/2\)，对有符号下界可用较精确的 \(B_\Phi\)。在有限长度层，可以用上包络加可和的比较迭代，也可以由 C401 的净耗散直接得到 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。下降 \(a\le A(t)\) 与这两个长度充分机制分别判定。
   - **证据** [C400 输入步长与轨道例](../topics/dd2/core.md#dd2-trajectory)、[C401 同一步耗散和积分势](../topics/dd2/core.md#dd2-general-gauge)。
   - **复核** 在 C401 的前提下，\(s\ge\chi(t)\) 及 \(t^2-a^2\ge\delta s^2\) 给 \(s\le(t^2-a^2)/(\delta\chi(t))\le(2/\delta)\int_a^t u/\chi(u)\,du\)，第二步用 \(\chi\) 非减。反之，仅用 C400 的 \(A(t)=t/(1+t)\) 取等实例，沿真实轨道 \(s_k=t_{k+1}=(k+1+t_0^{-1})^{-1}\)，总长发散。
-- [ ] `S01.04` DD2 对算子 `F`、目标集 `S`、近端参数 `\lambda`、投影点、合法近端对有哪些精确要求？
+- [x] `S01.04` DD2 对算子 `F`、目标集 `S`、近端参数 `\lambda`、投影点、合法近端对有哪些精确要求？
+  - **裁决** Proved
+  - **结论** 普通 DD2 固定欧氏空间 \(H\)、关系 \(F:H\rightrightarrows H\)、闭非空 \(S\subseteq F^{-1}(0)\)、\(\lambda>0\)、开集 \(U\) 及 \(R>0\)。对 \(x\in U_R=\{x\in U:d(x,S)\le R\}\) 和每个 \(y\in\mathcal J(x)\subseteq\{z:x-z\in\lambda F(z)\}\)，要求某个 \(p\in P_S(x)\) 满足同边锚定下界，并在实际输出上核 \(a\le\psi(\inf_{v\in F(y)}\|v\|)\)。一步版只量化已有边；轨道版另要求 \(\mathcal J(x)\ne\varnothing\) 和留域。若输出误差界局部有定义，需对实际 \(y\)、\(r_F(y)\)，以及使用单调比较时的 \(s/\lambda\)，逐一检查评价窗。
+  - **证据** [对象、复合图与误差域](../canonical/ppa_ab_necessary_bounds.md#ab-scope)、[C400 基本量词](../topics/dd2/core.md#dd2-reverse)、[C401 工作窗及留域预算](../topics/dd2/core.md#dd2-general-gauge)、[C414 有符号正尺度版本](../canonical/dd2_general_phi_exact.md)。
+  - **复核** 边包含式给实际图值 \((x-y)/\lambda\in F(y)\)，所以 \(0\le r_F(y)\le s/\lambda\)，不要求残差下确界达到。锚的距离是输入尺度 \(t\)，误差界使用输出距离 \(a\)。C414 原陈述只取 \(t>0\)。在 C400/C401 的 \(D(0)=0\) 下，\(t=0\) 时唯一最近锚是 \(x\)，锚定内积为 \(-s^2\)，因此只能驻定。有限前缀长度严格小于工作域余量时，下一输入仍在 \(U_R\)，于是可以再次调用覆盖。
 - [ ] `S01.05` 是所有合法近端输出满足条件，还是只要求存在某个选择？
 - [ ] `S01.06` 零点锚定条件对所有最近点成立，还是仅对某个最近点成立？
 - [ ] `S01.07` DD2 是否要求预解式单值、局部存在、满射性、连续性、闭图或其他结构？
