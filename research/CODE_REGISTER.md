@@ -200,3 +200,8 @@ C271另用同目录rail_verify.py，seed271、Fraction与Decimal80；1035真实�
 [统一复算入口](code/submonotonicity_routes/README.md)运行 python3 research/code/submonotonicity_routes/run_all.py。六个独占脚本的完整 stdout/stderr、返回码、Python版本和脚本hash保存于 [all_verifiers_output.json](code/submonotonicity_routes/all_verifiers_output.json)；Fraction恒等式、零/临界/两符号/远输入、完整分支前缀、单零锚/完整零集和无限长度渐近分别标明。
 
 本轮只增加比较证据：旧tied类精确换参、同算法direction-loss、一般预算边界与点收敛/finite-length区分。GU1/GU3保留报告级candidate，不新注册总账Claim，不改旧身份；全称由[各分报告](novelty/2026_10_14_submonotonicity/README.md)解析证明，数值不认证全部纤维、公开首创或实际成本。
+
+
+## C462：完整 DD1 的二维低稳定性解选择
+
+[dd1_limit_selection/README.md](code/dd1_limit_selection/README.md)给标准库 Decimal120/Fraction、固定 B=R=1/4,r0=1/8、无随机参数及56个完整逆/真残差/锚界点的复算。六个 ε=exp(−z) 的首次饱和及根对数诊断保存在 [results.json](code/dd1_limit_selection/results.json)；截断使用解析尾上界，Decimal舍入不是严格区间认证。普遍同胚、完整 DD1、实际 Q-二次和无任何正阶 Hölder 由规范正文 LS1–LS9 证明。

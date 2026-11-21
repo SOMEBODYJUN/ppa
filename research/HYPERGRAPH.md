@@ -1318,6 +1318,12 @@
 | --- | --- | --- | --- |
 | E773 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD2-ZERO-DEFECT-OPTIMAL-TAIL · C458 零缺陷连续原模的准确旋转尾与最佳首项](topics/dd2/tail_envelopes.md#dd2-zero-defect-optimal-tail) ∧ [DD2-IRREGULAR-ZERO-DEFECT · C454 任意原误差模零缺陷完整类长度充要门](topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length) | conditional → [DD2-RAW-GAUGE-OPTIMAL-TAIL · C461 一般原残差域的准确最佳尾上确界与闭图逼近](topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail) | C461-v1 λ,R>0,0∈Dψ,任意有限非负原ψ且含零前缀sup→0，无需可测/连续/非减。m(q)=sup原rho min(ψrho²,(q−λ²rho²)+),p(t)=√m(t²)，预设φ先核p≤φ。Phi0,U=VψH的全部有限维E0类、原真rho、闭非空子零集、全R允许覆盖，包含二维闭完整exactS0全J。m和q−m非减,m连续1Lip,m(q)<q正q；q0=t²,qnext=m(q)，Tψ(t)=Σ√(qk−qnext)精确等于真实全类长度sup、原真残差尺度池值及闭尺度池值，池同值不等于端点可行。正部和给上界；θm有限链选同一原rho>0，P0+二维锚0主链+每正输出径向辅助前像保真rho；输入可撞但输出半径全异，辅助窗内同样认证φ，有限闭完整图全覆盖exactzero0。先θ↑1固定N逼近，再N→∞，不声称有限最优值同图达到。bψ正，Tψ非减，C454给Tψ(R)有限iff∫t/bψ有限，可积时≤2I；认证p≤φ保其坏见证。一般U用严格前缀预算；原前缀不消失、signedPhi、更强目标、连续单值子类必要性和黑箱算法不在范围。 承接C458的是ZT4–ZT5只用平方降幅序的比较，不导入连续非减原ψ假设。；**derived-checked** |
 
+## 完整DD1之后的解选择稳定性
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E774 | [RSL-DATA · C285 最近零锚与同窗真线性误差界](canonical/rleb_sharp_linear_frontier.md#rsl-envelope) | conditional → [DD1-LIMIT-SELECTION-STABILITY · C462 完整DD1二次点率与非Hölder极限选择](topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability) | C462-v1：H=R²,λ1,S=R×0,B=R=1/4,T(p,r)=(p+B min(sqrt(p+),\|r\|),r\|r\|/(1+\|r\|)),完整F=T逆−I全域连续单值非单调且exactzeroS。全部\|r\|≤R输入有唯一完整输出、rho=s、a≤rho/4、最近锚积≥−t²/16、零驻定与整带不变；L1/4,sigma1/16,DD1因子3/sqrt136<1。共同尾≤sqrt17 tk/3≤sqrt17 R^(2^k)/3，P连续回缩；每个非零法向轨道真实点误差Q2，p初值≤0比值1，p>0比值4/sqrt17。固定同r0=1/8、切向微扰epsilon的极限差在常数乘exp(−C sqrt(log1/epsilon))与exp(−c sqrt(log1/epsilon))之间，故非零初值处任意正阶两点Holder失败。r0可任意近零但固定后比较；不否定零点calmness或DD1收敛。原线性EB常数和统一sigma最小均核；未称最优根对数常数、独立代理复核或公开新颖性。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

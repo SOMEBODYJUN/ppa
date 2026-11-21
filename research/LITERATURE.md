@@ -1,5 +1,35 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-dd-retraction-priority"></a>
+## 连续极限回缩的直接先例与 DD 正文筛选
+
+本项为 2026-11-21 的定向查新，不是系统综述。检索了 proximal point / retraction / zero set / neighborhood retract / uniform convergence of iterates，以及极限选择的 Hölder、对数模和半代数关键词；使用两种网页搜索和 arXiv 全文发现入口。以下只对实际读到的一手位置登记事实，阴性搜索没有优先权证明效力。
+
+| 一手来源及实读位置 | Paper Fact | 对本项目的准确影响 |
+| --- | --- | --- |
+| K. Goebel, M. Koter, *A Remark on Nonexpansive Mappings*, Canadian Mathematical Bulletin 24(1) (1981), 113–115；[原文 PDF](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0EF8BD360B430BB0C3F10FA8796B5A13/S0008439500062639a.pdf/remark_on_nonexpansive_mappings.pdf)，三页全文，特别 pp.114–115 | 对闭凸 Banach 子集上的 rotative 非扩张 T，引入 \(F_\alpha=(I-\alpha T)^{-1}(1-\alpha)I\)，推导步差收缩 \(\|F_\alpha x-F_\alpha^2x\|\le q_\alpha\|x-F_\alpha x\|\)、\(q_\alpha<1\)，并在 p.115 明确写 \(Rx=\lim_nF_\alpha^nx\) 为到 Fix T 的非扩张回缩。 | “几何步差可和→极限映射→固定点回缩”有直接旧例；不是一个尚无人联系的机制。原文 rotative 和非扩张前件没有被替换成 DD 的最近锚条件。 |
+| A. Wiśnicki, *Hölder Continuous Retractions and Amenable Semigroups of Uniformly Lipschitzian Mappings in Hilbert Spaces*, TMNA 43(1) (2014), 89–96；[正式 PDF](https://www.tmna.ncu.pl/static/published/2014/v43n1-06.pdf)，Lemma 2.1，印页91及 Theorem 2.2，pp.92–94 | 引理在完备有界度量空间、单步 k-Lipschitz 自映射 L、全初值共同几何增量下给 Hölder 极限，证明显式平衡 \(k^nd(x,y)+2c\gamma^n/(1-\gamma)\)。Theorem 2.2 在其 amenability 与 \(k<\sqrt2\) 等前件下构造共同固定集的 Hölder 回缩。引理本身被作者称作 well-known result 的变体。 | 仓库 [ST-LIPSCHITZ](canonical/selection_truncation_prior_tools.md#st-lipschitz) 已在此前核过这个先例，因此不能声称此前完全没有回缩方向文献记录。本轮重新读正式原页。其 Lipschitz 前件不覆盖本轮 C462 的半阶切向映射。 |
+| J. Górnicki, *Structure of the Fixed-Point Set of Mappings with Lipschitzian Iterates*, TMNA 36 (2010), 381–393；[正式 PDF](https://www.tmna.ncu.pl/static/published/2010/v36n2-07.pdf)，摘要、§1、Corollary 5.5，印页392 | 本文直接研究 Lipschitz 迭代条件下固定集的回缩结构；5.5 在有界闭凸 Lp 域、1<p≤2 及所述 Cesàro Lipschitz 平方门下给固定点及回缩。 | 固定点集的回缩结构是成熟问题。该文并未在本轮被证明等价于非单调完整 PPA 的 DD 紧零簇 ENR 定理。其所引 Bruck 原文未在本轮全文核验。 |
+| W. Takahashi, *Proximal point algorithms and four types of nonlinear retractions*, *Banach and Function Spaces II* (2008), 157–190；[作者 CV](https://rcnao.kmu.edu.tw/images/Staff_CV/wataru-CVWeb.pdf)，条目235；[Aoyama–Kohsaka 2010](https://link.springer.com/article/10.1155/2010/512751)，参考文献29 | 题名、作者、卷年和页码得到作者资料与正式论文书目交叉确认。 | 这是 PPA 与回缩的直接专题线索；本轮没有取得并逐定理读该章，不能仅凭题名断言它已经证明本稿的全部非单调局部拓扑后果。 |
+
+**本库重构的 PPA 桥，非原文逐字陈述。** 在 Goebel–Koter 的全空间特例，置 \(A=I-T\)、\(\lambda=\alpha/(1-\alpha)\)。方程 \(y=(1-\alpha)x+\alpha Ty\) 恰等价于 \(x-y=\lambda A(y)\)，故 \(F_\alpha=J_{\lambda A}\)、\(\operatorname{zer}A=\operatorname{Fix}T\)。Hilbert 情形下 A 单调且连续。这给真实 PPA 的旧例，但不把原论文的步差收缩误称为本仓库逐字相同的 A+B 假设。
+
+**当前裁决。** 连续单步映射加共同消失的物理尾界，令极限成为连续回缩，是通用机制；不能独立包装为首次发现 PPA 零集回缩。RLEB / DD 下可主张的具体增量，须限定到原算子类别、完整纤维、统一局部窗和拓扑后果，并逐项比较。此次未定位与本稿所有这些条件完全相同的公开定理；这不是证明其不存在。流形优化中预设的 tangent-bundle retraction 和 proximity-space homotopy 不是本题的轨道极限映射。
+
+<a id="lit-dd-structural-selection"></a>
+### 从已有成果挑选正文问题
+
+下表是选稿判断，不给任何 Claim 追加公开新颖性。筛过总账标题与研究地图，再对表列正文逐项读证明；没有把全部条目声称为本轮全文审查。
+
+| 读者问题与叙事 | 已有数学资产 | 本轮选择及边界 |
+| --- | --- | --- |
+| DD 保证很快收敛以后，最终选中的零点是否同样稳定？ | C116、C138–C141 的共同尾与匹配坏选择；[C462](topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability) 新增二维连续单值原 F、完整 DD1、真实 Q-二次点率及无任何正阶 Hölder 的直接模型 | 优先的独立结构节：从定性回缩推进到定量解选择。旧 Lipschitz 引理不覆盖半阶单步，但更广文献先行性仍开放。 |
+| 解集形状怎样改变单调性–正则性补偿？ | [C426–C427](topics/dd2/target_geometry.md)：自由凸性不改善准确一步域，仿射正交性增加准确代价，有同参数完整线性锐例 | 优先的几何节，直接承接 DD；固定目标、逐边最优和共同轨道分别保量词。 |
+| 一步锐界为什么不等于一条最坏轨道？ | [C444](topics/dd2/dd1_recovery.md#dd1-critical-finite-termination) 同边最优常数临界、每尺度取等而全部轨道两步终止；[C457](topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction) 连续完整图有限长，却无下有界距离支付势 | 可作紧凑的动力学结构节：空间输出要能续接，逐尺度最坏值不能自由重置方向。两者不反驳完整 DD1，不将投影伪链当真实轨道；一般原则在动力系统中并非新概念，具体 PPA 锐模型仍需查新。 |
+| 局部吸引零簇可否原样延拓为全局算子而不增加零点？ | [C233–C235](canonical/zero_preserving_completion.md)：连通管外、允许新 Hölder 常数时 Euler 完成门；RP² 及全局吸引的不同障碍 | 是比“存在回缩”更深入的拓扑候选，但依赖经典 Hopf / 度数机制，不能未比较即作新主贡献。C234 的完整局部模型也给 DD1：Z10–Z12 中线性真界常数可取 \(\ell=\lambda\rho^2/(1-\rho^2)\)，最近锚内积非负。保原常数完成另有独立义务。 |
+
+误差容忍 C455 仍是可保留的计算后果，不因本表而撤销其正文资格；正文篇幅优先由以上新问题和具体答案决定。连续回缩本身降为经典工具/有条件结构推论，原稿及既有任务书在本轮未被擅自重排。
+
 <a id="lit-alcantara-dd"></a>
 ## Alcantara Table 1、普通 RLEB 与 DD1/DD2
 

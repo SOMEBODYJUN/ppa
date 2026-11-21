@@ -1,6 +1,8 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前作者问题：DD 能否真正改善非精确计算。** [C455 的完整证明](research/topics/dd2/inexact.md#dd1-observable-margin)将完整 DD1 的 A+B 编译成可观察停止规则：\(E\le\delta_\kappa s\)，\(\delta_\kappa=\max\{1/b,\sqrt{(1+L^2)/(1+2\sigma)}\}-L/\kappa\)。它保留所有接受轨道的距离收缩、步长绝对可和和点收敛；自由闭目标完整图类的一步系数准确，具体非单调模型有至多十次内层更新的证明和[可复算程序](research/code/dd1_robust_margin/README.md)。[Claim 身份](CLAIMS.md#c455)与[过度贡献判断的失败机制](FAILED_ROUTES.md#f162)分别保存。
+**当前作者问题：连续回缩是否已有先例，DD 之后还有哪些结构性正文结果。** [定向查新与选稿表](research/LITERATURE.md#lit-dd-retraction-priority)核读 Goebel–Koter 1981 的几何步差–极限回缩、Wiśnicki 2014 Lemma 2.1 和 Górnicki 2010 的固定集回缩；基础机制已知，非单调完整 PPA 的全部同前件拓扑增量仍须逐项比较。[C462](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)把已有坏选择方向直接落实到二维连续单值原算子与完整 DD1：所有局部非驻定轨道真实 Q-二次收敛，极限回缩却无任何正阶两点 Hölder 模。它与 C426–C427 的目标几何、C444/C457 的实际续接组成三个优先结构问题；数学证明与选稿价值、公开新颖性各自独立。
+
+**上一阶段已核：DD 的非精确计算后果。** [C455 的完整证明](research/topics/dd2/inexact.md#dd1-observable-margin)将完整 DD1 的 A+B 编译成可观察停止规则：\(E\le\delta_\kappa s\)，\(\delta_\kappa=\max\{1/b,\sqrt{(1+L^2)/(1+2\sigma)}\}-L/\kappa\)。它保留所有接受轨道的距离收缩、步长绝对可和和点收敛；自由闭目标完整图类的一步系数准确，具体非单调模型有至多十次内层更新的证明和[可复算程序](research/code/dd1_robust_margin/README.md)。[Claim 身份](CLAIMS.md#c455)与[过度贡献判断的失败机制](FAILED_ROUTES.md#f162)分别保存。
 
 **价值裁决与真正前沿。** 该预算比 C275 的分离估计和 C406 的 I13 部分系数更宽，但 UI4–UI6 已有通用消元，零缺陷线性和已验证模型均被 C283 覆盖；一般零缺陷收紧至多 25%，不改变已有 Hölder 锐阈值。因此尚无世界范围优势、实际应用或总成本严格改进的证明。[五包设计任务](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-design-task-packages)仍保留 17 项身份，E01–E03 只获明确子类进展，不整体勾选。下一步须在同一原图与内层 oracle 上越过已有基线，或证明消失余量的新精度边界；完整 DD1 的点收敛本身不是缺口。
 

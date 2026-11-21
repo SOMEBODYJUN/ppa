@@ -4114,3 +4114,13 @@
 - **Complete approximation / Evidence**：[RT1–RT11](research/topics/dd2/raw_tail_envelope.md#dd2-raw-gauge-optimal-tail)先由原 ρ 证明实际 \(a\le p(t)\)，不评价 \(\psi(s/\lambda)\)。平方降幅正部和比较给全尾上界。每个有限 N、θ<1 用 \(q_{k+1}^\theta=\theta m(q_k^\theta)\) 在原域选正 ρ，二维主链锚0、最大物理步，P0 底图加每个正输出的径向辅助前像，保完整真残差恰为所选ρ。所有正输出半径互异；输入碰撞只增加合法后继。辅助输入窗内亦由原数据认证预设目标，窗外仍保留于完整纤维；有限添边使 F 闭、完整覆盖、exactzero0、零驻定与窗不变。θ↑1 先逼近每个有限前缀，再 N→∞；不是逐行实现后默认可续接。
 - **Finite-length interface / Dependencies**：D01/E0、C458 的平方降幅论证、C454 原域长度充要门。原 \(b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}>0\)，\(\mathcal T_\psi(R)<\infty\) 恰等价 \(\int_0^R t/b_\psi(t)\,dt<\infty\)，可积时 \(\mathcal T_\psi(t)\le2\int_0^t u/b_\psi(u)\,du\)。\(\mathcal T_\psi\) 非减，C454 的任意小真实坏初点因此也迫该 R 值无限。已认证 p≤φ 自动保其全部原边，不能误要求旧安全包络也低于 φ。有限势用于一般开 U 仍需全窗覆盖和严格位置预算。
 - **Counterevidence / Objections / Scope / Related Files**：\(\mathcal T_\psi\) 是共同原数据类的值，不是任意固定图的实际尾；C456/C457/C459 保留区别。RT1 失效的模、正或负锚下界、更强目标筛选、连续单值子类的必要性和有限查询算法未在本身份处理。发散时单一真实坏图由 C454 另供，不是 RT4 的有限逼近自动生成。无公开新颖性认证；[S05.09](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-optimal-tail-acceptance)汇总范围。
+
+<a id="c462"></a>
+## C462-v1 · 二维连续单值完整 DD1 的二次点收敛与非 Hölder 极限选择
+
+- **Status**：`derived-checked`。本轮直接重构完整逆、全部纤维及真残差、零输入/两符号/不变带、真实点率和首次饱和两侧估计；没有独立代理复核，未认证公开新颖性。
+- **Exact Statement / Objects / Domain / Definitions**：H=R²，λ=1，S=R×{0}，固定 B=R=1/4，g(r)=r|r|/(1+|r|)，h_t(p)=p+B min{sqrt(p_+),t}，完整 T(p,r)=(h_|r|(p),g(r))，F=T逆−I。T 为全域同胚，F 全域连续单值且非单调，完整 J_F=T、exact zerF=S。
+- **Quantifiers / Assumptions / DD1 bridge**：对所有 |r|≤R 的输入 x，唯一完整输出 y=Tx、t=d(x,S)、a=d(y,S)、s=|x−y| 及完整真残差 ρ=|F(y)|=s 满足 a≤ρ/4、最近输入锚积≥−t²/16。零输入驻定、全域覆盖及整输入带不变；L=1/4,σ=1/16，原 DD1 的 h=sqrt(17/18)、m=3/sqrt(136)<1。线性真界常数 R 在带端取等，σ=B² 为整个正距离带的最小统一非负二次缺陷系数。
+- **Conclusion / Scope**：全部带内轨道有限长且点趋 S；共同尾≤sqrt(17)t_k/3≤sqrt(17)R^(2^k)/3，因此极限 P 连续回缩。每个非零法向初值的真实点误差 Q-二次：初始 p≤0 比值趋1，p>0 趋4/sqrt17；法向初值0另驻定。固定 x0=(0,1/8),xε=(ε,1/8)，小 ε 的极限差在 B exp[−C sqrt(log1/ε)] 与 (5/6)exp[−c sqrt(log1/ε)] 之间，c,C>0，故 P 在该非零初值处无任何正阶两点 Hölder 模。r0 可任取固定 (0,R]，常数随之改变。不是零点处 calmness 的反例。
+- **Dependencies / Evidence / Related Files**：[LS1–LS9 完整证明](research/topics/dd2/limit_selection_stability.md#dd1-limit-selection-stability)、DD1 C285/C455 的两条几何消元；[Decimal120/Fraction 复算](research/code/dd1_limit_selection/README.md)核56个固定点及六个固定微扰。有限数值不证明普遍量词。C116/C141 是相关但不同的三维原图，未改其身份。
+- **Counterevidence / Objections / Novelty**：不否定完整 DD1 的 A+B、绝对可和或点收敛；不声称图具有单调性、全对 Lipschitz、光滑性、最优二次缺陷函数或最优根对数常数。[Wiśnicki 2014 Lemma 2.1](research/LITERATURE.md#lit-dd-retraction-priority)的单步 Lipschitz 前件在 p=0 被 sqrt 切向差破坏，故它不强迫本 P 有 Hölder 模。一般极限回缩机制已有旧例，非 Hölder 解选择的公开先行性仍需查核。
