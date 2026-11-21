@@ -11103,13 +11103,24 @@
       "realm": "convergence-annex-9"
     },
     "DD2-ASYMPTOTIC-ENDPOINT-SEPARATION": {
-      "role": "candidate",
-      "kind": "mountain",
-      "object": "bamboo",
-      "evidence": "candidate",
-      "reason": "explicit-node-status",
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
       "x": 814,
       "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-TRUE-RESIDUAL-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
     }
@@ -14142,6 +14153,10 @@
     "E760": {
       "x": 826.8,
       "y": 5377.74
+    },
+    "E761": {
+      "x": 911.4,
+      "y": 5649.12
     }
   },
   "bounds": {

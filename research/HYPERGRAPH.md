@@ -1240,6 +1240,12 @@
 | --- | --- | --- | --- |
 | E760 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-ASYMPTOTIC-ENDPOINT-SEPARATION · C448 距离趋零与渐近正则的两个零端缺口](topics/dd2/asymptotic_regularity.md#dd2-asymptotic-endpoint-separation) | 采用 E0 的一般原误差界而不附加 D04 的原点连续 gauge 条件；两个不同的 H=ℝ²、λ=1、U=H、精确 S=ℝ×{0} 完整普通 PPA：J=P_S 加正高度逃逸链 x_k→x_{k+1}，F=J逆−I。全部 J 非空、两图闭、零输入驻定，S 上 F={0}×ℝ且真残差0，正链输出唯一前像给真残差等于实际步，其余纤维为空且非输出。A 取 x_k=(k,2^(−k))、R=1、Phi(0)=0及正尺度Phi=−1、全域psi(r)=r；全窗全部边 a≤t/2，所有轨道距离几何趋零，但链步长趋1。B 取 t_k=1+1/(k+1)、u_0=0及u_{k+1}−u_k=1/[2(k+1)]、R=2、Phi=0、psi(0)=0及psi(r>0)=2；全部受检正边严格、全部轨道渐近正则，但整条链距离趋1、横坐标发散、平方步和≤3而总长∞。各自全选择距离窗不变，目标直接由固定图认证而非自由反推预算，不称所有选择失败，不声称有界轨道或连续单值/优化子类反例。；**derived-checked** |
 
+## DD2 完整真残差与所选图值
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E761 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-TRUE-RESIDUAL-SEPARATION · C449 完整真残差几何趋零而所选步不趋零](topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity) | 固定 H=ℝ²、λ=1、U=H、R=1、S=ℝ×{0}，z_k=(k,2^(−k))，完整 J(u,v)={(u,0),(u,v/2)} 加 z_k→z_{k+1}，F=J逆−I且允许全部完整边。J/F闭且处处非空，精确零集、零驻定；全域真rho(u,v)=\|v\|，链正输出纤维含短(0,v)及长(−1,v)。原psi(r)=r、Phi(0)=0及正尺度Phi=−1使整个U_R的E0成立，全部完整边a≤t/2，且对半边每尺度达到；全部窗内初值和全部轨道距离及真残差几何趋零，但沿同一链实际所选值的范数与实际步均趋1。保C448-A全部边而不改其身份；目标由固定图认证，不是自由反向预算。只给存在无界坏链，不声称单值或单调/优化子类反例。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

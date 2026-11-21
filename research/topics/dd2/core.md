@@ -27,7 +27,7 @@ r_F(y)=\inf_{v\in F(y)}\|v\|.
 \exists p\in P_S(x):\langle x-y,y-p\rangle\ge\Phi(t),
 \tag{E0}
 \]
-其中 \(t=d(x,S),s=\|x-y\|\)。同一个 \(p\) 用于该边全部几何推导，可以依赖 \(x,y\)；不要求所有最近锚或所有零点均满足条件。若误差界另有位置窗 \(V_\psi\)，还要求每个受检输出 \(y\in V_\psi\)。这里不预设 \(y\in U_R\)。完整图值只给 \(0\le\rho\le s/\lambda\)；残差不必取到。
+其中 \(t=d(x,S),s=\|x-y\|\)。同一个 \(p\) 用于该边全部几何推导，可以依赖 \(x,y\)；不要求所有最近锚或所有零点均满足条件。若误差界另有位置窗 \(V_\psi\)，还要求每个受检输出 \(y\in V_\psi\)。这里不预设 \(y\in U_R\)。完整图值只给 \(0\le\rho\le s/\lambda\)；残差不必取到。 [C449 的完整轨道](asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)表明，即使真残差对全部选择几何趋零，也不能逆推实际所选值或步长趋零；[固定参数与其他评价点的传递](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)另核缩放。
 
 一步版不要求 \(\mathcal J(x)\ne\varnothing\)。要保证轨道续接，另加对所有 \(x\in U_R\) 的非空覆盖，并由下列预算证明下一输入留域。只有 \(\mathcal J=J_{\lambda F}\) 在整个受检窗逐点相等时，结论才量化全部原近端选择。没有公共的单值、连续、闭图、单调性或全域满射假设。
 

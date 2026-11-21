@@ -698,6 +698,7 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：对 C78 同一完整关系，固定每个 \(\lambda>0\)，全输入 \(J_{\lambda F}(p)=\operatorname{sgn}(p)(|p|-\lambda)_+\)。在全部 \(|p|<\lambda\)，\(\operatorname{Fix}J=\{0\}\)，且 \(d(p,\operatorname{Fix}J)=|p-J(p)|=|p|\)，局部步残差线性 EB 锐系数 1、一步进入零点。全图反射 \(2J-I\) 的 Lipschitz/全对线性 RL 锐常数 1；无界全图的任何 \(0<\gamma<1\) 有限 Hölder 常数失败。
 - **Dependencies / Evidence / Status**：[AV-PROX](research/topics/examples/absolute_value_subgradient.md#av-prox) 完整解近端包含式及分段反射证明，`derived-checked`。
 - **Counterevidence / Scope**：原算子残差局部系数下确界 0 不转移到近端步残差；全域步 EB 不成立，局部 \(\gamma<1\) 可继承界不表示全图次线性 RL。
+- **S04.06 评价点与缩放补证**：[残差验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)仅用同一完整 AV1–AV3 计算变参数 \(\lambda_k=2^{-k-1}\) 的有限长趋零轨道及固定 \(\lambda=1,\alpha=1/2\) 的松弛轨道；前者原输出残差恒为 1，后者影子残差为零而更新点残差恒为 1。它们分别说明参数缩放与评价点的边界，不改变本卡每个固定参数的完整近端公式。
 
 ## C80-v1 / FS-REGULARITY · 有限状态同步残差平方的连续分片仿射性
 
@@ -3947,3 +3948,13 @@
 - **Exact Statement / Quantifiers / Assumptions — B**：取 \(t_k=1+1/(k+1)\)、\(u_0=0,u_{k+1}-u_k=1/[2(k+1)]\)、\(x_k=(u_k,t_k)\)、\(R_{\rm B}=2\)、\(\Phi_{\rm B}\equiv0\) 于 \([0,2]\)、原 \(\psi_{\rm B}(0)=0,\psi_{\rm B}(r)=2\) 于全部 \(r>0\)。E0 对整个 \(U_{R_{\rm B}}\) 的全部完整边成立，窗内正距离边严格下降，全部选择保持距离窗；有效共同目标为 \(A_{\rm B}(t)=t/2\) 于 \([0,1]\)、\(A_{\rm B}(t)=2-1/t\) 于 \((1,2]\)。从任意窗内初值出发的每条完整选择轨道都渐近正则。但始终沿链从 \(x_0=(0,2)\) 出发有 \(t_k\downarrow1\)、\(u_k=\frac12\sum_{j=1}^k1/j\to\infty\)、\(s_k=\rho_k\sim1/[2(k+1)]\)、\(\sum s_k^2\le3\)、\(\sum s_k=\infty\)。所以存在渐近正则而距离不趋零、点不收敛及无限长的真实轨道。原模的零点值不等于其沿零端小性。
 - **Dependencies / Evidence**：D01 的完整近端反演与完整输出真残差定义，以及 core E0 的原误差界量词；不调用 D04 的原点连续 gauge 前件。[AR1–AR10](research/topics/dd2/asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)给共同图闭/零集/全纤维证明，A 的实际锚积与步长，以及 B 的 \(g_k=t_k-t_{k+1}\)、\(h_k=u_{k+1}-u_k\)、\(2h_k^2\le g_k\le h_k\) 和锚积 \(a_kg_k-h_k^2>0\)。B 的全选择正则由“有限步投影即驻定，或永久沿链”穷尽全部选择，未以一个好选择替代全称量词。
 - **Counterevidence / Objections / Scope / Related Files**：两分支不是同一 \(F,\Phi,\psi,R\)。两个目标均由固定图直接证明，未宣称给定数据通过自由类反向预算；A 不满足 DD1 的正尺度缺陷兼容门，B 的目标在 1 右侧失败于 C418 的距离趋零门。投影选择可终止，不称全部选择都失败。坏链无界，不否定范数预紧、允许图闭/零驻定或 \(S=\operatorname{zer}F\) 加强后的识别结果，也不覆盖额外连续单值或优化来源类。所有输出残差用完整纤维，空非输出纤维不作为覆盖失败。未认定公开新颖性。[S04.05](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-asymptotic-regularity-acceptance)、[F159](FAILED_ROUTES.md#f159)保存正面条件和失败机制。
+
+<a id="c449"></a>
+## C449-v1 · 完整真残差趋零与实际所选值的严格分离
+
+- **Status**：`derived-checked`。三路独立重构并复读实际 RT1–RT5、全部纤维、原模/参数边界、身份卡和图边；所选向量/范数、全部轨道/存在坏链的量词已核，无未决承重异议。
+- **Exact Statement / Objects / Domain / Definitions**：固定 \(H=\mathbb R^2,S=\mathbb R\times\{0\},\lambda=1,U=H,R=1\)，\(z_k=(k,2^{-k})\)。完整 \(J(u,v)=\{(u,0),(u,v/2)\}\cup\{z_{k+1}:(u,v)=z_k,\ k\ge0\}\)，完整 \(F(y)=\{x-y:y\in J(x)\}\)，允许关系等于 \(J_F=J\)。令 \(t=d(x,S),a=d(y,S),s=\|x-y\|,\rho=r_F(y)\)，原域 \(D_\psi=[0,\infty)\)，\(\psi(r)=r,\Phi(0)=0,\Phi(t)=-1\) 于 \(0<t\le1\)。
+- **Quantifiers / Assumptions / Conclusion — 完整图**：\(J,F\) 都闭，二者处处非空，\(\operatorname{zer}F=S\)，零输入驻定。对所有 \(y=(\xi,\nu)\)，若 \(\nu=0\) 则 \(F(y)=\{0\}\times\mathbb R\)；若 \(y=z_{k+1}\) 则 \(F(y)=\{(0,\nu),(-1,\nu)\}\)；其余点 \(F(y)=\{(0,\nu)\}\)。故全域 \(\rho=d(y,S)=|\nu|\)，真实误差界取等。E0 对整个 \(U_R\) 的全部完整边成立，且这些边有 \(a\le t/2\)；目标 \(A(t)=t/2\) 每尺度由对半边达到。
+- **Quantifiers / Conclusion — 实际轨道**：对任意 \(x^0\in U_R\) 及每条完整选择轨道，均可无限续接，\(t_k\le2^{-k}t_0\)、\(\rho_k=r_F(x^{k+1})=t_{k+1}\le2^{-k-1}t_0\)，距离窗不变。但从 \(x^0=z_0\) 永远选择链有 \(x^k=z_k\)、所选 \(v_k=(-1,2^{-k-1})\)、实际 \(s_k=\|v_k\|\to1\)，所以完整真残差趋零不保证所选值或实际步趋零。全部轨道的好残差与存在坏长步轨道是不同量词。
+- **Dependencies / Evidence**：D01 的原图反演与完整真残差，E0 的原允许边合同；[RT1–RT5](research/topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)独立计算全部前像、闭图、零集、锚积和实际链。垂向对半底图与投影底图均闭，特殊链横向逃逸；原 C448-A 的全部边保留，所选链向量不变，而该链正输出的完整残差由原 \(s_k\) 降为 \(2^{-k-1}\)。
+- **Counterevidence / Objections / Scope / Related Files**：这是新完整图，不修改 C448 身份；扩图增加可选边及非空纤维，不仅改变一个标量。固定图有效目标不冒充原数据的自由反向预算；本例缺陷不满足 DD1 比例兼容。坏链无界，原关系多值，不反驳额外单值、全对单调、优化来源或选择近极小条件。未认定公开新颖性。[S04.06](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)给固定参数正向传递、原模零端的标量充要门及不同参数/评价点边界；[F160](FAILED_ROUTES.md#f160)保存不可逆机制。

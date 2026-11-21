@@ -267,7 +267,12 @@
   - **结论** 普通固定参数 PPA 的渐近正则是实际 \(s_k\to0\)。有限长、范数点收敛、共同正平方耗散、沿路径可和负缺陷或有符号累计亏损有统一上界都可保证它；距离有有限极限且沿路径负缺陷趋零也足够，不要求该极限为零。C401/C419 的平方耗散用于本项时不需长度积分。仅有加权平方和的普适逐项结论需尾部正权下界；总权发散一般只给 \(\liminf s_k=0\) 及最佳前缀，不是最后一步。松弛方向 \(\|q\|\) 与实际 \(\alpha\|q\|\) 使用不同权重。正则不自动给距离归零、点收敛、平方步可和或有限长；反向仅距离归零也不够。原函数零点值、穿孔零端和受检零边分别核，闭性加范数预紧的加强另保各自合同。
   - **证据** [S04.05 完整正面证明、权重和边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-asymptotic-regularity-acceptance)、[C448 两条完整原图 AR1–AR10](../topics/dd2/asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)、[C401/C419 的平方耗散](../canonical/dd2_function_hypotheses.md#fh-general-length)、[C418 实际正距离限与退化权](../canonical/dd2_function_hypotheses.md#fh-positive-limit)、[C447-A 的平方步可和及圆聚点](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[C447-B 的非平方可和正则](../topics/dd2/core.md#dd2-bounded-linear-trajectory)、[零距离完整二周期](../canonical/dd2_function_hypotheses.md#fh-zero)、[C402 松弛的实际耗散](../topics/dd2/relaxation.md#dd2-adaptive-length)。
   - **复核** 三路独立重建正面合同、完整反例及加权逻辑，已复读实际审计和 AR1–AR10。核有符号根、沿路径求和与全选择预算、穿孔/零点分离、实际所选向量的闭性识别；核权重充要只属数列层、最佳前缀小 \(o\) 非最后一步率、松弛零项及原方向/实步区分。C448 两图逐项核全部纤维、闭图、精确零集、覆盖、零驻定、距离窗和两种全选择量词；固定图目标未冒充自由反向预算。原零间二周期文字已修正为距离吸收不等于驻定。三席已复读最终身份卡、图边和本记录；E760 已移除不适用于跳跃原模的 D04 原点连续前件，B 的全边量词明确限于其认证窗。
-- [ ] `S04.06` 何时能够保证残差趋于零？
+- [x] `S04.06` 何时能够保证残差趋于零？
+  - **裁决** Proved
+  - **结论** 普通固定 \(\lambda>0\) 的合法轨道恒有 \(0\le\rho_k\le\|v_k\|=s_k/\lambda\)；实际步趋零与所选值趋零等价，充分给完整真残差趋零，且实际步的各次幂可和性可传递。平方耗散、有限长度、范数点收敛及 S04.05 的其他实际步证书均适用；无需为这条比较另加闭图、误差界或残差达到。逆向不成立：C449 的全部距离/真残差几何趋零而仍有链步趋 1。原域与 \([0,\epsilon]\) 相交所得前缀上确界（空集记零）趋零，是仅凭原 \(\psi\) 对全部标量列反推距离趋零的充要门，非固定图必要条件。变参数必须保 \(s/\lambda_k\)，松弛必须保 \(h/(\alpha_k\lambda_k)\) 且在实际影子评价；退化 PPPA 由实际 \(Cq\in A(y)\) 控制原影子残差，不把跨 lift 的下确界当作所选值。
+  - **证据** [S04.06 正向传递、原模门和参数/评价点 RZ1–RZ5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)、[C449 完整纤维与实际链 RT1–RT5](../topics/dd2/asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)、[C448-A 距离趋零而真残差不趋零](../topics/dd2/asymptotic_regularity.md#dd2-distance-zero-without-regularity)、[C448-B 原模的零端跳跃](../topics/dd2/asymptotic_regularity.md#dd2-regularity-without-distance-zero)、[C78/C79 完整绝对值次梯度](../topics/examples/absolute_value_subgradient.md#av-prox)、[C408 近极小完整图 lift](DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)、[PPPA 原空间实际值与全部纤维](../topics/dd2/pppa_recovery.md#dd2-pppa-gauges)。
+  - **复核** 三席完成四项数学自检后，分别独立重构充分条件、完整反例和参数/残差类型。已有真残差例与逐尺度添边机制已查重；固定 \(\lambda\)、变 \(\lambda\) 及松弛评价点分开。三席已复读真实最终 RZ1–RZ5、RT1–RT5、身份卡、图边与本记录；原域空前缀/孤立零、真残差零项、最佳前缀小 o、参数比值的充分性及三个评价点均校准。C449 完整纤维、闭图、精确零集、全选择覆盖与实际坏链逐式核准；C448 节点的已签状态字段同步纠正，不改其数学身份。
+
 - [ ] `S04.07` 何时能确认极限属于指定的 `S`，而不只是 `\operatorname{zer}F`？
 - [ ] `S04.08` 是否能够允许没有传统线性收敛率的迭代？
 - [ ] `S04.09` 是否能够覆盖有收敛率但没有固定收缩系数的情况？
