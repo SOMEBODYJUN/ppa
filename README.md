@@ -15,7 +15,7 @@
 
 [DD2 主线](research/topics/dd2/core.md)从指定下降目标 \(\varphi\) 反推锚定下界 \(\Phi\) 与输出真误差界 \(\psi\) 的补偿。DD1 与 DD2 都允许一般有符号的 \(\Phi\)，一般 \(\psi\) 属于 DD2 的研究范围。[C400](CLAIMS.md#c400) 给线性误差界特例的精确反演及实际轨道反例，[C401](CLAIMS.md#c401) 在一般 \(\psi\) 下以同一步积分势推出长度和留域。
 
-[DD1 在 DD2 中的恢复正文](research/topics/dd2/dd1_recovery.md)保留一般有符号 \(\Phi\)、逐允许边某最近锚和完整真残差。C442 定位零输入缺口；D1R–D1F 核统一因子、分支、全部四点及自由类锐值。D1O 将取等边接入完整图并给任意小不变窗，分别保逐尺度、同图和轨道量词。C400 的最大值与 C426 的固定射线经二次齐次缩放得到 [C443](research/topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment)：同一完整图每尺度达到；任意函数轮廓和共同轨道另有门。
+[DD1 在 DD2 中的恢复正文](research/topics/dd2/dd1_recovery.md)保留一般有符号 \(\Phi\)、逐允许边某最近锚和完整真残差。C442 定位零输入缺口；D1R–D1F 核统一因子、分支、全部四点及自由类锐值。D1O 将取等边接入完整图并给任意小不变窗，分别保逐尺度、同图和轨道量词。C400 的最大值与 C426 的固定射线经二次齐次缩放得到 [C443](research/topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment)：同一完整图每尺度达到；任意函数轮廓和共同轨道另有门。[C444 的临界特化](research/topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)使两个最小常数同边取等、所有轨道却两步终止，与完整临界旋转／二周期分别说明一步边界和真实动力学。
 
 [函数条件的逐层裁决](research/canonical/dd2_function_hypotheses.md)给出 C417–C420：原始非单调真残差的联合可行域、正锚下界的完整前像障碍、全部标量递推趋零的精确右侧条件、任意原模的位移下界，以及零缺陷统一算子类的固定模积分充要性。它们把单边、完整整窗、固定图和统一轨道的必要性分开；旧 C400/C401/C414 的身份保持。 [C421](CLAIMS.md#c421) 进一步将原残差联合域精确消成一维上确界，并分别给出连续模或非减点值合同下的有限精度证书和无信息采样的失败机制。 [C422](CLAIMS.md#c422) 说明原域非空时前缀化保持自由单边最优值，却可能改变取等和完整整窗前件；固定图、目标及维数的严格差距均有实际见证。
 

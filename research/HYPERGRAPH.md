@@ -1210,6 +1210,12 @@
 | --- | --- | --- | --- |
 | E755 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [DD2-CONVEX-SCALAR-REALIZATION · C426 闭凸线段与固定射线的单边标量实现](topics/dd2/target_geometry.md#dd2-convex-scalar-realization) | conditional → [DD2-HOMOGENEOUS-SAME-GRAPH · C443 固定二次数据的同一射线完整图全尺度达到](topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment) | 固定 n≥2、λ,ℓ>0、σ≥0 及二次 Φ(t)=−σt²、线性 ψ=ℓr：在预先固定射线 S*=R+e1 上把归一化最大构形作正比例图射线，与完整投影图合并；一个闭图 F 精确以 S* 为零集、完整近端全域覆盖，且每个正尺度有边达到 C400 三项包络取小所得的最优输出距离 m_L(σ)t。完整纤维逐一核验；不声称任意非齐次轮廓、任意固定目标或共同饱和轨道。；**derived-checked** |
 
+## DD2 临界一步与实际轨道
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E756 | [DD2-HOMOGENEOUS-SAME-GRAPH · C443 固定二次数据的同一射线完整图全尺度达到](topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment) | conditional → [DD2-CRITICAL-FINITE-TERMINATION · C444 同边临界最优常数与全轨道两步终止并存](topics/dd2/dd1_recovery.md#dd1-critical-finite-termination) | 固定 n≥2、λ,ℓ>0，在 C443 的显式射线图取 σ=T(ℓ/λ)、a*=1、s*=λ/ℓ。所有完整边满足精确二次/线性证书，每个正尺度的同一边使两项最小常数同时取等，但特殊正输出不可能续接为特殊正输入，所以从任意初值的所有完整选择轨道至多两条非驻定边进入 S*，准确总长上界为 (1+λ/ℓ)d(x0,S*)。显式距离窗保全部选择局部不变；不推出所有临界图终止，也不声称与坏例相同的零集或逐输入数据。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

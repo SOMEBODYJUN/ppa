@@ -11057,6 +11057,17 @@
       "y": 5333,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-CRITICAL-FINITE-TERMINATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14067,6 +14078,10 @@
     "E755": {
       "x": 391.96,
       "y": 5335.02
+    },
+    "E756": {
+      "x": 335.41,
+      "y": 5289.22
     }
   },
   "bounds": {
