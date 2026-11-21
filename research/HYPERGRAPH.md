@@ -1234,6 +1234,12 @@
 | --- | --- | --- | --- |
 | E759 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-BOUNDED-POINT-NONCONVERGENCE · C447 有界最近锚 PPA 的半阶与线性非收敛见证](topics/dd2/relaxation.md#dd2-bounded-circular-ppa) | 两个分别构造的三维普通 PPA 完整图，固定 λ=1、U=H。A 对任意 0<c≤1 取 S=ℝ²×{0}、F(u,v)=(f(v+v³)−f(v),v³)，f(v)=c(cos log\|v\|,sin log\|v\|)，差分零处延0；全域半阶真误差界 psi(r)=2√(r/c)、Phi=0或有效下界(1−c²)(g逆(t))^4，其中g(w)=w+w³于非负轴且c<1时正尺度下界严格正。B 对任意0<R≤1/2取S={0}×ℝ、a=t/√(1+t²)、h=sin log a−sin log t及cosθ=(t²+h²)/(2ta)，定义J的法向旋转和切向平移、窗外按比率齐次延拓，完整F=J逆−I；全域psi(r)=r，窗内Phi=−(a²+h²/2−t²/2)。两图均连续单值、完整近端同胚、精确零集及零驻定、各自受检距离窗内全部选择不变。A 的每个 v0>0（固定受检窗时 v0≤R）、B 的每个 0<t0≤R 的实际唯一轨道有界，距离与步长及完整真残差均趋零，强聚点分别为目标平面中的整圆和目标零线中的非退化区间，所以不点收敛。A另有平方步和有限、总长无限；B不声称平方步和有限。两分支不是同数据比较，不反驳额外全锚、单调或优化来源定理。；**derived-checked** |
 
+## DD2 实际步与距离的零端合同
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E760 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [DD2-ASYMPTOTIC-ENDPOINT-SEPARATION · C448 距离趋零与渐近正则的两个零端缺口](topics/dd2/asymptotic_regularity.md#dd2-asymptotic-endpoint-separation) | 采用 E0 的一般原误差界而不附加 D04 的原点连续 gauge 条件；两个不同的 H=ℝ²、λ=1、U=H、精确 S=ℝ×{0} 完整普通 PPA：J=P_S 加正高度逃逸链 x_k→x_{k+1}，F=J逆−I。全部 J 非空、两图闭、零输入驻定，S 上 F={0}×ℝ且真残差0，正链输出唯一前像给真残差等于实际步，其余纤维为空且非输出。A 取 x_k=(k,2^(−k))、R=1、Phi(0)=0及正尺度Phi=−1、全域psi(r)=r；全窗全部边 a≤t/2，所有轨道距离几何趋零，但链步长趋1。B 取 t_k=1+1/(k+1)、u_0=0及u_{k+1}−u_k=1/[2(k+1)]、R=2、Phi=0、psi(0)=0及psi(r>0)=2；全部受检正边严格、全部轨道渐近正则，但整条链距离趋1、横坐标发散、平方步和≤3而总长∞。各自全选择距离窗不变，目标直接由固定图认证而非自由反推预算，不称所有选择失败，不声称有界轨道或连续单值/优化子类反例。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

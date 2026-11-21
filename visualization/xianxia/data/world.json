@@ -11101,6 +11101,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-ASYMPTOTIC-ENDPOINT-SEPARATION": {
+      "role": "candidate",
+      "kind": "mountain",
+      "object": "bamboo",
+      "evidence": "candidate",
+      "reason": "explicit-node-status",
+      "x": 814,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14127,6 +14138,10 @@
     "E759": {
       "x": 729.54,
       "y": 5467.96
+    },
+    "E760": {
+      "x": 826.8,
+      "y": 5377.74
     }
   },
   "bounds": {

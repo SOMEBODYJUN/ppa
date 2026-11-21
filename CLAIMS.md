@@ -3519,6 +3519,8 @@
 
 - **S04.03 最近锚边界补证**：[C447-A](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)把已有有界圆周机制完整写回普通 PPA，并核全域半阶真误差界、正锚可选下界及平方步和；独立登记新身份，不更改 C402 的方向图、全锚和长度假设。
 
+- **S04.05 实际量复核**：[渐近正则验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-asymptotic-regularity-acceptance)保本卡 \(s=\|q\|\) 的定义，另记实际松弛步 \(h=\alpha s\)。同一加权平方和控制方向和实际更新的权重分别为 \(\alpha\mu\) 与 \(\mu/\alpha\)；未吸收式还保非负 \(\alpha(2\beta-\alpha)\) 及可和缺陷/误差。级数层面的普适条件不提升为固定图必要性，近两端完整原图也不被误作普通 \(\alpha=1\) 的反例。
+
 <a id="c403"></a>
 ## C403-v1 · 输入与输出真误差界的精确联合几何
 
@@ -3933,3 +3935,15 @@
 - **Conclusion — B 的全图与实际轨道**：\(J_{\rm B}\) 为全域同胚，\(F_{\rm B}\) 连续单值，完整近端恰为 \(J_{\rm B}\)，精确零集 \(S_{\rm B}\)，零输入驻定。每条完整边有 \(\rho=s=a_*\)，全域线性真误差界取等；窗内唯一最近输入锚的内积为 \(-D(t)\)，\(0<D(t)<t^2/2\) 于 \(0<t\le R\)，所有完整输出保距窗。对任意 \(0<t_0=\|u_0\|\le R,v_0\in\mathbb R\)，唯一轨道满足 \(t_k=(t_0^{-2}+k)^{-1/2}\)、\(v_k=v_0+\sin\log t_k-\sin\log t_0\)、\(s_k=\rho_k=t_{k+1}\to0\)。强聚点集恰为 \(\{0\}\times[v_0-\sin\log t_0-1,v_0-\sin\log t_0+1]\subset S_{\rm B}\)，故有界、距离趋零而点不收敛，总长发散；本分支不具有 A 的平方步可和性。
 - **Definitions / Dependencies / Evidence**：D01 的普通近端与完整图反演，D04 的完整输出真残差及输出误差界。[PC1–PC6](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)给差分的零处连续性、全部纤维、全域半阶界、相位首次越界与实际步渐近；[CV1–CV3](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)给角度良定、全域齐次延拓、逆映射、完整纤维及全部区间聚点。两分支的真实轨道与结论均直接证明，不以数值轨道或抽象标量序列代替。B 额外按 C400 校准的准确自由包络为 \(M_L(t)=\sqrt{a_*^2+h_*^2/2}<t\)，自由预算取等针对 \(M_L\)，与固定图实际目标 \(a_*\) 仅在 \(h_*=0\) 的尺度相等。
 - **Counterevidence / Objections / Scope / Related Files**：两分支不是同一数据或同一原图；A 的 \(\Phi\ge0\)、半阶模与平方步可和不转授 B，B 的线性真误差界不转授 A。共同否定一般最近锚类中“距离趋零、有界、渐近正则及所有强聚点入目标足以给点收敛”，不否定全锚 Fejér、单调算子或优化来源等另加结构的定理。A 的半阶长度积分发散，故不反驳 C401/C419；有效正锚下界未声称最优。既有 C400/C402 身份不变。本结果未认定公开新颖性；[S04.03](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)、[F138](FAILED_ROUTES.md#f138)、[F139](FAILED_ROUTES.md#f139)记录充分机制和失败范围。
+
+
+<a id="c448"></a>
+## C448-v1 · 渐近正则与距离趋零的两个零端缺口
+
+- **Status**：`derived-checked`。三路独立重构并复读实际 AR1–AR10、身份卡、图边与验收记录；已纠正 D04 原点连续前件的误引，完整纤维、距离窗与选择量词无未决承重异议。
+- **Exact Statement / Objects / Domain / Definitions**：两分支分别取 \(H=\mathbb R^2,S=\mathbb R\times\{0\},\lambda=1,U=H\)，完整 \(J(x)=P_S(x)\cup\{x_{k+1}:x=x_k,\ k\ge0\}\)，完整 \(F(y)=\{x-y:y\in J(x)\}\)，允许关系等于 \(J_F=J\)。所用链均为正高度、横坐标严格增加至无穷。定义 \(t=d(x,S),a=d(y,S),s=\|x-y\|,\rho=r_F(y)=d(0,F(y))\)，轨道的 \(\rho_k\) 对应输出 \(x_{k+1}\)。函数只在各自输入距离窗及原残差域评价。
+- **Conclusion — 共同完整图**：\(F,J\) 都闭图，完整 \(J\) 全域非空，精确零集为 \(S\)，零输入只有恒等输出。对 \(y\in S\)，\(F(y)=\{0\}\times\mathbb R\)、\(\rho=0\)；对正链输出 \(y=x_{k+1}\)，完整纤维是单点 \(\{x_k-x_{k+1}\}\)，\(\rho=s>0\)；其余纤维为空且不是实际输出。完整近端不被要求单值，原 \(F\) 不被称为处处非空。
+- **Exact Statement / Quantifiers / Assumptions — A**：取 \(x_k=(k,2^{-k})\)、\(R_{\rm A}=1\)、\(\psi_{\rm A}(r)=r\) 于全部 \([0,\infty)\)、\(\Phi_{\rm A}(0)=0,\Phi_{\rm A}(t)=-1\) 于 \(0<t\le1\)。E0 对整个 \(U_{R_{\rm A}}\) 的全部完整边成立，且这些边均有 \(a\le t/2\)。对每个该窗初值和全部完整选择，\(t_k\le2^{-k}t_0\)，距离窗不变。但从 \(x_0=(0,1)\) 始终沿链有 \(s_k=\rho_k=\sqrt{1+4^{-k}/4}\to1\)，故不渐近正则。链最近输入锚积为 \(-1+t_k^2/4\)，线性真误差界成立；零驻定不能替代正尺度负缺陷在零端的小性。
+- **Exact Statement / Quantifiers / Assumptions — B**：取 \(t_k=1+1/(k+1)\)、\(u_0=0,u_{k+1}-u_k=1/[2(k+1)]\)、\(x_k=(u_k,t_k)\)、\(R_{\rm B}=2\)、\(\Phi_{\rm B}\equiv0\) 于 \([0,2]\)、原 \(\psi_{\rm B}(0)=0,\psi_{\rm B}(r)=2\) 于全部 \(r>0\)。E0 对整个 \(U_{R_{\rm B}}\) 的全部完整边成立，窗内正距离边严格下降，全部选择保持距离窗；有效共同目标为 \(A_{\rm B}(t)=t/2\) 于 \([0,1]\)、\(A_{\rm B}(t)=2-1/t\) 于 \((1,2]\)。从任意窗内初值出发的每条完整选择轨道都渐近正则。但始终沿链从 \(x_0=(0,2)\) 出发有 \(t_k\downarrow1\)、\(u_k=\frac12\sum_{j=1}^k1/j\to\infty\)、\(s_k=\rho_k\sim1/[2(k+1)]\)、\(\sum s_k^2\le3\)、\(\sum s_k=\infty\)。所以存在渐近正则而距离不趋零、点不收敛及无限长的真实轨道。原模的零点值不等于其沿零端小性。
+- **Dependencies / Evidence**：D01 的完整近端反演与完整输出真残差定义，以及 core E0 的原误差界量词；不调用 D04 的原点连续 gauge 前件。[AR1–AR10](research/topics/dd2/asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)给共同图闭/零集/全纤维证明，A 的实际锚积与步长，以及 B 的 \(g_k=t_k-t_{k+1}\)、\(h_k=u_{k+1}-u_k\)、\(2h_k^2\le g_k\le h_k\) 和锚积 \(a_kg_k-h_k^2>0\)。B 的全选择正则由“有限步投影即驻定，或永久沿链”穷尽全部选择，未以一个好选择替代全称量词。
+- **Counterevidence / Objections / Scope / Related Files**：两分支不是同一 \(F,\Phi,\psi,R\)。两个目标均由固定图直接证明，未宣称给定数据通过自由类反向预算；A 不满足 DD1 的正尺度缺陷兼容门，B 的目标在 1 右侧失败于 C418 的距离趋零门。投影选择可终止，不称全部选择都失败。坏链无界，不否定范数预紧、允许图闭/零驻定或 \(S=\operatorname{zer}F\) 加强后的识别结果，也不覆盖额外连续单值或优化来源类。所有输出残差用完整纤维，空非输出纤维不作为覆盖失败。未认定公开新颖性。[S04.05](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-asymptotic-regularity-acceptance)、[F159](FAILED_ROUTES.md#f159)保存正面条件和失败机制。
