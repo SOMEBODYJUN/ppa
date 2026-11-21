@@ -5460,6 +5460,12 @@
       "label": "C436 完整前像的真残差右闭包过滤",
       "file": "topics/dd2/joint_relation.md#dd2-complete-fiber-filter",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-MAXIMUM-ATTAINMENT",
+      "label": "C437 原超水平最大值判据与固定闭图紧性边界",
+      "file": "canonical/dd2_function_hypotheses.md#fh-attainment-exact",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14038,6 +14044,18 @@
       "output": "DD2-COMPLETE-FIBER-FILTER",
       "relation": "conditional",
       "scope": "U=H、全部窗内完整边受检且包含零尺度，每个非空纤维的真实残差须从允许入边长度集合右侧逼近；合取原误差界给统一上界，并有完整类非空的严格改进，不宣称一般兼容充分。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E749",
+      "topic": "DD2 最大值与对象紧性",
+      "inputs": [
+        "DD2-EXACT-JOINT-RELATION",
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-MAXIMUM-ATTAINMENT",
+      "relation": "conditional",
+      "scope": "自由单边按非严格原超水平层命中几何前缀判最大值；精确零集闭纤维另滤零残差。固定有限维图的紧输入层加相对闭边集给独立达到保证，非紧目标及Hilbert有实际反例。",
       "status": "derived-checked"
     }
   ]

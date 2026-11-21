@@ -10980,6 +10980,17 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-MAXIMUM-ATTAINMENT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13962,6 +13973,10 @@
     "E748": {
       "x": 291.15,
       "y": 5539.71
+    },
+    "E749": {
+      "x": 401.22,
+      "y": 5454.84
     }
   },
   "bounds": {

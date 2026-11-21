@@ -239,6 +239,14 @@ b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}
 
 准确有符号 G/R 版另保实根、评价域与原可行集非空；C421/JR9 的空域不能用某个有限数值替代。连续非减原模的重根不相容例和 C435 的零尺度直接计算核准这一点。逐尺度良定不授予整窗共同有界、完整图相容、最值达到或动态结论。后续各公式检查仍按清单独立验收。
 
+### 2.F02 最大值达到的精确条件
+
+**裁决：Proved；一般不自动达到，准确条件与对象边界已给出。**
+
+[C437 的 AT1–AT3](../canonical/dd2_function_hypotheses.md#fh-attainment-exact)用原非严格超水平集命中几何前缀精确判定正部数值式与准确 R 的达到性；G 保留物理位移的实际交集。默认自由 R 的输出值集恰为 \([\alpha,M_R)\) 或 \([\alpha,M_R]\)，零最大值及非空单点情形必达到。紧残差前缀与相对上半连续原模足够，但不必要；证明单独处理零输出过滤，不误称原域紧。
+
+[AT5](../canonical/dd2_function_hypotheses.md#fh-attainment-closed-fiber)在同一连续原模下分别核允许额外零点、精确零集非闭纤维及精确零集闭纤维：前两类达到 2，最后一类只能由闭图逼近 2。固定图另需它自己的紧性，[AT6–AT7](../canonical/dd2_function_hypotheses.md#fh-attainment-fixed-graph)给无界输入层及无限维有界输出不预紧的实际反例。逐尺度自由取等没有被转授给固定图、完整整窗或共同轨道。
+
 ## §3 DD1 两段分段机制
 
 ### 3.1 DD2 假设恢复 DD1

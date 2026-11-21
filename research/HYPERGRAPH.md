@@ -1168,6 +1168,12 @@
 | --- | --- | --- | --- |
 | E748 | [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-COMPLETE-FIBER-FILTER · C436 完整前像的真残差右闭包过滤](topics/dd2/joint_relation.md#dd2-complete-fiber-filter) | U=H、全部窗内完整边受检且包含零尺度，每个非空纤维的真实残差须从允许入边长度集合右侧逼近；合取原误差界给统一上界，并有完整类非空的严格改进，不宣称一般兼容充分。；**derived-checked** |
 
+## DD2 最大值与对象紧性
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E749 | [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-MAXIMUM-ATTAINMENT · C437 原超水平最大值判据与固定闭图紧性边界](canonical/dd2_function_hypotheses.md#fh-attainment-exact) | 自由单边按非严格原超水平层命中几何前缀判最大值；精确零集闭纤维另滤零残差。固定有限维图的紧输入层加相对闭边集给独立达到保证，非紧目标及Hilbert有实际反例。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

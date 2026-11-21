@@ -31,6 +31,8 @@
 
 [C435–C436 的精确共同关系与完整前像过滤](research/topics/dd2/joint_relation.md)以三项最大值 \(Q_t(a,\lambda\rho)\) 同时表达原真残差、输入锚和全部四点几何，并给固定输出与残差的完整可实现步长区间。自由单边精确性不能自动转授完整整窗；后者还需所有真实前像的长度从右逼近真残差。这个新必要门在一个非空完整类中把自由上界 \(1/2\) 严格降为准确值 \(1/4\)，没有宣称解决一般整窗兼容或共同动态。
 
+[C437 的达到性合同](research/canonical/dd2_function_hypotheses.md#fh-attainment-exact)以原非严格超水平层命中几何前缀，判定最大值是否真有见证。精确零集、闭纤维及固定图各有独立条件；同一连续原模的三类完整关系、沿无界目标逃逸的连续算子和 Hilbert 范数闭图分别验证端点与紧性障碍。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
@@ -377,7 +379,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
-| [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
+| [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§3 给精确达到判据、闭纤维端点和固定图紧性正反例。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |
 | [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434 的原真残差双向预算、兼容及尖锐性边界。以危险前缀求允许的 ψ，以非空上端和三门求有符号 Φ；保留整窗交集、线性标尺、首端见证及正下界完整窗必要性失败。§6 核逐尺度存在与完整窗兼容，§7 核预算尖锐而输出无取等、单尺度／同图／轨道三个量词，并给留域预算非必要例。设计目标、反推强度或提升实现范围前读取。 |
 | [research/topics/dd2/joint_relation.md](research/topics/dd2/joint_relation.md) | C435 的输出–真残差精确三项代价、锚上限、全部可实现物理步长及仿射附加代价；C436 的完整前像右闭包必要门、非空完整类的严格增益与未达残差端点反例。需要简化共同关系、读取给定输出的预算或利用全部完整前像改进上界时读取；不替代一般完整兼容和动态证明。 |
