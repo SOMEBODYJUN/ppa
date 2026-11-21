@@ -390,7 +390,12 @@
   - **结论** q是所选Hölder幂指数，不是原位移函数。非降输出所需\(u=\lambda K^{-1/q}t^{1/q}\)在规定Φ=−D≤0的自由闭目标类把准确非降门统一成max{u²/2,u(u−t)}：q<1零端走能量支，q=1由h=K/λ在1/2处换支，q>1走近锚步帽支。所有边χΣ下界另有三种尺度，不能当实际步等价。纯幂好门下q<1用平方净耗散，该统一积分证书在q>1/2给正幂凹势；q=1用DD1共同余量和线性步帽；q>1用B_D上帽、强输出模和t^β步尾，非临界可证点/距充分Q阶，而正缺陷临界仅保线性距离及几何尾。新完整好临界链实际距比r、点比r^(1/q)>0，全部图边保同幂数据和预设κ认证。M=0、signed正锚、更强目标、固定图和一般非幂模各保范围；q≤1/2的距离结论须先保证轨道合法续接。
   - **证据** [PM.A1及机制验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-regime-acceptance)、[PM1–PM8统一几何与轨道合同](../canonical/dd2_power_defect_finite_length.md#dd2-power-regime-mechanisms)、[PM9–PM12完整好侧线性链](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-critical-linear-chain)、[C399原目标及凹势](../canonical/dd2_power_defect_finite_length.md#dd2-power-explicit-rates)、[DD1完整临界图](../topics/dd2/dd1_recovery.md#dd1-critical-full-operators)、[C416身份及支持见证](../../CLAIMS.md#c416)。
   - **复核** 三席均先完成四项实际数学自检，再独立重构并逐源冷读PM1–PM12、PM.A1、C416原身份及两项支持登记、F145和全部八处实际正文与地图。复算两支非降门、φ=0根护栏、DD1临界函数、q→1的尺度次序、低q合法续接及M=0例外；重查临界链所有锚、全部前像、图闭性、精确零集、全覆盖、预设κ与图级r，并独立核非临界点Q桥及首出步尾预算。已修下界/实步、逐边/比例、固定图/统一类和链后缀量词；无未关闭实质异议。仅签S06.01，不预签端点、锐常数或最优率。
-- [ ] `S06.02` `q>1/2` 是否为有限长度的真正临界范围？
+- [x] `S06.02` `q>1/2` 是否为有限长度的真正临界范围？
+  - **裁决** Sharp
+  - **结论** 是准确统一类的严格端点：固定任意K、λ、R，原Φ=0与纯幂ψ=Kρ^q，含二维、闭目标、完整真残差、同一最近输入锚及全距离窗覆盖时，全部对象的全部轨道有限长当且仅当q>1/2。准确积分和实际全域旋转分别证正反两侧；半阶步渐近于1/(ck)，更低幂步指数小于1，任意正初值无限长而点趋零。各负幂好门保对应长度预算，低幂坏例另以已认证的φ_D匹配原预算，不能沿用较紧φ₀认证。固定图无此必要性：同精确模径向凸近端的尾恰为t；一维任意闭S的非负锚本身就迫s=t−a。正锚、已认证的更强目标和非幂对数修正保各自范围；裸q>1/2在一般DD2仍不充分。
+  - **证据** [PL.A1及范围验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-length-threshold-acceptance)、[PL1–PL14精确积分、完整双图与预设目标](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)、[PL15一维任意闭目标](../canonical/dd2_power_defect_finite_length.md#dd2-one-dimensional-nonnegative-length)、[C420原充要范围与目标接口](../canonical/dd2_function_hypotheses.md#fh-zero-defect-target-integral)、[C456原精确模配对](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)、[C451非幂边界](../topics/dd2/nonpower_rates.md#dd2-log-half-order)。
+  - **复核** 三席均先完成四项实际数学自检，独立重构正面积分/留域、完整反向/纤维与量词边界，再逐源冷读PL1–PL15、PL.A1、C420两支持卡、F148及全部八处实际正文/地图/四栏。复算Tonelli准确系数、首出步预算、q=1及q>1独立好门、旋转全部前像与每残差取等、νc²/2实际渐近、径向全局凸近端、φ_D认证及原φ₀的Sigma=0反向障碍；一维任意闭S等式、正锚非空例、零输入、无覆盖和无误差界各范围逐项核准。已修严格号的零尺度、全域反解与目标窗、渐近与等号及固定图/统一类误读；无未关闭实质异议。仅签S06.02，S06.03及后续不预签。
+
 - [ ] `S06.03` `q=1/2` 的反例是否满足全部算子与近端量词？
 - [ ] `S06.04` `q<1/2` 是否存在更强的失败机制？
 - [ ] `S06.05` `pq=2` 时的尖锐常数是什么？
