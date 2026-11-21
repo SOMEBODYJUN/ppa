@@ -3697,6 +3697,8 @@
 
 - **S04.04 必要性复核**：[实际验收证明](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)独立核全部前像水平集、平台最小残差、零输出、闭图和全域唯一近端，以及每个距离壳的积分上下界。必要性仍只针对本卡的固定连续非减模、零缺陷统一自由类；未向原一般有符号下界、额外下降目标或任意固定图转移。
 
+- **S05.04 充要范围与目标接口补证**：[NI1–NI5](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integral-necessity-acceptance)复核全部前像、零平台、每个正起点及固定图/严格吸收反例。[ZI1–ZI2](research/canonical/dd2_function_hypotheses.md#fh-zero-defect-target-integral)证明 \(A_0=\eta\circ Q_0^{-1}\) 是原零缺陷数据的准确输出包络；预设 \(\varphi\ge A_0\) 时同一必要见证仍适格，不能擅自替换更强目标。普通逆恒等式给原模零端平方积分的等价表述。二维固定单点子类仍含原见证；一维固定单点却由 \(s=t-a\) 统一有限长。此为原类的等价式及量词边界，不改本命题身份。
+
 <a id="c421"></a>
 ## C421-v1 · 原真残差一维显式包络与有限精度计算合同
 
@@ -3732,6 +3734,8 @@
 - **Exact Statement / Scope**：固定 \(\lambda=1,1<m<2,\psi(r)=r^{1/m}\)、\(2D(t)=t^{2m}-w(t)\)，其中 \(0<w(t)\le t^{2m}\) 连续并在每个 \([t/2,t]\) 上统一可比。\(H(t)=t^2+t^{2m}\)、\(A_*=H^{-1}(H-w)\) 在小窗严格递增。对整个距离窗有覆盖、每边最近锚缺陷至多 \(D\) 且满足指定真输出误差界的有限维统一类，全部轨道有限长当且仅当 \(\int_0^R u^{m+1}/w(u)\,du<\infty\)。局部窗留域使用充分侧总预算。
 - **Evidence / Related Files**：平方能量给 \(w(t)\lesssim t^2-a^2\)，进而给同一步长度势。平面旋转以 \(a=A_*(t),s=a^m\) 同时达到两约束，并全域反演为连续单值完整算子。[证明和幂对数端点](research/canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)。
 - **Boundary / Objections**：同一 \(\psi\) 与 \(D(t)\sim t^{2m}/2\) 能分别给有限长或无限长。必要性在统一类成立，保留余量可比、等号半径递增和二维反演范围。先行性未审尽。
+
+- **S05.04 补证**：[原余量正文](research/canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)把充分常数明写为 \(2^{m+2}\sqrt2K(1+mR^{2m-2})\)，并给取等壳的两侧估计。原同 K 可比、半径严格增、小窗及完整图量词全部保留；\(A_*\) 与预设 \(\varphi\) 的比较单列，不扩大到任意余量函数。
 
 <a id="c425"></a>
 ## C425-v1 · 固定 DR 约化下原变量角变差与长度的精确刻画
