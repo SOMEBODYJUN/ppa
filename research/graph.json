@@ -5640,6 +5640,18 @@
       "label": "C466 闭仿射零线与处处非空原图的完整有界周期族",
       "file": "canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-CONTINUOUS-AFFINE-INVOLUTION",
+      "label": "C467 连续单值仿射零集的完整近端对合与任意小二周期",
+      "file": "canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-POWER-STRUCTURED-NECESSITY",
+      "label": "C468 固定连续仿射类的全系数必要指数与单点边界",
+      "file": "canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14570,6 +14582,35 @@
       "output": "DD2-AFFINE-BOUNDED-CYCLE",
       "relation": "conditional",
       "scope": "C466-v1：q,K,λ>0，H=R²,S={0}×R,c=λK^(−1/q),u(r)=c|r|^(1/q)。完整J(r,v)向v≤0加u、向v≥0减u，v=0保双支；全部原F(r,w)为(0,−u/λ)当w≤u、(0,+u/λ)当w≥−u，条件片并覆盖全部输出。两图闭且处处非空，F每纤维≤2值，exactzeroS，r=0驻定。每边a=t=|r|,s=u,完整rho=u/λ,Kρ^q=a，唯一输入锚(0,v)内积−u²；全域Phi*=−c²t^(2/q)和psi精确，K最小且q最高局部幂。任意M>0,0<p<2/q取c²R^(2/q−p)≤M，全部受检边通过原Phi=−Mt^p；p=2/q,M≥c²也通过，q>1覆盖其临界坏侧而不替代q≤1较小锐常数。盒|r|<T,|v|<V且V>u(T)全输出不变，T≤R，V=2u(T)给任意小同图位置窗；每正距所有轨道有界、恒正距/步/残差、不收敛且无限长，±u/2实际2周期，零输入另驻定，不声称所有路径最终同周期。违反每个严格phi，故只反驳弱数据认证A，不反驳满足Sigma的DD2。多值非单调，不授唯一连续近端或凸全局最小化；C415/C416旧身份不变，无新颖性判断。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E779",
+      "topic": "DD2 强幂连续完整反向",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "DD2-CONTINUOUS-AFFINE-INVOLUTION",
+      "relation": "conditional",
+      "scope": "C467-v1：d≥1整数,q>1,K,λ>0,m=1/q,c=λK^(−1/q)，H=R^d×R^d,S=R^d×0。h(t)=sqrt((c²t^(2m)−4t²)_+)，f(v)=h(||v||)v/||v||且f(0)=0，T=(u+f(v),−v)，F=(f(v),−2v)/λ。奇连续f给I+λF=T=T^−1，全域连续单值原F、完整近端同胚、精确零集S与零驻定。全边a=t,s²=max(c²t^(2m),4t²)，真rho=s/λ，ψ全域有效；小窗ct^(m−1)>2时取等、K最小/q最高、锚积−c²t^(2m)+2t²。0<p<2/q,M>0取c²R^(2/q−p)≤M；p=2/q,M≥c²也过指定Φ=−Mt^p。每正初距exact2cycle，距/步/ρ恒正，有界不收敛L∞；u+f(v)/2和||v||守恒给同图任意小开位置窗且全部F值趋零。不是自由逐尺度次项锐性，不授q1最优常数/单调凸类/任意严格φ；坏图否定弱预算认证A而不否定DD2。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E780",
+      "topic": "DD2 明确结构类的必要指数",
+      "inputs": [
+        "D01",
+        "D04",
+        "PPA-HOLDER-DEFECT-FINITE-LENGTH",
+        "DD2-REVERSE-A",
+        "DD2-GAUGE-LENGTH",
+        "DD2-REVERSE-RAW-COMPENSATION",
+        "DD2-CONTINUOUS-AFFINE-INVOLUTION"
+      ],
+      "output": "DD2-POWER-STRUCTURED-NECESSITY",
+      "relation": "conditional",
+      "scope": "C468-v1：固定p,q,K,λ>0、H=R²×R²和S=R²×0，类C为全域连续单值F、exactzeroS及I+λF同胚；完整J，U=H，原ρ域[0,∞)。每M>0,R>0要求全t≤R边锚≥−Mt^p且a≤Kρ^q；SN2保子类非空。先∃φ*（在M之前选择且与M无关），它在[0,R*]连续非减、φ*(0)=0且正尺度严格下降；再∀M>0∀R>0∃0<r≤min{R,R*}(依参数不依F)∀认证F给全部小窗A，当且仅当pq>2。同∀M∀R∃r∀F量词下全轨finiteL、距0和点S，当且仅当pq>2且q>1/2。反向只需一个认证R0和同图任意小失败；低q法向旋转/q1定旋或线性shift-flip/强q C467(d2)均同C，半阶PL7保精确真模且pq>2时仍保原认证φ*。C401仅承担充分积分；半阶反向由本规范PL7–PL11完整旋转与实际级数独立证明，不由积分发散直接反判。固定M仍WR1临界好侧/M0，M0长度门q>1/2而p退出；不声称当前仿射类q1最优系数。另有限维单点S子类允许多值J：q>1任p>0,M≥0，根帽→0与s≤t+a给s≤2t,a≤2^q(K/λ^q)t^q，指定κ后尾≤2t/(1−κ)，局部严预算保首出边；q1,L<1/2单点尾≤t/(1−2L)。必要性不授固定图/紧φ/更强signed/一维或径向结构，无最优率或新颖性判断。",
       "status": "derived-checked"
     }
   ]

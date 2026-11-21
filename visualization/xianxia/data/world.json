@@ -11322,6 +11322,28 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD2-CONTINUOUS-AFFINE-INVOLUTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2198,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD2-POWER-STRUCTURED-NECESSITY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1540,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14424,6 +14446,14 @@
     "E778": {
       "x": 2184.92,
       "y": 5650.82
+    },
+    "E779": {
+      "x": 2197.94,
+      "y": 5740.0
+    },
+    "E780": {
+      "x": 1519.49,
+      "y": 5380.6
     }
   },
   "bounds": {

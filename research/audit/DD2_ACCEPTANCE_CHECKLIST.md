@@ -420,7 +420,12 @@
   - **证据** [完整验收与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-condition-weakening-acceptance)、[WR1–WR10参数与原目标接口](../canonical/dd2_power_defect_finite_length.md#dd2-power-condition-weakening)、[C466的AF1–AF7完整纤维与真实周期](../canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)、[C424原余量充要与实际图](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)、[D1S11准确单项常数仍非固定图必要](../topics/dd2/dd1_recovery.md#dd1-pointwise-strict-boundaries)。
   - **复核** 三席先独立重构，再复读九处实际正文/登记、E778与四栏；核准三支严格系数、M=0和q≤半阶边界，WR3连续严格增目标/同壳可比/全空间完整覆盖、WR6首出边支付与幂/对数反向。AF1–AF7的全部前像、处处非空原纤维、精确q/K、0<p<2/q、全选择小盒不变和确有二周期逐式核准；全选择不收敛未改称全部周期。D1S11最小单项常数与有界残差换幂均另核，必要性不转授更强固定Φ、紧目标或受限图类。无未关闭实质异议；只签S06.06及C466，不预签下一项。
 
-- [ ] `S06.07` 是否存在使当前指数条件成为必要条件的明确算子子类？
+- [x] `S06.07` 是否存在使当前指数条件成为必要条件的明确算子子类？
+  - **裁决** Proved
+  - **结论** 存在。C468固定同一H=R²×R²、S=R²×{0}，只取F连续单值、完整I+λF全域同胚的结构类，子类对任意预算非空。先选与M无关的严格连续非减φ*，再按∀M>0∀R>0∃r(M,R)∀认证F排序，准确共同降距门为pq>2；相同量词的实际有限长并点收敛门为pq>2且q>1/2。半径依M但不依F；反向在一个认证R₀内保同图任意小失败。C467把q>1坏侧加强为连续单值原图、唯一完整近端对合、全域真EB和任意小位置窗内真实二周期。固定M仍允许临界好系数与M=0，不能删∀M；单点q>1则任意p>0可由真实s≤t+a得有限长，无须乘积门。各坏图及低半阶长度图保原完整真残差/覆盖，长度反向在好乘积区还保已认证的同一φ*；不把固定图或更紧目标据此反判。
+  - **证据** [完整范围验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-necessary-subclasses-acceptance)、[C468/SN1–SN10的双向与单点证明](../canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)、[C467/CI1–CI8完整连续图](../canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution)、[PL7–PL14真模匹配有限/无限长度](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)、[CK8精确临界好图](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)。
+  - **复核** 三席先独立重构后逐读九处实际正文/登记、图边与四栏；CI1–8的正部延拓、完整唯一原根、真ρ、K最小/最高q、全部零输入及同图不变位置窗均核准。SN3先∃预设φ*再∀M∀R∃r∀F、一个R₀反证和三支先目标后预算、半阶实际级数逐式通过；固定M用WR1共同保证，CK8另作固定图证据，未混用。单点旁支的B_D→0、真正s≤t+a、含首出边支付及线性尾常数独立复算；E780补C430承重，C401只正侧，PL反向保全纤维而非凭积分发散。无未关闭实质异议；只签S06.07/C467/C468，未预签下一项。
+
 - [ ] `S06.08` 在 `p,q` 固定时，能否刻画最优收敛速率？
 - [ ] `S06.09` 是否能够构造达到速率上界的算子？
 - [ ] `S06.10` 是否能够从一般函数判据直接恢复幂次分类，而不是分别重复证明？

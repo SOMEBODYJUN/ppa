@@ -4178,3 +4178,26 @@
 - **Conclusion — 全部真实轨道**：每条轨道r_k=r₀且|v_k|≤max(|v₀|,u(r₀))。任意正初距的每条选择都有恒正t、s=u(r₀)、ρ=s/λ，所以有界、不收敛、非渐近正则且总长无限；每个小盒内的(r₀,±u(r₀)/2)是实际二周期。只断言这些特定周期存在，v=0处允许后续换支，不宣称所有路径最终固定周期。零初距另驻定。
 - **Dependencies / Evidence**：D01/E0原近端、D04完整真残差；[AF1–AF7](research/canonical/dd2_power_defect_finite_length.md#dd2-affine-subcritical-cycle)直接反解全部纤维、两闭片、全输出锚积和max不变界。 [WR1–WR10及S06.06](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-condition-weakening-acceptance)区分纯幂类、函数余量类与固定图。证据为完整解析证明，不以数值轨道替代。
 - **Counterevidence / Objections / Scope**：本图每个正距a=t，违反任何φ<t；它证明较弱原数据不能认证指定A，不违反已满足Σ的完整DD2定理。原图多值且近端不处处唯一连续，AF4对零锚负积排除单调/凸次梯度。反向不是固定F必须失败的判据，也不授任意指定凸目标或更强signedΦ。 [F145](FAILED_ROUTES.md#f145)记录边界；没有公开新颖性认定。
+
+<a id="c467"></a>
+## C467-v1 · 连续单值仿射零集的完整近端对合与任意小二周期
+
+- **Status**：`derived-checked`；三席独立重构后复读实际正文、身份、图边及答卷，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Quantifiers**：任意整数d≥1、q>1、K,λ>0，m=1/q、c=λK^(−1/q)，H=R^d×R^d、S=R^d×{0}。令h(t)=sqrt((c²t^(2m)−4t²)_+)，f(v)=h(||v||)v/||v||（v=0取0），T(u,v)=(u+f(v),−v)，F=(f(v),−2v)/λ。原ψ(ρ)=Kρ^q、Dψ=[0,∞)。
+- **Definitions / Full graph / Zero set**：奇连续f给T²=I、I+λF=T，所以全部JλF=T；F全域连续单值，T全域同胚，图闭且全输入/原纤维非空。zerF精确为S，零距离全部输入唯一驻定。每条完整边a=t=||v||、s²=max(c²t^(2m),4t²)、完整ρ=s/λ，唯一输入锚(u,0)的内积=−h(t)²−2t²；原真EB全域成立。
+- **Assumptions / Local budget / Conclusion**：选择ε使cε^(m−1)>2；全部0<t≤ε边有s=ct^m、Kρ^q=t、锚积=−c²t^(2m)+2t²。K是最小系数、q为最高局部正幂。任意M>0、0<p<2/q，取R≤ε且c²R^(2/q−p)≤M，全部t≤R边通过指定Φ=−Mt^p；p=2/q,M≥c²亦通过。实际缺陷主系数上确界为c²，次临界p/M可为松预算。
+- **Conclusion / All trajectories / Windows**：每个正初距的完整轨道恰为二周期，距离、步长、真ρ恒正，有界不收敛且总长无限。中心u+f(v)/2与||v||守恒；CI7开窗对全部输出不变，缩小A,T₀得同图任意小位置窗，平移至任意零点仍成立。全部F值随窗缩小趋零。零初距另驻定。
+- **Dependencies / Evidence**：D01完整近端、D04真残差；[CI1–CI8](research/canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution)直接计算全部原根、正部延拓、锚积、精确模与守恒窗。作为[C468](#c468)和[S06.07](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-necessary-subclasses-acceptance)的强幂反向。
+- **Counterevidence / Objections / Scope**：此图不满足任何严格φ；反驳的是弱纯幂数据认证A，不是完整DD2。实际下阶缺陷不等于自由多锚的ct^(1+1/q)修正，不宣称逐尺度自由锐性；不转授q=1的最优系数。负零锚积排除单调/凸次梯度，未称跨零集局部Lipschitz。原C466身份不变；不认定公开新颖性。
+
+<a id="c468"></a>
+## C468-v1 · 固定连续仿射算子类的全系数必要指数与单点边界
+
+- **Status**：`derived-checked`；三席独立重构后复读实际正文、身份、图边及答卷，无未关闭实质异议。
+- **Exact Statement / Objects / Domain**：固定p,q,K,λ>0，H=R²×R²、S=R²×{0}。结构类C由全域连续单值F、精确zerF=S、I+λF全域同胚组成，允许关系取完整JλF，位置域U=H。给定M>0,R>0，每个成员须在全部输入t≤R的全部完整边满足同一唯一最近输入锚积≥−Mt^p，以及输出完整真残差界a≤Kρ^q；原ρ域[0,∞)。SN2明确证明每组参数子类非空。
+- **Quantifiers / Conclusion — 共同距离**：存在在选择M之前预先给定的目标φ*，它在[0,R*]连续非减且φ*(0)=0、正尺度严格下降，使∀M>0∀R>0∃r∈(0,R]（落在目标域，依参数但不依F），所有认证成员的全部0<t≤r边均有a≤φ*(t)，当且仅当pq>2。明确目标见SN4及其线性/强幂两段；不是任意更紧目标都可。
+- **Quantifiers / Conclusion — 共同轨道**：∀M>0∀R>0∃r∈(0,R]独立于F，所有认证成员从任意t₀≤r出发的完整实际轨道有限长、距离趋零且点收敛于S，当且仅当pq>2且q>1/2。允许r随M缩小；反向在一个实际认证R₀内由同一F的任意小初值见证，未断言每个预给大R的构造。M=0另有长度门q>1/2而p退出。
+- **Evidence / Dependencies**：C399的原幂支付、C400/DD1的线性A+B、C401/PL的零缺陷支付与全参数旋转、C430的原一般Σ两支、C467的d=2完整对合；[SN1–SN10](research/canonical/dd2_power_defect_finite_length.md#dd2-power-necessary-subclasses)。q<1法向CK6临界旋转、q=1法向定旋或SN6线性图、q>1 C467，都保持同一H/S及连续单值同胚结构；半阶法向PL7锚恰0、完整原模取等，并在pq>2时保同一已认证φ*。证据是解析完整图与实际级数；C401只用于充分支付，半阶反向另由PL7–PL11证明，未从充分积分发散反判。
+- **Fixed-budget / Fixed-graph boundary**：固定M仍保WR1的临界严格常数及M=0，不能删除主命题的∀M。CK8的实际p=2/q、精确M和最高q可同时成立而全轨有限长；SN2任意q均长=t₀，D1S11的边际最小常数亦不形成固定图反判。q=1反向只要求一个坏M，不声称该仿射类固定M的最优常数。
+- **Singleton lemma / Assumptions / Conclusion**：另在任意有限维H取S={z*}⊆zerF、开U和R>0、允许J⊆JλF，在U_R全部输入非空覆盖且每边满足原纯幂锚/真EB。任意q>1,p>0,M≥0均可缩窗：令b=K/λ^q，先使bB_D(r)^(q−1)≤1/2，再使2^qb r^(q−1)≤κ<1，则s≤2t、a≤2^qb t^q≤κt，实际尾≤2t/(1−κ)。局部初值须此预算严格小于d(x₀,U^c)，先保首出边再续接；全空间无位置限制。q=1且L=K/λ<1/2的单点尾另≤t/(1−2L)，保相应局部预算。未要求此旁支F/J连续或唯一。
+- **Counterevidence / Scope / Related Files**：必要性不授每个固定图、其他给定严格φ、一般更强signedΦ、一维非负锚或同射线结构；单点s≤t+a不能给任意闭S。C467与C466身份分开；不声称完整幂分区、最优率或公开新颖性。[S06.07答卷](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)、[F145](FAILED_ROUTES.md#f145)保量词断点。

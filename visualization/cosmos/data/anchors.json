@@ -5033,5 +5033,15 @@
     "x": -231.88769218175258,
     "y": 1440.1380339559273,
     "system": "path"
+  },
+  "DD2-CONTINUOUS-AFFINE-INVOLUTION": {
+    "x": -138.2384229366417,
+    "y": 1765.7549420147018,
+    "system": "path"
+  },
+  "DD2-POWER-STRUCTURED-NECESSITY": {
+    "x": 451.7190629354636,
+    "y": 1915.7005140672,
+    "system": "path"
   }
 }
