@@ -3681,6 +3681,8 @@
 
 - **S04.04 证据与范围复核**：[有限长度验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-finite-length-acceptance)将实际同一步势、原模下界、严格耗散、有限积分和首退出预算分别重构；一般势只要求可评价、有限初值和沿路径有限下界，给全部选择的共同界另需统一常数。此为既有充分机制的证据补全，不改原函数域或增加固定图必要性。C444 的真实等距正步还表明：全选择有限终止的固定图可能根本不容许覆盖全部边的单一距离势。
 
+- **S05.02 原函数构造补证**：[IP1–IP2](research/canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)直接对原 $\psi(r)=r(1+\mathbf1_{\mathbb Q}(r))$ 求得 $b_{\psi,1}(t)=t/3$，包括正尺度下确界不达到的情形；$\Phi=0$ 给 $\Theta=3t,C=2$，预设 $9t/10$ 另由原一步数据认证。保原域而不作物理残差代换。[RC1–RC4](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-raw-potential-construction)分开默认原模下界、实际可选其他下界与有符号联合构造的范围。
+
 <a id="c420"></a>
 ## C420-v1 · 零缺陷统一算子类的固定模积分充要性
 
@@ -3826,6 +3828,8 @@
 - **Conclusion / Scope**：最小可实现物理步长为 \(v\)，最大可实现锚积为 \(\Gamma_t(a,u)=(t^2-Q_t(a,u))/2=\min\{a(t-a),t^2/4-(u-t/2)_+^2,(t^2-a^2-u^2)/2\}\)，两者同时达到。在非空行令 \(E=t^2-2\phi,B=(t+\sqrt{t^2-4\phi})/2,\alpha=(t-B)_+\)，逐行投影恰为 \(u\le B,\alpha\le a\le\min\{B,\sqrt{E-u^2}\}\)，另保原模和零行；全部可实现物理步长恰为 \([v,\min\{B,\sqrt{E-a^2}\}]\)。给定边的实际步长不可自动替换成 \(v\)。
 - **Definitions / Dependencies / Evidence**：C414 同一四点实现、C417 完整纤维反演。代价 \(H(s)=s^2+\max\{a^2,(s-t)_+^2\}\) 在 \(s\ge|t-a|\) 严格递增，消元并展开最大值得 \(Q\)；投影底图加指定边及一个最小残差前像给完整闭覆盖实现，但只认证指定边。[JR1–JR8 证明](research/topics/dd2/joint_relation.md#dd2-joint-exact-cost)、[准确逐行域](research/topics/dd2/joint_relation.md#dd2-joint-projection)。
 - **Counterevidence / Objections / Related Files**：\(t=0\) 时 \(Q=2\max(a,u)^2\)，\(a=\rho=0\) 仍可在不同零点间移动；吸收另需条件。精确零集且闭纤维需 \(a=0\Leftrightarrow\rho=0\)，仅精确零集的未达零残差端点另核。C427 自由仿射类有准确附加代价 \(2t(u-t-a)_+\)。这是对已准确自由类的等价表示，不能再降其锐值；相对原正部候选则有完整图严格差距。[对比及 \(L=1,A=3t/4\) 校准](research/topics/dd2/joint_relation.md#dd2-joint-candidate-comparison)。任意正下界完整窗、固定图、指定目标和动态实现不由单边补全转授；未认定公开新颖性。
+
+- **S05.02 同一步势对接**：[JB1–JB4](research/topics/dd2/joint_relation.md#dd2-joint-length-bellman)在原可行输出上取本卡全部步长区间的上端 $c_\Phi(t,a)=\min\{B_\Phi(t),\sqrt{t^2-2\Phi(t)-a^2}\}$，再调用已有 JP18 的有限路径判据。原目标先认证，不删坏行；逐点有限时给整个自由单边池归一 $C=1$ 的最小非负共同支付函数。一般正下界完整窗仅作安全充分约束，非正完整类的共同势必要性才使用已核逐行整窗实现。未将最小可实现位移替代实际成本，也未改变本卡原对象或宣称一般算法可计算性。
 
 <a id="c436"></a>
 ## C436-v1 · 完整窗的前像长度集合与真残差右闭包过滤

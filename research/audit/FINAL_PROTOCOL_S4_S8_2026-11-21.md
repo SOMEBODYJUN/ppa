@@ -1262,15 +1262,105 @@ $C\Theta(t_0)<d(x^0,U^c)$ 作位置证书；第一条拟出界边也必须受检
 
 本项补足旧短答只谈“积分有有限值”而未认证“势差支付实际步”的缺口。存在性、所列原数据的可验证充分证书和完整失败边界已有证明；后续各小题的可计算性、最弱积分条件和正则性仍按其独立题目逐项验收。
 
-### 5.3 能否由 Phi, psi 构造
+<a id="dd2-raw-potential-construction"></a>
+### 5.3 S05.02：能否直接由原 $\Phi,\psi$ 构造
 
-**状态：Proved（充分构造）。**
+**裁决：Proved（有条件的直接构造）；“任意原数据都自动给有限势”为 Refuted。** 固定 E0 的 $\lambda>0$、输入窗 $[0,R]$、原残差域 $D_\psi$ 和受检允许关系。这里“由原函数”还包括这些固定参数与域，并不表示它们可被省掉。下面给原残差积分、有符号比较和联合成本三种已证入口；它们都支付实际 $s$。预设目标 $a\le\varphi(t)$ 仍须从原数据独立认证，不能用新定义的势、最坏包络或比较曲线替换目标。
 
-D=[-Phi]_+、eta(s)=psi(s/lambda)。若 2D<=(1-delta)chi^2，三角不等式给 s>=chi(t)，平方能量给 t^2-a^2>=delta s^2。于是
+**RC1：保留原残差域的直接积分构造。** 先取 $0\in D_\psi\subseteq[0,\infty)$、原有限非负 $\psi$；不要求连续、非减或可测。令
+\[
+D(t)=[-\Phi(t)]_+,\qquad
+b_{\psi,\lambda}(t)=\inf_{\rho\in D_\psi}
+\max\{\lambda\rho,t-\psi(\rho)\}.
+\tag{RC.e1}
+\]
+这个指标集始终是同一个原域，不能随 $t$ 更换后沿用原证明的保序结论。每条实际边以其自身真残差给 $s\ge\lambda\rho$ 和 $s\ge t-a\ge t-\psi(\rho)$，所以 $s\ge b_{\psi,\lambda}(t)$。同一候选族的下确界使 $b$ 非负、有限、非减且 1-Lipschitz；含零给 $b(0)=0$ 和 $b(t)\le t$。无需残差或下确界取到。若在全正尺度使用 $b>0$，仍须检查正性；[C419/C429](../canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse)将其准确化为原模含零前缀在零端趋零。
 
-s <= (t^2-a^2)/(delta chi(t)) <= (2/delta) integral_a^t u/chi(u)du.
+现在核一个统一的 $0<\delta\le1$ 和有限积分：
+\[
+0<b(t),\qquad
+2[-\Phi(t)]_+\le(1-\delta)b(t)^2\quad(0<t\le R),\qquad
+\Theta_{\Phi,\psi;\lambda}(R)<\infty,
+\quad\Theta_{\Phi,\psi;\lambda}(t)=\int_0^t\frac{u}{b_{\psi,\lambda}(u)}\,du .
+\tag{RC.e2}
+\]
+以原 $\Phi(0)=0$ 核零驻定后，这就是 $\Theta(0)=0$ 的有限非负构造，且
+\[
+s\le\frac2\delta[\Theta_{\Phi,\psi;\lambda}(t)-\Theta_{\Phi,\psi;\lambda}(a)].
+\tag{RC.e3}
+\]
+证明是 [PT2](#dd2-potential-existence-acceptance) 的同锚平方展开、严格吸收和单调分母积分。这个公式的积分部分由 $\psi,\lambda$ 给出，$\Phi$ 决定其是否能支付以及常数 $\delta$；并不声称每种输入函数必须显式出现在被积函数里。若原 $\Phi(0)<0$ 而结论覆盖零输入，只有实际另证驻定才可为这条归零势路线独立补零，不能悄改原函数；此时多用了一份固定图信息。若原 $\Phi(0)>0$，没有受检零边，与该处覆盖不相容；未受检的零输入不凭空获得覆盖。
 
-这直接构造 Theta 和有限长度。它没有给固定算子的必要性。
+若原 $\psi:[0,\infty)\to[0,\infty)$ 连续非减且零点为零，原 C401 的 $b=(\operatorname{id}+\psi(\cdot/\lambda))^{-1}$ 提供同一类证书；平台无碍和函数的严格可逆。局部版本须另核逆的定义域、值域及所用评价点，若作保值连续非减延拓也须证明其实际比较合法；原域有限不能仅凭相对连续性调用全域普通逆。非单调或一般局部域可直接用 (RC.e1)，不在未经认证的 $s/\lambda$ 处评价原函数。局部输出位置与残差域仍保 E0。参数也确实承重：例如全半轴原域上的 $\psi(r)=r$ 时，$b_{\psi,\lambda}(t)=\lambda t/(1+\lambda)$，缺陷吸收随 $\lambda$ 改变。
+
+[原非单调例 IP1–IP2](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)亲算
+\[
+\lambda=1,\quad\Phi=0,\quad
+\psi(r)=r(1+\mathbf1_{\mathbb Q}(r)),\quad
+b(t)=t/3,\quad\Theta(t)=3t,\quad C=2.
+\tag{RC.e4}
+\]
+有理残差逼近 $t/3$ 给准确下确界；$t/3$ 无理时不取到，公式仍有效。若预设 $\varphi(t)=9t/10$，另由原 $a\le2\rho\le2s$ 与能量得到正尺度 $a\le2t/\sqrt5<\varphi(t)$（零尺度为等号），而 $F=I$ 提供完整非空实例。这既保一般原函数，也保“先指定目标”的顺序。
+
+**RC2：保留正下界和变号信息的显式构造。** 本段含零结论同样使用原 $\Phi(0)=0$ 或另已证明的实际零驻定；后者是额外图信息。(RC.e1)–(RC.e3) 仅是安全的充分路线，$[-\Phi]_+$ 会丢掉正锚信息。直接用 C414 的原符号根
+\[
+B_\Phi(t)=\frac{t+\sqrt{t^2-4\Phi(t)}}2
+\tag{RC.e5}
+\]
+可得每条存在的边 $s\le B_\Phi(t)$；一般原模的准确单边上界另记 $M_{\Phi,\psi}(t)$。若已给定非减自映射 $Q:[0,R]\to[0,R]$、$Q(0)=0$，以及有限非负非减步帽 $h:[0,R]\to[0,\infty)$，并在原行非空的尺度由原函数认证 $Q\ge M_{\Phi,\psi}$、$h\ge B_\Phi$（零尺度用真实驻定），再核
+\[
+W(t)=\sum_{j\ge0}h(Q^{\circ j}(t)),\qquad W(R)<\infty,
+\tag{RC.e6}
+\]
+则 $W$ 非减，$W(t)-W(Q(t))=h(t)$；所以
+$s\le h(t)\le W(t)-W(a)$。取 $\Theta=W,C=1$ 即可。正尺度根非实时是无边，不是覆盖；空行没有所用的 $M$，根非实时也不评价 $B_\Phi$，但 $Q,h$ 仍在整个所声明域给出值。若要在自由单边池统一认证原目标，每个非空行都须 $M_{\Phi,\psi}\le\varphi$；固定图或更窄类可对自己的实际边另证。某个更松 $Q$ 能造势，不能据此放宽原目标。这里的 $h$ 只作步长上界，与 RC1 的下界 $b$ 相反。
+
+一个完全显式的正下界特例是：对全部正尺度
+\[
+ct^2\le\Phi(t)\le t^2/4,\quad0<c\le1/4,\qquad
+\kappa_c=\frac{1+\sqrt{1-4c}}2<1.
+\]
+C435 的输出根与 C414 的步长根同时给 $a,s\le\kappa_ct$。于是有
+\[
+\Theta(t)=t,\qquad
+s\le\frac{\kappa_c}{1-\kappa_c}(t-a).
+\tag{RC.e7}
+\]
+这只是有效常数，不声明一般 $c$ 时最优。原 $\psi$ 仍须允许实际非空边；该正下界门不自行创建算子或覆盖。若 $\Phi=t^2/4$，两根和 $t\le s+a$ 强制 $a=s=t/2$，故 $C=1$ 逐边取等。取 $\lambda=1,R\le1,F=I,S=\{0\}$，原 $\psi(r)=\sqrt r$ 时默认 $b_{\psi,1}=\chi\le t^2$，所以对应积分发散；若改取 $\psi(0)=0,\psi(r)=1$ 对 $r>0$，默认 $b_{\psi,1}$ 在 $0<t\le R$ 甚至为零。两种原函数均允许这个完整实例，并且同一正下界都直接给 $\Theta=t,C=1$。失败的是仅由该模所得的默认下界证书，不是 C419 使用其他实际有效下界的整个框架。
+
+[C428 的密集变号原 $\Phi$](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)也无需正则化：$\lambda=1,\psi(r)=r$，正有理尺度取 $\Phi=t^2/8$、正无理尺度取 $\Phi=-t^2/8$，零点取零。原公式给
+\(a\le\kappa t\)、\(s\le ct\)，其中
+$\kappa=\sqrt{5/8}$、$c=(1+\sqrt{3/2})/2$。因此 $\Theta=t,C=c/(1-\kappa)$ 是直接势。负值尺度恰使默认 $b=t/2$ 的严格 $\delta$ 门失败；保留原几何仍有证书。这个 $c$ 只在此例表示步帽系数，与 (RC.e7) 的正下界系数不是同一个参数。
+
+**RC3：原联合行还能直接给最小共同尺度势。** 对一般原函数，先用 [C435 的 JB1–JB4](../topics/dd2/joint_relation.md#dd2-joint-length-bellman)保留准确可行输出 $a$、存在的原真残差 $\rho$ 及该行最大实际成本
+\[
+c_\Phi(t,a)=\min\{B_\Phi(t),\sqrt{t^2-2\Phi(t)-a^2}\}.
+\tag{RC.e8}
+\]
+输出可行性同时保原 $a\le\psi(\rho)$、$0\le\lambda\rho\le B_\Phi$、平方能量、输出根区间以及 $a=0\Rightarrow\rho=0$。这个最大步可由同类单边实现；不能用最小位移 $\max\{|t-a|,\lambda\rho\}$ 来支付可能更大的实际步。
+
+先认证全部原可行行满足 $a\le\varphi(t)\le R$，或仅为势的评价扩充域纳入全部受检输出，再从 $W_0=0$ 按
+\[
+W_{N+1}(t)=\sup\bigl(\{0\}\cup
+\{c_\Phi(t,a)+W_N(a):a\text{ 为原可行输出}\}\bigr)
+\tag{RC.e9}
+\]
+构造 $W_* =\sup_N W_N$。逐点有限时，$\Theta=W_*,C=1$ 支付整个自由单边池，且在归一 $C=1$ 的非负支付函数中逐点最小；若写成任意常数 $C$ 与势 $\Theta$，则比较的是 $C\Theta\ge W_*$。扩域本身只保证评价合法，不认证原目标，后者仍须独立完成。只有原函数、原域和固定参数参与定义，不输入未知实际轨道。但这不是任意黑箱原函数的有限查询算法，也不保证该势有限；[PE1–PE4](../canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)解释其准确存在量词。
+
+一般有符号原数据下，此池是实际完整图的安全外约束，正下界的全部前像兼容不能省略。非正整个含零窗的自由完整覆盖类可用 C417 的逐行整窗实现，得到该类共用一个势的准确对应；固定图各自选势、指定目标结构、额外闭纤维／精确零集和共同轨道均不是这个必要性的范围。零尺度如原 $\Phi(0)<0$，自由池已有正成本零自环，不能删它再构造归零的势。
+
+**RC4：数据级共同构造失败与固定图结论的范围。** 保同一组
+\[
+H=\mathbb R^2,\ S=\{0\},\ \lambda=1,\ U=H,\quad
+0<R<\sqrt2-1,\quad
+\psi(r)=r,\quad
+\Phi(t)=t^2/2-\left(\frac{t}{1+t}\right)^2,\quad
+\varphi(t)=\frac{t}{1+t}.
+\tag{RC.e10}
+\]
+C400 的完整匹配旋转满足原数据，真实 $s_k=t_{k+1}\sim1/k$，所以不存在支付该图全部受检边的有限非负距离势。同一数据下 $F=I$ 的完整近端为 $x/2$，原锚积 $t^2/4\ge\Phi(t)$、$\rho=a=s=t/2$、$a\le\varphi(t)$，却有 $\Theta=t,C=1$。零输入、全域覆盖和距离窗不变均成立。[NR2 的同数据核验](#dd2-nonlinear-rate-acceptance)给完整图证明。这排除“只因一份数据级共同构造失败，就认定每个符合数据的固定图都无势”的推断；并不否定原数据对统一类共同势的精确问题。
+
+所有三种正向路线均先给逐边证书。全部实际选择的续接、首出窗边、严格初值预算及指定目标识别沿用 PT5 和各来源合同，不能由积分符号或 Bellman 定义自动补足。本项给出可验证的原函数构造，不宣称任意一般 $\Phi,\psi$ 下存在有限势或已经取得普遍可计算的最优公式。
 
 ### 5.4 积分判据是充分还是必要
 
@@ -1617,7 +1707,7 @@ pppa_recovery.md 的逆向障碍 1–4 显示局部物理误差界不能自动�
 | §4 蕴含关系 | Proved；错误箭头均 Refuted | [IM1–IM7](#dd2-dynamics-implications-acceptance)：十二条箭头、四完整见证、指定目标识别和强化合同 |
 | §5.1 F1–F3 | Proved（充分性） | 回到历史原式，通过 C401 恢复原一步势 |
 | §5.2 势存在 | Proved；准确边集与充分证书分开 | [S05.01 的 PT1–PT5](#dd2-potential-existence-acceptance)、JP18/PE1–PE4、C401/C419、原 F1–F3 与 C278 边界 |
-| §5.3 由原函数构造 | Proved（既有充分构造；逐项验收待续） | 原域位移下界与同一步耗散 |
+| §5.3 由原函数构造 | Proved（条件化）；自动有限 Refuted | [RC1–RC4](#dd2-raw-potential-construction)：原残差积分、有符号比较、最大实际成本的联合势及同数据固定图边界 |
 | §5.4 积分必要性 | Conditional/Refuted | 几何统一充分，固定算子反例 |
 | §5.5–5.6 势正则性和非幂次 | Proved | 单调逆模及包络 |
 | §5.7 弱化可积性 | Partial | C401 去掉 F3 的非增上包络；最弱统一积分条件待证 |

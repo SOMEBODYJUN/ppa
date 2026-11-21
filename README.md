@@ -67,6 +67,9 @@
 
 [S05.01 的一般距离势存在条件](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-existence-acceptance)把原 JP18 的有限路径判据与 C401/C419 的可验证充分证书接起来：有限非负势存在，恰需同尺度边集每个起点的全部有限路径成本有共同预算。原 F1–F3 的局部真残差证明保逆域；C278 的严格降距两步终止图说明真实总长不能代替投影后的路径预算，C400 的无下界的对数势说明下界不可省。
 
+[S05.02 的原函数构造](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-raw-potential-construction)给出三条明确入口：原残差域下界积分、有符号几何的比较尾势、以及 C435 最大实际成本与 JP18 的联合势。$\Phi=t^2/4$ 的重根例和 C428 的变号例说明不能先丢正锚信息再判失败；原非单调 $\psi$ 的下确界可不达到，仍有直接积分证书。自由单边池、完整整窗类和固定图各自保留必要性的范围。
+
+
 
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
@@ -424,7 +427,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437–C438 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§1.6 对全部已认证边证明原真残差取样的统一安全性，核允许图与完整输出范围；§3 给精确达到判据、闭纤维端点和固定图紧性正反例；§3.4 明确原两项式的放宽域、准确 G/R 的实现及原式等值的必要充分条件，含正负完整图比较和零尺度；§3.5 给临界右前缀的严格下降充要门、逐边与共同余量的完整图分离及线性校准。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |
 | [research/topics/dd2/reverse_compensation.md](research/topics/dd2/reverse_compensation.md) | C430–C431、C434、C441 的原真残差双向预算、兼容及尖锐性边界。危险前缀求 ψ，非空上端和三门求有符号 Φ；保整窗交集、线性标尺、首端及正下界必要性失败。§6 核整窗兼容，§7 分预算尖锐、输出取等和单尺度／同图／轨道量词。§8 给原两项式的两道逆预算及非正下降目标的准确恢复。§9 复用 C435/C437 给同残差、同锚及全部步长取等证书，并给原 max 已达且与准确上确界同值、正下界完整类仍无等号的图族。设计目标、反推强度或提升实现范围前读取。 |
-| [research/topics/dd2/joint_relation.md](research/topics/dd2/joint_relation.md) | C435 的输出–真残差精确三项代价、锚上限、全部可实现物理步长及仿射附加代价；C436 的完整前像右闭包必要门、非空完整类的严格增益与未达残差端点反例。需要简化共同关系、读取给定输出的预算或利用全部完整前像改进上界时读取；不替代一般完整兼容和动态证明。 |
+| [research/topics/dd2/joint_relation.md](research/topics/dd2/joint_relation.md) | C435 的输出–真残差精确三项代价、锚上限、全部可实现物理步长及仿射附加代价；C436 的完整前像右闭包必要门、非空完整类的严格增益与未达残差端点反例。需要简化共同关系、读取给定输出的预算或利用全部完整前像改进上界时读取；不替代一般完整兼容和动态证明。 JB1–JB4 从准确可行输出保留最大实际步长，接到 JP18 构造共同非负势；检查纯数据长度证书时读取，先核原目标和原域，不把自由池失败转授正下界完整窗。 |
 | [research/topics/dd2/scalar_iteration.md](research/topics/dd2/scalar_iteration.md) | C439 的纯复合有限退出、逆像层与整数秩；非减时与 C418 受控递推的等价；两个同单输入距离数据、同准确最大值却有不同真实轨道的完整闭图，含旋转坐标、反射影子、真纤维、预算与续接。C440 另给最小非减上界、严格与趋零条件、全窗一致性等价、连续构造，以及左前缀和右连续障碍的完整图实现。C446 用同一个一维完整闭图的有界轨道分别检验允许图闭性与窗内聚点。核曲线复合、非减比较、预设目标是否保留、图闭/留域是否足以用紧性或从单步最优推轨道时读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 在同一闭零集和固定完整图上逐步实现低 \(L<1/2\) 的严格步长支，包含局部孤立零点与无限长度例、闭仿射单步障碍。C413 以相对法锥的统一正向排除一般有限维闭凸目标上的收敛锚链及可和链。研究动态尖锐性、最近锚切换或写主文范围时读取。 |

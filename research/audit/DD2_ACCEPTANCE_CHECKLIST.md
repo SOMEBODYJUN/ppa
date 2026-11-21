@@ -312,7 +312,12 @@
   - **证据** [PT1–PT5 的准确存在判据与充分证书](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-existence-acceptance)、[JP18/PE1–PE4 的自足有限路径证明](../canonical/unified_ppa_joint_certificates.md#ujc-distance-potential-existence)、[C278 完整反例及 E0 桥 JP46a](../canonical/unified_ppa_joint_certificates.md#ujc-distance-state)、[C419 原模下界、积分势及边界](../canonical/dd2_function_hypotheses.md#fh-general-length)、[作者原 F1–F3](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3)、[C400 比较尾和与调和旋转](../topics/dd2/core.md#dd2-trajectory)、[F148 断点与回收](../../FAILED_ROUTES.md#f148)。
   - **复核** 三席先完成四项数学自检，独立重构有限路径等价、积分证书与反例，再复读实际最终 PT1–PT5、PE1–PE4、JP46a、身份补证、失败记录、地图及本项。首边上确界、空路径、逐起点共同预算、零归一与外包络自身零行均核；C278 完整纤维、水平虚接、竖直下界与原 DD 桥逐式核准。F1–F3 按现有原式转录重证数学充分性，原逆域和常数 4 未换；对数势限定原受检窗，比较尾的错误零端断言已撤。首出窗边与受检输入距离窗、位置预算及指定目标识别保持独立。现成精确复算仅作附证，一般结论由解析证明给出；三席无未解决致命异议。JP18/C278 已查重，不新增同义 Claim，也不改 C277 动力学范围。
 
-- [ ] `S05.02` 能否直接由 `\Phi,\psi` 构造？
+- [x] `S05.02` 能否直接由 `\Phi,\psi` 构造？
+  - **裁决** Proved
+  - **结论** 可以有条件地直接构造，但原函数、固定参数和评价域不保证势总有限。原 $b_{\psi,\lambda}=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}$ 配统一严格吸收及有限积分给 $\Theta$，不需原模保序、可测或逆端点达到；原非单调例亲算 $b=t/3$。保有符号根可另造比较尾势，正二次下界及密集变号例均有显式线性势。C435 原可行行的最大实际步长再接 JP18，给自由单边池归一 $C=1$ 的最小非负共同支付函数；先认证预设目标和域，不删坏输出。正下界完整窗、固定图、逐算子各自势的必要性不互授；同原数据的 C400 旋转与 $F=I$ 分别无非负势与有线性势，反驳无条件的固定图反判。
+  - **证据** [RC1–RC4 的三种直接构造及边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-raw-potential-construction)、[IP1–IP2 原非单调模的准确下界](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)、[JB1–JB4 最大实际成本和联合势](../topics/dd2/joint_relation.md#dd2-joint-length-bellman)、[C429 原域下界](../canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse)、[C428 有符号密集例](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)、[C436 完整前像障碍](../topics/dd2/joint_relation.md#dd2-complete-fiber-filter)、[同数据完整旋转与恒等算子](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)。
+  - **复核** 三席先完成四项数学自检，独立重建原域积分、有符号几何和同数据边界，再逐式复读实际最终 RC1–RC4、JB1–JB4、IP1–IP2、C419/C435 补证、失败记录、地图及清单。固定指标集、原逆的全域/局部资格、零输入三分、IP 下确界未达与原目标比较均核；正二次与变号系数、每行最大实际成本及其完整实现逐式相符。非空尺度才评价 M/根，扩域不认证目标，最小性按 C=1 或支付函数 CΘ 归一。非正整窗的逐行补图只授整个类共用势，不授一般正下界完整窗、固定图或共同轨道。三席无未解决的致命异议，未修改原 Claim 的对象和量词。
+
 - [ ] `S05.03` 所需条件是否可以写成可计算的积分判据？
 - [ ] `S05.04` 积分判据是充分、必要，还是某个函数类中的充要条件？
 - [ ] `S05.05` `\Theta` 是否需要单调、连续、凹或可微？
