@@ -3583,3 +3583,12 @@
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(0<L<1/2\)，\(\rho_L=L/(1-L)\)。若一列 \(t_{k+1}=A(t_k)\) 满足 \(r_k=t_{k+1}/t_k\in(\rho_L,1)\)，在 \(\mathbb R\) 中取 \(s_k=t_{k+1}/L\)、\(x_{k+1}=x_k-s_k\)、\(p_k=x_k-t_k\)，并取 \(S=\{p_k\}\) 及可和情形的唯一极限点，则 \(S\) 闭，\(d(x_k,S)=t_k\)，每步输入/输出最近锚分别为 \(p_k,p_{k+1}\)，且步长支和 \(D(t_k)=t_k^2r_k(r_k-L)/L^2\) 同时取等。把投影关系与边 \(x_k\mapsto x_{k+1}\) 合并，得到固定的全域非空闭图 \(J\)，其反演 \(F=(J^{-1}-I)/\lambda\) 满足 \(\operatorname{zer}F=S\) 和 \(d(x_{k+1},S)=\lambda Lr_F(x_{k+1})\)。
 - **Sharp example and boundaries**：\(A(t)=t/(1+t)\) 在 \(t_0<(1/\rho_L)-1\) 时给出局部孤立离散闭零集、\(t_k\downarrow0\) 和 \(\sum s_k=\infty\)。任何局部孤立零集只排除总长可和的步长支链；闭仿射集连一条 \(a<b\) 的步长支边都不能有。L6a 排除了局部锥、特别是多面体闭凸集的收敛锚链；一般弯曲闭凸集的可和/非可和链仍保持 open，不能把未闭的法锥符号论证写成定理。
 - **Evidence / Related Files**：[低 \(L\) 固定图证明](research/topics/dd2/lowL_dynamic_sharpness.md)、[DD2 反向定理](research/topics/dd2/core.md#dd2-reverse)。
+- **后续审查**：[C413](#c413) 关闭有限维一般闭凸集上的收敛锚与可和链义务。锚不收敛的链仍待分类。
+
+<a id="c413"></a>
+## C413-v1 · 有限维闭凸目标排除低参数严格步长支的收敛锚链
+
+- **Status**：`derived-checked`（相对法锥、锚改变、有限维紧性和两支交界逐项检查）。
+- **Exact Statement / Objects / Domain / Quantifiers**：任取有限维实欧氏空间 \(H\)、非空闭凸 \(S\subset H\)、序列 \((x_k)\)，记 \(p_k=P_Sx_k\)。若从某步起每步有正数 \(t_k,a_k,b_k\) 与单位向量 \(e_k,e'_k\) 满足 \(x_k=p_k+t_ke_k\)、\(x_{k+1}=p_k-b_ke_k=p_{k+1}+a_ke'_k\)、\(b_k>a_k\)，则 \(p_k\) 不收敛，且 \(\sum_k\|x_{k+1}-x_k\|=\infty\)。覆盖严格低 \(L\) 步长支逐步取等，不对给定算子另加假设。
+- **Dependencies / Evidence**：C400 的步长支与 C411 的等号几何给出假设中的反射构形。相对外法锥是闭图尖锥。在候选极限点法锥的单位截面凸包取最小范数点，得到同时位于法锥且对其单位方向一致为正的支撑方向。紧性将严格符号传到邻近锚，迫使有符号支撑差严格递减而不能趋零。[完整证明及边界检查](research/topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex)。
+- **Counterevidence / Scope**：若 \(b_k=a_k\)，单点闭凸目标在两支交界即可给出可和链。对无限维空间或锚不收敛的闭凸轨道，本命题没有分类。旧法锥取向反驳见 [F143](FAILED_ROUTES.md#f143)。

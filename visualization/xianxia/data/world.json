@@ -10727,6 +10727,17 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-LOW-L-CONVEX-ANCHOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13609,6 +13620,10 @@
     "E723": {
       "x": 1206.6,
       "y": 5378.96
+    },
+    "E724": {
+      "x": 670.92,
+      "y": 5134.09
     }
   },
   "bounds": {

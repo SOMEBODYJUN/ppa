@@ -1,6 +1,6 @@
 # DD2 任务书验收矩阵（基线 `d6ecad7`）
 
-**适用范围。** 这是前一份交接稿的七项 P0–P3 专项矩阵。当前主任务遵循[作者原版 17 节协议](../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)，逐问进度见[最终数学验收](DD2_FINAL_ACCEPTANCE.md)。
+**适用范围。** 这是前一份交接稿的七项 P0–P3 专项矩阵。当前主任务遵循[作者原版 17 节协议](../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)，逐问进度见[最终数学验收](DD2_FINAL_ACCEPTANCE.md)。以下为原批次裁决。后来 [C413](../../CLAIMS.md#c413) 解决了 P1 一般有限维闭凸目标上的收敛锚和可和链义务。
 
 本文把任务书中的 P0–P3 工作线逐项绑定到规范 Claim、证明文件和剩余义务。`derived-checked` 只表示项目内的推导、量词和反例已经复核；它不表示全球先行性已经穷尽，也不把比较级必要性升级成算子级反例。
 

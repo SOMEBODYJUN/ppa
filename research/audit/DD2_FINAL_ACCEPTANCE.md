@@ -10,7 +10,7 @@
 | --- | --- | --- |
 | §1 数学身份 | [C400–C401](../topics/dd2/core.md)、[原 A/B](../canonical/ppa_ab_necessary_bounds.md) | 交出统摄版本的精确定理，核对 A、旧 $B_\omega$、新 $B_\Phi$、输出相对步长与同一步耗散的关系。逐条核 Hilbert 投影存在、截断、全边与选支覆盖。 |
 | §2 一般函数补偿 | [一步精确几何](../topics/dd2/core.md#dd2-geometry)、[保留有符号模的几何](../topics/dd2/dual_eb.md#dd2-dual-envelope) | 统一有符号 $\Phi$、不连续及振荡模、平台的单侧反演、可行域为空、上确界不取到、比较迭代与整窗算子实现。固定尺度与整窗的充分、必要、充要分别证明。 |
-| §3 恢复 DD1 | [C285](../canonical/rleb_sharp_linear_frontier.md#rsl-threshold)、[反向补偿](../topics/dd2/core.md#dd2-reverse)、[C411](../../CLAIMS.md#c411) | 对齐 DD1 全部旧假设、反射换参、评价窗、步长和统一收缩。分别签收精确一步因子、严格下降边界、临界完整图和固定目标的动态范围。 |
+| §3 恢复 DD1 | [C285](../canonical/rleb_sharp_linear_frontier.md#rsl-threshold)、[反向补偿](../topics/dd2/core.md#dd2-reverse)、[C411](../../CLAIMS.md#c411)、[C413](../../CLAIMS.md#c413) | 对齐 DD1 全部旧假设、反射换参、评价窗、步长和统一收缩。分别签收精确一步因子、严格下降边界、临界完整图和固定目标的动态范围。 |
 | §4 收敛层级 | [距离、点与长度](../topics/dd2/core.md#dd2-trajectory)、[迭代边界](../topics/dd2/relaxation.md#dd2-adaptive-examples) | 给出带局部留域、停滞和集合识别量词的完整蕴含关系。特别核对不连续比较模、渐近正则、完整真残差和实际算法残差。 |
 | §5 长度势 | [C401](../topics/dd2/core.md#dd2-general-gauge)、[非线性长度与耦合障碍](../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md) | 对原稿 F1–F3 逐条重构或指出断点。分清积分充分性与何种类中的必要性，核势的最弱正则性、振荡与对数模、有限长但不满足候选判据的例子，以及最优尾预算。 |
 | §6 幂次分区 | [C399](../canonical/dd2_power_defect_finite_length.md#dd2-power-defect)、[常数与半阶见证](../canonical/dd2_power_defect_finite_length.md#dd2-power-witnesses) | 交叉验收 $q>1$、$q=1$、$q<1$ 与 $pq\gtreqless 2$，逐区给严格下降、可续、有限长、最优率和同量词取等或反例。C399 的正面定理范围为 $1/2<q<1$。 |
@@ -31,6 +31,7 @@
 - **有符号下界。** 固定 $t=1$、$\Phi(t)=1/4$、$\psi(s/\lambda)=s$。由锚定下界与 Cauchy–Schwarz，$1/4\le s(1-s)$，故 $s=1/2$。有符号能量给 $a\le 1/2$，中点构形取等。取 $D=[-\Phi]_+=0$ 后，旧包络为 $1/\sqrt{2}$。截断可以给安全放宽，但不会给原有符号假设的精确值。
 - **不连续误差界。** 固定 $t=1,D=0$，取 $\psi(s/\lambda)=0$ 当 $s\le1/2$，其余为 $1$。原一维优化在 $s\downarrow1/2$ 的右侧趋向 $\sqrt{3}/2$，却无最大值。该侧的值满足准确几何的 $(1-s)_+\le a$，故即使保留最近点约束，也须处理上确界不取到。
 - **幂次覆盖。** C399 在 $1/2<q<1$ 给出正面定理，已有 $q\le1/2$ 反例和 $0<q<1$ 的临界常数见证。协议要求的全分区、最优率和整窗构造须逐区提交证据。
+- **低 $L$ 闭凸达到边界。** [C413 的证明](../topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex) 解决上一轮留下的可和链问题。任意有限维闭凸目标上，严格步长支逐步取等迫使锚不收敛。两支交界可有可和链，一般闭凸目标上的锚不收敛链仍待分类。
 
 ## 执行与完成判据
 

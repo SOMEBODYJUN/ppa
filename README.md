@@ -10,7 +10,7 @@
 
 [P2 覆盖与矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)给出近极小完整图值 lift 的必要量词、选定分支的反例以及原始—对偶块的 Schur 补可计算证书，并由 [C408](CLAIMS.md#c408) 登记其作用域。
 
-[P0 先行性审计](research/audit/DD2_P0_PRIOR_ART_2026-11-21.md)逐式核对 Lauster–Luke 2021、Alcantara v1 和 Li–Mordukhovich 2012，明确 DD2 与既有比较曲线、全锚半单调 PPA 及 Hölder PPA 的重合和量词差异；它把公开优先性保留为未决，不把代数重合写成首创。[P2/P3 扩张审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-verification)补充一般势扰动、物理二点恢复和有通信假设的分布式固定步证书，由 [C410](CLAIMS.md#c410)、[C412](CLAIMS.md#c412) 登记。低 (L) 的固定图动态见 [C411](CLAIMS.md#c411)；一般闭凸链的未闭义务保留在该 Claim 中。
+[P0 先行性审计](research/audit/DD2_P0_PRIOR_ART_2026-11-21.md)逐式核对 Lauster–Luke 2021、Alcantara v1 和 Li–Mordukhovich 2012，明确 DD2 与既有比较曲线、全锚半单调 PPA 及 Hölder PPA 的重合和量词差异；它把公开优先性保留为未决，不把代数重合写成首创。[P2/P3 扩张审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-verification)补充一般势扰动、物理二点恢复和有通信假设的分布式固定步证书，由 [C410](CLAIMS.md#c410)、[C412](CLAIMS.md#c412) 登记。[C411](CLAIMS.md#c411) 给出低 \(L\) 固定图逐步达到，[C413](CLAIMS.md#c413) 排除有限维闭凸目标上的严格步长支收敛锚与可和链。
 
 [DD2 论文结构与 GPT Pro 任务书](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md)列出可写定理、严格例、文献差距与各项未闭门。[CP／DR](research/topics/dd2/splitting.md#dd2-splitting-component)给分量充分条件、显式非零位置模及慢收敛的完整算法例；[其他分裂固定步审计](research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md)逐式核对 FBF、外梯度和 FRB 的实际步能量及反例。[Inexact DD2](research/topics/dd2/inexact.md#dd2-inexact-absolute)给真图扰动、尾和与临界精度。
 
@@ -342,7 +342,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
-| [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 的低 (L<1/2) 步长支动态审计。L1–L2 在同一闭零集和固定完整图上逐步实现指定 (A)，L3 给 (A(t)=t/(1+t)) 的局部孤立零点与无限长度例，L4–L5 给局部孤立的可和障碍和闭仿射单步障碍，L6a 闭合局部锥/多面体闭凸集的收敛锚障碍；一般弯曲闭凸链保留为未决 candidate。研究低参数动态尖锐性、最近锚切换或写主文范围时读取。 |
+| [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 在同一闭零集和固定完整图上逐步实现低 \(L<1/2\) 的严格步长支，包含局部孤立零点与无限长度例、闭仿射单步障碍。C413 以相对法锥的统一正向排除一般有限维闭凸目标上的收敛锚链及可和链。研究动态尖锐性、最近锚切换或写主文范围时读取。 |
 | [research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md](research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md) | 旧交接稿的七项 P0–P3 专项审计，绑定 C407/C408/C410/C411/C412、证明和未闭义务。用作最终协议相应小问的证据。 |
 | [research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md](research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md) | FBF、外梯度和 FRB 的固定步实际能量、残差 lift、欧氏距离反例与交叉项 Lyapunov 作用域；写其他分裂扩展或检查其不能自动统一时读取。 |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |

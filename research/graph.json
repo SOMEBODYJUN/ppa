@@ -5322,6 +5322,12 @@
       "label": "C406 有真图见证的 DD2 扰动稳定性",
       "file": "topics/dd2/inexact.md#dd2-inexact-absolute",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-LOW-L-CONVEX-ANCHOR",
+      "label": "C413 有限维闭凸目标的严格步长支收敛锚障碍",
+      "file": "topics/dd2/lowL_dynamic_sharpness.md#dd2-low-l-convex",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13613,6 +13619,17 @@
       "output": "DD2-INEXACT",
       "relation": "conditional",
       "scope": "用同一允许真图上的受扰输入识别残差，绝对势预算或严格相对耗散给真实步长望远镜。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E724",
+      "topic": "DD2 反向补偿与轨道",
+      "inputs": [
+        "DD2-REVERSE-A"
+      ],
+      "output": "DD2-LOW-L-CONVEX-ANCHOR",
+      "relation": "conditional",
+      "scope": "有限维闭凸目标上连续逐步达到严格低 L 步长支，等号几何与相对法锥的统一支撑方向排除收敛锚链和可和轨道。",
       "status": "derived-checked"
     }
   ]
