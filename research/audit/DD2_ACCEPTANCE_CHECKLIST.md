@@ -318,7 +318,12 @@
   - **证据** [RC1–RC4 的三种直接构造及边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-raw-potential-construction)、[IP1–IP2 原非单调模的准确下界](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)、[JB1–JB4 最大实际成本和联合势](../topics/dd2/joint_relation.md#dd2-joint-length-bellman)、[C429 原域下界](../canonical/dd2_function_hypotheses.md#fh-generalized-step-inverse)、[C428 有符号密集例](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)、[C436 完整前像障碍](../topics/dd2/joint_relation.md#dd2-complete-fiber-filter)、[同数据完整旋转与恒等算子](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)。
   - **复核** 三席先完成四项数学自检，独立重建原域积分、有符号几何和同数据边界，再逐式复读实际最终 RC1–RC4、JB1–JB4、IP1–IP2、C419/C435 补证、失败记录、地图及清单。固定指标集、原逆的全域/局部资格、零输入三分、IP 下确界未达与原目标比较均核；正二次与变号系数、每行最大实际成本及其完整实现逐式相符。非空尺度才评价 M/根，扩域不认证目标，最小性按 C=1 或支付函数 CΘ 归一。非正整窗的逐行补图只授整个类共用势，不授一般正下界完整窗、固定图或共同轨道。三席无未解决的致命异议，未修改原 Claim 的对象和量词。
 
-- [ ] `S05.03` 所需条件是否可以写成可计算的积分判据？
+- [x] `S05.03` 所需条件是否可以写成可计算的积分判据？
+  - **裁决** Proved
+  - **结论** C419 的正非减实际步下界与严格吸收合同给候选积分；它精确等价于二进正项级数收敛，并可由认证紧段上下和加已证零端尾界核算。任意精度需要有效尾模，有限采样不能证全窗吸收或积分敛散。C401 普通逆积分可准确换为原模平方积分，无须可微；幂与对数模型给显式尾证书。共享有效连续模的连续严格增原模仍有有限查询同答、积分分别为 2 与无穷的例子；同完整非空图和同预设目标均核，反证只限信息模型，不反判固定图真实长度。
+  - **证据** [CI1–CI4 的验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-computable-integral-acceptance)、[IC1–IC6 的级数、误差、换元与反证](../canonical/dd2_function_hypotheses.md#fh-integral-computation)、[C419 原充分合同](../../CLAIMS.md#c419)、[F149 计算失败边界](../../FAILED_ROUTES.md#f149)。
+  - **复核** 三席先完成四项数学自检，独立推导后逐式复读实际 IC1–IC6、CI1–CI4、C419/F149、地图与清单。核准二进壳常数与尾索引、非连续 b 的加权夹逼、固定原域截断与合法网格、认证实数运算、一次有限尾证与有效尾模的区别；CI3 已补含零域守卫。普通逆恒等式用非负积分交换，不要求导数。自适应有限查询、共同连续模、完整 F=I 真残差及共同预设目标均逐边核，未转授轨道必要性；远端语义澄清已安全合入。无未关闭致命异议，原 C419 身份未改。
+
 - [ ] `S05.04` 积分判据是充分、必要，还是某个函数类中的充要条件？
 - [ ] `S05.05` `\Theta` 是否需要单调、连续、凹或可微？
 - [ ] `S05.06` 是否允许非幂次、对数修正、振荡模函数？

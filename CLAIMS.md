@@ -3683,6 +3683,8 @@
 
 - **S05.02 原函数构造补证**：[IP1–IP2](research/canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)直接对原 $\psi(r)=r(1+\mathbf1_{\mathbb Q}(r))$ 求得 $b_{\psi,1}(t)=t/3$，包括正尺度下确界不达到的情形；$\Phi=0$ 给 $\Theta=3t,C=2$，预设 $9t/10$ 另由原一步数据认证。保原域而不作物理残差代换。[RC1–RC4](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-raw-potential-construction)分开默认原模下界、实际可选其他下界与有符号联合构造的范围。
 
+- **S05.03 积分计算补证（原充分命题身份不变）**：[IC1–IC6](research/canonical/dd2_function_hypotheses.md#fh-integral-computation)对任意正有限非减下界给等价二进级数和全部截断尾的双边常数；认证节点、紧段划分及有效零端尾界给数值误差。C401 普通逆合同另给非负积分交换恒等式，直接由原模平方积分核候选可积性。共享连续模的两份连续严格增原函数仍可在任何有限查询上同答而候选积分敛散不同；这限制无尾信息的计算承诺，不把积分发散升级为固定图失败，也不改 C419 的正性、严格吸收或轨道前件。
+
 <a id="c420"></a>
 ## C420-v1 · 零缺陷统一算子类的固定模积分充要性
 
