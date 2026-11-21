@@ -216,18 +216,28 @@
 \]
 则对每个 \(x_*\in\operatorname{zer}(A_{\rm net}+B_{\rm net})\)
 \[
+ \begin{aligned}
  \|x^{k+1}-x_*\|_P^2
- \le \|x^k-x_*\|_P^2
- -(2\kappa\lambda-\lambda^2)\|B x^k-B x_*\|_{P^{-1}}^2
- -\|x^{k+1}-x^k\|_P^2.\tag{P20}
+ &\le \|x^k-x_*\|_P^2
+ -\Bigl(1-\frac{\lambda}{2\kappa}\Bigr)\|x^{k+1}-x^k\|_P^2\\
+ &\quad-2\lambda\kappa\left\|P^{-1/2}(B x^k-B x_*)
+ -\frac{1}{2\kappa}P^{1/2}(x^k-x^{k+1})\right\|^2 .
+ \end{aligned}\tag{P20}
 \]
 在 \(\lambda<2\kappa\) 下得到 Fejér 单调和平方可和；若零集非空且 \(A_{\rm net}+B_{\rm net}\) 零值闭，则有限维轨道收敛到共识解。若各节点只交换 \(L^{1/2}x^k\) 的量化值，误差 \(e^k\) 满足 \(\sum_k\|e^k\|_P<\infty\)，则 (P20) 右端增加一个可和拟 Fejér误差项，结论保留。
 
 **证明。** 预条件 resolvent 的单调性给
 \[
- \langle x^{k+1}-x_*,P(x^k-x^{k+1})-\lambda(Bx^k-Bx_*)\rangle\ge0.
+ \|x^k-x_*\|_P^2-\|x^{k+1}-x_*\|_P^2
+ \ge \|s\|_P^2+2\lambda\langle x^{k+1}-x_*,b\rangle,
 \]
-用 \(2\langle a,b\rangle=\|a\|_P^2+\|b\|_P^2-\|a-b\|_P^2\) 展开，并用 (P18) 控制前向项，得到 (P20)。连通性只用于 \(\ker\mathsf L=\mathcal C\) 和 \(P\) 在共识/分歧分解上的正定性；\(\lambda_2(\mathsf L)>0\) 给分歧方向的定量门。量化扰动先按 C406 的同图误差写成 \(e^k\)，再用可和尾控制。
+其中 \(s=x^k-x^{k+1}\)、\(b=Bx^k-Bx_*\)。用 \(x^{k+1}-x_*=x^k-x_*-s\) 和 (P18) 后，右端至少为
+\[
+ \|s\|_P^2+2\lambda\kappa\|b\|_{P^{-1}}^2-2\lambda\langle s,b\rangle
+ =\Bigl(1-\frac{\lambda}{2\kappa}\Bigr)\|s\|_P^2
+ +2\lambda\kappa\left\|P^{-1/2}b-\frac1{2\kappa}P^{1/2}s\right\|^2,
+\]
+即得 (P20)。连通性只用于 \(\ker\mathsf L=\mathcal C\) 和 \(P\) 在共识/分歧分解上的正定性；\(\lambda_2(\mathsf L)>0\) 给分歧方向的定量门。量化扰动先按 C406 的同图误差写成 \(e^k\)，再用可和尾控制。
 
 ### 不能删除的通信前件
 
