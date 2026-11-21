@@ -3682,3 +3682,19 @@
 - **Conclusion / Scope**：同一连续 Lipschitz 非单调输入模和线性输出模 (14) 下，分别施加输入界、输出界和两界的三个完整图类，在每个 \(t_n=10^{-n}\) 的精确距离因子分别为 \(\sqrt{15}/4,4/5,\sqrt{19}/10\)。每个类有一个固定完整闭图在所有指定尺度达到它的上界。
 - **Definitions / Dependencies / Evidence**：C403 的逐边几何和图剪切。非减情况取两个单侧见证中较大的步长。完整图的输出界在整个输入纤维强制 \(r_F(z)\ge (I+\psi)^{-1}(t)\) 后才评估非单调 \(h\)。[证明、公式及固定图取等](research/topics/dd2/dual_eb.md#dd2-dual-true-fiber)。
 - **Counterevidence / Objections / Related Files**：非减逐边公式不自动授予任意完整图类的锐性。新例允许多值完整预解式，严格增益落在指定小尺度。在另一列趋零尺度仍可达到输出单用的统一因子。优化来源、连续单值和轨道增益另验，公开优先性待查。
+
+<a id="c424"></a>
+## C424-v1 · 固定 Hölder 正则性下次阶缺陷余量的长度充要门
+
+- **Status**：`derived-checked`。充分、取等及完整反演经独立核对。
+- **Exact Statement / Scope**：固定 \(\lambda=1,1<m<2,\psi(r)=r^{1/m}\)、\(2D(t)=t^{2m}-w(t)\)，其中 \(0<w(t)\le t^{2m}\) 连续并在每个 \([t/2,t]\) 上统一可比。\(H(t)=t^2+t^{2m}\)、\(A_*=H^{-1}(H-w)\) 在小窗严格递增。对整个距离窗有覆盖、每边最近锚缺陷至多 \(D\) 且满足指定真输出误差界的有限维统一类，全部轨道有限长当且仅当 \(\int_0^R u^{m+1}/w(u)\,du<\infty\)。局部窗留域使用充分侧总预算。
+- **Evidence / Related Files**：平方能量给 \(w(t)\lesssim t^2-a^2\)，进而给同一步长度势。平面旋转以 \(a=A_*(t),s=a^m\) 同时达到两约束，并全域反演为连续单值完整算子。[证明和幂对数端点](research/canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)。
+- **Boundary / Objections**：同一 \(\psi\) 与 \(D(t)\sim t^{2m}/2\) 能分别给有限长或无限长。必要性在统一类成立，保留余量可比、等号半径递增和二维反演范围。先行性未审尽。
+
+<a id="c425"></a>
+## C425-v1 · 固定 DR 约化下原变量角变差与长度的精确刻画
+
+- **Status**：`derived-checked`。独立复核了反射复合、配对公式、完整正反例与成本序列实现。
+- **Exact Statement / Scope**：在 C405 的二维临界旋转分裂族，固定 \(\vartheta,P,z_0\)，将两个反射的角分别分配为 \(\phi(r)\) 和 \(\vartheta(r)-\phi(r)\)。所有有界、在正半轴连续的 \(\phi\) 产生同一完整约化迭代和相同约化真残差。实际原变量长度有限当且仅当 \(\sum_k r_k|\sin((\phi(r_{k+1})-\phi(r_k))/2)|<\infty\)。任何 \(0\le b_k\le r_k\) 的角变差成本序列都由一个固定分裂实现。
+- **Evidence / Related Files**：实际配对是 \(u_k=(z_k+R_{\phi_k}z_k)/2,v_k=u_k-z_{k+1}\)。相邻配对增量与 \(\sqrt2 b_k\) 之差由已可和的约化增量控制。[完整推导及优化来源障碍](research/topics/dd2/splitting.md#dd2-same-reduction-phase)。
+- **Boundary / Objections**：比较固定约化过程所决定的数据。原物理残差函数可随分裂而异。当前旋转族的两个分量不能同时为真实全局极小近端，证据为循环单调与闭圆环流。自然耦合目标模型及外部先行性另验。

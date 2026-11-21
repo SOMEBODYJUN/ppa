@@ -10837,6 +10837,28 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-SAME-REDUCTION-PHASE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-VANISHING-BUDGET": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13755,6 +13777,14 @@
     "E732": {
       "x": 539.01,
       "y": 5740.51
+    },
+    "E733": {
+      "x": 923.69,
+      "y": 5469.64
+    },
+    "E734": {
+      "x": 1091.69,
+      "y": 5558.19
     }
   },
   "bounds": {

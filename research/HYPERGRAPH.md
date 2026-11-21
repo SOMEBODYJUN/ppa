@@ -1122,6 +1122,13 @@
 | --- | --- | --- | --- |
 | E732 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-DUAL-TRUE-FIBER · C423 双残差逐边因子与完整图联合增益](topics/dd2/dual_eb.md#dd2-dual-true-fiber) | 非减逐边模给精确单端包络的最小值；零缺陷单点完整纤维的输出约束排除非单调输入模允许的孤立值，三种完整图类有指定小尺度的严格分离。；**derived-checked** |
 
+## DD2 补偿的动态与原变量边界
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E733 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-VANISHING-BUDGET · C424 次阶缺陷余量的长度充要门](canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget) | 固定 Hölder 真正则模、可比正余量与递增等号半径下的精确积分门，完整旋转实现发散侧。；**derived-checked** |
+| E734 | [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | conditional → [DD2-SAME-REDUCTION-PHASE · C425 同一 DR 约化下角变差与实际长度](topics/dd2/splitting.md#dd2-same-reduction-phase) | 固定完整约化映射和真残差，按反射角的不同分配精确控制原变量的实际长度。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
