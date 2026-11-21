@@ -128,6 +128,8 @@ m_Cr_G(w)\le\inf_{C^*y=w}r_{A_{\mathcal R}}(y)\le M_Cr_G(w).
 
 Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接入 DD2。Theorem 4.10–4.12 的弱收敛、唯一 fiber、强恢复和 Lipschitz recovery 可恢复，但需要完整 lift、目标闭性、零值 demiclosedness 和 DD2 留域条件。
 
+§9 逐题证据与量词索引：§9.1–§9.3 使用 `../topics/dd2/pppa_recovery.md` 开头定义和式 (1)，量词是闭值域下的每个允许图值。§9.4–§9.7 使用同文件“锚定条件与最近点”段，量词分别是选定影子、非空局部关系和存在最近锚。§9.8–§9.11 使用式 (2)–(4) 及 gauges 表，完整结论要求每个允许 q 都有 lift，selected relation 只给存在性。§9.12 使用同文件对 Lemma 4.3、Theorems 4.10–4.12 的映射，附加矩阵正定、闭图和 recovery 条件不能省略。
+
 ---
 
 # §10 Shadow recovery
@@ -144,6 +146,8 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 10. **Recovery conditions from structure，Conditional。** Theorem 4.11–4.12 的 \((U,V)\) 强正定给出一种可验证结构。
 11. **Finite-dimensional simplification，Proved conditionally。** 外半连续、闭图和局部有界可用紧性加强。
 12. **Weaker mechanism，Partial。** 最弱可靠组合是约化强收敛、闭目标、有界 lift、零值闭图和唯一 fiber。非唯一 fiber 只能给正确 fiber 的聚点结论。
+
+§10 逐题证据与量词索引：§10.1–§10.2 对所有强收敛约化轨道使用 `../topics/dd2/pppa_recovery.md` 的“投影识别”段。§10.3–§10.5 的量词是所选影子序列有界并且每个弱聚点满足零值闭图，非唯一 fiber 只给聚点。§10.6–§10.9 使用该文件的“一点恢复”“物理长度”段，二点估计需对轨道相邻输入成立。§10.10–§10.12 使用 Theorems 4.11–4.12 及有限维专门化，任何强恢复均是附加条件下的 conditional 结论。
 
 ---
 
@@ -229,6 +233,19 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 
 逐式证据位于 DD2_P0_PRIOR_ART_2026-11-21.md 与 research/LITERATURE.md。未读版本不升级为 Paper Fact。
 
+### §15.1–§15.10 十项迁移问题
+
+1. **状态：Recovered conditionally。** 原论文真正证明的是各自固定版本中明确写出的比较曲线、半单调 PPA、约化前向、Hölder PPA 或 KL/有限长度结论。证据：`DD2_P0_PRIOR_ART_2026-11-21.md` 的 Paper fact 小节和 `research/LITERATURE.md`。量词按原文版本保留。
+2. **状态：Proved for the read versions / Partial globally。** 已读文献的空间、图、目标、残差和局部或全域量词已登记。仅有摘要或未读版本保留 deferred，不能升级为 Paper fact。证据：`research/LITERATURE.md` 的版本与访问边界记录。
+3. **状态：Conditional。** C400–C406、C404 和 C405 分别恢复 Lauster–Luke 的比较迭代特例、Alcantara 的普通 PPA/约化/分裂特例、Hölder PPA 的幂次门。证据：P0 审计逐式换参以及本文件 §9–§14。
+4. **状态：Partial / Conditional。** 恢复通常只覆盖固定步、闭值域、完整 lift、匹配的 full-graph 或 selected-relation 版本。原论文中未被 DD2 假设重建的紧性、自映射、局部覆盖或矩阵正性保持为附加条件。证据：P0 §2.3、`pppa_recovery.md` 证据边界。
+5. **状态：Proved as scope separation。** 不能自动恢复的假设包括 CAT(κ) 或 p-一致凸几何、bounded compactness、自映射留域、Alcantara 的零值 demiclosedness、完整 shadow fiber 和分裂算法的 resolvent 非空性。证据：P0 的严格边界段与 `splitting.md` 适用边界。
+6. **状态：Partial / Open globally。** 已证明的是若干匹配特例的恢复和几何模块的扩展，尚未证明对每一篇文献都严格削弱假设或严格增强结论。证据：C410、C404–C405 的 Counterevidence / Scope 字段。
+7. **状态：Conditional。** 不可比较关系由量词和对象差异产生，例如 DD2 的最近锚/允许边与文献的全锚/全图、自映射和紧性要求不能直接互含。证据：P0 §2.3 与 `research/LITERATURE.md` 的接口表。
+8. **状态：Partial。** 真实算子分离已在远 kernel、非唯一 fiber、非单调慢轨道以及 FRB 欧氏势反例中给出，但“严格包含全部旧算子类”尚未证明。证据：`pppa_recovery.md` 逆向障碍、`splitting.md` 慢轨道和 `DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md`。
+9. **状态：Proved for the audited modules。** 相同机制是锚定平方能量、误差界和比较迭代，不同机制是共同 s 的四点约束、值域退化 fiber、真实物理恢复和非精确误差债务。证据：本文件 §11–§14 与 `dual_eb.md`、`pppa_recovery.md`。
+10. **状态：Open as a global priority claim。** 现有记录只能排除已读版本中的直接等价误读，不能据有限检索宣称不存在更早等价结果。证据：P0 的检索边界声明和 `research/LITERATURE.md` 的未读来源清单。
+
 ---
 
 # §16 新颖性八维评价
@@ -245,7 +262,7 @@ E. 新收敛机制：Partial。一般势和物理 recovery 给出非固定 A 机
 
 F. 新算法应用：Conditional。CP/DR、FBF、EG、FRB 和固定网络子类已闭合，统一算法应用未闭合。
 
-G. 新方法：Derived-checked for geometric modules。四点共同 s 约束确实强于分开三角估计，是否普遍超越传统 Lyapunov 尚未证明。
+G. 新方法：Conditional / Partial。四点共同 s 约束在声明的几何模块中已核对严格强于分开三角估计，是否普遍超越传统 Lyapunov 尚未证明。
 
 H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点、低 L 支和物理长度分离均有构造。
 
