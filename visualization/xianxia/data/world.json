@@ -11090,6 +11090,17 @@
       "y": 5788,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-BOUNDED-POINT-NONCONVERGENCE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14112,6 +14123,10 @@
     "E758": {
       "x": 919.93,
       "y": 5741.51
+    },
+    "E759": {
+      "x": 729.54,
+      "y": 5467.96
     }
   },
   "bounds": {

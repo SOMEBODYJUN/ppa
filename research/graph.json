@@ -5520,6 +5520,12 @@
       "label": "C446 有界严格下降轨道的允许闭性与窗边界分离",
       "file": "topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-BOUNDED-POINT-NONCONVERGENCE",
+      "label": "C447 有界最近锚 PPA 的半阶与线性非收敛见证",
+      "file": "topics/dd2/relaxation.md#dd2-bounded-circular-ppa",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14218,6 +14224,18 @@
       "output": "DD2-BOUNDED-CLOSURE-BOUNDARIES",
       "relation": "conditional",
       "scope": "固定 H=ℝ、λ=1、S={0}、距离窗半径2、Phi(t)=-2t²、全域psi(r)=r。g(t)=t²于[0,1]且g(t)=(1+t)/2于t>1，完整J={0,反号g}反演为同一个闭图F，F(0)为全体实数、正输出唯一前像，全部母边满足原锚与完整真残差界。A在U=H仅删两条允许极限边；B保全域完整J但认证U=ℝ去掉正负1。两版覆盖、零驻定、全部选择不变、受检正距离严格，却均有有界合法链x_k=(-1)^k(1+2^(-k))、距离趋1。A缺允许图闭性，B缺认证窗内限输入。仅反驳一般充分定理的删项，不改C418标量必要性，不声称所有选择或连续单值近端均失败。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E759",
+      "topic": "DD2 距离与点收敛的分离",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "DD2-BOUNDED-POINT-NONCONVERGENCE",
+      "relation": "conditional",
+      "scope": "两个分别构造的三维普通 PPA 完整图，固定 λ=1、U=H。A 对任意 0<c≤1 取 S=ℝ²×{0}、F(u,v)=(f(v+v³)−f(v),v³)，f(v)=c(cos log|v|,sin log|v|)，差分零处延0；全域半阶真误差界 psi(r)=2√(r/c)、Phi=0或有效下界(1−c²)(g逆(t))^4，其中g(w)=w+w³于非负轴且c<1时正尺度下界严格正。B 对任意0<R≤1/2取S={0}×ℝ、a=t/√(1+t²)、h=sin log a−sin log t及cosθ=(t²+h²)/(2ta)，定义J的法向旋转和切向平移、窗外按比率齐次延拓，完整F=J逆−I；全域psi(r)=r，窗内Phi=−(a²+h²/2−t²/2)。两图均连续单值、完整近端同胚、精确零集及零驻定、各自受检距离窗内全部选择不变。A 的每个 v0>0（固定受检窗时 v0≤R）、B 的每个 0<t0≤R 的实际唯一轨道有界，距离与步长及完整真残差均趋零，强聚点分别为目标平面中的整圆和目标零线中的非退化区间，所以不点收敛。A另有平方步和有限、总长无限；B不声称平方步和有限。两分支不是同数据比较，不反驳额外全锚、单调或优化来源定理。",
       "status": "derived-checked"
     }
   ]

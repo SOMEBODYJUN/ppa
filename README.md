@@ -47,6 +47,8 @@
 
 [C440 的非减主曲线](research/topics/dd2/scalar_iteration.md#dd2-monotone-majorant)给前缀最小上界、严格下降与迭代趋零的分层充要条件，并将其存在与全窗标量路径一致趋零相联系。连续主曲线有更强的右连续上界条件及显式构造；左右端点障碍都有完整闭图及真残差实现。非减化不改变最坏一步比例，也不自动保持另给的目标 \(A\)，两者各有独立检验。
 
+[S04.03 的点收敛合同](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)分开可和实际步尾、全锚可和误差与目标定位。距离趋零、有界和渐近正则不够：[C447-A](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)以零缺陷、全域半阶真误差界及平方步可和得到整圆聚点；[C447-B](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)以线性真误差界取等得到零线上的闭区间聚点。两者都是连续完整单值普通 PPA，但不是同一数据或算子。它们说明必须控制沿零集的位置，有限长度只是可用的充分机制之一。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
@@ -391,7 +393,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
-| [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接。 |
+| [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接；C447-B 给连续完整图、线性真误差界下的有界非收敛轨道与准确区间聚点。 |
+| [research/topics/dd2/relaxation.md](research/topics/dd2/relaxation.md) | C402 的方向松弛、实际耗散和长度势，全锚与最近锚的量词分离；C447-A 的原算子 PC1–PC6 给全域半阶真误差界、连续完整近端及有界整圆聚点。核变松弛、全锚点收敛或误把有界渐近正则当成点收敛时读取。 |
 | [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | C442 的原稿映射及零输入修订；D1R–D1F 保存因子、符号根、尾长、两支机制、全部最近性、连续性及全几何最大值。D1S 的真实临界轨道与 D1O1–D1O12 的完整纤维、C443 固定射线同图全尺度、显式间隔拼接及全部输出不变窗分开证明。整窗共同因子排除额外帽，任意小局部坏尺度可适配正帽。核 DD1 恢复、完整局部锐性和取等量词时读取。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437–C438 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§1.6 对全部已认证边证明原真残差取样的统一安全性，核允许图与完整输出范围；§3 给精确达到判据、闭纤维端点和固定图紧性正反例；§3.4 明确原两项式的放宽域、准确 G/R 的实现及原式等值的必要充分条件，含正负完整图比较和零尺度；§3.5 给临界右前缀的严格下降充要门、逐边与共同余量的完整图分离及线性校准。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |

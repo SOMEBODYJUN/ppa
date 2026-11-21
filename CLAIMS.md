@@ -3501,6 +3501,8 @@
 - **S03.08 补证 / 完整局部类**：[D1O1–D1O12](research/topics/dd2/dd1_recovery.md#dd1-complete-local-sharpness)对同一非负轮廓实现全部单尺度几何数据，明确零输出和正距离输出的不同完整纤维。显式间隔的同图拼接保任意小不变窗及所有输出、位置/残差/使用图值帽；固定二次准确取等，任意轮廓剪预算只保坏侧。整窗共同因子的充要门排除额外帽，局部上极限门可由同一图攻击；动态必要性独立使用临界真实轨道。固定二次的同图每尺度射线实现另登 C443，不把新量词并入一般轮廓。[D1Q1–D1Q3 的两层合同](research/topics/dd2/dd1_recovery.md#dd1-sharpness-two-scope-contract)汇总每项假设、完整纤维和局部/轨道量词的实际证据，不另立重复 Claim。
 - **S03.GATE 补证 / 原参数门的闭合交付**：[D1K1–D1K8](research/topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)将原协议、教师稿与 C285 的反射参数逐个对应，区分旧候选包络和准确值，合并 \(\sigma<T(L)\) 的原因子、步长、合法尾长与覆盖预算。临界及每个越界系数都有实际最小缺陷恰等于该 \(\sigma\) 的旋转／双向块，完整纤维与局部数值帽按新参数逐一核验；给定 \(\ell\) 在严格坏侧可仅是有效常数。这是既有严格门的证明与失败证据补全，不改 C400 的一般轮廓身份，不把类级必要性提升为固定图必要性。
 
+- **S04.03 轨道边界补证**：[C447-B](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)独立登记线性真误差界取等、闭仿射目标及连续完整单值近端下的有界非收敛轨道。其固定图实际目标和本组数据的自由包络分别计算，不把这项新反例并入 C400 原一般目标的量词。
+
 <a id="c401"></a>
 ## C401-v1 · 一般函数误差界的积分长度势
 
@@ -3514,6 +3516,8 @@
 - **Status**：`derived-checked`。能量、局部续接、速率与边界轨道均有自足推导。
 - **Exact Statement / Objects / Domain / Quantifiers**：Hilbert 空间的允许边 \(q\in\mathcal F(z)\) 以最近或近似最近零锚控制 \(\langle q,z-p\rangle\ge\langle q,Vq\rangle-D(t)\)，\(V\succeq\eta I>0\)。置 \(s=\|q\|\)、\(\beta\le\langle q,Vq\rangle/s^2\)、\(a=d(z-q,S)\le\psi(s)\)、\(\chi=(I+\psi)^{-1}\)。允许 \(\alpha>0,\ 2\beta-\alpha\ge g(t)>0\) 且 \(\mu(t)=g(t)-2D(t)/\chi(t)^2>0\)。若 \(2t/(\mu(t)\chi(t))\) 有非增可积上包络，则其积分势之差控制实际 \(\alpha s\)，覆盖与初值严格预算给统一续接和尾长。再加累积松弛发散及 \(\mu\) 远离零的窗有正下界，识别极限入闭目标。
 - **Mechanism / Boundaries**：\(\alpha=2\beta-\|q\|^\kappa\) 的小窗 Hölder 子类有锐长度阈值 \(\kappa<2\vartheta-1\)。最近锚只控制距离；对每个固定锚再有统一可和误差时得到 quasi-Fejér、平方和及条件性的弱收敛和强收敛。最佳平方残差及加权残差向量平均的 \(O(1/N)\) 所用条件和结论不同。取原文 \(U\succeq0\) 与零误差回收 Proposition 3.1 的公式。证明、完整反例及外部先行范围见[正文](research/topics/dd2/relaxation.md#dd2-adaptive-length)。
+
+- **S04.03 最近锚边界补证**：[C447-A](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)把已有有界圆周机制完整写回普通 PPA，并核全域半阶真误差界、正锚可选下界及平方步和；独立登记新身份，不更改 C402 的方向图、全锚和长度假设。
 
 <a id="c403"></a>
 ## C403-v1 · 输入与输出真误差界的精确联合几何
@@ -3913,3 +3917,15 @@
 - **Conclusion — 两个受检版本**：A 取 \(U_{\mathrm A}=\mathbb R\)，仅从允许图删去 \((1,-1),(-1,1)\)，完整 \(F\) 保持不变。允许关系仍全域覆盖、零驻定，全部正距离允许边严格下降，\([-2,2]\) 对所有选择不变；允许图却不闭。B 取全域允许关系 \(\mathcal J_{\mathrm B}=J\) 和认证开窗 \(U_{\mathrm B}=\mathbb R\setminus\{-1,1\}\)。完整允许图全局闭、全部受检正距离边严格下降，\(U_{\mathrm B}\cap[-2,2]\) 对所有选择不变且覆盖。两版从 \(x^0=2\) 都有合法轨道 \(x^k=(-1)^k(1+2^{-k})\)，其距离趋 1，\(s_k=r_F(x^{k+1})=2+3\,2^{-(k+1)}\to2\)。A 的极限输入留窗而两条极限边不被允许；B 的极限边被完整图允许，但输入不在认证窗。
 - **Definitions / Dependencies / Evidence**：D01 的完整图反演、D04 的真实残差定义。正文 [BC1–BC5 的全纤维与逐边证明](research/topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries)先核 \(g^{-1}\) 唯一性、闭图、精确零集和所有母边前件，再核两个允许/位置合同；\(g(t)=1\iff t=1\) 保 B 的全部输出留域。首段另重构 C418 的实际强边聚点充分论证，说明反例各缺其中哪一项，而不改 C418 的全部标量路径身份。
 - **Counterevidence / Objections / Scope / Related Files**：仅声称存在坏选择，允许投影到零的选择仍可一步终止。反例排除一般充分定理删去允许图闭性或认证窗内聚点条件，不把这两条件称为每个收敛固定图的必要条件。B 在距离恰为 1 时没有受检输入；空层不被赋予实际包络，也不免除 C418 对该正极限阈值的右侧门。两版在 1 右侧均有实际输出 \(g(u)>1\)，故任何支配它们的目标都不满足该门。母近端允许多值，未给连续单值近端受限类的同样结论，未认定公开新颖性。[S04.02 验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-distance-zero-acceptance)、[F147](FAILED_ROUTES.md#f147)保存其精确作用。
+
+
+<a id="c447"></a>
+## C447-v1 · 有界最近锚 PPA 不收敛的半阶与线性真误差界见证
+
+- **Status**：`derived-checked`。三路先独立重建两组完整图及轨道，再复读实际 PC1–PC6、CV1–CV3、本卡、E759 和最终验收记录；原残差、初值/窗口量词、聚点集合及两分支性质分离均通过。
+- **Exact Statement / Objects / Domain / Quantifiers — 分支 A**：对任意 \(0<c\le1\)，取 \(H=\mathbb R^2\times\mathbb R,\lambda=1,S_{\rm A}=\mathbb R^2\times\{0\}\)。令 \(h(v)=v+v^3\)、\(f(v)=c(\cos\log|v|,\sin\log|v|)\) 于 \(v\ne0\)、\(b(v)=f(h(v))-f(v)\) 于 \(v\ne0\)、\(b(0)=0\)，定义整个原算子 \(F_{\rm A}(u,v)=(b(v),v^3)\)。位置窗 \(U=H\)，原残差域为 \([0,\infty)\)，取 \(\psi_{\rm A}(r)=2\sqrt{r/c}\)、\(\Phi_{\rm A}=0\)。允许关系是完整 \(J_{\rm A}=(I+F_{\rm A})^{-1}\)，不删纤维、边或输出。本卡两分支均记 \(\rho_k=r_F(x^{k+1})\)，始终取完整输出纤维。
+- **Conclusion — A 的全图与实际轨道**：\(F_{\rm A}\) 全域连续单值，\(I+F_{\rm A}\) 及完整 \(J_{\rm A}\) 为同胚，精确零集是 \(S_{\rm A}\)，零输入驻定。任意完整边的唯一最近输入锚给 \(t=h(|v|),a=|v|,\rho=s=(\|b(v)\|^2+v^6)^{1/2}\)、锚积 \(v^4-\|b(v)\|^2\ge(1-c^2)v^4\)；全域真误差界成立。故还可取有效下界 \(\Phi_c(t)=(1-c^2)(h^{-1}(t))^4\)，在 \(c<1,t>0\) 时为正。任意 \(R>0\) 的距离窗对全部完整选择不变。对每个 \(u_0\in\mathbb R^2,v_0>0\)，唯一轨道有 \(v_k=v_{k+1}+v_{k+1}^3\)、\(u_k-f(v_k)=u_0-f(v_0)\)，有界且 \(t_k=v_k\downarrow0\)。强聚点集恰为 \(\{(u_0-f(v_0)+c(\cos\theta,\sin\theta),0):0\le\theta<2\pi\}\subset S_{\rm A}\)，故不点收敛。实际 \(s_k=\rho_k\sim c/(2k)\)，总长发散、平方步和有限且不超过 \(t_0^2\)。在指定距离窗内取 \(v_0\le R\)。
+- **Exact Statement / Objects / Domain / Quantifiers — 分支 B**：这是另一个图，固定 \(H=\mathbb R^2\times\mathbb R,\lambda=\ell=1,S_{\rm B}=\{0\}\times\mathbb R,U=H,0<R\le1/2\)。在 \(0<t\le R\) 置 \(a_*(t)=t/\sqrt{1+t^2}\)、\(h_*(t)=\sin\log a_*(t)-\sin\log t\)，取 \(\theta(t)=\arccos((t^2+h_*(t)^2)/(2ta_*(t)))\)。定义 \(J_{\rm B}(u,v)=((a_*(t)/t)R_{\theta(t)}u,v+h_*(t))\)，其中 \(t=\|u\|>0\)，并置 \(J_{\rm B}(0,v)=(0,v)\)。在 \(t>R\) 将 \(a_*/t,h_*/t,\theta\) 分别延为其在 \(R\) 的常值。取完整 \(F_{\rm B}=J_{\rm B}^{-1}-I\)，原模全域 \(\psi_{\rm B}(r)=r\)，窗内 \(\Phi_{\rm B}(t)=-D(t)\)、\(D(t)=a_*^2+h_*^2/2-t^2/2\)、\(D(0)=0\)。
+- **Conclusion — B 的全图与实际轨道**：\(J_{\rm B}\) 为全域同胚，\(F_{\rm B}\) 连续单值，完整近端恰为 \(J_{\rm B}\)，精确零集 \(S_{\rm B}\)，零输入驻定。每条完整边有 \(\rho=s=a_*\)，全域线性真误差界取等；窗内唯一最近输入锚的内积为 \(-D(t)\)，\(0<D(t)<t^2/2\) 于 \(0<t\le R\)，所有完整输出保距窗。对任意 \(0<t_0=\|u_0\|\le R,v_0\in\mathbb R\)，唯一轨道满足 \(t_k=(t_0^{-2}+k)^{-1/2}\)、\(v_k=v_0+\sin\log t_k-\sin\log t_0\)、\(s_k=\rho_k=t_{k+1}\to0\)。强聚点集恰为 \(\{0\}\times[v_0-\sin\log t_0-1,v_0-\sin\log t_0+1]\subset S_{\rm B}\)，故有界、距离趋零而点不收敛，总长发散；本分支不具有 A 的平方步可和性。
+- **Definitions / Dependencies / Evidence**：D01 的普通近端与完整图反演，D04 的完整输出真残差及输出误差界。[PC1–PC6](research/topics/dd2/relaxation.md#dd2-bounded-circular-ppa)给差分的零处连续性、全部纤维、全域半阶界、相位首次越界与实际步渐近；[CV1–CV3](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)给角度良定、全域齐次延拓、逆映射、完整纤维及全部区间聚点。两分支的真实轨道与结论均直接证明，不以数值轨道或抽象标量序列代替。B 额外按 C400 校准的准确自由包络为 \(M_L(t)=\sqrt{a_*^2+h_*^2/2}<t\)，自由预算取等针对 \(M_L\)，与固定图实际目标 \(a_*\) 仅在 \(h_*=0\) 的尺度相等。
+- **Counterevidence / Objections / Scope / Related Files**：两分支不是同一数据或同一原图；A 的 \(\Phi\ge0\)、半阶模与平方步可和不转授 B，B 的线性真误差界不转授 A。共同否定一般最近锚类中“距离趋零、有界、渐近正则及所有强聚点入目标足以给点收敛”，不否定全锚 Fejér、单调算子或优化来源等另加结构的定理。A 的半阶长度积分发散，故不反驳 C401/C419；有效正锚下界未声称最优。既有 C400/C402 身份不变。本结果未认定公开新颖性；[S04.03](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)、[F138](FAILED_ROUTES.md#f138)、[F139](FAILED_ROUTES.md#f139)记录充分机制和失败范围。

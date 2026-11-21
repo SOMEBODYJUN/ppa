@@ -252,7 +252,11 @@
   - **结论** 已认证的预设 \(a\le A(t)\) 下，全部标量不等式路径趋零恰需 \(A(0)=0\)、每个正尺度 \(A(t)<t\)，以及每个 \(0<\ell<R\) 右侧某邻域内 \(A(u)\le\ell\)。该条件充分用于始终合法的实际轨道，必要性不转授固定图。非减 \(A\) 可由趋零复合比较；一般非单调 \(A\) 不可。全窗所有初值与标量选择一致趋零另需 \(Q_A(t)=\sup_{u\le t}A(u)<t\)。固定图还可用受检强极限边的紧性，或正距离壳的累计净耗散排除正极限。覆盖、零吸收、位置留域分别核验；不要求共同 \(\kappa<1\)，不自动推出点收敛或长度。
   - **证据** [S04.02 的正反证明、原模翻译与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-distance-zero-acceptance)、[C418 准确右侧条件](../canonical/dd2_function_hypotheses.md#fh-distance)、[C439 同单输入数据的好坏完整图](../topics/dd2/scalar_iteration.md#dd2-same-envelope-different-trajectories)、[C440 全窗一致性](../topics/dd2/scalar_iteration.md#dd2-majorant-uniformity)、[C446 的有界闭性及窗边界反例](../topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries)、[原模反演](../topics/dd2/scalar_iteration.md#dd2-composition-applications)。
   - **复核** 三路独立重建标量必要充分证明、实际紧性/净耗散与反例，再复读实际源和新身份。核右侧等号、零点和右端、非单调纯复合、逐路径与一致量词、原残差危险集的开闭端及非空条件。C439 核全部前像同范、图闭和真实空间续接；C446 独立核 \(g\) 的连续双射、完整 \(F(0)\) 与正输出唯一纤维、两种允许/位置合同及 \((-1)^k(1+2^{-k})\) 的合法链。紧性结论保全部受检正边严格、允许边相对闭及窗内限输入；耗散仅在正尺度使用，未删去续接所需的留域条件。
-- [ ] `S04.03` 何时能够保证点列本身收敛？
+- [x] `S04.03` 何时能够保证点列本身收敛？
+  - **裁决** Proved
+  - **结论** 对已知合法路径，可和实际步尾给强 Cauchy，另由距离趋零与闭 \(S\) 识别极限。C401/C419 的同一步耗散及有限积分，或 C400 的已认证非减比较尾和，给可核的长度证书。另一充分机制是对每个固定零锚的共同可和平方误差加 \(\liminf t_k=0\)：点列直接强 Cauchy，尾误差不超过 \(t_k+\sqrt{t_k^2+E_k}\)，无需有限长度。单点目标加距离趋零、强聚点唯一加范数预紧也可定位。最近锚存在量词不自动给全锚；仅距离趋零，即使加有界、渐近正则、连续完整算子及全部聚点入目标，仍不足以点收敛。自动续接另保全窗覆盖、末边证书及严格位置预算。
+  - **证据** [S04.03 充分证明、尾界和合同](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-point-convergence-acceptance)、[C401 同一步积分](../topics/dd2/core.md#dd2-general-gauge)、[C419 原模位移下界](../canonical/dd2_function_hypotheses.md#fh-general-length)、[全锚估计](../topics/dd2/relaxation.md#dd2-all-anchor)、[C447-A 的半阶圆聚点 PC1–PC6](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[C447-B 的线性区间聚点 CV1–CV3](../topics/dd2/core.md#dd2-bounded-linear-trajectory)、[C400 点收敛而无限长及切向逃逸](../topics/dd2/core.md#dd2-trajectory)。
+  - **复核** 三路先独立重建充分条件、完整反例及删项攻击，后复读实际证明。已核普通逆的全域或合法延拓、原非单调残差域、共同误差与逐锚误差、liminf 门和有限前缀首退出边。两个新分支的零集、连续性、完整纤维、全选择不变、实际递推及强聚点集合均逐式复核；A 的半阶模、正锚及平方步和不转授 B，B 的线性真界不转授 A。固定图目标与自由包络分开，未假定不等价的图闭、有限长或全锚条件。三席已复读最终身份卡、图边、地图、失败机制及本记录；窗口、正下界端点、定位和比较步长合同的表述已按实际证明校准。
 - [ ] `S04.04` 何时能够保证有限长度？
 - [ ] `S04.05` 何时只有渐近正则性？
 - [ ] `S04.06` 何时能够保证残差趋于零？
