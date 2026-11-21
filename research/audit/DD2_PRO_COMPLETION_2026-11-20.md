@@ -151,27 +151,27 @@
 
 设 \(\Theta:[0,R]\to[0,\infty)\) 连续非减、\(\Theta(0)=0\)，且精确同一步几何给出
 \[
- \ell_k\le C\,[\Theta(\tau_k)-\Theta(a_k)],\qquad
+ s_k\le C\,[\Theta(\tau_k)-\Theta(a_k)],\qquad
  \tau_k\le r_k+\eta_k,\tag{P12}
 \]
-其中 \(r_k\) 是实际输入到目标的距离，\(\tau_k\) 是未扰动图边的输入距离，\(\eta_k=\|e_k\|\) 是输入扰动。则
+其中 \(s_k\) 是未扰动图边位移，\(\ell_k\) 是实际更新的步长，\(r_k\) 是实际输入到目标的距离，\(\tau_k\) 是未扰动图边的输入距离，\(\eta_k=\|e_k\|\) 是输入扰动。若更新规则满足 \(|\ell_k-s_k|\le\eta_k\)，则
 \[
  \ell_k\le C[\Theta(r_k)-\Theta(a_k)]
- +C\,\Delta_\Theta(r_k,\eta_k),\quad
+ +C\,\Delta_\Theta(r_k,\eta_k)+\eta_k,\quad
  \Delta_\Theta(r,\eta):=\Theta(r+\eta)-\Theta(r).
  \tag{P13}
 \]
 因而
 \[
- \sum_k\Delta_\Theta(r_k,\eta_k)<\infty\tag{P14}
+ \sum_k\bigl(\Delta_\Theta(r_k,\eta_k)+\eta_k\bigr)<\infty\tag{P14}
 \]
-连同 C401 的精确下降和有限前缀留域预算，足以把无扰动有限长度、点收敛及极限识别传给受扰轨道。
+连同 C401 的精确下降、\(a_k=r_{k+1}\) 的实际下一点约定和有限前缀留域预算，足以把无扰动有限长度、点收敛及极限识别传给受扰轨道。若另有 \(\Theta(t)\ge c t\) 的小窗下界，则可用 \(\sum\Delta_\Theta<\infty\) 吸收 \(\sum\eta_k\)；一般 \(\Theta\) 不可省略后者。
 
-**证明。** 由 \(\Theta\) 非减和 \(\tau_k\le r_k+\eta_k\)，\(\Theta(\tau_k)\le\Theta(r_k+\eta_k)\)。再将右端写成 \(\Theta(r_k)-\Theta(a_k)+\Delta_\Theta(r_k,\eta_k)\) 即得 (P13)。对有限前缀求和，第一项望远镜，第二项由 (P14) 控制；严格小于工作域余量后取极限。
+**证明。** 由 \(\Theta\) 非减和 \(\tau_k\le r_k+\eta_k\)，\(\Theta(\tau_k)\le\Theta(r_k+\eta_k)\)。先对 \(s_k\) 作势分解，再用 \(\ell_k\le s_k+\eta_k\)，即得 (P13)。对有限前缀求和，第一项在 \(a_k=r_{k+1}\) 时望远镜，第二项和 \(\sum\eta_k\) 由 (P14) 控制；严格小于工作域余量后取极限。
 
 ### 比较级必要性与明确限度
 
-若只允许使用 (P12)–(P13) 这组标量信息，那么任何统一的绝对误差条件都必须控制 \(\sum_k\Delta_\Theta(r_k,\eta_k)\)，或给出一个逐项更强且能推出它的条件。否则可在标量比较系统中取 \(a_k=0\)、\(\ell_k=C\Delta_\Theta(r_k,\eta_k)\)，使总长度恰为该债务级数；所以从 \(\Theta\) 与 \(\{\eta_k\}\) 本身不能推出有限长度。这个“必要”是对比较证书的必要性，不宣称每个坏债务序列都能由同一个最大单调算子实现。
+若只允许使用 (P12)–(P13) 这组标量信息，那么任何统一的势型绝对误差条件都必须控制 \(\sum_k\Delta_\Theta(r_k,\eta_k)\)，而要控制实际长度和点收敛还必须控制 \(\sum_k\eta_k\)，除非另有下界把二者关联。否则可在标量比较系统中取 \(a_k=0\)、\(s_k=C\Delta_\Theta(r_k,\eta_k)\)，或取扰动脉冲使 \(\sum\eta_k=\infty\)，从而说明各自预算不能从 \(\Theta\) 单独推出。这个“必要”是对比较证书的必要性，不宣称每个坏债务序列都能由同一个最大单调算子实现。
 
 若 \(\Theta\) 局部绝对连续，则
 \[
@@ -206,7 +206,7 @@
  B_{\rm net}=(B_i)_i,\qquad
  P=\operatorname{diag}(\tau_i^{-1}I)+\rho\,\mathsf L\otimes I,\quad \tau_i>0,\ \rho\ge0.
 \]
-假设每个 \(A_i\) 最大单调，\(B_{\rm net}\) 在 \(P\)-度量中 \(\kappa\)-cocoercive：
+假设 \(A_{\rm net}\) 本身最大单调（例如对 \(\operatorname{diag}(A_i)+N_{\mathcal C}\) 满足标准和的闭性/资格条件），\(P\succ0\) 在整个堆叠空间上，\(B_{\rm net}\) 在 \(P\)-度量中 \(\kappa\)-cocoercive：
 \[
  \langle Bx-By,x-y\rangle\ge\kappa\|B x-B y\|_{P^{-1}}^2,\tag{P18}
 \]
@@ -214,6 +214,7 @@
 \[
  x^{k+1}=J_{\lambda P^{-1}A_{\rm net}}\bigl(x^k-\lambda P^{-1}B_{\rm net}x^k\bigr).\tag{P19}
 \]
+这里的 resolvent 被假定可由一次精确网络子步实现；若只近似求解，则必须把内层误差纳入 C406 的可和项。
 则对每个 \(x_*\in\operatorname{zer}(A_{\rm net}+B_{\rm net})\)
 \[
  \begin{aligned}
@@ -241,7 +242,7 @@
 
 ### 不能删除的通信前件
 
-若图不连通，\(\ker\mathsf L\) 大于 \(\mathcal C\)，节点间不同常数向量不受能量控制；即使每个本地算子都满足 (P18)，也不能从 (P20) 识别全局共识零点。若 \(P\) 只有半正定而在分歧空间无闭值域，\(P^{-1}\) 和 (P19) 不良定义；应转入 C404 的值域约化并重新验证 lift 与物理长度。时间变化图还需统一 \(\lambda_2(\mathsf L_k)\ge\underline\lambda_2>0\) 和度数上界，单一固定能量不能直接沿用。
+若图不连通，\(\ker\mathsf L\) 大于 \(\mathcal C\)，节点间不同常数向量不受能量控制；即使每个本地算子都满足 (P18)，也不能从 (P20) 识别全局共识零点。若 \(P\) 只有半正定而在分歧空间无闭值域，\(P^{-1}\) 和 (P19) 不良定义；应转入 C404 的值域约化并重新验证 lift 与物理长度。时间变化图还需统一 \(\lambda_2(\mathsf L_k)\ge\underline\lambda_2>0\) 和度数上界，单一固定能量不能直接沿用。有限维极限识别还要使用 \(B_{\rm net}\) 的连续性（由 cocoercivity 得到）和 \(A_{\rm net}\) 图的闭性。
 
 ### 作用域结论
 
