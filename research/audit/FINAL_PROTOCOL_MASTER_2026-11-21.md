@@ -13,7 +13,7 @@
 - `Partial` / `Open`：有可靠中间结果，但主命题或必要性尚未闭合。
 - `Refuted` / `Invalid`：原无条件命题有满足量词的反例，或候选公式在声明域上不是精确对象。
 
-阶段提交 `cd028d5` 已建立题号与证据入口。后续[证据复核](FINAL_PROTOCOL_FINAL_REVIEW_2026-11-21.md#dd2-cd-review) 发现部分数学裁决需改正，且完整证明、算子类图和文献矩阵尚有未交齐项目。全协议仍在进行。统一异步、变图和一般 gauge 反向必要性仍 Open。
+阶段提交 `cd028d5` 已建立题号与证据入口。后续[证据复核](FINAL_PROTOCOL_FINAL_REVIEW_2026-11-21.md#dd2-cd-review) 发现部分数学裁决需改正，且完整证明、算子类图和文献矩阵尚有未交齐项目。全协议仍在进行。统一异步和变图仍有 Open 项；一般原模的长度必要性在正 \(b_\psi\)、零或严格吸收非正下界的完整统一类已由 [C454](../topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length) 关闭。任意 signed 数据的全部反向必要性、更强预设目标和受限图类不随之升级。
 
 ## 2. Canonical theorem versions
 
@@ -44,6 +44,8 @@
 
 证据：`research/topics/dd2/core.md#dd2-general-gauge`、`research/canonical/dd2_power_defect_finite_length.md`、`FINAL_PROTOCOL_S4_S8` §5–§6。
 
+[S05.07](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integrability-weakening-acceptance)进一步区分了等价积分与真删项：F3 非增主函数、原直接积分及共同普通逆窗的和函数逆积分同敛散。[C453](../topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2)在原 F1 不变下以混合支付势删除 F2，完整连续剪切核其实际作用；C454 用原残差壳链、辅助前像和闭完整图给任意原 \(\psi\) 的限定统一类充要门。它们不把固定图、正锚信息和更强目标混入必要性。
+
 ### T3：方向松弛和非精确 / C402、C406、C407
 
 z plus = z - alpha q 的净能量含 gamma=2 beta-alpha；alpha、方向商和缺陷吸收是独立可观测量。相对误差、绝对误差和真实图误差尾分别有不同债务门。逐边门不自动给全锚 Fejer、零聚点或物理 shadow 长度。
@@ -70,7 +72,7 @@ CP/DR、FBF、外梯度、FRB 及固定网络前向—后向只在文件列出�
 | §2.1–§2.10 一般 Phi, psi | 同文件 §2；C414 | Phi<=0 自由几何 Proved/Sharp；任意符号旧 D+ sharp 主张 Invalid；不连续/振荡全局必要性 Partial/Open |
 | §3.1–§3.10 DD1 | 同文件 §3；C400/C285 | 两段 T(L) 在自由几何和一般完整闭图类均 Sharp；受限子类另验 |
 | §4.1–§4.10 收敛区分 | `FINAL_PROTOCOL_S4_S8_2026-11-21.md` §4 | 距离、点、平方和、长度、残差分层；无条件严格下降到长度 Refuted |
-| §5.1–§5.10 F1–F3 与势 | 同文件 §5 | C401/F1–F3 是充分路线；一般必要性和所有 gauge Open/Partial |
+| §5.1–§5.10 F1–F3 与势 | 同文件 §5；C453–C454 | S05.01–S05.07 已逐项核势存在、原域构造、计算、必要性、正则与一般模；F3 等价、保 F1 删 F2、一般原模限定类充要门分别保范围。后续尾预算及替代机制仍按清单继续验收 |
 | §6.1–§6.10 幂次 | 同文件 §6；C285/C399/C416 | 一般闭目标完整图类的三种临界常数和长度端点 Sharp；受限图类的最优率仍 Partial |
 | §7.1–§7.10 实际算子类 | 同文件 §7 | 有 Holder、非单调、非凸、非孤立和多值例；全类严格包含关系 Partial |
 | §8.1–§8.8 猜想攻击 | 同文件 §8 | 八个无条件猜想均有 Refuted 或 Conditional 边界 |

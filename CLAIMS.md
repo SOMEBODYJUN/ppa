@@ -3701,6 +3701,8 @@
 
 - **S05.04 充要范围与目标接口补证**：[NI1–NI5](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integral-necessity-acceptance)复核全部前像、零平台、每个正起点及固定图/严格吸收反例。[ZI1–ZI2](research/canonical/dd2_function_hypotheses.md#fh-zero-defect-target-integral)证明 \(A_0=\eta\circ Q_0^{-1}\) 是原零缺陷数据的准确输出包络；预设 \(\varphi\ge A_0\) 时同一必要见证仍适格，不能擅自替换更强目标。普通逆恒等式给原模零端平方积分的等价表述。二维固定单点子类仍含原见证；一维固定单点却由 \(s=t-a\) 统一有限长。此为原类的等价式及量词边界，不改本命题身份。
 
+- **后续独立范围**：[C454](#c454)通过原域近极小残差和完整闭多值壳图，另证任意原 ψ、正 bψ 的零缺陷统一类必要性；不将这里的连续非减原模、普通逆或更规则旋转改名。平方积分等价式不随新范围自动推广。
+
 <a id="c421"></a>
 ## C421-v1 · 原真残差一维显式包络与有限精度计算合同
 
@@ -4017,3 +4019,25 @@
 - **Conclusion — 势及不可规则化**：该固定图全部受检边的最小归一 \(C=1\) 非负支付函数为 \(\Theta_*(t_n)=2a_n\)、其余 \(\Theta_*(t)=t\)，含 \(\Theta_*(0)=0\)，并有 \(t\le\Theta_*(t)\le2t\)。对任意固定 \(0<C<\infty\)，不存在处处有限实值的非减 Θ 支付全部边，也不存在在内点1有有限右极限的这种 Θ。因此内点连续、可微、有限凹或在 \([1,t_1]\) 有限变差的替代均被排除；这些否定不要求 Θ 非负。最小性若写成任意 C，比较的是支付函数 CΘ。
 - **Dependencies / Evidence**：D01、E0、有限路径势差与投影完整反演；[PR4–PR6 的全部构造与证明](research/topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction)。\(a_n\notin\{t_j\}\) 使实际特殊边无法续接；\(t_{n+1}<a_n<t_n\) 让非减性产生人工零成本桥，N 条步的支付被强制压到同一有限势差下。内点连续性与每条成本趋1直接冲突。无数值实验或外部未核定理作证明。
 - **Counterevidence / Objections / Scope / Related Files**：目标 S 闭离散且非凸，原 J 多值，原 Φ/φ 不要求正尺度连续；Φ 全窗有界且 \(D(t)<t^2/2\)，但缺陷比趋临界，任何实际步下界都不能满足 C419 的统一严格吸收。坏尺度在1，缩至 \(R'\le1\) 可用规则势 t；任意 \(R'>1\) 仍含无限坏尾。Θ* 的存在及最小性属于此固定完整图的精确边池，不授整个原数据类共同势。C278 无任何距离势的旧身份不变。本结果不认定公开新颖性，不转授闭凸目标、连续单值近端或优化类。[S05.05](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-potential-regularity-acceptance)、[F148](FAILED_ROUTES.md#f148)记录范围。
+
+
+<a id="c453"></a>
+## C453-v1 · 原 F1 不变时删除 F2 的混合长度势
+
+- **Status**：`derived-checked`。三席已独立重构并逐式复读实际终稿的三分支、原逆域、完整剪切、身份与图边，零输入及原目标范围均已核，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Definitions**：固定实 Hilbert H、非空闭 \(S\subseteq\operatorname{zer}F\)、\(\lambda,R>0\)、开 U 和在 \(U_R\) 非空的允许完整近端子关系。每条边保 E0 的同一最近输入锚和完整真残差 \(\rho\in D_\psi\)、\(a\le\psi(\rho)\)。含零区间 \([0,r_*]\subseteq D_\psi\) 上原 \(\psi\) 连续严格增、\(\psi(0)=0\)，\(R/2\le\psi(r_*)\)；区间外无单调要求。置 \(q(t)=\lambda\psi^{-1}(t/2)\)、\(P(t)=\int_0^t u/q(u)\,du\)。同一原数据在 \([0,R]\) 满足 \(D\ge0,\Phi\ge-D,D(0)=0\)，正尺度原 F1 为 \(D(t)\le q(t)^2/4\)，且 \(P(R)<\infty\)。
+- **Quantifiers / Conclusion**：不要求 F2 \(\lambda\psi^{-1}(t)=o(t)\)。固定 \(\alpha=16\sqrt3/3,\beta=3+2\sqrt3\)，\(W=\alpha P+\beta q\) 为有限非负连续归零势。每条允许边正尺度 \(a<t\) 且 \(s\le W(t)-W(a)\)，零输入 \(s=a=0\)。任意 \(x^0\in U_R\) 满足 \(W(t_0)<d(x^0,U^c)\) 时，全部允许轨道可续留域、有限长、趋于 \(S\cap U\) 中一点，尾长至多 \(W(t_k)\to0\)。F 无须闭图。预设目标仍另认证，FI18 只提供安全候选而非强改原目标。
+- **Proof obligations / Dependencies / Evidence**：[FI3–FI4](research/topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2)以原残差反证阈值 \(a\ge v\Rightarrow s\ge\lambda\psi^{-1}(v)\)，先证 \(a<t\) 再评价 q(a)，不在域外调用逆或原模；三种步分别由 P、P、q 的同一步差支付。零驻定、距离正极限排除、首个出界步和尾预算独立证明。[FI1–FI2](research/topics/dd2/original_f_conditions.md#dd2-original-integrability-equivalence)另证 F3 的非增可积主函数与 P 可积等价，共同小窗的 \(\chi_\Sigma\) 积分也同敛散，无 F2；此等价不把两套吸收合同混同。
+- **Strict range witness**：[FI5](research/topics/dd2/original_f_conditions.md#dd2-f1-mixed-potential-example)固定 \(\lambda=1,\psi(r)=r^2,\Phi=-t/8,D=t/8,R=1/8,U=H=\mathbb R^2,S=\mathbb R\times\{0\}\)，原数据认证预设 \(\varphi=t/2\)。完整连续单值 \(F(u,v)=(-\sqrt{|v|},7v)\)，唯一全域近端 \(J(u,v)=(u+\sqrt{|v|/8},v/8)\)，真实 \(a=t/8,\rho=s=\sqrt{t/8+49t^2/64}\)，精确零集、原锚和覆盖均成立。F1 取等、F3 成立，F2 失败；尾长等价 \(\sqrt{t_k}/(\sqrt8-1)\)。P 的 \(t^{3/2}\) 量级不能独自支付，q 项有实际内容；同窗 \(2D>s^2\) 使任何有效步下界都无法恢复该固定 D 的 C419 严格吸收。
+- **Counterevidence / Objections / Scope / Related Files**：不是原可积性门的严格弱化，也不证明 F1 必要或上述常数最优。原 F2 仍是历史陈述的一部分，新结果不改写原稿；只核现存转录及独立证明，未声称重读缺失的 509 行原附件。更强原目标、一般非可逆局部模、非精确或变参数算法需各自前件。与 C424 消失余量机制分别使用；[S05.07](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integrability-weakening-acceptance)给完整分类，不认定公开新颖性。
+
+<a id="c454"></a>
+## C454-v1 · 任意原误差模的零缺陷完整统一类长度充要门
+
+- **Status**：`derived-checked`。三席已独立重构并复读实际终稿、身份和图边，原域选点、壳链、桥与首点辅助前像、完整纤维、闭性及范围均核，无未关闭实质异议。
+- **Exact Statement / Objects / Domain / Definitions**：固定 \(\lambda,R>0\)、\(0\in D_\psi\subseteq[0,\infty)\)、任意有限非负原 \(\psi:D_\psi\to[0,\infty)\)；不要求原模可测、连续或非减。\(b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}>0\) 对 \(0<t\le R\)，\(I_b(t)=\int_0^t u/b_\psi(u)\,du\)。b 非减、1-Lipschitz、\(0\le b\le t\)，正性强制原零前缀趋零及 \(\psi(0)=0\)。
+- **Quantifiers / Assumptions / Conclusion**：在 \(\Phi=0,U=V_\psi=H\) 的全体 E0 对象类中，空间包含 \(\mathbb R^2\)，不另删满足前件的对象；每对象有固定非空闭 \(S\subseteq\operatorname{zer}F\)、同一允许关系全距离窗非空覆盖、每边同一最近输入锚、完整真残差原域与原误差界。则 \(I_b(R)<\infty\) 恰等价于每对象从任意 \(t_0\le R\) 出发的每条允许轨道有限长。充分侧给共同势 \(2I_b(t)\) 与距离趋零、点识别；必要侧已在全部二维、精确单点零集、闭完整图且全部近端允许的子类内实现，故该更小完整类也有同一等价。
+- **Actual countermodel / Complete fibers**：若 \(I_b=\infty\)，[IZ2–IZ5](research/topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length)取 \(u_j=R2^{-j}\) 的 \(b(2u_j)\le u_j/16\) 好壳，原域选 \(\rho_j\) 满足下确界两倍近极小，\(0<d_j=\lambda\rho_j\le u_j/8,\psi(\rho_j)\ge15u_j/8\)。每壳 \(N_j=\lfloor7u_j^2/(16d_j^2)\rfloor\) 个垂直锚取等旋转步，从半径 u_j 到至少 \(3u_j/4\)，桥连下一好壳；各首点的垂直辅助前像使桥输出完整残差为 \(\rho_j\)。加全域投影到零的底图，线性反演得闭 F、全部完整 J 覆盖、精确 \(\operatorname{zer}F=\{0\}\)、零驻定及窗不变。所有非零纤维逐项列明，特殊边仅积于 \((0,0)\)。同一个真实壳链点趋零而总长至少 \(\sum_{j\in\mathcal G}7u_j^2/[64b(2u_j)]=\infty\)；后续首点给任意小坏初点。投影选择仍可终止，不宣称每个初值或全部选择坏。
+- **Preset target / Nonpositive extension**：所有零缺陷原边满足连续非减安全界 \(A_b(t)=\sqrt{t^2-b(t)^2}<t\)，不是声称最优包络；预设 \(\varphi\ge A_b\) 保上述好坏侧，任何已对全原类认证的目标亦保见证，更小筛选须另核。若固定 \(\Phi\le0,\Phi(0)=0\) 且同一 b 满足全窗 \(2[-\Phi]_+\le(1-\delta)b^2,0<\delta\le1\)，C419 充分与本零锚坏图又给该固定非正下界完整类的同一充要性。
+- **Dependencies / Evidence**：D01/E0、C419 的正非减下界支付、C429 的原域下确界及正性；[IZ1–IZ6](research/topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length)直接给二进制筛壳、有限坐标链、桥/辅助前像及闭完整反演。必要侧不调用单调原模、残差代换、数值观察或未经证明的标量路径提升。积分有限、共同非负有限支付势、逐图这种势及全部实际路径有限长在此类也等价。
+- **Counterevidence / Objections / Scope / Related Files**：[IZ19–IZ20](research/topics/dd2/irregular_zero_defect_length.md#dd2-irregular-length-scope)原 Borel 模仅在 \(r=4^{-j}\) 取 \(\sqrt r\)、其余零，\(\int(\psi/r)^2=0\) 而 \(b(t)\le4t^2\)、真实坏图仍有无限长，排除把连续非减分支平方积分公式外推。必要性不授正 \(\Phi\)、任意固定图、更强原目标、一维单点、连续唯一近端或最小化结构；一般负缺陷无严格吸收时原积分单独不足充分。F 可有空值、J 可多选是构造的明确范围。C420 原连续模和更规则旋转不被改名；b 退化为零的情况未在此处理。[S05.07](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integrability-weakening-acceptance)只关闭这些准确范围，不认定公开新颖性。

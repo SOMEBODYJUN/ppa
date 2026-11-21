@@ -11156,6 +11156,28 @@
       "y": 5424,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-IRREGULAR-ZERO-DEFECT": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1002,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-ORIGINAL-F1-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 626,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14202,6 +14224,14 @@
     "E764": {
       "x": 725.28,
       "y": 5376.29
+    },
+    "E765": {
+      "x": 644.58,
+      "y": 5743.74
+    },
+    "E766": {
+      "x": 1023.62,
+      "y": 5745.14
     }
   },
   "bounds": {

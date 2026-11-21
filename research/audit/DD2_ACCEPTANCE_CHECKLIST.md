@@ -342,7 +342,11 @@
   - **证据** [NG1–NG5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonpower-gauge-acceptance)、[C451 与 LG.e15a–b](../topics/dd2/nonpower_rates.md#dd2-log-half-order)、[IP1–IP2](../canonical/dd2_function_hypotheses.md#fh-irregular-psi-potential)、[C428](../canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)、[C424](../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget)、[IC1–IC6](../canonical/dd2_function_hypotheses.md#fh-integral-computation)。
   - **复核** 三席先各完成四项实际自检，分别独立重建对数完整模型、原非单调残差域及包络范围，再逐式复读 NG1–NG5、LG.e15a–b、C451 身份、F148、地图和本答卷。准确 χ 与比较 w、β=1 等号、两图全部纤维及各自零集、C424 小窗/三角/目标均核准。原下确界取到、含零域及零前缀、实际目标、严格 δ 与全窗积分推出支付已明确；零驻定、覆盖和位置预算独立。C428 全部前像及逐尺度锐性不授同图，负支吸收等界与几何长度分开；NG5 全域主函数、严格逆和 C420 完整见证核原目标损失，前缀数值/端点/整窗及势凹化区别成立。发现的字面转义和推导前提表述已修正复读，无未关闭实质异议。
 
-- [ ] `S05.07` 是否可以弱化当前的可积性假设？
+- [x] `S05.07` 是否可以弱化当前的可积性假设？
+  - **裁决** Proved
+  - **结论** 必须分对象：原 F3 的非增可积主函数、直接积分及共同普通逆窗的和函数逆积分同敛散，删包络写法不是实质可积性弱化。C453 保原 F1 和原逆域不变，以 P 与 q 的混合势真正删除 F2；完整连续剪切满足 F1/F3 而无 F2，原 P 单独不能支付。C454 对任意含零原域 ψ、正准确 bψ 的零缺陷完整统一类证明积分充要，并扩至保严格吸收的固定非正下界；不能在这些同类中允许原积分发散。正锚、更强目标、固定图或附加结构可避开该必要性；C424 放宽的是统一耗散余量，不是基准积分。各目标、全图与局部预算保各自合同。
+  - **证据** [WI1–WI5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integrability-weakening-acceptance)、[FI1–FI2 的准确等价](../topics/dd2/original_f_conditions.md#dd2-original-integrability-equivalence)、[C453 完整证明与剪切](../topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2)、[C454 原域与完整壳链](../topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length)、[稀疏模及范围](../topics/dd2/irregular_zero_defect_length.md#dd2-irregular-length-scope)、[NI1–NI5](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-integral-necessity-acceptance)、[C453](../../CLAIMS.md#c453)、[C454](../../CLAIMS.md#c454)。
+  - **复核** 三席各先完成四项实际数学自检，再独立攻击原 F3 等价、F1 三分支新支付及原非单调模必要性；逐式复读 FI1–FI24、IZ1–IZ20、WI1–WI5、C453/C454 身份、E765–E766、地图与本答卷。原逆仅需 R/2 评价范围，先降距再评价 q(a)，零端主函数可无有限零值，共同小窗比较与完整窗预算分开。剪切的完整同胚、真实残差、原目标、尾常数和 P/吸收失败均核准。好壳移位与剔项、原域近极小、各输出唯一或桥/辅助双前像、首壳辅助、闭图及精确零集、同图真实发散和任意小坏初点逐项成立；不授全部选择失败。固定非正吸收、原目标资格、稀疏点值积分反例和正锚/C424 边界均保范围。发现的零点括号和全类措辞已修复复读；历史原式只核现存转录并独立证明，无未关闭实质异议。两新身份升为 derived-checked。
 - [ ] `S05.08` 是否存在具有有限长度、却不满足当前候选势函数判据的例子？
 - [ ] `S05.09` 是否可以建立最佳或近最佳的尾部长度包络？
 - [ ] `S05.10` 有没有不使用这类势函数、却能得到更强结论的证明机制？

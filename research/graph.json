@@ -5556,6 +5556,18 @@
       "label": "C452 有最小有限距离势却无非减或内点连续替代",
       "file": "topics/dd2/potential_regularity.md#dd2-potential-regularization-obstruction",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-ORIGINAL-F1-LENGTH",
+      "label": "C453 保留原F1并删除F2的混合长度势",
+      "file": "topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-IRREGULAR-ZERO-DEFECT",
+      "label": "C454 任意原误差模零缺陷完整类长度充要门",
+      "file": "topics/dd2/irregular_zero_defect_length.md#dd2-irregular-zero-defect-length",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14322,6 +14334,30 @@
       "output": "DD2-POTENTIAL-REGULARITY",
       "relation": "conditional",
       "scope": "C452-v1 固定H=R²,λ=1,R=5/4,U=H,闭离散S={(0,10n)}；epsilon_n=2^(-n-3),t_n=1+epsilon_n,a_n=1+3epsilon_n/4，完整J=P_S加指定x_n→y_n，F=J逆-I。原ψ=id,Φ特殊尺度=t_n²/2-a_n²其余0，预设φ特殊尺度=a_n其余t/sqrt2，由原E0认证正尺度全部同数据边严格下降。完整F闭、近端全域非空、zerF=S、特殊正输出唯一前像rho=s=a_n，零驻定及窗不变。固定图全部轨道至多两非静步、长≤2t0；最小C=1非负支付Θ*在t_n取2a_n其余t，t≤Θ*≤2t。对任何有限正C，无处处有限非减或在1有有限右极限的支付势，因交错区间成本和发散/两端趋1成本趋1；故排内点连续、可微、有限凹及[1,t1]BV替代。只属该固定完整图精确边池，不授整个原数据类共同势，不授凸目标或连续单值近端；R缩至≤1障碍消失，不认定新颖。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E765",
+      "topic": "DD2 原F条件的实质删项",
+      "inputs": [
+        "D01"
+      ],
+      "output": "DD2-ORIGINAL-F1-LENGTH",
+      "relation": "conditional",
+      "scope": "C453-v1 固定Hilbert H,闭非空S⊂zerF,λ,R>0,开U及同一允许关系在U_R全选择非空覆盖；每边保原E0同一最近输入锚、完整真rho∈Dψ和a≤ψ(rho)。[0,r*]⊂Dψ上原ψ连续严格增归零，R/2≤ψ(r*)，其余原域不要求单调。q(t)=λψ逆(t/2),P=∫₀ᵗu/q(u),P(R)<∞；[0,R]上D≥0,Phi≥−D,D0=0，正尺度原F1 D≤q²/4不变。无需原F2。W=(16√3/3)P+(3+2√3)q支付每条边s≤W(t)−W(a)，正尺度a<t、零驻定；起点W(t0)<dist(x0,Uc)保全部选择续接留域、有限长和S∩U点极限，尾≤W(tk)→0。先原rho阈值证明a<t，再评价q(a)避免逆域循环。原目标仍另认证，FI18只给安全曲线。ψ=r²,Phi=−t/8,R=1/8的完整连续F(u,v)=(−√|v|,7v)、唯一J给F1/F3而非F2、实际尾~√t/(√8−1)，原P单独不能支付且任何有效b均不能恢复同D的C419严格吸收。F3非增包络和直接P、共同普通逆窗的和函数逆积分同敛散，删F2不称积分严格弱化；不称常数最优或公开新颖。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E766",
+      "topic": "DD2 原非单调模的长度必要性",
+      "inputs": [
+        "D01",
+        "DD2-RAW-GAUGE-LENGTH",
+        "DD2-RAW-GENERALIZED-INVERSE"
+      ],
+      "output": "DD2-IRREGULAR-ZERO-DEFECT",
+      "relation": "conditional",
+      "scope": "C454-v1 固定λ,R>0、含零原域Dψ、任意有限非负原ψ（无需可测/单调/连续），准确bψ=inf原rho max(λrho,t−ψrho)>0于(0,R]，Ib=∫₀ᴿt/bψ。Phi=0,U=Vψ=H的全部E0对象、同一目标和允许关系、完整真残差及全距离窗覆盖，空间含R²且不另删二维完整闭图精确S0全J对象；Ib有限iff每对象任意t0≤R全部允许轨道有限长。充分侧2Ib；必要侧同一二维闭完整图用dyadic好壳原域近极小rho、有限垂直旋转步、径向桥和首点辅助前像保完整纤维，加P0覆盖，特殊边只积于(0,0)、exactzero0、零驻定。真实壳链点→0而长度≥Σ好壳7u²/[64b(2u)]发散；同图任意小壳首点坏选择，投影支仍可终止，不授每初值或每选择失败。A_b=√(t²−b²)为连续非减安全界非声称最优，预设φ≥A_b保坏见证；强筛选另核。固定Phi≤0、Phi0=0且2[-Phi]+≤(1−δ)b²的同一严格吸收类亦充要。原ψ仅在4^-j取√rho其余0的稀疏例，原平方积分为0却Ib∞，不能外推连续分支公式。F可空值J多选；不授正Phi、固定好图、一维单点、连续唯一近端、最小化结构或b退化零情形，不认定新颖。",
       "status": "derived-checked"
     }
   ]
