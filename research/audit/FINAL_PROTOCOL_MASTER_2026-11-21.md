@@ -38,7 +38,7 @@
 
 ### T2：一般势和幂次有限长度 / C401、C399
 
-chi 由 t=s+eta(s) 的逆或下广义逆给出。严格同一步耗散和 Theta(t)=integral u/chi(u) du 的可积性给有限前缀留域、尾长和极限识别。幂次的 pq 分区只在 0<q<1 的 C399 类中直接成立；q=1 必须保留一般闭集的 DD1 两段缺陷门 T(h)=(1-h)/h²（h<=1/2）或 1/(2h²)（h>=1/2），并要求 p>2 或 p=2 且 M<T(h)；q>1 的正面几何证明至少需要 p>2/q 或 p=2/q 的小常数门，失败侧固定闭集轨道仍 Partial/Open。q=1/2 的完整图旋转是无限长度 sharp 端点。
+chi 由 t=s+eta(s) 的逆或下广义逆给出。严格同一步耗散和 Theta(t)=integral u/chi(u) du 的可积性给有限前缀留域、尾长和极限识别。幂次的 pq 分区只在 0<q<1 的 C399 类中直接成立；q=1 必须保留一般闭集的 DD1 两段缺陷门 T(h)=(1-h)/h²（h<=1/2）或 1/(2h²)（h>=1/2），并要求 p>2 或 p=2 且 M<T(h)；q>1 的正面几何证明至少需要 p>2/q 或 p=2/q 的小常数门。p q<2 且 M>0 已有固定闭集完整图链反例，临界 q>1 算子锐性仍 Partial/Open。q=1/2 的完整图旋转是无限长度 sharp 端点。
 
 证据：`research/topics/dd2/core.md#dd2-general-gauge`、`research/canonical/dd2_power_defect_finite_length.md`、`FINAL_PROTOCOL_S4_S8` §5–§6。
 
@@ -69,7 +69,7 @@ CP/DR、FBF、外梯度、FRB 及固定网络前向—后向只在文件列出�
 | §3.1–§3.10 DD1 | 同文件 §3；C400/C285 | 两段 T(L) 自由几何 Sharp，完整局部 PPA 全窗版本 Partial |
 | §4.1–§4.10 收敛区分 | `FINAL_PROTOCOL_S4_S8_2026-11-21.md` §4 | 距离、点、平方和、长度、残差分层；无条件严格下降到长度 Refuted |
 | §5.1–§5.10 F1–F3 与势 | 同文件 §5 | C401/F1–F3 是充分路线；一般必要性和所有 gauge Open/Partial |
-| §6.1–§6.10 幂次 | 同文件 §6 | 0<q<1 的 pq 门 Sharp；q=1、q>1 另分支；把 pq 作为全部 q 的统一律 Invalid |
+| §6.1–§6.10 幂次 | 同文件 §6 | 0<q<1 的 pq 门 Sharp；q=1、q>1 另分支；q>1 的 pq<2 且 M>0 已有链反例；把 pq 作为全部 q 的统一律 Invalid |
 | §7.1–§7.10 实际算子类 | 同文件 §7 | 有 Holder、非单调、非凸、非孤立和多值例；全类严格包含关系 Partial |
 | §8.1–§8.8 猜想攻击 | 同文件 §8 | 八个无条件猜想均有 Refuted 或 Conditional 边界 |
 | §9.1–§9.12 约化前向 | `FINAL_PROTOCOL_S9_S17_2026-11-21.md` §9 | 闭值域和完整 lift 下 Conditional/Proved；非闭投影和 kernel 逆向 Refuted |
@@ -105,6 +105,7 @@ flowchart TD
 - 正 Phi 的 D+ 非尖锐：C414 反例。
 - 严格下降但无限长度：`core.md#dd2-trajectory` 的 L=1 调和旋转。
 - q=1/2、q<1/2 完整图无限长度：`FINAL_PROTOCOL_S4_S8` §6.3。
+- q>1 或 q=1 在 pq<2 且 M>0 的固定闭集链反例：`FINAL_PROTOCOL_S4_S8` §6.5。
 - 低 L 固定闭图与闭凸锚障碍：C411、C413、`lowL_dynamic_sharpness.md`。
 - 远 kernel、非唯一 fiber、非闭投影目标：`pppa_recovery.md` 逆向障碍。
 - 选定图值冒充完整真残差：C408 的 G(y)={y,y³}。
