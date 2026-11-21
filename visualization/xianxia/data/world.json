@@ -10881,6 +10881,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-SIGNED-LINEAR-CALIBRATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13815,6 +13826,10 @@
     "E736": {
       "x": 318.23,
       "y": 5555.5
+    },
+    "E737": {
+      "x": 410.78,
+      "y": 5748.47
     }
   },
   "bounds": {

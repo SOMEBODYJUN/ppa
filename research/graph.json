@@ -5406,6 +5406,12 @@
       "label": "C427 自由仿射准确几何与完整线性锐例",
       "file": "topics/dd2/target_geometry.md#dd2-affine-exact-geometry",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-SIGNED-LINEAR-CALIBRATION",
+      "label": "C428 不规则有符号下界的线性真残差精确标尺",
+      "file": "canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13845,6 +13851,18 @@
       "output": "DD2-AFFINE-EXACT-GEOMETRY",
       "relation": "conditional",
       "scope": "自由仿射目标的法切正交分解给精确越锚附加平方代价，单点和直线实现两支；λ=1、Phi(t)=-2t²、psi(r)=r/4 的锐因子由全域连续单值线性算子达到，不转授任意固定余维或一般动态锐性。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E737",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-SIGNED-ENVELOPE",
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-SIGNED-LINEAR-CALIBRATION",
+      "relation": "conditional",
+      "scope": "λ=1、psi(r)=r、Phi(0)=0 且 Phi(t)≤t²/4；完整闭图和全域覆盖在固定单点目标逐尺度实现 sqrt(t²/2-Phi(t))。允许原下界变号和不规则，不移除一般原模的完整前像障碍或动态条件。",
       "status": "derived-checked"
     }
   ]

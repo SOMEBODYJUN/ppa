@@ -3720,3 +3720,12 @@
 - **Conclusion / Scope**：直接位移模或 C417 原残差条件仍逐点相交；C426 的非正整窗完整闭图构造也适用于这些仿射目标。若 \(\Phi(t)\ge0\)，自由仿射类与自由闭目标在该尺度的标量域相同。取 \(\lambda=1,\Phi(t)=-2t^2,\psi(r)=r/4\)，裸能量放宽、自由闭目标／自由凸目标／固定射线、自由仿射目标，以及指定单点的最优输出分别为 \(\sqrt{5/17}\,t,t/2,r_*t,t/3\)，其中 \(r_*=(1+\sqrt{193})/32\)。后三项均有完整覆盖真残差见证。
 - **Definitions / Dependencies / Evidence**：C414 的完整自由几何、C426 的凸实现与全纤维补全；[仿射域充要证明](research/topics/dd2/target_geometry.md#dd2-affine-exact-geometry)、[同参数四个界和完整线性见证](research/topics/dd2/target_geometry.md#dd2-affine-sharp-example)。二维中 \(J(u,v)=(-r_*u,v+d_*u)\)、\(d_*^2=2-r_*-r_*^2\)，原算子 \(F=J^{-1}-I\) 全域连续单值，精确零集为直线；每个输入有 \(a=r_*t,s=4r_*t,r_F(y)=s\)，锚内积恰为 \(-2t^2\)。指定单点的 \(t/3\) 由 \(F=-4I\) 实现。
 - **Counterevidence / Objections / Related Files**：自由仿射域不等于每个指定维数、余维或固定仿射目标的域。上述固定直线线性见证声明在二维；与恒等近端作高维直积得到超平面。仿射正交性确实降低负下界越锚支的界，凸性单独没有这种自由标量改进。裸平方能量遗漏根及距离三角的严格差距另见 [几何层级](research/topics/dd2/target_geometry.md#dd2-energy-versus-geometry)。一般正下界完整窗、指定连续单值凸类及其他动态锐性不由本命题裁决；公开新颖性未认定。
+
+<a id="c428"></a>
+## C428-v1 · 不规则有符号锚下界的线性真残差精确标尺
+
+- **Status**：`derived-checked`。精确三角构形、完整闭图全部纤维、零尺度及跨尺度量词经独立重构。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定 \(H=\mathbb R^n,n\ge2,\lambda=1,\psi(r)=r\)、\(R>0,U=H\)，有限 \(\Phi:[0,R]\to\mathbb R\)，\(\Phi(0)=0\)，且 \(\Phi(t)\le t^2/4\) 对每个 \(0<t\le R\)。取非空闭 \(S\subseteq\operatorname{zer}F\)，不限制输出位置，记 \(t=d(x,S),a=d(y,S)\)。对每条受检近端边，某个最近输入锚的内积至少为 \(\Phi(t)\)，输出满足 \(a\le r_F(y)\)。其最小共同输出上界为 \(M_\Phi(t)=\sqrt{t^2/2-\Phi(t)}\)，零处取零。
+- **Conclusion / Scope**：每个固定测试尺度都可在完整闭图、全域非空近端且固定精确零集 \(S=\{0\}\) 的类中达到该值，整个窗的全部完整边均受检；实现算子可随测试尺度改变。对指定 \(0<\kappa<1\)，统一保证 \(a\le\kappa t\) 当且仅当 \(\Phi(t)\ge(1/2-\kappa^2)t^2\) 于全部正尺度。存在这样的共同 \(\kappa\) 当且仅当 \(\inf_{0<t\le R}\Phi(t)/t^2>-1/2\)。不要求 \(\Phi\) 连续、可测、非减或非负。
+- **Definitions / Dependencies / Evidence**：C414 的有符号同锚能量、C417 的完整残差区分。对给定 \(t\)，置 \(m=M_\Phi(t),x=te_1,y=(t/2)e_1+\sqrt{m^2-t^2/4}\,e_2\)，向 \(J=I/2\) 加边 \((x,y)\)，再反演 \(F=J^{-1}-I\)。完整每个输出 \(z\) 的全部前像给 \(r_F(z)=\|z\|\)；底图的锚内积为输入距离平方的 \(1/4\)，特殊边达到 \(\Phi(t)\)。[证明与锐预算](research/canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration)。
+- **Counterevidence / Objections / Related Files**：正有理尺度 \(\Phi=t^2/8\)、无理尺度 \(\Phi=-t^2/8\) 使 \(\Phi\) 与 \(M_\Phi\) 在每个正点不连续非单调，但仍统一几何下降及有限长。其无理尺度的孤立取等边证明闭图不容许自动将 \(\Phi\) 换为上半连续包络。[变号见证](research/canonical/dd2_function_hypotheses.md#fh-oscillatory-phi-example)。逐尺度严格下降、C418 正距离右侧门和长度证书分开，标量必要性不转授给固定图。[动态边界](research/canonical/dd2_function_hypotheses.md#fh-irregular-phi-dynamics)。这是固定线性真残差的校准，不改变一般 \(\psi\) 在正下界完整窗中的前像障碍，不宣称公开新颖性。
