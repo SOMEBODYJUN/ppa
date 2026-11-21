@@ -362,7 +362,11 @@
   - **结论** 有，须分指定积分、全部下有界距离势和全部状态势。平方降幅保同原数据可改指定积分常数，但C458/C461精确最优尾不能再降；C457/C278原生角度或位置给距离投影不能支付的真实有限尾。C463在有限维凸完整近端和非空完整极小集下给无误差界的尾界2C_n t_k，Hilbert凸二次反例阻止删除维数。C464在有限维、固定λ、x⁰∈dom f下，对proper-lsc下有界函数的全部全局极小近端选择轨道，以前驱比较自动补H3；该轨若有一个凹型KL聚点，再锁域得有限长与近端固定点；不要求域连续，不转授全部驻点resolvent或指定子目标。全锚Fejér加距离趋零仅保证点收敛，不能自动给长度。
   - **证据** [AM1–AM6的对象、比较和边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-alternative-mechanisms-acceptance)、[C463的SC1–SC5完整凸近端与维数反例](../topics/common_structure/compensation_methods_2.md#self-contracted-tail-boundary)、[C464的EK1–EK10自动H3与KL留域](../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#exact-prox-kl-value-bridge)、[原状态最小支付](../topics/dd2/tail_envelopes.md#dd2-optimal-tail-values)、[角状态障碍](../topics/dd2/angular_length_obstruction.md#dd2-angular-length-obstruction)、[精确身份](../../CLAIMS.md#c463)、[一手位置](../LITERATURE.md#lit-dd2-alternative-length)。
   - **复核** 三席均先完成四项实际数学自检，再独立重建同数据最优限制、凸未来点几何及KL全局比较桥；已逐式冷读AM1–AM6、SC1–SC5、EK1–EK10及全部11源登记。原目标与真模、准确全尾与有限逼近、真实角状态与尺度伪链、阶梯总变差、Hilbert完整最小化和分块发散均核准。H3由前驱全局比较自证，KL先含首出步锁球再求和；新增真实驻点二周期区分定理不适用与结论为假。候选的统计范围、凹型KL聚点、指定目标识别、原设计导航及同维比较均已收紧。一手定理和PDF定位已核，无未关闭实质异议。远端并行C462/E774完整保留，本项两身份顺延C463/C464、E775/E776，数学身份未变。
-- [ ] `S05.F1` 定位作者原稿 F1 的精确版本并独立核验它如何吸收缺陷。
+- [x] `S05.F1` 定位作者原稿 F1 的精确版本并独立核验它如何吸收缺陷。
+  - **裁决** Proved
+  - **结论** 已定位509行原稿的登记指纹及d32b3f2中可读的精确存录版：原χ(u)=λψ⁻¹(u)，F1为D(t)≤χ(t/2)²/4。本轮未取得原附件字节，不声称逐字鉴定。令q(t)=χ(t/2)，在原严格增分支及q(t)≤t/2的窗口，用同一完整真残差先证s≥q，再由同锚能量得t²−a²≥s²/2。F3不参与此吸收。没有窗口前件时F1只在高输出分支直接吸收；低输出分支虽降距，C453完整剪切却使真实净余量比趋零。原1/4系数、参数、半尺度、零输入、原目标及覆盖留域均分别核，未把和函数逆或后续混合势改称原F1。
+  - **证据** [原式身份、历史对象和F1A](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f1-source-and-absorption)、[FA1–FA9完整原域证明与边界](../topics/dd2/original_f_conditions.md#dd2-original-f1-absorption)、[core来源记录](../topics/dd2/core.md#dd2-source)、[C453完整剪切](../topics/dd2/original_f_conditions.md#dd2-f1-mixed-potential-example)。
+  - **复核** 三席均先完成四项实际数学自检，再独立重建原残差阈值、两分支、能量因子和剪切真实降幅；实际冷读全部八处正文与登记，另对读e554/d32两个Git对象。局部逆域及和值域、距离1-Lipschitz与同锚能量的不同来源、原完整纤维、窗口的使用、零输入/零输出、共同预设目标及真实最小缺陷均核准。源记录、现存转录与本轮推导分层，未将原件未取得改成数学反证，亦未声称原字节鉴定。无未关闭实质异议；仅签S05.F1，后续F2/F3/望远镜不预签。
 - [ ] `S05.F2` 定位作者原稿 F2 的精确版本并独立核验逆模条件及其作用。
 - [ ] `S05.F3` 定位作者原稿 F3 的精确版本并独立核验被积函数和单调上包络条件。
 - [ ] `S05.TELESCOPE` 独立重构原 F1–F3 对应的同一步长度势、望远镜求和与局部留域，逐项注明可以省去的条件。

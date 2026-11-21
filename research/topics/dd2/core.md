@@ -304,6 +304,7 @@ s\le \frac{t^2-a^2}{\delta\chi(t)}
 
 [C451 的对数强化半阶模](nonpower_rates.md#dd2-log-half-order)给 \(\chi(t)\sim t^2[\log(1/t)]^\beta\)，把本积分具体化为 \(\beta>1\) 的门。完整旋转和剪切分别计算实际距离、点误差和尾长；剪切的有限长点误差可慢于每个正幂。其统一类必要性使用 C420 的零缺陷合同，固定图范围另行区分。
 
+<a id="dd2-source"></a>
 ## 5. 输入材料和既有结果
 
 作者本轮给定的写作次序是目标 \(A\) → 线性误差界下的平面反演 → 距离及长度 → 一般 \(\psi\) → 算法推广。上传的 509 行 Markdown（SHA-256 c834aeee5e134d3968a26d49ddec7b3ed416576b2806bf93b6267722d0d65213）是一般函数、约化图和恢复的来源稿。此页将其几何和长度结果重构为可检验的命题。长度推导承接 [C309](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem)、C399 和 [C285](../../canonical/rleb_sharp_linear_frontier.md#rsl-factor)，新内容是指定下降曲线的反向预算、尺度内精确变分形式、同一曲线无限长度算子和一般 \((I+\eta)^{-1}\) 长度积分。完整关系的动态锐性、指定规则零集的更强条件和公开优先性均有独立量词，见研究任务书。
