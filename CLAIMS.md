@@ -3533,3 +3533,13 @@
 - **Status**：`derived-checked`。受扰图输入、长度势、留域、误差时序和反例可独立复核。
 - **Exact Statement / Objects / Domain / Quantifiers**：接受实际步 \(x^+=y\) 且 \(x+e=y+\lambda w,\ w\in F(y)\)，必须属于同一受检允许图。精确凹势下 \(\sum\Theta(\|e_k\|)<\infty\) 和有限前缀严格预算足以给真实有限长与闭目标极限。C401 积分势有可积凹上包络。若真实平方耗散为 \(\tau^2-a^2\ge\beta s^2\)，可用可检验准则 \(\|e\|\le\theta\beta s^2/[s+2\psi(s/\lambda)]\)，\(0\le\theta<1\)。在 C399 幂次类，绝对误差幂指数 \(2-1/q\)、线性相对系数的可和指数 \(1/(1-q)\) 与相对残差的严格常数门均有完整原图反例。
 - **Conclusion / Scope**：欧氏绝对误差可和一般不能保证真实长度或点收敛，且单轨道 \(\|e_k\|/s_k\to0\) 也可失败。附加累计欧氏误差尾条件时保留精确幂次点率。退化 PPPA 的相邻 shadow 控制仍是独立假设。不能将同点真图证书泛化为任意扩大算子或任意近似图。见[证明及误差边界](research/topics/dd2/inexact.md#dd2-inexact-absolute)。
+
+<a id="c407"></a>
+## C407-v1 · 方向自适应松弛的可计算分离与 Hölder 同时临界门
+
+- **Status**：`derived-checked`。逐边平方展开、方向下界与缺陷吸收的分离，Hölder 近上限端点，以及最近锚／全锚／零聚点的量词区分均已重构。该 Claim 不宣称外部先行性。
+- **Exact Statement / Objects / Domain / Quantifiers**：在 C402 的 Hilbert 空间设置中，\(\rho_V(q)=\langle q,Vq\rangle/\|q\|^2\)，\(\chi=(I+\psi)^{-1}\)，\(\omega_D(t)=D(t)/\chi(t)^2\)。给定松弛 \(\alpha_k\) 和预留净余量 \(\mu_{\rm req,k}\)，逐边可认证的最小方向下界为 \(\beta_{\min,k}=\alpha_k/2+\omega_D(t_k)+\mu_{\rm req,k}/2\)。等价地，给定方向下界时必须有 \(\alpha_k<2(\underline\beta_k-\omega_D(t_k))\)。方向商、缺陷吸收和 \(\alpha_k\) 是三个独立观察量。精确最近锚可把模型缺陷换成逐边缺陷，但不能产生全允许边的统一缺陷函数。
+- **Hölder boundary**：若 \(\psi(s)=Ks^\vartheta\)、\(1/2<\vartheta<1\)、方向余量 \(\gamma(t)\ge c_\gamma\chi(t)^\kappa\)，而 \(D(t)\le Ct^p\)，则同阶 \(p=(2+\kappa)/\vartheta\) 的严格净耗散门为 \(2C<c_\gamma K^{-(2+\kappa)/\vartheta}\)。在输出模达到的 sharp 子类中，近上限规则的实际长度阈值是 \(\kappa<2\vartheta-1\)。\(\kappa=2\vartheta-1\) 给调和级数长度，仍可有距离趋零。等号常数由平面连续单值完整图构造达到，半径可以保持不降。
+- **Anchor and cluster scope**：最近锚只给标量距离、留域和在累积松弛及远离零正余量条件下的 \(t_k\to0\)。全锚条件对每个 \(w\in S\) 给 Fejér／准 Fejér 和 Opial 型零点识别，但误差尾、弱闭性或 demiclosedness 仍须单列。有限维有界最近锚轨道的聚点落入闭 \(S\)，最近锚自身不能给唯一聚点或点收敛。最近锚的连续单值漂移例 \(G(u,v)=(-v^2,v^3)\) 使 \(t_k\to0\) 而切向坐标发散。
+- **Counterevidence / Boundaries**：\(\alpha_k<2\beta_k\) 与 \(\sum\alpha_k=\infty\) 单独不足。\(F=I\)、\(\alpha_k=2-2^{-k-2}\) 的轨道保持正距离。等号 \(\alpha=2\beta\) 可取 \(z^+=-z\)。这些例子排除把逐步严格门或松弛累积直接升级为零聚点识别。
+- **Evidence / Related Files**：[完整审计和证明](research/topics/dd2/adaptive_parameter_audit.md)、[C402 方向松弛正文](research/topics/dd2/relaxation.md#dd2-adaptive-length)。

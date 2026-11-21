@@ -4,7 +4,7 @@
 
 [DD2 主线](research/topics/dd2/core.md)按指定目标 \(A\)、线性输出误差界的反向缺陷、轨道距离与长度、一般误差界的次序展开。[C400](CLAIMS.md#c400) 记录尺度锐性及线性正则下的无限长与逃逸反例。[C401](CLAIMS.md#c401) 以一般函数的积分势从同一步能量推出长度和留域。
 
-[DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。
+[DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。
 
 [DD2 论文结构与 GPT Pro 任务书](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md)列出可写定理、严格例、文献差距与各项未闭门。[CP／DR](research/topics/dd2/splitting.md#dd2-splitting-component)给分量充分条件、显式非零位置模及慢收敛的完整算法例。[Inexact DD2](research/topics/dd2/inexact.md#dd2-inexact-absolute)给真图扰动、尾和与临界精度。
 
