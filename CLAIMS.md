@@ -3483,3 +3483,17 @@
 - **Conclusion**：对满足 \(Cd_0^\alpha<d(x^0,U^c)\) 的同窗初值，所有允许轨道无限续接且留域，尾长 \(\le Cd_k^\alpha\)，\(d_k=O(k^{-1/\nu})\)，强收敛到 \(S\cap U\)，点误差 \(O(k^{-\alpha/\nu})\)。
 - **Counterevidence / Scope**：临界常数等号及坏侧，或 \(p<2/q,\ M>0\)，存在全域单值近端的保半径反例。对 \(q=1/2\) 已有零内积、点收敛而无限长的原算子。\(q=3/4,\ p=3\) 的非单调实例没有线性误差界及 R 线性距离率。退化 PPPA 需独立转移和恢复。
 - **Evidence / Dependencies / Related Files**：[证明、覆盖、实例及边界](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect)，C392 为保半径构造的先行内部证据。与 C309 及 C212 的关系见同页，[外部比较](research/LITERATURE.md#lit-alcantara-dd)。
+
+<a id="c400"></a>
+## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
+
+- **Status**：`derived-checked`。同尺度可行域、反演和真残差全图实现均可重构。公开优先性未判定。
+- **Exact Statement / Objects / Domain / Quantifiers**：欧氏空间，固定 \(\lambda>0\)、闭非空 \(S\subseteq\operatorname{zer}F\)。每条允许近端边用一个最近输入锚，缺陷为 \(-D(t)\)、\(D\ge0,D(0)=0\)，输出线性真误差界 \(d(y,S)\le\ell r_F(y)\)。写 \(t=d(x,S)>0,L=\ell/\lambda\)。对目标 \(A(t)=rt<t\)，任意闭目标统一几何类的精确门为 \(r\ge L/\sqrt{1+L^2}\) 且 \(D(t)/t^2\le\Sigma_L(r)\)，公式 (2) 的两支随 \(L,r\) 比较。坏侧在该尺度由完整闭图、有全域根覆盖的算子实现。
+- **Scope and evidence**：\(L\ge1/2\) 可用同一完整旋转关系实现任意连续允许目标 \(A\) 的每个小尺度；非减 \(A\) 的不可和迭代给无限长度。一般连续非减 \(\psi\) 的精确一步变分值及严格门见同文 (5)、(7)，严格增 \(\psi\) 的反演见 (8)。单尺度统一锐性不同于固定规则零集或整个动态轨道类的必要性。与 C285 的关系、二支切换、覆盖及旋转与逃逸反例见[正文](research/topics/dd2/core.md#dd2-reverse)。
+
+<a id="c401"></a>
+## C401-v1 · 一般函数误差界的积分长度势
+
+- **Status**：`derived-checked`。根据同一步能量与单调逆函数的积分比较推导。
+- **Exact Statement / Objects / Domain / Quantifiers**：保留 C400 最近输入锚与覆盖于 \(U_R\) 的允许关系，输出真误差界由连续非减 \(\psi\)、\(\psi(0)=0\) 给定。令 \(\eta(s)=\psi(s/\lambda),\ \chi=(I+\eta)^{-1}\)。若 \(2D(t)\le(1-\delta)\chi(t)^2\) 于 \(0<t\le R\)，\(0<\delta\le1\)，且 \(\Theta(R)=\int_0^R u/\chi(u)\,du<\infty\)，则每一步 \(t^2-a^2\ge\delta s^2\) 且 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。
+- **Conclusion / Scope**：初值严格预算 \((2/\delta)\Theta(t_0)<d(x^0,U^c)\) 保全部允许轨道有限长度、留域及收敛至 \(S\cap U\)，尾长 \(\le(2/\delta)\Theta(t_k)\)。幂次恢复 C399 的严格临界常数。耗散条件为充分条件。线性误差界临界区另有 C400 的曲线尾和门。见[证明与实例](research/topics/dd2/core.md#dd2-general-gauge)。

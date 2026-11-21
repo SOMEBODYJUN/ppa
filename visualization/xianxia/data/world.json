@@ -10650,6 +10650,28 @@
       "y": 5151,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-GAUGE-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "lotus",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1096,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-REVERSE-A": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 720,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13504,6 +13526,14 @@
     "E716": {
       "x": 920.56,
       "y": 5104.67
+    },
+    "E717": {
+      "x": 746.25,
+      "y": 5110.81
+    },
+    "E718": {
+      "x": 1085.08,
+      "y": 5195.26
     }
   },
   "bounds": {

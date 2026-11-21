@@ -1081,6 +1081,13 @@
 | E714 | [PPA-ANGLE-RESIDUAL-EXPONENT-BALANCE · C392 最近锚角度与完整残差的锐指数制衡](topics/common_structure/angle_residual_exponent_balance.md#angle-residual-exponent-balance) ∧ [D01 · 完整图、真残差与图剪切](foundations.md#d01) | conditional → [PLANAR-PPA-TWO-FIXED-ZERO-CONVERGENCE · C393 平方和与两固定零点的二维点收敛](topics/common_structure/angle_residual_exponent_balance.md#planar-two-fixed-zero-convergence) | 严格指数侧及原根子关系覆盖、输出在评估窗给平方步长可和和到零集距离趋零。有限零集或两个固定零点的平方方向条件给二维点收敛。；**derived-checked** |
 | E715 | [EUCLIDEAN-ORTHOGONAL-PROJECTION-FOUR-POINT · C396 同一目标直线上的四点投影不变量](topics/common_structure/orthogonal_projection_four_point_invariant.md#orthogonal-projection-invariant) | conditional → [PPA-AFFINE-PROJECTION-GRAM-COMPENSATION · C398 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门](topics/common_structure/affine_projection_gram_compensation.md#affine-projection-gram-compensation) | 将 C396 的共同法向恒等式推广为仿射目标上的角度加权 Gram 平衡，并把同一 Aτ+B_L 后端收缩门写成任意有限维欧氏空间的维数无关结论；完整图量词、coverage、留域和闭目标条件保留。；**derived-checked** |
 
+## DD2 反向补偿与轨道
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E717 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | conditional → [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | 同一最近输入零锚、非负缺陷及输出线性误差界，利用精确几何可行域反演目标比率的缺陷预算。；**derived-checked** |
+| E718 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | conditional → [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | 连续非减输出误差界，缺陷可由位移下界平方严格吸收，积分长度势给有限前缀及尾长。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

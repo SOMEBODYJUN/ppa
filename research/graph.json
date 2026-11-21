@@ -5280,6 +5280,18 @@
       "label": "C399 输入距离幂次缺陷与 Hölder 真误差界的有限长度门",
       "file": "canonical/dd2_power_defect_finite_length.md#dd2-power-defect",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-REVERSE-A",
+      "label": "C400 指定一般 A 的反向缺陷与几何尖锐性",
+      "file": "topics/dd2/core.md#dd2-reverse",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-GAUGE-LENGTH",
+      "label": "C401 一般函数误差界的积分长度势",
+      "file": "topics/dd2/core.md#dd2-general-gauge",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13485,6 +13497,32 @@
       "scope": "有限维普通 PPA 的同一允许图，最近输入零锚的幂次缺陷与 Hölder 真误差界满足 C399 的相容门。实际步长平方吸收缺陷，再由同一步幂势控制有限前缀、尾长与点率。",
       "status": "derived-checked",
       "topic": "PPA 非线性收缩"
+    },
+    {
+      "id": "E717",
+      "topic": "DD2 反向补偿与轨道",
+      "inputs": [
+        "D01",
+        "D04",
+        "R01"
+      ],
+      "output": "DD2-REVERSE-A",
+      "relation": "conditional",
+      "scope": "同一最近输入零锚、非负缺陷及输出线性误差界，利用精确几何可行域反演目标比率的缺陷预算。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E718",
+      "topic": "DD2 反向补偿与轨道",
+      "inputs": [
+        "D01",
+        "D04",
+        "COV"
+      ],
+      "output": "DD2-GAUGE-LENGTH",
+      "relation": "conditional",
+      "scope": "连续非减输出误差界，缺陷可由位移下界平方严格吸收，积分长度势给有限前缀及尾长。",
+      "status": "derived-checked"
     }
   ]
 }
