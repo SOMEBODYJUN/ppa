@@ -136,7 +136,7 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 
 1. **Projected convergence，Proved。** \(z^k\to z_\infty\) 强收敛时，\(P_{\mathcal R}^{-1/2}z^k\) 强收敛。
 2. **Projected zero identification，Conditional。** S 闭且距离趋零时极限在 S。S 不闭时只能到 \(\overline S\)。
-3. **Bounded recovery，Conditional。** 在 \(q^k\to0\)、\(z^k\to z_\infty\) 且所选影子有界时，局部有界 \(\mathscr H\) 加零值外半连续给物理零点聚点。
+3. **Bounded recovery，Conditional。** 在 \(q^k\to0\)、\(z^k\to z_\infty\) 且所选影子有界时，局部有界 \(\mathscr H\) 加零值 demiclosedness 给物理零点聚点。有限维时可用零值外半连续和紧性替代。
 4. **Weak shadow convergence，Conditional。** 在上述 \(q^k\to0\) 和影子有界量词下，所有弱聚点在 \(Z\cap(C^*)^{-1}(z_\infty)\)。fiber 单点时弱收敛。
 5. **Strong shadow convergence，Conditional。** 唯一 fiber 加有界性只给弱收敛和正确 fiber 识别。强收敛还需要有限维性、弱到强的额外紧性，或固定零点的局部强 recovery。
 6. **Lipschitz recovery，Proved conditionally。** \(\|y-x_\infty\|\le K\|z-z_\infty\|\) 传递约化尾长。
@@ -147,7 +147,7 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 11. **Finite-dimensional simplification，Proved conditionally。** 外半连续、闭图和局部有界可用紧性加强。
 12. **Weaker mechanism，Partial。** 对弱聚点识别，最弱可靠组合是约化强收敛、闭目标、有界 lift、零值闭图。唯一 fiber 再给物理弱收敛。物理强收敛还需有限维性或强 recovery，非唯一 fiber 只能给正确 fiber 的聚点结论。
 
-§10 逐题证据与量词索引：§10.1–§10.2 对所有强收敛约化轨道使用 `../topics/dd2/pppa_recovery.md` 的“投影识别”段。§10.3–§10.5 的量词是 (q^k\to0)、所选影子序列有界并且每个弱聚点满足零值闭图，非唯一 fiber 只给聚点。§10.6–§10.9 使用该文件的“一点恢复”“物理长度”段，二点估计需对轨道相邻输入成立。§10.10–§10.12 使用 Theorems 4.11–4.12 及有限维专门化，任何强恢复均是附加条件下的 conditional 结论。
+§10 逐题证据与量词索引：§10.1–§10.2 对所有强收敛约化轨道使用 `../topics/dd2/pppa_recovery.md` 的“投影识别”段。§10.3–§10.5 的量词是 \(q^k\to0\)、所选影子序列有界并且每个弱聚点满足零值 demiclosedness，有限维时才可用外半连续和紧性替代，非唯一 fiber 只给聚点。§10.6–§10.9 使用该文件的“一点恢复”“物理长度”段，二点估计需对轨道相邻输入成立。§10.10–§10.12 使用 Theorems 4.11–4.12 及有限维专门化，任何强恢复均是附加条件下的 conditional 结论。
 
 ---
 
