@@ -372,7 +372,11 @@
   - **结论** 现存Git转录的原F2是b_inv(u)=λψ⁻¹(u)=o(u)，普通逆定义在原零点连续严格增分支；来源层级沿用S05.F1，未新称原件字节鉴定。固定λ下它等价ψ(r)/r→∞和q(t)=b_inv(t/2)=o(t)，从而缩窗取得q≤t/2；实际窗口只需对应原分支ψ(r)≥λr，严格更弱。原组合在此窗先用真实ρ证s≥q，再用F1吸收，零/目标/覆盖等不由F2补足。两个逆的小o性质虽等价，点态渐近等价却被连续严格增插值反例否定。线性完整近端、C453剪切和C456旋转分别核F2非必要、该剪切删窗口仍有限长且指定原P不支付、F1+F2不保有限长；原模强弱、局部像及新位置预算均分开。
   - **证据** [F2A–F2B及来源与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f2-inverse-role-acceptance)、[FB1–FB8精确逆域、反例和完整边界](../topics/dd2/original_f_conditions.md#dd2-original-f2-role)、[原F1先步下界后吸收](../topics/dd2/original_f_conditions.md#dd2-original-f1-absorption)、[C453混合支付](../topics/dd2/original_f_conditions.md#dd2-original-f1-without-f2)、[C456完整旋转](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)。
   - **复核** 三席均先完成四项实际数学自检，独立重建逆模双向换元、窗口与两个逆的范围及反例；已逐源冷读FB1–FB8、F2A–F2B和全部七处正文与登记，并对读历史Git对象、C453、C456和C458。普通逆的值域、和函数的像、固定参数、零端双向换元、非严格窗口、插值反例节点及三完整模型均核准；没有把小o性质等价升级成点态渐近，没有把所选宽误差界误称强正则。新势的位置预算和来源层级保留，无未关闭实质异议；仅签S05.F2。
-- [ ] `S05.F3` 定位作者原稿 F3 的精确版本并独立核验被积函数和单调上包络条件。
+- [x] `S05.F3` 定位作者原稿 F3 的精确版本并独立核验被积函数和单调上包络条件。
+  - **裁决** Proved
+  - **结论** 可恢复Git转录的原F3为g(t)=t/[λψ⁻¹(t/2)]≤bar g(t)，存在同一正点有限非增主函数且零端可积；普通逆分支、半尺度、固定λ及原件未重新取得的来源界限均保留。原q非减使F3、P可积及最小非增上界可积等价，不使用F2；最小上界有准确两倍整窗比较，原连续q还使其积分正窗C¹、全窗AC、严格增凹。合法共同逆域内与和函数逆积分同敛散，不声称点态渐近。原g非增、主函数零点有限、固定大窗主函数逐尾常数均不是可随意加上的结论；连续尖峰说明删q保序会破等价。纯函数界与C456固定图长度边界各保范围。
+  - **证据** [F3A–F3C及来源范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f3-majorant-acceptance)、[FC1–FC5原式与边界](../topics/dd2/original_f_conditions.md#dd2-original-f3-role)、[FI1–FI2（式FI1–FI6，含FI3a）最小主函数与逆积分证明](../topics/dd2/original_f_conditions.md#dd2-original-integrability-equivalence)、[C456同模完整长度分离](../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)。
+  - **复核** 三席均先完成四项实际数学自检，独立重构原式量词、Tonelli支配、最小主函数与逆域比较；已逐源冷读FC1–FC5、FI1–FI6/FI3a、F3A–F3C及全部七处正文与登记，复对历史Git对象、PR4a–PR4b和C456完整模型。半尺度因子、正点有限与零端、整窗两倍锐性及四倍构造的不同对象、连续尾最大、差分而非点态支配均核准。三类纯函数反例的导数、端点、支撑、面积与发散已独立复算，C456限定任一正初距且零输入驻定。来源层级及函数/轨道范围未升级，无未关闭实质异议；仅签S05.F3。
 - [ ] `S05.TELESCOPE` 独立重构原 F1–F3 对应的同一步长度势、望远镜求和与局部留域，逐项注明可以省去的条件。
 
 ## §6 幂次情形是否已经完整分类？
