@@ -39,7 +39,7 @@
 
 [取等的同一构形证书](research/topics/dd2/reverse_compensation.md#dd2-attainment-certificate)把弱层命中还原为全部物理步长、两个最近锚及完整真残差。补充的正下界完整类反例证明：原 max 已达且等于准确上确界，也不能自动转移最大点；有限预算端点还要独立检查目标弱层。
 
-[C438 的严格下降判据](research/canonical/dd2_function_hypotheses.md#fh-strict-decrease)以临界残差右前缀的共同余量精确判定原两项式何时小于输入距离；正下界的准确根另可直接保证严格下降。每条实际边严格、同一尺度的最坏值严格及全窗统一比例三者分开，同一连续完整图和右跳原模给出真实端点反例。
+[C438 的严格下降判据](research/canonical/dd2_function_hypotheses.md#fh-strict-decrease)以临界残差右前缀的共同余量精确判定原两项式何时小于输入距离；正下界的准确根另可直接保证严格下降。每条实际边严格、同一尺度的最坏值严格及全窗统一比例三者分开，同一连续完整图和右跳原模给出真实端点反例。[严格距离下降的验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-strict-distance-acceptance)进一步绑定 C418 的完整正极限轨道：逐尺度共同严格性仍可伴随距离趋 1、位移与真残差不趋零。
 
 [C439 的曲线复合与实际轨道](research/topics/dd2/scalar_iteration.md)用有限退出刻画一般下降函数的精确复合，保留 C418 对全部不等式递推的一步右侧门。两个完整闭图可拥有相同的单输入距离数据、处处达到的准确包络和一致趋零的纯复合，真实轨道却有趋零与趋于正距离的严格差别；这个完整反例定位了非单调复合比较的缺口。
 

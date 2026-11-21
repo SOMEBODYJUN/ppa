@@ -7,23 +7,22 @@
 
 ## 0. 固定对象和量词
 
-在普通 PPA 审计中，H 是有限维欧氏空间，lambda>0，S 是非空闭集且 S subset zer F，允许关系非空并满足 J(x) subset J_(lambda F)(x)。对每条实际边 y in J(x)，记
+公共对象以 [core.md 的 E0](../topics/dd2/core.md#dd2-exact-contract) 为准：有限维欧氏空间 \(H\)、\(\lambda>0\)、非空闭 \(S\subseteq\operatorname{zer}F\)、允许关系 \(\mathcal J\subseteq J_{\lambda F}\) 和认证输入窗。每条实际边使用 \(t=d(x,S),a=d(y,S),s=\|x-y\|\)，并满足
+\[
+\exists p\in P_S(x):\quad \langle x-y,y-p\rangle\ge\Phi(t),
+\qquad \rho=r_F(y)\in D_\psi,\qquad a\le\psi(\rho).
+\]
+原 \(\Phi\) 有符号；下文采用非负 \(D\) 的版本另核 \(\Phi\ge-D\) 及该版本附加前件。一步结论允许空输出，轨道存在与续接才另加非空覆盖及留域；各节不能因沿用本页符号就自动取得其他版本的这些条件。
 
-t=d(x,S),  a=d(y,S),  s=||x-y||,
+真残差在完整 \(F(y)\) 上取下确界，不要求达到。实际图值只给 \(\rho\le s/\lambda\)。一般原模必须直接在 \(\rho\) 评价；不能仅逐图值验证 \(a\le\psi(\|v\|)\) 就未经极限条件换成 \(\psi(\inf\|v\|)\)。空纤维的 \(+\infty\) 约定不提供实际输出，也不允许在未定义点评价原模。
 
-并要求存在一个最近锚 p in P_S(x) 使
-
-< x-y,y-p > >= -D(t),    a <= psi(r_F(y)),
-
-其中 r_F(y)=inf{||v||:v in F(y)}。实际图值只给 r_F(y)<=s/lambda。若要把结论写成完整真残差，必须对完整纤维的每个图值验证误差界。空纤维按残差 +infinity 处理，不能把空图的真空成立当作覆盖。
-
-令 eta(s)=psi(s/lambda)。平面几何给出精确可行域
+只有所用点可评价且已核 \(\psi(\rho)\le\psi(s/\lambda)\)，才能令直接位移模 \(\eta(s)=\psi(s/\lambda)\)。单独采用非正下界 \(-D(t)\)、\(D\ge0\) 时，自由平面几何的精确可行域为
 
 0<=s<=B(t),
 (t-s)_+ <= a <= min{t+s,sqrt(t^2+2D(t)-s^2)},
 B(t)=(t+sqrt(t^2+4D(t)))/2.
 
-这个可行域由 core.md 的三角形和第二锚构造实现。于是下面的“尖锐”首先表示所有二维闭目标几何类的尖锐性。固定算子或额外全图覆盖要另外验证。
+这个域由 core.md 的三角形和第二锚构造实现；加入直接输出界还须筛选 \(a\le\eta(s)\)。原有符号条件和原真残差条件分别用 C414、C417/C421 的准确域。下面各个“尖锐”只属于其写明的对象类；固定算子、指定目标、完整覆盖与实际轨道要另外验证。
 
 状态含义：Proved 表示明确假设和量词下有完整证明，Sharp 还含同一对象类的取等或逼近见证，Conditional 表示需要明确附加条件，Partial 表示可靠中间结果但主目标未闭，Open 表示仍缺具体证明义务，Refuted 表示已由满足原量词的反例否定，Invalid 表示对象或适用条件错误。
 
@@ -31,29 +30,101 @@ B(t)=(t+sqrt(t^2+4D(t)))/2.
 
 ## 4. 不要求统一 kappa<1 时的收敛
 
-### 4.1 严格距离下降
+<a id="dd2-strict-distance-acceptance"></a>
+### 4.1 S04.01：严格距离下降能保证什么
 
-**状态：Proved（逐边），Conditional（变量松弛）。**
+**裁决：Proved；准确条件分别属于其声明的对象类，严格下降自动升级为趋零等结论的推断为 Refuted。**
 
-core.md 的一般输出几何最大值是
+沿用 [E0 的公共对象](../topics/dd2/core.md#dd2-exact-contract)：固定普通 PPA 的允许关系 \(\mathcal J\subseteq J_{\lambda F}\)、非空闭 \(S\subseteq\operatorname{zer}F\)、输入窗 \(U_R\) 和原 \(\Phi,\psi\)。每条受检边选用该边的一个最近输入锚，并在该边推导中沿用它，误差界在完整真残差 \(\rho=r_F(y)\) 上成立。以下严格下降只针对 \(t=d(x,S)>0\)；不在零尺度要求不可能的 \(a<0\)。
 
-M(t)=min{B(t), max_(0<=s<=B(t)) min{eta(s),sqrt(t^2+2D(t)-s^2)}}.
+**预设目标与三种严格性。** 若已认证 \(a\le A(t)\)，且预设 \(A(t)<t\)，则每条受检正距离边严格下降。仅写下一条这样的目标曲线尚未证明它；对默认自由类的统一保证，须用 C430 等反演核 \(M_R(t)\le A(t)\)；固定图也可直接证明自身全部受检边满足目标，不要求自由上界通过。对一个既定边类，三种不同量词为：
 
-其严格门为
+| 所要的结论 | 精确量词或上确界条件 | 可以缺少什么 |
+|---|---|---|
+| 每边严格 | 每条实际边 \(a<t\) | 固定尺度上确界仍可为 \(t\)，但不达到。 |
+| 每个尺度有共同严格余量 | 对每个 \(t>0\) 存在 \(c_t<t\)，使该尺度全部边 \(a\le c_t\)；等价于该类 \(M(t)<t\) | \(c_t/t\) 可在尺度变化时趋于 1。 |
+| 全窗同一比例 | 存在一个 \(\kappa<1\)，全部正尺度及全部受检边均有 \(a\le\kappa t\)；等价于 \(\sup M(t)/t<1\) | 这是 DD1 的额外统一性，前两行本身不提供它。 |
 
-M(t)<t  iff  eta(min{B(t),sqrt(2D(t))})<t.
+表中每个 \(M\) 都是同一已指定边类的实际非空上确界，比值上确界只在有受检边的正尺度取；空尺度没有因此获得覆盖或轨道存在性。固定图用自己的边，不能把自由类上界的必要性转给该图。对任意安全上界，后两种数值条件仍是充分条件。
 
-这是逐点充要条件。若 eta 严格增，目标 a_0=A(t)<t，u=eta^{-1}(a_0)，则
+**一般原模的准确判据。** [C438 的 SC1–SC5](../canonical/dd2_function_hypotheses.md#fh-strict-decrease)固定 \(t,\lambda>0\)、有限 \(\Phi(t)\)、\(0\in D_\psi\subseteq[0,\infty)\) 和有限非负 \(\psi:D_\psi\to[0,\infty)\)。准确 \(M_R\) 的必要性范围是维数至少二、自由闭目标 \(S\subseteq\operatorname{zer}F\) 的原真残差单边类。先核
+\[
+\Phi(t)\le t^2/4,\qquad
+B=\frac{t+\sqrt{t^2-4\Phi(t)}}2,\quad \alpha=(t-B)_+,\qquad
+\exists\rho\in D_\psi\cap[0,B/\lambda]:\ \psi(\rho)\ge\alpha .
+\]
+这是准确原域非空的条件；无边不是下降算法的覆盖证明。令
+\[
+D_+=[-\Phi(t)]_+,\quad q=\sqrt{2D_+},\quad
+B_+=\frac{t+\sqrt{t^2+4D_+}}2,\qquad
+\mathcal H_t=\lim_{\varepsilon\downarrow0}
+\sup_{\substack{\rho\in D_\psi\\
+\lambda\rho\le\min\{B_+,q+\varepsilon\}}}\psi(\rho).
+\]
+前缀含零、随 \(\varepsilon\) 缩小，故扩展实数极限良定，无需连续、非减、可测或残差取到。此时
+\[
+M_R(t)<t
+\quad\Longleftrightarrow\quad
+\Phi(t)>0\quad\text{或}\quad
+\bigl[\Phi(t)\le0\ \text{且}\ \mathcal H_t<t\bigr].
+\]
+正下界的非空类直接有 \(M_R\le B<t\)，不能先取 \(D_+\) 再丢掉这份信息。非正支的精确关系是 \(M_R=\min\{B_+,W_+\}\)、\(B_+\ge t\)；C438 证明原两项式上确界 \(W_+<t\iff\mathcal H_t<t\)。其机制是：临界残差右前缀上的原模留有共同余量，前缀外的平方能量帽也留有共同余量，两者才给一个共同严格界。
 
-M(t)<=a_0  iff  B(t)<=u 或 t^2+2D(t)<=u^2+a_0^2.
+若只问第一行的**每边严格**，非正支的较弱准确条件为
+\[
+\{\rho\in D_\psi:\psi(\rho)\ge t\}
+\cap[0,\min\{B_+,q\}/\lambda]=\varnothing .
+\]
+这个式子排除所有 \(a=t\) 的可实现行；若有 \(a>t\)，同一原残差行也可实现 \(a=t\)。它却允许输出从下方逼近 \(t\)。若该类最大输出达到，第一行与第二行等价；两行只可能在上确界为 \(t\) 且未达到时分离。
 
-若 eta 有平台，最大值公式仍良定，普通反函数式不是合法推导，须用广义逆并保留平台区间。
+若另要求精确零集且闭纤维，正高度的 \(\rho=0\) 行不可实现，须在该类自己的可行域中过滤后重算；任意固定 \(S,F\)、一维及额外位置窗同样保持各自范围。非正整个含零窗、自由目标、\(U=H\) 和无额外输出位置限制下，完整投影加辅助前像的见证可传递相应统一类的必要性；一般正下界整窗仍须核所有完整前像兼容。这个传递不省略目标与纤维合同。
 
-方向松弛 z+=z-alpha q 时，relaxation.md 给出
+**常用连续非减版及 DD1 校准。** 若 \([0,B_+/\lambda]\subseteq D_\psi\)，且 \(\psi\) 在这个完整前缀上连续非减，则
+\[
+\mathcal H_t=\psi\bigl(\min\{B_+,q\}/\lambda\bigr).
+\]
+这给非正支的共同严格余量端点式；若仅判每边严格，原模在临界闭前缀上非减且其右端在域，已经可以读取该端点，无需连续。一般非单调模须保内部峰，共同余量还须保右侧逼近。更一般地，紧原前缀加相对上半连续性可把右极限改为临界闭前缀最大值，但不能只读端点。直接位移版 \(\eta(s)\) 另保其真实物理可行行；只有已核评价域和 \(\psi(\rho)\le\psi(s/\lambda)\)，才可从原误差界令 \(\eta(s)=\psi(s/\lambda)\)。
 
-u^2 <= t^2+2 alpha D(t)-alpha(2 beta-alpha)s^2,
+在全域线性原模 \(\psi(\rho)=\ell\rho\)、\(L=\ell/\lambda>0\) 的非空自由校准中，令 \(\sigma(t)=D_+(t)/t^2\)。逐尺度严格门正是
+\[
+\sigma(t)<T(L),\qquad
+T(L)=
+\begin{cases}
+(1-L)/L^2,&0<L\le1/2,\\
+1/(2L^2),&L\ge1/2 .
+\end{cases}
+\]
+在同一非正准确自由类中，跨尺度共同 \(\kappa<1\) 恰需 \(\sup_{0<t\le R}\sigma(t)<T(L)\)。处处严格却上确界等于临界值，不能替代这个条件。预设非线性 \(A\) 则仍按其自身预算反推；不把计算所得界改成原目标。
 
-其中 beta=<q,Vq>/||q||^2。gamma=2 beta-alpha>0 时，最大不下降区间由 s_m=min{B_(beta,D)(t),sqrt(2D(t)/gamma)} 截断，严格门还必须检查 psi(s_m)+|1-alpha|s_m<t。alpha<2 beta 只支付方向余量，不能自动吸收 D。
+**两类不同的完整反例。** [SC6](../canonical/dd2_function_hypotheses.md#fh-strict-edge-versus-margin)取 \(H=\mathbb R^2,S=\mathbb R\times\{0\},\lambda=R=1,\Phi=0\)，\(\psi(0)=0,\psi(r>0)=1\)，以及
+\[
+F(u,z)=\left(0,\frac{z}{1+u^2}\right),\qquad
+J(u,z)=(u,\beta(u)z),\qquad
+\beta(u)=\frac{1+u^2}{2+u^2}<1 .
+\]
+同一个全域连续单值完整图的全部正距离边都有 \(a=\beta(u)t<t\)，完整 \(\rho=s=(1-\beta(u))t\)，锚内积非负且零输入驻定。但固定每个 \(0<t\le1\) 后，让 \(|u|\to\infty\)，得到实际上确界 \(t\) 未达。这否定“每边严格就有同尺度共同余量”；它本身的每条轨道仍按其固定 \(u\) 几何下降。
+
+[C418 的完整正极限例](../canonical/dd2_function_hypotheses.md#fh-positive-limit)进一步满足第二行。它取 \(H=\mathbb R^2\times\mathbb R,S=\{0\}\times\mathbb R,\lambda=1,R=2,U=H,\psi(\rho)=\rho\)，并预设
+\[
+\alpha_*(t)=1+(t-1)/t,\qquad
+A(t)=(t+\alpha_*(t))/2\quad(1<t\le2),\qquad
+A(t)=3t/4\quad(0\le t\le1),
+\]
+\[
+\Phi(t)=t^2/2-A(t)^2\le0 .
+\]
+每个正尺度的准确自由界 \(M_R(t)=A(t)<t\)。正文用完整 \(J=P_S\) 加一条向目标切向逃逸的链，构造闭图、精确零集、完整近端的全域覆盖及全选择距离窗不变性。其一条真实轨道满足
+\[
+t_k=1+\frac1{k+1}\downarrow1,\qquad
+s_k=\rho_k=t_{k+1}\longrightarrow1 .
+\]
+这里 \(\rho_k=r_F(x^{k+1})\) 取完整纤维；正输出唯一前像。切向增量 \(1/[2(k+1)]\) 使点列逃逸，附加图无有限聚点，因而闭图并未被破坏。所有投影边也满足同一前件。这个实例同时排除从严格距离下降直接推出距离趋零、点收敛、有限长度、渐近正则或真残差趋零。它使用无界位置窗 \(U=H\)，不声称满足另加的有界紧性或限点留域条件。
+
+**本项可交付的轨道结论与零尺度。** 对已知始终合法的轨道，正距离处严格下降；若实际零输入边另有距离吸收，则距离序列单调且存在非负极限。上述例子证明该极限未必为零。\(A(0)=0\) 必须与已认证的实际估计结合，才能保证距离吸收；\(\Phi(0)>0\) 时没有合法零输入边，与包含这类输入的覆盖不相容；\(\Phi(0)=0\) 是强制零输入驻定的充分条件，只有距离吸收不排除沿 \(S\) 移动。一步结论既不提供允许输出非空，也不使输出自动留在位置窗内；要构造无限合法轨道仍另核覆盖及留域。更强收敛结论按后续各题验收。
+
+**变量松弛的既有旁支。** [relaxation.md](../topics/dd2/relaxation.md) 对 \(z^+=z-\alpha q\) 给
+\(u^2\le t^2+2\alpha D(t)-\alpha(2\beta-\alpha)s^2\)，其中
+\(\beta=\langle q,Vq\rangle/\|q\|^2\)。其端点式仍沿用该文的输出模、方向、评价域和松弛条件；\(\alpha<2\beta\) 只给方向余量，不能独自吸收 \(D\)。本项普通 PPA 的准确判据不自动成为这个不同更新点的准确包络。
 
 ### 4.2 距离趋于零
 
@@ -505,7 +576,7 @@ pppa_recovery.md 的逆向障碍 1–4 显示局部物理误差界不能自动�
 
 | 小节 | 状态 | 精确证据或反例 |
 |---|---|---|
-| §4.1 严格下降 | Proved/Conditional | core.md 一步包络、relaxation.md 松弛包络 |
+| §4.1 严格下降 | Proved；自动趋零等升级 Refuted | [S04.01 三种量词及完整反例](#dd2-strict-distance-acceptance)、C438 原残差严格门 |
 | §4.2 距离趋零 | Proved/Conditional | C400 迭代、relaxation.md mu 条件 |
 | §4.3 点收敛 | Conditional | C401 势与仿射零线逃逸 |
 | §4.4 有限长度 | Proved/Refuted | C401/C399 与 A=t/(1+t) |
