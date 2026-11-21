@@ -5424,6 +5424,12 @@
       "label": "C430 原真残差与有符号锚界的双向精确补偿",
       "file": "topics/dd2/reverse_compensation.md#dd2-compensation-contract",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-FULL-WINDOW-COMPATIBILITY-OBSTRUCTION",
+      "label": "C431 逐尺度达标与完整整窗兼容的严格分离",
+      "file": "topics/dd2/reverse_compensation.md#dd2-compensation-compatibility-obstruction",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13898,6 +13904,29 @@
       "output": "DD2-REVERSE-RAW-COMPENSATION",
       "relation": "conditional",
       "scope": "给定目标、任意非负原psi及有符号Phi，在自由单边非空域以危险前缀帽或三门并集精确反演；非正全窗、U=H且无附加输出位置限制的自由子零集完整闭图类在正尺度保持统一必要性，零尺度、正下界完整窗及同图动态另核。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E740",
+      "topic": "DD2 反向补偿与完整图边界",
+      "inputs": [
+        "DD2-SIGNED-ENVELOPE",
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-FULL-WINDOW-COMPATIBILITY-OBSTRUCTION",
+      "relation": "conditional",
+      "scope": "固定二维单点目标及同一Phi/psi/A，每个尺度真实单边非空且统一严格达标；重根窗的近极小完整前像矛盾排除全部完整边同时认证，而同一闭图的覆盖允许选择可实现。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E741",
+      "topic": "DD2 反向补偿与完整图边界",
+      "inputs": [
+        "DD2-FULL-WINDOW-COMPATIBILITY-OBSTRUCTION"
+      ],
+      "output": "DD2-REVERSE-RAW-COMPENSATION",
+      "relation": "limits",
+      "scope": "不反驳自由单边充要式或完整图充分方向；逐尺度非空与目标帽同时成立仍不能保证存在一个满足同数据前件的完整整窗算子。非正全窗完成及允许子关系分别保留。",
       "status": "derived-checked"
     }
   ]

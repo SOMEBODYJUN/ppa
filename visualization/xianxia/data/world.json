@@ -10914,6 +10914,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-FULL-WINDOW-COMPATIBILITY-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13860,6 +13871,14 @@
     "E739": {
       "x": 830.91,
       "y": 5652.08
+    },
+    "E740": {
+      "x": 484.52,
+      "y": 5689.95
+    },
+    "E741": {
+      "x": 769.08,
+      "y": 5680.09
     }
   },
   "bounds": {

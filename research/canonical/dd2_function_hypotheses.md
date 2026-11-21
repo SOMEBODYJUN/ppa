@@ -219,7 +219,7 @@ g_t(\rho)=\sqrt{E-\max\{h,\lambda\rho\}^2}.
         \min\{\psi(\rho),g_t(\rho)\}.\quad}
 \tag{19}
 \]
-它只对原 \(\psi\) 作一次一维上确界，无须可逆、非减、连续或把原模替成其上包络。每条受检实际边有 \(a\le M_R(t)\le B\)。空域表示没有这种边；不把空上确界指定为一个可实现输出。\(M_R\) 仍是最坏一步上界，只有另证 \(M_R(t)\le A(t)<t\) 才得到所指定的严格下降。
+它只对原 \(\psi\) 作一次一维上确界，无须可逆、非减、连续或把原模替成其上包络。每条受检实际边有 \(a\le M_R(t)\le B\)。空域表示没有这种边；不把空上确界指定为一个可实现输出。\(M_R\) 仍是最坏一步上界，若要认证带有指定共同裕量的 \(a\le A(t)<t\)，须另证 \(M_R(t)\le A(t)\)。仅要求每条边 \(a<t\) 时，上确界等于 \(t\) 却不达到也可能成功，见 [严格性区别](../topics/dd2/reverse_compensation.md#dd2-compensation-necessity)。
 
 **消元证明。** C414 的 \(U_t(s)=\min\{t+s,\sqrt{E-s^2}\}\) 在 \(I\) 上的最高点为 \(s=h\)，值为 \(B\)，且在 \([h,B]\) 上等于递减的圆弧 \(\sqrt{E-s^2}\)。当 \(\Phi\le0\)，两支在 \(h=B-t\) 相交；当 \(\Phi>0\)，\(h=\alpha=t-B\) 是根区间左端，圆弧在整个区间都不大于直线。这也证明 \(a\le B\)。任一联合可行点有 \(\rho\le B/\lambda\)、\(\psi(\rho)\ge a\ge(t-B)_+=\alpha\)。若其 \(s\ge h\)，则 \(s\ge\max\{h,\lambda\rho\}\) 给 \(a\le g_t(\rho)\)；若 \(s<h\)，则 \(\lambda\rho<h\)，\(g_t(\rho)=B\ge a\)。所以 (19) 是上界。
 
