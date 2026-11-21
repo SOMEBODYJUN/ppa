@@ -10826,6 +10826,17 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-DUAL-TRUE-FIBER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13740,6 +13751,10 @@
     "E731": {
       "x": 419.9,
       "y": 5650.45
+    },
+    "E732": {
+      "x": 539.01,
+      "y": 5740.51
     }
   },
   "bounds": {

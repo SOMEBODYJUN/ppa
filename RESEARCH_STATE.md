@@ -10,6 +10,8 @@
 - §4–§8：原 [F1–F3](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-original-f1-f3) 由 C401 恢复；[C416](CLAIMS.md#c416) 给出 \(q>1\) 的锐常数与一个完整图的任意小二周期；[C399 的剪切见证](research/canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates) 核实 \(0<q<1\) 的距离率及 \(q>1/2\) 的尾长、点误差指数。
 - §9–§17：PPPA reduction、shadow recovery、双残差、算法、分裂、文献、原创性和独立审查。
 
+周会选稿中独立核出 [C423](CLAIMS.md#c423)：非减模的共同位移几何按两条精确单侧包络取小，完整纤维配连续非单调输入模可严格联合改善指定尺度。待查连续单值和优化来源子类，以及统一局部或真实轨道的收益。
+
 尚未闭合的研究包括任意非规则 gauge 在完整整窗的最优相容与动态尾势（C417 已精确处理单边，C420 已关闭连续非减模的零缺陷统一类）、同对象量词下的文献与严格包含/不可比较证据，以及 fiber 与算法问题。指定闭凸目标或连续单值近端的 \(q>1\) 临界锐性单列。按清单顺序使用或补齐证据。
 
 最新验证：`python3 research/validate_assets.py`、`python3 research/code/dd2/verify_outline.py` 和 `python3 research/build_graph.py` 均通过。

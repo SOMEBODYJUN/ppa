@@ -1116,6 +1116,12 @@
 | E730 | [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) | 自由单边原残差联合域的等价一维消元；已核非空、有效常数与原模认证求值下，用有效连续模或非减右端比较获得有限精度。无表示信息与精确等号另有查询障碍。；**derived-checked** |
 | E731 | [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) | 准确原域非空时，前缀几何与残差坐标的上确界等于自由单边最优值；取等及完整窗前件不等价。正下界下前缀误差界可将完整窗最优值从四分之一提高到二分之一。；**derived-checked** |
 
+## DD2 双残差与图结构
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E732 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-DUAL-TRUE-FIBER · C423 双残差逐边因子与完整图联合增益](topics/dd2/dual_eb.md#dd2-dual-true-fiber) | 非减逐边模给精确单端包络的最小值；零缺陷单点完整纤维的输出约束排除非单调输入模允许的孤立值，三种完整图类有指定小尺度的严格分离。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。
