@@ -330,6 +330,8 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 27. **状态：Proved for stated modules。** 局部锥、共同 s、二点 recovery 是已确认的改善约束。证据：C400/C403、`pppa_recovery.md` 物理长度段。
 28. **状态：Proved as obstruction diagnosis。** 核心障碍是图残差、目标锚、kernel fiber 和物理步长不由单一距离控制。证据：`pppa_recovery.md` 逆向障碍、shadow finite-length 反例与 C406。
 
+§8 逐题证据与量词索引：题 1–8 的共同结构、补偿泛函、逆映射和分段机制以 C400/C401/C403 及 `../topics/dd2/core.md` 为证据，量词限于声明的几何类、连续非减模和允许边 coverage。题 9–15 的收敛、势、残差和非幂次机制以 C399/C401/C406 及 `../topics/dd2/inexact.md` 为证据，严格区分逐边递推、整条留域轨道和误差债务。题 16–22 的 PPPA、fiber、recovery 与 splitting calculus 以 `../topics/dd2/pppa_recovery.md`、`../topics/dd2/splitting.md`、C404/C405/C412 为证据，完整强收敛和物理长度保留相应附加条件。题 23–28 的锐边、反例和阻碍以 C400/C399/C406/C411、`pppa_recovery.md` 和 `DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md` 为证据，未闭对象明确标为 Open 或 Partial。
+
 ---
 
 # 第九部分交付物
