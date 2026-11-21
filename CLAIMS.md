@@ -3579,7 +3579,7 @@
 <a id="c411"></a>
 ## C411-v1 - 低 \(L\) 步长支的固定闭图动力学范围
 
-- **Status**：`candidate`。L1–L5 的一维离散锚链、完整闭图、真残差取等、局部孤立例和仿射单步障碍已逐式核对；原稿对一般闭凸集可和链的法锥论证有符号缺口，该部分保持 open。
+- **Status**：`candidate`。L1–L5 的一维离散锚链、完整闭图、真残差取等、局部孤立例和仿射单步障碍，以及 L6a 的局部锥/多面体闭凸收敛锚障碍已逐式核对；一般弯曲闭凸集的可和/非可和链仍因原稿法锥符号缺口保持 open。
 - **Exact Statement / Objects / Domain / Quantifiers**：固定 \(0<L<1/2\)，\(\rho_L=L/(1-L)\)。若一列 \(t_{k+1}=A(t_k)\) 满足 \(r_k=t_{k+1}/t_k\in(\rho_L,1)\)，在 \(\mathbb R\) 中取 \(s_k=t_{k+1}/L\)、\(x_{k+1}=x_k-s_k\)、\(p_k=x_k-t_k\)，并取 \(S=\{p_k\}\) 及可和情形的唯一极限点，则 \(S\) 闭，\(d(x_k,S)=t_k\)，每步输入/输出最近锚分别为 \(p_k,p_{k+1}\)，且步长支和 \(D(t_k)=t_k^2r_k(r_k-L)/L^2\) 同时取等。把投影关系与边 \(x_k\mapsto x_{k+1}\) 合并，得到固定的全域非空闭图 \(J\)，其反演 \(F=(J^{-1}-I)/\lambda\) 满足 \(\operatorname{zer}F=S\) 和 \(d(x_{k+1},S)=\lambda Lr_F(x_{k+1})\)。
-- **Sharp example and boundaries**：\(A(t)=t/(1+t)\) 在 \(t_0<(1/\rho_L)-1\) 时给出局部孤立离散闭零集、\(t_k\downarrow0\) 和 \(\sum s_k=\infty\)。任何局部孤立零集只排除总长可和的步长支链；闭仿射集连一条 \(a<b\) 的步长支边都不能有。一般闭凸集的可和/非可和链均保持 open，不能把未闭的法锥符号论证写成定理。
+- **Sharp example and boundaries**：\(A(t)=t/(1+t)\) 在 \(t_0<(1/\rho_L)-1\) 时给出局部孤立离散闭零集、\(t_k\downarrow0\) 和 \(\sum s_k=\infty\)。任何局部孤立零集只排除总长可和的步长支链；闭仿射集连一条 \(a<b\) 的步长支边都不能有。L6a 排除了局部锥、特别是多面体闭凸集的收敛锚链；一般弯曲闭凸集的可和/非可和链仍保持 open，不能把未闭的法锥符号论证写成定理。
 - **Evidence / Related Files**：[低 \(L\) 固定图证明](research/topics/dd2/lowL_dynamic_sharpness.md)、[DD2 反向定理](research/topics/dd2/core.md#dd2-reverse)。
