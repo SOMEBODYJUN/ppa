@@ -4,6 +4,8 @@
 
 ## 先把定理讲清楚
 
+先读[DD2 分段主定理](../topics/dd2/core.md#dd2-main-theorem)：一般 \(\Phi,\psi,\varphi\) 通过 \(r=\varphi(t)/t\)、\(z=\lambda\inf\{\psi>\varphi(t)\}/t\) 进入同一个 \(\Sigma(r,z)\)，条件是 \(-\Phi(t)/t^2\le\Sigma(r,z)\)，非规则原模的唯一严格端点例外在定理后紧接说明。随后取 \(\psi(\rho)=\ell\rho\)、\(\Phi=-D\le0\)，须逐式看到[原 \(\Sigma_L\) 两支](../topics/dd2/core.md#dd2-linear-recovery)和 DD1 的 \(T(L)\)。这是主陈述；Q 联合域、三门并集、F/F-raw 等承担证明与扩展，不再替代主定理。A+B 的累计、覆盖和留域条件见[轨道结论](../topics/dd2/core.md#dd2-main-trajectory)，原 F1–F3 保留各自身份。
+
 一次近端迭代把 \(x\) 送到 \(y\)。\(t=d(x,S)\) 是原来离零集的距离，\(a=d(y,S)\) 是走完后还剩的距离，\(s=\|x-y\|\) 是这一步实际走了多远。离零集近了多少和实际走了多远是两件事。
 
 **DD1 和 DD2 的锚定单调性都允许一般有符号函数 \(\Phi\)。** 一条允许步只需有一个最近输入锚 \(p\in P_S(x)\)，使 \(\langle x-y,y-p\rangle\ge\Phi(t)\)。DD1 原来的目标 A 是要求 \(a\le\kappa t\)，其中 \(0<\kappa<1\) 在工作窗里统一。作者讨论稿的 DD1 用线性输出真误差界 \(\ell r_F(y)\) 与一般 \(\Phi\) 做分段补偿，同时得到输入尺度的步长上界。

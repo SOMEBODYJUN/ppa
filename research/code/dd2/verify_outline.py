@@ -1,6 +1,7 @@
 """Check the DD2 manuscript order, references and selected exact algebra."""
 from fractions import Fraction
 from pathlib import Path
+from itertools import product
 import re
 
 repo = Path(__file__).resolve().parents[3]
@@ -109,6 +110,102 @@ for q in (Fraction(3, 5), Fraction(2, 3), Fraction(3, 4)):
     assert p0 * (2 - 1 / q) == p0 - Fraction(1, 2)
 
 assert Fraction(26, 101) < Fraction(12, 37)
+
+# C430: independently compare the new piecewise expression with the original
+# three signed lower gates (RC9), including actual nonemptiness and endpoints.
+def old_compensation(t, c, q, attained, phi):
+    if q is None:  # Empty strict superlevel.
+        return True
+    return (
+        (2 * c >= t and phi >= c * (t - c))
+        or phi >= (t * t - c * c - q * q) / 2
+        or (2 * q >= t and (
+            phi > q * (t - q)
+            or (phi == q * (t - q) and not attained)
+        ))
+    )
+
+
+def piecewise_sigma(r, z):
+    if 1 - r <= z <= 1 + r:
+        return (r * r + z * z - 1) / 2
+    if z > 1 + r:
+        return z * (z - 1)
+    if 2 * r >= 1:
+        return r * (r - 1)
+    return None  # No nonempty successful free one-edge class.
+
+
+def new_compensation(t, c, q, attained, phi):
+    if q is None:
+        return True
+    r, z = c / t, q / t
+    threshold = piecewise_sigma(r, z)
+    if threshold is None:
+        return False
+    sigma = -phi / (t * t)
+    return sigma < threshold if z > 1 + r and attained else sigma <= threshold
+
+
+piecewise_checks = 0
+
+
+def compare_gates(t, c, q, attained, b, nonempty_endpoint=True):
+    global piecewise_checks
+    beta = max(t / 2, b)
+    upper = beta * (t - beta)
+    gates = {Fraction(0), t * t / 4, upper, c * (t - c)}
+    if q is not None:
+        gates.update({(t * t - c * c - q * q) / 2, q * (t - q)})
+    epsilon = t * t / 128
+    for phi in {gate + shift for gate in gates for shift in (-epsilon, 0, epsilon)}:
+        nonempty = phi < upper or (phi == upper and nonempty_endpoint)
+        old = nonempty and old_compensation(t, c, q, attained, phi)
+        new = nonempty and new_compensation(t, c, q, attained, phi)
+        assert old == new, (t, c, q, attained, b, phi, old, new)
+        piecewise_checks += 1
+
+
+for t, lam, values in product(
+    map(Fraction, (1, 2)),
+    (Fraction(1, 2), Fraction(1), Fraction(2)),
+    product((Fraction(0), Fraction(1, 2), Fraction(2)), repeat=3),
+):
+    raw = dict(zip((Fraction(0), Fraction(1, 2), Fraction(2)), values))
+    b = min(max(lam * rho, t - value) for rho, value in raw.items())
+    for ratio in (Fraction(0), Fraction(1, 4), Fraction(1, 2), Fraction(3, 4), Fraction(7, 8)):
+        c = ratio * t
+        bad = [lam * rho for rho, value in raw.items() if value > c]
+        compare_gates(t, c, min(bad) if bad else None, bool(bad), b)
+
+# Ordinary inverse, arbitrary values of L, and all piecewise switching lines.
+for L in (Fraction(1, 10), Fraction(1, 4), Fraction(1, 2), Fraction(1), Fraction(2)):
+    for r in (Fraction(0), Fraction(1, 4), Fraction(1, 2), Fraction(3, 4), Fraction(7, 8)):
+        compare_gates(Fraction(1), r, r / L, False, 1 / (1 + L))
+        if r * r >= L * L / (1 + L * L):
+            original = (
+                r * (r - L) / (L * L)
+                if L < Fraction(1, 2) and r > L / (1 - L)
+                else ((1 + L * L) * r * r - L * L) / (2 * L * L)
+            )
+            assert piecewise_sigma(r, r / L) == original
+            piecewise_checks += 1
+    if L < Fraction(1, 2):
+        switch = L / (1 - L)
+        assert piecewise_sigma(switch, switch / L) == switch * (switch - L) / (L * L)
+
+# Same first bad residual, distinct open/closed root endpoint; the energy
+# endpoint stays safe even if the first bad residual belongs to the layer.
+assert not new_compensation(Fraction(1), Fraction(1, 2), Fraction(2), True, Fraction(-2))
+assert new_compensation(Fraction(1), Fraction(1, 2), Fraction(2), False, Fraction(-2))
+assert new_compensation(Fraction(1), Fraction(1, 2), Fraction(3, 2), True, Fraction(-3, 4))
+compare_gates(Fraction(1), Fraction(1, 2), Fraction(2), False, Fraction(1))
+compare_gates(Fraction(1), Fraction(1, 2), Fraction(0), False, Fraction(1, 2), False)
+
+core = (repo / "research/topics/dd2/core.md").read_text(encoding="utf-8")
+assert core.index('id="dd2-main-theorem"') < core.index('id="dd2-linear-recovery"') < core.index('id="dd2-exact-statements"')
+assert all(f"\\tag{{DD2.{i}}}" in core for i in range(1, 10))
 print(f"DD2 verified: 17 design-task contracts with copy prompts and all 22 legacy tasks mapped; "
       f"5 provisional chapters, 4 legacy proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
-      f"{len(claim_ids)} claim records, {len(links)} local links, 7 exact algebra checks.")
+      f"{len(claim_ids)} claim records, {len(links)} local links, 7 legacy exact algebra checks; "
+      f"{piecewise_checks} exact piecewise compensation comparisons and explicit endpoint checks.")

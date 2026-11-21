@@ -215,7 +215,7 @@
 | 章 | 正文的问题 | 要交付的主结果 |
 | --- | --- | --- |
 | 1 引言 | 为什么应该给定下降目标，反过来问次单调性与正则性？ | Luke–Tam 已把二者组成局部收敛的充分条件。引言固定 DD 要回答的精确关系、最坏边与真实轨道的范围，以及后三章各自的问题。 [同参数文献核查](../../novelty/DD1_PRIOR_ART_2026-11-20.md) |
-| 2 DD1 与 DD2 | 想让一步下降多少，能够容忍的缺陷和所需的正则性怎样互相反解？ | 两条定理与共同证明约两页。一般有符号 \(\Phi\)、输出真残差界 \(\psi\)、预先指定的 \(\varphi\) 与最坏上界 \(M\) 同时入式。DD1 给固定比例的两支及各自临界见证。C430 给 DD2 逐尺度双向反演，并区分自由一步与整窗。 [核心](../../topics/dd2/core.md) · [C430](../../topics/dd2/reverse_compensation.md) · [精确联合关系](../../topics/dd2/joint_relation.md) · [DD1 两支](../../topics/dd2/dd1_recovery.md) |
+| 2 DD1 与 DD2 | 想让一步下降多少，能够容忍的缺陷和所需的正则性怎样互相反解？ | 两条定理与共同证明约两页。先展示 DD2 的分段补偿函数 \(\Sigma(r,z)\) 及条件 \(-\Phi(t)/t^2\le\Sigma(r,z)\)，再代入线性模恢复原 \(\Sigma_L\) 两支；Q 联合关系与三门并集用于证明。一般有符号 \(\Phi\)、输出真残差界 \(\psi\)、预先指定的 \(\varphi\) 与最坏上界 \(M\) 同时入式。DD1 给固定比例的两支及各自临界见证。C430 给 DD2 逐尺度双向反演，并区分自由一步与整窗。 [核心](../../topics/dd2/core.md) · [C430](../../topics/dd2/reverse_compensation.md) · [精确联合关系](../../topics/dd2/joint_relation.md) · [DD1 两支](../../topics/dd2/dd1_recovery.md) |
 | 3 从一步下降到实际轨道 | DD 认证距离下降以后，能否**不靠步长绝对可和**仍证点收敛？又在什么余量下才能加强为有限长度？ | **两个相连而不同的待证主结果。** 先由 DD 的同一数据认证下降，增加可从原图验证的方向或跨步条件，在实际无限长度轨道上证点收敛并划出失效边界；另在包含非幂模的明确算子类里求固定 \((\Phi,\psi)\) 的临界长度余量或精确跨步障碍。 [点收敛任务](#dd2-nonabsolute-main-task) · [长度任务](#dd2-length-main-task) |
 | 4 优化结构与补偿边界 | 同一目标函数的真实全局极小近端，究竟能实现哪些抽象 DD 最坏步？ | **主结果目标。** 固定同一个零集、真误差模、步长和空间，在一个明确的优化类中求精确的补偿边界，给出达到它的目标函数或锐逼近。比较时保留同一工作窗和完整近端覆盖。 [认领任务](#dd2-optimization-main-task) |
 | 5 应用 | 两个分量的次单调性、正则性和耦合方向能否组合成可检验的原始–对偶补偿律？ | **正文应用主结果，优先认领，待证。** 推导可复用于多个模型的分量到耦合推导，并以真正非分离的临界 Chambolle–Pock 验明，保留位置模 \(U\) 对同模型轨道的严格收益或精确限制。 [CP 认领任务](#dd2-cp-main-task) |
@@ -298,7 +298,7 @@
 
 | 已备，不重新认领主证明 | 精确可用范围 |
 | --- | --- |
-| D01 · DD1/DD2 对象与核心 | [E0 合同](../../topics/dd2/core.md#dd2-exact-contract)、[DD1 分段门及边界](../../topics/dd2/dd1_recovery.md)、[C430 双向反演](../../topics/dd2/reverse_compensation.md)、[C435 自由共同代价和 C436 完整前像过滤](../../topics/dd2/joint_relation.md)。有符号 \(\Phi\)、完整真残差、指定 \(\varphi\) 和实际最坏 \(M\) 均已有精确定义；**自由一步、完整窗口、同图轨道仍是不同结论**。 |
+| D01 · DD1/DD2 对象与核心 | [DD2 分段主陈述](../../topics/dd2/core.md#dd2-main-theorem)、[E0 合同](../../topics/dd2/core.md#dd2-exact-contract)、[DD1 分段门及边界](../../topics/dd2/dd1_recovery.md)、[C430 双向反演](../../topics/dd2/reverse_compensation.md)、[C435 自由共同代价和 C436 完整前像过滤](../../topics/dd2/joint_relation.md)。有符号 \(\Phi\)、完整真残差、指定 \(\varphi\) 和实际最坏 \(M\) 均已有精确定义；**自由一步、完整窗口、同图轨道仍是不同结论**。 |
 | D02 · 轨道与反例基线 | [C401](../../topics/dd2/core.md#dd2-general-gauge) 的固定正余量长度势、[C420](../../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp) 的零缺陷类充要、[C424](../../canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget) 的幂模临界余量、[C319](../../canonical/ppa_two_step_and_directional_residual.md#td-cancellation) 的**另一个 A+B 合同**下两步相消而无限长点收敛，以及 [C444](../../topics/dd2/dd1_recovery.md#dd1-critical-finite-termination)、[C447](../../topics/dd2/relaxation.md#dd2-bounded-circular-ppa) 的不同动力学警戒。C319 尚不是 DD 认证点收敛的主例。 |
 | D03 · 真实优化基线 | [C426–C427](../../topics/dd2/target_geometry.md) 的目标集几何与 [C432](../../canonical/optimization_proximal_limits.md#opl-gauge-length) 的真实全局极小近端 Moreau 能量；尚无同目标函数类的 DD 精确替代一步界。凸零集的自由一步见证及仿射线性算子不等于目标函数近端。 |
 | D04 · 分裂基线 | [C405](../../topics/dd2/splitting.md#dd2-splitting-scope) 的实际临界 CP／DR 更新、选定影子上的图值与真残差比较、分量 \(U,V\) 充分式、现有可拆例；[C433](../../topics/dd2/splitting.md#dd2-dr-objective-shadow) 的原变量长度丢失对照。**真正非分离优化 CP 的 DD 桥尚未做。** |
@@ -308,7 +308,7 @@
 | --- | --- | --- |
 | P01 | 1 · 待核 | 逐式列旧 RLEB 标量兼容／常数门、Luke–Tam 与 Alcantara 的**同对象最强**前件和结论；标 paper fact 与本稿解释。不要声称补偿思想首次提出。摘要只写已证增量。 |
 | P02 | 1–2 · 待证 | 找**同一完整图、同一 \(S,\lambda\)、工作窗、近端选择及目标结论**下 DD 可认证而旧 RLEB 认证门失败的见证；精确计算旧门和 DD 门、覆盖、零输入与真残差。若找不到，给证明障碍并修改引言叙事。实际 A+B 若指结果性的 A 与 B 合取，不宣称 DD 可用却 A+B 不成立。原 C322 的 C320/RLEB 分离不可代用。 |
-| P03 | 2 · 成文待做 | 把已备 DD1、DD2 写成约两页共同符号的两条主定理和共用平方几何证明：\(\Phi\) 一般有符号，\(\psi\) 是完整输出真残差模，\(\varphi\) 是预设目标，\(M\) 是算出的最坏界；DD1 两支和 DD2 双向反演各陈述精确量词。零输入与评价域不可省。 |
+| P03 | 2 · 成文待做 | 把已备 DD1、DD2 写成约两页共同符号的两条主定理和共用平方几何证明；DD2 先列一般分段补偿 \(\Sigma(r,z)\)，接着恢复原 \(\Sigma_L\) 两支，不以技术版本清单替代主陈述：\(\Phi\) 一般有符号，\(\psi\) 是完整输出真残差模，\(\varphi\) 是预设目标，\(M\) 是算出的最坏界；DD1 两支和 DD2 双向反演各陈述精确量词。零输入与评价域不可省。 |
 | P04 | 2 · 成文待做 | 选少量承重取等／失败例，分清自由四点、完整前像、同图取等与真实轨道；给每条定理适用的 sharpness 量词。保 C431/C436 的完整整窗阻碍，不能从逐尺度锐自动写轨道锐。 |
 | P05 | 3 · **待证主定理** | 按[点收敛认领](#dd2-nonabsolute-main-task)：先由同一 \((\Phi,\psi,\varphi)\) 的 DD 门认证下降，再以可从完整原图检查的方向／跨步条件在 \(\sum s_k=\infty\) 时证明全受检轨道点收敛、留域与正确极限；若不能在合理类中实现，给准确不可行边界。 |
 | P06 | 3 · 待证配套 | 与 P05 同数据给方向条件失效而点不收敛的完整轨道，或给该类不能有同数据分离的证明；C319 是旧 A+B 可用的启发，C447 各是不同数据的警戒，均不能直接充数。明确点收敛等价于向量位移和收敛，而有限长要求范数和收敛。 |
@@ -856,4 +856,4 @@ DD1 与 DD2 都允许一般有符号锚函数 \(\Phi\)。DD2 先指定下降曲�
 python3 research/code/dd2/verify_outline.py
 ```
 
-脚本核成文次序、链接和选定换参等式。完整数学论证由各节引用的正文承担。
+脚本核成文次序、链接和选定换参等式，并以精确有理数复算一般分段补偿与原三门并集的 8,875 组比较（含非空端、切换线和首端归属），另核显式端点例。完整数学论证由各节引用的正文承担。

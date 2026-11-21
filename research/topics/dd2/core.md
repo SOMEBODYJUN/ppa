@@ -1,121 +1,122 @@
-# DD2：从指定下降函数反推缺陷，再建立有限长度
+# DD2 定理：指定下降曲线的分段补偿
 
-**研究起点。** DD1 与 DD2 的锚定下界都允许用一般有符号函数 \(\Phi(t)\)。DD2 先把统一比例形式的 A 改成指定目标 \(a\le\varphi(t)\)，本页把 \(\varphi(t)\) 记为 \(A(t)\)。随后反问哪些 \(\Phi\) 与输出真残差误差界 \(\psi\) 能保证这个目标。一般 \(\psi\) 属于 DD2 框架，以下先解固定线性误差界的可计算特例，再给一般输出模的一步及长度结果。指定目标 \(A\) 与由几何求出的最坏输出界 \(M\) 分别使用。
+DD1 指定统一比例 \(\kappa t\)；DD2 指定一般下降曲线 \(\varphi(t)\)，再由同一个分段补偿函数反求锚定下界与误差界的配合。
 
-[C430 的双向精确反演](reverse_compensation.md)给出任意原 \(\psi\)（允许非单调）的一般补偿：给定 \(\Phi\) 得危险残差前缀上的点态帽；给定 \(\psi\) 得有符号 \(\Phi\) 的三个下界条件及准确非空上端。单边、非正完整窗和一般正下界完整窗分别标明充要或充分范围，不改变本页 C400/C401 的原身份。
+<a id="dd2-main-theorem"></a>
+## 主定理
 
-[C435–C436 的共同关系](joint_relation.md)把自由单边写成 \(2\Phi(t)+Q_t(a,\lambda\rho)\le t^2\)，给指定输出和真残差的全部物理步长。完整窗再对所有前像加入残差右闭包过滤，在非空算子类的实例中严格缩小上界。自由存在性、完整窗必要性和动态续接各保留自己的量词。
-
-<a id="dd2-exact-statements"></a>
-## 0. Exact Theorem Statements：公共对象与分开的版本
-
-以下把本页及 [C417–C420](../../canonical/dd2_function_hypotheses.md) 的陈述放在同一个对象合同下。每个版本只调用自己列出的附加条件；不能把某一版本的必要性、取等或全图覆盖转授给另一版本。
-
-<a id="dd2-exact-contract"></a>
-### 0.1 公共对象和受检量词
-
-固定 \(H=\mathbb R^n\)、\(n\ge1\)，关系 \(F:H\rightrightarrows H\)，\(\lambda>0\)，非空闭集 \(S\subseteq\operatorname{zer}F\)，开集 \(U\subseteq H\)，以及 \(R>0\)。令
+设 \(H=\mathbb R^n\)，\(F:H\rightrightarrows H\)，\(S\subseteq\operatorname{zer}F\) 非空闭，\(\lambda>0\)。指定目标 \(\varphi:[0,R]\to[0,R]\)，满足 \(\varphi(0)=0\)、\(0\le\varphi(t)<t\)（\(t>0\)）。设 \(\Phi:[0,R]\to\mathbb R\) 有限且 \(\Phi(0)=0\)，\(\psi:D_\psi\to[0,\infty)\) 有限，\(0\in D_\psi\subseteq[0,\infty)\)。对工作窗中的每条允许近端步
 \[
-J_{\lambda F}(x)=\{y:x-y\in\lambda F(y)\},\quad
-U_R=\{x\in U:d(x,S)\le R\},\quad
-r_F(y)=\inf_{v\in F(y)}\|v\|.
+y\in\mathcal J(x)\subseteq J_{\lambda F}(x),\qquad
+t=d(x,S),\quad a=d(y,S),\quad \rho=r_F(y),
 \]
-这里 \(\operatorname{zer}F=\{z:0\in F(z)\}\)，\(P_S(x)=\{p\in S:\|x-p\|=d(x,S)\}\)。空纤维的残差取 \(+\infty\)，但实际输出的纤维非空且残差有限。指定允许子关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\)。给定有限 \(\Phi:[0,R]\to\mathbb R\) 和 \(\psi:D_\psi\to[0,\infty)\)，其中 \(D_\psi\subseteq[0,\infty)\)。原真残差 PPA 版本使用的公共前件是
+假设 \(\rho\in D_\psi\)，且
 \[
-\forall x\in U_R\ \forall y\in\mathcal J(x)\quad
-\rho=r_F(y)\in D_\psi,\quad a=d(y,S)\le\psi(\rho),\quad
-\exists p\in P_S(x):\langle x-y,y-p\rangle\ge\Phi(t),
-\tag{E0}
+\boxed{\quad
+a\le\psi(\rho),\qquad
+\exists p\in P_S(x):\ \langle x-y,y-p\rangle\ge\Phi(t).
+\quad}
+\tag{DD2.1}
 \]
-其中 \(t=d(x,S),s=\|x-y\|\)。同一个 \(p\) 用于该边全部几何推导，可以依赖 \(x,y\)；不要求所有最近锚或所有零点均满足条件。若误差界另有位置窗 \(V_\psi\)，还要求每个受检输出 \(y\in V_\psi\)。这里不预设 \(y\in U_R\)。完整图值只给 \(0\le\rho\le s/\lambda\)；残差不必取到。 [C449 的完整轨道](asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)表明，即使真残差对全部选择几何趋零，也不能逆推实际所选值或步长趋零；[固定参数与其他评价点的传递](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)另核缩放。
+这里 \(r_F(y)=\inf_{v\in F(y)}\|v\|\) 是完整输出纤维的真残差。
+近端关系为 \(J_{\lambda F}(x)=\{y:x-y\in\lambda F(y)\}\)，\(P_S(x)\) 为 \(x\) 的最近点集；允许关系不预设单值或连续。
 
-一步版不要求 \(\mathcal J(x)\ne\varnothing\)。要保证轨道续接，另加对所有 \(x\in U_R\) 的非空覆盖，并由下列预算证明下一输入留域。只有 \(\mathcal J=J_{\lambda F}\) 在整个受检窗逐点相等时，结论才量化全部原近端选择。没有公共的单值、连续、闭图、单调性或全域满射假设。 [指定目标识别](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)另区分闭 \(S\) 加距离趋零、零值图闭及极限恒等边受检；[C450](target_identification.md#dd2-target-identification-boundaries)表明有限长度、真残差趋零和全程留域不能替代这些不同合同。
-
-零尺度独立处理：\(t=0\) 时 \(p=x\)、\(-s^2\ge\Phi(0)\)。下列长度版本以 \(\Phi(0)\ge0\) 或 \(D(0)=0,\Phi\ge-D\) 保证驻定；实际有零输入覆盖时 \(\Phi(0)>0\) 不可行。仅指定 \(A(0)=0\) 不提供实际边估计；即使已有 \(a\le A(0)=0\)，也只保证距离仍为零。[C442 的完整闭图反例与修订](dd1_recovery.md#dd1-zero-obstruction)说明：DD1 原稿的正尺度兼容门不自动控制零输入，恢复含零比例步长界须核受检零边驻定。 [C448 的两个零端分离](asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)另说明：零驻定不代替正尺度负缺陷的小性，\(\psi(0)=0\) 也不代替原残差域上的零端极限；闭图和完整覆盖仍可同时保留。
-
-<a id="dd2-exact-one-step"></a>
-### 0.2 一步定理的三个版本
-
-**G：有符号位移几何版（C414-v1）。** 其自由几何本体只使用锚条件和直接位移界，不另附加 (E0) 的原 \(\psi\) 或算子约束。应用于 (E0) 时，在一条 \(t>0\) 的受检边上另已核 \(a\le\eta(s)\)，其中 \(\eta:[0,\infty)\to[0,\infty)\) 有限。在使用 \(\eta(s)=\psi(s/\lambda)\) 时，必须另核 \(s/\lambda\in D_\psi\) 及 \(\psi(\rho)\le\psi(s/\lambda)\)；非减性是保证后者的一种条件。定义
+对每个 \(t>0\)，把三个函数归一化为
 \[
-E=t^2-2\Phi(t),\quad I=\{s\ge0:s^2+(t-s)^2\le E\},\quad
-L_t(s)=(t-s)_+,\quad U_t(s)=\min\{t+s,\sqrt{E-s^2}\}.
+r(t)=\frac{\varphi(t)}t,\qquad
+z(t)=\frac{\lambda}{t}\inf\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},\qquad
+\sigma(t)=-\frac{\Phi(t)}{t^2}.
+\tag{DD2.2}
 \]
-\(U_t(s)\) 只在 \(s\in I\) 上评价，此时 \(E-s^2\ge(t-s)^2\ge0\)。所有边满足 \(s\in I\)、\(L_t(s)\le a\le\min\{\eta(s),U_t(s)\}\)。可行集合非空时，
+空集的下确界取 \(+\infty\)。连续严格递增且无界的 \(\psi\) 满足
+\(z(t)=\lambda\psi^{-1}(\varphi(t))/t\)；一般原模直接用 (DD2.2)，无须改成幂函数，也无须先取单调包络。
+
+**分段补偿函数。** 对 \(0\le r<1\)、\(0\le z<\infty\)，在 \(r\ge1/2\) 或 \(z\ge1-r\) 的区域内定义
 \[
-M_G(t)=\sup_{\substack{s\in I\\L_t(s)\le\min\{\eta(s),U_t(s)\}}}
-\min\{\eta(s),U_t(s)\}
-\tag{E1}
+\boxed{\quad
+\Sigma(r,z)=
+\begin{cases}
+\dfrac{r^2+z^2-1}{2},&1-r\le z\le1+r,\\[4pt]
+z(z-1),&z>1+r,\\[2pt]
+r(r-1),&0\le z<1-r,\quad r\ge\dfrac12.
+\end{cases}
+\quad}
+\tag{DD2.3}
 \]
-是统一上界；它在 \(n\ge2\) 的自由闭目标两锚几何类中精确。C414-v1 的连续 \(\eta\) 保证最大值达到；S01.10 已核的相对上半连续版本也足够。计算 (E1) 须在整个所用根区间评价 \(\eta\)，不能在局部 \(\psi\) 的未定义点径自代入。\(I\) 或完整可行集合为空只表示无这种边，不能代替覆盖。任意指定 \(A(t)\ge0\) 的自由几何保证等价于 \(M_G(t)\le A(t)\)（非空情形）。证明见 [C414](../../canonical/dd2_general_phi_exact.md) 及 [上半连续版本](../../canonical/dd2_function_hypotheses.md#fh-sup-inverse)。
 
-**R：保留原真残差版（C417-v1）。** 固定测试尺度 \(0<t\le R\)。不假设 \(\psi\) 连续、非减或可逆；本版本取 \(0\in D_\psi\)。定义
+若每个正尺度满足
 \[
-\mathcal K_t=\{(s,a,\rho):s\in I,\rho\in D_\psi\cap[0,s/\lambda],
-\ L_t(s)\le a\le U_t(s),\ a\le\psi(\rho),\ a=0\Rightarrow\rho=0\}.
-\tag{E2}
+\boxed{\qquad \sigma(t)\le\Sigma\bigl(r(t),z(t)\bigr),\qquad}
+\tag{DD2.4}
 \]
-非空时 \(M_R(t)=\sup\{a:(s,a,\rho)\in\mathcal K_t\}\) 控制 (E0) 的全部受检边；对 \(n\ge2\)、\(S\subseteq\operatorname{zer}F\) 的自由单边关系类，这个域和上确界精确。给定 \(A\)，\(M_R(t)\le A(t)\) 是该类逐尺度充要门。若 \(S=\operatorname{zer}F\)，则正距离 \(t>0\) 排除 \(s=0\)；再有 \(F(y)\) 闭时还排除 \(\rho=0<a\)。仅有闭纤维而允许 \(S\subsetneq\operatorname{zer}F\) 不排除后者。空 \(\mathcal K_t\) 表示无边。若整个 \([0,R]\) 上 \(\Phi\le0\)，可在自由目标类、无额外输出位置限制（可取 \(V_\psi=H\)）时用完整投影底图加辅助前像实现覆盖；正 \(\Phi\) 的完整全窗最优一般不能由本单边域判定，已有 \(1/2\) 对 \(1/4\) 的严格分离。证明、最大值条件和超水平反演见 [C417](../../canonical/dd2_function_hypotheses.md#fh-raw-residual)。
-
-**L：固定线性误差界的反向预算版（C400-v1）。** 给定 \(\ell>0\)、\(L=\ell/\lambda\)、\(D:[0,R]\to[0,\infty)\)、\(D(0)=0\)，在 (E0) 中取 \(D_\psi=[0,\infty)\)、\(\psi(r)=\ell r\)，使用下界 \(-D(t)\) 及输出界 \(a\le\ell\rho\)。设
+则每条允许步同时满足
 \[
-E=t^2+2D(t),\qquad B=\frac{t+\sqrt{t^2+4D(t)}}2,
-\qquad M_L(t)=\min\{B,LB,L\sqrt{E/(1+L^2)}\}.
-\tag{E3}
+\boxed{\quad
+d(y,S)\le\varphi\bigl(d(x,S)\bigr),\qquad
+\|x-y\|\le B_\Phi\bigl(d(x,S)\bigr),\quad
+B_\Phi(t)=\frac{t+\sqrt{t^2-4\Phi(t)}}2.
+\quad}
+\tag{DD2.5}
 \]
-则所有边有 \(s\le B,a\le M_L(t)\)。对每个 \(t>0\) 的预设目标 \(A(t)=rt\)、\(0\le r<1\)，在 \(n\ge2\) 的自由闭目标统一类中，保证 \(a\le rt\) 当且仅当 \(r\ge r_0=L/\sqrt{1+L^2}\) 且 \(D(t)/t^2\le\Sigma_L(r)\)，其中 \(\Sigma_L\) 的完整分段公式是下文 (2)。坏侧的固定尺度见证取自由目标及无额外输出位置限制（可取 \(V_\psi=H\)），可以是完整闭图、全域非空近端、精确零集和完整真残差的算子。它不声称一个固定算子对所有尺度、所有轨道同时达到上界。若从一般 \(\Phi\) 取 \(D=[-\Phi]_+\)，(E3) 仍为安全界，但相对于原正 \(\Phi\) 不再宣称精确。证明见 [§1–§2](#dd2-reverse)。
+在有实际边的尺度，根号自动有定义；零输入由 \(\Phi(0)=0\) 驻定，取 \(B_\Phi(0)=0\)。
 
-<a id="dd2-exact-dynamics"></a>
-### 0.3 轨道定理：距离、曲线尾和及同一步长度势
+一般原模只有一处端点修正：若 \(z>1+r\)，且 (DD2.2) 的有限下确界本身属于严格超水平集，则 (DD2.4) 在这一支用严格不等号。连续非减的全域原模没有这个例外。若 \(z=+\infty\)，误差界本身已保证目标；若 \(r<1/2,z<1-r\)，非空自由单边类中没有统一达标的锚下界。
 
-**D：指定目标的距离版。** 在 (E0) 的受检边上已由上述某个门或另一个证明得到 \(a\le A(t)\)，其中 \(A:[0,R]\to[0,R]\)。若 \(A(0)=0,A(t)<t\) 对 \(0<t\le R\)，且 \(\forall l\in(0,R)\ \exists\epsilon_l>0\ \forall u\in(l,R]\cap(l,l+\epsilon_l): A(u)\le l\)，则从 \(x^0\in U_R\) 出发、每条已知一直在 \(U_R\) 中合法的无限允许轨道有 \(d(x^k,S)\to0\)。连续 \(A<t\) 是其充分特例。\(U=H\) 且有覆盖时，距离不增使所有选择自动续接；一般开 \(U\) 不能仅由距离下降保证物理留域。该条件对全部标量转移的必要性及固定图的反例属于 C418，见 [完整证明](../../canonical/dd2_function_hypotheses.md#fh-distance)。此版本不宣称点收敛或有限长度。
+上述补偿对每个满足 (DD2.1) 的固定算子都是充分条件；在维数至少二、允许自由闭目标的**非空单边类**中也是必要条件。非正下界的完整窗实现、正下界的整窗限制与准确非空端点见[补偿证明](reverse_compensation.md#dd2-compensation-piecewise)及其 §5；不把逐尺度必要性转成任意固定图的必要性。
 
-纯复合条件的适用范围另见 [C439](scalar_iteration.md)：非减目标可由复合归纳控制实际距离；一般非单调目标即使其复合一致趋零，且它是完整固定图处处达到的精确包络，也不能代替 D 版的全部递推条件。该新反例不改变 D 版的原假设与结论。
+<a id="dd2-linear-recovery"></a>
+### 原来的两支公式与 DD1
 
-**L-tail：C400 的比较级数长度版。** 保留 L 版本及工作窗非空覆盖。设 \(A:[0,R]\to[0,R]\) 连续、\(A(0)=0\)，且每个正尺度 \(r=A(t)/t\in[r_0,1)\)、\(D(t)/t^2\le\Sigma_L(r)\)。令 \(Q=A\)（若非减），否则 \(Q(t)=\max_{0\le u\le t}A(u)\)。设
+取 \(\psi(\rho)=\ell\rho\)、\(L=\ell/\lambda\)、\(\Phi=-D\le0\)，便有 \(z=r/L\)。令 \(r_0=L/\sqrt{1+L^2}\)。对 \(r_0\le r<1\)，(DD2.3) 原样化为
 \[
-H_Q(t)=\sum_{j\ge0}Q^{\circ j}(t)\quad(0\le t\le R),\qquad H_Q(R)<\infty,\qquad
-b_L=\frac{1+\sqrt{1+4T(L)}}2,
+\boxed{\quad
+\Sigma_L(r)=
+\begin{cases}
+\dfrac{r(r-L)}{L^2},&0<L<\dfrac12,\quad r>\dfrac{L}{1-L},\\[6pt]
+\dfrac{(1+L^2)r^2-L^2}{2L^2},&\text{其余}.
+\end{cases}
+\quad}
+\tag{DD2.6}
 \]
-其中 \(T(L)\) 的分段式在下文 §1。对 \(x^0\in U_R,t_0=d(x^0,S)\)，若 \(b_LH_Q(t_0)<d(x^0,U^c)\)，则所有允许轨道续接且留在 \(U_R\)，
+因此 \(D(t)/t^2\le\Sigma_L(\varphi(t)/t)\) 就给指定下降；令 \(\varphi(t)=\kappa t\) 恢复 DD1 的统一比例形式，临界门为
 \[
-d(x^k,S)\le Q^{\circ k}(t_0),\qquad
-\sum_{j\ge k}\|x^{j+1}-x^j\|\le b_LH_Q(d(x^k,S)),
+\lim_{r\uparrow1}\Sigma_L(r)=T(L)=
+\begin{cases}
+\dfrac{1-L}{L^2},&0<L\le\dfrac12,\\[4pt]
+\dfrac1{2L^2},&L\ge\dfrac12.
+\end{cases}
+\tag{DD2.7}
 \]
-并强收敛到 \(S\cap U\)。约定 \(d(x,\varnothing)=+\infty\)。证明在 [§3](#dd2-trajectory)，以有限前缀预算归纳留域，未先假定无限轨道存在。
+完整 DD1 在统一严格门 \(\sup D(t)/t^2<T(L)\)、覆盖、零驻定及留域预算下，同时给距离几何收缩、步长绝对可和和点收敛。[一般有符号 DD1 的逐项恢复](dd1_recovery.md#dd1-dd2-assumption-map)保留原 \(\Phi\)。
 
-**F：连续非减输出模的积分版（C401-v1）。** 保留 (E0)。以下一步结论不需覆盖，轨道结论另要求工作窗非空覆盖。设 \(\psi:[0,\infty)\to[0,\infty)\) 连续非减、\(\psi(0)=0\)；误差界只要求在实际输出成立，不是原算子全域误差界。这里 \(\operatorname{id}(s)=s\)。定义 \(\eta(s)=\psi(s/\lambda),\chi=(\operatorname{id}+\eta)^{-1}\)。取 \(D\ge0,D(0)=0\)，在 \([0,R]\) 上有 \(\Phi\ge-D\)，并设某个统一 \(0<\delta\le1\) 满足
+<a id="dd2-main-trajectory"></a>
+### 从 A+B 得到完整轨道结论
+
+保留 (DD2.1)–(DD2.5)，并设 \(U\subseteq H\) 开，允许近端关系在距离窗 \(U_R=\{x\in U:d(x,S)\le R\}\) 上逐点非空。取连续非减 \(Q:[0,R]\to[0,R]\)，满足 \(Q(0)=0\)、\(\varphi(t)\le Q(t)<t\)（\(t>0\)）。假设 \(\Phi(t)\le t^2/4\)，并定义
 \[
-2D(t)\le(1-\delta)\chi(t)^2\quad(0<t\le R),\qquad
-\Theta(R)<\infty,\quad \Theta(t)=\int_0^t u/\chi(u)\,du.
-\tag{E4}
+\overline B(t)=\sup_{0\le u\le t}B_\Phi(u),\qquad
+\Theta(t)=\sum_{j=0}^{\infty}\overline B\bigl(Q^{\circ j}(t)\bigr).
+\tag{DD2.8}
 \]
-每条允许边均有 \(t^2-a^2\ge\delta s^2\ge\delta\chi(t)^2\) 及 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。对 \(x^0\in U_R,t_0=d(x^0,S)\) 满足 \((2/\delta)\Theta(t_0)<d(x^0,U^c)\) 的初值，所有选择留域、续接、有限长，并强收敛到 \(S\cap U\)，从第 \(k\) 步起尾长至多 \((2/\delta)\Theta(t_k)\)。平台 \(\psi\) 被允许，只有 \(\operatorname{id}+\eta\) 需要上述普通逆。证明在 [§4](#dd2-general-gauge)。局部模若经延拓使用本版，必须另外核所需评价域，不能借延拓改变实际误差界前提。
-
-**F-raw：原始非规则模的长度版（C419-v1）。** 保留 (E0) 和 \(\Phi\ge-D\) 于 \([0,R]\)、\(D\ge0,D(0)=0\)。不对原 \(\psi\) 加连续或单调条件。取一个已证对全部正距离受检边都有 \(s\ge b(t)>0\) 的有限非减函数 \(b:(0,R]\to(0,\infty)\)，只为公式延拓令 \(b(0)=0\)。例如可以计算
+若 \(\overline B\) 有限且在零连续、\(\Theta(R)<\infty\)，则对 \(x^0\in U_R\) 且满足
+\(\Theta(d(x^0,S))<d(x^0,U^c)\) 的初值，每条允许轨道均可无限续接、留在 \(U_R\)，且
 \[
-b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}
+d(x^k,S)\le Q^{\circ k}(d(x^0,S)),\qquad
+\sum_{j=k}^{\infty}\|x^{j+1}-x^j\|\le\Theta(d(x^k,S)),\qquad
+x^k\longrightarrow x^\infty\in S\cap U.
+\tag{DD2.9}
 \]
-并核其正性；若 \(0\in D_\psi\)，其整段正性恰要求原模近零前缀上确界趋零。令 \(P(t)=\int_0^t u/b(u)\,du\)，\(0\le t\le R\)。若 \(P(R)<\infty\)，且存在统一 \(0<\delta\le1\) 使 \(2D(t)\le(1-\delta)b(t)^2\) 于 \(0<t\le R\)，则 F 版的一步结论成立，将 \(\chi,\Theta\) 分别换成 \(b,P\)；零尺度由驻定给 \(s=a=0\)。另有工作窗非空覆盖、\(x^0\in U_R\) 及 \((2/\delta)P(t_0)<d(x^0,U^c)\) 时，全部允许轨道留域、续接、有限长并强收敛到 \(S\cap U\)，尾长至多 \((2/\delta)P(t_k)\)。该版本把长度条件明确降到实际位移下界，没有把它称为原模或固定算子的必要条件。[完整证明与边界](../../canonical/dd2_function_hypotheses.md#fh-general-length)。
+约定 \(d(x,\varnothing)=+\infty\)。这是一种直接累计 A+B 的充分长度条件；原 [F1–F3](original_f_conditions.md)、[积分长度条件](#dd2-general-gauge)及[原域长度版本](#dd2-exact-dynamics)仍各自保留，并不以比较级数替换它们。
 
-<a id="dd2-exact-versions"></a>
-### 0.4 版本、空间与尖锐性边界
+**证明。** 对正尺度展开 (DD2.1)，得
+\(s^2+\|y-p\|^2\le t^2-2\Phi(t)\)，且
+\(\|y-p\|\ge|t-s|\)。于是 \(s^2-ts+\Phi(t)\le0\)，从而 \(s\le B_\Phi(t)\)。C430 的准确反演化为 (DD2.3)–(DD2.4)，即得 \(a\le\varphi(t)\)；三个分支及全部等号端点的代数推导见[同式证明](reverse_compensation.md#dd2-compensation-piecewise)。
 
-**Z：零缺陷统一类的精确长度版（C420-v1）。** 固定 \(\lambda,R>0\)，连续非减 \(\eta:[0,\infty)\to[0,\infty)\)、\(\eta(0)=0\)，令 \(\psi(r)=\eta(\lambda r)\)、\(\chi=(\operatorname{id}+\eta)^{-1}\)，取 \(U=H,\Phi=0\)。在包含二维空间的自由闭目标普通 PPA 类中，所有满足 (E0)、在整个距离窗 \(d(x,S)\le R\) 上非空覆盖的允许关系，其全部 \(t_0\le R\) 轨道都有有限长度，当且仅当 \(\int_0^R u/\chi(u)\,du<\infty\)。必要侧用一个完整闭图、全域唯一近端、\(S=\{0\}\) 的算子见证；原 \(F\) 不被要求单值或全域有值。局部 \(U\) 若满足 F 版的严格初值预算，则充分侧保证全部允许轨道留域及有限长度。证明见 [C420](../../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)。这个统一类的必要性不属于任意固定 \(F\)，也不适用于强正 \(\Phi\) 或额外下降目标。
+轨道部分，\(Q\) 连续且严格低于恒等映射，故其复合趋零。\(\Theta\) 非减，且
+\(\Theta(t)=\overline B(t)+\Theta(Q(t))\)。每条实际边因此满足
+\(s\le\Theta(t)-\Theta(a)\)。有限前缀望远镜及严格初值预算先保证下一输入留在 \(U_R\)，再用覆盖续接。可和性和 \(S\) 闭性给极限；预算使极限仍在 \(U\)。最后，以 \(\Theta(R)\) 中的可和项控制各项，由 \(\overline B\) 在零连续得 \(\Theta(t)\to0\)，从任一步重启求和即得尾界。这与 [C309 的一般函数迭代机制](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem)一致。
 
-| 版本 | 数学身份与附加条件 | 结论的量词 |
-| --- | --- | --- |
-| G | C414-v1；直接位移界或已核的残差代换 | 正向界对每条受检边；精确最优属维数至少二的自由两锚几何 |
-| R | C417-v1；保留完整真残差和零值限制 | 自由单边精确；非正下界的完整覆盖实现与正下界障碍分开 |
-| L / L-tail | C400-v1；固定线性误差界及非负缺陷预算，长度另有可和比较级数 | 完整图固定坏尺度见证；所有允许轨道的长度须覆盖与留域预算 |
-| D | C418-v1 的标量判据应用于已证距离目标 | 已知始终合法轨道的距离趋零；标量必要性不转授给固定图 |
-| F | C401-v1；连续非减模、统一严格耗散、可积势 | 每条受检边的长度势及预算内所有允许轨道 |
-| F-raw | C419-v1；已核的正非减位移下界替代普通逆 | 一般原模下的充分长度结论，未声称一般必要性 |
-| Z | C420-v1；固定连续非减模及 \(\Phi=0\) | 积分是包含二维算子的统一类保证全部轨道有限长的充要条件；非固定图必要 |
-
-**Hilbert 传递版（已验收 S01.08）。** 把公共对象中的 \(\mathbb R^n\) 改为任意实 Hilbert 空间，并把输入最近锚的存在作为逐边明确前件，以上正向平方估计、残差比较、标量递推和有限长度/强点收敛结论仍成立。各长度版本的极限也满足 \(\|x^\infty-x^0\|\le\text{初始长度预算}<d(x^0,U^c)\)，故确在 \(U\) 中。证明依次只用内积平方展开、三角不等式、标量积分与求和、有限前缀预算、Hilbert 完备性和 \(S\) 的范数闭性；不调用有限维紧性。自由几何的逆向二维见证可嵌入维数至少二的 Hilbert 空间，但不证明任意固定 \(S\)（包括任意给定闭凸目标）或指定连续单值原算子的尖锐性。原有限维 Claim 版本不更名；此处的传递版单独保留最近锚前件。C419 原登记已取 Hilbert 空间。
-
-这些版本全部固定同一 \(\lambda\)。变步长、变度量、松弛、非精确步及物理 shadow 恢复须使用各自的单独版本，不能从本节符号中默许它们。DD1 的统一比例目标是 L 版本的 \(A(t)=\kappa t\) 特例；原稿一般有符号前件的[逐边映射、零尺度修订与局部化范围](dd1_recovery.md#dd1-dd2-assumption-map)另有精确核对。指定一般 \(A\) 的一步保证、距离趋零和有限长度分别由上面的不同门控制。
+以下先给原两支公式的直接证明，再给几何实现、轨道例子与一般模的长度证明。公共评价域及各种技术版本集中在文末[技术补充](#dd2-exact-statements)。后文旧记号 \(A(t)\) 均指本节指定的 \(\varphi(t)\)，不指算出的最坏输出 \(M(t)\)。
 
 <a id="dd2-reverse"></a>
 ## 1. 指定下降函数与线性误差界
@@ -310,3 +311,114 @@ s\le \frac{t^2-a^2}{\delta\chi(t)}
 作者本轮给定的写作次序是目标 \(A\) → 线性误差界下的平面反演 → 距离及长度 → 一般 \(\psi\) → 算法推广。上传的 509 行 Markdown（SHA-256 c834aeee5e134d3968a26d49ddec7b3ed416576b2806bf93b6267722d0d65213）是一般函数、约化图和恢复的来源稿。此页将其几何和长度结果重构为可检验的命题。长度推导承接 [C309](../../canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem)、C399 和 [C285](../../canonical/rleb_sharp_linear_frontier.md#rsl-factor)，新内容是指定下降曲线的反向预算、尺度内精确变分形式、同一曲线无限长度算子和一般 \((I+\eta)^{-1}\) 长度积分。完整关系的动态锐性、指定规则零集的更强条件和公开优先性均有独立量词，见研究任务书。
 
 [C417–C420 的函数条件验收](../../canonical/dd2_function_hypotheses.md)补充原真残差的非单调可行域、标量趋零的精确右侧条件、任意原模的正位移下界和零缺陷统一类的积分必要性。它们是各有明确量词的新版本，不删除本页 C400/C401 的原假设。尤其，某个固定算子有限长不要求它所配的任意较松误差界模都满足 (9)。
+
+<a id="dd2-exact-statements"></a>
+## 技术补充：公共评价域与各版本的准确范围
+
+以下把本页及 [C417–C420](../../canonical/dd2_function_hypotheses.md) 的陈述放在同一个对象合同下。每个版本只调用自己列出的附加条件；不能把某一版本的必要性、取等或全图覆盖转授给另一版本。
+
+<a id="dd2-exact-contract"></a>
+### A.1 公共对象和受检量词
+
+固定 \(H=\mathbb R^n\)、\(n\ge1\)，关系 \(F:H\rightrightarrows H\)，\(\lambda>0\)，非空闭集 \(S\subseteq\operatorname{zer}F\)，开集 \(U\subseteq H\)，以及 \(R>0\)。令
+\[
+J_{\lambda F}(x)=\{y:x-y\in\lambda F(y)\},\quad
+U_R=\{x\in U:d(x,S)\le R\},\quad
+r_F(y)=\inf_{v\in F(y)}\|v\|.
+\]
+这里 \(\operatorname{zer}F=\{z:0\in F(z)\}\)，\(P_S(x)=\{p\in S:\|x-p\|=d(x,S)\}\)。空纤维的残差取 \(+\infty\)，但实际输出的纤维非空且残差有限。指定允许子关系 \(\mathcal J(x)\subseteq J_{\lambda F}(x)\)。给定有限 \(\Phi:[0,R]\to\mathbb R\) 和 \(\psi:D_\psi\to[0,\infty)\)，其中 \(D_\psi\subseteq[0,\infty)\)。原真残差 PPA 版本使用的公共前件是
+\[
+\forall x\in U_R\ \forall y\in\mathcal J(x)\quad
+\rho=r_F(y)\in D_\psi,\quad a=d(y,S)\le\psi(\rho),\quad
+\exists p\in P_S(x):\langle x-y,y-p\rangle\ge\Phi(t),
+\tag{E0}
+\]
+其中 \(t=d(x,S),s=\|x-y\|\)。同一个 \(p\) 用于该边全部几何推导，可以依赖 \(x,y\)；不要求所有最近锚或所有零点均满足条件。若误差界另有位置窗 \(V_\psi\)，还要求每个受检输出 \(y\in V_\psi\)。这里不预设 \(y\in U_R\)。完整图值只给 \(0\le\rho\le s/\lambda\)；残差不必取到。 [C449 的完整轨道](asymptotic_regularity.md#dd2-true-residual-without-selected-regularity)表明，即使真残差对全部选择几何趋零，也不能逆推实际所选值或步长趋零；[固定参数与其他评价点的传递](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)另核缩放。
+
+一步版不要求 \(\mathcal J(x)\ne\varnothing\)。要保证轨道续接，另加对所有 \(x\in U_R\) 的非空覆盖，并由下列预算证明下一输入留域。只有 \(\mathcal J=J_{\lambda F}\) 在整个受检窗逐点相等时，结论才量化全部原近端选择。没有公共的单值、连续、闭图、单调性或全域满射假设。 [指定目标识别](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)另区分闭 \(S\) 加距离趋零、零值图闭及极限恒等边受检；[C450](target_identification.md#dd2-target-identification-boundaries)表明有限长度、真残差趋零和全程留域不能替代这些不同合同。
+
+零尺度独立处理：\(t=0\) 时 \(p=x\)、\(-s^2\ge\Phi(0)\)。下列长度版本以 \(\Phi(0)\ge0\) 或 \(D(0)=0,\Phi\ge-D\) 保证驻定；实际有零输入覆盖时 \(\Phi(0)>0\) 不可行。仅指定 \(A(0)=0\) 不提供实际边估计；即使已有 \(a\le A(0)=0\)，也只保证距离仍为零。[C442 的完整闭图反例与修订](dd1_recovery.md#dd1-zero-obstruction)说明：DD1 原稿的正尺度兼容门不自动控制零输入，恢复含零比例步长界须核受检零边驻定。 [C448 的两个零端分离](asymptotic_regularity.md#dd2-asymptotic-endpoint-separation)另说明：零驻定不代替正尺度负缺陷的小性，\(\psi(0)=0\) 也不代替原残差域上的零端极限；闭图和完整覆盖仍可同时保留。
+
+<a id="dd2-exact-one-step"></a>
+### A.2 一步定理的三个版本
+
+**G：有符号位移几何版（C414-v1）。** 其自由几何本体只使用锚条件和直接位移界，不另附加 (E0) 的原 \(\psi\) 或算子约束。应用于 (E0) 时，在一条 \(t>0\) 的受检边上另已核 \(a\le\eta(s)\)，其中 \(\eta:[0,\infty)\to[0,\infty)\) 有限。在使用 \(\eta(s)=\psi(s/\lambda)\) 时，必须另核 \(s/\lambda\in D_\psi\) 及 \(\psi(\rho)\le\psi(s/\lambda)\)；非减性是保证后者的一种条件。定义
+\[
+E=t^2-2\Phi(t),\quad I=\{s\ge0:s^2+(t-s)^2\le E\},\quad
+L_t(s)=(t-s)_+,\quad U_t(s)=\min\{t+s,\sqrt{E-s^2}\}.
+\]
+\(U_t(s)\) 只在 \(s\in I\) 上评价，此时 \(E-s^2\ge(t-s)^2\ge0\)。所有边满足 \(s\in I\)、\(L_t(s)\le a\le\min\{\eta(s),U_t(s)\}\)。可行集合非空时，
+\[
+M_G(t)=\sup_{\substack{s\in I\\L_t(s)\le\min\{\eta(s),U_t(s)\}}}
+\min\{\eta(s),U_t(s)\}
+\tag{E1}
+\]
+是统一上界；它在 \(n\ge2\) 的自由闭目标两锚几何类中精确。C414-v1 的连续 \(\eta\) 保证最大值达到；S01.10 已核的相对上半连续版本也足够。计算 (E1) 须在整个所用根区间评价 \(\eta\)，不能在局部 \(\psi\) 的未定义点径自代入。\(I\) 或完整可行集合为空只表示无这种边，不能代替覆盖。任意指定 \(A(t)\ge0\) 的自由几何保证等价于 \(M_G(t)\le A(t)\)（非空情形）。证明见 [C414](../../canonical/dd2_general_phi_exact.md) 及 [上半连续版本](../../canonical/dd2_function_hypotheses.md#fh-sup-inverse)。
+
+**R：保留原真残差版（C417-v1）。** 固定测试尺度 \(0<t\le R\)。不假设 \(\psi\) 连续、非减或可逆；本版本取 \(0\in D_\psi\)。定义
+\[
+\mathcal K_t=\{(s,a,\rho):s\in I,\rho\in D_\psi\cap[0,s/\lambda],
+\ L_t(s)\le a\le U_t(s),\ a\le\psi(\rho),\ a=0\Rightarrow\rho=0\}.
+\tag{E2}
+\]
+非空时 \(M_R(t)=\sup\{a:(s,a,\rho)\in\mathcal K_t\}\) 控制 (E0) 的全部受检边；对 \(n\ge2\)、\(S\subseteq\operatorname{zer}F\) 的自由单边关系类，这个域和上确界精确。给定 \(A\)，\(M_R(t)\le A(t)\) 是该类逐尺度充要门。若 \(S=\operatorname{zer}F\)，则正距离 \(t>0\) 排除 \(s=0\)；再有 \(F(y)\) 闭时还排除 \(\rho=0<a\)。仅有闭纤维而允许 \(S\subsetneq\operatorname{zer}F\) 不排除后者。空 \(\mathcal K_t\) 表示无边。若整个 \([0,R]\) 上 \(\Phi\le0\)，可在自由目标类、无额外输出位置限制（可取 \(V_\psi=H\)）时用完整投影底图加辅助前像实现覆盖；正 \(\Phi\) 的完整全窗最优一般不能由本单边域判定，已有 \(1/2\) 对 \(1/4\) 的严格分离。证明、最大值条件和超水平反演见 [C417](../../canonical/dd2_function_hypotheses.md#fh-raw-residual)。
+
+**L：固定线性误差界的反向预算版（C400-v1）。** 给定 \(\ell>0\)、\(L=\ell/\lambda\)、\(D:[0,R]\to[0,\infty)\)、\(D(0)=0\)，在 (E0) 中取 \(D_\psi=[0,\infty)\)、\(\psi(r)=\ell r\)，使用下界 \(-D(t)\) 及输出界 \(a\le\ell\rho\)。设
+\[
+E=t^2+2D(t),\qquad B=\frac{t+\sqrt{t^2+4D(t)}}2,
+\qquad M_L(t)=\min\{B,LB,L\sqrt{E/(1+L^2)}\}.
+\tag{E3}
+\]
+则所有边有 \(s\le B,a\le M_L(t)\)。对每个 \(t>0\) 的预设目标 \(A(t)=rt\)、\(0\le r<1\)，在 \(n\ge2\) 的自由闭目标统一类中，保证 \(a\le rt\) 当且仅当 \(r\ge r_0=L/\sqrt{1+L^2}\) 且 \(D(t)/t^2\le\Sigma_L(r)\)，其中 \(\Sigma_L\) 的完整分段公式是下文 (2)。坏侧的固定尺度见证取自由目标及无额外输出位置限制（可取 \(V_\psi=H\)），可以是完整闭图、全域非空近端、精确零集和完整真残差的算子。它不声称一个固定算子对所有尺度、所有轨道同时达到上界。若从一般 \(\Phi\) 取 \(D=[-\Phi]_+\)，(E3) 仍为安全界，但相对于原正 \(\Phi\) 不再宣称精确。证明见 [§1–§2](#dd2-reverse)。
+
+<a id="dd2-exact-dynamics"></a>
+### A.3 轨道定理：距离、曲线尾和及同一步长度势
+
+**D：指定目标的距离版。** 在 (E0) 的受检边上已由上述某个门或另一个证明得到 \(a\le A(t)\)，其中 \(A:[0,R]\to[0,R]\)。若 \(A(0)=0,A(t)<t\) 对 \(0<t\le R\)，且 \(\forall l\in(0,R)\ \exists\epsilon_l>0\ \forall u\in(l,R]\cap(l,l+\epsilon_l): A(u)\le l\)，则从 \(x^0\in U_R\) 出发、每条已知一直在 \(U_R\) 中合法的无限允许轨道有 \(d(x^k,S)\to0\)。连续 \(A<t\) 是其充分特例。\(U=H\) 且有覆盖时，距离不增使所有选择自动续接；一般开 \(U\) 不能仅由距离下降保证物理留域。该条件对全部标量转移的必要性及固定图的反例属于 C418，见 [完整证明](../../canonical/dd2_function_hypotheses.md#fh-distance)。此版本不宣称点收敛或有限长度。
+
+纯复合条件的适用范围另见 [C439](scalar_iteration.md)：非减目标可由复合归纳控制实际距离；一般非单调目标即使其复合一致趋零，且它是完整固定图处处达到的精确包络，也不能代替 D 版的全部递推条件。该新反例不改变 D 版的原假设与结论。
+
+**L-tail：C400 的比较级数长度版。** 保留 L 版本及工作窗非空覆盖。设 \(A:[0,R]\to[0,R]\) 连续、\(A(0)=0\)，且每个正尺度 \(r=A(t)/t\in[r_0,1)\)、\(D(t)/t^2\le\Sigma_L(r)\)。令 \(Q=A\)（若非减），否则 \(Q(t)=\max_{0\le u\le t}A(u)\)。设
+\[
+H_Q(t)=\sum_{j\ge0}Q^{\circ j}(t)\quad(0\le t\le R),\qquad H_Q(R)<\infty,\qquad
+b_L=\frac{1+\sqrt{1+4T(L)}}2,
+\]
+其中 \(T(L)\) 的分段式在下文 §1。对 \(x^0\in U_R,t_0=d(x^0,S)\)，若 \(b_LH_Q(t_0)<d(x^0,U^c)\)，则所有允许轨道续接且留在 \(U_R\)，
+\[
+d(x^k,S)\le Q^{\circ k}(t_0),\qquad
+\sum_{j\ge k}\|x^{j+1}-x^j\|\le b_LH_Q(d(x^k,S)),
+\]
+并强收敛到 \(S\cap U\)。约定 \(d(x,\varnothing)=+\infty\)。证明在 [§3](#dd2-trajectory)，以有限前缀预算归纳留域，未先假定无限轨道存在。
+
+**F：连续非减输出模的积分版（C401-v1）。** 保留 (E0)。以下一步结论不需覆盖，轨道结论另要求工作窗非空覆盖。设 \(\psi:[0,\infty)\to[0,\infty)\) 连续非减、\(\psi(0)=0\)；误差界只要求在实际输出成立，不是原算子全域误差界。这里 \(\operatorname{id}(s)=s\)。定义 \(\eta(s)=\psi(s/\lambda),\chi=(\operatorname{id}+\eta)^{-1}\)。取 \(D\ge0,D(0)=0\)，在 \([0,R]\) 上有 \(\Phi\ge-D\)，并设某个统一 \(0<\delta\le1\) 满足
+\[
+2D(t)\le(1-\delta)\chi(t)^2\quad(0<t\le R),\qquad
+\Theta(R)<\infty,\quad \Theta(t)=\int_0^t u/\chi(u)\,du.
+\tag{E4}
+\]
+每条允许边均有 \(t^2-a^2\ge\delta s^2\ge\delta\chi(t)^2\) 及 \(s\le(2/\delta)[\Theta(t)-\Theta(a)]\)。对 \(x^0\in U_R,t_0=d(x^0,S)\) 满足 \((2/\delta)\Theta(t_0)<d(x^0,U^c)\) 的初值，所有选择留域、续接、有限长，并强收敛到 \(S\cap U\)，从第 \(k\) 步起尾长至多 \((2/\delta)\Theta(t_k)\)。平台 \(\psi\) 被允许，只有 \(\operatorname{id}+\eta\) 需要上述普通逆。证明在 [§4](#dd2-general-gauge)。局部模若经延拓使用本版，必须另外核所需评价域，不能借延拓改变实际误差界前提。
+
+**F-raw：原始非规则模的长度版（C419-v1）。** 保留 (E0) 和 \(\Phi\ge-D\) 于 \([0,R]\)、\(D\ge0,D(0)=0\)。不对原 \(\psi\) 加连续或单调条件。取一个已证对全部正距离受检边都有 \(s\ge b(t)>0\) 的有限非减函数 \(b:(0,R]\to(0,\infty)\)，只为公式延拓令 \(b(0)=0\)。例如可以计算
+\[
+b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}
+\]
+并核其正性；若 \(0\in D_\psi\)，其整段正性恰要求原模近零前缀上确界趋零。令 \(P(t)=\int_0^t u/b(u)\,du\)，\(0\le t\le R\)。若 \(P(R)<\infty\)，且存在统一 \(0<\delta\le1\) 使 \(2D(t)\le(1-\delta)b(t)^2\) 于 \(0<t\le R\)，则 F 版的一步结论成立，将 \(\chi,\Theta\) 分别换成 \(b,P\)；零尺度由驻定给 \(s=a=0\)。另有工作窗非空覆盖、\(x^0\in U_R\) 及 \((2/\delta)P(t_0)<d(x^0,U^c)\) 时，全部允许轨道留域、续接、有限长并强收敛到 \(S\cap U\)，尾长至多 \((2/\delta)P(t_k)\)。该版本把长度条件明确降到实际位移下界，没有把它称为原模或固定算子的必要条件。[完整证明与边界](../../canonical/dd2_function_hypotheses.md#fh-general-length)。
+
+<a id="dd2-exact-versions"></a>
+### A.4 版本、空间与尖锐性边界
+
+**Z：零缺陷统一类的精确长度版（C420-v1）。** 固定 \(\lambda,R>0\)，连续非减 \(\eta:[0,\infty)\to[0,\infty)\)、\(\eta(0)=0\)，令 \(\psi(r)=\eta(\lambda r)\)、\(\chi=(\operatorname{id}+\eta)^{-1}\)，取 \(U=H,\Phi=0\)。在包含二维空间的自由闭目标普通 PPA 类中，所有满足 (E0)、在整个距离窗 \(d(x,S)\le R\) 上非空覆盖的允许关系，其全部 \(t_0\le R\) 轨道都有有限长度，当且仅当 \(\int_0^R u/\chi(u)\,du<\infty\)。必要侧用一个完整闭图、全域唯一近端、\(S=\{0\}\) 的算子见证；原 \(F\) 不被要求单值或全域有值。局部 \(U\) 若满足 F 版的严格初值预算，则充分侧保证全部允许轨道留域及有限长度。证明见 [C420](../../canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)。这个统一类的必要性不属于任意固定 \(F\)，也不适用于强正 \(\Phi\) 或额外下降目标。
+
+| 版本 | 数学身份与附加条件 | 结论的量词 |
+| --- | --- | --- |
+| G | C414-v1；直接位移界或已核的残差代换 | 正向界对每条受检边；精确最优属维数至少二的自由两锚几何 |
+| R | C417-v1；保留完整真残差和零值限制 | 自由单边精确；非正下界的完整覆盖实现与正下界障碍分开 |
+| L / L-tail | C400-v1；固定线性误差界及非负缺陷预算，长度另有可和比较级数 | 完整图固定坏尺度见证；所有允许轨道的长度须覆盖与留域预算 |
+| D | C418-v1 的标量判据应用于已证距离目标 | 已知始终合法轨道的距离趋零；标量必要性不转授给固定图 |
+| F | C401-v1；连续非减模、统一严格耗散、可积势 | 每条受检边的长度势及预算内所有允许轨道 |
+| F-raw | C419-v1；已核的正非减位移下界替代普通逆 | 一般原模下的充分长度结论，未声称一般必要性 |
+| Z | C420-v1；固定连续非减模及 \(\Phi=0\) | 积分是包含二维算子的统一类保证全部轨道有限长的充要条件；非固定图必要 |
+
+**Hilbert 传递版（已验收 S01.08）。** 把公共对象中的 \(\mathbb R^n\) 改为任意实 Hilbert 空间，并把输入最近锚的存在作为逐边明确前件，以上正向平方估计、残差比较、标量递推和有限长度/强点收敛结论仍成立。各长度版本的极限也满足 \(\|x^\infty-x^0\|\le\text{初始长度预算}<d(x^0,U^c)\)，故确在 \(U\) 中。证明依次只用内积平方展开、三角不等式、标量积分与求和、有限前缀预算、Hilbert 完备性和 \(S\) 的范数闭性；不调用有限维紧性。自由几何的逆向二维见证可嵌入维数至少二的 Hilbert 空间，但不证明任意固定 \(S\)（包括任意给定闭凸目标）或指定连续单值原算子的尖锐性。原有限维 Claim 版本不更名；此处的传递版单独保留最近锚前件。C419 原登记已取 Hilbert 空间。
+
+这些版本全部固定同一 \(\lambda\)。变步长、变度量、松弛、非精确步及物理 shadow 恢复须使用各自的单独版本，不能从本节符号中默许它们。DD1 的统一比例目标是 L 版本的 \(A(t)=\kappa t\) 特例；原稿一般有符号前件的[逐边映射、零尺度修订与局部化范围](dd1_recovery.md#dd1-dd2-assumption-map)另有精确核对。指定一般 \(A\) 的一步保证、距离趋零和有限长度分别由上面的不同门控制。

@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+**DD2 主定理入口。** [主陈述](research/topics/dd2/core.md#dd2-main-theorem)先给一般 \(\Phi,\psi,\varphi\) 的分段补偿函数 \(\Sigma(r,z)\)，由 \(-\Phi(t)/t^2\le\Sigma(\varphi(t)/t,\lambda\inf\{\psi>\varphi(t)\}/t)\) 同时读出指定下降与实际步长上界。随后[原两支 \(\Sigma_L\) 和 DD1 临界门](research/topics/dd2/core.md#dd2-linear-recovery)逐式恢复，覆盖、可和步预算和留域条件下给[全部轨道的有限长度与点收敛](research/topics/dd2/core.md#dd2-main-trajectory)。[C430 的等价分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)保原有符号、原残差与准确端点；原域、联合关系和长度的各技术版本放在主陈述之后。本次重写改变呈现顺序，未新增或提升 Claim，也未重排作者尚未选定的后续题材。
+
 **当前选稿原则：从 DD 引出的新问题重新比较，不以旧 RLEB 的题材作模板。** 作者以 RLEB 第四章说明附加结果的质量与叙事要求，没有指定 DD 论文优先采用几何、拓扑或回缩。此前提出的“选择稳定性、目标几何、实际续接与准确总尾”仅是助手候选，优先排序撤回；其证明与查新记录保留。恢复选题时，同时考察原算子与优化子类的不同补偿机制、组合/分解、可实施设计与认证、真实模型及其他有证据的新问题。候选须分别交代读者原问题、DD 增加的准确数学信息、已有答案/未闭义务与一手比较，不能仅因已有证明或类似旧文章章节而选入正文。 [前次候选与查新](research/LITERATURE.md#lit-dd-structural-selection)保留为比较材料，不是作者选定的大纲。
 
 **上一阶段已核：DD 的非精确计算后果。** [C455 的完整证明](research/topics/dd2/inexact.md#dd1-observable-margin)将完整 DD1 的 A+B 编译成可观察停止规则：\(E\le\delta_\kappa s\)，\(\delta_\kappa=\max\{1/b,\sqrt{(1+L^2)/(1+2\sigma)}\}-L/\kappa\)。它保留所有接受轨道的距离收缩、步长绝对可和和点收敛；自由闭目标完整图类的一步系数准确，具体非单调模型有至多十次内层更新的证明和[可复算程序](research/code/dd1_robust_margin/README.md)。[Claim 身份](CLAIMS.md#c455)与[过度贡献判断的失败机制](FAILED_ROUTES.md#f162)分别保存。
@@ -31,7 +33,7 @@
 
 [广义逆合同与 C429](research/canonical/dd2_function_hypotheses.md#fh-generalized-inverse-contract)将精确反向判定与长度下界分开：前者保留严格／非严格超水平的首端归属，后者不要求端点达到。原真残差位移下界恰等于精确前缀的广义逆，并自动非减且 \(1\)-Lipschitz；它仍只对应两条标量约束，不能代替完整几何或长度证书。
 
-[C430 的双向补偿](research/topics/dd2/reverse_compensation.md)在自由单边类固定指定目标 \(A\)：给定一般有符号 \(\Phi\)，求原 \(\psi\) 在危险残差前缀上必须满足的点态帽；给定任意原 \(\psi\)，用三个下界条件的并集和准确非空上端，求允许的 \(\Phi(t)\) 区间。非减、连续或严格可逆都不必预设，开闭端点不可丢失。非正整窗、\(U=H\) 且无额外输出位置限制时，有完整闭图统一类的反向实现；正下界另有连续目标的完整前像分离例。
+[C430 的双向补偿](research/topics/dd2/reverse_compensation.md)在自由单边类固定指定目标 \(A\)：给定一般有符号 \(\Phi\)，求原 \(\psi\) 在危险残差前缀上必须满足的点态帽；给定任意原 \(\psi\)，用分段补偿函数及准确非空上端，求允许的 \(\Phi(t)\) 区间。非减、连续或严格可逆都不必预设，开闭端点不可丢失。非正整窗、\(U=H\) 且无额外输出位置限制时，有完整闭图统一类的反向实现；正下界另有连续目标的完整前像分离例。
 
 [C441 的原式数值逆](research/topics/dd2/reverse_compensation.md#dd2-original-envelope-inverse)以严格危险残差层的首端和归属给两道预算，保能量端与根端的不同开闭。非正下界且预设 \(A(t)<t\) 时，该数值逆恰与准确自由目标逆等价；正下界、固定图和精确零集闭纤维各有独立限制与完整反例。
 
