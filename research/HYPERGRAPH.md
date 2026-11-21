@@ -1204,6 +1204,12 @@
 | --- | --- | --- | --- |
 | E754 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD1-ZERO-SCALE-RECOVERY · C442 DD1 原前件嵌入、零输入缺口及精确修订](topics/dd2/dd1_recovery.md#dd1-zero-obstruction) | 同一允许边、某最近输入锚和完整线性真残差：DD1 一般有符号原前件进入 E0，正尺度兼容另保；将比例步长界延至受检零边恰需该边驻定。原正尺度上确界不能推出此门，任意小二周期有完整闭图、精确零集与全域覆盖。二次校准自带零条件，F 耗散及 L-tail 自动位置预算另核，不否定正尺度或原有效 C400/C285。；**derived-checked** |
 
+## DD2 尖锐性与实现量词
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E755 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) ∧ [DD2-CONVEX-SCALAR-REALIZATION · C426 闭凸线段与固定射线的单边标量实现](topics/dd2/target_geometry.md#dd2-convex-scalar-realization) | conditional → [DD2-HOMOGENEOUS-SAME-GRAPH · C443 固定二次数据的同一射线完整图全尺度达到](topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment) | 固定 n≥2、λ,ℓ>0、σ≥0 及二次 Φ(t)=−σt²、线性 ψ=ℓr：在预先固定射线 S*=R+e1 上把归一化最大构形作正比例图射线，与完整投影图合并；一个闭图 F 精确以 S* 为零集、完整近端全域覆盖，且每个正尺度有边达到 C400 三项包络取小所得的最优输出距离 m_L(σ)t。完整纤维逐一核验；不声称任意非齐次轮廓、任意固定目标或共同饱和轨道。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

@@ -15,7 +15,7 @@
 
 [DD2 主线](research/topics/dd2/core.md)从指定下降目标 \(\varphi\) 反推锚定下界 \(\Phi\) 与输出真误差界 \(\psi\) 的补偿。DD1 与 DD2 都允许一般有符号的 \(\Phi\)，一般 \(\psi\) 属于 DD2 的研究范围。[C400](CLAIMS.md#c400) 给线性误差界特例的精确反演及实际轨道反例，[C401](CLAIMS.md#c401) 在一般 \(\psi\) 下以同一步积分势推出长度和留域。
 
-[C442 与 DD1 恢复正文](research/topics/dd2/dd1_recovery.md)保留原教师稿的一般有符号 \(\Phi\)、逐允许边某最近锚和完整真残差线性界。D1R 恢复原统一因子与符号根，D1G/D1N/D1C 核分支机制、全部最近性和半点连续。D1S 给完整临界失败及严格量词边界；D1F 核整个自由四点类的全参数最大值、各支坐标和严格坏侧，自由凸类也达到。固定目标、一维、完整算子和共同轨道的范围分开；零输入修订、续接和开域内极限仍各有合同。
+[DD1 在 DD2 中的恢复正文](research/topics/dd2/dd1_recovery.md)保留一般有符号 \(\Phi\)、逐允许边某最近锚和完整真残差。C442 定位零输入缺口；D1R–D1F 核统一因子、分支、全部四点及自由类锐值。D1O 将取等边接入完整图并给任意小不变窗，分别保逐尺度、同图和轨道量词。C400 的最大值与 C426 的固定射线经二次齐次缩放得到 [C443](research/topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment)：同一完整图每尺度达到；任意函数轮廓和共同轨道另有门。
 
 [函数条件的逐层裁决](research/canonical/dd2_function_hypotheses.md)给出 C417–C420：原始非单调真残差的联合可行域、正锚下界的完整前像障碍、全部标量递推趋零的精确右侧条件、任意原模的位移下界，以及零缺陷统一算子类的固定模积分充要性。它们把单边、完整整窗、固定图和统一轨道的必要性分开；旧 C400/C401/C414 的身份保持。 [C421](CLAIMS.md#c421) 进一步将原残差联合域精确消成一维上确界，并分别给出连续模或非减点值合同下的有限精度证书和无信息采样的失败机制。 [C422](CLAIMS.md#c422) 说明原域非空时前缀化保持自由单边最优值，却可能改变取等和完整整窗前件；固定图、目标及维数的严格差距均有实际见证。
 
@@ -390,7 +390,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接。 |
-| [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | 原教师稿映射与 C442 零输入缺口；D1R 的统一因子、符号根和尾长；D1G/D1N/D1C 的几何机制、最近性和连续代表；D1S 的完整临界图及动态量词边界。D1F1–D1F9 给准确四点域、三项全参数最优值、每个分支坐标及 Σ 的闭预算与 T 的严格临界，明确自由凸、一维和固定目标的区别。核 DD1 恢复、全几何锐性或局部化时读取。 |
+| [research/topics/dd2/dd1_recovery.md](research/topics/dd2/dd1_recovery.md) | C442 的原稿映射及零输入修订；D1R–D1F 保存因子、符号根、尾长、两支机制、全部最近性、连续性及全几何最大值。D1S 的真实临界轨道与 D1O1–D1O12 的完整纤维、C443 固定射线同图全尺度、显式间隔拼接及全部输出不变窗分开证明。整窗共同因子排除额外帽，任意小局部坏尺度可适配正帽。核 DD1 恢复、完整局部锐性和取等量词时读取。 |
 | [research/canonical/dd2_general_phi_exact.md](research/canonical/dd2_general_phi_exact.md) | C414 有符号一步定理及四点完整证明。G1–G6 对应输入/输出最近性、四个三角、同锚能量与二维两锚坐标；逐一核退化和删除限制的伪数据。核一步公式的几何完整性或准备添加目标结构时先读。 |
 | [research/canonical/dd2_function_hypotheses.md](research/canonical/dd2_function_hypotheses.md) | C417–C422、C428–C429、C437–C438 的完整函数条件、包络计算及最优性范围证明。包含非单调真残差联合域、单边与完整前像的严格分离、标量右侧判据、原模位移下界、零余量无限长例和零缺陷固定模积分充要性。另有原残差的一维消元、网格误差证书、前缀最优值等价和完整图/固定目标的严格差距。C428 另给一般有符号下界下的线性真残差精确值、完整图取等及密集变号见证。C429 另核原残差下界与前缀广义逆的等值和正则性，保留反向判定首端归属。[§1.5 的公式合同](research/canonical/dd2_function_hypotheses.md#fh-formula-well-defined)另分清原正部式的根号、局部评价域、max/sup 与空原域；§1.6 对全部已认证边证明原真残差取样的统一安全性，核允许图与完整输出范围；§3 给精确达到判据、闭纤维端点和固定图紧性正反例；§3.4 明确原两项式的放宽域、准确 G/R 的实现及原式等值的必要充分条件，含正负完整图比较和零尺度；§3.5 给临界右前缀的严格下降充要门、逐边与共同余量的完整图分离及线性校准。核函数假设、计算前提、广义逆端点及距离/长度必要性时读取。 |
 | [research/topics/dd2/target_geometry.md](research/topics/dd2/target_geometry.md) | C426–C427 的目标几何与完整图证明。以紧凸线段和同一固定射线实现全部自由单边标量；法向辅助前像保留原真残差、闭图和非正整窗覆盖。另给指定凸四点条件、自由仿射精确域、同参数四级最优值及全域线性取等。研究凸性／仿射性是否改善一步界，或区分逐边与轨道锐性时读取。 |

@@ -11046,6 +11046,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-HOMOGENEOUS-SAME-GRAPH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14052,6 +14063,10 @@
     "E754": {
       "x": 580.42,
       "y": 5499.94
+    },
+    "E755": {
+      "x": 391.96,
+      "y": 5335.02
     }
   },
   "bounds": {
