@@ -10639,6 +10639,17 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "PPA-HOLDER-DEFECT-FINITE-LENGTH": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13489,6 +13500,10 @@
     "E715": {
       "x": 1006.31,
       "y": 5289.81
+    },
+    "E716": {
+      "x": 920.56,
+      "y": 5104.67
     }
   },
   "bounds": {

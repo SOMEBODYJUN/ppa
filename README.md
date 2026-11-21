@@ -2,6 +2,8 @@
 
 **当前研究入口**是[单调性与正则性的共同结构](#common-structure-frontier)。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
 
+[DD1/DD2 与 Alcantara 的同参数比较](research/LITERATURE.md#lit-alcantara-dd) 定位普通 PPA 的共同二次式、分段锐门及退化 PPPA 的恢复条件。[C399](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect) 从输入距离次单调性缺陷和输出 Hölder 真残差误差界直接推出同一步长度势，给临界常数、半阶无限长度见证及超出线性收敛的非单调原算子。
+
 [从原算子出发的 C322/C323](research/canonical/ppa_native_alignment_and_transverse_test.md) 用标准 Cucker–Smale 完整全隐式场检验 C320：统一耗散预算给所有根收敛，旧 RLEB 即使用实际图值的最紧欧氏球也会失败。对光滑零流形，C323 把 A/C320 精确化为横向奇异值一项检验，量化两次标量化损失，并清楚区分这一结构与抽象统一目标。
 
 [C318 · A 与输入距离步界 B 的必要性](research/canonical/ppa_ab_necessary_bounds.md) 固定普通 PPA 的允许图量词，给出精确一步可行域、A 强制的真线性次正则及锐残差窗，以及固定一般模在全部允许关系上的锐长度预算与 Dini 充要性。完整单值近端同时达到每一步与每条尾的上界。
@@ -48,7 +50,7 @@
 
 继续参数攻击得到 [C257锐正阻尼门](research/canonical/amplitude_circle_damping_threshold.md#damp-tuple)：每个Γ>0都有完全显式共同小圆管与全部输出证书，Γ≤0从精确圆零输入破坏吸收；最坏一步距离商、锐EB–半阶锚积随缩管同趋1/(1+Γ)，所有正阻尼下仍真三分支。完整中心零输入及全局二周期另保留，正阻尼不能推出全域收敛。最大有限窗仍未优化。 接续C259已给每个正Γ的经典局部能量路径，参数数学与显式半径价值保留，不再承担全经典不可解叙事。
 
-导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 944 个数学节点、710 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
+导航单位是**定义、精确命题、证明义务、反例与合取关系**。先进入 [动态研究宇宙](visualization/cosmos/index.html)：太阳系承载 RLEB–PPA 主链，其他星域承载相邻方向；行星和卫星按视觉轨道公转，D3 双层力学处理主题星系整组漂移、碰撞与拖动，以及内部非轨道节点的排布。真实跨域超边随天体位置重绘，灰色导航线与数学关系分离。太阳系的 `E02/E03` 等航道仍是原图的**合取超边**，公转和星系形态不表示证明顺序或证据等级。[宇宙语义契约](visualization/COSMOS_SEMANTIC_CONTRACT.md) 与 [宇宙项目说明](visualization/cosmos/README.md) 记录对象对应和增长方式；[Markdown 关系表](research/HYPERGRAPH.md) 与 [graph.json](research/graph.json) 保存精确文字及机读结构，当前有 947 个数学节点、712 条关系。原件在 [history/sources/](history/README.md) 作证据，不充当导航树，也不因标题含“终审”自动成为定理。离线 HTML 内嵌关系数据；进入规范 Markdown 正文的相对链接仍需要完整仓库。GitHub 文件页未必执行 HTML。
 
 **从零继续研究的最短路径**：先读下方 Research Goal 和 Definition Map；再读 [当前活跃问题与完成标准](RESEARCH_STATE.md#active-frontier)，沿本页 Claim Map 的一条**合取**关系进入正文，最后对照 [Claim 精确身份](CLAIMS.md) 与 [现存异议](FAILED_ROUTES.md)。要新增结果按 [增长协议](RESEARCH_PROTOCOL.md) 写入主题目录。下方 File Map 是定位表，不要求顺读 251 个历史原件。
 
@@ -323,6 +325,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
+| [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
 | research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md | 给老师的 Obsidian 可渲染讨论稿；保留 DD1 的四点几何、分段补偿、充分性证明和开放问题，并嵌入任意闭集合 S 的新示意图。仅作 discussion-draft/source-report，不替代 CLAIMS.md 的规范身份。 |
 | research/manuscripts/dd1_2026_11_20/DD1_平面几何竞赛题_题面与标准解.md | 按竞赛标准答案体例重排的题面与解答：题面只给四点条件，证明中依次调用阿波罗尼斯中线定理、泰勒斯定理、阿波罗尼斯圆和沃罗诺伊最近区域，最后给出分段锐补偿函数。 |

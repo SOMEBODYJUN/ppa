@@ -1,5 +1,27 @@
 # 一手文献事实与本项目的定理导入
 
+<a id="lit-alcantara-dd"></a>
+## Alcantara Table 1、普通 RLEB 与 DD1/DD2
+
+| 比较对象 | 核对结果 |
+| --- | --- |
+| [Alcantara v1](https://arxiv.org/html/2611.20523v1) Table 1、Definition 2.1(ii)、Proposition 4.2 | 相对半单调对受检图点量化，锚为指定子集 \(S^\star\) 的每个零点。PPPA 中可只检验值域受限图 \(A_{\mathcal R}\)，\(V\) 可为矩阵模，具体收敛定理有额外正性、松弛与恢复门。退化闭值域 \(P\) 有约化前向表示。 |
+| 同文 Proposition 3.4 (11)–(14)、Remark 3.5 | 普通 PPA 记输入缺陷 \(\sigma\)、输出线性 EB 与步长之比 \(\rho\)。Remark 3.5 明写收缩因子 \(\rho\sqrt{(1+2\sigma)/(1+\rho^2)}\)，并要求 \(2\sigma\rho^2<1\)。Proposition 3.4 的步长估计在相同参数下为 \(\|x-y\|\le (1+\sqrt{1+4\sigma})d(x,S)/2\)，配合同文使用的输出 EB 即得 DD1 第一上界。正文比较的是可比的一步参数，并保留各定理的原量词。 |
+| 同文 Theorems 4.10–4.12、Corollary 4.13 | 投影、原空间 shadow 与松弛后的原空间迭代各有自己的条件。4.13 中约化步长由几何距离级数控制，故约化轨道有限长。具有原空间 R 线性率的分支也由三角不等式得到原空间有限长。 |
+| [Luke–Tam 正式版](https://doi.org/10.1287/moor.2025.0863) Theorem 2、Assumption 2 | 原文陈述的是局部普通 PPA 允许序列本身的 R 线性收敛。Alcantara Table 1 的投影／完整收敛栏不宜解读为 Luke–Tam 没有原迭代点率。原文同球覆盖另见本库 [C340](../CLAIMS.md#c340) 的数学审查。 |
+| [Li–Mordukhovich 2012](https://web.maths.unsw.edu.au/~gyli/papers/lm-subreg12final.pdf) §7、Theorem 7.3(i) | 极大单调 PPA 对 Hölder 次正则的固定步长距离率已经成立。平方耗散与距离率经二倍块 Cauchy–Schwarz 推得 \(q>1/2\) 时有限长度，见[逐式推导](novelty/2026_10_09/gppa_source_priority_followup.md)。 |
+
+**项目内的对齐。** 普通 RLEB 与 Alcantara 在线性、解锚定的普通 PPA 上重叠。写 \(v=(x-y)/\lambda\)，当 \(z\) 固定且用 \(\|x-z\|\) 计输入距离时，二次式 \(\lambda\langle v,y-z\rangle\ge-\sigma\|x-z\|^2\) 等价于
+
+\[
+\langle v,y-z\rangle\ge -\frac{\theta}{\lambda}\|y-z\|^2-\theta\lambda\|v\|^2,\qquad
+\theta=\frac{\sigma}{1+2\sigma}.
+\]
+
+RLEB 对允许步只需一个最近输入锚，Alcantara 的矩阵 \(V\) 及退化 PPPA 理论有自己的更一般结构。RLEB 的 GPPA 推广也有独立核及物理提升假设。二次式的等价保留各自原量词与覆盖条件。
+
+**严格比较。** [DD1 的分段门](novelty/DD1_PRIOR_ART_2026-11-20.md) 比 Remark 3.5 明写的能量门多出 \(0<\rho<1/2,\ 1/(2\rho^2)\le\sigma<(1-\rho)/\rho^2\)。这一区间的证明来自保留步长界，必要性属于 C285 的最近锚允许关系类。若另有更强的误差界或更强的图量词，应重新做同假设比较。[DD2 的幂次结果](canonical/dd2_power_defect_finite_length.md#dd2-power-defect) 给出另一个有限长度机制，其非单调实例在普通 PPA 的输入和输出均无线性次正则，实际距离亦无 R 线性率。这个实例分离的是线性收敛分支。公开优先性及退化 PPPA 的物理有限长度仍待核。
+
 
 <a id="lit-gradient-feedback"></a>
 ## 梯度反馈插值与置零稳定性

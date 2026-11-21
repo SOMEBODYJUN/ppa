@@ -5274,6 +5274,12 @@
       "label": "C398 角度加权的仿射投影平衡与维数无关的 τ–L 收缩门",
       "file": "topics/common_structure/affine_projection_gram_compensation.md#affine-projection-gram-compensation",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "PPA-HOLDER-DEFECT-FINITE-LENGTH",
+      "label": "C399 输入距离幂次缺陷与 Hölder 真误差界的有限长度门",
+      "file": "canonical/dd2_power_defect_finite_length.md#dd2-power-defect",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13466,6 +13472,19 @@
       "scope": "将 C396 的共同法向恒等式推广为仿射目标上的角度加权 Gram 平衡，并把同一 Aτ+B_L 后端收缩门写成任意有限维欧氏空间的维数无关结论；完整图量词、coverage、留域和闭目标条件保留。",
       "status": "derived-checked",
       "topic": "普通 PPA 的单调性与正则性的共同结构"
+    },
+    {
+      "id": "E716",
+      "inputs": [
+        "D01",
+        "D04",
+        "COV"
+      ],
+      "output": "PPA-HOLDER-DEFECT-FINITE-LENGTH",
+      "relation": "conditional",
+      "scope": "有限维普通 PPA 的同一允许图，最近输入零锚的幂次缺陷与 Hölder 真误差界满足 C399 的相容门。实际步长平方吸收缺陷，再由同一步幂势控制有限前缀、尾长与点率。",
+      "status": "derived-checked",
+      "topic": "PPA 非线性收缩"
     }
   ]
 }

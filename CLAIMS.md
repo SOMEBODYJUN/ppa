@@ -3474,3 +3474,12 @@
 - **Parameter gate and regularity boundary**：κ<1 的后端门为 τ<T(L)，其中 T(L)=(1−L)/L²（0<L≤1/2），T(L)=1/(2L²)（L≥1/2）。若 B_L 对完整图值 v∈F(y) 成立且 s=λ‖v‖ 的输入覆盖完整，则它给出 d(y,S)≤λL r_F(y)，所以 GMSR 无需作为独立输入，但线性 B_L 也没有真正弱化线性正则性。只对选定轨道或选定图值时不能取下确界，F(y)={y,y³} 是反例。用 t≤ψ(s) 时必须改用非线性包络及其迭代/尾势门。
 - **Counterevidence / Scope**：R³ 中的仿射目标可取 a=2、t=b=1、s=√3，满足 τ=0、L=1 的 A+B，但四边长度比为 1/2，故 C396 的常数 1 不能直接推广。对一般曲面还会出现弦—法向缺陷项，需 reach 或曲率误差预算。C398 认证的是仿射投影的真实角度平衡和维数无关的 A+B 后端门，尚未认证一般多值原算子的统一 M。
 - **Evidence / Related Files**：[仿射投影与 A+B 证明](research/topics/common_structure/affine_projection_gram_compensation.md)、[C396 高维反例审查](research/audit/C396_COUNTEREXAMPLE_REVIEW_2026-11-20.md)、[C396 平面恒等式](research/topics/common_structure/orthogonal_projection_four_point_invariant.md)、[C397 非线性模补偿](research/topics/common_structure/nonlinear_modulus_compensation.md)。
+
+<a id="c399"></a>
+## C399-v1 · 输入距离幂次缺陷与 Hölder 真误差界的有限长度门
+
+- **Status**：`derived-checked`。一步耗散、有限前缀续接及完整二维例逐式重构。外部优先性未判定。
+- **Exact Statement / Objects / Domain / Quantifiers**：有限维欧氏普通 PPA，固定 \(\lambda>0\)，非空闭 \(S\subseteq\operatorname{zer}F\)，允许关系在 \(U\) 的统一小距离窗非空。每条允许边的某个最近输入零锚满足内积下界 \(-Md(x,S)^p\)，且输出满足 \(d(y,S)\le Kr_F(y)^q\)，取完整真残差，\(K>0,\ M\ge0,\ p>0,\ 1/2<q<1\)。若 \(M=0\)，或 \(p>2/q\)，或 \(p=2/q,\ 2M<\lambda^2K^{-2/q}\)，则小窗存在共同 \(C,\gamma>0\)，使 \(\|x-y\|\le C(d(x,S)^\alpha-d(y,S)^\alpha)\)、\(d(y,S)\le d(x,S)-\gamma d(x,S)^{1+\nu}\)，其中 \(\alpha=2-1/q,\ \nu=2/q-2\)。
+- **Conclusion**：对满足 \(Cd_0^\alpha<d(x^0,U^c)\) 的同窗初值，所有允许轨道无限续接且留域，尾长 \(\le Cd_k^\alpha\)，\(d_k=O(k^{-1/\nu})\)，强收敛到 \(S\cap U\)，点误差 \(O(k^{-\alpha/\nu})\)。
+- **Counterevidence / Scope**：临界常数等号及坏侧，或 \(p<2/q,\ M>0\)，存在全域单值近端的保半径反例。对 \(q=1/2\) 已有零内积、点收敛而无限长的原算子。\(q=3/4,\ p=3\) 的非单调实例没有线性误差界及 R 线性距离率。退化 PPPA 需独立转移和恢复。
+- **Evidence / Dependencies / Related Files**：[证明、覆盖、实例及边界](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect)，C392 为保半径构造的先行内部证据。与 C309 及 C212 的关系见同页，[外部比较](research/LITERATURE.md#lit-alcantara-dd)。

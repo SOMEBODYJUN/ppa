@@ -903,6 +903,7 @@
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
 | E583 | [R01 · 一步能量、步长、输出界](rleb_ppa.md#r01) | conditional → [NG-PPA · C309 一般函数迭代 PPA 有限长度](canonical/ppa_nonlinear_gauge_and_coupled_obstruction.md#c309-theorem) | 若允许转移已独立验证 NG6 的距离模 Phi 与 B-加权尾 NG7–NG8，则 C309 给有限长度；R01 只提供现有一步证书，不能单独生产任意 Phi。；**derived-checked** |
+| E716 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [COV · 图块 coverage 与最近零点图](rleb_ppa.md#cov) | conditional → [PPA-HOLDER-DEFECT-FINITE-LENGTH · C399 输入距离幂次缺陷与 Hölder 真误差界的有限长度门](canonical/dd2_power_defect_finite_length.md#dd2-power-defect) | 有限维普通 PPA 的同一允许图，最近输入零锚的幂次缺陷与 Hölder 真误差界满足 C399 的相容门。实际步长平方吸收缺陷，再由同一步幂势控制有限前缀、尾长与点率。；**derived-checked** |
 
 ## PPA 耦合条件障碍
 
