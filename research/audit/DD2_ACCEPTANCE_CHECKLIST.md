@@ -432,7 +432,12 @@
   - **证据** [完整速率合同与裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)、[C469的GR1–GR8完整逐步实现](../topics/dd2/power_rates.md#power-greedy-realization)、[C470的WT1–WT6精确尾及首出预算](../topics/dd2/power_rates.md#power-exact-tail)、[RT1–RT8全部准确率](../topics/dd2/power_rates.md#power-sharp-rates)、[C471的QB1–QB8点Q边界](../topics/dd2/power_rates.md#power-point-q-boundaries)。
   - **复核** 三席先完成实际四项自检并独立重构，再逐读OR1–QB8、三卡、E781–E783和全部九处实际终稿/四栏。核准两支全部候选锚最近性、完整F/J闭性/纤维/零/全距窗、每初距一个图同时全部k取等；WT2人工补零正部和与含首出边支付、BR分支及可和相对修正、RT全部准确常数逐式通过。QB3稀疏变号全锚距离、跨图无界系数、q1全域逆/原φ=.99与27/305复算通过。提交前补自足两严格门、统一首项支配及有限W/低半阶范围，三席再次核准；无未关闭实质异议，只签S06.08/C469–C471，未预签后续。
 
-- [ ] `S06.09` 是否能够构造达到速率上界的算子？
+- [x] `S06.09` 是否能够构造达到速率上界的算子？
+  - **裁决** Sharp
+  - **结论** 能。固定S06.08的原纯幂数据好门及自由闭目标完整类，C469对每个小正初距构造一个完整闭F和同一无限轨道，全部k精确达到距离M_D^k；q>1/2还同时达到真实尾/点W(M_D^k)及RT所有已声明最佳常数、Q阶和R底数。FX1–FX2将S上全部投影原值、正链唯一值、其余空值逐点列出，反代穷尽所有近端根；真残差、精确零集、全域近端覆盖、零驻定、全部选择的原数据及距离窗均保持。图可依t₀，不能每步换图，也不宣称∃F∀连续初距。坏参数仅凭原Φ/ψ有真实恒距图、无共同趋零率；低半阶好门达到距离率而点逃逸/长度∞；强幂好临界最佳点Q比另由C471变号链达到，无有限共同系数处用一族图。原认证φ不改名，局部有限W仍先用严格预算排首出；反向不转授指定S/连续单值等额外类。旧PR剪切保指数身份；严格低L步帽的旧能量等号措辞修正为正能量余量，不改旧命题。
+  - **证据** [逐区构造验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-rate-attainment-acceptance)、[GR2–GR8同图全轨](../topics/dd2/power_rates.md#power-greedy-realization)、[FX1–FX2全部原纤维与近端根](../topics/dd2/power_rates.md#power-complete-fibers)、[RT1–RT8实际速率常数](../topics/dd2/power_rates.md#power-sharp-rates)、[QB2–QB5点Q取等](../topics/dd2/power_rates.md#power-point-q-boundaries)、[旧PR完整剪切](../canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)。
+  - **复核** 新三席先做实际四项自检，独立重构锚链/图/真实率，再逐读十处实际终稿、身份支持、E781和四栏。FX完整半空间纤维反代、S外唯一链值/空值、闭图线性同胚、全部原根与选择逐式通过；GR5不依D/s单调的相邻距离比较、有限积点/逃逸、预设φ、严格首出及零输入分别核准。RT全部常数与Q/R、同初距同图∀k、QB另一变号图/跨图系数边界及旧PR仅指数均独立复算；低L锚距能量等号和真实a余量同时写清，L1–6/C413身份不变。无未关闭实质异议；只签S06.09，不预签后续。
+
 - [ ] `S06.10` 是否能够从一般函数判据直接恢复幂次分类，而不是分别重复证明？
 - [ ] `S06.ABOVE` 针对原协议的幂次误差界，在 \(pq>2\) 区域按 \(q\) 分区验收距离、点与有限长度结论。
 - [ ] `S06.CRITICAL` 在 \(pq=2\) 区域逐分支证明临界常数、严格侧和等号侧的结论与构造。

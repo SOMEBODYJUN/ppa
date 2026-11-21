@@ -4213,6 +4213,8 @@
 - **Dependencies / Evidence / Related Files**：D01/E0、D04完整残差，[OR1–GR8](research/topics/dd2/power_rates.md#power-greedy-realization)直接证明两种原标量门、根合法、全部候选锚比较与完整图合同；原好门依据WR1/CK。原数据对整个自由类认证的预设φ必支配M_D，所以匹配图保同一原目标；更紧φ若作为额外图约束须另判。
 - **Counterevidence / Scope**：允许F在非输出点为空，不授处处非空连续单值、指定凸S或单点目标子类。低半阶的无界链不声称局部位置不变，有限侧的首出预算另由C470证明。M=0时p无效，坏门不纳入正向；不认定公开新颖性。[S06.08](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)。
 
+- **S06.09 完整算子支持（实际终稿三席复核通过）**：[FX1–FX2](research/topics/dd2/power_rates.md#power-complete-fibers)把本卡F在S上的全部原值写成投影不等式的半空间交，正输出为唯一前像值，其余空；反代精确穷尽全部近端根。原图可能在输入为空而近端仍全覆盖、完整闭性来自图的线性同胚、全部非终止轨道恰链后缀，皆按原身份重证。该支持同时核距离/点/实际尾及零输入范围，不把自由目标构造提升为固定S或连续单值类；[当前09答卷](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-rate-attainment-acceptance)逐区对应RT/QB。
+
 <a id="c470"></a>
 ## C470-v1 · 原纯幂完整类的准确全尾包络与最优三种速率
 

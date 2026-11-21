@@ -1364,7 +1364,7 @@
 
 | 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
 | --- | --- | --- | --- |
-| E781 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-POWER-GREEDY-REALIZATION · C469 原纯幂最坏距离包络的完整同图逐步取等](topics/dd2/power_rates.md#power-greedy-realization) | C469-v1：固定p,q,K,λ>0,M≥0，Φ=−Mt^p,ψ=Kρ^q全域，c=λK^(−1/q),m=1/q,h=K/λ^q；OR2好门M0或p>2/q或临界M<c²/2(q<1)、T(K/λ)(q1)、c²(q>1)。E0同一存在最近输入锚和完整ρ；小窗MD=min{G_m⁻¹(t²+2D),hB_D^q}连续严格增且0<MD<t。所有受检边a≤MD。∀t0∈(0,R]∃H2自由闭S的完整闭F、全域非空J及同一轨道，所有k同时t_k=MD^k(t0),s=c t_next^m,真EB和原缺陷取等。能量锚P=s−D/s,Y=sqrt(t²−P²)，根锚P=t,Y0；相邻锚平方距交点在步区间给全部最近性。J=P_S加同向全链，F=(J⁻¹−I)/λ，exactzeroS、零驻定、全距窗不变，正输出唯一前像。总步长可和时e=L，总步长发散时点无界但距0；不交换成∃F∀连续t0。原类认证φ必支配MD；不授更紧额外φ/固定S/连续单值类，F允许非输出空值。OR/BR自足核好门与活动支，未用文献新颖性判断。；**derived-checked** |
+| E781 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) | conditional → [DD2-POWER-GREEDY-REALIZATION · C469 原纯幂最坏距离包络的完整同图逐步取等](topics/dd2/power_rates.md#power-greedy-realization) | C469-v1：固定p,q,K,λ>0,M≥0，Φ=−Mt^p,ψ=Kρ^q全域，c=λK^(−1/q),m=1/q,h=K/λ^q；OR2好门M0或p>2/q或临界M<c²/2(q<1)、T(K/λ)(q1)、c²(q>1)。E0同一存在最近输入锚和完整ρ；小窗MD=min{G_m⁻¹(t²+2D),hB_D^q}连续严格增且0<MD<t。所有受检边a≤MD。∀t0∈(0,R]∃H2自由闭S的完整闭F、全域非空J及同一轨道，所有k同时t_k=MD^k(t0),s=c t_next^m,真EB和原缺陷取等。能量锚P=s−D/s,Y=sqrt(t²−P²)，根锚P=t,Y0；相邻锚平方距交点在步区间给全部最近性。J=P_S加同向全链，F=(J⁻¹−I)/λ，exactzeroS、零驻定、全距窗不变，正输出唯一前像。总步长可和时e=L，总步长发散时点无界但距0；不交换成∃F∀连续t0。原类认证φ必支配MD；不授更紧额外φ/固定S/连续单值类，F允许非输出空值。OR/BR自足核好门与活动支，未用文献新颖性判断。 S06.09的FX1–2将S上全部投影原值写为2λ<v,z−y>≤\|\|z−y\|\|²的交，正链输出唯值、其他空；逐值反代穷尽全部根。F在初链输入空不妨碍J覆盖，非终止正步轨道恰链后缀；为同一身份的显式支持，不增加结构类量词。；**derived-checked** |
 
 ## DD2 纯幂最优尾与实际速率
 
