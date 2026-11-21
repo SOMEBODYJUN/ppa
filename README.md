@@ -19,7 +19,7 @@
 
 [目标几何的分层裁决](research/topics/dd2/target_geometry.md)给 C426–C427：二维及以上，紧凸线段甚至同一固定射线都能逐边实现完整自由四点的全部标量；凸性仍限制指定四点，却不降低自由单边最优值。仿射目标的法切正交分解则在越锚支增加精确平方代价。同一组 \(\lambda=1,\Phi=-2t^2,\psi=r/4\) 下，自由凸目标、自由仿射目标和固定单点的锐因子依次为 \(1/2,(1+\sqrt{193})/32,1/3\)，中项有全域连续单值线性算子取等。非正整窗的完整真残差实现与固定轨道的动态障碍分别保留。
 
-[C428 的有符号线性标尺](research/canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration)在固定 \(\lambda=1,\psi(r)=r\) 下给 \(M_\Phi(t)=\sqrt{t^2/2-\Phi(t)}\) 及完整闭图逐尺度取等。密集变号、处处不连续的 \(\Phi\) 仍可统一有限长；决定距离与长度的是跨尺度余量和实际步预算。图闭也不容许自动加强证书为邻尺度上极限。
+[C428 的有符号线性标尺](research/canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration)在固定 \(\lambda=1,\psi(r)=r\) 下给 \(M_\Phi(t)=\sqrt{t^2/2-\Phi(t)}\) 及完整闭图逐尺度取等。密集变号、每个正尺度都不连续的 \(\Phi\) 仍可统一有限长；决定距离与长度的是跨尺度余量和实际步预算。图闭也不容许自动加强证书为邻尺度上极限。
 
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
