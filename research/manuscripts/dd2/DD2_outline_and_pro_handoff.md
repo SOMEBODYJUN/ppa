@@ -1,5 +1,7 @@
 # DD2 论文结构与 GPT Pro 研究任务书
 
+**接续入口。** 本稿保留成文结构和旧 P0–P3 专项任务。当前 DD1–DD2 主任务从[作者原版 17 节协议](../../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)及[逐节验收](../../audit/DD2_FINAL_ACCEPTANCE.md)接续。
+
 ## 写作对象与当前优先级
 
 拟题：**近端点算法的非线性下降与尖锐反向补偿**。

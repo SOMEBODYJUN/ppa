@@ -1,5 +1,7 @@
 # Repository research and writing
 
+The active DD1–DD2 research task is the author's [final acceptance protocol](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md). Resume at the [question-by-question audit](research/audit/DD2_FINAL_ACCEPTANCE.md). Check the original protocol at startup, at each checkpoint, and before reporting completion. The earlier P0–P3 matrix supplies scoped evidence for this task.
+
 Read RESEARCH_PROTOCOL.md and relevant canonical definitions before mathematical changes. Keep exact claim versions, true residuals, graph-block versus complete-fiber scope, coverage and localization explicit. History is provenance, not a proof. Update canonical records when a substantive new checked claim is registered.
 
 For author-directed mathematical paper outlines, use `$paper-skeleton-and-logical-architecture` at `.agents/skills/paper-skeleton-and-logical-architecture`, downloaded from VeryMath/AI4Math-Writing. Present the actual definitions, lemmas, assumptions, theorems and corollaries in the author's order. Apply new instructions cumulatively: preserve previously requested definitions and results unless the author explicitly removes them. Validate the final outline against each author instruction, not only against correct formulas. Maintain one current outline and one runnable verifier with its current output; do not create duplicate chapter drafts, review ledgers or revision reports for routine outline edits. Delete superseded process files rather than archiving additional copies.

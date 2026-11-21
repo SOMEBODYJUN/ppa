@@ -1,6 +1,8 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前研究入口**是[单调性与正则性的共同结构](#common-structure-frontier)。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
+**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 DD1–DD2 的 17 节数学验收及全部最终交付。从[逐节验收入口](research/audit/DD2_FINAL_ACCEPTANCE.md)恢复，先处理 §1–§6 的精确定理、一般补偿、DD1 回收、收敛、有限长度及幂次分区。P0–P3 的前次矩阵是对应小问的证据。
+
+[单调性与正则性的共同结构](#common-structure-frontier)是另一研究线。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
 
 [DD2 主线](research/topics/dd2/core.md)按指定目标 \(A\)、线性输出误差界的反向缺陷、轨道距离与长度、一般误差界的次序展开。[C400](CLAIMS.md#c400) 记录尺度锐性及线性正则下的无限长与逃逸反例。[C401](CLAIMS.md#c401) 以一般函数的积分势从同一步能量推出长度和留域。
 
@@ -324,6 +326,8 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 ## Next Actions
 
+按 [DD1–DD2 最终数学验收](research/audit/DD2_FINAL_ACCEPTANCE.md)逐问审查和补证。每个 checkpoint 回看[原协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)；就有符号补偿、不连续模、一般长度势及幂次分类先完成直接数学推导和反例攻击。
+
 第 004 轮的共同收敛证明可以直接调用。下一步按 [现行任务与验收](research/topics/common_structure/GPT_PRO_M_RESEARCH_PROMPT.md) 寻找联系单调性与正则性的结构定理，让原一般非线性 RL 真正参与其中。旧文献仅在具体证明需要核对时回查，已掌握的背景不作为默认发现入口。
 
 固定核GPPA首创性以[四路接续裁决](research/novelty/2026_10_09/PRIORITY_FOLLOWUP.md)为当前入口：双方旧算法/收敛骨架、C209标量尾势和SF合法KL导入已查明，C222精确预算全域Lip实现已独立接收。下一步核完整编译、物理政策、锐配对/离散共振的精确发表先行和尚未取得正文，冻结C217保真合同；不将固定核扩展、经典可导性或未命中升级为全球首次。
@@ -334,10 +338,12 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 
 | 完整路径 | 内容与使用时机 |
 | --- | --- |
+| [research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md) | 作者原版 DD1–DD2 验收协议，逐字节保存。启动、续接和结束当前主任务前读取，包含 17 节逐问要求、强制交付物和最后六问。 |
+| [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
 | [research/canonical/dd2_power_defect_finite_length.md](research/canonical/dd2_power_defect_finite_length.md) | C399 的同一步耗散与幂势证明，包括局部覆盖、留域、点率、临界旋转和无线性次正则的非单调实例。比较 DD2 与线性收敛结果或导入退化 PPPA 前读取。 |
 | [research/topics/dd2/lowL_dynamic_sharpness.md](research/topics/dd2/lowL_dynamic_sharpness.md) | C411 的低 (L<1/2) 步长支动态审计。L1–L2 在同一闭零集和固定完整图上逐步实现指定 (A)，L3 给 (A(t)=t/(1+t)) 的局部孤立零点与无限长度例，L4–L5 给局部孤立的可和障碍和闭仿射单步障碍，L6a 闭合局部锥/多面体闭凸集的收敛锚障碍；一般弯曲闭凸链保留为未决 candidate。研究低参数动态尖锐性、最近锚切换或写主文范围时读取。 |
-| [research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md](research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md) | 将任务书 P0–P3 逐项绑定到 C407/C408/C410/C411/C412、证明文件、可写论文结论和剩余 proof obligation；中断恢复或审稿前验收时先读取。 |
+| [research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md](research/audit/DD2_TASK_ACCEPTANCE_MATRIX_2026-11-21.md) | 旧交接稿的七项 P0–P3 专项审计，绑定 C407/C408/C410/C411/C412、证明和未闭义务。用作最终协议相应小问的证据。 |
 | [research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md](research/audit/DD2_OTHER_SPLITTING_AUDIT_2026-11-21.md) | FBF、外梯度和 FRB 的固定步实际能量、残差 lift、欧氏距离反例与交叉项 Lyapunov 作用域；写其他分裂扩展或检查其不能自动统一时读取。 |
 | research/topics/common_structure/folded_projection_quadrilateral.md | C395 的方向和平方根半径题设、三条几何长度的不变量、无限续接、平方预算和折返固定点。普通步长发散是一个同题设见证。 |
 | research/manuscripts/dd1_2026_11_20/DD1_2026-11-20_教师讨论稿.md | 给老师的 Obsidian 可渲染讨论稿；保留 DD1 的四点几何、分段补偿、充分性证明和开放问题，并嵌入任意闭集合 S 的新示意图。仅作 discussion-draft/source-report，不替代 CLAIMS.md 的规范身份。 |
