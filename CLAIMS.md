@@ -3653,3 +3653,13 @@
 - **Conclusion / Scope**：充分侧保留 C401 的尾预算及附条件的局部留域。必要侧由同一个完整闭图、全域单值近端、\(S=\{0\}\) 实现：\(Q(s)=\sqrt{s^2+\eta(s)^2},b=Q^{-1},A=\eta\circ b\)，用 \(\cos\theta=A/t,\sin\theta=b/t\) 的旋转映射令 \(a=A(t),s=b(t)\)。真残差在 \(\eta^{-1}(a)\) 最小端取到；实际总长介于 \(\int_0^{t_0}u/b(u)\,du\) 与其两倍之间。
 - **Definitions / Dependencies / Evidence**：C401 的 \(D=0,\delta=1\) 充分性、完整图反演。[定理、构造及全部证明](research/canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp)。\(\chi(u)\le b(u)\le\chi(\sqrt2u)\) 给两积分同敛散。
 - **Counterevidence / Objections / Related Files**：这是固定误差界模、零缺陷、统一算子类的充要性；不是固定算子的必要性。\(F=I\) 使用较松 \(\psi(r)=\sqrt r\) 有有限长但积分发散；正下界 \(\Phi=t^2/4\) 也能在该模下给统一有限长。\(\eta\) 有界时原 \(F\) 可在非实际输出处为空，完整预解式仍全域单值；不把它称作全域单值 \(F\)。
+
+
+<a id="c421"></a>
+## C421-v1 · 原真残差一维显式包络与有限精度计算合同
+
+- **Status**：`derived-checked`（等价消元、非空与零值边界、两种有限精度证书及完整图查询反例经独立重构）。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：沿用 C417 的自由闭目标单边类，维数至少二，\(S\subseteq\operatorname{zer}F\)，固定 \(t,\lambda>0\)、有限 \(\Phi(t)\) 和 \(0\in D_\psi\subseteq[0,\infty)\)、\(\psi:D_\psi\to[0,\infty)\)。\(\Phi(t)>t^2/4\) 无边；否则令 \(B=(t+\sqrt{t^2-4\Phi(t)})/2,h=|B-t|,\alpha=(t-B)_+,E=B^2+h^2\)。\(\mathcal R_t=\{\rho\in D_\psi\cap[0,B/\lambda]:\psi(\rho)\ge\alpha\}\) 非空等价于准确联合域非空，其输出上确界等于 \(\sup_{\rho\in\mathcal R_t}\min\{\psi(\rho),\sqrt{E-\max(h,\lambda\rho)^2}\}\)。
+- **Conclusion / Scope**：没有原模正则性要求。可行域已核非空时，去掉目标值优化中的超水平限制不改变上确界。在完整残差前缀上，若常数有有效表示、原模可认证求值且有有效连续模 \(\omega\)，覆盖半径 \(\delta\) 的网格及误差 \(\epsilon\) 给最优值宽度不超过 \(2\epsilon+\max\{\omega(\delta),\sqrt{2B\lambda\delta}\}\) 的区间。若原模非减且可认证评价全部指定右端网格点，无需连续性，可用宽度 \(2\epsilon+\sqrt{2B\lambda\delta}\)。没有输入表示条件的任意函数有限点值计算承诺被反例否定。
+- **Definitions / Dependencies / Evidence**：C417-v1 原联合域与完整前像构造、C414 两锚几何；[等价消元证明](research/canonical/dd2_function_hypotheses.md#fh-envelope-explicit)、[有限计算及信息边界](research/canonical/dd2_function_hypotheses.md#fh-envelope-computation)。
+- **Counterevidence / Objections / Related Files**：空可行域不能赋可实现零值；\(a=0\Rightarrow\rho=0\) 的例外明确处理；正 \(\Phi\) 的完整整窗最优另有 C417 障碍。\(t=\lambda=1,\Phi=0\) 时，在有限查询未见的残差处添连续窄峰，可将自由及完整覆盖类的最优值从零提高到至少 \(\sqrt3/2\)。这否定无证书精度，不否定上确界公式；近似值不自动裁决精确等号。原 C414、C417 的身份不改。

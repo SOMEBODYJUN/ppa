@@ -1113,6 +1113,7 @@
 | E727 | [DD2-REVERSE-A · C400 指定一般 A 的反向缺陷与几何尖锐性](topics/dd2/core.md#dd2-reverse) | conditional → [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) | 在所有标量转移上以正距离右侧条件准确判趋零；固定实际图可有额外跨步限制，不能逆向转移必要性。；**derived-checked** |
 | E728 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-RAW-GAUGE-LENGTH · C419 任意原真残差模的积分长度充分门](canonical/dd2_function_hypotheses.md#fh-general-length) | 把连续非减模的普通逆改成原真残差的正非减位移下界，保留严格耗散、可积势及有限前缀留域。；**derived-checked** |
 | E729 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-ZERO-DEFECT-INTEGRAL · C420 零缺陷统一算子类的固定模积分充要性](canonical/dd2_function_hypotheses.md#fh-zero-defect-sharp) | 固定连续非减误差界且零缺陷：同一步积分给充分性，完整二维旋转及全部水平集前像给统一类必要性。；**derived-checked** |
+| E730 | [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) | 自由单边原残差联合域的等价一维消元；已核非空、有效常数与原模认证求值下，用有效连续模或非减右端比较获得有限精度。无表示信息与精确等号另有查询障碍。；**derived-checked** |
 
 ## 不蕴含关系
 

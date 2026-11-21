@@ -5364,6 +5364,12 @@
       "label": "C414 一般有符号锚下界的精确两锚包络",
       "file": "canonical/dd2_general_phi_exact.md",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-RAW-ENVELOPE-COMPUTATION",
+      "label": "C421 原真残差一维包络与有限精度合同",
+      "file": "canonical/dd2_function_hypotheses.md#fh-envelope-explicit",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13722,6 +13728,17 @@
       "output": "DD2-ZERO-DEFECT-INTEGRAL",
       "relation": "conditional",
       "scope": "固定连续非减误差界且零缺陷：同一步积分给充分性，完整二维旋转及全部水平集前像给统一类必要性。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E730",
+      "topic": "DD2 函数条件与量词边界",
+      "inputs": [
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-RAW-ENVELOPE-COMPUTATION",
+      "relation": "conditional",
+      "scope": "自由单边原残差联合域的等价一维消元；已核非空、有效常数与原模认证求值下，用有效连续模或非减右端比较获得有限精度。无表示信息与精确等号另有查询障碍。",
       "status": "derived-checked"
     }
   ]

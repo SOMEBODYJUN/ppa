@@ -10804,6 +10804,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-RAW-ENVELOPE-COMPUTATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 438,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13710,6 +13721,10 @@
     "E729": {
       "x": 1174.37,
       "y": 5469.62
+    },
+    "E730": {
+      "x": 390.19,
+      "y": 5692.69
     }
   },
   "bounds": {
