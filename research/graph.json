@@ -5472,6 +5472,12 @@
       "label": "C438 临界残差右前缀与严格下降共同余量",
       "file": "canonical/dd2_function_hypotheses.md#fh-strict-decrease",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-COMPOSITION-TRAJECTORY-SEPARATION",
+      "label": "C439 精确复合、受控递推与同单步数据的真实轨道分离",
+      "file": "topics/dd2/scalar_iteration.md#dd2-composition-exit",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14075,6 +14081,18 @@
       "output": "DD2-STRICT-DECREASE-PREFIX",
       "relation": "conditional",
       "scope": "正尺度、含零原残差域及有限原模：临界右前缀共同余量等价原两项上确界严格小于 t；准确非空自由 R 在非正下界同判，正下界由输出根自动严格。逐边严格、固定图和跨尺度统一比例保留各自量词，完整窗必要性限已证非正范围。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E751",
+      "topic": "DD2 曲线复合与完整轨道",
+      "inputs": [
+        "DD2-SCALAR-RIGHT-BARRIER",
+        "DD2-ENVELOPE-SCOPE-EQUIVALENCE"
+      ],
+      "output": "DD2-COMPOSITION-TRAJECTORY-SEPARATION",
+      "relation": "conditional",
+      "scope": "在下降自映射合同内，依点有限退出精确判纯复合；非减时可直接归纳全部受控路径，一般非单调时不保证该比较。三维非紧仿射目标的两个完整闭覆盖图同单输入距离数据和同已达准确包络，纯复合一致趋零而实际轨道结论不同；不外推连续单值子类。",
       "status": "derived-checked"
     }
   ]

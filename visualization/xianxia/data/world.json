@@ -11002,6 +11002,17 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-COMPOSITION-TRAJECTORY-SEPARATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "spring",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 532,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13992,6 +14003,10 @@
     "E750": {
       "x": 484.2,
       "y": 5519.35
+    },
+    "E751": {
+      "x": 487.96,
+      "y": 5404.9
     }
   },
   "bounds": {

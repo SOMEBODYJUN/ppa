@@ -1180,6 +1180,12 @@
 | --- | --- | --- | --- |
 | E750 | [DD2-RAW-ENVELOPE-COMPUTATION · C421 原真残差一维包络与有限精度合同](canonical/dd2_function_hypotheses.md#fh-envelope-explicit) ∧ [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) ∧ [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) | conditional → [DD2-STRICT-DECREASE-PREFIX · C438 临界残差右前缀与严格下降共同余量](canonical/dd2_function_hypotheses.md#fh-strict-decrease) | 正尺度、含零原残差域及有限原模：临界右前缀共同余量等价原两项上确界严格小于 t；准确非空自由 R 在非正下界同判，正下界由输出根自动严格。逐边严格、固定图和跨尺度统一比例保留各自量词，完整窗必要性限已证非正范围。；**derived-checked** |
 
+## DD2 曲线复合与完整轨道
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E751 | [DD2-SCALAR-RIGHT-BARRIER · C418 全部标量下降递推趋零的精确右侧条件](canonical/dd2_function_hypotheses.md#fh-distance) ∧ [DD2-ENVELOPE-SCOPE-EQUIVALENCE · C422 非空单边包络等值与完整窗严格差距](canonical/dd2_function_hypotheses.md#fh-envelope-optimality) | conditional → [DD2-COMPOSITION-TRAJECTORY-SEPARATION · C439 精确复合、受控递推与同单步数据的真实轨道分离](topics/dd2/scalar_iteration.md#dd2-composition-exit) | 在下降自映射合同内，依点有限退出精确判纯复合；非减时可直接归纳全部受控路径，一般非单调时不保证该比较。三维非紧仿射目标的两个完整闭覆盖图同单输入距离数据和同已达准确包络，纯复合一致趋零而实际轨道结论不同；不外推连续单值子类。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

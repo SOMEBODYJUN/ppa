@@ -70,6 +70,8 @@ E=t^2+2D(t),\qquad B=\frac{t+\sqrt{t^2+4D(t)}}2,
 
 **D：指定目标的距离版。** 在 (E0) 的受检边上已由上述某个门或另一个证明得到 \(a\le A(t)\)，其中 \(A:[0,R]\to[0,R]\)。若 \(A(0)=0,A(t)<t\) 对 \(0<t\le R\)，且 \(\forall l\in(0,R)\ \exists\epsilon_l>0\ \forall u\in(l,R]\cap(l,l+\epsilon_l): A(u)\le l\)，则从 \(x^0\in U_R\) 出发、每条已知一直在 \(U_R\) 中合法的无限允许轨道有 \(d(x^k,S)\to0\)。连续 \(A<t\) 是其充分特例。\(U=H\) 且有覆盖时，距离不增使所有选择自动续接；一般开 \(U\) 不能仅由距离下降保证物理留域。该条件对全部标量转移的必要性及固定图的反例属于 C418，见 [完整证明](../../canonical/dd2_function_hypotheses.md#fh-distance)。此版本不宣称点收敛或有限长度。
 
+纯复合条件的适用范围另见 [C439](scalar_iteration.md)：非减目标可由复合归纳控制实际距离；一般非单调目标即使其复合一致趋零，且它是完整固定图处处达到的精确包络，也不能代替 D 版的全部递推条件。该新反例不改变 D 版的原假设与结论。
+
 **L-tail：C400 的比较级数长度版。** 保留 L 版本及工作窗非空覆盖。设 \(A:[0,R]\to[0,R]\) 连续、\(A(0)=0\)，且每个正尺度 \(r=A(t)/t\in[r_0,1)\)、\(D(t)/t^2\le\Sigma_L(r)\)。令 \(Q=A\)（若非减），否则 \(Q(t)=\max_{0\le u\le t}A(u)\)。设
 \[
 H_Q(t)=\sum_{j\ge0}Q^{\circ j}(t)\quad(0\le t\le R),\qquad H_Q(R)<\infty,\qquad
