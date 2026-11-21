@@ -4226,6 +4226,8 @@
 - **Dependencies / Evidence**：C469取等与D01/D04原标量约束；[BR1–WT6](research/topics/dd2/power_rates.md#power-exact-tail)用单调D、固定活动支和平方降幅正部和重构全尾上界，人工补零只作数列比较，不假装合法边。[RT1–RT8](research/topics/dd2/power_rates.md#power-sharp-rates)由递推、可和相对修正、望远镜和及真实步尾证明所有率。C458是已明示的比较机制先例，但此处自足重证，不修改C458原零缺陷身份。
 - **Counterevidence / Scope / Related Files**：坏参数有实际保距图，不能给共同趋零率。结论不授任意signed/非单调缺陷、固定凸目标、连续单值子类或另加更紧φ。仅q>1/2写点率；q≤1/2可有实际点失败。R底数不替换Q比，不声称S12残差/遍历复杂度已验收。公开新颖性未核；[S06.08](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-optimal-rates-acceptance)、[F145](FAILED_ROUTES.md#f145)。
 
+- **S06.ABOVE 支持（三席实际终核通过）**：[AB1–AB9](research/canonical/dd2_power_defect_finite_length.md#dd2-power-supercritical-classification)对pq>2逐q写出原φ与显式小窗、同一步预算、原Φ≥−D的正向和低半阶完整剪切；准确率仍引用本卡RT，最佳性仍属原Φ=−D的自由完整类。此为既有身份的组合验收，未改变本卡假设、量词或状态。
+
 <a id="c471"></a>
 ## C471-v1 · 强幂好临界的点Q锐门与线性模的R/Q分离
 

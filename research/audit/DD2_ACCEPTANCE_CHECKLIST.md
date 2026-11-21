@@ -444,7 +444,12 @@
   - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-functional-power-recovery-acceptance)、[GF1–GF6原目标反演](../topics/dd2/functional_power_recovery.md#functional-power-target)、[GT1–GT8一般混支全尾及完整原图](../topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)、[PC1–PC4直接幂次恢复](../topics/dd2/functional_power_recovery.md#functional-power-classification)、[CB1–CB2原证书范围](../topics/dd2/functional_power_recovery.md#functional-power-certificate-boundaries)、[C472身份](../../CLAIMS.md#c472)。
   - **复核** 三席先做实际四项自检并独立重构，随后逐读十一处实际GF–CB正文、C472、E784、地图、旧文桥与四栏。GF3预算/原逆端点、H*单调配对支付、W同敛散及零/∞端、含首出边严格预算、全部原纤维/近端根和每初距同图全k取等逐式通过；GT8同轨无限换支复算。PC原目标下阶、固定M与逐M缩窗、BR标量非循环、点Q/R、C419默认交点/C420平台及原F1–F3和粗B范围均核准。无未关闭实质异议；只签S06.10/C472，不预签S06.ABOVE及后续。
 
-- [ ] `S06.ABOVE` 针对原协议的幂次误差界，在 \(pq>2\) 区域按 \(q\) 分区验收距离、点与有限长度结论。
+- [x] `S06.ABOVE` 针对原协议的幂次误差界，在 \(pq>2\) 区域按 \(q\) 分区验收距离、点与有限长度结论。
+  - **裁决** Sharp
+  - **结论** 固定原协议Φ≥−Mt^p、a≤Kρ^q及pq>2，统一缩窗后全部受检正边严格降距，完整合法无限轨道距离趋0；更紧预设φ仍须单独认证。0<q<1可先给φ=t−γt^(2/q−1)、0<γ<c²/2：距离最佳阶q/[2(1−q)]，仅q>1/2有统一点/长度，W~2t^(2−1/q)/[(2−1/q)c]。q1给统一κ与有限长，准确三量R底数κ₀=L/√(1+L²)，点Q不一概提升。q>1给ω=qβ>1的距离/点/尾Q阶，β=1于M0或p≥2，β=p/2于M>0、2/q<p<2，准确W~b_*t^β。低半阶有完整连续单值、固定仿射零集的实际剪切点逃逸/长度∞，亦有单点旋转点趋0但无限长；故pq>2不单独保证点/长度。原下界含0才自动驻定；局部全选择续接先用有限支付严格排首出，低半阶需另有留域。更强Φ保充分性，最坏性属Φ=−D自由完整类；M0的p标签退出，不预签其他指数区。
+  - **证据** [本项逐区裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-supercritical-acceptance)、[AB1–AB9显式小窗/同一步支付/完整反例](../canonical/dd2_power_defect_finite_length.md#dd2-power-supercritical-classification)、[C470准确率](../topics/dd2/power_rates.md#power-sharp-rates)、[C472混支准确尾](../topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)、[完整原纤维与所有近端根](../topics/dd2/power_rates.md#power-complete-fibers)。
+  - **复核** 新三席先完成真实四自检、独立重构，再逐读六处实际AB正文、审计、四栏、C470支持、README及STATE，并回核BR/RT/QB、GT及PL/PR/SF完整原图。θδ小窗/原φ、δs²与凹幂支付、准确W和有限窗P的常数差别、q1可和相对修正及点R/Q、强幂β三支和真实步Q逐式核准。AB9完整逆、两符号锚积、全部真ρ/距离窗和实际水平发散，以及单点旋转点/长分离均复算；E0允许𝒥/全J、零初值、原R、signed正向及严格首出后覆盖已核。无未关闭实质异议，只签S06.ABOVE，不预签后续。
+
 - [ ] `S06.CRITICAL` 在 \(pq=2\) 区域逐分支证明临界常数、严格侧和等号侧的结论与构造。
 - [ ] `S06.BELOW` 在 \(pq<2\) 区域逐分支验收正面结果、失败范围和实际近端反例。
 - [ ] `S06.TAIL` 独立复核 \(\alpha=2-1/q\) 的实际总长度估计，明确 \(q\) 的范围、常数选择、局部不变性及边界。
