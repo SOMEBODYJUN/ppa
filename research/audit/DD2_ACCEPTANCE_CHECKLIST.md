@@ -450,7 +450,12 @@
   - **证据** [本项逐区裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-supercritical-acceptance)、[AB1–AB9显式小窗/同一步支付/完整反例](../canonical/dd2_power_defect_finite_length.md#dd2-power-supercritical-classification)、[C470准确率](../topics/dd2/power_rates.md#power-sharp-rates)、[C472混支准确尾](../topics/dd2/functional_power_recovery.md#general-monotone-defect-exact-tail)、[完整原纤维与所有近端根](../topics/dd2/power_rates.md#power-complete-fibers)。
   - **复核** 新三席先完成真实四自检、独立重构，再逐读六处实际AB正文、审计、四栏、C470支持、README及STATE，并回核BR/RT/QB、GT及PL/PR/SF完整原图。θδ小窗/原φ、δs²与凹幂支付、准确W和有限窗P的常数差别、q1可和相对修正及点R/Q、强幂β三支和真实步Q逐式核准。AB9完整逆、两符号锚积、全部真ρ/距离窗和实际水平发散，以及单点旋转点/长分离均复算；E0允许𝒥/全J、零初值、原R、signed正向及严格首出后覆盖已核。无未关闭实质异议，只签S06.ABOVE，不预签后续。
 
-- [ ] `S06.CRITICAL` 在 \(pq=2\) 区域逐分支证明临界常数、严格侧和等号侧的结论与构造。
+- [x] `S06.CRITICAL` 在 \(pq=2\) 区域逐分支证明临界常数、严格侧和等号侧的结论与构造。
+  - **裁决** Sharp
+  - **结论** 固定p=2/q，c=λK^(−1/q)、L=K/λ、α=2−1/q、τ=√M/c；反向取含二维的自由闭目标完整类。准确逐尺度非降门Δ=max{c²t^(2/q)/2,c²t^(2/q)−ct^(1+1/q)}给三种共同严格系数：q<1的M<c²/2、q1的M<T(L)、q>1的M<c²。前两种名义等号仍a≤t却有完整恒距轨道；强幂名义等号已超Δ，连a≤t也不普遍保。严格侧q<1仅q>1/2有统一点/有限长，W~ct^α/[α(c²/2−M)]；q1的µ=κ_Mt、W=κ_Mt/[L(1−κ_M)]准确；强幂M>0的距离R底数τ^q、点/尾R底数τ及W~√M t^(1/q)/(1−τ)，点Q另需τ<1/3。强幂M0转为Q阶q、W~t。预设φ的次线性/强幂常数等号均因下阶失败，线性Σ_L预算等号允许。CK6/D1K/C416给每个临界或越界M的一个固定完整坏图及任意小不变窗；C467另保强幂固定仿射与连续单值对合。原Φ≥−D只正向、反向按Φ=−D明示类；全部正面含零、覆盖及严格首出预算，低半阶须另保合法续接/留域。坏参数不反判每个固定图，C444临界两步终止保留。
+  - **证据** [本项完整裁决](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-power-critical-acceptance)、[CT1–CT5临界逐区合同](../canonical/dd2_power_defect_finite_length.md#dd2-power-critical-classification)、[CK1–CK10端点与原目标](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)、[D1K6–D1K8线性全M完整失败](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)、[C416强幂完整周期](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)、[C467连续完整对合](../canonical/dd2_power_defect_finite_length.md#dd2-affine-continuous-involution)、[C470/C471准确率与点Q](../topics/dd2/power_rates.md#power-sharp-rates)。
+  - **复核** 新三席先完成真实四自检和独立重构，再逐读六处实际CT/审计/四栏/C416/地图/状态，并回核CK、D1K、C416/CI、BR/RT/QB、GT及AB9/PL7/C444。Δ两支、强幂名义等号的显式完整扩张、各M的最小实际缺陷或有效预算、全部原根/真ρ/零/同图不变窗逐式核准。γ*与W首项、线性两支准确κ/W、τ的距离R与点尾R、点Q锐门和跨图无界系数、M0切支均复算；原φ的两负下阶/线性闭端、signed正向、含二维反向、允许𝒥/全J、首出前缀及固定M/全M量词相互一致。最新范围/符号/扩张补丁三席复读通过，无未关闭实质异议，只签S06.CRITICAL。
+
 - [ ] `S06.BELOW` 在 \(pq<2\) 区域逐分支验收正面结果、失败范围和实际近端反例。
 - [ ] `S06.TAIL` 独立复核 \(\alpha=2-1/q\) 的实际总长度估计，明确 \(q\) 的范围、常数选择、局部不变性及边界。
 

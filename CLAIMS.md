@@ -3657,6 +3657,8 @@
 - **好临界非超线性见证 PM4-v1（实际终稿三席复核通过）**：任意 \(q>1,K,\lambda>0,0<M<c^2,p=2/q\)，取 \(r=hM^{q/2}\in(0,1)\) 和预设 \(\kappa\in(r,1)\)；在已由同一幂数据认证 \(\varphi=\kappa t\) 的小窗内，[PM9–PM12](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-critical-linear-chain)给实线紧目标 \(S=\{x_k+t_k\}\cup\{x_\infty\}\)、完整闭图 \(J=P_S+\{x_k\to x_{k+1}\}\)、\(F=(J^{-1}-I)/\lambda\)，其中 \(t_k=r^kt_0,s_k=\sqrt M\,t_k^{1/q}\)。全部近端覆盖、零集精确、每条图边保原真误差界和缺陷，全部轨道有限长。所有非终止轨道均为该链的某个后缀，具有距离比 r、点误差比 \(r^{1/q}\) 及准确尾 \(\sqrt M\,t_k^{1/q}/(1-r^{1/q})\)。源中核全部最近锚、完整纤维和闭性；反驳“q>1好侧一律超线性”，不把其图级 \(a=rt\) 冒称原预算的统一目标，也不声明固定凸目标或连续单值预解式的必要性。
 
 - **S06.05 等系数和位置窗补证（实际终稿三席复核通过）**：[公式CK2–CK3与CK-B](research/canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)核M=c²时预算比准确尺度门多 \(ct^{1+1/q}>0\)，不保证全类不增，原二周期见证则另保不变距窗。全部旧锚与第N+1块锚的中点下界45d_N/64，给完整投影和特殊输出在 \(U_N=(-2d_N/3,2d_N/3)\) 内不变；可嵌入任意有限维轴线与对应开球。F允许空值的范围明确，不转授全定义连续原图/唯一近端/指定凸目标。C416主身份不变；预设κ的精确常数见C430补证。
+- **S06.CRITICAL 支持（三席实际终核通过）**：[CT1–CT5](research/canonical/dd2_power_defect_finite_length.md#dd2-power-critical-classification)逐区验收原临界系数、严格侧点/真实尾、M0切支及名义M=c²已超过准确尺度门；C416保持原自由闭目标完整类和同图不变二周期，C467的连续仿射对合是独立子类补证，不改变本卡对象。原signedΦ正向、预设φ及全部首出/零合同保持，无新Claim版本。
+
 <a id="c417"></a>
 ## C417-v1 · 非单调真残差模的单边可行域与完整前像障碍
 
