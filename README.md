@@ -1,6 +1,8 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)。新会话先读 [GPT Pro 开工提示词](research/audit/DD2_PRO_START_HERE.md)，核清一般 \(\Phi\)、一般 \(\psi\) 和指定下降目标 \(\varphi\) 的角色，再从第一项未勾任务恢复。逐项证明、复核、提交并推送后继续下一项。清单本身就是交回作者的完整答卷。[历史审计入口](research/audit/DD2_FINAL_ACCEPTANCE.md)提供既有证据。
+**本轮作者任务：评判并拆分 DD 的设计型研究。** [同一任务书的新入口](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-design-task-packages)比较方向性、近端参数 \(\lambda\)、非精确计算、分量组合和实际模型，给五包各三项、N00/R00 两项支撑，共 17 个可认领交付及 Codex/GPT Pro 的复制指令。新议程优先竞争正文，未将任何开放结果升级为已证。C427/C402/C407 的方向基础、C406 的可观察准则与锐幂、C405/C408 的组合公式均复用；真正前沿是严格方向收益、变 \(\lambda\) 的共同图／可解性、消失余量下容错与内层终止、完整整体真残差的组合及同模型收益。[旧题对应](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-design-old-task-map)保留 P01–P22，尤其作者原来的无绝对可和点收敛、长度临界和真实优化锐界。六章是竞争方案，原五章仍为暂定；原 280 项协议进度另计。[一手设计基线](research/LITERATURE.md#lit-dd2-design-baselines)记录本轮实际核查范围。
+
+**原协议长期主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 [DD1–DD2 全量验收清单](research/audit/DD2_ACCEPTANCE_CHECKLIST.md)。新会话先读 [GPT Pro 开工提示词](research/audit/DD2_PRO_START_HERE.md)，核清一般 \(\Phi\)、一般 \(\psi\) 和指定下降目标 \(\varphi\) 的角色，再从第一项未勾任务恢复。逐项证明、复核、提交并推送后继续下一项。清单本身就是交回作者的完整答卷。[历史审计入口](research/audit/DD2_FINAL_ACCEPTANCE.md)提供既有证据。
 
 
 ## 2026-11-21 最终协议验收入口

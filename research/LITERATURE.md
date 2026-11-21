@@ -821,6 +821,19 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 
 下表只登记原文提出或已证的事项，以及本仓库作出的具体对照。任何未核穷的优先性均保留。
 
+<a id="lit-dd2-design-baselines"></a>
+### 方向、参数和精度设计的新增比较入口（2026-11-21）
+
+本表服务[五组设计任务](manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd2-design-task-packages)。本轮核实了下列问题确有一手研究依据，未完成拟得新定理的全先行性排查。论文事实、研究解释和未来验收分开。
+
+| 来源与本轮实读位置 | Paper Fact | 对新任务的解释及仍需核查 |
+| --- | --- | --- |
+| Tuomo Valkonen, *Preconditioned Proximal Point Methods and Notions of Partial Subregularity*, JCA 28 (2021), 251–278；[期刊页摘要](https://journalofconvexanalysis.com/articles/jca28017/)；[作者稿](https://tuomov.iki.fi/mathematics/subreg.pdf)，标注 revised 2020-02-28，实核摘要、§1、§3–§4 的入口，特别 Definition 4.2 附近；旧 C320 文献记录另定位 Lemma 4.4、Example 4.6。 | 提出部分强次单调和部分度量次正则，研究两者关系，并用于原始—对偶算法的线性收敛。 | 部分／方向正则本身已有先例。G 包须逐定义匹配 DD 的最近输入锚、函数型缺陷和完整真残差，交严格同对象收益；不能仅凭论文主题接近断言新 G 定理已被覆盖，也不能声称方向分解首次提出。 |
+| Thomas Pethick, Ioannis Mavrothalassitis, Volkan Cevher, *Efficient Interpolation between Extragradient and Proximal Methods for Weak MVIs*, ICLR 2025；[正式摘要](https://proceedings.iclr.cc/paper_files/paper/2025/hash/7f44f98e5e70dea605d0c5baca231c58-Abstract-Conference.html)、[正式 PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/7f44f98e5e70dea605d0c5baca231c58-Paper-Conference.pdf)，实核摘要、§1、表1及 §7 入口。 | 对 Lipschitz 弱 Minty 类给误差修正的非精确近端方法，自动选择近端精度，研究完整所述参数范围的复杂度及额外条件下的线性收敛。 | 允许误差、参数和精度选择已有直接先例。E/L 包必须逐式核该方法与 DD 实际更新是否一致、误差 oracle 和复杂度计数是否相同。本轮没有把摘要里的参数范围当成原始无修正 PPA 的通用保证，也未认证新的 DD 结论超越其主定理。 |
+| Meng Lu, Zheng Qu, *An adaptive proximal point algorithm framework and application to large-scale optimization*, [arXiv:2008.08784v2](https://arxiv.org/abs/2008.08784v2)，2021-02-25；[全文入口](https://arxiv.org/html/2008.08784v2)，本轮实核摘要与版本信息。 | 在误差界条件下研究 PPA 及非精确扩展，提出按可实施条件更新近端正则化参数的 AGPPA，并分析线性收敛及优化复杂度。 | L 包的新意不能是“也能自适应”。拟得非单调函数补偿规则须另核其精确定理和全部前件；本轮没有完成该全文的定理级对照，不能直接作严格分离结论。 |
+
+下面原选材表中的 Alcantara、Evens 以及复合半单调框架继续是 C/A 包基线。用户提供的新方案与检索摘要都是选题线索，不替代原文定理及其适用条件。
+
 | 一手来源 | 论文事实与当前 DD 对照 |
 | --- | --- |
 | [Luke–Tam，刊本 §1、定理 2、式 (28)–(30)、§5](https://pubsonline.informs.org/doi/10.1287/moor.2025.0863) | 主定理结合局部次单调性与度量次正则性，给足够条件。DD 的比较对象是最近锚和输出真残差的精确反向补偿，见 C285、C430 和分支先行性审计。§5 明确提出以 \(-\|x\|_{3/2}\) 替换稀疏最小二乘中的 \(-\|x\|_2\)。C224–C227 的相关优化结果已有独立稿件，DD 本篇仍需交出独立的同模型轨道结论。 |

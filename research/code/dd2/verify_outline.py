@@ -7,6 +7,22 @@ repo = Path(__file__).resolve().parents[3]
 outline = repo / "research/manuscripts/dd2/DD2_outline_and_pro_handoff.md"
 body = outline.read_text(encoding="utf-8")
 
+design_anchors = [
+    "dd2-design-task-packages", "dd2-design-old-task-map", "dd2-design-copy-prompts",
+]
+for anchor in design_anchors:
+    assert body.count(f'id="{anchor}"') == 1
+design_ids = re.findall(r"^- \[[ x]\] `((?:N|G|C|L|E|A|R)\d\d)`：", body, re.MULTILINE)
+expected_design_ids = ["N00"] + [f"{package}{i:02d}" for package in "GCLEA" for i in range(1, 4)] + ["R00"]
+assert design_ids == expected_design_ids
+old_task_map = body.split('id="dd2-design-old-task-map"', 1)[1].split('id="dd2-design-copy-prompts"', 1)[0]
+mapped_paper_ids = []
+for first, last in re.findall(r"^\| P(\d\d)(?:–P(\d\d))? \|", old_task_map, re.MULTILINE):
+    mapped_paper_ids.extend(range(int(first), int(last or first) + 1))
+assert mapped_paper_ids == list(range(1, 23))
+for package in "GCLEA":
+    assert f"**{package}01–{package}03：**" in body
+
 chapters = [
     "引言",
     "DD1 与 DD2",
@@ -27,7 +43,8 @@ for chapter, anchors in chapter_tasks.items():
         assert f"](#{anchor})" in chapter_row
         assert body.count(f'id="{anchor}"') == 1
 assert body.count('id="dd2-paper-required-inventory"') == 1
-assert [int(x) for x in re.findall(r"^\| P(\d\d) \|", body, re.MULTILINE)] == list(range(1, 23))
+paper_inventory = body.split('id="dd2-paper-required-inventory"', 1)[1].split('id="dd2-editorial-280"', 1)[0]
+assert [int(x) for x in re.findall(r"^\| P(\d\d) \|", paper_inventory, re.MULTILINE)] == list(range(1, 23))
 
 checklist = repo / "research/audit/DD2_ACCEPTANCE_CHECKLIST.md"
 checklist_body = checklist.read_text(encoding="utf-8")
@@ -92,5 +109,6 @@ for q in (Fraction(3, 5), Fraction(2, 3), Fraction(3, 4)):
     assert p0 * (2 - 1 / q) == p0 - Fraction(1, 2)
 
 assert Fraction(26, 101) < Fraction(12, 37)
-print(f"DD2 verified: 5 chapters, 4 proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
+print(f"DD2 verified: 17 design-task contracts with copy prompts and all 22 legacy tasks mapped; "
+      f"5 provisional chapters, 4 legacy proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
       f"{len(claim_ids)} claim records, {len(links)} local links, 7 exact algebra checks.")
