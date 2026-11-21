@@ -138,14 +138,14 @@ Lemma 4.3 的 \((U,V)\) 二次条件可通过 P 内积和 \(C^*VC\) 正定性接
 2. **Projected zero identification，Conditional。** S 闭且距离趋零时极限在 S。S 不闭时只能到 \(\overline S\)。
 3. **Bounded recovery，Conditional。** 局部有界 \(\mathscr H\) 加零值外半连续给物理零点聚点。
 4. **Weak shadow convergence，Conditional。** 所有弱聚点在 \(Z\cap(C^*)^{-1}(z_\infty)\)。fiber 单点时弱收敛。
-5. **Strong shadow convergence，Conditional。** 需要唯一 fiber 或固定零点局部强 recovery。
+5. **Strong shadow convergence，Conditional。** 唯一 fiber 加有界性只给弱收敛和正确 fiber 识别。强收敛还需要有限维性、弱到强的额外紧性，或固定零点的局部强 recovery。
 6. **Lipschitz recovery，Proved conditionally。** \(\|y-x_\infty\|\le K\|z-z_\infty\|\) 传递约化尾长。
 7. **Hölder recovery，Conditional。** 一点评估只给点识别。二点 Hölder 还需 \(\sum\omega(\|\Delta z_k\|)<\infty\) 才给物理长度。
 8. **Shadow finite length，Conditional。** 需要二点 recovery 或沿轨可和差分。
 9. **Tail transfer，Conditional。** 一点 Lipschitz 给 \(K L_k\)，一般 gauge 保留势尾。
 10. **Recovery conditions from structure，Conditional。** Theorem 4.11–4.12 的 \((U,V)\) 强正定给出一种可验证结构。
 11. **Finite-dimensional simplification，Proved conditionally。** 外半连续、闭图和局部有界可用紧性加强。
-12. **Weaker mechanism，Partial。** 最弱可靠组合是约化强收敛、闭目标、有界 lift、零值闭图和唯一 fiber。非唯一 fiber 只能给正确 fiber 的聚点结论。
+12. **Weaker mechanism，Partial。** 对弱聚点识别，最弱可靠组合是约化强收敛、闭目标、有界 lift、零值闭图。唯一 fiber 再给物理弱收敛。物理强收敛还需有限维性或强 recovery，非唯一 fiber 只能给正确 fiber 的聚点结论。
 
 §10 逐题证据与量词索引：§10.1–§10.2 对所有强收敛约化轨道使用 `../topics/dd2/pppa_recovery.md` 的“投影识别”段。§10.3–§10.5 的量词是所选影子序列有界并且每个弱聚点满足零值闭图，非唯一 fiber 只给聚点。§10.6–§10.9 使用该文件的“一点恢复”“物理长度”段，二点估计需对轨道相邻输入成立。§10.10–§10.12 使用 Theorems 4.11–4.12 及有限维专门化，任何强恢复均是附加条件下的 conditional 结论。
 
@@ -316,7 +316,7 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 16. PPPA 在闭值域、完整 lift、目标闭和 recovery 条件下继承 DD2。Conditional。
 17. 降维可能丢失 kernel fiber、原范数残差和目标闭性。Proved by examples。
 18. 原/约化函数指标可通过 \(m_C,M_C\) 和 recovery 双向传递。Conditional。
-19. 最弱 recovery 是有界 lift、闭图、正确 fiber 聚点。Conditional。
+19. **状态：Conditional。** 最弱 recovery 是有界 lift、闭图和正确 fiber 聚点识别。它只保证物理弱聚点。强 recovery 或有限维紧性才可升级为强收敛。证据：`../topics/dd2/pppa_recovery.md` 投影识别段。
 20. primal-dual 组合规律来自块完成平方和共同 s。Conditional。
 21. 已有固定步分裂 calculus 组件，统一 calculus Open。
 22. 尚未证明具体应用严格超过全部现有算法定理。Partial。
@@ -353,7 +353,7 @@ H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点
 
 **状态：Conditional / Partial。**
 
-已证明或条件性证明的核心内容包括：闭值域 \(P=CC^*\) 下的约化图恒等式，P-内积缺陷的等距传递，完整 fiber 真残差的 \(m_C,M_C\) 关系，目标闭性与 demiclosedness 下的 projection identification，唯一 fiber 或局部 recovery 下的 shadow 收敛，C401 一般势的有限长度，C402 方向自适应松弛，C403 联合双残差几何，C405 固定 CP/DR 子类，C406 非精确图误差债务，以及 FBF、外梯度和 FRB 的固定步局部证书。
+已证明或条件性证明的核心内容包括：闭值域 \(P=CC^*\) 下的约化图恒等式，P-内积缺陷的等距传递，完整 fiber 真残差的 \(m_C,M_C\) 关系，目标闭性与 demiclosedness 下的 projection identification，唯一 fiber 下的物理弱收敛，以及有限维性或强 recovery 下的物理强收敛。还包括 C401 一般势的有限长度，C402 方向自适应松弛，C403 联合双残差几何，C405 固定 CP/DR 子类，C406 非精确图误差债务，以及 FBF、外梯度和 FRB 的固定步局部证书。
 
 这些结果的状态是 Proved、Recovered、Sharp 或 Conditional，不能合并成一个无条件 master theorem。
 
