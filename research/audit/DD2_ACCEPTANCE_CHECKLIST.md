@@ -279,7 +279,12 @@
   - **证据** [S04.07 强/弱识别、自环门及范围 TI1–TI7](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)、[C450 完整纤维及全轨道分类 ID1–ID7](../topics/dd2/target_identification.md#dd2-target-identification-boundaries)、[原模的零端门](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-residual-zero-acceptance)、[AT5 的额外零点与受检恒等边](../canonical/dd2_function_hypotheses.md#fh-attainment-closed-fiber)、[开位置窗不保限点](../topics/dd2/dd1_recovery.md#dd1-localization-scope)、[C404 非闭投影和双影子](../topics/dd2/pppa_recovery.md#dd2-pppa-recovery)、[C447 的非唯一强聚点](../topics/dd2/core.md#dd2-bounded-linear-trajectory)。
   - **复核** 三席先完成四项数学自检，再独立重建强极限、弱拓扑与完整图边界；ID1–ID7 的原纤维、闭/非闭图、全窗 E0、全部选择及有限长分类已核。三席已复读最终 TI1–TI7、ID1–ID7、身份卡、图边、失败记录及本项四字段；强/弱闭性、全点列等价与固定轨道充分性、含零与穿孔原模、输出残差索引均校准。A/B 与 C 的零集和图闭身份不互授；物理识别显保同子列的可见极限和所选图值，并按目标拓扑区分闭性。
 
-- [ ] `S04.08` 是否能够允许没有传统线性收敛率的迭代？
+- [x] `S04.08` 是否能够允许没有传统线性收敛率的迭代？
+  - **裁决** Proved
+  - **结论** 可以，且有限长度与无限长度均有完整原图实例。实际正误差比趋 1 时，对数 Cesàro 给根率 1，排除距离/相应点误差的 Q、R 线性。C400 的匹配反向预算旋转精确给 \(t_k=(t_0^{-1}+k)^{-1}\)、\(s_k=t_{k+1}\)，点趋零而长度无限；C399 的完整剪切以及原 \(q=3/4,p=3\) 非单调例在各自小窗有限长，却无 R 线性距离与点误差率。预设目标分别从原锚下界与完整真残差界认证。\(A/t\to1\) 和多项式上界本身不排除固定图几何率：同 C400 全部数据的 \(F=I\) 即反证。当前另列的非绝对可和点收敛主问题保持开放。
+  - **证据** [S04.08 的 NR1–NR5：定义、完整实例、原 DD 目标和边界](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)、[C400 匹配目标的同一完整旋转](../topics/dd2/core.md#dd2-trajectory)、[C399 完整剪切](../canonical/dd2_power_defect_finite_length.md#dd2-sublinear-power-rates)、[C399 负缺陷非单调实例及有限长门](../canonical/dd2_power_defect_finite_length.md#dd2-power-witnesses)、[C399 补证](../../CLAIMS.md#c399)、[F138 速率误推的断点](../../FAILED_ROUTES.md#f138)。
+  - **复核** 三席先完成四项数学自检，独立重构速率逻辑、完整实例与范围，再复读最终 NR1–NR5、清单、身份补证、地图及失败记录。核正项 Cesàro、有限终止与 Q/R 量词；旋转半径延拓、同数据恒等算子、剪切完整反解及 \(2^{-11/3}\) 目标系数逐式核准。原非单调径向图的远根排除、小窗单射覆盖、负缺陷、完整真残差及 \(G^{-1}\) 目标均核，C399 的严格幂次门和位置预算没有省略。式号与分段名分开，正距离极限和固定图后继的不同身份已明确。无未解决的致命异议；未将本项存在性误记为当前文章主问题已闭。
+
 - [ ] `S04.09` 是否能够覆盖有收敛率但没有固定收缩系数的情况？
 - [ ] `S04.10` 是否能够得到更一般的、无法由简单幂次描述的收敛过程？
 - [ ] `S04.IMPLICATIONS` 给出严格距离下降、距离趋零、点收敛和有限长度之间的精确蕴含关系，逐条给出所需附加条件或反例。

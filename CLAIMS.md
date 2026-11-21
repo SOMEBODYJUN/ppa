@@ -3487,6 +3487,8 @@
 - **Counterevidence / Scope**：临界常数等号及坏侧，或 \(p<2/q,\ M>0\)，存在全域单值近端的保半径反例。对 \(q=1/2\) 已有零内积、点收敛而无限长的原算子。\(q=3/4,\ p=3\) 的非单调实例没有线性误差界及 R 线性距离率。退化 PPPA 需独立转移和恢复。
 - **Evidence / Dependencies / Related Files**：[证明、覆盖、实例及边界](research/canonical/dd2_power_defect_finite_length.md#dd2-power-defect)，C392 为保半径构造的先行内部证据。与 C309 及 C212 的关系见同页，[外部比较](research/LITERATURE.md#lit-alcantara-dd)。
 
+- **S04.08 线性率边界补证**：[NR1、NR3–NR4](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)固定 Q/R 线性定义，以实际正距离比趋 1 推出根率 1；剪切及原 \(q=3/4,p=3\) 非单调例各有完整纤维、小窗覆盖与原 DD 数据认证的预设目标。有限长度与非 R 线性共存。固定图精确法向后继不冒充统一 DD 目标，多项式上界不被用作慢速下界。这是既有 C399 的证明和范围补证，不修改其量词或指数。
+
 <a id="c400"></a>
 ## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
 
@@ -3503,6 +3505,8 @@
 - **S03.GATE 补证 / 原参数门的闭合交付**：[D1K1–D1K8](research/topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)将原协议、教师稿与 C285 的反射参数逐个对应，区分旧候选包络和准确值，合并 \(\sigma<T(L)\) 的原因子、步长、合法尾长与覆盖预算。临界及每个越界系数都有实际最小缺陷恰等于该 \(\sigma\) 的旋转／双向块，完整纤维与局部数值帽按新参数逐一核验；给定 \(\ell\) 在严格坏侧可仅是有效常数。这是既有严格门的证明与失败证据补全，不改 C400 的一般轮廓身份，不把类级必要性提升为固定图必要性。
 
 - **S04.03 轨道边界补证**：[C447-B](research/topics/dd2/core.md#dd2-bounded-linear-trajectory)独立登记线性真误差界取等、闭仿射目标及连续完整单值近端下的有界非收敛轨道。其固定图实际目标和本组数据的自由包络分别计算，不把这项新反例并入 C400 原一般目标的量词。
+
+- **S04.08 实际慢轨道与固定图范围**：[NR1–NR2](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)对匹配反向预算的 \(A=t/(1+t)\) 旋转给实际距离等式、根率 1 和调和实步；同一完整 DD 数据也容纳 \(F=I\) 的几何轨道。因此无统一目标比例不能转授为每个固定图无 R 线性率。本项不改变 C400 的统一类锐性，也不关闭另列的非绝对可和点收敛主问题。
 
 <a id="c401"></a>
 ## C401-v1 · 一般函数误差界的积分长度势

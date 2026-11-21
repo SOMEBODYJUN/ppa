@@ -55,6 +55,8 @@
 
 [S04.07 的指定目标识别](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-target-identification-acceptance)分开闭目标的距离路线、零值图闭的零集路线及受检恒等边入口。[C450](research/topics/dd2/target_identification.md#dd2-target-identification-boundaries)在所有选择都有限长的完整一维模型中，分别暴露允许极限边、限点认证窗与跨点零值闭性的缺口。Hilbert 弱目标与物理指定 lift 另保各自条件；残差小或投影零点不能替代这些身份。
 
+[S04.08 的实际非线性率](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-nonlinear-rate-acceptance)用真实正误差比和根率区分证书与轨道。C400 的匹配调和旋转点收敛而无限长，同数据的 \(F=I\) 却几何收敛；C399 的完整剪切与负缺陷非单调例具有有限长度且无 R 线性率。每个目标仍由对应的原 DD 数据认证，固定图法向后继不替代该证书。
+
 [DD2 松弛](research/topics/dd2/relaxation.md#dd2-adaptive-length)给方向余量、全锚和最近锚的速率差异。[方向参数审计](research/topics/dd2/adaptive_parameter_audit.md)把方向商、缺陷吸收和 α 的可计算性分开，并固定 Hölder 同时临界门及零聚点量词。[双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)保留输入、输出和过松弛最近锚的精确几何。[退化 PPPA](research/topics/dd2/pppa_recovery.md#dd2-pppa-gauges)给核纤维上的真残差公式、投影识别及物理长度的独立门。 [C423](CLAIMS.md#c423) 给非减模逐尺度精确界的分解，并证明连续非单调输入模通过完整纤维可在指定尺度产生严格联合增益。
 
 [次阶缺陷长度门](CLAIMS.md#c424)在临界缺陷主阶固定后，以剩余次阶预算精确区分有限长和无限长。[同一 DR 约化下的原变量长度](CLAIMS.md#c425)刻画角分配丢失的相邻变化，给同一约化数据下的真实有限长／无限长分离。
