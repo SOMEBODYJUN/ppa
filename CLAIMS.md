@@ -3783,3 +3783,21 @@
 - **Exact Statement — B**：固定 \(H=\mathbb R^2,S=\mathbb R_+e_1,\lambda=1,U=H,D_\psi=[0,\infty),\Phi=-2t^2,\psi(r)=r/4\)。令 \(u=(\sqrt3/2)e_1+e_2/2\)，\(J=P_S\cup\{(-tu,tu):t\ge0\},F=J^{-1}-I\)。则完整 \(J,F\) 闭、近端全域非空且 \(\operatorname{zer}F=S\)。同一个 \(F\) 在每个正尺度达到 C426 的自由锐值 \(a=t/2\)，特殊边有 \(s=\rho=2t\) 和锚积 \(-2t^2\)。但这个图的全部实际轨道至多两条非驻定边。更一般，对固定该射线且相关边满足同组前件的任意算子，都不存在连续两条正距离取等边：锐边强制输入投影在端点、输出投影在相对内部。
 - **Definitions / Dependencies / Evidence**：A 用 C428 同数据逐尺度实现；若同图全尺度锐，取无理 \(t_j\to\) 正有理 \(t_*\) 的近优边，两端因单点目标有界，有限维子列和闭图给违反有理小上界的极限边。B 用 C426 射线锐值；正特殊输出不在目标内、唯一完整前像为负向输入，后继只能投影到 \(S\)，再驻定。[两向完整证明 RC25–RC28](research/topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation)。
 - **Conclusion / Scope / Objections**：明确区分 \(\forall t\,\exists F_t\)、\(\exists F\,\forall t\,\exists\text{取等边}\) 和一条实际轨道每步取等。A 的不可存在性依赖有限维、固定单点和完整受检闭图，不能移植到任意非紧零集、无限维或不闭允许子图；B 给同图全尺度取等实例，并证明固定该射线时任意图都不能连续取等，不否定 C400/C411 已核子构造的正面轨道。总体必要性与取等表见 [S02.09](research/topics/dd2/reverse_compensation.md#dd2-compensation-sharpness)，失败机制见 [F153](FAILED_ROUTES.md#f153)。不认定公开新颖性。
+
+<a id="c435"></a>
+## C435-v1 · 输出距离与真残差的精确联合代价及全部物理步长
+
+- **Status**：`derived-checked`。三席分别重构代价消元、原残差域和端点，并复读实际正文。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：有限维 \(n\ge2\) 的自由单边类，允许自由选择闭非空 \(S\subseteq\operatorname{zer}F\) 与关系 \(F\)。固定 \(t,a,\rho\ge0,\lambda>0\)、有限有符号 \(\phi=\Phi(t)\)、\(0\in D_\psi\subseteq[0,\infty)\) 及有限原模 \(\psi:D_\psi\to[0,\infty)\)，置 \(u=\lambda\rho,v=\max\{|t-a|,u\}\)。存在具有输入距离 \(t\)、输出距离 \(a\)、完整真残差 \(\rho\) 且某个最近输入锚积至少为 \(\phi\) 的边，当且仅当 \(\rho\in D_\psi,a\le\psi(\rho),a=0\Rightarrow\rho=0\)，以及 \(2\phi+Q_t(a,u)\le t^2\)，其中 \(Q_t(a,u)=\max\{a^2+(t-a)^2,a^2+u^2,u^2+(u-t)_+^2\}\)。
+- **Conclusion / Scope**：最小可实现物理步长为 \(v\)，最大可实现锚积为 \(\Gamma_t(a,u)=(t^2-Q_t(a,u))/2=\min\{a(t-a),t^2/4-(u-t/2)_+^2,(t^2-a^2-u^2)/2\}\)，两者同时达到。在非空行令 \(E=t^2-2\phi,B=(t+\sqrt{t^2-4\phi})/2,\alpha=(t-B)_+\)，逐行投影恰为 \(u\le B,\alpha\le a\le\min\{B,\sqrt{E-u^2}\}\)，另保原模和零行；全部可实现物理步长恰为 \([v,\min\{B,\sqrt{E-a^2}\}]\)。给定边的实际步长不可自动替换成 \(v\)。
+- **Definitions / Dependencies / Evidence**：C414 同一四点实现、C417 完整纤维反演。代价 \(H(s)=s^2+\max\{a^2,(s-t)_+^2\}\) 在 \(s\ge|t-a|\) 严格递增，消元并展开最大值得 \(Q\)；投影底图加指定边及一个最小残差前像给完整闭覆盖实现，但只认证指定边。[JR1–JR8 证明](research/topics/dd2/joint_relation.md#dd2-joint-exact-cost)、[准确逐行域](research/topics/dd2/joint_relation.md#dd2-joint-projection)。
+- **Counterevidence / Objections / Related Files**：\(t=0\) 时 \(Q=2\max(a,u)^2\)，\(a=\rho=0\) 仍可在不同零点间移动；吸收另需条件。精确零集且闭纤维需 \(a=0\Leftrightarrow\rho=0\)，仅精确零集的未达零残差端点另核。C427 自由仿射类有准确附加代价 \(2t(u-t-a)_+\)。这是对已准确自由类的等价表示，不能再降其锐值；相对原正部候选则有完整图严格差距。[对比及 \(L=1,A=3t/4\) 校准](research/topics/dd2/joint_relation.md#dd2-joint-candidate-comparison)。任意正下界完整窗、固定图、指定目标和动态实现不由单边补全转授；未认定公开新颖性。
+
+<a id="c436"></a>
+## C436-v1 · 完整窗的前像长度集合与真残差右闭包过滤
+
+- **Status**：`derived-checked`。全部前像、右端逼近、非空完整类严格增益与非闭纤维反例经独立实际正文复核。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：有限维 \(H\)、固定 \(\lambda,R>0,U=H\)、非空闭 \(S\subseteq\operatorname{zer}F\)，有限有符号 \(\Phi:[0,R]\to\mathbb R\)。对每个 \(d(w,S)\le R\) 的输入，完整 \(J_{\lambda F}(w)\) 的每条边都有某个最近输入锚满足下界 \(\Phi(d(w,S))\)，包含零尺度。定义 \(\mathcal V_\Phi(a)=\{q\ge0:a+q>R\ \text{或}\ \exists\tau\in[0,R],|\tau-a|\le q,\ q^2+\max\{a,|\tau-q|\}^2\le\tau^2-2\Phi(\tau)\}\)。每个实际输出 \(y\) 的 \(a=d(y,S),u=\lambda d(0,F(y))\) 都满足 \(u\in\overline{\mathcal V_\Phi(a)\cap[u,\infty)}\)；残差达到时有 \(u\in\mathcal V_\Phi(a)\)，有限维非空闭纤维足够。
+- **Conclusion / Scope**：若受检输出还满足 (JR2) 的原真残差误差界，将该必要门合取 C435 原模联合域再取输出上确界，得到完整窗统一上界；不声称过滤后的域一般可由同一完整图实现。固定 \(\lambda=R=1,\Phi(\tau)=3\tau^2/16,\psi(r)=r/3\) 且唯一改 \(\psi(1/100)=1/2\)，在 \(t=1\) 自由精确值 \(1/2\) 被此门缩至完整类准确值 \(1/4\)，由完整闭覆盖 \(F=3I,S=\{0\}\) 达到。故改进发生于非空完整算子类。
+- **Definitions / Dependencies / Evidence**：任一完整图值 \(v'\in F(y)\) 给入边 \(w=y+\lambda v'\)。窗外由距离三角给 \(a+q>R\)，窗内由同锚平方展开给 \(\mathcal V\) 第二支；近极小范数序列从右逼近 \(u\)。严格例的 \(1/4<a\le1/2\) 行强制 \(u=1/100\)，但全部候选入边有 \(q\ge a/3\)。[JR12–JR14 证明及全纤维见证](research/topics/dd2/joint_relation.md#dd2-complete-fiber-filter)。
+- **Counterevidence / Objections / Related Files**：不闭纤维不能删右闭包：JR15 的 \(J=I/2\) 加一条窗内边及窗外前像序列，在同一完整窗满足全部前件，输出 \(a=3/4\) 的残差 \(u=1/4\) 不达到且 \(\mathcal V_\Phi(a)=(1/4,\infty)\)。其图非闭，精确零集和全域覆盖仍成立。[完整端点反例](research/topics/dd2/joint_relation.md#dd2-complete-fiber-right-endpoint)。零输出的残差已达到，强制 \(\Phi(0)\le0\)，不自动强制零尺度驻定。若只认证允许子关系或限制位置窗 \(U\)，须重查全部前像是否受检；本命题不转授该量词。一般完整兼容与动态最优仍未由此必要门解决；未认定公开新颖性。

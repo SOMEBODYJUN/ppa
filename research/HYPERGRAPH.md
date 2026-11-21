@@ -1156,6 +1156,18 @@
 | E745 | [DD2-SIGNED-LINEAR-CALIBRATION · C428 不规则有符号下界的线性真残差精确标尺](canonical/dd2_function_hypotheses.md#fh-signed-linear-calibration) ∧ [DD2-CONVEX-SCALAR-REALIZATION · C426 闭凸线段与固定射线的单边标量实现](topics/dd2/target_geometry.md#dd2-convex-scalar-realization) | conditional → [DD2-SHARPNESS-QUANTIFIER-SEPARATION · C434 单尺度、同图全尺度与轨道取等的严格分层](topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation) | 密集下界的固定有限维单点闭图不能全尺度饱和；固定射线在lambda=1、Phi=-2t²、psi=r/4下有完整闭图全尺度取等且所有轨道至多两条非驻定边，任意该射线的同数据锐边均不能连续。；**derived-checked** |
 | E746 | [DD2-SHARPNESS-QUANTIFIER-SEPARATION · C434 单尺度、同图全尺度与轨道取等的严格分层](topics/dd2/reverse_compensation.md#dd2-sharpness-quantifier-separation) | limits → [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) | 逐尺度反演的最优性不自动给共同闭图全尺度锐化或实际轨道逐步饱和；不反驳 C400 连续高参数旋转、C411 已核非凸链等独立动态正面。；**derived-checked** |
 
+## DD2 一般函数的共同关系
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E747 | [DD2-SIGNED-ENVELOPE · C414 一般有符号锚下界的精确两锚包络](canonical/dd2_general_phi_exact.md) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) | 自由单边、有限维至少二维：三项代价给固定输出与真残差的充要存在性、最大锚积和全部物理位移区间；默认子零集，精确零集闭纤维另加零残差过滤。；**derived-checked** |
+
+## DD2 完整窗的额外必要条件
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E748 | [DD2-EXACT-JOINT-RELATION · C435 输出距离与真残差的精确联合代价](topics/dd2/joint_relation.md#dd2-joint-exact-cost) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-COMPLETE-FIBER-FILTER · C436 完整前像的真残差右闭包过滤](topics/dd2/joint_relation.md#dd2-complete-fiber-filter) | U=H、全部窗内完整边受检且包含零尺度，每个非空纤维的真实残差须从允许入边长度集合右侧逼近；合取原误差界给统一上界，并有完整类非空的严格改进，不宣称一般兼容充分。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

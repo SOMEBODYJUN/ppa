@@ -10958,6 +10958,28 @@
       "y": 5606,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-COMPLETE-FIBER-FILTER": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-EXACT-JOINT-RELATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13932,6 +13954,14 @@
     "E746": {
       "x": 784.83,
       "y": 5658.88
+    },
+    "E747": {
+      "x": 348.31,
+      "y": 5471.81
+    },
+    "E748": {
+      "x": 291.15,
+      "y": 5539.71
     }
   },
   "bounds": {
