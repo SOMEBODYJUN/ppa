@@ -247,6 +247,14 @@ b_\psi(t)=\inf_{\rho\in D_\psi}\max\{\lambda\rho,t-\psi(\rho)\}
 
 [AT5](../canonical/dd2_function_hypotheses.md#fh-attainment-closed-fiber)在同一连续原模下分别核允许额外零点、精确零集非闭纤维及精确零集闭纤维：前两类达到 2，最后一类只能由闭图逼近 2。固定图另需它自己的紧性，[AT6–AT7](../canonical/dd2_function_hypotheses.md#fh-attainment-fixed-graph)给无界输入层及无限维有界输出不预紧的实际反例。逐尺度自由取等没有被转授给固定图、完整整窗或共同轨道。
 
+### 2.F03 全部合法受检边的统一上界
+
+**裁决：Proved；按前件实际认证的关系及函数域量化。**
+
+[UB1–UB3](../canonical/dd2_function_hypotheses.md#fh-uniform-upper-bound)以真实残差 \(u=\lambda r_F(y)\le s\) 作取样，给 \(a^2+u^2\le E_+\)、\(u\le B_+\)，从而直接得到 \(a\le W_+(t)\)。符号不放宽时，距离三角另给输出根与 \(a\le B\)，所以准确残差截帽式同样统一安全，且不大于正部放宽。无需原 \(\psi\) 非减、残差达到、最大值达到、图闭或覆盖；Hilbert 中实际最近输入锚存在即可。
+
+字面 max 先满足 F01–F02 的定义及达到合同才同值使用。UB4 的完整图证明错误物理代换可误算零，却不影响正确真残差上界 \(1/2\)；UB5 核允许子图的全部边合格、额外完整输出却超过所算界，因为该边未满足锚前件。限制允许图不改变真残差的完整纤维。零尺度、局部输入窗及原残差域均已单列，不将一步统一界升为覆盖、留域或最优性结论。
+
 ## §3 DD1 两段分段机制
 
 ### 3.1 DD2 假设恢复 DD1
