@@ -266,6 +266,8 @@ G. 新方法：Conditional / Partial。四点共同 s 约束在声明的几何�
 
 H. 新临界现象：Sharp for stated subclasses。二次缺陷、Hölder 端点、低 L 支和物理长度分离均有构造。
 
+§16 逐项证据索引：A–B 由 C400–C412、`DD2_P0_PRIOR_ART_2026-11-21.md` 和对应正文给出公式重构及先行性边界。C 的平面联合包络与幂次取等见 C399/C400/C403。D–F 的算子类、恢复和算法范围见 C404/C405/C412 及 `pppa_recovery.md`、`splitting.md`。G 的共同 s 严格增益见 `dual_eb.md` 的同边比较，仍限于声明几何类。H 的临界反例见 C399/C400/C405/C406。所有判断保留各 Claim 的 full-graph、selected-relation、工作窗和 recovery 量词。
+
 ---
 
 # §17 独立反例和数学审查
