@@ -5394,6 +5394,18 @@
       "label": "C425 同一 DR 约化下角变差与实际长度",
       "file": "topics/dd2/splitting.md#dd2-same-reduction-phase",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-CONVEX-SCALAR-REALIZATION",
+      "label": "C426 闭凸线段与固定射线的单边标量实现",
+      "file": "topics/dd2/target_geometry.md#dd2-convex-scalar-realization",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-AFFINE-EXACT-GEOMETRY",
+      "label": "C427 自由仿射准确几何与完整线性锐例",
+      "file": "topics/dd2/target_geometry.md#dd2-affine-exact-geometry",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -13809,6 +13821,30 @@
       "output": "DD2-SAME-REDUCTION-PHASE",
       "relation": "conditional",
       "scope": "固定完整约化映射和真残差，按反射角的不同分配精确控制原变量的实际长度。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E735",
+      "topic": "DD2 目标几何与量词",
+      "inputs": [
+        "DD2-SIGNED-ENVELOPE",
+        "DD2-RAW-GAUGE-FEASIBILITY"
+      ],
+      "output": "DD2-CONVEX-SCALAR-REALIZATION",
+      "relation": "conditional",
+      "scope": "正尺度、维数至少二：凸线段及固定射线逐边实现全部自由四点标量；法向辅助前像保真残差，非正整窗、U=H 且无附加输出位置限制时保完整闭图覆盖。精确零集、闭纤维、正下界和共同轨道分别保留量词。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E736",
+      "topic": "DD2 目标几何与量词",
+      "inputs": [
+        "DD2-SIGNED-ENVELOPE",
+        "DD2-CONVEX-SCALAR-REALIZATION"
+      ],
+      "output": "DD2-AFFINE-EXACT-GEOMETRY",
+      "relation": "conditional",
+      "scope": "自由仿射目标的法切正交分解给精确越锚附加平方代价，单点和直线实现两支；λ=1、Phi(t)=-2t²、psi(r)=r/4 的锐因子由全域连续单值线性算子达到，不转授任意固定余维或一般动态锐性。",
       "status": "derived-checked"
     }
   ]

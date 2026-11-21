@@ -3601,6 +3601,8 @@
 - **Boundary / Counterevidence**: Phi<=0 时 I=[0,(t+sqrt(t^2+4D))/2]，恢复旧 DD2 包络。若 Phi>0，正部 D=[-Phi]_+ 丢掉下根和能量余量；t=1、Phi=1/8、eta(s)=s 时精确值 sqrt(3/8)，正部式给 1/sqrt(2)，故不能称 sharp。
 - **Dependencies / Related Files**: [精确定理与证明](research/canonical/dd2_general_phi_exact.md)、[§1-§3 逐题审计](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[C400 负缺陷版本](research/topics/dd2/core.md#dd2-reverse)。固定凸或仿射目标、固定连续单值图、无限维最近点和轨道级反向必要性另需条件。
 
+后续 [C426](#c426) 在同一正尺度和维数合同下证明自由闭凸目标及固定射线保持全部单边标量，[C427](#c427) 则刻画自由仿射目标的准确附加条件。它们是另立的目标结构结果，不改变本命题身份。
+
 <a id="c415"></a>
 ## C415-v1 - q 不小于 1 的次临界幂次固定闭图失败链
 
@@ -3626,6 +3628,8 @@
 - **Conclusion / Scope**：不需 \(\Phi\) 或 \(\psi\) 连续、非减或可逆；原可行域的上确界精确，超水平集及其端点位给反向判定。\(\Phi\le0\) 的整个窗可用两锚正交辅助前像与投影底图实现完整覆盖；精确零集及零残差的闭图限制分别保留。正 \(\Phi\) 时不能将单边最优提升为完整全窗最优。
 - **Definitions / Dependencies / Evidence**：C414 的两锚三角形、完整图反演及真残差定义。[正文可行域与全部证明](research/canonical/dd2_function_hypotheses.md#fh-raw-residual)、[超水平端点](research/canonical/dd2_function_hypotheses.md#fh-sup-inverse)。
 - **Counterevidence / Objections / Related Files**：\(\Phi(t)=3t^2/16\)，\(\psi(r)=r/3\) 但 \(\psi(1/100)=1/2\)，在 \(\lambda=R=1\) 时在 \(t=1\) 测试尺度单边允许 \(a=1/2\)，完整全窗类的该尺度边却必须 \(a\le1/4\)，由 \(F=3I\) 取等。[严格分离证明](research/canonical/dd2_function_hypotheses.md#fh-positive-fibers)。不将上包络闭合的可行点、辅助未受检边或不达到的残差误作完整算子取等。
+
+[C426](#c426) 另证凸投影的法向辅助前像保持这些单边残差及非正整窗实现；上述正下界分离仍可在凸单点目标上成立。
 
 <a id="c418"></a>
 ## C418-v1 · 全部标量下降递推趋零的精确右侧条件
@@ -3698,3 +3702,21 @@
 - **Exact Statement / Scope**：在 C405 的二维临界旋转分裂族，固定 \(\vartheta,P,z_0\)，将两个反射的角分别分配为 \(\phi(r)\) 和 \(\vartheta(r)-\phi(r)\)。所有有界、在正半轴连续的 \(\phi\) 产生同一完整约化迭代和相同约化真残差。实际原变量长度有限当且仅当 \(\sum_k r_k|\sin((\phi(r_{k+1})-\phi(r_k))/2)|<\infty\)。任何 \(0\le b_k\le r_k\) 的角变差成本序列都由一个固定分裂实现。
 - **Evidence / Related Files**：实际配对是 \(u_k=(z_k+R_{\phi_k}z_k)/2,v_k=u_k-z_{k+1}\)。相邻配对增量与 \(\sqrt2 b_k\) 之差由已可和的约化增量控制。[完整推导及优化来源障碍](research/topics/dd2/splitting.md#dd2-same-reduction-phase)。
 - **Boundary / Objections**：比较固定约化过程所决定的数据。原物理残差函数可随分裂而异。当前旋转族的两个分量不能同时为真实全局极小近端，证据为循环单调与闭圆环流。自然耦合目标模型及外部先行性另验。
+
+<a id="c426"></a>
+## C426-v1 · 闭凸线段及固定射线的完整单边标量实现
+
+- **Status**：`derived-checked`。凸投影坐标、完整输出纤维、维数与动态边界经独立重构和实际正文复核。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：在 \(\mathbb R^n,n\ge2\)，固定 \(t>0\)、有限 \(\Phi(t)\)，令 \(E=t^2-2\Phi(t)\)。每个满足 \(s,a\ge0,(t-s)_+\le a\le t+s,s^2+a^2\le E,s^2+(t-s)^2\le E\) 的 \((s,a)\)，都能由某个紧凸线段（允许单点）和输入、输出实现。更强地，预先指定同一射线 \(S_*=\mathbb R_+e_1\) 后也能选择 \(x,y\) 实现每组数据，其中 \(t=d(x,S),a=d(y,S),s=\|x-y\|\)，锚为 \(p=P_Sx\) 且 \(\langle x-y,y-p\rangle\ge\Phi(t)\)。直接位移模可逐点相交。原真残差版另固定 \(\lambda>0\)、\(\psi:D_\psi\to[0,\infty)\)、\(0\in D_\psi\subseteq[0,\infty)\)，并保留 C417 的 \(\rho\in D_\psi\cap[0,s/\lambda],a\le\psi(\rho),a=0\Rightarrow\rho=0\)。
+- **Conclusion / Scope**：自由闭凸目标和上述固定射线的原残差单边域，与 C417 的自由闭目标域相同；非空时最优上确界相同。可用全域投影底图和至多两条附加边构造闭图 \(F\)，使 \(S\subseteq\operatorname{zer}F\)、完整近端全域非空、指定输出真残差准确为 \(\rho\)。若 \(R>0,\Phi:[0,R]\to\mathbb R\) 于整个窗非正、\(t\le R\)、\(U=H\) 且无附加输出位置限制，则每个 \(u\in U_R=\{u:d(u,S)\le R\}\) 的每个 \(v\in J_{\lambda F}(u)\) 都满足同一锚条件及输出真误差界。加闭纤维及精确零集时，准确域另需 \(\rho=0\Rightarrow a=0\)；\(\psi(0)=0\) 已自动保证它。
+- **Definitions / Dependencies / Evidence**：C414 的自由四点域、C417 的真残差及完整关系反演；[紧凸线段与指定四点投影条件](research/topics/dd2/target_geometry.md#dd2-convex-scalar-realization)、[同一固定射线](research/topics/dd2/target_geometry.md#dd2-fixed-ray-realization)、[法向辅助前像及全部纤维](research/topics/dd2/target_geometry.md#dd2-convex-complete-fibers)。
+- **Counterevidence / Objections / Related Files**：一维凸目标不能实现一般闭目标的全部数据。指定四点仍须两条投影法向不等式，某些原有限集构形不能原样凸化。固定 \(F\) 或共同轨道的量词不在实现定理内；固定射线不能连续出现两条 \(s=t+b,b>a\) 的严格步长边。正初值在同一有限维闭凸目标上每步达到 \(\Phi=-2t^2,\psi=r/4,\lambda=1\) 的自由因子 \(1/2\)，还会与 C413 的收敛锚障碍冲突。[动态边界](research/topics/dd2/target_geometry.md#dd2-target-dynamic-boundary)。正下界完整窗仍受 C417 前像障碍，未作公开新颖性认定。
+
+<a id="c427"></a>
+## C427-v1 · 自由仿射目标的准确几何代价与完整线性锐例
+
+- **Status**：`derived-checked`。法切正交分解、两支反向实现、全域线性算子的完整真残差及零尺度已独立复核。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定 \(\mathbb R^n,n\ge2,t>0\)、有限 \(\Phi(t)\) 及 \(E=t^2-2\Phi(t)\)，目标允许在所有非空闭仿射集中选择其维数与位置。给定 \(s,a\ge0\)，存在距离 \(t,a\)、步长 \(s\) 及最近输入锚内积至少 \(\Phi(t)\) 的构形，当且仅当 \(\lvert t-a\rvert\le s\) 且 \(s^2+a^2+(s^2-(t+a)^2)_+\le E\)。在 \(s,a\ge0,\lvert t-a\rvert\le s\) 的共同距离域上，施加锚下界前的最小输出到最近输入锚的平方距离 \(b^2=\|y-p\|^2,p\in P_S(x)\)（在各类内连同允许锚最小化）之差为 \(b_{\rm aff,min}^2-b_{\rm free,min}^2=2t(s-t-a)_+\)。
+- **Conclusion / Scope**：直接位移模或 C417 原残差条件仍逐点相交；C426 的非正整窗完整闭图构造也适用于这些仿射目标。若 \(\Phi(t)\ge0\)，自由仿射类与自由闭目标在该尺度的标量域相同。取 \(\lambda=1,\Phi(t)=-2t^2,\psi(r)=r/4\)，裸能量放宽、自由闭目标／自由凸目标／固定射线、自由仿射目标，以及指定单点的最优输出分别为 \(\sqrt{5/17}\,t,t/2,r_*t,t/3\)，其中 \(r_*=(1+\sqrt{193})/32\)。后三项均有完整覆盖真残差见证。
+- **Definitions / Dependencies / Evidence**：C414 的完整自由几何、C426 的凸实现与全纤维补全；[仿射域充要证明](research/topics/dd2/target_geometry.md#dd2-affine-exact-geometry)、[同参数四个界和完整线性见证](research/topics/dd2/target_geometry.md#dd2-affine-sharp-example)。二维中 \(J(u,v)=(-r_*u,v+d_*u)\)、\(d_*^2=2-r_*-r_*^2\)，原算子 \(F=J^{-1}-I\) 全域连续单值，精确零集为直线；每个输入有 \(a=r_*t,s=4r_*t,r_F(y)=s\)，锚内积恰为 \(-2t^2\)。指定单点的 \(t/3\) 由 \(F=-4I\) 实现。
+- **Counterevidence / Objections / Related Files**：自由仿射域不等于每个指定维数、余维或固定仿射目标的域。上述固定直线线性见证声明在二维；与恒等近端作高维直积得到超平面。仿射正交性确实降低负下界越锚支的界，凸性单独没有这种自由标量改进。裸平方能量遗漏根及距离三角的严格差距另见 [几何层级](research/topics/dd2/target_geometry.md#dd2-energy-versus-geometry)。一般正下界完整窗、指定连续单值凸类及其他动态锐性不由本命题裁决；公开新颖性未认定。

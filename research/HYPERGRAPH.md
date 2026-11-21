@@ -1129,6 +1129,13 @@
 | E733 | [DD2-GAUGE-LENGTH · C401 一般函数误差界的积分长度势](topics/dd2/core.md#dd2-general-gauge) | conditional → [DD2-VANISHING-BUDGET · C424 次阶缺陷余量的长度充要门](canonical/dd2_power_defect_finite_length.md#dd2-vanishing-budget) | 固定 Hölder 真正则模、可比正余量与递增等号半径下的精确积分门，完整旋转实现发散侧。；**derived-checked** |
 | E734 | [DD2-CP-DR · C405 CP／DR 分量传递与物理长度边界](topics/dd2/splitting.md#dd2-splitting-component) | conditional → [DD2-SAME-REDUCTION-PHASE · C425 同一 DR 约化下角变差与实际长度](topics/dd2/splitting.md#dd2-same-reduction-phase) | 固定完整约化映射和真残差，按反射角的不同分配精确控制原变量的实际长度。；**derived-checked** |
 
+## DD2 目标几何与量词
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E735 | [DD2-SIGNED-ENVELOPE · C414 一般有符号锚下界的精确两锚包络](canonical/dd2_general_phi_exact.md) ∧ [DD2-RAW-GAUGE-FEASIBILITY · C417 非单调真残差可行域与完整前像障碍](canonical/dd2_function_hypotheses.md#fh-raw-residual) | conditional → [DD2-CONVEX-SCALAR-REALIZATION · C426 闭凸线段与固定射线的单边标量实现](topics/dd2/target_geometry.md#dd2-convex-scalar-realization) | 正尺度、维数至少二：凸线段及固定射线逐边实现全部自由四点标量；法向辅助前像保真残差，非正整窗、U=H 且无附加输出位置限制时保完整闭图覆盖。精确零集、闭纤维、正下界和共同轨道分别保留量词。；**derived-checked** |
+| E736 | [DD2-SIGNED-ENVELOPE · C414 一般有符号锚下界的精确两锚包络](canonical/dd2_general_phi_exact.md) ∧ [DD2-CONVEX-SCALAR-REALIZATION · C426 闭凸线段与固定射线的单边标量实现](topics/dd2/target_geometry.md#dd2-convex-scalar-realization) | conditional → [DD2-AFFINE-EXACT-GEOMETRY · C427 自由仿射准确几何与完整线性锐例](topics/dd2/target_geometry.md#dd2-affine-exact-geometry) | 自由仿射目标的法切正交分解给精确越锚附加平方代价，单点和直线实现两支；λ=1、Phi(t)=-2t²、psi(r)=r/4 的锐因子由全域连续单值线性算子达到，不转授任意固定余维或一般动态锐性。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

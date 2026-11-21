@@ -10859,6 +10859,28 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-AFFINE-EXACT-GEOMETRY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 344,
+      "y": 5515,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
+    },
+    "DD2-CONVEX-SCALAR-REALIZATION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 250,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -13785,6 +13807,14 @@
     "E734": {
       "x": 1091.69,
       "y": 5558.19
+    },
+    "E735": {
+      "x": 279.81,
+      "y": 5643.62
+    },
+    "E736": {
+      "x": 318.23,
+      "y": 5555.5
     }
   },
   "bounds": {
