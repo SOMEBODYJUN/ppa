@@ -2,6 +2,15 @@
 
 **当前主任务**是按[作者原版协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)完成 DD1–DD2 的 17 节数学验收及全部最终交付。从[逐节验收入口](research/audit/DD2_FINAL_ACCEPTANCE.md)恢复，先处理 §1–§6 的精确定理、一般补偿、DD1 回收、收敛、有限长度及幂次分区。P0–P3 的前次矩阵是对应小问的证据。
 
+
+## 2026-11-21 最终协议验收入口
+
+本轮已按原协议逐题审计 §1–§17，并把第八部分 28 问、第九部分 10 项交付物和最终六问接入同一证据链。总索引在 [FINAL_PROTOCOL_MASTER_2026-11-21.md](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md)；三个分节审计分别是 [§1–§3](research/audit/FINAL_PROTOCOL_S1_S3_2026-11-21.md)、[§4–§8](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md)、[§9–§17](research/audit/FINAL_PROTOCOL_S9_S17_2026-11-21.md)。
+
+本轮新增的有符号缺陷版本见 [C414](CLAIMS.md#c414) 和 [精确一步定理](research/canonical/dd2_general_phi_exact.md)：当 Phi 可以为正时，D=[-Phi]_+ 只给安全上界，精确步长根区间必须保留 Phi。幂次审计已纠正一般闭集的锚量词：q=1 使用 DD1 两段缺陷门，q>1 的正面结论需要 p>2/q 或临界小常数；失败侧固定轨道仍是 Partial/Open。
+
+这三份审计的状态是逐题裁决，不是无条件总定理宣告。已证明部分、尖锐子类、条件性恢复和 Open/Partial 义务均在主索引中分开列出。
+
 [单调性与正则性的共同结构](#common-structure-frontier)是另一研究线。先从各自的定义找出两种几何约束及其在原近端步中的联系。已有收敛定理和仓库里的共用证书只在此后用于核验覆盖或定位障碍。
 
 [DD2 主线](research/topics/dd2/core.md)按指定目标 \(A\)、线性输出误差界的反向缺陷、轨道距离与长度、一般误差界的次序展开。[C400](CLAIMS.md#c400) 记录尺度锐性及线性正则下的无限长与逃逸反例。[C401](CLAIMS.md#c401) 以一般函数的积分势从同一步能量推出长度和留域。

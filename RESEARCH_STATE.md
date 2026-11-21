@@ -1,3 +1,15 @@
+# 2026-11-21 原协议验收 checkpoint
+
+本轮已建立 [最终协议主索引](research/audit/FINAL_PROTOCOL_MASTER_2026-11-21.md)，逐项覆盖 §1–§17、28 个深层问题、10 项强制交付物和最终六问。三份分节审计保存每个题号的状态、量词和证据：
+
+- §1–§3：一般符号 Phi 的精确根区间、正部公式反例、DD1 两段门及算子层 sharpness 边界；C414 的正式证明在 `research/canonical/dd2_general_phi_exact.md`。
+- §4–§8：严格下降、距离/点/长度分离、F1–F3、完整幂次分区、实际算子类和八个猜想攻击。q=1 和 q>1 已按一般闭集的不同最近锚量词修正，不能使用同锚三角不等式。
+- §9–§17：PPPA reduction、shadow recovery、双残差、算法、分裂、文献、原创性和独立审查。
+
+当前真实状态不是“所有普遍命题 Proved”。已闭合的是写明对象类下的几何、势、幂次端点、固定步分裂和条件性 recovery；仍开放的是任意振荡 gauge 的必要性、一般弯曲闭凸低 L 的完整固定图、弱 kernel full coverage、非唯一 fiber 的所有选择强恢复、统一异步/变图/非分离分裂，以及全球优先性。
+
+最新验证：`python3 research/validate_assets.py`、`python3 research/code/dd2/verify_outline.py` 和 `python3 research/build_graph.py` 均通过。
+
 # 当前研究状态
 
 **当前主任务未完成。** 依照[作者原版 DD1–DD2 最终数学验收协议](research/topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)，完成 §1–§17 的逐问数学验收、第八部分的 28 问、第九部分的交付物及最终六问。[逐节验收入口](research/audit/DD2_FINAL_ACCEPTANCE.md)给出证据定位、缺口与结束条件。最先推进 §1–§6，尤其是保留符号的一步补偿、不连续模、原 F1–F3 与完整幂次分区。前次 P0–P3 结果按实际证明范围复用。
