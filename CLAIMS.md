@@ -3548,7 +3548,38 @@
 ## C408-v1 · 完整图覆盖与原始—对偶矩阵门
 
 - **Status**：`derived-checked`。近极小完整图值的 lift 证明、只选单支的反例、块完成平方及 Schur 补可计算门已逐式核对。结论只适用于写明的覆盖、工作窗和完整真残差量词，不宣称对任意近似扩大算子自动成立。
-- **Exact Statement / Objects / Domain / Quantifiers**：在有限维 Hilbert 空间、闭目标 (S)、允许边集 (mathscr E) 和连续非减输出模 (psi) 下，若每个近极小 (q\in G(y)) 的输入 (x=y+q) 落在工作窗并属于 (mathscr E)，且该边满足 (d(y,S)\le\psi(\|q\|))，则完整真残差 (r_G(y)=\inf_{q\in G(y)}\|q\|) 满足 (d(y,S)\le\psi(r_G(y)))。若只选一支，(G(y)=\{y,y^3\}) 给出线性选定支而 (r_G(y)=|y|^3)，所以完整界失败。
-- **Matrix gate**：若原始—对偶块满足 (langle d,y\rangle\ge\langle d,Md\rangle+\langle y-\mathcal Kd,N(y-\mathcal Kd)\rangle)，则任意 (W\succ0) 给出 (V=N-W)、(U=M+\mathcal K^*(N-NW^{-1}N)\mathcal K) 及精确平方余量。对退化预条件 (P=CC^*)，(U+\sigma P\succeq0) 与 (C^*VC\succeq\eta I)、(eta>-1/2)，接上实际锚缺陷即可得到 DD2 正耗散。选择 (W,sigma,eta) 的有限维门等价于 Schur 补 LMI，因此可逐实例认证。
-- **Scope / Objections**：近极小 lift 是存在量词，不能给允许任意坏图值的算法提供全轨道结论。只知道 (U\succeq-\sigma P) 时负位置项可能是二阶距离量，仍须额外吸收。最优 LMI 值和一般非线性、非分离分裂的统一性留作开放扩展。
+- **Exact Statement / Objects / Domain / Quantifiers**：在有限维 Hilbert 空间、闭目标 (S)、允许边集 \(\mathscr E\) 和连续非减输出模 \(\psi\) 下，若每个近极小 (q\in G(y)) 的输入 (x=y+q) 落在工作窗并属于 \(\mathscr E\)，且该边满足 (d(y,S)\le\psi(\|q\|))，则完整真残差 (r_G(y)=\inf_{q\in G(y)}\|q\|) 满足 (d(y,S)\le\psi(r_G(y)))。若只选一支，\(G(y)=\{y,y^3\}\) 给出线性选定支而 \(r_G(y)=|y|^3\)，所以完整界失败。
+- **Matrix gate**：若原始—对偶块满足 \(\langle d,y\rangle\ge\langle d,Md\rangle+\langle y-\mathcal Kd,N(y-\mathcal Kd)\rangle\)，则任意 \(W\succ0\) 给出 \(V=N-W\)、\(U=M+\mathcal K^*(N-NW^{-1}N)\mathcal K\) 及精确平方余量。对退化预条件 \(P=CC^*\)，\(U+\sigma P\succeq0\) 与 \(C^*VC\succeq\eta I\)、\(\eta>-1/2\)，接上实际锚缺陷即可得到 DD2 正耗散。选择 \(W,\sigma,\eta\) 的有限维门等价于 Schur 补 LMI，因此可逐实例认证。
+- **Scope / Objections**：近极小 lift 是存在量词，不能给允许任意坏图值的算法提供全轨道结论。只知道 \(U\succeq-\sigma P\) 时负位置项可能是二阶距离量，仍须额外吸收。最优 LMI 值和一般非线性、非分离分裂的统一性留作开放扩展。
 - **Evidence / Related Files**：[P2 覆盖与矩阵审计](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-coverage)、[矩阵门](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-matrix)、[DD2 双误差界](research/topics/dd2/dual_eb.md#dd2-dual-envelope)、[CP/DR 分量证书](research/topics/dd2/splitting.md#dd2-splitting-component)。
+
+
+
+<a id="c412"></a>
+## C412-v1 - 一般势扰动债务、物理二点恢复与分布式固定步证书
+
+- **Status**：`derived-checked`（比较级势预算、二点恢复和固定网络前向—后向能量）；算子类的普遍必要性和异步/变图扩展仍为 open。
+- **Exact Statement / Objects / Domain / Quantifiers**：若未扰动图边满足 \(s_k\le C[\Theta(\tau_k)-\Theta(a_k)]\)，输入扰动为 \(\eta_k\)，实际步满足 \(|\ell_k-s_k|\le\eta_k\)，且 \(\tau_k\le r_k+\eta_k\)、\(a_k=r_{k+1}\)，则
+  \[
+  \ell_k\le C[\Theta(r_k)-\Theta(r_{k+1})]+C\Delta_\Theta(r_k,\eta_k)+\eta_k,
+  \quad \Delta_\Theta(r,\eta)=\Theta(r+\eta)-\Theta(r).
+  \]
+  \(\sum_k(\Delta_\Theta+\eta_k)<\infty\) 加有限前缀留域预算，给受扰轨道的长度和点识别；仅 \(\sum\Delta_\Theta<\infty\) 对一般连续势不足。一点恢复 \(\|h(z)-x_*\|\le K\omega(d(z,S))\) 不给物理长度；二点模 \(\|h(z)-h(z')\|\le K\omega(\|z-z'\|)\) 与 \(\sum\omega(\|\Delta z_k\|)<\infty\) 给物理有限长度。
+- **Network sub-class**：有限连通无向图、\(P=\operatorname{diag}(\tau_i^{-1}I)+\rho\mathsf L\otimes I\succ0\)、\(A_{\rm net}=\operatorname{diag}(A_i)+N_{\mathcal C}\) 最大单调、\(B_{\rm net}\) 在 \(P\)-度量中 \(\kappa\)-cocoercive 时，固定 \(0<\lambda<2\kappa\) 的预条件前向—后向步满足 (P20) 的平方配方；内层网络误差须按 C406 另行可和控制。
+- **Evidence / Scope**：完整推导和通信边界见 [P3 审计主文](research/audit/DD2_PRO_COMPLETION_2026-11-20.md#dd2-pro-theta) 与 [独立复核](research/audit/DD2_P3_REVIEW_2026-11-21.md)。这是一组带明确拓扑和图闭性前件的可验证子类，不是一般分布式非单调算法的统一结论。
+
+<a id="c410"></a>
+## C410-v1 - DD2 与既有比较曲线、半单调 PPA 和 Hölder PPA 的先行性边界
+
+- **Status**：`derived-checked`（文献公式和项目内换参已逐式核对）；全球优先性仍为 open，因为未穷尽所有后续版本和非英文来源。
+- **Exact Statement / Objects / Domain / Quantifiers**：Lauster–Luke 2021 式 (18)–(19)、Theorem 16(b)、Lemma 17、Corollary 19 已给固定点单值自映射的可和比较曲线、输入步残差误差界、almost-firm 能量和有限长度；Alcantara v1 Proposition 3.4/Remark 3.5 在全锚全图值量词下给 DD1 两个平方因子；Li–Mordukhovich 2012 Theorem 7.2–7.3 给极大单调完整图的 Hölder PPA 距离率，\(q>1/2\) 的有限长度可由其递推作 dyadic 推论。
+- **Project boundary**：DD2 的 \(A(t)<t\) 可连续但不必满足比较迭代可和，允许关系可为近端图子关系，缺陷是每边最近输入锚的函数 \(D(t)\)，输出界使用完整真残差 infimum；C400 的反向缺陷充要门、低 \(L\) 步长支的同一闭图达到性和一般函数缺陷因此不能直接归入上述定理。
+- **Paper wording**：主文承认这些重合与 \(q>1/2\) 的经典端点，不使用“首次提出一般比较曲线/首次证明 Hölder PPA 有限长度”等表述；保留 DD2 的新增范围为明确量词下的反向几何预算、两支达到性和缺陷/允许关系/物理恢复的分离。完整逐式审计见 [P0 报告](research/audit/DD2_P0_PRIOR_ART_2026-11-21.md)。
+
+<a id="c411"></a>
+## C411-v1 - 低 \(L\) 步长支的固定闭图动力学范围
+
+- **Status**：`candidate`。L1–L5 的一维离散锚链、完整闭图、真残差取等、局部孤立例和仿射单步障碍已逐式核对；原稿对一般闭凸集可和链的法锥论证有符号缺口，该部分保持 open。
+- **Exact Statement / Objects / Domain / Quantifiers**：固定 \(0<L<1/2\)，\(\rho_L=L/(1-L)\)。若一列 \(t_{k+1}=A(t_k)\) 满足 \(r_k=t_{k+1}/t_k\in(\rho_L,1)\)，在 \(\mathbb R\) 中取 \(s_k=t_{k+1}/L\)、\(x_{k+1}=x_k-s_k\)、\(p_k=x_k-t_k\)，并取 \(S=\{p_k\}\) 及可和情形的唯一极限点，则 \(S\) 闭，\(d(x_k,S)=t_k\)，每步输入/输出最近锚分别为 \(p_k,p_{k+1}\)，且步长支和 \(D(t_k)=t_k^2r_k(r_k-L)/L^2\) 同时取等。把投影关系与边 \(x_k\mapsto x_{k+1}\) 合并，得到固定的全域非空闭图 \(J\)，其反演 \(F=(J^{-1}-I)/\lambda\) 满足 \(\operatorname{zer}F=S\) 和 \(d(x_{k+1},S)=\lambda Lr_F(x_{k+1})\)。
+- **Sharp example and boundaries**：\(A(t)=t/(1+t)\) 在 \(t_0<(1/\rho_L)-1\) 时给出局部孤立离散闭零集、\(t_k\downarrow0\) 和 \(\sum s_k=\infty\)。任何局部孤立零集只排除总长可和的步长支链；闭仿射集连一条 \(a<b\) 的步长支边都不能有。一般闭凸集的可和/非可和链均保持 open，不能把未闭的法锥符号论证写成定理。
+- **Evidence / Related Files**：[低 \(L\) 固定图证明](research/topics/dd2/lowL_dynamic_sharpness.md)、[DD2 反向定理](research/topics/dd2/core.md#dd2-reverse)。
