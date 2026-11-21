@@ -146,7 +146,7 @@ P0 审计逐式核对 Lauster–Luke 2021、Alcantara v1、Li–Mordukhovich 201
 
 本轮运行过：
 
-- `python3 research/validate_assets.py`：通过，240 manifest hashes、251 audited source files、178 ZIP members、4827 source units、4671 atomic records、955 nodes、720 edges、495 Markdown files。
+- `python3 research/validate_assets.py`：通过，240 manifest hashes、251 audited source files、178 ZIP members、4827 source units、4671 atomic records、955 nodes、720 edges、496 Markdown files。
 - `python3 research/code/dd2/verify_outline.py`：通过，6 ordered sections、7 claim records、15 local links、7 exact algebra checks。
 - `python3 research/build_graph.py`：通过，更新 graph.json/HYPERGRAPH.md；离线 cosmos/xianxia 构建也通过。
 
