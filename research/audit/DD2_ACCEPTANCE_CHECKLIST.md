@@ -247,7 +247,11 @@
   - **结论** 三个不同层次已分别验收：每条实际正距离边 \(a<t\)、固定尺度的共同余量 \(M(t)<t\)、全窗存在同一 \(\kappa<1\)（等价于 \(\sup M(t)/t<1\)）。对非空的默认自由原残差类，正 \(\Phi(t)\) 由输出根 \(B<t\) 自动给共同严格性；非正支的共同严格性恰需 C438 的临界右前缀 \(\mathcal H_t<t\)，每边严格则只需原弱层 \(\{\psi\ge t\}\) 不命中临界闭前缀。预设 \(A<t\) 仍须先被原前件认证，固定图可另证自身目标。对已知合法且零距离吸收的轨道，仅有前两种严格性时只保证距离单调并有非负极限；不能保证极限零、点收敛、有限长、渐近正则或真残差趋零。
   - **证据** [S04.01 的完整答案与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-strict-distance-acceptance)、[C438 准确严格门](../canonical/dd2_function_hypotheses.md#fh-strict-decrease)、[SC6 同一连续完整图的未达上确界](../canonical/dd2_function_hypotheses.md#fh-strict-edge-versus-margin)、[C418 的完整正极限轨道](../canonical/dd2_function_hypotheses.md#fh-positive-limit)、[E0 原始对象](../topics/dd2/core.md#dd2-exact-contract)。
   - **复核** 三路独立重建坏边的原残差前缀、共同余量、线性校准及真实轨道，再复读实际源。核内部峰、右跳、非空原域、未达上确界、正下界、零输入和非单调模的评价域；一般条件不偷换成连续非减端点式。SC6 保同一完整连续图，C418 逐项核完整纤维、精确零集、全覆盖、全部选择距离窗不变及 \(t_k\downarrow1,\ s_k=\rho_k\to1\)；其位置窗为 \(H\)。必要性不转授固定图、精确零集闭纤维、一维或正下界整窗。旧审计公共合同同步修正为 E0，未以真空成立或图闭补出轨道留域。
-- [ ] `S04.02` 何时能够保证距离趋于零？
+- [x] `S04.02` 何时能够保证距离趋于零？
+  - **裁决** Proved
+  - **结论** 已认证的预设 \(a\le A(t)\) 下，全部标量不等式路径趋零恰需 \(A(0)=0\)、每个正尺度 \(A(t)<t\)，以及每个 \(0<\ell<R\) 右侧某邻域内 \(A(u)\le\ell\)。该条件充分用于始终合法的实际轨道，必要性不转授固定图。非减 \(A\) 可由趋零复合比较；一般非单调 \(A\) 不可。全窗所有初值与标量选择一致趋零另需 \(Q_A(t)=\sup_{u\le t}A(u)<t\)。固定图还可用受检强极限边的紧性，或正距离壳的累计净耗散排除正极限。覆盖、零吸收、位置留域分别核验；不要求共同 \(\kappa<1\)，不自动推出点收敛或长度。
+  - **证据** [S04.02 的正反证明、原模翻译与范围](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-distance-zero-acceptance)、[C418 准确右侧条件](../canonical/dd2_function_hypotheses.md#fh-distance)、[C439 同单输入数据的好坏完整图](../topics/dd2/scalar_iteration.md#dd2-same-envelope-different-trajectories)、[C440 全窗一致性](../topics/dd2/scalar_iteration.md#dd2-majorant-uniformity)、[C446 的有界闭性及窗边界反例](../topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries)、[原模反演](../topics/dd2/scalar_iteration.md#dd2-composition-applications)。
+  - **复核** 三路独立重建标量必要充分证明、实际紧性/净耗散与反例，再复读实际源和新身份。核右侧等号、零点和右端、非单调纯复合、逐路径与一致量词、原残差危险集的开闭端及非空条件。C439 核全部前像同范、图闭和真实空间续接；C446 独立核 \(g\) 的连续双射、完整 \(F(0)\) 与正输出唯一纤维、两种允许/位置合同及 \((-1)^k(1+2^{-k})\) 的合法链。紧性结论保全部受检正边严格、允许边相对闭及窗内限输入；耗散仅在正尺度使用，未删去续接所需的留域条件。
 - [ ] `S04.03` 何时能够保证点列本身收敛？
 - [ ] `S04.04` 何时能够保证有限长度？
 - [ ] `S04.05` 何时只有渐近正则性？

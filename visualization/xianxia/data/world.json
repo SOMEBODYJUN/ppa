@@ -11079,6 +11079,17 @@
       "y": 5697,
       "region": "convergence",
       "realm": "convergence-annex-9"
+    },
+    "DD2-BOUNDED-CLOSURE-BOUNDARIES": {
+      "role": "object",
+      "kind": "mine",
+      "object": "crystal",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 908,
+      "y": 5788,
+      "region": "convergence",
+      "realm": "convergence-annex-9"
     }
   },
   "edges": {
@@ -14097,6 +14108,10 @@
     "E757": {
       "x": 995.85,
       "y": 5649.4
+    },
+    "E758": {
+      "x": 919.93,
+      "y": 5741.51
     }
   },
   "bounds": {

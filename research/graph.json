@@ -5514,6 +5514,12 @@
       "label": "C445 一维自由闭目标的准确一步值与三段临界门",
       "file": "topics/dd2/dd1_recovery.md#dd1-one-dimensional-exact",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD2-BOUNDED-CLOSURE-BOUNDARIES",
+      "label": "C446 有界严格下降轨道的允许闭性与窗边界分离",
+      "file": "topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14200,6 +14206,18 @@
       "output": "DD2-ONE-DIMENSIONAL-SHARP",
       "relation": "conditional",
       "scope": "另固定 H=R、λ,ℓ>0、σ≥0、L=ℓ/λ、逐边某最近输入锚的二次下界 −σt²及完整真残差线性界。由一维最近锚重新分类输出位置，令 b=(1+√(1+4σ))/2，得到 m1=max{L/(1+L),min(Lb,b−1),min(L(b−1),b)}，不借二维取等。投影加边给每尺度完整闭图达到；m1<1 的准确 T1 在 L≤1/2、1/2≤L≤1、L≥1 为三段。临界双向块的固定图拼接保任意小全选择不变窗及真实二周期。自由闭目标不默认凸；固定图必要性、所有选择失败及额外受限类不在结论内。 原一步类无预设位置/数值帽，受检零处也用同一二次下界；局部反例给一列缩向零的显式全选择不变窗，不宣称任意指定窗均不变。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E758",
+      "topic": "DD2 实际轨道与认证窗口",
+      "inputs": [
+        "D01",
+        "D04"
+      ],
+      "output": "DD2-BOUNDED-CLOSURE-BOUNDARIES",
+      "relation": "conditional",
+      "scope": "固定 H=ℝ、λ=1、S={0}、距离窗半径2、Phi(t)=-2t²、全域psi(r)=r。g(t)=t²于[0,1]且g(t)=(1+t)/2于t>1，完整J={0,反号g}反演为同一个闭图F，F(0)为全体实数、正输出唯一前像，全部母边满足原锚与完整真残差界。A在U=H仅删两条允许极限边；B保全域完整J但认证U=ℝ去掉正负1。两版覆盖、零驻定、全部选择不变、受检正距离严格，却均有有界合法链x_k=(-1)^k(1+2^(-k))、距离趋1。A缺允许图闭性，B缺认证窗内限输入。仅反驳一般充分定理的删项，不改C418标量必要性，不声称所有选择或连续单值近端均失败。",
       "status": "derived-checked"
     }
   ]

@@ -3902,3 +3902,14 @@
 - **Conclusion / Scope — 严格门与真实边界**：\(m^{(1)}_L(\sigma)<1\iff\sigma<T_1(L)\)，其中 \(T_1=(1-L)/L^2\) 于 \(L\le1/2\)，\(T_1=2\) 于 \(1/2\le L\le1\)，\(T_1=(L+1)/L^2\) 于 \(L\ge1\)。等号最大值为 1，严格越界最大值大于 1。每个 \(L>0\) 的临界还存在一个固定一维完整闭图，精确闭零集在 0 聚集，有一列缩向 0 的显式全选择不变窗，每个窗内都有真实二周期；其正距离恒定、总长无穷。它也满足所有 \(\sigma>T_1\) 的较弱下界。严格侧对始终合法的轨道由 \(s\le bt\) 得有限长度；自动续接另需原覆盖及留域合同。
 - **Definitions / Dependencies / Evidence**：D01 的完整图反演、D04 的线性真实误差界，以及从一维最近锚重新推导的 [D1X7–D1X8](research/topics/dd2/dd1_recovery.md#dd1-one-dimensional-exact)。归一化 \(x=0,p=1\) 迫使 \(S\cap(-1,1)=\varnothing\)，逐个输出位置核全部可行距离；负向端点不可行时其候选严格低于基线，不虚构取等。投影底图加边实现完整纤维。临界 [D1X9–D1X10](research/topics/dd2/dd1_recovery.md#dd1-one-dimensional-critical-cycles)逐向核锚与唯一前像，显式分离块保同图、图闭、精确零集和全部输出不变性。C400 的二维反向取等不作为一维证据。
 - **Counterevidence / Objections / Related Files**：一维能量取等受共线限制；\(L>1/2\) 的 \(T_1>T\) 不否定原 \(n\ge2\) 的自由类。目标不被暗加凸性：例如 \(L=2,\sigma=1\) 的一维自由闭类准确值 \(\sqrt5-1>1\)，一维自由闭凸类准确值仅 \(2/3\)，正文有全部位置证明及完整线性取等。中段临界二周期的给定 \(\ell\) 有效但可不是最小常数；其作用域从未要求两项常数最小。投影选择可终止，所以失败是存在坏选择，并非所有选择都失败。完整残差始终用未截断纤维；任意固定目标、全对单调性、连续单值或优化来源类另验。参见 [F96](FAILED_ROUTES.md#f96)；未认定公开新颖性。
+
+
+<a id="c446"></a>
+## C446-v1 · 有界严格下降轨道的允许图闭性与认证窗边界分离
+
+- **Status**：`derived-checked`。三路先独立重构，后复读实际 BC1–BC5、对象卡、E758 及验收记录；完整纤维、两种闭性缺口、限点位置和所有选择留域均通过。
+- **Exact Statement / Objects / Domain / Quantifiers / Assumptions**：固定 \(H=\mathbb R,S=\{0\},\lambda=\ell=1,R=2\)，在全部非负尺度取 \(\Phi(t)=-2t^2,\psi(r)=r\)。定义连续严格递增满射 \(g(t)=t^2\) 于 \([0,1]\)、\(g(t)=(1+t)/2\) 于 \(t>1\)，令 \(\operatorname{sgn}(0)=0\)、完整 \(J(x)=\{0,-\operatorname{sgn}(x)g(|x|)\}\)、\(F(y)=\{x-y:y\in J(x)\}\)。原算子固定，在两个版本之间不改纤维或残差。
+- **Conclusion — 完整母图**：\(F,J=J_F\) 均闭图且处处非空，\(\operatorname{zer}F=\operatorname{Fix}J=S\)，零输入驻定。\(F(0)=\mathbb R\)，正距离输出 \(y\ne0\) 的完整前像唯一；其真残差 \(\rho=s=t+a\)。全部完整边满足 E0 的最近锚下界及线性真误差界，反号边 \((x-y)y=-a(t+a)\ge-2t^2\)，投影边输出距离、真残差和锚积均为零。
+- **Conclusion — 两个受检版本**：A 取 \(U_{\mathrm A}=\mathbb R\)，仅从允许图删去 \((1,-1),(-1,1)\)，完整 \(F\) 保持不变。允许关系仍全域覆盖、零驻定，全部正距离允许边严格下降，\([-2,2]\) 对所有选择不变；允许图却不闭。B 取全域允许关系 \(\mathcal J_{\mathrm B}=J\) 和认证开窗 \(U_{\mathrm B}=\mathbb R\setminus\{-1,1\}\)。完整允许图全局闭、全部受检正距离边严格下降，\(U_{\mathrm B}\cap[-2,2]\) 对所有选择不变且覆盖。两版从 \(x^0=2\) 都有合法轨道 \(x^k=(-1)^k(1+2^{-k})\)，其距离趋 1，\(s_k=r_F(x^{k+1})=2+3\,2^{-(k+1)}\to2\)。A 的极限输入留窗而两条极限边不被允许；B 的极限边被完整图允许，但输入不在认证窗。
+- **Definitions / Dependencies / Evidence**：D01 的完整图反演、D04 的真实残差定义。正文 [BC1–BC5 的全纤维与逐边证明](research/topics/dd2/scalar_iteration.md#dd2-bounded-closure-boundaries)先核 \(g^{-1}\) 唯一性、闭图、精确零集和所有母边前件，再核两个允许/位置合同；\(g(t)=1\iff t=1\) 保 B 的全部输出留域。首段另重构 C418 的实际强边聚点充分论证，说明反例各缺其中哪一项，而不改 C418 的全部标量路径身份。
+- **Counterevidence / Objections / Scope / Related Files**：仅声称存在坏选择，允许投影到零的选择仍可一步终止。反例排除一般充分定理删去允许图闭性或认证窗内聚点条件，不把这两条件称为每个收敛固定图的必要条件。B 在距离恰为 1 时没有受检输入；空层不被赋予实际包络，也不免除 C418 对该正极限阈值的右侧门。两版在 1 右侧均有实际输出 \(g(u)>1\)，故任何支配它们的目标都不满足该门。母近端允许多值，未给连续单值近端受限类的同样结论，未认定公开新颖性。[S04.02 验收](research/audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-distance-zero-acceptance)、[F147](FAILED_ROUTES.md#f147)保存其精确作用。
