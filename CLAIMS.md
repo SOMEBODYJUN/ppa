@@ -3497,6 +3497,7 @@
 
 - **S06.03 原半阶完整合同补证（实际终稿三席复核通过）**：[HE1–HE9](research/canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)固定本卡原反例 \(H=\mathbb R^2,\lambda=K=1,q=1/2,S=\{0\},\Phi=0,\psi=\sqrt\rho,U=V_\psi=H\)。从 \(a^2+a^4=t^2\) 排除全部额外半径，再直接代回 \(\mathcal J(x)=J_F(x)=\{(I-aQ)x/(1+a^2)\}\) 的唯一完整根，核 F/J 闭图、精确零集、每个完整输出残差 \(\rho=s=a^2\)、零驻定及任意距离 R 窗全输出覆盖不变。预设 \(\varphi=(a\mapsto\sqrt{a^2+a^4})^{-1}\) 先由原数据统一认证，本图同边达到。每个非零初值的 \(s_k\) 有 HE8 调和下界，且 \(t_k\sim k^{-1/2},s_k=\rho_k\sim k^{-1}\)、平方步和 \(t_0^2\)，故点趋0而实际长度无限；零初值例外明确。在R≤1核原组合时，F1/F2通过但F3的 \(4/t\) 发散，没有反驳原完整长度定理。此为原反例的精确范围与证明补充，不改 C399 正定理的指数域，也不把非负锚误作全对单调；C456 的同模好图身份保留。
 
+- **S06.05 临界系数与实际坏侧支持（实际终稿三席复核通过）**：[CK1–CK8](research/canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)核任意K、λ、0<q<1下的准确降距门 \(M<c^2/2\)，c=λK^(-1/q)。CK6对每个坏侧M用√(2M)给实际锚积恰为预算的连续完整保距旋转，给定K在严格坏侧不冒称最小；EB局部、完整F/J全域的区别明确。q≤1/2仍不能由好M保证全类有限长；本卡正定理的q>1/2不变。具体预设φγ的更细线由C430支持另记。
 <a id="c400"></a>
 ## C400-v1 · 指定 A 的 DD2 反向缺陷与尖锐性
 
@@ -3655,6 +3656,7 @@
 - **S06.01 机制补证（实际终稿三席复核通过；原定理身份不变）**：[PM1–PM8](research/canonical/dd2_power_defect_finite_length.md#dd2-power-regime-mechanisms)把坏输出的必要步尺度 \(u=\lambda K^{-1/q}t^{1/q}\) 与默认和函数逆下界分开，统一两支 \(D_{\rm crit}=\max\{u^2/2,u(u-t)\}\)；准确性仍属自由闭目标且规定Φ=−D≤0的类。非临界好支的 \(\beta=\min\{1,p/2\}\)（M=0另取1）给距离充分幂阶 \(q\beta>1\)，结合输出真残差和实际步尾可独立推出点误差的同一充分Q阶，不宣称最优。
 - **好临界非超线性见证 PM4-v1（实际终稿三席复核通过）**：任意 \(q>1,K,\lambda>0,0<M<c^2,p=2/q\)，取 \(r=hM^{q/2}\in(0,1)\) 和预设 \(\kappa\in(r,1)\)；在已由同一幂数据认证 \(\varphi=\kappa t\) 的小窗内，[PM9–PM12](research/canonical/dd2_power_defect_finite_length.md#dd2-superlinear-critical-linear-chain)给实线紧目标 \(S=\{x_k+t_k\}\cup\{x_\infty\}\)、完整闭图 \(J=P_S+\{x_k\to x_{k+1}\}\)、\(F=(J^{-1}-I)/\lambda\)，其中 \(t_k=r^kt_0,s_k=\sqrt M\,t_k^{1/q}\)。全部近端覆盖、零集精确、每条图边保原真误差界和缺陷，全部轨道有限长。所有非终止轨道均为该链的某个后缀，具有距离比 r、点误差比 \(r^{1/q}\) 及准确尾 \(\sqrt M\,t_k^{1/q}/(1-r^{1/q})\)。源中核全部最近锚、完整纤维和闭性；反驳“q>1好侧一律超线性”，不把其图级 \(a=rt\) 冒称原预算的统一目标，也不声明固定凸目标或连续单值预解式的必要性。
 
+- **S06.05 等系数和位置窗补证（实际终稿三席复核通过）**：[公式CK2–CK3与CK-B](research/canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)核M=c²时预算比准确尺度门多 \(ct^{1+1/q}>0\)，不保证全类不增，原二周期见证则另保不变距窗。全部旧锚与第N+1块锚的中点下界45d_N/64，给完整投影和特殊输出在 \(U_N=(-2d_N/3,2d_N/3)\) 内不变；可嵌入任意有限维轴线与对应开球。F允许空值的范围明确，不转授全定义连续原图/唯一近端/指定凸目标。C416主身份不变；预设κ的精确常数见C430补证。
 <a id="c417"></a>
 ## C417-v1 · 非单调真残差模的单边可行域与完整前像障碍
 
@@ -3804,6 +3806,7 @@
 - **Definitions / Dependencies / Evidence**：C414 几何、C417 原残差实现、C421 非空时一维最优式、C429 原下界与首端合同。由 \(M>c\) 的准确条件 \(B>c,E>c^2+q^2,(q<B\text{ 或 }[q=B,e=1])\) 取否定得到三门；由根上支 \(\phi=B(t-B)\) 的严格递减性得到非空上端。[完整证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-psi-cap)、[反向区间](research/topics/dd2/reverse_compensation.md#dd2-compensation-phi-budget)、[同一判据的分段补偿式及逐支证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)、[线性及端点校准](research/topics/dd2/reverse_compensation.md#dd2-compensation-calibration)。
 - **Counterevidence / Objections / Related Files**：非正整窗、\(U=H\)、无附加输出位置限制时，C426 完整闭覆盖实现给全部正尺度的统一类必要性；任意正下界完整窗仅沿用充分性，RC13 用连续目标 \(A(t)=\min(3t/4,1/4)\) 严格分离两类。精确零集且闭纤维需删去 \(\rho=0<a\) 行，\(\psi(0)=0\) 自动消除此差异；固定图及共同轨道不继承逐尺度实现量词。\(L=1,A=3t/4\) 允许的有符号区间为 \([-t^2/16,t^2/4]\)，限制非负缺陷才得 \(D\le t^2/16\)。相同首端 2 的开闭阶跃原模给不同缺陷端点。[完整图和计算范围](research/topics/dd2/reverse_compensation.md#dd2-compensation-scope)。无正则性原模的精确 inf/sup 不自动可由有限点值查询计算；不认证公开新颖性。
 
+- **S06.05 纯临界幂目标特化（实际终稿三席复核通过；本卡原身份不变）**：在CK1的原E0、自由闭目标完整类，q,K,λ>0、M≥0、p=2/q、Φ=−Mt^(2/q)、ψ=Kρ^q，令c=λK^(-1/q)，q=1时另记L=K/λ。[CK7–CK10](research/canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)给存在共同小窗认证事前目标的准确条件：0<q<1且φγ=t−γt^(2/q−1)、γ>0时 iff M+γ<c²/2；q=1且φ=κt、0<κ<1时 iff κ≥L/√(1+L²)、M≤Σ_L(κ)；q>1且φ=κt、0<κ<1时 iff M<c²κ^(2/q)。前后两行等号由真实正尺度次项排除，线性行等号保留。CK8的同一连续完整旋转在全部小窗真模和缺陷取等，CK10的完整单向添边在任意小尺度破过强κ、轨道却全部至多两步终止；完整坏边与持续坏动力学分开。仅此原预算自由类必要，强signed下界/固定图另核；未认定新颖性或后续最优率。
 <a id="c431"></a>
 ## C431-v1 · 逐尺度非空及统一达标不保证完整整窗兼容
 

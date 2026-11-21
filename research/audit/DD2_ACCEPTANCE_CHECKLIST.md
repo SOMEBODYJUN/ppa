@@ -408,7 +408,12 @@
   - **证据** [四层范围与逐项证据](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-subhalf-strong-failures-acceptance)、[SF1–SF9完整剪切及半阶全类比较](../canonical/dd2_power_defect_finite_length.md#dd2-subhalf-strong-failures)、[C465的BC1–BC15全域圆族](../topics/dd2/relaxation.md#dd2-subhalf-bounded-circle)、[原半阶圆族C447-A](../topics/dd2/relaxation.md#dd2-bounded-circular-ppa)、[一维非负锚PL15](../canonical/dd2_power_defect_finite_length.md#dd2-power-length-threshold)。
   - **复核** 三席均先读原合同并完成四项实际自检，分别独立重构无界剪切、有界相位圈及半阶全类比较，再逐源冷读十处实际正文、身份、图边、地图和四栏。SF5有限前缀误差、SF8截尾二进块、完整逆与零面、正负初高、给定K/λ缩放、最高幂及首次相位越界逐式复算；修正早期弦长正弦绝对值、负高度表述、锚内积与锚位置混称、依初值圆心及直接破Fejér的阈值。E777仅以D01/D04定义为承重输入，C447保为构造先例而非合取前件；K有效不冒称最优。原F3/χ/比较尾与位置窗边界已分别核清，无未关闭实质异议；仅签S06.04，不预签后续。
 
-- [ ] `S06.05` `pq=2` 时的尖锐常数是什么？
+- [x] `S06.05` `pq=2` 时的尖锐常数是什么？
+  - **裁决** Sharp
+  - **结论** 令c=λK^(−1/q)、L=K/λ。固定原Φ=−Mt^(2/q)、ψ=Kρ^q的含二维自由闭目标完整类，共同小窗所有正边严格下降的准确门是M<c²/2（0<q<1）、M<T(L)（q=1）、M<c²（q>1），T(L)=(1−L)/L²于L≤1/2，1/(2L²)于L≥1/2。严格侧q>1/2配各自覆盖/留域预算给全选择有限长与点收敛，q≤1/2只降距门仍不保证长度或点收敛。每个固定的等号/坏侧参数均有一个完整图，在其任意小尺度保有持续坏轨道；q>1的M=c²甚至超过精确尺度门，不能统称等号非增。若真正预设φγ=t−γt^(2/q−1)（q<1,γ>0），准确小窗条件为M+γ<c²/2；预设κt（q>1）则M<c²κ^(2/q)，两者等号失败且有完整原图证据。q=1的预设κ仍保M≤Σ_L(κ)及κ≥L/√(1+L²)。正向可用更强signedΦ；反向不转授固定图、指定目标几何或凸最小化子类，q→1与零端缩窗一般不交换（q↑1侧在L≥1/2时数值相同）。
+  - **证据** [精确常数与量词验收](FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-critical-power-constants-acceptance)、[CK1–CK10三支及指定曲线证明](../canonical/dd2_power_defect_finite_length.md#dd2-critical-power-constants)、[DD1每个坏系数的完整实际图](../topics/dd2/dd1_recovery.md#dd1-exact-supercritical-failure)、[C416同图全部坏尺度](../canonical/dd2_power_defect_finite_length.md#dd2-superlinear-power)、[原分段补偿](../topics/dd2/core.md#dd2-main-theorem)。
+  - **复核** 三席先完成四项实际自检，分别冷启动重建次线性/线性/强幂瓶颈，再逐源核CK1–10、原D1K/C416/PL/SF、三条身份支持、失败路线及全部八处实际终稿和四栏。复算同锚双门、K/λ换参、L=1/2合锚、q→1极限例外、原signed步根和零输入；完整坏图每个参数、输出纤维/残差、局部EB与全域同胚、首出边预算及45/64位置窗均核。CK7负导数、CK8实际半径与同边取等、CK9次项、CK10两步终止独立核准；明确公式CK3的降距门与指定目标门不互换，跨参数各选一图、低半阶长度/点失败另有原证据。无未关闭实质异议；只签S06.05，不预签后续分区或最优率。
+
 - [ ] `S06.06` `pq>2` 是否能够进一步削弱？
 - [ ] `S06.07` 是否存在使当前指数条件成为必要条件的明确算子子类？
 - [ ] `S06.08` 在 `p,q` 固定时，能否刻画最优收敛速率？
