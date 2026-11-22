@@ -1,0 +1,98 @@
+\section{Introduction}\label{sec:intro}
+
+The proximal point algorithm seeks a zero of a set-valued operator by solving an implicit inclusion at each iteration. Martinet's regularization of variational inequalities~\cite{Martinet1970} and Rockafellar's analysis for maximal monotone operators~\cite{Rockafellar1976} established the classical theory. Monotonicity supplies a distance inequality, while maximality supplies the existence of proximal points. Beyond this setting, these two roles must be examined separately: an estimate for a proximal step does not by itself show that such a step exists.
+
+Luke and Tam~\cite{LukeTam2025} study this distinction locally. Their submonotonicity condition is a quantified weakening of monotonicity on a localized operator graph. Combined with metric subregularity, local resolvent coverage, and the other localization assumptions in their Assumption~2, it yields local $R$-linear convergence of appropriately selected proximal sequences. Their geometric results also specify which sets are being described. Theorem~1 represents truncated operator values and inverse values as restricted sublevel sets of weakly convex functions; the inverse value at zero describes a localized zero set. Proposition~4 concerns the resolvent of the truncated graph on its actual domain. These statements about operator values, inverse values, and a restricted resolvent have different objects and quantifiers.
+
+The compensation between a violation of firm nonexpansiveness and residual regularity has an established quantitative form. Lauster and Luke~\cite[Theorem~16, Lemma~17, and Corollary~19]{LausterLuke2021} use general regularity functions and summable comparison iterates to analyze fixed-point convergence. In the monotone proximal setting, Li and Mordukhovich~\cite[Theorem~7.3]{LiMordukhovich2012} derive convergence rates from H\"older metric subregularity. Thus, both nonlinear regularity and the use of regularity to compensate for an expansion are part of the existing theory. Our question is the exact relation between an input-anchored defect and an output residual bound for the same ordinary proximal step.
+
+Alcantara's preprint~\cite{Alcantara2026}, first submitted on 16 November 2026, provides a particularly close comparison. Proposition~3.4 and Remark~3.5 give step bounds and a local linear convergence estimate that overlap with the estimates used in DD1 below. The broader paper treats degenerate preconditioned proximal methods. Its reduced zero set is the image $C^*(\zer A)$ of the original zero set under the reduction map, and convergence of projected iterates and shadows requires the stated identification and recovery assumptions. These reduced sets must be distinguished from the original zero set and from the values of the original resolvent. We compare quantitative sufficient conditions only after matching the proximal relation, the residual, and the anchoring assumptions.
+
+Brito, Lara, and Yuan~\cite{BritoLaraYuan2026}, first submitted on 18 November 2026, address proximal existence directly. Under star monotonicity at a zero and alternative topological assumptions, their Theorem~3.1 proves global surjectivity of $I+cF$. Their Corollary~3.12 also gives a surjectivity range for a quadratic radial violation. Their homotopy argument separates an a priori bound from the selection and fixed-point theorems used to obtain a solution. We use this separation in DD3, replacing the radial bound by a function of distance to a nearest input anchor. The resulting existence statement is finite dimensional and uses conditions on the entire operator graph.
+
+Throughout the paper, $H=\R^n$ has its Euclidean inner product and norm, $F:H\rightrightarrows H$, and $S$ is a nonempty closed subset of
+\[
+\zer F:=\{x\in H:0\in F(x)\}.
+\]
+We write
+\begin{equation}\label{eq:intro-notation}
+ d(x):=\dist(x,S),\qquad
+ P_S(x):=\{p\in S:\norm{x-p}=d(x)\},\qquad
+ r_F(y):=\inf_{v\in F(y)}\norm{v}.
+\end{equation}
+The infimum over an empty set is $+\infty$. For $\lambda>0$, the ordinary resolvent is
+\[
+ J_\lambda:=(I+\lambda F)^{-1},\qquad
+ y\in J_\lambda(x)\ \Longleftrightarrow\ x-y\in\lambda F(y).
+\]
+The residual $r_F$ always uses the full value $F(y)$, even when an iteration uses a specified subset of the resolvent values.
+
+To explain the two directions of DD1, consider an allowed proximal step $y\in J_\lambda(x)$ and suppose that
+\begin{equation}\label{eq:intro-two-assumptions}
+ d(y)\le\ell r_F(y),\qquad
+ \ip{x-y}{y-p}\ge\Phi(d(x))
+ \quad\text{for some }p\in P_S(x),
+\end{equation}
+where $\ell>0$. The first inequality measures regularity at the output. The second bounds the possible negative inner product relative to a nearest point to the input. On a distance interval $0<t\le R$, define
+\begin{equation}\label{eq:intro-indices}
+ L:=\frac{\ell}{\lambda},\qquad
+ \sigma(t):=\frac{[-\Phi(t)]_+}{t^2},\qquad
+ \sigma_R:=\sup_{0<t\le R}\sigma(t),\qquad
+ [a]_+:=\max\{a,0\}.
+\end{equation}
+For informal interpretation, we call $L$ a \emph{regularity index} and $\sigma(t)$ a \emph{hypomonotonicity index} at scale $t$. These are numerical measures, not power exponents. A smaller $L$ gives a stronger residual bound relative to the proximal parameter; a smaller $\sigma(t)$ permits less negative anchoring. The second name refers only to the anchored inequality in~\eqref{eq:intro-two-assumptions}, rather than an all-pairs hypomonotonicity assumption. Both quantities retain their dependence on the chosen proximal parameter. Equal numerical values lead to the same test below, without identifying the operators or their trajectories.
+
+For a fixed regularity index, the first direction computes the admissible defect. DD1 gives uniform strict distance decrease under
+\begin{equation}\label{eq:intro-threshold}
+ \sigma_R<T(L),\qquad
+ T(L):=
+ \begin{cases}
+ (1-L)/L^2,&0<L\le\tfrac12,\\[2pt]
+ 1/(2L^2),&L\ge\tfrac12.
+ \end{cases}
+\end{equation}
+Conversely, for a prescribed finite defect bound $\sigma_R=\sigma$, the required regularity is expressed by
+\begin{equation}\label{eq:intro-inverse}
+ L<\Lambda(\sigma),\qquad
+ \Lambda(\sigma):=
+ \begin{cases}
+ +\infty,&\sigma=0,\\[2pt]
+ (2\sigma)^{-1/2},&0<\sigma\le2,\\[2pt]
+ 2/(1+\sqrt{1+4\sigma}),&\sigma\ge2.
+ \end{cases}
+\end{equation}
+The formulas agree at their shared endpoints. DD1 also gives the corresponding inverse calculation for any prescribed contraction factor. The piecewise relation comes from retaining both the step bound and the squared distance inequality. Together they give a geometric distance estimate and a step bound proportional to input distance. Under proximal coverage, absorption at zero distance, and the stated localization assumptions, the steps are summable and the iterates converge to a point of $S$.
+
+The comparison with existing estimates is correspondingly specific. Alcantara~\cite[Remark~3.5]{Alcantara2026} explicitly obtains the condition $2\sigma L^2<1$ in the ordinary proximal specialization, and the step estimate in the proof of Proposition~3.4 supplies another ingredient of~\eqref{eq:intro-threshold}. Retaining both estimates adds the parameter region
+\[
+ 0<L<\tfrac12,\qquad
+ \frac{1}{2L^2}\le\sigma<\frac{1-L}{L^2}.
+\]
+The comparison concerns these displayed sufficient conditions. Exactness of the DD1 bound is proved for the stated nearest-anchor geometric class; it is not a claim of necessity for every fixed operator or every stronger graph condition.
+
+DD2 keeps the same proximal relation and replaces the linear residual bound by $d(y)\le\psi(r_F(y))$. It permits a general signed anchoring function $\Phi$ and computes a piecewise condition for a prescribed decrease $d(y)\le\varphi(d(x))$. This includes trajectories with sublinear decay and finite length. Distance decrease alone does not imply finite length: the trajectory theorems retain their summability or integrability assumptions, and examples distinguish the two conclusions. DD3 proves global proximal existence and combines it with these local estimates. Finally, the parameter analysis starts from data on the original $F$, determines admissible step sizes, and gives a class for which parameters may be chosen arbitrarily at each iteration from a common range.
+
+The paper follows this order. Section~\ref{sec:dd1} presents the two DD1 calculations and their geometric proof. Section~\ref{sec:dd2} develops the general function compensation and the length estimates. Section~\ref{sec:dd3} proves the following existence lemma and then derives the associated trajectory results. Section~\ref{sec:parameters} treats proximal parameter selection. When the convergence assumptions hold only locally, global existence is combined with local convergence; surjectivity alone gives no global convergence conclusion.
+
+\begin{lemma}[Global proximal existence]\label{lem:existence}
+Let $F:\R^n\rightrightarrows\R^n$ have nonempty values everywhere, let $S\subseteq\zer F$ be nonempty and closed, and let $c>0$. For each $\mu\in(0,c]$, let $\Phi_\mu:[0,\infty)\to\R$. Assume that, for every $\mu\in(0,c]$, every $y\in\R^n$, and every $u\in F(y)$, setting
+\[
+ z=y+\mu u,\qquad t=d(z),
+\]
+there exists $p_z\in P_S(z)$ such that
+\begin{equation}\label{eq:global-anchor}
+ \ip{z-y}{y-p_z}\ge\Phi_\mu(t).
+\end{equation}
+Assume also that
+\begin{equation}\label{eq:global-defect}
+ D_c(R):=\sup_{\substack{0<\mu\le c\\0\le t\le R}}
+ [-\Phi_\mu(t)]_+<\infty
+ \qquad\text{for every finite }R\ge0.
+\end{equation}
+Suppose that either
+\begin{enumerate}
+ \item $F$ is lower semicontinuous with nonempty closed convex values; or
+ \item $F$ is upper semicontinuous with nonempty compact convex values.
+\end{enumerate}
+Then $\ran(I+cF)=\R^n$.
+\end{lemma}

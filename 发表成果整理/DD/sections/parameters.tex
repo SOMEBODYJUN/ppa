@@ -1,0 +1,508 @@
+\section{Choosing the proximal parameter}
+\label{sec:parameters}
+
+DD1 and DD2 first fix a parameter and then ask whether the
+corresponding proximal edges satisfy a distance-decrease
+condition. The parameter also enters the hypotheses: in DD1,
+$L=\ell/\lambda$, and a lower anchor bound obtained from the
+original operator may itself change with $\lambda$. The same
+point occurs in the fixed-parameter analysis of
+Luke and Tam~\cite{LukeTam2025}, where the assumptions are
+tested on the scaled operator $\lambda F$. We now reverse the
+calculation. We first solve the DD inequalities for $\lambda$
+when the original data are valid for a common range of
+parameters. We then give original-operator assumptions that
+provide both common proximal coverage and a common decrease
+estimate, allowing the parameter to change at each iteration.
+
+\subsection{Inverting the DD1 inequality}
+
+Suppose that $\ell>0$ and $\sigma\ge0$ are independent of
+$\lambda$ on the parameter range under consideration. Thus
+every allowed edge has a nearest input anchor $p\in P_S(x)$
+such that
+\begin{equation}
+ \ip{x-y}{y-p}\ge-\sigma t^2,
+ \qquad a\le\ell r_F(y),
+ \qquad t=d(x),\quad a=d(y).
+ \label{eq:parameters-common-linear}
+\end{equation}
+The statement that $\sigma$ is common is an assumption about
+the original edges for all these parameters, rather than a
+consequence of small $\lambda$.
+
+\begin{proposition}[DD1 parameter thresholds]
+\label{prop:parameters-dd1}
+For a prescribed $0<r<1$, define
+\begin{equation}
+ \lambda_r=\frac{\ell}{r}
+ \begin{cases}
+ \sqrt{1-r^2+2\sigma},&\sigma\le r(1+r),\\[2pt]
+ \dfrac{1+\sqrt{1+4\sigma}}2,&\sigma>r(1+r).
+ \end{cases}
+ \label{eq:parameters-linear-target}
+\end{equation}
+The DD1 condition for the uniform conclusion $a\le rt$ is
+equivalent to $\lambda\ge\lambda_r$. In the unrestricted
+closed-target one-edge class in dimension at least two this
+is the exact threshold determined by
+\eqref{eq:parameters-common-linear}. A uniform contraction
+factor strictly smaller than one exists precisely when
+\begin{equation}
+ \lambda>\ell
+ \begin{cases}
+ \sqrt{2\sigma},&0\le\sigma\le2,\\[2pt]
+ \dfrac{1+\sqrt{1+4\sigma}}2,&\sigma\ge2.
+ \end{cases}
+ \label{eq:parameters-linear-strict}
+\end{equation}
+These thresholds concern the information in the two common
+inequalities. A fixed operator may admit stronger estimates.
+\end{proposition}
+
+\begin{proof}
+Put $b_\sigma=(1+\sqrt{1+4\sigma})/2$ and
+$L=\ell/\lambda$. By Theorems~\ref{thm:dd1} and
+\ref{thm:dd12}, the sharp output factor is
+\[
+ \min\left\{b_\sigma,Lb_\sigma,
+ L\sqrt{\frac{1+2\sigma}{1+L^2}}\right\}.
+\]
+Since $b_\sigma\ge1>r$, this factor is at most $r$ exactly
+when at least one of the last two terms is at most $r$.
+Solving separately gives
+\[
+ \lambda\ge\frac{\ell b_\sigma}{r}
+ \quad\hbox{or}\quad
+ \lambda\ge\frac{\ell\sqrt{1+2\sigma-r^2}}r.
+\]
+Their union starts at the smaller threshold. The identity
+$b_\sigma(b_\sigma-1)=\sigma$ shows that the second is
+smaller precisely when $b_\sigma\le1+r$, equivalently
+$\sigma\le r(1+r)$. This proves
+\eqref{eq:parameters-linear-target}, including its joining
+point. Taking $r\uparrow1$ gives
+\eqref{eq:parameters-linear-strict}; equality in that limit
+does not provide a common factor $r<1$. Exactness has the
+same free-class scope as Theorem~\ref{thm:dd12}.
+\end{proof}
+
+Coverage, zero-input stationarity and the localization and
+length assumptions remain those of
+Theorem~\ref{thm:dd1-trajectory}. In particular, a numerical
+solution of \eqref{eq:parameters-linear-strict} does not by
+itself produce a proximal output.
+
+\subsection{Inverting DD2 for a nonpositive lower bound}
+
+Let $D:[0,R]\to[0,\infty)$, and suppose the common anchor
+bound is $\Phi=-D$. Let
+$\psi:D_\psi\to[0,\infty)$ be the original residual function,
+where $0\in D_\psi\subseteq[0,\infty)$, and prescribe the
+DD2 target $0<\varphi(t)<t$ for $0<t\le R$. No monotonicity
+of $\psi$ is needed for the following calculation. For each
+positive scale define
+\begin{equation}
+ E_t=\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},\qquad
+ q_t=\inf E_t,\qquad
+ B_D(t)=\frac{t+\sqrt{t^2+4D(t)}}2.
+ \label{eq:parameters-bad-layer}
+\end{equation}
+An empty $E_t$ means that the residual bound alone guarantees
+$a\le\varphi(t)$. For a nonempty $E_t$, its infimum and the
+question whether that infimum belongs to $E_t$ contain
+different information.
+
+\begin{theorem}[DD2 parameter inversion]
+\label{thm:parameters-dd2}
+At a fixed $t>0$, suppose $E_t\ne\varnothing$ and
+$0<q_t<\infty$. Define
+\begin{equation}
+ H(t)=
+ \begin{cases}
+ \dfrac{\sqrt{t^2-\varphi(t)^2+2D(t)}}{q_t},
+ &D(t)\le\varphi(t)(t+\varphi(t)),\\[7pt]
+ \dfrac{B_D(t)}{q_t},
+ &D(t)>\varphi(t)(t+\varphi(t)).
+ \end{cases}
+ \label{eq:parameters-general-threshold}
+\end{equation}
+The DD2 condition for $a\le\varphi(t)$ is precisely
+$\lambda\ge H(t)$, except that the second branch requires
+$\lambda>H(t)$ when $q_t\in E_t$. If $E_t$ is empty, put
+$H(t)=0$ and impose no positive lower threshold. If $E_t$ is
+nonempty and $q_t=0$, no finite positive parameter satisfies
+this one-edge condition, and we put $H(t)=+\infty$.
+
+The equivalence is exact in the free closed-target one-edge
+class of Proposition~\ref{prop:dd2-exact}, in dimension at least two.
+For actual allowed proximal edges on which $D$ and $\psi$
+are common, it is a sufficient guarantee at each tested
+parameter. On $0<t\le R$, put
+\[
+ H_R=\sup_{0<t\le R}H(t).
+\]
+If $H_R<\infty$, every valid common parameter
+$\lambda>H_R$ satisfies the decrease condition at all these
+scales. At $\lambda=H_R>0$, each scale must satisfy the
+endpoint rule above.
+\end{theorem}
+
+\begin{proof}
+Set $r=\varphi(t)/t$, $\delta=D(t)/t^2$ and
+$z=\lambda q_t/t$. The exact DD2 relation of
+Proposition~\ref{prop:dd2-exact} is
+$\delta\le\Sigma(r,z)$. Its lower branch has value
+$r(r-1)<0$ and cannot accommodate $\delta\ge0$.
+On the middle branch the inequality becomes
+\[
+ z^2\ge1-r^2+2\delta.
+\]
+The positive root is at least $1-r$, since
+$1-r^2\ge(1-r)^2$ for $0<r<1$. It is at most $1+r$
+exactly when $\delta\le r(1+r)$. This gives the first branch
+of \eqref{eq:parameters-general-threshold}. If
+$\delta>r(1+r)$, the upper branch is necessary and reads
+$z(z-1)\ge\delta$. Its positive root is $B_D(t)/t$,
+which gives the second branch. The common point
+$D(t)=\varphi(t)(t+\varphi(t))$ belongs to the middle
+branch, where equality is allowed. On the upper branch the
+strict-endpoint exception is exactly the condition
+$q_t\in E_t$ in Theorem~\ref{thm:dd2}.
+
+If $E_t$ is empty, $a\le\psi(r_F(y))\le\varphi(t)$
+already. If $q_t=0$ and $E_t$ is nonempty, then $z=0$ for
+each finite $\lambda$; no nonnegative $\delta$ can pass the
+piecewise condition with $0<r<1$. This proves the stated
+conventions. The underlying free one-edge domain is nonempty
+for $\Phi=-D\le0$, since the scalar choice
+$(s,a,\rho)=(t,0,0)$ is feasible. Thus the equivalence does
+not rely on an empty class. Finally, applying the pointwise
+conditions at every $t\in(0,R]$ proves the assertion about
+$H_R$.
+\end{proof}
+
+When $\psi$ is continuous and strictly increasing on the
+relevant interval and $\varphi(t)$ lies in the interior of
+its image, $q_t=\psi^{-1}(\varphi(t))$ and $q_t\notin E_t$.
+In this case $\lambda>H(t)$ also permits a slightly smaller
+target, so that $a<\varphi(t)$. For an arbitrary original
+function $\psi$, strictness of the parameter inequality
+alone does not imply this stronger output conclusion.
+
+The functions in this theorem must apply to the same
+operator, target set and allowed edges for every candidate
+parameter. One must also verify actual root coverage, the
+evaluation domains, zero-input stationarity, localization
+and one of the length conditions of Section~\ref{sec:dd2}.
+If parameters are available only below a finite upper
+limit, the strict sufficient choice requires an available
+parameter greater than $H_R$. The inversion does not
+establish that such a parameter exists.
+
+There is a different conclusion when the neighborhood may
+depend on a fixed parameter. Suppose, near zero,
+\[
+ D(t)\le Ct^p,\qquad \psi(\rho)\le K\rho^q,
+ \qquad C,K,p,q>0,
+ \qquad m=\min\{1,p/2\}.
+\]
+Then $B_D(t)=O(t^m)$. On every actual edge,
+$r_F(y)\le B_D(t)/\lambda$, so for each fixed
+$\lambda>0$ the residual eventually lies in the specified
+range and
+\[
+ a=O_\lambda(t^{mq}).
+\]
+If $mq>1$, shrinking the input scale therefore gives any
+prescribed ratio $a\le rt$, $0<r<1$. The step estimate
+$s\le C_\lambda t^m$ then gives
+\[
+ \sum_{k=0}^\infty s_k
+ \le\frac{C_\lambda t_0^m}{1-r^m}
+\]
+for a legal trajectory in that range. With coverage,
+stationarity at zero and this total bound smaller than the
+distance to the boundary of the input neighborhood, the
+same finite-prefix induction as before gives continuation
+and point convergence. This is a statement of the form
+$\forall\lambda>0\;\exists R_\lambda>0$.
+
+For instance, $F(y)=\operatorname{sgn}(y)|y|^\alpha$ on
+$\R$, $0<\alpha<1$, has a unique proximal root for every
+input and every $\lambda>0$. It satisfies $\Phi=0$ and
+$\psi(\rho)=\rho^{1/\alpha}$, so every fixed positive
+parameter gives the preceding local conclusion. For a fixed
+positive input, however, the root of
+$x=y+\lambda y^\alpha$ tends to $x$ as $\lambda\downarrow0$.
+Thus a fixed ratio $r<1$ cannot hold on a common positive
+input interval for all parameters tending to zero.
+
+\subsection{Small parameters need not improve the decrease}
+
+The dependence of the anchor bound on $\lambda$ cannot be
+discarded, even if its coefficient tends to zero.
+
+\begin{example}[A solvable linear operator with small-step expansion]
+\label{ex:parameters-rotation}
+Let $Q$ be rotation through $\pi/2$ in $\R^2$ and set
+$F=-I+2Q$, $S=\{0\}$. Then
+\[
+ \norm{F(y)}=\sqrt5\norm{y},\qquad
+ \ip{F(y)}{y}=-\norm{y}^2,
+\]
+while
+\[
+ I+\lambda F=(1-\lambda)I+2\lambda Q,
+ \qquad
+ \norm{(I+\lambda F)y}^2
+ =(1-2\lambda+5\lambda^2)\norm{y}^2.
+\]
+The scalar $1-2\lambda+5\lambda^2$ is positive for every
+$\lambda$, so every proximal problem has a unique root.
+The exact distance ratio is
+\[
+ \frac{a}{t}=\frac1{\sqrt{1-2\lambda+5\lambda^2}}.
+\]
+It is smaller than one exactly when $\lambda>2/5$; it is
+larger than one for $0<\lambda<2/5$.
+
+The exact linear residual constant is $\ell=1/\sqrt5$.
+On a proximal edge the smallest nonnegative quadratic
+anchor coefficient is
+\[
+ \sigma_\lambda
+ =\frac{\lambda}{1-2\lambda+5\lambda^2}
+ \longrightarrow0\qquad(\lambda\downarrow0).
+\]
+Nevertheless $L=1/(\sqrt5\lambda)$ tends to infinity.
+For $\lambda\le2\ell$, the strict DD1 condition is
+$\sigma_\lambda<\lambda^2/(2\ell^2)$, which fails for
+all sufficiently small $\lambda$. In fact the energy term
+of DD1 is exact here:
+\[
+ \frac{L^2(1+2\sigma_\lambda)}{1+L^2}
+ =\frac1{1-2\lambda+5\lambda^2}.
+\]
+Thus decay of $\sigma_\lambda$ by itself does not decide
+the compensation inequality.
+\end{example}
+
+\subsection{Original angle data and a common parameter range}
+
+We next give assumptions that do not contain the proximal
+parameter. They also yield roots in a common input
+neighborhood, which makes varying the parameter possible
+without changing the set on which continuation is proved.
+
+\begin{theorem}[Common coverage and variable parameters]
+\label{thm:parameters-variable}
+Let $F:\R^n\to\R^n$, let $S\subseteq\zer F$ be nonempty
+and closed, and let $p_0\in S$. Suppose $F$ is continuous on
+a neighborhood of $V=\overline B(p_0,R_0)$ and there
+are $\ell>0$ and $0\le\mu<1$ such that, for all $y\in V$
+and $p\in S\cap V$,
+\begin{equation}
+ d(y)\le\ell\norm{F(y)},\qquad
+ \ip{F(y)}{y-p}
+ \ge-\mu\norm{F(y)}\norm{y-p}.
+ \label{eq:parameters-raw-angle}
+\end{equation}
+Choose
+\[
+ 0<r_0<\min\{R_0/2,\sqrt{1-\mu^2}R_0\},
+ \qquad U=B(p_0,r_0),
+\]
+and, for each $\lambda>0$, use exactly the allowed relation
+\[
+ \mathcal J_\lambda(x)=J_\lambda(x)\cap B(p_0,R_0).
+\]
+Every such relation is nonempty on $U$. Fix $0<r<1$ and put
+\begin{equation}
+ \lambda_*(r)=\ell
+ \begin{cases}
+ \mu+\sqrt{\mu^2+r^{-2}-1},
+ &\displaystyle\mu\le\frac r{\sqrt{1+r^2}},\\[5pt]
+ \dfrac1{r\sqrt{1-\mu^2}},
+ &\displaystyle\mu\ge\frac r{\sqrt{1+r^2}}.
+ \end{cases}
+ \label{eq:parameters-raw-threshold}
+\end{equation}
+The two expressions agree at their common endpoint.
+For every $\lambda\ge\lambda_*(r)$ and every
+$y\in\mathcal J_\lambda(x)$ with $x\in U$,
+\begin{equation}
+ d(y)\le r d(x),\qquad
+ \norm{x-y}\le\frac{d(x)}{\sqrt{1-\mu^2}}.
+ \label{eq:parameters-common-estimates}
+\end{equation}
+In particular, zero-distance inputs are stationary.
+
+If $x^0\in U$ satisfies
+\begin{equation}
+ \frac{d(x^0)}{(1-r)\sqrt{1-\mu^2}}
+ <\dist(x^0,U^c),
+ \label{eq:parameters-local-start}
+\end{equation}
+then, for every sequence $\lambda_k\ge\lambda_*(r)$,
+every allowed choice
+$x^{k+1}\in\mathcal J_{\lambda_k}(x^k)$ can be continued
+indefinitely, remains in $U$, and converges to a point
+$x^\infty\in S\cap U$. Moreover,
+\begin{equation}
+ d(x^k)\le r^k d(x^0),\qquad
+ \sum_{j=k}^\infty\norm{x^{j+1}-x^j}
+ \le\frac{d(x^k)}{(1-r)\sqrt{1-\mu^2}}.
+ \label{eq:parameters-variable-tail}
+\end{equation}
+If continuity and \eqref{eq:parameters-raw-angle} hold
+globally, with all $y\in\R^n$ and all $p\in S$, then each
+full $J_\lambda$ is everywhere nonempty. Taking
+$\mathcal J_\lambda=J_\lambda$, the same convergence and
+tail conclusions hold for every initial point, without
+\eqref{eq:parameters-local-start}.
+\end{theorem}
+
+\begin{proof}
+We first prove coverage independently of the residual
+inequality. Fix $\lambda>0$ and consider
+$H_\tau(y)=y+\tau\lambda F(y)$, $0\le\tau\le1$.
+For $y\in\partial V$, apply the angle inequality with
+$p=p_0$ and set $h=\tau\lambda\norm{F(y)}$. Then
+\begin{align*}
+ \norm{H_\tau(y)-p_0}^2
+ &\ge R_0^2+h^2-2\mu R_0h\\
+ &=(h-\mu R_0)^2+(1-\mu^2)R_0^2
+ \ge(1-\mu^2)R_0^2.
+\end{align*}
+For every $x$ with
+$\norm{x-p_0}<\sqrt{1-\mu^2}R_0$, this homotopy avoids
+$x$ on $\partial V$. Homotopy invariance of Brouwer degree
+therefore gives
+\[
+ \deg(H_1-x,B(p_0,R_0),0)
+ =\deg(I-x,B(p_0,R_0),0)=1.
+\]
+It follows that $H_1(y)=x$ has a root in $B(p_0,R_0)$.
+This proves coverage on the same input ball for every
+$\lambda>0$.
+
+Now fix any allowed edge from $x\in U$. Every nearest
+point $p_x\in P_S(x)$ satisfies
+\[
+ \norm{p_x-p_0}\le d(x)+\norm{x-p_0}
+ \le2\norm{x-p_0}<R_0,
+\]
+so the angle inequality applies to $y$ and $p_x$. Write
+$b=\norm{y-p_x}$, $s=\norm{x-y}$, $t=d(x)$ and $a=d(y)$.
+Since $x-y=\lambda F(y)$,
+\begin{equation}
+ t^2\ge b^2+s^2-2\mu bs
+ =(b-\mu s)^2+(1-\mu^2)s^2.
+ \label{eq:parameters-angle-energy}
+\end{equation}
+This proves the step bound in
+\eqref{eq:parameters-common-estimates}; if $t=0$ it also
+proves $s=0$ and hence stationarity.
+
+For $a>0$, put $h=s/a$. The residual inequality gives
+$h\ge\lambda/\ell$, and $b/a\ge1$. Minimizing the right
+side of \eqref{eq:parameters-angle-energy} over $b/a\ge1$
+yields
+\[
+ \frac{t^2}{a^2}\ge f(h):=
+ \begin{cases}
+ 1+h^2-2\mu h,&\mu h\le1,\\
+ (1-\mu^2)h^2,&\mu h\ge1.
+ \end{cases}
+\]
+The function is nondecreasing for $h\ge\mu$. Since
+$f(\mu)=1-\mu^2<r^{-2}$, the solution of
+$f(h)=r^{-2}$ on that increasing part is larger than
+$\mu$. Solving on the first branch gives
+$h=\mu+\sqrt{\mu^2+r^{-2}-1}$; this belongs to that
+branch exactly when
+$\mu\le r/\sqrt{1+r^2}$. On the second branch the solution
+is $h=1/(r\sqrt{1-\mu^2})$. Thus
+$\lambda\ge\lambda_*(r)$ implies $t^2/a^2\ge r^{-2}$,
+as required. The case $a=0$ needs no division and already
+satisfies the conclusion.
+
+For the trajectory assertion put $C=(1-\mu^2)^{-1/2}$
+and $t_k=d(x^k)$. As long as the current input belongs
+to $U$, coverage gives the next allowed choice and
+\eqref{eq:parameters-common-estimates} gives
+$t_{k+1}\le rt_k$ and $s_k\le Ct_k$. Every finite
+prefix therefore has total length at most
+$Ct_0/(1-r)$. By \eqref{eq:parameters-local-start} this
+keeps its next point in $U$. Induction proves continuation
+and invariance for every sequence of choices and parameters.
+Summing the geometric series from index $k$ proves
+\eqref{eq:parameters-variable-tail}. Finite length gives a
+Cauchy sequence; closedness of $S$ and $t_k\to0$ put its
+limit in $S$. The strict inequality in
+\eqref{eq:parameters-local-start} also puts that limit
+inside $U$.
+
+Under the global assumptions, fix $p_0\in S$ and any input
+$x$. Choose $R_0$ sufficiently large that
+$\norm{x-p_0}<\sqrt{1-\mu^2}R_0$ and apply the same
+boundary argument. This proves full coverage. The edge
+estimates apply to every nearest input anchor without a
+location restriction, so the same summation proves the
+global assertion.
+\end{proof}
+
+One can also obtain a parameter range directly from DD1.
+Indeed, \eqref{eq:parameters-angle-energy} implies
+\[
+ t^2\ge2(1-\mu)bs,\qquad
+ \ip{x-y}{y-p_x}\ge-\mu bs
+ \ge-\sigma_\mu t^2,
+ \qquad \sigma_\mu=\frac{\mu}{2(1-\mu)}.
+\]
+Together with $a\le\ell s/\lambda$, this allows the use of
+Proposition~\ref{prop:parameters-dd1} with the common
+coefficient $\sigma_\mu$. Retaining the original angle
+can give a smaller sufficient threshold. For example, at
+$\ell=1$, $\mu=4/5$ and $r=9/10$,
+\eqref{eq:parameters-raw-threshold} gives $50/27$, whereas
+\eqref{eq:parameters-linear-target} with $\sigma_\mu=2$
+gives $20/9$. This compares two guarantees from the same
+original data; it does not identify the best parameter for
+each fixed operator.
+
+Theorem~\ref{thm:parameters-variable} permits any parameter
+from a common half-line at each step. It specifies neither
+an observable optimization criterion nor a procedure for
+finding a globally optimal parameter. Its conclusion uses
+uniform decrease and a uniform step estimate, which also
+explain why allowing arbitrary positive parameters would
+be a different assertion.
+
+\begin{example}[Strict decrease at each step and total length]
+\label{ex:parameters-variable-rotation}
+Let $F=Q$ in $\R^2$, where $Q$ is rotation through $\pi/2$,
+and let $S=\{0\}$. Every proximal root is unique and
+\[
+ t_{k+1}=\frac{t_k}{\sqrt{1+\lambda_k^2}},\qquad
+ s_k=\lambda_k t_{k+1}.
+\]
+If $\lambda_k=(k+1)^{-1/2}$, then
+$t_k=t_0/\sqrt{k+1}$ and
+\[
+ s_k=\frac{t_0}{\sqrt{(k+1)(k+2)}}.
+\]
+Thus the trajectory converges to zero while its length is
+infinite. If instead $\sum_k\lambda_k^2<\infty$, then
+\[
+ t_k=t_0\prod_{j<k}(1+\lambda_j^2)^{-1/2}
+\]
+has a positive limit for $t_0>0$: the logarithm of the
+product converges because
+$0\le\log(1+\lambda_j^2)\le\lambda_j^2$. Every step
+still strictly decreases the positive distance. These
+sequences do not have the positive parameter lower bound
+required for a fixed $r<1$ in
+Theorem~\ref{thm:parameters-variable}.
+\end{example}

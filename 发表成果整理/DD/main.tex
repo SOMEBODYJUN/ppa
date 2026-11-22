@@ -1,0 +1,60 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amsthm,amssymb,mathtools}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\definecolor{paperlink}{RGB}{0,0,114}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=paperlink,citecolor=paperlink,
+  urlcolor=paperlink,pdfstartview=Fit,pdftitle={DD manuscript draft}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small DD}
+\fancyhead[R]{\small\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[enumerate]{leftmargin=2.2em,itemsep=0.25em,topsep=0.4em}
+\setlist[itemize]{leftmargin=2em,itemsep=0.25em,topsep=0.4em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\zer}{zer}
+\DeclareMathOperator{\gph}{gph}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\dom}{dom}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+% The author will choose the final title and supply the author metadata.
+\title{DD\\[2pt]\large Manuscript draft}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\input{sections/frontmatter}
+\input{sections/introduction}
+\input{sections/dd1}
+\input{sections/dd2}
+\input{sections/dd3}
+\input{sections/parameters}
+\input{sections/conclusion}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

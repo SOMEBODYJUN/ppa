@@ -1,0 +1,616 @@
+\section{DD1: linear residual regularity}\label{sec:dd1}
+
+The local proximal point method combines two kinds of information: an
+inequality measuring the departure from monotonicity and a residual error
+bound measuring regularity.  This section computes their quantitative
+relation when the error bound is linear.  We first determine the permitted
+negative part of the anchored inequality for a given regularity constant,
+then solve the same relation for the regularity constant.  The resulting
+distance contraction also controls the displacement of each iterate, and
+therefore gives finite length and convergence of every admissible sequence
+under the stated local existence assumptions.
+
+Throughout this section, $H=\R^n$, $n\geq1$, $F:H\rightrightarrows H$, and
+$S\subseteq\zer F$ is nonempty and closed.  Write
+\[
+ d(x)=\dist(x,S),\qquad
+ P_S(x)=\{p\in S:\norm{x-p}=d(x)\},\qquad
+ r_F(y)=\inf_{v\in F(y)}\norm{v}.
+\]
+Fix $\lambda,\ell>0$, an open set $U\subseteq H$, and $R>0$, and set
+\[
+ U_R=\{x\in U:d(x)\leq R\},\qquad L=\frac{\ell}{\lambda}.
+\]
+The proximal relation and an admissible subrelation are denoted by
+\[
+ J_\lambda=(I+\lambda F)^{-1},\qquad
+ \mathcal J(x)\subseteq J_\lambda(x)
+ =\{y\in H:x-y\in\lambda F(y)\}\quad(x\in U_R).
+\]
+Neither relation is assumed to be single valued.  Nonemptiness of
+$\mathcal J(x)$ will be an additional assumption for the trajectory result;
+the one step estimates concern every output that exists.
+
+Let $\Phi:[0,R]\to\R$ be finite.  For every $x\in U_R$ and every
+$y\in\mathcal J(x)$, assume
+\begin{equation}\label{dd1:assumptions}
+ d(y)\leq\ell r_F(y),\qquad
+ \text{there exists }p\in P_S(x)\text{ such that }
+ \ip{x-y}{y-p}\geq\Phi(d(x)).
+\end{equation}
+The anchor $p$ may depend on both $x$ and $y$.  The first inequality is
+evaluated at the true residual of the complete fiber $F(y)$, even when
+$\mathcal J$ contains only some proximal outputs.  If this error bound is
+known only on an output neighborhood or for residuals below a prescribed
+bound, all outputs in $\mathcal J$ must belong to that range of validity.
+Defining $\mathcal J$ by such restrictions does not by itself establish
+nonemptiness.
+
+For an admissible pair $(x,y)$, use the abbreviations
+\[
+ t=d(x),\qquad a=d(y),\qquad s=\norm{x-y},\qquad h=\norm{y-p}.
+\]
+The same anchor must be used in all identities below.
+
+\begin{lemma}[The signed geometric estimates]\label{dd1:geometry}
+Under \eqref{dd1:assumptions}, every admissible pair satisfies
+\begin{equation}\label{eq:dd1-energy}
+ a\leq Ls,\qquad a\leq h,\qquad
+ a^2+s^2\leq h^2+s^2\leq t^2-2\Phi(t).
+\end{equation}
+Moreover, the existence of the pair implies $t^2-4\Phi(t)\geq0$, and
+\begin{equation}\label{eq:dd1-step}
+ \max\{s,h\}\leq B_\Phi(t),\qquad
+ B_\Phi(t)=\frac{t+\sqrt{t^2-4\Phi(t)}}2.
+\end{equation}
+If $x\in S$, the anchored inequality becomes
+$-s^2\geq\Phi(0)$.  Consequently, $\Phi(0)\geq0$ is sufficient for every
+admissible output at such an input to equal $x$.
+\end{lemma}
+
+\begin{proof}
+The proximal inclusion gives
+$r_F(y)\leq\norm{(x-y)/\lambda}=s/\lambda$, so the residual error bound
+implies $a\leq Ls$.  Since $p\in S$, $a\leq h$.  Expanding
+$x-p=(x-y)+(y-p)$ gives
+\[
+ t^2=s^2+h^2+2\ip{x-y}{y-p}\geq s^2+h^2+2\Phi(t),
+\]
+which proves \eqref{eq:dd1-energy}.  The two expressions
+\[
+ \ip{x-y}{y-p}
+ =\ip{x-y}{x-p}-s^2\leq st-s^2,
+ \qquad
+ \ip{x-y}{y-p}
+ =\ip{x-p}{y-p}-h^2\leq th-h^2
+\]
+show that both $s$ and $h$ satisfy $z^2-tz+\Phi(t)\leq0$.
+The discriminant is therefore nonnegative, and the larger root gives
+\eqref{eq:dd1-step}.  For $x\in S$, the unique nearest anchor is $p=x$,
+and the last assertion follows directly.
+\end{proof}
+
+The function $\Phi$ retains its sign in these estimates.  In particular,
+a positive lower bound improves both the energy estimate and the root in
+\eqref{eq:dd1-step}.  At a scale where $\Phi(t)>t^2/4$, no admissible pair
+exists.  For a uniform contraction it is useful to control only the negative
+part.  Define
+\begin{equation}\label{dd1:negative-part}
+ D(t)=[-\Phi(t)]_+,\qquad
+ \sigma_R=\sup_{0<t\leq R}\frac{D(t)}{t^2}.
+\end{equation}
+This is a relaxation of the signed assumptions, rather than a replacement of
+$\Phi$ by a quadratic function.
+
+\begin{theorem}[DD11: from regularity to an anchored lower bound]
+\label{thm:dd1}
+Assume \eqref{dd1:assumptions}, and suppose $\sigma_R<\infty$.  For
+$\sigma\geq0$, define
+\begin{align}
+ b_\sigma&=\frac{1+\sqrt{1+4\sigma}}2,
+ &e_L(\sigma)&=L\sqrt{\frac{1+2\sigma}{1+L^2}},
+ \label{dd1:constants}\\
+ m_L(\sigma)&=\min\{b_\sigma,Lb_\sigma,e_L(\sigma)\},
+ &\kappa_L(\sigma)&=\min\{Lb_\sigma,e_L(\sigma)\}.
+ \label{dd1:factors}
+\end{align}
+Then, for every finite $\theta\geq\sigma_R$, every $x\in U_R$ with $t=d(x)>0$,
+and every $y\in\mathcal J(x)$,
+\begin{equation}\label{dd1:forward-estimates}
+ d(y)\leq m_L(\theta)t,\qquad
+ \norm{x-y}\leq b_\theta t.
+\end{equation}
+The exact condition for the displayed uniform factor to be strictly less
+than one is
+\begin{equation}\label{dd1:threshold}
+ m_L(\theta)<1
+ \quad\Longleftrightarrow\quad
+ \kappa_L(\theta)<1
+ \quad\Longleftrightarrow\quad
+ \theta<T(L),\qquad
+ T(L)=
+ \begin{cases}
+ \dfrac{1-L}{L^2},&0<L\leq\dfrac12,\\[5pt]
+ \dfrac1{2L^2},&L\geq\dfrac12.
+ \end{cases}
+\end{equation}
+In particular, $\sigma_R<T(L)$ gives
+$d(y)\leq\kappa_L(\sigma_R)d(x)$ at every positive input distance.
+
+More precisely, let a desired distance ratio $r\in(0,1)$ be prescribed and
+put
+\begin{equation}\label{dd1:target-bound}
+ r_0(L)=\frac{L}{\sqrt{1+L^2}},\qquad
+ \Sigma_L(r)=
+ \begin{cases}
+ \dfrac{r(r-L)}{L^2},
+ &0<L<\dfrac12,\quad \dfrac{L}{1-L}<r<1,\\[6pt]
+ \dfrac{(1+L^2)r^2-L^2}{2L^2},
+ &r_0(L)\leq r<1\text{ in the remaining cases}.
+ \end{cases}
+\end{equation}
+If $r\geq r_0(L)$ and
+\begin{equation}\label{dd1:target-condition}
+ \frac{D(t)}{t^2}\leq\Sigma_L(r)\qquad(0<t\leq R),
+\end{equation}
+then every such pair satisfies $d(y)\leq r d(x)$.
+Both branches in \eqref{dd1:target-bound} agree when
+$r=L/(1-L)$, and the inequalities in \eqref{dd1:target-condition} are
+nonstrict.
+
+For the model $\Phi(t)=-\sigma t^2$, the factor $m_L(\sigma)$ is the
+smallest common one step upper bound over the class in which $S$ and $F$
+may vary, in every fixed dimension $n\geq2$.  This remains true when $F$
+is required to have a closed graph, $S=\zer F$, and the complete proximal
+relation is nonempty at every input and satisfies the assumptions at every
+input.  Thus, in this class, for $r_0(L)\leq r<1$,
+\[
+ m_L(\sigma)\leq r
+ \quad\Longleftrightarrow\quad
+ \sigma\leq\Sigma_L(r).
+\]
+For $0<r<r_0(L)$, such a common ratio is impossible even when $\sigma=0$.
+No necessity assertion is made for an individually fixed operator or target
+set.  For a general nonpositive lower bound $\Phi=-D$, the same sharp
+condition applies separately at each positive scale over the same varying
+class; for signed $\Phi$,
+\eqref{dd1:target-condition} remains sufficient.
+
+All forward estimates extend to $t=0$ if admissible zero inputs are
+stationary, that is,
+\begin{equation}\label{dd1:stationarity}
+ x\in U_R\cap S,\quad y\in\mathcal J(x)
+ \quad\Longrightarrow\quad y=x.
+\end{equation}
+This condition holds in particular when $\Phi(0)\geq0$.
+\end{theorem}
+
+\begin{proof}
+For $t>0$, $\Phi(t)\geq-\theta t^2$.  Lemma~\ref{dd1:geometry} gives
+\[
+ s,h\leq b_\theta t,\qquad
+ a^2+s^2\leq(1+2\theta)t^2,\qquad a\leq Ls.
+\]
+Consequently $a\leq b_\theta t$, $a\leq Lb_\theta t$, and
+\[
+ a^2(1+L^{-2})\leq a^2+s^2\leq(1+2\theta)t^2.
+\]
+These are exactly the three bounds defining $m_L(\theta)$.
+Since $b_\theta\geq1$, strict contraction can only come from the other
+two terms.  Their conditions are
+\[
+ e_L(\theta)<1\ \Longleftrightarrow\
+ \theta<\frac1{2L^2},
+\]
+and, when $L<1$,
+\[
+ Lb_\theta<1\ \Longleftrightarrow\
+ \theta<\frac{1-L}{L^2}.
+\]
+For $L\geq1$ the latter inequality is impossible.  Taking the union of
+these two ranges and comparing their endpoints proves
+\eqref{dd1:threshold}; at $L=1/2$ both endpoints equal $2$.
+
+For a prescribed $r<1$, the condition $e_L(\sigma)\leq r$ is equivalent
+to
+\[
+ \sigma\leq\Sigma_E(r):=
+ \frac{(1+L^2)r^2-L^2}{2L^2}.
+\]
+It can hold with $\sigma\geq0$ precisely when $r\geq r_0(L)$.
+The other condition, $Lb_\sigma\leq r$, requires $r\geq L$ and is then
+equivalent to
+\[
+ \sigma\leq\Sigma_B(r):=\frac{r(r-L)}{L^2}.
+\]
+The side condition $r\geq L$ is necessary before squaring the root
+inequality.  Whenever both conditions are available,
+\begin{equation}\label{dd1:branch-difference}
+ \Sigma_B(r)-\Sigma_E(r)
+ =\frac{\big((1+L)r-L\big)\big((1-L)r-L\big)}{2L^2}.
+\end{equation}
+For $r\geq r_0(L)$ the first factor in the numerator is positive.
+The second changes sign at $r=L/(1-L)$ if $L<1$; this point belongs to
+$(0,1)$ only if $L<1/2$.  The larger valid upper bound is therefore
+exactly \eqref{dd1:target-bound}.  Applying this argument with
+$\sigma=D(t)/t^2$ at each positive scale proves
+\eqref{dd1:target-condition}.
+
+We next verify the asserted optimality, including its operator
+interpretation.  By scaling, first set $t=1$, and write
+$b=b_\sigma$ and $e^2=1+2\sigma=b^2+(b-1)^2$.
+All admissible pairs satisfy
+\begin{equation}\label{dd1:scalar-constraints}
+ 0\leq u\leq b,\qquad
+ (1-u)_+\leq v\leq
+ \min\{Lu,1+u,\sqrt{e^2-u^2}\},
+ \qquad u=s,\quad v=a.
+\end{equation}
+The distance function is $1$-Lipschitz, which gives the two distance
+constraints in this display; the remaining inequalities have already been
+proved.  They imply $v\leq m_L(\sigma)$.
+
+Conversely, take any $0\leq v\leq m_L(\sigma)$ and define
+\[
+ u=\max\{v/L,|1-v|\},\qquad h=\max\{v,|1-u|\}.
+\]
+Then $u\leq b$.  Also
+\[
+ v^2+u^2
+ =\max\{v^2+v^2/L^2,\ v^2+(1-v)^2\}\leq e^2.
+\]
+Indeed, the first term is bounded by the definition of $m_L$, while the
+second is bounded on $0\leq v\leq b$ by its endpoint values $1$ and
+$e^2$.  The same endpoint argument gives
+$u^2+(1-u)^2\leq e^2$, so $u^2+h^2\leq e^2$.
+Furthermore $|1-u|\leq h\leq1+u$: for the upper bound, use
+$u\geq|1-v|$.  Thus a possibly degenerate plane triangle with
+\[
+ \norm{x-p}=1,\qquad\norm{x-y}=u,\qquad\norm{y-p}=h
+\]
+exists.  Here $u>0$.  Set
+\[
+ q=y+\frac{v}{u}(y-x),\qquad S=\{p,q\}.
+\]
+We have $\norm{y-q}=v\leq h$ and
+$\norm{x-q}=u+v\geq1$.  Hence $p\in P_S(x)$, $d(x)=1$,
+and $d(y)=v$.  The triangle identity gives
+\[
+ \ip{x-y}{y-p}=\frac{1-u^2-h^2}{2}\geq-\sigma,
+ \qquad d(y)=v\leq Lu.
+\]
+In particular, $v=m_L(\sigma)$ is attainable.  This construction embeds
+in every $\R^n$ with $n\geq2$.
+
+To realize the same data by a complete operator, at any prescribed positive
+scale, define
+\begin{equation}\label{dd1:completion}
+ \gph J=\gph P_S\ \cup\ \{(x,y)\},\qquad
+ F(z)=\{(w-z)/\lambda:z\in J(w)\}.
+\end{equation}
+The graph of $P_S$ is closed and has an output at every input, so the same
+is true of $J$.  The invertible linear change of graph coordinates in
+\eqref{dd1:completion} proves that $F$ has a closed graph and that
+$(I+\lambda F)^{-1}=J$.  Since $x\notin S$ and $x\ne y$, its fixed point
+set, and thus $\zer F$, is exactly $S$.  When $v>0$, $y\notin S$; it
+cannot be a projection output and has only the added input $x$ as a
+preimage.  Therefore
+\[
+ F(y)=\{(x-y)/\lambda\},\qquad
+ r_F(y)=s/\lambda,\qquad d(y)\leq\ell r_F(y).
+\]
+When $v=0$, $y\in S$ and both its distance and true residual are zero.
+Every projection pair $w\mapsto z\in P_S(w)$ uses the anchor $p=z$,
+has anchored inner product zero, and has output distance and true residual
+zero.  Thus every complete proximal output satisfies the quadratic lower
+bound and the error bound.  Scaling the construction proves optimality at
+every positive scale, with the given $\lambda$ and $\ell$ unchanged.
+
+Since $m_L(0)=r_0(L)$, ratios below $r_0(L)$ cannot be guaranteed even
+when $\sigma=0$.  The equivalence for a prescribed ratio now follows
+from the algebra above and attainability.  For $\Phi=-D\leq0$, the
+completion with only one additional pair also satisfies the specified
+lower bound at all other input distances, because its other pairs are
+projection pairs.  This proves the stated pointwise necessity for that
+class.  Finally, under \eqref{dd1:stationarity}, both $a$ and $s$ vanish
+at $t=0$, which extends all forward estimates to zero inputs.
+\end{proof}
+
+The two branches have different nearest point geometry.  If an extremal
+pair has $a=rt$ and $s=rt/L$, with $r\geq r_0(L)$, its input anchor can also be an output
+nearest point precisely in the range
+$r/L\leq1+r$.  In that range the limiting relation is
+$a^2+s^2=(1+2\sigma)t^2$, giving $\Sigma_E$.  When $r/L>1+r$,
+the triangle inequality forces
+$h\geq s-t>a$.  A different point of $S$ is then nearer to the output.
+The limiting relation is $s=t+h$, giving $\Sigma_B$.
+At $r/L=1+r$ the configurations coincide and both formulas give
+$\sigma=r(1+r)$.  No convexity restriction on $S$ has been used.
+
+\begin{theorem}[DD12: from an anchored lower bound to regularity]
+\label{thm:dd12}
+Fix $\sigma\geq0$ and $0<r<1$.  Define
+\begin{equation}\label{dd1:inverse-target}
+ \Lambda_\sigma(r)=
+ \begin{cases}
+ \dfrac{r}{\sqrt{1+2\sigma-r^2}},
+ &0\leq\sigma\leq r(1+r),\\[6pt]
+ \dfrac{2r}{1+\sqrt{1+4\sigma}},
+ &\sigma\geq r(1+r).
+ \end{cases}
+\end{equation}
+The two expressions agree at $\sigma=r(1+r)$.
+If \eqref{dd1:assumptions} holds and
+\[
+ D(t)\leq\sigma t^2\quad(0<t\leq R),\qquad
+ \frac{\ell}{\lambda}\leq\Lambda_\sigma(r),
+\]
+then every admissible pair at positive input distance satisfies
+$d(y)\leq r d(x)$.  In the nonpositive quadratic model, this is the exact
+condition for that conclusion over the complete operator class of
+Theorem~\ref{thm:dd1} in dimension at least two.
+
+For some uniform distance factor strictly below one, the corresponding
+condition on regularity is
+\begin{equation}\label{dd1:inverse-threshold}
+ \frac{\ell}{\lambda}<\Lambda(\sigma),\qquad
+ \Lambda(\sigma)=
+ \begin{cases}
+ +\infty,&\sigma=0,\\[2pt]
+ \dfrac1{\sqrt{2\sigma}},&0<\sigma\leq2,\\[6pt]
+ \dfrac2{1+\sqrt{1+4\sigma}},&\sigma\geq2.
+ \end{cases}
+\end{equation}
+Equivalently, $\sigma<T(\ell/\lambda)$.  At the finite boundary
+$L=\Lambda(\sigma)$, the sharp one step distance factor equals one.
+Stationarity \eqref{dd1:stationarity} extends the conclusions to zero
+inputs.
+\end{theorem}
+
+\begin{proof}
+Because $r<1\leq b_\sigma$, the condition $m_L(\sigma)\leq r$ is
+equivalent to at least one of
+\[
+ Lb_\sigma\leq r,
+ \qquad
+ L\sqrt{\frac{1+2\sigma}{1+L^2}}\leq r.
+\]
+Solving each inequality for $L$ gives
+\[
+ L\leq\frac{r}{b_\sigma}
+ \quad\text{or}\quad
+ L\leq\frac{r}{\sqrt{1+2\sigma-r^2}}.
+\]
+The denominator of the second expression is positive.  Since
+$\sigma=b_\sigma(b_\sigma-1)$,
+\[
+ 1+2\sigma-r^2-b_\sigma^2=(b_\sigma-1)^2-r^2.
+\]
+Thus the first upper bound is larger precisely when
+$b_\sigma\geq1+r$, equivalently $\sigma\geq r(1+r)$.
+Taking the larger of the two bounds gives
+\eqref{dd1:inverse-target}, including equality at the common endpoint.
+Theorem~\ref{thm:dd1} proves sufficiency and the stated classwise
+necessity.
+
+For strict contraction, the two alternatives are
+\[
+ L<\frac1{b_\sigma}
+ \quad\text{or}\quad
+ L<\frac1{\sqrt{2\sigma}},
+\]
+where the second alternative places no restriction on finite $L$ when
+$\sigma=0$.  For $\sigma>0$, compare
+$2\sigma-b_\sigma^2=b_\sigma(b_\sigma-2)$.
+The larger upper bound changes at $b_\sigma=2$, or $\sigma=2$.
+This proves \eqref{dd1:inverse-threshold}.  Both bounds equal $1/2$ at
+that endpoint.  The boundary assertion follows either from
+\eqref{dd1:factors} or from the attainable maximum in
+Theorem~\ref{thm:dd1}.
+\end{proof}
+
+For a general signed $\Phi$, one may take $\sigma=\sigma_R$ in either
+direction.  The distinction between strict and nonstrict inequalities is
+essential: a prescribed $r<1$ permits equality in
+\eqref{dd1:target-condition} and \eqref{dd1:inverse-target}, whereas the
+existence of some uniform factor below one requires a strict inequality
+in \eqref{dd1:threshold} or \eqref{dd1:inverse-threshold}.
+Also, $\sigma_R$ contains no information about $\Phi(0)$.
+Zero input stationarity must therefore be retained separately when it
+does not follow from the original anchored inequality.
+
+\begin{theorem}[Finite length and local continuation]
+\label{thm:dd1-trajectory}
+Assume \eqref{dd1:assumptions}, \eqref{dd1:stationarity}, and
+$\sigma_R<T(L)$.  Set
+\[
+ b=b_{\sigma_R},\qquad
+ \kappa=\kappa_L(\sigma_R)\in(0,1),\qquad C=\frac{b}{1-\kappa}.
+\]
+Every infinite sequence whose pairs
+$(x^k,x^{k+1})$ belong to the admissible relation on $U_R$ satisfies
+\begin{align}
+ d(x^k)&\leq\kappa^k d(x^0),
+ &\sum_{j=k}^{\infty}\norm{x^{j+1}-x^j}&\leq C d(x^k),
+ \label{dd1:trajectory-estimates}\\
+ x^k&\longrightarrow x^\infty\in S,
+ &\norm{x^k-x^\infty}&\leq C d(x^k)
+ \leq C\kappa^k d(x^0).
+ \label{dd1:point-rate}
+\end{align}
+In addition, $r_F(x^{k+1})\leq b d(x^k)/\lambda\to0$.
+
+Suppose, further, that $\mathcal J(x)\ne\varnothing$ for every
+$x\in U_R$.  If $x^0\in U_R$ and
+\begin{equation}\label{dd1:localization}
+ C d(x^0)<\dist(x^0,U^c),
+\end{equation}
+then every successive choice $x^{k+1}\in\mathcal J(x^k)$ can be
+continued indefinitely, stays in $U_R$, and satisfies
+\eqref{dd1:trajectory-estimates}--\eqref{dd1:point-rate} with
+$x^\infty\in S\cap U$.  Here $\dist(x,\varnothing)=+\infty$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:dd1}, including its zero input conclusion, gives
+\[
+ t_{k+1}\leq\kappa t_k,\qquad
+ s_k\leq b t_k,
+ \qquad t_k=d(x^k),\quad s_k=\norm{x^{k+1}-x^k}.
+\]
+On a sequence already known to be admissible, induction and summation
+yield
+\[
+ t_k\leq\kappa^k t_0,\qquad
+ \sum_{j=k}^{\infty}s_j
+ \leq b t_k\sum_{i=0}^{\infty}\kappa^i=Ct_k.
+\]
+Finite length makes the sequence Cauchy.  Its limit belongs to $S$,
+because $t_k\to0$ and $S$ is closed.  The same tail estimate bounds
+$\norm{x^k-x^\infty}$ and proves the pointwise rate.  The residual
+estimate follows from the actual proximal inclusion.
+
+For continuation from an initial point, no infinite sequence is assumed
+in advance.  Suppose a finite admissible sequence through $x^k\in U_R$
+has been chosen.  Nonemptiness provides any $x^{k+1}\in\mathcal J(x^k)$.
+The estimates for this pair, together with those for the preceding pairs,
+give
+\[
+ d(x^{k+1})\leq\kappa^{k+1}t_0\leq R,
+ \qquad
+ \norm{x^{k+1}-x^0}
+ \leq b t_0\sum_{j=0}^{k}\kappa^j
+ \leq Ct_0<\dist(x^0,U^c).
+\]
+Hence $x^{k+1}\in U_R$, establishing induction for every choice.
+All iterates and their limit lie in the closed ball of radius $Ct_0$
+about $x^0$, which is contained in $U$ by
+\eqref{dd1:localization}.  The first part of the proof therefore applies
+and gives $x^\infty\in S\cap U$.
+\end{proof}
+
+The continuation statement concerns the same admissible relation on which
+the inequalities have been verified.  It does not add unexamined branches
+of $J_\lambda$.  If the error bound is valid for all relevant output
+positions whenever $r_F(y)\leq\bar\rho$, the sufficient restriction
+$bR/\lambda\leq\bar\rho$ ensures its residual range of validity by the
+step estimate, which follows from the anchored inequality alone.
+Any separate restriction on output positions still requires verification.
+For a sequence independently known to remain admissible, the additional
+initial condition \eqref{dd1:localization} is unnecessary; its role is to
+prove continuation and keep the limit inside the open set $U$.
+
+\begin{example}[A complete operator in the additional parameter range]
+\label{dd1:example}
+Take $H=\R^2$, $\lambda=1$, $\ell=1/4$, and $\sigma=10$.  Set
+\[
+ b=\frac{1+\sqrt{41}}2,\qquad
+ h=b-1,\qquad a=\frac b4,\qquad
+ c=\sqrt{h^2-a^2},
+ \qquad
+ \bar y=(c,a),\quad \bar x=-\bar y/h.
+\]
+Here $h>a>0$, so $c>0$.  Let $S=\R_+e_1$, and define the complete
+operator by
+\begin{equation}\label{dd1:example-operator}
+ F(z)=
+ \begin{cases}
+ \{(v_1,v_2):v_1\leq0\},&z=0,\\
+ \{(0,v_2):v_2\in\R\},&z=\xi e_1,\quad\xi>0,\\
+ \{\tau(\bar x-\bar y)\},&z=\tau\bar y,\quad\tau>0,\\
+ \varnothing,&\text{otherwise}.
+ \end{cases}
+\end{equation}
+Equivalently, if $N_S$ denotes the normal cone to the closed convex ray
+$S$, then
+\[
+ \gph F=\gph N_S\ \cup\
+ \{(\tau\bar y,\tau(\bar x-\bar y)):\tau\geq0\}.
+\]
+This is a closed graph.  Direct inversion gives
+\begin{equation}\label{dd1:example-resolvent}
+ \gph J_1=\gph P_S\ \cup\
+ \{(\tau\bar x,\tau\bar y):\tau\geq0\},
+ \qquad P_S(w)=\max\{w_1,0\}e_1.
+\end{equation}
+In particular, the complete proximal relation has an output at every
+input, and $\zer F=S$.
+
+For every $\tau>0$, the additional pair has the nearest input anchor
+$p=0$ and satisfies
+\[
+ d(\tau\bar x)=\tau,\qquad
+ d(\tau\bar y)=a\tau,\qquad
+ \norm{\tau\bar x-\tau\bar y}=b\tau,
+ \qquad
+ \ip{\tau(\bar x-\bar y)}{\tau\bar y}=-10\tau^2.
+\]
+Indeed, $\norm{\bar y}=h$, $\norm{\bar x}=1$,
+$\bar x-\bar y=-(1+1/h)\bar y$, and $b(b-1)=10$.
+Because $\tau\bar y\notin S$, its complete fiber consists of the single
+value displayed in \eqref{dd1:example-operator}.  Thus
+\[
+ r_F(\tau\bar y)=b\tau,\qquad
+ d(\tau\bar y)=\frac14r_F(\tau\bar y).
+\]
+Every other proximal pair is a projection pair: its output is in $S$,
+its true residual is zero, and using that output as the nearest input
+anchor gives inner product zero.  Hence the assumptions hold for every
+complete proximal output, globally, with $\Phi(t)=-10t^2$ and
+$L=1/4$.  Zero inputs are stationary.  Both constants are exact on the
+additional pairs at every positive scale.  All complete proximal
+sequences enter $S$ in at most two nonstationary steps: after an
+additional pair the output has positive first coordinate and cannot be
+another additional input, whose first coordinate is negative.
+
+For these parameters, the DD1 estimate and threshold are
+\[
+ T(1/4)=12>10,\qquad
+ \kappa_{1/4}(10)=\frac{1+\sqrt{41}}8<1,
+ \qquad e_{1/4}(10)=\sqrt{\frac{21}{17}}>1.
+\]
+Thus the additional pairs attain the DD1 upper bound, although this
+particular operator has finite termination.  The example distinguishes
+the sharp uniform one step estimate from the behavior of an individual
+trajectory.
+
+For comparison, the explicit compatibility condition in
+Luke--Tam~\cite[Assumption~2(d)(ii) and Theorem~2]{LukeTam2025}, after
+normalization to the same proximal step and output error constant, is
+$\sigma(1+L)^2<1/2$.  Their equation~(30) uses the same energy
+inequality, leading to the limiting distance factor
+$\sqrt{1+2\sigma-(1+L)^{-2}}$.  Alcantara's proof of
+\cite[Proposition~3.4, following equation~(11)]{Alcantara2026} gives
+the step estimate $s\leq b_\sigma t$; his
+\cite[Remark~3.5]{Alcantara2026} explicitly gives the ordinary proximal
+point energy factor $e_L(\sigma)$ and the condition $2\sigma L^2<1$.
+At $L=1/4$, the three sufficient conditions are
+\[
+ \begin{array}{c|c}
+ \text{estimate}&\text{permitted negative quadratic coefficient}\\ \hline
+ \text{Luke--Tam's displayed condition}&\sigma<8/25\\[2pt]
+ \text{Alcantara's displayed energy condition}&\sigma<8\\[2pt]
+ \text{DD1}&\sigma<12.
+ \end{array}
+\]
+The exact constants of \eqref{dd1:example-operator} therefore satisfy
+DD1 and lie outside the other two displayed sufficient conditions.
+In any neighborhood of the origin containing the additional pairs,
+their anchored inner products force a quadratic coefficient at least
+$10$, and their true residual ratios force an error constant at least
+$1/4$.  Smaller valid constants cannot restore either displayed
+condition there.
+
+The energy factor in DD1 thus agrees with an existing estimate.
+Multiplying Alcantara's step estimate by the output error bound also
+recovers the other factor.  Taking their minimum enlarges the explicit
+energy range only when $0<L<1/2$, by
+\[
+ \frac1{2L^2}\leq\sigma<\frac{1-L}{L^2}.
+\]
+These comparisons concern the identified sufficient conditions on the
+same ordinary proximal relation and the stated normalization.
+They do not assert an inclusion of the complete local theorems, whose
+graph assumptions, existence hypotheses, and localization requirements
+must also be checked.
+\end{example}

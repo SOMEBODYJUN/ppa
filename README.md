@@ -1,5 +1,7 @@
 # PPA 研究地图：数学节点与真实超边
 
+**当前英文成文。** 作者口述安排已落实为 [发表成果整理/DD/main.tex](发表成果整理/DD/main.tex) 及其分章源文件，编译稿为 [DD_draft.pdf](发表成果整理/DD/DD_draft.pdf)。全文依次为摘要、引言、DD1、DD2、DD3、近端参数选择与结论；存在引理在引言陈述，在 DD3 证明。源文件、对应 Claim、编译方法与独立复核范围见 [写作入口](发表成果整理/DD/README.md)。RLEB 为另一篇既有稿，未被本轮覆盖。下一轮直接修改这套 DD 源稿，不另建竞争正文。
+
 **DD2 主定理入口。** [主陈述](research/topics/dd2/core.md#dd2-main-theorem)先给一般 \(\Phi,\psi,\varphi\) 的分段补偿函数 \(\Sigma(r,z)\)，由 \(-\Phi(t)/t^2\le\Sigma(\varphi(t)/t,\lambda\inf\{\psi>\varphi(t)\}/t)\) 同时读出指定下降与实际步长上界。随后[原两支 \(\Sigma_L\) 和 DD1 临界门](research/topics/dd2/core.md#dd2-linear-recovery)逐式恢复，覆盖、可和步预算和留域条件下给[全部轨道的有限长度与点收敛](research/topics/dd2/core.md#dd2-main-trajectory)。[C430 的等价分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)保原有符号、原残差与准确端点；原域、联合关系和长度的各技术版本放在主陈述之后。本次重写改变呈现顺序，未新增或提升 Claim，也未重排作者尚未选定的后续题材。
 
 **当前论文大纲。** [作者口述版](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd-paper-author-outline)以历史叙事串起摘要与引言，随后为 DD1、DD2、DD3、近端参数选择与结论。引言给指数解释及存在引理陈述，DD3 承接其证明；DD2 以长度边界引出比较级数及耦合长度势。各章链接到已备的证明和例子。

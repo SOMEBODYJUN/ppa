@@ -28,7 +28,7 @@ z(t)=\frac{\lambda}{t}\inf\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},\qquad
 \sigma(t)=-\frac{\Phi(t)}{t^2}.
 \tag{DD2.2}
 \]
-空集的下确界取 \(+\infty\)。连续严格递增且无界的 \(\psi\) 满足
+空集的下确界取 \(+\infty\)。若 \(D_\psi=[0,\infty)\)，且 \(\psi\) 连续严格递增、\(\psi(0)=0\) 并无界，则
 \(z(t)=\lambda\psi^{-1}(\varphi(t))/t\)；一般原模直接用 (DD2.2)，无须改成幂函数，也无须先取单调包络。
 
 **分段补偿函数。** 对 \(0\le r<1\)、\(0\le z<\infty\)，在 \(r\ge1/2\) 或 \(z\ge1-r\) 的区域内定义
