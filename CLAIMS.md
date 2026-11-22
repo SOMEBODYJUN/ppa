@@ -4329,3 +4329,25 @@
 - **Exact Statement / Object A**：\(F:\mathbb R\to\mathbb R\) 为 \(y^2\)（\(y\ge0\)）与 \(y^2-y\)（\(y<0\)），\(c=1,S=\{0\}\)。全图锚下界 \(\Phi(t)=-t-t^{3/2}\) 与完整真残差模 \(\psi(\rho)=\sqrt\rho+\rho\) 成立，\(\operatorname{ran}(I+F)=[0,\infty)\)。见[反例](research/topics/dd2/global_proximal_solvability.md#dd3-fixed-step-obstruction)。
 - **Exact Statement / Object B**：\(F:\mathbb R^2\to\mathbb R^2\) 在 \(y\ne0\) 取 \(-\|y\|^{-1/4}y+\|y\|^{-1/2}Qy\)，其中 \(Q\) 为直角旋转，\(F(0)=0\)。精确 \(S=\{0\}\)。对全部 \(\mu>0\) 与全部原边有 \(\Phi_\mu(t)=-2^{5/8}t^{9/4}-2^{5/6}t^{8/3}\) 和真模 \(\psi(\rho)=\rho^2\)。每个 \(c>0\) 完整原近端满域；无有限的 \(\gamma\) 使固定零锚的 \(\langle F(y),y\rangle\ge-\gamma\|y\|^2\) 在零点邻域成立。见[二维例和核算](research/topics/dd2/global_proximal_solvability.md#dd3-nonquadratic-example)。
 - **Dependencies / Scope**：A 直接算范围，其两条证书不含 DD2 下降门。B 用二次式最小值和 C477，也可直接用径向或既有度数机制得覆盖；同一 \(c\) 另有正半径不变圆，故无全局所有轨道收敛。B 的分离只对 arXiv:2611.23997v1 的指定径向前件。
+
+<a id="c479"></a>
+## C479-v1 · DD 的逐尺度步长反演与消参范围
+
+- **Status**：`derived-checked`，由 C430 逐支反解，原始坏层首端逐项核对。
+- **Exact Statement / Objects / Scope**：固定同一 \(F,S\) 的候选参数共同证书 \(\Phi=-D\le0\)、原真残差模 \(\psi\)，对每个 \(t>0\) 指定 \(0<A(t)<t\)。以 \(q_t=\inf\{\rho\in D_\psi:\psi(\rho)>A(t)\}\)。若 \(0<q_t<\infty\)，DD2 在维数至少二的自由闭目标单边类的 \(a\le A(t)\) 判据为 \(\lambda\ge H(t)\)，其中 \(H(t)=\sqrt{t^2-A(t)^2+2D(t)}/q_t\) 于 \(D(t)\le A(t)(t+A(t))\)，其余为 \(B_D(t)/q_t\)。后支若首点属坏层则用严格不等号。空坏层直接通过，非空且首点为零则无有限步长通过该尺度。
+- **Conclusion / Evidence / Dependencies**：[Pλ1–2](research/topics/dd2/parameter_selection.md#dd-parameter-inversion)给共用窗上确界、线性 DD1 的闭式步长严格门，以及 \(t\downarrow0\) 与 \(\lambda\downarrow0\) 的不同量词。共同 \(D=O(t^p),\psi=O(\rho^q)\) 且 \(q\min(1,p/2)>1\) 时，每个固定正步长可在自己的小窗认证任意统一目标比并求和，另用覆盖及位置门。固定图动力学、可解、留域和长度不由单边反演自动取得；C481 反驳取任意小正步长的无条件推断。
+
+<a id="c480"></a>
+## C480-v1 · 原算子独立角度及线性误差界给共同可用步长半直线
+
+- **Status**：`derived-checked`。独立核球面同伦、最近锚在原评价球、角度两支、零输入及共同尾长。
+- **Exact Statement / Objects / Domain**：\(F:\mathbb R^n\to\mathbb R^n\) 在闭球 \(V=\overline B(p_0,R_0)\) 邻域连续，\(S\subseteq\operatorname{zer}F\) 非空闭且 \(p_0\in S\)。所有 \(y\in V,\ p\in S\cap V\) 满足 \(d(y,S)\le\ell\|F(y)\|\)、\(\langle F(y),y-p\rangle\ge-\mu\|F(y)\|\|y-p\|\)，\(\ell>0,0\le\mu<1\)。取 \(U=B(p_0,r_0)\)，\(0<r_0<\min(R_0/2,\sqrt{1-\mu^2}R_0)\)，以 \(J_{\lambda F}\cap B(p_0,R_0)\) 为允许关系。
+- **Conclusion / Quantifiers**：\(U\) 内每个输入对每个 \(\lambda>0\) 有球内根。最近输入锚给共同缺陷 \(\sigma_\mu t^2\)、\(\sigma_\mu=\mu/[2(1-\mu)]\)，及 \(s\le t/\sqrt{1-\mu^2}\)。给定任意 \(0<r<1\)，用 C479 或直接 [角度阈值 Pλ4](research/topics/dd2/parameter_selection.md#dd-parameter-raw-angle) 得共同 \(a\le rt\) 的参数半直线。从严格位置预算内任意初值，任取该半直线上的 \(\lambda_k\) 与允许根均留域、有限长并点收敛于 \(S\cap U\)。
+- **Dependencies / Scope**：C479 给经 DD 分段的后端，C381 给直接角度几何。存在性用球面同伦和 Brouwer 度，逐边设定和条件见正文。所证为共同认证区间，非观察最优搜索、固定图最优步长或任意集合值局部规则。对比 C477 及 C481。
+
+<a id="c481"></a>
+## C481-v1 · 小步障碍与 Luke–Tam 的两类原图对照
+
+- **Status**：`derived-checked`。直接完整求根，文献对照只核已指定的条件。
+- **Exact Statement / Evidence**：[参数例](research/topics/dd2/parameter_selection.md#dd-parameter-small-step-examples) 的三个模型，均以真实原算子和完整原关系计算。平面 \(F=-I+2Q\) 每个正步长满域唯一，严格下降恰为 \(\lambda>2/5\)，锚缺陷比趋零仍可实际扩张。\(F=Q,\lambda_k=(k+1)^{-1/2}\) 每步收缩、点趋零且无限长。实线 \(F(y)=(2+\sin(1/|y|))y\)（\(F(0)=0\)）每个正步长完整覆盖且所有输出距比至多 \(1/(1+\lambda)\)，却因任意小同输入异根，对每个固定正步长都否定 Luke–Tam Definition 2 的局部全对条件。
+- **Scope / Related Files**：第一例也可反解 Luke–Tam 的显式门，其证明 (29) 结合真残差恢复相同的实际能量因子。第三例只分离指定图前件。不同缺口和可回收结果见 [F166](FAILED_ROUTES.md#f166)。

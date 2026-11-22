@@ -5734,6 +5734,24 @@
       "label": "C478(b) 全参数非二次可解例",
       "file": "topics/dd2/global_proximal_solvability.md#dd3-nonquadratic-example",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD-PARAMETER-INVERSE",
+      "label": "C479 DD 补偿的步长反演",
+      "file": "topics/dd2/parameter_selection.md#dd-parameter-inversion",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD-PARAMETER-RAW-ANGLE",
+      "label": "C480 原算子角度与变步长有限长",
+      "file": "topics/dd2/parameter_selection.md#dd-parameter-raw-angle",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD-PARAMETER-SMALL-STEP-MODELS",
+      "label": "C481 小步障碍与缩放图分离",
+      "file": "topics/dd2/parameter_selection.md#dd-parameter-small-step-examples",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14824,6 +14842,31 @@
       "output": "DD3-GLOBAL-COVERAGE",
       "relation": "conditional",
       "scope": "C477-v1：有限维 R^n，S 非空闭且 S⊂zer F，固定 c>0；全部 (y,u) 及 0<μ≤c 的最近输入锚条件，负部在每个共同有界距离窗统一有限。F 全域非空值，下半连续闭凸值或上半连续紧凸值。平移同伦先由 DD2 步帽控制位移，再由 Schaefer 或多值 Leray–Schauder 得 ran(I+cF)=R^n。指定截断图、轨道留域及收敛须另核。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E791",
+      "topic": "DD2 分段式反解步长",
+      "inputs": [
+        "DD2-REVERSE-RAW-COMPENSATION"
+      ],
+      "output": "DD-PARAMETER-INVERSE",
+      "relation": "conditional",
+      "scope": "C479-v1：D≥0 和原残差模在候选参数中共同有效，0<A(t)<t；解原Σ的中支和高支，并保危险残差首端开闭，得到逐尺度证书。共同参数还需与原可解和窗交集，固定图实际收敛不由此反向刻画。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E792",
+      "topic": "原角度与线性误差界的共同选参",
+      "inputs": [
+        "D01",
+        "D04",
+        "PPA-TWO-ANCHOR-ANGLE",
+        "DD-PARAMETER-INVERSE"
+      ],
+      "output": "DD-PARAMETER-RAW-ANGLE",
+      "relation": "conditional",
+      "scope": "C480-v1：连续单值有限维，指定零点闭球上原图角度 μ<1 对所有相关锚成立且真线性误差界有效。球面同伦给所有正λ的球内根，两种支付给指定目标比例的共同可行半直线。严格位置预算下全部允许变步轨道有限长并趋S。范围为局部允许根。",
       "status": "derived-checked"
     }
   ]

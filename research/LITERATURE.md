@@ -933,3 +933,10 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 [Brito–Lara–Yuan, *Beyond Monotone Operators*, arXiv:2611.23997v1](https://arxiv.org/abs/2611.23997) 于 2026-11-18 提交，PDF 稿面日期为 11-19。Theorem 3.1 在实 Hilbert 空间，对一个零点 \(p\) 的全局径向非负条件配合 Z1–Z4 任一拓扑值域框架给所有正参数的满射。式 (5) 先控制同伦不动点。Theorems 2.5–2.7 分别列 Michael、Schaefer、多值 Leray–Schauder；Z4 使用有限维投影与 Definition 2.3 的 Condition (M)。该定义的网 \(x_\alpha,u_\alpha\) **均弱收敛**，并另有内积极限上界。Remark 3.7 给有限维的下半连续非空闭凸值或上半连续非空紧凸值两种入口。Corollary 3.12、Remark 3.13 给固定径向负二次缺陷的统一满射参数范围和有根仍发散的例子。
 
 [C477](topics/dd2/global_proximal_solvability.md#dd3-global-coverage) 自有推导以最近输入锚和参数区间缺陷帽取得同伦有界性，再使用上述拓扑工具。与既有满射或度数文献的全面先行性尚未判定。
+
+<a id="lit-dd-parameter-luke-tam"></a>
+## DD 选参与 Luke–Tam 的固定缩放表述
+
+[Luke–Tam 刊本](https://pubsonline.informs.org/doi/pdf/10.1287/moor.2025.0863) 的 Assumption 2、Theorem 2 固定 \(\lambda>0\)，在缩放图 \(\lambda F\) 上使用最大次单调性、局部覆盖和显式兼容门。Definition 2 量化局部图块的所有点对。(29) 在同一图窗给最近零锚的平方和估计。固定缩放的表述允许在已知 \(\tau_\lambda\) 后反推参数，不能据此说原方法做不到选参。
+
+[本库比较](topics/dd2/parameter_selection.md#dd-parameter-small-step-examples) 在同一线性旋转图上核算了原显式门及 (29) 的能量信息，另给任意 \(\lambda\) 下局部全对条件失败而原步仍可解并收敛的连续标量例。结论限指定图条件与证书；无公开先行性裁决。

@@ -1196,3 +1196,10 @@ C366 的几何部分在逐点任意缩小原值后保持不变，真实残差可
 - **尝试及断点**：固定 \(c\) 的锚和真残差不等式只量化已有的图边。通过同伦延拓时，原参数实为 \(\mu=\tau c\)，而已有边不为缺失的输入生成输出。
 - **反例**：[C478(a)](research/topics/dd2/global_proximal_solvability.md#dd3-fixed-step-obstruction) 在连续单值图、完整零集和全局两证书下只覆盖半条实轴。其负半轴分支不满足 DD2 的严格下降，排除范围限于两条证书本身。 [F123](#f123) 另记录同一原图已可解而覆盖步长孤立的不同障碍。
 - **可回收机制**：[C477](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage) 用整个区间的统一缺陷帽得到先验有界性，再调用适用的拓扑定理。其它足以证固定 \(c\) 覆盖的条件仍可独立使用。
+
+<a id="f166"></a>
+## F166 · 把存在正步长或负缺陷趋零读成任意小步长可收敛
+
+- **尝试与断点**：让 \(\lambda\downarrow0\) 消去 DD1 或 DD2 中的近端参数。小步会同时减弱真残差提供的有利量；DD1 的线性残差窗中允许的负缺陷为 \(\lambda^2/(2\ell^2)\)，其本身趋零。
+- **完整证据**：[C481](research/topics/dd2/parameter_selection.md#dd-parameter-small-step-examples) 的旋转与负径向叠加在所有参数下满域且给任意小步长真实扩张。另一个纯旋转例在所有逐步参数均严格收缩时仍能无限长。
+- **可用替代**：[C479](research/topics/dd2/parameter_selection.md#dd-parameter-inversion) 对分段式反解，再同可解与留域条件取共同参数。某些 DD2 严格幂次下每个固定正步长可分别缩窗，参数值和可用窗口的量词仍须明确。

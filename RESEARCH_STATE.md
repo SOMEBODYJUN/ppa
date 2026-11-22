@@ -2,7 +2,9 @@
 
 **当前作者修订：恢复 DD2 的分段主陈述。** [核心正文](research/topics/dd2/core.md#dd2-main-theorem)已按“指定 \(\varphi\) → 一般 \(\psi\) 的分段补偿 \(\Sigma(r,z)\) → A+B → 附条件的完整轨道结论”重写。原 \(\Sigma_L\) 两支、DD1 临界门与一般有符号 \(\Phi\) 均在开头直接可见；G/R/L、原残差联合域和各长度版本移至文末技术补充。C430 的数学身份保持，新增的是[与原三门逐式等价的分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)，不是新贡献登记。原 F1–F3 及其协议进度不变。选题工作继续服从下述作者边界。
 
-**当前成文交接。** [按作者口述的唯一大纲](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd-paper-author-outline)已有引言、DD1、DD2、DD3 与选参入口。固定步认证和已有子类可进入选参章；作者拟用的逐步选参规则及通用同窗进展未对上现有已证定理。第 99 轮原 F1–F3 附件的实际字节与历史哈希吻合。
+**当前成文交接。** [按作者口述的唯一大纲](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd-paper-author-outline)已有引言、DD1、DD2、DD3 与选参入口。已恢复作者的固定步反演和原算子变步长子类；通用逐次选优仍待核。第 99 轮原 F1–F3 附件的实际字节与历史哈希吻合。
+
+**选参材料已恢复。** [参数反演、共同区间与真实模型](research/topics/dd2/parameter_selection.md)核作者附件中的两支公式，另保留非单调原模的严格首端。由 \(\lambda\) 无关的原角度和线性误差界给可认证步长半直线及同窗任取变步长的轨道。小步极限的一般推断有反例。开放范围是可观察的逐次选优、一般函数算子数据上共同覆盖及完整文献比较。
 
 **DD3 的有限维存在性材料已核。** [C477/C478](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage)给由函数型锚缺陷到同伦先验界和原近端关系满射的准确证明、固定参数反例及二维非二次分离。同一 \(\Phi\) 的步长函数和 RLEB 表示可直接复用。投稿前的主要核验是匹配 DD1/DD2 的实际允许窗及假设，并限制二维例和文献比较的主张。一般 Hilbert 投影分支另存为远期问题。
 

@@ -1420,6 +1420,18 @@
 | --- | --- | --- | --- |
 | E790 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [DD3-UNIFORM-ANCHOR · 参数区间的全图最近输入锚下界](topics/dd2/global_proximal_solvability.md#dd3-global-coverage) ∧ [DD3-FINITE-TOPOLOGY · 有限维非空凸值与半连续性](topics/dd2/global_proximal_solvability.md#dd3-global-coverage) | conditional → [DD3-GLOBAL-COVERAGE · C477 有限维函数型 DD 全局近端可解](topics/dd2/global_proximal_solvability.md#dd3-global-coverage) | C477-v1：有限维 R^n，S 非空闭且 S⊂zer F，固定 c>0；全部 (y,u) 及 0<μ≤c 的最近输入锚条件，负部在每个共同有界距离窗统一有限。F 全域非空值，下半连续闭凸值或上半连续紧凸值。平移同伦先由 DD2 步帽控制位移，再由 Schaefer 或多值 Leray–Schauder 得 ran(I+cF)=R^n。指定截断图、轨道留域及收敛须另核。；**derived-checked** |
 
+## DD2 分段式反解步长
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E791 | [DD2-REVERSE-RAW-COMPENSATION · C430 原真残差与有符号锚界的双向精确补偿](topics/dd2/reverse_compensation.md#dd2-compensation-contract) | conditional → [DD-PARAMETER-INVERSE · C479 DD 补偿的步长反演](topics/dd2/parameter_selection.md#dd-parameter-inversion) | C479-v1：D≥0 和原残差模在候选参数中共同有效，0<A(t)<t；解原Σ的中支和高支，并保危险残差首端开闭，得到逐尺度证书。共同参数还需与原可解和窗交集，固定图实际收敛不由此反向刻画。；**derived-checked** |
+
+## 原角度与线性误差界的共同选参
+
+| 边 | 联合输入 | 关系 → 输出 | 精确范围与证据 |
+| --- | --- | --- | --- |
+| E792 | [D01 · 完整图、真残差与图剪切](foundations.md#d01) ∧ [D04 · 真实 EB 与 gauge](foundations.md#d04) ∧ [PPA-TWO-ANCHOR-ANGLE · C381 双最近零锚的角度与误差界锐门](topics/common_structure/two_anchor_angle_inverse.md#two-anchor-angle) ∧ [DD-PARAMETER-INVERSE · C479 DD 补偿的步长反演](topics/dd2/parameter_selection.md#dd-parameter-inversion) | conditional → [DD-PARAMETER-RAW-ANGLE · C480 原算子角度与变步长有限长](topics/dd2/parameter_selection.md#dd-parameter-raw-angle) | C480-v1：连续单值有限维，指定零点闭球上原图角度 μ<1 对所有相关锚成立且真线性误差界有效。球面同伦给所有正λ的球内根，两种支付给指定目标比例的共同可行半直线。严格位置预算下全部允许变步轨道有限长并趋S。范围为局部允许根。；**derived-checked** |
+
 ## 不蕴含关系
 
 - 局部单值 J_G 不推出完整 J_F 单值；见 [解选择反例](solution_selection.md)。

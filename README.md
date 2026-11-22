@@ -4,6 +4,8 @@
 
 **当前论文大纲。** [作者口述版](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd-paper-author-outline)按引言、DD1、DD2、DD3、近端参数选择与结论组织，提供各章可直接引用的数学资产及一般逐步选参的未闭义务。
 
+**DD 的步长反演。** [C479–C481](research/topics/dd2/parameter_selection.md)给指定下降目标的两支 \(\lambda\) 阈值、原算子角度与线性误差界下的共同可解和变步长有限长度，以及任意小步长扩张的完整例。DD2 的缩窗极限按固定参数另核。
+
 **DD3 全局近端可解。** [C477 的有限维存在性引理](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage)把 DD 的原步长函数放入同伦。在整个参数区间的最近输入锚缺陷统一有界时，配合上下半连续凸值条件可证明满射。[C478](CLAIMS.md#c478)分别保存固定参数两证书下的不满射例与严格越过固定二次径向前件的二维例。指定局部截断、全局收敛和文献优先性各有自己的核验。
 
 **当前查新 · 从算子信息到函数型补偿与近端参数选择。** [文献与仓库对照](research/LITERATURE.md#lit-dd-operator-calculus)核清固定锚求和、完整和映射的线性误差界、非幂误差模和参数区间的先行结果。此线沿 [DD 主陈述](research/topics/dd2/core.md#dd2-main-theorem)向上游追问怎样由可检验的算子数据获得 \(\Phi_\lambda,\psi_F\)。它与 [C35 的满秩复合](research/canonical/composite_subregularity.md#cs-eb)、[C279 的原图演算](research/canonical/unified_ppa_raw_calculus.md) 和 [DD2 共同关系](research/topics/dd2/joint_relation.md#dd2-joint-exact-cost) 的分工、重合与未闭义务见该条。
@@ -484,6 +486,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
+| [research/topics/dd2/parameter_selection.md](research/topics/dd2/parameter_selection.md) | C479 的 DD 步长反演、C480 的原角度共同覆盖和变步有限长度、C481 的小步与文献分离。第五章选参及引言归一化的来源。 |
 | [research/topics/dd2/global_proximal_solvability.md](research/topics/dd2/global_proximal_solvability.md) | C477 的同伦先验界与两种有限维拓扑入口。C478 对照固定参数下有证书但缺覆盖、全参数成立但无二次径向证书；用于 DD3 与 DD1/DD2 的覆盖衔接。 |
 | [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接；C447-B 给连续完整图、线性真误差界下的有界非收敛轨道与准确区间聚点。 |
 | [research/audit/DD2_POINT_VS_ZERO_SET_CLARIFICATION_2026-11-21.md](research/audit/DD2_POINT_VS_ZERO_SET_CLARIFICATION_2026-11-21.md) | 语义校正：完整 DD1 的 A+B 已给统一距离收缩、线性步长界、绝对可和和点收敛；C447/方向分离只属于删去 DD1 兼容或步长门后的弱化 DD2 扩展。还记录鲁棒步界作为内层误差停止准则，以及 G03/P05–P06 的重新作用域。 |

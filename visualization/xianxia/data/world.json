@@ -11498,6 +11498,39 @@
       "y": 5242,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD-PARAMETER-INVERSE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "scroll",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 5697,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD-PARAMETER-RAW-ANGLE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "stele",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1634,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD-PARAMETER-SMALL-STEP-MODELS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1728,
+      "y": 5606,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14648,6 +14681,14 @@
     "E790": {
       "x": 1824.89,
       "y": 5103.09
+    },
+    "E791": {
+      "x": 1590.78,
+      "y": 5717.88
+    },
+    "E792": {
+      "x": 1608.32,
+      "y": 5383.44
     }
   },
   "bounds": {
