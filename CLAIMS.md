@@ -2512,6 +2512,7 @@
 - **Counterevidence / Scope**：C253 作为充分条件仍有效。高 \(\eta\) 的必要性用允许多值、非孤立零集。二维旋转不能宣告固定一维锐性，最近锚反例也不能宣告全对或连续单值子类的同一最优门。
 - **External evidence / Novelty（2026-11-20）**：[DD1 六路先例核查](research/novelty/DD1_PRIOR_ART_2026-11-20.md) 用 \(L=\sqrt{1+4\sigma},\eta=1/\rho\) 给出 DD1 固定二次包络与本版本的对应。Alcantara arXiv:2611.20523v1 Remark 3.5 已明写根式能量分支；同文步长界及更早半单调 resolvent 常数可重建另一充分分支。完整分段锐门与本类临界反例未在本次所读外部来源定位，公开优先继续未决；内部数学状态和本版本量词不变。
 - **DD1 当前符号下的复核**：[D1S2–D1S8](research/topics/dd2/dd1_recovery.md#dd1-critical-full-operators)用反射系数 \(c_\sigma=\sqrt{1+4\sigma}\)、\(\eta=1/L_{\rm DD}\) 重构两个临界完整图，直接核锚积、全纤维、精确零集、全部覆盖与任意小不变窗。原反射参数 \(L\) 与当前 \(L_{\rm DD}=\ell/\lambda\) 不混用；这是 S03.06 的实际等号失败证据，维数和受限目标范围不变。
+- **成文位置**：[DD1 英文正文](发表成果整理/DD/sections/dd1.tex)在扩张例之后，以当前 \(L_{\rm DD}\) 写出两支临界不收敛构造及完整真残差、全覆盖和任意小不变邻域的证明；本版本身份、状态和公开优先性判断保持不变。
 - **S03.GATE 的全坏侧补证**：[D1K1–D1K8](research/topics/dd2/dd1_recovery.md#dd1-final-calibrated-gate)补全旧反射参数与当前二次预算的精确换名。每个当前 \(\sigma\ge T(L_{\rm DD})\) 均有实际最小缺陷为 \(\sigma\)（因而实际反射比为 \(\sqrt{1+4\sigma}\)）的持续合法旋转／二周期，完整真残差、精确零集和全选择不变窗直接核查；不是只把临界例的声明常数放大。当前给定的误差界系数 \(\ell=K\) 只需有效，固定图和一维的必要性范围不因补证扩大。
 
 <a id="c286"></a>

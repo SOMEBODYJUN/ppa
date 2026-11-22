@@ -83,9 +83,9 @@ For a continuous nondecreasing function~$\psi:[0,\infty)\to[0,\infty)$, the stri
 \begin{equation}\label{eq:dd2-inverse}
  z(t)=\frac{\lambda\psi^{-1}(\varphi(t))}{t}.
 \end{equation}
-In particular,~$\psi(\rho)=\ell\rho$ gives~$z=r/L$, and the first two branches recover exactly the DD1 function~$\Sigma_L$.
+In particular,~$\psi(\rho)=\ell\rho$ gives~$z=r/L$, where~$L=\ell/\lambda$. With~$\Phi\le0$, the first two branches recover exactly the DD1 function~$\Sigma_L$.
 
-The following result specifies the sense in which the piecewise formula is exact. The operator and the closed target may vary, and only the indicated proximal step is required to satisfy the two bounds. This distinction matters when using the converse to determine parameters.
+The next proposition gives the optimal bound when~$F$,~$S$ and the single tested proximal step may vary. Only that step is required to satisfy the two bounds.
 
 \begin{proposition}[Exact one-step compensation]\label{prop:dd2-exact}
 Fix~$n\ge2$,~$t,\lambda>0$, a finite~$\phi\le t^2/4$ and the function~$\psi$ on~$D_\psi$ as above. Put
@@ -108,7 +108,7 @@ For a prescribed~$0\le c<t$, the condition~$M_{\phi,\psi}(t)\le c$ is equivalent
 \end{proposition}
 
 \begin{proof}
-Write~$u=\lambda\rho$. A fixed pair of numbers~$(a,u)$ is realizable precisely when
+Write~$u=\lambda\rho$. For a fixed~$\rho\in D_\psi$, the admissible values of~$a$ are precisely those satisfying
 \begin{equation}\label{eq:dd2-exact-row}
  0\le u\le B,\qquad
  \alpha\le a\le\min\{B,\sqrt{E-u^2}\},\qquad
@@ -127,7 +127,7 @@ Solving these three quadratic inequalities gives exactly the first two condition
 
 To realize the distances in~$\R^2$, take the triangle above. If~$h=a$, use~$S=\{p\}$. If~$h>a$, then~$s>0$; add~$p'=y+(a/s)(y-x)$ and set~$S=\{p,p'\}$. One has~$\norm{y-p'}=a$ and~$\norm{x-p'}=s+a\ge t$. Thus~$p\in P_S(x)$ and~$d(y)=a$. Let a relation~$J$ consist of the graph of~$P_S$ together with the pair~$(x,y)$. If~$a>0$ and~$u<s$, add a further pair~$(y+u e,y)$, with~$e$ any unit vector. Set~$F=\lambda^{-1}(J^{-1}-I)$. Since a positive-distance output is not a projection value, its only preimages are the ones added. Its true residual is therefore exactly~$u/\lambda$. If~$a=0$, the projection relation supplies the zero residual, as required. This construction has a closed graph and a globally nonempty resolvent, but only the specified step is being tested.
 
-The minimum positive lower endpoint for~$a$ in~\eqref{eq:dd2-exact-row} is~$\alpha$. Since~$E-B^2=(B-t)^2$, a row with~$u\le B$ and~$\psi(\rho)\ge\alpha$ admits such an~$a$. If~$\alpha=0$ and all available positive-distance rows are absent, the row~$\rho=a=0$ is feasible because~$0\in D_\psi$. This proves~\eqref{eq:dd2-nonempty}. Maximizing the row upper endpoint gives~\eqref{eq:dd2-exact-M}; rows with~$\psi(\rho)<\alpha$ do not affect the supremum of a nonempty class.
+The lower endpoint for~$a$ in~\eqref{eq:dd2-exact-row} is~$\alpha$. Since~$E-B^2=(B-t)^2$, if~$u\le B$ and~$\psi(\rho)\ge\alpha>0$, the value~$a=\alpha$ is feasible. If~$\alpha=0$, the choice~$\rho=a=0$ is feasible because~$0\in D_\psi$. This proves~\eqref{eq:dd2-nonempty}. Taking the supremum of the upper endpoints gives~\eqref{eq:dd2-exact-M}. Values~$\psi(\rho)<\alpha$ contribute less than~$\alpha$ and therefore cannot change this supremum when the class is nonempty. An excluded zero endpoint with~$\rho>0$ also cannot change it, since zero is already feasible when~$\alpha=0$.
 
 Let~$q=\lambda\inf\{\psi>c\}$ and, when finite, let~$e=1$ if~$q/\lambda$ belongs to this strict superlevel set, and~$e=0$ otherwise. Formula~\eqref{eq:dd2-exact-M} gives
 \begin{equation}\label{eq:dd2-exact-bad}
@@ -156,8 +156,18 @@ For a target~$\alpha\le c<B$, the residual condition
 guarantees~$a\le c$. A step violating that conclusion would have a residual in the displayed set by~\eqref{eq:dd2-basic}. This form answers the second compensation question directly: a specified inner product lower bound determines which small residual values must imply an output distance at most~$c$. The energy endpoint is open and the step length endpoint is closed.
 
 \begin{remark}[Scope of the compensation formulas]\label{rem:dd2-scope}
-The conditions above are sufficient for each fixed operator. They make no assertion that a fixed operator must violate the target whenever a condition fails. In the class in which the closed target and a single proximal step may vary, the distinction between~$s\le B$ and the energy endpoint explains the three branches. Whole trajectories require the additional existence and summability hypotheses proved below.
+The one-step converse in Proposition~\ref{prop:dd2-exact} does not assert necessity for a class whose complete proximal relation must satisfy the same positive~$\Phi$ at every input. The auxiliary preimage in its construction need not satisfy that condition. The forward estimates apply to every permitted step, and whole trajectories require the additional existence and summability hypotheses below.
 \end{remark}
+
+\begin{example}[Positive anchoring]\label{ex:dd2-positive-anchor}
+Let~$\lambda=1$,~$F(y)=y/3$ on~$\R^n$ and~$S=\{0\}$. The complete resolvent is~$J_1(x)=3x/4$. Its true residual is~$\rho=t/4$, and the anchored inner product is~$3t^2/16$. Take~$\psi(\rho)=4\rho$,~$\Phi(t)=3t^2/16$ and~$\varphi(t)=3t/4$. Then~$r=3/4$ and~$z=3/16<1-r$. The third branch gives
+\begin{equation*}
+ -\frac{\Phi(t)}{t^2}=-\frac3{16}=r(r-1),
+\end{equation*}
+and the target is attained by every step. Replacing the positive lower bound~$\Phi$ by zero would lose this conclusion from these residual data.
+\end{example}
+
+The following example shows why the endpoint qualification is needed. Set~$t=\lambda=1$,~$\Phi(1)=-2$ and~$c=1/2$. The functions~$\psi_c=\mathbf1_{[2,\infty)}$ and~$\psi_o=\mathbf1_{(2,\infty)}$ have the same strict superlevel infimum~$2$ at height~$c$. Thus~$r=1/2$,~$z=2$ and~$-\Phi(1)=\Sigma(r,z)=2$. For~$\psi_c$, take~$S=\{0\}$,~$x=e_1$,~$y=-e_1$ and define~$F$ from~$J=P_S\cup\{(e_1,-e_1)\}$ as in the proof. The tested step has~$a=1>c$,~$s=\rho=2$ and anchored inner product~$-2$. For~$\psi_o$, every feasible step at that input distance has~$\rho\le s\le B=2$, so its error bound forces~$a=0$. The membership of the infimum in the strict superlevel set therefore cannot be omitted.
 
 \subsection{Nonlinear convergence and an infinite length boundary}
 
@@ -304,7 +314,7 @@ We retain~\eqref{eq:dd2-assumptions} on~$U_R$, but now suppose~$\psi$ is continu
  b(u)=\lambda\psi^{-1}(u),\qquad q(t)=b(t/2),\qquad
  P(t)=\int_0^t\frac{u}{q(u)}\,du,
 \end{equation}
-where~$R/2\le\psi(\rho_*)$. The inverse is the ordinary inverse on this interval. The half-distance is inside the inverse, and the multiplication by~$\lambda$ follows it.
+where~$R/2\le\psi(\rho_*)$. Here~$\psi^{-1}:[0,\psi(\rho_*)]\to[0,\rho_*]$ is the ordinary inverse of this restriction of~$\psi$.
 
 \begin{theorem}[Finite length under F1--F3]\label{thm:dd2-length}
 Suppose~$\mathcal J(x)\ne\varnothing$ for every~$x\in U_R$, and every permitted output satisfies~\eqref{eq:dd2-assumptions}. Let~$D:[0,R]\to[0,\infty)$ satisfy~$D(0)=0$ and~$\Phi\ge-D$. Assume
@@ -344,7 +354,7 @@ If~$t>0$ and~$s<q(t)$, the same argument with~$v=t/2$ gives~$a<t/2$. But~$t\le a
  t^2-a^2\ge s^2-2D(t)
  \ge\frac12s^2\ge\frac12q(t)^2>0.
 \end{equation}
-Only now do we use~$a<t\le R$ in the length potential. Since~$q$ is increasing,
+Since~$a<t\le R$ and~$q$ is increasing,
 \begin{equation}\label{eq:dd2-potential-step}
  P(t)-P(a)\ge\frac{t^2-a^2}{2q(t)}
  \ge\frac{s^2}{4q(t)}\ge\frac{s}{4}.
@@ -356,7 +366,9 @@ For any finite permitted sequence with inputs in~$U_R$, sum~\eqref{eq:dd2-potent
 The decreasing distances have a limit. If that limit were~$\ell>0$,~\eqref{eq:dd2-net-descent} would give~$t_k^2-t_{k+1}^2\ge q(\ell)^2/2>0$ at every step, which is impossible. Hence~$t_k\to0$. Finite length and closedness of~$S$ identify the limit; the strict initial bound places it in~$U$.
 \end{proof}
 
-Condition F2 supplies the inequality~$q(t)\le t/2$ after reducing~$R$; that inequality is all the proof uses from F2. Condition F3 is an integrability assumption on a residual-derived function, not an additional requirement to sum the iterates of~$\varphi$. For~$\psi(\rho)=K\rho^\theta$ with~$0<\theta<1$, the integrand has order~$t^{1-1/\theta}$. It is integrable precisely when~$\theta>1/2$. The finite length and infinite length rotation examples verify the two sides of this threshold in the absence of an inner product defect. For maximal monotone operators, the same sufficient threshold follows from the distance estimates in~\cite[Theorems~7.2--7.3]{LiMordukhovich2012} and squared step descent. Indeed, their distance rate has exponent~$\beta=\theta/[2(1-\theta)]$; on a dyadic block, Cauchy--Schwarz and~$\sum_{j=N}^{2N-1}s_j^2\le t_N^2$ give a length bound~$O(N^{1/2-\beta})$. Summing the blocks gives finite length for~$\theta>1/2$. The compensation formula here additionally retains a signed function~$\Phi$ and the nearest input point.
+Condition F2 supplies the inequality~$q(t)\le t/2$ after reducing~$R$; that inequality is all the proof uses from F2. Condition F3 requires an integrable upper bound for~$t/q(t)$; it does not require summability of the iterates of~$\varphi$. For~$\psi(\rho)=K\rho^\theta$ with~$0<\theta<1$, the integrand has order~$t^{1-1/\theta}$. It is integrable precisely when~$\theta>1/2$. The finite length and infinite length rotation examples verify the two sides of this threshold in the absence of an inner product defect.
+
+For comparison, take~$S=\zer F$ and assume~$F$ is maximal monotone with a local H\"older metric subregularity bound. The fixed-parameter proximal iteration, started sufficiently near the reference zero, has the distance rate~$t_k=O(k^{-\beta})$, where~$\beta=\theta/[2(1-\theta)]$; see~\cite[Theorem~7.3(i)]{LiMordukhovich2012}. This rate and squared step descent give the same sufficient length threshold. On a dyadic block, Cauchy--Schwarz and~$\sum_{j=N}^{2N-1}s_j^2\le t_N^2$ give a length bound~$O(N^{1/2-\beta})$. Summing these bounds over~$N=2^j$ gives finite length for~$\theta>1/2$. The compensation formula here additionally retains a signed function~$\Phi$ and the nearest input point.
 
 For completeness, the smallness assumption F2 can be removed if one changes the potential while keeping F1 and the integral. This also covers residual functions such as the one in Example~\ref{ex:dd2-shear}.
 
@@ -369,7 +381,7 @@ Every permitted step satisfies~$a<t$ when~$t>0$ and
 \begin{equation}\label{eq:dd2-mixed-step}
  s\le\mathcal W(t)-\mathcal W(a).
 \end{equation}
-If~$\mathcal W(t_0)<\dist(x^0,U^c)$, all conclusions of Theorem~\ref{thm:dd2-length} hold with~$\mathcal W$ in place of~$\mathcal P$.
+If~$x^0\in U_R$,~$t_0=d(x^0)$ and~$\mathcal W(t_0)<\dist(x^0,U^c)$, all conclusions of Theorem~\ref{thm:dd2-length} hold with~$\mathcal W$ in place of~$\mathcal P$.
 \end{proposition}
 
 \begin{proof}

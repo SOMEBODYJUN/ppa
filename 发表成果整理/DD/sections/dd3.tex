@@ -18,6 +18,8 @@ a priori estimate below uses the nearest input anchor and the
 function $B_\Phi$ from DD2.
 
 \begin{proof}[Proof of Lemma~\ref{lem:existence}]
+Nearest points to $S$ exist because $S$ is nonempty and closed in
+finite dimension.
 Fix $b\in\R^n$ and $p_0\in S$, and put
 \[
  q=b-p_0,\qquad r=\norm{q},\qquad
@@ -66,7 +68,7 @@ Suppose first that $F$ is lower semicontinuous with nonempty closed
 convex values. Then $\mathcal G$ has the same properties. Michael's
 selection theorem gives a continuous map $g:\R^n\to\R^n$ with
 $g(w)\in\mathcal G(w)$ for every $w$. The domain $\R^n$ is
-paracompact and the range is a Banach space, as required by that
+paracompact Hausdorff and the range is a Banach space, as required by that
 theorem. In finite dimension, $g$ maps bounded sets to relatively
 compact sets: the image of the compact closure of a bounded set is
 compact. Every solution of $w=\tau g(w)$ is a solution of
@@ -75,7 +77,7 @@ Schaefer's fixed-point theorem therefore gives $w=g(w)$.
 
 Suppose instead that $F$ is upper semicontinuous with nonempty
 compact convex values. These properties pass to $\mathcal G$.
-For completeness, $\mathcal G$ maps bounded sets to relatively
+$\mathcal G$ maps bounded sets to relatively
 compact sets. Indeed, upper semicontinuity and compact values give
 local boundedness; a finite covering makes the union of the values
 over a compact set bounded. The graph is closed, so this union is
@@ -113,7 +115,7 @@ from the fixed point $p_0$, whereas the hypothesis uses a nearest
 point to $z$. The additional translation term in
 \eqref{eq:dd3-position-bound} accounts for this difference.
 
-\subsection{Using the same allowed relation}
+\subsection{Localization and convergence}
 
 Surjectivity of $I+cF$ gives an output in the full relation
 $J_c=(I+cF)^{-1}$. A local iteration may allow only outputs in a
@@ -129,7 +131,8 @@ The next observation gives a direct way to verify it.
 
 \begin{proposition}[Localization of the roots]
 \label{prop:dd3-local-roots}
-Assume Lemma~\ref{lem:existence}, let $p_0\in S$ and $r>0$,
+Assume the hypotheses of Lemma~\ref{lem:existence}, let $p_0\in S$
+and $r>0$,
 and suppose
 \[
  V\supseteq B(p_0,R_V),\qquad W\supseteq B(0,R_W),
@@ -144,13 +147,14 @@ preserve full proximal coverage on this input ball.
 \begin{proof}
 Take any $y\in J_c(x)$ and write $u=(x-y)/c\in F(y)$.
 The calculation leading to \eqref{eq:dd3-step-bound}, now with
-$\mu=c$ and $z=x$, gives
+$\mu=c$ and $z=x$, gives the following bounds, since
+$d(x)\le\norm{x-p_0}<r$ and $D_c$ is nondecreasing:
 \[
  \norm{x-y}\le K_c(r),\qquad
  \norm{y-p_0}<r+K_c(r),\qquad
  \norm{u}\le K_c(r)/c.
 \]
-Thus every full root satisfies the two restrictions.
+Thus every proximal solution satisfies the two restrictions.
 Lemma~\ref{lem:existence} supplies at least one such root.
 \end{proof}
 
@@ -161,16 +165,17 @@ uses the global hypotheses of the existence lemma. An anchor
 inequality verified only inside an output ball requires a
 separate existence argument on that ball.
 
-\begin{theorem}[DD3: existence and the DD trajectory conclusions]
+\begin{theorem}[DD3: global solvability and local convergence]
 \label{thm:dd3}
-Assume Lemma~\ref{lem:existence} at $c>0$. Let $U$ be open,
+Assume the hypotheses of Lemma~\ref{lem:existence} at $c>0$.
+Let $U$ be open,
 $R>0$, and $U_R=\{x\in U:d(x)\le R\}$. Fix one allowed
 relation $\mathcal J_c\subseteq J_c$ on $U_R$. Assume its
 nonemptiness there is obtained either by taking
 $\mathcal J_c=J_c$, or by verifying that the roots furnished by
 the lemma satisfy its restrictions, for example by
-Proposition~\ref{prop:dd3-local-roots}. Then the following
-conclusions hold.
+Proposition~\ref{prop:dd3-local-roots}. For initial points
+$x^0\in U_R$, the following conclusions hold.
 \begin{enumerate}
  \item If all the other hypotheses of
  Theorem~\ref{thm:dd1-trajectory} hold for this same
@@ -204,7 +209,7 @@ assumption in each cited trajectory theorem. All its remaining
 hypotheses are imposed on that same relation. Its finite-prefix
 argument therefore keeps every generated input in $U_R$,
 permits the next choice, and yields the claimed estimates and
-convergence. No output from a different relation is used.
+convergence.
 \end{proof}
 
 For example, zero-input stationarity follows from
@@ -236,8 +241,8 @@ $t=|z|=y^2$,
  F(y)y=-t-t^{3/2};
 \]
 for $y\ge0$ this product is nonnegative. Thus
-$\Phi(t)=-t-t^{3/2}$ is a valid lower bound on every full
-$c=1$ edge. Moreover $|F(y)|\ge|y|^2$, so
+$\Phi(t)=-t-t^{3/2}$ is a valid lower bound on every proximal
+step at $c=1$. Moreover $|F(y)|\ge|y|^2$, so
 \[
  d(y)\le\psi(r_F(y)),\qquad \psi(\rho)=\sqrt\rho+\rho.
 \]
@@ -249,10 +254,16 @@ This failure can also be seen directly. Fix $b<0$ and set
 $\mu=\tau\in(0,1)$. On the negative half-line,
 $y+\tau F(y)=\tau y^2+(1-\tau)y$. The equation
 $y+\tau F(y)=\tau b$ has negative roots for all sufficiently
-small $\tau$; one root tends to $-\infty$ as $\tau\downarrow0$.
+small $\tau$. In particular,
+\[
+ y_\tau=
+ \frac{-(1-\tau)-\sqrt{(1-\tau)^2+4\tau^2b}}{2\tau}
+ \longrightarrow-\infty\qquad(\tau\downarrow0).
+\]
 For this root the input $z=\tau b$ tends to zero while
 \[
- \ip{z-y}{y} = zy-y^2\longrightarrow-\infty.
+ \ip{z-y_\tau}{y_\tau}
+ =zy_\tau-y_\tau^2\longrightarrow-\infty.
 \]
 Consequently no family of lower bounds valid on $(0,1]$ can
 have $D_1(R)<\infty$ for every finite $R$. The example does
@@ -267,7 +278,10 @@ Let $Q$ be a rotation through $\pi/2$ in $\R^2$ and define
  F(y)=-\norm{y}^{-1/4}y+\norm{y}^{-1/2}Qy\quad(y\ne0),
  \qquad F(0)=0.
 \]
-This is continuous with $\zer F=\{0\}$. Write $r=\norm{y}$.
+The two terms have norms $\norm{y}^{3/4}$ and
+$\norm{y}^{1/2}$, so $F$ is continuous also at zero. Its
+nonzero tangential component gives $\zer F=\{0\}$.
+Write $r=\norm{y}$.
 For $y\ne0$ and $t=\norm{y+\mu F(y)}$,
 \begin{equation}
  \ip{F(y)}{y}=-r^{7/4},\qquad
@@ -300,9 +314,8 @@ The residual bound $d(y)\le r_F(y)^2$ also follows from
 \eqref{eq:dd3-nonquadratic-identities}. Thus the example admits
 the nonlinear residual function $\psi(\rho)=\rho^2$.
 
-These facts concern existence, and do not assert convergence
-of all proximal trajectories. To see the distinction, fix
-$c>0$. The continuous function
+Global solvability here permits a trajectory at constant
+positive distance from $S$. Fix $c>0$. The continuous function
 $2r^{3/4}/(1+\sqrt r)$ tends to zero as $r\downarrow0$
 and to infinity as $r\to\infty$, so some $r>0$ satisfies
 \[
@@ -310,10 +323,16 @@ and to infinity as $r\to\infty$, so some $r>0$ satisfies
 \]
 At that radius, \eqref{eq:dd3-nonquadratic-identities} gives
 $\norm{y+cF(y)}=r$. On the circle of radius $r$, the map
-$I+cF$ is a fixed rotation: its tangential coefficient is
-$cr^{-1/2}>0$ and its modulus is one. Its inverse rotation
-therefore gives a legal proximal trajectory of constant
-positive distance from $S$. The example separates the
+$I+cF$ agrees with the linear map
+\[
+ A_r=(1-cr^{-1/4})I+cr^{-1/2}Q.
+\]
+Its coefficients satisfy
+$(1-cr^{-1/4})^2+c^2r^{-1}=1$, and its tangential
+coefficient is positive. Thus $A_r$ is a nonidentity rotation.
+For any $\norm{x^0}=r$, the sequence $x^k=A_r^{-k}x^0$
+satisfies $x^k=x^{k+1}+cF(x^{k+1})$ and has constant
+positive distance $r$ from $S$. The example separates the
 nonquadratic existence hypothesis from a fixed quadratic
 radial hypothesis; the DD decrease assumptions must still be
 verified for any convergence claim.

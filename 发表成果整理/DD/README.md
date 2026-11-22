@@ -32,6 +32,13 @@
 - 作者指定的 [Lieflat Less AI Tone v2](https://github.com/larashero3-dotcom/lieflat-less-ai-tone)，版本 fe77df00a27cf94428632ad449a4aecdcb83db41。其统计与脚本主要针对中文，不将其输出解释为英文数学论文的 AI 率，也不自动改写公式、引文或外语段落。作者已授权本轮直接清理，无需另等一轮确认。
 - [Humanizer](https://github.com/blader/humanizer)，版本 a32f24407364c74c812b43c15926d638bee1e072，用于英文中空泛判断、重复铺垫和不必要的修辞。
 - [LaTeX Mathematics Writing](https://github.com/amelieloher/math-paper-skills)，版本 4ec9c7bf76f0bdf931a00134cefe1f8ab7548e02，用于精确陈述、证明与排版；作者的章序优先。
+- [Mathematical Academic Writing](https://github.com/JiahaoLi-creator/mathematical-academic-writing)，版本 39090de79c9b7bdd1203cb583d313995abad039a，本轮克隆并阅读其数学完整性、论文写作、反复防御性表述和成品核验规范。
 - 仓库既有的数学写作及论文结构规范。
 
-独立复核与最终编译记录将在本节完成后更新；未完成的复核不作为已通过事项。
+## 独立复核与编译
+
+六路独立审读分别覆盖 DD1、DD2、DD3、步长选择、全篇英文及作者安排与一手文献。数学审读核对实际算子、完整真残差、量词、分支端点、零输入、有限前缀留域及轨道结论；英文审读与结构审读另行冷读全部最终源文件。当前受检范围内未留下实质性异议。此处记录内部检查范围，不代表期刊同行评审或新颖性认定。
+
+本轮修订明确了 DD1 的全局二次锐性与逐尺度实现的区别；在扩张例后补入已有 C285 的临界不收敛构造；补明 DD2 普通逆的初始区间与非连续原模的端点；明确 DD3 和无 F2 长度推论的初值所属集合；将 Li--Mordukhovich 的比较限于其完整零集、局部 Hölder 前件、固定参数及 Theorem 7.3(i)。这些是已有结果的成文与适用范围核准，没有新增或提升 Claim。
+
+最终源码通过 `bash build.sh` 编译。正文为 32 页，七项参考文献，无未定义引文或交叉引用、无重复标签、无编译警告或溢出版面诊断。已检查全部页面缩略图及分段公式、长定理、例子和参考文献的放大图。作者大纲验证器及项目资产验证器通过；机器检查不替代上述数学审读。

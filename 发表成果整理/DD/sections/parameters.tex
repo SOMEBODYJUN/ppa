@@ -1,9 +1,9 @@
 \section{Choosing the proximal parameter}
 \label{sec:parameters}
 
-DD1 and DD2 first fix a parameter and then ask whether the
-corresponding proximal edges satisfy a distance-decrease
-condition. The parameter also enters the hypotheses: in DD1,
+DD1 and DD2 first fix a parameter and ask which bounds
+guarantee a decrease in the distance to $S$. The parameter
+also enters the hypotheses: in DD1,
 $L=\ell/\lambda$, and a lower anchor bound obtained from the
 original operator may itself change with $\lambda$. The same
 point occurs in the fixed-parameter analysis of
@@ -11,15 +11,16 @@ Luke and Tam~\cite{LukeTam2025}, where the assumptions are
 tested on the scaled operator $\lambda F$. We now reverse the
 calculation. We first solve the DD inequalities for $\lambda$
 when the original data are valid for a common range of
-parameters. We then give original-operator assumptions that
-provide both common proximal coverage and a common decrease
-estimate, allowing the parameter to change at each iteration.
+parameters. We then give assumptions on the original
+operator that provide roots on a common input neighborhood
+and a uniform decrease estimate, allowing the parameter to
+change at each iteration.
 
 \subsection{Inverting the DD1 inequality}
 
 Suppose that $\ell>0$ and $\sigma\ge0$ are independent of
 $\lambda$ on the parameter range under consideration. Thus
-every allowed edge has a nearest input anchor $p\in P_S(x)$
+every admissible step has a nearest input anchor $p\in P_S(x)$
 such that
 \begin{equation}
  \ip{x-y}{y-p}\ge-\sigma t^2,
@@ -28,7 +29,7 @@ such that
  \label{eq:parameters-common-linear}
 \end{equation}
 The statement that $\sigma$ is common is an assumption about
-the original edges for all these parameters, rather than a
+the proximal steps for all these parameters, rather than a
 consequence of small $\lambda$.
 
 \begin{proposition}[DD1 parameter thresholds]
@@ -42,12 +43,13 @@ For a prescribed $0<r<1$, define
  \end{cases}
  \label{eq:parameters-linear-target}
 \end{equation}
-The DD1 condition for the uniform conclusion $a\le rt$ is
-equivalent to $\lambda\ge\lambda_r$. In the unrestricted
-closed-target one-edge class in dimension at least two this
-is the exact threshold determined by
-\eqref{eq:parameters-common-linear}. A uniform contraction
-factor strictly smaller than one exists precisely when
+The DD1 criterion for the uniform bound $a\le rt$ is
+equivalent to $\lambda\ge\lambda_r$. In dimension at least
+two, this threshold cannot be improved for the class of
+single proximal steps satisfying
+\eqref{eq:parameters-common-linear}, where $F$ and the closed
+set $S$ may vary. These inequalities guarantee a uniform
+contraction factor strictly smaller than one precisely when
 \begin{equation}
  \lambda>\ell
  \begin{cases}
@@ -84,24 +86,31 @@ $\sigma\le r(1+r)$. This proves
 point. Taking $r\uparrow1$ gives
 \eqref{eq:parameters-linear-strict}; equality in that limit
 does not provide a common factor $r<1$. Exactness has the
-same free-class scope as Theorem~\ref{thm:dd12}.
+same scope as the converse in Theorem~\ref{thm:dd12}.
 \end{proof}
 
-Coverage, zero-input stationarity and the localization and
-length assumptions remain those of
-Theorem~\ref{thm:dd1-trajectory}. In particular, a numerical
-solution of \eqref{eq:parameters-linear-strict} does not by
-itself produce a proximal output.
+For continuation and convergence, also impose coverage,
+zero-input stationarity and the localization and length
+hypotheses of Theorem~\ref{thm:dd1-trajectory}.
 
 \subsection{Inverting DD2 for a nonpositive lower bound}
 
-Let $D:[0,R]\to[0,\infty)$, and suppose the common anchor
-bound is $\Phi=-D$. Let
+Let $D:[0,R]\to[0,\infty)$, and let
 $\psi:D_\psi\to[0,\infty)$ be the original residual function,
 where $0\in D_\psi\subseteq[0,\infty)$, and prescribe the
-DD2 target $0<\varphi(t)<t$ for $0<t\le R$. No monotonicity
-of $\psi$ is needed for the following calculation. For each
-positive scale define
+DD2 target $0<\varphi(t)<t$ for $0<t\le R$. Fix a set
+$\Lambda\subseteq(0,\infty)$ of candidate parameters and an
+admissible relation $\mathcal J_\lambda\subseteq J_\lambda$
+for each $\lambda\in\Lambda$, all for the same $F$ and $S$.
+Suppose every tested step at positive input distance satisfies
+\[
+ \rho=r_F(y)\in D_\psi,\qquad a\le\psi(\rho),\qquad
+ \exists p\in P_S(x):\quad
+ \ip{x-y}{y-p}\ge-D(t).
+\]
+Thus $D$ and $\psi$ are common to all these parameters.
+No monotonicity of $\psi$ is needed. For each positive scale
+define
 \begin{equation}
  E_t=\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},\qquad
  q_t=\inf E_t,\qquad
@@ -132,17 +141,18 @@ $\lambda\ge H(t)$, except that the second branch requires
 $\lambda>H(t)$ when $q_t\in E_t$. If $E_t$ is empty, put
 $H(t)=0$ and impose no positive lower threshold. If $E_t$ is
 nonempty and $q_t=0$, no finite positive parameter satisfies
-this one-edge condition, and we put $H(t)=+\infty$.
+this condition, and we put $H(t)=+\infty$.
 
-The equivalence is exact in the free closed-target one-edge
-class of Proposition~\ref{prop:dd2-exact}, in dimension at least two.
-For actual allowed proximal edges on which $D$ and $\psi$
-are common, it is a sufficient guarantee at each tested
-parameter. On $0<t\le R$, put
+The equivalence is exact in dimension at least two for the
+class of single proximal steps in
+Proposition~\ref{prop:dd2-exact}, where $F$ and the closed
+set $S$ may vary. For a fixed $F$ and $S$, the threshold is
+sufficient for every tested step; it need not be necessary.
+On $0<t\le R$, put
 \[
  H_R=\sup_{0<t\le R}H(t).
 \]
-If $H_R<\infty$, every valid common parameter
+If $H_R<\infty$, every $\lambda\in\Lambda$ with
 $\lambda>H_R$ satisfies the decrease condition at all these
 scales. At $\lambda=H_R>0$, each scale must satisfy the
 endpoint rule above.
@@ -174,7 +184,7 @@ If $E_t$ is empty, $a\le\psi(r_F(y))\le\varphi(t)$
 already. If $q_t=0$ and $E_t$ is nonempty, then $z=0$ for
 each finite $\lambda$; no nonnegative $\delta$ can pass the
 piecewise condition with $0<r<1$. This proves the stated
-conventions. The underlying free one-edge domain is nonempty
+conventions. The class of steps used for the converse is nonempty
 for $\Phi=-D\le0$, since the scalar choice
 $(s,a,\rho)=(t,0,0)$ is feasible. Thus the equivalence does
 not rely on an empty class. Finally, applying the pointwise
@@ -182,16 +192,21 @@ conditions at every $t\in(0,R]$ proves the assertion about
 $H_R$.
 \end{proof}
 
-When $\psi$ is continuous and strictly increasing on the
-relevant interval and $\varphi(t)$ lies in the interior of
-its image, $q_t=\psi^{-1}(\varphi(t))$ and $q_t\notin E_t$.
-In this case $\lambda>H(t)$ also permits a slightly smaller
-target, so that $a<\varphi(t)$. For an arbitrary original
-function $\psi$, strictness of the parameter inequality
-alone does not imply this stronger output conclusion.
+Suppose, more specifically, that $\psi$ is continuous and
+strictly increasing on an initial interval
+$[0,\rho_*]\subseteq D_\psi$ and
+$\psi(0)<\varphi(t)<\psi(\rho_*)$. Then
+$q_t=\psi^{-1}(\varphi(t))$ for the inverse on this interval,
+and $q_t\notin E_t$; values outside the interval cannot
+lower the infimum. In this case $H(t)$ depends continuously
+on the target value, including at the branch switch, so
+$\lambda>H(t)$ permits a slightly smaller target and gives
+$a<\varphi(t)$. For an arbitrary original function $\psi$,
+strictness of the parameter inequality alone does not imply
+this stronger output conclusion.
 
 The functions in this theorem must apply to the same
-operator, target set and allowed edges for every candidate
+operator, target set and admissible steps for every candidate
 parameter. One must also verify actual root coverage, the
 evaluation domains, zero-input stationarity, localization
 and one of the length conditions of Section~\ref{sec:dd2}.
@@ -200,14 +215,20 @@ limit, the strict sufficient choice requires an available
 parameter greater than $H_R$. The inversion does not
 establish that such a parameter exists.
 
-There is a different conclusion when the neighborhood may
-depend on a fixed parameter. Suppose, near zero,
+The threshold also gives a local test: if a fixed candidate
+$\lambda$ satisfies $\lambda>\limsup_{t\downarrow0}H(t)$,
+then shrinking the scale interval makes $\lambda>H(t)$
+throughout that interval. Coverage and the other local
+hypotheses must still hold there.
+
+The neighborhood may therefore depend on the fixed
+parameter. For example, suppose, near zero,
 \[
  D(t)\le Ct^p,\qquad \psi(\rho)\le K\rho^q,
  \qquad C,K,p,q>0,
  \qquad m=\min\{1,p/2\}.
 \]
-Then $B_D(t)=O(t^m)$. On every actual edge,
+Then $B_D(t)=O(t^m)$. On every admissible step,
 $r_F(y)\le B_D(t)/\lambda$, so for each fixed
 $\lambda>0$ the residual eventually lies in the specified
 range and
@@ -221,8 +242,8 @@ $s\le C_\lambda t^m$ then gives
  \sum_{k=0}^\infty s_k
  \le\frac{C_\lambda t_0^m}{1-r^m}
 \]
-for a legal trajectory in that range. With coverage,
-stationarity at zero and this total bound smaller than the
+for a trajectory of admissible steps in that range. With
+coverage, stationarity at zero and this total bound smaller than the
 distance to the boundary of the input neighborhood, the
 same finite-prefix induction as before gives continuation
 and point convergence. This is a statement of the form
@@ -268,7 +289,7 @@ It is smaller than one exactly when $\lambda>2/5$; it is
 larger than one for $0<\lambda<2/5$.
 
 The exact linear residual constant is $\ell=1/\sqrt5$.
-On a proximal edge the smallest nonnegative quadratic
+On a proximal step the smallest nonnegative quadratic
 anchor coefficient is
 \[
  \sigma_\lambda
@@ -313,7 +334,7 @@ Choose
  0<r_0<\min\{R_0/2,\sqrt{1-\mu^2}R_0\},
  \qquad U=B(p_0,r_0),
 \]
-and, for each $\lambda>0$, use exactly the allowed relation
+and, for each $\lambda>0$, use exactly the admissible relation
 \[
  \mathcal J_\lambda(x)=J_\lambda(x)\cap B(p_0,R_0).
 \]
@@ -345,7 +366,7 @@ If $x^0\in U$ satisfies
  \label{eq:parameters-local-start}
 \end{equation}
 then, for every sequence $\lambda_k\ge\lambda_*(r)$,
-every allowed choice
+every admissible choice
 $x^{k+1}\in\mathcal J_{\lambda_k}(x^k)$ can be continued
 indefinitely, remains in $U$, and converges to a point
 $x^\infty\in S\cap U$. Moreover,
@@ -387,7 +408,7 @@ It follows that $H_1(y)=x$ has a root in $B(p_0,R_0)$.
 This proves coverage on the same input ball for every
 $\lambda>0$.
 
-Now fix any allowed edge from $x\in U$. Every nearest
+Now fix any admissible step from $x\in U$. Every nearest
 point $p_x\in P_S(x)$ satisfies
 \[
  \norm{p_x-p_0}\le d(x)+\norm{x-p_0}
@@ -430,7 +451,7 @@ satisfies the conclusion.
 
 For the trajectory assertion put $C=(1-\mu^2)^{-1/2}$
 and $t_k=d(x^k)$. As long as the current input belongs
-to $U$, coverage gives the next allowed choice and
+to $U$, coverage gives an admissible output and
 \eqref{eq:parameters-common-estimates} gives
 $t_{k+1}\le rt_k$ and $s_k\le Ct_k$. Every finite
 prefix therefore has total length at most
@@ -447,7 +468,7 @@ inside $U$.
 Under the global assumptions, fix $p_0\in S$ and any input
 $x$. Choose $R_0$ sufficiently large that
 $\norm{x-p_0}<\sqrt{1-\mu^2}R_0$ and apply the same
-boundary argument. This proves full coverage. The edge
+boundary argument. This proves full coverage. The step
 estimates apply to every nearest input anchor without a
 location restriction, so the same summation proves the
 global assertion.
@@ -472,13 +493,11 @@ gives $20/9$. This compares two guarantees from the same
 original data; it does not identify the best parameter for
 each fixed operator.
 
-Theorem~\ref{thm:parameters-variable} permits any parameter
-from a common half-line at each step. It specifies neither
-an observable optimization criterion nor a procedure for
-finding a globally optimal parameter. Its conclusion uses
-uniform decrease and a uniform step estimate, which also
-explain why allowing arbitrary positive parameters would
-be a different assertion.
+Theorem~\ref{thm:parameters-variable} allows an arbitrary
+choice $\lambda_k\ge\lambda_*(r)$ at each iteration. Its
+convergence conclusion uses uniform decrease and a uniform
+step estimate. Choosing an optimal parameter from observable
+data is a separate problem.
 
 \begin{example}[Strict decrease at each step and total length]
 \label{ex:parameters-variable-rotation}

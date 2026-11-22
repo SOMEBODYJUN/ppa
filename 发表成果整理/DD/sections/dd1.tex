@@ -29,7 +29,7 @@ The proximal relation and an admissible subrelation are denoted by
 \]
 Neither relation is assumed to be single valued.  Nonemptiness of
 $\mathcal J(x)$ will be an additional assumption for the trajectory result;
-the one step estimates concern every output that exists.
+the one-step estimates concern every output that exists.
 
 Let $\Phi:[0,R]\to\R$ be finite.  For every $x\in U_R$ and every
 $y\in\mathcal J(x)$, assume
@@ -39,7 +39,7 @@ $y\in\mathcal J(x)$, assume
  \ip{x-y}{y-p}\geq\Phi(d(x)).
 \end{equation}
 The anchor $p$ may depend on both $x$ and $y$.  The first inequality is
-evaluated at the true residual of the complete fiber $F(y)$, even when
+evaluated at the true residual of the full value $F(y)$, even when
 $\mathcal J$ contains only some proximal outputs.  If this error bound is
 known only on an output neighborhood or for residuals below a prescribed
 bound, all outputs in $\mathcal J$ must belong to that range of validity.
@@ -99,8 +99,8 @@ part.  Define
  D(t)=[-\Phi(t)]_+,\qquad
  \sigma_R=\sup_{0<t\leq R}\frac{D(t)}{t^2}.
 \end{equation}
-This is a relaxation of the signed assumptions, rather than a replacement of
-$\Phi$ by a quadratic function.
+Since $\Phi\geq-D$, every estimate obtained using the lower bound $-D$
+also applies to the signed assumptions.
 
 \begin{theorem}[DD11: from regularity to an anchored lower bound]
 \label{thm:dd1}
@@ -159,11 +159,11 @@ $r=L/(1-L)$, and the inequalities in \eqref{dd1:target-condition} are
 nonstrict.
 
 For the model $\Phi(t)=-\sigma t^2$, the factor $m_L(\sigma)$ is the
-smallest common one step upper bound over the class in which $S$ and $F$
+smallest common one-step upper bound over the class in which $S$ and $F$
 may vary, in every fixed dimension $n\geq2$.  This remains true when $F$
-is required to have a closed graph, $S=\zer F$, and the complete proximal
-relation is nonempty at every input and satisfies the assumptions at every
-input.  Thus, in this class, for $r_0(L)\leq r<1$,
+is required to have a closed graph, $S=\zer F$, and the full proximal
+relation is nonempty at every input and satisfies the corresponding
+quadratic assumptions globally.  Thus, in this class, for $r_0(L)\leq r<1$,
 \[
  m_L(\sigma)\leq r
  \quad\Longleftrightarrow\quad
@@ -172,8 +172,9 @@ input.  Thus, in this class, for $r_0(L)\leq r<1$,
 For $0<r<r_0(L)$, such a common ratio is impossible even when $\sigma=0$.
 No necessity assertion is made for an individually fixed operator or target
 set.  For a general nonpositive lower bound $\Phi=-D$, the same sharp
-condition applies separately at each positive scale over the same varying
-class; for signed $\Phi$,
+condition applies separately at each positive scale over the class with
+the prescribed $D$ on $[0,R]$; the realizing operator may depend on that
+scale.  For signed $\Phi$,
 \eqref{dd1:target-condition} remains sufficient.
 
 All forward estimates extend to $t=0$ if admissible zero inputs are
@@ -248,7 +249,9 @@ All admissible pairs satisfy
 \end{equation}
 The distance function is $1$-Lipschitz, which gives the two distance
 constraints in this display; the remaining inequalities have already been
-proved.  They imply $v\leq m_L(\sigma)$.
+proved.  They imply $v\leq m_L(\sigma)$.  To show that no further
+geometric restriction reduces this bound, we construct a target set with
+at most two points for every height in that interval.
 
 Conversely, take any $0\leq v\leq m_L(\sigma)$ and define
 \[
@@ -282,7 +285,7 @@ and $d(y)=v$.  The triangle identity gives
 In particular, $v=m_L(\sigma)$ is attainable.  This construction embeds
 in every $\R^n$ with $n\geq2$.
 
-To realize the same data by a complete operator, at any prescribed positive
+To realize the same data by a set-valued operator, at any prescribed positive
 scale, define
 \begin{equation}\label{dd1:completion}
  \gph J=\gph P_S\ \cup\ \{(x,y)\},\qquad
@@ -316,8 +319,10 @@ class.  Finally, under \eqref{dd1:stationarity}, both $a$ and $s$ vanish
 at $t=0$, which extends all forward estimates to zero inputs.
 \end{proof}
 
-The two branches have different nearest point geometry.  If an extremal
-pair has $a=rt$ and $s=rt/L$, with $r\geq r_0(L)$, its input anchor can also be an output
+The two branches have different nearest point geometry.  At
+$\sigma=\Sigma_L(r)$, for $r_0(L)\leq r<1$, an extremal pair has
+$a=rt$ and $s=rt/L$.
+Its input anchor can also be an output
 nearest point precisely in the range
 $r/L\leq1+r$.  In that range the limiting relation is
 $a^2+s^2=(1+2\sigma)t^2$, giving $\Sigma_E$.  When $r/L>1+r$,
@@ -347,8 +352,8 @@ If \eqref{dd1:assumptions} holds and
 \]
 then every admissible pair at positive input distance satisfies
 $d(y)\leq r d(x)$.  In the nonpositive quadratic model, this is the exact
-condition for that conclusion over the complete operator class of
-Theorem~\ref{thm:dd1} in dimension at least two.
+condition for that conclusion over the operator class with the full
+proximal relation in Theorem~\ref{thm:dd1}, in dimension at least two.
 
 For some uniform distance factor strictly below one, the corresponding
 condition on regularity is
@@ -362,7 +367,7 @@ condition on regularity is
  \end{cases}
 \end{equation}
 Equivalently, $\sigma<T(\ell/\lambda)$.  At the finite boundary
-$L=\Lambda(\sigma)$, the sharp one step distance factor equals one.
+$L=\Lambda(\sigma)$, the sharp one-step distance factor equals one.
 Stationarity \eqref{dd1:stationarity} extends the conclusions to zero
 inputs.
 \end{theorem}
@@ -500,7 +505,7 @@ For a sequence independently known to remain admissible, the additional
 initial condition \eqref{dd1:localization} is unnecessary; its role is to
 prove continuation and keep the limit inside the open set $U$.
 
-\begin{example}[A complete operator in the additional parameter range]
+\begin{example}[An operator in the additional parameter range]
 \label{dd1:example}
 Take $H=\R^2$, $\lambda=1$, $\ell=1/4$, and $\sigma=10$.  Set
 \[
@@ -510,7 +515,7 @@ Take $H=\R^2$, $\lambda=1$, $\ell=1/4$, and $\sigma=10$.  Set
  \qquad
  \bar y=(c,a),\quad \bar x=-\bar y/h.
 \]
-Here $h>a>0$, so $c>0$.  Let $S=\R_+e_1$, and define the complete
+Here $h>a>0$, so $c>0$.  Let $S=\R_+e_1$, and define the set-valued
 operator by
 \begin{equation}\label{dd1:example-operator}
  F(z)=
@@ -547,7 +552,7 @@ $p=0$ and satisfies
 \]
 Indeed, $\norm{\bar y}=h$, $\norm{\bar x}=1$,
 $\bar x-\bar y=-(1+1/h)\bar y$, and $b(b-1)=10$.
-Because $\tau\bar y\notin S$, its complete fiber consists of the single
+Because $\tau\bar y\notin S$, its full value consists of the single
 value displayed in \eqref{dd1:example-operator}.  Thus
 \[
  r_F(\tau\bar y)=b\tau,\qquad
@@ -571,7 +576,7 @@ For these parameters, the DD1 estimate and threshold are
 \]
 Thus the additional pairs attain the DD1 upper bound, although this
 particular operator has finite termination.  The example distinguishes
-the sharp uniform one step estimate from the behavior of an individual
+the sharp uniform one-step estimate from the behavior of an individual
 trajectory.
 
 For comparison, the explicit compatibility condition in
@@ -614,3 +619,85 @@ They do not assert an inclusion of the complete local theorems, whose
 graph assumptions, existence hypotheses, and localization requirements
 must also be checked.
 \end{example}
+
+The preceding example has finite termination even though it attains the
+one-step upper bound.  At the critical coefficient, other operators have
+nonconvergent sequences.  The following constructions show why equality
+in the strict contraction threshold cannot guarantee convergence of every
+proximal selection.
+
+\begin{samepage}
+\begin{proposition}[Nonconvergent sequences at the critical coefficient]
+\label{dd1:critical-trajectories}
+For every $\lambda,\ell>0$, with $L=\ell/\lambda$, there is a
+closed-graph operator $F:\R^2\rightrightarrows\R^2$ with
+$S=\zer F$ closed and nonempty such that the full proximal relation is
+nonempty everywhere, is stationary on $S$, and satisfies
+\eqref{dd1:assumptions} globally for $\Phi(t)=-T(L)t^2$.
+It admits nonconvergent proximal sequences of constant positive distance
+from $S$ in arbitrarily small invariant neighborhoods of $0\in S$.
+The same operator satisfies the weaker lower bound
+$\Phi(t)=-\sigma t^2$ for every $\sigma\geq T(L)$.
+\end{proposition}
+\end{samepage}
+
+\begin{proof}
+Put $\eta=1/L$.  If $L\geq1/2$, let
+$\alpha=2\arcsin(\eta/2)\in(0,\pi]$ and set
+\[
+ J=R_\alpha,\qquad F=(R_{-\alpha}-I)/\lambda,\qquad S=\{0\},
+\]
+where $R_\alpha$ is rotation through angle $\alpha$.  Then
+$J=J_\lambda$ and, for $y=Jx$,
+\[
+ a=t,\qquad s=\eta t,\qquad r_F(y)=\eta t/\lambda,
+ \qquad
+ \ip{x-y}{y}=-\frac{\eta^2}{2}t^2=-T(L)t^2.
+\]
+Thus $a=\ell r_F(y)$, and every nonzero orbit remains on its initial
+circle with a constant positive step length.  It cannot converge.
+Every ball centered at zero is invariant, including the endpoint
+$L=1/2$, where $J=-I$.
+
+If $0<L<1/2$, then $\eta>2$.  Choose
+$0<\delta<1/(\eta+3)$ and, for $j\geq1$, put
+\[
+ \begin{gathered}
+ r_j=\delta^j,\qquad x_j=2r_je_1,\qquad p_j=3r_je_1,\\
+ q_j=(\eta+1)r_je_1,\qquad y_j=(\eta+2)r_je_1,\qquad
+ S=\{0\}\cup\{p_j,q_j:j\geq1\}.
+ \end{gathered}
+\]
+The intervals $[r_j,(\eta+3)r_j]$ on the first coordinate axis are
+disjoint.  Both $x_j$ and $y_j$ lie at distance $r_j$ from their nearer
+interval boundary, so anchors in other intervals are farther away.
+Within their own interval, $p_j,q_j$ are their respective unique nearest
+points.  Consequently $d(x_j)=d(y_j)=r_j$.  Define
+\[
+ \gph J=\gph P_S\cup\{(x_j,y_j),(y_j,x_j):j\geq1\},\qquad
+ F(z)=\{(w-z)/\lambda:z\in J(w)\}.
+\]
+The set $S$ is compact.  The added pairs accumulate only at $(0,0)$,
+which is already in the projection graph.  Thus $J,F$ have closed graphs,
+$J=J_\lambda$ has an output everywhere, and $\zer F=S$.  Projection
+outputs have zero true residual and anchored inner product zero.  Each
+special output has only its opposite endpoint as a preimage, giving
+\[
+ r_F(x_j)=r_F(y_j)=\eta r_j/\lambda.
+\]
+Using $p=p_j$ in the forward direction and $p=q_j$ in the reverse
+direction, both special pairs satisfy
+\[
+ a=t=r_j=\ell r_F(y),\qquad s=\eta r_j,\qquad
+ \ip{x-y}{y-p}=-\eta(\eta-1)r_j^2=-T(L)r_j^2.
+\]
+The sequences alternating between $x_j$ and $y_j$ do not converge.
+For every $N\geq1$, the ball $B(0,r_N)$ is invariant under all full
+proximal outputs: anchors with index at most $N$ are farther from its
+inputs than zero, while all later anchors and both endpoints of every
+later special pair lie inside it.  These balls shrink to zero and contain
+the cycles with $j>N$.  In both constructions the output distance is
+either zero or unchanged, so intersection with any distance sublevel
+preserves invariance.  The quadratic lower bound also forces stationarity
+on $S$.
+\end{proof}
