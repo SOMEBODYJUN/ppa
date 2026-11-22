@@ -8,6 +8,27 @@ repo = Path(__file__).resolve().parents[3]
 outline = repo / "research/manuscripts/dd2/DD2_outline_and_pro_handoff.md"
 body = outline.read_text(encoding="utf-8")
 
+current_anchor = 'id="dd-paper-author-outline"'
+legacy_anchor = 'id="dd-paper-legacy-handoff"'
+assert body.count(current_anchor) == body.count(legacy_anchor) == 1
+assert body.index(current_anchor) < body.index(legacy_anchor)
+current = body.split(current_anchor, 1)[1].split(legacy_anchor, 1)[0]
+legacy = body.split(legacy_anchor, 1)[1]
+assert re.findall(r"^### (.+)$", current, re.MULTILINE) == [
+    "摘要", "第 1 章 引言", "第 2 章 DD1", "第 3 章 DD2",
+    "第 4 章 DD3", "第 5 章 近端参数选择", "结论与展望",
+]
+abstract, introduction, dd1, dd2, dd3, parameters, conclusion = re.split(
+    r"^### .+\n", current, flags=re.MULTILINE
+)[1:]
+assert all(name in abstract for name in ("DD1", "DD2", "DD3"))
+assert all(name in introduction for name in ("正则指数", "次单调指数", "存在性引理"))
+assert "DD11、DD12" in dd1 and "dd1-step-and-tail" in dd1
+assert dd2.index("传统比较级数") < dd2.index("原 F1–F3")
+assert "dd3-global-coverage" in dd3 and "同一近端关系" in dd3
+assert "sr-uniform-steps" in parameters and "累计进展" in parameters
+assert "例子随定理" in conclusion
+
 design_anchors = [
     "dd2-design-task-packages", "dd2-design-old-task-map", "dd2-design-copy-prompts",
 ]
@@ -31,7 +52,7 @@ chapters = [
     "优化结构与补偿边界",
     "应用",
 ]
-chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", body, re.MULTILINE)
+chapter_titles = re.findall(r"^\| ([1-5]) ([^|]+?) \|", legacy, re.MULTILINE)
 assert chapter_titles == [(str(i), title) for i, title in enumerate(chapters, 1)]
 chapter_tasks = {
     3: ("dd2-nonabsolute-main-task", "dd2-length-main-task"),
@@ -39,7 +60,7 @@ chapter_tasks = {
     5: ("dd2-cp-main-task",),
 }
 for chapter, anchors in chapter_tasks.items():
-    chapter_row = next(line for line in body.splitlines() if line.startswith(f"| {chapter} "))
+    chapter_row = next(line for line in legacy.splitlines() if line.startswith(f"| {chapter} "))
     for anchor in anchors:
         assert f"](#{anchor})" in chapter_row
         assert body.count(f'id="{anchor}"') == 1
@@ -205,7 +226,8 @@ compare_gates(Fraction(1), Fraction(1, 2), Fraction(0), False, Fraction(1, 2), F
 core = (repo / "research/topics/dd2/core.md").read_text(encoding="utf-8")
 assert core.index('id="dd2-main-theorem"') < core.index('id="dd2-linear-recovery"') < core.index('id="dd2-exact-statements"')
 assert all(f"\\tag{{DD2.{i}}}" in core for i in range(1, 10))
-print(f"DD2 verified: 17 design-task contracts with copy prompts and all 22 legacy tasks mapped; "
-      f"5 provisional chapters, 4 legacy proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
+print(f"DD outline verified: 5 author chapters, abstract and conclusion; "
+      f"17 design-task contracts with copy prompts and all 22 legacy tasks mapped; "
+      f"5 historical chapters, 4 legacy proof tasks, 22 paper deliverables, 280 individually ranked answers, 6 indexed source sections, "
       f"{len(claim_ids)} claim records, {len(links)} local links, 7 legacy exact algebra checks; "
       f"{piecewise_checks} exact piecewise compensation comparisons and explicit endpoint checks.")

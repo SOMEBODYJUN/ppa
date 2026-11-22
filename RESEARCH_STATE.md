@@ -2,6 +2,8 @@
 
 **当前作者修订：恢复 DD2 的分段主陈述。** [核心正文](research/topics/dd2/core.md#dd2-main-theorem)已按“指定 \(\varphi\) → 一般 \(\psi\) 的分段补偿 \(\Sigma(r,z)\) → A+B → 附条件的完整轨道结论”重写。原 \(\Sigma_L\) 两支、DD1 临界门与一般有符号 \(\Phi\) 均在开头直接可见；G/R/L、原残差联合域和各长度版本移至文末技术补充。C430 的数学身份保持，新增的是[与原三门逐式等价的分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)，不是新贡献登记。原 F1–F3 及其协议进度不变。选题工作继续服从下述作者边界。
 
+**当前成文交接。** [按作者口述的唯一大纲](research/manuscripts/dd2/DD2_outline_and_pro_handoff.md#dd-paper-author-outline)已有引言、DD1、DD2、DD3 与选参入口。固定步认证和已有子类可进入选参章；作者拟用的逐步选参规则及通用同窗进展未对上现有已证定理。第 99 轮原 F1–F3 附件的实际字节与历史哈希吻合。
+
 **DD3 的有限维存在性材料已核。** [C477/C478](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage)给由函数型锚缺陷到同伦先验界和原近端关系满射的准确证明、固定参数反例及二维非二次分离。同一 \(\Phi\) 的步长函数和 RLEB 表示可直接复用。投稿前的主要核验是匹配 DD1/DD2 的实际允许窗及假设，并限制二维例和文献比较的主张。一般 Hilbert 投影分支另存为远期问题。
 
 **算子运算法则与选参 · 作者指定的查新问题。** 在一般 \(\Phi,\psi\) 和原三段 \(\Sigma\) 的合同下，考察哪类分量、扰动或复合数据可验证地生成原 DD 证书，以及保留分量耦合能否扩大可认证的下降或参数区域。先对照已有结果，覆盖的子类直接引用。[文献及本库去重](research/LITERATURE.md#lit-dd-operator-calculus)固定了强固定锚、线性和映射、一般模斜率和近端可解区间的先行范围。当前缺口是同一输入最近锚、整体真残差、近端覆盖及相对已知规则的严格收益能否在同一原始算子类中同时确认。未登记新 Claim。

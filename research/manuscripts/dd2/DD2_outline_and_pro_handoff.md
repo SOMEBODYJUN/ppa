@@ -1,8 +1,60 @@
-# DD2 论文选材裁决与成文方案
+# PPA 论文写作大纲与研究交接
+
+<a id="dd-paper-author-outline"></a>
+## 当前大纲 · 按作者口述
+
+题目由作者最后确定。正文五章为引言、DD1、DD2、DD3、近端参数选择，随后是结论。以下是落笔顺序和材料入口。
+
+### 摘要
+
+用一段历史开篇。Martinet、Rockafellar 从经典单调理论起步，Luke–Tam 在局部讨论较弱的单调性与残差正则性如何配合，Alcantara 给出与 DD1 部分重合的定量估计。由此提出两种性质的补偿关系能否明确计算，以及局部覆盖与全局结构何时更便于验证。
+
+随后依次交代 DD1 的双向分段关系、DD2 的一般函数尺度与非几何有限长轨道、DD3 的有限维全局近端可解性和 DD 选参。摘要说清 DD1/DD2 的局部轨道分析使用已认证的覆盖，DD3 以全图区间条件证明原近端覆盖，和 DD1/DD2 结合时须匹配实际工作窗。步长部分承诺能够写明的固定参数认证和已证变参数范围。出处见 [DD1 文献比对](../../novelty/DD1_PRIOR_ART_2026-11-20.md)、[DD3 文献](../../LITERATURE.md#lit-dd3-bly)。
+
+### 第 1 章 引言
+
+1. 简评经典 PPA、Luke–Tam、Alcantara 及 Brito–Lara–Yuan。区分各家分析的对象和局部覆盖／全局满射。Alcantara 的 v1 于 2026-11-16 提交，Brito–Lara–Yuan 的 v1 于 2026-11-18 提交。几何历史中所说的集合须点明是零集、预解值域还是约化空间的集合。
+2. 用 DD1 的两种计算方向引进“正则指数”和“次单调指数”作为读图术语。现有归一化为线性残差比 \(L=\ell/\lambda\) 与负缺陷比 \([-\Phi(t)]_+/t^2\)，窗内取 \(\sigma_R\)。口述中的“\(\Phi\) 与 \(t^2\) 的比”按原有符号契约核准，精确指数名称与正则性方向留作者定稿。定理章节用原符号和分段关系。见 [DD1 分段公式](../../topics/dd2/core.md#dd2-linear-recovery)。
+3. 预告后文的存在性引理结论 \(\operatorname{ran}(I+\lambda F)=\mathbb R^n\)，说明为何值得把存在性从覆盖假设变成可证明的结论。引理的前件及证明放第 4 章。
+
+### 第 2 章 DD1
+
+1. 在定理前就地给出合法的近端边、最近输入锚、线性真残差正则性和局部工作窗。按口述保留 DD11、DD12 两个计算方向，排版时将临界兼容门、给定下降比的反向预算和各分支端点对齐仓库公式。
+2. 紧接分段定理写几何证明。距离线性收缩与比例步长界一起给绝对可和、有限长度与点收敛，写明覆盖、零输入和留域条件。来源为[两支几何](../../topics/dd2/dd1_recovery.md#dd1-two-branch-mechanisms)、[步长与轨道](../../topics/dd2/dd1_recovery.md#dd1-step-and-tail)。
+3. 证明后接一个完整算子和简短比较。可用[固定射线完整图 C443](../../topics/dd2/dd1_recovery.md#dd1-homogeneous-fixed-ray-attainment)取 \(L=1/4,\sigma=10\)。此时 DD1 通过，落在 Alcantara 明写的能量充分门之外。Luke–Tam 和 Alcantara 的精确重合与扩张区见[逐式对照](../../novelty/DD1_PRIOR_ART_2026-11-20.md)。比较表述限定在同一原近端对象、归一化和已核充分门。
+
+### 第 3 章 DD2
+
+1. 从线性残差界进入一般的有符号 \(\Phi\) 和原真残差模 \(\psi\)。先指定希望保证的下降函数 \(\varphi\)，直接展示[三段 \(\Sigma\) 主定理](../../topics/dd2/core.md#dd2-main-theorem)，随后给证明及准确端点。已指定的 \(\varphi\) 是欲认证的下降目标。
+2. 用[非几何有限长的完整旋转 C474](../../topics/dd2/operator_separation.md#dd2-dd1-strict-operator-separation)展示严格扩张，再按篇幅选[低于二次的负缺陷 C453](../../topics/dd2/original_f_conditions.md#dd2-f1-mixed-potential-example)。有限长度的边界可用[半阶完整旋转](../../canonical/dd2_power_defect_finite_length.md#dd2-half-order-complete-example)说明点收敛与无限长度可以共存。
+3. 有限长度先解释传统比较级数为什么出现，再用[原 F1–F3 的长度势与望远镜证明](../../topics/dd2/original_f_conditions.md#dd2-original-telescope)说明在相应结构下无需另外检查原 Dini 比较级数。F3 的可积性仍是这条充分定理的前件。也可用[同一精确原模的径向／旋转对照 C456](../../topics/dd2/finite_length_countermodels.md#dd2-sharp-gauge-finite-length-pair)说明固定图的实际长度和一般统一证书的区别。[原附件核验](../../audit/FINAL_PROTOCOL_S4_S8_2026-11-21.md#dd2-f1-source-and-absorption)已补齐。
+
+### 第 4 章 DD3
+
+1. 承接前两章的实际步与覆盖，说明有些全局定义的算子可在全图上验证存在性前件。借 Brito–Lara–Yuan 的同伦证明分工。
+2. 正式写[有限维存在性引理 C477](../../topics/dd2/global_proximal_solvability.md#dd3-global-coverage)。在 \(0<\mu\le\lambda\) 上核最近输入锚的统一缺陷帽，加两种有限维半连续凸值入口之一。用 DD2 的步长公式给同伦先验界，再证明原预解式满域。
+3. DD3 的轨道结论接同一近端关系上的 DD1 或 DD2 前件，分别列可解、下降、留域、长度与点收敛。有局部截断时核输出和图值窗。若收敛合同只在局部成立，结论写为全局可解加局部收敛。
+4. 引理后放[固定参数不满射反例](../../topics/dd2/global_proximal_solvability.md#dd3-fixed-step-obstruction)与[非二次全参数可解例](../../topics/dd2/global_proximal_solvability.md#dd3-nonquadratic-example)，各用一句说明证明了什么。二维例只比较存在性前件，和全局所有轨道收敛不合并。
+
+### 第 5 章 近端参数选择
+
+1. 固定同一算子和目标集，先说明为什么可在下一步选择 \(\lambda\)。给定一次希望的下降，DD1 以 \(L=\ell/\lambda\) 和对应的锚下界代入两支，DD2 用同一目标曲线和原三段 \(\Sigma\) 筛选候选参数。每个实际参数都核可解、留域和长度所需的共同条件。[现有参数公式和任务范围](#dd2-design-task-packages)。
+2. 每步变化时使用已证的共同窗口结果，例如[稀疏模型 C226 的变步区间](../../topics/sparse_recovery/automatic_regularity.md#sr-uniform-steps)。若安排通用的动态选步法，须取得作者想采用的方法，写明可观察的接受量，证明有限接受、续接和累计进展。[L01–L03](#dd2-design-task-packages)保留待核任务。松弛 \(\alpha_k\) 与近端 \(\lambda_k\) 分开。
+
+### 结论与展望
+
+归纳补偿的两条计算方向、一般函数的几何和有限长度、有限维全局可解，以及正文实际证明的选参结果。展望只点出一般函数下实际有限长度的精确边界和应用。例子随定理，各章随用随定义。经典恢复、退化 PPPA、组合分裂和方向分解可作背景或后续用途。
+
+**成文前核对。** 第 1–4 章的定义、分段式、关键证明与例子已有入口，题名与摘要最后落笔。现有材料允许把第 5 章写成 DD 的参数认证加已证变参数实例。若要写作者口述的通用逐步选法，尚缺那条指定规则及其同窗轨道证明。先从已确定的主定理和对应例子入手，摘要与结论据完成范围定稿。
+
+<a id="dd-paper-legacy-handoff"></a>
+## 旧研究交接与选材记录
+
+以下章节编号服务于早期选稿与协议验收。各旧锚点用于追踪材料和论证，其中未完成任务仍按原身份登记。当前论文章序见上。
 
 **接续入口。** 本稿确定五章主问题、开放证明认领顺序，并逐项重判 280 个题号。公式口径见 [DD2 核心说明](../../audit/DD2_PRO_START_HERE.md)。正式研究验收见 [作者原版协议](../../topics/dd2/DD2_FINAL_ACCEPTANCE_PROTOCOL.md)和 [全量验收清单](../../audit/DD2_ACCEPTANCE_CHECKLIST.md)。
 
-**新增研究任务入口。** 作者提供的方向性、近端参数设计、计算误差、算子组合和实际模型方案，现按[五组任务包](#dd2-design-task-packages)逐项与已有成果比较，并拆成 17 个可认领交付。它们优先竞争正文，尚未成为已证贡献。下方五章仍是此前暂定编排；六章是新的竞争方案，不由本次任务设计自动定稿。P01–P22 与原 280 题均保留身份；新增任务的执行顺序和旧题接续见[对应表](#dd2-design-old-task-map)。
+**原研究任务入口。** 作者提供的方向性、近端参数设计、计算误差、算子组合和实际模型方案，现按[五组任务包](#dd2-design-task-packages)逐项与已有成果比较，并拆成 17 个可认领交付。它们优先竞争正文，尚未成为已证贡献。下方五章仍是此前暂定编排；六章是新的竞争方案，不由本次任务设计自动定稿。P01–P22 与原 280 题均保留身份；新增任务的执行顺序和旧题接续见[对应表](#dd2-design-old-task-map)。
 
 <a id="dd2-design-task-packages"></a>
 ## 从补偿判据到算法设计：评判与可执行任务包
