@@ -1,527 +1,206 @@
-\section{Choosing the proximal parameter}
-\label{sec:parameters}
+\section{近端参数的选择}\label{sec:parameters}
 
-DD1 and DD2 first fix a parameter and ask which bounds
-guarantee a decrease in the distance to $S$. The parameter
-also enters the hypotheses: in DD1,
-$L=\ell/\lambda$, and a lower anchor bound obtained from the
-original operator may itself change with $\lambda$. The same
-point occurs in the fixed-parameter analysis of
-Luke and Tam~\cite{LukeTam2025}, where the assumptions are
-tested on the scaled operator $\lambda F$. We now reverse the
-calculation. We first solve the DD inequalities for $\lambda$
-when the original data are valid for a common range of
-parameters. We then give assumptions on the original
-operator that provide roots on a common input neighborhood
-and a uniform decrease estimate, allowing the parameter to
-change at each iteration.
+前文先固定 $\lambda$，再检验次单调性与正则性的补偿。
+Luke--Tam~\cite{LukeTam2025} 也将缩放算子 $\lambda F$ 的性质放在假设中。
+本节反过来，从原算子的信息确定可用参数，最后允许每步更换 $\lambda_k$。
+改变参数会改变近端对，故下列共同估计均须对所考虑的全部参数有效。
 
-\subsection{Inverting the DD1 inequality}
+\subsection{DD1 与 DD2 的参数反演}
 
-Suppose that $\ell>0$ and $\sigma\ge0$ are independent of
-$\lambda$ on the parameter range under consideration. Thus
-every admissible step has a nearest input anchor $p\in P_S(x)$
-such that
-\begin{equation}
- \ip{x-y}{y-p}\ge-\sigma t^2,
- \qquad a\le\ell r_F(y),
- \qquad t=d(x),\quad a=d(y).
- \label{eq:parameters-common-linear}
+先设 $\ell>0$、$\sigma\ge0$ 与参数无关，且每个所考虑的近端对满足
+\begin{equation}\label{eq:parameters-common-linear}
+ d(y)\le\ell r_F(y),\qquad
+ \exists p\in P_S(x):\quad\ip{x-y}{y-p}\ge-\sigma d(x)^2.
 \end{equation}
-The statement that $\sigma$ is common is an assumption about
-the proximal steps for all these parameters, rather than a
-consequence of small $\lambda$.
 
-\begin{proposition}[DD1 parameter thresholds]
-\label{prop:parameters-dd1}
-For a prescribed $0<r<1$, define
-\begin{equation}
- \lambda_r=\frac{\ell}{r}
+\begin{proposition}[DD1 的参数条件]\label{prop:parameters-dd1}
+给定 $0<r<1$，令
+\begin{equation}\label{eq:parameters-linear-target}
+ \lambda_r=\frac\ell r
  \begin{cases}
  \sqrt{1-r^2+2\sigma},&\sigma\le r(1+r),\\[2pt]
- \dfrac{1+\sqrt{1+4\sigma}}2,&\sigma>r(1+r).
+ (1+\sqrt{1+4\sigma})/2,&\sigma>r(1+r).
  \end{cases}
- \label{eq:parameters-linear-target}
 \end{equation}
-The DD1 criterion for the uniform bound $a\le rt$ is
-equivalent to $\lambda\ge\lambda_r$. In dimension at least
-two, this threshold cannot be improved for the class of
-single proximal steps satisfying
-\eqref{eq:parameters-common-linear}, where $F$ and the closed
-set $S$ may vary. These inequalities guarantee a uniform
-contraction factor strictly smaller than one precisely when
-\begin{equation}
+则 DD1 中保证 $d(y)\le r d(x)$ 的分段条件可写为 $\lambda\ge\lambda_r$。
+存在某个统一收缩比例 $r<1$ 的 DD1 条件为
+\begin{equation}\label{eq:parameters-linear-strict}
  \lambda>\ell
  \begin{cases}
  \sqrt{2\sigma},&0\le\sigma\le2,\\[2pt]
- \dfrac{1+\sqrt{1+4\sigma}}2,&\sigma\ge2.
+ (1+\sqrt{1+4\sigma})/2,&\sigma\ge2.
  \end{cases}
- \label{eq:parameters-linear-strict}
 \end{equation}
-These thresholds concern the information in the two common
-inequalities. A fixed operator may admit stronger estimates.
 \end{proposition}
 
 \begin{proof}
-Put $b_\sigma=(1+\sqrt{1+4\sigma})/2$ and
-$L=\ell/\lambda$. By Theorems~\ref{thm:dd1} and
-\ref{thm:dd12}, the sharp output factor is
+令 $b_\sigma=(1+\sqrt{1+4\sigma})/2$。
+将 $L=\ell/\lambda$ 代入 DD1 的两项收缩估计，条件等价于
 \[
- \min\left\{b_\sigma,Lb_\sigma,
- L\sqrt{\frac{1+2\sigma}{1+L^2}}\right\}.
-\]
-Since $b_\sigma\ge1>r$, this factor is at most $r$ exactly
-when at least one of the last two terms is at most $r$.
-Solving separately gives
-\[
- \lambda\ge\frac{\ell b_\sigma}{r}
- \quad\hbox{or}\quad
+ \lambda\ge\frac{\ell b_\sigma}r
+ \quad\text{或}\quad
  \lambda\ge\frac{\ell\sqrt{1+2\sigma-r^2}}r.
 \]
-Their union starts at the smaller threshold. The identity
-$b_\sigma(b_\sigma-1)=\sigma$ shows that the second is
-smaller precisely when $b_\sigma\le1+r$, equivalently
-$\sigma\le r(1+r)$. This proves
-\eqref{eq:parameters-linear-target}, including its joining
-point. Taking $r\uparrow1$ gives
-\eqref{eq:parameters-linear-strict}; equality in that limit
-does not provide a common factor $r<1$. Exactness has the
-same scope as the converse in Theorem~\ref{thm:dd12}.
+取两个下界中较小者；两者在 $\sigma=r(1+r)$ 处相等，即得
+\eqref{eq:parameters-linear-target}。令 $r\uparrow1$ 即得严格条件
+\eqref{eq:parameters-linear-strict}。
 \end{proof}
 
-For continuation and convergence, also impose coverage,
-zero-input stationarity and the localization and length
-hypotheses of Theorem~\ref{thm:dd1-trajectory}.
-
-\subsection{Inverting DD2 for a nonpositive lower bound}
-
-Let $D:[0,R]\to[0,\infty)$, and let
-$\psi:D_\psi\to[0,\infty)$ be the original residual function,
-where $0\in D_\psi\subseteq[0,\infty)$, and prescribe the
-DD2 target $0<\varphi(t)<t$ for $0<t\le R$. Fix a set
-$\Lambda\subseteq(0,\infty)$ of candidate parameters and an
-admissible relation $\mathcal J_\lambda\subseteq J_\lambda$
-for each $\lambda\in\Lambda$, all for the same $F$ and $S$.
-Suppose every tested step at positive input distance satisfies
+一般函数情形中，设同一 $F,S$ 对所有候选参数 $\lambda\in\Lambda$
+及相应允许对 $y\in\mathcal J_\lambda(x)\subseteq J_\lambda(x)$ 均满足
 \[
- \rho=r_F(y)\in D_\psi,\qquad a\le\psi(\rho),\qquad
- \exists p\in P_S(x):\quad
- \ip{x-y}{y-p}\ge-D(t).
+ \rho=r_F(y)\in D_\psi,\qquad d(y)\le\psi(\rho),\qquad
+ \exists p\in P_S(x):\quad\ip{x-y}{y-p}\ge-D(t),\quad t=d(x),
 \]
-Thus $D$ and $\psi$ are common to all these parameters.
-No monotonicity of $\psi$ is needed. For each positive scale
-define
-\begin{equation}
+其中 $D\ge0$，$0\in D_\psi$。给定目标 $0<\varphi(t)<t$，记
+\begin{equation}\label{eq:parameters-bad-layer}
  E_t=\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},\qquad
- q_t=\inf E_t,\qquad
- B_D(t)=\frac{t+\sqrt{t^2+4D(t)}}2.
- \label{eq:parameters-bad-layer}
+ q_t=\inf E_t,\qquad B_D(t)=\frac{t+\sqrt{t^2+4D(t)}}2.
 \end{equation}
-An empty $E_t$ means that the residual bound alone guarantees
-$a\le\varphi(t)$. For a nonempty $E_t$, its infimum and the
-question whether that infimum belongs to $E_t$ contain
-different information.
 
-\begin{theorem}[DD2 parameter inversion]
-\label{thm:parameters-dd2}
-At a fixed $t>0$, suppose $E_t\ne\varnothing$ and
-$0<q_t<\infty$. Define
-\begin{equation}
+\begin{theorem}[DD2 的参数条件]\label{thm:parameters-dd2}
+当 $E_t\ne\varnothing$ 且 $0<q_t<\infty$ 时，令
+\begin{equation}\label{eq:parameters-general-threshold}
  H(t)=
  \begin{cases}
  \dfrac{\sqrt{t^2-\varphi(t)^2+2D(t)}}{q_t},
- &D(t)\le\varphi(t)(t+\varphi(t)),\\[7pt]
- \dfrac{B_D(t)}{q_t},
- &D(t)>\varphi(t)(t+\varphi(t)).
+ &D(t)\le\varphi(t)(t+\varphi(t)),\\[6pt]
+ \dfrac{B_D(t)}{q_t},&D(t)>\varphi(t)(t+\varphi(t)).
  \end{cases}
- \label{eq:parameters-general-threshold}
 \end{equation}
-The DD2 condition for $a\le\varphi(t)$ is precisely
-$\lambda\ge H(t)$, except that the second branch requires
-$\lambda>H(t)$ when $q_t\in E_t$. If $E_t$ is empty, put
-$H(t)=0$ and impose no positive lower threshold. If $E_t$ is
-nonempty and $q_t=0$, no finite positive parameter satisfies
-this condition, and we put $H(t)=+\infty$.
-
-The equivalence is exact in dimension at least two for the
-class of single proximal steps in
-Proposition~\ref{prop:dd2-exact}, where $F$ and the closed
-set $S$ may vary. For a fixed $F$ and $S$, the threshold is
-sufficient for every tested step; it need not be necessary.
-On $0<t\le R$, put
-\[
- H_R=\sup_{0<t\le R}H(t).
-\]
-If $H_R<\infty$, every $\lambda\in\Lambda$ with
-$\lambda>H_R$ satisfies the decrease condition at all these
-scales. At $\lambda=H_R>0$, each scale must satisfy the
-endpoint rule above.
+DD2 保证 $d(y)\le\varphi(t)$ 的分段条件等价于 $\lambda\ge H(t)$；
+仅当第二支且 $q_t\in E_t$ 时，应改为 $\lambda>H(t)$。
+若 $E_t=\varnothing$，记 $H(t)=0$，不需附加参数条件；
+若 $E_t\ne\varnothing$ 且 $q_t=0$，记 $H(t)=+\infty$，无有限正参数满足该判据。
+因此若 $H_R:=\sup_{0<t\le R}H(t)<\infty$，则每个
+$\lambda\in\Lambda$、$\lambda>H_R$ 均满足全部距离 $0<t\le R$ 的下降条件。
+在 $\lambda=H_R>0$ 时须逐点检查上述端点条件。
 \end{theorem}
 
 \begin{proof}
-Set $r=\varphi(t)/t$, $\delta=D(t)/t^2$ and
-$z=\lambda q_t/t$. The exact DD2 relation of
-Proposition~\ref{prop:dd2-exact} is
-$\delta\le\Sigma(r,z)$. Its lower branch has value
-$r(r-1)<0$ and cannot accommodate $\delta\ge0$.
-On the middle branch the inequality becomes
-\[
- z^2\ge1-r^2+2\delta.
-\]
-The positive root is at least $1-r$, since
-$1-r^2\ge(1-r)^2$ for $0<r<1$. It is at most $1+r$
-exactly when $\delta\le r(1+r)$. This gives the first branch
-of \eqref{eq:parameters-general-threshold}. If
-$\delta>r(1+r)$, the upper branch is necessary and reads
-$z(z-1)\ge\delta$. Its positive root is $B_D(t)/t$,
-which gives the second branch. The common point
-$D(t)=\varphi(t)(t+\varphi(t))$ belongs to the middle
-branch, where equality is allowed. On the upper branch the
-strict-endpoint exception is exactly the condition
-$q_t\in E_t$ in Theorem~\ref{thm:dd2}.
-
-If $E_t$ is empty, $a\le\psi(r_F(y))\le\varphi(t)$
-already. If $q_t=0$ and $E_t$ is nonempty, then $z=0$ for
-each finite $\lambda$; no nonnegative $\delta$ can pass the
-piecewise condition with $0<r<1$. This proves the stated
-conventions. The class of steps used for the converse is nonempty
-for $\Phi=-D\le0$, since the scalar choice
-$(s,a,\rho)=(t,0,0)$ is feasible. Thus the equivalence does
-not rely on an empty class. Finally, applying the pointwise
-conditions at every $t\in(0,R]$ proves the assertion about
-$H_R$.
+在 DD2 中代入 $r=\varphi(t)/t$、$z=\lambda q_t/t$、$\delta=D(t)/t^2\ge0$。
+第三支 $r(r-1)<0$ 不适用。中间支要求
+$z\ge\sqrt{1-r^2+2\delta}$；该根不小于 $1-r$，且不大于 $1+r$
+当且仅当 $\delta\le r(1+r)$，得到第一支。
+若 $\delta>r(1+r)$，则由 $z(z-1)\ge\delta$ 解出第二支。
+两支交点属于中间支，允许等号；其余开闭端点直接沿用 DD2 的规定。
+空集情形由残差估计已得 $d(y)\le\varphi(t)$；非空且 $q_t=0$ 时 $z=0$，
+分段式不可能容纳 $\delta\ge0$。最后对全部 $t$ 同时应用即可。
 \end{proof}
 
-Suppose, more specifically, that $\psi$ is continuous and
-strictly increasing on an initial interval
-$[0,\rho_*]\subseteq D_\psi$ and
-$\psi(0)<\varphi(t)<\psi(\rho_*)$. Then
-$q_t=\psi^{-1}(\varphi(t))$ for the inverse on this interval,
-and $q_t\notin E_t$; values outside the interval cannot
-lower the infimum. In this case $H(t)$ depends continuously
-on the target value, including at the branch switch, so
-$\lambda>H(t)$ permits a slightly smaller target and gives
-$a<\varphi(t)$. For an arbitrary original function $\psi$,
-strictness of the parameter inequality alone does not imply
-this stronger output conclusion.
+若 $\psi$ 在从零开始的区间上连续严格递增，且目标值属于该限制的像的内部，
+则 $q_t=\psi^{-1}(\varphi(t))$、$q_t\notin E_t$。
+若 $\lambda>\limsup_{t\downarrow0}H(t)$，则在足够小的距离区间内满足该条件。
+这些结论还须结合近端存在性、零输入驻定及相应长度和留域条件；
+它们没有断言固定算子只有满足此判据才能收敛。
 
-The functions in this theorem must apply to the same
-operator, target set and admissible steps for every candidate
-parameter. One must also verify actual root coverage, the
-evaluation domains, zero-input stationarity, localization
-and one of the length conditions of Section~\ref{sec:dd2}.
-If parameters are available only below a finite upper
-limit, the strict sufficient choice requires an available
-parameter greater than $H_R$. The inversion does not
-establish that such a parameter exists.
-
-The threshold also gives a local test: if a fixed candidate
-$\lambda$ satisfies $\lambda>\limsup_{t\downarrow0}H(t)$,
-then shrinking the scale interval makes $\lambda>H(t)$
-throughout that interval. Coverage and the other local
-hypotheses must still hold there.
-
-The neighborhood may therefore depend on the fixed
-parameter. For example, suppose, near zero,
+\begin{example}[小参数下的距离扩张]\label{ex:parameters-rotation}
+令 $Q$ 为平面直角旋转，$F=-I+2Q$，$S=\{0\}$。则
 \[
- D(t)\le Ct^p,\qquad \psi(\rho)\le K\rho^q,
- \qquad C,K,p,q>0,
- \qquad m=\min\{1,p/2\}.
+ I+\lambda F=(1-\lambda)I+2\lambda Q,\qquad
+ \norm{(I+\lambda F)y}^2=(1-2\lambda+5\lambda^2)\norm y^2.
 \]
-Then $B_D(t)=O(t^m)$. On every admissible step,
-$r_F(y)\le B_D(t)/\lambda$, so for each fixed
-$\lambda>0$ the residual eventually lies in the specified
-range and
+因此每个 $\lambda>0$ 的近端步均唯一存在，而实际距离比为
 \[
- a=O_\lambda(t^{mq}).
+ \frac{d(y)}{d(x)}=\frac1{\sqrt{1-2\lambda+5\lambda^2}}.
 \]
-If $mq>1$, shrinking the input scale therefore gives any
-prescribed ratio $a\le rt$, $0<r<1$. The step estimate
-$s\le C_\lambda t^m$ then gives
-\[
- \sum_{k=0}^\infty s_k
- \le\frac{C_\lambda t_0^m}{1-r^m}
-\]
-for a trajectory of admissible steps in that range. With
-coverage, stationarity at zero and this total bound smaller than the
-distance to the boundary of the input neighborhood, the
-same finite-prefix induction as before gives continuation
-and point convergence. This is a statement of the form
-$\forall\lambda>0\;\exists R_\lambda>0$.
-
-For instance, $F(y)=\operatorname{sgn}(y)|y|^\alpha$ on
-$\R$, $0<\alpha<1$, has a unique proximal root for every
-input and every $\lambda>0$. It satisfies $\Phi=0$ and
-$\psi(\rho)=\rho^{1/\alpha}$, so every fixed positive
-parameter gives the preceding local conclusion. For a fixed
-positive input, however, the root of
-$x=y+\lambda y^\alpha$ tends to $x$ as $\lambda\downarrow0$.
-Thus a fixed ratio $r<1$ cannot hold on a common positive
-input interval for all parameters tending to zero.
-
-\subsection{Small parameters need not improve the decrease}
-
-The dependence of the anchor bound on $\lambda$ cannot be
-discarded, even if its coefficient tends to zero.
-
-\begin{example}[A solvable linear operator with small-step expansion]
-\label{ex:parameters-rotation}
-Let $Q$ be rotation through $\pi/2$ in $\R^2$ and set
-$F=-I+2Q$, $S=\{0\}$. Then
-\[
- \norm{F(y)}=\sqrt5\norm{y},\qquad
- \ip{F(y)}{y}=-\norm{y}^2,
-\]
-while
-\[
- I+\lambda F=(1-\lambda)I+2\lambda Q,
- \qquad
- \norm{(I+\lambda F)y}^2
- =(1-2\lambda+5\lambda^2)\norm{y}^2.
-\]
-The scalar $1-2\lambda+5\lambda^2$ is positive for every
-$\lambda$, so every proximal problem has a unique root.
-The exact distance ratio is
-\[
- \frac{a}{t}=\frac1{\sqrt{1-2\lambda+5\lambda^2}}.
-\]
-It is smaller than one exactly when $\lambda>2/5$; it is
-larger than one for $0<\lambda<2/5$.
-
-The exact linear residual constant is $\ell=1/\sqrt5$.
-On a proximal step the smallest nonnegative quadratic
-anchor coefficient is
-\[
- \sigma_\lambda
- =\frac{\lambda}{1-2\lambda+5\lambda^2}
- \longrightarrow0\qquad(\lambda\downarrow0).
-\]
-Nevertheless $L=1/(\sqrt5\lambda)$ tends to infinity.
-For $\lambda\le2\ell$, the strict DD1 condition is
-$\sigma_\lambda<\lambda^2/(2\ell^2)$, which fails for
-all sufficiently small $\lambda$. In fact the energy term
-of DD1 is exact here:
-\[
- \frac{L^2(1+2\sigma_\lambda)}{1+L^2}
- =\frac1{1-2\lambda+5\lambda^2}.
-\]
-Thus decay of $\sigma_\lambda$ by itself does not decide
-the compensation inequality.
+当 $0<\lambda<2/5$ 时距离增大，当 $\lambda>2/5$ 时距离缩小。
+这里 $\ell=1/\sqrt5$，最小二次缺陷系数
+$\sigma_\lambda=\lambda/(1-2\lambda+5\lambda^2)$ 虽趋于零，
+仍不足以保证小参数下的收敛。
 \end{example}
 
-\subsection{Original angle data and a common parameter range}
+\subsection{原算子条件与变参数迭代}
 
-We next give assumptions that do not contain the proximal
-parameter. They also yield roots in a common input
-neighborhood, which makes varying the parameter possible
-without changing the set on which continuation is proved.
+以下条件在选取参数之前给定，同时保证共同邻域内的近端存在性与收敛。
 
-\begin{theorem}[Common coverage and variable parameters]
-\label{thm:parameters-variable}
-Let $F:\R^n\to\R^n$, let $S\subseteq\zer F$ be nonempty
-and closed, and let $p_0\in S$. Suppose $F$ is continuous on
-a neighborhood of $V=\overline B(p_0,R_0)$ and there
-are $\ell>0$ and $0\le\mu<1$ such that, for all $y\in V$
-and $p\in S\cap V$,
-\begin{equation}
+\begin{theorem}[共同参数范围与变参数收敛]\label{thm:parameters-variable}
+设 $F:\R^n\to\R^n$ 在 $V=\overline B(p_0,R_0)$ 的邻域连续，
+$S\subseteq\zer F$ 非空闭，$p_0\in S$。设 $\ell>0$、$0\le\mu<1$，
+对全部 $y\in V$、$p\in S\cap V$ 有
+\begin{equation}\label{eq:parameters-raw-angle}
  d(y)\le\ell\norm{F(y)},\qquad
- \ip{F(y)}{y-p}
- \ge-\mu\norm{F(y)}\norm{y-p}.
- \label{eq:parameters-raw-angle}
+ \ip{F(y)}{y-p}\ge-\mu\norm{F(y)}\norm{y-p}.
 \end{equation}
-Choose
-\[
- 0<r_0<\min\{R_0/2,\sqrt{1-\mu^2}R_0\},
- \qquad U=B(p_0,r_0),
-\]
-and, for each $\lambda>0$, use exactly the admissible relation
-\[
- \mathcal J_\lambda(x)=J_\lambda(x)\cap B(p_0,R_0).
-\]
-Every such relation is nonempty on $U$. Fix $0<r<1$ and put
-\begin{equation}
+取 $0<r_0<\min\{R_0/2,\sqrt{1-\mu^2}R_0\}$，令
+$U=B(p_0,r_0)$、$\mathcal J_\lambda(x)=J_\lambda(x)\cap B(p_0,R_0)$。
+则每个 $\lambda>0$ 下，$\mathcal J_\lambda$ 在 $U$ 上非空。
+给定 $0<r<1$，令
+\begin{equation}\label{eq:parameters-raw-threshold}
  \lambda_*(r)=\ell
  \begin{cases}
- \mu+\sqrt{\mu^2+r^{-2}-1},
- &\displaystyle\mu\le\frac r{\sqrt{1+r^2}},\\[5pt]
- \dfrac1{r\sqrt{1-\mu^2}},
- &\displaystyle\mu\ge\frac r{\sqrt{1+r^2}}.
+ \mu+\sqrt{\mu^2+r^{-2}-1},&\mu\le r/\sqrt{1+r^2},\\[3pt]
+ 1/(r\sqrt{1-\mu^2}),&\mu\ge r/\sqrt{1+r^2}.
  \end{cases}
- \label{eq:parameters-raw-threshold}
 \end{equation}
-The two expressions agree at their common endpoint.
-For every $\lambda\ge\lambda_*(r)$ and every
-$y\in\mathcal J_\lambda(x)$ with $x\in U$,
-\begin{equation}
- d(y)\le r d(x),\qquad
- \norm{x-y}\le\frac{d(x)}{\sqrt{1-\mu^2}}.
- \label{eq:parameters-common-estimates}
+当 $\lambda\ge\lambda_*(r)$ 时，每个允许对均满足
+\begin{equation}\label{eq:parameters-common-estimates}
+ d(y)\le r d(x),\qquad \norm{x-y}\le\frac{d(x)}{\sqrt{1-\mu^2}}.
 \end{equation}
-In particular, zero-distance inputs are stationary.
-
-If $x^0\in U$ satisfies
-\begin{equation}
- \frac{d(x^0)}{(1-r)\sqrt{1-\mu^2}}
- <\dist(x^0,U^c),
- \label{eq:parameters-local-start}
+若 $x^0\in U$ 且
+\begin{equation}\label{eq:parameters-local-start}
+ \frac{d(x^0)}{(1-r)\sqrt{1-\mu^2}}<\dist(x^0,U^c),
 \end{equation}
-then, for every sequence $\lambda_k\ge\lambda_*(r)$,
-every admissible choice
-$x^{k+1}\in\mathcal J_{\lambda_k}(x^k)$ can be continued
-indefinitely, remains in $U$, and converges to a point
-$x^\infty\in S\cap U$. Moreover,
-\begin{equation}
+则任取 $\lambda_k\ge\lambda_*(r)$ 和
+$x^{k+1}\in\mathcal J_{\lambda_k}(x^k)$，迭代可无限续接、始终留在 $U$，
+并收敛于某个 $x^\infty\in S\cap U$，且
+\begin{equation}\label{eq:parameters-variable-tail}
  d(x^k)\le r^k d(x^0),\qquad
- \sum_{j=k}^\infty\norm{x^{j+1}-x^j}
+ \sum_{j=k}^{\infty}\norm{x^{j+1}-x^j}
  \le\frac{d(x^k)}{(1-r)\sqrt{1-\mu^2}}.
- \label{eq:parameters-variable-tail}
 \end{equation}
-If continuity and \eqref{eq:parameters-raw-angle} hold
-globally, with all $y\in\R^n$ and all $p\in S$, then each
-full $J_\lambda$ is everywhere nonempty. Taking
-$\mathcal J_\lambda=J_\lambda$, the same convergence and
-tail conclusions hold for every initial point, without
-\eqref{eq:parameters-local-start}.
+若连续性及~\eqref{eq:parameters-raw-angle} 全局成立，则可取完整关系
+$\mathcal J_\lambda=J_\lambda$，上述结论对任意初值成立，无需~\eqref{eq:parameters-local-start}。
 \end{theorem}
 
 \begin{proof}
-We first prove coverage independently of the residual
-inequality. Fix $\lambda>0$ and consider
-$H_\tau(y)=y+\tau\lambda F(y)$, $0\le\tau\le1$.
-For $y\in\partial V$, apply the angle inequality with
-$p=p_0$ and set $h=\tau\lambda\norm{F(y)}$. Then
-\begin{align*}
- \norm{H_\tau(y)-p_0}^2
- &\ge R_0^2+h^2-2\mu R_0h\\
- &=(h-\mu R_0)^2+(1-\mu^2)R_0^2
+先证存在性。对 $H_\tau(y)=y+\tau\lambda F(y)$，在 $\partial V$ 上用 $p=p_0$
+并记 $h=\tau\lambda\norm{F(y)}$，有
+\[
+ \norm{H_\tau(y)-p_0}^2\ge R_0^2+h^2-2\mu R_0h
  \ge(1-\mu^2)R_0^2.
-\end{align*}
-For every $x$ with
-$\norm{x-p_0}<\sqrt{1-\mu^2}R_0$, this homotopy avoids
-$x$ on $\partial V$. Homotopy invariance of Brouwer degree
-therefore gives
-\[
- \deg(H_1-x,B(p_0,R_0),0)
- =\deg(I-x,B(p_0,R_0),0)=1.
 \]
-It follows that $H_1(y)=x$ has a root in $B(p_0,R_0)$.
-This proves coverage on the same input ball for every
-$\lambda>0$.
+故对 $\norm{x-p_0}<\sqrt{1-\mu^2}R_0$，同伦在边界避开 $x$。
+Brouwer 度的同伦不变性给出
+$\deg(H_1-x,B(p_0,R_0),0)=\deg(I-x,B(p_0,R_0),0)=1$，
+从而球内有根，且输入邻域与 $\lambda$ 无关。
 
-Now fix any admissible step from $x\in U$. Every nearest
-point $p_x\in P_S(x)$ satisfies
-\[
- \norm{p_x-p_0}\le d(x)+\norm{x-p_0}
- \le2\norm{x-p_0}<R_0,
-\]
-so the angle inequality applies to $y$ and $p_x$. Write
-$b=\norm{y-p_x}$, $s=\norm{x-y}$, $t=d(x)$ and $a=d(y)$.
-Since $x-y=\lambda F(y)$,
-\begin{equation}
+对 $x\in U$，每个 $p_x\in P_S(x)$ 满足
+$\norm{p_x-p_0}\le2\norm{x-p_0}<R_0$。
+记 $b=\norm{y-p_x}$、$s=\norm{x-y}$、$t=d(x)$、$a=d(y)$，则
+\begin{equation}\label{eq:parameters-angle-energy}
  t^2\ge b^2+s^2-2\mu bs
  =(b-\mu s)^2+(1-\mu^2)s^2.
- \label{eq:parameters-angle-energy}
 \end{equation}
-This proves the step bound in
-\eqref{eq:parameters-common-estimates}; if $t=0$ it also
-proves $s=0$ and hence stationarity.
-
-For $a>0$, put $h=s/a$. The residual inequality gives
-$h\ge\lambda/\ell$, and $b/a\ge1$. Minimizing the right
-side of \eqref{eq:parameters-angle-energy} over $b/a\ge1$
-yields
+这已给出步长上界，并在 $t=0$ 时保证驻定。
+当 $a>0$ 时，$h=s/a\ge\lambda/\ell$、$b/a\ge1$。
+将右端对 $b/a\ge1$ 最小化，得
 \[
  \frac{t^2}{a^2}\ge f(h):=
- \begin{cases}
- 1+h^2-2\mu h,&\mu h\le1,\\
- (1-\mu^2)h^2,&\mu h\ge1.
- \end{cases}
+ \begin{cases}1+h^2-2\mu h,&\mu h\le1,\\
+ (1-\mu^2)h^2,&\mu h\ge1.\end{cases}
 \]
-The function is nondecreasing for $h\ge\mu$. Since
-$f(\mu)=1-\mu^2<r^{-2}$, the solution of
-$f(h)=r^{-2}$ on that increasing part is larger than
-$\mu$. Solving on the first branch gives
-$h=\mu+\sqrt{\mu^2+r^{-2}-1}$; this belongs to that
-branch exactly when
-$\mu\le r/\sqrt{1+r^2}$. On the second branch the solution
-is $h=1/(r\sqrt{1-\mu^2})$. Thus
-$\lambda\ge\lambda_*(r)$ implies $t^2/a^2\ge r^{-2}$,
-as required. The case $a=0$ needs no division and already
-satisfies the conclusion.
+$f$ 在 $h\ge\mu$ 上非减，解 $f(h)=r^{-2}$ 即得
+\eqref{eq:parameters-raw-threshold} 的两支；两式在交点相等。
+故 $\lambda\ge\lambda_*(r)$ 给出 $a\le rt$；$a=0$ 时结论显然。
 
-For the trajectory assertion put $C=(1-\mu^2)^{-1/2}$
-and $t_k=d(x^k)$. As long as the current input belongs
-to $U$, coverage gives an admissible output and
-\eqref{eq:parameters-common-estimates} gives
-$t_{k+1}\le rt_k$ and $s_k\le Ct_k$. Every finite
-prefix therefore has total length at most
-$Ct_0/(1-r)$. By \eqref{eq:parameters-local-start} this
-keeps its next point in $U$. Induction proves continuation
-and invariance for every sequence of choices and parameters.
-Summing the geometric series from index $k$ proves
-\eqref{eq:parameters-variable-tail}. Finite length gives a
-Cauchy sequence; closedness of $S$ and $t_k\to0$ put its
-limit in $S$. The strict inequality in
-\eqref{eq:parameters-local-start} also puts that limit
-inside $U$.
-
-Under the global assumptions, fix $p_0\in S$ and any input
-$x$. Choose $R_0$ sufficiently large that
-$\norm{x-p_0}<\sqrt{1-\mu^2}R_0$ and apply the same
-boundary argument. This proves full coverage. The step
-estimates apply to every nearest input anchor without a
-location restriction, so the same summation proves the
-global assertion.
+令 $C=(1-\mu^2)^{-1/2}$。每个输入仍在 $U$ 的有限迭代段均有
+$t_{k+1}\le rt_k$、$s_k\le Ct_k$，因此连同最后输出在内，总长度不超过
+$Ct_0/(1-r)$。由~\eqref{eq:parameters-local-start}，最后输出仍在 $U$。
+逐步归纳即得无限续接与留域；从任意第 $k$ 步求和得
+\eqref{eq:parameters-variable-tail}。有限长度保证柯西性，$t_k\to0$ 与 $S$ 闭
+保证极限在 $S$，严格初值不等式保证极限在 $U$。
+全局情形对任意输入选足够大的 $R_0$ 重复上述度论证明，
+得到完整近端关系处处非空，再应用同样的估计即可。
 \end{proof}
 
-One can also obtain a parameter range directly from DD1.
-Indeed, \eqref{eq:parameters-angle-energy} implies
+上述原算子条件也能直接接入 DD1。由~\eqref{eq:parameters-angle-energy}，
+$t^2\ge2(1-\mu)bs$，从而
 \[
- t^2\ge2(1-\mu)bs,\qquad
  \ip{x-y}{y-p_x}\ge-\mu bs
- \ge-\sigma_\mu t^2,
- \qquad \sigma_\mu=\frac{\mu}{2(1-\mu)}.
+ \ge-\frac{\mu}{2(1-\mu)}t^2.
 \]
-Together with $a\le\ell s/\lambda$, this allows the use of
-Proposition~\ref{prop:parameters-dd1} with the common
-coefficient $\sigma_\mu$. Retaining the original angle
-can give a smaller sufficient threshold. For example, at
-$\ell=1$, $\mu=4/5$ and $r=9/10$,
-\eqref{eq:parameters-raw-threshold} gives $50/27$, whereas
-\eqref{eq:parameters-linear-target} with $\sigma_\mu=2$
-gives $20/9$. This compares two guarantees from the same
-original data; it does not identify the best parameter for
-each fixed operator.
-
-Theorem~\ref{thm:parameters-variable} allows an arbitrary
-choice $\lambda_k\ge\lambda_*(r)$ at each iteration. Its
-convergence conclusion uses uniform decrease and a uniform
-step estimate. Choosing an optimal parameter from observable
-data is a separate problem.
-
-\begin{example}[Strict decrease at each step and total length]
-\label{ex:parameters-variable-rotation}
-Let $F=Q$ in $\R^2$, where $Q$ is rotation through $\pi/2$,
-and let $S=\{0\}$. Every proximal root is unique and
-\[
- t_{k+1}=\frac{t_k}{\sqrt{1+\lambda_k^2}},\qquad
- s_k=\lambda_k t_{k+1}.
-\]
-If $\lambda_k=(k+1)^{-1/2}$, then
-$t_k=t_0/\sqrt{k+1}$ and
-\[
- s_k=\frac{t_0}{\sqrt{(k+1)(k+2)}}.
-\]
-Thus the trajectory converges to zero while its length is
-infinite. If instead $\sum_k\lambda_k^2<\infty$, then
-\[
- t_k=t_0\prod_{j<k}(1+\lambda_j^2)^{-1/2}
-\]
-has a positive limit for $t_0>0$: the logarithm of the
-product converges because
-$0\le\log(1+\lambda_j^2)\le\lambda_j^2$. Every step
-still strictly decreases the positive distance. These
-sequences do not have the positive parameter lower bound
-required for a fixed $r<1$ in
-Theorem~\ref{thm:parameters-variable}.
-\end{example}
+将共同系数 $\sigma=\mu/[2(1-\mu)]$ 代入
+\eqref{eq:parameters-linear-target} 即可选参；保留角度信息则得到
+\eqref{eq:parameters-raw-threshold}。这些结果允许逐步选择参数，
+并未给出每个固定算子的最优参数。

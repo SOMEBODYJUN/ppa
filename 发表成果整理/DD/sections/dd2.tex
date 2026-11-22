@@ -1,398 +1,254 @@
-\section{DD2: general residual regularity}\label{sec:dd2}
+\section{DD2：一般函数补偿}\label{sec:dd2}
 
-The linear error bound in DD1 can be replaced by a general function of the residual. The distance reduction is then described by a function~$\varphi(t)<t$, rather than by a fixed multiple of~$t$. The same geometry gives an explicit relation between~$\varphi$, the residual bound and the signed lower bound on the inner product.
+本节将线性残差界推广为一般函数界，并把统一收缩比例改为指定下降函数
+$\varphi(t)<t$。先给出分段补偿关系，再讨论距离下降与实际长度之间的联系。
 
-\subsection{The piecewise compensation formula}
+\subsection{三段补偿定理}
 
-Fix~$\lambda>0$, a nonempty closed set~$S\subseteq\zer F$ and~$R>0$. As before, write~$d(x)=\dist(x,S)$. Let~$\mathcal J(x)\subseteq J_\lambda(x)$ be the permitted proximal relation. Suppose that, for every proximal step under consideration,
+沿用前节的记号。设 $\Phi:[0,R]\to\R$ 有限且 $\Phi(0)=0$，
+$\psi:D_\psi\to[0,\infty)$ 有限，$0\in D_\psi\subseteq[0,\infty)$。
+在所讨论的每个允许近端对上，设
 \begin{equation}\label{eq:dd2-assumptions}
- \begin{split}
- &y\in\mathcal J(x),\qquad
- t=d(x),\quad a=d(y),\quad s=\norm{x-y},\quad \rho=r_F(y),\\
- &\rho\in D_\psi,\qquad a\le\psi(\rho),\qquad
+ \begin{gathered}
+ y\in\mathcal J(x)\subseteq J_\lambda(x),\quad
+ t=d(x),\quad a=d(y),\quad s=\norm{x-y},\quad \rho=r_F(y)\in D_\psi,\\
+ a\le\psi(\rho),\qquad
  \exists p\in P_S(x):\quad \ip{x-y}{y-p}\ge\Phi(t).
- \end{split}
+ \end{gathered}
 \end{equation}
-Here~$\Phi:[0,R]\to\R$ is finite, with~$\Phi(0)=0$, and~$\psi:D_\psi\to[0,\infty)$ is finite, where~$0\in D_\psi\subseteq[0,\infty)$. No monotonicity of~$\psi$ is assumed in the following theorem. In particular,~$\psi(\rho)$ is evaluated at the true residual; it is not replaced by~$\psi(s/\lambda)$.
-
-Let~$\varphi:[0,R]\to[0,R]$ satisfy~$\varphi(0)=0$ and~$0\le\varphi(t)<t$ for~$t>0$. Define
+此处不预设 $\psi$ 单调，不能将 $\psi(\rho)$ 换成 $\psi(s/\lambda)$。
+指定 $\varphi:[0,R]\to[0,R]$，满足 $\varphi(0)=0$、
+$0\le\varphi(t)<t$（$t>0$），并记
 \begin{equation}\label{eq:dd2-normalization}
- r(t)=\frac{\varphi(t)}{t},\qquad
- z(t)=\frac{\lambda}{t}\inf\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\},
- \qquad \sigma(t)=-\frac{\Phi(t)}{t^2}.
+ r(t)=\frac{\varphi(t)}t,\qquad
+ z(t)=\frac{\lambda}{t}\inf\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\}.
 \end{equation}
-The infimum of the empty set is~$+\infty$. For~$0\le r<1$ and finite~$z\ge0$, set
+对 $0\le r<1$，定义
 \begin{equation}\label{eq:dd2-sigma}
- \boxed{\displaystyle
- \Sigma(r,z)=
+ \boxed{\Sigma(r,z)=
  \begin{cases}
- \dfrac{r^2+z^2-1}{2},&1-r\le z\le1+r,\\[5pt]
- z(z-1),&z>1+r,\\[2pt]
- r(r-1),&0\le z<1-r,\quad r\ge\dfrac12.
+ (r^2+z^2-1)/2,&1-r\le z\le1+r,\\
+ z(z-1),&z>1+r,\\
+ r(r-1),&0\le z<1-r,\quad r\ge1/2.
  \end{cases}}
 \end{equation}
-The remaining region~$r<1/2$,~$z<1-r$ is excluded from its domain.
+不在区域 $r<1/2,\ z<1-r$ 内定义 $\Sigma$。
 
 \begin{theorem}[DD2]\label{thm:dd2}
-Suppose~\eqref{eq:dd2-assumptions} holds for every permitted step whose input distance lies in~$[0,R]$. At each~$t\in(0,R]$ with~$z(t)<\infty$, suppose~$(r(t),z(t))$ belongs to the domain of~$\Sigma$ and
+假设输入距离在 $[0,R]$ 内的每个允许近端对满足~\eqref{eq:dd2-assumptions}。
+对每个 $t>0$，若 $z(t)<\infty$，要求 $(r(t),z(t))$ 属于 $\Sigma$ 的定义域，且
 \begin{equation}\label{eq:dd2-condition}
- \boxed{\displaystyle -\frac{\Phi(t)}{t^2}\le
- \Sigma\!\left(\frac{\varphi(t)}t,
+ \boxed{-\frac{\Phi(t)}{t^2}\le
+ \Sigma\left(\frac{\varphi(t)}t,\
  \frac{\lambda}{t}\inf\{\rho\in D_\psi:\psi(\rho)>\varphi(t)\}\right).}
 \end{equation}
-There is one endpoint qualification: if~$z(t)>1+r(t)$ and the finite infimum in~\eqref{eq:dd2-normalization} belongs to the strict superlevel set defining it, require a strict inequality in~\eqref{eq:dd2-condition}. If~$z(t)=\infty$, no compensation inequality is needed at that distance. Then every permitted step satisfies
+仅有下述端点例外：在 $z(t)>1+r(t)$ 时，若式~\eqref{eq:dd2-normalization}
+中的有限下确界属于所定义的严格超水平集，则式~\eqref{eq:dd2-condition}须用严格不等号。
+若 $z(t)=\infty$，不需要该尺度的补偿条件。于是
 \begin{equation}\label{eq:dd2-conclusions}
  d(y)\le\varphi(d(x)),\qquad
  \norm{x-y}\le B_\Phi(d(x)),\qquad
  B_\Phi(t)=\frac{t+\sqrt{t^2-4\Phi(t)}}2.
 \end{equation}
-The square root is real at every distance at which a permitted step exists. At~$t=0$ the output equals the input, and~$B_\Phi(0)=0$.
+有近端对存在的尺度上根号自动有定义；输入距离为零时 $y=x$。
 \end{theorem}
 
 \begin{proof}
-Choose the nearest point~$p$ furnished by~\eqref{eq:dd2-assumptions}. Since~$\lambda r_F(y)\le s$, expansion of~$\norm{x-p}^2$ gives
+由同一最近点展开，得
 \begin{equation}\label{eq:dd2-basic}
  a^2+s^2\le t^2-2\Phi(t),\qquad
- s^2+\norm{y-p}^2\le t^2-2\Phi(t),\qquad
- \norm{y-p}\ge|t-s|.
+ s^2+\norm{y-p}^2\le t^2-2\Phi(t),\qquad \lambda\rho\le s.
 \end{equation}
-Consequently~$s^2-ts+\Phi(t)\le0$, so~$s\le B_\Phi(t)$. Interchanging the two side lengths in the same argument also gives~$\norm{y-p}\le B_\Phi(t)$. If~$t=0$, then~$p=x$ and~$-s^2\ge\Phi(0)=0$, which proves stationarity.
-
-Fix~$t>0$ and abbreviate~$c=\varphi(t)$,~$\phi=\Phi(t)$ and~$q=tz(t)$. Suppose, to obtain a contradiction, that~$a>c$. The error bound implies~$\psi(\rho)>c$, and hence~$s\ge\lambda\rho\ge q$. If~$q=\infty$ there is already a contradiction. For finite~$q$, three sufficient ways to exclude this step are
-\begin{align}
- &c\ge t/2,\qquad \phi\ge c(t-c),\label{eq:dd2-root-a}\\
- &\phi\ge(t^2-c^2-q^2)/2,\label{eq:dd2-energy-test}\\
- &q\ge t/2,\qquad
- \phi>q(t-q)\ \text{or}\ 
- \bigl[\phi=q(t-q),\ q/\lambda\notin\{\psi>c\}\bigr].
- \label{eq:dd2-root-s}
-\end{align}
-Indeed,~\eqref{eq:dd2-root-a} implies~$B_\Phi(t)\le c$ and hence~$a\le c$. Condition~\eqref{eq:dd2-energy-test} contradicts~$a^2+s^2>c^2+q^2$. In~\eqref{eq:dd2-root-s}, a strict inequality gives~$B_\Phi(t)<q$, contradicting~$s\ge q$. At equality,~$B_\Phi(t)=q$; exclusion of the first point of the superlevel set forces~$s\ge\lambda\rho>q$.
-
-To compare these three conditions, divide their thresholds by~$t^2$ and put~$r=c/t$,~$z=q/t$. The thresholds are~$A=r(1-r)$,~$E=(1-r^2-z^2)/2$ and~$C=z(1-z)$, with the restrictions shown in~\eqref{eq:dd2-root-a}--\eqref{eq:dd2-root-s}. Their differences are
-\begin{equation}\label{eq:dd2-switch}
+引理~\ref{dd1:geometry} 给出 $s,\norm{y-p}\le B_\Phi(t)$，
+并由 $\Phi(0)=0$ 得零输入驻定。
+固定 $t>0$，记 $c=\varphi(t)$、$\phi=\Phi(t)$、
+$q=\lambda\inf\{\psi>c\}$。若 $a>c$，则 $\psi(\rho)>c$，从而 $s\ge\lambda\rho\ge q$。
+$q=\infty$ 时已不可能；有限时，以下任一条件均可排除该步：
+\[
+ \begin{array}{ll}
+ c\ge t/2,\quad \phi\ge c(t-c),& B_\Phi(t)\le c;\\
+ \phi\ge(t^2-c^2-q^2)/2,& a^2+s^2>c^2+q^2;\\
+ q\ge t/2,\quad \phi>q(t-q),& B_\Phi(t)<q.
+ \end{array}
+\]
+第三行在 $\phi=q(t-q)$ 时，若 $q/\lambda\notin\{\psi>c\}$，
+仍有 $s\ge\lambda\rho>q=B_\Phi(t)$。
+将三个下界除以 $t^2$，写成
+$A=r(1-r)$、$E=(1-r^2-z^2)/2$、$C=z(1-z)$。由
+\[
  A-E=\frac{z^2-(1-r)^2}{2},\qquad
- C-E=\frac{r^2-(z-1)^2}{2}.
-\end{equation}
-Thus the least applicable threshold is~$E$ for~$1-r\le z\le1+r$,~$C$ for~$z>1+r$, and~$A$ for~$z<1-r$ with~$r\ge1/2$. Reversing the sign gives~\eqref{eq:dd2-sigma}. At~$z=1\pm r$ the energy condition includes equality, so the sole strict endpoint is the one specified in the theorem.
+ C-E=\frac{r^2-(z-1)^2}{2}
+\]
+比较适用的最小下界，依次得到式~\eqref{eq:dd2-sigma}的三支。
+$z=1\pm r$ 处由第二行包含等号，故唯一严格端点正如定理所述。
 \end{proof}
 
-The first branch combines the inner product with the residual bound through the squared distance identity. The second uses the largest possible step length. The third uses the largest possible distance to the same nearest input point; its negative value permits a positive lower bound~$\Phi$. Keeping this third branch retains information that would disappear if~$\Phi$ were replaced everywhere by~$-[-\Phi]_+$.
+第一支来自平方距离恒等式，第二支来自步长上界，第三支利用正的锚定下界。
+$\Phi$ 保留符号，第三支的信息才能保留。
+若 $D_\psi=[0,\infty)$，且 $\psi$ 连续、严格递增、无界并满足 $\psi(0)=0$，则
+$z(t)=\lambda\psi^{-1}(\varphi(t))/t$。
+取 $\psi(\rho)=\ell\rho$、$\Phi\le0$，即恢复 DD1 的两支公式。
 
-For a continuous nondecreasing function~$\psi:[0,\infty)\to[0,\infty)$, the strict endpoint qualification never affects the second branch. If~$\psi$ is also strictly increasing and unbounded, with~$\psi(0)=0$, then
-\begin{equation}\label{eq:dd2-inverse}
- z(t)=\frac{\lambda\psi^{-1}(\varphi(t))}{t}.
-\end{equation}
-In particular,~$\psi(\rho)=\ell\rho$ gives~$z=r/L$, where~$L=\ell/\lambda$. With~$\Phi\le0$, the first two branches recover exactly the DD1 function~$\Sigma_L$.
-
-The next proposition gives the optimal bound when~$F$,~$S$ and the single tested proximal step may vary. Only that step is required to satisfy the two bounds.
-
-\begin{proposition}[Exact one-step compensation]\label{prop:dd2-exact}
-Fix~$n\ge2$,~$t,\lambda>0$, a finite~$\phi\le t^2/4$ and the function~$\psi$ on~$D_\psi$ as above. Put
-\begin{equation}\label{eq:dd2-exact-B}
- B=\frac{t+\sqrt{t^2-4\phi}}2,\qquad
- E=t^2-2\phi,\qquad \alpha=(t-B)_+.
-\end{equation}
-Among all choices of~$F,S,x,y$ satisfying~\eqref{eq:dd2-assumptions} at this one step with~$\Phi(t)=\phi$, a step exists if and only if
-\begin{equation}\label{eq:dd2-nonempty}
- \exists\rho\in D_\psi:\quad \lambda\rho\le B,\quad
- \psi(\rho)\ge\alpha.
-\end{equation}
-If this class is nonempty, its least common upper bound on~$d(y)$ is
-\begin{equation}\label{eq:dd2-exact-M}
- M_{\phi,\psi}(t)=
- \sup_{\substack{\rho\in D_\psi\\\lambda\rho\le B}}
- \min\{\psi(\rho),B,\sqrt{E-\lambda^2\rho^2}\}.
-\end{equation}
-For a prescribed~$0\le c<t$, the condition~$M_{\phi,\psi}(t)\le c$ is equivalent to~\eqref{eq:dd2-condition}, with~$r=c/t$,~$z=(\lambda/t)\inf\{\psi>c\}$ and the stated endpoint qualification. If~$z=\infty$, it is automatic. In the excluded region~$r<1/2$,~$z<1-r$, no nonempty class has this uniform conclusion. These assertions do not give a necessary condition for an individually fixed operator.
-\end{proposition}
-
-\begin{proof}
-Write~$u=\lambda\rho$. For a fixed~$\rho\in D_\psi$, the admissible values of~$a$ are precisely those satisfying
-\begin{equation}\label{eq:dd2-exact-row}
- 0\le u\le B,\qquad
- \alpha\le a\le\min\{B,\sqrt{E-u^2}\},\qquad
- a\le\psi(\rho),\qquad a=0\ \Longrightarrow\ \rho=0.
-\end{equation}
-Here is a direct verification, including the nearest points and the true residual. Distances and residuals require~$s\ge|t-a|$ and~$s\ge u$. For given~$t,a,s$, the smallest possible distance from the output to a nearest input point is~$h=\max\{a,|t-s|\}$. It can be attained by a triangle with vertices~$x,y,p$ and side lengths~$t,s,h$. The triangle inequalities hold whenever~$s\ge|t-a|$. The squared distance identity permits it if and only if~$s^2+h^2\le E$. On the half-line~$s\ge|t-a|$, the function
-\begin{equation*}
- s^2+\max\{a^2,(t-s)^2\}
- =s^2+\max\{a^2,(s-t)_+^2\}
-\end{equation*}
-is strictly increasing. Its minimum under~$s\ge u$ is attained at~$s=\max\{|t-a|,u\}$ and equals
-\begin{equation}\label{eq:dd2-exact-cost}
- \max\{a^2+(t-a)^2,\ a^2+u^2,\ u^2+(u-t)_+^2\}.
-\end{equation}
-Solving these three quadratic inequalities gives exactly the first two conditions of~\eqref{eq:dd2-exact-row}.
-
-To realize the distances in~$\R^2$, take the triangle above. If~$h=a$, use~$S=\{p\}$. If~$h>a$, then~$s>0$; add~$p'=y+(a/s)(y-x)$ and set~$S=\{p,p'\}$. One has~$\norm{y-p'}=a$ and~$\norm{x-p'}=s+a\ge t$. Thus~$p\in P_S(x)$ and~$d(y)=a$. Let a relation~$J$ consist of the graph of~$P_S$ together with the pair~$(x,y)$. If~$a>0$ and~$u<s$, add a further pair~$(y+u e,y)$, with~$e$ any unit vector. Set~$F=\lambda^{-1}(J^{-1}-I)$. Since a positive-distance output is not a projection value, its only preimages are the ones added. Its true residual is therefore exactly~$u/\lambda$. If~$a=0$, the projection relation supplies the zero residual, as required. This construction has a closed graph and a globally nonempty resolvent, but only the specified step is being tested.
-
-The lower endpoint for~$a$ in~\eqref{eq:dd2-exact-row} is~$\alpha$. Since~$E-B^2=(B-t)^2$, if~$u\le B$ and~$\psi(\rho)\ge\alpha>0$, the value~$a=\alpha$ is feasible. If~$\alpha=0$, the choice~$\rho=a=0$ is feasible because~$0\in D_\psi$. This proves~\eqref{eq:dd2-nonempty}. Taking the supremum of the upper endpoints gives~\eqref{eq:dd2-exact-M}. Values~$\psi(\rho)<\alpha$ contribute less than~$\alpha$ and therefore cannot change this supremum when the class is nonempty. An excluded zero endpoint with~$\rho>0$ also cannot change it, since zero is already feasible when~$\alpha=0$.
-
-Let~$q=\lambda\inf\{\psi>c\}$ and, when finite, let~$e=1$ if~$q/\lambda$ belongs to this strict superlevel set, and~$e=0$ otherwise. Formula~\eqref{eq:dd2-exact-M} gives
-\begin{equation}\label{eq:dd2-exact-bad}
- M_{\phi,\psi}(t)>c
- \quad\Longleftrightarrow\quad
- B>c,\quad E>c^2+q^2,\quad
- \bigl(q<B\ \text{or}\ [q=B,\ e=1]\bigr).
-\end{equation}
-For~$q<B$, the defining infimum supplies a member of the superlevel set below both~$B$ and~$\sqrt{E-c^2}$. For~$q=B$, its first point must belong to the set. Conversely, a term of~\eqref{eq:dd2-exact-M} strictly above~$c$ implies these three conditions. Negating~\eqref{eq:dd2-exact-bad} gives precisely the union of~\eqref{eq:dd2-root-a}--\eqref{eq:dd2-root-s}. Comparing their thresholds as in~\eqref{eq:dd2-switch} proves the three branches and the endpoint qualification.
-
-To check the remaining region,~$c<t/2$ and~$q<t-c$. If~$\phi>c(t-c)$, every~$a\le c$ violates the first term of~\eqref{eq:dd2-exact-cost}, so a nonempty class cannot satisfy the target. If~$\phi\le c(t-c)$, choose a residual in~$\{\psi>c\}$ with~$\lambda\rho<t-c$, and then choose~$a>c$ sufficiently close to~$c$ that~$a<t/2$,~$a<\psi(\rho)$ and~$\lambda\rho<t-a$. The collinear choice~$s=t-a$,~$h=a$ has inner product~$a(t-a)>c(t-c)\ge\phi$ and is realized by the same construction. It is a step violating the target.
-\end{proof}
-
-There is a useful converse way to read the same geometry. Fix~$t>0$ and~$\phi=\Phi(t)\le t^2/4$, and write
-\begin{equation}\label{eq:dd2-dual-parameters}
- B=\frac{t+\sqrt{t^2-4\phi}}2,\qquad
- E=t^2-2\phi,\qquad \alpha=(t-B)_+.
-\end{equation}
-For a target~$\alpha\le c<B$, the residual condition
+固定锚定下界后，也可反求残差正则性条件。固定 $t>0$、$\phi=\Phi(t)\le t^2/4$，
+记 $E=t^2-2\phi$、$B=B_\Phi(t)$。给定 $(t-B)_+\le c<B$，
+若
 \begin{equation}\label{eq:dd2-dual-cap}
  \psi(\rho)\le c\quad
- \text{for every }\rho\in D_\psi
- \text{ with }\lambda\rho\le B,\quad
- \lambda\rho<\sqrt{E-c^2}
+ \text{对所有 }\rho\in D_\psi\text{ 满足 }\lambda\rho\le B,\
+ \lambda\rho<\sqrt{E-c^2},
 \end{equation}
-guarantees~$a\le c$. A step violating that conclusion would have a residual in the displayed set by~\eqref{eq:dd2-basic}. This form answers the second compensation question directly: a specified inner product lower bound determines which small residual values must imply an output distance at most~$c$. The energy endpoint is open and the step length endpoint is closed.
+则 $a\le c$。否则 $a>c$ 与式~\eqref{eq:dd2-basic}会使实际残差恰落在所列区域，
+矛盾。这就由给定的锚定下界确定了残差正则性所需满足的条件。
 
-\begin{remark}[Scope of the compensation formulas]\label{rem:dd2-scope}
-The one-step converse in Proposition~\ref{prop:dd2-exact} does not assert necessity for a class whose complete proximal relation must satisfy the same positive~$\Phi$ at every input. The auxiliary preimage in its construction need not satisfy that condition. The forward estimates apply to every permitted step, and whole trajectories require the additional existence and summability hypotheses below.
-\end{remark}
+\subsection{一般函数的扩张与长度边界}
 
-\begin{example}[Positive anchoring]\label{ex:dd2-positive-anchor}
-Let~$\lambda=1$,~$F(y)=y/3$ on~$\R^n$ and~$S=\{0\}$. The complete resolvent is~$J_1(x)=3x/4$. Its true residual is~$\rho=t/4$, and the anchored inner product is~$3t^2/16$. Take~$\psi(\rho)=4\rho$,~$\Phi(t)=3t^2/16$ and~$\varphi(t)=3t/4$. Then~$r=3/4$ and~$z=3/16<1-r$. The third branch gives
-\begin{equation*}
- -\frac{\Phi(t)}{t^2}=-\frac3{16}=r(r-1),
-\end{equation*}
-and the target is attained by every step. Replacing the positive lower bound~$\Phi$ by zero would lose this conclusion from these residual data.
+\begin{example}[次线性收敛]\label{ex:dd2-rotation}
+令 $Q(u,v)=(-v,u)$，取 $1<m<2$，定义
+\[
+ F(y)=\norm y^{m-1}Qy,\qquad S=\{0\},\qquad \lambda=1.
+\]
+每个输入 $x$ 有唯一输出：$a\ge0$ 由 $t^2=a^2+a^{2m}$ 确定，且
+\[
+ y=\frac{I-a^{m-1}Q}{1+a^{2m-2}}x,\qquad
+ r_F(y)=s=a^m,\qquad a=r_F(y)^{1/m},\qquad \ip{x-y}{y}=0.
+\]
+半径方程的右侧连续严格递增且无界，故确实给出完整预解式。
+取 $\Phi=0$、$\psi(\rho)=\rho^{1/m}$，以半径方程的逆函数为 $\varphi$。
+此时 $r=a/t$、$z=a^m/t$，有 $r^2+z^2=1$，
+故 $1-r<z<1+r$，DD2 第一支取等。
+
+所有实际半径递减趋零。记 $\nu=2m-2$，由半径递推得
+\[
+ t_{k+1}^{-\nu}-t_k^{-\nu}\longrightarrow\nu/2,\qquad
+ t_k\sim(\nu k/2)^{-1/\nu}.
+\]
+前式由 $(1+v)^{-\nu/2}=1-(\nu/2)v+o(v)$ 得到，后式由平均增量得到。
+因而收敛为次线性，且 $a/r_F(y)=a^{1-m}\to\infty$，
+不存在 DD1 所需的局部线性残差常数。
+它的有限长度将在本节末由耦合势推出。
 \end{example}
 
-The following example shows why the endpoint qualification is needed. Set~$t=\lambda=1$,~$\Phi(1)=-2$ and~$c=1/2$. The functions~$\psi_c=\mathbf1_{[2,\infty)}$ and~$\psi_o=\mathbf1_{(2,\infty)}$ have the same strict superlevel infimum~$2$ at height~$c$. Thus~$r=1/2$,~$z=2$ and~$-\Phi(1)=\Sigma(r,z)=2$. For~$\psi_c$, take~$S=\{0\}$,~$x=e_1$,~$y=-e_1$ and define~$F$ from~$J=P_S\cup\{(e_1,-e_1)\}$ as in the proof. The tested step has~$a=1>c$,~$s=\rho=2$ and anchored inner product~$-2$. For~$\psi_o$, every feasible step at that input distance has~$\rho\le s\le B=2$, so its error bound forces~$a=0$. The membership of the infimum in the strict superlevel set therefore cannot be omitted.
-
-\subsection{Nonlinear convergence and an infinite length boundary}
-
-We first give an operator for which general residual regularity yields finite length without a uniform geometric rate. The example also separates DD2 from the linear residual hypothesis of DD1.
-
-\begin{example}[Finite length without geometric convergence]\label{ex:dd2-rotation}
-Let~$Q(u,v)=(-v,u)$, fix~$1/2<q<1$ and~$K>0$, and put~$m=1/q\in(1,2)$. Define a continuous single valued operator on~$\R^2$ by
-\begin{equation}\label{eq:dd2-rotation-F}
- F(y)=K^{-1/q}\norm{y}^{m-1}Qy,\qquad F(0)=0.
-\end{equation}
-For any fixed~$\lambda>0$, set~$c=\lambda K^{-1/q}$ and~$\nu=2m-2$. The zero set is~$\{0\}$. Every input has a unique proximal output: its norm~$a$ is the unique nonnegative solution of
-\begin{equation}\label{eq:dd2-rotation-radius}
- t^2=a^2+c^2a^{2m},
-\end{equation}
-and the output itself is
-\begin{equation}\label{eq:dd2-rotation-J}
- y=\frac{I-ca^{m-1}Q}{1+c^2a^{2m-2}}\,x.
-\end{equation}
-The function~$a\mapsto\sqrt{a^2+c^2a^{2m}}$ is continuous, strictly increasing and onto~$[0,\infty)$, which proves both existence and uniqueness, including possible outputs far from the origin. Moreover,
-\begin{equation}\label{eq:dd2-rotation-data}
- r_F(y)=K^{-1/q}a^m,\qquad
- a=K r_F(y)^q,\qquad s=ca^m,\qquad \ip{x-y}{y}=0.
-\end{equation}
-
-Choose~$R>0$ such that~$c^2R^\nu\le1$, and specify the target
-\begin{equation}\label{eq:dd2-rotation-target}
- \varphi(t)=\frac{t}{1+c^2t^\nu/4},\qquad 0\le t\le R.
-\end{equation}
-This target follows from~$\Phi=0$ and~$\psi(\rho)=K\rho^q$ through the first branch of~$\Sigma$. To verify this explicitly, let~$u=c^2t^\nu$,~$r=(1+u/4)^{-1}$ and~$z=\sqrt{u}\,r^m$. Then~$r\ge4/5$ and
-\begin{equation}\label{eq:dd2-rotation-sigma}
- r^2+z^2-1=ur^2\left(r^\nu-\frac12-\frac{u}{16}\right)>0,
- \qquad 1-r<z<1+r.
-\end{equation}
-Indeed~$r^\nu\ge r^2\ge16/25>9/16\ge1/2+u/16$, and~$z\ge(16/25)\sqrt u>u/4\ge1-r$. Thus~$\Sigma(r,z)>0=-\Phi(t)/t^2$.
-
-Every actual radius decreases, so all proximal steps remain in the initial ball. The radii tend to zero, since a positive limiting radius would contradict~\eqref{eq:dd2-rotation-radius}. To prove finite length directly, put~$\gamma=2-m>0$ and~$b_R=c(1+c^2R^\nu)^{-m/2}$. Equations~\eqref{eq:dd2-rotation-radius}--\eqref{eq:dd2-rotation-data} give~$s\ge b_Rt^m$. Concavity of~$v\mapsto v^{\gamma/2}$ therefore yields
-\begin{equation}\label{eq:dd2-rotation-length}
- t^\gamma-a^\gamma
- \ge\frac{\gamma}{2}t^{-m}(t^2-a^2)
- =\frac{\gamma}{2}t^{-m}s^2
- \ge\frac{\gamma b_R}{2}s.
-\end{equation}
-Summation proves finite length and convergence to zero.
-
-For a nonzero initial point, the recurrence gives
-\begin{equation}\label{eq:dd2-rotation-rate}
- t_{k+1}^{-\nu}-t_k^{-\nu}\longrightarrow\frac{\nu c^2}{2},
- \qquad
- t_k\sim\left(\frac{\nu c^2}{2}k\right)^{-1/\nu}.
-\end{equation}
-For the first limit, factor~$t_{k+1}^{-\nu}$ and use
-$(1+v)^{-\nu/2}=1-(\nu/2)v+o(v)$ at~$v=c^2t_{k+1}^{\nu}$. Averaging the increments proves the second limit. In particular,~$t_{k+1}/t_k\to1$, and no geometric upper bound holds. Also~$a/r_F(y)=K^{1/q}a^{1-m}\to\infty$ as~$y\to0$. Thus no finite linear residual constant, and no uniform distance contraction factor, can make this operator satisfy DD1 near zero at any fixed positive~$\lambda$.
-\end{example}
-
-\begin{example}[A defect of order less than two]\label{ex:dd2-shear}
-Take~$\lambda=1$ and~$F(u,v)=(-\sqrt{|v|},7v)$ on~$\R^2$. Its zero set is~$S=\R\times\{0\}$, and
-\begin{equation}\label{eq:dd2-shear}
+\begin{example}[低于二次阶的负缺陷]\label{ex:dd2-shear}
+取 $\lambda=1$、$F(u,v)=(-\sqrt{|v|},7v)$、$S=\R\times\{0\}$。直接解得
+\[
  J_1(\xi,\eta)=\left(\xi+\sqrt{|\eta|/8},\,\eta/8\right).
-\end{equation}
-Thus every input has exactly one output. For~$t=|\eta|$, the true residual and nearest point~$p=(\xi,0)$ satisfy
-\begin{equation}\label{eq:dd2-shear-data}
- a=\frac t8,\quad
- \rho^2=s^2=\frac t8+\frac{49t^2}{64},\quad
- \ip{x-y}{y-p}=-\frac t8+\frac{7t^2}{64}\ge-\frac t8.
-\end{equation}
-Consequently~$\psi(\rho)=\rho^2$ and~$\Phi(t)=-t/8$ are valid. On~$0<t\le1/8$, choose~$\varphi(t)=t/2$. Here~$r=1/2$,~$z=1/\sqrt{2t}\ge2>1+r$, and the second branch of~$\Sigma$ gives
-\begin{equation*}
- \Sigma(r,z)-\frac{1}{8t}
- =\frac{3}{8t}-\frac{1}{\sqrt{2t}}\ge0.
-\end{equation*}
-DD2 therefore applies to a negative defect of order~$t$, which has no bounded quadratic normalization. The explicit iteration also has finite length:~$|v_k|=|v_0|8^{-k}$, and the horizontal increments~$\sqrt{|v_k|/8}$ form a geometric series. This is a statement about the complete proximal relation, not a selected solution of the proximal equation.
+\]
+记 $t=|\eta|$，最近输入点为 $p=(\xi,0)$，则
+\[
+ a=t/8,\quad \rho^2=s^2=t/8+49t^2/64,\quad
+ \ip{x-y}{y-p}=-t/8+7t^2/64\ge-t/8.
+\]
+故 $\psi(\rho)=\rho^2$、$\Phi(t)=-t/8$ 有效。
+在 $0<t\le1/8$ 上取 $\varphi(t)=t/2$，则 $r=1/2$、
+$z=1/\sqrt{2t}>1+r$，且
+$\Sigma(r,z)-1/(8t)=3/(8t)-1/\sqrt{2t}\ge0$。
+DD2 因而允许不能由有界二次系数控制的负缺陷。
+实际纵坐标以 $8^{-k}$ 衰减，横向增量以 $8^{-k/2}$ 衰减，轨道有限长。
 \end{example}
 
-The next example shows why a one-step distance estimate does not by itself settle finite length.
-
-\begin{example}[Point convergence with infinite length]\label{ex:dd2-half}
-Let~$\lambda=1$ and~$F(y)=\norm{y}Qy$ on~$\R^2$. This is the endpoint~$m=2$ of~\eqref{eq:dd2-rotation-F}. Its complete proximal relation is single valued. For an input of norm~$t$, its output has norm
-\begin{equation}\label{eq:dd2-half-target}
- a=\varphi(t)=\frac{\sqrt2\,t}{\sqrt{1+\sqrt{1+4t^2}}},
- \qquad
- y=\frac{I-aQ}{1+a^2}\,x.
-\end{equation}
-One has~$r_F(y)=s=a^2$,~$a=\sqrt{r_F(y)}$,~$\ip{x-y}{y}=0$, and~$t^2=a^2+a^4$. Thus the first branch of~$\Sigma$ holds with equality for~$\Phi=0$ and~$\psi(\rho)=\sqrt\rho$.
-
-For every nonzero initial point, set~$u_k=t_k^{-2}$. The exact recurrence gives
-\begin{equation}\label{eq:dd2-half-recurrence}
- u_{k+1}-u_k=\frac{1}{1+t_{k+1}^2},\qquad s_k=t_{k+1}^2.
-\end{equation}
-The increments of~$u_k$ lie between~$(1+t_0^2)^{-1}$ and~$1$. Hence~$t_k\to0$, so the iterates converge to zero. But~$u_k\le u_0+k$, and therefore
-\begin{equation}\label{eq:dd2-half-length}
- s_k\ge\frac1{u_0+k+1},\qquad
- \sum_{k=0}^\infty s_k=\infty,\qquad
- \sum_{k=0}^\infty s_k^2=t_0^2.
-\end{equation}
-In fact~$t_k\sim k^{-1/2}$ and~$s_k\sim k^{-1}$. This example concerns the general-function distance conclusion of DD2; it does not satisfy the finite length hypotheses below or the uniform DD1 hypotheses.
+\begin{example}[点收敛而无限长]\label{ex:dd2-half}
+取上一旋转族的端点 $m=2$，即 $F(y)=\norm y\,Qy$。
+仍有 $\Phi=0$、$\psi(\rho)=\sqrt\rho$，DD2 第一支取等，且
+\[
+ t^2=a^2+a^4,\qquad s=a^2,\qquad
+ u_{k+1}-u_k=\frac1{1+t_{k+1}^2},\quad u_k=t_k^{-2}.
+\]
+非零初值的半径趋零，故 $x^k\to0$。但 $u_k\le u_0+k$，所以
+\[
+ s_k=t_{k+1}^2\ge\frac1{u_0+k+1},\qquad
+ \sum_{k=0}^\infty s_k=\infty.
+\]
+这说明 DD2 的距离下降与点收敛本身不保证有限长度。
 \end{example}
 
-\subsection{Comparison series and finite length}
+\subsection{比较级数与耦合长度势}
 
-Suppose that the estimates of Theorem~\ref{thm:dd2} hold for every permitted output from every~$x$ in
-\begin{equation}\label{eq:dd2-UR}
- U_R=\{x\in U:d(x)\le R\},
-\end{equation}
-where~$U\subseteq\R^n$ is open. The estimates are assumed for those outputs before proving that they remain in~$U$. A sufficient way to sum the step bounds is to compare the distance recurrence with a nondecreasing function.
+一般的距离递推 $t_{k+1}\le\varphi(t_k)$ 与步长界 $s_k\le B_\Phi(t_k)$
+可通过比较级数求和。以下保留存在与留域条件：
+$U$ 为开集，$U_R=\{x\in U:d(x)\le R\}$，$\mathcal J(x)$ 在 $U_R$ 上非空，
+且其每个输出满足 DD2。约定 $\dist(x,\varnothing)=+\infty$。
 
-\begin{theorem}[Finite length from a comparison series]\label{thm:dd2-series}
-Assume~$\mathcal J(x)\ne\varnothing$ for every~$x\in U_R$, and assume all its outputs satisfy Theorem~\ref{thm:dd2}. Suppose~$\Phi(t)\le t^2/4$ on~$[0,R]$. Let~$Q:[0,R]\to[0,R]$ be continuous and nondecreasing, with~$Q(0)=0$ and
-\begin{equation*}
- \varphi(t)\le Q(t)<t\qquad(0<t\le R).
-\end{equation*}
-Define
+\begin{theorem}[比较级数条件]\label{thm:dd2-series}
+设 $\Phi(t)\le t^2/4$。取连续非减 $Q:[0,R]\to[0,R]$，
+满足 $Q(0)=0$、$\varphi(t)\le Q(t)<t$（$t>0$）。令
 \begin{equation}\label{eq:dd2-series}
- \overline B(t)=\sup_{0\le u\le t} B_\Phi(u),\qquad
- \Theta(t)=\sum_{j=0}^{\infty}\overline B(Q^{\circ j}(t)).
+ \overline B(t)=\sup_{0\le u\le t}B_\Phi(u),\qquad
+ \Theta(t)=\sum_{j=0}^\infty\overline B(Q^{\circ j}(t)).
 \end{equation}
-Suppose~$\overline B$ is finite,~$\overline B(t)\to0$ as~$t\downarrow0$, and~$\Theta(R)<\infty$. If~$x^0\in U_R$ satisfies
-\begin{equation}\label{eq:dd2-series-locality}
- \Theta(d(x^0))<\dist(x^0,U^c),
-\end{equation}
-then every permitted PPA sequence exists for all~$k$, remains in~$U_R$ and converges to some~$x^\infty\in S\cap U$. Moreover,
+若 $\overline B$ 有限、$\overline B(t)\to0$，且 $\Theta(R)<\infty$，
+则满足 $\Theta(d(x^0))<\dist(x^0,U^c)$ 的 $x^0\in U_R$
+所产生的每条允许轨道均可无限续接、留在 $U_R$ 并收敛到 $S\cap U$ 中一点，且
 \begin{equation}\label{eq:dd2-series-tail}
  d(x^k)\le Q^{\circ k}(d(x^0)),\qquad
- \sum_{j=k}^{\infty}\norm{x^{j+1}-x^j}\le\Theta(d(x^k)).
+ \sum_{j=k}^\infty\norm{x^{j+1}-x^j}\le\Theta(d(x^k)).
 \end{equation}
-We use~$\dist(x,\varnothing)=+\infty$.
 \end{theorem}
 
 \begin{proof}
-Continuity and~$Q(t)<t$ imply~$Q^{\circ j}(t)\to0$. The function~$\Theta$ is nondecreasing and satisfies~$\Theta(t)=\overline B(t)+\Theta(Q(t))$. For a permitted step with distances~$t$ and~$a$, monotonicity and~$a\le Q(t)$ give
-\begin{equation*}
- \norm{x-y}\le\overline B(t)\le\Theta(t)-\Theta(a).
-\end{equation*}
-Starting from~$x^0$, sum this inequality along an arbitrary finite sequence whose inputs lie in~$U_R$, including its last output. The sum is at most~$\Theta(d(x^0))$, so~\eqref{eq:dd2-series-locality} places that last output in~$U$. Its distance is at most the preceding distance, hence at most~$R$. Nonemptiness of~$\mathcal J$ then allows the next step. This proves existence and invariance by induction, for every permitted choice.
-
-The same telescoping estimate from any~$k$ proves the tail bound. Finite length makes the iterates Cauchy. Their distances tend to zero, so closedness of~$S$ identifies the limit as a point of~$S$. The strict initial inequality places the limit in~$U$. Finally, each term of~\eqref{eq:dd2-series} tends to zero as~$t\downarrow0$ and is dominated by its value at~$R$. Summability at~$R$ therefore gives~$\Theta(t)\to0$.
+$Q^{\circ j}(t)\to0$，且 $\Theta$ 非减、
+$\Theta(t)=\overline B(t)+\Theta(Q(t))$。
+每步 $a\le Q(t)$，故 $s\le\Theta(t)-\Theta(a)$。
+沿任意有限前缀求和，长度不超过 $\Theta(d(x^0))$；
+严格初值条件使最后输出仍在 $U$，距离下降使其仍在 $U_R$，非空性保证续接。
+再求尾和得式~\eqref{eq:dd2-series-tail}。有限长度给出柯西性，
+距离趋零与 $S$ 闭性识别极限。以 $\Theta(R)$ 的可和项为控制，
+还得 $\Theta(t)\to0$。
 \end{proof}
 
-The comparison series uses the step bound~$B_\Phi$ separately from the distance recurrence. It can overestimate length. For instance, in Example~\ref{ex:dd2-rotation},~$B_\Phi(t)=t$, whereas the actual step has order~$t^m$. A length estimate that retains their relation can apply even when the series in~\eqref{eq:dd2-series} diverges.
-
-\subsection{A length potential from the same proximal step}
-
-We retain~\eqref{eq:dd2-assumptions} on~$U_R$, but now suppose~$\psi$ is continuous and strictly increasing on an interval~$[0,\rho_*]\subseteq D_\psi$, with~$\psi(0)=0$. Its behavior outside that interval may be arbitrary. Define
+该级数分别估计距离与步长，可能过粗。保留同一步中两者的联系，可以直接构造长度势。
+设 $\psi$ 在 $[0,\rho_*]\subseteq D_\psi$ 上连续严格递增、$\psi(0)=0$，
+区间外可任意。设 $R/2\le\psi(\rho_*)$，记
 \begin{equation}\label{eq:dd2-q}
  b(u)=\lambda\psi^{-1}(u),\qquad q(t)=b(t/2),\qquad
- P(t)=\int_0^t\frac{u}{q(u)}\,du,
+ P(t)=\int_0^t\frac{u}{q(u)}\,du.
 \end{equation}
-where~$R/2\le\psi(\rho_*)$. Here~$\psi^{-1}:[0,\psi(\rho_*)]\to[0,\rho_*]$ is the ordinary inverse of this restriction of~$\psi$.
 
-\begin{theorem}[Finite length under F1--F3]\label{thm:dd2-length}
-Suppose~$\mathcal J(x)\ne\varnothing$ for every~$x\in U_R$, and every permitted output satisfies~\eqref{eq:dd2-assumptions}. Let~$D:[0,R]\to[0,\infty)$ satisfy~$D(0)=0$ and~$\Phi\ge-D$. Assume
+\begin{theorem}[耦合长度条件]\label{thm:dd2-length}
+设 $\mathcal J$ 在 $U_R$ 上非空，每个输出满足~\eqref{eq:dd2-assumptions}。
+取 $D\ge0$、$D(0)=0$、$\Phi\ge-D$，并假设
 \begin{align}
- &D(t)\le\frac14[\lambda\psi^{-1}(t/2)]^2
-             =\frac14q(t)^2,\qquad 0<t\le R,
- \tag{F1}\label{eq:dd2-F1}\\
- &b(u)=o(u)\qquad(u\downarrow0),
- \tag{F2}\label{eq:dd2-F2}\\
- &\frac{t}{q(t)}\le\overline g(t)\quad(0<t\le R),
- \quad \overline g\text{ nonincreasing},\quad
- \int_0^R\overline g(t)\,dt<\infty.
- \tag{F3}\label{eq:dd2-F3}
+ &D(t)\le q(t)^2/4,\qquad 0<t\le R, \tag{F1}\label{eq:dd2-F1}\\
+ &b(u)=o(u)\quad(u\downarrow0), \tag{F2}\label{eq:dd2-F2}\\
+ &t/q(t)\le\overline g(t),\quad \overline g\text{ 非增},\quad
+   \int_0^R\overline g(t)\,dt<\infty. \tag{F3}\label{eq:dd2-F3}
 \end{align}
-Choose~$R$ small enough that~$q(t)\le t/2$ on~$(0,R]$, as permitted by~\eqref{eq:dd2-F2}. Put~$\mathcal P(t)=4P(t)$. If~$x^0\in U_R$ and
-\begin{equation}\label{eq:dd2-potential-locality}
- \mathcal P(d(x^0))<\dist(x^0,U^c),
-\end{equation}
-then every permitted sequence exists for all~$k$, remains in~$U_R$, has finite length and converges to~$x^\infty\in S\cap U$. For~$t_k=d(x^k)$,
+缩小 $R$ 使 $q(t)\le t/2$。若 $x^0\in U_R$ 且
+$4P(d(x^0))<\dist(x^0,U^c)$，则每条允许轨道均可无限续接、留在 $U_R$，
+并以有限长度收敛到某个 $x^\infty\in S\cap U$，且
 \begin{equation}\label{eq:dd2-potential-tail}
- \sum_{j=k}^{\infty}\norm{x^{j+1}-x^j}
- \le\mathcal P(t_k),\qquad
- \norm{x^k-x^\infty}\le\mathcal P(t_k).
+ \norm{x^k-x^\infty}\le\sum_{j=k}^\infty\norm{x^{j+1}-x^j}
+ \le4P(d(x^k)).
 \end{equation}
-If a specified~$\varphi$ has also been verified by Theorem~\ref{thm:dd2}, its distance estimate holds for the same sequence.
 \end{theorem}
 
 \begin{proof}
-For any~$0<v\le R/2$, the implication
-\begin{equation}\label{eq:dd2-residual-threshold}
- a\ge v\quad\Longrightarrow\quad s\ge b(v)
-\end{equation}
-follows from the true residual. Otherwise~$\rho\le s/\lambda<\psi^{-1}(v)\le\rho_*$, so the error bound on the strictly increasing interval would give~$a\le\psi(\rho)<v$. This argument does not evaluate~$\psi$ at a larger residual outside that interval.
-
-If~$t>0$ and~$s<q(t)$, the same argument with~$v=t/2$ gives~$a<t/2$. But~$t\le a+s$ and~$s<q(t)\le t/2$ give~$a>t/2$. Thus~$s\ge q(t)$. The energy inequality and~\eqref{eq:dd2-F1} imply
-\begin{equation}\label{eq:dd2-net-descent}
- t^2-a^2\ge s^2-2D(t)
- \ge\frac12s^2\ge\frac12q(t)^2>0.
-\end{equation}
-Since~$a<t\le R$ and~$q$ is increasing,
-\begin{equation}\label{eq:dd2-potential-step}
+若 $a\ge v>0$、$v\le R/2$，则 $s\ge b(v)$：
+否则 $\rho\le s/\lambda<\psi^{-1}(v)\le\rho_*$，
+原误差界与区间内严格单调性给出 $a\le\psi(\rho)<v$。
+若 $s<q(t)$，取 $v=t/2$ 得 $a<t/2$，但
+$t\le a+s$ 和 $q(t)\le t/2$ 又给 $a>t/2$，矛盾。故 $s\ge q(t)$，
+由平方距离恒等式与 F1 得
+\[
+ t^2-a^2\ge s^2-2D(t)\ge s^2/2\ge q(t)^2/2>0.
+\]
+$q$ 递增，因而
+\[
  P(t)-P(a)\ge\frac{t^2-a^2}{2q(t)}
- \ge\frac{s^2}{4q(t)}\ge\frac{s}{4}.
-\end{equation}
-The potential is finite by~\eqref{eq:dd2-F3}, continuous at zero and increasing. At~$t=0$, the inner product inequality and~$D(0)=0$ give~$s=a=0$.
-
-For any finite permitted sequence with inputs in~$U_R$, sum~\eqref{eq:dd2-potential-step}. Its length is at most~$\mathcal P(t_0)-\mathcal P(t_N)\le\mathcal P(t_0)$, including the last output. Condition~\eqref{eq:dd2-potential-locality} places that output in~$U$, and~\eqref{eq:dd2-net-descent} places it in~$U_R$. The nonempty relation allows continuation. Repeating from any~$k$ gives the tail bound.
-
-The decreasing distances have a limit. If that limit were~$\ell>0$,~\eqref{eq:dd2-net-descent} would give~$t_k^2-t_{k+1}^2\ge q(\ell)^2/2>0$ at every step, which is impossible. Hence~$t_k\to0$. Finite length and closedness of~$S$ identify the limit; the strict initial bound places it in~$U$.
+ \ge\frac{s^2}{4q(t)}\ge s/4.
+\]
+零输入由 $\Phi(0)=0$ 驻定。沿有限前缀求和，由初值条件先得留域，
+再用非空性续接，与比较级数定理的归纳相同。
+若距离有正极限 $\delta$，则每步平方距离至少下降 $q(\delta)^2/2$，矛盾。
+F3 保证 $P$ 有限且在零连续，望远镜求和给出尾界；
+柯西性及 $S$ 闭性给出所述极限。
 \end{proof}
 
-Condition F2 supplies the inequality~$q(t)\le t/2$ after reducing~$R$; that inequality is all the proof uses from F2. Condition F3 requires an integrable upper bound for~$t/q(t)$; it does not require summability of the iterates of~$\varphi$. For~$\psi(\rho)=K\rho^\theta$ with~$0<\theta<1$, the integrand has order~$t^{1-1/\theta}$. It is integrable precisely when~$\theta>1/2$. The finite length and infinite length rotation examples verify the two sides of this threshold in the absence of an inner product defect.
-
-For comparison, take~$S=\zer F$ and assume~$F$ is maximal monotone with a local H\"older metric subregularity bound. The fixed-parameter proximal iteration, started sufficiently near the reference zero, has the distance rate~$t_k=O(k^{-\beta})$, where~$\beta=\theta/[2(1-\theta)]$; see~\cite[Theorem~7.3(i)]{LiMordukhovich2012}. This rate and squared step descent give the same sufficient length threshold. On a dyadic block, Cauchy--Schwarz and~$\sum_{j=N}^{2N-1}s_j^2\le t_N^2$ give a length bound~$O(N^{1/2-\beta})$. Summing these bounds over~$N=2^j$ gives finite length for~$\theta>1/2$. The compensation formula here additionally retains a signed function~$\Phi$ and the nearest input point.
-
-For completeness, the smallness assumption F2 can be removed if one changes the potential while keeping F1 and the integral. This also covers residual functions such as the one in Example~\ref{ex:dd2-shear}.
-
-\begin{proposition}[A potential without F2]\label{prop:dd2-mixed}
-Keep the inverse interval, coverage and geometric hypotheses of Theorem~\ref{thm:dd2-length}. Assume F1 and~$P(R)<\infty$, without F2 or~$q(t)\le t/2$. Set
-\begin{equation}\label{eq:dd2-mixed-potential}
- \mathcal W(t)=\frac{16\sqrt3}{3}P(t)+(3+2\sqrt3)q(t).
-\end{equation}
-Every permitted step satisfies~$a<t$ when~$t>0$ and
-\begin{equation}\label{eq:dd2-mixed-step}
- s\le\mathcal W(t)-\mathcal W(a).
-\end{equation}
-If~$x^0\in U_R$,~$t_0=d(x^0)$ and~$\mathcal W(t_0)<\dist(x^0,U^c)$, all conclusions of Theorem~\ref{thm:dd2-length} hold with~$\mathcal W$ in place of~$\mathcal P$.
-\end{proposition}
-
-\begin{proof}
-The residual implication~\eqref{eq:dd2-residual-threshold} remains valid. If~$a\ge t/2$, it gives~$s\ge q(t)$, and F1 gives~$t^2-a^2\ge s^2/2>0$. Otherwise~$a<t/2$ already proves~$a<t$. We may therefore evaluate~$q(a)$, and~\eqref{eq:dd2-residual-threshold} with~$v=a/2$ gives~$q(a)\le s$; this also holds for~$a=0$.
-
-When~$a\ge t/2$, the calculation in~\eqref{eq:dd2-potential-step} gives~$s\le4(P(t)-P(a))$. When~$a<t/2$ and~$q(t)\le2t$, energy gives~$s\le\sqrt3\,t$, while
-\begin{equation*}
- P(t)-P(a)\ge\int_{t/2}^t\frac{u}{q(t)}\,du
- =\frac{3t^2}{8q(t)}\ge\frac{3t}{16}.
-\end{equation*}
-Finally, if~$a<t/2$ and~$q(t)>2t$, energy gives~$s\le(\sqrt3/2)q(t)$. Combined with~$q(a)\le s$, this yields~$s\le(3+2\sqrt3)(q(t)-q(a))$. These three estimates prove~\eqref{eq:dd2-mixed-step}. Zero input is stationary. Finite-prefix summation proves continuation and invariance as before. If the decreasing distances had a positive limit, then eventually~$a\ge t/2$, and~$t^2-a^2\ge q(t)^2/2$ would contradict convergence of the squared distances. Thus~$t_k\to0$, and continuity of~$\mathcal W$ at zero completes the tail and convergence conclusions.
-\end{proof}
-
-The two potentials give sufficient conditions for finite length on general closed zero sets. Finite length for an individual operator can also depend on its directions and on how successive proximal steps fit together. Example~\ref{ex:dd2-half} shows that distance convergence and point convergence alone leave that question open.
+取 $\psi(\rho)=\rho^{1/m}$，则 $q(t)=(t/2)^m$，
+$t/q(t)$ 在零附近可积当且仅当 $m<2$。
+因此例~\ref{ex:dd2-rotation} 在足够小邻域满足 F1--F3，轨道有限长。
+另一方面，在比较级数中取本例的精确半径函数 $Q=\varphi$，则
+$Q^{\circ k}(t)\asymp k^{-1/(2m-2)}$，
+而 $\Phi=0$ 给 $B_\Phi(t)=t$；
+$m\ge3/2$ 时式~\eqref{eq:dd2-series}发散，耦合长度条件仍适用。
+这里省去的是对该比较级数的额外检验，F3 的积分条件仍然保留。
+一般缺陷及正则性函数下实际有限长度的完整边界尚待进一步研究。

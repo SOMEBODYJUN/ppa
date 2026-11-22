@@ -1,17 +1,13 @@
-\documentclass[11pt,letterpaper]{article}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\documentclass[UTF8,11pt,a4paper,fontset=fandol]{ctexart}
 \usepackage{amsmath,amsthm,amssymb,mathtools}
-\usepackage[margin=1.05in]{geometry}
-\usepackage{microtype}
+\usepackage[margin=25mm]{geometry}
 \usepackage{enumitem}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{xcolor}
 \definecolor{paperlink}{RGB}{0,0,114}
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=paperlink,citecolor=paperlink,
-  urlcolor=paperlink,pdfstartview=Fit,pdftitle={DD manuscript draft}}
+  urlcolor=paperlink,pdfstartview=Fit,pdftitle={DD 中文讨论稿}}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -24,16 +20,17 @@
 \setlist[enumerate]{leftmargin=2.2em,itemsep=0.25em,topsep=0.4em}
 \setlist[itemize]{leftmargin=2em,itemsep=0.25em,topsep=0.4em}
 \numberwithin{equation}{section}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{theorem}{定理}[section]
+\newtheorem{lemma}[theorem]{引理}
+\newtheorem{proposition}[theorem]{命题}
+\newtheorem{corollary}[theorem]{推论}
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{assumption}[theorem]{Assumption}
-\newtheorem{example}[theorem]{Example}
+\newtheorem{definition}[theorem]{定义}
+\newtheorem{assumption}[theorem]{假设}
+\newtheorem{example}[theorem]{例}
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remark}[theorem]{注}
+\renewcommand{\proofname}{证明}
 \newcommand{\R}{\mathbb R}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\zer}{zer}
@@ -43,7 +40,7 @@
 \newcommand{\ip}[2]{\langle #1,#2\rangle}
 \newcommand{\norm}[1]{\lVert #1\rVert}
 % The author will choose the final title and supply the author metadata.
-\title{DD\\[2pt]\large Manuscript draft}
+\title{DD\\[2pt]\large 中文讨论稿}
 \author{}
 \date{}
 \begin{document}
@@ -56,5 +53,9 @@
 \input{sections/parameters}
 \input{sections/conclusion}
 \bibliographystyle{plainnat}
+\begingroup
+\small
+\setlength{\bibsep}{4pt}
 \bibliography{references}
+\endgroup
 \end{document}

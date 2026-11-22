@@ -1,6 +1,6 @@
 # PPA 研究地图：数学节点与真实超边
 
-**当前英文成文。** 作者口述安排已落实为 [发表成果整理/DD/main.tex](发表成果整理/DD/main.tex) 及其分章源文件，编译稿为 [DD_draft.pdf](发表成果整理/DD/DD_draft.pdf)。全文依次为摘要、引言、DD1、DD2、DD3、近端参数选择与结论；存在引理在引言陈述，在 DD3 证明。32 页初稿已完成四章数学、全篇英文及结构文献六路独立审读，修订了适用范围和惯用表达，并通过最终编译与版面检查。源文件、对应 Claim、编译方法与复核范围见 [写作入口](发表成果整理/DD/README.md)。RLEB 为另一篇既有稿，未被本轮覆盖。下一轮直接修改这套 DD 源稿，不另建竞争正文。
+**当前中文成文。** 作者已明确正文须用中文，并要求删除超出其安排的扩写。[唯一源稿](发表成果整理/DD/main.tex) 已改为中文，[编译稿](发表成果整理/DD/DD_draft.pdf) 为 15 页（含参考文献）。仍依次为历史摘要、引言、DD1、DD2、DD3、参数选择与展望；存在引理在引言陈述，在 DD3 证明。保留所需分段定理、证明、扩张例、长度问题及变参数结论，删去一般锐性构造、额外反例与重复技术版本；这些数学资产仍保留在原专题。题目最后由作者确定。来源与本轮复核范围见[写作入口](发表成果整理/DD/README.md)。后续继续修订这套源稿。
 
 **DD2 主定理入口。** [主陈述](research/topics/dd2/core.md#dd2-main-theorem)先给一般 \(\Phi,\psi,\varphi\) 的分段补偿函数 \(\Sigma(r,z)\)，由 \(-\Phi(t)/t^2\le\Sigma(\varphi(t)/t,\lambda\inf\{\psi>\varphi(t)\}/t)\) 同时读出指定下降与实际步长上界。随后[原两支 \(\Sigma_L\) 和 DD1 临界门](research/topics/dd2/core.md#dd2-linear-recovery)逐式恢复，覆盖、可和步预算和留域条件下给[全部轨道的有限长度与点收敛](research/topics/dd2/core.md#dd2-main-trajectory)。[C430 的等价分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)保原有符号、原残差与准确端点；原域、联合关系和长度的各技术版本放在主陈述之后。本次重写改变呈现顺序，未新增或提升 Claim，也未重排作者尚未选定的后续题材。
 

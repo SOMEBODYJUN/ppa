@@ -1,339 +1,108 @@
-\section{DD3: global proximal solvability and local convergence}
-\label{sec:dd3}
+\section{DD3：全局近端存在性}\label{sec:dd3}
 
-The previous sections concern the geometry of proximal steps once an
-allowed output exists. We now give conditions on the full operator that
-ensure existence for every input. The condition is imposed on all
-parameters in an interval, since the homotopy used to solve the equation
-at its final parameter passes through the smaller parameters. The
-resulting existence statement can then be combined with DD1 or DD2 on
-the same allowed relation.
+DD1 和 DD2 假设所用的近端步存在。本节沿用
+Brito、Lara 和 Yuan~\cite[定理~3.1]{BritoLaraYuan2026} 的同伦方法，
+先证明引言中的存在引理，再与局部收敛条件结合。
 
-\subsection{The existence lemma}
-
-We prove Lemma~\ref{lem:existence}, stated in the Introduction. Its
-topological argument follows the homotopy of
-Brito, Lara and Yuan~\cite[Theorem~3.1]{BritoLaraYuan2026}; the
-a priori estimate below uses the nearest input anchor and the
-function $B_\Phi$ from DD2.
-
-\begin{proof}[Proof of Lemma~\ref{lem:existence}]
-Nearest points to $S$ exist because $S$ is nonempty and closed in
-finite dimension.
-Fix $b\in\R^n$ and $p_0\in S$, and put
+\begin{proof}[引理~\ref{lem:existence} 的证明]
+固定任意 $b\in\R^n$ 和 $p_0\in S$，令
 \[
- q=b-p_0,\qquad r=\norm{q},\qquad
- \mathcal G(w)=q-cF(p_0+w).
+ q=b-p_0,\qquad r=\norm q,\qquad \mathcal G(w)=q-cF(p_0+w).
 \]
-A fixed point $w\in\mathcal G(w)$ gives
-$b\in y+cF(y)$ with $y=p_0+w$. We first bound every solution of
-\begin{equation}
+只需证明 $w\in\mathcal G(w)$ 有解。先考察同伦方程
+\begin{equation}\label{eq:dd3-homotopy}
  w\in\tau\mathcal G(w),\qquad 0\le\tau\le1.
- \label{eq:dd3-homotopy}
 \end{equation}
-For $\tau=0$ this equation gives $w=0$. If $\tau>0$, choose
-$u\in F(p_0+w)$ such that $w=\tau q-\tau cu$, and set
+当 $\tau=0$ 时 $w=0$。当 $\tau>0$ 时，取相应的 $u\in F(p_0+w)$，记
 \[
- y=p_0+w,\qquad \mu=\tau c,\qquad
- z=p_0+\tau q=y+\mu u,\qquad t=d(z),\qquad s=\norm{z-y}.
+ y=p_0+w,\quad \mu=\tau c,\quad z=p_0+\tau q=y+\mu u,
+ \quad t=d(z)\le r,\quad s=\norm{z-y}.
 \]
-Here $t\le\tau r\le r$. The hypothesis of the lemma supplies
-$p_z\in P_S(z)$ with
-\begin{align*}
- \Phi_\mu(t)
- &\le\ip{z-y}{y-p_z}\\
- &=\ip{z-y}{z-p_z}-s^2
- \le ts-s^2.
-\end{align*}
-Thus the quadratic inequality has a nonnegative discriminant on
-every actual homotopy solution and gives
-\begin{equation}
- s\le B_{\Phi_\mu}(t)
- =\frac{t+\sqrt{t^2-4\Phi_\mu(t)}}2
- \le K_c(r),\qquad
- K_c(r):=\frac{r+\sqrt{r^2+4D_c(r)}}2.
- \label{eq:dd3-step-bound}
+由锚定条件存在 $p_z\in P_S(z)$，使
+\[
+ \Phi_\mu(t)\le\ip{z-y}{y-p_z}
+ =\ip{z-y}{z-p_z}-s^2\le ts-s^2.
+\]
+因此实际同伦解满足
+\begin{equation}\label{eq:dd3-step-bound}
+ s\le\frac{t+\sqrt{t^2-4\Phi_\mu(t)}}2
+ \le K_c(r):=\frac{r+\sqrt{r^2+4D_c(r)}}2,
+ \qquad \norm w\le r+K_c(r).
 \end{equation}
-Consequently,
-\begin{equation}
- \norm{w}\le\tau r+s\le r+K_c(r).
- \label{eq:dd3-position-bound}
-\end{equation}
-The quantity on the right is finite and independent of $\tau$ and
-of the particular solution. This is the point where boundedness of
-the negative parts of $\Phi_\mu$ on the whole parameter interval
-$(0,c]$ is used.
+右端有限，且不依赖 $\tau$。
 
-Suppose first that $F$ is lower semicontinuous with nonempty closed
-convex values. Then $\mathcal G$ has the same properties. Michael's
-selection theorem gives a continuous map $g:\R^n\to\R^n$ with
-$g(w)\in\mathcal G(w)$ for every $w$. The domain $\R^n$ is
-paracompact Hausdorff and the range is a Banach space, as required by that
-theorem. In finite dimension, $g$ maps bounded sets to relatively
-compact sets: the image of the compact closure of a bounded set is
-compact. Every solution of $w=\tau g(w)$ is a solution of
-\eqref{eq:dd3-homotopy}, so \eqref{eq:dd3-position-bound} applies.
-Schaefer's fixed-point theorem therefore gives $w=g(w)$.
-
-Suppose instead that $F$ is upper semicontinuous with nonempty
-compact convex values. These properties pass to $\mathcal G$.
-$\mathcal G$ maps bounded sets to relatively
-compact sets. Indeed, upper semicontinuity and compact values give
-local boundedness; a finite covering makes the union of the values
-over a compact set bounded. The graph is closed, so this union is
-also closed and hence compact in $\R^n$. The multivalued
-Leray--Schauder alternative now applies: an upper semicontinuous
-map with nonempty compact convex values that is compact on bounded
-sets has a fixed point if the solutions of
-$w\in\tau\mathcal G(w)$, $0<\tau<1$, are bounded. This last
-condition is \eqref{eq:dd3-position-bound}. The three topological
-results used here are also stated in
-\cite[Theorems~2.5--2.7]{BritoLaraYuan2026}.
-
-In either case $w\in\mathcal G(w)$. With $y=p_0+w$ we obtain
-$b\in y+cF(y)$. Since $b$ was arbitrary,
-$\ran(I+cF)=\R^n$.
+若 $F$ 下半连续且非空闭凸值，则 $\mathcal G$ 也具有这些性质。
+Michael 选择定理给出连续选择 $g(w)\in\mathcal G(w)$。
+其定义域 $\R^n$ 仿紧，值域是 Banach 空间，且有限维连续映射将有界集映入相对紧集。
+方程 $w=\tau g(w)$ 的解均满足上述一致界，故 Schaefer 不动点定理给出
+$w=g(w)\in\mathcal G(w)$。
+若 $F$ 上半连续且非空紧凸值，则 $\mathcal G$ 同样如此；
+上半连续紧值映射在紧集上的值之并为紧集，因此它在有界集上相对紧。
+由多值 Leray--Schauder 原理及同一先验界，仍得 $w\in\mathcal G(w)$。
+所用三项经典定理见\cite[定理~2.5--2.7]{BritoLaraYuan2026}。
+两种情形均得到 $b\in y+cF(y)$，故 $\ran(I+cF)=\R^n$。
 \end{proof}
 
-The residual regularity function $\psi$ does not enter this proof.
-If the assumptions of Lemma~\ref{lem:existence} hold for each
-$c>0$, with a bound $D_c$ that may depend on $c$, then
-$\ran(I+cF)=\R^n$ for every $c>0$. A common lower bound
-$\Phi_\mu(t)\ge-D(t)$, where $D$ is bounded on bounded intervals,
-is a sufficient way to obtain the required interval bounds.
+存在性证明不使用正则性函数 $\psi$。条件~\eqref{eq:global-defect}
+须在整个参数区间 $(0,c]$ 成立，因为同伦经过其中的每个参数。
+若每个 $c>0$ 都满足该条件，则每个正参数下近端步均全局存在。
 
-When $S=\{p_0\}$, the homotopy has the sharper estimate
-\[
- \norm{w}^2+\Phi_{\tau c}(\tau r)
- \le\ip{\tau q}{w}
- \le\tau r\norm{w},
- \qquad
- \norm{w}\le B_{\Phi_{\tau c}}(\tau r).
-\]
-For a general closed $S$, the homotopy position $w$ is measured
-from the fixed point $p_0$, whereas the hypothesis uses a nearest
-point to $z$. The additional translation term in
-\eqref{eq:dd3-position-bound} accounts for this difference.
-
-\subsection{Localization and convergence}
-
-Surjectivity of $I+cF$ gives an output in the full relation
-$J_c=(I+cF)^{-1}$. A local iteration may allow only outputs in a
-set $V$ and only graph values in a set $W$. In that case the
-relation to be used in the convergence theorem is
-\begin{equation}
- \mathcal J_c(x)
- =\{y\in J_c(x):y\in V,\ (x-y)/c\in W\}.
- \label{eq:dd3-allowed}
+局部迭代有时还限制输出及所用图值，例如
+\begin{equation}\label{eq:dd3-allowed}
+ \mathcal J_c(x)=\{y\in J_c(x):y\in V,\ (x-y)/c\in W\}.
 \end{equation}
-Its nonemptiness must follow for this relation itself.
-The next observation gives a direct way to verify it.
+此时须验证这个受限关系本身非空。一个直接的充分条件是：对某个 $p_0\in S$、$r>0$，
+\begin{equation}\label{eq:dd3-local-roots}
+ V\supseteq B(p_0,R_V),\quad W\supseteq B(0,R_W),\qquad
+ r+K_c(r)<R_V,\quad K_c(r)<cR_W.
+\end{equation}
+事实上，对 $\norm{x-p_0}<r$ 的每个完整近端输出 $y$，
+在~\eqref{eq:dd3-step-bound} 中取 $\mu=c,z=x$ 可得
+$\norm{x-y}\le K_c(r)$、$\norm{y-p_0}<r+K_c(r)$。
+故全部输出都满足限制，即 $\mathcal J_c(x)=J_c(x)\ne\varnothing$。
 
-\begin{proposition}[Localization of the roots]
-\label{prop:dd3-local-roots}
-Assume the hypotheses of Lemma~\ref{lem:existence}, let $p_0\in S$
-and $r>0$,
-and suppose
-\[
- V\supseteq B(p_0,R_V),\qquad W\supseteq B(0,R_W),
- \qquad
- r+K_c(r)<R_V,\qquad K_c(r)<cR_W.
-\]
-Then $\mathcal J_c(x)=J_c(x)\ne\varnothing$ whenever
-$\norm{x-p_0}<r$. In particular the stated local restrictions
-preserve full proximal coverage on this input ball.
-\end{proposition}
-
-\begin{proof}
-Take any $y\in J_c(x)$ and write $u=(x-y)/c\in F(y)$.
-The calculation leading to \eqref{eq:dd3-step-bound}, now with
-$\mu=c$ and $z=x$, gives the following bounds, since
-$d(x)\le\norm{x-p_0}<r$ and $D_c$ is nondecreasing:
-\[
- \norm{x-y}\le K_c(r),\qquad
- \norm{y-p_0}<r+K_c(r),\qquad
- \norm{u}\le K_c(r)/c.
-\]
-Thus every proximal solution satisfies the two restrictions.
-Lemma~\ref{lem:existence} supplies at least one such root.
-\end{proof}
-
-If $D_c(r)\to0$ as $r\downarrow0$, then $K_c(r)\to0$.
-Hence sufficiently small input balls satisfy the displayed
-conditions for any fixed positive $R_V,R_W$. This conclusion
-uses the global hypotheses of the existence lemma. An anchor
-inequality verified only inside an output ball requires a
-separate existence argument on that ball.
-
-\begin{theorem}[DD3: global solvability and local convergence]
-\label{thm:dd3}
-Assume the hypotheses of Lemma~\ref{lem:existence} at $c>0$.
-Let $U$ be open,
-$R>0$, and $U_R=\{x\in U:d(x)\le R\}$. Fix one allowed
-relation $\mathcal J_c\subseteq J_c$ on $U_R$. Assume its
-nonemptiness there is obtained either by taking
-$\mathcal J_c=J_c$, or by verifying that the roots furnished by
-the lemma satisfy its restrictions, for example by
-Proposition~\ref{prop:dd3-local-roots}. For initial points
-$x^0\in U_R$, the following conclusions hold.
-\begin{enumerate}
- \item If all the other hypotheses of
- Theorem~\ref{thm:dd1-trajectory} hold for this same
- $\mathcal J_c$, with $\lambda=c$, every initial point
- satisfying that theorem's localization inequality generates
- an indefinitely continuable trajectory for every allowed
- choice. Its distance decreases geometrically, its length is
- finite, and it converges to a point of $S\cap U$, with the
- estimates stated there.
- \item If the DD2 hypotheses and the comparison-series
- assumptions of Theorem~\ref{thm:dd2-series} hold for this
- same $\mathcal J_c$, every initial point satisfying its
- localization inequality has the continuation, finite-length,
- point-convergence and tail estimates of that theorem.
- \item The same assertion holds under the hypotheses of
- Theorem~\ref{thm:dd2-length}, with its stated length function
- and localization inequality, again for this same relation.
-\end{enumerate}
-In all three assertions the zero-input stationarity and the
-evaluation domains required by the cited theorem are retained.
-The conclusion is global proximal solvability together with
-local convergence whenever the DD assumptions hold only on
-$U_R$.
+\begin{theorem}[DD3]\label{thm:dd3}
+设引理~\ref{lem:existence} 的条件在参数 $c>0$ 下成立。
+取开集 $U$、$R>0$ 及 $U_R=\{x\in U:d(x)\le R\}$。
+若使用完整关系 $\mathcal J_c=J_c$，或已验证受限关系
+$\mathcal J_c\subseteq J_c$ 在 $U_R$ 上非空，则对初值 $x^0\in U_R$ 有以下结论。
+若同一关系满足 DD1 的其余条件及定理~\ref{thm:dd1-trajectory} 的初值条件，
+则每条允许的 PPA 轨道均具有有限长度并线性收敛于 $S\cap U$ 中的一点。
+若同一关系满足 DD2 及定理~\ref{thm:dd2-series} 或
+定理~\ref{thm:dd2-length} 的其余条件与初值条件，
+则每条允许轨道均具有相应的距离估计、有限长度及点收敛结论。
 \end{theorem}
 
 \begin{proof}
-The existence lemma gives nonemptiness of the full $J_c$ at
-every input. The additional assumption gives nonemptiness of
-$\mathcal J_c$ on $U_R$, which is precisely the coverage
-assumption in each cited trajectory theorem. All its remaining
-hypotheses are imposed on that same relation. Its finite-prefix
-argument therefore keeps every generated input in $U_R$,
-permits the next choice, and yields the claimed estimates and
-convergence.
+存在引理保证完整近端关系处处非空；受限情形的非空性由附加假设给出。
+对同一关系应用所引定理，其有限前缀长度估计保证下一步仍在 $U_R$，
+从而可无限续接，并得到相应收敛结论。
 \end{proof}
 
-For example, zero-input stationarity follows from
-$\Phi_c(0)\ge0$: if $x\in S$ and $y\in J_c(x)$, the unique
-nearest point to $x$ is $x$, and the anchor inequality gives
-$-\norm{x-y}^2\ge\Phi_c(0)\ge0$. Lemma~\ref{lem:existence}
-alone does not impose this normalization. Nor does solvability
-alone imply distance decrease or finite length; the next two
-examples separate these assertions.
-
-\subsection{Two existence examples}
-
-\begin{example}[A fixed-parameter bound without surjectivity]
-\label{ex:dd3-fixed}
-On $\R$, define the continuous function
+\begin{example}[非二次条件下的全局存在性]\label{ex:dd3-nonquadratic}
+设 $Q$ 为平面直角旋转，定义连续算子
 \[
- F(y)=\begin{cases}y^2,&y\ge0,\\y^2-y,&y<0.\end{cases}
- \qquad S=\{0\},\qquad c=1.
+ F(y)=-\norm y^{-1/4}y+\norm y^{-1/2}Qy\quad(y\ne0),\qquad F(0)=0.
 \]
-For $y\ge0$ the input $z=y+F(y)=y+y^2$ ranges over
-$[0,\infty)$; for $y<0$ it is $z=y^2$. Hence
-\[
- \ran(I+F)=[0,\infty)\ne\R.
-\]
-Nevertheless both a global anchor bound and a global residual
-bound hold at this fixed parameter. Indeed, for $y<0$ and
-$t=|z|=y^2$,
-\[
- F(y)y=-t-t^{3/2};
-\]
-for $y\ge0$ this product is nonnegative. Thus
-$\Phi(t)=-t-t^{3/2}$ is a valid lower bound on every proximal
-step at $c=1$. Moreover $|F(y)|\ge|y|^2$, so
-\[
- d(y)\le\psi(r_F(y)),\qquad \psi(\rho)=\sqrt\rho+\rho.
-\]
-The topology is also sufficient for either alternative of the
-existence lemma. What is missing is the uniformly bounded
-negative part throughout $(0,1]$.
-
-This failure can also be seen directly. Fix $b<0$ and set
-$\mu=\tau\in(0,1)$. On the negative half-line,
-$y+\tau F(y)=\tau y^2+(1-\tau)y$. The equation
-$y+\tau F(y)=\tau b$ has negative roots for all sufficiently
-small $\tau$. In particular,
-\[
- y_\tau=
- \frac{-(1-\tau)-\sqrt{(1-\tau)^2+4\tau^2b}}{2\tau}
- \longrightarrow-\infty\qquad(\tau\downarrow0).
-\]
-For this root the input $z=\tau b$ tends to zero while
-\[
- \ip{z-y_\tau}{y_\tau}
- =zy_\tau-y_\tau^2\longrightarrow-\infty.
-\]
-Consequently no family of lower bounds valid on $(0,1]$ can
-have $D_1(R)<\infty$ for every finite $R$. The example does
-not satisfy the DD2 decrease condition either: its negative
-outputs have $d(y)=\sqrt t>t$ for $0<t<1$.
-\end{example}
-
-\begin{example}[A nonquadratic global existence condition]
-\label{ex:dd3-nonquadratic}
-Let $Q$ be a rotation through $\pi/2$ in $\R^2$ and define
-\[
- F(y)=-\norm{y}^{-1/4}y+\norm{y}^{-1/2}Qy\quad(y\ne0),
- \qquad F(0)=0.
-\]
-The two terms have norms $\norm{y}^{3/4}$ and
-$\norm{y}^{1/2}$, so $F$ is continuous also at zero. Its
-nonzero tangential component gives $\zer F=\{0\}$.
-Write $r=\norm{y}$.
-For $y\ne0$ and $t=\norm{y+\mu F(y)}$,
-\begin{equation}
- \ip{F(y)}{y}=-r^{7/4},\qquad
+其零点集为 $S=\{0\}$。记 $r=\norm y$、$t=\norm{y+\mu F(y)}$，则
+\begin{equation}\label{eq:dd3-nonquadratic-identities}
+ \ip{F(y)}y=-r^{7/4},\qquad
  t^2=(r-\mu r^{3/4})^2+\mu^2r,\qquad
  \norm{F(y)}^2=r^{3/2}+r.
- \label{eq:dd3-nonquadratic-identities}
 \end{equation}
-There is no finite constant $\gamma$ such that
-$\ip{F(y)}{y}\ge-\gamma\norm{y}^2$ near zero, since
-$r^{7/4}/r^2=r^{-1/4}\to\infty$.
-
-Minimizing the quadratic expression for $t^2$ over real
-$\mu$ gives
+因此零点附近不存在有限常数 $\gamma$ 使
+$\ip{F(y)}y\ge-\gamma\norm y^2$。
+另一方面，将 $t^2$ 对实参数 $\mu$ 最小化可得
 \[
- t^2\ge\frac{r^2}{1+\sqrt r},\qquad
- \mu r^{7/4}\le t r^{5/4}.
+ t^2\ge\frac{r^2}{1+\sqrt r},\qquad \mu r^{7/4}\le tr^{5/4}\quad(\mu>0).
 \]
-The second inequality follows from $t\ge\mu\sqrt r$ for
-$\mu>0$. If $r\le1$, the first gives $r\le\sqrt2\,t$;
-if $r\ge1$, it gives $r\le2^{2/3}t^{4/3}$. Consequently,
-for every $\mu>0$,
+当 $r\le1$ 时 $r\le\sqrt2\,t$；当 $r\ge1$ 时
+$r\le2^{2/3}t^{4/3}$。故所有 $\mu>0$ 共同满足
 \[
- \ip{\mu F(y)}{y}
- \ge-2^{5/8}t^{9/4}-2^{5/6}t^{8/3}=:\Phi(t).
+ \ip{\mu F(y)}y\ge-2^{5/8}t^{9/4}-2^{5/6}t^{8/3}=:\Phi(t).
 \]
-The same $\Phi$ applies to the whole parameter range and has
-bounded negative part on bounded intervals. Lemma~\ref{lem:existence}
-therefore proves $\ran(I+cF)=\R^2$ for every $c>0$.
-The residual bound $d(y)\le r_F(y)^2$ also follows from
-\eqref{eq:dd3-nonquadratic-identities}. Thus the example admits
-the nonlinear residual function $\psi(\rho)=\rho^2$.
-
-Global solvability here permits a trajectory at constant
-positive distance from $S$. Fix $c>0$. The continuous function
-$2r^{3/4}/(1+\sqrt r)$ tends to zero as $r\downarrow0$
-and to infinity as $r\to\infty$, so some $r>0$ satisfies
-\[
- c=\frac{2r^{3/4}}{1+\sqrt r}.
-\]
-At that radius, \eqref{eq:dd3-nonquadratic-identities} gives
-$\norm{y+cF(y)}=r$. On the circle of radius $r$, the map
-$I+cF$ agrees with the linear map
-\[
- A_r=(1-cr^{-1/4})I+cr^{-1/2}Q.
-\]
-Its coefficients satisfy
-$(1-cr^{-1/4})^2+c^2r^{-1}=1$, and its tangential
-coefficient is positive. Thus $A_r$ is a nonidentity rotation.
-For any $\norm{x^0}=r$, the sequence $x^k=A_r^{-k}x^0$
-satisfies $x^k=x^{k+1}+cF(x^{k+1})$ and has constant
-positive distance $r$ from $S$. The example separates the
-nonquadratic existence hypothesis from a fixed quadratic
-radial hypothesis; the DD decrease assumptions must still be
-verified for any convergence claim.
+此下界在有界距离区间内一致有界，存在引理遂给出
+$\ran(I+cF)=\R^2$，对每个 $c>0$ 成立。
+同时 $d(y)\le r_F(y)^2$。本例说明非二次锚定条件可以保证近端存在性；
+收敛仍须另验 DD1 或 DD2 的条件。
 \end{example}

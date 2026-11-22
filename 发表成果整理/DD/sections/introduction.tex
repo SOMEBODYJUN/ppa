@@ -1,98 +1,99 @@
-\section{Introduction}\label{sec:intro}
+\section{引言}\label{sec:intro}
 
-The proximal point algorithm seeks a zero of a set-valued operator by solving an implicit inclusion at each iteration. Martinet's regularization of variational inequalities~\cite{Martinet1970} and Rockafellar's analysis for maximal monotone operators~\cite{Rockafellar1976} established the classical theory. Monotonicity supplies a distance inequality, while maximality supplies the existence of proximal points. Beyond this setting, these two roles must be examined separately: an estimate for a proximal step does not by itself show that such a step exists.
+近端点算法通过逐步求解隐式包含寻找集合值算子的零点。
+Martinet~\cite{Martinet1970} 对变分不等式的正则化与
+Rockafellar~\cite{Rockafellar1976} 对极大单调算子的分析奠定了经典理论。
+其中，单调性提供距离下降，极大性保证近端步存在。削弱单调性之后，这两个问题需要分别处理。
 
-Luke and Tam~\cite{LukeTam2025} study this distinction locally. Their submonotonicity condition quantifies a weakening of monotonicity on a localized operator graph. Together with metric subregularity, local resolvent coverage, and the localization assumptions in their Assumption~2, it yields local $R$-linear convergence of appropriately selected proximal sequences. Their Theorem~1 also represents truncated operator values and inverse values as restricted sublevel sets of weakly convex functions; the inverse value at zero describes a localized zero set. Their Proposition~4 describes the resolvent of the truncated graph on its domain.
+Luke、Tam~\cite{LukeTam2025} 在局部图上引入次单调性，
+将其与度量次正则性、局部预解式覆盖及定位条件结合，证明了所选近端序列的局部 $R$ 线性收敛。
+其定理~1 还将截断算子值及逆像表示为弱凸函数的受限下水平集，
+其中零值的逆像给出局部零点集。在一般函数尺度上，
+Lauster、Luke~\cite[定理~16、引理~17、推论~19]{LausterLuke2021}
+利用正则性函数与可和比较序列分析不动点迭代；
+Li、Mordukhovich~\cite[定理~7.3]{LiMordukhovich2012}
+则在单调近端框架中由 H\"older 度量次正则性推导收敛速率。
 
-The compensation between a violation of firm nonexpansiveness and residual regularity has an established quantitative form. Lauster and Luke~\cite[Theorem~16, Lemma~17, and Corollary~19]{LausterLuke2021} use general regularity functions and summable comparison iterates to analyze fixed-point convergence. In the monotone proximal setting, Li and Mordukhovich~\cite[Theorem~7.3]{LiMordukhovich2012} derive convergence rates from H\"older metric subregularity. Thus, both nonlinear regularity and the use of regularity to compensate for an expansion are part of the existing theory. Our question is the exact relation between an input-anchored defect and an output residual bound for the same ordinary proximal step.
+Alcantara~\cite[命题~3.4、注~3.5]{Alcantara2026} 研究退化预条件近端方法，
+其普通近端特例给出与本文 DD1 部分重合的步长界与收缩估计。
+本文比较限于该特例中的明确充分条件。
+Brito、Lara、Yuan~\cite[定理~3.1、推论~3.12]{BritoLaraYuan2026}
+从零点处的星单调性或二次径向条件出发，利用同伦先验有界性与不动点定理证明预解式满射。
+对于整体结构便于检验的算子，这类全局存在条件可用于补充局部收敛分析。
 
-Alcantara's preprint~\cite{Alcantara2026}, first submitted on 16 November 2026, provides a close comparison. Proposition~3.4 and Remark~3.5 give step bounds and a local linear convergence estimate that overlap with DD1 below. The full paper treats degenerate preconditioned proximal methods, with reduced zero set $C^*(\zer A)$ and additional assumptions for identifying projected limits and recovering the original variables. Our comparison uses the scalar residual and anchored bounds in the ordinary proximal specialization; the graph and existence assumptions are treated separately.
-
-Brito, Lara, and Yuan~\cite{BritoLaraYuan2026}, first submitted on 18 November 2026, address proximal existence directly. Under star monotonicity at a zero and alternative topological assumptions, their Theorem~3.1 proves global surjectivity of $I+cF$. Their Corollary~3.12 gives a surjectivity range for a quadratic radial violation. The proof first bounds homotopy solutions and then applies selection and fixed-point theorems. DD3 follows this argument in finite dimensions, imposing a bound on the entire operator graph relative to a nearest point in a specified closed subset of the zero set.
-
-Throughout the paper, $H=\R^n$ has its Euclidean inner product and norm, $F:H\rightrightarrows H$, and $S$ is a nonempty closed subset of
+本文关心同一次近端迭代中，次单调性缺陷与残差正则性究竟能互相补偿多少。
+以下均在欧氏空间 $H=\R^n$ 中讨论，$F:H\rightrightarrows H$，
+$S\subseteq\zer F$ 非空闭，其中
 \[
-\zer F:=\{x\in H:0\in F(x)\}.
+ \zer F=\{x:0\in F(x)\},\qquad d(x)=\dist(x,S),\qquad
+ P_S(x)=\{p\in S:\norm{x-p}=d(x)\}.
 \]
-We write
+记完整算子值的残差与预解式为
 \begin{equation}\label{eq:intro-notation}
- d(x):=\dist(x,S),\qquad
- P_S(x):=\{p\in S:\norm{x-p}=d(x)\},\qquad
- r_F(y):=\inf_{v\in F(y)}\norm{v}.
-\end{equation}
-The infimum over an empty set is $+\infty$. For $\lambda>0$, the ordinary resolvent is
-\[
- J_\lambda:=(I+\lambda F)^{-1},\qquad
+ r_F(y)=\inf_{v\in F(y)}\norm v,\qquad
+ J_\lambda=(I+\lambda F)^{-1},\qquad
  y\in J_\lambda(x)\ \Longleftrightarrow\ x-y\in\lambda F(y).
-\]
-The residual $r_F$ always uses the full value $F(y)$, even when an iteration uses a specified subset of the resolvent values.
+\end{equation}
+空集的下确界取 $+\infty$。允许从预解式中选定子关系
+$\mathcal J(x)\subseteq J_\lambda(x)$；所有结论针对每个允许输出，
+残差始终由完整的 $F(y)$ 计算。
 
-To explain the two directions of DD1, consider an allowed proximal step $y\in J_\lambda(x)$ and suppose that
+为说明双向补偿，先设每个允许近端对满足
 \begin{equation}\label{eq:intro-two-assumptions}
  d(y)\le\ell r_F(y),\qquad
- \ip{x-y}{y-p}\ge\Phi(d(x))
- \quad\text{for some }p\in P_S(x),
+ \exists p\in P_S(x):\quad \ip{x-y}{y-p}\ge\Phi(d(x)).
 \end{equation}
-where $\ell>0$. The first inequality measures regularity at the output. The second bounds the possible negative inner product relative to a nearest point to the input. On a distance interval $0<t\le R$, define
+在 $0<t\le R$ 上记
 \begin{equation}\label{eq:intro-indices}
- L:=\frac{\ell}{\lambda},\qquad
- \sigma(t):=\frac{[-\Phi(t)]_+}{t^2},\qquad
- \sigma_R:=\sup_{0<t\le R}\sigma(t),\qquad
- [a]_+:=\max\{a,0\}.
+ L=\frac{\ell}{\lambda},\qquad
+ \sigma(t)=\frac{[-\Phi(t)]_+}{t^2},\qquad
+ \sigma_R=\sup_{0<t\le R}\sigma(t),\qquad [v]_+=\max\{v,0\}.
 \end{equation}
-We call $L$ the \emph{regularity index} and $\sigma(t)$ the \emph{hypomonotonicity index} at scale $t$. These numerical indices measure the residual bound and the permitted negative inner product in~\eqref{eq:intro-two-assumptions}; the latter concerns a nearest input anchor rather than all pairs of graph points. Smaller values impose stronger bounds. Both depend on the chosen proximal parameter, and operators with the same indices satisfy the same compensation test.
+称 $L$ 为正则指数，$\sigma(t)$ 为尺度 $t$ 处的次单调指数。
+二者越小，相应约束越强；具有相同指标的算子适用同一补偿判定。
+这里的次单调性针对最近输入零点，不要求任意图点对满足同一不等式。
+这两个名称仅用于解释计算，不另行引入算子假设。
 
-For a fixed regularity index, the first direction computes the admissible defect. DD1 gives uniform strict distance decrease under
+设 $\sigma_R<\infty$。给定正则性，DD1 用分段函数 $T$ 确定允许的缺陷；
+给定缺陷，则用 $\Lambda$ 反算正则性：
 \begin{equation}\label{eq:intro-threshold}
  \sigma_R<T(L),\qquad
- T(L):=
+ T(L)=
  \begin{cases}
- (1-L)/L^2,&0<L\le\tfrac12,\\[2pt]
- 1/(2L^2),&L\ge\tfrac12.
+ (1-L)/L^2,&0<L\le1/2,\\
+ 1/(2L^2),&L\ge1/2,
  \end{cases}
+ \quad\Longleftrightarrow\quad L<\Lambda(\sigma_R),
 \end{equation}
-Conversely, for a prescribed finite defect bound $\sigma_R=\sigma$, the required regularity is expressed by
+其中
 \begin{equation}\label{eq:intro-inverse}
- L<\Lambda(\sigma),\qquad
- \Lambda(\sigma):=
+ \Lambda(\sigma)=
  \begin{cases}
- +\infty,&\sigma=0,\\[2pt]
- (2\sigma)^{-1/2},&0<\sigma\le2,\\[2pt]
+ +\infty,&\sigma=0,\\
+ (2\sigma)^{-1/2},&0<\sigma\le2,\\
  2/(1+\sqrt{1+4\sigma}),&\sigma\ge2.
  \end{cases}
 \end{equation}
-The formulas agree at their shared endpoints. DD1 also gives the corresponding inverse calculation for any prescribed contraction factor. The piecewise relation comes from retaining both the step bound and the squared distance inequality. Together they give a geometric distance estimate and a step bound proportional to input distance. Under proximal coverage, absorption at zero distance, and the stated localization assumptions, the steps are summable and the iterates converge to a point of $S$.
+各公共端点处的公式一致。DD1 在近端步存在、零输入驻定及留域条件下得到有限长度与点收敛。
+DD2 将线性残差界推广为 $d(y)\le\psi(r_F(y))$，
+以三段补偿函数计算一般下降目标，并进一步讨论实际长度。
+DD3 证明下面的存在引理，再与两项收敛结论结合。
+最后一章从原算子信息反求 $\lambda$，并处理逐步变化的 $\lambda_k$。
 
-The comparison with existing estimates is correspondingly specific. Alcantara~\cite[Remark~3.5]{Alcantara2026} explicitly obtains the condition $2\sigma L^2<1$ in the ordinary proximal specialization, and the step estimate in the proof of Proposition~3.4 supplies another ingredient of~\eqref{eq:intro-threshold}. Retaining both estimates adds the parameter region
-\[
- 0<L<\tfrac12,\qquad
- \frac{1}{2L^2}\le\sigma<\frac{1-L}{L^2}.
-\]
-The sharpness statement below allows the operator and the closed target set to vary; an individual operator may admit stronger estimates.
-
-DD2 keeps the same proximal relation and replaces the linear residual bound by $d(y)\le\psi(r_F(y))$. For a general signed function $\Phi$, it computes a piecewise condition ensuring the prescribed decrease $d(y)\le\varphi(d(x))$. Examples include sublinear trajectories of finite length and a trajectory converging to a point with infinite length. We then obtain finite length from comparison series or an integrable potential. DD3 establishes global proximal existence and supplies the coverage used in these local convergence results. The final section starts from data on the original $F$ and determines a common admissible range from which parameters may be chosen at each iteration.
-
-Section~\ref{sec:dd1} gives the two DD1 calculations and their geometric proof. Section~\ref{sec:dd2} develops compensation for general functions and the associated length estimates. Section~\ref{sec:dd3} proves the following existence lemma and combines it with DD1 and DD2. Section~\ref{sec:parameters} treats proximal parameter selection.
-
-\begin{lemma}[Global proximal existence]\label{lem:existence}
-Let $F:\R^n\rightrightarrows\R^n$ have nonempty values everywhere, let $S\subseteq\zer F$ be nonempty and closed, and let $c>0$. For each $\mu\in(0,c]$, let $\Phi_\mu:[0,\infty)\to\R$. Assume that, for every $\mu\in(0,c]$, every $y\in\R^n$, and every $u\in F(y)$, setting
-\[
- z=y+\mu u,\qquad t=d(z),
-\]
-there exists $p_z\in P_S(z)$ such that
+\begin{lemma}[近端存在引理]\label{lem:existence}
+设 $F:\R^n\rightrightarrows\R^n$ 处处非空，$S\subseteq\zer F$ 非空闭，$c>0$。
+对每个 $\mu\in(0,c]$，给定 $\Phi_\mu:[0,\infty)\to\R$。
+假设任意 $y\in\R^n$、$u\in F(y)$ 及 $\mu\in(0,c]$，
+令 $z=y+\mu u$、$t=d(z)$，均存在 $p_z\in P_S(z)$ 使
 \begin{equation}\label{eq:global-anchor}
  \ip{z-y}{y-p_z}\ge\Phi_\mu(t).
 \end{equation}
-Assume also that
+又设对每个有限 $R\ge0$，
 \begin{equation}\label{eq:global-defect}
- D_c(R):=\sup_{\substack{0<\mu\le c\\0\le t\le R}}
- [-\Phi_\mu(t)]_+<\infty
- \qquad\text{for every finite }R\ge0.
+ D_c(R)=\sup_{\substack{0<\mu\le c\\0\le t\le R}}[-\Phi_\mu(t)]_+<\infty.
 \end{equation}
-Suppose that either
-\begin{enumerate}
- \item $F$ is lower semicontinuous with nonempty closed convex values; or
- \item $F$ is upper semicontinuous with nonempty compact convex values.
-\end{enumerate}
-Then $\ran(I+cF)=\R^n$.
+若 $F$ 下半连续且取非空闭凸值，或 $F$ 上半连续且取非空紧凸值，则
+$\ran(I+cF)=\R^n$。
 \end{lemma}
+引理的证明置于第~\ref{sec:dd3}~节。条件~\eqref{eq:global-defect}
+要求整个参数区间上的一致有界性，正则性函数 $\psi$ 不参与存在性证明。
