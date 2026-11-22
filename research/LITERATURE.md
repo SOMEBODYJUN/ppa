@@ -895,3 +895,33 @@ ho/\lambda\)。 | 一步包含式配三角不等式的输出到输入传递属�
 | Pethick–Mavrothalassitis–Cevher，ICLR 2025，[正式会议 PDF](https://proceedings.iclr.cc/paper_files/paper/2025/file/7f44f98e5e70dea605d0c5baca231c58-Paper-Conference.pdf)，§6.2 Theorem 6.1 及 Appendix D.1；§7 Assumption 7.1/Theorem 7.3 | 作者在弱 Minty、Lipschitz 与分裂条件下给自动内层精度、内层次数分析及误差界下的线性收敛；更新包含误差校正。 | 精度自动选择、有限内层和误差界本身均不是本轮新贡献。尚未证明 C455 与此完整算法类的严格包含或成本优势。 |
 
 **本库推导与 Interpretation。** C455 的 DD1 联合余量有独立证明，但 UI4–UI6 已提供其消元形式；C283 直接恢复其零缺陷线性公式和具体非单调模型的全部精度/参数区。对 C275 的较粗分离预算及 C406/I13 的部分严格系数改进不等于世界范围理论优势；真残差、最近/全锚、真实图/扩大图及实际更新都需保留。Wang–Li–Ng 2023 的全文逐条件比较未在本轮补齐，不能作排除判断。
+
+<a id="lit-dd-operator-calculus"></a>
+## DD1/DD2 · 从算子信息到函数型补偿与近端参数选择
+
+2026-11-21 定向查新。对象固定为普通欧氏近端关系和 [DD2.1–DD2.5](topics/dd2/core.md#dd2-main-theorem)。输入尺度 \(t=d(x,S)\)，锚取 \(p\in P_S(x)\)，\(x-y=\lambda v\) 对应实际允许步。需要的锚定下界是 \(\langle x-y,y-p\rangle\ge\Phi_\lambda(t)\)。误差界在输出 \(y\) 评价，残差是 \(r_F(y)=\inf_{w\in F(y)}\|w\|\)。轨道结论还需覆盖、停留及相应长度条件。文献的符号只在下表中使用。
+
+### 已定位的先行结果
+
+| 一手来源及位置 | Paper fact | 与本问题的对应及边界 |
+| --- | --- | --- |
+| [Khanh–Lara, arXiv:2611.15151v1](https://arxiv.org/html/2611.15151v1#S3)，Definition 6、Propositions 11–13、Theorem 16、Corollary 17 | 固定锚 \(p\) 上的下界 \(\langle v,y-p\rangle\ge(\gamma/2)\|y-p\|^2\)，取 \(\gamma\ge0\)，对所有 \(y,v\) 成立。非负加权和在同一锚按权重相加，仿射拉回按最小谱值传递。开域、锚处值非空和弱半连续性（weak hemicontinuity）再加 \(\gamma>0\)，给唯一零点及全域真残差界 \(\|y-p\|\le 2r_T(y)/\gamma\)。 | 固定同锚的分量计算与线性真残差已有同一篇先例；即便各分量在锚处各自未取零，求和的内积规则仍成立。对 DD，固定锚是单点目标时的最近锚，正内积增长按输出尺度给出，可取零缺陷证书。一般的有符号输入尺度和非单点目标仍需核算。 |
+| [Brito–Lara–Yuan, arXiv:2611.23997](https://arxiv.org/pdf/2611.23997)，Corollary 3.12、Remark 3.13、Theorem 5.5、Corollary 5.6，正文 pp. 13、26–27 | 对有鞍点的指定双线性耦合极小极大模型，在对角部分具有固定鞍点径向下界及 Condition (M) 时，对任意 \(c>0\) 有原近端点；正模另给精确步点收缩和全局误差界。有限维推论由两个部分函数的星拟凸模得到对应径向模。固定零锚负二次型下，在 (Z1)–(Z4) 任一拓扑值域框架内，统一覆盖区间 \(0<c<1/\gamma\) 为锐；作者也给出在该区间内发散的例子。 | 已有“分量数据 → 同锚内积增长与残差 → 原近端覆盖与收敛”的实际非单调模型。其锚由给定鞍点决定，正模为二次增长。相同模型、数据与保证应直接引用。 |
+| [Ngai–Tron–Théra, *Metric Regularity of the Sum of Multifunctions and Applications*](https://arxiv.org/pdf/1304.7892)，Definition 3.1、Theorem 3.3，正文 pp. 14、17；[Durea–Strugariu 作者稿](https://optimization-online.org/wp-content/uploads/2015/01/4758.pdf)，Theorem 4.4，正文 p. 18 | 前者在完备度量定义域、Banach 值域、闭图、第一项度量正则模 \(\tau\)、第二项 Aubin 模 \(\ell\)、\(\tau\ell<1\) 下，提升映射有正则模 \((\tau^{-1}-\ell)^{-1}\)。若指定分解处另满足局部 sum-stability，该估计对完整和映射成立。后者用同类定量条件直接界定重合点距离，局部右端使用截断的两分量值集，条件全局化才移除截断。 | 取目标值为 0，前者可直接提供整体零集的线性 \(\psi\)，且保留完整和的真残差。局部 sum-stability 所要求的，是近参考点的小总图值能由参考分解附近的一对图值实现。局部截断残差一般较大，不能直接填入 DD 的完整真残差位置。 |
+| [Kruger, *Nonlinear Metric Subregularity*, arXiv:1502.06159v2](https://arxiv.org/pdf/1502.06159v2)，§5.1 式 (46)、Theorem 5.1、Corollary 5.1、Example 5.1 | 式 (46) 对完整残差给 \(\tau d(y,F^{-1}(0))\le g(d(0,F(y)))\) 的局部形式；定量斜率判据使用单调且有规定可微性的模，例 5.1 给反余弦模。 | 在适用窗、完整零集及量词匹配时可引用 \(\psi=g/\tau\)；非幂 \(\psi\) 和一般模斜率判据已有。文中输入是整体图及其斜率，使用分量信息还需有可核的传递。 |
+| [Mordukhovich–Ouyang, *Higher-Order Metric Subregularity and Its Applications*](https://optimization-online.org/wp-content/uploads/2014/07/4440.pdf)，Theorem 4.1；[Zheng–Ng, SIAM J. Optim. 2021](https://doi.org/10.1137/19M1309171)；[Ouyang–Zhang–Zhu, Applicable Analysis 2025](https://doi.org/10.1080/00036811.2025.2505614) | 前者的扰动定理覆盖强 \(q\) 次正则、\(q\ge1\) 和符合小量条件的单值扰动。后两篇刊方摘要分别给普通次正则的扰动稳定性条件和非光滑连续单值加项的模估计。普通次正则对任意小的 Lipschitz 或 calm 加项不具有统一的稳定性。 | 强次正则支使用相对指定点的估计。后两份此次只据刊方摘要登记，与 DD 的逐定理覆盖需取得全文再定，尤其是 2025 年直接研究加法扰动的论文。 |
+| [Rolewicz 1999，式 (3)、Proposition 1](https://doi.org/10.4064/sm-133-1-29-37)；[Duda–Zajíček 2009，Theorem R、Corollary 4.5](https://journalofconvexanalysis.com/articles/jca16013/jca16013.pdf) | 一般的两图点距离余项已有先例。后者在开凸域上由半凸模 \(\omega\) 得到 Clarke 次梯度的支撑余项 \(a(t)=t\omega(t)\)。 | 可作为从函数原始数据估算缺陷的已有工具。原距离是两图点的状态间距；DD 的尺度却是近端输入到指定集的距离，必须保留原边和输入最近锚，另核相应的位置估计。 |
+| [Evens–Pas–Latafat–Patrinos, arXiv:2305.03605](https://arxiv.org/pdf/2305.03605)，Proposition 4.7 及其证明；[Evens–Latafat–Patrinos, *Chambolle–Pock*](https://optimization-online.org/wp-content/uploads/2023/12/CP-Minty.pdf)，Proposition 4.8；[Quan–Bodard–Oikonomidis–Patrinos, arXiv:2511.20209](https://arxiv.org/pdf/2511.20209)，Definition II.1、Propositions II.1–II.2 | 前两份沿同一参考位置保持分量图值的分解，标量或矩阵二次项在对应适用条件下以平行和消元。后者的两算子 SRG 在同一对输入上比较输出增量，在弦条件下给求和包含。 | 可借鉴先保存共同图值分解、再消元的步骤，以及对消元所丢方向信息的控制。二次平行和、一般的图增量联合表示和弦条件下的求和规则已有。缩放相对图记录增量比例与角度，直接作为 DD 真残差证书仍缺绝对尺度与全纤维信息。 |
+| [Liao–Ding–Zheng, arXiv:2312.16775](https://arxiv.org/pdf/2312.16775)，Theorems 3.1、4.3、Table 1；[Alcantara–Dao–Takeda, arXiv:2608.16609](https://arxiv.org/pdf/2608.16609)，Lemmas 4.4–4.5、Remark 4.6 | 前者由弱凸目标在同一子水平窗上的足够强二次增长给受限割线不等式和次梯度真残差界，再给精确近端的线性结论。后者明确把受检 resolvent 的满域单值 Lipschitz 区间与收敛条件相交，给 Algorithm 3 的参数范围。 | 同一原始数据同时产生两种约束、及同时检查近端可解与收敛，都已有先例。前者的割线锚是输出点最近极小点，后者参数属于指定仿射约束分裂。新比较须保持 DD 的输入最近锚、真残差、普通近端及指定下降目标。 |
+
+[Luke–Tam 刊本](https://doi.org/10.1287/moor.2025.0863) Proposition 3、Proposition 4、Theorem 2 和式 (27)–(30) 是普通 PPA 的已有线性补偿基线。其逐图条件和线性真残差进入收敛证明，局部原根覆盖另列；本库 [C340](../CLAIMS.md#c340) 另记印刷定理同球留域的量词缺口。它适合作为条件匹配比较，不能靠其名义上的同球结论替代实际留域核验。近期 [Alcantara 的原稿](https://arxiv.org/html/2611.20523v1) Proposition 3.4、Remark 3.5 和 Lemma 4.14 保留[既有逐式比较](#lit-dd-structural-selection)。
+
+[Dontchev–Gfrerer–Kruger–Outrata, arXiv:1807.02198](https://arxiv.org/pdf/1807.02198) Example 1.2 用 \(F=0\) 加局部 Lipschitz 模为零的 \(h(x)=x^2\) 说明普通线性次正则可在任意小的这类扰动下丢失。Theorem 3.2 的扰动半径借助方向图数据，给今后选择可检验交互条件的另一基线。[Huang–Li 2014](https://doi.org/10.1007/s11228-013-0271-2) 的刊方摘要另确认已研究两个凸多值映射之差的误差界；通过第二项值域反号与求和问题相联。全文条件尚未逐项比对。
+
+### 仓库去重与待判问题
+
+- [C35–C37 的复合路线](canonical/composite_subregularity.md#cs-eb)已经从凸外层的一般非减误差模、内层满行秩和 \(C^{1,1}\) 预算传递完整真残差；再加乘子上界给弱凸缺陷和指定局部近端。非幂示例已存在。照搬同一传递不形成新章的独立贡献。
+- [C279 的原图运算](canonical/unified_ppa_raw_calculus.md) §3 已设整体零锚的真实分量分解、同一提升变量、和／积／逆／拉回规则；仿射目标用 LMI 认证实际一步，另在 \(F(y)=Dy+E(y)\) 子类从相对扰动预算给全输入近端与线性真残差。它已指出无核方向控制时拉回不传递真残差。一般非仿射最近锚和一般有符号缺陷的计算仍缺。 [C277–C278](../CLAIMS.md#c277) 已经展示距离／步长的分离取最坏值和径向状态两种压缩会丢失长度信息；它们没有给出本章从分量信息生成 DD 证书的完整运算规则。
+- [DD2 的精确共同关系](topics/dd2/joint_relation.md#dd2-joint-exact-cost) 从已给的证书进入单边几何；固定图与整窗覆盖另有量词。比较联合运算的收益时，应以同一原始数据支持的个别证书以及仓库已有联合估计为基线。若两项仍分别压成同一对标量包络，再代入同一个 \(\Sigma\)，公式的输入里已无保存的额外关联。具体收益要体现在可证的尺度、下降目标或参数集合上。
+
+当前开放问题是，能否在一个可独立检验的原始算子类上，控制**同一整体零锚上的分量分解**及**整体图小残差的抵消**，从而获得原 DD 的一般 \(\psi_F\) 与 \(\Phi_\lambda\)，并将保证转给实际可解的 \(\lambda\)。可先以加法扰动作为比较对象，再判断需要推广哪一步。在固定数据、同一个 \(F,S\)、认证窗、原近端关系与目标 \(\varphi\) 下，需要展示已有局部求和、固定锚二次规则与仓库 C35/C279 不能给出的距离下降或实质参数范围，且原始前件能在未给完整零集及投影公式时核验。若给的是指定子目标，局部到完整零集的误差界须另核目标一致。已覆盖子类直接引用。此次是问题固定和文献边界，尚无等价于全任务的已核文献，也没有完成优先权证明。
