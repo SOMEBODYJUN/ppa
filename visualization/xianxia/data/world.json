@@ -11443,6 +11443,61 @@
       "y": 5515,
       "region": "convergence",
       "realm": "convergence-annex-10"
+    },
+    "DD3-FINITE-TOPOLOGY": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1916,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD3-FIXED-STEP-OBSTRUCTION": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2292,
+      "y": 5333,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD3-GLOBAL-COVERAGE": {
+      "role": "object",
+      "kind": "mine",
+      "object": "furnace",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 5151,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD3-NONQUADRATIC-WITNESS": {
+      "role": "object",
+      "kind": "mine",
+      "object": "bell",
+      "evidence": "derived-checked",
+      "reason": "neutral-default",
+      "x": 2386,
+      "y": 5424,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
+    },
+    "DD3-UNIFORM-ANCHOR": {
+      "role": "object",
+      "kind": "mine",
+      "object": "sword",
+      "evidence": "unspecified",
+      "reason": "neutral-default",
+      "x": 1822,
+      "y": 5242,
+      "region": "convergence",
+      "realm": "convergence-annex-10"
     }
   },
   "edges": {
@@ -14589,6 +14644,10 @@
     "E789": {
       "x": 1621.09,
       "y": 5468.77
+    },
+    "E790": {
+      "x": 1824.89,
+      "y": 5103.09
     }
   },
   "bounds": {

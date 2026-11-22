@@ -5706,6 +5706,34 @@
       "label": "C476 有限长DD2近端的每个固定SPD局部扩张",
       "file": "topics/dd2/operator_separation.md#dd2-nonmonotone-complete-operators",
       "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD3-UNIFORM-ANCHOR",
+      "label": "参数区间的全图最近输入锚下界",
+      "file": "topics/dd2/global_proximal_solvability.md#dd3-global-coverage"
+    },
+    {
+      "id": "DD3-FINITE-TOPOLOGY",
+      "label": "有限维非空凸值与半连续性",
+      "file": "topics/dd2/global_proximal_solvability.md#dd3-global-coverage"
+    },
+    {
+      "id": "DD3-GLOBAL-COVERAGE",
+      "label": "C477 有限维函数型 DD 全局近端可解",
+      "file": "topics/dd2/global_proximal_solvability.md#dd3-global-coverage",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD3-FIXED-STEP-OBSTRUCTION",
+      "label": "C478(a) 固定参数两证书不授满射",
+      "file": "topics/dd2/global_proximal_solvability.md#dd3-fixed-step-obstruction",
+      "evidence_status": "derived-checked"
+    },
+    {
+      "id": "DD3-NONQUADRATIC-WITNESS",
+      "label": "C478(b) 全参数非二次可解例",
+      "file": "topics/dd2/global_proximal_solvability.md#dd3-nonquadratic-example",
+      "evidence_status": "derived-checked"
     }
   ],
   "edges": [
@@ -14783,6 +14811,19 @@
       "output": "DD2-LOCAL-SPD-EXPANSION",
       "relation": "conditional",
       "scope": "C476-v1：C474主F₀=K^(−1/q)|y|^(m−1)Qy,q∈(.5,1),m1/q,K>0，同一F每有限固定λ>0；负F₋=−|y|y+|y|^(1/3)Qy仅λ1、原R₋2^-14。全部原纤维/全域完整唯一根、exactzero0、零驻定/覆盖、原预设φ/Σ/F1–F3及真实finiteL/点0保C474，欧氏证书不迁移W。每固定SPD W、每共同开零输入/输出窗及正距离/真残差/两类图值帽，存在两条实际原边位于原认证窗而J在W范数严格两点膨胀。取w₁≤w₂的e₁,e₂=Qe₁，输出r e₁,(r/2)e₂；主dot=βr^(m+1)(w₁2^-m−w₂/2)<0，完整平方gap=-cA_Wr^(m+1)+c²B_Wr^(2m)；负dot=(w₁2^(−4/3)−w₂/2)r^(7/3)−(w₁+w₂/8)r³且正平方O_W(r^(8/3))，负首项确保任意小r，欧氏r≤2^-15显保R₋。任意γ>0的单调A固定W预条件若仅含两边即迫A图含(y_i,(λ/γ)WF(y_i))，负积矛盾；故同原J不能在小全输入窗为单调/极大单调/凸prox，亦非W非扩张或常规θ平均。量词∀W∀窗∃点对，非一个点对全W；不排稀疏政策/逐步变度量/非线性共轭/换算法。F=−2I,J=−I说明不可从非单调直接猜NE失败。GP-SHELL仅为对照边界而非本命题的合取依赖，保主零锚族C212已有finiteL正面，负锚另有局部weakMinty比→0和δ7/8，未据此自动导外部定理；不授公开新颖性或改C474/C475。",
+      "status": "derived-checked"
+    },
+    {
+      "id": "E790",
+      "topic": "函数型 DD 和同伦覆盖",
+      "inputs": [
+        "D01",
+        "DD3-UNIFORM-ANCHOR",
+        "DD3-FINITE-TOPOLOGY"
+      ],
+      "output": "DD3-GLOBAL-COVERAGE",
+      "relation": "conditional",
+      "scope": "C477-v1：有限维 R^n，S 非空闭且 S⊂zer F，固定 c>0；全部 (y,u) 及 0<μ≤c 的最近输入锚条件，负部在每个共同有界距离窗统一有限。F 全域非空值，下半连续闭凸值或上半连续紧凸值。平移同伦先由 DD2 步帽控制位移，再由 Schaefer 或多值 Leray–Schauder 得 ran(I+cF)=R^n。指定截断图、轨道留域及收敛须另核。",
       "status": "derived-checked"
     }
   ]

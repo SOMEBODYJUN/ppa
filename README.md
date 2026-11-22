@@ -2,6 +2,8 @@
 
 **DD2 主定理入口。** [主陈述](research/topics/dd2/core.md#dd2-main-theorem)先给一般 \(\Phi,\psi,\varphi\) 的分段补偿函数 \(\Sigma(r,z)\)，由 \(-\Phi(t)/t^2\le\Sigma(\varphi(t)/t,\lambda\inf\{\psi>\varphi(t)\}/t)\) 同时读出指定下降与实际步长上界。随后[原两支 \(\Sigma_L\) 和 DD1 临界门](research/topics/dd2/core.md#dd2-linear-recovery)逐式恢复，覆盖、可和步预算和留域条件下给[全部轨道的有限长度与点收敛](research/topics/dd2/core.md#dd2-main-trajectory)。[C430 的等价分段证明](research/topics/dd2/reverse_compensation.md#dd2-compensation-piecewise)保原有符号、原残差与准确端点；原域、联合关系和长度的各技术版本放在主陈述之后。本次重写改变呈现顺序，未新增或提升 Claim，也未重排作者尚未选定的后续题材。
 
+**DD3 全局近端可解。** [C477 的有限维存在性引理](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage)把 DD 的原步长函数放入同伦。在整个参数区间的最近输入锚缺陷统一有界时，配合上下半连续凸值条件可证明满射。[C478](CLAIMS.md#c478)分别保存固定参数两证书下的不满射例与严格越过固定二次径向前件的二维例。指定局部截断、全局收敛和文献优先性各有自己的核验。
+
 **当前查新 · 从算子信息到函数型补偿与近端参数选择。** [文献与仓库对照](research/LITERATURE.md#lit-dd-operator-calculus)核清固定锚求和、完整和映射的线性误差界、非幂误差模和参数区间的先行结果。此线沿 [DD 主陈述](research/topics/dd2/core.md#dd2-main-theorem)向上游追问怎样由可检验的算子数据获得 \(\Phi_\lambda,\psi_F\)。它与 [C35 的满秩复合](research/canonical/composite_subregularity.md#cs-eb)、[C279 的原图演算](research/canonical/unified_ppa_raw_calculus.md) 和 [DD2 共同关系](research/topics/dd2/joint_relation.md#dd2-joint-exact-cost) 的分工、重合与未闭义务见该条。
 
 **选稿原则：从 DD 引出的新问题比较。** 作者以 RLEB 第四章说明附加结果的质量与叙事要求，没有指定 DD 论文优先采用几何、拓扑或回缩。此前提出的“选择稳定性、目标几何、实际续接与准确总尾”仅是助手候选，优先排序撤回；其证明与查新记录保留。恢复选题时，同时考察原算子与优化子类的不同补偿机制、组合/分解、可实施设计与认证、真实模型及其他有证据的新问题。候选须分别交代读者原问题、DD 增加的准确数学信息、已有答案/未闭义务与一手比较，不能仅因已有证明或类似旧文章章节而选入正文。 [前次候选与查新](research/LITERATURE.md#lit-dd-structural-selection)保留为比较材料，不是作者选定的大纲。
@@ -480,6 +482,7 @@ p=u+\lambda v,\quad C(p)=u-\lambda v .
 | [research/code/dd2/verify_acceptance_checklist.py](research/code/dd2/verify_acceptance_checklist.py) | 核对题面和编号、证据文件、单项暂存及远端提交历史。终结检查要求全部勾选。 |
 | [research/audit/DD2_FINAL_ACCEPTANCE.md](research/audit/DD2_FINAL_ACCEPTANCE.md) | 当前验收入口，逐节定位既有数学证据和剩余义务，包含有符号模及不连续模的公式检查、逐问关闭规则和最终交付门。 |
 | research/novelty/DD1_PRIOR_ART_2026-11-20.md | 六路公开先例核查：固定 DD1 的正距离量词，逐式比对 Otero–Iusem、almost averaged 框架、Luke–Tam 与 Alcantara 的原文；给出 C285 换参、已存在的估计、未检出的完整分段锐门及可复核检索词。写 DD1 的贡献、引文或修订竞赛题退化条件前读取。 |
+| [research/topics/dd2/global_proximal_solvability.md](research/topics/dd2/global_proximal_solvability.md) | C477 的同伦先验界与两种有限维拓扑入口。C478 对照固定参数下有证书但缺覆盖、全参数成立但无二次径向证书；用于 DD3 与 DD1/DD2 的覆盖衔接。 |
 | [research/topics/dd2/core.md](research/topics/dd2/core.md) | DD2 主线及 §0 Exact Theorem Statements：公共对象、每边锚量词、真残差评价域，分别列出有符号几何、原模可行域、线性反演、距离、比较尾和及两种长度势版本。核主定理或将一步结论用于实际轨道前先读；C417–C420 的完整证明由本页链接；C447-B 给连续完整图、线性真误差界下的有界非收敛轨道与准确区间聚点。 |
 | [research/audit/DD2_POINT_VS_ZERO_SET_CLARIFICATION_2026-11-21.md](research/audit/DD2_POINT_VS_ZERO_SET_CLARIFICATION_2026-11-21.md) | 语义校正：完整 DD1 的 A+B 已给统一距离收缩、线性步长界、绝对可和和点收敛；C447/方向分离只属于删去 DD1 兼容或步长门后的弱化 DD2 扩展。还记录鲁棒步界作为内层误差停止准则，以及 G03/P05–P06 的重新作用域。 |
 | [research/topics/dd2/relaxation.md](research/topics/dd2/relaxation.md) | C402 的方向松弛、实际耗散和长度势，全锚与最近锚的量词分离；C447-A 的原算子 PC1–PC6 给全域半阶真误差界、连续完整近端及有界整圆聚点；C465的BC1–BC15给任意精确低幂/原K与λ的独立完整圆族、最高幂和实际正幂前缀。核变松弛、全锚点收敛或误把有界渐近正则当成点收敛时读取。 |

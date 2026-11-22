@@ -4313,3 +4313,19 @@
 - **Actual pairs / Evidence**：取W单位本征基e₁、e₂=Qe₁及0<w₁≤w₂，y₁=r e₁,y₂=(r/2)e₂。主族ΔF=βr^m(2^-m e₁+e₂)，dot_W=βr^(m+1)(w₁2^-m−w₂/2)<0；NM5平方差=-cA_Wr^(m+1)+c²B_Wr^(2m)，A_W=w₂−2^(1−m)w₁、B_W=w₁2^(-2m)+w₂，门cr^(m−1)<A_W/B_W。负图dot_W=(w₁2^(−4/3)−w₂/2)r^(7/3)−(w₁+w₂/8)r³，正平方项O_W(r^(8/3))；输入/输出平方差除r^(7/3)趋2w₁2^(−4/3)−w₂<0。欧氏显式r≤2^-12使扩张，r≤2^-15还保证两个输入都在R₋；任意W用其严格负首项再缩r。
 - **Classical routes excluded**：对任意γ>0及任意欧氏单调关系A（容许多值/其他零集），固定W预条件关系J^W_(γA)(x)={y:W(x−y)/γ∈A(y)}不能在一个完整小零输入邻域包含原J的所有输出；仅包含上述两边已迫A图含(y_i,(λ/γ)WF(y_i))，单调积严格负。故同J的极大单调、凸次梯度/凸prox表示不可能。非扩张必要于同W通常θ平均映射（0<θ<1），真实扩张另排该路线；非单调本身不推出这一更强结论，F=−2I/λ1/J=−I为校准。
 - **Dependencies / Boundaries / Counterevidence**：[NM1–NM6](research/topics/dd2/operator_separation.md#dd2-nonmonotone-complete-operators)以完整图坐标恒等、显式成对值和高阶项自足证明；D01/D04及C474负责原对象/全部根/DD2正面，C212保主族已有锚定壳层finiteL。F₀欧氏零锚积0仍不保证全对单调；F₋零锚firm能量失败2a³但距离下降，weak-Minty比=−a^(1/3)/(1+a^(4/3))→0，原R₋可用ε1/16、δ7/8。这些是原欧氏局部充分证书，不认证任何外部全图导入或最佳常数。稀疏状态/仅轨道、逐步变度量、非线性共轭、改变原J的换图/算法不由本项排除。C474/C475身份不改，所有旧方法或公开新颖性不作升级。
+
+<a id="c477"></a>
+## C477-v1 · 参数区间上的最近输入零锚缺陷给有限维全域覆盖
+
+- **Status**：`derived-checked`。独立核算同伦、两种拓扑映射、零尺度、局部输出窗及反例。外部调用固定 arXiv:2611.23997v1 Theorems 2.5–2.7。
+- **Exact Statement / Objects / Assumptions**：\(F:\mathbb R^n\rightrightarrows\mathbb R^n\) 全域非空值，\(S\subseteq\operatorname{zer}F\) 非空闭，固定 \(c>0\)。对每个 \(0<\mu\le c\) 和每个原图点 \((y,u)\)，设 \(z=y+\mu u,t=d(z,S)\)。设有 \(p_z\in P_S(z)\) 使 \(\langle z-y,y-p_z\rangle\ge\Phi_\mu(t)\)，其中 \(D_c(R)=\sup_{0<\mu\le c,0\le t\le R}[-\Phi_\mu(t)]_+<\infty\) 对所有有限 \(R\ge0\) 成立。\(F\) 下半连续闭凸值，或上半连续紧凸值。
+- **Conclusion / Dependencies / Evidence**：\(\operatorname{ran}(I+cF)=\mathbb R^n\)。\(w=y-p\) 的同伦满足 \(z=p+\tau(b-p)\)、\(\mu=\tau c\)，由同一 DD2 步帽公式 \(B_{\Phi_\mu}\) 得 \(\|w\|\le r+(r+\sqrt{r^2+4D_c(r)})/2\) 且 \(r=\|b-p\|\)。平移映射分别用连续选择和 Schaefer，或直接多值 Leray–Schauder。见 [GDD、P1 与拓扑映射](research/topics/dd2/global_proximal_solvability.md#dd3-global-coverage)。
+- **Scope / Counterevidence / Related Files**：给原 \(J_{cF}\) 全局覆盖，指定输出窗、图值截断、留域、指定距离下降、长度与收敛各按各自合同核。C478(a) 排除用仅固定参数的两条全局证书替代区间前件。Hilbert Z4 投影不在本结论内。全局覆盖的原图量词和优先性见 [文献记录](research/LITERATURE.md#lit-dd3-bly)。
+
+<a id="c478"></a>
+## C478-v1 · 固定参数覆盖反例与全参数非二次可解例
+
+- **Status**：`derived-checked`。两例逐式核算完整图、真残差、参数和实际覆盖；仅相对指定文献前件作分离。
+- **Exact Statement / Object A**：\(F:\mathbb R\to\mathbb R\) 为 \(y^2\)（\(y\ge0\)）与 \(y^2-y\)（\(y<0\)），\(c=1,S=\{0\}\)。全图锚下界 \(\Phi(t)=-t-t^{3/2}\) 与完整真残差模 \(\psi(\rho)=\sqrt\rho+\rho\) 成立，\(\operatorname{ran}(I+F)=[0,\infty)\)。见[反例](research/topics/dd2/global_proximal_solvability.md#dd3-fixed-step-obstruction)。
+- **Exact Statement / Object B**：\(F:\mathbb R^2\to\mathbb R^2\) 在 \(y\ne0\) 取 \(-\|y\|^{-1/4}y+\|y\|^{-1/2}Qy\)，其中 \(Q\) 为直角旋转，\(F(0)=0\)。精确 \(S=\{0\}\)。对全部 \(\mu>0\) 与全部原边有 \(\Phi_\mu(t)=-2^{5/8}t^{9/4}-2^{5/6}t^{8/3}\) 和真模 \(\psi(\rho)=\rho^2\)。每个 \(c>0\) 完整原近端满域；无有限的 \(\gamma\) 使固定零锚的 \(\langle F(y),y\rangle\ge-\gamma\|y\|^2\) 在零点邻域成立。见[二维例和核算](research/topics/dd2/global_proximal_solvability.md#dd3-nonquadratic-example)。
+- **Dependencies / Scope**：A 直接算范围，其两条证书不含 DD2 下降门。B 用二次式最小值和 C477，也可直接用径向或既有度数机制得覆盖；同一 \(c\) 另有正半径不变圆，故无全局所有轨道收敛。B 的分离只对 arXiv:2611.23997v1 的指定径向前件。
