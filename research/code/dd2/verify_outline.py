@@ -23,9 +23,13 @@ abstract, introduction, dd1, dd2, dd3, parameters, conclusion = re.split(
 )[1:]
 assert all(name in abstract for name in ("DD1", "DD2", "DD3"))
 assert all(name in introduction for name in ("正则指数", "次单调指数", "存在性引理"))
+assert "正式列出存在性引理的陈述" in introduction
 assert "DD11、DD12" in dd1 and "dd1-step-and-tail" in dd1
+assert "给定正则性允许多大缺陷" in dd1 and "给定缺陷要求多强正则性" in dd1
+assert dd2.index("dd2-half-order-complete-example") < dd2.index("传统比较级数")
 assert dd2.index("传统比较级数") < dd2.index("原 F1–F3")
 assert "dd3-global-coverage" in dd3 and "同一近端关系" in dd3
+assert "先证明引言列出的" in dd3
 assert "sr-uniform-steps" in parameters and "累计进展" in parameters
 assert "例子随定理" in conclusion
 
